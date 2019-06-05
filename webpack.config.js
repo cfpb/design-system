@@ -18,6 +18,13 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.(html)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'html-loader'
+        }
       }
     ]
   }

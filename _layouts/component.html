@@ -32,27 +32,13 @@
 
   <h3>Variations</h3>
 
-  <section id="variations">
-    {{ page.variations }}
-  </section>
+  {% include variations.html %}
 
-  <h3>Usage</h3>
+  {% include usage.html %}
 
-  <section id="usage">
-    {{ page.usage }}
-  </section>
+  {% include accessibility.html %}
 
-  <h3>Accessibility</h3>
-
-  <section id="accessibility">
-    {{ page.accessibility }}
-  </section>
-
-  <h3>Research</h3>
-
-  <section id="research">
-    {{ page.research }}
-  </section>
+  {% include research.html %}
 
   <script src="{{ site.baseurl }}/dist/design-system.js" charset="utf-8"></script>
 

@@ -1,0 +1,164 @@
+//
+// Default button
+//
+
+.a-btn {
+    appearance: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding:
+        unit( @btn-v-padding / @btn-font-size, em )
+        unit( @btn-h-padding / @btn-font-size, em );
+    border: 0;
+    margin: 0;
+    border-radius: unit( @btn-border-radius-size / @btn-font-size, em );
+    cursor: pointer;
+    font-size: unit( @btn-font-size / @base-font-size-px, em );
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.1s;
+
+    &,
+    &:link,
+    &:visited {
+        background-color: @btn-bg;
+        color: @btn-text;
+    }
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+        background-color: @btn-bg-hover;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 1px dotted @btn-bg;
+        // The outline-offset property is not supported everywhere (e.g. IE)
+        // but it adds a nice touch in browsers where it is.
+        outline-offset: 1px;
+    }
+
+    &:active,
+    &.active {
+        background-color: @btn-bg-active;
+    }
+
+    button&::-moz-focus-inner,
+    input&::-moz-focus-inner {
+        // Fixes inconsistent button.btn height in Firefox.
+        // Helps with inconsistent input.btn height in Firefox but not completely.
+        border: 0;
+    }
+
+    //
+    // Secondary button
+    //
+
+    &__secondary {
+        &,
+        &:link,
+        &:visited {
+            background-color: @btn__secondary-bg;
+            color: @btn__secondary-text;
+        }
+
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            background-color: @btn__secondary-bg-hover;
+        }
+
+        &:focus,
+        &.focus {
+            outline-color: @btn__secondary-bg;
+        }
+
+        &:active,
+        &.active {
+            background-color: @btn__secondary-bg-active;
+        }
+    }
+
+    //
+    // Destructive action button
+    //
+
+    &__warning {
+        &,
+        &:link,
+        &:visited {
+            background-color: @btn__warning-bg;
+            color: @btn__warning-text;
+        }
+
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            background-color: @btn__warning-bg-hover;
+        }
+
+        &:focus,
+        &.focus {
+            outline-color: @btn__warning-bg;
+        }
+
+        &:active,
+        &.active {
+            background-color: @btn__warning-bg-active;
+        }
+    }
+
+    //
+    // Disabled button
+    //
+
+    &__disabled,
+    &[disabled] {
+        &,
+        &:link,
+        &:visited,
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: @btn__disabled-bg;
+            color: @btn__disabled-text;
+            cursor: default; // Fallback for IE/Opera
+            cursor: not-allowed;
+        }
+
+        &:focus,
+        &.focus {
+            outline-color: @btn__disabled-outline;
+        }
+    }
+
+    //
+    // Super button
+    //
+
+    &__super {
+        padding:
+            unit( 11px / @btn__super-font-size, em )
+            unit( 29px / @btn__super-font-size, em );
+        font-size: unit( @btn__super-font-size / @base-font-size-px, em );
+    }
+
+    //
+    // Full width button on x-small screens
+    //
+    &__full-on-xs {
+        .respond-to-max( @bp-xs-max, {
+            display: block;
+            width: 100%;
+        } );
+    }
+}

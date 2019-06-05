@@ -1,0 +1,15 @@
+---
+layout: homepage
+---
+
+<h1>Design System</h1>
+
+<h2>Here are our components:</h2>
+
+<ul>
+  {% for component in site.data.components %}
+  <li>
+    <a href="{{ site.baseurl }}{{ component.url }}">{{ component.name }}</a>
+  </li>
+  {% endfor %}
+</ul>

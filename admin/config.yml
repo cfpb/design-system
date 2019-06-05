@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: test-things/design-system
+  branch: master
+  site_domain: localhost:4000
+  base_url: https://netlifycms-auth.glitch.me
+
+publish_mode: editorial_workflow
+media_folder: images/uploads
+
+collections:
+  - name: 'page-component'
+    label: 'Page components'
+    label_singular: 'Page component'
+    folder: 'components/'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {name: 'title', label: 'Title', widget: 'string'}
+      - {name: 'layout', value: 'page', widget: 'hidden'}
+      - {name: 'category', value: 'Page components', widget: 'hidden'}
+      - {name: 'status', label: 'Implementation status', widget: 'select', options: [{ label: 'Proposed', value: 'proposed'}, { label: 'In progress', value: 'in-progress'}, {label: 'Beta', value: 'beta'}, {label: 'Released', value: 'released' }]}
+      - {name: 'test_widget', label: 'Test Widget', widget: 'test'}
+      - {name: 'intro', label: 'Intro text', widget: 'markdown'}
+      - {name: 'usage', label: 'Usage', widget: 'text'}
+      - {name: 'accessibility', label: 'Accessibility', widget: 'text'}
+      - {name: 'research', label: 'Research', widget: 'text'}

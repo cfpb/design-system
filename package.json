@@ -36,8 +36,7 @@
   "scripts": {
     "start": "parallelshell \"bundle exec jekyll serve --watch --host=localhost\" \"yarn run watch\"",
     "watch": "webpack --watch",
-    "build": "NODE_ENV=production webpack && bundle exec jekyll build",
-    "install": "bundle install"
+    "build": "bundle exec jekyll build && NODE_ENV=production webpack"
   },
   "dependencies": {
     "fetch-suspense": "^1.1.0",

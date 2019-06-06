@@ -25,7 +25,7 @@
   </ul>
 
   {% capture variations %}{{ page.variations | markdownify }}{% endcapture %}
-  {% capture variations_code %}{% include_relative {{ page.title }}/src/{{ page.title }}.example.html %}{% endcapture %}
+  {% capture variations_code %}{% include_relative {{ page.slug }}/src/{{ page.slug }}.example.html %}{% endcapture %}
   {% include variations.html %}
 
   {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}

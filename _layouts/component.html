@@ -30,6 +30,7 @@
     <li><a href="#research">Research</a></li>
   </ul>
 
+  {% capture variations_code %}{% include_relative {{ page.slug }}/src/{{ page.slug }}.example.html %}{% endcapture %}
   {% include variations.html %}
 
   {% include usage.html %}

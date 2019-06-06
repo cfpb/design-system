@@ -10,9 +10,12 @@ highlighter: rouge
 
 # Organization
 org: CFPB
+description: CFPB's design system
+repository: test-things/design-system
 
 # Title
-name: Design Manual
+title: Design System
+name: Design System
 # We currently don't use this in the templates
 subtitle: A set of principles and standards for the Consumer Financial Protection Bureau's design projects.
 
@@ -23,7 +26,5 @@ subtitle: A set of principles and standards for the Consumer Financial Protectio
 #baseurl: ''
 baseurl: '/design-system'
 
-exclude:
-  - README.md
-  - TERMS.md
-  - usage.md
+includes:
+  - components

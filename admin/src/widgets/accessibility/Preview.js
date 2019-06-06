@@ -1,11 +1,12 @@
 import React from 'react';
-import { ReactLiquid } from 'react-liquid'
+import { ReactLiquid } from 'react-liquid';
+import marked from 'marked';
 import template from '../../../../_includes/accessibility.html';
 
 export const Preview = props => {
   const data = {
       page: {
-        accessibility: props.value
+        accessibility: marked(props.value)
       }
   }
   return (

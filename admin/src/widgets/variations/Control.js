@@ -22,13 +22,11 @@ export default class Control extends React.Component {
     } = this.props;
 
     return (
-      <input
-        type="text"
+      <textarea
         id={forID}
         className={classNameWrapper}
-        value={value || ''}
         onChange={e => onChange(e.target.value)}
-      />
+      >{value || ''}</textarea>
     );
   }
 }

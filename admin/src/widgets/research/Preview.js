@@ -1,11 +1,12 @@
 import React from 'react';
-import { ReactLiquid } from 'react-liquid'
+import { ReactLiquid } from 'react-liquid';
+import marked from 'marked';
 import template from '../../../../_includes/research.html';
 
 export const Preview = props => {
   const data = {
       page: {
-        research: props.value
+        research: marked(props.value)
       }
   }
   return (

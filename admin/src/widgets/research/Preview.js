@@ -5,9 +5,7 @@ import template from '../../../../_includes/research.html';
 
 export const Preview = props => {
   const data = {
-      page: {
-        research: marked(props.value)
-      }
+    research: marked(props.value)
   }
   return (
     <div>

@@ -5,9 +5,7 @@ import template from '../../../../_includes/usage.html';
 
 export const Preview = props => {
   const data = {
-      page: {
-        usage: marked(props.value)
-      }
+    usage: marked(props.value)
   }
   return (
     <div>

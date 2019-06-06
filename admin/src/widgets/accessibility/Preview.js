@@ -5,9 +5,7 @@ import template from '../../../../_includes/accessibility.html';
 
 export const Preview = props => {
   const data = {
-      page: {
-        accessibility: marked(props.value)
-      }
+    accessibility: marked(props.value)
   }
   return (
     <div>

@@ -1,7 +1,8 @@
 ---
 title: Buttons
+slug: buttons
 layout: component
-status: published
+status: in-progress
 intro: >-
   Buttons signal actions. They should be used sparingly; each additional button
   on a page reduces the visual prominence of a call to action. In contrast,

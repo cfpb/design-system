@@ -3,6 +3,6 @@
   command = "yarn run build"
 
 [[redirects]]
-  from = "/"
-  to = "/design-system"
+  from = "/*"
+  to = "/design-system/:splat"
   status = 200

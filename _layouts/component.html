@@ -24,13 +24,17 @@
     <li><a href="#research">Research</a></li>
   </ul>
 
-  {% capture variations_code %}{% include_relative {{ page.slug }}/src/{{ page.slug }}.example.html %}{% endcapture %}
+  {% capture variations %}{{ page.variations | markdownify }}{% endcapture %}
+  {% capture variations_code %}{% include_relative {{ page.title }}/src/{{ page.title }}.example.html %}{% endcapture %}
   {% include variations.html %}
 
+  {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}
   {% include usage.html %}
 
+  {% capture accessibility %}{{ page.accessibility | markdownify }}{% endcapture %}
   {% include accessibility.html %}
 
+  {% capture research %}{{ page.research | markdownify }}{% endcapture %}
   {% include research.html %}
 
   <script src="{{ site.baseurl }}/dist/design-system.js" charset="utf-8"></script>

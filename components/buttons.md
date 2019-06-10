@@ -8,7 +8,32 @@ intro: >-
   on a page reduces the visual prominence of a call to action. In contrast,
   [links](https://consumerfinance.gov) should lead users to another page or
   further information.
-variations: There are many types of buttons. Here they are.
+variations: |
+  There are many types of buttons. Here they are.
+
+  #### Default state
+
+  <a href="#" class="a-btn" title="Test button">Anchor Tag</a>
+  <button class="a-btn" title="Test button">Button Tag</button>
+  <input type="submit" value="Input Tag" class="a-btn">
+
+  #### Hovered state
+
+  <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
+  <button class="a-btn hover" title="Test button">Button Tag</button>
+  <input type="submit" value="Input Tag" class="a-btn hover">
+
+  #### Focused state
+
+  <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
+  <button class="a-btn focus" title="Test button">Button Tag</button>
+  <input type="submit" value="Input Tag" class="a-btn focus">
+
+  #### Active state
+
+  <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
+  <button class="a-btn active" title="Test button">Button Tag</button>
+  <input type="submit" value="Input Tag" class="a-btn active">
 usage: >
   **Use cases**
 

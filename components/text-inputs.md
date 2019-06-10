@@ -7,27 +7,25 @@ intro: >-
   that contains general guidance on all form types. This pattern includes Labels
   and optionally Buttons.
 variations:
-  - Variation: |-
+  - variation: |-
       #### Default state
-
-      The default state is for default stuff.
 
       <a href="#" class="a-btn" title="Test button">Anchor Tag</a>
       <button class="a-btn" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn">
-  - Variation: |-
+  - variation: |-
       #### Hovered state
 
       <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
       <button class="a-btn hover" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn hover">
-  - Variation: |-
+  - variation: |-
       #### Focused state
 
       <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
       <button class="a-btn focus" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn focus">
-  - Variation: |-
+  - variation: |-
       #### Active state
 
       <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>

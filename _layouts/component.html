@@ -181,8 +181,12 @@
           {% capture intro %}{{ page.intro | markdownify }}{% endcapture %}
           {% include intro.html %}
 
-          {% capture variations %}{{ page.variations | markdownify }}{% endcapture %}
-          {% include variations.html %}
+
+          {% for item in page.variations %}
+          ---------
+            {{ item }}
+          ---------
+          {% endfor %}
 
           {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}
           {% include usage.html %}

@@ -20,9 +20,26 @@ collections:
       - {name: 'slug', label: 'Slug', widget: 'slugWidget'}
       - {name: 'layout', value: 'page', widget: 'hidden'}
       - {name: 'category', value: 'Page components', widget: 'hidden'}
-      - {name: 'status', label: 'Implementation status', widget: 'statusWidget', options: [{ label: 'Proposed', value: 'proposed'}, { label: 'In progress', value: 'in-progress'}, {label: 'Beta', value: 'beta'}, {label: 'Released', value: 'released' }]}
+      - name: 'status'
+        label: 'Implementation status'
+        widget: 'statusWidget'
+        options:
+          - label: 'Proposed'
+            value: 'proposed'
+          - label: 'In progress'
+            value: 'in-progress'
+          - label: 'Beta'
+            value: 'beta'
+          - label: 'Released'
+            value: 'released'
       - {name: 'intro', label: 'Intro text', widget: 'introWidget'}
-      - {name: 'variations', label: 'Variations', widget: 'variationsWidget', buttons: ['bold', 'italic', 'quote', 'link']}
+      - name: 'variations'
+        label: 'Variations'
+        widget: 'list'
+        fields:
+          - name: 'variation'
+            label: 'Variation'
+            widget: 'variationWidget'
       - {name: 'usage', label: 'Usage', widget: 'usageWidget'}
       - {name: 'accessibility', label: 'Accessibility', widget: 'accessibilityWidget'}
       - {name: 'research', label: 'Research', widget: 'researchWidget'}

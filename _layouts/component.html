@@ -14,7 +14,12 @@ layout: default
       {% include intro.html %}
 
       {% for variation in page.variations %}
-        {{ variation.variation | markdownify }}
+        {% capture name %}{{ variation.variation_name }}{% endcapture %}
+        {% include variation/name.html %}
+        {% capture description %}{{ variation.variation_description }}{% endcapture %}
+        {% include variation/description.html %}
+        {% capture code_snippet %}{{ variation.variation_code_snippet }}{% endcapture %}
+        {% include variation/code-snippet.html %}
       {% endfor %}
 
       {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}

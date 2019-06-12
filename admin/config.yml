@@ -37,9 +37,15 @@ collections:
         label: 'Variations'
         widget: 'list'
         fields:
-          - name: 'variation'
-            label: 'Variation'
-            widget: 'variationWidget'
+          - name: 'variation_name'
+            label: 'Variation name'
+            widget: 'variationNameWidget'
+          - name: 'variation_description'
+            label: 'Variation description'
+            widget: 'variationDescriptionWidget'
+          - name: 'variation_code_snippet'
+            label: 'Variation code snippet'
+            widget: 'variationCodeSnippetWidget'
       - {name: 'usage', label: 'Usage', widget: 'usageWidget'}
       - {name: 'accessibility', label: 'Accessibility', widget: 'accessibilityWidget'}
       - {name: 'research', label: 'Research', widget: 'researchWidget'}

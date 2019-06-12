@@ -1,0 +1,28 @@
+.a-form-alert {
+    .cf-icon-svg {
+        color: @input-icon;
+        float: left;
+    }
+
+    &_text {
+        display: block;
+        margin-left: unit( 20px / @base-font-size-px, em );
+    }
+
+    &__success .cf-icon-svg {
+        color: @input-icon__success;
+    }
+
+    &__error .cf-icon-svg {
+        color: @input-icon__error;
+    }
+
+    &__warning .cf-icon-svg {
+        color: @input-icon__warning;
+    }
+}
+
+// TODO: Deprecate a-error-message
+.a-error-message {
+    .a-form-alert();
+}

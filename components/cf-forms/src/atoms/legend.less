@@ -1,0 +1,10 @@
+.a-legend {
+    .h4();
+
+    // Legends do not wrap in IE.
+    // Different styles are required to ensure wrapping in different versions.
+    box-sizing: border-box; // IE9-11 & Edge 12-13
+    display: table; // IE8-11
+    max-width: 100%; // Patch for IE9-11 & Edge 12-13
+    white-space: normal; // IE8-11
+}

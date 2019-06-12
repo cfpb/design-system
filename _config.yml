@@ -25,6 +25,3 @@ subtitle: A set of principles and standards for the Consumer Financial Protectio
 # See http://jekyllrb.com/docs/github-pages/ for more info
 #baseurl: ''
 baseurl: '/design-system'
-
-includes:
-  - components

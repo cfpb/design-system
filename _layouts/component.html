@@ -1,259 +1,31 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
+<div class="wrapper">
+  {% include sidebar.html %}
+  <section id="content" class="content">
+    <main role="main">
 
-<head>
-  <meta name="description" content="{{ site.description }}">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cfpb.github.io/capital-framework/dist/css/main.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/dist/design-system.css">
-</head>
+      <h1>{{ page.title }}</h1>
 
-<body>
-  <div class="body-wrapper">
+      {% include status.html %}
 
+      {% capture intro %}{{ page.intro | markdownify }}{% endcapture %}
+      {% include intro.html %}
 
-    <a class="skip-link u-visually-hidden focusable" href="#main">Skip to Main Content</a>
-    <header role="banner" class="site-header">
-      <div class="wrapper">
-        <div class="title content-l_col content-l_col-1-3">
-          <h1 class="title_heading">
-            <a class="title-link" href="/capital-framework/">
-              <span class="demi">Capital</span>Framework
-            </a>
-          </h1>
-        </div>
-        <nav class="global-nav content-l_col content-l_col-2-3">
-          <ul class="global-nav_list">
+      {% for variation in page.variations %}
+        {{ variation.variation | markdownify }}
+      {% endfor %}
 
-            <li class="nav-list-item"><a href="/capital-framework/getting-started/">Getting Started</a></li>
+      {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}
+      {% include usage.html %}
 
-            <li class="nav-list-item"><a href="/capital-framework/components/">Components</a></li>
+      {% capture accessibility %}{{ page.accessibility | markdownify }}{% endcapture %}
+      {% include accessibility.html %}
 
-            <li class="nav-list-item"><a href="/capital-framework/contributing/">Contributing</a></li>
+      {% capture research %}{{ page.research | markdownify }}{% endcapture %}
+      {% include research.html %}
 
-            <li class="nav-list-item"><a href="/capital-framework/about/">About</a></li>
-
-          </ul>
-        </nav>
-      </div> <!-- /.wrapper -->
-    </header>
-
-
-    <main class="content content__1-3" id="main" role="main">
-      <div class="content_bar"></div>
-      <div class="content_wrapper">
-        <aside class="content_sidebar sans">
-
-
-
-
-          <nav class="nav-secondary">
-            <ul class="nav-secondary_list">
-
-
-              <li class="nav-secondary_item">
-                <a class="nav-secondary_link" href="/capital-framework/components/">
-                  Components
-                </a>
-              </li>
-
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-atomic-component/">
-                  cf-atomic-component
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-core/">
-                  cf-core
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link nav-secondary_link__current" href="/capital-framework/components/cf-buttons/">
-                  cf-buttons
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-expandables/">
-                  cf-expandables
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-forms/">
-                  cf-forms
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-grid/">
-                  cf-grid
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-icons/">
-                  cf-icons
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-layout/">
-                  cf-layout
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-notifications/">
-                  cf-notifications
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-pagination/">
-                  cf-pagination
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-tables/">
-                  cf-tables
-                </a>
-              </li>
-
-
-
-
-              <li>
-                <a class="nav-secondary_link" href="/capital-framework/components/cf-typography/">
-                  cf-typography
-                </a>
-              </li>
-
-
-            </ul>
-          </nav>
-        </aside>
-
-        <section class="content_main">
-          <h1>{{ page.title }}</h1>
-
-          {% include status.html %}
-
-          {% capture intro %}{{ page.intro | markdownify }}{% endcapture %}
-          {% include intro.html %}
-
-
-          {% for item in page.variations %}
-          ---------
-            {{ item }}
-          ---------
-          {% endfor %}
-
-          {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}
-          {% include usage.html %}
-
-          {% capture accessibility %}{{ page.accessibility | markdownify }}{% endcapture %}
-          {% include accessibility.html %}
-
-          {% capture research %}{{ page.research | markdownify }}{% endcapture %}
-          {% include research.html %}
-        </section>
-      </div>
     </main>
-
-    <footer class="site-footer">
-      <div class="wrapper site-footer_wrapper">
-
-        <div class="content-l_col content-l_col-1-2">
-          <ul class="m-list m-list__links">
-            <li class="m-list_item">
-              <a class="m-list_link" href="https://www.consumerfinance.gov/">consumerfinance.gov</a>
-            </li>
-            <li class="m-list_item">
-              <a class="m-list_link" href="https://cfpb.github.io/">CFPB Open Tech</a>
-            </li>
-            <li class="m-list_item">
-              <a class="m-list_link" href="https://github.com/cfpb">github.com/cfpb</a>
-            </li>
-            <li class="m-list_item">
-              <a class="m-list_link" href="https://www.consumerfinance.gov/about-us/careers/">Work with us</a>
-            </li>
-            <li class="m-list_item">
-              <a class="m-list_link" href="mailto:tech@cfpb.gov" target="_blank">Contact us</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="content-l_col content-l_col-1-2">
-          <h4>Open source</h4>
-          <p>
-            This project is maintained by the <a href="https://cfpb.github.io/">Consumer Financial Protection Bureau</a>.
-            The source code is available at <a href="https://github.com/cfpb/capital-framework">github.com/cfpb/capital-framework</a>.
-          </p>
-          <p>
-            As a work of the United States Government,
-            source code released by the CFPB is in the
-            public domain by default within the United States.
-          </p>
-          <a class="a-link a-link__jump a-link__icon-after-text" href="https://cfpb.github.io/source-code-policy/">
-            <span class="a-link_text">View our full source code policy</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790.1 1200" class="cf-icon-svg">
-              <path d="M740.1 178.8H449.5c-27.6 0-50 22.4-50 50s22.4 50 50 50h169.9L518.2 379.9c-14.7-6.2-30.5-9.4-46.4-9.4H120c-66.2.1-119.9 53.8-120 120v351.8c.1 66.2 53.8 119.9 120 120h351.8c66.2-.1 119.9-53.8 120-120V490.6c0-12.6-2-25-5.8-37l104.1-104.1v169.9c0 27.6 22.4 50 50 50s50-22.4 50-50V228.8c0-27.7-22.4-50-50-50zM491.8 842.3c-.1 11-9 19.9-20 20H120c-11-.1-19.9-9-20-20V490.6c.1-11 9-19.9 20-20h307.5L267 631.1c-19.4 19.6-19.3 51.3.3 70.7 19.5 19.3 50.9 19.3 70.4 0l154-154 .1 294.5z"></path>
-            </svg>
-          </a>
-        </div>
-
-      </div>
-    </footer>
-
-
-  </div> <!-- /.body-wrapper -->
-
-  <section id="edit-page">
-    <a href="#" class="a-btn" title="Edit this page in Netlify CMS">Edit this page</a>
   </section>
-
-  <script src="{{ site.baseurl }}/dist/design-system.js" charset="utf-8"></script>
-
-</body>
-
-</html>
+</div><!-- /.wrap -->

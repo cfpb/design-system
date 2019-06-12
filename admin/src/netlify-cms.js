@@ -15,10 +15,10 @@ CMS.registerWidget('statusWidget', 'select', statusPreview);
 CMS.registerWidget('accessibilityWidget', 'markdown', accessibilityPreview);
 CMS.registerWidget('researchWidget', 'markdown', researchPreview);
 CMS.registerWidget('usageWidget', 'markdown', usagePreview);
-CMS.registerWidget('variationWidget', 'markdown', variationPreview);
+CMS.registerWidget('variationWidget', 'text', variationPreview);
 // CMS.registerWidget('variationsWidget', 'list', variationsPreview);
 
-CMS.registerPreviewStyle('https://cfpb.github.io/capital-framework/dist/css/main.css');
+CMS.registerPreviewStyle('https://cfpb.github.io/design-manual/static/css/main.min.css');
 CMS.registerPreviewStyle('/design-system/dist/design-system.css');
 
 // CMS.registerEditorComponent({

@@ -1,6 +1,7 @@
 ---
 title: Text inputs
 slug: text-inputs
+layout: component
 status: in-progress
 intro: >-
   This would be a general description of text inputs. This is a link to Forms
@@ -66,4 +67,3 @@ research: >-
   qui omniam quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il
   ipisque sunt, idipicia volor aut eat.
 ---
-

@@ -1,0 +1,68 @@
+.a-text-input {
+    // Reset the browser's default styling.
+    appearance: none;
+    display: inline-block;
+    padding: unit( 7px / @base-font-size-px, em );
+    border: 1px solid @input-border;
+    background: @input-bg;
+    color: @input-text;
+
+    &:hover,
+    &.hover {
+        border-color: @input-border__hover;
+        outline: 1px solid @input-border__hover;
+    }
+
+    &:focus,
+    &.focus {
+        border-color: @input-border__focused;
+        box-shadow: 0 0 0 1px @input-border__focused;
+        outline: 1px dotted @input-border__focused;
+
+        // The outline-offset property is not supported everywhere (e.g. IE)
+        // but it adds a nice touch in browsers where it is.
+        outline-offset: 2px;
+    }
+
+    &:disabled {
+
+        &,
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: @input-text__disabled;
+            background-color: @input-bg__disabled;
+            cursor: not-allowed;
+
+            // Cancel the hover and focus states.
+            border-color: @input-border;
+            outline: none;
+        }
+    }
+
+    &__error {
+        border-color: @input-border__error;
+        outline: 1px solid @input-border__error;
+    }
+
+    &__warning {
+        border-color: @input-border__warning;
+        outline: 1px solid @input-border__warning;
+    }
+
+    &__success {
+        border-color: @input-border__success;
+        outline: 1px solid @input-border__success;
+    }
+}
+
+// Overrides extra left padding.
+// http://stackoverflow.com/questions/11127891/how-can-i-get-rid-of-horizontal-padding-or-indent-in-html5-search-inputs-in-webk
+::-webkit-search-decoration {
+    appearance: none;
+}
+
+::placeholder {
+    color: @input-text__placeholder;
+}

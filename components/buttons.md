@@ -9,30 +9,30 @@ intro: >-
   [links](https://consumerfinance.gov) should lead users to another page or
   further information.
 variations:
-  - variation: |-
-      #### Default state
-
+  - variation_code_snippet: |-
       <a href="#" class="a-btn" title="Test button">Anchor Tag</a>
       <button class="a-btn" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn">
-  - variation: |-
-      #### Hovered state
-
+    variation_description: The default state is the most default state of them all.
+    variation_name: Default state
+  - variation_code_snippet: |-
       <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
       <button class="a-btn hover" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn hover">
-  - variation: |-
-      #### Focused state
-
+    variation_description: Use the hover state when hovering.
+    variation_name: Hovered state
+  - variation_code_snippet: |-
       <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
       <button class="a-btn focus" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn focus">
-  - variation: |-
-      #### Active state
-
+    variation_description: Stay focused on the focused state.
+    variation_name: Focused state
+  - variation_code_snippet: |-
       <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
       <button class="a-btn active" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn active">
+    variation_description: Want a button to look active? Use the active state.
+    variation_name: Active state
 usage: >-
   **Use cases**
 
@@ -62,3 +62,4 @@ usage: >-
 accessibility: It's important that buttons are accessible. Here's how to ensure that.
 research: We studied buttons for a long time.
 ---
+

@@ -1,0 +1,167 @@
+.m-hero {
+    background-color: @hero-bg;
+
+    &_wrapper {
+        padding-top: unit( @grid_gutter-width / @base-font-size-px, em );
+        padding-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+
+        .respond-to-min( @bp-sm-min, {
+            // IE specific fix.
+            display: table;
+
+            @supports( display: flex ) {
+                display: flex;
+            }
+
+            min-height: @hero-desktop-height - ( @grid_gutter-width * 2 );
+        } );
+
+        .respond-to-min( @bp-lg-min, {
+            padding-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
+            padding-bottom: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
+            min-height: @hero-desktop-height - ( ( @grid_gutter-width * 1.5 ) * 2 );
+        } );
+    }
+
+    &_text {
+        .grid_column( 1, 1 );
+
+        .respond-to-min( @bp-sm-min, {
+            .grid_column( 7, 12 );
+
+            // IE specific fix
+            display: table-cell;
+            vertical-align: middle;
+
+            @supports ( display: flex ) {
+                display: block;
+                margin: auto;
+            }
+        } );
+    }
+
+    &_heading {
+        .heading-1();
+
+        .respond-to-max( @bp-sm-max, {
+            .heading-2();
+        } );
+    }
+
+    &_subhead {
+        // Not using the `.heading-3()` mixin here because we want the weight
+        // to remain Regular on smaller screens.
+        font-size: @size-iii;
+        line-height: 1.25;
+
+        .respond-to-max( @bp-sm-max, {
+            font-size: @size-iv;
+        } );
+    }
+
+    &_image-wrapper {
+        .grid_column( 1, 1 );
+
+        overflow: hidden;
+
+        .respond-to-min( @bp-sm-min, {
+            .grid_column( 5, 12 );
+
+            // IE specific fix.
+            display: table-cell;
+            vertical-align: middle;
+
+            @supports ( display: flex ) {
+                display: block;
+                margin: auto;
+            }
+        } );
+
+        .respond-to-max( @bp-xs-max, {
+            margin-top: unit( @grid_gutter-width / @base-font-size-px, em );
+        } );
+    }
+
+    &_image {
+        .u-flexible-container-mixin( 16, 9 );
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__knockout {
+        background-color: @hero-knockout-bg;
+        color: @hero-knockout-text;
+    }
+
+    &__bleeding {
+        .respond-to-min( @bp-sm-min, {
+
+            .m-hero_wrapper {
+                position: relative;
+            }
+
+            .m-hero_image-wrapper {
+                margin-top: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
+                margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
+
+                // IE specific fix.
+                position: absolute;
+                height: 100%;
+
+                @supports ( display: flex ) {
+                    position: relative;
+                    height: initial;
+                }
+            }
+
+            .m-hero_image {
+                // Remove the flexible container padding so that the image is a consistent width.
+                padding-bottom: 0 !important;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                background-size: cover;
+            }
+        } );
+
+        .respond-to-min( @bp-lg-min, {
+            .m-hero_image-wrapper {
+                margin-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em ) * -1;
+                margin-bottom: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em ) * -1;
+            }
+        } );
+    }
+
+    &__overlay {
+        .m-hero_wrapper {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .respond-to-max( @bp-xs-max, {
+
+            .m-hero_wrapper {
+                // Overwrite the image that is set in the markup because
+                // we are showing the image container below instead.
+                background-image: none !important;
+
+                // Remove wrapper bottom padding.
+                padding-bottom: 0;
+            }
+
+            .m-hero_image-wrapper {
+                position: relative;
+                border-width: 0;
+            }
+        } );
+
+        .respond-to-min( @bp-sm-min, {
+            .m-hero_image {
+                display: none;
+            }
+        } );
+    }
+}

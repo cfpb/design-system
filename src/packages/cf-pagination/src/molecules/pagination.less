@@ -1,0 +1,86 @@
+//
+// Pagination
+//
+
+.m-pagination {
+    position: relative;
+
+    &_form {
+        padding: unit( 5px / @base-font-size-px, em );
+        border-radius: unit( 4px / @base-font-size-px, em );
+        background: @pagination-bg;
+        color: @pagination-text;
+        text-align: center;
+    }
+
+    &_current-page {
+        // 45px is a magic number to provide enough room for three digits
+        // and the number spinners for type="number" inputs on desktop
+        width: unit( 45px / @base-font-size-px, em );
+
+        // 10px + a normal inline single space ~= spec'ed value of 15px
+        margin-right: unit( 10px / @base-font-size-px, em );
+        margin-left: unit( 10px / @base-font-size-px, em );
+        font-weight: 500;
+        text-align: right;
+    }
+
+    &_label {
+        display: inline-block;
+
+        // 10px + a normal inline single space ~= spec'ed value of 15px
+        margin-right: unit( 10px / @base-font-size-px, em );
+        vertical-align: middle;
+    }
+
+    &_btn-submit {
+        margin: 0;
+        vertical-align: middle;
+    }
+
+    &_btn-prev,
+    &_btn-next {
+        min-width: @pagination-btn-min-width-px;
+
+        // 22px is a magic number to vertically center the type in the button
+        // TODO: Consider refactoring with flexbox for vertical centering
+        line-height: 22px;
+        text-align: center;
+
+        &.a-btn__disabled {
+            background-color: @pagination-bg;
+            border-color: transparent;
+        }
+    }
+
+    &_btn-next {
+        position: absolute;
+        right: 0;
+    }
+
+    .respond-to-max( @bp-xs-max, {
+        &_btn-prev,
+        &_btn-next {
+            margin-bottom: unit( 15px / @base-font-size-px, em );
+        }
+    } );
+
+    .respond-to-min( @bp-sm-min, {
+        &_btn-prev,
+        &_btn-next {
+            height: 100%;
+        }
+
+        &_btn-prev {
+            position: absolute;
+
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &_btn-next {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    } );
+}

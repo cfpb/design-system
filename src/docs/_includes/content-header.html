@@ -1,0 +1,8 @@
+<header class="content-header">
+    <h1 class="content-header_heading">{{ page.title }}</h1>
+    {% if page.description %}
+    <div class="content-header_description">
+    	{{ page.description | markdownify }}
+    </div>
+    {% endif %}
+</header>

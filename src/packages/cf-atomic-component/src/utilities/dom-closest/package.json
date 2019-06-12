@@ -1,0 +1,27 @@
+{
+  "name": "@cfpb/dom-closest",
+  "version": "1.0.0",
+  "description": "Utility for finding the closest parent of the current element (or the current element itself) which matches the selector.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Run gulp test\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfpb/AtomicComponent.git"
+  },
+  "author": {
+    "name": "Consumer Financial Protection Bureau",
+    "email": "tech@cfpb.gov",
+    "url": "https://consumerfinance.gov"
+  },
+  "license": "CC0-1.0",
+  "keywords": [
+    "DOM closest",
+    "Find parent element "
+  ],
+  "bugs": {
+    "url": "https://github.com/cfpb/AtomicComponent/issues"
+  },
+  "homepage": "https://github.com/cfpb/AtomicComponent#readme"
+}

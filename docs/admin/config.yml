@@ -1,0 +1,51 @@
+backend:
+  name: github
+  repo: test-things/design-system
+  branch: master
+  site_domain: localhost:4000
+  base_url: https://netlifycms-auth.glitch.me
+
+logo_url: https://cfpb.github.io/design-manual/static/img/logo/Logo0_@2.png
+publish_mode: editorial_workflow
+media_folder: docs/images/uploads
+
+collections:
+  - name: 'components'
+    label: 'Components'
+    folder: 'docs/components/'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {name: 'title', label: 'Title', widget: 'string'}
+      - {name: 'slug', label: 'Slug', widget: 'slugWidget'}
+      - {name: 'layout', value: 'page', widget: 'hidden'}
+      - {name: 'category', value: 'Page components', widget: 'hidden'}
+      - name: 'status'
+        label: 'Implementation status'
+        widget: 'statusWidget'
+        options:
+          - label: 'Proposed'
+            value: 'proposed'
+          - label: 'In progress'
+            value: 'in-progress'
+          - label: 'Beta'
+            value: 'beta'
+          - label: 'Released'
+            value: 'released'
+      - {name: 'intro', label: 'Intro text', widget: 'introWidget'}
+      - name: 'variations'
+        label: 'Variations'
+        widget: 'list'
+        fields:
+          - name: 'variation_name'
+            label: 'Variation name'
+            widget: 'variationNameWidget'
+          - name: 'variation_description'
+            label: 'Variation description'
+            widget: 'variationDescriptionWidget'
+          - name: 'variation_code_snippet'
+            label: 'Variation code snippet'
+            widget: 'variationCodeSnippetWidget'
+      - {name: 'usage', label: 'Usage', widget: 'usageWidget'}
+      - {name: 'accessibility', label: 'Accessibility', widget: 'accessibilityWidget'}
+      - {name: 'research', label: 'Research', widget: 'researchWidget'}

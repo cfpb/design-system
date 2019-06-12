@@ -1,0 +1,27 @@
+{
+  "name": "type-checkers",
+  "version": "1.0.1",
+  "description": "Various utility functions to check Javascript types and primitives.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Run gulp test\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfpb/AtomicComponent.git"
+  },
+  "author": {
+    "name": "Consumer Financial Protection Bureau",
+    "email": "tech@cfpb.gov",
+    "url": "https://consumerfinance.gov"
+  },
+  "license": "CC0-1.0",
+  "keywords": [
+    "Javascript type checkers",
+    "Javascript primitives"
+  ],
+  "bugs": {
+    "url": "https://github.com/cfpb/AtomicComponent/issues"
+  },
+  "homepage": "https://github.com/cfpb/AtomicComponent#readme"
+}

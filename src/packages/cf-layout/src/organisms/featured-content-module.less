@@ -1,0 +1,83 @@
+.o-featured-content-module {
+    .u-clearfix();
+
+    position: relative;
+    min-height: 220px;
+    background-color: @block__bg;
+
+    .respond-to-min( @fcm-bp-min, {
+        display: flex;
+    } );
+
+    .respond-to-range( @bp-sm-min, @fcm-bp-max, {
+        padding-right: unit( @grid_gutter-width / @base-font-size-px, em );
+        padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+    } );
+
+    &_text {
+        padding-top: unit( @grid_gutter-width / @base-font-size-px, em );
+        padding-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+
+        .respond-to-max( @bp-xs-max, {
+            padding-right: unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
+            padding-left: unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
+        } );
+
+        .respond-to-min( @fcm-bp-min, {
+            flex: 1;
+            padding-right: 300px;
+            padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+        } );
+    }
+
+    &_visual {
+        .respond-to-min( @fcm-bp-min, {
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            width: 270px;
+        } );
+    }
+
+    &_img {
+        display: block;
+
+        .respond-to-max( @bp-sm-max, {
+            margin-right: auto;
+            margin-left: auto;
+        } );
+
+        .respond-to-min( @fcm-bp-min, {
+            height: 100%;
+            max-width: none;
+        } );
+    }
+
+    // Modifiers
+    &__right {
+        .o-featured-content-module_img {
+            .respond-to-min( @fcm-bp-min, {
+                float: right;
+            } );
+        }
+    }
+
+    &__center {
+        .o-featured-content-module_img {
+            .respond-to-min( @fcm-bp-min, {
+                position: relative;
+                left: 50%;
+
+                transform: translateX( -50% );
+
+                .lt-ie9 & {
+                    position: absolute;
+                    right: -100%;
+                    left: -100%;
+                    margin: auto;
+                }
+            } );
+        }
+    }
+}

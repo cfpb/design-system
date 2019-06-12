@@ -1,0 +1,26 @@
+{
+  "name": "@cfpb/object-assign",
+  "version": "1.0.0",
+  "description": "Utility used to copy Javascript object properties from one or more source objects to a target object",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Run gulp test\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfpb/AtomicComponent.git"
+  },
+  "author": {
+    "name": "Consumer Financial Protection Bureau",
+    "email": "tech@cfpb.gov",
+    "url": "https://consumerfinance.gov"
+  },
+  "license": "CC0-1.0",
+  "keywords": [
+    "Javascript object assign"
+  ],
+  "bugs": {
+    "url": "https://github.com/cfpb/AtomicComponent/issues"
+  },
+  "homepage": "https://github.com/cfpb/AtomicComponent#readme"
+}

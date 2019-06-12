@@ -1,0 +1,16 @@
+{
+  "name": "cf-expandables",
+  "version": "10.0.0",
+  "description": "Capital Framework expandables",
+  "main": "src/cf-expandables.js",
+  "less": "src/cf-expandables.less",
+  "style": "cf-expandables.css",
+  "dependencies": {
+    "cf-atomic-component": "^10.0.0",
+    "cf-core": "^10.0.0",
+    "cf-icons": "^10.0.0"
+  },
+  "keywords": [
+    "expandable"
+  ]
+}

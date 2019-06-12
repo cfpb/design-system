@@ -1,0 +1,11 @@
+{
+  "name": "cf-core",
+  "version": "10.0.0",
+  "description": "Capital Framework core styles",
+  "less": "src/cf-core.less",
+  "style": "cf-core.css",
+  "dependencies": {
+    "normalize-css": "^2.0.0",
+    "normalize-legacy-addon": "0.1.0"
+  }
+}

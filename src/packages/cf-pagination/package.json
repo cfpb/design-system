@@ -1,0 +1,15 @@
+{
+  "name": "cf-pagination",
+  "version": "10.0.0",
+  "description": "Capital Framework pagination",
+  "less": "src/cf-pagination.less",
+  "style": "cf-pagination.css",
+  "dependencies": {
+    "cf-buttons": "^10.0.0",
+    "cf-core": "^10.0.0",
+    "cf-icons": "^10.0.0"
+  },
+  "keywords": [
+    "pagination"
+  ]
+}

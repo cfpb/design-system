@@ -1,0 +1,7 @@
+env:
+  jest: true
+rules:
+  wrap-iife: 0
+  no-process-env: 0
+  no-console: 0
+  max-lines-per-function: 0

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<main class="content content__1-3" role="main">
+    <div class="content_bar"></div>
+    <div class="content_wrapper">
+        <aside class="content_sidebar">
+            {% include sidebar.html %}
+        </aside>
+        <section class="content_main">
+            <h2>{{ page.title }}</h2>
+
+            {% include status.html %}
+
+            {% capture intro %}{{ page.intro | markdownify }}{% endcapture %}
+            {% include intro.html %}
+
+            {% for variation in page.variations %}
+              {% capture name %}{{ variation.variation_name }}{% endcapture %}
+              {% include variation/name.html %}
+              {% capture description %}{{ variation.variation_description | markdownify }}{% endcapture %}
+              {% include variation/description.html %}
+              {% capture code_snippet %}{{ variation.variation_code_snippet }}{% endcapture %}
+              {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape | newline_to_br }}{% endcapture %}
+              {% include variation/code-snippet.html %}
+            {% endfor %}
+
+            {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}
+            {% include usage.html %}
+
+            {% capture accessibility %}{{ page.accessibility | markdownify }}{% endcapture %}
+            {% include accessibility.html %}
+
+            {% capture research %}{{ page.research | markdownify }}{% endcapture %}
+            {% include research.html %}
+        </section>
+    </div>
+</main>

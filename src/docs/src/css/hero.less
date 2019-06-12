@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+    padding: unit( 60 / @base-font-size-px, em ) 0;
+    background: @green-20;
+}
+
+.hero_content {
+    .grid_column( 1, 1 );
+}
+
+.hero_heading {
+    margin: 0;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.hero_code {
+    background: @dark-gray;
+    color: @gray-10;
+    font-size: 1.5em;
+    padding: .5em .5em;
+    margin: 1.5em 0;
+}
+
+@media (min-width: 1100px) {
+    .hero_code {
+        width: 60%;
+    }
+}
+
+.hero_p {
+    margin-bottom: .2em;
+    font-size: 1.25em;
+
+    .a-link_text {
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 770px) {
+
+    .hero_heading {
+        font-size: 2em;
+    }
+
+    .hero_code {
+        font-size: 1em;
+    }
+
+    .hero_p {
+        margin-bottom: 0em;
+        font-size: 1em;
+    }
+
+}

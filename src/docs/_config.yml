@@ -1,0 +1,22 @@
+# Base configuration
+permalink: /:title
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Title
+title: Capital Framework
+subtitle: Everything you wanted to know about Capital Framework
+
+# Author/Organization info to be displayed in the templates
+author:
+  name: The CFPB
+  url: http://cfpb.github.io/
+
+# Ignores.
+exclude:
+  - src

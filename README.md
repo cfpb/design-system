@@ -1,16 +1,16 @@
-# Netlify CMS Design System
+# CFPB's Design System
 
-### Getting started
+The documentation website is in `docs/`. The code for Capital Framework, our UI library, is in `src/`.
+
+### Getting started with our docs
 
 Clone or fork the repo, then install dependencies:
 
 ```shell
 git clone https://github.com/test-things/design-system.git
-cd design-system
+cd design-system/docs
 yarn
 ```
-
-### Development
 
 To run a local copy of Netlify CMS that will open PRs against this GitHub repository:
 
@@ -26,3 +26,8 @@ Webpack and Jekyll will watch your JS and HTML and recompile when changed.
 Custom Netlify CMS widgets are in `admin/src/`.  
 Jekyll templates are in `_layouts/`.  
 Design system components are in `components/`.
+
+### Getting started with Capital Framework
+
+We're in the process of migrating Capital Framework to this repository.
+For now, it still lives at [cfpb/capital-framework](https://github.com/cfpb/capital-framework). Stay tuned.

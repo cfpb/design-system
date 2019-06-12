@@ -1,0 +1,89 @@
+//
+// Notification
+//
+
+.m-notification {
+    display: none;
+    position: relative;
+    padding: @notification-padding__px;
+    background: @notification-bg;
+    border: 1px solid @notification-border;
+
+    & > .cf-icon-svg {
+        position: absolute;
+        fill: @notification-icon;
+    }
+
+    &__success {
+        background: @notification-bg-success;
+        border-color: @notification-border-success;
+
+        .cf-icon-svg {
+            fill: @notification-icon-success;
+        }
+    }
+
+    &__warning {
+        background: @notification-bg-warning;
+        border-color: @notification-border-warning;
+
+        .cf-icon-svg {
+            fill: @notification-icon-warning;
+        }
+    }
+
+    &__error {
+        background: @notification-bg-error;
+        border-color: @notification-border-error;
+
+        .cf-icon-svg {
+            fill: @notification-icon-error;
+        }
+    }
+
+    &__visible {
+        display: block;
+    }
+
+    // Only adding left padding if an icon is present.
+    .cf-icon-svg + &_content {
+        padding-left: unit( 25px / @base-font-size-px, em );
+    }
+
+    &_message {
+        margin-bottom: 0;
+    }
+
+    &_explanation {
+        margin-top: unit( 5px / @base-font-size-px, em );
+    }
+
+    // We need to provide a margin for links if an explanation is absent.
+    &_message + .m-list {
+        margin-top: unit( 15px / @base-font-size-px, em );
+    }
+
+    // Make adjustments to the icon, explanation, and links if at non-mobile.
+    .respond-to-min( @bp-sm-min, {
+
+        // Increase the icon size.
+        .cf-icon-svg {
+            font-size: unit( @size-iv / @base-font-size-px, em );
+        }
+
+        // Remove default margin between explanation and list of links.
+        &_explanation {
+            margin-bottom: 0;
+        }
+
+        // Decrease the margin between the links and the message/explanation.
+        .m-list {
+            margin-top: unit( 5px / @base-font-size-px, em );
+        }
+
+        // Decrease the margin between link items.
+        .m-list_item {
+            margin-bottom: unit( 5px / @base-font-size-px, em );
+        }
+    } );
+}

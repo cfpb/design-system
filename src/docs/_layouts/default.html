@@ -1,0 +1,18 @@
+{% include page-top.html %}
+
+{% include header.html %}
+
+<main class="content content__1-3" id="main" role="main">
+  <div class="content_bar"></div>
+  <div class="content_wrapper">
+    {% include section-nav.html %}
+    <section class="content_main">
+      {% include content-header.html %}
+      {{ content }}
+    </section>
+  </div>
+</main>
+
+{% include footer.html %}
+
+{% include page-bottom.html %}

@@ -1,0 +1,24 @@
+- name: src/
+  slug: src
+  definition: |
+    The working folder containing component source files.
+- name: screenshot.png
+  slug: screenshot
+  definition: |
+    Screenshot of the component in a browser.
+- name: usage.md
+  slug: usage
+  definition: |
+    Markdown file containing code snippets of how to use the component.
+    [cf-buttons](https://raw.githubusercontent.com/cfpb/capital-framework/master/packages/cf-buttons/usage.md)
+    is a good example.
+- name: package.json
+  slug: packagejson
+  definition: |
+    Used to record the component's dependencies, keywords and description, among
+    other things.
+    The `less` property should point to the component's Less file,
+    `styles` to the component's compiled CSS file, and `main` to the component's
+    JavaScript file, if applicable.
+    Whenever you update a component, increment the component's package.json file
+    appropriately.

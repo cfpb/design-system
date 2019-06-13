@@ -15,6 +15,7 @@ collections:
     label_singular: 'Component'
     folder: 'docs/components/'
     create: true
+    delete: false
     slug: '{{slug}}'
     filter: {field: 'layout', value: 'component'}
     fields:

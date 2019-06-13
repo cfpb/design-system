@@ -8,6 +8,15 @@ layout: default
         {% include sidebar.html %}
     </aside>
     <section class="content_main">
+
+        <section id="edit-page">
+          <a class="a-btn" href="#">
+              Edit this page
+              <span class="a-btn_icon
+                           a-btn_icon__on-right">{% include icons/edit.svg %}</span>
+          </a>
+        </section>
+
         <h2>{{ page.title }}</h2>
 
         {% include status.html %}

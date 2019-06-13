@@ -4825,8 +4825,7 @@ code {
 }
 pre {
   display: block;
-  margin-top: 0;
-  margin-bottom: 1em;
+  margin: 1em 0;
   padding: 1em;
   font-size: 0.8em;
   line-height: 1.4;
@@ -5121,4 +5120,8 @@ pre code {
   position: relative;
   margin-left: -15px;
   margin-right: -15px;
+}
+#edit-page {
+  display: none;
+  float: right;
 }

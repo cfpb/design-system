@@ -12,12 +12,13 @@ media_folder: docs/images/uploads
 collections:
   - name: 'components'
     label: 'Components'
+    label_singular: 'Component'
     folder: 'docs/components/'
     create: true
     slug: '{{slug}}'
+    filter: {field: 'layout', value: 'component'}
     fields:
       - {name: 'title', label: 'Title', widget: 'string'}
-      - {name: 'slug', label: 'Slug', widget: 'slugWidget'}
       - {name: 'layout', value: 'component', widget: 'hidden'}
       - {name: 'category', value: 'components', widget: 'hidden'}
       - name: 'status'
@@ -25,13 +26,13 @@ collections:
         widget: 'statusWidget'
         options:
           - label: 'Proposed'
-            value: 'proposed'
+            value: 'Proposed'
           - label: 'In progress'
-            value: 'in-progress'
+            value: 'In progress'
           - label: 'Beta'
-            value: 'beta'
+            value: 'Beta'
           - label: 'Released'
-            value: 'released'
+            value: 'Released'
       - {name: 'intro', label: 'Intro text', widget: 'introWidget'}
       - name: 'variations'
         label: 'Variations'

@@ -7,7 +7,7 @@ const hideEl = el => el.style.display = 'none';
 const showEl = el => el.style.display = 'block';
 
 const getComponentEditableURL = component =>
-  `/design-system/admin/#/collections/page-component/entries/${component}`;
+  `/design-system/admin/#/collections/components/entries/${component}`;
 
 const getComponentFromURL = url => {
   const urlParts = url.match(/components\/([\w\-]+)/);

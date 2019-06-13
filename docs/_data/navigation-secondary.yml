@@ -1,147 +1,30 @@
-- category: Overview
-  text: Home
-  url: index.html
-- category: Best practices
-  text: Accessibility best practices
-  url: best-practices/accessibility-best-practices.html
-- category: Best practices
-  text: Design principles
-  url: best-practices/design-principles.html
-- category: Best practices
-  text: Form best practices
-  url: best-practices/form-best-practices.html
-- category: Brand guidelines
-  text: Beam pattern
-  url: brand-guidelines/beam-pattern.html
-- category: Brand guidelines
-  text: Color
-  url: brand-guidelines/color-principles.html
-- category: Brand guidelines
-  text: Illustrations
-  url: brand-guidelines/illustration.html
-- category: Brand guidelines
-  text: Isocons
-  url: brand-guidelines/isocons.html
-- category: Brand guidelines
-  text: Logo
-  url: brand-guidelines/logo.html
-- category: Brand guidelines
-  text: Minicons
-  url: brand-guidelines/minicons.html
-- category: Brand guidelines
-  text: Photography
-  url: brand-guidelines/photography.html
-- category: Brand guidelines
-  text: Typography
-  url: brand-guidelines/typography.html
-- category: Brand guidelines
-  text: Video
-  url: brand-guidelines/video.html
-- category: Global elements
-  text: Browse page
-  url: global-elements/browse-page.html
-- category: Global elements
-  text: Document detail page
-  url: global-elements/document-detail.html
-- category: Global elements
-  text: Filterable list pages
-  url: global-elements/filterable-list-pages.html
-- category: Global elements
-  text: Grid
-  url: global-elements/grid.html
-- category: Global elements
-  text: Heroes
-  url: global-elements/heroes.html
-- category: Global elements
-  text: Item introduction
-  url: global-elements/item-introduction.html
-- category: Global elements
-  text: Landing page
-  url: global-elements/landing-page.html
-- category: Global elements
-  text: Learn page
-  url: global-elements/learn-page.html
-- category: Global elements
-  text: Sublanding page
-  url: global-elements/sublanding-page.html
-- category: Global elements
-  text: Text introductions
-  url: global-elements/text-introductions.html
 - category: components
   text: 25/75 image and text
-  url: components/25-75.html
+  url: components/25-75-image-text
 - category: components
   text: 50/50 image and text
-  url: components/50-50.html
+  url: components/50-50-image-text
 - category: components
   text: Buttons
-  url: components/buttons.html
+  url: components/buttons
 - category: components
   text: Contact information
-  url: components/contact-information.html
+  url: components/contact-information
 - category: components
   text: Email sign-up
-  url: components/email-sign-up.html
+  url: components/email-sign-up
 - category: components
   text: Expandables
-  url: components/expandables.html
+  url: components/expandables
 - category: components
   text: Featured content modules
-  url: components/featured-content-module.html
+  url: components/featured-content-modules
 - category: components
   text: Filterable list control panel
-  url: components/filter-control.html
+  url: components/filterable-list-control-panel
 - category: components
   text: Form fields
-  url: components/form-fields.html
+  url: components/form-fields
 - category: components
   text: Full width text
-  url: components/fullwidth-text.html
-- category: components
-  text: Link blob - half width
-  url: components/half-width-link-blob.html
-- category: components
-  text: Link blob - third width
-  url: components/third-width-link-blob.html
-- category: components
-  text: Links
-  url: components/links.html
-- category: components
-  text: Modals
-  url: components/modals.html
-- category: components
-  text: Sidebar/prefooter
-  url: components/sidebar-prefooter.html
-- category: components
-  text: Tables
-  url: components/tables.html
-- category: components
-  text: Wells
-  url: components/wells.html
-- category: Data visualization
-  text: Accessibility
-  url: data-visualization/accessibility.html
-- category: Data visualization
-  text: Accuracy
-  url: data-visualization/accuracy.html
-- category: Data visualization
-  text: Audience
-  url: data-visualization/audience.html
-- category: Data visualization
-  text: Chart components
-  url: data-visualization/chart-components.html
-- category: Data visualization
-  text: Chart types
-  url: data-visualization/chart-types.html
-- category: Data visualization
-  text: Color
-  url: data-visualization/color.html
-- category: Data visualization
-  text: Emphasis!
-  url: data-visualization/emphasis.html
-- category: components
-  text: Sticky note
-  url: components/sticky-note.html
-- category: components
-  text: Notifications
-  url: /components/notifications
+  url: components/full-width-text

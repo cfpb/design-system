@@ -40,7 +40,8 @@
     "start": "parallelshell \"bundle exec jekyll serve --watch --host=localhost\" \"yarn run watch\"",
     "compile-css": "lessc --include-path=../src/packages/:../src/node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/design-system.css",
     "watch": "webpack --watch",
-    "build": "bundle exec jekyll build && NODE_ENV=production webpack"
+    "build": "bundle exec jekyll build && NODE_ENV=production webpack && yarn run compile-css",
+    "install": "yarn --cwd ../src"
   },
   "dependencies": {
     "escape-html": "^1.0.3",

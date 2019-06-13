@@ -1,4 +1,4 @@
-const netlifyUser = localStorage.getItem('netlify-cms-user');
+// const netlifyUser = localStorage.getItem('netlify-cms-user');
 
 const editButton = document.getElementById('edit-page');
 
@@ -17,7 +17,8 @@ const getComponentFromURL = url => {
   return null;
 }
 
-if (netlifyUser && JSON.parse(netlifyUser).token && editButton) {
+// if (netlifyUser && JSON.parse(netlifyUser).token && editButton) {
+if (editButton) {
   const component = getComponentFromURL(window.location.pathname);
   const url = getComponentEditableURL(component);
   showEl(editButton);

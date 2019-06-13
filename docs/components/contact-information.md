@@ -47,7 +47,7 @@ usage: >
   necessary to support this standard.)
 accessibility: >-
   Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend
-  uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num
+  uciunt od estis simpor apitia secatessit ma presciaera esequis antiae num
   nullupt atiorporro modicim res dolora vent volore acius, saperis sitat arum,
   et imus dolorec epelescias eos sita quam incidis imoleseque officitam faccus
   qui dis molorro eos ernam, ullam autemodia verit quosam od quosapicae

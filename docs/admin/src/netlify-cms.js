@@ -21,8 +21,7 @@ CMS.registerWidget('variationDescriptionWidget', 'markdown', variationDescriptio
 CMS.registerWidget('variationCodeSnippetWidget', 'text', variationCodeSnippetPreview);
 // CMS.registerWidget('variationsWidget', 'list', variationsPreview);
 
-CMS.registerPreviewStyle('https://cfpb.github.io/capital-framework/dist/css/main.css');
-CMS.registerPreviewStyle('/design-system/dist/design-system.css');
+CMS.registerPreviewStyle('/design-system/dist/css/design-system.css');
 
 // CMS.registerEditorComponent({
 //   // Internal id of the component

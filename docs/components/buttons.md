@@ -2,6 +2,7 @@
 title: Buttons
 slug: buttons
 layout: component
+category: components
 status: proposed
 intro: >-
   Buttons signal actions. They should be used sparingly; each additional button

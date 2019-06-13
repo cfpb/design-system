@@ -93,8 +93,39 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var netlifyUser = localStorage.getItem('netlify-cms-user');\nvar editButton = document.getElementById('edit-page');\n\nvar hideEl = function hideEl(el) {\n  return el.style.display = 'none';\n};\n\nvar showEl = function showEl(el) {\n  return el.style.display = 'block';\n};\n\nvar getComponentEditableURL = function getComponentEditableURL(component) {\n  return \"/design-system/admin/#/collections/page-component/entries/\".concat(component);\n};\n\nvar getComponentFromURL = function getComponentFromURL(url) {\n  var urlParts = url.match(/components\\/([\\w\\-]+)/);\n\n  if (urlParts && urlParts[1]) {\n    return urlParts[1];\n  }\n\n  return null;\n};\n\nif (netlifyUser && JSON.parse(netlifyUser).token && editButton) {\n  var component = getComponentFromURL(window.location.pathname);\n  var url = getComponentEditableURL(component);\n  showEl(editButton);\n  editButton.children[0].setAttribute('href', url);\n}\n\n//# sourceURL=webpack:///./assets/js/main.js?");
+var netlifyUser = localStorage.getItem('netlify-cms-user');
+var editButton = document.getElementById('edit-page');
+
+var hideEl = function hideEl(el) {
+  return el.style.display = 'none';
+};
+
+var showEl = function showEl(el) {
+  return el.style.display = 'block';
+};
+
+var getComponentEditableURL = function getComponentEditableURL(component) {
+  return "/design-system/admin/#/collections/page-component/entries/".concat(component);
+};
+
+var getComponentFromURL = function getComponentFromURL(url) {
+  var urlParts = url.match(/components\/([\w\-]+)/);
+
+  if (urlParts && urlParts[1]) {
+    return urlParts[1];
+  }
+
+  return null;
+};
+
+if (netlifyUser && JSON.parse(netlifyUser).token && editButton) {
+  var component = getComponentFromURL(window.location.pathname);
+  var url = getComponentEditableURL(component);
+  showEl(editButton);
+  editButton.children[0].setAttribute('href', url);
+}
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=design-system.js.map

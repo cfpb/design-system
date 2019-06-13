@@ -8,9 +8,10 @@ module.exports = {
     'design-system': './assets/js/main.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist', 'js'),
     filename: '[name].js'
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {

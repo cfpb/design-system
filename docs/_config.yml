@@ -16,6 +16,11 @@ repository: test-things/design-system
 # Title
 title: Design System
 name: Design System
+
+# Logo
+logourl: assets/img/cfpb-logo.png
+logoalt: Consumer Financial Protection Bureau
+
 # We currently don't use this in the templates
 subtitle: A set of principles and standards for the Consumer Financial Protection Bureau's design projects.
 

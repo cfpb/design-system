@@ -1,15 +1,9 @@
 <ul>
-    {% for link in site.data.navigation-secondary.secondarynav %}
+    {% for link in site.data.navigation-secondary %}
         {% if link.category == page.category %}
-            {% if link.internal == true %}
-                <li{% if link.text == page.title %} class="secondary-nav-active"{% endif %}>
-                    <a href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a>
-                </li>
-            {% else %}
-                <li{% if link.text == page.title %} class="secondary-nav-active"{% endif %}>
-                    <a href="{{ link.url }}">{{ link.text }}</a>
-                </li>
-            {% endif %}
+            <li{% if link.text == link.title %} class="secondary-nav-active"{% endif %}>
+                <a href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a>
+            </li>
         {% endif %}
     {% endfor %}
 </ul>

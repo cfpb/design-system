@@ -1,22 +1,8 @@
-mainnav:
-  - internal: true
-    text: Overview
-    url: index.html
-  - internal: true
-    text: Best practices
-    url: best-practices/best-practices.html
-  - internal: true
-    text: Brand guidelines
-    url: brand-guidelines/brand-guidelines.html
-  - internal: true
-    text: Global elements
-    url: global-elements/global-elements.html
-  - internal: true
-    text: Page components
-    url: page-components/page-components.html
-  - internal: true
-    text: Data visualization
-    url: data-visualization/data-visualization.html
-  - internal: false
-    text: Testing
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+- title: Get Started
+  url: get-started
+- title: Foundation
+  url: foundation
+- title: Components
+  url: components
+- title: Templates
+  url: templates

@@ -1,35 +1,19 @@
-<header id="header" class="header" role="banner">
-    <div class="wrapper">
-        <a class="skip-link" href="#content">Skip to main content</a>
-
-        <div class="site-title">
-            <h1>
-                <a class="title-link" href="{{ site.baseurl }}/">
-                    <span class="site-org">{{ site.org }}&nbsp;</span>{{ site.name }}
-                </a>
-            </h1>
-        </div>
-
-        <div class="site-logo">
-            <a href="http://www.consumerfinance.gov">
-                <img class="logo" src="{{ site.baseurl }}/{{ site.logourl }}" alt="{{ site.logoalt }}">
-            </a>
-        </div>
-
-        <nav role="navigation">
-            <ul class="main-nav">
-        {% for link in site.data.navigation-primary.mainnav %}
-            {% if link.internal == true %}
-                <li{% if link.text == page.category %} class="main-nav-active"{% endif %}>
-                    <a href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a>
-                </li>
-            {% else %}
-                <li{% if link.text == page.category %} class="main-nav-active"{% endif %}>
-                    <a href="{{ link.url }}">{{ link.text }}</a>
-                </li>
-            {% endif %}
-        {% endfor %}
-            </ul>
-        </nav>
+<a class="skip-link u-visually-hidden focusable" href="#main">Skip to Main Content</a>
+<header role="banner" class="site-header">
+  <div class="wrapper">
+    <div class="title content-l_col content-l_col-1-3">
+      <h1 class="title_heading">
+        <a class="title-link" href="{{ '/' | relative_url }}">
+          <span class="demi">Capital</span>Framework
+        </a>
+      </h1>
     </div>
+    <nav class="global-nav content-l_col content-l_col-2-3">
+      <ul class="global-nav_list">
+        {% for link in site.data.navigation-primary %}
+          <li class="nav-list-item"><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div> <!-- /.wrapper -->
 </header>

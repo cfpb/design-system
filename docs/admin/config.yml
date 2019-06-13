@@ -18,8 +18,8 @@ collections:
     fields:
       - {name: 'title', label: 'Title', widget: 'string'}
       - {name: 'slug', label: 'Slug', widget: 'slugWidget'}
-      - {name: 'layout', value: 'page', widget: 'hidden'}
-      - {name: 'category', value: 'Page components', widget: 'hidden'}
+      - {name: 'layout', value: 'component', widget: 'hidden'}
+      - {name: 'category', value: 'components', widget: 'hidden'}
       - name: 'status'
         label: 'Implementation status'
         widget: 'statusWidget'

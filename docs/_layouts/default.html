@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
   <meta name="description" content="{{ site.description }}">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cfpb.github.io/capital-framework/dist/css/main.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/dist/design-system.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/dist/css/design-system.css">
+  <script>
+      // Confirm availability of JS and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+  </script>
 </head>
 <body>
   <div class="body-wrapper">
@@ -14,6 +21,6 @@
     {{ content }}
     {% include footer.html %}
   </div>
-  <script src="{{ site.baseurl }}/dist/design-system.js" charset="utf-8"></script>
+  <script src="{{ site.baseurl }}/dist/js/design-system.js" charset="utf-8"></script>
 </body>
 </html>

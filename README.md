@@ -23,8 +23,8 @@ Visit http://localhost:4000/design-system/ to view the site and http://localhost
 The OAuth app is hosted on [glitch](https://glitch.com/edit/#!/netlifycms-auth).
 
 Webpack and Jekyll will watch your JS and HTML and recompile when changed.
-The website is in `docs/`.
-[Capital Framework](https://github.com/cfpb/capital-framework) has been copied into `src/`.
+The website is in `docs/`.  
+[Capital Framework](https://github.com/cfpb/capital-framework) has been copied into `src/`.  
 Custom Netlify CMS widgets are in `docs/admin/src/`.  
 Jekyll templates are in `docs/_layouts/`.  
 Design system components are in YAML in `docs/components/`.

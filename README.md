@@ -18,6 +18,8 @@ To run a local copy of Netlify CMS that will open PRs against this GitHub reposi
 yarn start
 ```
 
+#### Notes:
+
 - Visit http://localhost:4000/design-system/ to view the site.
 - Visit http://localhost:4000/design-system/admin to log into the CMS.
 - The OAuth app is hosted on [glitch](https://glitch.com/edit/#!/netlifycms-auth).

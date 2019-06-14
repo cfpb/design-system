@@ -6,8 +6,8 @@ status: Proposed
 intro: >-
   Buttons signal actions. They should be used sparingly; each additional button
   on a page reduces the visual prominence of a call to action. In contrast,
-  [links](https://consumerfinance.gov) should lead users to another page or
-  further information.
+  [links](https://example.com) should lead users to another page or further
+  information.
 variations:
   - variation_code_snippet: |-
       <a href="#" class="a-btn" title="Test button">Anchor Tag</a>
@@ -16,7 +16,7 @@ variations:
     variation_description: The default state is the most default state of them all.
     variation_name: Default state
   - variation_code_snippet: |-
-      <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
+      <a href="#" class="a-btn hover" title="Test button">Anker Tag</a>
       <button class="a-btn hover" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn hover">
     variation_description: Use the hover state when hovering.
@@ -60,16 +60,40 @@ usage: >-
   actions have icons to the right of the text, and those with “back” actions
   have icons to the left.
 accessibility: >-
-  Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis sitat arum, et imus dolorec epelescias eos sita quam incidis imoleseque officitam faccus qui dis molorro eos ernam, ullam autemodia dem verit quosam hit od quosapicae peditatur, velicati cum qui des aute sam ulles nosam quiamendiam et et, sum iunt, sim et esciundam, que comni con consendi duntur, quo magnim fugitam qui sam quatur sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi cum quiaes esequiasi volecate nos inimodi gniminc idipsam inihit volupta volorectam fuga. Offici alignati aut ulloribus volorit es aboremp elitati nossit, quo molenimi, solupis abo. Iciis eos eum fuga.
+  Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend
+  uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num
+  nullupt atiorporro modicim res dolora vent volore acius, saperis sitat arum,
+  et imus dolorec epelescias eos sita quam incidis imoleseque officitam faccus
+  qui dis molorro eos ernam, ullam autemodia dem verit quosam hit od quosapicae
+  peditatur, velicati cum qui des aute sam ulles nosam quiamendiam et et, sum
+  iunt, sim et esciundam, que comni con consendi duntur, quo magnim fugitam qui
+  sam quatur sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi
+  cum quiaes esequiasi volecate nos inimodi gniminc idipsam inihit volupta
+  volorectam fuga. Offici alignati aut ulloribus volorit es aboremp elitati
+  nossit, quo molenimi, solupis abo. Iciis eos eum fuga.
 
 
-  Peria qui dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et qui omniam quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque sunt, idipicia volor aut eat.
+  Peria qui dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et
+  qui omniam quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il
+  ipisque sunt, idipicia volor aut eat.
 research: >-
-  Quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis sitat arum, et imus dolorec epelescias eos sita quam incidis imoleseque officitam faccus qui dis molorro eos ernam, ullam autemodia dem verit quosam hit od quosapicae peditatur.
+  Quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis
+  antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis
+  sitat arum, et imus dolorec epelescias eos sita quam incidis imoleseque
+  officitam faccus qui dis molorro eos ernam, ullam autemodia dem verit quosam
+  hit od quosapicae peditatur.
 
 
-  Velicati cum qui des aute sam ulles nosam quiamendiam et et, sum iunt, sim et esciundam, que comni con consendi duntur, quo magnim fugitam qui sam quatur sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi cum quiaes esequiasi volecate nos inimodi gniminc idipsam inihit volupta volorectam fuga. Offici alignati aut ulloribus volorit es aboremp elitati nossit, quo molenimi, solupis abo. Iciis eos eum fuga.
+  Velicati cum qui des aute sam ulles nosam quiamendiam et et, sum iunt, sim et
+  esciundam, que comni con consendi duntur, quo magnim fugitam qui sam quatur
+  sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi cum quiaes
+  esequiasi volecate nos inimodi gniminc idipsam inihit volupta volorectam fuga.
+  Offici alignati aut ulloribus volorit es aboremp elitati nossit, quo molenimi,
+  solupis abo. Iciis eos eum fuga.
 
 
-  Dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et qui omniam quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque sunt, idipicia volor aut eat.
+  Dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et qui omniam
+  quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
+  sunt, idipicia volor aut eat.
 ---
+

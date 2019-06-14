@@ -1,9 +1,9 @@
 [build]
   base = "docs/"
   publish = "docs/_site/"
-  command = "yarn run build"
+  command = "yarn run build-preview && cd _site/ && mkdir design-system && mv !(design-system) design-system"
 
 [[redirects]]
-  from = "/*"
-  to = "/design-system/:splat"
-  status = 200
+  from = "/"
+  to = "/design-system"
+  status = 302

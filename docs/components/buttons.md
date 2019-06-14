@@ -60,22 +60,21 @@ usage: >-
   actions have icons to the right of the text, and those with “back” actions
   have icons to the left.
 accessibility: >-
-  Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend
-  uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num
-  nullupt atiorporro modicim res dolora vent volore acius, saperis sitat arum,
-  et imus dolorec epelescias eos sita quam incidis imoleseque officitam faccus
-  qui dis molorro eos ernam, ullam autemodia dem verit quosam hit od quosapicae
-  peditatur, velicati cum qui des aute sam ulles nosam quiamendiam et et, sum
-  iunt, sim et esciundam, que comni con consendi duntur, quo magnim fugitam qui
-  sam quatur sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi
-  cum quiaes esequiasi volecate nos inimodi gniminc idipsam inihit volupta
-  volorectam fuga. Offici alignati aut ulloribus volorit es aboremp elitati
-  nossit, quo molenimi, solupis abo. Iciis eos eum fuga.
+  ### Meaningful text labels
 
 
-  Peria qui dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et
-  qui omniam quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il
-  ipisque sunt, idipicia volor aut eat.
+
+
+  UI control text labels are very useful to all users, but getting them right is
+  particularly important to users with disabilities.
+
+
+
+
+  You should make sure that your button and link text labels are understandable
+  and distinctive. Don't just use "Click here" for your labels, as screenreader
+  users sometimes get up a list of buttons and form controls. The following
+  screenshot shows our controls being listed by VoiceOver on Mac.
 research: >-
   Quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis
   antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis

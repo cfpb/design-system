@@ -2,74 +2,86 @@
 title: Email sign-up
 layout: component
 category: components
-status: Proposed
+status: Beta
 intro: >-
-  Buttons signal actions. They should be used sparingly; each additional button
-  on a page reduces the visual prominence of a call to action. In contrast,
-  [links](https://consumerfinance.gov) should lead users to another page or
-  further information.
+  Email sign-ups are used to add individual email addresses to a specific
+  mailing list that is relevant to the content on the page or the section it is
+  contained within.
 variations:
-  - variation_code_snippet: |-
-      <a href="#" class="a-btn" title="Test button">Anchor Tag</a>
-      <button class="a-btn" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="a-btn">
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: |-
-      <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
-      <button class="a-btn hover" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="a-btn hover">
-    variation_description: Use the hover state when hovering.
-    variation_name: Hovered state
-  - variation_code_snippet: |-
-      <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
-      <button class="a-btn focus" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="a-btn focus">
-    variation_description: Stay focused on the focused state.
-    variation_name: Focused state
-  - variation_code_snippet: |-
-      <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
-      <button class="a-btn active" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="a-btn active">
-    variation_description: Want a button to look active? Use the active state.
-    variation_name: Active state
-usage: >-
+  - variation_code_snippet: |
+      <label class="a-label a-label__heading" for="textinput-example-default">
+          A text input
+      </label>
+      <input class="a-text-input"
+             type="text"
+             id="textinput-example-default"
+             placeholder="Enter text…"
+             value="Lorem ipsum">
+      <label class="a-label a-label__heading" for="textarea-example-default">
+          A textarea input
+      </label>
+      <textarea class="a-text-input"
+              id="textarea-example-default"
+              placeholder="Enter text…">Lorem Ipsum</textarea>
+    variation_description: >
+      Email sign ups allow users to stay engaged on a specific topic or content
+      type produced by the Bureau. Different page types will be connected to the
+      corresponding GovDelivery list based on the page topic (i.e. HMDA) or page
+      type (i.e. blog).
+
+
+      This pattern also includes a link to our privacy statement and a an
+      optional call to action to subscribe to an RSS feed.
+    variation_name: Basic email sign up
+usage: >
   **Use cases**
 
 
-  Use primary buttons for actions that go to the next step. Use secondary
-  buttons for actions that happen on the current page. Generous white space
-  lends focus and makes buttons more actionable. Avoid using multiple primary
-  buttons on a single page; there can be multiple secondary buttons per page.
+  - Use standard slug text: “Email updates”
 
+  - Description text will be unique to each mailing list and should clearly set
+  expectations for what a user will receive as a result of signing up. Email
+  address field should always be marked required.
 
-  Use an animated icon in a button to reassure the user that the action they are
-  attempting to perform is functioning as intended.
+  - Use standard helper text within form field: “john@example.com” and standard
+  privacy policy text before the button.
 
-
-  **Content guidelines**
-
-
-  Labels should be written in sentence case. Use verbs and an active voice.
-  Language should be clear, succinct, and informative. Limit the copy length to
-  22 characters.
-
-
-  Use icons consistently. Each icon should be used exclusively for one action.
-  Icons appear to the left of the button text. Buttons that have “forward”
-  actions have icons to the right of the text, and those with “back” actions
-  have icons to the left.
+  - Use standard button text: “Sign up”
 accessibility: >-
-  Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis sitat arum, et imus dolorec epelescias eos sita quam incidis imoleseque officitam faccus qui dis molorro eos ernam, ullam autemodia dem verit quosam hit od quosapicae peditatur, velicati cum qui des aute sam ulles nosam quiamendiam et et, sum iunt, sim et esciundam, que comni con consendi duntur, quo magnim fugitam qui sam quatur sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi cum quiaes esequiasi volecate nos inimodi gniminc idipsam inihit volupta volorectam fuga. Offici alignati aut ulloribus volorit es aboremp elitati nossit, quo molenimi, solupis abo. Iciis eos eum fuga.
+  Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend
+  uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num
+  nullupt atiorporro modicim res dolora vent volore acius, saperis sitat arum,
+  et imus dolorec epelescias eos sita quam incidis imoleseque officitam faccus
+  qui dis molorro eos ernam, ullam autemodia dem verit quosam hit od quosapicae
+  peditatur, velicati cum qui des aute sam ulles nosam quiamendiam et et, sum
+  iunt, sim et esciundam, que comni con consendi duntur, quo magnim fugitam qui
+  sam quatur sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi
+  cum quiaes esequiasi volecate nos inimodi gniminc idipsam inihit volupta
+  volorectam fuga. Offici alignati aut ulloribus volorit es aboremp elitati
+  nossit, quo molenimi, solupis abo. Iciis eos eum fuga.
 
 
-  Peria qui dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et qui omniam quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque sunt, idipicia volor aut eat.
+  Peria qui dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et
+  qui omniam quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il
+  ipisque sunt, idipicia volor aut eat.
 research: >-
-  Quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis sitat arum, et imus dolorec epelescias eos sita quam incidis imoleseque officitam faccus qui dis molorro eos ernam, ullam autemodia dem verit quosam hit od quosapicae peditatur.
+  Quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis
+  antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis
+  sitat arum, et imus dolorec epelescias eos sita quam incidis imoleseque
+  officitam faccus qui dis molorro eos ernam, ullam autemodia dem verit quosam
+  hit od quosapicae peditatur.
 
 
-  Velicati cum qui des aute sam ulles nosam quiamendiam et et, sum iunt, sim et esciundam, que comni con consendi duntur, quo magnim fugitam qui sam quatur sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi cum quiaes esequiasi volecate nos inimodi gniminc idipsam inihit volupta volorectam fuga. Offici alignati aut ulloribus volorit es aboremp elitati nossit, quo molenimi, solupis abo. Iciis eos eum fuga.
+  Velicati cum qui des aute sam ulles nosam quiamendiam et et, sum iunt, sim et
+  esciundam, que comni con consendi duntur, quo magnim fugitam qui sam quatur
+  sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi cum quiaes
+  esequiasi volecate nos inimodi gniminc idipsam inihit volupta volorectam fuga.
+  Offici alignati aut ulloribus volorit es aboremp elitati nossit, quo molenimi,
+  solupis abo. Iciis eos eum fuga.
 
 
-  Dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et qui omniam quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque sunt, idipicia volor aut eat.
+  Dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et qui omniam
+  quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
+  sunt, idipicia volor aut eat.
 ---
+

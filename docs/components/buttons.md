@@ -16,7 +16,7 @@ variations:
     variation_description: The default state is the most default state of them all.
     variation_name: Default state
   - variation_code_snippet: |-
-      <a href="#" class="a-btn hover" title="Test button">Anker Tag</a>
+      <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
       <button class="a-btn hover" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn hover">
     variation_description: Use the hover state when hovering.

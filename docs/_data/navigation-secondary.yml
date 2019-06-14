@@ -13,18 +13,3 @@
 - category: components
   text: Email sign-up
   url: components/email-sign-up
-- category: components
-  text: Expandables
-  url: components/expandables
-- category: components
-  text: Featured content modules
-  url: components/featured-content-modules
-- category: components
-  text: Filterable list control panel
-  url: components/filterable-list-control-panel
-- category: components
-  text: Form fields
-  url: components/form-fields
-- category: components
-  text: Full width text
-  url: components/full-width-text

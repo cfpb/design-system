@@ -2,11 +2,11 @@
 title: Contact information
 layout: component
 category: components
-status: Released
+status: Beta
 intro: >-
   The contact information component is used to display phone, email, mailing
   address, and fax information for offices within the Bureau. This pattern may
-  show up in either the main content area or the sidebar.
+  show up in either the main content area or the sidebar. asdfasdf
 variations:
   - variation_code_snippet: |-
       <div class="o-well">

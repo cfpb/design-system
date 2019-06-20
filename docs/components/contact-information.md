@@ -1,7 +1,8 @@
 ---
 title: Contact information
 layout: component
-category: components
+section: components
+category: layout
 status: Beta
 intro: >-
   The contact information component is used to display phone, email, mailing
@@ -82,4 +83,3 @@ research: >-
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
 ---
-

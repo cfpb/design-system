@@ -10,8 +10,8 @@
     </div>
     <nav class="global-nav content-l_col content-l_col-2-3">
       <ul class="global-nav_list">
-        {% for link in site.data.navigation-primary %}
-          <li class="nav-list-item"><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% for section in site.data.navigation.sections %}
+          <li class="nav-list-item"><a href="{{ section.slug | relative_url }}">{{ section.label }}</a></li>
         {% endfor %}
       </ul>
     </nav>

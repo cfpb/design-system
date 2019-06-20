@@ -1,7 +1,8 @@
 ---
 title: Email sign-up
 layout: component
-category: components
+section: components
+category: forms
 status: Beta
 intro: >-
   Email sign-ups are used to add individual email addresses to a specific
@@ -84,4 +85,3 @@ research: >-
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
 ---
-

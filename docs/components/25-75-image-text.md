@@ -1,7 +1,8 @@
 ---
 title: 25/75 image and text
 layout: component
-category: components
+section: components
+category: layout
 status: Proposed
 intro: >-
   The 25/75 image and text component is used to draw the user’s eye to key
@@ -84,4 +85,3 @@ research: >-
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
 ---
-

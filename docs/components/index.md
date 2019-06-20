@@ -1,6 +1,6 @@
 ---
 title:  Components
-category: components
+section: components
 layout: section-index
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: Buttons
 layout: component
-category: components
+section: components
+category: forms
 status: Proposed
 intro: >-
   Buttons signal actions. They should be used sparingly; each additional button
@@ -95,4 +96,3 @@ research: >-
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
 ---
-

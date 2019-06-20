@@ -1,0 +1,54 @@
+sections:
+  - label: Getting Started
+    slug: getting-started
+  - label: Foundation
+    slug: foundation
+  - label: Components
+    slug: components
+    categories:
+      - label: Alerts
+        slug: alerts
+        items:
+          - label: Modals
+            slug: modals
+          - label: Notifications
+            slug: notifications
+      - label: Data visualization
+        slug: data-visualization
+        items:
+          - label: Bar chart
+            slug: bar-chart
+          - label: Line chart
+            slug: line-chart
+          - label: Pie chart
+            slug: pie-chart
+      - label: Forms
+        slug: forms
+        items:
+          - label: Buttons
+            slug: buttons
+          - label: Checkboxes
+            slug: checkboxes
+          - label: Dropdowns
+            slug: dropdowns
+          - label: E-mail signup module
+            slug: e-mail-signup-module
+          - label: Feedback forms
+            slug: feedback-forms
+          - label: Fieldsets
+            slug: fieldsets
+          - label: Multi-select
+            slug: multi-select
+          - label: Radio buttons
+            slug: radio-buttons
+          - label: Range sliders
+            slug: range-sliders
+          - label: Text inputs
+            slug: text-inputs
+      - label: Layout
+        slug: layout
+        items:
+          - label: xxxxxxxxxx
+            slug: xxxxxxxxxx
+  - label: Templates
+    slug: templates

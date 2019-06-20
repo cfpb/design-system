@@ -1,12 +1,20 @@
-<ul>
-    {% for link in site.data.navigation-secondary %}
-        {% if link.category == page.category %}
-            <li{% if link.text == link.title %} class="secondary-nav-active"{% endif %}>
-                <a href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a>
-            </li>
-        {% endif %}
-    {% endfor %}
-    <li style="list-style-type: none;">
-      <a href="https://test-things.github.io/design-system/admin/#/collections/components/new">+ Add a new component</a>
-    </li>
-</ul>
+{% for section in site.data.navigation.sections %}
+    {% if section.slug == page.section %}
+    <ul>
+        {% for category in section.categories %}
+        <li>
+          <a href="{{ site.baseurl }}/{{ section.slug }}">{{ category.label }}</a>
+          <ul>
+              {% for item in category.items %}
+              <li>
+                <a class="{% if item.label == page.title %}active{% endif %}" href="{{ site.baseurl }}/{{ section.slug }}/{{ item.slug }}">
+                    {{ item.label }}
+                </a>
+              </li>
+              {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endfor %}

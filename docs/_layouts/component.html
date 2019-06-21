@@ -9,29 +9,45 @@ layout: default
     </aside>
     <section class="content_main">
 
-        <section id="edit-page">
-          <a class="a-btn" href="#">
-              Edit this page
-              <span class="a-btn_icon
-                           a-btn_icon__on-right">{% include icons/edit.svg %}</span>
-          </a>
-        </section>
+        <div class="content-l">
+            <div class="content-l_col content-l_col-2-3">
+                <div>
+                    <h2>{{ page.title }}</h2>
 
-        <h2>{{ page.title }}</h2>
+                    {% include status.html %}
 
-        {% include status.html %}
+                    {% include contributors.html %}
+                </div>
+            </div>
+            <div class="content-l_col content-l_col-1-3">
+                <div class="block">
+                    <a class="a-btn" href="#">
+                        Show code &amp; specs
+                        <span class="a-btn_icon
+                                   a-btn_icon__on-right">{% include icons/plus.svg %}</span>
+                    </a>
+                </div>
+                <div id="edit-page">
+                    <a class="a-btn" href="#">
+                    Edit this page
+                    <span class="a-btn_icon
+                                a-btn_icon__on-right">{% include icons/edit.svg %}</span>
+                    </a>
+                </div>
+            </div>
+        </div><!-- .content-l -->
 
         {% capture intro %}{{ page.intro | markdownify }}{% endcapture %}
         {% include intro.html %}
 
         {% for variation in page.variations %}
-          {% capture name %}{{ variation.variation_name }}{% endcapture %}
-          {% include variation/name.html %}
-          {% capture description %}{{ variation.variation_description | markdownify }}{% endcapture %}
-          {% include variation/description.html %}
-          {% capture code_snippet %}{{ variation.variation_code_snippet }}{% endcapture %}
-          {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape }}{% endcapture %}
-          {% include variation/code-snippet.html %}
+            {% capture name %}{{ variation.variation_name }}{% endcapture %}
+            {% include variation/name.html %}
+            {% capture description %}{{ variation.variation_description | markdownify }}{% endcapture %}
+            {% include variation/description.html %}
+            {% capture code_snippet %}{{ variation.variation_code_snippet }}{% endcapture %}
+            {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape }}{% endcapture %}
+            {% include variation/code-snippet.html %}
         {% endfor %}
 
         {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}
@@ -42,6 +58,41 @@ layout: default
 
         {% capture research %}{{ page.research | markdownify }}{% endcapture %}
         {% include research.html %}
+
+        <div class="content-l">
+            <div class="content-l_col content-l_col-1-2">
+                <div>
+                    <!-- @todo: convert to CMS fields -->
+                    <h3>Related items</h3>   
+                    <ul class="m-list m-list__links">
+                        <li class="m-list_item">
+                            <a class="m-list_link" href="#">List item 1</a>
+                        </li>
+                        <li class="m-list_item">
+                            <a class="m-list_link" href="#">List item 2</a>
+                        </li>
+                        <li class="m-list_item">
+                            <a class="m-list_link" href="#">List item 3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-l_col content-l_col-1-2">
+                <div>
+                    <!-- @todo: convert to CMS fields -->
+                    <h3>Help us make improvements</h3>   
+                    <ul class="m-list m-list__links">
+                        <li class="m-list_item">
+                            <a class="m-list_link" href="#">List item 1</a>
+                        </li>
+                        <li class="m-list_item">
+                            <a class="m-list_link" href="#">List item 2</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- .content-l -->   
+      
     </section>
   </div>
 </main>

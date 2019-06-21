@@ -126,7 +126,7 @@ module.exports = "<h3>Research</h3>\n\n<section id=\"research\">\n  <p>\n    {{ 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"m-meta-header\">\n    <div class=\"m-meta-header_left\">\n        <span class=\"u-visually-hidden\">Page status:</span>\n        <span class=\"page-status\">Status: {{ page.status }}</span>\n        |\n        <span class=\"last-updated\">Last updated: Today</span>\n    </div>\n</header>\n";
+module.exports = "<header class=\"m-meta-header\">\n    <div class=\"m-meta-header_left\">\n        <span class=\"u-visually-hidden\">Component status:</span>\n        <strong class=\"page-status\">{{ page.status }}</strong>\n        |\n        <span class=\"last-updated\">Last update: Today</span>\n    </div>\n</header>\n";
 
 /***/ }),
 

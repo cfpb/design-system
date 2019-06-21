@@ -20,4 +20,4 @@ CMS.registerWidget('variationNameWidget', 'string', variationNamePreview);
 CMS.registerWidget('variationDescriptionWidget', 'markdown', variationDescriptionPreview);
 CMS.registerWidget('variationCodeSnippetWidget', 'text', variationCodeSnippetPreview);
 
-CMS.registerPreviewStyle('/design-system/dist/css/design-system.css');
+CMS.registerPreviewStyle('/design-system/dist/css/main.css');

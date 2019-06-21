@@ -213,7 +213,7 @@ netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('usageWidget',
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationNameWidget', 'string', _widgets_variation_NamePreview__WEBPACK_IMPORTED_MODULE_7__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationDescriptionWidget', 'markdown', _widgets_variation_DescriptionPreview__WEBPACK_IMPORTED_MODULE_8__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationCodeSnippetWidget', 'text', _widgets_variation_CodeSnippetPreview__WEBPACK_IMPORTED_MODULE_9__["Preview"]);
-netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerPreviewStyle('/design-system/dist/css/design-system.css');
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerPreviewStyle('/design-system/dist/css/main.css');
 
 /***/ }),
 

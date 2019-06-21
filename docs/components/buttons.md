@@ -1,9 +1,10 @@
 ---
 title: Buttons
 layout: component
+collection_name: components
 section: components
-category: forms
 status: Proposed
+permalink: /components/buttons
 intro: >-
   Buttons signal actions. They should be used sparingly; each additional button
   on a page reduces the visual prominence of a call to action. In contrast,

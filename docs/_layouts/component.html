@@ -10,11 +10,10 @@ layout: default
     <section class="content_main">
 
         <section id="edit-page">
-          <a class="a-btn" href="#">
-              Edit this page
-              <span class="a-btn_icon
-                           a-btn_icon__on-right">{% include icons/edit.svg %}</span>
-          </a>
+            <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/entries/{{ page.title | slugify }}" title="Edit this page in Netlify CMS">
+                <span class="a-btn_text">Edit this page</span>
+                <span class="a-btn_icon">{% include icons/edit.svg %}</span>
+            </a>
         </section>
 
         <h2>{{ page.title }}</h2>

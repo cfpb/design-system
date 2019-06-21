@@ -3,7 +3,8 @@
     <ul>
         {% for category in section.categories %}
         <li>
-          <a href="{{ site.baseurl }}/{{ section.slug }}">{{ category.label }}</a>
+          <!-- <a href="{{ site.baseurl }}/{{ section.slug }}">{{ category.label }}</a> -->
+          {{ category.label }}
           <ul>
               {% for item in category.items %}
               <li>

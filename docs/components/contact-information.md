@@ -1,9 +1,10 @@
 ---
-title: Contact information
+title: Contact Information
 layout: component
+collection_name: components
 section: components
-category: layout
-status: Beta
+status: Proposed
+permalink: /components/contact-information
 intro: >-
   The contact information component is used to display phone, email, mailing
   address, and fax information for offices within the Bureau. This pattern may

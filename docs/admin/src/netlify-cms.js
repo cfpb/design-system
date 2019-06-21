@@ -9,6 +9,8 @@ import { Preview as usagePreview } from './widgets/usage/Preview';
 import { Preview as variationNamePreview } from './widgets/variation/NamePreview';
 import { Preview as variationDescriptionPreview } from './widgets/variation/DescriptionPreview';
 import { Preview as variationCodeSnippetPreview } from './widgets/variation/CodeSnippetPreview';
+import { Preview as bodyPreview } from './widgets/body/Preview';
+import { Preview as permalinkPreview } from './widgets/permalink/Preview';
 
 CMS.registerWidget('introWidget', 'markdown', introPreview);
 CMS.registerWidget('slugWidget', 'string', slugPreview);
@@ -19,5 +21,7 @@ CMS.registerWidget('usageWidget', 'markdown', usagePreview);
 CMS.registerWidget('variationNameWidget', 'string', variationNamePreview);
 CMS.registerWidget('variationDescriptionWidget', 'markdown', variationDescriptionPreview);
 CMS.registerWidget('variationCodeSnippetWidget', 'text', variationCodeSnippetPreview);
+CMS.registerWidget('bodyWidget', 'markdown', bodyPreview);
+CMS.registerWidget('permalinkWidget', 'string', permalinkPreview);
 
 CMS.registerPreviewStyle('/design-system/dist/css/main.css');

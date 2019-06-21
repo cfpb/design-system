@@ -10,36 +10,45 @@ publish_mode: editorial_workflow
 media_folder: docs/images/uploads
 
 collections:
+  - name: 'pages'
+    label: 'Pages'
+    label_singular: 'Page'
+    folder: 'docs/pages/'
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    fields:
+      - {name: 'title', label: 'Title', widget: 'string'}
+      - {name: 'permalink', label: 'Page URL', widget: 'permalinkWidget', default: '/:slug'}
+      - {name: 'layout', value: 'generic-page', widget: 'hidden'}
+      - {name: 'collection_name', value: 'pages', widget: 'hidden'}
+      - name: 'section'
+        label: 'Parent section'
+        widget: 'select'
+        required: false
+        options:
+          - label: 'Getting Started'
+            value: 'getting-started'
+          - label: 'Components'
+            value: 'components'
+          - label: 'Foundation'
+            value: 'foundation'
+          - label: 'Templates'
+            value: 'templates'
+      - {name: 'body', label: 'Body', widget: 'bodyWidget'}
   - name: 'components'
     label: 'Components'
     label_singular: 'Component'
     folder: 'docs/components/'
     create: true
-    delete: false
+    delete: true
     slug: '{{slug}}'
-    filter: {field: 'layout', value: 'component'}
     fields:
       - {name: 'title', label: 'Title', widget: 'string'}
+      - {name: 'permalink', label: 'Page URL', widget: 'permalinkWidget', default: '/components/SOMETHING'}
       - {name: 'layout', value: 'component', widget: 'hidden'}
+      - {name: 'collection_name', value: 'components', widget: 'hidden'}
       - {name: 'section', value: 'components', widget: 'hidden'}
-      - name: 'category'
-        label: 'Component category'
-        widget: 'select'
-        options:
-          - label: 'Alerts'
-            value: 'alerts'
-          - label: 'Data visualization'
-            value: 'data-visualization'
-          - label: 'Forms'
-            value: 'forms'
-          - label: 'Layout'
-            value: 'layout'
-          - label: 'Tables'
-            value: 'tables'
-          - label: 'Text'
-            value: 'text'
-          - label: 'Widgets'
-            value: 'widgets'
       - name: 'status'
         label: 'Implementation status'
         widget: 'statusWidget'

@@ -1,8 +1,20 @@
 sections:
   - label: Getting Started
     slug: getting-started
+    categories:
+      - label: Category Name
+        slug: category-name
+        items:
+          - label: Random page
+            slug: random-page
   - label: Foundation
     slug: foundation
+    categories:
+      - label: Category Name
+        slug: category-name
+        items:
+          - label: Random page
+            slug: random-page
   - label: Components
     slug: components
     categories:
@@ -134,3 +146,9 @@ sections:
             slug: quotes
   - label: Templates
     slug: templates
+    categories:
+      - label: Category Name
+        slug: category-name
+        items:
+          - label: Random page
+            slug: random-page

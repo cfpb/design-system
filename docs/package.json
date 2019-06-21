@@ -37,8 +37,9 @@
     "webpack-serve": "^0.3.1"
   },
   "scripts": {
-    "start": "parallelshell \"bundle exec jekyll serve --watch --host=localhost\" \"yarn run watch\"",
-    "compile-css": "lessc --include-path=../src/packages/:../src/node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/design-system.css",
+    "start": "parallelshell \"bundle exec jekyll serve --watch --host=localhost\" \"yarn run watch\" \"yarn run watch-css\"",
+    "compile-css": "lessc --include-path=../src/packages/:../src/node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/main.css",
+    "watch-css": "less-watch-compiler --less-args include-path=../src/packages/:../src/node_modules/normalize-css/normalize-css/ assets/css dist/css main.less",
     "watch": "webpack --watch",
     "build": "bundle exec jekyll build && NODE_ENV=production webpack && yarn run compile-css",
     "build-preview": "bundle exec jekyll build && webpack && yarn run compile-css",
@@ -48,6 +49,7 @@
     "escape-html": "^1.0.3",
     "fetch-suspense": "^1.1.0",
     "ftdomdelegate": "^3.0.0",
+    "less-watch-compiler": "^1.13.0",
     "marked": "^0.6.2",
     "normalize-css": "^2.3.1",
     "normalize-legacy-addon": "^0.1.0",

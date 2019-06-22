@@ -11,8 +11,8 @@ media_folder: docs/images/uploads
 
 collections:
   - name: 'pages'
-    label: 'Generic Pages'
-    label_singular: 'Page'
+    label: 'Generic pages'
+    label_singular: 'Generic page'
     folder: 'docs/pages/'
     create: false
     delete: false
@@ -37,8 +37,8 @@ collections:
             value: 'templates'
       - {name: 'body', label: 'Body', widget: 'bodyWidget'}
   - name: 'components'
-    label: 'Components'
-    label_singular: 'Component'
+    label: 'Component pages'
+    label_singular: 'Component page'
     folder: 'docs/components/'
     create: true
     delete: true

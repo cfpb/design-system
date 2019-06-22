@@ -2,6 +2,7 @@ import CMS from 'netlify-cms';
 
 import { Preview as introPreview } from './widgets/intro/Preview';
 import { Preview as slugPreview } from './widgets/slug/Preview';
+import { Preview as sectionPreview } from './widgets/section/Preview';
 import { Preview as statusPreview } from './widgets/status/Preview';
 import { Preview as accessibilityPreview } from './widgets/accessibility/Preview';
 import { Preview as researchPreview } from './widgets/research/Preview';
@@ -14,6 +15,7 @@ import { Preview as permalinkPreview } from './widgets/permalink/Preview';
 
 CMS.registerWidget('introWidget', 'markdown', introPreview);
 CMS.registerWidget('slugWidget', 'string', slugPreview);
+CMS.registerWidget('sectionWidget', 'select', sectionPreview);
 CMS.registerWidget('statusWidget', 'select', statusPreview);
 CMS.registerWidget('accessibilityWidget', 'markdown', accessibilityPreview);
 CMS.registerWidget('researchWidget', 'markdown', researchPreview);

@@ -11,7 +11,7 @@ media_folder: docs/images/uploads
 
 collections:
   - name: 'pages'
-    label: 'Pages'
+    label: 'Generic Pages'
     label_singular: 'Page'
     folder: 'docs/pages/'
     create: false
@@ -23,8 +23,8 @@ collections:
       - {name: 'layout', value: 'generic-page', widget: 'hidden'}
       - {name: 'collection_name', value: 'pages', widget: 'hidden'}
       - name: 'section'
-        label: 'Parent section'
-        widget: 'select'
+        label: 'Navigation section'
+        widget: 'sectionWidget'
         required: false
         options:
           - label: 'Getting Started'

@@ -93,38 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// const netlifyUser = localStorage.getItem('netlify-cms-user');
-var editButton = document.getElementById('edit-page');
-
-var hideEl = function hideEl(el) {
-  return el.style.display = 'none';
-};
-
-var showEl = function showEl(el) {
-  return el.style.display = 'block';
-};
-
-var getComponentEditableURL = function getComponentEditableURL(component) {
-  return "https://test-things.github.io/design-system/admin/#/collections/components/entries/".concat(component);
-};
-
-var getComponentFromURL = function getComponentFromURL(url) {
-  var urlParts = url.match(/components\/([\w\-]+)/);
-
-  if (urlParts && urlParts[1]) {
-    return urlParts[1];
-  }
-
-  return null;
-}; // if (netlifyUser && JSON.parse(netlifyUser).token && editButton) {
-
-
-if (editButton) {
-  var component = getComponentFromURL(window.location.pathname);
-  var url = getComponentEditableURL(component);
-  showEl(editButton);
-  editButton.children[0].setAttribute('href', url);
-}
+// The edit button href is now generated server-side
 
 /***/ })
 

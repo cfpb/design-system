@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<main class="content content__1-3" id="main" role="main">
+  <div class="content_bar"></div>
+  <div class="content_wrapper">
+    <aside class="content_sidebar">
+        {% include sidebar.html %}
+    </aside>
+    <section class="content_main">
+
+        <section id="edit-page">
+            <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/entries/{{ page.title | slugify }}" title="Edit this page in Netlify CMS">
+                <span class="a-btn_text">Edit this page</span>
+                <span class="a-btn_icon">{% include icons/edit.svg %}</span>
+            </a>
+        </section>
+
+        <h2>{{ page.title }}</h2>
+
+        {% capture content %}{{ page.content | markdownify }}{% endcapture %}
+        {% include content.html %}
+    </section>
+  </div>
+</main>

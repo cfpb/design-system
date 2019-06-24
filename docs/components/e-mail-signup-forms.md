@@ -1,53 +1,54 @@
 ---
-title: 25/75 image and text
+title: E-mail Signup Forms
 layout: component
+collection_name: components
 section: components
-category: layout
 status: Proposed
+permalink: /components/e-mail-signup-forms
 intro: >-
-  The 25/75 image and text component is used to draw the user’s eye to key
-  information and navigation links, and aid comprehension by pairing content
-  with illustration/imagery.
-
-
-  When used in conjunction with half width link blob, it can help create a
-  hierarchy of child pages or other content on the page, or can help feature a
-  particular link over others.
+  Email sign-ups are used to add individual email addresses to a specific
+  mailing list that is relevant to the content on the page or the section it is
+  contained within.
 variations:
-  - variation_code_snippet: |-
-      <section class="m-hero" id="hero1">
-          <div class="m-hero_wrapper wrapper">
-              <div class="m-hero_text">
-                  <h1 class="m-hero_heading">Standard hero with illustration</h1>
-                  <p class="m-hero_subhead">
-                      This text has a recommended count of 165-186 characters
-                      (three lines at 1230px) following a one-line heading
-                      and 108-124 characters (two lines at 1230px)
-                      following a two-line heading.
-                  </p>
-              </div>
-              <div class="m-hero_image-wrapper">
-                  <div class="m-hero_image"></div>
-              </div>
-          </div>
-      </section>
-    variation_description: >-
-      A hero consists of a headline, a small amount of additional sub-heading
-      text and an image. Its background color or image is flush with the sides
-      of the screen, and the content is vertically centered.
-    variation_name: Standard hero
-usage: >-
+  - variation_code_snippet: |
+      <label class="a-label a-label__heading" for="textinput-example-default">
+          A text input
+      </label>
+      <input class="a-text-input"
+             type="text"
+             id="textinput-example-default"
+             placeholder="Enter text…"
+             value="Lorem ipsum">
+      <label class="a-label a-label__heading" for="textarea-example-default">
+          A textarea input
+      </label>
+      <textarea class="a-text-input"
+              id="textarea-example-default"
+              placeholder="Enter text…">Lorem Ipsum</textarea>
+    variation_description: >
+      Email sign ups allow users to stay engaged on a specific topic or content
+      type produced by the Bureau. Different page types will be connected to the
+      corresponding GovDelivery list based on the page topic (i.e. HMDA) or page
+      type (i.e. blog).
+
+
+      This pattern also includes a link to our privacy statement and a an
+      optional call to action to subscribe to an RSS feed.
+    variation_name: Basic email sign up
+usage: >
   **Use cases**
 
 
-  - When a call-to-action, leading users to a deeper page in the section, needs
-  a visual highlight on the page.
+  - Use standard slug text: “Email updates”
 
-  - When an image or illustration helps users better understand the purpose of
-  content.
+  - Description text will be unique to each mailing list and should clearly set
+  expectations for what a user will receive as a result of signing up. Email
+  address field should always be marked required.
 
-  - Can be used for an even or odd number of items and may imply a hierarchy of
-  information given the list style format.
+  - Use standard helper text within form field: “john@example.com” and standard
+  privacy policy text before the button.
+
+  - Use standard button text: “Sign up”
 accessibility: >-
   Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend
   uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num

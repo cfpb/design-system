@@ -16,7 +16,7 @@
       docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
   </script>
 </head>
-<body>
+<body class="t-{{ page.layout }}">
   <div class="body-wrapper">
     {% include header.html %}
     {{ content }}

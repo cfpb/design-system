@@ -47,6 +47,8 @@ layout: default
             {% capture code_snippet %}{{ variation.variation_code_snippet }}{% endcapture %}
             {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape }}{% endcapture %}
             {% include variation/code-snippet.html %}
+            <h5>Specifications</h5>
+            <p>table goes here</p>
         {% endfor %}
 
         {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}

@@ -159,7 +159,7 @@ module.exports = "</section>\n\n<h3>Usage</h3>\n\n<section id=\"usage\">\n  <p>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"variation-code-snippet\">\n  {{ code_snippet }}\n  <div class=\"source-code\" data-source-code>\n    <pre><code class=\"language-html\">{{ code_snippet_raw }}</code></pre>\n  </div>\n</div>\n";
+module.exports = "<div class=\"variation-code-snippet\">\n    {{ code_snippet }}\n    <h5 class=\"u-mt15\">HTML</h5>\n    <div class=\"source-code\" data-source-code>\n        <pre><code class=\"language-html\">{{ code_snippet_raw }}</code></pre>\n    </div>\n</div>\n";
 
 /***/ }),
 

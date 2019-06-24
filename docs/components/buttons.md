@@ -1,10 +1,10 @@
 ---
 title: Buttons
+permalink: /components/buttons
 layout: component
 collection_name: components
 section: components
 status: Proposed
-permalink: /components/buttons
 intro: >-
   Buttons signal actions. They should be used sparingly; each additional button
   on a page reduces the visual prominence of a call to action. In contrast,
@@ -18,7 +18,7 @@ variations:
     variation_description: The default state is the most default state of them all.
     variation_name: Default state
   - variation_code_snippet: |-
-      <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
+      <a href="#" class="a-btn hover" title="Test button">Anker Tag</a>
       <button class="a-btn hover" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn hover">
     variation_description: Use the hover state when hovering.
@@ -62,21 +62,9 @@ usage: >-
   actions have icons to the right of the text, and those with “back” actions
   have icons to the left.
 accessibility: >-
-  ### Meaningful text labels
-
-
-
-
-  UI control text labels are very useful to all users, but getting them right is
-  particularly important to users with disabilities.
-
-
-
-
-  You should make sure that your button and link text labels are understandable
-  and distinctive. Don't just use "Click here" for your labels, as screenreader
-  users sometimes get up a list of buttons and form controls. The following
-  screenshot shows our controls being listed by VoiceOver on Mac.
+  This is some placeholder text until we write accessibility content. Praesent
+  id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et
+  justo.
 research: >-
   Quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis
   antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis
@@ -97,3 +85,4 @@ research: >-
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
 ---
+

@@ -185,6 +185,17 @@ module.exports = "<h4>{{ name }}</h4>\n";
 
 /***/ }),
 
+/***/ "./_includes/variation/specs.html":
+/*!****************************************!*\
+  !*** ./_includes/variation/specs.html ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h5>Specifications</h5>\n{{ specs }}\n";
+
+/***/ }),
+
 /***/ "./admin/src/netlify-cms.js":
 /*!**********************************!*\
   !*** ./admin/src/netlify-cms.js ***!
@@ -206,8 +217,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_variation_NamePreview__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/variation/NamePreview */ "./admin/src/widgets/variation/NamePreview.js");
 /* harmony import */ var _widgets_variation_DescriptionPreview__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/variation/DescriptionPreview */ "./admin/src/widgets/variation/DescriptionPreview.js");
 /* harmony import */ var _widgets_variation_CodeSnippetPreview__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/variation/CodeSnippetPreview */ "./admin/src/widgets/variation/CodeSnippetPreview.js");
-/* harmony import */ var _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/body/Preview */ "./admin/src/widgets/body/Preview.js");
-/* harmony import */ var _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/permalink/Preview */ "./admin/src/widgets/permalink/Preview.js");
+/* harmony import */ var _widgets_variation_SpecsPreview__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/variation/SpecsPreview */ "./admin/src/widgets/variation/SpecsPreview.js");
+/* harmony import */ var _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/body/Preview */ "./admin/src/widgets/body/Preview.js");
+/* harmony import */ var _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/permalink/Preview */ "./admin/src/widgets/permalink/Preview.js");
+
 
 
 
@@ -231,8 +244,9 @@ netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('usageWidget',
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationNameWidget', 'string', _widgets_variation_NamePreview__WEBPACK_IMPORTED_MODULE_8__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationDescriptionWidget', 'markdown', _widgets_variation_DescriptionPreview__WEBPACK_IMPORTED_MODULE_9__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationCodeSnippetWidget', 'text', _widgets_variation_CodeSnippetPreview__WEBPACK_IMPORTED_MODULE_10__["Preview"]);
-netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('bodyWidget', 'markdown', _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_11__["Preview"]);
-netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('permalinkWidget', 'string', _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_12__["Preview"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationSpecsWidget', 'markdown', _widgets_variation_SpecsPreview__WEBPACK_IMPORTED_MODULE_11__["Preview"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('bodyWidget', 'markdown', _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_12__["Preview"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('permalinkWidget', 'string', _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_13__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerPreviewStyle('/design-system/dist/css/main.css');
 
 /***/ }),
@@ -591,6 +605,40 @@ var Preview = function Preview(props) {
   };
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_liquid__WEBPACK_IMPORTED_MODULE_1__["ReactLiquid"], {
     template: _includes_variation_name_html__WEBPACK_IMPORTED_MODULE_3___default.a,
+    data: data,
+    html: true
+  });
+};
+
+/***/ }),
+
+/***/ "./admin/src/widgets/variation/SpecsPreview.js":
+/*!*****************************************************!*\
+  !*** ./admin/src/widgets/variation/SpecsPreview.js ***!
+  \*****************************************************/
+/*! exports provided: Preview */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Preview", function() { return Preview; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_liquid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-liquid */ "./node_modules/react-liquid/dist/index.es.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! marked */ "./node_modules/marked/lib/marked.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _includes_variation_specs_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../_includes/variation/specs.html */ "./_includes/variation/specs.html");
+/* harmony import */ var _includes_variation_specs_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_includes_variation_specs_html__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+var Preview = function Preview(props) {
+  var data = {
+    specs: marked__WEBPACK_IMPORTED_MODULE_2___default()(props.value)
+  };
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_liquid__WEBPACK_IMPORTED_MODULE_1__["ReactLiquid"], {
+    template: _includes_variation_specs_html__WEBPACK_IMPORTED_MODULE_3___default.a,
     data: data,
     html: true
   });

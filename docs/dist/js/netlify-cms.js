@@ -115,7 +115,7 @@ module.exports = "{{ content }}\n";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section id=\"intro\" class=\"u-mt20 u-mb20\">\n  {{ intro }}\n</section>\n\n<ul class=\"u-mb20\">\n  <li><a href=\"#variations\">Variations</a></li>\n  <li><a href=\"#usage\">Usage</a></li>\n  <li><a href=\"#accessibility\">Accessibility</a></li>\n  <li><a href=\"#research\">Research</a></li>\n</ul>\n\n<h3>Variations</h3>\n\n<section id=\"variations\">\n";
+module.exports = "<section id=\"intro\" class=\"u-mt20 u-mb20\">\n  {{ intro }}\n</section>\n\n<ul class=\"m-list m-list__horizontal u-mb20\">\n    <li class=\"m-list_item\">\n        <a class=\"m-list_link\" href=\"#variations\">Variations</a>\n    </li>\n    <li class=\"m-list_item\">\n        <a class=\"m-list_link\" href=\"#usage\">Usage</a>\n    </li>\n    <li class=\"m-list_item\">\n        <a class=\"m-list_link\" href=\"#accessibility\">Accessibility</a>\n    </li>\n    <li class=\"m-list_item\">\n        <a class=\"m-list_link\" href=\"#research\">Research</a>\n    </li>\n</ul>\n\n<h3>Variations</h3>\n\n<section id=\"variations\">\n";
 
 /***/ }),
 

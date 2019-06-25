@@ -1,1 +1,1 @@
-// The edit button href is now generated server-side 
+// The edit button href is now generated server-side

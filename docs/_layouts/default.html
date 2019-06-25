@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  <title>CFPB Design System</title>
+  <title>{{ page.title }} - CFPB Design System</title>
   <meta name="description" content="{{ site.description }}">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
       docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
   </script>
 </head>
-<body>
+<body class="t-{{ page.layout }}">
   <div class="body-wrapper">
     {% include header.html %}
     {{ content }}

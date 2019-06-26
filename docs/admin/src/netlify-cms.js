@@ -25,3 +25,5 @@ CMS.registerWidget('variationDescriptionWidget', 'markdown', variationDescriptio
 CMS.registerWidget('variationCodeSnippetWidget', 'text', variationCodeSnippetPreview);
 CMS.registerWidget('bodyWidget', 'markdown', bodyPreview);
 CMS.registerWidget('permalinkWidget', 'string', permalinkPreview);
+
+CMS.registerPreviewStyle('/design-system/dist/css/main.css');

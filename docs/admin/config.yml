@@ -75,6 +75,9 @@ collections:
           - name: 'variation_code_snippet'
             label: 'Variation code snippet'
             widget: 'variationCodeSnippetWidget'
+          - name: 'variation_specs'
+            label: 'Variation specifications'
+            widget: 'variationSpecsWidget'
       - {name: 'usage', label: 'Usage', widget: 'usageWidget'}
       - {name: 'accessibility', label: 'Accessibility', widget: 'accessibilityWidget'}
       - {name: 'research', label: 'Research', widget: 'researchWidget'}

@@ -2,19 +2,29 @@
 	position: fixed;
 	bottom: 40px;
 	right: 40px;
-	border-radius: 8px;
-	box-shadow: 1px 1px 3px #999;
+
+	.a-btn {
+		border-radius: 8px;
+		box-shadow: 1px 1px 3px #999;
+	}
 
 	.a-btn_text {
 		display: none;
 	}
 
+	.add-new {
+		display: none;
+	}
+
 	&:hover {
+		.a-btn {
+			display: inline-block;
+		}
 		.a-btn_text {
 			display: inline;
 		}
 		.a-btn_icon {
-			padding-left: 0.6875em;
+		    padding-left: 0.6875em;
 			border-left: 1px solid #80b9e7;
 			margin-left: 0.4375em;
 		}

@@ -8,6 +8,7 @@ backend:
 logo_url: https://cfpb.github.io/design-manual/static/img/logo/Logo0_@2.png
 publish_mode: editorial_workflow
 media_folder: docs/images/uploads
+public_folder: /design-system/images/uploads
 
 collections:
   - name: 'pages'

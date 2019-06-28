@@ -1,0 +1,17 @@
+// Button to show/hide code snippets and specs on component pages
+
+.hidden {
+    display: none;
+}
+.visible {
+    display: inline;
+}
+
+#toggle-code-btn {
+    .show-button { .hidden() }
+    .hide-button { .visible() }
+    &[data-code-hidden] {
+        .show-button { .visible() }
+        .hide-button { .hidden() }
+    }
+}

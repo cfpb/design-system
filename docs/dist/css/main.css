@@ -5159,3 +5159,21 @@ pre code {
 .u-left {
   float: left;
 }
+.hidden {
+  display: none;
+}
+.visible {
+  display: inline;
+}
+#toggle-code-btn .show-button {
+  display: none;
+}
+#toggle-code-btn .hide-button {
+  display: inline;
+}
+#toggle-code-btn[data-code-hidden] .show-button {
+  display: inline;
+}
+#toggle-code-btn[data-code-hidden] .hide-button {
+  display: none;
+}

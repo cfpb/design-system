@@ -8,7 +8,7 @@ export const Preview = props => {
     help_us: marked(props.value)
   }
   return (
-    <div className="align-right">
+    <div className="u-right">
       <ReactLiquid template={template} data={data} html />
     </div>
   );

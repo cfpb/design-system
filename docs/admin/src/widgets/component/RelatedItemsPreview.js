@@ -8,7 +8,7 @@ export const Preview = props => {
     related_items: marked(props.value)
   }
   return (
-    <div className="align-left">
+    <div className="u-left">
       <ReactLiquid template={template} data={data} html />
     </div>
   );

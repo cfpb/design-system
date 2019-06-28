@@ -373,7 +373,7 @@ var Preview = function Preview(props) {
     help_us: marked__WEBPACK_IMPORTED_MODULE_2___default()(props.value)
   };
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "align-right"
+    className: "u-right"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_liquid__WEBPACK_IMPORTED_MODULE_1__["ReactLiquid"], {
     template: _includes_component_help_us_html__WEBPACK_IMPORTED_MODULE_3___default.a,
     data: data,
@@ -409,7 +409,7 @@ var Preview = function Preview(props) {
     related_items: marked__WEBPACK_IMPORTED_MODULE_2___default()(props.value)
   };
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "align-left"
+    className: "u-left"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_liquid__WEBPACK_IMPORTED_MODULE_1__["ReactLiquid"], {
     template: _includes_component_related_items_html__WEBPACK_IMPORTED_MODULE_3___default.a,
     data: data,

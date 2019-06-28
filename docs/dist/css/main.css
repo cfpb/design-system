@@ -5148,3 +5148,9 @@ pre code {
 .css-2oej7z-ToolbarContainer .css-ngnf8v-ToolbarSubSectionFirst-ToolbarSubSectionLast {
   display: none;
 }
+.align-left {
+  float: left;
+}
+.align-right {
+  float: right;
+}

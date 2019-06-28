@@ -61,26 +61,13 @@ layout: default
         {% include research.html %}
 
         <div class="content-l">
-            <div class="content-l_col content-l_col-1-2">
-                <div>
+            
                     {% capture related_items %}{{ page.related_items | markdownify }}{% endcapture %}
                     {% include component/related-items.html %}
-                </div>
-            </div>
-            <div class="content-l_col content-l_col-1-2">
-                <div>
-                    <!-- @todo: convert to CMS fields -->
-                    <h3>Help us make improvements</h3>
-                    <ul class="m-list m-list__links">
-                        <li class="m-list_item">
-                            <a class="m-list_link" href="#">List item 1</a>
-                        </li>
-                        <li class="m-list_item">
-                            <a class="m-list_link" href="#">List item 2</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            
+                    {% capture help_us %}{{ page.help_us | markdownify }}{% endcapture %}
+                    {% include component/help-us.html %}
+                
         </div><!-- .content-l -->
 
     </section>

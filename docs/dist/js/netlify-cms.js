@@ -97,6 +97,28 @@ module.exports = "<h3>Accessibility</h3>\n\n<section id=\"accessibility\">\n  <p
 
 /***/ }),
 
+/***/ "./_includes/component/list-link-text.html":
+/*!*************************************************!*\
+  !*** ./_includes/component/list-link-text.html ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<li class=\"m-list_item\">\n    <a class=\"m-list_link\" href=\"{% include list-link-url.html %}\">{{ text }}</a>\n</li>";
+
+/***/ }),
+
+/***/ "./_includes/component/list-link-url.html":
+/*!************************************************!*\
+  !*** ./_includes/component/list-link-url.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "{{ url }}";
+
+/***/ }),
+
 /***/ "./_includes/content.html":
 /*!********************************!*\
   !*** ./_includes/content.html ***!
@@ -218,8 +240,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_variation_DescriptionPreview__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/variation/DescriptionPreview */ "./admin/src/widgets/variation/DescriptionPreview.js");
 /* harmony import */ var _widgets_variation_CodeSnippetPreview__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/variation/CodeSnippetPreview */ "./admin/src/widgets/variation/CodeSnippetPreview.js");
 /* harmony import */ var _widgets_variation_SpecsPreview__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/variation/SpecsPreview */ "./admin/src/widgets/variation/SpecsPreview.js");
-/* harmony import */ var _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/body/Preview */ "./admin/src/widgets/body/Preview.js");
-/* harmony import */ var _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/permalink/Preview */ "./admin/src/widgets/permalink/Preview.js");
+/* harmony import */ var _widgets_component_ListLinkTextPreview__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/component/ListLinkTextPreview */ "./admin/src/widgets/component/ListLinkTextPreview.js");
+/* harmony import */ var _widgets_component_ListLinkURLPreview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/component/ListLinkURLPreview */ "./admin/src/widgets/component/ListLinkURLPreview.js");
+/* harmony import */ var _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./widgets/body/Preview */ "./admin/src/widgets/body/Preview.js");
+/* harmony import */ var _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./widgets/permalink/Preview */ "./admin/src/widgets/permalink/Preview.js");
+
+
 
 
 
@@ -245,8 +271,15 @@ netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationName
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationDescriptionWidget', 'markdown', _widgets_variation_DescriptionPreview__WEBPACK_IMPORTED_MODULE_9__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationCodeSnippetWidget', 'text', _widgets_variation_CodeSnippetPreview__WEBPACK_IMPORTED_MODULE_10__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationSpecsWidget', 'markdown', _widgets_variation_SpecsPreview__WEBPACK_IMPORTED_MODULE_11__["Preview"]);
+<<<<<<< HEAD
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('bodyWidget', 'markdown', _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_12__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('permalinkWidget', 'string', _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_13__["Preview"]);
+=======
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('listLinkTextWidget', 'string', _widgets_component_ListLinkTextPreview__WEBPACK_IMPORTED_MODULE_12__["Preview"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('listLinkURLWidget', 'string', _widgets_component_ListLinkURLPreview__WEBPACK_IMPORTED_MODULE_13__["Preview"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('bodyWidget', 'markdown', _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_14__["Preview"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('permalinkWidget', 'string', _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_15__["Preview"]);
+>>>>>>> attempt to add link widgets
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerPreviewStyle('/design-system/dist/css/main.css');
 
 /***/ }),
@@ -315,6 +348,74 @@ var Preview = function Preview(props) {
     data: data,
     html: true
   }));
+};
+
+/***/ }),
+
+/***/ "./admin/src/widgets/component/ListLinkTextPreview.js":
+/*!************************************************************!*\
+  !*** ./admin/src/widgets/component/ListLinkTextPreview.js ***!
+  \************************************************************/
+/*! exports provided: Preview */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Preview", function() { return Preview; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_liquid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-liquid */ "./node_modules/react-liquid/dist/index.es.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! marked */ "./node_modules/marked/lib/marked.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _includes_component_list_link_text_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../_includes/component/list-link-text.html */ "./_includes/component/list-link-text.html");
+/* harmony import */ var _includes_component_list_link_text_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_includes_component_list_link_text_html__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+var Preview = function Preview(props) {
+  var data = {
+    text: marked__WEBPACK_IMPORTED_MODULE_2___default()(props.value)
+  };
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_liquid__WEBPACK_IMPORTED_MODULE_1__["ReactLiquid"], {
+    template: _includes_component_list_link_text_html__WEBPACK_IMPORTED_MODULE_3___default.a,
+    data: data,
+    html: true
+  });
+};
+
+/***/ }),
+
+/***/ "./admin/src/widgets/component/ListLinkURLPreview.js":
+/*!***********************************************************!*\
+  !*** ./admin/src/widgets/component/ListLinkURLPreview.js ***!
+  \***********************************************************/
+/*! exports provided: Preview */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Preview", function() { return Preview; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_liquid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-liquid */ "./node_modules/react-liquid/dist/index.es.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! marked */ "./node_modules/marked/lib/marked.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _includes_component_list_link_url_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../_includes/component/list-link-url.html */ "./_includes/component/list-link-url.html");
+/* harmony import */ var _includes_component_list_link_url_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_includes_component_list_link_url_html__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+var Preview = function Preview(props) {
+  var data = {
+    url: marked__WEBPACK_IMPORTED_MODULE_2___default()(props.value)
+  };
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_liquid__WEBPACK_IMPORTED_MODULE_1__["ReactLiquid"], {
+    template: _includes_component_list_link_url_html__WEBPACK_IMPORTED_MODULE_3___default.a,
+    data: data,
+    html: true
+  });
 };
 
 /***/ }),

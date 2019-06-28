@@ -70,7 +70,13 @@ layout: default
                     <!-- @todo: convert to CMS fields -->
                     <h3>Related items</h3>   
                     <ul class="m-list m-list__links">
-                        <li class="m-list_item">
+        {% for related_item in page.related_items %}
+            {% capture related_item_text %}{{ link.text }}{% endcapture %}
+            {% capture related_item_url %}{{ link.url }}{% endcapture %}
+            {% include component/list-link-text.html %}
+        {% endfor %}
+
+                        <!-- <li class="m-list_item">
                             <a class="m-list_link" href="#">List item 1</a>
                         </li>
                         <li class="m-list_item">
@@ -78,7 +84,7 @@ layout: default
                         </li>
                         <li class="m-list_item">
                             <a class="m-list_link" href="#">List item 3</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>

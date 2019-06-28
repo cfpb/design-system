@@ -63,31 +63,14 @@ layout: default
         <div class="content-l">
             <div class="content-l_col content-l_col-1-2">
                 <div>
-                    <!-- @todo: convert to CMS fields -->
-                    <h3>Related items</h3>   
-                    <ul class="m-list m-list__links">
-        {% for related_item in page.related_items %}
-            {% capture related_item_text %}{{ link.text }}{% endcapture %}
-            {% capture related_item_url %}{{ link.url }}{% endcapture %}
-            {% include component/list-link-text.html %}
-        {% endfor %}
-
-                        <!-- <li class="m-list_item">
-                            <a class="m-list_link" href="#">List item 1</a>
-                        </li>
-                        <li class="m-list_item">
-                            <a class="m-list_link" href="#">List item 2</a>
-                        </li>
-                        <li class="m-list_item">
-                            <a class="m-list_link" href="#">List item 3</a>
-                        </li> -->
-                    </ul>
+                    {% capture related_items %}{{ page.related_items | markdownify }}{% endcapture %}
+                    {% include component/related-items.html %}
                 </div>
             </div>
             <div class="content-l_col content-l_col-1-2">
                 <div>
                     <!-- @todo: convert to CMS fields -->
-                    <h3>Help us make improvements</h3>   
+                    <h3>Help us make improvements</h3>
                     <ul class="m-list m-list__links">
                         <li class="m-list_item">
                             <a class="m-list_link" href="#">List item 1</a>
@@ -98,8 +81,8 @@ layout: default
                     </ul>
                 </div>
             </div>
-        </div><!-- .content-l -->   
-      
+        </div><!-- .content-l -->
+
     </section>
   </div>
 </main>

@@ -5125,11 +5125,19 @@ pre code {
   position: fixed;
   bottom: 40px;
   right: 40px;
+}
+#edit-page .a-btn {
   border-radius: 8px;
   box-shadow: 1px 1px 3px #999;
 }
 #edit-page .a-btn_text {
   display: none;
+}
+#edit-page .add-new {
+  display: none;
+}
+#edit-page:hover .a-btn {
+  display: inline-block;
 }
 #edit-page:hover .a-btn_text {
   display: inline;

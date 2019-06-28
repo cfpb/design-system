@@ -28,6 +28,10 @@ layout: default
                     </a>
                 </div>
                 <div id="edit-page">
+                    <a class="a-btn add-new" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/new" title="Add a new component page in Netlify CMS">
+                        <span class="a-btn_text">Add new component page</span>
+                        <span class="a-btn_icon">{% include icons/plus.svg %}</span>
+                    </a>
                     <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/entries/{{ page.title | slugify }}" title="Edit this page in Netlify CMS">
                         <span class="a-btn_text">Edit this page</span>
                         <span class="a-btn_icon">{% include icons/edit.svg %}</span>
@@ -60,14 +64,12 @@ layout: default
         {% capture research %}{{ page.research | markdownify }}{% endcapture %}
         {% include research.html %}
 
-        <div class="content-l">
-            
+        <div class="content-l">            
                     {% capture related_items %}{{ page.related_items | markdownify }}{% endcapture %}
                     {% include component/related-items.html %}
             
                     {% capture help_us %}{{ page.help_us | markdownify }}{% endcapture %}
                     {% include component/help-us.html %}
-                
         </div><!-- .content-l -->
 
     </section>

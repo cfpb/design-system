@@ -81,3 +81,13 @@ collections:
       - {name: 'usage', label: 'Usage', widget: 'usageWidget'}
       - {name: 'accessibility', label: 'Accessibility', widget: 'accessibilityWidget'}
       - {name: 'research', label: 'Research', widget: 'researchWidget'}
+      - name: 'related_items'
+        label: 'Related items'
+        widget: 'list'
+        fields:
+          - name: 'related_item_text'
+            label: 'Link text'
+            widget: 'listLinkTextWidget'
+          - name: 'related_item_url'
+            label: 'URL'
+            widget: 'listLinkURLWidget'

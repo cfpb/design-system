@@ -76,9 +76,16 @@ collections:
           - name: 'variation_code_snippet'
             label: 'Variation code snippet'
             widget: 'variationCodeSnippetWidget'
+          - name: 'variation_jinja_code_snippet'
+            label: 'Variation Jinja links or snippet'
+            hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
+            required: false
+            widget: 'variationJinjaCodeSnippetWidget'
           - name: 'variation_specs'
             label: 'Variation specifications'
             widget: 'variationSpecsWidget'
       - {name: 'usage', label: 'Usage', widget: 'usageWidget'}
       - {name: 'accessibility', label: 'Accessibility', widget: 'accessibilityWidget'}
       - {name: 'research', label: 'Research', widget: 'researchWidget'}
+      - {name: 'related_items', label: 'Related items', widget: 'relatedItemsWidget'}
+      - {name: 'help_us', label: 'Help us make improvements', widget: 'helpUsWidget'}

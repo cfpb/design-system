@@ -13,6 +13,15 @@ intro: >-
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.
+    variation_jinja_code_snippet: >-
+      *
+      [_includes/organisms/chart.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/chart.html)
+
+      -
+      [_includes/organisms/mortgage-chart.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/mortgage-chart.html)
+
+      -
+      [_includes/organisms/mortgage-map.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/mortgage-map.html)
     variation_name: Default state
     variation_specs: Must have bars
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>

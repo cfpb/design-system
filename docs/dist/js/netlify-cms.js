@@ -203,7 +203,7 @@ module.exports = "{{ description }}\n";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"variation-code-snippet\" class=\"u-mt15\">\n    {{ jinja_code_snippet }}\n    <h5>HTML</h5>\n    <div class=\"source-code\" data-source-code>\n        <pre><code class=\"language-html\">{{ jinja_code_snippet_raw }}</code></pre>\n    </div>\n</div>\n";
+module.exports = "<div class=\"variation-jinja-code-snippet\" class=\"u-mt15\">\n    <h5>Jinja</h5>\n    <div>\n        {{ jinja_code_snippet }}\n    </div>\n</div>\n";
 
 /***/ }),
 

@@ -44,15 +44,24 @@ layout: default
         {% include intro.html %}
 
         {% for variation in page.variations %}
+            <!-- Name -->
             {% capture name %}{{ variation.variation_name }}{% endcapture %}
             {% include variation/name.html %}
+
+            <!-- Description -->
             {% capture description %}{{ variation.variation_description | markdownify }}{% endcapture %}
             {% include variation/description.html %}
+
+            <!-- HTML snippet -->
             {% capture code_snippet %}{{ variation.variation_code_snippet }}{% endcapture %}
             {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape }}{% endcapture %}
             {% include variation/code-snippet.html %}
+
+            <!-- Jinja snippet -->
             {% capture jinja_code_snippet %}{{ variation.variation_jinja_code_snippet | markdownify }}{% endcapture %}
             {% include variation/jinja-code-snippet.html %}
+
+            <!-- Specifications -->
             {% capture specs %}{{ variation.variation_specs | markdownify }}{% endcapture %}
             {% include variation/specs.html %}
         {% endfor %}

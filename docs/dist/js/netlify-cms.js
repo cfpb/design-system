@@ -97,6 +97,28 @@ module.exports = "<h3>Accessibility</h3>\n\n<section id=\"accessibility\">\n  <p
 
 /***/ }),
 
+/***/ "./_includes/component/help-us.html":
+/*!******************************************!*\
+  !*** ./_includes/component/help-us.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content-l_col content-l_col-1-2\">\n    <div>\n        <section id=\"help-us\">\n            <h3>Help us make improvements</h3>\n            {{ help_us }}\n        </section>\n    </div>\n</div>";
+
+/***/ }),
+
+/***/ "./_includes/component/related-items.html":
+/*!************************************************!*\
+  !*** ./_includes/component/related-items.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content-l_col content-l_col-1-2\">\n    <div>\n        <section id=\"related-items\">\n            <h3>Related Items</h3>\n            {{ related_items }}\n        </section>\n    </div>\n</div>";
+
+/***/ }),
+
 /***/ "./_includes/content.html":
 /*!********************************!*\
   !*** ./_includes/content.html ***!
@@ -218,8 +240,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_variation_DescriptionPreview__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/variation/DescriptionPreview */ "./admin/src/widgets/variation/DescriptionPreview.js");
 /* harmony import */ var _widgets_variation_CodeSnippetPreview__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/variation/CodeSnippetPreview */ "./admin/src/widgets/variation/CodeSnippetPreview.js");
 /* harmony import */ var _widgets_variation_SpecsPreview__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/variation/SpecsPreview */ "./admin/src/widgets/variation/SpecsPreview.js");
-/* harmony import */ var _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/body/Preview */ "./admin/src/widgets/body/Preview.js");
-/* harmony import */ var _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/permalink/Preview */ "./admin/src/widgets/permalink/Preview.js");
+/* harmony import */ var _widgets_component_RelatedItemsPreview__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/component/RelatedItemsPreview */ "./admin/src/widgets/component/RelatedItemsPreview.js");
+/* harmony import */ var _widgets_component_HelpUsPreview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/component/HelpUsPreview */ "./admin/src/widgets/component/HelpUsPreview.js");
+/* harmony import */ var _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./widgets/body/Preview */ "./admin/src/widgets/body/Preview.js");
+/* harmony import */ var _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./widgets/permalink/Preview */ "./admin/src/widgets/permalink/Preview.js");
+
+
 
 
 
@@ -245,8 +271,10 @@ netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationName
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationDescriptionWidget', 'markdown', _widgets_variation_DescriptionPreview__WEBPACK_IMPORTED_MODULE_9__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationCodeSnippetWidget', 'text', _widgets_variation_CodeSnippetPreview__WEBPACK_IMPORTED_MODULE_10__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('variationSpecsWidget', 'markdown', _widgets_variation_SpecsPreview__WEBPACK_IMPORTED_MODULE_11__["Preview"]);
-netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('bodyWidget', 'markdown', _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_12__["Preview"]);
-netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('permalinkWidget', 'string', _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_13__["Preview"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('relatedItemsWidget', 'markdown', _widgets_component_RelatedItemsPreview__WEBPACK_IMPORTED_MODULE_12__["Preview"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('helpUsWidget', 'markdown', _widgets_component_HelpUsPreview__WEBPACK_IMPORTED_MODULE_13__["Preview"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('bodyWidget', 'markdown', _widgets_body_Preview__WEBPACK_IMPORTED_MODULE_14__["Preview"]);
+netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerWidget('permalinkWidget', 'string', _widgets_permalink_Preview__WEBPACK_IMPORTED_MODULE_15__["Preview"]);
 netlify_cms__WEBPACK_IMPORTED_MODULE_0___default.a.registerPreviewStyle('/design-system/dist/css/main.css');
 
 /***/ }),
@@ -312,6 +340,78 @@ var Preview = function Preview(props) {
   };
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_liquid__WEBPACK_IMPORTED_MODULE_1__["ReactLiquid"], {
     template: _includes_content_html__WEBPACK_IMPORTED_MODULE_3___default.a,
+    data: data,
+    html: true
+  }));
+};
+
+/***/ }),
+
+/***/ "./admin/src/widgets/component/HelpUsPreview.js":
+/*!******************************************************!*\
+  !*** ./admin/src/widgets/component/HelpUsPreview.js ***!
+  \******************************************************/
+/*! exports provided: Preview */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Preview", function() { return Preview; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_liquid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-liquid */ "./node_modules/react-liquid/dist/index.es.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! marked */ "./node_modules/marked/lib/marked.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _includes_component_help_us_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../_includes/component/help-us.html */ "./_includes/component/help-us.html");
+/* harmony import */ var _includes_component_help_us_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_includes_component_help_us_html__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+var Preview = function Preview(props) {
+  var data = {
+    help_us: marked__WEBPACK_IMPORTED_MODULE_2___default()(props.value)
+  };
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "u-right"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_liquid__WEBPACK_IMPORTED_MODULE_1__["ReactLiquid"], {
+    template: _includes_component_help_us_html__WEBPACK_IMPORTED_MODULE_3___default.a,
+    data: data,
+    html: true
+  }));
+};
+
+/***/ }),
+
+/***/ "./admin/src/widgets/component/RelatedItemsPreview.js":
+/*!************************************************************!*\
+  !*** ./admin/src/widgets/component/RelatedItemsPreview.js ***!
+  \************************************************************/
+/*! exports provided: Preview */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Preview", function() { return Preview; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_liquid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-liquid */ "./node_modules/react-liquid/dist/index.es.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! marked */ "./node_modules/marked/lib/marked.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _includes_component_related_items_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../_includes/component/related-items.html */ "./_includes/component/related-items.html");
+/* harmony import */ var _includes_component_related_items_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_includes_component_related_items_html__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+var Preview = function Preview(props) {
+  var data = {
+    related_items: marked__WEBPACK_IMPORTED_MODULE_2___default()(props.value)
+  };
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "u-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_liquid__WEBPACK_IMPORTED_MODULE_1__["ReactLiquid"], {
+    template: _includes_component_related_items_html__WEBPACK_IMPORTED_MODULE_3___default.a,
     data: data,
     html: true
   }));

@@ -11,6 +11,8 @@ import { Preview as variationNamePreview } from './widgets/variation/NamePreview
 import { Preview as variationDescriptionPreview } from './widgets/variation/DescriptionPreview';
 import { Preview as variationCodeSnippetPreview } from './widgets/variation/CodeSnippetPreview';
 import { Preview as variationSpecsPreview } from './widgets/variation/SpecsPreview';
+import { Preview as relatedItemsPreview } from './widgets/component/RelatedItemsPreview';
+import { Preview as helpUsPreview } from './widgets/component/HelpUsPreview';
 import { Preview as bodyPreview } from './widgets/body/Preview';
 import { Preview as permalinkPreview } from './widgets/permalink/Preview';
 
@@ -25,6 +27,8 @@ CMS.registerWidget('variationNameWidget', 'string', variationNamePreview);
 CMS.registerWidget('variationDescriptionWidget', 'markdown', variationDescriptionPreview);
 CMS.registerWidget('variationCodeSnippetWidget', 'text', variationCodeSnippetPreview);
 CMS.registerWidget('variationSpecsWidget', 'markdown', variationSpecsPreview);
+CMS.registerWidget('relatedItemsWidget', 'markdown', relatedItemsPreview);
+CMS.registerWidget('helpUsWidget', 'markdown', helpUsPreview);
 CMS.registerWidget('bodyWidget', 'markdown', bodyPreview);
 CMS.registerWidget('permalinkWidget', 'string', permalinkPreview);
 

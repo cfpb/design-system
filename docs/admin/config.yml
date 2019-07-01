@@ -82,3 +82,5 @@ collections:
       - {name: 'usage', label: 'Usage', widget: 'usageWidget'}
       - {name: 'accessibility', label: 'Accessibility', widget: 'accessibilityWidget'}
       - {name: 'research', label: 'Research', widget: 'researchWidget'}
+      - {name: 'related_items', label: 'Related items', widget: 'relatedItemsWidget'}
+      - {name: 'help_us', label: 'Help us make improvements', widget: 'helpUsWidget'}

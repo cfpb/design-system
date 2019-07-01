@@ -53,6 +53,7 @@ layout: default
         {% include intro.html %}
 
         {% for variation in page.variations %}
+        <div class="u-mt15">
             {% capture name %}{{ variation.variation_name }}{% endcapture %}
             {% include variation/name.html %}
             {% capture description %}{{ variation.variation_description | markdownify }}{% endcapture %}
@@ -62,6 +63,7 @@ layout: default
             {% include variation/code-snippet.html %}
             {% capture specs %}{{ variation.variation_specs | markdownify }}{% endcapture %}
             {% include variation/specs.html %}
+        </div>
         {% endfor %}
 
         {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}

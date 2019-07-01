@@ -1,17 +1,12 @@
 // Button to show/hide code snippets and specs on component pages
-
-.hidden {
-    display: none;
-}
-.visible {
-    display: inline;
-}
+// When the `data-code-hidden` HTML attribute is present on the button element,
+// the button text shows "Show code" instead of "Hide code"
 
 #toggle-code-btn {
-    .show-button { .hidden() }
-    .hide-button { .visible() }
+    .show-button { display: none; }
+    .hide-button { display: inline; }
     &[data-code-hidden] {
-        .show-button { .visible() }
-        .hide-button { .hidden() }
+        .show-button { display: inline; }
+        .hide-button { display: none; }
     }
 }

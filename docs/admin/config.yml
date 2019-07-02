@@ -19,10 +19,19 @@ collections:
     delete: false
     slug: '{{slug}}'
     fields:
-      - {name: 'title', label: 'Title', widget: 'string'}
-      - {name: 'permalink', label: 'Page URL', widget: 'permalinkWidget', default: '/:slug'}
-      - {name: 'layout', value: 'generic-page', widget: 'hidden'}
-      - {name: 'collection_name', value: 'pages', widget: 'hidden'}
+      - name: 'title'
+        label: 'Title'
+        widget: 'string'
+      - name: 'permalink'
+        label: 'Page URL'
+        widget: 'permalinkWidget'
+        default: '/SOMETHING'
+      - name: 'layout'
+        value: 'generic-page'
+        widget: 'hidden'
+      - name: 'collection_name'
+        value: 'pages'
+        widget: 'hidden'
       - name: 'section'
         label: 'Navigation section'
         widget: 'sectionWidget'
@@ -36,7 +45,9 @@ collections:
             value: 'foundation'
           - label: 'Templates'
             value: 'templates'
-      - {name: 'body', label: 'Body', widget: 'bodyWidget'}
+      - name: 'body'
+        label: 'Body'
+        widget: 'bodyWidget'
   - name: 'components'
     label: 'Component pages'
     label_singular: 'Component page'
@@ -45,11 +56,22 @@ collections:
     delete: true
     slug: '{{slug}}'
     fields:
-      - {name: 'title', label: 'Title', widget: 'string'}
-      - {name: 'permalink', label: 'Page URL', widget: 'permalinkWidget', default: '/components/SOMETHING'}
-      - {name: 'layout', value: 'component', widget: 'hidden'}
-      - {name: 'collection_name', value: 'components', widget: 'hidden'}
-      - {name: 'section', value: 'components', widget: 'hidden'}
+      - name: 'title'
+        label: 'Title'
+        widget: 'string'
+      - name: 'permalink'
+        label: 'Page URL'
+        widget: 'permalinkWidget'
+        default: '/components/SOMETHING'
+      - name: 'layout'
+        value: 'component'
+        widget: 'hidden'
+      - name: 'collection_name'
+        value: 'components'
+        widget: 'hidden'
+      - name: 'section'
+        value: 'components'
+        widget: 'hidden'
       - name: 'status'
         label: 'Implementation status'
         widget: 'statusWidget'
@@ -62,7 +84,9 @@ collections:
             value: 'Beta'
           - label: 'Released'
             value: 'Released'
-      - {name: 'intro', label: 'Intro text', widget: 'introWidget'}
+      - name: 'intro'
+        label: 'Intro text'
+        widget: 'introWidget'
       - name: 'variations'
         label: 'Variations'
         widget: 'list'
@@ -73,14 +97,31 @@ collections:
           - name: 'variation_description'
             label: 'Variation description'
             widget: 'variationDescriptionWidget'
+            required: false
           - name: 'variation_code_snippet'
             label: 'Variation code snippet'
             widget: 'variationCodeSnippetWidget'
           - name: 'variation_specs'
             label: 'Variation specifications'
             widget: 'variationSpecsWidget'
-      - {name: 'usage', label: 'Usage', widget: 'usageWidget'}
-      - {name: 'accessibility', label: 'Accessibility', widget: 'accessibilityWidget'}
-      - {name: 'research', label: 'Research', widget: 'researchWidget'}
-      - {name: 'related_items', label: 'Related items', widget: 'relatedItemsWidget'}
-      - {name: 'help_us', label: 'Help us make improvements', widget: 'helpUsWidget'}
+            required: false
+      - name: 'usage'
+        label: 'Usage'
+        widget: 'usageWidget'
+        required: false
+      - name: 'accessibility'
+        label: 'Accessibility'
+        widget: 'accessibilityWidget'
+        required: false
+      - name: 'research'
+        label: 'Research'
+        widget: 'researchWidget'
+        required: false
+      - name: 'related_items'
+        label: 'Related items'
+        widget: 'relatedItemsWidget'
+        required: false
+      - name: 'help_us'
+        label: 'Help us make improvements'
+        widget: 'helpUsWidget'
+        required: false

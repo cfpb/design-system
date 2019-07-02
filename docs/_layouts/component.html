@@ -43,6 +43,9 @@ layout: default
         {% capture intro %}{{ page.intro | markdownify }}{% endcapture %}
         {% include intro.html %}
 
+        {% include tabs.html %}
+
+
         {% for variation in page.variations %}
             <!-- Name -->
             {% capture name %}{{ variation.variation_name }}{% endcapture %}

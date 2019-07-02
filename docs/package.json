@@ -49,6 +49,7 @@
     "escape-html": "^1.0.3",
     "fetch-suspense": "^1.1.0",
     "ftdomdelegate": "^3.0.0",
+    "govuk-frontend": "^2.13.0",
     "less-watch-compiler": "^1.13.0",
     "marked": "^0.6.2",
     "normalize-css": "^2.3.1",

@@ -11,6 +11,7 @@ script:
 before_deploy:
 - yarn --cwd docs/ run compile-js
 - yarn --cwd docs/ run compile-css
+- rm -rf docs/node_modules/
 deploy:
   provider: pages
   skip_cleanup: true

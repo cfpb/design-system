@@ -42,8 +42,8 @@
     "compile-css": "lessc --include-path=../src/packages/:../src/node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/main.css",
     "watch-css": "less-watch-compiler --less-args include-path=../src/packages/:../src/node_modules/normalize-css/normalize-css/ assets/css dist/css main.less",
     "watch": "webpack --watch",
-    "build": "bundle exec jekyll build && yarn run compile-js && yarn run compile-css",
-    "build-preview": "bundle exec jekyll build && webpack && yarn run compile-css",
+    "build": "yarn run compile-js && yarn run compile-css && bundle exec jekyll build",
+    "build-preview": "webpack && yarn run compile-css && bundle exec jekyll build",
     "install": "yarn --cwd ../src"
   },
   "dependencies": {

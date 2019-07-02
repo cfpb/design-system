@@ -52,9 +52,6 @@ layout: default
         {% capture intro %}{{ page.intro | markdownify }}{% endcapture %}
         {% include intro.html %}
 
-        {% include tabs.html %}
-
-
         {% for variation in page.variations %}
         <div class="u-mt15">
             <!-- Name -->
@@ -65,14 +62,47 @@ layout: default
             {% capture description %}{{ variation.variation_description | markdownify }}{% endcapture %}
             {% include variation/description.html %}
 
-            <!-- HTML snippet -->
+            <!-- Live code example -->
             {% capture code_snippet %}{{ variation.variation_code_snippet }}{% endcapture %}
-            {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape }}{% endcapture %}
+            {% capture code_snippet_raw %}{% endcapture %}
             {% include variation/code-snippet.html %}
 
+            <div class="govuk-tabs" data-module="tabs">
+                <h2 class="govuk-tabs__title">
+                Contents
+                </h2>
+
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet">
+                        HTML
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#jinja-code-snippet">
+                        Jinja
+                        </a>
+                    </li>
+                </ul>
+
+                
+                <!-- HTML snippet -->
+                <section class="govuk-tabs__panel" id="html-code-snippet">
+                    <h5 class="u-visually-hidden">HTML</h5>
+                    {% capture code_snippet %}{% endcapture %}
+                    {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape }}{% endcapture %}
+                    {% include variation/code-snippet.html %}
+                </section>
+            
+
             <!-- Jinja snippet -->
-            {% capture jinja_code_snippet %}{{ variation.variation_jinja_code_snippet | markdownify }}{% endcapture %}
-            {% include variation/jinja-code-snippet.html %}
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet">
+                    <h5>Jinja</h5>
+                    {% capture jinja_code_snippet %}{{ variation.variation_jinja_code_snippet | markdownify }}{% endcapture %}
+                    {% include variation/jinja-code-snippet.html %}
+                </section>
+
+            </div><!-- .govuk-tabs -->
 
             <!-- Specifications -->
             {% capture specs %}{{ variation.variation_specs | markdownify }}{% endcapture %}

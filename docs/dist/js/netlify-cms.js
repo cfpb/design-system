@@ -181,7 +181,7 @@ module.exports = "</section>\n\n<h3>Usage</h3>\n\n<section id=\"usage\">\n  <p>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"variation-code-snippet\">\n    <h5 class=\"u-visually-hidden\">HTML</h5>\n    {% if code_snippet != '' %}\n        {{ code_snippet }}\n    {% endif %}\n    <div>\n        {% if code_snippet_raw != '' %}\n            <div class=\"source-code\">\n                <pre><code class=\"language-html\">{{ code_snippet_raw }}</code></pre>\n            </div>\n        {% endif %}\n    </div>\n</div>\n";
+module.exports = "<div class=\"variation-code-snippet\">\n    <h5 class=\"u-visually-hidden\">HTML</h5>\n    {% if code_snippet != '' %}\n        {{ code_snippet }}\n    {% endif %}\n    {% if code_snippet_raw != '' %}\n        <div class=\"source-code\">\n            <pre><code class=\"language-html\">{{ code_snippet_raw }}</code></pre>\n        </div>\n    {% endif %}\n</div>\n";
 
 /***/ }),
 
@@ -203,7 +203,7 @@ module.exports = "{{ description }}\n";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"variation-jinja-code-snippet\">\n    <h5 class=\"u-visually-hidden\">Jinja</h5>\n    <div>\n        {{ jinja_code_snippet }}\n    </div>\n</div>\n";
+module.exports = "<div class=\"variation-jinja-code-snippet\">\n    <h5 class=\"u-visually-hidden\">Jinja</h5>\n    {{ jinja_code_snippet }}\n</div>\n";
 
 /***/ }),
 

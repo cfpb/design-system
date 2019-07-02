@@ -3,11 +3,9 @@
     {% if code_snippet != '' %}
         {{ code_snippet }}
     {% endif %}
-    <div>
-        {% if code_snippet_raw != '' %}
-            <div class="source-code">
-                <pre><code class="language-html">{{ code_snippet_raw }}</code></pre>
-            </div>
-        {% endif %}
-    </div>
+    {% if code_snippet_raw != '' %}
+        <div class="source-code">
+            <pre><code class="language-html">{{ code_snippet_raw }}</code></pre>
+        </div>
+    {% endif %}
 </div>

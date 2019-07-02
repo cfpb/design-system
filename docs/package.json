@@ -38,10 +38,11 @@
   },
   "scripts": {
     "start": "parallelshell \"bundle exec jekyll serve --watch --host=localhost\" \"yarn run watch\" \"yarn run watch-css\"",
+    "compile-js": "NODE_ENV=production webpack",
     "compile-css": "lessc --include-path=../src/packages/:../src/node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/main.css",
     "watch-css": "less-watch-compiler --less-args include-path=../src/packages/:../src/node_modules/normalize-css/normalize-css/ assets/css dist/css main.less",
     "watch": "webpack --watch",
-    "build": "bundle exec jekyll build && NODE_ENV=production webpack && yarn run compile-css",
+    "build": "bundle exec jekyll build && yarn run compile-js && yarn run compile-css",
     "build-preview": "bundle exec jekyll build && webpack && yarn run compile-css",
     "install": "yarn --cwd ../src"
   },

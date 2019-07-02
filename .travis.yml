@@ -9,7 +9,8 @@ install:
 script:
 - yarn --cwd src/ run test
 before_deploy:
-- yarn --cwd docs/ run build
+- yarn --cwd docs/ run compile-js
+- yarn --cwd docs/ run compile-css
 deploy:
   provider: pages
   skip_cleanup: true

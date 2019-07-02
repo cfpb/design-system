@@ -99,12 +99,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(govuk_frontend__WEBPACK_IMPORTED_MODULE_0__);
 
 var $main = document.querySelector('main.content');
-var $tabs = document.querySelector('[data-module="tabs"]');
+var $tabs = document.querySelectorAll('[data-module="tabs"]');
 
 if ($tabs) {
   $main.classList.add('js-enabled');
-  new govuk_frontend__WEBPACK_IMPORTED_MODULE_0__["Tabs"]($tabs).init();
-  console.log('myhello');
+
+  for (var i = 0; i < $tabs.length; i++) {
+    var $tab = $tabs[i];
+    new govuk_frontend__WEBPACK_IMPORTED_MODULE_0__["Tabs"]($tab).init();
+  }
 }
 
 var HIDDEN_CLASS = 'u-hidden';

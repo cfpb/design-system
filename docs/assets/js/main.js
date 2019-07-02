@@ -1,12 +1,14 @@
 import { Tabs } from 'govuk-frontend'
 
-var $main = document.querySelector('main.content');
-var $tabs = document.querySelector('[data-module="tabs"]')
+const $main = document.querySelector('main.content');
+const $tabs = document.querySelectorAll( '[data-module="tabs"]' )
 
-if ($tabs) {
-  $main.classList.add('js-enabled');
-  new Tabs($tabs).init()
-  console.log('myhello')
+if ( $tabs ) {
+  $main.classList.add( 'js-enabled' );
+  for ( let i = 0; i < $tabs.length; i++ ) {
+    let $tab = $tabs[i];
+    new Tabs( $tab ).init( )  
+  }
 }
 
 const HIDDEN_CLASS = 'u-hidden';

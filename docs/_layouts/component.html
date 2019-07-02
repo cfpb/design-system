@@ -74,12 +74,11 @@ layout: default
 
                 <ul class="govuk-tabs__list">
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet">
-                        HTML
-                        </a>
+                        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet-{{ forloop.index }}">
+                        HTML                        </a>
                     </li>
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#jinja-code-snippet">
+                        <a class="govuk-tabs__tab" href="#jinja-code-snippet-{{ forloop.index }}">
                         Jinja
                         </a>
                     </li>
@@ -87,7 +86,7 @@ layout: default
 
                 
                 <!-- HTML snippet -->
-                <section class="govuk-tabs__panel" id="html-code-snippet">
+                <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
                     <h5 class="u-visually-hidden">HTML</h5>
                     {% capture code_snippet %}{% endcapture %}
                     {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape }}{% endcapture %}
@@ -96,7 +95,7 @@ layout: default
             
 
             <!-- Jinja snippet -->
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
                     <h5>Jinja</h5>
                     {% capture jinja_code_snippet %}{{ variation.variation_jinja_code_snippet | markdownify }}{% endcapture %}
                     {% include variation/jinja-code-snippet.html %}

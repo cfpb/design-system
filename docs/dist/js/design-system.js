@@ -107,6 +107,35 @@ if ($tabs) {
   console.log('myhello');
 }
 
+var HIDDEN_CLASS = 'u-hidden';
+var toggleButton = document.getElementById('toggle-code-btn');
+var codeSnippets = document.querySelectorAll('[data-toggle-code]');
+
+hideEls = function hideEls(els) {
+  return els.forEach(function (el) {
+    return el.classList.add(HIDDEN_CLASS);
+  });
+};
+
+showEls = function showEls(els) {
+  return els.forEach(function (el) {
+    return el.classList.remove(HIDDEN_CLASS);
+  });
+};
+
+toggleButton.addEventListener('click', function (ev) {
+  ev.preventDefault();
+  var codeIsHidden = toggleButton.getAttribute('data-code-hidden');
+
+  if (codeIsHidden) {
+    showEls(codeSnippets);
+    toggleButton.removeAttribute('data-code-hidden');
+  } else {
+    hideEls(codeSnippets);
+    toggleButton.setAttribute('data-code-hidden', 'true');
+  }
+});
+
 /***/ }),
 
 /***/ "./node_modules/govuk-frontend/all.js":

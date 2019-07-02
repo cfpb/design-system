@@ -181,7 +181,7 @@ module.exports = "</section>\n\n<h3>Usage</h3>\n\n<section id=\"usage\">\n  <p>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"variation-code-snippet\">\n    {{ code_snippet }}\n    <h5 class=\"u-mt15\">HTML</h5>\n    <div class=\"source-code\" data-source-code>\n        <pre><code class=\"language-html\">{{ code_snippet_raw }}</code></pre>\n    </div>\n</div>\n";
+module.exports = "<div class=\"variation-code-snippet\">\n    {{ code_snippet }}\n    <div data-toggle-code class=\"u-mt15\">\n        <h5>HTML</h5>\n        <div class=\"source-code\">\n            <pre><code class=\"language-html\">{{ code_snippet_raw }}</code></pre>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 
@@ -225,7 +225,7 @@ module.exports = "<h4>{{ name }}</h4>\n";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h5>Specifications</h5>\n{{ specs }}\n";
+module.exports = "<div class=\"variation-code-specs\" data-toggle-code>\n\n    <h5>Specifications</h5>\n\n    {{ specs }}\n\n</div>\n";
 
 /***/ }),
 

@@ -5387,3 +5387,15 @@ pre code {
     margin-bottom: 0;
   }
 }
+#toggle-code-btn .show-button {
+  display: none;
+}
+#toggle-code-btn .hide-button {
+  display: inline;
+}
+#toggle-code-btn[data-code-hidden] .show-button {
+  display: inline;
+}
+#toggle-code-btn[data-code-hidden] .hide-button {
+  display: none;
+}

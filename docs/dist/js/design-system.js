@@ -111,13 +111,13 @@ var HIDDEN_CLASS = 'u-hidden';
 var toggleButton = document.getElementById('toggle-code-btn');
 var codeSnippets = document.querySelectorAll('[data-toggle-code]');
 
-hideEls = function hideEls(els) {
+var hideEls = function hideEls(els) {
   return els.forEach(function (el) {
     return el.classList.add(HIDDEN_CLASS);
   });
 };
 
-showEls = function showEls(els) {
+var showEls = function showEls(els) {
   return els.forEach(function (el) {
     return el.classList.remove(HIDDEN_CLASS);
   });

@@ -13,8 +13,8 @@ const HIDDEN_CLASS = 'u-hidden';
 const toggleButton = document.getElementById( 'toggle-code-btn' );
 const codeSnippets = document.querySelectorAll( '[data-toggle-code]' );
 
-hideEls = els => els.forEach( el => el.classList.add( HIDDEN_CLASS ) );
-showEls = els => els.forEach( el => el.classList.remove( HIDDEN_CLASS ) );
+let hideEls = els => els.forEach( el => el.classList.add( HIDDEN_CLASS ) );
+let showEls = els => els.forEach( el => el.classList.remove( HIDDEN_CLASS ) );
 
 toggleButton.addEventListener( 'click', ev => {
   ev.preventDefault();

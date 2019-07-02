@@ -1,7 +1,9 @@
-<h3>Research</h3>
+{% if page.research %}
+    <h3>Research</h3>
 
-<section id="research">
-  <p>
-    {{ research }}
-  </p>
-</section>
+    <section id="research">
+        <p>
+            {{ page.research | markdownify }}
+        </p>
+    </section>
+{% endif %}

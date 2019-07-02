@@ -1,7 +1,9 @@
-<h3>Accessibility</h3>
+{% if page.accessibility %}
+    <h3>Accessibility</h3>
 
-<section id="accessibility">
-  <p>
-    {{ accessibility }}
-  </p>
-</section>
+    <section id="accessibility">
+        <p>
+            {{ page.accessibility | markdownify }}
+        </p>
+    </section>
+{% endif %}

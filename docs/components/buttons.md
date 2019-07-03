@@ -16,25 +16,49 @@ variations:
       <button class="a-btn" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn">
     variation_description: The default state is the most default state of them all.
+    variation_jinja_code_snippet: |-
+      ```
+      {% macro render(value) -%}
+
+      <div class="o-form-actions">
+          <input class="a-btn a-btn__super form-actions_item"
+                 type="submit"
+                 value="{{ value.button_text }}">
+      </div>
+
+      {%- endmacro %}
+      ```
     variation_name: Default state
+    variation_specs: text
   - variation_code_snippet: |-
       <a href="#" class="a-btn hover" title="Test button">Anker Tag</a>
       <button class="a-btn hover" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn hover">
     variation_description: Use the hover state when hovering.
+    variation_jinja_code_snippet: text
     variation_name: Hovered state
+    variation_specs: |-
+      ```
+      this is a jinja
+      ```
   - variation_code_snippet: |-
       <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
       <button class="a-btn focus" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn focus">
     variation_description: Stay focused on the focused state.
+    variation_jinja_code_snippet: |-
+      ```
+      this is a jinja
+      ```
     variation_name: Focused state
+    variation_specs: text
   - variation_code_snippet: |-
       <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
       <button class="a-btn active" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn active">
     variation_description: Want a button to look active? Use the active state.
     variation_name: Active state
+    variation_specs: text
 usage: >-
   **Use cases**
 
@@ -84,5 +108,7 @@ research: >-
   Dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et qui omniam
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
+related_items: '- related items'
+help_us: '- related items'
 ---
 

@@ -1,13 +1,13 @@
-import { Tabs } from 'govuk-frontend'
+import { Tabs } from 'govuk-frontend';
 
-const $main = document.querySelector('main.content');
-const $tabs = document.querySelectorAll( '[data-module="tabs"]' )
+const $main = document.querySelector( 'main.content' );
+const $tabs = document.querySelectorAll( '[data-module="tabs"]' );
 
 if ( $tabs ) {
   $main.classList.add( 'js-enabled' );
   for ( let i = 0; i < $tabs.length; i++ ) {
-    let $tab = $tabs[i];
-    new Tabs( $tab ).init( )  
+    const $tab = $tabs[i];
+    new Tabs( $tab ).init( );
   }
 }
 
@@ -15,8 +15,8 @@ const HIDDEN_CLASS = 'u-hidden';
 const toggleButton = document.getElementById( 'toggle-code-btn' );
 const codeSnippets = document.querySelectorAll( '[data-toggle-code]' );
 
-let hideEls = els => els.forEach( el => el.classList.add( HIDDEN_CLASS ) );
-let showEls = els => els.forEach( el => el.classList.remove( HIDDEN_CLASS ) );
+const hideEls = els => els.forEach( el => el.classList.add( HIDDEN_CLASS ) );
+const showEls = els => els.forEach( el => el.classList.remove( HIDDEN_CLASS ) );
 
 toggleButton.addEventListener( 'click', ev => {
   ev.preventDefault();

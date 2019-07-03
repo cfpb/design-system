@@ -1,9 +1,9 @@
-</section>
-
+{% if page.usage %}
 <h3>Usage</h3>
 
-<section id="usage">
-  <p>
-    {{ usage }}
-  </p>
-</section>
+    <section id="usage">
+        <p>
+            {{ page.usage | markdownify }}
+        </p>
+    </section>
+{% endif %}

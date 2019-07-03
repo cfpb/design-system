@@ -1,6 +1,8 @@
-<section id="intro" class="u-mt20 u-mb20">
-  {{ intro }}
-</section>
+{% if page.intro %}
+    <section id="intro" class="u-mt20 u-mb20">
+        {{ page.intro | markdownify }}
+    </section>
+{% endif %}
 
 <ul class="m-list m-list__horizontal u-mb20">
     <li class="m-list_item">

@@ -1,8 +1,10 @@
+{% if page.help_us %}
 <div class="content-l_col content-l_col-1-2">
     <div>
         <section id="help-us">
             <h3>Help us make improvements</h3>
-            {{ help_us }}
+            {{ page.help_us | markdownify }}
         </section>
     </div>
 </div>
+{% endif %}

@@ -5,8 +5,10 @@ import template from '../../../../_includes/usage.html';
 
 export const Preview = props => {
   const data = {
-    usage: marked(props.value)
-  }
+    page: {
+      usage: marked(props.value)
+    }
+  };
   return (
     <div>
       <ReactLiquid template={template} data={data} html />

@@ -49,7 +49,6 @@ layout: default
             </div>
         </div><!-- .content-l -->
 
-        {% capture intro %}{{ page.intro | markdownify }}{% endcapture %}
         {% include intro.html %}
 
         {% for variation in page.variations %}
@@ -100,26 +99,23 @@ layout: default
             </div><!-- .govuk-tabs -->
 
             <!-- Specifications -->
+            {% if variation.variation_specs %}
             {% capture specs %}{{ variation.variation_specs | markdownify }}{% endcapture %}
             {% include variation/specs.html %}
+            {% endif %}
         </div>
         {% endfor %}
 
-        {% capture usage %}{{ page.usage | markdownify }}{% endcapture %}
         {% include usage.html %}
 
-        {% capture accessibility %}{{ page.accessibility | markdownify }}{% endcapture %}
         {% include accessibility.html %}
 
-        {% capture research %}{{ page.research | markdownify }}{% endcapture %}
         {% include research.html %}
 
-        <div class="content-l">            
-                    {% capture related_items %}{{ page.related_items | markdownify }}{% endcapture %}
-                    {% include component/related-items.html %}
-            
-                    {% capture help_us %}{{ page.help_us | markdownify }}{% endcapture %}
-                    {% include component/help-us.html %}
+        <div class="content-l">
+            {% include component/related-items.html %}
+
+            {% include component/help-us.html %}
         </div><!-- .content-l -->
 
     </section>

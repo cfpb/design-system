@@ -64,11 +64,15 @@ coverage.xml
 # Front-End #
 #############
 node_modules/
+docs/node_modules/
+src/node_modules/
 bower_components/
 .grunt/
 vendor/
 static/vendor/
 tmp/
+dist/
+docs/dist/
 
 # Jekyll stuff #
 ################

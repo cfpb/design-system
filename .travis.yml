@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+- '10'
+before_install:
+- curl -o- -L https://yarnpkg.com/install.sh | bash
+- export PATH="$HOME/.yarn/bin:$PATH"
+install:
+- yarn --cwd docs/
+script:
+- yarn --cwd src/ run test
+before_deploy:
+- yarn --cwd docs/ run compile-js
+- yarn --cwd docs/ run compile-css
+- rm -rf docs/node_modules/
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs/
+  verbose: true
+  github_token: "$GITHUB_TOKEN"
+  on:
+    branch: master
+env:
+  matrix:
+  # $GITHUB_TOKEN for cfpb/design-system (using the CFPBot GH account)
+  # See https://docs.travis-ci.com/user/deployment/pages/
+  # - secure: igy8Ui68mPDnKkZnDJaEBOmk1X2BkzmpKU1M5GJHN0zn0oDJDRb01UW6GwXsqLC3sZzYzT7rMEy9Vhy4aTsXcXCQknDRX7TB382Vbfrd4pdjZks5il8E22PjQz7tOu9gp2on5LSScNOZoAvKzc/gcHG94B4biLQmHF2mN4LwWqZFBd81PnUeGAkPZIgbTQhD7jq4qHgsCK3OVHybSdCIpZSEInZzwNcA04nV3oxfJrneuGhaCCtL+djTey1+BPr95LZIelauKgsONskj3jRw46xrSEq2zIn2VJh+i7+4QCUbuNCHFoKWgRWzefhK99osomoB7b7JtdTX1uO5cfBBX4nYGZGZzWE5jhJQi5Y/9bGs4XSsod8dozlggFam7PwErrAf9jf19xRjD+0kLvD3VRf/c7MSILFvAYvWxGzYDe5+VTm9VHYoCkwNeDgCbwqAHm/AqacUGWcpC8NDq09pGECMskMBlAfLmkwrHKhVmhHf7YCh4JwvHFUiALr05tqlZIXraZdmn3AH/flczdcyVgHSnmm2YlOb2Xn5SCr4niGE0u+TwXWNkMApzQfT0N8UZwlhRKwFsU6CDu+LJPe84thLjNKFJJ8qzP3zg5YWHubf8VQzgkGb6xqFlGc5FRx3k0SDG1Nh4+8iW1wK6nNnwIh+PIODG0XDuDEfdlM29zo=
+  # $GITHUB_TOKEN for test-things/design-system (using the CFPBot GH account)
+  # See https://docs.travis-ci.com/user/deployment/pages/
+  - secure: jyOhMEBc71q86SlOeMjr2pAv1f1WUm4HMaO2ghZqL2aeeictl4jXFw6kDF7tQV1ShX17qWOf4MMlTPB5k8rraSPneUF0SXZWwqKCVLhkK8S3pd6KIMgcUYmg6JJpQ+02TN3qN5EP+PCkTYtshBbuSZWWIDNqvbTVVuCGqBY7Q17QvNKxksRi88q1OiyUND72mZFFwmB08d6vu8EDY3uQ9EVFyvZv0wul5frMpW8eLY+Ehi75maPhiCUw9RkIBgNgJmc0qcmmokZeg0IyVQ+YeQrt7oLwCcKDP4LgVzBHhwbKOtz7o8xoHyq/PqCGPTuqRbieUWIBCqO35cMv1XSgtD9hTXCDFjtj2FqINbpFbnNtT1igzBuV2/LGI+M99QrUrmUgZFWD/6ikerApczaTzpSbbXfYEhH8orgri3P3wUuESCe42i1BkQccNOAe/TlS7GiiNlgw/9z1CVjy9slvPbc/ADrMBVSGyqMjHhKIde/M9oN50nf7Q+9LZ9+BW9gvEBXMvbD58A6iSVPYqb/MVzM6Dcl0zFYeaSf8SVOF7dSQE0yEDNGE1tEOc+WKPCgxgkam/MihMQRgpvuWZY83OkTYQ2IevXnRzwkv7xNeAtsx7NG7OveGv7ZJGsVc3u7TwYtOiOuMg91EMb9q+1FDPqZljwXgntM1LdIpHvKDi98=

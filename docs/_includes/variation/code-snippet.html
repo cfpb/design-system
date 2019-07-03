@@ -1,13 +1,13 @@
 {% if code_snippet %}
 <div class="variation-code-snippet">
-    {{ code_snippet }}
-    {% if code_snippet_raw %}
-    <div data-toggle-code class="u-mt15">
-        <h5>HTML</h5>
+    <h5 class="u-visually-hidden">HTML</h5>
+    {% if code_snippet != '' %}
+        {{ code_snippet }}
+    {% endif %}
+    {% if code_snippet_raw != '' %}
         <div class="source-code">
             <pre><code class="language-html">{{ code_snippet_raw }}</code></pre>
         </div>
-    </div>
     {% endif %}
 </div>
 {% endif %}

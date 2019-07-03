@@ -13,6 +13,10 @@ intro: >-
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.
+    variation_jinja_code_snippet: |2
+       now i will add reandom text
+      - [jinja template]()
+      - 
     variation_name: Default state
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The secondary state is very secondary.

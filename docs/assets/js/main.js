@@ -61,8 +61,9 @@ function addPermalinks( headings ) {
   permalinks.forEach(
     permalink => permalink.addEventListener( 'click', ev => {
       ev.preventDefault();
-      console.log( ev.currentTarget.href );
-      copyAnchorLink( );
+      const href = ev.currentTarget.href;
+      // console.log( href );
+      copyAnchorLink( ev.currentTarget );
     } )
   );
 
@@ -71,9 +72,36 @@ function addPermalinks( headings ) {
 /**
  * Get href value and copy to clipboard
  */
-function copyAnchorLink( ) {
+function copyAnchorLink( linkEl ) {
   // do the copy
-  console.log( 'do the copy' );
+  const range = document.createRange();
+  const linkText = linkEl.innerHTML;
+  const linkURL = linkEl.href;
+  // hackx to set the link text to equal the link url so we can select it and copy it to clipboard
+  // how can we get the whole url and note just the anchor bit....?
+  linkEl.innerHTML = linkURL;
+  range.selectNodeContents( linkEl );
+
+  console.log ( linkURL );
+  console.log ( linkEl );
+  console.log ( range );
+
+  window.getSelection().addRange( range );
+
+  try {
+    // Now that we've selected the anchor text, execute the copy command
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copy email command was ' + msg);
+  } catch(err) {
+    console.log('Oops, unable to copy');
+  }
+
+  // Remove the selections - NOTE: Should use
+  // removeRange(range) when it is supported
+  window.getSelection().removeAllRanges();
+  linkEl.innerHTML = linkText;
+
 }
 
 const h3Els = document.querySelectorAll( '.content_main h3' );

@@ -12,10 +12,33 @@ intro: >-
   information.
 variations:
   - variation_code_snippet: |-
+      Default State<br>
+      <button class="a-btn" title="Test button">Button</button>
+      <br>Hovered state<br>
+      <button class="a-btn hover" title="Test button">Button</button>
+      <br>Focused state<br>
+      <button class="a-btn focus" title="Test button">Button</button>
+      <br>Active state<br>
+      <button class="a-btn active" title="Test button">Button</button>
+
+      <!--
+      Alternatives for Default state:
       <a href="#" class="a-btn" title="Test button">Anchor Tag</a>
-      <button class="a-btn" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn">
-    variation_description: The default state is the most default state of them all.
+
+      Alternatives for Hovered state:
+      <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
+      <input type="submit" value="Input Tag" class="a-btn hover">
+
+      Alternatives for Focused state:
+      <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
+      <input type="submit" value="Input Tag" class="a-btn focus">
+
+      Alternatives for Active state:
+      <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
+      <input type="submit" value="Input Tag" class="a-btn active">
+      -->
+    variation_description: Use primary buttons for actions that go to the next step.
     variation_jinja_code_snippet: |-
       ```
       {% macro render(value) -%}
@@ -28,37 +51,158 @@ variations:
 
       {%- endmacro %}
       ```
-    variation_name: Default state
-    variation_specs: text
-  - variation_code_snippet: |-
-      <a href="#" class="a-btn hover" title="Test button">Anker Tag</a>
-      <button class="a-btn hover" title="Test button">Button Tag</button>
+    variation_name: Primary button
+    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn-text | @white; | White (#ffffff)\t\nBackground | @btn-bg: | @pacific; | Pacific (#0072ce)\nBackground (hover) | @btn-bg-hover: | @dark-pacific; | Dark Pacific (#0050b4)\nBackground (active)  | @btn-bg-active: | @navy; | Navy (#254b87)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t"
+  - variation_code_snippet: >-
+      Default state<br>
+
+      <button class="a-btn a-btn__secondary" title="Test button">Button</button>
+
+      <br>Hovered state<br>
+
+      <button class="a-btn a-btn__secondary hover" title="Test
+      button">Button</button>
+
+      <br>Focused state<br>
+
+      <button class="a-btn a-btn__secondary focus" title="Test
+      button">Button</button>
+
+      <br>Active state<br>
+
+      <button class="a-btn a-btn__secondary active" title="Test
+      button">Button</button>
+
+
+      <!--
+
+      Alternatives for Default state:
+
+      <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
+
       <input type="submit" value="Input Tag" class="a-btn hover">
-    variation_description: Use the hover state when hovering.
-    variation_jinja_code_snippet: text
-    variation_name: Hovered state
-    variation_specs: |-
-      ```
-      this is a jinja
-      ```
-  - variation_code_snippet: |-
-      <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
-      <button class="a-btn focus" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="a-btn focus">
-    variation_description: Stay focused on the focused state.
+
+
+      Alternatives for Hovered state:
+
+      <a href="#" class="a-btn a-btn__secondary hover">Anchor Tag</a>
+
+      <input type="submit" value="Input Tag" class="a-btn a-btn__secondary
+      hover">
+
+
+      Alternatives for Focused state:
+
+      <a href="#" class="a-btn a-btn__secondary focus">Anchor Tag</a>
+
+      <input type="submit" value="Input Tag" class="a-btn a-btn__secondary
+      focus">
+
+
+      Alternatives for Active state:
+
+      <a href="#" class="a-btn a-btn__secondary active">Anchor Tag</a>
+
+      <input type="submit" value="Input Tag" class="a-btn a-btn__secondary
+      active">
+
+      -->
+    variation_description: Use secondary buttons for actions that happen on the current page.
     variation_jinja_code_snippet: |-
       ```
       this is a jinja
       ```
-    variation_name: Focused state
-    variation_specs: text
+    variation_name: Secondary button
+    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn__secondary-text: | @white; | White (#ffffff)\t\nBackground | @btn__secondary-bg: | @gray; | Gray (#5a5d61)\nBackground (hover) | @btn__secondary-bg-hover: | @dark-gray; | Dark gray (#43484e)\nBackground (active) | @btn__secondary-bg-active: | @black; | Black (#101820)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t"
+  - variation_code_snippet: >
+      Default State<br>
+
+      <button class="a-btn a-btn__warning" title="Test button">Button</button>
+
+      <br>Hovered state<br>
+
+      <button class="a-btn a-btn__warning hover" title="Test
+      button">Button</button>
+
+      <br>Focused state<br>
+
+      <button class="a-btn a-btn__warning focus" title="Test
+      button">Button</button>
+
+      <br>Active state<br>
+
+      <button class="a-btn a-btn__warning active" title="Test
+      button">Button</button>
+
+
+      <!--
+
+      Alternatives for Default state:
+
+      <a href="#" class="a-btn a-btn__warning">Anchor Tag</a>
+
+      <input type="submit" value="Input Tag" class="a-btn a-btn__warning">
+
+
+      Alternatives for Hovered state:
+
+      <a href="#" class="a-btn a-btn__warning hover">Anchor Tag</a>
+
+      <input type="submit" value="Input Tag" class="a-btn a-btn__warning hover">
+
+
+      Alternatives for Focused state:
+
+      <a href="#" class="a-btn a-btn__warning focus">Anchor Tag</a>
+
+      <input type="submit" value="Input Tag" class="a-btn a-btn__warning focus">
+
+
+      Alternatives for Active state:
+
+      <a href="#" class="a-btn a-btn__warning active">Anchor Tag</a>
+
+      <input type="submit" value="Input Tag" class="a-btn a-btn__warning
+      active">
+
+      -->
+    variation_description: ''
+    variation_jinja_code_snippet: |-
+      ```
+      this is a jinja
+      ```
+    variation_name: Destructive action button
+    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn-text | @white; | White (#ffffff)\t\nBackground | @btn__warning-bg: | @red; | Red (#d14124)\nBackground (hover) | @btn__warning-bg-hover: | @dark-red; | Dark red (#b63014)\nBackground (active)  | @btn__warning-bg-active: | @dark-gray; | Dark gray (#43484e)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t"
   - variation_code_snippet: |-
       <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
       <button class="a-btn active" title="Test button">Button Tag</button>
       <input type="submit" value="Input Tag" class="a-btn active">
-    variation_description: Want a button to look active? Use the active state.
-    variation_name: Active state
-    variation_specs: text
+    variation_description: ''
+    variation_name: Disabled button
+    variation_specs: ''
+  - variation_code_snippet: |-
+      Default State
+      <button class="a-btn" title="Test button">Button Tag</button>
+
+      Hover state
+      <button class="a-btn hover" title="Test button">Button Tag</button>
+
+      Focused state
+      <button class="a-btn focus" title="Test button">Button Tag</button>
+
+      Active state
+      <button class="a-btn active" title="Test button">Button Tag</button>
+    variation_name: Super button
+  - variation_code_snippet: TBD
+    variation_name: Full-width button
+  - variation_code_snippet: TBD
+    variation_name: Icon button
+  - variation_code_snippet: TBD
+    variation_name: Animated icon button
+  - variation_code_snippet: TBD
+    variation_name: Button group
+  - variation_code_snippet: TBD
+    variation_name: Button link
 usage: >-
   **Use cases**
 

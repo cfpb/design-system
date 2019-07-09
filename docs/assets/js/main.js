@@ -60,7 +60,6 @@ function addPermalinks( headings ) {
 
   permalinks.forEach(
     permalink => permalink.addEventListener( 'click', ev => {
-      ev.preventDefault();
       const href = ev.currentTarget.href;
       // console.log( href );
       copyAnchorLink( ev.currentTarget );

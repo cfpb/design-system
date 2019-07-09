@@ -61,7 +61,6 @@ function addPermalinks( headings ) {
   permalinks.forEach(
     permalink => permalink.addEventListener( 'click', ev => {
       const href = ev.currentTarget.href;
-      // console.log( href );
       copyAnchorLink( ev.currentTarget );
     } )
   );
@@ -70,20 +69,15 @@ function addPermalinks( headings ) {
 
 /**
  * Get href value and copy to clipboard
+ * @param {HTMLNode} linkEl - <a> anchor link element created in addPermalinks()
  */
 function copyAnchorLink( linkEl ) {
-  // do the copy
   const range = document.createRange();
   const linkText = linkEl.innerHTML;
   const linkURL = linkEl.href;
   // hackx to set the link text to equal the link url so we can select it and copy it to clipboard
-  // how can we get the whole url and note just the anchor bit....?
   linkEl.innerHTML = linkURL;
   range.selectNodeContents( linkEl );
-
-  console.log ( linkURL );
-  console.log ( linkEl );
-  console.log ( range );
 
   window.getSelection().addRange( range );
 

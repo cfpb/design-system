@@ -1,16 +1,8 @@
 {
-  "name": "",
-  "description": "A boilerplate for creating Netlify CMS widgets.",
-  "keywords": [
-    "netlify",
-    "netlify-cms",
-    "cms",
-    "widget",
-    "starter",
-    "boilerplate"
-  ],
-  "version": "0.0.1",
-  "homepage": "https://github.com/netlify/",
+  "name": "@cfpb/design-system",
+  "version": "1.0.0",
+  "description": "CFPB Design System documentation website",
+  "homepage": "https://github.com/cfpb/design-system",
   "license": "MIT",
   "main": "dist/main.js",
   "devDependencies": {
@@ -28,7 +20,6 @@
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
-    "netlify-cms": "^2.9.1",
     "parallelshell": "3.0.1",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.23.1",
@@ -47,6 +38,7 @@
     "install": "yarn --cwd ../src"
   },
   "dependencies": {
+    "@cfpb/netlify-cms": "1.0.6",
     "escape-html": "^1.0.3",
     "fetch-suspense": "^1.1.0",
     "ftdomdelegate": "^3.0.0",

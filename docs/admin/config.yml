@@ -15,7 +15,7 @@ collections:
     label: 'Generic pages'
     label_singular: 'Generic page'
     folder: 'docs/pages/'
-    create: false
+    create: true
     delete: false
     slug: '{{slug}}'
     fields:

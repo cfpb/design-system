@@ -1,6 +1,6 @@
 ---
 title: Design Principles
-permalink: /design-principles
+permalink: /foundation/design-principles
 section: foundation
 ---
 ## Overall principles

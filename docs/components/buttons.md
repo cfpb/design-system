@@ -1,6 +1,6 @@
 ---
 title: Buttons
-permalink: /buttons
+permalink: components/buttons
 layout: component
 collection_name: components
 section: components

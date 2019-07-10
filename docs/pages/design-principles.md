@@ -85,31 +85,37 @@ For any content that is not text-based (images, audio, video, animations, charts
 
 #### Organize content semantically
 Semantic content allows user agents to correctly parse documents and present it to end users in a way that is appropriate for their device and medium without losing information or structure.
-
  
-Use semantic HTML, including relative header tags, lists, and semantic tags like `<aside>`, and `<figure>`
-Support HTML tables with semantic tags like `<th>`, `<thead>`, `<tbody>`, and `<caption>`
-Mark up HTML forms with semantic tags like `<label>`, `<fieldset>`, `<legend>`, and – where appropriate – HTML5 form additions like email fields.
-If the sequence of a page matters, the underlying HTML document should be in that order or the sequence should be machine-readable through another method.
-Avoid text descriptions that rely on layout or other sensory items such as “click the round button” or “the image on the right.” However, note that “above” and “below” are generally understood to mean “preceding” and “after,” and as such are permissible usage.
-Make content easily distinguishable from its surroundings
+- Use semantic HTML, including relative header tags, lists, and semantic tags like `<aside>`, and `<figure>`
+- Support HTML tables with semantic tags like `<th>`, `<thead>`, `<tbody>`, and `<caption>`
+- Mark up HTML forms with semantic tags like `<label>`, `<fieldset>`, `<legend>`, and – where appropriate – HTML5 form additions like email fields.
+- If the sequence of a page matters, the underlying HTML document should be in that order or the sequence should be machine-readable through another method.
+- Avoid text descriptions that rely on layout or other sensory items such as “click the round button” or “the image on the right.” However, note that “above” and “below” are generally understood to mean “preceding” and “after,” and as such are permissible usage.
+
+#### Make content easily distinguishable from its surroundings
+
 These guidelines help ensure that content is perceivable for sighted users.
-
  
-TEXT:
-Choose easy-to-read fonts.
-Avoid using images of text, except for logos and images meant to represent physical documents.
-Text should be able to be resized up to 200% without causing overlapping issues with other content on the page. Don’t rely on browser zoom, since some users have settings to force large type.
-COLOR:
-Do not use color as the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
-Text should have a contrast ratio of at least 4.5 : 1, but there are exceptions.
-For large text, a contrast ratio of only 3 : 1 is necessary. Large regular text is at least 18pt/24px, while large bold text is 14pt/18px.
-Text or images of text that are either pure decoration or not visible, or are part of a logo, picture that contains significant other visual content, or inactive UI components (like disabled form controls) do not have a color contrast requirement.
-The Colour Contrast Check is a nice tool for testing color contrast ratios.
-AUDIO:
-Avoid auto-playing audio. If this is absolutely unavoidable, provide a control that allows the user to stop the audio and adjust or mute the volume.
-In recorded audio, background sounds should be at least 20 dB lower than foreground sounds and speech. This does not apply to music.
-OperableView Operable on W3C site 
+##### TEXT:
+
+- Choose easy-to-read fonts.
+- Avoid using images of text, except for logos and images meant to represent physical documents.
+- Text should be able to be resized up to 200% without causing overlapping issues with other content on the page. Don’t rely on browser zoom, since some users have settings to force large type.
+
+##### COLOR:
+- Do not use color as the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
+- Text should have a contrast ratio of at least 4.5 : 1, but there are exceptions.
+  1. For large text, a contrast ratio of only 3 : 1 is necessary. Large regular text is at least 18pt/24px, while large bold text is 14pt/18px.
+  2. Text or images of text that are either pure decoration or not visible, or are part of a logo, picture that contains significant other visual content, or inactive UI components (like disabled form controls) do not have a color contrast requirement.
+- The Colour Contrast Check is a nice tool for testing color contrast ratios.
+
+##### AUDIO:
+- Avoid auto-playing audio. If this is absolutely unavoidable, provide a control that allows the user to stop the audio and adjust or mute the volume.
+- In recorded audio, background sounds should be at least 20 dB lower than foreground sounds and speech. This does not apply to music.
+
+
+#### Operable (View Operable on W3C site) 
+
 User interface components and navigation must be operable: an interface cannot require interaction that a user cannot perform. Following these guidelines will guarantee that all users can navigate a website or app regardless of their input device (mouse, keyboard, touchscreen, screen reader, etc).
 
 Ensure that all content is keyboard accessible
@@ -174,23 +180,26 @@ If an automatic context change is necessary, warn the user in advance and give t
  
 A few examples of context changes:
 
-Submitting a form
-Moving focus to a different element
-Popping open a help dialog box
-Launching a new window
-Following a link
-Reloading most of the content on a page
-RobustView Robust on W3C site 
+- Submitting a form
+- Moving focus to a different element
+- Popping open a help dialog box
+- Launching a new window
+- Following a link
+- Reloading most of the content on a page
+
+#### Robust (View Robust on W3C site) 
+
 Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies. A robust site will be broadly compatible with past, current, and future web browsers and devices.
 
-Follow standard web best practices
+##### Follow standard web best practices
 This means using standard HTML markup. If complex widgets are required, use WAI-ARIA to make the use, states, and properties clear to browsers and assistive technologies.
-
  
-Make sure your HTML validates.
-Use unique IDs on individual pages.
-Avoid deprecated or proprietary markup.
+##### Make sure your HTML validates.
+- Use unique IDs on individual pages.
+- Avoid deprecated or proprietary markup.
 Make sure states and properties of elements are machine readable.
 Note that this is specific to HTML and does not include CSS.
+
 Attribution
+
 This guide on accessible interfaces has been adapted from the Web Content Accessibility Guidelines (WCAG) 2.0. That document’s status is Recommendation. The document is copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved. W3C liability, trademark and document use rules apply.

@@ -1,9 +1,9 @@
 workflow "delete merged branch" {
   on = "pull_request"
-  resolves = ["SvanBoxel/delete-merged-branch@master"]
+  resolves = ["Delete merged branch"]
 }
 
-action "SvanBoxel/delete-merged-branch@master" {
-  uses = "SvanBoxel/delete-merged-branch@master"
+action "Delete merged branch" {
+  uses = "cfpb/delete-merged-branch@master"
   secrets = ["GITHUB_TOKEN"]
 }

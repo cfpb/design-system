@@ -239,51 +239,90 @@ variations:
       Active state
       <button class="a-btn active" title="Test button">Button Tag</button>
     variation_name: Super button
-  - variation_code_snippet: TBD
+  - variation_code_snippet: >-
+      Default State<br>
+
+      <button class="a-btn a-btn__full-on-xs" title="Test
+      button">Button</button>
+
+
+      <!--
+
+      Alternatives for Default state:
+
+      <a href="#" class="a-btn a-btn__full-on-xs">Anchor Tag</a>
+
+      <input type="submit" value="Input Tag" class="a-btn a-btn__full-on-xs">
+
+      -->
+    variation_description: _Reduce screen size to see these in action._
     variation_name: Full-width button
-  - variation_code_snippet: |-
+    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn-text | @white; | White (#ffffff)\t\nBackground | @btn-bg: | @pacific; | Pacific (#0072ce)\nBackground (hover) | @btn-bg-hover: | @dark-pacific; | Dark Pacific (#0050b4)\nBackground (active)  | @btn-bg-active: | @navy; | Navy (#254b87)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t\nOutline color | @btn-bg: | @pacific; | Pacific (#0072ce)\nOutline size | | | Dotted 1px\nOutline offset | | | 1px"
+  - variation_code_snippet: >-
+      <!--
+
+      Note: Due to inherent whitespace created between inline elements,
+      whitespace must be removed between the icon and its wrapping span element.
+
+      -->
+
+
       Primary button with icon on the left<br>
+
       <button class="a-btn">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button>
+
       <br>Secondary button with icon on the left<br>
+
       <button class="a-btn a-btn__secondary">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button>
+
       <br>Warning button with icon on the left<br>
+
       <button class="a-btn a-btn__warning">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button>
+
       <br>Disabled button with icon on the left<br>
+
       <button class="a-btn a-btn__disabled">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button><br>Primary button with icon on the left<br>
+
       <button class="a-btn">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button>
+
       <br>Secondary button with icon on the left<br>
+
       <button class="a-btn a-btn__secondary">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button>
+
       <br>Warning button with icon on the left<br>
+
       <button class="a-btn a-btn__warning">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button>
+
       <br>Disabled button with icon on the left<br>
+
       <button class="a-btn a-btn__disabled">
           Close
           <span class="a-btn_icon

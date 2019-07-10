@@ -38,7 +38,7 @@
     "install": "yarn --cwd ../src"
   },
   "dependencies": {
-    "@cfpb/netlify-cms": "1.0.8",
+    "@cfpb/netlify-cms": "1.10.0",
     "escape-html": "^1.0.3",
     "fetch-suspense": "^1.1.0",
     "ftdomdelegate": "^3.0.0",

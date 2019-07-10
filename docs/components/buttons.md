@@ -8,35 +8,81 @@ status: Proposed
 intro: >-
   Buttons signal actions. They should be used sparingly; each additional button
   on a page reduces the visual prominence of a call to action. In contrast,
-  [links](https://example.com) should lead users to another page or further
-  information. 
+  [links](https://test-things.github.io/design-system/components/link) should
+  lead users to another page or further information.
+
+
+  The cf-buttons component provides extensions to the basic button styles for
+  Capital Framework.
+
+
+  cf-core and cf-icons components are all dependencies of this component.
+
+
+  NOTE: If you use cf-buttons.less directly, be sure to run the file through
+  Autoprefixer, or your compiled Capital Framework CSS will not work perfectly
+  in older browsers.
 variations:
-  - variation_code_snippet: |-
+  - variation_code_snippet: >-
+      <!--
+
+      The Primary button is an atom in our atomic design standards. You can
+      apply the a-btn class to a link, button and submit input field to receive
+      the atomic button styles.
+
+
+      For accessibility reasons, use the semantic <button> instead of a link
+      when possible.
+
+      -->
+
+
       Default State<br>
+
       <button class="a-btn" title="Test button">Button</button>
+
       <br>Hovered state<br>
+
       <button class="a-btn hover" title="Test button">Button</button>
+
       <br>Focused state<br>
+
       <button class="a-btn focus" title="Test button">Button</button>
+
       <br>Active state<br>
+
       <button class="a-btn active" title="Test button">Button</button>
 
+
       <!--
+
       Alternatives for Default state:
+
       <a href="#" class="a-btn" title="Test button">Anchor Tag</a>
+
       <input type="submit" value="Input Tag" class="a-btn">
 
+
       Alternatives for Hovered state:
+
       <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
+
       <input type="submit" value="Input Tag" class="a-btn hover">
 
+
       Alternatives for Focused state:
+
       <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
+
       <input type="submit" value="Input Tag" class="a-btn focus">
 
+
       Alternatives for Active state:
+
       <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
+
       <input type="submit" value="Input Tag" class="a-btn active">
+
       -->
     variation_description: Use primary buttons for actions that go to the next step.
     variation_jinja_code_snippet: |-

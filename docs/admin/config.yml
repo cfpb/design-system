@@ -18,7 +18,7 @@ collections:
     files:
       - label: "Navigation"
         name: "navigation"
-        file: "_data/navigation.yml"
+        file: "docs/_data/navigation.yml"
         fields:
           - label: "Sections"
             name: "sections"
@@ -31,15 +31,23 @@ collections:
                 label: 'Slug'
                 widget: 'string'
               - name: 'categories'
-                label: 'Categories'
+                label: 'Second-level nav items'
+                label_singular: 'Second-level nav item'
                 widget: 'list'
                 fields:
-                - name: 'label'
-                  label: 'Title'
-                  widget: 'string'
-                - name: 'slug'
-                  label: 'Slug'
-                  widget: 'string'
+                  - name: 'slug'
+                    label: 'Slug'
+                    widget: 'string'
+                  - name: 'items'
+                    label: 'Items'
+                    widget: 'list'
+                    fields:
+                      - name: 'label'
+                        label: 'Title'
+                        widget: 'string'
+                      - name: 'slug'
+                        label: 'Slug'
+                        widget: 'string'
   - name: 'pages'
     label: 'Generic pages'
     label_singular: 'Generic page'

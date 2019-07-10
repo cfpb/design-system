@@ -118,14 +118,16 @@ These guidelines help ensure that content is perceivable for sighted users.
 
 User interface components and navigation must be operable: an interface cannot require interaction that a user cannot perform. Following these guidelines will guarantee that all users can navigate a website or app regardless of their input device (mouse, keyboard, touchscreen, screen reader, etc).
 
-Ensure that all content is keyboard accessible
-In general, if a website can be operated using only the keyboard, it will also be operable with less-common input devices.
+##### Ensure that all content is keyboard accessible
 
+In general, if a website can be operated using only the keyboard, it will also be operable with less-common input devices.
  
-All controls must be addressible by the keyboard. By default, this includes `<a>`, `<area>`, `<object>`, and all form elements. Other elements can be made addressible by applying a tabindex value.
-Avoid keyboard traps. If a user can tab to an element on the page, the user needs to be able to exit that element using only the keyboard as well.
-Do not rely on specific timing of individual keystrokes when implementing keyboard accessibility.
-Give users ample time to interact with content
+- All controls must be addressible by the keyboard. By default, this includes `<a>`, `<area>`, `<object>`, and all form elements. Other elements can be made addressible by applying a tabindex value.
+- Avoid keyboard traps. If a user can tab to an element on the page, the user needs to be able to exit that element using only the keyboard as well.
+- Do not rely on specific timing of individual keystrokes when implementing keyboard accessibility.
+
+#### Give users ample time to interact with content
+
 You should not use time limits.
 
  

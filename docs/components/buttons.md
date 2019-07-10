@@ -203,6 +203,18 @@ variations:
     variation_name: Button group
   - variation_code_snippet: TBD
     variation_name: Button link
+  - variation_code_snippet: TBD
+    variation_description: >-
+      For multiple actions in a single button unit. Prone to error, avoid if
+      possible.
+    variation_name: Compound button
+    variation_specs: TBD
+  - variation_code_snippet: TBD
+    variation_description: >-
+      When paired with a primary action, indicate the destructive action using a
+      destructive action button link to the right of the primary button.
+    variation_name: Destructive action
+    variation_specs: TBD
 usage: >-
   **Use cases**
 
@@ -229,30 +241,9 @@ usage: >-
   Icons appear to the left of the button text. Buttons that have “forward”
   actions have icons to the right of the text, and those with “back” actions
   have icons to the left.
-accessibility: >-
-  This is some placeholder text until we write accessibility content. Praesent
-  id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et
-  justo.
-research: >-
-  Quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis
-  antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis
-  sitat arum, et imus dolorec epelescias eos sita quam incidis imoleseque
-  officitam faccus qui dis molorro eos ernam, ullam autemodia dem verit quosam
-  hit od quosapicae peditatur.
-
-
-  Velicati cum qui des aute sam ulles nosam quiamendiam et et, sum iunt, sim et
-  esciundam, que comni con consendi duntur, quo magnim fugitam qui sam quatur
-  sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi cum quiaes
-  esequiasi volecate nos inimodi gniminc idipsam inihit volupta volorectam fuga.
-  Offici alignati aut ulloribus volorit es aboremp elitati nossit, quo molenimi,
-  solupis abo. Iciis eos eum fuga.
-
-
-  Dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et qui omniam
-  quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
-  sunt, idipicia volor aut eat.
+accessibility: TBD
+research: TBD
 related_items: '- related items'
-help_us: '- related items'
+help_us: TBD
 ---
 

@@ -355,34 +355,9 @@ variations:
           <button class="a-btn a-btn__super">No</button>
           <button class="a-btn a-btn__super">Maybe So</button>
       </div>
+    variation_jinja_code_snippet: ''
     variation_name: Button group
-    variation_specs: |-
-      Default State<br>
-      <button class="a-btn" title="Test button">Button</button>
-      <br>Hovered state<br>
-      <button class="a-btn hover" title="Test button">Button</button>
-      <br>Focused state<br>
-      <button class="a-btn focus" title="Test button">Button</button>
-      <br>Active state<br>
-      <button class="a-btn active" title="Test button">Button</button>
-
-      <!--
-      Alternatives for Default state:
-      <a href="#" class="a-btn" title="Test button">Anchor Tag</a>
-      <input type="submit" value="Input Tag" class="a-btn">
-
-      Alternatives for Hovered state:
-      <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
-      <input type="submit" value="Input Tag" class="a-btn hover">
-
-      Alternatives for Focused state:
-      <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
-      <input type="submit" value="Input Tag" class="a-btn focus">
-
-      Alternatives for Active state:
-      <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
-      <input type="submit" value="Input Tag" class="a-btn active">
-      -->
+    variation_specs: TBD
   - variation_code_snippet: >-
       __Primary button link__<br>
 
@@ -436,6 +411,7 @@ variations:
       <button href="#" class="a-btn a-btn__link a-btn__warning active">Active
       state</button>
     variation_name: Button link
+    variation_specs: TBD
   - variation_code_snippet: TBD
     variation_description: >-
       For multiple actions in a single button unit. Prone to error, avoid if

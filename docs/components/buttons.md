@@ -9,7 +9,7 @@ intro: >-
   Buttons signal actions. They should be used sparingly; each additional button
   on a page reduces the visual prominence of a call to action. In contrast,
   [links](https://example.com) should lead users to another page or further
-  information.
+  information. 
 variations:
   - variation_code_snippet: |-
       Default State<br>

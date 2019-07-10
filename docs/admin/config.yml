@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: test-things/design-system
+  repo: cfpb/design-system
   branch: master
   squash_merges: true
   base_url: https://netlifycms-auth.glitch.me

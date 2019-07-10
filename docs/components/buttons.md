@@ -159,7 +159,7 @@ variations:
       this is a jinja
       ```
     variation_name: Secondary button
-    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn__secondary-text: | @white; | White (#ffffff)\t\nBackground | @btn__secondary-bg: | @gray; | Gray (#5a5d61)\nBackground (hover) | @btn__secondary-bg-hover: | @dark-gray; | Dark gray (#43484e)\nBackground (active) | @btn__secondary-bg-active: | @black; | Black (#101820)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t"
+    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn__secondary-text: | @white; | White (#ffffff)\t\nBackground | @btn__secondary-bg: | @gray; | Gray (#5a5d61)\nBackground (hover) | @btn__secondary-bg-hover: | @dark-gray; | Dark gray (#43484e)\nBackground (active) | @btn__secondary-bg-active: | @black; | Black (#101820)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t\nOutline color | @btn-bg: | @gray; | Gray (#5a5d61)\nOutline size | | | Dotted 1px\nOutline offset | | | 1px"
   - variation_code_snippet: >
       Default State<br>
 
@@ -218,7 +218,7 @@ variations:
       this is a jinja
       ```
     variation_name: Destructive action button
-    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn-text | @white; | White (#ffffff)\t\nBackground | @btn__warning-bg: | @red; | Red (#d14124)\nBackground (hover) | @btn__warning-bg-hover: | @dark-red; | Dark red (#b63014)\nBackground (active)  | @btn__warning-bg-active: | @dark-gray; | Dark gray (#43484e)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t"
+    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn-text | @white; | White (#ffffff)\t\nBackground | @btn__warning-bg: | @red; | Red (#d14124)\nBackground (hover) | @btn__warning-bg-hover: | @dark-red; | Dark red (#b63014)\nBackground (active)  | @btn__warning-bg-active: | @dark-gray; | Dark gray (#43484e)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t\nOutline color | @btn-bg: | @red; | Red (#d14124)\nOutline size | | | Dotted 1px\nOutline offset | | | 1px"
   - variation_code_snippet: |-
       <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
       <button class="a-btn active" title="Test button">Button Tag</button>

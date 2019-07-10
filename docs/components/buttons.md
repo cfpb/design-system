@@ -241,35 +241,59 @@ variations:
     variation_name: Super button
   - variation_code_snippet: TBD
     variation_name: Full-width button
-  - variation_code_snippet: TBD
-    variation_description: |-
-
-
-      <br>Primary button with icon on the right<br>
+  - variation_code_snippet: |-
+      Primary button with icon on the left<br>
       <button class="a-btn">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button>
-      <br>Secondary button with icon on the right<br>
+      <br>Secondary button with icon on the left<br>
       <button class="a-btn a-btn__secondary">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button>
-      <br>Warning button with icon on the right<br>
+      <br>Warning button with icon on the left<br>
       <button class="a-btn a-btn__warning">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button>
-      <br>Disabled button with icon on the right<br>
+      <br>Disabled button with icon on the left<br>
+      <button class="a-btn a-btn__disabled">
+          Close
+          <span class="a-btn_icon
+                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+      </button><br>Primary button with icon on the left<br>
+      <button class="a-btn">
+          Close
+          <span class="a-btn_icon
+                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+      </button>
+      <br>Secondary button with icon on the left<br>
+      <button class="a-btn a-btn__secondary">
+          Close
+          <span class="a-btn_icon
+                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+      </button>
+      <br>Warning button with icon on the left<br>
+      <button class="a-btn a-btn__warning">
+          Close
+          <span class="a-btn_icon
+                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+      </button>
+      <br>Disabled button with icon on the left<br>
       <button class="a-btn a-btn__disabled">
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">{% include icons/error.svg %}</span>
       </button>
+    variation_description: ''
     variation_name: Icon button
+    variation_specs: >-
+      Specs table doesn't really apply since there's primary, secondary,
+      warning, and disabled buttons in this variation.
   - variation_code_snippet: |-
       <button class="a-btn">
           Submit your complaint

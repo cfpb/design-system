@@ -383,7 +383,58 @@ variations:
       <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
       <input type="submit" value="Input Tag" class="a-btn active">
       -->
-  - variation_code_snippet: TBD
+  - variation_code_snippet: >-
+      __Primary button link__<br>
+
+
+      <button href="#" class="a-btn a-btn__link">Default state</button>
+
+
+      <button href="#" class="a-btn a-btn__link hover">Hovered state</button>
+
+
+      <button href="#" class="a-btn a-btn__link focus">Focused state</button>
+
+
+      <button href="#" class="a-btn a-btn__link active">Active state</button>
+
+
+      <br>__Secondary button link__<br>
+
+
+      <button href="#" class="a-btn a-btn__link a-btn__secondary">Default
+      state</button>
+
+
+      <button href="#" class="a-btn a-btn__link a-btn__secondary hover">Hovered
+      state</button>
+
+
+      <button href="#" class="a-btn a-btn__link a-btn__secondary focus">Focused
+      state</button>
+
+
+      <button href="#" class="a-btn a-btn__link a-btn__secondary active">Active
+      state</button>
+
+
+      <br>__Warning button link__<br>
+
+
+      <button href="#" class="a-btn a-btn__link a-btn__warning">Default
+      state</button>
+
+
+      <button href="#" class="a-btn a-btn__link a-btn__warning hover">Hovered
+      state</button>
+
+
+      <button href="#" class="a-btn a-btn__link a-btn__warning focus">Focus
+      state</button>
+
+
+      <button href="#" class="a-btn a-btn__link a-btn__warning active">Active
+      state</button>
     variation_name: Button link
   - variation_code_snippet: TBD
     variation_description: >-

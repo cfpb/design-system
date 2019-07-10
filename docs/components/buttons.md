@@ -242,11 +242,84 @@ variations:
   - variation_code_snippet: TBD
     variation_name: Full-width button
   - variation_code_snippet: TBD
+    variation_description: |-
+
+
+      <br>Primary button with icon on the right<br>
+      <button class="a-btn">
+          Close
+          <span class="a-btn_icon
+                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+      </button>
+      <br>Secondary button with icon on the right<br>
+      <button class="a-btn a-btn__secondary">
+          Close
+          <span class="a-btn_icon
+                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+      </button>
+      <br>Warning button with icon on the right<br>
+      <button class="a-btn a-btn__warning">
+          Close
+          <span class="a-btn_icon
+                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+      </button>
+      <br>Disabled button with icon on the right<br>
+      <button class="a-btn a-btn__disabled">
+          Close
+          <span class="a-btn_icon
+                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+      </button>
     variation_name: Icon button
-  - variation_code_snippet: TBD
+  - variation_code_snippet: |-
+      <button class="a-btn">
+          Submit your complaint
+          <span class="a-btn_icon
+                       a-btn_icon__on-right">{% include icons/updating.svg %}</span>
+      </button>
+    variation_description: ''
+    variation_jinja_code_snippet: TBD
     variation_name: Animated icon button
-  - variation_code_snippet: TBD
+  - variation_code_snippet: |-
+      Primary button group<br>
+      <div class="m-btn-group">
+          <button class="a-btn">Yes</button>
+          <button class="a-btn">No</button>
+          <button class="a-btn">Maybe So</button>
+      </div>
+      <br>Super button group<br>
+      <div class="m-btn-group">
+          <button class="a-btn a-btn__super">Yes</button>
+          <button class="a-btn a-btn__super">No</button>
+          <button class="a-btn a-btn__super">Maybe So</button>
+      </div>
     variation_name: Button group
+    variation_specs: |-
+      Default State<br>
+      <button class="a-btn" title="Test button">Button</button>
+      <br>Hovered state<br>
+      <button class="a-btn hover" title="Test button">Button</button>
+      <br>Focused state<br>
+      <button class="a-btn focus" title="Test button">Button</button>
+      <br>Active state<br>
+      <button class="a-btn active" title="Test button">Button</button>
+
+      <!--
+      Alternatives for Default state:
+      <a href="#" class="a-btn" title="Test button">Anchor Tag</a>
+      <input type="submit" value="Input Tag" class="a-btn">
+
+      Alternatives for Hovered state:
+      <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
+      <input type="submit" value="Input Tag" class="a-btn hover">
+
+      Alternatives for Focused state:
+      <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
+      <input type="submit" value="Input Tag" class="a-btn focus">
+
+      Alternatives for Active state:
+      <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
+      <input type="submit" value="Input Tag" class="a-btn active">
+      -->
   - variation_code_snippet: TBD
     variation_name: Button link
   - variation_code_snippet: TBD

@@ -61,6 +61,16 @@ variations:
 
       Minicon: 18 px, Black (#101820)
 usage: >-
+  Selecting the checkbox or touching the label text next to it should toggle the
+  state of the checkbox on and off.
+
+
+  To optimize usability, consider using checkboxes with large target areas. If
+  these won’t fit into the design and the default style shown below is used,
+  make sure the target area is at least 45 x 45px and that it includes the text
+  label.
+
+
   **Use cases**
 
 
@@ -73,17 +83,7 @@ usage: >-
   TBD
 
 
-  **Usability**
-
-
-  To optimize usability, consider using checkboxes with large target areas. If
-  these won’t fit into the design and the default style shown below is used,
-  make sure the target area is at least 45 x 45px and that it includes the text
-  label.
-
-
-  Selecting the checkbox or touching the label text next to it should toggle the
-  state of the checkbox on and off.
+  ****
 accessibility: >-
   To optimize screen reader accessibility, lay out checkboxes vertically rather
   than horizontally.

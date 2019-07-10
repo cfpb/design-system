@@ -11,6 +11,43 @@ media_folder: docs/images/uploads
 public_folder: /design-system/images/uploads
 
 collections:
+  - name: "navigation"
+    label: "Navigation"
+    editor:
+      preview: true
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "docs/_data/navigation.yml"
+        fields:
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - name: 'label'
+                label: 'Title'
+                widget: 'string'
+              - name: 'slug'
+                label: 'Slug'
+                widget: 'string'
+              - name: 'categories'
+                label: 'Second-level nav items'
+                label_singular: 'Second-level nav item'
+                widget: 'list'
+                fields:
+                  - name: 'slug'
+                    label: 'Slug'
+                    widget: 'string'
+                  - name: 'items'
+                    label: 'Items'
+                    widget: 'list'
+                    fields:
+                      - name: 'label'
+                        label: 'Title'
+                        widget: 'string'
+                      - name: 'slug'
+                        label: 'Slug'
+                        widget: 'string'
   - name: 'pages'
     label: 'Generic pages'
     label_singular: 'Generic page'

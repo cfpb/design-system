@@ -3,7 +3,6 @@ backend:
   repo: cfpb/design-system
   branch: master
   squash_merges: true
-  base_url: https://netlifycms-auth.glitch.me
 
 logo_url: https://cfpb.github.io/design-manual/static/img/logo/Logo0_@2.png
 publish_mode: editorial_workflow

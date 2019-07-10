@@ -10,7 +10,20 @@ intro: >-
   clear with helper text that this is the case.
 variations:
   - variation_code_snippet: TBD
-    variation_description: The default state is the most default state of them all.
+    variation_description: |-
+      Default
+
+      Height: 20 px
+
+      Width: 20 px
+
+      Margin right: 10 px
+
+      Border: 1 px, Gray 60 (#919395)
+
+      Background: White (#ffffff)
+
+      Avenir Next Regular, 16 px, Black (#101820)
     variation_name: Default state
   - variation_code_snippet: TBD
     variation_description: The secondary state is very secondary.

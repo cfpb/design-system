@@ -7,7 +7,7 @@ The documentation website is in `docs/`. The code for Capital Framework, our UI 
 Clone or fork the repo, then install dependencies:
 
 ```shell
-git clone https://github.com/test-things/design-system.git
+git clone https://github.com/cfpb/design-system.git
 cd design-system/docs
 yarn
 ```

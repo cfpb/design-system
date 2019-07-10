@@ -11,7 +11,7 @@ highlighter: rouge
 # Organization
 org: CFPB
 description: CFPB's design system
-repository: test-things/design-system
+repository: cfpb/design-system
 
 # Title
 title: Design System

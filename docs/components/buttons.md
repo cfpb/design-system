@@ -5,23 +5,7 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: >-
-  Buttons signal actions. They should be used sparingly; each additional button
-  on a page reduces the visual prominence of a call to action. In contrast,
-  [links](https://test-things.github.io/design-system/components/link) should
-  lead users to another page or further information.
-
-
-  The cf-buttons component provides extensions to the basic button styles for
-  Capital Framework.
-
-
-  cf-core and cf-icons components are all dependencies of this component.
-
-
-  NOTE: If you use cf-buttons.less directly, be sure to run the file through
-  Autoprefixer, or your compiled Capital Framework CSS will not work perfectly
-  in older browsers.
+intro: "Buttons signal actions. They should be used sparingly; each additional button on a page reduces the visual prominence of a call to action. In contrast, [links](https://test-things.github.io/design-system/components/link) should lead users to another page or further information.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/\n\nThe cf-buttons component provides extensions to the basic button styles for Capital Framework.\n\ncf-core and cf-icons components are all dependencies of this component.\n\nNOTE: If you use cf-buttons.less directly, be sure to run the file through Autoprefixer, or your compiled Capital Framework CSS will not work perfectly in older browsers."
 variations:
   - variation_code_snippet: |-
       Default State<br>
@@ -449,3 +433,4 @@ research: TBD
 related_items: '- related items'
 help_us: 1TBD
 ---
+

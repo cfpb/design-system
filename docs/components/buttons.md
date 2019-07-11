@@ -104,7 +104,7 @@ variations:
     variation_name: Disabled button
     variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText color | @btn__disabled-text: | @gray; | Gray (#5a5d61)\t\nBackground | @btn__disabled-bg: | @gray-20; | Gray 20 (##d2d3d5)\nBackground (hover) | @btn__warning-bg-hover: | @dark-red; | Dark red (#b63014)\nBackground (active)  | @btn__warning-bg-active: | @dark-gray; | Dark gray (#43484e)\nOutline color | @btn__disabled-outline: | @gray-20; | Gray 20 (##d2d3d5)"
   - variation_code_snippet: |-
-      <button class="a-btn" title="Test button">Super button</button>
+      <button class="a-btn a-btn__super" title="Test button">Button Tag</button>
 
       <!--
       Alternatives:

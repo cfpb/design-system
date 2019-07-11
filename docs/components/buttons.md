@@ -103,13 +103,19 @@ variations:
     variation_description: ''
     variation_name: Disabled button
     variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText color | @btn__disabled-text: | @gray; | Gray (#5a5d61)\t\nBackground | @btn__disabled-bg: | @gray-20; | Gray 20 (##d2d3d5)\nBackground (hover) | @btn__warning-bg-hover: | @dark-red; | Dark red (#b63014)\nBackground (active)  | @btn__warning-bg-active: | @dark-gray; | Dark gray (#43484e)\nOutline color | @btn__disabled-outline: | @gray-20; | Gray 20 (##d2d3d5)"
-  - variation_code_snippet: |-
-      <button class="a-btn a-btn__super" title="Test button">Button Tag</button>
+  - variation_code_snippet: >-
+      <button class="a-btn a-btn__super" title="Test button">Super
+      button</button>
+
 
       <!--
+
       Alternatives:
+
       <a href="#" class="a-btn a-btn__super">Anchor Tag</a>
+
       <input type="submit" value="Input Tag" class="a-btn a-btn__super">
+
       -->
     variation_name: Super button
     variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText size | @btn__super-font-size:  | 18px;\t| 18px\t\nTop/bottom padding |  | 15px; | 15px\t\nLeft/right padding |  | 30px; | 30px\t\t"

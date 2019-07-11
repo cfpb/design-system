@@ -5,34 +5,17 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: "Buttons signal actions. They should be used sparingly; each additional button on a page reduces the visual prominence of a call to action. In contrast, [links](https://test-things.github.io/design-system/components/link) should lead users to another page or further information.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/\n\nThe cf-buttons component provides extensions to the basic button styles for Capital Framework.\n\ncf-core and cf-icons components are all dependencies of this component.\n\nNOTE: If you use cf-buttons.less directly, be sure to run the file through Autoprefixer, or your compiled Capital Framework CSS will not work perfectly in older browsers."
+intro: "Buttons signal actions. They should be used sparingly; each additional button on a page reduces the visual prominence of a call to action. In contrast, [links](https://test-things.github.io/design-system/components/link) should lead users to another page or further information.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/"
 variations:
   - variation_code_snippet: |-
-      Default State<br>
-      <button class="a-btn" title="Test button">Button</button>
-      <br>Hovered state<br>
-      <button class="a-btn hover" title="Test button">Button</button>
-      <br>Focused state<br>
-      <button class="a-btn focus" title="Test button">Button</button>
-      <br>Active state<br>
-      <button class="a-btn active" title="Test button">Button</button>
+      <button class="a-btn" title="Test button">Primary button</button>
 
       <!--
-      Alternatives for Default state:
+      Alternatives:
+
       <a href="#" class="a-btn" title="Test button">Anchor Tag</a>
+
       <input type="submit" value="Input Tag" class="a-btn">
-
-      Alternatives for Hovered state:
-      <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
-      <input type="submit" value="Input Tag" class="a-btn hover">
-
-      Alternatives for Focused state:
-      <a href="#" class="a-btn focus" title="Test button">Anchor Tag</a>
-      <input type="submit" value="Input Tag" class="a-btn focus">
-
-      Alternatives for Active state:
-      <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
-      <input type="submit" value="Input Tag" class="a-btn active">
       -->
     variation_description: >-
       Use primary buttons for actions that go to the next step.
@@ -58,59 +41,21 @@ variations:
       {%- endmacro %}
       ```
     variation_name: Primary button
-    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn-text | @white; | White (#ffffff)\t\nBackground | @btn-bg: | @pacific; | Pacific (#0072ce)\nBackground (hover) | @btn-bg-hover: | @dark-pacific; | Dark Pacific (#0050b4)\nBackground (active)  | @btn-bg-active: | @navy; | Navy (#254b87)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t\nOutline color | @btn-bg: | @pacific; | Pacific (#0072ce)\nOutline size | | | Dotted 1px\nOutline offset | | | 1px\n"
+    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn-text | @white; | White (#ffffff)\t\nBackground | @btn-bg: | @pacific; | Pacific (#0072ce)\nBackground (hover) | @btn-bg-hover: | @dark-pacific; | Dark Pacific (#0050b4)\nBackground (active)  | @btn-bg-active: | @navy; | Navy (#254b87)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\nOutline size | | | Dotted 1px\nOutline offset | | | 1px\n"
   - variation_code_snippet: >-
-      Default state<br>
-
-      <button class="a-btn a-btn__secondary" title="Test button">Button</button>
-
-      <br>Hovered state<br>
-
-      <button class="a-btn a-btn__secondary hover" title="Test
-      button">Button</button>
-
-      <br>Focused state<br>
-
-      <button class="a-btn a-btn__secondary focus" title="Test
-      button">Button</button>
-
-      <br>Active state<br>
-
-      <button class="a-btn a-btn__secondary active" title="Test
-      button">Button</button>
+      <button class="a-btn a-btn__secondary" title="Test button">Secondary
+      button</button>
 
 
       <!--
 
-      Alternatives for Default state:
+      Alternatives:
+
 
       <a href="#" class="a-btn hover" title="Test button">Anchor Tag</a>
 
+
       <input type="submit" value="Input Tag" class="a-btn hover">
-
-
-      Alternatives for Hovered state:
-
-      <a href="#" class="a-btn a-btn__secondary hover">Anchor Tag</a>
-
-      <input type="submit" value="Input Tag" class="a-btn a-btn__secondary
-      hover">
-
-
-      Alternatives for Focused state:
-
-      <a href="#" class="a-btn a-btn__secondary focus">Anchor Tag</a>
-
-      <input type="submit" value="Input Tag" class="a-btn a-btn__secondary
-      focus">
-
-
-      Alternatives for Active state:
-
-      <a href="#" class="a-btn a-btn__secondary active">Anchor Tag</a>
-
-      <input type="submit" value="Input Tag" class="a-btn a-btn__secondary
-      active">
 
       -->
     variation_description: Use secondary buttons for actions that happen on the current page.
@@ -119,57 +64,22 @@ variations:
       this is a jinja
       ```
     variation_name: Secondary button
-    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn__secondary-text: | @white; | White (#ffffff)\t\nBackground | @btn__secondary-bg: | @gray; | Gray (#5a5d61)\nBackground (hover) | @btn__secondary-bg-hover: | @dark-gray; | Dark gray (#43484e)\nBackground (active) | @btn__secondary-bg-active: | @black; | Black (#101820)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t\nOutline color | @btn-bg: | @gray; | Gray (#5a5d61)\nOutline size | | | Dotted 1px\nOutline offset | | | 1px"
+    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText color | @btn__secondary-text: | @white; | White (#ffffff)\t\nBackground | @btn__secondary-bg: | @gray; | Gray (#5a5d61)\nBackground (hover) | @btn__secondary-bg-hover: | @dark-gray; | Dark gray (#43484e)\nBackground (active) | @btn__secondary-bg-active: | @black; | Black (#101820)"
   - variation_code_snippet: >
-      Default State<br>
 
-      <button class="a-btn a-btn__warning" title="Test button">Button</button>
-
-      <br>Hovered state<br>
-
-      <button class="a-btn a-btn__warning hover" title="Test
-      button">Button</button>
-
-      <br>Focused state<br>
-
-      <button class="a-btn a-btn__warning focus" title="Test
-      button">Button</button>
-
-      <br>Active state<br>
-
-      <button class="a-btn a-btn__warning active" title="Test
-      button">Button</button>
+      <button class="a-btn a-btn__warning" title="Test button">Destructive
+      button</button>
 
 
       <!--
 
-      Alternatives for Default state:
+      Alternatives:
+
 
       <a href="#" class="a-btn a-btn__warning">Anchor Tag</a>
 
+
       <input type="submit" value="Input Tag" class="a-btn a-btn__warning">
-
-
-      Alternatives for Hovered state:
-
-      <a href="#" class="a-btn a-btn__warning hover">Anchor Tag</a>
-
-      <input type="submit" value="Input Tag" class="a-btn a-btn__warning hover">
-
-
-      Alternatives for Focused state:
-
-      <a href="#" class="a-btn a-btn__warning focus">Anchor Tag</a>
-
-      <input type="submit" value="Input Tag" class="a-btn a-btn__warning focus">
-
-
-      Alternatives for Active state:
-
-      <a href="#" class="a-btn a-btn__warning active">Anchor Tag</a>
-
-      <input type="submit" value="Input Tag" class="a-btn a-btn__warning
-      active">
 
       -->
     variation_description: ''
@@ -178,14 +88,30 @@ variations:
       this is a jinja
       ```
     variation_name: Destructive action button
-    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn-text | @white; | White (#ffffff)\t\nBackground | @btn__warning-bg: | @red; | Red (#d14124)\nBackground (hover) | @btn__warning-bg-hover: | @dark-red; | Dark red (#b63014)\nBackground (active)  | @btn__warning-bg-active: | @dark-gray; | Dark gray (#43484e)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\t\nOutline color | @btn-bg: | @red; | Red (#d14124)\nOutline size | | | Dotted 1px\nOutline offset | | | 1px"
-  - variation_code_snippet: |-
-      <a href="#" class="a-btn active" title="Test button">Anchor Tag</a>
-      <button class="a-btn active" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="a-btn active">
+    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText color | @btn__warning-text: | @white; | White (#ffffff)\t\nBackground | @btn__warning-bg: | @red; | Red (#d14124)\nBackground (hover) | @btn__warning-bg-hover: | @dark-red; | Dark red (#b63014)\nBackground (active)  | @btn__warning-bg-active: | @dark-gray; | Dark gray (#43484e)"
+  - variation_code_snippet: >-
+      <button class="a-btn a-btn__disabled" title="Test button">Disabled
+      button</button>
+
+
+      <!--
+
+      Alternatives:
+
+
+      <a href="#" class="a-btn a-btn__disabled">Anchor Tag</a>
+
+
+      <input type="submit" value="Input Tag" class="a-btn a-btn__disabled">
+
+
+      <button class="a-btn" disabled title="Test button">Button Tag w/ disabled
+      attr</button>
+
+      -->
     variation_description: ''
     variation_name: Disabled button
-    variation_specs: ''
+    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText color | @btn__disabled-text: | @gray; | Gray (#5a5d61)\t\nBackground | @btn__disabled-bg: | @gray-20; | Gray 20 (##d2d3d5)\nBackground (hover) | @btn__warning-bg-hover: | @dark-red; | Dark red (#b63014)\nBackground (active)  | @btn__warning-bg-active: | @dark-gray; | Dark gray (#43484e)\nOutline color | @btn__disabled-outline: | @gray-20; | Gray 20 (##d2d3d5)"
   - variation_code_snippet: |-
       Default State
       <button class="a-btn" title="Test button">Button Tag</button>
@@ -428,6 +354,20 @@ usage: >-
   Icons appear to the left of the button text. Buttons that have “forward”
   actions have icons to the right of the text, and those with “back” actions
   have icons to the left.
+
+
+  **Code**
+
+
+  The cf-buttons component provides extensions to the basic button styles.
+
+
+  cf-core and cf-icons components are all dependencies of this component.
+
+
+  NOTE: If you use cf-buttons.less directly, be sure to run the file through
+  Autoprefixer, or your compiled Capital Framework CSS will not work perfectly
+  in older browsers.
 accessibility: TBD
 research: TBD
 related_items: '- related items'

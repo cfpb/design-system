@@ -7,6 +7,9 @@ sections:
     secondaryNavItems:
       - label: Forms
         slug: forms
+        tertiaryNavItems:
+          - label: Buttons
+            slug: buttons
     slug: components
   - label: Templates
     slug: templates

@@ -10,6 +10,24 @@ sections:
         tertiaryNavItems:
           - label: Buttons
             slug: buttons
+          - label: Checkboxes
+            slug: checkboxes
+          - label: 'Dropdowns '
+            slug: 'dropdowns '
+          - label: 'E-mail signup forms '
+            slug: 'e-mail-signup-forms '
+          - label: Feedback forms
+            slug: feedback-forms
+          - label: Fieldsets
+            slug: fieldsets
+          - label: Multi-selects
+            slug: multi-selects
+          - label: Radio buttons
+            slug: radio-buttons
+          - label: Range sliders
+            slug: range-sliders
+          - label: Text inputs
+            slug: text-inputs
     slug: components
   - label: Templates
     slug: templates

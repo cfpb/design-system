@@ -1,14 +1,20 @@
 ---
 title: E-mail Signup Forms
+permalink: /components/e-mail-signup-forms
 layout: component
 collection_name: components
 section: components
 status: Proposed
-permalink: /components/e-mail-signup-forms
 intro: >-
   Email sign-ups are used to add individual email addresses to a specific
   mailing list that is relevant to the content on the page or the section it is
   contained within.
+
+
+  More information can be found at:
+
+
+  http://cfpb.github.io/design-manual/page-components/email-sign-up.html
 variations:
   - variation_code_snippet: |
       <label class="a-label a-label__heading" for="textinput-example-default">
@@ -86,3 +92,4 @@ research: >-
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
 ---
+

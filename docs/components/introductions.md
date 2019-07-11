@@ -5,11 +5,9 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: >-
-  Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas
-  purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor,
-  lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent
-  taciti sociosqu ad litora torquent per conubia nostra.
+intro: |-
+  Information about Introductions can be found at:
+  * http://cfpb.github.io/design-manual/global-elements/text-introductions.html
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.

@@ -1,14 +1,14 @@
 ---
 title: Contact Information
+permalink: /components/contact-information
 layout: component
 collection_name: components
 section: components
 status: Proposed
-permalink: /components/contact-information
-intro: >-
-  The contact information component is used to display phone, email, mailing
-  address, and fax information for offices within the Bureau. This pattern may
-  show up in either the main content area or the sidebar. asdfasdf
+intro: |-
+  Information for "Contact Information" can be found at:
+
+  http://cfpb.github.io/design-manual/page-components/contact-information.html
 variations:
   - variation_code_snippet: |-
       <div class="o-well">
@@ -84,3 +84,4 @@ research: >-
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
 ---
+

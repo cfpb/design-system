@@ -23,31 +23,30 @@ collections:
           - label: "Sections"
             name: "sections"
             widget: "list"
+            required: false
             fields:
               - name: 'label'
-                label: 'Title'
+                label: 'Link text'
                 widget: 'string'
+                required: false
               - name: 'slug'
                 label: 'Slug'
                 widget: 'string'
-              - name: 'categories'
-                label: 'Second-level nav items'
-                label_singular: 'Second-level nav item'
+                required: false
+              - name: 'secondaryNavItems'
+                label: 'Secondary nav items'
+                label_singular: 'Secondary nav item'
                 widget: 'list'
+                required: false
                 fields:
                   - name: 'slug'
                     label: 'Slug'
                     widget: 'string'
-                  - name: 'items'
-                    label: 'Items'
-                    widget: 'list'
-                    fields:
-                      - name: 'label'
-                        label: 'Title'
-                        widget: 'string'
-                      - name: 'slug'
-                        label: 'Slug'
-                        widget: 'string'
+                    required: false
+                  - name: 'label'
+                    label: 'Link text'
+                    widget: 'string'
+                    required: false
   - name: 'pages'
     label: 'Generic pages'
     label_singular: 'Generic page'

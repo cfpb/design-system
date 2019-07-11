@@ -1,33 +1,33 @@
 sections:
   - label: Getting Started
     slug: getting-started
-    categories:
+    secondaryNavItems:
       - label: Category Name
         slug: category-name
-        items:
+        tertiaryNavItems:
           - label: Random page
             slug: random-page
   - label: Foundation
     slug: foundation
-    categories:
+    secondaryNavItems:
       - label: Category Name
         slug: category-name
-        items:
+        tertiaryNavItems:
           - label: Random page
             slug: random-page
   - label: Components
     slug: components
-    categories:
+    secondaryNavItems:
       - label: Alerts
         slug: alerts
-        items:
+        tertiaryNavItems:
           - label: Modals
             slug: modals
           - label: Notifications
             slug: notifications
       - label: Content layouts
         slug: content-layouts
-        items:
+        tertiaryNavItems:
           - label: Contact information
             slug: contact-information
           - label: Expandables
@@ -48,7 +48,7 @@ sections:
             slug: wells
       - label: Core utilities
         slug: core-utilities
-        items:
+        tertiaryNavItems:
           - label: Atomic components
             slug: atomic-components
           - label: Blocks
@@ -65,7 +65,7 @@ sections:
             slug: utilities
       - label: Data visualization
         slug: data-visualization
-        items:
+        tertiaryNavItems:
           - label: Bar charts
             slug: bar-charts
           - label: Line charts
@@ -76,7 +76,7 @@ sections:
             slug: pie-charts
       - label: Forms
         slug: forms
-        items:
+        tertiaryNavItems:
           - label: Buttons
             slug: buttons
           - label: Checkboxes
@@ -99,7 +99,7 @@ sections:
             slug: text-inputs
       - label: Navigation
         slug: navigation
-        items:
+        tertiaryNavItems:
           - label: Filterable list control panels
             slug: filterable-list-control-panels
           - label: Left hand navigation
@@ -110,7 +110,7 @@ sections:
             slug: pagination
       - label: Tables
         slug: tables
-        items:
+        tertiaryNavItems:
           - label: Default tables
             slug: default-tables
           - label: Sortable tables
@@ -121,7 +121,7 @@ sections:
             slug: snippet-lists
       - label: Text
         slug: text
-        items:
+        tertiaryNavItems:
           - label: Dates
             slug: dates
           - label: Definition lists
@@ -146,9 +146,9 @@ sections:
             slug: quotes
   - label: Templates
     slug: templates
-    categories:
+    secondaryNavItems:
       - label: Category Name
         slug: category-name
-        items:
+        tertiaryNavItems:
           - label: Random page
             slug: random-page

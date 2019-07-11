@@ -51,10 +51,8 @@ layout: default
 
         {% include intro.html %}
 
-
-        <h3 id="variations">Variations</h3>
-
-        <section>
+        <section class="sticky-header">
+            <h3 id="variations">Variations</h3>
             {% for variation in page.variations %}
             <div class="u-mt15">
                 <!-- Name -->
@@ -86,13 +84,13 @@ layout: default
                             </a>
                         </li>
                     </ul>
-                    
+
                     <!-- HTML snippet -->
                     <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
                         {% capture code_snippet %}{% endcapture %}
                         {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape }}{% endcapture %}
                         {% include variation/code-snippet.html %}
-                    </section>            
+                    </section>
 
                     <!-- Jinja snippet -->
                     <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">

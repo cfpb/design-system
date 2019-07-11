@@ -73,6 +73,7 @@ static/vendor/
 tmp/
 dist/
 docs/dist/
+docs/assets/icons/
 
 # Jekyll stuff #
 ################

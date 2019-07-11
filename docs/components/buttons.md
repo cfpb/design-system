@@ -248,7 +248,9 @@ variations:
       <button class="a-btn">
           Close
           <span class="a-btn_icon
-                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+                       a-btn_icon__on-right">
+              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+          </span>
       </button>
 
       <br>Secondary button with icon on the left<br>
@@ -256,7 +258,9 @@ variations:
       <button class="a-btn a-btn__secondary">
           Close
           <span class="a-btn_icon
-                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+                       a-btn_icon__on-right">
+              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+          </span>
       </button>
 
       <br>Warning button with icon on the left<br>
@@ -264,7 +268,9 @@ variations:
       <button class="a-btn a-btn__warning">
           Close
           <span class="a-btn_icon
-                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+                       a-btn_icon__on-right">
+              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+          </span>
       </button>
 
       <br>Disabled button with icon on the left<br>
@@ -272,13 +278,17 @@ variations:
       <button class="a-btn a-btn__disabled">
           Close
           <span class="a-btn_icon
-                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+                       a-btn_icon__on-right">
+              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+          </span>
       </button><br>Primary button with icon on the left<br>
 
       <button class="a-btn">
           Close
           <span class="a-btn_icon
-                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+                       a-btn_icon__on-right">
+              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+          </span>
       </button>
 
       <br>Secondary button with icon on the left<br>
@@ -286,7 +296,9 @@ variations:
       <button class="a-btn a-btn__secondary">
           Close
           <span class="a-btn_icon
-                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+                       a-btn_icon__on-right">
+              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+          </span>
       </button>
 
       <br>Warning button with icon on the left<br>
@@ -294,7 +306,9 @@ variations:
       <button class="a-btn a-btn__warning">
           Close
           <span class="a-btn_icon
-                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+                       a-btn_icon__on-right">
+              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+          </span>
       </button>
 
       <br>Disabled button with icon on the left<br>
@@ -302,7 +316,9 @@ variations:
       <button class="a-btn a-btn__disabled">
           Close
           <span class="a-btn_icon
-                       a-btn_icon__on-right">{% include icons/error.svg %}</span>
+                       a-btn_icon__on-right">
+              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+          </span>
       </button>
     variation_description: ''
     variation_name: Icon button
@@ -313,7 +329,9 @@ variations:
       <button class="a-btn">
           Submit your complaint
           <span class="a-btn_icon
-                       a-btn_icon__on-right">{% include icons/updating.svg %}</span>
+                       a-btn_icon__on-right">
+              <img src="/design-system/assets/icons/updating.svg" class="cf-icon-svg" />
+          </span>
       </button>
     variation_description: ''
     variation_jinja_code_snippet: TBD

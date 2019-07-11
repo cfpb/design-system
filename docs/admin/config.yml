@@ -46,6 +46,20 @@ collections:
                     label: 'Link text'
                     widget: 'string'
                     required: false
+                  - name: 'tertiaryNavItems'
+                    label: 'Tertiary nav items'
+                    label_singular: 'Tertiary nav item'
+                    widget: 'list'
+                    required: false
+                    fields:
+                      - name: 'slug'
+                        label: 'Slug'
+                        widget: 'string'
+                        required: false
+                      - name: 'label'
+                        label: 'Link text'
+                        widget: 'string'
+                        required: false
   - name: 'pages'
     label: 'Generic pages'
     label_singular: 'Generic page'

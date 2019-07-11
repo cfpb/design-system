@@ -1,9 +1,9 @@
 ---
-title:  Getting Started
+title: Getting Started
+permalink: /getting-started
+layout: generic-page
 collection_name: pages
 section: foundation
-layout: generic-page
-permalink: /getting-started
 ---
 
-Some great content will go here about getting started.
+Some great content will go here about getting started!

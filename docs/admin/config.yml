@@ -1,9 +1,8 @@
 backend:
   name: github
-  repo: test-things/design-system
+  repo: cfpb/design-system
   branch: master
   squash_merges: true
-  base_url: https://netlifycms-auth.glitch.me
 
 logo_url: https://cfpb.github.io/design-manual/static/img/logo/Logo0_@2.png
 publish_mode: editorial_workflow
@@ -64,9 +63,11 @@ collections:
         default: '/SOMETHING'
       - name: 'layout'
         value: 'generic-page'
+        default: 'generic-page'
         widget: 'hidden'
       - name: 'collection_name'
         value: 'pages'
+        default: 'pages'
         widget: 'hidden'
       - name: 'section'
         label: 'Navigation section'
@@ -101,12 +102,15 @@ collections:
         default: '/components/SOMETHING'
       - name: 'layout'
         value: 'component'
+        default: 'component'
         widget: 'hidden'
       - name: 'collection_name'
         value: 'components'
+        default: 'components'
         widget: 'hidden'
       - name: 'section'
         value: 'components'
+        default: 'components'
         widget: 'hidden'
       - name: 'status'
         label: 'Implementation status'

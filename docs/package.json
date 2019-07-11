@@ -31,14 +31,15 @@
     "start": "parallelshell \"bundle exec jekyll serve --watch --host=localhost\" \"yarn run watch\" \"yarn run watch-css\"",
     "compile-js": "NODE_ENV=production webpack",
     "compile-css": "lessc --include-path=../src/packages/:../src/node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/main.css",
+    "copy-icons": "cp -r ../src/packages/cf-icons/src/icons assets/",
     "watch-css": "less-watch-compiler --less-args include-path=../src/packages/:../src/node_modules/normalize-css/normalize-css/ assets/css dist/css main.less",
     "watch": "webpack --watch",
     "build": "yarn run compile-js && yarn run compile-css && bundle exec jekyll build",
     "build-preview": "webpack && yarn run compile-css && bundle exec jekyll build",
-    "install": "yarn --cwd ../src"
+    "install": "yarn run copy-icons && yarn --cwd ../src"
   },
   "dependencies": {
-    "@cfpb/netlify-cms": "1.0.6",
+    "@cfpb/netlify-cms": "1.11.0",
     "escape-html": "^1.0.3",
     "fetch-suspense": "^1.1.0",
     "ftdomdelegate": "^3.0.0",

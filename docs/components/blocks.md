@@ -9,13 +9,27 @@ intro: >-
   Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
 variations:
   - variation_code_snippet: |-
-      <marquee>Some sample code will eventually show up here.</marquee>
+      <div class="m-notification
+                  m-notification__visible">
+          <img src="/design-system/assets/icons/information-round.svg" class="cf-icon-svg" />
+          <div class="m-notification_content">
+              <div class="h4 m-notification_message">A default notification</div>
+              <ul class="m-list m-list__links">
+                  <li class="m-list_item">
+                      <a class="m-list_link" href="/">
+                          This is a link below the message
+                      </a>
+                  </li>
+                  <li class="m-list_item">
+                      <a class="m-list_link" href="/">
+                          This is another link
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
     variation_description: The default state is the most default state of them all.
     variation_name: Default state
-  - variation_code_snippet: |-
-      <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
 usage: >-
   **Use cases**
 

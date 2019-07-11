@@ -51,60 +51,63 @@ layout: default
 
         {% include intro.html %}
 
-        {% for variation in page.variations %}
-        <div class="u-mt15">
-            <!-- Name -->
-            {% capture name %}{{ variation.variation_name }}{% endcapture %}
-            {% include variation/name.html %}
+        <section class="sticky-header">
+            <h3 id="variations">Variations</h3>
+            {% for variation in page.variations %}
+            <div class="u-mt15">
+                <!-- Name -->
+                {% capture name %}{{ variation.variation_name }}{% endcapture %}
+                {% include variation/name.html %}
 
-            <!-- Description -->
-            {% capture description %}{{ variation.variation_description | markdownify }}{% endcapture %}
-            {% include variation/description.html %}
+                <!-- Description -->
+                {% capture description %}{{ variation.variation_description | markdownify }}{% endcapture %}
+                {% include variation/description.html %}
 
-            <!-- Live code example -->
-            {% capture code_snippet %}{{ variation.variation_code_snippet }}{% endcapture %}
-            {% capture code_snippet_raw %}{% endcapture %}
-            {% include variation/code-snippet.html %}
+                <!-- Live code example -->
+                {% capture code_snippet %}{{ variation.variation_code_snippet }}{% endcapture %}
+                {% capture code_snippet_raw %}{% endcapture %}
+                {% include variation/code-snippet.html %}
 
-            <div class="govuk-tabs u-mt30" data-module="tabs"  data-toggle-code>
-                <h2 class="govuk-tabs__title">
-                Contents
-                </h2>
+                <div class="govuk-tabs u-mt30" data-module="tabs"  data-toggle-code>
+                    <h2 class="govuk-tabs__title">
+                    Contents
+                    </h2>
 
-                <ul class="govuk-tabs__list">
-                    <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet-{{ forloop.index }}">
-                        HTML                        </a>
-                    </li>
-                    <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#jinja-code-snippet-{{ forloop.index }}">
-                        Jinja
-                        </a>
-                    </li>
-                </ul>
-                
-                <!-- HTML snippet -->
-                <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
-                    {% capture code_snippet %}{% endcapture %}
-                    {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape }}{% endcapture %}
-                    {% include variation/code-snippet.html %}
-                </section>            
+                    <ul class="govuk-tabs__list">
+                        <li class="govuk-tabs__list-item">
+                            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet-{{ forloop.index }}">
+                            HTML                        </a>
+                        </li>
+                        <li class="govuk-tabs__list-item">
+                            <a class="govuk-tabs__tab" href="#jinja-code-snippet-{{ forloop.index }}">
+                            Jinja
+                            </a>
+                        </li>
+                    </ul>
 
-                <!-- Jinja snippet -->
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
-                    {% capture jinja_code_snippet %}{{ variation.variation_jinja_code_snippet | markdownify }}{% endcapture %}
-                    {% include variation/jinja-code-snippet.html %}
-                </section>
+                    <!-- HTML snippet -->
+                    <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
+                        {% capture code_snippet %}{% endcapture %}
+                        {% capture code_snippet_raw %}{{ variation.variation_code_snippet | xml_escape }}{% endcapture %}
+                        {% include variation/code-snippet.html %}
+                    </section>
 
-            </div><!-- .govuk-tabs -->
+                    <!-- Jinja snippet -->
+                    <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
+                        {% capture jinja_code_snippet %}{{ variation.variation_jinja_code_snippet | markdownify }}{% endcapture %}
+                        {% include variation/jinja-code-snippet.html %}
+                    </section>
 
-            <!-- Specifications -->
-            {% if variation.variation_specs %}
-            {% capture specs %}{{ variation.variation_specs | markdownify }}{% endcapture %}
-            {% include variation/specs.html %}
-            {% endif %}
-        </div>
-        {% endfor %}
+                </div><!-- .govuk-tabs -->
+
+                <!-- Specifications -->
+                {% if variation.variation_specs %}
+                {% capture specs %}{{ variation.variation_specs | markdownify }}{% endcapture %}
+                {% include variation/specs.html %}
+                {% endif %}
+            </div>
+            {% endfor %}
+        </section>
 
         {% include usage.html %}
 
@@ -117,7 +120,6 @@ layout: default
 
             {% include component/help-us.html %}
         </div><!-- .content-l -->
-
-    </section>
+    </section><!-- .content_main -->
   </div>
 </main>

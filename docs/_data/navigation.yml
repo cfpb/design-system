@@ -1,7 +1,55 @@
 sections:
   - label: Getting Started
+    secondaryNavItems:
+      - label: How to use the design system
+        slug: getting-started/how-to-use-the-design-system
+      - label: Help us make improvements
+        slug: getting-started/help-us-make-improvements
+      - label: Why we are sharing this
+        slug: getting-started/why-we-are-sharing-this
     slug: getting-started
   - label: Foundation
+    secondaryNavItems:
+      - label: Design principles
+        slug: ''
+        tertiaryNavItems:
+          - label: General principles
+            slug: foundation/general-principles
+          - label: Data visualization
+            slug: foundation/data-visualization
+          - label: Forms
+            slug: foundation/forms
+      - label: Color
+        slug: foundation/color
+      - label: Iconography
+        slug: foundation/iconography
+      - label: Identity
+        slug: ''
+        tertiaryNavItems:
+          - label: Beam pattern
+            slug: foundation/beam-pattern
+          - label: Logo
+            slug: foundation/logo
+          - label: Seal
+            slug: foundation/seal
+      - label: Imagery
+        slug: ''
+        tertiaryNavItems:
+          - label: Illustration
+            slug: foundation/illustration
+          - label: Photography
+            slug: foundation/photography
+      - label: Multimedia
+        slug: ''
+        tertiaryNavItems:
+          - label: Animation
+            slug: foundation/animation
+          - label: Video
+            slug: foundation/video
+      - label: Typography
+        slug: foundation/typography
+      - label: User research
+        slug: foundation/user-research
     slug: foundation
   - label: Components
     secondaryNavItems:
@@ -133,4 +181,20 @@ sections:
             slug: quotes
     slug: components
   - label: Templates
+    secondaryNavItems:
+      - label: Web page templates
+        slug: ''
+        tertiaryNavItems:
+          - label: Landing pages
+            slug: templates/landing-pages
+          - label: Sublanding pages
+            slug: templates/sublanding-pages
+          - label: Browse pages
+            slug: templates/browse-pages
+          - label: Learn pages
+            slug: templates/learn-pages
+          - label: Filterable list pages
+            slug: templates/filterable-list-pages
+          - label: Document detail pages
+            slug: templates/document-detail-pages
     slug: templates

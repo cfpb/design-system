@@ -30,7 +30,7 @@ collections:
                 required: false
               - name: 'slug'
                 label: 'Slug'
-                widget: 'noPreviewStringWidget'
+                widget: 'slugWidget'
                 required: false
               - name: 'secondaryNavItems'
                 label: 'Secondary nav items'
@@ -44,7 +44,7 @@ collections:
                     required: false
                   - name: 'slug'
                     label: 'Slug'
-                    widget: 'noPreviewStringWidget'
+                    widget: 'slugWidget'
                     required: false
                   - name: 'tertiaryNavItems'
                     label: 'Tertiary nav items'
@@ -58,7 +58,7 @@ collections:
                         required: false
                       - name: 'slug'
                         label: 'Slug'
-                        widget: 'noPreviewStringWidget'
+                        widget: 'slugWidget'
                         required: false
   - name: 'pages'
     label: 'Generic pages'

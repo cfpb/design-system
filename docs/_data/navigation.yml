@@ -133,4 +133,20 @@ sections:
             slug: quotes
     slug: components
   - label: Templates
+    secondaryNavItems:
+      - label: Web page templates
+        slug: templates/web-page-templates
+        tertiaryNavItems:
+          - label: Landing pages
+            slug: templates/web-page-templates/landing-pages
+          - label: Sublanding pages
+            slug: templates/web-page-templates/sublanding-pages
+          - label: Browse pages
+            slug: templates/web-page-templates/browse-pages
+          - label: Learn pages
+            slug: templates/web-page-templates/learn-pages
+          - label: Filterable list pages
+            slug: templates/web-page-templates/filterable-list-pages
+          - label: Document detail pages
+            slug: templates/web-page-templates/document-detail-pages
     slug: templates

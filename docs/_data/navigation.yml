@@ -3,23 +3,47 @@ sections:
     slug: getting-started
   - label: Foundation
     secondaryNavItems:
-      - label: Design Principles
-        slug: design-principles
+      - label: Design principles
+        slug: ''
+        tertiaryNavItems:
+          - label: General design principles
+            slug: foundation/general-design-principles
+          - label: Data visualization
+            slug: foundation/data-visualization
+          - label: Forms
+            slug: foundation/forms
       - label: Color
-        slug: color
+        slug: foundation/color
       - label: Iconography
-        slug: iconography
+        slug: foundation/iconography
       - label: Identity
-        slug: identity
+        slug: ''
+        tertiaryNavItems:
+          - label: Beam pattern
+            slug: foundation/beam-pattern
+          - label: Logo
+            slug: foundation/logo
+          - label: Seal
+            slug: foundation/seal
       - label: Imagery
-        slug: imagery
+        slug: ''
+        tertiaryNavItems:
+          - label: Illustration
+            slug: foundation/illustration
+          - label: Photography
+            slug: foundation/photography
       - label: Multimedia
-        slug: multimedia
+        slug: ''
+        tertiaryNavItems:
+          - label: Animation
+            slug: foundation/animation
+          - label: Video
+            slug: foundation/video
       - label: Typography
-        slug: typography
+        slug: foundation/typography
       - label: User research
-        slug: user-research
-    slug: ''
+        slug: foundation/user-research
+    slug: foundation
   - label: Components
     secondaryNavItems:
       - label: Alerts

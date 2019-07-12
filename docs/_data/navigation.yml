@@ -1,68 +1,49 @@
 sections:
   - label: Getting Started
     secondaryNavItems:
-      - label: How to use the design system
-        slug: getting-started/how-to-use-the-design-system
-      - label: Help us make improvements
-        slug: getting-started/help-us-make-improvements
-      - label: Why we are sharing this
-        slug: getting-started/why-we-are-sharing-this
+      - {}
+      - {}
+      - {}
     slug: getting-started
   - label: Foundation
     secondaryNavItems:
-      - label: Design principles
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: General principles
             slug: foundation/general-principles
           - label: Data visualization
             slug: foundation/data-visualization
           - label: Forms
             slug: foundation/forms
-      - label: Color
-        slug: foundation/color
-      - label: Iconography
-        slug: foundation/iconography
-      - label: Identity
-        slug: ''
-        tertiaryNavItems:
+      - {}
+      - {}
+      - tertiaryNavItems:
           - label: Beam pattern
             slug: foundation/beam-pattern
           - label: Logo
             slug: foundation/logo
           - label: Seal
             slug: foundation/seal
-      - label: Imagery
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: Illustration
             slug: foundation/illustration
           - label: Photography
             slug: foundation/photography
-      - label: Multimedia
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: Animation
             slug: foundation/animation
           - label: Video
             slug: foundation/video
-      - label: Typography
-        slug: foundation/typography
-      - label: User research
-        slug: foundation/user-research
+      - {}
+      - {}
     slug: foundation
   - label: Components
     secondaryNavItems:
-      - label: Alerts
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: Modals
             slug: modals
           - label: Notifications
             slug: notifications
-      - label: Content layouts
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: Contact information
             slug: contact-information
           - label: Expandables
@@ -81,9 +62,7 @@ sections:
             slug: sidebars-prefooters
           - label: Wells
             slug: wells
-      - label: Core utilities
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: Atomic components
             slug: atomic-components
           - label: Blocks
@@ -98,9 +77,7 @@ sections:
             slug: media-queries
           - label: Utilities
             slug: utilities
-      - label: Data visualization
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: Bar charts
             slug: bar-charts
           - label: Line charts
@@ -109,9 +86,7 @@ sections:
             slug: maps
           - label: Pie charts
             slug: pie-charts
-      - label: Forms
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: Buttons
             slug: buttons
           - label: Checkboxes
@@ -132,9 +107,7 @@ sections:
             slug: range-sliders
           - label: Text inputs
             slug: text-inputs
-      - label: Navigation
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: Filterable list control panels
             slug: filterable-list-control-panels
           - label: Left hand navigation
@@ -143,9 +116,7 @@ sections:
             slug: megamenu
           - label: Pagination
             slug: pagination
-      - label: Tables
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: Default tables
             slug: default-tables
           - label: Sortable tables
@@ -154,9 +125,7 @@ sections:
             slug: responsive-tables
           - label: Snippet lists
             slug: snippet-lists
-      - label: Text
-        slug: ''
-        tertiaryNavItems:
+      - tertiaryNavItems:
           - label: Dates
             slug: dates
           - label: Definition lists
@@ -182,8 +151,8 @@ sections:
     slug: components
   - label: Templates
     secondaryNavItems:
-      - label: Web page templates
-        slug: ''
+      - secondaryNavLink:
+          label: Web page templates
         tertiaryNavItems:
           - label: Landing pages
             slug: templates/landing-pages

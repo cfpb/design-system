@@ -4,14 +4,14 @@
         {% for secondaryNavItem in section.secondaryNavItems %}
         <li>
             {% if secondaryNavItem.slug != '' %}
-                <a href="{{ site.baseurl }}/{{ section.slug }}">{{ secondaryNavItem.label }}</a>
+                <a href="{{ site.baseurl }}/{{ secondaryNavItem.slug }}">{{ secondaryNavItem.label }}</a>
             {% else %}
                 {{ secondaryNavItem.label }}
             {% endif %}
           <ul>
               {% for tertiaryNavItem in secondaryNavItem.tertiaryNavItems %}
               <li>
-                <a class="{% if tertiaryNavItem.label == page.title %}active{% endif %}" href="{{ site.baseurl }}/{{ section.slug }}/{{ tertiaryNavItem.slug }}">
+                <a class="{% if tertiaryNavItem.label == page.title %}active{% endif %}" href="{{ site.baseurl }}/{{ tertiaryNavItem.slug }}">
                     {{ tertiaryNavItem.label }}
                 </a>
               </li>

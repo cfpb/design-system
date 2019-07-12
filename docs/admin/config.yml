@@ -22,31 +22,44 @@ collections:
           - label: "Sections"
             name: "sections"
             widget: "list"
+            required: false
             fields:
               - name: 'label'
-                label: 'Title'
-                widget: 'string'
+                label: 'Link text'
+                widget: 'navSectionWidget'
+                required: false
               - name: 'slug'
                 label: 'Slug'
-                widget: 'string'
-              - name: 'categories'
-                label: 'Second-level nav items'
-                label_singular: 'Second-level nav item'
+                widget: 'noPreviewStringWidget'
+                required: false
+              - name: 'secondaryNavItems'
+                label: 'Secondary nav items'
+                label_singular: 'Secondary nav item'
                 widget: 'list'
+                required: false
                 fields:
                   - name: 'slug'
                     label: 'Slug'
-                    widget: 'string'
-                  - name: 'items'
-                    label: 'Items'
+                    widget: 'noPreviewStringWidget'
+                    required: false
+                  - name: 'label'
+                    label: 'Link text'
+                    widget: 'navSecondaryWidget'
+                    required: false
+                  - name: 'tertiaryNavItems'
+                    label: 'Tertiary nav items'
+                    label_singular: 'Tertiary nav item'
                     widget: 'list'
+                    required: false
                     fields:
-                      - name: 'label'
-                        label: 'Title'
-                        widget: 'string'
                       - name: 'slug'
                         label: 'Slug'
-                        widget: 'string'
+                        widget: 'noPreviewStringWidget'
+                        required: false
+                      - name: 'label'
+                        label: 'Link text'
+                        widget: 'navTertiaryWidget'
+                        required: false
   - name: 'pages'
     label: 'Generic pages'
     label_singular: 'Generic page'

@@ -186,15 +186,15 @@ sections:
         slug: ''
         tertiaryNavItems:
           - label: Landing pages
-            slug: templates/web-page-templates/landing-pages
+            slug: templates/landing-pages
           - label: Sublanding pages
-            slug: templates/web-page-templates/sublanding-pages
+            slug: templates/sublanding-pages
           - label: Browse pages
-            slug: templates/web-page-templates/browse-pages
+            slug: templates/browse-pages
           - label: Learn pages
-            slug: templates/web-page-templates/learn-pages
+            slug: templates/learn-pages
           - label: Filterable list pages
-            slug: templates/web-page-templates/filterable-list-pages
+            slug: templates/filterable-list-pages
           - label: Document detail pages
-            slug: templates/web-page-templates/document-detail-pages
+            slug: templates/document-detail-pages
     slug: templates

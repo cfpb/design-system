@@ -1,5 +1,8 @@
 # CFPB's Design System
 
+[![Build Status](https://travis-ci.org/cfpb/design-system.png?branch=master)](https://travis-ci.org/cfpb/design-system?branch=master)
+
+
 The documentation website is in `docs/`. The code for Capital Framework, our UI library, is in `src/`.
 
 ### Getting started with our docs

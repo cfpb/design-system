@@ -3,8 +3,11 @@
     <ul>
         {% for secondaryNavItem in section.secondaryNavItems %}
         <li>
-          <!-- <a href="{{ site.baseurl }}/{{ section.slug }}">{{ secondaryNavItem.label }}</a> -->
-          {{ secondaryNavItem.label }}
+            {% if secondaryNavItem.slug != '' %}
+                <a href="{{ site.baseurl }}/{{ section.slug }}">{{ secondaryNavItem.label }}</a>
+            {% else %}
+                {{ secondaryNavItem.label }}
+            {% endif %}
           <ul>
               {% for tertiaryNavItem in secondaryNavItem.tertiaryNavItems %}
               <li>

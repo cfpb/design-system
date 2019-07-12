@@ -6,14 +6,14 @@ sections:
   - label: Components
     secondaryNavItems:
       - label: Alerts
-        slug: alerts
+        slug: ''
         tertiaryNavItems:
           - label: Modals
             slug: modals
           - label: Notifications
             slug: notifications
       - label: Content layouts
-        slug: content-layouts
+        slug: ''
         tertiaryNavItems:
           - label: Contact information
             slug: contact-information
@@ -34,7 +34,7 @@ sections:
           - label: Wells
             slug: wells
       - label: Core utilities
-        slug: core-utilities
+        slug: ''
         tertiaryNavItems:
           - label: Atomic components
             slug: atomic-components

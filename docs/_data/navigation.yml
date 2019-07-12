@@ -6,14 +6,14 @@ sections:
   - label: Components
     secondaryNavItems:
       - label: Alerts
-        slug: alerts
+        slug: ''
         tertiaryNavItems:
           - label: Modals
             slug: modals
           - label: Notifications
             slug: notifications
       - label: Content layouts
-        slug: content-layouts
+        slug: ''
         tertiaryNavItems:
           - label: Contact information
             slug: contact-information
@@ -34,7 +34,7 @@ sections:
           - label: Wells
             slug: wells
       - label: Core utilities
-        slug: core-utilities
+        slug: ''
         tertiaryNavItems:
           - label: Atomic components
             slug: atomic-components
@@ -51,7 +51,7 @@ sections:
           - label: Utilities
             slug: utilities
       - label: Data visualization
-        slug: data-visualization
+        slug: ''
         tertiaryNavItems:
           - label: Bar charts
             slug: bar-charts
@@ -62,7 +62,7 @@ sections:
           - label: Pie charts
             slug: pie-charts
       - label: Forms
-        slug: forms
+        slug: ''
         tertiaryNavItems:
           - label: Buttons
             slug: buttons
@@ -85,7 +85,7 @@ sections:
           - label: Text inputs
             slug: text-inputs
       - label: Navigation
-        slug: navigation
+        slug: ''
         tertiaryNavItems:
           - label: Filterable list control panels
             slug: filterable-list-control-panels
@@ -96,7 +96,7 @@ sections:
           - label: Pagination
             slug: pagination
       - label: Tables
-        slug: tables
+        slug: ''
         tertiaryNavItems:
           - label: Default tables
             slug: default-tables
@@ -107,7 +107,7 @@ sections:
           - label: Snippet lists
             slug: snippet-lists
       - label: Text
-        slug: text
+        slug: ''
         tertiaryNavItems:
           - label: Dates
             slug: dates

@@ -13,8 +13,8 @@ sections:
       - label: Design principles
         slug: ''
         tertiaryNavItems:
-          - label: General design principles
-            slug: foundation/general-design-principles
+          - label: General principles
+            slug: foundation/general-principles
           - label: Data visualization
             slug: foundation/data-visualization
           - label: Forms

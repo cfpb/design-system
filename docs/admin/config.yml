@@ -38,13 +38,13 @@ collections:
                 widget: 'list'
                 required: false
                 fields:
-                  - name: 'slug'
-                    label: 'Slug'
-                    widget: 'noPreviewStringWidget'
-                    required: false
                   - name: 'label'
                     label: 'Link text'
                     widget: 'navSecondaryWidget'
+                    required: false
+                  - name: 'slug'
+                    label: 'Slug'
+                    widget: 'noPreviewStringWidget'
                     required: false
                   - name: 'tertiaryNavItems'
                     label: 'Tertiary nav items'
@@ -52,13 +52,13 @@ collections:
                     widget: 'list'
                     required: false
                     fields:
-                      - name: 'slug'
-                        label: 'Slug'
-                        widget: 'noPreviewStringWidget'
-                        required: false
                       - name: 'label'
                         label: 'Link text'
                         widget: 'navTertiaryWidget'
+                        required: false
+                      - name: 'slug'
+                        label: 'Slug'
+                        widget: 'noPreviewStringWidget'
                         required: false
   - name: 'pages'
     label: 'Generic pages'

@@ -16,6 +16,10 @@ import { Preview as relatedItemsPreview } from './widgets/component/RelatedItems
 import { Preview as helpUsPreview } from './widgets/component/HelpUsPreview';
 import { Preview as bodyPreview } from './widgets/body/Preview';
 import { Preview as permalinkPreview } from './widgets/permalink/Preview';
+import { Preview as navSectionPreview } from './widgets/navigation/sectionPreview';
+import { Preview as navSecondaryPreview } from './widgets/navigation/secondaryPreview';
+import { Preview as navTertiaryPreview } from './widgets/navigation/tertiaryPreview';
+import { Preview as noPreview } from './widgets/noPreview';
 
 CMS.registerWidget( 'introWidget', 'markdown', introPreview );
 CMS.registerWidget( 'slugWidget', 'string', slugPreview );
@@ -33,5 +37,9 @@ CMS.registerWidget( 'relatedItemsWidget', 'markdown', relatedItemsPreview );
 CMS.registerWidget( 'helpUsWidget', 'markdown', helpUsPreview );
 CMS.registerWidget( 'bodyWidget', 'markdown', bodyPreview );
 CMS.registerWidget( 'permalinkWidget', 'string', permalinkPreview );
+CMS.registerWidget( 'navSectionWidget', 'string', navSectionPreview );
+CMS.registerWidget( 'navSecondaryWidget', 'string', navSecondaryPreview );
+CMS.registerWidget( 'navTertiaryWidget', 'string', navTertiaryPreview );
+CMS.registerWidget( 'noPreviewStringWidget', 'string', noPreview );
 
 CMS.registerPreviewStyle( '/design-system/dist/css/main.css' );

@@ -32,13 +32,18 @@ variations:
     variation_description: The default state is the most default state of them all.
     variation_jinja_code_snippet: ''
     variation_name: Body text
-    variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nText color | @text: | @black; | Black (#101820)\t| 0, 0, 0, 100\nText size | @base-font-size-px: | 16px; | 16px\nLine height (pixels) | @base-line-height-px: | 22px; | 22px\nLine height | @base-line-height: | unit( @base-line-height-px / @base-font-size-px ); | \nLarge breakpoint | @bp-lg-max: | 1230px; | \nMedium breakpoint | @bp-med-max: | 1020px; |\nSmall breakpoint | @bp-sm-max: | 900px; |\nExtra-small breakpoint | @bp-xs-max: | 600px; |"
+    variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nText color | @text: | @black; | Black (#101820)\t| 0, 0, 0, 100\nText size | @base-font-size-px: | 16px; | 16px | 11pt\nLine height (pixels) | @base-line-height-px: | 22px; | 22px | 16pt\nLine height | @base-line-height: | unit( @base-line-height-px / @base-font-size-px ); | \nLarge breakpoint | @bp-lg-max: | 1230px; | \nMedium breakpoint | @bp-med-max: | 1020px; |\nSmall breakpoint | @bp-sm-max: | 900px; |\nExtra-small breakpoint | @bp-xs-max: | 600px; |"
   - variation_code_snippet: >-
       <p class="lead-paragraph">Ut enim ad minim veniam, quis nostrud
       exercitation
 
       ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     variation_name: Lead paragraph (subheading)
+    variation_specs: |-
+      Element | Variable name | Variable | web value | Print value
+      --- | --- | --- | --- | ---
+      Text size | ? |  | 22px | 16pt
+      Line height (pixels) | ? |  | 28px | 20pt
   - variation_code_snippet: <h1 class="superheading">Example display heading</h1>
     variation_description: ''
     variation_jinja_code_snippet: ''

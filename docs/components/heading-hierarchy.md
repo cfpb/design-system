@@ -36,7 +36,7 @@ variations:
       length and height, and contrast.
     variation_jinja_code_snippet: ''
     variation_name: Body text
-    variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nTypeface | | | Avenir Next Regular | Avenir Next Regular\nText color | @text: | @black; | Black (#101820)\t| 0, 0, 0, 100\nText size | @base-font-size-px: | 16px; | 16px | 11pt\nLine height (pixels) | @base-line-height-px: | 22px; | 22px | 16pt\nLine height | @base-line-height: | unit( @base-line-height-px / @base-font-size-px ); | \nLarge breakpoint | @bp-lg-max: | 1230px; | \nMedium breakpoint | @bp-med-max: | 1020px; |\nSmall breakpoint | @bp-sm-max: | 900px; |\nExtra-small breakpoint | @bp-xs-max: | 600px; |"
+    variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nTypeface | | | Avenir Next Regular | Avenir Next Regular\nWebfont | @webfont-regular: | Arial; | Arial\nText color | @text: | @black; | Black (#101820)\t| 0, 0, 0, 100\nText size | @base-font-size-px: | 16px; | 16px | 11pt\nLine height (pixels) | @base-line-height-px: | 22px; | 22px | 16pt\nLine height | @base-line-height: | unit( @base-line-height-px / @base-font-size-px ); | \nBottom margin | | | 15px |\nExtra-small breakpoint | @bp-xs-max: | 600px; |"
   - variation_code_snippet: >-
       <p class="lead-paragraph">Ut enim ad minim veniam, quis nostrud
       exercitation
@@ -64,7 +64,7 @@ variations:
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
-      Text size | ? |  | 48px | 38pt
+      Text size | @size-xl: | 48px; | 48px | 38pt
       Small screen text size | | | 34px | 
       Line height (pixels) | ? |  | 60px | 66pt
       Small screen line height | | 42px | 
@@ -82,7 +82,7 @@ variations:
     variation_specs: |+
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
-      Text size | ? |  | 34px | 38pt
+      Text size | @size-i: | 34px; | 34px | 38pt
       Small screen text size | | | 26px | 
       Line height (pixels) | ? |  | 42px | 40pt
       Small screen line height | | 32px | 
@@ -104,7 +104,7 @@ variations:
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
-      Text size | ? |  | 26px | 26pt
+      Text size | @size-ii: | 26px; | 26px | 26pt
       Small screen text size | | | 22px | 
       Line height (pixels) | ? |  | 32px | 28pt
       Small screen line height | | 28px | 
@@ -123,7 +123,7 @@ variations:
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
       Typeface | | | | Avenir Next Demi Bold
-      Text size | ? |  | 22px | 16pt
+      Text size | @size-iii: | 22px; | 22px | 16pt
       Small screen text size | | | 18px | 
       Line height (pixels) | ? |  | 28px | 18pt
       Small screen line height | | 22px | 
@@ -146,7 +146,7 @@ variations:
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
       Typeface | | | Avenir Next Medium | Avenir Next Medium
-      Text size | ? |  | 18px | 14pt
+      Text size | @size-iv: | 18px; | 18px | 14pt
       Small screen text size | | | 16px | 
       Line height (pixels) | ? |  | 22px | 16pt
       Small screen line height | | 18px | 
@@ -164,7 +164,7 @@ variations:
       --- | --- | --- | --- | ---
       Typeface | | | Avenir Next Demi Bold | Avenir Next Demi Bold
       Case | | | All caps | All caps
-      Text size | ? |  | 14px | 10pt
+      Text size | @size-v: | 14px; | 14px | 10pt
       Line height (pixels) | ? |  | 18px | 12pt
   - variation_code_snippet: |-
       <h5>Example heading element</h5>
@@ -180,7 +180,7 @@ variations:
       --- | --- | --- | --- | ---
       Typeface | | | Avenir Next Demi Bold | Avenir Next Medium
       Case | | | All caps | 
-      Text size | ? |  | 12px | 12pt
+      Text size | @size-vi: | 12px; | 12px | 12pt
       Line height (pixels) | ? |  | 15px | 14pt
 usage: >-
   **Use cases**

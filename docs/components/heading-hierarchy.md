@@ -122,6 +122,7 @@ variations:
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
+      Typeface | | | | Avenir Next Demi Bold
       Text size | ? |  | 22px | 16pt
       Small screen text size | | | 18px | 
       Line height (pixels) | ? |  | 28px | 18pt
@@ -144,16 +145,49 @@ variations:
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
-      Typeface | | | Avenir Next Medium |
+      Typeface | | | Avenir Next Medium | Avenir Next Medium
       Text size | ? |  | 18px | 14pt
       Small screen text size | | | 16px | 
       Line height (pixels) | ? |  | 22px | 16pt
       Small screen line height | | 18px | 
-  - variation_code_snippet: TBD
+  - variation_code_snippet: |-
+      <h5>Example heading element</h5>
+
+      <!--
+      Non heading element:
+      <p class="h5">A non-heading element</p>
+      -->
+    variation_description: Not a responsive heading. 1 px letter spacing.
     variation_name: Heading level 5
-  - variation_code_snippet: TBD
-    variation_name: Heading level 6 (web)
-  - variation_code_snippet: TBD
+    variation_specs: |-
+      Element | Variable name | Variable | web value | Print value
+      --- | --- | --- | --- | ---
+      Typeface | | | Avenir Next Demi Bold | Avenir Next Demi Bold
+      Case | | | All caps | All caps
+      Text size | ? |  | 14px | 10pt
+      Line height (pixels) | ? |  | 18px | 12pt
+  - variation_code_snippet: |-
+      <h5>Example heading element</h5>
+
+      <!--
+      Non heading element:
+      <p class="h6">A non-heading element</p>
+      -->
+    variation_description: Not a responsive heading. 1 px letter spacing.
+    variation_name: Heading level 6
+    variation_specs: |-
+      Element | Variable name | Variable | web value | Print value
+      --- | --- | --- | --- | ---
+      Typeface | | | Avenir Next Demi Bold | Avenir Next Medium
+      Case | | | All caps | 
+      Text size | ? |  | 12px | 12pt
+      Line height (pixels) | ? |  | 15px | 14pt
+  - variation_code_snippet: |-
+      <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+      </ul>
     variation_name: Unordered list
   - variation_code_snippet: TBD
     variation_name: Unordered nested list

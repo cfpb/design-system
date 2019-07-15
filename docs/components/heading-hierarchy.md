@@ -19,10 +19,34 @@ intro: >-
 
   * https://cfpb.github.io/capital-framework/components/cf-core/#type-hierarchy
 variations:
+  - variation_code_snippet: >-
+      <p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>, sed
+      do
+
+      eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna
+      aliqua.
+
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+
+      aliquip ex ea commodo consequat.</p>
+    variation_description: The default state is the most default state of them all.
+    variation_jinja_code_snippet: ''
+    variation_name: Body text
+    variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nText color | @text: | @black; | Black (#101820)\t| 0, 0, 0, 100\nText size | @base-font-size-px: | 16px; | 16px\nLine height (pixels) | @base-line-height-px: | 22px; | 22px\nLine height | @base-line-height: | unit( @base-line-height-px / @base-font-size-px ); | \nLarge breakpoint | @bp-lg-max: | 1230px; | \nMedium breakpoint | @bp-med-max: | 1020px; |\nSmall breakpoint | @bp-sm-max: | 900px; |\nExtra-small breakpoint | @bp-xs-max: | 600px; |"
+  - variation_code_snippet: >-
+      <p class="lead-paragraph">Ut enim ad minim veniam, quis nostrud
+      exercitation
+
+      ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    variation_name: Lead paragraph (subheading)
   - variation_code_snippet: <h1 class="superheading">Example display heading</h1>
     variation_description: ''
+    variation_jinja_code_snippet: ''
     variation_name: Display heading
-  - variation_code_snippet: TBD
+  - variation_code_snippet: |-
+      <h1>Example heading element</h1>
+      <p class="h1">A non-heading element</p>
+    variation_description: 'Responsive heading. At small screen sizes, displays as heading level 2.'
     variation_name: Heading level 1
   - variation_code_snippet: TBD
     variation_name: Heading level 2
@@ -38,11 +62,6 @@ variations:
     variation_name: Heading level 6 (web)
   - variation_code_snippet: TBD
     variation_name: Heading level 6 (print)
-  - variation_code_snippet: TBD
-    variation_name: Lead paragraph / subheading
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Body text
   - variation_code_snippet: TBD
     variation_name: Unordered list
   - variation_code_snippet: TBD

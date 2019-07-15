@@ -10,6 +10,6 @@ intro: >-
   this page:
 
 
-  * http://cfpb.github.io/design-manual/brand-guidelines/video.html
+  * http://cfpb.github.io/design-manual/brand-guidelines/beam-pattern.html
 ---
 

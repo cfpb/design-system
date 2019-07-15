@@ -1,5 +1,5 @@
 ---
-title: Heading Hierarchy
+title: Headings
 permalink: /components/heading-hierarchy
 layout: component
 collection_name: components

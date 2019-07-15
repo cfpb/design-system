@@ -183,18 +183,38 @@ variations:
       Text size | ? |  | 12px | 12pt
       Line height (pixels) | ? |  | 15px | 14pt
   - variation_code_snippet: |-
+      <p> Paragraph example for visual reference</p>
       <ul>
           <li>List item 1</li>
-          <li>List item 2</li>
+          <li>
+              List item 2
+              <ul>
+                    <li>Nested item 2-1</li>
+                    <li>Nested item 2-2</li>
+                    <li>Nested item 2-3</li>
+              </ul>
+          </li>
           <li>List item 3</li>
       </ul>
+      <p> Paragraph example for visual reference</p>
     variation_name: Unordered list
-  - variation_code_snippet: TBD
-    variation_name: Unordered nested list
-  - variation_code_snippet: TBD
+  - variation_code_snippet: |-
+      <p>Paragraph example for visual reference</p>
+      <ol>
+          <li>List item 1</li>
+          <li>
+              List item 2
+              <ol>
+                    <li>Nested item 2-1</li>
+                    <li>Nested item 2-2</li>
+                    <li>Nested item 2-3</li>
+              </ol>
+          </li>
+          <li>List item 3</li>
+      </ol>
+      <p>Paragraph example for visual reference</p>
+    variation_description: ''
     variation_name: Ordered list
-  - variation_code_snippet: TBD
-    variation_name: Ordered nested list
 usage: >-
   **Use cases**
 

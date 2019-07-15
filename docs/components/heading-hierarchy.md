@@ -12,10 +12,11 @@ intro: >-
   they’re looking for.
 
 
-  More information can be found at:
+  This page is under active development. Information is being moved into it from
+  these pages:
 
 
-  * "http://cfpb.github.io/design-manual/brand-guidelines/typography.html
+  * http://cfpb.github.io/design-manual/brand-guidelines/typography.html
 
   * https://cfpb.github.io/capital-framework/components/cf-core/#type-hierarchy
 variations:
@@ -29,15 +30,19 @@ variations:
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 
       aliquip ex ea commodo consequat.</p>
-    variation_description: The default state is the most default state of them all.
+    variation_description: >-
+      Body text should provide an efficient and pleasant experience on every
+      viewport size. Readable text makes good use of alignment, spacing, line
+      length and height, and contrast.
     variation_jinja_code_snippet: ''
     variation_name: Body text
-    variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nText color | @text: | @black; | Black (#101820)\t| 0, 0, 0, 100\nText size | @base-font-size-px: | 16px; | 16px | 11pt\nLine height (pixels) | @base-line-height-px: | 22px; | 22px | 16pt\nLine height | @base-line-height: | unit( @base-line-height-px / @base-font-size-px ); | \nLarge breakpoint | @bp-lg-max: | 1230px; | \nMedium breakpoint | @bp-med-max: | 1020px; |\nSmall breakpoint | @bp-sm-max: | 900px; |\nExtra-small breakpoint | @bp-xs-max: | 600px; |"
+    variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nTypeface | | | Avenir Next Regular | Avenir Next Regular\nText color | @text: | @black; | Black (#101820)\t| 0, 0, 0, 100\nText size | @base-font-size-px: | 16px; | 16px | 11pt\nLine height (pixels) | @base-line-height-px: | 22px; | 22px | 16pt\nLine height | @base-line-height: | unit( @base-line-height-px / @base-font-size-px ); | \nLarge breakpoint | @bp-lg-max: | 1230px; | \nMedium breakpoint | @bp-med-max: | 1020px; |\nSmall breakpoint | @bp-sm-max: | 900px; |\nExtra-small breakpoint | @bp-xs-max: | 600px; |"
   - variation_code_snippet: >-
       <p class="lead-paragraph">Ut enim ad minim veniam, quis nostrud
       exercitation
 
       ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    variation_description: ''
     variation_name: Lead paragraph (subheading)
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
@@ -48,13 +53,28 @@ variations:
     variation_description: ''
     variation_jinja_code_snippet: ''
     variation_name: Display heading
+    variation_specs: |-
+      Element | Variable name | Variable | web value | Print value
+      --- | --- | --- | --- | ---
+      Text size | ? |  | 48px | 38pt
+      Line height (pixels) | ? |  | 60px | 40pt
   - variation_code_snippet: |-
       <h1>Example heading element</h1>
       <p class="h1">A non-heading element</p>
     variation_description: 'Responsive heading. At small screen sizes, displays as heading level 2.'
     variation_name: Heading level 1
+    variation_specs: |-
+      Element | Variable name | Variable | web value | Print value
+      --- | --- | --- | --- | ---
+      Text size | ? |  | --px | 16pt
+      Line height (pixels) | ? |  | --px | 20pt
   - variation_code_snippet: TBD
     variation_name: Heading level 2
+    variation_specs: |-
+      Element | Variable name | Variable | web value | Print value
+      --- | --- | --- | --- | ---
+      Text size | ? |  | 22px | 16pt
+      Line height (pixels) | ? |  | 28px | 20pt
   - variation_code_snippet: TBD
     variation_name: Heading level 3 (web)
   - variation_code_snippet: TBD

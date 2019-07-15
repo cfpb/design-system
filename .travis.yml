@@ -17,11 +17,11 @@ deploy:
   skip_cleanup: true
   local_dir: docs/
   verbose: true
-  github_token: "$GITHUB_TOKEN"
+  github_token: $GITHUB_TOKEN
   on:
     branch: master
 env:
   matrix:
-  # $GITHUB_TOKEN for cfpb/design-system (using the CFPBot GH account)
-  # See https://docs.travis-ci.com/user/deployment/pages/
-  - secure: igy8Ui68mPDnKkZnDJaEBOmk1X2BkzmpKU1M5GJHN0zn0oDJDRb01UW6GwXsqLC3sZzYzT7rMEy9Vhy4aTsXcXCQknDRX7TB382Vbfrd4pdjZks5il8E22PjQz7tOu9gp2on5LSScNOZoAvKzc/gcHG94B4biLQmHF2mN4LwWqZFBd81PnUeGAkPZIgbTQhD7jq4qHgsCK3OVHybSdCIpZSEInZzwNcA04nV3oxfJrneuGhaCCtL+djTey1+BPr95LZIelauKgsONskj3jRw46xrSEq2zIn2VJh+i7+4QCUbuNCHFoKWgRWzefhK99osomoB7b7JtdTX1uO5cfBBX4nYGZGZzWE5jhJQi5Y/9bGs4XSsod8dozlggFam7PwErrAf9jf19xRjD+0kLvD3VRf/c7MSILFvAYvWxGzYDe5+VTm9VHYoCkwNeDgCbwqAHm/AqacUGWcpC8NDq09pGECMskMBlAfLmkwrHKhVmhHf7YCh4JwvHFUiALr05tqlZIXraZdmn3AH/flczdcyVgHSnmm2YlOb2Xn5SCr4niGE0u+TwXWNkMApzQfT0N8UZwlhRKwFsU6CDu+LJPe84thLjNKFJJ8qzP3zg5YWHubf8VQzgkGb6xqFlGc5FRx3k0SDG1Nh4+8iW1wK6nNnwIh+PIODG0XDuDEfdlM29zo=
+    # $GITHUB_TOKEN for cfpb/design-system (using the CFPBot GH account)
+    # See https://docs.travis-ci.com/user/deployment/pages/
+    secure: zlRBn1Ga42/3sfPIqq3Dmb++aGgWexi9yQsgzwBml1m3biF2x79ggBemPpuTYGnzRQvB3wIP7sZm/VfSXZaU2QufWgiX8KXd69ztErVDu/tUCMY4n4NbQz6H2P/WulKD2B9gdmGuxdMj2K3elUo7OLnnbTXNHX8wrh5+pWqNgJBBhsJHRMBNE8F9RvzrhcAZtKbfDFUgALhJD0oYriEddggpjD8turMSV37PTI24MENBYsJY2oR9hT3RTfe0WFxnDj57tisZ+IXe94JurQmAADAjuBixdDEpGrlT3ilRmiH+OinGX5+8R4dftiHEFF3SaM8feK4ml7JuzObcD1GQvs6H54g/AMYhvPy+6IUlru4EGXYO9CrYZCXiR5ODHC6UCcnvjWakhl6YSAsc79k1fQCPOoeH8j/e4wuPOX9Vu3aGi/frnXG0F+CkFTZ3vhsA2M3AKiED1xmwxsPgV7pKMlEzu5EI1cNxsGM/vKY/Ej2W8Y4Nl33j14vAhuK5rL6B5PAxHG6/iwevGNSacBvb2a+pgxutOCp0S969JgyKfyhJOtEtJ4wxsn4ZLs8ANy32uSyDBgNghT9HbiJstR7WhmH0+As5YCRI2C2dFHv409AUl+JnfX6cDzjM7xGwgGwjMBd2dDbVUo6W3dJhhN8xSQ7ne3UZnmlcjsn3nMhAujA=

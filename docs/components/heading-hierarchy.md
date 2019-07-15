@@ -5,18 +5,50 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: |-
+intro: >-
+  A clear typographic hierarchy is critical to the effective communication of
+  our brand.
+
+
   More information can be found at:
 
+
   * "http://cfpb.github.io/design-manual/brand-guidelines/typography.html
+
   * https://cfpb.github.io/capital-framework/components/cf-core/#type-hierarchy
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+    variation_name: Display heading
+  - variation_code_snippet: TBD
+    variation_name: Heading level 1
+  - variation_code_snippet: TBD
+    variation_name: Heading level 2
+  - variation_code_snippet: TBD
+    variation_name: Heading level 3 (web)
+  - variation_code_snippet: TBD
+    variation_name: Heading level 3 (print)
+  - variation_code_snippet: TBD
+    variation_name: Heading level 4
+  - variation_code_snippet: TBD
+    variation_name: Heading level 5
+  - variation_code_snippet: TBD
+    variation_name: Heading level 6 (web)
+  - variation_code_snippet: TBD
+    variation_name: Heading level 6 (print)
+  - variation_code_snippet: TBD
+    variation_name: Lead paragraph / subheading
+  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+    variation_description: The default state is the most default state of them all.
+    variation_name: Body text
+  - variation_code_snippet: TBD
+    variation_name: Unordered list
+  - variation_code_snippet: TBD
+    variation_name: Unordered nested list
+  - variation_code_snippet: TBD
+    variation_name: Ordered list
+  - variation_code_snippet: TBD
+    variation_name: Ordered nested list
 usage: >-
   **Use cases**
 

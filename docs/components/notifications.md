@@ -5,17 +5,14 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: >-
-  Information for notifications can be found at:
+intro: >
+  This page is under active development. Information is being moved into it from
+  these pages:
 
-
+  *
   http://cfpb.github.io/design-manual/page-components/form-fields.html#notifications
 
-
-  and
-
-
-  https://cfpb.github.io/capital-framework/components/cf-notifications/
+  * https://cfpb.github.io/capital-framework/components/cf-notifications/
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.

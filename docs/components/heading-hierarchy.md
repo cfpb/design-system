@@ -42,51 +42,117 @@ variations:
       exercitation
 
       ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    variation_description: ''
+    variation_description: >-
+      Responsive text. Displays as a Heading 3 on large screens; displays at
+      Heading 4 size (but still Regular weight) on small screens.
+
+      <601px wide: 18px / 22px
     variation_name: Lead paragraph (subheading)
-    variation_specs: |-
+    variation_specs: |+
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
       Text size | ? |  | 22px | 16pt
+      Small screen text size | | | 18px | 
       Line height (pixels) | ? |  | 28px | 20pt
+      Small screen line height | | 22px | 
+
+
   - variation_code_snippet: <h1 class="superheading">Example display heading</h1>
-    variation_description: ''
+    variation_description: '<601px wide: Drops to Heading 1'
     variation_jinja_code_snippet: ''
     variation_name: Display heading
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
       Text size | ? |  | 48px | 38pt
-      Line height (pixels) | ? |  | 60px | 40pt
+      Small screen text size | | | 34px | 
+      Line height (pixels) | ? |  | 60px | 66pt
+      Small screen line height | | 42px | 
   - variation_code_snippet: |-
       <h1>Example heading element</h1>
+
+      <!--
+      Non heading element:
       <p class="h1">A non-heading element</p>
-    variation_description: 'Responsive heading. At small screen sizes, displays as heading level 2.'
+      -->
+    variation_description: |-
+      Responsive heading. At small screen sizes, displays as heading level 2.
+      <601px wide: Drops to Heading 2
     variation_name: Heading level 1
-    variation_specs: |-
+    variation_specs: |+
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
-      Text size | ? |  | --px | 16pt
-      Line height (pixels) | ? |  | --px | 20pt
-  - variation_code_snippet: TBD
+      Text size | ? |  | 34px | 38pt
+      Small screen text size | | | 26px | 
+      Line height (pixels) | ? |  | 42px | 40pt
+      Small screen line height | | 32px | 
+
+
+
+
+  - variation_code_snippet: |-
+      <h2>Example heading element</h2>
+
+      <!--
+      Non heading element:
+      <p class="h2">A non-heading element</p>
+      -->
+    variation_description: |-
+      Responsive heading. At small screen sizes, displays as heading level 3.
+      <601px wide: Drops to Heading 3
     variation_name: Heading level 2
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
+      Text size | ? |  | 26px | 26pt
+      Small screen text size | | | 22px | 
+      Line height (pixels) | ? |  | 32px | 28pt
+      Small screen line height | | 28px | 
+  - variation_code_snippet: |-
+      <h3>Example heading element</h3>
+
+      <!--
+      Non heading element:
+      <p class="h3">A non-heading element</p>
+      -->
+    variation_description: |-
+      Responsive heading. At small screen sizes, displays as heading level 4.
+      <601px wide: Drops to Heading 4
+    variation_name: Heading level 3
+    variation_specs: |-
+      Element | Variable name | Variable | web value | Print value
+      --- | --- | --- | --- | ---
       Text size | ? |  | 22px | 16pt
-      Line height (pixels) | ? |  | 28px | 20pt
-  - variation_code_snippet: TBD
-    variation_name: Heading level 3 (web)
-  - variation_code_snippet: TBD
-    variation_name: Heading level 3 (print)
-  - variation_code_snippet: TBD
+      Small screen text size | | | 18px | 
+      Line height (pixels) | ? |  | 28px | 18pt
+      Small screen line height | | 22px | 
+  - variation_code_snippet: |-
+      <h4>Example heading element</h4>
+
+      <!--
+      Non heading element:
+      <p class="h4">A non-heading element</p>
+      -->
+    variation_description: >-
+      Responsive heading. At small screen sizes, displays at same size as body
+      text.
+
+      <601px wide: Drops to 16px / 18px
+    variation_jinja_code_snippet: |+
+
     variation_name: Heading level 4
+    variation_specs: |-
+      Element | Variable name | Variable | web value | Print value
+      --- | --- | --- | --- | ---
+      Typeface | | | Avenir Next Medium |
+      Text size | ? |  | 18px | 14pt
+      Small screen text size | | | 16px | 
+      Line height (pixels) | ? |  | 22px | 16pt
+      Small screen line height | | 18px | 
   - variation_code_snippet: TBD
     variation_name: Heading level 5
   - variation_code_snippet: TBD
     variation_name: Heading level 6 (web)
-  - variation_code_snippet: TBD
-    variation_name: Heading level 6 (print)
   - variation_code_snippet: TBD
     variation_name: Unordered list
   - variation_code_snippet: TBD

@@ -141,6 +141,21 @@ variations:
       Text size | @size-vi: | 12px; | 12px | 12pt
       Line height (pixels) | ? |  | 15px | 14pt
       Bottom margin | | | 15px |
+  - variation_code_snippet: |-
+      <a href="#" class="a-heading a-heading__icon">
+          {% include icons/dialogue.svg %}
+          Consumer finance
+      </a>
+    variation_description: >-
+      The heading with icon is typically used for listing categories in a meta
+      header.
+    variation_name: Heading with icon
+    variation_specs: |-
+      Element | Variable name | Variable | web value | Print value
+      --- | --- | --- | --- | ---
+      Color | @heading__icon:  | @black; | Black | Black (#101820) |
+      Hover color | @heading__icon__hover: | @link-text-hover; | ? | ?
+      Bottom margin | | | 15px |
 usage: >-
   **Use cases**
 
@@ -159,7 +174,10 @@ usage: >-
 
   At screen widths of 600px and below, the Display heading and Headings 1-4 drop
   in size. Headings 5-6 remain consistent at all screen widths.
-accessibility: TBD
+accessibility: >-
+  Since categories can be repetitive, we suggest placing a label with
+  `.u-visually-hidden` prior to the headings with icons to add more context for
+  screen readers (see Meta Header).
 research: TBD
 ---
 

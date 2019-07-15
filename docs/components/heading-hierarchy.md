@@ -197,7 +197,17 @@ variations:
           <li>List item 3</li>
       </ul>
       <p> Paragraph example for visual reference</p>
+    variation_description: >-
+      Use a bulleted list when grouping similar items or short thoughts into
+      “bite-size” chunks. Generally, the order or count of the items in a bullet
+      list isn’t important. An exception to this may be a list of states, which
+      naturally fits into an alphabetical order.
     variation_name: Unordered list
+    variation_specs: |
+      Element | Variable name | Variable | web value | Print value
+      --- | --- | --- | --- | ---
+      Margin top | 
+      Margin bottom | 
   - variation_code_snippet: |-
       <p>Paragraph example for visual reference</p>
       <ol>

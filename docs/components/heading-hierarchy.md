@@ -182,49 +182,6 @@ variations:
       Case | | | All caps | 
       Text size | ? |  | 12px | 12pt
       Line height (pixels) | ? |  | 15px | 14pt
-  - variation_code_snippet: |-
-      <p> Paragraph example for visual reference</p>
-      <ul>
-          <li>List item 1</li>
-          <li>
-              List item 2
-              <ul>
-                    <li>Nested item 2-1</li>
-                    <li>Nested item 2-2</li>
-                    <li>Nested item 2-3</li>
-              </ul>
-          </li>
-          <li>List item 3</li>
-      </ul>
-      <p> Paragraph example for visual reference</p>
-    variation_description: >-
-      Use a bulleted list when grouping similar items or short thoughts into
-      “bite-size” chunks. Generally, the order or count of the items in a bullet
-      list isn’t important. An exception to this may be a list of states, which
-      naturally fits into an alphabetical order.
-    variation_name: Unordered list
-    variation_specs: |
-      Element | Variable name | Variable | web value | Print value
-      --- | --- | --- | --- | ---
-      Margin top | 
-      Margin bottom | 
-  - variation_code_snippet: |-
-      <p>Paragraph example for visual reference</p>
-      <ol>
-          <li>List item 1</li>
-          <li>
-              List item 2
-              <ol>
-                    <li>Nested item 2-1</li>
-                    <li>Nested item 2-2</li>
-                    <li>Nested item 2-3</li>
-              </ol>
-          </li>
-          <li>List item 3</li>
-      </ol>
-      <p>Paragraph example for visual reference</p>
-    variation_description: ''
-    variation_name: Ordered list
 usage: >-
   **Use cases**
 

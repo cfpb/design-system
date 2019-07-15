@@ -15,7 +15,7 @@ variations:
     variation_description: >-
       The default section below demonstrates how a checkbox would normally
       appear in code.
-    variation_name: Default checkbox
+    variation_name: Default state
     variation_specs: |-
       Height: 20 px
 
@@ -33,7 +33,7 @@ variations:
           <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_checked" checked>
           <label class="a-label" for="test_checkbox_basic_checked">Label</label>
       </div>
-    variation_name: Selected
+    variation_name: Selected state
     variation_specs: |-
       Border: 1 px, Gray 60 (#919395)
 

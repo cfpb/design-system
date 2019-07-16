@@ -174,11 +174,11 @@ sections:
           - label: Lists
             slug: lists
           - label: Links
-            slug: links
+            slug: components/links
           - label: Paragraphs
-            slug: paragraphs
+            slug: components/paragraphs
           - label: Quotes
-            slug: quotes
+            slug: components/quotes
     slug: components
   - label: Templates
     secondaryNavItems:

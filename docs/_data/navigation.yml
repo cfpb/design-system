@@ -168,11 +168,11 @@ sections:
           - label: Helper text
             slug: components/helper-text
           - label: Labels
-            slug: labels
+            slug: components/labels
           - label: Legends
-            slug: legends
+            slug: components/legends
           - label: Lists
-            slug: lists
+            slug: components/lists
           - label: Links
             slug: components/links
           - label: Paragraphs

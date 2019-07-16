@@ -11,7 +11,7 @@
           <ul>
               {% for tertiaryNavItem in secondaryNavItem.tertiaryNavItems %}
               <li>
-                <a class="{% if tertiaryNavItem.label == page.title %}active{% endif %}" href="{{ site.baseurl }}/{{ section.slug }}/{{ tertiaryNavItem.slug }}">
+                <a class="{% if tertiaryNavItem.label == page.title %}active{% endif %}" href="{{ site.baseurl }}/{{ tertiaryNavItem.slug }}">
                     {{ tertiaryNavItem.label }}
                 </a>
               </li>

@@ -57,30 +57,30 @@ sections:
         slug: ''
         tertiaryNavItems:
           - label: Modals
-            slug: /components/modals
+            slug: components/modals
           - label: Notifications
-            slug: /components/notifications
+            slug: components/notifications
       - label: Content layouts
         slug: ''
         tertiaryNavItems:
           - label: Contact information
-            slug: /components/contact-information
+            slug: components/contact-information
           - label: Expandables
-            slug: /components/expandables
+            slug: components/expandables
           - label: Featured content modules
-            slug: /components/featured-content-modules
+            slug: components/featured-content-modules
           - label: Full width text
-            slug: /components/full-width-text
+            slug: components/full-width-text
           - label: Heroes
-            slug: /components/heroes
+            slug: components/heroes
           - label: Info unit groups
-            slug: /components/info-unit-groups
+            slug: components/info-unit-groups
           - label: Introductions
-            slug: /components/introductions
+            slug: components/introductions
           - label: Sidebars/prefooters
-            slug: /components/sidebars-prefooters
+            slug: components/sidebars-prefooters
           - label: Wells
-            slug: /components/wells
+            slug: components/wells
       - label: Core utilities
         slug: ''
         tertiaryNavItems:

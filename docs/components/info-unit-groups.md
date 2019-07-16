@@ -94,6 +94,51 @@ variations:
       blob component instead.
 
       * When there are multiple paragraphs of copy.
+
+
+      **Behavior**
+
+
+      At breakpoints below 601, the two-column pattern transitions into a single
+      column and stacks each instance in Z-order.
+
+
+      ![50-50 component behavior
+      screenshot](/design-system/images/uploads/50-50-behavior.png "50-50
+      component behavior screenshot")
+
+
+      **Content guidelines**
+
+
+      * Headings should be as succinct as possible, ideally staying on a single
+      line at max column width (30 characters or less).
+
+      * Description beneath heading should also be succinct, 2-3 lines at max
+      column width of text; roughly 50-130 characters.
+
+      * Call to action link should be one line; about 40 characters or less.
+      Link content should follow link guidelines.
+
+
+      **Style**
+
+
+      ![50-50 component style
+      screenshot](/design-system/images/uploads/50_50_style_mockup.png "50-50
+      component style screenshot")
+
+
+      * Imagery: 16:9 ratio, recommend 1600 x 900 pixels to account for retina
+      displays.
+
+      * Headings: Any heading size may be used, recommend H2-4.
+
+      * Body copy: Avenir paragraph.
+
+      * At breakpoints below 601: Heading sizes H3 and above automatically drop
+      down one level and the mobile link style is used for the call to action
+      link(s).
     variation_name: 50/50 image and text component
 usage: >
   **When to use**

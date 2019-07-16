@@ -38,7 +38,7 @@ CMS.registerWidget( 'helpUsWidget', 'markdown', helpUsPreview );
 CMS.registerWidget( 'bodyWidget', 'markdown', bodyPreview );
 CMS.registerWidget( 'permalinkWidget', 'string', permalinkPreview );
 CMS.registerWidget( 'navSectionWidget', 'string', navSectionPreview );
-CMS.registerWidget( 'navSecondaryWidget', 'string', navSecondaryPreview );
+CMS.registerWidget( 'navSecondaryWidget', 'object', navSecondaryPreview );
 CMS.registerWidget( 'navTertiaryWidget', 'string', navTertiaryPreview );
 CMS.registerWidget( 'noPreviewStringWidget', 'string', noPreview );
 

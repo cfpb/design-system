@@ -30,7 +30,7 @@ collections:
                 required: false
               - name: 'slug'
                 label: 'Slug'
-                widget: 'slugWidget'
+                widget: 'noPreviewStringWidget'
                 required: false
               - name: 'secondaryNavItems'
                 label: 'Secondary nav items'
@@ -38,28 +38,32 @@ collections:
                 widget: 'list'
                 required: false
                 fields:
-                  - name: 'label'
-                    label: 'Link text'
+                  - name: 'secondaryNavLink'
+                    label: 'Secondary nav link'
                     widget: 'navSecondaryWidget'
-                    required: false
-                  - name: 'slug'
-                    label: 'Slug'
-                    widget: 'slugWidget'
-                    required: false
-                  - name: 'tertiaryNavItems'
-                    label: 'Tertiary nav items'
-                    label_singular: 'Tertiary nav item'
-                    widget: 'list'
-                    required: false
                     fields:
                       - name: 'label'
                         label: 'Link text'
-                        widget: 'navTertiaryWidget'
+                        widget: 'string'
                         required: false
                       - name: 'slug'
                         label: 'Slug'
-                        widget: 'slugWidget'
+                        widget: 'noPreviewStringWidget'
                         required: false
+                      - name: 'tertiaryNavItems'
+                        label: 'Tertiary nav items'
+                        label_singular: 'Tertiary nav item'
+                        widget: 'list'
+                        required: false
+                        fields:
+                          - name: 'label'
+                            label: 'Link text'
+                            widget: 'navTertiaryWidget'
+                            required: false
+                          - name: 'slug'
+                            label: 'Slug'
+                            widget: 'noPreviewStringWidget'
+                            required: false
   - name: 'pages'
     label: 'Generic pages'
     label_singular: 'Generic page'

@@ -130,10 +130,10 @@ collections:
         label: 'Implementation status'
         widget: 'statusWidget'
         options:
+          - label: 'Legacy'
+            value: 'Legacy'
           - label: 'Proposed'
             value: 'Proposed'
-          - label: 'In progress'
-            value: 'In progress'
           - label: 'Beta'
             value: 'Beta'
           - label: 'Released'

@@ -4,7 +4,7 @@ permalink: components/buttons
 layout: component
 collection_name: components
 section: components
-status: Proposed
+status: Released
 intro: "Buttons signal actions. They should be used sparingly; each additional button on a page reduces the visual prominence of a call to action. In contrast, [links](https://test-things.github.io/design-system/components/link) should lead users to another page or further information.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/"
 variations:
   - variation_code_snippet: |-
@@ -261,4 +261,3 @@ research: TBD
 related_items: '- related items'
 help_us: 1TBD
 ---
-

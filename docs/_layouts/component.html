@@ -9,52 +9,43 @@ layout: default
     </aside>
     <section class="content_main">
 
-        <div class="content-l">
-            <div class="content-l_col content-l_col-2-3">
-                <div>
-                    <h2>{{ page.title }}</h2>
-
-                    {% include status.html %}
-
-                    {% include contributors.html %}
-                </div>
-            </div>
-            <div class="content-l_col content-l_col-1-3">
-                <div class="block">
-                    <a class="a-btn" id="toggle-code-btn" href="#">
-                        <span class="hide-button">
-                            Hide code &amp; specs
-                            <span class="a-btn_icon a-btn_icon__on-right">
-                                {% include icons/minus.svg %}
-                            </span>
-                        </span>
-                        <span  class="show-button">
-                            Show code &amp; specs
-                            <span class="a-btn_icon a-btn_icon__on-right">
-                                {% include icons/plus.svg %}
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div id="edit-page">
-                    <a class="a-btn add-new" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/new" title="Add a new component page in Netlify CMS">
-                        <span class="a-btn_text">Add new component page</span>
-                        <span class="a-btn_icon">{% include icons/plus.svg %}</span>
-                    </a>
-                    <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/entries/{{ page.title | slugify }}" title="Edit this page in Netlify CMS">
-                        <span class="a-btn_text">Edit this page</span>
-                        <span class="a-btn_icon">{% include icons/edit.svg %}</span>
-                    </a>
-                </div>
-            </div>
-        </div><!-- .content-l -->
+        <div class="component-header">
+            <h2>
+                {{ page.title }}
+                {% include status.html %}
+            </h2>
+            <a class="a-btn" id="toggle-code-btn" href="#">
+                <span class="hide-button">
+                    Hide code &amp; specs
+                    <span class="a-btn_icon a-btn_icon__on-right">
+                        {% include icons/minus.svg %}
+                    </span>
+                </span>
+                <span  class="show-button">
+                    Show code &amp; specs
+                    <span class="a-btn_icon a-btn_icon__on-right">
+                        {% include icons/plus.svg %}
+                    </span>
+                </span>
+            </a>
+        </div>
+        <div id="edit-page">
+            <a class="a-btn add-new" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/new" title="Add a new component page in Netlify CMS">
+                <span class="a-btn_text">Add new component page</span>
+                <span class="a-btn_icon">{% include icons/plus.svg %}</span>
+            </a>
+            <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/entries/{{ page.title | slugify }}" title="Edit this page in Netlify CMS">
+                <span class="a-btn_text">Edit this page</span>
+                <span class="a-btn_icon">{% include icons/edit.svg %}</span>
+            </a>
+        </div>
 
         {% include intro.html %}
 
         <section class="sticky-header">
             <h3 id="variations">Variations</h3>
             {% for variation in page.variations %}
-            <div class="u-mt15">
+            <div class="u-mt30">
                 <!-- Name -->
                 {% capture name %}{{ variation.variation_name }}{% endcapture %}
                 {% include variation/name.html %}

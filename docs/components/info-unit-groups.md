@@ -4,7 +4,7 @@ permalink: /components/info-unit-groups
 layout: component
 collection_name: components
 section: components
-status: In progress
+status: Legacy
 intro: >-
   Info unit groups are very important. Etiam at risus et justo dignissim congue.
   Donec congue lacinia dui, a porttitor lectus condimentum laoreet.
@@ -241,4 +241,3 @@ help_us: >-
   *
   [cf-layout](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
 ---
-

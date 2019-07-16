@@ -4,48 +4,109 @@ permalink: /components/info-unit-groups
 layout: component
 collection_name: components
 section: components
-status: Proposed
+status: In progress
 intro: >-
-  Information about Info Unit Groups can be found at:
-
-
-  * http://cfpb.github.io/design-manual/page-components/25-75.html
-
-  * http://cfpb.github.io/design-manual/page-components/50-50.html
-
-  *
-  http://cfpb.github.io/design-manual/page-components/half-width-link-blob.html
-
-  *
-  http://cfpb.github.io/design-manual/page-components/third-width-link-blob.html
-
-  *
-  https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts
+  Info unit groups are very important. Etiam at risus et justo dignissim congue.
+  Donec congue lacinia dui, a porttitor lectus condimentum laoreet.
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
-usage: >-
-  **Use cases**
+  - variation_code_snippet: >-
+      See https://gist.github.com/contolini/91d498357fd362d6272f22e001300cae for
+      sample HTML, CSS needs to be migrated.
+    variation_description: >-
+      ![25/75 Image and text component
+      example](/design-system/images/uploads/2575example_desktop.jpg "25/75
+      Image and text component example")
 
 
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
+      The 25/75 image and text component is used to draw the user’s eye to key
+      information and navigation links, and aid comprehension by pairing content
+      with illustration/imagery.
 
 
-  **Content guidelines**
+      When used in conjunction with half width link blob, it can help create a
+      hierarchy of child pages or other content on the page, or can help feature
+      a particular link over others.
 
 
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
+      **When to use**
+
+
+      * When a call-to-action, leading users to a deeper page in the section,
+      needs a visual highlight on the page.
+
+      * When an image or illustration helps users better understand the purpose
+      of content.
+
+      * Can be used for an even or odd number of items and may imply a hierarchy
+      of information given the list style format.
+
+
+      **When other options are better**
+
+
+      * When content doesn’t require imagery. Suggest using the half width link
+      blob pattern instead.
+
+      * When there are multiple paragraphs of copy
+    variation_jinja_code_snippet: >-
+      *
+      [image-text-25-75-group.html](https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/image-text-25-75-group.html)
+      in cfgov-refresh
+    variation_name: 25/75 Image and text component
+  - variation_code_snippet: >-
+      See https://gist.github.com/contolini/ad1513232fe07d8a70683669ba48f9d2 for
+      sample HTML, CSS needs to be migrated.
+    variation_description: >-
+      ![50/50 image and text
+      component](/design-system/images/uploads/50_50_intro_mockup.png "50/50
+      image and text component")
+
+
+      The 50/50 image and text component is used to call attention to specific
+      linked content on a page and feature it prodominantly. At larger
+      breakpoints, this component has a two column layout to utilize extra
+      screen real estate.
+
+
+      The half-width link blob component is a variation of the 50/50 image and
+      text that does not use imagery.
+
+
+      **When to use**
+
+
+      * When a call-to-action, leading users to a deeper page in the section,
+      needs a visual highlight on the page.
+
+      * When an image or illustration helps users better understand the purpose
+      of content.
+
+      * Ideally, when an even number of these components can be featured
+      together.
+
+      * To help establish a hierarchy of linked content on this page.
+
+
+      **When other options are better**
+
+
+      * When content doesn’t require imagery. Suggest using the half-width link
+      blob component instead.
+
+      * When there are multiple paragraphs of copy.
+    variation_name: 50/50 image and text component
+usage: >
+  **When to use**
+
+
+  * When a call-to-action, leading users to a deeper page in the section, needs
+  a visual highlight on the page.
+
+  * When an image or illustration helps users better understand the purpose of
+  content.
+
+  * Can be used for an even or odd number of items and may imply a hierarchy of
+  information given the list style format.
 accessibility: >-
   Phasellus molestie magna non est bibendum non venenatis nisl tempor.
   Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
@@ -71,5 +132,21 @@ research: >-
   egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
+help_us: >-
+  Information about Info Unit Groups can be found at:
+
+
+  * [25-75](http://cfpb.github.io/design-manual/page-components/25-75.html)
+
+  * [50-50](http://cfpb.github.io/design-manual/page-components/50-50.html)
+
+  *
+  [half-width-link-blob](http://cfpb.github.io/design-manual/page-components/half-width-link-blob.html)
+
+  *
+  [third-width-link-blob](http://cfpb.github.io/design-manual/page-components/third-width-link-blob.html)
+
+  *
+  [cf-layout](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
 ---
 

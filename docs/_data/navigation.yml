@@ -1,42 +1,200 @@
 sections:
   - label: Getting Started
     secondaryNavItems:
-      - {}
-      - {}
-      - {}
+      - label: How to use the design system
+        slug: getting-started/how-to-use-the-design-system
+      - label: Help us make improvements
+        slug: getting-started/help-us-make-improvements
+      - label: Why we are sharing this
+        slug: getting-started/why-we-are-sharing-this
     slug: getting-started
   - label: Foundation
     secondaryNavItems:
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
+      - label: Design principles
+        slug: ''
+        tertiaryNavItems:
+          - label: General principles
+            slug: foundation/general-principles
+          - label: Data visualization
+            slug: foundation/data-visualization
+          - label: Forms
+            slug: foundation/forms
+      - label: Color
+        slug: foundation/color
+      - label: Iconography
+        slug: foundation/iconography
+      - label: Identity
+        slug: ''
+        tertiaryNavItems:
+          - label: Beam pattern
+            slug: foundation/beam-pattern
+          - label: Logo
+            slug: foundation/logo
+          - label: Seal
+            slug: foundation/seal
+      - label: Imagery
+        slug: ''
+        tertiaryNavItems:
+          - label: Illustration
+            slug: foundation/illustration
+          - label: Photography
+            slug: foundation/photography
+      - label: Multimedia
+        slug: ''
+        tertiaryNavItems:
+          - label: Animation
+            slug: foundation/animation
+          - label: Video
+            slug: foundation/video
+      - label: Typography
+        slug: foundation/typography
+      - label: User research
+        slug: foundation/user-research
     slug: foundation
   - label: Components
     secondaryNavItems:
-      - secondaryNavLink:
-          label: Forms
-          slug: ''
-          tertiaryNavItems:
-            - label: Buttons
-              slug: components/buttons
-            - label: Inputs
-              slug: components/inputs
-            - label: Email signup forms
-              slug: components/email-signup-forms
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
+      - label: Alerts
+        slug: ''
+        tertiaryNavItems:
+          - label: Modals
+            slug: /components/modals
+          - label: Notifications
+            slug: /components/notifications
+      - label: Content layouts
+        slug: ''
+        tertiaryNavItems:
+          - label: Contact information
+            slug: /components/contact-information
+          - label: Expandables
+            slug: /components/expandables
+          - label: Featured content modules
+            slug: /components/featured-content-modules
+          - label: Full width text
+            slug: /components/full-width-text
+          - label: Heroes
+            slug: /components/heroes
+          - label: Info unit groups
+            slug: /components/info-unit-groups
+          - label: Introductions
+            slug: /components/introductions
+          - label: Sidebars/prefooters
+            slug: /components/sidebars-prefooters
+          - label: Wells
+            slug: /components/wells
+      - label: Core utilities
+        slug: ''
+        tertiaryNavItems:
+          - label: Atomic components
+            slug: /components/atomic-components
+          - label: Blocks
+            slug: /components/blocks
+          - label: Dividers
+            slug: /components/dividers
+          - label: Grid
+            slug: /components/grid
+          - label: Images
+            slug: /components/images
+          - label: Media queries
+            slug: /components/media-queries
+          - label: Utilities
+            slug: /components/utilities
+      - label: Data visualization
+        slug: ''
+        tertiaryNavItems:
+          - label: Bar charts
+            slug: /components/bar-charts
+          - label: Line charts
+            slug: /components/line-charts
+          - label: Maps
+            slug: /components/maps
+          - label: Pie charts
+            slug: /components/pie-charts
+      - label: Forms
+        slug: ''
+        tertiaryNavItems:
+          - label: Buttons
+            slug: /components/buttons
+          - label: Checkboxes
+            slug: /components/checkboxes
+          - label: 'Dropdowns '
+            slug: 'dropdowns '
+          - label: 'E-mail signup forms '
+            slug: 'e-mail-signup-forms '
+          - label: Feedback forms
+            slug: feedback-forms
+          - label: Fieldsets
+            slug: fieldsets
+          - label: Multi-selects
+            slug: multi-selects
+          - label: Radio buttons
+            slug: radio-buttons
+          - label: Range sliders
+            slug: range-sliders
+          - label: Text inputs
+            slug: text-inputs
+      - label: Navigation
+        slug: ''
+        tertiaryNavItems:
+          - label: Filterable list control panels
+            slug: filterable-list-control-panels
+          - label: Left hand navigation
+            slug: left-hand-navigation
+          - label: Megamenu
+            slug: megamenu
+          - label: Pagination
+            slug: pagination
+      - label: Tables
+        slug: ''
+        tertiaryNavItems:
+          - label: Default tables
+            slug: default-tables
+          - label: Sortable tables
+            slug: sortable-tables
+          - label: Responsive tables
+            slug: responsive-tables
+          - label: Snippet lists
+            slug: snippet-lists
+      - label: Text
+        slug: ''
+        tertiaryNavItems:
+          - label: Dates
+            slug: dates
+          - label: Definition lists
+            slug: definition-lists
+          - label: Headers
+            slug: headers
+          - label: Heading hierarchy
+            slug: heading-hierarchy
+          - label: Helper text
+            slug: helper-text
+          - label: Labels
+            slug: labels
+          - label: Legends
+            slug: legends
+          - label: Lists
+            slug: lists
+          - label: Links
+            slug: links
+          - label: Paragraphs
+            slug: paragraphs
+          - label: Quotes
+            slug: quotes
     slug: components
   - label: Templates
     secondaryNavItems:
-      - {}
+      - label: Web page templates
+        slug: ''
+        tertiaryNavItems:
+          - label: Landing pages
+            slug: templates/landing-pages
+          - label: Sublanding pages
+            slug: templates/sublanding-pages
+          - label: Browse pages
+            slug: templates/browse-pages
+          - label: Learn pages
+            slug: templates/learn-pages
+          - label: Filterable list pages
+            slug: templates/filterable-list-pages
+          - label: Document detail pages
+            slug: templates/document-detail-pages
     slug: templates

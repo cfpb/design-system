@@ -24,7 +24,13 @@ sections:
           tertiaryNavItems:
             - label: Modals
               slug: components/modals
-      - {}
+      - secondaryNavLink:
+          label: Forms
+          tertiaryNavItems:
+            - label: Buttons
+              slug: components/buttons
+            - label: Checkboxes
+              slug: components/checkboxes
       - {}
       - {}
       - {}

@@ -9,9 +9,7 @@ intro: >-
   Info unit groups are very important. Etiam at risus et justo dignissim congue.
   Donec congue lacinia dui, a porttitor lectus condimentum laoreet.
 variations:
-  - variation_code_snippet: >-
-      See https://gist.github.com/contolini/91d498357fd362d6272f22e001300cae for
-      sample HTML, CSS needs to be migrated.
+  - variation_code_snippet: TBD
     variation_description: >-
       ![25/75 Image and text component
       example](/design-system/images/uploads/2575example_desktop.jpg "25/75
@@ -97,9 +95,7 @@ variations:
       [image-text-25-75-group.html](https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/image-text-25-75-group.html)
       in cfgov-refresh
     variation_name: 25/75 Image and text component
-  - variation_code_snippet: >-
-      See https://gist.github.com/contolini/ad1513232fe07d8a70683669ba48f9d2 for
-      sample HTML, CSS needs to be migrated.
+  - variation_code_snippet: TBD
     variation_description: >-
       ![50/50 image and text
       component](/design-system/images/uploads/50_50_intro_mockup.png "50/50
@@ -222,6 +218,13 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 help_us: >-
+  See [25-75 sample
+  HTML](https://gist.github.com/contolini/91d498357fd362d6272f22e001300cae) and
+  [50-50 sample
+  HTML](https://gist.github.com/contolini/ad1513232fe07d8a70683669ba48f9d2), CSS
+  for both need to be migrated from cfgov-refresh.
+
+
   Information about Info Unit Groups can be found at:
 
 

@@ -85,13 +85,13 @@ sections:
         slug: ''
         tertiaryNavItems:
           - label: Atomic components
-            slug: /components/atomic-components
+            slug: components/atomic-components
           - label: Blocks
-            slug: /components/blocks
+            slug: components/blocks
           - label: Dividers
-            slug: /components/dividers
+            slug: components/dividers
           - label: Grid
-            slug: /components/grid
+            slug: components/grid
           - label: Images
             slug: /components/images
           - label: Media queries

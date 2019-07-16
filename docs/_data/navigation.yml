@@ -93,67 +93,67 @@ sections:
           - label: Grid
             slug: components/grid
           - label: Images
-            slug: /components/images
+            slug: components/images
           - label: Media queries
-            slug: /components/media-queries
+            slug: components/media-queries
           - label: Utilities
-            slug: /components/utilities
+            slug: components/utilities
       - label: Data visualization
         slug: ''
         tertiaryNavItems:
           - label: Bar charts
-            slug: /components/bar-charts
+            slug: components/bar-charts
           - label: Line charts
-            slug: /components/line-charts
+            slug: components/line-charts
           - label: Maps
-            slug: /components/maps
+            slug: components/maps
           - label: Pie charts
-            slug: /components/pie-charts
+            slug: components/pie-charts
       - label: Forms
         slug: ''
         tertiaryNavItems:
           - label: Buttons
-            slug: /components/buttons
+            slug: components/buttons
           - label: Checkboxes
-            slug: /components/checkboxes
+            slug: components/checkboxes
           - label: 'Dropdowns '
-            slug: dropdowns
+            slug: components/dropdowns
           - label: 'E-mail signup forms '
-            slug: 'e-mail-signup-forms '
+            slug: 'components/e-mail-signup-forms '
           - label: Feedback forms
-            slug: feedback-forms
+            slug: components/feedback-forms
           - label: Fieldsets
-            slug: fieldsets
+            slug: components/fieldsets
           - label: Multi-selects
-            slug: multi-selects
+            slug: components/multi-selects
           - label: Radio buttons
-            slug: radio-buttons
+            slug: components/radio-buttons
           - label: Range sliders
-            slug: range-sliders
+            slug: components/range-sliders
           - label: Text inputs
-            slug: text-inputs
+            slug: components/text-inputs
       - label: Navigation
         slug: ''
         tertiaryNavItems:
           - label: Filterable list control panels
-            slug: filterable-list-control-panels
+            slug: components/filterable-list-control-panels
           - label: Left hand navigation
-            slug: left-hand-navigation
+            slug: components/left-hand-navigation
           - label: Megamenu
-            slug: megamenu
+            slug: components/megamenu
           - label: Pagination
-            slug: pagination
+            slug: components/pagination
       - label: Tables
         slug: ''
         tertiaryNavItems:
           - label: Default tables
-            slug: default-tables
+            slug: components/default-tables
           - label: Sortable tables
-            slug: sortable-tables
+            slug: components/sortable-tables
           - label: Responsive tables
-            slug: responsive-tables
+            slug: components/responsive-tables
           - label: Snippet lists
-            slug: snippet-lists
+            slug: components/snippet-lists
       - label: Text
         slug: ''
         tertiaryNavItems:

@@ -57,128 +57,128 @@ sections:
         slug: ''
         tertiaryNavItems:
           - label: Modals
-            slug: modals
+            slug: components/modals
           - label: Notifications
-            slug: notifications
+            slug: components/notifications
       - label: Content layouts
         slug: ''
         tertiaryNavItems:
           - label: Contact information
-            slug: contact-information
+            slug: components/contact-information
           - label: Expandables
-            slug: expandables
+            slug: components/expandables
           - label: Featured content modules
-            slug: featured-content-modules
+            slug: components/featured-content-modules
           - label: Full width text
-            slug: full-width-text
+            slug: components/full-width-text
           - label: Heroes
-            slug: heroes
+            slug: components/heroes
           - label: Info unit groups
-            slug: info-unit-groups
+            slug: components/info-unit-groups
           - label: Introductions
-            slug: introductions
+            slug: components/introductions
           - label: Sidebars/prefooters
-            slug: sidebars-prefooters
+            slug: components/sidebars-prefooters
           - label: Wells
-            slug: wells
+            slug: components/wells
       - label: Core utilities
         slug: ''
         tertiaryNavItems:
           - label: Atomic components
-            slug: atomic-components
+            slug: components/atomic-components
           - label: Blocks
-            slug: blocks
+            slug: components/blocks
           - label: Dividers
-            slug: dividers
+            slug: components/dividers
           - label: Grid
-            slug: grid
+            slug: components/grid
           - label: Images
-            slug: images
+            slug: components/images
           - label: Media queries
-            slug: media-queries
+            slug: components/media-queries
           - label: Utilities
-            slug: utilities
+            slug: components/utilities
       - label: Data visualization
         slug: ''
         tertiaryNavItems:
           - label: Bar charts
-            slug: bar-charts
+            slug: components/bar-charts
           - label: Line charts
-            slug: line-charts
+            slug: components/line-charts
           - label: Maps
-            slug: maps
+            slug: components/maps
           - label: Pie charts
-            slug: pie-charts
+            slug: components/pie-charts
       - label: Forms
         slug: ''
         tertiaryNavItems:
           - label: Buttons
-            slug: buttons
+            slug: components/buttons
           - label: Checkboxes
-            slug: checkboxes
+            slug: components/checkboxes
           - label: 'Dropdowns '
-            slug: 'dropdowns '
+            slug: components/dropdowns
           - label: 'E-mail signup forms '
-            slug: 'e-mail-signup-forms '
+            slug: 'components/e-mail-signup-forms '
           - label: Feedback forms
-            slug: feedback-forms
+            slug: components/feedback-forms
           - label: Fieldsets
-            slug: fieldsets
+            slug: components/fieldsets
           - label: Multi-selects
-            slug: multi-selects
+            slug: components/multi-selects
           - label: Radio buttons
-            slug: radio-buttons
+            slug: components/radio-buttons
           - label: Range sliders
-            slug: range-sliders
+            slug: components/range-sliders
           - label: Text inputs
-            slug: text-inputs
+            slug: components/text-inputs
       - label: Navigation
         slug: ''
         tertiaryNavItems:
           - label: Filterable list control panels
-            slug: filterable-list-control-panels
+            slug: components/filterable-list-control-panels
           - label: Left hand navigation
-            slug: left-hand-navigation
+            slug: components/left-hand-navigation
           - label: Megamenu
-            slug: megamenu
+            slug: components/megamenu
           - label: Pagination
-            slug: pagination
+            slug: components/pagination
       - label: Tables
         slug: ''
         tertiaryNavItems:
           - label: Default tables
-            slug: default-tables
+            slug: components/default-tables
           - label: Sortable tables
-            slug: sortable-tables
+            slug: components/sortable-tables
           - label: Responsive tables
-            slug: responsive-tables
+            slug: components/responsive-tables
           - label: Snippet lists
-            slug: snippet-lists
+            slug: components/snippet-lists
       - label: Text
         slug: ''
         tertiaryNavItems:
           - label: Dates
-            slug: dates
+            slug: components/dates
           - label: Definition lists
-            slug: definition-lists
+            slug: components/definition-lists
           - label: Headers
-            slug: headers
+            slug: components/headers
           - label: Heading hierarchy
-            slug: heading-hierarchy
+            slug: components/heading-hierarchy
           - label: Helper text
-            slug: helper-text
+            slug: components/helper-text
           - label: Labels
-            slug: labels
+            slug: components/labels
           - label: Legends
-            slug: legends
+            slug: components/legends
           - label: Lists
-            slug: lists
+            slug: components/lists
           - label: Links
-            slug: links
+            slug: components/links
           - label: Paragraphs
-            slug: paragraphs
+            slug: components/paragraphs
           - label: Quotes
-            slug: quotes
+            slug: components/quotes
     slug: components
   - label: Templates
     secondaryNavItems:

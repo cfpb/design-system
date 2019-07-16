@@ -158,15 +158,15 @@ sections:
         slug: ''
         tertiaryNavItems:
           - label: Dates
-            slug: dates
+            slug: components/dates
           - label: Definition lists
-            slug: definition-lists
+            slug: components/definition-lists
           - label: Headers
-            slug: headers
+            slug: components/headers
           - label: Heading hierarchy
-            slug: heading-hierarchy
+            slug: components/heading-hierarchy
           - label: Helper text
-            slug: helper-text
+            slug: components/helper-text
           - label: Labels
             slug: labels
           - label: Legends

@@ -117,7 +117,7 @@ sections:
           - label: Checkboxes
             slug: /components/checkboxes
           - label: 'Dropdowns '
-            slug: 'dropdowns '
+            slug: dropdowns
           - label: 'E-mail signup forms '
             slug: 'e-mail-signup-forms '
           - label: Feedback forms

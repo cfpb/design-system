@@ -47,7 +47,51 @@ variations:
       * When content doesn’t require imagery. Suggest using the half width link
       blob pattern instead.
 
-      * When there are multiple paragraphs of copy
+      * When there are multiple paragraphs of copy.
+
+
+      **Behavior**
+
+
+      At breakpoints below 601, the two-column pattern transitions into a single
+      column and stacks each instance in Z-order.
+
+
+      ![25-75 component behavior
+      screenshot](/design-system/images/uploads/25-75-behavior.png "25-75
+      component behavior screenshot")
+
+
+      **Content guidelines**
+
+
+      * Headings should be as succinct as possible, ideally staying on a single
+      line at max column width; 60 characters or less.
+
+      * Description beneath heading should also be succinct, ideally no more
+      than 4 lines at max column width; 1-2 sentences, no more than 275
+      characters.
+
+      * Call to action link should be a single concise phrase starting with an
+      action verb. Should stay on a single line at max column width; 65
+      characters or less.
+
+
+      **Style**
+
+
+      ![25-75 component style
+      screenshot](/design-system/images/uploads/style_desktop_1.jpg "25-75
+      component style screenshot")
+
+
+      * Imagery: 1:1 ratio, may be illustration, isocon, or photography. 150px
+      wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and
+      below
+
+      * Padding: 30px padding for imagery across responsive sizes
+
+      * Headings: Any heading size may be used, recommend H2-6
     variation_jinja_code_snippet: >-
       *
       [image-text-25-75-group.html](https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/image-text-25-75-group.html)

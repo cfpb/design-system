@@ -18,12 +18,12 @@ export const Preview = props => {
   } );
 
 
-  return (
-    var children = items.map(item => <span key={item.title} />);
-    <div>{children}</div>
-  );
-  // return h('div', {},
-  //   h('div', {"className": "sections"}, sections),
-  //   h('div', {"className": "secondary-nav-items"}, secondaryList)
+  // return (
+  //   var children = items.map(item => <span key={item.title} />);
+  //   <div>{children}</div>
   // );
+  return h('div', {},
+    h('div', {"className": "sections"}, sections),
+    h('div', {"className": "secondary-nav-items"}, secondaryList)
+  );
 };

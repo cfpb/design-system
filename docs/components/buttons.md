@@ -4,8 +4,12 @@ permalink: components/buttons
 layout: component
 collection_name: components
 section: components
-status: Proposed
-intro: "Buttons signal actions. They should be used sparingly; each additional button on a page reduces the visual prominence of a call to action. In contrast, [links](https://test-things.github.io/design-system/components/link) should lead users to another page or further information.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/"
+status: Released
+intro: >-
+  Buttons signal actions. They should be used sparingly; each additional button
+  on a page reduces the visual prominence of a call to action. In contrast,
+  [links](https://test-things.github.io/design-system/components/link) should
+  lead users to another page or further information.
 variations:
   - variation_code_snippet: |-
       <button class="a-btn" title="Test button">Primary button</button>
@@ -24,7 +28,7 @@ variations:
       the atomic button styles.
 
 
-      For accessibility reasons, use the semantic <button> instead of a link
+      For accessibility reasons, use the semantic `<button>` instead of a link
       when possible.
     variation_jinja_code_snippet: |-
       ```
@@ -259,6 +263,6 @@ usage: >-
 accessibility: TBD
 research: TBD
 related_items: '- related items'
-help_us: 1TBD
+help_us: "More information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/"
 ---
 

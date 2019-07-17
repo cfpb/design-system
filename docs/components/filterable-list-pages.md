@@ -1,10 +1,15 @@
 ---
 title: Filterable list pages
-permalink: /filterable-list-pages
+permalink: /templates/filterable-list-pages
 layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: TBD
+intro: >-
+  This page is under active development. Information is being moved into it from
+  this page:
+
+  *
+  http://cfpb.github.io/design-manual/global-elements/filterable-list-pages.html
 ---
 

@@ -15,7 +15,7 @@ variations:
     variation_description: >-
       The default section below demonstrates how a checkbox would normally
       appear in code.
-    variation_name: Default checkbox
+    variation_name: Default state
     variation_specs: |-
       Height: 20 px
 
@@ -30,30 +30,10 @@ variations:
       Avenir Next Regular, 16 px, Black (#101820)
   - variation_code_snippet: |-
       <div class="m-form-field m-form-field__checkbox">
-          <input class="a-checkbox hover" type="checkbox" id="test_checkbox_basic_hover">
-          <label class="a-label" for="test_checkbox_basic_hover">Label</label>
-      </div>
-    variation_description: tbd
-    variation_name: Hover state
-    variation_specs: 'Border: 2 px, Pacific (#0072ce)'
-  - variation_code_snippet: |-
-      <div class="m-form-field m-form-field__checkbox">
-          <input class="a-checkbox focus" type="checkbox" id="test_checkbox_basic_focus">
-          <label class="a-label" for="test_checkbox_basic_focus">Label</label>
-      </div>
-    variation_name: Focus
-    variation_specs: |-
-      Border: 2 px, Pacific (#0072ce)
-
-      Outline: Dotted 1px, Pacific (#0072ce)
-
-      Outline offset: 1px
-  - variation_code_snippet: |-
-      <div class="m-form-field m-form-field__checkbox">
           <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_checked" checked>
           <label class="a-label" for="test_checkbox_basic_checked">Label</label>
       </div>
-    variation_name: Selected
+    variation_name: Selected state
     variation_specs: |-
       Border: 1 px, Gray 60 (#919395)
 

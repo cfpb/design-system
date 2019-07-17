@@ -26,11 +26,11 @@ collections:
             fields:
               - name: 'label'
                 label: 'Link text'
-                widget: 'navSectionWidget'
+                widget: 'string'
                 required: false
               - name: 'slug'
                 label: 'Slug'
-                widget: 'noPreviewStringWidget'
+                widget: 'string'
                 required: false
               - name: 'secondaryNavItems'
                 label: 'Secondary nav items'
@@ -48,7 +48,7 @@ collections:
                         required: false
                       - name: 'slug'
                         label: 'Slug'
-                        widget: 'noPreviewStringWidget'
+                        widget: 'string'
                         required: false
                       - name: 'tertiaryNavItems'
                         label: 'Tertiary nav items'
@@ -58,11 +58,11 @@ collections:
                         fields:
                           - name: 'label'
                             label: 'Link text'
-                            widget: 'navTertiaryWidget'
+                            widget: 'string'
                             required: false
                           - name: 'slug'
                             label: 'Slug'
-                            widget: 'noPreviewStringWidget'
+                            widget: 'string'
                             required: false
   - name: 'pages'
     label: 'Generic pages'

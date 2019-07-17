@@ -40,7 +40,7 @@ collections:
                 fields:
                   - name: 'secondaryNavLink'
                     label: 'Secondary nav link'
-                    widget: 'navSecondaryWidget'
+                    widget: 'object'
                     fields:
                       - name: 'label'
                         label: 'Link text'

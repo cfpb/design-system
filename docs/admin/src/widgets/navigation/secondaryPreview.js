@@ -1,23 +1,20 @@
 import React from 'react';
 
-// export const Preview = props => <div>
-//     &nbsp;&nbsp;&nbsp;&nbsp;└ {props.value}
-// </div>;
-
-
 export const Preview = props => {
-  
-  const entry = props.entry;
-  var navigationWTF = entry.getIn(['data', 'navigation']);
-  const linkText = entry.getIn(['section', 'secondaryNavLink', 'label']);
-  console.log( 'porps' );
-  console.log( props.entry );
-  // console.log( linkText );
-  window.cats = entry;
+
+  window.previewProps = props;
+  window.previewReact = React;
+
+  props.widgetsFor( 'sections' ).map( section => {
+    const secondaryNavItems = section.getIn( [ 'widgets', 'secondaryNavItems' ] );
+    React.Children.forEach( secondaryNavItems.props.children, secondaryNavItem => {
+      console.log( JSON.stringify( secondaryNavItem.props.value ) );
+    } );
+  } );
 
   return (
     <div>
-      &nbsp;&nbsp;&nbsp;&nbsp;└ { linkText } (2nd level)
+      &nbsp;&nbsp;&nbsp;&nbsp;└ (2nd level)
     </div>
   );
 };

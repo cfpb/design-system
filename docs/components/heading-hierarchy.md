@@ -20,10 +20,10 @@ intro: >-
 
   * https://cfpb.github.io/capital-framework/components/cf-core/#type-hierarchy
 variations:
-  - variation_code_snippet: <h1 class="superheading">Example display heading</h1>
+  - variation_code_snippet: <h1 class="superheading">Display heading</h1>
     variation_description: '<601px wide: Drops to Heading 1'
     variation_jinja_code_snippet: ''
-    variation_name: Display heading
+    variation_name: ' '
     variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nTypeface | | | Avenir Next Regular | Avenir Next Regular\nWebfont | @webfont-regular: | Arial; | Arial\nText color | @text: | @black; | Black (#101820)\t| 0, 0, 0, 100\nText size | @size-xl: | 48px; | 48px | 38pt\nSmall screen text size | | | 34px | \nLine height | @base-line-height: | unit( @base-line-height-px / @base-font-size-px ); | \nLine height (pixels) | ? |  | 60px | 66pt\nSmall screen line height | | 42px | \nBottom margin | | | | 30px\nExtra-small breakpoint | @bp-xs-max: | 600px; |"
   - variation_code_snippet: |-
       <h1>Example heading element</h1>

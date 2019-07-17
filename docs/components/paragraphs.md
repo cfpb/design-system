@@ -68,24 +68,14 @@ variations:
       </aside>
     variation_name: Pull quote
     variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nColor | @pull-quote_body | @black | Black (#101820)\t| 0, 0, 0, 100\nColor (citation) | @pull-quote_citation | @gray | Gray (#5a5d61) | 0, 0, 0, 77 |\nText size |  |  |  | \nLine height (pixels) |  |  |  | \nBottom margin | | | |"
-usage: >-
+usage: |-
   **Use cases**
 
-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
-
+  TBD
 
   **Content guidelines**
 
-
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
+  TBD
 accessibility: >-
   Phasellus molestie magna non est bibendum non venenatis nisl tempor.
   Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.

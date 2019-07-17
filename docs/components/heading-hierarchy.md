@@ -144,12 +144,12 @@ variations:
   - variation_code_snippet: |-
       <a href="#" class="a-heading a-heading__icon">
           {% include icons/dialogue.svg %}
-          Consumer finance
+          Heading with icon
       </a>
     variation_description: >-
       The heading with icon is typically used for listing categories in a meta
       header.
-    variation_name: Heading with icon
+    variation_name: ' '
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---

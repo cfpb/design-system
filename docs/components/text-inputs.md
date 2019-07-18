@@ -6,7 +6,8 @@ collection_name: components
 section: components
 status: Proposed
 intro: >-
-  For information on Form alerts, see the notifications section
+  This page includes other components like form alerts and buttons. You can
+  learn more about these on their respective pages.
 
 
   This page is under active development. Information is being moved into it from
@@ -86,10 +87,10 @@ variations:
                 placeholder="Enter text…">Lorem Ipsum</textarea>
     variation_description: ''
     variation_name: Textarea input
-    variation_specs: |+
+    variation_specs: |
       Element | Variable name | Variable | web value
       --- | --- | --- | ---
-
+      **Border height** | @select-height | @30px? | 35px?
   - variation_code_snippet: |-
       <div class="m-form-field">
           <label class="a-label a-label__heading" for="full-textinput-example">
@@ -101,6 +102,9 @@ variations:
                  value="Lorem ipsum">
       </div>
     variation_name: Full-width text input
+    variation_specs: |-
+      Element | Variable name | Variable | web value
+      --- | --- | --- | ---
   - variation_code_snippet: |-
       <div class="m-form-field">
           <label class="a-label a-label__heading" for="full-textarea-example">
@@ -109,7 +113,12 @@ variations:
           <textarea class="a-text-input a-text-input__full"
                     id="full-textarea-example">Lorem Ipsum</textarea>
       </div>
+    variation_jinja_code_snippet: ''
     variation_name: Full-width textarea input
+    variation_specs: |-
+      Element | Variable name | Variable | web value
+      --- | --- | --- | ---
+      **Border height** | @select-height | @30px? | 35px?
   - variation_code_snippet: |-
       <div class="o-form__input-w-btn">
           <div class="o-form__input-w-btn_input-container">
@@ -121,6 +130,8 @@ variations:
       </div>
     variation_description: These are used for simple forms where a full filter isn’t necessary.
     variation_name: Text input with a button
+    variation_specs: |+
+
   - variation_code_snippet: |-
       <div class="m-btn-inside-input">
           <input type="text"
@@ -158,6 +169,9 @@ variations:
       This example combines both of the previous patterns, creating a typical
       site search form.
     variation_name: Button inside a text input with another button
+    variation_specs: |-
+      Element | Variable name | Variable | web value
+      --- | --- | --- | ---
 usage: >-
   **Use cases**
 
@@ -192,6 +206,10 @@ usage: >-
 
 
   Text should be in sentence case.
+
+
+  Use placeholder text for formatting examples only. Don’t use for instructions.
+  Placeholder text disappears once a user begins typing in the field.
 
 
   **Behavior**

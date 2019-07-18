@@ -7,22 +7,13 @@ section: foundation
 ---
 <div class="content-67 content-first" markdown="1">
 
-
-The CFPB logo was designed to symbolize vigilance, transparency, and a
-consumer focus. Consumers are the foundation and focus of our mission and our
-logo reflects that. A soft beam of light symbolizes our efforts to illuminate
-the financial landscape and foster transparency in the marketplace.
-
+The CFPB logo was designed to symbolize vigilance, transparency, and a consumer focus. Consumers are the foundation and focus of our mission and our logo reflects that. A soft beam of light symbolizes our efforts to illuminate the financial landscape and foster transparency in the marketplace.
 
 </div>
 
-
 <div class="content-33 content-last" markdown="1">
 
-
-![Feature
-logo](https://cfpb.github.io/design-manual/static/img/logo/Logo0_@2.png)
-
+![Feature logo](https://cfpb.github.io/design-manual/static/img/logo/Logo0_@2.png)
 
 </div>
 
@@ -447,7 +438,7 @@ photo backgrounds logo")
 <div class="content-33 content-first warning" markdown="1">
 
 
-<p>{% include icons/error-round.svg %} Don’t remove the light beam. It is
+<p><img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t remove the light beam. It is
 essential to the logo.</p>
 
 
@@ -474,7 +465,7 @@ with no beam")
 <div class="content-33 content-first warning" markdown="1">
 
 
-<p>{% include icons/error-round.svg %} Don’t stretch or condense. This weakens
+<p><img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t stretch or condense. This weakens
 the brand.</p>
 
 
@@ -512,7 +503,7 @@ logo](https://cfpb.github.io/design-manual/static/img/logo/Logo24.png
 <div class="content-33 content-first warning" markdown="1">
 
 
-<p>{% include icons/error-round.svg %} Don’t apply a drop shadow.</p>
+<p><img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t apply a drop shadow.</p>
 
 
 </div><!-- /.content-33 -->
@@ -536,8 +527,8 @@ shadow logo")
 <div class="content-33 content-first warning" markdown="1">
 
 
-<p>{% include icons/error-round.svg %} Don’t outline the logo or use other
-colors. This dilutes brand association.</p>
+<img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t outline the logo or use other
+colors. This dilutes brand association.
 
 
 </div><!-- /.content-33 -->
@@ -573,8 +564,8 @@ logo](https://cfpb.github.io/design-manual/static/img/logo/Logo25.png
 <div class="content-33 content-first warning" markdown="1">
 
 
-<p>{% include icons/error-round.svg %} Don’t rotate the symbol. This changes
-the connotation of the light.</p>
+<img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t rotate the symbol. This changes
+the connotation of the light.
 
 
 </div><!-- /.content-33 -->
@@ -611,8 +602,8 @@ logo")
 <div class="content-33 content-first warning" markdown="1">
 
 
-<p>{% include icons/error-round.svg %} Don’t place the logo directly on a
-colored background or photo without a white bounding box.</p>
+<img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t place the logo directly on a
+colored background or photo without a white bounding box.
 
 
 </div><!-- /.content-33 -->

@@ -7,14 +7,17 @@ section: components
 status: Proposed
 intro: |-
   Information about Introductions can be found at:
+
   * http://cfpb.github.io/design-manual/global-elements/text-introductions.html
+  * https://cfpb.github.io/design-manual/global-elements/item-introduction.html
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.
-    variation_jinja_code_snippet: |2
+    variation_jinja_code_snippet: |2-
        now i will add reandom text
-      - [jinja template]()
-      - 
+
+      * [jinja template](<>)
+      *
     variation_name: Default state
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The secondary state is very secondary.

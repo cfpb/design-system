@@ -30,22 +30,53 @@ variations:
       The default section below demonstrates how a text input would normally
       appear in code.
     variation_name: Basic text input
-    variation_specs: |-
-      Element | Variable name | Variable | web value
+    variation_specs: >-
+      Element | Variable name | Variable | Value
+
       --- | --- | --- | ---
-      Text color | @input-text | @black | Black (#101820)
-      Text color | @input-text | @black | Black (#101820)
-      Text color (placeholder) | @gray | 
-      Text color (disabled) | @gray | 
-      Text size | @base-font-size-px | 16px | 16px | 11pt
-      Border | @input-border | @gray-60 | Gray 60 ()
-      Border (hover) | @pacific | 
-      Border (focused) | @pacific | 
-      Border (active) | @pacific | 
-      Border (selected) | @pacific | 
-      Background | @input-bg | @white | White ()
-      Background (selected) | 
-      Background (disabled)
+
+      **Typeface** | | | Avenir Next Regular |
+
+      **Text color** | @input-text | @black | Black (#101820)
+
+      **Text color (disabled)** | @input-text__disabled | @gray | Gray (#5a5d61)
+
+      **Text color (placeholder)** | @input-text__placeholder | @gray | Gray
+      (#5a5d61)
+
+      **Text size** | @base-font-size-px | 16px | 16px | 11pt
+
+      **Border color** | @input-border | @gray-60 | Gray 60 (#919395)
+
+      **Border color (hover)**| @input-border__hover | @pacific | Pacific
+      (#0072ce)
+
+      **Border color (focused)**| @input-border__focused | @pacific | Pacific
+      (#0072ce)
+
+      **Border color (active)** | @input-border__active | @pacific | Pacific
+      (#0072c@input-border__selected | @pacific | Pacific (#0072ce)
+
+      **Border thickness** | | | 1px
+
+      **Border thickness (hover, focus)** | | | 2px
+
+      **Border height** | @select-height | @30px? | 35px?
+
+      **Focus outline thickness** | | | Dotted 1px
+
+      **Focus outline color** | | | Pacific (#0072ce)
+
+      **Focus outline offset** | | | 1px
+
+      **Background** | @input-bg | @white | White ()
+
+      **Background (selected)** | @input-bg__selected | @pacific | Pacific
+      (#0072ce)
+
+      **Background (disabled)** | @input-bg__disabled| @gray | Gray (#5a5d61)
+
+      **Padding** | | | 7px
   - variation_code_snippet: |-
       <label class="a-label a-label__heading" for="textarea-example-default">
           A textarea input
@@ -55,10 +86,10 @@ variations:
                 placeholder="Enter text…">Lorem Ipsum</textarea>
     variation_description: ''
     variation_name: Textarea input
-    variation_specs: |
+    variation_specs: |+
       Element | Variable name | Variable | web value
       --- | --- | --- | ---
-      Height | @select-height | @30px | 30px
+
   - variation_code_snippet: |-
       <div class="m-form-field">
           <label class="a-label a-label__heading" for="full-textinput-example">
@@ -158,6 +189,9 @@ usage: >-
   * Date, month, or year
 
   * State abbreviation
+
+
+  Text should be in sentence case.
 
 
   **Behavior**

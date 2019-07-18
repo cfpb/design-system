@@ -6,6 +6,9 @@ collection_name: components
 section: components
 status: Proposed
 intro: >-
+  For information on Form alerts, see the notifications section
+
+
   This page is under active development. Information is being moved into it from
   these pages:
 
@@ -31,16 +34,18 @@ variations:
       Element | Variable name | Variable | web value
       --- | --- | --- | ---
       Text color | @input-text | @black | Black (#101820)
+      Text color | @input-text | @black | Black (#101820)
+      Text color (placeholder) | @gray | 
+      Text color (disabled) | @gray | 
       Text size | @base-font-size-px | 16px | 16px | 11pt
       Border | @input-border | @gray-60 | Gray 60 ()
-      Border (hover)
-      Border (focused)
-      Border (active)
-      Border (error)
-      Border (warning)
-      Border (success)
-      Border (selected)
+      Border (hover) | @pacific | 
+      Border (focused) | @pacific | 
+      Border (active) | @pacific | 
+      Border (selected) | @pacific | 
       Background | @input-bg | @white | White ()
+      Background (selected) | 
+      Background (disabled)
   - variation_code_snippet: |-
       <label class="a-label a-label__heading" for="textarea-example-default">
           A textarea input
@@ -50,6 +55,10 @@ variations:
                 placeholder="Enter text…">Lorem Ipsum</textarea>
     variation_description: ''
     variation_name: Textarea input
+    variation_specs: |
+      Element | Variable name | Variable | web value
+      --- | --- | --- | ---
+      Height | @select-height | @30px | 30px
   - variation_code_snippet: |-
       <div class="m-form-field">
           <label class="a-label a-label__heading" for="full-textinput-example">

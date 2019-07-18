@@ -12,11 +12,11 @@ intro: >-
   http://cfpb.github.io/design-manual/data-visualization/chart-types.html#pie-or-doughnut-charts
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The secondary state is very secondary.
     variation_name: Secondary state
+  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+    variation_description: The default state is the most default state of them all.
+    variation_name: Default state
 usage: >-
   **Use cases**
 

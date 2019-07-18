@@ -1,5 +1,5 @@
 ---
-title: Welcome to the CFPB Design Design System
+title: Welcome to the CFPB Design System
 permalink: /
 layout: homepage
 collection_name: pages

@@ -20,13 +20,13 @@ intro: >-
 
   * https://cfpb.github.io/capital-framework/components/cf-core/#type-hierarchy
 variations:
-  - variation_code_snippet: <h1 class="superheading">Example display heading</h1>
+  - variation_code_snippet: <h1 class="superheading">Display heading</h1>
     variation_description: '<601px wide: Drops to Heading 1'
     variation_jinja_code_snippet: ''
-    variation_name: Display heading
+    variation_name: ' '
     variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nTypeface | | | Avenir Next Regular | Avenir Next Regular\nWebfont | @webfont-regular: | Arial; | Arial\nText color | @text: | @black; | Black (#101820)\t| 0, 0, 0, 100\nText size | @size-xl: | 48px; | 48px | 38pt\nSmall screen text size | | | 34px | \nLine height | @base-line-height: | unit( @base-line-height-px / @base-font-size-px ); | \nLine height (pixels) | ? |  | 60px | 66pt\nSmall screen line height | | 42px | \nBottom margin | | | | 30px\nExtra-small breakpoint | @bp-xs-max: | 600px; |"
   - variation_code_snippet: |-
-      <h1>Example heading element</h1>
+      <h1>Heading level 1</h1>
 
       <!--
       Non heading element:
@@ -35,7 +35,7 @@ variations:
     variation_description: |-
       Responsive heading. At small screen sizes, displays as heading level 2.
       <601px wide: Drops to Heading 2
-    variation_name: Heading level 1
+    variation_name: ' '
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -45,7 +45,7 @@ variations:
       Small screen line height | | 32px | 
       Bottom margin | | | 15px |
   - variation_code_snippet: |-
-      <h2>Example heading element</h2>
+      <h2>Heading level 2</h2>
 
       <!--
       Non heading element:
@@ -54,7 +54,7 @@ variations:
     variation_description: |-
       Responsive heading. At small screen sizes, displays as heading level 3.
       <601px wide: Drops to Heading 3
-    variation_name: Heading level 2
+    variation_name: ' '
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -64,7 +64,7 @@ variations:
       Small screen line height | | 28px | 
       Bottom margin | | | 15px |
   - variation_code_snippet: |-
-      <h3>Example heading element</h3>
+      <h3>Heading level 3</h3>
 
       <!--
       Non heading element:
@@ -73,7 +73,7 @@ variations:
     variation_description: |-
       Responsive heading. At small screen sizes, displays as heading level 4.
       <601px wide: Drops to Heading 4
-    variation_name: Heading level 3
+    variation_name: ' '
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -84,7 +84,7 @@ variations:
       Small screen line height | | 22px | 
       Bottom margin | | | 15px |
   - variation_code_snippet: |-
-      <h4>Example heading element</h4>
+      <h4>Heading level 4</h4>
 
       <!--
       Non heading element:
@@ -97,7 +97,7 @@ variations:
       <601px wide: Drops to 16px / 18px
     variation_jinja_code_snippet: |+
 
-    variation_name: Heading level 4
+    variation_name: ' '
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -108,14 +108,14 @@ variations:
       Small screen line height | | 18px | 
       Bottom margin | | | 15px |
   - variation_code_snippet: |-
-      <h5>Example heading element</h5>
+      <h5>Heading level 5</h5>
 
       <!--
       Non heading element:
       <p class="h5">A non-heading element</p>
       -->
     variation_description: Not a responsive heading. 1 px letter spacing.
-    variation_name: Heading level 5
+    variation_name: ' '
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -125,14 +125,14 @@ variations:
       Line height (pixels) | ? |  | 18px | 12pt
       Bottom margin | | | 15px |
   - variation_code_snippet: |-
-      <h5>Example heading element</h5>
+      <h5>Heading level 6</h5>
 
       <!--
       Non heading element:
       <p class="h6">A non-heading element</p>
       -->
     variation_description: Not a responsive heading. 1 px letter spacing.
-    variation_name: Heading level 6
+    variation_name: ' '
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -144,12 +144,12 @@ variations:
   - variation_code_snippet: |-
       <a href="#" class="a-heading a-heading__icon">
           {% include icons/dialogue.svg %}
-          Consumer finance
+          Heading with icon
       </a>
     variation_description: >-
       The heading with icon is typically used for listing categories in a meta
       header.
-    variation_name: Heading with icon
+    variation_name: ' '
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---

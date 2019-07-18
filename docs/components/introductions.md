@@ -5,11 +5,31 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: |-
+intro: >-
   Information about Introductions can be found at:
 
+
   * http://cfpb.github.io/design-manual/global-elements/text-introductions.html
+
   * https://cfpb.github.io/design-manual/global-elements/item-introduction.html
+
+
+  The text introduction component is the standard page introduction component
+  used across all pages that do not have a
+  [hero](https://cfpb.github.io/design-system/components/heroes) or item
+  introduction.
+
+
+  On [landing](https://cfpb.github.io/design-system/templates/landing-pages) or
+  [sub-landing
+  pages](https://cfpb.github.io/design-system/templates/sublanding-pages), the
+  text introduction may be accompanied by a breakout sidebar to highlight a
+  specific piece of content from the section.
+
+
+  The item introduction component is a variation of the text introduction
+  component used on pages found in filterable lists such as blog posts, press
+  releases, or documents.
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.

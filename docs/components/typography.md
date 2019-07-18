@@ -75,8 +75,6 @@ usage: >-
   ![](/design-system/images/uploads/typography_typesetting03_-2.png)
 
 
-
-
   #### Line length
 
 
@@ -86,6 +84,9 @@ usage: >-
 
   For a single column of text, line length should be an average of 66 characters
   per line, including spaces, but may range from 50 to 75 characters.
+
+
+  ![](/design-system/images/uploads/typography_typesetting04_-2.png)
 
 
   #### Spacing
@@ -103,10 +104,16 @@ usage: >-
   Display and 15px below Headings 1–6.
 
 
+  ![](/design-system/images/uploads/typography_typesetting05_below-headings_-2.png)
+
+
   Body copy followed by a heading
 
   When body copy is followed by a heading, include 45px of space above Heading 2
   and 30px above Headings 3–6.
+
+
+  ![](/design-system/images/uploads/typography_typesetting05_above-headings_-2.png)
 
 
   Heading followed by a heading
@@ -114,10 +121,16 @@ usage: >-
   For stacked headings, include 30 px of space after the primary heading.
 
 
+  ![](/design-system/images/uploads/typography_typesetting05_between-headings_-2.png)
+
+
   Body copy spacing
 
   For multiple paragraphs within the same section set the space between
   paragraphs to 15px.
+
+
+  ![](/design-system/images/uploads/typography_typesetting05_in-body_-2.png)
 accessibility: >
   Text contrast
 

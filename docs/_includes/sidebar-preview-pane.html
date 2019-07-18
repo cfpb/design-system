@@ -1,8 +1,10 @@
-    <ul>
-
 {% for section in site.data.navigation.sections %}
+    <ul>
+        {% for secondaryNavItem in section.secondaryNavItems %}
         <li>
-            {{ section }}
+                {{ secondaryNavItem.label }}
+
         </li>
-{% endfor %}
+        {% endfor %}
     </ul>
+{% endfor %}

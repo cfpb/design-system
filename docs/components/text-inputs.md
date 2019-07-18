@@ -20,7 +20,7 @@ intro: >-
 variations:
   - variation_code_snippet: |-
       <label class="a-label a-label__heading" for="textinput-example-default">
-          Label for text input
+          Label
       </label>
       <input class="a-text-input"
              type="text"
@@ -80,11 +80,11 @@ variations:
       **Padding** | | | 7px
   - variation_code_snippet: |-
       <label class="a-label a-label__heading" for="textarea-example-default">
-          A textarea input
+          Label
       </label>
       <textarea class="a-text-input"
                 id="textarea-example-default"
-                placeholder="Enter text…">Lorem Ipsum</textarea>
+                placeholder="Enter text…">Placeholder text</textarea>
     variation_description: ''
     variation_name: Textarea input
     variation_specs: |
@@ -94,12 +94,12 @@ variations:
   - variation_code_snippet: |-
       <div class="m-form-field">
           <label class="a-label a-label__heading" for="full-textinput-example">
-              A full-width text input
+              Label
           </label>
           <input class="a-text-input a-text-input__full"
                  type="text"
                  id="full-textinput-example"
-                 value="Lorem ipsum">
+                 value="Placeholder text">
       </div>
     variation_name: Full-width text input
     variation_specs: |-
@@ -108,10 +108,10 @@ variations:
   - variation_code_snippet: |-
       <div class="m-form-field">
           <label class="a-label a-label__heading" for="full-textarea-example">
-              A full-width textarea input
+              Label
           </label>
           <textarea class="a-text-input a-text-input__full"
-                    id="full-textarea-example">Lorem Ipsum</textarea>
+                    id="full-textarea-example">Placeholder text</textarea>
       </div>
     variation_jinja_code_snippet: ''
     variation_name: Full-width textarea input

@@ -72,6 +72,11 @@ usage: >-
   37.5% larger.
 
 
+  ![](/design-system/images/uploads/typography_typesetting03_-2.png)
+
+
+
+
   #### Line length
 
 

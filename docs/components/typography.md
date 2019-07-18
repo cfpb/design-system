@@ -98,7 +98,7 @@ usage: >-
   establish a proper relationship between elements.
 
 
-  Heading followed by body copy
+  ##### Heading followed by body copy
 
   When a heading is followed by paragraph text, include 30px of space below
   Display and 15px below Headings 1–6.
@@ -107,7 +107,7 @@ usage: >-
   ![](/design-system/images/uploads/typography_typesetting05_below-headings_-2.png)
 
 
-  Body copy followed by a heading
+  ##### Body copy followed by a heading
 
   When body copy is followed by a heading, include 45px of space above Heading 2
   and 30px above Headings 3–6.
@@ -116,7 +116,7 @@ usage: >-
   ![](/design-system/images/uploads/typography_typesetting05_above-headings_-2.png)
 
 
-  Heading followed by a heading
+  ##### Heading followed by a heading
 
   For stacked headings, include 30 px of space after the primary heading.
 
@@ -124,15 +124,20 @@ usage: >-
   ![](/design-system/images/uploads/typography_typesetting05_between-headings_-2.png)
 
 
-  Body copy spacing
+  ##### Body copy spacing
 
   For multiple paragraphs within the same section set the space between
   paragraphs to 15px.
 
 
   ![](/design-system/images/uploads/typography_typesetting05_in-body_-2.png)
-accessibility: >
-  Text contrast
+accessibility: >-
+
+
+
+
+  #### Text contrast
+
 
   WCA (Web Content Accessibility) standards ensure that content is accessible by
   everyone, regardless of any disability or user device.
@@ -143,17 +148,13 @@ accessibility: >
   foreground/background color contrast permitted by the Section 508 guidelines.
 
 
-  For more information:
+  #### For more information:
+
 
   To learn more, refer to the http://www.section508.gov.
 
 
   This color contrast tool is a useful resource for testing the compliance of
   any combination of colors in our palette.
-
-
-  Fully accessible combinations
-
-  Use only these accessible text and background color combinations.
 ---
 

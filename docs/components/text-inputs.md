@@ -129,6 +129,7 @@ variations:
           </div>
       </div>
     variation_description: These are used for simple forms where a full filter isn’t necessary.
+    variation_jinja_code_snippet: ''
     variation_name: Text input with a button
     variation_specs: |+
 
@@ -139,13 +140,14 @@ variations:
               title="Test input"
               class="a-text-input">
           <button class="a-btn a-btn__link">
-              {% include icons/error.svg %}
+              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
               <span class="u-visually-hidden">Clear</span>
           </button>
       </div>
     variation_description: >-
       These offer the user an action to take related to the input, typically to
       clear the input.
+    variation_jinja_code_snippet: ''
     variation_name: Button inside a text input
   - variation_code_snippet: |-
       <div class="o-form__input-w-btn">
@@ -156,7 +158,7 @@ variations:
                       title="Test input"
                       class="a-text-input">
                   <button class="a-btn a-btn__link">
-                      {% include icons/error.svg %}
+                      <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
                       <span class="u-visually-hidden">Clear</span>
                   </button>
               </div>

@@ -4,12 +4,16 @@ layout: default
 <main class="content" id="main" role="main">
     <div class="content_wrapper">
         <section class="content_main">
+
             <section id="edit-page">
                 <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/entries/{{ page.title | slugify }}" title="Edit this page in Netlify CMS">
                     <span class="a-btn_text">Edit this page</span>
                     <span class="a-btn_icon">{% include icons/edit.svg %}</span>
                 </a>
             </section>
+
+            <h2>{{ page.title }}</h2>
+
             {{ content }}
         </section>
     </div>

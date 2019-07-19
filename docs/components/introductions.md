@@ -59,6 +59,12 @@ variations:
 
       * At breakpoints below 600: Page title and lead paragraph drop down one
       type size to make reading on smaller devices easier.
+
+
+      Related:
+
+
+      * Typography
   - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
     variation_description: >-
       Layout as seen with a ‘breakout’ highlight in the right sidebar area:
@@ -67,8 +73,58 @@ variations:
       ![Image of a text introduction component with a "breakout" highlight in
       the right sidebar](/design-system/images/uploads/textintro_intro2.png)
     variation_name: Text introduction with optional breakout sidebar
+    variation_specs: >-
+
+
+      (copy-pasted from Style section of Design Manual)
+
+
+      ![](/design-system/images/uploads/textintro_style2.png)
+
+
+      * Spacing: The breakout may be taller than the Text Intro content, in
+      which case the margin beneath the breakout should be 60px.
+
+      * Required elements: slug title and paragraph text.
+
+      * Imagery: May use either a circle (1x1) image or a 16x9 ratio image.
+
+
+      Component parts:
+
+
+      * Illustration
+
+      * Photography
   - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
     variation_name: Item introduction
+    variation_specs: >-
+      (copy-pasted from Style section of Design Manual)
+
+
+      ![](/design-system/images/uploads/itemintro_style.png)
+
+
+      * Required components: Only the post title is absolutely required and the
+      category label should be used in the vast majority of cases. (Category
+      label minicons are optional.)
+
+      * Optional components: Subheader paragraph, author, dates, and social
+      sharing icons.
+
+      * Spacing: 45 px margin above, 60 px margin below.
+
+
+
+
+      Component parts:
+
+
+      * Typography
+
+      * Minicons
+
+      * Links
 usage: >-
   #### Use cases
 

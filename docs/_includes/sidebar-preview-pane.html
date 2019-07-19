@@ -1,10 +1,18 @@
 {% for section in site.data.navigation.sections %}
-    <ul>
+    {{ section.label }}
+
+    {% if section.secondaryNavItems %}
+    <ul>        
         {% for secondaryNavItem in section.secondaryNavItems %}
         <li>
-                {{ secondaryNavItem.label }}
-
+            {% if secondaryNavItem.secondaryNavLink.slug != '' %}
+                <a href="{{ site.baseurl }}/{{ secondaryNavItem.secondaryNavLink.slug }}">{{ secondaryNavItem.secondaryNavLink.label }}</a>
+            {% else %}
+                {{ secondaryNavItem.secondaryNavLink.label }}
+            {% endif %}
         </li>
         {% endfor %}
     </ul>
+    {% endif %}
+
 {% endfor %}

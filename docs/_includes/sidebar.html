@@ -6,14 +6,14 @@
         <ul>        
             {% for secondaryNavItem in section.secondaryNavItems %}
             <li>
-                {% if secondaryNavItem.secondaryNavLink.slug and secondaryNavItem.secondaryNavLink.slug != '' %}
-                    <a href="{{ site.baseurl }}/{{ secondaryNavItem.secondaryNavLink.slug }}">{{ secondaryNavItem.secondaryNavLink.label }}</a>
+                {% if secondaryNavItem.slug and secondaryNavItem.slug != '' %}
+                    <a href="{{ site.baseurl }}/{{ secondaryNavItem.slug }}">{{ secondaryNavItem.label }}</a>
                 {% else %}
-                    {{ secondaryNavItem.secondaryNavLink.label }}
+                    {{ secondaryNavItem.label }}
                 {% endif %}
-                {% if secondaryNavItem.secondaryNavLink.tertiaryNavItems %}
+                {% if secondaryNavItem.tertiaryNavItems %}
                     <ul>
-                        {% for tertiaryNavItem in secondaryNavItem.secondaryNavLink.tertiaryNavItems %}
+                        {% for tertiaryNavItem in secondaryNavItem.tertiaryNavItems %}
                         <li>
                             {% if tertiaryNavItem.slug and tertiaryNavItem.slug != '' %}
                             <a href="{{ site.baseurl }}/{{ tertiaryNavItem.slug }}">{{ tertiaryNavItem.label }}</a>

@@ -5,19 +5,19 @@ sections:
     slug: foundation
   - label: Components
     secondaryNavItems:
-      - secondaryNavLink:
-          label: Alerts
-          slug: ''
-          tertiaryNavItems:
-            - label: Modals
-              slug: components/modals
-      - secondaryNavLink:
-          label: Forms
-          tertiaryNavItems:
-            - label: Buttons
-              slug: components/buttons
-            - label: Checkboxes
-              slug: components/checkboxes
+      - label: Alerts
+        slug: ''
+        tertiaryNavItems:
+          - label: Modals
+            slug: components/modals
+          - label: Notifications
+            slug: components/notifications
+      - label: Forms
+        tertiaryNavItems:
+          - label: Buttons
+            slug: components/buttons
+          - label: Checkboxes
+            slug: components/checkboxes
     slug: components
   - label: Templates
     slug: templates

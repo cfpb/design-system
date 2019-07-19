@@ -38,9 +38,19 @@ collections:
                 widget: 'list'
                 required: false
                 fields:
-                  - name: 'secondaryNavLink'
-                    label: 'Secondary nav link'
-                    widget: 'object'
+                  - name: 'label'
+                    label: 'Link text'
+                    widget: 'string'
+                    required: false
+                  - name: 'slug'
+                    label: 'Slug'
+                    widget: 'string'
+                    required: false
+                  - name: 'tertiaryNavItems'
+                    label: 'Tertiary nav items'
+                    label_singular: 'Tertiary nav item'
+                    widget: 'list'
+                    required: false
                     fields:
                       - name: 'label'
                         label: 'Link text'
@@ -50,20 +60,6 @@ collections:
                         label: 'Slug'
                         widget: 'string'
                         required: false
-                      - name: 'tertiaryNavItems'
-                        label: 'Tertiary nav items'
-                        label_singular: 'Tertiary nav item'
-                        widget: 'list'
-                        required: false
-                        fields:
-                          - name: 'label'
-                            label: 'Link text'
-                            widget: 'string'
-                            required: false
-                          - name: 'slug'
-                            label: 'Slug'
-                            widget: 'string'
-                            required: false
   - name: 'pages'
     label: 'Generic pages'
     label_singular: 'Generic page'

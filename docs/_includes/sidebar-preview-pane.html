@@ -11,6 +11,16 @@
                 {% else %}
                     {{ secondaryNavItem.secondaryNavLink.label }}
                 {% endif %}
+                {% if secondaryNavItem.secondaryNavLink.tertiaryNavItems %}
+                    <ul>
+                        {% for tertiaryNavItem in secondaryNavItem.secondaryNavLink.tertiaryNavItems %}
+                        <li>
+                            <a href="{{ site.baseurl }}/{{ tertiaryNavItem.slug }}">{{ tertiaryNavItem.label }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
             </li>
             {% endfor %}
         </ul>

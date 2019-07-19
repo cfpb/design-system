@@ -51,10 +51,10 @@ variations:
   - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
     variation_name: Item introduction
 usage: >-
-  **Use cases**
+  #### Use cases
 
 
-  _**Text introductions**_
+  **_Text introductions_**
 
 
   Text introductions should be used on every page, except in cases when a hero
@@ -86,7 +86,7 @@ usage: >-
   pages.
 
 
-  _**Item introductions**_
+  **_Item introductions_**
 
 
   WHEN TO USE
@@ -115,12 +115,13 @@ usage: >-
   * Document detail page
 
 
+  - - -
 
 
-  **Behavior**
+  #### Behavior
 
 
-  **_Text introductions_**
+  _**Text introductions**_
 
 
   901+ breakpoints, standard grey-welled sidebar on the right
@@ -148,18 +149,22 @@ usage: >-
   ![](/design-system/images/uploads/textintro_behavior4.jpg)
 
 
-  _**Item introductions**_
+  **_Item introductions_**
 
 
+  901+ breakpoints, item introduction with sidebar to the right
 
 
-  _****_
+  ![](/design-system/images/uploads/textintro_behavior1.png)
 
 
-  **Content guidelines**
+  - - -
 
 
-  _**Text introductions**_
+  #### Content guidelines
+
+
+  **_Text introductions_**
 
 
   Headings should be as succinct as possible, ideally staying on a single line
@@ -190,7 +195,7 @@ usage: >-
   less. Link content should follow link guidelines.
 
 
-  _**Item introductions**_
+  **_Item introductions_**
 
 
   Category should always be selected if it is a page type that is categorized.
@@ -208,24 +213,25 @@ usage: >-
   explain why the reader should care. No more than 2 sentences; 50 words.
 
 
+  - - -
 
 
-  **Style**
+  #### Style
 
 
-  **_Text introductions_**
+  _**Text introductions**_
 
 
   **__**
 
 
-  _**Item introductions**_
+  **_Item introductions_**
 
 
-  _****_
+  _\*\*\*\*_
 
 
-  _****_
+  _\*\*\*\*_
 accessibility: ''
 research: ''
 help_us: |-

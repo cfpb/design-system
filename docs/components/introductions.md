@@ -155,7 +155,13 @@ usage: >-
   901+ breakpoints, item introduction with sidebar to the right
 
 
-  ![](/design-system/images/uploads/textintro_behavior1.png)
+  ![](/design-system/images/uploads/itemintro_behavior1.png)
+
+
+  900 and under breakpoints, item intro takes up full width of viewport
+
+
+  ![](/design-system/images/uploads/itemintro_behavior2.png)
 
 
   - - -

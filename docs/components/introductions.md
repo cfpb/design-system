@@ -167,6 +167,8 @@ usage: >-
   - - -
 
 
+
+
   #### Content guidelines
 
 
@@ -219,7 +221,11 @@ usage: >-
   explain why the reader should care. No more than 2 sentences; 50 words.
 
 
+
+
   - - -
+
+
 
 
   #### Style
@@ -228,7 +234,15 @@ usage: >-
   _**Text introductions**_
 
 
-  **__**
+  Standard sidebar
+
+
+  Related: Typography
+
+
+  ![](/design-system/images/uploads/textintro_style1.png)
+
+
 
 
   **_Item introductions_**

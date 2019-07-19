@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactLiquid } from 'react-liquid';
 import marked from 'marked';
-import template from '../../../_includes/sidebar-preview-pane.html';
+import template from '../../../_includes/sidebar.html';
 
 export const Preview = props => {
   const data = {

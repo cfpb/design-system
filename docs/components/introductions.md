@@ -40,6 +40,25 @@ variations:
       sidebar](/design-system/images/uploads/textintro_intro.png)
     variation_jinja_code_snippet: ''
     variation_name: Standard text introduction
+    variation_specs: >-
+      (copy-pasted from Style section of Design Manual)
+
+
+      ![](/design-system/images/uploads/textintro_style1.png)
+
+
+
+
+      * Spacing: 45px margin above, 60 px margin below.
+
+      * Page title: Heading 1
+
+      * Subheader: Lead paragraph style
+
+      * Optional body paragraph and link: Avenir paragraph
+
+      * At breakpoints below 600: Page title and lead paragraph drop down one
+      type size to make reading on smaller devices easier.
   - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
     variation_description: >-
       Layout as seen with a ‘breakout’ highlight in the right sidebar area:
@@ -219,39 +238,6 @@ usage: >-
 
   If using the subheader paragraph, it should expand on the page title and help
   explain why the reader should care. No more than 2 sentences; 50 words.
-
-
-
-
-  - - -
-
-
-
-
-  #### Style
-
-
-  _**Text introductions**_
-
-
-  Standard sidebar
-
-
-  Related: Typography
-
-
-  ![](/design-system/images/uploads/textintro_style1.png)
-
-
-
-
-  **_Item introductions_**
-
-
-  _\*\*\*\*_
-
-
-  _\*\*\*\*_
 accessibility: ''
 research: ''
 help_us: |-

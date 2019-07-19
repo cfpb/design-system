@@ -1,20 +1,7 @@
 sections:
   - label: Getting Started
-    secondaryNavItems:
-      - {}
-      - {}
-      - {}
     slug: getting-started
   - label: Foundation
-    secondaryNavItems:
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
     slug: foundation
   - label: Components
     secondaryNavItems:
@@ -31,14 +18,6 @@ sections:
               slug: components/buttons
             - label: Checkboxes
               slug: components/checkboxes
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
-      - {}
     slug: components
   - label: Templates
-    secondaryNavItems:
-      - {}
     slug: templates

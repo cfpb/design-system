@@ -2,7 +2,13 @@
     <!-- todo: remove from sidebar -->
     {% if section.slug == page.section or page.section == 'all' %}
         {% if page.section == 'all' %}
-            <h3>{{ section.label }}</h3>
+            <h3>
+                {% if section.slug and section.slug != '' %}
+                    <a href="{{ site.baseurl }}/{{ section.slug }}">{{ section.label }}</a>
+                {% else %}
+                    {{ section.label }}
+                {% endif %}
+            </h3>
         {% endif %}
         {% if section.secondaryNavItems %}
         <ul>        

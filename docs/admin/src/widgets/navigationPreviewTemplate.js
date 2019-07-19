@@ -6,8 +6,7 @@ import template from '../../../_includes/sidebar.html';
 export const Preview = props => {
   const data = {
     page: {
-      section: 'all',
-      title: 'Preview'
+      section: 'all'
     },
     site: {
       baseurl: 'https://cfpb.github.io/design-system',
@@ -19,7 +18,6 @@ export const Preview = props => {
 
   window.previewProps = props;
   window.previewReact = React;
-
   window.previewData = data;
 
   return (

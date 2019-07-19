@@ -86,8 +86,6 @@ usage: >-
   pages.
 
 
-
-
   _**Item introductions**_
 
 
@@ -119,6 +117,43 @@ usage: >-
 
 
 
+  **Behavior**
+
+
+  **_Text introductions_**
+
+
+  901+ breakpoints, standard grey-welled sidebar on the right
+
+
+  ![](/design-system/images/uploads/textintro_behavior1.png)
+
+
+  901+ breakpoints, breakout sidebar on the right
+
+
+  ![](/design-system/images/uploads/textintro_behavior2.png)
+
+
+  900 breakpoints and less, standard grey-welled sidebar (stacked to prefooter)
+
+
+  ![](/design-system/images/uploads/textintro_behavior3.jpg)
+
+
+  900 breakpoints and less, breakout sidebar stacked immediately after text
+  intro
+
+
+  ![](/design-system/images/uploads/textintro_behavior4.jpg)
+
+
+  _**Item introductions**_
+
+
+
+
+  _****_
 
 
   **Content guidelines**
@@ -171,31 +206,30 @@ usage: >-
 
   If using the subheader paragraph, it should expand on the page title and help
   explain why the reader should care. No more than 2 sentences; 50 words.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
 
 
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
 
 
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
-help_us: ''
+  **Style**
+
+
+  **_Text introductions_**
+
+
+  **__**
+
+
+  _**Item introductions**_
+
+
+  _****_
+
+
+  _****_
+accessibility: ''
+research: ''
+help_us: |-
+  * [github issue goes here](<>)
+  * [email us](<>)
 ---
 

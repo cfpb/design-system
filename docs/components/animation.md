@@ -3,7 +3,7 @@ title: Animation
 permalink: /foundation/animation
 layout: component
 collection_name: components
-section: components
+section: foundation
 status: Proposed
 intro: >-
   This page is under active development. Information is being moved into it from

@@ -10,6 +10,10 @@ intro: >-
   authority and expertise in communication.
 
 
+  The following sets of colors maintain CFPB brand cohesion and create
+  accessible graphics.
+
+
   This page is under active development. Information is being moved into it from
   these pages:
 

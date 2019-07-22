@@ -41,12 +41,7 @@ variations:
     variation_jinja_code_snippet: ''
     variation_name: Standard text introduction
     variation_specs: >-
-      (copy-pasted from Style section of Design Manual)
-
-
       ![](/design-system/images/uploads/textintro_style1.png)
-
-
 
 
       * Spacing: 45px margin above, 60 px margin below.
@@ -74,11 +69,6 @@ variations:
       the right sidebar](/design-system/images/uploads/textintro_intro2.png)
     variation_name: Text introduction with optional breakout sidebar
     variation_specs: >-
-
-
-      (copy-pasted from Style section of Design Manual)
-
-
       ![](/design-system/images/uploads/textintro_style2.png)
 
 
@@ -99,9 +89,6 @@ variations:
   - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
     variation_name: Item introduction
     variation_specs: >-
-      (copy-pasted from Style section of Design Manual)
-
-
       ![](/design-system/images/uploads/itemintro_style.png)
 
 
@@ -113,8 +100,6 @@ variations:
       sharing icons.
 
       * Spacing: 45 px margin above, 60 px margin below.
-
-
 
 
       Component parts:

@@ -9,9 +9,11 @@ intro: >-
   Information about Introductions can be found at:
 
 
-  * http://cfpb.github.io/design-manual/global-elements/text-introductions.html
+  *
+  <https://cfpb.github.io/design-manual/global-elements/text-introductions.html>
 
-  * https://cfpb.github.io/design-manual/global-elements/item-introduction.html
+  *
+  <https://cfpb.github.io/design-manual/global-elements/item-introduction.html>
 
 
   The text introduction component is the standard page introduction component

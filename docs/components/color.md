@@ -3,7 +3,7 @@ title: Color
 permalink: /foundation/color
 layout: component
 collection_name: components
-section: components
+section: foundation
 status: Proposed
 intro: >-
   A minimal palette, clear hierarchy, and ample whitespace ensure a voice of

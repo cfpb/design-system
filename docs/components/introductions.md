@@ -61,7 +61,7 @@ variations:
       Related:
 
 
-      * Typography
+      * [Typography](https://cfpb.github.io/design-system/foundation/typography)
   - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
     variation_description: >-
       Layout as seen with a ‘breakout’ highlight in the right sidebar area:
@@ -82,12 +82,14 @@ variations:
       * Imagery: May use either a circle (1x1) image or a 16x9 ratio image.
 
 
-      Component parts:
+      Related:
 
 
-      * Illustration
+      *
+      [Illustration](https://cfpb.github.io/design-system/foundation/illustration)
 
-      * Photography
+      *
+      [Photography](https://cfpb.github.io/design-system/foundation/photography)
   - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
     variation_name: Item introduction
     variation_specs: >-
@@ -104,14 +106,14 @@ variations:
       * Spacing: 45 px margin above, 60 px margin below.
 
 
-      Component parts:
+      Related:
 
 
-      * Typography
+      * [Typography](https://cfpb.github.io/design-system/foundation/typography)
 
-      * Minicons
+      * [Minicons](https://cfpb.github.io/design-system/foundation/iconography)
 
-      * Links
+      * [Links](https://cfpb.github.io/design-system/components/links)
 usage: >-
   #### Use cases
 

@@ -17,5 +17,18 @@ intro: >-
   * http://cfpb.github.io/design-manual/brand-guidelines/color-principles.html
 
   * http://cfpb.github.io/design-manual/data-visualization/color.html
+variations:
+  - variation_code_snippet: ' '
+    variation_name: Primary palette
+  - variation_code_snippet: ' '
+    variation_name: Secondary colors
+  - variation_code_snippet: ' '
+    variation_name: Tints
+  - variation_code_snippet: ' '
+    variation_name: Data visualization cool palette
+  - variation_code_snippet: ' '
+    variation_name: Data visualization warm palette
+  - variation_code_snippet: ' '
+    variation_name: Data visualization divergent palette
 ---
 

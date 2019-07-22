@@ -91,6 +91,10 @@ variations:
       *
       [Photography](https://cfpb.github.io/design-system/foundation/photography)
   - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
+    variation_description: |-
+      Layout as seen on a Learn page template:
+
+      ![](/design-system/images/uploads/itemintro_intro.png)
     variation_name: Item introduction
     variation_specs: >-
       ![](/design-system/images/uploads/itemintro_style.png)

@@ -36,6 +36,8 @@ variations:
     variation_description: The default state is the most default state of them all.
     variation_name: Standard hero with illustration
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+    variation_name: Hero with knockout text
+  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The secondary state is very secondary.
     variation_name: Hero with bleeding illustration
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>

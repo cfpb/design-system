@@ -5,21 +5,31 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: |-
-  Information about Heroes can be found at:
+intro: >-
+  Heroes function as a primary focal point on a page, often used to introduce a
+  collection of pages by combining a brief description of the goals of that
+  section along with a visually impactful graphic.
 
-  http://cfpb.github.io/design-manual/global-elements/heroes.html
+
+  More information about Heroes can be found at:
+
+
+  <https://cfpb.github.io/design-manual/global-elements/heroes.html>
+
 
   and
 
-  https://cfpb.github.io/capital-framework/components/cf-layout/#heroes
+
+  <https://cfpb.github.io/capital-framework/components/cf-layout/#heroes>
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.
-    variation_name: Default state
+    variation_name: Standard hero with illustration
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+    variation_name: Hero with bleeding illustration
+  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+    variation_name: Hero with photograph
 usage: >-
   **Use cases**
 

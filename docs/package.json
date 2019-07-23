@@ -44,6 +44,7 @@
     "fetch-suspense": "^1.1.0",
     "ftdomdelegate": "^3.0.0",
     "govuk-frontend": "^2.13.0",
+    "html-entities": "^1.2.1",
     "less-watch-compiler": "^1.13.0",
     "marked": "^0.6.2",
     "normalize-css": "^2.3.1",

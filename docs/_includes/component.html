@@ -1,0 +1,164 @@
+<section class="content_main">
+
+    <div class="component-header">
+        <h2>
+            {{ page.title }}
+            <div class="a-badge status-{{ page.status }}" title="This component has not yet been migrated to the Design System">
+                {{ page.status }}
+            </div>
+        </h2>
+    </div>
+
+    <div id="edit-page">
+        <a class="a-btn add-new" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/new" title="Add a new component page in Netlify CMS">
+            <span class="a-btn_text">Add new component page</span>
+            <span class="a-btn_icon">{% include icons/plus.svg %}</span>
+        </a>
+        <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/entries/{{ page.title | slugify }}" title="Edit this page in Netlify CMS">
+            <span class="a-btn_text">Edit this page</span>
+            <span class="a-btn_icon">{% include icons/edit.svg %}</span>
+        </a>
+    </div>
+
+    {% if page.intro %}
+        <section id="intro" class="u-mt20 u-mb20">
+            {{ page.intro | markdownify }}
+        </section>
+    {% endif %}
+
+    <ul class="m-list m-list__horizontal u-mb20">
+        <li class="m-list_item">
+            <a class="m-list_link" href="#variations">Variations</a>
+        </li>
+        <li class="m-list_item">
+            <a class="m-list_link" href="#usage">Usage</a>
+        </li>
+        <li class="m-list_item">
+            <a class="m-list_link" href="#accessibility">Accessibility</a>
+        </li>
+        <li class="m-list_item">
+            <a class="m-list_link" href="#research">Research</a>
+        </li>
+    </ul>
+
+    <section class="sticky-header">
+        <h3 id="variations">Variations</h3>
+        {% for variation in page.variations %}
+        <div class="u-mt30">
+            <!-- Name -->
+            <h4>{{ variation.variation_name }}</h4>
+
+            <!-- Description -->
+            {{ variation.variation_description | markdownify }}
+
+            <!-- Live code example -->
+            {% if variation.variation_code_snippet %}
+                {{ variation.variation_code_snippet }}
+            {% endif %}
+
+            <div class="govuk-tabs u-mt30" data-module="tabs"  data-toggle-code>
+                <h2 class="govuk-tabs__title">
+                Contents
+                </h2>
+
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet-{{ forloop.index }}">
+                        HTML                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#jinja-code-snippet-{{ forloop.index }}">
+                        Jinja
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- HTML snippet -->
+                <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
+                    {% if variation.variation_code_snippet %}
+                    <div class="variation-code-snippet">
+                        <h5 class="u-visually-hidden">HTML</h5>
+                        {% if variation.variation_code_snippet %}
+                            <div class="source-code">
+                                <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </section>
+
+                <!-- Jinja snippet -->
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
+                    <div class="variation-jinja-code-snippet">
+                        <h5 class="u-visually-hidden">Jinja</h5>
+                        {{ variation.variation_jinja_code_snippet | markdownify }}
+                    </div>
+                </section>
+
+            </div><!-- .govuk-tabs -->
+
+            {% if variation.variation_specs %}
+            <div class="variation-code-specs" data-toggle-code>
+
+                <h5>Specifications</h5>
+
+                {{ variation.variation_specs | markdownify }}
+
+            </div>
+            {% endif %}
+
+        {% endfor %}
+    </section>
+
+    {% if page.usage %}
+        <section class="sticky-header">
+            <h3 id="usage">Usage</h3>
+            <p>
+                {{ page.usage | markdownify }}
+            </p>
+        </section>
+    {% endif %}
+
+    {% if page.accessibility %}
+        <section class="sticky-header">
+            <h3 id="accessibility">Accessibility</h3>
+            <p>
+                {{ page.accessibility | markdownify }}
+            </p>
+        </section>
+    {% endif %}
+
+    {% if page.research %}
+        <section class="sticky-header">
+            <h3 id="research">Research</h3>
+            <p>
+                {{ page.research | markdownify }}
+            </p>
+        </section>
+    {% endif %}
+
+    <div class="content-l">
+        {% if page.related_items %}
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h3 id="related-items">Related Items</h3>
+                    {{ page.related_items | markdownify }}
+                </section>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if page.help_us %}
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h3 id="help-us">Help us make improvements</h3>
+                    {{ page.help_us | markdownify }}
+                </section>
+            </div>
+        </div>
+        {% endif %}
+    </div><!-- .content-l -->
+
+</section><!-- .content_main -->

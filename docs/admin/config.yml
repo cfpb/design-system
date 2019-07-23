@@ -26,11 +26,11 @@ collections:
             fields:
               - name: 'label'
                 label: 'Link text'
-                widget: 'navSectionWidget'
+                widget: 'string'
                 required: false
               - name: 'slug'
                 label: 'Slug'
-                widget: 'noPreviewStringWidget'
+                widget: 'string'
                 required: false
               - name: 'secondaryNavItems'
                 label: 'Secondary nav items'
@@ -38,13 +38,13 @@ collections:
                 widget: 'list'
                 required: false
                 fields:
-                  - name: 'slug'
-                    label: 'Slug'
-                    widget: 'noPreviewStringWidget'
-                    required: false
                   - name: 'label'
                     label: 'Link text'
-                    widget: 'navSecondaryWidget'
+                    widget: 'string'
+                    required: false
+                  - name: 'slug'
+                    label: 'Slug'
+                    widget: 'string'
                     required: false
                   - name: 'tertiaryNavItems'
                     label: 'Tertiary nav items'
@@ -52,13 +52,13 @@ collections:
                     widget: 'list'
                     required: false
                     fields:
-                      - name: 'slug'
-                        label: 'Slug'
-                        widget: 'noPreviewStringWidget'
-                        required: false
                       - name: 'label'
                         label: 'Link text'
-                        widget: 'navTertiaryWidget'
+                        widget: 'string'
+                        required: false
+                      - name: 'slug'
+                        label: 'Slug'
+                        widget: 'string'
                         required: false
   - name: 'pages'
     label: 'Generic pages'
@@ -73,7 +73,7 @@ collections:
         widget: 'string'
       - name: 'permalink'
         label: 'Page URL'
-        widget: 'permalinkWidget'
+        widget: 'string'
         default: '/SOMETHING'
       - name: 'layout'
         value: 'generic-page'
@@ -85,7 +85,7 @@ collections:
         widget: 'hidden'
       - name: 'section'
         label: 'Navigation section'
-        widget: 'sectionWidget'
+        widget: 'string'
         required: false
         options:
           - label: 'Getting Started'
@@ -98,7 +98,7 @@ collections:
             value: 'templates'
       - name: 'body'
         label: 'Body'
-        widget: 'bodyWidget'
+        widget: 'markdown'
   - name: 'components'
     label: 'Component pages'
     label_singular: 'Component page'
@@ -112,7 +112,7 @@ collections:
         widget: 'string'
       - name: 'permalink'
         label: 'Page URL'
-        widget: 'permalinkWidget'
+        widget: 'string'
         default: '/components/SOMETHING'
       - name: 'layout'
         value: 'component'
@@ -125,7 +125,7 @@ collections:
       - name: 'section'
         default: 'components'
         label: 'Navigation section'
-        widget: 'sectionWidget'
+        widget: 'string'
         required: false
         options:
           - label: 'Getting Started'
@@ -138,7 +138,7 @@ collections:
             value: 'templates'
       - name: 'status'
         label: 'Implementation status'
-        widget: 'statusWidget'
+        widget: 'select'
         options:
           - label: 'Legacy'
             value: 'Legacy'
@@ -150,47 +150,47 @@ collections:
             value: 'Released'
       - name: 'intro'
         label: 'Intro text'
-        widget: 'introWidget'
+        widget: 'markdown'
       - name: 'variations'
         label: 'Variations'
         widget: 'list'
         fields:
           - name: 'variation_name'
             label: 'Variation name'
-            widget: 'variationNameWidget'
+            widget: 'string'
           - name: 'variation_description'
             label: 'Variation description'
-            widget: 'variationDescriptionWidget'
+            widget: 'markdown'
             required: false
           - name: 'variation_code_snippet'
             label: 'Variation code snippet'
-            widget: 'variationCodeSnippetWidget'
+            widget: 'text'
           - name: 'variation_jinja_code_snippet'
             label: 'Variation Jinja links or snippet'
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
             required: false
-            widget: 'variationJinjaCodeSnippetWidget'
+            widget: 'markdown'
           - name: 'variation_specs'
             label: 'Variation specifications'
-            widget: 'variationSpecsWidget'
+            widget: 'markdown'
             required: false
       - name: 'usage'
         label: 'Usage'
-        widget: 'usageWidget'
+        widget: 'markdown'
         required: false
       - name: 'accessibility'
         label: 'Accessibility'
-        widget: 'accessibilityWidget'
+        widget: 'markdown'
         required: false
       - name: 'research'
         label: 'Research'
-        widget: 'researchWidget'
+        widget: 'markdown'
         required: false
       - name: 'related_items'
         label: 'Related items'
-        widget: 'relatedItemsWidget'
+        widget: 'markdown'
         required: false
       - name: 'help_us'
         label: 'Help us make improvements'
-        widget: 'helpUsWidget'
+        widget: 'markdown'
         required: false

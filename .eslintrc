@@ -839,11 +839,6 @@ rules:
     -
       max: 2
 
-  # Enforce a particular style for multiline comments.
-  multiline-comment-style:
-    - 1
-    - bare-block
-
   # Enforce newlines between operands of ternary expressions.
   multiline-ternary:
     - 0

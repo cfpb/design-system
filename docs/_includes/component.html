@@ -9,6 +9,17 @@
         </h2>
     </div>
 
+    <div id="edit-page">
+        <a class="a-btn add-new" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/new" title="Add a new component page in Netlify CMS">
+            <span class="a-btn_text">Add new component page</span>
+            <span class="a-btn_icon">{% include icons/plus.svg %}</span>
+        </a>
+        <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/{{ page.collection_name }}/entries/{{ page.title | slugify }}" title="Edit this page in Netlify CMS">
+            <span class="a-btn_text">Edit this page</span>
+            <span class="a-btn_icon">{% include icons/edit.svg %}</span>
+        </a>
+    </div>
+
     {% if page.intro %}
         <section id="intro" class="u-mt20 u-mb20">
             {{ page.intro | markdownify }}

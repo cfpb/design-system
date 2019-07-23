@@ -16,10 +16,6 @@ export const Preview = props => {
     }
   };
 
-  window.previewProps = props;
-  window.previewReact = React;
-  window.previewData = data;
-
   return (
     <div>
       <ReactLiquid template={template} data={data} html />

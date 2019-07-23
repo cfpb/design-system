@@ -73,7 +73,7 @@ collections:
         widget: 'string'
       - name: 'permalink'
         label: 'Page URL'
-        widget: 'permalinkWidget'
+        widget: 'string'
         default: '/SOMETHING'
       - name: 'layout'
         value: 'generic-page'
@@ -85,7 +85,7 @@ collections:
         widget: 'hidden'
       - name: 'section'
         label: 'Navigation section'
-        widget: 'sectionWidget'
+        widget: 'string'
         required: false
         options:
           - label: 'Getting Started'
@@ -98,7 +98,7 @@ collections:
             value: 'templates'
       - name: 'body'
         label: 'Body'
-        widget: 'bodyWidget'
+        widget: 'markdown'
   - name: 'components'
     label: 'Component pages'
     label_singular: 'Component page'
@@ -125,7 +125,7 @@ collections:
       - name: 'section'
         default: 'components'
         label: 'Navigation section'
-        widget: 'sectionWidget'
+        widget: 'string'
         required: false
         options:
           - label: 'Getting Started'

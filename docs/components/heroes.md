@@ -33,7 +33,33 @@ intro: >-
   <https://cfpb.github.io/capital-framework/components/cf-layout/#heroes>
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
+    variation_description: >-
+      * All illustrations should be saved at 200% to accommodate retina displays
+
+      * When saving illustrations, use a transparent background.
+
+      * Single image for both large and small screens
+
+      * Illustration dimensions: 470px (exact) x 195px (maximum) (2x: 940px x
+      390px)
+
+
+      **Large screens (601px+)**
+
+
+      ![Image of large non-bleed hero graphic with
+      dimensions](/design-system/images/uploads/hero_style_non-bleed_large.png
+      "Image of large non-bleed hero graphic with dimensions")
+
+
+
+
+      **Small screens (600-)**
+
+
+      ![Image of small non-bleed hero graphic with
+      dimensions](/design-system/images/uploads/hero_style_non-bleed_small.png
+      "Image of small non-bleed hero graphic with dimensions")
     variation_name: Standard hero with illustration
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_name: Hero with knockout text

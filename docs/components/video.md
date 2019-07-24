@@ -60,8 +60,6 @@ variations:
       Video](/design-system/images/uploads/video_4.jpg "Documentary video")
     variation_name: Documentary
 usage: >-
-
-
   #### Content guidelines
 
 
@@ -168,5 +166,9 @@ accessibility: >-
 
   * In recorded audio, background sounds should be at least 20 dB lower than
   foreground sounds and speech. This does not apply to music.
+
+
+  #### Do not create designs or interactions that may cause seizures
+   * Nothing on the page should flash more than 3 times in 1 second.
 ---
 

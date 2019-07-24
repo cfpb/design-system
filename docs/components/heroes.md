@@ -97,13 +97,13 @@ variations:
 
       * When saving illustrations, use a transparent background.
 
-      * The illustration can be customized by setting the \`background-image\`
-      property on the \`.m-hero_image\` element.
+      * The illustration can be customized by setting the `background-image`
+      property on the `.m-hero_image` element.
 
       * Single image for both large and small screens
 
       * On small screens (or where media queries are not supported), the text
-      spans the full width of the \`.m-hero_wrapper\` and the illustration is
+      spans the full width of the `.m-hero_wrapper` and the illustration is
       displayed underneath.
 
       * For larger screen sizes, media queries are used to position the
@@ -188,8 +188,8 @@ variations:
           </style>
       </section>
     variation_description: >-
-      When using a dark background add the \`__knockout\` modifier to the hero
-      to switch the text to white.
+      When using a dark background add the `__knockout` modifier to the hero to
+      switch the text to white.
     variation_name: Hero with knockout text
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The secondary state is very secondary.

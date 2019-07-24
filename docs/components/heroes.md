@@ -32,16 +32,86 @@ intro: >-
 
   <https://cfpb.github.io/capital-framework/components/cf-layout/#heroes>
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+  - variation_code_snippet: |-
+      <section class="m-hero" id="hero1">
+          <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_text">
+                  <h1 class="m-hero_heading">Standard hero with illustration</h1>
+                  <p class="m-hero_subhead">
+                      This text has a recommended count of 165-186 characters
+                      (three lines at 1230px) following a one-line heading
+                      and 108-124 characters (two lines at 1230px)
+                      following a two-line heading.
+                  </p>
+              </div>
+              <div class="m-hero_image-wrapper">
+                  <div class="m-hero_image"></div>
+              </div>
+          </div>
+          <style>
+              #hero1 .m-hero_image {
+                  background-image:
+                      url('https://dummyimage.com/570x236/addc91/101820');
+                  background-image: -webkit-image-set(
+                      url('https://dummyimage.com/570x236/addc91/101820') 1x,
+                      url('https://dummyimage.com/1140x472/addc91/101820') 2x
+                  );
+                  background-image: image-set(
+                      url('https://dummyimage.com/570x236/addc91/101820') 1x,
+                      url('https://dummyimage.com/1140x472/addc91/101820') 2x
+                  );
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                      src='https://dummyimage.com/570x236/addc91/101820',
+                      sizingMethod='scale');
+                  padding-bottom: 41.4893617%;
+              }
+
+              @media screen and (min-width: 37.5625em) {
+                  #hero1 .m-hero_image {
+                      background-image:
+                          url('https://dummyimage.com/470x195/addc91/101820');
+                      background-image: -webkit-image-set(
+                          url('https://dummyimage.com/470x195/addc91/101820') 1x,
+                          url('https://dummyimage.com/940x390/addc91/101820') 2x
+                      );
+                      background-image: image-set(
+                          url('https://dummyimage.com/470x195/addc91/101820') 1x,
+                          url('https://dummyimage.com/940x390/addc91/101820') 2x
+                      );
+                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                          src='https://dummyimage.com/470x195/addc91/101820',
+                          sizingMethod='scale');
+                      padding-bottom: 41.4893617%;
+                  }
+              }
+          </style>
+      </section>
     variation_description: >-
-      * All illustrations should be saved at 200% to accommodate retina displays
+      * A hero consists of a headline, a small amount of additional sub-heading
+      text and an image. Its background color or image is flush with the sides
+      of the screen, and the content is vertically centered.
+
+      * All illustrations should be saved at 200% to accommodate retina
+      displays. Illustration dimensions: 470px (exact) x 195px (maximum) (2x:
+      940px x 390px)
 
       * When saving illustrations, use a transparent background.
 
+      * The illustration can be customized by setting the \`background-image\`
+      property on the \`.m-hero_image\` element.
+
       * Single image for both large and small screens
 
-      * Illustration dimensions: 470px (exact) x 195px (maximum) (2x: 940px x
-      390px)
+      * On small screens (or where media queries are not supported), the text
+      spans the full width of the \`.m-hero_wrapper\` and the illustration is
+      displayed underneath.
+
+      * For larger screen sizes, media queries are used to position the
+      illustration to the right of the text.
+
+      * At the grid’s maximum width and above, the hero should not exceed 285px
+      in height. The image should be 195px in height to conform to this
+      standard.
 
 
       **Large screens (601px+)**
@@ -52,8 +122,6 @@ variations:
       "Image of large non-bleed hero graphic with dimensions")
 
 
-
-
       **Small screens (600-)**
 
 
@@ -61,7 +129,67 @@ variations:
       dimensions](/design-system/images/uploads/hero_style_non-bleed_small.png
       "Image of small non-bleed hero graphic with dimensions")
     variation_name: Standard hero with illustration
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+  - variation_code_snippet: |-
+      <section class="m-hero m-hero__knockout" id="hero2">
+          <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_text">
+                  <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
+                  <p class="m-hero_subhead">
+                      This text has a recommended count of 165-186 characters
+                      (three lines at 1230px) following a one-line heading
+                      and 108-124 characters (two lines at 1230px)
+                      following a two-line heading.
+                  </p>
+              </div>
+              <div class="m-hero_image-wrapper">
+                  <div class="m-hero_image"></div>
+              </div>
+          </div>
+          <style>
+              #hero2 {
+                  background-color: #207676;
+              }
+
+              #hero2 .m-hero_image {
+                  background-image:
+                      url('https://dummyimage.com/570x236/addc91/101820');
+                  background-image: -webkit-image-set(
+                      url('https://dummyimage.com/570x236/addc91/101820') 1x,
+                      url('https://dummyimage.com/1140x472/addc91/101820') 2x
+                  );
+                  background-image: image-set(
+                      url('https://dummyimage.com/570x236/addc91/101820') 1x,
+                      url('https://dummyimage.com/1140x472/addc91/101820') 2x
+                  );
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                      src='https://dummyimage.com/570x236/addc91/101820',
+                      sizingMethod='scale');
+                  padding-bottom: 41.4893617%;
+              }
+
+              @media screen and (min-width: 37.5625em) {
+                  #hero2 .m-hero_image {
+                      background-image:
+                          url('https://dummyimage.com/470x195/addc91/101820');
+                      background-image: -webkit-image-set(
+                          url('https://dummyimage.com/470x195/addc91/101820') 1x,
+                          url('https://dummyimage.com/940x390/addc91/101820') 2x
+                      );
+                      background-image: image-set(
+                          url('https://dummyimage.com/470x195/addc91/101820') 1x,
+                          url('https://dummyimage.com/940x390/addc91/101820') 2x
+                      );
+                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                          src='https://dummyimage.com/470x195/addc91/101820',
+                          sizingMethod='scale');
+                      padding-bottom: 41.4893617%;
+                  }
+              }
+          </style>
+      </section>
+    variation_description: >-
+      When using a dark background add the \`__knockout\` modifier to the hero
+      to switch the text to white.
     variation_name: Hero with knockout text
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The secondary state is very secondary.

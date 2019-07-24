@@ -44,8 +44,6 @@ variations:
       illustration](/design-system/images/uploads/illustration6_-2.png)
     variation_name: Top-facing
 usage: >-
-
-
   Illustrations are universally relatable and set a friendly tone when
   communicating complex topics.
 
@@ -133,5 +131,19 @@ usage: >-
 
   ![Example of shadows in
   llustration](/design-system/images/uploads/illustration8_-2.png)
+accessibility: >-
+  #### Include text alternatives for non-text content
+
+
+  For any content that is not text-based (images, audio, video, animations,
+  charts, graphs, etc), provide an alternative version of that content that is
+  text-based.
+
+  * Use the `alt` and `title` attributes on images and other graphical elements.
+
+  * Use the `<title>` and `<desc>` elements in SVG drawings.
+
+  * Include descriptive text near images (for example, a pie chart legend with
+  percentages of each item).
 ---
 

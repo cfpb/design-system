@@ -87,10 +87,11 @@ variations:
           </style>
       </section>
     variation_description: >-
-      * A hero consists of a headline, a small amount of additional sub-heading
+      A hero consists of a headline, a small amount of additional sub-heading
       text and an image. Its background color or image is flush with the sides
       of the screen, and the content is vertically centered.
-
+    variation_name: Standard hero with illustration
+    variation_specs: >-
       * All illustrations should be saved at 200% to accommodate retina
       displays. Illustration dimensions: 470px (exact) x 195px (maximum) (2x:
       940px x 390px)
@@ -128,7 +129,6 @@ variations:
       ![Image of small non-bleed hero graphic with
       dimensions](/design-system/images/uploads/hero_style_non-bleed_small.png
       "Image of small non-bleed hero graphic with dimensions")
-    variation_name: Standard hero with illustration
   - variation_code_snippet: |-
       <section class="m-hero m-hero__knockout" id="hero2">
           <div class="m-hero_wrapper wrapper">

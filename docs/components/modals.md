@@ -10,54 +10,206 @@ intro: |-
 
   http://cfpb.github.io/design-manual/page-components/modals.html
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+  - variation_code_snippet: ' '
+    variation_description: |-
+      ![Example of modal](/design-system/images/uploads/formexpiring.png)
+
+
+
+      ![Example of modal](/design-system/images/uploads/savesearch.png)
+    variation_name: Default modal
 usage: >-
-  **Use cases**
+  #### Use cases
 
 
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
+  Modals help draw attention to an alert or a focused task by preventing
+  interactions with anything on the web page other than the modal itself. Due to
+  their disruptive nature, modal windows should only be used in very specific
+  cases outlined below.
 
 
-  **Content guidelines**
+  ###### Feedback or correction
+
+  Modals can be effective for communicating a warning or alert outside the main
+  web page. They can be triggered by a user interaction (like pressing a button
+  to “save”) or without an interaction (like a timeout warning after a period of
+  inactivity).
 
 
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
+  ###### Interruption
+
+  Use modals to force the user to complete a task or make a decision that
+  requires their full attention outside of the main workflow. A critical piece
+  of this scenario is that you need the workflow to be interrupted to be
+  effective. If not, explore other UI elements to accomplish the goal.
 
 
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
+  ###### Examples of when to use modals
+
+  * Confirm an action that can’t be undone, such as “Are you sure you want to
+  delete this?
+
+  * Display a warning that something is about to expire or timeout
+
+  * Save a form that requires inputs separate from the main workflow, like
+  entering a “Save as” file name
+
+  * Focus attention on the need to accept or acknowledge something before the
+  user can proceed
 
 
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+  #### Content guidelines
+
+
+  ###### Heading
+
+  Modal windows should have a clear heading at the top of the window. This
+  heading should clearly state what is happening or what action a modal is
+  prompting the user for. For instance, if a modal appears due to inactivity,
+  the heading should clearly state the action that is about to take place due to
+  that inactivity.
+
+
+  ###### Supporting text
+
+  Any copy underneath the heading should include clear instructions about what
+  the user needs to do.
+
+
+  ###### Form fields
+
+  If form fields are included in a modal, they should follow standard form field
+  design guidelines.
+
+
+  ###### Modal window box
+
+  * Alignment: centered horizontally and vertically on top of lightbox
+
+  * Background: White (#ffffff)
+
+  * Background lightbox: Gray 80 (#75787b), 70% opacity
+
+  * Padding: 30px
+
+  * Top border: 3px, CFPB Green (#20aa3f)
+
+  * Heading: Avenir Next Regular, 22 px, Black (#101820)
+
+  * Supporting text: Avenir Next Regular, 16px, Black (#101820)
+
+
+  ###### Close area
+
+  * Minicon: “close-round”
+
+  * Minicon color: Pacific (#0072ce)
+
+  * Minicon size: 16px
+
+  * Font: Avenir Next Regular, 16px, Pacific (#0072ce)
+
+
+  ###### Gray action bar
+
+  * Background: Gray 5 (#f7f8f9)
+
+  * Padding right/left: 30px
+
+  * Padding top/bottom: 10px
+
+  * Primary action: left aligned button
+
+
+  ###### Maximum width
+
+  * 270px for small screens
+
+  * 630px for medium and large screens
+
+
+  ###### Inactive window
+
+  * Set page to fixed
+
+
+  #### Behavior
+
+  ###### Opening a modal
+
+  Modals can be triggered by links, buttons, or even inactivity on a site. When
+  a modal opens, set the focus to the first element users need to interact with.
+  This could be either the first form field in the modal window or the primary
+  action button.
+
+
+  ###### Scrolling within a modal
+
+  Modal windows should not scroll. If a modal contains enough information to
+  require scrolling, use an alternative method of displaying content, such as a
+  different UI element or another content page.
+
+
+  ###### Closing a modal
+
+  Actions inside modals should be clearly marked. There should be a clear path
+  forward (“continue”) and back (“cancel”), in addition to a clearly labeled way
+  to close the modal without taking any action at all. When a modal window is
+  closed, return focus to the last active element on the page behind the modal.
+
+
+  Modal windows are always closable by clicking or tapping:
+
+  * A delete minicon or label in the upper right corner
+
+  * The next action button or link
+
+  * Anywhere outside the modal window
+
+  * ESC key on a keyboard
+
+
+  ###### Creating accessible behaviors
+
+  Keyboard access should be limited to only interacting with the modal dialog
+  once it is visible.
+
+  * The close minicon needs to be accessible from a keyboard.
+
+  * The escape key should also close the modal.
+
+  * The enter key should should be mapped to any submission forms in the modal.
+
+
+  Provide separate focus and hover states for the close minicon and any “next”
+  action buttons.
+
+
+  The find function (ctrl+F) will not search information contained within a
+  modal window.
+
+
+  Include offscreen instructions that describe the modal dialog and how to
+  interact with it.
+
+
+  #### Specific development directions
+
+  * Modal windows should be marked with aria-hidden=”true” and toggled to false
+  when visible and given the role=dialog ARIA role.
+
+  * When the modal dialog is displayed, the main content of the page should be
+  marked with aria-hidden=”true” to prevent screen readers from interacting with
+  it.
+
+  * Add role=”alertdialog” to the modal window.
+
+  * Code the close minicon using a button element for more semantic markup.
+
+  * The heading of the modal dialog should use an H1 tag.
+
+  * Offscreen interaction instructions should use aria-labelledby attribute.
+accessibility: ''
+research: ''
 ---
 

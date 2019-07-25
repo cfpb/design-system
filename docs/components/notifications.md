@@ -64,6 +64,8 @@ variations:
           </div>
       </div>
 
+
+
       <div class="m-notification
                   m-notification__visible">
           {% include icons/information-round.svg %}

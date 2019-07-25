@@ -43,6 +43,30 @@ variations:
       If your notification requires further explanation, include it in a
       paragraph following the main message.
     variation_name: Default notification with explanation
+  - variation_code_snippet: |-
+      <div class="m-notification
+                  m-notification__visible">
+          {% include icons/information-round.svg %}
+          <div class="m-notification_content">
+              <div class="h4 m-notification_message">A default notification</div>
+              <ul class="m-list m-list__links">
+                  <li class="m-list_item">
+                      <a class="m-list_link" href="/">
+                          This is a link below the message
+                      </a>
+                  </li>
+                  <li class="m-list_item">
+                      <a class="m-list_link" href="/">
+                          This is another link
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    variation_description: >-
+      If your notification requires links, include them below the message or
+      explanation as a `m-list` unordered list.
+    variation_name: Default notification with links
 usage: >-
   **Use cases**
 

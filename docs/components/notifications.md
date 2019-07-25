@@ -64,7 +64,7 @@ variations:
           </div>
       </div>
 
-      <br /> <!-- Insert spacing between two notification examples -->
+      <br /> <!-- Spacing between two notification examples -->
 
       <div class="m-notification
                   m-notification__visible">

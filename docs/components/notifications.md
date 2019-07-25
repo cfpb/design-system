@@ -27,10 +27,22 @@ variations:
       The default notification creates the base for the message that is often
       hidden and empty, but is modified by scripting in production to update the
       state and message based on user input.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+    variation_name: Default notification
+  - variation_code_snippet: |-
+      <div class="m-notification
+                  m-notification__visible">
+          {% include icons/information-round.svg %}
+          <div class="m-notification_content">
+              <div class="h4 m-notification_message">A default notification</div>
+              <p class="m-notification_explanation">
+                  This is the explanation of the notification.
+              </p>
+          </div>
+      </div>
+    variation_description: >-
+      If your notification requires further explanation, include it in a
+      paragraph following the main message.
+    variation_name: Default notification with explanation
 usage: >-
   **Use cases**
 

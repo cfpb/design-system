@@ -136,9 +136,9 @@ variations:
     variation_specs: |-
       | Less variable name | Less variable value |
       | - | - |
-      | @notification-bg-success | @green-10 |
-      | @notification-border-success | @green |
-      | @notification-icon-success | @green |
+      | @notification-bg | @gray-5 |
+      | @notification-border | @gray-40 |
+      | @notification-icon | @gray |
       | @notification-padding__px | 15px |
   - variation_code_snippet: |-
       <div class="m-notification

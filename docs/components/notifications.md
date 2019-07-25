@@ -33,6 +33,13 @@ variations:
       adding or removing the `m-notification__visible` class to the base
       element.
     variation_name: Default notification
+    variation_specs: |-
+      | Less variable name | Less variable value
+      | - | - |
+      | @notification-bg | @gray-5 |
+      | @notification-border | @gray-40 |
+      | @notification-icon | @gray |
+      | @notification-padding__px | 15px |
   - variation_code_snippet: |-
       <div class="m-notification
                   m-notification__visible">

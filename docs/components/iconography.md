@@ -63,7 +63,7 @@ variations:
     variation_name: Animated icon
   - variation_code_snippet: ' '
     variation_description: >-
-      ### Navigation icons
+      ##### Navigation icons
 
 
       | icon | icon-round | canonical name | aliases |
@@ -97,7 +97,7 @@ variations:
       {: class="icon-table"}
 
 
-      ### Status icons
+      ##### Status icons
 
 
       | icon | icon-round | canonical name | aliases |
@@ -140,7 +140,7 @@ variations:
       {: class="icon-table"}
 
 
-      ### Social/sharing icons
+      ##### Social/sharing icons
 
 
       | icon | icon-square | canonical name | aliases |
@@ -171,7 +171,7 @@ variations:
       {: class="icon-table"}
 
 
-      ### Communications icons
+      ##### Communications icons
 
 
       | icon | icon-round | canonical name | aliases |
@@ -199,7 +199,7 @@ variations:
       {: class="icon-table"}
 
 
-      ### Document icons
+      ##### Document icons
 
 
       | icon | icon-round | canonical name | aliases |
@@ -242,7 +242,7 @@ variations:
       {: class="icon-table"}
 
 
-      ### Financial products, services, and concepts
+      ##### Financial products, services, and concepts
 
 
       | icon | icon-round | canonical name | aliases |
@@ -313,7 +313,7 @@ variations:
       {: class="icon-table"}
 
 
-      ### Web application icons
+      ##### Web application icons
 
 
       | icon | icon-round | canonical name | aliases |

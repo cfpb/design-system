@@ -140,6 +140,12 @@ variations:
       | @notification-border | @gray-40 |
       | @notification-icon | @gray |
       | @notification-padding__px | 15px |
+
+      * Border: 1 px, Gray 40 (#b4b5b6)
+      * Background: Gray 10 (#f7f8f9)
+      * Padding: 15px
+      * H4 (Avenir Next Medium, 18 px) Black (#101820)
+      * Minicon: 18 px, Gray (#5a5d61)
   - variation_code_snippet: |-
       <div class="m-notification
                   m-notification__visible

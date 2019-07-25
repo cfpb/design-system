@@ -167,5 +167,13 @@ usage: >-
 
   ![Post preview within a filterable list at breakpoints 600 and
   less](/design-system/images/uploads/post_preview_mobile_1.jpg)
+related_items: |-
+  * Item introduction
+  * Full width text
+  * Table
+  * Expandable
+  * Metadata / Related posts / Related links
+  * Contact information
+  * Email sign up
 ---
 

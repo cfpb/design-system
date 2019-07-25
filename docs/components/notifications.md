@@ -107,6 +107,19 @@ variations:
       minicons](https://cfpb.github.io/design-system/foundation/iconography) to
       reassure the user that an action is functioning as intended.
     variation_name: Action notification
+  - variation_code_snippet: |-
+      <div class="m-notification
+                  m-notification__visible
+                  m-notification__success">
+          {% include icons/approved-round.svg %}
+          <div class="m-notification_content">
+              <div class="h4 m-notification_message">11 results</div>
+          </div>
+      </div>
+    variation_description: >-
+      The success notification is for displaying when an operation has run as
+      expected, such as returning the number of results in a search.
+    variation_name: Success notification
 usage: >-
   **Use cases**
 

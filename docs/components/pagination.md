@@ -81,15 +81,6 @@ variations:
     variation_jinja_code_snippet: ''
     variation_name: First and last pages
 usage: >-
-  **Use cases**
-
-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
-
-
   **Content guidelines**
 
   Tables with over 20 rows can be paired with pagination.

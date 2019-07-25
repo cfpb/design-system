@@ -175,5 +175,10 @@ related_items: |-
   * Metadata / Related posts / Related links
   * Contact information
   * Email sign up
+  * Illustration
+  * Links
+  * Icons
+  * Photography
+  * Typography
 ---
 

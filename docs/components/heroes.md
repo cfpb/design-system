@@ -192,8 +192,30 @@ variations:
       switch the text to white.
     variation_name: Hero with knockout text
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
+    variation_description: >-
+      When using an illustration that bleeds top to bottom at larger screen
+      sizes, add the `__bleeding` modifier to the hero and add an additional
+      `m-hero_bleeding-image` as a sibling to `m-hero_image`.
     variation_name: Hero with bleeding illustration
+    variation_specs: >-
+      * Two images must be created, one for large and one for small screens
+
+      * Large and small screen images should contain the same elements but can
+      differ compositionally
+
+      * On large screens, illustration bleeds top and bottom
+
+      * Large screen image dimensions are based on maximum possible hero height
+      at 601px width
+
+      * To conserve vertical space, small screen image should be as short as
+      possible
+
+      * Illustration dimensions for large screens (exact): 470px x 638px (2x:
+      940px x 1276px)
+
+      * Illustration dimensions for small screens: 570px (exact) x 320px
+      (maximum) (2x: 1140px x 640px)
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_name: Hero with photograph
 usage: >-

@@ -15,26 +15,18 @@ intro: >-
 
   * https://cfpb.github.io/capital-framework/components/cf-notifications/
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+  - variation_code_snippet: |-
+      <div class="m-notification
+                  m-notification__visible">
+          {% include icons/information-round.svg %}
+          <div class="m-notification_content">
+              <div class="h4 m-notification_message">A default notification</div>
+          </div>
+      </div>
     variation_description: >-
-      Where possible, display formatting errors immediately using client-side
-      validation so the user doesn’t have to wait until submitting to see what
-      went wrong (this is especially frustrating if the information the user
-      enters the first time around is not cached on submit and they have to fill
-      out all the fields again from scratch). If letters are entered in a date
-      field, if an email address is missing the “@” sign, let the user know
-      right away by showing a field-level error on blur.
-
-
-      That said, it’s a good idea to always validate on the server side even if
-      you use client-side validation for formatting checks. That’s because
-      JavaScript validation may not work on all clients; JavaScript errors could
-      occur no matter the client; and JS validation can easily be bypassed,
-      which raises security concerns.
-
-
-      In general, the best practice for server-side validation is to mark errors
-      with both form-level and field-level errors.
+      The default notification creates the base for the message that is often
+      hidden and empty, but is modified by scripting in production to update the
+      state and message based on user input.
     variation_name: Default state
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The secondary state is very secondary.

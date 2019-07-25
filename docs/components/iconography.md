@@ -61,7 +61,7 @@ variations:
   - variation_code_snippet: ' '
     variation_description: ''
     variation_name: Animated icon
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ' {% include identity/icons/index.md %}'
     variation_description: ''
     variation_name: Icon library
     variation_specs: >-

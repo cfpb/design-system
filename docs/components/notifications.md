@@ -63,6 +63,29 @@ variations:
               </ul>
           </div>
       </div>
+
+      <div class="m-notification
+                  m-notification__visible">
+          {% include icons/information-round.svg %}
+          <div class="m-notification_content">
+              <div class="h4 m-notification_message">A default notification</div>
+              <p class="m-notification_explanation">
+                  This is the explanation of the notification.
+              </p>
+              <ul class="m-list m-list__links">
+                  <li class="m-list_item">
+                      <a class="m-list_link" href="/">
+                          This is a link below the explanation
+                      </a>
+                  </li>
+                  <li class="m-list_item">
+                      <a class="m-list_link" href="/">
+                          This is an external link {% include icons/external-link.svg %}
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
     variation_description: >-
       If your notification requires links, include them below the message or
       explanation as a `m-list` unordered list.

@@ -21,10 +21,18 @@ intro: >-
 
   * https://cfpb.github.io/capital-framework/components/cf-icons/
 variations:
+  - variation_code_snippet: |-
+      <a class="a-link a-link__icon" href="#">
+          <span class="a-link_text">Example link with icon</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 651.7 1200" class="cf-icon-svg"><path d="M507.1 692.8c-15.6-15.6-40.9-15.6-56.6 0l-85.1 85.1V466.6c0-22.1-17.9-40-40-40s-40 17.9-40 40V778l-85.1-85.1c-15.6-15.6-40.9-15.6-56.6 0-15.6 15.6-15.6 40.9 0 56.6L297 902.9c7.5 7.5 17.7 11.7 28.3 11.7s20.8-4.2 28.3-11.7l153.3-153.4c15.8-15.7 15.8-41 .2-56.7z"/><path d="M30 161c-16.5 0-30 13.5-30 30v827.8c0 16.5 13.5 30 30 30h591.7c16.5 0 30-13.5 30-30V343.7L469 161H30zm389.6 60v134.8c0 19.9 16.3 36.2 36.2 36.2h135.9V988.8H60V221h359.6z"/></svg>
+      </a>
+    variation_description: ''
+    variation_name: Inline with text (raw SVG)
   - variation_code_snippet: ' '
-    variation_name: Navigation icons
+    variation_name: Inline with text (templated)
   - variation_code_snippet: ' '
-    variation_name: Status icons
+    variation_description: Test
+    variation_name: Animated icon
   - variation_code_snippet: ' '
     variation_name: Social/sharing icons
   - variation_code_snippet: ' '
@@ -38,6 +46,20 @@ variations:
   - variation_code_snippet: ' '
     variation_name: Expenses
 usage: >-
+  #### SVG icon basics
+
+  The cf-icon component provides Scalable Vector Graphics (SVG) icons for
+  Capital Framework. This component can be used by itself, but is designed to
+  work with Capital Framework.
+
+
+  We subscribe to the guidance offered by Chris Coyier in his article, “[A
+  Pretty Good SVG Icon
+  System](https://css-tricks.com/pretty-good-svg-icon-system/)”, in which he
+  concludes, “Just include the icons inline.”
+
+
+
   #### Content guidelines
 
 
@@ -79,6 +101,12 @@ usage: >-
   the size and padding standards for buttons when placed inside a button to
   indicate loading or follows standards of a form-level alert within an alert
   message.
+
+
+  Our previous font icon system provided modifiers to rotate any icon. We found
+  in reality this wasn’t practical and only one icon is ever animated, `update`.
+  We’ve provided an alias–`updating`–to be used within the UI when a user needs
+  to be made aware that the website is working on responding to their actions.
 
 
   #### Download

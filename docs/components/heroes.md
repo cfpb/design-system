@@ -21,6 +21,31 @@ intro: >-
   hero graphic")
 
 
+  ##### Where to use
+
+
+  * [Landing page](https://cfpb.github.io/design-system/templates/landing-pages)
+
+  * [Sublanding
+  page](https://cfpb.github.io/design-system/templates/sublanding-pages)
+
+
+  ##### When to use
+
+
+  * When orienting a user to a new section or topic
+
+  * When the page serves as a navigational tool with general information about a
+  subject and links to lower-level pages that contain more specific information
+
+
+  ##### When other options are better
+
+
+  * When introducing a specific piece of content, like a blog, press release, or
+  other lengthy or detailed content, use the text introduction
+
+
   More information about Heroes can be found at:
 
 
@@ -113,22 +138,6 @@ variations:
       * At the grid’s maximum width and above, the hero should not exceed 285px
       in height. The image should be 195px in height to conform to this
       standard.
-
-
-      **Large screens (601px+)**
-
-
-      ![Image of large non-bleed hero graphic with
-      dimensions](/design-system/images/uploads/hero_style_non-bleed_large.png
-      "Image of large non-bleed hero graphic with dimensions")
-
-
-      **Small screens (600-)**
-
-
-      ![Image of small non-bleed hero graphic with
-      dimensions](/design-system/images/uploads/hero_style_non-bleed_small.png
-      "Image of small non-bleed hero graphic with dimensions")
   - variation_code_snippet: |-
       <section class="m-hero m-hero__knockout" id="hero2">
           <div class="m-hero_wrapper wrapper">
@@ -346,33 +355,6 @@ variations:
 
       * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
 usage: >-
-  #### Use cases
-
-
-  ##### Where to use
-
-
-  * Landing page
-
-  * Sublanding page
-
-
-  ##### When to use
-
-
-  * When orienting a user to a new section or topic
-
-  * When the page serves as a navigational tool with general information about a
-  subject and links to lower-level pages that contain more specific information
-
-
-  ##### When other options are better
-
-
-  * When introducing a specific piece of content, like a blog, press release, or
-  other lengthy or detailed content, use the text introduction
-
-
   #### Content guidelines
 
 
@@ -447,17 +429,56 @@ usage: >-
   **601 px and above**
 
 
-  ![Image of hero graphic at desktop
-  size](/design-system/images/uploads/hero_behavior_large.png "Image of hero
+  ![Mockup of hero graphic at desktop
+  size](/design-system/images/uploads/hero_behavior_large.png "Mockup of hero
   graphic at desktop size")
 
 
   **600 px and below**
 
 
-  ![Image of hero graphic at small
-  size](/design-system/images/uploads/hero_behavior_small.png "Image of hero
+  ![Mockup of hero graphic at small
+  size](/design-system/images/uploads/hero_behavior_small.png "Mockup of hero
   graphic at small size")
+
+
+  **Standard hero with illustration**
+
+
+  ![Image of large non-bleed hero graphic with
+  dimensions](/design-system/images/uploads/hero_style_non-bleed_large.png
+  "Image of large non-bleed hero graphic with dimensions")
+
+
+  ![Image of smaller non-bleed hero graphics with
+  dimensions](/design-system/images/uploads/hero_style_non-bleed_small.png
+  "Image of smaller non-bleed hero graphics with dimensions")
+
+
+  **Hero with bleeding illustration**
+
+
+  ![Image of larger bleeding hero graphic with
+  dimensions](/design-system/images/uploads/hero_style_bleed_large.png "Image of
+  larger bleeding hero graphic with dimensions")
+
+
+  ![Image of smaller bleeding hero graphics with
+  dimensions](/design-system/images/uploads/hero_style_bleed_small.png "Image of
+  smaller bleeding hero graphics with dimensions")
+
+
+  **Hero with photograph**
+
+
+  ![Image of larger photographic hero graphic with
+  dimensions](/design-system/images/uploads/hero_style_photo_large.png "Image of
+  larger photographic hero graphic with dimensions")
+
+
+  ![Image of smaller photographic hero graphic with
+  dimensions](/design-system/images/uploads/hero_style_photo_small.png "Image of
+  smaller photographic hero graphic with dimensions")
 accessibility: ''
 research: ''
 ---

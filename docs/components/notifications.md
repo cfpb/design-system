@@ -120,6 +120,20 @@ variations:
       The success notification is for displaying when an operation has run as
       expected, such as returning the number of results in a search.
     variation_name: Success notification
+  - variation_code_snippet: |-
+      <div class="m-notification
+                  m-notification__visible
+                  m-notification__warning">
+          {% include icons/warning-round.svg %}
+          <div class="m-notification_content">
+              <div class="h4 m-notification_message">No results found.</div>
+          </div>
+      </div>
+    variation_description: >-
+      The warning notification is for displaying when an operation has run as
+      expected, but doesn’t have the expected results, such as a search that
+      returned no results.
+    variation_name: Warning notification
 usage: >-
   **Use cases**
 

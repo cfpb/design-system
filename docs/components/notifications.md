@@ -64,7 +64,7 @@ variations:
           </div>
       </div>
 
-
+      <br /> <!-- Insert spacing between two notification examples -->
 
       <div class="m-notification
                   m-notification__visible">
@@ -92,6 +92,21 @@ variations:
       If your notification requires links, include them below the message or
       explanation as a `m-list` unordered list.
     variation_name: Default notification with links
+  - variation_code_snippet: |-
+      <div class="m-notification
+                  m-notification__visible">
+          {% include icons/update.svg %}
+          <div class="m-notification_content">
+              <div class="h4 m-notification_message">The page is loading…</div>
+          </div>
+      </div>
+    variation_description: >-
+      The action notification displays when something is happening on the page,
+      such as a page loading notification as search results are found. Use
+      [animated
+      minicons](https://cfpb.github.io/design-system/foundation/iconography) to
+      reassure the user that an action is functioning as intended.
+    variation_name: Action notification
 usage: >-
   **Use cases**
 

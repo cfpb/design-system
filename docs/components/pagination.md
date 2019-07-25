@@ -5,14 +5,81 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: "More information can be found at:\n* http://cfpb.github.io/design-manual/page-components/tables.html#behavior\t\n* https://cfpb.github.io/capital-framework/components/cf-pagination/"
+intro: "Default pagination consists of “Older” and “Newer” links, styled as buttons, and an inline form (input, submit button) that allows users to navigate to specific pages by number. When appropriate, the buttons may be labeled “Previous” and “Next”.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/tables.html#behavior\t\n* https://cfpb.github.io/capital-framework/components/cf-pagination/"
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+  - variation_code_snippet: |-
+      <div id="pagination_content"></div>
+
+      <!-- Paginated content here -->
+
+      <nav class="m-pagination" role="navigation" aria-label="Pagination">
+          <a class="a-btn
+                    m-pagination_btn-prev"
+             href="?page=21#pagination_content">
+              <span class="a-btn_icon a-btn_icon__on-left">{% include icons/left.svg %}</span>
+              Newer
+          </a>
+          <a class="a-btn
+                    m-pagination_btn-next"
+             href="?page=23#pagination_content">
+              <span class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg %}</span>
+              Older
+          </a>
+          <form class="m-pagination_form"
+                action="#pagination_content">
+              <label class="m-pagination_label"
+                     for="m-pagination_current-page">
+                  Page
+                  <span class="u-visually-hidden">
+                      number 22 out
+                  </span>
+                  <input class="m-pagination_current-page"
+                         id="m-pagination_current-page"
+                         name="page"
+                         type="number"
+                         min="1"
+                         max="149"
+                         pattern="[0-9]*"
+                         inputmode="numeric"
+                         value="22">
+                  of 149
+              </label>
+              <button class="a-btn
+                             a-btn__link
+                             m-pagination_btn-submit"
+                      id="m-pagination_btn-submit"
+                      type="submit">Go</button>
+          </form>
+      </nav>
+    variation_description: ''
+    variation_name: Default pagination
+  - variation_code_snippet: >-
+      <nav class="m-pagination" role="navigation" aria-label="Pagination">    <a
+      class="a-btn              a-btn__disabled             
+      m-pagination_btn-prev">        <span class="a-btn_icon
+      a-btn_icon__on-left">{% include icons/left.svg %}</span>        Newer   
+      </a>    <a class="a-btn              m-pagination_btn-next"      
+      href="?page=2#pagination_content">        Older        <span
+      class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg
+      %}</span>    </a>    <form class="m-pagination_form"         
+      action="#pagination_content">        <label
+      class="m-pagination_label"              
+      for="m-pagination_current-page">            Page            <span
+      class="u-visually-hidden">                number 1 out           
+      </span>            <input
+      class="m-pagination_current-page"                  
+      id="m-pagination_current-page"                  
+      name="page"                   type="number"                  
+      min="1"                   max="149"                  
+      pattern="[0-9]*"                   inputmode="numeric"                  
+      value="1">            of 149        </label>        <button
+      class="a-btn                       a-btn__link                      
+      m-pagination_btn-submit"               
+      id="m-pagination_btn-submit"                type="submit">Go</button>   
+      </form></nav>
+    variation_description: ''
+    variation_jinja_code_snippet: ''
+    variation_name: First and last pages
 usage: >-
   **Use cases**
 
@@ -25,36 +92,39 @@ usage: >-
 
   **Content guidelines**
 
-
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
+  Tables with over 20 rows can be paired with pagination.
 
 
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
+  **Behavior**
+
+  `@bp-xs-max`: On small screens, the buttons display next to each other,
+  stacked on top of the form
 
 
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+  **Code**
+
+  To enable the component to jump directly to the paginated content, include an
+  `id` on a wrapper of the paginated content (or an element directly above it),
+  e.g., `id="pagination_content"`.
+
+
+  When on the first or last page of paginated content, be sure to disable the
+  appropriate buttons by adding the `a_btn__disabled` modifier and removing
+  their `href` attribute.
+
+
+  The cf-pagination component provides a responsive approach to multipage page
+  navigation for Capital Framework.
+
+
+  `cf-core`, `cf-buttons`, and `cf-icons` components are all dependencies of
+  this component.
+
+
+  NOTE: If you use `cf-pagination.less` directly, be sure to run the file
+  through Autoprefixer, or your compiled Capital Framework CSS will not work
+  perfectly in older browsers.
+accessibility: ''
+research: ''
 ---
 

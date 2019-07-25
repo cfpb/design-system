@@ -33,13 +33,7 @@ variations:
       adding or removing the `m-notification__visible` class to the base
       element.
     variation_name: Default notification
-    variation_specs: |-
-      | Less variable name | Less variable value
-      | - | - |
-      | @notification-bg | @gray-5 |
-      | @notification-border | @gray-40 |
-      | @notification-icon | @gray |
-      | @notification-padding__px | 15px |
+    variation_specs: ''
   - variation_code_snippet: |-
       <div class="m-notification
                   m-notification__visible">
@@ -55,13 +49,7 @@ variations:
       If your notification requires further explanation, include it in a
       paragraph following the main message.
     variation_name: Default notification with explanation
-    variation_specs: |-
-      | Less variable name | Less variable value |
-      | - | - |
-      | @notification-bg | @gray-5 |
-      | @notification-border | @gray-40 |
-      | @notification-icon | @gray |
-      | @notification-padding__px | 15px |
+    variation_specs: ''
   - variation_code_snippet: |-
       <div class="m-notification
                   m-notification__visible">
@@ -111,13 +99,7 @@ variations:
       If your notification requires links, include them below the message or
       explanation as a `m-list` unordered list.
     variation_name: Default notification with links
-    variation_specs: |-
-      | Less variable name | Less variable value |
-      | - | - |
-      | @notification-bg | @gray-5 |
-      | @notification-border | @gray-40 |
-      | @notification-icon | @gray |
-      | @notification-padding__px | 15px |
+    variation_specs: ''
   - variation_code_snippet: |-
       <div class="m-notification
                   m-notification__visible">
@@ -133,19 +115,7 @@ variations:
       minicons](https://cfpb.github.io/design-system/foundation/iconography) to
       reassure the user that an action is functioning as intended.
     variation_name: Action notification
-    variation_specs: |-
-      | Less variable name | Less variable value |
-      | - | - |
-      | @notification-bg | @gray-5 |
-      | @notification-border | @gray-40 |
-      | @notification-icon | @gray |
-      | @notification-padding__px | 15px |
-
-      * Border: 1 px, Gray 40 (#b4b5b6)
-      * Background: Gray 10 (#f7f8f9)
-      * Padding: 15px
-      * H4 (Avenir Next Medium, 18 px) Black (#101820)
-      * Minicon: 18 px, Gray (#5a5d61)
+    variation_specs: ''
   - variation_code_snippet: |-
       <div class="m-notification
                   m-notification__visible

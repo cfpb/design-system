@@ -27,6 +27,11 @@ variations:
       The default notification creates the base for the message that is often
       hidden and empty, but is modified by scripting in production to update the
       state and message based on user input.
+
+
+      Notifications are hidden by default; you can toggle their visibility by
+      adding or removing the `m-notification__visible` class to the base
+      element.
     variation_name: Default notification
   - variation_code_snippet: |-
       <div class="m-notification
@@ -134,6 +139,19 @@ variations:
       expected, but doesn’t have the expected results, such as a search that
       returned no results.
     variation_name: Warning notification
+  - variation_code_snippet: |-
+      <div class="m-notification
+                  m-notification__visible
+                  m-notification__error">
+          {% include icons/error-round.svg %}
+          <div class="m-notification_content">
+              <div class="h4 m-notification_message">Page not found.</div>
+          </div>
+      </div>
+    variation_description: >-
+      The error notification is for displaying when an operation has not run as
+      expected and encountered an error.
+    variation_name: Error notification
 usage: >-
   **Use cases**
 

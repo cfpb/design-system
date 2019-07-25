@@ -6,20 +6,19 @@ collection_name: components
 section: templates
 status: Proposed
 intro: >-
+  Document detail page types provide summary information about a document or
+  related group of documents. These pages help users better understand the
+  relevancy and context of documents before deciding whether or not to download
+  or engage further.
+
+
   This page is under active development. Information is being moved into it from
   this page:
 
   * http://cfpb.github.io/design-manual/global-elements/document-detail.html
 variations:
   - variation_code_snippet: ' '
-    variation_description: >-
-      Document detail page types provide summary information about a document or
-      related group of documents. These pages help users better understand the
-      relevancy and context of documents before deciding whether or not to
-      download or engage further.
-
-
-      ![](/design-system/images/uploads/docdetail_top_example.jpg)
+    variation_description: '![](/design-system/images/uploads/docdetail_top_example.jpg)'
     variation_name: Document detail page example
 usage: >-
   #### Use cases

@@ -191,7 +191,59 @@ variations:
       When using a dark background add the `__knockout` modifier to the hero to
       switch the text to white.
     variation_name: Hero with knockout text
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+  - variation_code_snippet: |-
+      <section class="m-hero m-hero__bleeding" id="hero3">
+          <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_text">
+                  <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
+                  <p class="m-hero_subhead">
+                      This text has a recommended count of 165-186 characters
+                      (three lines at 1230px) following a one-line heading
+                      and 108-124 characters (two lines at 1230px)
+                      following a two-line heading.
+                  </p>
+              </div>
+              <div class="m-hero_image-wrapper">
+                  <div class="m-hero_image"></div>
+              </div>
+          </div>
+          <style>
+              #hero3 .m-hero_image {
+                  background-image:
+                      url('https://dummyimage.com/570x140/addc91/101820');
+                  background-image: -webkit-image-set(
+                      url('https://dummyimage.com/570x140/addc91/101820') 1x,
+                      url('https://dummyimage.com/1140x280/addc91/101820') 2x
+                  );
+                  background-image: image-set(
+                      url('https://dummyimage.com/570x140/addc91/101820') 1x,
+                      url('https://dummyimage.com/1140x280/addc91/101820') 2x
+                  );
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                      src='https://dummyimage.com/570x140/addc91/101820',
+                      sizingMethod='scale');
+                  padding-bottom: 25.1020408%;
+              }
+
+              @media screen and (min-width: 37.5625em) {
+                  #hero3 .m-hero_image {
+                      background-image:
+                          url('https://dummyimage.com/470x640/addc91/101820');
+                      background-image: -webkit-image-set(
+                          url('https://dummyimage.com/470x640/addc91/101820') 1x,
+                          url('https://dummyimage.com/940x1280/addc91/101820') 2x
+                      );
+                      background-image: image-set(
+                          url('https://dummyimage.com/470x640/addc91/101820') 1x,
+                          url('https://dummyimage.com/940x1280/addc91/101820') 2x
+                      );
+                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                          src='https://dummyimage.com/470x640/addc91/101820',
+                          sizingMethod='scale');
+                  }
+              }
+          </style>
+      </section>
     variation_description: >-
       When using an illustration that bleeds top to bottom at larger screen
       sizes, add the `__bleeding` modifier to the hero and add an additional

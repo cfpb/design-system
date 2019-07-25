@@ -268,8 +268,83 @@ variations:
 
       * Illustration dimensions for small screens: 570px (exact) x 320px
       (maximum) (2x: 1140px x 640px)
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+  - variation_code_snippet: |-
+      <section class="m-hero m-hero__overlay" id="hero4">
+          <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_text">
+                  <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
+                  <p class="m-hero_subhead">
+                      This text has a recommended count of 165-186 characters
+                      (three lines at 1230px) following a one-line heading
+                      and 108-124 characters (two lines at 1230px)
+                      following a two-line heading.
+                  </p>
+              </div>
+              <div class="m-hero_image-wrapper">
+                  <div class="m-hero_image"></div>
+              </div>
+          </div>
+          <style>
+              #hero4 .m-hero_image {
+                  background-image:
+                      url('https://dummyimage.com/600x250/addc91/101820');
+                  background-image: -webkit-image-set(
+                      url('https://dummyimage.com/600x250/addc91/101820') 1x,
+                      url('https://dummyimage.com/1200x500/addc91/101820') 2x
+                  );
+                  background-image: image-set(
+                      url('https://dummyimage.com/600x250/addc91/101820') 1x,
+                      url('https://dummyimage.com/1200x500/addc91/101820') 2x
+                  );
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                      src='https://dummyimage.com/600x250/addc91/101820',
+                      sizingMethod='scale');
+                  padding-bottom: 41.6666667%;
+              }
+
+              @media screen and (min-width: 37.5625em) {
+                  #hero4 .m-hero_wrapper{
+                      background-image:
+                          url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
+                      background-image: -webkit-image-set(
+                          url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
+                          url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
+                      );
+                      background-image: image-set(
+                          url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
+                          url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
+                      );
+                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                          src='http://files.consumerfinance.gov/f/images/PC_hero.original.jpg',
+                          sizingMethod='scale');
+                  }
+              }
+          </style>
+      </section>
+    variation_description: >-
+      The text overlays the photograph at larger screen sizes. It’s best to
+      avoid a non-button call to action in these, as it’s unlikely that the
+      Pacific Blue will have accessible contrast with a non-white (or light
+      gray) background.
     variation_name: Hero with photograph
+    variation_specs: >-
+      * Two images must be created, one for large and one for small screens
+
+      * Large and small screen images should contain the same elements but can
+      differ compositionally
+
+      * When selecting a photo include a 30px horizontal margin of clear space
+      between text and image area
+
+      * Type contrast ratios cannot be mathematically determined for photos, so
+      special care should be paid when selecting these images
+
+      * To conserve vertical space, small screen image should be as short as
+      possible
+
+      * Photo dimensions for large screens (exact): 1230px x 285px
+
+      * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
 usage: >-
   #### Use cases
 

@@ -140,7 +140,7 @@ variations:
               title="Test input"
               class="a-text-input">
           <button class="a-btn a-btn__link">
-              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+              {% include icons/error.svg %}
               <span class="u-visually-hidden">Clear</span>
           </button>
       </div>
@@ -158,7 +158,7 @@ variations:
                       title="Test input"
                       class="a-text-input">
                   <button class="a-btn a-btn__link">
-                      <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+                      {% include icons/error.svg %}
                       <span class="u-visually-hidden">Clear</span>
                   </button>
               </div>
@@ -232,4 +232,3 @@ research: TBD
 related_items: '* A related item'
 help_us: '* Help us do a thing'
 ---
-

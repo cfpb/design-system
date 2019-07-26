@@ -97,7 +97,7 @@ especially well for horizontal layouts.
 
 <div class="content-25" markdown="1">
 
-<h4 class="warning" markdown="1"><img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Poor composition</h4>
+<h4 class="warning" markdown="1">{% include icons/error-round.svg %} Poor composition</h4>
 
 Beams float in white space, leaving little room for content. No transparency used.
 
@@ -111,7 +111,7 @@ Beams float in white space, leaving little room for content. No transparency use
 
 <div class="content-25" markdown="1">
 
-<h4 class="warning" markdown="1"><img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Poor composition</h4>
+<h4 class="warning" markdown="1">{% include icons/error-round.svg %} Poor composition</h4>
 
 All three beams layer in the same direction, weakening the beam metaphor.
 

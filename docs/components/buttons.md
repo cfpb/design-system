@@ -67,7 +67,7 @@ variations:
     variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText color | @btn__secondary-text: | @white; | White (#ffffff)\t\nBackground | @btn__secondary-bg: | @gray; | Gray (#5a5d61)\nBackground (hover) | @btn__secondary-bg-hover: | @dark-gray; | Dark gray (#43484e)\nBackground (active) | @btn__secondary-bg-active: | @black; | Black (#101820)"
   - variation_code_snippet: >
 
-      <button class="a-btn a-btn__warning" title="Test button">Destructiv
+      <button class="a-btn a-btn__warning" title="Test button">Destructive
       button</button>
 
 

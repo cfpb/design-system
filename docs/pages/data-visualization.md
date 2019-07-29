@@ -5,6 +5,21 @@ layout: generic-page
 collection_name: pages
 section: foundation
 ---
+### Whether you’re using Excel, Tableau, D3.js, or any other program, follow these guidelines to create effective and consistent data visualizations.
+
+Data visualization can be an excellent way to increase understanding and make comparisons of data. Each graph should have a point that you want the user to walk away knowing.
+
+Using visuals to convey meaning and to tell stories engages the user and creates a memorable experience. Part of this is choosing the correct visualization for the data. Make sure you understand the data and the relationship of your data before you choose visuals to help explain it to others.
+
+Occasionally, data visualization isn’t the best approach. A well crafted sentence or table may be a better solution to convey specific points or a precise numerical interpretation. Graphs are most useful when you want the user to walk away with a general sense of the data and to interpret patterns.
+
+##### KEY QUESTIONS
+
+* Is data visualization necessary to help achieve your objective?
+* Do you understand the data set?
+* What do you want people to walk away knowing?
+
+
 This page is under active development. Information is being moved into it from this page:
 
 * http://cfpb.github.io/design-manual/data-visualization/data-visualization.html
@@ -64,22 +79,27 @@ Wherever possible, charts should not include a key, and data should be directly 
 ##### Reports
 
 ###### Figure number
+
 * Uses the Figure number style (all caps)
 
 Title
+
 * Gives an overview of what the graph is about
 * Uses the h3 heading style
 * 2 lines of text maximum
 
 Subtitle
+
 * Explains the general trends of the graph and what that means, including why it is important
 * Uses the h4 heading style
 * 3 lines of text maximum
 
 Notes
+
 * Describes any caveats or inconsistencies with the data such as explaining why numbers do not add up to 100% or the specific dates that the data is pulled from
 
 Data source information
+
 * Provides a link to the URL of a spreadsheet or to the source of the data
 * Important to include for trustworthiness and validity
 * Allows people to dive deeper into the data and explore the nuances for themselves or to replicate the visualization
@@ -87,22 +107,27 @@ Data source information
 ##### Blog posts
 
 ###### Title
+
 * Gives an overview of what the graph is about
 * Uses the h3 heading style
 * 2 lines of text maximum
 
 ###### Subtitle
+
 * Explains the general trends of the graph and what that means, including why it is important
 * Uses the h4 heading style
 * 3 lines of text maximum
 
 ###### Notes
+
 * Describes any caveats or inconsistencies with the data such as explaining why numbers do not add up to 100% or the specific dates that the data is pulled from
 
 ###### Date
+
 * Include a date to at least the month and year of when the data was collected to provide context and accuracy over time.
 
 ###### Data source information
+
 * Provides a link to the URL of a spreadsheet or to the source of the data
 * Important to include for trustworthiness and validity
 * Allows people to dive deeper into the data and explore the nuances for themselves or to replicate the visualization
@@ -110,27 +135,33 @@ Data source information
 ##### Social media
 
 ###### Title
+
 * Gives an overview of what the graph is about
 * Uses the h3 heading style
 * 2 lines of text maximum
 
 ###### Subtitle
+
 * Explains the general trends of the graph and what that means, including why it is important
 * Uses the h4 heading style
 * 3 lines of text maximum
 
 ###### Notes
+
 * Describes any caveats or inconsistencies with the data such as explaining why numbers do not add up to 100% or the specific dates that the data is pulled from
 
 ###### Date
+
 * Include a date to at least the month and year of when the data was collected to provide context and accuracy over time.
 
 ###### Data source information
+
 * Provides a link to the URL of a spreadsheet or to the source of the data
 * Important to include for trustworthiness and validity
 * Allows people to dive deeper into the data and explore the nuances for themselves or to replicate the visualization
 
 ###### CFPB logo
+
 * Include the CFPB logo; helps with identification and determining origin if the graphic gets re-used
 
 #### Accuracy

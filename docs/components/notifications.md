@@ -6,6 +6,12 @@ collection_name: components
 section: components
 status: Proposed
 intro: >-
+
+  This component provides notification boxes. Form alerts provide a light-touch
+  alternative to notifications for inline form validation or feedback to a
+  user’s input.
+
+
   This page is under active development. Information is being moved into it from
   these pages:
 

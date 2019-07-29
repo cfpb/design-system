@@ -26,10 +26,10 @@ variations:
       *
       [_includes/organisms/chart.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/chart.html)
 
-      -
+      *
       [_includes/organisms/mortgage-chart.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/mortgage-chart.html)
 
-      -
+      *
       [_includes/organisms/mortgage-map.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/mortgage-map.html)
     variation_name: Simple bar chart
     variation_specs: Must have bars
@@ -64,6 +64,6 @@ usage: >-
 accessibility: ''
 research: ''
 related_items: ''
-help_us: |+
+help_us: ''
 ---
 

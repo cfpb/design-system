@@ -6,13 +6,22 @@ collection_name: components
 section: components
 status: Proposed
 intro: >-
+  Use bar or column charts to show comparisons of different discrete items,
+  factors or categories. Comparisons could include items that can be counted and
+  categorized. These are some of the easiest charts to interpret because the
+  data is shown by length of bar.
+
+
+
   Information about Bar Charts can be found at:
 
 
   http://cfpb.github.io/design-manual/data-visualization/chart-types.html#bar-or-column-charts
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
+    variation_description: >-
+      ![Horizontal bar chart showing breakdown of complaints in other financial
+      services category.](/design-system/images/uploads/bar-chart-1.png)
     variation_jinja_code_snippet: >-
       *
       [_includes/organisms/chart.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/chart.html)
@@ -22,62 +31,39 @@ variations:
 
       -
       [_includes/organisms/mortgage-map.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/mortgage-map.html)
-    variation_name: Default state
+    variation_name: Simple bar chart
     variation_specs: Must have bars
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+    variation_description: >-
+      ![Bar charts showing complaints by type for New York metro area, New York
+      state and the United
+      States.](/design-system/images/uploads/bar-chart-2.png)
+    variation_name: Grouped bar chart
     variation_specs: It must have data
+  - variation_code_snippet: ' '
+    variation_description: >-
+      ![Bar charts showing complaints by region (New York metro area, New York
+      state and the United States) for different financial
+      categories.](/design-system/images/uploads/bar-chart-4.png)
+    variation_name: Categories bar chart
+  - variation_code_snippet: ' '
+    variation_description: >-
+      ![Stacked bar chart showing breakdown of complaints in other financial
+      services category.](/design-system/images/uploads/bar-chart-3.png)
+    variation_name: Stacked bar chart
 usage: >-
-  **Use cases**
-
-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
-
-
   **Content guidelines**
 
 
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
+  * If exact numbers are important, the bars should be labeled with the value.
 
+  * When possible label directly rather than relying on color.
 
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
-
-
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
-related_items: |
-  - [Grithub](https://github.com/cfpb)
-  - [Grithub.corp](https://github.com/cfpb)
-  - [Gritty.computer](https://github.com/cfpb)
-help_us: |
-  - [Grithub](https://github.com/cfpb)
-  - [Grithub.corp](https://github.com/cfpb)
-  - [Gritty.computer](https://github.com/cfpb)
+  * For stacked charts, use a white line or stroke to create contrast between
+  bar chunks.
+accessibility: ''
+research: ''
+related_items: ''
+help_us: |+
 ---
 

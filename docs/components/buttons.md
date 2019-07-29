@@ -260,7 +260,18 @@ usage: >-
   NOTE: If you use cf-buttons.less directly, be sure to run the file through
   Autoprefixer, or your compiled Capital Framework CSS will not work perfectly
   in older browsers.
-accessibility: TBD
+accessibility: >-
+  ### Meaningful text labels
+
+
+  UI control text labels are very useful to all users, but getting them right is
+  particularly important to users with disabilities.
+
+
+  You should make sure that your button and link text labels are understandable
+  and distinctive. Don't just use "Click here" for your labels, as screenreader
+  users sometimes get up a list of buttons and form controls. The following
+  screenshot shows our controls being listed by VoiceOver on Mac.
 research: TBD
 related_items: '- related items'
 help_us: "More information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/"

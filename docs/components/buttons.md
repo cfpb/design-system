@@ -261,7 +261,7 @@ usage: >-
   Autoprefixer, or your compiled Capital Framework CSS will not work perfectly
   in older browsers.
 accessibility: >-
-  ### Meaningful text labels
+  #### Meaningful text labels
 
 
   UI control text labels are very useful to all users, but getting them right is

@@ -6,59 +6,36 @@ collection_name: components
 section: components
 status: Proposed
 intro: >-
+  Use when you have one factor over time to show change. Start your axis at 0
+  and label your axis to avoid confusion.
+
+
   Information about Line Charts can be found at:
 
 
   http://cfpb.github.io/design-manual/data-visualization/chart-types.html#line-charts
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
+    variation_description: >-
+      ![Line chart showing complaints from Florida from July 2011 to December
+      2016.](/design-system/images/uploads/parts-of-a-chart_013.png)
+    variation_name: Line chart
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+    variation_description: >-
+      ![Line chart showing change in college credit card agreement trends
+      between 2009 and 2015.](/design-system/images/uploads/line-chart-2.png)
+    variation_name: Line chart showing trends
 usage: >-
-  **Use cases**
-
-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
-
-
   **Content guidelines**
 
 
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
+  * Label your lines directly or use different patterns for each line.
 
+  * Generally show five or fewer lines to avoid confusion.
 
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
-
-
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+  * Consider using many small line charts if you need to show more factors.
+  (These are called small multiples charts.)
+accessibility: ''
+research: ''
 ---
 

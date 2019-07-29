@@ -12,53 +12,30 @@ intro: >-
   http://cfpb.github.io/design-manual/page-components/form-fields.html#range-sliders
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+    variation_description: '![](/design-system/images/uploads/slider-default.png)'
+    variation_name: Basic range slider
 usage: >-
-  **Use cases**
-
-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus!
-
-
   **Content guidelines**
 
 
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
+  Range sliders can work well for discovery and education, where the inputs are
+  [a relative quantity and not a specific numeric
+  input](https://medium.com/@paulvddool/sliders-are-bad-practice-b56c3b7a6e19).
+  As an example, users can narrow a list of flight options on kayak.com with
+  sliders that show a range of takeoff times. Sliders are an elegant and
+  intuitive way to allow the user to discover which takeoff times will yield the
+  lowest fares.
 
 
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
-
-
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+  Because they’re imprecise and difficult to manipulate, range sliders are not a
+  good choice when the user is likely to have a specific number that they want
+  to input. If you choose to implement a slider in this latter case, consider
+  adding steppers or an input box as an alternative means of entering the same
+  data. Also consider the balance between the length of the slider and the
+  number of data points it covers (the range as well as how discrete the points
+  are). The more points to choose from, the harder it is for the user to target
+  a specific number.
+accessibility: Make sure that sliders are accessible by keyboard using the arrow keys
+research: ''
 ---
 

@@ -5,7 +5,7 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: "More information about Dropdowns can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#dropdowns\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#select-dropdown"
+intro: Dropdowns are very useful.
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.
@@ -56,5 +56,6 @@ research: >-
   egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
+help_us: "More information about Dropdowns can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#dropdowns\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#select-dropdown"
 ---
 

@@ -24,7 +24,7 @@ variations:
   - variation_code_snippet: |-
       <a class="a-link a-link__icon" href="#">
           <span class="a-link_text">Example with icon</span>
-          <img src="/design-system/assets/icons/download.svg" class="cf-icon-svg" />
+          {% include icons/download.svg %}
       </a>
 
 

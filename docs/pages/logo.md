@@ -438,7 +438,7 @@ photo backgrounds logo")
 <div class="content-33 content-first warning" markdown="1">
 
 
-<p><img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t remove the light beam. It is
+<p>{% include icons/error-round.svg %} Don’t remove the light beam. It is
 essential to the logo.</p>
 
 
@@ -465,7 +465,7 @@ with no beam")
 <div class="content-33 content-first warning" markdown="1">
 
 
-<p><img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t stretch or condense. This weakens
+<p>{% include icons/error-round.svg %} Don’t stretch or condense. This weakens
 the brand.</p>
 
 
@@ -503,7 +503,7 @@ logo](https://cfpb.github.io/design-manual/static/img/logo/Logo24.png
 <div class="content-33 content-first warning" markdown="1">
 
 
-<p><img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t apply a drop shadow.</p>
+<p>{% include icons/error-round.svg %} Don’t apply a drop shadow.</p>
 
 
 </div><!-- /.content-33 -->
@@ -527,7 +527,7 @@ shadow logo")
 <div class="content-33 content-first warning" markdown="1">
 
 
-<img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t outline the logo or use other
+{% include icons/error-round.svg %} Don’t outline the logo or use other
 colors. This dilutes brand association.
 
 
@@ -564,7 +564,7 @@ logo](https://cfpb.github.io/design-manual/static/img/logo/Logo25.png
 <div class="content-33 content-first warning" markdown="1">
 
 
-<img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t rotate the symbol. This changes
+{% include icons/error-round.svg %} Don’t rotate the symbol. This changes
 the connotation of the light.
 
 
@@ -602,7 +602,7 @@ logo")
 <div class="content-33 content-first warning" markdown="1">
 
 
-<img src="/design-system/assets/icons/error-round.svg" class="cf-icon-svg" /> Don’t place the logo directly on a
+{% include icons/error-round.svg %} Don’t place the logo directly on a
 colored background or photo without a white bounding box.
 
 

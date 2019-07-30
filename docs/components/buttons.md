@@ -152,7 +152,7 @@ variations:
       <button class="a-btn">
           <span class="a-btn_icon
                        a-btn_icon__on-left">
-             <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+             {% include icons/error.svg %}
           </span>
           Close
       </button>
@@ -162,7 +162,7 @@ variations:
           Close
           <span class="a-btn_icon
                        a-btn_icon__on-right">
-              <img src="/design-system/assets/icons/error.svg" class="cf-icon-svg" />
+              {% include icons/error.svg %}
           </span>
       </button>
     variation_description: ''
@@ -173,7 +173,7 @@ variations:
           Submit your complaint
           <span class="a-btn_icon
                        a-btn_icon__on-right">
-              <img src="/design-system/assets/icons/updating.svg" class="cf-icon-svg" />
+              {% include icons/updating.svg %}
           </span>
       </button>
     variation_description: ''
@@ -265,4 +265,3 @@ research: TBD
 related_items: '- related items'
 help_us: "More information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/"
 ---
-

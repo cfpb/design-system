@@ -5,7 +5,7 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: Dropdowns are important!
+intro: Dropdowns are important?
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.

@@ -3,6 +3,10 @@ backend:
   repo: cfpb/design-system
   branch: master
   squash_merges: true
+  commit_messages:
+    create: Create “{{slug}}”
+    update: Update “{{slug}}”
+    delete: Delete “{{slug}}”
 
 logo_url: https://cfpb.github.io/design-manual/static/img/logo/Logo0_@2.png
 publish_mode: editorial_workflow

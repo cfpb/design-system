@@ -9,13 +9,10 @@
 // if we change them in this CSS we also have to fork and release our own JS with updated breakpoints
 
 .govuk-tabs {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.25;
-    color: #0b0c0c;
     margin-top: 5px;
     margin-bottom: 20px; 
 }
@@ -93,6 +90,10 @@
         margin: 0;
         padding: 0;
         list-style: none;
+        display: none;
+        .respond-to-min( 641px, {
+            display: block;
+        });
     }
 
         @media (max-width: 40.0525em) {
@@ -256,3 +257,10 @@
                 margin-bottom: 0; 
             } 
         }
+
+    .variation-code-snippet-title,
+    .variation-jinja-code-snippet-title {
+        .respond-to-min( 641px, {
+            .u-visually-hidden();
+        } );
+    }

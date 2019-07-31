@@ -9,13 +9,12 @@ install:
 script:
 - yarn --cwd src/ run test
 before_deploy:
-- yarn --cwd docs/ run compile-js
-- yarn --cwd docs/ run compile-css
-- rm -rf docs/node_modules/
+- yarn --cwd docs/ run build
+- sed -i '/_site/d' ./.gitignore
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: docs/
+  local_dir: docs/_site/
   verbose: true
   github_token: $GITHUB_TOKEN
   on:

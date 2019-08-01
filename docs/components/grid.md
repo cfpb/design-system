@@ -136,7 +136,6 @@ variations:
           </section>
       </div>
 
-      ```
       <div class="cols-12">
           <section>
               <div class="col col-1"><p>one</p></div>
@@ -192,7 +191,6 @@ variations:
               <div class="col col-12"><p>twelve</p></div>
           </section>
       </div>
-      ```
     variation_description: >
       Twelve-column grid with flexible column widths and fixed gutters. The
       width of the padding on the left and right edge of the grid depends on

@@ -222,12 +222,17 @@ variations:
 
       This value can be overridden in the `grid_column()` mixin.
     variation_name: Variables
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+  - variation_code_snippet: >-
+      <div class="main-wrapper" style="background-color: #f9f9f9">This container
+      now has left and right padding and a centered max width.</div>
+
+      <div class="wide-wrapper" style="background-color: #f9f9f9">This container
+      is the same except it has a wider max-width.</div>
     variation_description: |-
       Wrappers are centered containers with a max-width
       and outside left/right padding of ½ the gutter width on each side.
 
-      ### Less mixin
+      ##### Less mixin
 
       ```
       .grid_wrapper( @grid_wrapper-width: @grid_wrapper-width )
@@ -236,7 +241,7 @@ variations:
       You can create a wrapper with max-width other than the default
       by passing a pixel value into the mixin.
 
-      ### Example
+      ##### Example
 
       ```
       .main-wrapper {
@@ -246,19 +251,16 @@ variations:
           .grid_wrapper( 1900px );
       }
       ```
-
-      ```
-      <div class="main-wrapper">
-          This container now has left and right padding and a centered max width.
-      </div>
-      <div class="wide-wrapper">
-          This container is the same except it has a wider max-width.
-      </div>
-      ```
     variation_name: Wrappers
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+  - variation_code_snippet: |-
+      <div class="main-wrapper">
+           <div class="half">I am half of my parent.</div>    
+           <div class="half">        
+                <div class="styled">I am half of my parent. I also have a border and background.</div>
+           </div>
+      </div>
     variation_description: >-
-      ### Less mixin
+      ##### Less mixin
 
 
       ```
@@ -285,8 +287,6 @@ variations:
       add a wrapper just inside the column to be styled that way.
 
 
-      ### Usage
-
 
       ```
 
@@ -306,28 +306,28 @@ variations:
       ```
 
 
-      ```
-
-      <div class="main-wrapper">
-          <div class="half">I am half of my parent.</div>
-          <div class="half">
-              <div class="styled">
-                  I am half of my parent. I also have a border and background.
-              </div>
-          </div>
-      </div>
-
-      ```
-
-
       **NOTE:** cf-grid does not have a "row" concept.
 
       If you have a 12-column grid and place 24 columns inside a wrapper,
 
       cf-grid columns will automatically stack into two rows of 12.
     variation_name: Columns
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: >-
+  - variation_code_snippet: |-
+      <div class="main-wrapper">
+          <div class="half">
+              <div class="nested">
+                  <div class="half"></div>
+                  <div class="half"></div>
+              </div>
+          </div>
+          <div class="half">
+              <div class="nested">
+                  <div class="half"></div>
+                  <div class="half"></div>
+              </div>
+          </div>
+      </div>
+    variation_description: >
       Since all grid columns have left and right gutters,
 
       you will notice undesirable offsetting when nesting columns.
@@ -354,7 +354,7 @@ variations:
       without having to deal with the first and last columns of each row.
 
 
-      ### Less mixin
+      ##### Less mixin
 
 
       ```
@@ -364,7 +364,7 @@ variations:
       ```
 
 
-      ### Usage
+      ##### Usage
 
 
       ```
@@ -380,26 +380,6 @@ variations:
       .half {
           .grid_column(1, 2);
       }
-
-      ```
-
-
-      ```
-
-      <div class="main-wrapper">
-          <div class="half">
-              <div class="nested">
-                  <div class="half"></div>
-                  <div class="half"></div>
-              </div>
-          </div>
-          <div class="half">
-              <div class="nested">
-                  <div class="half"></div>
-                  <div class="half"></div>
-              </div>
-          </div>
-      </div>
 
       ```
     variation_name: Nested columns
@@ -456,7 +436,11 @@ variations:
       </div>
     variation_description: TBA
     variation_name: Nesting
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+  - variation_code_snippet: |-
+      <div>
+          <div class="second">I am first in the markup but appear after .first.</div>
+          <div class="first">I am second in the markup but appear before .second.</div>
+      </div>
     variation_description: >-
       **NOTE:** Using these is not advised, because the disadvantages for users
 
@@ -467,7 +451,7 @@ variations:
       it.
 
 
-      ### Less mixin
+      ##### Less mixin
 
 
       ```
@@ -484,7 +468,7 @@ variations:
       ```
 
 
-      ### Usage
+      ##### Usage
 
 
       ```
@@ -498,16 +482,6 @@ variations:
           .grid_column(1, 2);
           .grid_push(1);
       }
-
-      ```
-
-
-      ```
-
-      <div>
-          <div class="second">I am first in the markup but appear after .first.</div>
-          <div class="first">I am second in the markup but appear before .second.</div>
-      </div>
 
       ```
     variation_name: Push and pull mixins for source ordering
@@ -540,7 +514,9 @@ usage: |-
   TBA
 accessibility: TBA
 research: TBA
-related_items: TBA
+related_items: >-
+  -
+  [cf-grid-generated.less](https://github.com/cfpb/capital-framework/blob/master/packages/cf-grid/src-generated/cf-grid-generated.less)
 help_us: |-
   This page needs help with its content!
   - [Contribute on Github](https://github.com/cfpb/design-system/issues/183)

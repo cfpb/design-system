@@ -3,7 +3,7 @@ name: Component needs content edits
 about: For issues about missing content or content that needs editing on Components
   pages.
 title: 'Edit component page content: "COMPONENT"'
-labels: help wanted, content
+labels: content, help wanted
 assignees: ''
 
 ---

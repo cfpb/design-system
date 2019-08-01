@@ -79,7 +79,120 @@ intro: >-
     or your compiled Capital Framework CSS will
     not work perfectly in older browsers.
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+  - variation_code_snippet: |-
+      <div class="cols-12">
+          <section>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+          </section>
+
+          <section>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-2"><p>two</p></div>
+          </section>
+
+          <section>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-3"><p>three</p></div>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-3"><p>three</p></div>
+              <div class="col col-2"><p>two</p></div>
+          </section>
+
+          <section>
+              <div class="col col-3"><p>three</p></div>
+              <div class="col col-3"><p>three</p></div>
+              <div class="col col-3"><p>three</p></div>
+              <div class="col col-3"><p>three</p></div>
+          </section>
+
+          <section>
+              <div class="col col-4"><p>four</p></div>
+              <div class="col col-4"><p>four</p></div>
+              <div class="col col-4"><p>four</p></div>
+          </section>
+
+          <section>
+              <div class="col col-6"><p>six</p></div>
+              <div class="col col-6"><p>six</p></div>
+          </section>
+
+          <section>
+              <div class="col col-12"><p>twelve</p></div>
+          </section>
+      </div>
+
+      ```
+      <div class="cols-12">
+          <section>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+              <div class="col col-1"><p>one</p></div>
+          </section>
+
+          <section>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-2"><p>two</p></div>
+          </section>
+
+          <section>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-3"><p>three</p></div>
+              <div class="col col-2"><p>two</p></div>
+              <div class="col col-3"><p>three</p></div>
+              <div class="col col-2"><p>two</p></div>
+          </section>
+
+          <section>
+              <div class="col col-3"><p>three</p></div>
+              <div class="col col-3"><p>three</p></div>
+              <div class="col col-3"><p>three</p></div>
+              <div class="col col-3"><p>three</p></div>
+          </section>
+
+          <section>
+              <div class="col col-4"><p>four</p></div>
+              <div class="col col-4"><p>four</p></div>
+              <div class="col col-4"><p>four</p></div>
+          </section>
+
+          <section>
+              <div class="col col-6"><p>six</p></div>
+              <div class="col col-6"><p>six</p></div>
+          </section>
+
+          <section>
+              <div class="col col-12"><p>twelve</p></div>
+          </section>
+      </div>
+      ```
     variation_description: >
       Twelve-column grid with flexible column widths and fixed gutters. The
       width of the padding on the left and right edge of the grid depends on
@@ -95,7 +208,7 @@ variations:
       * Tablet: 30px padding on each side
 
       * Mobile: 15px padding on each side
-    variation_name: 12-column grid
+    variation_name: 12 columns w/ 1200px max width
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: >-
       Five major breakpoints standardize large-scale changes like navigation and
@@ -397,122 +510,6 @@ variations:
     variation_name: Push and pull mixins for source ordering
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: |
-      ### 12 columns w/ 1200px max width
-
-      <div class="cols-12">
-          <section>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-          </section>
-
-          <section>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-          </section>
-
-          <section>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-2"><p>two</p></div>
-          </section>
-
-          <section>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-3"><p>three</p></div>
-          </section>
-
-          <section>
-              <div class="col col-4"><p>four</p></div>
-              <div class="col col-4"><p>four</p></div>
-              <div class="col col-4"><p>four</p></div>
-          </section>
-
-          <section>
-              <div class="col col-6"><p>six</p></div>
-              <div class="col col-6"><p>six</p></div>
-          </section>
-
-          <section>
-              <div class="col col-12"><p>twelve</p></div>
-          </section>
-      </div>
-
-      ```
-      <div class="cols-12">
-          <section>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-          </section>
-
-          <section>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-          </section>
-
-          <section>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-2"><p>two</p></div>
-          </section>
-
-          <section>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-3"><p>three</p></div>
-          </section>
-
-          <section>
-              <div class="col col-4"><p>four</p></div>
-              <div class="col col-4"><p>four</p></div>
-              <div class="col col-4"><p>four</p></div>
-          </section>
-
-          <section>
-              <div class="col col-6"><p>six</p></div>
-              <div class="col col-6"><p>six</p></div>
-          </section>
-
-          <section>
-              <div class="col col-12"><p>twelve</p></div>
-          </section>
-      </div>
-      ```
-
       ### Prefixing/Suffixing
 
       <div class="cols-12">

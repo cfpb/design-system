@@ -26,6 +26,21 @@ variations:
     variation_description: ''
     variation_name: Disabled state
   - variation_code_snippet: |-
+      <div class="m-form-field m-form-field__checkbox">
+          <input class="a-checkbox" type="checkbox" id="test_checkbox_helper">
+          <label class="a-label" for="test_checkbox_helper">
+              This is a very long label that wraps to a second line.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <small class="a-label_helper">
+                  (This is helper text)
+              </small>
+          </label>
+      </div>
+    variation_description: >-
+      Checkboxes and radio button inputs can have labels that span multiple
+      lines and have helper text that appears below the main label text.
+    variation_name: Radio button with helper text
+  - variation_code_snippet: |-
       <div class="m-form-field m-form-field__radio m-form-field__lg-target">
           <input class="a-radio" type="radio" id="test_radio_lg_default">
           <label class="a-label" for="test_radio_lg_default">Label</label>
@@ -41,21 +56,6 @@ variations:
           <label class="a-label" for="test_radio_lg_disabled">Label</label>
       </div>
     variation_name: Disabled large target area radio button
-  - variation_code_snippet: |-
-      <div class="m-form-field m-form-field__checkbox">
-          <input class="a-checkbox" type="checkbox" id="test_checkbox_helper">
-          <label class="a-label" for="test_checkbox_helper">
-              This is a very long label that wraps to a second line.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <small class="a-label_helper">
-                  (This is helper text)
-              </small>
-          </label>
-      </div>
-    variation_description: >-
-      Checkboxes and radio button inputs can have labels that span multiple
-      lines and have helper text that appears below the main label text.
-    variation_name: Radio button with helper text
   - variation_code_snippet: |-
       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_helper">

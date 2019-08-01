@@ -450,10 +450,7 @@ variations:
 
       ```
     variation_name: Push and pull mixins for source ordering
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: |
-      ### Prefixing/Suffixing
-
+  - variation_code_snippet: |-
       <div class="cols-12">
           <section>
               <div class="col col-1 suffix-11"><p>prefix 0, suffix 11</p></div>
@@ -470,132 +467,8 @@ variations:
               <div class="col col-1 prefix-11"><p>prefix 11, suffix 0</p></div>
           </section>
       </div>
-
-      ```
-      <div class="cols-12">
-          <section>
-              <div class="col col-1 suffix-11"><p>prefix 0, suffix 11</p></div>
-              <div class="col col-1 prefix-1 suffix-10"><p>prefix 1, suffix 10</p></div>
-              <div class="col col-1 prefix-2 suffix-9"><p>prefix 2, suffix 9</p></div>
-              <div class="col col-1 prefix-3 suffix-8"><p>prefix 3, suffix 8</p></div>
-              <div class="col col-1 prefix-4 suffix-7"><p>prefix 4, suffix 7</p></div>
-              <div class="col col-1 prefix-5 suffix-6"><p>prefix 5, suffix 6</p></div>
-              <div class="col col-1 prefix-6 suffix-5"><p>prefix 6, suffix 5</p></div>
-              <div class="col col-1 prefix-7 suffix-4"><p>prefix 7, suffix 4</p></div>
-              <div class="col col-1 prefix-8 suffix-3"><p>prefix 8, suffix 3</p></div>
-              <div class="col col-1 prefix-9 suffix-2"><p>prefix 9, suffix 2</p></div>
-              <div class="col col-1 prefix-10 suffix-1"><p>prefix 10, suffix 1</p></div>
-              <div class="col col-1 prefix-11"><p>prefix 11, suffix 0</p></div>
-          </section>
-      </div>
-      ```
-
-      ### Nesting
-
-      <div class="cols-12">
-          <section>
-              <div class="col col-6">
-                  <p>six</p>
-                  <section class="nested">
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                  </section>
-              </div>
-
-              <div class="col col-6">
-                  <p>six</p>
-                  <section class="nested">
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                  </section>
-              </div>
-          </section>
-
-          <section>
-              <div class="col col-3">
-                  <p>three</p>
-                  <section class="nested">
-                      <div class="col col-6"><p>six</p></div>
-                      <div class="col col-6"><p>six</p></div>
-                  </section>
-              </div>
-
-              <div class="col col-6">
-                  <p>six</p>
-                  <section class="nested">
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                  </section>
-              </div>
-
-              <div class="col col-3">
-                  <p>three</p>
-                  <section class="nested">
-                      <div class="col col-3"><p>three</p></div>
-                      <div class="col col-3"><p>three</p></div>
-                      <div class="col col-3"><p>three</p></div>
-                      <div class="col col-3"><p>three</p></div>
-                  </section>
-              </div>
-          </section>
-      </div>
-
-      ```
-      <div class="cols-12">
-          <section>
-              <div class="col col-6">
-                  <p>six</p>
-                  <section class="nested">
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                  </section>
-              </div>
-
-              <div class="col col-6">
-                  <p>six</p>
-                  <section class="nested">
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                  </section>
-              </div>
-          </section>
-
-          <section>
-              <div class="col col-3">
-                  <p>three</p>
-                  <section class="nested">
-                      <div class="col col-6"><p>six</p></div>
-                      <div class="col col-6"><p>six</p></div>
-                  </section>
-              </div>
-
-              <div class="col col-6">
-                  <p>six</p>
-                  <section class="nested">
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                  </section>
-              </div>
-
-              <div class="col col-3">
-                  <p>three</p>
-                  <section class="nested">
-                      <div class="col col-3"><p>three</p></div>
-                      <div class="col col-3"><p>three</p></div>
-                      <div class="col col-3"><p>three</p></div>
-                      <div class="col col-3"><p>three</p></div>
-                  </section>
-              </div>
-          </section>
-      </div>
-      ```
-    variation_name: Example grid layouts
+    variation_description: TBA
+    variation_name: Prefixing/Suffixing
 usage: |-
   **Use cases**
 

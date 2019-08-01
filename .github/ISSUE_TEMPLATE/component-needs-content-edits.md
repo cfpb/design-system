@@ -21,6 +21,8 @@ What content needs to be created?
    - [ ] Content guidelines
 - [ ] Accessibility
 - [ ] Research
+- [ ] Related Items
+- [ ] Help us make improvements
 - [ ] Etc
 
 ---
@@ -38,4 +40,6 @@ What content exists already but needs **edits**?
    - [ ] Content guidelines
 - [ ] Accessibility
 - [ ] Research
+- [ ] Related Items
+- [ ] Help us make improvements
 - [ ] Etc

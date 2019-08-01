@@ -395,6 +395,59 @@ variations:
 
       ```
     variation_name: Nested columns
+  - variation_code_snippet: |-
+      <div class="cols-12">
+          <section>
+              <div class="col col-6">
+                  <p>six</p>
+                  <section class="nested">
+                      <div class="col col-4"><p>four</p></div>
+                      <div class="col col-4"><p>four</p></div>
+                      <div class="col col-4"><p>four</p></div>
+                  </section>
+              </div>
+
+              <div class="col col-6">
+                  <p>six</p>
+                  <section class="nested">
+                      <div class="col col-4"><p>four</p></div>
+                      <div class="col col-4"><p>four</p></div>
+                      <div class="col col-4"><p>four</p></div>
+                  </section>
+              </div>
+          </section>
+
+          <section>
+              <div class="col col-3">
+                  <p>three</p>
+                  <section class="nested">
+                      <div class="col col-6"><p>six</p></div>
+                      <div class="col col-6"><p>six</p></div>
+                  </section>
+              </div>
+
+              <div class="col col-6">
+                  <p>six</p>
+                  <section class="nested">
+                      <div class="col col-4"><p>four</p></div>
+                      <div class="col col-4"><p>four</p></div>
+                      <div class="col col-4"><p>four</p></div>
+                  </section>
+              </div>
+
+              <div class="col col-3">
+                  <p>three</p>
+                  <section class="nested">
+                      <div class="col col-3"><p>three</p></div>
+                      <div class="col col-3"><p>three</p></div>
+                      <div class="col col-3"><p>three</p></div>
+                      <div class="col col-3"><p>three</p></div>
+                  </section>
+              </div>
+          </section>
+      </div>
+    variation_description: TBA
+    variation_name: Nesting
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: >-
       **NOTE:** Using these is not advised, because the disadvantages for users

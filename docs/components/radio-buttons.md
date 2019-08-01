@@ -26,9 +26,9 @@ variations:
     variation_description: ''
     variation_name: Disabled state
   - variation_code_snippet: |-
-      <div class="m-form-field m-form-field__checkbox">
-          <input class="a-checkbox" type="checkbox" id="test_checkbox_helper">
-          <label class="a-label" for="test_checkbox_helper">
+      <div class="m-form-field m-form-field__radio">
+          <input class="a-radio" type="radio" id="test_radio_basic_helper">
+          <label class="a-label" for="test_radio_basic_helper">
               This is a very long label that wraps to a second line.
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <small class="a-label_helper">
@@ -57,15 +57,15 @@ variations:
       </div>
     variation_name: Disabled large target area radio button
   - variation_code_snippet: |-
-      <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
-          <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_helper">
-          <label class="a-label" for="test_checkbox_lg_helper">
+      <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+          <input class="a-radio" type="radio" id="test_radio_lg_helper">
+          <label class="a-label" for="test_radio_lg_helper">
               This is a very long label that wraps to a second line.
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <small class="a-label_helper">
                   (This is helper text)
               </small>
-          </label>
+            </label>
       </div>
     variation_name: Large target radio button with helper text
 usage: >-

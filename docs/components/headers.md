@@ -5,10 +5,7 @@ layout: component
 collection_name: components
 section: components
 status: Released
-intro: |-
-  More information can be found at:
-
-  https://cfpb.github.io/capital-framework/components/cf-typography/#headers
+intro: Use headers to lead content.
 variations:
   - variation_code_snippet: |-
       <header class="m-slug-header">

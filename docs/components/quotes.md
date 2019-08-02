@@ -4,61 +4,45 @@ permalink: /components/quotes
 layout: component
 collection_name: components
 section: components
-status: Proposed
+status: Released
 intro: >-
-  More information can be found at:
-
-  *
-  https://cfpb.github.io/capital-framework/components/cf-typography/#pull-quote
+  Use a pull quote to highlight excerpts from the current work. This is not to
+  be confused with `blockquote` which quotes from an external work. Since a pull
+  quote is an excerpt and repeats content from the article you should use the
+  `aside` element.
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
-usage: >-
-  **Use cases**
-
-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
-
-
-  **Content guidelines**
-
-
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
-
-
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
-
-
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+  - variation_code_snippet: |-
+      <aside class="m-pull-quote">
+          <p class="m-pull-quote_body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Cum corrupti tempora nam nihil qui mollitia consectetur
+              corporis nemo culpa dolorum!
+          </p>
+          <footer>
+              <cite class="m-pull-quote_citation">
+                  Author Name
+              </cite>
+          </footer>
+      </aside>
+    variation_description: ''
+    variation_name: Default pull quote
+  - variation_code_snippet: |-
+      <aside class="m-pull-quote m-pull-quote__large">
+          <div class="m-pull-quote_body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Cum corrupti tempora nam nihil qui mollitia consectetur
+              corporis nemo culpa dolorum!
+          </div>
+          <footer>
+              <cite class="m-pull-quote_citation">
+                  Author Name
+              </cite>
+          </footer>
+      </aside>
+    variation_description: ''
+    variation_name: Large pull quote
+usage: ''
+accessibility: ''
+research: ''
 ---
 

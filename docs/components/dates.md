@@ -4,11 +4,8 @@ permalink: /components/dates
 layout: component
 collection_name: components
 section: components
-status: Proposed
-intro: |-
-  More information can be found at:
-
-  https://cfpb.github.io/capital-framework/components/cf-typography/#date
+status: Released
+intro: Use the `.a-date` class to display a date.
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.

@@ -4,60 +4,46 @@ permalink: /components/headers
 layout: component
 collection_name: components
 section: components
-status: Proposed
-intro: |-
-  More information can be found at:
-
-  https://cfpb.github.io/capital-framework/components/cf-typography/#headers
+status: Released
+intro: Use headers to lead content.
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
-usage: >-
-  **Use cases**
-
-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
-
-
-  **Content guidelines**
-
-
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
-
-
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
-
-
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+  - variation_code_snippet: |-
+      <header class="m-slug-header">
+          <h2 class="a-heading">
+              Blog summary
+          </h2>
+      </header>
+    variation_description: ''
+    variation_name: Slug header
+  - variation_code_snippet: |
+      <header class="m-meta-header">
+          <div class="m-meta-header_right">
+              <span class="a-date">
+                  Nov 4, 2013
+              </span>
+          </div>
+          <div class="m-meta-header_left">
+              <span class="u-visually-hidden">Categories: </span>
+              <a href="#" class="a-heading a-heading__icon">
+                  {% include icons/credit-card.svg %}
+                  Consumer finance
+              </a>
+              |
+              <a href="#" class="a-heading a-heading__icon">
+                  {% include icons/bullhorn.svg %}
+                  At the CFPB
+              </a>
+          </div>
+      </header>
+    variation_description: >-
+      Note that the example shows `.m-meta-header_left` using the
+      `.a-heading__icon` pattern and `.m-meta-header_right` using the `.a-date`
+      pattern but you could use other patterns in place of them. Or you can even
+      swap them so that date is attached to `.m-meta-header_left` and
+      `.a-heading.a-heading__icon` is attached to `.m-meta-header_right`.
+    variation_name: Meta header
+usage: ''
+accessibility: ''
+research: ''
 ---
 

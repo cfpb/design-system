@@ -5,7 +5,19 @@ layout: component
 collection_name: components
 section: components
 status: Proposed
-intro: "Use checkboxes when the user can select more than one option from a list. Make clear with helper text that this is the case.\n\nMore information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#checkboxes\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes"
+intro: >-
+  Use checkboxes when the user can select more than one option from a list. Make
+  clear with helper text that this is the case.
+
+
+  More information can be found at:
+
+
+  *
+  [http://cfpb.github.io/design-manual/page-components/form-fields.html#checkboxes](http://cfpb.github.io/design-manual/page-components/form-fields.html#checkboxes)
+
+  *
+  [https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes](https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes)
 variations:
   - variation_code_snippet: |-
       <div class="m-form-field m-form-field__checkbox">

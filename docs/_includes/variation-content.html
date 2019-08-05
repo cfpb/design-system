@@ -1,0 +1,254 @@
+<section class="content_main">
+
+    <div class="component-header">
+        <h2>
+            {{ page.title }}
+            <div class="a-badge status-{{ page.status }}" title="This component has not yet been migrated to the Design System">
+                {{ page.status }}
+            </div>
+        </h2>
+        <div id="toggle-code">
+            <a class="a-btn" id="toggle-code-btn" href="#">
+                <span class="hide-button">
+                    Hide code &amp; specs
+                    <span class="a-btn_icon a-btn_icon__on-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"/></svg>
+                    </span>
+                </span>
+                <span  class="show-button">
+                    Show code &amp; specs
+                    <span class="a-btn_icon a-btn_icon__on-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"/></svg>
+                    </span>
+                </span>
+            </a>
+        </div>
+    </div>
+
+    {% if page.intro %}
+        <section id="intro" class="u-mt20 u-mb20">
+            {{ page.intro | markdownify }}
+        </section>
+    {% endif %}
+
+    <ul class="m-list m-list__horizontal u-mb20">
+        <li class="m-list_item">
+            <a class="m-list_link" href="#variations">Variations</a>
+        </li>
+        <li class="m-list_item">
+            <a class="m-list_link" href="#usage">Usage</a>
+        </li>
+        <li class="m-list_item">
+            <a class="m-list_link" href="#accessibility">Accessibility</a>
+        </li>
+        <li class="m-list_item">
+            <a class="m-list_link" href="#research">Research</a>
+        </li>
+    </ul>
+
+    <section class="sticky-header">
+        <h3 id="variations">Variations</h3>
+        {% for variation in page.variations %}
+        <div class="u-mt30">
+            <!-- Name -->
+            <h4>{{ variation.variation_name }}</h4>
+
+            <!-- Description -->
+            {{ variation.variation_description | markdownify }}
+
+            <!-- Live code example -->
+            {% if variation.variation_code_snippet %}
+            <div class="live-code-example">
+                {{ variation.variation_code_snippet }}
+            </div>
+            {% endif %}
+
+            <div class="govuk-tabs u-mt30" data-module="tabs"  data-toggle-code>
+                <h2 class="govuk-tabs__title">
+                Contents
+                </h2>
+
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet-{{ forloop.index }}">
+                        HTML                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#jinja-code-snippet-{{ forloop.index }}">
+                        Jinja
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- HTML snippet -->
+                <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
+                    {% if variation.variation_code_snippet %}
+                    <div class="variation-code-snippet">
+                        <h5 class="u-visually-hidden">HTML</h5>
+                        {% if variation.variation_code_snippet %}
+                            <div class="source-code">
+                                <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </section>
+
+                <!-- Jinja snippet -->
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
+                    <div class="variation-jinja-code-snippet">
+                        <h5 class="u-visually-hidden">Jinja</h5>
+                        {{ variation.variation_jinja_code_snippet | markdownify }}
+                    </div>
+                </section>
+
+            </div><!-- .govuk-tabs -->
+
+            {% assign tokens = site.data.cfpb-design-tokens %}
+
+            {% if tokens %}
+
+                {% comment %}
+                    Create an arrary of all the design token columns
+                {% endcomment %}
+                {% assign column_names = "Design token name,Less variable name,Less value,Pixels,Ems,Points,Seconds" | split: "," %}
+
+                {% comment %}
+                    Initalize empty arrays to store the rows and columns
+                    applicable to the current variation
+                {% endcomment %}
+                {% assign rows = "" | split: "/" %}
+                {% assign columns = "" | split: "/" %}
+
+                {% for token in tokens %}
+
+                    {% comment %}
+                        Keep track of the current token's location and create
+                        an array of all the variations that use this token
+                        in the spreadsheet
+                    {% endcomment %}
+                    {% assign token_index = forloop.index %}
+                    {% assign token_variations = token["Components"] | remove: " " | split: "," %}
+
+                    {% comment %}
+                        Create a slugified version of the current variation to
+                        compare to the variations in the spreadsheet
+                    {% endcomment %}
+                    {% capture full_variation_name %}{{ page.title | slugify }}_{{ variation.variation_name | slugify }}{% endcapture %}
+
+                    {% comment %}
+                        For each variation listed next to this token in the
+                        spreadsheet, check if it's the same as the current
+                        variation. If it is, record the row number.
+                        Then go through each cell and check if there's a
+                        value provided. If there is, record the column name.
+                    {% endcomment %}
+                    {% for token_variation in token_variations %}
+                        {% if token_variation == full_variation_name %}
+                            {% assign rows = rows | push: token_index %}
+                            {% for column_name in column_names %}
+                                {% if token[column_name] %}
+                                    {% assign columns = columns | push: column_name %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+
+                {% endfor %}
+
+                {% if rows.size > 0 %}
+
+                    <div class="variation-code-specs" data-toggle-code>
+                        <h5>Specifications</h5>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    {% if columns contains 'Design token name' %}<th>Attribute</th>{% endif %}
+                                    {% if columns contains 'Less variable name' %}<th>Variable</th>{% endif %}
+                                    {% if columns contains 'Less value' %}<th>Value</th>{% endif %}
+                                    {% if columns contains 'Pixels' %}<th>Pixels</th>{% endif %}
+                                    {% if columns contains 'Ems' %}<th>Ems</th>{% endif %}
+                                    {% if columns contains 'Points' %}<th>Points</th>{% endif %}
+                                    {% if columns contains 'Seconds' %}<th>Seconds</th>{% endif %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% comment %}
+                                    For each applicable row, print a cell only if the
+                                    relevant column is necessary.
+                                {% endcomment %}
+                                {% for spec in rows %}
+                                <tr>
+                                    {% if columns contains 'Design token name' %}<td>{{ tokens[spec]["Design token name"] }}</td>{% endif %}
+                                    {% if columns contains 'Less variable name' %}<td>{{ tokens[spec]["Less variable name"] }}</td>{% endif %}
+                                    {% if columns contains 'Less value' %}<td>{{ tokens[spec]["Less value"] }}</td>{% endif %}
+                                    {% if columns contains 'Pixels' %}<td>{{ tokens[spec]["Pixels"] }}</td>{% endif %}
+                                    {% if columns contains 'Ems' %}<td>{{ tokens[spec]["Ems"] }}</td>{% endif %}
+                                    {% if columns contains 'Points' %}<td>{{ tokens[spec]["Points"] }}</td>{% endif %}
+                                    {% if columns contains 'Seconds' %}<td>{{ tokens[spec]["Seconds"] }}</td>{% endif %}
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+
+                    </div>
+                {% endif %}
+
+            {% endif %}
+
+        {% endfor %}
+    </section>
+
+    {% if page.usage %}
+        <section class="sticky-header">
+            <h3 id="usage">Usage</h3>
+            <p>
+                {{ page.usage | markdownify }}
+            </p>
+        </section>
+    {% endif %}
+
+    {% if page.accessibility %}
+        <section class="sticky-header">
+            <h3 id="accessibility">Accessibility</h3>
+            <p>
+                {{ page.accessibility | markdownify }}
+            </p>
+        </section>
+    {% endif %}
+
+    {% if page.research %}
+        <section class="sticky-header">
+            <h3 id="research">Research</h3>
+            <p>
+                {{ page.research | markdownify }}
+            </p>
+        </section>
+    {% endif %}
+
+    <div class="content-l">
+        {% if page.related_items %}
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h3 id="related-items">Related Items</h3>
+                    {{ page.related_items | markdownify }}
+                </section>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if page.help_us %}
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h3 id="help-us">Help us make improvements</h3>
+                    {{ page.help_us | markdownify }}
+                </section>
+            </div>
+        </div>
+        {% endif %}
+    </div><!-- .content-l -->
+
+</section><!-- .content_main -->

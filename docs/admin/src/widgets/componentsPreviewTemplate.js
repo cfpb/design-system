@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { ReactLiquid, liquidEngine } from 'react-liquid';
 import { Tabs } from 'govuk-frontend';
 import marked from 'marked';
-import template from '../../../_includes/component.html';
+import template from '../../../_includes/variation-content.html';
 
 export default class Preview extends Component {
 

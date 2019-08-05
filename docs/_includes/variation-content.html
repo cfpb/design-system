@@ -25,9 +25,9 @@
         </div>
     </div>
 
-    {% if page.intro %}
-        <section id="intro" class="u-mt20 u-mb20">
-            {{ page.intro | markdownify }}
+    {% if page.description %}
+        <section id="description" class="u-mt20 u-mb20">
+            {{ page.description | markdownify }}
         </section>
     {% endif %}
 

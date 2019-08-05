@@ -64,9 +64,9 @@
             {% endif %}
 
             <div class="govuk-tabs u-mt30" data-module="tabs"  data-toggle-code>
-                <h2 class="govuk-tabs__title">
-                Contents
-                </h2>
+                <h5 class="govuk-tabs__title">
+                Code snippets
+                </h5>
 
                 <ul class="govuk-tabs__list">
                     <li class="govuk-tabs__list-item">
@@ -84,7 +84,7 @@
                 <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
                     {% if variation.variation_code_snippet %}
                     <div class="variation-code-snippet">
-                        <h5 class="u-visually-hidden">HTML</h5>
+                        <h6 class="variation-code-snippet-title">HTML</h6>
                         {% if variation.variation_code_snippet %}
                             <div class="source-code">
                                 <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
@@ -97,7 +97,7 @@
                 <!-- Jinja snippet -->
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
                     <div class="variation-jinja-code-snippet">
-                        <h5 class="u-visually-hidden">Jinja</h5>
+                        <h6 class="variation-jinja-code-snippet-title">Jinja</h6>
                         {{ variation.variation_jinja_code_snippet | markdownify }}
                     </div>
                 </section>

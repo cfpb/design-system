@@ -1,8 +1,6 @@
 sections:
   - label: Getting Started
     secondaryNavItems:
-      - label: How to use the design system
-        slug: getting-started/how-to-use-the-design-system
       - label: Help us make improvements
         slug: getting-started/help-us-make-improvements
       - label: Why we are sharing this

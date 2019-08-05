@@ -51,8 +51,7 @@ variations:
           <input class="a-radio"
                  type="radio"
                  id="test_radio_lg_disabled"
-                 disabled
-                 checked>
+                 disabled>
           <label class="a-label" for="test_radio_lg_disabled">Label</label>
       </div>
     variation_name: Disabled large target area radio button

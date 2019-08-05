@@ -1,6 +1,6 @@
 ---
 title: Dates
-permalink: /components/SOMETHING
+permalink: /components/dates
 layout: variation
 section: components
 status: Released

@@ -3,10 +3,14 @@
     <div class="component-header">
         <h2>
             {{ page.title }}
+            {% if page.status %}
             <div class="a-badge status-{{ page.status }}" title="This component has not yet been migrated to the Design System">
                 {{ page.status }}
             </div>
+            {% endif %}
         </h2>
+    {% if page.variations %}
+
         <div id="toggle-code">
             <a class="a-btn" id="toggle-code-btn" href="#">
                 <span class="hide-button">
@@ -23,6 +27,9 @@
                 </span>
             </a>
         </div>
+
+    {% endif %}
+
     </div>
 
     {% if page.description %}
@@ -31,21 +38,31 @@
         </section>
     {% endif %}
 
+    
     <ul class="m-list m-list__horizontal u-mb20">
+        {% if page.variations %}
         <li class="m-list_item">
             <a class="m-list_link" href="#variations">Variations</a>
         </li>
+        {% endif %}
+        {% if page.usage %}
         <li class="m-list_item">
             <a class="m-list_link" href="#usage">Usage</a>
         </li>
+        {% endif %}
+        {% if page.accessibility %}
         <li class="m-list_item">
             <a class="m-list_link" href="#accessibility">Accessibility</a>
         </li>
+        {% endif %}
+        {% if page.research %}
         <li class="m-list_item">
             <a class="m-list_link" href="#research">Research</a>
         </li>
+        {% endif %}
     </ul>
 
+    {% if page.variations %}
     <section class="sticky-header">
         <h3 id="variations">Variations</h3>
         {% for variation in page.variations %}
@@ -199,6 +216,7 @@
 
         {% endfor %}
     </section>
+    {% endif %}
 
     {% if page.usage %}
         <section class="sticky-header">

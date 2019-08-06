@@ -1,8 +1,7 @@
 ---
 title: Components
 permalink: /components
-layout: generic-page
-collection_name: pages
+layout: variation
 section: components
+description: CFPB's Design System has a lot of neat components. Check them out.
 ---
-CFPB's Design System has a lot of neat components. Check them out.

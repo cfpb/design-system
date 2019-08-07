@@ -1,11 +1,11 @@
 ---
 title: Left Hand Navigation
 permalink: /components/left-hand-navigation
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   More information can be found at:
 
 

@@ -1,11 +1,11 @@
 ---
 title: Browse pages
 permalink: /templates/browse-pages
-layout: component
+layout: variation
 collection_name: components
 section: templates
 status: Proposed
-intro: >-
+description: >-
   Browse page types provide specific topic or product overviews and information.
   Often these pages contain medium-length content, access to specific documents
   or other resources, or descriptions of action steps.

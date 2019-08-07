@@ -1,11 +1,11 @@
 ---
 title: Dividers
 permalink: /components/dividers
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: |-
+description: |-
   Information about Dividers can be found at:
 
   https://cfpb.github.io/capital-framework/components/cf-layout/

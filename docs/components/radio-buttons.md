@@ -1,11 +1,11 @@
 ---
 title: Radio Buttons
 permalink: /components/radio-buttons
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >
+description: >
   Use radio buttons when the user can choose only one option out of a list. Use
   these for a small number of discrete elements—avoid long lists of radio
   buttons (usually no more than 6-8 options). When there are more than two

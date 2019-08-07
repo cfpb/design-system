@@ -1,11 +1,11 @@
 ---
 title: Legends
 permalink: /components/legends
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Released
-intro: >-
+description: >-
   The legend serves as the heading for a
   [fieldset](https://cfpb.github.io/design-system/components/fieldsets).
 variations:

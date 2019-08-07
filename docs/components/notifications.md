@@ -1,11 +1,11 @@
 ---
 title: Notifications
 permalink: /components/notifications
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
 
   This component provides notification boxes. Form alerts provide a light-touch
   alternative to notifications for inline form validation or feedback to a

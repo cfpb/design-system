@@ -1,11 +1,11 @@
 ---
 title: Expandables
 permalink: /components/expandables
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: |-
+description: |-
   Information about Expandables can be found at:
 
   http://cfpb.github.io/design-manual/page-components/expandables.html

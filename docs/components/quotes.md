@@ -1,11 +1,11 @@
 ---
 title: Quotes
 permalink: /components/quotes
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Released
-intro: >-
+description: >-
   Use a pull quote to highlight excerpts from the current work. This is not to
   be confused with `blockquote` which quotes from an external work. Since a pull
   quote is an excerpt and repeats content from the article you should use the

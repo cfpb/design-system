@@ -1,11 +1,11 @@
 ---
 title: Document detail pages
 permalink: /templates/document-detail-pages
-layout: component
+layout: variation
 collection_name: components
 section: templates
 status: Proposed
-intro: >-
+description: >-
   Document detail page types provide summary information about a document or
   related group of documents. These pages help users better understand the
   relevancy and context of documents before deciding whether or not to download

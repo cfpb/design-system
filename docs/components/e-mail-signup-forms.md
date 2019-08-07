@@ -1,11 +1,11 @@
 ---
 title: E-mail Signup Forms
 permalink: /components/e-mail-signup-forms
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   Email sign-ups are used to add individual email addresses to a specific
   mailing list that is relevant to the content on the page or the section it is
   contained within.

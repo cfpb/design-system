@@ -1,11 +1,11 @@
 ---
 title: Bar Charts
 permalink: /components/bar-charts
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   Use bar or column charts to show comparisons of different discrete items,
   factors or categories. Comparisons could include items that can be counted and
   categorized. These are some of the easiest charts to interpret because the

@@ -1,11 +1,11 @@
 ---
 title: Wells
 permalink: /components/wells
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: |-
+description: |-
   Information about Wells can be found at:
 
   * http://cfpb.github.io/design-manual/page-components/wells.html

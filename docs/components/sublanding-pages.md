@@ -1,11 +1,11 @@
 ---
 title: Sublanding pages
 permalink: /templates/sublanding-pages
-layout: component
+layout: variation
 collection_name: components
 section: templates
 status: Proposed
-intro: >-
+description: >-
   This page is under active development. Information is being moved into it from
   this page:
 

@@ -1,11 +1,11 @@
 ---
 title: Typography
 permalink: /foundation/typography
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   A clear typographic hierarchy is critical to the effective communication of
   our brand. Type should be light and well-spaced to reinforce that we are
   transparent, open, and approachable. This system uses weight, scale, and

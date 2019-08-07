@@ -1,11 +1,11 @@
 ---
 title: Images
 permalink: /components/images
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: |-
+description: |-
   Information about Images can be found at:
 
   https://cfpb.github.io/capital-framework/components/cf-core/#base-images

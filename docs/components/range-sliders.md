@@ -1,11 +1,11 @@
 ---
 title: Range Sliders
 permalink: /components/range-sliders
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Released
-intro: >-
+description: >-
   More information can be found at:
 
 

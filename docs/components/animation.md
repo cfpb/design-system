@@ -1,11 +1,11 @@
 ---
 title: Animation
 permalink: /foundation/animation
-layout: component
+layout: variation
 collection_name: components
 section: foundation
 status: Proposed
-intro: >-
+description: >-
   Animation should be used to bring on-brand illustrations to life. Animation
   can also be used enhance the display of information, such as drawing the
   trajectory of a line chart or the growth of a bar chart.
@@ -65,4 +65,3 @@ accessibility: >-
   #### Do not create designs or interactions that may cause seizures
    * Nothing on the page should flash more than 3 times in 1 second.
 ---
-

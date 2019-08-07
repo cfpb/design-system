@@ -1,11 +1,11 @@
 ---
 title: Modals
 permalink: /components/modals
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   Modal windows (also known as dialog boxes or lightboxes) are “pop-up” elements
   that appear in front of a web page, blocking the main page below. Similar to
   popup windows or system alerts, modals are unique because they prevent

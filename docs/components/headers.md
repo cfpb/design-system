@@ -1,11 +1,11 @@
 ---
 title: Headers
 permalink: /components/headers
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Released
-intro: Use headers to lead content.
+description: Use headers to lead content.
 variations:
   - variation_code_snippet: |-
       <header class="m-slug-header">

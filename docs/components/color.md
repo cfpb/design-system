@@ -1,11 +1,11 @@
 ---
 title: Color
 permalink: /foundation/color
-layout: component
+layout: variation
 collection_name: components
 section: foundation
 status: Proposed
-intro: >-
+description: >-
   A minimal palette, clear hierarchy, and ample whitespace ensure a voice of
   authority and expertise in communication.
 

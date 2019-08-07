@@ -1,11 +1,11 @@
 ---
 title: Learn pages
 permalink: /templates/learn-pages
-layout: component
+layout: variation
 collection_name: components
 section: templates
 status: Proposed
-intro: >-
+description: >-
   Learn page types provide focused, detailed information about a specific topic.
   These pages may contain lengthy text passages or interactive content that
   require more engagement from the user.

@@ -1,11 +1,11 @@
 ---
 title: Illustration
 permalink: /foundation/illustration
-layout: component
+layout: variation
 collection_name: components
 section: foundation
 status: Proposed
-intro: >-
+description: >-
   Illustrations are an important tool for introducing the subject matter of a
   page, event, or topic. Illustrations are vector-based graphics that support
   primary headers and text. They function as the brand’s top-level illustration

@@ -1,11 +1,11 @@
 ---
 title: Introductions
 permalink: /components/introductions
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   Information about Introductions can be found at:
 
 

@@ -1,11 +1,11 @@
 ---
 title: Utilities
 permalink: /components/utilities
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: |-
+description: |-
   Information about Utilities can be found at:
 
   https://cfpb.github.io/capital-framework/components/cf-core/#utilities

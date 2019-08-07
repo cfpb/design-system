@@ -1,11 +1,11 @@
 ---
 title: Landing pages
 permalink: /templates/landing-pages
-layout: component
+layout: variation
 collection_name: components
 section: templates
 status: Proposed
-intro: >-
+description: >-
   Landing page types provide an overview of a main navigation section and helps
   users situate themselves within the site and the subject matter. Their main
   function is to preview the different sub-pages within that section and help

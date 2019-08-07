@@ -1,11 +1,11 @@
 ---
 title: Blocks
 permalink: /components/blocks
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   `.block` is a base class with several modifiers that help you separate chunks
   of content via `margin`, `padding`, `border`, and `background`.
 

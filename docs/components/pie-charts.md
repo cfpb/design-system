@@ -1,11 +1,11 @@
 ---
 title: Pie Charts
 permalink: /components/pie-charts
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   Use when you have less than six things that add up to 100%. Use the middle of
   the doughnut to highlight the number or category type. You could also consider
   using a stacked bar chart instead.

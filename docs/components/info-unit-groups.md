@@ -1,11 +1,11 @@
 ---
 title: Info Unit Groups
 permalink: /components/info-unit-groups
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Legacy
-intro: >-
+description: >-
   Info unit groups are very important. Etiam at risus et justo dignissim congue.
   Donec congue lacinia dui, a porttitor lectus condimentum laoreet.
 variations:

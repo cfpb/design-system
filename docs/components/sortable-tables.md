@@ -1,11 +1,11 @@
 ---
 title: Sortable Tables
 permalink: /components/sortable-tables
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: "More information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/tables.html\t\n* https://cfpb.github.io/capital-framework/components/cf-tables/#sortable-tables"
+description: "More information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/tables.html\t\n* https://cfpb.github.io/capital-framework/components/cf-tables/#sortable-tables"
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.

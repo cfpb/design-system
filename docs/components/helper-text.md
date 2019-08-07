@@ -1,11 +1,11 @@
 ---
 title: Helper Text
 permalink: /components/helper-text
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: "More information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#labels-and-helper-text\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#label-helper-text"
+description: "More information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#labels-and-helper-text\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#label-helper-text"
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.

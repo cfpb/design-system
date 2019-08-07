@@ -1,11 +1,11 @@
 ---
 title: Multi-Selects
 permalink: /components/multi-selects
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   More information can be found at:
 
 

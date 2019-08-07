@@ -1,11 +1,11 @@
 ---
 title: Line Charts
 permalink: /components/line-charts
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   Use when you have one factor over time to show change. Start your axis at 0
   and label your axis to avoid confusion.
 

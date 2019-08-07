@@ -1,11 +1,11 @@
 ---
 title: Labels
 permalink: /components/labels
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: "More information can be found at:\n* http://cfpb.github.io/design-manual/page-components/form-fields.html\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#labels"
+description: "More information can be found at:\n* http://cfpb.github.io/design-manual/page-components/form-fields.html\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#labels"
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.

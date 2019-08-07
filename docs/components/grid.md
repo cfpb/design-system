@@ -1,11 +1,11 @@
 ---
 title: Grid
 permalink: /components/grid
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   The grid provides structure for website content. The flexible design adjusts
   for different devices.
 

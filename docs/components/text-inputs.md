@@ -1,11 +1,11 @@
 ---
 title: Text Inputs
 permalink: /components/text-inputs
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   This page includes other components like form alerts and buttons. You can
   learn more about these on their respective pages.
 

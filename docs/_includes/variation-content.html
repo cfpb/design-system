@@ -4,7 +4,7 @@
         <h2>
             {{ page.title }}
             {% if page.status %}
-            <div class="a-badge status-{{ page.status }}" title="This component has not yet been migrated to the Design System">
+            <div class="a-badge status-{{ page.status }}">
                 {{ page.status }}
             </div>
             {% endif %}
@@ -38,7 +38,7 @@
         </section>
     {% endif %}
 
-    
+
     <ul class="m-list m-list__horizontal u-mb20">
         {% if page.variations %}
         <li class="m-list_item">
@@ -124,7 +124,7 @@
                         <h6 class="variation-jinja-code-snippet-title">Jinja</h6>
                         {{ variation.variation_jinja_code_snippet | markdownify }}
                     </div>
-                    {% endif %}    
+                    {% endif %}
                 </section>
 
             </div><!-- .govuk-tabs -->

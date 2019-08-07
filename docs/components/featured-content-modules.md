@@ -1,11 +1,11 @@
 ---
 title: Featured Content Module
 permalink: /components/featured-content-modules
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   Information about Featured Content Modules can be found at:
 
 

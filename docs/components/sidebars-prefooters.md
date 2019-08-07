@@ -1,11 +1,11 @@
 ---
 title: Sidebars/Prefooters
 permalink: /components/sidebars-prefooters
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   Information about Sidebars/Prefooters can be found at:
 
   * http://cfpb.github.io/design-manual/page-components/sidebar-prefooter.html

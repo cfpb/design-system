@@ -1,11 +1,11 @@
 ---
 title: Paragraphs
 permalink: /components/paragraphs
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   This page is under active development. Information is being moved into it from
   these pages:
 

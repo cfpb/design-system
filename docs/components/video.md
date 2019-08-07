@@ -1,11 +1,11 @@
 ---
 title: Video
 permalink: /foundation/video
-layout: component
+layout: variation
 collection_name: components
 section: foundation
 status: Proposed
-intro: >-
+description: >-
   Video is a powerful tool that can be used to educate viewers about the
   financial marketplace and the CFPB’s role in regulating it.
 

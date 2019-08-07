@@ -1,11 +1,11 @@
 ---
 title: Filterable list pages
 permalink: /templates/filterable-list-pages
-layout: component
+layout: variation
 collection_name: components
 section: templates
 status: Proposed
-intro: >-
+description: >-
   Filterable list page types are used to house searchable lists of articles,
   documents, or other resources and publications.
 

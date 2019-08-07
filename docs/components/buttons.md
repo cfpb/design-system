@@ -1,11 +1,11 @@
 ---
 title: Buttons
 permalink: components/buttons
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Released
-intro: >-
+description: >-
   Buttons signal actions. They should be used sparingly; each additional button
   on a page reduces the visual prominence of a call to action. In contrast,
   [links](https://test-things.github.io/design-system/components/link) should

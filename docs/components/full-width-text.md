@@ -1,11 +1,11 @@
 ---
 title: Full Width Text
 permalink: /components/full-width-text
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: "Information about Full Width Text can be found at:\n\nhttp://cfpb.github.io/design-manual/page-components/fullwidth-text.html\t\n\nand\n\nhttps://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts"
+description: "Information about Full Width Text can be found at:\n\nhttp://cfpb.github.io/design-manual/page-components/fullwidth-text.html\t\n\nand\n\nhttps://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts"
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.

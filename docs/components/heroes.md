@@ -1,11 +1,11 @@
 ---
 title: Heroes
 permalink: /components/heroes
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   Heroes function as a primary focal point on a page, often used to introduce a
   collection of pages by combining a brief description of the goals of that
   section along with a visually impactful graphic.

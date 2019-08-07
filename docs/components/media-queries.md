@@ -1,11 +1,11 @@
 ---
 title: Media Queries
 permalink: /components/media-queries
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: |-
+description: |-
   Information about Media Queries can be found at:
 
   https://cfpb.github.io/capital-framework/components/cf-core/#media-queries

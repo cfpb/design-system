@@ -1,11 +1,11 @@
 ---
 title: Iconography
 permalink: /foundation/iconography
-layout: component
+layout: variation
 collection_name: components
 section: foundation
 status: Proposed
-intro: >-
+description: >-
   Icons visually reinforce an interface action, file type, status, or category.
 
 

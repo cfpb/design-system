@@ -1,11 +1,11 @@
 ---
 title: Headings
 permalink: /components/heading-hierarchy
-layout: component
+layout: variation
 collection_name: components
 section: components
 status: Proposed
-intro: >-
+description: >-
   Hierarchy refers to the difference in type size and weight between text
   elements. A successful hierarchy establishes the order of importance of
   elements on a page, allowing readers to easily scan content and find what

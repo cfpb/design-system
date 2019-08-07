@@ -3,7 +3,7 @@ title: How to use the design system
 permalink: /getting-started/how-to-use-the-design-system
 layout: variation
 section: getting-started
-status: Released
+status: Proposed
 description: >-
   Capital Framework provides a set of modular HTML, CSS, and JavaScript patterns
   that can be used both collectively and individually. There are several ways to

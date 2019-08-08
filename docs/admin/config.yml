@@ -32,6 +32,14 @@ collections:
       - name: 'section'
         default: 'getting-started'
         widget: 'hidden'
+      - name: 'secondary_section'
+        label: 'Navigation section'
+        widget: 'select'
+        required: false
+        hint: 'Where on the website will this page live?'
+        options:
+          - label: 'Getting started'
+            value: 'Getting started'
       - name: 'status'
         label: 'Implementation status'
         widget: 'select'

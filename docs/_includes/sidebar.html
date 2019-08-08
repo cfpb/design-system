@@ -16,6 +16,7 @@
 {% endcomment %}
 {% assign secondary_sections = secondary_sections | sort %}
 
+{% if secondary_sections %}
 <ul>
     {% for secondary_section in secondary_sections | sort %}
     <li>
@@ -30,3 +31,12 @@
     </li>
     {% endfor %}
 </ul>
+{% else %}
+<ul>
+    {% for p in site.pages %}
+        {% if p.section == page.section %}
+        <li><a href="{{ site.baseurl }}/{{ p.section }}/{{ p.title | slugify }}">{{ p.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}

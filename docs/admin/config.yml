@@ -291,6 +291,18 @@ collections:
         label: 'Usage'
         widget: 'markdown'
         required: false
+      - name: 'restrictions'
+        label: 'Restrictions'
+        widget: 'list'
+        fields:
+          - name: 'restrictions_do'
+            label: 'Do'
+            widget: 'markdown'
+            required: false
+          - name: 'restrictions_do_not'
+            label: 'Do not'
+            widget: 'markdown'
+            required: false
       - name: 'accessibility'
         label: 'Accessibility'
         widget: 'markdown'

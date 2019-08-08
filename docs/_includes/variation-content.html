@@ -227,12 +227,29 @@
     </section>
     {% endif %}
 
-    {% if page.usage %}
+    {% if page.usage or page.restrictions %}
         <section class="sticky-header">
             <h3 id="usage">Usage</h3>
             <p>
-                {{ page.usage | markdownify }}
+                {% if page.usage %}
+                    {{ page.usage | markdownify }}
+                {% endif %}
             </p>
+            {% if page.restrictions %}
+                <h4>Restrictions</h4>
+                {% for restriction in page.restrictions %}
+                    {% if restriction.restrictions_do %}
+                    <p>
+                        {{ restriction.restrictions_do | markdownify }}
+                    </p>
+                    {% endif %}
+                    {% if restriction.restrictions_do_not %}
+                    <p>
+                        {{ restriction.restrictions_do_not | markdownify }}
+                    </p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
         </section>
     {% endif %}
 

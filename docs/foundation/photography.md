@@ -1,9 +1,8 @@
 ---
 title: Photography
-permalink: /foundation/photography
 layout: variation
-collection_name: components
 section: foundation
+secondary_section: Imagery
 status: Proposed
 description: >-
   Photography is an important tool that helps us relate to consumers,
@@ -65,4 +64,3 @@ accessibility: >-
   * Include descriptive text near images (for example, a pie chart legend with
   percentages of each item).
 ---
-

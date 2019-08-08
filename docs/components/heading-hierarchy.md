@@ -1,9 +1,8 @@
 ---
 title: Headings
-permalink: /components/heading-hierarchy
 layout: variation
-collection_name: components
 section: components
+secondary_section: Text
 status: Proposed
 description: >-
   Hierarchy refers to the difference in type size and weight between text
@@ -40,9 +39,9 @@ variations:
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
       Text size | @size-i: | 34px; | 34px | 38pt
-      Small screen text size | | | 26px | 
+      Small screen text size | | | 26px |
       Line height (pixels) | ? |  | 42px | 40pt
-      Small screen line height | | 32px | 
+      Small screen line height | | 32px |
       Bottom margin | | | 15px |
   - variation_code_snippet: |-
       <h2>Heading level 2</h2>
@@ -59,9 +58,9 @@ variations:
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
       Text size | @size-ii: | 26px; | 26px | 26pt
-      Small screen text size | | | 22px | 
+      Small screen text size | | | 22px |
       Line height (pixels) | ? |  | 32px | 28pt
-      Small screen line height | | 28px | 
+      Small screen line height | | 28px |
       Bottom margin | | | 15px |
   - variation_code_snippet: |-
       <h3>Heading level 3</h3>
@@ -79,9 +78,9 @@ variations:
       --- | --- | --- | --- | ---
       Typeface | | | | Avenir Next Demi Bold
       Text size | @size-iii: | 22px; | 22px | 16pt
-      Small screen text size | | | 18px | 
+      Small screen text size | | | 18px |
       Line height (pixels) | ? |  | 28px | 18pt
-      Small screen line height | | 22px | 
+      Small screen line height | | 22px |
       Bottom margin | | | 15px |
   - variation_code_snippet: |-
       <h4>Heading level 4</h4>
@@ -103,9 +102,9 @@ variations:
       --- | --- | --- | --- | ---
       Typeface | | | Avenir Next Medium | Avenir Next Medium
       Text size | @size-iv: | 18px; | 18px | 14pt
-      Small screen text size | | | 16px | 
+      Small screen text size | | | 16px |
       Line height (pixels) | ? |  | 22px | 16pt
-      Small screen line height | | 18px | 
+      Small screen line height | | 18px |
       Bottom margin | | | 15px |
   - variation_code_snippet: |-
       <h5>Heading level 5</h5>
@@ -137,7 +136,7 @@ variations:
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
       Typeface | | | Avenir Next Demi Bold | Avenir Next Medium
-      Case | | | All caps | 
+      Case | | | All caps |
       Text size | @size-vi: | 12px; | 12px | 12pt
       Line height (pixels) | ? |  | 15px | 14pt
       Bottom margin | | | 15px |
@@ -161,7 +160,7 @@ usage: >-
 
 
   Consistent scaling, weights, and capitalization are used to create distinction
-  between heading levels. 
+  between heading levels.
 
 
   **Content guidelines**
@@ -180,4 +179,3 @@ accessibility: >-
   screen readers (see Meta Header).
 research: TBD
 ---
-

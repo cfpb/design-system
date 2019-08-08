@@ -1,9 +1,8 @@
 ---
 title: Pie Charts
-permalink: /components/pie-charts
 layout: variation
-collection_name: components
 section: components
+secondary_section: Data visualization
 status: Proposed
 description: >-
   Use when you have less than six things that add up to 100%. Use the middle of
@@ -36,4 +35,3 @@ usage: |-
 accessibility: ''
 research: ''
 ---
-

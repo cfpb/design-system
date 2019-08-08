@@ -1,9 +1,8 @@
 ---
 title: Helper Text
-permalink: /components/helper-text
 layout: variation
-collection_name: components
 section: components
+secondary_section: Text
 status: Proposed
 description: "More information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#labels-and-helper-text\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#label-helper-text"
 variations:
@@ -57,4 +56,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

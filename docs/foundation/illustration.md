@@ -1,9 +1,8 @@
 ---
 title: Illustration
-permalink: /foundation/illustration
 layout: variation
-collection_name: components
 section: foundation
+secondary_section: Imagery
 status: Proposed
 description: >-
   Illustrations are an important tool for introducing the subject matter of a
@@ -146,4 +145,3 @@ accessibility: >-
   * Include descriptive text near images (for example, a pie chart legend with
   percentages of each item).
 ---
-

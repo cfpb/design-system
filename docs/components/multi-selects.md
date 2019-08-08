@@ -1,9 +1,8 @@
 ---
 title: Multi-Selects
-permalink: /components/multi-selects
 layout: variation
-collection_name: components
 section: components
+secondary_section: Forms
 status: Proposed
 description: >-
   More information can be found at:
@@ -61,4 +60,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

@@ -1,9 +1,8 @@
 ---
 title: Dropdowns
-permalink: /components/dropdowns
 layout: variation
-collection_name: components
 section: components
+secondary_section: Forms
 status: Proposed
 description: Dropdowns are great.
 variations:
@@ -58,4 +57,3 @@ research: >-
   amet leo consequat posuere.
 help_us: "More information about Dropdowns can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#dropdowns\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#select-dropdown"
 ---
-

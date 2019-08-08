@@ -1,9 +1,8 @@
 ---
 title: Heroes
-permalink: /components/heroes
 layout: variation
-collection_name: components
 section: components
+secondary_section: Content layouts
 status: Proposed
 description: >-
   Heroes function as a primary focal point on a page, often used to introduce a
@@ -482,4 +481,3 @@ usage: >-
 accessibility: ''
 research: ''
 ---
-

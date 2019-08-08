@@ -1,9 +1,8 @@
 ---
 title: Lists
-permalink: /components/lists
 layout: variation
-collection_name: components
 section: components
+secondary_section: Text
 status: Proposed
 description: "More information can be found at:\n* http://cfpb.github.io/design-manual/brand-guidelines/typography.html\t\n* https://cfpb.github.io/capital-framework/components/cf-typography/#lists"
 variations:
@@ -57,4 +56,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

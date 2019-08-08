@@ -1,9 +1,8 @@
 ---
 title: Landing pages
-permalink: /templates/landing-pages
 layout: variation
-collection_name: components
 section: templates
+secondary_section: Web templates
 status: Proposed
 description: >-
   Landing page types provide an overview of a main navigation section and helps
@@ -121,4 +120,3 @@ related_items: |-
   * Related posts / Related links
   * Email signup
 ---
-

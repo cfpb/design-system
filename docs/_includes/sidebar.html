@@ -1,41 +1,32 @@
-{% for section in site.data.navigation.sections %}
-    <!-- todo: remove from sidebar -->
-    {% if section.slug == page.section or page.section == 'all' %}
-        {% if page.section == 'all' %}
-            <h3>
-                {% if section.slug and section.slug != '' %}
-                    <a href="{{ site.baseurl }}/{{ section.slug }}">{{ section.label }}</a>
-                {% else %}
-                    {{ section.label }}
-                {% endif %}
-            </h3>
-        {% endif %}
-        {% if section.secondaryNavItems %}
-        <ul>        
-            {% for secondaryNavItem in section.secondaryNavItems %}
-            <li>
-                {% if secondaryNavItem.slug and secondaryNavItem.slug != '' %}
-                    <a href="{{ site.baseurl }}/{{ secondaryNavItem.slug }}">{{ secondaryNavItem.label }}</a>
-                {% else %}
-                    {{ secondaryNavItem.label }}
-                {% endif %}
-                {% if secondaryNavItem.tertiaryNavItems %}
-                    <ul>
-                        {% for tertiaryNavItem in secondaryNavItem.tertiaryNavItems %}
-                        <li>
-                            {% if tertiaryNavItem.slug and tertiaryNavItem.slug != '' %}
-                            <a href="{{ site.baseurl }}/{{ tertiaryNavItem.slug }}">{{ tertiaryNavItem.label }}</a>
-                            {% else %}
-                                {{ tertiaryNavItem.label }}
-                            {% endif %}
-                        </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
+{% comment %}
+    Create an empty array to store secondary nav sections
+{% endcomment %}
+{% assign secondary_sections = '' | split: ',' %}
 
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
+{% for p in site.pages %}
+    {% if p.section == page.section and p.secondary_section %}
+        {% unless secondary_sections contains p.secondary_section %}
+            {% assign secondary_sections = secondary_sections | push: p.secondary_section %}
+        {% endunless %}
     {% endif %}
 {% endfor %}
+
+{% comment %}
+    Alphabetize the sections
+{% endcomment %}
+{% assign secondary_sections = secondary_sections | sort %}
+
+<ul>
+    {% for secondary_section in secondary_sections | sort %}
+    <li>
+        {{ secondary_section }}
+        <ul>
+            {% for p in site.pages %}
+                {% if p.section == page.section and p.secondary_section == secondary_section %}
+                <li><a href="{{ site.baseurl }}/{{ p.section }}/{{ p.title | slugify }}">{{ p.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>

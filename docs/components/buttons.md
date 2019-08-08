@@ -1,9 +1,8 @@
 ---
 title: Buttons
-permalink: components/buttons
 layout: variation
-collection_name: components
 section: components
+secondary_section: Forms
 status: Released
 description: >-
   Buttons signal actions. They should be used sparingly; each additional button

@@ -1,9 +1,8 @@
 ---
 title: Featured Content Module
-permalink: /components/featured-content-modules
 layout: variation
-collection_name: components
 section: components
+secondary_section: Content layouts
 status: Proposed
 description: >-
   Information about Featured Content Modules can be found at:
@@ -67,4 +66,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

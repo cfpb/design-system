@@ -1,9 +1,8 @@
 ---
 title: Filterable list pages
-permalink: /templates/filterable-list-pages
 layout: variation
-collection_name: components
 section: templates
+secondary_section: Web templates
 status: Proposed
 description: >-
   Filterable list page types are used to house searchable lists of articles,
@@ -109,4 +108,3 @@ related_items: |-
   * Sidebar
   * Email sign-up
 ---
-

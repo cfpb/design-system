@@ -1,9 +1,8 @@
 ---
 title: Blocks
-permalink: /components/blocks
 layout: variation
-collection_name: components
 section: components
+secondary_section: Content layouts
 status: Proposed
 description: >-
   `.block` is a base class with several modifiers that help you separate chunks
@@ -257,4 +256,3 @@ usage: |-
 accessibility: TBD
 research: TBD
 ---
-

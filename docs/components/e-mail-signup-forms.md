@@ -1,9 +1,8 @@
 ---
 title: E-mail Signup Forms
-permalink: /components/e-mail-signup-forms
 layout: variation
-collection_name: components
 section: components
+secondary_section: Forms
 status: Proposed
 description: >-
   Email sign-ups are used to add individual email addresses to a specific
@@ -92,4 +91,3 @@ research: >-
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
 ---
-

@@ -1,9 +1,8 @@
 ---
 title: Modals
-permalink: /components/modals
 layout: variation
-collection_name: components
 section: components
+secondary_section: Alerts
 status: Proposed
 description: >-
   Modal windows (also known as dialog boxes or lightboxes) are “pop-up” elements
@@ -217,4 +216,3 @@ usage: >-
 accessibility: ''
 research: ''
 ---
-

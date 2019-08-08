@@ -1,9 +1,8 @@
 ---
 title: Checkboxes
-permalink: /components/checkboxes
 layout: variation
-collection_name: components
 section: components
+secondary_section: Forms
 status: Proposed
 description: "Use checkboxes when the user can select more than one option from a list. Make clear with helper text that this is the case.\n\nMore information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#checkboxes\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes"
 variations:
@@ -86,4 +85,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

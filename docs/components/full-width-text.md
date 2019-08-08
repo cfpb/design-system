@@ -1,9 +1,8 @@
 ---
 title: Full Width Text
-permalink: /components/full-width-text
 layout: variation
-collection_name: components
 section: components
+secondary_section: Content layouts
 status: Proposed
 description: "Information about Full Width Text can be found at:\n\nhttp://cfpb.github.io/design-manual/page-components/fullwidth-text.html\t\n\nand\n\nhttps://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts"
 variations:
@@ -57,4 +56,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

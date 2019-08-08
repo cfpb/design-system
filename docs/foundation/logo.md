@@ -1,9 +1,8 @@
 ---
 title: Logo
-permalink: /foundation/logo
 layout: variation
-collection_name: pages
 section: foundation
+secondary_section: Identity
 description: >-
   <div class="content-67 content-first" markdown="1">
 

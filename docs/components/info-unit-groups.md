@@ -1,9 +1,8 @@
 ---
 title: Info Unit Groups
-permalink: /components/info-unit-groups
 layout: variation
-collection_name: components
 section: components
+secondary_section: Content layouts
 status: Legacy
 description: >-
   Info unit groups are very important. Etiam at risus et justo dignissim congue.

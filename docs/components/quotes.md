@@ -1,9 +1,8 @@
 ---
 title: Quotes
-permalink: /components/quotes
 layout: variation
-collection_name: components
 section: components
+secondary_section: Text
 status: Released
 description: >-
   Use a pull quote to highlight excerpts from the current work. This is not to
@@ -45,4 +44,3 @@ usage: ''
 accessibility: ''
 research: ''
 ---
-

@@ -1,9 +1,8 @@
 ---
 title: Range Sliders
-permalink: /components/range-sliders
 layout: variation
-collection_name: components
 section: components
+secondary_section: Forms
 status: Released
 description: >-
   More information can be found at:
@@ -38,4 +37,3 @@ usage: >-
 accessibility: Make sure that sliders are accessible by keyboard using the arrow keys
 research: ''
 ---
-

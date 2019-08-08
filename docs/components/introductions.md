@@ -1,9 +1,8 @@
 ---
 title: Introductions
-permalink: /components/introductions
 layout: variation
-collection_name: components
 section: components
+secondary_section: Content layouts
 status: Proposed
 description: >-
   Information about Introductions can be found at:
@@ -293,4 +292,3 @@ help_us: |-
   * [github issue goes here](<>)
   * [email us](<>)
 ---
-

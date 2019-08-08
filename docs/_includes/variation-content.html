@@ -236,19 +236,39 @@
                 {% endif %}
             </p>
             {% if page.restrictions %}
-                <h4>Restrictions</h4>
-                {% for restriction in page.restrictions %}
-                    {% if restriction.restrictions_do %}
-                    <p>
-                        {{ restriction.restrictions_do | markdownify }}
-                    </p>
-                    {% endif %}
-                    {% if restriction.restrictions_do_not %}
-                    <p>
-                        {{ restriction.restrictions_do_not | markdownify }}
-                    </p>
-                    {% endif %}
-                {% endfor %}
+                <div class="content-l">
+                    <h4>Restrictions</h4>
+                    {% for restriction in page.restrictions %}
+                        {% if restriction.restrictions_do %}
+                            <div class="content-l_col content-l_col-1-2">
+                                <div>
+                                    <header class="m-slug-header">
+                                        <h5 class="a-heading">
+                                            Do
+                                        </h5>
+                                    </header>
+                                    <p>
+                                    {{ restriction.restrictions_do | markdownify }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if restriction.restrictions_do_not %}
+                            <div class="content-l_col content-l_col-1-2">
+                                <div>
+                                    <header class="m-slug-header">
+                                        <h5 class="a-heading">
+                                            Do not
+                                        </h5>
+                                    </header>
+                                    <p>
+                                    {{ restriction.restrictions_do_not | markdownify }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div><!-- .content-l -->
             {% endif %}
         </section>
     {% endif %}

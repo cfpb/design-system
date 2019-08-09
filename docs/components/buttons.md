@@ -259,8 +259,31 @@ usage: >-
   NOTE: If you use cf-buttons.less directly, be sure to run the file through
   Autoprefixer, or your compiled Capital Framework CSS will not work perfectly
   in older browsers.
-accessibility: TBD
-research: TBD
+restrictions:
+  - restrictions_do: <button class="a-btn" title="Test button">Short label</button>
+    restrictions_do_not: >-
+      <button class="a-btn" title="Test button">This label is much, much too
+      long</button>
+  - restrictions_do: |+
+      <button class="a-btn">
+          <span class="a-btn_icon
+                       a-btn_icon__on-left">
+             {% include icons/left.svg %}
+          </span>
+          Back
+      </button>
+
+    restrictions_do_not: |-
+      <button class="a-btn">
+          Back
+          <span class="a-btn_icon
+                       a-btn_icon__on-right">
+              {% include icons/left.svg %}
+          </span>
+      </button>
+accessibility: ''
+research: ''
 related_items: '- related items'
 help_us: "More information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/"
 ---
+

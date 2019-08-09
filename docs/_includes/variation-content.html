@@ -227,12 +227,49 @@
     </section>
     {% endif %}
 
-    {% if page.usage %}
+    {% if page.usage or page.restrictions %}
         <section class="sticky-header">
             <h3 id="usage">Usage</h3>
-            <p>
-                {{ page.usage | markdownify }}
-            </p>
+                {% if page.usage %}
+                    <p>
+                    {{ page.usage | markdownify }}
+                    </p>
+                {% endif %}
+            {% if page.restrictions %}
+                <div class="content-l">
+                    <h4>Restrictions</h4>
+                    {% for restriction in page.restrictions %}
+                        {% if restriction.restrictions_do %}
+                            <div class="content-l_col content-l_col-1-2">
+                                <div>
+                                    <header class="m-slug-header">
+                                        <h5 class="a-heading">
+                                            Do
+                                        </h5>
+                                    </header>
+                                    <p>
+                                    {{ restriction.restrictions_do | markdownify }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if restriction.restrictions_do_not %}
+                            <div class="content-l_col content-l_col-1-2">
+                                <div>
+                                    <header class="m-slug-header m-slug-header__warning">
+                                        <h5 class="a-heading">
+                                            Do not
+                                        </h5>
+                                    </header>
+                                    <p>
+                                    {{ restriction.restrictions_do_not | markdownify }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div><!-- .content-l -->
+            {% endif %}
         </section>
     {% endif %}
 

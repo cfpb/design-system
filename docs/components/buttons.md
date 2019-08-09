@@ -260,11 +260,19 @@ usage: >-
   Autoprefixer, or your compiled Capital Framework CSS will not work perfectly
   in older browsers.
 restrictions:
-  - restrictions_do: <button class="a-btn" title="Test button">Short label</button>
+  - restrictions_do: |-
+      Test
+
+      <button class="a-btn" title="Test button">Short label</button>
     restrictions_do_not: >-
+      Test
+
+
       <button class="a-btn" title="Test button">This label is much, much too
       long</button>
   - restrictions_do: |+
+      Test
+
       <button class="a-btn">
           <span class="a-btn_icon
                        a-btn_icon__on-left">
@@ -274,6 +282,8 @@ restrictions:
       </button>
 
     restrictions_do_not: |-
+      Test
+
       <button class="a-btn">
           Back
           <span class="a-btn_icon

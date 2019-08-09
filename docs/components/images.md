@@ -2,7 +2,7 @@
 title: Images
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Data visualization
 status: Proposed
 description: |-
   Information about Images can be found at:
@@ -59,3 +59,4 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
+

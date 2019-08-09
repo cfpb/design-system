@@ -1,9 +1,8 @@
 ---
 title: Learn pages
-permalink: /templates/learn-pages
 layout: variation
-collection_name: components
 section: templates
+secondary_section: Web templates
 status: Proposed
 description: >-
   Learn page types provide focused, detailed information about a specific topic.
@@ -103,4 +102,3 @@ related_items: |-
   * Email signup
   * Contact information
 ---
-

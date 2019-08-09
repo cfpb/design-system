@@ -1,9 +1,8 @@
 ---
 title: Contact Information
-permalink: /components/contact-information
 layout: variation
-collection_name: components
 section: components
+secondary_section: Content layouts
 status: Proposed
 description: |-
   Information for "Contact Information" can be found at:
@@ -84,4 +83,3 @@ research: >-
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
 ---
-

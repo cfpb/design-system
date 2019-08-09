@@ -1,9 +1,8 @@
 ---
 title: Atomic Components
-permalink: /components/atomic-components
 layout: variation
-collection_name: components
 section: components
+secondary_section: Content layouts
 status: Proposed
 description: >-
   Atomic Component is a micro framework for building Atomic Design components
@@ -89,4 +88,3 @@ usage: >-
 accessibility: ''
 research: ''
 ---
-

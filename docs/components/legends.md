@@ -1,9 +1,8 @@
 ---
 title: Legends
-permalink: /components/legends
 layout: variation
-collection_name: components
 section: components
+secondary_section: Text
 status: Released
 description: >-
   The legend serves as the heading for a
@@ -22,4 +21,3 @@ help_us: >-
   Legend specs can be found in the [Design
   Manual](http://cfpb.github.io/design-manual/page-components/form-fields.html#legend).
 ---
-

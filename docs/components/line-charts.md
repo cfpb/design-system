@@ -1,9 +1,8 @@
 ---
 title: Line Charts
-permalink: /components/line-charts
 layout: variation
-collection_name: components
 section: components
+secondary_section: Data visualization
 status: Proposed
 description: >-
   Use when you have one factor over time to show change. Start your axis at 0
@@ -38,4 +37,3 @@ usage: >-
 accessibility: ''
 research: ''
 ---
-

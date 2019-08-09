@@ -1,9 +1,8 @@
 ---
 title: Beam pattern
-permalink: /foundation/beam-pattern
 layout: variation
-collection_name: pages
 section: foundation
+secondary_section: Identity
 description: >-
   - [Stylistic guidelines](#stylistic-guidelines)
 

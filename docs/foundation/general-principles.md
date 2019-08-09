@@ -1,9 +1,8 @@
 ---
 title: General principles
-permalink: /foundation/general-principles
 layout: variation
-collection_name: pages
 section: foundation
+secondary_section: Design principles
 description: >-
   ### Overall principles
 

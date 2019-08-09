@@ -1,9 +1,8 @@
 ---
 title: Sublanding pages
-permalink: /templates/sublanding-pages
 layout: variation
-collection_name: components
 section: templates
+secondary_section: Web templates
 status: Proposed
 description: >-
   This page is under active development. Information is being moved into it from
@@ -133,4 +132,3 @@ related_items: |-
   * Email signup
   * Contact information
 ---
-

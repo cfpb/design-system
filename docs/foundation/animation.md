@@ -1,9 +1,8 @@
 ---
 title: Animation
-permalink: /foundation/animation
 layout: variation
-collection_name: components
 section: foundation
+secondary_section: Multimedia
 status: Proposed
 description: >-
   Animation should be used to bring on-brand illustrations to life. Animation

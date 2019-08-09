@@ -14,56 +14,6 @@ media_folder: docs/images/uploads
 public_folder: /design-system/images/uploads
 
 collections:
-  - name: "navigation"
-    label: "Navigation"
-    editor:
-      preview: true
-    files:
-      - label: "Navigation"
-        name: "navigation"
-        file: "docs/_data/navigation.yml"
-        fields:
-          - label: "Sections"
-            name: "sections"
-            widget: "list"
-            required: false
-            fields:
-              - name: 'label'
-                label: 'Link text'
-                widget: 'string'
-                required: false
-              - name: 'slug'
-                label: 'Slug'
-                widget: 'string'
-                required: false
-              - name: 'secondaryNavItems'
-                label: 'Secondary nav items'
-                label_singular: 'Secondary nav item'
-                widget: 'list'
-                required: false
-                fields:
-                  - name: 'label'
-                    label: 'Link text'
-                    widget: 'string'
-                    required: false
-                  - name: 'slug'
-                    label: 'Slug'
-                    widget: 'string'
-                    required: false
-                  - name: 'tertiaryNavItems'
-                    label: 'Tertiary nav items'
-                    label_singular: 'Tertiary nav item'
-                    widget: 'list'
-                    required: false
-                    fields:
-                      - name: 'label'
-                        label: 'Link text'
-                        widget: 'string'
-                        required: false
-                      - name: 'slug'
-                        label: 'Slug'
-                        widget: 'string'
-                        required: false
   - name: 'getting-started'
     label: 'Getting started pages'
     label_singular: 'Getting started page'
@@ -75,10 +25,6 @@ collections:
       - name: 'title'
         label: 'Title'
         widget: 'string'
-      - name: 'permalink'
-        label: 'Page URL'
-        widget: 'string'
-        default: '/getting-started/SOMETHING'
       - name: 'layout'
         value: 'variation'
         default: 'variation'
@@ -86,9 +32,18 @@ collections:
       - name: 'section'
         default: 'getting-started'
         widget: 'hidden'
+      - name: 'secondary_section'
+        label: 'Navigation section'
+        widget: 'select'
+        required: false
+        hint: 'Where on the website will this page live?'
+        options:
+          - label: 'Getting started'
+            value: 'Getting started'
       - name: 'status'
         label: 'Implementation status'
         widget: 'select'
+        required: false
         options:
           - label: 'Legacy'
             value: 'Legacy'
@@ -156,10 +111,6 @@ collections:
       - name: 'title'
         label: 'Title'
         widget: 'string'
-      - name: 'permalink'
-        label: 'Page URL'
-        widget: 'string'
-        default: '/foundation/SOMETHING'
       - name: 'layout'
         value: 'variation'
         default: 'variation'
@@ -167,9 +118,24 @@ collections:
       - name: 'section'
         default: 'foundation'
         widget: 'hidden'
+      - name: 'secondary_section'
+        label: 'Navigation section'
+        widget: 'select'
+        required: false
+        hint: 'Where on the website will this page live?'
+        options:
+          - label: 'Foundation > Design principles'
+            value: 'Design principles'
+          - label: 'Foundation > Identity'
+            value: 'Identity'
+          - label: 'Foundation > Imagery'
+            value: 'Imagery'
+          - label: 'Foundation > Multimedia'
+            value: 'Multimedia'
       - name: 'status'
         label: 'Implementation status'
         widget: 'select'
+        required: false
         options:
           - label: 'Legacy'
             value: 'Legacy'
@@ -237,10 +203,6 @@ collections:
       - name: 'title'
         label: 'Title'
         widget: 'string'
-      - name: 'permalink'
-        label: 'Page URL'
-        widget: 'string'
-        default: '/components/SOMETHING'
       - name: 'layout'
         value: 'variation'
         default: 'variation'
@@ -248,9 +210,30 @@ collections:
       - name: 'section'
         default: 'components'
         widget: 'hidden'
+      - name: 'secondary_section'
+        label: 'Navigation section'
+        widget: 'select'
+        required: false
+        hint: 'Where on the website will this page live?'
+        options:
+          - label: 'Components > Alerts'
+            value: 'Alerts'
+          - label: 'Components > Content layouts'
+            value: 'Content layouts'
+          - label: 'Components > Data visualization'
+            value: 'Data visualization'
+          - label: 'Components > Forms'
+            value: 'Forms'
+          - label: 'Components > Navigation'
+            value: 'Navigation'
+          - label: 'Components > Tables'
+            value: 'Tables'
+          - label: 'Components > Text'
+            value: 'Text'
       - name: 'status'
         label: 'Implementation status'
         widget: 'select'
+        required: false
         options:
           - label: 'Legacy'
             value: 'Legacy'
@@ -318,10 +301,6 @@ collections:
       - name: 'title'
         label: 'Title'
         widget: 'string'
-      - name: 'permalink'
-        label: 'Page URL'
-        widget: 'string'
-        default: '/templates/SOMETHING'
       - name: 'layout'
         value: 'variation'
         default: 'variation'
@@ -329,9 +308,20 @@ collections:
       - name: 'section'
         default: 'templates'
         widget: 'hidden'
+      - name: 'secondary_section'
+        label: 'Navigation section'
+        widget: 'select'
+        required: false
+        hint: 'Where on the website will this page live?'
+        options:
+          - label: 'Templates > Web templates'
+            value: 'Web templates'
+          - label: 'Templates > Print templates'
+            value: 'Print templates'
       - name: 'status'
         label: 'Implementation status'
         widget: 'select'
+        required: false
         options:
           - label: 'Legacy'
             value: 'Legacy'

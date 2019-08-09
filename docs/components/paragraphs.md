@@ -1,9 +1,8 @@
 ---
 title: Paragraphs
-permalink: /components/paragraphs
 layout: variation
-collection_name: components
 section: components
+secondary_section: Text
 status: Proposed
 description: >-
   This page is under active development. Information is being moved into it from
@@ -44,9 +43,9 @@ variations:
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
       Text size | ? |  | 22px | 16pt
-      Small screen text size | | | 18px | 
+      Small screen text size | | | 18px |
       Line height (pixels) | ? |  | 28px | 20pt
-      Small screen line height | | 22px | 
+      Small screen line height | | 22px |
   - variation_code_snippet: |-
       <p class="a-micro-copy">
           Lorem ipsum dolor sit amet
@@ -102,4 +101,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

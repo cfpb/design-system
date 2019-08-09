@@ -1,9 +1,8 @@
 ---
 title: Forms
-permalink: /foundation/forms
 layout: variation
-collection_name: pages
 section: foundation
+secondary_section: Design principles
 description: >-
   Web forms provide an incredible advantage over paper forms in their potential for accessibility, usability, and operational efficiency, but when designed without users in mind they can lose many of these benefits. In this guide, we’ve outlined several ways to ensure the best possible user experience.
 

@@ -1,9 +1,8 @@
 ---
 title: Document detail pages
-permalink: /templates/document-detail-pages
 layout: variation
-collection_name: components
 section: templates
+secondary_section: Web templates
 status: Proposed
 description: >-
   Document detail page types provide summary information about a document or
@@ -180,4 +179,3 @@ related_items: |-
   * Photography
   * Typography
 ---
-

@@ -1,9 +1,8 @@
 ---
 title: Grid
-permalink: /components/grid
 layout: variation
-collection_name: components
 section: components
+secondary_section: Content layouts
 status: Proposed
 description: >-
   The grid provides structure for website content. The flexible design adjusts
@@ -521,4 +520,3 @@ help_us: |-
   This page needs help with its content!
   - [Contribute on Github](https://github.com/cfpb/design-system/issues/183)
 ---
-

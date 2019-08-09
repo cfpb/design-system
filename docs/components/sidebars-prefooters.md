@@ -1,9 +1,8 @@
 ---
 title: Sidebars/Prefooters
-permalink: /components/sidebars-prefooters
 layout: variation
-collection_name: components
 section: components
+secondary_section: Content layouts
 status: Proposed
 description: >-
   Information about Sidebars/Prefooters can be found at:
@@ -63,4 +62,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

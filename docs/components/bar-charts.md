@@ -1,9 +1,8 @@
 ---
 title: Bar Charts
-permalink: /components/bar-charts
 layout: variation
-collection_name: components
 section: components
+secondary_section: Data visualization
 status: Proposed
 description: >-
   Use bar or column charts to show comparisons of different discrete items,
@@ -66,4 +65,3 @@ research: ''
 related_items: ''
 help_us: ''
 ---
-

@@ -10,15 +10,34 @@
     </div>
     <nav class="global-nav content-l_col content-l_col-2-3">
       <ul class="global-nav_list">
-        {% for section in site.data.navigation.sections %}
-          <li class="nav-list-item">
-            <a 
-            class="{% if section.slug == page.section %}active{% endif %}"
-            href="{{ section.slug | relative_url }}">
-            {{ section.label }}
+        <li class="nav-list-item">
+            <a
+            class="{% if page.section == 'getting-started' %}active{% endif %}"
+            href="{{ site.baseurl }}/getting-started">
+            Getting Started
             </a>
-            </li>
-        {% endfor %}
+        </li>
+        <li class="nav-list-item">
+            <a
+            class="{% if page.section == 'foundation' %}active{% endif %}"
+            href="{{ site.baseurl }}/foundation">
+            Foundation
+            </a>
+        </li>
+        <li class="nav-list-item">
+            <a
+            class="{% if page.section == 'components' %}active{% endif %}"
+            href="{{ site.baseurl }}/components">
+            Components
+            </a>
+        </li>
+        <li class="nav-list-item">
+            <a
+            class="{% if page.section == 'templates' %}active{% endif %}"
+            href="{{ site.baseurl }}/templates">
+            Templates
+            </a>
+        </li>
       </ul>
     </nav>
   </div> <!-- /.wrapper -->

@@ -1,9 +1,8 @@
 ---
 title: Radio Buttons
-permalink: /components/radio-buttons
 layout: variation
-collection_name: components
 section: components
+secondary_section: Forms
 status: Proposed
 description: >
   Use radio buttons when the user can choose only one option out of a list. Use
@@ -106,4 +105,3 @@ related_items: >-
   *
   [https://cfpb.github.io/capital-framework/components/cf-forms/#basic-radio-buttons](http://cfpb.github.io/design-manual/page-components/form-fields.html#radio-buttons)
 ---
-

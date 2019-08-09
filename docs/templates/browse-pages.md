@@ -1,9 +1,8 @@
 ---
 title: Browse pages
-permalink: /templates/browse-pages
 layout: variation
-collection_name: components
 section: templates
+secondary_section: Web templates
 status: Proposed
 description: >-
   Browse page types provide specific topic or product overviews and information.
@@ -112,4 +111,3 @@ related_items: |-
   * Email signup
   * Contact information
 ---
-

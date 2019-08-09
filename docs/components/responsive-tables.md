@@ -1,9 +1,8 @@
 ---
 title: Responsive Tables
-permalink: /components/responsive-tables
 layout: variation
-collection_name: components
 section: components
+secondary_section: Tables
 status: Proposed
 description: "More information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/tables.html\t\n* https://cfpb.github.io/capital-framework/components/cf-tables/#responsive-tables"
 variations:
@@ -57,4 +56,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

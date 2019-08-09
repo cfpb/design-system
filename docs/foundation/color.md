@@ -1,9 +1,8 @@
 ---
 title: Color
-permalink: /foundation/color
 layout: variation
-collection_name: components
 section: foundation
+secondary_section: Design principles
 status: Proposed
 description: >-
   A minimal palette, clear hierarchy, and ample whitespace ensure a voice of
@@ -122,4 +121,3 @@ accessibility: >-
   Check](http://www.snook.ca/technical/colour_contrast/colour.html) is a nice
   tool for testing color contrast ratios.
 ---
-

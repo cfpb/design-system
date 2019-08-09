@@ -1,9 +1,8 @@
 ---
 title: Iconography
-permalink: /foundation/iconography
 layout: variation
-collection_name: components
 section: foundation
+secondary_section: Identity
 status: Proposed
 description: >-
   Icons visually reinforce an interface action, file type, status, or category.
@@ -588,4 +587,3 @@ usage: >
   CSS `background-image` property. This is exposed via a mixin,
   `.u-svg-inline-bg( @name )`, where `@name` is the SVG icon canonical name.
 ---
-

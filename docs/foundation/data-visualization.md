@@ -1,9 +1,8 @@
 ---
 title: Data Visualization
-permalink: /foundation/data-visualization
 layout: variation
-collection_name: pages
 section: foundation
+secondary_section: Design principles
 description: >-
   ### Whether you’re using Excel, Tableau, D3.js, or any other program, follow these guidelines to create effective and consistent data visualizations.
 

@@ -1,9 +1,8 @@
 ---
 title: Text Inputs
-permalink: /components/text-inputs
 layout: variation
-collection_name: components
 section: components
+secondary_section: Forms
 status: Proposed
 description: >-
   This page includes other components like form alerts and buttons. You can

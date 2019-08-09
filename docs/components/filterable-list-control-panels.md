@@ -1,9 +1,8 @@
 ---
 title: Filterable List Control Panels
-permalink: /components/filterable-list-control-panels
 layout: variation
-collection_name: components
 section: components
+secondary_section: Navigation
 status: Proposed
 description: |-
   More information can be found at:
@@ -60,4 +59,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

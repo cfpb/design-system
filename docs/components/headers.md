@@ -1,9 +1,8 @@
 ---
 title: Headers
-permalink: /components/headers
 layout: variation
-collection_name: components
 section: components
+secondary_section: Text
 status: Released
 description: Use headers to lead content.
 variations:
@@ -46,4 +45,3 @@ usage: ''
 accessibility: ''
 research: ''
 ---
-

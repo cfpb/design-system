@@ -1,8 +1,8 @@
 ---
 title: Help us make improvements
-permalink: /getting-started/help-us-make-improvements
 layout: variation
 section: getting-started
+secondary_section: Getting started
 description: >-
   All contributions to this project will be released under the CC0 public domain
   dedication. By submitting a pull request or filing a bug, issue, or

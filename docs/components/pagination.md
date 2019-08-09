@@ -1,9 +1,8 @@
 ---
 title: Pagination
-permalink: /components/pagination
 layout: variation
-collection_name: components
 section: components
+secondary_section: Navigation
 status: Proposed
 description: "Default pagination consists of “Older” and “Newer” links, styled as buttons, and an inline form (input, submit button) that allows users to navigate to specific pages by number. When appropriate, the buttons may be labeled “Previous” and “Next”.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/tables.html#behavior\t\n* https://cfpb.github.io/capital-framework/components/cf-pagination/"
 variations:
@@ -118,4 +117,3 @@ usage: >-
 accessibility: ''
 research: ''
 ---
-

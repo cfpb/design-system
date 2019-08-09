@@ -1,8 +1,6 @@
 ---
 title: Welcome to the CFPB Design System
-permalink: /
 layout: homepage
-collection_name: pages
 ---
 The CFPB strives to better serve consumers by using plain language; relying on simple, user-friendly design; and providing easy access to information that can help consumers make informed decisions.
 

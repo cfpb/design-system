@@ -1,9 +1,8 @@
 ---
 title: Notifications
-permalink: /components/notifications
 layout: variation
-collection_name: components
 section: components
+secondary_section: Alerts
 status: Proposed
 description: >-
 
@@ -188,4 +187,3 @@ accessibility: >-
   users, visually impaired users, users with motor control issues, etc.).
 research: ''
 ---
-

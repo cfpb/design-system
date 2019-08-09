@@ -230,11 +230,11 @@
     {% if page.usage or page.restrictions %}
         <section class="sticky-header">
             <h3 id="usage">Usage</h3>
-            <p>
                 {% if page.usage %}
+                    <p>
                     {{ page.usage | markdownify }}
+                    </p>
                 {% endif %}
-            </p>
             {% if page.restrictions %}
                 <div class="content-l">
                     <h4>Restrictions</h4>
@@ -256,7 +256,7 @@
                         {% if restriction.restrictions_do_not %}
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
-                                    <header class="m-slug-header">
+                                    <header class="m-slug-header m-slug-header__warning">
                                         <h5 class="a-heading">
                                             Do not
                                         </h5>

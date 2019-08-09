@@ -3,59 +3,22 @@ title: Images
 layout: variation
 section: components
 secondary_section: Content layouts
-status: Proposed
-description: |-
-  Information about Images can be found at:
-
-  https://cfpb.github.io/capital-framework/components/cf-core/#base-images
+status: Released
+description: Images have a `max-width` of `100%` by default.
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
-usage: >-
-  **Use cases**
-
-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
-
-
-  **Content guidelines**
-
-
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
-
-
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
-
-
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+  - variation_code_snippet: '<img src="https://dummyimage.com/800x40/addc91/101820" alt="">'
+    variation_description: Gives all images a default `max-width` of `100%` of their container.
+    variation_name: Full-width images
+  - variation_code_snippet: |-
+      <figure>
+          <img src="https://dummyimage.com/340x320/addc91/101820" alt="">
+      </figure>
+    variation_description: >-
+      Resets browser default side `margins` for `figure` to `0`, and removes
+      bottom inline spacing from `img` elements within.
+    variation_name: Figure
+usage: ''
+accessibility: ''
+research: ''
 ---
+

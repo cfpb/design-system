@@ -4,14 +4,84 @@ layout: variation
 section: components
 secondary_section: Text
 status: Proposed
-description: "More information can be found at:\n* http://cfpb.github.io/design-manual/brand-guidelines/typography.html\t\n* https://cfpb.github.io/capital-framework/components/cf-typography/#lists"
+description: "Lists are an effective way to visually highlight important information so that it can be more easily scanned and read. Before writing a list, it’s important to identify the best style needed for the information being presented.\n\nList items should:\n\n* Be capitalized\n* Avoid unnecessary repetition\n* Have a parallel structure\n* Start with an introductory clause or sentence\n* Use consistent punctuation\n\nIf the list items are complete sentences, the introductory clause should also be a complete sentence, followed by a colon. These list items should end with a period.\n\nIf the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/brand-guidelines/typography.html\t\n* https://cfpb.github.io/capital-framework/components/cf-typography/#lists"
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+  - variation_code_snippet: |-
+      <ul class="m-list m-list__unstyled">
+          <li class="m-list_item">List item 1</li>
+          <li class="m-list_item">List item 2</li>
+          <li class="m-list_item">List item 3</li>
+      </ul>
+    variation_description: Unstyled list removes bullets and other styling from a list.
+    variation_name: Unstyled list
+  - variation_code_snippet: |
+      <ul class="m-list">
+          <li class="m-list_item">List item 1</li>
+          <li class="m-list_item">List item 2</li>
+          <li class="m-list_item">List item 3</li>
+      </ul>
+    variation_description: >-
+      Use a bulleted list when grouping similar items or short thoughts into
+      “bite-size” chunks. Generally, the order or count of the items in a bullet
+      list isn’t important. An exception to this may be a list of states, which
+      naturally fits into an alphabetical order.
+    variation_name: Bulleted list
+  - variation_code_snippet: |-
+      <ul class="m-list">
+          <li class="m-list_item">List item 1</li>
+          <li class="m-list_item">
+              List item 2
+              <ul class="m-list m-list__spaced">
+                  <li class="m-list_item">List item 2a</li>
+                  <li class="m-list_item">List item 2b</li>
+                  <li class="m-list_item">List item 2c</li>
+              </ul>
+          </li>
+          <li class="m-list_item">List item 3</li>
+      </ul>
+    variation_name: Nested bulleted list
+  - variation_code_snippet: >-
+      <ol class="m-list">    <li class="m-list_item">List item 1</li>    <li
+      class="m-list_item">List item 2</li>    <li class="m-list_item">List item
+      3</li></ol>
+    variation_description: >
+      When the order of information presented is important, use a numbered list.
+      This could include chronological items, things presented in the order or
+      importance, or a finite list of a counted number of items.
+    variation_name: Numbered list
+  - variation_code_snippet: |-
+      <ul class="m-list m-list__horizontal">
+          <li class="m-list_item">List item 1</li>
+          <li class="m-list_item">List item 2</li>
+          <li class="m-list_item">List item 3</li>
+      </ul>
+    variation_description: A modifier for the list to make it show items horizontally.
+    variation_name: Horizontal list
+  - variation_code_snippet: |-
+      <ul class="m-list m-list__links">
+          <li class="m-list_item">
+              <a class="m-list_link" href="#">List item 1</a>
+          </li>
+          <li class="m-list_item">
+              <a class="m-list_link" href="#">List item 2</a>
+          </li>
+          <li class="m-list_item">
+              <a class="m-list_link" href="#">List item 3</a>
+          </li>
+      </ul>
+    variation_description: >-
+      The link list modifier is intended to be used for lists where each item is
+      a link. It converts to a finger-friendly link with a large tap area on
+      smaller screens.
+    variation_name: Link list
+  - variation_code_snippet: |-
+      <ul class="m-list m-list__spaced">
+          <li class="m-list_item">List item 1</li>
+          <li class="m-list_item">List item 2</li>
+          <li class="m-list_item">List item 3</li>
+      </ul>
+    variation_description: Spaced list adds extra padding to every element in a list.
+    variation_name: Spaced list
 usage: >-
   **Use cases**
 
@@ -30,29 +100,7 @@ usage: >-
   odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
   vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
   aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
-
-
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
-
-
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+accessibility: ''
+research: ''
 ---
+

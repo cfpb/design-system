@@ -14,19 +14,8 @@ variations:
       </ul>
     variation_description: Unstyled list removes bullets and other styling from a list.
     variation_name: Unstyled list
-  - variation_code_snippet: |
-      <ul class="m-list">
-          <li class="m-list_item">List item 1</li>
-          <li class="m-list_item">List item 2</li>
-          <li class="m-list_item">List item 3</li>
-      </ul>
-    variation_description: >-
-      Use a bulleted list when grouping similar items or short thoughts into
-      “bite-size” chunks. Generally, the order or count of the items in a bullet
-      list isn’t important. An exception to this may be a list of states, which
-      naturally fits into an alphabetical order.
-    variation_name: Bulleted list
   - variation_code_snippet: |-
+      <p> Paragraph example for visual reference</p>
       <ul class="m-list">
           <li class="m-list_item">List item 1</li>
           <li class="m-list_item">
@@ -39,11 +28,28 @@ variations:
           </li>
           <li class="m-list_item">List item 3</li>
       </ul>
-    variation_name: Nested bulleted list
-  - variation_code_snippet: >-
-      <ol class="m-list">    <li class="m-list_item">List item 1</li>    <li
-      class="m-list_item">List item 2</li>    <li class="m-list_item">List item
-      3</li></ol>
+      <p> Paragraph example for visual reference</p>
+    variation_description: >-
+      Use a bulleted list when grouping similar items or short thoughts into
+      “bite-size” chunks. Generally, the order or count of the items in a bullet
+      list isn’t important. An exception to this may be a list of states, which
+      naturally fits into an alphabetical order.
+    variation_name: Bulleted list
+  - variation_code_snippet: |-
+      <p>Paragraph example for visual reference</p>
+      <ol>
+          <li>List item 1</li>
+          <li>
+              List item 2
+              <ol>
+                    <li>Nested item 2-1</li>
+                    <li>Nested item 2-2</li>
+                    <li>Nested item 2-3</li>
+              </ol>
+          </li>
+          <li>List item 3</li>
+      </ol>
+      <p>Paragraph example for visual reference</p>
     variation_description: >
       When the order of information presented is important, use a numbered list.
       This could include chronological items, things presented in the order or

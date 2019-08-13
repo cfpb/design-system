@@ -132,10 +132,39 @@ variations:
 
       * This isn't present in CF and doesn't have a code snippet.
     variation_name: Fixed-width table
-  - variation_code_snippet: ' '
-    variation_description: |-
+  - variation_code_snippet: |2-
+       <table class="o-table o-table__row-links">
+          <thead>
+              <tr>
+                  <th>Column 1</th>
+                  <th>Column 2</th>
+                  <th>Column 3</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td data-label="Column 1">
+                      <a href="https://example.com/">Example 1</a>
+                  </td>
+                  <td data-label="Column 2">Cell A2</td>
+                  <td data-label="Column 3" >Cell A3</td>
+              </tr>
+              <tr>
+                  <td data-label="Column 1">
+                      <a href="https://example.com/">Example 2</a>
+                  </td>
+                  <td data-label="Column 2">Cell B2</td>
+                  <td data-label="Column 3">Cell B3</td>
+              </tr>
+          </tbody>
+      </table>
+    variation_description: >-
+      The `.o-table_cell__row-links` class is added to a `table` to enable
+      highlighting and hyperlinking rows which contain links.
 
-      * No code snippet available
+
+      * Conflicts with "Table with row links" in CF. Using the code snippet from
+      that here. 
     variation_name: Snippet list
   - variation_code_snippet: ' '
     variation_description: '* No code snippet available'

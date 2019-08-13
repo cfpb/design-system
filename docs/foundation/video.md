@@ -2,7 +2,7 @@
 title: Video
 layout: variation
 section: foundation
-secondary_section: Multimedia
+secondary_section: Identity
 status: Proposed
 description: >-
   Video is a powerful tool that can be used to educate viewers about the
@@ -170,3 +170,4 @@ accessibility: >-
   #### Do not create designs or interactions that may cause seizures
    * Nothing on the page should flash more than 3 times in 1 second.
 ---
+

@@ -161,14 +161,10 @@ variations:
     variation_description: >-
       The `.o-table_cell__row-links` class is added to a `table` to enable
       highlighting and hyperlinking rows which contain links.
-
-
-      * Conflicts with "Table with row links" in CF. Using the code snippet from
-      that here. 
-    variation_name: Snippet list
+    variation_name: Table with row links
   - variation_code_snippet: ' '
     variation_description: '* No code snippet available'
-    variation_name: Snippet list with thumbnail
+    variation_name: Snippet list
   - variation_code_snippet: |-
       <table class="o-table o-table__stack-on-small">
           <thead>

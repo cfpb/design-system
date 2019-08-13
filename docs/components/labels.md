@@ -29,7 +29,7 @@ variations:
   - variation_code_snippet: |-
       <label class="a-label a-label__heading">
           A label heading
-          <small class="a-label_helper a-label_helper__block">Helper text</small>
+          <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
       </label>
     variation_description: >-
       Use block helper text to explain why a piece of information is being
@@ -60,15 +60,6 @@ variations:
       field.
     variation_name: Placeholder text
 usage: >-
-  **Use cases**
-
-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
-
-
   **Content guidelines**
 
 

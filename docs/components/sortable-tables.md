@@ -119,12 +119,15 @@ usage: >-
 
   ```
 
+  …
+
   <button class="sortable">
       Column Name
   </button>
 
-  ```
+  …
 
+  ```
 
   The use of a `button` helps address certain accessibility concerns.
 

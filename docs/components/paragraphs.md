@@ -52,27 +52,6 @@ variations:
       </p>
     variation_name: Microcopy
     variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nText color | @micro-copy | @black | Black (#101820)\t| 0, 0, 0, 100\nText size |  |  |  | \nLine height (pixels) |  |  |  | \nBottom margin | | | |"
-  - variation_code_snippet: >-
-      <p>This is an example of paragraph text with an inline code block
-      <code>&lt;a href="#" class="a-btn" title="Test button"&gt;Anchor
-      Tag&lt;/a&gt;</code></p>
-    variation_description: ''
-    variation_name: Inline code
-    variation_specs: ''
-  - variation_code_snippet: >-
-      This is an example of a fenced code block following some paragraph text.
-
-      <pre>
-
-      <code>&lt;a href="#" class="a-btn" title="Test button"&gt;Anchor
-      Tag&lt;/a&gt;
-
-      &lt;button class="a-btn" title="Test button"&gt;Button Tag&lt;/button&gt;
-
-      &lt;input type="submit" value="Input Tag" class="a-btn"&gt;</code>
-
-      </pre>
-    variation_name: Fenced code block
 usage: |-
   **Use cases**
 

@@ -6,9 +6,45 @@ secondary_section: Tables
 status: Proposed
 description: "Tables divide information into distinct columns and rows to create an intersection “cell” where data is displayed.\n\nMore information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/tables.html\t\n* https://cfpb.github.io/capital-framework/components/cf-tables/#responsive-tables"
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
+  - variation_code_snippet: >-
+      <table>
+          <caption>Table caption describing the data</caption>
+          <thead>
+              <tr>
+                  <th>Column 1 header</th>
+                  <th>Column 2 header</th>
+                  <th>Column 3 header</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Row 1, column 1</td>
+                  <td>Row 1, column 2</td>
+                  <td>Row 1, column 3</td>
+              </tr>
+              <tr>
+                  <td>Row 2, column 1</td>
+                  <td>Row 2, column 2</td>
+                  <td>Row 2, column 3</td>
+              </tr>
+              <tr>
+                  <td>Row 3, column 1</td>
+                  <td>Row 3, column 2</td>
+                  <td>Row 3, column 3</td>
+              </tr>
+          </tbody>
+      </table>
+
+
+      <!--
+
+      Note: While th elements normally only contain raw text, they may sometimes
+      contain heading elements when that would be beneficial to navigating a
+      page’s content with a screenreader.
+
+      -->
+    variation_description: This is the default style without a breakpoint.
+    variation_name: Standard table
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The secondary state is very secondary.
     variation_name: Secondary state

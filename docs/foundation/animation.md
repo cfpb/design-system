@@ -2,7 +2,7 @@
 title: Animation
 layout: variation
 section: foundation
-secondary_section: Multimedia
+secondary_section: Identity
 status: Proposed
 description: >-
   Animation should be used to bring on-brand illustrations to life. Animation
@@ -64,3 +64,4 @@ accessibility: >-
   #### Do not create designs or interactions that may cause seizures
    * Nothing on the page should flash more than 3 times in 1 second.
 ---
+

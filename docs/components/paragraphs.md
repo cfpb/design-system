@@ -52,21 +52,6 @@ variations:
       </p>
     variation_name: Microcopy
     variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nText color | @micro-copy | @black | Black (#101820)\t| 0, 0, 0, 100\nText size |  |  |  | \nLine height (pixels) |  |  |  | \nBottom margin | | | |"
-  - variation_code_snippet: |-
-      <aside class="m-pull-quote">
-          <p class="m-pull-quote_body">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Cum corrupti tempora nam nihil qui mollitia consectetur
-              corporis nemo culpa dolorum!
-          </p>
-          <footer>
-              <cite class="m-pull-quote_citation">
-                  Author Name
-              </cite>
-          </footer>
-      </aside>
-    variation_name: Pull quote
-    variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nColor | @pull-quote_body | @black | Black (#101820)\t| 0, 0, 0, 100\nColor (citation) | @pull-quote_citation | @gray | Gray (#5a5d61) | 0, 0, 0, 77 |\nText size |  |  |  | \nLine height (pixels) |  |  |  | \nBottom margin | | | |"
 usage: |-
   **Use cases**
 
@@ -101,3 +86,4 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
+

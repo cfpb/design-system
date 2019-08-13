@@ -25,7 +25,7 @@ variations:
     variation_description: >-
       Appears with label headings. Use to indicate whether a field is optional
       or required.
-    variation_name: Label helper text
+    variation_name: Inline helper text
   - variation_code_snippet: |-
       <label class="a-label a-label__heading">
           A label heading
@@ -39,6 +39,26 @@ variations:
 
       Appears with labels and label headings.
     variation_name: Block helper text
+  - variation_code_snippet: |-
+      <label class="a-label a-label__heading" for="textinput-example-default">
+          A text input
+      </label>
+      <input class="a-text-input"
+             type="text"
+             id="textinput-example-default"
+             placeholder="Enter text…"
+             value="mm/dd/yyyy">
+      <br><br>
+      <input class="a-text-input"
+             type="text"
+             id="textinput-example-default"
+             placeholder="Enter text…"
+             value="email@example.com">
+    variation_description: >-
+      Use placeholder text for formatting examples only. Don’t use for
+      instructions. Placeholder text disappears once a user begins typing in the
+      field.
+    variation_name: Placeholder text
 usage: >-
   **Use cases**
 
@@ -52,11 +72,16 @@ usage: >-
   **Content guidelines**
 
 
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
+  Where possible, design your forms to only include required fields. If it’s not
+  required, ask yourself if it’s really necessary to include at all. Add
+  instructions at the top of the form to clearly indicate that all fields are
+  required unless otherwise noted. If a field is optional, indicate it with
+  inline helper text, as shown here. Don’t indicate which fields are required;
+  that would only introduce redundant visual noise.
+
+
+  Try not to design forms consisting mainly of optional fields. If you must do
+  so, mark required field labels only with inline helper text.
 accessibility: >
   For screen reader accessibility, consider using the aria-describedby attribute
   for helper text, which gives screen readers users the information if they need

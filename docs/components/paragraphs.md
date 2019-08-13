@@ -67,6 +67,25 @@ variations:
       </aside>
     variation_name: Pull quote
     variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nColor | @pull-quote_body | @black | Black (#101820)\t| 0, 0, 0, 100\nColor (citation) | @pull-quote_citation | @gray | Gray (#5a5d61) | 0, 0, 0, 77 |\nText size |  |  |  | \nLine height (pixels) |  |  |  | \nBottom margin | | | |"
+  - variation_code_snippet: >-
+      <p>This is an example of paragraph text with an inline code block
+      <code>&lt;a href="#" class="a-btn" title="Test button"&gt;Anchor
+      Tag&lt;/a&gt;</code></p>
+    variation_name: Inline code
+  - variation_code_snippet: >-
+      This is an example of a fenced code block following some paragraph text.
+
+      <pre>
+
+      <code>&lt;a href="#" class="a-btn" title="Test button"&gt;Anchor
+      Tag&lt;/a&gt;
+
+      &lt;button class="a-btn" title="Test button"&gt;Button Tag&lt;/button&gt;
+
+      &lt;input type="submit" value="Input Tag" class="a-btn"&gt;</code>
+
+      </pre>
+    variation_name: Fenced code block
 usage: |-
   **Use cases**
 
@@ -101,3 +120,4 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
+

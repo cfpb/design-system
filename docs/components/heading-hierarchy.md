@@ -155,6 +155,27 @@ variations:
       Color | @heading__icon:  | @black; | Black | Black (#101820) |
       Hover color | @heading__icon__hover: | @link-text-hover; | ? | ?
       Bottom margin | | | 15px |
+  - variation_code_snippet: >2
+       <!--
+      The eyebrow heading text is styled the same as H5 heading text, but built
+      using div tags instead of h5.
+
+      -->
+    variation_description: >-
+      Use the eyebrow heading to label page headings that are part of a larger
+      group of related pages, or when additional context can help orient the
+      user to the page's purpose.
+
+
+      The eyebrow heading is secondary to and serves to support the main page
+      heading. So it should be concise and shorter than the main page heading.
+
+
+      ##### When other options are better
+
+      For most pages, a single informative page heading provides enough detail
+      to communicate the page's purpose and contents.
+    variation_name: Eyebrow heading
 usage: >-
   **Use cases**
 
@@ -179,3 +200,4 @@ accessibility: >-
   screen readers (see Meta Header).
 research: TBD
 ---
+

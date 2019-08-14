@@ -155,18 +155,68 @@ variations:
       Color | @heading__icon:  | @black; | Black | Black (#101820) |
       Hover color | @heading__icon__hover: | @link-text-hover; | ? | ?
       Bottom margin | | | 15px |
+  - variation_code_snippet: >2
+       <!--
+      The eyebrow heading text is styled the same as H5 heading text, but built
+      using div tags instead of h5.
+
+      -->
+    variation_description: >-
+      Use the eyebrow heading to label page headings that are part of a larger
+      group of related pages, or when additional context can help orient the
+      user to the page's purpose.
+
+
+      The eyebrow heading is secondary to and serves to support the main page
+      heading. So it should be concise and shorter than the main page heading.
+
+
+      ##### When other options are better
+
+      For most pages, a single informative page heading provides enough detail
+      to communicate the page's purpose and contents.
+    variation_name: Eyebrow heading
+  - variation_code_snippet: |-
+      <header class="m-slug-header">
+          <h2 class="a-heading">
+              Blog summary
+          </h2>
+      </header>
+    variation_description: Use headers to lead content.
+    variation_name: Slug header
+  - variation_code_snippet: |
+      <header class="m-meta-header">
+          <div class="m-meta-header_right">
+              <span class="a-date">
+                  Nov 4, 2013
+              </span>
+          </div>
+          <div class="m-meta-header_left">
+              <span class="u-visually-hidden">Categories: </span>
+              <a href="#" class="a-heading a-heading__icon">
+                  {% include icons/credit-card.svg %}
+                  Consumer finance
+              </a>
+              |
+              <a href="#" class="a-heading a-heading__icon">
+                  {% include icons/bullhorn.svg %}
+                  At the CFPB
+              </a>
+          </div>
+      </header>
+    variation_description: >-
+      Note that the example shows `.m-meta-header_left` using the
+      `.a-heading__icon` pattern and `.m-meta-header_right` using the `.a-date`
+      pattern but you could use other patterns in place of them. Or you can even
+      swap them so that date is attached to `.m-meta-header_left` and
+      `.a-heading.a-heading__icon` is attached to `.m-meta-header_right`.
+    variation_name: Meta header
 usage: >-
   **Use cases**
 
 
   Consistent scaling, weights, and capitalization are used to create distinction
   between heading levels.
-
-
-  **Content guidelines**
-
-
-  TBD
 
 
   **Behavior**
@@ -177,5 +227,6 @@ accessibility: >-
   Since categories can be repetitive, we suggest placing a label with
   `.u-visually-hidden` prior to the headings with icons to add more context for
   screen readers (see Meta Header).
-research: TBD
+research: ''
 ---
+

@@ -4,58 +4,154 @@ layout: variation
 section: components
 secondary_section: Content layouts
 status: Proposed
-description: |-
+description: >-
+  Mixins for consistent media queries that take `px` values and convert them to
+  ems.
+
+
+  ##### Respond to min and max width mixins
+
+  These mixins take a px value breakpoint and set of style rules and converts
+  them to the corresponding min or max width media query.
+
+
+  ```
+
+  .respond-to-min(@bp, @rules);
+
+
+  .respond-to-max(@bp, @rules);
+
+  ```
+
+  Ex.
+
+  ```
+
+  .respond-to-min( @bp-sm-min, {
+      .title {
+          font-size: 2em;
+      }
+  } );
+
+
+  // Compiles to
+
+
+  @media only all and (min-width: 37.5625em) {
+      .title {
+          font-size: 2em;
+      }
+  }
+
+  ```
+
+  ##### Respond to range mixin
+
+  This mixin takes both min and max px values and a set of style rules and
+  converts them to the corresponding min and max media query.
+
+  ```
+
+  .respond-to-range(@bp1, @bp2, @rules);
+
+  ```
+
+  Ex.
+
+  ```
+
+  .respond-to-range( @bp-sm-min, @bp-sm-max, {
+      .title {
+          font-size: 2em;
+      }
+  } );
+
+
+  // Compiles to
+
+
+  @media only all and (min-width: 37.5625em) and (max-width: 56.25em) {
+      .title {
+          font-size: 2em;
+      }
+  }
+
+  ```
+
+  ##### Respond to dpi mixin
+
+  This mixin allows us to easily write styles that target high-resolution
+  screens, such as Apple retina screens
+
+  ```
+
+  // The following LESS...
+
+  .example {
+      background: url(regular-resolution-image.png);
+      .respond-to-dpi(2, {
+          background-image: url(retina-image.png);
+      });
+  }
+
+
+  // ...Exports to
+
+  .example {
+      background: url(regular-resolution-image.png);
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .example {
+          background-image: url(retina-image.png);
+      }
+  }
+
+  ```
+
+  ##### Respond to print mixin
+
+  This mixin allows us to easily write styles that target both @media print and
+  .print.
+
+  ```
+
+  // The following LESS...
+
+  .example {
+      color: @gray;
+      .respond-to-print({
+          color: @black;
+      });
+  }
+
+
+  // ...Exports to
+
+  .example {
+      color: #75787B;
+  }
+
+  @media print {
+      .example {
+          color: #101820;
+      }
+  }
+
+  .print .example {
+      color: #101820;
+  }
+
+  ```
+
   Information about Media Queries can be found at:
 
+
   https://cfpb.github.io/capital-framework/components/cf-core/#media-queries
-variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
-usage: >-
-  **Use cases**
-
-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
-
-
-  **Content guidelines**
-
-
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
-
-
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
-
-
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+variations: []
+usage: ''
+accessibility: ''
+research: ''
 ---
+

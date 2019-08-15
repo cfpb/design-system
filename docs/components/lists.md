@@ -14,19 +14,8 @@ variations:
       </ul>
     variation_description: Unstyled list removes bullets and other styling from a list.
     variation_name: Unstyled list
-  - variation_code_snippet: |
-      <ul class="m-list">
-          <li class="m-list_item">List item 1</li>
-          <li class="m-list_item">List item 2</li>
-          <li class="m-list_item">List item 3</li>
-      </ul>
-    variation_description: >-
-      Use a bulleted list when grouping similar items or short thoughts into
-      “bite-size” chunks. Generally, the order or count of the items in a bullet
-      list isn’t important. An exception to this may be a list of states, which
-      naturally fits into an alphabetical order.
-    variation_name: Bulleted list
   - variation_code_snippet: |-
+      <p> Paragraph example for visual reference</p>
       <ul class="m-list">
           <li class="m-list_item">List item 1</li>
           <li class="m-list_item">
@@ -39,11 +28,28 @@ variations:
           </li>
           <li class="m-list_item">List item 3</li>
       </ul>
-    variation_name: Nested bulleted list
-  - variation_code_snippet: >-
-      <ol class="m-list">    <li class="m-list_item">List item 1</li>    <li
-      class="m-list_item">List item 2</li>    <li class="m-list_item">List item
-      3</li></ol>
+      <p> Paragraph example for visual reference</p>
+    variation_description: >-
+      Use a bulleted list when grouping similar items or short thoughts into
+      “bite-size” chunks. Generally, the order or count of the items in a bullet
+      list isn’t important. An exception to this may be a list of states, which
+      naturally fits into an alphabetical order.
+    variation_name: Bulleted list
+  - variation_code_snippet: |-
+      <p>Paragraph example for visual reference</p>
+      <ol>
+          <li>List item 1</li>
+          <li>
+              List item 2
+              <ol>
+                    <li>Nested item 2-1</li>
+                    <li>Nested item 2-2</li>
+                    <li>Nested item 2-3</li>
+              </ol>
+          </li>
+          <li>List item 3</li>
+      </ol>
+      <p>Paragraph example for visual reference</p>
     variation_description: >
       When the order of information presented is important, use a numbered list.
       This could include chronological items, things presented in the order or
@@ -82,24 +88,21 @@ variations:
       </ul>
     variation_description: Spaced list adds extra padding to every element in a list.
     variation_name: Spaced list
-usage: >-
-  **Use cases**
+  - variation_code_snippet: ' '
+    variation_description: >-
+      When the primary role of a list is to offer definitions or explanations
+      for a group of terms, the bolded term should appear first, followed by a
+      colon. The definition should appear after the bolded term and be written
+      in complete sentences.
 
 
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
+      Each defined term should appear on its own line, without an indentation or
+      bullet.
 
 
-  **Content guidelines**
-
-
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
+      ![](/design-system/images/uploads/28131667-787b1896-66ef-11e7-8411-c0f40ba79e2c.png)
+    variation_name: Definition list
+usage: ''
 accessibility: ''
 research: ''
 ---

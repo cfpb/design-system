@@ -88,6 +88,20 @@ variations:
       </ul>
     variation_description: Spaced list adds extra padding to every element in a list.
     variation_name: Spaced list
+  - variation_code_snippet: ' '
+    variation_description: >-
+      ![](/design-system/images/uploads/28131667-787b1896-66ef-11e7-8411-c0f40ba79e2c.png)
+
+
+      When the primary role of a list is to offer definitions or explanations
+      for a group of terms, the bolded term should appear first, followed by a
+      colon. The definition should appear after the bolded term and be written
+      in complete sentences.
+
+
+      Each defined term should appear on its own line, without an indentation or
+      bullet.
+    variation_name: Definition list
 usage: ''
 accessibility: ''
 research: ''

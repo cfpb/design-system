@@ -227,42 +227,62 @@ description: >-
   and social security numbers, provide an example of the required format (e.g.,
   XXX-XX-XXXX).
 
-  ##### RICH CONTEXTUAL HELP Sometimes you need to give users access to
-  supporting content, in case they’re unfamiliar with the terminology or
-  concepts involved in the form. This kind of content should probably exist as a
-  page outside of the form, and then be repurposed in some way within the form.
 
-  ### Communicating errors Despite providing the best possible helper text and
-  contextual help, you should still plan for when users make errors when filling
-  out your forms.
+  ##### RICH CONTEXTUAL HELP
 
-  #### Tips for communicating errors: ##### INDICATE OPTIONAL AND/OR REQUIRED
-  FIELDS If most of the fields are required, leave them alone and just mark the
+  Sometimes you need to give users access to supporting content, in case they’re
+  unfamiliar with the terminology or concepts involved in the form. This kind of
+  content should probably exist as a page outside of the form, and then be
+  repurposed in some way within the form.
+
+
+  ### Communicating errors
+
+  Despite providing the best possible helper text and contextual help, you
+  should still plan for when users make errors when filling out your forms.
+
+
+  #### Tips for communicating errors:
+
+  ##### INDICATE OPTIONAL AND/OR REQUIRED FIELDS
+
+  If most of the fields are required, leave them alone and just mark the
   optional fields as optional. If most of the fields are optional, leave them
   alone and just mark the required fields as required. If it’s close to a tie,
   go with whichever choice might be better for your users.
 
-  ##### COMBINE FIELD-LEVEL ERROR TEXT WITH A PAGE-LEVEL ERROR MESSAGE This is
-  particularly important for accessibility. If someone is using a screenreader
-  to navigate the page, a digest of errors at the top of the page will help them
-  understand which fields need fixing. Including anchor links to the invalid
-  fields will allow them to find and fix the error without re-navigating the
-  entire form.
 
-  ##### BE DESCRIPTIVE WITH ERROR TEXT Tell the user what caused the error and
-  how to correct it.
+  ##### COMBINE FIELD-LEVEL ERROR TEXT WITH A PAGE-LEVEL ERROR MESSAGE
 
-  ##### VALIDATE FIELDS BEFORE THE USER SUBMITS Check for errors as the user
-  fills out the form (e.g., using javascript) and provide inline messaging with
-  instructions for how to correct the error.
+  This is particularly important for accessibility. If someone is using a
+  screenreader to navigate the page, a digest of errors at the top of the page
+  will help them understand which fields need fixing. Including anchor links to
+  the invalid fields will allow them to find and fix the error without
+  re-navigating the entire form.
+
+
+  ##### BE DESCRIPTIVE WITH ERROR TEXT
+
+  Tell the user what caused the error and how to correct it.
+
+
+  ##### VALIDATE FIELDS BEFORE THE USER SUBMITS
+
+  Check for errors as the user fills out the form (e.g., using javascript) and
+  provide inline messaging with instructions for how to correct the error.
+
 
   Also consider including affirmative inline validation (such as green
   checkmarks) for required text fields, especially those that require specific
   formats or character counts, such as Zip Codes and passwords.
 
-  ### Saving progress If the average time to complete a form is more than you
-  can reasonably expect your users to spend in a single session, then you need
-  to provide a way for them to save their progress.
+
+  ### Saving progress
+
+  If the average time to complete a form is more than you can reasonably expect
+  your users to spend in a single session, then you need to provide a way for
+  them to save their progress.
+
 
   The same goes if the session is likely to be interrupted for some reason. For
   example, if the user is suddenly asked for information which they might not
@@ -271,36 +291,60 @@ description: >-
   user might start a form on their mobile device and want to continue filling it
   out on their desktop computer.
 
-  ### Setting expectations The further in to a form someone gets, the more time
-  they have invested in it and the greater their annoyance if they have to
-  abandon it for some reason.
+
+  ### Setting expectations
+
+  The further in to a form someone gets, the more time they have invested in it
+  and the greater their annoyance if they have to abandon it for some reason.
+
 
   Be honest about what you’re offering users, and what you’re not offering them.
   In particular, people need to know up front about any:
 
-  * Costs involved * Waiting periods or delays * Uncommon or hard-to-find
-  infomation they’ll need to provide * Constraints on who can complete the form
-  (age, nationality etc) * Equipment that will be required (e.g., a printer) *
-  Non-digital parts of the form
+  * Costs involved
+
+  * Waiting periods or delays
+
+  * Uncommon or hard-to-find infomation they’ll need to provide
+
+  * Constraints on who can complete the form (age, nationality, etc)
+
+  * Equipment that will be required (e.g., a printer)
+
+  * Non-digital parts of the form
+
 
   Use common sense, though. Don’t try to make everyone read a page of terms and
   conditions before they start (they won’t).
+
 
   The best approach is to meet (or exceed) people’s expectations. For example,
   if your delivery times are typical and you accept all the usual payment
   methods then you won’t need to warn everyone about them up front.
 
-  ### Keeping it simple Every request for information from the user: * Requires
-  additional physical and cognitive effort * Creates another opportunity for
-  them to get something ‘wrong’ * Increases the time it takes to complete the
-  form * Increases the perception that the service is invasive * Increases the
-  risk that users will give up or fail to submit your form
+
+  ### Keeping it simple
+
+  Every request for information from the user:
+
+  * Requires additional physical and cognitive effort
+
+  * Creates another opportunity for them to get something ‘wrong’
+
+  * Increases the time it takes to complete the form
+
+  * Increases the perception that the service is invasive
+
+  * Increases the risk that users will give up or fail to submit your form
+
 
   Asking for information because ‘it might be useful’ or ‘it helps with our
   record keeping’ should be considered against all of these factors.
 
-  ### Attribution This guide on effective forms has been adapted from the guide
-  [Designing
+
+  ### Attribution
+
+  This guide on effective forms has been adapted from the guide [Designing
   transactions](https://www.gov.uk/service-manual/user-centred-design/designing-transactions.html)
   in the [GOV.UK Government Service Design
   Manual](https://www.gov.uk/service-manual), which is licensed under the [Open

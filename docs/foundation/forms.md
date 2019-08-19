@@ -59,43 +59,85 @@ description: >-
 
   ### Example structures
 
-  #### Option 1: Single page All sections are positioned on a single page.
+
+  #### Option 1: Single page
+
+
+  All sections are positioned on a single page.
 
   ![Diagram showing all sections on a
   page](/design-system/images/uploads/effectiveforms1-2x.png)
 
-  ##### The good * There’s only one submit button to press * A single URL gives
-  access to all form fields * It doesn’t force a fixed order of completion * You
-  benefit from context of neighboring sections * Progress is self-evident
 
-  ##### The bad * Long forms can be overwhelming and off-putting * It’s less
-  well suited to branching or non-linear flow * How do you save partial
-  progress? * Can be harder to track analytics like drop-off rates
+  ##### The good
 
-  #### Option 2: Wizard Each section goes on its own page.
+  * There’s only one submit button to press
+
+  * A single URL gives access to all form fields
+
+  * It doesn’t force a fixed order of completion
+
+  * You benefit from context of neighboring sections
+
+  * Progress is self-evident
+
+
+  ##### The bad
+
+  * Long forms can be overwhelming and off-putting
+
+  * It’s less well suited to branching or non-linear flow
+
+  * How do you save partial progress?
+
+  * Can be harder to track analytics like drop-off rates
+
+
+  #### Option 2: Wizard
+
+
+  Each section goes on its own page.
 
   ![Diagram showing each section on its own
   page](/design-system/images/uploads/effectiveforms2-2x.png)
 
-  ##### The good * It’s easier to handle branching and dependencies between
-  sections * It’s easier to let the user save progress * A long form can feel
-  more manageable * Easier to guide a user through an unfamiliar process *
-  Easier to capture analytics like drop-off rates for each section
 
-  ##### The bad * Can be harder for users to see where they are within the form
-  * It can slow users down as they have to click and load each section * You
-  lose the contextual information from neighboring sections * Harder for users
-  to review and edit previous sections * There’s no single place for users to go
-  back and edit their data * Not a natural fit for non-linear processes like
-  looping, adding and removing
+  ##### The good
 
-  #### Option 3: Accordion form All sections on a single page, but each new
-  section only appears once the previous section has been completed. Done well,
-  option 3 is a hybrid of the other two that has benefits of both the other
-  options. Within this hybrid option there are still some important design
-  decisions to make, for example: * Will future questions be shown in any way or
-  will you only see the questions you’ve answered? * What happens if you go back
-  and edit a previous question?
+  * It’s easier to handle branching and dependencies between sections
+
+  * It’s easier to let the user save progress
+
+  * A long form can feel more manageable
+
+  * Easier to guide a user through an unfamiliar process
+
+  * Easier to capture analytics like drop-off rates for each section
+
+
+  ##### The bad
+
+  * Can be harder for users to see where they are within the form
+
+  * It can slow users down as they have to click and load each section
+
+  * You lose the contextual information from neighboring sections
+
+  * Harder for users to review and edit previous sections
+
+  * There’s no single place for users to go back and edit their data
+
+  * Not a natural fit for non-linear processes like looping, adding and removing
+
+
+  #### Option 3: Accordion form
+
+  All sections on a single page, but each new section only appears once the
+  previous section has been completed. Done well, option 3 is a hybrid of the
+  other two that has benefits of both the other options. Within this hybrid
+  option there are still some important design decisions to make, for example: *
+  Will future questions be shown in any way or will you only see the questions
+  you’ve answered? * What happens if you go back and edit a previous question?
      * Does the current question stay open or closed?
      * How do you get back to the current question once you’ve edited a previous one?
      * Do you lose all your answers to questions that follow the one you go back to edit?

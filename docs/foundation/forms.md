@@ -134,31 +134,56 @@ description: >-
 
   All sections on a single page, but each new section only appears once the
   previous section has been completed. Done well, option 3 is a hybrid of the
-  other two that has benefits of both the other options. Within this hybrid
-  option there are still some important design decisions to make, for example: *
-  Will future questions be shown in any way or will you only see the questions
-  you’ve answered? * What happens if you go back and edit a previous question?
-     * Does the current question stay open or closed?
-     * How do you get back to the current question once you’ve edited a previous one?
-     * Do you lose all your answers to questions that follow the one you go back to edit?
+  other two that has benefits of both the other options.
+
+
+  Within this hybrid option there are still some important design decisions to
+  make, for example:
+
+  * Will future questions be shown in any way or will you only see the questions
+  you’ve answered?
+
+  * What happens if you go back and edit a previous question?
+
+  * Does the current question stay open or closed?
+
+  * How do you get back to the current question once you’ve edited a previous
+  one?
+
+  * Do you lose all your answers to questions that follow the one you go back to
+  edit?
+
 
   ![Diagram showing an accordion
   form](/design-system/images/uploads/effectiveforms3-2x.png)
 
-  ##### The good * Can handle branching and dependencies between sections * Can
-  easily review and edit previous questions * Can help guide a user through an
-  unfamiliar process * User still benefits from some surrounding context
-  Progress is clear
 
-  ##### The bad * Implementation and interface is more complex
+  ##### The good
 
-  #### Option 4: Hybrid For more complicated forms, some combination of the
-  other options might be your best bet.
+  * Can handle branching and dependencies between sections
 
-  Done well, this can give you the benefits of both the single page and wizard
-  approaches. It also allows you to create a sense of rhythm to the overall
-  flow, which can help users understand when they have moved into a different
-  part of the form, and break up the monotony of filling in forms.
+  * Can easily review and edit previous questions
+
+  * Can help guide a user through an unfamiliar process
+
+  * User still benefits from some surrounding context
+
+  * Progress is clear
+
+
+  ##### The bad
+
+  * Implementation and interface is more complex
+
+
+  #### Option 4: Hybrid
+
+  For more complicated forms, some combination of the other options might be
+  your best bet. Done well, this can give you the benefits of both the single
+  page and wizard approaches. It also allows you to create a sense of rhythm to
+  the overall flow, which can help users understand when they have moved into a
+  different part of the form, and break up the monotony of filling in forms.
+
 
   As always, these design decisions must have a strong, user-centred rationale
   behind them.
@@ -166,27 +191,41 @@ description: >-
   ![Diagram showing a hybrid
   form](/design-system/images/uploads/effectiveforms4-2x.png)
 
-  ### Helping users You should be aiming for a service that’s so intuitive
-  people don’t need any help in using it. If you find yourself explaining the
-  interface within the interface it’s a sign that something has gone wrong.
+
+  ### Helping users
+
+  You should be aiming for a service that’s so intuitive people don’t need any
+  help in using it. If you find yourself explaining the interface within the
+  interface it’s a sign that something has gone wrong.
+
 
   Sometimes though, people are going to need extra help. Many government forms
   involve concepts and terminology that people will be unfamiliar with. Some of
   this stuff takes a lot of explaining, so we need a way of providing contextual
   help of varying degrees of detail throughout a form.
 
-  #### Methods for providing extra help: ##### INLINE HELP Short, snappy text,
-  positioned near the part of the interface it refers to. If it’s something that
-  everyone needs to know, make it permanently visible.
 
-  ##### PROGRESSIVE DISCLOSURE A fancy phrase for hiding stuff until it’s
-  clicked on. Used carefully this is a good way of keeping the interface free
-  from potentially confusing clutter. Only use this for help that’s intended for
-  a small subset of your audience (say, less than 10%).
+  #### Methods for providing extra help:
 
-  ##### FIELD MASKING When a specific data entry format is required, as for
-  phone numbers, dates, and social security numbers, provide an example of the
-  required format (e.g., XXX-XX-XXXX).
+  ##### INLINE HELP
+
+  Short, snappy text, positioned near the part of the interface it refers to. If
+  it’s something that everyone needs to know, make it permanently visible.
+
+
+  ##### PROGRESSIVE DISCLOSURE
+
+  A fancy phrase for hiding stuff until it’s clicked on. Used carefully this is
+  a good way of keeping the interface free from potentially confusing clutter.
+  Only use this for help that’s intended for a small subset of your audience
+  (say, less than 10%).
+
+
+  ##### FIELD MASKING
+
+  When a specific data entry format is required, as for phone numbers, dates,
+  and social security numbers, provide an example of the required format (e.g.,
+  XXX-XX-XXXX).
 
   ##### RICH CONTEXTUAL HELP Sometimes you need to give users access to
   supporting content, in case they’re unfamiliar with the terminology or

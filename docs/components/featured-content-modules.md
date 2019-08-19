@@ -12,7 +12,6 @@ description: >-
 
 
 
-
   The goal of the FCM is to have the user do one of three things: learn
   something (usually by navigating to other content), watch something, or
   download something (a printable tool or resource). Because this content is
@@ -24,25 +23,11 @@ description: >-
 
 
 
-
   FCMs appear below the title and introductory paragraph on a page, and retain
   that position on all screen sizes. FCMs can appear on any page type, though
   they are best suited for pages third level and below in the site map. They are
   designed to accommodate pages with either a left-hand navigation or right-hand
   sidebar.
-
-
-
-
-  Information about Featured Content Modules can be found at:\
-
-
-  \*
-  http://cfpb.github.io/design-manual/page-components/featured-content-module.html\
-
-
-  \*
-  https://cfpb.github.io/capital-framework/components/cf-layout/#featured-content-module
 variations:
   - variation_code_snippet: |-
       <section class="o-featured-content-module">
@@ -237,5 +222,15 @@ usage: >-
   change the image’s horizontal anchoring.
 accessibility: ''
 research: ''
+help_us: >-
+  Information about Featured Content Modules can be found at:
+
+
+  *
+  http://cfpb.github.io/design-manual/page-components/featured-content-module.html\
+
+
+  *
+  https://cfpb.github.io/capital-framework/components/cf-layout/#featured-content-module
 ---
 

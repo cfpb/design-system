@@ -337,6 +337,9 @@ usage: >-
 
   ##### Code
 
+  Below are modifiers and elements of expandables.
+
+
   NOTE: If you use `cf-expandables.less` directly, be sure to run the file
   through [Autoprefixer](https://github.com/postcss/autoprefixer), or your
   compiled Capital Framework CSS will not work perfectly in older browsers.
@@ -344,8 +347,100 @@ usage: >-
 
   ###### Expanded modifier
 
+  Sometimes you may want the expandable to be open by default. This is as easy
+  as adding the `.o-expandable_content__onload-open` modifier to the
+  `.o-expandable_content` block.
+
+  ```
+
+  .o-expandable_content__onload-open
+
+  ```
+
 
   ###### Padded modifier
+
+  Adds padding and a background color to `.o-expandable_header` and
+  `.o-expandable_content`.
+
+
+  In addition to using the `.o-expandable__padded` modifier you also need to
+  make sure you are using `.o-expandable_header`.
+
+  ```
+
+  .o-expandable__padded
+
+  ```
+
+  ###### Spaced header
+
+  Allows you to add space between `.o-expandable_header` and
+  `.o-expandable_content`.
+
+  ```
+
+  .o-expandable_header__spaced
+
+  ```
+
+
+  ###### Label
+
+  Allows you to add some styled text.
+
+  ```
+
+  <span class="o-expandable_label">
+      Lorem ipsum
+  </span>
+
+  ```
+
+
+  ###### Link
+
+  Allows you to add some styled text to look like a link.
+
+  Note: only use this in the expandable header
+
+  ```
+
+  <span class="o-expandable_link">
+      Lorem ipsum
+  </span>
+
+  ```
+
+
+  ###### Header
+
+  Creates a full-width container to house information that is always visible.
+  This is useful for more complicated expandables that need to convey more
+  information than just ‘Show/Hide’ before the user expands it.
+
+
+  Combine `.o-expandable_header` with `.o-expandable_target` for a full-width
+  trigger.
+
+  ```
+
+  .o-expandable_header
+
+  ```
+
+
+  ###### Header left/right
+
+  Allows you to float information left and right.
+
+  ```
+
+  .o-expandable_header-left
+
+  .o-expandable_header-right
+
+  ```
 accessibility: >-
   The `find` function will not discover information hidden by a collapsed
   expandable, so use good judgement in deciding which information to hide.

@@ -441,6 +441,45 @@ usage: >-
   .o-expandable_header-right
 
   ```
+
+
+  ##### JavaScript API
+
+  A new array of Expandable instances can be created with `const expandables =
+  Expandable.init();`. Each instance has the following methods for public
+  consumption:
+
+
+  ###### toggleTargetState( element )
+
+  ```
+
+  const` element = document.querySelector( '.o-expandable_target' );
+
+  expandables[0].toggleTargetState( element );
+
+  ```
+
+  Toggle an expandable to open or closed.
+
+  Parameters:
+
+  * element {HTMLNode} The expandable target HTML DOM element.
+
+
+  ###### getLabelText()
+
+  ```
+
+  expandables[0].getLabelText();
+
+  ```
+
+  Retrieve the label text of the expandable header.
+
+  Return:
+
+  * {string} The text of the expandable’s label.
 accessibility: >-
   The `find` function will not discover information hidden by a collapsed
   expandable, so use good judgement in deciding which information to hide.

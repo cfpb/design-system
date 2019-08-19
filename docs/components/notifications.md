@@ -150,7 +150,7 @@ variations:
       expected, such as returning the number of results in a search.
 
 
-      For field level notifications, the success minicon and message should
+      * For field level notifications, the success minicon and message should
       always appear below the input field.
     variation_name: Success notification
   - variation_code_snippet: >-
@@ -183,7 +183,13 @@ variations:
       returned no results.
 
 
-      For field level notifications, the warning minicon and message should
+      This notification can also be used to display additional critical
+      information to a user before they submit a form, such as how their data
+      will be used and protected or a reminder that they can’t edit their
+      responses after submitting.
+
+
+      * For field level notifications, the warning minicon and message should
       always appear below the input field.
     variation_name: Warning notification
   - variation_code_snippet: >-
@@ -211,12 +217,18 @@ variations:
           </div>
       </div>
     variation_description: >-
-      The error notification is for displaying when an operation has not run as
-      expected and encountered an error.
+      The error notification displays when an operation has not run as expected
+      and encounters an error. Use after validating on the server side to call
+      out input errors preventing form submission.
 
 
-      For field level notifications, the error minicon and message should always
-      appear below the input field.
+      * For screen reader accessibility, include anchor links to the fields that
+      need correction.
+
+      * Place form-level alerts below the form title.
+
+      * For field level notifications, the error minicon and message should
+      always appear below the input field.
     variation_name: Error notification
 usage: >-
   **Use cases**

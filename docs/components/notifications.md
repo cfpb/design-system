@@ -121,7 +121,7 @@ variations:
       reassure the user that an action is functioning as intended.
     variation_name: Action notification
     variation_specs: ''
-  - variation_code_snippet: |-
+  - variation_code_snippet: >-
       <div class="m-notification
                   m-notification__visible
                   m-notification__success">
@@ -130,11 +130,30 @@ variations:
               <div class="h4 m-notification_message">11 results</div>
           </div>
       </div>
-    variation_description: >-
+
+
+      <br /> <!-- Spacing between standard and field level success notification
+      examples -->
+
+
+      <div class="m-form-field m-form-field__success">
+          <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
+          <div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert">
+              {% include icons/approved-round.svg %}
+              <span class="a-form-alert_text">
+                  This is an inline alert with a success state.
+              </span>
+          </div>
+      </div>
+    variation_description: >
       The success notification is for displaying when an operation has run as
       expected, such as returning the number of results in a search.
+
+
+      For field level notifications, the success minicon and message should
+      always appear below the input field.
     variation_name: Success notification
-  - variation_code_snippet: |-
+  - variation_code_snippet: >-
       <div class="m-notification
                   m-notification__visible
                   m-notification__warning">
@@ -143,12 +162,31 @@ variations:
               <div class="h4 m-notification_message">No results found.</div>
           </div>
       </div>
+
+
+      <br /> <!-- Spacing between standard and field level warning notification
+      examples -->
+
+
+      <div class="m-form-field m-form-field__warning">
+          <input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message">
+          <div class="a-form-alert a-form-alert__warning" id="form-input-warning_message" role="alert">
+              {% include icons/warning-round.svg %}
+              <span class="a-form-alert_text">
+                  This is an inline alert with a warning state.
+              </span>
+          </div>
+      </div>
     variation_description: >-
       The warning notification is for displaying when an operation has run as
       expected, but doesn’t have the expected results, such as a search that
       returned no results.
+
+
+      For field level notifications, the warning minicon and message should
+      always appear below the input field.
     variation_name: Warning notification
-  - variation_code_snippet: |-
+  - variation_code_snippet: >-
       <div class="m-notification
                   m-notification__visible
                   m-notification__error">
@@ -157,9 +195,28 @@ variations:
               <div class="h4 m-notification_message">Page not found.</div>
           </div>
       </div>
+
+
+      <br /> <!-- Spacing between standard and field level error notification
+      examples -->
+
+
+      <div class="m-form-field m-form-field__error">
+          <input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message">
+          <div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert">
+              {% include icons/error-round.svg %}
+              <span class="a-form-alert_text">
+                  This is an inline alert with an error state.
+              </span>
+          </div>
+      </div>
     variation_description: >-
       The error notification is for displaying when an operation has not run as
       expected and encountered an error.
+
+
+      For field level notifications, the error minicon and message should always
+      appear below the input field.
     variation_name: Error notification
 usage: >-
   **Use cases**

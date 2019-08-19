@@ -7,15 +7,14 @@ status: Legacy
 description: >-
   Web forms provide an incredible advantage over paper forms in their potential
   for accessibility, usability, and operational efficiency, but when designed
-  without users in mind they can lose many of these benefits. In this guide,
+  without users in mind, they can lose many of these benefits. In this guide,
   we’ve outlined several ways to ensure the best possible user experience.
 
 
   This page is under active development. Information is being moved into it from
   this page:
 
-  *
-  (http://cfpb.github.io/design-manual/page-components/form-fields.html)[http://cfpb.github.io/design-manual/page-components/form-fields.html]
+  * http://cfpb.github.io/design-manual/page-components/form-fields.html
 
 
   ### Choosing a form structure
@@ -65,6 +64,7 @@ description: >-
 
   All sections are positioned on a single page.
 
+
   ![Diagram showing all sections on a
   page](/design-system/images/uploads/effectiveforms1-2x.png)
 
@@ -97,6 +97,7 @@ description: >-
 
 
   Each section goes on its own page.
+
 
   ![Diagram showing each section on its own
   page](/design-system/images/uploads/effectiveforms2-2x.png)
@@ -188,11 +189,13 @@ description: >-
   As always, these design decisions must have a strong, user-centred rationale
   behind them.
 
+
   ![Diagram showing a hybrid
   form](/design-system/images/uploads/effectiveforms4-2x.png)
 
 
   ### Helping users
+
 
   You should be aiming for a service that’s so intuitive people don’t need any
   help in using it. If you find yourself explaining the interface within the
@@ -207,13 +210,16 @@ description: >-
 
   #### Methods for providing extra help:
 
+
   ##### INLINE HELP
+
 
   Short, snappy text, positioned near the part of the interface it refers to. If
   it’s something that everyone needs to know, make it permanently visible.
 
 
   ##### PROGRESSIVE DISCLOSURE
+
 
   A fancy phrase for hiding stuff until it’s clicked on. Used carefully this is
   a good way of keeping the interface free from potentially confusing clutter.
@@ -223,12 +229,14 @@ description: >-
 
   ##### FIELD MASKING
 
+
   When a specific data entry format is required, as for phone numbers, dates,
   and social security numbers, provide an example of the required format (e.g.,
   XXX-XX-XXXX).
 
 
   ##### RICH CONTEXTUAL HELP
+
 
   Sometimes you need to give users access to supporting content, in case they’re
   unfamiliar with the terminology or concepts involved in the form. This kind of
@@ -238,13 +246,16 @@ description: >-
 
   ### Communicating errors
 
+
   Despite providing the best possible helper text and contextual help, you
   should still plan for when users make errors when filling out your forms.
 
 
   #### Tips for communicating errors:
 
+
   ##### INDICATE OPTIONAL AND/OR REQUIRED FIELDS
+
 
   If most of the fields are required, leave them alone and just mark the
   optional fields as optional. If most of the fields are optional, leave them
@@ -253,6 +264,7 @@ description: >-
 
 
   ##### COMBINE FIELD-LEVEL ERROR TEXT WITH A PAGE-LEVEL ERROR MESSAGE
+
 
   This is particularly important for accessibility. If someone is using a
   screenreader to navigate the page, a digest of errors at the top of the page
@@ -263,10 +275,12 @@ description: >-
 
   ##### BE DESCRIPTIVE WITH ERROR TEXT
 
+
   Tell the user what caused the error and how to correct it.
 
 
   ##### VALIDATE FIELDS BEFORE THE USER SUBMITS
+
 
   Check for errors as the user fills out the form (e.g., using javascript) and
   provide inline messaging with instructions for how to correct the error.
@@ -278,6 +292,7 @@ description: >-
 
 
   ### Saving progress
+
 
   If the average time to complete a form is more than you can reasonably expect
   your users to spend in a single session, then you need to provide a way for
@@ -293,6 +308,7 @@ description: >-
 
 
   ### Setting expectations
+
 
   The further in to a form someone gets, the more time they have invested in it
   and the greater their annoyance if they have to abandon it for some reason.
@@ -324,6 +340,7 @@ description: >-
 
 
   ### Keeping it simple
+
 
   Every request for information from the user:
 

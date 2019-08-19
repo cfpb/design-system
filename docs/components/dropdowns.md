@@ -1,5 +1,5 @@
 ---
-title: Dropdowns and multi-select
+title: Dropdowns and multi-selects
 layout: variation
 section: components
 secondary_section: Forms

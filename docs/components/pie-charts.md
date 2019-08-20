@@ -4,16 +4,7 @@ layout: variation
 section: components
 secondary_section: Data visualization
 status: Proposed
-description: >-
-  Use when you have less than six things that add up to 100%. Use the middle of
-  the doughnut to highlight the number or category type. You could also consider
-  using a stacked bar chart instead.
-
-
-  Information about Pie Charts can be found at:
-
-
-  http://cfpb.github.io/design-manual/data-visualization/chart-types.html#pie-or-doughnut-charts
+description: I like pie.
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: >-
@@ -35,3 +26,4 @@ usage: |-
 accessibility: ''
 research: ''
 ---
+

@@ -1,28 +1,28 @@
 ---
-title: Info Unit Groups
+title: 'Info Unit Groups: Image/text'
 layout: variation
 section: components
 secondary_section: Content layouts
 status: Legacy
 description: >-
-  Info unit groups provide descriptions, context, and links to lead users to
-  additional content off the page. If desired, images are used in combination
-  with text to call attention to specific linked content on a page. The
-  variations are used in different use cases and on specific page templates.
+  In general, info unit groups provide context and lead users to additional
+  content off the page. The image/text variations are used to call attention to
+  specific linked content.
 
 
-  More information about Info Unit Group variations can be found at:
+  ![Info unit group: example of 50/50 image and text
+  component](/design-system/images/uploads/50_50_intro_mockup.png "Info unit
+  group: example of 50/50 image and text component")
+
+
+
+
+  More information about Info Unit Group image/text variations can be found at:
 
 
   * https://cfpb.github.io/design-manual/page-components/25-75.html
 
   * https://cfpb.github.io/design-manual/page-components/50-50.html
-
-  *
-  https://cfpb.github.io/design-manual/page-components/half-width-link-blob.html
-
-  *
-  https://cfpb.github.io/design-manual/page-components/third-width-link-blob.html
 
   * https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group
 variations:

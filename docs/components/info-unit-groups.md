@@ -5,8 +5,26 @@ section: components
 secondary_section: Content layouts
 status: Legacy
 description: >-
-  Info unit groups are very important. Etiam at risus et justo dignissim congue.
-  Donec congue lacinia dui, a porttitor lectus condimentum laoreet.
+  Info unit groups provide descriptions, context, and links to lead users to
+  additional content off the page. If desired, images are used in combination
+  with text to call attention to specific linked content on a page. The
+  variations are used in different use cases and on specific page templates.
+
+
+  More information about Info Unit Group variations can be found at:
+
+
+  * https://cfpb.github.io/design-manual/page-components/25-75.html
+
+  * https://cfpb.github.io/design-manual/page-components/50-50.html
+
+  *
+  https://cfpb.github.io/design-manual/page-components/half-width-link-blob.html
+
+  *
+  https://cfpb.github.io/design-manual/page-components/third-width-link-blob.html
+
+  * https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group
 variations:
   - variation_code_snippet: TBD
     variation_description: >-

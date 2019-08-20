@@ -9,7 +9,7 @@ layout: default
     </aside>
         {% include variation-content.html %}
         <div class="o-editor_link" id="edit-page">
-            <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/{{ page.section }}/entries/{{ page.title | slugify }}" title="Edit this page in Netlify CMS">
+            <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/{{ page.section }}/entries/{{ page.path | split: '/' | last | replace: '.md', '' }}" title="Edit this page in Netlify CMS">
                 <span class="a-btn_text">Edit this page</span>
                 <span class="a-btn_icon">{% include icons/edit.svg %}</span>
             </a>

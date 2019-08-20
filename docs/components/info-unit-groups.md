@@ -6,8 +6,8 @@ secondary_section: Content layouts
 status: Legacy
 description: >-
   In general, info unit groups provide context and lead users to additional
-  content off the page. The image/text variations are used to call attention to
-  specific linked content.
+  content off the page. The versions called image/text components are used to
+  call attention to specific linked content.
 
 
   ![Info unit group: example of 50/50 image and text

@@ -2,7 +2,7 @@
 title: Typography
 layout: variation
 section: foundation
-secondary_section: Multimedia
+secondary_section: Identity
 status: Proposed
 description: >-
   A clear typographic hierarchy is critical to the effective communication of
@@ -156,3 +156,4 @@ accessibility: >-
   This color contrast tool is a useful resource for testing the compliance of
   any combination of colors in our palette.
 ---
+

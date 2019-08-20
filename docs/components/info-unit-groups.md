@@ -15,8 +15,6 @@ description: >-
   group: example of 50/50 image and text component")
 
 
-
-
   More information about Info Unit Group image and text components can be found
   at:
 
@@ -24,6 +22,9 @@ description: >-
   * https://cfpb.github.io/design-manual/page-components/25-75.html
 
   * https://cfpb.github.io/design-manual/page-components/50-50.html
+
+  *
+  https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts
 
   * https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group
 variations:
@@ -197,6 +198,10 @@ variations:
       * At breakpoints below 601: Heading sizes H3 and above automatically drop
       down one level and the mobile link style is used for the call to action
       link(s).
+    variation_jinja_code_snippet: >-
+      *
+      [image-text-50-50-group.html](https://github.com/cfpb/cfgov-refresh/blob/469930ce0e3816a3decfbca60d4ce4578db7d589/cfgov/jinja2/v1/_includes/organisms/image-text-50-50-group.html)
+      in cfgov-refresh
     variation_name: 50/50 image and text component
 usage: >
   **When to use**

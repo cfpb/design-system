@@ -1,13 +1,13 @@
 ---
-title: 'Info Unit Groups: Image/text'
+title: 'Info Unit Groups: Image and text'
 layout: variation
 section: components
 secondary_section: Content layouts
 status: Legacy
 description: >-
   In general, info unit groups provide context and lead users to additional
-  content off the page. The versions called image/text components are used to
-  call attention to specific linked content.
+  content off the page. The versions called image and text components are used
+  to call attention to specific linked content.
 
 
   ![Info unit group: example of 50/50 image and text
@@ -17,7 +17,8 @@ description: >-
 
 
 
-  More information about Info Unit Group image/text variations can be found at:
+  More information about Info Unit Group image and text components can be found
+  at:
 
 
   * https://cfpb.github.io/design-manual/page-components/25-75.html

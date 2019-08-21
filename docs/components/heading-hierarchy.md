@@ -8,7 +8,7 @@ description: >-
   Hierarchy refers to the difference in type size and weight between text
   elements. A successful hierarchy establishes the order of importance of
   elements on a page, allowing readers to easily scan content and find what
-  they’re looking for.
+  they’re looking for!
 
 
   This page is under active development. Information is being moved into it from

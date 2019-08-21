@@ -25,22 +25,34 @@ description: >-
   from print to digital. Its round and geometric letterforms are approachable
   and modern.
 variations:
-  - variation_code_snippet: |-
-      <h4 id="avenir-next-demi-bold">Avenir Next Demi Bold<br><br>
+  - variation_code_snippet: >-
+      <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight:
+      600;letter-spacing: 1px;">Avenir Next Demi Bold<br><br>
+
       ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+
       abcdefghijklmnopqrstuvwxyz<br>
+
       0123456789</p></h4>
     variation_name: ' '
-  - variation_code_snippet: |-
-      <h4 id="avenir-next-medium">Avenir Next Medium<br><br>
+  - variation_code_snippet: >-
+      <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight: 500;">Avenir
+      Next Medium<br><br>
+
       ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+
       abcdefghijklmnopqrstuvwxyz<br>
+
       0123456789</p></h4>
     variation_name: ' '
-  - variation_code_snippet: |-
-      <h4 id="avenir-next-regular">Avenir Next Regular<br><br>
+  - variation_code_snippet: >-
+      <h4 style="font-family:'AvenirNextLTW01-Regular';">Avenir Next
+      Regular<br><br>
+
       ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+
       abcdefghijklmnopqrstuvwxyz<br>
+
       0123456789</p></h4>
     variation_name: ' '
 usage: >-

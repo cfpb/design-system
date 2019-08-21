@@ -13,9 +13,7 @@ variations:
   - variation_code_snippet: |-
       <aside class="m-pull-quote">
           <p class="m-pull-quote_body">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Cum corrupti tempora nam nihil qui mollitia consectetur
-              corporis nemo culpa dolorum!
+              "You miss 100% of the shots you don't take - Wayne Gretzky" -Michael Scott
           </p>
           <footer>
               <cite class="m-pull-quote_citation">
@@ -44,3 +42,4 @@ usage: ''
 accessibility: ''
 research: ''
 ---
+

@@ -15,6 +15,7 @@ public_folder: /design-system/images/uploads
 
 collections:
   - name: 'getting-started'
+    preview_path: "/getting-started/{{slug}}"
     label: 'Getting started pages'
     label_singular: 'Getting started page'
     folder: 'docs/getting-started/'
@@ -113,6 +114,7 @@ collections:
         widget: 'markdown'
         required: false
   - name: 'foundation'
+    preview_path: "/foundation/{{slug}}"
     label: 'Foundation pages'
     label_singular: 'Foundation page'
     folder: 'docs/foundation/'
@@ -217,6 +219,7 @@ collections:
         widget: 'markdown'
         required: false
   - name: 'components'
+    preview_path: "/components/{{slug}}"
     label: 'Component pages'
     label_singular: 'Component page'
     folder: 'docs/components/'
@@ -328,6 +331,7 @@ collections:
         required: false
   - name: 'templates'
     label: 'Templates pages'
+    preview_path: "/templates/{{slug}}"
     label_singular: 'Templates page'
     folder: 'docs/templates/'
     create: true

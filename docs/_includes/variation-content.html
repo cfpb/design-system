@@ -171,6 +171,7 @@
                     {% endcomment %}
                     {% for token_variation in token_variations %}
                         {% if token_variation == full_variation_name %}
+                            {% assign token_index = token_index | minus: 1 %}
                             {% assign rows = rows | push: token_index %}
                             {% for column_name in column_names %}
                                 {% if token[column_name] %}

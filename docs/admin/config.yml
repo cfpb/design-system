@@ -219,7 +219,7 @@ collections:
         widget: 'markdown'
         required: false
   - name: 'components'
-    preview_path: "components/quotes/"
+    preview_path: "components/{{slug}}"
     label: 'Component pages'
     label_singular: 'Component page'
     folder: 'docs/components/'

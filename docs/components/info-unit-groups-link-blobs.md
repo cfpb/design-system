@@ -62,5 +62,8 @@ variations:
       [third-width-link-blob-group.html](https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html)
       in [cfgov-refresh](https://github.com/cfpb/cfgov-refresh)
     variation_name: Third-width link blob
+related_items: >-
+  * [Info Unit Groups: image and
+  text](https://cfpb.github.io/design-system/components/info-unit-groups-image-and-text)
 ---
 

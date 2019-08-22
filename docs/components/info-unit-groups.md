@@ -222,7 +222,7 @@ restrictions:
   - restrictions_do_not: When there are multiple paragraphs of copy.
 accessibility: ''
 research: ''
-related_items: '* Link blobs (Design System page link in progress)'
+related_items: '* Link blobs (Design System page in progress)'
 help_us: >-
   See [25-75 sample HTML
   (https://gist.github.com/contolini/91d498357fd362d6272f22e001300cae) and

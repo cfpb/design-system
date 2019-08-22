@@ -165,6 +165,7 @@ usage: >-
 
   ##### When to use Related posts
 
+
   * This component is used to display lists of related content dynamically
   pulled from elsewhere in the site – blogs, events, and newsroom items– based
   on topic tag selections.
@@ -175,6 +176,7 @@ usage: >-
 
   ##### When other options are better
 
+
   * When lists of items should not be automatically updated consider related
   links instead.
 
@@ -182,6 +184,7 @@ usage: >-
 
 
   ##### When to use Related links
+
 
   * When a specific, static piece of content and call to action needs to be
   displayed in the sidebar.
@@ -192,10 +195,12 @@ usage: >-
 
   ##### When other options are better
 
+
   * When all of the content is posts that can be dynamically populated.
 
 
   ##### When to use Meta data
+
 
   * When displaying relevant metadata about a specific document or set of
   documents, such as for a rule, notice, or report, for users to easily
@@ -204,22 +209,26 @@ usage: >-
 
   ##### When other options are better
 
+
   * When anything other than metadata for a document detail page is being
   displayed.
 
 
   ##### When to use call to action with button
 
+
   * When highlighting or featuring a call to take a specific action.
 
 
   ##### When other options are better
+
 
   * When the “action” is navigating to another page of the site or downloading a
   document. Refer to the buttons page for more information.
 
 
   **Content guidelines**
+
 
   * Slugs should be as succinct as possible, ideally 30 characters or less. They
   should be limited to one line at max column width.
@@ -236,6 +245,7 @@ usage: >-
 
 
   #### Behavior
+
 
   All variations of sidebar element move into prefooter format at screen widths
   less than 901 px. The sidebar area can house multiple stacked sidebar
@@ -259,7 +269,6 @@ usage: >-
 
   Below 601 px width, for legibility link styling on clickable headings remains
   in the standard format, but mobile link style is applied where possible.
-
 
 
   ![Prefooter 901+ (with side

@@ -45,7 +45,9 @@
             <a class="m-list_link" href="#variations">Variations</a>
         </li>
         {% endif %}
-        {% if page.usage %}
+        <!-- liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below -->
+        {% if page.restrictions != '' and page.restrictions or page.usage and page.usage != '' %}
+        <!-- restrictions is not empty and ( restrictions exists or (if usage exists and usage is not empty)) -->
         <li class="m-list_item">
             <a class="m-list_link" href="#usage">Usage</a>
         </li>
@@ -226,19 +228,20 @@
     </section>
     {% endif %}
 
-    {% if page.usage or page.restrictions %}
+    <!-- liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below -->
+    {% if page.restrictions != '' and page.restrictions or page.usage and page.usage != '' %}
         <section class="sticky-header">
             <h3 id="usage">Usage</h3>
-                {% if page.usage %}
+                {% if page.usage and page.usage != '' %}
                     <p>
                     {{ page.usage | markdownify }}
                     </p>
                 {% endif %}
-            {% if page.restrictions %}
+            {% if page.restrictions and page.restrictions != '' %}
                 <div class="content-l">
                     <h4>Restrictions</h4>
                     {% for restriction in page.restrictions %}
-                        {% if restriction.restrictions_do %}
+                        {% if restriction.restrictions_do and restriction.restrictions_do != '' %}
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
                                     <header class="m-slug-header">
@@ -252,7 +255,7 @@
                                 </div>
                             </div>
                         {% endif %}
-                        {% if restriction.restrictions_do_not %}
+                        {% if restriction.restrictions_do_not and restriction.restrictions_do_not != '' %}
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
                                     <header class="m-slug-header m-slug-header__warning">

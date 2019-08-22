@@ -29,7 +29,7 @@ description: >-
 
   * <https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group>
 variations:
-  - variation_code_snippet: TBD
+  - variation_code_snippet: TBD (not easily available)
     variation_description: >-
       The half-width link blob is used on higher-level template pages to provide
       succinct descriptions and lead users to content deeper within the section.
@@ -45,7 +45,7 @@ variations:
       [half-width-link-blob-group.html](https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/half-width-link-blob-group.html)
       in [cfgov-refresh](https://github.com/cfpb/cfgov-refresh)
     variation_name: Half-width link blob
-  - variation_code_snippet: TBD
+  - variation_code_snippet: TBD (not easily available)
     variation_description: >-
       The third-width link blob provides users with supplemental content or
       suggested navigation paths to sibling pages. The three-column layout

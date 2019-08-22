@@ -1,12 +1,32 @@
 ---
-title: Info Unit Groups
+title: 'Info Unit Groups: Image and text'
 layout: variation
 section: components
 secondary_section: Content layouts
 status: Legacy
 description: >-
-  Info unit groups are very important. Etiam at risus et justo dignissim congue.
-  Donec congue lacinia dui, a porttitor lectus condimentum laoreet.
+  In general, info unit groups provide context and lead users to additional
+  content off the page. The versions called image and text components are used
+  to call attention to specific linked content.
+
+
+  ![Info unit group: example of 50/50 image and text
+  component](/design-system/images/uploads/50_50_intro_mockup.png "Info unit
+  group: example of 50/50 image and text component")
+
+
+  More information about Info Unit Group image and text components can be found
+  at:
+
+
+  * https://cfpb.github.io/design-manual/page-components/25-75.html
+
+  * https://cfpb.github.io/design-manual/page-components/50-50.html
+
+  *
+  https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts
+
+  * https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group
 variations:
   - variation_code_snippet: TBD
     variation_description: >-
@@ -178,6 +198,10 @@ variations:
       * At breakpoints below 601: Heading sizes H3 and above automatically drop
       down one level and the mobile link style is used for the call to action
       link(s).
+    variation_jinja_code_snippet: >-
+      *
+      [image-text-50-50-group.html](https://github.com/cfpb/cfgov-refresh/blob/469930ce0e3816a3decfbca60d4ce4578db7d589/cfgov/jinja2/v1/_includes/organisms/image-text-50-50-group.html)
+      in cfgov-refresh
     variation_name: 50/50 image and text component
 usage: >
   **When to use**
@@ -240,3 +264,4 @@ help_us: >-
   *
   [cf-layout](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
 ---
+

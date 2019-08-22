@@ -52,12 +52,12 @@
             <a class="m-list_link" href="#usage">Usage</a>
         </li>
         {% endif %}
-        {% if page.accessibility %}
+        {% if page.accessibility and page.accessibility != '' %}
         <li class="m-list_item">
             <a class="m-list_link" href="#accessibility">Accessibility</a>
         </li>
         {% endif %}
-        {% if page.research %}
+        {% if page.research and page.research != '' %}
         <li class="m-list_item">
             <a class="m-list_link" href="#research">Research</a>
         </li>
@@ -275,7 +275,7 @@
         </section>
     {% endif %}
 
-    {% if page.accessibility %}
+    {% if page.accessibility and page.accessibility != '' %}
         <section class="sticky-header">
             <h3 id="accessibility">Accessibility</h3>
             <p>
@@ -284,7 +284,7 @@
         </section>
     {% endif %}
 
-    {% if page.research %}
+    {% if page.research and page.research != '' %}
         <section class="sticky-header">
             <h3 id="research">Research</h3>
             <p>

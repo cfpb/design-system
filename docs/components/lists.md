@@ -6,6 +6,13 @@ secondary_section: Text
 status: Proposed
 description: "Lists are an effective way to visually highlight important information so that it can be more easily scanned and read. Before writing a list, it’s important to identify the best style needed for the information being presented.\n\nList items should:\n\n* Be capitalized\n* Avoid unnecessary repetition\n* Have a parallel structure\n* Start with an introductory clause or sentence\n* Use consistent punctuation\n\nIf the list items are complete sentences, the introductory clause should also be a complete sentence, followed by a colon. These list items should end with a period.\n\nIf the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/brand-guidelines/typography.html\t\n* https://cfpb.github.io/capital-framework/components/cf-typography/#lists"
 variations:
+  - variation_code_snippet: ' '
+    variation_description: >-
+      Modifies the base style to make <dt> look like an h5. Used for definition
+      lists that contain key/value or term/definition pairs (i.e. lists where
+      the <dt> is fairly short, acts like a label, and is readable in all caps),
+      like the Mosaic portals and the job listings.
+    variation_name: Key/value definition list
   - variation_code_snippet: |-
       <ul class="m-list m-list__unstyled">
           <li class="m-list_item">List item 1</li>
@@ -99,13 +106,6 @@ variations:
       Each defined term should appear on its own line, without an indentation or
       bullet.
     variation_name: Basic definition list
-  - variation_code_snippet: ' '
-    variation_description: >-
-      Modifies the base style to make <dt> look like an h5. Used for definition
-      lists that contain key/value or term/definition pairs (i.e. lists where
-      the <dt> is fairly short, acts like a label, and is readable in all caps),
-      like the Mosaic portals and the job listings.
-    variation_name: Key/value definition list
   - variation_code_snippet: ' '
     variation_description: >-
       Modifies the base style to put <dt> and <dd> on the same line (and maybe

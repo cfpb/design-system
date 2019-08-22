@@ -124,7 +124,7 @@ variations:
       Line height (pixels) | ? |  | 18px | 12pt
       Bottom margin | | | 15px |
   - variation_code_snippet: |-
-      <h5>Heading level 6</h5>
+      <h6>Heading level 6</h6>
 
       <!--
       Non heading element:

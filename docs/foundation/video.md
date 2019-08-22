@@ -22,7 +22,7 @@ description: >-
 
   * http://cfpb.github.io/design-manual/brand-guidelines/video.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       A video that covers a specific event relevant to the Bureau, such as a
       field hearing, webcast, or conference.
@@ -31,7 +31,7 @@ variations:
       ![Still from Miami Fl Field Hearing
       Video](/design-system/images/uploads/video_1.jpg "Event video")
     variation_name: Event
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       An industry-facing video that informs viewers about a specific topic
       through animated slide presentations and voiceovers.

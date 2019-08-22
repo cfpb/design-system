@@ -24,7 +24,7 @@ collections:
     slug: '{{slug}}'
     fields:
       - name: 'title'
-        label: 'Title'
+        label: 'Page title'
         widget: 'string'
       - name: 'layout'
         value: 'variation'
@@ -123,7 +123,7 @@ collections:
     slug: '{{slug}}'
     fields:
       - name: 'title'
-        label: 'Title'
+        label: 'Page title'
         widget: 'string'
       - name: 'layout'
         value: 'variation'
@@ -228,7 +228,7 @@ collections:
     slug: '{{slug}}'
     fields:
       - name: 'title'
-        label: 'Title'
+        label: 'Page title'
         widget: 'string'
       - name: 'layout'
         value: 'variation'
@@ -339,7 +339,7 @@ collections:
     slug: '{{slug}}'
     fields:
       - name: 'title'
-        label: 'Title'
+        label: 'Page title'
         widget: 'string'
       - name: 'layout'
         value: 'variation'

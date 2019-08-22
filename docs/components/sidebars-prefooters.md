@@ -143,6 +143,22 @@ variations:
       Inline styling is for demonstration purposes only; do not include it in
       your markup.
     variation_name: Narrow content column option
+  - variation_code_snippet: ' '
+    variation_description: >-
+      ![Related posts
+      example](/design-system/images/uploads/related_posts_example.jpg)
+    variation_name: Related posts
+  - variation_code_snippet: ' '
+    variation_description: >-
+      ![Related links
+      example](/design-system/images/uploads/related_links_example.jpg)
+    variation_name: Related links
+  - variation_code_snippet: ' '
+    variation_description: '![Metadata example](/design-system/images/uploads/metadata_example.jpg)'
+    variation_name: Metadata
+  - variation_code_snippet: ' '
+    variation_description: '![](/design-system/images/uploads/cta_example.png)'
+    variation_name: Call to action with button
 usage: >-
   **Use cases**
 

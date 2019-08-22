@@ -1,0 +1,14 @@
+{
+  "name": "cf-notifications",
+  "version": "11.0.1",
+  "description": "Capital Framework notifications",
+  "less": "src/cf-notifications.less",
+  "style": "cf-notifications.css",
+  "dependencies": {
+    "cf-core": "^11.0.0",
+    "cf-icons": "^11.0.1"
+  },
+  "keywords": [
+    "notifications"
+  ]
+}

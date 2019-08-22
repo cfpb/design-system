@@ -222,9 +222,10 @@ restrictions:
   - restrictions_do_not: When there are multiple paragraphs of copy.
 accessibility: ''
 research: ''
+related_items: '* Link blobs (Design System page link in progress)'
 help_us: >-
-  See [25-75 sample
-  HTML](https://gist.github.com/contolini/91d498357fd362d6272f22e001300cae) and
+  See [25-75 sample HTML
+  (https://gist.github.com/contolini/91d498357fd362d6272f22e001300cae) and
   [50-50 sample
   HTML](https://gist.github.com/contolini/ad1513232fe07d8a70683669ba48f9d2), CSS
   for both need to be migrated from cfgov-refresh.

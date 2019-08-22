@@ -54,9 +54,7 @@ usage: >
   privacy policy text before the button.
 
   - Use standard button text: “Sign up”
-restrictions:
-  - restrictions_do: 'Yes'
-    restrictions_do_not: 'No'
+restrictions: []
 accessibility: >-
   Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend
   uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num

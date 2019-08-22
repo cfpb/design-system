@@ -215,11 +215,7 @@ usage: >
 
   * Can be used for an even or odd number of items and may imply a hierarchy of
   information given the list style format.
-restrictions:
-  - restrictions_do_not: >-
-      When content doesn’t require imagery. Use the half width link blob pattern
-      instead.
-  - restrictions_do_not: When there are multiple paragraphs of copy.
+restrictions: []
 accessibility: ''
 research: ''
 related_items: '* Link blobs (Design System page in progress)'

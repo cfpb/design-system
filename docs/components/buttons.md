@@ -260,6 +260,7 @@ usage: >-
   Autoprefixer, or your compiled Capital Framework CSS will not work perfectly
   in older browsers.
 restrictions:
+  - {}
   - restrictions_do: |-
       Test
 

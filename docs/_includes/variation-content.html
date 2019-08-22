@@ -88,13 +88,13 @@
                 </h5>
 
                 <ul class="govuk-tabs__list">
-                    {% if variation.variation_code_snippet != '' %}
+                    {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet-{{ forloop.index }}">
                         HTML                        </a>
                     </li>
                     {% endif %}
-                    {% if variation.variation_jinja_code_snippet != '' %}
+                    {% if variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '' %}
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#jinja-code-snippet-{{ forloop.index }}">
                         Jinja
@@ -104,7 +104,7 @@
                 </ul>
 
                 <!-- HTML snippet -->
-                {% if variation.variation_code_snippet != '' %}
+                {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
                 <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
                     <div class="variation-code-snippet">
                         <h6 class="variation-code-snippet-title">HTML</h6>
@@ -116,7 +116,7 @@
                 {% endif %}
 
                 <!-- Jinja snippet -->
-                {% if variation.variation_jinja_code_snippet != '' %}
+                {% if variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '' %}
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
                     <div class="variation-jinja-code-snippet">
                         <h6 class="variation-jinja-code-snippet-title">Jinja</h6>

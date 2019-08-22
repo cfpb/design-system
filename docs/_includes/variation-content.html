@@ -45,9 +45,9 @@
             <a class="m-list_link" href="#variations">Variations</a>
         </li>
         {% endif %}
-        <!-- liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below -->
+        {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
         {% if page.restrictions != '' and page.restrictions or page.usage and page.usage != '' %}
-        <!-- restrictions is not empty and ( restrictions exists or (if usage exists and usage is not empty)) -->
+        {% comment %} restrictions is not empty and ( restrictions exists or (if usage exists and usage is not empty)) {% endcomment %}
         <li class="m-list_item">
             <a class="m-list_link" href="#usage">Usage</a>
         </li>
@@ -228,7 +228,7 @@
     </section>
     {% endif %}
 
-    <!-- liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below -->
+    {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
     {% if page.restrictions != '' and page.restrictions or page.usage and page.usage != '' %}
         <section class="sticky-header">
             <h3 id="usage">Usage</h3>

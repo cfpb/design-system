@@ -54,6 +54,9 @@ usage: >
   privacy policy text before the button.
 
   - Use standard button text: “Sign up”
+restrictions:
+  - restrictions_do: 'Yes'
+    restrictions_do_not: 'No'
 accessibility: >-
   Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend
   uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num
@@ -91,3 +94,4 @@ research: >-
   quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
   sunt, idipicia volor aut eat.
 ---
+

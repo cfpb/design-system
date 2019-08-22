@@ -1,5 +1,5 @@
 ---
-title: Sidebars/Prefooters
+title: Sidebars and Prefooters
 layout: variation
 section: components
 secondary_section: Content layouts

@@ -110,9 +110,9 @@
                 <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
                     <div class="variation-code-snippet">
                         <h6 class="variation-code-snippet-title">HTML</h6>
-                            <div class="source-code">
-                                <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
-                            </div>
+                        <div class="source-code">
+                            <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
+                        </div>
                     </div>
                 </section>
                 {% endif %}
@@ -122,7 +122,9 @@
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
                     <div class="variation-jinja-code-snippet">
                         <h6 class="variation-jinja-code-snippet-title">Jinja</h6>
-                        {{ variation.variation_jinja_code_snippet | markdownify }}
+                        <div class="source-code">
+                            <pre><code class="language-html">{{ variation.variation_jinja_code_snippet | xml_escape }}</code></pre>
+                        </div>
                     </div>
                 </section>
                 {% endif %}

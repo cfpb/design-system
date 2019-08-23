@@ -19,7 +19,7 @@ description: >-
 
   * http://cfpb.github.io/design-manual/brand-guidelines/illustration.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       These illustrations should feature flat elements and avoid showing things
       in three dimensions. Elements should not appear to be outlined.
@@ -28,7 +28,7 @@ variations:
       ![Paying for College
       illustration](/design-system/images/uploads/illustration5_-2.png)
     variation_name: Front-facing
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       Top-facing illustrations are object-based. Illustrations should be
       arranged in a way that it appears the viewer is immersed in a real life

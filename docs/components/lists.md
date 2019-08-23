@@ -99,14 +99,14 @@ variations:
       Each defined term should appear on its own line, without an indentation or
       bullet.
     variation_name: Basic definition list
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       Modifies the base style to make <dt> look like an h5. Used for definition
       lists that contain key/value or term/definition pairs (i.e. lists where
       the <dt> is fairly short, acts like a label, and is readable in all caps),
       like the Mosaic portals and the job listings.
     variation_name: Key/value definition list
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       Modifies the base style to put <dt> and <dd> on the same line (and maybe
       also add a colon after the <dt>?). Used when the two parts of the list

@@ -16,7 +16,7 @@ description: >-
 
   * http://cfpb.github.io/design-manual/brand-guidelines/video.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ![Still from Student Loan
       Video](/design-system/images/uploads/video_11.jpg "Example of animation in

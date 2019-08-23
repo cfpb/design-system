@@ -20,7 +20,7 @@ description: >-
 
   * http://cfpb.github.io/design-manual/global-elements/learn-page.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: '![Learn page example](/design-system/images/uploads/learn_example.jpg)'
     variation_name: Learn page
 usage: >-

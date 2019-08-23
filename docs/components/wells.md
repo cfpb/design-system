@@ -4,59 +4,84 @@ layout: variation
 section: components
 secondary_section: Content layouts
 status: Proposed
-description: |-
+description: >-
+  Wells are used to highlight specific information within a designated section
+  of a page. This breaks up the flow of content on the page and helps to
+  emphasize and set apart the content that is included.
+
+
   Information about Wells can be found at:
 
+
   * http://cfpb.github.io/design-manual/page-components/wells.html
+
   * https://cfpb.github.io/capital-framework/components/cf-layout/#wells
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+  - variation_code_snippet: |-
+      <div class="o-well">
+          <h4>Well title</h4>
+          <p>
+              Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
+              instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
+              cu.
+          </p>
+      </div>
+    variation_description: ''
+    variation_name: Default well
 usage: >-
-  **Use cases**
+  #### Use cases
 
 
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus.
+  Use sparingly to attract users’ attention to a concise piece of content.
+  Ideally, content within a well should not take up more than a third of page
+  content.
 
 
-  **Content guidelines**
+  Full width text, images, and embedded media (like video) may be placed within
+  wells, however, if content includes imagery also consider the featured content
+  module.
 
 
-  Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a
-  porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget
-  odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus
-  vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
-  aliquet egestas purus in.
-accessibility: >-
-  Phasellus molestie magna non est bibendum non venenatis nisl tempor.
-  Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-  Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus et justo dignissim congue. Donec.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
+  #### Content guidelines
 
 
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
+  * Grey wells should be used to feature content or specific calls to action
+
+  * Grey well will help visually set apart the content within it, so use it to
+  draw attention to that content.
+
+  * Grey wells should take up less than a third of a page.
+
+  * Currently, single column content only.
 
 
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+  ##### Behavior
+
+
+  ###### Breakpoints 900+
+
+
+  Page with a right sidebar
+
+
+  ![](/design-system/images/uploads/wells_behavior_mockup_1.png)
+
+
+  Browse page with left nav
+
+
+  ![](/design-system/images/uploads/wells_behavior_mockup_2.png)
+
+
+  ###### Breakpoints 900 and under
+
+
+  Wells are full width. At breakpoints 600 and under there are slight padding
+  adjustments to maximize real estate on smaller displays.
+
+
+  ![](/design-system/images/uploads/wells_behavior_mockup_3.png)
+accessibility: ''
+research: ''
 ---
+

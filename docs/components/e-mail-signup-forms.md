@@ -15,79 +15,164 @@ description: >-
 
   http://cfpb.github.io/design-manual/page-components/email-sign-up.html
 variations:
-  - variation_code_snippet: |
-      <label class="a-label a-label__heading" for="textinput-example-default">
-          A text input
-      </label>
-      <input class="a-text-input"
-             type="text"
-             id="textinput-example-default"
-             placeholder="Enter text…"
-             value="Lorem ipsum">
-      <label class="a-label a-label__heading" for="textarea-example-default">
-          A textarea input
-      </label>
-      <textarea class="a-text-input"
-              id="textarea-example-default"
-              placeholder="Enter text…">Lorem Ipsum</textarea>
-    variation_description: >
-      Email sign ups allow users to stay engaged on a specific topic or content
-      type produced by the Bureau. Different page types will be connected to the
-      corresponding GovDelivery list based on the page topic (i.e. HMDA) or page
-      type (i.e. blog).
+  - variation_code_snippet: ' '
+    variation_description: >-
+      ![Sidebar email signup
+      mockup](/design-system/images/uploads/emailsignup_intro_mockup.png)
+    variation_name: Sidebar email sign up
+  - variation_code_snippet: ' '
+    variation_description: >-
+      The inset email signup module is a variation on the main email signup that
+      can be used in the body content of Learn and Browse pages. It should be
+      used when the email CTA is more important to the purpose of the page than
+      the sidebar or prefooter placement reflects.
 
 
-      This pattern also includes a link to our privacy statement and a an
-      optional call to action to subscribe to an RSS feed.
-    variation_name: Basic email sign up
-usage: >
+      ![Inset email
+      signup](/design-system/images/uploads/2e07e378-4adf-11e8-96a7-67d2534eec85.png)
+    variation_name: Inset email sign up
+usage: >-
   **Use cases**
 
+  Email sign ups allow users to stay engaged on a specific topic or content type
+  produced by the Bureau. Different page types will be connected to the
+  corresponding GovDelivery list based on the page topic (i.e. HMDA) or page
+  type (i.e. blog).
 
-  - Use standard slug text: “Email updates”
 
-  - Description text will be unique to each mailing list and should clearly set
+  This pattern also includes a link to our privacy statement and a an optional
+  call to action to subscribe to an RSS feed.
+
+
+  ###### When to use inset email signup
+
+
+  * On Learn pages, only use the inset email module when signing up for the
+  email list is a primary user goal for the page, for example job seekers
+  signing up for job announcements.
+
+  * On Browse pages, use the inset email module when feedback modules or other
+  prefooter content competes with the prefooter email signup CTA, or when
+  signing up for the email list is a primary user goal.
+
+
+  ###### When other options are better
+
+
+  * On Learn pages when we want to encourage visitors to sign up for an email
+  list but the list itself is not a primary user goal, use the standard sidebar
+  email signup.
+
+  * On Browse pages, when email signups are not a primary user goal, and the
+  prefooter/end of page content has no other CTAs to compete with the email
+  signup, use the standard prefooter email signup.
+
+
+  **Content guidelines**
+
+
+  * Use standard slug text: “Email updates”
+
+  * Description text will be unique to each mailing list and should clearly set
   expectations for what a user will receive as a result of signing up. Email
   address field should always be marked required.
 
-  - Use standard helper text within form field: “john@example.com” and standard
+  * Use standard helper text within form field: “john@example.com” and standard
   privacy policy text before the button.
 
-  - Use standard button text: “Sign up”
-accessibility: >-
-  Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend
-  uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num
-  nullupt atiorporro modicim res dolora vent volore acius, saperis sitat arum,
-  et imus dolorec epelescias eos sita quam incidis imoleseque officitam faccus
-  qui dis molorro eos ernam, ullam autemodia dem verit quosam hit od quosapicae
-  peditatur, velicati cum qui des aute sam ulles nosam quiamendiam et et, sum
-  iunt, sim et esciundam, que comni con consendi duntur, quo magnim fugitam qui
-  sam quatur sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi
-  cum quiaes esequiasi volecate nos inimodi gniminc idipsam inihit volupta
-  volorectam fuga. Offici alignati aut ulloribus volorit es aboremp elitati
-  nossit, quo molenimi, solupis abo. Iciis eos eum fuga.
+  * Use standard button text: “Sign up”
 
 
-  Peria qui dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et
-  qui omniam quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il
-  ipisque sunt, idipicia volor aut eat.
-research: >-
-  Quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis
-  antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis
-  sitat arum, et imus dolorec epelescias eos sita quam incidis imoleseque
-  officitam faccus qui dis molorro eos ernam, ullam autemodia dem verit quosam
-  hit od quosapicae peditatur.
+  ###### Inset
 
 
-  Velicati cum qui des aute sam ulles nosam quiamendiam et et, sum iunt, sim et
-  esciundam, que comni con consendi duntur, quo magnim fugitam qui sam quatur
-  sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi cum quiaes
-  esequiasi volecate nos inimodi gniminc idipsam inihit volupta volorectam fuga.
-  Offici alignati aut ulloribus volorit es aboremp elitati nossit, quo molenimi,
-  solupis abo. Iciis eos eum fuga.
+  * The module heading should provide a strong call to action that clearly sets
+  expectations for what a user will receive as a result of signing up.
+    * Uncheck "Default heading style" to get the alternate heading style that we want in this inset module
+  * The additional body text can further clarify what kind of information will
+  be in the emails, with a focus on the value users will receive from the
+  emails.
+
+  * The placement of the email signup on the page should not interfere with the
+  primary page goal. Users respond better to follow-on requests that happen
+  after their primary goal has been met.
 
 
-  Dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et qui omniam
-  quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
-  sunt, idipicia volor aut eat.
+  **Behavior**
+
+
+  The mockups below show simultaneously how this pattern works within either a
+  sidebar or a prefooter area.
+
+
+  ##### Breakpoints 901+
+
+
+  ###### Sublanding page
+
+
+  ![Sublanding
+  page](/design-system/images/uploads/emailsignup_behavior_mockup_1.jpg)
+
+
+  ###### Browse page
+
+
+  ![Browse
+  page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg)
+
+
+  ###### Inset
+
+
+  When the inset module is wide enough, the Privacy Act statement link is
+  displayed inline with the sign up button, right-aligned.
+
+
+  ![Inset email sign up 900
+  breakpoint](/design-system/images/uploads/email-sign-up_learn.png)
+
+
+  ##### Breakpoints 900 - 601
+
+
+  ###### Sidebar
+
+
+  ![Breakpoints 900 -
+  601](/design-system/images/uploads/emailsignup_behavior_mockup_3.jpg)
+
+
+  ##### Breakpoints 601 and less
+
+
+  At breakpoints below 601: Heading sizes H3 and above automatically drop down
+  one level and the mobile link style is used for the call to action link(s).
+
+
+  ###### Sidebar
+
+
+  ![Breakpoints 601 and
+  less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)
+
+
+  ###### Inset
+
+
+  At breakpoints below 601px, the inset module transitions to a single column
+  and stacks above the full-width text. The signup button extends the full width
+  of the module at the smallest breakpoint, 320px.
+
+
+  ![Inset breakpoint
+  601](/design-system/images/uploads/email-sign-up_learn_601.png)
+
+
+  ![Inset breakpoint
+  320](/design-system/images/uploads/email-sign-up_learn_320.png)
+restrictions: []
+accessibility: ''
+research: ''
 ---
+

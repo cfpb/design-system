@@ -728,10 +728,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@cfpb/netlify-cms@1.17.0":
-  version "1.17.0"
-  resolved "https://registry.yarnpkg.com/@cfpb/netlify-cms/-/netlify-cms-1.17.0.tgz#30d205504d9ad7319363130a32d5b3994bd9c19e"
-  integrity sha512-kdzc9Oa7hJjMZ4VRyslP3AQM/+L9OoFwO2mA0qoGKogWZa7E8jDQdhZRPO33rPMnzq2l7MLEsE+9YKO1bewuuA==
+"@cfpb/netlify-cms@1.18.0":
+  version "1.18.0"
+  resolved "https://registry.yarnpkg.com/@cfpb/netlify-cms/-/netlify-cms-1.18.0.tgz#e9a69654623beb976c1a0ed19b5ef366c908a48f"
+  integrity sha512-UY2B91+j2FD4CnzWC1plmCqSVwknDLc43kRIBYQFWHYzxVAIJ0e97FoFJhNn+DPzSTzKuZlepntgDp4us0+yig==
   dependencies:
     netlify-cms-app "^2.9.8-beta.0"
     netlify-cms-media-library-cloudinary "^1.3.3"

@@ -39,7 +39,7 @@
     "install": "yarn run copy-icons && yarn --cwd ../src && bundle install"
   },
   "dependencies": {
-    "@cfpb/netlify-cms": "1.17.0",
+    "@cfpb/netlify-cms": "1.18.0",
     "escape-html": "^1.0.3",
     "fetch-suspense": "^1.1.0",
     "ftdomdelegate": "^3.0.0",

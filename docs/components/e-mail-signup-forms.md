@@ -30,66 +30,77 @@ variations:
       <textarea class="a-text-input"
               id="textarea-example-default"
               placeholder="Enter text…">Lorem Ipsum</textarea>
-    variation_description: >
-      Email sign ups allow users to stay engaged on a specific topic or content
-      type produced by the Bureau. Different page types will be connected to the
-      corresponding GovDelivery list based on the page topic (i.e. HMDA) or page
-      type (i.e. blog).
+    variation_description: |+
 
-
-      This pattern also includes a link to our privacy statement and a an
-      optional call to action to subscribe to an RSS feed.
     variation_name: Basic email sign up
-usage: >
+usage: >-
   **Use cases**
 
+  Email sign ups allow users to stay engaged on a specific topic or content type
+  produced by the Bureau. Different page types will be connected to the
+  corresponding GovDelivery list based on the page topic (i.e. HMDA) or page
+  type (i.e. blog).
 
-  - Use standard slug text: “Email updates”
 
-  - Description text will be unique to each mailing list and should clearly set
+  This pattern also includes a link to our privacy statement and a an optional
+  call to action to subscribe to an RSS feed.
+
+
+  **Content guidelines**
+
+
+  * Use standard slug text: “Email updates”
+
+  * Description text will be unique to each mailing list and should clearly set
   expectations for what a user will receive as a result of signing up. Email
   address field should always be marked required.
 
-  - Use standard helper text within form field: “john@example.com” and standard
+  * Use standard helper text within form field: “john@example.com” and standard
   privacy policy text before the button.
 
-  - Use standard button text: “Sign up”
+  * Use standard button text: “Sign up”
+
+
+  **Behavior**
+
+  The mockups below show simultaneously how this pattern works within either a
+  sidebar or a prefooter area.
+
+
+  ##### Breakpoints 901+
+
+
+  ###### Sublanding page
+
+
+  ![Sublanding
+  page](/design-system/images/uploads/emailsignup_behavior_mockup_1.jpg)
+
+
+  ###### Browse page
+
+
+  ![Browse
+  page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg)
+
+
+  ##### Breakpoints 900 - 601
+
+
+  ![Breakpoints 900 -
+  601](/design-system/images/uploads/emailsignup_behavior_mockup_3.jpg)
+
+
+  ##### Breakpoints 601 and less
+
+  At breakpoints below 601: Heading sizes H3 and above automatically drop down
+  one level and the mobile link style is used for the call to action link(s).
+
+
+  ![Breakpoints 601 and
+  less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)
 restrictions: []
-accessibility: >-
-  Si tem dolume demodi se int quos essimin reptatet quia et ium quam nossend
-  uciunt od estis ea simpor apitia secatessit ma presciaera esequis antiae num
-  nullupt atiorporro modicim res dolora vent volore acius, saperis sitat arum,
-  et imus dolorec epelescias eos sita quam incidis imoleseque officitam faccus
-  qui dis molorro eos ernam, ullam autemodia dem verit quosam hit od quosapicae
-  peditatur, velicati cum qui des aute sam ulles nosam quiamendiam et et, sum
-  iunt, sim et esciundam, que comni con consendi duntur, quo magnim fugitam qui
-  sam quatur sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi
-  cum quiaes esequiasi volecate nos inimodi gniminc idipsam inihit volupta
-  volorectam fuga. Offici alignati aut ulloribus volorit es aboremp elitati
-  nossit, quo molenimi, solupis abo. Iciis eos eum fuga.
-
-
-  Peria qui dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et
-  qui omniam quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il
-  ipisque sunt, idipicia volor aut eat.
-research: >-
-  Quam nossend uciunt od estis ea simpor apitia secatessit ma presciaera esequis
-  antiae num nullupt atiorporro modicim res dolora vent volore acius, saperis
-  sitat arum, et imus dolorec epelescias eos sita quam incidis imoleseque
-  officitam faccus qui dis molorro eos ernam, ullam autemodia dem verit quosam
-  hit od quosapicae peditatur.
-
-
-  Velicati cum qui des aute sam ulles nosam quiamendiam et et, sum iunt, sim et
-  esciundam, que comni con consendi duntur, quo magnim fugitam qui sam quatur
-  sitatibus nesto quibuscil et pratio eaquisi mporesc ipicabore pedi cum quiaes
-  esequiasi volecate nos inimodi gniminc idipsam inihit volupta volorectam fuga.
-  Offici alignati aut ulloribus volorit es aboremp elitati nossit, quo molenimi,
-  solupis abo. Iciis eos eum fuga.
-
-
-  Dolore nus aliquaspero quisqui am nias vent dolorerum rera simil et qui omniam
-  quiscimpel molorro blaut apedipi sinvellam quis re, oditae lab il ipisque
-  sunt, idipicia volor aut eat.
+accessibility: ''
+research: ''
 ---
 

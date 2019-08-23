@@ -46,6 +46,7 @@ usage: >-
 
   ###### When to use inset email signup
 
+
   * On Learn pages, only use the inset email module when signing up for the
   email list is a primary user goal for the page, for example job seekers
   signing up for job announcements.
@@ -56,6 +57,7 @@ usage: >-
 
 
   ###### When other options are better
+
 
   * On Learn pages when we want to encourage visitors to sign up for an email
   list but the list itself is not a primary user goal, use the standard sidebar
@@ -80,27 +82,55 @@ usage: >-
 
   * Use standard button text: “Sign up”
 
-    **Behavior**
 
-    The mockups below show simultaneously how this pattern works within either a
-    sidebar or a prefooter area.
+  ###### Inset
 
 
-    ##### Breakpoints 901+
+  * The module heading should provide a strong call to action that clearly sets
+  expectations for what a user will receive as a result of signing up.
+    * Uncheck "Default heading style" to get the alternate heading style that we want in this inset module
+  * The additional body text can further clarify what kind of information will
+  be in the emails, with a focus on the value users will receive from the
+  emails.
+
+  * The placement of the email signup on the page should not interfere with the
+  primary page goal. Users respond better to follow-on requests that happen
+  after their primary goal has been met.
 
 
-    ###### Sublanding page
+  **Behavior**
 
 
-    ![Sublanding
-    page](/design-system/images/uploads/emailsignup_behavior_mockup_1.jpg)
+  The mockups below show simultaneously how this pattern works within either a
+  sidebar or a prefooter area.
 
 
-    ###### Browse page
+  ##### Breakpoints 901+
 
 
-    ![Browse
-    page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg)
+  ###### Sublanding page
+
+
+  ![Sublanding
+  page](/design-system/images/uploads/emailsignup_behavior_mockup_1.jpg)
+
+
+  ###### Browse page
+
+
+  ![Browse
+  page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg)
+
+
+  ###### Inset
+
+
+  When the inset module is wide enough, the Privacy Act statement link is
+  displayed inline with the sign up button, right-aligned.
+
+
+  ![Inset email sign up 900
+  breakpoint](/design-system/images/uploads/email-sign-up_learn.png)
 
 
   ##### Breakpoints 900 - 601
@@ -113,13 +143,8 @@ usage: >-
   601](/design-system/images/uploads/emailsignup_behavior_mockup_3.jpg)
 
 
-  ###### Inset
-
-  When the inset module is wide enough, the Privacy Act statement link is
-  displayed inline with the sign up button, right-aligned.
-
-
   ##### Breakpoints 601 and less
+
 
   At breakpoints below 601: Heading sizes H3 and above automatically drop down
   one level and the mobile link style is used for the call to action link(s).
@@ -134,6 +159,7 @@ usage: >-
 
   ###### Inset
 
+
   At breakpoints below 601px, the inset module transitions to a single column
   and stacks above the full-width text. The signup button extends the full width
   of the module at the smallest breakpoint, 320px.
@@ -141,7 +167,6 @@ usage: >-
 
   ![Inset breakpoint
   601](/design-system/images/uploads/email-sign-up_learn_601.png)
-
 
 
   ![Inset breakpoint

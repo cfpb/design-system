@@ -15,24 +15,16 @@ description: >-
 
   http://cfpb.github.io/design-manual/page-components/email-sign-up.html
 variations:
-  - variation_code_snippet: |
-      <label class="a-label a-label__heading" for="textinput-example-default">
-          A text input
-      </label>
-      <input class="a-text-input"
-             type="text"
-             id="textinput-example-default"
-             placeholder="Enter text…"
-             value="Lorem ipsum">
-      <label class="a-label a-label__heading" for="textarea-example-default">
-          A textarea input
-      </label>
-      <textarea class="a-text-input"
-              id="textarea-example-default"
-              placeholder="Enter text…">Lorem Ipsum</textarea>
-    variation_description: |+
-
-    variation_name: Basic email sign up
+  - variation_code_snippet: ' '
+    variation_description: >-
+      ![Sidebar email signup
+      mockup](/design-system/images/uploads/emailsignup_intro_mockup.png)
+    variation_name: Sidebar email sign up
+  - variation_code_snippet: ' '
+    variation_description: >-
+      ![Inset email
+      signup](/design-system/images/uploads/2e07e378-4adf-11e8-96a7-67d2534eec85.png)
+    variation_name: Inset email sign up
 usage: >-
   **Use cases**
 
@@ -92,6 +84,7 @@ usage: >-
 
 
   ##### Breakpoints 601 and less
+
 
   At breakpoints below 601: Heading sizes H3 and above automatically drop down
   one level and the mobile link style is used for the call to action link(s).

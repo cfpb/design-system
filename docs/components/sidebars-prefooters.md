@@ -15,14 +15,6 @@ description: >-
   ups, contact information, etc. Primary layout variations as seen in basic
   sidebar format. Multiple elements can be used in the sidebar/ prefooter but
   each should have their own slug label.
-
-
-  Information about Sidebars/Prefooters can be found at:
-
-  * http://cfpb.github.io/design-manual/page-components/sidebar-prefooter.html
-
-  *
-  https://cfpb.github.io/capital-framework/components/cf-layout/#standard-content-formats
 variations:
   - variation_code_snippet: |-
       <main class="content" role="main">
@@ -279,5 +271,13 @@ usage: >-
   less](/design-system/images/uploads/behavior_prefooter_mobile_1.jpg)
 accessibility: ''
 research: ''
+help_us: >-
+  Information about Sidebars/Prefooters can be found at:
+
+
+  * http://cfpb.github.io/design-manual/page-components/sidebar-prefooter.html
+
+  *
+  https://cfpb.github.io/capital-framework/components/cf-layout/#standard-content-formats
 ---
 

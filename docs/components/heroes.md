@@ -380,7 +380,7 @@ usage: >-
   Since the goal of the hero is to get the user to continue reading the page,
   don’t include links or calls to action within the hero. If there is content
   that needs to link elsewhere for explanation, place it underneath the hero
-  within the main content area.
+  within the main content area!
 
 
   ##### Writing hero content
@@ -481,3 +481,4 @@ usage: >-
 accessibility: ''
 research: ''
 ---
+

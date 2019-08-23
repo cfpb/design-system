@@ -45,17 +45,19 @@
             <a class="m-list_link" href="#variations">Variations</a>
         </li>
         {% endif %}
-        {% if page.usage %}
+        {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
+        {% if page.restrictions != empty and page.restrictions or page.usage and page.usage != '' %}
+        {% comment %} restrictions is not empty and ( restrictions exists or (if usage exists and usage is not empty)) {% endcomment %}
         <li class="m-list_item">
             <a class="m-list_link" href="#usage">Usage</a>
         </li>
         {% endif %}
-        {% if page.accessibility %}
+        {% if page.accessibility and page.accessibility != '' %}
         <li class="m-list_item">
             <a class="m-list_link" href="#accessibility">Accessibility</a>
         </li>
         {% endif %}
-        {% if page.research %}
+        {% if page.research and page.research != '' %}
         <li class="m-list_item">
             <a class="m-list_link" href="#research">Research</a>
         </li>
@@ -88,13 +90,13 @@
                 </h5>
 
                 <ul class="govuk-tabs__list">
-                    {% if variation.variation_code_snippet %}
+                    {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet-{{ forloop.index }}">
                         HTML                        </a>
                     </li>
                     {% endif %}
-                    {% if variation.variation_jinja_code_snippet %}
+                    {% if variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '' %}
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#jinja-code-snippet-{{ forloop.index }}">
                         Jinja
@@ -104,28 +106,28 @@
                 </ul>
 
                 <!-- HTML snippet -->
+                {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
                 <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
-                    {% if variation.variation_code_snippet %}
                     <div class="variation-code-snippet">
                         <h6 class="variation-code-snippet-title">HTML</h6>
-                        {% if variation.variation_code_snippet %}
-                            <div class="source-code">
-                                <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
-                            </div>
-                        {% endif %}
+                        <div class="source-code">
+                            <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
+                        </div>
                     </div>
-                    {% endif %}
                 </section>
+                {% endif %}
 
                 <!-- Jinja snippet -->
+                {% if variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '' %}
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
-                    {% if variation.variation_jinja_code_snippet %}
                     <div class="variation-jinja-code-snippet">
                         <h6 class="variation-jinja-code-snippet-title">Jinja</h6>
-                        {{ variation.variation_jinja_code_snippet | markdownify }}
+                        <div class="source-code">
+                            <pre><code class="language-html">{{ variation.variation_jinja_code_snippet | xml_escape }}</code></pre>
+                        </div>
                     </div>
-                    {% endif %}
                 </section>
+                {% endif %}
 
             </div><!-- .govuk-tabs -->
             {% endif %}
@@ -228,19 +230,20 @@
     </section>
     {% endif %}
 
-    {% if page.usage or page.restrictions %}
+    {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
+    {% if page.restrictions != empty and page.restrictions or page.usage and page.usage != '' %}
         <section class="sticky-header">
             <h3 id="usage">Usage</h3>
-                {% if page.usage %}
+                {% if page.usage and page.usage != '' %}
                     <p>
                     {{ page.usage | markdownify }}
                     </p>
                 {% endif %}
-            {% if page.restrictions %}
+            {% if page.restrictions and page.restrictions != empty %}
                 <div class="content-l">
                     <h4>Restrictions</h4>
                     {% for restriction in page.restrictions %}
-                        {% if restriction.restrictions_do %}
+                        {% if restriction.restrictions_do and restriction.restrictions_do != '' %}
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
                                     <header class="m-slug-header">
@@ -254,7 +257,7 @@
                                 </div>
                             </div>
                         {% endif %}
-                        {% if restriction.restrictions_do_not %}
+                        {% if restriction.restrictions_do_not and restriction.restrictions_do_not != '' %}
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
                                     <header class="m-slug-header m-slug-header__warning">
@@ -274,7 +277,7 @@
         </section>
     {% endif %}
 
-    {% if page.accessibility %}
+    {% if page.accessibility and page.accessibility != '' %}
         <section class="sticky-header">
             <h3 id="accessibility">Accessibility</h3>
             <p>
@@ -283,7 +286,7 @@
         </section>
     {% endif %}
 
-    {% if page.research %}
+    {% if page.research and page.research != '' %}
         <section class="sticky-header">
             <h3 id="research">Research</h3>
             <p>

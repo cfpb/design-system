@@ -21,30 +21,24 @@ description: >-
 
   * http://cfpb.github.io/design-manual/data-visualization/color.html
 variations:
-  - variation_code_snippet: ''
-    variation_description: >-
+  - variation_description: >-
       Our core brand color is CFPB Green. Green 60 and Green 20 play a
       supporting role in basic branded pieces. Black is typically used for type
       and icons while grays are used for wells and accents, such as rules and
       borders.
     variation_name: Primary palette
-  - variation_code_snippet: ''
-    variation_description: >-
+  - variation_description: >-
       The secondary color palette introduces visual variety. Colors were
       selected to hold together as a family and coordinate with CFPB Green.
     variation_name: Secondary colors
-  - variation_code_snippet: ''
-    variation_description: >-
+  - variation_description: >-
       Tints expand upon the primary and secondary color palettes to help create
       visual cohesion when incorporating complex illustrations and data
       visualizations.
     variation_name: Tints
-  - variation_code_snippet: ''
-    variation_name: Data visualization cool palette
-  - variation_code_snippet: ''
-    variation_name: Data visualization warm palette
-  - variation_code_snippet: ''
-    variation_name: Data visualization divergent palette
+  - variation_name: Data visualization cool palette
+  - variation_name: Data visualization warm palette
+  - variation_name: Data visualization divergent palette
 usage: >-
   When used properly, color can help clarify relationships between data, provide
   emphasis for certain data points, and maintain a consistent brand voice. When

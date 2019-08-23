@@ -16,7 +16,7 @@ description: >-
 
   http://cfpb.github.io/design-manual/page-components/filter-control.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ##### Collapsed
 

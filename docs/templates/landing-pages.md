@@ -16,12 +16,12 @@ description: >-
 
   * http://cfpb.github.io/design-manual/global-elements/landing-page.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ![Landing page with
       hero](/design-system/images/uploads/landing_top_examplea_2x.jpg)
     variation_name: Landing page with hero
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ![Landing page with text
       introduction](/design-system/images/uploads/landing_top_exampleb_2x.jpg)

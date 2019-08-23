@@ -21,12 +21,12 @@ description: >-
   *
   http://cfpb.github.io/design-manual/global-elements/filterable-list-pages.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ![Sublanding page
       mockup](/design-system/images/uploads/sublanding_behavior_desktop-1.jpg)
     variation_name: Filterable list sublanding page
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ![Browse page
       mockup](/design-system/images/uploads/browse_behavior_desktop.jpg)

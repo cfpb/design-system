@@ -118,7 +118,7 @@ variations:
       The use of the `.o-table_cell__right-align` class on a `td` aligns the
       text right - see the third column.
     variation_name: Right-aligned table
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       Column widths are automatically set by browsers by default. If needed,
       some or all columns can be set to specific widths instead to accommodate

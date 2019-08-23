@@ -20,7 +20,7 @@ description: >-
 
   * http://cfpb.github.io/design-manual/global-elements/browse-page.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: '![Browse page example](/design-system/images/uploads/browse_example.jpg)'
     variation_name: Browse page example
 usage: >-

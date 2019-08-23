@@ -73,6 +73,7 @@ collections:
           - name: 'variation_code_snippet'
             label: 'HTML code snippet'
             widget: 'text'
+            required: false
           - name: 'variation_jinja_code_snippet'
             label: 'Jinja links or snippet'
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
@@ -178,6 +179,7 @@ collections:
           - name: 'variation_code_snippet'
             label: 'Variation code snippet'
             widget: 'text'
+            required: false
           - name: 'variation_jinja_code_snippet'
             label: 'Variation Jinja links or snippet'
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
@@ -289,6 +291,7 @@ collections:
           - name: 'variation_code_snippet'
             label: 'Variation code snippet'
             widget: 'text'
+            required: false
           - name: 'variation_jinja_code_snippet'
             label: 'Variation Jinja links or snippet'
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
@@ -390,6 +393,7 @@ collections:
           - name: 'variation_code_snippet'
             label: 'Variation code snippet'
             widget: 'text'
+            required: false
           - name: 'variation_jinja_code_snippet'
             label: 'Variation Jinja links or snippet'
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'

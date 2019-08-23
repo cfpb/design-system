@@ -39,6 +39,7 @@ variations:
     variation_description: ''
     variation_name: Large pull quote
 usage: ''
+restrictions: []
 accessibility: ''
 research: ''
 ---

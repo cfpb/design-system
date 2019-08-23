@@ -1,0 +1,13 @@
+{
+  "name": "cf-atomic-component",
+  "version": "11.0.0",
+  "description": "Capital Framework atomic component micro-framework",
+  "less": "src/cf-atomic-component.less",
+  "style": "cf-atomic-component.css",
+  "dependencies": {
+    "ftdomdelegate": "^3.0.0"
+  },
+  "keywords": [
+    "atomic-component"
+  ]
+}

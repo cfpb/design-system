@@ -1,0 +1,86 @@
+.o-featured-content-module {
+    .u-clearfix();
+
+    min-height: @fcm-min-height;
+    border: 1px solid @fcm-border;
+    position: relative;
+    background-color: @fcm-bg;
+
+    .respond-to-min( @bp-sm-min, {
+        display: flex;
+    } );
+
+    &_text {
+        padding-top: unit( @grid_gutter-width / @base-font-size-px, em );
+        padding-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+
+        .respond-to-max( @bp-xs-max, {
+            padding-right: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
+            padding-left: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
+        } );
+
+        .respond-to-min( @bp-sm-min, {
+            flex: 1;
+            padding-right: @fcm-visual-width + @grid_gutter-width;
+            padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+        } );
+    }
+
+    &_visual {
+        .respond-to-max( @bp-xs-max, {
+            padding-right: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
+            padding-bottom: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
+            padding-left: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
+        } );
+
+        .respond-to-min( @bp-sm-min, {
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: @fcm-visual-width;
+        } );
+    }
+
+    &_img {
+        display: block;
+
+        .respond-to-max( @bp-sm-max, {
+            margin-right: auto;
+            margin-left: auto;
+        } );
+
+        .respond-to-min( @bp-sm-min, {
+            max-width: none;
+            height: 100%;
+            position: absolute;
+        } );
+    }
+
+    // Modifiers
+    &__right {
+        .o-featured-content-module_img {
+            .respond-to-min( @bp-sm-min, {
+                right: 0;
+            } );
+        }
+    }
+
+    &__center {
+        .o-featured-content-module_img {
+            .respond-to-min( @bp-sm-min, {
+                left: 50%;
+
+                transform: translateX( -50% );
+
+                .lt-ie9 & {
+                    position: absolute;
+                    right: -100%;
+                    left: -100%;
+                    margin: auto;
+                }
+            } );
+        }
+    }
+}

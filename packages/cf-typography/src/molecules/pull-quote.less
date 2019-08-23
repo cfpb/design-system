@@ -1,0 +1,31 @@
+.m-pull-quote {
+
+    &_body {
+        .heading-3();
+
+        color: @pull-quote_body;
+
+        .respond-to-max( @bp-xs-max, {
+            .heading-4();
+        } );
+    }
+
+    &_citation {
+        .heading-5( @text-shadow: @pull-quote_citation );
+
+        color: @pull-quote_citation;
+
+        &:before {
+            // An em dash before the cited author name.
+            content: '\2014 ';
+        }
+    }
+
+    &__large .m-pull-quote_body {
+        .heading-2();
+
+        .respond-to-max( @bp-xs-max, {
+            .heading-3();
+        } );
+    }
+}

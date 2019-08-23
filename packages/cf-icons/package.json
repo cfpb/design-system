@@ -1,0 +1,10 @@
+{
+  "name": "cf-icons",
+  "version": "11.0.1",
+  "description": "Capital Framework icons",
+  "less": "src/cf-icons.less",
+  "style": "cf-icons.css",
+  "keywords": [
+    "icons"
+  ]
+}

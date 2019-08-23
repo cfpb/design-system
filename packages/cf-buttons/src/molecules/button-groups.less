@@ -1,0 +1,40 @@
+@import (less) '../atoms/buttons.less';
+
+//
+// Button groups
+//
+
+.m-btn-group {
+    .a-btn + .a-btn {
+        margin-left: unit( 6px / @btn-font-size, em );
+    }
+
+    .a-btn__super + .a-btn__super {
+        margin-left: unit( 6px / @btn__super-font-size, em );
+    }
+}
+
+.m-btn-group__combined {
+
+    .a-btn {
+        border-radius: 0;
+        margin-right: 1px;
+    }
+
+    // TODO: There's a strange disappearing border issue on Chrome.
+    // This might have to be revisited.
+    .a-btn + .a-btn,
+    .a-btn__super + .a-btn__super {
+        margin-left: -4px;
+    }
+
+    .a-btn:first-child {
+        border-top-left-radius: unit( 4px / @btn-font-size, em );
+        border-bottom-left-radius: unit( 4px / @btn-font-size, em );
+    }
+
+    .a-btn:last-child {
+        border-top-right-radius: unit( 4px / @btn-font-size, em );
+        border-bottom-right-radius: unit( 4px / @btn-font-size, em );
+    }
+}

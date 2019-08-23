@@ -39,25 +39,44 @@ description: >-
   [cfgov-refresh](https://github.com/cfpb/cfgov-refresh), here's what you'd do:
 
   1. `git clone git@github.com:cfpb/capital-framework.git`, if you haven't
-  already. 1. `cd capital-framework` 1. `git checkout master && git pull` to
-  ensure you're on the latest changes (this step is not necessary when cloning
-  for the first time). 1. `yarn` to install dependencies and set up
-  [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) 1. `git checkout -b
-  button-fix` to create a new branch for your changes. 1. Edit file(s) in
-  `/packages/cf-buttons/` however you want. 1. Run `gulp docs` to update the
-  documentation. 1. `yarn run cf-link` to
-  [link](https://yarnpkg.com/lang/en/docs/cli/link/) your local CF components.
+  already. 
+
+  1. `cd capital-framework` 
+
+  1. `git checkout master && git pull` to ensure you're on the latest changes
+  (this step is not necessary when cloning for the first time). 
+
+  1. `yarn` to install dependencies and set up
+  [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) 
+
+  1. `git checkout -b button-fix` to create a new branch for your changes. 
+
+  1. Edit file(s) in `/packages/cf-buttons/` however you want. 
+
+  1. Run `gulp docs` to update the documentation. 
+
+  1. `yarn run cf-link` to [link](https://yarnpkg.com/lang/en/docs/cli/link/)
+  your local CF components. 
+
   1. `cd ~/wherever/cfgov-refresh/` to navigate to another project where you'd
-  like to test your buttons changes (in this case, cfgov-refresh). 1. `yarn link
-  cf-buttons` to link cf-buttons to cfgov-refresh. 1. `gulp build` in
-  cfgov-refresh to compile your stylesheets. 1. [Start
-  cfgov-refresh](https://cfpb.github.io/cfgov-refresh/usage/) and navigate to a
-  page with buttons to view your cf-buttons changes. 1. When you're pleased with
-  your changes, `cd` back to your `capital-framework` repo and commit your
-  changes: `git commit -am "Fix button border radius"` 1. `git push origin
-  button-fix` to push your branch up to GitHub. 1. Go to
-  https://github.com/cfpb/capital-framework and open a pull request to merge
-  `button-fix` into `master`.
+  like to test your buttons changes (in this case, cfgov-refresh). 
+
+  1. `yarn link cf-buttons` to link cf-buttons to cfgov-refresh.
+
+  1. `gulp build` in cfgov-refresh to compile your stylesheets. 
+
+  1. [Start cfgov-refresh](https://cfpb.github.io/cfgov-refresh/usage/) and
+  navigate to a page with buttons to view your cf-buttons changes. 
+
+  1. When you're pleased with your changes, `cd` back to your
+  `capital-framework` repo and commit your changes: `git commit -am "Fix button
+  border radius"` 
+
+  1. `git push origin button-fix` to push your branch up to GitHub. 
+
+  1. Go to https://github.com/cfpb/capital-framework and open a pull request to
+  merge `button-fix` into `master`.
+
 
   If you are not a current contributor to Capital Framework, use forks by first
   clicking the fork button on top of the repository and cloning your fork in

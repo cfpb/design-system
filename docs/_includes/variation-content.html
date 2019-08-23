@@ -45,12 +45,12 @@
             <a class="m-list_link" href="#variations">Variations</a>
         </li>
         {% endif %}
-        {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
-        {% if page.restrictions != '' and page.restrictions or page.usage and page.usage != '' %}
-        {% comment %} restrictions is not empty and ( restrictions exists or (if usage exists and usage is not empty)) {% endcomment %}
+        {% if page.restrictions or page.usage %}
+        {% unless page.restrictions == empty and page.usage == blank %}
         <li class="m-list_item">
             <a class="m-list_link" href="#usage">Usage</a>
         </li>
+        {% endunless %}
         {% endif %}
         {% if page.accessibility and page.accessibility != '' %}
         <li class="m-list_item">
@@ -228,8 +228,8 @@
     </section>
     {% endif %}
 
-    {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
-    {% if page.restrictions != '' and page.restrictions or page.usage and page.usage != '' %}
+    {% if page.restrictions or page.usage %}
+    {% unless page.restrictions == empty and page.usage == blank %}
         <section class="sticky-header">
             <h3 id="usage">Usage</h3>
                 {% if page.usage and page.usage != '' %}
@@ -237,7 +237,7 @@
                     {{ page.usage | markdownify }}
                     </p>
                 {% endif %}
-            {% if page.restrictions and page.restrictions != '' %}
+            {% if page.restrictions != empty and page.restrictions %}
                 <div class="content-l">
                     <h4>Restrictions</h4>
                     {% for restriction in page.restrictions %}
@@ -273,6 +273,7 @@
                 </div><!-- .content-l -->
             {% endif %}
         </section>
+    {% endunless %}
     {% endif %}
 
     {% if page.accessibility and page.accessibility != '' %}

@@ -2,7 +2,7 @@
 title: Foundation
 layout: variation
 section: foundation
-status: Proposed
+status: Released
 description: >-
   Foundation includes our design principles, best practices for user experience,
   and our visual identity standards. Together, they serve as a foundation for

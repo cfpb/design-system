@@ -22,6 +22,7 @@
     "url": "https://github.com/cfpb/capital-framework/issues"
   },
   "scripts": {
+    "start": "echo You are in the wrong directory, to run yarn start try: cd docs",
     "build": "gulp build",
     "cf-link": "lerna exec -- yarn link",
     "cf-unlink": "lerna exec -- yarn unlink",

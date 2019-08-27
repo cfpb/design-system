@@ -70,7 +70,7 @@
         {% for variation in page.variations %}
         <div class="u-mt30">
             <!-- Name -->
-            <h4>{{ variation.variation_name }}</h4>
+            <h3>{{ variation.variation_name }}</h3>
 
             <!-- Description -->
             {{ variation.variation_description | markdownify }}
@@ -241,7 +241,7 @@
                 {% endif %}
             {% if page.restrictions and page.restrictions != empty %}
                 <div class="content-l">
-                    <h4>Restrictions</h4>
+                    <h3>Restrictions</h3>
                     {% for restriction in page.restrictions %}
                         {% if restriction.restrictions_do and restriction.restrictions_do != '' %}
                             <div class="content-l_col content-l_col-1-2">

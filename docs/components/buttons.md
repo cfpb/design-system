@@ -207,13 +207,13 @@ variations:
       state</button>
     variation_name: Warning button link
     variation_specs: TBD
-  - variation_code_snippet: TBD
+  - variation_code_snippet: ''
     variation_description: >-
       For multiple actions in a single button unit. Prone to error, avoid if
       possible.
     variation_name: Compound button
     variation_specs: TBD
-  - variation_code_snippet: TBD
+  - variation_code_snippet: ''
     variation_description: >-
       When paired with a primary action, indicate the destructive action using a
       destructive action button link to the right of the primary button.

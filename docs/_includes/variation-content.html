@@ -113,7 +113,7 @@
                 {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
                 <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
                     <div class="variation-code-snippet">
-                        <h6 class="variation-code-snippet-title">HTML</h6>
+                        <h5 class="variation-code-snippet-title">HTML</h5>
                         <div class="source-code">
                             <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
                         </div>
@@ -125,7 +125,7 @@
                 {% if variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '' %}
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
                     <div class="variation-jinja-code-snippet">
-                        <h6 class="variation-jinja-code-snippet-title">Jinja</h6>
+                        <h5 class="variation-jinja-code-snippet-title">Jinja</h5>
                         <div class="source-code">
                             <pre><code class="language-html">{{ variation.variation_jinja_code_snippet | xml_escape }}</code></pre>
                         </div>
@@ -194,36 +194,38 @@
                     <div class="variation-code-specs" data-toggle-code>
                         <h5>Specifications</h5>
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    {% if columns contains 'Design token name' %}<th>Attribute</th>{% endif %}
-                                    {% if columns contains 'Less variable name' %}<th>Variable</th>{% endif %}
-                                    {% if columns contains 'Less value' %}<th>Value</th>{% endif %}
-                                    {% if columns contains 'Pixels' %}<th>Pixels</th>{% endif %}
-                                    {% if columns contains 'Ems' %}<th>Ems</th>{% endif %}
-                                    {% if columns contains 'Points' %}<th>Points</th>{% endif %}
-                                    {% if columns contains 'Seconds' %}<th>Seconds</th>{% endif %}
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% comment %}
-                                    For each applicable row, print a cell only if the
-                                    relevant column is necessary.
-                                {% endcomment %}
-                                {% for spec in rows %}
-                                <tr>
-                                    {% if columns contains 'Design token name' %}<td>{{ tokens[spec]["Design token name"] }}</td>{% endif %}
-                                    {% if columns contains 'Less variable name' %}<td>{{ tokens[spec]["Less variable name"] }}</td>{% endif %}
-                                    {% if columns contains 'Less value' %}<td>{{ tokens[spec]["Less value"] }}</td>{% endif %}
-                                    {% if columns contains 'Pixels' %}<td>{{ tokens[spec]["Pixels"] }}</td>{% endif %}
-                                    {% if columns contains 'Ems' %}<td>{{ tokens[spec]["Ems"] }}</td>{% endif %}
-                                    {% if columns contains 'Points' %}<td>{{ tokens[spec]["Points"] }}</td>{% endif %}
-                                    {% if columns contains 'Seconds' %}<td>{{ tokens[spec]["Seconds"] }}</td>{% endif %}
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
+                        <div class="o-table o-table-wrapper__scrolling">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        {% if columns contains 'Design token name' %}<th>Attribute</th>{% endif %}
+                                        {% if columns contains 'Less variable name' %}<th>Variable</th>{% endif %}
+                                        {% if columns contains 'Less value' %}<th>Value</th>{% endif %}
+                                        {% if columns contains 'Pixels' %}<th>Pixels</th>{% endif %}
+                                        {% if columns contains 'Ems' %}<th>Ems</th>{% endif %}
+                                        {% if columns contains 'Points' %}<th>Points</th>{% endif %}
+                                        {% if columns contains 'Seconds' %}<th>Seconds</th>{% endif %}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% comment %}
+                                        For each applicable row, print a cell only if the
+                                        relevant column is necessary.
+                                    {% endcomment %}
+                                    {% for spec in rows %}
+                                    <tr>
+                                        {% if columns contains 'Design token name' %}<td data-label="Design token name">{{ tokens[spec]["Design token name"] }}</td>{% endif %}
+                                        {% if columns contains 'Less variable name' %}<td data-label="Less variable name">{{ tokens[spec]["Less variable name"] }}</td>{% endif %}
+                                        {% if columns contains 'Less value' %}<td data-label="Less value">{{ tokens[spec]["Less value"] }}</td>{% endif %}
+                                        {% if columns contains 'Pixels' %}<td data-label="Pixels">{{ tokens[spec]["Pixels"] }}</td>{% endif %}
+                                        {% if columns contains 'Ems' %}<td data-label="Ems">{{ tokens[spec]["Ems"] }}</td>{% endif %}
+                                        {% if columns contains 'Points' %}<td data-label="Points">{{ tokens[spec]["Points"] }}</td>{% endif %}
+                                        {% if columns contains 'Seconds' %}<td data-label="Seconds">{{ tokens[spec]["Seconds"] }}</td>{% endif %}
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 {% endif %}

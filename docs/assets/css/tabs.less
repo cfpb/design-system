@@ -8,73 +8,14 @@
 // if we change them in this CSS we also have to fork and release our own JS with updated breakpoints
 
 .govuk-tabs {
-    font-weight: 400;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
     margin-top: 5px;
     margin-bottom: 20px;
 }
-@media print {
-    .govuk-tabs {
-        font-family: sans-serif;
-    }
-}
-@media (min-width: 40.0625em) {
-    .govuk-tabs {
-        font-size: 19px;
-        font-size: 1.1875rem;
-        line-height: 1.3157894737;
-    }
-}
-@media print {
-    .govuk-tabs {
-        font-size: 14pt;
-        line-height: 1.15;
-    }
-}
-@media print {
-    .govuk-tabs {
-        color: #000000;
-    }
-}
+
 @media (min-width: 40.0625em) {
     .govuk-tabs {
         margin-top: 5px;
-    }
-}
-@media (min-width: 40.0625em) {
-    .govuk-tabs {
         margin-bottom: 30px;
-    }
-}
-
-.govuk-tabs__title {
-    font-family: "nta", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
-    margin-bottom: 5px;
-}
-@media print {
-    .govuk-tabs__title {
-        font-family: sans-serif;
-    }
-}
-@media (min-width: 40.0625em) {
-    .govuk-tabs__title {
-        font-size: 19px;
-        font-size: 1.1875rem;
-        line-height: 1.3157894737;
-    }
-}
-@media print {
-    .govuk-tabs__title {
-        font-size: 14pt;
-        line-height: 1.15;
     }
 }
 
@@ -97,6 +38,8 @@
 }
 
 .govuk-tabs__list-item {
+    .heading-5();
+    border-bottom: 0;
     margin-left: 25px;
 }
 
@@ -106,137 +49,85 @@
     padding-right: 5px;
 }
 
-.govuk-tabs__tab {
-    font-family: "nta", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: "nta", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
-    display: inline-block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-@media print {
-    .govuk-tabs__tab {
-        font-family: sans-serif;
-    }
-}
-
 .govuk-tabs__tab:focus {
-    outline: 3px solid #ffbf47;
-    outline-offset: 0;
-    background-color: #ffbf47;
-}
-
-.govuk-tabs__tab:link {
-    color: #005ea5;
-}
-
-.govuk-tabs__tab:visited {
-    color: #4c2c92;
+    outline: 1px dotted @pacific;
+    outline-offset: 3px;
 }
 
 .govuk-tabs__tab:hover {
-    color: #2b8cc4;
+    background-color: @gray-5;
 }
 
 .govuk-tabs__tab:active {
-    color: #2b8cc4;
+    color: @black;
 }
 
 .govuk-tabs__tab:focus {
-    color: #0b0c0c;
-}
-@media print {
-    .govuk-tabs__tab {
-        font-family: sans-serif;
-    }
-}
-@media (min-width: 40.0625em) {
-    .govuk-tabs__tab {
-        font-size: 19px;
-        font-size: 1.1875rem;
-        line-height: 1.3157894737;
-    }
-}
-@media print {
-    .govuk-tabs__tab {
-        font-size: 14pt;
-        line-height: 1.15;
-    }
+    color: @black;
 }
 
 .govuk-tabs__tab[aria-current="true"] {
-    color: #0b0c0c;
+    color: @black;
     text-decoration: none;
 }
 
 .govuk-tabs__panel {
+    background-color: @gray-5;
     margin-bottom: 30px;
 }
 @media (min-width: 40.0625em) {
     .govuk-tabs__panel {
-        margin-bottom: 50px;
+        border-top: 1px solid @gray;
+        margin: -3px 0 50px;
     }
 }
 @media (min-width: 40.0625em) {
-    .js-enabled .govuk-tabs__list {
-        border-bottom: 1px solid #bfc1c3;
-    }
+    .js-enabled {
 
-    .js-enabled .govuk-tabs__list:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
+        .govuk-tabs__list:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
 
-    .js-enabled .govuk-tabs__list-item {
-        margin-left: 0;
-    }
+        .govuk-tabs__list-item {
+            margin-left: 0;
+        }
 
-    .js-enabled .govuk-tabs__list-item::before {
-        content: none;
-    }
+        .govuk-tabs__list-item::before {
+            content: none;
+        }
 
-    .js-enabled .govuk-tabs__title {
-        display: none;
-    }
+        .govuk-tabs__title {
+            display: none;
+        }
 
-    .js-enabled .govuk-tabs__tab {
-        margin-right: 5px;
-        padding-right: 20px;
-        padding-left: 20px;
-        float: left;
-        color: #0b0c0c;
-        background-color: #f8f8f8;
-        text-align: center;
-        text-decoration: none;
-    }
+        .govuk-tabs__tab {
+            border: 0;
+            color: @gray;
+            margin-right: 5px;
+            padding: 20px 40px 7px;
+            float: left;
+            text-align: center;
+            &:hover {
+                border-bottom: 2px solid @gray-5;
+            }
+            &--selected {
+                color: @black;
+                border-bottom: 5px solid @pacific;
+                &:hover {
+                    border-bottom: 5px solid @pacific;
+                }
+            }
+        }
 
-    .js-enabled .govuk-tabs__tab--selected {
-        margin-top: -5px;
-        margin-bottom: -1px;
-        padding: 14px 19px 16px;
-        border: 1px solid #bfc1c3;
-        border-bottom: 0;
-        color: #0b0c0c;
-        background-color: #ffffff;
-    }
+        .govuk-tabs__tab--selected:focus {
+            background-color: transparent;
+        }
 
-    .js-enabled .govuk-tabs__tab--selected:focus {
-        background-color: transparent;
-    }
-
-    .js-enabled .govuk-tabs__panel {
-        margin-bottom: 0;
-        padding: 30px 20px;
-        border: 1px solid #bfc1c3;
-        border-top: 0;
+        .govuk-tabs__panel {
+            margin-bottom: 0;
+        }
     }
 }
 @media (min-width: 40.0625em) and (min-width: 40.0625em) {
@@ -256,5 +147,11 @@
 
 .variation-code-snippet-title,
 .variation-jinja-code-snippet-title {
-    .respond-to-min(641px, { .u-visually-hidden(); });
+    .respond-to-min(641px, {
+        .u-visually-hidden();
+    });
+    background-color: @white;
+    border-bottom: 1px solid @gray;
+    margin: 0;
+    padding: 20px 40px 7px;
 }

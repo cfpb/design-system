@@ -58,6 +58,7 @@ function addPermalinks( headings ) {
     }
 
   }
+
   /**
    * Add event listener to copy on click the anchor link href value for permalink icons next to headings.
    */
@@ -88,11 +89,11 @@ function copyAnchorLink( linkEl ) {
 
   try {
     // Now that we've selected the anchor text, execute the copy command
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copy email command was ' + msg);
-  } catch(err) {
-    console.log('Oops, unable to copy');
+    const successful = document.execCommand( 'copy' );
+    const msg = successful ? 'successful' : 'unsuccessful';
+    console.log( 'Copy email command was ' + msg );
+  } catch ( err ) {
+    console.log( 'Oops, unable to copy' );
   }
 
   // Remove the selections - NOTE: Should use

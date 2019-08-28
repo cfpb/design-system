@@ -4,9 +4,9 @@ backend:
   branch: master
   squash_merges: true
   commit_messages:
-    create: Create “{{slug}}”
-    update: Update “{{slug}}”
-    delete: Delete “{{slug}}”
+    create: Create "{{slug}}" page
+    update: Update "{{slug}}" page
+    delete: Delete "{{slug}}" page
 
 logo_url: https://cfpb.github.io/design-system/assets/img/cfpb-netlify-logo.png
 publish_mode: editorial_workflow
@@ -115,6 +115,9 @@ collections:
         label: 'Help us make improvements'
         widget: 'markdown'
         required: false
+      - name: 'last_updated'
+        label: 'Page last updated'
+        widget: 'datetime'
   - name: 'foundation'
     preview_path: "foundation/{{slug}}"
     label: 'Foundation pages'
@@ -221,6 +224,9 @@ collections:
         label: 'Help us make improvements'
         widget: 'markdown'
         required: false
+      - name: 'last_updated'
+        label: 'Page last updated'
+        widget: 'datetime'
   - name: 'components'
     preview_path: "components/{{slug}}"
     label: 'Component pages'
@@ -333,6 +339,9 @@ collections:
         label: 'Help us make improvements'
         widget: 'markdown'
         required: false
+      - name: 'last_updated'
+        label: 'Page last updated'
+        widget: 'datetime'
   - name: 'templates'
     label: 'Templates pages'
     preview_path: "templates/{{slug}}"
@@ -435,3 +444,6 @@ collections:
         label: 'Help us make improvements'
         widget: 'markdown'
         required: false
+      - name: 'last_updated'
+        label: 'Page last updated'
+        widget: 'datetime'

@@ -16,7 +16,7 @@ description: >-
 
   * http://cfpb.github.io/design-manual/global-elements/document-detail.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: '![](/design-system/images/uploads/docdetail_top_example.jpg)'
     variation_name: Document detail page example
 usage: >-

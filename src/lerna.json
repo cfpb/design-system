@@ -1,8 +1,0 @@
-{
-  "npmClient": "yarn",
-  "version": "10.0.0",
-  "useWorkspaces": true,
-  "changelog": {
-    "cacheDir": ".changelog"
-  }
-}

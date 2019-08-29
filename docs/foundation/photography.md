@@ -21,7 +21,7 @@ description: >-
 
   * http://cfpb.github.io/design-manual/brand-guidelines/photography.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       Editorial photographs capture the events and activities attended by CFPB
       staff. These photographs show consumers, our partners, and CFPB employees
@@ -36,7 +36,7 @@ variations:
       calls and share the big
       news](/design-system/images/uploads/photography_2_550px_wide.jpg)
     variation_name: Editorial
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       Photographs should not be collaged, staged, unrealistic, or use still
       lifes to illustrate concepts. Image manipulation should be limited to

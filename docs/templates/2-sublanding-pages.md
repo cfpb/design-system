@@ -10,17 +10,17 @@ description: >-
 
   * http://cfpb.github.io/design-manual/global-elements/sublanding-page.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ![Sublanding page with
       hero](/design-system/images/uploads/sublanding_examplea.jpg)
     variation_name: Sublanding page with hero
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ![Sublanding page with text
       introduction](/design-system/images/uploads/sublanding_examplec.jpg)
     variation_name: Sublanding page with text introduction
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ![Sublanding page with breakout
       sidebar](/design-system/images/uploads/sublanding_exampleb.jpg)

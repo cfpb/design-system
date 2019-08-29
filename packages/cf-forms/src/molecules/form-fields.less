@@ -1,0 +1,243 @@
+.m-form-field {
+    .a-text-input__full {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .a-label + .a-text-input {
+        margin-top: unit( 5px / @base-font-size-px, em );
+    }
+
+    &__checkbox,
+    &__radio {
+        .a-label {
+            // We need to turn off autoprefixing for the inline-grid because
+            // IE does not handle an inline-grid like other browsers,
+            // leading to an extremely narrow column of text for the label
+            // and the checkbox or radio widget covering the first part of it.
+            // The Autoprefixer control comment below ensures that the following
+            // property is only picked up by browsers with standard support.
+            // The exclamation mark is necessary for Less to preserve the
+            // comment so that Autoprefixer will see it.
+
+            /*! autoprefixer: ignore next */
+            display: inline-grid;
+            // 30px is width of checkbox/radio button plus the needed padding.
+            grid-template-columns: unit( 30px / @base-font-size-px, em ) auto;
+            vertical-align: top;
+            cursor: pointer;
+
+            &:before {
+                display: inline-block;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                border: 1px solid @form-field-input-border;
+                height: unit( 18px / @base-font-size-px, em );
+                width: unit( 18px / @base-font-size-px, em );
+                margin-right: 10px;
+                background-color: @input-bg;
+                content: '';
+                vertical-align: top;
+
+                // Offset so that the checkbox/radio fits within focused area.
+                position: relative;
+                top: 1px;
+                left: 1px;
+
+                .lt-ie9 & {
+                    display: none !important;
+                }
+            }
+
+            &:hover:before,
+            &.hover:before {
+                border-color: @input-border__hover;
+            }
+        }
+
+        // Ensure the helper text appears on its own line below the label.
+        .a-label_helper {
+            display: block;
+        }
+
+        .a-checkbox,
+        .a-radio {
+            .u-visually-hidden();
+
+            .lt-ie9 & {
+                height: unit( 20px / @base-font-size-px, em );
+                width: unit( 20px / @base-font-size-px, em );
+                width: auto;
+                border: 0;
+                float: left;
+                margin: 1em;
+                position: static;
+                clear: both;
+            }
+
+            &:focus + .a-label,
+            &.focus + .a-label {
+                outline: 1px dotted @input-border__focused;
+                // The outline-offset property is not supported in IE.
+                outline-offset: 1px;
+            }
+
+            &:disabled {
+
+                &:checked + .a-label:before,
+                &:focus + .a-label:before,
+                &.focus + .a-label:before,
+                &:hover + .a-label:before,
+                &.hover + .a-label:before {
+                    border-color: @input-border;
+                    outline: none;
+                    box-shadow: none; // Applies only to radio buttons.
+                }
+
+                & + .a-label {
+                    cursor: not-allowed;
+                    color: @input-text__disabled;
+
+                    &:before {
+                        background: @input-bg__disabled;
+                        border-color: @form-field-input-border__disabled;
+                    }
+                }
+            }
+        }
+    }
+
+    &__checkbox {
+        .a-checkbox {
+            &:focus + .a-label:before,
+            &.focus + .a-label:before {
+                border-color: @input-border__focused;
+                box-shadow: 0 0 0 1px @input-border__focused;
+            }
+
+            &:hover + .a-label:before,
+            &.hover + .a-label:before {
+                border-color: @input-border__hover;
+                box-shadow: 0 0 0 1px @input-border__hover;
+            }
+
+            &:checked + .a-label:before {
+                .u-svg-inline-bg( 'approved' );
+
+                background-size: auto @cf-icon-height;
+                background-repeat: no-repeat;
+                background-position: center 0;
+            }
+            &:disabled:checked + .a-label:before {
+                // rgb values are CFPB gray-40.
+                // For some reason SVG isn't accepting hex values for the fill.
+                .u-svg-inline-bg( 'approved', @gray );
+            }
+        }
+    }
+
+    &__radio {
+        .a-label {
+            &:before {
+                border-radius: 50%;
+
+                /* The rotate is needed to fix a bug in Firefox where radio
+                   button was not centered. */
+                transform: rotate( 0deg );
+            }
+        }
+
+        .a-radio {
+            &:focus + .a-label:before,
+            &.focus + .a-label:before {
+                outline: none;
+                border-color: @input-border__focused;
+                box-shadow: 0 0 0 1px @input-border__focused;
+            }
+
+            &:hover + .a-label:before,
+            &.hover + .a-label:before {
+                outline: none;
+                border-color: @input-border__hover;
+                box-shadow: 0 0 0 1px @input-border__hover;
+            }
+
+            &:checked + .a-label:before {
+                background-color: @input-bg__selected;
+                box-shadow: inset 0 0 0 2px @form-field-inset;
+            }
+
+            &:checked:disabled + .a-label:before {
+                background-color: @input-bg__disabled-selected;
+                box-shadow: inset 0 0 0 2px @input-bg__disabled;
+            }
+
+            &:focus:checked + .a-label:before,
+            &.focus:checked + .a-label:before {
+                border-color: @input-border__focused;
+                box-shadow: 0 0 0 1px @input-border__focused,
+                            inset 0 0 0 2px @form-field-inset;
+            }
+
+            &:hover:checked + .a-label:before,
+            &.hover:checked + .a-label:before {
+                border-color: @input-border__hover;
+                box-shadow: 0 0 0 1px @input-border__hover,
+                            inset 0 0 0 2px @form-field-inset;
+            }
+        }
+    }
+
+    &__lg-target {
+        display: block;
+
+        .a-label {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 15px;
+            background-color: @form-field-input-lg-target-bg;
+        }
+
+        .a-checkbox,
+        .a-radio {
+
+            &:checked + .a-label {
+                background-color: @form-field-input-lg-target-bg__selected;
+                box-shadow: inset 0 0 0 1px @form-field-input-lg-target-border;
+            }
+
+            &:hover + .a-label,
+            &.hover + .a-label,
+            &:focus + .a-label,
+            &.focus + .a-label {
+                box-shadow: inset 0 0 0 2px @form-field-input-lg-target-border;
+            }
+
+            &:focus + .a-label,
+            &.focus + .a-label,
+            &:checked + .a-label {
+                // The outline-offset property is not supported in IE.
+                outline-offset: 1px;
+            }
+
+            &:disabled + .a-label,
+            &:checked:disabled + .a-label,
+            &:hover:disabled + .a-label {
+                color: @input-text__disabled;
+                box-shadow: none;
+                background-color: @form-field-input-lg-target-bg__disabled;
+            }
+
+            &:checked:disabled + .a-label {
+                &, &:before {
+                    border: 1px solid @form-field-input-border__disabled;
+                }
+            }
+        }
+    }
+
+    .a-form-alert,
+    .a-error-message {
+        margin-top: unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
+    }
+}

@@ -39,13 +39,13 @@ variations:
       States.](/design-system/images/uploads/bar-chart-2.png)
     variation_name: Grouped bar chart
     variation_specs: It must have data
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ![Bar charts showing complaints by region (New York metro area, New York
       state and the United States) for different financial
       categories.](/design-system/images/uploads/bar-chart-4.png)
     variation_name: Categories bar chart
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ![Stacked bar chart showing breakdown of complaints in other financial
       services category.](/design-system/images/uploads/bar-chart-3.png)

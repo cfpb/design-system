@@ -64,19 +64,18 @@ coverage.xml
 # Front-End #
 #############
 node_modules/
-docs/node_modules/
-src/node_modules/
 bower_components/
 .grunt/
 vendor/
 static/vendor/
 tmp/
 dist/
+
+# Documentation #
+#################
+docs/node_modules/
 docs/dist/
 docs/assets/icons/
-
-# Jekyll stuff #
-################
 _site
 .sass-cache
 .jekyll-metadata

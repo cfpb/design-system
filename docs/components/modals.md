@@ -16,7 +16,7 @@ description: >-
 
   http://cfpb.github.io/design-manual/page-components/modals.html
 variations:
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: |-
       ![Example of modal](/design-system/images/uploads/formexpiring.png)
 

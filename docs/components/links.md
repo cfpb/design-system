@@ -120,10 +120,10 @@ variations:
       </a>
     variation_description: Only visible on small screens.
     variation_name: Jump link with background modifier
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: '<h2>Header 2 containing <a href="#">a link</a></h2>'
     variation_name: Header link
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: No visited link style
     variation_name: Navigation link
 usage: >-

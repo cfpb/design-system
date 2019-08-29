@@ -36,31 +36,31 @@ variations:
       -->
     variation_description: Used inline with text.
     variation_name: Extra small
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: |-
       * Used on buttons
 
       * Numbers, contact icons
     variation_name: Small
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: |-
       * Social media sharing sets
 
       * Numbers, contact icons
     variation_name: Medium
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: |-
       * Inline with large text links
 
       * Numbers, contact icons
     variation_name: Large
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: '* Paired with primary headers'
     variation_name: Extra large
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: ''
     variation_name: Animated icon
-  - variation_code_snippet: ' '
+  - variation_code_snippet: ''
     variation_description: >-
       ##### Navigation icons
 

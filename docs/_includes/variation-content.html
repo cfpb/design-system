@@ -1,6 +1,6 @@
 <section class="content_main">
 
-    <div class="component-header">
+    <div class="component-header u-mb30">
         <h1 class="superheading">
             {{ page.title }}
             {% if page.status %}
@@ -33,13 +33,13 @@
     </div>
 
     {% if page.description %}
-        <section id="description" class="u-mt20 u-mb20">
+        <section id="description" class="u-mb30" class="lead-paragraph">
             {{ page.description | markdownify }}
         </section>
     {% endif %}
 
 
-    <ul class="m-list m-list__horizontal u-mb20">
+    <ul class="m-list m-list__horizontal u-mb45">
         {% if page.variations %}
         <li class="m-list_item">
             <a class="m-list_link" href="#variations">Variations</a>
@@ -65,11 +65,11 @@
     </ul>
 
     {% if page.variations %}
-    <section class="sticky-header">
+    <section class="sticky-header u-mb45">
         <h2 id="variations">Variations</h2>
         <div class="content_line__wide content_line__thick content_line u-mb20"></div>
         {% for variation in page.variations %}
-        <div>
+        <div class="u-mb30">
             <!-- Name -->
             <h3>{{ variation.variation_name }}</h3>
 
@@ -227,13 +227,14 @@
 
             {% endif %}
 
+        </div>
         {% endfor %}
     </section>
     {% endif %}
 
     {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
     {% if page.restrictions != empty and page.restrictions or page.usage and page.usage != '' %}
-        <section class="sticky-header">
+        <section class="sticky-header u-mb45">
             <h2 id="usage">Usage</h2>
             <div class="content_line__wide content_line__thick content_line u-mb20"></div>
                 {% if page.usage and page.usage != '' %}

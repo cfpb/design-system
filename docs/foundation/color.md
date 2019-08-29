@@ -2,7 +2,7 @@
 title: Color
 layout: variation
 section: foundation
-secondary_section: Identity
+secondary_section: Brand guidelines
 status: Proposed
 description: >-
   A minimal palette, clear hierarchy, and ample whitespace ensure a voice of
@@ -121,4 +121,3 @@ accessibility: >-
   Check](http://www.snook.ca/technical/colour_contrast/colour.html) is a nice
   tool for testing color contrast ratios.
 ---
-

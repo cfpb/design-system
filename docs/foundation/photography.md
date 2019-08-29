@@ -2,7 +2,7 @@
 title: Photography
 layout: variation
 section: foundation
-secondary_section: Identity
+secondary_section: Brand guidelines
 status: Proposed
 description: >-
   Photography is an important tool that helps us relate to consumers,
@@ -64,4 +64,3 @@ accessibility: >-
   * Include descriptive text near images (for example, a pie chart legend with
   percentages of each item).
 ---
-

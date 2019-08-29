@@ -2,7 +2,7 @@
 title: Logo
 layout: variation
 section: foundation
-secondary_section: Identity
+secondary_section: Brand guidelines
 description: >-
   <div class="content-67 content-first" markdown="1">
 

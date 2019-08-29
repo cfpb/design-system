@@ -2,7 +2,7 @@
 title: Expandables
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Layout options
 status: Proposed
 description: >-
   Expandables are components that have additional content that can be opened
@@ -487,4 +487,3 @@ accessibility: >-
   default state (expanded or collapsed) will depend on the circumstance.
 research: ''
 ---
-

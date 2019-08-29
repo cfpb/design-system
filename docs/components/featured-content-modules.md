@@ -2,7 +2,7 @@
 title: Featured Content Module
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Layout options
 status: Proposed
 description: >-
   Featured content modules (FCMs) highlight a specific piece of content at the
@@ -233,4 +233,3 @@ help_us: >-
   *
   https://cfpb.github.io/capital-framework/components/cf-layout/#featured-content-module
 ---
-

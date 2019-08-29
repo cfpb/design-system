@@ -2,7 +2,7 @@
 title: Sidebars and Prefooters
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Layout options
 status: Proposed
 description: >-
   Sidebars are present across most page templates to house information related
@@ -280,4 +280,3 @@ usage: >-
 accessibility: ''
 research: ''
 ---
-

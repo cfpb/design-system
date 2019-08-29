@@ -2,7 +2,7 @@
 title: Wells
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Layout options
 status: Proposed
 description: >-
   Wells are used to highlight specific information within a designated section
@@ -84,4 +84,3 @@ usage: >-
 accessibility: ''
 research: ''
 ---
-

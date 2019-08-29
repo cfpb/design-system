@@ -2,7 +2,7 @@
 title: Lists
 layout: variation
 section: components
-secondary_section: Text
+secondary_section: Layout options
 status: Proposed
 description: "Lists are an effective way to visually highlight important information so that it can be more easily scanned and read. Before writing a list, it’s important to identify the best style needed for the information being presented.\n\nList items should:\n\n* Be capitalized\n* Avoid unnecessary repetition\n* Have a parallel structure\n* Start with an introductory clause or sentence\n* Use consistent punctuation\n\nIf the list items are complete sentences, the introductory clause should also be a complete sentence, followed by a colon. These list items should end with a period.\n\nIf the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/brand-guidelines/typography.html\t\n* https://cfpb.github.io/capital-framework/components/cf-typography/#lists"
 variations:
@@ -119,4 +119,3 @@ usage: ''
 accessibility: ''
 research: ''
 ---
-

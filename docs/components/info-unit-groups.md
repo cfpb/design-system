@@ -2,7 +2,7 @@
 title: 'Info Unit Groups: Image and text'
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Layout options
 status: Legacy
 description: >-
   In general, info unit groups provide context and lead users to additional
@@ -243,4 +243,3 @@ help_us: >-
   *
   [cf-layout](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
 ---
-

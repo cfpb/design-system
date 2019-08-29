@@ -2,7 +2,7 @@
 title: Atomic Components
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Core development
 status: Proposed
 description: >-
   Atomic Component is a micro framework for building Atomic Design components

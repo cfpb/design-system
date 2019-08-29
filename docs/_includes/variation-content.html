@@ -89,21 +89,18 @@
             {% if variation.variation_code_snippet or variation.variation_jinja_code_snippet %}
 
             <div class="govuk-tabs u-mt30" data-module="tabs"  data-toggle-code>
-                <h5 class="govuk-tabs__title">
-                Code snippets
-                </h5>
-
                 <ul class="govuk-tabs__list">
                     {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet-{{ forloop.index }}">
-                        HTML                        </a>
+                            HTML code snippet
+                        </a>
                     </li>
                     {% endif %}
                     {% if variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '' %}
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#jinja-code-snippet-{{ forloop.index }}">
-                        Jinja
+                            Jinja code snippet
                         </a>
                     </li>
                     {% endif %}
@@ -113,7 +110,7 @@
                 {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
                 <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
                     <div class="variation-code-snippet">
-                        <h5 class="variation-code-snippet-title">HTML</h5>
+                        <h5 class="variation-code-snippet-title">HTML code snippet</h5>
                         <div class="source-code">
                             <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
                         </div>
@@ -125,7 +122,7 @@
                 {% if variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '' %}
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
                     <div class="variation-jinja-code-snippet">
-                        <h5 class="variation-jinja-code-snippet-title">Jinja</h5>
+                        <h5 class="variation-jinja-code-snippet-title">Jinja code snippet</h5>
                         <div class="source-code">
                             <pre><code class="language-html">{{ variation.variation_jinja_code_snippet | xml_escape }}</code></pre>
                         </div>

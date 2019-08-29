@@ -67,8 +67,9 @@
     {% if page.variations %}
     <section class="sticky-header">
         <h2 id="variations">Variations</h2>
+        <div class="content_line__wide content_line__thick content_line u-mb20"></div>
         {% for variation in page.variations %}
-        <div class="u-mt30">
+        <div>
             <!-- Name -->
             <h3>{{ variation.variation_name }}</h3>
 
@@ -234,6 +235,7 @@
     {% if page.restrictions != empty and page.restrictions or page.usage and page.usage != '' %}
         <section class="sticky-header">
             <h2 id="usage">Usage</h2>
+            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
                 {% if page.usage and page.usage != '' %}
                     <p>
                     {{ page.usage | markdownify }}
@@ -280,6 +282,7 @@
     {% if page.accessibility and page.accessibility != '' %}
         <section class="sticky-header">
             <h2 id="accessibility">Accessibility</h2>
+            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
             <p>
                 {{ page.accessibility | markdownify }}
             </p>
@@ -289,6 +292,7 @@
     {% if page.research and page.research != '' %}
         <section class="sticky-header">
             <h2 id="research">Research</h2>
+            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
             <p>
                 {{ page.research | markdownify }}
             </p>

@@ -441,7 +441,19 @@ usage: >-
   graphic at small size")
 
 
-  **Standard hero with illustration**
+  #### Style
+
+  ##### Standard hero with illustration
+
+  * All illustrations should be saved at 200% to accommodate retina displays
+
+  * When saving illustrations, use a transparent background
+
+  * Single image for both large and small screens
+
+  * Illustration dimensions: 470px (exact) x 195px (maximum) (2x: 940px x 390px)
+
+
 
 
   ![Image of large non-bleed hero graphic with
@@ -454,7 +466,26 @@ usage: >-
   "Image of smaller non-bleed hero graphics with dimensions")
 
 
-  **Hero with bleeding illustration**
+  ##### Hero with bleeding illustration
+
+  * Two images must be created, one for large and one for small screens
+
+  * Large and small screen images should contain the same elements but can
+  differ compositionally
+
+  * On large screens, illustration bleeds top and bottom
+
+  * Large screen image dimensions are based on maximum possible hero height at
+  601px width
+
+  * To conserve vertical space, small screen image should be as short as
+  possible
+
+  * Illustration dimensions for large screens (exact): 470px x 638px (2x: 940px
+  x 1276px)
+
+  * Illustration dimensions for small screens: 570px (exact) x 320px (maximum)
+  (2x: 1140px x 640px)
 
 
   ![Image of larger bleeding hero graphic with
@@ -467,7 +498,25 @@ usage: >-
   smaller bleeding hero graphics with dimensions")
 
 
-  **Hero with photograph**
+  ##### Hero with photograph
+
+  * Two images must be created, one for large and one for small screens
+
+  * Large and small screen images should contain the same elements but can
+  differ compositionally
+
+  * When selecting a photo include a 30px horizontal margin of clear space
+  between text and image area
+
+  * Type contrast ratios cannot be mathematically determined for photos so
+  special care should be paid when selecting these images
+
+  * To conserve vertical space, small screen image should be as short as
+  possible
+
+  * Photo dimensions for large screens (exact): 1230px x 285px
+
+  * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
 
 
   ![Image of larger photographic hero graphic with
@@ -481,3 +530,4 @@ usage: >-
 accessibility: ''
 research: ''
 ---
+

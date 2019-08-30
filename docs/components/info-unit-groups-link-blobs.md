@@ -2,8 +2,8 @@
 title: 'Info Unit Groups: Link blobs'
 layout: variation
 section: components
-secondary_section: Content layouts
-status: Proposed
+secondary_section: Layout options
+status: Released
 description: >-
   In general, info unit groups provide context and lead users to additional
   content. The versions called link blobs are used to lead users to other deeper
@@ -65,5 +65,6 @@ variations:
 related_items: >-
   * [Info Unit Groups: image and
   text](https://cfpb.github.io/design-system/components/info-unit-groups-image-and-text)
+last_updated: 2019-08-30T14:51:00.000Z
 ---
 

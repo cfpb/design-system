@@ -2,7 +2,7 @@
 title: Filterable List Control Panels
 layout: variation
 section: components
-secondary_section: Navigation
+secondary_section: Layout options
 status: Proposed
 description: >-
   The filter control panel allows users to whittle down number of items in a
@@ -100,4 +100,3 @@ usage: >-
 accessibility: ''
 research: ''
 ---
-

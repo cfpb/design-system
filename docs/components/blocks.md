@@ -2,7 +2,7 @@
 title: Blocks
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Core development
 status: Proposed
 description: >-
   `.block` is a base class with several modifiers that help you separate chunks

@@ -1,8 +1,8 @@
 ---
-title: Standard Tables
+title: Tables
 layout: variation
 section: components
-secondary_section: Tables
+secondary_section: Layout options
 status: Proposed
 description: "Tables divide information into distinct columns and rows to create an intersection “cell” where data is displayed.\n\nMore information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/tables.html\t\n* https://cfpb.github.io/capital-framework/components/cf-tables/#responsive-tables"
 variations:
@@ -487,4 +487,3 @@ accessibility: >-
   to make tabular data accessible.
 research: ''
 ---
-

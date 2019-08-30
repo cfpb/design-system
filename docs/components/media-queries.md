@@ -1,8 +1,8 @@
 ---
-title: Media Queries
+title: Media queries
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Core development
 status: Proposed
 description: >-
   Mixins for consistent media queries that take `px` values and convert them to
@@ -154,4 +154,3 @@ usage: ''
 accessibility: ''
 research: ''
 ---
-

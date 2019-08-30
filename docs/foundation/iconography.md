@@ -2,7 +2,7 @@
 title: Iconography
 layout: variation
 section: foundation
-secondary_section: Identity
+secondary_section: Brand guidelines
 status: Proposed
 description: >-
   Icons visually reinforce an interface action, file type, status, or category.

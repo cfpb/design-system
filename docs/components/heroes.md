@@ -2,7 +2,7 @@
 title: Heroes
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Layout options
 status: Proposed
 description: >-
   Heroes function as a primary focal point on a page, often used to introduce a

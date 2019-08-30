@@ -2,7 +2,7 @@
 title: Sortable Tables
 layout: variation
 section: components
-secondary_section: Tables
+secondary_section: Layout options
 status: Proposed
 description: "Sorting allows users to reorder the contents of a table by a sortable column of their choice.\n\nAny column that can sort needs to be specified in the table’s markup. When the table loads, it should be sorted by one of the sortable columns by default and indicate which column is already sorted. Not every column of a table needs to be sortable.\n\nAt large screen sizes, tables can be sorted using the header of any sortable column.\n* The currently sorted column is marked with an up or down triangle for ascending and descending sorts, respectively\n* On hover, the currently sorted column shows the opposite triangle\n* Columns that can sort show an up triangle on hover\n* Columns that cannot sort show nothing on hover\n\nIf sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked.\n\nMore information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/tables.html\t\n* https://cfpb.github.io/capital-framework/components/cf-tables/#sortable-tables"
 variations:
@@ -211,4 +211,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

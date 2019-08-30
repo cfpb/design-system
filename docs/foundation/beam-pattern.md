@@ -2,7 +2,7 @@
 title: Beam pattern
 layout: variation
 section: foundation
-secondary_section: Identity
+secondary_section: Brand guidelines
 description: >-
   - [Stylistic guidelines](#stylistic-guidelines)
 

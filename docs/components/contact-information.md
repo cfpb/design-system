@@ -2,7 +2,7 @@
 title: Contact Information
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Layout options
 status: Proposed
 description: >-
   The contact information component is used to display phone, email, mailing
@@ -157,4 +157,3 @@ usage: >-
 accessibility: ''
 research: ''
 ---
-

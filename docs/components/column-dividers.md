@@ -1,13 +1,13 @@
 ---
-title: Utilities
+title: Column dividers
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Core development
 status: Proposed
 description: |-
-  Information about Utilities can be found at:
+  Information about Dividers can be found at:
 
-  https://cfpb.github.io/capital-framework/components/cf-core/#utilities
+  https://cfpb.github.io/capital-framework/components/cf-layout/
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.
@@ -22,7 +22,7 @@ usage: >-
   Phasellus molestie magna non est bibendum non venenatis nisl tempor.
   Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
   Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at
-  risus!
+  risus.
 
 
   **Content guidelines**
@@ -59,4 +59,3 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
-

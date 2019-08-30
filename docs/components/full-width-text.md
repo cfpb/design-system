@@ -2,7 +2,7 @@
 title: Full Width Text
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Layout options
 status: Proposed
 description: "Information about Full Width Text can be found at:\n\nhttp://cfpb.github.io/design-manual/page-components/fullwidth-text.html\t\n\nand\n\nhttps://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts"
 variations:

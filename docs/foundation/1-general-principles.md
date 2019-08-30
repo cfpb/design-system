@@ -1,8 +1,8 @@
 ---
-title: General principles
+title: General
 layout: variation
 section: foundation
-secondary_section: Design principles
+secondary_section: Principles
 description: >-
   ### Overall principles
 

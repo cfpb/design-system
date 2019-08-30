@@ -4,9 +4,9 @@ backend:
   branch: master
   squash_merges: true
   commit_messages:
-    create: Create “{{slug}}”
-    update: Update “{{slug}}”
-    delete: Delete “{{slug}}”
+    create: Create "{{slug}}" page
+    update: Update "{{slug}}" page
+    delete: Delete "{{slug}}" page
 
 logo_url: https://cfpb.github.io/design-system/assets/img/cfpb-netlify-logo.png
 publish_mode: editorial_workflow
@@ -115,6 +115,10 @@ collections:
         label: 'Help us make improvements'
         widget: 'markdown'
         required: false
+      - name: 'last_updated'
+        label: 'Page last updated'
+        widget: 'datetime'
+        required: false
   - name: 'foundation'
     preview_path: "foundation/{{slug}}"
     label: 'Foundation pages'
@@ -140,14 +144,12 @@ collections:
         required: false
         hint: 'Where on the website will this page live?'
         options:
-          - label: 'Foundation > Design principles'
-            value: 'Design principles'
-          - label: 'Foundation > Identity'
-            value: 'Identity'
-          - label: 'Foundation > Imagery'
-            value: 'Imagery'
-          - label: 'Foundation > Multimedia'
-            value: 'Multimedia'
+          - label: 'Foundation > Principles'
+            value: 'Principles'
+          - label: 'Foundation > Brand guidelines'
+            value: 'Brand guidelines'
+          - label: 'Foundation > User research'
+            value: 'User research'
       - name: 'status'
         label: 'Implementation status'
         widget: 'select'
@@ -221,6 +223,10 @@ collections:
         label: 'Help us make improvements'
         widget: 'markdown'
         required: false
+      - name: 'last_updated'
+        label: 'Page last updated'
+        widget: 'datetime'
+        required: false
   - name: 'components'
     preview_path: "components/{{slug}}"
     label: 'Component pages'
@@ -248,12 +254,14 @@ collections:
         options:
           - label: 'Components > Alerts'
             value: 'Alerts'
-          - label: 'Components > Content layouts'
-            value: 'Content layouts'
+          - label: 'Components > Core development'
+            value: 'Core development'
           - label: 'Components > Data visualization'
             value: 'Data visualization'
           - label: 'Components > Forms'
             value: 'Forms'
+          - label: 'Components > Layout options'
+            value: 'Layout options'
           - label: 'Components > Navigation'
             value: 'Navigation'
           - label: 'Components > Tables'
@@ -332,6 +340,10 @@ collections:
       - name: 'help_us'
         label: 'Help us make improvements'
         widget: 'markdown'
+        required: false
+      - name: 'last_updated'
+        label: 'Page last updated'
+        widget: 'datetime'
         required: false
   - name: 'templates'
     label: 'Templates pages'
@@ -434,4 +446,8 @@ collections:
       - name: 'help_us'
         label: 'Help us make improvements'
         widget: 'markdown'
+        required: false
+      - name: 'last_updated'
+        label: 'Page last updated'
+        widget: 'datetime'
         required: false

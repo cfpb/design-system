@@ -2,7 +2,7 @@
 title: Grid
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Core development
 status: Proposed
 description: >-
   The grid provides structure for website content. The flexible design adjusts
@@ -253,8 +253,8 @@ variations:
     variation_name: Wrappers
   - variation_code_snippet: |-
       <div class="main-wrapper">
-           <div class="half">I am half of my parent.</div>    
-           <div class="half">        
+           <div class="half">I am half of my parent.</div>
+           <div class="half">
                 <div class="styled">I am half of my parent. I also have a border and background.</div>
            </div>
       </div>

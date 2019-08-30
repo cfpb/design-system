@@ -1,8 +1,8 @@
 ---
-title: Images
+title: Base images
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Core development
 status: Released
 description: Images have a `max-width` of `100%` by default.
 variations:
@@ -21,4 +21,3 @@ usage: ''
 accessibility: ''
 research: ''
 ---
-

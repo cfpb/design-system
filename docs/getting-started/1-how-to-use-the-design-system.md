@@ -1,5 +1,5 @@
 ---
-title: 'First steps: how to use the design system'
+title: 'How to use the design system'
 layout: variation
 section: getting-started
 secondary_section: Getting started
@@ -12,4 +12,3 @@ description: >-
   * Call out things that would need to be educated about, as they might be
   different than expected
 ---
-

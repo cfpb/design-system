@@ -2,7 +2,7 @@
 title: Forms
 layout: variation
 section: foundation
-secondary_section: Design principles
+secondary_section: Principles
 status: Legacy
 description: >-
   Web forms provide an incredible advantage over paper forms in their potential
@@ -368,4 +368,3 @@ description: >-
   Government License
   v2.0](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/).
 ---
-

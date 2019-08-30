@@ -2,7 +2,7 @@
 title: 'Info Unit Groups: Link blobs'
 layout: variation
 section: components
-secondary_section: Content layouts
+secondary_section: Layout options
 status: Proposed
 description: >-
   In general, info unit groups provide context and lead users to additional
@@ -66,4 +66,3 @@ related_items: >-
   * [Info Unit Groups: image and
   text](https://cfpb.github.io/design-system/components/info-unit-groups-image-and-text)
 ---
-

@@ -40,11 +40,13 @@
 
 
     <ul class="m-list m-list__horizontal u-mb20">
+
         {% if page.variations %}
         <li class="m-list_item">
             <a class="m-list_link" href="#variations">Variations</a>
         </li>
         {% endif %}
+
         {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
         {% if page.restrictions != empty and page.restrictions or page.usage and page.usage != '' %}
         {% comment %} restrictions is not empty and ( restrictions exists or (if usage exists and usage is not empty)) {% endcomment %}
@@ -52,11 +54,13 @@
             <a class="m-list_link" href="#usage">Usage</a>
         </li>
         {% endif %}
+
         {% if page.accessibility and page.accessibility != '' %}
         <li class="m-list_item">
             <a class="m-list_link" href="#accessibility">Accessibility</a>
         </li>
         {% endif %}
+
         {% if page.research and page.research != '' %}
         <li class="m-list_item">
             <a class="m-list_link" href="#research">Research</a>
@@ -240,8 +244,10 @@
                     </p>
                 {% endif %}
             {% if page.restrictions and page.restrictions != empty %}
-                <div class="content-l">
-                    <h4>Restrictions</h4>
+                <div class="content-l component-restrictions">
+                    <div class="content-l_col content-l_col-1">
+                        <h4>Restrictions</h4>
+                    </div>
                     {% for restriction in page.restrictions %}
                         {% if restriction.restrictions_do and restriction.restrictions_do != '' %}
                             <div class="content-l_col content-l_col-1-2">

@@ -118,6 +118,7 @@ collections:
       - name: 'last_updated'
         label: 'Page last updated'
         widget: 'datetime'
+        required: false
   - name: 'foundation'
     preview_path: "foundation/{{slug}}"
     label: 'Foundation pages'
@@ -225,6 +226,7 @@ collections:
       - name: 'last_updated'
         label: 'Page last updated'
         widget: 'datetime'
+        required: false
   - name: 'components'
     preview_path: "components/{{slug}}"
     label: 'Component pages'
@@ -342,6 +344,7 @@ collections:
       - name: 'last_updated'
         label: 'Page last updated'
         widget: 'datetime'
+        required: false
   - name: 'templates'
     label: 'Templates pages'
     preview_path: "templates/{{slug}}"
@@ -447,3 +450,4 @@ collections:
       - name: 'last_updated'
         label: 'Page last updated'
         widget: 'datetime'
+        required: false

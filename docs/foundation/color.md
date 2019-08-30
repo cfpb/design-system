@@ -3,7 +3,7 @@ title: Color
 layout: variation
 section: foundation
 secondary_section: Brand guidelines
-status: Proposed
+status: Released
 description: >-
   A minimal palette, clear hierarchy, and ample whitespace ensure a voice of
   authority and expertise in communication.
@@ -17,9 +17,9 @@ description: >-
   these pages:
 
 
-  * http://cfpb.github.io/design-manual/brand-guidelines/color-principles.html
+  * <http://cfpb.github.io/design-manual/brand-guidelines/color-principles.html>
 
-  * http://cfpb.github.io/design-manual/data-visualization/color.html
+  * <http://cfpb.github.io/design-manual/data-visualization/color.html>
 variations:
   - variation_description: >-
       Our core brand color is CFPB Green. Green 60 and Green 20 play a
@@ -114,4 +114,6 @@ accessibility: >-
   The [Colour Contrast
   Check](http://www.snook.ca/technical/colour_contrast/colour.html) is a nice
   tool for testing color contrast ratios.
+last_updated: 2019-08-30T18:31:00.000Z
 ---
+

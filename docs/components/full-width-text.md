@@ -13,7 +13,7 @@ variations:
     variation_description: The secondary state is very secondary.
     variation_name: Secondary state
 usage: >-
-  **Use cases**
+  <h3>Use cases</h3>
 
 
   Phasellus molestie magna non est bibendum non venenatis nisl tempor.
@@ -22,7 +22,7 @@ usage: >-
   risus.
 
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
 
   Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a

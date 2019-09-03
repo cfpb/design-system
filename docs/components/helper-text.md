@@ -48,7 +48,7 @@ variations:
       field.
     variation_name: Placeholder text
 usage: >-
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
 
   Where possible, design your forms to only include required fields. If it’s not

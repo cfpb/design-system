@@ -18,28 +18,28 @@ description: >-
 variations:
   - variation_code_snippet: ''
     variation_description: >-
-      ##### Collapsed
+      #### Collapsed
 
 
       ![filter control
       collapsed](/design-system/images/uploads/filter_collapsed.png)
 
 
-      ##### Expanded
+      #### Expanded
 
 
       ![Filterable list
       expanded](/design-system/images/uploads/filter_expanded.png)
     variation_name: Default filterable list
 usage: >-
-  **Use cases**
+  <h3>Use cases</h3>
 
 
   Use filters in conjunction with search to help users narrow down large amounts
   of data or content.
 
 
-  ##### When to use
+  #### When to use
 
   * When presenting more than 20 documents or listings together for users to
   browse through.
@@ -52,7 +52,7 @@ usage: >-
   categories for articles
 
 
-  ##### When other options are better
+  #### When other options are better
 
   * The total amount of content can be skimmed in a list of 20 items or less.
 
@@ -62,7 +62,7 @@ usage: >-
   * Search alone is sufficient for user needs
 
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
   * Headings and labels should be as succinct as possible, ideally 10 characters
   or less. Do not use colon (:) or other punctuation after the header.
@@ -82,7 +82,7 @@ usage: >-
   * Follow form patterns for grouping, layout, and messaging.
 
 
-  **Behavior**
+  <h3>Behavior</h3>
 
 
   Filters live in an expandable style element allowing controls to be hidden

@@ -116,7 +116,7 @@ variations:
       remains in view at all screen sizes.
     variation_name: Centered visual
 usage: >-
-  **Use cases**
+  <h3>Use cases</h3>
 
   Use a featured content module when you want to highlight something that’s:
 
@@ -156,7 +156,7 @@ usage: >-
   either a left-hand navigation or right-hand sidebar.
 
 
-  ###### When other options are better
+  ##### When other options are better
 
   * When the content is an integral, long-term part of the intended user
   journey, then it should have a more permanent home on the page.
@@ -166,7 +166,7 @@ usage: >-
   using a well or inline text instead.
 
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
   FCMs contain a headline, descriptive body copy text, an optional
   call-to-action link, and a graphical element related to the piece of content
@@ -200,7 +200,7 @@ usage: >-
   which the visual will be seen (on a 600px wide display).
 
 
-  **Behavior**
+  <h3>Behavior</h3>
 
 
   At desktop size, the ratio of text and visual changes with screen size to keep

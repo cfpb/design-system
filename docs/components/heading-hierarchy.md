@@ -171,7 +171,7 @@ variations:
       heading. So it should be concise and shorter than the main page heading.
 
 
-      ##### When other options are better
+      #### When other options are better
 
       For most pages, a single informative page heading provides enough detail
       to communicate the page's purpose and contents.
@@ -212,14 +212,14 @@ variations:
       `.a-heading.a-heading__icon` is attached to `.m-meta-header_right`.
     variation_name: Meta header
 usage: >-
-  **Use cases**
+  <h3>Use cases</h3>
 
 
   Consistent scaling, weights, and capitalization are used to create distinction
   between heading levels.
 
 
-  **Behavior**
+  <h3>Behavior</h3>
 
   At screen widths of 600px and below, the Display heading and Headings 1-4 drop
   in size. Headings 5-6 remain consistent at all screen widths.

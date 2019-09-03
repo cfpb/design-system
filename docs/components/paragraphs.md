@@ -53,11 +53,11 @@ variations:
     variation_name: Microcopy
     variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nText color | @micro-copy | @black | Black (#101820)\t| 0, 0, 0, 100\nText size |  |  |  | \nLine height (pixels) |  |  |  | \nBottom margin | | | |"
 usage: |-
-  **Use cases**
+  <h3>Use cases</h3>
 
   TBD
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
   TBD
 accessibility: >-

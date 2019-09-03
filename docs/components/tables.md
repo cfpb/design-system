@@ -503,7 +503,7 @@ usage: >-
   so that the underlying meaning is quickly apparent.
 
 
-  ##### Labels and Titles
+  #### Labels and Titles
 
   Give tables a meaningful title that succinctly describes the content presented
   so that users can understand their purpose at a glance. If presenting more
@@ -512,13 +512,13 @@ usage: >-
   The title given to this table”).
 
 
-  ###### Long column labels
+  ##### Long column labels
 
   Consider using fixed columns or truncation for column labels that are
   significantly longer than the expected width of the data.
 
 
-  ###### Unit of measurement
+  ##### Unit of measurement
 
   Make sure to indicate the unit of measurement. In terms of placement, if the
   units are the same across columns, indicate the unit of measurement in the
@@ -543,14 +543,14 @@ usage: >-
   table.
 
 
-  ##### Stacking tables
+  #### Stacking tables
 
   A default table would “stack” the information on a smaller screen, since
   shrinking a table that maintained its columns/row structure would make it
   illegible.
 
 
-  ##### Directory tables
+  #### Directory tables
 
   When the data you’re presenting should only be read across the rows (instead
   of down columns), you can use a directory table. The first column in these
@@ -577,7 +577,7 @@ usage: >-
   smaller breakpoints.
 
 
-  ##### Scrolling tables
+  #### Scrolling tables
 
   When the data you’re presenting has more columns than what will comfortably
   fit on the screen, you can use a table that scrolls horizontally. This becomes
@@ -593,7 +593,7 @@ usage: >-
   sizes.
 
 
-  ##### Sorting tables
+  #### Sorting tables
 
   At large screen sizes, tables can be sorted using the header of any sortable
   column.
@@ -615,7 +615,7 @@ usage: >-
 
   #### Code
 
-  ##### Making a table sortable
+  #### Making a table sortable
 
   By adding the `.o-table__sortable` class to a `table`, the table becomes
   sortable. To allow the table to be sorted by a column, add a button to the
@@ -637,7 +637,7 @@ usage: >-
   The use of a `button` helps address certain accessibility concerns.
 
 
-  ##### Sorting type
+  #### Sorting type
 
   To sort properly, the type of the `data` can be specified. By default, the
   column’s values will be sorted as `string` values. However, the column can be
@@ -664,7 +664,7 @@ usage: >-
   ```
 
 
-  ##### Sorting table on page load
+  #### Sorting table on page load
 
   To sort the table on page load, use the `.sorted-up` and `.sorted-down`
   classes:

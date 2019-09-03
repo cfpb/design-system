@@ -80,18 +80,18 @@ variations:
     variation_jinja_code_snippet: ''
     variation_name: First and last pages
 usage: >-
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
   Tables with over 20 rows can be paired with pagination.
 
 
-  **Behavior**
+  <h3>Behavior</h3>
 
   `@bp-xs-max`: On small screens, the buttons display next to each other,
   stacked on top of the form
 
 
-  **Code**
+  <h3>Code</h3>
 
   To enable the component to jump directly to the paginated content, include an
   `id` on a wrapper of the paginated content (or an element directly above it),

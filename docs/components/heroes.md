@@ -20,7 +20,7 @@ description: >-
   hero graphic")
 
 
-  ##### Where to use
+  #### Where to use
 
 
   * [Landing page](https://cfpb.github.io/design-system/templates/landing-pages)
@@ -29,7 +29,7 @@ description: >-
   page](https://cfpb.github.io/design-system/templates/sublanding-pages)
 
 
-  ##### When to use
+  #### When to use
 
 
   * When orienting a user to a new section or topic
@@ -38,7 +38,7 @@ description: >-
   subject and links to lower-level pages that contain more specific information
 
 
-  ##### When other options are better
+  #### When other options are better
 
 
   * When introducing a specific piece of content, like a blog, press release, or
@@ -362,7 +362,7 @@ usage: >-
   tone of the CFPB.
 
 
-  ##### Purpose
+  #### Purpose
 
 
   Hero copy should be written from the user’s perspective. It’s less about what
@@ -383,10 +383,10 @@ usage: >-
   within the main content area.
 
 
-  ##### Writing hero content
+  #### Writing hero content
 
 
-  ###### Heading
+  ##### Heading
 
 
   Headings should communicate what the user can learn from the page or the
@@ -404,7 +404,7 @@ usage: >-
   * Two-line (at largest breakpoint): 82 characters maximum
 
 
-  ###### Subheading
+  ##### Subheading
 
 
   Subheading content should be brief, enticing, and build upon the heading to
@@ -443,7 +443,7 @@ usage: >-
 
   #### Style
 
-  ##### Standard hero with illustration
+  #### Standard hero with illustration
 
   * All illustrations should be saved at 200% to accommodate retina displays
 
@@ -466,7 +466,7 @@ usage: >-
   "Image of smaller non-bleed hero graphics with dimensions")
 
 
-  ##### Hero with bleeding illustration
+  #### Hero with bleeding illustration
 
   * Two images must be created, one for large and one for small screens
 
@@ -498,7 +498,7 @@ usage: >-
   smaller bleeding hero graphics with dimensions")
 
 
-  ##### Hero with photograph
+  #### Hero with photograph
 
   * Two images must be created, one for large and one for small screens
 

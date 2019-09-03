@@ -1,14 +1,14 @@
 <section class="content_main">
 
-    <div class="component-header">
-        <h2>
+    <div class="component-header u-mb30">
+        <h1 class="superheading">
             {{ page.title }}
             {% if page.status %}
             <div class="a-badge status-{{ page.status }}">
                 {{ page.status }}
             </div>
             {% endif %}
-        </h2>
+        </h1>
     {% if page.variations %}
 
         <div id="toggle-code">
@@ -33,14 +33,13 @@
     </div>
 
     {% if page.description %}
-        <section id="description" class="u-mt20 u-mb20">
+        <section id="description" class="u-mb30" class="lead-paragraph">
             {{ page.description | markdownify }}
         </section>
     {% endif %}
 
 
-    <ul class="m-list m-list__horizontal u-mb20">
-
+    <ul class="m-list m-list__horizontal u-mb45">
         {% if page.variations %}
         <li class="m-list_item">
             <a class="m-list_link" href="#variations">Variations</a>
@@ -69,12 +68,13 @@
     </ul>
 
     {% if page.variations %}
-    <section class="sticky-header">
-        <h3 id="variations">Variations</h3>
+    <section class="sticky-header u-mb45">
+        <h2 id="variations">Variations</h2>
+        <div class="content_line__wide content_line__thick content_line u-mb20"></div>
         {% for variation in page.variations %}
-        <div class="u-mt30">
+        <div class="u-mb30">
             <!-- Name -->
-            <h4>{{ variation.variation_name }}</h4>
+            <h3>{{ variation.variation_name }}</h3>
 
             <!-- Description -->
             {{ variation.variation_description | markdownify }}
@@ -230,14 +230,16 @@
 
             {% endif %}
 
+        </div>
         {% endfor %}
     </section>
     {% endif %}
 
     {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
     {% if page.restrictions != empty and page.restrictions or page.usage and page.usage != '' %}
-        <section class="sticky-header">
-            <h3 id="usage">Usage</h3>
+        <section class="sticky-header u-mb45">
+            <h2 id="usage">Usage</h2>
+            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
                 {% if page.usage and page.usage != '' %}
                     <p>
                     {{ page.usage | markdownify }}
@@ -246,7 +248,7 @@
             {% if page.restrictions and page.restrictions != empty %}
                 <div class="content-l component-restrictions">
                     <div class="content-l_col content-l_col-1">
-                        <h4>Restrictions</h4>
+                        <h3>Restrictions</h3>
                     </div>
                     {% for restriction in page.restrictions %}
                         {% if restriction.restrictions_do and restriction.restrictions_do != '' %}
@@ -285,7 +287,8 @@
 
     {% if page.accessibility and page.accessibility != '' %}
         <section class="sticky-header">
-            <h3 id="accessibility">Accessibility</h3>
+            <h2 id="accessibility">Accessibility</h2>
+            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
             <p>
                 {{ page.accessibility | markdownify }}
             </p>
@@ -294,7 +297,8 @@
 
     {% if page.research and page.research != '' %}
         <section class="sticky-header">
-            <h3 id="research">Research</h3>
+            <h2 id="research">Research</h2>
+            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
             <p>
                 {{ page.research | markdownify }}
             </p>
@@ -306,7 +310,8 @@
         <div class="content-l_col content-l_col-1-2">
             <div>
                 <section>
-                    <h3 id="related-items">Related Items</h3>
+                    <h2 id="related-items">Related Items</h2>
+                    <div class="content_line__wide content_line__thick content_line u-mb20"></div>
                     {{ page.related_items | markdownify }}
                 </section>
             </div>
@@ -317,7 +322,8 @@
         <div class="content-l_col content-l_col-1-2">
             <div>
                 <section>
-                    <h3 id="help-us">Help us make improvements</h3>
+                    <h2 id="help-us">Help us make improvements</h2>
+                    <div class="content_line__wide content_line__thick content_line u-mb20"></div>
                     {{ page.help_us | markdownify }}
                 </section>
             </div>

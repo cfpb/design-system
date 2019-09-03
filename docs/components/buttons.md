@@ -220,7 +220,7 @@ variations:
     variation_name: Destructive action
     variation_specs: TBD
 usage: >-
-  **Use cases**
+  <h3>Use cases</h3>
 
 
   Use primary buttons for actions that go to the next step. Use secondary
@@ -233,7 +233,7 @@ usage: >-
   attempting to perform is functioning as intended.
 
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
 
   Labels should be written in sentence case. Use verbs and an active voice.
@@ -247,7 +247,7 @@ usage: >-
   have icons to the left.
 
 
-  **Code**
+  <h3>Code</h3>
 
 
   The cf-buttons component provides extensions to the basic button styles.

@@ -74,7 +74,7 @@
         {% for variation in page.variations %}
         <div class="u-mb30">
             <!-- Name -->
-            <h3>{{ variation.variation_name }}</h3>
+            <h3 class="h5">{{ variation.variation_name }}</h3>
 
             <!-- Description -->
             {{ variation.variation_description | markdownify }}
@@ -192,7 +192,7 @@
                 {% if rows.size > 0 %}
 
                     <div class="variation-code-specs" data-toggle-code>
-                        <h5>Specifications</h5>
+                        <h4 class="h6 u-visually-hidden">Specifications</h4>
 
                         <table>
                             <thead>
@@ -246,7 +246,7 @@
                     </p>
                 {% endif %}
             {% if page.restrictions and page.restrictions != empty %}
-                <div class="content-l component-restrictions">
+                <div class="content-l component-restrictions u-mt30">
                     <div class="content-l_col content-l_col-1">
                         <h3>Restrictions</h3>
                     </div>

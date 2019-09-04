@@ -1091,13 +1091,14 @@ usage: >-
 
   1. Update the values within the CFPB Brand Colors CSV file
 
-  2. From terminal within this repo run npm run colors, this will auto-generate
-  a new brand-palette.less file
+  2. From terminal within this repo run \`npm run colors\`, this will
+  auto-generate a new \`brand-palette.less\` file
 
-  3. Run grunt build (you may need the -f flag because of linting issues)
+  3. Run \`grunt build\` (you may need the \`-f\` flag because of linting
+  issues)
 
-  4. Run npm start and check
-  /design-manual/brand-guidelines/color-principles.html locally
+  4. Run \`npm start\` and check
+  \`/design-manual/brand-guidelines/color-principles.html\` locally
 
   5. Commit the changes and open a PR.
 

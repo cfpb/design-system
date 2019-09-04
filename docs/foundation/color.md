@@ -1143,6 +1143,20 @@ accessibility: >-
   color to represent the brand.
 
 
+  This is an example of a visualization using the green/red combination, and how
+  it can appear to someone with red/green color blindness:
+
+
+  ![](/design-system/images/uploads/screen-shot-2019-09-04-at-4.29.57-pm.png)
+
+
+  This is an example of a visualization using the teal/red combination, and how
+  it can appear to someone with red/green color blindness:
+
+
+  ![](/design-system/images/uploads/screen-shot-2019-09-04-at-4.30.36-pm.png)
+
+
   * Do not use color as the only means of conveying information, indicating an
   action, prompting a response, or distinguishing a visual element.
 

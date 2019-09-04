@@ -35,7 +35,7 @@
     "watch-css": "less-watch-compiler --less-args include-path=../packages/:../node_modules/normalize-css/normalize-css/ assets/css dist/css main.less",
     "watch": "webpack --watch",
     "build": "yarn run compile-js && yarn run compile-css && bundle exec jekyll build",
-    "build-preview": "webpack && yarn run compile-css && bundle exec jekyll build",
+    "build-netlify": "yarn --cwd ../ && webpack && yarn run compile-css && bundle exec jekyll build",
     "install": "yarn run copy-icons && bundle install"
   },
   "dependencies": {

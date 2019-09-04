@@ -3,7 +3,7 @@ title: Maps
 layout: variation
 section: components
 secondary_section: Data visualization
-status: Beta
+status: Proposed
 description: >-
   Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas
   purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor,

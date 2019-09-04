@@ -1054,10 +1054,16 @@ variations:
 
         </tbody></table>
     variation_name: Tints
-  - variation_description: '![](/design-system/images/uploads/datavis_color_03_03.png)'
-    variation_name: Data visualization standard palette
-  - variation_description: '![](/design-system/images/uploads/datavis_color_03_06.png)'
-    variation_name: Data visualization cool and warm palettes
+  - variation_description: '![](/design-system/images/uploads/datavis_color_main.png)'
+    variation_name: Data visualization main palette
+  - variation_description: '![](/design-system/images/uploads/datavis_color_pos-neg.png)'
+    variation_name: Data visualization positive-negative palette
+  - variation_description: '![](/design-system/images/uploads/datavis_color_divergent.png)'
+    variation_name: Data visualization divergent palette
+  - variation_description: '![](/design-system/images/uploads/datavis_color_cool.png)'
+    variation_name: Data visualization cool palette
+  - variation_description: '![](/design-system/images/uploads/datavis_color_warm.png)'
+    variation_name: Data visualization warm palette
 usage: >-
   When used properly, color can help clarify relationships between data, provide
   emphasis for certain data points, and maintain a consistent brand voice. When

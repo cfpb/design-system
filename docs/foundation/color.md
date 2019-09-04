@@ -436,8 +436,7 @@ variations:
               <td>240, 248, 235</td>
               <td></td>
           </tr>
-      </tbody></table>
-      <table class="color-table">
+      </tbody></table> <table class="color-table">
             <thead>
                 <tr><th></th>
                 <th>Name</th>
@@ -1068,12 +1067,23 @@ usage: >-
   * To highlight part of a set of data, or show that things are related, use a
   tint or a shade of the main color.
 
+
+  ![](/design-system/images/uploads/subsets-and-relationships-color-1.png)
+
+
   * Use categorical color schemes when you’re visualizing groups of things.
   These are discrete colors that do not imply an visual relationship between the
   sets of data.
 
+
+  ![](/design-system/images/uploads/categorical-color-1.png)
+
+
   * When you’re displaying sequential data that shows a range of data in a
   ranked order, use these sequential colors to imply the relationship.
+
+
+  ![](/design-system/images/uploads/sequential-color-1.png)
 
 
   To update the color palette within the Design Manual:
@@ -1135,3 +1145,4 @@ accessibility: >-
   tool for testing color contrast ratios.
 last_updated: 2019-08-30T18:31:00.000Z
 ---
+

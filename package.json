@@ -22,6 +22,7 @@
     "url": "https://github.com/cfpb/capital-framework/issues"
   },
   "scripts": {
+    "start": "yarn --cwd docs/ start",
     "build": "gulp build",
     "cf-link": "lerna exec -- yarn link",
     "cf-unlink": "lerna exec -- yarn unlink",

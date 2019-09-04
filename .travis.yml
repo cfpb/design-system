@@ -7,7 +7,7 @@ before_install:
 install:
 - yarn --cwd docs/
 script:
-- yarn --cwd src/ run test
+- yarn test
 before_deploy:
 - yarn --cwd docs/ run build
 - sed -i '/_site/d' ./.gitignore

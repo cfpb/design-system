@@ -1086,6 +1086,10 @@ usage: >-
   ![](/design-system/images/uploads/sequential-color-1.png)
 
 
+  **NOTE: The following update information was copy-pasted from the Design
+  Manual, but does not apply to the Design System.**
+
+
   To update the color palette within the Design Manual:
 
 

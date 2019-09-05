@@ -182,7 +182,8 @@ usage: >-
     * For half-width link blobs, roughly 3-5 lines at max column width of text (100-250 characters)
     * For third-width link blobs, roughly 3-5 lines at max column width of text (between 90 and 150 characters)
   * Call to action link should stay on a single line at max column width. Link
-  content should follow link guidelines.
+  content should follow [link
+  guidelines](https://cfpb.github.io/design-system/components/links).
     * For half-width link blobs, 40 characters or less
     * For third-width link blobs, 30 characters or less
   * When these components are featured together (which is ideal), the amount of

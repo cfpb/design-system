@@ -94,6 +94,46 @@ variations:
       ![Info unit group: example of third width link
       blob](/design-system/images/uploads/third_width_link_blob_intro.png "Info
       unit group: example of third width link blob")
+
+
+      ##### When to use
+
+
+      * Default option for providing users with secondary content or suggested
+      navigation paths to sibling pages.
+
+      * Ideally, when a group of these components can be featured together in
+      multiples of three (3, 6, 9, etc.).
+
+
+      ##### When other options are better
+
+
+      * When the number of components would be better featured in multiples of 2
+      (Suggest using the half-width link blob)
+
+      * When headings are too long for the narrower width, for example, when
+      they break to 3 lines or more.
+
+      * When content requires imagery (Suggest using the 50/50 image and text or
+      the 25/75 image and text instead
+
+      * When there are multiple paragraphs of copy
+
+      * When the page includes a sidebar
+
+
+      ##### WHERE TO USE
+
+
+      * [Landing
+      pages](https://cfpb.github.io/design-system/templates/landing-pages)
+
+      * [Sublanding
+      pages](https://cfpb.github.io/design-system/templates/sublanding-pages)
+
+      * [Browse
+      pages](https://cfpb.github.io/design-system/templates/browse-pages)
     variation_jinja_code_snippet: >-
       File in https://github.com/cfpb/cfgov-refresh:
 

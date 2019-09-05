@@ -141,7 +141,7 @@ variations:
       https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html
     variation_name: Third-width link blob
 usage: >-
-  #### Behavior
+  ### Behavior
 
 
   At breakpoints below 601, the two- or three-column patterns transition into a
@@ -170,6 +170,26 @@ usage: >-
 
 
   ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png)
+
+
+  ### Content guidelines
+
+
+  * Headings should be as succinct as possible.
+    * For half-width link blobs, ideally 1 line at max column width (25 characters) or two lines at max column width maximum (50 characters)
+    * For third-width link blobs, ideally 1 line at max column width (25 characters) or two lines at max column width maximum (45 characters)
+  * Description beneath heading should also be succinct.
+    * For half-width link blobs, roughly 3-5 lines at max column width of text (100-250 characters)
+    * For third-width link blobs, roughly 3-5 lines at max column width of text (between 90 and 150 characters)
+  * Call to action link should stay on a single line at max column width. Link
+  content should follow link guidelines.
+    * For half-width link blobs, 40 characters or less
+    * For third-width link blobs, 30 characters or less
+  * When these components are featured together (which is ideal), the amount of
+  content in each component should be as close to the same number of total lines
+  as possible.
+    * For half-width link blobs, one or two lines different is ok
+    * For third-width link blobs, a difference of one line is ok
 related_items: >-
   * [Info Unit Groups: image and
   text](https://cfpb.github.io/design-system/components/info-unit-groups-image-and-text)

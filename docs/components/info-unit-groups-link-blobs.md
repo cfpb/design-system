@@ -195,12 +195,6 @@ usage: >-
   ### Style
 
 
-  ![](/design-system/images/uploads/halfwidthblob_style_mockup.png)
-
-
-  ![](/design-system/images/uploads/third_width_link_blob_style.png)
-
-
   * Headings: Use H3 or H4. Do not use both.
     * H3: Use when you wish to give the blob heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
     * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
@@ -209,6 +203,12 @@ usage: >-
   * At breakpoints below 601: H3 automatically drops down to an H4, the
   three-column pattern transitions into a single column and stacks, and the
   mobile link style is used for the call to action link(s)
+
+
+  ![](/design-system/images/uploads/halfwidthblob_style_mockup.png)
+
+
+  ![](/design-system/images/uploads/third_width_link_blob_style.png)
 related_items: >-
   * [Info Unit Groups: image and
   text](https://cfpb.github.io/design-system/components/info-unit-groups-image-and-text)

@@ -11,6 +11,9 @@ description: >-
   they’re looking for.
 
 
+  *There are conflicts in text weight between print and web.
+
+
   This page is under active development. Information is being moved into it from
   these pages:
 
@@ -22,7 +25,7 @@ variations:
   - variation_code_snippet: <h1 class="superheading">Display heading</h1>
     variation_description: '<601px wide: Drops to Heading 1'
     variation_jinja_code_snippet: ''
-    variation_name: ' '
+    variation_name: ' Display'
     variation_specs: "Element | Variable name | Variable | web value | Print value\n--- | --- | --- | --- | ---\nTypeface | | | Avenir Next Regular | Avenir Next Regular\nWebfont | @webfont-regular: | Arial; | Arial\nText color | @text: | @black; | Black (#101820)\t| 0, 0, 0, 100\nText size | @size-xl: | 48px; | 48px | 38pt\nSmall screen text size | | | 34px | \nLine height | @base-line-height: | unit( @base-line-height-px / @base-font-size-px ); | \nLine height (pixels) | ? |  | 60px | 66pt\nSmall screen line height | | 42px | \nBottom margin | | | | 30px\nExtra-small breakpoint | @bp-xs-max: | 600px; |"
   - variation_code_snippet: |-
       <h1>Heading level 1</h1>
@@ -34,7 +37,7 @@ variations:
     variation_description: |-
       Responsive heading. At small screen sizes, displays as heading level 2.
       <601px wide: Drops to Heading 2
-    variation_name: ' '
+    variation_name: 'H1 '
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -53,7 +56,7 @@ variations:
     variation_description: |-
       Responsive heading. At small screen sizes, displays as heading level 3.
       <601px wide: Drops to Heading 3
-    variation_name: ' '
+    variation_name: ' H2'
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -72,7 +75,9 @@ variations:
     variation_description: |-
       Responsive heading. At small screen sizes, displays as heading level 4.
       <601px wide: Drops to Heading 4
-    variation_name: ' '
+
+      *There are conflicts in text weight between print and web.
+    variation_name: ' H3'
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -94,9 +99,12 @@ variations:
       text.
 
       <601px wide: Drops to 16px / 18px
+
+
+      *There are conflicts in text weight between print and web.
     variation_jinja_code_snippet: |+
 
-    variation_name: ' '
+    variation_name: ' H4'
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -114,7 +122,7 @@ variations:
       <p class="h5">A non-heading element</p>
       -->
     variation_description: Not a responsive heading. 1 px letter spacing.
-    variation_name: ' '
+    variation_name: ' H5'
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -130,8 +138,13 @@ variations:
       Non heading element:
       <p class="h6">A non-heading element</p>
       -->
-    variation_description: Not a responsive heading. 1 px letter spacing.
-    variation_name: ' '
+    variation_description: >-
+      Not a responsive heading. 1 px letter spacing.
+
+
+      *There are conflicts in text weight and capitalization between print and
+      web.
+    variation_name: ' H6'
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---
@@ -148,7 +161,7 @@ variations:
     variation_description: >-
       The heading with icon is typically used for listing categories in a meta
       header.
-    variation_name: ' '
+    variation_name: ' Heading with icon'
     variation_specs: |-
       Element | Variable name | Variable | web value | Print value
       --- | --- | --- | --- | ---

@@ -157,7 +157,7 @@ variations:
       * Mobile: 15px padding on each side
 
 
-      ##### Breakpoints
+      #### Breakpoints
 
 
       Five major breakpoints standardize large-scale changes like navigation and
@@ -231,7 +231,7 @@ variations:
       Wrappers are centered containers with a max-width
       and outside left/right padding of ½ the gutter width on each side.
 
-      ##### Less mixin
+      #### Less mixin
 
       ```
       .grid_wrapper( @grid_wrapper-width: @grid_wrapper-width )
@@ -240,7 +240,7 @@ variations:
       You can create a wrapper with max-width other than the default
       by passing a pixel value into the mixin.
 
-      ##### Example
+      #### Example
 
       ```
       .main-wrapper {
@@ -259,7 +259,7 @@ variations:
            </div>
       </div>
     variation_description: >-
-      ##### Less mixin
+      #### Less mixin
 
 
       ```
@@ -353,7 +353,7 @@ variations:
       without having to deal with the first and last columns of each row.
 
 
-      ##### Less mixin
+      #### Less mixin
 
 
       ```
@@ -363,7 +363,7 @@ variations:
       ```
 
 
-      ##### Usage
+      #### Usage
 
 
       ```
@@ -450,7 +450,7 @@ variations:
       it.
 
 
-      ##### Less mixin
+      #### Less mixin
 
 
       ```
@@ -467,7 +467,7 @@ variations:
       ```
 
 
-      ##### Usage
+      #### Usage
 
 
       ```
@@ -504,11 +504,11 @@ variations:
     variation_description: TBA
     variation_name: Prefixing/Suffixing
 usage: |-
-  **Use cases**
+  <h3>Use cases</h3>
 
   TBA
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
   TBA
 accessibility: TBA

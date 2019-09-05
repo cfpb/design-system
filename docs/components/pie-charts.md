@@ -26,7 +26,7 @@ variations:
       graphic.](/design-system/images/uploads/doughnut-chart-2.jpg)
     variation_name: Donut chart
 usage: |-
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
   * The slices should add up to 100%.
   * Use 5 or less slices.

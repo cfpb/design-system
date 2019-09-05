@@ -161,10 +161,10 @@ usage: >-
 
 
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
 
-  **Behavior**
+  <h3>Behavior</h3>
 
 
   Default links

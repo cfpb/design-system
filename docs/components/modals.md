@@ -32,7 +32,7 @@ usage: >-
   cases outlined below.
 
 
-  ###### Feedback or correction
+  ##### Feedback or correction
 
   Modals can be effective for communicating a warning or alert outside the main
   web page. They can be triggered by a user interaction (like pressing a button
@@ -40,7 +40,7 @@ usage: >-
   inactivity).
 
 
-  ###### Interruption
+  ##### Interruption
 
   Use modals to force the user to complete a task or make a decision that
   requires their full attention outside of the main workflow. A critical piece
@@ -48,7 +48,7 @@ usage: >-
   effective. If not, explore other UI elements to accomplish the goal.
 
 
-  ###### Examples of when to use modals
+  ##### Examples of when to use modals
 
   * Confirm an action that can’t be undone, such as “Are you sure you want to
   delete this?
@@ -65,7 +65,7 @@ usage: >-
   #### Content guidelines
 
 
-  ###### Heading
+  ##### Heading
 
   Modal windows should have a clear heading at the top of the window. This
   heading should clearly state what is happening or what action a modal is
@@ -74,19 +74,19 @@ usage: >-
   that inactivity.
 
 
-  ###### Supporting text
+  ##### Supporting text
 
   Any copy underneath the heading should include clear instructions about what
   the user needs to do.
 
 
-  ###### Form fields
+  ##### Form fields
 
   If form fields are included in a modal, they should follow standard form field
   design guidelines.
 
 
-  ###### Modal window box
+  ##### Modal window box
 
   * Alignment: centered horizontally and vertically on top of lightbox
 
@@ -103,7 +103,7 @@ usage: >-
   * Supporting text: Avenir Next Regular, 16px, Black (#101820)
 
 
-  ###### Close area
+  ##### Close area
 
   * Minicon: “close-round”
 
@@ -114,7 +114,7 @@ usage: >-
   * Font: Avenir Next Regular, 16px, Pacific (#0072ce)
 
 
-  ###### Gray action bar
+  ##### Gray action bar
 
   * Background: Gray 5 (#f7f8f9)
 
@@ -125,21 +125,21 @@ usage: >-
   * Primary action: left aligned button
 
 
-  ###### Maximum width
+  ##### Maximum width
 
   * 270px for small screens
 
   * 630px for medium and large screens
 
 
-  ###### Inactive window
+  ##### Inactive window
 
   * Set page to fixed
 
 
   #### Behavior
 
-  ###### Opening a modal
+  ##### Opening a modal
 
   Modals can be triggered by links, buttons, or even inactivity on a site. When
   a modal opens, set the focus to the first element users need to interact with.
@@ -147,14 +147,14 @@ usage: >-
   action button.
 
 
-  ###### Scrolling within a modal
+  ##### Scrolling within a modal
 
   Modal windows should not scroll. If a modal contains enough information to
   require scrolling, use an alternative method of displaying content, such as a
   different UI element or another content page.
 
 
-  ###### Closing a modal
+  ##### Closing a modal
 
   Actions inside modals should be clearly marked. There should be a clear path
   forward (“continue”) and back (“cancel”), in addition to a clearly labeled way
@@ -173,7 +173,7 @@ usage: >-
   * ESC key on a keyboard
 
 
-  ###### Creating accessible behaviors
+  ##### Creating accessible behaviors
 
   Keyboard access should be limited to only interacting with the modal dialog
   once it is visible.

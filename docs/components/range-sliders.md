@@ -14,7 +14,7 @@ variations:
     variation_description: '![](/design-system/images/uploads/slider-default.png)'
     variation_name: Basic range slider
 usage: >-
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
 
   Range sliders can work well for discovery and education, where the inputs are

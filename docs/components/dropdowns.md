@@ -41,7 +41,7 @@ variations:
     variation_description: ''
     variation_name: Multiselect
 usage: >-
-  **Use cases**
+  <h3>Use cases</h3>
 
   While dropdowns are easy to implement, they aren’t always the best choice from
   a usability perspective.

@@ -25,7 +25,7 @@ variations:
       between 2009 and 2015.](/design-system/images/uploads/line-chart-2.png)
     variation_name: Line chart showing trends
 usage: >-
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
 
   * Label your lines directly or use different patterns for each line.

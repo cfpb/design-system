@@ -246,11 +246,11 @@ variations:
       Element | Variable name | Variable | web value
       --- | --- | --- | ---
 usage: |-
-  **Use cases**
+  <h3>Use cases</h3>
 
   TBD
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
   TBD
 accessibility: TBD

@@ -67,7 +67,7 @@ variations:
       * When there are multiple paragraphs of copy.
 
 
-      **Behavior**
+      <h3>Behavior</h3>
 
 
       At breakpoints below 601, the two-column pattern transitions into a single
@@ -79,7 +79,7 @@ variations:
       component behavior screenshot")
 
 
-      **Content guidelines**
+      <h3>Content guidelines</h3>
 
 
       * Headings should be as succinct as possible, ideally staying on a single
@@ -155,7 +155,7 @@ variations:
       * When there are multiple paragraphs of copy.
 
 
-      **Behavior**
+      <h3>Behavior</h3>
 
 
       At breakpoints below 601, the two-column pattern transitions into a single
@@ -167,7 +167,7 @@ variations:
       component behavior screenshot")
 
 
-      **Content guidelines**
+      <h3>Content guidelines</h3>
 
 
       * Headings should be as succinct as possible, ideally staying on a single

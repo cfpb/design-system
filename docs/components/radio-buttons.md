@@ -67,7 +67,7 @@ variations:
       </div>
     variation_name: Large target radio button with helper text
 usage: >-
-  **Use cases**
+  <h3>Use cases</h3>
 
 
   Leave radio buttons unselected as the default. It’s easy for users to miss
@@ -86,7 +86,7 @@ usage: >-
   includes the option text.
 
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
 
   TBA

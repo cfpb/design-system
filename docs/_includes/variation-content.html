@@ -74,7 +74,7 @@
         {% for variation in page.variations %}
         <div class="u-mb30">
             <!-- Name -->
-            <h3>{{ variation.variation_name }}</h3>
+            <h3 class="h5">{{ variation.variation_name }}</h3>
 
             <!-- Description -->
             {{ variation.variation_description | markdownify }}
@@ -189,7 +189,7 @@
                 {% if rows.size > 0 %}
 
                     <div class="variation-code-specs" data-toggle-code>
-                        <h5>Specifications</h5>
+                        <h4 class="h6 u-visually-hidden">Specifications</h4>
 
                         <div class="o-table o-table-wrapper__scrolling">
                             <table>
@@ -245,7 +245,7 @@
                     </p>
                 {% endif %}
             {% if page.restrictions and page.restrictions != empty %}
-                <div class="content-l component-restrictions">
+                <div class="content-l component-restrictions u-mt30">
                     <div class="content-l_col content-l_col-1">
                         <h3>Restrictions</h3>
                     </div>
@@ -285,7 +285,7 @@
     {% endif %}
 
     {% if page.accessibility and page.accessibility != '' %}
-        <section class="sticky-header">
+        <section class="sticky-header u-mb45">
             <h2 id="accessibility">Accessibility</h2>
             <div class="content_line__wide content_line__thick content_line u-mb20"></div>
             <p>
@@ -295,7 +295,7 @@
     {% endif %}
 
     {% if page.research and page.research != '' %}
-        <section class="sticky-header">
+        <section class="sticky-header u-mb45">
             <h2 id="research">Research</h2>
             <div class="content_line__wide content_line__thick content_line u-mb20"></div>
             <p>
@@ -304,7 +304,7 @@
         </section>
     {% endif %}
 
-    <div class="content-l">
+    <div class="content-l u-mb45">
         {% if page.related_items %}
         <div class="content-l_col content-l_col-1-2">
             <div>

@@ -55,10 +55,10 @@ usage: >-
   * Currently, single column content only.
 
 
-  ##### Behavior
+  #### Behavior
 
 
-  ###### Breakpoints 900+
+  ##### Breakpoints 900+
 
 
   Page with a right sidebar
@@ -73,7 +73,7 @@ usage: >-
   ![](/design-system/images/uploads/wells_behavior_mockup_2.png)
 
 
-  ###### Breakpoints 900 and under
+  ##### Breakpoints 900 and under
 
 
   Wells are full width. At breakpoints 600 and under there are slight padding

@@ -51,7 +51,7 @@ variations:
       services category.](/design-system/images/uploads/bar-chart-3.png)
     variation_name: Stacked bar chart
 usage: >-
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
 
   * If exact numbers are important, the bars should be labeled with the value.

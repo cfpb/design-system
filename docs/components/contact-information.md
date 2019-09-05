@@ -64,7 +64,7 @@ variations:
       </div>
     variation_name: Sidebar contact info
 usage: >-
-  **Use cases**
+  <h3>Use cases</h3>
 
 
   * When there is a specific action users may want or need to take that requires
@@ -75,14 +75,14 @@ usage: >-
   objective of the page.
 
 
-  ##### When something else is better
+  #### When something else is better
 
 
   * When no contact information is needed or no specific action is tied to the
   contact information.
 
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
 
   Headings should be the official name of the office.
@@ -122,7 +122,7 @@ usage: >-
   method.
 
 
-  ##### Behavior
+  #### Behavior
 
 
   The mockups below show simultaneously how this pattern works within either the

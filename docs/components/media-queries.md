@@ -9,7 +9,7 @@ description: >-
   ems.
 
 
-  ##### Respond to min and max width mixins
+  #### Respond to min and max width mixins
 
   These mixins take a px value breakpoint and set of style rules and converts
   them to the corresponding min or max width media query.
@@ -46,7 +46,7 @@ description: >-
 
   ```
 
-  ##### Respond to range mixin
+  #### Respond to range mixin
 
   This mixin takes both min and max px values and a set of style rules and
   converts them to the corresponding min and max media query.
@@ -79,7 +79,7 @@ description: >-
 
   ```
 
-  ##### Respond to dpi mixin
+  #### Respond to dpi mixin
 
   This mixin allows us to easily write styles that target high-resolution
   screens, such as Apple retina screens
@@ -110,7 +110,7 @@ description: >-
 
   ```
 
-  ##### Respond to print mixin
+  #### Respond to print mixin
 
   This mixin allows us to easily write styles that target both @media print and
   .print.

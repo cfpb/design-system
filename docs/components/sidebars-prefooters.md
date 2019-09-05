@@ -160,10 +160,10 @@ variations:
     variation_description: '![](/design-system/images/uploads/cta_example.png)'
     variation_name: Call to action with button
 usage: >-
-  **Use cases**
+  <h3>Use cases</h3>
 
 
-  ##### When to use Related posts
+  #### When to use Related posts
 
 
   * This component is used to display lists of related content dynamically
@@ -174,7 +174,7 @@ usage: >-
   subject matter and needs of the page.
 
 
-  ##### When other options are better
+  #### When other options are better
 
 
   * When lists of items should not be automatically updated consider related
@@ -183,7 +183,7 @@ usage: >-
   * When posts will be mixed with other types of content.
 
 
-  ##### When to use Related links
+  #### When to use Related links
 
 
   * When a specific, static piece of content and call to action needs to be
@@ -193,13 +193,13 @@ usage: >-
   in the sidebar.
 
 
-  ##### When other options are better
+  #### When other options are better
 
 
   * When all of the content is posts that can be dynamically populated.
 
 
-  ##### When to use Meta data
+  #### When to use Meta data
 
 
   * When displaying relevant metadata about a specific document or set of
@@ -207,27 +207,27 @@ usage: >-
   reference.
 
 
-  ##### When other options are better
+  #### When other options are better
 
 
   * When anything other than metadata for a document detail page is being
   displayed.
 
 
-  ##### When to use call to action with button
+  #### When to use call to action with button
 
 
   * When highlighting or featuring a call to take a specific action.
 
 
-  ##### When other options are better
+  #### When other options are better
 
 
   * When the “action” is navigating to another page of the site or downloading a
   document. Refer to the buttons page for more information.
 
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
 
   * Slugs should be as succinct as possible, ideally 30 characters or less. They

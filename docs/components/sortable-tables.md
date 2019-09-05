@@ -109,7 +109,7 @@ variations:
 usage: >-
   #### Code
 
-  ##### Making a table sortable
+  #### Making a table sortable
 
   By adding the `.o-table__sortable` class to a `table`, the table becomes
   sortable. To allow the table to be sorted by a column, add a button to the
@@ -131,7 +131,7 @@ usage: >-
   The use of a `button` helps address certain accessibility concerns.
 
 
-  ##### Sorting type
+  #### Sorting type
 
   To sort properly, the type of the `data` can be specified. By default, the
   column’s values will be sorted as `string` values. However, the column can be
@@ -158,7 +158,7 @@ usage: >-
   ```
 
 
-  ##### Sorting table on page load
+  #### Sorting table on page load
 
   To sort the table on page load, use the `.sorted-up` and `.sorted-down`
   classes:

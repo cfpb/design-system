@@ -174,13 +174,13 @@ variations:
       Element | Variable name | Variable | web value
       --- | --- | --- | ---
 usage: >-
-  **Use cases**
+  <h3>Use cases</h3>
 
 
   TBD
 
 
-  **Content guidelines**
+  <h3>Content guidelines</h3>
 
   Choose the appropriate width for text input fields so they match the kind of
   information requested. This makes it easier for users to quickly grasp what’s
@@ -213,7 +213,7 @@ usage: >-
   Placeholder text disappears once a user begins typing in the field.
 
 
-  **Behavior**
+  <h3>Behavior</h3>
 
   As the screen size gets smaller, break multi-column inputs into a single,
   stacked column. Fields that are next to each other on a large screen, should

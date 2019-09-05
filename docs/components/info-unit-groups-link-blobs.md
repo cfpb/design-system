@@ -191,9 +191,25 @@ usage: >-
   as possible.
     * For half-width link blobs, one or two lines different is ok
     * For third-width link blobs, a difference of one line is ok
+
+  ### Style
+
+
+  * Headings: Use H3 or H4. Do not use both.
+    * H3: Use when you wish to give the blob heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
+    * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
+  * Body copy: Avenir paragraph.
+
+  * At breakpoints below 601: H3 automatically drops down to an H4, the
+  three-column pattern transitions into a single column and stacks, and the
+  mobile link style is used for the call to action link(s)
 related_items: >-
   * [Info Unit Groups: image and
   text](https://cfpb.github.io/design-system/components/info-unit-groups-image-and-text)
+
+  * [Links](https://cfpb.github.io/design-system/components/links)
+
+  * [Typography](https://cfpb.github.io/design-system/foundation/typography)
 last_updated: 2019-08-30T16:07:00.000Z
 ---
 

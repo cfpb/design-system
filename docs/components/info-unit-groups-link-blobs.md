@@ -40,6 +40,44 @@ variations:
       ![Info unit group: example of half width link
       blob](/design-system/images/uploads/halfwidthblob_intro_mockup.png "Info
       unit group: example of half width link blob")
+
+
+      ##### When to use
+
+
+      * Default option for providing succinct descriptions and navigation paths
+      to child pages from a parent page.
+
+      * Ideally, when an even number of these components can be featured
+      together.
+
+
+      ##### When other options are better
+
+
+      * When the number of components would be better featured in multiples of
+      3. Suggest using third-width link blob.
+
+      * When content requires imagery. Suggest using the 50/50 image and text or
+      25/75 image and text components instead.
+
+      * When there are multiple paragraphs of copy
+
+      * When we are not implying a parent/child relationship between the current
+      page and the linked page
+
+
+      ##### WHERE TO USE
+
+
+      * [Landing
+      pages](https://cfpb.github.io/design-system/templates/landing-pages)
+
+      * [Sublanding
+      pages](https://cfpb.github.io/design-system/templates/sublanding-pages)
+
+      * [Browse
+      pages](https://cfpb.github.io/design-system/templates/browse-pages)
     variation_jinja_code_snippet: >-
       File in https://github.com/cfpb/cfgov-refresh:
 

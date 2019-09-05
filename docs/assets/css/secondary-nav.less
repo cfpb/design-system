@@ -62,3 +62,69 @@
         }
     }
 }
+
+
+//
+// Bleedbar sidebar (on left) styling
+//
+
+.content__bleedbar_left {
+    // Overrides the border between main and sidebar, because bleedbar makes its own.
+    .content_sidebar:after {
+        content: none;
+    }
+
+    .content_main {
+        padding:
+            unit( @grid_gutter-width / @base-font-size-px, em )
+            unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
+        background: @content_sidebar-bg;
+    }
+
+    .respond-to-min( @bp-med-min, {
+        // Prevent pseudo element background from creating horizontal scrollbar.
+        overflow: hidden;
+
+        .content_main {
+            padding-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
+            padding-right: 0;
+            padding-bottom: unit( ( @grid_gutter-width / 2) / @base-font-size-px, em );
+            padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+            margin-left: 0;
+            position: relative;
+            z-index: 1;
+
+            // Remove background color from actual sidebar.
+            // It will now be provided by pseudoelement :after sidebar parent.
+            background: transparent;
+        }
+
+        .content_wrapper {
+            position: relative;
+
+            &:before {
+                // Create faux sidebar background.
+                content: '';
+                display: block;
+                width: 9999px;
+                border-left: 1px solid @content_sidebar-border;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: 0;
+                // The three in the below calculation is a magic number.
+                // Not entirely sure what to do about it right now.
+                margin-left: ( @grid_gutter-width / 3 );
+                background: @content_sidebar-bg;
+            }
+        }
+
+        &.content__1-2 .content_wrapper:before {
+            right: 66.666666667%;
+        }
+
+        &.content__1-3 .content_wrapper:before {
+            right: 75%;
+        }
+    });
+}

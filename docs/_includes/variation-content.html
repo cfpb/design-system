@@ -140,7 +140,7 @@
                 {% comment %}
                     Create an arrary of all the design token columns
                 {% endcomment %}
-                {% assign column_names = "Design token name,Less variable name,Less value,Pixels,Ems,Points,Seconds" | split: "," %}
+                {% assign column_names = "Design token name,Less variable name,Less value,Pixels,Ems,Points,Seconds,Inches" | split: "," %}
 
                 {% comment %}
                     Initalize empty arrays to store the rows and columns
@@ -202,6 +202,7 @@
                                         {% if columns contains 'Ems' %}<th>Ems</th>{% endif %}
                                         {% if columns contains 'Points' %}<th>Points</th>{% endif %}
                                         {% if columns contains 'Seconds' %}<th>Seconds</th>{% endif %}
+                                        {% if columns contains 'Inches' %}<th>Inches</th>{% endif %}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -218,6 +219,7 @@
                                         {% if columns contains 'Ems' %}<td data-label="Ems">{{ tokens[spec]["Ems"] }}</td>{% endif %}
                                         {% if columns contains 'Points' %}<td data-label="Points">{{ tokens[spec]["Points"] }}</td>{% endif %}
                                         {% if columns contains 'Seconds' %}<td data-label="Seconds">{{ tokens[spec]["Seconds"] }}</td>{% endif %}
+                                        {% if columns contains 'Inches' %}<td data-label="Inches">{{ tokens[spec]["Inches"] }}</td>{% endif %}
                                     </tr>
                                     {% endfor %}
                                 </tbody>

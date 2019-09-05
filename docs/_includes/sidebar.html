@@ -17,14 +17,16 @@
 {% assign secondary_sections = secondary_sections | sort %}
 
 {% if secondary_sections %}
-<ul>
+<ul class="m-list m-list__unstyled">
     {% for secondary_section in secondary_sections | sort %}
-    <li>
-        {{ secondary_section }}
-        <ul>
+    <li class="m-list_item">
+        <span class="h5">{{ secondary_section }}</span>
+        <ul class="m-list m-list__links">
             {% for p in site.pages %}
                 {% if p.section == page.section and p.secondary_section == secondary_section %}
-                <li><a href="{{ site.baseurl }}/{{ p.section }}/{{ p.title | slugify }}">{{ p.title }}</a></li>
+                <li class="m-list_item">
+                    <a class="m-list_link" href="{{ site.baseurl }}/{{ p.section }}/{{ p.title | slugify }}">{{ p.title }}</a>
+                </li>
                 {% endif %}
             {% endfor %}
         </ul>
@@ -32,10 +34,12 @@
     {% endfor %}
 </ul>
 {% else %}
-<ul>
+<ul class="m-list m-list__links">
     {% for p in site.pages %}
         {% if p.section == page.section %}
-        <li><a href="{{ site.baseurl }}/{{ p.section }}/{{ p.title | slugify }}">{{ p.title }}</a></li>
+        <li class="m-list_item">
+            <a class="m-list_link" href="{{ site.baseurl }}/{{ p.section }}/{{ p.title | slugify }}">{{ p.title }}</a>
+        </li>
         {% endif %}
     {% endfor %}
 </ul>

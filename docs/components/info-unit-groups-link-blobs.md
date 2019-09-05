@@ -41,9 +41,10 @@ variations:
       blob](/design-system/images/uploads/halfwidthblob_intro_mockup.png "Info
       unit group: example of half width link blob")
     variation_jinja_code_snippet: >-
+      File in https://github.com/cfpb/cfgov-refresh:
+
       *
-      [half-width-link-blob-group.html](https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/half-width-link-blob-group.html)
-      in [cfgov-refresh](https://github.com/cfpb/cfgov-refresh)
+      https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/half-width-link-blob-group.html
     variation_name: Half-width link blob
   - variation_code_snippet: TBD (not easily available)
     variation_description: >-
@@ -56,9 +57,10 @@ variations:
       blob](/design-system/images/uploads/third_width_link_blob_intro.png "Info
       unit group: example of third width link blob")
     variation_jinja_code_snippet: >-
+      File in https://github.com/cfpb/cfgov-refresh:
+
       *
-      [third-width-link-blob-group.html](https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html)
-      in [cfgov-refresh](https://github.com/cfpb/cfgov-refresh)
+      https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html
     variation_name: Third-width link blob
 related_items: >-
   * [Info Unit Groups: image and

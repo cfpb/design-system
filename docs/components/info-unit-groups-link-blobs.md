@@ -81,7 +81,7 @@ variations:
     variation_jinja_code_snippet: >-
       File in https://github.com/cfpb/cfgov-refresh:
 
-      *
+
       https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/half-width-link-blob-group.html
     variation_name: Half-width link blob
   - variation_code_snippet: ''
@@ -137,7 +137,7 @@ variations:
     variation_jinja_code_snippet: >-
       File in https://github.com/cfpb/cfgov-refresh:
 
-      *
+
       https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html
     variation_name: Third-width link blob
 related_items: >-

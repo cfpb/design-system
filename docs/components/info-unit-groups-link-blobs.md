@@ -140,6 +140,36 @@ variations:
 
       https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html
     variation_name: Third-width link blob
+usage: >-
+  #### Behavior
+
+
+  At breakpoints below 601, the two- or three-column patterns transition into a
+  single column and stacks each instance in Z-order.
+
+
+  **601 and above (2 column half-width link blob)**
+
+
+  ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png)
+
+
+  **601 and above (3 column third-width link blob)**
+
+
+  ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png)
+
+
+  **600 and under (1 column half-width link blob)**
+
+
+  ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png)
+
+
+  **600 and under (1 column third-width link blob)**
+
+
+  ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png)
 related_items: >-
   * [Info Unit Groups: image and
   text](https://cfpb.github.io/design-system/components/info-unit-groups-image-and-text)

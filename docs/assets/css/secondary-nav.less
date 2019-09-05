@@ -29,10 +29,36 @@
 .nav-secondary {
     ul > li > .h5 {
         color: #676A6F;
+        font-weight: 500;
     }
     .m-list__links {
+
+        .respond-to-min(901px, {
+                margin-top: unit( 5px / @base-font-size-px, em );
+        });
+
+        .m-list_item {
+            .respond-to-min(901px, {
+                margin-bottom: unit( 4px / @base-font-size-px, em );
+            });
+        }
+
         .m-list_link {
             padding-left: unit( 20px / @base-font-size-px, em );
+            .respond-to-max(900px, {
+                border-style: solid;
+                border-color: @gray-40;
+            });
+            .respond-to-min(901px, {
+                margin-left: unit( 20px / @base-font-size-px, em );
+                padding: unit( 4px / @base-font-size-px, em ) unit( 15px / @base-font-size-px, em );
+                border-bottom: none;
+                color: @black;
+                &:hover,
+                &:focus {
+                    background: @gray-10;
+                }
+            });
         }
     }
 }

@@ -77,7 +77,7 @@
                 border-style: solid;
                 border-color: @gray-40;
             });
-            .respond-to-min(901px, {
+            .respond-to-min(@bp-sm-min, {
                 margin-left: unit( 20px / @base-font-size-px, em );
                 padding: unit( 4px / @base-font-size-px, em ) unit( 15px / @base-font-size-px, em );
                 border-bottom: none;
@@ -97,13 +97,13 @@
 // @breakpoint argument: pixel value of minimum screen width at which you want the bleedbar styling to appear
 //
 
-.bleedbar_left(@breakpoint) {
+.content__bleedbar_left {
     // Overrides the border between main and sidebar, because bleedbar makes its own.
     .content_main:after {
         content: none;
     }
 
-    .respond-to-min( @breakpoint, {
+    .respond-to-min( @bp-med-min, {
         // Prevent pseudo element background from creating horizontal scrollbar.
         overflow: hidden;
 
@@ -152,17 +152,12 @@
     });
 }
 
-.content__bleedbar_left {
-    // breakpoint for generic left bleedbar layout: @bp-med-min
-    .bleedbar_left(@bp-med-min);
-}
-
 .content__bleedbar_expandable {
-    // breakpoint for left bleedbar layout when the sidebar is also an expandable: 901px;
-    .bleedbar_left(901px);
+
+    .content__bleedbar_left;
 
     // Add custom border with smaller gutter between sidebar and main content for secondary nav
-    .respond-to-min(901px, {
+    .respond-to-min(@bp-med-min, {
         
         .content_sidebar {
             border-right-color: @content_sidebar-bg;

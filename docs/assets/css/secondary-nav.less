@@ -1,5 +1,14 @@
 /* ==========================================================================
    Secondary Nav
+   Creates an expandable show/hide toggle nav on small screens, and a regular left sidebar on large screens
+   Use the following classes on the sidebar container element to add this styling:
+        .content_sidebar
+        .o-expandable
+        .o-expandable__padded
+        .o-expandable__background
+    And use these for child div where the navigation links are:
+        .o-expandable_content 
+        .nav-secondary
    ========================================================================== */
 
 .content_sidebar {
@@ -12,6 +21,13 @@
                 .u-visually-hidden();
             });
         }
+
+        .o-expandable_content {
+            .respond-to-min(901px, {
+                margin-top: unit( 30px / @base-font-size-px, em );
+            });
+        }
+
         .o-expandable_content__collapsed {
             .respond-to-min(901px, {
                 max-height: initial !important;
@@ -21,7 +37,19 @@
     }
 
     &.o-expandable__padded {
+        .o-expandable_content {
+            &:before {
+                .respond-to-min(901px, {
+                    border: none;
+                });
+            }
+        }
+    }
 
+    &.o-expandable__background {
+        .respond-to-min(901px, {
+            background: transparent;
+        });
     }
 
 }
@@ -65,23 +93,17 @@
 
 
 //
-// Bleedbar sidebar (on left) styling
+// Mixin: Bleedbar sidebar (on left) styling
+// @breakpoint argument: pixel value of minimum screen width at which you want the bleedbar styling to appear
 //
 
-.content__bleedbar_left {
+.bleedbar_left(@breakpoint) {
     // Overrides the border between main and sidebar, because bleedbar makes its own.
-    .content_sidebar:after {
+    .content_main:after {
         content: none;
     }
 
-    .content_main {
-        padding:
-            unit( @grid_gutter-width / @base-font-size-px, em )
-            unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
-        background: @content_sidebar-bg;
-    }
-
-    .respond-to-min( @bp-med-min, {
+    .respond-to-min( @breakpoint, {
         // Prevent pseudo element background from creating horizontal scrollbar.
         overflow: hidden;
 
@@ -107,7 +129,7 @@
                 content: '';
                 display: block;
                 width: 9999px;
-                border-left: 1px solid @content_sidebar-border;
+                border-right: 1px solid @content_sidebar-border;
                 height: 100%;
                 position: absolute;
                 top: 0;
@@ -126,5 +148,31 @@
         &.content__1-3 .content_wrapper:before {
             right: 75%;
         }
+
     });
+}
+
+.content__bleedbar_left {
+    // breakpoint for generic left bleedbar layout: @bp-med-min
+    .bleedbar_left(@bp-med-min);
+}
+
+.content__bleedbar_expandable {
+    // breakpoint for left bleedbar layout when the sidebar is also an expandable: 901px;
+    .bleedbar_left(901px);
+
+    // Add custom border with smaller gutter between sidebar and main content for secondary nav
+    .respond-to-min(901px, {
+        
+        .content_sidebar {
+            border-right-color: @content_sidebar-bg;
+        }
+
+        .content_main {
+            border-left-color: @content_sidebar-bg;
+        }
+
+    });
+
+        
 }

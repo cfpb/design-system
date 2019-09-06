@@ -3,8 +3,8 @@ title: Full Width Text
 layout: variation
 section: components
 secondary_section: Layout options
-status: Proposed
-description: "Information about Full Width Text can be found at:\n\nhttp://cfpb.github.io/design-manual/page-components/fullwidth-text.html\t\n\nand\n\nhttps://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts"
+status: Released
+description: "Information about Full Width Text can be found at:\n\n<http://cfpb.github.io/design-manual/page-components/fullwidth-text.html>\t\n\nand\n\n<https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts>"
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.
@@ -56,3 +56,4 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
+

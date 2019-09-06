@@ -145,7 +145,7 @@ usage: >-
 
 
   At breakpoints below 601, the two- or three-column patterns transition into a
-  single column and stacks each instance in Z-order.
+  single column and stack each instance in Z-order.
 
 
   **601 and above (2 column half-width link blob)**

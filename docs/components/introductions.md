@@ -121,7 +121,7 @@ usage: >-
   #### Use cases
 
 
-  **_Text introductions_**
+  _**Text introductions**_
 
 
   Text introductions should be used on every page, except in cases when a hero
@@ -153,7 +153,7 @@ usage: >-
   pages.
 
 
-  **_Item introductions_**
+  _**Item introductions**_
 
 
   WHEN TO USE
@@ -188,7 +188,7 @@ usage: >-
   #### Behavior
 
 
-  _**Text introductions**_
+  **_Text introductions_**
 
 
   901+ breakpoints, standard grey-welled sidebar on the right
@@ -216,7 +216,7 @@ usage: >-
   ![](/design-system/images/uploads/textintro_behavior4.jpg)
 
 
-  **_Item introductions_**
+  _**Item introductions**_
 
 
   901+ breakpoints, item introduction with sidebar to the right
@@ -234,12 +234,10 @@ usage: >-
   - - -
 
 
-
-
   #### Content guidelines
 
 
-  **_Text introductions_**
+  _**Text introductions**_
 
 
   Headings should be as succinct as possible, ideally staying on a single line
@@ -270,7 +268,7 @@ usage: >-
   less. Link content should follow link guidelines.
 
 
-  **_Item introductions_**
+  _**Item introductions**_
 
 
   Category should always be selected if it is a page type that is categorized.
@@ -286,9 +284,14 @@ usage: >-
 
   If using the subheader paragraph, it should expand on the page title and help
   explain why the reader should care. No more than 2 sentences; 50 words.
+
+
+  ![Item introduction
+  spacing](/design-system/images/uploads/itemintro_style.png)
 accessibility: ''
 research: ''
 help_us: |-
   * [github issue goes here](<>)
   * [email us](<>)
 ---
+

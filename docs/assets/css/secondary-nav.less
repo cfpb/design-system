@@ -97,7 +97,7 @@
 // @breakpoint argument: pixel value of minimum screen width at which you want the bleedbar styling to appear
 //
 
-.content__bleedbar_left {
+.content__bleedbar-left {
     // Overrides the border between main and sidebar, because bleedbar makes its own.
     .content_main:after {
         content: none;
@@ -152,9 +152,9 @@
     });
 }
 
-.content__bleedbar_expandable {
+.content__bleedbar-expandable {
 
-    .content__bleedbar_left;
+    .content__bleedbar-left;
 
     // Add custom border with smaller gutter between sidebar and main content for secondary nav
     .respond-to-min(@bp-med-min, {
@@ -173,6 +173,5 @@
         }
 
     });
-
         
 }

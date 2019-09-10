@@ -4,14 +4,15 @@ layout: variation
 section: components
 secondary_section: Layout options
 status: Released
-description: "Information about Full Width Text can be found at:\n\n<http://cfpb.github.io/design-manual/page-components/fullwidth-text.html>\t\n\nand\n\n<https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts>"
+description: "The full width text component is the foundation of the main content area of many pages. Spanning the full main content area within a given template, it houses basic text content that follows [our typographic hierarchy](https://cfpb.github.io/design-system/foundation/typography) with the option to add pull quotes, media, inset information, and tables in-line.\n\nMore information about the Full Width Text component can be found at:\n\n<http://cfpb.github.io/design-manual/page-components/fullwidth-text.html>\t\n\nand\n\n<https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts>"
 variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+  - variation_code_snippet: ''
+    variation_description: ''
+    variation_name: Content
+  - variation_code_snippet: ''
+    variation_description: ''
+    variation_name: Media
+  - variation_name: Inset content
 usage: >-
   <h3>Use cases</h3>
 

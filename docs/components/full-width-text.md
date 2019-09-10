@@ -11,7 +11,7 @@ variations:
       ![](/design-system/images/uploads/content_quote_example.jpg)
 
 
-      #### WHEN TO USE
+      **WHEN TO USE**
 
       - When there are multiple paragraphs of text to be shown on a page.
       Especially if multiple sections are involved.
@@ -19,13 +19,13 @@ variations:
       - When text content is the main focus of a page.
 
 
-      #### WHEN SOMETHING ELSE IS BETTER
+      **WHEN SOMETHING ELSE IS BETTER**
 
       - When the goal of the text is to quickly inform users about a set of
       options and/or drive them to child pages other sections of the site.
       Consider using the half width link blob.
        
-      #### WHERE TO USE
+      **WHERE TO USE**
 
       - [Landing
       pages](https://cfpb.github.io/design-system/templates/landing-pages)

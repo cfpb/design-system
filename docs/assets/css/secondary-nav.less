@@ -1,85 +1,177 @@
 /* ==========================================================================
    Secondary Nav
+   Creates an expandable show/hide toggle nav on small screens, and a regular left sidebar on large screens
+   Use the following classes on the sidebar container element to add this styling:
+        .content_sidebar
+        .o-expandable
+        .o-expandable__padded
+        .o-expandable__background
+    And use these for child div where the navigation links are:
+        .o-expandable_content 
+        .nav-secondary
    ========================================================================== */
 
+.content_sidebar {
+    &.o-expandable {
+
+        padding: unit( 7.5px / @base-font-size-px, em ) 0px 0px;
+
+        .o-expandable_header {
+            .respond-to-min(901px, {
+                .u-visually-hidden();
+            });
+        }
+
+        .o-expandable_content {
+            .respond-to-min(901px, {
+                margin-top: unit( 30px / @base-font-size-px, em );
+            });
+        }
+
+        .o-expandable_content__collapsed {
+            .respond-to-min(901px, {
+                max-height: initial !important;
+                overflow: visible;
+            });
+        }
+    }
+
+    &.o-expandable__padded {
+        .o-expandable_content {
+            &:before {
+                .respond-to-min(901px, {
+                    border: none;
+                });
+            }
+        }
+    }
+
+    &.o-expandable__background {
+        .respond-to-min(901px, {
+            background: transparent;
+        });
+    }
+
+}
+
 .nav-secondary {
-    margin-bottom: unit(30px / @base-font-size-px, em);
-
-    &_list {
-        margin: 0;
-        padding: 0;
+    ul > li > .h5 {
+        color: #676A6F;
+        font-weight: 500;
     }
+    .m-list__links {
 
-    &_item {
-        list-style: none;
-
-        .respond-to-min(801px, {
-            & + & {
-                margin-top: 10px;
-            }
-        });
-    }
-
-    &_link {
-        @font-size-small: 16px;
-        @font-size-large: 18px;
-
-        .respond-to-max(800px, {
-            display: block;
-            // width: 100%; // Needed to override button styles
-            padding: unit((@grid_gutter-width / 2) / @font-size-small, em)
-                     unit(@grid_gutter-width / @font-size-small, em);
-            border-bottom-style: solid;
-            border-width: 0; // Needed to override button styles
-            border-bottom-width: 1px;
-            background: @gray-10;
-            font-size: unit(@font-size-small / @base-font-size-px, em);
-            font-weight: 500;
-            .u-link__colors(@dark-gray, @dark-gray, @dark-gray, @dark-gray, @dark-gray,
-                            @gray-20, @gray-20, @gray-20, @gray-20, @gray-20);
-            text-align: left; // Needed to override button styles
+        .respond-to-min(901px, {
+                margin-top: unit( 5px / @base-font-size-px, em );
         });
 
-        .respond-to-max(600px, {
-            padding-left: unit((@grid_gutter-width / 2) / @font-size-small, em);
-            padding-right: unit((@grid_gutter-width / 2) / @font-size-small, em);
-        });
-
-        .respond-to-min(801px, {
-            display: inline-block;
-            padding: unit(5px / @font-size-large, em)
-                     unit(15px / @font-size-large, em);
-            border-left-style: solid;
-            border-left-width: 5px;
-            font-size: unit(@font-size-large / @base-font-size-px, em);
-            font-weight: 500;
-            .u-link__colors(@pacific, @pacific, @black, @black, @black,
-                            transparent, transparent, @green, @green, @green);
-        });
-
-        &__current {
-            .respond-to-max(800px, {
-                display: none;
-            });
-            .respond-to-min(801px, {
-                .u-link__colors(@black, @black, @black, @black, @black,
-                                @green, @green, @green, @green, @green);
+        .m-list_item {
+            .respond-to-min(901px, {
+                margin-bottom: unit( 4px / @base-font-size-px, em );
             });
         }
 
-        &__button {
-            width: 100%;
-            font-weight: bold;
-            text-align: left;
-            text-transform: uppercase;
-
-            &:focus {
-                outline: thin dotted;
-            }
-
-            .respond-to-min(801px, {
-                display: none;
+        .m-list_link {
+            padding-left: unit( 20px / @base-font-size-px, em );
+            .respond-to-max(900px, {
+                border-style: solid;
+                border-color: @gray-40;
+            });
+            .respond-to-min(@bp-sm-min, {
+                margin-left: unit( 20px / @base-font-size-px, em );
+                padding: unit( 4px / @base-font-size-px, em ) unit( 15px / @base-font-size-px, em );
+                border-bottom: none;
+                color: @black;
+                &:hover,
+                &:focus {
+                    background: @gray-10;
+                }
             });
         }
     }
+}
+
+
+//
+// Mixin: Bleedbar sidebar (on left) styling
+// @breakpoint argument: pixel value of minimum screen width at which you want the bleedbar styling to appear
+//
+
+.content__bleedbar-left {
+    // Overrides the border between main and sidebar, because bleedbar makes its own.
+    .content_main:after {
+        content: none;
+    }
+
+    .respond-to-min( @bp-med-min, {
+        // Prevent pseudo element background from creating horizontal scrollbar.
+        overflow: hidden;
+
+        .content_main {
+            padding-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
+            padding-right: 0;
+            padding-bottom: unit( ( @grid_gutter-width / 2) / @base-font-size-px, em );
+            padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+            margin-left: 0;
+            position: relative;
+            z-index: 1;
+
+            // Remove background color from actual sidebar.
+            // It will now be provided by pseudoelement :after sidebar parent.
+            background: transparent;
+        }
+
+        .content_wrapper {
+            position: relative;
+
+            &:before {
+                // Create faux sidebar background.
+                content: '';
+                display: block;
+                width: 9999px;
+                border-right: 1px solid @content_sidebar-border;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: 0;
+                // The three in the below calculation is a magic number.
+                // Not entirely sure what to do about it right now.
+                margin-left: ( @grid_gutter-width / 3 );
+                background: @content_sidebar-bg;
+            }
+        }
+
+        &.content__1-2 .content_wrapper:before {
+            right: 66.666666667%;
+        }
+
+        &.content__1-3 .content_wrapper:before {
+            right: 75%;
+        }
+
+    });
+}
+
+.content__bleedbar-expandable {
+
+    .content__bleedbar-left;
+
+    // Add custom border with smaller gutter between sidebar and main content for secondary nav
+    .respond-to-min(@bp-med-min, {
+        
+        .content_sidebar {
+            border-right-color: @content_sidebar-bg;
+        }
+
+        .content_main {
+            border-left-color: @content_sidebar-bg;
+        }
+
+        &.content__1-3 .content_wrapper:before {
+            margin-right: -22px; // magic numbers are fun
+            border-right: 1px solid @content_sidebar-bg;
+        }
+
+    });
+        
 }

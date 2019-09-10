@@ -17,6 +17,9 @@ description: >-
   * <https://cfpb.github.io/capital-framework/components/cf-grid/>
 
 
+  <br />
+
+
   **Warning:** _This document is written for people who might want to create a
   grid system using our Less mixins, and does not itself document how we have
   used our own mixins to create a grid system. Nor does it document how to use

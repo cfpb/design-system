@@ -9,7 +9,7 @@ description: >-
   developers to help us create visually consistent web products as easily as
   possible. The Design System provides design specifications, code snippets,
   usage guidelines, and where possible, accessibility and research
-  guidelines.</p class="lead-paragraph">
+  guidelines.</p>
 
 
   ## Component and page status
@@ -28,5 +28,6 @@ description: >-
   we'd like and where conflicts in the current documentation exist. See how to
   get started [updating this
   documentation](https://cfpb.github.io/design-system/getting-started/updating-this-documentation).
+last_updated: 2019-09-10T18:25:28.993Z
 ---
 

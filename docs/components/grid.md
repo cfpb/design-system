@@ -3,7 +3,7 @@ title: Grid
 layout: variation
 section: components
 secondary_section: Core development
-status: Proposed
+status: Released
 description: >-
   The grid provides structure for website content. The flexible design adjusts
   for different devices.
@@ -17,10 +17,16 @@ description: >-
   * <https://cfpb.github.io/capital-framework/components/cf-grid/>
 
 
-  **Warning:** *This document is written for people who might want to create a
+  <br />
+
+
+  **Warning:** _This document is written for people who might want to create a
   grid system using our Less mixins, and does not itself document how we have
   used our own mixins to create a grid system. Nor does it document how to use
-  said grid system. This page probably needs a major re-write.*
+  said grid system. This page probably needs a major re-write._
+
+
+  ----
 
 
   The grid component is a suite of Less variable and mixins that enables you to
@@ -79,10 +85,14 @@ description: >-
 
 
   > NOTE: If you use `cf-grid.less` directly,
-    be sure to run the file through
-    [Autoprefixer](https://github.com/postcss/autoprefixer),
-    or your compiled Capital Framework CSS will
-    not work perfectly in older browsers.
+
+  >   be sure to run the file through
+
+  >   [Autoprefixer](https://github.com/postcss/autoprefixer),
+
+  >   or your compiled Capital Framework CSS will
+
+  >   not work perfectly in older browsers.
 variations:
   - variation_code_snippet: |-
       <div class="cols-12">
@@ -164,17 +174,17 @@ variations:
       sidebar behavior. Use other breakpoints as necessary.
 
 
-      * xs: 0-600px
+      * `xs`: 0-600px
 
-      * sm: 601-900px
+      * `sm`: 601-900px
 
-      * med: 901-1020px
+      * `med`: 901-1020px
 
-      * lg: 1021-1230px
+      * `lg`: 1021-1230px
 
-      * xl: 1231px and up
+      * `xl`: 1231px and up
     variation_name: 12 columns w/ 1200px max width
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+  - variation_code_snippet: ''
     variation_description: >-
       Component variables are used to theme a component.
 
@@ -433,7 +443,7 @@ variations:
               </div>
           </section>
       </div>
-    variation_description: TBA
+    variation_description: ''
     variation_name: Nesting
   - variation_code_snippet: |-
       <div>
@@ -501,22 +511,17 @@ variations:
               <div class="col col-1 prefix-11"><p>prefix 11, suffix 0</p></div>
           </section>
       </div>
-    variation_description: TBA
+    variation_description: ''
     variation_name: Prefixing/Suffixing
-usage: |-
-  <h3>Use cases</h3>
-
-  TBA
-
-  <h3>Content guidelines</h3>
-
-  TBA
-accessibility: TBA
-research: TBA
+usage: ''
+accessibility: ''
+research: ''
 related_items: >-
   -
   [cf-grid-generated.less](https://github.com/cfpb/capital-framework/blob/master/packages/cf-grid/src-generated/cf-grid-generated.less)
 help_us: |-
   This page needs help with its content!
   - [Contribute on Github](https://github.com/cfpb/design-system/issues/183)
+last_updated: 2019-09-10T15:02:08.752Z
 ---
+

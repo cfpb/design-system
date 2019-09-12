@@ -51,5 +51,48 @@ description: >-
 
 
   ## Updating navigation
+
+
+  ## Updating design tokens
+
+
+  CFPB's design tokens are stored in a spreadsheet located in the repository's
+  [`/docs/_data
+  folder`](https://github.com/cfpb/design-system/tree/master/docs/_data). You
+  can add new tokens and change existing ones by editing the file in your
+  favorite spreadsheet software.
+
+
+  ![Screenshot of design tokens
+  spreadsheet](/design-system/images/uploads/design-tokens-spreadsheet.png
+  "Screenshot of design tokens spreadsheet")
+
+
+  To add a spec to a component variation's specs tables, add the applicable
+  component variation to **column A**. Use the format
+  `<component-name>_<variation-name>`. For example, to add the `Button
+  background` spec in the above screenshot to the first variation on the
+  [buttons component
+  page](https://cfpb.github.io/design-system/components/buttons#variations), you
+  would add `buttons_primary-button` to the row's first cell.
+
+
+  **Column B** is the human-readable name of the specification and **column C**
+  is the machine-readable name of the specification (we use [Less
+  variables](https://github.com/cfpb/development/blob/master/standards/css.md#less)).
+  The value of the specification can be added to **column D**. This will often
+  be another Less variable.
+
+
+  **Columns E - M** are the specifications' values. Complete only the applicable
+  columns. For example, our headings (`h1`, `h2`, etc.) only have `Pixels` and
+  `Points` defined because they're the only things needed to size a heading
+  (pixels for websites and points for print documents). The `Second` and color
+  columns are blank because time and colors don't concern headings.
+
+
+  ![Screenshot of headings in design tokens
+  spreadsheet](/design-system/images/uploads/design-tokens-values.png
+  "Screenshot of headings in design tokens spreadsheet")
 ---
 

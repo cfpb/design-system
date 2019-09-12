@@ -140,7 +140,7 @@
                 {% comment %}
                     Create an arrary of all the design token columns
                 {% endcomment %}
-                {% assign column_names = "Design token name,Less variable name,Less value,Pixels,Ems,Points,Seconds" | split: "," %}
+                {% assign column_names = "Specification,Variable,Value,Pixels,Ems,Points,Seconds,Inches,Hex,RGB,CMYK,Pantone" | split: "," %}
 
                 {% comment %}
                     Initalize empty arrays to store the rows and columns
@@ -157,7 +157,7 @@
                         in the spreadsheet
                     {% endcomment %}
                     {% assign token_index = forloop.index %}
-                    {% assign token_variations = token["Components"] | remove: " " | split: "," %}
+                    {% assign token_variations = token["Website section"] | remove: " " | split: "," %}
 
                     {% comment %}
                         Create a slugified version of the current variation to
@@ -195,13 +195,18 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        {% if columns contains 'Design token name' %}<th>Attribute</th>{% endif %}
-                                        {% if columns contains 'Less variable name' %}<th>Variable</th>{% endif %}
-                                        {% if columns contains 'Less value' %}<th>Value</th>{% endif %}
+                                        {% if columns contains 'Specification' %}<th>Attribute</th>{% endif %}
+                                        {% if columns contains 'Variable' %}<th>Variable</th>{% endif %}
+                                        {% if columns contains 'Value' %}<th>Value</th>{% endif %}
                                         {% if columns contains 'Pixels' %}<th>Pixels</th>{% endif %}
                                         {% if columns contains 'Ems' %}<th>Ems</th>{% endif %}
                                         {% if columns contains 'Points' %}<th>Points</th>{% endif %}
                                         {% if columns contains 'Seconds' %}<th>Seconds</th>{% endif %}
+                                        {% if columns contains 'Inches' %}<th>Inches</th>{% endif %}
+                                        {% if columns contains 'Hex' %}<th>Hex</th>{% endif %}
+                                        {% if columns contains 'RGB' %}<th>RGB</th>{% endif %}
+                                        {% if columns contains 'CMYK' %}<th>CMYK</th>{% endif %}
+                                        {% if columns contains 'Pantone' %}<th>Pantone</th>{% endif %}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -211,13 +216,18 @@
                                     {% endcomment %}
                                     {% for spec in rows %}
                                     <tr>
-                                        {% if columns contains 'Design token name' %}<td data-label="Design token name">{{ tokens[spec]["Design token name"] }}</td>{% endif %}
-                                        {% if columns contains 'Less variable name' %}<td data-label="Less variable name">{{ tokens[spec]["Less variable name"] }}</td>{% endif %}
-                                        {% if columns contains 'Less value' %}<td data-label="Less value">{{ tokens[spec]["Less value"] }}</td>{% endif %}
+                                        {% if columns contains 'Specification' %}<td data-label="Specification">{{ tokens[spec]["Specification"] }}</td>{% endif %}
+                                        {% if columns contains 'Variable' %}<td data-label="Variable">{{ tokens[spec]["Variable"] }}</td>{% endif %}
+                                        {% if columns contains 'Value' %}<td data-label="Value">{{ tokens[spec]["Value"] }}</td>{% endif %}
                                         {% if columns contains 'Pixels' %}<td data-label="Pixels">{{ tokens[spec]["Pixels"] }}</td>{% endif %}
                                         {% if columns contains 'Ems' %}<td data-label="Ems">{{ tokens[spec]["Ems"] }}</td>{% endif %}
                                         {% if columns contains 'Points' %}<td data-label="Points">{{ tokens[spec]["Points"] }}</td>{% endif %}
                                         {% if columns contains 'Seconds' %}<td data-label="Seconds">{{ tokens[spec]["Seconds"] }}</td>{% endif %}
+                                        {% if columns contains 'Inches' %}<td data-label="Inches">{{ tokens[spec]["Inches"] }}</td>{% endif %}
+                                        {% if columns contains 'Hex' %}<td data-label="Hex">{{ tokens[spec]["Hex"] }}</td>{% endif %}
+                                        {% if columns contains 'RGB' %}<td data-label="RGB">{{ tokens[spec]["RGB"] }}</td>{% endif %}
+                                        {% if columns contains 'CMYK' %}<td data-label="CMYK">{{ tokens[spec]["CMYK"] }}</td>{% endif %}
+                                        {% if columns contains 'Pantone' %}<td data-label="Pantone">{{ tokens[spec]["Pantone"] }}</td>{% endif %}
                                     </tr>
                                     {% endfor %}
                                 </tbody>

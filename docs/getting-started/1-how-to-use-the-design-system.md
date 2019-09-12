@@ -47,10 +47,30 @@ description: >-
   merged.
 
 
-  ## Sizing images
+  ## Uploading images
+
+
+  When editing a page, click the `+` icon to add an image. Select an image from
+  the current library or upload a new image from your computer. Note: Due to a
+  bug in Netlify CMS, the image might not immediately appear in the preview
+  pane.
+
+
+  ![Screenshot of image upload in
+  CMS](/design-system/images/uploads/uploading-cms-images.png "Screenshot of
+  image upload in CMS")
 
 
   ## Updating navigation
+
+
+  Change a page’s location in the side navigation by changing the "Navigation
+  Section" field in the CMS.
+
+
+  ![Screenshot of navigation section in
+  CMS](/design-system/images/uploads/netlify-cms-navigation-section.png
+  "Screenshot of navigation section in CMS")
 
 
   ## Updating design tokens
@@ -94,5 +114,6 @@ description: >-
   ![Screenshot of headings in design tokens
   spreadsheet](/design-system/images/uploads/design-tokens-values.png
   "Screenshot of headings in design tokens spreadsheet")
+last_updated: 2019-09-12T20:41:36.822Z
 ---
 

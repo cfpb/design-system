@@ -134,9 +134,6 @@ usage: >-
   ![](/design-system/images/uploads/fullwidth_behavior2.png)
 
 
-  ****
-
-
   ### Inset
 
 
@@ -156,16 +153,11 @@ usage: >-
   ![](/design-system/images/uploads/behavior_inset_mobile.png)
 
 
-  ****
-
-
   ### Content guidelines
 
 
   Content guidelines will be dependent on the type of element that is inserted
   into the content area. See individual component guidelines for specifics.
-
-
 
 
   ### Style

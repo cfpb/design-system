@@ -38,9 +38,11 @@ description: >
 
   ```sh
 
-  TBA
+  yarn add cf-buttons cf-icons
 
   ```
+
+  or
 
   ```sh
 

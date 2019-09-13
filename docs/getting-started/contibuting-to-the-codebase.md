@@ -186,6 +186,14 @@ description: >+
     https://saucelabs.com/beta/dashboard/tests -
     http://developer.samsung.com/remotetestlab/rtlDeviceList.action#
 
+  ### Accessibility testing
+
+
+  We deeply value accessible web products and work to ensure that all of our
+  components comply with Section 508 rules for creating accessible software and
+  websites. We actively test components to ensure that they are keyboard and
+  screen reader friendly.
+
 
     ## Release management
 

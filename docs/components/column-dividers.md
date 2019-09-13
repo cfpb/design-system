@@ -1,5 +1,5 @@
 ---
-title: Column Dividers
+title: Column dividers
 layout: variation
 section: components
 secondary_section: Core development

@@ -67,7 +67,19 @@ variations:
       different widths, the borders will cause unwanted overlapping since they
       will span the height of the entire `.content-l` element.
     variation_name: Content layout column dividers
-  - variation_code_snippet: |-
+  - variation_code_snippet: ''
+    variation_description: >-
+      `cf-grid` columns use left and right `border` for fixed `margin` which
+      means it’s not possible to set visual left and right borders directly on
+      them. Instead we can use the `:before` pseudo element and position it
+      absolutely. The added benefit of doing it this way is that the `border`
+      spans the entire height of the next parent using `position: relative;`.
+      This means that the `border` will always match the height of the tallest
+      column in the row.
+
+
+      ```
+
       .my-column-1-2 {
 
           // Creates a column that spans 6 out of 12 columns.
@@ -84,14 +96,8 @@ variations:
           });
 
       }
-    variation_description: >-
-      `cf-grid` columns use left and right `border` for fixed `margin` which
-      means it’s not possible to set visual left and right borders directly on
-      them. Instead we can use the `:before` pseudo element and position it
-      absolutely. The added benefit of doing it this way is that the `border`
-      spans the entire height of the next parent using `position: relative;`.
-      This means that the `border` will always match the height of the tallest
-      column in the row.
+
+      ```
     variation_name: Column divider modifiers
 usage: >-
   <h3>Use cases</h3>

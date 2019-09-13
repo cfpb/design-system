@@ -65,13 +65,21 @@ description: >
   ```
 
 
+  > NOTE: Be sure to run the Less files through
+    [Autoprefixer](https://github.com/postcss/autoprefixer),
+    or your compiled CSS might not work perfectly in older browsers.
+
   ### Import JavaScript
 
+  ```js
+
+  import Expandable from '@cfpb/expandables/src/Expandable'';
+
+
+  Expandable.init( document.querySelector( '#container' ) );
+
   ```
 
-  TBA
-
-  ```
 
 
   ## Using the generator

@@ -9,7 +9,7 @@ description: >-
   our design standards. More information about these utilities can be found at:
 
 
-  https://cfpb.github.io/capital-framework/components/cf-core/#utilities
+  <https://cfpb.github.io/capital-framework/components/cf-core/#utilities>
 variations:
   - variation_code_snippet: |-
       <html class="no-js">
@@ -209,7 +209,7 @@ variations:
 
       Hides content on screens widths under 601px.
     variation_name: '"Hide on mobile" width-specific helper class'
-  - variation_code_snippet: '.u-align-with-btn(@font-size: @base-font-size-px);'
+  - variation_code_snippet: ''
     variation_description: >-
       Align an element vertically with the text within a button that may be to
       either side.
@@ -217,6 +217,9 @@ variations:
 
       _Pass `font-size` as the argument for calculating spacing, default value
       is `@base-font-size-px`._
+
+
+      `.u-align-with-btn(@font-size: @base-font-size-px);`
     variation_name: '"Align with button" mixin'
   - variation_code_snippet: |-
       <div class="u-flexible-container">

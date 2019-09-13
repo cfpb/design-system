@@ -3,7 +3,7 @@ title: Contact Information
 layout: variation
 section: components
 secondary_section: Layout options
-status: Proposed
+status: Released
 description: >-
   The contact information component is used to display phone, email, mailing
   address, and fax information for offices within the Bureau. This pattern may

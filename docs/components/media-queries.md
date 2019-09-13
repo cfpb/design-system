@@ -3,7 +3,7 @@ title: Media queries
 layout: variation
 section: components
 secondary_section: Core development
-status: Proposed
+status: Released
 description: >-
   Mixins for consistent media queries that take `px` values and convert them to
   ems.

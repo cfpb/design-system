@@ -3,7 +3,7 @@ title: Document detail pages
 layout: variation
 section: templates
 secondary_section: Web templates
-status: Proposed
+status: Released
 description: >-
   Document detail page types provide summary information about a document or
   related group of documents. These pages help users better understand the

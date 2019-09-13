@@ -3,7 +3,7 @@ title: Text Inputs
 layout: variation
 section: components
 secondary_section: Forms
-status: Proposed
+status: Released
 description: >-
   This page includes other components like form alerts and buttons. You can
   learn more about these on their respective pages.

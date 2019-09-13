@@ -3,7 +3,7 @@ title: Typography
 layout: variation
 section: foundation
 secondary_section: Brand guidelines
-status: Proposed
+status: Released
 description: >-
   A clear typographic hierarchy is critical to the effective communication of
   our brand. Type should be light and well-spaced to reinforce that we are

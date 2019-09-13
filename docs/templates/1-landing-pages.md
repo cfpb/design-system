@@ -3,7 +3,7 @@ title: Landing pages
 layout: variation
 section: templates
 secondary_section: Web templates
-status: Proposed
+status: Released
 description: >-
   Landing page types provide an overview of a main navigation section and helps
   users situate themselves within the site and the subject matter. Their main

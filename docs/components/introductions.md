@@ -3,7 +3,7 @@ title: Introductions
 layout: variation
 section: components
 secondary_section: Layout options
-status: Proposed
+status: Released
 description: >-
   Information about Introductions can be found at:
 

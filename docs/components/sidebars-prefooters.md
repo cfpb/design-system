@@ -3,7 +3,7 @@ title: Sidebars and Prefooters
 layout: variation
 section: components
 secondary_section: Layout options
-status: Proposed
+status: Released
 description: >-
   Sidebars are present across most page templates to house information related
   to the main content of the page. On pages with leftside sub-navigation,

@@ -3,7 +3,7 @@ title: Tables
 layout: variation
 section: components
 secondary_section: Layout options
-status: Proposed
+status: Released
 description: "Tables divide information into distinct columns and rows to create an intersection “cell” where data is displayed.\n\nMore information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/tables.html\t\n* https://cfpb.github.io/capital-framework/components/cf-tables/#responsive-tables\n* https://cfpb.github.io/capital-framework/components/cf-tables/#sortable-tables"
 variations:
   - variation_code_snippet: >-

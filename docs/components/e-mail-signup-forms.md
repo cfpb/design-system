@@ -3,7 +3,7 @@ title: E-mail Signup Forms
 layout: variation
 section: components
 secondary_section: Forms
-status: Proposed
+status: Released
 description: >-
   Email sign-ups are used to add individual email addresses to a specific
   mailing list that is relevant to the content on the page or the section it is

@@ -3,7 +3,7 @@ title: Dropdowns and multi-selects
 layout: variation
 section: components
 secondary_section: Forms
-status: Proposed
+status: Released
 description: "More information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#dropdowns\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#select-dropdown\n* https://cfpb.github.io/capital-framework/components/cf-forms/#basic-multiselect"
 variations:
   - variation_code_snippet: |-

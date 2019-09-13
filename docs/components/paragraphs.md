@@ -3,7 +3,7 @@ title: Paragraphs
 layout: variation
 section: components
 secondary_section: Text
-status: Proposed
+status: Released
 description: >-
   This page is under active development. Information is being moved into it from
   these pages:

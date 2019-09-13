@@ -3,7 +3,7 @@ title: Filterable List Control Panels
 layout: variation
 section: components
 secondary_section: Layout options
-status: Proposed
+status: Released
 description: >-
   The filter control panel allows users to whittle down number of items in a
   list to help them focus in on a specific piece of content they may be looking

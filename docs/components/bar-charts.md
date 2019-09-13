@@ -3,7 +3,7 @@ title: Bar Charts
 layout: variation
 section: components
 secondary_section: Data visualization
-status: Proposed
+status: Released
 description: >-
   Use bar or column charts to show comparisons of different discrete items,
   factors or categories. Comparisons could include items that can be counted and

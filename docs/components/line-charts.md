@@ -3,7 +3,7 @@ title: Line Charts
 layout: variation
 section: components
 secondary_section: Data visualization
-status: Proposed
+status: Released
 description: >-
   Use when you have one factor over time to show change. Start your axis at 0
   and label your axis to avoid confusion.

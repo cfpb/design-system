@@ -3,7 +3,7 @@ title: Column dividers
 layout: variation
 section: components
 secondary_section: Core development
-status: Proposed
+status: Released
 description: |-
   Information about Dividers can be found at:
 

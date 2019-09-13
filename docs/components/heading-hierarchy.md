@@ -3,7 +3,7 @@ title: Headings
 layout: variation
 section: components
 secondary_section: Text
-status: Proposed
+status: Released
 description: >-
   Hierarchy refers to the difference in type size and weight between text
   elements. A successful hierarchy establishes the order of importance of

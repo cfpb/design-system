@@ -3,7 +3,7 @@ title: Radio Buttons
 layout: variation
 section: components
 secondary_section: Forms
-status: Proposed
+status: Released
 description: >
   Use radio buttons when the user can choose only one option out of a list. Use
   these for a small number of discrete elements—avoid long lists of radio

@@ -3,7 +3,7 @@ title: Expandables
 layout: variation
 section: components
 secondary_section: Layout options
-status: Proposed
+status: Released
 description: >-
   Expandables are components that have additional content that can be opened
   (expanded) and closed (collapsed). They can appear on their own or in groups.

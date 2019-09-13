@@ -3,7 +3,7 @@ title: Code blocks
 layout: variation
 section: components
 secondary_section: Text
-status: Proposed
+status: Released
 description: ' '
 variations:
   - variation_code_snippet: >-

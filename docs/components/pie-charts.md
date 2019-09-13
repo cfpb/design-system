@@ -3,7 +3,7 @@ title: Pie Charts
 layout: variation
 section: components
 secondary_section: Data visualization
-status: Proposed
+status: Released
 description: >-
   Use when you have less than six things that add up to 100%. Use the middle of
   the doughnut to highlight the number or category type. You could also consider

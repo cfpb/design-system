@@ -3,7 +3,7 @@ title: Sublanding pages
 layout: variation
 section: templates
 secondary_section: Web templates
-status: Proposed
+status: Released
 description: >-
   This page is under active development. Information is being moved into it from
   this page:

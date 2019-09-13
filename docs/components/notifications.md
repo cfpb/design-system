@@ -3,7 +3,7 @@ title: Notifications
 layout: variation
 section: components
 secondary_section: Alerts
-status: Proposed
+status: Released
 description: >-
 
   This component provides notification boxes. Form alerts provide a light-touch

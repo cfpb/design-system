@@ -3,7 +3,7 @@ title: Blocks
 layout: variation
 section: components
 secondary_section: Core development
-status: Proposed
+status: Released
 description: >-
   `.block` is a base class with several modifiers that help you separate chunks
   of content via `margin`, `padding`, `border`, and `background`.

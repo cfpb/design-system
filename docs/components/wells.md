@@ -3,7 +3,7 @@ title: Wells
 layout: variation
 section: components
 secondary_section: Layout options
-status: Proposed
+status: Released
 description: >-
   Wells are used to highlight specific information within a designated section
   of a page. This breaks up the flow of content on the page and helps to

@@ -1,13 +1,22 @@
 ---
-title: Column dividers
+title: Column Dividers
 layout: variation
 section: components
 secondary_section: Core development
-status: Proposed
-description: |-
-  Information about Dividers can be found at:
+status: Released
+description: >+
+  Information about Dividers can be found at the following places:
 
-  https://cfpb.github.io/capital-framework/components/cf-layout/
+
+  -
+  <https://cfpb.github.io/capital-framework/components/cf-layout/#content-line>
+
+  -
+  <https://cfpb.github.io/capital-framework/components/cf-layout/#content-layout-column-dividers>
+
+  -
+  <https://cfpb.github.io/capital-framework/components/cf-layout/#column-divider-modifiers>
+
 variations:
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: The default state is the most default state of them all.
@@ -59,3 +68,4 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
+

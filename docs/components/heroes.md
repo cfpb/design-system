@@ -3,7 +3,7 @@ title: Heroes
 layout: variation
 section: components
 secondary_section: Layout options
-status: Proposed
+status: Released
 description: >-
   Heroes function as a primary focal point on a page, often used to introduce a
   collection of pages by combining a brief description of the goals of that

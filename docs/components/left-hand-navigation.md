@@ -3,7 +3,7 @@ title: Left Hand Navigation
 layout: variation
 section: components
 secondary_section: Navigation
-status: Proposed
+status: Released
 description: >-
   More information can be found at:
 

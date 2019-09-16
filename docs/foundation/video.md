@@ -3,7 +3,7 @@ title: Video
 layout: variation
 section: foundation
 secondary_section: Brand guidelines
-status: Proposed
+status: Released
 description: >-
   Video is a powerful tool that can be used to educate viewers about the
   financial marketplace and the CFPB’s role in regulating it.

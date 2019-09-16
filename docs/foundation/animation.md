@@ -3,7 +3,7 @@ title: Animation
 layout: variation
 section: foundation
 secondary_section: Brand guidelines
-status: Proposed
+status: Released
 description: >-
   Animation should be used to bring on-brand illustrations to life. Animation
   can also be used enhance the display of information, such as drawing the

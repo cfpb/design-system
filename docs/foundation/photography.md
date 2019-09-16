@@ -3,7 +3,7 @@ title: Photography
 layout: variation
 section: foundation
 secondary_section: Brand guidelines
-status: Proposed
+status: Released
 description: >-
   Photography is an important tool that helps us relate to consumers,
   communicate empathy, and build trust. CFPB images should preserve aesthetic

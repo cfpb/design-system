@@ -3,7 +3,7 @@ title: Learn pages
 layout: variation
 section: templates
 secondary_section: Web templates
-status: Proposed
+status: Released
 description: >-
   Learn page types provide focused, detailed information about a specific topic.
   These pages may contain lengthy text passages or interactive content that

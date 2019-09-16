@@ -3,7 +3,7 @@ title: Iconography
 layout: variation
 section: foundation
 secondary_section: Brand guidelines
-status: Proposed
+status: Released
 description: >-
   Icons visually reinforce an interface action, file type, status, or category.
 

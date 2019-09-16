@@ -3,7 +3,7 @@ title: Links
 layout: variation
 section: components
 secondary_section: Text
-status: Proposed
+status: Released
 description: "Links lead users to a different page or further information. In contrast, buttons are used to signal actions. Users should be able to identify links without relying on color or styling alone.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/links.html\t\n* https://cfpb.github.io/capital-framework/components/cf-core/#default-links\n* https://cfpb.github.io/capital-framework/components/cf-typography/#link-patterns\""
 variations:
   - variation_code_snippet: >-

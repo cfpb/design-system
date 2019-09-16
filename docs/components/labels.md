@@ -3,7 +3,7 @@ title: Labels and legends
 layout: variation
 section: components
 secondary_section: Text
-status: Proposed
+status: Released
 description: "The legend serves as the heading for a [fieldset](https://cfpb.github.io/design-system/components/fieldsets).\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/form-fields.html\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#labels"
 variations:
   - variation_code_snippet: |-

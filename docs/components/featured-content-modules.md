@@ -3,7 +3,7 @@ title: Featured Content Module
 layout: variation
 section: components
 secondary_section: Layout options
-status: Proposed
+status: Released
 description: >-
   Featured content modules (FCMs) highlight a specific piece of content at the
   top of a page. It’s meant to call attention to a related piece of content that

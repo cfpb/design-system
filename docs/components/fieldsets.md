@@ -3,7 +3,7 @@ title: Fieldsets
 layout: variation
 section: components
 secondary_section: Forms
-status: Proposed
+status: Released
 description: "The fieldset element is used to group several controls as well as labels within a web form. The fieldset includes:\n\n* Legend\n* Block helper text (if necessary)\n* Inline labels\n* Set of controls\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/form-fields.html\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#fieldsets\n\n*NOTE: The code doesn't match description in that the code doesn't include a legend, block helper text, or inline labels."
 variations:
   - variation_code_snippet: |-

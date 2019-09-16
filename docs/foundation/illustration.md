@@ -3,7 +3,7 @@ title: Illustration
 layout: variation
 section: foundation
 secondary_section: Brand guidelines
-status: Proposed
+status: Released
 description: >-
   Illustrations are an important tool for introducing the subject matter of a
   page, event, or topic. Illustrations are vector-based graphics that support

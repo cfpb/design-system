@@ -3,7 +3,7 @@ title: Filterable list pages
 layout: variation
 section: templates
 secondary_section: Web templates
-status: Proposed
+status: Released
 description: >-
   Filterable list page types are used to house searchable lists of articles,
   documents, or other resources and publications.

@@ -3,7 +3,7 @@ title: Browse pages
 layout: variation
 section: templates
 secondary_section: Web templates
-status: Proposed
+status: Released
 description: >-
   Browse page types provide specific topic or product overviews and information.
   Often these pages contain medium-length content, access to specific documents

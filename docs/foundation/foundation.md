@@ -2,7 +2,6 @@
 title: Foundation
 layout: variation
 section: foundation
-status: Released
 description: >-
   <p class="lead-paragraph">Foundation includes our design principles, best
   practices for user experience, and our visual identity standards. Together,

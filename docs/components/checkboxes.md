@@ -51,7 +51,9 @@ usage: >-
   <h3>Use cases</h3>
 
 
-  TBD.
+  \* Use checkboxes when the user can select more than one option from a list.
+  Use [radio buttons](/components/radio-buttons) when the user can choose only
+  one option out of a list.
 
 
   <h3>Content guidelines</h3>
@@ -60,7 +62,7 @@ usage: >-
   TBD
 
 
-  ****
+  - - -
 accessibility: >-
   To optimize screen reader accessibility, lay out checkboxes vertically rather
   than horizontally.
@@ -85,3 +87,4 @@ research: >-
   torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
   amet leo consequat posuere.
 ---
+

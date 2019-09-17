@@ -23,7 +23,7 @@ variations:
 
       - When the goal of the text is to quickly inform users about a set of
       options and/or drive them to child pages other sections of the site.
-      Consider using the half width link blob.
+      Consider using an [Info Unit Group](info-unit-groups-image-and-text).
        
       **WHERE TO USE**
 

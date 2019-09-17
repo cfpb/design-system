@@ -54,9 +54,6 @@ variations:
 
       - When an image is needed in the context of a passage of text
 
-      - On a blog or article page when more images are needed that the featured
-      image
-
 
       **WHEN SOMETHING ELSE IS BETTER**
 

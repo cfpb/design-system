@@ -16,9 +16,9 @@ description: >-
 
 
   *
-  https://cfpb.github.io/design-manual/page-components/form-fields.html#notifications
+  <https://cfpb.github.io/design-manual/page-components/form-fields.html#notifications>
 
-  * https://cfpb.github.io/capital-framework/components/cf-notifications/
+  * <https://cfpb.github.io/capital-framework/components/cf-notifications/>
 variations:
   - variation_code_snippet: |-
       <div class="m-notification

@@ -3,11 +3,6 @@
     <div class="component-header u-mb30">
         <h1 class="superheading">
             {{ page.title }}
-            {% if page.status %}
-            <div class="a-badge status-{{ page.status }}">
-                {{ page.status }}
-            </div>
-            {% endif %}
         </h1>
     {% if page.variations %}
 
@@ -28,6 +23,12 @@
             </a>
         </div>
 
+    {% endif %}
+
+    {% if page.status %}
+    <div class="a-badge status-{{ page.status }}">
+        {{ page.status }}
+    </div>
     {% endif %}
 
     </div>

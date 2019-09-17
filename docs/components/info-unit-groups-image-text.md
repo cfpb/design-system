@@ -19,14 +19,17 @@ description: >-
   at:
 
 
-  * https://cfpb.github.io/design-manual/page-components/25-75.html
-
-  * https://cfpb.github.io/design-manual/page-components/50-50.html
+  *
+  [https://cfpb.github.io/design-manual/page-components/25-75.html](https://cfpb.github.io/design-manual/page-components/25-75.html)
 
   *
-  https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts
+  [https://cfpb.github.io/design-manual/page-components/50-50.html](https://cfpb.github.io/design-manual/page-components/50-50.html)
 
-  * https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group
+  *
+  [https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
+
+  *
+  [https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group](https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group)
 variations:
   - variation_code_snippet: TBD
     variation_description: >-
@@ -113,13 +116,6 @@ variations:
       *
       [image-text-25-75-group.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/info-unit-group-2.html)
       in cfgov-refresh
-
-
-      ```
-
-      THIS IS SOME CODE
-
-      ```
     variation_name: 25/75 Image and text component
   - variation_code_snippet: TBD
     variation_description: >-

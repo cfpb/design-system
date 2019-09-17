@@ -4,7 +4,7 @@ layout: variation
 section: components
 secondary_section: Forms
 status: Released
-description: "Use checkboxes when the user can select more than one option from a list. Make clear with helper text that this is the case.\n\nMore information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#checkboxes\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes"
+description: "Use checkboxes when the user can select more than one option from a list. Make clear with helper text that this is the case.\n\nMore information can be found at:\n\n* <http://cfpb.github.io/design-manual/page-components/form-fields.html#checkboxes>\t\n* <https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes>"
 variations:
   - variation_code_snippet: |-
       <div class="m-form-field m-form-field__checkbox">
@@ -37,12 +37,6 @@ variations:
       Border: 1 px, Gray 60 (#919395)
 
       Minicon: 18 px, Black (#101820)
-  - variation_code_snippet: |-
-      <div class="m-form-field m-form-field__checkbox">
-          <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled>
-          <label class="a-label" for="test_checkbox_basic_disabled">Label</label>
-      </div>
-    variation_name: Disabled
 usage: >-
   Selecting the checkbox or touching the label text next to it should toggle the
   state of the checkbox on and off.

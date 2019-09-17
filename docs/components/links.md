@@ -18,7 +18,7 @@ description: >-
   * <https://cfpb.github.io/capital-framework/components/cf-core/#default-links>
 
   *
-  https://cfpb.github.io/capital-framework/components/cf-typography/#link-patterns
+  <https://cfpb.github.io/capital-framework/components/cf-typography/#link-patterns>
 variations:
   - variation_code_snippet: >-
       <p><a href="#">Inline links</a> should be Regular weight if inline with

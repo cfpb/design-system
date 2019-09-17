@@ -85,7 +85,7 @@ usage: >-
 
 
   - Around 70% of desktop visitors to
-  [cfpb.gov](https://www.consumerfinance.gov) have a screen height of 768 px or
+  [consumerfinance.gov](https://www.consumerfinance.gov) have a screen height of 768 px or
   more. At that screen height, 7 is the maximum number of links that users see
   before items below are cut off, assuming 5 links around 20 characters or less
   with spaces, and 2 links up to 35-40 characters with spaces. This also assumes

@@ -4,7 +4,7 @@ layout: variation
 section: components
 secondary_section: Layout options
 status: Released
-description: "The full width text component is the foundation of the main content area of many pages. Spanning the full main content area within a given template, it houses basic text content that follows [our typographic hierarchy](https://cfpb.github.io/design-system/foundation/typography) with the option to add pull quotes, media, inset information, and tables in-line.\n\nMore information about the Full Width Text component can be found at:\n\n<http://cfpb.github.io/design-manual/page-components/fullwidth-text.html>\t\n\nand\n\n<https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts>"
+description: "The full width text component is the foundation of the main content area of many pages. Spanning the full main content area within a given template, it houses basic text content that follows [our typographic hierarchy](https://cfpb.github.io/design-system/foundation/typography) with the option to add pull quotes, images, inset information, and tables in-line.\n\nMore information about the Full Width Text component can be found at:\n\n<http://cfpb.github.io/design-manual/page-components/fullwidth-text.html>\t\n\nand\n\n<https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts>"
 variations:
   - variation_code_snippet: ''
     variation_description: >-
@@ -57,11 +57,8 @@ variations:
 
       **WHEN SOMETHING ELSE IS BETTER**
 
-      - When a single video is being featured on a page. Consider the [featured
-      content
-      module](https://cfpb.github.io/design-system/components/featured-content-module).
-
-      - When multiple columns or a grid of images are needed
+      - When multiple columns or a grid of images are needed. Consider the [Info
+      Unit Group](info-unit-group-image-and-text) module.
 
 
       **WHERE TO USE**
@@ -80,7 +77,7 @@ variations:
 
       - [Document detail
       pages](https://cfpb.github.io/design-system/templates/document-detail-pages)
-    variation_name: Media
+    variation_name: Image
   - variation_description: >-
       ![](/design-system/images/uploads/content_inset_example.jpg)
 
@@ -111,10 +108,10 @@ variations:
       pages](https://cfpb.github.io/design-system/templates/document-detail-pages)
     variation_name: Inset content
 usage: >-
-  ### Content and media
+  ### Content and image
 
 
-  Content and media elements that are full width at desktop size remain full
+  Content and image elements that are full width at desktop size remain full
   width across all breakpoints. Heading, link, and buttons all follow responsive
   patterns.
 
@@ -160,13 +157,13 @@ usage: >-
   ### Style
 
 
-  #### Content and media
+  #### Content and image
 
 
   ![](/design-system/images/uploads/style_contentmedia.png)
 
 
-  * Quote or media container padding: 30 px top and bottom. Side padding is
+  * Quote or image container padding: 30 px top and bottom. Side padding is
   removed so element is flush left and right.
 
   * Insets follow this format below 601px breakpoint
@@ -197,5 +194,6 @@ related_items: |-
   - [Illustration](https://cfpb.github.io/design-system/foundation/illustration)
   - [Photography](https://cfpb.github.io/design-system/foundation/photography)
   - [Video](https://cfpb.github.io/design-system/foundation/video)
+last_updated: 2019-09-17T14:47:14.382Z
 ---
 

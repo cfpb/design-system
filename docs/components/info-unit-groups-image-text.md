@@ -113,6 +113,13 @@ variations:
       *
       [image-text-25-75-group.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/info-unit-group-2.html)
       in cfgov-refresh
+
+
+      ```
+
+      THIS IS SOME CODE
+
+      ```
     variation_name: 25/75 Image and text component
   - variation_code_snippet: TBD
     variation_description: >-

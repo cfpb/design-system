@@ -198,10 +198,11 @@ variations:
       * At breakpoints below 601: Heading sizes H3 and above automatically drop
       down one level and the mobile link style is used for the call to action
       link(s).
-    variation_jinja_code_snippet: >-
+    variation_jinja_code_snippet: >+
       *
       [image-text-50-50-group.html](https://github.com/cfpb/cfgov-refresh/blob/469930ce0e3816a3decfbca60d4ce4578db7d589/cfgov/jinja2/v1/_includes/organisms/image-text-50-50-group.html)
       in cfgov-refresh
+
     variation_name: 50/50 image and text component
 usage: >
   **When to use**
@@ -242,4 +243,6 @@ help_us: >-
 
   *
   [cf-layout](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
+last_updated: 2019-09-17T14:27:23.333Z
 ---
+

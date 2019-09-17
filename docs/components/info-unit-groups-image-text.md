@@ -111,7 +111,7 @@ variations:
       * Headings: Any heading size may be used, recommend H2-6
     variation_jinja_code_snippet: >-
       *
-      [image-text-25-75-group.html](https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/image-text-25-75-group.html)
+      [image-text-25-75-group.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/info-unit-group-2.html)
       in cfgov-refresh
     variation_name: 25/75 Image and text component
   - variation_code_snippet: TBD
@@ -200,7 +200,7 @@ variations:
       link(s).
     variation_jinja_code_snippet: >+
       *
-      [image-text-50-50-group.html](https://github.com/cfpb/cfgov-refresh/blob/469930ce0e3816a3decfbca60d4ce4578db7d589/cfgov/jinja2/v1/_includes/organisms/image-text-50-50-group.html)
+      [image-text-50-50-group.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/info-unit-group-2.html)
       in cfgov-refresh
 
     variation_name: 50/50 image and text component

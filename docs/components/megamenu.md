@@ -76,7 +76,7 @@ usage: >-
   editorial guidelines.
 
 
-  ### General mega menu content guidelines
+  ### General megamenu content guidelines
 
   #### Maximum number of links
 
@@ -126,5 +126,6 @@ usage: >-
 restrictions: []
 accessibility: ''
 research: ''
+last_updated: 2019-09-17T14:36:40.318Z
 ---
 

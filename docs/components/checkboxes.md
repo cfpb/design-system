@@ -94,6 +94,9 @@ usage: >-
 
   * Label text should be concise
 
+  * Text spacing should inform spacing of checkboxes and checkbox should be
+  vertically centered with the first line of text in an option.
+
 
   - - -
 accessibility: >-

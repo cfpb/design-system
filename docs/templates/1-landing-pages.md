@@ -71,10 +71,12 @@ usage: >-
 
   ##### Area 1: Introduction
 
+
   * Choose between a hero or text introduction for this area.
 
 
   ##### Area 2: Main content
+
 
   * Must contain at least 1 component.
 
@@ -86,6 +88,7 @@ usage: >-
 
 
   ##### Area 3: Sidebar
+
 
   * Must contain at least 1 component.
 
@@ -99,14 +102,14 @@ usage: >-
   Below the 901 px breakpoint, the sidebar stacks below the main content area.
 
 
-  ##### Breakpoints 901+
+  ##### Breakpoints 901+ pixels
 
 
   ![Breakpoints
   901+](/design-system/images/uploads/landing_behavior_desktop_2x.jpg)
 
 
-  ##### Breakpoints 900 and less
+  ##### Breakpoints 900 pixels and less
 
 
   ![Breakpoints 900 and
@@ -120,3 +123,4 @@ related_items: |-
   * Related posts / Related links
   * Email signup
 ---
+

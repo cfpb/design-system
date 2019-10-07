@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Design System
+   Button Styling
+   ========================================================================== */
+
+//
+// Theme variables
+//
+
+// Color variables
+
+// .btn
+@btn-text:                      @white;
+@btn-bg:                        @pacific;
+@btn-bg-hover:                  @dark-pacific;
+@btn-bg-active:                 @navy;
+
+// .btn__secondary
+@btn__secondary-text:           @white;
+@btn__secondary-bg:             @gray;
+@btn__secondary-bg-hover:       @dark-gray;
+@btn__secondary-bg-active:      @black;
+
+// .btn__warning
+@btn__warning-text:             @white;
+@btn__warning-bg:               @red;
+@btn__warning-bg-hover:         @dark-red;
+@btn__warning-bg-active:        @dark-gray;
+
+// .btn__disabled
+@btn__disabled-text:            @gray;
+@btn__disabled-bg:              @gray-20;
+@btn__disabled-outline:         @gray-20;
+
+// Sizing variables
+
+// .btn
+@btn-font-size:                 @base-font-size-px;
+@btn-border-radius-size:        4px;
+@btn-v-padding:                 8px;
+@btn-h-padding:                 14px;
+@btn-v-padding-modifier-ie:     0.8;
+
+// .btn__super
+@btn__super-font-size:          18px;
+
+
+// Import external dependencies
+
+@import (less) '../../core/src/core.less';
+@import (less) '../../icons/src/icons.less';
+
+
+// Import atomic components of @cfpb/buttons
+
+@import (less) 'atoms/buttons.less';
+@import (less) 'atoms/button-links.less';
+@import (less) 'atoms/buttons-with-icons.less';
+@import (less) 'molecules/button-groups.less';

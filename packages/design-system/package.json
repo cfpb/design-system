@@ -1,0 +1,34 @@
+{
+  "name": "@cfpb/design-system",
+  "version": "1.0.0",
+  "description": "CFPB's UI framework",
+  "main": "src/design-system.js",
+  "less": "src/design-system.less",
+  "author": {
+    "name": "Consumer Financial Protection Bureau",
+    "email": "tech@cfpb.gov",
+    "url": "https://cfpb.github.io/design-system"
+  },
+  "license": "SEE LICENSE IN TERMS.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cfpb/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cfpb/design-system/issues"
+  },
+  "dependencies": {
+    "@cfpb/atomic-component": "^1.0.0",
+    "@cfpb/buttons": "^1.0.0",
+    "@cfpb/core": "^1.0.0",
+    "@cfpb/expandables": "^1.0.0",
+    "@cfpb/forms": "^1.0.0",
+    "@cfpb/grid": "^1.0.0",
+    "@cfpb/icons": "^1.0.0",
+    "@cfpb/layout": "^1.0.0",
+    "@cfpb/notifications": "^1.0.0",
+    "@cfpb/pagination": "^1.0.0",
+    "@cfpb/tables": "^1.0.0",
+    "@cfpb/typography": "^1.0.0"
+  }
+}

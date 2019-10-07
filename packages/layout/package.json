@@ -1,0 +1,14 @@
+{
+  "name": "@cfpb/layout",
+  "version": "1.0.0",
+  "description": "Design System layouts",
+  "less": "src/layout.less",
+  "style": "layout.css",
+  "dependencies": {
+    "@cfpb/core": "^1.0.0",
+    "@cfpb/grid": "^1.0.0"
+  },
+  "keywords": [
+    "layout"
+  ]
+}

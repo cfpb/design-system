@@ -1,0 +1,618 @@
+/* ==========================================================================
+   Design System
+   Layout Helpers
+   ========================================================================== */
+
+//
+// Theme variables
+//
+
+// Color variables
+
+// .block
+@block__bg:                     @gray-5;
+@block__border:                 @gray-40;
+@block__border-top:             @block__border;
+@block__border-right:           @block__border;
+@block__border-bottom:          @block__border;
+@block__border-left:            @block__border;
+
+// .content_main
+@content_main-border:           @block__border;
+
+// .content_sidebar
+@content_sidebar-bg:            @block__bg;
+@content_sidebar-border:        @block__border;
+
+// .content_line
+@content_line:                  @block__border;
+
+// .grid_column__top-divider
+@grid_column__top-divider:      @block__border;
+
+// .grid_column__top-divider
+@grid_column__left-divider:     @block__border;
+
+// Hero variables
+
+@hero-desktop-height:           285px;
+
+@hero-bg:                       @block__bg;
+@hero-knockout-bg:              @gray;
+@hero-knockout-text:            @white;
+
+// Featured Content Module variables
+
+@fcm-visual-width:              270px;
+@fcm-min-height:                220px;
+
+@fcm-bg:                        @block__bg;
+@fcm-border:                    @block__border;
+
+// Well variables
+
+@well-bg:                       @block__bg;
+@well-border:                   @block__border;
+// 8 columns plus gutters
+@well-max:                      ( ( @grid_wrapper-width - @grid_gutter-width ) / @grid_total-columns * 8 ) - @grid_gutter-width;
+
+//
+// Import external dependencies
+//
+
+@import (less) '../../core/src/core.less';
+@import (less) '../../grid/src/grid.less';
+
+//
+// Content layouts
+//
+
+.content-l {
+    // Used to position __divider modifiers
+    position: relative;
+
+    .respond-to-min( @bp-sm-min, {
+        .grid_nested-col-group();
+    } );
+
+    &__full {
+        .respond-to-range( @bp-sm-min, 767px, {
+            .stack-col-thirds();
+            .stack-col-eighths();
+            .stack-col-quarters();
+        } );
+    }
+
+    &__main {
+        .respond-to-range( @bp-med-min, @bp-med-max, {
+            .stack-col( content-l_col-1-2 );
+        } );
+
+        .respond-to-range( @bp-sm-min, @bp-sm-max, {
+            .stack-col-thirds();
+            .stack-col-eighths();
+            .stack-col-quarters();
+        } );
+    }
+
+    &__sidebar {
+        .stack-col-thirds();
+        .stack-col-eighths();
+        .stack-col-quarters();
+
+        .respond-to-min( @bp-med-min, {
+            .stack-col( content-l_col-1-2 );
+        } );
+    }
+
+    &__large-gutters {
+        .respond-to-min( @bp-sm-min, {
+            margin-left: -@grid_gutter-width;
+            margin-right: -@grid_gutter-width;
+
+            > .content-l_col {
+                border-left-width: @grid_gutter-width;
+                border-right-width: @grid_gutter-width;
+            }
+        } );
+    }
+}
+
+.content-l_col {
+    .respond-to-max( @bp-xs-max, {
+        & + & {
+            margin-top: unit( @grid_gutter-width / @base-font-size-px, em );
+        }
+    } );
+}
+
+.respond-to-min( @bp-sm-min, {
+    .content-l_col-1 {
+        .grid_column( 12 );
+    }
+
+    .content-l_col-1-2 {
+        .grid_column( 6 );
+    }
+
+    .content-l_col-1-3 {
+        .grid_column( 4 );
+    }
+
+    .content-l_col-2-3 {
+        .grid_column( 8 );
+    }
+
+    .content-l_col-3-8 {
+        .grid_column( 3, 8 );
+    }
+
+    .content-l_col-5-8 {
+        .grid_column( 5, 8 );
+    }
+
+    .content-l_col-1-4 {
+        .grid_column( 3 );
+    }
+
+    .content-l_col-3-4 {
+        .grid_column( 9 );
+    }
+} );
+
+//
+// Content layout column dividers
+//
+
+.content-l_col__before-divider.content-l_col-1-2 {
+    .respond-to-max( @bp-xs-max, {
+        .grid_column__top-divider();
+    } );
+
+    .respond-to-min( @bp-sm-min, {
+        .grid_column__left-divider();
+    } );
+}
+
+.content-l_col__before-divider.content-l_col-1-3 {
+    .respond-to-max( @bp-xs-max, {
+        .grid_column__top-divider();
+    } );
+
+    .respond-to-min( @bp-sm-min, {
+        .grid_column__left-divider();
+    } );
+}
+
+
+.stack-col( @col ) {
+    .content-l_col.@{col} {
+        display: block;
+        width: 100%;
+
+        &.content-l_col__before-divider {
+            .grid_column__top-divider();
+        }
+    }
+
+    &.content-l__large-gutters {
+        .content-l_col.@{col}.content-l_col__before-divider {
+            border-left-width: @grid_gutter-width;
+        }
+    }
+
+    .content-l_col + .@{col} {
+        margin-top: unit( @grid_gutter-width / @base-font-size-px, em );
+    }
+}
+
+.stack-col-thirds() {
+    .stack-col( content-l_col-1-3 );
+    .stack-col( content-l_col-2-3 );
+}
+
+.stack-col-eighths() {
+    .stack-col( content-l_col-3-8 );
+    .stack-col( content-l_col-5-8 );
+}
+
+.stack-col-quarters() {
+    .stack-col( content-l_col-1-4 );
+    .stack-col( content-l_col-3-4 );
+}
+
+//
+// Content line
+//
+
+.content_line {
+    height: 1px;
+    background: @content_line;
+}
+
+//
+// Main content and sidebar
+//
+
+.content_wrapper {
+    &:extend( .wrapper all );
+}
+
+.content_main,
+.content_intro {
+    dd,
+    dt,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    p,
+    label {
+        max-width: 41.875rem;
+    }
+}
+
+.content_intro,
+.content_main,
+.content_sidebar {
+    padding:
+        unit( @grid_gutter-width / @base-font-size-px, em )
+        unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
+
+    .respond-to-min( @bp-sm-min, {
+        .grid_column( 12 );
+
+        padding:
+        unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em )
+        unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
+    } );
+
+    .respond-to-min( @bp-med-min, {
+        padding:
+        unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em )
+        0;
+    } );
+}
+
+.respond-to-min( @bp-med-min, {
+    .content_intro {
+        .grid_column( 12 );
+    }
+} );
+
+// Set up standard multi-column content area layouts
+.respond-to-min( @bp-med-min, {
+    .content {
+        &__1-3 {
+            .content_sidebar {
+                .grid_column( 3 );
+
+                padding-right: unit( @grid_gutter-width / @base-font-size-px, em );
+            }
+
+            .content_main {
+                .grid_column( 9 );
+                position: relative;
+
+                &:after {
+                    content: '';
+                    border-left: 1px solid @content_main-border;
+                    position: absolute;
+                    top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
+                    bottom: 0;
+                    left: unit( -1 * @grid_gutter-width / @base-font-size-px, em );
+                }
+            }
+        }
+
+        &__2-1 {
+            .content_main {
+                .grid_column( 8 );
+
+                &:after {
+                    right: unit( -1 * @grid_gutter-width / @base-font-size-px, em );
+                }
+            }
+
+            .content_sidebar {
+                .grid_column( 4 );
+
+                padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+            }
+        }
+    }
+}); // END min-width 801 block
+
+.respond-to-min( @bp-lg-min, {
+    .content__2-1 .content_main__narrow {
+        .grid_column( 7, @grid_total-columns, 0, 1 );
+    }
+} );
+
+.content__flush-bottom {
+    padding-bottom: 0;
+}
+
+.content__flush-top-on-small {
+    .respond-to-max( @bp-sm-max, {
+        padding-top: 0;
+    } );
+}
+
+.content__flush-all-on-small {
+    .respond-to-max( @bp-sm-max, {
+        padding: 0;
+        border: none;
+    } );
+}
+
+//
+// Block
+//
+
+.block {
+    margin-top: unit( ( @grid_gutter-width * 2 ) / @base-font-size-px, em );
+    margin-bottom: unit( ( @grid_gutter-width * 2 ) / @base-font-size-px, em );
+
+    &__border-top {
+        border-top: 1px solid @block__border-top;
+    }
+
+    &__border-right {
+        border-right: 1px solid @block__border-right;
+    }
+
+    &__border-bottom {
+        border-bottom: 1px solid @block__border-bottom;
+    }
+
+    &__border-left {
+        border-left: 1px solid @block__border-left;
+    }
+
+    &__border {
+        border: 1px solid @block__border;
+    }
+
+    &__flush-top {
+        margin-top: 0 !important;
+
+        &.block__border,
+        &.block__border-top {
+            border-top: none;
+        }
+    }
+
+    &__flush-bottom {
+        margin-bottom: 0 !important;
+
+        &.block__border,
+        &.block__border-bottom {
+            border-bottom: none;
+        }
+    }
+
+    &__flush-sides {
+        margin-right: -( @grid_gutter-width / 2 );
+        margin-left: -( @grid_gutter-width / 2 );
+
+        .respond-to-max( @bp-xs-max, {
+            &.block__border,
+            &.block__border-right,
+            &.block__border-left {
+                border-right: none;
+                border-left: none;
+            }
+        } );
+
+        .respond-to-min( @bp-sm-min, {
+            margin-right: -@grid_gutter-width;
+            margin-left: -@grid_gutter-width;
+        } );
+    }
+
+    &__flush {
+        margin-top: 0 !important;
+        margin-right: -( @grid_gutter-width / 2 );
+        margin-bottom: 0 !important;
+        margin-left: -( @grid_gutter-width / 2 );
+
+        &.block__border,
+        &.block__border-top,
+        &.block__border-bottom {
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .respond-to-max( @bp-xs-max, {
+            &.block__border,
+            &.block__border-right,
+            &.block__border-left {
+                border-right: none;
+                border-left: none;
+            }
+        } );
+
+        .respond-to-min( @bp-sm-min, {
+            margin-right: -@grid_gutter-width;
+            margin-left: -@grid_gutter-width;
+        } );
+    }
+
+    &__bg {
+        padding:
+            unit( @grid_gutter-width / @base-font-size-px, em )
+            unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
+        padding-bottom: unit( ( @grid_gutter-width * 2 ) / @base-font-size-px, em );
+        background: @block__bg;
+
+        .respond-to-min( @bp-sm-min, {
+            padding: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em )
+            unit( @grid_gutter-width / @base-font-size-px, em );
+        } );
+    }
+
+    &__padded-top {
+        padding-top: unit( @grid_gutter-width / @base-font-size-px, em );
+        margin-top: unit( @grid_gutter-width / @base-font-size-px, em );
+    }
+
+    &__padded-bottom {
+        padding-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+        margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+    }
+
+    &__sub {
+        margin-top: unit( @grid_gutter-width / @base-font-size-px, em );
+        margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+    }
+
+    // Overrides for when .block is also a column
+    .content-l_col&,
+    .content-l_col&__sub {
+        .respond-to-min( @bp-sm-min, {
+            margin-top: 0;
+        } );
+    }
+}
+
+//
+// Bleedbar sidebar styling
+//
+
+.content__bleedbar {
+    // Overrides the border between main and sidebar, because bleedbar makes its own.
+    .content_main:after {
+        content: none;
+    }
+
+    .content_sidebar {
+        padding:
+            unit( @grid_gutter-width / @base-font-size-px, em )
+            unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
+        background: @content_sidebar-bg;
+    }
+
+    .respond-to-min( @bp-med-min, {
+        // Prevent pseudo element background from creating horizontal scrollbar.
+        overflow: hidden;
+
+        .content_sidebar {
+            padding-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
+            padding-right: 0;
+            padding-bottom: unit( ( @grid_gutter-width / 2) / @base-font-size-px, em );
+            padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+            margin-left: 0;
+            position: relative;
+            z-index: 1;
+
+            // Remove background color from actual sidebar.
+            // It will now be provided by pseudoelement :after sidebar parent.
+            background: transparent;
+        }
+
+        .content_wrapper {
+            position: relative;
+
+            &:after {
+                // Create faux sidebar background.
+                content: '';
+                display: block;
+                width: 9999px;
+                border-left: 1px solid @content_sidebar-border;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: 0;
+                // The three in the below calculation is a magic number.
+                // Not entirely sure what to do about it right now.
+                margin-left: ( @grid_gutter-width / 3 );
+                background: @content_sidebar-bg;
+            }
+        }
+
+        &.content__2-1 .content_wrapper:after {
+            left: 66.666666667%;
+        }
+
+        &.content__3-1 .content_wrapper:after {
+            left: 75%;
+        }
+    });
+}
+
+//
+// grid helpers
+//
+
+.wrapper {
+    .respond-to-min( @bp-med-min, {
+        .grid_wrapper();
+    } );
+
+    &__match-content {
+        padding-left: @grid_gutter-width / 2;
+        padding-right: @grid_gutter-width / 2;
+
+        .respond-to-min( @bp-sm-min, {
+            padding-left: @grid_gutter-width;
+            padding-right: @grid_gutter-width;
+            max-width: @grid_wrapper-width - @grid_gutter-width;
+        } );
+    }
+}
+
+.lt-ie9 {
+    & .wrapper {
+        max-width: 960px;
+    }
+
+    & body {
+        min-width: 800px;
+    }
+}
+
+.grid_column__top-divider {
+    margin-top: unit( ( @grid_gutter-width * 2 ) / @base-font-size-px, em );
+    border-left-width: @grid_gutter-width / 2;
+
+    &:before {
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+        margin-left: auto !important;
+        position: static;
+        background-color: @grid_column__top-divider;
+        content: '';
+    }
+}
+
+.grid_column__left-divider {
+    border-left-width: @grid_gutter-width;
+
+    &:before {
+        display: block;
+        width: 1px;
+        margin-left: -@grid_gutter-width;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: @grid_column__left-divider;
+        content: '';
+    }
+}
+
+//
+// Import Molecules
+//
+
+@import (less) 'molecules/heroes.less';
+
+//
+// Import Organisms
+//
+
+@import (less) 'organisms/featured-content-module.less';
+@import (less) 'organisms/wells.less';

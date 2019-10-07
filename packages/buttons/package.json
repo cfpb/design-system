@@ -1,0 +1,14 @@
+{
+  "name": "@cfpb/buttons",
+  "version": "1.0.0",
+  "description": "Design System buttons",
+  "less": "src/buttons.less",
+  "style": "buttons.css",
+  "dependencies": {
+    "@cfpb/core": "^1.0.0",
+    "@cfpb/icons": "^1.0.0"
+  },
+  "keywords": [
+    "buttons"
+  ]
+}

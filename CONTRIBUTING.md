@@ -37,7 +37,7 @@ here's what you'd do:
 1. `yarn` to install dependencies and set up [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
 1. `git checkout -b button-fix` to create a new branch for your changes.
 1. Edit file(s) in `/packages/buttons/` however you want.
-1. `yarn run cf-link` to [link](https://yarnpkg.com/lang/en/docs/cli/link/) your local CF components.
+1. `yarn run design-system-link` to [link](https://yarnpkg.com/lang/en/docs/cli/link/) your local CF components.
 1. `cd ~/wherever/cfgov-refresh/` to navigate to another project where you'd like to test your buttons changes (in this case, cfgov-refresh).
 1. `yarn link @cfpb/buttons` to link @cfpb/buttons to cfgov-refresh.
 1. `gulp build` in cfgov-refresh to compile your stylesheets.

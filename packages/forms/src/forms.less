@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Design System
+   Form Element Styling
+   ========================================================================== */
+//
+// Theme variables
+//
+
+// Color variables
+
+// .a-text-input borders
+@input-border:                            @gray-60;
+@input-border__hover:                     @pacific;
+@input-border__focused:                   @pacific;
+@input-border__error:                     @red;
+@input-border__warning:                   @gold;
+@input-border__success:                   @green;
+
+// .a-text-input backgrounds
+@input-bg:                                @white;
+@input-bg__selected:                      @pacific;
+@input-bg__disabled:                      @gray-10;
+@input-bg__disabled-selected:             @gray-40;
+
+// .a-text-input text
+@input-text:                              @black;
+@input-text__disabled:                    @gray;
+@input-text__placeholder:                 @gray;
+
+// .a-text-input icons
+@input-icon:                              @gray;
+@input-icon__success:                     @green;
+@input-icon__warning:                     @gold;
+@input-icon__error:                       @red;
+
+// .a-select
+@select-border:                           @input-border;
+@select-icon-bg:                          @gray-10;
+@select-text__disabled:                   @input-text__disabled;
+
+// .m-form-field
+@form-field-input-border:                 @input-border;
+@form-field-input-border__disabled:       @gray-60;
+@form-field-inset:                        @white;
+
+// .m-form-field__lg-target
+@form-field-input-lg-target-bg:           @gray-10;
+@form-field-input-lg-target-bg__selected: @pacific-20;
+@form-field-input-lg-target-bg__disabled: @gray-20;
+@form-field-input-lg-target-border:       @pacific;
+
+// .a-label_helper
+@label-helper:                            @gray;
+
+// Sizing variables
+
+// .a-select
+@select-height:                           35px;
+
+
+//
+// Import external dependencies
+//
+
+@import (less) '../../grid/src/grid.less';
+@import (less) '../../core/src/core.less';
+@import (less) '../../buttons/src/buttons.less';
+@import (less) '../../icons/src/icons.less';
+
+
+//
+// Import atoms
+//
+
+@import (less) 'atoms/form-alert.less';
+@import (less) 'atoms/label.less';
+@import (less) 'atoms/legend.less';
+@import (less) 'atoms/multiselect.less';
+@import (less) 'atoms/select.less';
+@import (less) 'atoms/text-input.less';
+
+
+//
+// Import molecules
+//
+
+@import (less) 'molecules/btn-inside-input.less';
+@import (less) 'molecules/form-fields.less';
+
+//
+// Import organisms
+//
+
+@import (less) 'organisms/form.less';

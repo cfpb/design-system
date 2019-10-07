@@ -1,0 +1,16 @@
+{
+  "name": "@cfpb/forms",
+  "version": "1.0.0",
+  "description": "Design System form fields",
+  "less": "src/forms.less",
+  "style": "forms.css",
+  "dependencies": {
+    "@cfpb/buttons": "^1.0.0",
+    "@cfpb/core": "^1.0.0",
+    "@cfpb/grid": "^1.0.0",
+    "@cfpb/icons": "^1.0.0"
+  },
+  "keywords": [
+    "forms"
+  ]
+}

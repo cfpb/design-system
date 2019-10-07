@@ -1,0 +1,14 @@
+{
+  "name": "@cfpb/grid",
+  "version": "1.0.0",
+  "description": "Design System grid",
+  "less": "src/grid.less",
+  "style": "grid.css",
+  "dependencies": {
+    "normalize-css": "^2.0.0",
+    "normalize-legacy-addon": "0.1.0"
+  },
+  "keywords": [
+    "grid"
+  ]
+}

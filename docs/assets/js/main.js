@@ -1,6 +1,6 @@
 import { Tabs } from 'govuk-frontend';
-import Expandable from 'cf-expandables/src/Expandable';
-import Table from 'cf-tables/src/Table';
+import Expandable from '@cfpb/expandables/src/Expandable';
+import Table from '@cfpb/tables/src/Table';
 
 Expandable.init();
 Table.init();

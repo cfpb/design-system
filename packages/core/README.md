@@ -1,4 +1,4 @@
-# @cfpb/core [![Build Status](https://img.shields.io/travis/cfpb/capital-framework.svg)](https://travis-ci.org/cfpb/capital-framework) [![npm](https://img.shields.io/npm/v/@cfpb/core.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/core)
+# @cfpb/core [![Build Status](https://img.shields.io/travis/cfpb/design-system.svg)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/@cfpb/core.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/core)
 
 Design System core styles
 
@@ -6,12 +6,10 @@ This component can be used by itself, but it was made for Design System,
 a front end framework developed at the
 [Consumer Financial Protection Bureau](https://consumerfinance.gov).
 
-- [View the @cfpb/core docs](https://cfpb.github.io/capital-framework/components/@cfpb/core)
-
 ## How to use this component
 
 Detailed instructions can be found at the Design System
-[documentation site](https://cfpb.github.io/capital-framework/).
+[documentation site](https://cfpb.github.io/design-system/).
 
 > NOTE: Be sure to run the Less files through
   [Autoprefixer](https://github.com/postcss/autoprefixer),
@@ -23,8 +21,8 @@ Detailed instructions can be found at the Design System
 
 We welcome your feedback and contributions.
 
-- [Find out about contributing](https://github.com/cfpb/capital-framework/blob/master/CONTRIBUTING.md)
-- [File a bug](https://github.com/cfpb/capital-framework/issues/new?labels=bug)
+- [Find out about contributing](https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md)
+- [File a bug](https://github.com/cfpb/design-system/issues/new?labels=bug)
 
 ---
 

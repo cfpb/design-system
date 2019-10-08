@@ -1,4 +1,4 @@
-# capital-framework [![Build Status](https://img.shields.io/travis/cfpb/design-system.svg)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/design-system.svg?style=flat-square)](https://www.npmjs.com/package/design-system)
+# CFPB's Design System [![Build Status](https://img.shields.io/travis/cfpb/design-system.svg)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/design-system.svg?style=flat-square)](https://www.npmjs.com/package/design-system)
 
 This UI library was developed at the
 [Consumer Financial Protection Bureau](https://consumerfinance.gov).

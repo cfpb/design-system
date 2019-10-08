@@ -1,5 +1,5 @@
 {
-  "name": "capital-framework",
+  "name": "cfpb-design-system",
   "private": "true",
   "workspaces": [
     "packages/*"
@@ -12,17 +12,16 @@
   },
   "license": "SEE LICENSE IN TERMS.md",
   "keywords": [
-    "capital-framework"
+    "design-system"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/cfpb/capital-framework.git"
+    "url": "git+ssh://git@github.com/cfpb/design-system.git"
   },
   "bugs": {
-    "url": "https://github.com/cfpb/capital-framework/issues"
+    "url": "https://github.com/cfpb/design-system/issues"
   },
   "scripts": {
-    "start": "yarn --cwd docs/ start",
     "build": "gulp build",
     "design-system-link": "lerna exec -- yarn link",
     "design-system-unlink": "lerna exec -- yarn unlink",

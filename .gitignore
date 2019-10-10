@@ -70,6 +70,11 @@ vendor/
 static/vendor/
 tmp/
 dist/
+.npmrc
+.changelog/
+yarn-error.log
+packages/**/*.css
+packages/**/*.min.js
 
 # Documentation #
 #################

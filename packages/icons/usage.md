@@ -34,7 +34,7 @@ The standard icon height in ems matches the 19px rendered canvas of text
 set in Avenir Next sized at 16px (19/16 = 1.1875).
 
 ```
-@@cfpb/icon-height: 1.1875em;
+@cf-icon-height: 1.1875em;
 ```
 
 ## SVG icon basics

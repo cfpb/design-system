@@ -11,12 +11,6 @@ a front end framework developed at the
 Detailed instructions can be found at the Design System
 [documentation site](https://cfpb.github.io/design-system/).
 
-> NOTE: Be sure to run the Less files through
-  [Autoprefixer](https://github.com/postcss/autoprefixer),
-  or your compiled Design System CSS will not work
-  perfectly in older browsers.
-
-
 ## Getting involved
 
 We welcome your feedback and contributions.

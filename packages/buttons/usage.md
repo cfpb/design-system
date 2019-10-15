@@ -37,7 +37,7 @@ where this component's less file is imported.
 
 ### Color variables
 
-Color variables referenced in comments are from [@cfpb/core @cfpb/brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/core/src/brand-colors.less).
+Color variables referenced in comments are from [@cfpb/core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/core/src/brand-colors.less).
 
 ```
 // .btn

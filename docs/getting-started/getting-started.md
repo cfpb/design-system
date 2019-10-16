@@ -8,16 +8,16 @@ description: >-
 
   Setting up the framework for your project and creating new components should
   be quick and easy. [Learn how to integrate CFPB Design System into your
-  project](https://cfpb.github.io/design-system/getting-started/contributing-to-the-code-base)
+  project](https://cfpb.github.io/design-system/getting-started/contributing-to-the-code-base).
 
 
   ## For designing wireframes or prototypes with the CFPB Design System
 
 
   [Browse our components](https://cfpb.github.io/design-system/components/) for
-  specs or [go to Foundations](https://cfpb.github.io/design-system/foundation/)
-  for more general information on using our logo, color palette, icons and
-  fonts.
+  specifications or [go to the Foundation
+  section](https://cfpb.github.io/design-system/foundation/) for more general
+  information on using our logo, color palette, icons and fonts.
 
 
   ## Help us make improvements

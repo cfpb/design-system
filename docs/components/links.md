@@ -4,7 +4,21 @@ layout: variation
 section: components
 secondary_section: Text
 status: Released
-description: "Links lead users to a different page or further information. In contrast, buttons are used to signal actions. Users should be able to identify links without relying on color or styling alone.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/links.html\t\n* https://cfpb.github.io/capital-framework/components/cf-core/#default-links\n* https://cfpb.github.io/capital-framework/components/cf-typography/#link-patterns\""
+description: >-
+  Links lead users to a different page or further information. In contrast,
+  buttons are used to signal actions. Users should be able to identify links
+  without relying on color or styling alone.
+
+
+  More information can be found at:
+
+
+  * <https://cfpb.github.io/design-manual/page-components/links.html>
+
+  * <https://cfpb.github.io/capital-framework/components/cf-core/#default-links>
+
+  *
+  <https://cfpb.github.io/capital-framework/components/cf-typography/#link-patterns>
 variations:
   - variation_code_snippet: >-
       <p><a href="#">Inline links</a> should be Regular weight if inline with
@@ -194,5 +208,6 @@ usage: >-
 restrictions: []
 accessibility: ''
 research: ''
+last_updated: 2019-09-17T14:52:22.684Z
 ---
 

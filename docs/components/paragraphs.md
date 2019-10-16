@@ -8,7 +8,8 @@ description: >-
   This page is under active development. Information is being moved into it from
   these pages:
 
-  * "http://cfpb.github.io/design-manual/brand-guidelines/typography.html
+
+  * http://cfpb.github.io/design-manual/brand-guidelines/typography.html
 
   * https://cfpb.github.io/capital-framework/components/cf-core/#base-typography
 variations:

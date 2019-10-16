@@ -22,7 +22,7 @@ Our design system has been created to work with a wide range of devices and brow
 As a work of the United States government, all code is open source and in the public domain. We encourage you to use this framework in your own projects and to contribute back.
 
 ## Help us make improvements
-Since the start of the CFPB, our design system has evolved, and will continue to evolve, as we learn what works best for the CFPB and the people we serve. Our design system is open for the public, which allows you to help us make improvements by [filing an issue](https://github.com/cfpb/design-manual/issues?milestone=&page=1&state=open) or [submitting a pull request](https://github.com/cfpb/design-manual/pulls) on GitHub. Not on GitHub? Email us your suggestions at [tech@consumerfinance.gov](tech@consumerfinance.gov).
+Since the start of the CFPB, our design system has evolved, and will continue to evolve, as we learn what works best for the CFPB and the people we serve. Our design system is open for the public, which allows you to help us make improvements by [filing an issue](https://github.com/cfpb/design-system/issues?milestone=&page=1&state=open) or [submitting a pull request](https://github.com/cfpb/design-system/pulls) on GitHub. Not on GitHub? Email us your suggestions at [tech@consumerfinance.gov](tech@consumerfinance.gov).
 
 All content has been released as open source under the CC0 1.0 Universal Public Domain Dedication, and we’d love for other agencies, developers, or groups to adapt it for their own use.
 

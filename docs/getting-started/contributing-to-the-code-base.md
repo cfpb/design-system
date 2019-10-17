@@ -22,13 +22,14 @@ description: >-
   </p>
 
 
-  There are 3 primary ways to help:
+  There are three primary steps toward contributing:
 
-  - [Using the issue tracker](#using-the-issue-tracker), and
+  - [Using the issue tracker](#using-the-issue-tracker) to find filed bugs or
+  file your own.
 
-  - [Changing the codebase](#changing-the-codebase)
+  - [Changing the codebase](#changing-the-codebase) to fix issues.
 
-  - [Release management](#release-management)
+  - [Release management](#release-management) to release the fixes.
 
 
 
@@ -278,9 +279,19 @@ description: >-
   following list of browsers:
 
 
-  - Chrome - Firefox - Safari - Internet Explorer 8, 9, 10, and 11 - Edge - iOS
+  - Chrome
 
-  Safari - Chrome for Android
+  - Firefox
+
+  - Safari
+
+  - Internet Explorer 8, 9, 10, and 11
+
+  - Edge
+
+  - iOS Safari
+
+  - Chrome for Android
 
 
 

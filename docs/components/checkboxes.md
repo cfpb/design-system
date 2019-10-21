@@ -4,7 +4,7 @@ layout: variation
 section: components
 secondary_section: Forms
 status: Released
-description: "Use checkboxes when the user can select more than one option from a list. Make clear with helper text that this is the case.\n\nMore information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#checkboxes\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes"
+description: "Use checkboxes when the user can select more than one option from a list. Make clear with helper text that this is the case.\n\nMore information can be found at:\n\n* <http://cfpb.github.io/design-manual/page-components/form-fields.html#checkboxes>\t\n* <https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes>"
 variations:
   - variation_code_snippet: |-
       <div class="m-form-field m-form-field__checkbox">
@@ -48,40 +48,61 @@ usage: >-
   label.
 
 
-  <h3>Use cases</h3>
+  #### Use cases
 
 
-  TBD.
+  * Use checkboxes when the user can select more than one option from a list. 
+
+  * Use [radio buttons](/design-system/components/radio-buttons) when the user
+  can choose only one option out of a list.
 
 
-  <h3>Content guidelines</h3>
+  ##### Nested checkboxes
 
 
-  TBD
+  There are times when checkboxes may be nested with parent/child relationships.
+  This is common when used within filter interactions.
 
 
-  ****
+  ##### Usability
+
+
+  In this case, the following behavior and design should be followed:
+
+  * Parent is “collapsed” and displays an expandable arrow at the end of the
+  text.
+
+  * The label of the parent checkbox should be clickable.
+
+  * Clicking on the label or arrow toggles the opening/closing of the child
+  options.
+
+  * In open state, arrow points up; in closed state, arrow points down.
+
+  * Child options are in black text and not clickable.
+
+  * Clicking on the parent checkbox selects the parent option and all child
+  options.
+
+  * Clicking on the parent checkbox does not change the state of the open/close
+  expansion (if it’s checked with the children expanded, it stays expanded, for
+  instance).
+
+
+  #### Content guidelines
+
+
+  * Label text should be concise
+
+  * Text spacing should inform spacing of checkboxes and checkbox should be
+  vertically centered with the first line of text in an option.
+
+
+  - - -
 accessibility: >-
   To optimize screen reader accessibility, lay out checkboxes vertically rather
   than horizontally.
-research: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
-  Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
-  rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna
-  non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut
-  dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut
-  blandit.
-
-
-  Odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
-  congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu
-  ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in
-  metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus
-  tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.
-
-
-  Vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac
-  egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora
-  torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
-  amet leo consequat posuere.
+research: ''
+last_updated: 2019-09-17T14:30:15.293Z
 ---
+

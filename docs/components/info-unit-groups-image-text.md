@@ -19,14 +19,17 @@ description: >-
   at:
 
 
-  * https://cfpb.github.io/design-manual/page-components/25-75.html
-
-  * https://cfpb.github.io/design-manual/page-components/50-50.html
+  *
+  [https://cfpb.github.io/design-manual/page-components/25-75.html](https://cfpb.github.io/design-manual/page-components/25-75.html)
 
   *
-  https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts
+  [https://cfpb.github.io/design-manual/page-components/50-50.html](https://cfpb.github.io/design-manual/page-components/50-50.html)
 
-  * https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group
+  *
+  [https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
+
+  *
+  [https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group](https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group)
 variations:
   - variation_code_snippet: TBD
     variation_description: >-
@@ -111,7 +114,7 @@ variations:
       * Headings: Any heading size may be used, recommend H2-6
     variation_jinja_code_snippet: >-
       *
-      [image-text-25-75-group.html](https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/image-text-25-75-group.html)
+      [info-unit-group-2.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/info-unit-group-2.html)
       in cfgov-refresh
     variation_name: 25/75 Image and text component
   - variation_code_snippet: TBD
@@ -198,10 +201,11 @@ variations:
       * At breakpoints below 601: Heading sizes H3 and above automatically drop
       down one level and the mobile link style is used for the call to action
       link(s).
-    variation_jinja_code_snippet: >-
+    variation_jinja_code_snippet: >+
       *
-      [image-text-50-50-group.html](https://github.com/cfpb/cfgov-refresh/blob/469930ce0e3816a3decfbca60d4ce4578db7d589/cfgov/jinja2/v1/_includes/organisms/image-text-50-50-group.html)
+      [info-unit-group-2.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/info-unit-group-2.html)
       in cfgov-refresh
+
     variation_name: 50/50 image and text component
 usage: >
   **When to use**
@@ -242,4 +246,6 @@ help_us: >-
 
   *
   [cf-layout](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
+last_updated: 2019-09-17T14:27:23.333Z
 ---
+

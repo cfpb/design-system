@@ -1,5 +1,5 @@
 module.exports = {
-  verbose: false,
+  verbose: true,
   transform: {
     '^.+\\.jsx?$': 'babel-jest'
   },

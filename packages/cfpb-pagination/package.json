@@ -1,0 +1,15 @@
+{
+  "name": "@cfpb/pagination",
+  "version": "1.0.0",
+  "description": "Design System pagination",
+  "less": "src/cfpb-pagination.less",
+  "style": "cfpb-pagination.css",
+  "dependencies": {
+    "@cfpb/buttons": "^1.0.0",
+    "@cfpb/core": "^1.0.0",
+    "@cfpb/icons": "^1.0.0"
+  },
+  "keywords": [
+    "pagination"
+  ]
+}

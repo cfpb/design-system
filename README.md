@@ -35,10 +35,10 @@ npm install @cfpb/design-system
 Import individual Less stylesheets or the entire design system into your project:
 
 ```less
-@import '@cfpb/buttons/src/buttons.less';
-@import '@cfpb/typography/src/typography.less';
+@import '@cfpb/buttons/src/cfpb-buttons.less';
+@import '@cfpb/typography/src/cfpb-typography.less';
 // or
-@import '@cfpb/design-system/src/design-system.less';
+@import '@cfpb/design-system/src/cfpb-design-system.less';
 
 // the rest of your stylesheet...
 ```
@@ -59,7 +59,7 @@ Expandable.init( document.querySelector( '#container' ) );
 ## Documentation
 
 The Design System's website is available at https://cfpb.github.io/design-system/.
-It lives in this repository's `docs/` directory and is powered by Netlify CMS and Jekyll.
+It lives in this repository's `docs/` directory and is powered by [Netlify CMS](https://www.netlifycms.org/) and [Jekyll](https://jekyllrb.com/).
 To edit any page of the website, click the edit button at the bottom right of
 the page.
 You'll need to be added as a contributor to this repository in order to

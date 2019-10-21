@@ -55,9 +55,9 @@ description: >
 
   ```css
 
-  @import (less) "node_modules/cf-buttons/src/cf-buttons.less";
+  @import (less) "node_modules/cf-buttons/src/cfpb-buttons.less";
 
-  @import (less) "node_modules/cf-icons/src/cf-icons.less";
+  @import (less) "node_modules/cf-icons/src/cfpb-icons.less";
 
 
   /* the rest of your stylesheet… */
@@ -236,9 +236,9 @@ description: >
 
   ```css
 
-  @import (less) "node_modules/cf-buttons/src/cf-buttons.less";
+  @import (less) "node_modules/cf-buttons/src/cfpb-buttons.less";
 
-  @import (less) "node_modules/cf-icons/src/cf-icons.less";
+  @import (less) "node_modules/cf-icons/src/cfpb-icons.less";
 
 
   /* the rest of your stylesheet… */

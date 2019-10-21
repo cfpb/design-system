@@ -71,7 +71,7 @@ function lintStyles() {
   return gulp.src( [
     'packages/**/*.less',
     '!packages/**/node_modules/**/*.less',
-    '!packages/grid/src-generated/*.less'
+    '!packages/cfpb-grid/src-generated/*.less'
   ] )
     .pipe( gulpStylelint( {
       failAfterError: true,

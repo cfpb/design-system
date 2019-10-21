@@ -1,0 +1,10 @@
+{
+  "name": "@cfpb/icons",
+  "version": "1.0.0",
+  "description": "Design System icons",
+  "less": "src/cfpb-icons.less",
+  "style": "cfpb-icons.css",
+  "keywords": [
+    "icons"
+  ]
+}

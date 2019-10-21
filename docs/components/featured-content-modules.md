@@ -118,15 +118,31 @@ variations:
 usage: >-
   #### Use cases
 
-    Use a featured content module (FCM) when you want to highlight something that’s:
 
-   * **Timely**: Highlights a new tool or development. Keep in mind: When you remove dated content from a FCM, make sure you're not getting rid of the only way users can navigate to it. Make sure to plan a permanent home for the content.
+  Use a featured content module (FCM) when you want to highlight something
+  that’s:
 
-   * **Impactful**: Lets people know immediately how the content will affect them, how they can use it, and how it might enhance their understanding of—or experience with—the primary page content.
 
-   * **Localized**: New content that specifically applies to people in a specific geographic area; it may be important for that audience to see their specific content first, and when it’s removed from the page it won’t disrupt the usual user flow.
+  * **Timely**: Highlights a new tool or development. Keep in mind: When you
+  remove dated content from a FCM, make sure you're not getting rid of the only
+  way users can navigate to it. Make sure to plan a permanent home for the
+  content.
 
-   * **Unique**: Content that is specifically in the Bureau’s “wheelhouse” because of our position as an approachable, trusted, unbiased authority.
+
+  * **Impactful**: Lets people know immediately how the content will affect
+  them, how they can use it, and how it might enhance their understanding of—or
+  experience with—the primary page content.
+
+
+  * **Localized**: New content that specifically applies to people in a specific
+  geographic area; it may be important for that audience to see their specific
+  content first, and when it’s removed from the page it won’t disrupt the usual
+  user flow.
+
+
+  * **Unique**: Content that is specifically in the Bureau’s “wheelhouse”
+  because of our position as an approachable, trusted, unbiased authority.
+
 
   Featured content modules should highlight a single piece of content. That
   content can be almost anything, from a webpage to a blog post to a PDF to a
@@ -161,25 +177,30 @@ usage: >-
 
   #### Content guidelines
 
+
   FCMs contain a headline, descriptive body copy text, an optional
   call-to-action link, and a graphical element related to the piece of content
   being featured. They are a “mini story” and never simply a dominant visual.
 
-  \* Headings should be as succinct as possible and 35 characters or less
+
+  * Headings should be as succinct as possible and 35 characters or less
   (including spaces).
 
-  \* Descriptions should be action-oriented and let the user know what they will
+
+  * Descriptions should be action-oriented and let the user know what they will
   get out of the featured content and how it's related to the main page content,
   not just what it is. Descriptions should be 160 characters or less (including
   spaces).
 
-  \* Links serve as a call-to-action, so they should begin with an action verb
+
+  * Links serve as a call-to-action, so they should begin with an action verb
   like “explore,” “read,” “learn,” or “discover.” When using an action verb, be
   specific and tie the action back to the content and what the user will get
   from it. As a best practice, only include up to one link in a FCM. Link text
   should be 35 characters or less (including spaces).
 
-  \* Do not include a link with a video FCM. In a FCM that features video, the
+
+  * Do not include a link with a video FCM. In a FCM that features video, the
   desired action is for the user to play the video, so the play button serves as
   a visual call-to-action. This makes it especially important for the
   description in the FCM to be action-oriented. Encourage users to take the

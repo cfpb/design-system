@@ -232,7 +232,18 @@ usage: >-
   between heading levels.
 
 
+  <h3> Content guidelines </h3>
+
+
+  * Headings should be sentence case.
+
+  * Do not include punctuation in headings.
+
+  * Keep headings to one line on desktop when possible.
+
+
   <h3>Behavior</h3>
+
 
   At screen widths of 600px and below, the Display heading and Headings 1-4 drop
   in size. Headings 5-6 remain consistent at all screen widths.
@@ -241,5 +252,6 @@ accessibility: >-
   `.u-visually-hidden` prior to the headings with icons to add more context for
   screen readers (see Meta Header).
 research: ''
+last_updated: 2019-10-21T21:54:52.744Z
 ---
 

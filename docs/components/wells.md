@@ -41,8 +41,38 @@ usage: >-
 
 
   #### Content guidelines
-    * Grey wells should be used to feature content or specific calls to action; text should be succinct.* Grey well will help visually set apart the content within it, so use it to draw attention to that content.* Grey wells should take up less than a third of a page.* Currently, single column content only.* Types of atoms you can place in a well include:  * Headings (H2 - H5)  * Text (including bullets and numbered lists)
-    * Links* Headings should be as succinct as possible and 35 characters or less (including spaces).
+
+
+  * Grey wells should be used to feature content or specific calls to action;
+  text should be succinct.
+
+
+  * A grey well will help visually set apart the content within it, so use it to
+  draw attention to that content.
+
+
+  * Grey wells should take up less than a third of a page.
+
+
+  * Currently, grey wells should contain single column content only.
+
+
+
+  Types of atoms you can place in a well include:  
+
+
+  * Headings (H2 - H5).
+
+
+  * Text (including bullets and numbered lists).
+
+
+  * Links.
+
+
+  * Headings should be as succinct as possible and 35 characters or less
+  (including spaces).
+
 
   #### Behavior
 

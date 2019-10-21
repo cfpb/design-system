@@ -1,2 +1,2 @@
 // The path to the source directory for these tests.
-module.exports = '../../../../../../packages/atomic-component/src/';
+module.exports = '../../../../../../packages/cfpb-atomic-component/src/';

@@ -1,4 +1,4 @@
-import { closest } from '../../../../../../packages/atomic-component/src/utilities/dom-closest';
+import { closest } from '../../../../../../packages/cfpb-atomic-component/src/utilities/dom-closest';
 
 let testBlockA;
 let testBlockB;

@@ -75,7 +75,7 @@ dist/
 yarn-error.log
 packages/**/*.css
 packages/**/*.min.js
-test/unit-test-coverage
+test/unit-test-coverage/
 
 # Documentation #
 #################

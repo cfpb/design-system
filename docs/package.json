@@ -31,7 +31,7 @@
     "start": "parallelshell \"bundle exec jekyll serve --watch --host=localhost\" \"yarn run watch\" \"yarn run watch-css\"",
     "compile-js": "NODE_ENV=production webpack",
     "compile-css": "lessc --include-path=../packages/:../node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/main.css",
-    "copy-icons": "cp -r ../packages/icons/src/icons assets/",
+    "copy-icons": "cp -r ../packages/cfpb-icons/src/icons assets/",
     "watch-css": "less-watch-compiler --less-args include-path=../packages/:../node_modules/normalize-css/normalize-css/ assets/css dist/css main.less",
     "watch": "webpack --watch",
     "build": "yarn run compile-js && yarn run compile-css && bundle exec jekyll build",

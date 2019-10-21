@@ -48,48 +48,48 @@ usage: >-
   label.
 
 
-  <h3>Use cases</h3>
+  #### Use cases
 
 
   * Use checkboxes when the user can select more than one option from a list. 
 
-  * Use [radio buttons](/components/radio-buttons) when the user can choose only
-  one option out of a list.
+  * Use [radio buttons](/design-system/components/radio-buttons) when the user
+  can choose only one option out of a list.
 
 
-  <h4>Nested checkboxes</h4>
+  ##### Nested checkboxes
 
 
   There are times when checkboxes may be nested with parent/child relationships.
   This is common when used within filter interactions.
 
 
-  <h5>Usability</h5>
+  ##### Usability
 
 
-  * In this case, the following behavior and design should be followed:
+  In this case, the following behavior and design should be followed:
 
   * Parent is “collapsed” and displays an expandable arrow at the end of the
-  text
+  text.
 
-  * The label of the parent checkbox should be clickable
+  * The label of the parent checkbox should be clickable.
 
   * Clicking on the label or arrow toggles the opening/closing of the child
-  options
+  options.
 
-  * In open state, arrow points up; in closed state, arrow points down
+  * In open state, arrow points up; in closed state, arrow points down.
 
-  * Child options are in black text and not clickable
+  * Child options are in black text and not clickable.
 
   * Clicking on the parent checkbox selects the parent option and all child
-  options
+  options.
 
   * Clicking on the parent checkbox does not change the state of the open/close
   expansion (if it’s checked with the children expanded, it stays expanded, for
-  instance)
+  instance).
 
 
-  <h3>Content guidelines</h3>
+  #### Content guidelines
 
 
   * Label text should be concise

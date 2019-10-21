@@ -225,14 +225,14 @@ variations:
       `.a-heading.a-heading__icon` is attached to `.m-meta-header_right`.
     variation_name: Meta header
 usage: >-
-  <h3>Use cases</h3>
+  #### Use cases
 
 
   Consistent scaling, weights, and capitalization are used to create distinction
   between heading levels.
 
 
-  <h3> Content guidelines </h3>
+  #### Content guidelines
 
 
   * Headings should be sentence case.
@@ -242,7 +242,7 @@ usage: >-
   * Keep headings to one line on desktop when possible.
 
 
-  <h3>Behavior</h3>
+  #### Behavior
 
 
   At screen widths of 600px and below, the Display heading and Headings 1-4 drop

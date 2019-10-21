@@ -116,25 +116,32 @@ variations:
       remains in view at all screen sizes.
     variation_name: Centered visual
 usage: >-
-  <h3>Use cases</h3>
+  #### Use cases
 
-  Use a featured content module when you want to highlight something that’s:
 
-  * Timely: Highlights a new tool or development. Keep in mind: When you remove
-  dated content from a FCM, make sure you're not getting rid of the only way
-  users can navigate to it. Make sure to plan a permanent home for the content.
+  Use a featured content module (FCM) when you want to highlight something
+  that’s:
 
-  * Impactful: Lets people know immediately how the content will affect them,
-  how they can use it, and how it might enhance their understanding of—or
-  experience with—the primary page content
 
-  * Localized: New content that specifically applies to people in a specific
+  * **Timely**: Highlights a new tool or development. Keep in mind: When you
+  remove dated content from a FCM, make sure you're not getting rid of the only
+  way users can navigate to it. Make sure to plan a permanent home for the
+  content.
+
+
+  * **Impactful**: Lets people know immediately how the content will affect
+  them, how they can use it, and how it might enhance their understanding of—or
+  experience with—the primary page content.
+
+
+  * **Localized**: New content that specifically applies to people in a specific
   geographic area; it may be important for that audience to see their specific
   content first, and when it’s removed from the page it won’t disrupt the usual
   user flow.
 
-  * Unique: Content that is specifically in the Bureau’s “wheelhouse” because of
-  our position as an approachable, trusted, unbiased authority
+
+  * **Unique**: Content that is specifically in the Bureau’s “wheelhouse”
+  because of our position as an approachable, trusted, unbiased authority.
 
 
   Featured content modules should highlight a single piece of content. That
@@ -158,33 +165,40 @@ usage: >-
 
   ##### When other options are better
 
+
   * When the content is an integral, long-term part of the intended user
   journey, then it should have a more permanent home on the page.
+
 
   * When there’s no link or video for the user to interact with. If you just
   want to visually differentiate your content from its surroundings, consider
   using a well or inline text instead.
 
 
-  <h3>Content guidelines</h3>
+  #### Content guidelines
+
 
   FCMs contain a headline, descriptive body copy text, an optional
   call-to-action link, and a graphical element related to the piece of content
   being featured. They are a “mini story” and never simply a dominant visual.
 
+
   * Headings should be as succinct as possible and 35 characters or less
   (including spaces).
+
 
   * Descriptions should be action-oriented and let the user know what they will
   get out of the featured content and how it's related to the main page content,
   not just what it is. Descriptions should be 160 characters or less (including
   spaces).
 
+
   * Links serve as a call-to-action, so they should begin with an action verb
   like “explore,” “read,” “learn,” or “discover.” When using an action verb, be
   specific and tie the action back to the content and what the user will get
   from it. As a best practice, only include up to one link in a FCM. Link text
   should be 35 characters or less (including spaces).
+
 
   * Do not include a link with a video FCM. In a FCM that features video, the
   desired action is for the user to play the video, so the play button serves as
@@ -200,7 +214,7 @@ usage: >-
   which the visual will be seen (on a 600px wide display).
 
 
-  <h3>Behavior</h3>
+  #### Behavior
 
 
   At desktop size, the ratio of text and visual changes with screen size to keep
@@ -232,4 +246,6 @@ help_us: >-
 
   *
   https://cfpb.github.io/capital-framework/components/cf-layout/#featured-content-module
+last_updated: 2019-10-17T14:52:11.082Z
 ---
+

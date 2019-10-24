@@ -16,15 +16,14 @@ function stylesComponents() {
   return gulp.src( 'packages/' + ( component || '*' ) + '/src/*.less' )
     .pipe( gulpIgnore.exclude( vf => {
       /* Exclude Less files that don't share the same name as the directory
-         they're in. This filters out things like cf-vars.less but still
-         includes cf-core.less. */
+         they're in. This filters out things like vars.less but still
+         includes cfpb-core.less. */
       const matches = vf.path.match( /\/([\w-]*)\/src\/([\w-]*)\.less/ );
-      // We also exclude cf-grid. It needs its own special task. See below.
-      return matches[2] === 'cf-grid' || matches[1] !== matches[2];
+      // We also exclude grid. It needs its own special task. See below.
+      return matches[2] === 'cfpb-grid' || matches[1] !== matches[2];
     } ) )
     .pipe( gulpLess( {
-      paths: [ 'node_modules/cf-*/src/' ],
-      compress: true
+      paths: [ 'node_modules/cfpb-*/src/' ]
     } ) )
     .pipe( gulpPostcss( [
       autoprefixer( {
@@ -34,20 +33,19 @@ function stylesComponents() {
     .pipe( gulpRename( path => {
       path.dirname = component || path.dirname;
       path.dirname = path.dirname.replace( '/src', '' );
-      path.extname = '.min.css';
+      path.extname = '.css';
     } ) )
     .pipe( gulp.dest( 'packages' ) );
 }
 
 /**
- * cf-grid needs to compile cf-grid-generated.less.
+ * cfpb-grid needs to compile cfpb-grid-generated.less.
  * @returns {PassThrough} A source stream.
  */
 function stylesGrid() {
-  return gulp.src( 'packages/cf-grid/src-generated/*.less' )
+  return gulp.src( 'packages/cfpb-grid/src-generated/*.less' )
     .pipe( gulpLess( {
-      paths: [ 'node_modules/cf-*/src/' ],
-      compress: true
+      paths: [ 'node_modules/cfpb-*/src/' ]
     } ) )
     .pipe( gulpPostcss( [
       autoprefixer( {
@@ -56,36 +54,16 @@ function stylesGrid() {
       } )
     ] ) )
     .pipe( gulpRename( {
-      basename: 'cf-grid',
-      extname: '.min.css'
+      basename: 'cfpb-grid',
+      extname: '.css'
     } ) )
-    .pipe( gulp.dest( 'packages/cf-grid' ) );
-}
-
-/**
- * Process CSS for the docs.
- * @returns {PassThrough} A source stream.
- */
-function stylesDocs() {
-  return gulp.src( 'docs/src/css/main.less' )
-    .pipe( gulpLess( {
-      paths: [ 'node_modules/cf-*/src/' ],
-      compress: true
-    } ) )
-    .pipe( gulpPostcss( [
-      autoprefixer( {
-        browsers: BROWSER_LIST.LAST_2_PLUS_IE_8_AND_UP
-      } )
-    ] ) )
-    .pipe( gulp.dest( 'docs/dist/css/' ) );
+    .pipe( gulp.dest( 'packages/cfpb-grid' ) );
 }
 
 gulp.task( 'styles:components', stylesComponents );
 gulp.task( 'styles:grid', stylesGrid );
-gulp.task( 'styles:docs', stylesDocs );
 
 gulp.task( 'styles', gulp.parallel(
   'styles:components',
-  'styles:grid',
-  'styles:docs'
+  'styles:grid'
 ) );

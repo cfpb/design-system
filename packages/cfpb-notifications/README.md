@@ -1,0 +1,27 @@
+# @cfpb/notifications [![Build Status](https://img.shields.io/travis/cfpb/design-system.svg)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/@cfpb/notifications.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/notifications)
+
+Design System notifications
+
+This component can be used by itself, but it was made for Design System,
+a front end framework developed at the
+[Consumer Financial Protection Bureau](https://consumerfinance.gov).
+
+## How to use this component
+
+Detailed instructions can be found at the Design System
+[documentation site](https://cfpb.github.io/design-system/).
+
+
+## Getting involved
+
+We welcome your feedback and contributions.
+
+- [Find out about contributing](https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md)
+- [File a bug](https://github.com/cfpb/design-system/issues/new?labels=bug)
+
+---
+
+## Open source licensing info
+1. [TERMS](TERMS.md)
+2. [LICENSE](LICENSE)
+3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)

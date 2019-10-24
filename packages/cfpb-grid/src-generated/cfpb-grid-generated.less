@@ -1,0 +1,96 @@
+@import (less) '../../normalize-css/normalize.css';
+@import (less) '../../normalize-legacy-addon/normalize-legacy-addon.css';
+@import (reference) '../src/cfpb-grid.less';
+
+/**
+ *  A CSS version of @cfpb/grid
+ **/
+
+//  If you'd prefer vanilla CSS over LESS, this stylesheet will
+//  generate a CSS version of @cfpb/grid with the same fixed-gutter,
+//  fluid-column functionality.
+//
+//  .wrapper = .grid_wrapper()
+//  .col-X = .grid_column( X )
+//  .prefix-Y = .grid_column( @columns: X; @prefix: Y; )
+//  .suffix-Z = .grid_column( @columns: X; @suffix: Z; )
+//  .push-X = .grid_push( X )
+//  .pull-X = .grid_pull( X )
+//
+//  Change the variables below before compiling to change your
+//  grid specifications.
+//
+// WARNING: This generates a GIGANTIC CSS file, so if you are
+// going to use this, you best be gzipping on the server-side.
+
+
+@grid_wrapper-width: 1200px;
+@grid_gutter-width: 30px;
+@grid_total-columns: 12;
+
+
+.wrapper {
+  .grid_wrapper();
+}
+
+
+.columnX ( @index ) when ( @index > 0 ) {
+
+  .col-@{index} {
+    .grid_column( @index );
+  }
+
+  .prefixX ( @index, @grid_total-columns - @index );
+  .suffixX ( @index, @grid_total-columns - @index );
+
+
+  .push-@{index} {
+    .grid_push( @index );
+  }
+
+  .pull-@{index} {
+    .grid_pull( @index );
+  }
+
+  .columnX( @index - 1 );
+
+}
+
+
+.prefixX ( @index, @indexP ) when (@indexP > 0) {
+
+  .col-@{index}.prefix-@{indexP} {
+    .grid_column( @columns: @index; @prefix: @indexP; );
+  }
+
+  .prefixSuffix ( @index, @indexP, @grid_total-columns - @index - @indexP );
+  .prefixX ( @index, @indexP - 1 );
+
+}
+
+
+.suffixX ( @index, @indexS ) when (@indexS > 0) {
+
+  .col-@{index}.suffix-@{indexS} {
+    .grid_column( @columns: @index; @suffix: @indexS; );
+  }
+
+  .suffixX ( @index, @indexS - 1 );
+
+}
+
+
+.prefixSuffix ( @index, @indexP, @indexS ) when (@indexS > 0) {
+
+  .col-@{index}.prefix-@{indexP}.suffix-@{indexS} {
+    .grid_column( @columns: @index; @prefix: @indexP; @suffix: @indexS );
+  }
+
+  .prefixSuffix ( @index, @indexP, @indexS - 1 );
+
+}
+
+
+.columnX ( 0 ) {}
+
+.columnX ( @grid_total-columns );

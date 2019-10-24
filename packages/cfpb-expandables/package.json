@@ -1,0 +1,16 @@
+{
+  "name": "@cfpb/expandables",
+  "version": "1.0.0",
+  "description": "Design System expandables",
+  "main": "src/cfpb-expandables.js",
+  "less": "src/cfpb-expandables.less",
+  "style": "cfpb-expandables.css",
+  "dependencies": {
+    "@cfpb/atomic-component": "^1.0.0",
+    "@cfpb/core": "^1.0.0",
+    "@cfpb/icons": "^1.0.0"
+  },
+  "keywords": [
+    "expandable"
+  ]
+}

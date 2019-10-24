@@ -15,7 +15,7 @@ fs.readdir( path.join( __dirname, '..', '..', '/tmp' ), ( err, dirs ) => {
     throw new Error( 'Didn\'t read directory.' );
   }
   dirs.forEach( function( component ) {
-    if ( component.indexOf( 'cf-' ) !== 0 ) return;
+    if ( component.indexOf( 'cfpb-' ) !== 0 ) return;
     startServer( component, testComponent );
   } );
 } );

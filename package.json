@@ -1,5 +1,5 @@
 {
-  "name": "capital-framework",
+  "name": "cfpb-design-system",
   "private": "true",
   "workspaces": [
     "packages/*"
@@ -12,25 +12,24 @@
   },
   "license": "SEE LICENSE IN TERMS.md",
   "keywords": [
-    "capital-framework"
+    "design-system"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/cfpb/capital-framework.git"
+    "url": "git+ssh://git@github.com/cfpb/design-system.git"
   },
   "bugs": {
-    "url": "https://github.com/cfpb/capital-framework/issues"
+    "url": "https://github.com/cfpb/design-system/issues"
   },
   "scripts": {
-    "start": "yarn --cwd docs/ start",
     "build": "gulp build",
-    "cf-link": "lerna exec -- yarn link",
-    "cf-unlink": "lerna exec -- yarn unlink",
+    "design-system-link": "lerna exec -- yarn link",
+    "design-system-unlink": "lerna exec -- yarn unlink",
     "test": "gulp test",
     "changelog": "./scripts/generate-changelog.sh",
     "release": "yarn run build && lerna publish",
     "version": "yarn run changelog && git add CHANGELOG.md",
-    "process-icon-svgs": "svgo -o packages/cf-icons/src/icons --enable=addClassesToSVGElement --enable=removeStyleElement --enable=removeAttrs --config='{ \"plugins\": [ { \"addClassesToSVGElement\": { \"className\": \"cf-icon-svg\" } }, { \"removeAttrs\": { \"attrs\": [ \"fill\", \"path:class\", \"circle:class\" ] } }, { \"cleanupIDs\": { \"force\": \"true\" } } ] }'"
+    "process-icon-svgs": "svgo -o packages/cfpb-icons/src/cfpb-icons --enable=addClassesToSVGElement --enable=removeStyleElement --enable=removeAttrs --config='{ \"plugins\": [ { \"addClassesToSVGElement\": { \"className\": \"cf-icon-svg\" } }, { \"removeAttrs\": { \"attrs\": [ \"fill\", \"path:class\", \"circle:class\" ] } }, { \"cleanupIDs\": { \"force\": \"true\" } } ] }'"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",

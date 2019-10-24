@@ -60,14 +60,11 @@ usage: >-
   clear next steps and calls to actions so they can quickly decide what content
   is relevant to them and where they should go next.
 
-
   * This page should be written and organized in a way that aids the user in
   skimming and quickly navigating to lower-level pages.
 
-
   * Page titles are sentence case and use the word “and” instead of “&”. (Note
   that navigation labels follow a different style.)
-
 
   * Email signup component should only be used on campaign landing pages. This
   component is not used on Landing pages.
@@ -85,12 +82,10 @@ usage: >-
 
   * Must contain at least 1 component.
 
-
   * Recommended hierarchy of components: [image &
   text](/design-system/components/info-unit-groups-image-and-text) components,
   [gray well](/design-system/components/wells), and [half width link
   blobs](/design-system/components/info-unit-groups-link-blobs).
-
 
   * The [gray well](/design-system/components/wells) component should not be
   used at the top of this area if the introduction area contains a hero.
@@ -100,7 +95,6 @@ usage: >-
 
 
   * Must contain at least 1 component.
-
 
   * If using both static and dynamic content, preference for dynamic content to
   appear above static content.

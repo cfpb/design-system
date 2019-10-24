@@ -8,12 +8,6 @@ description: >-
   Atomic Component is a micro framework for building Atomic Design components
   that utilize JavaScript. It is a dependency of other packages and isn’t used
   on its own.
-
-
-  Information about Atomic Components can be found at:
-
-
-  https://cfpb.github.io/capital-framework/components/cf-atomic-component/
 variations: []
 usage: >-
   This framework is intended to be used in conjunction with adherence to Atomic
@@ -88,3 +82,4 @@ usage: >-
 accessibility: ''
 research: ''
 ---
+

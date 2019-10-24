@@ -9,12 +9,6 @@ description: >-
   users situate themselves within the site and the subject matter. Their main
   function is to preview the different sub-pages within that section and help
   users quickly skim section topics and select the category that interests them.
-
-
-  This page is under active development. Information is being moved into it from
-  this page:
-
-  * http://cfpb.github.io/design-manual/global-elements/landing-page.html
 variations:
   - variation_code_snippet: ''
     variation_description: >-

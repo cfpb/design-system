@@ -22,8 +22,7 @@ requireDir( './scripts/gulp/', { recurse: true } );
 gulp.task( 'build',
   gulp.parallel(
     'styles:components',
-    'scripts:components',
-    'styles:grid'
+    'scripts:components'
   )
 );
 

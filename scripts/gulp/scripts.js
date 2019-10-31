@@ -17,6 +17,7 @@ const webpackStream = require( 'webpack-stream' );
  */
 function scriptsComponents() {
   const tmp = {};
+  const key = 'cfpb-design-system';
   return gulp.src( 'packages/' + ( component || '*' ) + '/src/*.js' )
     .pipe( gulpIgnore.exclude( vf => {
 
@@ -27,11 +28,11 @@ function scriptsComponents() {
     } ) )
     .pipe( vinylNamed() )
     .pipe( gulpRename( path => {
-      tmp[path.basename] = path;
+      tmp[key] = path;
     } ) )
     .pipe( webpackStream( webpackConfig.commonConf, webpack ) )
     .pipe( gulpRename( path => {
-      path.dirname = tmp[path.basename].dirname.replace( '/src', '' );
+      path.dirname = tmp[key].dirname.replace( '/src', '' );
       path.extname = '.min.js';
     } ) )
     .pipe( gulp.dest( 'packages' ) );

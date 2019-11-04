@@ -5,6 +5,9 @@
   "main": "src/cfpb-expandables.js",
   "less": "src/cfpb-expandables.less",
   "style": "cfpb-expandables.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@cfpb/atomic-component": "^0.0.3",
     "@cfpb/core": "^0.0.3",
@@ -12,5 +15,6 @@
   },
   "keywords": [
     "expandable"
-  ]
+  ],
+  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
 }

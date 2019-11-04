@@ -4,11 +4,15 @@
   "description": "Design System buttons",
   "less": "src/cfpb-buttons.less",
   "style": "cfpb-buttons.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@cfpb/core": "^0.0.3",
     "@cfpb/icons": "^0.0.3"
   },
   "keywords": [
     "buttons"
-  ]
+  ],
+  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
 }

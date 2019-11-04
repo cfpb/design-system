@@ -4,7 +4,11 @@
   "description": "Design System icons",
   "less": "src/cfpb-icons.less",
   "style": "cfpb-icons.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "icons"
-  ]
+  ],
+  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
 }

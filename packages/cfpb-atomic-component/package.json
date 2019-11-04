@@ -4,10 +4,14 @@
   "description": "Design System atomic component micro-framework",
   "less": "src/cfpb-atomic-component.less",
   "style": "cfpb-atomic-component.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "ftdomdelegate": "^3.0.0"
   },
   "keywords": [
     "atomic-component"
-  ]
+  ],
+  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
 }

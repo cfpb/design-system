@@ -4,11 +4,15 @@
   "description": "Design System typography",
   "less": "src/typography.less",
   "style": "typography.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@cfpb/core": "^0.0.3",
     "@cfpb/icons": "^0.0.3"
   },
   "keywords": [
     "typography"
-  ]
+  ],
+  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
 }

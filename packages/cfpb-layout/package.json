@@ -4,11 +4,15 @@
   "description": "Design System layouts",
   "less": "src/cfpb-layout.less",
   "style": "cfpb-layout.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@cfpb/core": "^0.0.3",
     "@cfpb/grid": "^0.0.3"
   },
   "keywords": [
     "layout"
-  ]
+  ],
+  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
 }

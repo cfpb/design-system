@@ -4,6 +4,9 @@
   "description": "Design System pagination",
   "less": "src/cfpb-pagination.less",
   "style": "cfpb-pagination.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@cfpb/buttons": "^0.0.3",
     "@cfpb/core": "^0.0.3",
@@ -11,5 +14,6 @@
   },
   "keywords": [
     "pagination"
-  ]
+  ],
+  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
 }

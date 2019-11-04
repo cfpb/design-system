@@ -4,11 +4,15 @@
   "description": "Design System grid",
   "less": "src/cfpb-grid.less",
   "style": "cfpb-grid.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "normalize-css": "^2.0.0",
     "normalize-legacy-addon": "0.1.0"
   },
   "keywords": [
     "grid"
-  ]
+  ],
+  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/design-system",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "CFPB's UI framework",
   "main": "src/cfpb-design-system.js",
   "less": "src/cfpb-design-system.less",
@@ -18,17 +18,17 @@
     "url": "https://github.com/cfpb/design-system/issues"
   },
   "dependencies": {
-    "@cfpb/atomic-component": "^1.0.0",
-    "@cfpb/buttons": "^1.0.0",
-    "@cfpb/core": "^1.0.0",
-    "@cfpb/expandables": "^1.0.0",
-    "@cfpb/forms": "^1.0.0",
-    "@cfpb/grid": "^1.0.0",
-    "@cfpb/icons": "^1.0.0",
-    "@cfpb/layout": "^1.0.0",
-    "@cfpb/notifications": "^1.0.0",
-    "@cfpb/pagination": "^1.0.0",
-    "@cfpb/tables": "^1.0.0",
-    "@cfpb/typography": "^1.0.0"
+    "@cfpb/atomic-component": "^0.0.2",
+    "@cfpb/buttons": "^0.0.2",
+    "@cfpb/core": "^0.0.2",
+    "@cfpb/expandables": "^0.0.2",
+    "@cfpb/forms": "^0.0.2",
+    "@cfpb/grid": "^0.0.2",
+    "@cfpb/icons": "^0.0.2",
+    "@cfpb/layout": "^0.0.2",
+    "@cfpb/notifications": "^0.0.2",
+    "@cfpb/pagination": "^0.0.2",
+    "@cfpb/tables": "^0.0.2",
+    "@cfpb/typography": "^0.0.2"
   }
 }

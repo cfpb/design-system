@@ -1,13 +1,13 @@
 {
   "name": "@cfpb/tables",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Design System tables",
   "main": "src/cfpb-tables.js",
   "less": "src/cfpb-tables.less",
   "style": "cfpb-tables.css",
   "dependencies": {
-    "@cfpb/atomic-component": "^1.0.0",
-    "@cfpb/core": "^1.0.0"
+    "@cfpb/atomic-component": "^0.0.2",
+    "@cfpb/core": "^0.0.2"
   },
   "keywords": [
     "tables"

@@ -4,6 +4,9 @@
   "description": "Design System core styles",
   "less": "src/cfpb-core.less",
   "style": "cfpb-core.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "normalize-css": "^2.0.0",
     "normalize-legacy-addon": "0.1.0"

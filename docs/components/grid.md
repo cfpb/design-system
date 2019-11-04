@@ -516,9 +516,7 @@ variations:
 usage: ''
 accessibility: ''
 research: ''
-related_items: >-
-  -
-  [cf-grid-generated.less](https://github.com/cfpb/capital-framework/blob/master/packages/cf-grid/src-generated/cf-grid-generated.less)
+related_items: ''
 help_us: |-
   This page needs help with its content!
   - [Contribute on Github](https://github.com/cfpb/design-system/issues/183)

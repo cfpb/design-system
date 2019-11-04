@@ -70,8 +70,7 @@ function lintStyles() {
   const willFix = options.fix || false;
   return gulp.src( [
     'packages/**/*.less',
-    '!packages/**/node_modules/**/*.less',
-    '!packages/cfpb-grid/src-generated/*.less'
+    '!packages/**/node_modules/**/*.less'
   ] )
     .pipe( gulpStylelint( {
       failAfterError: true,

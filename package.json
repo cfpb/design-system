@@ -32,8 +32,8 @@
     "process-icon-svgs": "svgo -o packages/cfpb-icons/src/cfpb-icons --enable=addClassesToSVGElement --enable=removeStyleElement --enable=removeAttrs --config='{ \"plugins\": [ { \"addClassesToSVGElement\": { \"className\": \"cf-icon-svg\" } }, { \"removeAttrs\": { \"attrs\": [ \"fill\", \"path:class\", \"circle:class\" ] } }, { \"cleanupIDs\": { \"force\": \"true\" } } ] }'"
   },
   "devDependencies": {
-    "@babel/core": "7.6.4",
-    "@babel/preset-env": "7.6.3",
+    "@babel/core": "7.7.0",
+    "@babel/preset-env": "7.7.1",
     "autoprefixer": "8.6.5",
     "babel-loader": "8.0.6",
     "fancy-log": "^1.3.2",

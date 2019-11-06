@@ -101,12 +101,12 @@ variations:
               <tr>
                   <td data-label="Column 1">Row A</td>
                   <td data-label="Column 2">Cell A2</td>
-                  <td data-label="Column 3" class="table_cell__right-align">Cell A3</td>
+                  <td data-label="Column 3" class="o-table_cell__right-align">Cell A3</td>
               </tr>
               <tr>
                   <td data-label="Column 1">Row B</td>
                   <td data-label="Column 2">Cell B2</td>
-                  <td data-label="Column 3" class="table_cell__right-align">Cell B3</td>
+                  <td data-label="Column 3" class="o-table_cell__right-align">Cell B3</td>
               </tr>
           </tbody>
       </table>

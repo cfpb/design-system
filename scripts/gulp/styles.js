@@ -1,6 +1,5 @@
 const autoprefixer = require( 'autoprefixer' );
 const BROWSER_LIST = require( '../../config/browser-list-config' );
-const component = require( '../utils/parseComponentName' );
 const gulp = require( 'gulp' );
 const gulpPostcss = require( 'gulp-postcss' );
 const gulpIgnore = require( 'gulp-ignore' );
@@ -13,7 +12,7 @@ const gulpRename = require( 'gulp-rename' );
  * @returns {PassThrough} A source stream.
  */
 function stylesComponents() {
-  return gulp.src( 'packages/' + ( component || '*' ) + '/src/*.less' )
+  return gulp.src( 'packages/*/src/*.less' )
     .pipe( gulpIgnore.exclude( vf => {
       /* Exclude Less files that don't share the same name as the directory
          they're in. This filters out things like vars.less but still
@@ -31,7 +30,6 @@ function stylesComponents() {
       } )
     ] ) )
     .pipe( gulpRename( path => {
-      path.dirname = component || path.dirname;
       path.dirname = path.dirname.replace( '/src', '' );
       path.extname = '.css';
     } ) )

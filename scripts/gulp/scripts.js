@@ -1,10 +1,8 @@
-const component = require( '../utils/parseComponentName' );
 const gulp = require( 'gulp' );
-const gulpIgnore = require( 'gulp-ignore' );
-const gulpRename = require( 'gulp-rename' );
 const vinylNamed = require( 'vinyl-named' );
 const webpack = require( 'webpack' );
-const webpackConfig = require( '../../config/webpack-config.js' );
+const webpackConfig = require( '../../config/webpack-config' );
+const handleErrors = require( '../utils/handle-errors' );
 const webpackStream = require( 'webpack-stream' );
 
 /* TODO: Add a production and dev flag via NODE_ENV to generate
@@ -16,26 +14,11 @@ const webpackStream = require( 'webpack-stream' );
  * @returns {Object} An output stream from gulp.
  */
 function scriptsComponents() {
-  const tmp = {};
-  const key = 'cfpb-design-system';
-  return gulp.src( 'packages/' + ( component || '*' ) + '/src/*.js' )
-    .pipe( gulpIgnore.exclude( vf => {
-
-      /* Exclude JS files that don't share the same name as the directory
-         they're in. This filters out utility files. */
-      const matches = vf.path.match( /\/([\w-]*)\/src\/([\w-]*)\.js/ );
-      return matches[1] !== matches[2];
-    } ) )
+  return gulp.src( 'packages/cfpb-design-system/src/cfpb-design-system.js' )
     .pipe( vinylNamed() )
-    .pipe( gulpRename( path => {
-      tmp[key] = path;
-    } ) )
     .pipe( webpackStream( webpackConfig.commonConf, webpack ) )
-    .pipe( gulpRename( path => {
-      path.dirname = tmp[key].dirname.replace( '/src', '' );
-      path.extname = '.min.js';
-    } ) )
-    .pipe( gulp.dest( 'packages' ) );
+    .on( 'error', handleErrors.bind( this, { exitProcess: true } ) )
+    .pipe( gulp.dest( 'packages/cfpb-design-system/' ) );
 }
 
 gulp.task( 'scripts:components', scriptsComponents );

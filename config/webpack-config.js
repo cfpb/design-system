@@ -3,7 +3,6 @@
    ========================================================================== */
 
 const BROWSER_LIST = require( './browser-list-config' );
-const webpack = require( 'webpack' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
 
 /* Commmon webpack 'module' option used in each configuration.
@@ -29,6 +28,7 @@ const COMMON_MODULE_CONFIG = {
 const COMMON_MINIFICATION_CONFIG = new TerserPlugin( {
   cache: true,
   parallel: true,
+  extractComments: false,
   terserOptions: {
     ie8: false,
     ecma: 5,
@@ -46,6 +46,7 @@ const commonConf = {
   module: COMMON_MODULE_CONFIG,
   mode: 'production',
   optimization: {
+    minimize: true,
     minimizer: [
       COMMON_MINIFICATION_CONFIG
     ],

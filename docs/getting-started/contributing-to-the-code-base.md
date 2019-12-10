@@ -106,10 +106,10 @@ description: >-
     * Samsung Internet
   * Internet Explorer 9
     http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+9
-    As well as additional Autoprefixer support for:
+    As well as additional Autoprefixer support for: For what?
   * Internet Explorer 8
     http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+8
-    What this means to the end-user is we've added a level of backward compatability for modern features as much as possible. This doesn't necessarily mean feature parity. Where it's impossible or impractical to implement a modern feature, we fallback to standard practices for that browser. For example, we do not deliver interactive scripting for Internet Explorer 8, but we do ensure that default browser features continue to work so users that can't or don't want to upgrade continue to have access to the site and our content.
+    We add backwards compatibility for modern features where possible. Where doing so is not possible, we fall back to standard practices for that browser. For example, we don't deliver interactive scripting for Internet Explorer 8, but we do ensure that default browser features continue to work so users can access the site and its contents. 
 
   #### Browser Testing
 

@@ -4,8 +4,8 @@ layout: variation
 section: getting-started
 secondary_section: Getting started
 description: >-
-  ## There are two primary ways to help: using the issue tracker, and changing
-  the codebase.
+  There are two primary ways to help: using the issue tracker, and changing the
+  codebase.  
 
 
   **Note:**  All contributions to this project will be released under the CC0
@@ -16,21 +16,24 @@ description: >-
   [_LICENSE_](https://github.com/cfpb/design-system/blob/master/LICENSE).
 
 
-  ### Using the issue tracker
+  ## Using the issue tracker
 
 
   Use the issue tracker to suggest feature requests, report bugs, and ask
   questions—or use it to find ways to contribute, by finding a bug or a feature.
-  If you[ll contribute, say so in thet issue, then follow the _Changing the
-  codebase_ guidance below.
+  If you[ll contribute, make a comment in the issue, then follow the _Changing
+  the codebase_ guidance below.
 
 
-  ### Changing the codebase
+  ## Changing the codebase
 
 
   We work off feature branches from the `master` branch. After you've edited a
   component, open a Pull Request to merge your feature branch back into
   `master`.
+
+
+  ### Sample workflow
 
   For example, if you wanted to change `@cfpb/buttons` and use it in
   [cfgov-refresh](https://github.com/cfpb/cfgov-refresh), here's what you'd do:
@@ -72,20 +75,25 @@ description: >-
   merge `button-fix` into `master`.
 
 
+  ##### First-time contributor?
+
   If you are not a current contributor to this repository, use forks by first
   clicking the fork button on top of the repository and cloning your fork in
   step 1. In the final step, go to https://github.com/cfpb/design-system and
   file a pull request by clicking the link to compare changes across forks.
-     ### Updating Documentation
+     
+  ### Updating Documentation
      The Design System's website lives in this repository's `docs/` directory and is powered by Netlify CMS and Jekyll. To edit any page of the website, click the edit button at the bottom right of the page. You'll need to be added as a contributor to this repository in order to authenticate with Netlify CMS.
 
   ### Testing components locally
 
 
-  **Automated tests** can be run with the command `yarn test`.
+  #### Automated tests
+
+  Automated tests can be run with the command `yarn test`.
 
 
-  ### Browser support
+  #### Browser support
 
 
   We configure [Autoprefixer](#autoprefixer) and [Babel](#babel) to support the
@@ -93,7 +101,13 @@ description: >-
     * Chrome
     * Firefox
     * Safari
-    * Internet Explorer (see note below)
+    * Internet Explorer
+      * Internet Explorer 9
+    http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+9
+    
+      * Additional Autoprefixer support for Internet Explorer 8
+    http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+8
+    What this means is that we add backwards compatibility for modern features where possible, and otherwise fall back to standard practices for that browser. For example, we don't deliver interactive scripting for Internet Explorer 8, but we do ensure that default browser features continue to work so users can access the site and its contents. 
     * Edge
     * Opera
     * iOS Safari
@@ -104,22 +118,17 @@ description: >-
     * Chrome for Android
     * Firefox for Android
     * Samsung Internet
-  * Internet Explorer 9
-    http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+9
-    As well as additional Autoprefixer support for: For what?
-  * Internet Explorer 8
-    http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+8
-    We add backwards compatibility for modern features where possible. Where doing so is not possible, we fall back to standard practices for that browser. For example, we don't deliver interactive scripting for Internet Explorer 8, but we do ensure that default browser features continue to work so users can access the site and its contents. 
+
 
   #### Browser Testing
 
-  We have automated tests that use a headless version of Chrome to ensure the
-  majority of the site is working as expected. For manual testing, we
-  realistically test this project locally or in a virtual environment with the
-  following list of browsers: 
+  For automated testing, we use a headless version of Chrome to ensure the
+  majority of the site is working as expected. 
 
-  * Chrome - Firefox - Safari - Internet Explorer 8, 9, 10, and 11 - Edge - iOS
-  Safari - Chrome for Android
+
+  For manual testing, we test locally or in a virtual environment with the
+  following browsers: Chrome; Firefox; Safari; Internet Explorer 8, 9, 10, and
+  11; Edge; iOS Safari; and Chrome for Android.
 
 
   #### Autoprefixer
@@ -140,9 +149,11 @@ description: >-
   #### Resources
 
 
-  * https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/ -
-  https://saucelabs.com/beta/dashboard/tests -
-  http://developer.samsung.com/remotetestlab/rtlDeviceList.action#
+  * https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/  
+
+  * https://saucelabs.com/beta/dashboard/tests  
+
+  * http://developer.samsung.com/remotetestlab/rtlDeviceList.action#
 
 
   ## Release management
@@ -151,19 +162,21 @@ description: >-
   Ready to publish changes to npm?
 
 
-  1. Ensure you're on `master` and `git pull` to confirm you're up-to-date. 1.
-  Export a personal access token called
+  1. Ensure you're on `master` and `git pull` to confirm you're up-to-date. 
+
+  2. Export a personal access token called
      [`GITHUB_AUTH`](https://github.com/lerna/lerna-changelog#github-token).
-  2. Run `yarn run changelog` and open `CHANGELOG.md` to see a preview
+  3. Run `yarn run changelog` and open `CHANGELOG.md` to see a preview
      of new changelog entries.
      We use a [tool](https://github.com/lerna/lerna-changelog#usage) that scans our
      Pull Requests for specific labels so if you see a PR missing from the changelog,
      ensure it has been labeled `breaking`, `enhancement`, `bug`,
      `documentation` or `internal`.
-  3. If you're pleased with the changelog preview,
+  4. If you're pleased with the changelog preview,
      `git checkout CHANGELOG.md` to reset it.
-  4. Run `yarn run release` to start the release. 1. If all packages are shown
-  as having been published,
+  5. Run `yarn run release` to start the release. 
+
+  6. If all packages are shown as having been published,
      run `git push` to push changes to the remote `master` branch.
 
   Lerna will update the changelog, ask for a new version number, create a git
@@ -195,12 +208,20 @@ description: >-
   ### Follow our CSS naming conventions
 
 
-  **We are using a customized BEM format**
+  **We are using a customized BEM format**<br>
 
-  `css .block-name .block-name_element-name .block-name__block-modifier
-  .block-name_element-name__element-modifier`
+
+  `.block-name `<br>
+
+  `.block-name_element-name `<br>
+
+  `.block-name__block-modifier `<br>
+
+  `.block-name_element-name__element-modifier`
+
 
   **Avoid creating elements of modifiers**
+
 
   Appending an element name to a modifier class can result in a confusing class
   name like `.list__space_item`. Avoid this in favor of using a descendant, like

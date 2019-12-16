@@ -283,10 +283,11 @@ variations:
       the accordion mode.
     variation_name: Accordion-style group
 usage: >-
-  <h3>Content guidelines</h3>
+  ### Content guidelines
 
 
-  \#### Individual
+  #### Individual
+
 
   When only one expandable is used, it should include a stroke on all sides,
   heading text, and the expand/collapse minicon within a circle with a label
@@ -310,10 +311,11 @@ usage: >-
   gray well). Title text should be consistent across a group of expandables.
 
 
-  <h3>Behavior</h3>
+  ### Behavior
 
 
-  \#### Collapsed
+  #### Collapsed
+
 
   The default collapsed state should include the expand/collapse minicon within
   a circle and a label (if space allows). The Show/Hide label can be hidden at
@@ -513,5 +515,6 @@ accessibility: >-
   Non-javaScript users should default to the expanded state. Otherwise, the
   default state (expanded or collapsed) will depend on the circumstance.
 research: ''
+last_updated: 2019-12-16T18:43:19.784Z
 ---
 

@@ -283,9 +283,11 @@ variations:
       the accordion mode.
     variation_name: Accordion-style group
 usage: >-
-  <h3>Content guidelines</h3>
+  ### Content guidelines
+
 
   #### Individual
+
 
   When only one expandable is used, it should include a stroke on all sides,
   heading text, and the expand/collapse minicon within a circle with a label
@@ -301,6 +303,7 @@ usage: >-
 
   #### Group
 
+
   When expandable sections are used in a group, they are stacked vertically,
   with each row sharing its top or bottom stroke with the adjacent row. In this
   use case, expandables have no background color of their own, but match
@@ -308,9 +311,11 @@ usage: >-
   gray well). Title text should be consistent across a group of expandables.
 
 
-  <h3>Behavior</h3>
+  ### Behavior
+
 
   #### Collapsed
+
 
   The default collapsed state should include the expand/collapse minicon within
   a circle and a label (if space allows). The Show/Hide label can be hidden at
@@ -319,6 +324,7 @@ usage: >-
 
 
   #### Expanded
+
 
   The content of an expandable can contain normal paragraphs, headings, lists,
   wells, and images.
@@ -337,6 +343,7 @@ usage: >-
 
   #### Code
 
+
   Below are modifiers and elements of expandables.
 
 
@@ -347,9 +354,11 @@ usage: >-
 
   ##### Expanded modifier
 
+
   Sometimes you may want the expandable to be open by default. This is as easy
   as adding the `.o-expandable_content__onload-open` modifier to the
   `.o-expandable_content` block.
+
 
   ```
 
@@ -360,6 +369,7 @@ usage: >-
 
   ##### Padded modifier
 
+
   Adds padding and a background color to `.o-expandable_header` and
   `.o-expandable_content`.
 
@@ -367,16 +377,20 @@ usage: >-
   In addition to using the `.o-expandable__padded` modifier you also need to
   make sure you are using `.o-expandable_header`.
 
+
   ```
 
   .o-expandable__padded
 
   ```
 
+
   ##### Spaced header
+
 
   Allows you to add space between `.o-expandable_header` and
   `.o-expandable_content`.
+
 
   ```
 
@@ -387,7 +401,9 @@ usage: >-
 
   ##### Label
 
+
   Allows you to add some styled text.
+
 
   ```
 
@@ -400,9 +416,11 @@ usage: >-
 
   ##### Link
 
+
   Allows you to add some styled text to look like a link.
 
   Note: only use this in the expandable header
+
 
   ```
 
@@ -415,6 +433,7 @@ usage: >-
 
   ##### Header
 
+
   Creates a full-width container to house information that is always visible.
   This is useful for more complicated expandables that need to convey more
   information than just ‘Show/Hide’ before the user expands it.
@@ -422,6 +441,7 @@ usage: >-
 
   Combine `.o-expandable_header` with `.o-expandable_target` for a full-width
   trigger.
+
 
   ```
 
@@ -432,7 +452,9 @@ usage: >-
 
   ##### Header left/right
 
+
   Allows you to float information left and right.
+
 
   ```
 
@@ -445,12 +467,14 @@ usage: >-
 
   #### JavaScript API
 
+
   A new array of Expandable instances can be created with `const expandables =
   Expandable.init();`. Each instance has the following methods for public
   consumption:
 
 
   ##### toggleTargetState( element )
+
 
   ```
 
@@ -460,14 +484,17 @@ usage: >-
 
   ```
 
+
   Toggle an expandable to open or closed.
 
   Parameters:
+
 
   * element {HTMLNode} The expandable target HTML DOM element.
 
 
   ##### getLabelText()
+
 
   ```
 
@@ -475,9 +502,11 @@ usage: >-
 
   ```
 
+
   Retrieve the label text of the expandable header.
 
   Return:
+
 
   * {string} The text of the expandable’s label.
 accessibility: >-
@@ -486,4 +515,6 @@ accessibility: >-
   Non-javaScript users should default to the expanded state. Otherwise, the
   default state (expanded or collapsed) will depend on the circumstance.
 research: ''
+last_updated: 2019-12-16T18:43:19.784Z
 ---
+

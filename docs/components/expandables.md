@@ -515,6 +515,7 @@ accessibility: >-
   Non-javaScript users should default to the expanded state. Otherwise, the
   default state (expanded or collapsed) will depend on the circumstance.
 research: ''
+related_items: "### Google Tag Manager\n\nBelow is a list of items that Digital Analytics references in the tag that captures expandables. \n\n#### TAG ITEMS\n\n**Category:** Page Interaction (hardcoded)\n\n\n**Action:** Dropdown (hardcoded)\n\n\n**Label:** where {{element}} = element clicked\n\n```\nvar elem = {{element}};\n\rvar closestElem = closest(elem, '.o-expandable_target');\r\nvar textElem = closestElem.querySelector('.o-expandable_label') || closestElem.querySelector('.o-expandable_cue')\r;\nvar text = textElem.textContent.trim();\r\nreturn text;\n```\n\nOR\n\n```\nvar elem = {{element}};\rvar closestElem = closest(elem, '.expandable_target');\nvar text = closestElem.querySelector('.expandable_label').textContent.trim();\nreturn text;\n```\n\n\n\n#### TRIGGER ITEMS\n\nElement has a parentNode with className matching RegEx `expandable_header|expandable__padded`.\n\nElement has parentNode with a className that does not contain `nav-secondary`, since the secondary navigation at mobile uses an expandable as well."
 last_updated: 2019-12-16T18:43:19.784Z
 ---
 

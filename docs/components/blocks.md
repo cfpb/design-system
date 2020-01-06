@@ -253,6 +253,7 @@ usage: |-
   <h3>Content guidelines</h3>
 
   TBD
-accessibility: TBD
-research: TBD
+accessibility: ''
+research: ''
 ---
+

@@ -75,16 +75,17 @@ usage: >-
   #### Behavior
 
 
-  Below the 901 px breakpoint, the sidebar stacks below the main content area.
+  Below the 901 pixel breakpoint, the sidebar stacks below the main content
+  area.
 
 
-  ##### Breakpoints 901+
+  ##### Breakpoints 901 pixels or more
 
 
   ![Breakpoints 901+](/design-system/images/uploads/learn_behavior_desktop.jpg)
 
 
-  ##### Breakpoints 900 and less
+  ##### Breakpoints 900 pixels or less
 
 
   ![Breakpoints 90o and
@@ -102,3 +103,4 @@ related_items: |-
   * Email signup
   * Contact information
 ---
+

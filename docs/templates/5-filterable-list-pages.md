@@ -69,14 +69,14 @@ usage: >-
   ##### Sublanding page with filterable list
 
 
-  ###### Breakpoints 901+
+  ###### Breakpoints 901 pixels or more
 
 
   ![Desktop
   mockup](/design-system/images/uploads/sublanding_behavior_desktop-1.jpg)
 
 
-  ###### Breakpoints 900 and less
+  ###### Breakpoints 900 pixels or less
 
 
   ![Mobile
@@ -86,13 +86,13 @@ usage: >-
   ##### Browse page with Filterable List
 
 
-  ###### Breakpoints 901+
+  ###### Breakpoints 901 pixels or more
 
 
   ![Desktop mockup](/design-system/images/uploads/browse_behavior_desktop-1.jpg)
 
 
-  ###### Breakpoints 900 and less
+  ###### Breakpoints 900 pixels or less
 
 
   ![Mobile mockup](/design-system/images/uploads/browse_behavior_mobile.jpg)
@@ -108,3 +108,4 @@ related_items: |-
   * Sidebar
   * Email sign-up
 ---
+

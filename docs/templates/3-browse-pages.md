@@ -79,7 +79,7 @@ usage: >-
 
   #### Behavior
 
-  Below the 901 px breakpoint, the sub-navigation collapses into the global
+  Below the 901 pixel breakpoint, the sub-navigation collapses into the global
   navigation under a hamburger menu, as seen on the [Regulatory agenda
   page](http://www.consumerfinance.gov/policy-compliance/rulemaking/regulatory-agenda/).
   In cases where a browse page has children browse pages, the children will
@@ -88,12 +88,12 @@ usage: >-
   page](http://www.consumerfinance.gov/policy-compliance/guidance/implementation-guidance/).
 
 
-  ##### Breakpoints 901+
+  ##### Breakpoints 901 pixels or more
 
   ![Breakpoints 901+](/design-system/images/uploads/browse_behavior_desktop.jpg)
 
 
-  ##### Breakpoints 900 and less
+  ##### Breakpoints 900 pixels or less
 
   ![Breakpoints 900 and
   less](/design-system/images/uploads/browse_behavior_mobile.jpg)
@@ -110,4 +110,6 @@ related_items: |-
   * Related posts / Related links
   * Email signup
   * Contact information
+last_updated: 2020-01-13T23:25:20.183Z
 ---
+

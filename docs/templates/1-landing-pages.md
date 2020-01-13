@@ -9,12 +9,6 @@ description: >-
   users situate themselves within the site and the subject matter. Their main
   function is to preview the different sub-pages within that section and help
   users quickly skim section topics and select the category that interests them.
-
-
-  This page is under active development. Information is being moved into it from
-  this page:
-
-  * http://cfpb.github.io/design-manual/global-elements/landing-page.html
 variations:
   - variation_code_snippet: ''
     variation_description: >-
@@ -35,8 +29,9 @@ usage: >-
 
   * The landing page template should only be used for the top-level page under
   each main navigation section on the site to help users navigate to the various
-  sub-sections within the navigation vertical. Examples: Data & research
-  overview, Policy & compliance overview.
+  sub-sections within the navigation vertical. Examples: [Data & research
+  overview](https://www.consumerfinance.gov/data-research/), [Policy &
+  compliance overview](https://www.consumerfinance.gov/policy-compliance/).
 
   * This template may also be used for campaign pages.
 
@@ -47,7 +42,7 @@ usage: >-
   * When a new page is needed within a navigation section, rather than at the
   top-level.
 
-  * When page content includes paragraph copy or more detailed deifnitions or
+  * When page content includes paragraph copy or more detailed definitions or
   explanations.
 
 
@@ -63,7 +58,7 @@ usage: >-
   skimming and quickly navigating to lower-level pages.
 
   * Page titles are sentence case and use the word “and” instead of “&”. (Note
-  that navigation labels follows a different style.)
+  that navigation labels follow a different style.)
 
   * Email signup component should only be used on campaign landing pages. This
   component is not used on Landing pages.
@@ -71,21 +66,27 @@ usage: >-
 
   ##### Area 1: Introduction
 
-  * Choose between a hero or text introduction for this area.
+
+  * Choose between a [hero](/design-system/components/heroes) or [text
+  introduction](/design-system/components/introductions) for this area.
 
 
   ##### Area 2: Main content
 
+
   * Must contain at least 1 component.
 
-  * Recommended hierarchy of components: image & text components, gray well, and
-  half width link blobs.
+  * Recommended hierarchy of components: [image &
+  text](/design-system/components/info-unit-groups-image-and-text) components,
+  [gray well](/design-system/components/wells), and [half width link
+  blobs](/design-system/components/info-unit-groups-link-blobs).
 
-  * Gray well component should not be used at the top of this area if the
-  introduction area contains a hero.
+  * The [gray well](/design-system/components/wells) component should not be
+  used at the top of this area if the introduction area contains a hero.
 
 
   ##### Area 3: Sidebar
+
 
   * Must contain at least 1 component.
 
@@ -96,17 +97,18 @@ usage: >-
   #### Behavior
 
 
-  Below the 901 px breakpoint, the sidebar stacks below the main content area.
+  Below the 901 pixel breakpoint, the sidebar stacks below the main content
+  area.
 
 
-  ##### Breakpoints 901+
+  ##### Breakpoints 901 pixels or more
 
 
   ![Breakpoints
   901+](/design-system/images/uploads/landing_behavior_desktop_2x.jpg)
 
 
-  ##### Breakpoints 900 and less
+  ##### Breakpoints 900 pixels or less
 
 
   ![Breakpoints 900 and
@@ -119,4 +121,6 @@ related_items: |-
   * Gray well
   * Related posts / Related links
   * Email signup
+last_updated: 2019-10-24T20:28:47.366Z
 ---
+

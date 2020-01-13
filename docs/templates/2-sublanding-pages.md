@@ -119,7 +119,8 @@ usage: >-
   #### Behavior
 
 
-  Below the 901 px breakpoint, the sidebar stacks below the main content area.
+  Below the 901 pixel breakpoint, the sidebar stacks below the main content
+  area.
 
 
   ##### Breakpoints 901 pixels or more

@@ -5,10 +5,16 @@ section: templates
 secondary_section: Web templates
 status: Released
 description: >-
-  This page is under active development. Information is being moved into it from
-  this page:
+  Sub-landing page types provide an overview of a topic and/or group of related
+  content within a main navigation area. The sub-landing page template should
+  always be used as a child page to the [landing
+  page](/design-system/templates/landing-pages) template.
 
-  * http://cfpb.github.io/design-manual/global-elements/sublanding-page.html
+
+  Similar to landing pages, the focus of these pages is enabling users to
+  quickly understand a topic area and select the specific information that meets
+  their need. Unlike the landing page, this template allows for lengthier
+  content components to allow for further explanation of a topic if needed.
 variations:
   - variation_code_snippet: ''
     variation_description: >-
@@ -75,21 +81,31 @@ usage: >-
 
   ##### Area 1: Introduction
 
-  * Choose between a hero or text introduction for this area.
+
+  * Choose between a [hero](/design-system/components/heroes) or [text
+  introduction](/design-system/components/introductions) for this area.
 
   * Option for using breakout sidebar variation of the text introduction.
 
+
   ##### Area 2: Main content
 
-  * Must contain at least 1 component, though the featured content module or
-  gray well should not stand on their own.
 
-  * Recommended hierarchy of components: featured content module, image & text
-  components, gray well and half width link blobs, full width text, and contact
-  information.
+  * Must contain at least 1 component, though the [featured content
+  module](/design-system/components/featured-content-module) or [gray
+  well](/design-system/components/wells) should not stand on their own.
 
-  * Gray well component should not be used at the top of this area if the
-  introduction area contains a hero.
+  * Recommended hierarchy of components: [featured content
+  module](/design-system/components/featured-content-module), [image &
+  text](/design-system/components/info-unit-groups-image-and-text) components,
+  [gray well](/design-system/components/wells) and [half width link
+  blobs](/design-system/components/info-unit-groups-link-blobs), [full width
+  text](/design-system/components/full-width-text), and [contact
+  information](/design-system/components/contact-information).
+
+  * [Gray well](/design-system/components/wells) component should not be used at
+  the top of this area if the introduction area contains a hero.
+
 
   ##### Area 3: Sidebar
 
@@ -103,17 +119,18 @@ usage: >-
   #### Behavior
 
 
-  Below the 901 px breakpoint, the sidebar stacks below the main content area.
+  Below the 901 pixel breakpoint, the sidebar stacks below the main content
+  area.
 
 
-  ##### Breakpoints 901+
+  ##### Breakpoints 901 pixels or more
 
 
   ![Sublanding behavior
   desktop](/design-system/images/uploads/sublanding_behavior_desktop.jpg)
 
 
-  ##### Breakpoints 900 and less
+  ##### Breakpoints 900 pixels or less
 
 
   ![Sublanding behavior
@@ -132,3 +149,4 @@ related_items: |-
   * Email signup
   * Contact information
 ---
+

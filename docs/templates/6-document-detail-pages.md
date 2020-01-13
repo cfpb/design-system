@@ -128,17 +128,18 @@ usage: >-
   #### Behavior
 
 
-  Below the 901 px breakpoint, the sidebar stacks below the main content area.
+  Below the 901 pixel breakpoint, the sidebar stacks below the main content
+  area.
 
 
-  ###### Breakpoints 901+
+  ###### Breakpoints 901 pixels or more
 
 
   ![Breakpoints
   901+](/design-system/images/uploads/docdetail_behavior_desktop.jpg)
 
 
-  ###### Breakpoints 900 and less
+  ###### Breakpoints 900 pixels or less
 
 
   ![Breakpoints 900 and
@@ -160,7 +161,7 @@ usage: >-
   601+](/design-system/images/uploads/post_preview_desktop_1.jpg)
 
 
-  ###### Breakpoints 600 and less
+  ###### Breakpoints 600 pixels or less
 
 
   ![Post preview within a filterable list at breakpoints 600 and
@@ -178,4 +179,6 @@ related_items: |-
   * Icons
   * Photography
   * Typography
+last_updated: 2020-01-13T23:29:43.319Z
 ---
+

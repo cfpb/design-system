@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-forms",
-  "version": "0.0.6",
+  "version": "0.0.5",
   "description": "Design System form fields",
   "less": "src/cfpb-forms.less",
   "style": "cfpb-forms.css",

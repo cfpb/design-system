@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/typography",
+  "name": "@cfpb/cfpb-typography",
   "version": "0.0.5",
   "description": "Design System typography",
   "less": "src/typography.less",

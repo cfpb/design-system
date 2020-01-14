@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/expandables",
+  "name": "@cfpb/cfpb-expandables",
   "version": "0.0.5",
   "description": "Design System expandables",
   "main": "src/cfpb-expandables.js",

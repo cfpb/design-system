@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/icons",
+  "name": "@cfpb/cfpb-icons",
   "version": "0.0.5",
   "description": "Design System icons",
   "less": "src/cfpb-icons.less",

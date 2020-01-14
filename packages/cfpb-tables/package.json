@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/tables",
+  "name": "@cfpb/cfpb-tables",
   "version": "0.0.5",
   "description": "Design System tables",
   "main": "src/cfpb-tables.js",

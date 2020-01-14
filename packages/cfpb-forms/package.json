@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/forms",
+  "name": "@cfpb/cfpb-forms",
   "version": "0.0.5",
   "description": "Design System form fields",
   "less": "src/cfpb-forms.less",

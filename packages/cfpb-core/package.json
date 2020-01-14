@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/core",
+  "name": "@cfpb/cfpb-core",
   "version": "0.0.5",
   "description": "Design System core styles",
   "less": "src/cfpb-core.less",

@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/design-system",
+  "name": "@cfpb/cfpb-design-system",
   "version": "0.0.5",
   "description": "CFPB's UI framework",
   "main": "src/cfpb-design-system.js",

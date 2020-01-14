@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/pagination",
+  "name": "@cfpb/cfpb-pagination",
   "version": "0.0.5",
   "description": "Design System pagination",
   "less": "src/cfpb-pagination.less",

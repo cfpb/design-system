@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/notifications",
+  "name": "@cfpb/cfpb-notifications",
   "version": "0.0.5",
   "description": "Design System notifications",
   "less": "src/cfpb-notifications.less",

@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/buttons",
+  "name": "@cfpb/cfpb-buttons",
   "version": "0.0.5",
   "description": "Design System buttons",
   "less": "src/cfpb-buttons.less",

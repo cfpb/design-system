@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/layout",
+  "name": "@cfpb/cfpb-layout",
   "version": "0.0.5",
   "description": "Design System layouts",
   "less": "src/cfpb-layout.less",

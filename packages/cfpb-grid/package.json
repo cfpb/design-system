@@ -1,5 +1,5 @@
 {
-  "name": "@cfpb/grid",
+  "name": "@cfpb/cfpb-grid",
   "version": "0.0.5",
   "description": "Design System grid",
   "less": "src/cfpb-grid.less",

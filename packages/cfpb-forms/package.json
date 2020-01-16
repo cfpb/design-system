@@ -8,10 +8,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/buttons": "^0.0.5",
-    "@cfpb/core": "^0.0.5",
-    "@cfpb/grid": "^0.0.5",
-    "@cfpb/icons": "^0.0.5"
+    "@cfpb/cfpb-buttons": "^0.0.5",
+    "@cfpb/cfpb-core": "^0.0.5",
+    "@cfpb/cfpb-grid": "^0.0.5",
+    "@cfpb/cfpb-icons": "^0.0.5"
   },
   "keywords": [
     "forms"

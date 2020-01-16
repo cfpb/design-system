@@ -21,18 +21,18 @@
     "url": "https://github.com/cfpb/design-system/issues"
   },
   "dependencies": {
-    "@cfpb/atomic-component": "^0.0.5",
-    "@cfpb/buttons": "^0.0.5",
-    "@cfpb/core": "^0.0.5",
-    "@cfpb/expandables": "^0.0.5",
-    "@cfpb/forms": "^0.0.5",
-    "@cfpb/grid": "^0.0.5",
-    "@cfpb/icons": "^0.0.5",
-    "@cfpb/layout": "^0.0.5",
-    "@cfpb/notifications": "^0.0.5",
-    "@cfpb/pagination": "^0.0.5",
-    "@cfpb/tables": "^0.0.5",
-    "@cfpb/typography": "^0.0.5"
+    "@cfpb/cfpb-atomic-component": "^0.0.5",
+    "@cfpb/cfpb-buttons": "^0.0.5",
+    "@cfpb/cfpb-core": "^0.0.5",
+    "@cfpb/cfpb-expandables": "^0.0.5",
+    "@cfpb/cfpb-forms": "^0.0.5",
+    "@cfpb/cfpb-grid": "^0.0.5",
+    "@cfpb/cfpb-icons": "^0.0.5",
+    "@cfpb/cfpb-layout": "^0.0.5",
+    "@cfpb/cfpb-notifications": "^0.0.5",
+    "@cfpb/cfpb-pagination": "^0.0.5",
+    "@cfpb/cfpb-tables": "^0.0.5",
+    "@cfpb/cfpb-typography": "^0.0.5"
   },
   "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
 }

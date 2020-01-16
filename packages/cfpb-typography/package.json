@@ -8,8 +8,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/core": "^0.0.5",
-    "@cfpb/icons": "^0.0.5"
+    "@cfpb/cfpb-core": "^0.0.5",
+    "@cfpb/cfpb-icons": "^0.0.5"
   },
   "keywords": [
     "typography"

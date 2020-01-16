@@ -8,9 +8,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/buttons": "^0.0.5",
-    "@cfpb/core": "^0.0.5",
-    "@cfpb/icons": "^0.0.5"
+    "@cfpb/cfpb-buttons": "^0.0.5",
+    "@cfpb/cfpb-core": "^0.0.5",
+    "@cfpb/cfpb-icons": "^0.0.5"
   },
   "keywords": [
     "pagination"

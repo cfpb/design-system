@@ -1,6 +1,6 @@
 import { Tabs } from 'govuk-frontend';
-import Expandable from '@cfpb/expandables/src/Expandable';
-import Table from '@cfpb/tables/src/Table';
+import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
+import Table from '@cfpb/cfpb-tables/src/Table';
 
 Expandable.init();
 Table.init();
@@ -12,7 +12,7 @@ if ( tabs ) {
   main.classList.add( 'js-enabled' );
   for ( let i = 0; i < tabs.length; i++ ) {
     const tab = tabs[i];
-    new Tabs( tab ).init( );
+    new Tabs( tab ).init();
   }
 }
 
@@ -23,17 +23,21 @@ const codeSnippets = document.querySelectorAll( '[data-toggle-code]' );
 const hideEls = els => els.forEach( el => el.classList.add( HIDDEN_CLASS ) );
 const showEls = els => els.forEach( el => el.classList.remove( HIDDEN_CLASS ) );
 
-toggleButton.addEventListener( 'click', ev => {
-  ev.preventDefault();
-  const codeIsHidden = toggleButton.getAttribute( 'data-code-hidden' );
-  if ( codeIsHidden ) {
-    showEls( codeSnippets );
-    toggleButton.removeAttribute( 'data-code-hidden' );
-  } else {
-    hideEls( codeSnippets );
-    toggleButton.setAttribute( 'data-code-hidden', 'true' );
-  }
-} );
+// This is the "Hide/show code & specs" button on component pages.
+
+if ( typeof toggleButton !== 'undefined' ) {
+  toggleButton.addEventListener( 'click', ev => {
+    ev.preventDefault();
+    const codeIsHidden = toggleButton.getAttribute( 'data-code-hidden' );
+    if ( codeIsHidden ) {
+      showEls( codeSnippets );
+      toggleButton.removeAttribute( 'data-code-hidden' );
+    } else {
+      hideEls( codeSnippets );
+      toggleButton.setAttribute( 'data-code-hidden', 'true' );
+    }
+  } );
+}
 
 /**
  * Create permalink elements for easy copy/paste of anchor links on specified heading elements.

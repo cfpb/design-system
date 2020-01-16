@@ -6,7 +6,7 @@
 
 
 const closest = require(
-  '@cfpb/atomic-component/src/utilities/dom-closest'
+  '@cfpb/cfpb-atomic-component/src/utilities/dom-closest'
 ).closest;
 
 const TableRowLinks = {

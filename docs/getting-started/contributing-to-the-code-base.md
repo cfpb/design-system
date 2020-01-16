@@ -5,7 +5,7 @@ section: getting-started
 secondary_section: Getting started
 description: >-
   There are two primary ways to help: using the issue tracker, and changing the
-  codebase.  
+  codebase.
 
 
   **Note:**  All contributions to this project will be released under the CC0
@@ -35,41 +35,41 @@ description: >-
 
   ### Sample workflow
 
-  For example, if you wanted to change `@cfpb/buttons` and use it in
+  For example, if you wanted to change `@cfpb/cfpb-buttons` and use it in
   [cfgov-refresh](https://github.com/cfpb/cfgov-refresh), here's what you'd do:
 
 
-  1. `git clone git@github.com:cfpb/design-system.git`, if you haven't already. 
+  1. `git clone git@github.com:cfpb/design-system.git`, if you haven't already.
 
-  2. `cd design-system` 
+  2. `cd design-system`
 
   3. `git checkout master && git pull` to ensure you're on the latest changes
-  (this step is not necessary when cloning for the first time). 
+  (this step is not necessary when cloning for the first time).
 
   4. `yarn` to install dependencies and set up
-  [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) 
+  [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
 
-  5. `git checkout -b button-fix` to create a new branch for your changes. 
+  5. `git checkout -b button-fix` to create a new branch for your changes.
 
-  6. Edit file(s) in `/packages/buttons/` however you want. 
+  6. Edit file(s) in `/packages/buttons/` however you want.
 
   7. `yarn run design-system-link` to
-  [link](https://yarnpkg.com/lang/en/docs/cli/link/) your local CF components. 
+  [link](https://yarnpkg.com/lang/en/docs/cli/link/) your local CF components.
 
   8. `cd ~/wherever/cfgov-refresh/` to navigate to another project where you'd
-  like to test your buttons changes (in this case, cfgov-refresh). 
+  like to test your buttons changes (in this case, cfgov-refresh).
 
-  9. `yarn link @cfpb/buttons` to link @cfpb/buttons to cfgov-refresh. 
+  9. `yarn link @cfpb/cfpb-buttons` to link @cfpb/cfpb-buttons to cfgov-refresh.
 
-  10. `gulp build` in cfgov-refresh to compile your stylesheets. 
+  10. `gulp build` in cfgov-refresh to compile your stylesheets.
 
   11. [Start cfgov-refresh](https://cfpb.github.io/cfgov-refresh/usage/) and
-  navigate to a page with buttons to view your @cfpb/buttons changes. 
+  navigate to a page with buttons to view your @cfpb/cfpb-buttons changes.
 
   12. When you're pleased with your changes, `cd` back to your `design-system`
-  repo and commit your changes: `git commit -am "Fix button border radius"` 
+  repo and commit your changes: `git commit -am "Fix button border radius"`
 
-  13. `git push origin button-fix` to push your branch up to GitHub. 
+  13. `git push origin button-fix` to push your branch up to GitHub.
 
   14. Go to https://github.com/cfpb/design-system and open a pull request to
   merge `button-fix` into `master`.
@@ -81,7 +81,7 @@ description: >-
   clicking the fork button on top of the repository and cloning your fork in
   step 1. In the final step, go to https://github.com/cfpb/design-system and
   file a pull request by clicking the link to compare changes across forks.
-     
+
   ### Updating Documentation
      The Design System's website lives in this repository's `docs/` directory and is powered by Netlify CMS and Jekyll. To edit any page of the website, click the edit button at the bottom right of the page. You'll need to be added as a contributor to this repository in order to authenticate with Netlify CMS.
 
@@ -104,10 +104,10 @@ description: >-
     * Internet Explorer
       * Internet Explorer 9
     http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+9
-    
+
       * Additional Autoprefixer support for Internet Explorer 8
     http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+8
-    What this means is that we add backwards compatibility for modern features where possible, and otherwise fall back to standard practices for that browser. For example, we don't deliver interactive scripting for Internet Explorer 8, but we do ensure that default browser features continue to work so users can access the site and its contents. 
+    What this means is that we add backwards compatibility for modern features where possible, and otherwise fall back to standard practices for that browser. For example, we don't deliver interactive scripting for Internet Explorer 8, but we do ensure that default browser features continue to work so users can access the site and its contents.
     * Edge
     * Opera
     * iOS Safari
@@ -123,7 +123,7 @@ description: >-
   #### Browser Testing
 
   For automated testing, we use a headless version of Chrome to ensure the
-  majority of the site is working as expected. 
+  majority of the site is working as expected.
 
 
   For manual testing, we test locally or in a virtual environment with the
@@ -149,9 +149,9 @@ description: >-
   #### Resources
 
 
-  * https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/  
+  * https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
 
-  * https://saucelabs.com/beta/dashboard/tests  
+  * https://saucelabs.com/beta/dashboard/tests
 
   * http://developer.samsung.com/remotetestlab/rtlDeviceList.action#
 
@@ -162,7 +162,7 @@ description: >-
   Ready to publish changes to npm?
 
 
-  1. Ensure you're on `master` and `git pull` to confirm you're up-to-date. 
+  1. Ensure you're on `master` and `git pull` to confirm you're up-to-date.
 
   2. Export a personal access token called
      [`GITHUB_AUTH`](https://github.com/lerna/lerna-changelog#github-token).
@@ -174,7 +174,7 @@ description: >-
      `documentation` or `internal`.
   4. If you're pleased with the changelog preview,
      `git checkout CHANGELOG.md` to reset it.
-  5. Run `yarn run release` to start the release. 
+  5. Run `yarn run release` to start the release.
 
   6. If all packages are shown as having been published,
      run `git push` to push changes to the remote `master` branch.
@@ -236,4 +236,3 @@ description: >-
   devices can use and one that does not require media query support.
 last_updated: 2019-09-13T18:35:13.321Z
 ---
-

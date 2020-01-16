@@ -55,9 +55,9 @@ description: >
 
   ```css
 
-  @import (less) "node_modules/cf-buttons/src/cfpb-buttons.less";
+  @import (less) "node_modules/@cfpb/cfpb-buttons/src/cfpb-buttons.less";
 
-  @import (less) "node_modules/cf-icons/src/cfpb-icons.less";
+  @import (less) "node_modules/@cfpb/cfpb-icons/src/cfpb-icons.less";
 
 
   /* the rest of your stylesheet… */
@@ -73,7 +73,7 @@ description: >
 
   ```js
 
-  import Expandable from '@cfpb/expandables/src/Expandable'';
+  import Expandable from '@cfpb/cfpb-expandables/src/Expandable'';
 
 
   Expandable.init( document.querySelector( '#container' ) );
@@ -278,4 +278,3 @@ description: >
   ```
 last_updated: 2019-09-13T13:48:42.692Z
 ---
-

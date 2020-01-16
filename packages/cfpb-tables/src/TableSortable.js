@@ -5,9 +5,9 @@
    ========================================================================== */
 
 
-const config = require( '@cfpb/atomic-component/src/utilities/config' );
+const config = require( '@cfpb/cfpb-atomic-component/src/utilities/config' );
 const closest = require(
-  '@cfpb/atomic-component/src/utilities/dom-closest'
+  '@cfpb/cfpb-atomic-component/src/utilities/dom-closest'
 ).closest;
 const DIRECTIONS = config.DIRECTIONS;
 const UNDEFINED = config.UNDEFINED;

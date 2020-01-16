@@ -1,8 +1,9 @@
 The @cfpb/notifications component provides notification boxes
 for Design System.
 
-[`@cfpb/core`](../core) and
-[`@cfpb/icons`](../icons) components are dependencies of this component.
+[`@cfpb/cfpb-core`](../core) and
+[`@cfpb/cfpb-icons`](../icons)
+components are dependencies of this component.
 
 ## Table of contents
 

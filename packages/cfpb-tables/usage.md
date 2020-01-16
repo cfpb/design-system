@@ -1,7 +1,7 @@
 The @cfpb/tables component formats tables, and provides an easy way to make tables sortable.
 
-The [`@cfpb/core`](../core/) component is a dependency of this component, and
-[base table styling is defined there](../core/#tables).
+The [`@cfpb/cfpb-core`](../cfpb-core/) component is a dependency of this component,
+and [base table styling is defined there](../cfpb-core/#tables).
 
 ## Table of contents
 
@@ -33,7 +33,7 @@ where this component's less file is imported.
 
 ### Color variables
 
-Color variables referenced in comments are from [@cfpb/core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/core/src/brand-colors.less).
+Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/cfpb-core/src/brand-colors.less).
 
 ```less
 @table-cell-bg:              @white;
@@ -48,7 +48,8 @@ Color variables referenced in comments are from [@cfpb/core's brand-colors.less]
 ## Standard tables
 
 A basic `o-table` table is not striped by default and is equivalent to defining
-a classless `<table>` element in `@cfpb/core`, [for example](../core/#standard-table).
+a classless `<table>` element in `@cfpb/cfpb-core`,
+[for example](../cfpb-core/#standard-table).
 
 ## Striped tables
 
@@ -236,7 +237,7 @@ highlighting and hyperlinking rows which contain links.
 
 ## Sortable tables
 
-The @cfpb/tables module also includes a sortable table utility.
+The @cfpb/cfpb-tables module also includes a sortable table utility.
 
 ### Making a table sortable
 

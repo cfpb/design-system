@@ -8,8 +8,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/core": "^0.0.5",
-    "@cfpb/grid": "^0.0.5"
+    "@cfpb/cfpb-core": "^0.0.5",
+    "@cfpb/cfpb-grid": "^0.0.5"
   },
   "keywords": [
     "layout"

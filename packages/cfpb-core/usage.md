@@ -1,8 +1,8 @@
-The @cfpb/core component acts as the backbone for Design System.
+The @cfpb/cfpb-core component acts as the backbone for Design System.
 It's made up of four child components `vars`, `media-queries`,
 `utilities`, and `base`.
 
-> NOTE: If you use any @cfpb/core Less file directly,
+> NOTE: If you use any @cfpb/cfpb-core Less file directly,
   be sure to run the files through
   [Autoprefixer](https://github.com/postcss/autoprefixer),
   or your compiled Design System CSS will
@@ -61,7 +61,7 @@ where this component's less file is imported.
 
 ### Color variables
 
-Color variables referenced in comments are from [@cfpb/core brand-palette.less](https://github.com/cfpb/capital-framework/blob/master/src/@cfpb/core/src/@cfpb/brand-colors.less).
+Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.less](https://github.com/cfpb/design-system/blob/master/packages/cfpb-core/src/brand-colors.less).
 
 ```
 // body

@@ -1,7 +1,8 @@
 A set of HTML and CSS layout helpers.
 
-[`@cfpb/core`](../core) and [`@cfpb/grid`](../grid) components are
-dependencies of this component.
+[`@cfpb/cfpb-core`](../core) and
+[`@cfpb/cfpb-grid`](../grid)
+components are dependencies of this component.
 
 ## Table of contents
 
@@ -61,7 +62,7 @@ where this component's less file is imported.
 
 ### Color variables
 
-Color variables referenced in comments are from [@cfpb/core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/core/src/brand-colors.less).
+Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/cfpb-core/src/brand-colors.less).
 
 ```
 // .block
@@ -1239,11 +1240,11 @@ and should not be used in production._
 ```
 
 
-## @cfpb/grid helpers
+## @cfpb/cfpb-grid helpers
 
 ### .wrapper (base)
 
-Turns an element into a @cfpb/grid wrapper at `801px` and above. Includes some
+Turns an element into a @cfpb/cfpb-grid wrapper at `801px` and above. Includes some
 explicit declarations for Internet Explorer 8 due to the fact that it doesn't
 support media queries.
 
@@ -1259,7 +1260,7 @@ support media queries.
 
 ### Column divider modifiers
 
-@cfpb/grid columns use left and right `border` for fixed `margin` which means it's
+@cfpb/cfpb-grid columns use left and right `border` for fixed `margin` which means it's
 not possible to set visual left and right borders directly on them.
 Instead we can use the `:before` pseudo element and position it absolutely.
 The added benefit of doing it this way is that the `border` spans the entire

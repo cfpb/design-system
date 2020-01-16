@@ -1,8 +1,10 @@
 The @cfpb/forms component provides extensions to the basic form styles for
 Design System.
 
-[`@cfpb/core`](../core), [`@cfpb/buttons`](../buttons), and
-[`@cfpb/icons`](../icons) components are all dependencies of this component.
+[`@cfpb/cfpb-core`](../core),
+[`@cfpb/cfpb-buttons`](../buttons), and
+[`@cfpb/cfpb-icons`](../icons)
+components are all dependencies of this component.
 
 ## Table of contents
 
@@ -43,7 +45,7 @@ where this component's less file is imported.
 
 ### Color variables
 
-Color variables referenced in comments are from [@cfpb/core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/cfpb-core/src/brand-colors.less).
+Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/cfpb-core/src/brand-colors.less).
 
 ```less
 // .a-text-input borders

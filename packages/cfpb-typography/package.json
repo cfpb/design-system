@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-typography",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Design System typography",
   "less": "src/typography.less",
   "style": "typography.css",

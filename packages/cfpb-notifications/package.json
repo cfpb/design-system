@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-notifications",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Design System notifications",
   "less": "src/cfpb-notifications.less",
   "style": "cfpb-notifications.css",

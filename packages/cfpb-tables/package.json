@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-tables",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Design System tables",
   "main": "src/cfpb-tables.js",
   "less": "src/cfpb-tables.less",
@@ -9,11 +9,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/cfpb-atomic-component": "^0.0.5",
-    "@cfpb/cfpb-core": "^0.0.5"
+    "@cfpb/cfpb-atomic-component": "^0.0.6",
+    "@cfpb/cfpb-core": "^0.0.6"
   },
   "keywords": [
     "tables"
   ],
-  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
+  "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e"
 }

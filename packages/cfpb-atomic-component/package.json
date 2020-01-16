@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-atomic-component",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Design System atomic component micro-framework",
   "less": "src/cfpb-atomic-component.less",
   "style": "cfpb-atomic-component.css",
@@ -13,5 +13,5 @@
   "keywords": [
     "atomic-component"
   ],
-  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
+  "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e"
 }

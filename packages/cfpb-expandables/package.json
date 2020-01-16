@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-expandables",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Design System expandables",
   "main": "src/cfpb-expandables.js",
   "less": "src/cfpb-expandables.less",
@@ -9,12 +9,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/cfpb-atomic-component": "^0.0.5",
-    "@cfpb/cfpb-core": "^0.0.5",
-    "@cfpb/cfpb-icons": "^0.0.5"
+    "@cfpb/cfpb-atomic-component": "^0.0.6",
+    "@cfpb/cfpb-core": "^0.0.6",
+    "@cfpb/cfpb-icons": "^0.0.6"
   },
   "keywords": [
     "expandable"
   ],
-  "gitHead": "bd49776b414bd9a12e1360eb042df97fafe1396f"
+  "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e"
 }

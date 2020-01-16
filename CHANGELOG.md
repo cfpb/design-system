@@ -1,4 +1,15 @@
 
+## Unreleased (2020-01-16)
+
+#### :house: Internal
+* `cfpb-buttons`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#401](https://github.com/cfpb/design-system/pull/401) Bump dependencies ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 
 
 

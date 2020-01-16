@@ -9,9 +9,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/cfpb-atomic-component": "^0.0.6",
-    "@cfpb/cfpb-core": "^0.0.6",
-    "@cfpb/cfpb-icons": "^0.0.6"
+    "@cfpb/cfpb-atomic-component": "^0.0.7",
+    "@cfpb/cfpb-core": "^0.0.7",
+    "@cfpb/cfpb-icons": "^0.0.7"
   },
   "keywords": [
     "expandable"

@@ -23,7 +23,7 @@ Molecules are prefixed with “m-” in CSS, JavaScript, and HTML files.
 
 ```html
 <div class="m-notification">
-    <span class="m-notification_icon @cfpb/icon"></span>
+    <span class="m-notification_icon cf-icon"></span>
     <div class="m-notification_content" role="alert">
         <div class="h4 m-notification_message">message</div>
             <p class="h4 m-notification_explanation">

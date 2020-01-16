@@ -16,17 +16,17 @@ The Consumer Financial Protection Bureau's user interface framework and document
 Install components using yarn or npm:
 
 ```sh
-yarn add @cfpb/buttons
+yarn add @cfpb/cfpb-buttons
 # or
-npm install @cfpb/buttons
+npm install @cfpb/cfpb-buttons
 ```
 
 Or you can install all components at once:
 
 ```sh
-yarn add @cfpb/design-system
+yarn add @cfpb/cfpb-design-system
 # or
-npm install @cfpb/design-system
+npm install @cfpb/cfpb-design-system
 ```
 
 
@@ -35,10 +35,10 @@ npm install @cfpb/design-system
 Import individual Less stylesheets or the entire design system into your project:
 
 ```less
-@import '@cfpb/buttons/src/cfpb-buttons.less';
-@import '@cfpb/typography/src/cfpb-typography.less';
+@import '@cfpb/cfpb-buttons/src/cfpb-buttons.less';
+@import '@cfpb/cfpb-typography/src/cfpb-typography.less';
 // or
-@import '@cfpb/design-system/src/cfpb-design-system.less';
+@import '@cfpb/cfpb-design-system/src/cfpb-design-system.less';
 
 // the rest of your stylesheet...
 ```
@@ -46,7 +46,7 @@ Import individual Less stylesheets or the entire design system into your project
 Components with JavaScript can also be imported:
 
 ```js
-import Expandable from '@cfpb/expandables/src/Expandable'';
+import Expandable from '@cfpb/cfpb-expandables/src/Expandable'';
 
 Expandable.init( document.querySelector( '#container' ) );
 ```

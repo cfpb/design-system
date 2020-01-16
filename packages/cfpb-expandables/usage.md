@@ -2,8 +2,9 @@ Expandables are components that have additional content that can be
 opened (expanded) and closed (collapsed). They can appear on their own
 or in groups.
 
-[`@cfpb/core`](../@cfpb/core) and [`@cfpb/icons`](../@cfpb/icons) components are
-dependencies of this component.
+[`@cfpb/cfpb-core`](../@cfpb/cfpb-core) and
+[`@cfpb/cfpb-icons`](../@cfpb/cfpb-icons)
+components are dependencies of this component.
 
 ## Table of contents
 
@@ -37,7 +38,7 @@ where this component's less file is imported.
 
 ### Color variables
 
-Color variables referenced in comments are from [@cfpb/core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/cfpb-core/src/brand-colors.less).
+Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/cfpb-core/src/brand-colors.less).
 
 
 ```

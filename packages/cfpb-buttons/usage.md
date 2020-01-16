@@ -1,10 +1,11 @@
 The @cfpb/buttons component provides extensions to the basic button styles for
 CFPB's Design System.
 
-[`@cfpb/core`](../@cfpb/core) and [`@cfpb/icons`](../@cfpb/icons) components are all
-dependencies of this component.
+[`@cfpb/cfpb-core`](../@cfpb/cfpb-core) and
+[`@cfpb/cfpb-icons`](../@cfpb/cfpb-icons)
+components are all dependencies of this component.
 
-> NOTE: If you use `@cfpb/buttons.less` directly,
+> NOTE: If you use `@cfpb/cfpb-buttons.less` directly,
   be sure to run the file through
   [Autoprefixer](https://github.com/postcss/autoprefixer),
   or your compiled CSS will
@@ -37,7 +38,7 @@ where this component's less file is imported.
 
 ### Color variables
 
-Color variables referenced in comments are from [@cfpb/core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/core/src/brand-colors.less).
+Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/master/packages/cfpb-core/src/brand-colors.less).
 
 ```
 // .btn

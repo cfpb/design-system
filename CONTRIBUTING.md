@@ -27,7 +27,7 @@ We work off feature branches from the `master` branch.
 After you've edited a component,
 open a Pull Request to merge your feature branch back into `master`.
 
-For example, if you wanted to change `@cfpb/buttons` and use it in
+For example, if you wanted to change `@cfpb/cfpb-buttons` and use it in
 [cfgov-refresh](https://github.com/cfpb/cfgov-refresh),
 here's what you'd do:
 
@@ -36,12 +36,12 @@ here's what you'd do:
 1. `git checkout master && git pull` to ensure you're on the latest changes (this step is not necessary when cloning for the first time).
 1. `yarn` to install dependencies and set up [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
 1. `git checkout -b button-fix` to create a new branch for your changes.
-1. Edit file(s) in `/packages/buttons/` however you want.
+1. Edit file(s) in `/packages/cfpb-buttons/` however you want.
 1. `yarn run design-system-link` to [link](https://yarnpkg.com/lang/en/docs/cli/link/) your local CF components.
 1. `cd ~/wherever/cfgov-refresh/` to navigate to another project where you'd like to test your buttons changes (in this case, cfgov-refresh).
-1. `yarn link @cfpb/buttons` to link @cfpb/buttons to cfgov-refresh.
+1. `yarn link @cfpb/cfpb-buttons` to link @cfpb/cfpb-buttons to cfgov-refresh.
 1. `gulp build` in cfgov-refresh to compile your stylesheets.
-1. [Start cfgov-refresh](https://cfpb.github.io/cfgov-refresh/usage/) and navigate to a page with buttons to view your @cfpb/buttons changes.
+1. [Start cfgov-refresh](https://cfpb.github.io/cfgov-refresh/usage/) and navigate to a page with buttons to view your @cfpb/cfpb-buttons changes.
 1. When you're pleased with your changes, `cd` back to your `design-system` repo and commit your changes: `git commit -am "Fix button border radius"`
 1. `git push origin button-fix` to push your branch up to GitHub.
 1. Go to https://github.com/cfpb/design-system and open a pull request to merge `button-fix` into `master`.

@@ -3,10 +3,10 @@
    ========================================================================== */
 
 const closest = require(
-  '@cfpb/atomic-component/src/utilities/dom-closest'
+  '@cfpb/cfpb-atomic-component/src/utilities/dom-closest'
 ).closest;
-const Events = require( '@cfpb/atomic-component/src/mixins/Events.js' );
-const Organism = require( '@cfpb/atomic-component/src/components/Organism' );
+const Events = require( '@cfpb/cfpb-atomic-component/src/mixins/Events.js' );
+const Organism = require( '@cfpb/cfpb-atomic-component/src/components/Organism' );
 const ExpandableTransition = require( './ExpandableTransition' );
 
 const Expandable = Organism.extend( {

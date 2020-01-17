@@ -13,7 +13,7 @@ variations:
   - variation_code_snippet: |-
       <aside class="m-pull-quote">
           <p class="m-pull-quote_body">
-             "You miss 100% of the shots you don't take - Wayne Gretzky"  
+             "You miss 100% of the shots you don't take - Wayne Gretzky"
           </p>
           <footer>
               <cite class="m-pull-quote_citation">
@@ -39,8 +39,6 @@ variations:
     variation_description: ''
     variation_name: Large pull quote
 usage: ''
-restrictions: []
 accessibility: ''
 research: ''
 ---
-

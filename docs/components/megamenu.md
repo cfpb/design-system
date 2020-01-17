@@ -108,23 +108,21 @@ usage: >-
 
   ##### Link character counts
 
-  - Links should be 20 characters or less, including spaces. 
+  - Links should be 20 characters or less, including spaces.
 
   - Two exceptions per column can be made for longer links. These longer links
   can be 30-35 characters with spaces **maximum** (e.g. “Managing someone else’s
-  money”).  
-   
+  money”).
+
 
   #### Editorial guidelines
     - Links should be in alphabetical order and written in title case
     - Ampersands ("&") should be used in place of the word "and"
-    - See previous section for link limits and character count guidance 
+    - See previous section for link limits and character count guidance
     - Links should generally be straightforward and self-explanatory, avoiding jargon or brand names that might be difficult for users to understand
     - Links should generally go to [consumerfinance.gov](https://www.consumerfinance.gov) pages only
     - Links should reflect page titles, but don't necessarily have to duplicate them verbatim
-restrictions: []
 accessibility: ''
 research: ''
 last_updated: 2019-09-17T14:36:40.318Z
 ---
-

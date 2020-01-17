@@ -26,15 +26,10 @@ description: >-
   1. Our mega menu is based on industry standards around web development and
   user expectations around interactions. The mega menu works:
 
-
-  * across our supported browsers,
-
-  * across different browser sizes (and not just device form factors),
-
-  * across the spectrum of user ability levels or technology familiarity, and
-
-  * in line with the standard interactions for different assistive techniques.
-
+    * across our supported browsers,
+    * across different browser sizes (and not just device form factors),
+    * across the spectrum of user ability levels or technology familiarity, and
+    * in line with the standard interactions for different assistive techniques.
 
   2. Our mega menu is designed to be equitable and provides full navigational
   support to all users. This includes users with physical disabilities, hearing
@@ -44,14 +39,17 @@ description: >-
   percentage within our larger user base. We do not ignore the needs of the few
   to only focus on the many.
 
+
   3. Our mega menu fully aligns with the WCAG core accessibility principles
   known as POUR: every part of it is perceivable, operable, understandable, and
   robust for all users.
+
 
   4. Our mega menu is built mobile-first with semantic code to focus on the
   content and navigation elements within it. It’s designed to work with the
   interaction defaults of both JAWS and Apple VoiceOver. The visual design
   supports all of these factors and doesn’t supersede them.
+
 
   5. We maintain a good mega menu experience for our users and actively work to
   improve it. All the designers and developers in the department read, share,
@@ -77,6 +75,7 @@ usage: >-
 
 
   ### General mega menu content guidelines
+
 
   #### Maximum number of links
 

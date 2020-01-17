@@ -39,14 +39,14 @@ variations:
               {% include icons/mail.svg %}
               <span class="a-link_text">john.smith@cfpb.gov</span>
           </a>.
-          Documents minicons can emphasize a link that contains a 
+          Documents minicons can emphasize a link that contains a
           <a class="a-link
                     a-link__icon"
              href="#">
               <span class="a-link_text">file or document</span>
               {% include icons/download.svg %}
           </a>.
-          Use the external link minicon to emphasize 
+          Use the external link minicon to emphasize
           <a class="a-link
                     a-link__icon"
              href="#">
@@ -205,9 +205,7 @@ usage: >-
   `aria-label="Learn why some county data are unavailable. (Link opens in new
   tab.)"` This meets [WCAG guideline 3.2 that webpages should work in a
   predictable way](https://www.w3.org/TR/WCAG20-TECHS/G201.html).
-restrictions: []
 accessibility: ''
 research: ''
 last_updated: 2019-09-17T14:52:22.684Z
 ---
-

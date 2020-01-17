@@ -171,8 +171,6 @@ usage: >-
 
   ![Inset breakpoint
   320](/design-system/images/uploads/email-sign-up_learn_320.png)
-restrictions: []
 accessibility: ''
 research: ''
 ---
-

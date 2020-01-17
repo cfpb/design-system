@@ -219,7 +219,6 @@ usage: >
 
   * Can be used for an even or odd number of items and may imply a hierarchy of
   information given the list style format.
-restrictions: []
 accessibility: ''
 research: ''
 related_items: '* Link blobs (Design System page in progress)'
@@ -248,4 +247,3 @@ help_us: >-
   [cf-layout](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
 last_updated: 2019-09-17T14:27:23.333Z
 ---
-

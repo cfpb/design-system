@@ -1,4 +1,19 @@
 
+## Unreleased (2020-01-22)
+
+#### :bug: Bug Fix
+* `cfpb-forms`, `cfpb-icons`
+  * [#408](https://github.com/cfpb/design-system/pull/408) Fix misnamed icon utility ([@anselmbradford](https://github.com/anselmbradford))
+
+#### :house: Internal
+* [#407](https://github.com/cfpb/design-system/pull/407) Create yarn.lock ([@anselmbradford](https://github.com/anselmbradford))
+* [#404](https://github.com/cfpb/design-system/pull/404) Remove empty restrictions (bug) ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## Unreleased (2020-01-16)
 
 #### :house: Internal

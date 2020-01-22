@@ -18,7 +18,7 @@ module.exports = {
      * @param {string} svgFillColor - The fill color of the icon (defaults to CFPB Black).
      * @returns {string} SVG icon markup.
      */
-    functions.add( '@cfpb/icons-svg-inline', ( svgName, svgFillColor ) => {
+    functions.add( 'icons-svg-inline', ( svgName, svgFillColor ) => {
       // Retrieve this plugin script's path so we can fake __dirname.
       const thisScriptPath = pluginManager.installedPlugins[0].filename;
 

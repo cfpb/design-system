@@ -35,7 +35,7 @@
     "@cfpb/netlify-cms": "1.19.0",
     "escape-html": "^1.0.3",
     "ftdomdelegate": "^3.0.0",
-    "govuk-frontend": "3.4.0",
+    "govuk-frontend": "3.5.0",
     "html-entities": "^1.2.1",
     "marked": "0.8.0",
     "normalize-css": "^2.3.1",

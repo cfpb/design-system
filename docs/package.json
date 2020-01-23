@@ -2,9 +2,19 @@
   "name": "@cfpb/cfpb-design-system",
   "version": "1.0.0",
   "description": "CFPB Design System documentation website",
-  "homepage": "https://github.com/cfpb/design-system",
+  "homepage": "https://cfpb.github.io/design-system/",
   "license": "MIT",
-  "main": "dist/main.js",
+  "scripts": {
+    "start": "parallelshell \"bundle exec jekyll serve --watch --host=localhost\" \"yarn run watch\" \"yarn run watch-css\"",
+    "compile-js": "NODE_ENV=production webpack",
+    "compile-css": "lessc --include-path=../packages/:../node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/main.css",
+    "copy-icons": "cp -r ../packages/cfpb-icons/src/icons assets/",
+    "watch-css": "less-watch-compiler --less-args include-path=../packages/:../node_modules/normalize-css/normalize-css/ assets/css dist/css main.less",
+    "watch": "webpack --watch",
+    "build": "yarn run compile-js && yarn run compile-css && bundle exec jekyll build",
+    "build-netlify": "yarn --cwd ../ && webpack && yarn run compile-css && bundle exec jekyll build",
+    "install": "yarn run copy-icons && bundle install"
+  },
   "devDependencies": {
     "@babel/core": "7.8.3",
     "@babel/plugin-proposal-class-properties": "7.8.3",
@@ -19,17 +29,6 @@
     "parallelshell": "3.0.1",
     "webpack": "4.41.5",
     "webpack-cli": "^3.3.10"
-  },
-  "scripts": {
-    "start": "parallelshell \"bundle exec jekyll serve --watch --host=localhost\" \"yarn run watch\" \"yarn run watch-css\"",
-    "compile-js": "NODE_ENV=production webpack",
-    "compile-css": "lessc --include-path=../packages/:../node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/main.css",
-    "copy-icons": "cp -r ../packages/cfpb-icons/src/icons assets/",
-    "watch-css": "less-watch-compiler --less-args include-path=../packages/:../node_modules/normalize-css/normalize-css/ assets/css dist/css main.less",
-    "watch": "webpack --watch",
-    "build": "yarn run compile-js && yarn run compile-css && bundle exec jekyll build",
-    "build-netlify": "yarn --cwd ../ && webpack && yarn run compile-css && bundle exec jekyll build",
-    "install": "yarn run copy-icons && bundle install"
   },
   "dependencies": {
     "@cfpb/netlify-cms": "1.19.0",

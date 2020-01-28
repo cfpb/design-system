@@ -2,24 +2,8 @@
   "name": "@cfpb/cfpb-design-system",
   "version": "1.0.0",
   "description": "CFPB Design System documentation website",
-  "homepage": "https://github.com/cfpb/design-system",
+  "homepage": "https://cfpb.github.io/design-system/",
   "license": "MIT",
-  "main": "dist/main.js",
-  "devDependencies": {
-    "@babel/core": "7.8.3",
-    "@babel/plugin-proposal-class-properties": "7.8.3",
-    "@babel/plugin-proposal-object-rest-spread": "7.8.3",
-    "@babel/plugin-syntax-export-extensions": "^7.0.0-beta.32",
-    "@babel/preset-env": "7.8.3",
-    "@babel/preset-react": "7.8.3",
-    "babel-loader": "^8.0.6",
-    "copy-webpack-plugin": "^5.1.1",
-    "html-loader": "^0.5.5",
-    "less-watch-compiler": "^1.14.1",
-    "parallelshell": "3.0.1",
-    "webpack": "4.41.5",
-    "webpack-cli": "^3.3.10"
-  },
   "scripts": {
     "start": "parallelshell \"bundle exec jekyll serve --watch --host=localhost\" \"yarn run watch\" \"yarn run watch-css\"",
     "compile-js": "NODE_ENV=production webpack",
@@ -31,6 +15,20 @@
     "build-netlify": "yarn --cwd ../ && webpack && yarn run compile-css && bundle exec jekyll build",
     "install": "yarn run copy-icons && bundle install"
   },
+  "devDependencies": {
+    "@babel/core": "7.8.3",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.8.3",
+    "@babel/plugin-syntax-export-extensions": "^7.0.0-beta.32",
+    "@babel/preset-env": "7.8.3",
+    "@babel/preset-react": "7.8.3",
+    "babel-loader": "^8.0.6",
+    "html-loader": "^0.5.5",
+    "less-watch-compiler": "^1.14.1",
+    "parallelshell": "3.0.1",
+    "webpack": "4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
   "dependencies": {
     "@cfpb/netlify-cms": "1.19.0",
     "escape-html": "^1.0.3",
@@ -41,6 +39,6 @@
     "normalize-css": "^2.3.1",
     "normalize-legacy-addon": "^0.1.0",
     "react": "16.12.0",
-    "react-liquid": "^1.2.0"
+    "react-liquid": "1.3.0"
   }
 }

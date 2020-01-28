@@ -5036,10 +5036,10 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-liquid@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-liquid/-/react-liquid-1.2.0.tgz#8a968a2e8b9b5606a073ba6cb142d743d57e4a3f"
-  integrity sha512-LxG36Y+dNMs1EdLEoVSZ6e07sC9oSWCqY2n0TnmgpiT0rt5Tnw+1kIAWfYxjgsHU5lWUyuHpU0Cmu0cngFtMCw==
+react-liquid@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-liquid/-/react-liquid-1.3.0.tgz#7d37fb47fa10a431233375b4db787feecda84a14"
+  integrity sha512-+4MOUiJ5EOJUTpfeQdPqwzHIErD5is3YotT7P586sGg9FKnHNoDrMCda/Cv5K11BBfAcQVfzNxlJtVHLorqrFw==
   dependencies:
     liquidjs "^6.0.0"
 

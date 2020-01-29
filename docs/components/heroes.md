@@ -529,5 +529,5 @@ usage: >-
   smaller photographic hero graphic with dimensions")
 accessibility: ''
 research: ''
+last_updated: 2020-01-28T15:55:47.394Z
 ---
-

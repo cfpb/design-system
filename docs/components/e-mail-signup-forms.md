@@ -173,4 +173,5 @@ usage: >-
   320](/design-system/images/uploads/email-sign-up_learn_320.png)
 accessibility: ''
 research: ''
+last_updated: 2020-01-28T15:55:47.394Z
 ---

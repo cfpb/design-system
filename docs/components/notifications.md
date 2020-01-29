@@ -269,5 +269,5 @@ accessibility: >-
   different accessibility needs (color blind users, visually impaired users,
   users with motor control issues, etc.).
 research: ''
+last_updated: 2020-01-28T15:55:47.394Z
 ---
-

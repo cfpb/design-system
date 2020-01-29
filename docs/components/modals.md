@@ -3,7 +3,7 @@ title: Modals
 layout: variation
 section: components
 secondary_section: Alerts
-status: Released
+status: Beta
 description: >-
   Modal windows (also known as dialog boxes or lightboxes) are “pop-up” elements
   that appear in front of a web page, blocking the main page below. Similar to
@@ -215,4 +215,6 @@ usage: >-
   * Offscreen interaction instructions should use aria-labelledby attribute.
 accessibility: ''
 research: ''
+last_updated: 2020-01-29T19:07:36.411Z
 ---
+

@@ -36,4 +36,5 @@ usage: >-
   a specific number.
 accessibility: Make sure that sliders are accessible by keyboard using the arrow keys
 research: ''
+last_updated: 2020-01-28T15:55:47.394Z
 ---

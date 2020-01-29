@@ -54,27 +54,27 @@ variations:
     variation_name: Default pagination
   - variation_code_snippet: >-
       <nav class="m-pagination" role="navigation" aria-label="Pagination">    <a
-      class="a-btn              a-btn__disabled             
+      class="a-btn              a-btn__disabled
       m-pagination_btn-prev">        <span class="a-btn_icon
-      a-btn_icon__on-left">{% include icons/left.svg %}</span>        Newer   
-      </a>    <a class="a-btn              m-pagination_btn-next"      
+      a-btn_icon__on-left">{% include icons/left.svg %}</span>        Newer
+      </a>    <a class="a-btn              m-pagination_btn-next"
       href="?page=2#pagination_content">        Older        <span
       class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg
-      %}</span>    </a>    <form class="m-pagination_form"         
+      %}</span>    </a>    <form class="m-pagination_form"
       action="#pagination_content">        <label
-      class="m-pagination_label"              
+      class="m-pagination_label"
       for="m-pagination_current-page">            Page            <span
-      class="u-visually-hidden">                number 1 out           
+      class="u-visually-hidden">                number 1 out
       </span>            <input
-      class="m-pagination_current-page"                  
-      id="m-pagination_current-page"                  
-      name="page"                   type="number"                  
-      min="1"                   max="149"                  
-      pattern="[0-9]*"                   inputmode="numeric"                  
+      class="m-pagination_current-page"
+      id="m-pagination_current-page"
+      name="page"                   type="number"
+      min="1"                   max="149"
+      pattern="[0-9]*"                   inputmode="numeric"
       value="1">            of 149        </label>        <button
-      class="a-btn                       a-btn__link                      
-      m-pagination_btn-submit"               
-      id="m-pagination_btn-submit"                type="submit">Go</button>   
+      class="a-btn                       a-btn__link
+      m-pagination_btn-submit"
+      id="m-pagination_btn-submit"                type="submit">Go</button>
       </form></nav>
     variation_description: ''
     variation_jinja_code_snippet: ''
@@ -116,4 +116,5 @@ usage: >-
   perfectly in older browsers.
 accessibility: ''
 research: ''
+last_updated: 2020-01-28T15:55:47.394Z
 ---

@@ -34,4 +34,5 @@ usage: |-
   * Use a white outline or stroke to create contrast between the slices.
 accessibility: ''
 research: ''
+last_updated: 2020-01-28T15:55:47.394Z
 ---

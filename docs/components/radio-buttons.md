@@ -104,4 +104,5 @@ related_items: >-
 
   *
   [https://cfpb.github.io/capital-framework/components/cf-forms/#basic-radio-buttons](http://cfpb.github.io/design-manual/page-components/form-fields.html#radio-buttons)
+last_updated: 2020-01-28T15:55:47.394Z
 ---

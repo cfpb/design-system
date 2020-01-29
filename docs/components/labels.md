@@ -27,8 +27,8 @@ variations:
       [fieldset](https://cfpb.github.io/design-system/components/fieldsets).
     variation_name: Basic legend
 usage: ''
-accessibility: |+
-
+accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z
 ---
+

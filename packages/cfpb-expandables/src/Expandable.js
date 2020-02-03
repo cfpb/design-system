@@ -54,6 +54,7 @@ function initialize() {
     this.ui.target.classList.add( this.classes.targetExpanded );
   } else {
     this.ui.target.classList.add( this.classes.targetCollapsed );
+    this.ui.content.classList.add('u-hidden');
   }
 
   const expandableGroup = closest( this.ui.target, '.' + this.classes.group );

@@ -25,7 +25,7 @@ const showEls = els => els.forEach( el => el.classList.remove( HIDDEN_CLASS ) );
 
 // This is the "Hide/show code & specs" button on component pages.
 
-if ( typeof toggleButton !== 'undefined' ) {
+if ( toggleButton !== null ) {
   toggleButton.addEventListener( 'click', ev => {
     ev.preventDefault();
     const codeIsHidden = toggleButton.getAttribute( 'data-code-hidden' );

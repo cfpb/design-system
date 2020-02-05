@@ -47,11 +47,14 @@ function initialize() {
     this.ui.content
   );
   this.transition = transition.init();
+  this.transition.addEventListener( 'expandBegin', expandBeginHandler.bind( this ) );
+  this.transition.addEventListener( 'collapseEnd', collapseEndHandler.bind( this ) );
 
   if ( this.ui.content.classList.contains( ExpandableTransition.CLASSES.EXPANDED ) ) {
     this.ui.target.classList.add( this.classes.targetExpanded );
   } else {
     this.ui.target.classList.add( this.classes.targetCollapsed );
+    this.ui.content.classList.add( 'u-hidden' );
   }
 
   const expandableGroup = closest( this.ui.target, '.' + this.classes.group );
@@ -93,6 +96,20 @@ function expandableClickHandler() {
       this.activeAccordion = true;
     }
   }
+}
+
+/**
+ * Event handler for when an expandable begins expanding.
+ */
+function expandBeginHandler() {
+  this.ui.content.classList.remove( 'u-hidden' );
+}
+
+/**
+ * Event handler for when an expandable is finished collapsing.
+ */
+function collapseEndHandler() {
+  this.ui.content.classList.add( 'u-hidden' );
 }
 
 /**

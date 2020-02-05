@@ -7,7 +7,7 @@
         .o-expandable__padded
         .o-expandable__background
     And use these for child div where the navigation links are:
-        .o-expandable_content 
+        .o-expandable_content
         .nav-secondary
    ========================================================================== */
 
@@ -32,6 +32,7 @@
             .respond-to-min(@bp-med-min, {
                 max-height: initial !important;
                 overflow: visible;
+                display: block;
             });
         }
     }
@@ -158,7 +159,7 @@
 
     // Add custom border with smaller gutter between sidebar and main content for secondary nav
     .respond-to-min(@bp-med-min, {
-        
+
         .content_sidebar {
             border-right-color: @content_sidebar-bg;
         }
@@ -173,5 +174,5 @@
         }
 
     });
-        
+
 }

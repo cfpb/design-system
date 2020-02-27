@@ -6,6 +6,11 @@
 
     &__column-3 &_cards {
         grid-template-columns: repeat( 3, minmax( 0, 1fr ) );
+
+        // Convert to 2-column layout at small screen sizes;
+        .respond-to-max( @bp-med-min, {
+            grid-template-columns: 1fr 1fr;
+        } );
     }
 
     &_cards {

@@ -397,7 +397,11 @@ variations:
     variation_code_snippet: |-
         <article class="m-card m-card__featured">
             <a class="" href="#">
-                <div class="m-card_icon">{% include icons/idea.svg %}</div>
+                <h2 class="m-card_heading">
+                    <div class="m-card_icon">
+                        {% include icons/idea.svg %}
+                    </div>
+                </h2>
                 <p>
                     Have a problem with a financial product or service?
                 </p>
@@ -418,7 +422,11 @@ variations:
             <div class="o-card-group_cards">
                 <article class="m-card m-card__featured">
                     <a class="" href="#">
-                        <div class="m-card_icon">{% include icons/complaint.svg %}</div>
+                        <h2 class="m-card_heading">
+                            <div class="m-card_icon">
+                                {% include icons/complaint.svg %}
+                            </div>
+                        </h2>
                         <p>
                             Have a problem with a financial product or service?
                         </p>
@@ -430,7 +438,11 @@ variations:
 
                 <article class="m-card m-card__featured">
                     <a class="" href="#">
-                        <div class="m-card_icon">{% include icons/idea.svg %}</div>
+                        <h2 class="m-card_heading">
+                            <div class="m-card_icon">
+                                {% include icons/idea.svg %}
+                            </div>
+                        </h2>
                         <p>
                             Have a question on a financial topic?
                             Browse answers to hundreds of financial questions.
@@ -443,7 +455,11 @@ variations:
 
                 <article class="m-card m-card__featured">
                     <a class="" href="#">
-                        <div class="m-card_icon">{% include icons/open-quote.svg %}</div>
+                        <h2 class="m-card_heading">
+                            <div class="m-card_icon">
+                                {% include icons/open-quote.svg %}
+                            </div>
+                        </h2>
                         <p>
                             Tell us your experiences with money
                             and financial services. The CFPB is listening.

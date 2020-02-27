@@ -47,8 +47,7 @@ usage: >-
   * Employee awards, commendations, and certificates from the Director 
 
   * Delegations of Authority from the Director
-restrictions:
-  - {}
+restrictions: []
 last_updated: 2020-02-27T16:56:46.952Z
 ---
 

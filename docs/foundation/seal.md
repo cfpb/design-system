@@ -3,7 +3,7 @@ title: Seal
 layout: variation
 section: foundation
 secondary_section: Brand guidelines
-status: Proposed
+status: Released
 description: >-
   The seal was created as a symbol of CFPB to use in uniquely governmental and
   ceremonial contexts.

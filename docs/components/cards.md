@@ -121,7 +121,7 @@ variations:
 
                     <p class="m-card_footer">
                         <a href="#">
-                            Learn more about bank accounts
+                            Learn more about auto loans
                         </a>
                     </p>
                 </article>
@@ -154,7 +154,7 @@ variations:
 
                     <p class="m-card_footer">
                         <a href="#">
-                            Learn more about bank accounts
+                            Learn more about credit cards
                         </a>
                     </p>
                 </article>
@@ -236,7 +236,7 @@ variations:
 
                     <p class="m-card_footer">
                         <a href="#">
-                            Learn more about bank accounts
+                            Learn more about auto loans
                         </a>
                     </p>
                 </article>
@@ -269,7 +269,7 @@ variations:
 
                     <p class="m-card_footer">
                         <a href="#">
-                            Learn more about bank accounts
+                            Learn more about credit cards
                         </a>
                     </p>
                 </article>
@@ -350,7 +350,7 @@ variations:
 
                     <p class="m-card_footer">
                         <a href="#">
-                            Learn more about bank accounts
+                            Learn more about auto loans
                         </a>
                     </p>
                 </article>
@@ -383,7 +383,7 @@ variations:
 
                     <p class="m-card_footer">
                         <a href="#">
-                            Learn more about bank accounts
+                            Learn more about credit cards
                         </a>
                     </p>
                 </article>

@@ -14,7 +14,7 @@ variations:
     variation_code_snippet: |-
         <article class="m-card">
             <h2 class="m-card_heading">
-                <a class="" href="#">
+                <a href="#">
                     <div class="m-card_icon">{% include icons/idea.svg %}</div>
                     <span>Bank accounts</span>
                 </a>
@@ -56,7 +56,7 @@ variations:
             <div class="o-card-group_cards">
                 <article class="m-card">
                     <h2 class="m-card_heading">
-                        <a class="" href="#">
+                        <a href="#">
                             <div class="m-card_icon">{% include icons/idea.svg %}</div>
                             <span>Bank accounts</span>
                         </a>
@@ -92,7 +92,7 @@ variations:
 
                 <article class="m-card">
                     <h2 class="m-card_heading">
-                        <a class="" href="#">
+                        <a href="#">
                             <div class="m-card_icon">{% include icons/car.svg %}</div>
                             <span>Auto loans</span>
                         </a>
@@ -128,7 +128,7 @@ variations:
 
                 <article class="m-card">
                     <h2 class="m-card_heading">
-                        <a class="" href="#">
+                        <a href="#">
                             <div class="m-card_icon">{% include icons/credit-card.svg %}</div>
                             <span>Credit cards</span>
                         </a>
@@ -165,13 +165,13 @@ variations:
   - variation_name: Card group - two column
     variation_description: |-
         A group of cards broken into two columns.
-        The `o-card-group__column-2` modifier is added.
+        The `.o-card-group__column-2` modifier is added.
     variation_code_snippet: |-
         <div class="o-card-group o-card-group__column-2">
             <div class="o-card-group_cards">
                 <article class="m-card">
                     <h2 class="m-card_heading">
-                        <a class="" href="#">
+                        <a href="#">
                             <div class="m-card_icon">{% include icons/idea.svg %}</div>
                             <span>Bank accounts</span>
                         </a>
@@ -207,7 +207,7 @@ variations:
 
                 <article class="m-card">
                     <h2 class="m-card_heading">
-                        <a class="" href="#">
+                        <a href="#">
                             <div class="m-card_icon">{% include icons/car.svg %}</div>
                             <span>Auto loans</span>
                         </a>
@@ -243,7 +243,7 @@ variations:
 
                 <article class="m-card">
                     <h2 class="m-card_heading">
-                        <a class="" href="#">
+                        <a href="#">
                             <div class="m-card_icon">{% include icons/credit-card.svg %}</div>
                             <span>Credit cards</span>
                         </a>
@@ -279,13 +279,13 @@ variations:
   - variation_name: Card group - three column
     variation_description: |-
         A group of cards broken into three columns.
-        The `o-card-group__column-3` modifier is added.
+        The `.o-card-group__column-3` modifier is added.
     variation_code_snippet: |-
         <div class="o-card-group o-card-group__column-3">
             <div class="o-card-group_cards">
                 <article class="m-card">
                     <h2 class="m-card_heading">
-                        <a class="" href="#">
+                        <a href="#">
                             <div class="m-card_icon">{% include icons/idea.svg %}</div>
                             <span>Bank accounts</span>
                         </a>
@@ -321,7 +321,7 @@ variations:
 
                 <article class="m-card">
                     <h2 class="m-card_heading">
-                        <a class="" href="#">
+                        <a href="#">
                             <div class="m-card_icon">{% include icons/car.svg %}</div>
                             <span>Auto loans</span>
                         </a>
@@ -357,7 +357,7 @@ variations:
 
                 <article class="m-card">
                     <h2 class="m-card_heading">
-                        <a class="" href="#">
+                        <a href="#">
                             <div class="m-card_icon">{% include icons/credit-card.svg %}</div>
                             <span>Credit cards</span>
                         </a>
@@ -393,10 +393,10 @@ variations:
   - variation_name: Featured Card
     variation_description: |-
         A single featured card.
-        The `m-card__featured` modifier is added.
+        The `.m-card__featured` modifier is added.
     variation_code_snippet: |-
         <article class="m-card m-card__featured">
-            <a class="" href="#">
+            <a href="#">
                 <h2 class="m-card_heading">
                     <div class="m-card_icon">
                         {% include icons/idea.svg %}
@@ -414,14 +414,14 @@ variations:
   - variation_name: Featured card group
     variation_description: |-
         A group of featured cards together with a heading and green background.
-        The `o-card-group__bg-green` modifier is added to the group and
-        the `m-card__featured` modifier is added to the cards.
+        The `.o-card-group__bg-green` modifier is added to the group and
+        the `.m-card__featured` modifier is added to the cards.
     variation_code_snippet: |-
         <div class="o-card-group o-card-group__column-3 o-card-group__bg-green">
             <h2>We want to hear from you</h2>
             <div class="o-card-group_cards">
                 <article class="m-card m-card__featured">
-                    <a class="" href="#">
+                    <a href="#">
                         <h2 class="m-card_heading">
                             <div class="m-card_icon">
                                 {% include icons/complaint.svg %}
@@ -437,7 +437,7 @@ variations:
                 </article>
 
                 <article class="m-card m-card__featured">
-                    <a class="" href="#">
+                    <a href="#">
                         <h2 class="m-card_heading">
                             <div class="m-card_icon">
                                 {% include icons/idea.svg %}
@@ -454,7 +454,7 @@ variations:
                 </article>
 
                 <article class="m-card m-card__featured">
-                    <a class="" href="#">
+                    <a href="#">
                         <h2 class="m-card_heading">
                             <div class="m-card_icon">
                                 {% include icons/open-quote.svg %}

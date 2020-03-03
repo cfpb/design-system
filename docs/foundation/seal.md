@@ -67,8 +67,8 @@ restrictions:
       should be ¼” of the seal’s size.  
 
       * Place the seal on a white background. The only other color the seal may
-      be placed on is navy, and this is reserved for select cases, such as CFPB'
-      flag.
+      be placed on is navy, and this is reserved for select cases, such as the
+      CFPB's flag.
     restrictions_do_not: >-
       * Don’t stretch or condense the seal. This weakens the brand.  
 
@@ -84,6 +84,56 @@ restrictions:
 
       * Don't place the seal on a background that is a pattern, photo, or color
       other than white or navy.
+related_items: |-
+  ## Color 
+
+  The seal is comprised of the following colors.
+
+  <h4>Dark Navy</h4> 
+
+  **CMYK:** 100, 80, 6, 32 
+
+  **RGB:** 0, 45, 114 
+
+  **PMS:** 288C 
+
+  <br/>
+
+  <h4>Beige</h4> 
+
+  **CMYK:** 0, 10, 50, 30 
+
+  **RGB:** 190, 169, 111 
+
+  **PMS:** 4515C 
+
+  <br/>
+
+  <h4>Mid beige</h4> 
+
+  **CMYK:** 0, 6, 30, 18 
+
+  **RGB:** 216, 200, 160 
+
+  **PMS:** 4515C 60% 
+
+  <br/>
+
+  <h4>Light beige</h4>
+
+  **CMYK:** 0, 2, 10, 6 
+
+  **RGB:** 240, 232, 216 
+
+  **PMS:** 4515C 30% 
+
+  <br/>
+
+  <h4>White</h4>
+
+  **CMYK:** 0, 0, 0, 0 
+
+  **RGB:** 255, 255, 255
 last_updated: 2020-02-27T16:56:46.952Z
 ---
 

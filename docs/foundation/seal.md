@@ -56,7 +56,34 @@ usage: >-
   * Employee awards, commendations, and certificates from the Director 
 
   * Delegations of Authority from the Director
-restrictions: []
+restrictions:
+  - restrictions_do: >-
+      * Use the seal at its benchmark size of 1.75” for most materials, such as
+      a report cover. For materials such as signage and flags where the seal
+      needs to appear larger, increase the seal's size in increments of 0.5”.  
+
+      * Use ample space around the seal to ensure maximum impact and keep the
+      mark from looking cluttered. The clear space on each side of the seal
+      should be ¼” of the seal’s size.  
+
+      * Place the seal on a white background. The only other color the seal may
+      be placed on is navy, and this is reserved for select cases, such as CFPB'
+      flag.
+    restrictions_do_not: >-
+      * Don’t stretch or condense the seal. This weakens the brand.  
+
+      * Don’t alter the text of the seal in any way. 
+
+      * Don’t remove design or text elements from the seal.  
+
+      * Don’t apply a drop shadow. 
+
+      * Don’t outline the seal or change its colors. 
+
+      * Don’t rotate the seal. This impairs readability. 
+
+      * Don't place the seal on a background that is a pattern, photo, or color
+      other than white or navy.
 last_updated: 2020-02-27T16:56:46.952Z
 ---
 

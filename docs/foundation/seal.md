@@ -85,7 +85,7 @@ restrictions:
       * Don't place the seal on a background that is a pattern, photo, or color
       other than white or navy.
 related_items: |-
-  ## Color 
+  ## Color
 
   The seal is comprised of the following colors.
 
@@ -97,8 +97,6 @@ related_items: |-
 
   **PMS:** 288C 
 
-  <br/>
-
   <h4>Beige</h4> 
 
   **CMYK:** 0, 10, 50, 30 
@@ -106,8 +104,6 @@ related_items: |-
   **RGB:** 190, 169, 111 
 
   **PMS:** 4515C 
-
-  <br/>
 
   <h4>Mid beige</h4> 
 
@@ -117,8 +113,6 @@ related_items: |-
 
   **PMS:** 4515C 60% 
 
-  <br/>
-
   <h4>Light beige</h4>
 
   **CMYK:** 0, 2, 10, 6 
@@ -126,8 +120,6 @@ related_items: |-
   **RGB:** 240, 232, 216 
 
   **PMS:** 4515C 30% 
-
-  <br/>
 
   <h4>White</h4>
 

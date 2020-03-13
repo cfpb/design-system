@@ -5,7 +5,16 @@ section: components
 secondary_section: Navigation
 status: Released
 description: >-
-  ## Design principles
+  <p style="padding-bottom:20px">The mega menu groups related links in a
+  compact, easy-to-access fashion for both desktop and mobile breakpoints. Our
+  mega menu is divided into five main sections: Consumer Tools, Practitioner
+  Resources, Data and Research, Policy and Compliance, and About Us.</p>
+
+
+  <hr>
+
+
+  <h2 style="padding-top:20px"> Design principles</h2>
 
 
   **The mega menu works everywhere.** Our mega menu is based on industry
@@ -52,68 +61,139 @@ description: >-
   make sure that we’re continually aware of how users are using it and able to
   make necessary adjustments over time as needed. We also usability test the
   mega menu with external users as a part of the monitoring process.
+variations:
+  - variation_description: >-
+      ### Desktop 
+
+      [mockup]  
 
 
-  The [consumerfinance.gov](https://www.consumerfinance.gov) website mega menu
-  is composed of five verticals: Consumer Tools, Practitioner Resources, Data &
-  Research, Policy & Compliance, and About Us. **The visual layout, spacing, and
-  some portion of the content guidelines will change in the near future, as we
-  monitor analytics information.**
-variations: []
+      #### Breakpoints
+
+      Appears at 901 px + 
+
+
+      #### Structure
+
+      - 4 columns @ 25% width 
+
+      - Navigation link list spacing is dictated by atom 
+
+
+      #### Font
+
+      - Overview page links: 20 px 
+
+      - Page and featured links: 16 px 
+
+      - Spacing takes into account minimum touch target size requirements
+
+      - Character counts and editorial guidelines are in the "Usage" section
+
+
+      #### Interaction patterns
+
+      - Menu opens and closes on click
+
+
+      #### Other notes
+
+      - Menu is cropped on both sides
+
+      - Drop shadow: #000, 20% transparency, bottom/right 5px 
+
+      - When opened, the mega menu should be superimposed over the green stroke
+      from the header organism
+
+
+      #### Content guidelines for desktop
+
+      Character counts and editorial guidelines are found below in the "Usage"
+      section.
+
+      - Max 7 page links each in columns 1-3
+        - These may be grouped across 1-2 columns with labels.  
+        - No more than 2 sets of grouped links per menu. See Consumer Tools for an example. 
+        - If a menu has two sets of grouped links, one set can have 14 links maximum, the other section up to 7 links maximum. 
+      - Max 3 page links in column 4. 
+        - These must be a standalone group, and not spillover links from column 3.  
+      - Max 2 featured items ONLY if there are no additional page links in
+      column 4. 
+
+
+      <hr>
+    variation_name: Desktop
+  - variation_description: >+
+      ### Mobile 
+
+
+      [gif or image]
+
+
+      #### Breakpoints
+
+      - 320-900 px 
+       
+      #### Structure
+
+      - Mega menu contains 2 levels of navigation
+        - Mega menu previously contained 3 levels, in Policy & Compliance and in About Us > Careers, but analytics review showed these weren't being used
+        - “In this section” expandable is considered a 4th level of navigation for mobile, and appears primarily on browse pages 
+      - The submit a complaint link and eyebrow content that appears in the
+      header at desktop breakpoints are relocated to the bottom of level 1 of
+      the mega menu 
+
+      - Links appear in one column, as a list 
+
+      - Page content is covered with a 60% opacity black overlay  
+
+
+      #### Interaction patterns
+
+      - Sequential menu where selecting one level of navigation will replace the
+      current level displayed 
+
+      - Right-facing green carets indicate 2nd level of navigation
+
+      - Hamburger icon transitions into a close button to allow users to close
+      the menu 
+
+      - “Back” button appears on level 2 to return users to level 1
+
+      - Both close and back buttons get the same background color: #e7e8e9 
+
+    variation_name: Mobile
 usage: >-
   This section contains general guidelines that govern mega menu usage,
   specifically addressing recommended link limits, character counts and
   editorial guidelines.
 
 
-  ### General mega menu content guidelines
+  ### Link character counts
 
 
-  #### Maximum number of links
-
-  Analytics review suggests that 7 links per column should be the maximum,
-  assuming space on top of the menu for a section overview page.
-
-
-  - Around 70% of desktop visitors to
-  [consumerfinance.gov](https://www.consumerfinance.gov) have a screen height of
-  768 px or more. At that screen height, 7 is the maximum number of links that
-  users see before items below are cut off, assuming 5 links around 20
-  characters or less with spaces, and 2 links up to 35-40 characters with
-  spaces. This also assumes no extra browser chrome, such as an address or
-  bookmark bar, and flush placement of browser window to top of screen.
-
-  - Research also shows 7 is around the maximum number of items that one can
-  scan and comfortably hold in short-term memory. The idea is to minimize
-  cognitive load by grouping like items into categories that can be easily
-  scanned and that line up with the user's mental models.
-
-  - For a vertical with two sections, one section can have 14 links maximum, the
-  other section up to 7 links maximum, given space for a featured item, which
-  occupies the fourth column. (There should be no more than three main sections
-  in a vertical, but it's easier for users to scan up to two.)
-
-  - If a section of links spans two columns, the number of links should be
-  evenly distributed between columns.
+  * Page links: 20 characters or less, including spaces
+    * Two exceptions per column for longer links, which can be 30-35 characters with spaces maximum (e.g. “Managing someone else’s money”)
+  * Featured link: 45 characters or less, including spaces
 
 
 
-  ##### Link character counts
-
-  - Links should be 20 characters or less, including spaces.
-
-  - Two exceptions per column can be made for longer links. These longer links
-  can be 30-35 characters with spaces **maximum** (e.g. “Managing someone else’s
-  money”).
+  ### Editorial guidelines
 
 
-  #### Editorial guidelines
-    - Links should be in alphabetical order and written in title case
-    - Ampersands ("&") should be used in place of the word "and"
-    - See previous section for link limits and character count guidance
-    - Links should generally be straightforward and self-explanatory, avoiding jargon or brand names that might be difficult for users to understand
-    - Links should generally go to [consumerfinance.gov](https://www.consumerfinance.gov) pages only
-    - Links should reflect page titles, but don't necessarily have to duplicate them verbatim
+  * Order links alphabetically
+
+  * Use title case
+
+  * Use ampersands (“&” instead of “and”)
+
+  * Be concise. Avoid jargon or brand names that might be difficult to
+  understand
+
+  * Link to consumerfinance.gov pages only, where possible
+
+  * Links should reflect page titles, but don’t necessarily have to duplicate
+  them verbatim
 accessibility: ''
 research: ''
 last_updated: 2019-09-17T14:36:40.318Z

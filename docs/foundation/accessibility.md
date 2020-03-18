@@ -340,6 +340,25 @@ description: >-
 
 
   Note that this is specific to HTML and does not include CSS.
+usage: >-
+  ## Testing accessibility issues
+
+
+  ### Using WAVE
+
+
+  The [WAVE extension](https://wave.webaim.org/extension/) can be installed in
+  your browser and used to check for issues on the page as they relate to
+  accessibility issues.
+
+
+  ### Using VoiceOver
+
+
+  VoiceOver can be used as a screenreader on Mac.
+
+   - To enable VoiceOver, press _command + f5_.
+   - With VoiceOver enabled, optionally enable the "rotor" by pressing _control +option+U_.
 last_updated: 2019-12-10T22:50:48.793Z
 ---
 

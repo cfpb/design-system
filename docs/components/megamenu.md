@@ -6,7 +6,7 @@ secondary_section: Navigation
 status: Released
 description: >-
   ## Summary of [consumerfinance.gov](https://www.consumerfinance.gov) mega menu
-  design principles
+  design principles 
 
 
   1. The mega menu works everywhere.

@@ -32,10 +32,7 @@ variations:
       sidebar](/design-system/images/uploads/sublanding_exampleb.jpg) |
     variation_name: Sublanding page variations
 usage: >-
-  #### Use case
-
-
-  ##### When to use
+  #### When to use
 
 
   * When creating a new topic area within one of the main navigation verticals.
@@ -45,7 +42,7 @@ usage: >-
   the specific content that will meet their needs.
 
 
-  ##### When other options are better
+  #### When other options are better
 
   * When page content includes multiple paragraphs of copy or more detailed
   definitions or explanations.
@@ -123,18 +120,14 @@ usage: >-
   area.
 
 
-  ##### Breakpoints 901 pixels or more
+  | 901 pixels or more | 900 pixels or less |
 
+  | -- | -- | 
 
+  | ![Sublanding behavior
+  desktop](/design-system/images/uploads/sublanding_behavior_desktop.jpg) |
   ![Sublanding behavior
-  desktop](/design-system/images/uploads/sublanding_behavior_desktop.jpg)
-
-
-  ##### Breakpoints 900 pixels or less
-
-
-  ![Sublanding behavior
-  mobile](/design-system/images/uploads/sublanding_behavior_mobile.jpg)
+  mobile](/design-system/images/uploads/sublanding_behavior_mobile.jpg) |
 related_items: |-
   * Hero
   * Text introduction (with optional breakout sidebar)

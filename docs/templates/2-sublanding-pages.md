@@ -18,19 +18,19 @@ description: >-
 variations:
   - variation_code_snippet: ''
     variation_description: >-
-      ![Sublanding page with
-      hero](/design-system/images/uploads/sublanding_examplea.jpg)
-    variation_name: Sublanding page with hero
-  - variation_code_snippet: ''
-    variation_description: >-
+
+
+      | With hero | With text introduction | With breakout sidebar |
+
+      | --- | --- | --- | 
+
+      | ![Sublanding page with
+      hero](/design-system/images/uploads/sublanding_examplea.jpg) |
       ![Sublanding page with text
-      introduction](/design-system/images/uploads/sublanding_examplec.jpg)
-    variation_name: Sublanding page with text introduction
-  - variation_code_snippet: ''
-    variation_description: >-
+      introduction](/design-system/images/uploads/sublanding_examplec.jpg) |
       ![Sublanding page with breakout
-      sidebar](/design-system/images/uploads/sublanding_exampleb.jpg)
-    variation_name: Sublanding page with breakout sidebar
+      sidebar](/design-system/images/uploads/sublanding_exampleb.jpg) |
+    variation_name: Sublanding page variations
 usage: >-
   #### Use case
 
@@ -148,5 +148,5 @@ related_items: |-
   * Related posts / Related links
   * Email signup
   * Contact information
+last_updated: 2020-03-30T16:36:53.821Z
 ---
-

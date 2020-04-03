@@ -1,4 +1,4 @@
-import CMS from '@cfpb/netlify-cms';
+import CMS from 'netlify-cms';
 import { default as componentsPreviewTemplate } from './widgets/componentsPreviewTemplate';
 import { Preview as navPreview } from './widgets/navigationPreviewTemplate';
 

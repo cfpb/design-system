@@ -1,7 +1,7 @@
 <section class="content_main">
 
     <div class="component-header u-mb30">
-        <h1 class="superheading">
+        <h1>
             {{ page.title }}
         </h1>
     {% if page.variations %}
@@ -71,7 +71,7 @@
     {% if page.variations %}
     <section class="sticky-header u-mb45">
         <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+        <div class="content_line__wide content_line content_line u-mb20"></div>
         {% for variation in page.variations %}
         <div class="u-mb30">
             <!-- Name -->
@@ -249,7 +249,7 @@
     {% if page.restrictions != empty and page.restrictions or page.usage and page.usage != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="usage">Usage</h2>
-            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+            <div class="content_line__wide content_line content_line u-mb20"></div>
                 {% if page.usage and page.usage != '' %}
                     <p>
                     {{ page.usage | markdownify }}
@@ -298,7 +298,7 @@
     {% if page.accessibility and page.accessibility != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="accessibility">Accessibility</h2>
-            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+            <div class="content_line__wide content_line content_line u-mb20"></div>
             <p>
                 {{ page.accessibility | markdownify }}
             </p>
@@ -308,7 +308,7 @@
     {% if page.research and page.research != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="research">Research</h2>
-            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+            <div class="content_line__wide content_line content_line u-mb20"></div>
             <p>
                 {{ page.research | markdownify }}
             </p>
@@ -321,7 +321,7 @@
             <div>
                 <section>
                     <h2 id="related-items">Related Items</h2>
-                    <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
                     {{ page.related_items | markdownify }}
                 </section>
             </div>
@@ -333,7 +333,7 @@
             <div>
                 <section>
                     <h2 id="help-us">Help us make improvements</h2>
-                    <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
                     {{ page.help_us | markdownify }}
                 </section>
             </div>

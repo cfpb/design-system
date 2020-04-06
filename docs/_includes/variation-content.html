@@ -27,14 +27,7 @@
 
     </div>
 
-    {% if page.description %}
-        <section id="description" class="u-mb30" class="lead-paragraph">
-            {{ page.description | markdownify }}
-        </section>
-    {% endif %}
-
-
-    <ul class="m-list m-list__horizontal u-mb45">
+    <ul class="m-list m-list__horizontal u-mb30">
         {% if page.variations %}
         <li class="m-list_item">
             <a class="m-list_link" href="#variations">Variations</a>
@@ -61,6 +54,12 @@
         </li>
         {% endif %}
     </ul>
+
+    {% if page.description %}
+        <section id="description" class="u-mb30" class="lead-paragraph">
+            {{ page.description | markdownify }}
+        </section>
+    {% endif %}
 
     {% if page.variations %}
     <section class="sticky-header u-mb45">

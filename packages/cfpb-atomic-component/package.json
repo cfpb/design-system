@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-atomic-component",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Design System atomic component micro-framework",
   "less": "src/cfpb-atomic-component.less",
   "style": "cfpb-atomic-component.css",

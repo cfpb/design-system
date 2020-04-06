@@ -2,9 +2,22 @@
    Header
    ========================================================================== */
 
-.site-header {
+.site-header {    
     .content-l_col + .content-l_col {
         margin-top: 0;
+    }
+}
+
+.title_heading {
+
+    font-size: unit( 16px / @base-font-size-px, em );
+
+    a {
+        color: @gray;
+    }
+
+    .demi {
+        font-weight: bold;
     }
 }
 
@@ -19,7 +32,7 @@
 .respond-to-min( @bp-xs-max, {
 
     .site-header {
-        padding: unit( 20px / @base-font-size-px, em ) 0 0;
+        padding: unit( 30px / @base-font-size-px, em ) 0;
         border-bottom: 4px solid @green;
 
         .content-l_col {
@@ -29,10 +42,10 @@
 
     .title_heading {
         font-size: unit( 16px / @base-font-size-px, em );
+        margin: 0;
     }
 
     .global-nav {
-        padding-bottom: unit( 8px / @base-font-size-px, em );
         text-align: right;
     }
 
@@ -45,14 +58,11 @@
         .u-inline-block;
         margin-right: 20px;
         a {
-            color: @black;
-            padding-bottom: 10px;
             &:hover,
             &:focus,
             &:active,
             &.active {
                 text-decoration: underline;
-                color: @black;
             }
         }
     }
@@ -68,11 +78,6 @@
     }
     .global-nav_list {
         font-size: unit( 16px / @base-font-size-px, em );
-    }
-    .nav-list-item {
-        a {
-            padding-bottom: 16px;
-        }
     }
 } );
 

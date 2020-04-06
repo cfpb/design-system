@@ -4,7 +4,7 @@ import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
 import Table from '@cfpb/cfpb-tables/src/Table';
 
 const anchors = new AnchorJS();
-anchors.add();
+anchors.add('h2:not(.title_heading), h3, h4, h5');
 
 Expandable.init();
 Table.init();

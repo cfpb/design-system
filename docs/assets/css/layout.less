@@ -1,0 +1,7 @@
+// taken from enhancements/layout.less
+
+.wrapper__match-content {
+    .respond-to-min(@bp-sm-min, {
+        max-width: @grid_wrapper-width - ( @grid_gutter-width * 2 );
+    });
+}

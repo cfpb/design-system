@@ -19,8 +19,14 @@
   </script>
 </head>
 <body class="t-{{ page.layout }}">
-    <!-- Google Tag Manager code -->
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <!-- Google Tag Manager code -->
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <div class="skip-nav">
+    <a class="skip-nav_link" href="#main">
+        Skip to main content
+    </a>
+  </div>
+  {% include global-eyebrow.html %}
   <div class="body-wrapper">
     {% include header.html %}
     {{ content }}

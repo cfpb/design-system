@@ -104,7 +104,7 @@
                 {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
                 <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
                     <div class="variation-code-snippet">
-                        <h5 class="variation-code-snippet-title">HTML code snippet</h5>
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
                         </div>
@@ -116,7 +116,7 @@
                 {% if variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '' %}
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
                     <div class="variation-jinja-code-snippet">
-                        <h5 class="variation-jinja-code-snippet-title">Jinja code snippet</h5>
+                        <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">{{ variation.variation_jinja_code_snippet | xml_escape }}</code></pre>
                         </div>
@@ -152,9 +152,9 @@
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
                                     <header class="m-slug-header">
-                                        <h5 class="a-heading">
+                                        <h4 class="a-heading">
                                             Do
-                                        </h5>
+                                        </h4>
                                     </header>
                                     <p>
                                     {{ restriction.restrictions_do | markdownify }}
@@ -166,9 +166,9 @@
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
                                     <header class="m-slug-header m-slug-header__warning">
-                                        <h5 class="a-heading">
+                                        <h4 class="a-heading">
                                             Do not
-                                        </h5>
+                                        </h4>
                                     </header>
                                     <p>
                                     {{ restriction.restrictions_do_not | markdownify }}

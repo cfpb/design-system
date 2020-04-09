@@ -34,6 +34,8 @@
 // Hack for Edge/IE to convert grid to a floated block layout.
 // See https://jeffclayton.wordpress.com/2015/04/07/css-hacks-for-windows-10-and-spartan-browser-preview/
 // Necessitated because of https://stackoverflow.com/questions/46743722/items-in-css-grid-in-ie-superimposed-on-each-other
+
+/* stylelint-disable selector-type-no-unknown */
 _:-ms-lang(x),.o-card-group_cards {
     display: block;
 
@@ -48,7 +50,8 @@ _:-ms-lang(x),.o-card-group__column-2 {
     .o-card-group_cards .m-card {
         width: 48%;
         margin-right: 2%;
-    }.o-card-group_cards .m-card:last-child {
+    }
+    .o-card-group_cards .m-card:last-child {
         margin-right: 0;
     }
 }
@@ -68,3 +71,4 @@ _:-ms-lang(x),.o-card-group:after {
     display: table;
     clear: both;
 }
+/* stylelint-enable selector-type-no-unknown */

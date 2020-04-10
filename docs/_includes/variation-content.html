@@ -1,7 +1,7 @@
 <section class="content_main">
 
     <div class="component-header u-mb30">
-        <h1 class="superheading">
+        <h1>
             {{ page.title }}
         </h1>
     {% if page.variations %}
@@ -25,22 +25,9 @@
 
     {% endif %}
 
-    {% if page.status %}
-    <div class="a-badge status-{{ page.status }}">
-        {{ page.status }}
-    </div>
-    {% endif %}
-
     </div>
 
-    {% if page.description %}
-        <section id="description" class="u-mb30" class="lead-paragraph">
-            {{ page.description | markdownify }}
-        </section>
-    {% endif %}
-
-
-    <ul class="m-list m-list__horizontal u-mb45">
+    <ul class="m-list m-list__horizontal u-mb30">
         {% if page.variations %}
         <li class="m-list_item">
             <a class="m-list_link" href="#variations">Variations</a>
@@ -68,14 +55,20 @@
         {% endif %}
     </ul>
 
+    {% if page.description %}
+        <section id="description" class="u-mb30" class="lead-paragraph">
+            {{ page.description | markdownify }}
+        </section>
+    {% endif %}
+
     {% if page.variations %}
     <section class="sticky-header u-mb45">
         <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+        <div class="content_line__wide content_line content_line u-mb20"></div>
         {% for variation in page.variations %}
         <div class="u-mb30">
             <!-- Name -->
-            <h3 class="h5">{{ variation.variation_name }}</h3>
+            <h3>{{ variation.variation_name }}</h3>
 
             <!-- Description -->
             {{ variation.variation_description | markdownify }}
@@ -87,13 +80,14 @@
             </div>
             {% endif %}
 
-            {% if variation.variation_code_snippet or variation.variation_jinja_code_snippet %}
+            {% if variation.variation_code_snippet and variation.variation_code_snippet != '' and
+                  variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != ''%}
 
             <div class="govuk-tabs u-mt30" data-module="tabs"  data-toggle-code>
                 <ul class="govuk-tabs__list">
                     {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
-                    <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet-{{ forloop.index }}">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#html-code-snippet-{{ forloop.index }}">
                             HTML code snippet
                         </a>
                     </li>
@@ -111,7 +105,7 @@
                 {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
                 <section class="govuk-tabs__panel" id="html-code-snippet-{{ forloop.index }}">
                     <div class="variation-code-snippet">
-                        <h5 class="variation-code-snippet-title">HTML code snippet</h5>
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
                         </div>
@@ -123,7 +117,7 @@
                 {% if variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '' %}
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-{{ forloop.index }}">
                     <div class="variation-jinja-code-snippet">
-                        <h5 class="variation-jinja-code-snippet-title">Jinja code snippet</h5>
+                        <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">{{ variation.variation_jinja_code_snippet | xml_escape }}</code></pre>
                         </div>
@@ -132,112 +126,6 @@
                 {% endif %}
 
             </div><!-- .govuk-tabs -->
-            {% endif %}
-
-            {% assign tokens = site.data.cfpb-design-tokens %}
-
-            {% if tokens %}
-
-                {% comment %}
-                    Create an arrary of all the design token columns
-                {% endcomment %}
-                {% assign column_names = "Specification,Variable,Value,Pixels,Ems,Points,Seconds,Inches,Hex,RGB,CMYK,Pantone" | split: "," %}
-
-                {% comment %}
-                    Initalize empty arrays to store the rows and columns
-                    applicable to the current variation
-                {% endcomment %}
-                {% assign rows = "" | split: "/" %}
-                {% assign columns = "" | split: "/" %}
-
-                {% for token in tokens %}
-
-                    {% comment %}
-                        Keep track of the current token's location and create
-                        an array of all the variations that use this token
-                        in the spreadsheet
-                    {% endcomment %}
-                    {% assign token_index = forloop.index %}
-                    {% assign token_variations = token["Website section"] | remove: " " | split: "," %}
-
-                    {% comment %}
-                        Create a slugified version of the current variation to
-                        compare to the variations in the spreadsheet
-                    {% endcomment %}
-                    {% capture full_variation_name %}{{ page.title | slugify }}_{{ variation.variation_name | slugify }}{% endcapture %}
-
-                    {% comment %}
-                        For each variation listed next to this token in the
-                        spreadsheet, check if it's the same as the current
-                        variation. If it is, record the row number.
-                        Then go through each cell and check if there's a
-                        value provided. If there is, record the column name.
-                    {% endcomment %}
-                    {% for token_variation in token_variations %}
-                        {% if token_variation == full_variation_name %}
-                            {% assign token_index = token_index | minus: 1 %}
-                            {% assign rows = rows | push: token_index %}
-                            {% for column_name in column_names %}
-                                {% if token[column_name] %}
-                                    {% assign columns = columns | push: column_name %}
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-
-                {% endfor %}
-
-                {% if rows.size > 0 %}
-
-                    <div class="variation-code-specs" data-toggle-code>
-                        <h4 class="h6 u-visually-hidden">Specifications</h4>
-
-                        <div class="o-table o-table-wrapper__scrolling">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        {% if columns contains 'Specification' %}<th>Attribute</th>{% endif %}
-                                        {% if columns contains 'Variable' %}<th>Variable</th>{% endif %}
-                                        {% if columns contains 'Value' %}<th>Value</th>{% endif %}
-                                        {% if columns contains 'Pixels' %}<th>Pixels</th>{% endif %}
-                                        {% if columns contains 'Ems' %}<th>Ems</th>{% endif %}
-                                        {% if columns contains 'Points' %}<th>Points</th>{% endif %}
-                                        {% if columns contains 'Seconds' %}<th>Seconds</th>{% endif %}
-                                        {% if columns contains 'Inches' %}<th>Inches</th>{% endif %}
-                                        {% if columns contains 'Hex' %}<th>Hex</th>{% endif %}
-                                        {% if columns contains 'RGB' %}<th>RGB</th>{% endif %}
-                                        {% if columns contains 'CMYK' %}<th>CMYK</th>{% endif %}
-                                        {% if columns contains 'Pantone' %}<th>Pantone</th>{% endif %}
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {% comment %}
-                                        For each applicable row, print a cell only if the
-                                        relevant column is necessary.
-                                    {% endcomment %}
-                                    {% for spec in rows %}
-                                    <tr>
-                                        {% if columns contains 'Specification' %}<td data-label="Specification">{{ tokens[spec]["Specification"] }}</td>{% endif %}
-                                        {% if columns contains 'Variable' %}<td data-label="Variable">{{ tokens[spec]["Variable"] }}</td>{% endif %}
-                                        {% if columns contains 'Value' %}<td data-label="Value">{{ tokens[spec]["Value"] }}</td>{% endif %}
-                                        {% if columns contains 'Pixels' %}<td data-label="Pixels">{{ tokens[spec]["Pixels"] }}</td>{% endif %}
-                                        {% if columns contains 'Ems' %}<td data-label="Ems">{{ tokens[spec]["Ems"] }}</td>{% endif %}
-                                        {% if columns contains 'Points' %}<td data-label="Points">{{ tokens[spec]["Points"] }}</td>{% endif %}
-                                        {% if columns contains 'Seconds' %}<td data-label="Seconds">{{ tokens[spec]["Seconds"] }}</td>{% endif %}
-                                        {% if columns contains 'Inches' %}<td data-label="Inches">{{ tokens[spec]["Inches"] }}</td>{% endif %}
-                                        {% if columns contains 'Hex' %}<td data-label="Hex">{{ tokens[spec]["Hex"] }}</td>{% endif %}
-                                        {% if columns contains 'RGB' %}<td data-label="RGB">{{ tokens[spec]["RGB"] }}</td>{% endif %}
-                                        {% if columns contains 'CMYK' %}<td data-label="CMYK">{{ tokens[spec]["CMYK"] }}</td>{% endif %}
-                                        {% if columns contains 'Pantone' %}<td data-label="Pantone">{{ tokens[spec]["Pantone"] }}</td>{% endif %}
-                                    </tr>
-                                    {% endfor %}
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-                {% endif %}
-
             {% endif %}
 
         </div>
@@ -249,7 +137,7 @@
     {% if page.restrictions != empty and page.restrictions or page.usage and page.usage != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="usage">Usage</h2>
-            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+            <div class="content_line__wide content_line content_line u-mb20"></div>
                 {% if page.usage and page.usage != '' %}
                     <p>
                     {{ page.usage | markdownify }}
@@ -265,9 +153,9 @@
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
                                     <header class="m-slug-header">
-                                        <h5 class="a-heading">
+                                        <h4 class="a-heading">
                                             Do
-                                        </h5>
+                                        </h4>
                                     </header>
                                     <p>
                                     {{ restriction.restrictions_do | markdownify }}
@@ -279,9 +167,9 @@
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
                                     <header class="m-slug-header m-slug-header__warning">
-                                        <h5 class="a-heading">
+                                        <h4 class="a-heading">
                                             Do not
-                                        </h5>
+                                        </h4>
                                     </header>
                                     <p>
                                     {{ restriction.restrictions_do_not | markdownify }}
@@ -298,7 +186,7 @@
     {% if page.accessibility and page.accessibility != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="accessibility">Accessibility</h2>
-            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+            <div class="content_line__wide content_line content_line u-mb20"></div>
             <p>
                 {{ page.accessibility | markdownify }}
             </p>
@@ -308,7 +196,7 @@
     {% if page.research and page.research != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="research">Research</h2>
-            <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+            <div class="content_line__wide content_line content_line u-mb20"></div>
             <p>
                 {{ page.research | markdownify }}
             </p>
@@ -321,7 +209,7 @@
             <div>
                 <section>
                     <h2 id="related-items">Related Items</h2>
-                    <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
                     {{ page.related_items | markdownify }}
                 </section>
             </div>
@@ -333,7 +221,7 @@
             <div>
                 <section>
                     <h2 id="help-us">Help us make improvements</h2>
-                    <div class="content_line__wide content_line__thick content_line u-mb20"></div>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
                     {{ page.help_us | markdownify }}
                 </section>
             </div>

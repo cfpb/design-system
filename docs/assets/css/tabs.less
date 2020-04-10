@@ -92,6 +92,16 @@
 
         .govuk-tabs__list-item {
             margin-left: 0;
+
+            &--selected {
+                a {
+                    color: @black;
+                    border-bottom: 5px solid @pacific;
+                    &:hover {
+                        border-bottom: 5px solid @pacific;
+                    }
+                }
+            }
         }
 
         .govuk-tabs__list-item::before {
@@ -111,13 +121,6 @@
             text-align: center;
             &:hover {
                 border-bottom: 2px solid @gray-5;
-            }
-            &--selected {
-                color: @black;
-                border-bottom: 5px solid @pacific;
-                &:hover {
-                    border-bottom: 5px solid @pacific;
-                }
             }
         }
 

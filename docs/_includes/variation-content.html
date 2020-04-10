@@ -80,13 +80,14 @@
             </div>
             {% endif %}
 
-            {% if variation.variation_code_snippet or variation.variation_jinja_code_snippet %}
+            {% if variation.variation_code_snippet and variation.variation_code_snippet != '' and
+                  variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != ''%}
 
             <div class="govuk-tabs u-mt30" data-module="tabs"  data-toggle-code>
                 <ul class="govuk-tabs__list">
                     {% if variation.variation_code_snippet and variation.variation_code_snippet != '' %}
-                    <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#html-code-snippet-{{ forloop.index }}">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#html-code-snippet-{{ forloop.index }}">
                             HTML code snippet
                         </a>
                     </li>

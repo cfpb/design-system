@@ -34,7 +34,7 @@
     "anchor-js": "^4.2.2",
     "escape-html": "^1.0.3",
     "ftdomdelegate": "^3.0.0",
-    "govuk-frontend": "3.5.0",
+    "govuk-frontend": "^3.6.0",
     "html-entities": "^1.2.1",
     "marked": "0.8.0",
     "netlify-cms": "^2.10.39",

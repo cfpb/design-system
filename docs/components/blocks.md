@@ -30,10 +30,6 @@ variations:
       The standard `.block` class by itself simply adds a `margin` of twice the
       gutter width to the top and bottom.
     variation_name: Standard block example
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
-      Background | @block__bg | @gray-5 | Gray 5
   - variation_code_snippet: |-
       Main content...
       <div class="block block__border-top">
@@ -42,10 +38,6 @@ variations:
     variation_description: Adds top `border` to `.block`.
     variation_jinja_code_snippet: ''
     variation_name: Border top modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
-      Border top | @block__border-top |  @gray-40 | Gray 40
   - variation_code_snippet: |-
       Main content...
       <div class="block block__border-right">
@@ -53,10 +45,6 @@ variations:
       </div>
     variation_description: Adds right `border` to `.block`.
     variation_name: Border right modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
-      Border right | @block__border-right |  @gray-40 | Gray 40
   - variation_code_snippet: |-
       Main content...
       <div class="block block__border-bottom">
@@ -64,10 +52,6 @@ variations:
       </div>
     variation_description: Adds bottom `border` to `.block`.
     variation_name: Border bottom modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
-      Border bottom | @block__border-bottom |  @gray-40 | Gray 40
   - variation_code_snippet: |-
       Main content...
       <div class="block block__border-left">
@@ -75,10 +59,6 @@ variations:
       </div>
     variation_description: Adds left `border` to `.block`.
     variation_name: Border left modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
-      Border left | @block__border-left |  @gray-40 | Gray 40
   - variation_code_snippet: |-
       Main content...
       <div class="block block__border">
@@ -86,10 +66,6 @@ variations:
       </div>
     variation_description: Adds `border` on all sides to `.block`.
     variation_name: Border modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
-      Border | @block__border |  @gray-40 | Gray 40
   - variation_code_snippet: |-
       Main content...
       <div class="block block__flush-top">
@@ -100,9 +76,6 @@ variations:
       </div>
     variation_description: Removes the top `margin` from `.block`.
     variation_name: Flush-top modifier
-    variation_specs: |
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
   - variation_code_snippet: |-
       Main content...
       <div class="block block__flush-bottom">
@@ -113,9 +86,6 @@ variations:
       </div>
     variation_description: Removes the bottom `margin` from `.block`.
     variation_name: Flush-bottom modifier
-    variation_specs: |
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
   - variation_code_snippet: |-
       <main class="content content__1-3" role="main">
           <div class="content_wrapper">
@@ -135,9 +105,6 @@ variations:
       with `.block__bg` to create a ‘well’ whose `background` extends into the
       left and right gutters. (See below.)
     variation_name: Flush-sides modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
   - variation_code_snippet: |-
       <main class="content content__1-3" role="main">
           <div class="content_wrapper">
@@ -154,9 +121,6 @@ variations:
       </main>
     variation_description: 'Removes the side, top, and bottom margin from .block.'
     variation_name: Flush modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
   - variation_code_snippet: |-
       Main content...
       <div class="block block__bg">
@@ -166,9 +130,6 @@ variations:
       Adds a `background` color and padding to `.block`. Setup for
       (ems-equivalent) `30px` `padding` on top and `60px` on bottom.
     variation_name: Background modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
   - variation_code_snippet: |-
       <main class="content content__1-3" role="main">
           <div class="content_wrapper">
@@ -187,9 +148,6 @@ variations:
       This is an example of combining modifiers to get a flush `padding` and
       `background` with a `.block`.
     variation_name: Background and flush-sides modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
   - variation_code_snippet: |-
       Main content...
       <div class="block block__padded-top block__border-top">
@@ -201,9 +159,6 @@ variations:
       with `block__border-top` to add `padding` between `.block` contents and
       `border`.
     variation_name: Padded-top modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
   - variation_code_snippet: |-
       Main content...
       <div class="block block__padded-bottom block__border-bottom">
@@ -215,9 +170,6 @@ variations:
       with `block__border-bottom` to add `padding` between `.block` contents and
       `border`.
     variation_name: Padded-bottom modifier
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
   - variation_code_snippet: |-
       <div class="block block__sub">
           <div style="background: #F1F2F2; padding: 8px;">
@@ -242,9 +194,6 @@ variations:
       Note that the `div`s with inline styles are for demonstration purposes
       only and should not be used in production.
     variation_name: Sub blocks
-    variation_specs: |-
-      Element | Variable name | Variable | web value
-      --- | --- | --- | ---
 usage: |-
   <h3>Use cases</h3>
 
@@ -257,4 +206,3 @@ accessibility: ''
 research: ''
 last_updated: 2020-01-06T20:29:09.912Z
 ---
-

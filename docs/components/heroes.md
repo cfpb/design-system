@@ -115,28 +115,6 @@ variations:
       text and an image. Its background color or image is flush with the sides
       of the screen, and the content is vertically centered.
     variation_name: Standard hero with illustration
-    variation_specs: >-
-      * All illustrations should be saved at 200% to accommodate retina
-      displays. Illustration dimensions: 470px (exact) x 195px (maximum) (2x:
-      940px x 390px)
-
-      * When saving illustrations, use a transparent background.
-
-      * The illustration can be customized by setting the `background-image`
-      property on the `.m-hero_image` element.
-
-      * Single image for both large and small screens
-
-      * On small screens (or where media queries are not supported), the text
-      spans the full width of the `.m-hero_wrapper` and the illustration is
-      displayed underneath.
-
-      * For larger screen sizes, media queries are used to position the
-      illustration to the right of the text.
-
-      * At the grid’s maximum width and above, the hero should not exceed 285px
-      in height. The image should be 195px in height to conform to this
-      standard.
   - variation_code_snippet: |-
       <section class="m-hero m-hero__knockout" id="hero2">
           <div class="m-hero_wrapper wrapper">
@@ -257,25 +235,6 @@ variations:
       sizes, add the `__bleeding` modifier to the hero and add an additional
       `m-hero_bleeding-image` as a sibling to `m-hero_image`.
     variation_name: Hero with bleeding illustration
-    variation_specs: >-
-      * Two images must be created, one for large and one for small screens
-
-      * Large and small screen images should contain the same elements but can
-      differ compositionally
-
-      * On large screens, illustration bleeds top and bottom
-
-      * Large screen image dimensions are based on maximum possible hero height
-      at 601px width
-
-      * To conserve vertical space, small screen image should be as short as
-      possible
-
-      * Illustration dimensions for large screens (exact): 470px x 638px (2x:
-      940px x 1276px)
-
-      * Illustration dimensions for small screens: 570px (exact) x 320px
-      (maximum) (2x: 1140px x 640px)
   - variation_code_snippet: |-
       <section class="m-hero m-hero__overlay" id="hero4">
           <div class="m-hero_wrapper wrapper">
@@ -335,24 +294,6 @@ variations:
       Pacific Blue will have accessible contrast with a non-white (or light
       gray) background.
     variation_name: Hero with photograph
-    variation_specs: >-
-      * Two images must be created, one for large and one for small screens
-
-      * Large and small screen images should contain the same elements but can
-      differ compositionally
-
-      * When selecting a photo include a 30px horizontal margin of clear space
-      between text and image area
-
-      * Type contrast ratios cannot be mathematically determined for photos, so
-      special care should be paid when selecting these images
-
-      * To conserve vertical space, small screen image should be as short as
-      possible
-
-      * Photo dimensions for large screens (exact): 1230px x 285px
-
-      * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
 usage: >-
   #### Content guidelines
 

@@ -15,7 +15,6 @@ variations:
 
       The primary seal should be used on materials printed in color.
     variation_name: Primary seal
-    variation_specs: ''
   - variation_description: >-
       ![CFPB one-color
       seal](/design-system/images/uploads/bcfp_primary_seal_black_rgb.png)
@@ -28,59 +27,59 @@ variations:
 usage: >-
   Use of the seal is very limited. It should never be used on consumer-facing
   materials, as it is important that the CFPB logo is consistently used to help
-  consumers recognize and trust the CFPB.  
+  consumers recognize and trust the CFPB. 
 
 
   The seal is used on a limited set of materials regarding enforcement,
   governmental affairs and official items from the Director’s office. These
-  materials are limited to: 
+  materials are limited to:
 
 
   * Official correspondence from the Director
 
   * Event materials where the Director’s office is the primary participant
-  (e.g., podium placards and signage) 
+  (e.g., podium placards and signage)
 
-  * Statutorily required reports  
+  * Statutorily required reports
 
-  * Examiner commissioning certificates 
+  * Examiner commissioning certificates
 
-  * Legal actions 
+  * Legal actions
 
-  * Office of Administrative Adjudication official documents 
+  * Office of Administrative Adjudication official documents
 
-  * PIV cards 
+  * PIV cards
 
-  * Bureau flag 
+  * Bureau flag
 
-  * Employee awards, commendations, and certificates from the Director 
+  * Employee awards, commendations, and certificates from the Director
 
   * Delegations of Authority from the Director
 restrictions:
   - restrictions_do: >-
       * Use the seal at its benchmark size of 1.75” for most materials, such as
       a report cover. For materials such as signage and flags where the seal
-      needs to appear larger, increase the seal's size in increments of 0.5”.  
+      needs to appear larger, increase the seal's size in increments of 0.5”. 
 
       * Use ample space around the seal to ensure maximum impact and keep the
       mark from looking cluttered. The clear space on each side of the seal
-      should be ¼” of the seal’s size.  
+      should be ¼” of the seal’s size. 
 
       * Place the seal on a white background. The only other color the seal may
       be placed on is navy, and this is reserved for select cases, such as the
       CFPB's flag.
     restrictions_do_not: >-
-      * Don’t stretch or condense the seal. This weakens the brand.  
+      * Don’t stretch or condense the seal. This weakens the brand. 
 
-      * Don’t alter the text of the seal in any way. 
+      * Don’t alter the text of the seal in any way.
 
-      * Don’t remove design or text elements from the seal.  
+      * Don’t remove design or text elements from the seal. 
 
-      * Don’t apply a drop shadow. 
+      * Don’t apply a drop shadow.
 
-      * Don’t outline the seal or change its colors. 
+      * Don’t outline the seal or change its colors.
 
-      * Don’t rotate the seal. This impairs readability. 
+      * Don’t rotate the seal. This impairs readability.
 
       * Don't place the seal on a background that is a pattern, photo, or color
       other than white or navy.
@@ -89,43 +88,42 @@ related_items: |-
 
   The seal is comprised of the following colors.
 
-  <h4>Dark Navy</h4> 
+  <h4>Dark Navy</h4>
 
-  **CMYK:** 100, 80, 6, 32 
+  **CMYK:** 100, 80, 6, 32
 
-  **RGB:** 0, 45, 114 
+  **RGB:** 0, 45, 114
 
-  **PMS:** 288C 
+  **PMS:** 288C
 
-  <h4>Beige</h4> 
+  <h4>Beige</h4>
 
-  **CMYK:** 0, 10, 50, 30 
+  **CMYK:** 0, 10, 50, 30
 
-  **RGB:** 190, 169, 111 
+  **RGB:** 190, 169, 111
 
-  **PMS:** 4515C 
+  **PMS:** 4515C
 
-  <h4>Mid beige</h4> 
+  <h4>Mid beige</h4>
 
-  **CMYK:** 0, 6, 30, 18 
+  **CMYK:** 0, 6, 30, 18
 
-  **RGB:** 216, 200, 160 
+  **RGB:** 216, 200, 160
 
-  **PMS:** 4515C 60% 
+  **PMS:** 4515C 60%
 
   <h4>Light beige</h4>
 
-  **CMYK:** 0, 2, 10, 6 
+  **CMYK:** 0, 2, 10, 6
 
-  **RGB:** 240, 232, 216 
+  **RGB:** 240, 232, 216
 
-  **PMS:** 4515C 30% 
+  **PMS:** 4515C 30%
 
   <h4>White</h4>
 
-  **CMYK:** 0, 0, 0, 0 
+  **CMYK:** 0, 0, 0, 0
 
   **RGB:** 255, 255, 255
 last_updated: 2020-02-27T16:56:46.952Z
 ---
-

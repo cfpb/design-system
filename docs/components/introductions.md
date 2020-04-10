@@ -41,26 +41,6 @@ variations:
       sidebar](/design-system/images/uploads/textintro_intro.png)
     variation_jinja_code_snippet: ''
     variation_name: Standard text introduction
-    variation_specs: >-
-      ![](/design-system/images/uploads/textintro_style1.png)
-
-
-      * Spacing: 45px margin above, 60 px margin below.
-
-      * Page title: Heading 1
-
-      * Subheader: Lead paragraph style
-
-      * Optional body paragraph and link: Avenir paragraph
-
-      * At breakpoints below 600: Page title and lead paragraph drop down one
-      type size to make reading on smaller devices easier.
-
-
-      Related:
-
-
-      * [Typography](https://cfpb.github.io/design-system/foundation/typography)
   - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
     variation_description: >-
       Layout as seen with a ‘breakout’ highlight in the right sidebar area:
@@ -69,54 +49,12 @@ variations:
       ![Image of a text introduction component with a "breakout" highlight in
       the right sidebar](/design-system/images/uploads/textintro_intro2.png)
     variation_name: Text introduction with optional breakout sidebar
-    variation_specs: >-
-      ![](/design-system/images/uploads/textintro_style2.png)
-
-
-      * Spacing: The breakout may be taller than the Text Intro content, in
-      which case the margin beneath the breakout should be 60px.
-
-      * Required elements: slug title and paragraph text.
-
-      * Imagery: May use either a circle (1x1) image or a 16x9 ratio image.
-
-
-      Related:
-
-
-      *
-      [Illustration](https://cfpb.github.io/design-system/foundation/illustration)
-
-      *
-      [Photography](https://cfpb.github.io/design-system/foundation/photography)
   - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
     variation_description: |-
       Layout as seen on a Learn page template:
 
       ![](/design-system/images/uploads/itemintro_intro.png)
     variation_name: Item introduction
-    variation_specs: >-
-      ![](/design-system/images/uploads/itemintro_style.png)
-
-
-      * Required components: Only the post title is absolutely required and the
-      category label should be used in the vast majority of cases. (Category
-      label minicons are optional.)
-
-      * Optional components: Subheader paragraph, author, dates, and social
-      sharing icons.
-
-      * Spacing: 45 px margin above, 60 px margin below.
-
-
-      Related:
-
-
-      * [Typography](https://cfpb.github.io/design-system/foundation/typography)
-
-      * [Minicons](https://cfpb.github.io/design-system/foundation/iconography)
-
-      * [Links](https://cfpb.github.io/design-system/components/links)
 usage: >-
   #### Use cases
 

@@ -79,10 +79,6 @@ collections:
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
             required: false
             widget: 'markdown'
-          - name: 'variation_specs'
-            label: 'Variation specifications'
-            widget: 'markdown'
-            required: false
       - name: 'usage'
         label: 'Usage'
         widget: 'markdown'
@@ -187,10 +183,6 @@ collections:
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
             required: false
             widget: 'markdown'
-          - name: 'variation_specs'
-            label: 'Variation specifications'
-            widget: 'markdown'
-            required: false
       - name: 'usage'
         label: 'Usage'
         widget: 'markdown'
@@ -305,10 +297,6 @@ collections:
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
             required: false
             widget: 'markdown'
-          - name: 'variation_specs'
-            label: 'Variation specifications'
-            widget: 'markdown'
-            required: false
       - name: 'usage'
         label: 'Usage'
         widget: 'markdown'
@@ -411,10 +399,6 @@ collections:
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
             required: false
             widget: 'markdown'
-          - name: 'variation_specs'
-            label: 'Variation specifications'
-            widget: 'markdown'
-            required: false
       - name: 'usage'
         label: 'Usage'
         widget: 'markdown'

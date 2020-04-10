@@ -1,4 +1,16 @@
 
+## Unreleased (2020-04-10)
+
+#### :bug: Bug Fix
+* `cfpb-layout`, `cfpb-notifications`
+  * [#440](https://github.com/cfpb/design-system/pull/440) Fix stylelint errors ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Chris Contolini ([@contolini](https://github.com/contolini))
+
+
+
 ## Unreleased (2020-04-06)
 
 #### :rocket: Enhancement

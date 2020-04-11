@@ -42,7 +42,6 @@ variations:
       {%- endmacro %}
       ```
     variation_name: Primary button
-    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nTypeface | - | - | Avenir Next Medium\t\nText size | @btn-font-size | @base-font-size-px;\t| 16px\t\nText color | @btn-text | @white; | White (#ffffff)\t\nBackground | @btn-bg: | @pacific; | Pacific (#0072ce)\nBackground (hover) | @btn-bg-hover: | @dark-pacific; | Dark Pacific (#0050b4)\nBackground (active)  | @btn-bg-active: | @navy; | Navy (#254b87)\nTop/bottom padding | @btn-v-padding | 8px; | 8px\t\nLeft/right padding | @btn-h-padding | 14px; | 14 px\t\nBorder radius | @btn-border-radius-size | 4px; | 4px\t\nPadding modifier | @btn-v-padding-modifier-ie: | 0.8; | -\nOutline size | | | Dotted 1px\nOutline offset | | | 1px\n"
   - variation_code_snippet: >-
       <button class="a-btn a-btn__secondary" title="Test button">Secondary
       button</button>
@@ -63,7 +62,6 @@ variations:
       this is a jinja
       ```
     variation_name: Secondary button
-    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText color | @btn__secondary-text: | @white; | White (#ffffff)\t\nBackground | @btn__secondary-bg: | @gray; | Gray (#5a5d61)\nBackground (hover) | @btn__secondary-bg-hover: | @dark-gray; | Dark gray (#43484e)\nBackground (active) | @btn__secondary-bg-active: | @black; | Black (#101820)"
   - variation_code_snippet: >
 
       <button class="a-btn a-btn__warning" title="Test button">Destructiv
@@ -85,7 +83,6 @@ variations:
       this is a jinja
       ```
     variation_name: Destructive action button
-    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText color | @btn__warning-text: | @white; | White (#ffffff)\t\nBackground | @btn__warning-bg: | @red; | Red (#d14124)\nBackground (hover) | @btn__warning-bg-hover: | @dark-red; | Dark red (#b63014)\nBackground (active)  | @btn__warning-bg-active: | @dark-gray; | Dark gray (#43484e)"
   - variation_code_snippet: >-
       <button class="a-btn a-btn__disabled" title="Test button">Disabled
       button</button>
@@ -105,7 +102,6 @@ variations:
       -->
     variation_description: ''
     variation_name: Disabled button
-    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText color | @btn__disabled-text: | @gray; | Gray (#5a5d61)\t\nBackground | @btn__disabled-bg: | @gray-20; | Gray 20 (##d2d3d5)\nBackground (hover) | @btn__warning-bg-hover: | @dark-red; | Dark red (#b63014)\nBackground (active)  | @btn__warning-bg-active: | @dark-gray; | Dark gray (#43484e)\nOutline color | @btn__disabled-outline: | @gray-20; | Gray 20 (##d2d3d5)"
   - variation_code_snippet: >-
       <button class="a-btn a-btn__super" title="Test button">Super
       button</button>
@@ -121,7 +117,6 @@ variations:
 
       -->
     variation_name: Super button
-    variation_specs: "Element | Variable type | Variable | Value\n--- | --- | --- | ---\nText size | @btn__super-font-size:  | 18px;\t| 18px\t\nTop/bottom padding |  | 15px; | 15px\t\nLeft/right padding |  | 30px; | 30px\t\t"
   - variation_code_snippet: >-
       <button class="a-btn a-btn__full-on-xs" title="Test button">Full-width
       Button</button>
@@ -138,7 +133,6 @@ variations:
       -->
     variation_description: _Reduce screen size to see these in action._
     variation_name: Full-width button
-    variation_specs: ''
   - variation_code_snippet: >-
       <!--
 
@@ -166,7 +160,6 @@ variations:
       </button>
     variation_description: ''
     variation_name: Icon button
-    variation_specs: Specs table TBD
   - variation_code_snippet: |-
       <button class="a-btn">
           Submit your complaint
@@ -178,7 +171,6 @@ variations:
     variation_description: ''
     variation_jinja_code_snippet: TBD
     variation_name: Animated icon button
-    variation_specs: TBD
   - variation_code_snippet: |-
       <div class="m-btn-group">
           <button class="a-btn">Yes</button>
@@ -187,7 +179,6 @@ variations:
       </div>
     variation_jinja_code_snippet: ''
     variation_name: Button group
-    variation_specs: TBD
   - variation_code_snippet: |-
       <div class="m-btn-group">
           <button class="a-btn a-btn__super">Yes</button>
@@ -197,7 +188,6 @@ variations:
     variation_name: Super button group
   - variation_code_snippet: '<button href="#" class="a-btn a-btn__link">Default state</button>'
     variation_name: Primary Button link
-    variation_specs: TBD
   - variation_code_snippet: >-
       <button href="#" class="a-btn a-btn__link a-btn__secondary">Default
       state</button>
@@ -206,19 +196,16 @@ variations:
       <button href="#" class="a-btn a-btn__link a-btn__warning">Default
       state</button>
     variation_name: Warning button link
-    variation_specs: TBD
   - variation_code_snippet: ''
     variation_description: >-
       For multiple actions in a single button unit. Prone to error, avoid if
       possible.
     variation_name: Compound button
-    variation_specs: TBD
   - variation_code_snippet: ''
     variation_description: >-
       When paired with a primary action, indicate the destructive action using a
       destructive action button link to the right of the primary button.
     variation_name: Destructive action
-    variation_specs: TBD
 usage: >-
   <h3>Use cases</h3>
 

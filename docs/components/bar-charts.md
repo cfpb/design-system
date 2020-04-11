@@ -31,14 +31,12 @@ variations:
       *
       [_includes/organisms/mortgage-map.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/mortgage-map.html)
     variation_name: Simple bar chart
-    variation_specs: Must have bars
   - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
     variation_description: >-
       ![Bar charts showing complaints by type for New York metro area, New York
       state and the United
       States.](/design-system/images/uploads/bar-chart-2.png)
     variation_name: Grouped bar chart
-    variation_specs: It must have data
   - variation_code_snippet: ''
     variation_description: >-
       ![Bar charts showing complaints by region (New York metro area, New York

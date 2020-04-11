@@ -433,10 +433,6 @@ variations:
 
       {: class="icon-table"}
     variation_name: Icon library
-    variation_specs: >-
-      Each icon has a circled variant shown in the second column (or square, in
-      the case of the social media icons) that can be accessed by appending
-      `-round` (or `-square`) to the canonical name or any of its aliases.
 usage: >
   #### Content guidelines
 

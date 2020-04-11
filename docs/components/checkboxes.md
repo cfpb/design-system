@@ -15,28 +15,12 @@ variations:
       The default section below demonstrates how a checkbox would normally
       appear in code.
     variation_name: Default state
-    variation_specs: |-
-      Height: 20 px
-
-      Width: 20 px
-
-      Margin right: 10 px
-
-      Border: 1 px, Gray 60 (#919395)
-
-      Background: White (#ffffff)
-
-      Avenir Next Regular, 16 px, Black (#101820)
   - variation_code_snippet: |-
       <div class="m-form-field m-form-field__checkbox">
           <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_checked" checked>
           <label class="a-label" for="test_checkbox_basic_checked">Label</label>
       </div>
     variation_name: Selected state
-    variation_specs: |-
-      Border: 1 px, Gray 60 (#919395)
-
-      Minicon: 18 px, Black (#101820)
 usage: >-
   Selecting the checkbox or touching the label text next to it should toggle the
   state of the checkbox on and off.
@@ -51,7 +35,7 @@ usage: >-
   #### Use cases
 
 
-  * Use checkboxes when the user can select more than one option from a list. 
+  * Use checkboxes when the user can select more than one option from a list.
 
   * Use [radio buttons](/design-system/components/radio-buttons) when the user
   can choose only one option out of a list.
@@ -105,4 +89,3 @@ accessibility: >-
 research: ''
 last_updated: 2019-09-17T14:30:15.293Z
 ---
-

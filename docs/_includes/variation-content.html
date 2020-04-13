@@ -80,8 +80,8 @@
             </div>
             {% endif %}
 
-            {% if variation.variation_code_snippet and variation.variation_code_snippet != '' and
-                  variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != ''%}
+            {% if (variation.variation_code_snippet and variation.variation_code_snippet != '') or
+                  (variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '') %}
 
             <div class="govuk-tabs u-mt30" data-module="tabs"  data-toggle-code>
                 <ul class="govuk-tabs__list">

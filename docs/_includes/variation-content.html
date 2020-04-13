@@ -4,7 +4,7 @@
         <h1>
             {{ page.title }}
         </h1>
-    {% if page.variations %}
+    {% if page.variations and page.variations.size > 0 %}
 
         <div id="toggle-code">
             <a class="a-btn" id="toggle-code-btn" href="#">
@@ -28,7 +28,7 @@
     </div>
 
     <ul class="m-list m-list__horizontal u-mb30">
-        {% if page.variations %}
+        {% if page.variations and page.variations.size > 0 %}
         <li class="m-list_item">
             <a class="m-list_link" href="#variations">Variations</a>
         </li>
@@ -61,7 +61,7 @@
         </section>
     {% endif %}
 
-    {% if page.variations %}
+    {% if page.variations and page.variations.size > 0 %}
     <section class="sticky-header u-mb45">
         <h2 id="variations">Variations</h2>
         <div class="content_line__wide content_line content_line u-mb20"></div>

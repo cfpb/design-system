@@ -54,6 +54,18 @@
         });
     }
 
+    .m-list_link {
+        border: none;
+
+        &:visited {
+            color: @link-text;
+        }
+
+        &:hover {
+            border-bottom: 1px solid @link-underline-active;
+            color: @link-text-active;
+        }
+    }
 }
 
 

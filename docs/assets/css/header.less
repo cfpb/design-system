@@ -58,11 +58,16 @@
         .u-inline-block;
         margin-right: 20px;
         a {
-            &:hover,
-            &:focus,
             &:active,
-            &.active {
-                text-decoration: underline;
+            &.active,
+            &:visited {
+                border-bottom: 1px solid @link-underline;
+                color: @link-text;
+            }
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid @link-underline-active;
+                color: @link-text-active;
             }
         }
     }

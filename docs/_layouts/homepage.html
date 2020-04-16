@@ -3,10 +3,12 @@ layout: default
 ---
 <main class="content" id="main" role="main">
     <div class="content_wrapper">
-        <section class="content_main">
-            <h2>{{ page.title }}</h2>
-
-            {{ content }}
-        </section>
+        {% include generic-content.html %}
+    </div>
+    <div class="o-editor_link" id="edit-page">
+        <a class="a-btn" href="{{ site.baseurl }}/admin/#/collections/generic-pages/entries/home" title="Edit this page in Netlify CMS">
+            <span class="a-btn_text">Edit this page</span>
+            <span class="a-btn_icon">{% include icons/edit.svg %}</span>
+        </a>
     </div>
 </main>

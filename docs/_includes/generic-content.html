@@ -1,0 +1,9 @@
+<section class="content_main">
+
+    {% if page.body %}
+    <section>
+        {{ page.body | markdownify }}
+    </section>
+    {% endif %}
+
+</section><!-- .content_main -->

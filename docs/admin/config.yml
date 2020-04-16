@@ -21,7 +21,6 @@ collections:
     label_singular: 'Getting started page'
     folder: 'docs/getting-started/'
     create: true
-    delete: true
     slug: '{{slug}}'
     fields:
       - name: 'title'
@@ -121,7 +120,6 @@ collections:
     label_singular: 'Foundation page'
     folder: 'docs/foundation/'
     create: true
-    delete: true
     slug: '{{slug}}'
     fields:
       - name: 'title'
@@ -225,7 +223,6 @@ collections:
     label_singular: 'Component page'
     folder: 'docs/components/'
     create: true
-    delete: true
     slug: '{{slug}}'
     fields:
       - name: 'title'
@@ -339,7 +336,6 @@ collections:
     label_singular: 'Templates page'
     folder: 'docs/templates/'
     create: true
-    delete: true
     slug: '{{slug}}'
     fields:
       - name: 'title'

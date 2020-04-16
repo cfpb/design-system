@@ -6,7 +6,7 @@
 }
 
 .swatches__primary {
-    .grid_column(9.40)
+    .grid_column( 9.40 )
 }
 
 
@@ -50,7 +50,7 @@
 /* Make swatch tables multi column at appropriate widths */
 
 /* Small tablet (600px) */
-@media only screen and (min-width: 37.5em) {
+@media only screen and ( min-width: 37.5em ) {
 
     th {
         width: unit( 70px / @base-font-size-px, em );
@@ -59,44 +59,44 @@
         .grid_nested-col-group();
     }
     .swatch {
-        .grid_column(6)
+        .grid_column( 6 )
     }
 }
 /* Landscape tablet/netbook/laptop (1024px) */
 @media only screen and (min-width: 64em) {
     .swatch__secondary {
-        .grid_column(3);
+        .grid_column( 3 );
     }
 
     .swatch__primary {
-        .grid_column(4);
+        .grid_column( 4 );
     }
 
 }
 
 @colors: 'dark-green', 'green', 'green-80', 'green-60', 'green-40', 'green-20', 'green-10',
-        'dark-teal', 'teal', 'teal-80', 'teal-60', 'teal-40', 'teal-20', 'teal-10',
-        'dark-pacific', 'pacific', 'pacific-80', 'pacific-60', 'pacific-40', 'pacific-20', 'pacific-10',
-        'dark-navy', 'navy', 'navy-80', 'navy-60', 'navy-40', 'navy-20', 'navy-10',
-        'dark-purple', 'purple', 'purple-80', 'purple-60', 'purple-40', 'purple-20', 'purple-10',
-        'dark-red', 'red', 'red-80', 'red-60', 'red-40', 'red-20', 'red-10',
-        'dark-gold', 'gold', 'gold-80', 'gold-60', 'gold-40', 'gold-20', 'gold-10',
-        'dark-neutral', 'neutral', 'neutral-80', 'neutral-60', 'neutral-40', 'neutral-20', 'neutral-10',
-        'dark-gray', 'gray', 'gray-80', 'gray-60', 'gray-40', 'gray-20', 'gray-10', 'gray-5',
-        'black', 'white';
+         'dark-teal', 'teal', 'teal-80', 'teal-60', 'teal-40', 'teal-20', 'teal-10',
+         'dark-pacific', 'pacific', 'pacific-80', 'pacific-60', 'pacific-40', 'pacific-20', 'pacific-10',
+         'dark-navy', 'navy', 'navy-80', 'navy-60', 'navy-40', 'navy-20', 'navy-10',
+         'dark-purple', 'purple', 'purple-80', 'purple-60', 'purple-40', 'purple-20', 'purple-10',
+         'dark-red', 'red', 'red-80', 'red-60', 'red-40', 'red-20', 'red-10',
+         'dark-gold', 'gold', 'gold-80', 'gold-60', 'gold-40', 'gold-20', 'gold-10',
+         'dark-neutral', 'neutral', 'neutral-80', 'neutral-60', 'neutral-40', 'neutral-20', 'neutral-10',
+         'dark-gray', 'gray', 'gray-80', 'gray-60', 'gray-40', 'gray-20', 'gray-10', 'gray-5',
+         'black', 'white';
 
 // Set up looping mixin
-.color-swatch-loop(@index) when (@index > 0) {
+.color-swatch-loop( @index ) when ( @index > 0 ) {
     // Retrieve the next variable name from the @colors array
-    @name: e(extract(@colors, @index));
+    @name: e( extract( @colors, @index ) );
     // Output the `.swatch_field__color` rule
     .swatch_field__@{name} { background: @@name; }
     // Call the next iteration of the loop
-    .color-swatch-loop((@index - 1));
+    .color-swatch-loop( @index - 1 );
 }
 
 // Initiate loop
-.color-swatch-loop( length(@colors) );
+.color-swatch-loop( length( @colors ) );
 
 .color-table {
     width: 100%;
@@ -107,7 +107,7 @@
         height: 2.5em;
     }
 
-    td:not(:first-of-type) {
+    td:not( :first-of-type ) {
         white-space: nowrap;
     }
 }

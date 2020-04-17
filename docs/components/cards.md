@@ -7,9 +7,7 @@ status: Beta
 description: Cards are blocks of content that are surrounded by a border.
 variations:
   - variation_name: Card
-    variation_description: |-
-      A single card with multiple links.
-      In this layout the heading is a link.
+    variation_description: A single card with multiple links. In this layout the heading is a link.
     variation_code_snippet: |-
       <article class="m-card">
           <h2 class="m-card_heading">
@@ -466,5 +464,6 @@ variations:
 usage: ''
 accessibility: ''
 research: ''
+help_us: Just a test.
 last_updated: 2019-10-21T20:38:39.851Z
 ---

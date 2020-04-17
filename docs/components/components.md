@@ -19,8 +19,8 @@ description: >-
   use. 
 
 
-  Beta components are new and design changes may still occur. Please [contact
-  us](tech@cfpb.gov) with any questions.
+  Beta components are new and design changes may still occur. Please <a
+  href="mailto:tech@cfpb.gov">contact us</a> with any questions.
 
 
   ## Help us improve this documentation

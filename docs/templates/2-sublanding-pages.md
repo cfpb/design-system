@@ -18,24 +18,21 @@ description: >-
 variations:
   - variation_code_snippet: ''
     variation_description: >-
-      ![Sublanding page with
-      hero](/design-system/images/uploads/sublanding_examplea.jpg)
-    variation_name: Sublanding page with hero
-  - variation_code_snippet: ''
-    variation_description: >-
+
+
+      | With hero | With text introduction | With breakout sidebar |
+
+      | --- | --- | --- | 
+
+      | ![Sublanding page with
+      hero](/design-system/images/uploads/sublanding_examplea.jpg) |
       ![Sublanding page with text
-      introduction](/design-system/images/uploads/sublanding_examplec.jpg)
-    variation_name: Sublanding page with text introduction
-  - variation_code_snippet: ''
-    variation_description: >-
+      introduction](/design-system/images/uploads/sublanding_examplec.jpg) |
       ![Sublanding page with breakout
-      sidebar](/design-system/images/uploads/sublanding_exampleb.jpg)
-    variation_name: Sublanding page with breakout sidebar
+      sidebar](/design-system/images/uploads/sublanding_exampleb.jpg) |
+    variation_name: Sublanding page variations
 usage: >-
-  #### Use case
-
-
-  ##### When to use
+  #### When to use
 
 
   * When creating a new topic area within one of the main navigation verticals.
@@ -45,7 +42,7 @@ usage: >-
   the specific content that will meet their needs.
 
 
-  ##### When other options are better
+  #### When other options are better
 
   * When page content includes multiple paragraphs of copy or more detailed
   definitions or explanations.
@@ -123,18 +120,14 @@ usage: >-
   area.
 
 
-  ##### Breakpoints 901 pixels or more
+  | 901 pixels or more | 900 pixels or less |
 
+  | -- | -- | 
 
+  | ![Sublanding behavior
+  desktop](/design-system/images/uploads/sublanding_behavior_desktop.jpg) |
   ![Sublanding behavior
-  desktop](/design-system/images/uploads/sublanding_behavior_desktop.jpg)
-
-
-  ##### Breakpoints 900 pixels or less
-
-
-  ![Sublanding behavior
-  mobile](/design-system/images/uploads/sublanding_behavior_mobile.jpg)
+  mobile](/design-system/images/uploads/sublanding_behavior_mobile.jpg) |
 related_items: |-
   * Hero
   * Text introduction (with optional breakout sidebar)
@@ -148,5 +141,5 @@ related_items: |-
   * Related posts / Related links
   * Email signup
   * Contact information
+last_updated: 2020-03-30T16:36:53.821Z
 ---
-

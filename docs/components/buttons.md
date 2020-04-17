@@ -1,14 +1,4 @@
 ---
-title: Buttons
-layout: variation
-section: components
-secondary_section: Forms
-status: Released
-description: >-
-  Buttons signal actions. They should be used sparingly; each additional button
-  on a page reduces the visual prominence of a call to action. In contrast,
-  [links](https://test-things.github.io/design-system/components/link) should
-  lead users to another page or further information.
 variations:
   - variation_code_snippet: |-
       <button class="a-btn" title="Test button">Primary button</button>
@@ -206,6 +196,74 @@ variations:
       When paired with a primary action, indicate the destructive action using a
       destructive action button link to the right of the primary button.
     variation_name: Destructive action
+title: Buttons
+layout: variation
+section: components
+secondary_section: Forms
+status: Released
+description: >-
+  Buttons signal actions. They should be used sparingly; each additional button
+  on a page reduces the visual prominence of a call to action. In contrast,
+  [links](https://test-things.github.io/design-system/components/link) should
+  lead users to another page or further information.
+variation_groups:
+  - variation_group_name: Primary buttons
+    variations:
+      - variation_name: Primary button
+        variation_description: >-
+          Use primary buttons for actions that go to the next step.
+
+
+          The Primary button is an atom in our atomic design standards. You can
+          apply the a-btn class to a link, button and submit input field to
+          receive the atomic button styles.
+        variation_code_snippet: |-
+          <button class="a-btn" title="Test button">Primary button</button>
+
+          <button class="a-btn" title="Test button">Primary button</button>
+        variation_jinja_code_snippet: |-
+          <button class="a-btn" title="Test button">Primary button</button>
+
+          <button class="a-btn" title="Test button">Primary button</button>
+        Implementation: |-
+          <button class="a-btn" title="Test button">Primary button</button>
+
+          <button class="a-btn" title="Test button">Primary button</button>
+      - variation_name: Primary button
+        variation_description: >-
+          Use primary buttons for actions that go to the next step.
+
+
+          The Primary button is an atom in our atomic design standards. You can
+          apply the a-btn class to a link, button and submit input field to
+          receive the atomic button styles.
+        variation_code_snippet: |-
+          <button class="a-btn" title="Test button">Primary button</button>
+
+          <button class="a-btn" title="Test button">Primary button</button>
+        variation_jinja_code_snippet: |-
+          <button class="a-btn" title="Test button">Primary button</button>
+
+          <button class="a-btn" title="Test button">Primary button</button>
+        Implementation: |-
+          <button class="a-btn" title="Test button">Primary button</button>
+
+          <button class="a-btn" title="Test button">Primary button</button>
+  - variation_group_name: Secondary buttons
+    variations:
+      - variation_description: |-
+          <button class="a-btn" title="Test button">Primary button</button>
+
+          <button class="a-btn" title="Test button">Primary button</button>
+        variation_code_snippet: |-
+          <button class="a-btn" title="Test button">Primary button</button>
+
+          <button class="a-btn" title="Test button">Primary button</button>
+        variation_jinja_code_snippet: |-
+          <button class="a-btn" title="Test button">Primary button</button>
+
+          <button class="a-btn" title="Test button">Primary button</button>
+        variation_name: Foo button
 usage: >-
   <h3>Use cases</h3>
 
@@ -279,8 +337,8 @@ restrictions:
           </span>
       </button>
 accessibility: ''
-research: ''
 related_items: '- related items'
-help_us: "More information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/"
 last_updated: 2020-01-28T15:55:47.394Z
+research: ''
+help_us: "More information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/"
 ---

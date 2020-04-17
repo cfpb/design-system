@@ -111,10 +111,6 @@ collections:
         label: 'Help us make improvements'
         widget: 'markdown'
         required: false
-      - name: 'last_updated'
-        label: 'Page last updated'
-        widget: 'datetime'
-        required: false
   - name: 'foundation'
     preview_path: "foundation/{{slug}}"
     label: 'Foundation pages'
@@ -214,10 +210,6 @@ collections:
       - name: 'help_us'
         label: 'Help us make improvements'
         widget: 'markdown'
-        required: false
-      - name: 'last_updated'
-        label: 'Page last updated'
-        widget: 'datetime'
         required: false
   - name: 'components'
     preview_path: "components/{{slug}}"
@@ -329,10 +321,6 @@ collections:
         label: 'Help us make improvements'
         widget: 'markdown'
         required: false
-      - name: 'last_updated'
-        label: 'Page last updated'
-        widget: 'datetime'
-        required: false
   - name: 'templates'
     label: 'Templates pages'
     preview_path: "templates/{{slug}}"
@@ -430,8 +418,4 @@ collections:
       - name: 'help_us'
         label: 'Help us make improvements'
         widget: 'markdown'
-        required: false
-      - name: 'last_updated'
-        label: 'Page last updated'
-        widget: 'datetime'
         required: false

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-describe( 'Basic cfpb expandable', () => {
+describe( 'Basic CFPB expandable', () => {
 
   let expandableHeader;
   let expandableContent;

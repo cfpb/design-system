@@ -31,8 +31,8 @@
     "release": "yarn run build && lerna publish",
     "version": "yarn run changelog && git add CHANGELOG.md",
     "process-icon-svgs": "svgo -o packages/cfpb-icons/src/cfpb-icons --enable=addClassesToSVGElement --enable=removeStyleElement --enable=removeAttrs --config='{ \"plugins\": [ { \"addClassesToSVGElement\": { \"className\": \"cf-icon-svg\" } }, { \"removeAttrs\": { \"attrs\": [ \"fill\", \"path:class\", \"circle:class\" ] } }, { \"cleanupIDs\": { \"force\": \"true\" } } ] }'",
-    "webdriver": "wdio run test/browser/webdriver.conf.js",
-    "webdriver-sauce": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && wdio run test/browser/webdriver-sauce.conf.js"
+    "test:browser": "wdio run test/browser/webdriver.conf.js",
+    "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && wdio run test/browser/webdriver-sauce.conf.js"
   },
   "devDependencies": {
     "@babel/core": "7.8.3",

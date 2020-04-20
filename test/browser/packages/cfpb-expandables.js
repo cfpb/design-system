@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-describe( 'basic cfpb expandable', () => {
+describe( 'Basic cfpb expandable', () => {
 
   let expandableHeader;
   let expandableContent;
@@ -21,13 +21,13 @@ describe( 'basic cfpb expandable', () => {
 
   it( 'should open expandable when header is clicked', () => {
     expandableHeader.click();
-    browser.pause( 300 );
+    expandableContent.waitForDisplayed();
     expect( isExpandableContentVisible() ).toBeTruthy();
   } );
 
   it( 'should close expandable when header is clicked again', () => {
     expandableHeader.click();
-    browser.pause( 300 );
+    expandableContent.waitForDisplayed( { reverse: true } );
     expect( isExpandableContentVisible() ).toBeFalsy();
   } );
 

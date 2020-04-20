@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-describe( 'the code snippet toggling feature', () => {
+describe( 'The code snippet toggling feature', () => {
 
   let codeToggleButton;
   let codeSnippets;

@@ -3,7 +3,7 @@ title: Cards
 layout: variation
 section: components
 secondary_section: Layout options
-status: Beta
+status: Released
 description: Cards are blocks of content that are surrounded by a border.
 variations:
   - variation_name: Card
@@ -465,6 +465,6 @@ variations:
       </div>
 usage: ''
 accessibility: ''
-research: ''
 last_updated: 2019-10-21T20:38:39.851Z
+research: ''
 ---

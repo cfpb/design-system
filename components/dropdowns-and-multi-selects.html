@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Google Tag Manager code -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
+  <title>Dropdowns and multi-selects - CFPB Design System</title>
+  <meta name="description" content="CFPB's design system">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/design-system/dist/css/main.css">
+  <script>
+      // Confirm availability of JS and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+  </script>
+</head>
+<body class="t-variation">
+  <!-- Google Tag Manager code -->
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <div class="skip-nav">
+    <a class="skip-nav_link" href="#main">
+        Skip to main content
+    </a>
+  </div>
+  <div class="m-global-eyebrow
+            m-global-eyebrow__horizontal">
+    <div class="wrapper
+                wrapper__match-content">
+        <div class="a-tagline">
+            An official website of the United States government
+        </div>
+    </div>
+</div>
+
+  <div class="body-wrapper">
+    <header role="banner" class="site-header">
+  <div class="wrapper">
+    <div class="title content-l_col content-l_col-1-3">
+      <h1 class="title_heading">
+        <a class="title-link" href="/design-system/">
+          <span class="demi">CFPB</span> Design System
+        </a>
+      </h1>
+    </div>
+    <nav class="global-nav content-l_col content-l_col-2-3" role="navigation">
+      <ul class="global-nav_list">
+        <li class="nav-list-item">
+            <a class="" href="/design-system/getting-started">
+            Getting Started
+            </a>
+        </li>
+        <li class="nav-list-item">
+            <a class="" href="/design-system/foundation">
+            Foundation
+            </a>
+        </li>
+        <li class="nav-list-item">
+            <a class="active" href="/design-system/components">
+            Components
+            </a>
+        </li>
+        <li class="nav-list-item">
+            <a class="" href="/design-system/templates">
+            Templates
+            </a>
+        </li>
+      </ul>
+    </nav>
+  </div> <!-- /.wrapper -->
+</header>
+
+    <main class="content content__1-3 content__bleedbar-expandable" id="main" role="main">
+  <div class="content_bar"></div>
+  <div class="content_wrapper">
+    <aside class="content_sidebar
+                o-expandable
+                o-expandable__padded
+                o-expandable__background
+                o-expandable__border">
+        <button class="o-expandable_header o-expandable_target" title="Expand content">
+            <h3 class="h5 o-expandable_header-left o-expandable_label">
+                In this section
+            </h3>
+            <span class="o-expandable_header-right o-expandable_link">
+                <span class="o-expandable_cue o-expandable_cue-open">
+                    <span class="u-visually-hidden-on-mobile">Show</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H549.6v213.6c0 27.6-22.4 50-50 50s-50-22.4-50-50V655.9H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h213.6V342.3c0-27.6 22.4-50 50-50s50 22.4 50 50v213.6h213.6c27.6 0 50 22.4 50 50s-22.5 50-50.1 50z"></path></svg>
+                </span>
+                <span class="o-expandable_cue o-expandable_cue-close">
+                    <span class="u-visually-hidden-on-mobile">Hide</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h527.1c27.6 0 50 22.4 50 50s-22.4 50-50 50z"></path></svg>
+                </span>
+            </span>
+        </button>
+        <div class="o-expandable_content
+                    nav-secondary">
+            
+
+
+
+
+
+
+
+
+<ul class="m-list m-list__unstyled">
+    
+    <li class="m-list_item u-mb15">
+        <span class="h5">Alerts</span>
+        <ul class="m-list m-list__links">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/banners">Banners</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/notifications">Notifications</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </li>
+    
+    <li class="m-list_item u-mb15">
+        <span class="h5">Core development</span>
+        <ul class="m-list m-list__links">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/atomic-components">Atomic Components</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/base-images">Base images</a>
+                </li>
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/blocks">Blocks</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/column-dividers">Column dividers</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/grid">Grid</a>
+                </li>
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/helper-classes-and-mixins">Helper classes and mixins</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/media-queries">Media queries</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </li>
+    
+    <li class="m-list_item u-mb15">
+        <span class="h5">Data visualization</span>
+        <ul class="m-list m-list__links">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/bar-charts">Bar Charts</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/line-charts">Line Charts</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/maps">Maps</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/pie-charts">Pie Charts</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </li>
+    
+    <li class="m-list_item u-mb15">
+        <span class="h5">Forms</span>
+        <ul class="m-list m-list__links">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/buttons">Buttons</a>
+                </li>
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/checkboxes">Checkboxes</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/dropdowns-and-multi-selects">Dropdowns and multi-selects</a>
+                </li>
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/e-mail-signup-forms">E-mail Signup Forms</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/feedback-forms">Feedback Forms</a>
+                </li>
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/fieldsets">Fieldsets</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/radio-buttons">Radio Buttons</a>
+                </li>
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/range-sliders">Range Sliders</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/text-inputs">Text Inputs</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </li>
+    
+    <li class="m-list_item u-mb15">
+        <span class="h5">Layout options</span>
+        <ul class="m-list m-list__links">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/cards">Cards</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/contact-information">Contact Information</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/expandables">Expandables</a>
+                </li>
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/featured-content-module">Featured Content Module</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/filterable-list-control-panels">Filterable List Control Panels</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/heroes">Heroes</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                </li>
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/introductions">Introductions</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/lists">Lists</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/sidebars-and-prefooters">Sidebars and Prefooters</a>
+                </li>
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/tables">Tables</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/wells">Wells</a>
+                </li>
+                
+            
+                
+            
+        </ul>
+    </li>
+    
+    <li class="m-list_item u-mb15">
+        <span class="h5">Navigation</span>
+        <ul class="m-list m-list__links">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/left-hand-navigation">Left Hand Navigation</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/mega-menu">Mega menu</a>
+                </li>
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/pagination">Pagination</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </li>
+    
+    <li class="m-list_item u-mb15">
+        <span class="h5">Text</span>
+        <ul class="m-list m-list__links">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/code-blocks">Code blocks</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/headings">Headings</a>
+                </li>
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/helper-text">Helper text</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/labels-and-legends">Labels and legends</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/links">Links</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/paragraphs">Paragraphs</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+                <li class="m-list_item">
+                    <a class="m-list_link" href="/design-system/components/quotes">Quotes</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </li>
+    
+</ul>
+
+
+        </div>
+    </aside>
+        <section class="content_main">
+
+    <div class="component-header u-mb30">
+        <h1>
+            Dropdowns and multi-selects
+        </h1>
+    
+
+        <div id="toggle-code">
+            <a class="a-btn" id="toggle-code-btn" href="#">
+                <span class="hide-button">
+                    Hide code &amp; specs
+                    <span class="a-btn_icon a-btn_icon__on-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
+                    </span>
+                </span>
+                <span class="show-button">
+                    Show code &amp; specs
+                    <span class="a-btn_icon a-btn_icon__on-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
+                    </span>
+                </span>
+            </a>
+        </div>
+
+    
+
+    </div>
+
+    <ul class="m-list m-list__horizontal u-mb30">
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#variations">Variations</a>
+        </li>
+        
+
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#usage">Usage</a>
+        </li>
+        
+
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#accessibility">Accessibility</a>
+        </li>
+        
+
+        
+    </ul>
+
+    
+        <section id="description" class="u-mb30">
+            <p>More information can be found at:</p>
+
+<ul>
+  <li>http://cfpb.github.io/design-manual/page-components/form-fields.html#dropdowns</li>
+  <li>https://cfpb.github.io/capital-framework/components/cf-forms/#select-dropdown</li>
+  <li>https://cfpb.github.io/capital-framework/components/cf-forms/#basic-multiselect</li>
+</ul>
+
+        </section>
+    
+
+    
+    <section class="sticky-header u-mb45">
+        <h2 id="variations">Variations</h2>
+        <div class="content_line__wide content_line content_line u-mb20"></div>
+        
+        <div class="u-mb30">
+            <!-- Name -->
+            <h3>Select dropdown</h3>
+
+            <!-- Description -->
+            
+
+
+            <!-- Live code example -->
+            
+            <div class="live-code-example">
+                <div class="m-form-field m-form-field__select">
+    <label class="a-label a-label__heading" for="test_select_default">
+        Label
+    </label>
+    <div class="a-select">
+        <select id="test_select_default">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+        </select>
+    </div>
+</div>
+            </div>
+            
+
+            
+            
+            
+
+            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="m-form-field m-form-field__select"&gt;
+    &lt;label class="a-label a-label__heading" for="test_select_default"&gt;
+        Label
+    &lt;/label&gt;
+    &lt;div class="a-select"&gt;
+        &lt;select id="test_select_default"&gt;
+            &lt;option value="option1"&gt;Option 1&lt;/option&gt;
+            &lt;option value="option2"&gt;Option 2&lt;/option&gt;
+            &lt;option value="option3"&gt;Option 3&lt;/option&gt;
+            &lt;option value="option4"&gt;Option 4&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="u-mb30">
+            <!-- Name -->
+            <h3>Multiselect</h3>
+
+            <!-- Description -->
+            
+
+
+            <!-- Live code example -->
+            
+            <div class="live-code-example">
+                <div class="m-form-field m-form-field__select">
+    <label class="a-label a-label__heading" for="test_select__multiple">
+        Label
+    </label>
+    <select class="a-multiselect" id="test_select__multiple" multiple>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option1">Option 5</option>
+        <option value="option2">Option 6</option>
+        <option value="option3">Option 7</option>
+        <option value="option4">Option 8</option>
+    </select>
+</div>
+            </div>
+            
+
+            
+            
+            
+
+            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="m-form-field m-form-field__select"&gt;
+    &lt;label class="a-label a-label__heading" for="test_select__multiple"&gt;
+        Label
+    &lt;/label&gt;
+    &lt;select class="a-multiselect" id="test_select__multiple" multiple&gt;
+        &lt;option value="option1"&gt;Option 1&lt;/option&gt;
+        &lt;option value="option2"&gt;Option 2&lt;/option&gt;
+        &lt;option value="option3"&gt;Option 3&lt;/option&gt;
+        &lt;option value="option4"&gt;Option 4&lt;/option&gt;
+        &lt;option value="option1"&gt;Option 5&lt;/option&gt;
+        &lt;option value="option2"&gt;Option 6&lt;/option&gt;
+        &lt;option value="option3"&gt;Option 7&lt;/option&gt;
+        &lt;option value="option4"&gt;Option 8&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+    </section>
+    
+
+    
+    
+        <section class="sticky-header u-mb45">
+            <h2 id="usage">Usage</h2>
+            <div class="content_line__wide content_line content_line u-mb20"></div>
+                
+                    <p>
+                    </p>
+<h3>Use cases</h3>
+<p>While dropdowns are easy to implement, they aren’t always the best choice from a usability perspective.</p>
+
+<p>Use dropdowns when:</p>
+<ul>
+  <li>You have a long list of finite options. If the list is shorter than around six items, radio buttons might work better. If the options include something open ended, a text input field is better.</li>
+  <li>You need structured data for a long list. For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a dropdown facilitates this standardization.</li>
+  <li>The list options are familiar to the user. A dropdown is not a good place to introduce new or complicated terms or concepts. For instance, if the question is “What’s your favorite color of the rainbow,” a dropdown could be a good choice. The options are familiar and there are more than six. You don’t want the user to have to read and absorb a lot of new information in a dropdown.</li>
+</ul>
+
+                    
+                
+            
+        </section>
+    
+
+    
+        <section class="sticky-header u-mb45">
+            <h2 id="accessibility">Accessibility</h2>
+            <div class="content_line__wide content_line content_line u-mb20"></div>
+            <p>
+                </p>
+<p>Keep in mind that dropdowns behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions. Mobile also doesn’t allow for the use of typeahead to navigate quickly to an item in a list, so navigating long lists can be especially cumbersome.</p>
+
+<p>From an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multi-select component is desired, use custom JavaScript to make it accessible.</p>
+
+            
+        </section>
+    
+
+    
+
+    <div class="content-l u-mb45">
+        
+
+        
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="help-us">Help us make improvements</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    
+
+                </section>
+            </div>
+        </div>
+        
+    </div>
+<!-- .content-l -->
+
+</section><!-- .content_main -->
+
+        <div class="o-editor_link" id="edit-page">
+            <a class="a-btn" href="/design-system/admin/#/collections/components/entries/dropdowns" title="Edit this page in Netlify CMS">
+                <span class="a-btn_text">Edit this page</span>
+                <span class="a-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 833.4 1200" class="cf-icon-svg"><path d="M233 203.1c-27.2-27.2-71.8-27.2-99 0L20.4 316.7c-27.2 27.2-27.2 71.8 0 99l89.7 89.7 212.7-212.7-89.8-89.6zM832.6 992.7l-48.6-216c-3.4-15.3-14.9-36.5-26-48.6l-1.8-1.8-121.8-121.9-110.6-110.6-165.7-165.7-54.8 54.8 400 400 21.4-21.4c5.3 6.4 11.9 18.9 13.5 25.6l21.4 95.2-60 60-95.2-21.4c-6.7-1.5-19.2-8.2-25.6-13.5l89.2-89.2-400-400-122.6 122.6 165.7 165.7 110.6 110.6 121.8 121.8 1.8 1.8c12.1 11.1 33.3 22.6 48.6 26l215.9 48.6c2.2.5 4.3.7 6.2.7 12.6.1 19.8-9.4 16.6-23.3z"></path></svg></span>
+            </a>
+        </div>
+        <div class="o-editor_link" id="add-page">
+            <a class="a-btn" href="/design-system/admin/#/collections/components/new" title="Add a new Design System page in Netlify CMS">
+                <span class="a-btn_text">Add new page</span>
+                <span class="a-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg></span>
+            </a>
+        </div>
+  </div>
+</main>
+
+    <footer class="footer" role="contentinfo">
+    <div class="wrapper">
+
+        <hr>
+
+        <div class="block block__sub">
+            <small>
+                <strong>Page last edited:</strong>
+                <time datetime="2020-01-06 21:02:17 +0000">
+                     9:02:17 PM Jan 06, 2020
+                </time>
+            </small>
+        </div>
+
+    </div>
+</footer>
+
+  </div>
+  <script src="/design-system/dist/js/design-system.js" charset="utf-8"></script>
+</body>
+</html>

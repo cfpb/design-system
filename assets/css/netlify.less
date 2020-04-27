@@ -1,0 +1,42 @@
+.o-editor_link {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+    z-index: 1;
+
+    &#edit-page {
+    	bottom: 75px;
+    }
+
+	.a-btn {
+		border-radius: 8px;
+		box-shadow: 1px 1px 3px #999;
+	}
+
+	.a-btn_text {
+		display: none;
+	}
+
+	&:hover {
+		.a-btn {
+			display: inline-block;
+		}
+		.a-btn_text {
+			display: inline;
+		}
+		.a-btn_icon {
+		    padding-left: 0.6875em;
+			border-left: 1px solid #80b9e7;
+			margin-left: 0.4375em;
+		}
+	}
+}
+
+// Don't show the toggle code button in the Netlify CMS preview pane
+.frame-content #toggle-code {
+    display: none;
+}
+
+.u-left {
+    float: left;
+}

@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {    
+    .content-l_col + .content-l_col {
+        margin-top: 0;
+    }
+}
+
+.title_heading {
+
+    font-size: unit( 16px / @base-font-size-px, em );
+
+    a {
+        color: @gray;
+    }
+
+    .demi {
+        font-weight: bold;
+    }
+}
+
+.global-nav_list {
+    font-size: unit( 14px / @base-font-size-px, em );
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.respond-to-min( @bp-xs-max, {
+
+    .site-header {
+        padding: unit( 30px / @base-font-size-px, em ) 0;
+        border-bottom: 4px solid @green;
+
+        .content-l_col {
+            vertical-align: middle;
+        }
+    }
+
+    .title_heading {
+        font-size: unit( 16px / @base-font-size-px, em );
+        margin: 0;
+    }
+
+    .global-nav {
+        text-align: right;
+    }
+
+    .global-nav_list {
+        display: inline-block;
+        font-size: unit( 12px / @base-font-size-px, em );
+    }
+
+    .nav-list-item {
+        .u-inline-block;
+        margin-right: 20px;
+        a {
+            &:active,
+            &.active,
+            &:visited {
+                border-bottom: 1px solid @link-underline;
+                color: @link-text;
+            }
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid @link-underline-active;
+                color: @link-text-active;
+            }
+        }
+    }
+
+    .nav-list-item:last-child {
+        margin-right: 0px;
+    }
+} );
+
+.respond-to-min( @bp-sm-max, {
+    .title_heading {
+        font-size: 1.625em;
+    }
+    .global-nav_list {
+        font-size: unit( 16px / @base-font-size-px, em );
+    }
+} );
+
+.respond-to-max( @bp-xs-max, {
+
+    .site-header {
+        background-color: @gray-5;
+    }
+
+    .title_heading {
+        padding-left: unit( 16px / @base-font-size-px, em );
+        padding-top: unit( 12px / @base-font-size-px, em );
+    }
+
+    .global-nav_list {
+        width: 100%;
+    }
+
+    .nav-list-item {
+        &:first-child a {
+            border-top: 1px solid @gray-20;
+        }
+        a {
+            display: block;
+            border-bottom: 1px solid @gray-20;
+            padding: 1em;
+
+        }
+    }
+
+} );

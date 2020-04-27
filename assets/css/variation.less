@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Variation page template
+   ========================================================================== */
+
+.t-variation {
+    .m-slug-header__warning {
+        .a-heading {
+            border-top: 5px solid @red;
+        }
+    }
+    .content_line__thick {
+        height: 2px;
+    }
+    .content_main {
+        .content_line__wide {
+            .respond-to-min( @bp-med-min, {
+                margin-left: -30px;
+            } );
+        }
+    }
+}
+
+// Override the stripes that appear in responsive tables
+.variation-code-specs {
+    table {
+        border: none;
+    }
+    td {
+        background-color: @white;
+    }
+}

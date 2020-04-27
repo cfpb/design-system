@@ -1,0 +1,461 @@
+backend:
+  name: github
+  repo: cfpb/design-system
+  branch: master
+  squash_merges: true
+  commit_messages:
+    create: Create "{{slug}}" page
+    update: Update "{{slug}}" page
+    delete: Delete "{{slug}}" page
+
+logo_url: https://cfpb.github.io/design-system/assets/img/cfpb-netlify-logo.png
+publish_mode: editorial_workflow
+media_folder: docs/images/uploads
+public_folder: /design-system/images/uploads
+pull_request_url: https://github.com/cfpb/design-system/pulls
+
+collections:
+  - name: 'getting-started'
+    preview_path: "getting-started/{{slug}}"
+    label: 'Getting started pages'
+    label_singular: 'Getting started page'
+    folder: 'docs/getting-started/'
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    fields:
+      - name: 'title'
+        label: 'Page title'
+        widget: 'string'
+      - name: 'layout'
+        value: 'variation'
+        default: 'variation'
+        widget: 'hidden'
+      - name: 'section'
+        default: 'getting-started'
+        widget: 'hidden'
+      - name: 'secondary_section'
+        label: 'Navigation section'
+        widget: 'select'
+        required: false
+        hint: 'Where on the website will this page live?'
+        options:
+          - label: 'Getting started'
+            value: 'Getting started'
+      - name: 'status'
+        label: 'Implementation status'
+        widget: 'select'
+        required: false
+        options:
+          - label: 'Legacy'
+            value: 'Legacy'
+          - label: 'Proposed'
+            value: 'Proposed'
+          - label: 'Beta'
+            value: 'Beta'
+          - label: 'Released'
+            value: 'Released'
+      - name: 'description'
+        label: 'Description'
+        hint: 'If this page does not contain variations, you may leave the remaining fields blank, and the above field can be used for all page content.'
+        widget: 'markdown'
+        minimal: true
+      - name: 'variations'
+        label: 'Variations'
+        widget: 'list'
+        fields:
+          - name: 'variation_name'
+            label: 'Variation name'
+            widget: 'string'
+          - name: 'variation_description'
+            label: 'Variation description'
+            widget: 'markdown'
+            minimal: true
+            required: false
+          - name: 'variation_code_snippet'
+            label: 'HTML code snippet'
+            widget: 'text'
+            required: false
+          - name: 'variation_jinja_code_snippet'
+            label: 'Jinja links or snippet'
+            hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
+            required: false
+            widget: 'markdown'
+            minimal: true
+      - name: 'usage'
+        label: 'Usage'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'restrictions'
+        label: 'Restrictions'
+        widget: 'list'
+        fields:
+          - name: 'restrictions_do'
+            label: 'Do'
+            widget: 'markdown'
+            minimal: true
+            required: false
+          - name: 'restrictions_do_not'
+            label: 'Do not'
+            widget: 'markdown'
+            minimal: true
+            required: false
+      - name: 'accessibility'
+        label: 'Accessibility'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'research'
+        label: 'Research'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'related_items'
+        label: 'Related items'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'help_us'
+        label: 'Help us make improvements'
+        widget: 'markdown'
+        minimal: true
+        required: false
+  - name: 'foundation'
+    preview_path: "foundation/{{slug}}"
+    label: 'Foundation pages'
+    label_singular: 'Foundation page'
+    folder: 'docs/foundation/'
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    fields:
+      - name: 'title'
+        label: 'Page title'
+        widget: 'string'
+      - name: 'layout'
+        value: 'variation'
+        default: 'variation'
+        widget: 'hidden'
+      - name: 'section'
+        default: 'foundation'
+        widget: 'hidden'
+      - name: 'secondary_section'
+        label: 'Navigation section'
+        widget: 'select'
+        required: false
+        hint: 'Where on the website will this page live?'
+        options:
+          - label: 'Foundation > Principles'
+            value: 'Principles'
+          - label: 'Foundation > Brand guidelines'
+            value: 'Brand guidelines'
+          - label: 'Foundation > User research'
+            value: 'User research'
+      - name: 'status'
+        label: 'Implementation status'
+        widget: 'select'
+        required: false
+        options:
+          - label: 'Legacy'
+            value: 'Legacy'
+          - label: 'Proposed'
+            value: 'Proposed'
+          - label: 'Beta'
+            value: 'Beta'
+          - label: 'Released'
+            value: 'Released'
+      - name: 'description'
+        label: 'Description'
+        hint: 'If this page does not contain variations, you may leave the remaining fields blank, and the above field can be used for all page content.'
+        widget: 'markdown'
+        minimal: true
+      - name: 'variations'
+        label: 'Variations'
+        widget: 'list'
+        fields:
+          - name: 'variation_name'
+            label: 'Variation name'
+            widget: 'string'
+          - name: 'variation_description'
+            label: 'Variation description'
+            widget: 'markdown'
+            minimal: true
+            required: false
+          - name: 'variation_code_snippet'
+            label: 'Variation code snippet'
+            widget: 'text'
+            required: false
+          - name: 'variation_jinja_code_snippet'
+            label: 'Variation Jinja links or snippet'
+            hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
+            required: false
+            widget: 'markdown'
+            minimal: true
+      - name: 'usage'
+        label: 'Usage'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'restrictions'
+        label: 'Restrictions'
+        widget: 'list'
+        fields:
+          - name: 'restrictions_do'
+            label: 'Do'
+            widget: 'markdown'
+            minimal: true
+            required: false
+          - name: 'restrictions_do_not'
+            label: 'Do not'
+            widget: 'markdown'
+            minimal: true
+            required: false
+      - name: 'accessibility'
+        label: 'Accessibility'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'research'
+        label: 'Research'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'related_items'
+        label: 'Related items'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'help_us'
+        label: 'Help us make improvements'
+        widget: 'markdown'
+        minimal: true
+        required: false
+  - name: 'components'
+    preview_path: "components/{{slug}}"
+    label: 'Component pages'
+    label_singular: 'Component page'
+    folder: 'docs/components/'
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    fields:
+      - name: 'title'
+        label: 'Page title'
+        widget: 'string'
+      - name: 'layout'
+        value: 'variation'
+        default: 'variation'
+        widget: 'hidden'
+      - name: 'section'
+        default: 'components'
+        widget: 'hidden'
+      - name: 'secondary_section'
+        label: 'Navigation section'
+        widget: 'select'
+        required: false
+        hint: 'Where on the website will this page live?'
+        options:
+          - label: 'Components > Alerts'
+            value: 'Alerts'
+          - label: 'Components > Core development'
+            value: 'Core development'
+          - label: 'Components > Data visualization'
+            value: 'Data visualization'
+          - label: 'Components > Forms'
+            value: 'Forms'
+          - label: 'Components > Layout options'
+            value: 'Layout options'
+          - label: 'Components > Navigation'
+            value: 'Navigation'
+          - label: 'Components > Tables'
+            value: 'Tables'
+          - label: 'Components > Text'
+            value: 'Text'
+      - name: 'status'
+        label: 'Implementation status'
+        widget: 'select'
+        required: false
+        options:
+          - label: 'Legacy'
+            value: 'Legacy'
+          - label: 'Proposed'
+            value: 'Proposed'
+          - label: 'Beta'
+            value: 'Beta'
+          - label: 'Released'
+            value: 'Released'
+      - name: 'description'
+        label: 'Description'
+        hint: 'If this page does not contain variations, you may leave the remaining fields blank, and the above field can be used for all page content.'
+        widget: 'markdown'
+        minimal: true
+      - name: 'variations'
+        label: 'Variations'
+        widget: 'list'
+        fields:
+          - name: 'variation_name'
+            label: 'Variation name'
+            widget: 'string'
+          - name: 'variation_description'
+            label: 'Variation description'
+            widget: 'markdown'
+            minimal: true
+            required: false
+          - name: 'variation_code_snippet'
+            label: 'Variation code snippet'
+            widget: 'text'
+            required: false
+          - name: 'variation_jinja_code_snippet'
+            label: 'Variation Jinja links or snippet'
+            hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
+            required: false
+            widget: 'markdown'
+            minimal: true
+      - name: 'usage'
+        label: 'Usage'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'restrictions'
+        label: 'Restrictions'
+        widget: 'list'
+        fields:
+          - name: 'restrictions_do'
+            label: 'Do'
+            widget: 'markdown'
+            minimal: true
+            required: false
+          - name: 'restrictions_do_not'
+            label: 'Do not'
+            widget: 'markdown'
+            minimal: true
+            required: false
+      - name: 'accessibility'
+        label: 'Accessibility'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'research'
+        label: 'Research'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'related_items'
+        label: 'Related items'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'help_us'
+        label: 'Help us make improvements'
+        widget: 'markdown'
+        minimal: true
+        required: false
+  - name: 'templates'
+    label: 'Templates pages'
+    preview_path: "templates/{{slug}}"
+    label_singular: 'Templates page'
+    folder: 'docs/templates/'
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    fields:
+      - name: 'title'
+        label: 'Page title'
+        widget: 'string'
+      - name: 'layout'
+        value: 'variation'
+        default: 'variation'
+        widget: 'hidden'
+      - name: 'section'
+        default: 'templates'
+        widget: 'hidden'
+      - name: 'secondary_section'
+        label: 'Navigation section'
+        widget: 'select'
+        required: false
+        hint: 'Where on the website will this page live?'
+        options:
+          - label: 'Templates > Web templates'
+            value: 'Web templates'
+          - label: 'Templates > Print templates'
+            value: 'Print templates'
+      - name: 'status'
+        label: 'Implementation status'
+        widget: 'select'
+        required: false
+        options:
+          - label: 'Legacy'
+            value: 'Legacy'
+          - label: 'Proposed'
+            value: 'Proposed'
+          - label: 'Beta'
+            value: 'Beta'
+          - label: 'Released'
+            value: 'Released'
+      - name: 'description'
+        label: 'Description'
+        hint: 'If this page does not contain variations, you may leave the remaining fields blank, and the above field can be used for all page content.'
+        widget: 'markdown'
+        minimal: true
+      - name: 'variations'
+        label: 'Variations'
+        widget: 'list'
+        fields:
+          - name: 'variation_name'
+            label: 'Variation name'
+            widget: 'string'
+          - name: 'variation_description'
+            label: 'Variation description'
+            widget: 'markdown'
+            minimal: true
+            required: false
+          - name: 'variation_code_snippet'
+            label: 'Variation code snippet'
+            widget: 'text'
+            required: false
+          - name: 'variation_jinja_code_snippet'
+            label: 'Variation Jinja links or snippet'
+            hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
+            required: false
+            widget: 'markdown'
+            minimal: true
+      - name: 'usage'
+        label: 'Usage'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'restrictions'
+        label: 'Restrictions'
+        widget: 'list'
+        fields:
+          - name: 'restrictions_do'
+            label: 'Do'
+            widget: 'markdown'
+            minimal: true
+            required: false
+          - name: 'restrictions_do_not'
+            label: 'Do not'
+            widget: 'markdown'
+            minimal: true
+            required: false
+      - name: 'accessibility'
+        label: 'Accessibility'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'research'
+        label: 'Research'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'related_items'
+        label: 'Related items'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'help_us'
+        label: 'Help us make improvements'
+        widget: 'markdown'
+        minimal: true
+        required: false

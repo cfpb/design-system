@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Design System
+   ========================================================================== */
+
+// This is your project's main Less file.
+// Project-specific Less rules go after the imports.
+
+// Import Capital Framework.
+@import (less) "@cfpb/cfpb-atomic-component/src/cfpb-atomic-component.less";
+@import (less) "@cfpb/cfpb-core/src/cfpb-core.less";
+@import (less) "@cfpb/cfpb-grid/src/cfpb-grid.less";
+@import (less) "@cfpb/cfpb-icons/src/cfpb-icons.less";
+@import (less) "@cfpb/cfpb-typography/src/cfpb-typography.less";
+@import (less) "@cfpb/cfpb-layout/src/cfpb-layout.less";
+@import (less) "@cfpb/cfpb-buttons/src/cfpb-buttons.less";
+@import (less) "@cfpb/cfpb-forms/src/cfpb-forms.less";
+@import (less) "@cfpb/cfpb-notifications/src/cfpb-notifications.less";
+@import (less) "@cfpb/cfpb-pagination/src/cfpb-pagination.less";
+@import (less) "@cfpb/cfpb-expandables/src/cfpb-expandables.less";
+@import (less) "@cfpb/cfpb-tables/src/cfpb-tables.less";
+
+// Icon font path
+@cf-icon-path: '../css/fonts';
+
+// Webfont variables
+// This is the path for self-hosted fonts.
+@cf-fonts-path: '/static/fonts';
+// Whether or not to override the local path and retrieve fonts from fonts.net.
+@use-font-cdn: true;
+
+// Documentation specific stlyes
+html, body {
+    height: 100%;
+}
+
+/* for sticky footer */
+.body-wrapper {
+    display: table;
+    height: 100%;
+    width: 100%
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.highlighter-rouge {
+    margin-top: unit( 15px / @base-font-size-px, em );
+}
+
+// custom modules
+@import (less) "skip-nav.less";
+@import (less) "global-eyebrow.less";
+@import (less) "tagline.less";
+@import (less) "layout.less";
+@import (less) "header.less";
+@import (less) "hero.less";
+@import (less) "main-content.less";
+@import (less) "footer.less";
+@import (less) "secondary-nav.less";
+@import (less) "code.less";
+@import (less) "grid-demo.less";
+@import (less) "netlify.less";
+@import (less) "tabs.less";
+@import (less) "toggle-code-button.less";
+@import (less) "badges.less";
+@import (less) "variation.less";
+@import (less) "color-swatches.less";

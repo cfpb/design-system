@@ -9,19 +9,3 @@ install:
 - yarn --cwd docs/
 script:
 - yarn test
-before_deploy:
-- yarn --cwd docs/ run build
-- sed -i '/_site/d' ./.gitignore
-deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: docs/_site/
-  verbose: true
-  github_token: $GITHUB_TOKEN
-  on:
-    branch: master
-env:
-  matrix:
-    # $GITHUB_TOKEN for cfpb/design-system (using the CFPBot GH account)
-    # See https://docs.travis-ci.com/user/deployment/pages/
-    secure: zlRBn1Ga42/3sfPIqq3Dmb++aGgWexi9yQsgzwBml1m3biF2x79ggBemPpuTYGnzRQvB3wIP7sZm/VfSXZaU2QufWgiX8KXd69ztErVDu/tUCMY4n4NbQz6H2P/WulKD2B9gdmGuxdMj2K3elUo7OLnnbTXNHX8wrh5+pWqNgJBBhsJHRMBNE8F9RvzrhcAZtKbfDFUgALhJD0oYriEddggpjD8turMSV37PTI24MENBYsJY2oR9hT3RTfe0WFxnDj57tisZ+IXe94JurQmAADAjuBixdDEpGrlT3ilRmiH+OinGX5+8R4dftiHEFF3SaM8feK4ml7JuzObcD1GQvs6H54g/AMYhvPy+6IUlru4EGXYO9CrYZCXiR5ODHC6UCcnvjWakhl6YSAsc79k1fQCPOoeH8j/e4wuPOX9Vu3aGi/frnXG0F+CkFTZ3vhsA2M3AKiED1xmwxsPgV7pKMlEzu5EI1cNxsGM/vKY/Ej2W8Y4Nl33j14vAhuK5rL6B5PAxHG6/iwevGNSacBvb2a+pgxutOCp0S969JgyKfyhJOtEtJ4wxsn4ZLs8ANy32uSyDBgNghT9HbiJstR7WhmH0+As5YCRI2C2dFHv409AUl+JnfX6cDzjM7xGwgGwjMBd2dDbVUo6W3dJhhN8xSQ7ne3UZnmlcjsn3nMhAujA=

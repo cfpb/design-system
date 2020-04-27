@@ -59,6 +59,7 @@ collections:
         label: 'Description'
         hint: 'If this page does not contain variations, you may leave the remaining fields blank, and the above field can be used for all page content.'
         widget: 'markdown'
+        minimal: true
       - name: 'variations'
         label: 'Variations'
         widget: 'list'
@@ -69,6 +70,7 @@ collections:
           - name: 'variation_description'
             label: 'Variation description'
             widget: 'markdown'
+            minimal: true
             required: false
           - name: 'variation_code_snippet'
             label: 'HTML code snippet'
@@ -79,9 +81,11 @@ collections:
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
             required: false
             widget: 'markdown'
+            minimal: true
       - name: 'usage'
         label: 'Usage'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'restrictions'
         label: 'Restrictions'
@@ -90,26 +94,32 @@ collections:
           - name: 'restrictions_do'
             label: 'Do'
             widget: 'markdown'
+            minimal: true
             required: false
           - name: 'restrictions_do_not'
             label: 'Do not'
             widget: 'markdown'
+            minimal: true
             required: false
       - name: 'accessibility'
         label: 'Accessibility'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'research'
         label: 'Research'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'related_items'
         label: 'Related items'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'help_us'
         label: 'Help us make improvements'
         widget: 'markdown'
+        minimal: true
         required: false
   - name: 'foundation'
     preview_path: "foundation/{{slug}}"
@@ -159,6 +169,7 @@ collections:
         label: 'Description'
         hint: 'If this page does not contain variations, you may leave the remaining fields blank, and the above field can be used for all page content.'
         widget: 'markdown'
+        minimal: true
       - name: 'variations'
         label: 'Variations'
         widget: 'list'
@@ -169,6 +180,7 @@ collections:
           - name: 'variation_description'
             label: 'Variation description'
             widget: 'markdown'
+            minimal: true
             required: false
           - name: 'variation_code_snippet'
             label: 'Variation code snippet'
@@ -179,9 +191,11 @@ collections:
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
             required: false
             widget: 'markdown'
+            minimal: true
       - name: 'usage'
         label: 'Usage'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'restrictions'
         label: 'Restrictions'
@@ -190,26 +204,32 @@ collections:
           - name: 'restrictions_do'
             label: 'Do'
             widget: 'markdown'
+            minimal: true
             required: false
           - name: 'restrictions_do_not'
             label: 'Do not'
             widget: 'markdown'
+            minimal: true
             required: false
       - name: 'accessibility'
         label: 'Accessibility'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'research'
         label: 'Research'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'related_items'
         label: 'Related items'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'help_us'
         label: 'Help us make improvements'
         widget: 'markdown'
+        minimal: true
         required: false
   - name: 'components'
     preview_path: "components/{{slug}}"
@@ -269,6 +289,7 @@ collections:
         label: 'Description'
         hint: 'If this page does not contain variations, you may leave the remaining fields blank, and the above field can be used for all page content.'
         widget: 'markdown'
+        minimal: true
       - name: 'variations'
         label: 'Variations'
         widget: 'list'
@@ -279,6 +300,7 @@ collections:
           - name: 'variation_description'
             label: 'Variation description'
             widget: 'markdown'
+            minimal: true
             required: false
           - name: 'variation_code_snippet'
             label: 'Variation code snippet'
@@ -289,9 +311,11 @@ collections:
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
             required: false
             widget: 'markdown'
+            minimal: true
       - name: 'usage'
         label: 'Usage'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'restrictions'
         label: 'Restrictions'
@@ -300,26 +324,32 @@ collections:
           - name: 'restrictions_do'
             label: 'Do'
             widget: 'markdown'
+            minimal: true
             required: false
           - name: 'restrictions_do_not'
             label: 'Do not'
             widget: 'markdown'
+            minimal: true
             required: false
       - name: 'accessibility'
         label: 'Accessibility'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'research'
         label: 'Research'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'related_items'
         label: 'Related items'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'help_us'
         label: 'Help us make improvements'
         widget: 'markdown'
+        minimal: true
         required: false
   - name: 'templates'
     label: 'Templates pages'
@@ -367,6 +397,7 @@ collections:
         label: 'Description'
         hint: 'If this page does not contain variations, you may leave the remaining fields blank, and the above field can be used for all page content.'
         widget: 'markdown'
+        minimal: true
       - name: 'variations'
         label: 'Variations'
         widget: 'list'
@@ -377,6 +408,7 @@ collections:
           - name: 'variation_description'
             label: 'Variation description'
             widget: 'markdown'
+            minimal: true
             required: false
           - name: 'variation_code_snippet'
             label: 'Variation code snippet'
@@ -387,9 +419,11 @@ collections:
             hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'
             required: false
             widget: 'markdown'
+            minimal: true
       - name: 'usage'
         label: 'Usage'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'restrictions'
         label: 'Restrictions'
@@ -398,24 +432,30 @@ collections:
           - name: 'restrictions_do'
             label: 'Do'
             widget: 'markdown'
+            minimal: true
             required: false
           - name: 'restrictions_do_not'
             label: 'Do not'
             widget: 'markdown'
+            minimal: true
             required: false
       - name: 'accessibility'
         label: 'Accessibility'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'research'
         label: 'Research'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'related_items'
         label: 'Related items'
         widget: 'markdown'
+        minimal: true
         required: false
       - name: 'help_us'
         label: 'Help us make improvements'
         widget: 'markdown'
+        minimal: true
         required: false

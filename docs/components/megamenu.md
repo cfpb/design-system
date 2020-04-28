@@ -2,7 +2,7 @@
 title: Mega menu
 layout: variation
 section: components
-secondary_section: Navigation
+secondary_section: null
 status: Released
 description: >-
   <p style="padding-bottom:20px">The mega menu groups related links in a
@@ -184,6 +184,6 @@ usage: >-
   * Links should reflect page titles, but don’t necessarily have to duplicate
   them verbatim
 accessibility: ''
-research: ''
 last_updated: 2019-09-17T14:36:40.318Z
+research: ''
 ---

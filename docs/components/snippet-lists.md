@@ -2,7 +2,7 @@
 title: Snippet Lists
 layout: variation
 section: components
-secondary_section: Layout options
+secondary_section: null
 status: Released
 description: >-
   Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas

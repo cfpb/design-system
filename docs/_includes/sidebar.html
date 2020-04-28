@@ -25,7 +25,7 @@
             {% for p in site.pages %}
                 {% if p.section == page.section and p.secondary_section == secondary_section %}
                 <li class="m-list_item">
-                    <a class="m-list_link" href="{{ site.baseurl }}/{{ p.section }}/{{ p.title | slugify }}">{{ p.title }}</a>
+                    <a class="m-list_link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
                 </li>
                 {% endif %}
             {% endfor %}
@@ -38,7 +38,7 @@
     {% for p in site.pages %}
         {% if p.section == page.section %}
         <li class="m-list_item">
-            <a class="m-list_link" href="{{ site.baseurl }}/{{ p.section }}/{{ p.title | slugify }}">{{ p.title }}</a>
+            <a class="m-list_link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
         </li>
         {% endif %}
     {% endfor %}

@@ -4,8 +4,7 @@ plugins:
 
 # Base configuration
 permalink: /:title
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "src", "node_modules"]
-markdown: kramdown
+exclude: [package.json, webpack.config.js, yarn.lock]
 highlighter: rouge
 
 # Organization

@@ -2,7 +2,7 @@
 title: Modals
 layout: variation
 section: components
-secondary_section: Alerts
+secondary_section: null
 status: Beta
 description: >-
   Modal windows (also known as dialog boxes or lightboxes) are “pop-up” elements

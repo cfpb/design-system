@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Fieldsets - CFPB Design System</title>
+  <title>Full Width Text - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1429,7 +1429,7 @@
 
     <div class="component-header u-mb30">
         <h1>
-            Fieldsets
+            Full Width Text
         </h1>
     
 
@@ -1463,6 +1463,11 @@
 
         
         
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#usage">Usage</a>
+        </li>
+        
 
         
 
@@ -1471,22 +1476,15 @@
 
     
         <section id="description" class="u-mb30">
-            <p>The fieldset element is used to group several controls as well as labels within a web form. The fieldset includes:</p>
+            <p>The full width text component is the foundation of the main content area of many pages. Spanning the full main content area within a given template, it houses basic text content that follows <a href="https://cfpb.github.io/design-system/foundation/typography">our typographic hierarchy</a> with the option to add pull quotes, images, inset information, and tables in-line.</p>
 
-<ul>
-  <li>Legend</li>
-  <li>Block helper text (if necessary)</li>
-  <li>Inline labels</li>
-  <li>Set of controls</li>
-</ul>
+<p>More information about the Full Width Text component can be found at:</p>
 
-<p>More information can be found at:</p>
-<ul>
-  <li>http://cfpb.github.io/design-manual/page-components/form-fields.html</li>
-  <li>https://cfpb.github.io/capital-framework/components/cf-forms/#fieldsets</li>
-</ul>
+<p><a href="http://cfpb.github.io/design-manual/page-components/fullwidth-text.html">http://cfpb.github.io/design-manual/page-components/fullwidth-text.html</a></p>
 
-<p>*NOTE: The code doesn’t match description in that the code doesn’t include a legend, block helper text, or inline labels.</p>
+<p>and</p>
+
+<p><a href="https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts">https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts</a></p>
 
         </section>
     
@@ -1498,29 +1496,37 @@
         
         <div class="u-mb30">
             <!-- Name -->
-            <h3>Fieldset with checkboxes</h3>
+            <h3>Content</h3>
 
             <!-- Description -->
-            
+            <p><img src="/design-system/images/uploads/content_quote_example.jpg" alt=""></p>
+
+<p><strong>WHEN TO USE</strong></p>
+<ul>
+  <li>When there are multiple paragraphs of text to be shown on a page. Especially if multiple sections are involved.</li>
+  <li>When text content is the main focus of a page.</li>
+</ul>
+
+<p><strong>WHEN SOMETHING ELSE IS BETTER</strong></p>
+<ul>
+  <li>When the goal of the text is to quickly inform users about a set of options and/or drive them to child pages other sections of the site. Consider using an <a href="info-unit-groups-image-and-text">Info Unit Group</a>.</li>
+</ul>
+
+<p><strong>WHERE TO USE</strong></p>
+<ul>
+  <li><a href="https://cfpb.github.io/design-system/templates/landing-pages">Landing pages</a></li>
+  <li><a href="https://cfpb.github.io/design-system/templates/sublanding-pages">Sublanding pages</a></li>
+  <li><a href="https://cfpb.github.io/design-system/templates/browse-pages">Browse pages</a></li>
+  <li><a href="https://cfpb.github.io/design-system/templates/filterable-pages">Filterable pages</a></li>
+  <li><a href="https://cfpb.github.io/design-system/templates/learn-pages">Learn pages</a></li>
+  <li><a href="https://cfpb.github.io/design-system/templates/document-detail-pages">Document detail pages</a></li>
+</ul>
 
 
             <!-- Live code example -->
             
             <div class="live-code-example">
-                <form class="o-form">
-    <div class="o-form_group">
-        <fieldset class="o-form_fieldset">
-            <div class="m-form-field m-form-field__checkbox">
-                <input class="a-checkbox" type="checkbox" id="test_checkbox_1" name="test_checkbox">
-                <label class="a-label" for="test_checkbox_1">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__checkbox">
-                <input class="a-checkbox" type="checkbox" id="test_checkbox_2" name="test_checkbox">
-                <label class="a-label" for="test_checkbox_2">Label</label>
-            </div>
-        </fieldset>
-    </div>
-</form>
+                
             </div>
             
 
@@ -1546,20 +1552,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;form class="o-form"&gt;
-    &lt;div class="o-form_group"&gt;
-        &lt;fieldset class="o-form_fieldset"&gt;
-            &lt;div class="m-form-field m-form-field__checkbox"&gt;
-                &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_1" name="test_checkbox"&gt;
-                &lt;label class="a-label" for="test_checkbox_1"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__checkbox"&gt;
-                &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_2" name="test_checkbox"&gt;
-                &lt;label class="a-label" for="test_checkbox_2"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/fieldset&gt;
-    &lt;/div&gt;
-&lt;/form&gt;</code></pre>
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -1576,29 +1569,35 @@
         
         <div class="u-mb30">
             <!-- Name -->
-            <h3>Fieldset with radio buttons</h3>
+            <h3>Image</h3>
 
             <!-- Description -->
-            
+            <p><img src="/design-system/images/uploads/content_media_example.jpg" alt=""></p>
+
+<p><strong>WHEN TO USE</strong></p>
+<ul>
+  <li>When an image is needed in the context of a passage of text</li>
+</ul>
+
+<p><strong>WHEN SOMETHING ELSE IS BETTER</strong></p>
+<ul>
+  <li>When multiple columns or a grid of images are needed. Consider the <a href="info-unit-group-image-and-text">Info Unit Group</a> module.</li>
+</ul>
+
+<p><strong>WHERE TO USE</strong></p>
+<ul>
+  <li><a href="https://cfpb.github.io/design-system/templates/landing-pages">Landing pages</a></li>
+  <li><a href="https://cfpb.github.io/design-system/templates/sublanding-pages">Sublanding pages</a></li>
+  <li><a href="https://cfpb.github.io/design-system/templates/browse-pages">Browse pages</a></li>
+  <li><a href="https://cfpb.github.io/design-system/templates/learn-pages">Learn pages</a></li>
+  <li><a href="https://cfpb.github.io/design-system/templates/document-detail-pages">Document detail pages</a></li>
+</ul>
 
 
             <!-- Live code example -->
             
             <div class="live-code-example">
-                <form class="o-form">
-    <div class="o-form_group">
-        <fieldset class="o-form_fieldset">
-            <div class="m-form-field m-form-field__radio">
-                <input class="a-radio" type="radio" id="test_radio_1" name="test_radio">
-                <label class="a-label" for="test_radio_1">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__radio">
-                <input class="a-radio" type="radio" id="test_radio_2" name="test_radio">
-                <label class="a-label" for="test_radio_2">Label</label>
-            </div>
-        </fieldset>
-    </div>
-</form>
+                
             </div>
             
 
@@ -1624,20 +1623,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;form class="o-form"&gt;
-    &lt;div class="o-form_group"&gt;
-        &lt;fieldset class="o-form_fieldset"&gt;
-            &lt;div class="m-form-field m-form-field__radio"&gt;
-                &lt;input class="a-radio" type="radio" id="test_radio_1" name="test_radio"&gt;
-                &lt;label class="a-label" for="test_radio_1"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__radio"&gt;
-                &lt;input class="a-radio" type="radio" id="test_radio_2" name="test_radio"&gt;
-                &lt;label class="a-label" for="test_radio_2"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/fieldset&gt;
-    &lt;/div&gt;
-&lt;/form&gt;</code></pre>
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -1654,188 +1640,34 @@
         
         <div class="u-mb30">
             <!-- Name -->
-            <h3>Large target fieldset with checkboxes</h3>
+            <h3>Inset content</h3>
 
             <!-- Description -->
-            
+            <p><img src="/design-system/images/uploads/content_inset_example.jpg" alt=""></p>
+
+<p><strong>WHEN TO USE</strong></p>
+<ul>
+  <li>When ancillary information is needed in context of flowing text, such as quotes, call to action, related links, etc. Only add related links within page text when the links are directly related to and referenced in a specific part of the text. Generally related links should go in the sidebar.</li>
+  <li>May be used in any full width text component, but recommended only for Learn pages.</li>
+</ul>
+
+<p><strong>WHEN SOMETHING ELSE IS BETTER</strong></p>
+<ul>
+  <li>May be used in any full width text component, but recommended only for Learn pages.</li>
+</ul>
+
+<p><strong>WHERE TO USE</strong></p>
+<ul>
+  <li><a href="https://cfpb.github.io/design-system/templates/learn-pages">Learn pages</a></li>
+  <li><a href="https://cfpb.github.io/design-system/templates/document-detail-pages">Document detail pages</a></li>
+</ul>
 
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
-                <form class="o-form">
-    <div class="o-form_group">
-        <fieldset class="o-form_fieldset">
-            <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
-                <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_1">
-                <label class="a-label" for="test_checkbox_lg_default_1">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
-                <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_2">
-                <label class="a-label" for="test_checkbox_lg_default_2">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
-                <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3">
-                <label class="a-label" for="test_checkbox_lg_default_3">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
-                <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4">
-                <label class="a-label" for="test_checkbox_lg_default_4">Label</label>
-            </div>
-        </fieldset>
-    </div>
-</form>
-            </div>
-            
 
             
             
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-3">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-3">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;form class="o-form"&gt;
-    &lt;div class="o-form_group"&gt;
-        &lt;fieldset class="o-form_fieldset"&gt;
-            &lt;div class="m-form-field m-form-field__checkbox m-form-field__lg-target"&gt;
-                &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_1"&gt;
-                &lt;label class="a-label" for="test_checkbox_lg_default_1"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__checkbox m-form-field__lg-target"&gt;
-                &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_2"&gt;
-                &lt;label class="a-label" for="test_checkbox_lg_default_2"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__checkbox m-form-field__lg-target"&gt;
-                &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3"&gt;
-                &lt;label class="a-label" for="test_checkbox_lg_default_3"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__checkbox m-form-field__lg-target"&gt;
-                &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4"&gt;
-                &lt;label class="a-label" for="test_checkbox_lg_default_4"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/fieldset&gt;
-    &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Large target fieldset with radio buttons</h3>
-
-            <!-- Description -->
-            
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                <form class="o-form">
-    <div class="o-form_group">
-        <fieldset class="o-form_fieldset">
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
-                <input class="a-radio" type="radio" id="test_radio_lg_default_1" name="radio-fieldset">
-                <label class="a-label" for="test_radio_lg_default_1">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
-                <input class="a-radio" type="radio" id="test_radio_lg_default_2" name="radio-fieldset">
-                <label class="a-label" for="test_radio_lg_default_2">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
-                <input class="a-radio" type="radio" id="test_radio_lg_default_3" name="radio-fieldset">
-                <label class="a-label" for="test_radio_lg_default_3">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
-                <input class="a-radio" type="radio" id="test_radio_lg_default_4" name="radio-fieldset">
-                <label class="a-label" for="test_radio_lg_default_4">Label</label>
-            </div>
-        </fieldset>
-    </div>
-</form>
-            </div>
-            
-
-            
-            
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-4">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-4">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;form class="o-form"&gt;
-    &lt;div class="o-form_group"&gt;
-        &lt;fieldset class="o-form_fieldset"&gt;
-            &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
-                &lt;input class="a-radio" type="radio" id="test_radio_lg_default_1" name="radio-fieldset"&gt;
-                &lt;label class="a-label" for="test_radio_lg_default_1"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
-                &lt;input class="a-radio" type="radio" id="test_radio_lg_default_2" name="radio-fieldset"&gt;
-                &lt;label class="a-label" for="test_radio_lg_default_2"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
-                &lt;input class="a-radio" type="radio" id="test_radio_lg_default_3" name="radio-fieldset"&gt;
-                &lt;label class="a-label" for="test_radio_lg_default_3"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
-                &lt;input class="a-radio" type="radio" id="test_radio_lg_default_4" name="radio-fieldset"&gt;
-                &lt;label class="a-label" for="test_radio_lg_default_4"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/fieldset&gt;
-    &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
             
 
         </div>
@@ -1845,12 +1677,92 @@
 
     
     
+        <section class="sticky-header u-mb45">
+            <h2 id="usage">Usage</h2>
+            <div class="content_line__wide content_line content_line u-mb20"></div>
+                
+                    <p>
+                    </p>
+<h3 id="content-and-image">Content and image</h3>
+
+<p>Content and image elements that are full width at desktop size remain full width across all breakpoints. Heading, link, and buttons all follow responsive patterns.</p>
+
+<p><strong>Sidebar 901+ px</strong></p>
+
+<p><img src="/design-system/images/uploads/fullwidth_behavior1.png" alt=""></p>
+
+<p><strong>Sidebar less than 600 px</strong></p>
+
+<p><img src="/design-system/images/uploads/fullwidth_behavior2.png" alt=""></p>
+
+<h3 id="inset">Inset</h3>
+
+<p>All variations of inset elements move into full width format at screen widths less than 600px as seen below.</p>
+
+<p><strong>Sidebar 601+ px</strong></p>
+
+<p><img src="/design-system/images/uploads/behavior_inset_desktop.png" alt=""></p>
+
+<p><strong>Sidebar less than 600 px</strong></p>
+
+<p><img src="/design-system/images/uploads/behavior_inset_mobile.png" alt=""></p>
+
+<h3 id="content-guidelines">Content guidelines</h3>
+
+<p>Content guidelines will be dependent on the type of element that is inserted into the content area. See individual component guidelines for specifics.</p>
+
+<h3 id="style">Style</h3>
+
+<h4 id="content-and-image-1">Content and image</h4>
+
+<p><img src="/design-system/images/uploads/style_contentmedia.png" alt=""></p>
+
+<ul>
+  <li>Quote or image container padding: 30 px top and bottom. Side padding is removed so element is flush left and right.</li>
+  <li>Insets follow this format below 601px breakpoint</li>
+</ul>
+
+<h4 id="inset-1">Inset</h4>
+
+<p><img src="/design-system/images/uploads/style_inset.png" alt=""></p>
+
+<ul>
+  <li>Width: 270px for 601 px breakpoint and above.</li>
+  <li>Padding: 30px all sides for 601 px breakpoint and above.</li>
+  <li>Alignment: right side of main content</li>
+  <li>Rule line: Top rule is optional</li>
+  <li>Elements within the the inset (links, call to action etc) follow prefooter styling below 601 px</li>
+</ul>
+
+                    
+                
+            
+        </section>
+    
 
     
 
     
 
     <div class="content-l u-mb45">
+        
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="related-items">Related Items</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <ul>
+  <li><a href="https://cfpb.github.io/design-system/foundation/typography">Typography</a></li>
+  <li><a href="https://cfpb.github.io/design-system/foundation/iconography">Iconography</a></li>
+  <li><a href="https://cfpb.github.io/design-system/components/links">Links</a></li>
+  <li><a href="https://cfpb.github.io/design-system/foundation/illustration">Illustration</a></li>
+  <li><a href="https://cfpb.github.io/design-system/foundation/photography">Photography</a></li>
+  <li><a href="https://cfpb.github.io/design-system/foundation/video">Video</a></li>
+</ul>
+
+                </section>
+            </div>
+        </div>
         
 
         
@@ -1860,7 +1772,7 @@
 </section><!-- .content_main -->
 
         <div class="o-editor_link" id="edit-page">
-            <a class="a-btn" href="/design-system/admin/#/collections/components/entries/fieldsets" title="Edit this page in Netlify CMS">
+            <a class="a-btn" href="/design-system/admin/#/collections/components/entries/full-width-text" title="Edit this page in Netlify CMS">
                 <span class="a-btn_text">Edit this page</span>
                 <span class="a-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 833.4 1200" class="cf-icon-svg"><path d="M233 203.1c-27.2-27.2-71.8-27.2-99 0L20.4 316.7c-27.2 27.2-27.2 71.8 0 99l89.7 89.7 212.7-212.7-89.8-89.6zM832.6 992.7l-48.6-216c-3.4-15.3-14.9-36.5-26-48.6l-1.8-1.8-121.8-121.9-110.6-110.6-165.7-165.7-54.8 54.8 400 400 21.4-21.4c5.3 6.4 11.9 18.9 13.5 25.6l21.4 95.2-60 60-95.2-21.4c-6.7-1.5-19.2-8.2-25.6-13.5l89.2-89.2-400-400-122.6 122.6 165.7 165.7 110.6 110.6 121.8 121.8 1.8 1.8c12.1 11.1 33.3 22.6 48.6 26l215.9 48.6c2.2.5 4.3.7 6.2.7 12.6.1 19.8-9.4 16.6-23.3z"></path></svg></span>
             </a>
@@ -1882,8 +1794,8 @@
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2020-01-29 19:16:34 +0000">
-                     7:16:34 PM Jan 29, 2020
+                <time datetime="2020-04-28 15:23:57 +0000">
+                     3:23:57 PM Apr 28, 2020
                 </time>
             </small>
         </div>

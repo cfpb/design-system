@@ -2,7 +2,7 @@
 title: 'Info Unit Groups: Image and text'
 layout: variation
 section: components
-secondary_section: Layout options
+secondary_section: null
 status: Legacy
 description: >-
   In general, info unit groups provide context and lead users to additional

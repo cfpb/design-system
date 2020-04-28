@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Sidebars and Prefooters - CFPB Design System</title>
+  <title>Info Unit Groups: Image and text - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1391,7 +1391,7 @@
 
     <div class="component-header u-mb30">
         <h1>
-            Sidebars and Prefooters
+            Info Unit Groups: Image and text
         </h1>
     
 
@@ -1438,14 +1438,17 @@
 
     
         <section id="description" class="u-mb30">
-            <p>Sidebars are present across most page templates to house information related to the main content of the page. On pages with leftside sub-navigation, sidebar content may be displayed as an optional prefooter at the bottom of the main content.</p>
+            <p>In general, info unit groups provide context and lead users to additional content off the page. The versions called image and text components are used to call attention to specific linked content.</p>
 
-<p>Sidebars may can contain related posts, calls to action, metadata, email sign ups, contact information, etc. Primary layout variations as seen in basic sidebar format. Multiple elements can be used in the sidebar/ prefooter but each should have their own slug label.</p>
+<p><img src="/design-system/images/uploads/50_50_intro_mockup.png" alt="Info unit group: example of 50/50 image and text component" title="Info unit group: example of 50/50 image and text component"></p>
 
-<p>Information about Sidebars/Prefooters can be found at:</p>
+<p>More information about Info Unit Group image and text components can be found at:</p>
+
 <ul>
-  <li>http://cfpb.github.io/design-manual/page-components/sidebar-prefooter.html</li>
-  <li>https://cfpb.github.io/capital-framework/components/cf-layout/#standard-content-formats</li>
+  <li><a href="https://cfpb.github.io/design-manual/page-components/25-75.html">https://cfpb.github.io/design-manual/page-components/25-75.html</a></li>
+  <li><a href="https://cfpb.github.io/design-manual/page-components/50-50.html">https://cfpb.github.io/design-manual/page-components/50-50.html</a></li>
+  <li><a href="https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts">https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts</a></li>
+  <li><a href="https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group">https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group</a></li>
 </ul>
 
         </section>
@@ -1458,32 +1461,59 @@
         
         <div class="u-mb30">
             <!-- Name -->
-            <h3>Main content and sidebar</h3>
+            <h3>25/75 Image and text component</h3>
 
             <!-- Description -->
-            <p>Standard layout for the main content area and sidebar.</p>
+            <p><img src="/design-system/images/uploads/2575example_desktop.jpg" alt="25/75 Image and text component example" title="25/75 Image and text component example"></p>
 
-<p>By default <code class="highlighter-rouge">.content_main</code> and <code class="highlighter-rouge">.content_sidebar</code> stack vertically. When using the modifiers described below to create columns, the columns will remain stacked for smaller screens and then convert to to columns at <code class="highlighter-rouge">801px</code>.</p>
+<p>The 25/75 image and text component is used to draw the user’s eye to key information and navigation links, and aid comprehension by pairing content with illustration/imagery.</p>
 
-<p>Inline styling is for demonstration purposes only; do not include it in your markup.</p>
+<p>When used in conjunction with half width link blob, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.</p>
+
+<p><strong>When to use</strong></p>
+
+<ul>
+  <li>When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.</li>
+  <li>When an image or illustration helps users better understand the purpose of content.</li>
+  <li>Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.</li>
+</ul>
+
+<p><strong>When other options are better</strong></p>
+
+<ul>
+  <li>When content doesn’t require imagery. Suggest using the half width link blob pattern instead.</li>
+  <li>When there are multiple paragraphs of copy.</li>
+</ul>
+
+<h3>Behavior</h3>
+
+<p>At breakpoints below 601, the two-column pattern transitions into a single column and stacks each instance in Z-order.</p>
+
+<p><img src="/design-system/images/uploads/25-75-behavior.png" alt="25-75 component behavior screenshot" title="25-75 component behavior screenshot"></p>
+
+<h3>Content guidelines</h3>
+
+<ul>
+  <li>Headings should be as succinct as possible, ideally staying on a single line at max column width; 60 characters or less.</li>
+  <li>Description beneath heading should also be succinct, ideally no more than 4 lines at max column width; 1-2 sentences, no more than 275 characters.</li>
+  <li>Call to action link should be a single concise phrase starting with an action verb. Should stay on a single line at max column width; 65 characters or less.</li>
+</ul>
+
+<p><strong>Style</strong></p>
+
+<p><img src="/design-system/images/uploads/style_desktop_1.jpg" alt="25-75 component style screenshot" title="25-75 component style screenshot"></p>
+
+<ul>
+  <li>Imagery: 1:1 ratio, may be illustration, isocon, or photography. 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below</li>
+  <li>Padding: 30px padding for imagery across responsive sizes</li>
+  <li>Headings: Any heading size may be used, recommend H2-6</li>
+</ul>
 
 
             <!-- Live code example -->
             
             <div class="live-code-example">
-                <main class="content" role="main">
-    <section class="content_hero" style="background: #E3E4E5">
-        Content hero
-    </section>
-    <div class="content_wrapper">
-        <section class="content_main">
-            Main content area
-        </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
-            Sidebar
-        </aside>
-    </div>
-</main>
+                TBD
             </div>
             
 
@@ -1501,6 +1531,12 @@
                     </li>
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#jinja-code-snippet-1">
+                            Jinja code snippet
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
@@ -1509,25 +1545,22 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;main class="content" role="main"&gt;
-    &lt;section class="content_hero" style="background: #E3E4E5"&gt;
-        Content hero
-    &lt;/section&gt;
-    &lt;div class="content_wrapper"&gt;
-        &lt;section class="content_main"&gt;
-            Main content area
-        &lt;/section&gt;
-        &lt;aside class="content_sidebar" style="background: #F1F2F2"&gt;
-            Sidebar
-        &lt;/aside&gt;
-    &lt;/div&gt;
-&lt;/main&gt;</code></pre>
+                            <pre><code class="language-html">TBD</code></pre>
                         </div>
                     </div>
                 </section>
                 
 
                 <!-- Jinja snippet -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-1">
+                    <div class="variation-jinja-code-snippet">
+                        <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">* [info-unit-group-2.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/info-unit-group-2.html) in cfgov-refresh</code></pre>
+                        </div>
+                    </div>
+                </section>
                 
 
             </div>
@@ -1538,41 +1571,61 @@
         
         <div class="u-mb30">
             <!-- Name -->
-            <h3>Right-hand sidebar layout</h3>
+            <h3>50/50 image and text component</h3>
 
             <!-- Description -->
-            <p>Add a class of <code class="highlighter-rouge">.content__L-R</code> to <code class="highlighter-rouge">main.content</code> to determine the width ratio of <code class="highlighter-rouge">.content_main</code> and <code class="highlighter-rouge">.content_sidebar</code>, where ‘L’ is the left-hand item and ‘R’ is the right-hand item. The two common configurations are <code class="highlighter-rouge">1-3</code> (sidebar on the left, content on the right, in a ratio of 1:3) and <code class="highlighter-rouge">2-1</code> (content on the left, sidebar on the right, in a ratio of 2:1).</p>
+            <p><img src="/design-system/images/uploads/50_50_intro_mockup.png" alt="50/50 image and text component" title="50/50 image and text component"></p>
 
-<p>It is assumed that the content is wider than the sidebar.</p>
+<p>The 50/50 image and text component is used to call attention to specific linked content on a page and feature it prodominantly. At larger breakpoints, this component has a two column layout to utilize extra screen real estate.</p>
 
-<p>Inline styling is for demonstration purposes only; do not include it in your markup.</p>
+<p>The half-width link blob component is a variation of the 50/50 image and text that does not use imagery.</p>
+
+<p><strong>When to use</strong></p>
+
+<ul>
+  <li>When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.</li>
+  <li>When an image or illustration helps users better understand the purpose of content.</li>
+  <li>Ideally, when an even number of these components can be featured together.</li>
+  <li>To help establish a hierarchy of linked content on this page.</li>
+</ul>
+
+<p><strong>When other options are better</strong></p>
+
+<ul>
+  <li>When content doesn’t require imagery. Suggest using the half-width link blob component instead.</li>
+  <li>When there are multiple paragraphs of copy.</li>
+</ul>
+
+<h3>Behavior</h3>
+
+<p>At breakpoints below 601, the two-column pattern transitions into a single column and stacks each instance in Z-order.</p>
+
+<p><img src="/design-system/images/uploads/50-50-behavior.png" alt="50-50 component behavior screenshot" title="50-50 component behavior screenshot"></p>
+
+<h3>Content guidelines</h3>
+
+<ul>
+  <li>Headings should be as succinct as possible, ideally staying on a single line at max column width (30 characters or less).</li>
+  <li>Description beneath heading should also be succinct, 2-3 lines at max column width of text; roughly 50-130 characters.</li>
+  <li>Call to action link should be one line; about 40 characters or less. Link content should follow link guidelines.</li>
+</ul>
+
+<p><strong>Style</strong></p>
+
+<p><img src="/design-system/images/uploads/50_50_style_mockup.png" alt="50-50 component style screenshot" title="50-50 component style screenshot"></p>
+
+<ul>
+  <li>Imagery: 16:9 ratio, recommend 1600 x 900 pixels to account for retina displays.</li>
+  <li>Headings: Any heading size may be used, recommend H2-4.</li>
+  <li>Body copy: Avenir paragraph.</li>
+  <li>At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).</li>
+</ul>
 
 
             <!-- Live code example -->
             
             <div class="live-code-example">
-                <main class="content content__2-1" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main">
-            <h2>Main content area</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            </p>
-        </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
-            Sidebar
-        </aside>
-    </div>
-</main>
-<footer class="footer" role="contentinfo">
-    <div class="wrapper">
-        Footer
-    </div>
-</footer>
+                TBD
             </div>
             
 
@@ -1590,6 +1643,12 @@
                     </li>
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#jinja-code-snippet-2">
+                            Jinja code snippet
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
@@ -1598,28 +1657,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;main class="content content__2-1" role="main"&gt;
-    &lt;div class="content_line"&gt;&lt;/div&gt;
-    &lt;div class="content_wrapper"&gt;
-        &lt;section class="content_main"&gt;
-            &lt;h2&gt;Main content area&lt;/h2&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            &lt;/p&gt;
-        &lt;/section&gt;
-        &lt;aside class="content_sidebar" style="background: #F1F2F2"&gt;
-            Sidebar
-        &lt;/aside&gt;
-    &lt;/div&gt;
-&lt;/main&gt;
-&lt;footer class="footer" role="contentinfo"&gt;
-    &lt;div class="wrapper"&gt;
-        Footer
-    &lt;/div&gt;
-&lt;/footer&gt;</code></pre>
+                            <pre><code class="language-html">TBD</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1627,389 +1665,16 @@
 
                 <!-- Jinja snippet -->
                 
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Bleedbar sidebar styling</h3>
-
-            <!-- Description -->
-            <p>Simply add class <code class="highlighter-rouge">.content__bleedbar</code> to <code class="highlighter-rouge">main.content.</code> Only supports sidebars on the right, for now.</p>
-
-<p>Note that inline styling is for demonstration purposes only; do not include it in your markup.</p>
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                <main class="content content__2-1 content__bleedbar" role="main">
-    <section class="content_hero" style="background: #E3E4E5">
-        Content hero
-    </section>
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main">
-            Main content area
-        </section>
-        <aside class="content_sidebar">
-            Bleeding sidebar
-        </aside>
-    </div>
-</main>
-            </div>
-            
-
-            
-            
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-3">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-3">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-2">
+                    <div class="variation-jinja-code-snippet">
+                        <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;main class="content content__2-1 content__bleedbar" role="main"&gt;
-    &lt;section class="content_hero" style="background: #E3E4E5"&gt;
-        Content hero
-    &lt;/section&gt;
-    &lt;div class="content_line"&gt;&lt;/div&gt;
-    &lt;div class="content_wrapper"&gt;
-        &lt;section class="content_main"&gt;
-            Main content area
-        &lt;/section&gt;
-        &lt;aside class="content_sidebar"&gt;
-            Bleeding sidebar
-        &lt;/aside&gt;
-    &lt;/div&gt;
-&lt;/main&gt;</code></pre>
+                            <pre><code class="language-html">* [info-unit-group-2.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/info-unit-group-2.html) in cfgov-refresh
+
+</code></pre>
                         </div>
                     </div>
                 </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Narrow content column option</h3>
-
-            <!-- Description -->
-            <p>Add a class of .content_main__narrow to .content_main to get a one-column (in a 12-column grid) gutter on the right side.</p>
-
-<p>Inline styling is for demonstration purposes only; do not include it in your markup.</p>
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                <main class="content content__2-1" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main content_main__narrow">
-            <h2>Main content area</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            </p>
-        </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
-            Sidebar
-        </aside>
-    </div>
-</main>
-<footer class="footer" role="contentinfo">
-    <div class="wrapper">
-        Footer
-    </div>
-</footer>
-            </div>
-            
-
-            
-            
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-4">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-4">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;main class="content content__2-1" role="main"&gt;
-    &lt;div class="content_line"&gt;&lt;/div&gt;
-    &lt;div class="content_wrapper"&gt;
-        &lt;section class="content_main content_main__narrow"&gt;
-            &lt;h2&gt;Main content area&lt;/h2&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            &lt;/p&gt;
-        &lt;/section&gt;
-        &lt;aside class="content_sidebar" style="background: #F1F2F2"&gt;
-            Sidebar
-        &lt;/aside&gt;
-    &lt;/div&gt;
-&lt;/main&gt;
-&lt;footer class="footer" role="contentinfo"&gt;
-    &lt;div class="wrapper"&gt;
-        Footer
-    &lt;/div&gt;
-&lt;/footer&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Related posts</h3>
-
-            <!-- Description -->
-            <p><img src="/design-system/images/uploads/related_posts_example.jpg" alt="Related posts example"></p>
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                
-            </div>
-            
-
-            
-            
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-5">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-5">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html"></code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Related links</h3>
-
-            <!-- Description -->
-            <p><img src="/design-system/images/uploads/related_links_example.jpg" alt="Related links example"></p>
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                
-            </div>
-            
-
-            
-            
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-6">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-6">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html"></code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Metadata</h3>
-
-            <!-- Description -->
-            <p><img src="/design-system/images/uploads/metadata_example.jpg" alt="Metadata example"></p>
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                
-            </div>
-            
-
-            
-            
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-7">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-7">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html"></code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Call to action with button</h3>
-
-            <!-- Description -->
-            <p><img src="/design-system/images/uploads/cta_example.png" alt=""></p>
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                
-            </div>
-            
-
-            
-            
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-8">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-8">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html"></code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
                 
 
             </div>
@@ -2029,86 +1694,13 @@
                 
                     <p>
                     </p>
-<h3>Use cases</h3>
-
-<h4 id="when-to-use-related-posts">When to use Related posts</h4>
+<p><strong>When to use</strong></p>
 
 <ul>
-  <li>This component is used to display lists of related content dynamically pulled from elsewhere in the site – blogs, events, and newsroom items– based on topic tag selections.</li>
-  <li>The amount and types of related content may be restricted based on the subject matter and needs of the page.</li>
+  <li>When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.</li>
+  <li>When an image or illustration helps users better understand the purpose of content.</li>
+  <li>Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.</li>
 </ul>
-
-<h4 id="when-other-options-are-better">When other options are better</h4>
-
-<ul>
-  <li>When lists of items should not be automatically updated consider related links instead.</li>
-  <li>When posts will be mixed with other types of content.</li>
-</ul>
-
-<h4 id="when-to-use-related-links">When to use Related links</h4>
-
-<ul>
-  <li>When a specific, static piece of content and call to action needs to be displayed in the sidebar.</li>
-  <li>When a static list of links or specific related posts need to be displayed in the sidebar.</li>
-</ul>
-
-<h4 id="when-other-options-are-better-1">When other options are better</h4>
-
-<ul>
-  <li>When all of the content is posts that can be dynamically populated.</li>
-</ul>
-
-<h4 id="when-to-use-meta-data">When to use Meta data</h4>
-
-<ul>
-  <li>When displaying relevant metadata about a specific document or set of documents, such as for a rule, notice, or report, for users to easily reference.</li>
-</ul>
-
-<h4 id="when-other-options-are-better-2">When other options are better</h4>
-
-<ul>
-  <li>When anything other than metadata for a document detail page is being displayed.</li>
-</ul>
-
-<h4 id="when-to-use-call-to-action-with-button">When to use call to action with button</h4>
-
-<ul>
-  <li>When highlighting or featuring a call to take a specific action.</li>
-</ul>
-
-<h4 id="when-other-options-are-better-3">When other options are better</h4>
-
-<ul>
-  <li>When the “action” is navigating to another page of the site or downloading a document. Refer to the buttons page for more information.</li>
-</ul>
-
-<h3>Content guidelines</h3>
-
-<ul>
-  <li>Slugs should be as succinct as possible, ideally 30 characters or less. They should be limited to one line at max column width.</li>
-  <li>Description beneath heading should also be succinct, limited to 3 lines at max column width max; 100 characters.</li>
-  <li>Call to action link should be limited to one line at max column width; 40 characters or less.</li>
-  <li>Content can be one or two columns in prefooter depending on need.</li>
-  <li>In the prefooter, content is populated in a Z-order, chronologically.</li>
-</ul>
-
-<h4 id="behavior">Behavior</h4>
-
-<p>All variations of sidebar element move into prefooter format at screen widths less than 901 px. The sidebar area can house multiple stacked sidebar elements.</p>
-
-<p>Under 600px all elements become single column. Mobile link style should be used in place of normal links at this size.</p>
-
-<p><img src="/design-system/images/uploads/behavior_sidebar_desktop.jpg" alt="Sidebar 901+"></p>
-
-<p><img src="/design-system/images/uploads/behavior_sidebar_mobile.jpg" alt="Sidebar 900 or less (transition to prefooter)"></p>
-
-<p>Prefooter format is automatically used on pages that have a left side secondary navigation.</p>
-
-<p>Below 601 px width, for legibility link styling on clickable headings remains in the standard format, but mobile link style is applied where possible.</p>
-
-<p><img src="/design-system/images/uploads/behavior_prefooter_desktop_1.jpg" alt="Prefooter 901+ (with side nav.)"></p>
-
-<p><img src="/design-system/images/uploads/behavior_prefooter_mobile_1.jpg" alt="Prefooter 600 or less"></p>
 
                     
                 
@@ -2122,7 +1714,41 @@
 
     <div class="content-l u-mb45">
         
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="related-items">Related Items</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <ul>
+  <li>Link blobs (Design System page in progress)</li>
+</ul>
 
+                </section>
+            </div>
+        </div>
+        
+
+        
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="help-us">Help us make improvements</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <p>See <a href="https://gist.github.com/contolini/91d498357fd362d6272f22e001300cae">25-75 sample HTML</a> and <a href="https://gist.github.com/contolini/ad1513232fe07d8a70683669ba48f9d2">50-50 sample HTML</a>, CSS for both need to be migrated from cfgov-refresh.</p>
+
+<p>Information about Info Unit Groups can be found at:</p>
+
+<ul>
+  <li><a href="http://cfpb.github.io/design-manual/page-components/25-75.html">25-75</a></li>
+  <li><a href="http://cfpb.github.io/design-manual/page-components/50-50.html">50-50</a></li>
+  <li><a href="http://cfpb.github.io/design-manual/page-components/half-width-link-blob.html">half-width-link-blob</a></li>
+  <li><a href="http://cfpb.github.io/design-manual/page-components/third-width-link-blob.html">third-width-link-blob</a></li>
+  <li><a href="https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts">cf-layout</a></li>
+</ul>
+
+                </section>
+            </div>
+        </div>
         
     </div>
 <!-- .content-l -->
@@ -2130,7 +1756,7 @@
 </section><!-- .content_main -->
 
         <div class="o-editor_link" id="edit-page">
-            <a class="a-btn" href="/design-system/admin/#/collections/components/entries/sidebars-prefooters" title="Edit this page in Netlify CMS">
+            <a class="a-btn" href="/design-system/admin/#/collections/components/entries/info-unit-groups-image-text" title="Edit this page in Netlify CMS">
                 <span class="a-btn_text">Edit this page</span>
                 <span class="a-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 833.4 1200" class="cf-icon-svg"><path d="M233 203.1c-27.2-27.2-71.8-27.2-99 0L20.4 316.7c-27.2 27.2-27.2 71.8 0 99l89.7 89.7 212.7-212.7-89.8-89.6zM832.6 992.7l-48.6-216c-3.4-15.3-14.9-36.5-26-48.6l-1.8-1.8-121.8-121.9-110.6-110.6-165.7-165.7-54.8 54.8 400 400 21.4-21.4c5.3 6.4 11.9 18.9 13.5 25.6l21.4 95.2-60 60-95.2-21.4c-6.7-1.5-19.2-8.2-25.6-13.5l89.2-89.2-400-400-122.6 122.6 165.7 165.7 110.6 110.6 121.8 121.8 1.8 1.8c12.1 11.1 33.3 22.6 48.6 26l215.9 48.6c2.2.5 4.3.7 6.2.7 12.6.1 19.8-9.4 16.6-23.3z"></path></svg></span>
             </a>
@@ -2152,8 +1778,8 @@
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2020-01-29 19:16:34 +0000">
-                     7:16:34 PM Jan 29, 2020
+                <time datetime="2020-04-28 15:00:25 +0000">
+                     3:00:25 PM Apr 28, 2020
                 </time>
             </small>
         </div>

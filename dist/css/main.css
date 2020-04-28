@@ -5823,6 +5823,9 @@ pre code {
   border-left: 1px solid #80b9e7;
   margin-left: 0.4375em;
 }
+.t-homepage .o-editor_link#edit-page {
+  bottom: 30px;
+}
 .frame-content #toggle-code {
   display: none;
 }

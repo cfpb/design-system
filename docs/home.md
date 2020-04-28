@@ -49,4 +49,3 @@ body: >-
 
   All content has been released as open source under the CC0 1.0 Universal Public Domain Dedication, and we’d love for other agencies, developers, or groups to adapt it for their own use.
 ---
-

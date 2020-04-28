@@ -15,6 +15,17 @@ public_folder: /design-system/images/uploads
 pull_request_url: https://github.com/cfpb/design-system/pulls
 
 collections:
+  - label: "Generic pages"
+    name: "generic-pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "home.md"
+        fields:
+          - name: 'body'
+            label: 'Markdown and/or HTML for the homepage'
+            widget: 'text'
+            required: true
   - name: 'getting-started'
     preview_path: "getting-started/{{slug}}"
     label: 'Getting started pages'

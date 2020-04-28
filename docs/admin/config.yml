@@ -20,7 +20,7 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "home.md"
+        file: "docs/home.md"
         fields:
           - name: 'body'
             label: 'Markdown and/or HTML for the homepage'

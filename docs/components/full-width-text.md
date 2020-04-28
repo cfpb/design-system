@@ -2,7 +2,7 @@
 title: Full Width Text
 layout: variation
 section: components
-secondary_section: Layout options
+secondary_section: null
 status: Released
 description: "The full width text component is the foundation of the main content area of many pages. Spanning the full main content area within a given template, it houses basic text content that follows [our typographic hierarchy](https://cfpb.github.io/design-system/foundation/typography) with the option to add pull quotes, images, inset information, and tables in-line.\n\nMore information about the Full Width Text component can be found at:\n\n<http://cfpb.github.io/design-manual/page-components/fullwidth-text.html>\t\n\nand\n\n<https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts>"
 variations:

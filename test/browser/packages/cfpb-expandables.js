@@ -10,8 +10,8 @@ describe( 'Basic CFPB expandable', () => {
     browser.url( 'http://localhost:4000/design-system/components/expandables' );
     browser.setWindowSize( 1024, 768 );
     // Selects the first expandable live code sample, "Basic expandable"
-    expandableHeader = $( '.live-code-example button.o-expandable_header' );
-    expandableContent = $( '.live-code-example .o-expandable_content' );
+    expandableHeader = $( '.a-live_code button.o-expandable_header' );
+    expandableContent = $( '.a-live_code .o-expandable_content' );
     isExpandableContentVisible = () => expandableContent.isDisplayed();
   } );
 

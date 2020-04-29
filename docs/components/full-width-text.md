@@ -9,7 +9,7 @@ variation_groups:
   - variations:
       - variation_code_snippet: ''
         variation_description: >-
-          ![](/design-system/images/uploads/content_quote_example.jpg)
+          ![Content quote example screenshot](/design-system/images/uploads/content_quote_example.jpg)
 
 
           **WHEN TO USE**
@@ -48,7 +48,7 @@ variation_groups:
         variation_name: Content
       - variation_code_snippet: ''
         variation_description: >-
-          ![](/design-system/images/uploads/content_media_example.jpg)
+          ![Content media example screenshot](/design-system/images/uploads/content_media_example.jpg)
 
 
           **WHEN TO USE**
@@ -80,7 +80,7 @@ variation_groups:
           pages](https://cfpb.github.io/design-system/templates/document-detail-pages)
         variation_name: Image
       - variation_description: >-
-          ![](/design-system/images/uploads/content_inset_example.jpg)
+          ![Content inset example screenshot](/design-system/images/uploads/content_inset_example.jpg)
 
 
           **WHEN TO USE**

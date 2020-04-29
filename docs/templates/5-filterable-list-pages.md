@@ -20,17 +20,19 @@ description: >-
 
   *
   http://cfpb.github.io/design-manual/global-elements/filterable-list-pages.html
-variations:
-  - variation_code_snippet: ''
-    variation_description: >-
-      ![Sublanding page
-      mockup](/design-system/images/uploads/sublanding_behavior_desktop-1.jpg)
-    variation_name: Filterable list sublanding page
-  - variation_code_snippet: ''
-    variation_description: >-
-      ![Browse page
-      mockup](/design-system/images/uploads/browse_behavior_desktop.jpg)
-    variation_name: Filterable list browse page
+variation_groups:
+  - variation_group_name: ''
+    variations:
+      - variation_code_snippet: ''
+        variation_description: >-
+          ![Sublanding page
+          mockup](/design-system/images/uploads/sublanding_behavior_desktop-1.jpg)
+        variation_name: Filterable list sublanding page
+      - variation_code_snippet: ''
+        variation_description: >-
+          ![Browse page
+          mockup](/design-system/images/uploads/browse_behavior_desktop.jpg)
+        variation_name: Filterable list browse page
 usage: >-
   #### Use case
 

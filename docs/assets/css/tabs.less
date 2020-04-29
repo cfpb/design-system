@@ -7,15 +7,9 @@
 // 40.0625em; 641px
 // if we change them in this CSS we also have to fork and release our own JS with updated breakpoints
 
-.govuk-tabs {
-    margin-top: 5px;
-    margin-bottom: 20px;
-}
-
 @media (min-width: 40.0625em) {
     .govuk-tabs {
-        margin-top: 5px;
-        margin-bottom: 30px;
+        margin: 0 -2rem 2rem;
     }
 }
 
@@ -24,7 +18,7 @@
     padding: 0;
     list-style: none;
     display: none;
-    .respond-to-min(641px, { display: block; });
+    .respond-to-min(641px, { display: flex; });
 }
 @media (max-width: 40.0525em) {
     .govuk-tabs__list {
@@ -40,7 +34,7 @@
 .govuk-tabs__list-item {
     .heading-5();
     border-bottom: 0;
-    margin-left: 25px;
+    margin-bottom: 0;
 }
 
 .govuk-tabs__list-item::before {
@@ -78,6 +72,7 @@
 @media (min-width: 40.0625em) {
     .govuk-tabs__panel {
         border-top: 1px solid @gray;
+        border-bottom: 1px solid @gray-40;
         margin: -3px 0 50px;
     }
 }
@@ -102,6 +97,13 @@
                     }
                 }
             }
+
+            &:first-child {
+                .govuk-tabs__tab {
+                    padding-left: 2rem;
+                }
+            }
+
         }
 
         .govuk-tabs__list-item::before {
@@ -115,9 +117,9 @@
         .govuk-tabs__tab {
             border: 0;
             color: @gray;
+            display: block;
             margin-right: 5px;
-            padding: 20px 40px 7px;
-            float: left;
+            padding: 1rem 1rem calc( 1rem - 5px );
             text-align: center;
             &:hover {
                 border-bottom: 2px solid @gray-5;
@@ -149,7 +151,9 @@
 }
 
 .variation-code-snippet-title,
-.variation-jinja-code-snippet-title {
+.variation-jinja-code-snippet-title,
+.variation-implementation-title,
+.variation-specs-title {
     .respond-to-min(641px, {
         .u-visually-hidden();
     });

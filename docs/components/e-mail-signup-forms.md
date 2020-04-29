@@ -14,23 +14,24 @@ description: >-
 
 
   http://cfpb.github.io/design-manual/page-components/email-sign-up.html
-variations:
-  - variation_code_snippet: ''
-    variation_description: >-
-      ![Sidebar email signup
-      mockup](/design-system/images/uploads/emailsignup_intro_mockup.png)
-    variation_name: Sidebar email sign up
-  - variation_code_snippet: ''
-    variation_description: >-
-      The inset email signup module is a variation on the main email signup that
-      can be used in the body content of Learn and Browse pages. It should be
-      used when the email CTA is more important to the purpose of the page than
-      the sidebar or prefooter placement reflects.
+variation_groups:
+  - variations:
+      - variation_code_snippet: ''
+        variation_description: >-
+          ![Sidebar email signup
+          mockup](/design-system/images/uploads/emailsignup_intro_mockup.png)
+        variation_name: Sidebar email sign up
+      - variation_code_snippet: ''
+        variation_description: >-
+          The inset email signup module is a variation on the main email signup that
+          can be used in the body content of Learn and Browse pages. It should be
+          used when the email CTA is more important to the purpose of the page than
+          the sidebar or prefooter placement reflects.
 
 
-      ![Inset email
-      signup](/design-system/images/uploads/2e07e378-4adf-11e8-96a7-67d2534eec85.png)
-    variation_name: Inset email sign up
+          ![Inset email
+          signup](/design-system/images/uploads/2e07e378-4adf-11e8-96a7-67d2534eec85.png)
+        variation_name: Inset email sign up
 usage: >-
   <h3>Use cases</h3>
 

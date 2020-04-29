@@ -21,43 +21,45 @@ description: >-
 
 
   * http://cfpb.github.io/design-manual/brand-guidelines/video.html
-variations:
-  - variation_code_snippet: ''
-    variation_description: >-
-      A video that covers a specific event relevant to the Bureau, such as a
-      field hearing, webcast, or conference.
+variation_groups:
+  - variation_group_name: ''
+    variations:
+      - variation_code_snippet: ''
+        variation_description: >-
+          A video that covers a specific event relevant to the Bureau, such as a
+          field hearing, webcast, or conference.
 
 
-      ![Still from Miami Fl Field Hearing
-      Video](/design-system/images/uploads/video_1.jpg "Event video")
-    variation_name: Event
-  - variation_code_snippet: ''
-    variation_description: >-
-      An industry-facing video that informs viewers about a specific topic
-      through animated slide presentations and voiceovers.
+          ![Still from Miami Fl Field Hearing
+          Video](/design-system/images/uploads/video_1.jpg "Event video")
+        variation_name: Event
+      - variation_code_snippet: ''
+        variation_description: >-
+          An industry-facing video that informs viewers about a specific topic
+          through animated slide presentations and voiceovers.
 
 
-      ![Still from Remittance Transfer Rule
-      Video](/design-system/images/uploads/video_2.jpg "Informational video")
-    variation_name: Informational
-  - variation_code_snippet: ''
-    variation_description: >-
-      A video that educates consumers on a specific issue, web tool, or
-      regulation written by the Bureau.
+          ![Still from Remittance Transfer Rule
+          Video](/design-system/images/uploads/video_2.jpg "Informational video")
+        variation_name: Informational
+      - variation_code_snippet: ''
+        variation_description: >-
+          A video that educates consumers on a specific issue, web tool, or
+          regulation written by the Bureau.
 
 
-      ![Still from What is HMDA Video](/design-system/images/uploads/video_3.jpg
-      "Educational video")
-    variation_name: Educational
-  - variation_code_snippet: ''
-    variation_description: >-
-      A documentary-style, consumer-facing video that demonstrates the work done
-      by the Bureau.
+          ![Still from What is HMDA Video](/design-system/images/uploads/video_3.jpg
+          "Educational video")
+        variation_name: Educational
+      - variation_code_snippet: ''
+        variation_description: >-
+          A documentary-style, consumer-facing video that demonstrates the work done
+          by the Bureau.
 
 
-      ![Still from Consumer Stories
-      Video](/design-system/images/uploads/video_4.jpg "Documentary video")
-    variation_name: Documentary
+          ![Still from Consumer Stories
+          Video](/design-system/images/uploads/video_4.jpg "Documentary video")
+        variation_name: Documentary
 usage: >-
   #### Content guidelines
 

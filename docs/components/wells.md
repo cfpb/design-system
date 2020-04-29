@@ -16,18 +16,19 @@ description: >-
   * http://cfpb.github.io/design-manual/page-components/wells.html
 
   * https://cfpb.github.io/capital-framework/components/cf-layout/#wells
-variations:
-  - variation_code_snippet: |-
-      <div class="o-well">
-          <h4>Well title</h4>
-          <p>
-              Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-              instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
-              cu.
-          </p>
-      </div>
-    variation_description: ''
-    variation_name: Default well
+variation_groups:
+  - variations:
+      - variation_code_snippet: |-
+          <div class="o-well">
+              <h4>Well title</h4>
+              <p>
+                  Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
+                  instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
+                  cu.
+              </p>
+          </div>
+        variation_description: ''
+        variation_name: Default well
 usage: >-
   #### Use cases
 

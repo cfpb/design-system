@@ -5,80 +5,81 @@ section: components
 secondary_section: Navigation
 status: Released
 description: "Default pagination consists of “Older” and “Newer” links, styled as buttons, and an inline form (input, submit button) that allows users to navigate to specific pages by number. When appropriate, the buttons may be labeled “Previous” and “Next”.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/page-components/tables.html#behavior\t\n* https://cfpb.github.io/capital-framework/components/cf-pagination/"
-variations:
-  - variation_code_snippet: |-
-      <div id="pagination_content"></div>
+variation_groups:
+  - variations:
+      - variation_code_snippet: |-
+          <div id="pagination_content"></div>
 
-      <!-- Paginated content here -->
+          <!-- Paginated content here -->
 
-      <nav class="m-pagination" role="navigation" aria-label="Pagination">
-          <a class="a-btn
-                    m-pagination_btn-prev"
-             href="?page=21#pagination_content">
-              <span class="a-btn_icon a-btn_icon__on-left">{% include icons/left.svg %}</span>
-              Newer
-          </a>
-          <a class="a-btn
-                    m-pagination_btn-next"
-             href="?page=23#pagination_content">
-              <span class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg %}</span>
-              Older
-          </a>
-          <form class="m-pagination_form"
-                action="#pagination_content">
-              <label class="m-pagination_label"
-                     for="m-pagination_current-page">
-                  Page
-                  <span class="u-visually-hidden">
-                      number 22 out
-                  </span>
-                  <input class="m-pagination_current-page"
-                         id="m-pagination_current-page"
-                         name="page"
-                         type="number"
-                         min="1"
-                         max="149"
-                         pattern="[0-9]*"
-                         inputmode="numeric"
-                         value="22">
-                  of 149
-              </label>
-              <button class="a-btn
-                             a-btn__link
-                             m-pagination_btn-submit"
-                      id="m-pagination_btn-submit"
-                      type="submit">Go</button>
-          </form>
-      </nav>
-    variation_description: ''
-    variation_name: Default pagination
-  - variation_code_snippet: >-
-      <nav class="m-pagination" role="navigation" aria-label="Pagination">    <a
-      class="a-btn              a-btn__disabled
-      m-pagination_btn-prev">        <span class="a-btn_icon
-      a-btn_icon__on-left">{% include icons/left.svg %}</span>        Newer
-      </a>    <a class="a-btn              m-pagination_btn-next"
-      href="?page=2#pagination_content">        Older        <span
-      class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg
-      %}</span>    </a>    <form class="m-pagination_form"
-      action="#pagination_content">        <label
-      class="m-pagination_label"
-      for="m-pagination_current-page">            Page            <span
-      class="u-visually-hidden">                number 1 out
-      </span>            <input
-      class="m-pagination_current-page"
-      id="m-pagination_current-page"
-      name="page"                   type="number"
-      min="1"                   max="149"
-      pattern="[0-9]*"                   inputmode="numeric"
-      value="1">            of 149        </label>        <button
-      class="a-btn                       a-btn__link
-      m-pagination_btn-submit"
-      id="m-pagination_btn-submit"                type="submit">Go</button>
-      </form></nav>
-    variation_description: ''
-    variation_jinja_code_snippet: ''
-    variation_name: First and last pages
+          <nav class="m-pagination" role="navigation" aria-label="Pagination">
+              <a class="a-btn
+                        m-pagination_btn-prev"
+                href="?page=21#pagination_content">
+                  <span class="a-btn_icon a-btn_icon__on-left">{% include icons/left.svg %}</span>
+                  Newer
+              </a>
+              <a class="a-btn
+                        m-pagination_btn-next"
+                href="?page=23#pagination_content">
+                  <span class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg %}</span>
+                  Older
+              </a>
+              <form class="m-pagination_form"
+                    action="#pagination_content">
+                  <label class="m-pagination_label"
+                        for="m-pagination_current-page">
+                      Page
+                      <span class="u-visually-hidden">
+                          number 22 out
+                      </span>
+                      <input class="m-pagination_current-page"
+                            id="m-pagination_current-page"
+                            name="page"
+                            type="number"
+                            min="1"
+                            max="149"
+                            pattern="[0-9]*"
+                            inputmode="numeric"
+                            value="22">
+                      of 149
+                  </label>
+                  <button class="a-btn
+                                a-btn__link
+                                m-pagination_btn-submit"
+                          id="m-pagination_btn-submit"
+                          type="submit">Go</button>
+              </form>
+          </nav>
+        variation_description: ''
+        variation_name: Default pagination
+      - variation_code_snippet: >-
+          <nav class="m-pagination" role="navigation" aria-label="Pagination">    <a
+          class="a-btn              a-btn__disabled
+          m-pagination_btn-prev">        <span class="a-btn_icon
+          a-btn_icon__on-left">{% include icons/left.svg %}</span>        Newer
+          </a>    <a class="a-btn              m-pagination_btn-next"
+          href="?page=2#pagination_content">        Older        <span
+          class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg
+          %}</span>    </a>    <form class="m-pagination_form"
+          action="#pagination_content">        <label
+          class="m-pagination_label"
+          for="m-pagination_current-page">            Page            <span
+          class="u-visually-hidden">                number 1 out
+          </span>            <input
+          class="m-pagination_current-page"
+          id="m-pagination_current-page"
+          name="page"                   type="number"
+          min="1"                   max="149"
+          pattern="[0-9]*"                   inputmode="numeric"
+          value="1">            of 149        </label>        <button
+          class="a-btn                       a-btn__link
+          m-pagination_btn-submit"
+          id="m-pagination_btn-submit"                type="submit">Go</button>
+          </form></nav>
+        variation_description: ''
+        variation_jinja_code_snippet: ''
+        variation_name: First and last pages
 usage: >-
   <h3>Content guidelines</h3>
 

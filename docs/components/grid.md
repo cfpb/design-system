@@ -93,426 +93,427 @@ description: >-
   >   or your compiled Capital Framework CSS will
 
   >   not work perfectly in older browsers.
-variations:
-  - variation_code_snippet: |-
-      <div class="cols-12">
-          <section>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-              <div class="col col-1"><p>one</p></div>
-          </section>
+variation_groups:
+  - variations:
+      - variation_code_snippet: |-
+          <div class="cols-12">
+              <section>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+                  <div class="col col-1"><p>one</p></div>
+              </section>
 
-          <section>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-2"><p>two</p></div>
-          </section>
+              <section>
+                  <div class="col col-2"><p>two</p></div>
+                  <div class="col col-2"><p>two</p></div>
+                  <div class="col col-2"><p>two</p></div>
+                  <div class="col col-2"><p>two</p></div>
+                  <div class="col col-2"><p>two</p></div>
+                  <div class="col col-2"><p>two</p></div>
+              </section>
 
-          <section>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-2"><p>two</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-2"><p>two</p></div>
-          </section>
+              <section>
+                  <div class="col col-2"><p>two</p></div>
+                  <div class="col col-3"><p>three</p></div>
+                  <div class="col col-2"><p>two</p></div>
+                  <div class="col col-3"><p>three</p></div>
+                  <div class="col col-2"><p>two</p></div>
+              </section>
 
-          <section>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-3"><p>three</p></div>
-              <div class="col col-3"><p>three</p></div>
-          </section>
+              <section>
+                  <div class="col col-3"><p>three</p></div>
+                  <div class="col col-3"><p>three</p></div>
+                  <div class="col col-3"><p>three</p></div>
+                  <div class="col col-3"><p>three</p></div>
+              </section>
 
-          <section>
-              <div class="col col-4"><p>four</p></div>
-              <div class="col col-4"><p>four</p></div>
-              <div class="col col-4"><p>four</p></div>
-          </section>
+              <section>
+                  <div class="col col-4"><p>four</p></div>
+                  <div class="col col-4"><p>four</p></div>
+                  <div class="col col-4"><p>four</p></div>
+              </section>
 
-          <section>
-              <div class="col col-6"><p>six</p></div>
-              <div class="col col-6"><p>six</p></div>
-          </section>
+              <section>
+                  <div class="col col-6"><p>six</p></div>
+                  <div class="col col-6"><p>six</p></div>
+              </section>
 
-          <section>
-              <div class="col col-12"><p>twelve</p></div>
-          </section>
-      </div>
-    variation_description: >-
-      Twelve-column grid with flexible column widths and fixed gutters. The
-      width of the padding on the left and right edge of the grid depends on
-      device size.
+              <section>
+                  <div class="col col-12"><p>twelve</p></div>
+              </section>
+          </div>
+        variation_description: >-
+          Twelve-column grid with flexible column widths and fixed gutters. The
+          width of the padding on the left and right edge of the grid depends on
+          device size.
 
 
-      * 30px fixed gutter width
+          * 30px fixed gutter width
 
-      * Max width 1230px, background colors may bleed to edge
+          * Max width 1230px, background colors may bleed to edge
 
-      * Desktop: 30px padding on each side
+          * Desktop: 30px padding on each side
 
-      * Tablet: 30px padding on each side
+          * Tablet: 30px padding on each side
 
-      * Mobile: 15px padding on each side
+          * Mobile: 15px padding on each side
 
 
-      #### Breakpoints
+          #### Breakpoints
 
 
-      Five major breakpoints standardize large-scale changes like navigation and
-      sidebar behavior. Use other breakpoints as necessary.
+          Five major breakpoints standardize large-scale changes like navigation and
+          sidebar behavior. Use other breakpoints as necessary.
 
 
-      * `xs`: 0-600px
+          * `xs`: 0-600px
 
-      * `sm`: 601-900px
+          * `sm`: 601-900px
 
-      * `med`: 901-1020px
+          * `med`: 901-1020px
 
-      * `lg`: 1021-1230px
+          * `lg`: 1021-1230px
 
-      * `xl`: 1231px and up
-    variation_name: 12 columns w/ 1200px max width
-  - variation_code_snippet: ''
-    variation_description: >-
-      Component variables are used to theme a component.
+          * `xl`: 1231px and up
+        variation_name: 12 columns w/ 1200px max width
+      - variation_code_snippet: ''
+        variation_description: >-
+          Component variables are used to theme a component.
 
-      They likely will be left as is, but if needed can be overwritten by
-      duplicating
+          They likely will be left as is, but if needed can be overwritten by
+          duplicating
 
-      the variable in a `@key: value` format with a different value.
+          the variable in a `@key: value` format with a different value.
 
-      This customized variable would be placed in the same file
+          This customized variable would be placed in the same file
 
-      where this component's less file is imported.
+          where this component's less file is imported.
 
 
-      ```
+          ```
 
-      @grid_wrapper-width: 1200px;
+          @grid_wrapper-width: 1200px;
 
-      ```
+          ```
 
 
-      The grid's maximum width in px.
+          The grid's maximum width in px.
 
-      This value can be overridden in the `grid_wrapper()` mixin.
+          This value can be overridden in the `grid_wrapper()` mixin.
 
 
-      ```
+          ```
 
-      @grid_gutter-width: 30px;
+          @grid_gutter-width: 30px;
 
-      ```
+          ```
 
 
-      The fixed width between columns.
+          The fixed width between columns.
 
 
-      ```
+          ```
 
-      @grid_total-columns: 12;
+          @grid_total-columns: 12;
 
-      ```
+          ```
 
 
-      The total number of columns used in calculating column widths.
+          The total number of columns used in calculating column widths.
 
-      This value can be overridden in the `grid_column()` mixin.
-    variation_name: Variables
-  - variation_code_snippet: >-
-      <div class="main-wrapper" style="background-color: #f9f9f9">This container
-      now has left and right padding and a centered max width.</div>
+          This value can be overridden in the `grid_column()` mixin.
+        variation_name: Variables
+      - variation_code_snippet: >-
+          <div class="main-wrapper" style="background-color: #f9f9f9">This container
+          now has left and right padding and a centered max width.</div>
 
-      <div class="wide-wrapper" style="background-color: #f9f9f9">This container
-      is the same except it has a wider max-width.</div>
-    variation_description: |-
-      Wrappers are centered containers with a max-width
-      and outside left/right padding of ½ the gutter width on each side.
+          <div class="wide-wrapper" style="background-color: #f9f9f9">This container
+          is the same except it has a wider max-width.</div>
+        variation_description: |-
+          Wrappers are centered containers with a max-width
+          and outside left/right padding of ½ the gutter width on each side.
 
-      #### Less mixin
+          #### Less mixin
 
-      ```
-      .grid_wrapper( @grid_wrapper-width: @grid_wrapper-width )
-      ```
+          ```
+          .grid_wrapper( @grid_wrapper-width: @grid_wrapper-width )
+          ```
 
-      You can create a wrapper with max-width other than the default
-      by passing a pixel value into the mixin.
+          You can create a wrapper with max-width other than the default
+          by passing a pixel value into the mixin.
 
-      #### Example
+          #### Example
 
-      ```
-      .main-wrapper {
-          .grid_wrapper();
-      }
-      .wide-wrapper {
-          .grid_wrapper( 1900px );
-      }
-      ```
-    variation_name: Wrappers
-  - variation_code_snippet: |-
-      <div class="main-wrapper">
-           <div class="half">I am half of my parent.</div>
-           <div class="half">
-                <div class="styled">I am half of my parent. I also have a border and background.</div>
-           </div>
-      </div>
-    variation_description: >-
-      #### Less mixin
-
-
-      ```
-
-      .grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0;
-      @suffix: 0 )
-
-      ```
-
-
-      Create a grid column that is `@columns` wide given `@total` total grid
-      columns.
-
-
-      Optionally give the column left or right padding with the
-
-      `@prefix` and `@suffix` parameters.
-
-
-      Grid columns use transparent borders to create the gutters of the grid,
-
-      so if you want a column to have a background or border, you'll need to
-
-      add a wrapper just inside the column to be styled that way.
-
-
-
-      ```
-
-      .main-wrapper {
-          .grid_wrapper();
-      }
-
-      .half {
-          .grid_column(1, 2);
-      }
-
-      .styled {
-          border: 1px solid #999;
-          background: #EEE;
-      }
-
-      ```
-
-
-      **NOTE:** cf-grid does not have a "row" concept.
-
-      If you have a 12-column grid and place 24 columns inside a wrapper,
-
-      cf-grid columns will automatically stack into two rows of 12.
-    variation_name: Columns
-  - variation_code_snippet: |-
-      <div class="main-wrapper">
-          <div class="half">
-              <div class="nested">
-                  <div class="half"></div>
-                  <div class="half"></div>
+          ```
+          .main-wrapper {
+              .grid_wrapper();
+          }
+          .wide-wrapper {
+              .grid_wrapper( 1900px );
+          }
+          ```
+        variation_name: Wrappers
+      - variation_code_snippet: |-
+          <div class="main-wrapper">
+              <div class="half">I am half of my parent.</div>
+              <div class="half">
+                      <div class="styled">I am half of my parent. I also have a border and background.</div>
               </div>
           </div>
-          <div class="half">
-              <div class="nested">
-                  <div class="half"></div>
-                  <div class="half"></div>
+        variation_description: >-
+          #### Less mixin
+
+
+          ```
+
+          .grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0;
+          @suffix: 0 )
+
+          ```
+
+
+          Create a grid column that is `@columns` wide given `@total` total grid
+          columns.
+
+
+          Optionally give the column left or right padding with the
+
+          `@prefix` and `@suffix` parameters.
+
+
+          Grid columns use transparent borders to create the gutters of the grid,
+
+          so if you want a column to have a background or border, you'll need to
+
+          add a wrapper just inside the column to be styled that way.
+
+
+
+          ```
+
+          .main-wrapper {
+              .grid_wrapper();
+          }
+
+          .half {
+              .grid_column(1, 2);
+          }
+
+          .styled {
+              border: 1px solid #999;
+              background: #EEE;
+          }
+
+          ```
+
+
+          **NOTE:** cf-grid does not have a "row" concept.
+
+          If you have a 12-column grid and place 24 columns inside a wrapper,
+
+          cf-grid columns will automatically stack into two rows of 12.
+        variation_name: Columns
+      - variation_code_snippet: |-
+          <div class="main-wrapper">
+              <div class="half">
+                  <div class="nested">
+                      <div class="half"></div>
+                      <div class="half"></div>
+                  </div>
+              </div>
+              <div class="half">
+                  <div class="nested">
+                      <div class="half"></div>
+                      <div class="half"></div>
+                  </div>
               </div>
           </div>
-      </div>
-    variation_description: >
-      Since all grid columns have left and right gutters,
+        variation_description: >
+          Since all grid columns have left and right gutters,
 
-      you will notice undesirable offsetting when nesting columns.
+          you will notice undesirable offsetting when nesting columns.
 
-      Normally this is removed with complex selectors
+          Normally this is removed with complex selectors
 
-      or by adding classes to the first and last column per 'row'.
-
-
-      In cf-grid, the way to get around this is by wrapping your columns
-
-      in a container that utilizes the `.grid_nested-col-group()` mixin.
-
-      This mixin uses negative left and right margins to
-
-      pull the columns back into alignment with parent columns.
+          or by adding classes to the first and last column per 'row'.
 
 
-      Working this way allows you to easily create responsive grids.
+          In cf-grid, the way to get around this is by wrapping your columns
 
-      You are free to control the number of columns per "row" at different
-      breakpoints
+          in a container that utilizes the `.grid_nested-col-group()` mixin.
 
-      without having to deal with the first and last columns of each row.
+          This mixin uses negative left and right margins to
 
-
-      #### Less mixin
+          pull the columns back into alignment with parent columns.
 
 
-      ```
+          Working this way allows you to easily create responsive grids.
 
-      .grid_nested-col-group()
+          You are free to control the number of columns per "row" at different
+          breakpoints
 
-      ```
-
-
-      #### Usage
+          without having to deal with the first and last columns of each row.
 
 
-      ```
-
-      .main-wrapper {
-          .grid_wrapper();
-      }
-
-      .nested {
-          .grid_nested-col-group();
-      }
-
-      .half {
-          .grid_column(1, 2);
-      }
-
-      ```
-    variation_name: Nested columns
-  - variation_code_snippet: |-
-      <div class="cols-12">
-          <section>
-              <div class="col col-6">
-                  <p>six</p>
-                  <section class="nested">
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                  </section>
-              </div>
-
-              <div class="col col-6">
-                  <p>six</p>
-                  <section class="nested">
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                  </section>
-              </div>
-          </section>
-
-          <section>
-              <div class="col col-3">
-                  <p>three</p>
-                  <section class="nested">
-                      <div class="col col-6"><p>six</p></div>
-                      <div class="col col-6"><p>six</p></div>
-                  </section>
-              </div>
-
-              <div class="col col-6">
-                  <p>six</p>
-                  <section class="nested">
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                      <div class="col col-4"><p>four</p></div>
-                  </section>
-              </div>
-
-              <div class="col col-3">
-                  <p>three</p>
-                  <section class="nested">
-                      <div class="col col-3"><p>three</p></div>
-                      <div class="col col-3"><p>three</p></div>
-                      <div class="col col-3"><p>three</p></div>
-                      <div class="col col-3"><p>three</p></div>
-                  </section>
-              </div>
-          </section>
-      </div>
-    variation_description: ''
-    variation_name: Nesting
-  - variation_code_snippet: |-
-      <div>
-          <div class="second">I am first in the markup but appear after .first.</div>
-          <div class="first">I am second in the markup but appear before .second.</div>
-      </div>
-    variation_description: >-
-      **NOTE:** Using these is not advised, because the disadvantages for users
-
-      of assistive technology outweigh the advantages of putting your most
-      important
-
-      content first in the source order, but it's here if you absolutely need
-      it.
+          #### Less mixin
 
 
-      #### Less mixin
+          ```
+
+          .grid_nested-col-group()
+
+          ```
 
 
-      ```
-
-      .push( @offset: 1, @grid_total-columns: @grid_total-columns )
-
-      ```
+          #### Usage
 
 
-      ```
+          ```
 
-      .pull( @offset: 1, @grid_total-columns: @grid_total-columns )
+          .main-wrapper {
+              .grid_wrapper();
+          }
 
-      ```
+          .nested {
+              .grid_nested-col-group();
+          }
+
+          .half {
+              .grid_column(1, 2);
+          }
+
+          ```
+        variation_name: Nested columns
+      - variation_code_snippet: |-
+          <div class="cols-12">
+              <section>
+                  <div class="col col-6">
+                      <p>six</p>
+                      <section class="nested">
+                          <div class="col col-4"><p>four</p></div>
+                          <div class="col col-4"><p>four</p></div>
+                          <div class="col col-4"><p>four</p></div>
+                      </section>
+                  </div>
+
+                  <div class="col col-6">
+                      <p>six</p>
+                      <section class="nested">
+                          <div class="col col-4"><p>four</p></div>
+                          <div class="col col-4"><p>four</p></div>
+                          <div class="col col-4"><p>four</p></div>
+                      </section>
+                  </div>
+              </section>
+
+              <section>
+                  <div class="col col-3">
+                      <p>three</p>
+                      <section class="nested">
+                          <div class="col col-6"><p>six</p></div>
+                          <div class="col col-6"><p>six</p></div>
+                      </section>
+                  </div>
+
+                  <div class="col col-6">
+                      <p>six</p>
+                      <section class="nested">
+                          <div class="col col-4"><p>four</p></div>
+                          <div class="col col-4"><p>four</p></div>
+                          <div class="col col-4"><p>four</p></div>
+                      </section>
+                  </div>
+
+                  <div class="col col-3">
+                      <p>three</p>
+                      <section class="nested">
+                          <div class="col col-3"><p>three</p></div>
+                          <div class="col col-3"><p>three</p></div>
+                          <div class="col col-3"><p>three</p></div>
+                          <div class="col col-3"><p>three</p></div>
+                      </section>
+                  </div>
+              </section>
+          </div>
+        variation_description: ''
+        variation_name: Nesting
+      - variation_code_snippet: |-
+          <div>
+              <div class="second">I am first in the markup but appear after .first.</div>
+              <div class="first">I am second in the markup but appear before .second.</div>
+          </div>
+        variation_description: >-
+          **NOTE:** Using these is not advised, because the disadvantages for users
+
+          of assistive technology outweigh the advantages of putting your most
+          important
+
+          content first in the source order, but it's here if you absolutely need
+          it.
 
 
-      #### Usage
+          #### Less mixin
 
 
-      ```
+          ```
 
-      .first {
-          .grid_column(1, 2);
-          .grid_pull(1);
-      }
+          .push( @offset: 1, @grid_total-columns: @grid_total-columns )
 
-      .second {
-          .grid_column(1, 2);
-          .grid_push(1);
-      }
+          ```
 
-      ```
-    variation_name: Push and pull mixins for source ordering
-  - variation_code_snippet: |-
-      <div class="cols-12">
-          <section>
-              <div class="col col-1 suffix-11"><p>prefix 0, suffix 11</p></div>
-              <div class="col col-1 prefix-1 suffix-10"><p>prefix 1, suffix 10</p></div>
-              <div class="col col-1 prefix-2 suffix-9"><p>prefix 2, suffix 9</p></div>
-              <div class="col col-1 prefix-3 suffix-8"><p>prefix 3, suffix 8</p></div>
-              <div class="col col-1 prefix-4 suffix-7"><p>prefix 4, suffix 7</p></div>
-              <div class="col col-1 prefix-5 suffix-6"><p>prefix 5, suffix 6</p></div>
-              <div class="col col-1 prefix-6 suffix-5"><p>prefix 6, suffix 5</p></div>
-              <div class="col col-1 prefix-7 suffix-4"><p>prefix 7, suffix 4</p></div>
-              <div class="col col-1 prefix-8 suffix-3"><p>prefix 8, suffix 3</p></div>
-              <div class="col col-1 prefix-9 suffix-2"><p>prefix 9, suffix 2</p></div>
-              <div class="col col-1 prefix-10 suffix-1"><p>prefix 10, suffix 1</p></div>
-              <div class="col col-1 prefix-11"><p>prefix 11, suffix 0</p></div>
-          </section>
-      </div>
-    variation_description: ''
-    variation_name: Prefixing/Suffixing
+
+          ```
+
+          .pull( @offset: 1, @grid_total-columns: @grid_total-columns )
+
+          ```
+
+
+          #### Usage
+
+
+          ```
+
+          .first {
+              .grid_column(1, 2);
+              .grid_pull(1);
+          }
+
+          .second {
+              .grid_column(1, 2);
+              .grid_push(1);
+          }
+
+          ```
+        variation_name: Push and pull mixins for source ordering
+      - variation_code_snippet: |-
+          <div class="cols-12">
+              <section>
+                  <div class="col col-1 suffix-11"><p>prefix 0, suffix 11</p></div>
+                  <div class="col col-1 prefix-1 suffix-10"><p>prefix 1, suffix 10</p></div>
+                  <div class="col col-1 prefix-2 suffix-9"><p>prefix 2, suffix 9</p></div>
+                  <div class="col col-1 prefix-3 suffix-8"><p>prefix 3, suffix 8</p></div>
+                  <div class="col col-1 prefix-4 suffix-7"><p>prefix 4, suffix 7</p></div>
+                  <div class="col col-1 prefix-5 suffix-6"><p>prefix 5, suffix 6</p></div>
+                  <div class="col col-1 prefix-6 suffix-5"><p>prefix 6, suffix 5</p></div>
+                  <div class="col col-1 prefix-7 suffix-4"><p>prefix 7, suffix 4</p></div>
+                  <div class="col col-1 prefix-8 suffix-3"><p>prefix 8, suffix 3</p></div>
+                  <div class="col col-1 prefix-9 suffix-2"><p>prefix 9, suffix 2</p></div>
+                  <div class="col col-1 prefix-10 suffix-1"><p>prefix 10, suffix 1</p></div>
+                  <div class="col col-1 prefix-11"><p>prefix 11, suffix 0</p></div>
+              </section>
+          </div>
+        variation_description: ''
+        variation_name: Prefixing/Suffixing
 usage: ''
 accessibility: ''
 research: ''

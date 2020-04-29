@@ -31,30 +31,31 @@ description: >-
   The item introduction component is a variation of the text introduction
   component used on pages found in filterable lists such as blog posts, press
   releases, or documents.
-variations:
-  - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
-    variation_description: >-
-      Layout as seen with a standard right sidebar:
+variation_groups:
+  - variations:
+      - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
+        variation_description: >-
+          Layout as seen with a standard right sidebar:
 
 
-      ![Image of a text introduction component with a standard right
-      sidebar](/design-system/images/uploads/textintro_intro.png)
-    variation_jinja_code_snippet: ''
-    variation_name: Standard text introduction
-  - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
-    variation_description: >-
-      Layout as seen with a ‘breakout’ highlight in the right sidebar area:
+          ![Image of a text introduction component with a standard right
+          sidebar](/design-system/images/uploads/textintro_intro.png)
+        variation_jinja_code_snippet: ''
+        variation_name: Standard text introduction
+      - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
+        variation_description: >-
+          Layout as seen with a ‘breakout’ highlight in the right sidebar area:
 
 
-      ![Image of a text introduction component with a "breakout" highlight in
-      the right sidebar](/design-system/images/uploads/textintro_intro2.png)
-    variation_name: Text introduction with optional breakout sidebar
-  - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
-    variation_description: |-
-      Layout as seen on a Learn page template:
+          ![Image of a text introduction component with a "breakout" highlight in
+          the right sidebar](/design-system/images/uploads/textintro_intro2.png)
+        variation_name: Text introduction with optional breakout sidebar
+      - variation_code_snippet: <marquee>We don't have CF code to add for this.</marquee>
+        variation_description: |-
+          Layout as seen on a Learn page template:
 
-      ![](/design-system/images/uploads/itemintro_intro.png)
-    variation_name: Item introduction
+          ![](/design-system/images/uploads/itemintro_intro.png)
+        variation_name: Item introduction
 usage: >-
   #### Use cases
 

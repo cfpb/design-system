@@ -18,30 +18,32 @@ description: >-
 
 
   * http://cfpb.github.io/design-manual/brand-guidelines/illustration.html
-variations:
-  - variation_code_snippet: ''
-    variation_description: >-
-      These illustrations should feature flat elements and avoid showing things
-      in three dimensions. Elements should not appear to be outlined.
+variation_groups:
+  - variation_group_name: ''
+    variations:
+      - variation_code_snippet: ''
+        variation_description: >-
+          These illustrations should feature flat elements and avoid showing things
+          in three dimensions. Elements should not appear to be outlined.
 
 
-      ![Paying for College
-      illustration](/design-system/images/uploads/illustration5_-2.png)
-    variation_name: Front-facing
-  - variation_code_snippet: ''
-    variation_description: >-
-      Top-facing illustrations are object-based. Illustrations should be
-      arranged in a way that it appears the viewer is immersed in a real life
-      scenario. These should include 4-6 objects and relative sizing to create a
-      realistic and natural perspective. Shadows around objects can be used to
-      create realism in top-facing perspective. If using top-facing perspective
-      in a project, all illustrations should maintain that perspective for
-      consistency.
+          ![Paying for College
+          illustration](/design-system/images/uploads/illustration5_-2.png)
+        variation_name: Front-facing
+      - variation_code_snippet: ''
+        variation_description: >-
+          Top-facing illustrations are object-based. Illustrations should be
+          arranged in a way that it appears the viewer is immersed in a real life
+          scenario. These should include 4-6 objects and relative sizing to create a
+          realistic and natural perspective. Shadows around objects can be used to
+          create realism in top-facing perspective. If using top-facing perspective
+          in a project, all illustrations should maintain that perspective for
+          consistency.
 
 
-      ![Paying for College
-      illustration](/design-system/images/uploads/illustration6_-2.png)
-    variation_name: Top-facing
+          ![Paying for College
+          illustration](/design-system/images/uploads/illustration6_-2.png)
+        variation_name: Top-facing
 usage: >-
   Illustrations are universally relatable and set a friendly tone when
   communicating complex topics.

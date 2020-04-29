@@ -9,10 +9,11 @@ description: >-
 
 
   http://cfpb.github.io/design-manual/page-components/form-fields.html#range-sliders
-variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: '![](/design-system/images/uploads/slider-default.png)'
-    variation_name: Basic range slider
+variation_groups:
+  - variations:
+      - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+        variation_description: '![](/design-system/images/uploads/slider-default.png)'
+        variation_name: Basic range slider
 usage: >-
   <h3>Content guidelines</h3>
 

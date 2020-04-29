@@ -9,17 +9,19 @@ description: >-
   users situate themselves within the site and the subject matter. Their main
   function is to preview the different sub-pages within that section and help
   users quickly skim section topics and select the category that interests them.
-variations:
-  - variation_code_snippet: ''
-    variation_description: >-
-      ![Landing page with
-      hero](/design-system/images/uploads/landing_top_examplea_2x.jpg)
-    variation_name: Landing page with hero
-  - variation_code_snippet: ''
-    variation_description: >-
-      ![Landing page with text
-      introduction](/design-system/images/uploads/landing_top_exampleb_2x.jpg)
-    variation_name: Landing page with text introduction
+variation_groups:
+  - variation_group_name: ''
+    variations:
+      - variation_code_snippet: ''
+        variation_description: >-
+          ![Landing page with
+          hero](/design-system/images/uploads/landing_top_examplea_2x.jpg)
+        variation_name: Landing page with hero
+      - variation_code_snippet: ''
+        variation_description: >-
+          ![Landing page with text
+          introduction](/design-system/images/uploads/landing_top_exampleb_2x.jpg)
+        variation_name: Landing page with text introduction
 usage: >-
   #### Use cases
 

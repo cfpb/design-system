@@ -20,114 +20,84 @@ description: >-
   * http://cfpb.github.io/design-manual/page-components/expandables.html
 
   * https://cfpb.github.io/capital-framework/components/cf-expandables/
-variations:
-  - variation_code_snippet: |-
-      <div class="o-expandable
-                  o-expandable__padded
-                  o-expandable__background
-                  o-expandable__border">
-          <button class="o-expandable_header o-expandable_target"
-                  title="Expand content">
-              <h3 class="h4 o-expandable_header-left o-expandable_label">
-                  Expandable Header
-              </h3>
-              <span class="o-expandable_header-right o-expandable_link">
+variation_groups:
+  - variations:
+      - variation_code_snippet: |-
+          <div class="o-expandable
+                      o-expandable__padded
+                      o-expandable__background
+                      o-expandable__border">
+              <button class="o-expandable_header o-expandable_target"
+                      title="Expand content">
+                  <h3 class="h4 o-expandable_header-left o-expandable_label">
+                      Expandable Header
+                  </h3>
+                  <span class="o-expandable_header-right o-expandable_link">
+                      <span class="o-expandable_cue o-expandable_cue-open">
+                          <span class="u-visually-hidden-on-mobile">Show</span>
+                          {% include icons/plus-round.svg %}
+                      </span>
+                      <span class="o-expandable_cue o-expandable_cue-close">
+                          <span class="u-visually-hidden-on-mobile">Hide</span>
+                          {% include icons/minus-round.svg %}
+                      </span>
+                  </span>
+              </button>
+              <div class="o-expandable_content">
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                      temporibus magnam debitis quidem. Ducimus ratione
+                      corporis nesciunt earum vel est quaerat blanditiis
+                      dolore ipsa?
+                      <a href="#">Lorem link</a>.
+                  </p>
+              </div>
+          </div>
+        variation_description: The following combination is our recommended go-to expandable pattern.
+        variation_name: Basic expandable
+      - variation_code_snippet: |-
+          <div class="o-expandable
+                      o-expandable__padded
+                      o-expandable__background
+                      o-expandable__border">
+              <button class="o-expandable_header o-expandable_target"
+                      title="Expand content">
+                  <h3 class="h4 o-expandable_header-left o-expandable_label">
+                      Expandable Header
+                  </h3>
+                  <span class="o-expandable_header-right o-expandable_link">
+                      <span class="o-expandable_cue o-expandable_cue-open">
+                          <span class="u-visually-hidden-on-mobile">Show</span>
+                          {% include icons/plus-round.svg %}
+                      </span>
+                      <span class="o-expandable_cue o-expandable_cue-close">
+                          <span class="u-visually-hidden-on-mobile">Hide</span>
+                          {% include icons/minus-round.svg %}
+                      </span>
+                  </span>
+              </button>
+              <div class="o-expandable_content o-expandable_content__onload-open">
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                      temporibus magnam debitis quidem. Ducimus ratione
+                      corporis nesciunt earum vel est quaerat blanditiis
+                      dolore ipsa?
+                      <a href="#">Lorem link</a>.
+                  </p>
+              </div>
+          </div>
+        variation_description: ''
+        variation_name: Basic expandable (open on load)
+      - variation_code_snippet: |-
+          <div class="o-expandable">
+              <button class="o-expandable_target" title="Expand content">
                   <span class="o-expandable_cue o-expandable_cue-open">
                       <span class="u-visually-hidden-on-mobile">Show</span>
-                      {% include icons/plus-round.svg %}
                   </span>
                   <span class="o-expandable_cue o-expandable_cue-close">
                       <span class="u-visually-hidden-on-mobile">Hide</span>
-                      {% include icons/minus-round.svg %}
-                  </span>
-              </span>
-          </button>
-          <div class="o-expandable_content">
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                  temporibus magnam debitis quidem. Ducimus ratione
-                  corporis nesciunt earum vel est quaerat blanditiis
-                  dolore ipsa?
-                  <a href="#">Lorem link</a>.
-              </p>
-          </div>
-      </div>
-    variation_description: The following combination is our recommended go-to expandable pattern.
-    variation_name: Basic expandable
-  - variation_code_snippet: |-
-      <div class="o-expandable
-                  o-expandable__padded
-                  o-expandable__background
-                  o-expandable__border">
-          <button class="o-expandable_header o-expandable_target"
-                  title="Expand content">
-              <h3 class="h4 o-expandable_header-left o-expandable_label">
-                  Expandable Header
-              </h3>
-              <span class="o-expandable_header-right o-expandable_link">
-                  <span class="o-expandable_cue o-expandable_cue-open">
-                      <span class="u-visually-hidden-on-mobile">Show</span>
-                      {% include icons/plus-round.svg %}
-                  </span>
-                  <span class="o-expandable_cue o-expandable_cue-close">
-                      <span class="u-visually-hidden-on-mobile">Hide</span>
-                      {% include icons/minus-round.svg %}
-                  </span>
-              </span>
-          </button>
-          <div class="o-expandable_content o-expandable_content__onload-open">
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                  temporibus magnam debitis quidem. Ducimus ratione
-                  corporis nesciunt earum vel est quaerat blanditiis
-                  dolore ipsa?
-                  <a href="#">Lorem link</a>.
-              </p>
-          </div>
-      </div>
-    variation_description: ''
-    variation_name: Basic expandable (open on load)
-  - variation_code_snippet: |-
-      <div class="o-expandable">
-          <button class="o-expandable_target" title="Expand content">
-              <span class="o-expandable_cue o-expandable_cue-open">
-                  <span class="u-visually-hidden-on-mobile">Show</span>
-              </span>
-              <span class="o-expandable_cue o-expandable_cue-close">
-                  <span class="u-visually-hidden-on-mobile">Hide</span>
-              </span>
-          </button>
-          <div class="o-expandable_content">
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                  temporibus magnam debitis quidem. Ducimus ratione
-                  corporis nesciunt earum vel est quaerat blanditiis
-                  dolore ipsa?
-                  <a href="#">Lorem link</a>.
-              </p>
-          </div>
-      </div>
-    variation_name: Barebones expandable
-  - variation_code_snippet: |-
-      <div class="o-expandable-group">
-          <div class="o-expandable o-expandable__padded">
-              <button class="o-expandable_header o-expandable_target"
-                      title="Expand content">
-                  <h3 class="h4 o-expandable_header-left o-expandable_label">
-                      Expandable Header 1
-                  </h3>
-                  <span class="o-expandable_header-right o-expandable_link">
-                      <span class="o-expandable_cue o-expandable_cue-open">
-                          <span class="u-visually-hidden-on-mobile">Show</span>
-                          {% include icons/plus-round.svg %}
-                      </span>
-                      <span class="o-expandable_cue o-expandable_cue-close">
-                          <span class="u-visually-hidden-on-mobile">Hide</span>
-                          {% include icons/minus-round.svg %}
-                      </span>
                   </span>
               </button>
               <div class="o-expandable_content">
@@ -141,156 +111,187 @@ variations:
                   </p>
               </div>
           </div>
-          <div class="o-expandable o-expandable__padded">
-              <button class="o-expandable_header o-expandable_target"
-                      title="Expand content">
-                  <h3 class="h4 o-expandable_header-left o-expandable_label">
-                      Expandable Header 2
-                  </h3>
-                  <span class="o-expandable_header-right o-expandable_link">
-                      <span class="o-expandable_cue o-expandable_cue-open">
-                          <span class="u-visually-hidden-on-mobile">Show</span>
-                          {% include icons/plus-round.svg %}
+        variation_name: Barebones expandable
+      - variation_code_snippet: |-
+          <div class="o-expandable-group">
+              <div class="o-expandable o-expandable__padded">
+                  <button class="o-expandable_header o-expandable_target"
+                          title="Expand content">
+                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                          Expandable Header 1
+                      </h3>
+                      <span class="o-expandable_header-right o-expandable_link">
+                          <span class="o-expandable_cue o-expandable_cue-open">
+                              <span class="u-visually-hidden-on-mobile">Show</span>
+                              {% include icons/plus-round.svg %}
+                          </span>
+                          <span class="o-expandable_cue o-expandable_cue-close">
+                              <span class="u-visually-hidden-on-mobile">Hide</span>
+                              {% include icons/minus-round.svg %}
+                          </span>
                       </span>
-                      <span class="o-expandable_cue o-expandable_cue-close">
-                          <span class="u-visually-hidden-on-mobile">Hide</span>
-                          {% include icons/minus-round.svg %}
+                  </button>
+                  <div class="o-expandable_content">
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+                          <a href="#">Lorem link</a>.
+                      </p>
+                  </div>
+              </div>
+              <div class="o-expandable o-expandable__padded">
+                  <button class="o-expandable_header o-expandable_target"
+                          title="Expand content">
+                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                          Expandable Header 2
+                      </h3>
+                      <span class="o-expandable_header-right o-expandable_link">
+                          <span class="o-expandable_cue o-expandable_cue-open">
+                              <span class="u-visually-hidden-on-mobile">Show</span>
+                              {% include icons/plus-round.svg %}
+                          </span>
+                          <span class="o-expandable_cue o-expandable_cue-close">
+                              <span class="u-visually-hidden-on-mobile">Hide</span>
+                              {% include icons/minus-round.svg %}
+                          </span>
                       </span>
-                  </span>
-              </button>
-              <div class="o-expandable_content">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                      temporibus magnam debitis quidem. Ducimus ratione
-                      corporis nesciunt earum vel est quaerat blanditiis
-                      dolore ipsa?
-                      <a href="#">Lorem link</a>.
-                  </p>
+                  </button>
+                  <div class="o-expandable_content">
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+                          <a href="#">Lorem link</a>.
+                      </p>
+                  </div>
+              </div>
+              <div class="o-expandable o-expandable__padded">
+                  <button class="o-expandable_header o-expandable_target"
+                          title="Expand content">
+                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                          Expandable Header 3
+                      </h3>
+                      <span class="o-expandable_header-right o-expandable_link">
+                          <span class="o-expandable_cue o-expandable_cue-open">
+                              <span class="u-visually-hidden-on-mobile">Show</span>
+                              {% include icons/plus-round.svg %}
+                          </span>
+                          <span class="o-expandable_cue o-expandable_cue-close">
+                              <span class="u-visually-hidden-on-mobile">Hide</span>
+                              {% include icons/minus-round.svg %}
+                          </span>
+                      </span>
+                  </button>
+                  <div class="o-expandable_content">
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+                          <a href="#">Lorem link</a>.
+                      </p>
+                  </div>
               </div>
           </div>
-          <div class="o-expandable o-expandable__padded">
-              <button class="o-expandable_header o-expandable_target"
-                      title="Expand content">
-                  <h3 class="h4 o-expandable_header-left o-expandable_label">
-                      Expandable Header 3
-                  </h3>
-                  <span class="o-expandable_header-right o-expandable_link">
-                      <span class="o-expandable_cue o-expandable_cue-open">
-                          <span class="u-visually-hidden-on-mobile">Show</span>
-                          {% include icons/plus-round.svg %}
+        variation_name: Expandable group
+      - variation_code_snippet: |-
+          <div class="o-expandable-group o-expandable-group__accordion">
+              <div class="o-expandable o-expandable__padded">
+                  <button class="o-expandable_header o-expandable_target"
+                          title="Expand content">
+                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                          Expandable Header 1
+                      </h3>
+                      <span class="o-expandable_header-right o-expandable_link">
+                          <span class="o-expandable_cue o-expandable_cue-open">
+                              <span class="u-visually-hidden-on-mobile">Show</span>
+                              {% include icons/plus-round.svg %}
+                          </span>
+                          <span class="o-expandable_cue o-expandable_cue-close">
+                              <span class="u-visually-hidden-on-mobile">Hide</span>
+                              {% include icons/minus-round.svg %}
+                          </span>
                       </span>
-                      <span class="o-expandable_cue o-expandable_cue-close">
-                          <span class="u-visually-hidden-on-mobile">Hide</span>
-                          {% include icons/minus-round.svg %}
+                  </button>
+                  <div class="o-expandable_content">
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+                          <a href="#">Lorem link</a>.
+                      </p>
+                  </div>
+              </div>
+              <div class="o-expandable o-expandable__padded">
+                  <button class="o-expandable_header o-expandable_target"
+                          title="Expand content">
+                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                          Expandable Header 2
+                      </h3>
+                      <span class="o-expandable_header-right o-expandable_link">
+                          <span class="o-expandable_cue o-expandable_cue-open">
+                              <span class="u-visually-hidden-on-mobile">Show</span>
+                              {% include icons/plus-round.svg %}
+                          </span>
+                          <span class="o-expandable_cue o-expandable_cue-close">
+                              <span class="u-visually-hidden-on-mobile">Hide</span>
+                              {% include icons/minus-round.svg %}
+                          </span>
                       </span>
-                  </span>
-              </button>
-              <div class="o-expandable_content">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                      temporibus magnam debitis quidem. Ducimus ratione
-                      corporis nesciunt earum vel est quaerat blanditiis
-                      dolore ipsa?
-                      <a href="#">Lorem link</a>.
-                  </p>
+                  </button>
+                  <div class="o-expandable_content">
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+                          <a href="#">Lorem link</a>.
+                      </p>
+                  </div>
+              </div>
+              <div class="o-expandable o-expandable__padded">
+                  <button class="o-expandable_header o-expandable_target"
+                          title="Expand content">
+                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                          Expandable Header 3
+                      </h3>
+                      <span class="o-expandable_header-right o-expandable_link">
+                          <span class="o-expandable_cue o-expandable_cue-open">
+                              <span class="u-visually-hidden-on-mobile">Show</span>
+                              {% include icons/plus-round.svg %}
+                          </span>
+                          <span class="o-expandable_cue o-expandable_cue-close">
+                              <span class="u-visually-hidden-on-mobile">Hide</span>
+                              {% include icons/minus-round.svg %}
+                          </span>
+                      </span>
+                  </button>
+                  <div class="o-expandable_content">
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+                          <a href="#">Lorem link</a>.
+                      </p>
+                  </div>
               </div>
           </div>
-      </div>
-    variation_name: Expandable group
-  - variation_code_snippet: |-
-      <div class="o-expandable-group o-expandable-group__accordion">
-          <div class="o-expandable o-expandable__padded">
-              <button class="o-expandable_header o-expandable_target"
-                      title="Expand content">
-                  <h3 class="h4 o-expandable_header-left o-expandable_label">
-                      Expandable Header 1
-                  </h3>
-                  <span class="o-expandable_header-right o-expandable_link">
-                      <span class="o-expandable_cue o-expandable_cue-open">
-                          <span class="u-visually-hidden-on-mobile">Show</span>
-                          {% include icons/plus-round.svg %}
-                      </span>
-                      <span class="o-expandable_cue o-expandable_cue-close">
-                          <span class="u-visually-hidden-on-mobile">Hide</span>
-                          {% include icons/minus-round.svg %}
-                      </span>
-                  </span>
-              </button>
-              <div class="o-expandable_content">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                      temporibus magnam debitis quidem. Ducimus ratione
-                      corporis nesciunt earum vel est quaerat blanditiis
-                      dolore ipsa?
-                      <a href="#">Lorem link</a>.
-                  </p>
-              </div>
-          </div>
-          <div class="o-expandable o-expandable__padded">
-              <button class="o-expandable_header o-expandable_target"
-                      title="Expand content">
-                  <h3 class="h4 o-expandable_header-left o-expandable_label">
-                      Expandable Header 2
-                  </h3>
-                  <span class="o-expandable_header-right o-expandable_link">
-                      <span class="o-expandable_cue o-expandable_cue-open">
-                          <span class="u-visually-hidden-on-mobile">Show</span>
-                          {% include icons/plus-round.svg %}
-                      </span>
-                      <span class="o-expandable_cue o-expandable_cue-close">
-                          <span class="u-visually-hidden-on-mobile">Hide</span>
-                          {% include icons/minus-round.svg %}
-                      </span>
-                  </span>
-              </button>
-              <div class="o-expandable_content">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                      temporibus magnam debitis quidem. Ducimus ratione
-                      corporis nesciunt earum vel est quaerat blanditiis
-                      dolore ipsa?
-                      <a href="#">Lorem link</a>.
-                  </p>
-              </div>
-          </div>
-          <div class="o-expandable o-expandable__padded">
-              <button class="o-expandable_header o-expandable_target"
-                      title="Expand content">
-                  <h3 class="h4 o-expandable_header-left o-expandable_label">
-                      Expandable Header 3
-                  </h3>
-                  <span class="o-expandable_header-right o-expandable_link">
-                      <span class="o-expandable_cue o-expandable_cue-open">
-                          <span class="u-visually-hidden-on-mobile">Show</span>
-                          {% include icons/plus-round.svg %}
-                      </span>
-                      <span class="o-expandable_cue o-expandable_cue-close">
-                          <span class="u-visually-hidden-on-mobile">Hide</span>
-                          {% include icons/minus-round.svg %}
-                      </span>
-                  </span>
-              </button>
-              <div class="o-expandable_content">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                      temporibus magnam debitis quidem. Ducimus ratione
-                      corporis nesciunt earum vel est quaerat blanditiis
-                      dolore ipsa?
-                      <a href="#">Lorem link</a>.
-                  </p>
-              </div>
-          </div>
-      </div>
-    variation_description: >-
-      Accordions can only show one open expandable at a time. Add the
-      `o-expandable-group__accordion` class to the expandable group to activate
-      the accordion mode.
-    variation_name: Accordion-style group
+        variation_description: >-
+          Accordions can only show one open expandable at a time. Add the
+          `o-expandable-group__accordion` class to the expandable group to activate
+          the accordion mode.
+        variation_name: Accordion-style group
 usage: >-
   ### Content guidelines
 

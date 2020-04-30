@@ -11,7 +11,9 @@ module Permalinks
     def generate(site)
       site.pages.each do |page|
         # Slugify the title
-        slug = page.data['title'].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+        if page.data['title']
+          slug = page.data['title'].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+        end
         # Look out for the homepage and section index pages
         if not page.data['section'] or slug == page.data['section']
           slug = 'index'

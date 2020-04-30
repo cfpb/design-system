@@ -15,7 +15,7 @@ Table.init();
 const main = document.querySelector( 'main.content' );
 const tabs = document.querySelectorAll( '[data-module="tabs"]' );
 
-if ( tabs ) {
+if ( tabs && tabs.length > 0 ) {
   main.classList.add( 'js-enabled' );
   for ( let i = 0; i < tabs.length; i++ ) {
     const tab = tabs[i];

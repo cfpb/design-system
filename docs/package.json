@@ -36,6 +36,7 @@
     "ftdomdelegate": "^3.0.0",
     "govuk-frontend": "^3.6.0",
     "html-entities": "^1.2.1",
+    "lunr": "^2.3.8",
     "marked": "0.8.0",
     "netlify-cms": "^2.10.39",
     "normalize-css": "^2.3.1",

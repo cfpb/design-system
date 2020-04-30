@@ -1,0 +1,48 @@
+<script>
+    {% assign variations_count = 0 %}
+    // This is an inline script attached to the window so that we can utilize
+    // jekyll's liquid variables, such as site.pages.
+    window.searchStore = {
+        {% for page in site.pages %}
+        '{{ page.url | slugify }}': {
+            'title': '{{ page.title | xml_escape }}',
+            'description': {{ page.description | markdownify | strip_html | strip_newlines | jsonify }},
+            'usage': {{ page.usage | markdownify | strip_html | strip_newlines | jsonify }},
+            'accessibility': {{ page.usage | markdownify | strip_html | strip_newlines | jsonify }},
+            'url': '{{ page.url | xml_escape }}',
+
+            // Determine the maximum number of variations present overall.
+            {% if page.variations.size > variations_count %}
+                {% assign variations_count = page.variations | size  %}
+            {% endif %}
+
+            // Cycle through the variation fields of this page.
+            {% for variation in page.variations %}
+                'variation_name{{ forloop.index }}': '{{ variation.variation_name | xml_escape }}',
+                'variation_description{{ forloop.index }}': {{ variation.variation_description | markdownify | strip_html | strip_newlines | jsonify }},
+                'variation_code_snippet{{ forloop.index }}': {{ variation.variation_code_snippet | markdownify | strip_html | strip_newlines | jsonify }}
+                {% unless forloop.last %},{% endunless %}
+            {% endfor %}
+
+        }
+        {% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    };
+
+    // These need to match the fields processed in the block below.
+    window.searchStore.fields = [
+        'title',
+        'description',
+        'usage',
+        'accessibility',
+        'url',
+        // Populate the variation fields up to the possible maximum.
+        {% for i in (1..variations_count) %}
+            'variation_name{{ forloop.index }}',
+            'variation_description{{ forloop.index }}',
+            'variation_code_snippet{{ forloop.index }}'
+            {% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ];
+</script>
+<script src="{{ site.baseurl }}/dist/js/search.js"></script>

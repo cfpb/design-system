@@ -15,22 +15,23 @@ description: >-
 
 
   http://cfpb.github.io/design-manual/page-components/filter-control.html
-variations:
-  - variation_code_snippet: ''
-    variation_description: >-
-      #### Collapsed
+variation_groups:
+  - variations:
+      - variation_code_snippet: ''
+        variation_description: >-
+          #### Collapsed
 
 
-      ![filter control
-      collapsed](/design-system/images/uploads/filter_collapsed.png)
+          ![filter control
+          collapsed](/design-system/images/uploads/filter_collapsed.png)
 
 
-      #### Expanded
+          #### Expanded
 
 
-      ![Filterable list
-      expanded](/design-system/images/uploads/filter_expanded.png)
-    variation_name: Default filterable list
+          ![Filterable list
+          expanded](/design-system/images/uploads/filter_expanded.png)
+        variation_name: Default filterable list
 usage: >-
   <h3>Use cases</h3>
 

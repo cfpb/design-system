@@ -28,93 +28,94 @@ description: >-
   they are best suited for pages third level and below in the site map. They are
   designed to accommodate pages with either a left-hand navigation or right-hand
   sidebar.
-variations:
-  - variation_code_snippet: |-
-      <section class="o-featured-content-module">
-          <div class="o-featured-content-module_text">
-              <h2>Featured content</h2>
-              <p>
-                  Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-                  instructior ex pri. Cu pri inani constituto, cum aeque noster
-                  commodo cu.
-              </p>
-              <a class="a-link
-                        a-link__jump
-                        a-link__icon-after-text">
-                  <span class="a-link_text">Read more about the feature</span>
-                  {% include icons/right.svg %}
-              </a>
-          </div>
-          <div class="o-featured-content-module_visual">
-              <img class="o-featured-content-module_img"
-                   src="https://dummyimage.com/1076x606/addc91/101820"
-                   alt="">
-          </div>
-      </section>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Visual anchored on the left
-  - variation_code_snippet: |-
-      <section class="o-featured-content-module
-                      o-featured-content-module__right">
-          <div class="o-featured-content-module_text">
-              <h2>Featured map</h2>
-              <p>
-                  Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-                  instructior ex pri. Cu pri inani constituto, cum aeque noster
-                  commodo cu.
-              </p>
-              <a class="a-link
-                        a-link__jump
-                        a-link__icon-after-text">
-                  <span class="a-link_text">Read more about the feature</span>
-                  {% include icons/right.svg %}
-              </a>
-          </div>
-          <div class="o-featured-content-module_visual">
-              <img class="o-featured-content-module_img"
-                   src="https://dummyimage.com/1076x606/addc91/101820"
-                   alt="">
-          </div>
-      </section>
-    variation_description: >-
-      To anchor a featured content module’s visual on the right (for example,
-      when displaying a map with a copyright watermark on the right), add the
-      `o-featured-content-module__right` modifier class to the
-      `o-featured-content-module` organism. This anchors the right side of the
-      image to the right of the available space so that the right side remains
-      in view at all screen sizes.
-    variation_name: Visual anchored on the right
-  - variation_code_snippet: |-
-      <section class="o-featured-content-module
-                      o-featured-content-module__center">
-          <div class="o-featured-content-module_text">
-              <h2>Featured video</h2>
-              <p>
-                  Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-                  instructior ex pri. Cu pri inani constituto, cum aeque noster
-                  commodo cu.
-              </p>
-              <a class="a-link
-                        a-link__jump
-                        a-link__icon-after-text">
-                  <span class="a-link_text">Read more about the feature</span>
-                  {% include icons/right.svg %}
-              </a>
-          </div>
-          <div class="o-featured-content-module_visual">
-              <img class="o-featured-content-module_img"
-                   src="https://dummyimage.com/1076x606/addc91/101820"
-                   alt="">
-          </div>
-      </section>
-    variation_description: >-
-      When the featured content module visual is a video, or a static image
-      composed with its subject in the middle, add the
-      `o-featured-content-module__center` modifier class to the
-      `o-featured-content-module` organism. This anchors the center of the image
-      to the center of the available space so that the focal point of the visual
-      remains in view at all screen sizes.
-    variation_name: Centered visual
+variation_groups:
+  - variations:
+      - variation_code_snippet: |-
+          <section class="o-featured-content-module">
+              <div class="o-featured-content-module_text">
+                  <h2>Featured content</h2>
+                  <p>
+                      Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
+                      instructior ex pri. Cu pri inani constituto, cum aeque noster
+                      commodo cu.
+                  </p>
+                  <a class="a-link
+                            a-link__jump
+                            a-link__icon-after-text">
+                      <span class="a-link_text">Read more about the feature</span>
+                      {% include icons/right.svg %}
+                  </a>
+              </div>
+              <div class="o-featured-content-module_visual">
+                  <img class="o-featured-content-module_img"
+                      src="https://dummyimage.com/1076x606/addc91/101820"
+                      alt="">
+              </div>
+          </section>
+        variation_description: The default state is the most default state of them all.
+        variation_name: Visual anchored on the left
+      - variation_code_snippet: |-
+          <section class="o-featured-content-module
+                          o-featured-content-module__right">
+              <div class="o-featured-content-module_text">
+                  <h2>Featured map</h2>
+                  <p>
+                      Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
+                      instructior ex pri. Cu pri inani constituto, cum aeque noster
+                      commodo cu.
+                  </p>
+                  <a class="a-link
+                            a-link__jump
+                            a-link__icon-after-text">
+                      <span class="a-link_text">Read more about the feature</span>
+                      {% include icons/right.svg %}
+                  </a>
+              </div>
+              <div class="o-featured-content-module_visual">
+                  <img class="o-featured-content-module_img"
+                      src="https://dummyimage.com/1076x606/addc91/101820"
+                      alt="">
+              </div>
+          </section>
+        variation_description: >-
+          To anchor a featured content module’s visual on the right (for example,
+          when displaying a map with a copyright watermark on the right), add the
+          `o-featured-content-module__right` modifier class to the
+          `o-featured-content-module` organism. This anchors the right side of the
+          image to the right of the available space so that the right side remains
+          in view at all screen sizes.
+        variation_name: Visual anchored on the right
+      - variation_code_snippet: |-
+          <section class="o-featured-content-module
+                          o-featured-content-module__center">
+              <div class="o-featured-content-module_text">
+                  <h2>Featured video</h2>
+                  <p>
+                      Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
+                      instructior ex pri. Cu pri inani constituto, cum aeque noster
+                      commodo cu.
+                  </p>
+                  <a class="a-link
+                            a-link__jump
+                            a-link__icon-after-text">
+                      <span class="a-link_text">Read more about the feature</span>
+                      {% include icons/right.svg %}
+                  </a>
+              </div>
+              <div class="o-featured-content-module_visual">
+                  <img class="o-featured-content-module_img"
+                      src="https://dummyimage.com/1076x606/addc91/101820"
+                      alt="">
+              </div>
+          </section>
+        variation_description: >-
+          When the featured content module visual is a video, or a static image
+          composed with its subject in the middle, add the
+          `o-featured-content-module__center` modifier class to the
+          `o-featured-content-module` organism. This anchors the center of the image
+          to the center of the available space so that the focal point of the visual
+          remains in view at all screen sizes.
+        variation_name: Centered visual
 usage: >-
   #### Use cases
 

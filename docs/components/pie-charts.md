@@ -14,17 +14,18 @@ description: >-
 
 
   http://cfpb.github.io/design-manual/data-visualization/chart-types.html#pie-or-doughnut-charts
-variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: >-
-      ![Three doughnut charts of varying
-      percentages.](/design-system/images/uploads/doughnut-chart-1.png)
-    variation_name: Donut chart
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: >-
-      ![A doughnut chart used within a social media
-      graphic.](/design-system/images/uploads/doughnut-chart-2.jpg)
-    variation_name: Donut chart
+variation_groups:
+  - variations:
+      - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+        variation_description: >-
+          ![Three doughnut charts of varying
+          percentages.](/design-system/images/uploads/doughnut-chart-1.png)
+        variation_name: Donut chart
+      - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+        variation_description: >-
+          ![A doughnut chart used within a social media
+          graphic.](/design-system/images/uploads/doughnut-chart-2.jpg)
+        variation_name: Donut chart
 usage: |-
   <h3>Content guidelines</h3>
 

@@ -7,13 +7,14 @@ status: Released
 description: >-
   Feedback forms are used to allow users to respond whether a given page was
   helpful. They can also provide an additional comment as free-form text.
-variations:
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The default state is the most default state of them all.
-    variation_name: Default state
-  - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
-    variation_description: The secondary state is very secondary.
-    variation_name: Secondary state
+variation_groups:
+  - variations:
+      - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+        variation_description: The default state is the most default state of them all.
+        variation_name: Default state
+      - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+        variation_description: The secondary state is very secondary.
+        variation_name: Secondary state
 usage: >-
   <h3>Use cases</h3>
 

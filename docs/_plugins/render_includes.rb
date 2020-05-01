@@ -6,7 +6,7 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     include_tag_regex = /{%\s+include\s+\/?icons\/(?<icon>[\w-]+)\.svg\s+%}/
     doc = Nokogiri::HTML(page.output)
     # Elements to search for includes in
-    divs = doc.css('div.live-code-example, table.icon-table, body.t-generic-page, div.component-restrictions')
+    divs = doc.css('div.a-live_code, table.icon-table, body.t-generic-page, div.component-restrictions, section#description')
     divs.each do |div|
       div.inner_html = div.inner_html.gsub(include_tag_regex) do |inline_icon|
         filename = "#{$1}.svg"

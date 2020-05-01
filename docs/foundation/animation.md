@@ -15,18 +15,20 @@ description: >-
 
 
   * http://cfpb.github.io/design-manual/brand-guidelines/video.html
-variations:
-  - variation_code_snippet: ''
-    variation_description: >-
-      ![Still from Student Loan
-      Video](/design-system/images/uploads/video_11.jpg "Example of animation in
-      Video")
+variation_groups:
+  - variation_group_name: ''
+    variations:
+      - variation_code_snippet: ''
+        variation_description: >-
+          ![Still from Student Loan
+          Video](/design-system/images/uploads/video_11.jpg "Example of animation in
+          Video")
 
 
-      ![Still from Student Loan
-      Video](/design-system/images/uploads/video_12.jpg "Example of animation in
-      Video")
-    variation_name: Animation
+          ![Still from Student Loan
+          Video](/design-system/images/uploads/video_12.jpg "Example of animation in
+          Video")
+        variation_name: Animation
 accessibility: >-
   #### Include text alternatives for non-text content
 

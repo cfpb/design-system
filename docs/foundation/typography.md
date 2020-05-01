@@ -24,37 +24,39 @@ description: >-
   Avenir Next is the primary brand typeface and can be used across all formats
   from print to digital. Its round and geometric letterforms are approachable
   and modern.
-variations:
-  - variation_code_snippet: >-
-      <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight:
-      600;letter-spacing: 1px;">Avenir Next Demi Bold<br><br>
+variation_groups:
+  - variation_group_name: ''
+    variations:
+      - variation_code_snippet: >-
+          <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight:
+          600;letter-spacing: 1px;">Avenir Next Demi Bold<br><br>
 
-      ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
 
-      abcdefghijklmnopqrstuvwxyz<br>
+          abcdefghijklmnopqrstuvwxyz<br>
 
-      0123456789</p></h4>
-    variation_name: ' '
-  - variation_code_snippet: >-
-      <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight: 500;">Avenir
-      Next Medium<br><br>
+          0123456789</p></h4>
+        variation_name: ' '
+      - variation_code_snippet: >-
+          <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight: 500;">Avenir
+          Next Medium<br><br>
 
-      ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
 
-      abcdefghijklmnopqrstuvwxyz<br>
+          abcdefghijklmnopqrstuvwxyz<br>
 
-      0123456789</p></h4>
-    variation_name: ' '
-  - variation_code_snippet: >-
-      <h4 style="font-family:'AvenirNextLTW01-Regular';">Avenir Next
-      Regular<br><br>
+          0123456789</p></h4>
+        variation_name: ' '
+      - variation_code_snippet: >-
+          <h4 style="font-family:'AvenirNextLTW01-Regular';">Avenir Next
+          Regular<br><br>
 
-      ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
 
-      abcdefghijklmnopqrstuvwxyz<br>
+          abcdefghijklmnopqrstuvwxyz<br>
 
-      0123456789</p></h4>
-    variation_name: ' '
+          0123456789</p></h4>
+        variation_name: ' '
 usage: >-
   Readable text allows users to efficiently read and take in textual
   information. Text that is not readable turns off readers or makes it

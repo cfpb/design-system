@@ -19,50 +19,51 @@ description: >-
 
 
   http://cfpb.github.io/design-manual/page-components/contact-information.html
-variations:
-  - variation_jinja_code_snippet: |-
-      {% if value.contact %}
-          <div class="o-main-contact-info">
-              <h2>{{ value.contact.heading }}</h2>
+variation_groups:
+  - variations:
+      - variation_jinja_code_snippet: |-
+          {% if value.contact %}
+              <div class="o-main-contact-info">
+                  <h2>{{ value.contact.heading }}</h2>
 
-              {{ value.contact.body | safe }}
+                  {{ value.contact.body | safe }}
 
-              {% if value.contact.contact_info %}
+                  {% if value.contact.contact_info %}
 
-                  {% for block in value.contact.contact_info %}
-                      {{ render_stream_child(block) }}
-                  {% endfor %}
-              {% endif %}
+                      {% for block in value.contact.contact_info %}
+                          {{ render_stream_child(block) }}
+                      {% endfor %}
+                  {% endif %}
+              </div>
+          {% endif %}
+        variation_name: Main content contact info
+      - variation_jinja_code_snippet: |-
+          <div class="o-sidebar-contact-info">
+              <div class="o-sidebar-contact-info_heading">
+                <header class="m-slug-header">
+                    <h2 class="a-heading">
+                        Contact Information
+                    </h2>
+                </header>
+              </div>
+
+              <div class="o-sidebar-contact-info_content">
+                  {% if value.contact.heading %}
+                      <h3>{{ value.contact.heading }}</h3>
+                  {% endif %}
+
+                  {{ value.contact.body | safe }}
+              </div>
+
+              <div class="o-sidebar-contact-info_contacts">
+                  {% if value.contact.contact_info %}
+                      {% for block in value.contact.contact_info %}
+                          {{ render_stream_child(block) }}
+                      {% endfor %}
+                  {% endif %}
+              </div>
           </div>
-      {% endif %}
-    variation_name: Main content contact info
-  - variation_jinja_code_snippet: |-
-      <div class="o-sidebar-contact-info">
-          <div class="o-sidebar-contact-info_heading">
-            <header class="m-slug-header">
-                <h2 class="a-heading">
-                    Contact Information
-                </h2>
-            </header>
-          </div>
-
-          <div class="o-sidebar-contact-info_content">
-              {% if value.contact.heading %}
-                  <h3>{{ value.contact.heading }}</h3>
-              {% endif %}
-
-              {{ value.contact.body | safe }}
-          </div>
-
-          <div class="o-sidebar-contact-info_contacts">
-              {% if value.contact.contact_info %}
-                  {% for block in value.contact.contact_info %}
-                      {{ render_stream_child(block) }}
-                  {% endfor %}
-              {% endif %}
-          </div>
-      </div>
-    variation_name: Sidebar contact info
+        variation_name: Sidebar contact info
 usage: >-
   <h3>Use cases</h3>
 

@@ -15,22 +15,24 @@ description: >-
   quickly understand a topic area and select the specific information that meets
   their need. Unlike the landing page, this template allows for lengthier
   content components to allow for further explanation of a topic if needed.
-variations:
-  - variation_code_snippet: ''
-    variation_description: >-
+variation_groups:
+  - variation_group_name: ''
+    variations:
+      - variation_code_snippet: ''
+        variation_description: >-
 
 
-      | With hero | With text introduction | With breakout sidebar |
+          | With hero | With text introduction | With breakout sidebar |
 
-      | --- | --- | --- | 
+          | --- | --- | --- | 
 
-      | ![Sublanding page with
-      hero](/design-system/images/uploads/sublanding_examplea.jpg) |
-      ![Sublanding page with text
-      introduction](/design-system/images/uploads/sublanding_examplec.jpg) |
-      ![Sublanding page with breakout
-      sidebar](/design-system/images/uploads/sublanding_exampleb.jpg) |
-    variation_name: Sublanding page variations
+          | ![Sublanding page with
+          hero](/design-system/images/uploads/sublanding_examplea.jpg) |
+          ![Sublanding page with text
+          introduction](/design-system/images/uploads/sublanding_examplec.jpg) |
+          ![Sublanding page with breakout
+          sidebar](/design-system/images/uploads/sublanding_exampleb.jpg) |
+        variation_name: Sublanding page variations
 usage: >-
   #### When to use
 

@@ -3,31 +3,36 @@
 describe( 'The code snippet toggling feature', () => {
 
   let codeToggleButton;
-  let codeSnippets;
-  let areCodeSnippetsVisible;
+  let codeSnippetTabs;
+  let arecodeSnippetTabsVisible;
 
   before( () => {
     browser.url( 'http://localhost:4000/design-system/components/buttons' );
     browser.setWindowSize( 1024, 768 );
-    codeToggleButton = $( '#toggle-code-btn' );
-    codeSnippets = [ ...$$( '[data-toggle-code]' ) ];
-    areCodeSnippetsVisible = () => codeSnippets.some( snippet => snippet.isDisplayed() );
+    codeShowButton = $( '.a-toggle_code [data-toggle-code="show"]' );
+    codeHideButton = $( '.a-toggle_code [data-toggle-code="hide"]' );
+    codeSnippetTabs = [ ...$$( '.govuk-tabs' ) ];
+    areCodeSnippetTabsVisible = () => codeSnippetTabs.some( snippet => snippet.isDisplayed() );
   } );
 
-  it( 'should show code snippets by default', () => {
-    expect( areCodeSnippetsVisible() ).toBeTruthy();
+  it( 'should hide snippet tabs by default', () => {
+    expect( codeShowButton.isDisplayed() ).toBeTruthy();
+    expect( codeHideButton.isDisplayed() ).toBeFalsy();
+    expect( areCodeSnippetTabsVisible() ).toBeFalsy();
   } );
 
-  it( 'should hide code snippets when toggle button is clicked', () => {
-    codeToggleButton.click();
-    expect( codeToggleButton.getText() ).toContain( 'Show' );
-    expect( areCodeSnippetsVisible() ).toBeFalsy();
+  it( 'should show code snippets when toggle button is clicked', () => {
+    codeShowButton.click();
+    expect( codeShowButton.isDisplayed() ).toBeFalsy();
+    expect( codeHideButton.isDisplayed() ).toBeTruthy();
+    expect( areCodeSnippetTabsVisible() ).toBeTruthy();
   } );
 
-  it( 'should re-show code snippets when toggle button is clicked again', () => {
-    codeToggleButton.click();
-    expect( codeToggleButton.getText() ).toContain( 'Hide' );
-    expect( areCodeSnippetsVisible() ).toBeTruthy();
+  it( 'should re-hide code snippets when toggle button is clicked again', () => {
+    codeHideButton.click();
+    expect( codeShowButton.isDisplayed() ).toBeTruthy();
+    expect( codeHideButton.isDisplayed() ).toBeFalsy();
+    expect( areCodeSnippetTabsVisible() ).toBeFalsy();
   } );
 
 } );

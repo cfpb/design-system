@@ -5,41 +5,42 @@ section: components
 secondary_section: Forms
 status: Released
 description: "More information can be found at:\n\n* http://cfpb.github.io/design-manual/page-components/form-fields.html#dropdowns\t\n* https://cfpb.github.io/capital-framework/components/cf-forms/#select-dropdown\n* https://cfpb.github.io/capital-framework/components/cf-forms/#basic-multiselect"
-variations:
-  - variation_code_snippet: |-
-      <div class="m-form-field m-form-field__select">
-          <label class="a-label a-label__heading" for="test_select_default">
-              Label
-          </label>
-          <div class="a-select">
-              <select id="test_select_default">
+variation_groups:
+  - variations:
+      - variation_code_snippet: |-
+          <div class="m-form-field m-form-field__select">
+              <label class="a-label a-label__heading" for="test_select_default">
+                  Label
+              </label>
+              <div class="a-select">
+                  <select id="test_select_default">
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                      <option value="option4">Option 4</option>
+                  </select>
+              </div>
+          </div>
+        variation_description: ''
+        variation_name: Select dropdown
+      - variation_code_snippet: |-
+          <div class="m-form-field m-form-field__select">
+              <label class="a-label a-label__heading" for="test_select__multiple">
+                  Label
+              </label>
+              <select class="a-multiselect" id="test_select__multiple" multiple>
                   <option value="option1">Option 1</option>
                   <option value="option2">Option 2</option>
                   <option value="option3">Option 3</option>
                   <option value="option4">Option 4</option>
+                  <option value="option1">Option 5</option>
+                  <option value="option2">Option 6</option>
+                  <option value="option3">Option 7</option>
+                  <option value="option4">Option 8</option>
               </select>
           </div>
-      </div>
-    variation_description: ''
-    variation_name: Select dropdown
-  - variation_code_snippet: |-
-      <div class="m-form-field m-form-field__select">
-          <label class="a-label a-label__heading" for="test_select__multiple">
-              Label
-          </label>
-          <select class="a-multiselect" id="test_select__multiple" multiple>
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
-              <option value="option4">Option 4</option>
-              <option value="option1">Option 5</option>
-              <option value="option2">Option 6</option>
-              <option value="option3">Option 7</option>
-              <option value="option4">Option 8</option>
-          </select>
-      </div>
-    variation_description: ''
-    variation_name: Multiselect
+        variation_description: ''
+        variation_name: Multiselect
 usage: >-
   <h3>Use cases</h3>
 

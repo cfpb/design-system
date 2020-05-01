@@ -2,6 +2,7 @@ backend:
   name: github
   repo: cfpb/design-system
   branch: master
+  auth_scope: public_repo
   squash_merges: true
   commit_messages:
     create: Create "{{slug}}" page

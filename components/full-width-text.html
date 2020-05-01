@@ -985,7 +985,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                    <a class="m-list_link" href="/design-system/components/link-blobs">Link blobs</a>
                 </li>
                 
             
@@ -1453,48 +1453,15 @@
         <h1>
             Full Width Text
         </h1>
-    
-
-        <div id="toggle-code">
-            <a class="a-btn" id="toggle-code-btn" href="#">
-                <span class="hide-button">
-                    Hide code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
-                    </span>
-                </span>
-                <span class="show-button">
-                    Show code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
-                    </span>
-                </span>
-            </a>
-        </div>
-
-    
-
     </div>
 
+    
     <ul class="m-list m-list__horizontal u-mb30">
         
-        <li class="m-list_item">
-            <a class="m-list_link" href="#variations">Variations</a>
-        </li>
         
-
-        
-        
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#usage">Usage</a>
-        </li>
-        
-
-        
-
         
     </ul>
+    
 
     
         <section id="description" class="u-mb30">
@@ -1512,16 +1479,21 @@
     
 
     
-    <section class="sticky-header u-mb45">
-        <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line content_line u-mb20"></div>
+    
+    <section class="o-variation_group" id="">
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Content</h3>
 
-            <!-- Description -->
-            <p><img src="/design-system/images/uploads/content_quote_example.jpg" alt=""></p>
+        
+
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>Content</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p><img src="/design-system/images/uploads/content_quote_example.jpg" alt="Content quote example screenshot"></p>
 
 <p><strong>WHEN TO USE</strong></p>
 <ul>
@@ -1531,11 +1503,9 @@
 
 <p><strong>WHEN SOMETHING ELSE IS BETTER</strong></p>
 <ul>
-  <li>When the goal of the text is to quickly inform users about a set of options and/or drive them to child pages other sections of the site. Consider using an <a href="info-unit-groups-image-and-text">Info Unit Group</a>.</li>
-</ul>
-
-<p><strong>WHERE TO USE</strong></p>
-<ul>
+  <li>When the goal of the text is to quickly inform users about a set of options and/or drive them to child pages other sections of the site. Consider using an <a href="info-unit-groups-image-and-text">Info Unit Group</a>.
+<strong>WHERE TO USE</strong>
+</li>
   <li><a href="https://cfpb.github.io/design-system/templates/landing-pages">Landing pages</a></li>
   <li><a href="https://cfpb.github.io/design-system/templates/sublanding-pages">Sublanding pages</a></li>
   <li><a href="https://cfpb.github.io/design-system/templates/browse-pages">Browse pages</a></li>
@@ -1544,10 +1514,11 @@
   <li><a href="https://cfpb.github.io/design-system/templates/document-detail-pages">Document detail pages</a></li>
 </ul>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 
             </div>
             
@@ -1555,22 +1526,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#content-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#content-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="content-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#content-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="content-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1583,18 +1563,26 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Image</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p><img src="/design-system/images/uploads/content_media_example.jpg" alt=""></p>
+            <div class="m-variation_name">
+                <h3>Image</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p><img src="/design-system/images/uploads/content_media_example.jpg" alt="Content media example screenshot"></p>
 
 <p><strong>WHEN TO USE</strong></p>
 <ul>
@@ -1615,10 +1603,11 @@
   <li><a href="https://cfpb.github.io/design-system/templates/document-detail-pages">Document detail pages</a></li>
 </ul>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 
             </div>
             
@@ -1626,22 +1615,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#image-code-2" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#image-code-2" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="image-code-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#image-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="image-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1654,18 +1652,26 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Inset content</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p><img src="/design-system/images/uploads/content_inset_example.jpg" alt=""></p>
+            <div class="m-variation_name">
+                <h3>Inset content</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p><img src="/design-system/images/uploads/content_inset_example.jpg" alt="Content inset example screenshot"></p>
 
 <p><strong>WHEN TO USE</strong></p>
 <ul>
@@ -1675,15 +1681,14 @@
 
 <p><strong>WHEN SOMETHING ELSE IS BETTER</strong></p>
 <ul>
-  <li>May be used in any full width text component, but recommended only for Learn pages.</li>
-</ul>
-
-<p><strong>WHERE TO USE</strong></p>
-<ul>
+  <li>May be used in any full width text component, but recommended only for Learn pages.
+<strong>WHERE TO USE</strong>
+</li>
   <li><a href="https://cfpb.github.io/design-system/templates/learn-pages">Learn pages</a></li>
   <li><a href="https://cfpb.github.io/design-system/templates/document-detail-pages">Document detail pages</a></li>
 </ul>
 
+            </div>
 
             <!-- Live code example -->
             
@@ -1691,10 +1696,13 @@
             
             
             
+            
+            
 
         </div>
         
     </section>
+    
     
 
     
@@ -1817,8 +1825,8 @@
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2020-04-28 15:23:57 +0000">
-                     3:23:57 PM Apr 28, 2020
+                <time datetime="2020-05-01 17:35:42 +0000">
+                     5:35:42 PM May 01, 2020
                 </time>
             </small>
         </div>

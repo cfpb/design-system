@@ -985,7 +985,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                    <a class="m-list_link" href="/design-system/components/link-blobs">Link blobs</a>
                 </li>
                 
             
@@ -1453,48 +1453,15 @@
         <h1>
             Blocks
         </h1>
-    
-
-        <div id="toggle-code">
-            <a class="a-btn" id="toggle-code-btn" href="#">
-                <span class="hide-button">
-                    Hide code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
-                    </span>
-                </span>
-                <span class="show-button">
-                    Show code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
-                    </span>
-                </span>
-            </a>
-        </div>
-
-    
-
     </div>
 
+    
     <ul class="m-list m-list__horizontal u-mb30">
         
-        <li class="m-list_item">
-            <a class="m-list_link" href="#variations">Variations</a>
-        </li>
         
-
-        
-        
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#usage">Usage</a>
-        </li>
-        
-
-        
-
         
     </ul>
+    
 
     
         <section id="description" class="u-mb30">
@@ -1508,21 +1475,27 @@
     
 
     
-    <section class="sticky-header u-mb45">
-        <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line content_line u-mb20"></div>
+    
+    <section class="o-variation_group" id="">
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Standard block example</h3>
 
-            <!-- Description -->
-            <p>The standard <code class="highlighter-rouge">.block</code> class by itself simply adds a <code class="highlighter-rouge">margin</code> of twice the gutter width to the top and bottom.</p>
+        
 
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>Standard block example</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>The standard <code class="highlighter-rouge">.block</code> class by itself simply adds a <code class="highlighter-rouge">margin</code> of twice the gutter width to the top and bottom.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block">
     Content block
@@ -1540,22 +1513,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#standard-block-example-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#standard-block-example-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="standard-block-example-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#standard-block-example-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="standard-block-example-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1578,23 +1560,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Border top modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Adds top <code class="highlighter-rouge">border</code> to <code class="highlighter-rouge">.block</code>.</p>
+            <div class="m-variation_name">
+                <h3>Border top modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Adds top <code class="highlighter-rouge">border</code> to <code class="highlighter-rouge">.block</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block block__border-top">
     Content block with top border.
@@ -1605,28 +1596,37 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#border-top-modifier-code-2" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#border-top-modifier-code-2" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="border-top-modifier-code-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#border-top-modifier-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#jinja-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#border-top-modifier-jinja-code-snippet-2">
                             Jinja code snippet
                         </a>
                     </li>
+                    
+                    
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="border-top-modifier-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1641,7 +1641,7 @@
 
                 <!-- Jinja snippet -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-2">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="border-top-modifier-jinja-code-snippet-2">
                     <div class="variation-jinja-code-snippet">
                         <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
                         <div class="source-code">
@@ -1651,23 +1651,32 @@
                 </section>
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Border right modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Adds right <code class="highlighter-rouge">border</code> to <code class="highlighter-rouge">.block</code>.</p>
+            <div class="m-variation_name">
+                <h3>Border right modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Adds right <code class="highlighter-rouge">border</code> to <code class="highlighter-rouge">.block</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block block__border-right">
     Content block with right border.
@@ -1678,22 +1687,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#border-right-modifier-code-3" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#border-right-modifier-code-3" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="border-right-modifier-code-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#border-right-modifier-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="border-right-modifier-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1709,23 +1727,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Border bottom modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Adds bottom <code class="highlighter-rouge">border</code> to <code class="highlighter-rouge">.block</code>.</p>
+            <div class="m-variation_name">
+                <h3>Border bottom modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Adds bottom <code class="highlighter-rouge">border</code> to <code class="highlighter-rouge">.block</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block block__border-bottom">
     Content block with bottom border.
@@ -1736,22 +1763,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#border-bottom-modifier-code-4" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#border-bottom-modifier-code-4" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="border-bottom-modifier-code-4">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#border-bottom-modifier-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="border-bottom-modifier-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1767,23 +1803,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Border left modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Adds left <code class="highlighter-rouge">border</code> to <code class="highlighter-rouge">.block</code>.</p>
+            <div class="m-variation_name">
+                <h3>Border left modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Adds left <code class="highlighter-rouge">border</code> to <code class="highlighter-rouge">.block</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block block__border-left">
     Content block with left border.
@@ -1794,22 +1839,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#border-left-modifier-code-5" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#border-left-modifier-code-5" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="border-left-modifier-code-5">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-5">
+                        <a class="govuk-tabs__tab" href="#border-left-modifier-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-5">
+                <section class="govuk-tabs__panel" id="border-left-modifier-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1825,23 +1879,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Border modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Adds <code class="highlighter-rouge">border</code> on all sides to <code class="highlighter-rouge">.block</code>.</p>
+            <div class="m-variation_name">
+                <h3>Border modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Adds <code class="highlighter-rouge">border</code> on all sides to <code class="highlighter-rouge">.block</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block block__border">
     Content block with borders on all sides.
@@ -1852,22 +1915,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#border-modifier-code-6" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#border-modifier-code-6" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="border-modifier-code-6">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#border-modifier-html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="border-modifier-html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1883,23 +1955,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Flush-top modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Removes the top <code class="highlighter-rouge">margin</code> from <code class="highlighter-rouge">.block</code>.</p>
+            <div class="m-variation_name">
+                <h3>Flush-top modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Removes the top <code class="highlighter-rouge">margin</code> from <code class="highlighter-rouge">.block</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block block__flush-top">
     Content block with no top margin.
@@ -1913,22 +1994,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#flush-top-modifier-code-7" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#flush-top-modifier-code-7" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="flush-top-modifier-code-7">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-7">
+                        <a class="govuk-tabs__tab" href="#flush-top-modifier-html-code-snippet-7">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-7">
+                <section class="govuk-tabs__panel" id="flush-top-modifier-html-code-snippet-7">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1947,23 +2037,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Flush-bottom modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Removes the bottom <code class="highlighter-rouge">margin</code> from <code class="highlighter-rouge">.block</code>.</p>
+            <div class="m-variation_name">
+                <h3>Flush-bottom modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Removes the bottom <code class="highlighter-rouge">margin</code> from <code class="highlighter-rouge">.block</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block block__flush-bottom">
     Content block with no bottom margin.
@@ -1977,22 +2076,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#flush-bottom-modifier-code-8" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#flush-bottom-modifier-code-8" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="flush-bottom-modifier-code-8">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-8">
+                        <a class="govuk-tabs__tab" href="#flush-bottom-modifier-html-code-snippet-8">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-8">
+                <section class="govuk-tabs__panel" id="flush-bottom-modifier-html-code-snippet-8">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2011,23 +2119,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Flush-sides modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Removes the side <code class="highlighter-rouge">margin</code> from <code class="highlighter-rouge">.block</code>. Typically used in conjunction with <code class="highlighter-rouge">.block__bg</code> to create a ‘well’ whose <code class="highlighter-rouge">background</code> extends into the left and right gutters. (See below.)</p>
+            <div class="m-variation_name">
+                <h3>Flush-sides modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Removes the side <code class="highlighter-rouge">margin</code> from <code class="highlighter-rouge">.block</code>. Typically used in conjunction with <code class="highlighter-rouge">.block__bg</code> to create a ‘well’ whose <code class="highlighter-rouge">background</code> extends into the left and right gutters. (See below.)</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <main class="content content__1-3" role="main">
     <div class="content_wrapper">
         <aside class="content_sidebar">
@@ -2047,22 +2164,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#flush-sides-modifier-code-9" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#flush-sides-modifier-code-9" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="flush-sides-modifier-code-9">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-9">
+                        <a class="govuk-tabs__tab" href="#flush-sides-modifier-html-code-snippet-9">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-9">
+                <section class="govuk-tabs__panel" id="flush-sides-modifier-html-code-snippet-9">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2087,23 +2213,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Flush modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Removes the side, top, and bottom margin from .block.</p>
+            <div class="m-variation_name">
+                <h3>Flush modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Removes the side, top, and bottom margin from .block.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <main class="content content__1-3" role="main">
     <div class="content_wrapper">
         <aside class="content_sidebar">
@@ -2123,22 +2258,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#flush-modifier-code-10" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#flush-modifier-code-10" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="flush-modifier-code-10">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-10">
+                        <a class="govuk-tabs__tab" href="#flush-modifier-html-code-snippet-10">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-10">
+                <section class="govuk-tabs__panel" id="flush-modifier-html-code-snippet-10">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2163,23 +2307,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Background modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Adds a <code class="highlighter-rouge">background</code> color and padding to <code class="highlighter-rouge">.block</code>. Setup for (ems-equivalent) <code class="highlighter-rouge">30px</code> <code class="highlighter-rouge">padding</code> on top and <code class="highlighter-rouge">60px</code> on bottom.</p>
+            <div class="m-variation_name">
+                <h3>Background modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Adds a <code class="highlighter-rouge">background</code> color and padding to <code class="highlighter-rouge">.block</code>. Setup for (ems-equivalent) <code class="highlighter-rouge">30px</code> <code class="highlighter-rouge">padding</code> on top and <code class="highlighter-rouge">60px</code> on bottom.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block block__bg">
     Content block with a background
@@ -2190,22 +2343,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#background-modifier-code-11" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#background-modifier-code-11" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="background-modifier-code-11">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-11">
+                        <a class="govuk-tabs__tab" href="#background-modifier-html-code-snippet-11">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-11">
+                <section class="govuk-tabs__panel" id="background-modifier-html-code-snippet-11">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2221,23 +2383,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Background and flush-sides modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>This is an example of combining modifiers to get a flush <code class="highlighter-rouge">padding</code> and <code class="highlighter-rouge">background</code> with a <code class="highlighter-rouge">.block</code>.</p>
+            <div class="m-variation_name">
+                <h3>Background and flush-sides modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>This is an example of combining modifiers to get a flush <code class="highlighter-rouge">padding</code> and <code class="highlighter-rouge">background</code> with a <code class="highlighter-rouge">.block</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <main class="content content__1-3" role="main">
     <div class="content_wrapper">
         <aside class="content_sidebar">
@@ -2257,22 +2428,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#background-and-flush-sides-modifier-code-12" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#background-and-flush-sides-modifier-code-12" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="background-and-flush-sides-modifier-code-12">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-12">
+                        <a class="govuk-tabs__tab" href="#background-and-flush-sides-modifier-html-code-snippet-12">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-12">
+                <section class="govuk-tabs__panel" id="background-and-flush-sides-modifier-html-code-snippet-12">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2297,23 +2477,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Padded-top modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Breaks top <code class="highlighter-rouge">margin</code> into <code class="highlighter-rouge">margin</code> and <code class="highlighter-rouge">padding</code>. Useful in combination with <code class="highlighter-rouge">block__border-top</code> to add <code class="highlighter-rouge">padding</code> between <code class="highlighter-rouge">.block</code> contents and <code class="highlighter-rouge">border</code>.</p>
+            <div class="m-variation_name">
+                <h3>Padded-top modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Breaks top <code class="highlighter-rouge">margin</code> into <code class="highlighter-rouge">margin</code> and <code class="highlighter-rouge">padding</code>. Useful in combination with <code class="highlighter-rouge">block__border-top</code> to add <code class="highlighter-rouge">padding</code> between <code class="highlighter-rouge">.block</code> contents and <code class="highlighter-rouge">border</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block block__padded-top block__border-top">
     Content block with reduced top margin and added top padding
@@ -2325,22 +2514,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#padded-top-modifier-code-13" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#padded-top-modifier-code-13" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="padded-top-modifier-code-13">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-13">
+                        <a class="govuk-tabs__tab" href="#padded-top-modifier-html-code-snippet-13">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-13">
+                <section class="govuk-tabs__panel" id="padded-top-modifier-html-code-snippet-13">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2357,23 +2555,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Padded-bottom modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Breaks bottom <code class="highlighter-rouge">margin</code> into <code class="highlighter-rouge">margin</code> and <code class="highlighter-rouge">padding</code>. Useful in combination with <code class="highlighter-rouge">block__border-bottom</code> to add <code class="highlighter-rouge">padding</code> between <code class="highlighter-rouge">.block</code> contents and <code class="highlighter-rouge">border</code>.</p>
+            <div class="m-variation_name">
+                <h3>Padded-bottom modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Breaks bottom <code class="highlighter-rouge">margin</code> into <code class="highlighter-rouge">margin</code> and <code class="highlighter-rouge">padding</code>. Useful in combination with <code class="highlighter-rouge">block__border-bottom</code> to add <code class="highlighter-rouge">padding</code> between <code class="highlighter-rouge">.block</code> contents and <code class="highlighter-rouge">border</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 Main content...
 <div class="block block__padded-bottom block__border-bottom">
     Content block with reduced bottom margin and added bottom padding
@@ -2385,22 +2592,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#padded-bottom-modifier-code-14" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#padded-bottom-modifier-code-14" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="padded-bottom-modifier-code-14">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-14">
+                        <a class="govuk-tabs__tab" href="#padded-bottom-modifier-html-code-snippet-14">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-14">
+                <section class="govuk-tabs__panel" id="padded-bottom-modifier-html-code-snippet-14">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2417,25 +2633,34 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Sub blocks</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Useful for when you need some consistent <code class="highlighter-rouge">margin</code> between <code class="highlighter-rouge">.blocks</code> that are nested within other <code class="highlighter-rouge">.blocks</code>.</p>
+            <div class="m-variation_name">
+                <h3>Sub blocks</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Useful for when you need some consistent <code class="highlighter-rouge">margin</code> between <code class="highlighter-rouge">.blocks</code> that are nested within other <code class="highlighter-rouge">.blocks</code>.</p>
 
 <p>Note that the <code class="highlighter-rouge">div</code>s with inline styles are for demonstration purposes only and should not be used in production.</p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="block block__sub">
     <div style="background: #F1F2F2; padding: 8px;">
         Sub content block
@@ -2457,22 +2682,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#sub-blocks-code-15" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#sub-blocks-code-15" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="sub-blocks-code-15">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-15">
+                        <a class="govuk-tabs__tab" href="#sub-blocks-html-code-snippet-15">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-15">
+                <section class="govuk-tabs__panel" id="sub-blocks-html-code-snippet-15">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2499,6 +2733,12 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
@@ -2506,6 +2746,7 @@
         </div>
         
     </section>
+    
     
 
     
@@ -2567,8 +2808,8 @@
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2020-04-10 17:34:12 +0000">
-                     5:34:12 PM Apr 10, 2020
+                <time datetime="2020-05-01 17:35:42 +0000">
+                     5:35:42 PM May 01, 2020
                 </time>
             </small>
         </div>

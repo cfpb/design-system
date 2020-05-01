@@ -985,7 +985,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                    <a class="m-list_link" href="/design-system/components/link-blobs">Link blobs</a>
                 </li>
                 
             
@@ -1453,43 +1453,15 @@
         <h1>
             Helper classes and mixins
         </h1>
-    
-
-        <div id="toggle-code">
-            <a class="a-btn" id="toggle-code-btn" href="#">
-                <span class="hide-button">
-                    Hide code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
-                    </span>
-                </span>
-                <span class="show-button">
-                    Show code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
-                    </span>
-                </span>
-            </a>
-        </div>
-
-    
-
     </div>
 
+    
     <ul class="m-list m-list__horizontal u-mb30">
         
-        <li class="m-list_item">
-            <a class="m-list_link" href="#variations">Variations</a>
-        </li>
         
-
-        
-        
-
-        
-
         
     </ul>
+    
 
     
         <section id="description" class="u-mb30">
@@ -1501,16 +1473,21 @@
     
 
     
-    <section class="sticky-header u-mb45">
-        <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line content_line u-mb20"></div>
+    
+    <section class="o-variation_group" id="">
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"JS only" helper class</h3>
 
-            <!-- Description -->
-            <p>Hide an element when JavaScript isn’t available. Requires a small script in the <code class="highlighter-rouge">&lt;head&gt;</code> of your <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> document that removes a <code class="highlighter-rouge">.no-js</code> class.</p>
+        
+
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>"JS only" helper class</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Hide an element when JavaScript isn’t available. Requires a small script in the <code class="highlighter-rouge">&lt;head&gt;</code> of your <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> document that removes a <code class="highlighter-rouge">.no-js</code> class.</p>
 
 <ol>
   <li>Add a <code class="highlighter-rouge">no-js</code> class to the html</li>
@@ -1537,10 +1514,11 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="u-js-only"&gt;&lt;/div&gt;
 </code></pre></div></div>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 
 <script>
       // Confirm availability of JavaScript and remove no-js class from html
@@ -1554,22 +1532,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#js-only-helper-class-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#js-only-helper-class-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="js-only-helper-class-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#js-only-helper-class-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="js-only-helper-class-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1588,27 +1575,36 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Clearfix" helper class</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Clear floated elements to avoid following elements from flowing into the previous one.</p>
+            <div class="m-variation_name">
+                <h3>"Clearfix" helper class</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Clear floated elements to avoid following elements from flowing into the previous one.</p>
 
 <p>For example, to float an element to the left, but prevent the following text from flowing into it.</p>
 
 <p>More information see: <a href="http://css-tricks.com/snippets/css/clear-fix">http://css-tricks.com/snippets/css/clear-fix</a></p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="u-clearfix">
     <div style="float:left; width:100%; height:60px; background:black;"></div>
 </div>
@@ -1619,22 +1615,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#clearfix-helper-class-code-2" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#clearfix-helper-class-code-2" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="clearfix-helper-class-code-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#clearfix-helper-class-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="clearfix-helper-class-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1650,25 +1655,34 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Visually hidden" helper class</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Hide an element from view while keeping it accessible to screen readers.</p>
+            <div class="m-variation_name">
+                <h3>"Visually hidden" helper class</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Hide an element from view while keeping it accessible to screen readers.</p>
 
 <p>For example, to create a link with a social network icon, but allow non-sighted users to understand the context, add descriptive text with the <code class="highlighter-rouge">u-visually-hidden</code> class.</p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <h1>
     <a href="#">
         <span class="cf-icon cf-icon-twitter-square"></span>
@@ -1681,22 +1695,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#visually-hidden-helper-class-code-3" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#visually-hidden-helper-class-code-3" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="visually-hidden-helper-class-code-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#visually-hidden-helper-class-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="visually-hidden-helper-class-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1714,40 +1737,54 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Totally hidden" helper class</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Use <code class="highlighter-rouge">u-hidden</code> to hide an element from everything (including screen readers). This is useful for dynamically hiding and showing content. It is also useful for progressive enhancement. For example, if you want to hide something initially on page load but show it after checking for browser support, use JavaScript to remove this class from the element after verifying support.</p>
+            <div class="m-variation_name">
+                <h3>"Totally hidden" helper class</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Use <code class="highlighter-rouge">u-hidden</code> to hide an element from everything (including screen readers). This is useful for dynamically hiding and showing content. It is also useful for progressive enhancement. For example, if you want to hide something initially on page load but show it after checking for browser support, use JavaScript to remove this class from the element after verifying support.</p>
+
+            </div>
 
             <!-- Live code example -->
             
 
+            
+            
             
             
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Inline block" helper class [DEPRECATED]</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p><em>DEPRECATED.</em> Identical to <code class="highlighter-rouge">display: inline-block.</code></p>
+            <div class="m-variation_name">
+                <h3>"Inline block" helper class [DEPRECATED]</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p><em>DEPRECATED.</em> Identical to <code class="highlighter-rouge">display: inline-block.</code></p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="u-inline-block"></div>
             </div>
             
@@ -1755,22 +1792,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#inline-block-helper-class-deprecated-code-5" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#inline-block-helper-class-deprecated-code-5" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="inline-block-helper-class-deprecated-code-5">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-5">
+                        <a class="govuk-tabs__tab" href="#inline-block-helper-class-deprecated-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-5">
+                <section class="govuk-tabs__panel" id="inline-block-helper-class-deprecated-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1783,23 +1829,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Float right" helper class</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            
+            <div class="m-variation_name">
+                <h3>"Float right" helper class</h3>
+            </div>
 
+            <div class="m-variation_description">
+                
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="u-right"></div>
             </div>
             
@@ -1807,22 +1862,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#float-right-helper-class-code-6" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#float-right-helper-class-code-6" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="float-right-helper-class-code-6">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#float-right-helper-class-html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="float-right-helper-class-html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1835,25 +1899,34 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Break word" helper class</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Force word breaks within an element. Useful for small containers where text may over-run the width of the container.</p>
+            <div class="m-variation_name">
+                <h3>"Break word" helper class</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Force word breaks within an element. Useful for small containers where text may over-run the width of the container.</p>
 
 <p><em>This only works in Internet Explorer 8 when the element with the <code class="highlighter-rouge">.u-break-word</code> class has layout. See <a href="http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8">http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8</a> for more information.</em></p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="u-break-word">
     This link should break:
     <a href="#">
@@ -1873,22 +1946,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#break-word-helper-class-code-7" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#break-word-helper-class-code-7" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="break-word-helper-class-code-7">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-7">
+                        <a class="govuk-tabs__tab" href="#break-word-helper-class-html-code-snippet-7">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-7">
+                <section class="govuk-tabs__panel" id="break-word-helper-class-html-code-snippet-7">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1913,27 +1995,36 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Margin utilities" helper classes</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Force a <code class="highlighter-rouge">margin</code> top or bottom on an element in pixels.</p>
+            <div class="m-variation_name">
+                <h3>"Margin utilities" helper classes</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Force a <code class="highlighter-rouge">margin</code> top or bottom on an element in pixels.</p>
 
 <p><code class="highlighter-rouge">.u-m[p][#]</code></p>
 
 <p><em><code class="highlighter-rouge">[p]</code> is the position, use <code class="highlighter-rouge">t</code> for top or <code class="highlighter-rouge">b</code> for bottom. <code class="highlighter-rouge">[#]</code> is the pixel value, available options are 0, 5, 10, 15, 20, 30, 45, 60</em></p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <h1 class="u-mb0">Heading with zero bottom margin</h1>
             </div>
             
@@ -1941,22 +2032,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#margin-utilities-helper-classes-code-8" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#margin-utilities-helper-classes-code-8" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="margin-utilities-helper-classes-code-8">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-8">
+                        <a class="govuk-tabs__tab" href="#margin-utilities-helper-classes-html-code-snippet-8">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-8">
+                <section class="govuk-tabs__panel" id="margin-utilities-helper-classes-html-code-snippet-8">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1969,25 +2069,34 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Width utilities" helper classes</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Set the <code class="highlighter-rouge">width</code> of an element in percentages.</p>
+            <div class="m-variation_name">
+                <h3>"Width utilities" helper classes</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Set the <code class="highlighter-rouge">width</code> of an element in percentages.</p>
 
 <p><strong>NOTE: Inline style properties for demonstration only.</strong></p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;">
     <code>.u-w100pct</code>
 </div>
@@ -2036,22 +2145,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#width-utilities-helper-classes-code-9" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#width-utilities-helper-classes-code-9" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="width-utilities-helper-classes-code-9">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-9">
+                        <a class="govuk-tabs__tab" href="#width-utilities-helper-classes-html-code-snippet-9">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-9">
+                <section class="govuk-tabs__panel" id="width-utilities-helper-classes-html-code-snippet-9">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2105,27 +2223,36 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Show on mobile" width-specific helper class</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Show or hide content based on the current display size.</p>
+            <div class="m-variation_name">
+                <h3>"Show on mobile" width-specific helper class</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Show or hide content based on the current display size.</p>
 
 <p><strong>NOTE: Inline style properties for demonstration only</strong></p>
 
 <p>Displays content on screen widths under 601px.</p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div style="border: 1px solid black; height: 22px; padding: 5px;">
     <p class="u-show-on-mobile">Visible on mobile</p>
 </div>
@@ -2135,22 +2262,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#show-on-mobile-width-specific-helper-class-code-10" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#show-on-mobile-width-specific-helper-class-code-10" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="show-on-mobile-width-specific-helper-class-code-10">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-10">
+                        <a class="govuk-tabs__tab" href="#show-on-mobile-width-specific-helper-class-html-code-snippet-10">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-10">
+                <section class="govuk-tabs__panel" id="show-on-mobile-width-specific-helper-class-html-code-snippet-10">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2165,27 +2301,36 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Hide on mobile" width-specific helper class</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Show or hide content based on the current display size.</p>
+            <div class="m-variation_name">
+                <h3>"Hide on mobile" width-specific helper class</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Show or hide content based on the current display size.</p>
 
 <p><strong>NOTE: Inline style properties for demonstration only</strong></p>
 
 <p>Hides content on screens widths under 601px.</p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div style="border: 1px solid black; height: 22px; padding: 5px;">
     <p class="u-hide-on-mobile">Hidden on mobile</p>
 </div>
@@ -2195,22 +2340,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#hide-on-mobile-width-specific-helper-class-code-11" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#hide-on-mobile-width-specific-helper-class-code-11" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="hide-on-mobile-width-specific-helper-class-code-11">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-11">
+                        <a class="govuk-tabs__tab" href="#hide-on-mobile-width-specific-helper-class-html-code-snippet-11">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-11">
+                <section class="govuk-tabs__panel" id="hide-on-mobile-width-specific-helper-class-html-code-snippet-11">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2225,27 +2379,36 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Align with button" mixin</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Align an element vertically with the text within a button that may be to either side.</p>
+            <div class="m-variation_name">
+                <h3>"Align with button" mixin</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Align an element vertically with the text within a button that may be to either side.</p>
 
 <p><em>Pass <code class="highlighter-rouge">font-size</code> as the argument for calculating spacing, default value is <code class="highlighter-rouge">@base-font-size-px</code>.</em></p>
 
 <p><code class="highlighter-rouge">.u-align-with-btn(@font-size: @base-font-size-px);</code></p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 
             </div>
             
@@ -2253,22 +2416,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#align-with-button-mixin-code-12" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#align-with-button-mixin-code-12" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="align-with-button-mixin-code-12">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-12">
+                        <a class="govuk-tabs__tab" href="#align-with-button-mixin-html-code-snippet-12">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-12">
+                <section class="govuk-tabs__panel" id="align-with-button-mixin-html-code-snippet-12">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2281,18 +2453,26 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Flexible proportional containers" mixin</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Utilize intrinsic ratios to create a flexible container that retains an aspect ratio. When <code class="highlighter-rouge">&lt;img&gt;</code> tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.</p>
+            <div class="m-variation_name">
+                <h3>"Flexible proportional containers" mixin</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Utilize intrinsic ratios to create a flexible container that retains an aspect ratio. When <code class="highlighter-rouge">&lt;img&gt;</code> tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.</p>
 
 <p><em>Read more about intrinsic ratios: <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video">http://alistapart.com/article/creating-intrinsic-ratios-for-video</a></em></p>
 
@@ -2312,10 +2492,11 @@
 
 <p>To create a 4:3 flexible video player, add the <code class="highlighter-rouge">__4_3</code> modifier to the container.</p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="u-flexible-container">
     <video class="u-flexible-container_inner" style="background:#75787B;" controls>
     </video>
@@ -2339,36 +2520,45 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#flexible-proportional-containers-mixin-code-13" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#flexible-proportional-containers-mixin-code-13" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="flexible-proportional-containers-mixin-code-13">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-13">
+                        <a class="govuk-tabs__tab" href="#flexible-proportional-containers-mixin-html-code-snippet-13">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-13">
+                <section class="govuk-tabs__panel" id="flexible-proportional-containers-mixin-html-code-snippet-13">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;div class="u-flexible-container"&gt;
     &lt;video class="u-flexible-container_inner"
-           style="background:#75787B;"
-           controls&gt;
+          style="background:#75787B;"
+          controls&gt;
     &lt;/video&gt;
 &lt;/div&gt;
 
 &lt;br /&gt;
 
 &lt;div class="u-flexible-container"
-     style="background-image: url(https://dummyimage.com/700x394/addc91/101820);
+    style="background-image: url(https://dummyimage.com/700x394/addc91/101820);
             background-position: center center;
             background-repeat: no-repeat;"&gt;&lt;/div&gt;
 
@@ -2376,8 +2566,8 @@
 
 &lt;div class="u-flexible-container u-flexible-container__4-3"&gt;
     &lt;video class="u-flexible-container_inner"
-           style="background:#75787B;"
-           controls&gt;
+          style="background:#75787B;"
+          controls&gt;
     &lt;/video&gt;
 &lt;/div&gt;</code></pre>
                         </div>
@@ -2388,18 +2578,26 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Link color" mixin</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Calling the mixin without arguments will set the following states: default - <code class="highlighter-rouge">#0071bc</code>, <code class="highlighter-rouge">:hover</code> - <code class="highlighter-rouge">#205493</code>, <code class="highlighter-rouge">:focus</code> - <code class="highlighter-rouge">#0071bc</code>, <code class="highlighter-rouge">:visited</code> - <code class="highlighter-rouge">#4c2c92</code>, <code class="highlighter-rouge">:active</code> - <code class="highlighter-rouge">#046b99</code>.</p>
+            <div class="m-variation_name">
+                <h3>"Link color" mixin</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Calling the mixin without arguments will set the following states: default - <code class="highlighter-rouge">#0071bc</code>, <code class="highlighter-rouge">:hover</code> - <code class="highlighter-rouge">#205493</code>, <code class="highlighter-rouge">:focus</code> - <code class="highlighter-rouge">#0071bc</code>, <code class="highlighter-rouge">:visited</code> - <code class="highlighter-rouge">#4c2c92</code>, <code class="highlighter-rouge">:active</code> - <code class="highlighter-rouge">#046b99</code>.</p>
 
 <p><code class="highlighter-rouge">u-link__colors()</code></p>
 
@@ -2421,6 +2619,7 @@
 
 <p><strong>A base mixin of <code class="highlighter-rouge">u-link__colors-base()</code> exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use <code class="highlighter-rouge">.u-link__colors(@c, @v, @h, @f, @a)</code>.</strong></p>
 
+            </div>
 
             <!-- Live code example -->
             
@@ -2428,15 +2627,19 @@
             
             
             
+            
+            
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Link border" mixin</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Force the default bottom border on the default and <code class="highlighter-rouge">:hover</code> states.</p>
+            <div class="m-variation_name">
+                <h3>"Link border" mixin</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Force the default bottom border on the default and <code class="highlighter-rouge">:hover</code> states.</p>
 
 <p><code class="highlighter-rouge">.u-link__border()</code></p>
 
@@ -2448,6 +2651,7 @@
 
 <p><code class="highlighter-rouge">.u-link__hover-border()</code></p>
 
+            </div>
 
             <!-- Live code example -->
             
@@ -2455,15 +2659,19 @@
             
             
             
+            
+            
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Link children" mixin</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Calling this mixin without arguments will set the default color for the <code class="highlighter-rouge">:hover</code> state of a child within a link, without affecting the link itself.</p>
+            <div class="m-variation_name">
+                <h3>"Link children" mixin</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Calling this mixin without arguments will set the default color for the <code class="highlighter-rouge">:hover</code> state of a child within a link, without affecting the link itself.</p>
 
 <p><code class="highlighter-rouge">.u-link__hover-child()</code></p>
 
@@ -2471,6 +2679,7 @@
 
 <p><code class="highlighter-rouge">.u-link__hover-child(@c)</code></p>
 
+            </div>
 
             <!-- Live code example -->
             
@@ -2478,15 +2687,19 @@
             
             
             
+            
+            
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>"Small text utility" mixin</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p><strong>CLASS</strong></p>
+            <div class="m-variation_name">
+                <h3>"Small text utility" mixin</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p><strong>CLASS</strong></p>
 
 <p>Sets the element to <code class="highlighter-rouge">14px</code> (in <code class="highlighter-rouge">em</code>s).</p>
 
@@ -2519,6 +2732,7 @@
 }
 </code></pre></div></div>
 
+            </div>
 
             <!-- Live code example -->
             
@@ -2526,10 +2740,13 @@
             
             
             
+            
+            
 
         </div>
         
     </section>
+    
     
 
     
@@ -2572,8 +2789,8 @@
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2019-09-13 19:20:27 +0000">
-                     7:20:27 PM Sep 13, 2019
+                <time datetime="2020-05-01 17:35:42 +0000">
+                     5:35:42 PM May 01, 2020
                 </time>
             </small>
         </div>

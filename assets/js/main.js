@@ -24,24 +24,28 @@ if ( tabs && tabs.length > 0 ) {
 }
 
 const HIDDEN_CLASS = 'u-hidden';
-const toggleButton = document.getElementById( 'toggle-code-btn' );
-const codeSnippets = document.querySelectorAll( '[data-toggle-code]' );
 
-const hideEls = els => els.forEach( el => el.classList.add( HIDDEN_CLASS ) );
-const showEls = els => els.forEach( el => el.classList.remove( HIDDEN_CLASS ) );
+/**
+ * @param {MouseEvent} event - The mouse event object from the click.
+ */
+function handleDocumentClick( event ) {
+  const target = event.target;
+  if ( !target.matches( '[data-toggle-code]' ) ) {
+    return;
+  }
+  event.preventDefault();
+  const container = target.parentNode;
+  const codeEl = document.querySelector( target.getAttribute( 'href' ) );
+  if ( codeEl && codeEl.classList.contains( HIDDEN_CLASS ) ) {
+    codeEl.classList.remove( HIDDEN_CLASS );
+    container.querySelector( '[data-toggle-code="hide"]' ).classList.remove( HIDDEN_CLASS );
+    container.querySelector( '[data-toggle-code="show"]' ).classList.add( HIDDEN_CLASS );
+  } else {
+    codeEl.classList.add( HIDDEN_CLASS );
+    container.querySelector( '[data-toggle-code="hide"]' ).classList.add( HIDDEN_CLASS );
+    container.querySelector( '[data-toggle-code="show"]' ).classList.remove( HIDDEN_CLASS );
+  }
 
-// This is the "Hide/show code & specs" button on component pages.
-
-if ( toggleButton !== null ) {
-  toggleButton.addEventListener( 'click', ev => {
-    ev.preventDefault();
-    const codeIsHidden = toggleButton.getAttribute( 'data-code-hidden' );
-    if ( codeIsHidden ) {
-      showEls( codeSnippets );
-      toggleButton.removeAttribute( 'data-code-hidden' );
-    } else {
-      hideEls( codeSnippets );
-      toggleButton.setAttribute( 'data-code-hidden', 'true' );
-    }
-  } );
 }
+
+document.addEventListener( 'click', handleDocumentClick, false );

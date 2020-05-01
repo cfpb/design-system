@@ -985,7 +985,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                    <a class="m-list_link" href="/design-system/components/link-blobs">Link blobs</a>
                 </li>
                 
             
@@ -1453,56 +1453,15 @@
         <h1>
             Radio Buttons
         </h1>
-    
-
-        <div id="toggle-code">
-            <a class="a-btn" id="toggle-code-btn" href="#">
-                <span class="hide-button">
-                    Hide code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
-                    </span>
-                </span>
-                <span class="show-button">
-                    Show code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
-                    </span>
-                </span>
-            </a>
-        </div>
-
-    
-
     </div>
 
+    
     <ul class="m-list m-list__horizontal u-mb30">
         
-        <li class="m-list_item">
-            <a class="m-list_link" href="#variations">Variations</a>
-        </li>
         
-
-        
-        
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#usage">Usage</a>
-        </li>
-        
-
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#accessibility">Accessibility</a>
-        </li>
-        
-
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#research">Research</a>
-        </li>
         
     </ul>
+    
 
     
         <section id="description" class="u-mb30">
@@ -1512,21 +1471,27 @@
     
 
     
-    <section class="sticky-header u-mb45">
-        <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line content_line u-mb20"></div>
+    
+    <section class="o-variation_group" id="">
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Default state</h3>
 
-            <!-- Description -->
-            
+        
 
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>Default state</h3>
+            </div>
+
+            <div class="m-variation_description">
+                
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-form-field m-form-field__radio">
     <input class="a-radio" type="radio" id="test_radio_basic_default">
     <label class="a-label" for="test_radio_basic_default">Label</label>
@@ -1537,22 +1502,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#default-state-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#default-state-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="default-state-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#default-state-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="default-state-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1568,23 +1542,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Disabled state</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            
+            <div class="m-variation_name">
+                <h3>Disabled state</h3>
+            </div>
 
+            <div class="m-variation_description">
+                
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-form-field m-form-field__radio">
     <input class="a-radio" type="radio" id="test_radio_basic_disabled" disabled>
     <label class="a-label" for="test_radio_basic_disabled">Label</label>
@@ -1595,22 +1578,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#disabled-state-code-2" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#disabled-state-code-2" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="disabled-state-code-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#disabled-state-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="disabled-state-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1626,23 +1618,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Radio button with helper text</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Checkboxes and radio button inputs can have labels that span multiple lines and have helper text that appears below the main label text.</p>
+            <div class="m-variation_name">
+                <h3>Radio button with helper text</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Checkboxes and radio button inputs can have labels that span multiple lines and have helper text that appears below the main label text.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-form-field m-form-field__radio">
     <input class="a-radio" type="radio" id="test_radio_basic_helper">
     <label class="a-label" for="test_radio_basic_helper">
@@ -1659,22 +1660,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#radio-button-with-helper-text-code-3" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#radio-button-with-helper-text-code-3" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="radio-button-with-helper-text-code-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#radio-button-with-helper-text-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="radio-button-with-helper-text-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1696,23 +1706,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Large target area radio button</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            
+            <div class="m-variation_name">
+                <h3>Large target area radio button</h3>
+            </div>
 
+            <div class="m-variation_description">
+                
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-form-field m-form-field__radio m-form-field__lg-target">
     <input class="a-radio" type="radio" id="test_radio_lg_default">
     <label class="a-label" for="test_radio_lg_default">Label</label>
@@ -1723,22 +1742,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#large-target-area-radio-button-code-4" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#large-target-area-radio-button-code-4" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="large-target-area-radio-button-code-4">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#large-target-area-radio-button-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="large-target-area-radio-button-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1754,23 +1782,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Disabled large target area radio button</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            
+            <div class="m-variation_name">
+                <h3>Disabled large target area radio button</h3>
+            </div>
 
+            <div class="m-variation_description">
+                
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-form-field m-form-field__radio m-form-field__lg-target">
     <input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled>
     <label class="a-label" for="test_radio_lg_disabled">Label</label>
@@ -1781,30 +1818,39 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#disabled-large-target-area-radio-button-code-5" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#disabled-large-target-area-radio-button-code-5" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="disabled-large-target-area-radio-button-code-5">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-5">
+                        <a class="govuk-tabs__tab" href="#disabled-large-target-area-radio-button-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-5">
+                <section class="govuk-tabs__panel" id="disabled-large-target-area-radio-button-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
     &lt;input class="a-radio"
-           type="radio"
-           id="test_radio_lg_disabled"
-           disabled&gt;
+          type="radio"
+          id="test_radio_lg_disabled"
+          disabled&gt;
     &lt;label class="a-label" for="test_radio_lg_disabled"&gt;Label&lt;/label&gt;
 &lt;/div&gt;</code></pre>
                         </div>
@@ -1815,23 +1861,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Large target radio button with helper text</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            
+            <div class="m-variation_name">
+                <h3>Large target radio button with helper text</h3>
+            </div>
 
+            <div class="m-variation_description">
+                
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-form-field m-form-field__radio m-form-field__lg-target">
     <input class="a-radio" type="radio" id="test_radio_lg_helper">
     <label class="a-label" for="test_radio_lg_helper">
@@ -1848,22 +1903,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#large-target-radio-button-with-helper-text-code-6" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#large-target-radio-button-with-helper-text-code-6" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="large-target-radio-button-with-helper-text-code-6">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#large-target-radio-button-with-helper-text-html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="large-target-radio-button-with-helper-text-html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1885,6 +1949,12 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
@@ -1892,6 +1962,7 @@
         </div>
         
     </section>
+    
     
 
     
@@ -1994,8 +2065,8 @@
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2020-04-08 17:28:35 +0000">
-                     5:28:35 PM Apr 08, 2020
+                <time datetime="2020-05-01 17:35:42 +0000">
+                     5:35:42 PM May 01, 2020
                 </time>
             </small>
         </div>

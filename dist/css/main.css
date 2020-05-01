@@ -5507,8 +5507,8 @@ pre code {
   color: inherit;
   background-color: transparent;
 }
-.live-code-example {
-  margin: 30px 0 40px 30px;
+.a-live_code {
+  margin: 2rem 0 1rem;
 }
 /* Pygments via Jekyll */
 .highlight {
@@ -5521,7 +5521,7 @@ pre code {
 .source-code pre {
   background: none;
   clear: both;
-  margin-top: 0;
+  margin: 0;
   padding: 40px;
 }
 /* ==========================================================================
@@ -5835,14 +5835,9 @@ pre code {
 /* ==========================================================================
    tabs
    ========================================================================== */
-.govuk-tabs {
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
 @media (min-width: 40.0625em) {
   .govuk-tabs {
-    margin-top: 5px;
-    margin-bottom: 30px;
+    margin: 0 -2rem 2rem;
   }
 }
 .govuk-tabs__list {
@@ -5853,7 +5848,7 @@ pre code {
 }
 @media only all and (min-width: 40.0625em) {
   .govuk-tabs__list {
-    display: block;
+    display: flex;
   }
 }
 @media (max-width: 40.0525em) {
@@ -5874,7 +5869,7 @@ pre code {
   line-height: 1.25;
   text-transform: uppercase;
   border-bottom: 0;
-  margin-left: 25px;
+  margin-bottom: 0;
 }
 .govuk-tabs__list-item::before {
   content: "\2014 ";
@@ -5905,6 +5900,7 @@ pre code {
 @media (min-width: 40.0625em) {
   .govuk-tabs__panel {
     border-top: 1px solid #5a5d61;
+    border-bottom: 1px solid #b4b5b6;
     margin: -3px 0 50px;
   }
 }
@@ -5924,6 +5920,9 @@ pre code {
   .js-enabled .govuk-tabs__list-item--selected a:hover {
     border-bottom: 5px solid #0072ce;
   }
+  .js-enabled .govuk-tabs__list-item:first-child .govuk-tabs__tab {
+    padding-left: 2rem;
+  }
   .js-enabled .govuk-tabs__list-item::before {
     content: none;
   }
@@ -5933,9 +5932,9 @@ pre code {
   .js-enabled .govuk-tabs__tab {
     border: 0;
     color: #5a5d61;
+    display: block;
     margin-right: 5px;
-    padding: 20px 40px 7px;
-    float: left;
+    padding: 1rem 1rem calc(1rem - 5px);
     text-align: center;
   }
   .js-enabled .govuk-tabs__tab:hover {
@@ -5962,7 +5961,9 @@ pre code {
   }
 }
 .variation-code-snippet-title,
-.variation-jinja-code-snippet-title {
+.variation-jinja-code-snippet-title,
+.variation-implementation-title,
+.variation-specs-title {
   background-color: #fff;
   border-bottom: 1px solid #5a5d61;
   margin: 0;
@@ -5970,7 +5971,9 @@ pre code {
 }
 @media only all and (min-width: 40.0625em) {
   .variation-code-snippet-title,
-  .variation-jinja-code-snippet-title {
+  .variation-jinja-code-snippet-title,
+  .variation-implementation-title,
+  .variation-specs-title {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -5981,24 +5984,16 @@ pre code {
     clip: rect(0 0 0 0);
   }
 }
-.component-header {
-  position: relative;
+.a-toggle_code {
+  border-bottom: 1px solid #b4b5b6;
+  text-align: right;
+  margin: 0 -2rem;
+  padding: 0 2rem 1rem;
 }
-#toggle-code-btn {
-  position: absolute;
-  right: 0;
-  top: 0;
+.a-toggle_code .a-btn {
+  text-transform: uppercase;
 }
-#toggle-code-btn .show-button {
-  display: none;
-}
-#toggle-code-btn .hide-button {
-  display: inline;
-}
-#toggle-code-btn[data-code-hidden] .show-button {
-  display: inline;
-}
-#toggle-code-btn[data-code-hidden] .hide-button {
+.a-toggle_code .a-btn.u-hidden {
   display: none;
 }
 .a-badge {
@@ -6029,13 +6024,30 @@ pre code {
 .t-variation .m-slug-header__warning .a-heading {
   border-top: 5px solid #d14124;
 }
-.t-variation .content_line__thick {
-  height: 2px;
-}
 @media only all and (min-width: 56.3125em) {
   .t-variation .content_main .content_line__wide {
     margin-left: -30px;
   }
+}
+.o-variation_group {
+  border: 1px solid #b4b5b6;
+  border-bottom: none;
+  margin: 2rem 0;
+  padding: 2rem 2rem 0;
+}
+.o-variation_group_title {
+  border-bottom: 1px solid #b4b5b6;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+.o-variation_group_description {
+  margin-bottom: 2rem;
+}
+.m-variation_name {
+  margin-top: 2rem;
+}
+.m-variation:first-child .m-variation_name {
+  margin-top: 0;
 }
 .variation-code-specs table {
   border: none;

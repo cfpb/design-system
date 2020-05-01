@@ -985,7 +985,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                    <a class="m-list_link" href="/design-system/components/link-blobs">Link blobs</a>
                 </li>
                 
             
@@ -1453,48 +1453,15 @@
         <h1>
             Introductions
         </h1>
-    
-
-        <div id="toggle-code">
-            <a class="a-btn" id="toggle-code-btn" href="#">
-                <span class="hide-button">
-                    Hide code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
-                    </span>
-                </span>
-                <span class="show-button">
-                    Show code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
-                    </span>
-                </span>
-            </a>
-        </div>
-
-    
-
     </div>
 
+    
     <ul class="m-list m-list__horizontal u-mb30">
         
-        <li class="m-list_item">
-            <a class="m-list_link" href="#variations">Variations</a>
-        </li>
         
-
-        
-        
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#usage">Usage</a>
-        </li>
-        
-
-        
-
         
     </ul>
+    
 
     
         <section id="description" class="u-mb30">
@@ -1515,23 +1482,29 @@
     
 
     
-    <section class="sticky-header u-mb45">
-        <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line content_line u-mb20"></div>
+    
+    <section class="o-variation_group" id="">
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Standard text introduction</h3>
 
-            <!-- Description -->
-            <p>Layout as seen with a standard right sidebar:</p>
+        
+
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>Standard text introduction</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Layout as seen with a standard right sidebar:</p>
 
 <p><img src="/design-system/images/uploads/textintro_intro.png" alt="Image of a text introduction component with a standard right sidebar"></p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <marquee>We don't have CF code to add for this.</marquee>
             </div>
             
@@ -1539,28 +1512,37 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#standard-text-introduction-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#standard-text-introduction-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="standard-text-introduction-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#standard-text-introduction-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#jinja-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#standard-text-introduction-jinja-code-snippet-1">
                             Jinja code snippet
                         </a>
                     </li>
+                    
+                    
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="standard-text-introduction-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1572,7 +1554,7 @@
 
                 <!-- Jinja snippet -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-1">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="standard-text-introduction-jinja-code-snippet-1">
                     <div class="variation-jinja-code-snippet">
                         <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
                         <div class="source-code">
@@ -1582,25 +1564,34 @@
                 </section>
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Text introduction with optional breakout sidebar</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Layout as seen with a ‘breakout’ highlight in the right sidebar area:</p>
+            <div class="m-variation_name">
+                <h3>Text introduction with optional breakout sidebar</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Layout as seen with a ‘breakout’ highlight in the right sidebar area:</p>
 
 <p><img src="/design-system/images/uploads/textintro_intro2.png" alt='Image of a text introduction component with a "breakout" highlight in the right sidebar'></p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <marquee>We don't have CF code to add for this.</marquee>
             </div>
             
@@ -1608,22 +1599,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#text-introduction-with-optional-breakout-sidebar-code-2" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#text-introduction-with-optional-breakout-sidebar-code-2" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="text-introduction-with-optional-breakout-sidebar-code-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#text-introduction-with-optional-breakout-sidebar-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="text-introduction-with-optional-breakout-sidebar-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1634,6 +1634,12 @@
                 
 
                 <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
                 
 
             </div>
@@ -1642,19 +1648,22 @@
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Item introduction</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Layout as seen on a Learn page template:</p>
+            <div class="m-variation_name">
+                <h3>Item introduction</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Layout as seen on a Learn page template:</p>
 
 <p><img src="/design-system/images/uploads/itemintro_intro.png" alt=""></p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <marquee>We don't have CF code to add for this.</marquee>
             </div>
             
@@ -1662,22 +1671,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#item-introduction-code-3" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#item-introduction-code-3" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="item-introduction-code-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#item-introduction-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="item-introduction-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1688,6 +1706,12 @@
                 
 
                 <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
                 
 
             </div>
@@ -1697,6 +1721,7 @@
         </div>
         
     </section>
+    
     
 
     
@@ -1868,8 +1893,8 @@
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2020-04-10 17:34:12 +0000">
-                     5:34:12 PM Apr 10, 2020
+                <time datetime="2020-05-01 17:35:42 +0000">
+                     5:35:42 PM May 01, 2020
                 </time>
             </small>
         </div>

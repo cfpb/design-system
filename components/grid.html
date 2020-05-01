@@ -985,7 +985,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                    <a class="m-list_link" href="/design-system/components/link-blobs">Link blobs</a>
                 </li>
                 
             
@@ -1453,43 +1453,15 @@
         <h1>
             Grid
         </h1>
-    
-
-        <div id="toggle-code">
-            <a class="a-btn" id="toggle-code-btn" href="#">
-                <span class="hide-button">
-                    Hide code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
-                    </span>
-                </span>
-                <span class="show-button">
-                    Show code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
-                    </span>
-                </span>
-            </a>
-        </div>
-
-    
-
     </div>
 
+    
     <ul class="m-list m-list__horizontal u-mb30">
         
-        <li class="m-list_item">
-            <a class="m-list_link" href="#variations">Variations</a>
-        </li>
         
-
-        
-        
-
-        
-
         
     </ul>
+    
 
     
         <section id="description" class="u-mb30">
@@ -1549,16 +1521,21 @@ and apply the mixins to those semantic classes, like this:</p>
     
 
     
-    <section class="sticky-header u-mb45">
-        <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line content_line u-mb20"></div>
+    
+    <section class="o-variation_group" id="">
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>12 columns w/ 1200px max width</h3>
 
-            <!-- Description -->
-            <p>Twelve-column grid with flexible column widths and fixed gutters. The width of the padding on the left and right edge of the grid depends on device size.</p>
+        
+
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>12 columns w/ 1200px max width</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Twelve-column grid with flexible column widths and fixed gutters. The width of the padding on the left and right edge of the grid depends on device size.</p>
 
 <ul>
   <li>30px fixed gutter width</li>
@@ -1585,10 +1562,11 @@ and apply the mixins to those semantic classes, like this:</p>
 <code class="highlighter-rouge">xl</code>: 1231px and up</li>
 </ul>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="cols-12">
     <section>
         <div class="col col-1"><p>one</p></div>
@@ -1650,22 +1628,31 @@ and apply the mixins to those semantic classes, like this:</p>
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#12-columns-w-1200px-max-width-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#12-columns-w-1200px-max-width-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="12-columns-w-1200px-max-width-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#12-columns-w-1200px-max-width-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="12-columns-w-1200px-max-width-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1732,18 +1719,26 @@ and apply the mixins to those semantic classes, like this:</p>
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Variables</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Component variables are used to theme a component.
+            <div class="m-variation_name">
+                <h3>Variables</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Component variables are used to theme a component.
 They likely will be left as is, but if needed can be overwritten by duplicating
 the variable in a <code class="highlighter-rouge">@key: value</code> format with a different value.
 This customized variable would be placed in the same file
@@ -1766,10 +1761,11 @@ This value can be overridden in the <code class="highlighter-rouge">grid_wrapper
 <p>The total number of columns used in calculating column widths.
 This value can be overridden in the <code class="highlighter-rouge">grid_column()</code> mixin.</p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 
             </div>
             
@@ -1777,22 +1773,31 @@ This value can be overridden in the <code class="highlighter-rouge">grid_column(
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#variables-code-2" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#variables-code-2" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="variables-code-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#variables-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="variables-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1805,18 +1810,26 @@ This value can be overridden in the <code class="highlighter-rouge">grid_column(
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Wrappers</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Wrappers are centered containers with a max-width
+            <div class="m-variation_name">
+                <h3>Wrappers</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Wrappers are centered containers with a max-width
 and outside left/right padding of ½ the gutter width on each side.</p>
 
 <h4 id="less-mixin">Less mixin</h4>
@@ -1837,10 +1850,11 @@ by passing a pixel value into the mixin.</p>
 }
 </code></pre></div></div>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="main-wrapper" style="background-color: #f9f9f9">This container now has left and right padding and a centered max width.</div>
 <div class="wide-wrapper" style="background-color: #f9f9f9">This container is the same except it has a wider max-width.</div>
             </div>
@@ -1849,22 +1863,31 @@ by passing a pixel value into the mixin.</p>
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#wrappers-code-3" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#wrappers-code-3" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="wrappers-code-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#wrappers-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="wrappers-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1878,18 +1901,26 @@ by passing a pixel value into the mixin.</p>
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Columns</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <h4 id="less-mixin">Less mixin</h4>
+            <div class="m-variation_name">
+                <h3>Columns</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <h4 id="less-mixin">Less mixin</h4>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
 </code></pre></div></div>
@@ -1919,15 +1950,16 @@ add a wrapper just inside the column to be styled that way.</p>
 If you have a 12-column grid and place 24 columns inside a wrapper,
 cf-grid columns will automatically stack into two rows of 12.</p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="main-wrapper">
-     <div class="half">I am half of my parent.</div>
-     <div class="half">
-          <div class="styled">I am half of my parent. I also have a border and background.</div>
-     </div>
+    <div class="half">I am half of my parent.</div>
+    <div class="half">
+            <div class="styled">I am half of my parent. I also have a border and background.</div>
+    </div>
 </div>
             </div>
             
@@ -1935,30 +1967,39 @@ cf-grid columns will automatically stack into two rows of 12.</p>
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#columns-code-4" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#columns-code-4" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="columns-code-4">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#columns-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="columns-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;div class="main-wrapper"&gt;
-     &lt;div class="half"&gt;I am half of my parent.&lt;/div&gt;
-     &lt;div class="half"&gt;
-          &lt;div class="styled"&gt;I am half of my parent. I also have a border and background.&lt;/div&gt;
-     &lt;/div&gt;
+    &lt;div class="half"&gt;I am half of my parent.&lt;/div&gt;
+    &lt;div class="half"&gt;
+            &lt;div class="styled"&gt;I am half of my parent. I also have a border and background.&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                     </div>
@@ -1968,18 +2009,26 @@ cf-grid columns will automatically stack into two rows of 12.</p>
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Nested columns</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Since all grid columns have left and right gutters,
+            <div class="m-variation_name">
+                <h3>Nested columns</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Since all grid columns have left and right gutters,
 you will notice undesirable offsetting when nesting columns.
 Normally this is removed with complex selectors
 or by adding classes to the first and last column per ‘row’.</p>
@@ -2011,10 +2060,11 @@ without having to deal with the first and last columns of each row.</p>
 }
 </code></pre></div></div>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="main-wrapper">
     <div class="half">
         <div class="nested">
@@ -2035,22 +2085,31 @@ without having to deal with the first and last columns of each row.</p>
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#nested-columns-code-5" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#nested-columns-code-5" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="nested-columns-code-5">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-5">
+                        <a class="govuk-tabs__tab" href="#nested-columns-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-5">
+                <section class="govuk-tabs__panel" id="nested-columns-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2076,23 +2135,32 @@ without having to deal with the first and last columns of each row.</p>
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Nesting</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            
+            <div class="m-variation_name">
+                <h3>Nesting</h3>
+            </div>
 
+            <div class="m-variation_description">
+                
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="cols-12">
     <section>
         <div class="col col-6">
@@ -2149,22 +2217,31 @@ without having to deal with the first and last columns of each row.</p>
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#nesting-code-6" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#nesting-code-6" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="nesting-code-6">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#nesting-html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="nesting-html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2226,18 +2303,26 @@ without having to deal with the first and last columns of each row.</p>
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Push and pull mixins for source ordering</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p><strong>NOTE:</strong> Using these is not advised, because the disadvantages for users
+            <div class="m-variation_name">
+                <h3>Push and pull mixins for source ordering</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p><strong>NOTE:</strong> Using these is not advised, because the disadvantages for users
 of assistive technology outweigh the advantages of putting your most important
 content first in the source order, but it’s here if you absolutely need it.</p>
 
@@ -2261,10 +2346,11 @@ content first in the source order, but it’s here if you absolutely need it.</p
 }
 </code></pre></div></div>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div>
     <div class="second">I am first in the markup but appear after .first.</div>
     <div class="first">I am second in the markup but appear before .second.</div>
@@ -2275,22 +2361,31 @@ content first in the source order, but it’s here if you absolutely need it.</p
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#push-and-pull-mixins-for-source-ordering-code-7" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#push-and-pull-mixins-for-source-ordering-code-7" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="push-and-pull-mixins-for-source-ordering-code-7">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-7">
+                        <a class="govuk-tabs__tab" href="#push-and-pull-mixins-for-source-ordering-html-code-snippet-7">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-7">
+                <section class="govuk-tabs__panel" id="push-and-pull-mixins-for-source-ordering-html-code-snippet-7">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2306,23 +2401,32 @@ content first in the source order, but it’s here if you absolutely need it.</p
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Prefixing/Suffixing</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            
+            <div class="m-variation_name">
+                <h3>Prefixing/Suffixing</h3>
+            </div>
 
+            <div class="m-variation_description">
+                
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="cols-12">
     <section>
         <div class="col col-1 suffix-11"><p>prefix 0, suffix 11</p></div>
@@ -2345,22 +2449,31 @@ content first in the source order, but it’s here if you absolutely need it.</p
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#prefixing-suffixing-code-8" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#prefixing-suffixing-code-8" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="prefixing-suffixing-code-8">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-8">
+                        <a class="govuk-tabs__tab" href="#prefixing-suffixing-html-code-snippet-8">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-8">
+                <section class="govuk-tabs__panel" id="prefixing-suffixing-html-code-snippet-8">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2388,6 +2501,12 @@ content first in the source order, but it’s here if you absolutely need it.</p
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
@@ -2395,6 +2514,7 @@ content first in the source order, but it’s here if you absolutely need it.</p
         </div>
         
     </section>
+    
     
 
     
@@ -2462,8 +2582,8 @@ content first in the source order, but it’s here if you absolutely need it.</p
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2019-10-25 16:54:04 +0000">
-                     4:54:04 PM Oct 25, 2019
+                <time datetime="2020-05-01 17:35:42 +0000">
+                     5:35:42 PM May 01, 2020
                 </time>
             </small>
         </div>

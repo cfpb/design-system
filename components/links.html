@@ -985,7 +985,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                    <a class="m-list_link" href="/design-system/components/link-blobs">Link blobs</a>
                 </li>
                 
             
@@ -1453,48 +1453,15 @@
         <h1>
             Links
         </h1>
-    
-
-        <div id="toggle-code">
-            <a class="a-btn" id="toggle-code-btn" href="#">
-                <span class="hide-button">
-                    Hide code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
-                    </span>
-                </span>
-                <span class="show-button">
-                    Show code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
-                    </span>
-                </span>
-            </a>
-        </div>
-
-    
-
     </div>
 
+    
     <ul class="m-list m-list__horizontal u-mb30">
         
-        <li class="m-list_item">
-            <a class="m-list_link" href="#variations">Variations</a>
-        </li>
         
-
-        
-        
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#usage">Usage</a>
-        </li>
-        
-
-        
-
         
     </ul>
+    
 
     
         <section id="description" class="u-mb30">
@@ -1512,21 +1479,27 @@
     
 
     
-    <section class="sticky-header u-mb45">
-        <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line content_line u-mb20"></div>
+    
+    <section class="o-variation_group" id="">
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Inline link</h3>
 
-            <!-- Description -->
-            <p>Links that appear in body text or link lists are underlined.</p>
+        
 
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>Inline link</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Links that appear in body text or link lists are underlined.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <p><a href="#">Inline links</a> should be Regular weight if inline with other text (e.g., within a paragraph like this one).</p>
             </div>
             
@@ -1534,22 +1507,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#inline-link-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#inline-link-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="inline-link-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#inline-link-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="inline-link-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1562,23 +1544,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Stand-alone link</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Stand-alone links (e.g., in a call to action or list of links) should be Medium weight.</p>
+            <div class="m-variation_name">
+                <h3>Stand-alone link</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Stand-alone links (e.g., in a call to action or list of links) should be Medium weight.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <a href="#">Default link style</a>
             </div>
             
@@ -1586,22 +1577,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#stand-alone-link-code-2" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#stand-alone-link-code-2" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="stand-alone-link-code-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#stand-alone-link-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="stand-alone-link-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1614,18 +1614,26 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Link with icon</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Use icons when a link needs extra emphasis. Use icons consistently, or don’t use them at all. Each icon should be used exclusively for one action.</p>
+            <div class="m-variation_name">
+                <h3>Link with icon</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Use icons when a link needs extra emphasis. Use icons consistently, or don’t use them at all. Each icon should be used exclusively for one action.</p>
 
 <p>Icons appear to the right of the link text. The color and font-size of icons should be the same as the adjacent text, including state changes. Icons are never underlined.</p>
 <ul>
@@ -1634,12 +1642,13 @@
   <li>Include the icon either prior to or after the <code class="highlighter-rouge">a-link_text</code>. It is important the text and icon are siblings to correctly handle underlines.</li>
 </ul>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <p>
-   Use the email icon to emphasize an email address like
+  Use the email icon to emphasize an email address like
     <a class="a-link
               a-link__icon" href="#">
         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 997.3 1200" class="cf-icon-svg"><path d="M962.3 396.6H35c-19.3.1-34.9 15.7-35 35v491.8c.1 19.3 15.7 34.9 35 35h927.3c19.3-.1 34.9-15.7 35-35V431.6c0-19.3-15.7-34.9-35-35zm-25 501.8H60V456.6h877.3v441.8z"></path><path d="M205.9 719h384.4v50H205.9zM205.9 609.7h384.4v50H205.9zM736.3 517.1h141.1V660H736.3z"></path></svg>
@@ -1664,44 +1673,53 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#link-with-icon-code-3" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#link-with-icon-code-3" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="link-with-icon-code-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#link-with-icon-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="link-with-icon-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;p&gt;
-   Use the email icon to emphasize an email address like
+  Use the email icon to emphasize an email address like
     &lt;a class="a-link
               a-link__icon"
-       href="#"&gt;
+      href="#"&gt;
         {% include icons/mail.svg %}
         &lt;span class="a-link_text"&gt;john.smith@cfpb.gov&lt;/span&gt;
     &lt;/a&gt;.
     Documents minicons can emphasize a link that contains a
     &lt;a class="a-link
               a-link__icon"
-       href="#"&gt;
+      href="#"&gt;
         &lt;span class="a-link_text"&gt;file or document&lt;/span&gt;
         {% include icons/download.svg %}
     &lt;/a&gt;.
     Use the external link minicon to emphasize
     &lt;a class="a-link
               a-link__icon"
-       href="#"&gt;
+      href="#"&gt;
         &lt;span class="a-link_text"&gt;a non-CFPB webpage&lt;/span&gt;
         {% include icons/external-link.svg %}
     &lt;/a&gt; for further details.
@@ -1714,23 +1732,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Non-wrapping icon links</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Warning: Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the <code class="highlighter-rouge">__no-wrap</code> modifier to <code class="highlighter-rouge">.a-link__icon</code>.</p>
+            <div class="m-variation_name">
+                <h3>Non-wrapping icon links</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Warning: Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the <code class="highlighter-rouge">__no-wrap</code> modifier to <code class="highlighter-rouge">.a-link__icon</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 For more information, email
 <a class="a-link
           a-link__icon
@@ -1744,22 +1771,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#non-wrapping-icon-links-code-4" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#non-wrapping-icon-links-code-4" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="non-wrapping-icon-links-code-4">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#non-wrapping-icon-links-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="non-wrapping-icon-links-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1767,7 +1803,7 @@
 &lt;a class="a-link
           a-link__icon
           a-link__no-wrap"
-   href="#"&gt;
+  href="#"&gt;
     &lt;span class="a-link_text"&gt;john.smith@cfpb.gov&lt;/span&gt;
     {% include icons/mail.svg %}
 &lt;/a&gt;.</code></pre>
@@ -1779,23 +1815,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Jump link</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>“Jump links” are standalone links that respond to small screens by converting to full block links that have a finger-friendly touch area.</p>
+            <div class="m-variation_name">
+                <h3>Jump link</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>“Jump links” are standalone links that respond to small screens by converting to full block links that have a finger-friendly touch area.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <a class="a-link
           a-link__jump
           a-link__icon-after-text" href="#">
@@ -1807,29 +1852,38 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#jump-link-code-5" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#jump-link-code-5" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="jump-link-code-5">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-5">
+                        <a class="govuk-tabs__tab" href="#jump-link-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-5">
+                <section class="govuk-tabs__panel" id="jump-link-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;a class="a-link
           a-link__jump
           a-link__icon-after-text"
-   href="#"&gt;
+  href="#"&gt;
     {% include icons/right.svg %}
 &lt;/a&gt;</code></pre>
                         </div>
@@ -1840,23 +1894,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Large jump link</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>The large jump link has an <code class="highlighter-rouge">18px</code> <code class="highlighter-rouge">font-size</code>, compared to the default of <code class="highlighter-rouge">16px</code>.</p>
+            <div class="m-variation_name">
+                <h3>Large jump link</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>The large jump link has an <code class="highlighter-rouge">18px</code> <code class="highlighter-rouge">font-size</code>, compared to the default of <code class="highlighter-rouge">16px</code>.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <a class="a-link
           a-link__jump
           a-link__icon-after-text
@@ -1870,22 +1933,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#large-jump-link-code-6" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#large-jump-link-code-6" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="large-jump-link-code-6">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#large-jump-link-html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="large-jump-link-html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1893,7 +1965,7 @@
           a-link__jump
           a-link__icon-after-text
           a-link__large"
-   href="#"&gt;
+  href="#"&gt;
     &lt;span class="a-link_text"&gt;Large jump link&lt;/span&gt;
     {% include icons/right.svg %}
 &lt;/a&gt;</code></pre>
@@ -1905,23 +1977,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Jump link with icon on left</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Jump links can also have icons before the text, like icon links.</p>
+            <div class="m-variation_name">
+                <h3>Jump link with icon on left</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Jump links can also have icons before the text, like icon links.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <a class="a-link
           a-link__jump
           a-link__icon-before-text" href="#">
@@ -1934,29 +2015,38 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#jump-link-with-icon-on-left-code-7" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#jump-link-with-icon-on-left-code-7" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="jump-link-with-icon-on-left-code-7">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-7">
+                        <a class="govuk-tabs__tab" href="#jump-link-with-icon-on-left-html-code-snippet-7">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-7">
+                <section class="govuk-tabs__panel" id="jump-link-with-icon-on-left-html-code-snippet-7">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;a class="a-link
           a-link__jump
           a-link__icon-before-text"
-   href="#"&gt;
+  href="#"&gt;
     {% include icons/left.svg %}
     &lt;span class="a-link_text"&gt;Jump link with icon on left&lt;/span&gt;
 &lt;/a&gt;</code></pre>
@@ -1968,23 +2058,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Jump link with background modifier</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>Only visible on small screens.</p>
+            <div class="m-variation_name">
+                <h3>Jump link with background modifier</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Only visible on small screens.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <a class="a-link
           a-link__jump
           a-link__icon-after-text
@@ -1999,22 +2098,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#jump-link-with-background-modifier-code-8" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#jump-link-with-background-modifier-code-8" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="jump-link-with-background-modifier-code-8">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-8">
+                        <a class="govuk-tabs__tab" href="#jump-link-with-background-modifier-html-code-snippet-8">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-8">
+                <section class="govuk-tabs__panel" id="jump-link-with-background-modifier-html-code-snippet-8">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2022,7 +2130,7 @@
           a-link__jump
           a-link__icon-after-text
           a-link__bg"
-   href="#"&gt;
+  href="#"&gt;
     &lt;span class="a-link_text"&gt;Jump link with grey background and
         solid borders on small screens&lt;/span&gt;
     {% include icons/right.svg %}
@@ -2035,24 +2143,33 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Header link</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <h2>Header 2 containing <a href="#">a link</a>
+            <div class="m-variation_name">
+                <h3>Header link</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <h2>Header 2 containing <a href="#">a link</a>
 </h2>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 
             </div>
             
@@ -2060,22 +2177,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#header-link-code-9" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#header-link-code-9" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="header-link-code-9">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-9">
+                        <a class="govuk-tabs__tab" href="#header-link-html-code-snippet-9">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-9">
+                <section class="govuk-tabs__panel" id="header-link-html-code-snippet-9">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2086,6 +2212,12 @@
                 
 
                 <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
                 
 
             </div>
@@ -2094,17 +2226,20 @@
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Navigation link</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>No visited link style</p>
+            <div class="m-variation_name">
+                <h3>Navigation link</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>No visited link style</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 
             </div>
             
@@ -2112,22 +2247,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#navigation-link-code-10" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#navigation-link-code-10" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="navigation-link-code-10">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-10">
+                        <a class="govuk-tabs__tab" href="#navigation-link-html-code-snippet-10">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-10">
+                <section class="govuk-tabs__panel" id="navigation-link-html-code-snippet-10">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2138,6 +2282,12 @@
                 
 
                 <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
                 
 
             </div>
@@ -2147,6 +2297,7 @@
         </div>
         
     </section>
+    
     
 
     
@@ -2238,8 +2389,8 @@ Links should open in a new tab in situations where users enter data or make sele
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2020-01-17 22:07:52 +0000">
-                    10:07:52 PM Jan 17, 2020
+                <time datetime="2020-05-01 17:35:42 +0000">
+                     5:35:42 PM May 01, 2020
                 </time>
             </small>
         </div>

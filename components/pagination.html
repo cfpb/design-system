@@ -985,7 +985,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                    <a class="m-list_link" href="/design-system/components/link-blobs">Link blobs</a>
                 </li>
                 
             
@@ -1453,48 +1453,15 @@
         <h1>
             Pagination
         </h1>
-    
-
-        <div id="toggle-code">
-            <a class="a-btn" id="toggle-code-btn" href="#">
-                <span class="hide-button">
-                    Hide code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
-                    </span>
-                </span>
-                <span class="show-button">
-                    Show code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
-                    </span>
-                </span>
-            </a>
-        </div>
-
-    
-
     </div>
 
+    
     <ul class="m-list m-list__horizontal u-mb30">
         
-        <li class="m-list_item">
-            <a class="m-list_link" href="#variations">Variations</a>
-        </li>
         
-
-        
-        
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#usage">Usage</a>
-        </li>
-        
-
-        
-
         
     </ul>
+    
 
     
         <section id="description" class="u-mb30">
@@ -1510,21 +1477,27 @@
     
 
     
-    <section class="sticky-header u-mb45">
-        <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line content_line u-mb20"></div>
+    
+    <section class="o-variation_group" id="">
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Default pagination</h3>
 
-            <!-- Description -->
-            
+        
 
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>Default pagination</h3>
+            </div>
+
+            <div class="m-variation_description">
+                
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div id="pagination_content"></div>
 
 <!-- Paginated content here -->
@@ -1550,8 +1523,8 @@
             of 149
         </label>
         <button class="a-btn
-                       a-btn__link
-                       m-pagination_btn-submit" id="m-pagination_btn-submit" type="submit">Go</button>
+                      a-btn__link
+                      m-pagination_btn-submit" id="m-pagination_btn-submit" type="submit">Go</button>
     </form>
 </nav>
             </div>
@@ -1560,22 +1533,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#default-pagination-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#default-pagination-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="default-pagination-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#default-pagination-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="default-pagination-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1586,38 +1568,38 @@
 &lt;nav class="m-pagination" role="navigation" aria-label="Pagination"&gt;
     &lt;a class="a-btn
               m-pagination_btn-prev"
-       href="?page=21#pagination_content"&gt;
+      href="?page=21#pagination_content"&gt;
         &lt;span class="a-btn_icon a-btn_icon__on-left"&gt;{% include icons/left.svg %}&lt;/span&gt;
         Newer
     &lt;/a&gt;
     &lt;a class="a-btn
               m-pagination_btn-next"
-       href="?page=23#pagination_content"&gt;
+      href="?page=23#pagination_content"&gt;
         &lt;span class="a-btn_icon a-btn_icon__on-right"&gt;{% include icons/right.svg %}&lt;/span&gt;
         Older
     &lt;/a&gt;
     &lt;form class="m-pagination_form"
           action="#pagination_content"&gt;
         &lt;label class="m-pagination_label"
-               for="m-pagination_current-page"&gt;
+              for="m-pagination_current-page"&gt;
             Page
             &lt;span class="u-visually-hidden"&gt;
                 number 22 out
             &lt;/span&gt;
             &lt;input class="m-pagination_current-page"
-                   id="m-pagination_current-page"
-                   name="page"
-                   type="number"
-                   min="1"
-                   max="149"
-                   pattern="[0-9]*"
-                   inputmode="numeric"
-                   value="22"&gt;
+                  id="m-pagination_current-page"
+                  name="page"
+                  type="number"
+                  min="1"
+                  max="149"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  value="22"&gt;
             of 149
         &lt;/label&gt;
         &lt;button class="a-btn
-                       a-btn__link
-                       m-pagination_btn-submit"
+                      a-btn__link
+                      m-pagination_btn-submit"
                 id="m-pagination_btn-submit"
                 type="submit"&gt;Go&lt;/button&gt;
     &lt;/form&gt;
@@ -1630,23 +1612,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>First and last pages</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            
+            <div class="m-variation_name">
+                <h3>First and last pages</h3>
+            </div>
 
+            <div class="m-variation_description">
+                
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <nav class="m-pagination" role="navigation" aria-label="Pagination">    <a class="a-btn              a-btn__disabled m-pagination_btn-prev">        <span class="a-btn_icon a-btn_icon__on-left"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 559.6 1200" class="cf-icon-svg"><path d="M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z"></path></svg></span>        Newer </a>    <a class="a-btn              m-pagination_btn-next" href="?page=2#pagination_content">        Older        <span class="a-btn_icon a-btn_icon__on-right"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg></span>    </a>    <form class="m-pagination_form" action="#pagination_content">        <label class="m-pagination_label" for="m-pagination_current-page">            Page            <span class="u-visually-hidden">                number 1 out </span>            <input class="m-pagination_current-page" id="m-pagination_current-page" name="page" type="number" min="1" max="149" pattern="[0-9]*" inputmode="numeric" value="1">            of 149        </label>        <button class="a-btn                       a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit" type="submit">Go</button> </form></nav>
             </div>
             
@@ -1654,28 +1645,37 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#first-and-last-pages-code-2" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#first-and-last-pages-code-2" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="first-and-last-pages-code-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#first-and-last-pages-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#jinja-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#first-and-last-pages-jinja-code-snippet-2">
                             Jinja code snippet
                         </a>
                     </li>
+                    
+                    
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="first-and-last-pages-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1687,7 +1687,7 @@
 
                 <!-- Jinja snippet -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="jinja-code-snippet-2">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="first-and-last-pages-jinja-code-snippet-2">
                     <div class="variation-jinja-code-snippet">
                         <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
                         <div class="source-code">
@@ -1697,6 +1697,12 @@
                 </section>
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
@@ -1704,6 +1710,7 @@
         </div>
         
     </section>
+    
     
 
     
@@ -1774,8 +1781,8 @@
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2020-01-29 19:16:34 +0000">
-                     7:16:34 PM Jan 29, 2020
+                <time datetime="2020-05-01 17:35:42 +0000">
+                     5:35:42 PM May 01, 2020
                 </time>
             </small>
         </div>

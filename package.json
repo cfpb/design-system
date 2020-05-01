@@ -30,7 +30,6 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "@cfpb/netlify-cms": "2.10.35",
     "anchor-js": "^4.2.2",
     "escape-html": "^1.0.3",
     "ftdomdelegate": "^3.0.0",

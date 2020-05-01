@@ -985,7 +985,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                    <a class="m-list_link" href="/design-system/components/link-blobs">Link blobs</a>
                 </li>
                 
             
@@ -1453,86 +1453,59 @@
         <h1>
             Notifications
         </h1>
-    
-
-        <div id="toggle-code">
-            <a class="a-btn" id="toggle-code-btn" href="#">
-                <span class="hide-button">
-                    Hide code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
-                    </span>
-                </span>
-                <span class="show-button">
-                    Show code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
-                    </span>
-                </span>
-            </a>
-        </div>
-
-    
-
     </div>
 
+    
     <ul class="m-list m-list__horizontal u-mb30">
         
-        <li class="m-list_item">
-            <a class="m-list_link" href="#variations">Variations</a>
-        </li>
-        
-
-        
-        
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#usage">Usage</a>
+            <a class="m-list_link" href="#standard-notifications">Standard notifications</a>
         </li>
         
-
+        
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#accessibility">Accessibility</a>
+            <a class="m-list_link" href="#action-notifications">Action notifications</a>
         </li>
         
-
         
     </ul>
+    
 
     
         <section id="description" class="u-mb30">
-            
-<p>This component provides notification boxes. Form alerts provide a light-touch alternative to notifications for inline form validation or feedback to a user’s input.</p>
-
-<p>This page is under active development. Information is being moved into it from these pages:</p>
-
-<ul>
-  <li><a href="https://cfpb.github.io/design-manual/page-components/form-fields.html#notifications">https://cfpb.github.io/design-manual/page-components/form-fields.html#notifications</a></li>
-  <li><a href="https://cfpb.github.io/capital-framework/components/cf-notifications/">https://cfpb.github.io/capital-framework/components/cf-notifications/</a></li>
-</ul>
+            <p>This component provides notification boxes. Form alerts provide a light-touch alternative to notifications for inline form validation or feedback to a user’s input.</p>
 
         </section>
     
 
     
-    <section class="sticky-header u-mb45">
-        <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line content_line u-mb20"></div>
+    
+    <section class="o-variation_group" id="standard-notifications">
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Default notification</h3>
+        <h2 class="o-variation_group_title">Standard notifications</h2>
+        
 
-            <!-- Description -->
-            <p>The default notification creates the base for the message that is often hidden and empty, but is modified by scripting in production to update the state and message based on user input.</p>
+        
 
-<p>Notifications are hidden by default; you can toggle their visibility by adding or removing the <code class="highlighter-rouge">m-notification__visible</code> class to the base element.</p>
+        
+        <div class="m-variation">
 
+            <div class="m-variation_name">
+                <h3>Default notification</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>The default notification creates the base for the message that is often hidden and empty, but is modified by scripting in production to update the state and message based on user input.</p>
+
+<p>If your notification requires further explanation, include it in a paragraph following the main message.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-notification
             m-notification__visible">
     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm50.3 770.7c0 27.6-22.4 50-50 50s-50-22.4-50-50V547.3c0-27.6 22.4-50 50-50s50 22.4 50 50v328.6zm-50-439.1c-39.6 0-71.7-32.1-71.7-71.7s32.1-71.7 71.7-71.7 71.7 32.1 71.7 71.7-32.1 71.7-71.7 71.7z"></path></svg>
@@ -1540,154 +1513,21 @@
         <div class="h4 m-notification_message">A default notification</div>
     </div>
 </div>
-            </div>
-            
 
-            
-            
-            
+<br>
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-1">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-notification
-            m-notification__visible"&gt;
-    {% include icons/information-round.svg %}
-    &lt;div class="m-notification_content"&gt;
-        &lt;div class="h4 m-notification_message"&gt;A default notification&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Default notification with explanation</h3>
-
-            <!-- Description -->
-            <p>If your notification requires further explanation, include it in a paragraph following the main message.</p>
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                <div class="m-notification
+<div class="m-notification
             m-notification__visible">
     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm50.3 770.7c0 27.6-22.4 50-50 50s-50-22.4-50-50V547.3c0-27.6 22.4-50 50-50s50 22.4 50 50v328.6zm-50-439.1c-39.6 0-71.7-32.1-71.7-71.7s32.1-71.7 71.7-71.7 71.7 32.1 71.7 71.7-32.1 71.7-71.7 71.7z"></path></svg>
     <div class="m-notification_content">
         <div class="h4 m-notification_message">A default notification</div>
         <p class="m-notification_explanation">
-            This is the explanation of the notification.
+            You can also add an explanation to the notification.
         </p>
     </div>
 </div>
-            </div>
-            
 
-            
-            
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-2">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-notification
-            m-notification__visible"&gt;
-    {% include icons/information-round.svg %}
-    &lt;div class="m-notification_content"&gt;
-        &lt;div class="h4 m-notification_message"&gt;A default notification&lt;/div&gt;
-        &lt;p class="m-notification_explanation"&gt;
-            This is the explanation of the notification.
-        &lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Default notification with links</h3>
-
-            <!-- Description -->
-            <p>If your notification requires links, include them below the message or explanation as a <code class="highlighter-rouge">m-list</code> unordered list.</p>
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                <div class="m-notification
-            m-notification__visible">
-    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm50.3 770.7c0 27.6-22.4 50-50 50s-50-22.4-50-50V547.3c0-27.6 22.4-50 50-50s50 22.4 50 50v328.6zm-50-439.1c-39.6 0-71.7-32.1-71.7-71.7s32.1-71.7 71.7-71.7 71.7 32.1 71.7 71.7-32.1 71.7-71.7 71.7z"></path></svg>
-    <div class="m-notification_content">
-        <div class="h4 m-notification_message">A default notification</div>
-        <ul class="m-list m-list__links">
-            <li class="m-list_item">
-                <a class="m-list_link" href="/">
-                    This is a link below the message
-                </a>
-            </li>
-            <li class="m-list_item">
-                <a class="m-list_link" href="/">
-                    This is another link
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<br> <!-- Spacing between two notification examples -->
+<br>
 
 <div class="m-notification
             m-notification__visible">
@@ -1717,13 +1557,28 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#default-notification-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#default-notification-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="default-notification-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#default-notification-html-code-snippet-1">
                             HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#default-notification-implementation-1">
+                            Implementation
                         </a>
                     </li>
                     
@@ -1732,7 +1587,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="default-notification-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1741,22 +1596,23 @@
     {% include icons/information-round.svg %}
     &lt;div class="m-notification_content"&gt;
         &lt;div class="h4 m-notification_message"&gt;A default notification&lt;/div&gt;
-        &lt;ul class="m-list m-list__links"&gt;
-            &lt;li class="m-list_item"&gt;
-                &lt;a class="m-list_link" href="/"&gt;
-                    This is a link below the message
-                &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class="m-list_item"&gt;
-                &lt;a class="m-list_link" href="/"&gt;
-                    This is another link
-                &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;br /&gt; &lt;!-- Spacing between two notification examples --&gt;
+&lt;br&gt;
+
+&lt;div class="m-notification
+            m-notification__visible"&gt;
+    {% include icons/information-round.svg %}
+    &lt;div class="m-notification_content"&gt;
+        &lt;div class="h4 m-notification_message"&gt;A default notification&lt;/div&gt;
+        &lt;p class="m-notification_explanation"&gt;
+            You can also add an explanation to the notification.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
 
 &lt;div class="m-notification
             m-notification__visible"&gt;
@@ -1788,23 +1644,57 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="default-notification-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Notifications are hidden by default; you can toggle their visibility by
+adding or removing the <code class="highlighter-rouge">m-notification__visible</code> class to the base
+element.</p>
+
+<p>If your notification requires links, include them below the message or
+explanation as a <code class="highlighter-rouge">m-list</code> unordered list.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Action notification</h3>
+    </section>
+    
+    <section class="o-variation_group" id="action-notifications">
+        
+        <h2 class="o-variation_group_title">Action notifications</h2>
+        
 
-            <!-- Description -->
-            <p>The action notification displays when something is happening on the page, such as a page loading notification as search results are found. Use <a href="https://cfpb.github.io/design-system/foundation/iconography">animated minicons</a> to reassure the user that an action is functioning as intended.</p>
+        
 
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>In-progress notification</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>The in-progress notification displays when something is happening on the page, such as a page loading notification as search results are found. Use <a href="https://cfpb.github.io/design-system/foundation/iconography">animated minicons</a> to reassure the user that an action is functioning as intended.</p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-notification
             m-notification__visible">
     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 952.7 1200" class="cf-icon-svg cf-icon-svg__updating"><path d="M952.5 592.6c-.9-35.3-29.7-63.4-65-63.4h-1.6c-35.9.9-64.3 30.7-63.4 66.6.1 2.8.1 5.7.1 8.5s0 5.6-.1 8.3c-.9 35.9 27.5 65.7 63.4 66.6h1.6c35.3 0 64.1-28.1 65-63.4.1-3.8.1-7.6.1-11.5s0-7.8-.1-11.7zM873.1 730.4c-32-16.2-71.1-3.4-87.4 28.6-4.4 8.7-9.3 17.3-14.4 25.6-19.1 30.4-10 70.5 20.4 89.6 30.4 19.1 70.5 10 89.6-20.4.1-.2.3-.4.4-.7 7.1-11.5 13.8-23.4 19.9-35.4 16.3-31.9 3.5-71.1-28.5-87.3zM668.2 890.5c-11.7 7.6-23.9 14.6-36.5 20.7-32.6 15-46.9 53.6-31.9 86.2s53.6 46.9 86.2 31.9c1-.4 1.9-.9 2.9-1.4 17.4-8.5 34.2-18.1 50.4-28.6 29.8-20.1 37.6-60.5 17.5-90.2-19.7-29.1-58.9-37.3-88.6-18.6zM486.6 946.2h-.9c-14 .2-28-.5-41.9-2-35.7-3.7-67.6 22.3-71.3 58-3.6 35.4 21.8 67.1 57.1 71.2 17 1.9 34.1 2.8 51.3 2.8h6.6c35.9-.2 64.8-29.5 64.6-65.4-.3-35.9-29.6-64.8-65.5-64.6zM655.2 310.3l.6.4c30.8 18.5 70.7 8.6 89.2-22.2 18.5-30.8 8.6-70.7-22.2-89.2l-1.1-.7c-30.8-18.4-70.7-8.2-89.1 22.6-18.4 30.9-8.2 70.7 22.6 89.1zM490 132.6h-2.3c-35.9-.3-65.2 28.6-65.5 64.5s28.6 65.2 64.5 65.5h2.1c35.9.3 65.3-28.5 65.6-64.4.3-35.8-28.5-65.2-64.4-65.6zM778.5 436.4c17.7 31.2 57.4 42.2 88.6 24.4s42.2-57.4 24.4-88.6l-.5-.9c-17.1-31.6-56.6-43.3-88.1-26.2-31.6 17.1-43.3 56.6-26.2 88.1.4.7.8 1.5 1.3 2.2l.5 1zM298.8 893c-14.3-9-27.8-19-40.6-30-27.4-23.2-68.4-19.7-91.6 7.7-22.9 27.1-19.8 67.7 7 91 17.6 15.1 36.3 28.9 55.9 41.3 30.4 19.1 70.5 10 89.6-20.4 19.2-30.3 10.1-70.5-20.3-89.6zM168.8 742.8c-6.8-15.4-12.5-31.2-17-47.4-10.2-34.4-46.4-54.1-80.8-43.9-33.6 9.9-53.2 44.7-44.5 78.6 6.2 22.3 14 44.2 23.4 65.4 14.6 32.8 53 47.6 85.8 33.1 32.8-14.6 47.6-53 33.1-85.8zM275.9 180.2H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h47.2c-47.2 59.2-79.4 128.9-94 203.1-6.9 35.2 16.1 69.4 51.3 76.3s69.4-16.1 76.3-51.3C156 486.1 178.3 437 211 395v61.3c0 35.9 29.1 65 65 65s65-29.1 65-65v-211c0-36-29.1-65.1-65.1-65.1.1 0 .1 0 0 0z"></path></svg>
@@ -1819,22 +1709,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#in-progress-notification-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#in-progress-notification-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="in-progress-notification-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#in-progress-notification-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="in-progress-notification-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1853,27 +1752,32 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Success notification</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>The success notification is for displaying when an operation has run as expected, such as returning the number of results in a search.</p>
+            <div class="m-variation_name">
+                <h3>Success notification</h3>
+            </div>
 
-<ul>
-  <li>For field level notifications, the success minicon and message should always appear below the input field.</li>
-</ul>
+            <div class="m-variation_description">
+                <p>The success notification is for displaying when an operation has run as expected, such as returning the number of results in a search.</p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-notification
             m-notification__visible
             m-notification__success">
@@ -1900,13 +1804,28 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#success-notification-code-2" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#success-notification-code-2" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="success-notification-code-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-5">
+                        <a class="govuk-tabs__tab" href="#success-notification-html-code-snippet-2">
                             HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#success-notification-implementation-2">
+                            Implementation
                         </a>
                     </li>
                     
@@ -1915,7 +1834,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-5">
+                <section class="govuk-tabs__panel" id="success-notification-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1947,29 +1866,45 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="success-notification-implementation-2">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>For field level notifications, the success minicon and message should
+always appear below the input field.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Warning notification</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>The warning notification is for displaying when an operation has run as expected, but doesn’t have the expected results, such as a search that returned no results.</p>
+            <div class="m-variation_name">
+                <h3>Warning notification</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>The warning notification is for displaying when an operation has run as expected, but doesn’t have the expected results, such as a search that returned no results.</p>
 
 <p>This notification can also be used to display additional critical information to a user before they submit a form, such as how their data will be used and protected or a reminder that they can’t edit their responses after submitting.</p>
 
-<ul>
-  <li>For field level notifications, the warning minicon and message should always appear below the input field.</li>
-</ul>
-
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-notification
             m-notification__visible
             m-notification__warning">
@@ -1996,13 +1931,28 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#warning-notification-code-3" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#warning-notification-code-3" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="warning-notification-code-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#warning-notification-html-code-snippet-3">
                             HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#warning-notification-implementation-3">
+                            Implementation
                         </a>
                     </li>
                     
@@ -2011,7 +1961,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="warning-notification-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2043,29 +1993,43 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="warning-notification-implementation-3">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>For field level notifications, the warning minicon and message should
+always appear below the input field.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Error notification</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>The error notification displays when an operation has not run as expected and encounters an error. Use after validating on the server side to call out input errors preventing form submission.</p>
+            <div class="m-variation_name">
+                <h3>Error notification</h3>
+            </div>
 
-<ul>
-  <li>For screen reader accessibility, include anchor links to the fields that need correction.</li>
-  <li>Place form-level alerts below the form title.</li>
-  <li>For field level notifications, the error minicon and message should always appear below the input field.</li>
-</ul>
+            <div class="m-variation_description">
+                <p>The error notification displays when an operation has not run as expected and encounters an error. Use after validating on the server side to call out input errors preventing form submission.</p>
 
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <div class="m-notification
             m-notification__visible
             m-notification__error">
@@ -2092,13 +2056,28 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#error-notification-code-4" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#error-notification-code-4" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="error-notification-code-4">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-7">
+                        <a class="govuk-tabs__tab" href="#error-notification-html-code-snippet-4">
                             HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#error-notification-implementation-4">
+                            Implementation
                         </a>
                     </li>
                     
@@ -2107,7 +2086,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-7">
+                <section class="govuk-tabs__panel" id="error-notification-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2139,6 +2118,34 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="error-notification-implementation-4">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <ul>
+  <li>
+    <p>For screen reader accessibility, include anchor links to the fields that
+need correction.</p>
+  </li>
+  <li>
+    <p>Place form-level alerts below the form title.</p>
+  </li>
+  <li>
+    <p>For field level notifications, the error minicon and message should
+always appear below the input field.</p>
+  </li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
             </div>
 <!-- .govuk-tabs -->
             
@@ -2146,6 +2153,7 @@
         </div>
         
     </section>
+    
     
 
     
@@ -2224,8 +2232,8 @@
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2020-04-10 17:34:12 +0000">
-                     5:34:12 PM Apr 10, 2020
+                <time datetime="2020-05-01 17:35:42 +0000">
+                     5:35:42 PM May 01, 2020
                 </time>
             </small>
         </div>

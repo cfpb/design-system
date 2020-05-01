@@ -985,7 +985,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/info-unit-groups-link-blobs">Info Unit Groups: Link blobs</a>
+                    <a class="m-list_link" href="/design-system/components/link-blobs">Link blobs</a>
                 </li>
                 
             
@@ -1453,108 +1453,67 @@
         <h1>
             Heroes
         </h1>
-    
-
-        <div id="toggle-code">
-            <a class="a-btn" id="toggle-code-btn" href="#">
-                <span class="hide-button">
-                    Hide code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h654.5c35.9 0 65-29.1 65-65s-29.1-65-65-65z"></path></svg>
-                    </span>
-                </span>
-                <span class="show-button">
-                    Show code &amp; specs
-                    <span class="a-btn_icon a-btn_icon__on-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 784.5 1200" class="cf-icon-svg"><path d="M719.5 515H457.3V252.7c0-35.9-29.1-65-65-65s-65 29.1-65 65V515H65c-35.9 0-65 29.1-65 65s29.1 65 65 65h262.3v262.3c0 35.9 29.1 65 65 65s65-29.1 65-65V645h262.3c35.9 0 65-29.1 65-65s-29.2-65-65.1-65z"></path></svg>
-                    </span>
-                </span>
-            </a>
-        </div>
-
-    
-
     </div>
 
+    
     <ul class="m-list m-list__horizontal u-mb30">
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#standard-heroes">Standard heroes</a>
+        </li>
+        
+        
         
         <li class="m-list_item">
             <a class="m-list_link" href="#variations">Variations</a>
         </li>
         
-
-        
-        
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#usage">Usage</a>
-        </li>
-        
-
-        
-
         
     </ul>
+    
 
     
         <section id="description" class="u-mb30">
-            <p>Heroes function as a primary focal point on a page, often used to introduce a collection of pages by combining a brief description of the goals of that section along with a visually impactful graphic.</p>
-
-<p>Heroes are the most prominent component on a page, in terms of their position and visual footprint. Heroes should only be used on top level pages, including landing and sublanding pages.</p>
-
-<p><img src="/design-system/images/uploads/hero_use-case.png" alt="Image of standard hero graphic" title="Image of standard hero graphic"></p>
-
-<h4 id="where-to-use">Where to use</h4>
-
-<ul>
-  <li><a href="https://cfpb.github.io/design-system/templates/landing-pages">Landing page</a></li>
-  <li><a href="https://cfpb.github.io/design-system/templates/sublanding-pages">Sublanding page</a></li>
-</ul>
-
-<h4 id="when-to-use">When to use</h4>
-
-<ul>
-  <li>When orienting a user to a new section or topic</li>
-  <li>When the page serves as a navigational tool with general information about a subject and links to lower-level pages that contain more specific information</li>
-</ul>
-
-<h4 id="when-other-options-are-better">When other options are better</h4>
-
-<ul>
-  <li>When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the text introduction</li>
-</ul>
-
-<p>More information about Heroes can be found at:</p>
-
-<p><a href="https://cfpb.github.io/design-manual/global-elements/heroes.html">https://cfpb.github.io/design-manual/global-elements/heroes.html</a></p>
-
-<p>and</p>
-
-<p><a href="https://cfpb.github.io/capital-framework/components/cf-layout/#heroes">https://cfpb.github.io/capital-framework/components/cf-layout/#heroes</a></p>
+            <p>Heroes are used to introduce landing and sublanding pages. To introduce lower-level pages like blogs or press releases that contain specific pieces of content, use the <a href="">text introduction</a>.</p>
 
         </section>
     
 
     
-    <section class="sticky-header u-mb45">
-        <h2 id="variations">Variations</h2>
-        <div class="content_line__wide content_line content_line u-mb20"></div>
+    
+    <section class="o-variation_group" id="standard-heroes">
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Standard hero with illustration</h3>
+        <h2 class="o-variation_group_title">Standard heroes</h2>
+        
 
-            <!-- Description -->
-            <p>A hero consists of a headline, a small amount of additional sub-heading text and an image. Its background color or image is flush with the sides of the screen, and the content is vertically centered.</p>
+        
+        <div class="o-variation_group_description">
+            
 
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>Hero with illustration</h3>
+            </div>
+
+            <div class="m-variation_description">
+                <p>Use case for illustrations here.
+<a href="https://www.consumerfinance.gov/owning-a-home/">Live example</a></p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
                 <section class="m-hero" id="hero1">
     <div class="m-hero_wrapper wrapper">
         <div class="m-hero_text">
-            <h1 class="m-hero_heading">Standard hero with illustration</h1>
+            <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
             <p class="m-hero_subhead">
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
@@ -1610,29 +1569,50 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#hero-with-illustration-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#hero-with-illustration-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="hero-with-illustration-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#hero-with-illustration-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
                     
                     
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#hero-with-illustration-implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#hero-with-illustration-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="hero-with-illustration-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;section class="m-hero" id="hero1"&gt;
     &lt;div class="m-hero_wrapper wrapper"&gt;
         &lt;div class="m-hero_text"&gt;
-            &lt;h1 class="m-hero_heading"&gt;Standard hero with illustration&lt;/h1&gt;
+            &lt;h1 class="m-hero_heading"&gt;41 chars max for a one-line heading&lt;/h1&gt;
             &lt;p class="m-hero_subhead"&gt;
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
@@ -1690,23 +1670,295 @@
                 <!-- Jinja snippet -->
                 
 
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="hero-with-illustration-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>When using an illustration that bleeds top to bottom at larger screen sizes, add the __bleeding modifier to the hero and add an additional m-hero_bleeding-image as a sibling to m-hero_image.</p>
+
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="hero-with-illustration-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <h4 id="standard-hero-with-illustration">Standard hero with illustration</h4>
+<ul>
+  <li>All illustrations should be saved at 200% to accommodate retina displays</li>
+  <li>When saving illustrations, use a transparent background</li>
+  <li>Single image for both large and small screens</li>
+  <li>Illustration dimensions: 470px (exact) x 195px (maximum) (2x: 940px x 390px)</li>
+</ul>
+
+<p><img src="/design-system/images/uploads/hero_style_non-bleed_large.png" alt="Image of large non-bleed hero graphic with dimensions" title="Image of large non-bleed hero graphic with dimensions"></p>
+
+<p><img src="/design-system/images/uploads/hero_style_non-bleed_small.png" alt="Image of smaller non-bleed hero graphics with dimensions" title="Image of smaller non-bleed hero graphics with dimensions"></p>
+
+<h4 id="hero-with-bleeding-illustration">Hero with bleeding illustration</h4>
+<ul>
+  <li>Two images must be created, one for large and one for small screens</li>
+  <li>Large and small screen images should contain the same elements but can differ compositionally</li>
+  <li>On large screens, illustration bleeds top and bottom</li>
+  <li>Large screen image dimensions are based on maximum possible hero height at 601px width</li>
+  <li>To conserve vertical space, small screen image should be as short as possible</li>
+  <li>Illustration dimensions for large screens (exact): 470px x 638px (2x: 940px x 1276px)</li>
+  <li>Illustration dimensions for small screens: 570px (exact) x 320px (maximum) (2x: 1140px x 640px)</li>
+</ul>
+
+<p><img src="/design-system/images/uploads/hero_style_bleed_large.png" alt="Image of larger bleeding hero graphic with dimensions" title="Image of larger bleeding hero graphic with dimensions"></p>
+
+<p><img src="/design-system/images/uploads/hero_style_bleed_small.png" alt="Image of smaller bleeding hero graphics with dimensions" title="Image of smaller bleeding hero graphics with dimensions"></p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
             </div>
 <!-- .govuk-tabs -->
             
 
         </div>
         
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Hero with knockout text</h3>
+        <div class="m-variation">
 
-            <!-- Description -->
-            <p>When using a dark background add the <code class="highlighter-rouge">__knockout</code> modifier to the hero to switch the text to white.</p>
+            <div class="m-variation_name">
+                <h3>Hero with photograph</h3>
+            </div>
 
+            <div class="m-variation_description">
+                <p>Use case for photographs here. 
+<a href="https://www.consumerfinance.gov/consumer-tools/mortgages/">Live example</a></p>
+
+            </div>
 
             <!-- Live code example -->
             
-            <div class="live-code-example">
+            <div class="a-live_code">
+                <section class="m-hero m-hero__overlay" id="hero4">
+    <div class="m-hero_wrapper wrapper">
+        <div class="m-hero_text">
+            <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
+            <p class="m-hero_subhead">
+                This text has a recommended count of 165-186 characters
+                (three lines at 1230px) following a one-line heading
+                and 108-124 characters (two lines at 1230px)
+                following a two-line heading.
+            </p>
+        </div>
+        <div class="m-hero_image-wrapper">
+            <div class="m-hero_image"></div>
+        </div>
+    </div>
+    <style>
+        #hero4 .m-hero_image {
+            background-image:
+                url('https://dummyimage.com/600x250/addc91/101820');
+            background-image: -webkit-image-set(
+                url('https://dummyimage.com/600x250/addc91/101820') 1x,
+                url('https://dummyimage.com/1200x500/addc91/101820') 2x
+            );
+            background-image: image-set(
+                url('https://dummyimage.com/600x250/addc91/101820') 1x,
+                url('https://dummyimage.com/1200x500/addc91/101820') 2x
+            );
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                src='https://dummyimage.com/600x250/addc91/101820',
+                sizingMethod='scale');
+            padding-bottom: 41.6666667%;
+        }
+
+        @media screen and (min-width: 37.5625em) {
+            #hero4 .m-hero_wrapper{
+                background-image:
+                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
+                background-image: -webkit-image-set(
+                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
+                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
+                );
+                background-image: image-set(
+                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
+                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
+                );
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://files.consumerfinance.gov/f/images/PC_hero.original.jpg',
+                    sizingMethod='scale');
+            }
+        }
+    </style>
+</section>
+            </div>
+            
+
+            
+            
+            
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#hero-with-photograph-code-2" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#hero-with-photograph-code-2" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="hero-with-photograph-code-2">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#hero-with-photograph-html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#hero-with-photograph-specs-2">
+                            Specs
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="hero-with-photograph-html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;section class="m-hero m-hero__overlay" id="hero4"&gt;
+    &lt;div class="m-hero_wrapper wrapper"&gt;
+        &lt;div class="m-hero_text"&gt;
+            &lt;h1 class="m-hero_heading"&gt;41 chars max for a one-line heading&lt;/h1&gt;
+            &lt;p class="m-hero_subhead"&gt;
+                This text has a recommended count of 165-186 characters
+                (three lines at 1230px) following a one-line heading
+                and 108-124 characters (two lines at 1230px)
+                following a two-line heading.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="m-hero_image-wrapper"&gt;
+            &lt;div class="m-hero_image"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;style&gt;
+        #hero4 .m-hero_image {
+            background-image:
+                url('https://dummyimage.com/600x250/addc91/101820');
+            background-image: -webkit-image-set(
+                url('https://dummyimage.com/600x250/addc91/101820') 1x,
+                url('https://dummyimage.com/1200x500/addc91/101820') 2x
+            );
+            background-image: image-set(
+                url('https://dummyimage.com/600x250/addc91/101820') 1x,
+                url('https://dummyimage.com/1200x500/addc91/101820') 2x
+            );
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                src='https://dummyimage.com/600x250/addc91/101820',
+                sizingMethod='scale');
+            padding-bottom: 41.6666667%;
+        }
+
+        @media screen and (min-width: 37.5625em) {
+            #hero4 .m-hero_wrapper{
+                background-image:
+                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
+                background-image: -webkit-image-set(
+                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
+                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
+                );
+                background-image: image-set(
+                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
+                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
+                );
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='http://files.consumerfinance.gov/f/images/PC_hero.original.jpg',
+                    sizingMethod='scale');
+            }
+        }
+    &lt;/style&gt;
+&lt;/section&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="hero-with-photograph-specs-2">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <h4 id="hero-with-photograph">Hero with photograph</h4>
+<ul>
+  <li>Two images must be created, one for large and one for small screens</li>
+  <li>Large and small screen images should contain the same elements but can differ compositionally</li>
+  <li>When selecting a photo include a 30px horizontal margin of clear space between text and image area</li>
+  <li>Type contrast ratios cannot be mathematically determined for photos so special care should be paid when selecting these images</li>
+  <li>To conserve vertical space, small screen image should be as short as possible</li>
+  <li>Photo dimensions for large screens (exact): 1230px x 285px</li>
+  <li>Photo dimensions for small screens: 600px (exact) x 338px (maximum)</li>
+</ul>
+
+<p><img src="/design-system/images/uploads/hero_style_photo_large.png" alt="Image of larger photographic hero graphic with dimensions" title="Image of larger photographic hero graphic with dimensions"></p>
+
+<p><img src="/design-system/images/uploads/hero_style_photo_small.png" alt="Image of smaller photographic hero graphic with dimensions" title="Image of smaller photographic hero graphic with dimensions"></p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="variations">
+        
+        <h2 class="o-variation_group_title">Variations</h2>
+        
+
+        
+        <div class="o-variation_group_description">
+            
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            <div class="m-variation_name">
+                <h3>Hero with knockout text</h3>
+            </div>
+
+            <div class="m-variation_description">
+                
+
+            </div>
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
                 <section class="m-hero m-hero__knockout" id="hero2">
     <div class="m-hero_wrapper wrapper">
         <div class="m-hero_text">
@@ -1770,22 +2022,31 @@
             
             
             
+            
+            
 
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
+            <div class="a-toggle_code">
+                <button href="#hero-with-knockout-text-code-1" class="a-btn a-btn__link" data-toggle-code="show">Show source</button>
+                <button href="#hero-with-knockout-text-code-1" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide source</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="hero-with-knockout-text-code-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#hero-with-knockout-text-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
+                    
+                    
                     
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="hero-with-knockout-text-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1854,312 +2115,10 @@
                 <!-- Jinja snippet -->
                 
 
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Hero with bleeding illustration</h3>
-
-            <!-- Description -->
-            <p>When using an illustration that bleeds top to bottom at larger screen sizes, add the <code class="highlighter-rouge">__bleeding</code> modifier to the hero and add an additional <code class="highlighter-rouge">m-hero_bleeding-image</code> as a sibling to <code class="highlighter-rouge">m-hero_image</code>.</p>
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                <section class="m-hero m-hero__bleeding" id="hero3">
-    <div class="m-hero_wrapper wrapper">
-        <div class="m-hero_text">
-            <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
-            <p class="m-hero_subhead">
-                This text has a recommended count of 165-186 characters
-                (three lines at 1230px) following a one-line heading
-                and 108-124 characters (two lines at 1230px)
-                following a two-line heading.
-            </p>
-        </div>
-        <div class="m-hero_image-wrapper">
-            <div class="m-hero_image"></div>
-        </div>
-    </div>
-    <style>
-        #hero3 .m-hero_image {
-            background-image:
-                url('https://dummyimage.com/570x140/addc91/101820');
-            background-image: -webkit-image-set(
-                url('https://dummyimage.com/570x140/addc91/101820') 1x,
-                url('https://dummyimage.com/1140x280/addc91/101820') 2x
-            );
-            background-image: image-set(
-                url('https://dummyimage.com/570x140/addc91/101820') 1x,
-                url('https://dummyimage.com/1140x280/addc91/101820') 2x
-            );
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                src='https://dummyimage.com/570x140/addc91/101820',
-                sizingMethod='scale');
-            padding-bottom: 25.1020408%;
-        }
-
-        @media screen and (min-width: 37.5625em) {
-            #hero3 .m-hero_image {
-                background-image:
-                    url('https://dummyimage.com/470x640/addc91/101820');
-                background-image: -webkit-image-set(
-                    url('https://dummyimage.com/470x640/addc91/101820') 1x,
-                    url('https://dummyimage.com/940x1280/addc91/101820') 2x
-                );
-                background-image: image-set(
-                    url('https://dummyimage.com/470x640/addc91/101820') 1x,
-                    url('https://dummyimage.com/940x1280/addc91/101820') 2x
-                );
-                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                    src='https://dummyimage.com/470x640/addc91/101820',
-                    sizingMethod='scale');
-            }
-        }
-    </style>
-</section>
-            </div>
-            
-
-            
-            
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-3">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-3">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;section class="m-hero m-hero__bleeding" id="hero3"&gt;
-    &lt;div class="m-hero_wrapper wrapper"&gt;
-        &lt;div class="m-hero_text"&gt;
-            &lt;h1 class="m-hero_heading"&gt;Max of 41 chars for a one-line heading&lt;/h1&gt;
-            &lt;p class="m-hero_subhead"&gt;
-                This text has a recommended count of 165-186 characters
-                (three lines at 1230px) following a one-line heading
-                and 108-124 characters (two lines at 1230px)
-                following a two-line heading.
-            &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class="m-hero_image-wrapper"&gt;
-            &lt;div class="m-hero_image"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;style&gt;
-        #hero3 .m-hero_image {
-            background-image:
-                url('https://dummyimage.com/570x140/addc91/101820');
-            background-image: -webkit-image-set(
-                url('https://dummyimage.com/570x140/addc91/101820') 1x,
-                url('https://dummyimage.com/1140x280/addc91/101820') 2x
-            );
-            background-image: image-set(
-                url('https://dummyimage.com/570x140/addc91/101820') 1x,
-                url('https://dummyimage.com/1140x280/addc91/101820') 2x
-            );
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                src='https://dummyimage.com/570x140/addc91/101820',
-                sizingMethod='scale');
-            padding-bottom: 25.1020408%;
-        }
-
-        @media screen and (min-width: 37.5625em) {
-            #hero3 .m-hero_image {
-                background-image:
-                    url('https://dummyimage.com/470x640/addc91/101820');
-                background-image: -webkit-image-set(
-                    url('https://dummyimage.com/470x640/addc91/101820') 1x,
-                    url('https://dummyimage.com/940x1280/addc91/101820') 2x
-                );
-                background-image: image-set(
-                    url('https://dummyimage.com/470x640/addc91/101820') 1x,
-                    url('https://dummyimage.com/940x1280/addc91/101820') 2x
-                );
-                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                    src='https://dummyimage.com/470x640/addc91/101820',
-                    sizingMethod='scale');
-            }
-        }
-    &lt;/style&gt;
-&lt;/section&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
+                <!-- Implementation details -->
                 
 
-                <!-- Jinja snippet -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="u-mb30">
-            <!-- Name -->
-            <h3>Hero with photograph</h3>
-
-            <!-- Description -->
-            <p>The text overlays the photograph at larger screen sizes. It’s best to avoid a non-button call to action in these, as it’s unlikely that the Pacific Blue will have accessible contrast with a non-white (or light gray) background.</p>
-
-
-            <!-- Live code example -->
-            
-            <div class="live-code-example">
-                <section class="m-hero m-hero__overlay" id="hero4">
-    <div class="m-hero_wrapper wrapper">
-        <div class="m-hero_text">
-            <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
-            <p class="m-hero_subhead">
-                This text has a recommended count of 165-186 characters
-                (three lines at 1230px) following a one-line heading
-                and 108-124 characters (two lines at 1230px)
-                following a two-line heading.
-            </p>
-        </div>
-        <div class="m-hero_image-wrapper">
-            <div class="m-hero_image"></div>
-        </div>
-    </div>
-    <style>
-        #hero4 .m-hero_image {
-            background-image:
-                url('https://dummyimage.com/600x250/addc91/101820');
-            background-image: -webkit-image-set(
-                url('https://dummyimage.com/600x250/addc91/101820') 1x,
-                url('https://dummyimage.com/1200x500/addc91/101820') 2x
-            );
-            background-image: image-set(
-                url('https://dummyimage.com/600x250/addc91/101820') 1x,
-                url('https://dummyimage.com/1200x500/addc91/101820') 2x
-            );
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                src='https://dummyimage.com/600x250/addc91/101820',
-                sizingMethod='scale');
-            padding-bottom: 41.6666667%;
-        }
-
-        @media screen and (min-width: 37.5625em) {
-            #hero4 .m-hero_wrapper{
-                background-image:
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
-                background-image: -webkit-image-set(
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
-                );
-                background-image: image-set(
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
-                );
-                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                    src='http://files.consumerfinance.gov/f/images/PC_hero.original.jpg',
-                    sizingMethod='scale');
-            }
-        }
-    </style>
-</section>
-            </div>
-            
-
-            
-            
-            
-
-            <div class="govuk-tabs u-mt30" data-module="tabs" data-toggle-code>
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#html-code-snippet-4">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="html-code-snippet-4">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;section class="m-hero m-hero__overlay" id="hero4"&gt;
-    &lt;div class="m-hero_wrapper wrapper"&gt;
-        &lt;div class="m-hero_text"&gt;
-            &lt;h1 class="m-hero_heading"&gt;Max of 41 chars for a one-line heading&lt;/h1&gt;
-            &lt;p class="m-hero_subhead"&gt;
-                This text has a recommended count of 165-186 characters
-                (three lines at 1230px) following a one-line heading
-                and 108-124 characters (two lines at 1230px)
-                following a two-line heading.
-            &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class="m-hero_image-wrapper"&gt;
-            &lt;div class="m-hero_image"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;style&gt;
-        #hero4 .m-hero_image {
-            background-image:
-                url('https://dummyimage.com/600x250/addc91/101820');
-            background-image: -webkit-image-set(
-                url('https://dummyimage.com/600x250/addc91/101820') 1x,
-                url('https://dummyimage.com/1200x500/addc91/101820') 2x
-            );
-            background-image: image-set(
-                url('https://dummyimage.com/600x250/addc91/101820') 1x,
-                url('https://dummyimage.com/1200x500/addc91/101820') 2x
-            );
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                src='https://dummyimage.com/600x250/addc91/101820',
-                sizingMethod='scale');
-            padding-bottom: 41.6666667%;
-        }
-
-        @media screen and (min-width: 37.5625em) {
-            #hero4 .m-hero_wrapper{
-                background-image:
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
-                background-image: -webkit-image-set(
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
-                );
-                background-image: image-set(
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
-                );
-                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                    src='http://files.consumerfinance.gov/f/images/PC_hero.original.jpg',
-                    sizingMethod='scale');
-            }
-        }
-    &lt;/style&gt;
-&lt;/section&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
+                <!-- Specs -->
                 
 
             </div>
@@ -2170,6 +2129,7 @@
         
     </section>
     
+    
 
     
     
@@ -2179,96 +2139,66 @@
                 
                     <p>
                     </p>
-<h4 id="content-guidelines">Content guidelines</h4>
+<h3 id="content-guidelines">Content guidelines</h3>
 
-<p>Hero content should serve to orient the user and communicate the primary goal of the page. Copy should be succinct and engaging, reflecting the voice and tone of the CFPB.</p>
+<p>Hero content should orient the user and communicate the primary goal of the page.</p>
 
-<h4 id="purpose">Purpose</h4>
+<h4 id="do">Do</h4>
+<p>Write hero copy from the user’s perspective.</p>
+<ul>
+  <li>Orient the user: “Is this page what I was looking for?”</li>
+  <li>Engage the user: “Do I want to keep reading?”</li>
+</ul>
 
-<p>Hero copy should be written from the user’s perspective. It’s less about what we can do for them or what we can offer them, and more about what the user can do with the resources we provide.</p>
+<h4 id="dont">Don’t</h4>
+<ul>
+  <li>Don’t write copy from the perspective of what the Bureau does or offers.</li>
+  <li>Don’t include links or calls to action within the hero.</li>
+</ul>
 
-<p>Hero content should help a user answer these two questions:</p>
+<h4 id="headings">Headings</h4>
 
-<p>Is this page what I was looking for? (orient the user)
-Do I want to keep reading? (engage the user)
-Since the goal of the hero is to get the user to continue reading the page, don’t include links or calls to action within the hero. If there is content that needs to link elsewhere for explanation, place it underneath the hero within the main content area.</p>
+<p>Communicate what the user can learn from the page or the benefit the page provides. Actionable, descriptive, orienting statements work best.</p>
 
-<h4 id="writing-hero-content">Writing hero content</h4>
+<p>Headings should be a single phrase, preferably one line at the largest breakpoint. Take care to avoid orphaned text.</p>
 
-<h5 id="heading">Heading</h5>
-
-<p>Headings should communicate what the user can learn from the page or the benefit the page provides. Headings should be a single phrase, preferably one line at the largest breakpoint. Take care to avoid orphaned text.</p>
-
-<p>Headings should not include a period at the end. Question marks can be used when a question is asked, but avoid phrasing heroes as questions. Actionable, descriptive, orienting statements work best.</p>
+<p>Headings should not include a period at the end. Question marks can be used when a question is asked, but avoid phrasing heroes as questions.</p>
 
 <ul>
   <li>One-line (at largest breakpoint): 41 characters maximum</li>
   <li>Two-line (at largest breakpoint): 82 characters maximum</li>
 </ul>
 
-<h5 id="subheading">Subheading</h5>
+<h4 id="subheading-content">Subheading content</h4>
 
-<p>Subheading content should be brief, enticing, and build upon the heading to describe the value of the page. Take care to avoid orphaned text.</p>
+<p>Copy underneath the heading should be brief, enticing, and build upon the heading to describe the value of the page. Take care to avoid orphaned text.</p>
 
 <ul>
   <li>After one-line heading: Between 165 and 186 characters (three lines at largest breakpoint)</li>
   <li>After two-line heading: Between 108 and 124 characters (two lines at largest breakpoint)</li>
 </ul>
 
-<h4 id="behavior">Behavior</h4>
+<h3 id="behavior">Behavior</h3>
 
-<p>Below the 601 px breakpoint, the text and image stack to span the full width of the viewport.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Above 600 px</th>
+      <th>Below 601 px</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Text and hero image appear side-by-side</td>
+      <td>Text and hero image stack vertically</td>
+    </tr>
+    <tr>
+      <td><img src="/design-system/images/uploads/hero_behavior_large.png" alt="Mockup of hero graphic at desktop size" title="Mockup of hero graphic at desktop size"></td>
+      <td><img src="/design-system/images/uploads/hero_behavior_small.png" alt="Mockup of hero graphic at small size" title="Mockup of hero graphic at small size"></td>
+    </tr>
+  </tbody>
+</table>
 
-<p><strong>601 px and above</strong></p>
-
-<p><img src="/design-system/images/uploads/hero_behavior_large.png" alt="Mockup of hero graphic at desktop size" title="Mockup of hero graphic at desktop size"></p>
-
-<p><strong>600 px and below</strong></p>
-
-<p><img src="/design-system/images/uploads/hero_behavior_small.png" alt="Mockup of hero graphic at small size" title="Mockup of hero graphic at small size"></p>
-
-<h4 id="style">Style</h4>
-<h4 id="standard-hero-with-illustration">Standard hero with illustration</h4>
-<ul>
-  <li>All illustrations should be saved at 200% to accommodate retina displays</li>
-  <li>When saving illustrations, use a transparent background</li>
-  <li>Single image for both large and small screens</li>
-  <li>Illustration dimensions: 470px (exact) x 195px (maximum) (2x: 940px x 390px)</li>
-</ul>
-
-<p><img src="/design-system/images/uploads/hero_style_non-bleed_large.png" alt="Image of large non-bleed hero graphic with dimensions" title="Image of large non-bleed hero graphic with dimensions"></p>
-
-<p><img src="/design-system/images/uploads/hero_style_non-bleed_small.png" alt="Image of smaller non-bleed hero graphics with dimensions" title="Image of smaller non-bleed hero graphics with dimensions"></p>
-
-<h4 id="hero-with-bleeding-illustration">Hero with bleeding illustration</h4>
-<ul>
-  <li>Two images must be created, one for large and one for small screens</li>
-  <li>Large and small screen images should contain the same elements but can differ compositionally</li>
-  <li>On large screens, illustration bleeds top and bottom</li>
-  <li>Large screen image dimensions are based on maximum possible hero height at 601px width</li>
-  <li>To conserve vertical space, small screen image should be as short as possible</li>
-  <li>Illustration dimensions for large screens (exact): 470px x 638px (2x: 940px x 1276px)</li>
-  <li>Illustration dimensions for small screens: 570px (exact) x 320px (maximum) (2x: 1140px x 640px)</li>
-</ul>
-
-<p><img src="/design-system/images/uploads/hero_style_bleed_large.png" alt="Image of larger bleeding hero graphic with dimensions" title="Image of larger bleeding hero graphic with dimensions"></p>
-
-<p><img src="/design-system/images/uploads/hero_style_bleed_small.png" alt="Image of smaller bleeding hero graphics with dimensions" title="Image of smaller bleeding hero graphics with dimensions"></p>
-
-<h4 id="hero-with-photograph">Hero with photograph</h4>
-<ul>
-  <li>Two images must be created, one for large and one for small screens</li>
-  <li>Large and small screen images should contain the same elements but can differ compositionally</li>
-  <li>When selecting a photo include a 30px horizontal margin of clear space between text and image area</li>
-  <li>Type contrast ratios cannot be mathematically determined for photos so special care should be paid when selecting these images</li>
-  <li>To conserve vertical space, small screen image should be as short as possible</li>
-  <li>Photo dimensions for large screens (exact): 1230px x 285px</li>
-  <li>Photo dimensions for small screens: 600px (exact) x 338px (maximum)</li>
-</ul>
-
-<p><img src="/design-system/images/uploads/hero_style_photo_large.png" alt="Image of larger photographic hero graphic with dimensions" title="Image of larger photographic hero graphic with dimensions"></p>
-
-<p><img src="/design-system/images/uploads/hero_style_photo_small.png" alt="Image of smaller photographic hero graphic with dimensions" title="Image of smaller photographic hero graphic with dimensions"></p>
 
                     
                 
@@ -2313,8 +2243,8 @@ Since the goal of the hero is to get the user to continue reading the page, don�
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
-                <time datetime="2020-04-10 17:34:12 +0000">
-                     5:34:12 PM Apr 10, 2020
+                <time datetime="2020-05-01 17:35:42 +0000">
+                     5:35:42 PM May 01, 2020
                 </time>
             </small>
         </div>

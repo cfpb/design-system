@@ -24,22 +24,28 @@ if ( tabs && tabs.length > 0 ) {
 }
 
 const HIDDEN_CLASS = 'u-hidden';
-// const toggleButton = document.querySelectorAll( 'a-toggle_code' );
 
-document.addEventListener( 'click', function( event ) {
-  if ( event.target.matches( '[data-toggle-code]' ) ) {
-    event.preventDefault();
-    const container = event.target.parentNode;
-    const codeEl = document.querySelector( event.target.getAttribute( 'href' ) );
-    if ( codeEl && codeEl.classList.contains( HIDDEN_CLASS ) ) {
-      codeEl.classList.remove( HIDDEN_CLASS );
-      container.querySelector( '[data-toggle-code="hide"]' ).classList.remove( HIDDEN_CLASS );
-      container.querySelector( '[data-toggle-code="show"]' ).classList.add( HIDDEN_CLASS );
-    } else {
-      codeEl.classList.add( HIDDEN_CLASS );
-      container.querySelector( '[data-toggle-code="hide"]' ).classList.add( HIDDEN_CLASS );
-      container.querySelector( '[data-toggle-code="show"]' ).classList.remove( HIDDEN_CLASS );
-    }
+/**
+ * @param {MouseEvent} event - The mouse event object from the click.
+ */
+function handleDocumentClick( event ) {
+  const target = event.target;
+  if ( !target.matches( '[data-toggle-code]' ) ) {
+    return;
+  }
+  event.preventDefault();
+  const container = target.parentNode;
+  const codeEl = document.querySelector( target.getAttribute( 'href' ) );
+  if ( codeEl && codeEl.classList.contains( HIDDEN_CLASS ) ) {
+    codeEl.classList.remove( HIDDEN_CLASS );
+    container.querySelector( '[data-toggle-code="hide"]' ).classList.remove( HIDDEN_CLASS );
+    container.querySelector( '[data-toggle-code="show"]' ).classList.add( HIDDEN_CLASS );
+  } else {
+    codeEl.classList.add( HIDDEN_CLASS );
+    container.querySelector( '[data-toggle-code="hide"]' ).classList.add( HIDDEN_CLASS );
+    container.querySelector( '[data-toggle-code="show"]' ).classList.remove( HIDDEN_CLASS );
   }
 
-}, false );
+}
+
+document.addEventListener( 'click', handleDocumentClick, false );

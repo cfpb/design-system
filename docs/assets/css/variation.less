@@ -18,9 +18,8 @@
 }
 
 .o-variation_group {
-    border-top: 1px solid @gray-40;
-    border-right: 1px solid @gray-40;
-    border-left: 1px solid @gray-40;
+    border: 1px solid @gray-40;
+    border-bottom: none;
     margin: 2rem 0;
     padding: 2rem 2rem 0;
 
@@ -39,10 +38,9 @@
     &_name {
         margin-top: 2rem;
     }
-    &:first-child {
-        .m-variation_name {
-            margin-top: 0;
-        }
+
+    &:first-child .m-variation_name {
+        margin-top: 0;
     }
 }
 

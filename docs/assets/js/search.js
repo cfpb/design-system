@@ -11,7 +11,6 @@ const searchResultsElm = document.getElementById( 'search-results' );
  * @param {Object} store - search index/meta data store in the window object.
  */
 function displaySearchResults( results, store ) {
-
   // Are there any results?
   if ( results.length ) {
     let appendString = '';
@@ -23,24 +22,19 @@ function displaySearchResults( results, store ) {
 
       // Show some preview text under each search results item.
       let previewText = '';
-      let itemFieldValue;
-      let field;
+      const searchMatchWordFragment = Object.keys( results[i].matchData.metadata )[0];
+      const searchMatchFields = results[i].matchData.metadata[ searchMatchWordFragment ];
 
-      // Search for the first preview field that is populated.
-      const searchFields = store.fields;
-      for ( const fieldId in searchFields ) {
-        field = searchFields[fieldId];
-        // Exclude certain fields from being considered for the result preview.
-        if ( field === 'title' || field === 'url' ) {
-          continue;
-        }
+      // Remove fields that should never appear as the preview.
+      delete searchMatchFields.id;
+      delete searchMatchFields.title;
 
-        itemFieldValue = item[field];
-        if ( typeof itemFieldValue !== 'undefined' && itemFieldValue !== '' ) {
-          previewText = itemFieldValue;
-          break;
-        }
-      }
+      previewText = item[ Object.keys( searchMatchFields )[0] ];
+
+      const regex = new RegExp( results.searchTerm, 'gi');
+      previewText = previewText.replace( regex, function replace( match ) {
+        return '<mark>' + match + '</mark>';
+      } );
 
       // Add the preview text.
       if ( previewText !== '' ) {
@@ -114,6 +108,7 @@ if ( searchTerm ) {
 
   // Perform a search on lunr index.
   const results = idx.search( searchTerm );
+  results.searchTerm = searchTerm;
 
   // Display the results of the search.
   displaySearchResults( results, searchStore );

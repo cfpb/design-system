@@ -9,6 +9,8 @@ backend:
     update: Update "{{slug}}" page
     delete: Delete "{{slug}}" page
 
+local_backend: true
+
 logo_url: https://cfpb.github.io/design-system/assets/img/cfpb-netlify-logo.png
 publish_mode: editorial_workflow
 media_folder: docs/images/uploads

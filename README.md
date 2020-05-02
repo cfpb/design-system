@@ -75,14 +75,8 @@ yarn start
 ```
 
 Visit http://localhost:4000/design-system/ to view the site.
-Editing a page locally will open a real PR against this GitHub repository.
-
-Alternatively, you can run a local proxy server that mimics GitHub, using
+Editing a page locally will change your local files, using
 [an experimental Netlify CMS feature](https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository).
-Under this configuration, local edits will change your local files.
-
-To use a local proxy server, run `npx netlify-cms-proxy-server` in another
-window before running `yarn start`.
 
 
 ## Contributing

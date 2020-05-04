@@ -16,7 +16,7 @@
                 {% for variation in variation_group.variations %}
                     'variation_name{{ forloop.index }}': '{{ variation.variation_name | xml_escape }}',
                     'variation_description{{ forloop.index }}': {{ variation.variation_description | markdownify | strip_html | strip_newlines | jsonify }},
-                    'variation_code_snippet{{ forloop.index }}': {{ variation.variation_code_snippet | markdownify | strip_html | strip_newlines | jsonify }},
+                    'variation_code_snippet{{ forloop.index }}': `{{ variation.variation_code_snippet | xml_escape }}`,
                 {% endfor %}
             {% endfor %}
 

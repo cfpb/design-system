@@ -23,15 +23,15 @@ function displaySearchResults( results, store ) {
       // Show some preview text under each search results item.
       let previewText = '';
       const searchMatchWordFragment = Object.keys( results[i].matchData.metadata )[0];
-      const searchMatchFields = results[i].matchData.metadata[ searchMatchWordFragment ];
+      const searchMatchFields = results[i].matchData.metadata[searchMatchWordFragment];
 
       // Remove fields that should never appear as the preview.
       delete searchMatchFields.id;
       delete searchMatchFields.title;
 
-      previewText = item[ Object.keys( searchMatchFields )[0] ];
+      previewText = item[Object.keys( searchMatchFields )[0]];
 
-      const regex = new RegExp( results.searchTerm, 'gi');
+      const regex = new RegExp( results.searchTerm, 'gi' );
       previewText = previewText.replace( regex, function replace( match ) {
         return '<mark>' + match + '</mark>';
       } );

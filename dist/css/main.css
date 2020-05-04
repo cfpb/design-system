@@ -6359,7 +6359,7 @@ pre code {
 #search-form,
 #search-results {
   margin: 15px;
-  margin-left: 8px;
+  margin-left: 0;
 }
 #search-results {
   list-style: none;

@@ -26,18 +26,18 @@ yarn --cwd docs/ run build
 # Remove the built Jekyll website from .gitignore
 sed -i '/_site/d' ./.gitignore
 
-# Configure git
-git config user.name "CFPBot"
-git config user.email "CFPBot@users.noreply.github.com"
-
-# Commit the built website
+# Check to see if there are any changes to commit.
 cd "$target_dir"
-git add .
-git commit -m "Update GitHub Pages"
-if [ "$?" != "0" ]; then
-	echo "nothing to commit"
+
+if [ -z "$(git status --porcelain)" ]; then
+	echo "no local changes to commit"
 	exit 0
 fi
+
+# Commit all changed files.
+git config user.name "CFPBot"
+git config user.email "CFPBot@users.noreply.github.com"
+git commit -am "Update GitHub Pages"
 
 # Push to remote gh-pages branch
 git remote set-url "$remote_name" "$repo_uri"

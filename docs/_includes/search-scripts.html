@@ -4,6 +4,10 @@
     // jekyll's liquid variables, such as site.pages.
     window.searchStore = {
         {% for page in site.pages %}
+
+        {% comment %} Exclude search page itself from results. {% endcomment %}
+        {% if page.url == 'search/index' %} {% continue %} {% endif %}
+
         '{{ page.url | slugify }}': {
 
             // Cycle through the variation fields of this page.

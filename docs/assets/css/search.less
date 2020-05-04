@@ -1,8 +1,11 @@
 #search-form {
-    float: right;
+    margin: 15px;
+    margin-left: 15px;
+    .respond-to-min( @bp-xs-max, {
+        float: right;
+    } );
 }
 
-#search-form,
 #search-results {
     margin: 15px;
     margin-left: 0;

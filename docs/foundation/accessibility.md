@@ -11,13 +11,13 @@ description: >-
   compatibility in the event that future devices are radically different from
   those in use today.
 
-  - [Perceivable](./#Perceivable)
+  - [Perceivable](#perceivable)
 
-  - [Operable](./#Operable)
+  - [Operable](#operable)
 
-  - [Understandable](./#Understandable)
+  - [Understandable](#understandable)
 
-  - [Robust](./#Robust)
+  - [Robust](#robust)
 
 
   Note: While this document can function as a checklist – and at times, it will

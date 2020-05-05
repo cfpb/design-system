@@ -6,7 +6,9 @@ layout: default
         {% include generic-content.html %}
     </div>
     <div class="o-editor_link" id="edit-page">
-        <a class="a-btn" href="{{ "/admin/#/collections/generic-pages/entries/home" | relative_url }} title="Edit this page in Netlify CMS">
+        <a class="a-btn" href="
+            {{- '/admin/#/collections/generic-pages/entries/home' | relative_url
+            -}}" title="Edit this page in Netlify CMS">
             <span class="a-btn_text">Edit this page</span>
             <span class="a-btn_icon">{% include icons/edit.svg %}</span>
         </a>

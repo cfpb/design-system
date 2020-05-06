@@ -5,7 +5,7 @@ body: >-
   ## Welcome to the CFPB Design System
 
 
-  Our design system is an open-source resource for CFPB teams to produce effective and visually-consistent products that are easy for consumers to access, use, and understand. 
+  Our design system is an open-source resource for CFPB teams to produce effective and visually-consistent products that are easy for consumers to access, use, and understand.
 
 
   ## Getting started
@@ -35,17 +35,12 @@ body: >-
   ## About the CFPB Design System
 
 
-  Our design system has been created to work with a wide range of devices and browsers. Following a modern, mobile first responsive approach, sites built with our Design System easily adapt to a wide range of screen sizes, all while carefully following accessibility best practices. 
-
+  Our design system has been created to work with a wide range of devices and browsers. Following a modern, mobile first responsive approach, sites built with our Design System easily adapt to a wide range of screen sizes, all while carefully following accessibility best practices.
 
   As a work of the United States government, all code is open source and in the public domain. We encourage you to use this framework in your own projects and to contribute back.
 
 
-  ## Help us make improvements
-
-
-  Since the start of the CFPB, our design system has evolved, and will continue to evolve, as we learn what works best for the CFPB and the people we serve. Our design system is open for the public, which allows you to help us make improvements by [filing an issue](https://github.com/cfpb/design-system/issues?milestone=&page=1&state=open) or [submitting a pull request](https://github.com/cfpb/design-system/pulls) on GitHub. Not on GitHub? Email us your suggestions at [tech@consumerfinance.gov](tech@consumerfinance.gov).
-
+  ## License
 
   All content has been released as open source under the CC0 1.0 Universal Public Domain Dedication, and we’d love for other agencies, developers, or groups to adapt it for their own use.
 ---

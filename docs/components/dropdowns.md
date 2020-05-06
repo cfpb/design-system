@@ -77,7 +77,5 @@ accessibility: >-
   visually impaired. If a multi-select component is desired, use custom
   JavaScript to make it accessible.
 research: ''
-help_us: ''
 last_updated: 2020-01-06T20:31:06.632Z
 ---
-

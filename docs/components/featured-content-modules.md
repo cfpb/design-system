@@ -237,16 +237,5 @@ usage: >-
   change the image’s horizontal anchoring.
 accessibility: ''
 research: ''
-help_us: >-
-  Information about Featured Content Modules can be found at:
-
-
-  *
-  http://cfpb.github.io/design-manual/page-components/featured-content-module.html\
-
-
-  *
-  https://cfpb.github.io/capital-framework/components/cf-layout/#featured-content-module
 last_updated: 2019-10-17T14:52:11.082Z
 ---
-

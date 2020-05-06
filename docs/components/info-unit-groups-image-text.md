@@ -223,28 +223,5 @@ usage: >
 accessibility: ''
 research: ''
 related_items: '* Link blobs (Design System page in progress)'
-help_us: >-
-  See [25-75 sample
-  HTML](https://gist.github.com/contolini/91d498357fd362d6272f22e001300cae) and
-  [50-50 sample
-  HTML](https://gist.github.com/contolini/ad1513232fe07d8a70683669ba48f9d2), CSS
-  for both need to be migrated from cfgov-refresh.
-
-
-  Information about Info Unit Groups can be found at:
-
-
-  * [25-75](http://cfpb.github.io/design-manual/page-components/25-75.html)
-
-  * [50-50](http://cfpb.github.io/design-manual/page-components/50-50.html)
-
-  *
-  [half-width-link-blob](http://cfpb.github.io/design-manual/page-components/half-width-link-blob.html)
-
-  *
-  [third-width-link-blob](http://cfpb.github.io/design-manual/page-components/third-width-link-blob.html)
-
-  *
-  [cf-layout](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
 last_updated: 2019-09-17T14:27:23.333Z
 ---

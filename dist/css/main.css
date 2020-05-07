@@ -5040,15 +5040,8 @@ input.skip-nav_link:focus::-moz-focus-inner {
 /* ==========================================================================
    Footer
    ========================================================================== */
-.site-footer {
-  display: table-row;
-  /* for sticky footer */
-  height: 1px;
-  /* for sticky footer */
-  background: #e7e8e9;
-}
-.site-footer_wrapper {
-  padding: 2em 0;
+footer a {
+  border-bottom-width: 1px;
 }
 /* ==========================================================================
    Secondary Nav

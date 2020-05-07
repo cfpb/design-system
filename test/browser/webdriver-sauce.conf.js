@@ -54,7 +54,7 @@ exports.config = {
     {
       browserName: 'safari',
       browserVersion: 'latest',
-      platformName: 'macOS 10.15'
+      platformName: 'macOS 10.14'
     },
     {
       browserName: 'internet explorer',

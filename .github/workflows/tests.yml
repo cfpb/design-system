@@ -52,6 +52,9 @@ jobs:
 
     - name: Run browser tests
       env:
+        # These credentials are from @contolini's CFPB Sauce Labs account
+        # They're defined on the repo's settings page:
+        # https://github.com/cfpb/design-system/settings/secrets
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
         SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
       run: yarn test:browser:cloud

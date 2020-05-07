@@ -7,10 +7,11 @@
         <div class="block block__sub">
             <small>
                 <strong>Page last edited:</strong>
+                {% assign file_url_path = page.path | split: '/' | last %}
                 {% if page.section %}
-                    {% assign file_url_section = page.section | append: '/' %}
+                    {% assign file_url_path = page.section | append: '/' | append: file_url_path %}
                 {% endif %}
-                <a href="https://github.com/{{ site.repository }}/commits/master/docs/{{ file_url_section }}{{ page.path | split: '/' | last }}">
+                <a href="https://github.com/{{ site.repository }}/commits/master/docs/{{ file_url_path }}">
                     <time datetime="{{ page.last_modified_at }}">
                         {{ page.last_modified_at | date: "%l:%M:%S %p %b %d, %Y" }}
                     </time>

@@ -158,11 +158,6 @@ collections:
         widget: 'markdown'
         minimal: true
         required: false
-      - name: 'help_us'
-        label: 'Help us make improvements'
-        widget: 'markdown'
-        minimal: true
-        required: false
   - name: 'foundation'
     preview_path: "foundation/{{slug}}"
     label: 'Foundation pages'
@@ -291,11 +286,6 @@ collections:
         required: false
       - name: 'related_items'
         label: 'Related items'
-        widget: 'markdown'
-        minimal: true
-        required: false
-      - name: 'help_us'
-        label: 'Help us make improvements'
         widget: 'markdown'
         minimal: true
         required: false
@@ -440,11 +430,6 @@ collections:
         widget: 'markdown'
         minimal: true
         required: false
-      - name: 'help_us'
-        label: 'Help us make improvements'
-        widget: 'markdown'
-        minimal: true
-        required: false
   - name: 'templates'
     label: 'Templates pages'
     preview_path: "templates/{{slug}}"
@@ -571,11 +556,6 @@ collections:
         required: false
       - name: 'related_items'
         label: 'Related items'
-        widget: 'markdown'
-        minimal: true
-        required: false
-      - name: 'help_us'
-        label: 'Help us make improvements'
         widget: 'markdown'
         minimal: true
         required: false

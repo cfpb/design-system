@@ -63,7 +63,7 @@ function displaySearchResults( elm, results, store ) {
  * @param {string} term - the search term
  */
 function displayNoSearchResults( elm, term ) {
-  elm.innerHTML = `<li>No results found for '${ term }'.</li>`;
+  elm.innerHTML = `<li>No search results found for '${ term }'.</li>`;
 }
 
 /**

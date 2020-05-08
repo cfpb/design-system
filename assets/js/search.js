@@ -1,51 +1,69 @@
 const lunr = require( 'lunr' );
 
-// This is set outside of displaySearchResults in case we dynamically call
-// displaySearchResults in the future, although right now it's only called
-// once per page load.
-const searchResultsElm = document.getElementById( 'search-results' );
-
 /**
  * Update page markup with search results.
  * @param {Array} results - A list of search result hits as objects.
  * @param {Object} store - search index/meta data store in the window object.
  */
-function displaySearchResults( results, store ) {
-  // Are there any results?
-  if ( results.length ) {
-    let appendString = '';
+function displaySearchResults( elm, results, store ) {
+  // Search results content will be placed in here.
+  let resultsString = `
+    <p>
+      ${ results.length } result${ results.length > 1 ? 's' : '' }
+      for search of '${ results.searchTerm }'.
+    </p>
+  `;
 
-    // Iterate over the results.
-    for ( let i = 0; i < results.length; i++ ) {
-      const item = store[results[i].ref];
-      appendString += '<li><a href="../' + item.url + '"><h3>' + item.title + '</h3></a>';
+  // Iterate over the results.
+  for ( let i = 0; i < results.length; i++ ) {
+    const item = store[results[i].ref];
+    resultsString += `
+      <li>
+        <a href="../${ item.url }">
+          <h3>
+            ${ item.title }
+          </h3>
+        </a>
+    `;
 
-      // Show some preview text under each search results item.
-      let previewText = '';
-      const searchMatchWordFragment = Object.keys( results[i].matchData.metadata )[0];
-      const searchMatchFields = results[i].matchData.metadata[searchMatchWordFragment];
+    // Show some preview text under each search results item.
+    let previewText = '';
+    const searchMatchWordFragment = Object.keys( results[i].matchData.metadata )[0];
+    const searchMatchFields = results[i].matchData.metadata[searchMatchWordFragment];
 
-      // Remove fields that should never appear as the preview.
-      delete searchMatchFields.id;
-      delete searchMatchFields.title;
+    // Remove fields that should never appear as the preview.
+    delete searchMatchFields.id;
+    delete searchMatchFields.title;
 
-      previewText = item[Object.keys( searchMatchFields )[0]];
-
-      const regex = new RegExp( results.searchTerm, 'gi' );
-      previewText = previewText.replace( regex, function replace( match ) {
-        return '<mark>' + match + '</mark>';
-      } );
-
-      // Add the preview text.
-      if ( previewText !== '' ) {
-        appendString += '<p>' + previewText.substring( 0, 150 ) + '…</p></li>';
-      }
+    const matchFieldKeys = Object.keys( searchMatchFields );
+    if ( matchFieldKeys.length > 0 ) {
+      previewText = item[matchFieldKeys[0]];
     }
 
-    searchResultsElm.innerHTML = appendString;
-  } else {
-    searchResultsElm.innerHTML = '<li>No results found</li>';
+    const regex = new RegExp( results.searchTerm, 'gi' );
+    previewText = previewText.replace( regex, function replace( match ) {
+      return '<mark>' + match + '</mark>';
+    } );
+
+    // Add the preview text.
+    if ( previewText !== '' ) {
+      resultsString += `
+          <p>${ previewText.substring( 0, 150 ) }…</p>
+        </li>
+      `;
+    }
   }
+
+  elm.innerHTML = resultsString;
+}
+
+/**
+ * Display no search results in markup.
+ * @param {HTMLNode} elm - the HTML element to write to.
+ * @param {string} term - the search term
+ */
+function displayNoSearchResults( elm, term ) {
+  elm.innerHTML = `<li>No search results found for '${ term }'.</li>`;
 }
 
 /**
@@ -95,8 +113,12 @@ function initializeSearchIndex( store ) {
   } );
 }
 
-// Check if the URL has a search term set.
+// Create search-related references.
 const searchTerm = getURLParam( 'searchQuery' );
+const searchResultsElm = document.getElementById( 'search-results' );
+let results = [];
+
+// Check if the URL has a search term set.
 if ( searchTerm ) {
   document.getElementById( 'search-box' ).setAttribute( 'value', searchTerm );
 
@@ -107,9 +129,14 @@ if ( searchTerm ) {
   const idx = initializeSearchIndex( searchStore );
 
   // Perform a search on lunr index.
-  const results = idx.search( searchTerm );
+  results = idx.search( searchTerm );
   results.searchTerm = searchTerm;
+}
 
+// Are there any results?
+if ( results.length === 0 ) {
+  displayNoSearchResults( searchResultsElm, searchTerm );
+} else {
   // Display the results of the search.
-  displaySearchResults( results, searchStore );
+  displaySearchResults( searchResultsElm, results, searchStore );
 }

@@ -6347,9 +6347,14 @@ pre code {
   white-space: nowrap;
 }
 #search-form {
-  float: right;
+  margin: 15px;
+  margin-left: 15px;
 }
-#search-form,
+@media only all and (min-width: 37.5em) {
+  #search-form {
+    float: right;
+  }
+}
 #search-results {
   margin: 15px;
   margin-left: 0;

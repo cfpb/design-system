@@ -14,13 +14,14 @@ export default class Preview extends Component {
     liquidEngine.registerFilter( 'xml_escape', initial => entities.encode( initial ) );
     liquidEngine.registerFilter( 'markdownify', initial => marked( initial || '' ) );
 
-    if ( tabs ) {
+    if ( tabs && tabs.length > 0 ) {
       document.querySelector( 'iframe' ).contentWindow.document.body.classList.add( 'js-enabled' );
       for ( let i = 0; i < tabs.length; i++ ) {
         const tab = tabs[i];
         new Tabs( tab ).init( );
       }
     }
+
   }
 
   render() {

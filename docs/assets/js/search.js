@@ -29,7 +29,14 @@ function displaySearchResults( results, store ) {
   // Iterate over the results.
   for ( let i = 0; i < results.length; i++ ) {
     const item = store[results[i].ref];
-    resultsString += '<li><a href="../' + item.url + '"><h3>' + item.title + '</h3></a>';
+    resultsString += `
+      <li>
+        <a href="../${ item.url }">
+          <h3>
+            ${ item.title }
+          </h3>
+        </a>
+    `;
 
     // Show some preview text under each search results item.
     let previewText = '';
@@ -52,7 +59,10 @@ function displaySearchResults( results, store ) {
 
     // Add the preview text.
     if ( previewText !== '' ) {
-      resultsString += '<p>' + previewText.substring( 0, 150 ) + '…</p></li>';
+      resultsString += `
+          <p>${ previewText.substring( 0, 150 ) }…</p>
+        </li>
+      `;
     }
   }
 

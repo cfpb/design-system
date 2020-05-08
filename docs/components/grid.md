@@ -518,9 +518,5 @@ usage: ''
 accessibility: ''
 research: ''
 related_items: ''
-help_us: |-
-  This page needs help with its content!
-  - [Contribute on Github](https://github.com/cfpb/design-system/issues/183)
 last_updated: 2019-09-10T15:02:08.752Z
 ---
-

@@ -255,5 +255,4 @@ accessibility: ''
 related_items: '- related items'
 last_updated: 2020-01-28T15:55:47.394Z
 research: ''
-help_us: "More information can be found at:\n* http://cfpb.github.io/design-manual/page-components/buttons.html\t\n* https://cfpb.github.io/capital-framework/components/cf-buttons/"
 ---

@@ -229,8 +229,5 @@ usage: >-
   spacing](/design-system/images/uploads/itemintro_style.png)
 accessibility: ''
 research: ''
-help_us: |-
-  * [github issue goes here](<>)
-  * [email us](<>)
 last_updated: 2020-01-28T15:55:47.394Z
 ---

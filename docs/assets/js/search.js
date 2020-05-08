@@ -1,23 +1,11 @@
 const lunr = require( 'lunr' );
 
-// This is set outside of displaySearchResults in case we dynamically call
-// displaySearchResults in the future, although right now it's only called
-// once per page load.
-const searchResultsElm = document.getElementById( 'search-results' );
-
 /**
  * Update page markup with search results.
  * @param {Array} results - A list of search result hits as objects.
  * @param {Object} store - search index/meta data store in the window object.
- * @returns {boolean} True if there are search results, false otherwise.
  */
-function displaySearchResults( results, store ) {
-  // Are there any results?
-  if ( results.length === 0 ) {
-    displayNoSearchResults( searchResultsElm, results.searchTerm );
-    return false;
-  }
-
+function displaySearchResults( elm, results, store ) {
   // Search results content will be placed in here.
   let resultsString = `
     <p>
@@ -66,9 +54,16 @@ function displaySearchResults( results, store ) {
     }
   }
 
-  searchResultsElm.innerHTML = resultsString;
+  elm.innerHTML = resultsString;
+}
 
-  return true;
+/**
+ * Display no search results in markup.
+ * @param {HTMLNode} elm - the HTML element to write to.
+ * @param {string} term - the search term
+ */
+function displayNoSearchResults( elm, term ) {
+  elm.innerHTML = `<li>No results found for '${ term }'.</li>`;
 }
 
 /**
@@ -118,17 +113,12 @@ function initializeSearchIndex( store ) {
   } );
 }
 
-/**
- * Display no search results in markup.
- * @param {HTMLNode} elm - the HTML element to write to.
- * @param {string} term - the search term
- */
-function displayNoSearchResults( elm, term ) {
-  elm.innerHTML = `<li>No results found for '${ term }'.</li>`;
-}
+// Create search-related references.
+const searchTerm = getURLParam( 'searchQuery' );
+const searchResultsElm = document.getElementById( 'search-results' );
+let results = [];
 
 // Check if the URL has a search term set.
-const searchTerm = getURLParam( 'searchQuery' );
 if ( searchTerm ) {
   document.getElementById( 'search-box' ).setAttribute( 'value', searchTerm );
 
@@ -139,11 +129,14 @@ if ( searchTerm ) {
   const idx = initializeSearchIndex( searchStore );
 
   // Perform a search on lunr index.
-  const results = idx.search( searchTerm );
+  results = idx.search( searchTerm );
   results.searchTerm = searchTerm;
+}
 
-  // Display the results of the search.
-  displaySearchResults( results, searchStore );
-} else {
+// Are there any results?
+if ( results.length === 0 ) {
   displayNoSearchResults( searchResultsElm, searchTerm );
+} else {
+  // Display the results of the search.
+  displaySearchResults( searchResultsElm, results, searchStore );
 }

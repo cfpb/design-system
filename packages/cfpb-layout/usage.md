@@ -113,10 +113,10 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 A 1 pixel edge to edge bar that can divide content.
 
-<div class="content_line"></div>
+<hr class="content_line">
 
 ```
-<div class="content_line"></div>
+<hr class="content_line">
 ```
 
 
@@ -174,7 +174,7 @@ left, sidebar on the right, in a ratio of 2:1).
 It is assumed that the content is wider than the sidebar.
 
 <main class="content content__1-3" role="main">
-    <div class="content_line"></div>
+    <hr class="content_line">
     <div class="content_wrapper">
         <aside class="content_sidebar">
             Section navigation
@@ -198,7 +198,7 @@ It is assumed that the content is wider than the sidebar.
 
 ```
 <main class="content content__1-3" role="main">
-    <div class="content_line"></div>
+    <hr class="content_line">
     <div class="content_wrapper">
         <aside class="content_sidebar">
             Section navigation
@@ -236,7 +236,7 @@ _Inline styling is for demonstration purposes only; do not include it in your
 markup._
 
 <main class="content content__2-1" role="main">
-    <div class="content_line"></div>
+    <hr class="content_line">
     <div class="content_wrapper">
         <section class="content_main">
             <h2>Main content area</h2>
@@ -260,7 +260,7 @@ markup._
 
 ```
 <main class="content content__2-1" role="main">
-    <div class="content_line"></div>
+    <hr class="content_line">
     <div class="content_wrapper">
         <section class="content_main">
             <h2>Main content area</h2>
@@ -296,7 +296,7 @@ it in your markup._
     <section class="content_hero" style="background: #E3E4E5">
         Content hero
     </section>
-    <div class="content_line"></div>
+    <hr class="content_line">
     <div class="content_wrapper">
         <section class="content_main">
             Main content area
@@ -312,7 +312,7 @@ it in your markup._
     <section class="content_hero" style="background: #E3E4E5">
         Content hero
     </section>
-    <div class="content_line"></div>
+    <hr class="content_line">
     <div class="content_wrapper">
         <section class="content_main">
             Main content area
@@ -334,7 +334,7 @@ _Inline styling is for demonstration purposes only; do not include it in your
 markup._
 
 <main class="content content__2-1" role="main">
-    <div class="content_line"></div>
+    <hr class="content_line">
     <div class="content_wrapper">
         <section class="content_main content_main__narrow">
             <h2>Main content area</h2>

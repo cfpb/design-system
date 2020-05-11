@@ -13,7 +13,7 @@ variation_groups:
   - variations:
       - variation_code_snippet: |-
           <main class="content content__1-3" role="main">
-              <div class="content_line"></div>
+              <hr class="content_line">
               <div class="content_wrapper">
                   <aside class="content_sidebar">
                       Section navigation

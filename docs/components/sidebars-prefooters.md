@@ -54,7 +54,7 @@ variation_groups:
         variation_name: Main content and sidebar
       - variation_code_snippet: |-
           <main class="content content__2-1" role="main">
-              <div class="content_line"></div>
+              <hr class="content_line">
               <div class="content_wrapper">
                   <section class="content_main">
                       <h2>Main content area</h2>
@@ -95,7 +95,7 @@ variation_groups:
               <section class="content_hero" style="background: #E3E4E5">
                   Content hero
               </section>
-              <div class="content_line"></div>
+              <hr class="content_line">
               <div class="content_wrapper">
                   <section class="content_main">
                       Main content area
@@ -115,7 +115,7 @@ variation_groups:
         variation_name: Bleedbar sidebar styling
       - variation_code_snippet: |-
           <main class="content content__2-1" role="main">
-              <div class="content_line"></div>
+              <hr class="content_line">
               <div class="content_wrapper">
                   <section class="content_main content_main__narrow">
                       <h2>Main content area</h2>

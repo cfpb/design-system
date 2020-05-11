@@ -159,12 +159,12 @@
     {% if page.restrictions != empty and page.restrictions or page.usage and page.usage != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="usage">Usage</h2>
-            <div class="content_line__wide content_line content_line u-mb20"></div>
-                {% if page.usage and page.usage != '' %}
-                    <p>
-                    {{ page.usage | markdownify }}
-                    </p>
-                {% endif %}
+            <hr class="content_line content_line__wide u-mb20">
+            {% if page.usage and page.usage != '' %}
+                <p>
+                {{ page.usage | markdownify }}
+                </p>
+            {% endif %}
             {% if page.restrictions and page.restrictions != empty %}
                 <div class="content-l component-restrictions">
                     <div class="content-l_col content-l_col-1">
@@ -208,7 +208,7 @@
     {% if page.accessibility and page.accessibility != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="accessibility">Accessibility</h2>
-            <div class="content_line__wide content_line content_line u-mb20"></div>
+            <hr class="content_line  content_line__wide u-mb20">
             <p>
                 {{ page.accessibility | markdownify }}
             </p>
@@ -218,7 +218,7 @@
     {% if page.research and page.research != '' %}
         <section class="sticky-header u-mb45">
             <h2 id="research">Research</h2>
-            <div class="content_line__wide content_line content_line u-mb20"></div>
+            <hr class="content_line content_line__wide u-mb20">
             <p>
                 {{ page.research | markdownify }}
             </p>
@@ -231,7 +231,7 @@
             <div>
                 <section>
                     <h2 id="related-items">Related Items</h2>
-                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <hr class="content_line content_line__wide u-mb20">
                     {{ page.related_items | markdownify }}
                 </section>
             </div>

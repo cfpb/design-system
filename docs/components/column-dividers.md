@@ -19,7 +19,7 @@ description: >+
 
 variation_groups:
   - variations:
-      - variation_code_snippet: <div class="content_line"></div>
+      - variation_code_snippet: <hr class="content_line">
         variation_description: A 1 pixel edge to edge bar that can divide content.
         variation_name: Content line
       - variation_code_snippet: |-
@@ -105,4 +105,3 @@ accessibility: ''
 research: ''
 last_updated: 2019-09-13T19:34:43.025Z
 ---
-

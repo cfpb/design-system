@@ -174,8 +174,9 @@
                         {% if restriction.restrictions_do and restriction.restrictions_do != '' %}
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
-                                    <header class="m-slug-header">
-                                        <h4 class="a-heading">
+                                    <header class="component-restrictions_heading-do">
+                                        <h4>
+                                            {% include icons/check-round.svg %}
                                             Do
                                         </h4>
                                     </header>
@@ -188,8 +189,9 @@
                         {% if restriction.restrictions_do_not and restriction.restrictions_do_not != '' %}
                             <div class="content-l_col content-l_col-1-2">
                                 <div>
-                                    <header class="m-slug-header m-slug-header__warning">
-                                        <h4 class="a-heading">
+                                    <header class="component-restrictions_heading-donot">
+                                        <h4>
+                                            {% include icons/close-round.svg %}
                                             Do not
                                         </h4>
                                     </header>

@@ -6,6 +6,7 @@ plugins:
 permalink: /:title
 exclude: [package.json, webpack.config.js, yarn.lock]
 highlighter: rouge
+timezone: America/New_York
 
 # Organization
 org: CFPB

@@ -39,7 +39,7 @@ exports.config = {
   // and 30 processes will get spawned. The property handles how many capabilities
   // from the same test should run tests.
   //
-  maxInstances: 10,
+  maxInstances: 1,
   //
   // If you have trouble getting all important capabilities together, check out the
   // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -54,17 +54,29 @@ exports.config = {
     {
       browserName: 'safari',
       browserVersion: 'latest',
-      platformName: 'macOS 10.14'
+      platformName: 'macOS 10.14',
+      exclude: [
+        // Netlify CMS is only tested with Chrome
+        'test/browser/docs/netlify-cms.js'
+      ]
     },
     {
       browserName: 'internet explorer',
       browserVersion: '11.285',
-      platformName: 'Windows 10'
+      platformName: 'Windows 10',
+      exclude: [
+        // Netlify CMS is only tested with Chrome
+        'test/browser/docs/netlify-cms.js'
+      ]
     },
     {
       browserName: 'firefox',
       browserVersion: 'latest',
-      platformName: 'Windows 10'
+      platformName: 'Windows 10',
+      exclude: [
+        // Netlify CMS is only tested with Chrome
+        'test/browser/docs/netlify-cms.js'
+      ]
     }
   ],
   //
@@ -101,7 +113,7 @@ exports.config = {
   baseUrl: 'http://localhost:4000',
   //
   // Default timeout for all waitFor* commands.
-  waitforTimeout: 10000,
+  waitforTimeout: 120000,
   //
   // Default timeout in milliseconds for request
   // if browser driver or grid doesn't send response
@@ -147,7 +159,7 @@ exports.config = {
   // See the full list at http://mochajs.org/
   mochaOpts: {
     ui: 'bdd',
-    timeout: 60000
+    timeout: 120000
   }
   //
   // =====

@@ -6048,6 +6048,12 @@ pre code {
 .variation-code-specs td {
   background-color: #fff;
 }
+.component-restrictions_heading-do svg {
+  color: #20aa3f;
+}
+.component-restrictions_heading-donot svg {
+  color: #d14124;
+}
 /* Color swatches for Identity/Color page
    ========================================================================== */
 .swatches-container__primary {

@@ -52,20 +52,7 @@ describe( 'Netlify CMS', () => {
       loginButton = browser.react$( 'LoginButton' );
     } );
 
-    it( 'should load the login page with a login button', () => {
-      loginButton.waitForDisplayed();
-      expect( loginButton ).toExist();
-    } );
-
-    it( 'should allow the user to log in', () => {
-      loginButton.waitForDisplayed();
-      loginButton.click();
-      const editorContainer = browser.react$( 'EditorContainer' );
-      editorContainer.waitForDisplayed();
-      expect( editorContainer ).toExist();
-    } );
-
-    it( 'should properly render a preview of a page', () => {
+    it( 'should properly render a preview of a component page', () => {
       loginButton.waitForDisplayed();
       loginButton.click();
       // The button page's title field

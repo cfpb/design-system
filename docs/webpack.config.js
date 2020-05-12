@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require( 'path' );
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
@@ -8,7 +8,7 @@ module.exports = {
     'search': './assets/js/search.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist', 'js'),
+    path: path.resolve( __dirname, 'dist', 'js' ),
     filename: '[name].js'
   },
   devtool: 'source-map',
@@ -27,7 +27,11 @@ module.exports = {
         use: {
           loader: 'html-loader'
         }
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
       }
     ]
   }
-}
+};

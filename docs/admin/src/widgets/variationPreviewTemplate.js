@@ -6,8 +6,11 @@ import marked from 'marked';
 import template from '../../../_includes/variation-content.html';
 
 // react-liquid (https://github.com/aquibm/react-liquid/) isn't able to `include` other files so we
-// strip out any instances of {% include icons/XXXXX.svg %}
-const cleanTemplate = template.replace( /{%\s+include\s+\/?icons\/([\w-]+)\.svg\s+%}/g, '' );
+// replace instances of {% include icons/XXXXX.svg %} with the inlined SVG
+const templateWithIcons = template.replace(
+  /{%\s+include\s+\/?icons\/([\w-]+)\.svg\s+%}/g,
+  ( match, icon ) => require( `../../../_includes/icons/${ icon }.svg` )
+);
 
 export default class Preview extends Component {
 
@@ -34,7 +37,7 @@ export default class Preview extends Component {
     };
     return (
       <div>
-        <ReactLiquid template={cleanTemplate} data={data} html />
+        <ReactLiquid template={templateWithIcons} data={data} html />
       </div>
     );
   }

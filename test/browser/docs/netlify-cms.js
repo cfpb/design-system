@@ -12,7 +12,7 @@ describe( 'Netlify CMS', () => {
   describe( 'Editing the homepage', () => {
 
     beforeEach( () => {
-      browser.url( 'http://localhost:4000/design-system/admin/#/collections/generic-pages/entries/home' );
+      browser.url( '/design-system/admin/#/collections/generic-pages/entries/home' );
       loginButton = browser.react$( 'LoginButton' );
     } );
 
@@ -48,7 +48,7 @@ describe( 'Netlify CMS', () => {
   describe( 'Editing a component page', () => {
 
     beforeEach( () => {
-      browser.url( 'http://localhost:4000/design-system/admin/#/collections/components/entries/buttons' );
+      browser.url( '/design-system/admin/#/collections/components/entries/buttons' );
       loginButton = browser.react$( 'LoginButton' );
     } );
 

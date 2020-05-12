@@ -7,7 +7,7 @@ describe( 'The code snippet toggling feature', () => {
   let arecodeSnippetTabsVisible;
 
   before( () => {
-    browser.url( 'http://localhost:4000/design-system/components/buttons' );
+    browser.url( '/design-system/components/buttons' );
     browser.setWindowSize( 1024, 768 );
     codeShowButton = $( '.a-toggle_code [data-toggle-code="show"]' );
     codeHideButton = $( '.a-toggle_code [data-toggle-code="hide"]' );

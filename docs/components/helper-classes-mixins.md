@@ -414,9 +414,10 @@ variation_groups:
 
           ```
         variation_name: '"Small text utility" mixin'
-usage: ''
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2019-09-13T18:46:32.716Z
 ---
-

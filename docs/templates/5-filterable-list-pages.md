@@ -33,10 +33,7 @@ variation_groups:
           ![Browse page
           mockup](/design-system/images/uploads/browse_behavior_desktop.jpg)
         variation_name: Filterable list browse page
-usage: >-
-  #### Use case
-
-
+use_cases: >-
   ##### WHEN TO USE
 
 
@@ -46,10 +43,7 @@ usage: >-
   * Additional content may be included before or after the filterable list, but
   it is not encouraged. The filterable list should be the focus of the page.
 
-
-  #### Content guidelines
-
-
+content_guidelines: >-
   * Text introduction and/or full width text should be used to introduce the
   documents that are being filtered.
 
@@ -60,10 +54,7 @@ usage: >-
   * Required elements: filter control panel, list of items (displayed as post
   preview items) and pagination.
 
-
-  #### Behavior
-
-
+behavior: >-
   Responsive behavior follows the pattern of the base page types (sublanding
   page or browse page).
 
@@ -111,4 +102,3 @@ related_items: |-
   * Email sign-up
 last_updated: 2020-01-13T23:28:26.904Z
 ---
-

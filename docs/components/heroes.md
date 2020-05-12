@@ -111,7 +111,7 @@ variation_groups:
           (2x: 940px x 1276px)
 
           * Illustration dimensions for small screens: 570px (exact) x 320px
-          (maximum) (2x: 1140px x 640px) 
+          (maximum) (2x: 1140px x 640px)
 
 
           ![Image of larger bleeding hero graphic with
@@ -129,7 +129,7 @@ variation_groups:
 
       - variation_name: Hero with photograph
         variation_description: >-
-          Use case for photographs here. 
+          Use case for photographs here.
 
           [Live
           example](https://www.consumerfinance.gov/consumer-tools/mortgages/)
@@ -280,28 +280,26 @@ variation_groups:
               </style>
           </section>
     variation_group_description: ''
-usage: >+
-  ### Content guidelines
-
-
+use_cases: ''
+content_guidelines: >-
   Hero content should orient the user and communicate the primary goal of the
-  page. 
+  page.
 
 
   #### Do
 
-  Write hero copy from the user’s perspective. 
+  Write hero copy from the user’s perspective.
 
-  * Orient the user: "Is this page what I was looking for?" 
+  * Orient the user: "Is this page what I was looking for?"
 
-  * Engage the user: "Do I want to keep reading?" 
+  * Engage the user: "Do I want to keep reading?"
 
 
   #### Don't
 
   * Don't write copy from the perspective of what the Bureau does or offers.
 
-  * Don’t include links or calls to action within the hero. 
+  * Don’t include links or calls to action within the hero.
 
 
   #### Headings
@@ -316,7 +314,7 @@ usage: >+
 
 
   Headings should not include a period at the end. Question marks can be used
-  when a question is asked, but avoid phrasing heroes as questions. 
+  when a question is asked, but avoid phrasing heroes as questions.
 
 
   * One-line (at largest breakpoint): 41 characters maximum
@@ -336,12 +334,8 @@ usage: >+
 
   * After two-line heading: Between 108 and 124 characters (two lines at largest
   breakpoint)
-
-
-  ### Behavior
-
-
-  | Above 600 px | Below 601 px | 
+behavior: >-
+  | Above 600 px | Below 601 px |
 
   | -- | ----- |
 
@@ -353,9 +347,6 @@ usage: >+
   graphic at desktop size") | ![Mockup of hero graphic at small
   size](/design-system/images/uploads/hero_behavior_small.png "Mockup of hero
   graphic at small size") |
-
-
-
 accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
 research: ''

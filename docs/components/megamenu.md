@@ -68,15 +68,8 @@ description: >-
   some portion of the content guidelines will change in the near future, as we
   monitor analytics information.**
 variation_groups: []
-usage: >-
-  This section contains general guidelines that govern mega menu usage,
-  specifically addressing recommended link limits, character counts and
-  editorial guidelines.
-
-
-  ### General mega menu content guidelines
-
-
+use_cases: ''
+content_guidelines: >-
   #### Maximum number of links
 
   Analytics review suggests that 7 links per column should be the maximum,
@@ -122,6 +115,7 @@ usage: >-
     - Links should generally be straightforward and self-explanatory, avoiding jargon or brand names that might be difficult for users to understand
     - Links should generally go to [consumerfinance.gov](https://www.consumerfinance.gov) pages only
     - Links should reflect page titles, but don't necessarily have to duplicate them verbatim
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2019-09-17T14:36:40.318Z

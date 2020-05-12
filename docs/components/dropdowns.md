@@ -41,9 +41,7 @@ variation_groups:
           </div>
         variation_description: ''
         variation_name: Multiselect
-usage: >-
-  <h3>Use cases</h3>
-
+use_cases: >-
   While dropdowns are easy to implement, they aren’t always the best choice from
   a usability perspective.
 
@@ -63,6 +61,8 @@ usage: >-
   is “What’s your favorite color of the rainbow,” a dropdown could be a good
   choice. The options are familiar and there are more than six. You don’t want
   the user to have to read and absorb a lot of new information in a dropdown.
+content_guidelines: ''
+behavior: ''
 accessibility: >-
   Keep in mind that dropdowns behave differently on various mobile devices,
   taking up different amounts of real estate and requiring different

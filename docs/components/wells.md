@@ -29,9 +29,7 @@ variation_groups:
           </div>
         variation_description: ''
         variation_name: Default well
-usage: >-
-  #### Use cases
-
+use_cases: >-
   Use sparingly to attract users’ attention to a concise piece of content.
   Ideally, content within a well should not take up more than a third of page
   content.
@@ -39,11 +37,7 @@ usage: >-
   Full width text, images, and embedded media (like video) may be placed within
   wells, however, if content includes imagery also consider the [Featured
   Content Module](/design-system/components/featured-content-module).
-
-
-  #### Content guidelines
-
-
+content_guidelines: >-
   * Grey wells should be used to feature content or specific calls to action;
   text should be succinct.
 
@@ -59,7 +53,7 @@ usage: >-
 
 
 
-  Types of atoms you can place in a well include:  
+  Types of atoms you can place in a well include:
 
 
   * Headings (H2 - H5).
@@ -73,11 +67,7 @@ usage: >-
 
   * Headings should be as succinct as possible and 35 characters or less
   (including spaces).
-
-
-  #### Behavior
-
-
+behavior: >-
   ##### Breakpoints 900+
 
   Page with a right sidebar
@@ -99,4 +89,3 @@ accessibility: ''
 research: ''
 last_updated: 2019-10-21T20:38:39.851Z
 ---
-

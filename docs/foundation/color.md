@@ -1066,7 +1066,7 @@ variation_groups:
         variation_name: Data visualization cool palette
       - variation_description: '![](/design-system/images/uploads/datavis_color_warm.png)'
         variation_name: Data visualization warm palette
-usage: >-
+use_cases: >-
   When used properly, color can help clarify relationships between data, provide
   emphasis for certain data points, and maintain a consistent brand voice. When
   used poorly, color can overwhelm the user, make the data confusing and break
@@ -1117,6 +1117,8 @@ usage: >-
 
   Once the PR is merged, the Less file needs to be duplicated in Capital
   Framework CF Core and follow that project’s release process.
+content_guidelines: ''
+behavior: ''
 accessibility: >-
   Color should never be solely relied on to convey meaning in a visualization
   because of accessibility standards for people who are blind and visually
@@ -1172,4 +1174,3 @@ accessibility: >-
   tool for testing color contrast ratios.
 last_updated: 2019-08-30T18:31:00.000Z
 ---
-

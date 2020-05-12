@@ -39,7 +39,9 @@ variation_groups:
           </aside>
         variation_description: ''
         variation_name: Large pull quote
-usage: ''
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z

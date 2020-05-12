@@ -198,7 +198,9 @@ variation_groups:
           * For field level notifications, the error minicon and message should
           always appear below the input field.
         variation_name: Error notification
-usage: >-
+use_cases: ''
+content_guidelines: ''
+behavior: >-
   #### Visibility
 
   Notifications are hidden by default; you can toggle their visibility by adding

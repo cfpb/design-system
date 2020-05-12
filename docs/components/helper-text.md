@@ -48,10 +48,8 @@ variation_groups:
           instructions. Placeholder text disappears once a user begins typing in the
           field.
         variation_name: Placeholder text
-usage: >-
-  <h3>Content guidelines</h3>
-
-
+use_cases: ''
+content_guidelines: >-
   Where possible, design your forms to only include required fields. If it’s not
   required, ask yourself if it’s really necessary to include at all. Add
   instructions at the top of the form to clearly indicate that all fields are
@@ -62,6 +60,7 @@ usage: >-
 
   Try not to design forms consisting mainly of optional fields. If you must do
   so, mark required field labels only with inline helper text.
+behavior: ''
 accessibility: >-
   For screen reader accessibility, consider using the aria-describedby attribute
   for helper text, which gives screen readers users the information if they need

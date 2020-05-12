@@ -14,10 +14,8 @@ variation_groups:
       - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
         variation_description: '![](/design-system/images/uploads/slider-default.png)'
         variation_name: Basic range slider
-usage: >-
-  <h3>Content guidelines</h3>
-
-
+use_cases: ''
+content_guidelines: >-
   Range sliders can work well for discovery and education, where the inputs are
   [a relative quantity and not a specific numeric
   input](https://medium.com/@paulvddool/sliders-are-bad-practice-b56c3b7a6e19).
@@ -35,6 +33,7 @@ usage: >-
   number of data points it covers (the range as well as how discrete the points
   are). The more points to choose from, the harder it is for the user to target
   a specific number.
+behavior: ''
 accessibility: Make sure that sliders are accessible by keyboard using the arrow keys
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z

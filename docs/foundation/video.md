@@ -60,10 +60,8 @@ variation_groups:
           ![Still from Consumer Stories
           Video](/design-system/images/uploads/video_4.jpg "Documentary video")
         variation_name: Documentary
-usage: >-
-  #### Content guidelines
-
-
+use_cases: ''
+content_guidelines: >-
   ##### Logo
 
 
@@ -114,6 +112,7 @@ usage: >-
 
   ![Still from CFPB Training Video](/design-system/images/uploads/video_10.jpg
   "Example of title slide in Video")
+behavior: ''
 accessibility: >-
   #### Include text alternatives for non-text content
 

@@ -21,10 +21,7 @@ variation_groups:
       - variation_code_snippet: ''
         variation_description: '![](/design-system/images/uploads/docdetail_top_example.jpg)'
         variation_name: Document detail page example
-usage: >-
-  #### Use cases
-
-
+use_cases: >-
   ##### When to use
 
 
@@ -42,10 +39,7 @@ usage: >-
   specifically focused on a document for download, use the more general Learn
   page template.
 
-
-  #### Content guidelines
-
-
+content_guidelines: >-
   ##### Document detail page
 
 
@@ -126,10 +120,7 @@ usage: >-
   bullet
 
 
-
-  #### Behavior
-
-
+behavior: >-
   Below the 901 pixel breakpoint, the sidebar stacks below the main content
   area.
 
@@ -183,4 +174,3 @@ related_items: |-
   * Typography
 last_updated: 2020-01-13T23:29:43.319Z
 ---
-

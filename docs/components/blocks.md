@@ -195,14 +195,9 @@ variation_groups:
           Note that the `div`s with inline styles are for demonstration purposes
           only and should not be used in production.
         variation_name: Sub blocks
-usage: |-
-  <h3>Use cases</h3>
-
-  TBD
-
-  <h3>Content guidelines</h3>
-
-  TBD
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-06T20:29:09.912Z

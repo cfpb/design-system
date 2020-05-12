@@ -25,16 +25,15 @@ variation_groups:
           ![Line chart showing change in college credit card agreement trends
           between 2009 and 2015.](/design-system/images/uploads/line-chart-2.png)
         variation_name: Line chart showing trends
-usage: >-
-  <h3>Content guidelines</h3>
-
-
+use_cases: ''
+content_guidelines: >-
   * Label your lines directly or use different patterns for each line.
 
   * Generally show five or fewer lines to avoid confusion.
 
   * Consider using many small line charts if you need to show more factors.
   (These are called small multiples charts.)
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z

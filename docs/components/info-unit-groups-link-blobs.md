@@ -32,7 +32,7 @@ variation_groups:
 
 
           * When the number of components would be better featured in multiples
-          of 3, use the third-width link blob. 
+          of 3, use the third-width link blob.
 
           * When content requires imagery, use the 50/50 image and text or 25/75
           image and text components.
@@ -90,42 +90,14 @@ variation_groups:
       A link blob is a unit consisting of heading, short descriptive text, and
       call to action. There are two layout options for breakpoints above 601 px:
 
-      - Half-width link blobs consist of two units in a row  
+      - Half-width link blobs consist of two units in a row
 
-      - Third-width link blobs consist of three units in a row  
-usage: >-
-  ### Behavior
-
-
-  At breakpoints below 601, side-by-side modules stack vertically in Z-order as
-  shown below, and the mobile link style is used for the call to action link(s)
-
-
-  #### Half-width link blob
-
-  | Above 600 px | Below 601 px | 
-
-  | - | - |  
-
-  | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) |
-  ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png) |
-
-
-  #### Third-width link blob
-
-  | Above 600 px | Below 601 px | 
-
-  | - | - |
-
-  | ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) |
-  ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png) |
-
-
-  ### Content guidelines
-
+      - Third-width link blobs consist of three units in a row
+use_cases: ''
+content_guidelines: >-
   Do not use blobs for multiple paragraphs of copy. Copy should be succinct.
 
-  * Headings  
+  * Headings
     * 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
   * Descriptions
     * Half-width link blobs: 100-250 characters max
@@ -139,6 +111,29 @@ usage: >-
   as possible.
     * For half-width link blobs, one or two lines different is ok
     * For third-width link blobs, a difference of one line is ok
+behavior: >-
+  At breakpoints below 601, side-by-side modules stack vertically in Z-order as
+  shown below, and the mobile link style is used for the call to action link(s)
+
+
+  #### Half-width link blob
+
+  | Above 600 px | Below 601 px |
+
+  | - | - |
+
+  | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) |
+  ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png) |
+
+
+  #### Third-width link blob
+
+  | Above 600 px | Below 601 px |
+
+  | - | - |
+
+  | ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) |
+  ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png) |
 related_items: >-
   * [Info Unit Groups: image and
   text](https://cfpb.github.io/design-system/components/info-unit-groups-image-and-text)

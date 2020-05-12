@@ -80,14 +80,9 @@ variation_groups:
         variation_description: ''
         variation_jinja_code_snippet: ''
         variation_name: First and last pages
-usage: >-
-  <h3>Content guidelines</h3>
-
-  Tables with over 20 rows can be paired with pagination.
-
-
-  <h3>Behavior</h3>
-
+use_cases: ''
+content_guidelines: 'Tables with over 20 rows can be paired with pagination.'
+behavior: >-
   `@bp-xs-max`: On small screens, the buttons display next to each other,
   stacked on top of the form
 

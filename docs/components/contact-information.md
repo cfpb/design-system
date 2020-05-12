@@ -64,10 +64,7 @@ variation_groups:
               </div>
           </div>
         variation_name: Sidebar contact info
-usage: >-
-  <h3>Use cases</h3>
-
-
+use_cases: >-
   * When there is a specific action users may want or need to take that requires
   contacting a specific office within the Bureau.
 
@@ -121,11 +118,8 @@ usage: >-
 
   * Pre-set minicons are used to help visually reinforce the type of contact
   method.
-
-
-  #### Behavior
-
-
+content_guidelines: ''
+behavior: >-
   The mockups below show simultaneously how this pattern works within either the
   main content area or the sidebar:
 

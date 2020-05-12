@@ -100,9 +100,10 @@ variation_groups:
 
           ```
         variation_name: Column divider modifiers
-usage: ''
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2019-09-13T19:34:43.025Z
 ---
-

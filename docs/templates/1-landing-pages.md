@@ -22,10 +22,7 @@ variation_groups:
           ![Landing page with text
           introduction](/design-system/images/uploads/landing_top_exampleb_2x.jpg)
         variation_name: Landing page with text introduction
-usage: >-
-  #### Use cases
-
-
+use_cases: >-
   ##### When to use
 
 
@@ -47,10 +44,7 @@ usage: >-
   * When page content includes paragraph copy or more detailed definitions or
   explanations.
 
-
-  #### Content guidelines
-
-
+content_guidelines: >-
   * Generally, content components should work together to provide an overview of
   the information organized below this page or about the campaign. Give users
   clear next steps and calls to actions so they can quickly decide what content
@@ -115,6 +109,7 @@ usage: >-
 
   ![Breakpoints 900 and
   less](/design-system/images/uploads/landing_behavior_mobile_2x.jpg)
+behavior: ''
 related_items: |-
   * Text introduction
   * 50/50 image & text
@@ -125,4 +120,3 @@ related_items: |-
   * Email signup
 last_updated: 2019-10-24T20:28:47.366Z
 ---
-

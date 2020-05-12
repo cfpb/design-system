@@ -157,15 +157,8 @@ variation_groups:
           typical site search form.
         variation_name: Button inside a text input with another button
     variation_group_name: Variations
-usage: >-
-  <h3>Use cases</h3>
-
-
-  TBD
-
-
-  <h3>Content guidelines</h3>
-
+use_cases: ''
+content_guidelines: >-
   Choose the appropriate width for text input fields so they match the kind of
   information requested. This makes it easier for users to quickly grasp what’s
   being asked.
@@ -195,10 +188,7 @@ usage: >-
 
   Use placeholder text for formatting examples only. Don’t use for instructions.
   Placeholder text disappears once a user begins typing in the field.
-
-
-  <h3>Behavior</h3>
-
+behavior: >-
   As the screen size gets smaller, break multi-column inputs into a single,
   stacked column. Fields that are next to each other on a large screen, should
   stack at smaller screen sizes. When possible, fields should span the entire

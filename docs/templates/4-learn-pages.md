@@ -25,10 +25,7 @@ variation_groups:
       - variation_code_snippet: ''
         variation_description: '![Learn page example](/design-system/images/uploads/learn_example.jpg)'
         variation_name: Learn page
-usage: >-
-  #### Use cases
-
-
+use_cases: >-
   ##### When to use
 
 
@@ -48,9 +45,7 @@ usage: >-
   When page content covers a variety of related topics or is focused on
   directing users to navigate to other locations on the site or the internet.
 
-
-  #### Content guidelines
-
+content_guidelines: >-
   Users will likely be spending more time on these page types than others since
   they will hold more content. Consider ways to visually break up the content to
   organize it and make it easier for users to skim to find the specific content
@@ -73,10 +68,7 @@ usage: >-
   the template is being used to house an article or post.
 
 
-
-  #### Behavior
-
-
+behavior: >-
   Below the 901 pixel breakpoint, the sidebar stacks below the main content
   area.
 
@@ -106,4 +98,3 @@ related_items: |-
   * Contact information
 last_updated: 2020-01-13T23:26:34.507Z
 ---
-

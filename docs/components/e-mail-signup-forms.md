@@ -32,9 +32,7 @@ variation_groups:
           ![Inset email
           signup](/design-system/images/uploads/2e07e378-4adf-11e8-96a7-67d2534eec85.png)
         variation_name: Inset email sign up
-usage: >-
-  <h3>Use cases</h3>
-
+use_cases: >-
   Email sign ups allow users to stay engaged on a specific topic or content type
   produced by the Bureau. Different page types will be connected to the
   corresponding GovDelivery list based on the page topic (i.e. HMDA) or page
@@ -68,10 +66,7 @@ usage: >-
   prefooter/end of page content has no other CTAs to compete with the email
   signup, use the standard prefooter email signup.
 
-
-  <h3>Content guidelines</h3>
-
-
+content_guidelines: >-
   * Use standard slug text: “Email updates”
 
   * Description text will be unique to each mailing list and should clearly set
@@ -97,11 +92,7 @@ usage: >-
   * The placement of the email signup on the page should not interfere with the
   primary page goal. Users respond better to follow-on requests that happen
   after their primary goal has been met.
-
-
-  <h3>Behavior</h3>
-
-
+behavior: >-
   The mockups below show simultaneously how this pattern works within either a
   sidebar or a prefooter area.
 

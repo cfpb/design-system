@@ -49,16 +49,15 @@ variation_groups:
           ![Stacked bar chart showing breakdown of complaints in other financial
           services category.](/design-system/images/uploads/bar-chart-3.png)
         variation_name: Stacked bar chart
-usage: >-
-  <h3>Content guidelines</h3>
-
-
+use_cases: ''
+content_guidelines: >-
   * If exact numbers are important, the bars should be labeled with the value.
 
   * When possible label directly rather than relying on color.
 
   * For stacked charts, use a white line or stroke to create contrast between
   bar chunks.
+behavior: ''
 accessibility: ''
 research: ''
 related_items: ''

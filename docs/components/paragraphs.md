@@ -45,14 +45,9 @@ variation_groups:
               Lorem ipsum dolor sit amet
           </p>
         variation_name: Microcopy
-usage: |-
-  <h3>Use cases</h3>
-
-  TBD
-
-  <h3>Content guidelines</h3>
-
-  TBD
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-06T20:28:04.952Z

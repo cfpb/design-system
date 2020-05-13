@@ -25,10 +25,7 @@ variation_groups:
       - variation_code_snippet: ''
         variation_description: '![Browse page example](/design-system/images/uploads/browse_example.jpg)'
         variation_name: Browse page example
-usage: >-
-  #### Use case
-
-
+use_cases: >-
   ##### When to use
 
   * When adding new information to an existing topic area within one of the main
@@ -46,9 +43,7 @@ usage: >-
 
   * When page content is a lengthy article or text.
 
-
-  #### Content guidelines
-
+content_guidelines: >-
   Content should be displayed in a way that allows for ease of browsing; group
   content in ways that makes it easy to find.
 
@@ -78,9 +73,7 @@ usage: >-
   * If using both static and dynamic content, preference for dynamic content to
   appear above static content.
 
-
-  #### Behavior
-
+behavior: >-
   Below the 901 pixel breakpoint, the sub-navigation collapses into the global
   navigation under a hamburger menu, as seen on the [Regulatory agenda
   page](http://www.consumerfinance.gov/policy-compliance/rulemaking/regulatory-agenda/).
@@ -114,4 +107,3 @@ related_items: |-
   * Contact information
 last_updated: 2020-01-13T23:25:20.183Z
 ---
-

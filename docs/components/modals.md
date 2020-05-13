@@ -17,10 +17,7 @@ variation_groups:
 
           ![Example of modal](/design-system/images/uploads/savesearch.png)
         variation_name: Default modal
-usage: >-
-  #### Use cases
-
-
+use_cases: >-
   Modals help draw attention to an alert or a focused task by preventing
   interactions with anything on the web page other than the modal itself. Due to
   their disruptive nature, modal windows should only be used in very specific
@@ -55,11 +52,7 @@ usage: >-
 
   * Focus attention on the need to accept or acknowledge something before the
   user can proceed
-
-
-  #### Content guidelines
-
-
+content_guidelines: >-
   ##### Heading
 
   Modal windows should have a clear heading at the top of the window. This
@@ -130,10 +123,7 @@ usage: >-
   ##### Inactive window
 
   * Set page to fixed
-
-
-  #### Behavior
-
+behavior: >-
   ##### Opening a modal
 
   Modals can be triggered by links, buttons, or even inactivity on a site. When
@@ -212,4 +202,3 @@ accessibility: ''
 research: ''
 last_updated: 2020-01-29T19:07:36.411Z
 ---
-

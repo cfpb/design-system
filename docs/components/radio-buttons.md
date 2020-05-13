@@ -67,10 +67,7 @@ variation_groups:
                 </label>
           </div>
         variation_name: Large target radio button with helper text
-usage: >-
-  <h3>Use cases</h3>
-
-
+use_cases: >-
   Leave radio buttons unselected as the default. It’s easy for users to miss
   that a radio button has been preselected and to submit a form with an
   erroneous answer.
@@ -85,12 +82,8 @@ usage: >-
   areas</a>. If these won’t fit into your design and you need to use the default
   style shown below, make sure the target area is at least 45 x 45 px and
   includes the option text.
-
-
-  <h3>Content guidelines</h3>
-
-
-  TBA
+content_guidelines: ''
+behavior: ''
 accessibility: >-
   There are some issues with Voiceover reading radio buttons. To get around
   this, consider using the aria-describedby attribute.

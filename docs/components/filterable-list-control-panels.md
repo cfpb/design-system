@@ -32,10 +32,7 @@ variation_groups:
           ![Filterable list
           expanded](/design-system/images/uploads/filter_expanded.png)
         variation_name: Default filterable list
-usage: >-
-  <h3>Use cases</h3>
-
-
+use_cases: >-
   Use filters in conjunction with search to help users narrow down large amounts
   of data or content.
 
@@ -61,10 +58,7 @@ usage: >-
   categories, are not relevant to the content.
 
   * Search alone is sufficient for user needs
-
-
-  <h3>Content guidelines</h3>
-
+content_guidelines: >-
   * Headings and labels should be as succinct as possible, ideally 10 characters
   or less. Do not use colon (:) or other punctuation after the header.
 
@@ -81,11 +75,7 @@ usage: >-
   * Maximum three column wide layout, options stack vertically below 601 pixels
 
   * Follow form patterns for grouping, layout, and messaging.
-
-
-  <h3>Behavior</h3>
-
-
+behavior: >-
   Filters live in an expandable style element allowing controls to be hidden
   when not in use/needed.
 

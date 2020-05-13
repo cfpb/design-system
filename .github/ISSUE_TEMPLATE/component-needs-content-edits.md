@@ -16,13 +16,12 @@ What content needs to be created?
    - [ ] HTML snippet(s)
    - [ ] Jinja links/snippet(s)
    - [ ] Variations specifications
-- [ ] Usage
-   - [ ] Use cases
-   - [ ] Content guidelines
+- [ ] Use cases
+- [ ] Content guidelines
+- [ ] Behavior
 - [ ] Accessibility
 - [ ] Research
 - [ ] Related Items
-- [ ] Help us make improvements
 - [ ] Etc
 
 ---
@@ -35,11 +34,10 @@ What content exists already but needs **edits**?
    - [ ] HTML snippet(s)
    - [ ] Jinja links/snippet(s)
    - [ ] Variations specifications
-- [ ] Usage
-   - [ ] Use cases
-   - [ ] Content guidelines
+- [ ] Use cases
+- [ ] Content guidelines
+- [ ] Behavior
 - [ ] Accessibility
 - [ ] Research
 - [ ] Related Items
-- [ ] Help us make improvements
 - [ ] Etc

@@ -57,7 +57,8 @@ variation_groups:
 
           0123456789</p></h4>
         variation_name: ' '
-usage: >-
+use_cases: ''
+content_guidelines: >-
   Readable text allows users to efficiently read and take in textual
   information. Text that is not readable turns off readers or makes it
   challenging for them to stay focused. The following guidelines promote good
@@ -144,6 +145,7 @@ usage: >-
 
 
   ![](/design-system/images/uploads/typography_typesetting05_in-body_-2.png)
+behavior: ''
 accessibility: >-
 
 

@@ -26,13 +26,13 @@ variation_groups:
           ![A doughnut chart used within a social media
           graphic.](/design-system/images/uploads/doughnut-chart-2.jpg)
         variation_name: Donut chart
-usage: |-
-  <h3>Content guidelines</h3>
-
+use_cases: ''
+content_guidelines: >-
   * The slices should add up to 100%.
   * Use 5 or less slices.
   * Directly label all slices.
   * Use a white outline or stroke to create contrast between the slices.
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z

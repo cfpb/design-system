@@ -435,10 +435,7 @@ variation_groups:
 
           {: class="icon-table"}
         variation_name: Icon library
-usage: >
-  #### Content guidelines
-
-
+use_cases: >-
   ##### Color
 
 
@@ -465,11 +462,8 @@ usage: >
 
   ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png "Icon
   spacing diagram")
-
-
-  #### Behavior
-
-
+content_guidelines: ''
+behavior: >-
   In certain instances, icons can be animated to aid communication or to
   reassure the user that an action is functioning as intended. Examples include
   saving or loading content. Depending on the context, the animated icon follows

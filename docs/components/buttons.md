@@ -179,10 +179,7 @@ variation_groups:
 
           {%- endmacro %}
         variation_name: Full-width buttons on x-small screens
-usage: >-
-  <h3>Use cases</h3>
-
-
+use_cases: >-
   Use primary buttons for actions that go to the next step. Use secondary
   buttons for actions that happen on the current page. Generous white space
   lends focus and makes buttons more actionable. Avoid using multiple primary
@@ -191,11 +188,7 @@ usage: >-
 
   Use an animated icon in a button to reassure the user that the action they are
   attempting to perform is functioning as intended.
-
-
-  <h3>Content guidelines</h3>
-
-
+content_guidelines: >-
   Labels should be written in sentence case. Use verbs and an active voice.
   Language should be clear, succinct, and informative. Limit the copy length to
   22 characters.
@@ -205,20 +198,7 @@ usage: >-
   Icons appear to the left of the button text. Buttons that have “forward”
   actions have icons to the right of the text, and those with “back” actions
   have icons to the left.
-
-
-  <h3>Code</h3>
-
-
-  The cf-buttons component provides extensions to the basic button styles.
-
-
-  cf-core and cf-icons components are all dependencies of this component.
-
-
-  NOTE: If you use cf-buttons.less directly, be sure to run the file through
-  Autoprefixer, or your compiled Capital Framework CSS will not work perfectly
-  in older browsers.
+behavior: ''
 restrictions:
   - restrictions_do: |-
       Test

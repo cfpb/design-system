@@ -464,7 +464,9 @@ variation_groups:
                   </article>
               </div>
           </div>
-usage: ''
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 last_updated: 2019-10-21T20:38:39.851Z
 research: ''

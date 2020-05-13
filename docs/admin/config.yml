@@ -124,8 +124,18 @@ collections:
                 required: false
                 widget: 'markdown'
                 minimal: true
-      - name: 'usage'
-        label: 'Usage'
+      - name: 'use_cases'
+        label: 'Use cases'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'content_guidelines'
+        label: 'Content guidelines'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'behavior'
+        label: 'Behavior'
         widget: 'markdown'
         minimal: true
         required: false
@@ -255,8 +265,18 @@ collections:
                 required: false
                 widget: 'markdown'
                 minimal: true
-      - name: 'usage'
-        label: 'Usage'
+      - name: 'use_cases'
+        label: 'Use cases'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'content_guidelines'
+        label: 'Content guidelines'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'behavior'
+        label: 'Behavior'
         widget: 'markdown'
         minimal: true
         required: false
@@ -396,8 +416,18 @@ collections:
                 required: false
                 widget: 'markdown'
                 minimal: true
-      - name: 'usage'
-        label: 'Usage'
+      - name: 'use_cases'
+        label: 'Use cases'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'content_guidelines'
+        label: 'Content guidelines'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'behavior'
+        label: 'Behavior'
         widget: 'markdown'
         minimal: true
         required: false
@@ -525,8 +555,18 @@ collections:
                 required: false
                 widget: 'markdown'
                 minimal: true
-      - name: 'usage'
-        label: 'Usage'
+      - name: 'use_cases'
+        label: 'Use cases'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'content_guidelines'
+        label: 'Content guidelines'
+        widget: 'markdown'
+        minimal: true
+        required: false
+      - name: 'behavior'
+        label: 'Behavior'
         widget: 'markdown'
         minimal: true
         required: false

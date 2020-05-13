@@ -22,20 +22,7 @@ variation_groups:
               <label class="a-label" for="test_checkbox_basic_checked">Label</label>
           </div>
         variation_name: Selected state
-usage: >-
-  Selecting the checkbox or touching the label text next to it should toggle the
-  state of the checkbox on and off.
-
-
-  To optimize usability, consider using checkboxes with large target areas. If
-  these won’t fit into the design and the default style shown below is used,
-  make sure the target area is at least 45 x 45px and that it includes the text
-  label.
-
-
-  #### Use cases
-
-
+use_cases: >-
   * Use checkboxes when the user can select more than one option from a list.
 
   * Use [radio buttons](/design-system/components/radio-buttons) when the user
@@ -72,18 +59,19 @@ usage: >-
   * Clicking on the parent checkbox does not change the state of the open/close
   expansion (if it’s checked with the children expanded, it stays expanded, for
   instance).
-
-
-  #### Content guidelines
-
-
+content_guidelines: >-
   * Label text should be concise
 
   * Text spacing should inform spacing of checkboxes and checkbox should be
   vertically centered with the first line of text in an option.
+behavior: >-
+  Selecting the checkbox or touching the label text next to it should toggle the
+  state of the checkbox on and off.
 
-
-  - - -
+  To optimize usability, consider using checkboxes with large target areas. If
+  these won’t fit into the design and the default style shown below is used,
+  make sure the target area is at least 45 x 45px and that it includes the text
+  label.
 accessibility: >-
   To optimize screen reader accessibility, lay out checkboxes vertically rather
   than horizontally.

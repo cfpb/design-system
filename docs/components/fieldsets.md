@@ -91,7 +91,9 @@ variation_groups:
           </form>
         variation_description: ' '
         variation_name: Large target fieldset with radio buttons
-usage: ''
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z

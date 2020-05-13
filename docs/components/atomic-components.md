@@ -9,7 +9,7 @@ description: >-
   that utilize JavaScript. It is a dependency of other packages and isn’t used
   on its own.
 variations: []
-usage: >-
+use_cases: >-
   This framework is intended to be used in conjunction with adherence to Atomic
   Design principles. It helps provide a uniform way to build Atomic components
   using HTML, CSS, and JavaScript.
@@ -79,6 +79,8 @@ usage: >-
   NotificationMolecule.init();
 
   ```
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z

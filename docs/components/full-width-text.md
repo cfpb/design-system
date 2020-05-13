@@ -25,7 +25,7 @@ variation_groups:
           - When the goal of the text is to quickly inform users about a set of
           options and/or drive them to child pages other sections of the site.
           Consider using an [Info Unit Group](info-unit-groups-image-and-text).
-          
+
           **WHERE TO USE**
 
           - [Landing
@@ -99,7 +99,7 @@ variation_groups:
 
           - May be used in any full width text component, but recommended only for
           Learn pages.
-          
+
           **WHERE TO USE**
 
           - [Learn
@@ -108,10 +108,8 @@ variation_groups:
           - [Document detail
           pages](https://cfpb.github.io/design-system/templates/document-detail-pages)
         variation_name: Inset content
-usage: >-
-  ### Content and image
-
-
+use_cases: ''
+content_guidelines: >-
   Content and image elements that are full width at desktop size remain full
   width across all breakpoints. Heading, link, and buttons all follow responsive
   patterns.
@@ -186,6 +184,7 @@ usage: >-
 
   * Elements within the the inset (links, call to action etc) follow prefooter
   styling below 601 px
+behavior: ''
 accessibility: ''
 research: ''
 related_items: |-
@@ -197,4 +196,3 @@ related_items: |-
   - [Video](https://cfpb.github.io/design-system/foundation/video)
 last_updated: 2019-09-17T14:47:14.382Z
 ---
-

@@ -175,26 +175,26 @@ behavior: >-
   901+ breakpoints, standard grey-welled sidebar on the right
 
 
-  ![](/design-system/images/uploads/textintro_behavior1.png)
+  ![Mockup of 900+ pixel layout](/design-system/images/uploads/textintro_behavior1.png)
 
 
   901+ breakpoints, breakout sidebar on the right
 
 
-  ![](/design-system/images/uploads/textintro_behavior2.png)
+  ![Mockup of 900+ pixel layout](/design-system/images/uploads/textintro_behavior2.png)
 
 
   900 breakpoints and less, standard grey-welled sidebar (stacked to prefooter)
 
 
-  ![](/design-system/images/uploads/textintro_behavior3.jpg)
+  ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior3.jpg)
 
 
   900 breakpoints and less, breakout sidebar stacked immediately after text
   intro
 
 
-  ![](/design-system/images/uploads/textintro_behavior4.jpg)
+  ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior4.jpg)
 
 
   _**Item introductions**_
@@ -203,13 +203,13 @@ behavior: >-
   901+ breakpoints, item introduction with sidebar to the right
 
 
-  ![](/design-system/images/uploads/itemintro_behavior1.png)
+  ![Mockup of 900+ pixel layout](/design-system/images/uploads/itemintro_behavior1.png)
 
 
   900 and under breakpoints, item intro takes up full width of viewport
 
 
-  ![](/design-system/images/uploads/itemintro_behavior2.png)
+  ![Mockup of 900 pixel and below layout](/design-system/images/uploads/itemintro_behavior2.png)
 accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z

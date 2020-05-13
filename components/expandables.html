@@ -2301,142 +2301,11 @@
 
     
     
-        <section class="sticky-header u-mb45">
-            <h2 id="usage">Usage</h2>
-            <div class="content_line__wide content_line content_line u-mb20"></div>
-                
-                    <p>
-                    </p>
-<h3 id="content-guidelines">Content guidelines</h3>
-
-<h4 id="individual">Individual</h4>
-
-<p>When only one expandable is used, it should include a stroke on all sides, heading text, and the expand/collapse minicon within a circle with a label reading “Show” or “Hide” (when possible). A white or 5% gray background can be used to highlight the section from the page background.</p>
-
-<p>The entire bar is actionable. The header should clearly indicate what the user will see when the content is expanded (it should not be a call to action). Expand icons stay aligned at the top of the row when the title breaks to multiple lines.</p>
-
-<h4 id="group">Group</h4>
-
-<p>When expandable sections are used in a group, they are stacked vertically, with each row sharing its top or bottom stroke with the adjacent row. In this use case, expandables have no background color of their own, but match whatever color they are used on (this would typically be a white page or 5% gray well). Title text should be consistent across a group of expandables.</p>
-
-<h3 id="behavior">Behavior</h3>
-
-<h4 id="collapsed">Collapsed</h4>
-
-<p>The default collapsed state should include the expand/collapse minicon within a circle and a label (if space allows). The Show/Hide label can be hidden at narrower screen widths to prevent titles prematurely breaking onto multiple lines and to reduced visual clutter.</p>
-
-<h4 id="expanded">Expanded</h4>
-
-<p>The content of an expandable can contain normal paragraphs, headings, lists, wells, and images.</p>
-
-<p>Expandables can make use of an optional stroke under the title when expanded. The title stroke can help to define the title from the expanded content for longer sections of text. It should be indented left and right to match the text within the expandable section.</p>
-
-<p>In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.</p>
-
-<h4 id="code">Code</h4>
-
-<p>Below are modifiers and elements of expandables.</p>
-
-<p>NOTE: If you use <code class="highlighter-rouge">cf-expandables.less</code> directly, be sure to run the file through <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, or your compiled Capital Framework CSS will not work perfectly in older browsers.</p>
-
-<h5 id="expanded-modifier">Expanded modifier</h5>
-
-<p>Sometimes you may want the expandable to be open by default. This is as easy as adding the <code class="highlighter-rouge">.o-expandable_content__onload-open</code> modifier to the <code class="highlighter-rouge">.o-expandable_content</code> block.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.o-expandable_content__onload-open
-</code></pre></div></div>
-
-<h5 id="padded-modifier">Padded modifier</h5>
-
-<p>Adds padding and a background color to <code class="highlighter-rouge">.o-expandable_header</code> and <code class="highlighter-rouge">.o-expandable_content</code>.</p>
-
-<p>In addition to using the <code class="highlighter-rouge">.o-expandable__padded</code> modifier you also need to make sure you are using <code class="highlighter-rouge">.o-expandable_header</code>.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.o-expandable__padded
-</code></pre></div></div>
-
-<h5 id="spaced-header">Spaced header</h5>
-
-<p>Allows you to add space between <code class="highlighter-rouge">.o-expandable_header</code> and <code class="highlighter-rouge">.o-expandable_content</code>.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.o-expandable_header__spaced
-</code></pre></div></div>
-
-<h5 id="label">Label</h5>
-
-<p>Allows you to add some styled text.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="o-expandable_label"&gt;
-    Lorem ipsum
-&lt;/span&gt;
-</code></pre></div></div>
-
-<h5 id="link">Link</h5>
-
-<p>Allows you to add some styled text to look like a link.
-Note: only use this in the expandable header</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="o-expandable_link"&gt;
-    Lorem ipsum
-&lt;/span&gt;
-</code></pre></div></div>
-
-<h5 id="header">Header</h5>
-
-<p>Creates a full-width container to house information that is always visible. This is useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.</p>
-
-<p>Combine <code class="highlighter-rouge">.o-expandable_header</code> with <code class="highlighter-rouge">.o-expandable_target</code> for a full-width trigger.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.o-expandable_header
-</code></pre></div></div>
-
-<h5 id="header-leftright">Header left/right</h5>
-
-<p>Allows you to float information left and right.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.o-expandable_header-left
-.o-expandable_header-right
-</code></pre></div></div>
-
-<h4 id="javascript-api">JavaScript API</h4>
-
-<p>A new array of Expandable instances can be created with <code class="highlighter-rouge">const expandables = Expandable.init();</code>. Each instance has the following methods for public consumption:</p>
-
-<h5 id="toggletargetstate-element-">toggleTargetState( element )</h5>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const` element = document.querySelector( '.o-expandable_target' );
-expandables[0].toggleTargetState( element );
-</code></pre></div></div>
-
-<p>Toggle an expandable to open or closed.
-Parameters:</p>
-
-<ul>
-  <li>element {HTMLNode} The expandable target HTML DOM element.</li>
-</ul>
-
-<h5 id="getlabeltext">getLabelText()</h5>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>expandables[0].getLabelText();
-</code></pre></div></div>
-
-<p>Retrieve the label text of the expandable header.
-Return:</p>
-
-<ul>
-  <li>{string} The text of the expandable’s label.</li>
-</ul>
-
-                    
-                
-            
-        </section>
-    
 
     
         <section class="sticky-header u-mb45">
             <h2 id="accessibility">Accessibility</h2>
-            <div class="content_line__wide content_line content_line u-mb20"></div>
+            <div class="content_line content_line__wide u-mb20"></div>
             <p>
                 </p>
 <p>The <code class="highlighter-rouge">find</code> function will not discover information hidden by a collapsed expandable, so use good judgement in deciding which information to hide. Non-javaScript users should default to the expanded state. Otherwise, the default state (expanded or collapsed) will depend on the circumstance.</p>
@@ -2448,7 +2317,7 @@ Return:</p>
     
         <section class="sticky-header u-mb45">
             <h2 id="research">Research</h2>
-            <div class="content_line__wide content_line content_line u-mb20"></div>
+            <div class="content_line content_line__wide u-mb20"></div>
             <p>
                 </p>
 <h3 id="google-tag-manager">Google Tag Manager</h3>
@@ -2545,8 +2414,8 @@ return text;
                     
                     
                     <a href="https://github.com/cfpb/design-system/commits/master/docs/components/expandables.md">
-                        <time datetime="2020-05-01 13:35:42 -0400">
-                             1:35:42 PM May 01, 2020
+                        <time datetime="2020-05-12 11:30:07 -0400">
+                            11:30:07 AM May 12, 2020
                         </time>
                     </a>
                 </small>

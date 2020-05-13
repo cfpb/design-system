@@ -1455,65 +1455,11 @@
 
     
     
-        <section class="sticky-header u-mb45">
-            <h2 id="usage">Usage</h2>
-            <div class="content_line__wide content_line content_line u-mb20"></div>
-                
-                    <p>
-                    </p>
-<h4 id="code">Code</h4>
-<h4 id="making-a-table-sortable">Making a table sortable</h4>
-<p>By adding the <code class="highlighter-rouge">.o-table__sortable</code> class to a <code class="highlighter-rouge">table</code>, the table becomes sortable. To allow the table to be sorted by a column, add a button to the <code class="highlighter-rouge">th</code> of the column like so:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>…
-&lt;button class="sortable"&gt;
-    Column Name
-&lt;/button&gt;
-…
-</code></pre></div></div>
-<p>The use of a <code class="highlighter-rouge">button</code> helps address certain accessibility concerns.</p>
-
-<h4 id="sorting-type">Sorting type</h4>
-<p>To sort properly, the type of the <code class="highlighter-rouge">data</code> can be specified. By default, the column’s values will be sorted as <code class="highlighter-rouge">string</code> values. However, the column can be specifically sorted by <code class="highlighter-rouge">number</code> values (in which case, the cell’s contents are stripped of non-numeric characters, then sorted by the resulting number). To see an example, the sample table later in this document sorts the “Distance” column by <code class="highlighter-rouge">number</code> value.</p>
-
-<p>To sort by <code class="highlighter-rouge">number</code> value, add the <code class="highlighter-rouge">data-sort_type="number"</code> attribute to the sorting button:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
-    …
-        &lt;th&gt;
-            &lt;button class="sortable" data-sort_type="number"&gt;Column Name&lt;/button&gt;
-        &lt;/th&gt;
-    …
-&lt;/table&gt;
-</code></pre></div></div>
-
-<h4 id="sorting-table-on-page-load">Sorting table on page load</h4>
-<p>To sort the table on page load, use the <code class="highlighter-rouge">.sorted-up</code> and <code class="highlighter-rouge">.sorted-down</code> classes:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
-    …
-        &lt;th&gt;
-            &lt;button class="sortable sorted-up"&gt;Column Name&lt;/button&gt;
-        &lt;/th&gt;
-    …
-&lt;/table&gt;
-</code></pre></div></div>
-
-<ul>
-  <li>The class <code class="highlighter-rouge">.sorted-up</code> refers to a sort from smallest to greatest (first to last), and <code class="highlighter-rouge">.sorted-down</code> refers to a sort from greatest to smallest (last to first). These classes are added to the <code class="highlighter-rouge">th</code> when sorting occurs.</li>
-  <li>Please note the importance of defining a <code class="highlighter-rouge">thead</code> and <code class="highlighter-rouge">tbody</code> to preserve the table’s header through sorting operations.</li>
-</ul>
-
-                    
-                
-            
-        </section>
-    
 
     
         <section class="sticky-header u-mb45">
             <h2 id="accessibility">Accessibility</h2>
-            <div class="content_line__wide content_line content_line u-mb20"></div>
+            <div class="content_line content_line__wide u-mb20"></div>
             <p>
                 </p>
 <p>Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec.</p>
@@ -1525,7 +1471,7 @@
     
         <section class="sticky-header u-mb45">
             <h2 id="research">Research</h2>
-            <div class="content_line__wide content_line content_line u-mb20"></div>
+            <div class="content_line content_line__wide u-mb20"></div>
             <p>
                 </p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit.</p>
@@ -1582,8 +1528,8 @@
                     
                     
                     <a href="https://github.com/cfpb/design-system/commits/master/docs/components/sortable-tables.md">
-                        <time datetime="2019-09-13 15:25:42 -0400">
-                             3:25:42 PM Sep 13, 2019
+                        <time datetime="2020-05-12 11:30:07 -0400">
+                            11:30:07 AM May 12, 2020
                         </time>
                     </a>
                 </small>

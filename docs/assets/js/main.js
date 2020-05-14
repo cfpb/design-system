@@ -42,14 +42,16 @@ function handleDocumentClick( event ) {
   event.preventDefault();
   const container = target.parentNode;
   const codeEl = document.querySelector( target.getAttribute( 'href' ) );
+  const showCodeBtn = container.querySelector( '[data-toggle-code="show"]' );
+  const hideCodeBtn = container.querySelector( '[data-toggle-code="hide"]' );
   if ( codeEl && codeEl.classList.contains( HIDDEN_CLASS ) ) {
     codeEl.classList.remove( HIDDEN_CLASS );
-    container.querySelector( '[data-toggle-code="hide"]' ).classList.remove( HIDDEN_CLASS );
-    container.querySelector( '[data-toggle-code="show"]' ).classList.add( HIDDEN_CLASS );
+    hideCodeBtn.classList.remove( HIDDEN_CLASS );
+    showCodeBtn.classList.add( HIDDEN_CLASS );
   } else {
     codeEl.classList.add( HIDDEN_CLASS );
-    container.querySelector( '[data-toggle-code="hide"]' ).classList.add( HIDDEN_CLASS );
-    container.querySelector( '[data-toggle-code="show"]' ).classList.remove( HIDDEN_CLASS );
+    hideCodeBtn.classList.add( HIDDEN_CLASS );
+    showCodeBtn.classList.remove( HIDDEN_CLASS );
   }
 
 }

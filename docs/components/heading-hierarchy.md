@@ -70,19 +70,20 @@ variation_groups:
   - variation_group_name: Print headings
     variations:
       - variation_code_snippet: >-
-          <h1 class="superheading">Display heading</h1>
+          <h1 style="font-size:60pt; font-weight:500; line-height:66pt">Display
+          heading</h1>
 
-          <h1>Heading level 1</h1>
+          <h1 style="font-size:38pt; font-weight:400; line-height:40pt">Heading level 1</h1>
 
-          <h2 style="font-size:26pt; line-height:28pt">Heading level 2</h2>
+          <h2 style="font-size:26pt; font-weight:400; line-height:28pt">Heading level 2</h2>
 
           <h3 style="font-size: 16pt; font-weight:600; line-height: 18pt">Heading level 3</h3>
 
-          <h4>Heading level 4</h4>
+          <h4 style=font-size:14pt; font-weight:500; line-height:16pt">Heading level 4</h4>
 
-          <h5>Heading level 5</h5>
+          <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading level 5</h5>
 
-          <h6>Heading level 6</h6>
+          <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading level 6</h6>
 
 
           <!--

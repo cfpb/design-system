@@ -69,7 +69,7 @@ variation_groups:
       all screen widths.
   - variation_group_name: Print headings
     variations:
-      - variation_code_snippet: >-
+      - variation_code_snippet: >
           <h1 style="font-size:60pt; font-weight:500; line-height:66pt">Display
           heading</h1>
 
@@ -83,16 +83,7 @@ variation_groups:
 
           <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading level 5</h5>
 
-          <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading level 6</h6>
-
-
-          <!--
-
-          Example of a non heading element:
-
-          <p class="h1">A non-heading element</p>
-
-          -->
+          <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading level 6</p>
   - variation_group_name: Variations
     variations:
       - variation_name: " Heading with icon"

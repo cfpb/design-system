@@ -184,14 +184,16 @@
             {% endif %}
 
             {% if page.restrictions and page.restrictions != empty %}
+                <h2 id="restrictions">Restrictions</h2>
+                <div class="content_line content_line__wide u-mb20"></div>
                 <div class="content-l component-restrictions">
-                    <div class="content-l_col content-l_col-1">
-                        <h3>Restrictions</h3>
-                    </div>
                     {% for restriction in page.restrictions %}
                         {% if restriction.restrictions_do and restriction.restrictions_do != '' %}
                             <div class="content-l_col content-l_col-1-2">
-                                <div>
+                                <div class="block
+                                            block__flush-top
+                                            block__flush-bottom
+                                            block__padded-bottom">
                                     <header class="component-restrictions_heading-do">
                                         <h4>
                                             {% include icons/check-round.svg %}
@@ -206,7 +208,10 @@
                         {% endif %}
                         {% if restriction.restrictions_do_not and restriction.restrictions_do_not != '' %}
                             <div class="content-l_col content-l_col-1-2">
-                                <div>
+                                <div class="block
+                                            block__flush-top
+                                            block__flush-bottom
+                                            block__padded-bottom">
                                     <header class="component-restrictions_heading-donot">
                                         <h4>
                                             {% include icons/close-round.svg %}

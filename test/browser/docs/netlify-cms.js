@@ -49,6 +49,9 @@ describe( 'Netlify CMS', () => {
 
     beforeEach( () => {
       browser.url( '/design-system/admin/#/collections/components/entries/buttons' );
+      // Make the browser a little wider than normal to prevent the "show details" tabs
+      // from triggering their mobile media queries
+      browser.setWindowSize( 1400, 800 );
       loginButton = browser.react$( 'LoginButton' );
     } );
 
@@ -66,6 +69,23 @@ describe( 'Netlify CMS', () => {
       expect( previewPane ).toHaveTextContaining( 'component pages are the best' );
     } );
 
+    it( 'should support switching between the various "show details" tabs', () => {
+      loginButton.waitForDisplayed();
+      loginButton.click();
+      // Wait for the editor to load
+      const editorContainer = browser.react$( 'EditorContainer' );
+      editorContainer.waitForDisplayed();
+      // The preview pane is an iframe
+      browser.switchToFrame( $( 'iframe' ) );
+      const detailsButton = $( 'button=Show details' );
+      detailsButton.click();
+      const implementationButton = $( 'a=Implementation' );
+      expect( implementationButton ).toBeDisplayed();
+      implementationButton.click();
+      // Move one level up the DOM tree
+      const implementationButtonParent = implementationButton.$( '..' );
+      expect( implementationButtonParent ).toHaveClassContaining( 'selected' );
+    } );
   } );
 
 } );

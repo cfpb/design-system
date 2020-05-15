@@ -26,7 +26,7 @@ export default class Preview extends Component {
     super( props );
     const entities = new AllHtmlEntities();
 
-    liquidEngine.registerFilter( 'slugify', initial => slugify( initial, { lower: true } ) );
+    liquidEngine.registerFilter( 'slugify', initial => slugify( initial || '', { lower: true } ) );
     liquidEngine.registerFilter( 'xml_escape', initial => entities.encode( initial ) );
     liquidEngine.registerFilter( 'markdownify', initial => marked( initial || '' ) );
 

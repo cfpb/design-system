@@ -23,23 +23,23 @@ export function init( container ) {
  * @param {DOMNode} document - Defaults to window.document but overridable for ReactDOM
  */
 export function changeTab( tab, document = window.document ) {
-  const TABS_CONTAINER_CLASS = '.govuk-tabs';
-  const TAB_CLASS = '.govuk-tabs__list-item';
+  const TABS_CONTAINER_CLASS = 'govuk-tabs';
+  const TAB_CLASS = 'govuk-tabs__list-item';
   const TAB_CLASS_SELECTED = 'govuk-tabs__list-item--selected';
-  const TAB_CONTENT_CLASS = '.govuk-tabs__panel';
+  const TAB_CONTENT_CLASS = 'govuk-tabs__panel';
   const TAB_CONTENT_CLASS_HIDDEN = 'govuk-tabs__panel--hidden';
 
   const selectedTabContent = document.querySelector( tab.getAttribute( 'href' ) );
-  const selectedTabListItem = tab.closest( TAB_CLASS );
-  const tabsContainer = tab.closest( TABS_CONTAINER_CLASS );
+  const selectedTabListItem = tab.closest( `.${TAB_CLASS}` );
+  const tabsContainer = tab.closest( `.${TABS_CONTAINER_CLASS}` );
 
   // Un-highlight all tabs
-  tabsContainer.querySelectorAll( TAB_CLASS ).forEach( tabListItem => {
+  tabsContainer.querySelectorAll( `.${TAB_CLASS}` ).forEach( tabListItem => {
     tabListItem.classList.remove( TAB_CLASS_SELECTED );
   } );
 
   // Hide all tab content
-  tabsContainer.querySelectorAll( TAB_CONTENT_CLASS ).forEach( content => {
+  tabsContainer.querySelectorAll( `.${TAB_CONTENT_CLASS}` ).forEach( content => {
     content.classList.add( TAB_CONTENT_CLASS_HIDDEN );
   } );
 

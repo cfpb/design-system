@@ -9,7 +9,7 @@ export function init( container ) {
   if ( tabs && tabs.length > 0 ) {
     for ( let i = 0; i < tabs.length; i++ ) {
       const tab = tabs[i];
-      new Tabs( tab ).init( );
+      new Tabs( tab ).init();
     }
   }
 }
@@ -30,16 +30,16 @@ export function changeTab( tab, document = window.document ) {
   const TAB_CONTENT_CLASS_HIDDEN = 'govuk-tabs__panel--hidden';
 
   const selectedTabContent = document.querySelector( tab.getAttribute( 'href' ) );
-  const selectedTabListItem = tab.closest( `.${TAB_CLASS}` );
-  const tabsContainer = tab.closest( `.${TABS_CONTAINER_CLASS}` );
+  const selectedTabListItem = tab.closest( `.${ TAB_CLASS }` );
+  const tabsContainer = tab.closest( `.${ TABS_CONTAINER_CLASS }` );
 
   // Un-highlight all tabs
-  tabsContainer.querySelectorAll( `.${TAB_CLASS}` ).forEach( tabListItem => {
+  tabsContainer.querySelectorAll( `.${ TAB_CLASS }` ).forEach( tabListItem => {
     tabListItem.classList.remove( TAB_CLASS_SELECTED );
   } );
 
   // Hide all tab content
-  tabsContainer.querySelectorAll( `.${TAB_CONTENT_CLASS}` ).forEach( content => {
+  tabsContainer.querySelectorAll( `.${ TAB_CONTENT_CLASS }` ).forEach( content => {
     content.classList.add( TAB_CONTENT_CLASS_HIDDEN );
   } );
 

@@ -84,6 +84,12 @@ variation_groups:
           <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading level 5</h5>
 
           <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading level 6</p>
+        variation_name: ""
+        variation_description: >+
+          This hierarchy should serve as a basis for 8.5 x 11” documents, but
+          appropriate scaling should be explored for content of larger or
+          smaller dimensions.
+
   - variation_group_name: Variations
     variations:
       - variation_name: " Heading with icon"

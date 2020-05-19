@@ -1,7 +1,7 @@
 const { AllHtmlEntities } = require( 'html-entities' );
 import React, { Component } from 'react';
 import { ReactLiquid, liquidEngine } from 'react-liquid';
-import { changeTab, initTabs } from '../../../assets/js/tabs.js';
+import { changeTab, init as initTabs } from '../../../assets/js/tabs.js';
 import ReactDOM from 'react-dom';
 import marked from 'marked';
 import slugify from 'slugify';
@@ -14,11 +14,6 @@ const templateWithIcons = template.replace(
   /{%\s+include\s+\/?icons\/([\w-]+)\.svg\s+%}/g,
   ( match, icon ) => require( `../../../_includes/icons/${ icon }.svg` )
 );
-
-/**
- * @param {MouseEvent} event - The mouse event object from the click.
- */
-
 
 export default class Preview extends Component {
 
@@ -33,31 +28,26 @@ export default class Preview extends Component {
     this.containerRef = React.createRef();
   }
 
+  /**
+   * @param {MouseEvent} event - The mouse event object from the click.
+   */
   handleClick( event ) {
     const target = event.target;
-    // Returns the preview component's native DOM element for
-    // use with our non-React vanilla JS toggling and tabs functionality.
-    // https://reactjs.org/docs/react-dom.html#finddomnode
-    const doc = ReactDOM.findDOMNode( this );
     if ( target.matches( '[data-toggle-code]' ) ) {
       event.preventDefault();
-      toggleDetails( target, doc );
+      toggleDetails( target, this.containerRef.current );
     }
     if ( target.matches( '.govuk-tabs__tab' ) ) {
       event.preventDefault();
-      changeTab( target, doc );
+      changeTab( target, this.containerRef.current );
     }
   }
 
   componentDidMount() {
-    const container = ReactDOM.findDOMNode( this.containerRef.current );
-    container.addEventListener( 'click', this.handleClick );
+    const container = this.containerRef.current;
     // The Gov UK tab styles require a parent element to have .js-enabled, see tabs.less
     container.classList.add( 'js-enabled' );
-    // Initialize the Gov UK tabs once everything has finished loading
-    window.addEventListener( 'load', () => {
-      initTabs( container );
-    } );
+    initTabs( container );
   }
 
   render() {
@@ -65,7 +55,7 @@ export default class Preview extends Component {
       page: this.props.entry.toJS().data
     };
     return (
-      <div ref={this.containerRef}>
+      <div ref={this.containerRef} onClick={event => this.handleClick( event )}>
         <ReactLiquid template={templateWithIcons} data={data} html />
       </div>
     );

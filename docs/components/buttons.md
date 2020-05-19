@@ -170,13 +170,6 @@ variation_groups:
               <button class="a-btn">Maybe So</button>
           </div>
         variation_name: Default buttton group
-      - variation_name: Super button group
-        variation_code_snippet: |-
-          <div class="m-btn-group">
-              <button class="a-btn a-btn__super">Yes</button>
-              <button class="a-btn a-btn__super">No</button>
-              <button class="a-btn a-btn__super">Maybe So</button>
-          </div>
 use_cases: >-
   Use primary buttons for actions that go to the next step. Use secondary
   buttons for actions that happen on the current page. Generous white space

@@ -11,7 +11,7 @@ description: Buttons signal actions. They should be used sparingly; each
   lead users to another page or further informationz.
 variation_groups:
   - variation_group_name: Standard buttons
-    variation_group_description: Optional introductory paragraph
+    variation_group_description: ""
     variations:
       - variation_code_snippet: >-
           <button class="a-btn" title="Default state">Default state</button>
@@ -44,7 +44,24 @@ variation_groups:
           link
 
           when possible.
-        variation_specs: Some specs could go here.
+        variation_specs: |-
+          Default
+          - Avenir Next Medium, 16px, (#ffffff)
+          - Background: Pacific (#0072ce)
+          - Top and bottom padding: 10px
+          - Left and right padding: 15px
+          - Border radius: 4px
+
+          Hover
+          - Background: Dark Pacific (#0050b4)
+
+          Focused
+          - Background: Dark Pacific (#0050b4)
+          - Outline: Dotted 1px, Pacific (#0072ce)
+          - Outline offset: 1px
+
+          Active
+          - Background: Navy (#254b87)
         variation_name: Primary buttons
       - variation_code_snippet: >-
           <button class="a-btn a-btn__secondary" title="Default state">Default
@@ -70,6 +87,20 @@ variation_groups:
 
           {%- endmacro %}
         variation_name: Secondary buttons
+        variation_specs: |-
+          Default
+          - Background: Gray (#5a5d61)
+
+          Hover
+          - Background: Dark Gray (#43484e)
+
+          Focused
+          - Background: Dark Gray (#43484e)
+          - Outline: Dotted 1px, Gray (#5a5d61)
+          - Outline offset: 1px
+
+          Active
+          - Background: CFPB Black (#101820)
       - variation_code_snippet: >-
           <button class="a-btn a-btn__disabled" title="Default state">Default
           state</button>
@@ -90,6 +121,15 @@ variation_groups:
 
           {%- endmacro %}
         variation_name: Disabled buttons
+        variation_specs: |-
+          Default/Hover/Active
+          - Avenir Next Medium, 16px, Gray (#5a5d61)
+          - Background: Gray 20 (#d2d3d5)
+          - Cursor set to `not-allowed`
+
+          Focused
+          - Outline: Dotted 1px, Gray 20 (#d2d3d5)
+          - Outline offset: 1px
       - variation_code_snippet: >-
           <button class="a-btn a-btn__warning" title="Default state">Default
           state</button>
@@ -110,8 +150,22 @@ variation_groups:
 
           {%- endmacro %}
         variation_name: Destructive buttons
+        variation_specs: |-
+          Default
+          - Background: Red (#d14124)
+
+          Hover
+          - Background: Dark Red (#b63014)
+
+          Focused
+          - Background: Dark Red (#b63014)
+          - Outline: Dotted 1px, Red (#d14124)
+          - Outline offset: 1px
+
+          Active
+          - Background: Dark Gray (#43484e)
   - variation_group_name: Sizes
-    variation_group_description: Optional introductory paragraph
+    variation_group_description: ""
     variations:
       - variation_code_snippet: >-
           <button class="a-btn a-btn__super" title="Default state">Default
@@ -125,7 +179,8 @@ variation_groups:
 
 
           <button class="a-btn a-btn__super active" title="Active state">Active state</button>
-        variation_description: Use super buttons to really get users' attention.
+        variation_description: At the designer’s discretion, use the super button on
+          consumer-facing products for an important call to action.
         variation_jinja_code_snippet: |-
           {% macro render(value) -%}
 
@@ -137,6 +192,10 @@ variation_groups:
 
           {%- endmacro %}
         variation_name: Super buttons
+        variation_specs: |-
+          - Avenir Next Medium, 18px, White (#ffffff)
+          - Top and bottom padding: 15px
+          - Left and right padding: 30px
       - variation_code_snippet: >-
           <button class="a-btn a-btn__full-on-xs" title="Default state">Default
           state</button>

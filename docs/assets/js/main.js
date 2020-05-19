@@ -1,8 +1,8 @@
+import { TOGGLE_ATTRIBUTE, toggleDetails } from './toggle-details.js';
 import { Tabs } from 'govuk-frontend';
 import AnchorJS from 'anchor-js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
 import Table from '@cfpb/cfpb-tables/src/Table';
-import toggleDetails from './toggle-details.js';
 
 const anchors = new AnchorJS();
 // Add anchors to all headings (except page title headings)
@@ -35,7 +35,7 @@ if ( tabs && tabs.length > 0 ) {
  */
 function handleDocumentClick( event ) {
   const target = event.target;
-  if ( target.matches( '[data-toggle-code]' ) ) {
+  if ( target.matches( `[${ TOGGLE_ATTRIBUTE }]` ) ) {
     toggleDetails( target );
   }
 }

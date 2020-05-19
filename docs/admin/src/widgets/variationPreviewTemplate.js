@@ -1,12 +1,13 @@
-const { AllHtmlEntities } = require( 'html-entities' );
 import React, { Component } from 'react';
 import { ReactLiquid, liquidEngine } from 'react-liquid';
+import { TOGGLE_ATTRIBUTE, toggleDetails } from '../../../assets/js/toggle-details.js';
 import { changeTab, init as initTabs } from '../../../assets/js/tabs.js';
+import { AllHtmlEntities } from 'html-entities';
 import ReactDOM from 'react-dom';
 import marked from 'marked';
 import slugify from 'slugify';
 import template from '../../../_includes/variation-content.html';
-import toggleDetails from '../../../assets/js/toggle-details.js';
+
 
 // react-liquid (https://github.com/aquibm/react-liquid/) isn't able to `include` other files so we
 // replace instances of {% include icons/XXXXX.svg %} with the inlined SVG
@@ -33,7 +34,7 @@ export default class Preview extends Component {
    */
   handleClick( event ) {
     const target = event.target;
-    if ( target.matches( '[data-toggle-code]' ) ) {
+    if ( target.matches( `[${ TOGGLE_ATTRIBUTE }]` ) ) {
       event.preventDefault();
       toggleDetails( target, this.containerRef.current );
     }

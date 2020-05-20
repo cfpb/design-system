@@ -229,6 +229,21 @@ variation_groups:
               <button class="a-btn">Maybe So</button>
           </div>
         variation_name: Default buttton group
+  - variation_group_name: Buttons with icons
+    variations:
+      - variation_name: Icon buttons
+        variation_description: Example below of buttons with icon on left and icon on
+          right ("back" and "next")
+        variation_code_snippet: ""
+      - variation_name: Animated icon
+        variation_description: Use an animated icon in a button to reassure the user
+          that the action they are attempting to perform is functioning as
+          intended.
+      - {}
+    variation_group_description: Use icons consistently. Each icon should be used
+      exclusively for one action. Icons appear to the left of the button text.
+      Buttons that have “forward” actions have icons to the right of the text,
+      and those with “back” actions have icons to the left.
 use_cases: >-
   Use primary buttons for actions that go to the next step. Use secondary
   buttons for actions that happen on the current page. Generous white space

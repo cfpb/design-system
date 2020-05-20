@@ -34,7 +34,7 @@ describe( 'The "show details" toggling feature', () => {
         } );
 
         it( 'should hide snippet tabs by default', () => {
-          if ( !showDetailsButton || !hideDetailsButton ) {
+          if ( !showDetailsButton.isExisting() || !hideDetailsButton.isExisting() ) {
             this.skip();
           }
           expect( showDetailsButton.isDisplayed() ).toBeTruthy();
@@ -43,7 +43,7 @@ describe( 'The "show details" toggling feature', () => {
         } );
 
         it( 'should show code snippets when toggle button is clicked', () => {
-          if ( !showDetailsButton || !hideDetailsButton ) {
+          if ( !showDetailsButton.isExisting() || !hideDetailsButton.isExisting() ) {
             this.skip();
           }
           showDetailsButton.click();
@@ -53,7 +53,7 @@ describe( 'The "show details" toggling feature', () => {
         } );
 
         it( 'should re-hide code snippets when toggle button is clicked again', () => {
-          if ( !showDetailsButton || !hideDetailsButton ) {
+          if ( !showDetailsButton.isExisting() || !hideDetailsButton.isExisting() ) {
             this.skip();
           }
           hideDetailsButton.click();

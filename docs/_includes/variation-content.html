@@ -66,8 +66,8 @@
             {% if code_snippet or jinja_snippet or implementation or specs %}
 
             <div class="a-toggle_code">
-                <button href="#{{ variation.variation_name | slugify }}-code-{{ forloop.index }}" class="a-btn a-btn__link" data-toggle-code="show">Show details</button>
-                <button href="#{{ variation.variation_name | slugify }}-code-{{ forloop.index }}" class="a-btn a-btn__link u-hidden" data-toggle-code="hide">Hide details</button>
+                <button href="#{{ variation.variation_name | slugify }}-code-{{ forloop.index }}" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#{{ variation.variation_name | slugify }}-code-{{ forloop.index }}" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
             <div class="govuk-tabs u-hidden" data-module="tabs" id="{{ variation.variation_name | slugify }}-code-{{ forloop.index }}">

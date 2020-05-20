@@ -9,8 +9,8 @@ describe( 'The code snippet toggling feature', () => {
   before( () => {
     browser.url( '/design-system/components/buttons' );
     browser.setWindowSize( 1024, 768 );
-    codeShowButton = $( '.a-toggle_code [data-toggle-code="show"]' );
-    codeHideButton = $( '.a-toggle_code [data-toggle-code="hide"]' );
+    codeShowButton = $( 'button=Show details' );
+    codeHideButton = $( 'button=Hide details' );
     codeSnippetTabs = [ ...$$( '.govuk-tabs' ) ];
     areCodeSnippetTabsVisible = () => codeSnippetTabs.some( snippet => snippet.isDisplayed() );
   } );

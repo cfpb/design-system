@@ -71,6 +71,7 @@
             {% if code_snippet or jinja_snippet or implementation or specs %}
 
             {% capture variation_slug %}
+                details-
                 {{ variation.variation_name }}
                 {{ variation.variation_description }}
                 {{ variation.variation_code_snippet }}

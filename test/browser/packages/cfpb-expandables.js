@@ -12,7 +12,7 @@ describe( 'Basic CFPB expandable', function() {
     // Selects the first expandable live code sample, "Basic expandable"
     expandableHeader = $( '.a-live_code button.o-expandable_header' );
     expandableContent = $( '.a-live_code .o-expandable_content' );
-    isExpandableContentVisible = function() expandableContent.isDisplayed();
+    isExpandableContentVisible = () => expandableContent.isDisplayed();
   } );
 
   it( 'should hide expandable content on page load', function() {

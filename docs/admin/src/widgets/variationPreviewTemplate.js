@@ -25,6 +25,7 @@ export default class Preview extends Component {
     liquidEngine.registerFilter( 'slugify', initial => slugify( initial || '', { lower: true } ) );
     liquidEngine.registerFilter( 'xml_escape', initial => entities.encode( initial ) );
     liquidEngine.registerFilter( 'markdownify', initial => marked( initial || '' ) );
+    liquidEngine.registerFilter( 'strip', initial => initial && initial.trim() );
 
     this.containerRef = React.createRef();
   }

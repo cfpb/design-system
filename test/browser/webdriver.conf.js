@@ -17,7 +17,7 @@ exports.config = {
   // directory is where your package.json resides, so `wdio` will be called from there.
   //
   specs: [
-    './test/browser/**/*.js'
+    './test/browser/docs/show-details.js'
   ],
   // Patterns to exclude.
   exclude: [
@@ -56,7 +56,7 @@ exports.config = {
     'goog:chromeOptions': {
       // to run chrome headless the following flags are required
       // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
-      args: [ '--headless', '--disable-gpu' ]
+     //  args: [ '--headless', '--disable-gpu' ]
     }
     // If outputDir is provided WebdriverIO can capture driver session logs
     // it is possible to configure which logTypes to include/exclude.

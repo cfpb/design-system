@@ -79,14 +79,14 @@
                 {{ variation.variation_implementation }}
                 {{ variation.variation_specs }}
             {% endcapture %}
-            {% assign variation_slug = variation_slug | strip | truncate: 20, '' | slugify %}
+            {% assign variation_slug = variation_slug | strip | slugify | truncate: 40, '' %}
 
             <div class="a-toggle_code">
-                <button href="#{{ variation_slug }}-code-{{ forloop.index }}" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#{{ variation_slug }}-code-{{ forloop.index }}" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#{{ variation_slug }}-{{ forloop.index }}" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#{{ variation_slug }}-{{ forloop.index }}" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="{{ variation_slug }}-code-{{ forloop.index }}">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="{{ variation_slug }}-{{ forloop.index }}">
                 <ul class="govuk-tabs__list">
                     {% if code_snippet %}
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">

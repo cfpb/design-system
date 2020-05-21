@@ -37,6 +37,20 @@ variation_groups:
           | Heading 2 | Avenir Next Regular. 34px / 42px | Drops to
           Heading 3\r |\ 
 
+          | Heading 3 | Avenir Next Regular, 22px / 28px |\ 
+
+          <601px wide: Drops to Heading 4 |
+
+          | Heading 4 | Avenir Next Medium, 18px / 22px | <601px wide:
+          Drops to 16px / 18px |
+
+          | Heading 5 | Avenir Next Demi Bold, All caps, 14px / 18px,
+          1px letter spacing | <601px wide: No change |
+
+          | Heading 6 | Avenir Next Demi Bold, All caps, 12px / 15px,
+          1px letter spacing | <601px wide: No change |
+
+
 
           Element | Variable name | Variable | web value | Print value
 
@@ -90,6 +104,16 @@ variation_groups:
           appropriate scaling should be explored for content of larger or
           smaller dimensions.
 
+        variation_specs: |-
+          | Heading   | Specs                            |
+          | --------- | -------------------------------- |
+          | Display   | Avenir Next Medium, 60pt / 66pt  |
+          | Heading 1 | Avenir Next Regular, 38pt / 40pt |
+          | Heading 2 | Avenir Next Regular, 26pt / 28pt |
+          | Heading 3 | Avenir Next Regular, 16pt / 18pt |
+          | Heading 4 | Avenir Next Medium, 14pt / 16pt  |
+          | Heading 5 | Avenir Next Demi Bold, 10pt / 12pt, All caps | 
+          | Heading 6 | Avenir Next Medium, 12pt /14 pt |
   - variation_group_name: Variations
     variations:
       - variation_name: " Heading with icon"

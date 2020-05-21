@@ -1602,12 +1602,65 @@
                 
                     'variation_name1': 'Select dropdown',
                     'variation_description1': "",
-                    'variation_code_snippet1': `&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+                    'variation_code_snippet1': `&lt;!--Default state--&gt;
+
+&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
     &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select_default&quot;&gt;
-        Label
+        Default 
     &lt;/label&gt;
     &lt;div class=&quot;a-select&quot;&gt;
         &lt;select id=&quot;test_select_default&quot;&gt;
+            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;!--Hover state--&gt;
+&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__hover&quot;&gt;
+       Hover
+    &lt;/label&gt;
+    &lt;div class=&quot;a-select&quot;&gt;
+        &lt;select id=&quot;test_select__hover&quot; class=&quot;hover&quot;&gt;
+            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;!--Focus state--&gt;
+
+&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__focus&quot;&gt;
+        Focus
+    &lt;/label&gt;
+    &lt;div class=&quot;a-select&quot;&gt;
+        &lt;select id=&quot;test_select__focus&quot; class=&quot;focus&quot;&gt;
+            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;!--Disabled state--&gt;
+
+&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__disabled&quot;&gt;Disabled&lt;/label&gt;
+    &lt;div class=&quot;a-select a-select__disabled&quot;&gt;
+        &lt;select id=&quot;test_select__disabled&quot; disabled&gt;
             &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
             &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
             &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
@@ -1638,7 +1691,7 @@
 
 
             'title': 'Dropdowns and multi-selects',
-            'description': "More information can be found at:  http://cfpb.github.io/design-manual/page-components/form-fields.html#dropdowns  https://cfpb.github.io/capital-framework/components/cf-forms/#select-dropdown  https://cfpb.github.io/capital-framework/components/cf-forms/#basic-multiselect",
+            'description': "Use dropdowns for a finite list of options, for structured data, or for a list of options that are already familiar to the user. Otherwise, consider radio buttons or text input fields instead.",
             'use_cases': "While dropdowns are easy to implement, they aren’t always the best choice from a usability perspective.Use dropdowns when:  You have a long list of finite options. If the list is shorter than around six items, radio buttons might work better. If the options include something open ended, a text input field is better.  You need structured data for a long list. For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a dropdown facilitates this standardization.  The list options are familiar to the user. A dropdown is not a good place to introduce new or complicated terms or concepts. For instance, if the question is “What’s your favorite color of the rainbow,” a dropdown could be a good choice. The options are familiar and there are more than six. You don’t want the user to have to read and absorb a lot of new information in a dropdown.",
             'content_guidelines': "",
             'behavior': "",

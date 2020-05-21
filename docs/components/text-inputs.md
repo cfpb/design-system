@@ -102,7 +102,7 @@ variation_groups:
           <textarea class="a-text-input"
                     id="textarea-example-default"
                     placeholder="Enter text…">Placeholder text</textarea>
-  - variation_group_name: Buttons and inputs
+  - variation_group_name: Variations
     variations:
       - variation_name: Text input with a button
         variation_description: These are used for simple forms where a full filter isn’t necessary.
@@ -150,10 +150,7 @@ variation_groups:
                   <button class="a-btn">Search</button>
               </div>
           </div>
-  - variation_group_name: Full-width modifiers
-    variations:
-      - variation_name: Full-width text input
-        variation_description: ""
+      - variation_name: Full-width text inputs
         variation_code_snippet: >-
           <div class="m-form-field">
               <label class="a-label a-label__heading" for="full-textinput-example">
@@ -164,7 +161,7 @@ variation_groups:
                     id="full-textinput-example"
                     value="Placeholder text">
           </div>
-      - variation_name: Full-width textarea input
+      - variation_name: Full-width textarea inputs
         variation_code_snippet: >-
           <div class="m-form-field">
               <label class="a-label a-label__heading" for="full-textarea-example">
@@ -173,7 +170,6 @@ variation_groups:
               <textarea class="a-text-input a-text-input__full"
                         id="full-textarea-example">Placeholder text</textarea>
           </div>
-    variation_group_description: ""
 use_cases: ""
 content_guidelines: >-
   Choose the appropriate width for text input fields so they match the kind of

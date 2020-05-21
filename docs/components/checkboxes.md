@@ -129,7 +129,12 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled" disabled>
               <label class="a-label" for="test_checkbox_lg_disabled">Label</label>
           </div>
-      - variation_name: DIsabled/selected state
+        variation_specs: |-
+          Checkbox
+          - Border: 1 px, Gray 60 (#919395)
+          - Background: Gray 20 (#d2d3d5)
+          - Avenir Next Regular, 16 px, Gray (#5a5d61)
+      - variation_name: Disabled/selected state
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox
           m-form-field__lg-target">

@@ -2595,7 +2595,7 @@ Example of a non heading element:
 
                 
                     'variation_name1': '',
-                    'variation_description1': "This hierarchy should serve as a basis for 8.5 x 11” documents, but appropriate scaling should be explored for content of larger or smaller dimensions.",
+                    'variation_description1': "",
                     'variation_code_snippet1': `&lt;h1 style=&quot;font-size:60pt; font-weight:500; line-height:66pt&quot;&gt;Display heading&lt;/h1&gt;
 &lt;h1 style=&quot;font-size:38pt; font-weight:400; line-height:40pt&quot;&gt;Heading level 1&lt;/h1&gt;
 &lt;h2 style=&quot;font-size:26pt; font-weight:400; line-height:28pt&quot;&gt;Heading level 2&lt;/h2&gt;
@@ -2610,16 +2610,9 @@ Example of a non heading element:
                 
 
                 
-                    'variation_name1': ' Heading with icon',
-                    'variation_description1': "",
-                    'variation_code_snippet1': `&lt;a href=&quot;#&quot; class=&quot;a-heading a-heading__icon&quot;&gt;
-    {% include icons/dialogue.svg %}
-    Heading with icon
-&lt;/a&gt;`,
-                
-                    'variation_name2': 'Heading with icon: Meta header',
-                    'variation_description2': "This example of a heading with icon shows .m-meta-header_left using the .a-heading__icon pattern and .m-meta-header_right using the .a-date pattern but you could use other patterns in place of them. Or you can even swap them so that date is attached to .m-meta-header_left and .a-heading.a-heading__icon is attached to .m-meta-header_right.",
-                    'variation_code_snippet2': `&lt;header class=&quot;m-meta-header&quot;&gt;
+                    'variation_name1': 'Heading with icon ',
+                    'variation_description1': "The heading with icon is typically used for listing categories in a meta header on pages like the blog page.",
+                    'variation_code_snippet1': `&lt;header class=&quot;m-meta-header&quot;&gt;
     &lt;div class=&quot;m-meta-header_right&quot;&gt;
         &lt;span class=&quot;a-date&quot;&gt;
             Nov 4, 2013
@@ -2639,24 +2632,24 @@ Example of a non heading element:
     &lt;/div&gt;
 &lt;/header&gt;`,
                 
-                    'variation_name3': 'Eyebrow headings',
-                    'variation_description3': "Use the eyebrow heading to label page headings that are part of a larger group of related pages, or when additional context can help orient the user to the page’s purpose.The eyebrow heading is secondary to and serves to support the main page heading. So it should be concise and shorter than the main page heading.",
-                    'variation_code_snippet3': `&lt;!--The code snippet below is only used for display purposes. The eyebrow heading should be built using div tags:
+                    'variation_name2': 'Eyebrow headings',
+                    'variation_description2': "Use the eyebrow heading to label page headings that are part of a larger group of related pages, or when additional context can help orient the user to the page’s purpose.The eyebrow heading is secondary to and serves to support the main page heading. So it should be concise and shorter than the main page heading.An example of the eyebrow heading can be found on the Buying a House journey pages.",
+                    'variation_code_snippet2': `&lt;!--The code snippet below is only used for display purposes. The eyebrow heading should be built using div tags:
 
 &lt;div class =&quot;eyebrow&quot;&gt;
 
 The text will be styled the same as H5 heading text.
 --&gt;
 
-&lt;p class=&quot;h5&quot;&gt;Eyebrow heading&lt;/p&gt;
+&lt;h5&gt;eyebrow heading&lt;/h5&gt;
 &lt;h1&gt;Heading 1&lt;/h1&gt;
 `,
                 
-                    'variation_name4': 'Slug heading',
-                    'variation_description4': "Use headers to lead content.",
-                    'variation_code_snippet4': `&lt;header class=&quot;m-slug-header&quot;&gt;
+                    'variation_name3': 'Slug heading',
+                    'variation_description3': "Slug headings are used to lead content on sidebars and prefooters, inset modules, and inset email modules.",
+                    'variation_code_snippet3': `&lt;header class=&quot;m-slug-header&quot;&gt;
     &lt;h2 class=&quot;a-heading&quot;&gt;
-        Blog summary
+        Slug heading
     &lt;/h2&gt;
 &lt;/header&gt;`,
                 
@@ -2666,7 +2659,7 @@ The text will be styled the same as H5 heading text.
             'title': 'Headings',
             'description': "Consistent scaling, weights, and capitalization are used to create distinction between heading levels.",
             'use_cases': "",
-            'content_guidelines': "Headings should be sentence case. * Do not include punctuation in headings. * Keep headings to one line on desktop when possible.",
+            'content_guidelines': "Headings should be sentence case.  Do not include punctuation in headings.  Keep headings to one line on desktop when possible.",
             'behavior': "At screen widths of 600px and below, the Display heading and Headings 1-4 drop in size. Headings 5-6 remain consistent at all screen widths.StyleSpacingWhen a heading is followed by paragraph text, include 30px of space below Display and 15px below Headings 1–6.When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.For stacked headings, include 30 px of space after the primary heading.For multiple paragraphs within the same section set the space between paragraphs to 15px.”",
             'accessibility': "Since categories can be repetitive, we suggest placing a label with .u-visually-hidden prior to the headings with icons to add more context for screen readers (see Meta Header).",
             'research': "",

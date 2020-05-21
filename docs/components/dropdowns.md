@@ -4,9 +4,9 @@ layout: variation
 section: components
 secondary_section: Forms
 status: Released
-description: "Use dropdowns for a finite list of options, for structured data,
-  or for a list of options that are already familiar to the user. Otherwise,
-  consider radio buttons or text input fields instead. "
+description: Dropdowns allow the user to choose from a finite list of options.
+  They are not always the best choice from a usability perspective; see the
+  usage section below for more details.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -87,7 +87,7 @@ variation_groups:
               </div>
           </div>
         variation_description: ""
-        variation_name: Select dropdown
+        variation_name: ""
         variation_specs: |-
           Default 
           - Height: 35 px
@@ -107,6 +107,9 @@ variation_groups:
           Disabled
           - Background: Gray 10 (#e7e8e9)
           - Avenir Next Regular, 16 px, Gray (#5a5d61)
+    variation_group_name: Dropdowns
+  - variation_group_name: Multiselects
+    variations:
       - variation_code_snippet: >-
           <div class="m-form-field m-form-field__select">
               <label class="a-label a-label__heading" for="test_select__multiple">
@@ -123,8 +126,6 @@ variation_groups:
                   <option value="option4">Option 8</option>
               </select>
           </div>
-        variation_description: ""
-        variation_name: Multiselect
 use_cases: >-
   While dropdowns are easy to implement, they aren’t always the best choice from
   a usability perspective.

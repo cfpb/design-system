@@ -23,7 +23,7 @@ variation_groups:
           -->
         variation_description: ""
         variation_jinja_code_snippet: ""
-        variation_name: Web headings
+        variation_name: ""
         variation_specs: "| Heading   |
           Specs                                                             |
           Responsive behavior at < 601px |
@@ -78,7 +78,7 @@ variation_groups:
           <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading level 5</h5>
 
           <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading level 6</p>
-        variation_name: Print headings
+        variation_name: ""
         variation_description: ""
         variation_specs: |-
           | Heading   | Specs                            |

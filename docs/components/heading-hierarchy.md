@@ -23,7 +23,7 @@ variation_groups:
           -->
         variation_description: ""
         variation_jinja_code_snippet: ""
-        variation_name: .
+        variation_name: Web headings
         variation_specs: "| Heading   |
           Specs                                                             |
           Responsive behavior at < 601px |
@@ -78,12 +78,8 @@ variation_groups:
           <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading level 5</h5>
 
           <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading level 6</p>
-        variation_name: .
-        variation_description: >+
-          This hierarchy should serve as a basis for 8.5 x 11” documents, but
-          appropriate scaling should be explored for content of larger or
-          smaller dimensions.
-
+        variation_name: Print headings
+        variation_description: ""
         variation_specs: |-
           | Heading   | Specs                            |
           | --------- | -------------------------------- |
@@ -94,10 +90,17 @@ variation_groups:
           | Heading 4 | Avenir Next Medium, 14pt / 16pt  |
           | Heading 5 | Avenir Next Demi Bold, 10pt / 12pt, All caps | 
           | Heading 6 | Avenir Next Medium, 12pt /14 pt |
+    variation_group_description: >+
+      This hierarchy should serve as a basis for 8.5 x 11” documents, but
+      appropriate scaling should be explored for content of larger or smaller
+      dimensions.
+
   - variation_group_name: Variations
     variations:
       - variation_name: "Heading with icon "
-        variation_description: ""
+        variation_description: "The heading with icon is typically used for listing
+          categories in a meta header on pages like the [blog
+          page](https://www.consumerfinance.gov/about-us/blog/). "
         variation_code_snippet: |-
           <header class="m-meta-header">
               <div class="m-meta-header_right">
@@ -125,7 +128,16 @@ variation_groups:
           attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is
           attached to `.m-meta-header_right`.
       - variation_name: Eyebrow headings
-        variation_description: ""
+        variation_description: >-
+          Use the eyebrow heading to label page headings that are part of a
+          larger group of related pages, or when additional context can help
+          orient the user to the page’s purpose.
+
+
+          The eyebrow heading is secondary to and serves to support the main page heading. So it should be concise and shorter than the main page heading. 
+
+
+          An example of the eyebrow heading can be found on the [Buying a House journey pages](https://www.consumerfinance.gov/owning-a-home/process/prepare/).
         variation_code_snippet: >
           <!--The code snippet below is only used for display purposes. The
           eyebrow heading should be built using div tags:
@@ -139,20 +151,19 @@ variation_groups:
           -->
 
 
-          <p class="h5">Eyebrow heading</p>
+          <h5>eyebrow heading</h5>
 
           <h1>Heading 1</h1>
       - variation_name: Slug heading
-        variation_description: Use headers to lead content.
+        variation_description: "Slug headings are used to lead content on sidebars and
+          prefooters, inset modules, and inset email modules. "
         variation_code_snippet: |-
           <header class="m-slug-header">
               <h2 class="a-heading">
-                  Blog summary
+                  Slug heading
               </h2>
           </header>
-    variation_group_description: "The heading variations below have specific use
-      cases. For example, headings with icons appear on [blog
-      pages](https://www.consumerfinance.gov/about-us/blog/). "
+    variation_group_description: The heading variations below have specific use cases.
 use_cases: ""
 content_guidelines: |-
   Headings should be sentence case. 

@@ -106,39 +106,6 @@ variation_groups:
           #### Specs for textarea inputs
           - Border: 1 px, Gray 60 (#919395)
           - Avenir Next Regular, 16 px, Gray (#5a5d61)
-      - variation_code_snippet: |-
-          <div class="o-form__input-w-btn">
-              <div class="o-form__input-w-btn_input-container">
-                  <input class="a-text-input" type="text" title="Test input">
-              </div>
-              <div class="o-form__input-w-btn_btn-container">
-                  <button class="a-btn">Search</button>
-              </div>
-          </div>
-        variation_description: These are used for simple forms where a full filter isn’t necessary.
-        variation_jinja_code_snippet: ""
-        variation_name: Text input with a button
-      - variation_code_snippet: >-
-          <div class="o-form__input-w-btn">
-              <div class="o-form__input-w-btn_input-container">
-                  <div class="m-btn-inside-input">
-                      <input type="text"
-                          value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
-                          title="Test input"
-                          class="a-text-input">
-                      <button class="a-btn a-btn__link">
-                          {% include icons/error.svg %}
-                          <span class="u-visually-hidden">Clear</span>
-                      </button>
-                  </div>
-              </div>
-              <div class="o-form__input-w-btn_btn-container">
-                  <button class="a-btn">Search</button>
-              </div>
-          </div>
-        variation_description: This example combines both of the previous patterns,
-          creating a typical site search form.
-        variation_name: Button inside a text input with another button
     variation_group_name: Textarea inputs
   - variation_group_name: Full-width modifiers
     variations:
@@ -166,6 +133,17 @@ variation_groups:
     variation_group_description: ""
   - variation_group_name: Buttons and inputs
     variations:
+      - variation_name: Text input with a button
+        variation_description: These are used for simple forms where a full filter isn’t necessary.
+        variation_code_snippet: |-
+          <div class="o-form__input-w-btn">
+              <div class="o-form__input-w-btn_input-container">
+                  <input class="a-text-input" type="text" title="Test input">
+              </div>
+              <div class="o-form__input-w-btn_btn-container">
+                  <button class="a-btn">Search</button>
+              </div>
+          </div>
       - variation_name: Button inside a text input
         variation_code_snippet: >-
           <div class="m-btn-inside-input">

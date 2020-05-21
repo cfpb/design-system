@@ -1604,6 +1604,31 @@ Example of a non heading element:
       <td> </td>
       <td> </td>
     </tr>
+    <tr>
+      <td>Heading 3</td>
+      <td>Avenir Next Regular, 22px / 28px</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>&lt;601px wide: Drops to Heading 4</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Heading 4</td>
+      <td>Avenir Next Medium, 18px / 22px</td>
+      <td>&lt;601px wide: Drops to 16px / 18px</td>
+    </tr>
+    <tr>
+      <td>Heading 5</td>
+      <td>Avenir Next Demi Bold, All caps, 14px / 18px, 1px letter spacing</td>
+      <td>&lt;601px wide: No change</td>
+    </tr>
+    <tr>
+      <td>Heading 6</td>
+      <td>Avenir Next Demi Bold, All caps, 12px / 15px, 1px letter spacing</td>
+      <td>&lt;601px wide: No change</td>
+    </tr>
   </tbody>
 </table>
 
@@ -1765,6 +1790,12 @@ Example of a non heading element:
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
@@ -1793,6 +1824,53 @@ Example of a non heading element:
                 
 
                 <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <table>
+  <thead>
+    <tr>
+      <th>Heading</th>
+      <th>Specs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Display</td>
+      <td>Avenir Next Medium, 60pt / 66pt</td>
+    </tr>
+    <tr>
+      <td>Heading 1</td>
+      <td>Avenir Next Regular, 38pt / 40pt</td>
+    </tr>
+    <tr>
+      <td>Heading 2</td>
+      <td>Avenir Next Regular, 26pt / 28pt</td>
+    </tr>
+    <tr>
+      <td>Heading 3</td>
+      <td>Avenir Next Regular, 16pt / 18pt</td>
+    </tr>
+    <tr>
+      <td>Heading 4</td>
+      <td>Avenir Next Medium, 14pt / 16pt</td>
+    </tr>
+    <tr>
+      <td>Heading 5</td>
+      <td>Avenir Next Demi Bold, 10pt / 12pt, All caps</td>
+    </tr>
+    <tr>
+      <td>Heading 6</td>
+      <td>Avenir Next Medium, 12pt /14 pt</td>
+    </tr>
+  </tbody>
+</table>
+
+                        </div>
+                    </div>
+                </section>
                 
 
             </div>
@@ -2308,8 +2386,8 @@ The text will be styled the same as H5 heading text.
                     
                     
                     <a href="https://github.com/cfpb/design-system/commits/master/docs/components/heading-hierarchy.md">
-                        <time datetime="2020-05-18 09:54:18 -0400">
-                             9:54:18 AM May 18, 2020
+                        <time datetime="2020-05-20 22:24:06 -0400">
+                            10:24:06 PM May 20, 2020
                         </time>
                     </a>
                 </small>

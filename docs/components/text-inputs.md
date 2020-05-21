@@ -72,22 +72,22 @@ variation_groups:
                  disabled>
         variation_specs: |-
           #### Default
-          Border: 1 px, Gray 60 (#919395) 
-          Height: 35 px
-          Padding: 7px
-          Avenir Next Regular, 16px, Gray (#5a5d61)
-          Text should be in sentence case
+          - Border: 1 px, Gray 60 (#919395) 
+          - Height: 35 px
+          - Padding: 7px
+          - Avenir Next Regular, 16px, Gray (#5a5d61)
+          - Text should be in sentence case
 
           #### Hover
-          Border: 2 px, Pacific (#0072ce)
+          - Border: 2 px, Pacific (#0072ce)
 
           #### Focus
-          Border: 2 px, Pacific (#0072ce)
-          Outline: Dotted 1px, Pacific (#0072ce)
-          Outline offset: 1px
+          - Border: 2 px, Pacific (#0072ce)
+          - Outline: Dotted 1px, Pacific (#0072ce)
+          - Outline offset: 1px
 
           #### Disabled 
-          Background: Gray 10 (#e7e8e9)
+          - Background: Gray 10 (#e7e8e9)
   - variations:
       - variation_code_snippet: >-
           <label class="a-label a-label__heading"

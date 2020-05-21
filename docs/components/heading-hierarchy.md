@@ -96,42 +96,8 @@ variation_groups:
           | Heading 6 | Avenir Next Medium, 12pt /14 pt |
   - variation_group_name: Variations
     variations:
-      - variation_name: " Heading with icon"
-        variation_code_snippet: |-
-          <a href="#" class="a-heading a-heading__icon">
-              {% include icons/dialogue.svg %}
-              Heading with icon
-          </a>
-        variation_description: "Headings with icons are reserved for specific use cases,
-          such as the meta headers that appear on [blog
-          pages](https://www.consumerfinance.gov/about-us/blog/). "
-        variation_specs: >-
-          Responsive heading. At small screen sizes, displays as heading level
-          2.
-
-          <601px wide: Drops to Heading 2
-
-
-          Element | Variable name | Variable | web value | Print value
-
-          --- | --- | --- | --- | ---
-
-          Text size | @size-i: | 34px; | 34px | 38pt
-
-          Small screen text size | | | 26px |
-
-          Line height (pixels) | ? |  | 42px | 40pt
-
-          Small screen line height | | 32px |
-
-          Bottom margin | | | 15px |
-      - variation_name: "Heading with icon: Meta header"
-        variation_description: This example of a heading with icon shows
-          .m-meta-header_left using the .a-heading__icon pattern and
-          .m-meta-header_right using the .a-date pattern but you could use other
-          patterns in place of them. Or you can even swap them so that date is
-          attached to .m-meta-header_left and .a-heading.a-heading__icon is
-          attached to .m-meta-header_right.
+      - variation_name: "Heading with icon "
+        variation_description: ""
         variation_code_snippet: |-
           <header class="m-meta-header">
               <div class="m-meta-header_right">
@@ -152,14 +118,16 @@ variation_groups:
                   </a>
               </div>
           </header>
+        variation_implementation: This example of a heading with icon shows
+          `.m-meta-header_left` using the `.a-heading__icon` pattern and
+          `.m-meta-header_right` using the `.a-date` pattern. However, you could
+          use other patterns in place of them, or even swap them so that date is
+          attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is
+          attached to `.m-meta-header_right`.
       - variation_name: Eyebrow headings
-        variation_description: >-
-          Use the eyebrow heading to label page headings that are part of a
-          larger group of related pages, or when additional context can help
-          orient the user to the page's purpose.
-
-
-          The eyebrow heading is secondary to and serves to support the main page heading. So it should be concise and shorter than the main page heading.
+        variation_description: "Headings with icons are reserved for specific use cases,
+          such as the meta headers that appear on [blog
+          pages](https://www.consumerfinance.gov/about-us/blog/). "
         variation_code_snippet: >
           <!--The code snippet below is only used for display purposes. The
           eyebrow heading should be built using div tags:

@@ -33,22 +33,36 @@ html, body {
     height: 100%;
 }
 
-/* for sticky footer */
-.body-wrapper {
-    display: table;
-    height: 100%;
-    width: 100%
-}
-
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.highlighter-rouge {
-    margin-top: unit( 15px / @base-font-size-px, em );
+// Set padding for main content blocks.
+.m-global-eyebrow .a-tagline,
+.site-header,
+.footer {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
 }
+
+// Adjust eyebrow width to account for USA flag in the background.
+.m-global-eyebrow {
+    padding-left: 30px;
+    & .a-tagline {
+        max-width: 1140px;
+    }
+}
+
+// Tablet and mobile size.
+.respond-to-max( @bp-sm-max, {
+    .m-global-eyebrow,
+    .footer {
+        padding: 0 15px;
+    }
+} );
 
 // custom modules
 @import (less) "skip-nav.less";

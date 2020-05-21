@@ -2,15 +2,9 @@
    Header
    ========================================================================== */
 
-.site-header {
-    .content-l_col + .content-l_col {
-        margin-top: 0;
-    }
-}
-
-.title_heading {
-
+.title {
     font-size: unit( 16px / @base-font-size-px, em );
+    margin-top: 30px;
 
     a {
         color: @gray;
@@ -29,30 +23,80 @@
     vertical-align: middle;
 }
 
-.respond-to-min( @bp-xs-max, {
+// Tablet and mobile size.
+.respond-to-max( @bp-sm-max, {
 
     .site-header {
-        padding: unit( 30px / @base-font-size-px, em ) 0;
-        border-bottom: 4px solid @green;
+        background-color: @gray-5;
+        display: table;
+        width: 100%;
+        padding: 0;
+    }
 
-        .content-l_col {
-            vertical-align: middle;
+    .title {
+        display: table-header-group;
+        margin-top: 0;
+    }
+
+    .title-link {
+        margin-top: 15px;
+        margin-left: 15px;
+        display: block;
+    }
+
+    #search-form {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 15px;
+    }
+
+
+    .global-nav_list {
+        width: 100%;
+    }
+
+    .nav-list-item {
+        &:first-child a {
+            border-top: 1px solid @gray-20;
+        }
+        a {
+            display: block;
+            border-bottom: 1px solid @gray-20;
+            padding: 1em;
+
         }
     }
+} );
 
-    .title_heading {
-        font-size: unit( 16px / @base-font-size-px, em );
+// Desktop size.
+.respond-to-min( @bp-sm-max, {
+
+    #search-form {
         margin: 0;
+        float: right;
     }
 
-    .global-nav {
-        margin-right: -0.25em;
-        margin-top: 1.5em;
+    .site-header-wrapper {
+        padding-bottom: unit( 30px / @base-font-size-px, em );
+        border-bottom: 4px solid @green;
+    }
+
+    .site-header {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .title {
+        font-size: 1.625em;
+    }
+
+    .nav-list-item {
+        display: inline-block;
     }
 
     .global-nav_list {
-        display: inline-block;
-        font-size: unit( 12px / @base-font-size-px, em );
+        font-size: unit( 16px / @base-font-size-px, em );
     }
 
     .nav-list-item {
@@ -76,42 +120,4 @@
     .nav-list-item:last-child {
         margin-right: 0px;
     }
-} );
-
-.respond-to-min( @bp-sm-max, {
-    .title_heading {
-        font-size: 1.625em;
-    }
-    .global-nav_list {
-        font-size: unit( 16px / @base-font-size-px, em );
-    }
-} );
-
-.respond-to-max( @bp-xs-max, {
-
-    .site-header {
-        background-color: @gray-5;
-    }
-
-    .title_heading {
-        padding-left: unit( 16px / @base-font-size-px, em );
-        padding-top: unit( 12px / @base-font-size-px, em );
-    }
-
-    .global-nav_list {
-        width: 100%;
-    }
-
-    .nav-list-item {
-        &:first-child a {
-            border-top: 1px solid @gray-20;
-        }
-        a {
-            display: block;
-            border-bottom: 1px solid @gray-20;
-            padding: 1em;
-
-        }
-    }
-
 } );

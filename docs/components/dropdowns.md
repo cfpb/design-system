@@ -4,20 +4,9 @@ layout: variation
 section: components
 secondary_section: Forms
 status: Released
-description: >-
-  Use dropdowns for a finite list of options, for structured data, or for a list
-  of options that are already familiar to the user. Otherwise, consider radio
-  buttons or text input fields instead. 
-
-
-  More information can be found at:
-
-
-  * http://cfpb.github.io/design-manual/page-components/form-fields.html#dropdowns	
-
-  * https://cfpb.github.io/capital-framework/components/cf-forms/#select-dropdown
-
-  * https://cfpb.github.io/capital-framework/components/cf-forms/#basic-multiselect
+description: "Use dropdowns for a finite list of options, for structured data,
+  or for a list of options that are already familiar to the user. Otherwise,
+  consider radio buttons or text input fields instead. "
 variation_groups:
   - variations:
       - variation_code_snippet: >-

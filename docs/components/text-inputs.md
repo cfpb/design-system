@@ -5,8 +5,8 @@ section: components
 secondary_section: Forms
 status: Released
 description: >-
-  This page includes other components like form alerts and buttons. You can
-  learn more about these on their respective pages.
+  Text inputs allow users to input text information for use. Text inputs can be
+  one-line (standard text inputs) or multi-line (textarea inputs).  
 
 
   This page is under active development. Information is being moved into it from these pages:

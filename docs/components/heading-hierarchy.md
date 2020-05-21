@@ -23,7 +23,7 @@ variation_groups:
           -->
         variation_description: ""
         variation_jinja_code_snippet: ""
-        variation_name: ""
+        variation_name: .
         variation_specs: "| Heading   |
           Specs                                                             |
           Responsive behavior at < 601px |
@@ -78,7 +78,7 @@ variation_groups:
           <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading level 5</h5>
 
           <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading level 6</p>
-        variation_name: ""
+        variation_name: .
         variation_description: >+
           This hierarchy should serve as a basis for 8.5 x 11” documents, but
           appropriate scaling should be explored for content of larger or
@@ -125,9 +125,7 @@ variation_groups:
           attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is
           attached to `.m-meta-header_right`.
       - variation_name: Eyebrow headings
-        variation_description: "Headings with icons are reserved for specific use cases,
-          such as the meta headers that appear on [blog
-          pages](https://www.consumerfinance.gov/about-us/blog/). "
+        variation_description: ""
         variation_code_snippet: >
           <!--The code snippet below is only used for display purposes. The
           eyebrow heading should be built using div tags:
@@ -152,9 +150,14 @@ variation_groups:
                   Blog summary
               </h2>
           </header>
+    variation_group_description: "The heading variations below have specific use
+      cases. For example, headings with icons appear on [blog
+      pages](https://www.consumerfinance.gov/about-us/blog/). "
 use_cases: ""
-content_guidelines: Headings should be sentence case. * Do not include
-  punctuation in headings. * Keep headings to one line on desktop when possible.
+content_guidelines: |-
+  Headings should be sentence case. 
+  * Do not include punctuation in headings. 
+  * Keep headings to one line on desktop when possible.
 behavior: >-
   At screen widths of 600px and below, the Display heading and Headings 1-4 drop
   in size. Headings 5-6 remain consistent at all screen widths.

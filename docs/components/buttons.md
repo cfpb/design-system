@@ -8,7 +8,7 @@ description: Buttons signal actions. They should be used sparingly; each
   additional button on a page reduces the visual prominence of a call to action.
   In contrast,
   [links](https://test-things.github.io/design-system/components/link) should
-  lead users to another page or further informationz.
+  lead users to another page or further information.
 variation_groups:
   - variation_group_name: Standard buttons
     variation_group_description: ""

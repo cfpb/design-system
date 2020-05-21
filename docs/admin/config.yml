@@ -33,7 +33,7 @@ collections:
             widget: 'text'
             required: true
   - name: 'getting-started'
-    preview_path: "getting-started/{{slug}}"
+    preview_path: "design-system/getting-started/{{slug}}"
     label: 'Getting started pages'
     label_singular: 'Getting started page'
     folder: 'docs/getting-started/'
@@ -170,7 +170,7 @@ collections:
         minimal: true
         required: false
   - name: 'foundation'
-    preview_path: "foundation/{{slug}}"
+    preview_path: "design-system/foundation/{{slug}}"
     label: 'Foundation pages'
     label_singular: 'Foundation page'
     folder: 'docs/foundation/'
@@ -311,7 +311,7 @@ collections:
         minimal: true
         required: false
   - name: 'components'
-    preview_path: "components/{{slug}}"
+    preview_path: "design-system/components/{{slug}}"
     label: 'Component pages'
     label_singular: 'Component page'
     folder: 'docs/components/'
@@ -463,7 +463,7 @@ collections:
         required: false
   - name: 'templates'
     label: 'Templates pages'
-    preview_path: "templates/{{slug}}"
+    preview_path: "design-system/templates/{{slug}}"
     label_singular: 'Templates page'
     folder: 'docs/templates/'
     create: true

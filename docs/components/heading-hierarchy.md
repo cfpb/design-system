@@ -24,82 +24,39 @@ variation_groups:
         variation_description: ""
         variation_jinja_code_snippet: ""
         variation_name: ""
-        variation_specs: "| Heading | Specs                             | Responsive
-          behavior at < 601px |
+        variation_specs: "| Heading   |
+          Specs                                                             |
+          Responsive behavior at < 601px |
 
-          | ------- | --------------------------------- |
+          | --------- |
+          ----------------------------------------------------------------- |
           ------------------------------ |
 
-          | Display | Avenir Next Regular, 48px / 60px\x03 | Drops to
-          Heading 1             |
+          | Display   | Avenir Next Regular, 48px /
+          60px\x03                                 | Drops to Heading
+          1             |
 
-          |  Heading 1 | Avenir Next Regular. 34px / 42px\x03
-          |  <601px wide: Drops to Heading 2 |
+          | Heading 1 | Avenir Next Regular. 34px /
+          42px\x03                                 | Drops to Heading
+          2             |
 
-          | Heading 2 | Avenir Next Regular. 34px / 42px | Drops to
-          Heading 3 |\ 
+          | Heading 2 | Avenir Next Regular. 34px /
+          42px                                  | Drops to Heading
+          3             |
 
-          | Heading 3 | Avenir Next Regular, 22px / 28px |  <601px
-          wide: Drops to Heading 4 |
+          | Heading 3 | Avenir Next Regular, 22px /
+          28px                                  | Drops to Heading
+          4             |
 
-          | Heading 4 | Avenir Next Medium, 18px / 22px | <601px wide:
-          Drops to 16px / 18px |
+          | Heading 4 | Avenir Next Medium, 18px /
+          22px                                   | Drops to 16px /
+          18px           |
 
-          | Heading 5 | Avenir Next Demi Bold, All caps, 14px / 18px,
-          1px letter spacing | <601px wide: No change |
+          | Heading 5 | Avenir Next Demi Bold, 14px / 18px. All caps,
+          1px letter spacing  | No change                      |
 
-          | Heading 6 | Avenir Next Demi Bold, All caps, 12px / 15px,
-          1px letter spacing | <601px wide: No change |
-
-
-
-          | Element                  | Variable name      |
-          Variable                                           | web
-          value           | Print value         |
-
-          | ------------------------ | ------------------ |
-          -------------------------------------------------- |
-          ------------------- | ------------------- |
-
-          |
-          Typeface                 |                    |                                                    \
-          | Avenir Next Regular | Avenir Next Regular |
-
-          | Webfont                  | @webfont-regular:  |
-          Arial;                                             |
-          Arial               |                     |
-
-          | Text color               | @text:             |
-          @black;                                            | Black
-          (#101820)     | 0, 0, 0, 100        |
-
-          | Text size                | @size-xl:          |
-          48px;                                              |
-          48px                | 38pt                |
-
-          | Small screen text
-          size   |                    |                                                    \
-          | 34px                |                     |
-
-          | Line height              | @base-line-height: | unit(
-          @base-line-height-px / @base-font-size-px );
-          |                     |                     |
-
-          | Line height (pixels)     |
-          ?                  |                                                    \
-          | 60px                | 66pt                |
-
-          | Small screen line height |                    |
-          42px                                               |                     \
-          |                     |
-
-          | Bottom
-          margin            |                    |                                                    \
-          |                     | 30px                |
-
-          | Extra-small breakpoint   | @bp-xs-max:        |
-          600px;                                             |                     \
-          |                     |"
+          | Heading 6 | Avenir Next Demi Bold, 12px / 15px. All caps,
+          1px letter spacing  | No change                      |"
     variation_group_name: Web headings
     variation_group_description: At screen widths of 600px and below, the Display
       heading and Headings 1-4 drop in size. Headings 5-6 remain consistent at
@@ -145,7 +102,9 @@ variation_groups:
               {% include icons/dialogue.svg %}
               Heading with icon
           </a>
-        variation_description: ""
+        variation_description: "Headings with icons are reserved for specific use cases,
+          such as the meta headers that appear on [blog
+          pages](https://www.consumerfinance.gov/about-us/blog/). "
         variation_specs: >-
           Responsive heading. At small screen sizes, displays as heading level
           2.

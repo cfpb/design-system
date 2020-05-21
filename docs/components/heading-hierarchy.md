@@ -24,22 +24,23 @@ variation_groups:
         variation_description: ""
         variation_jinja_code_snippet: ""
         variation_name: ""
-        variation_specs: "| Heading | Specs | Responsive behavior at < 601px |\ 
+        variation_specs: "| Heading | Specs                             | Responsive
+          behavior at < 601px |
 
-          | - | - | - |
+          | ------- | --------------------------------- |
+          ------------------------------ |
 
           | Display | Avenir Next Regular, 48px / 60px\x03 | Drops to
-          Heading 1 |
+          Heading 1             |
 
-          | \rHeading 1 | Avenir Next Regular. 34px / 42px\x03 |
-          <601px wide: Drops to Heading 2\r |
+          |  Heading 1 | Avenir Next Regular. 34px / 42px\x03
+          |  <601px wide: Drops to Heading 2 |
 
           | Heading 2 | Avenir Next Regular. 34px / 42px | Drops to
-          Heading 3\r |\ 
+          Heading 3 |\ 
 
-          | Heading 3 | Avenir Next Regular, 22px / 28px |\ 
-
-          <601px wide: Drops to Heading 4 |
+          | Heading 3 | Avenir Next Regular, 22px / 28px |  <601px
+          wide: Drops to Heading 4 |
 
           | Heading 4 | Avenir Next Medium, 18px / 22px | <601px wide:
           Drops to 16px / 18px |
@@ -52,31 +53,53 @@ variation_groups:
 
 
 
-          Element | Variable name | Variable | web value | Print value
+          | Element                  | Variable name      |
+          Variable                                           | web
+          value           | Print value         |
 
-          --- | --- | --- | --- | ---
+          | ------------------------ | ------------------ |
+          -------------------------------------------------- |
+          ------------------- | ------------------- |
 
-          Typeface | | | Avenir Next Regular | Avenir Next Regular
+          |
+          Typeface                 |                    |                                                    \
+          | Avenir Next Regular | Avenir Next Regular |
 
-          Webfont | @webfont-regular: | Arial; | Arial
+          | Webfont                  | @webfont-regular:  |
+          Arial;                                             |
+          Arial               |                     |
 
-          Text color | @text: | @black; | Black (#101820)\t| 0, 0, 0,
-          100
+          | Text color               | @text:             |
+          @black;                                            | Black
+          (#101820)     | 0, 0, 0, 100        |
 
-          Text size | @size-xl: | 48px; | 48px | 38pt
+          | Text size                | @size-xl:          |
+          48px;                                              |
+          48px                | 38pt                |
 
-          Small screen text size | | | 34px |\ 
+          | Small screen text
+          size   |                    |                                                    \
+          | 34px                |                     |
 
-          Line height | @base-line-height: | unit(
-          @base-line-height-px / @base-font-size-px ); |\ 
+          | Line height              | @base-line-height: | unit(
+          @base-line-height-px / @base-font-size-px );
+          |                     |                     |
 
-          Line height (pixels) | ? |  | 60px | 66pt
+          | Line height (pixels)     |
+          ?                  |                                                    \
+          | 60px                | 66pt                |
 
-          Small screen line height | | 42px |\ 
+          | Small screen line height |                    |
+          42px                                               |                     \
+          |                     |
 
-          Bottom margin | | | | 30px
+          | Bottom
+          margin            |                    |                                                    \
+          |                     | 30px                |
 
-          Extra-small breakpoint | @bp-xs-max: | 600px; |"
+          | Extra-small breakpoint   | @bp-xs-max:        |
+          600px;                                             |                     \
+          |                     |"
     variation_group_name: Web headings
     variation_group_description: At screen widths of 600px and below, the Display
       heading and Headings 1-4 drop in size. Headings 5-6 remain consistent at

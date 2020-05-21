@@ -106,27 +106,6 @@ variation_groups:
           #### Specs for textarea inputs
           - Border: 1 px, Gray 60 (#919395)
           - Avenir Next Regular, 16 px, Gray (#5a5d61)
-      - variation_code_snippet: >-
-          <div class="m-form-field">
-              <label class="a-label a-label__heading" for="full-textinput-example">
-                  Label
-              </label>
-              <input class="a-text-input a-text-input__full"
-                    type="text"
-                    id="full-textinput-example"
-                    value="Placeholder text">
-          </div>
-        variation_name: Full-width text input
-      - variation_code_snippet: >-
-          <div class="m-form-field">
-              <label class="a-label a-label__heading" for="full-textarea-example">
-                  Label
-              </label>
-              <textarea class="a-text-input a-text-input__full"
-                        id="full-textarea-example">Placeholder text</textarea>
-          </div>
-        variation_jinja_code_snippet: ""
-        variation_name: Full-width textarea input
       - variation_code_snippet: |-
           <div class="o-form__input-w-btn">
               <div class="o-form__input-w-btn_input-container">
@@ -139,21 +118,6 @@ variation_groups:
         variation_description: These are used for simple forms where a full filter isn’t necessary.
         variation_jinja_code_snippet: ""
         variation_name: Text input with a button
-      - variation_code_snippet: >-
-          <div class="m-btn-inside-input">
-              <input type="text"
-                  value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
-                  title="Test input"
-                  class="a-text-input">
-              <button class="a-btn a-btn__link">
-                  {% include icons/error.svg %}
-                  <span class="u-visually-hidden">Clear</span>
-              </button>
-          </div>
-        variation_description: These offer the user an action to take related to the
-          input, typically to clear the input.
-        variation_jinja_code_snippet: ""
-        variation_name: Button inside a text input
       - variation_code_snippet: >-
           <div class="o-form__input-w-btn">
               <div class="o-form__input-w-btn_input-container">
@@ -175,7 +139,68 @@ variation_groups:
         variation_description: This example combines both of the previous patterns,
           creating a typical site search form.
         variation_name: Button inside a text input with another button
-    variation_group_name: Variations
+    variation_group_name: Textarea inputs
+  - variation_group_name: Full-width modifiers
+    variations:
+      - variation_name: Full-width text input
+        variation_description: ""
+        variation_code_snippet: >-
+          <div class="m-form-field">
+              <label class="a-label a-label__heading" for="full-textinput-example">
+                  Label
+              </label>
+              <input class="a-text-input a-text-input__full"
+                    type="text"
+                    id="full-textinput-example"
+                    value="Placeholder text">
+          </div>
+      - variation_name: Full-width textarea input
+        variation_code_snippet: >-
+          <div class="m-form-field">
+              <label class="a-label a-label__heading" for="full-textarea-example">
+                  Label
+              </label>
+              <textarea class="a-text-input a-text-input__full"
+                        id="full-textarea-example">Placeholder text</textarea>
+          </div>
+    variation_group_description: ""
+  - variation_group_name: Buttons and inputs
+    variations:
+      - variation_name: Button inside a text input
+        variation_code_snippet: >-
+          <div class="m-btn-inside-input">
+              <input type="text"
+                  value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
+                  title="Test input"
+                  class="a-text-input">
+              <button class="a-btn a-btn__link">
+                  {% include icons/error.svg %}
+                  <span class="u-visually-hidden">Clear</span>
+              </button>
+          </div>
+        variation_description: These offer the user an action to take related to the
+          input, typically to clear the input.
+      - variation_name: Button inside a text input with another button
+        variation_description: This example combines both of the previous patterns,
+          creating a typical site search form.
+        variation_code_snippet: >-
+          <div class="o-form__input-w-btn">
+              <div class="o-form__input-w-btn_input-container">
+                  <div class="m-btn-inside-input">
+                      <input type="text"
+                          value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
+                          title="Test input"
+                          class="a-text-input">
+                      <button class="a-btn a-btn__link">
+                          {% include icons/error.svg %}
+                          <span class="u-visually-hidden">Clear</span>
+                      </button>
+                  </div>
+              </div>
+              <div class="o-form__input-w-btn_btn-container">
+                  <button class="a-btn">Search</button>
+              </div>
+          </div>
 use_cases: ""
 content_guidelines: >-
   Choose the appropriate width for text input fields so they match the kind of

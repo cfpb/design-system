@@ -164,6 +164,16 @@ variation_groups:
 
           Active
           - Background: Dark Gray (#43484e)
+      - variation_name: "Destructive action "
+        variation_code_snippet: >-
+          <div class="m-btn-group">
+              <button class="a-btn">Action</button>
+              <button class="a-btn a-btn__link a-btn__warning">Destructive action</button>
+          </div>
+        variation_description: "When paired with a primary action, indicate the
+          destructive action using a destructive action button link to the right
+          of the primary button. "
+        variation_specs: "Destructive link: Avenir Next Medium, 16px, Red (#d14124)"
   - variation_group_name: Sizes
     variation_group_description: ""
     variations:

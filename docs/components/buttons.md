@@ -235,6 +235,8 @@ variation_groups:
         variation_description: Example below of buttons with icon on left and icon on
           right ("back" and "next")
         variation_code_snippet: >-
+          <!--
+
           <div class="m-btn-group">
               <button class="a-btn">
                   <span class="a-btn_icon
@@ -247,17 +249,23 @@ variation_groups:
                                a-btn_icon__on-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg></span>
               </button>
           </div>
+
+          -->
       - variation_name: Animated icon
         variation_description: >+
           Use an animated icon in a button to reassure the user that the action
           they are attempting to perform is functioning as intended.
 
         variation_code_snippet: >-
+          <!--
+
           <button class="a-btn">
               Submit your complaint
               <span class="a-btn_icon
                            a-btn_icon__on-right">{% include icons/updating.svg %}</span>
           </button>
+
+          -->
     variation_group_description: Use icons consistently. Each icon should be used
       exclusively for one action. Icons appear to the left of the button text.
       Buttons that have “forward” actions have icons to the right of the text,

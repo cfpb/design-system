@@ -1,3 +1,4 @@
+import { TOGGLE_ATTRIBUTE, toggleDetails } from './toggle-details.js';
 import { Tabs } from 'govuk-frontend';
 import AnchorJS from 'anchor-js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
@@ -29,31 +30,14 @@ if ( tabs && tabs.length > 0 ) {
   }
 }
 
-const HIDDEN_CLASS = 'u-hidden';
-
 /**
  * @param {MouseEvent} event - The mouse event object from the click.
  */
 function handleDocumentClick( event ) {
   const target = event.target;
-  if ( !target.matches( '[data-toggle-code]' ) ) {
-    return;
+  if ( target.matches( `[${ TOGGLE_ATTRIBUTE }]` ) ) {
+    toggleDetails( target );
   }
-  event.preventDefault();
-  const container = target.parentNode;
-  const codeEl = document.querySelector( target.getAttribute( 'href' ) );
-  const showCodeBtn = container.querySelector( '[data-toggle-code="show"]' );
-  const hideCodeBtn = container.querySelector( '[data-toggle-code="hide"]' );
-  if ( codeEl && codeEl.classList.contains( HIDDEN_CLASS ) ) {
-    codeEl.classList.remove( HIDDEN_CLASS );
-    hideCodeBtn.classList.remove( HIDDEN_CLASS );
-    showCodeBtn.classList.add( HIDDEN_CLASS );
-  } else {
-    codeEl.classList.add( HIDDEN_CLASS );
-    hideCodeBtn.classList.add( HIDDEN_CLASS );
-    showCodeBtn.classList.remove( HIDDEN_CLASS );
-  }
-
 }
 
 document.addEventListener( 'click', handleDocumentClick, false );

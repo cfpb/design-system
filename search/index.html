@@ -1329,51 +1329,42 @@
                 
 
                 
-                    'variation_name1': 'Default state',
-                    'variation_description1': "The default section below demonstrates how a checkbox would normally appear in code.",
+                    'variation_name1': '',
+                    'variation_description1': "",
                     'variation_code_snippet1': `&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox&quot;&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name2': 'Hover state',
-                    'variation_description2': "",
-                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox&quot;&gt;Default&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;!--Hover--&gt;
+&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
     &lt;input class=&quot;a-checkbox hover&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_basic_hover&quot;&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_hover&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name3': 'Focus state',
-                    'variation_description3': "",
-                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_hover&quot;&gt;Hover&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;!--Focus--&gt;
+&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
     &lt;input class=&quot;a-checkbox focus&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_basic_focus&quot;&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_focus&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name4': 'Selected state',
-                    'variation_description4': "",
-                    'variation_code_snippet4': `&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_focus&quot;&gt;Focus&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;!--Selected--&gt;
+&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_basic_checked&quot; checked&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_checked&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name5': 'Disabled state',
-                    'variation_description5': "",
-                    'variation_code_snippet5': `&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_checked&quot;&gt;Selected&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;!--Disabled--&gt;
+&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_basic_disabled&quot; disabled&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_disabled&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name6': 'Disabled/selected state',
-                    'variation_description6': "",
-                    'variation_code_snippet6': `&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_disabled&quot;&gt;Disabled&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;!--Disabled/selected--&gt;
+&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_basic_disabled&quot; disabled checked&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_disabled&quot;&gt;Label&lt;/label&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_disabled&quot;&gt;Disabled/selected&lt;/label&gt;
 &lt;/div&gt;`,
-                
-                    'variation_name7': '',
-                    'variation_description7': "",
-                    'variation_code_snippet7': ``,
                 
             
                 // Determine the maximum number of variations present overall.
@@ -1430,7 +1421,7 @@
 
 
             'title': 'Checkboxes',
-            'description': "Use checkboxes when the user can select more than one option from a list. Make clear with helper text that this is the case.More information can be found at:  http://cfpb.github.io/design-manual/page-components/form-fields.html#checkboxes  https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes",
+            'description': "Use checkboxes when the user can select more than one option from a list. Make clear with helper text that this is the case.",
             'use_cases': "  Use checkboxes when the user can select more than one option from a list.  Use radio buttons when the user can choose only one option out of a list.Nested checkboxesThere are times when checkboxes may be nested with parent/child relationships. This is common when used within filter interactions.UsabilityIn this case, the following behavior and design should be followed:  Parent is “collapsed” and displays an expandable arrow at the end of the text.  The label of the parent checkbox should be clickable.  Clicking on the label or arrow toggles the opening/closing of the child options.  In open state, arrow points up; in closed state, arrow points down.  Child options are in black text and not clickable.  Clicking on the parent checkbox selects the parent option and all child options.  Clicking on the parent checkbox does not change the state of the open/close expansion (if it’s checked with the children expanded, it stays expanded, for instance).",
             'content_guidelines': "  Label text should be concise  Text spacing should inform spacing of checkboxes and checkbox should be vertically centered with the first line of text in an option.",
             'behavior': "Selecting the checkbox or touching the label text next to it should toggle the state of the checkbox on and off.To optimize usability, consider using checkboxes with large target areas. If these won’t fit into the design and the default style shown below is used, make sure the target area is at least 45 x 45px and that it includes the text label.",

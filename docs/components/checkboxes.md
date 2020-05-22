@@ -142,6 +142,8 @@ variation_groups:
 
           <!--Disabled/Selected-->
 
+          <!--
+
           <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
               <input class="a-checkbox"
                      type="checkbox"
@@ -150,6 +152,8 @@ variation_groups:
                      checked>
               <label class="a-label" for="test_checkbox_lg_disabled">Disabled/Selected</label>
           </div>
+
+          -->
         variation_specs: |-
           #### Default
 

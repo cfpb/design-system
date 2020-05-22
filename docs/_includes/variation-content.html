@@ -41,7 +41,7 @@
         <div class="m-variation">
 
             {% assign variation_name = variation.variation_name | strip %}
-            {% assign variation_description = variation.variation_description | strip %}
+            {% assign variation_description = variation.variation_description | strip | markdownify %}
             {% assign variation_code_snippet = variation.variation_code_snippet %}
 
             {% unless variation_name == '' %}
@@ -52,7 +52,7 @@
 
             {% unless variation_description == '' %}
             <div class="m-variation_description">
-                {{ variation_description | markdownify }}
+                {{ variation_description }}
             </div>
             {% endunless %}
 

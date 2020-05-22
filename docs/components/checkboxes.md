@@ -60,7 +60,31 @@ variation_groups:
           </div>
         variation_description: ""
         variation_name: ""
-      - {}
+        variation_specs: |-
+          #### Default checkbox 
+          - Height: 20 px
+          - Width: 20 px
+          - Margin right: 10 px
+          - Border: 1 px, Gray 60 (#919395)
+          - Background: White (#ffffff)
+          - Avenir Next Regular, 16 px, Black (#101820)
+
+          #### Hover
+          - Border: 2 px, Pacific (#0072ce)
+
+          #### Focus
+          - Border: 2 px, Pacific (#0072ce)
+          - Outline: Dotted 1px, Pacific (#0072ce)
+          - Outline offset: 1px
+
+          #### Selected
+          - Border: 1 px, Gray 60 (#919395)
+          - Minicon: 18 px, Black (#101820)
+
+          #### Disabled
+          - Border: 1 px, Gray 60 (#919395)
+          - Background: Gray 10 (#e7e8e9)
+          - Avenir Next Regular, 16 px, Gray (#5a5d61)
     variation_group_name: Standard checkboxes
   - variation_group_name: Large target area checkboxes
     variations:

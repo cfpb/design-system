@@ -17,44 +17,59 @@ description: >-
   * <https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes>
 variation_groups:
   - variations:
-      - variation_code_snippet: |-
+      - variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox">
-              <label class="a-label" for="test_checkbox">Label</label>
+              <label class="a-label" for="test_checkbox">Default</label>
+          </div>
+
+          <br>
+
+          <!--Hover-->
+
+          <div class="m-form-field m-form-field__checkbox">
+              <input class="a-checkbox hover" type="checkbox" id="test_checkbox_basic_hover">
+              <label class="a-label" for="test_checkbox_basic_hover">Hover</label>
+          </div>
+
+          <br>
+
+          <!--Focus-->
+
+          <div class="m-form-field m-form-field__checkbox">
+              <input class="a-checkbox focus" type="checkbox" id="test_checkbox_basic_focus">
+              <label class="a-label" for="test_checkbox_basic_focus">Focus</label>
+          </div>
+
+          <br>
+
+          <!--Selected-->
+
+          <div class="m-form-field m-form-field__checkbox">
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_checked" checked>
+              <label class="a-label" for="test_checkbox_basic_checked">Selected</label>
+          </div>
+
+          <br>
+
+          <!--Disabled-->
+
+          <div class="m-form-field m-form-field__checkbox">
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled>
+              <label class="a-label" for="test_checkbox_basic_disabled">Disabled</label>
+          </div>
+
+          <br>
+
+          <!--Disabled/selected-->
+
+          <div class="m-form-field m-form-field__checkbox">
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled checked>
+              <label class="a-label" for="test_checkbox_basic_disabled">Disabled/selected</label>
           </div>
         variation_description: The default section below demonstrates how a checkbox
           would normally appear in code.
         variation_name: Default state
-      - variation_name: Hover state
-        variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox">
-              <input class="a-checkbox hover" type="checkbox" id="test_checkbox_basic_hover">
-              <label class="a-label" for="test_checkbox_basic_hover">Label</label>
-          </div>
-      - variation_name: Focus state
-        variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox">
-              <input class="a-checkbox focus" type="checkbox" id="test_checkbox_basic_focus">
-              <label class="a-label" for="test_checkbox_basic_focus">Label</label>
-          </div>
-      - variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox">
-              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_checked" checked>
-              <label class="a-label" for="test_checkbox_basic_checked">Label</label>
-          </div>
-        variation_name: Selected state
-      - variation_name: Disabled state
-        variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox">
-              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled>
-              <label class="a-label" for="test_checkbox_basic_disabled">Label</label>
-          </div>
-      - variation_name: Disabled/selected state
-        variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox">
-              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled checked>
-              <label class="a-label" for="test_checkbox_basic_disabled">Label</label>
-          </div>
       - {}
     variation_group_name: Standard checkboxes
   - variation_group_name: Large target area checkboxes

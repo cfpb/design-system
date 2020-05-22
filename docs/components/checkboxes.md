@@ -95,7 +95,64 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default">
               <label class="a-label" for="test_checkbox_lg_default">Label</label>
           </div>
+
+          <br>
+
+
+          <!--Hover-->
+
+          <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+              <input class="a-checkbox hover" type="checkbox" id="test_checkbox_lg_hover">
+              <label class="a-label" for="test_checkbox_lg_hover">Hover</label>
+          </div>
+
+          <br>
+
+
+          <!--Focus-->
+
+          <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+              <input class="a-checkbox focus" type="checkbox" id="test_checkbox_lg_focus">
+              <label class="a-label" for="test_checkbox_lg_focus">Focus</label>
+          </div>
+
+
+          <br>
+
+
+          <!--Selected-->
+
+          <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_checked" checked>
+              <label class="a-label" for="test_checkbox_lg_checked">Selected</label>
+          </div>
+
+          <br>
+
+
+          <!--Disabled-->
+
+          <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled" disabled>
+              <label class="a-label" for="test_checkbox_lg_disabled">Disabled</label>
+          </div>
+
+          <br>
+
+
+          <!--Disabled/Selected-->
+
+          <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+              <input class="a-checkbox"
+                     type="checkbox"
+                     id="test_checkbox_lg_disabled"
+                     disabled
+                     checked>
+              <label class="a-label" for="test_checkbox_lg_disabled">Disabled/Selected</label>
+          </div>
         variation_specs: |-
+          #### Default
+
           Target area
           - Minimum height: 50px
           - Background: Gray 10 (#e7e8e9)
@@ -105,14 +162,8 @@ variation_groups:
           - Border: 1 px, Gray 60 (#919395)
           - Background: 20 px x 20 px, White (#ffffff)
           - Avenir Next Regular, 16 px, Black (#101820)
-      - variation_name: Hover state
-        variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox
-          m-form-field__lg-target">
-              <input class="a-checkbox hover" type="checkbox" id="test_checkbox_lg_hover">
-              <label class="a-label" for="test_checkbox_lg_hover">Label</label>
-          </div>
-        variation_specs: |-
+
+          #### Hover
           Target area
           - Border: 2 px, Pacific (#0072ce)
           - Background: Gray 10 (#e7e8e9)
@@ -120,15 +171,9 @@ variation_groups:
 
           Checkbox
           - Border: 2 px, Pacific (#0072ce)
-      - variation_name: Focus state
-        variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox
-          m-form-field__lg-target">
-              <input class="a-checkbox focus" type="checkbox" id="test_checkbox_lg_focus">
-              <label class="a-label" for="test_checkbox_lg_focus">Label</label>
-          </div>
-        variation_specs: |-
-          
+
+          #### Focus
+
           Target area
           - Border: 2 px, Pacific (#0072ce)
           - Background: Gray 10 (#e7e8e9)
@@ -136,14 +181,9 @@ variation_groups:
 
           Checkbox
           - Border: 2 px, Pacific (#0072ce)
-      - variation_name: Selected state
-        variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox
-          m-form-field__lg-target">
-              <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_checked" checked>
-              <label class="a-label" for="test_checkbox_lg_checked">Label</label>
-          </div>
-        variation_specs: |-
+
+          #### Selected
+
           Target area
           - Border: 1 px, Pacific (#0072ce)
           - Background: Pacific 20 (#d6e8fa)
@@ -151,29 +191,13 @@ variation_groups:
           Checkbox
           - Border: 1 px, Gray 60 (#919395)
           - Background: 14 x 14 px, Pacific (#0072ce)
-      - variation_name: Disabled state
-        variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox
-          m-form-field__lg-target">
-              <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled" disabled>
-              <label class="a-label" for="test_checkbox_lg_disabled">Label</label>
-          </div>
-        variation_specs: |-
+
+          #### Disabled
+
           Checkbox
           - Border: 1 px, Gray 60 (#919395)
           - Background: Gray 20 (#d2d3d5)
           - Avenir Next Regular, 16 px, Gray (#5a5d61)
-      - variation_name: Disabled/selected state
-        variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox
-          m-form-field__lg-target">
-              <input class="a-checkbox"
-                     type="checkbox"
-                     id="test_checkbox_lg_disabled"
-                     disabled
-                     checked>
-              <label class="a-label" for="test_checkbox_lg_disabled">Label</label>
-          </div>
     variation_group_description: For better usability, consider using checkboxes and
       radio buttons with large target areas. These are easier to interact with
       (especially on smaller screens) and harder to miss. They are especially

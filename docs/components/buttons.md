@@ -244,7 +244,30 @@ variation_groups:
       - variation_name: Icon buttons
         variation_description: Example below of buttons with icon on left and icon on
           right ("back" and "next")
-        variation_code_snippet: ""
+        variation_code_snippet: >-
+          <div class="m-btn-group">
+              <button class="a-btn">
+                  <span class="a-btn_icon
+                               a-btn_icon__on-left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"><path d="M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z"></path></svg></span>
+                  Back
+              </button>
+              <button class="a-btn">
+                  Next
+                  <span class="a-btn_icon
+                               a-btn_icon__on-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg></span>
+              </button>
+          </div>
+      - variation_name: Animated icon
+        variation_description: >+
+          Use an animated icon in a button to reassure the user that the action
+          they are attempting to perform is functioning as intended.
+
+        variation_code_snippet: >-
+          <button class="a-btn">
+              Submit your complaint
+              <span class="a-btn_icon
+                           a-btn_icon__on-right">{% include icons/updating.svg %}</span>
+          </button>
     variation_group_description: Use icons consistently. Each icon should be used
       exclusively for one action. Icons appear to the left of the button text.
       Buttons that have “forward” actions have icons to the right of the text,
@@ -266,18 +289,10 @@ content_guidelines: >-
   Use icons consistently. Each icon should be used exclusively for one action. Icons appear to the left of the button text. Buttons that have “forward” actions have icons to the right of the text, and those with “back” actions have icons to the left.
 behavior: ""
 restrictions:
-  - restrictions_do: |-
-      Test
-
-      <button class="a-btn" title="Test button">Short label</button>
-    restrictions_do_not: >-
-      Test
-
-
-      <button class="a-btn" title="Test button">This label is much, much too long</button>
+  - restrictions_do: <button class="a-btn" title="Test button">Short label</button>
+    restrictions_do_not: <button class="a-btn" title="Test button">This label is
+      much, much too long</button>
   - restrictions_do: |+
-      Test
-
       <button class="a-btn">
           <span class="a-btn_icon
                        a-btn_icon__on-left">
@@ -287,8 +302,6 @@ restrictions:
       </button>
 
     restrictions_do_not: |-
-      Test
-
       <button class="a-btn">
           Back
           <span class="a-btn_icon

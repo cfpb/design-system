@@ -4,17 +4,8 @@ layout: variation
 section: components
 secondary_section: Forms
 status: Released
-description: >-
-  Use checkboxes when the user can select more than one option from a list. Make
-  clear with helper text that this is the case.
-
-
-  More information can be found at:
-
-
-  * <http://cfpb.github.io/design-manual/page-components/form-fields.html#checkboxes>	
-
-  * <https://cfpb.github.io/capital-framework/components/cf-forms/#basic-checkboxes>
+description: Use checkboxes when the user can select more than one option from a
+  list. Make clear with helper text that this is the case.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -67,9 +58,8 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled checked>
               <label class="a-label" for="test_checkbox_basic_disabled">Disabled/selected</label>
           </div>
-        variation_description: The default section below demonstrates how a checkbox
-          would normally appear in code.
-        variation_name: Default state
+        variation_description: ""
+        variation_name: ""
       - {}
     variation_group_name: Standard checkboxes
   - variation_group_name: Large target area checkboxes

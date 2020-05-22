@@ -206,8 +206,8 @@ variation_groups:
           experience on every viewport size. Readable text makes good use of
           alignment, spacing, line length and height, and contrast. "
         variation_code_snippet: >-
-          <p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>,
-          sed do
+          <p>This is a sample of body text. Lorem ipsum dolor sit amet,
+          <em>consectetur adipisicing elit</em>, sed do
 
           eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
 
@@ -215,16 +215,16 @@ variation_groups:
 
           aliquip ex ea commodo consequat.</p>
       - variation_name: Lead paragraph (subheading)
-        variation_description: >-
-          Responsive text. Displays as a Heading 3 on large screens; displays at
-          Heading 4 size (but still Regular weight) on small screens.
-
-          <601px wide: 18px / 22px
+        variation_description: Lead paragraph text appears below the H1. Displays as a
+          Heading 3 on large screens; at screen widths of 600px and
+          below,  displays at Heading 4 size (but still Regular weight) on small
+          screens.
         variation_code_snippet: >-
           <p class="lead-paragraph">Ut enim ad minim veniam, quis nostrud
           exercitation
 
           ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        variation_specs: "<601px wide: 18px / 22px"
       - variation_name: Microcopy
         variation_code_snippet: |-
           <p class="a-micro-copy">

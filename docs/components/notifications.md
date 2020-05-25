@@ -147,27 +147,13 @@ variation_groups:
           * Border: 2 px, Gold (#ff9e1b)
           * Minicon: 18 px, Gold (#ff9e1b)
           * Warning minicon and message should always appear below input field
-      - variation_code_snippet: >-
+      - variation_code_snippet: |-
           <div class="m-notification
                       m-notification__visible
                       m-notification__error">
               {% include icons/error-round.svg %}
               <div class="m-notification_content">
                   <div class="h4 m-notification_message">Page not found.</div>
-              </div>
-          </div>
-
-
-          <br /> <!-- Spacing between standard and field level error notification examples -->
-
-
-          <div class="m-form-field m-form-field__error">
-              <input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message">
-              <div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert">
-                  {% include icons/error-round.svg %}
-                  <span class="a-form-alert_text">
-                      This is an inline alert with an error state.
-                  </span>
               </div>
           </div>
         variation_description: ""
@@ -185,6 +171,24 @@ variation_groups:
 
           always appear below the input field.
         variation_name: Error notification
+        variation_specs: |-
+          * Border: 2 px, Red (#d14124)
+          * Background: Red 20 (#fff0dd)
+          * Minicon: 18px, Red (#d14124)
+      - variation_name: Error notification (field-level)
+        variation_code_snippet: >-
+          <div class="m-form-field m-form-field__error">
+              <input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message">
+              <div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert">
+                  {% include icons/error-round.svg %}
+                  <span class="a-form-alert_text">
+                      This is an inline alert with an error state.
+                  </span>
+              </div>
+          </div>
+        variation_specs: |-
+          * Border: 2 px, Red (#d14124)
+          * Minicon: 18 px, Red (#d14124)
       - variation_code_snippet: >-
           <div class="m-notification
                       m-notification__visible">
@@ -200,10 +204,13 @@ variation_groups:
           to reassure the user that an action is functioning as intended.
         variation_name: In-progress notification
     variation_group_description: >-
-      Remember to place form-level alerts below the form title. For field-level
-      notifications, the success minicon and message should
+      Remember to place form-level alerts below the form title. 
 
-      always appear below the input field. 
+
+      For field-level alerts alerts, minicon and message should always appear below the input field.  
+
+
+      For screen reader accessibility, include anchor links to the fields that need correction.
 use_cases: ""
 content_guidelines: ""
 behavior: >-

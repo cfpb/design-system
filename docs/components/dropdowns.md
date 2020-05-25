@@ -126,6 +126,9 @@ variation_groups:
                   <option value="option4">Option 8</option>
               </select>
           </div>
+    variation_group_description: "Custom JavaScript may be required to make the
+      default multiselect component accessible for the visually impaired. See
+      the [accessibility]() section for more information. "
 use_cases: >-
   While dropdowns are easy to implement, they aren’t always the best choice from
   a usability perspective.

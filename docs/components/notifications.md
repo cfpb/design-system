@@ -82,20 +82,6 @@ variation_groups:
         variation_name: Default notification
   - variation_group_name: Types
     variations:
-      - variation_code_snippet: >-
-          <div class="m-notification
-                      m-notification__visible">
-              {% include icons/updating.svg %}
-              <div class="m-notification_content">
-                  <div class="h4 m-notification_message">The page is loading…</div>
-              </div>
-          </div>
-        variation_description: The in-progress notification displays when something is
-          happening on the page, such as a page loading notification as search
-          results are found. Use [animated
-          minicons](https://cfpb.github.io/design-system/foundation/iconography)
-          to reassure the user that an action is functioning as intended.
-        variation_name: In-progress notification
       - variation_code_snippet: |-
           <div class="m-notification
                       m-notification__visible
@@ -184,9 +170,7 @@ variation_groups:
                   </span>
               </div>
           </div>
-        variation_description: The error notification displays when an operation has not
-          run as expected and encounters an error. Use after validating on the
-          server side to call out input errors preventing form submission.
+        variation_description: ""
         variation_implementation: >-
           * For screen reader accessibility, include anchor links to the fields
           that
@@ -201,6 +185,20 @@ variation_groups:
 
           always appear below the input field.
         variation_name: Error notification
+      - variation_code_snippet: >-
+          <div class="m-notification
+                      m-notification__visible">
+              {% include icons/updating.svg %}
+              <div class="m-notification_content">
+                  <div class="h4 m-notification_message">The page is loading…</div>
+              </div>
+          </div>
+        variation_description: The in-progress notification displays when something is
+          happening on the page, such as a page loading notification as search
+          results are found. Use [animated
+          minicons](https://cfpb.github.io/design-system/foundation/iconography)
+          to reassure the user that an action is functioning as intended.
+        variation_name: In-progress notification
     variation_group_description: >-
       Remember to place form-level alerts below the form title. For field-level
       notifications, the success minicon and message should

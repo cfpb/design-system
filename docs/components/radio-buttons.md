@@ -10,7 +10,7 @@ description: >
   buttons (usually no more than 6-8 options). When there are more than two
   options, stack radio buttons vertically.
 variation_groups:
-  - variation_group_name: Standard radio button
+  - variation_group_name: Standard radio buttons
     variations:
       - variation_code_snippet: >
           <div class="m-form-field m-form-field__radio">
@@ -71,6 +71,21 @@ variation_groups:
                      checked>
               <label class="a-label" for="test_radio_basic_disabled">Label</label>
           </div>
+      - variation_name: Radio button with helper text
+        variation_description: Checkboxes and radio button inputs can have labels that
+          span multiple lines and have helper text that appears below the main
+          label text.
+        variation_code_snippet: |-
+          <div class="m-form-field m-form-field__radio">
+              <input class="a-radio" type="radio" id="test_radio_basic_helper">
+              <label class="a-label" for="test_radio_basic_helper">
+                  This is a very long label that wraps to a second line.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <small class="a-label_helper">
+                      (This is helper text)
+                  </small>
+              </label>
+          </div>
   - variations:
       - variation_code_snippet: |-
           <div class="m-form-field m-form-field__radio">
@@ -114,7 +129,7 @@ variation_groups:
                 </label>
           </div>
         variation_name: Large target radio button with helper text
-    variation_group_name: Standard radio buttons
+    variation_group_name: Large target area radio buttons
 use_cases: >-
   Leave radio buttons unselected as the default. It’s easy for users to miss
   that a radio button has been preselected and to submit a form with an

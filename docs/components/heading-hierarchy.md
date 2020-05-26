@@ -164,26 +164,21 @@ variation_groups:
               </h2>
           </header>
     variation_group_description: The heading variations below have specific use cases.
-use_cases: ""
+use_cases: .
 content_guidelines: |-
   Headings should be sentence case. 
   * Do not include punctuation in headings. 
   * Keep headings to one line on desktop when possible.
 behavior: >-
-  At screen widths of 600px and below, the Display heading and Headings 1-4 drop
-  in size. Headings 5-6 remain consistent at all screen widths.
+  #### Spacing for web headings
 
-  #### Style
+  - When a heading is followed by paragraph text, include 30px of space below Display and 15px below Headings 1–6.
 
-  ##### Spacing
+  - When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
 
-  When a heading is followed by paragraph text, include 30px of space below Display and 15px below Headings 1–6.
+  - For stacked headings, include 30 px of space after the primary heading.
 
-  When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
-
-  For stacked headings, include 30 px of space after the primary heading.
-
-  For multiple paragraphs within the same section set the space between paragraphs to 15px."
+  - For multiple paragraphs within the same section set the space between paragraphs to 15px.
 accessibility: Since categories can be repetitive, we suggest placing a label
   with `.u-visually-hidden` prior to the headings with icons to add more context
   for screen readers (see Meta Header).

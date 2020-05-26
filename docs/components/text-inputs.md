@@ -102,6 +102,15 @@ variation_groups:
           <textarea class="a-text-input"
                     id="textarea-example-default"
                     placeholder="Enter text…">Placeholder text</textarea>
+        variation_specs: |-
+          
+
+          #### Multi-line
+
+          Use for long-form answers.
+
+          * Border: 1 px, Gray 60 (#919395)
+          * Avenir Next Regular, 16 px, Gray (#5a5d61)
   - variation_group_name: Variations
     variations:
       - variation_name: Text input with a button
@@ -170,7 +179,7 @@ variation_groups:
               <textarea class="a-text-input a-text-input__full"
                         id="full-textarea-example">Placeholder text</textarea>
           </div>
-use_cases: ""
+use_cases: .
 content_guidelines: >-
   Choose the appropriate width for text input fields so they match the kind of
   information requested. This makes it easier for users to quickly grasp what’s

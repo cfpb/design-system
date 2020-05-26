@@ -4,16 +4,8 @@ layout: variation
 section: components
 secondary_section: Forms
 status: Released
-description: >-
-  Text inputs can be one-line (standard text inputs) or multi-line (textarea
-  inputs).  
-
-
-  This page is under active development. Information is being moved into it from these pages:
-
-  * http://cfpb.github.io/design-manual/page-components/form-fields.html#text-input-fields
-
-  * https://cfpb.github.io/capital-framework/components/cf-forms/#text-inputs
+description: "Text inputs can be one-line (standard text inputs) or multi-line
+  (textarea inputs).  "
 variation_groups:
   - variation_group_name: Standard text inputs
     variations:
@@ -179,7 +171,7 @@ variation_groups:
               <textarea class="a-text-input a-text-input__full"
                         id="full-textarea-example">Placeholder text</textarea>
           </div>
-use_cases: .
+use_cases: .nan
 content_guidelines: >-
   Choose the appropriate width for text input fields so they match the kind of
   information requested. This makes it easier for users to quickly grasp what’s

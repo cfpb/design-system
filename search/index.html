@@ -4071,29 +4071,20 @@ The text will be styled the same as H5 heading text.
                 
 
                 
-                    'variation_name1': 'In-progress notification',
-                    'variation_description1': "The in-progress notification displays when something is happening on the page, such as a page loading notification as search results are found. Use animated minicons to reassure the user that an action is functioning as intended.",
+                    'variation_name1': 'Success notification',
+                    'variation_description1': "The success notification is for displaying when an operation has run as expected, such as returning the number of results in a search.",
                     'variation_code_snippet1': `&lt;div class=&quot;m-notification
-            m-notification__visible&quot;&gt;
-    {% include icons/updating.svg %}
-    &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;The page is loading…&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name2': 'Success notification',
-                    'variation_description2': "The success notification is for displaying when an operation has run as expected, such as returning the number of results in a search.",
-                    'variation_code_snippet2': `&lt;div class=&quot;m-notification
             m-notification__visible
             m-notification__success&quot;&gt;
     {% include icons/approved-round.svg %}
     &lt;div class=&quot;m-notification_content&quot;&gt;
         &lt;div class=&quot;h4 m-notification_message&quot;&gt;11 results&lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br /&gt; &lt;!-- Spacing between standard and field level success notification examples --&gt;
-
+&lt;/div&gt;`,
+                
+                    'variation_name2': 'Success notification (field-level)',
+                    'variation_description2': "",
+                    'variation_code_snippet2': `
 &lt;div class=&quot;m-form-field m-form-field__success&quot;&gt;
     &lt;input class=&quot;a-text-input a-text-input__success&quot; type=&quot;text&quot; placeholder=&quot;Placeholder text&quot; id=&quot;form-input-success&quot; aria-describedby=&quot;form-input-success_message&quot;&gt;
     &lt;div class=&quot;a-form-alert a-form-alert__success&quot; id=&quot;form-input-success_message&quot; role=&quot;alert&quot;&gt;
@@ -4105,7 +4096,7 @@ The text will be styled the same as H5 heading text.
 &lt;/div&gt;`,
                 
                     'variation_name3': 'Warning notification',
-                    'variation_description3': "The warning notification is for displaying when an operation has run as expected, but doesn’t have the expected results, such as a search that returned no results.This notification can also be used to display additional critical information to a user before they submit a form, such as how their data will be used and protected or a reminder that they can’t edit their responses after submitting.",
+                    'variation_description3': "The warning notification displays when an operation has run as expected, but doesn’t have the expected results, such as a search that returned no results.This notification can also be used to display additional critical information to a user before they submit a form, such as how their data will be used and protected or a reminder that they can’t edit their responses after submitting.",
                     'variation_code_snippet3': `&lt;div class=&quot;m-notification
             m-notification__visible
             m-notification__warning&quot;&gt;
@@ -4113,11 +4104,11 @@ The text will be styled the same as H5 heading text.
     &lt;div class=&quot;m-notification_content&quot;&gt;
         &lt;div class=&quot;h4 m-notification_message&quot;&gt;No results found.&lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br /&gt; &lt;!-- Spacing between standard and field level warning notification examples --&gt;
-
-&lt;div class=&quot;m-form-field m-form-field__warning&quot;&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name4': 'Warning notification (field-level)',
+                    'variation_description4': "",
+                    'variation_code_snippet4': `&lt;div class=&quot;m-form-field m-form-field__warning&quot;&gt;
     &lt;input class=&quot;a-text-input a-text-input__warning&quot; type=&quot;text&quot; placeholder=&quot;Placeholder text&quot; id=&quot;form-input-warning&quot; aria-describedby=&quot;form-input-warning_message&quot;&gt;
     &lt;div class=&quot;a-form-alert a-form-alert__warning&quot; id=&quot;form-input-warning_message&quot; role=&quot;alert&quot;&gt;
         {% include icons/warning-round.svg %}
@@ -4127,20 +4118,20 @@ The text will be styled the same as H5 heading text.
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name4': 'Error notification',
-                    'variation_description4': "The error notification displays when an operation has not run as expected and encounters an error. Use after validating on the server side to call out input errors preventing form submission.",
-                    'variation_code_snippet4': `&lt;div class=&quot;m-notification
+                    'variation_name5': 'Error notification',
+                    'variation_description5': "The error notification displays when an operation has not run as expected and encounters an error. Use after validating on the server side to call out input errors preventing form submission.",
+                    'variation_code_snippet5': `&lt;div class=&quot;m-notification
             m-notification__visible
             m-notification__error&quot;&gt;
     {% include icons/error-round.svg %}
     &lt;div class=&quot;m-notification_content&quot;&gt;
         &lt;div class=&quot;h4 m-notification_message&quot;&gt;Page not found.&lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br /&gt; &lt;!-- Spacing between standard and field level error notification examples --&gt;
-
-&lt;div class=&quot;m-form-field m-form-field__error&quot;&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name6': 'Error notification (field-level)',
+                    'variation_description6': "",
+                    'variation_code_snippet6': `&lt;div class=&quot;m-form-field m-form-field__error&quot;&gt;
     &lt;input class=&quot;a-text-input a-text-input__error&quot; type=&quot;text&quot; placeholder=&quot;Placeholder text&quot; id=&quot;form-input-error&quot; aria-describedby=&quot;form-input-error_message&quot;&gt;
     &lt;div class=&quot;a-form-alert a-form-alert__error&quot; id=&quot;form-input-error_message&quot; role=&quot;alert&quot;&gt;
         {% include icons/error-round.svg %}
@@ -4150,12 +4141,22 @@ The text will be styled the same as H5 heading text.
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
+                    'variation_name7': 'In-progress notification',
+                    'variation_description7': "The in-progress notification displays when something is happening on the page, such as a page loading notification as search results are found. Use animated minicons to reassure the user that an action is functioning as intended.",
+                    'variation_code_snippet7': `&lt;div class=&quot;m-notification
+            m-notification__visible&quot;&gt;
+    {% include icons/updating.svg %}
+    &lt;div class=&quot;m-notification_content&quot;&gt;
+        &lt;div class=&quot;h4 m-notification_message&quot;&gt;The page is loading…&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
             
 
 
             'title': 'Notifications',
             'description': "This component provides notification boxes. Form alerts provide a light-touch alternative to notifications for inline form validation or feedback to a user’s input.",
-            'use_cases': "",
+            'use_cases': ".",
             'content_guidelines': "",
             'behavior': "VisibilityNotifications are hidden by default; you can toggle their visibility by adding or removing the m-notification__visible class to the base element.ValidationWhere possible, display formatting errors immediately using client-side validation so the user doesn’t have to wait until submitting to see what went wrong (this is especially frustrating if the information the user enters the first time around is not cached on submit and they have to fill out all the fields again from scratch). If letters are entered in a date field, if an email address is missing the “@” sign, let the user know right away by showing a field-level error on blur.That said, it’s a good idea to always validate on the server side even if you use client-side validation for formatting checks. That’s because JavaScript validation may not work on all clients; JavaScript errors could occur no matter the client; and JS validation can easily be bypassed, which raises security concerns.In general, the best practice for server-side validation is to mark errors with both form-level and field-level errors.",
             'accessibility': "  For screen reader accessibility, form-level errors should include anchor links to the problem field in question.  Place form-level alerts below the form title.  In general, use distinct icons, contrasting colors, prominent placement, and text to indicate errors. Don’t rely on just one method, as users can have many different accessibility needs (color blind users, visually impaired users, users with motor control issues, etc.).",

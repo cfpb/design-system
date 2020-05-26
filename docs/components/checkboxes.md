@@ -5,7 +5,9 @@ section: components
 secondary_section: Forms
 status: Released
 description: Use checkboxes when the user can select more than one option from a
-  list. Make clear with helper text that this is the case.
+  list. Make clear with helper text that this is the case. Use [radio
+  buttons](/design-system/components/radio-buttons) when the user can choose
+  only one option out of a list.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -88,7 +90,7 @@ variation_groups:
     variation_group_name: Standard checkboxes
   - variation_group_name: Large target area checkboxes
     variations:
-      - variation_name: Default state
+      - variation_name: ""
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox
           m-form-field__lg-target">
@@ -210,12 +212,7 @@ variation_groups:
       for example, they may not work well for terms of service agreement
       checkboxes.
 use_cases: >-
-  * Use checkboxes when the user can select more than one option from a list.
-
-  * Use [radio buttons](/design-system/components/radio-buttons) when the user can choose only one option out of a list.
-
-
-  ##### Nested checkboxes
+  #### Nested checkboxes
 
 
   There are times when checkboxes may be nested with parent/child relationships. This is common when used within filter interactions.
@@ -246,6 +243,7 @@ content_guidelines: >-
 behavior: >-
   Selecting the checkbox or touching the label text next to it should toggle the
   state of the checkbox on and off.
+
 
   To optimize usability, consider using checkboxes with large target areas. If these won’t fit into the design and the default style shown below is used, make sure the target area is at least 45 x 45px and that it includes the text label.
 accessibility: To optimize screen reader accessibility, lay out checkboxes

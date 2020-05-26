@@ -4582,19 +4582,29 @@ html,
 body {
   height: 100%;
 }
-/* for sticky footer */
-.body-wrapper {
-  display: table;
-  height: 100%;
-  width: 100%;
-}
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.highlighter-rouge {
-  margin-top: 0.9375em;
+.m-global-eyebrow .a-tagline,
+.site-header,
+.footer {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.m-global-eyebrow {
+  padding-left: 30px;
+}
+.m-global-eyebrow .a-tagline {
+  max-width: 1140px;
+}
+@media only all and (max-width: 56.25em) {
+  .m-global-eyebrow,
+  .footer {
+    padding: 0 15px;
+  }
 }
 /* ==========================================================================
    cfgov-refresh
@@ -4754,8 +4764,6 @@ input.skip-nav_link:focus::-moz-focus-inner {
 }
 .m-global-eyebrow {
   font-size: 0.75em;
-}
-.m-global-eyebrow__horizontal {
   padding-top: 0.625em;
   padding-bottom: 0.625em;
   background: #f7f8f9;
@@ -4785,16 +4793,14 @@ input.skip-nav_link:focus::-moz-focus-inner {
 /* ==========================================================================
    Header
    ========================================================================== */
-.site-header .content-l_col + .content-l_col {
-  margin-top: 0;
-}
-.title_heading {
+.title {
   font-size: 1em;
+  margin-top: 30px;
 }
-.title_heading a {
+.title a {
   color: #5a5d61;
 }
-.title_heading .demi {
+.title .demi {
   font-weight: bold;
 }
 .global-nav_list {
@@ -4804,24 +4810,61 @@ input.skip-nav_link:focus::-moz-focus-inner {
   font-weight: 500;
   vertical-align: middle;
 }
-@media only all and (min-width: 37.5em) {
+@media only all and (max-width: 56.25em) {
   .site-header {
-    padding: 1.875em 0;
-    border-bottom: 4px solid #20aa3f;
+    background-color: #f7f8f9;
+    display: table;
+    width: 100%;
+    padding: 0;
   }
-  .site-header .content-l_col {
-    vertical-align: middle;
+  .title {
+    display: table-header-group;
+    margin-top: 0;
   }
-  .title_heading {
-    font-size: 1em;
-    margin: 0;
+  .title-link {
+    margin-top: 15px;
+    margin-left: 15px;
+    display: block;
   }
-  .global-nav {
-    text-align: right;
+  #search-form {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 15px;
   }
   .global-nav_list {
+    width: 100%;
+  }
+  .nav-list-item:first-child a {
+    border-top: 1px solid #d2d3d5;
+  }
+  .nav-list-item a {
+    display: block;
+    border-bottom: 1px solid #d2d3d5;
+    padding: 1em;
+  }
+}
+@media only all and (min-width: 56.25em) {
+  #search-form {
+    margin: 0;
+    float: right;
+  }
+  .site-header-wrapper {
+    padding-bottom: 1.875em;
+    border-bottom: 4px solid #20aa3f;
+  }
+  .site-header {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  .title {
+    font-size: 1.625em;
+  }
+  .nav-list-item {
     display: inline-block;
-    font-size: 0.75em;
+  }
+  .global-nav_list {
+    font-size: 1em;
   }
   .nav-list-item {
     display: inline-block;
@@ -4840,34 +4883,6 @@ input.skip-nav_link:focus::-moz-focus-inner {
   }
   .nav-list-item:last-child {
     margin-right: 0px;
-  }
-}
-@media only all and (min-width: 56.25em) {
-  .title_heading {
-    font-size: 1.625em;
-  }
-  .global-nav_list {
-    font-size: 1em;
-  }
-}
-@media only all and (max-width: 37.5em) {
-  .site-header {
-    background-color: #f7f8f9;
-  }
-  .title_heading {
-    padding-left: 1em;
-    padding-top: 0.75em;
-  }
-  .global-nav_list {
-    width: 100%;
-  }
-  .nav-list-item:first-child a {
-    border-top: 1px solid #d2d3d5;
-  }
-  .nav-list-item a {
-    display: block;
-    border-bottom: 1px solid #d2d3d5;
-    padding: 1em;
   }
 }
 /* ==========================================================================
@@ -5040,7 +5055,7 @@ input.skip-nav_link:focus::-moz-focus-inner {
 /* ==========================================================================
    Footer
    ========================================================================== */
-footer a {
+.footer a {
   border-bottom-width: 1px;
 }
 /* ==========================================================================
@@ -6351,15 +6366,6 @@ pre code {
 }
 .color-table td:not( :first-of-type ) {
   white-space: nowrap;
-}
-#search-form {
-  margin: 15px;
-  margin-left: 15px;
-}
-@media only all and (min-width: 37.5em) {
-  #search-form {
-    float: right;
-  }
 }
 #search-results {
   margin: 15px;

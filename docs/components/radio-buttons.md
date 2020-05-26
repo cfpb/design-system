@@ -245,14 +245,7 @@ content_guidelines: ""
 behavior: ""
 accessibility: There are some issues with Voiceover reading radio buttons. To
   get around this, consider using the aria-describedby attribute.
-related_items: >-
-  
-  More information can be found at:
-
-
-  * <http://cfpb.github.io/design-manual/page-components/form-fields.html#radio-buttons>
-
-  * [https://cfpb.github.io/capital-framework/components/cf-forms/#basic-radio-buttons](http://cfpb.github.io/design-manual/page-components/form-fields.html#radio-buttons)
+related_items: ""
 last_updated: 2020-01-28T15:55:47.394Z
-research: TBA
+research: ""
 ---

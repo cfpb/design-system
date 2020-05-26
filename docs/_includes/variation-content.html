@@ -34,10 +34,10 @@
             {{ variation_group.variation_group_name }}
         </h2>
         {% else %}
-        {#
+        {% comment %}
            Below is a sad sad spacer element since we could have no group name,
            but have a group description that needs top spacing when its alone.
-        #}
+        {% endcomment %}
         <div class="u-mb15"></div>
         {% endif %}
 

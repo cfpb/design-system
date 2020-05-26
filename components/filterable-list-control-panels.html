@@ -1435,6 +1435,10 @@
         <div class="m-variation">
 
             
+            
+            
+
+            
             <div class="m-variation_name">
                 <h3>Default filterable list</h3>
             </div>
@@ -1455,27 +1459,27 @@
 
             <!-- Live code example -->
             
-            <div class="a-live_code">
-                
-            </div>
-            
 
             
             
             
+            
+
+            
+
             
             
 
             <div class="a-toggle_code">
-                <button href="#default-filterable-list-code-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#default-filterable-list-code-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-default-filterable-list-collapse-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-default-filterable-list-collapse-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="default-filterable-list-code-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-default-filterable-list-collapse-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#default-filterable-list-html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-default-filterable-list-collapse-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1487,7 +1491,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="default-filterable-list-html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-default-filterable-list-collapse-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1517,6 +1521,67 @@
     
 
     
+    
+        <section class="sticky-header u-mb45">
+
+            
+                <h2 id="use-cases">Use cases</h2>
+                <div class="content_line content_line__wide u-mb20"></div>
+                <p>
+                </p>
+<p>Use filters in conjunction with search to help users narrow down large amounts of data or content.</p>
+
+<h4 id="when-to-use">When to use</h4>
+<ul>
+  <li>When presenting more than 20 documents or listings together for users to browse through.</li>
+  <li>Users interacting with content will want to focus their searching activities on this specific group of content, rather than using the general site search.</li>
+  <li>Data has relevant characteristics to filter on, for example product and issue for complaint data, location and property type for HMDA, date range and categories for articles</li>
+</ul>
+
+<h4 id="when-other-options-are-better">When other options are better</h4>
+<ul>
+  <li>The total amount of content can be skimmed in a list of 20 items or less.</li>
+  <li>Characteristics available as filter options, such as topics, dates, and categories, are not relevant to the content.</li>
+  <li>Search alone is sufficient for user needs</li>
+</ul>
+
+                
+            
+
+            
+                <h2 id="content-guidelines">Content guidelines</h2>
+                <div class="content_line content_line__wide u-mb20"></div>
+                <p>
+                </p>
+<ul>
+  <li>Headings and labels should be as succinct as possible, ideally 10 characters or less. Do not use colon (:) or other punctuation after the header.</li>
+  <li>Help text in text fields should be 40 characters or less.
+Answer options beneath heading should also be succinct, roughly 25 characters or less.</li>
+  <li>Headings and answer options should be sentence case (unless specifically proper nouns or titles)</li>
+  <li>Notification messaging sits below filter and above results</li>
+  <li>Maximum three column wide layout, options stack vertically below 601 pixels</li>
+  <li>Follow form patterns for grouping, layout, and messaging.</li>
+</ul>
+
+                
+            
+
+            
+                <h2 id="behavior">Behavior</h2>
+                <div class="content_line content_line__wide u-mb20"></div>
+                <p>
+                </p>
+<p>Filters live in an expandable style element allowing controls to be hidden when not in use/needed.</p>
+
+<p>On page load, the filter is collapsed by default. After filter is applied it remains open, except for mobile breakpoint (&lt; 601 px) where is is collapsed after filtering to make vertical space for the notification to be viewed on screen.</p>
+
+<p>When a user applies a filter setting, a notification automatically appears below the panel indicating number of results or errors.</p>
+
+                
+            
+
+            
+        </section>
     
 
     

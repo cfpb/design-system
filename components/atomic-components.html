@@ -1418,6 +1418,72 @@
 
     
     
+        <section class="sticky-header u-mb45">
+
+            
+                <h2 id="use-cases">Use cases</h2>
+                <div class="content_line content_line__wide u-mb20"></div>
+                <p>
+                </p>
+<p>This framework is intended to be used in conjunction with adherence to Atomic Design principles. It helps provide a uniform way to build Atomic components using HTML, CSS, and JavaScript.</p>
+
+<p>An example use case in building a Molecule is as follows:</p>
+
+<p>Molecules are prefixed with “m-” in CSS, JavaScript, and HTML files.</p>
+
+<h4 id="html">HTML:</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="m-notification"&gt;
+    &lt;span class="m-notification_icon cf-icon"&gt;&lt;/span&gt;
+    &lt;div class="m-notification_content" role="alert"&gt;
+        &lt;div class="h4 m-notification_message"&gt;message&lt;/div&gt;
+            &lt;p class="h4 m-notification_explanation"&gt;
+              Please check the URL and try again.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+<h4 id="css">CSS:</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.m-notification {
+    display: none;
+    position: relative;
+    padding: @notification-padding__px;
+    …
+</code></pre></div></div>
+<h4 id="javascript">JavaScript:</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const CONSTANTS = { MESSAGE: 'message', EXPLANATION: 'explanation' };
+
+const NotificationMolecule = Molecule.extend( {
+      classes: {
+        isVisible:   'm-notification__visible'
+      },
+
+      ui: {
+        base:        '.m-notification',
+        explanation: '.m-notification_explanation',
+        message:     '.m-notification_message'
+      },
+
+      initialize: function() {
+        this.ui.message.textContent = CONSTANTS.MESSAGE;
+        this.ui.explanation.textContent = CONSTANTS.EXPLANATION;
+      }
+} );
+
+NotificationMolecule.constants = CONSTANTS;
+NotificationMolecule.init();
+</code></pre></div></div>
+
+                
+            
+
+            
+
+            
+
+            
+        </section>
+    
 
     
 

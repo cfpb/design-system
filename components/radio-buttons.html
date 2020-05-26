@@ -1409,6 +1409,16 @@
     <ul class="m-list m-list__horizontal u-mb30">
         
         
+        <li class="m-list_item">
+            <a class="m-list_link" href="#standard-radio-buttons">Standard radio buttons</a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#large-target-area-radio-buttons">Large target area radio buttons</a>
+        </li>
+        
         
     </ul>
     
@@ -1422,7 +1432,9 @@
 
     
     
-    <section class="o-variation_group" id="">
+    <section class="o-variation_group" id="standard-radio-buttons">
+        
+        <h2 class="o-variation_group_title">Standard radio buttons</h2>
         
 
         
@@ -1431,9 +1443,9 @@
         <div class="m-variation">
 
             
-            <div class="m-variation_name">
-                <h3>Default state</h3>
-            </div>
+            
+            
+
             
 
             
@@ -1448,27 +1460,67 @@
             <div class="a-live_code">
                 <div class="m-form-field m-form-field__radio">
     <input class="a-radio" type="radio" id="test_radio_basic_default">
-    <label class="a-label" for="test_radio_basic_default">Label</label>
+    <label class="a-label" for="test_radio_basic_default">Default</label>
 </div>
+
+<br>
+<!--Hover-->
+<div class="m-form-field m-form-field__radio">
+    <input class="a-radio hover" type="radio" id="test_radio_basic_hover">
+    <label class="a-label" for="test_radio_basic_hover">Hover</label>
+</div>
+<br>
+
+<!--Focus--> 
+<div class="m-form-field m-form-field__radio">
+    <input class="a-radio focus" type="radio" id="test_radio_basic_focus">
+    <label class="a-label" for="test_radio_basic_focus">Focus</label>
+</div>
+<br>
+
+<!--Selected-->
+<div class="m-form-field m-form-field__radio">
+    <input class="a-radio" type="radio" id="test_radio_basic_checked" checked>
+    <label class="a-label" for="test_radio_basic_checked">Label</label>
+</div>
+<br> 
+
+<!--Disabled-->
+<div class="m-form-field m-form-field__radio">
+    <input class="a-radio" type="radio" id="test_radio_basic_disabled" disabled>
+    <label class="a-label" for="test_radio_basic_disabled">Disabled</label>
+</div>
+<br>
+
+<!--Disabled/selected-->
+<div class="m-form-field m-form-field__radio">
+    <input class="a-radio" type="radio" id="test_radio_basic_disabled" disabled checked>
+    <label class="a-label" for="test_radio_basic_disabled">Label</label>
+</div>
+
             </div>
             
 
             
             
             
+            
+
+            
+
             
             
 
             <div class="a-toggle_code">
-                <button href="#default-state-code-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#default-state-code-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-div-class-m-form-field-m-form-fi-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-div-class-m-form-field-m-form-fi-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="default-state-code-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-div-class-m-form-field-m-form-fi-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#default-state-html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-div-class-m-form-field-m-form-fi-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1476,98 +1528,64 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-div-class-m-form-field-m-form-fi-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="default-state-html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-div-class-m-form-field-m-form-fi-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;div class="m-form-field m-form-field__radio"&gt;
     &lt;input class="a-radio" type="radio" id="test_radio_basic_default"&gt;
-    &lt;label class="a-label" for="test_radio_basic_default"&gt;Label&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
+    &lt;label class="a-label" for="test_radio_basic_default"&gt;Default&lt;/label&gt;
+&lt;/div&gt;
 
-                <!-- Jinja snippet -->
-                
+&lt;br&gt;
+&lt;!--Hover--&gt;
+&lt;div class="m-form-field m-form-field__radio"&gt;
+    &lt;input class="a-radio hover" type="radio" id="test_radio_basic_hover"&gt;
+    &lt;label class="a-label" for="test_radio_basic_hover"&gt;Hover&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
 
-                <!-- Implementation details -->
-                
+&lt;!--Focus--&gt; 
+&lt;div class="m-form-field m-form-field__radio"&gt;
+    &lt;input class="a-radio focus" type="radio" id="test_radio_basic_focus"&gt;
+    &lt;label class="a-label" for="test_radio_basic_focus"&gt;Focus&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
 
-                <!-- Specs -->
-                
+&lt;!--Selected--&gt;
+&lt;div class="m-form-field m-form-field__radio"&gt;
+    &lt;input class="a-radio" type="radio" id="test_radio_basic_checked" checked&gt;
+    &lt;label class="a-label" for="test_radio_basic_checked"&gt;Label&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt; 
 
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            <div class="m-variation_name">
-                <h3>Disabled state</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <div class="m-form-field m-form-field__radio">
-    <input class="a-radio" type="radio" id="test_radio_basic_disabled" disabled>
-    <label class="a-label" for="test_radio_basic_disabled">Label</label>
-</div>
-            </div>
-            
-
-            
-            
-            
-            
-            
-
-            <div class="a-toggle_code">
-                <button href="#disabled-state-code-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#disabled-state-code-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="disabled-state-code-2">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#disabled-state-html-code-snippet-2">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="disabled-state-html-code-snippet-2">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-form-field m-form-field__radio"&gt;
+&lt;!--Disabled--&gt;
+&lt;div class="m-form-field m-form-field__radio"&gt;
     &lt;input class="a-radio" type="radio" id="test_radio_basic_disabled" disabled&gt;
+    &lt;label class="a-label" for="test_radio_basic_disabled"&gt;Disabled&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Disabled/selected--&gt;
+&lt;div class="m-form-field m-form-field__radio"&gt;
+    &lt;input class="a-radio"
+           type="radio"
+           id="test_radio_basic_disabled"
+           disabled
+           checked&gt;
     &lt;label class="a-label" for="test_radio_basic_disabled"&gt;Label&lt;/label&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1581,6 +1599,49 @@
 
                 <!-- Specs -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-div-class-m-form-field-m-form-fi-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <p>Default</p>
+<ul>
+  <li>Height: 20 px</li>
+  <li>Width: 20 px</li>
+  <li>Border: 1 px, Gray 60 (#919395)</li>
+  <li>Background: White (#ffffff)</li>
+  <li>Margin right: 10 px</li>
+  <li>Avenir Next Regular, 16 px, Black (#101820)</li>
+</ul>
+
+<p>Hover</p>
+<ul>
+  <li>Border: 2 px, Pacific (#0072ce)</li>
+</ul>
+
+<p>Focus</p>
+<ul>
+  <li>Border: 2 px, Pacific (#0072ce)</li>
+  <li>Outline: Dotted 1px, Pacific (#0072ce)</li>
+  <li>Outline offset: 1px</li>
+</ul>
+
+<p>Selected</p>
+<ul>
+  <li>Border: 1 px, Gray 60 (#919395)</li>
+  <li>Background: 14 px x 14 px, - Pacific (#0072ce)</li>
+</ul>
+
+<p>Disabled</p>
+<ul>
+  <li>Border: 1 px, Gray 60 (#919395)</li>
+  <li>Background: Gray 10 (#e7e8e9)</li>
+  <li>Avenir Next Regular, 16 px, Gray (#5a5d61)</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
 
             </div>
 <!-- .govuk-tabs -->
@@ -1589,6 +1650,10 @@
         </div>
         
         <div class="m-variation">
+
+            
+            
+            
 
             
             <div class="m-variation_name">
@@ -1623,18 +1688,22 @@
             
             
             
+
+            
+
+            
             
 
             <div class="a-toggle_code">
-                <button href="#radio-button-with-helper-text-code-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#radio-button-with-helper-text-code-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-radio-button-with-helper-text-ch-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-radio-button-with-helper-text-ch-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="radio-button-with-helper-text-code-3">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-radio-button-with-helper-text-ch-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#radio-button-with-helper-text-html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#details-radio-button-with-helper-text-ch-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -1642,11 +1711,17 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-radio-button-with-helper-text-ch-specs-2">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="radio-button-with-helper-text-html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="details-radio-button-with-helper-text-ch-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1673,6 +1748,77 @@
 
                 <!-- Specs -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-radio-button-with-helper-text-ch-specs-2">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <h4 id="default">Default</h4>
+<p>Target area</p>
+
+<ul>
+  <li>Minimum height: 50px</li>
+  <li>Background: Gray 10 (#e7e8e9)</li>
+  <li>Padding: 15 px</li>
+</ul>
+
+<p>Radio button (or checkbox) and text</p>
+
+<ul>
+  <li>Border: 1 px, Gray 60 (#919395)</li>
+  <li>Background: 20 px x 20 px, White (#ffffff)</li>
+  <li>Avenir Next Regular, 16 px, Black (#101820)</li>
+</ul>
+
+<h4 id="hover">Hover</h4>
+<p>Target area</p>
+<ul>
+  <li>Border: 2 px, Pacific (#0072ce)</li>
+  <li>Background: Gray 10 (#e7e8e9)</li>
+</ul>
+
+<p>Radio button (or checkbox)</p>
+<ul>
+  <li>Border: 2 px, Pacific (#0072ce)</li>
+</ul>
+
+<h4 id="focus">Focus</h4>
+<p>Target area</p>
+<ul>
+  <li>Border: 2 px, Pacific (#0072ce)</li>
+  <li>Background: Gray 10 (#e7e8e9)</li>
+  <li>Outline: Dotted 1px, Pacific (#0072ce)</li>
+</ul>
+
+<p>Radio button (or checkbox)</p>
+<ul>
+  <li>Border: 2 px, Pacific (#0072ce)</li>
+</ul>
+
+<h4 id="selected">Selected</h4>
+<p>Target area</p>
+<ul>
+  <li>Border: 1 px, Pacific (#0072ce)</li>
+  <li>Background: Pacific 20 (#d6e8fa)</li>
+</ul>
+
+<p>Radio button (or checkbox)</p>
+<ul>
+  <li>Border: 1 px, Gray 60 (#919395)</li>
+  <li>Background: 14 x 14 px, Pacific (#0072ce)</li>
+</ul>
+
+<h4 id="disabled">Disabled</h4>
+<p>Radio button (or checkbox)</p>
+<ul>
+  <li>Border: 1 px, Gray 60 (#919395)</li>
+  <li>Background: Gray 20 (#d2d3d5)</li>
+  <li>Avenir Next Regular, 16 px, Gray (#5a5d61)</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
 
             </div>
 <!-- .govuk-tabs -->
@@ -1680,14 +1826,29 @@
 
         </div>
         
+    </section>
+    
+    <section class="o-variation_group" id="large-target-area-radio-buttons">
+        
+        <h2 class="o-variation_group_title">Large target area radio buttons</h2>
+        
+
+        
+
+        
         <div class="m-variation">
 
             
-            <div class="m-variation_name">
-                <h3>Large target area radio button</h3>
-            </div>
+            
             
 
+            
+
+            
+            <div class="m-variation_description">
+                
+
+            </div>
             
 
             <!-- Live code example -->
@@ -1695,7 +1856,43 @@
             <div class="a-live_code">
                 <div class="m-form-field m-form-field__radio m-form-field__lg-target">
     <input class="a-radio" type="radio" id="test_radio_lg_default">
-    <label class="a-label" for="test_radio_lg_default">Label</label>
+    <label class="a-label" for="test_radio_lg_default">Default</label>
+</div>
+<br>
+
+<!--Hover--> 
+<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+    <input class="a-radio hover" type="radio" id="test_radio_lg_hover">
+    <label class="a-label" for="test_radio_lg_hover">Hover</label>
+</div>
+<br>
+
+<!--Focus-->
+<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+    <input class="a-radio focus" type="radio" id="test_radio_lg_focus">
+    <label class="a-label" for="test_radio_lg_focus">Focus</label>
+</div>
+<br>
+
+<!--Selected-->
+
+<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+    <input class="a-radio" type="radio" id="test_radio_lg_checked" checked>
+    <label class="a-label" for="test_radio_lg_checked">Selected</label>
+</div>
+<br>
+
+<!--Disabled-->
+<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+    <input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled>
+    <label class="a-label" for="test_radio_lg_disabled">Disabled</label>
+</div>
+<br>
+
+<!--Disabled/selected--> 
+<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+    <input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled checked>
+    <label class="a-label" for="test_radio_lg_disabled">Disabled/selected</label>
 </div>
             </div>
             
@@ -1704,18 +1901,22 @@
             
             
             
+
+            
+
+            
             
 
             <div class="a-toggle_code">
-                <button href="#large-target-area-radio-button-code-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#large-target-area-radio-button-code-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-div-class-m-form-field-m-form-fi-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-div-class-m-form-field-m-form-fi-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="large-target-area-radio-button-code-4">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-div-class-m-form-field-m-form-fi-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#large-target-area-radio-button-html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#details-div-class-m-form-field-m-form-fi-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1727,91 +1928,53 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="large-target-area-radio-button-html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="details-div-class-m-form-field-m-form-fi-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
     &lt;input class="a-radio" type="radio" id="test_radio_lg_default"&gt;
-    &lt;label class="a-label" for="test_radio_lg_default"&gt;Label&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
+    &lt;label class="a-label" for="test_radio_lg_default"&gt;Default&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
 
-                <!-- Jinja snippet -->
-                
+&lt;!--Hover--&gt; 
+&lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
+    &lt;input class="a-radio hover" type="radio" id="test_radio_lg_hover"&gt;
+    &lt;label class="a-label" for="test_radio_lg_hover"&gt;Hover&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
 
-                <!-- Implementation details -->
-                
+&lt;!--Focus--&gt;
+&lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
+    &lt;input class="a-radio focus" type="radio" id="test_radio_lg_focus"&gt;
+    &lt;label class="a-label" for="test_radio_lg_focus"&gt;Focus&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
 
-                <!-- Specs -->
-                
+&lt;!--Selected--&gt;
 
-            </div>
-<!-- .govuk-tabs -->
-            
+&lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
+    &lt;input class="a-radio" type="radio" id="test_radio_lg_checked" checked&gt;
+    &lt;label class="a-label" for="test_radio_lg_checked"&gt;Selected&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
 
-        </div>
-        
-        <div class="m-variation">
+&lt;!--Disabled--&gt;
+&lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
+    &lt;input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled&gt;
+    &lt;label class="a-label" for="test_radio_lg_disabled"&gt;Disabled&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
 
-            
-            <div class="m-variation_name">
-                <h3>Disabled large target area radio button</h3>
-            </div>
-            
-
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <div class="m-form-field m-form-field__radio m-form-field__lg-target">
-    <input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled>
-    <label class="a-label" for="test_radio_lg_disabled">Label</label>
-</div>
-            </div>
-            
-
-            
-            
-            
-            
-            
-
-            <div class="a-toggle_code">
-                <button href="#disabled-large-target-area-radio-button-code-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#disabled-large-target-area-radio-button-code-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="disabled-large-target-area-radio-button-code-5">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#disabled-large-target-area-radio-button-html-code-snippet-5">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="disabled-large-target-area-radio-button-html-code-snippet-5">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
+&lt;!--Disabled/selected--&gt; 
+&lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
     &lt;input class="a-radio"
-          type="radio"
-          id="test_radio_lg_disabled"
-          disabled&gt;
-    &lt;label class="a-label" for="test_radio_lg_disabled"&gt;Label&lt;/label&gt;
+           type="radio"
+           id="test_radio_lg_disabled"
+           disabled
+           checked&gt;
+    &lt;label class="a-label" for="test_radio_lg_disabled"&gt;Disabled/selected&lt;/label&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                     </div>
@@ -1834,6 +1997,10 @@
         </div>
         
         <div class="m-variation">
+
+            
+            
+            
 
             
             <div class="m-variation_name">
@@ -1841,6 +2008,11 @@
             </div>
             
 
+            
+            <div class="m-variation_description">
+                
+
+            </div>
             
 
             <!-- Live code example -->
@@ -1863,18 +2035,22 @@
             
             
             
+
+            
+
+            
             
 
             <div class="a-toggle_code">
-                <button href="#large-target-radio-button-with-helper-text-code-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#large-target-radio-button-with-helper-text-code-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-large-target-radio-button-with-h-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-large-target-radio-button-with-h-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="large-target-radio-button-with-helper-text-code-6">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-large-target-radio-button-with-h-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#large-target-radio-button-with-helper-text-html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#details-large-target-radio-button-with-h-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -1886,7 +2062,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="large-target-radio-button-with-helper-text-html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="details-large-target-radio-button-with-h-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1926,6 +2102,29 @@
 
     
     
+        <section class="sticky-header u-mb45">
+
+            
+                <h2 id="use-cases">Use cases</h2>
+                <div class="content_line content_line__wide u-mb20"></div>
+                <p>
+                </p>
+<p>Leave radio buttons unselected as the default. It’s easy for users to miss that a radio button has been preselected and to submit a form with an erroneous answer.</p>
+
+<p>Never use radio buttons for optional questions. Once a radio button is selected from a list, it or another choice must remain selected and there is no undoing the selection unless you reload the form.</p>
+
+<p>Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the default style shown below, make sure the target area is at least 45 x 45 px and includes the option text.</p>
+
+                
+            
+
+            
+
+            
+
+            
+        </section>
+    
 
     
         <section class="sticky-header u-mb45">
@@ -1940,16 +2139,6 @@
     
 
     
-        <section class="sticky-header u-mb45">
-            <h2 id="research">Research</h2>
-            <div class="content_line content_line__wide u-mb20"></div>
-            <p>
-                </p>
-<p>TBA</p>
-
-            
-        </section>
-    
 
     <div class="content-l u-mb45">
         
@@ -1959,12 +2148,6 @@
                     <h2 id="related-items">Related Items</h2>
                     <div class="content_line__wide content_line content_line u-mb20"></div>
                     
-<p>More information can be found at:</p>
-
-<ul>
-  <li><a href="http://cfpb.github.io/design-manual/page-components/form-fields.html#radio-buttons">http://cfpb.github.io/design-manual/page-components/form-fields.html#radio-buttons</a></li>
-  <li><a href="http://cfpb.github.io/design-manual/page-components/form-fields.html#radio-buttons">https://cfpb.github.io/capital-framework/components/cf-forms/#basic-radio-buttons</a></li>
-</ul>
 
                 </section>
             </div>
@@ -2012,8 +2195,8 @@
                     
                     
                     <a href="https://github.com/cfpb/design-system/commits/master/docs/components/radio-buttons.md">
-                        <time datetime="2020-05-12 11:30:07 -0400">
-                            11:30:07 AM May 12, 2020
+                        <time datetime="2020-05-25 20:10:27 -0400">
+                             8:10:27 PM May 25, 2020
                         </time>
                     </a>
                 </small>

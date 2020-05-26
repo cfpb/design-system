@@ -415,8 +415,8 @@
                 
 
                 
-                    'variation_name1': 'Default banner',
-                    'variation_description1': "Use the default banner by default.",
+                    'variation_name1': '',
+                    'variation_description1': "",
                     'variation_code_snippet1': `&lt;div class=&quot;o-banner&quot;&gt;
     &lt;div class=&quot;wrapper wrapper__match-content&quot;&gt;
         &lt;div class=&quot;m-notification
@@ -827,7 +827,30 @@
                 
                     'variation_name1': 'Icon buttons',
                     'variation_description1': "Example below of buttons with icon on left and icon on right (“back” and “next”)",
-                    'variation_code_snippet1': ``,
+                    'variation_code_snippet1': `&lt;!--
+&lt;div class=&quot;m-btn-group&quot;&gt;
+    &lt;button class=&quot;a-btn&quot;&gt;
+        &lt;span class=&quot;a-btn_icon
+                     a-btn_icon__on-left&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 559.6 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
+        Back
+    &lt;/button&gt;
+    &lt;button class=&quot;a-btn&quot;&gt;
+        Next
+        &lt;span class=&quot;a-btn_icon
+                     a-btn_icon__on-right&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 559.6 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+--&gt;`,
+                
+                    'variation_name2': 'Animated icon',
+                    'variation_description2': "Use an animated icon in a button to reassure the user that the action they are attempting to perform is functioning as intended.",
+                    'variation_code_snippet2': `&lt;!--
+&lt;button class=&quot;a-btn&quot;&gt;
+    Submit your complaint
+    &lt;span class=&quot;a-btn_icon
+                 a-btn_icon__on-right&quot;&gt;{% include icons/updating.svg %}&lt;/span&gt;
+&lt;/button&gt;
+--&gt;`,
                 
             
 
@@ -856,7 +879,7 @@
                 
 
                 
-                    'variation_name1': 'Card',
+                    'variation_name1': 'Single card',
                     'variation_description1': "A single card with multiple links.In this layout the heading is a link.",
                     'variation_code_snippet1': `&lt;article class=&quot;m-card&quot;&gt;
     &lt;h2 class=&quot;m-card_heading&quot;&gt;
@@ -894,342 +917,9 @@
     &lt;/p&gt;
 &lt;/article&gt;`,
                 
-                    'variation_name2': 'Card group',
-                    'variation_description2': "A default group of cards together is stacked vertically.",
-                    'variation_code_snippet2': `&lt;div class=&quot;o-card-group&quot;&gt;
-    &lt;div class=&quot;o-card-group_cards&quot;&gt;
-        &lt;article class=&quot;m-card&quot;&gt;
-            &lt;h2 class=&quot;m-card_heading&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/idea.svg %}&lt;/div&gt;
-                    &lt;span&gt;Bank accounts&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h2&gt;
-
-            &lt;ul class=&quot;m-list&quot;&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-            &lt;/ul&gt;
-
-            &lt;p class=&quot;m-card_footer&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    Learn more about bank accounts
-                &lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/article&gt;
-
-        &lt;article class=&quot;m-card&quot;&gt;
-            &lt;h2 class=&quot;m-card_heading&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/car.svg %}&lt;/div&gt;
-                    &lt;span&gt;Auto loans&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h2&gt;
-
-            &lt;ul class=&quot;m-list&quot;&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-            &lt;/ul&gt;
-
-            &lt;p class=&quot;m-card_footer&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    Learn more about auto loans
-                &lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/article&gt;
-
-        &lt;article class=&quot;m-card&quot;&gt;
-            &lt;h2 class=&quot;m-card_heading&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/credit-card.svg %}&lt;/div&gt;
-                    &lt;span&gt;Credit cards&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h2&gt;
-
-            &lt;ul class=&quot;m-list&quot;&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    What is a credit card interest rate? What does APR mean?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    How do I dispute a charge on my credit card bill?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-            &lt;/ul&gt;
-
-            &lt;p class=&quot;m-card_footer&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    Learn more about credit cards
-                &lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/article&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name3': 'Card group - two column',
-                    'variation_description3': "A group of cards broken into two columns.The .o-card-group__column-2 modifier is added.",
-                    'variation_code_snippet3': `&lt;div class=&quot;o-card-group o-card-group__column-2&quot;&gt;
-    &lt;div class=&quot;o-card-group_cards&quot;&gt;
-        &lt;article class=&quot;m-card&quot;&gt;
-            &lt;h2 class=&quot;m-card_heading&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/idea.svg %}&lt;/div&gt;
-                    &lt;span&gt;Bank accounts&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h2&gt;
-
-            &lt;ul class=&quot;m-list&quot;&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-            &lt;/ul&gt;
-
-            &lt;p class=&quot;m-card_footer&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    Learn more about bank accounts
-                &lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/article&gt;
-
-        &lt;article class=&quot;m-card&quot;&gt;
-            &lt;h2 class=&quot;m-card_heading&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/car.svg %}&lt;/div&gt;
-                    &lt;span&gt;Auto loans&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h2&gt;
-
-            &lt;ul class=&quot;m-list&quot;&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-            &lt;/ul&gt;
-
-            &lt;p class=&quot;m-card_footer&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    Learn more about auto loans
-                &lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/article&gt;
-
-        &lt;article class=&quot;m-card&quot;&gt;
-            &lt;h2 class=&quot;m-card_heading&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/credit-card.svg %}&lt;/div&gt;
-                    &lt;span&gt;Credit cards&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h2&gt;
-
-            &lt;ul class=&quot;m-list&quot;&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    What is a credit card interest rate? What does APR mean?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    How do I dispute a charge on my credit card bill?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-            &lt;/ul&gt;
-
-            &lt;p class=&quot;m-card_footer&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    Learn more about credit cards
-                &lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/article&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name4': 'Card group - three column',
-                    'variation_description4': "A group of cards broken into three columns.The .o-card-group__column-3 modifier is added.",
-                    'variation_code_snippet4': `&lt;div class=&quot;o-card-group o-card-group__column-3&quot;&gt;
-    &lt;div class=&quot;o-card-group_cards&quot;&gt;
-        &lt;article class=&quot;m-card&quot;&gt;
-            &lt;h2 class=&quot;m-card_heading&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/idea.svg %}&lt;/div&gt;
-                    &lt;span&gt;Bank accounts&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h2&gt;
-
-            &lt;ul class=&quot;m-list&quot;&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-            &lt;/ul&gt;
-
-            &lt;p class=&quot;m-card_footer&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    Learn more about bank accounts
-                &lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/article&gt;
-
-        &lt;article class=&quot;m-card&quot;&gt;
-            &lt;h2 class=&quot;m-card_heading&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/car.svg %}&lt;/div&gt;
-                    &lt;span&gt;Auto loans&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h2&gt;
-
-            &lt;ul class=&quot;m-list&quot;&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-            &lt;/ul&gt;
-
-            &lt;p class=&quot;m-card_footer&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    Learn more about auto loans
-                &lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/article&gt;
-
-        &lt;article class=&quot;m-card&quot;&gt;
-            &lt;h2 class=&quot;m-card_heading&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/credit-card.svg %}&lt;/div&gt;
-                    &lt;span&gt;Credit cards&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/h2&gt;
-
-            &lt;ul class=&quot;m-list&quot;&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    What is a credit card interest rate? What does APR mean?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-                &lt;li class=&quot;m-list_item&quot;&gt;
-                    How do I dispute a charge on my credit card bill?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
-                    &lt;/a&gt;
-                &lt;/li&gt;
-
-            &lt;/ul&gt;
-
-            &lt;p class=&quot;m-card_footer&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    Learn more about credit cards
-                &lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/article&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name5': 'Featured Card',
-                    'variation_description5': "A single featured card.The .m-card__featured modifier is added.",
-                    'variation_code_snippet5': `&lt;article class=&quot;m-card m-card__featured&quot;&gt;
+                    'variation_name2': 'Featured card',
+                    'variation_description2': "A single featured card.The .m-card__featured modifier is added.",
+                    'variation_code_snippet2': `&lt;article class=&quot;m-card m-card__featured&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;
         &lt;h2 class=&quot;m-card_heading&quot;&gt;
             &lt;div class=&quot;m-card_icon&quot;&gt;
@@ -1245,9 +935,347 @@
     &lt;/a&gt;
 &lt;/article&gt;`,
                 
-                    'variation_name6': 'Featured card group',
-                    'variation_description6': "A group of featured cards together with a heading and green background.The .o-card-group__bg-green modifier is added to the group andthe .m-card__featured modifier is added to the cards.",
-                    'variation_code_snippet6': `&lt;div class=&quot;o-card-group o-card-group__column-3 o-card-group__bg-green&quot;&gt;
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Card group',
+                    'variation_description1': "A default group of cards together is stacked vertically.",
+                    'variation_code_snippet1': `&lt;div class=&quot;o-card-group&quot;&gt;
+    &lt;div class=&quot;o-card-group_cards&quot;&gt;
+        &lt;article class=&quot;m-card&quot;&gt;
+            &lt;h2 class=&quot;m-card_heading&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/idea.svg %}&lt;/div&gt;
+                    &lt;span&gt;Bank accounts&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h2&gt;
+
+            &lt;ul class=&quot;m-list&quot;&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    How quickly can I get money after I deposit a check
+                    into my checking account? What is a deposit hold?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    I would like to be able to have my friend or family
+                    member help with my bill-paying and banking.
+                    What are my options?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+
+            &lt;p class=&quot;m-card_footer&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    Learn more about bank accounts
+                &lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;m-card&quot;&gt;
+            &lt;h2 class=&quot;m-card_heading&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/car.svg %}&lt;/div&gt;
+                    &lt;span&gt;Auto loans&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h2&gt;
+
+            &lt;ul class=&quot;m-list&quot;&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    What effect will shopping for
+                    an auto loan have on my credit?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    I owe more on my current loan than my current
+                    vehicle is worth. What do I need to know
+                    if I buy a new vehicle?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+
+            &lt;p class=&quot;m-card_footer&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    Learn more about auto loans
+                &lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;m-card&quot;&gt;
+            &lt;h2 class=&quot;m-card_heading&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/credit-card.svg %}&lt;/div&gt;
+                    &lt;span&gt;Credit cards&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h2&gt;
+
+            &lt;ul class=&quot;m-list&quot;&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    What is a credit card interest rate? What does APR mean?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    How do I dispute a charge on my credit card bill?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+
+            &lt;p class=&quot;m-card_footer&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    Learn more about credit cards
+                &lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name2': 'Card group - two column',
+                    'variation_description2': "A group of cards broken into two columns.The .o-card-group__column-2 modifier is added.",
+                    'variation_code_snippet2': `&lt;div class=&quot;o-card-group o-card-group__column-2&quot;&gt;
+    &lt;div class=&quot;o-card-group_cards&quot;&gt;
+        &lt;article class=&quot;m-card&quot;&gt;
+            &lt;h2 class=&quot;m-card_heading&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/idea.svg %}&lt;/div&gt;
+                    &lt;span&gt;Bank accounts&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h2&gt;
+
+            &lt;ul class=&quot;m-list&quot;&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    How quickly can I get money after I deposit a check
+                    into my checking account? What is a deposit hold?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    I would like to be able to have my friend or family
+                    member help with my bill-paying and banking.
+                    What are my options?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+
+            &lt;p class=&quot;m-card_footer&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    Learn more about bank accounts
+                &lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;m-card&quot;&gt;
+            &lt;h2 class=&quot;m-card_heading&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/car.svg %}&lt;/div&gt;
+                    &lt;span&gt;Auto loans&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h2&gt;
+
+            &lt;ul class=&quot;m-list&quot;&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    What effect will shopping for
+                    an auto loan have on my credit?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    I owe more on my current loan than my current
+                    vehicle is worth. What do I need to know
+                    if I buy a new vehicle?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+
+            &lt;p class=&quot;m-card_footer&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    Learn more about auto loans
+                &lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;m-card&quot;&gt;
+            &lt;h2 class=&quot;m-card_heading&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/credit-card.svg %}&lt;/div&gt;
+                    &lt;span&gt;Credit cards&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h2&gt;
+
+            &lt;ul class=&quot;m-list&quot;&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    What is a credit card interest rate? What does APR mean?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    How do I dispute a charge on my credit card bill?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+
+            &lt;p class=&quot;m-card_footer&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    Learn more about credit cards
+                &lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name3': 'Card group - three column',
+                    'variation_description3': "A group of cards broken into three columns.The .o-card-group__column-3 modifier is added.",
+                    'variation_code_snippet3': `&lt;div class=&quot;o-card-group o-card-group__column-3&quot;&gt;
+    &lt;div class=&quot;o-card-group_cards&quot;&gt;
+        &lt;article class=&quot;m-card&quot;&gt;
+            &lt;h2 class=&quot;m-card_heading&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/idea.svg %}&lt;/div&gt;
+                    &lt;span&gt;Bank accounts&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h2&gt;
+
+            &lt;ul class=&quot;m-list&quot;&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    How quickly can I get money after I deposit a check
+                    into my checking account? What is a deposit hold?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    I would like to be able to have my friend or family
+                    member help with my bill-paying and banking.
+                    What are my options?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+
+            &lt;p class=&quot;m-card_footer&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    Learn more about bank accounts
+                &lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;m-card&quot;&gt;
+            &lt;h2 class=&quot;m-card_heading&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/car.svg %}&lt;/div&gt;
+                    &lt;span&gt;Auto loans&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h2&gt;
+
+            &lt;ul class=&quot;m-list&quot;&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    What effect will shopping for
+                    an auto loan have on my credit?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    I owe more on my current loan than my current
+                    vehicle is worth. What do I need to know
+                    if I buy a new vehicle?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+
+            &lt;p class=&quot;m-card_footer&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    Learn more about auto loans
+                &lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;m-card&quot;&gt;
+            &lt;h2 class=&quot;m-card_heading&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;m-card_icon&quot;&gt;{% include icons/credit-card.svg %}&lt;/div&gt;
+                    &lt;span&gt;Credit cards&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/h2&gt;
+
+            &lt;ul class=&quot;m-list&quot;&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    What is a credit card interest rate? What does APR mean?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li class=&quot;m-list_item&quot;&gt;
+                    How do I dispute a charge on my credit card bill?
+                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
+                        Read answer
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+
+            &lt;p class=&quot;m-card_footer&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    Learn more about credit cards
+                &lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name4': 'Featured card group',
+                    'variation_description4': "A group of featured cards together with a heading and green background.The .o-card-group__bg-green modifier is added to the group andthe .m-card__featured modifier is added to the cards.",
+                    'variation_code_snippet4': `&lt;div class=&quot;o-card-group o-card-group__column-3 o-card-group__bg-green&quot;&gt;
     &lt;h2&gt;We want to hear from you&lt;/h2&gt;
     &lt;div class=&quot;o-card-group_cards&quot;&gt;
         &lt;article class=&quot;m-card m-card__featured&quot;&gt;
@@ -1376,46 +1404,49 @@
                     'variation_code_snippet1': `&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_default&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_default&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name2': 'Hover state',
-                    'variation_description2': "",
-                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Hover--&gt;
+&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox hover&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_hover&quot;&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_hover&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name3': 'Focus state',
-                    'variation_description3': "",
-                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_hover&quot;&gt;Hover&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Focus--&gt;
+&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox focus&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_focus&quot;&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_focus&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name4': 'Selected state',
-                    'variation_description4': "",
-                    'variation_code_snippet4': `&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_focus&quot;&gt;Focus&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;!--Selected--&gt;
+&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_checked&quot; checked&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_checked&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name5': 'Disabled state',
-                    'variation_description5': "",
-                    'variation_code_snippet5': `&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_checked&quot;&gt;Selected&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Disabled--&gt;
+&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_disabled&quot; disabled&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_disabled&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name6': 'Disabled/selected state',
-                    'variation_description6': "",
-                    'variation_code_snippet6': `&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_disabled&quot;&gt;Disabled&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Disabled/Selected--&gt;
+&lt;!--
+&lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot;
            type=&quot;checkbox&quot;
            id=&quot;test_checkbox_lg_disabled&quot;
            disabled
            checked&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_disabled&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_disabled&quot;&gt;Disabled/Selected&lt;/label&gt;
+&lt;/div&gt;
+--&gt;`,
                 
             
 
@@ -2999,23 +3030,27 @@ The text will be styled the same as H5 heading text.
                 
 
                 
-                    'variation_name1': 'Inline helper text',
-                    'variation_description1': "Appears with label headings. Use to indicate whether a field is optional or required.",
+                    'variation_name1': 'Block helper text',
+                    'variation_description1': "Use to explain why a piece of information is being requested, address security and privacy concerns, or to suggest ways of providing answers other than providing formatting examples. (For formatting examples, use placeholder text.) Appears with labels and label headings.",
                     'variation_code_snippet1': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
-    A label heading &lt;small class=&quot;a-label_helper&quot;&gt;(optional)&lt;/small&gt;
-&lt;/label&gt;`,
-                
-                    'variation_name2': 'Block helper text',
-                    'variation_description2': "Use block helper text to explain why a piece of information is being requested, address security and privacy concerns, or to suggest ways of providing answers other than providing formatting examples.Appears with labels and label headings.",
-                    'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
     A label heading
     &lt;small class=&quot;a-label_helper a-label_helper__block&quot;&gt;Use block helper text for instructions&lt;/small&gt;
-&lt;/label&gt;`,
+&lt;/label&gt;
+
+&lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;helper-example&quot;&gt;`,
+                
+                    'variation_name2': 'Inline helper text',
+                    'variation_description2': "Use to indicate whether a field is optional or required. Appears inline with label headings.",
+                    'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
+    A label heading &lt;small class=&quot;a-label_helper&quot;&gt;(optional)&lt;/small&gt;
+&lt;/label&gt;
+
+&lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;helper-example&quot;&gt;`,
                 
                     'variation_name3': 'Placeholder text',
                     'variation_description3': "Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field.",
                     'variation_code_snippet3': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-default&quot;&gt;
-    A text input
+    A label heading
 &lt;/label&gt;
 &lt;input class=&quot;a-text-input&quot;
       type=&quot;text&quot;
@@ -3027,13 +3062,19 @@ The text will be styled the same as H5 heading text.
       type=&quot;text&quot;
       id=&quot;textinput-example-default&quot;
       placeholder=&quot;Enter text…&quot;
-      value=&quot;email@example.com&quot;&gt;`,
+      value=&quot;email@example.com&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;input class=&quot;a-text-input&quot;
+      type=&quot;text&quot;
+      id=&quot;textinput-example-default&quot;
+      placeholder=&quot;Enter text…&quot;
+      value=&quot;placeholder text&quot;&gt;`,
                 
             
 
 
             'title': 'Helper text',
-            'description': "",
+            'description': "Helper text is used with form elements to give the user context about their usage. Examples include indicating whether a field is optional or required.",
             'use_cases': "",
             'content_guidelines': "Where possible, design your forms to only include required fields. If it’s not required, ask yourself if it’s really necessary to include at all. Add instructions at the top of the form to clearly indicate that all fields are required unless otherwise noted. If a field is optional, indicate it with inline helper text, as shown here. Don’t indicate which fields are required; that would only introduce redundant visual noise.Try not to design forms consisting mainly of optional fields. If you must do so, mark required field labels only with inline helper text.",
             'behavior': "",
@@ -4383,23 +4424,56 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
                 
 
                 
-                    'variation_name1': 'Default state',
+                    'variation_name1': '',
                     'variation_description1': "",
                     'variation_code_snippet1': `&lt;div class=&quot;m-form-field m-form-field__radio&quot;&gt;
     &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_basic_default&quot;&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_basic_default&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name2': 'Disabled state',
-                    'variation_description2': "",
-                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__radio&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_basic_default&quot;&gt;Default&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;!--Hover--&gt;
+&lt;div class=&quot;m-form-field m-form-field__radio&quot;&gt;
+    &lt;input class=&quot;a-radio hover&quot; type=&quot;radio&quot; id=&quot;test_radio_basic_hover&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_basic_hover&quot;&gt;Hover&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Focus--&gt; 
+&lt;div class=&quot;m-form-field m-form-field__radio&quot;&gt;
+    &lt;input class=&quot;a-radio focus&quot; type=&quot;radio&quot; id=&quot;test_radio_basic_focus&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_basic_focus&quot;&gt;Focus&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Selected--&gt;
+&lt;div class=&quot;m-form-field m-form-field__radio&quot;&gt;
+    &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_basic_checked&quot; checked&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_basic_checked&quot;&gt;Label&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt; 
+
+&lt;!--Disabled--&gt;
+&lt;div class=&quot;m-form-field m-form-field__radio&quot;&gt;
     &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_basic_disabled&quot; disabled&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_basic_disabled&quot;&gt;Disabled&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Disabled/selected--&gt;
+&lt;div class=&quot;m-form-field m-form-field__radio&quot;&gt;
+    &lt;input class=&quot;a-radio&quot;
+           type=&quot;radio&quot;
+           id=&quot;test_radio_basic_disabled&quot;
+           disabled
+           checked&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_radio_basic_disabled&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
+&lt;/div&gt;
+`,
                 
-                    'variation_name3': 'Radio button with helper text',
-                    'variation_description3': "Checkboxes and radio button inputs can have labels that span multiple lines and have helper text that appears below the main label text.",
-                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field m-form-field__radio&quot;&gt;
+                    'variation_name2': 'Radio button with helper text',
+                    'variation_description2': "Checkboxes and radio button inputs can have labels that span multiple lines and have helper text that appears below the main label text.",
+                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__radio&quot;&gt;
     &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_basic_helper&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_radio_basic_helper&quot;&gt;
         This is a very long label that wraps to a second line.
@@ -4410,26 +4484,61 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
     &lt;/label&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name4': 'Large target area radio button',
-                    'variation_description4': "",
-                    'variation_code_snippet4': `&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': '',
+                    'variation_description1': "",
+                    'variation_code_snippet1': `&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
     &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_default&quot;&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_default&quot;&gt;Label&lt;/label&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name5': 'Disabled large target area radio button',
-                    'variation_description5': "",
-                    'variation_code_snippet5': `&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_default&quot;&gt;Default&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Hover--&gt; 
+&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+    &lt;input class=&quot;a-radio hover&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_hover&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_hover&quot;&gt;Hover&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Focus--&gt;
+&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+    &lt;input class=&quot;a-radio focus&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_focus&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_focus&quot;&gt;Focus&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Selected--&gt;
+
+&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+    &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_checked&quot; checked&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_checked&quot;&gt;Selected&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Disabled--&gt;
+&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+    &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_disabled&quot; disabled&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_disabled&quot;&gt;Disabled&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;!--Disabled/selected--&gt; 
+&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
     &lt;input class=&quot;a-radio&quot;
-          type=&quot;radio&quot;
-          id=&quot;test_radio_lg_disabled&quot;
-          disabled&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_disabled&quot;&gt;Label&lt;/label&gt;
+           type=&quot;radio&quot;
+           id=&quot;test_radio_lg_disabled&quot;
+           disabled
+           checked&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_disabled&quot;&gt;Disabled/selected&lt;/label&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name6': 'Large target radio button with helper text',
-                    'variation_description6': "",
-                    'variation_code_snippet6': `&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+                    'variation_name2': 'Large target radio button with helper text',
+                    'variation_description2': "",
+                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
     &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_helper&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_helper&quot;&gt;
         This is a very long label that wraps to a second line.
@@ -4449,8 +4558,8 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
             'content_guidelines': "",
             'behavior': "",
             'accessibility': "There are some issues with Voiceover reading radio buttons. To get around this, consider using the aria-describedby attribute.",
-            'research': "TBA",
-            'related_items': "More information can be found at:  http://cfpb.github.io/design-manual/page-components/form-fields.html#radio-buttons  https://cfpb.github.io/capital-framework/components/cf-forms/#basic-radio-buttons",
+            'research': "",
+            'related_items': "",
             'url': 'components/radio-buttons'
         }
         ,

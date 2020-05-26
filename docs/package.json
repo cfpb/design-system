@@ -5,7 +5,7 @@
   "homepage": "https://cfpb.github.io/design-system/",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently --kill-others \"yarn start-netlify\" \"bundle exec jekyll serve --watch --profile --host=localhost\" \"yarn run watch\" \"yarn run watch-css\"",
+    "start": "concurrently --kill-others \"yarn start-netlify\" \"bundle exec jekyll serve --watch --profile --host=localhost --port=4000\" \"yarn run watch\" \"yarn run watch-css\"",
     "start-netlify": "cd ../ && netlify-cms-proxy-server",
     "compile-js": "NODE_ENV=production webpack",
     "compile-css": "lessc --include-path=../packages/:../node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/main.css",

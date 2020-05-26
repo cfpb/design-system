@@ -5,7 +5,7 @@ describe( 'Netlify CMS', function() {
 
   let loginButton;
 
-  beforeEach( function() {
+  afterEach( function() {
     browser.reloadSession();
   } );
 

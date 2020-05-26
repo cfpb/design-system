@@ -5,7 +5,9 @@ section: components
 secondary_section: Forms
 status: Released
 description: Range sliders allow the user to select a value between a defined
-  minimum and maximum range.
+  minimum and maximum range. They can work well for discovery and education, but
+  because they’re imprecise and difficult to manipulate, are not the best choice
+  when the user is likely to have a specific number that they want to input.
 variation_groups:
   - variations:
       - variation_code_snippet: ""
@@ -41,9 +43,12 @@ content_guidelines: >-
   lowest fares.
 
 
-  Because they’re imprecise and difficult to manipulate, range sliders are not a good choice when the user is likely to have a specific number that they want to input. If you choose to implement a slider in this latter case, consider adding steppers or an input box as an alternative means of entering the same data. Also consider the balance between the length of the slider and the number of data points it covers (the range as well as how discrete the points are). The more points to choose from, the harder it is for the user to target a specific number.
+  Because they’re imprecise and difficult to manipulate, range sliders are not a good choice when the user is likely to have a specific number that they want to input. If you choose to implement a slider in this latter case, consider adding steppers or an input box as an alternative means of entering the same data. 
+
+
+  Also consider the balance between the length of the slider and the number of data points it covers (the range, as well as how discrete the points are). The more points to choose from, the harder it is for the user to target a specific number.
 behavior: ""
-accessibility: Make sure that sliders are accessible by keyboard using the arrow keys
+accessibility: Make sure that sliders are accessible by keyboard using the arrow keys.
 last_updated: 2020-01-28T15:55:47.394Z
 research: ""
 ---

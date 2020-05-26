@@ -149,7 +149,9 @@ description: >-
 
 
   https://cfpb.github.io/capital-framework/components/cf-core/#media-queries
-usage: ''
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z

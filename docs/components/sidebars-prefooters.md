@@ -160,10 +160,7 @@ variation_groups:
       - variation_code_snippet: ''
         variation_description: '![](/design-system/images/uploads/cta_example.png)'
         variation_name: Call to action with button
-usage: >-
-  <h3>Use cases</h3>
-
-
+use_cases: >-
   #### When to use Related posts
 
 
@@ -226,11 +223,7 @@ usage: >-
 
   * When the “action” is navigating to another page of the site or downloading a
   document. Refer to the buttons page for more information.
-
-
-  <h3>Content guidelines</h3>
-
-
+content_guidelines: >-
   * Slugs should be as succinct as possible, ideally 30 characters or less. They
   should be limited to one line at max column width.
 
@@ -243,11 +236,7 @@ usage: >-
   * Content can be one or two columns in prefooter depending on need.
 
   * In the prefooter, content is populated in a Z-order, chronologically.
-
-
-  #### Behavior
-
-
+behavior: >-
   All variations of sidebar element move into prefooter format at screen widths
   less than 901 px. The sidebar area can house multiple stacked sidebar
   elements.

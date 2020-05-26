@@ -4,9 +4,8 @@ layout: variation
 section: components
 secondary_section: Alerts
 status: Beta
-description: >-
-  This component provides banner boxes at the top of the page's content.
-  This is similar to a notification, but is intended to be full width.
+description: This component provides banner boxes at the top of the page's
+  content. This is similar to a notification, but is intended to be full width.
 variation_groups:
   - variations:
       - variation_code_snippet: |-
@@ -24,7 +23,8 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: Use the default banner by default.
-        variation_name: Default banner
+        variation_description: ""
+        variation_name: ""
+    variation_group_name: Default banner
 last_updated: 2020-01-28T15:55:47.394Z
 ---

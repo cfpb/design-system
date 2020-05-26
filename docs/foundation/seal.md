@@ -26,7 +26,7 @@ variation_groups:
           color, the one-color seal in black should be used. The one-color seal
           should always be placed on a white background.
         variation_name: One-color seal
-usage: >-
+use_cases: >-
   Use of the seal is very limited. It should never be used on consumer-facing
   materials, as it is important that the CFPB logo is consistently used to help
   consumers recognize and trust the CFPB. 
@@ -57,6 +57,8 @@ usage: >-
   * Employee awards, commendations, and certificates from the Director
 
   * Delegations of Authority from the Director
+content_guidelines: ''
+behavior: ''
 restrictions:
   - restrictions_do: >-
       * Use the seal at its benchmark size of 1.75” for most materials, such as

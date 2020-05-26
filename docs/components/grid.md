@@ -514,7 +514,9 @@ variation_groups:
           </div>
         variation_description: ''
         variation_name: Prefixing/Suffixing
-usage: ''
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 related_items: ''

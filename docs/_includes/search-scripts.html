@@ -27,7 +27,9 @@
 
             'title': '{{ page.title | xml_escape }}',
             'description': {{ page.description | markdownify | strip_html | strip_newlines | jsonify }},
-            'usage': {{ page.usage | markdownify | strip_html | strip_newlines | jsonify }},
+            'use_cases': {{ page.use_cases | markdownify | strip_html | strip_newlines | jsonify }},
+            'content_guidelines': {{ page.content_guidelines | markdownify | strip_html | strip_newlines | jsonify }},
+            'behavior': {{ page.behavior | markdownify | strip_html | strip_newlines | jsonify }},
             'accessibility': {{ page.accessibility | markdownify | strip_html | strip_newlines | jsonify }},
             'research': {{ page.research | markdownify | strip_html | strip_newlines | jsonify }},
             'related_items': {{ page.related_items | markdownify | strip_html | strip_newlines | jsonify }},
@@ -41,7 +43,9 @@
     window.searchStore.fields = [
         'title',
         'description',
-        'usage',
+        'use_cases',
+        'content_guidelines',
+        'behavior',
         'accessibility',
         'research',
         'related_items',

@@ -208,9 +208,9 @@ variation_groups:
           in cfgov-refresh
 
         variation_name: 50/50 image and text component
-usage: >
+use_cases: ''
+content_guidelines: >-
   **When to use**
-
 
   * When a call-to-action, leading users to a deeper page in the section, needs
   a visual highlight on the page.
@@ -220,6 +220,7 @@ usage: >
 
   * Can be used for an even or odd number of items and may imply a hierarchy of
   information given the list style format.
+behavior: ''
 accessibility: ''
 research: ''
 related_items: '* Link blobs (Design System page in progress)'

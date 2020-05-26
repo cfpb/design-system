@@ -31,7 +31,7 @@ description: >-
   info](http://cfpb.github.io/design-manual/best-practices/accessibility-best-practices.html#attribution)._
 
 
-  ## Perceivable 
+  ## Perceivable
 
   ([View on W3C
   site](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#perceivable))
@@ -50,18 +50,18 @@ description: >-
   charts, graphs, etc), provide an alternative version of that content that is
   text-based.
 
-  * Use the alt and title attributes on images and other graphical elements. 
+  * Use the alt and title attributes on images and other graphical elements.
 
-  * Use the `<title>` and `<desc>` elements in SVG drawings. 
+  * Use the `<title>` and `<desc>` elements in SVG drawings.
 
-  * Use fallback text for the `<object>` element. 
+  * Use fallback text for the `<object>` element.
 
   * Include descriptive text near images (for example, a pie chart legend with
-  percentages of each item). 
+  percentages of each item).
 
-  * Provide transcripts of audio and video recordings. 
+  * Provide transcripts of audio and video recordings.
 
-  * Provide alternatives for multimedia 
+  * Provide alternatives for multimedia
 
   * Multimedia such as audio, video, and animations will usually require more
   than just descriptive text. In most cases, the timing of text and descriptions
@@ -72,10 +72,10 @@ description: >-
   #### Prerecorded content
 
   * For audio-only content, provide a transcript of both spoken words and
-  descriptions of other sounds. 
+  descriptions of other sounds.
 
   * For video-only content, provide an audio track or transcript that describes
-  the video. 
+  the video.
 
   * Combined audio and video content should accommodate alternatives for both
   (e.g., closed captioning or sign interpretation for audio, and an audio track
@@ -97,16 +97,16 @@ description: >-
   without losing information or structure.
 
   * Use semantic HTML, including relative header tags, lists, and semantic tags
-  like `<aside>`, and `<figure>` 
+  like `<aside>`, and `<figure>`
 
   * Support HTML tables with semantic tags like `<th>`, `<thead>`, `<tbody>`,
-  and `<caption>` 
+  and `<caption>`
 
   * Mark up HTML forms with semantic tags like `<label>`, `<fieldset>`,
-  `<legend>`, and – where appropriate – HTML5 form additions like email fields. 
+  `<legend>`, and – where appropriate – HTML5 form additions like email fields.
 
   * If the sequence of a page matters, the underlying HTML document should be in
-  that order or the sequence should be machine-readable through another method. 
+  that order or the sequence should be machine-readable through another method.
 
   * Avoid text descriptions that rely on layout or other sensory items such as
   “click the round button” or “the image on the right.” However, note that
@@ -121,10 +121,10 @@ description: >-
 
   #### Text
 
-  * Choose easy-to-read fonts. 
+  * Choose easy-to-read fonts.
 
   * Avoid using images of text, except for logos and images meant to represent
-  physical documents. 
+  physical documents.
 
   * Text should be able to be resized up to 200% without causing overlapping
   issues with other content on the page. Don’t rely on browser zoom, since some
@@ -135,7 +135,7 @@ description: >-
 
 
   * Do not use color as the only means of conveying information, indicating an
-  action, prompting a response, or distinguishing a visual element. 
+  action, prompting a response, or distinguishing a visual element.
 
   * Text should have a contrast ratio of at least 4.5 : 1, but there are
   exceptions.
@@ -148,13 +148,13 @@ description: >-
   #### Audio
 
   * Avoid auto-playing audio. If this is absolutely unavoidable, provide a
-  control that allows the user to stop the audio and adjust or mute the volume. 
+  control that allows the user to stop the audio and adjust or mute the volume.
 
   * In recorded audio, background sounds should be at least 20 dB lower than
   foreground sounds and speech. This does not apply to music.
 
 
-  ## Operable 
+  ## Operable
 
   ([view on W3C site](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#operable))
 
@@ -171,10 +171,10 @@ description: >-
 
   * All controls must be addressable by the keyboard. By default, this includes
   `<a>`, `<area>`, `<object>`, and all form elements. Other elements can be made
-  addressable by applying a `tabindex` value. 
+  addressable by applying a `tabindex` value.
 
   * Avoid keyboard traps. If a user can tab to an element on the page, the user
-  needs to be able to exit that element using only the keyboard as well. 
+  needs to be able to exit that element using only the keyboard as well.
 
   * Do not rely on specific timing of individual keystrokes when implementing
   keyboard accessibility.
@@ -187,73 +187,73 @@ description: >-
 
 
   * Allow users to turn off or extend the time limit to at least 10 times the
-  default setting. 
+  default setting.
 
   * Warn users at least 20 seconds before a time limit expires and enable a time
-  extension with a simple action, such as pressing the space bar. 
+  extension with a simple action, such as pressing the space bar.
 
   * If a user needs to log in again after a time limit, make sure that there is
-  no loss of data. 
+  no loss of data.
 
 
   ### Avoid interrupting users
 
   * Avoid popups or other modal dialogs that haven not been prompted by explicit
-  user action or are alerting the user about something that is time-sensitive. 
+  user action or are alerting the user about something that is time-sensitive.
 
   * Allow users to pause, stop, or hide anything moving, blinking, or scrolling
-  on the screen if the motion lasts longer than 5 seconds. 
+  on the screen if the motion lasts longer than 5 seconds.
 
   * Allow users to pause, stop, hide, or control the frequency of auto-updating
-  information. 
+  information.
 
 
   ### Do not create designs or interactions that may cause seizures
 
-  Nothing on the page should flash more than 3 times in 1 second. 
+  Nothing on the page should flash more than 3 times in 1 second.
 
 
   ### Help users navigate, find content, and determine where they are
 
   * Allow users to bypass blocks of content that appear repeatedly on a website,
-  like navigation, with a “skip to main content” or similar link. 
+  like navigation, with a “skip to main content” or similar link.
 
   * Use titles that describe a webpage’s topic or purpose.
 
-  * Include descriptive section headings to organize content. 
+  * Include descriptive section headings to organize content.
 
   * Unless content is a step in a process, provide more than one way to access
-  it, such as through browsing and search. 
+  it, such as through browsing and search.
 
   * Provide a breadcrumb trail or other way for the user to identify their
-  location in the site on every page. 
+  location in the site on every page.
 
   * Use descriptive link text. Avoid calls to action like “click here” or “read
-  more.” 
+  more.”
 
 
-  ### Manage focus 
+  ### Manage focus
 
   When users navigate a webpage using the keyboard or another alternative input
   device, only one element on the page will be in focus at a given time.
 
 
   * If the order of controls on a page matters, make sure they will be focused
-  in that order when navigating by keyboard. 
+  in that order when navigating by keyboard.
 
   * Make sure there is a visible indicator on screen of which element has focus.
   This may be an optional mode, but it should be turned on if the user begins to
-  navigate with the keyboard. 
+  navigate with the keyboard.
 
   * If a user action causes a modal dialog to appear on screen, make sure the
   focus is moved to that dialog or area. When the dialog is dismissed, re-focus
-  back to the original control or to some other logical place in the document. 
+  back to the original control or to some other logical place in the document.
 
 
-  ## Understandable 
+  ## Understandable
 
   ([view on W3C
-  site](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#understandable)) 
+  site](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#understandable))
 
 
   Users must be able to comprehend content and how to operate an interface.
@@ -264,58 +264,58 @@ description: >-
   * Specify the language of the content in a machine-readable way. Generally,
   this means using `<html lang="en-us">` or the equivalent for another language.
   This will help with translation software and ensures that screen readers will
-  use the correct pronunciation. 
+  use the correct pronunciation.
 
   * If part of a document is in a different language from the overall language
-  of the document, specify this with something like `<span lang="fr">`. 
+  of the document, specify this with something like `<span lang="fr">`.
 
   * Where possible, provide a way for users to find definitions of unusual words
-  and phrases, especially jargon. 
+  and phrases, especially jargon.
 
   * Make the meaning of abbreviations and acronyms available, either directly in
   the text, such as “Consumer Financial Protection Bureau (CFPB)”, or in a
   machine-readable way, like `<abbr title="Consumer Financial Protection
-  Bureau">CFPB</abbr>)`. 
+  Bureau">CFPB</abbr>)`.
 
   * Write text to an eighth-grade comprehension level, excluding proper names
   and titles, where possible. If that is not an option, provide a simplified
-  version of the text nearby. 
+  version of the text nearby.
 
-  * For hard-to-pronounce words, consider including the pronunciation. 
+  * For hard-to-pronounce words, consider including the pronunciation.
 
 
   ### Develop sites that behave in a predictable way
 
 
-  * Related webpages should have a consistent navigation structure and layout. 
+  * Related webpages should have a consistent navigation structure and layout.
 
-  * Components that perform the same action should be labelled the same way. 
+  * Components that perform the same action should be labelled the same way.
 
 
-  ### Maintain context 
+  ### Maintain context
 
   Avoid changing a user’s context without an explicit request from the user,
   like clicking a button. If an automatic context change is necessary, warn the
-  user in advance, and give them an opportunity to stop it. 
+  user in advance, and give them an opportunity to stop it.
 
 
   A few examples of context changes:
 
 
-  * Submitting a form 
+  * Submitting a form
 
-  * Moving focus to a different element 
+  * Moving focus to a different element
 
-  * Popping open a help dialog box 
+  * Popping open a help dialog box
 
-  * Launching a new window 
+  * Launching a new window
 
-  * Following a link 
+  * Following a link
 
   * Reloading most of the content on a page
 
 
-  ## Robust 
+  ## Robust
 
   ([View on W3C site](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#robust))
 
@@ -332,7 +332,7 @@ description: >-
 
   * Make sure your HTML validates.
 
-  * Use unique IDs on individual pages. 
+  * Use unique IDs on individual pages.
 
   * Avoid deprecated or proprietary markup.
 
@@ -340,7 +340,10 @@ description: >-
 
 
   Note that this is specific to HTML and does not include CSS.
-usage: >-
+use_cases: ''
+content_guidelines: ''
+behavior: ''
+accessibility: >-
   ## Testing accessibility issues
 
 
@@ -361,4 +364,3 @@ usage: >-
    - With VoiceOver enabled, optionally enable the "rotor" by pressing _control +option+U_.
 last_updated: 2019-12-10T22:50:48.793Z
 ---
-

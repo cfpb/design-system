@@ -106,7 +106,7 @@ variations:
       </table>
     variation_description: ''
     variation_name: Sortable table
-usage: >-
+use_cases: >-
   #### Code
 
   #### Making a table sortable
@@ -184,6 +184,8 @@ usage: >-
 
   * Please note the importance of defining a `thead` and `tbody` to preserve the
   table’s header through sorting operations.
+content_guidelines: ''
+behavior: ''
 accessibility: >-
   Phasellus molestie magna non est bibendum non venenatis nisl tempor.
   Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
@@ -211,4 +213,3 @@ research: >-
   amet leo consequat posuere.
 last_updated: 2019-08-30T15:24:10.371Z
 ---
-

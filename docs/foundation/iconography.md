@@ -333,10 +333,7 @@ variation_groups:
 
           {: class="icon-table"}
         variation_name: Icon library
-usage: >
-  #### Content guidelines
-
-
+use_cases: >-
   ##### Color
 
 
@@ -354,14 +351,17 @@ usage: >
 
   Padding varies around icons of various primary shapes. Square, vertically and horizontally rectangular, diagonal, and most complex icons can fit within the relative padding bounding box. Circular and some complex icons should be slightly larger to offset the visual weight of surrounding negative space.
 
-
-  ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png "Icon spacing diagram")
-
-
-  #### Behavior
-
-
-  In certain instances, icons can be animated to aid communication or to reassure the user that an action is functioning as intended. Examples include saving or loading content. Depending on the context, the animated icon follows the standards of the component that contains it, for example, the icon follows the size and padding standards for buttons when placed inside a button to indicate loading or follows standards of a form-level alert within an alert message.
+  ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png "Icon
+  spacing diagram")
+content_guidelines: ''
+behavior: >-
+  In certain instances, icons can be animated to aid communication or to
+  reassure the user that an action is functioning as intended. Examples include
+  saving or loading content. Depending on the context, the animated icon follows
+  the standards of the component that contains it, for example, the icon follows
+  the size and padding standards for buttons when placed inside a button to
+  indicate loading or follows standards of a form-level alert within an alert
+  message.
 
 
   Our previous font icon system provided modifiers to rotate any icon. We found in reality this wasn’t practical and only one icon is ever animated, `update`. We’ve provided an alias–`updating`–to be used within the UI when a user needs to be made aware that the website is working on responding to their actions.

@@ -44,7 +44,7 @@ variation_groups:
           ![Paying for College
           illustration](/design-system/images/uploads/illustration6_-2.png)
         variation_name: Top-facing
-usage: >-
+use_cases: >-
   Illustrations are universally relatable and set a friendly tone when
   communicating complex topics.
 
@@ -132,6 +132,8 @@ usage: >-
 
   ![Example of shadows in
   llustration](/design-system/images/uploads/illustration8_-2.png)
+content_guidelines: ''
+behavior: ''
 accessibility: >-
   #### Include text alternatives for non-text content
 

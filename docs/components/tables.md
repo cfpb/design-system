@@ -474,9 +474,7 @@ variation_groups:
           default and indicate which column is already sorted. Not every column of a
           table needs to be sortable.
         variation_name: Sortable table
-usage: >-
-  #### Use cases
-
+use_cases: >-
   Tables are only one method for presenting many data points grouped together in
   a visual way. Other options include charts or graphs.
 
@@ -495,10 +493,7 @@ usage: >-
   * Individual values are being presented or compared
 
   * Values across columns or rows require different units of measurement
-
-
-  #### Content guidelines
-
+content_guidelines: >-
   As a rule, design tables so that they are easy to read. Label columns
   precisely and include units of measurement where necessary. Organize the data
   so that the underlying meaning is quickly apparent.
@@ -535,10 +530,7 @@ usage: >-
   measure in parentheses following the column label. Make sure to use common
   abbreviations when indicating units of measure. Spell out any ambiguous or
   obscure abbreviations.
-
-
-  #### Behavior
-
+behavior: >-
   Since the nature of tables relies so much on visual space, there are several
   common variations that can be used to accommodate different types of data in a
   table.
@@ -697,4 +689,3 @@ accessibility: >-
 research: ''
 last_updated: 2019-08-30T15:18:28.960Z
 ---
-

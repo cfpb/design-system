@@ -141,9 +141,7 @@ variation_groups:
       - variation_code_snippet: ''
         variation_description: No visited link style
         variation_name: Navigation link
-usage: >-
-  **Usage**
-
+use_cases: >-
   Links are automatically underlined when they are a child of a paragraph `p`,
   list item `li`, or definition list term `dd`:
 
@@ -173,15 +171,8 @@ usage: >-
 
 
   Links within a `nav` element are not underlined.
-
-
-
-  <h3>Content guidelines</h3>
-
-
-  <h3>Behavior</h3>
-
-
+content_guidelines: ''
+behavior: >-
   Default links
 
   In general, links should default to opening in the same page or browser tab.

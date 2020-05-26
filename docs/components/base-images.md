@@ -18,7 +18,9 @@ variation_groups:
           Resets browser default side `margins` for `figure` to `0`, and removes
           bottom inline spacing from `img` elements within.
         variation_name: Figure
-usage: ''
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z

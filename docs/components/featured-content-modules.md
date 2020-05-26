@@ -116,10 +116,7 @@ variation_groups:
           to the center of the available space so that the focal point of the visual
           remains in view at all screen sizes.
         variation_name: Centered visual
-usage: >-
-  #### Use cases
-
-
+use_cases: >-
   Use a featured content module (FCM) when you want to highlight something
   that’s:
 
@@ -174,11 +171,7 @@ usage: >-
   * When there’s no link or video for the user to interact with. If you just
   want to visually differentiate your content from its surroundings, consider
   using a well or inline text instead.
-
-
-  #### Content guidelines
-
-
+content_guidelines: >-
   FCMs contain a headline, descriptive body copy text, an optional
   call-to-action link, and a graphical element related to the piece of content
   being featured. They are a “mini story” and never simply a dominant visual.
@@ -213,11 +206,7 @@ usage: >-
   When creating a static image for the visual, it should be 1076px × 606px (a
   16:9 aspect ratio), which is 2x the rendered width at the maximum size at
   which the visual will be seen (on a 600px wide display).
-
-
-  #### Behavior
-
-
+behavior: >-
   At desktop size, the ratio of text and visual changes with screen size to keep
   the full height of the image visible. As available width dips below the
   maximum page width, the text area shrinks in width while the visual maintains

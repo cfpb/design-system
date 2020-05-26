@@ -292,10 +292,8 @@ variation_groups:
           `o-expandable-group__accordion` class to the expandable group to activate
           the accordion mode.
         variation_name: Accordion-style group
-usage: >-
-  ### Content guidelines
-
-
+use_cases: ''
+content_guidelines: >-
   #### Individual
 
 
@@ -519,6 +517,7 @@ usage: >-
 
 
   * {string} The text of the expandable’s label.
+behavior: ''
 accessibility: >-
   The `find` function will not discover information hidden by a collapsed
   expandable, so use good judgement in deciding which information to hide.

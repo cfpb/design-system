@@ -26,12 +26,9 @@
         Skip to main content
     </a>
   </div>
-  {% include global-eyebrow.html %}
-  <div class="body-wrapper">
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
-  </div>
+  {% include header.html %}
+  {{ content }}
+  {% include footer.html %}
   <script src="{{ "/dist/js/main.js" | relative_url }}" charset="utf-8"></script>
 </body>
 </html>

@@ -24,7 +24,7 @@ variation_groups:
 
           | With hero | With text introduction | With breakout sidebar |
 
-          | --- | --- | --- | 
+          | --- | --- | --- |
 
           | ![Sublanding page with
           hero](/design-system/images/uploads/sublanding_examplea.jpg) |
@@ -33,7 +33,7 @@ variation_groups:
           ![Sublanding page with breakout
           sidebar](/design-system/images/uploads/sublanding_exampleb.jpg) |
         variation_name: Sublanding page variations
-usage: >-
+use_cases: >-
   #### When to use
 
 
@@ -52,9 +52,7 @@ usage: >-
   * When the desired user interaction is more geared toward encouraging users to
   sit down and read something or engage deeply with an interactive tool.
 
-
-  #### Content guidelines
-
+content_guidelines: >-
   * The content components should work together to create an overview of the
   information held within the section and how it relates back to the main
   navigation section.
@@ -114,17 +112,14 @@ usage: >-
   appear above static content.
 
 
-
-  #### Behavior
-
-
+behavior: >-
   Below the 901 pixel breakpoint, the sidebar stacks below the main content
   area.
 
 
   | 901 pixels or more | 900 pixels or less |
 
-  | -- | -- | 
+  | -- | -- |
 
   | ![Sublanding behavior
   desktop](/design-system/images/uploads/sublanding_behavior_desktop.jpg) |

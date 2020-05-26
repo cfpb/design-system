@@ -1,3 +1,4 @@
+import { TOGGLE_ATTRIBUTE, toggleDetails } from './toggle-details.js';
 import { Tabs } from 'govuk-frontend';
 import AnchorJS from 'anchor-js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
@@ -5,7 +6,7 @@ import Table from '@cfpb/cfpb-tables/src/Table';
 
 const anchors = new AnchorJS();
 // Add anchors to all headings (except page title headings)
-anchors.add( 'h2:not(.title_heading), h3, h4, h5' );
+anchors.add( 'h2:not(.title), h3, h4, h5' );
 // Ensure there are no anchors in the live code examples
 anchors.remove( `
   .live-code-example h2,
@@ -29,29 +30,14 @@ if ( tabs && tabs.length > 0 ) {
   }
 }
 
-const HIDDEN_CLASS = 'u-hidden';
-
 /**
  * @param {MouseEvent} event - The mouse event object from the click.
  */
 function handleDocumentClick( event ) {
   const target = event.target;
-  if ( !target.matches( '[data-toggle-code]' ) ) {
-    return;
+  if ( target.matches( `[${ TOGGLE_ATTRIBUTE }]` ) ) {
+    toggleDetails( target );
   }
-  event.preventDefault();
-  const container = target.parentNode;
-  const codeEl = document.querySelector( target.getAttribute( 'href' ) );
-  if ( codeEl && codeEl.classList.contains( HIDDEN_CLASS ) ) {
-    codeEl.classList.remove( HIDDEN_CLASS );
-    container.querySelector( '[data-toggle-code="hide"]' ).classList.remove( HIDDEN_CLASS );
-    container.querySelector( '[data-toggle-code="show"]' ).classList.add( HIDDEN_CLASS );
-  } else {
-    codeEl.classList.add( HIDDEN_CLASS );
-    container.querySelector( '[data-toggle-code="hide"]' ).classList.add( HIDDEN_CLASS );
-    container.querySelector( '[data-toggle-code="show"]' ).classList.remove( HIDDEN_CLASS );
-  }
-
 }
 
 document.addEventListener( 'click', handleDocumentClick, false );

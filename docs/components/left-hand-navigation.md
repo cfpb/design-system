@@ -45,7 +45,9 @@ variation_groups:
 
           It is assumed that the content is wider than the sidebar.
         variation_name: Left-hand navigation layout
-usage: ''
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z

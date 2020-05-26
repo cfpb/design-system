@@ -27,9 +27,10 @@ variation_groups:
           The legend serves as the heading for a
           [fieldset](https://cfpb.github.io/design-system/components/fieldsets).
         variation_name: Basic legend
-usage: ''
+use_cases: ''
+content_guidelines: ''
+behavior: ''
 accessibility: ''
 research: ''
 last_updated: 2020-01-28T15:55:47.394Z
 ---
-

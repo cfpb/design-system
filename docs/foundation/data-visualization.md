@@ -22,14 +22,14 @@ description: >-
   Occasionally, data visualization isn’t the best approach. A well crafted
   sentence or table may be a better solution to convey specific points or a
   precise numerical interpretation. Graphs are most useful when you want the
-  user to walk away with a general sense of the data and to interpret patterns. 
+  user to walk away with a general sense of the data and to interpret patterns.
 
 
   ##### KEY QUESTIONS
 
-  * Is data visualization necessary to help achieve your objective? 
+  * Is data visualization necessary to help achieve your objective?
 
-  * Do you understand the data set? 
+  * Do you understand the data set?
 
   * What do you want people to walk away knowing?
 
@@ -40,322 +40,314 @@ description: >-
   *
   http://cfpb.github.io/design-manual/data-visualization/data-visualization.html
 
+use_cases: >-
+    Consider your audience when you’re creating data visualization.
 
-  ### Usage
+    ##### KEY QUESTIONS
 
-  #### Use cases
+    * Who is your audience?
 
-  Consider your audience when you’re creating data visualization.
+    * What is their familiarity with data visualization?
 
-  ##### KEY QUESTIONS
+    * How much information do they need?
 
-  * Who is your audience? 
 
-  * What is their familiarity with data visualization? 
+    ##### If your user group is general (i.e. the American public)
 
-  * How much information do they need?
+    For the general public, stick with basic and most common chart types that
+    people can easily understand. Adding emphasis and labels will help highlight
+    the point of the visual and tell the story of the information. Consider using
+    multiple simple charts to step the user through the data, rather than one big
+    complex visualization.
 
+    ##### If your user is refined to a specific audience
 
-  ##### If your user group is general (i.e. the American public)
+    When you’re creating visualizations for a specific target, take into
+    consideration their familiarity with the data, visualization types, and the
+    terminology used to label and describe data. More complex stories might
+    necessitate more complex visuals, however, this does not mean it should lack
+    emphasis.
+  content_guidelines: >-
+    #### Chart components
 
-  For the general public, stick with basic and most common chart types that
-  people can easily understand. Adding emphasis and labels will help highlight
-  the point of the visual and tell the story of the information. Consider using
-  multiple simple charts to step the user through the data, rather than one big
-  complex visualization.
+    Using the appropriate font not only increases consistency with the core brand,
+    but assures legibility and good visual hierarchy. Proper labeling and titles
+    help users quickly understand the chart and increases comprehension as well as
+    helping with accessibility.
 
-  ##### If your user is refined to a specific audience
+    ##### KEY QUESTIONS
 
-  When you’re creating visualizations for a specific target, take into
-  consideration their familiarity with the data, visualization types, and the
-  terminology used to label and describe data. More complex stories might
-  necessitate more complex visuals, however, this does not mean it should lack
-  emphasis.
+    * Does your chart have a descriptive title and subtitle so someone who cannot
+    see the chart could understand the general trends?
 
-  ### Content guidelines
+    * Have you included notes and a data source?
 
-  #### Chart components
+    * Is it clear when the data is from?
 
-  Using the appropriate font not only increases consistency with the core brand,
-  but assures legibility and good visual hierarchy. Proper labeling and titles
-  help users quickly understand the chart and increases comprehension as well as
-  helping with accessibility.
 
-  ##### KEY QUESTIONS
+    ##### Font
 
-  * Does your chart have a descriptive title and subtitle so someone who cannot
-  see the chart could understand the general trends? 
+    All data, labels and titles for data visualizations should be in a sans-serif
+    font. The preferred choices for fonts are: Avenir Next over Arial, and Arial
+    over another sans serif font.
 
-  * Have you included notes and a data source? 
+    While serif fonts are generally easier to read for long blocks of text, data
+    visualizations rarely include long blocks. The lack of serifs, especially on
+    numbers, helps cut down on the amount of lines and visual clutter. This lack
+    also increases the legibility of small text by eliminating thin serifs.
 
-  * Is it clear when the data is from?
+    ##### Titles
 
+    Titles should be as descriptive as possible to give users a sense of what the
+    chart will be about. This not only provides users a framework of what they are
+    looking at, but also helps with 508 accessibility and decreases the amount of
+    text necessary in alt tags.
 
-  ##### Font
+    ![Labeled display of the titles on a
+    chart.](/design-system/images/uploads/parts-of-a-chart_01.png)
 
-  All data, labels and titles for data visualizations should be in a sans-serif
-  font. The preferred choices for fonts are: Avenir Next over Arial, and Arial
-  over another sans serif font.
+    ##### Labels and keys
 
-  While serif fonts are generally easier to read for long blocks of text, data
-  visualizations rarely include long blocks. The lack of serifs, especially on
-  numbers, helps cut down on the amount of lines and visual clutter. This lack
-  also increases the legibility of small text by eliminating thin serifs.
+    Wherever possible, charts should not include a key, and data should be
+    directly labeled. This reduces the cognitive burden for the user so they are
+    not hunting for labels and trying to connect colors to the data.
 
-  ##### Titles
+    ![Labeled display of the titles on a
+    chart.](/design-system/images/uploads/parts-of-a-chart_012.png)
 
-  Titles should be as descriptive as possible to give users a sense of what the
-  chart will be about. This not only provides users a framework of what they are
-  looking at, but also helps with 508 accessibility and decreases the amount of
-  text necessary in alt tags.
+    ![Labeled display of the titles on a
+    chart.](/design-system/images/uploads/parts-of-a-chart_013.png)
 
-  ![Labeled display of the titles on a
-  chart.](/design-system/images/uploads/parts-of-a-chart_01.png)
 
-  ##### Labels and keys
+    ##### Reports
 
-  Wherever possible, charts should not include a key, and data should be
-  directly labeled. This reduces the cognitive burden for the user so they are
-  not hunting for labels and trying to connect colors to the data.
+    ###### Figure number
 
-  ![Labeled display of the titles on a
-  chart.](/design-system/images/uploads/parts-of-a-chart_012.png)
+    * Uses the Figure number style (all caps)
 
-  ![Labeled display of the titles on a
-  chart.](/design-system/images/uploads/parts-of-a-chart_013.png)
 
+    ###### Title
 
-  ##### Reports
+    * Gives an overview of what the graph is about
 
-  ###### Figure number
+    * Uses the h3 heading style
 
-  * Uses the Figure number style (all caps)
+    * 2 lines of text maximum
 
 
-  ###### Title
+    ###### Subtitle
 
-  * Gives an overview of what the graph is about 
+    * Explains the general trends of the graph and what that means, including why
+    it is important
 
-  * Uses the h3 heading style 
+    * Uses the h4 heading style
 
-  * 2 lines of text maximum
+    * 3 lines of text maximum
 
 
-  ###### Subtitle
+    ###### Notes
 
-  * Explains the general trends of the graph and what that means, including why
-  it is important 
+    * Describes any caveats or inconsistencies with the data such as explaining
+    why numbers do not add up to 100% or the specific dates that the data is
+    pulled from
 
-  * Uses the h4 heading style 
 
-  * 3 lines of text maximum
+    ###### Data source information
 
+    * Provides a link to the URL of a spreadsheet or to the source of the data
 
-  ###### Notes
+    * Important to include for trustworthiness and validity
 
-  * Describes any caveats or inconsistencies with the data such as explaining
-  why numbers do not add up to 100% or the specific dates that the data is
-  pulled from
+    * Allows people to dive deeper into the data and explore the nuances for
+    themselves or to replicate the visualization
 
 
-  ###### Data source information
+    ##### Blog posts
 
-  * Provides a link to the URL of a spreadsheet or to the source of the data 
+    ###### Title
 
-  * Important to include for trustworthiness and validity 
+    * Gives an overview of what the graph is about
 
-  * Allows people to dive deeper into the data and explore the nuances for
-  themselves or to replicate the visualization
+    * Uses the h3 heading style
 
+    * 2 lines of text maximum
 
-  ##### Blog posts
 
-  ###### Title
+    ###### Subtitle
 
-  * Gives an overview of what the graph is about 
+    * Explains the general trends of the graph and what that means, including why
+    it is important
 
-  * Uses the h3 heading style 
+    * Uses the h4 heading style
 
-  * 2 lines of text maximum
+    * 3 lines of text maximum
 
 
-  ###### Subtitle
+    ###### Notes
 
-  * Explains the general trends of the graph and what that means, including why
-  it is important 
+    * Describes any caveats or inconsistencies with the data such as explaining
+    why numbers do not add up to 100% or the specific dates that the data is
+    pulled from
 
-  * Uses the h4 heading style 
 
-  * 3 lines of text maximum
+    ###### Date
 
+    * Include a date to at least the month and year of when the data was collected
+    to provide context and accuracy over time.
 
-  ###### Notes
 
-  * Describes any caveats or inconsistencies with the data such as explaining
-  why numbers do not add up to 100% or the specific dates that the data is
-  pulled from
+    ###### Data source information
 
+    * Provides a link to the URL of a spreadsheet or to the source of the data
 
-  ###### Date
+    * Important to include for trustworthiness and validity
 
-  * Include a date to at least the month and year of when the data was collected
-  to provide context and accuracy over time.
+    * Allows people to dive deeper into the data and explore the nuances for
+    themselves or to replicate the visualization
 
 
-  ###### Data source information
+    ##### Social media
 
-  * Provides a link to the URL of a spreadsheet or to the source of the data 
+    ###### Title
 
-  * Important to include for trustworthiness and validity 
+    * Gives an overview of what the graph is about
 
-  * Allows people to dive deeper into the data and explore the nuances for
-  themselves or to replicate the visualization
+    * Uses the h3 heading style
 
+    * 2 lines of text maximum
 
-  ##### Social media
 
-  ###### Title
+    ###### Subtitle
 
-  * Gives an overview of what the graph is about 
+    * Explains the general trends of the graph and what that means, including why
+    it is important
 
-  * Uses the h3 heading style 
+    * Uses the h4 heading style
 
-  * 2 lines of text maximum
+    * 3 lines of text maximum
 
 
-  ###### Subtitle
+    ###### Notes
 
-  * Explains the general trends of the graph and what that means, including why
-  it is important 
+    * Describes any caveats or inconsistencies with the data such as explaining
+    why numbers do not add up to 100% or the specific dates that the data is
+    pulled from
 
-  * Uses the h4 heading style 
 
-  * 3 lines of text maximum
+    ###### Date
 
+    * Include a date to at least the month and year of when the data was collected
+    to provide context and accuracy over time.
 
-  ###### Notes
 
-  * Describes any caveats or inconsistencies with the data such as explaining
-  why numbers do not add up to 100% or the specific dates that the data is
-  pulled from
+    ###### Data source information
 
+    * Provides a link to the URL of a spreadsheet or to the source of the data
 
-  ###### Date
+    * Important to include for trustworthiness and validity
 
-  * Include a date to at least the month and year of when the data was collected
-  to provide context and accuracy over time.
+    * Allows people to dive deeper into the data and explore the nuances for
+    themselves or to replicate the visualization
 
 
-  ###### Data source information
+    ###### CFPB logo
 
-  * Provides a link to the URL of a spreadsheet or to the source of the data 
+    * Include the CFPB logo; helps with identification and determining origin if
+    the graphic gets re-used
 
-  * Important to include for trustworthiness and validity 
 
-  * Allows people to dive deeper into the data and explore the nuances for
-  themselves or to replicate the visualization
+    #### Accuracy
 
+    A chart is only as good as the validity of its data. It’s important to check
+    both the data and chart several times with multiple people before publishing.
+    One small error can invalidate the integrity of an entire visualization.
+    Several errors in data accuracy can damage credibility.
 
-  ###### CFPB logo
 
-  * Include the CFPB logo; helps with identification and determining origin if
-  the graphic gets re-used
+    ##### KEY QUESTIONS
 
+    * Is this an accurate way to represent this data?
 
-  #### Accuracy
+    *  Did someone else look at the chart and data for feedback?
 
-  A chart is only as good as the validity of its data. It’s important to check
-  both the data and chart several times with multiple people before publishing.
-  One small error can invalidate the integrity of an entire visualization.
-  Several errors in data accuracy can damage credibility.
+    * If there are percentages, do they add up to 100? Why not?
 
+    * What is the source of the data?
 
-  ##### KEY QUESTIONS
 
-  * Is this an accurate way to represent this data?
+    ##### Notes section
 
-  *  Did someone else look at the chart and data for feedback?
+    When using charts that show percentages, users expect things to add up to
+    100%. If they don’t it undermines the integrity of the visuals by leaving the
+    user with missing pieces.
 
-  * If there are percentages, do they add up to 100? Why not? 
+    To remedy this effect add a note at the bottom to explain the missing data.
 
-  * What is the source of the data?
+    > Example: Percentages may not sum to 100% due to rounding.
 
+    Use notes to add in other caveats around the data like if it was taken from a
+    specific time period.
 
-  ##### Notes section
+    > Example: Percent change is based on a 3 month period (October-December) and
+    compared to the previous year. > > Example: Company-level information should
+    be considered in context of total complaints, company size and market share in
+    a given geographic area.
 
-  When using charts that show percentages, users expect things to add up to
-  100%. If they don’t it undermines the integrity of the visuals by leaving the
-  user with missing pieces.
+    ##### Sources section
 
-  To remedy this effect add a note at the bottom to explain the missing data.
+    Including the source of the data in the visualization is a must. It adds
+    credibility and transparency to the graph. The visualization could then be
+    replicated using the mentioned sources which adds credibility.
 
-  > Example: Percentages may not sum to 100% due to rounding.
+    If you’re unable to link to the source, link to a spreadsheet of the data used
+    to create the visualization.
 
-  Use notes to add in other caveats around the data like if it was taken from a
-  specific time period.
+    #### Emphasis
 
-  > Example: Percent change is based on a 3 month period (October-December) and
-  compared to the previous year. > > Example: Company-level information should
-  be considered in context of total complaints, company size and market share in
-  a given geographic area.
+    Highlighting parts of your chart will help users quickly understand the point
+    of the graphic and accurately comprehend the information.
 
-  ##### Sources section
+    ##### KEY QUESTIONS
 
-  Including the source of the data in the visualization is a must. It adds
-  credibility and transparency to the graph. The visualization could then be
-  replicated using the mentioned sources which adds credibility.
+    * What is the point of the chart?
 
-  If you’re unable to link to the source, link to a spreadsheet of the data used
-  to create the visualization.
+    * Can someone who hasn’t seen the chart before figure out the point from a
+    quick look and the title?
 
-  #### Emphasis
 
-  Highlighting parts of your chart will help users quickly understand the point
-  of the graphic and accurately comprehend the information.
+    ##### Visual hierarchy
 
-  ##### KEY QUESTIONS
+    Good visual hierarchy allows the user to focus on the most important piece of
+    content first and work their way into the graphic. The title and subtitle
+    should be the first thing that the user reads when viewing the chart to give
+    them context of what the chart is about. Therefore, they should be the biggest
+    thing on the chart.
 
-  * What is the point of the chart? 
+    Use the squint test (take a step back from your graph, squint your eyes, and
+    say what you see first, second, third…) to get a sense of what your users will
+    automatically identify first.
 
-  * Can someone who hasn’t seen the chart before figure out the point from a
-  quick look and the title?
+    ##### Labels
 
+    Goals, trends, and important outliers should be highlighted to help the user
+    discern what is going on with the data. Labels will help the user understand
+    the data and make sense of what it is showing.
 
-  ##### Visual hierarchy
+    ##### Projected values
 
-  Good visual hierarchy allows the user to focus on the most important piece of
-  content first and work their way into the graphic. The title and subtitle
-  should be the first thing that the user reads when viewing the chart to give
-  them context of what the chart is about. Therefore, they should be the biggest
-  thing on the chart.
+    When dealing with projected or predicted data, the predicted data should be
+    deemphasized. Use a color change to a lighter tint or dashed outline for bar
+    charts, a dotted line for line charts, and a label explaining what part of the
+    data is predicted or projected.
 
-  Use the squint test (take a step back from your graph, squint your eyes, and
-  say what you see first, second, third…) to get a sense of what your users will
-  automatically identify first.
+    ![Line chart that has a projected values label, as well as changes in color
+    and pattern to indicate the projected
+    data.](/design-system/images/uploads/projected-values-1.png)
 
-  ##### Labels
-
-  Goals, trends, and important outliers should be highlighted to help the user
-  discern what is going on with the data. Labels will help the user understand
-  the data and make sense of what it is showing.
-
-  ##### Projected values
-
-  When dealing with projected or predicted data, the predicted data should be
-  deemphasized. Use a color change to a lighter tint or dashed outline for bar
-  charts, a dotted line for line charts, and a label explaining what part of the
-  data is predicted or projected.
-
-  ![Line chart that has a projected values label, as well as changes in color
-  and pattern to indicate the projected
-  data.](/design-system/images/uploads/projected-values-1.png)
-
-  ![Bar chart that has a projected values label, as well as changes in color to
-  indicate the projected
-  data.](/design-system/images/uploads/projected-values-2.png)
-
-  ### Accessibility
-
+    ![Bar chart that has a projected values label, as well as changes in color to
+    indicate the projected
+    data.](/design-system/images/uploads/projected-values-2.png)
+accessibility: >-
   Allowing all users to be able to comprehend charts and graphics is a key part
   of being a government agency that serves the entire American public. This is
   an interpretation of what it means for a chart to be 508 compliant and
@@ -365,7 +357,7 @@ description: >-
 
   ##### KEY QUESTIONS
 
-  * How would someone using a screen reader interact with this visualization? 
+  * How would someone using a screen reader interact with this visualization?
 
   * How would someone with low vision interact with this visualization?
 
@@ -395,4 +387,3 @@ description: >-
   #### Color contrast and color blindness
 
   See the color section guidelines.
----

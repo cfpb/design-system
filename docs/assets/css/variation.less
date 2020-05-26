@@ -18,21 +18,27 @@
 }
 
 .o-variation_group {
-    border: 1px solid @gray-40;
-    border-bottom: none;
+    border: 5px solid @gray-10;
     margin: 2rem 0;
-    padding: 2rem 2rem 0;
 
     &_title {
-        border-bottom: 1px solid @gray-40;
+        background: @gray-10;
         margin-bottom: 2rem;
-        padding-bottom: 1rem;
+        padding: 1rem;
     }
 
     &_description {
         margin-bottom: 2rem;
     }
+
+    &_description,
+    & .m-variation {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
+
+
 
 .m-variation {
     &_name {
@@ -52,4 +58,13 @@
     td {
         background-color: @white;
     }
+}
+
+// The icon colors on the restrictions do/do not sections.
+.component-restrictions_heading-do svg {
+    color: @green;
+}
+
+.component-restrictions_heading-donot svg {
+    color: @red;
 }

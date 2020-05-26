@@ -5845,7 +5845,7 @@ pre code {
    ========================================================================== */
 @media (min-width: 40.0625em) {
   .govuk-tabs {
-    margin: 0 -2rem 2rem;
+    margin: 0 -1rem;
   }
 }
 .govuk-tabs__list {
@@ -5995,7 +5995,7 @@ pre code {
 .a-toggle_code {
   border-bottom: 1px solid #b4b5b6;
   text-align: right;
-  margin: 0 -2rem;
+  margin: 0 -1rem;
   padding: 0 2rem 1rem;
 }
 .a-toggle_code .a-btn {
@@ -6038,18 +6038,21 @@ pre code {
   }
 }
 .o-variation_group {
-  border: 1px solid #b4b5b6;
-  border-bottom: none;
+  border: 5px solid #e7e8e9;
   margin: 2rem 0;
-  padding: 2rem 2rem 0;
 }
 .o-variation_group_title {
-  border-bottom: 1px solid #b4b5b6;
+  background: #e7e8e9;
   margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 .o-variation_group_description {
   margin-bottom: 2rem;
+}
+.o-variation_group_description,
+.o-variation_group .m-variation {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .m-variation_name {
   margin-top: 2rem;

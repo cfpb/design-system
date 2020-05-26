@@ -164,7 +164,7 @@ variation_groups:
 
           Active
           - Background: Dark Gray (#43484e)
-      - variation_name: Destructive action
+      - variation_name: Destructive actions
         variation_code_snippet: >-
           <div class="m-btn-group">
               <button class="a-btn">Action</button>

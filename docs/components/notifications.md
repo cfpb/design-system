@@ -122,7 +122,13 @@ variation_groups:
                   <div class="h4 m-notification_message">No results found.</div>
               </div>
           </div>
-        variation_description: ""
+        variation_description: >-
+          The warning notification displays when an operation has run as
+          expected, but doesn’t have the expected results, such as a search that
+          returned no results.
+
+
+          This notification can also be used to display additional critical information to a user before they submit a form, such as how their data will be used and protected or a reminder that they can’t edit their responses after submitting.
         variation_implementation: ""
         variation_name: Warning notification
         variation_specs: |-
@@ -140,9 +146,7 @@ variation_groups:
                   </span>
               </div>
           </div>
-        variation_description: Remember to place form-level alerts below the form title.
-          For field level notifications, the error minicon and message should
-          always appear below the input field.
+        variation_description: ""
         variation_specs: |-
           * Border: 2 px, Gold (#ff9e1b)
           * Minicon: 18 px, Gold (#ff9e1b)
@@ -156,7 +160,9 @@ variation_groups:
                   <div class="h4 m-notification_message">Page not found.</div>
               </div>
           </div>
-        variation_description: ""
+        variation_description: The error notification displays when an operation has not
+          run as expected and encounters an error. Use after validating on the
+          server side to call out input errors preventing form submission.
         variation_implementation: >-
           * For screen reader accessibility, include anchor links to the fields
           that
@@ -204,14 +210,14 @@ variation_groups:
           to reassure the user that an action is functioning as intended.
         variation_name: In-progress notification
     variation_group_description: >-
-      Remember to place form-level alerts below the form title. 
+      Form-level alerts should appear below the form title. 
 
 
-      For field-level alerts alerts, minicon and message should always appear below the input field.  
+      For field-level alerts, minicon and message should always appear below the input field.  
 
 
       For screen reader accessibility, include anchor links to the fields that need correction.
-use_cases: ""
+use_cases: .
 content_guidelines: ""
 behavior: >-
   #### Visibility

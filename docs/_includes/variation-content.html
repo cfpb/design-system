@@ -1,17 +1,18 @@
 <section class="content_main">
 
-    <div class="component-header u-mb30">
-        <h1>
-            {{ page.title }}
-        </h1>
-    </div>
+    <h1 class="component-header u-mb30">
+        {{ page.title }}
+    </h1>
 
     {% if page.variation_groups and page.variation_groups.size > 0 %}
     <ul class="m-list m-list__horizontal u-mb30">
         {% for variation_group in page.variation_groups %}
         {% if variation_group.variation_group_name %}
         <li class="m-list_item">
-            <a class="m-list_link" href="#{{ variation_group.variation_group_name | slugify }}">{{ variation_group.variation_group_name }}</a>
+            <a class="m-list_link"
+               href="#{{ variation_group.variation_group_name | slugify }}">
+                {{ variation_group.variation_group_name }}
+            </a>
         </li>
         {% endif %}
         {% endfor %}
@@ -19,16 +20,25 @@
     {% endif %}
 
     {% if page.description %}
-        <section id="description" class="u-mb30" class="lead-paragraph">
-            {{ page.description | markdownify }}
-        </section>
+    <section id="description" class="u-mb30">
+        {{ page.description | markdownify }}
+    </section>
     {% endif %}
 
     {% if page.variation_groups and page.variation_groups.size > 0 %}
     {% for variation_group in page.variation_groups %}
     <section class="o-variation_group" id="{{ variation_group.variation_group_name | slugify }}">
-        {% if variation_group.variation_group_name  and variation_group.variation_group_name != '' %}
-        <h2 class="o-variation_group_title">{{ variation_group.variation_group_name }}</h2>
+
+        {% if variation_group.variation_group_name and variation_group.variation_group_name != '' %}
+        <h2 class="o-variation_group_title">
+            {{ variation_group.variation_group_name }}
+        </h2>
+        {% else %}
+        {% comment %}
+           Below is a sad sad spacer element since we could have no group name,
+           but have a group description that needs top spacing when its alone.
+        {% endcomment %}
+        <div class="u-mb15"></div>
         {% endif %}
 
         {% if variation_group.variation_group_description %}

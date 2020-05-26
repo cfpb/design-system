@@ -4,9 +4,9 @@ layout: variation
 section: components
 secondary_section: Text
 status: Released
-description: " Helper text is used with form elements to give the user context
+description: Helper text is used with form elements to give the user context
   about their usage. Examples include indicating whether a field is optional or
-  required."
+  required.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -34,9 +34,14 @@ variation_groups:
           </label>
 
           <input class="a-text-input" type="text" id="helper-example">
-        variation_description: "Use to indicate whether a field is optional or required.
-          Appears inline with label headings. "
+        variation_description: Use to indicate whether a field is optional or required.
+          Appears inline with label headings, and should be lowercase and placed
+          in parenthesis after the label.
         variation_name: Inline helper text
+        variation_specs: |-
+          #### Inline helper text
+          * Avenir Next Regular, 16 px, Gray (#5a5d61)
+          * Margin bottom: 10 px
       - variation_code_snippet: >-
           <label class="a-label a-label__heading"
           for="textinput-example-default">
@@ -69,15 +74,12 @@ variation_groups:
         variation_specs: |-
           #### Placeholder text
           Avenir Next Regular, 16 px, Gray (#5a5d61)
-    variation_group_name: Variations
-use_cases: ""
+    variation_group_name: Standard helper text
+use_cases: .
 content_guidelines: >-
-  Where possible, design your forms to only include required fields. If it’s not
-  required, ask yourself if it’s really necessary to include at all. Add
-  instructions at the top of the form to clearly indicate that all fields are
-  required unless otherwise noted. If a field is optional, indicate it with
-  inline helper text, as shown here. Don’t indicate which fields are required;
-  that would only introduce redundant visual noise.
+  #### Required vs. optional fields
+
+  Where possible, design your forms to only include required fields. If it’s not required, ask yourself if it’s really necessary to include at all. Add instructions at the top of the form to clearly indicate that all fields are required unless otherwise noted. If a field is optional, indicate it with inline helper text, as shown above. Don’t indicate which fields are required; that would only introduce redundant visual noise.
 
 
   Try not to design forms consisting mainly of optional fields. If you must do so, mark required field labels only with inline helper text.

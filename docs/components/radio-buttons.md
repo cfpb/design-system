@@ -71,6 +71,31 @@ variation_groups:
                      checked>
               <label class="a-label" for="test_radio_basic_disabled">Label</label>
           </div>
+        variation_specs: |-
+          Default
+          - Height: 20 px
+          - Width: 20 px
+          - Border: 1 px, Gray 60 (#919395)
+          - Background: White (#ffffff)
+          - Margin right: 10 px
+          - Avenir Next Regular, 16 px, Black (#101820)
+
+          Hover
+          - Border: 2 px, Pacific (#0072ce)
+
+          Focus
+          - Border: 2 px, Pacific (#0072ce)
+          - Outline: Dotted 1px, Pacific (#0072ce)
+          - Outline offset: 1px
+
+          Selected
+          - Border: 1 px, Gray 60 (#919395)
+          - Background: 14 px x 14 px, - Pacific (#0072ce)
+
+          Disabled
+          - Border: 1 px, Gray 60 (#919395)
+          - Background: Gray 10 (#e7e8e9)
+          - Avenir Next Regular, 16 px, Gray (#5a5d61)
       - variation_name: Radio button with helper text
         variation_description: Checkboxes and radio button inputs can have labels that
           span multiple lines and have helper text that appears below the main
@@ -86,6 +111,51 @@ variation_groups:
                   </small>
               </label>
           </div>
+        variation_specs: |-
+          #### Default
+          Target area
+
+          - Minimum height: 50px
+          - Background: Gray 10 (#e7e8e9)
+          - Padding: 15 px
+
+          Radio button (or checkbox) and text
+
+          - Border: 1 px, Gray 60 (#919395)
+          - Background: 20 px x 20 px, White (#ffffff)
+          - Avenir Next Regular, 16 px, Black (#101820)
+
+          #### Hover
+          Target area
+          - Border: 2 px, Pacific (#0072ce)
+          - Background: Gray 10 (#e7e8e9)
+
+          Radio button (or checkbox)
+          - Border: 2 px, Pacific (#0072ce)
+
+          #### Focus
+          Target area
+          - Border: 2 px, Pacific (#0072ce)
+          - Background: Gray 10 (#e7e8e9)
+          - Outline: Dotted 1px, Pacific (#0072ce)
+
+          Radio button (or checkbox)
+          - Border: 2 px, Pacific (#0072ce)
+
+          #### Selected
+          Target area
+          - Border: 1 px, Pacific (#0072ce)
+          - Background: Pacific 20 (#d6e8fa)
+
+          Radio button (or checkbox)
+          - Border: 1 px, Gray 60 (#919395)
+          - Background: 14 x 14 px, Pacific (#0072ce)
+
+          #### Disabled
+          Radio button (or checkbox)
+          - Border: 1 px, Gray 60 (#919395)
+          - Background: Gray 20 (#d2d3d5)
+          - Avenir Next Regular, 16 px, Gray (#5a5d61)
   - variations:
       - variation_code_snippet: >-
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
@@ -150,15 +220,6 @@ variation_groups:
         variation_name: ""
       - variation_code_snippet: |-
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
-              <input class="a-radio"
-                    type="radio"
-                    id="test_radio_lg_disabled"
-                    disabled>
-              <label class="a-label" for="test_radio_lg_disabled">Label</label>
-          </div>
-        variation_name: Disabled large target area radio button
-      - variation_code_snippet: |-
-          <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_helper">
               <label class="a-label" for="test_radio_lg_helper">
                   This is a very long label that wraps to a second line.
@@ -179,7 +240,7 @@ use_cases: >-
   Never use radio buttons for optional questions. Once a radio button is selected from a list, it or another choice must remain selected and there is no undoing the selection unless you reload the form.
 
 
-  Consider using <a href="#large-target">radio buttons with large target areas</a>. If these won’t fit into your design and you need to use the default style shown below, make sure the target area is at least 45 x 45 px and includes the option text.
+  Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the default style shown below, make sure the target area is at least 45 x 45 px and includes the option text.
 content_guidelines: ""
 behavior: ""
 accessibility: There are some issues with Voiceover reading radio buttons. To

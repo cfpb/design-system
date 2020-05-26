@@ -75,7 +75,7 @@ variation_groups:
           #### Placeholder text
           Avenir Next Regular, 16 px, Gray (#5a5d61)
     variation_group_name: Standard helper text
-use_cases: ""
+use_cases: .
 content_guidelines: >-
   #### Required vs. optional fields
 

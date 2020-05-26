@@ -32,8 +32,7 @@ variation_groups:
           - Background: Pacific 20 (#d6e8fa)
           #### 
     variation_group_name: Standard range slider
-use_cases: ""
-content_guidelines: >-
+use_cases: >-
   Range sliders can work well for discovery and education, where the inputs are
   [a relative quantity and not a specific numeric
   input](https://medium.com/@paulvddool/sliders-are-bad-practice-b56c3b7a6e19).
@@ -47,6 +46,7 @@ content_guidelines: >-
 
 
   Also consider the balance between the length of the slider and the number of data points it covers (the range, as well as how discrete the points are). The more points to choose from, the harder it is for the user to target a specific number.
+content_guidelines: ""
 behavior: ""
 accessibility: Make sure that sliders are accessible by keyboard using the arrow keys.
 last_updated: 2020-01-28T15:55:47.394Z

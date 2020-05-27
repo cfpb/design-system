@@ -1,7 +1,6 @@
 [build]
-  base = "docs/"
   publish = "docs/_site/"
-  command = "yarn run build-netlify && cd _site/ && mkdir design-system && mv !(design-system) design-system"
+  command = "./scripts/build-netlify-pr-preview.sh"
 
 [[redirects]]
   from = "/"

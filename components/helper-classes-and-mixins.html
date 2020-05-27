@@ -1442,20 +1442,20 @@
 
             
             <div class="m-variation_description">
-                <p>Hide an element when JavaScript isn’t available. Requires a small script in the <code class="highlighter-rouge">&lt;head&gt;</code> of your <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> document that removes a <code class="highlighter-rouge">.no-js</code> class.</p>
+                <p>Hide an element when JavaScript isn’t available. Requires a small script in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> of your <code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> document that removes a <code class="language-plaintext highlighter-rouge">.no-js</code> class.</p>
 
 <ol>
-  <li>Add a <code class="highlighter-rouge">no-js</code> class to the html</li>
+  <li>Add a <code class="language-plaintext highlighter-rouge">no-js</code> class to the html</li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html</span> <span class="na">class=</span><span class="s">"no-js"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html class="no-js"&gt;
 </code></pre></div></div>
 
 <ol>
   <li>Add a script to remove the no-js class after confirming JavaScript is available</li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
       // Confirm availability of JavaScript and remove no-js class from html
       var docElement = document.documentElement;
       docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
@@ -1466,7 +1466,7 @@
   <li>Add the utility class to the element you want to hide</li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="u-js-only"&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="u-js-only"&gt;&lt;/div&gt;
 </code></pre></div></div>
 
             </div>
@@ -1655,7 +1655,7 @@
             <div class="m-variation_description">
                 <p>Hide an element from view while keeping it accessible to screen readers.</p>
 
-<p>For example, to create a link with a social network icon, but allow non-sighted users to understand the context, add descriptive text with the <code class="highlighter-rouge">u-visually-hidden</code> class.</p>
+<p>For example, to create a link with a social network icon, but allow non-sighted users to understand the context, add descriptive text with the <code class="language-plaintext highlighter-rouge">u-visually-hidden</code> class.</p>
 
             </div>
             
@@ -1747,7 +1747,7 @@
 
             
             <div class="m-variation_description">
-                <p>Use <code class="highlighter-rouge">u-hidden</code> to hide an element from everything (including screen readers). This is useful for dynamically hiding and showing content. It is also useful for progressive enhancement. For example, if you want to hide something initially on page load but show it after checking for browser support, use JavaScript to remove this class from the element after verifying support.</p>
+                <p>Use <code class="language-plaintext highlighter-rouge">u-hidden</code> to hide an element from everything (including screen readers). This is useful for dynamically hiding and showing content. It is also useful for progressive enhancement. For example, if you want to hide something initially on page load but show it after checking for browser support, use JavaScript to remove this class from the element after verifying support.</p>
 
             </div>
             
@@ -1782,7 +1782,7 @@
 
             
             <div class="m-variation_description">
-                <p><em>DEPRECATED.</em> Identical to <code class="highlighter-rouge">display: inline-block.</code></p>
+                <p><em>DEPRECATED.</em> Identical to <code class="language-plaintext highlighter-rouge">display: inline-block.</code></p>
 
             </div>
             
@@ -1948,7 +1948,7 @@
             <div class="m-variation_description">
                 <p>Force word breaks within an element. Useful for small containers where text may over-run the width of the container.</p>
 
-<p><em>This only works in Internet Explorer 8 when the element with the <code class="highlighter-rouge">.u-break-word</code> class has layout. See <a href="http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8">http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8</a> for more information.</em></p>
+<p><em>This only works in Internet Explorer 8 when the element with the <code class="language-plaintext highlighter-rouge">.u-break-word</code> class has layout. See <a href="http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8">http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8</a> for more information.</em></p>
 
             </div>
             
@@ -2054,11 +2054,11 @@
 
             
             <div class="m-variation_description">
-                <p>Force a <code class="highlighter-rouge">margin</code> top or bottom on an element in pixels.</p>
+                <p>Force a <code class="language-plaintext highlighter-rouge">margin</code> top or bottom on an element in pixels.</p>
 
-<p><code class="highlighter-rouge">.u-m[p][#]</code></p>
+<p><code class="language-plaintext highlighter-rouge">.u-m[p][#]</code></p>
 
-<p><em><code class="highlighter-rouge">[p]</code> is the position, use <code class="highlighter-rouge">t</code> for top or <code class="highlighter-rouge">b</code> for bottom. <code class="highlighter-rouge">[#]</code> is the pixel value, available options are 0, 5, 10, 15, 20, 30, 45, 60</em></p>
+<p><em><code class="language-plaintext highlighter-rouge">[p]</code> is the position, use <code class="language-plaintext highlighter-rouge">t</code> for top or <code class="language-plaintext highlighter-rouge">b</code> for bottom. <code class="language-plaintext highlighter-rouge">[#]</code> is the pixel value, available options are 0, 5, 10, 15, 20, 30, 45, 60</em></p>
 
             </div>
             
@@ -2140,7 +2140,7 @@
 
             
             <div class="m-variation_description">
-                <p>Set the <code class="highlighter-rouge">width</code> of an element in percentages.</p>
+                <p>Set the <code class="language-plaintext highlighter-rouge">width</code> of an element in percentages.</p>
 
 <p><strong>NOTE: Inline style properties for demonstration only.</strong></p>
 
@@ -2488,9 +2488,9 @@
             <div class="m-variation_description">
                 <p>Align an element vertically with the text within a button that may be to either side.</p>
 
-<p><em>Pass <code class="highlighter-rouge">font-size</code> as the argument for calculating spacing, default value is <code class="highlighter-rouge">@base-font-size-px</code>.</em></p>
+<p><em>Pass <code class="language-plaintext highlighter-rouge">font-size</code> as the argument for calculating spacing, default value is <code class="language-plaintext highlighter-rouge">@base-font-size-px</code>.</em></p>
 
-<p><code class="highlighter-rouge">.u-align-with-btn(@font-size: @base-font-size-px);</code></p>
+<p><code class="language-plaintext highlighter-rouge">.u-align-with-btn(@font-size: @base-font-size-px);</code></p>
 
             </div>
             
@@ -2568,25 +2568,25 @@
 
             
             <div class="m-variation_description">
-                <p>Utilize intrinsic ratios to create a flexible container that retains an aspect ratio. When <code class="highlighter-rouge">&lt;img&gt;</code> tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.</p>
+                <p>Utilize intrinsic ratios to create a flexible container that retains an aspect ratio. When <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.</p>
 
 <p><em>Read more about intrinsic ratios: <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video">http://alistapart.com/article/creating-intrinsic-ratios-for-video</a></em></p>
 
-<p><code class="highlighter-rouge">.u-flexible-container-mixin(@width: 16, @height: 9);</code></p>
+<p><code class="language-plaintext highlighter-rouge">.u-flexible-container-mixin(@width: 16, @height: 9);</code></p>
 
 <p>In addition to the mixin, there are two default classes available for building 16:9 and 4:3 containers.</p>
 
-<p><em>When using the mixin, pass the <code class="highlighter-rouge">width</code> as the first argument, and the <code class="highlighter-rouge">height</code> as the second argument. Default values are <code class="highlighter-rouge">16, 9</code>.</em></p>
+<p><em>When using the mixin, pass the <code class="language-plaintext highlighter-rouge">width</code> as the first argument, and the <code class="language-plaintext highlighter-rouge">height</code> as the second argument. Default values are <code class="language-plaintext highlighter-rouge">16, 9</code>.</em></p>
 
 <p>Original mixin credit: <a href="https://gist.github.com/craigmdennis/6655047">https://gist.github.com/craigmdennis/6655047</a></p>
 
 <p><strong>NOTE: Inline style properties for demonstration only</strong></p>
 
-<p>To create a 16:9 flexible video player, wrap the video element in an element with <code class="highlighter-rouge">u-flexible-container</code> and add the <code class="highlighter-rouge">u-flexible-container_inner</code> to the video element.</p>
+<p>To create a 16:9 flexible video player, wrap the video element in an element with <code class="language-plaintext highlighter-rouge">u-flexible-container</code> and add the <code class="language-plaintext highlighter-rouge">u-flexible-container_inner</code> to the video element.</p>
 
 <p>To create a flexible container with only a background (no inner video or object element), omit the inner container.</p>
 
-<p>To create a 4:3 flexible video player, add the <code class="highlighter-rouge">__4_3</code> modifier to the container.</p>
+<p>To create a 4:3 flexible video player, add the <code class="language-plaintext highlighter-rouge">__4_3</code> modifier to the container.</p>
 
             </div>
             
@@ -2705,27 +2705,27 @@
 
             
             <div class="m-variation_description">
-                <p>Calling the mixin without arguments will set the following states: default - <code class="highlighter-rouge">#0071bc</code>, <code class="highlighter-rouge">:hover</code> - <code class="highlighter-rouge">#205493</code>, <code class="highlighter-rouge">:focus</code> - <code class="highlighter-rouge">#0071bc</code>, <code class="highlighter-rouge">:visited</code> - <code class="highlighter-rouge">#4c2c92</code>, <code class="highlighter-rouge">:active</code> - <code class="highlighter-rouge">#046b99</code>.</p>
+                <p>Calling the mixin without arguments will set the following states: default - <code class="language-plaintext highlighter-rouge">#0071bc</code>, <code class="language-plaintext highlighter-rouge">:hover</code> - <code class="language-plaintext highlighter-rouge">#205493</code>, <code class="language-plaintext highlighter-rouge">:focus</code> - <code class="language-plaintext highlighter-rouge">#0071bc</code>, <code class="language-plaintext highlighter-rouge">:visited</code> - <code class="language-plaintext highlighter-rouge">#4c2c92</code>, <code class="language-plaintext highlighter-rouge">:active</code> - <code class="language-plaintext highlighter-rouge">#046b99</code>.</p>
 
-<p><code class="highlighter-rouge">u-link__colors()</code></p>
+<p><code class="language-plaintext highlighter-rouge">u-link__colors()</code></p>
 
-<p>Passing a single argument into the mixin will set the color for the default, <code class="highlighter-rouge">:visited</code>, <code class="highlighter-rouge">:hover</code>, <code class="highlighter-rouge">:focus</code>, and <code class="highlighter-rouge">:active</code> states.</p>
+<p>Passing a single argument into the mixin will set the color for the default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states.</p>
 
-<p><code class="highlighter-rouge">u-link__colors(@c)</code></p>
+<p><code class="language-plaintext highlighter-rouge">u-link__colors(@c)</code></p>
 
-<p>Passing two arguments into the mixin will set the color for the default, <code class="highlighter-rouge">:visited</code>, and <code class="highlighter-rouge">:active</code> states as the first argument, and <code class="highlighter-rouge">:hover</code> and <code class="highlighter-rouge">:focus</code> as the second argument.</p>
+<p>Passing two arguments into the mixin will set the color for the default, <code class="language-plaintext highlighter-rouge">:visited</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states as the first argument, and <code class="language-plaintext highlighter-rouge">:hover</code> and <code class="language-plaintext highlighter-rouge">:focus</code> as the second argument.</p>
 
-<p><code class="highlighter-rouge">u-link__colors(@c, @h)</code></p>
+<p><code class="language-plaintext highlighter-rouge">u-link__colors(@c, @h)</code></p>
 
-<p>Passing five arguments will set the color for the default, <code class="highlighter-rouge">:visited</code>, <code class="highlighter-rouge">:hover</code>, <code class="highlighter-rouge">:focus</code>, and <code class="highlighter-rouge">:active</code> states respectively.</p>
+<p>Passing five arguments will set the color for the default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states respectively.</p>
 
-<p><code class="highlighter-rouge">u-link__colors(@c, @v, @h, @f, @a)</code></p>
+<p><code class="language-plaintext highlighter-rouge">u-link__colors(@c, @v, @h, @f, @a)</code></p>
 
-<p>Passing ten arguments will set the text (default, <code class="highlighter-rouge">:visited</code>, <code class="highlighter-rouge">:hover</code>, <code class="highlighter-rouge">:focus</code>, and <code class="highlighter-rouge">:active</code> states in the first five arguments) and border colors (default, <code class="highlighter-rouge">:visited</code>, <code class="highlighter-rouge">:hover</code>, <code class="highlighter-rouge">:focus</code>, and <code class="highlighter-rouge">:active</code> states in the following five arguments) separately.</p>
+<p>Passing ten arguments will set the text (default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states in the first five arguments) and border colors (default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states in the following five arguments) separately.</p>
 
-<p><code class="highlighter-rouge">u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)</code></p>
+<p><code class="language-plaintext highlighter-rouge">u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)</code></p>
 
-<p><strong>A base mixin of <code class="highlighter-rouge">u-link__colors-base()</code> exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use <code class="highlighter-rouge">.u-link__colors(@c, @v, @h, @f, @a)</code>.</strong></p>
+<p><strong>A base mixin of <code class="language-plaintext highlighter-rouge">u-link__colors-base()</code> exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use <code class="language-plaintext highlighter-rouge">.u-link__colors(@c, @v, @h, @f, @a)</code>.</strong></p>
 
             </div>
             
@@ -2760,17 +2760,17 @@
 
             
             <div class="m-variation_description">
-                <p>Force the default bottom border on the default and <code class="highlighter-rouge">:hover</code> states.</p>
+                <p>Force the default bottom border on the default and <code class="language-plaintext highlighter-rouge">:hover</code> states.</p>
 
-<p><code class="highlighter-rouge">.u-link__border()</code></p>
+<p><code class="language-plaintext highlighter-rouge">.u-link__border()</code></p>
 
-<p>Turn off the default bottom border on the default and <code class="highlighter-rouge">:hover</code> states.</p>
+<p>Turn off the default bottom border on the default and <code class="language-plaintext highlighter-rouge">:hover</code> states.</p>
 
-<p><code class="highlighter-rouge">.u-link__no-border()</code></p>
+<p><code class="language-plaintext highlighter-rouge">.u-link__no-border()</code></p>
 
-<p>Turn off the default bottom border on the default state but force a bottom border on the <code class="highlighter-rouge">:hover</code> state.</p>
+<p>Turn off the default bottom border on the default state but force a bottom border on the <code class="language-plaintext highlighter-rouge">:hover</code> state.</p>
 
-<p><code class="highlighter-rouge">.u-link__hover-border()</code></p>
+<p><code class="language-plaintext highlighter-rouge">.u-link__hover-border()</code></p>
 
             </div>
             
@@ -2805,13 +2805,13 @@
 
             
             <div class="m-variation_description">
-                <p>Calling this mixin without arguments will set the default color for the <code class="highlighter-rouge">:hover</code> state of a child within a link, without affecting the link itself.</p>
+                <p>Calling this mixin without arguments will set the default color for the <code class="language-plaintext highlighter-rouge">:hover</code> state of a child within a link, without affecting the link itself.</p>
 
-<p><code class="highlighter-rouge">.u-link__hover-child()</code></p>
+<p><code class="language-plaintext highlighter-rouge">.u-link__hover-child()</code></p>
 
-<p>Passing a single argument into the mixin will set a custom color for the <code class="highlighter-rouge">:hover</code> state of a child within a link, without affecting the link itself.</p>
+<p>Passing a single argument into the mixin will set a custom color for the <code class="language-plaintext highlighter-rouge">:hover</code> state of a child within a link, without affecting the link itself.</p>
 
-<p><code class="highlighter-rouge">.u-link__hover-child(@c)</code></p>
+<p><code class="language-plaintext highlighter-rouge">.u-link__hover-child(@c)</code></p>
 
             </div>
             
@@ -2848,19 +2848,19 @@
             <div class="m-variation_description">
                 <p><strong>CLASS</strong></p>
 
-<p>Sets the element to <code class="highlighter-rouge">14px</code> (in <code class="highlighter-rouge">em</code>s).</p>
+<p>Sets the element to <code class="language-plaintext highlighter-rouge">14px</code> (in <code class="language-plaintext highlighter-rouge">em</code>s).</p>
 
-<p><em>To be used on default <code class="highlighter-rouge">16px</code> text only. To use on text set to another size, use the mixin below.</em></p>
+<p><em>To be used on default <code class="language-plaintext highlighter-rouge">16px</code> text only. To use on text set to another size, use the mixin below.</em></p>
 
-<p><code class="highlighter-rouge">.u-small-text</code></p>
+<p><code class="language-plaintext highlighter-rouge">.u-small-text</code></p>
 
 <p><strong>MIXIN</strong></p>
 
-<p>Sets the element to <code class="highlighter-rouge">14px</code> (in <code class="highlighter-rouge">em</code>s) based on the text size passed as <code class="highlighter-rouge">@context</code>.</p>
+<p>Sets the element to <code class="language-plaintext highlighter-rouge">14px</code> (in <code class="language-plaintext highlighter-rouge">em</code>s) based on the text size passed as <code class="language-plaintext highlighter-rouge">@context</code>.</p>
 
-<p><code class="highlighter-rouge">.u-small-text(@context)</code></p>
+<p><code class="language-plaintext highlighter-rouge">.u-small-text(@context)</code></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Ex.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Ex.
 .example {
   font-size: unit(20px / @base-font-size-px, em);
 

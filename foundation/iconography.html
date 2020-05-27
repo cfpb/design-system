@@ -1881,7 +1881,7 @@
                 </p>
 <p>In certain instances, icons can be animated to aid communication or to reassure the user that an action is functioning as intended. Examples include saving or loading content. Depending on the context, the animated icon follows the standards of the component that contains it, for example, the icon follows the size and padding standards for buttons when placed inside a button to indicate loading or follows standards of a form-level alert within an alert message.</p>
 
-<p>Our previous font icon system provided modifiers to rotate any icon. We found in reality this wasn’t practical and only one icon is ever animated, <code class="highlighter-rouge">update</code>. We’ve provided an alias–<code class="highlighter-rouge">updating</code>–to be used within the UI when a user needs to be made aware that the website is working on responding to their actions.</p>
+<p>Our previous font icon system provided modifiers to rotate any icon. We found in reality this wasn’t practical and only one icon is ever animated, <code class="language-plaintext highlighter-rouge">update</code>. We’ve provided an alias–<code class="language-plaintext highlighter-rouge">updating</code>–to be used within the UI when a user needs to be made aware that the website is working on responding to their actions.</p>
 
 <h4 id="download">Download</h4>
 
@@ -1901,7 +1901,7 @@
 
 <p>Because including raw SVG code is not necessarily pretty or user-friendly, we encourage using your templating system to include them by reference.</p>
 <blockquote>
-  <p><strong>Note:</strong> Jinja2, the templating language that cfgov-refresh uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: <code class="highlighter-rouge">{% include 'icons/download.svg' %}</code>.</p>
+  <p><strong>Note:</strong> Jinja2, the templating language that cfgov-refresh uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: <code class="language-plaintext highlighter-rouge">{% include 'icons/download.svg' %}</code>.</p>
 </blockquote>
 
 <p>The filenames of the SVGs included with cf-icons match the names in the Icon library section. There are duplicate SVG files for each alias, as well.</p>
@@ -1911,28 +1911,28 @@
 </blockquote>
 
 <h5 id="what-the-less-is-doing">What the Less is doing</h5>
-<p>If you look in <code class="highlighter-rouge">cf-icons.less</code>, below the aforementioned sizing variable, you’ll see this simple rule:</p>
+<p>If you look in <code class="language-plaintext highlighter-rouge">cf-icons.less</code>, below the aforementioned sizing variable, you’ll see this simple rule:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.cf-icon-svg {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.cf-icon-svg {
     height: @cf-icon-height;
     vertical-align: text-top;
     fill: currentColor;
     …
 }
 </code></pre></div></div>
-<p>Referring back to the example above, you can see that we have encoded <code class="highlighter-rouge">class="cf-icon-svg"</code> in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.</p>
+<p>Referring back to the example above, you can see that we have encoded <code class="language-plaintext highlighter-rouge">class="cf-icon-svg"</code> in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.</p>
 
-<p>We start by limiting the size of the SVG to a proportion of the text height, using the <code class="highlighter-rouge">@cf-icon-height</code> variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set <code class="highlighter-rouge">vertical-align: text-top;</code>. Finally, setting <code class="highlighter-rouge">fill: currentColor;</code> tells the SVG to set its path’s fill <code class="highlighter-rouge">color</code> to match the color value of its parent element.</p>
+<p>We start by limiting the size of the SVG to a proportion of the text height, using the <code class="language-plaintext highlighter-rouge">@cf-icon-height</code> variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set <code class="language-plaintext highlighter-rouge">vertical-align: text-top;</code>. Finally, setting <code class="language-plaintext highlighter-rouge">fill: currentColor;</code> tells the SVG to set its path’s fill <code class="language-plaintext highlighter-rouge">color</code> to match the color value of its parent element.</p>
 
 <h5 id="caveats">Caveats</h5>
 <p>There are two modifications based on restrictions in Internet Explorer 8 and 9 (IE8/IE9).</p>
 
-<p>First, IE8 does not support <code class="highlighter-rouge">fill: currentColor</code>. Typically the fallback would be to use a PNG image, but due to the inability to know what the background or text color of its surroundings are, we found it better to fall back to the paired text with no icon.</p>
+<p>First, IE8 does not support <code class="language-plaintext highlighter-rouge">fill: currentColor</code>. Typically the fallback would be to use a PNG image, but due to the inability to know what the background or text color of its surroundings are, we found it better to fall back to the paired text with no icon.</p>
 
 <p>Second, IE9 displays SVGs as full width by default (not the paths, just the SVG container). To eliminate this issue we’ve set the width of the SVGs to match the height. The whitespace to the left or right may not be quite accurate, but we determined this is an acceptable difference for a legacy browser like IE9.</p>
 
 <h5 id="inline-svg-background">Inline SVG background</h5>
-<p>In some cases we embed an SVG as a background image. To accomplish this, a custom less plugin is used to inject the SVG icon source file inline into the CSS <code class="highlighter-rouge">background-image</code> property. This is exposed via a mixin, <code class="highlighter-rouge">.u-svg-inline-bg( @name )</code>, where <code class="highlighter-rouge">@name</code> is the SVG icon canonical name.</p>
+<p>In some cases we embed an SVG as a background image. To accomplish this, a custom less plugin is used to inject the SVG icon source file inline into the CSS <code class="language-plaintext highlighter-rouge">background-image</code> property. This is exposed via a mixin, <code class="language-plaintext highlighter-rouge">.u-svg-inline-bg( @name )</code>, where <code class="language-plaintext highlighter-rouge">@name</code> is the SVG icon canonical name.</p>
 
                 
             

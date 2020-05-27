@@ -2100,7 +2100,7 @@
 
             
             <div class="m-variation_description">
-                <p>Accordions can only show one open expandable at a time. Add the <code class="highlighter-rouge">o-expandable-group__accordion</code> class to the expandable group to activate the accordion mode.</p>
+                <p>Accordions can only show one open expandable at a time. Add the <code class="language-plaintext highlighter-rouge">o-expandable-group__accordion</code> class to the expandable group to activate the accordion mode.</p>
 
             </div>
             
@@ -2348,7 +2348,7 @@
             <div class="content_line content_line__wide u-mb20"></div>
             <p>
                 </p>
-<p>The <code class="highlighter-rouge">find</code> function will not discover information hidden by a collapsed expandable, so use good judgement in deciding which information to hide. Non-javaScript users should default to the expanded state. Otherwise, the default state (expanded or collapsed) will depend on the circumstance.</p>
+<p>The <code class="language-plaintext highlighter-rouge">find</code> function will not discover information hidden by a collapsed expandable, so use good judgement in deciding which information to hide. Non-javaScript users should default to the expanded state. Otherwise, the default state (expanded or collapsed) will depend on the circumstance.</p>
 
             
         </section>
@@ -2372,7 +2372,7 @@
 
 <p><strong>Label:</strong> where {{element}} = element clicked</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var elem = {{element}};
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var elem = {{element}};
 
 var closestElem = closest(elem, '.o-expandable_target');
 var textElem = closestElem.querySelector('.o-expandable_label') || closestElem.querySelector('.o-expandable_cue')
@@ -2383,7 +2383,7 @@ return text;
 
 <p>OR</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var elem = {{element}};
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var elem = {{element}};
 var closestElem = closest(elem, '.expandable_target');
 var text = closestElem.querySelector('.expandable_label').textContent.trim();
 return text;
@@ -2391,9 +2391,9 @@ return text;
 
 <h4 id="trigger-items">TRIGGER ITEMS</h4>
 
-<p>Element has a parentNode with className matching RegEx <code class="highlighter-rouge">expandable_header|expandable__padded</code>.</p>
+<p>Element has a parentNode with className matching RegEx <code class="language-plaintext highlighter-rouge">expandable_header|expandable__padded</code>.</p>
 
-<p>Element has parentNode with a className that does not contain <code class="highlighter-rouge">nav-secondary</code>, since the secondary navigation at mobile uses an expandable as well.</p>
+<p>Element has parentNode with a className that does not contain <code class="language-plaintext highlighter-rouge">nav-secondary</code>, since the secondary navigation at mobile uses an expandable as well.</p>
 
             
         </section>

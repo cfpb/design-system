@@ -1403,17 +1403,17 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Mixins for consistent media queries that take <code class="highlighter-rouge">px</code> values and convert them to ems.</p>
+        <p>Mixins for consistent media queries that take <code class="language-plaintext highlighter-rouge">px</code> values and convert them to ems.</p>
 
 <h4 id="respond-to-min-and-max-width-mixins">Respond to min and max width mixins</h4>
 <p>These mixins take a px value breakpoint and set of style rules and converts them to the corresponding min or max width media query.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-min(@bp, @rules);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-min(@bp, @rules);
 
 .respond-to-max(@bp, @rules);
 </code></pre></div></div>
 <p>Ex.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-min( @bp-sm-min, {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-min( @bp-sm-min, {
     .title {
         font-size: 2em;
     }
@@ -1429,10 +1429,10 @@
 </code></pre></div></div>
 <h4 id="respond-to-range-mixin">Respond to range mixin</h4>
 <p>This mixin takes both min and max px values and a set of style rules and converts them to the corresponding min and max media query.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-range(@bp1, @bp2, @rules);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-range(@bp1, @bp2, @rules);
 </code></pre></div></div>
 <p>Ex.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-range( @bp-sm-min, @bp-sm-max, {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-range( @bp-sm-min, @bp-sm-max, {
     .title {
         font-size: 2em;
     }
@@ -1448,7 +1448,7 @@
 </code></pre></div></div>
 <h4 id="respond-to-dpi-mixin">Respond to dpi mixin</h4>
 <p>This mixin allows us to easily write styles that target high-resolution screens, such as Apple retina screens</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The following LESS...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The following LESS...
 .example {
     background: url(regular-resolution-image.png);
     .respond-to-dpi(2, {
@@ -1468,7 +1468,7 @@
 </code></pre></div></div>
 <h4 id="respond-to-print-mixin">Respond to print mixin</h4>
 <p>This mixin allows us to easily write styles that target both @media print and .print.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The following LESS...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The following LESS...
 .example {
     color: @gray;
     .respond-to-print({

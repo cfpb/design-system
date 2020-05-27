@@ -518,8 +518,8 @@
 <p>For any content that is not text-based (images, audio, video, animations, charts, graphs, etc), provide an alternative version of that content that is text-based.</p>
 <ul>
   <li>Use the alt and title attributes on images and other graphical elements.</li>
-  <li>Use the <code class="highlighter-rouge">&lt;title&gt;</code> and <code class="highlighter-rouge">&lt;desc&gt;</code> elements in SVG drawings.</li>
-  <li>Use fallback text for the <code class="highlighter-rouge">&lt;object&gt;</code> element.</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;desc&gt;</code> elements in SVG drawings.</li>
+  <li>Use fallback text for the <code class="language-plaintext highlighter-rouge">&lt;object&gt;</code> element.</li>
   <li>Include descriptive text near images (for example, a pie chart legend with percentages of each item).</li>
   <li>Provide transcripts of audio and video recordings.</li>
   <li>Provide alternatives for multimedia</li>
@@ -541,11 +541,11 @@
 <h3 id="organize-content-semantically">Organize content semantically</h3>
 <p>Semantic content allows user agents to correctly parse documents and present it to end users in a way that is appropriate for their device and medium without losing information or structure.</p>
 <ul>
-  <li>Use semantic HTML, including relative header tags, lists, and semantic tags like <code class="highlighter-rouge">&lt;aside&gt;</code>, and <code class="highlighter-rouge">&lt;figure&gt;</code>
+  <li>Use semantic HTML, including relative header tags, lists, and semantic tags like <code class="language-plaintext highlighter-rouge">&lt;aside&gt;</code>, and <code class="language-plaintext highlighter-rouge">&lt;figure&gt;</code>
 </li>
-  <li>Support HTML tables with semantic tags like <code class="highlighter-rouge">&lt;th&gt;</code>, <code class="highlighter-rouge">&lt;thead&gt;</code>, <code class="highlighter-rouge">&lt;tbody&gt;</code>, and <code class="highlighter-rouge">&lt;caption&gt;</code>
+  <li>Support HTML tables with semantic tags like <code class="language-plaintext highlighter-rouge">&lt;th&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;thead&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;tbody&gt;</code>, and <code class="language-plaintext highlighter-rouge">&lt;caption&gt;</code>
 </li>
-  <li>Mark up HTML forms with semantic tags like <code class="highlighter-rouge">&lt;label&gt;</code>, <code class="highlighter-rouge">&lt;fieldset&gt;</code>, <code class="highlighter-rouge">&lt;legend&gt;</code>, and – where appropriate – HTML5 form additions like email fields.</li>
+  <li>Mark up HTML forms with semantic tags like <code class="language-plaintext highlighter-rouge">&lt;label&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;fieldset&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;legend&gt;</code>, and – where appropriate – HTML5 form additions like email fields.</li>
   <li>If the sequence of a page matters, the underlying HTML document should be in that order or the sequence should be machine-readable through another method.</li>
   <li>Avoid text descriptions that rely on layout or other sensory items such as “click the round button” or “the image on the right.” However, note that “above” and “below” are generally understood to mean “preceding” and “after,” and as such are permissible usage.</li>
 </ul>
@@ -586,7 +586,7 @@
 <h3 id="ensure-that-all-content-is-keyboard-accessible">Ensure that all content is keyboard accessible</h3>
 <p>In general, if a website can be operated using only the keyboard, it will also be operable with less-common input devices.</p>
 <ul>
-  <li>All controls must be addressable by the keyboard. By default, this includes <code class="highlighter-rouge">&lt;a&gt;</code>, <code class="highlighter-rouge">&lt;area&gt;</code>, <code class="highlighter-rouge">&lt;object&gt;</code>, and all form elements. Other elements can be made addressable by applying a <code class="highlighter-rouge">tabindex</code> value.</li>
+  <li>All controls must be addressable by the keyboard. By default, this includes <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;area&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;object&gt;</code>, and all form elements. Other elements can be made addressable by applying a <code class="language-plaintext highlighter-rouge">tabindex</code> value.</li>
   <li>Avoid keyboard traps. If a user can tab to an element on the page, the user needs to be able to exit that element using only the keyboard as well.</li>
   <li>Do not rely on specific timing of individual keystrokes when implementing keyboard accessibility.</li>
 </ul>
@@ -636,10 +636,10 @@
 
 <h3 id="create-text-content-that-is-machine--and-human-readable">Create text content that is machine- and human-readable</h3>
 <ul>
-  <li>Specify the language of the content in a machine-readable way. Generally, this means using <code class="highlighter-rouge"><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en-us"</span><span class="nt">&gt;</span></code> or the equivalent for another language. This will help with translation software and ensures that screen readers will use the correct pronunciation.</li>
-  <li>If part of a document is in a different language from the overall language of the document, specify this with something like <code class="highlighter-rouge">&lt;span lang="fr"&gt;</code>.</li>
+  <li>Specify the language of the content in a machine-readable way. Generally, this means using <code class="language-plaintext highlighter-rouge">&lt;html lang="en-us"&gt;</code> or the equivalent for another language. This will help with translation software and ensures that screen readers will use the correct pronunciation.</li>
+  <li>If part of a document is in a different language from the overall language of the document, specify this with something like <code class="language-plaintext highlighter-rouge">&lt;span lang="fr"&gt;</code>.</li>
   <li>Where possible, provide a way for users to find definitions of unusual words and phrases, especially jargon.</li>
-  <li>Make the meaning of abbreviations and acronyms available, either directly in the text, such as “Consumer Financial Protection Bureau (CFPB)”, or in a machine-readable way, like <code class="highlighter-rouge">&lt;abbr title="Consumer Financial Protection Bureau"&gt;CFPB&lt;/abbr&gt;)</code>.</li>
+  <li>Make the meaning of abbreviations and acronyms available, either directly in the text, such as “Consumer Financial Protection Bureau (CFPB)”, or in a machine-readable way, like <code class="language-plaintext highlighter-rouge">&lt;abbr title="Consumer Financial Protection Bureau"&gt;CFPB&lt;/abbr&gt;)</code>.</li>
   <li>Write text to an eighth-grade comprehension level, excluding proper names and titles, where possible. If that is not an option, provide a simplified version of the text nearby.</li>
   <li>For hard-to-pronounce words, consider including the pronunciation.</li>
 </ul>

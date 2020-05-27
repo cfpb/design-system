@@ -317,7 +317,7 @@ The left side of your screen will show the CMS fields, the right side shows a pr
 
 <h2 id="uploading-images">Uploading images</h2>
 
-<p>When editing a page, click the <code class="highlighter-rouge">+</code> icon to add an image. Select an image from the current library or upload a new image from your computer. Note: Due to a bug in Netlify CMS, the image might not immediately appear in the preview pane.</p>
+<p>When editing a page, click the <code class="language-plaintext highlighter-rouge">+</code> icon to add an image. Select an image from the current library or upload a new image from your computer. Note: Due to a bug in Netlify CMS, the image might not immediately appear in the preview pane.</p>
 
 <p><img src="/design-system/images/uploads/uploading-cms-images.png" alt="Screenshot of image upload in CMS" title="Screenshot of image upload in CMS"></p>
 
@@ -329,15 +329,15 @@ The left side of your screen will show the CMS fields, the right side shows a pr
 
 <h2 id="updating-design-tokens">Updating design tokens</h2>
 
-<p>CFPB’s design tokens are stored in a spreadsheet located in the repository’s <a href="https://github.com/cfpb/design-system/tree/master/docs/_data"><code class="highlighter-rouge">/docs/_data folder</code></a>. You can add new tokens and change existing ones by editing the file in your favorite spreadsheet software.</p>
+<p>CFPB’s design tokens are stored in a spreadsheet located in the repository’s <a href="https://github.com/cfpb/design-system/tree/master/docs/_data"><code class="language-plaintext highlighter-rouge">/docs/_data folder</code></a>. You can add new tokens and change existing ones by editing the file in your favorite spreadsheet software.</p>
 
 <p><img src="/design-system/images/uploads/design-tokens-spreadsheet.png" alt="Screenshot of design tokens spreadsheet" title="Screenshot of design tokens spreadsheet"></p>
 
-<p>To add a spec to a component variation’s specs tables, add the applicable component variation to <strong>column A</strong>. Use the format <code class="highlighter-rouge">&lt;component-name&gt;_&lt;variation-name&gt;</code>. For example, to add the <code class="highlighter-rouge">Button background</code> spec in the above screenshot to the first variation on the <a href="https://cfpb.github.io/design-system/components/buttons#variations">buttons component page</a>, you would add <code class="highlighter-rouge">buttons_primary-button</code> to the row’s first cell.</p>
+<p>To add a spec to a component variation’s specs tables, add the applicable component variation to <strong>column A</strong>. Use the format <code class="language-plaintext highlighter-rouge">&lt;component-name&gt;_&lt;variation-name&gt;</code>. For example, to add the <code class="language-plaintext highlighter-rouge">Button background</code> spec in the above screenshot to the first variation on the <a href="https://cfpb.github.io/design-system/components/buttons#variations">buttons component page</a>, you would add <code class="language-plaintext highlighter-rouge">buttons_primary-button</code> to the row’s first cell.</p>
 
 <p><strong>Column B</strong> is the human-readable name of the specification and <strong>column C</strong> is the machine-readable name of the specification (we use <a href="https://github.com/cfpb/development/blob/master/standards/css.md#less">Less variables</a>). The value of the specification can be added to <strong>column D</strong>. This will often be another Less variable.</p>
 
-<p><strong>Columns E - M</strong> are the specifications’ values. Complete only the applicable columns. For example, our headings (<code class="highlighter-rouge">h1</code>, <code class="highlighter-rouge">h2</code>, etc.) only have <code class="highlighter-rouge">Pixels</code> and <code class="highlighter-rouge">Points</code> defined because they’re the only things needed to size a heading (pixels for websites and points for print documents). The <code class="highlighter-rouge">Second</code> and color columns are blank because time and colors don’t concern headings.</p>
+<p><strong>Columns E - M</strong> are the specifications’ values. Complete only the applicable columns. For example, our headings (<code class="language-plaintext highlighter-rouge">h1</code>, <code class="language-plaintext highlighter-rouge">h2</code>, etc.) only have <code class="language-plaintext highlighter-rouge">Pixels</code> and <code class="language-plaintext highlighter-rouge">Points</code> defined because they’re the only things needed to size a heading (pixels for websites and points for print documents). The <code class="language-plaintext highlighter-rouge">Second</code> and color columns are blank because time and colors don’t concern headings.</p>
 
 <p><img src="/design-system/images/uploads/design-tokens-values.png" alt="Screenshot of headings in design tokens spreadsheet" title="Screenshot of headings in design tokens spreadsheet"></p>
 

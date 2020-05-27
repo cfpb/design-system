@@ -1440,22 +1440,22 @@
                 </p>
 <h4 id="code">Code</h4>
 <h4 id="making-a-table-sortable">Making a table sortable</h4>
-<p>By adding the <code class="highlighter-rouge">.o-table__sortable</code> class to a <code class="highlighter-rouge">table</code>, the table becomes sortable. To allow the table to be sorted by a column, add a button to the <code class="highlighter-rouge">th</code> of the column like so:</p>
+<p>By adding the <code class="language-plaintext highlighter-rouge">.o-table__sortable</code> class to a <code class="language-plaintext highlighter-rouge">table</code>, the table becomes sortable. To allow the table to be sorted by a column, add a button to the <code class="language-plaintext highlighter-rouge">th</code> of the column like so:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>…
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>…
 &lt;button class="sortable"&gt;
     Column Name
 &lt;/button&gt;
 …
 </code></pre></div></div>
-<p>The use of a <code class="highlighter-rouge">button</code> helps address certain accessibility concerns.</p>
+<p>The use of a <code class="language-plaintext highlighter-rouge">button</code> helps address certain accessibility concerns.</p>
 
 <h4 id="sorting-type">Sorting type</h4>
-<p>To sort properly, the type of the <code class="highlighter-rouge">data</code> can be specified. By default, the column’s values will be sorted as <code class="highlighter-rouge">string</code> values. However, the column can be specifically sorted by <code class="highlighter-rouge">number</code> values (in which case, the cell’s contents are stripped of non-numeric characters, then sorted by the resulting number). To see an example, the sample table later in this document sorts the “Distance” column by <code class="highlighter-rouge">number</code> value.</p>
+<p>To sort properly, the type of the <code class="language-plaintext highlighter-rouge">data</code> can be specified. By default, the column’s values will be sorted as <code class="language-plaintext highlighter-rouge">string</code> values. However, the column can be specifically sorted by <code class="language-plaintext highlighter-rouge">number</code> values (in which case, the cell’s contents are stripped of non-numeric characters, then sorted by the resulting number). To see an example, the sample table later in this document sorts the “Distance” column by <code class="language-plaintext highlighter-rouge">number</code> value.</p>
 
-<p>To sort by <code class="highlighter-rouge">number</code> value, add the <code class="highlighter-rouge">data-sort_type="number"</code> attribute to the sorting button:</p>
+<p>To sort by <code class="language-plaintext highlighter-rouge">number</code> value, add the <code class="language-plaintext highlighter-rouge">data-sort_type="number"</code> attribute to the sorting button:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
     …
         &lt;th&gt;
             &lt;button class="sortable" data-sort_type="number"&gt;Column Name&lt;/button&gt;
@@ -1465,9 +1465,9 @@
 </code></pre></div></div>
 
 <h4 id="sorting-table-on-page-load">Sorting table on page load</h4>
-<p>To sort the table on page load, use the <code class="highlighter-rouge">.sorted-up</code> and <code class="highlighter-rouge">.sorted-down</code> classes:</p>
+<p>To sort the table on page load, use the <code class="language-plaintext highlighter-rouge">.sorted-up</code> and <code class="language-plaintext highlighter-rouge">.sorted-down</code> classes:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
     …
         &lt;th&gt;
             &lt;button class="sortable sorted-up"&gt;Column Name&lt;/button&gt;
@@ -1477,8 +1477,8 @@
 </code></pre></div></div>
 
 <ul>
-  <li>The class <code class="highlighter-rouge">.sorted-up</code> refers to a sort from smallest to greatest (first to last), and <code class="highlighter-rouge">.sorted-down</code> refers to a sort from greatest to smallest (last to first). These classes are added to the <code class="highlighter-rouge">th</code> when sorting occurs.</li>
-  <li>Please note the importance of defining a <code class="highlighter-rouge">thead</code> and <code class="highlighter-rouge">tbody</code> to preserve the table’s header through sorting operations.</li>
+  <li>The class <code class="language-plaintext highlighter-rouge">.sorted-up</code> refers to a sort from smallest to greatest (first to last), and <code class="language-plaintext highlighter-rouge">.sorted-down</code> refers to a sort from greatest to smallest (last to first). These classes are added to the <code class="language-plaintext highlighter-rouge">th</code> when sorting occurs.</li>
+  <li>Please note the importance of defining a <code class="language-plaintext highlighter-rouge">thead</code> and <code class="language-plaintext highlighter-rouge">tbody</code> to preserve the table’s header through sorting operations.</li>
 </ul>
 
                 

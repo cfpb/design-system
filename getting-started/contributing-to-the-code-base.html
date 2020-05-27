@@ -303,49 +303,49 @@
 
 <h2 id="changing-the-codebase">Changing the codebase</h2>
 
-<p>We work off feature branches from the <code class="highlighter-rouge">master</code> branch. After you’ve edited a component, open a Pull Request to merge your feature branch back into <code class="highlighter-rouge">master</code>.</p>
+<p>We work off feature branches from the <code class="language-plaintext highlighter-rouge">master</code> branch. After you’ve edited a component, open a Pull Request to merge your feature branch back into <code class="language-plaintext highlighter-rouge">master</code>.</p>
 
 <h3 id="sample-workflow">Sample workflow</h3>
-<p>For example, if you wanted to change <code class="highlighter-rouge">@cfpb/cfpb-buttons</code> and use it in <a href="https://github.com/cfpb/cfgov-refresh">cfgov-refresh</a>, here’s what you’d do:</p>
+<p>For example, if you wanted to change <code class="language-plaintext highlighter-rouge">@cfpb/cfpb-buttons</code> and use it in <a href="https://github.com/cfpb/cfgov-refresh">cfgov-refresh</a>, here’s what you’d do:</p>
 
 <ol>
   <li>
-<code class="highlighter-rouge">git clone git@github.com:cfpb/design-system.git</code>, if you haven’t already.</li>
-  <li><code class="highlighter-rouge">cd design-system</code></li>
+<code class="language-plaintext highlighter-rouge">git clone git@github.com:cfpb/design-system.git</code>, if you haven’t already.</li>
+  <li><code class="language-plaintext highlighter-rouge">cd design-system</code></li>
   <li>
-<code class="highlighter-rouge">git checkout master &amp;&amp; git pull</code> to ensure you’re on the latest changes (this step is not necessary when cloning for the first time).</li>
+<code class="language-plaintext highlighter-rouge">git checkout master &amp;&amp; git pull</code> to ensure you’re on the latest changes (this step is not necessary when cloning for the first time).</li>
   <li>
-<code class="highlighter-rouge">yarn</code> to install dependencies and set up <a href="https://yarnpkg.com/lang/en/docs/workspaces/">workspaces</a>
+<code class="language-plaintext highlighter-rouge">yarn</code> to install dependencies and set up <a href="https://yarnpkg.com/lang/en/docs/workspaces/">workspaces</a>
 </li>
   <li>
-<code class="highlighter-rouge">git checkout -b button-fix</code> to create a new branch for your changes.</li>
-  <li>Edit file(s) in <code class="highlighter-rouge">/packages/buttons/</code> however you want.</li>
+<code class="language-plaintext highlighter-rouge">git checkout -b button-fix</code> to create a new branch for your changes.</li>
+  <li>Edit file(s) in <code class="language-plaintext highlighter-rouge">/packages/buttons/</code> however you want.</li>
   <li>
-<code class="highlighter-rouge">yarn run design-system-link</code> to <a href="https://yarnpkg.com/lang/en/docs/cli/link/">link</a> your local CF components.</li>
+<code class="language-plaintext highlighter-rouge">yarn run design-system-link</code> to <a href="https://yarnpkg.com/lang/en/docs/cli/link/">link</a> your local CF components.</li>
   <li>
-<code class="highlighter-rouge">cd ~/wherever/cfgov-refresh/</code> to navigate to another project where you’d like to test your buttons changes (in this case, cfgov-refresh).</li>
+<code class="language-plaintext highlighter-rouge">cd ~/wherever/cfgov-refresh/</code> to navigate to another project where you’d like to test your buttons changes (in this case, cfgov-refresh).</li>
   <li>
-<code class="highlighter-rouge">yarn link @cfpb/cfpb-buttons</code> to link @cfpb/cfpb-buttons to cfgov-refresh.</li>
+<code class="language-plaintext highlighter-rouge">yarn link @cfpb/cfpb-buttons</code> to link @cfpb/cfpb-buttons to cfgov-refresh.</li>
   <li>
-<code class="highlighter-rouge">gulp build</code> in cfgov-refresh to compile your stylesheets.</li>
+<code class="language-plaintext highlighter-rouge">gulp build</code> in cfgov-refresh to compile your stylesheets.</li>
   <li>
 <a href="https://cfpb.github.io/cfgov-refresh/usage/">Start cfgov-refresh</a> and navigate to a page with buttons to view your @cfpb/cfpb-buttons changes.</li>
-  <li>When you’re pleased with your changes, <code class="highlighter-rouge">cd</code> back to your <code class="highlighter-rouge">design-system</code> repo and commit your changes: <code class="highlighter-rouge">git commit -am "Fix button border radius"</code>
+  <li>When you’re pleased with your changes, <code class="language-plaintext highlighter-rouge">cd</code> back to your <code class="language-plaintext highlighter-rouge">design-system</code> repo and commit your changes: <code class="language-plaintext highlighter-rouge">git commit -am "Fix button border radius"</code>
 </li>
   <li>
-<code class="highlighter-rouge">git push origin button-fix</code> to push your branch up to GitHub.</li>
-  <li>Go to https://github.com/cfpb/design-system and open a pull request to merge <code class="highlighter-rouge">button-fix</code> into <code class="highlighter-rouge">master</code>.</li>
+<code class="language-plaintext highlighter-rouge">git push origin button-fix</code> to push your branch up to GitHub.</li>
+  <li>Go to https://github.com/cfpb/design-system and open a pull request to merge <code class="language-plaintext highlighter-rouge">button-fix</code> into <code class="language-plaintext highlighter-rouge">master</code>.</li>
 </ol>
 
 <h5 id="first-time-contributor">First-time contributor?</h5>
 <p>If you are not a current contributor to this repository, use forks by first clicking the fork button on top of the repository and cloning your fork in step 1. In the final step, go to https://github.com/cfpb/design-system and file a pull request by clicking the link to compare changes across forks.</p>
 <h3 id="updating-documentation">Updating Documentation</h3>
-<p>The Design System’s website lives in this repository’s <code class="highlighter-rouge">docs/</code> directory and is powered by Netlify CMS and Jekyll. To edit any page of the website, click the edit button at the bottom right of the page. You’ll need to be added as a contributor to this repository in order to authenticate with Netlify CMS.</p>
+<p>The Design System’s website lives in this repository’s <code class="language-plaintext highlighter-rouge">docs/</code> directory and is powered by Netlify CMS and Jekyll. To edit any page of the website, click the edit button at the bottom right of the page. You’ll need to be added as a contributor to this repository in order to authenticate with Netlify CMS.</p>
 
 <h3 id="testing-components-locally">Testing components locally</h3>
 
 <h4 id="automated-tests">Automated tests</h4>
-<p>Automated tests can be run with the command <code class="highlighter-rouge">yarn test</code>.</p>
+<p>Automated tests can be run with the command <code class="language-plaintext highlighter-rouge">yarn test</code>.</p>
 
 <h4 id="browser-support">Browser support</h4>
 
@@ -410,20 +410,20 @@ always pair icons with text.</li>
 <p>Ready to publish changes to npm?</p>
 
 <ol>
-  <li>Ensure you’re on <code class="highlighter-rouge">master</code> and <code class="highlighter-rouge">git pull</code> to confirm you’re up-to-date.</li>
+  <li>Ensure you’re on <code class="language-plaintext highlighter-rouge">master</code> and <code class="language-plaintext highlighter-rouge">git pull</code> to confirm you’re up-to-date.</li>
   <li>Export a personal access token called
-<a href="https://github.com/lerna/lerna-changelog#github-token"><code class="highlighter-rouge">GITHUB_AUTH</code></a>.</li>
-  <li>Run <code class="highlighter-rouge">yarn run changelog</code> and open <code class="highlighter-rouge">CHANGELOG.md</code> to see a preview
+<a href="https://github.com/lerna/lerna-changelog#github-token"><code class="language-plaintext highlighter-rouge">GITHUB_AUTH</code></a>.</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">yarn run changelog</code> and open <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code> to see a preview
 of new changelog entries.
 We use a <a href="https://github.com/lerna/lerna-changelog#usage">tool</a> that scans our
 Pull Requests for specific labels so if you see a PR missing from the changelog,
-ensure it has been labeled <code class="highlighter-rouge">breaking</code>, <code class="highlighter-rouge">enhancement</code>, <code class="highlighter-rouge">bug</code>,
-<code class="highlighter-rouge">documentation</code> or <code class="highlighter-rouge">internal</code>.</li>
+ensure it has been labeled <code class="language-plaintext highlighter-rouge">breaking</code>, <code class="language-plaintext highlighter-rouge">enhancement</code>, <code class="language-plaintext highlighter-rouge">bug</code>,
+<code class="language-plaintext highlighter-rouge">documentation</code> or <code class="language-plaintext highlighter-rouge">internal</code>.</li>
   <li>If you’re pleased with the changelog preview,
-<code class="highlighter-rouge">git checkout CHANGELOG.md</code> to reset it.</li>
-  <li>Run <code class="highlighter-rouge">yarn run release</code> to start the release.</li>
+<code class="language-plaintext highlighter-rouge">git checkout CHANGELOG.md</code> to reset it.</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">yarn run release</code> to start the release.</li>
   <li>If all packages are shown as having been published,
-run <code class="highlighter-rouge">git push</code> to push changes to the remote <code class="highlighter-rouge">master</code> branch.</li>
+run <code class="language-plaintext highlighter-rouge">git push</code> to push changes to the remote <code class="language-plaintext highlighter-rouge">master</code> branch.</li>
 </ol>
 
 <p>Lerna will update the changelog, ask for a new version number, create a git tag, push to GitHub and publish to npm.</p>
@@ -434,24 +434,24 @@ run <code class="highlighter-rouge">git push</code> to push changes to the remot
 
 <h3 id="adhere-to-any-linting-errors-or-warnings">Adhere to any linting errors or warnings</h3>
 
-<p>The <code class="highlighter-rouge">gulp lint</code> linting tasks that are set up within the build processes are there to promote consistency. When contributing code please publicly track that there are no linting errors or warnings using the testing checklist in the pull request description.</p>
+<p>The <code class="language-plaintext highlighter-rouge">gulp lint</code> linting tasks that are set up within the build processes are there to promote consistency. When contributing code please publicly track that there are no linting errors or warnings using the testing checklist in the pull request description.</p>
 
 <h3 id="follow-our-css-naming-conventions">Follow our CSS naming conventions</h3>
 
 <p><strong>We are using a customized BEM format</strong><br></p>
 
-<p><code class="highlighter-rouge">.block-name </code><br>
-<code class="highlighter-rouge">.block-name_element-name </code><br>
-<code class="highlighter-rouge">.block-name__block-modifier </code><br>
-<code class="highlighter-rouge">.block-name_element-name__element-modifier</code></p>
+<p><code class="language-plaintext highlighter-rouge">.block-name </code><br>
+<code class="language-plaintext highlighter-rouge">.block-name_element-name </code><br>
+<code class="language-plaintext highlighter-rouge">.block-name__block-modifier </code><br>
+<code class="language-plaintext highlighter-rouge">.block-name_element-name__element-modifier</code></p>
 
 <p><strong>Avoid creating elements of modifiers</strong></p>
 
-<p>Appending an element name to a modifier class can result in a confusing class name like <code class="highlighter-rouge">.list__space_item</code>. Avoid this in favor of using a descendant, like this: <code class="highlighter-rouge">.list__spaced .list_item</code>.</p>
+<p>Appending an element name to a modifier class can result in a confusing class name like <code class="language-plaintext highlighter-rouge">.list__space_item</code>. Avoid this in favor of using a descendant, like this: <code class="language-plaintext highlighter-rouge">.list__spaced .list_item</code>.</p>
 
 <h3 id="shoot-for-mobile-first-declarations">Shoot for mobile first declarations</h3>
 
-<p>In most cases styles should be declared mobile first, then enhanced with <code class="highlighter-rouge">min-width</code> media queries. By doing this we create a base experience that all devices can use and one that does not require media query support.</p>
+<p>In most cases styles should be declared mobile first, then enhanced with <code class="language-plaintext highlighter-rouge">min-width</code> media queries. By doing this we create a base experience that all devices can use and one that does not require media query support.</p>
 
     </section>
     

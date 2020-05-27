@@ -37,6 +37,7 @@ fi
 # Commit all changed files.
 git config user.name "CFPBot"
 git config user.email "CFPBot@users.noreply.github.com"
+git add .
 git commit -am "Update GitHub Pages"
 
 # Push to remote gh-pages branch

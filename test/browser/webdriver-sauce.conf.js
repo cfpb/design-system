@@ -47,9 +47,9 @@ exports.config = {
   //
   capabilities: [
     {
-      browserName: 'chrome',
-      browserVersion: 'latest',
-      platformName: 'Windows 10',
+      'browserName': 'chrome',
+      'browserVersion': 'latest',
+      'platformName': 'Windows 10',
       // Increase the VM's resolution for Netlify CMS tests that require a wider viewport.
       'sauce:options': {
         screenResolution: '1440x900'
@@ -59,6 +59,9 @@ exports.config = {
       browserName: 'safari',
       browserVersion: 'latest',
       platformName: 'macOS 10.14',
+      'sauce:options': {
+        screenResolution: '1024x768'
+      },
       exclude: [
         // Netlify CMS is only tested with Chrome
         'test/browser/docs/netlify-cms.js'
@@ -68,6 +71,9 @@ exports.config = {
       browserName: 'internet explorer',
       browserVersion: '11.285',
       platformName: 'Windows 10',
+      'sauce:options': {
+        screenResolution: '1024x768'
+      },
       exclude: [
         // Netlify CMS is only tested with Chrome
         'test/browser/docs/netlify-cms.js'
@@ -77,6 +83,9 @@ exports.config = {
       browserName: 'firefox',
       browserVersion: 'latest',
       platformName: 'Windows 10',
+      'sauce:options': {
+        screenResolution: '1024x768'
+      },
       exclude: [
         // Netlify CMS is only tested with Chrome
         'test/browser/docs/netlify-cms.js'
@@ -164,7 +173,7 @@ exports.config = {
   mochaOpts: {
     ui: 'bdd',
     timeout: 180000
-  }
+  },
   //
   // =====
   // Hooks
@@ -198,8 +207,10 @@ exports.config = {
        * @param {Array.<Object>} capabilities list of capabilities details
        * @param {Array.<String>} specs List of spec file paths that are to be run
        */
-  // beforeSession: function (config, capabilities, specs) {
-  // },
+  beforeSession: function (config, capabilities, specs) {
+    // Set a global variable indicating the tests are being run via Sauce Labs
+    global.SAUCE_LABS = true;
+  }
   /**
        * Gets executed before test execution begins. At this point you can access to all global
        * variables like `browser`. It is the perfect place to define custom commands.

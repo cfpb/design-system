@@ -1,6 +1,9 @@
 import CMS from 'netlify-cms';
-import { default as genericPreviewTemplate } from './widgets/genericPreviewTemplate';
-import { default as variationPreviewTemplate } from './widgets/variationPreviewTemplate';
+import StringTrimmedControl from './widgets/StringTrimmed';
+import genericPreviewTemplate from './widgets/genericPreviewTemplate';
+import variationPreviewTemplate from './widgets/variationPreviewTemplate';
+
+CMS.registerWidget( 'string-trimmed', StringTrimmedControl, 'string' );
 
 CMS.registerPreviewTemplate( 'getting-started', variationPreviewTemplate );
 CMS.registerPreviewTemplate( 'foundation', variationPreviewTemplate );

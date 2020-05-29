@@ -40,10 +40,11 @@ collections:
     create: true
     delete: true
     slug: '{{slug}}'
+    identifier_field: title
     fields:
       - name: 'title'
         label: 'Page title'
-        widget: 'string'
+        widget: 'string-trimmed'
       - name: 'layout'
         value: 'variation'
         default: 'variation'
@@ -84,7 +85,7 @@ collections:
         fields:
           - name: 'variation_group_name'
             label: 'Variation group name'
-            widget: 'string'
+            widget: 'string-trimmed'
             required: false
           - name: 'variation_group_description'
             label: 'Variation group description'
@@ -98,7 +99,7 @@ collections:
             fields:
               - name: 'variation_name'
                 label: 'Variation name'
-                widget: 'string'
+                widget: 'string-trimmed'
                 required: false
               - name: 'variation_description'
                 label: 'Variation description'
@@ -177,10 +178,11 @@ collections:
     create: true
     delete: true
     slug: '{{slug}}'
+    identifier_field: title
     fields:
       - name: 'title'
         label: 'Page title'
-        widget: 'string'
+        widget: 'string-trimmed'
       - name: 'layout'
         value: 'variation'
         default: 'variation'
@@ -225,7 +227,7 @@ collections:
         fields:
           - name: 'variation_group_name'
             label: 'Variation group name'
-            widget: 'string'
+            widget: 'string-trimmed'
             required: false
           - name: 'variation_group_description'
             label: 'Variation group description'
@@ -239,7 +241,7 @@ collections:
             fields:
               - name: 'variation_name'
                 label: 'Variation name'
-                widget: 'string'
+                widget: 'string-trimmed'
                 required: false
               - name: 'variation_description'
                 label: 'Variation description'
@@ -318,10 +320,11 @@ collections:
     create: true
     delete: true
     slug: '{{slug}}'
+    identifier_field: title
     fields:
       - name: 'title'
         label: 'Page title'
-        widget: 'string'
+        widget: 'string-trimmed'
       - name: 'layout'
         value: 'variation'
         default: 'variation'
@@ -376,7 +379,7 @@ collections:
         fields:
           - name: 'variation_group_name'
             label: 'Variation group name'
-            widget: 'string'
+            widget: 'string-trimmed'
             required: false
           - name: 'variation_group_description'
             label: 'Variation group description'
@@ -390,7 +393,7 @@ collections:
             fields:
               - name: 'variation_name'
                 label: 'Variation name'
-                widget: 'string'
+                widget: 'string-trimmed'
                 required: false
               - name: 'variation_description'
                 label: 'Variation description'
@@ -469,10 +472,11 @@ collections:
     create: true
     delete: true
     slug: '{{slug}}'
+    identifier_field: title
     fields:
       - name: 'title'
         label: 'Page title'
-        widget: 'string'
+        widget: 'string-trimmed'
       - name: 'layout'
         value: 'variation'
         default: 'variation'
@@ -515,7 +519,7 @@ collections:
         fields:
           - name: 'variation_group_name'
             label: 'Variation group name'
-            widget: 'string'
+            widget: 'string-trimmed'
             required: false
           - name: 'variation_group_description'
             label: 'Variation group description'
@@ -529,7 +533,7 @@ collections:
             fields:
               - name: 'variation_name'
                 label: 'Variation name'
-                widget: 'string'
+                widget: 'string-trimmed'
                 required: false
               - name: 'variation_description'
                 label: 'Variation description'

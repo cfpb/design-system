@@ -186,7 +186,8 @@
     {% endif %}
 
     {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
-    {% if page.restrictions != empty and page.restrictions or page.use_cases and page.use_cases != '' %}
+    {% if page.use_cases != '' or page.content_guidelines != '' or page.behavior != '' or page.restrictions and pag
+e.restrictions != empty %}
         <section class="sticky-header u-mb45">
 
             {% if page.use_cases and page.use_cases != '' %}

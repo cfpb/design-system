@@ -217,7 +217,7 @@ variation_groups:
 
 
       For screen reader accessibility, include anchor links to the fields that need correction.
-use_cases: .
+use_cases: ''
 content_guidelines: ""
 behavior: >-
   #### Visibility

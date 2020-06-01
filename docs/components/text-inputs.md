@@ -171,7 +171,7 @@ variation_groups:
               <textarea class="a-text-input a-text-input__full"
                         id="full-textarea-example">Placeholder text</textarea>
           </div>
-use_cases: .nan
+use_cases: ''
 content_guidelines: >-
   Choose the appropriate width for text input fields so they match the kind of
   information requested. This makes it easier for users to quickly grasp what’s

@@ -164,7 +164,7 @@ variation_groups:
               </h2>
           </header>
     variation_group_description: The heading variations below have specific use cases.
-use_cases: .
+use_cases: ''
 content_guidelines: |-
   Headings should be sentence case. 
   * Do not include punctuation in headings. 

@@ -33,7 +33,7 @@ variation_groups:
 
       * Mobile: 15px padding on each side
     variations:
-      - variation_name: 12 columns w/ 1200px max width
+      - variation_name: ""
         variation_description: ""
         variation_code_snippet: |-
           <div class="cols-12">

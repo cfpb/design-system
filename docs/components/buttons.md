@@ -6,12 +6,11 @@ secondary_section: Forms
 status: Released
 description: Buttons signal actions. They should be used sparingly; each
   additional button on a page reduces the visual prominence of a call to action.
-  In contrast,
-  [links](https://cfpb.github.io/design-system/components/link) should
-  lead users to another page or further informationz.
+  In contrast, [links](https://cfpb.github.io/design-system/components/link)
+  should lead users to another page or further information.
 variation_groups:
   - variation_group_name: Standard buttons
-    variation_group_description: ''
+    variation_group_description: ""
     variations:
       - variation_code_snippet: >-
           <button class="a-btn" title="Default state">Default state</button>
@@ -295,7 +294,7 @@ content_guidelines: >-
 
 
   Use icons consistently. Each icon should be used exclusively for one action. Icons appear to the left of the button text. Buttons that have “forward” actions have icons to the right of the text, and those with “back” actions have icons to the left.
-behavior: ''
+behavior: ""
 restrictions:
   - restrictions_do: <button class="a-btn" title="Test button">Short label</button>
     restrictions_do_not: <button class="a-btn" title="Test button">This label is
@@ -317,8 +316,8 @@ restrictions:
               {% include icons/left.svg %}
           </span>
       </button>
-accessibility: ''
-related_items: '- related items'
+accessibility: ""
+related_items: "- related items"
 last_updated: 2020-01-28T15:55:47.394Z
-research: ''
+research: ""
 ---

@@ -4,7 +4,7 @@ layout: variation
 section: components
 secondary_section: Core development
 status: Released
-description: >-
+description: >
   The grid provides structure for website content. The flexible design adjusts
   for different devices.
 
@@ -15,87 +15,27 @@ description: >-
   * <http://cfpb.github.io/design-manual/global-elements/grid.html>
 
   * <https://cfpb.github.io/capital-framework/components/cf-grid/>
-
-
-  <br />
-
-
-  **Warning:** _This document is written for people who might want to create a
-  grid system using our Less mixins, and does not itself document how we have
-  used our own mixins to create a grid system. Nor does it document how to use
-  said grid system. This page probably needs a major re-write._
-
-
-  ----
-
-
-  The grid component is a suite of Less variable and mixins that enables you to
-
-  lay out a flexible 12-column grid with fixed-size gutters.
-
-  (Column widths will expand and contract with the width of the page,
-
-  but the gutter width remains constant.)
-
-  The mixins are made to be used within your project's Less code to give grid
-
-  layout to your content without needing to use non-semantic grid classes.
-
-
-  For example, when creating a half-and-half layout, instead of applying classes
-
-  to your column wrappers, like this:
-
-
-  ```
-
-  <div class="col-half"> … </div>
-
-  <div class="col-half"> … </div>
-
-  ```
-
-
-  You can give your wrappers semantic class names that describe their content,
-
-  and apply the mixins to those semantic classes, like this:
-
-
-  ```
-
-  <div class="description"> … </div>
-
-  <div class="illustration"> … </div>
-
-  ```
-
-
-  ```
-
-  .description,
-
-  .illustration {
-      .grid_column(1, 2);
-  }
-
-  ```
-
-
-  Read on for more details on the variables and mixins this component provides.
-
-
-  > NOTE: If you use `cf-grid.less` directly,
-
-  >   be sure to run the file through
-
-  >   [Autoprefixer](https://github.com/postcss/autoprefixer),
-
-  >   or your compiled Capital Framework CSS will
-
-  >   not work perfectly in older browsers.
 variation_groups:
-  - variations:
-      - variation_code_snippet: |-
+  - variation_group_name: Standard grid
+    variation_group_description: >-
+      Twelve-column grid with flexible column widths and fixed gutters. The
+      width of the padding on the left and right edge of the grid depends on
+      device size.
+
+
+      * 30px fixed gutter width
+
+      * Max width 1230px, background colors may bleed to edge
+
+      * Desktop: 30px padding on each side
+
+      * Tablet: 30px padding on each side
+
+      * Mobile: 15px padding on each side
+    variations:
+      - variation_name: ""
+        variation_description: ""
+        variation_code_snippet: |-
           <div class="cols-12">
               <section>
                   <div class="col col-1"><p>one</p></div>
@@ -151,46 +91,27 @@ variation_groups:
                   <div class="col col-12"><p>twelve</p></div>
               </section>
           </div>
-        variation_description: >-
-          Twelve-column grid with flexible column widths and fixed gutters. The
-          width of the padding on the left and right edge of the grid depends on
-          device size.
+  - variation_group_name: Breakpoints
+    variation_group_description: >-
+      Five major breakpoints standardize large-scale changes like navigation and
+      sidebar behavior. Use other breakpoints as necessary.
 
 
-          * 30px fixed gutter width
+      * `xs`: 0-600px
 
-          * Max width 1230px, background colors may bleed to edge
+      * `sm`: 601-900px
 
-          * Desktop: 30px padding on each side
+      * `med`: 901-1020px
 
-          * Tablet: 30px padding on each side
+      * `lg`: 1021-1230px
 
-          * Mobile: 15px padding on each side
-
-
-          #### Breakpoints
-
-
-          Five major breakpoints standardize large-scale changes like navigation and
-          sidebar behavior. Use other breakpoints as necessary.
-
-
-          * `xs`: 0-600px
-
-          * `sm`: 601-900px
-
-          * `med`: 901-1020px
-
-          * `lg`: 1021-1230px
-
-          * `xl`: 1231px and up
-        variation_name: 12 columns w/ 1200px max width
-      - variation_code_snippet: ''
+      * `xl`: 1231px and up
+  - variations:
+      - variation_code_snippet: ""
         variation_description: >-
           Component variables are used to theme a component.
 
-          They likely will be left as is, but if needed can be overwritten by
-          duplicating
+          They likely will be left as is, but if needed can be overwritten by duplicating
 
           the variable in a `@key: value` format with a different value.
 
@@ -233,11 +154,11 @@ variation_groups:
           This value can be overridden in the `grid_column()` mixin.
         variation_name: Variables
       - variation_code_snippet: >-
-          <div class="main-wrapper" style="background-color: #f9f9f9">This container
-          now has left and right padding and a centered max width.</div>
+          <div class="main-wrapper" style="background-color: #f9f9f9">This
+          container now has left and right padding and a centered max
+          width.</div>
 
-          <div class="wide-wrapper" style="background-color: #f9f9f9">This container
-          is the same except it has a wider max-width.</div>
+          <div class="wide-wrapper" style="background-color: #f9f9f9">This container is the same except it has a wider max-width.</div>
         variation_description: |-
           Wrappers are centered containers with a max-width
           and outside left/right padding of ½ the gutter width on each side.
@@ -262,7 +183,7 @@ variation_groups:
           }
           ```
         variation_name: Wrappers
-      - variation_code_snippet: |-
+      - variation_code_snippet: >-
           <div class="main-wrapper">
               <div class="half">I am half of my parent.</div>
               <div class="half">
@@ -275,14 +196,12 @@ variation_groups:
 
           ```
 
-          .grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0;
-          @suffix: 0 )
+          .grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
 
           ```
 
 
-          Create a grid column that is `@columns` wide given `@total` total grid
-          columns.
+          Create a grid column that is `@columns` wide given `@total` total grid columns.
 
 
           Optionally give the column left or right padding with the
@@ -358,8 +277,7 @@ variation_groups:
 
           Working this way allows you to easily create responsive grids.
 
-          You are free to control the number of columns per "row" at different
-          breakpoints
+          You are free to control the number of columns per "row" at different breakpoints
 
           without having to deal with the first and last columns of each row.
 
@@ -444,21 +362,20 @@ variation_groups:
                   </div>
               </section>
           </div>
-        variation_description: ''
+        variation_description: ""
         variation_name: Nesting
-      - variation_code_snippet: |-
+      - variation_code_snippet: >-
           <div>
               <div class="second">I am first in the markup but appear after .first.</div>
               <div class="first">I am second in the markup but appear before .second.</div>
           </div>
         variation_description: >-
-          **NOTE:** Using these is not advised, because the disadvantages for users
+          **NOTE:** Using these is not advised, because the disadvantages for
+          users
 
-          of assistive technology outweigh the advantages of putting your most
-          important
+          of assistive technology outweigh the advantages of putting your most important
 
-          content first in the source order, but it's here if you absolutely need
-          it.
+          content first in the source order, but it's here if you absolutely need it.
 
 
           #### Less mixin
@@ -495,7 +412,7 @@ variation_groups:
 
           ```
         variation_name: Push and pull mixins for source ordering
-      - variation_code_snippet: |-
+      - variation_code_snippet: >-
           <div class="cols-12">
               <section>
                   <div class="col col-1 suffix-11"><p>prefix 0, suffix 11</p></div>
@@ -512,13 +429,86 @@ variation_groups:
                   <div class="col col-1 prefix-11"><p>prefix 11, suffix 0</p></div>
               </section>
           </div>
-        variation_description: ''
+        variation_description: ""
         variation_name: Prefixing/Suffixing
-use_cases: ''
-content_guidelines: ''
-behavior: ''
-accessibility: ''
-research: ''
-related_items: ''
+    variation_group_name: Development
+    variation_group_description: >-
+      
+      **Warning:** _This document is written for people who might want to create a grid system using our Less mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write._
+
+
+      ----
+
+
+      The grid component is a suite of Less variable and mixins that enables you to
+
+      lay out a flexible 12-column grid with fixed-size gutters.
+
+      (Column widths will expand and contract with the width of the page,
+
+      but the gutter width remains constant.)
+
+      The mixins are made to be used within your project's Less code to give grid
+
+      layout to your content without needing to use non-semantic grid classes.
+
+
+      For example, when creating a half-and-half layout, instead of applying classes
+
+      to your column wrappers, like this:
+
+
+      ```
+
+      <div class="col-half"> … </div>
+
+      <div class="col-half"> … </div>
+
+      ```
+
+
+      You can give your wrappers semantic class names that describe their content,
+
+      and apply the mixins to those semantic classes, like this:
+
+
+      ```
+
+      <div class="description"> … </div>
+
+      <div class="illustration"> … </div>
+
+      ```
+
+
+      ```
+
+      .description,
+
+      .illustration {
+          .grid_column(1, 2);
+      }
+
+      ```
+
+
+      Read on for more details on the variables and mixins this component provides.
+
+
+      > NOTE: If you use `cf-grid.less` directly,
+
+      >   be sure to run the file through
+
+      >   [Autoprefixer](https://github.com/postcss/autoprefixer),
+
+      >   or your compiled Capital Framework CSS will
+
+      >   not work perfectly in older browsers.
+use_cases: ""
+content_guidelines: ""
+behavior: ""
+accessibility: ""
+related_items: ""
 last_updated: 2019-09-10T15:02:08.752Z
+research: ""
 ---

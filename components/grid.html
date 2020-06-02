@@ -1403,6 +1403,28 @@
     <ul class="m-list m-list__horizontal u-mb30">
         
         
+        <li class="m-list_item">
+            <a class="m-list_link" href="#standard-grid">
+                Standard grid
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#breakpoints">
+                Breakpoints
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#development">
+                Development
+            </a>
+        </li>
+        
         
     </ul>
     
@@ -1418,61 +1440,32 @@
   <li><a href="https://cfpb.github.io/capital-framework/components/cf-grid/">https://cfpb.github.io/capital-framework/components/cf-grid/</a></li>
 </ul>
 
-<p><br></p>
-
-<p><strong>Warning:</strong> <em>This document is written for people who might want to create a grid system using our Less mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write.</em></p>
-
-<hr>
-
-<p>The grid component is a suite of Less variable and mixins that enables you to
-lay out a flexible 12-column grid with fixed-size gutters.
-(Column widths will expand and contract with the width of the page,
-but the gutter width remains constant.)
-The mixins are made to be used within your project’s Less code to give grid
-layout to your content without needing to use non-semantic grid classes.</p>
-
-<p>For example, when creating a half-and-half layout, instead of applying classes
-to your column wrappers, like this:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="col-half"&gt; … &lt;/div&gt;
-&lt;div class="col-half"&gt; … &lt;/div&gt;
-</code></pre></div></div>
-
-<p>You can give your wrappers semantic class names that describe their content,
-and apply the mixins to those semantic classes, like this:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="description"&gt; … &lt;/div&gt;
-&lt;div class="illustration"&gt; … &lt;/div&gt;
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.description,
-.illustration {
-    .grid_column(1, 2);
-}
-</code></pre></div></div>
-
-<p>Read on for more details on the variables and mixins this component provides.</p>
-
-<blockquote>
-  <p>NOTE: If you use <code class="language-plaintext highlighter-rouge">cf-grid.less</code> directly,
-  be sure to run the file through
-  <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>,
-  or your compiled Capital Framework CSS will
-  not work perfectly in older browsers.</p>
-</blockquote>
-
     </section>
     
 
     
     
-    <section class="o-variation_group" id="">
+    <section class="o-variation_group" id="standard-grid">
 
         
-        
-        <div class="u-mb15"></div>
+        <h2 class="o-variation_group_title">
+            Standard grid
+        </h2>
         
 
+        
+        <div class="o-variation_group_description">
+            <p>Twelve-column grid with flexible column widths and fixed gutters. The width of the padding on the left and right edge of the grid depends on device size.</p>
+
+<ul>
+  <li>30px fixed gutter width</li>
+  <li>Max width 1230px, background colors may bleed to edge</li>
+  <li>Desktop: 30px padding on each side</li>
+  <li>Tablet: 30px padding on each side</li>
+  <li>Mobile: 15px padding on each side</li>
+</ul>
+
+        </div>
         
 
         
@@ -1483,39 +1476,10 @@ and apply the mixins to those semantic classes, like this:</p>
             
 
             
-            <div class="m-variation_name">
-                <h3>12 columns w/ 1200px max width</h3>
-            </div>
-            
 
             
             <div class="m-variation_description">
-                <p>Twelve-column grid with flexible column widths and fixed gutters. The width of the padding on the left and right edge of the grid depends on device size.</p>
-
-<ul>
-  <li>30px fixed gutter width</li>
-  <li>Max width 1230px, background colors may bleed to edge</li>
-  <li>Desktop: 30px padding on each side</li>
-  <li>Tablet: 30px padding on each side</li>
-  <li>Mobile: 15px padding on each side</li>
-</ul>
-
-<h4 id="breakpoints">Breakpoints</h4>
-
-<p>Five major breakpoints standardize large-scale changes like navigation and sidebar behavior. Use other breakpoints as necessary.</p>
-
-<ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">xs</code>: 0-600px</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">sm</code>: 601-900px</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">med</code>: 901-1020px</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">lg</code>: 1021-1230px</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">xl</code>: 1231px and up</li>
-</ul>
+                
 
             </div>
             
@@ -1592,15 +1556,15 @@ and apply the mixins to those semantic classes, like this:</p>
             
 
             <div class="a-toggle_code">
-                <button href="#details-12-columns-w-1200px-max-width-tw-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-12-columns-w-1200px-max-width-tw-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-div-class-cols-12-section-div-cl-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-div-class-cols-12-section-div-cl-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-12-columns-w-1200px-max-width-tw-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-div-class-cols-12-section-div-cl-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-12-columns-w-1200px-max-width-tw-html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-div-class-cols-12-section-div-cl-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1612,7 +1576,7 @@ and apply the mixins to those semantic classes, like this:</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-12-columns-w-1200px-max-width-tw-html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-div-class-cols-12-section-div-cl-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1691,6 +1655,95 @@ and apply the mixins to those semantic classes, like this:</p>
 
         </div>
         
+    </section>
+    
+    <section class="o-variation_group" id="breakpoints">
+
+        
+        <h2 class="o-variation_group_title">
+            Breakpoints
+        </h2>
+        
+
+        
+        <div class="o-variation_group_description">
+            <p>Five major breakpoints standardize large-scale changes like navigation and sidebar behavior. Use other breakpoints as necessary.</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">xs</code>: 0-600px</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">sm</code>: 601-900px</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">med</code>: 901-1020px</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">lg</code>: 1021-1230px</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">xl</code>: 1231px and up</li>
+</ul>
+
+        </div>
+        
+
+        
+    </section>
+    
+    <section class="o-variation_group" id="development">
+
+        
+        <h2 class="o-variation_group_title">
+            Development
+        </h2>
+        
+
+        
+        <div class="o-variation_group_description">
+            
+<p><strong>Warning:</strong> <em>This document is written for people who might want to create a grid system using our Less mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write.</em></p>
+
+<hr>
+
+<p>The grid component is a suite of Less variable and mixins that enables you to
+lay out a flexible 12-column grid with fixed-size gutters.
+(Column widths will expand and contract with the width of the page,
+but the gutter width remains constant.)
+The mixins are made to be used within your project’s Less code to give grid
+layout to your content without needing to use non-semantic grid classes.</p>
+
+<p>For example, when creating a half-and-half layout, instead of applying classes
+to your column wrappers, like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="col-half"&gt; … &lt;/div&gt;
+&lt;div class="col-half"&gt; … &lt;/div&gt;
+</code></pre></div></div>
+
+<p>You can give your wrappers semantic class names that describe their content,
+and apply the mixins to those semantic classes, like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="description"&gt; … &lt;/div&gt;
+&lt;div class="illustration"&gt; … &lt;/div&gt;
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.description,
+.illustration {
+    .grid_column(1, 2);
+}
+</code></pre></div></div>
+
+<p>Read on for more details on the variables and mixins this component provides.</p>
+
+<blockquote>
+  <p>NOTE: If you use <code class="language-plaintext highlighter-rouge">cf-grid.less</code> directly,
+  be sure to run the file through
+  <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>,
+  or your compiled Capital Framework CSS will
+  not work perfectly in older browsers.</p>
+</blockquote>
+
+        </div>
+        
+
+        
         <div class="m-variation">
 
             
@@ -1745,15 +1798,15 @@ This value can be overridden in the <code class="language-plaintext highlighter-
             
 
             <div class="a-toggle_code">
-                <button href="#details-variables-component-variables-ar-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-variables-component-variables-ar-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-variables-component-variables-ar-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-variables-component-variables-ar-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-variables-component-variables-ar-2">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-variables-component-variables-ar-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-variables-component-variables-ar-html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#details-variables-component-variables-ar-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1765,7 +1818,7 @@ This value can be overridden in the <code class="language-plaintext highlighter-
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-variables-component-variables-ar-html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="details-variables-component-variables-ar-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1847,15 +1900,15 @@ by passing a pixel value into the mixin.</p>
             
 
             <div class="a-toggle_code">
-                <button href="#details-wrappers-wrappers-are-centered-c-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-wrappers-wrappers-are-centered-c-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-wrappers-wrappers-are-centered-c-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-wrappers-wrappers-are-centered-c-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-wrappers-wrappers-are-centered-c-3">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-wrappers-wrappers-are-centered-c-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-wrappers-wrappers-are-centered-c-html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#details-wrappers-wrappers-are-centered-c-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -1867,7 +1920,7 @@ by passing a pixel value into the mixin.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-wrappers-wrappers-are-centered-c-html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="details-wrappers-wrappers-are-centered-c-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1963,15 +2016,15 @@ cf-grid columns will automatically stack into two rows of 12.</p>
             
 
             <div class="a-toggle_code">
-                <button href="#details-columns-less-mixin-grid-column-c-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-columns-less-mixin-grid-column-c-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-columns-less-mixin-grid-column-c-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-columns-less-mixin-grid-column-c-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-columns-less-mixin-grid-column-c-4">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-columns-less-mixin-grid-column-c-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-columns-less-mixin-grid-column-c-html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#details-columns-less-mixin-grid-column-c-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -1983,7 +2036,7 @@ cf-grid columns will automatically stack into two rows of 12.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-columns-less-mixin-grid-column-c-html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="details-columns-less-mixin-grid-column-c-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2093,15 +2146,15 @@ without having to deal with the first and last columns of each row.</p>
             
 
             <div class="a-toggle_code">
-                <button href="#details-nested-columns-since-all-grid-co-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-nested-columns-since-all-grid-co-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-nested-columns-since-all-grid-co-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-nested-columns-since-all-grid-co-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-nested-columns-since-all-grid-co-5">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-nested-columns-since-all-grid-co-4">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-nested-columns-since-all-grid-co-html-code-snippet-5">
+                        <a class="govuk-tabs__tab" href="#details-nested-columns-since-all-grid-co-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
@@ -2113,7 +2166,7 @@ without having to deal with the first and last columns of each row.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-nested-columns-since-all-grid-co-html-code-snippet-5">
+                <section class="govuk-tabs__panel" id="details-nested-columns-since-all-grid-co-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2237,15 +2290,15 @@ without having to deal with the first and last columns of each row.</p>
             
 
             <div class="a-toggle_code">
-                <button href="#details-nesting-div-class-cols-12-sectio-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-nesting-div-class-cols-12-sectio-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-nesting-div-class-cols-12-sectio-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-nesting-div-class-cols-12-sectio-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-nesting-div-class-cols-12-sectio-6">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-nesting-div-class-cols-12-sectio-5">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-nesting-div-class-cols-12-sectio-html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#details-nesting-div-class-cols-12-sectio-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
@@ -2257,7 +2310,7 @@ without having to deal with the first and last columns of each row.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-nesting-div-class-cols-12-sectio-html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="details-nesting-div-class-cols-12-sectio-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2393,15 +2446,15 @@ content first in the source order, but it’s here if you absolutely need it.</p
             
 
             <div class="a-toggle_code">
-                <button href="#details-push-and-pull-mixins-for-source--7" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-push-and-pull-mixins-for-source--7" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-push-and-pull-mixins-for-source--6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-push-and-pull-mixins-for-source--6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-push-and-pull-mixins-for-source--7">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-push-and-pull-mixins-for-source--6">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-push-and-pull-mixins-for-source--html-code-snippet-7">
+                        <a class="govuk-tabs__tab" href="#details-push-and-pull-mixins-for-source--html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
@@ -2413,7 +2466,7 @@ content first in the source order, but it’s here if you absolutely need it.</p
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-push-and-pull-mixins-for-source--html-code-snippet-7">
+                <section class="govuk-tabs__panel" id="details-push-and-pull-mixins-for-source--html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2493,15 +2546,15 @@ content first in the source order, but it’s here if you absolutely need it.</p
             
 
             <div class="a-toggle_code">
-                <button href="#details-prefixing-suffixing-div-class-co-8" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-prefixing-suffixing-div-class-co-8" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-prefixing-suffixing-div-class-co-7" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-prefixing-suffixing-div-class-co-7" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-prefixing-suffixing-div-class-co-8">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-prefixing-suffixing-div-class-co-7">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-prefixing-suffixing-div-class-co-html-code-snippet-8">
+                        <a class="govuk-tabs__tab" href="#details-prefixing-suffixing-div-class-co-html-code-snippet-7">
                             HTML code snippet
                         </a>
                     </li>
@@ -2513,7 +2566,7 @@ content first in the source order, but it’s here if you absolutely need it.</p
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-prefixing-suffixing-div-class-co-html-code-snippet-8">
+                <section class="govuk-tabs__panel" id="details-prefixing-suffixing-div-class-co-html-code-snippet-7">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2618,8 +2671,8 @@ content first in the source order, but it’s here if you absolutely need it.</p
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/grid.md">
-                    <time datetime="2020-05-12 11:30:07 -0400">
-                        11:30:07 AM May 12, 2020
+                    <time datetime="2020-06-02 12:20:23 -0400">
+                        12:20:23 PM Jun 02, 2020
                     </time>
                 </a>
             </small>

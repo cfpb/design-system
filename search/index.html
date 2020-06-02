@@ -2541,8 +2541,8 @@
                 
 
                 
-                    'variation_name1': '12 columns w/ 1200px max width',
-                    'variation_description1': "Twelve-column grid with flexible column widths and fixed gutters. The width of the padding on the left and right edge of the grid depends on device size.  30px fixed gutter width  Max width 1230px, background colors may bleed to edge  Desktop: 30px padding on each side  Tablet: 30px padding on each side  Mobile: 15px padding on each sideBreakpointsFive major breakpoints standardize large-scale changes like navigation and sidebar behavior. Use other breakpoints as necessary.  xs: 0-600px  sm: 601-900px  med: 901-1020px  lg: 1021-1230px  xl: 1231px and up",
+                    'variation_name1': '',
+                    'variation_description1': "",
                     'variation_code_snippet1': `&lt;div class=&quot;cols-12&quot;&gt;
     &lt;section&gt;
         &lt;div class=&quot;col col-1&quot;&gt;&lt;p&gt;one&lt;/p&gt;&lt;/div&gt;
@@ -2599,27 +2599,37 @@
     &lt;/section&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name2': 'Variables',
-                    'variation_description2': "Component variables are used to theme a component.They likely will be left as is, but if needed can be overwritten by duplicatingthe variable in a @key: value format with a different value.This customized variable would be placed in the same filewhere this component’s less file is imported.@grid_wrapper-width: 1200px;The grid’s maximum width in px.This value can be overridden in the grid_wrapper() mixin.@grid_gutter-width: 30px;The fixed width between columns.@grid_total-columns: 12;The total number of columns used in calculating column widths.This value can be overridden in the grid_column() mixin.",
-                    'variation_code_snippet2': ``,
+            
+                // Determine the maximum number of variations present overall.
                 
-                    'variation_name3': 'Wrappers',
-                    'variation_description3': "Wrappers are centered containers with a max-widthand outside left/right padding of ½ the gutter width on each side.Less mixin.grid_wrapper( @grid_wrapper-width: @grid_wrapper-width )You can create a wrapper with max-width other than the defaultby passing a pixel value into the mixin.Example.main-wrapper {    .grid_wrapper();}.wide-wrapper {    .grid_wrapper( 1900px );}",
-                    'variation_code_snippet3': `&lt;div class=&quot;main-wrapper&quot; style=&quot;background-color: #f9f9f9&quot;&gt;This container now has left and right padding and a centered max width.&lt;/div&gt;
+
+                
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Variables',
+                    'variation_description1': "Component variables are used to theme a component.They likely will be left as is, but if needed can be overwritten by duplicatingthe variable in a @key: value format with a different value.This customized variable would be placed in the same filewhere this component’s less file is imported.@grid_wrapper-width: 1200px;The grid’s maximum width in px.This value can be overridden in the grid_wrapper() mixin.@grid_gutter-width: 30px;The fixed width between columns.@grid_total-columns: 12;The total number of columns used in calculating column widths.This value can be overridden in the grid_column() mixin.",
+                    'variation_code_snippet1': ``,
+                
+                    'variation_name2': 'Wrappers',
+                    'variation_description2': "Wrappers are centered containers with a max-widthand outside left/right padding of ½ the gutter width on each side.Less mixin.grid_wrapper( @grid_wrapper-width: @grid_wrapper-width )You can create a wrapper with max-width other than the defaultby passing a pixel value into the mixin.Example.main-wrapper {    .grid_wrapper();}.wide-wrapper {    .grid_wrapper( 1900px );}",
+                    'variation_code_snippet2': `&lt;div class=&quot;main-wrapper&quot; style=&quot;background-color: #f9f9f9&quot;&gt;This container now has left and right padding and a centered max width.&lt;/div&gt;
 &lt;div class=&quot;wide-wrapper&quot; style=&quot;background-color: #f9f9f9&quot;&gt;This container is the same except it has a wider max-width.&lt;/div&gt;`,
                 
-                    'variation_name4': 'Columns',
-                    'variation_description4': "Less mixin.grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )Create a grid column that is @columns wide given @total total grid columns.Optionally give the column left or right padding with the@prefix and @suffix parameters.Grid columns use transparent borders to create the gutters of the grid,so if you want a column to have a background or border, you’ll need toadd a wrapper just inside the column to be styled that way..main-wrapper {    .grid_wrapper();}.half {    .grid_column(1, 2);}.styled {    border: 1px solid #999;    background: #EEE;}NOTE: cf-grid does not have a “row” concept.If you have a 12-column grid and place 24 columns inside a wrapper,cf-grid columns will automatically stack into two rows of 12.",
-                    'variation_code_snippet4': `&lt;div class=&quot;main-wrapper&quot;&gt;
+                    'variation_name3': 'Columns',
+                    'variation_description3': "Less mixin.grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )Create a grid column that is @columns wide given @total total grid columns.Optionally give the column left or right padding with the@prefix and @suffix parameters.Grid columns use transparent borders to create the gutters of the grid,so if you want a column to have a background or border, you’ll need toadd a wrapper just inside the column to be styled that way..main-wrapper {    .grid_wrapper();}.half {    .grid_column(1, 2);}.styled {    border: 1px solid #999;    background: #EEE;}NOTE: cf-grid does not have a “row” concept.If you have a 12-column grid and place 24 columns inside a wrapper,cf-grid columns will automatically stack into two rows of 12.",
+                    'variation_code_snippet3': `&lt;div class=&quot;main-wrapper&quot;&gt;
     &lt;div class=&quot;half&quot;&gt;I am half of my parent.&lt;/div&gt;
     &lt;div class=&quot;half&quot;&gt;
             &lt;div class=&quot;styled&quot;&gt;I am half of my parent. I also have a border and background.&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name5': 'Nested columns',
-                    'variation_description5': "Since all grid columns have left and right gutters,you will notice undesirable offsetting when nesting columns.Normally this is removed with complex selectorsor by adding classes to the first and last column per ‘row’.In cf-grid, the way to get around this is by wrapping your columnsin a container that utilizes the .grid_nested-col-group() mixin.This mixin uses negative left and right margins topull the columns back into alignment with parent columns.Working this way allows you to easily create responsive grids.You are free to control the number of columns per “row” at different breakpointswithout having to deal with the first and last columns of each row.Less mixin.grid_nested-col-group()Usage.main-wrapper {    .grid_wrapper();}.nested {    .grid_nested-col-group();}.half {    .grid_column(1, 2);}",
-                    'variation_code_snippet5': `&lt;div class=&quot;main-wrapper&quot;&gt;
+                    'variation_name4': 'Nested columns',
+                    'variation_description4': "Since all grid columns have left and right gutters,you will notice undesirable offsetting when nesting columns.Normally this is removed with complex selectorsor by adding classes to the first and last column per ‘row’.In cf-grid, the way to get around this is by wrapping your columnsin a container that utilizes the .grid_nested-col-group() mixin.This mixin uses negative left and right margins topull the columns back into alignment with parent columns.Working this way allows you to easily create responsive grids.You are free to control the number of columns per “row” at different breakpointswithout having to deal with the first and last columns of each row.Less mixin.grid_nested-col-group()Usage.main-wrapper {    .grid_wrapper();}.nested {    .grid_nested-col-group();}.half {    .grid_column(1, 2);}",
+                    'variation_code_snippet4': `&lt;div class=&quot;main-wrapper&quot;&gt;
     &lt;div class=&quot;half&quot;&gt;
         &lt;div class=&quot;nested&quot;&gt;
             &lt;div class=&quot;half&quot;&gt;&lt;/div&gt;
@@ -2634,9 +2644,9 @@
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name6': 'Nesting',
-                    'variation_description6': "",
-                    'variation_code_snippet6': `&lt;div class=&quot;cols-12&quot;&gt;
+                    'variation_name5': 'Nesting',
+                    'variation_description5': "",
+                    'variation_code_snippet5': `&lt;div class=&quot;cols-12&quot;&gt;
     &lt;section&gt;
         &lt;div class=&quot;col col-6&quot;&gt;
             &lt;p&gt;six&lt;/p&gt;
@@ -2687,16 +2697,16 @@
     &lt;/section&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name7': 'Push and pull mixins for source ordering',
-                    'variation_description7': "NOTE: Using these is not advised, because the disadvantages for usersof assistive technology outweigh the advantages of putting your most importantcontent first in the source order, but it’s here if you absolutely need it.Less mixin.push( @offset: 1, @grid_total-columns: @grid_total-columns ).pull( @offset: 1, @grid_total-columns: @grid_total-columns )Usage.first {    .grid_column(1, 2);    .grid_pull(1);}.second {    .grid_column(1, 2);    .grid_push(1);}",
-                    'variation_code_snippet7': `&lt;div&gt;
+                    'variation_name6': 'Push and pull mixins for source ordering',
+                    'variation_description6': "NOTE: Using these is not advised, because the disadvantages for usersof assistive technology outweigh the advantages of putting your most importantcontent first in the source order, but it’s here if you absolutely need it.Less mixin.push( @offset: 1, @grid_total-columns: @grid_total-columns ).pull( @offset: 1, @grid_total-columns: @grid_total-columns )Usage.first {    .grid_column(1, 2);    .grid_pull(1);}.second {    .grid_column(1, 2);    .grid_push(1);}",
+                    'variation_code_snippet6': `&lt;div&gt;
     &lt;div class=&quot;second&quot;&gt;I am first in the markup but appear after .first.&lt;/div&gt;
     &lt;div class=&quot;first&quot;&gt;I am second in the markup but appear before .second.&lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name8': 'Prefixing/Suffixing',
-                    'variation_description8': "",
-                    'variation_code_snippet8': `&lt;div class=&quot;cols-12&quot;&gt;
+                    'variation_name7': 'Prefixing/Suffixing',
+                    'variation_description7': "",
+                    'variation_code_snippet7': `&lt;div class=&quot;cols-12&quot;&gt;
     &lt;section&gt;
         &lt;div class=&quot;col col-1 suffix-11&quot;&gt;&lt;p&gt;prefix 0, suffix 11&lt;/p&gt;&lt;/div&gt;
         &lt;div class=&quot;col col-1 prefix-1 suffix-10&quot;&gt;&lt;p&gt;prefix 1, suffix 10&lt;/p&gt;&lt;/div&gt;
@@ -2717,7 +2727,7 @@
 
 
             'title': 'Grid',
-            'description': "The grid provides structure for website content. The flexible design adjusts for different devices.Information about Grid can be found at:  http://cfpb.github.io/design-manual/global-elements/grid.html  https://cfpb.github.io/capital-framework/components/cf-grid/Warning: This document is written for people who might want to create a grid system using our Less mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write.The grid component is a suite of Less variable and mixins that enables you tolay out a flexible 12-column grid with fixed-size gutters.(Column widths will expand and contract with the width of the page,but the gutter width remains constant.)The mixins are made to be used within your project’s Less code to give gridlayout to your content without needing to use non-semantic grid classes.For example, when creating a half-and-half layout, instead of applying classesto your column wrappers, like this:&lt;div class=\"col-half\"&gt; … &lt;/div&gt;&lt;div class=\"col-half\"&gt; … &lt;/div&gt;You can give your wrappers semantic class names that describe their content,and apply the mixins to those semantic classes, like this:&lt;div class=\"description\"&gt; … &lt;/div&gt;&lt;div class=\"illustration\"&gt; … &lt;/div&gt;.description,.illustration {    .grid_column(1, 2);}Read on for more details on the variables and mixins this component provides.  NOTE: If you use cf-grid.less directly,  be sure to run the file through  Autoprefixer,  or your compiled Capital Framework CSS will  not work perfectly in older browsers.",
+            'description': "The grid provides structure for website content. The flexible design adjusts for different devices.Information about Grid can be found at:  http://cfpb.github.io/design-manual/global-elements/grid.html  https://cfpb.github.io/capital-framework/components/cf-grid/",
             'use_cases': "",
             'content_guidelines': "",
             'behavior': "",

@@ -109,95 +109,6 @@ variation_groups:
 
           * `xl`: 1231px and up
   - variations:
-      - variation_code_snippet: |-
-          <div class="cols-12">
-              <section>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-                  <div class="col col-1"><p>one</p></div>
-              </section>
-
-              <section>
-                  <div class="col col-2"><p>two</p></div>
-                  <div class="col col-2"><p>two</p></div>
-                  <div class="col col-2"><p>two</p></div>
-                  <div class="col col-2"><p>two</p></div>
-                  <div class="col col-2"><p>two</p></div>
-                  <div class="col col-2"><p>two</p></div>
-              </section>
-
-              <section>
-                  <div class="col col-2"><p>two</p></div>
-                  <div class="col col-3"><p>three</p></div>
-                  <div class="col col-2"><p>two</p></div>
-                  <div class="col col-3"><p>three</p></div>
-                  <div class="col col-2"><p>two</p></div>
-              </section>
-
-              <section>
-                  <div class="col col-3"><p>three</p></div>
-                  <div class="col col-3"><p>three</p></div>
-                  <div class="col col-3"><p>three</p></div>
-                  <div class="col col-3"><p>three</p></div>
-              </section>
-
-              <section>
-                  <div class="col col-4"><p>four</p></div>
-                  <div class="col col-4"><p>four</p></div>
-                  <div class="col col-4"><p>four</p></div>
-              </section>
-
-              <section>
-                  <div class="col col-6"><p>six</p></div>
-                  <div class="col col-6"><p>six</p></div>
-              </section>
-
-              <section>
-                  <div class="col col-12"><p>twelve</p></div>
-              </section>
-          </div>
-        variation_description: >-
-          Twelve-column grid with flexible column widths and fixed gutters. The
-          width of the padding on the left and right edge of the grid depends on
-          device size.
-
-
-          * 30px fixed gutter width
-
-          * Max width 1230px, background colors may bleed to edge
-
-          * Desktop: 30px padding on each side
-
-          * Tablet: 30px padding on each side
-
-          * Mobile: 15px padding on each side
-
-
-          #### Breakpoints
-
-
-          Five major breakpoints standardize large-scale changes like navigation and sidebar behavior. Use other breakpoints as necessary.
-
-
-          * `xs`: 0-600px
-
-          * `sm`: 601-900px
-
-          * `med`: 901-1020px
-
-          * `lg`: 1021-1230px
-
-          * `xl`: 1231px and up
-        variation_name: 12 columns w/ 1200px max width
       - variation_code_snippet: ""
         variation_description: >-
           Component variables are used to theme a component.
@@ -525,6 +436,9 @@ variation_groups:
     variation_group_name: Development
     variation_group_description: >-
       
+      **Warning:** _This document is written for people who might want to create a grid system using our Less mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write._
+
+
       ----
 
 

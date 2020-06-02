@@ -33,7 +33,7 @@ variation_groups:
 
       * Mobile: 15px padding on each side
     variations:
-      - variation_name: Grid
+      - variation_name: ""
         variation_description: 12 columns w/ 1200px max width
         variation_code_snippet: |-
           <div class="cols-12">
@@ -91,23 +91,21 @@ variation_groups:
                   <div class="col col-12"><p>twelve</p></div>
               </section>
           </div>
-      - variation_name: Breakpoints
-        variation_description: >-
-          #### Breakpoints
+  - variation_group_name: Breakpoints
+    variation_group_description: >-
+      Five major breakpoints standardize large-scale changes like navigation and
+      sidebar behavior. Use other breakpoints as necessary.
 
 
-          Five major breakpoints standardize large-scale changes like navigation and sidebar behavior. Use other breakpoints as necessary.
+      * `xs`: 0-600px
 
+      * `sm`: 601-900px
 
-          * `xs`: 0-600px
+      * `med`: 901-1020px
 
-          * `sm`: 601-900px
+      * `lg`: 1021-1230px
 
-          * `med`: 901-1020px
-
-          * `lg`: 1021-1230px
-
-          * `xl`: 1231px and up
+      * `xl`: 1231px and up
   - variations:
       - variation_code_snippet: ""
         variation_description: >-

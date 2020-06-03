@@ -97,9 +97,10 @@ variation_groups:
         variation_implementation: ""
         variation_name: Success notification
         variation_specs: |-
-          * Border: 2 px, CFPB Green (#20aa3f)
-          * Minicon: 18 px, CFPB Green (#20aa3f)
-          * Success minicon and message should always appear below input field
+          * **Border:** 2 px, CFPB Green (#20aa3f)
+          * **Icon:** 18 px, CFPB Green (#20aa3f)
+          * **Background color:** Green 20 (#e2efd8)
+          * Success icon and message should always appear below input field.
       - variation_name: Success notification (field-level)
         variation_code_snippet: >-
           
@@ -217,7 +218,7 @@ variation_groups:
 
 
       For screen reader accessibility, include anchor links to the fields that need correction.
-use_cases: ''
+use_cases: ""
 content_guidelines: ""
 behavior: >-
   #### Visibility

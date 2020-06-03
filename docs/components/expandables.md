@@ -19,8 +19,11 @@ description: >-
 
   * https://cfpb.github.io/capital-framework/components/cf-expandables/
 variation_groups:
-  - variations:
-      - variation_code_snippet: |-
+  - variation_group_name: Standard expandables
+    variations:
+      - variation_name: Standard expandable
+        variation_description: The following combination is our recommended go-to expandable pattern.
+        variation_code_snippet: |-
           <div class="o-expandable
                       o-expandable__padded
                       o-expandable__background
@@ -52,9 +55,8 @@ variation_groups:
                   </p>
               </div>
           </div>
-        variation_description: The following combination is our recommended go-to expandable pattern.
-        variation_name: Basic expandable
-      - variation_code_snippet: >-
+      - variation_name: Standard expandable (open on load)
+        variation_code_snippet: >-
           <div class="o-expandable
                       o-expandable__padded
                       o-expandable__background
@@ -90,8 +92,21 @@ variation_groups:
           default. This is as easy as adding the
           `.o-expandable_content__onload-open` modifier to the
           `.o-expandable_content` block.
-        variation_name: Basic expandable (open on load)
-      - variation_code_snippet: >-
+    variation_group_description: ""
+  - variation_group_name: Variations
+    variation_group_description: Expandables can be built by combining the basic
+      barebones structure described below with more specialized expandable
+      elements and modifiers described throughout.
+    variations:
+      - variation_name: Barebones expandable
+        variation_description: >-
+          Expandables can be built by combining the basic barebones structure
+          along with more specialized expandable elements and modifiers
+          described throughout to create custom expandable patterns.
+
+
+          In this barebones example there are no visual styles.
+        variation_code_snippet: >-
           <div class="o-expandable">
               <button class="o-expandable_target" title="Expand content">
                   <span class="o-expandable_cue o-expandable_cue-open">
@@ -112,15 +127,46 @@ variation_groups:
                   </p>
               </div>
           </div>
-        variation_name: Barebones expandable
-        variation_description: >+
-          Expandables can be built by combining the basic barebones structure
-          along with more specialized expandable elements and modifiers
-          described throughout to create custom expandable patterns.
+      - variation_name: Expanded modifier
+        variation_description: >-
+          Sometimes you may want the expandable to be open by default. This is
+          as easy as adding the `.o-expandable_content__onload-open` modifier to
+          the `.o-expandable_content block.`
 
 
-          In this barebones example there are no visual styles.
+          ```
 
+          .o-expandable_content__onload-open
+
+          ```
+        variation_code_snippet: ""
+      - variation_name: Padded modifier
+        variation_description: >-
+          Adds padding and a background color to `.o-expandable_header` and
+          `.o-expandable_content`.
+
+
+          In addition to using the `.o-expandable__padded` modifier you also need to make sure you are using `.o-expandable_header`.
+
+
+          ```
+
+          .o-expandable__padded
+
+          ```
+        variation_code_snippet: ""
+      - variation_name: Spaced header modifier
+        variation_description: >-
+          Allows you to add space between `.o-expandable_header` and
+          `.o-expandable_content`.
+
+
+          ```
+
+          .o-expandable_header__spaced
+
+          ```
+  - variations:
       - variation_code_snippet: >-
           <div class="o-expandable-group">
               <div class="o-expandable o-expandable__padded">
@@ -300,6 +346,8 @@ variation_groups:
           Add the `o-expandable-group__accordion` class to the expandable group
           to activate the accordion mode.
         variation_name: Accordion-style group
+    variation_group_name: Groups
+    variation_group_description: ""
 use_cases: ""
 content_guidelines: >-
   #### Individual
@@ -346,47 +394,6 @@ content_guidelines: >-
 
   NOTE: If you use `cf-expandables.less` directly, be sure to run the file through [Autoprefixer](https://github.com/postcss/autoprefixer), or your compiled Capital Framework CSS will not work perfectly in older browsers.
 
-
-  ##### Expanded modifier
-
-
-  Sometimes you may want the expandable to be open by default. This is as easy as adding the `.o-expandable_content__onload-open` modifier to the `.o-expandable_content` block.
-
-
-  ```
-
-  .o-expandable_content__onload-open
-
-  ```
-
-
-  ##### Padded modifier
-
-
-  Adds padding and a background color to `.o-expandable_header` and `.o-expandable_content`.
-
-
-  In addition to using the `.o-expandable__padded` modifier you also need to make sure you are using `.o-expandable_header`.
-
-
-  ```
-
-  .o-expandable__padded
-
-  ```
-
-
-  ##### Spaced header
-
-
-  Allows you to add space between `.o-expandable_header` and `.o-expandable_content`.
-
-
-  ```
-
-  .o-expandable_header__spaced
-
-  ```
 
 
   ##### Label

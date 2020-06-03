@@ -431,6 +431,48 @@ variation_groups:
           </div>
         variation_description: ""
         variation_name: Prefixing/Suffixing
+      - variation_name: "Cf-grid helpers: Wrapper"
+        variation_description: >
+          Turns an element into a cf-grid wrapper at 801px and above (e.g.,
+          `<div class="wrapper">`). Includes some explicit declarations for
+          Internet Explorer 8 due to the fact that it doesn’t support media
+          queries.
+        variation_code_snippet: |-
+          <div class="wrapper">
+              Wrapper
+          </div>
+      - variation_name: "Cf-grid helpers: Column divider modifiers"
+        variation_description: >-
+          cf-grid columns use left and right `border` for fixed `margin`, which
+          means it’s not possible to set visual left and right borders directly
+          on them. Instead we can use the `:before` pseudo element and position
+          it absolutely. The added benefit of doing it this way is that the
+          `border` spans the entire height of the next parent using `position:
+          relative;`. This means that the `border` will always match the height
+          of the tallest column in the row.
+
+
+          ```
+
+          .my-column-1-2 {
+
+              // Creates a column that spans 6 out of 12 columns.
+              .grid_column(6, 12);
+
+              // Add a top divider only at screen 599px and smaller.
+              .respond-to-max(599px {
+                  .grid_column__top-divider();
+              });
+
+              // Add a left divider only at screen 600px and larger.
+              .respond-to-min(600px, {
+                  .grid_column__left-divider();
+              });
+
+          }
+
+          ```
+        variation_code_snippet: ""
     variation_group_name: Development
     variation_group_description: >-
       

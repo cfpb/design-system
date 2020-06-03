@@ -91,11 +91,11 @@ variation_groups:
           `.o-expandable_content__onload-open` modifier to the
           `.o-expandable_content` block.
         variation_name: Basic expandable (open on load)
-      - variation_code_snippet: |-
+      - variation_code_snippet: >-
           <div class="o-expandable">
               <button class="o-expandable_target" title="Expand content">
                   <span class="o-expandable_cue o-expandable_cue-open">
-                      <span class="u-visually-hidden-on-mobile">Show</span>
+                      <span class="u-visually-hidden-on-mobile">Barebones expandable example </span>
                   </span>
                   <span class="o-expandable_cue o-expandable_cue-close">
                       <span class="u-visually-hidden-on-mobile">Hide</span>

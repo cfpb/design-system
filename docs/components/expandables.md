@@ -93,79 +93,6 @@ variation_groups:
           `.o-expandable_content__onload-open` modifier to the
           `.o-expandable_content` block.
     variation_group_description: ""
-  - variation_group_name: Variations
-    variation_group_description: Expandables can be built by combining the basic
-      barebones structure described below with more specialized expandable
-      elements and modifiers described throughout.
-    variations:
-      - variation_name: Barebones expandable
-        variation_description: >-
-          Expandables can be built by combining the basic barebones structure
-          along with more specialized expandable elements and modifiers
-          described throughout to create custom expandable patterns.
-
-
-          In this barebones example there are no visual styles.
-        variation_code_snippet: >-
-          <div class="o-expandable">
-              <button class="o-expandable_target" title="Expand content">
-                  <span class="o-expandable_cue o-expandable_cue-open">
-                      <span class="u-visually-hidden-on-mobile">Barebones expandable example </span>
-                  </span>
-                  <span class="o-expandable_cue o-expandable_cue-close">
-                      <span class="u-visually-hidden-on-mobile">Hide</span>
-                  </span>
-              </button>
-              <div class="o-expandable_content">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                      temporibus magnam debitis quidem. Ducimus ratione
-                      corporis nesciunt earum vel est quaerat blanditiis
-                      dolore ipsa?
-                      <a href="#">Lorem link</a>.
-                  </p>
-              </div>
-          </div>
-      - variation_name: Expanded modifier
-        variation_description: >-
-          Sometimes you may want the expandable to be open by default. This is
-          as easy as adding the `.o-expandable_content__onload-open` modifier to
-          the `.o-expandable_content block.`
-
-
-          ```
-
-          .o-expandable_content__onload-open
-
-          ```
-        variation_code_snippet: ""
-      - variation_name: Padded modifier
-        variation_description: >-
-          Adds padding and a background color to `.o-expandable_header` and
-          `.o-expandable_content`.
-
-
-          In addition to using the `.o-expandable__padded` modifier you also need to make sure you are using `.o-expandable_header`.
-
-
-          ```
-
-          .o-expandable__padded
-
-          ```
-        variation_code_snippet: ""
-      - variation_name: Spaced header modifier
-        variation_description: >-
-          Allows you to add space between `.o-expandable_header` and
-          `.o-expandable_content`.
-
-
-          ```
-
-          .o-expandable_header__spaced
-
-          ```
   - variations:
       - variation_code_snippet: >-
           <div class="o-expandable-group">
@@ -348,6 +275,137 @@ variation_groups:
         variation_name: Accordion-style group
     variation_group_name: Groups
     variation_group_description: ""
+  - variation_group_name: Variations
+    variation_group_description: Expandables can be built by combining the basic
+      barebones structure described below with more specialized expandable
+      elements and modifiers described throughout.
+    variations:
+      - variation_name: Barebones expandable
+        variation_description: >-
+          This is the barebones structure for expandables that can be used
+          (along with other expanable elements and modifiers) to create custom
+          expandable patterns.
+
+
+          In this barebones example there are no visual styles.
+        variation_code_snippet: >-
+          <div class="o-expandable">
+              <button class="o-expandable_target" title="Expand content">
+                  <span class="o-expandable_cue o-expandable_cue-open">
+                      <span class="u-visually-hidden-on-mobile">Barebones expandable example </span>
+                  </span>
+                  <span class="o-expandable_cue o-expandable_cue-close">
+                      <span class="u-visually-hidden-on-mobile">Hide</span>
+                  </span>
+              </button>
+              <div class="o-expandable_content">
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                      temporibus magnam debitis quidem. Ducimus ratione
+                      corporis nesciunt earum vel est quaerat blanditiis
+                      dolore ipsa?
+                      <a href="#">Lorem link</a>.
+                  </p>
+              </div>
+          </div>
+      - variation_name: Expanded modifier
+        variation_description: >-
+          Sometimes you may want the expandable to be open by default. This is
+          as easy as adding the `.o-expandable_content__onload-open` modifier to
+          the `.o-expandable_content block.`
+
+
+          ```
+
+          .o-expandable_content__onload-open
+
+          ```
+        variation_code_snippet: ""
+      - variation_name: Padded modifier
+        variation_description: >-
+          Adds padding and a background color to `.o-expandable_header` and
+          `.o-expandable_content`.
+
+
+          In addition to using the `.o-expandable__padded` modifier you also need to make sure you are using `.o-expandable_header`.
+
+
+          ```
+
+          .o-expandable__padded
+
+          ```
+        variation_code_snippet: ""
+      - variation_name: Spaced header modifier
+        variation_description: >-
+          Allows you to add space between `.o-expandable_header` and
+          `.o-expandable_content`.
+
+
+          ```
+
+          .o-expandable_header__spaced
+
+          ```
+        variation_code_snippet: ""
+      - variation_name: Text elements
+        variation_description: |
+          #### Label
+
+          Allows you to add some styled text.
+
+          ```
+          <span class="o-expandable_label">
+              Lorem ipsum
+          </span>
+          ```
+
+          #### Link
+
+          Allows you to add some styled text to look like a link.
+          Note: only use this in the expandable header
+
+          ```
+          <span class="o-expandable_link">
+              Lorem ipsum
+          </span>
+          ```
+        variation_code_snippet: ""
+      - variation_name: Header elements
+        variation_description: >
+          
+
+
+          #### Header
+
+
+          Creates a full-width container to house information that is always visible. This is useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.
+
+
+          Combine `.o-expandable_header` with `.o-expandable_target` for a full-width trigger.
+
+
+          ```
+
+          .o-expandable_header
+
+          ```
+
+
+          #### Header left/right
+
+
+          Allows you to float information left and right.
+
+
+          ```
+
+          .o-expandable_header-left
+
+          .o-expandable_header-right
+
+          ```
 use_cases: ""
 content_guidelines: >-
   #### Individual
@@ -385,78 +443,6 @@ content_guidelines: >-
 
   In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.
 
-
-  #### Code
-
-
-  Below are modifiers and elements of expandables.
-
-
-  NOTE: If you use `cf-expandables.less` directly, be sure to run the file through [Autoprefixer](https://github.com/postcss/autoprefixer), or your compiled Capital Framework CSS will not work perfectly in older browsers.
-
-
-
-  ##### Label
-
-
-  Allows you to add some styled text.
-
-
-  ```
-
-  <span class="o-expandable_label">
-      Lorem ipsum
-  </span>
-
-  ```
-
-
-  ##### Link
-
-
-  Allows you to add some styled text to look like a link.
-
-  Note: only use this in the expandable header
-
-
-  ```
-
-  <span class="o-expandable_link">
-      Lorem ipsum
-  </span>
-
-  ```
-
-
-  ##### Header
-
-
-  Creates a full-width container to house information that is always visible. This is useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.
-
-
-  Combine `.o-expandable_header` with `.o-expandable_target` for a full-width trigger.
-
-
-  ```
-
-  .o-expandable_header
-
-  ```
-
-
-  ##### Header left/right
-
-
-  Allows you to float information left and right.
-
-
-  ```
-
-  .o-expandable_header-left
-
-  .o-expandable_header-right
-
-  ```
 
 
   #### JavaScript API

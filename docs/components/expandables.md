@@ -113,6 +113,14 @@ variation_groups:
               </div>
           </div>
         variation_name: Barebones expandable
+        variation_description: >+
+          Expandables can be built by combining the basic barebones structure
+          along with more specialized expandable elements and modifiers
+          described throughout to create custom expandable patterns.
+
+
+          In this barebones example there are no visual styles.
+
       - variation_code_snippet: >-
           <div class="o-expandable-group">
               <div class="o-expandable o-expandable__padded">

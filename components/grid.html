@@ -2606,6 +2606,188 @@ content first in the source order, but it’s here if you absolutely need it.</p
 
         </div>
         
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Cf-grid helpers: Wrapper</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>Turns an element into a cf-grid wrapper at 801px and above (e.g., <code class="language-plaintext highlighter-rouge">&lt;div class="wrapper"&gt;</code>). Includes some explicit declarations for Internet Explorer 8 due to the fact that it doesn’t support media queries.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="wrapper">
+    Wrapper
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-cf-grid-helpers-wrapper-turns-an-8" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-cf-grid-helpers-wrapper-turns-an-8" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-cf-grid-helpers-wrapper-turns-an-8">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-cf-grid-helpers-wrapper-turns-an-html-code-snippet-8">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-cf-grid-helpers-wrapper-turns-an-html-code-snippet-8">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="wrapper"&gt;
+    Wrapper
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Cf-grid helpers: Column divider modifiers</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>cf-grid columns use left and right <code class="language-plaintext highlighter-rouge">border</code> for fixed <code class="language-plaintext highlighter-rouge">margin</code>, which means it’s not possible to set visual left and right borders directly on them. Instead we can use the <code class="language-plaintext highlighter-rouge">:before</code> pseudo element and position it absolutely. The added benefit of doing it this way is that the <code class="language-plaintext highlighter-rouge">border</code> spans the entire height of the next parent using <code class="language-plaintext highlighter-rouge">position: relative;</code>. This means that the <code class="language-plaintext highlighter-rouge">border</code> will always match the height of the tallest column in the row.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.my-column-1-2 {
+
+    // Creates a column that spans 6 out of 12 columns.
+    .grid_column(6, 12);
+
+    // Add a top divider only at screen 599px and smaller.
+    .respond-to-max(599px {
+        .grid_column__top-divider();
+    });
+
+    // Add a left divider only at screen 600px and larger.
+    .respond-to-min(600px, {
+        .grid_column__left-divider();
+    });
+
+}
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-cf-grid-helpers-column-divider-m-9" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-cf-grid-helpers-column-divider-m-9" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-cf-grid-helpers-column-divider-m-9">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-cf-grid-helpers-column-divider-m-html-code-snippet-9">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-cf-grid-helpers-column-divider-m-html-code-snippet-9">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html"></code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
     </section>
     
     
@@ -2671,8 +2853,8 @@ content first in the source order, but it’s here if you absolutely need it.</p
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/grid.md">
-                    <time datetime="2020-06-02 12:20:23 -0400">
-                        12:20:23 PM Jun 02, 2020
+                    <time datetime="2020-06-03 11:00:21 -0400">
+                        11:00:21 AM Jun 03, 2020
                     </time>
                 </a>
             </small>

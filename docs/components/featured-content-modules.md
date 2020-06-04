@@ -7,7 +7,7 @@ status: Released
 description: "Featured content modules (FCMs) highlight one specific piece of
   content at the top of a page. Content is featured temporarily and not a
   permanent part of the page. Content can be a video, link, or download.\r See
-  the [use cases]() for more information."
+  the [use cases](#use-cases) for more information."
 variation_groups:
   - variation_group_name: Standard featured content module
     variations:

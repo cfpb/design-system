@@ -55,8 +55,9 @@ variation_groups:
                       alt="">
               </div>
           </section>
-        variation_description: "By default, the featured content module visual is
-          anchored on the left.  "
+        variation_description: By default, the featured content module visual is
+          anchored on the left, so that the left side remains in view at all
+          screen sizes.
         variation_name: Visual anchored on the left (default)
       - variation_code_snippet: >-
           <section class="o-featured-content-module
@@ -81,12 +82,13 @@ variation_groups:
                       alt="">
               </div>
           </section>
-        variation_description: To anchor a featured content module’s visual on the right
-          (for example, when displaying a map with a copyright watermark on the
-          right), add the `o-featured-content-module__right` modifier class to
-          the `o-featured-content-module` organism. This anchors the right side
-          of the image to the right of the available space so that the right
-          side remains in view at all screen sizes.
+        variation_description: In cases where the featured content module’s visual
+          should be anchored to the right—for example, when displaying a map
+          with a copyright watermark on the right—add the
+          `o-featured-content-module__right` modifier class to the
+          `o-featured-content-module` organism. This anchors the right side of
+          the image to the right of the available space so that the right side
+          remains in view at all screen sizes.
         variation_name: Visual anchored on the right
       - variation_code_snippet: >-
           <section class="o-featured-content-module
@@ -120,12 +122,12 @@ variation_groups:
         variation_name: Centered visual
     variation_group_name: Variations
     variation_group_description: >-
-      The modifiers below describe how to change how the image or video is
-      anchored, which affects what portion of the image is visible at different
-      desktop breakpoints.
+      The modifiers below describe how to change how the featured content module
+      visual is anchored. This affects what portion of the image or video is
+      visible at different desktop breakpoints.
 
 
-      The featured content module image or video is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered. 
+      The featured content module visual is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered. 
 use_cases: >-
   Use a featured content module (FCM) when you want to highlight something
   that’s:

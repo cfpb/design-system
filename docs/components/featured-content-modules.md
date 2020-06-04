@@ -118,14 +118,14 @@ variation_groups:
           image to the center of the available space so that the focal point of
           the visual remains in view at all screen sizes.
         variation_name: Centered visual
-    variation_group_name: Image variations
+    variation_group_name: Variations
     variation_group_description: >-
-      The featured content module image or video is anchored left by default.
-      There may in some cases be a need to anchor the image or video either
-      right or center. For example, video should typically be centered. 
+      The modifiers below describe how to change how the image or video is
+      anchored, which affects what portion of the image is visible at different
+      desktop breakpoints.
 
 
-      The modifiers below describe how to change how the image or video is anchored, which affects what portion of the image is visible at different desktop breakpoints.
+      The featured content module image or video is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered. 
 use_cases: >-
   Use a featured content module (FCM) when you want to highlight something
   that’s:

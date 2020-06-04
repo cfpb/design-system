@@ -17,6 +17,11 @@ variation_groups:
           simply a dominant visual. FCMs appear below the page introduction,
           and  retain that position on all screen sizes.  
 
+          <br>
+
+
+          ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)
+
 
 
           ##### When to use
@@ -36,10 +41,7 @@ variation_groups:
           * When there’s no link or video for the user to interact with. If you just want to visually differentiate your content from its surroundings, consider using a well or inline text instead.
 
 
-          See  [use cases](#use-cases) for details. 
-
-
-          ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)
+          See  [use cases](#use-cases) and [content guidelines](#content-guidelines) for important details.
         variation_specs: >-
           Desktop style
 

@@ -29,9 +29,38 @@ variation_groups:
           * When content is a “mini-story” containing a headline, body copy, call to action, and image
 
 
-
-
           ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)
+        variation_specs: >-
+          Desktop style
+
+          * Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page.
+
+          * Background color of module is Gray 5 with a 1px Gray 40 stroke.
+
+          * Visual is always 270px wide and 220px tall at maximum page width.
+
+          * Text spans 5 columns at maximum page width and is left and top aligned. There is 30px of padding around all sides of the text.
+
+          * The ratio of text and visual changes with screen size to keep the full height of the image visible. As available width dips below the maximum page width, the text area shrinks in width while the visual maintains a fixed width of 270px. That means that the height and aspect ratio of the visual will change as the screen shrinks, and the image will be cropped between 16% and 29% from each side.
+
+          * Heading: H3, 35 maximum character count (including spaces)
+
+          * Body copy: 16px, appears 15px below the headline, 160 maximum character count (including spaces)
+
+          * Call to action link: 16px, standard link colors, appears 15px below body copy, 35 maximum character count (including spaces)
+
+          * Play button (for FCMs with a video): 60px diameter, Black background at 75% opacity that changes to Pacific on hover, White icon, 2px Gray 5 border, centered in the visual
+
+
+          Differences in style at mobile size:
+
+          * Text and visual are stacked instead of side by side with 30px space between text and top of visual
+
+          * Headline: H4
+
+          * Visual is always in a 16:9 ratio
+
+          * 15px of left, right, and bottom padding around all content in the FCM
   - variations:
       - variation_code_snippet: >-
           <section class="o-featured-content-module">

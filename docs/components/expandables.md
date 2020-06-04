@@ -406,9 +406,52 @@ variation_groups:
           .o-expandable_header-right
 
           ```
+  - variation_group_name: JavaScript API
+    variation_group_description: >-
+      A new array of Expandable instances can be created with `const expandables
+      = Expandable.init();`. Each instance has the following methods for public
+      consumption:
+
+
+      ### toggleTargetState( element )
+
+
+      ```
+
+      const` element = document.querySelector( '.o-expandable_target' );
+
+      expandables[0].toggleTargetState( element );
+
+      ```
+
+
+      Toggle an expandable to open or closed.
+
+      Parameters:
+
+
+      * element {HTMLNode} The expandable target HTML DOM element.
+
+
+      ### getLabelText()
+
+
+      ```
+
+      expandables[0].getLabelText();
+
+      ```
+
+
+      Retrieve the label text of the expandable header.
+
+      Return:
+
+
+      * {string} The text of the expandable’s label.
 use_cases: ""
 content_guidelines: >-
-  #### Individual
+  ### Individual
 
 
   When only one expandable is used, it should include a stroke on all sides, heading text, and the expand/collapse minicon within a circle with a label reading “Show” or “Hide” (when possible). A white or 5% gray background can be used to highlight the section from the page background.
@@ -417,22 +460,18 @@ content_guidelines: >-
   The entire bar is actionable. The header should clearly indicate what the user will see when the content is expanded (it should not be a call to action). Expand icons stay aligned at the top of the row when the title breaks to multiple lines.
 
 
-  #### Group
+  ### Group
 
 
   When expandable sections are used in a group, they are stacked vertically, with each row sharing its top or bottom stroke with the adjacent row. In this use case, expandables have no background color of their own, but match whatever color they are used on (this would typically be a white page or 5% gray well). Title text should be consistent across a group of expandables.
-
-
-  ### Behavior
-
-
-  #### Collapsed
+behavior: >
+  ### Collapsed
 
 
   The default collapsed state should include the expand/collapse minicon within a circle and a label (if space allows). The Show/Hide label can be hidden at narrower screen widths to prevent titles prematurely breaking onto multiple lines and to reduced visual clutter.
 
 
-  #### Expanded
+  ### Expanded
 
 
   The content of an expandable can contain normal paragraphs, headings, lists, wells, and images.
@@ -442,52 +481,6 @@ content_guidelines: >-
 
 
   In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.
-
-
-
-  #### JavaScript API
-
-
-  A new array of Expandable instances can be created with `const expandables = Expandable.init();`. Each instance has the following methods for public consumption:
-
-
-  ##### toggleTargetState( element )
-
-
-  ```
-
-  const` element = document.querySelector( '.o-expandable_target' );
-
-  expandables[0].toggleTargetState( element );
-
-  ```
-
-
-  Toggle an expandable to open or closed.
-
-  Parameters:
-
-
-  * element {HTMLNode} The expandable target HTML DOM element.
-
-
-  ##### getLabelText()
-
-
-  ```
-
-  expandables[0].getLabelText();
-
-  ```
-
-
-  Retrieve the label text of the expandable header.
-
-  Return:
-
-
-  * {string} The text of the expandable’s label.
-behavior: ""
 accessibility: The `find` function will not discover information hidden by a
   collapsed expandable, so use good judgement in deciding which information to
   hide. Non-javaScript users should default to the expanded state. Otherwise,

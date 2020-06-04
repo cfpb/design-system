@@ -6,8 +6,7 @@ secondary_section: Layout options
 status: Released
 description: "Featured content modules (FCMs) highlight one specific piece of
   content at the top of a page. Content is featured temporarily and not a
-  permanent part of the page. Content can be a video, link, or download.\r See
-  the [use cases](#use-cases) for more information."
+  permanent part of the page. Content can be a video, link, or download.\r"
 variation_groups:
   - variation_group_name: Standard featured content module
     variations:
@@ -35,6 +34,9 @@ variation_groups:
 
 
           * When there’s no link or video for the user to interact with. If you just want to visually differentiate your content from its surroundings, consider using a well or inline text instead.
+
+
+          See  [use cases](#use-cases) for details. 
 
 
           ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)

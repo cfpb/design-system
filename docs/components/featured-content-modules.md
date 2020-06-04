@@ -213,12 +213,16 @@ content_guidelines: >-
 
   Text is full-width and displayed above the visual in the default/mobile view. When creating a static image for the visual, it should be 1076px × 606px (a 16:9 aspect ratio), which is 2x the rendered width at the maximum size at which the visual will be seen (on a 600px wide display).
 behavior: >-
-  At desktop size, the ratio of text and visual changes with screen size to keep
-  the full height of the image visible. As available width dips below the
-  maximum page width, the text area shrinks in width while the visual maintains
-  a fixed width of 270px. That means that the height and aspect ratio of the
-  visual will change as the screen shrinks, and the image will be cropped
-  between 16% and 29% from each side.
+  | Above 600 px | Below 601 px |
+
+  | ------------ | ------------ |
+
+  | ![](/design-system/images/uploads/fcm-desktop02.png) | ![](/design-system/images/uploads/fcm-mobile02.png) |
+   
+  ### Responsive visual behavior
+
+
+  At desktop size, the ratio of text and visual changes with screen size to keep the full height of the image visible. As available width dips below the maximum page width, the text area shrinks in width while the visual maintains a fixed width of 270px. That means that the height and aspect ratio of the visual will change as the screen shrinks, and the image will be cropped between 16% and 29% from each side.
 
 
   At larger screen sizes, the image moves to the right of the text, occupying a fixed width of 270px (equal to 3 of 12 columns at max page width). By default, the left edge of the image is anchored to the left side of the visual’s 270px-wide area, and the right side is cropped off. The aspect ratio of the visual area increases as screen size increases, resulting in slightly different image cropping at different screen sizes, but the left edge of the image remains anchored in view. The full height of the image is always in view; the top and bottom are never cropped. See below for modifiers that change the image’s horizontal anchoring.

@@ -75,7 +75,7 @@ content_guidelines: >-
   * Follow form patterns for grouping, layout, and messaging.
 behavior: >-
   Filters live in an expandable style element allowing controls to be hidden
-  when not in use/needed.
+  when not in use or needed.
 
 
   On page load, the filter is collapsed by default. After filter is applied it remains open, except for mobile breakpoint (< 601 px) where is is collapsed after filtering to make vertical space for the notification to be viewed on screen.

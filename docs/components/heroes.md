@@ -69,7 +69,7 @@ variation_groups:
           specs, including styles at different breakpoints and specs for
           bleeding illustrations, click on the "Show details" link.'
         variation_name: Hero with illustration
-        variation_specs: >-
+        variation_specs: >
           #### Standard hero with illustration
 
           * All illustrations should be saved at 200% to accommodate retina displays
@@ -108,6 +108,24 @@ variation_groups:
 
 
           ![Image of smaller bleeding hero graphics with dimensions](/design-system/images/uploads/hero_style_bleed_small.png "Image of smaller bleeding hero graphics with dimensions")
+
+
+          #### Style at different breakpoints
+
+
+          | Item | Above 901 px | 601 - 900 px | Below 601 px | 
+
+          | -- | -- | -- | -- |
+
+          | Heading | H1 | H2 | H2 | 
+
+          | Subheading | Avenir Next Regular, 22px/28px | Avenir Next Regular, 18px/22px | Avenir Next Regular, 18px/22px | 
+
+          | Padding | Top/bottom: 45px, left/right: 30px | All sides: 30px | Top/bottom: 30px, left/right: 15px | 
+
+          | Text alignment | Vertically centered | Vertically centered | - | 
+
+          | Height | 285px (fixed) | Module height is flexible to text height | Module height is flexible to text height | 
         variation_implementation: >+
           When using an illustration that bleeds top to bottom at larger screen
           sizes, add the __bleeding modifier to the hero and add an additional
@@ -196,6 +214,7 @@ variation_groups:
     variation_group_name: Standard heroes
     variation_group_description: >-
       Heroes combine a heading, descriptive text, and image. 
+
 
       ##### When to use
 
@@ -318,6 +337,10 @@ content_guidelines: >-
 
   * After two-line heading: Between 108 and 124 characters (two lines at largest breakpoint)
 behavior: >-
+  For style at different breakpoints, see [specs for standard
+  heroes](#standard-heroes). 
+
+
   | Above 600 px | Below 601 px |
 
   | -- | ----- |

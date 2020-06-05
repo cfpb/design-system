@@ -203,6 +203,79 @@ variation_groups:
           - Padding, column label/bottom border: 15px
           - Padding, bottom border/content: 15px
           - Padding, content / next label: 30px
+      - variation_name: Responsive table with horizontal scroll
+        variation_description: >-
+          Use a table with horizontal scroll when the data you’re presenting has
+          more columns than will fit comfortably on the screen, and you want to
+          ensure all information can be accessed in its original tabular
+          structure, even on smaller screens. 
+
+
+          The `.o-table-wrapper__scrolling` class must be added to the parent element of the `table` (by adding a wrapping `div`, in most cases). The `table` element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the o-table__striped class, below).
+        variation_code_snippet: |-
+          <div class="o-table o-table-wrapper__scrolling">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Column 1</th>
+                          <th>Column 2</th>
+                          <th>Column 3</th>
+                          <th>Column 4</th>
+                          <th>Column 5</th>
+                          <th>Column 6</th>
+                          <th>Column 7</th>
+                          <th>Column 8</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td data-label="Column 1">Row A</td>
+                          <td data-label="Column 2">Cell A2</td>
+                          <td data-label="Column 3">Cell A3</td>
+                          <td data-label="Column 4">Cell A4</td>
+                          <td data-label="Column 5">Cell A5</td>
+                          <td data-label="Column 6">Cell A6</td>
+                          <td data-label="Column 7">Cell A7</td>
+                          <td data-label="Column 8">Cell A8</td>
+                      </tr>
+                      <tr>
+                          <td data-label="Column 1">Row B</td>
+                          <td data-label="Column 2">Cell B2</td>
+                          <td data-label="Column 3">Cell B3</td>
+                          <td data-label="Column 4">Cell B4</td>
+                          <td data-label="Column 5">Cell B5</td>
+                          <td data-label="Column 6">Cell B6</td>
+                          <td data-label="Column 7">Cell B7</td>
+                          <td data-label="Column 8">Cell B8</td>
+                      </tr>
+                      <tr>
+                          <td data-label="Column 1">Row C</td>
+                          <td data-label="Column 2">Cell C2</td>
+                          <td data-label="Column 3">Cell C3</td>
+                          <td data-label="Column 4">Cell C4</td>
+                          <td data-label="Column 5">Cell C5</td>
+                          <td data-label="Column 6">Cell C6</td>
+                          <td data-label="Column 7">Cell C7</td>
+                          <td data-label="Column 8">Cell C8</td>
+                      </tr>
+                      <tr>
+                          <td data-label="Column 1">Row D</td>
+                          <td data-label="Column 2">Cell D2</td>
+                          <td data-label="Column 3">Cell D3</td>
+                          <td data-label="Column 4">Cell D4</td>
+                          <td data-label="Column 5">Cell D5</td>
+                          <td data-label="Column 6">Cell D6</td>
+                          <td data-label="Column 7">Cell D7</td>
+                          <td data-label="Column 8">Cell D8</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+        variation_specs: |-
+          ### Styles for scrolling tables
+
+          * Border: 1px, Gray-50 #BABBBD around the scrolling table
+          * Alternate row striping: Grey-05 #F8F8F8
   - variations:
       - variation_code_snippet: >-
           <table>

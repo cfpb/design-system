@@ -74,10 +74,12 @@ variation_groups:
         variation_specs: |-
           #### Placeholder text
           Avenir Next Regular, 16 px, Gray (#5a5d61)
-    variation_group_name: Standard helper text
-use_cases: ''
+    variation_group_name: Types
+    variation_group_description: "Types of helper text include block helper text,
+      inline helper text, and placeholder text. "
+use_cases: ""
 content_guidelines: >-
-  #### Required vs. optional fields
+  ### Required vs. optional fields
 
   Where possible, design your forms to only include required fields. If it’s not required, ask yourself if it’s really necessary to include at all. Add instructions at the top of the form to clearly indicate that all fields are required unless otherwise noted. If a field is optional, indicate it with inline helper text, as shown above. Don’t indicate which fields are required; that would only introduce redundant visual noise.
 

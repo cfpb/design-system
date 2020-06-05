@@ -242,6 +242,18 @@ variation_groups:
       ##### When other options are better
 
       * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the text introduction
+
+
+      The illustration can be customized by setting the background-image property on the .m-hero_image element.
+
+
+      On small screens (or where media queries are not supported), the text spans the full width of the .m-hero_wrapper and the illustration is displayed underneath.
+
+
+      For larger screen sizes, media queries are used to position the illustration to the right of the text.
+
+
+      At the grid’s maximum width and above, the hero should not exceed 285px in height. The image should be 195px in height to conform to this standard.
   - variation_group_name: Variations
     variations:
       - variation_name: Hero with knockout text

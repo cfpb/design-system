@@ -5,10 +5,8 @@ section: components
 secondary_section: Layout options
 status: Released
 description: The text introduction is the standard page introduction pattern
-  used across all pages that do not have a
-  [hero](https://cfpb.github.io/design-system/components/heroes) or [item
-  introduction]((https://cfpb.github.io/design-system/components/item-introduction).
-  On [landing](https://cfpb.github.io/design-system/templates/landing-pages) or
+  used across all pages that do not have a hero or item introduction. On
+  [landing](https://cfpb.github.io/design-system/templates/landing-pages) or
   [sub-landing
   pages](https://cfpb.github.io/design-system/templates/sublanding-pages), the
   text introduction may be accompanied by a breakout sidebar to highlight a
@@ -16,20 +14,36 @@ description: The text introduction is the standard page introduction pattern
 variation_groups:
   - variations:
       - variation_code_snippet: ""
-        variation_description: ""
+        variation_description: >-
+          Text introductions consist of a heading and lead paragraph. They
+          should be used on every page, except in cases when a hero or item
+          introduction is used. 
+
+
+          Layout as seen with a standard right sidebar:
+
+
+          ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/textintro_intro.png)
         variation_jinja_code_snippet: ""
         variation_name: ""
+        variation_specs: >-
+          #### Style
+
+
+          ![Image of text intro showing grid and design specs](/design-system/images/uploads/textintro_style1.png)
+
+
+          * Spacing: 45px margin above, 60 px margin below.
+
+          * Page title: Heading 1
+
+          * Subheader: Lead paragraph style
+
+          * Optional body paragraph and link: Avenir paragraph
+
+          * At breakpoints below 600: Page title and lead paragraph drop down one type size to make reading on smaller devices easier.
     variation_group_name: Standard text introduction
-    variation_group_description: >-
-      Text introductions consist of a heading and lead paragraph. They should be
-      used on every page, except in cases when a hero or item introduction is
-      used. 
-
-
-      Layout as seen with a standard right sidebar:
-
-
-      ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/textintro_intro.png)
+    variation_group_description: ""
   - variation_group_name: Text introduction with optional breakout sidebar
     variation_group_description: >-
       On landing or sub-landing pages, the text introduction may be accompanied
@@ -48,6 +62,19 @@ variation_groups:
 
 
       ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/textintro_intro2.png)
+    variations:
+      - variation_specs: >-
+          #### Style
+
+
+          ![Image of text intro with breakout sidebar showing grid and design specs](/design-system/images/uploads/textintro_style2.png)
+
+
+          * Spacing: The breakout may be taller than the Text Intro content, in which case the margin beneath the breakout should be 60px.
+
+          * Required elements: slug title and paragraph text.
+
+          * Imagery: May use either a circle (1x1) image or a 16x9 ratio image.
 use_cases: ""
 content_guidelines: >-
   Headings should be as succinct as possible, ideally staying on a single line
@@ -68,46 +95,28 @@ content_guidelines: >-
 
   The optional call to action link should be one line; about 40 characters or less. Link content should follow link guidelines.
 behavior: >-
-  **_Text introductions_**
+  #### Text introduction
 
 
-  901+ breakpoints, standard grey-welled sidebar on the right
+  | Above 900 px                                                                          | Below 901 px                                                                                   |
+
+  | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+
+  | With standard grey-welled sidebar on the right                                        | With standard grey-welled sidebar stacked to prefooter                                         |
+
+  | ![Mockup of 900+ pixel layout](/design-system/images/uploads/textintro_behavior1.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior3.jpg) |
 
 
-  ![Mockup of 900+ pixel layout](/design-system/images/uploads/textintro_behavior1.png)
+  #### Text introduction with breakout sidebar
 
 
-  901+ breakpoints, breakout sidebar on the right
+  | Above 900 px                                                                          | Below 901 px                                                                                   |
 
+  | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 
-  ![Mockup of 900+ pixel layout](/design-system/images/uploads/textintro_behavior2.png)
+  | Breakout sidebar on the right                                                         | Breakout sidebar stacked immediately after text intro                                          |
 
-
-  900 breakpoints and less, standard grey-welled sidebar (stacked to prefooter)
-
-
-  ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior3.jpg)
-
-
-  900 breakpoints and less, breakout sidebar stacked immediately after text intro
-
-
-  ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior4.jpg)
-
-
-  _**Item introductions**_
-
-
-  901+ breakpoints, item introduction with sidebar to the right
-
-
-  ![Mockup of 900+ pixel layout](/design-system/images/uploads/itemintro_behavior1.png)
-
-
-  900 and under breakpoints, item intro takes up full width of viewport
-
-
-  ![Mockup of 900 pixel and below layout](/design-system/images/uploads/itemintro_behavior2.png)
+  | ![Mockup of 900+ pixel layout](/design-system/images/uploads/textintro_behavior2.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior4.jpg) |
 accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
 research: ""

@@ -137,9 +137,22 @@ variation_groups:
 
           | Image | ![hero desktop style](/design-system/images/uploads/hero_style_desktop.png) | ![hero tablet style](/design-system/images/uploads/hero_style_tablet.png) | ![hero mobile style](/design-system/images/uploads/hero_style_mobile.png) |
         variation_implementation: >+
-          When using an illustration that bleeds top to bottom at larger screen
-          sizes, add the __bleeding modifier to the hero and add an additional
-          m-hero_bleeding-image as a sibling to m-hero_image.
+          #### Customizing illustrations
+
+          The illustration can be customized by setting the `background-image` property on the `.m-hero_image` element.
+
+
+          #### Responsive behavior
+
+          On small screens (or where media queries are not supported), the text spans the full width of the .m-hero_wrapper and the illustration is displayed underneath.
+
+
+          For larger screen sizes, media queries are used to position the illustration to the right of the text.
+
+
+          ### Bleeding illustrations 
+
+          When using an illustration that bleeds top to bottom at larger screen sizes, add the __bleeding modifier to the hero and add an additional m-hero_bleeding-image as a sibling to m-hero_image.
 
       - variation_name: Hero with photograph
         variation_description: >-
@@ -227,9 +240,7 @@ variation_groups:
           ![Image of smaller photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_small.png "Image of smaller photographic hero graphic with dimensions")
     variation_group_name: Standard heroes
     variation_group_description: >-
-      Heroes combine a heading, a small amount of subheading text, and image. A
-      hero consists of a headline, a small amount of additional sub-heading text
-      and an image.  
+      Heroes combine a heading, a small amount of subheading text, and image. 
 
 
       ##### When to use
@@ -241,19 +252,7 @@ variation_groups:
 
       ##### When other options are better
 
-      * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the text introduction
-
-
-      The illustration can be customized by setting the background-image property on the .m-hero_image element.
-
-
-      On small screens (or where media queries are not supported), the text spans the full width of the .m-hero_wrapper and the illustration is displayed underneath.
-
-
-      For larger screen sizes, media queries are used to position the illustration to the right of the text.
-
-
-      At the grid’s maximum width and above, the hero should not exceed 285px in height. The image should be 195px in height to conform to this standard.
+      * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the text introduction.
   - variation_group_name: Variations
     variations:
       - variation_name: Hero with knockout text

@@ -6,7 +6,7 @@ secondary_section: Alerts
 status: Released
 description: "This page describes notifications and form alerts, the latter
   which provide a light-touch alternative for inline form validation or feedback
-  to a user’s input. The base (default) notification is also described; it is
+  to a user’s input. The default (base) notification is also described; it is
   modified by scripting in production to update the state and message based on
   user input.  "
 variation_groups:

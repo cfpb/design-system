@@ -24,7 +24,7 @@ variation_groups:
           ![Filterable list expanded](/design-system/images/uploads/filter_expanded.png)
 
 
-          #### When to use
+          ##### When to use
 
           * When presenting more than 20 documents or listings together for users to browse through.
 
@@ -33,7 +33,7 @@ variation_groups:
           * Data has relevant characteristics to filter on, for example product and issue for complaint data, location and property type for HMDA, date range and categories for articles
 
 
-          #### When other options are better
+          ##### When other options are better
 
           * The total amount of content can be skimmed in a list of 20 items or less.
 

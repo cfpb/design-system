@@ -56,7 +56,7 @@ variation_groups:
     variation_group_name: Standard fieldsets
     variation_group_description: The fieldset includes the legend, optional block
       helper text, inline labels, and a set of controls.
-  - variation_group_name: Groups
+  - variation_group_name: Sizes
     variations:
       - variation_name: Large target fieldset with checkboxes
         variation_code_snippet: >-

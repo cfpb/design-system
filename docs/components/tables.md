@@ -324,29 +324,33 @@ variation_groups:
                   <tr>
                       <th>Column 1</th>
                       <th>Column 2</th>
-                      <th>Column 3</th>
+                      <th>Right-aligned column</th>
                   </tr>
               </thead>
               <tbody>
                   <tr>
                       <td data-label="Column 1">Row A</td>
                       <td data-label="Column 2">Cell A2</td>
-                      <td data-label="Column 3" class="o-table_cell__right-align">Cell A3</td>
+                      <td data-label="Right-aligned column" class="o-table_cell__right-align">$1.00</td>
                   </tr>
                   <tr>
                       <td data-label="Column 1">Row B</td>
                       <td data-label="Column 2">Cell B2</td>
-                      <td data-label="Column 3" class="o-table_cell__right-align">Cell B3</td>
+                      <td data-label="Right-aligned column" class="o-table_cell__right-align">$2.00</td>
                   </tr>
               </tbody>
           </table>
         variation_description: >-
-          Right-align columns of numbers that contain quantities (counts, dollar
-          amounts, percentages) or ordinals (ranks, item numbers).
+          Right-align columns of numbers when they're quantities (counts, dollar
+          amounts, percentages) or ordinals (ranks, item numbers). Use the
+          `.o-table_cell__right-align` class on a `td`.
 
 
-          The use of the `.o-table_cell__right-align` class on a `td` aligns the text right - see the third column.
+          Left-align columns of numbers when they're nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).
         variation_name: Right-aligned table
+        variation_specs: |
+          ### Style for striped rows
+          - Alternate row background: Grey-05 #F8F8F8
       - variation_code_snippet: |-
           <table class="o-table o-table__row-links">
               <thead>

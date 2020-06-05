@@ -4971,8 +4971,8 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
                 
 
                 
-                    'variation_name1': 'Standard table',
-                    'variation_description1': "This is the default style without stripes and without a breakpoint. It is equivalent to defining a classless &lt;table&gt; element.",
+                    'variation_name1': '',
+                    'variation_description1': "",
                     'variation_code_snippet1': `&lt;table&gt;
     &lt;caption&gt;Table caption describing the data&lt;/caption&gt;
     &lt;thead&gt;
@@ -5005,9 +5005,14 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
 Note: While th elements normally only contain raw text, they may sometimes contain heading elements when that would be beneficial to navigating a page’s content with a screenreader.
 --&gt;`,
                 
-                    'variation_name2': 'Striped table',
-                    'variation_description2': "Striping is useful to help the eye track across table rows. Use striping for tables that have more than five columns, or for tables with rows that are difficult to follow across the full width of the table.The .o-table__striped class adds stripes to the table rows. This striping is not visible on small screens.",
-                    'variation_code_snippet2': `&lt;table class=&quot;o-table o-table__striped&quot;&gt;
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Responsive stacked table',
+                    'variation_description1': "To stack table information on smaller screens and make the information legible, use the .o-table__stack-on-small class.",
+                    'variation_code_snippet1': `&lt;table class=&quot;o-table o-table__stack-on-small&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;Column 1&lt;/th&gt;
@@ -5039,135 +5044,40 @@ Note: While th elements normally only contain raw text, they may sometimes conta
     &lt;/tbody&gt;
 &lt;/table&gt;`,
                 
-                    'variation_name3': 'Right-aligned table',
-                    'variation_description3': "Right-align columns of numbers that contain quantities (counts, dollar amounts, percentages) or ordinals (ranks, item numbers).The use of the .o-table_cell__right-align class on a td aligns the text right - see the third column.",
-                    'variation_code_snippet3': `&lt;table class=&quot;o-table o-table__stack-on-small&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Column 1&lt;/th&gt;
-            &lt;th&gt;Column 2&lt;/th&gt;
-            &lt;th&gt;Column 3&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;Row A&lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell A2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot; class=&quot;o-table_cell__right-align&quot;&gt;Cell A3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;Row B&lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell B2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot; class=&quot;o-table_cell__right-align&quot;&gt;Cell B3&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;`,
-                
-                    'variation_name4': 'Fixed-width table',
-                    'variation_description4': "Column widths are automatically set by browsers by default. If needed, some or all columns can be set to specific widths instead to accommodate longer data or labels.Fixed-width columns at the 600 px breakpoint and less lose their custom widths and expand to full width. This is the same responsive pattern used for default tables at small screens.  This isn’t present in CF and doesn’t have a code snippet.",
-                    'variation_code_snippet4': ``,
-                
-                    'variation_name5': 'Table with row links',
-                    'variation_description5': "The .o-table_cell__row-links class is added to a table to enable highlighting and hyperlinking rows which contain links.",
-                    'variation_code_snippet5': `&lt;table class=&quot;o-table o-table__row-links&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Column 1&lt;/th&gt;
-            &lt;th&gt;Column 2&lt;/th&gt;
-            &lt;th&gt;Column 3&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;
-                &lt;a href=&quot;https://example.com/&quot;&gt;Example 1&lt;/a&gt;
-            &lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell A2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot; &gt;Cell A3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;
-                &lt;a href=&quot;https://example.com/&quot;&gt;Example 2&lt;/a&gt;
-            &lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell B2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot;&gt;Cell B3&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;`,
-                
-                    'variation_name6': 'Responsive stacked table',
-                    'variation_description6': "Since the nature of tables relies so much on visual space, there are several common variations that can be used to accommodate different types of data in a table.A default table would “stack” the information on a smaller screen, since shrinking a table that maintained its columns/row structure would make it illegible.The .o-table__stack-on-small class adds the “stacked” table style for small screens.Please note that tables are not responsive without adding one of the small screen classes.Also note that the data-label attribute is used to label each entry in a table for small screen responsive views. Always include the data-label attribute for each cell.",
-                    'variation_code_snippet6': `&lt;table class=&quot;o-table o-table__stack-on-small&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Column 1&lt;/th&gt;
-            &lt;th&gt;Column 2&lt;/th&gt;
-            &lt;th&gt;Column 3&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;Row A&lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell A2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot;&gt;Cell A3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;Row B&lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell B2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot;&gt;Cell B3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;Row C&lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell C2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot;&gt;Cell C3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;Row D&lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell D2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot;&gt;Cell D3&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;`,
-                
-                    'variation_name7': 'Responsive stacked table with header',
-                    'variation_description7': "When the data you’re presenting should only be read across the rows (instead of down columns), you can use a directory table. The first column in these tables is what organizes or labels the other data points in the row.For instance, contact information is comprised of a name, phone number, and email address. An event is made up of the name of the event, time, and location. You need all three pieces of data to create an understanding of the thing being shown, and the first column of data is the key to that understanding.The default stacking behavior on smaller breakpoints doesn’t maintain that “first column” importance since it stacks based on column headers.As such, at the small screen breakpoint, the directory table pattern uses that first column data (employee name, for instance) as a way to group and label stacks of rows.The .o-table__entry-header-on-small class in addition to .o-table__stack-on-small class changes the first column to be styled as an entry header. This style requires both classes be added.Note that tables are not responsive without adding one of the small screen classes.Also note that the data-label attribute is used to label each entry. Always include the data-label attribute for each cell.",
-                    'variation_code_snippet7': `&lt;table class=&quot;o-table
+                    'variation_name2': 'Responsive stacked table with header (directory tables)',
+                    'variation_description2': "The directory table is a variation of the stacked table. At the small screen breakpoint, the directory table pattern uses first column data (employee name, for instance) as a way to group and label stacks of rows.This is useful when data is read across rows, instead of down columns. For instance, contact information is comprised of a name, phone number, and email address. An event is made up of the name of the event, time, and location. You need all three pieces of data to create an understanding of the thing being shown, and the first column of data is the key to that understanding.At the small screen breakpoint, the first column (in the example shown below, employee names) become headers, and the remaining data points in the same row (phone number, email address) are stacked below.The .o-table__entry-header-on-small class in addition to .o-table__stack-on-small class changes the first column to be styled as an entry header. This style requires both classes be added.",
+                    'variation_code_snippet2': `&lt;table class=&quot;o-table
               o-table__stack-on-small
               o-table__entry-header-on-small&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
-            &lt;th&gt;Column 1&lt;/th&gt;
-            &lt;th&gt;Column 2&lt;/th&gt;
-            &lt;th&gt;Column 3&lt;/th&gt;
+            &lt;th&gt;Employee name&lt;/th&gt;
+            &lt;th&gt;Phone number&lt;/th&gt;
+            &lt;th&gt;Email address&lt;/th&gt;
         &lt;/tr&gt;
     &lt;/thead&gt;
     &lt;tbody&gt;
         &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;Row A&lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell A2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot;&gt;Cell A3&lt;/td&gt;
+            &lt;td data-label=&quot;Employee name&quot;&gt;Andrew Able&lt;/td&gt;
+            &lt;td data-label=&quot;Phone number&quot;&gt;(202) XXX-XXXX&lt;/td&gt;
+            &lt;td data-label=&quot;Email address&quot;&gt;aable@example.com&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;Row B&lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell B2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot;&gt;Cell B3&lt;/td&gt;
+            &lt;td data-label=&quot;Employee name&quot;&gt;Betsy Bort&lt;/td&gt;
+            &lt;td data-label=&quot;Phone number&quot;&gt;(202) XXX-XXXX&lt;/td&gt;
+            &lt;td data-label=&quot;Email address&quot;&gt;bbort@example.com&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;Row C&lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell C2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot;&gt;Cell C3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label=&quot;Column 1&quot;&gt;Row D&lt;/td&gt;
-            &lt;td data-label=&quot;Column 2&quot;&gt;Cell D2&lt;/td&gt;
-            &lt;td data-label=&quot;Column 3&quot;&gt;Cell D3&lt;/td&gt;
+            &lt;td data-label=&quot;Employee name&quot;&gt;Charles Clark&lt;/td&gt;
+            &lt;td data-label=&quot;Phone number&quot;&gt;(202) XXX-XXXX&lt;/td&gt;
+            &lt;td data-label=&quot;Email address&quot;&gt;cclark@example.com&lt;/td&gt;
         &lt;/tr&gt;
     &lt;/tbody&gt;
 &lt;/table&gt;`,
                 
-                    'variation_name8': 'Responsive table with horizontal scroll',
-                    'variation_description8': "When the data you’re presenting has more columns than what will comfortably fit on the screen, you can use a table that scrolls horizontally. This becomes especially important when thinking about tables on smaller screens, instead of allowing the data to stack at smaller breakpoints.Using a table that scrolls ensures that all the information can be accessed in its original tabular structure, even on a smaller screen.The .o-table-wrapper__scrolling class must be added to the parent element of the table (by adding a wrapping div, in most cases). The table element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the o-table__striped class, below).",
-                    'variation_code_snippet8': `&lt;div class=&quot;o-table o-table-wrapper__scrolling&quot;&gt;
+                    'variation_name3': 'Responsive table with horizontal scroll',
+                    'variation_description3': "Use a table with horizontal scroll when the data you’re presenting has more columns than will fit comfortably on the screen, and you want to ensure all information can be accessed in its original tabular structure, even on smaller screens.The .o-table-wrapper__scrolling class must be added to the parent element of the table (by adding a wrapping div, in most cases). The table element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the o-table__striped class, below).",
+                    'variation_code_snippet3': `&lt;div class=&quot;o-table o-table-wrapper__scrolling&quot;&gt;
     &lt;table&gt;
         &lt;thead&gt;
             &lt;tr&gt;
@@ -5226,9 +5136,100 @@ Note: While th elements normally only contain raw text, they may sometimes conta
     &lt;/table&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name9': 'Sortable table',
-                    'variation_description9': "Sorting allows users to reorder the contents of a table by a sortable column of their choice.Any column that can sort needs to be specified in the table’s markup. When the table loads, it should be sorted by one of the sortable columns by default and indicate which column is already sorted. Not every column of a table needs to be sortable.",
-                    'variation_code_snippet9': `&lt;table class=&quot;o-table o-table__sortable&quot;&gt;
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Striped table',
+                    'variation_description1': "Striping is useful to help the eye track across table rows. Use striping for tables that have more than five columns, or for tables with rows that are difficult to follow across the full width of the table.The .o-table__striped class adds stripes to the table rows. This striping is not visible on small screens.",
+                    'variation_code_snippet1': `&lt;table class=&quot;o-table o-table__striped&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Column 1&quot;&gt;Row A&lt;/td&gt;
+            &lt;td data-label=&quot;Column 2&quot;&gt;Cell A2&lt;/td&gt;
+            &lt;td data-label=&quot;Column 3&quot;&gt;Cell A3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Column 1&quot;&gt;Row B&lt;/td&gt;
+            &lt;td data-label=&quot;Column 2&quot;&gt;Cell B2&lt;/td&gt;
+            &lt;td data-label=&quot;Column 3&quot;&gt;Cell B3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Column 1&quot;&gt;Row C&lt;/td&gt;
+            &lt;td data-label=&quot;Column 2&quot;&gt;Cell C2&lt;/td&gt;
+            &lt;td data-label=&quot;Column 3&quot;&gt;Cell C3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Column 1&quot;&gt;Row D&lt;/td&gt;
+            &lt;td data-label=&quot;Column 2&quot;&gt;Cell D2&lt;/td&gt;
+            &lt;td data-label=&quot;Column 3&quot;&gt;Cell D3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;`,
+                
+                    'variation_name2': 'Right-aligned table',
+                    'variation_description2': "Right-align columns of numbers when they’re quantities (counts, dollar amounts, percentages) or ordinals (ranks, item numbers). Use the .o-table_cell__right-align class on a td.Left-align columns of numbers when they’re nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).",
+                    'variation_code_snippet2': `&lt;table class=&quot;o-table o-table__stack-on-small&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Right-aligned column&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Column 1&quot;&gt;Row A&lt;/td&gt;
+            &lt;td data-label=&quot;Column 2&quot;&gt;Cell A2&lt;/td&gt;
+            &lt;td data-label=&quot;Right-aligned column&quot; class=&quot;o-table_cell__right-align&quot;&gt;$1.00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Column 1&quot;&gt;Row B&lt;/td&gt;
+            &lt;td data-label=&quot;Column 2&quot;&gt;Cell B2&lt;/td&gt;
+            &lt;td data-label=&quot;Right-aligned column&quot; class=&quot;o-table_cell__right-align&quot;&gt;$2.00&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;`,
+                
+                    'variation_name3': 'Table with row links',
+                    'variation_description3': "The .o-table_cell__row-links class is added to a table to enable highlighting and hyperlinking rows which contain links.",
+                    'variation_code_snippet3': `&lt;table class=&quot;o-table o-table__row-links&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Column 1&quot;&gt;
+                &lt;a href=&quot;https://example.com/&quot;&gt;Example 1&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Column 2&quot;&gt;Cell A2&lt;/td&gt;
+            &lt;td data-label=&quot;Column 3&quot; &gt;Cell A3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Column 1&quot;&gt;
+                &lt;a href=&quot;https://example.com/&quot;&gt;Example 2&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Column 2&quot;&gt;Cell B2&lt;/td&gt;
+            &lt;td data-label=&quot;Column 3&quot;&gt;Cell B3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;`,
+                
+                    'variation_name4': 'Sortable table',
+                    'variation_description4': "Sorting allows users to reorder the contents of a table by a sortable column of their choice. See the Behavior section for more information.Add the .o-table__sortable class to a table to make it sortable. To sort by a specific column, add a button to the th of the column. The use of a button helps address accessibility concerns.",
+                    'variation_code_snippet4': `&lt;table class=&quot;o-table o-table__sortable&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;
@@ -5331,10 +5332,10 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
 
             'title': 'Tables',
-            'description': "Tables divide information into distinct columns and rows to create an intersection “cell” where data is displayed.More information can be found at:  http://cfpb.github.io/design-manual/page-components/tables.html  https://cfpb.github.io/capital-framework/components/cf-tables/#responsive-tables  https://cfpb.github.io/capital-framework/components/cf-tables/#sortable-tables",
-            'use_cases': "Tables are only one method for presenting many data points grouped together in a visual way. Other options include charts or graphs.Tables serve a unique purpose of allowing easy organization or comparison of more complex data than a chart or graph. They can be read either vertically (by columns) or horizontally (by rows).Tables work best when:  Presenting sequential data  Data being presented requires specific or precise values  Individual values are being presented or compared  Values across columns or rows require different units of measurement",
+            'description': "Tables divide information into distinct columns and rows to create an intersection “cell” where data is displayed.",
+            'use_cases': "Tables allow easy organization or comparison of more complex data than a chart or graph. They can be read either vertically (by columns) or horizontally (by rows).Tables work best when:  Presenting sequential data  Data being presented requires specific or precise values  Individual values are being presented or compared  Values across columns or rows require different units of measurement",
             'content_guidelines': "As a rule, design tables so that they are easy to read. Label columns precisely and include units of measurement where necessary. Organize the data so that the underlying meaning is quickly apparent.Labels and TitlesGive tables a meaningful title that succinctly describes the content presented so that users can understand their purpose at a glance. If presenting more than one table within a page, consider adding labels (e.g. “Table 1,” “Table 2,” etc.) in addition to titles. Labels should precede titles (e.g. “Table 1: The title given to this table”).Long column labelsConsider using fixed columns or truncation for column labels that are significantly longer than the expected width of the data.Unit of measurementMake sure to indicate the unit of measurement. In terms of placement, if the units are the same across columns, indicate the unit of measurement in the title or someplace noticeable above the table.Alternatively, if the table uses at most two units of measurement, consider using asterisks following the column label, and define the unit of measurement below the table, as shown in the example here.If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.",
-            'behavior': "Since the nature of tables relies so much on visual space, there are several common variations that can be used to accommodate different types of data in a table.Stacking tablesA default table would “stack” the information on a smaller screen, since shrinking a table that maintained its columns/row structure would make it illegible.Directory tablesWhen the data you’re presenting should only be read across the rows (instead of down columns), you can use a directory table. The first column in these tables is what organizes or labels the other data points in the row.For instance, contact information is comprised of a name, phone number, and email address. An event is made up of the name of the event, time, and location. You need all three pieces of data to create an understanding of the thing being shown, and the first column of data is the key to that understanding.The default stacking behavior on smaller breakpoints doesn’t maintain that “first column” importance since it stacks based on column headers.As such, at the small screen breakpoint, the directory table pattern uses that first column data (employee name, for instance) as a way to group and label stacks of rows.See guidance on styles for a a directory table and how it should look on smaller breakpoints.Scrolling tablesWhen the data you’re presenting has more columns than what will comfortably fit on the screen, you can use a table that scrolls horizontally. This becomes especially important when thinking about tables on smaller screens, instead of allowing the data to stack at smaller breakpoints.Using a table that scrolls ensures that all the information can be accessed in its original tabular structure, even on a smaller screen.See guidance on styles for a table that scrolls horizontally at all screen sizes.Sorting tablesAt large screen sizes, tables can be sorted using the header of any sortable column.  The currently sorted column is marked with an up or down triangle for ascending and descending sorts, respectively  On hover, the currently sorted column shows the opposite triangle  Columns that can sort show an up triangle on hover  Columns that cannot sort show nothing on hoverIf sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked.CodeMaking a table sortableBy adding the .o-table__sortable class to a table, the table becomes sortable. To allow the table to be sorted by a column, add a button to the th of the column like so:…&lt;button class=\"sortable\"&gt;    Column Name&lt;/button&gt;…The use of a button helps address certain accessibility concerns.Sorting typeTo sort properly, the type of the data can be specified. By default, the column’s values will be sorted as string values. However, the column can be specifically sorted by number values (in which case, the cell’s contents are stripped of non-numeric characters, then sorted by the resulting number). To see an example, the sample table later in this document sorts the “Distance” column by number value.To sort by number value, add the data-sort_type=\"number\" attribute to the sorting button:&lt;table class=\"o-table o-table__sortable\"&gt;    …        &lt;th&gt;            &lt;button class=\"sortable\" data-sort_type=\"number\"&gt;Column Name&lt;/button&gt;        &lt;/th&gt;    …&lt;/table&gt;Sorting table on page loadTo sort the table on page load, use the .sorted-up and .sorted-down classes:&lt;table class=\"o-table o-table__sortable\"&gt;    …        &lt;th&gt;            &lt;button class=\"sortable sorted-up\"&gt;Column Name&lt;/button&gt;        &lt;/th&gt;    …&lt;/table&gt;  The class .sorted-up refers to a sort from smallest to greatest (first to last), and .sorted-down refers to a sort from greatest to smallest (last to first). These classes are added to the th when sorting occurs.  Please note the importance of defining a thead and tbody to preserve the table’s header through sorting operations.",
+            'behavior': "Sortable tablesAt large screen sizes,  The currently sorted column is marked with an up or down triangle for ascending and descending sorts, respectively  On hover, the currently sorted column shows the opposite triangle  Columns that can sort show an up triangle on hover  Columns that cannot sort show nothing on hoverIf sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked.",
             'accessibility': "Remember to always use headers (that is, &lt;th&gt; elements) for all data tables to make tabular data accessible.",
             'research': "",
             'related_items': "",

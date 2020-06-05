@@ -1421,6 +1421,28 @@
     <ul class="m-list m-list__horizontal u-mb30">
         
         
+        <li class="m-list_item">
+            <a class="m-list_link" href="#standard-table">
+                Standard table
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#responsive-tables">
+                Responsive tables
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#variations">
+                Variations
+            </a>
+        </li>
+        
         
     </ul>
     
@@ -1429,26 +1451,28 @@
     <section id="description" class="u-mb30">
         <p>Tables divide information into distinct columns and rows to create an intersection “cell” where data is displayed.</p>
 
-<p>More information can be found at:</p>
-
-<ul>
-  <li>http://cfpb.github.io/design-manual/page-components/tables.html</li>
-  <li>https://cfpb.github.io/capital-framework/components/cf-tables/#responsive-tables</li>
-  <li>https://cfpb.github.io/capital-framework/components/cf-tables/#sortable-tables</li>
-</ul>
-
     </section>
     
 
     
     
-    <section class="o-variation_group" id="">
+    <section class="o-variation_group" id="standard-table">
 
         
-        
-        <div class="u-mb15"></div>
+        <h2 class="o-variation_group_title">
+            Standard table
+        </h2>
         
 
+        
+        <div class="o-variation_group_description">
+            <p>This is the default style at the large screen breakpoint. It is also how the directory table pattern appears at the large screen breakpoint. This is equivalent to defining a classless <code class="language-plaintext highlighter-rouge">table</code> element.</p>
+
+<p>Tables are not responsive by default. See options below for <a href="https://cfpb-sandbox.github.io/design-system/components/tables#responsive-tables">responsive tables</a>.</p>
+
+<p>For design specs, look under the “Show detail” link.</p>
+
+        </div>
         
 
         
@@ -1459,14 +1483,10 @@
             
 
             
-            <div class="m-variation_name">
-                <h3>Standard table</h3>
-            </div>
-            
 
             
             <div class="m-variation_description">
-                <p>This is the default style without stripes and without a breakpoint. It is equivalent to defining a classless <code class="language-plaintext highlighter-rouge">&lt;table&gt;</code> element.</p>
+                
 
             </div>
             
@@ -1519,15 +1539,15 @@ Note: While th elements normally only contain raw text, they may sometimes conta
             
 
             <div class="a-toggle_code">
-                <button href="#details-standard-table-this-is-the-defau-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-standard-table-this-is-the-defau-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-table-caption-table-caption-desc-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-table-caption-table-caption-desc-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-standard-table-this-is-the-defau-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-table-caption-table-caption-desc-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-standard-table-this-is-the-defau-html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-table-caption-table-caption-desc-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1535,11 +1555,17 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-table-caption-table-caption-desc-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-standard-table-this-is-the-defau-html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-table-caption-table-caption-desc-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1587,357 +1613,74 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
                 <!-- Specs -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-table-caption-table-caption-desc-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <h3 id="color-variables">Color variables</h3>
 
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Striped table</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Striping is useful to help the eye track across table rows. Use striping for tables that have more than five columns, or for tables with rows that are difficult to follow across the full width of the table.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">.o-table__striped</code> class adds stripes to the <code class="language-plaintext highlighter-rouge">table</code> rows. This striping is not visible on small screens.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <table class="o-table o-table__striped">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Column 1">Row A</td>
-            <td data-label="Column 2">Cell A2</td>
-            <td data-label="Column 3">Cell A3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row B</td>
-            <td data-label="Column 2">Cell B2</td>
-            <td data-label="Column 3">Cell B3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row C</td>
-            <td data-label="Column 2">Cell C2</td>
-            <td data-label="Column 3">Cell C3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row D</td>
-            <td data-label="Column 2">Cell D2</td>
-            <td data-label="Column 3">Cell D3</td>
-        </tr>
-    </tbody>
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Variable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>@table-cell-bg:</td>
+      <td>@white;</td>
+    </tr>
+    <tr>
+      <td>@table-cell-bg_alt:</td>
+      <td>@gray-5;</td>
+    </tr>
+    <tr>
+      <td>@table-row-link-bg-hover:</td>
+      <td>@pacific-80;</td>
+    </tr>
+    <tr>
+      <td>@table-row-link-hover-color:</td>
+      <td>@white;</td>
+    </tr>
+    <tr>
+      <td>@table-scrolling-border:</td>
+      <td>@gray-40;</td>
+    </tr>
+    <tr>
+      <td>@table-border:</td>
+      <td>@gray;</td>
+    </tr>
+  </tbody>
 </table>
-            </div>
-            
 
-            
-            
-            
-            
+<h3 id="specs-for-default-and-directory-table-large-screens">Specs for default and directory table (large screens)</h3>
 
-            
-
-            
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-striped-table-striping-is-useful-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-striped-table-striping-is-useful-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-striped-table-striping-is-useful-2">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-striped-table-striping-is-useful-html-code-snippet-2">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="details-striped-table-striping-is-useful-html-code-snippet-2">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;table class="o-table o-table__striped"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Column 1&lt;/th&gt;
-            &lt;th&gt;Column 2&lt;/th&gt;
-            &lt;th&gt;Column 3&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;Row A&lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell A2&lt;/td&gt;
-            &lt;td data-label="Column 3"&gt;Cell A3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;Row B&lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell B2&lt;/td&gt;
-            &lt;td data-label="Column 3"&gt;Cell B3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;Row C&lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell C2&lt;/td&gt;
-            &lt;td data-label="Column 3"&gt;Cell C3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;Row D&lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell D2&lt;/td&gt;
-            &lt;td data-label="Column 3"&gt;Cell D3&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Right-aligned table</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Right-align columns of numbers that contain quantities (counts, dollar amounts, percentages) or ordinals (ranks, item numbers).</p>
-
-<p>The use of the <code class="language-plaintext highlighter-rouge">.o-table_cell__right-align</code> class on a <code class="language-plaintext highlighter-rouge">td</code> aligns the text right - see the third column.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <table class="o-table o-table__stack-on-small">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Column 1">Row A</td>
-            <td data-label="Column 2">Cell A2</td>
-            <td data-label="Column 3" class="o-table_cell__right-align">Cell A3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row B</td>
-            <td data-label="Column 2">Cell B2</td>
-            <td data-label="Column 3" class="o-table_cell__right-align">Cell B3</td>
-        </tr>
-    </tbody>
-</table>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-right-aligned-table-right-align--3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-right-aligned-table-right-align--3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-right-aligned-table-right-align--3">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-right-aligned-table-right-align--html-code-snippet-3">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="details-right-aligned-table-right-align--html-code-snippet-3">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;table class="o-table o-table__stack-on-small"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Column 1&lt;/th&gt;
-            &lt;th&gt;Column 2&lt;/th&gt;
-            &lt;th&gt;Column 3&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;Row A&lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell A2&lt;/td&gt;
-            &lt;td data-label="Column 3" class="o-table_cell__right-align"&gt;Cell A3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;Row B&lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell B2&lt;/td&gt;
-            &lt;td data-label="Column 3" class="o-table_cell__right-align"&gt;Cell B3&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Fixed-width table</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Column widths are automatically set by browsers by default. If needed, some or all columns can be set to specific widths instead to accommodate longer data or labels.</p>
-
-<p>Fixed-width columns at the 600 px breakpoint and less lose their custom widths and expand to full width. This is the same responsive pattern used for default tables at small screens.</p>
-
+<h4 id="header">Header</h4>
 <ul>
-  <li>This isn’t present in CF and doesn’t have a code snippet.</li>
+  <li>Background: Gray-05 #F8F8F8</li>
+  <li>Font: Avenir Next Demi-bold, all caps</li>
+  <li>Font-color: Black #101820</li>
+  <li>Font-size: 14px</li>
 </ul>
 
-            </div>
-            
+<h4 id="border">Border</h4>
+<ul>
+  <li>Bottom: 1px, Gray-50 #BABBBD on each row, including header</li>
+</ul>
 
-            <!-- Live code example -->
-            
+<h4 id="cells">Cells</h4>
+<ul>
+  <li>Background: Gray-05 #F8F8F8</li>
+  <li>Font: Avenir Next Regular Black</li>
+  <li>Font-color: Black #101820</li>
+  <li>Font-size: 16px</li>
+  <li>Padding: 10px</li>
+</ul>
 
-            
-            
-            
-            
-
-            
-
-            
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-fixed-width-table-column-widths--4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-fixed-width-table-column-widths--4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-fixed-width-table-column-widths--4">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-fixed-width-table-column-widths--html-code-snippet-4">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="details-fixed-width-table-column-widths--html-code-snippet-4">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
                 
 
             </div>
@@ -1946,135 +1689,31 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
         </div>
         
-        <div class="m-variation">
+    </section>
+    
+    <section class="o-variation_group" id="responsive-tables">
 
-            
-            
-            
+        
+        <h2 class="o-variation_group_title">
+            Responsive tables
+        </h2>
+        
 
-            
-            <div class="m-variation_name">
-                <h3>Table with row links</h3>
-            </div>
-            
+        
+        <div class="o-variation_group_description">
+            <p>Responsive tables fall into two main types:</p>
+<ul>
+  <li>Stacked, which stacks information vertically on smaller screens</li>
+  <li>Scrolling, which ensures that all the information can be accessed in its original tabular structure, even on a smaller screen.</li>
+</ul>
 
-            
-            <div class="m-variation_description">
-                <p>The <code class="language-plaintext highlighter-rouge">.o-table_cell__row-links</code> class is added to a <code class="language-plaintext highlighter-rouge">table</code> to enable highlighting and hyperlinking rows which contain links.</p>
+<p>Note that tables are <strong>not</strong> responsive unless you add one of the small screen classes detailed below.</p>
 
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <table class="o-table o-table__row-links">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Column 1">
-                <a href="https://example.com/">Example 1</a>
-            </td>
-            <td data-label="Column 2">Cell A2</td>
-            <td data-label="Column 3">Cell A3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">
-                <a href="https://example.com/">Example 2</a>
-            </td>
-            <td data-label="Column 2">Cell B2</td>
-            <td data-label="Column 3">Cell B3</td>
-        </tr>
-    </tbody>
-</table>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-table-with-row-links-the-o-table-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-table-with-row-links-the-o-table-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-table-with-row-links-the-o-table-5">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-table-with-row-links-the-o-table-html-code-snippet-5">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="details-table-with-row-links-the-o-table-html-code-snippet-5">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;table class="o-table o-table__row-links"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Column 1&lt;/th&gt;
-            &lt;th&gt;Column 2&lt;/th&gt;
-            &lt;th&gt;Column 3&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;
-                &lt;a href="https://example.com/"&gt;Example 1&lt;/a&gt;
-            &lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell A2&lt;/td&gt;
-            &lt;td data-label="Column 3" &gt;Cell A3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;
-                &lt;a href="https://example.com/"&gt;Example 2&lt;/a&gt;
-            &lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell B2&lt;/td&gt;
-            &lt;td data-label="Column 3"&gt;Cell B3&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
+<p>Also note that the <code class="language-plaintext highlighter-rouge">data-label</code> attribute must be used to label each cell in a <code class="language-plaintext highlighter-rouge">table</code> for small screen responsive views.</p>
 
         </div>
+        
+
         
         <div class="m-variation">
 
@@ -2090,15 +1729,7 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
             
             <div class="m-variation_description">
-                <p>Since the nature of tables relies so much on visual space, there are several common variations that can be used to accommodate different types of data in a table.</p>
-
-<p>A default table would “stack” the information on a smaller screen, since shrinking a table that maintained its columns/row structure would make it illegible.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">.o-table__stack-on-small</code> class adds the “stacked” <code class="language-plaintext highlighter-rouge">table</code> style for small screens.</p>
-
-<p>Please note that tables are not responsive without adding one of the small screen classes.</p>
-
-<p>Also note that the <code class="language-plaintext highlighter-rouge">data-label</code> attribute is used to label each entry in a <code class="language-plaintext highlighter-rouge">table</code> for small screen responsive views. Always include the <code class="language-plaintext highlighter-rouge">data-label</code> attribute for each cell.</p>
+                <p>To stack table information on smaller screens and make the information legible, use the <code class="language-plaintext highlighter-rouge">.o-table__stack-on-small</code> class.</p>
 
             </div>
             
@@ -2151,15 +1782,15 @@ Note: While th elements normally only contain raw text, they may sometimes conta
             
 
             <div class="a-toggle_code">
-                <button href="#details-responsive-stacked-table-since-t-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-responsive-stacked-table-since-t-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-responsive-stacked-table-to-stac-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-responsive-stacked-table-to-stac-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-responsive-stacked-table-since-t-6">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-responsive-stacked-table-to-stac-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-responsive-stacked-table-since-t-html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#details-responsive-stacked-table-to-stac-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -2167,11 +1798,17 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-responsive-stacked-table-to-stac-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-responsive-stacked-table-since-t-html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="details-responsive-stacked-table-to-stac-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2219,6 +1856,34 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
                 <!-- Specs -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-responsive-stacked-table-to-stac-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <h3 id="default-table-small-screens">Default table (small screens)</h3>
+
+<h4 id="border">Border</h4>
+<p>Bottom: 1px, Gray-50 #BABBBD</p>
+
+<h4 id="cells">Cells</h4>
+<ul>
+  <li>Font: 16px Avenir Next Regular Black</li>
+  <li>Font-color: Black #101820</li>
+  <li>Labels font: 14px Avenir Next Regular, all caps</li>
+  <li>Labels font-color: Black #101820</li>
+</ul>
+
+<h4 id="padding">Padding</h4>
+<ul>
+  <li>Padding, label / content: 15px</li>
+  <li>Padding, content / next label: 30px</li>
+  <li>Padding, rule line / first label: 15px</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
 
             </div>
 <!-- .govuk-tabs -->
@@ -2234,25 +1899,19 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
             
             <div class="m-variation_name">
-                <h3>Responsive stacked table with header</h3>
+                <h3>Responsive stacked table with header (directory tables)</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p>When the data you’re presenting should only be read across the rows (instead of down columns), you can use a directory table. The first column in these tables is what organizes or labels the other data points in the row.</p>
+                <p>The directory table is a variation of the stacked table. At the small screen breakpoint, the directory table pattern uses first column data (employee name, for instance) as a way to group and label stacks of rows.</p>
 
-<p>For instance, contact information is comprised of a name, phone number, and email address. An event is made up of the name of the event, time, and location. You need all three pieces of data to create an understanding of the thing being shown, and the first column of data is the key to that understanding.</p>
+<p>This is useful when data is read across rows, instead of down columns. For instance, contact information is comprised of a name, phone number, and email address. An event is made up of the name of the event, time, and location. You need all three pieces of data to create an understanding of the thing being shown, and the first column of data is the key to that understanding.</p>
 
-<p>The default stacking behavior on smaller breakpoints doesn’t maintain that “first column” importance since it stacks based on column headers.</p>
-
-<p>As such, at the small screen breakpoint, the directory table pattern uses that first column data (employee name, for instance) as a way to group and label stacks of rows.</p>
+<p>At the small screen breakpoint, the first column (in the example shown below, employee names) become headers, and the remaining data points in the same row (phone number, email address) are stacked below.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">.o-table__entry-header-on-small</code> class in addition to <code class="language-plaintext highlighter-rouge">.o-table__stack-on-small</code> class changes the first column to be styled as an entry header. This style requires both classes be added.</p>
-
-<p>Note that tables are not responsive without adding one of the small screen classes.</p>
-
-<p>Also note that the <code class="language-plaintext highlighter-rouge">data-label</code> attribute is used to label each entry. Always include the <code class="language-plaintext highlighter-rouge">data-label</code> attribute for each cell.</p>
 
             </div>
             
@@ -2265,31 +1924,26 @@ Note: While th elements normally only contain raw text, they may sometimes conta
               o-table__entry-header-on-small">
     <thead>
         <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
+            <th>Employee name</th>
+            <th>Phone number</th>
+            <th>Email address</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td data-label="Column 1">Row A</td>
-            <td data-label="Column 2">Cell A2</td>
-            <td data-label="Column 3">Cell A3</td>
+            <td data-label="Employee name">Andrew Able</td>
+            <td data-label="Phone number">(202) XXX-XXXX</td>
+            <td data-label="Email address">aable@example.com</td>
         </tr>
         <tr>
-            <td data-label="Column 1">Row B</td>
-            <td data-label="Column 2">Cell B2</td>
-            <td data-label="Column 3">Cell B3</td>
+            <td data-label="Employee name">Betsy Bort</td>
+            <td data-label="Phone number">(202) XXX-XXXX</td>
+            <td data-label="Email address">bbort@example.com</td>
         </tr>
         <tr>
-            <td data-label="Column 1">Row C</td>
-            <td data-label="Column 2">Cell C2</td>
-            <td data-label="Column 3">Cell C3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row D</td>
-            <td data-label="Column 2">Cell D2</td>
-            <td data-label="Column 3">Cell D3</td>
+            <td data-label="Employee name">Charles Clark</td>
+            <td data-label="Phone number">(202) XXX-XXXX</td>
+            <td data-label="Email address">cclark@example.com</td>
         </tr>
     </tbody>
 </table>
@@ -2307,15 +1961,15 @@ Note: While th elements normally only contain raw text, they may sometimes conta
             
 
             <div class="a-toggle_code">
-                <button href="#details-responsive-stacked-table-with-he-7" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-responsive-stacked-table-with-he-7" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-responsive-stacked-table-with-he-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-responsive-stacked-table-with-he-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-responsive-stacked-table-with-he-7">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-responsive-stacked-table-with-he-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-responsive-stacked-table-with-he-html-code-snippet-7">
+                        <a class="govuk-tabs__tab" href="#details-responsive-stacked-table-with-he-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -2323,11 +1977,17 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-responsive-stacked-table-with-he-specs-2">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-responsive-stacked-table-with-he-html-code-snippet-7">
+                <section class="govuk-tabs__panel" id="details-responsive-stacked-table-with-he-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2336,31 +1996,26 @@ Note: While th elements normally only contain raw text, they may sometimes conta
               o-table__entry-header-on-small"&gt;
     &lt;thead&gt;
         &lt;tr&gt;
-            &lt;th&gt;Column 1&lt;/th&gt;
-            &lt;th&gt;Column 2&lt;/th&gt;
-            &lt;th&gt;Column 3&lt;/th&gt;
+            &lt;th&gt;Employee name&lt;/th&gt;
+            &lt;th&gt;Phone number&lt;/th&gt;
+            &lt;th&gt;Email address&lt;/th&gt;
         &lt;/tr&gt;
     &lt;/thead&gt;
     &lt;tbody&gt;
         &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;Row A&lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell A2&lt;/td&gt;
-            &lt;td data-label="Column 3"&gt;Cell A3&lt;/td&gt;
+            &lt;td data-label="Employee name"&gt;Andrew Able&lt;/td&gt;
+            &lt;td data-label="Phone number"&gt;(202) XXX-XXXX&lt;/td&gt;
+            &lt;td data-label="Email address"&gt;aable@example.com&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;Row B&lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell B2&lt;/td&gt;
-            &lt;td data-label="Column 3"&gt;Cell B3&lt;/td&gt;
+            &lt;td data-label="Employee name"&gt;Betsy Bort&lt;/td&gt;
+            &lt;td data-label="Phone number"&gt;(202) XXX-XXXX&lt;/td&gt;
+            &lt;td data-label="Email address"&gt;bbort@example.com&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;Row C&lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell C2&lt;/td&gt;
-            &lt;td data-label="Column 3"&gt;Cell C3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Column 1"&gt;Row D&lt;/td&gt;
-            &lt;td data-label="Column 2"&gt;Cell D2&lt;/td&gt;
-            &lt;td data-label="Column 3"&gt;Cell D3&lt;/td&gt;
+            &lt;td data-label="Employee name"&gt;Charles Clark&lt;/td&gt;
+            &lt;td data-label="Phone number"&gt;(202) XXX-XXXX&lt;/td&gt;
+            &lt;td data-label="Email address"&gt;cclark@example.com&lt;/td&gt;
         &lt;/tr&gt;
     &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
@@ -2376,6 +2031,27 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                 
 
                 <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-responsive-stacked-table-with-he-specs-2">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <h3 id="style-for-directory-tables-small-screens">Style for directory tables (small screens)</h3>
+<ul>
+  <li>Bottom border: 1px, Gray-50 #BABBBD on each row</li>
+  <li>Font: 16px Avenir Next Regular Black</li>
+  <li>Font-color: Black #101820</li>
+  <li>Header background color: #f1f1f1</li>
+  <li>Labels font: 14px Avenir Next Regular, all caps</li>
+  <li>Labels font-color: Black #101820</li>
+  <li>Padding, column label/bottom border: 15px</li>
+  <li>Padding, bottom border/content: 15px</li>
+  <li>Padding, content / next label: 30px</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
                 
 
             </div>
@@ -2398,11 +2074,9 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
             
             <div class="m-variation_description">
-                <p>When the data you’re presenting has more columns than what will comfortably fit on the screen, you can use a table that scrolls horizontally. This becomes especially important when thinking about tables on smaller screens, instead of allowing the data to stack at smaller breakpoints.</p>
+                <p>Use a table with horizontal scroll when the data you’re presenting has more columns than will fit comfortably on the screen, and you want to ensure all information can be accessed in its original tabular structure, even on smaller screens.</p>
 
-<p>Using a table that scrolls ensures that all the information can be accessed in its original tabular structure, even on a smaller screen.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">.o-table-wrapper__scrolling</code> class must be added to the parent element of the table (by adding a wrapping <code class="language-plaintext highlighter-rouge">div</code>, in most cases). The <code class="language-plaintext highlighter-rouge">table</code> element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the <code class="language-plaintext highlighter-rouge">o-table__striped</code> class, below).</p>
+<p>The <code class="language-plaintext highlighter-rouge">.o-table-wrapper__scrolling</code> class must be added to the parent element of the <code class="language-plaintext highlighter-rouge">table</code> (by adding a wrapping <code class="language-plaintext highlighter-rouge">div</code>, in most cases). The <code class="language-plaintext highlighter-rouge">table</code> element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the o-table__striped class, below).</p>
 
             </div>
             
@@ -2482,15 +2156,15 @@ Note: While th elements normally only contain raw text, they may sometimes conta
             
 
             <div class="a-toggle_code">
-                <button href="#details-responsive-table-with-horizontal-8" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-responsive-table-with-horizontal-8" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-responsive-table-with-horizontal-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-responsive-table-with-horizontal-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-responsive-table-with-horizontal-8">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-responsive-table-with-horizontal-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-responsive-table-with-horizontal-html-code-snippet-8">
+                        <a class="govuk-tabs__tab" href="#details-responsive-table-with-horizontal-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -2498,11 +2172,17 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-responsive-table-with-horizontal-specs-3">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-responsive-table-with-horizontal-html-code-snippet-8">
+                <section class="govuk-tabs__panel" id="details-responsive-table-with-horizontal-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2577,6 +2257,451 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
                 <!-- Specs -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-responsive-table-with-horizontal-specs-3">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <h3 id="styles-for-scrolling-tables">Styles for scrolling tables</h3>
+
+<ul>
+  <li>Border: 1px, Gray-50 #BABBBD around the scrolling table</li>
+  <li>Alternate row striping: Grey-05 #F8F8F8</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="variations">
+
+        
+        <h2 class="o-variation_group_title">
+            Variations
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Striped table</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>Striping is useful to help the eye track across table rows. Use striping for tables that have more than five columns, or for tables with rows that are difficult to follow across the full width of the table.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">.o-table__striped</code> class adds stripes to the <code class="language-plaintext highlighter-rouge">table</code> rows. This striping is not visible on small screens.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <table class="o-table o-table__striped">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Column 1">Row A</td>
+            <td data-label="Column 2">Cell A2</td>
+            <td data-label="Column 3">Cell A3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row B</td>
+            <td data-label="Column 2">Cell B2</td>
+            <td data-label="Column 3">Cell B3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row C</td>
+            <td data-label="Column 2">Cell C2</td>
+            <td data-label="Column 3">Cell C3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row D</td>
+            <td data-label="Column 2">Cell D2</td>
+            <td data-label="Column 3">Cell D3</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-striped-table-striping-is-useful-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-striped-table-striping-is-useful-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-striped-table-striping-is-useful-1">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-striped-table-striping-is-useful-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-striped-table-striping-is-useful-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;table class="o-table o-table__striped"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Column 1"&gt;Row A&lt;/td&gt;
+            &lt;td data-label="Column 2"&gt;Cell A2&lt;/td&gt;
+            &lt;td data-label="Column 3"&gt;Cell A3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Column 1"&gt;Row B&lt;/td&gt;
+            &lt;td data-label="Column 2"&gt;Cell B2&lt;/td&gt;
+            &lt;td data-label="Column 3"&gt;Cell B3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Column 1"&gt;Row C&lt;/td&gt;
+            &lt;td data-label="Column 2"&gt;Cell C2&lt;/td&gt;
+            &lt;td data-label="Column 3"&gt;Cell C3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Column 1"&gt;Row D&lt;/td&gt;
+            &lt;td data-label="Column 2"&gt;Cell D2&lt;/td&gt;
+            &lt;td data-label="Column 3"&gt;Cell D3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Right-aligned table</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>Right-align columns of numbers when they’re quantities (counts, dollar amounts, percentages) or ordinals (ranks, item numbers). Use the <code class="language-plaintext highlighter-rouge">.o-table_cell__right-align</code> class on a <code class="language-plaintext highlighter-rouge">td</code>.</p>
+
+<p>Left-align columns of numbers when they’re nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <table class="o-table o-table__stack-on-small">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Right-aligned column</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Column 1">Row A</td>
+            <td data-label="Column 2">Cell A2</td>
+            <td data-label="Right-aligned column" class="o-table_cell__right-align">$1.00</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">Row B</td>
+            <td data-label="Column 2">Cell B2</td>
+            <td data-label="Right-aligned column" class="o-table_cell__right-align">$2.00</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-right-aligned-table-right-align--2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-right-aligned-table-right-align--2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-right-aligned-table-right-align--2">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-right-aligned-table-right-align--html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-right-aligned-table-right-align--specs-2">
+                            Specs
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-right-aligned-table-right-align--html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;table class="o-table o-table__stack-on-small"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Right-aligned column&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Column 1"&gt;Row A&lt;/td&gt;
+            &lt;td data-label="Column 2"&gt;Cell A2&lt;/td&gt;
+            &lt;td data-label="Right-aligned column" class="o-table_cell__right-align"&gt;$1.00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Column 1"&gt;Row B&lt;/td&gt;
+            &lt;td data-label="Column 2"&gt;Cell B2&lt;/td&gt;
+            &lt;td data-label="Right-aligned column" class="o-table_cell__right-align"&gt;$2.00&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-right-aligned-table-right-align--specs-2">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <h3 id="style-for-striped-rows">Style for striped rows</h3>
+<ul>
+  <li>Alternate row background: Grey-05 #F8F8F8</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Table with row links</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>The <code class="language-plaintext highlighter-rouge">.o-table_cell__row-links</code> class is added to a <code class="language-plaintext highlighter-rouge">table</code> to enable highlighting and hyperlinking rows which contain links.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <table class="o-table o-table__row-links">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Column 1">
+                <a href="https://example.com/">Example 1</a>
+            </td>
+            <td data-label="Column 2">Cell A2</td>
+            <td data-label="Column 3">Cell A3</td>
+        </tr>
+        <tr>
+            <td data-label="Column 1">
+                <a href="https://example.com/">Example 2</a>
+            </td>
+            <td data-label="Column 2">Cell B2</td>
+            <td data-label="Column 3">Cell B3</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-table-with-row-links-the-o-table-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-table-with-row-links-the-o-table-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-table-with-row-links-the-o-table-3">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-table-with-row-links-the-o-table-html-code-snippet-3">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-table-with-row-links-the-o-table-html-code-snippet-3">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;table class="o-table o-table__row-links"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Column 1"&gt;
+                &lt;a href="https://example.com/"&gt;Example 1&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td data-label="Column 2"&gt;Cell A2&lt;/td&gt;
+            &lt;td data-label="Column 3" &gt;Cell A3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Column 1"&gt;
+                &lt;a href="https://example.com/"&gt;Example 2&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td data-label="Column 2"&gt;Cell B2&lt;/td&gt;
+            &lt;td data-label="Column 3"&gt;Cell B3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
 
             </div>
 <!-- .govuk-tabs -->
@@ -2598,9 +2723,9 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
             
             <div class="m-variation_description">
-                <p>Sorting allows users to reorder the contents of a table by a sortable column of their choice.</p>
+                <p>Sorting allows users to reorder the contents of a table by a sortable column of their choice. See the <a href="#behavior">Behavior</a> section for more information.</p>
 
-<p>Any column that can sort needs to be specified in the table’s markup. When the table loads, it should be sorted by one of the sortable columns by default and indicate which column is already sorted. Not every column of a table needs to be sortable.</p>
+<p>Add the <code class="language-plaintext highlighter-rouge">.o-table__sortable</code> class to a table to make it sortable. To sort by a specific column, add a <code class="language-plaintext highlighter-rouge">button</code> to the <code class="language-plaintext highlighter-rouge">th</code> of the column. The use of a <code class="language-plaintext highlighter-rouge">button</code> helps address accessibility concerns.</p>
 
             </div>
             
@@ -2720,27 +2845,33 @@ Note: While th elements normally only contain raw text, they may sometimes conta
             
 
             <div class="a-toggle_code">
-                <button href="#details-sortable-table-sorting-allows-us-9" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-sortable-table-sorting-allows-us-9" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-sortable-table-sorting-allows-us-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-sortable-table-sorting-allows-us-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-sortable-table-sorting-allows-us-9">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-sortable-table-sorting-allows-us-4">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-sortable-table-sorting-allows-us-html-code-snippet-9">
+                        <a class="govuk-tabs__tab" href="#details-sortable-table-sorting-allows-us-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-sortable-table-sorting-allows-us-implementation-4">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-sortable-table-sorting-allows-us-html-code-snippet-9">
+                <section class="govuk-tabs__panel" id="details-sortable-table-sorting-allows-us-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2852,6 +2983,60 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
                 <!-- Implementation details -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-sortable-table-sorting-allows-us-implementation-4">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <h4 id="making-a-table-sortable">Making a table sortable</h4>
+
+<p>By adding the <code class="language-plaintext highlighter-rouge">.o-table__sortable</code> class to a <code class="language-plaintext highlighter-rouge">table</code>, the table becomes sortable. To allow the table to be sorted by a column, add a button to the <code class="language-plaintext highlighter-rouge">th</code> of the column like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>…
+&lt;button class="sortable"&gt;
+    Column Name
+&lt;/button&gt;
+…
+</code></pre></div></div>
+
+<p>The use of a <code class="language-plaintext highlighter-rouge">button</code> helps address certain accessibility concerns.</p>
+
+<h4 id="sorting-type">Sorting type</h4>
+
+<p>To sort properly, the type of the <code class="language-plaintext highlighter-rouge">data</code> can be specified. By default, the column’s values will be sorted as <code class="language-plaintext highlighter-rouge">string</code> values. However, the column can be specifically sorted by <code class="language-plaintext highlighter-rouge">number</code> values (in which case, the cell’s contents are stripped of non-numeric characters, then sorted by the resulting number). To see an example, the sample table later in this document sorts the “Distance” column by <code class="language-plaintext highlighter-rouge">number</code> value.</p>
+
+<p>To sort by <code class="language-plaintext highlighter-rouge">number</code> value, add the <code class="language-plaintext highlighter-rouge">data-sort_type="number"</code> attribute to the sorting button:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
+    …
+        &lt;th&gt;
+            &lt;button class="sortable" data-sort_type="number"&gt;Column Name&lt;/button&gt;
+        &lt;/th&gt;
+    …
+&lt;/table&gt;
+</code></pre></div></div>
+
+<h4 id="sorting-table-on-page-load">Sorting table on page load</h4>
+
+<p>To sort the table on page load, use the <code class="language-plaintext highlighter-rouge">.sorted-up</code> and <code class="language-plaintext highlighter-rouge">.sorted-down</code> classes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
+    …
+        &lt;th&gt;
+            &lt;button class="sortable sorted-up"&gt;Column Name&lt;/button&gt;
+        &lt;/th&gt;
+    …
+&lt;/table&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>The class <code class="language-plaintext highlighter-rouge">.sorted-up</code> refers to a sort from smallest to greatest (first to last), and <code class="language-plaintext highlighter-rouge">.sorted-down</code> refers to a sort from greatest to smallest (last to first). These classes are added to the <code class="language-plaintext highlighter-rouge">th</code> when sorting occurs.</li>
+  <li>Please note the importance of defining a <code class="language-plaintext highlighter-rouge">thead</code> and <code class="language-plaintext highlighter-rouge">tbody</code> to preserve the table’s header through sorting operations.</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
 
                 <!-- Specs -->
                 
@@ -2875,9 +3060,7 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<p>Tables are only one method for presenting many data points grouped together in a visual way. Other options include charts or graphs.</p>
-
-<p>Tables serve a unique purpose of allowing easy organization or comparison of more complex data than a chart or graph. They can be read either vertically (by columns) or horizontally (by rows).</p>
+<p>Tables allow easy organization or comparison of more complex data than a chart or graph. They can be read either vertically (by columns) or horizontally (by rows).</p>
 
 <p>Tables work best when:</p>
 <ul>
@@ -2900,10 +3083,10 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 <h4 id="labels-and-titles">Labels and Titles</h4>
 <p>Give tables a meaningful title that succinctly describes the content presented so that users can understand their purpose at a glance. If presenting more than one table within a page, consider adding labels (e.g. “Table 1,” “Table 2,” etc.) in addition to titles. Labels should precede titles (e.g. “Table 1: The title given to this table”).</p>
 
-<h5 id="long-column-labels">Long column labels</h5>
+<h4 id="long-column-labels">Long column labels</h4>
 <p>Consider using fixed columns or truncation for column labels that are significantly longer than the expected width of the data.</p>
 
-<h5 id="unit-of-measurement">Unit of measurement</h5>
+<h4 id="unit-of-measurement">Unit of measurement</h4>
 <p>Make sure to indicate the unit of measurement. In terms of placement, if the units are the same across columns, indicate the unit of measurement in the title or someplace noticeable above the table.</p>
 
 <p>Alternatively, if the table uses at most two units of measurement, consider using asterisks following the column label, and define the unit of measurement below the table, as shown in the example here.</p>
@@ -2918,31 +3101,9 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<p>Since the nature of tables relies so much on visual space, there are several common variations that can be used to accommodate different types of data in a table.</p>
+<h4 id="sortable-tables">Sortable tables</h4>
+<p>At large screen sizes,</p>
 
-<h4 id="stacking-tables">Stacking tables</h4>
-<p>A default table would “stack” the information on a smaller screen, since shrinking a table that maintained its columns/row structure would make it illegible.</p>
-
-<h4 id="directory-tables">Directory tables</h4>
-<p>When the data you’re presenting should only be read across the rows (instead of down columns), you can use a directory table. The first column in these tables is what organizes or labels the other data points in the row.</p>
-
-<p>For instance, contact information is comprised of a name, phone number, and email address. An event is made up of the name of the event, time, and location. You need all three pieces of data to create an understanding of the thing being shown, and the first column of data is the key to that understanding.</p>
-
-<p>The default stacking behavior on smaller breakpoints doesn’t maintain that “first column” importance since it stacks based on column headers.</p>
-
-<p>As such, at the small screen breakpoint, the directory table pattern uses that first column data (employee name, for instance) as a way to group and label stacks of rows.</p>
-
-<p>See guidance on styles for a a directory table and how it should look on smaller breakpoints.</p>
-
-<h4 id="scrolling-tables">Scrolling tables</h4>
-<p>When the data you’re presenting has more columns than what will comfortably fit on the screen, you can use a table that scrolls horizontally. This becomes especially important when thinking about tables on smaller screens, instead of allowing the data to stack at smaller breakpoints.</p>
-
-<p>Using a table that scrolls ensures that all the information can be accessed in its original tabular structure, even on a smaller screen.</p>
-
-<p>See guidance on styles for a table that scrolls horizontally at all screen sizes.</p>
-
-<h4 id="sorting-tables">Sorting tables</h4>
-<p>At large screen sizes, tables can be sorted using the header of any sortable column.</p>
 <ul>
   <li>The currently sorted column is marked with an up or down triangle for ascending and descending sorts, respectively</li>
   <li>On hover, the currently sorted column shows the opposite triangle</li>
@@ -2951,49 +3112,6 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 </ul>
 
 <p>If sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked.</p>
-
-<h4 id="code">Code</h4>
-<h4 id="making-a-table-sortable">Making a table sortable</h4>
-<p>By adding the <code class="language-plaintext highlighter-rouge">.o-table__sortable</code> class to a <code class="language-plaintext highlighter-rouge">table</code>, the table becomes sortable. To allow the table to be sorted by a column, add a button to the <code class="language-plaintext highlighter-rouge">th</code> of the column like so:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>…
-&lt;button class="sortable"&gt;
-    Column Name
-&lt;/button&gt;
-…
-</code></pre></div></div>
-<p>The use of a <code class="language-plaintext highlighter-rouge">button</code> helps address certain accessibility concerns.</p>
-
-<h4 id="sorting-type">Sorting type</h4>
-<p>To sort properly, the type of the <code class="language-plaintext highlighter-rouge">data</code> can be specified. By default, the column’s values will be sorted as <code class="language-plaintext highlighter-rouge">string</code> values. However, the column can be specifically sorted by <code class="language-plaintext highlighter-rouge">number</code> values (in which case, the cell’s contents are stripped of non-numeric characters, then sorted by the resulting number). To see an example, the sample table later in this document sorts the “Distance” column by <code class="language-plaintext highlighter-rouge">number</code> value.</p>
-
-<p>To sort by <code class="language-plaintext highlighter-rouge">number</code> value, add the <code class="language-plaintext highlighter-rouge">data-sort_type="number"</code> attribute to the sorting button:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
-    …
-        &lt;th&gt;
-            &lt;button class="sortable" data-sort_type="number"&gt;Column Name&lt;/button&gt;
-        &lt;/th&gt;
-    …
-&lt;/table&gt;
-</code></pre></div></div>
-
-<h4 id="sorting-table-on-page-load">Sorting table on page load</h4>
-<p>To sort the table on page load, use the <code class="language-plaintext highlighter-rouge">.sorted-up</code> and <code class="language-plaintext highlighter-rouge">.sorted-down</code> classes:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
-    …
-        &lt;th&gt;
-            &lt;button class="sortable sorted-up"&gt;Column Name&lt;/button&gt;
-        &lt;/th&gt;
-    …
-&lt;/table&gt;
-</code></pre></div></div>
-
-<ul>
-  <li>The class <code class="language-plaintext highlighter-rouge">.sorted-up</code> refers to a sort from smallest to greatest (first to last), and <code class="language-plaintext highlighter-rouge">.sorted-down</code> refers to a sort from greatest to smallest (last to first). These classes are added to the <code class="language-plaintext highlighter-rouge">th</code> when sorting occurs.</li>
-  <li>Please note the importance of defining a <code class="language-plaintext highlighter-rouge">thead</code> and <code class="language-plaintext highlighter-rouge">tbody</code> to preserve the table’s header through sorting operations.</li>
-</ul>
 
                 
             
@@ -3059,8 +3177,8 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/tables.md">
-                    <time datetime="2020-05-12 11:30:07 -0400">
-                        11:30:07 AM May 12, 2020
+                    <time datetime="2020-06-05 16:16:55 -0400">
+                         4:16:55 PM Jun 05, 2020
                     </time>
                 </a>
             </small>

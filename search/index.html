@@ -4275,7 +4275,7 @@ The text will be styled the same as H5 heading text.
 
 
             'title': 'Notifications',
-            'description': "This page describes notifications and form alerts, the latter which provide a light-touch alternative for inline form validation or feedback to a user’s input. The base (default) notification is also described; it is modified by scripting in production to update the state and message based on user input.",
+            'description': "This page describes notifications and form alerts, the latter which provide a light-touch alternative for inline form validation or feedback to a user’s input. The default (base) notification is also described; it is modified by scripting in production to update the state and message based on user input.",
             'use_cases': "",
             'content_guidelines': "",
             'behavior': "ValidationWhere possible, display formatting errors immediately using client-side validation so the user doesn’t have to wait until submitting to see what went wrong (this is especially frustrating if the information the user enters the first time around is not cached on submit and they have to fill out all the fields again from scratch). If letters are entered in a date field, if an email address is missing the “@” sign, let the user know right away by showing a field-level error on blur.That said, it’s a good idea to always validate on the server side even if you use client-side validation for formatting checks. That’s because JavaScript validation may not work on all clients; JavaScript errors could occur no matter the client; and JS validation can easily be bypassed, which raises security concerns.In general, the best practice for server-side validation is to mark errors with both form-level and field-level errors.",
@@ -4610,8 +4610,8 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
                 
 
                 
-                    'variation_name1': '',
-                    'variation_description1': "",
+                    'variation_name1': 'Large target area radio buttons',
+                    'variation_description1': "For better usability, consider using radio buttons with large target areas. These are easier to interact with (especially on smaller screens) and harder to miss. They are especially desirable when the form will have heavy mobile usage. Given the amount of real estate they occupy, they’re probably not suited for all use cases.",
                     'variation_code_snippet1': `&lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
     &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_default&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_default&quot;&gt;Default&lt;/label&gt;

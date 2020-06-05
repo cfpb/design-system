@@ -482,13 +482,79 @@ variation_groups:
           </table>
         variation_description: >-
           Sorting allows users to reorder the contents of a table by a sortable
-          column of their choice. See the
-          [Behavior](https://cfpb-sandbox.github.io/design-system/components/tables#behavior)
-          section for more information.
+          column of their choice. See the [Behavior](#behavior) section for more
+          information.
 
 
           Add the `.o-table__sortable` class to a table to make it sortable. To sort by a specific column, add a `button` to the `th` of the column. The use of a `button` helps address accessibility concerns.
         variation_name: Sortable table
+        variation_implementation: >-
+          #### Making a table sortable
+
+
+          By adding the `.o-table__sortable` class to a `table`, the table becomes sortable. To allow the table to be sorted by a column, add a button to the `th` of the column like so:
+
+
+          ```
+
+          …
+
+          <button class="sortable">
+              Column Name
+          </button>
+
+          …
+
+          ```
+
+
+          The use of a `button` helps address certain accessibility concerns.
+
+
+          #### Sorting type
+
+
+          To sort properly, the type of the `data` can be specified. By default, the column’s values will be sorted as `string` values. However, the column can be specifically sorted by `number` values (in which case, the cell’s contents are stripped of non-numeric characters, then sorted by the resulting number). To see an example, the sample table later in this document sorts the “Distance” column by `number` value.
+
+
+          To sort by `number` value, add the `data-sort_type="number"` attribute to the sorting button:
+
+
+          ```
+
+          <table class="o-table o-table__sortable">
+              …
+                  <th>
+                      <button class="sortable" data-sort_type="number">Column Name</button>
+                  </th>
+              …
+          </table>
+
+          ```
+
+
+          #### Sorting table on page load
+
+
+          To sort the table on page load, use the `.sorted-up` and `.sorted-down` classes:
+
+
+          ```
+
+          <table class="o-table o-table__sortable">
+              …
+                  <th>
+                      <button class="sortable sorted-up">Column Name</button>
+                  </th>
+              …
+          </table>
+
+          ```
+
+
+          * The class `.sorted-up` refers to a sort from smallest to greatest (first to last), and `.sorted-down` refers to a sort from greatest to smallest (last to first). These classes are added to the `th` when sorting occurs.
+
+          * Please note the importance of defining a `thead` and `tbody` to preserve the table’s header through sorting operations.
     variation_group_name: Variations
 use_cases: >-
   Tables are only one method for presenting many data points grouped together in

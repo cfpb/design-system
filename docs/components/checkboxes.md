@@ -7,7 +7,7 @@ status: Released
 description: Use checkboxes when the user can select more than one option from a
   list. Make clear with helper text that this is the case. Use [radio
   buttons](/design-system/components/radio-buttons) when the user can choose
-  only one option out of a list.
+  **only one** option out of a list.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -88,10 +88,9 @@ variation_groups:
           - Background: Gray 10 (#e7e8e9)
           - Avenir Next Regular, 16 px, Gray (#5a5d61)
     variation_group_name: Standard checkboxes
-  - variation_group_name: Large target area checkboxes
+  - variation_group_description: ""
     variations:
-      - variation_name: ""
-        variation_code_snippet: >-
+      - variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox
           m-form-field__lg-target">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default">
@@ -204,13 +203,15 @@ variation_groups:
           - Border: 1 px, Gray 60 (#919395)
           - Background: Gray 20 (#d2d3d5)
           - Avenir Next Regular, 16 px, Gray (#5a5d61)
-    variation_group_description: For better usability, consider using checkboxes and
-      radio buttons with large target areas. These are easier to interact with
-      (especially on smaller screens) and harder to miss. They are especially
-      desirable when the form will have heavy mobile usage. Given the amount of
-      real estate they occupy, they’re probably not suited for all use cases;
-      for example, they may not work well for terms of service agreement
-      checkboxes.
+        variation_description: For better usability, consider using checkboxes with
+          large target areas. These are easier to interact with (especially on
+          smaller screens) and harder to miss. They are especially desirable
+          when the form will have heavy mobile usage. Given the amount of real
+          estate they occupy, they’re probably not suited for all use cases; for
+          example, they may not work well for terms of service agreement
+          checkboxes.
+        variation_name: Large target area checkboxes
+    variation_group_name: Sizes
 use_cases: >-
   #### Nested checkboxes
 

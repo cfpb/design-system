@@ -140,6 +140,11 @@ variation_groups:
 
           | Image | ![hero desktop style](/design-system/images/uploads/hero_style_desktop.png) | ![hero tablet style](/design-system/images/uploads/hero_style_tablet.png) | ![hero mobile style](/design-system/images/uploads/hero_style_mobile.png) |
         variation_implementation: >+
+          #### Bleeding illustrations 
+
+          When using an illustration that bleeds top to bottom at larger screen sizes, add the `__bleeding` modifier to the hero and add an additional `m-hero_bleeding-image` as a sibling to `m-hero_image`.
+
+
           #### Customizing illustrations
 
           The illustration can be customized by setting the `background-image` property on the `.m-hero_image` element.
@@ -151,11 +156,6 @@ variation_groups:
 
 
           For larger screen sizes, media queries are used to position the illustration to the right of the text.
-
-
-          ### Bleeding illustrations 
-
-          When using an illustration that bleeds top to bottom at larger screen sizes, add the `__bleeding` modifier to the hero and add an additional `m-hero_bleeding-image` as a sibling to `m-hero_image`.
 
       - variation_name: Hero with photograph
         variation_description: Note hero text overlays the photograph at larger screen
@@ -316,6 +316,10 @@ variation_groups:
                   }
               </style>
           </section>
+        variation_description: When using a dark background, add the `__knockout`
+          modifier to the hero to switch the text to white. For reference, see
+          this [live example of a hero with knockout
+          text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
     variation_group_description: ""
 use_cases: ""
 content_guidelines: >-
@@ -334,7 +338,7 @@ content_guidelines: >-
 
   * Don't write copy from the perspective of what the Bureau does or offers. It’s less about what we can do for them or what we can offer them, and more about what the user can do with the resources we provide.
 
-  * Don’t include links or calls to action within the hero, Since the goal of the hero is to get the user to continue reading the page. If there is content that needs to link elsewhere for explanation, place it underneath the hero within the main content area.
+  * Don’t include links or calls to action within the hero. The goal of the hero is to get the user to continue reading the page, and calls to action  detract from that. If there's content that needs to link elsewhere for explanation, place it underneath the hero, within the main content area.
 
 
   #### Headings

@@ -11,7 +11,11 @@ variation_groups:
   - variation_group_name: Standard item introduction
     variations:
       - variation_description: >-
-          The item introduction Layout as seen on a Learn page template:
+          The item introduction consists of a heading, sometimes referred to as
+          the post title, with a category label above it in the vast majority of
+          cases. The item introduction may also include a minicon next to the
+          category label, subheading paragraph, author, dates, and/or social
+          sharing icons. Layout as seen on a Learn page template:
 
 
           ![Schematic of an item introduction](/design-system/images/uploads/itemintro_intro.png)
@@ -27,4 +31,23 @@ variation_groups:
           ##### WHEN OTHER OPTIONS ARE BETTER
 
           * When creating general content pages, even if the content is detailed or lengthy.
+        variation_specs: >-
+          * Required components: Only the post title is absolutely required and
+          the category label should be used in the vast majority of cases.
+          (Category label minicons are optional.)
+
+          * Optional components: Subheader paragraph, author, dates, and social sharing icons.
+
+          * Spacing: 45 px margin above, 60 px margin below. 
+content_guidelines: >-
+  Category should always be selected if it is a page type that is categorized.
+
+
+  Headings should be as succinct as possible, ideally no more than 2 lines at max column width; 80 characters or less.
+
+
+  The optional subheader paragraph should be additive to the user experience. Most pages currently using this component do not use the subheader element.
+
+
+  If using the subheader paragraph, it should expand on the page title and help explain why the reader should care. No more than 2 sentences; 50 words.
 ---

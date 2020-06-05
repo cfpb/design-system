@@ -32,13 +32,17 @@ variation_groups:
 
           * When creating general content pages, even if the content is detailed or lengthy.
         variation_specs: >-
-          * Required components: Only the post title is absolutely required and
-          the category label should be used in the vast majority of cases.
-          (Category label minicons are optional.)
+          #### Style 
+
+
+          ![](/design-system/images/uploads/itemintro_style.png)
+
+
+          * Required components: Only the post title is absolutely required and the category label should be used in the vast majority of cases. (Category label minicons are optional.)
 
           * Optional components: Subheader paragraph, author, dates, and social sharing icons.
 
-          * Spacing: 45 px margin above, 60 px margin below. 
+          * Spacing: 45 px margin above, 60 px margin below.
 content_guidelines: >-
   Category should always be selected if it is a page type that is categorized.
 
@@ -50,4 +54,13 @@ content_guidelines: >-
 
 
   If using the subheader paragraph, it should expand on the page title and help explain why the reader should care. No more than 2 sentences; 50 words.
+behavior: >-
+  | Above 900 px                         | Below 901
+  px                               |
+
+  | ------------------------------------ | ------------------------------------------ |
+
+  | Item intro with sidebar to the right | Item intro takes up full width of viewport |
+
+  | ![Schematic of an item intro at breakpoints above 900 px](/design-system/images/uploads/itemintro_behavior1.png) | ![schematic of an item intro at breakpionts below 901 px](/design-system/images/uploads/itemintro_behavior2.png) |
 ---

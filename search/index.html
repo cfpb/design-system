@@ -4138,59 +4138,6 @@ The text will be styled the same as H5 heading text.
                 
 
                 
-                    'variation_name1': 'Default notification',
-                    'variation_description1': "The default notification creates the base for the message that is often hidden and empty, but is modified by scripting in production to update the state and message based on user input.If your notification requires further explanation, include it in a paragraph following the main message.",
-                    'variation_code_snippet1': `&lt;div class=&quot;m-notification
-            m-notification__visible&quot;&gt;
-    {% include icons/information-round.svg %}
-    &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A default notification&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br&gt;
-
-&lt;div class=&quot;m-notification
-            m-notification__visible&quot;&gt;
-    {% include icons/information-round.svg %}
-    &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A default notification&lt;/div&gt;
-        &lt;p class=&quot;m-notification_explanation&quot;&gt;
-            You can also add an explanation to the notification.
-        &lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br&gt;
-
-&lt;div class=&quot;m-notification
-            m-notification__visible&quot;&gt;
-    {% include icons/information-round.svg %}
-    &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A default notification&lt;/div&gt;
-        &lt;p class=&quot;m-notification_explanation&quot;&gt;
-            This is the explanation of the notification.
-        &lt;/p&gt;
-        &lt;ul class=&quot;m-list m-list__links&quot;&gt;
-            &lt;li class=&quot;m-list_item&quot;&gt;
-                &lt;a class=&quot;m-list_link&quot; href=&quot;/&quot;&gt;
-                    This is a link below the explanation
-                &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;m-list_item&quot;&gt;
-                &lt;a class=&quot;m-list_link&quot; href=&quot;/&quot;&gt;
-                    This is an external link {% include icons/external-link.svg %}
-                &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
                     'variation_name1': 'Success notification',
                     'variation_description1': "The success notification is for displaying when an operation has run as expected, such as returning the number of results in a search.",
                     'variation_code_snippet1': `&lt;div class=&quot;m-notification
@@ -4272,13 +4219,66 @@ The text will be styled the same as H5 heading text.
 &lt;/div&gt;`,
                 
             
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': '',
+                    'variation_description1': "The default notification creates the base for the message that is often hidden and empty, but is modified by scripting in production to update the state and message based on user input.If your notification requires further explanation, include it in a paragraph following the main message.Notifications are hidden by default; you can toggle their visibility by adding or removing the m-notification__visible class to the base element.",
+                    'variation_code_snippet1': `&lt;div class=&quot;m-notification
+            m-notification__visible&quot;&gt;
+    {% include icons/information-round.svg %}
+    &lt;div class=&quot;m-notification_content&quot;&gt;
+        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A default notification&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;div class=&quot;m-notification
+            m-notification__visible&quot;&gt;
+    {% include icons/information-round.svg %}
+    &lt;div class=&quot;m-notification_content&quot;&gt;
+        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A default notification&lt;/div&gt;
+        &lt;p class=&quot;m-notification_explanation&quot;&gt;
+            You can also add an explanation to the notification.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;div class=&quot;m-notification
+            m-notification__visible&quot;&gt;
+    {% include icons/information-round.svg %}
+    &lt;div class=&quot;m-notification_content&quot;&gt;
+        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A default notification&lt;/div&gt;
+        &lt;p class=&quot;m-notification_explanation&quot;&gt;
+            This is the explanation of the notification.
+        &lt;/p&gt;
+        &lt;ul class=&quot;m-list m-list__links&quot;&gt;
+            &lt;li class=&quot;m-list_item&quot;&gt;
+                &lt;a class=&quot;m-list_link&quot; href=&quot;/&quot;&gt;
+                    This is a link below the explanation
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;m-list_item&quot;&gt;
+                &lt;a class=&quot;m-list_link&quot; href=&quot;/&quot;&gt;
+                    This is an external link {% include icons/external-link.svg %}
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+            
 
 
             'title': 'Notifications',
-            'description': "This component provides notification boxes. Form alerts provide a light-touch alternative to notifications for inline form validation or feedback to a user’s input.",
+            'description': "This page describes notifications and form alerts, the latter which provide a light-touch alternative for inline form validation or feedback to a user’s input. The base (default) notification is also described; it is modified by scripting in production to update the state and message based on user input.",
             'use_cases': "",
             'content_guidelines': "",
-            'behavior': "VisibilityNotifications are hidden by default; you can toggle their visibility by adding or removing the m-notification__visible class to the base element.ValidationWhere possible, display formatting errors immediately using client-side validation so the user doesn’t have to wait until submitting to see what went wrong (this is especially frustrating if the information the user enters the first time around is not cached on submit and they have to fill out all the fields again from scratch). If letters are entered in a date field, if an email address is missing the “@” sign, let the user know right away by showing a field-level error on blur.That said, it’s a good idea to always validate on the server side even if you use client-side validation for formatting checks. That’s because JavaScript validation may not work on all clients; JavaScript errors could occur no matter the client; and JS validation can easily be bypassed, which raises security concerns.In general, the best practice for server-side validation is to mark errors with both form-level and field-level errors.",
+            'behavior': "ValidationWhere possible, display formatting errors immediately using client-side validation so the user doesn’t have to wait until submitting to see what went wrong (this is especially frustrating if the information the user enters the first time around is not cached on submit and they have to fill out all the fields again from scratch). If letters are entered in a date field, if an email address is missing the “@” sign, let the user know right away by showing a field-level error on blur.That said, it’s a good idea to always validate on the server side even if you use client-side validation for formatting checks. That’s because JavaScript validation may not work on all clients; JavaScript errors could occur no matter the client; and JS validation can easily be bypassed, which raises security concerns.In general, the best practice for server-side validation is to mark errors with both form-level and field-level errors.",
             'accessibility': "  For screen reader accessibility, form-level errors should include anchor links to the problem field in question.  Place form-level alerts below the form title.  In general, use distinct icons, contrasting colors, prominent placement, and text to indicate errors. Don’t rely on just one method, as users can have many different accessibility needs (color blind users, visually impaired users, users with motor control issues, etc.).",
             'research': "",
             'related_items': "",

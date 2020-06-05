@@ -4,82 +4,12 @@ layout: variation
 section: components
 secondary_section: Alerts
 status: Released
-description: This component provides notification boxes. Form alerts provide a
-  light-touch alternative to notifications for inline form validation or
-  feedback to a user’s input.
+description: "This page describes notifications and form alerts, the latter
+  which provide a light-touch alternative for inline form validation or feedback
+  to a user’s input. The base (default) notification is also described; it is
+  modified by scripting in production to update the state and message based on
+  user input.  "
 variation_groups:
-  - variation_group_name: Standard notifications
-    variations:
-      - variation_code_snippet: >-
-          <div class="m-notification
-                      m-notification__visible">
-              {% include icons/information-round.svg %}
-              <div class="m-notification_content">
-                  <div class="h4 m-notification_message">A default notification</div>
-              </div>
-          </div>
-
-
-          <br>
-
-
-          <div class="m-notification
-                      m-notification__visible">
-              {% include icons/information-round.svg %}
-              <div class="m-notification_content">
-                  <div class="h4 m-notification_message">A default notification</div>
-                  <p class="m-notification_explanation">
-                      You can also add an explanation to the notification.
-                  </p>
-              </div>
-          </div>
-
-
-          <br>
-
-
-          <div class="m-notification
-                      m-notification__visible">
-              {% include icons/information-round.svg %}
-              <div class="m-notification_content">
-                  <div class="h4 m-notification_message">A default notification</div>
-                  <p class="m-notification_explanation">
-                      This is the explanation of the notification.
-                  </p>
-                  <ul class="m-list m-list__links">
-                      <li class="m-list_item">
-                          <a class="m-list_link" href="/">
-                              This is a link below the explanation
-                          </a>
-                      </li>
-                      <li class="m-list_item">
-                          <a class="m-list_link" href="/">
-                              This is an external link {% include icons/external-link.svg %}
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-        variation_description: >-
-          The default notification creates the base for the message that is
-          often hidden and empty, but is modified by scripting in production to
-          update the state and message based on user input.
-
-
-          If your notification requires further explanation, include it in a paragraph following the main message.
-        variation_implementation: >-
-          Notifications are hidden by default; you can toggle their visibility
-          by
-
-          adding or removing the `m-notification__visible` class to the base
-
-          element.
-
-
-          If your notification requires links, include them below the message or
-
-          explanation as a `m-list` unordered list.
-        variation_name: Default notification
   - variation_group_name: Types
     variations:
       - variation_code_snippet: |-
@@ -97,9 +27,9 @@ variation_groups:
         variation_implementation: ""
         variation_name: Success notification
         variation_specs: |-
-          * **Border:** 2 px, CFPB Green (#20aa3f)
-          * **Icon:** 18 px, CFPB Green (#20aa3f)
-          * **Background color:** Green 20 (#e2efd8)
+          * Border: 2 px, CFPB Green (#20aa3f)
+          * Icon: 18 px, CFPB Green (#20aa3f)
+          * Background color: Green 20 (#e2efd8)
           * Success icon and message should always appear below input field.
       - variation_name: Success notification (field-level)
         variation_code_snippet: >-
@@ -114,6 +44,10 @@ variation_groups:
               </div>
           </div>
         variation_description: ""
+        variation_specs: |-
+          * Border: 2 px, CFPB Green (#20aa3f)
+          * Minicon: 18 px, CFPB Green (#20aa3f)
+          * Success minicon and message should always appear below input field
       - variation_code_snippet: |-
           <div class="m-notification
                       m-notification__visible
@@ -211,22 +145,92 @@ variation_groups:
           to reassure the user that an action is functioning as intended.
         variation_name: In-progress notification
     variation_group_description: >-
-      Form-level alerts should appear below the form title. 
+      Types of notifications include success, warning, error, and in-progress. 
 
 
-      For field-level alerts, minicon and message should always appear below the input field.  
+      Note that form-level alerts should appear below the form title. Field-level alerts—minicon and message—should always appear below the input field.  
 
 
       For screen reader accessibility, include anchor links to the fields that need correction.
+  - variation_group_name: Default (base) notification
+    variations:
+      - variation_code_snippet: >-
+          <div class="m-notification
+                      m-notification__visible">
+              {% include icons/information-round.svg %}
+              <div class="m-notification_content">
+                  <div class="h4 m-notification_message">A default notification</div>
+              </div>
+          </div>
+
+
+          <br>
+
+
+          <div class="m-notification
+                      m-notification__visible">
+              {% include icons/information-round.svg %}
+              <div class="m-notification_content">
+                  <div class="h4 m-notification_message">A default notification</div>
+                  <p class="m-notification_explanation">
+                      You can also add an explanation to the notification.
+                  </p>
+              </div>
+          </div>
+
+
+          <br>
+
+
+          <div class="m-notification
+                      m-notification__visible">
+              {% include icons/information-round.svg %}
+              <div class="m-notification_content">
+                  <div class="h4 m-notification_message">A default notification</div>
+                  <p class="m-notification_explanation">
+                      This is the explanation of the notification.
+                  </p>
+                  <ul class="m-list m-list__links">
+                      <li class="m-list_item">
+                          <a class="m-list_link" href="/">
+                              This is a link below the explanation
+                          </a>
+                      </li>
+                      <li class="m-list_item">
+                          <a class="m-list_link" href="/">
+                              This is an external link {% include icons/external-link.svg %}
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+        variation_description: >-
+          The default notification creates the base for the message that is
+          often hidden and empty, but is modified by scripting in production to
+          update the state and message based on user input.
+
+
+          If your notification requires further explanation, include it in a paragraph following the main message.
+
+
+          Notifications are hidden by default; you can toggle their visibility by adding or removing the `m-notification__visible` class to the base element.
+        variation_implementation: >-
+          Notifications are hidden by default; you can toggle their visibility
+          by
+
+          adding or removing the `m-notification__visible` class to the base
+
+          element.
+
+
+          If your notification requires links, include them below the message or
+
+          explanation as a `m-list` unordered list.
+        variation_name: ""
 use_cases: ""
 content_guidelines: ""
 behavior: >-
-  #### Visibility
-
-  Notifications are hidden by default; you can toggle their visibility by adding or removing the `m-notification__visible` class to the base element.
-
-
-  #### Validation
+  ### Validation
 
 
   Where possible, display formatting errors immediately using client-side validation so the user doesn’t have to wait until submitting to see what went wrong (this is especially frustrating if the information the user enters the first time around is not cached on submit and they have to fill out all the fields again from scratch). If letters are entered in a date field, if an email address is missing the “@” sign, let the user know right away by showing a field-level error on blur.

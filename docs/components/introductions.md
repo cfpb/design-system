@@ -4,14 +4,15 @@ layout: variation
 section: components
 secondary_section: Layout options
 status: Released
-description: >-
-  The text introduction is the standard page introduction pattern used across
-  all pages that do not have a
+description: The text introduction is the standard page introduction pattern
+  used across all pages that do not have a
   [hero](https://cfpb.github.io/design-system/components/heroes) or [item
   introduction]((https://cfpb.github.io/design-system/components/item-introduction).
-
-
-  On [landing](https://cfpb.github.io/design-system/templates/landing-pages) or [sub-landing pages](https://cfpb.github.io/design-system/templates/sublanding-pages), the text introduction may be accompanied by a breakout sidebar to highlight a specific piece of content from the section.
+  On [landing](https://cfpb.github.io/design-system/templates/landing-pages) or
+  [sub-landing
+  pages](https://cfpb.github.io/design-system/templates/sublanding-pages), the
+  text introduction may be accompanied by a breakout sidebar to highlight a
+  specific piece of content from the section.
 variation_groups:
   - variations:
       - variation_code_snippet: ""
@@ -20,11 +21,16 @@ variation_groups:
         variation_name: ""
     variation_group_name: Standard text introduction
     variation_group_description: >-
+      Text introductions consist of a heading and lead paragraph. They should be
+      used on every page, except in cases when a hero or item introduction is
+      used. 
+
+
       Layout as seen with a standard right sidebar:
 
 
       ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/textintro_intro.png)
-  - variation_group_name: Optional breakout sidebar
+  - variation_group_name: Text introduction with optional breakout sidebar
     variation_group_description: >-
       On landing or sub-landing pages, the text introduction may be accompanied
       by a breakout sidebar to highlight a specific piece of content from the
@@ -42,61 +48,10 @@ variation_groups:
 
 
       ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/textintro_intro2.png)
-use_cases: >-
-  _**Text introductions**_
-
-
-  Text introductions should be used on every page, except in cases when a hero is used.
-
-
-  The optional breakout sidebar should be used when a specific piece of content needs to be highlighted that is related to but not a continuation of content in the introduction. The breakout sidebar may contain a related posts element or imagery. Instances where the breakout sidebar is successfully used include the Careers sub-landing page or Rulemaking sub-landing page.
-
-
-  WHERE TO USE
-
-
-  * Landing page *
-
-  * Sub-landing page *
-
-  * Browse page
-
-  * Learn page
-
-  * Document Detail page
-
-
-  Note (*): The breakout sidebar is only an option on landing and sub-landing pages.
-
-
-  _**Item introductions**_
-
-
-  WHEN TO USE
-
-
-  * When introducing a specific article or post (such as a press release or blog post) or document or group of documents (such as a report, rule or enforcement action) linked through a filterable list.
-
-  * The page contains specific content about one subject; there aren’t any child pages that drill down to anything more specific.
-
-
-  WHEN OTHER OPTIONS ARE BETTER
-
-
-  * When creating general content pages, even if the content is detailed or lengthy.
-
-
-  WHERE TO USE
-
-
-  * Learn page
-
-  * Document detail page
+use_cases: ""
 content_guidelines: >-
-  _**Text introductions**_
-
-
-  Headings should be as succinct as possible, ideally staying on a single line at max column width; 35 characters or less.
+  Headings should be as succinct as possible, ideally staying on a single line
+  at max column width; 35 characters or less.
 
 
   Heading should be in sentence case
@@ -112,24 +67,6 @@ content_guidelines: >-
 
 
   The optional call to action link should be one line; about 40 characters or less. Link content should follow link guidelines.
-
-
-  _**Item introductions**_
-
-
-  Category should always be selected if it is a page type that is categorized.
-
-
-  Headings should be as succinct as possible, ideally no more than 2 lines at max column width; 80 characters or less.
-
-
-  The optional subheader paragraph should be additive to the user experience. Most pages currently using this component do not use the subheader element.
-
-
-  If using the subheader paragraph, it should expand on the page title and help explain why the reader should care. No more than 2 sentences; 50 words.
-
-
-  ![Item introduction spacing](/design-system/images/uploads/itemintro_style.png)
 behavior: >-
   **_Text introductions_**
 

@@ -5,9 +5,10 @@ section: components
 secondary_section: Forms
 status: Released
 description: >-
-  Email sign-ups are used to add individual email addresses to a specific
-  mailing list that is relevant to the content on the page or the section it is
-  contained within.
+  Email sign-ups allow users to stay engaged on a specific topic or content type
+  produced by the Bureau. They are used to add individual email addresses to a
+  specific mailing list that is relevant to the content on the page or the
+  section it is contained within.
 
 
   More information can be found at:
@@ -47,14 +48,13 @@ variation_groups:
           * On Browse pages, when email signups are not a primary user goal, and the prefooter/end of page content has no other CTAs to compete with the email signup, use the standard prefooter email signup.
         variation_name: Inset email sign up
     variation_group_name: Types
-use_cases: >-
-  Email sign ups allow users to stay engaged on a specific topic or content type
-  produced by the Bureau. Different page types will be connected to the
-  corresponding GovDelivery list based on the page topic (i.e. HMDA) or page
-  type (i.e. blog).
+    variation_group_description: >-
+      Different page types will be connected to the corresponding GovDelivery
+      list based on the page topic (i.e. HMDA) or page type (i.e. blog).
 
 
-  This pattern also includes a link to our privacy statement and a an optional call to action to subscribe to an RSS feed.
+      This pattern also includes a link to our privacy statement and a an optional call to action to subscribe to an RSS feed.
+use_cases: ""
 content_guidelines: >-
   * Use standard slug text: “Email updates”
 

@@ -487,6 +487,9 @@ variation_groups:
 
           Any column that can sort needs to be specified in the table’s markup. When the table loads, it should be sorted by one of the sortable columns by default and indicate which column is already sorted. Not every column of a table needs to be sortable.
         variation_name: Sortable table
+      - variation_description: The `.o-table_cell__row-links` class is added to a
+          `table` to enable highlighting and hyperlinking rows which contain
+          links.
     variation_group_name: Variations
 use_cases: >-
   Tables are only one method for presenting many data points grouped together in

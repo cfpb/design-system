@@ -7,7 +7,7 @@ status: Released
 description: Use checkboxes when the user can select more than one option from a
   list. Make clear with helper text that this is the case. Use [radio
   buttons](/design-system/components/radio-buttons) when the user can choose
-  only one option out of a list.
+  **only one** option out of a list.
 variation_groups:
   - variations:
       - variation_code_snippet: >-

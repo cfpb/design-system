@@ -143,9 +143,13 @@ variation_groups:
 
       - variation_name: Hero with photograph
         variation_description: >-
-          Use case for photographs here.
+          The text overlays the photograph at larger screen sizes. It’s best to
+          avoid a non-button call to action in these, as it’s unlikely that the
+          Pacific Blue will have accessible contrast with a non-white (or light
+          gray) background. 
 
-          [Live example](https://www.consumerfinance.gov/consumer-tools/mortgages/)
+
+          [Live example](https://www.consumerfinance.gov/consumer-tools/mortgages/). For design specs, click on the "Show details" link.
         variation_code_snippet: >-
           <section class="m-hero m-hero__overlay" id="hero4">
               <div class="m-hero_wrapper wrapper">
@@ -223,7 +227,9 @@ variation_groups:
           ![Image of smaller photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_small.png "Image of smaller photographic hero graphic with dimensions")
     variation_group_name: Standard heroes
     variation_group_description: >-
-      Heroes combine a heading, descriptive text, and image. 
+      Heroes combine a heading, a small amount of subheading text, and image. A
+      hero consists of a headline, a small amount of additional sub-heading text
+      and an image.  
 
 
       ##### When to use
@@ -301,23 +307,21 @@ variation_groups:
 use_cases: ""
 content_guidelines: >-
   Hero content should orient the user and communicate the primary goal of the
-  page.
+  page. Copy should be succinct and engaging, reflecting the voice and tone of
+  the CFPB.
 
 
   #### Do
 
-  Write hero copy from the user’s perspective.
-
-  * Orient the user: "Is this page what I was looking for?"
-
-  * Engage the user: "Do I want to keep reading?"
-
+  * Write hero copy from the user’s perspective.
+    * Orient the user: "Is this page what I was looking for?"
+    * Engage the user: "Do I want to keep reading?"
 
   #### Don't
 
-  * Don't write copy from the perspective of what the Bureau does or offers.
+  * Don't write copy from the perspective of what the Bureau does or offers. It’s less about what we can do for them or what we can offer them, and more about what the user can do with the resources we provide.
 
-  * Don’t include links or calls to action within the hero.
+  * Don’t include links or calls to action within the hero, Since the goal of the hero is to get the user to continue reading the page. If there is content that needs to link elsewhere for explanation, place it underneath the hero within the main content area.
 
 
   #### Headings

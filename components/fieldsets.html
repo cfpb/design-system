@@ -1421,20 +1421,27 @@
     <ul class="m-list m-list__horizontal u-mb30">
         
         
+        <li class="m-list_item">
+            <a class="m-list_link" href="#standard-fieldsets">
+                Standard fieldsets
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#groups">
+                Groups
+            </a>
+        </li>
+        
         
     </ul>
     
 
     
     <section id="description" class="u-mb30">
-        <p>The fieldset element is used to group several controls as well as labels within a web form. The fieldset includes:</p>
-
-<ul>
-  <li>Legend</li>
-  <li>Block helper text (if necessary)</li>
-  <li>Inline labels</li>
-  <li>Set of controls</li>
-</ul>
+        <p>The fieldset element is used to group several controls as well as labels within a web form.</p>
 
 <p>More information can be found at:</p>
 <ul>
@@ -1449,13 +1456,19 @@
 
     
     
-    <section class="o-variation_group" id="">
+    <section class="o-variation_group" id="standard-fieldsets">
 
         
-        
-        <div class="u-mb15"></div>
+        <h2 class="o-variation_group_title">
+            Standard fieldsets
+        </h2>
         
 
+        
+        <div class="o-variation_group_description">
+            <p>The fieldset includes the legend, optional block helper text, inline labels, and a set of controls.</p>
+
+        </div>
         
 
         
@@ -1675,6 +1688,19 @@
 
         </div>
         
+    </section>
+    
+    <section class="o-variation_group" id="groups">
+
+        
+        <h2 class="o-variation_group_title">
+            Groups
+        </h2>
+        
+
+        
+
+        
         <div class="m-variation">
 
             
@@ -1733,15 +1759,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-large-target-fieldset-with-check-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-large-target-fieldset-with-check-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-large-target-fieldset-with-check-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-large-target-fieldset-with-check-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-large-target-fieldset-with-check-3">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-large-target-fieldset-with-check-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-large-target-fieldset-with-check-html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#details-large-target-fieldset-with-check-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1753,7 +1779,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-large-target-fieldset-with-check-html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="details-large-target-fieldset-with-check-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1821,28 +1847,34 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <form class="o-form">
-    <div class="o-form_group">
-        <fieldset class="o-form_fieldset">
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
-                <input class="a-radio" type="radio" id="test_radio_lg_default_1" name="radio-fieldset">
-                <label class="a-label" for="test_radio_lg_default_1">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
-                <input class="a-radio" type="radio" id="test_radio_lg_default_2" name="radio-fieldset">
-                <label class="a-label" for="test_radio_lg_default_2">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
-                <input class="a-radio" type="radio" id="test_radio_lg_default_3" name="radio-fieldset">
-                <label class="a-label" for="test_radio_lg_default_3">Label</label>
-            </div>
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
-                <input class="a-radio" type="radio" id="test_radio_lg_default_4" name="radio-fieldset">
-                <label class="a-label" for="test_radio_lg_default_4">Label</label>
-            </div>
-        </fieldset>
-    </div>
-</form>
+                <fieldset class="o-form_fieldset">
+                <legend class="a-legend">Basic legend
+                </legend>
+
+                <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+                    <input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1">
+                        <label class="a-label" for="is_helpful_1">Inline label
+                        </label>
+                </div>
+
+                <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+                    <input class="a-radio" id="is_helpful_2" type="radio" name="is_helpful" value="0">
+                        <label class="a-label" for="is_helpful_2">Inline label
+                        </label>
+                </div>
+
+                <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+                    <input class="a-radio" id="is_helpful_3" type="radio" name="is_helpful" value="0">
+                        <label class="a-label" for="is_helpful_3">Inline label
+                        </label>
+                </div>
+
+                <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+                    <input class="a-radio" id="is_helpful_4" type="radio" name="is_helpful" value="0">
+                        <label class="a-label" for="is_helpful_4">Inline label
+                        </label>
+                </div>
+    </fieldset>
             </div>
             
 
@@ -1857,15 +1889,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-large-target-fieldset-with-radio-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-large-target-fieldset-with-radio-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-large-target-fieldset-with-radio-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-large-target-fieldset-with-radio-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-large-target-fieldset-with-radio-4">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-large-target-fieldset-with-radio-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-large-target-fieldset-with-radio-html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#details-large-target-fieldset-with-radio-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -1877,32 +1909,38 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-large-target-fieldset-with-radio-html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="details-large-target-fieldset-with-radio-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;form class="o-form"&gt;
-    &lt;div class="o-form_group"&gt;
-        &lt;fieldset class="o-form_fieldset"&gt;
-            &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
-                &lt;input class="a-radio" type="radio" id="test_radio_lg_default_1" name="radio-fieldset"&gt;
-                &lt;label class="a-label" for="test_radio_lg_default_1"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
-                &lt;input class="a-radio" type="radio" id="test_radio_lg_default_2" name="radio-fieldset"&gt;
-                &lt;label class="a-label" for="test_radio_lg_default_2"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
-                &lt;input class="a-radio" type="radio" id="test_radio_lg_default_3" name="radio-fieldset"&gt;
-                &lt;label class="a-label" for="test_radio_lg_default_3"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
-                &lt;input class="a-radio" type="radio" id="test_radio_lg_default_4" name="radio-fieldset"&gt;
-                &lt;label class="a-label" for="test_radio_lg_default_4"&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/fieldset&gt;
-    &lt;/div&gt;
-&lt;/form&gt;</code></pre>
+                            <pre><code class="language-html">&lt;fieldset class="o-form_fieldset"&gt;
+                &lt;legend class="a-legend"&gt;Basic legend
+                &lt;/legend&gt;
+
+                &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
+                    &lt;input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1"&gt;
+                        &lt;label class="a-label" for="is_helpful_1"&gt;Inline label
+                        &lt;/label&gt;
+                &lt;/div&gt;
+
+                &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
+                    &lt;input class="a-radio" id="is_helpful_2" type="radio" name="is_helpful" value="0"&gt;
+                        &lt;label class="a-label" for="is_helpful_2"&gt;Inline label
+                        &lt;/label&gt;
+                &lt;/div&gt;
+
+                &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
+                    &lt;input class="a-radio" id="is_helpful_3" type="radio" name="is_helpful" value="0"&gt;
+                        &lt;label class="a-label" for="is_helpful_3"&gt;Inline label
+                        &lt;/label&gt;
+                &lt;/div&gt;
+
+                &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
+                    &lt;input class="a-radio" id="is_helpful_4" type="radio" name="is_helpful" value="0"&gt;
+                        &lt;label class="a-label" for="is_helpful_4"&gt;Inline label
+                        &lt;/label&gt;
+                &lt;/div&gt;
+    &lt;/fieldset&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1977,8 +2015,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/fieldsets.md">
-                    <time datetime="2020-05-12 11:30:07 -0400">
-                        11:30:07 AM May 12, 2020
+                    <time datetime="2020-06-05 16:32:12 -0400">
+                         4:32:12 PM Jun 05, 2020
                     </time>
                 </a>
             </small>

@@ -2373,9 +2373,14 @@
     &lt;/div&gt;
 &lt;/form&gt;`,
                 
-                    'variation_name3': 'Large target fieldset with checkboxes',
-                    'variation_description3': "",
-                    'variation_code_snippet3': `&lt;form class=&quot;o-form&quot;&gt;
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Large target fieldset with checkboxes',
+                    'variation_description1': "",
+                    'variation_code_snippet1': `&lt;form class=&quot;o-form&quot;&gt;
     &lt;div class=&quot;o-form_group&quot;&gt;
         &lt;fieldset class=&quot;o-form_fieldset&quot;&gt;
             &lt;div class=&quot;m-form-field m-form-field__checkbox m-form-field__lg-target&quot;&gt;
@@ -2398,36 +2403,42 @@
     &lt;/div&gt;
 &lt;/form&gt;`,
                 
-                    'variation_name4': 'Large target fieldset with radio buttons',
-                    'variation_description4': "",
-                    'variation_code_snippet4': `&lt;form class=&quot;o-form&quot;&gt;
-    &lt;div class=&quot;o-form_group&quot;&gt;
-        &lt;fieldset class=&quot;o-form_fieldset&quot;&gt;
-            &lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
-                &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_default_1&quot; name=&quot;radio-fieldset&quot;&gt;
-                &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_default_1&quot;&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
-                &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_default_2&quot; name=&quot;radio-fieldset&quot;&gt;
-                &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_default_2&quot;&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
-                &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_default_3&quot; name=&quot;radio-fieldset&quot;&gt;
-                &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_default_3&quot;&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
-                &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_lg_default_4&quot; name=&quot;radio-fieldset&quot;&gt;
-                &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_default_4&quot;&gt;Label&lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/fieldset&gt;
-    &lt;/div&gt;
-&lt;/form&gt;`,
+                    'variation_name2': 'Large target fieldset with radio buttons',
+                    'variation_description2': "",
+                    'variation_code_snippet2': `&lt;fieldset class=&quot;o-form_fieldset&quot;&gt;
+                &lt;legend class=&quot;a-legend&quot;&gt;Basic legend
+                &lt;/legend&gt;
+
+                &lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+                    &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_1&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;1&quot;&gt;
+                        &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_1&quot;&gt;Inline label
+                        &lt;/label&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+                    &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_2&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;0&quot;&gt;
+                        &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_2&quot;&gt;Inline label
+                        &lt;/label&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+                    &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_3&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;0&quot;&gt;
+                        &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_3&quot;&gt;Inline label
+                        &lt;/label&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+                    &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_4&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;0&quot;&gt;
+                        &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_4&quot;&gt;Inline label
+                        &lt;/label&gt;
+                &lt;/div&gt;
+    &lt;/fieldset&gt;`,
                 
             
 
 
             'title': 'Fieldsets',
-            'description': "The fieldset element is used to group several controls as well as labels within a web form. The fieldset includes:  Legend  Block helper text (if necessary)  Inline labels  Set of controlsMore information can be found at:  http://cfpb.github.io/design-manual/page-components/form-fields.html  https://cfpb.github.io/capital-framework/components/cf-forms/#fieldsets*NOTE: The code doesn’t match description in that the code doesn’t include a legend, block helper text, or inline labels.",
+            'description': "The fieldset element is used to group several controls as well as labels within a web form.More information can be found at:  http://cfpb.github.io/design-manual/page-components/form-fields.html  https://cfpb.github.io/capital-framework/components/cf-forms/#fieldsets*NOTE: The code doesn’t match description in that the code doesn’t include a legend, block helper text, or inline labels.",
             'use_cases': "",
             'content_guidelines': "",
             'behavior': "",

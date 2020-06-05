@@ -44,24 +44,8 @@ variation_groups:
           * At breakpoints below 600: Page title and lead paragraph drop down one type size to make reading on smaller devices easier.
     variation_group_name: Standard text introduction
     variation_group_description: ""
-  - variation_group_name: Text introduction with optional breakout sidebar
-    variation_group_description: >-
-      On landing or sub-landing pages, the text introduction may be accompanied
-      by a breakout sidebar to highlight a specific piece of content from the
-      section. The optional breakout sidebar should be used when a specific
-      piece of content needs to be highlighted that is related to but not a
-      continuation of content in the introduction. The breakout sidebar may
-      contain a related posts element or imagery. An example of it appears on
-      the [Rulemaking sub-landing
-      page](https://www.consumerfinance.gov/policy-compliance/rulemaking/). 
-
-
-
-
-      Layout as seen with a ‘breakout’ highlight in the right sidebar area:
-
-
-      ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/textintro_intro2.png)
+  - variation_group_name: Variation
+    variation_group_description: ""
     variations:
       - variation_specs: >-
           #### Style
@@ -75,6 +59,24 @@ variation_groups:
           * Required elements: slug title and paragraph text.
 
           * Imagery: May use either a circle (1x1) image or a 16x9 ratio image.
+        variation_name: Breakout sidebar
+        variation_description: >-
+          On landing or sub-landing pages, the text introduction may be
+          accompanied by a breakout sidebar to highlight a specific piece of
+          content from the section. The optional breakout sidebar should be used
+          when a specific piece of content needs to be highlighted that is
+          related to but not a continuation of content in the introduction. The
+          breakout sidebar may contain a related posts element or imagery. An
+          example of it appears on the [Rulemaking sub-landing
+          page](https://www.consumerfinance.gov/policy-compliance/rulemaking/). 
+
+
+
+
+          Layout as seen with a ‘breakout’ highlight in the right sidebar area:
+
+
+          ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/textintro_intro2.png)
 use_cases: ""
 content_guidelines: >-
   Headings should be as succinct as possible, ideally staying on a single line

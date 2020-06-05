@@ -41,3 +41,43 @@ function handleDocumentClick( event ) {
 }
 
 document.addEventListener( 'click', handleDocumentClick, false );
+
+const secondaryNavCats = document.querySelectorAll( '.ds-secondary-nav' );
+let hasChangedViewport = false;
+
+/**
+ * Collapses the secondary nav summary categories.
+ */
+function collapseSecondaryNav() {
+  for ( let i = 0, len = secondaryNavCats.length; i < len; i++ ) {
+    secondaryNavCats[i].removeAttribute( 'open' );
+  }
+}
+
+/**
+ * Expands the secondary nav summary categories.
+ */
+function expandSecondaryNav() {
+  for ( let i = 0, len = secondaryNavCats.length; i < len; i++ ) {
+    secondaryNavCats[i].setAttribute( 'open', 'open' );
+  }
+}
+
+/**
+ * Test the viewport size and set whether the test passes on the instance.
+ */
+function handleViewportChange() {
+  if ( window.innerWidth < 901 ) {
+    collapseSecondaryNav();
+  } else {
+    expandSecondaryNav();
+  }
+}
+
+// Check viewport state on page load.
+handleViewportChange();
+
+// Add event listener for checking viewport state on window resize.
+window.addEventListener( 'resize', () => {
+  handleViewportChange();
+} );

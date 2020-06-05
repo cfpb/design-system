@@ -14,33 +14,110 @@
 {% comment %}
     Alphabetize the sections
 {% endcomment %}
-{% assign secondary_sections = secondary_sections | sort %}
+{% assign secondary_sections_sorted = secondary_sections | sort %}
 
-{% if secondary_sections %}
-<ul class="m-list m-list__unstyled">
-    {% for secondary_section in secondary_sections | sort %}
-    <li class="m-list_item u-mb15">
-        <span class="h5">{{ secondary_section }}</span>
-        <ul class="m-list m-list__links">
-            {% for p in site.pages %}
-                {% if p.section == page.section and p.secondary_section == secondary_section %}
+<aside class="ds-sidebar">
+
+    <!-- GETTING STARTED -->
+    {% assign categories_getting_started = site.pages | where "page", "section", "getting-started" %}
+    <details open class="ds-secondary-nav">
+        <summary>Getting Started</summary>
+        {% assign secondary_sections = categories_getting_started | map "section", "secondary_section" | uniq %}
+        {% for ss in secondary_sections %}
+        {% if ss | lstrip != '' %}
+        <details open class="ds-secondary-nav ds-secondary-nav__subnav">
+            <summary>{{ ss }}</summary>
+            <ul class="m-list m-list__links">
+            {% for p in categories_getting_started %}
+                {% if p.secondary_section == ss %}
                 <li class="m-list_item">
                     <a class="m-list_link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
                 </li>
                 {% endif %}
             {% endfor %}
-        </ul>
-    </li>
-    {% endfor %}
-</ul>
-{% else %}
-<ul class="m-list m-list__links">
-    {% for p in site.pages %}
-        {% if p.section == page.section %}
-        <li class="m-list_item">
-            <a class="m-list_link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
-        </li>
+            </ul>
+        </details>
         {% endif %}
-    {% endfor %}
-</ul>
-{% endif %}
+        {% endfor %}
+        </ul>
+    </details>
+
+    <hr>
+
+    <!-- FOUNDATION -->
+    {% assign categories_foundation = site.pages | where "page", "section", "foundation" %}
+    <details open class="ds-secondary-nav">
+        <summary>Foundation</summary>
+        {% assign secondary_sections = categories_foundation | map "section", "secondary_section" | uniq %}
+        {% for ss in secondary_sections %}
+        {% if ss | lstrip != '' %}
+        <details open class="ds-secondary-nav ds-secondary-nav__subnav">
+            <summary>{{ ss }}</summary>
+            <ul class="m-list m-list__links">
+            {% for p in categories_foundation %}
+                {% if p.secondary_section == ss %}
+                <li class="m-list_item">
+                    <a class="m-list_link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </details>
+        {% endif %}
+        {% endfor %}
+        </ul>
+    </details>
+
+    <hr>
+
+    <!-- COMPONENTS -->
+    {% assign categories_components = site.pages | where "page", "section", "components" %}
+    <details open class="ds-secondary-nav">
+        <summary>Components</summary>
+        {% assign secondary_sections = categories_components | map "section", "secondary_section" | uniq %}
+        {% for ss in secondary_sections %}
+        {% if ss | lstrip != '' %}
+        <details open class="ds-secondary-nav ds-secondary-nav__subnav">
+            <summary>{{ ss }}</summary>
+            <ul class="m-list m-list__links">
+            {% for p in categories_components %}
+                {% if p.secondary_section == ss %}
+                <li class="m-list_item">
+                    <a class="m-list_link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </details>
+        {% endif %}
+        {% endfor %}
+        </ul>
+    </details>
+
+    <hr>
+
+     <!-- TEMPLATES -->
+     {% assign categories_templates = site.pages | where "page", "section", "templates" %}
+     <details open class="ds-secondary-nav">
+         <summary>Templates</summary>
+         {% assign secondary_sections = categories_templates | map "section", "secondary_section" | uniq %}
+         {% for ss in secondary_sections %}
+         {% if ss | lstrip != '' %}
+         <details open class="ds-secondary-nav ds-secondary-nav__subnav">
+             <summary>{{ ss }}</summary>
+             <ul class="m-list m-list__links">
+             {% for p in categories_templates %}
+                 {% if p.secondary_section == ss %}
+                 <li class="m-list_item">
+                     <a class="m-list_link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                 </li>
+                 {% endif %}
+             {% endfor %}
+             </ul>
+         </details>
+         {% endif %}
+         {% endfor %}
+         </ul>
+     </details>
+
+</aside>

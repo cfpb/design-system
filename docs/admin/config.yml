@@ -28,7 +28,7 @@ collections:
         name: "home"
         file: "docs/home.md"
         fields:
-          - name: 'body'
+          - name: 'markdown'
             label: 'Markdown and/or HTML for the homepage'
             widget: 'text'
             required: true

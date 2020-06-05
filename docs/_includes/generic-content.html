@@ -1,8 +1,8 @@
 <section class="content_main">
 
-    {% if page.body %}
+    {% if page.markdown %}
     <div>
-        {{ page.body | markdownify }}
+        {{ page.markdown | markdownify }}
     </div>
     {% endif %}
 

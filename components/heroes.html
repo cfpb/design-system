@@ -1423,7 +1423,7 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Heroes are used to introduce landing and sublanding pages. To introduce lower-level pages like blogs or press releases that contain specific pieces of content, use the <a href="">text introduction</a>.</p>
+        <p>Heroes function as a primary focal point on landing and sublanding pages. They introduce a collection of pages by combining a brief description of the goals of that section along with a visually impactful graphic. To introduce lower-level pages, use the <a href="">text introduction</a> instead.</p>
 
     </section>
     
@@ -1440,7 +1440,18 @@
 
         
         <div class="o-variation_group_description">
-            
+            <p>Heroes combine a heading, a small amount of subheading text, and image.</p>
+
+<h5 id="when-to-use">When to use</h5>
+<ul>
+  <li>When orienting a user to a new section or topic</li>
+  <li>When the page serves as a navigational tool with general information about a subject and links to lower-level pages that contain more specific information</li>
+</ul>
+
+<h5 id="when-other-options-are-better">When other options are better</h5>
+<ul>
+  <li>When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the text introduction.</li>
+</ul>
 
         </div>
         
@@ -1460,8 +1471,7 @@
 
             
             <div class="m-variation_description">
-                <p>Use case for illustrations here.
-<a href="https://www.consumerfinance.gov/owning-a-home/">Live example</a></p>
+                <p><a href="https://www.consumerfinance.gov/owning-a-home/">Live example</a>. For design specs, including styles at different breakpoints and specs for bleeding illustrations, click on the “Show details” link.</p>
 
             </div>
             
@@ -1536,15 +1546,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-hero-with-illustration-use-case--1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-hero-with-illustration-use-case--1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-hero-with-illustration-live-exam-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-hero-with-illustration-live-exam-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-hero-with-illustration-use-case--1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-hero-with-illustration-live-exam-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-hero-with-illustration-use-case--html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-hero-with-illustration-live-exam-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1552,14 +1562,14 @@
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-hero-with-illustration-use-case--implementation-1">
+                        <a class="govuk-tabs__tab" href="#details-hero-with-illustration-live-exam-implementation-1">
                             Implementation
                         </a>
                     </li>
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-hero-with-illustration-use-case--specs-1">
+                        <a class="govuk-tabs__tab" href="#details-hero-with-illustration-live-exam-specs-1">
                             Specs
                         </a>
                     </li>
@@ -1568,7 +1578,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-hero-with-illustration-use-case--html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-hero-with-illustration-live-exam-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1635,11 +1645,20 @@
 
                 <!-- Implementation details -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-hero-with-illustration-use-case--implementation-1">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-hero-with-illustration-live-exam-implementation-1">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
-                            <p>When using an illustration that bleeds top to bottom at larger screen sizes, add the __bleeding modifier to the hero and add an additional m-hero_bleeding-image as a sibling to m-hero_image.</p>
+                            <h4 id="customizing-illustrations">Customizing illustrations</h4>
+<p>The illustration can be customized by setting the <code class="language-plaintext highlighter-rouge">background-image</code> property on the <code class="language-plaintext highlighter-rouge">.m-hero_image</code> element.</p>
+
+<h4 id="responsive-behavior">Responsive behavior</h4>
+<p>On small screens (or where media queries are not supported), the text spans the full width of the .m-hero_wrapper and the illustration is displayed underneath.</p>
+
+<p>For larger screen sizes, media queries are used to position the illustration to the right of the text.</p>
+
+<h3 id="bleeding-illustrations">Bleeding illustrations</h3>
+<p>When using an illustration that bleeds top to bottom at larger screen sizes, add the __bleeding modifier to the hero and add an additional m-hero_bleeding-image as a sibling to m-hero_image.</p>
 
 
                         </div>
@@ -1649,11 +1668,12 @@
 
                 <!-- Specs -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-hero-with-illustration-use-case--specs-1">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-hero-with-illustration-live-exam-specs-1">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
                             <h4 id="standard-hero-with-illustration">Standard hero with illustration</h4>
+
 <ul>
   <li>All illustrations should be saved at 200% to accommodate retina displays</li>
   <li>When saving illustrations, use a transparent background</li>
@@ -1666,6 +1686,7 @@
 <p><img src="/design-system/images/uploads/hero_style_non-bleed_small.png" alt="Image of smaller non-bleed hero graphics with dimensions" title="Image of smaller non-bleed hero graphics with dimensions"></p>
 
 <h4 id="hero-with-bleeding-illustration">Hero with bleeding illustration</h4>
+
 <ul>
   <li>Two images must be created, one for large and one for small screens</li>
   <li>Large and small screen images should contain the same elements but can differ compositionally</li>
@@ -1679,6 +1700,57 @@
 <p><img src="/design-system/images/uploads/hero_style_bleed_large.png" alt="Image of larger bleeding hero graphic with dimensions" title="Image of larger bleeding hero graphic with dimensions"></p>
 
 <p><img src="/design-system/images/uploads/hero_style_bleed_small.png" alt="Image of smaller bleeding hero graphics with dimensions" title="Image of smaller bleeding hero graphics with dimensions"></p>
+
+<h4 id="style-at-different-breakpoints">Style at different breakpoints</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Above 901 px</th>
+      <th>601 - 900 px</th>
+      <th>Below 601 px</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Heading</td>
+      <td>H1</td>
+      <td>H2</td>
+      <td>H2</td>
+    </tr>
+    <tr>
+      <td>Subheading</td>
+      <td>Avenir Next Regular, 22px/28px</td>
+      <td>Avenir Next Regular, 18px/22px</td>
+      <td>Avenir Next Regular, 18px/22px</td>
+    </tr>
+    <tr>
+      <td>Padding</td>
+      <td>Top/bottom: 45px, left/right: 30px</td>
+      <td>All sides: 30px</td>
+      <td>Top/bottom: 30px, left/right: 15px</td>
+    </tr>
+    <tr>
+      <td>Text alignment</td>
+      <td>Vertically centered</td>
+      <td>Vertically centered</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Height</td>
+      <td>285px (fixed)</td>
+      <td>Module height is flexible to text height</td>
+      <td>Module height is flexible to text height</td>
+    </tr>
+    <tr>
+      <td>Image</td>
+      <td><img src="/design-system/images/uploads/hero_style_desktop.png" alt="hero desktop style"></td>
+      <td><img src="/design-system/images/uploads/hero_style_tablet.png" alt="hero tablet style"></td>
+      <td><img src="/design-system/images/uploads/hero_style_mobile.png" alt="hero mobile style"></td>
+    </tr>
+  </tbody>
+</table>
 
                         </div>
                     </div>
@@ -1705,8 +1777,9 @@
 
             
             <div class="m-variation_description">
-                <p>Use case for photographs here.
-<a href="https://www.consumerfinance.gov/consumer-tools/mortgages/">Live example</a></p>
+                <p>The text overlays the photograph at larger screen sizes. It’s best to avoid a non-button call to action in these, as it’s unlikely that the Pacific Blue will have accessible contrast with a non-white (or light gray) background.</p>
+
+<p><a href="https://www.consumerfinance.gov/consumer-tools/mortgages/">Live example</a>. For design specs, click on the “Show details” link.</p>
 
             </div>
             
@@ -1780,15 +1853,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-hero-with-photograph-use-case-fo-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-hero-with-photograph-use-case-fo-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-hero-with-photograph-the-text-ov-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-hero-with-photograph-the-text-ov-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-hero-with-photograph-use-case-fo-2">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-hero-with-photograph-the-text-ov-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-hero-with-photograph-use-case-fo-html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#details-hero-with-photograph-the-text-ov-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -1797,7 +1870,7 @@
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-hero-with-photograph-use-case-fo-specs-2">
+                        <a class="govuk-tabs__tab" href="#details-hero-with-photograph-the-text-ov-specs-2">
                             Specs
                         </a>
                     </li>
@@ -1806,7 +1879,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-hero-with-photograph-use-case-fo-html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="details-hero-with-photograph-the-text-ov-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1875,7 +1948,7 @@
 
                 <!-- Specs -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-hero-with-photograph-use-case-fo-specs-2">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-hero-with-photograph-the-text-ov-specs-2">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
@@ -2132,19 +2205,22 @@
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<p>Hero content should orient the user and communicate the primary goal of the page.</p>
+<p>Hero content should orient the user and communicate the primary goal of the page. Copy should be succinct and engaging, reflecting the voice and tone of the CFPB.</p>
 
 <h4 id="do">Do</h4>
-<p>Write hero copy from the user’s perspective.</p>
 <ul>
-  <li>Orient the user: “Is this page what I was looking for?”</li>
-  <li>Engage the user: “Do I want to keep reading?”</li>
+  <li>Write hero copy from the user’s perspective.
+    <ul>
+      <li>Orient the user: “Is this page what I was looking for?”</li>
+      <li>Engage the user: “Do I want to keep reading?”</li>
+    </ul>
+  </li>
 </ul>
 
 <h4 id="dont">Don’t</h4>
 <ul>
-  <li>Don’t write copy from the perspective of what the Bureau does or offers.</li>
-  <li>Don’t include links or calls to action within the hero.</li>
+  <li>Don’t write copy from the perspective of what the Bureau does or offers. It’s less about what we can do for them or what we can offer them, and more about what the user can do with the resources we provide.</li>
+  <li>Don’t include links or calls to action within the hero, Since the goal of the hero is to get the user to continue reading the page. If there is content that needs to link elsewhere for explanation, place it underneath the hero within the main content area.</li>
 </ul>
 
 <h4 id="headings">Headings</h4>
@@ -2177,6 +2253,8 @@
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
+<p>For style at different breakpoints, see <a href="#standard-heroes">specs for standard heroes</a>.</p>
+
 <table>
   <thead>
     <tr>
@@ -2250,8 +2328,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/heroes.md">
-                    <time datetime="2020-05-12 11:30:07 -0400">
-                        11:30:07 AM May 12, 2020
+                    <time datetime="2020-06-04 21:34:50 -0400">
+                         9:34:50 PM Jun 04, 2020
                     </time>
                 </a>
             </small>

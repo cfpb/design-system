@@ -64,10 +64,13 @@ variation_groups:
                   }
               </style>
           </section>
-        variation_description: '[Live
-          example](https://www.consumerfinance.gov/owning-a-home/). For design
-          specs, including styles at different breakpoints and specs for
-          bleeding illustrations, click on the "Show details" link.'
+        variation_description: The hero graphic may be fully contained, as shown here,
+          or bleeding. For production and style specs, as well as implementation
+          details, click on the "Show details" link. For reference, please see
+          this [live example of a hero with
+          illustration](https://www.consumerfinance.gov/owning-a-home/) and
+          [live example of a hero with bleeding
+          illustration](https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/).
         variation_name: Hero with illustration
         variation_specs: >-
           #### Standard hero with illustration
@@ -144,7 +147,7 @@ variation_groups:
 
           #### Responsive behavior
 
-          On small screens (or where media queries are not supported), the text spans the full width of the .m-hero_wrapper and the illustration is displayed underneath.
+          On small screens (or where media queries are not supported), the text spans the full width of the `.m-hero_wrapper` and the illustration is displayed underneath.
 
 
           For larger screen sizes, media queries are used to position the illustration to the right of the text.
@@ -152,17 +155,13 @@ variation_groups:
 
           ### Bleeding illustrations 
 
-          When using an illustration that bleeds top to bottom at larger screen sizes, add the __bleeding modifier to the hero and add an additional m-hero_bleeding-image as a sibling to m-hero_image.
+          When using an illustration that bleeds top to bottom at larger screen sizes, add the `__bleeding` modifier to the hero and add an additional `m-hero_bleeding-image` as a sibling to `m-hero_image`.
 
       - variation_name: Hero with photograph
-        variation_description: >-
-          The text overlays the photograph at larger screen sizes. It’s best to
-          avoid a non-button call to action in these, as it’s unlikely that the
-          Pacific Blue will have accessible contrast with a non-white (or light
-          gray) background. 
-
-
-          [Live example](https://www.consumerfinance.gov/consumer-tools/mortgages/). For design specs, click on the "Show details" link.
+        variation_description: Note hero text overlays the photograph at larger screen
+          sizes. For implementation details and production specs, click on the
+          "Show details" link. Also see this [live example of a hero with
+          photograph](https://www.consumerfinance.gov/consumer-tools/auto-loans/).
         variation_code_snippet: >-
           <section class="m-hero m-hero__overlay" id="hero4">
               <div class="m-hero_wrapper wrapper">
@@ -238,6 +237,9 @@ variation_groups:
 
 
           ![Image of smaller photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_small.png "Image of smaller photographic hero graphic with dimensions")
+        variation_implementation: "It’s best to avoid a non-button call to action in
+          these, as it’s unlikely that the Pacific Blue will have accessible
+          contrast with a non-white (or light gray) background. "
     variation_group_name: Standard heroes
     variation_group_description: >-
       Heroes combine a heading, a small amount of subheading text, and image. 
@@ -252,7 +254,7 @@ variation_groups:
 
       ##### When other options are better
 
-      * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the text introduction.
+      * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the text introduction or item introduction.
   - variation_group_name: Variations
     variations:
       - variation_name: Hero with knockout text

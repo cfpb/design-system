@@ -3662,23 +3662,45 @@ The text will be styled the same as H5 heading text.
 &lt;/label&gt;`,
                 
                     'variation_name2': 'Label heading',
-                    'variation_description2': "The secondary state is very secondary.",
+                    'variation_description2': "",
                     'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
-    A label heading
-&lt;/label&gt;`,
+Label heading
+&lt;/label&gt;
+
+&lt;input class=&quot;a-text-input&quot; type=&quot;text&quot;&gt;`,
                 
-                    'variation_name3': 'Basic legend',
-                    'variation_description3': "The legend serves as the heading for a fieldset.",
-                    'variation_code_snippet3': `&lt;legend class=&quot;a-legend&quot;&gt;
-    A basic legend
-&lt;/legend&gt;
-`,
+                    'variation_name3': 'Inline label',
+                    'variation_description3': "",
+                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
+    &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox&quot;&gt;Inline label&lt;/label&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name4': 'Basic legend',
+                    'variation_description4': "The legend serves as the heading for a fieldset.",
+                    'variation_code_snippet4': `&lt;fieldset class=&quot;o-form_fieldset&quot;&gt;
+                &lt;legend class=&quot;a-legend&quot;&gt;Basic legend
+                &lt;/legend&gt;
+
+                &lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+                    &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_1&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;1&quot;&gt;
+                        &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_1&quot;&gt;Inline label
+                        &lt;/label&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;m-form-field m-form-field__radio m-form-field__lg-target&quot;&gt;
+                    &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_2&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;0&quot;&gt;
+                        &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_2&quot;&gt;Inline label
+                        &lt;/label&gt;
+                &lt;/div&gt;
+
+    &lt;/fieldset&gt;`,
                 
             
 
 
             'title': 'Labels and legends',
-            'description': "The legend serves as the heading for a fieldset.More information can be found at:  http://cfpb.github.io/design-manual/page-components/form-fields.html  https://cfpb.github.io/capital-framework/components/cf-forms/#labels",
+            'description': "Labels and legends are used to help users understand the meaning of a form input. Legends are used exclusively for fieldsets.",
             'use_cases': "",
             'content_guidelines': "",
             'behavior': "",

@@ -217,7 +217,12 @@ variation_groups:
                      checked>
               <label class="a-label" for="test_radio_lg_disabled">Disabled/selected</label>
           </div>
-        variation_name: ""
+        variation_name: Large target area radio buttons
+        variation_description: For better usability, consider using radio buttons with
+          large target areas. These are easier to interact with (especially on
+          smaller screens) and harder to miss. They are especially desirable
+          when the form will have heavy mobile usage. Given the amount of real
+          estate they occupy, they’re probably not suited for all use cases.
       - variation_code_snippet: |-
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_helper">
@@ -230,7 +235,7 @@ variation_groups:
                 </label>
           </div>
         variation_name: Large target radio button with helper text
-    variation_group_name: Large target area radio buttons
+    variation_group_name: Sizes
 use_cases: >-
   Leave radio buttons unselected as the default. It’s easy for users to miss
   that a radio button has been preselected and to submit a form with an

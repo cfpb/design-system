@@ -69,8 +69,9 @@ variation_groups:
           specs, including styles at different breakpoints and specs for
           bleeding illustrations, click on the "Show details" link.'
         variation_name: Hero with illustration
-        variation_specs: >
+        variation_specs: >-
           #### Standard hero with illustration
+
 
           * All illustrations should be saved at 200% to accommodate retina displays
 
@@ -88,6 +89,7 @@ variation_groups:
 
 
           #### Hero with bleeding illustration
+
 
           * Two images must be created, one for large and one for small screens
 
@@ -113,19 +115,27 @@ variation_groups:
           #### Style at different breakpoints
 
 
-          | Item | Above 901 px | 601 - 900 px | Below 601 px | 
 
-          | -- | -- | -- | -- |
 
-          | Heading | H1 | H2 | H2 | 
 
-          | Subheading | Avenir Next Regular, 22px/28px | Avenir Next Regular, 18px/22px | Avenir Next Regular, 18px/22px | 
 
-          | Padding | Top/bottom: 45px, left/right: 30px | All sides: 30px | Top/bottom: 30px, left/right: 15px | 
 
-          | Text alignment | Vertically centered | Vertically centered | - | 
 
-          | Height | 285px (fixed) | Module height is flexible to text height | Module height is flexible to text height | 
+          | Item           | Above 901 px                       | 601 - 900 px                             | Below 601 px                              |
+
+          | -------------- | ---------------------------------- | ---------------------------------------- | ----------------------------------------- |
+
+          | Heading        | H1                                 | H2                                       | H2                                        |
+
+          | Subheading     | Avenir Next Regular, 22px/28px     | Avenir Next Regular, 18px/22px           | Avenir Next Regular, 18px/22px            |
+
+          | Padding        | Top/bottom: 45px, left/right: 30px | All sides: 30px                          | Top/bottom: 30px, left/right: 15px        |
+
+          | Text alignment | Vertically centered                | Vertically centered                      | \-                                        |
+
+          | Height         | 285px (fixed)                      | Module height is flexible to text height | Module height is flexible to text height |  
+
+          | Image | ![hero desktop style](/design-system/images/uploads/hero_style_desktop.png) | ![hero tablet style](/design-system/images/uploads/hero_style_tablet.png) | ![hero mobile style](/design-system/images/uploads/hero_style_mobile.png) |
         variation_implementation: >+
           When using an illustration that bleeds top to bottom at larger screen
           sizes, add the __bleeding modifier to the hero and add an additional

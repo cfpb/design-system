@@ -5,8 +5,9 @@ section: components
 secondary_section: Layout options
 description: The item introduction component is a variation of the
   [](https://cfpb.github.io/design-manual/global-elements/text-introductions.html)text
-  introduction. It's used on pages found in filterable lists, such as blog
-  posts, press releases, or documents.
+  introduction. It's used on learn and document detail pages found through
+  filterable lists. Examples of pages that use item introductions include blog
+  posts, press releases, and documents.
 variation_groups:
   - variation_group_name: Standard item introduction
     variations:

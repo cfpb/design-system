@@ -557,11 +557,9 @@ variation_groups:
           * Please note the importance of defining a `thead` and `tbody` to preserve the table’s header through sorting operations.
     variation_group_name: Variations
 use_cases: >-
-  Tables are only one method for presenting many data points grouped together in
-  a visual way. Other options include charts or graphs.
-
-
-  Tables serve a unique purpose of allowing easy organization or comparison of more complex data than a chart or graph. They can be read either vertically (by columns) or horizontally (by rows).
+  Tables allow easy organization or comparison of more complex data than a chart
+  or graph. They can be read either vertically (by columns) or horizontally (by
+  rows).
 
 
   Tables work best when:
@@ -573,7 +571,7 @@ use_cases: >-
   * Individual values are being presented or compared
 
   * Values across columns or rows require different units of measurement
-content_guidelines: >-
+content_guidelines: >
   As a rule, design tables so that they are easy to read. Label columns
   precisely and include units of measurement where necessary. Organize the data
   so that the underlying meaning is quickly apparent.
@@ -584,12 +582,12 @@ content_guidelines: >-
   Give tables a meaningful title that succinctly describes the content presented so that users can understand their purpose at a glance. If presenting more than one table within a page, consider adding labels (e.g. “Table 1,” “Table 2,” etc.) in addition to titles. Labels should precede titles (e.g. “Table 1: The title given to this table”).
 
 
-  ##### Long column labels
+  #### Long column labels
 
   Consider using fixed columns or truncation for column labels that are significantly longer than the expected width of the data.
 
 
-  ##### Unit of measurement
+  #### Unit of measurement
 
   Make sure to indicate the unit of measurement. In terms of placement, if the units are the same across columns, indicate the unit of measurement in the title or someplace noticeable above the table.
 
@@ -598,48 +596,11 @@ content_guidelines: >-
 
 
   If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.
-behavior: >-
-  Since the nature of tables relies so much on visual space, there are several
-  common variations that can be used to accommodate different types of data in a
-  table.
+behavior: >
+  #### Sortable tables 
 
+  At large screen sizes,  
 
-  #### Stacking tables
-
-  A default table would “stack” the information on a smaller screen, since shrinking a table that maintained its columns/row structure would make it illegible.
-
-
-  #### Directory tables
-
-  When the data you’re presenting should only be read across the rows (instead of down columns), you can use a directory table. The first column in these tables is what organizes or labels the other data points in the row.
-
-
-  For instance, contact information is comprised of a name, phone number, and email address. An event is made up of the name of the event, time, and location. You need all three pieces of data to create an understanding of the thing being shown, and the first column of data is the key to that understanding.
-
-
-  The default stacking behavior on smaller breakpoints doesn’t maintain that “first column” importance since it stacks based on column headers.
-
-
-  As such, at the small screen breakpoint, the directory table pattern uses that first column data (employee name, for instance) as a way to group and label stacks of rows.
-
-
-  See guidance on styles for a a directory table and how it should look on smaller breakpoints.
-
-
-  #### Scrolling tables
-
-  When the data you’re presenting has more columns than what will comfortably fit on the screen, you can use a table that scrolls horizontally. This becomes especially important when thinking about tables on smaller screens, instead of allowing the data to stack at smaller breakpoints.
-
-
-  Using a table that scrolls ensures that all the information can be accessed in its original tabular structure, even on a smaller screen.
-
-
-  See guidance on styles for a table that scrolls horizontally at all screen sizes.
-
-
-  #### Sorting tables
-
-  At large screen sizes, tables can be sorted using the header of any sortable column.
 
   * The currently sorted column is marked with an up or down triangle for ascending and descending sorts, respectively
 
@@ -650,74 +611,7 @@ behavior: >-
   * Columns that cannot sort show nothing on hover
 
 
-  If sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked.
-
-
-  #### Code
-
-  #### Making a table sortable
-
-  By adding the `.o-table__sortable` class to a `table`, the table becomes sortable. To allow the table to be sorted by a column, add a button to the `th` of the column like so:
-
-
-  ```
-
-  …
-
-  <button class="sortable">
-      Column Name
-  </button>
-
-  …
-
-  ```
-
-  The use of a `button` helps address certain accessibility concerns.
-
-
-  #### Sorting type
-
-  To sort properly, the type of the `data` can be specified. By default, the column’s values will be sorted as `string` values. However, the column can be specifically sorted by `number` values (in which case, the cell’s contents are stripped of non-numeric characters, then sorted by the resulting number). To see an example, the sample table later in this document sorts the “Distance” column by `number` value.
-
-
-  To sort by `number` value, add the `data-sort_type="number"` attribute to the sorting button:
-
-
-  ```
-
-  <table class="o-table o-table__sortable">
-      …
-          <th>
-              <button class="sortable" data-sort_type="number">Column Name</button>
-          </th>
-      …
-  </table>
-
-  ```
-
-
-  #### Sorting table on page load
-
-  To sort the table on page load, use the `.sorted-up` and `.sorted-down` classes:
-
-
-  ```
-
-  <table class="o-table o-table__sortable">
-      …
-          <th>
-              <button class="sortable sorted-up">Column Name</button>
-          </th>
-      …
-  </table>
-
-  ```
-
-
-
-  * The class `.sorted-up` refers to a sort from smallest to greatest (first to last), and `.sorted-down` refers to a sort from greatest to smallest (last to first). These classes are added to the `th` when sorting occurs.
-
-  * Please note the importance of defining a `thead` and `tbody` to preserve the table’s header through sorting operations.
+  If sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked. 
 accessibility: Remember to always use headers (that is, `<th>` elements) for all
   data tables to make tabular data accessible.
 last_updated: 2019-08-30T15:18:28.960Z

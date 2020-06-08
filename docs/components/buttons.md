@@ -9,7 +9,7 @@ description: Buttons signal actions. They should be used sparingly; each
   In contrast, [links](https://cfpb.github.io/design-system/components/link)
   should lead users to another page or further information.
 variation_groups:
-  - variation_group_name: Standard buttons
+  - variation_group_name: Types
     variation_group_description: ""
     variations:
       - variation_code_snippet: >-

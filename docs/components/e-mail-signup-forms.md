@@ -106,41 +106,24 @@ behavior: >-
 
   | -- | -- | 
 
-  | ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg) 
-
-  | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)  | 
+  | ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)  | 
 
 
-
-
-  ##### Inset
+  ### Inset
 
 
   When the inset module is wide enough, the Privacy Act statement link is displayed inline with the sign up button, right-aligned.
 
 
-  ![Inset email sign up 900 breakpoint](/design-system/images/uploads/email-sign-up_learn.png)
-
-
-  #### Breakpoints 900 - 601
-
-
-  #### Breakpoints 601 and less
-
-
-
-
-
-  ##### Inset
-
-
   At breakpoints below 601px, the inset module transitions to a single column and stacks above the full-width text. The signup button extends the full width of the module at the smallest breakpoint, 320px.
 
 
-  ![Inset breakpoint 601](/design-system/images/uploads/email-sign-up_learn_601.png)
 
+  | Above 900 px | 601-900 px | Below 601 px | 
 
-  ![Inset breakpoint 320](/design-system/images/uploads/email-sign-up_learn_320.png)
+  | -- | -- | -- | 
+
+  | ![Inset email sign up 900 breakpoint](/design-system/images/uploads/email-sign-up_learn.png) | ![Inset breakpoint 601](/design-system/images/uploads/email-sign-up_learn_601.png) | ![Inset breakpoint 320](/design-system/images/uploads/email-sign-up_learn_320.png) |
 accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
 research: ""

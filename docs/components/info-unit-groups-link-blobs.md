@@ -109,21 +109,21 @@ behavior: >-
   #### Half-width link blob
 
 
-  | Above 600 px | Below 601 px |
+  Above 600 px | Below 601 px
 
-  | --- | --- |
+  --- | ---
 
-  | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png) |
+  ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png)
 
 
   #### Third-width link blob
 
 
-  | Above 600 px | Below 601 px |
+  Above 600 px | Below 601 px
 
-  | --- | --- |
+  --- | ---
 
-  | ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png) |
+  ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png)
 accessibility: ""
 related_items: >-
   * [Info Unit Groups: image and

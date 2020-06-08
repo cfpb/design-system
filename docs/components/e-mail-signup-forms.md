@@ -49,11 +49,13 @@ variation_groups:
         variation_name: Inset email sign up
     variation_group_name: Types
     variation_group_description: >-
-      Different page types will be connected to the corresponding GovDelivery
-      list based on the page topic (i.e. HMDA) or page type (i.e. blog).
+      The email sign up form is comprised of standard slug text ("Email
+      updates"), custom description text, a form field for the user to enter
+      their email address, a standardized link to a privacy policy statement,
+      and a standardized sign up button.  
 
 
-      This pattern also includes a link to our privacy statement and a an optional call to action to subscribe to an RSS feed.
+      Different page types will be connected to the corresponding GovDelivery list based on the page topic (i.e. HMDA) or page type (i.e. blog).
 use_cases: ""
 content_guidelines: >-
   * Use standard slug text: “Email updates”

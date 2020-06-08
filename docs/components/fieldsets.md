@@ -53,7 +53,7 @@ variation_groups:
           </form>
         variation_description: " "
         variation_name: Fieldset with radio buttons
-    variation_group_name: Standard fieldsets
+    variation_group_name: Types
     variation_group_description: The fieldset includes the legend, optional block
       helper text, inline labels, and a set of controls.
   - variation_group_name: Sizes

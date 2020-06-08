@@ -80,19 +80,37 @@ behavior: >-
   sidebar or a prefooter area.
 
 
-  #### Breakpoints 901+
+  ### Sidebar email sign up module: Sublanding pages 
 
 
-  ##### Sublanding page
+  At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
 
 
-  ![Sublanding page](/design-system/images/uploads/emailsignup_behavior_mockup_1.jpg)
+  | Above 900 px | 601-900 px | Below 601 px | 
+
+  | -- | -- | -- | 
+
+  | ![Sublanding page](/design-system/images/uploads/emailsignup_behavior_mockup_1.jpg) | ![Breakpoints 900 - 601](/design-system/images/uploads/emailsignup_behavior_mockup_3.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)  |
 
 
-  ##### Browse page
+  ### Sidebar email sign up module: Browse pages 
 
 
-  ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg)
+  Browse pages do not have a sidebar. The sidebar email sign up module appears in the prefooter at the bottom of the page. 
+
+
+  For breakpoints below 601, heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
+
+
+  | Above 600 px | Below 601 px | 
+
+  | -- | -- | 
+
+  | ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg) 
+
+  | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)  | 
+
+
 
 
   ##### Inset
@@ -107,22 +125,10 @@ behavior: >-
   #### Breakpoints 900 - 601
 
 
-  ##### Sidebar
-
-
-  ![Breakpoints 900 - 601](/design-system/images/uploads/emailsignup_behavior_mockup_3.jpg)
-
-
   #### Breakpoints 601 and less
 
 
-  At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
 
-
-  ##### Sidebar
-
-
-  ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)
 
 
   ##### Inset

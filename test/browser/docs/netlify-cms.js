@@ -33,7 +33,7 @@ describe( 'Netlify CMS', function() {
       loginButton.waitForDisplayed();
       loginButton.click();
       // The homepage's body field
-      const pageBodyField = $( '#nc-root #body-field-1' );
+      const pageBodyField = $( '#nc-root #markdown-field-1' );
       pageBodyField.waitForDisplayed();
       pageBodyField.clearValue();
       pageBodyField.setValue( 'browser tests are fun' );

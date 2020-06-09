@@ -75,7 +75,7 @@ description: |-
                   Log into the CMS by clicking the "Login with Github" button. 
                   You'll need a github.com account and you'll need to be added to <a href="https://github.com/orgs/cfpb/people">CFPB's GitHub organization</a>. 
                   If you're new to GitHub and need to be added to this organization, 
-                  reach out to CFPB's front-end web development team by posting a message in the mattermost `FEWD` channel.
+                  post a message in the <code>Design System</code> mattermost channel and someone will assist you.
               </p>
               <div class="o-well">
                   <img src="/design-system/images/uploads/cms-demo2.gif" alt="Screenshot showing how to log into Netlify CMS" />

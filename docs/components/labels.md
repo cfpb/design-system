@@ -5,7 +5,8 @@ section: components
 secondary_section: Text
 status: Released
 description: "Labels and legends are used to help users understand the meaning
-  of a form input. Legends are used exclusively for [fieldsets](). "
+  of a form input. Legends are used exclusively for
+  [fieldsets](https://cfpb.github.io/design-system/components/fieldsets). "
 variation_groups:
   - variations:
       - variation_code_snippet: |-
@@ -14,6 +15,11 @@ variation_groups:
           </label>
         variation_description: ""
         variation_name: Basic label
+        variation_specs: |-
+          #### Basic label
+          * Avenir Next Medium, 18 px, Black (#101820)
+          * Positioned above the input field, left aligned
+          * Margin bottom: 10 px
       - variation_code_snippet: |-
           <label class="a-label a-label__heading">
           Label heading
@@ -33,6 +39,10 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox">
               <label class="a-label" for="test_checkbox">Inline label</label>
           </div>
+        variation_specs: |-
+          #### Inline label
+          * Avenir Next Regular, 16 px, Black (#101820)
+          * Positioned to the right of the input field, inline
       - variation_code_snippet: >-
           <fieldset class="o-form_fieldset">
                           <legend class="a-legend">Basic legend
@@ -54,11 +64,18 @@ variation_groups:
         variation_description: The legend serves as the heading for a
           [fieldset](https://cfpb.github.io/design-system/components/fieldsets).
         variation_name: Basic legend
+        variation_specs: |-
+          #### Legend
+          * Avenir Next Medium, 18 px, Black (#101820)
+          * Positioned above a group of input fields, left aligned
     variation_group_name: Types
 use_cases: ""
 content_guidelines: ""
 behavior: ""
 accessibility: ""
+related_items: |-
+  * [Helper text](https://cfpb.github.io/design-system/components/helper-text)
+  * [Fieldsets](https://cfpb.github.io/design-system/components/fieldsets)
 last_updated: 2020-01-28T15:55:47.394Z
 research: ""
 ---

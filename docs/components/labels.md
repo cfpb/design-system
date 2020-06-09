@@ -73,6 +73,9 @@ use_cases: ""
 content_guidelines: ""
 behavior: ""
 accessibility: ""
+related_items: |-
+  * [Helper text](https://cfpb.github.io/design-system/components/helper-text)
+  * [Fieldsets](https://cfpb.github.io/design-system/components/fieldsets)
 last_updated: 2020-01-28T15:55:47.394Z
 research: ""
 ---

@@ -41,25 +41,19 @@ variation_groups:
 
           * Search alone is sufficient for user needs
         variation_name: ""
-        variation_specs: >-
-          ![Filter panel
-          style](/design-system/images/uploads/filter_style_1.png)
-
-
-          ### Style
-
-
-          * Follow form patterns for grouping, layout, and messaging.
-
-          * Maximum three column wide layout, options stack vertically below 601 pixels.
-
-          * Notification messaging sits below filter and above results
+        variation_specs: "![Filter panel
+          style](/design-system/images/uploads/filter_style_1.png)"
     variation_group_name: Standard filterable list
-    variation_group_description: Use filters in conjunction with search to help
-      users narrow down large amounts of data or content. The example below
-      shows a layout as seen on a browse filterable template.
+    variation_group_description: >-
+      Use filters in conjunction with search to help users narrow down large
+      amounts of data or content. Follow form patterns for grouping, layout, and
+      messaging.  Note that notification messaging sits below the filter and
+      above results. 
+
+
+      The example below shows a layout as seen on a browse filterable template.
 use_cases: ""
-content_guidelines: >-
+content_guidelines: >
   * Headings and labels should be as succinct as possible, ideally 10 characters
   or less. Do not use colon (:) or other punctuation after the header.
 
@@ -68,13 +62,10 @@ content_guidelines: >-
   Answer options beneath heading should also be succinct, roughly 25 characters or less.
 
   * Headings and answer options should be sentence case (unless specifically proper nouns or titles)
-
-  * Notification messaging sits below filter and above results
-
-  * Maximum three column wide layout, options stack vertically below 601 pixels
-
-  * Follow form patterns for grouping, layout, and messaging.
 behavior: >-
+  Maximum three column wide layout. Options stack vertically below 601 pixels.
+
+
   | Above 600 px | Below 601 px |
 
   | ------------ | ------------ |

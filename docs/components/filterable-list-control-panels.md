@@ -83,6 +83,9 @@ behavior: >-
 
   When a user applies a filter setting, a notification automatically appears below the panel indicating number of results or errors.
 accessibility: ""
+related_items: "*
+  [Notifications](https://cfpb.github.io/design-system/components/notifications\
+  )"
 last_updated: 2020-01-28T15:55:47.394Z
 research: ""
 ---

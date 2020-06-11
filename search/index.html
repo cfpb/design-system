@@ -3915,17 +3915,9 @@ Label heading
                 
 
                 
-                    'variation_name1': 'Unstyled list',
-                    'variation_description1': "Unstyled list removes bullets and other styling from a list.",
-                    'variation_code_snippet1': `&lt;ul class=&quot;m-list m-list__unstyled&quot;&gt;
-    &lt;li class=&quot;m-list_item&quot;&gt;List item 1&lt;/li&gt;
-    &lt;li class=&quot;m-list_item&quot;&gt;List item 2&lt;/li&gt;
-    &lt;li class=&quot;m-list_item&quot;&gt;List item 3&lt;/li&gt;
-&lt;/ul&gt;`,
-                
-                    'variation_name2': 'Bulleted list',
-                    'variation_description2': "Use a bulleted list when grouping similar items or short thoughts into “bite-size” chunks. Generally, the order or count of the items in a bullet list isn’t important. An exception to this may be a list of states, which naturally fits into an alphabetical order.",
-                    'variation_code_snippet2': `&lt;p&gt; Paragraph example for visual reference&lt;/p&gt;
+                    'variation_name1': 'Bulleted list',
+                    'variation_description1': "Use a bulleted list when grouping similar items or short thoughts into “bite-size” chunks. Generally, the order or count of the items in a bullet list isn’t important. An exception to this may be a list of states, which naturally fits into an alphabetical order.",
+                    'variation_code_snippet1': `&lt;p&gt; Paragraph example for visual reference&lt;/p&gt;
 &lt;ul class=&quot;m-list&quot;&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;List item 1&lt;/li&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;
@@ -3940,9 +3932,9 @@ Label heading
 &lt;/ul&gt;
 &lt;p&gt; Paragraph example for visual reference&lt;/p&gt;`,
                 
-                    'variation_name3': 'Numbered list',
-                    'variation_description3': "When the order of information presented is important, use a numbered list. This could include chronological items, things presented in the order or importance, or a finite list of a counted number of items.",
-                    'variation_code_snippet3': `&lt;p&gt;Paragraph example for visual reference&lt;/p&gt;
+                    'variation_name2': 'Numbered list',
+                    'variation_description2': "When the order of information presented is important, use a numbered list. This could include chronological items, things presented in the order or importance, or a finite list of a counted number of items.",
+                    'variation_code_snippet2': `&lt;p&gt;Paragraph example for visual reference&lt;/p&gt;
 &lt;ol&gt;
     &lt;li&gt;List item 1&lt;/li&gt;
     &lt;li&gt;
@@ -3957,17 +3949,30 @@ Label heading
 &lt;/ol&gt;
 &lt;p&gt;Paragraph example for visual reference&lt;/p&gt;`,
                 
-                    'variation_name4': 'Horizontal list',
-                    'variation_description4': "A modifier for the list to make it show items horizontally.",
-                    'variation_code_snippet4': `&lt;ul class=&quot;m-list m-list__horizontal&quot;&gt;
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Unstyled list',
+                    'variation_description1': "Unstyled list removes bullets and other styling from a list.",
+                    'variation_code_snippet1': `&lt;ul class=&quot;m-list m-list__unstyled&quot;&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;List item 1&lt;/li&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;List item 2&lt;/li&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;List item 3&lt;/li&gt;
 &lt;/ul&gt;`,
                 
-                    'variation_name5': 'Link list',
-                    'variation_description5': "The link list modifier is intended to be used for lists where each item is a link. It converts to a finger-friendly link with a large tap area on smaller screens.",
-                    'variation_code_snippet5': `&lt;ul class=&quot;m-list m-list__links&quot;&gt;
+                    'variation_name2': 'Horizontal list',
+                    'variation_description2': "A modifier for the list to make it show items horizontally.",
+                    'variation_code_snippet2': `&lt;ul class=&quot;m-list m-list__horizontal&quot;&gt;
+    &lt;li class=&quot;m-list_item&quot;&gt;List item 1&lt;/li&gt;
+    &lt;li class=&quot;m-list_item&quot;&gt;List item 2&lt;/li&gt;
+    &lt;li class=&quot;m-list_item&quot;&gt;List item 3&lt;/li&gt;
+&lt;/ul&gt;`,
+                
+                    'variation_name3': 'Link list',
+                    'variation_description3': "The link list modifier is intended to be used for lists where each item is a link. It converts to a finger-friendly link with a large tap area on smaller screens.",
+                    'variation_code_snippet3': `&lt;ul class=&quot;m-list m-list__links&quot;&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;
         &lt;a class=&quot;m-list_link&quot; href=&quot;#&quot;&gt;List item 1&lt;/a&gt;
     &lt;/li&gt;
@@ -3979,37 +3984,37 @@ Label heading
     &lt;/li&gt;
 &lt;/ul&gt;`,
                 
-                    'variation_name6': 'Spaced list',
-                    'variation_description6': "Spaced list adds extra padding to every element in a list.",
-                    'variation_code_snippet6': `&lt;ul class=&quot;m-list m-list__spaced&quot;&gt;
+                    'variation_name4': 'Spaced list',
+                    'variation_description4': "Spaced list adds extra padding to every element in a list.",
+                    'variation_code_snippet4': `&lt;ul class=&quot;m-list m-list__spaced&quot;&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;List item 1&lt;/li&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;List item 2&lt;/li&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;List item 3&lt;/li&gt;
 &lt;/ul&gt;`,
                 
-                    'variation_name7': 'Basic definition list',
-                    'variation_description7': "When the primary role of a list is to offer definitions or explanations for a group of terms, the bolded term should appear first, followed by a colon. The definition should appear after the bolded term and be written in complete sentences.Each defined term should appear on its own line, without an indentation or bullet.",
-                    'variation_code_snippet7': `  `,
+                    'variation_name5': 'Basic definition list',
+                    'variation_description5': "When the primary role of a list is to offer definitions or explanations for a group of terms, the bolded term should appear first, followed by a colon. The definition should appear after the bolded term and be written in complete sentences.Each defined term should appear on its own line, without an indentation or bullet.",
+                    'variation_code_snippet5': `  `,
                 
-                    'variation_name8': 'Key/value definition list',
-                    'variation_description8': "Modifies the base style to make &lt;dt&gt; look like an h5. Used for definition lists that contain key/value or term/definition pairs (i.e. lists where the &lt;dt&gt; is fairly short, acts like a label, and is readable in all caps), like the Mosaic portals and the job listings.",
-                    'variation_code_snippet8': ``,
+                    'variation_name6': 'Key/value definition list',
+                    'variation_description6': "Modifies the base style to make &lt;dt&gt; look like an h5. Used for definition lists that contain key/value or term/definition pairs (i.e. lists where the &lt;dt&gt; is fairly short, acts like a label, and is readable in all caps), like the Mosaic portals and the job listings.",
+                    'variation_code_snippet6': ``,
                 
-                    'variation_name9': 'Compact definition list',
-                    'variation_description9': "Modifies the base style to put &lt;dt&gt; and &lt;dd&gt; on the same line (and maybe also add a colon after the &lt;dt&gt;?). Used when the two parts of the list entry should be inline, as in the job listings.",
-                    'variation_code_snippet9': ``,
+                    'variation_name7': 'Compact definition list',
+                    'variation_description7': "Modifies the base style to put &lt;dt&gt; and &lt;dd&gt; on the same line (and maybe also add a colon after the &lt;dt&gt;?). Used when the two parts of the list entry should be inline, as in the job listings.",
+                    'variation_code_snippet7': ``,
                 
             
 
 
             'title': 'Lists',
-            'description': "Lists are an effective way to visually highlight important information so that it can be more easily scanned and read. Before writing a list, it’s important to identify the best style needed for the information being presented.List items should:  Be capitalized  Avoid unnecessary repetition  Have a parallel structure  Start with an introductory clause or sentence  Use consistent punctuationIf the list items are complete sentences, the introductory clause should also be a complete sentence, followed by a colon. These list items should end with a period.If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.More information can be found at:  http://cfpb.github.io/design-manual/brand-guidelines/typography.html  https://cfpb.github.io/capital-framework/components/cf-typography/#lists",
+            'description': "Lists are an effective way to visually highlight important information so that it can be more easily scanned and read. Before writing a list, it’s important to identify the best style needed for the information being presented.More information can be found at:  http://cfpb.github.io/design-manual/brand-guidelines/typography.html  https://cfpb.github.io/capital-framework/components/cf-typography/#lists",
             'use_cases': "",
-            'content_guidelines': "",
+            'content_guidelines': "List items should:  Be capitalized  Avoid unnecessary repetition  Have a parallel structure  Start with an introductory clause or sentence  Use consistent punctuationIf the list items are complete sentences, the introductory clause should also be a complete sentence, followed by a colon. These list items should end with a period.If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.",
             'behavior': "",
             'accessibility': "",
             'research': "",
-            'related_items': "",
+            'related_items': "  Typography",
             'url': 'components/lists'
         }
         ,

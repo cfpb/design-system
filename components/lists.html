@@ -1403,6 +1403,20 @@
     <ul class="m-list m-list__horizontal u-mb30">
         
         
+        <li class="m-list_item">
+            <a class="m-list_link" href="#types">
+                Types
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#variations">
+                Variations
+            </a>
+        </li>
+        
         
     </ul>
     
@@ -1410,20 +1424,6 @@
     
     <section id="description" class="u-mb30">
         <p>Lists are an effective way to visually highlight important information so that it can be more easily scanned and read. Before writing a list, it’s important to identify the best style needed for the information being presented.</p>
-
-<p>List items should:</p>
-
-<ul>
-  <li>Be capitalized</li>
-  <li>Avoid unnecessary repetition</li>
-  <li>Have a parallel structure</li>
-  <li>Start with an introductory clause or sentence</li>
-  <li>Use consistent punctuation</li>
-</ul>
-
-<p>If the list items are complete sentences, the introductory clause should also be a complete sentence, followed by a colon. These list items should end with a period.</p>
-
-<p>If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.</p>
 
 <p>More information can be found at:</p>
 <ul>
@@ -1436,11 +1436,304 @@
 
     
     
-    <section class="o-variation_group" id="">
+    <section class="o-variation_group" id="types">
 
         
+        <h2 class="o-variation_group_title">
+            Types
+        </h2>
         
-        <div class="u-mb15"></div>
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Bulleted list</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>Use a bulleted list when grouping similar items or short thoughts into “bite-size” chunks. Generally, the order or count of the items in a bullet list isn’t important. An exception to this may be a list of states, which naturally fits into an alphabetical order.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <p> Paragraph example for visual reference</p>
+<ul class="m-list">
+    <li class="m-list_item">List item 1</li>
+    <li class="m-list_item">
+        List item 2
+        <ul class="m-list m-list__spaced">
+            <li class="m-list_item">List item 2a</li>
+            <li class="m-list_item">List item 2b</li>
+            <li class="m-list_item">List item 2c</li>
+        </ul>
+    </li>
+    <li class="m-list_item">List item 3</li>
+</ul>
+<p> Paragraph example for visual reference</p>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-bulleted-list-use-a-bulleted-lis-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-bulleted-list-use-a-bulleted-lis-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-bulleted-list-use-a-bulleted-lis-1">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-bulleted-list-use-a-bulleted-lis-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-bulleted-list-use-a-bulleted-lis-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-bulleted-list-use-a-bulleted-lis-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;p&gt; Paragraph example for visual reference&lt;/p&gt;
+&lt;ul class="m-list"&gt;
+    &lt;li class="m-list_item"&gt;List item 1&lt;/li&gt;
+    &lt;li class="m-list_item"&gt;
+        List item 2
+        &lt;ul class="m-list m-list__spaced"&gt;
+            &lt;li class="m-list_item"&gt;List item 2a&lt;/li&gt;
+            &lt;li class="m-list_item"&gt;List item 2b&lt;/li&gt;
+            &lt;li class="m-list_item"&gt;List item 2c&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class="m-list_item"&gt;List item 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; Paragraph example for visual reference&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-bulleted-list-use-a-bulleted-lis-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            
+<p>DEFAULT</p>
+
+<ul>
+  <li>Avenir Next Regular, 16px</li>
+  <li>Margin bottom (list item): 8px</li>
+  <li>Margin top (list): 10px</li>
+  <li>Margin bottom (list): 15px</li>
+  <li>Bullets are solid squares</li>
+  <li>Bullets are aligned flush with the left margin of the column of text they’re in</li>
+</ul>
+
+<p>NESTED</p>
+
+<ul>
+  <li>Bullets are open circles and flush left with the preceding line of text</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Numbered list</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>When the order of information presented is important, use a numbered list. This could include chronological items, things presented in the order or importance, or a finite list of a counted number of items.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <p>Paragraph example for visual reference</p>
+<ol>
+    <li>List item 1</li>
+    <li>
+        List item 2
+        <ol>
+              <li>Nested item 2-1</li>
+              <li>Nested item 2-2</li>
+              <li>Nested item 2-3</li>
+        </ol>
+    </li>
+    <li>List item 3</li>
+</ol>
+<p>Paragraph example for visual reference</p>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-numbered-list-when-the-order-of--2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-numbered-list-when-the-order-of--2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-numbered-list-when-the-order-of--2">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-numbered-list-when-the-order-of--html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-numbered-list-when-the-order-of--specs-2">
+                            Specs
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-numbered-list-when-the-order-of--html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;p&gt;Paragraph example for visual reference&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;List item 1&lt;/li&gt;
+    &lt;li&gt;
+        List item 2
+        &lt;ol&gt;
+              &lt;li&gt;Nested item 2-1&lt;/li&gt;
+              &lt;li&gt;Nested item 2-2&lt;/li&gt;
+              &lt;li&gt;Nested item 2-3&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;List item 3&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Paragraph example for visual reference&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-numbered-list-when-the-order-of--specs-2">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            
+<p>DEFAULT</p>
+
+<ul>
+  <li>Avenir Next Regular, 16px</li>
+  <li>Margin bottom (list item): 8px</li>
+  <li>Margin top (list): 10px</li>
+  <li>Margin bottom (list): 15px</li>
+  <li>Numbers are right aligned to their associated period; all single-digit numbers fit inside the left margin</li>
+</ul>
+
+<p>NESTED</p>
+
+<ul>
+  <li>Nested items have bullets — solid squares — that are flush left with the preceding line of text. (Note that the code sample shows letters and not bullets!)</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="variations">
+
+        
+        <h2 class="o-variation_group_title">
+            Variations
+        </h2>
         
 
         
@@ -1544,222 +1837,6 @@
 
             
             <div class="m-variation_name">
-                <h3>Bulleted list</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Use a bulleted list when grouping similar items or short thoughts into “bite-size” chunks. Generally, the order or count of the items in a bullet list isn’t important. An exception to this may be a list of states, which naturally fits into an alphabetical order.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <p> Paragraph example for visual reference</p>
-<ul class="m-list">
-    <li class="m-list_item">List item 1</li>
-    <li class="m-list_item">
-        List item 2
-        <ul class="m-list m-list__spaced">
-            <li class="m-list_item">List item 2a</li>
-            <li class="m-list_item">List item 2b</li>
-            <li class="m-list_item">List item 2c</li>
-        </ul>
-    </li>
-    <li class="m-list_item">List item 3</li>
-</ul>
-<p> Paragraph example for visual reference</p>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-bulleted-list-use-a-bulleted-lis-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-bulleted-list-use-a-bulleted-lis-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-bulleted-list-use-a-bulleted-lis-2">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-bulleted-list-use-a-bulleted-lis-html-code-snippet-2">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="details-bulleted-list-use-a-bulleted-lis-html-code-snippet-2">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;p&gt; Paragraph example for visual reference&lt;/p&gt;
-&lt;ul class="m-list"&gt;
-    &lt;li class="m-list_item"&gt;List item 1&lt;/li&gt;
-    &lt;li class="m-list_item"&gt;
-        List item 2
-        &lt;ul class="m-list m-list__spaced"&gt;
-            &lt;li class="m-list_item"&gt;List item 2a&lt;/li&gt;
-            &lt;li class="m-list_item"&gt;List item 2b&lt;/li&gt;
-            &lt;li class="m-list_item"&gt;List item 2c&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li class="m-list_item"&gt;List item 3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt; Paragraph example for visual reference&lt;/p&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Numbered list</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>When the order of information presented is important, use a numbered list. This could include chronological items, things presented in the order or importance, or a finite list of a counted number of items.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <p>Paragraph example for visual reference</p>
-<ol>
-    <li>List item 1</li>
-    <li>
-        List item 2
-        <ol>
-              <li>Nested item 2-1</li>
-              <li>Nested item 2-2</li>
-              <li>Nested item 2-3</li>
-        </ol>
-    </li>
-    <li>List item 3</li>
-</ol>
-<p>Paragraph example for visual reference</p>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-numbered-list-when-the-order-of--3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-numbered-list-when-the-order-of--3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-numbered-list-when-the-order-of--3">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-numbered-list-when-the-order-of--html-code-snippet-3">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="details-numbered-list-when-the-order-of--html-code-snippet-3">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;p&gt;Paragraph example for visual reference&lt;/p&gt;
-&lt;ol&gt;
-    &lt;li&gt;List item 1&lt;/li&gt;
-    &lt;li&gt;
-        List item 2
-        &lt;ol&gt;
-              &lt;li&gt;Nested item 2-1&lt;/li&gt;
-              &lt;li&gt;Nested item 2-2&lt;/li&gt;
-              &lt;li&gt;Nested item 2-3&lt;/li&gt;
-        &lt;/ol&gt;
-    &lt;/li&gt;
-    &lt;li&gt;List item 3&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Paragraph example for visual reference&lt;/p&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-
-            
-            <div class="m-variation_name">
                 <h3>Horizontal list</h3>
             </div>
             
@@ -1793,15 +1870,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-horizontal-list-a-modifier-for-t-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-horizontal-list-a-modifier-for-t-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-horizontal-list-a-modifier-for-t-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-horizontal-list-a-modifier-for-t-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-horizontal-list-a-modifier-for-t-4">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-horizontal-list-a-modifier-for-t-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-horizontal-list-a-modifier-for-t-html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#details-horizontal-list-a-modifier-for-t-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -1813,7 +1890,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-horizontal-list-a-modifier-for-t-html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="details-horizontal-list-a-modifier-for-t-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1889,15 +1966,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-link-list-the-link-list-modifier-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-link-list-the-link-list-modifier-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-link-list-the-link-list-modifier-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-link-list-the-link-list-modifier-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-link-list-the-link-list-modifier-5">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-link-list-the-link-list-modifier-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-link-list-the-link-list-modifier-html-code-snippet-5">
+                        <a class="govuk-tabs__tab" href="#details-link-list-the-link-list-modifier-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -1905,11 +1982,17 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-link-list-the-link-list-modifier-specs-3">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-link-list-the-link-list-modifier-html-code-snippet-5">
+                <section class="govuk-tabs__panel" id="details-link-list-the-link-list-modifier-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1936,6 +2019,22 @@
                 
 
                 <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-link-list-the-link-list-modifier-specs-3">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <ul>
+  <li>Avenir Next Medium, 16px, Pacific</li>
+  <li>Border bottom: 1 px, dotted, Pacific</li>
+  <li>Margin bottom (list item): 8px</li>
+  <li>Margin top (list): 10px</li>
+  <li>Margin bottom (list): 15px</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
                 
 
             </div>
@@ -1985,15 +2084,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-spaced-list-spaced-list-adds-ext-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-spaced-list-spaced-list-adds-ext-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-spaced-list-spaced-list-adds-ext-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-spaced-list-spaced-list-adds-ext-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-spaced-list-spaced-list-adds-ext-6">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-spaced-list-spaced-list-adds-ext-4">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-spaced-list-spaced-list-adds-ext-html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#details-spaced-list-spaced-list-adds-ext-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
@@ -2005,7 +2104,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-spaced-list-spaced-list-adds-ext-html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="details-spaced-list-spaced-list-adds-ext-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2073,15 +2172,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-basic-definition-list-when-the-p-7" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-basic-definition-list-when-the-p-7" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-basic-definition-list-when-the-p-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-basic-definition-list-when-the-p-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-basic-definition-list-when-the-p-7">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-basic-definition-list-when-the-p-5">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-basic-definition-list-when-the-p-html-code-snippet-7">
+                        <a class="govuk-tabs__tab" href="#details-basic-definition-list-when-the-p-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
@@ -2093,7 +2192,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-basic-definition-list-when-the-p-html-code-snippet-7">
+                <section class="govuk-tabs__panel" id="details-basic-definition-list-when-the-p-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2151,15 +2250,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-key-value-definition-list-modifi-8" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-key-value-definition-list-modifi-8" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-key-value-definition-list-modifi-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-key-value-definition-list-modifi-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-key-value-definition-list-modifi-8">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-key-value-definition-list-modifi-6">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-key-value-definition-list-modifi-html-code-snippet-8">
+                        <a class="govuk-tabs__tab" href="#details-key-value-definition-list-modifi-html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
@@ -2171,7 +2270,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-key-value-definition-list-modifi-html-code-snippet-8">
+                <section class="govuk-tabs__panel" id="details-key-value-definition-list-modifi-html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2231,15 +2330,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-compact-definition-list-modifies-9" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-compact-definition-list-modifies-9" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-compact-definition-list-modifies-7" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-compact-definition-list-modifies-7" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-compact-definition-list-modifies-9">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-compact-definition-list-modifies-7">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-compact-definition-list-modifies-html-code-snippet-9">
+                        <a class="govuk-tabs__tab" href="#details-compact-definition-list-modifies-html-code-snippet-7">
                             HTML code snippet
                         </a>
                     </li>
@@ -2251,7 +2350,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-compact-definition-list-modifies-html-code-snippet-9">
+                <section class="govuk-tabs__panel" id="details-compact-definition-list-modifies-html-code-snippet-7">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2282,12 +2381,57 @@
 
     
     
+        <section class="sticky-header u-mb45">
+
+            
+
+            
+                <h2 id="content-guidelines">Content guidelines</h2>
+                <div class="content_line content_line__wide u-mb20"></div>
+                <p>
+                
+</p>
+<p>List items should:</p>
+
+<ul>
+  <li>Be capitalized</li>
+  <li>Avoid unnecessary repetition</li>
+  <li>Have a parallel structure</li>
+  <li>Start with an introductory clause or sentence</li>
+  <li>Use consistent punctuation</li>
+</ul>
+
+<p>If the list items are complete sentences, the introductory clause should also be a complete sentence, followed by a colon. These list items should end with a period.</p>
+
+<p>If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.</p>
+
+                
+            
+
+            
+
+            
+        </section>
+    
 
     
 
     
 
     <div class="content-l u-mb45">
+        
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="related-items">Related Items</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <ul>
+  <li>Typography</li>
+</ul>
+
+                </section>
+            </div>
+        </div>
         
     </div>
 <!-- .content-l -->
@@ -2330,8 +2474,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/lists.md">
-                    <time datetime="2020-05-12 11:30:07 -0400">
-                        11:30:07 AM May 12, 2020
+                    <time datetime="2020-06-11 15:08:30 -0400">
+                         3:08:30 PM Jun 11, 2020
                     </time>
                 </a>
             </small>

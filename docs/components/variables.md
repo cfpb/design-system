@@ -278,4 +278,71 @@ variation_groups:
           ```
           @pagination-btn-min-width-px: 130px;
           ```
+  - variation_group_name: Tables
+    variations:
+      - variation_name: Color
+        variation_description: |-
+          ```
+          @table-cell-bg:              @white;
+          @table-cell-bg_alt:          @gray-5;
+          @table-row-link-bg-hover:    @pacific-80;
+          @table-row-link-hover-color: @white;
+          @table-scrolling-border:     @gray-40;
+          @table-border:               @gray;
+          ```
+  - variation_group_name: Typography
+    variations:
+      - variation_name: Color
+        variation_description: |-
+          ```
+          // Running text elements
+
+          // .a-micro-copy
+          @micro-copy:                @black;
+
+          // .a-date
+          @date:                      @gray;
+
+          // .m-pull-quote
+          @pull-quote_body:           @black;
+          @pull-quote_citation:       @gray;
+
+          // Headings
+
+          // .a-heading__icon
+          @heading__icon:             @black;
+          @heading__icon__hover:      @link-text-hover;
+
+          // Headers
+
+          // .m-slug-header
+          @slug-header_border__thin:  @gray-10;
+          @slug-header_border__thick: @green;
+
+          // .m-meta-header
+          @meta-header_border:        @gray-40;
+
+          // Links
+
+          // .a-link__jump
+          @jump-link_bg:              @gray-10;
+          @jump-link_border:          @gray-40;
+          ```
+      - variation_name: Fonts
+        variation_description: >-
+          ```
+
+          @webfont-regular: 'AvenirNextLTW01-Regular';
+
+          @webfont-italic: @webfont-regular;
+
+          @webfont-medium: 'AvenirNextLTW01-Medium';
+
+          @webfont-demi: @webfont-medium;
+
+          ```
+
+          **Note**: We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.
+
+          Similarly, we’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.
 ---

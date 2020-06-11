@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Text Inputs - CFPB Design System</title>
+  <title>Variables - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1414,7 +1414,7 @@
         <section class="content_main">
 
     <h1 class="component-header u-mb30">
-        Text Inputs
+        Variables
     </h1>
 
     
@@ -1422,16 +1422,80 @@
         
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#standard-text-inputs">
-                Standard text inputs
+            <a class="m-list_link" href="#buttons">
+                Buttons
             </a>
         </li>
         
         
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#variations">
-                Variations
+            <a class="m-list_link" href="#expandables">
+                Expandables
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#forms">
+                Forms
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#grid">
+                Grid
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#icons">
+                Icons
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#layout">
+                Layout
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#notifications">
+                Notifications
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#pagination">
+                Pagination
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#tables">
+                Tables
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#typography">
+                Typography
             </a>
         </li>
         
@@ -1441,18 +1505,18 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Text inputs can be one-line (standard text inputs) or multi-line (textarea inputs).</p>
+        <p>Component variables are used to theme a component. They likely will be left as is, but if needed can be overwritten by duplicating the variable in a <code class="language-plaintext highlighter-rouge">@key: value</code> format with a different value. This customized variable would be placed in the same file where this component’s less file is imported. Color variables referenced in comments are from cf-core cf-brand-colors.less.</p>
 
     </section>
     
 
     
     
-    <section class="o-variation_group" id="standard-text-inputs">
+    <section class="o-variation_group" id="buttons">
 
         
         <h2 class="o-variation_group_title">
-            Standard text inputs
+            Buttons
         </h2>
         
 
@@ -1467,41 +1531,40 @@
 
             
             <div class="m-variation_name">
-                <h3>Single-line text inputs</h3>
+                <h3>Color</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// .btn
+@btn-text:                  @white;
+@btn-bg:                    @pacific;
+@btn-bg-hover:              @dark-pacific;
+@btn-bg-active:             @navy;
+
+// .btn__secondary
+@btn__secondary-text:       @white;
+@btn__secondary-bg:         @gray;
+@btn__secondary-bg-hover:   @dark-gray;
+@btn__secondary-bg-active:  @black;
+
+// .btn__warning
+@btn__warning-text:         @white;
+@btn__warning-bg:           @red;
+@btn__warning-bg-hover:     @dark-red;
+@btn__warning-bg-active:    @dark-gray;
+
+// .btn__disabled
+@btn__disabled-text:        @gray;
+@btn__disabled-bg:          @gray-20;
+@btn__disabled-outline:     @gray-20;
+</code></pre></div></div>
 
             </div>
             
 
             <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <label class="a-label a-label__heading" for="textinput-example-default">
-Default
-</label>
-<input class="a-text-input" type="text" id="textinput-example-default" placeholder="Enter text…" value="Placeholder text">
-<br><br>
-<label class="a-label a-label__heading" for="textinput-example-hover">
-Hover
-</label>
-<input class="a-text-input hover" type="text" id="textinput-example-hover" placeholder="Enter text…" value="Placeholder text">
-<br><br>
-<label class="a-label a-label__heading" for="textinput-example-focus">
-Focus
-</label>
-<input class="a-text-input focus" type="text" id="textinput-example-focus" placeholder="Enter text…" value="Lorem ipsum">
-<br><br>
-<label class="a-label a-label__heading" for="textinput-example-disabled">
-Disabled
-</label>
-<input class="a-text-input" type="text" id="textinput-example-disabled" placeholder="Enter text…" value="Lorem ipsum" disabled>
-
-            </div>
             
 
             
@@ -1515,15 +1578,15 @@ Disabled
             
 
             <div class="a-toggle_code">
-                <button href="#details-single-line-text-inputs-label-cl-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-single-line-text-inputs-label-cl-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-color-btn-btn-text-white-btn-bg--1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-color-btn-btn-text-white-btn-bg--1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-single-line-text-inputs-label-cl-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-color-btn-btn-text-white-btn-bg--1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-single-line-text-inputs-label-cl-html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-color-btn-btn-text-white-btn-bg--html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1531,57 +1594,15 @@ Disabled
                     
                     
                     
-                    <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-single-line-text-inputs-label-cl-specs-1">
-                            Specs
-                        </a>
-                    </li>
-                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-single-line-text-inputs-label-cl-html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-color-btn-btn-text-white-btn-bg--html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;label class="a-label a-label__heading" for="textinput-example-default"&gt;
-Default
-&lt;/label&gt;
-&lt;input class="a-text-input"
-      type="text"
-      id="textinput-example-default"
-      placeholder="Enter text…"
-      value="Placeholder text"&gt;
-&lt;br&gt;&lt;br&gt;
-&lt;label class="a-label a-label__heading" for="textinput-example-hover"&gt;
-Hover
-&lt;/label&gt;
-&lt;input class="a-text-input hover"
-       type="text"
-       id="textinput-example-hover"
-       placeholder="Enter text…"
-       value="Placeholder text"&gt;
-&lt;br&gt;&lt;br&gt;
-&lt;label class="a-label a-label__heading" for="textinput-example-focus"&gt;
-Focus
-&lt;/label&gt;
-&lt;input class="a-text-input focus"
-       type="text"
-       id="textinput-example-focus"
-       placeholder="Enter text…"
-       value="Lorem ipsum"&gt;
-&lt;br&gt;&lt;br&gt;
-&lt;label class="a-label a-label__heading" for="textinput-example-disabled"&gt;
-Disabled
-&lt;/label&gt;
-&lt;input class="a-text-input"
-       type="text"
-       id="textinput-example-disabled"
-       placeholder="Enter text…"
-       value="Lorem ipsum"
-       disabled&gt;
-</code></pre>
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -1594,40 +1615,6 @@ Disabled
                 
 
                 <!-- Specs -->
-                
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-single-line-text-inputs-label-cl-specs-1">
-                    <div>
-                        <h4 class="variation-specs-title">Specs</h4>
-                        <div style="padding:40px">
-                            <h4 id="default">Default</h4>
-<ul>
-  <li>Border: 1 px, Gray 60 (#919395)</li>
-  <li>Height: 35 px</li>
-  <li>Padding: 7px</li>
-  <li>Avenir Next Regular, 16px, Gray (#5a5d61)</li>
-  <li>Text should be in sentence case</li>
-</ul>
-
-<h4 id="hover">Hover</h4>
-<ul>
-  <li>Border: 2 px, Pacific (#0072ce)</li>
-</ul>
-
-<h4 id="focus">Focus</h4>
-<ul>
-  <li>Border: 2 px, Pacific (#0072ce)</li>
-  <li>Outline: Dotted 1px, Pacific (#0072ce)</li>
-  <li>Outline offset: 1px</li>
-</ul>
-
-<h4 id="disabled">Disabled</h4>
-<ul>
-  <li>Background: Gray 10 (#e7e8e9)</li>
-</ul>
-
-                        </div>
-                    </div>
-                </section>
                 
 
             </div>
@@ -1644,13 +1631,22 @@ Disabled
 
             
             <div class="m-variation_name">
-                <h3>Textarea inputs</h3>
+                <h3>Sizing</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p>Use for long-form answers.</p>
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// .btn
+@btn-font-size:             @base-font-size-px;
+@btn-border-radius-size:    4px;
+@btn-v-padding:             8px;
+@btn-h-padding:             14px;
+@btn-v-padding-modifier-ie: 0.8;
+
+// .btn__super
+@btn__super-font-size:      18px;
+</code></pre></div></div>
 
             </div>
             
@@ -1658,10 +1654,7 @@ Disabled
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <label class="a-label a-label__heading" for="textarea-example-default">
-    Label
-</label>
-<textarea class="a-text-input" id="textarea-example-default" placeholder="Enter text…">Placeholder text</textarea>
+                
             </div>
             
 
@@ -1670,93 +1663,17 @@ Disabled
             
             
 
-            
-
-            
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-textarea-inputs-use-for-long-for-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-textarea-inputs-use-for-long-for-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-textarea-inputs-use-for-long-for-2">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-textarea-inputs-use-for-long-for-html-code-snippet-2">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-textarea-inputs-use-for-long-for-specs-2">
-                            Specs
-                        </a>
-                    </li>
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="details-textarea-inputs-use-for-long-for-html-code-snippet-2">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;label class="a-label a-label__heading" for="textarea-example-default"&gt;
-    Label
-&lt;/label&gt;
-&lt;textarea class="a-text-input"
-          id="textarea-example-default"
-          placeholder="Enter text…"&gt;Placeholder text&lt;/textarea&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-textarea-inputs-use-for-long-for-specs-2">
-                    <div>
-                        <h4 class="variation-specs-title">Specs</h4>
-                        <div style="padding:40px">
-                            
-<h4 id="multi-line">Multi-line</h4>
-
-<p>Use for long-form answers.</p>
-
-<ul>
-  <li>Border: 1 px, Gray 60 (#919395)</li>
-  <li>Avenir Next Regular, 16 px, Gray (#5a5d61)</li>
-</ul>
-
-                        </div>
-                    </div>
-                </section>
-                
-
-            </div>
-<!-- .govuk-tabs -->
             
 
         </div>
         
     </section>
     
-    <section class="o-variation_group" id="variations">
+    <section class="o-variation_group" id="expandables">
 
         
         <h2 class="o-variation_group_title">
-            Variations
+            Expandables
         </h2>
         
 
@@ -1771,29 +1688,37 @@ Disabled
 
             
             <div class="m-variation_name">
-                <h3>Text input with a button</h3>
+                <h3>Color</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p>These are used for simple forms where a full filter isn’t necessary.</p>
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// .o-expandable
+@expandable-focus:             @black;
+
+// .o-expandable_label
+@expandable_label-text:        @black;
+
+// .o-expandable_link
+@expandable_link-text:         @pacific;
+
+// .o-expandable__padded
+@expandable__padded-bg:        @gray-10;
+@expandable__padded-bg-hover:  @gray-20;
+@expandable__padded-divider:   @gray-40;
+
+// .o-expandable-group
+@expandable-group_header-text: @gray;
+@expandable-group_header-bg:   @gray-10;
+@expandable-group-bg:          @white;
+@expandable-group-divider:     @gray-80;
+</code></pre></div></div>
 
             </div>
             
 
             <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <div class="o-form__input-w-btn">
-    <div class="o-form__input-w-btn_input-container">
-        <input class="a-text-input" type="text" title="Test input">
-    </div>
-    <div class="o-form__input-w-btn_btn-container">
-        <button class="a-btn">Search</button>
-    </div>
-</div>
-            </div>
             
 
             
@@ -1807,15 +1732,15 @@ Disabled
             
 
             <div class="a-toggle_code">
-                <button href="#details-text-input-with-a-button-these-a-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-text-input-with-a-button-these-a-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-color-o-expandable-expandable-fo-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-color-o-expandable-expandable-fo-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-text-input-with-a-button-these-a-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-color-o-expandable-expandable-fo-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-text-input-with-a-button-these-a-html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-color-o-expandable-expandable-fo-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1827,18 +1752,11 @@ Disabled
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-text-input-with-a-button-these-a-html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-color-o-expandable-expandable-fo-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="o-form__input-w-btn"&gt;
-    &lt;div class="o-form__input-w-btn_input-container"&gt;
-        &lt;input class="a-text-input" type="text" title="Test input"&gt;
-    &lt;/div&gt;
-    &lt;div class="o-form__input-w-btn_btn-container"&gt;
-        &lt;button class="a-btn"&gt;Search&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -1867,28 +1785,19 @@ Disabled
 
             
             <div class="m-variation_name">
-                <h3>Button inside a text input</h3>
+                <h3>Sizing</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p>These offer the user an action to take related to the input, typically to clear the input.</p>
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@expandable_link-font-size: 14px;
+</code></pre></div></div>
 
             </div>
             
 
             <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <div class="m-btn-inside-input">
-    <input type="text" value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable." title="Test input" class="a-text-input">
-    <button class="a-btn a-btn__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 718.9 1200" class="cf-icon-svg"><path d="M451.4 613.7l248.1-248.1c25.6-25.1 26-66.3.8-91.9s-66.3-26-91.9-.8l-.8.8-248.1 248.1-248.1-248.1c-25.4-25.4-66.5-25.4-91.9 0s-25.4 66.5 0 91.9l248.1 248.1L19.5 861.8c-25.6 25.1-26 66.3-.8 91.9s66.3 26 91.9.8l.8-.8 248.1-248.1 248.1 248.1c25.4 25.4 66.5 25.4 91.9 0s25.4-66.5 0-91.9L451.4 613.7z"></path></svg>
-        <span class="u-visually-hidden">Clear</span>
-    </button>
-</div>
-            </div>
             
 
             
@@ -1902,15 +1811,15 @@ Disabled
             
 
             <div class="a-toggle_code">
-                <button href="#details-button-inside-a-text-input-these-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-button-inside-a-text-input-these-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-sizing-expandable-link-font-size-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-sizing-expandable-link-font-size-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-button-inside-a-text-input-these-2">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-sizing-expandable-link-font-size-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-button-inside-a-text-input-these-html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#details-sizing-expandable-link-font-size-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -1922,20 +1831,11 @@ Disabled
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-button-inside-a-text-input-these-html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="details-sizing-expandable-link-font-size-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-btn-inside-input"&gt;
-    &lt;input type="text"
-        value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
-        title="Test input"
-        class="a-text-input"&gt;
-    &lt;button class="a-btn a-btn__link"&gt;
-        {% include icons/error.svg %}
-        &lt;span class="u-visually-hidden"&gt;Clear&lt;/span&gt;
-    &lt;/button&gt;
-&lt;/div&gt;</code></pre>
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -1964,13 +1864,15 @@ Disabled
 
             
             <div class="m-variation_name">
-                <h3>Button inside a text input with another button</h3>
+                <h3>Timing</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p>This example combines both of the previous patterns, creating a typical site search form.</p>
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Transition timing
+@expandable__transition-speed: 0.25s;
+</code></pre></div></div>
 
             </div>
             
@@ -1978,21 +1880,94 @@ Disabled
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <div class="o-form__input-w-btn">
-    <div class="o-form__input-w-btn_input-container">
-        <div class="m-btn-inside-input">
-            <input type="text" value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable." title="Test input" class="a-text-input">
-            <button class="a-btn a-btn__link">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 718.9 1200" class="cf-icon-svg"><path d="M451.4 613.7l248.1-248.1c25.6-25.1 26-66.3.8-91.9s-66.3-26-91.9-.8l-.8.8-248.1 248.1-248.1-248.1c-25.4-25.4-66.5-25.4-91.9 0s-25.4 66.5 0 91.9l248.1 248.1L19.5 861.8c-25.6 25.1-26 66.3-.8 91.9s66.3 26 91.9.8l.8-.8 248.1-248.1 248.1 248.1c25.4 25.4 66.5 25.4 91.9 0s25.4-66.5 0-91.9L451.4 613.7z"></path></svg>
-                <span class="u-visually-hidden">Clear</span>
-            </button>
-        </div>
-    </div>
-    <div class="o-form__input-w-btn_btn-container">
-        <button class="a-btn">Search</button>
-    </div>
-</div>
+                
             </div>
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="forms">
+
+        
+        <h2 class="o-variation_group_title">
+            Forms
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Color</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// .a-text-input borders
+@input-border:                            @gray-60;
+@input-border__hover:                     @pacific;
+@input-border__focused:                   @pacific;
+@input-border__active:                    @pacific;
+@input-border__error:                     @red;
+@input-border__warning:                   @gold;
+@input-border__success:                   @green;
+@input-border__selected:                  @pacific;
+
+// .a-text-input backgrounds
+@input-bg:                                @white;
+@input-bg__selected:                      @pacific;
+@input-bg__disabled:                      @gray-10;
+@input-bg__disabled-selected:             @gray-40;
+
+// .a-text-input text
+@input-text:                              @black;
+@input-text__disabled:                    @gray;
+@input-text__placeholder:                 @gray;
+
+// .a-text-input icons
+@input-icon__error:                       @red;
+
+// .a-select
+@select-border:                           @input-border;
+@select-icon-bg:                          @gray-10;
+@select-text__disabled:                   @input-text__disabled;
+
+// .m-form-field
+@form-field-input-border:                 @input-border;
+@form-field-input-border__focused:        @input-border;
+@form-field-input-border__disabled:       @gray-60;
+
+// .m-form-field__lg-target
+@form-field-input-lg-target-bg:           @gray-10;
+@form-field-input-lg-target-bg__selected: @pacific-20;
+@form-field-input-lg-target-bg__disabled: @gray-20;
+@form-field-input-lg-target-border:       @pacific;
+
+// .a-label_helper
+@label-helper:                            @gray;
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
             
 
             
@@ -2006,15 +1981,15 @@ Disabled
             
 
             <div class="a-toggle_code">
-                <button href="#details-button-inside-a-text-input-with--3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-button-inside-a-text-input-with--3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-color-a-text-input-borders-input-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-color-a-text-input-borders-input-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-button-inside-a-text-input-with--3">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-color-a-text-input-borders-input-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-button-inside-a-text-input-with--html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#details-color-a-text-input-borders-input-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -2026,27 +2001,11 @@ Disabled
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-button-inside-a-text-input-with--html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="details-color-a-text-input-borders-input-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="o-form__input-w-btn"&gt;
-    &lt;div class="o-form__input-w-btn_input-container"&gt;
-        &lt;div class="m-btn-inside-input"&gt;
-            &lt;input type="text"
-                value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
-                title="Test input"
-                class="a-text-input"&gt;
-            &lt;button class="a-btn a-btn__link"&gt;
-                {% include icons/error.svg %}
-                &lt;span class="u-visually-hidden"&gt;Clear&lt;/span&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="o-form__input-w-btn_btn-container"&gt;
-        &lt;button class="a-btn"&gt;Search&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -2075,27 +2034,20 @@ Disabled
 
             
             <div class="m-variation_name">
-                <h3>Full-width text inputs</h3>
+                <h3>Sizing</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// .a-select
+@select-height: 30px;
+</code></pre></div></div>
 
             </div>
             
 
             <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <div class="m-form-field">
-    <label class="a-label a-label__heading" for="full-textinput-example">
-        Label
-    </label>
-    <input class="a-text-input a-text-input__full" type="text" id="full-textinput-example" value="Placeholder text">
-</div>
-            </div>
             
 
             
@@ -2109,15 +2061,15 @@ Disabled
             
 
             <div class="a-toggle_code">
-                <button href="#details-full-width-text-inputs-div-class-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-full-width-text-inputs-div-class-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-sizing-a-select-select-height-30-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-sizing-a-select-select-height-30-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-full-width-text-inputs-div-class-4">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-sizing-a-select-select-height-30-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-full-width-text-inputs-div-class-html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#details-sizing-a-select-select-height-30-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -2129,19 +2081,366 @@ Disabled
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-full-width-text-inputs-div-class-html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="details-sizing-a-select-select-height-30-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-form-field"&gt;
-    &lt;label class="a-label a-label__heading" for="full-textinput-example"&gt;
-        Label
-    &lt;/label&gt;
-    &lt;input class="a-text-input a-text-input__full"
-          type="text"
-          id="full-textinput-example"
-          value="Placeholder text"&gt;
-&lt;/div&gt;</code></pre>
+                            <pre><code class="language-html"></code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="grid">
+
+        
+        <h2 class="o-variation_group_title">
+            Grid
+        </h2>
+        
+
+        
+        <div class="o-variation_group_description">
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@grid_wrapper-width: 1200px;
+</code></pre></div></div>
+<p>The grid’s maximum width in px. This value can be overridden in the <code class="language-plaintext highlighter-rouge">grid_wrapper()</code> mixin.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@grid_gutter-width: 30px;
+</code></pre></div></div>
+<p>The fixed width between columns.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@grid_total-columns: 12;
+</code></pre></div></div>
+<p>The total number of columns used in calculating column widths. This value can be overridden in the <code class="language-plaintext highlighter-rouge">grid_column()</code> mixin.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@grid_debug: false;
+</code></pre></div></div>
+<p>Gives column blocks a background color if set to true.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Breakpoints</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@bp-xs-max:  600px;
+@bp-sm-min:  @bp-xs-max + 1px;
+@bp-sm-max:  900px;
+@bp-med-min: @bp-sm-max + 1px;
+@bp-med-max: 1020px;
+@bp-lg-min:  @bp-med-max + 1px;
+@bp-lg-max:  1230px;
+@bp-xl-min:  @bp-lg-max + 1px;
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="icons">
+
+        
+        <h2 class="o-variation_group_title">
+            Icons
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Sizing</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>The standard icon height in ems matches the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 = 1.1875).</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@cf-icon-height: 1.1875em;
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="layout">
+
+        
+        <h2 class="o-variation_group_title">
+            Layout
+        </h2>
+        
+
+        
+        <div class="o-variation_group_description">
+            
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Color</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// .block
+@block__bg:                 @gray-5;
+@block__border:             @gray-40;
+@block__border-top:         @gray-40;
+@block__border-right:       @gray-40;
+@block__border-bottom:      @gray-40;
+@block__border-left:        @gray-40;
+
+// .content_main
+@content_main-border:       @gray-40;
+
+// .content_sidebar
+@content_sidebar-bg:        @gray-5;
+@content_sidebar-border:    @gray-40;
+
+// .content_line
+@content_line:              @gray-40;
+
+// .grid_column__top-divider
+@grid_column__top-divider:  @gray-40;
+
+// .grid_column__top-divider
+@grid_column__left-divider: @gray-40;
+
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Heroes and featured content modules</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <h4 id="color">Color</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Hero variables
+@hero-bg:                   @gray-5;
+@hero-knockout-bg:          @gray;
+@hero-knockout-text:        @white;
+
+// Featured Content Module variables
+@fcm-bg:                    @block__bg;
+</code></pre></div></div>
+
+<h4 id="sizing">Sizing</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Hero variables
+@hero-desktop-height: 285px;
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="notifications">
+
+        
+        <h2 class="o-variation_group_title">
+            Notifications
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Color</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@notification-bg:             @gray-5;
+@notification-bg-success:     @green-10;
+@notification-bg-warning:     @gold-10;
+@notification-bg-error:       @red-10;
+
+@notification-border:         @gray-40;
+@notification-border-success: @green;
+@notification-border-warning: @gold;
+@notification-border-error:   @red;
+
+@notification-icon:           @gray;
+@notification-icon-success:   @green;
+@notification-icon-warning:   @gold;
+@notification-icon-error:     @red;
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-color-notification-bg-gray-5-not-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-color-notification-bg-gray-5-not-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-color-notification-bg-gray-5-not-1">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-color-notification-bg-gray-5-not-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-color-notification-bg-gray-5-not-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -2170,27 +2469,18 @@ Disabled
 
             
             <div class="m-variation_name">
-                <h3>Full-width textarea inputs</h3>
+                <h3>Sizing</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                
+                <p><code class="language-plaintext highlighter-rouge">@notification-padding__px: 15px;</code></p>
 
             </div>
             
 
             <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <div class="m-form-field">
-    <label class="a-label a-label__heading" for="full-textarea-example">
-        Label
-    </label>
-    <textarea class="a-text-input a-text-input__full" id="full-textarea-example">Placeholder text</textarea>
-</div>
-            </div>
             
 
             
@@ -2204,15 +2494,15 @@ Disabled
             
 
             <div class="a-toggle_code">
-                <button href="#details-full-width-textarea-inputs-div-c-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-full-width-textarea-inputs-div-c-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-sizing-notification-padding-px-1-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-sizing-notification-padding-px-1-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-full-width-textarea-inputs-div-c-5">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-sizing-notification-padding-px-1-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-full-width-textarea-inputs-div-c-html-code-snippet-5">
+                        <a class="govuk-tabs__tab" href="#details-sizing-notification-padding-px-1-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -2224,17 +2514,11 @@ Disabled
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-full-width-textarea-inputs-div-c-html-code-snippet-5">
+                <section class="govuk-tabs__panel" id="details-sizing-notification-padding-px-1-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-form-field"&gt;
-    &lt;label class="a-label a-label__heading" for="full-textarea-example"&gt;
-        Label
-    &lt;/label&gt;
-    &lt;textarea class="a-text-input a-text-input__full"
-              id="full-textarea-example"&gt;Placeholder text&lt;/textarea&gt;
-&lt;/div&gt;</code></pre>
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -2251,6 +2535,475 @@ Disabled
 
             </div>
 <!-- .govuk-tabs -->
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="pagination">
+
+        
+        <h2 class="o-variation_group_title">
+            Pagination
+        </h2>
+        
+
+        
+        <div class="o-variation_group_description">
+            
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Color</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@pagination-text: @gray;
+@pagination-bg:   @gray-10;
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-color-pagination-text-gray-pagin-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-color-pagination-text-gray-pagin-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-color-pagination-text-gray-pagin-1">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-color-pagination-text-gray-pagin-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-color-pagination-text-gray-pagin-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html"></code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Sizing</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@pagination-btn-min-width-px: 130px;
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="tables">
+
+        
+        <h2 class="o-variation_group_title">
+            Tables
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Color</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@table-cell-bg:              @white;
+@table-cell-bg_alt:          @gray-5;
+@table-row-link-bg-hover:    @pacific-80;
+@table-row-link-hover-color: @white;
+@table-head-text:            @text;
+@table-head-bg:              @gray-5;
+@table-scrolling-border:     @gray-40;
+@table-border:               @gray;
+
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="typography">
+
+        
+        <h2 class="o-variation_group_title">
+            Typography
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Color</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Running text elements
+
+// .a-micro-copy
+@micro-copy:                @black;
+
+// .a-date
+@date:                      @gray;
+
+// .m-pull-quote
+@pull-quote_body:           @black;
+@pull-quote_citation:       @gray;
+
+// Headings
+
+// .a-heading__icon
+@heading__icon:             @black;
+@heading__icon__hover:      @link-text-hover;
+
+// Headers
+
+// .m-slug-header
+@slug-header_border__thin:  @gray-10;
+@slug-header_border__thick: @green;
+
+// .m-meta-header
+@meta-header_border:        @gray-40;
+
+// Body
+@text:                      @black;
+
+// Links
+// a
+@link-text:              @pacific;
+@link-underline:         @pacific;
+@link-text-visited:      @teal;
+@link-underline-visited: @teal;
+@link-text-hover:        @dark-pacific;
+@link-underline-hover:   @dark-pacific;
+@link-text-active:       @navy;
+@link-underline-active:  @navy;
+
+// .a-link__jump
+@jump-link_bg:           @gray-10;
+@jump-link_border:       @gray-40;
+
+// code
+@code-text:              @text;
+@code-bg:                @gray-5;
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Sizing</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@base-font-size-px:   16px;
+@base-line-height-px: 22px;
+@base-line-height:    unit( @base-line-height-px / @base-font-size-px );
+
+@size-xl:             48px; // Super-size
+
+@size-i:              34px; // h1-size
+@size-ii:             26px; // h2-size
+@size-iii:            22px; // h3-size
+@size-iv:             18px; // h4-size
+@size-v:              14px; // h5-site
+@size-vi:             12px; // h6-size
+@size-code:           13px; // Custom size only for Mono code blocks
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Fonts</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <h4 id="avenir">Avenir</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@webfont-regular:     'AvenirNextLTW01-Regular';
+@webfont-italic:      @webfont-regular;
+@webfont-medium:      'AvenirNextLTW01-Medium';
+@webfont-demi:        @webfont-medium;
+</code></pre></div></div>
+<p><em>Note: We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.</em></p>
+
+<p><em>Similarly, we’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.</em></p>
+
+<h4 id="arial">Arial</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@webfont-regular:      Arial;
+@webfont-italic:       Arial;
+@webfont-medium:       Arial;
+@webfont-demi:         Arial;
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-fonts-avenir-webfont-regular-ave-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-fonts-avenir-webfont-regular-ave-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-fonts-avenir-webfont-regular-ave-3">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-fonts-avenir-webfont-regular-ave-html-code-snippet-3">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-fonts-avenir-webfont-regular-ave-html-code-snippet-3">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html"></code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Font source variables</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>Use this variable to specify where the fonts files used in the @webfont-* variables are located when self-hosting fonts. Can be either a relative or absolute path.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@cf-fonts-path: '/fonts'`
+</code></pre></div></div>
+
+<p>If you want to load fonts from a Fonts.com Web Fonts project, set the following variable to true, otherwise set it to false to use the self-hosted font path:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@use-font-cdn: true;
+</code></pre></div></div>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
             
 
         </div>
@@ -2266,71 +3019,18 @@ Disabled
             
 
             
-                <h2 id="content-guidelines">Content guidelines</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<p>Choose the appropriate width for text input fields so they match the kind of information requested. This makes it easier for users to quickly grasp what’s being asked.</p>
 
-<p>For example, it’s hard to understand at a glance that a single 1,000 px-wide text field is asking for your phone number or birth date. When possible, be even more explicit with the width by dividing it into known character counts. For instance, social security number should be three characters, then two, then four. Be mindful of not getting too restrictive, however. This approach could work for phone numbers, but only if international numbers are not permitted.</p>
-
-<p>These types of inputs should always be smaller widths:</p>
-
-<ul>
-  <li>Middle initial</li>
-  <li>Date, month, or year</li>
-  <li>State abbreviation</li>
-</ul>
-
-<p>Text should be in sentence case.</p>
-
-<p>Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field.</p>
-
-                
-            
-
-            
-                <h2 id="behavior">Behavior</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<p>As the screen size gets smaller, break multi-column inputs into a single, stacked column. Fields that are next to each other on a large screen, should stack at smaller screen sizes. When possible, fields should span the entire width of the screen at the smallest screen sizes.</p>
-
-                
             
 
             
         </section>
     
 
-    
-        <section class="sticky-header u-mb45">
-            <h2 id="accessibility">Accessibility</h2>
-            <div class="content_line content_line__wide u-mb20"></div>
-            <p>
-                </p>
-<p>Inputs should always be paired with a <code class="language-plaintext highlighter-rouge">label</code> for accessibility reasons.</p>
-
-<p>Users of screen readers use the tab key to move focus from one form control to another. Make sure that tab focus order reflects the way you would like users to navigate through the form. Consider whether tabs should move a user down or across the page.</p>
-
-            
-        </section>
     
 
     
 
     <div class="content-l u-mb45">
-        
-        <div class="content-l_col content-l_col-1-2">
-            <div>
-                <section>
-                    <h2 id="related-items">Related Items</h2>
-                    <div class="content_line__wide content_line content_line u-mb20"></div>
-                    
-
-                </section>
-            </div>
-        </div>
         
     </div>
 <!-- .content-l -->
@@ -2338,7 +3038,7 @@ Disabled
 </section><!-- .content_main -->
 
         <div class="o-editor_link" id="edit-page">
-            <a class="a-btn" href="/design-system/admin/#/collections/components/entries/text-inputs" title="Edit this page in Netlify CMS">
+            <a class="a-btn" href="/design-system/admin/#/collections/components/entries/variables" title="Edit this page in Netlify CMS">
                 <span class="a-btn_text">Edit this page</span>
                 <span class="a-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 833.4 1200" class="cf-icon-svg"><path d="M233 203.1c-27.2-27.2-71.8-27.2-99 0L20.4 316.7c-27.2 27.2-27.2 71.8 0 99l89.7 89.7 212.7-212.7-89.8-89.6zM832.6 992.7l-48.6-216c-3.4-15.3-14.9-36.5-26-48.6l-1.8-1.8-121.8-121.9-110.6-110.6-165.7-165.7-54.8 54.8 400 400 21.4-21.4c5.3 6.4 11.9 18.9 13.5 25.6l21.4 95.2-60 60-95.2-21.4c-6.7-1.5-19.2-8.2-25.6-13.5l89.2-89.2-400-400-122.6 122.6 165.7 165.7 110.6 110.6 121.8 121.8 1.8 1.8c12.1 11.1 33.3 22.6 48.6 26l215.9 48.6c2.2.5 4.3.7 6.2.7 12.6.1 19.8-9.4 16.6-23.3z"></path></svg></span>
             </a>
@@ -2361,7 +3061,7 @@ Disabled
         <p>
             <small>
                 <strong>Help improve this page:</strong>
-                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content%2C+help+wanted&amp;template=component-needs-content-edits.md&amp;title=Suggestions+for%3A+%22Text%20Inputs%22">
+                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content%2C+help+wanted&amp;template=component-needs-content-edits.md&amp;title=Suggestions+for%3A+%22Variables%22">
                     File an issue on GitHub.
                 </a>
             </small>
@@ -2372,9 +3072,9 @@ Disabled
                 <strong>Page last edited:</strong>
                 
                 
-                <a href="https://github.com/cfpb/design-system/commits/master/docs/components/text-inputs.md">
-                    <time datetime="2020-06-01 16:12:09 -0400">
-                         4:12:09 PM Jun 01, 2020
+                <a href="https://github.com/cfpb/design-system/commits/master/docs/components/variables.md">
+                    <time datetime="2020-06-11 16:31:08 -0400">
+                         4:31:08 PM Jun 11, 2020
                     </time>
                 </a>
             </small>

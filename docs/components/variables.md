@@ -325,11 +325,25 @@ variation_groups:
           // .m-meta-header
           @meta-header_border:        @gray-40;
 
+          // Body
+          @text:                      @black;
+
           // Links
+          // a
+          @link-text:              @pacific;
+          @link-underline:         @pacific;
+          @link-text-visited:      @teal;
+          @link-underline-visited: @teal;
+          @link-text-hover:        @dark-pacific;
+          @link-underline-hover:   @dark-pacific;
+          @link-text-active:       @navy;
+          @link-underline-active:  @navy;
 
           // .a-link__jump
           @jump-link_bg:              @gray-10;
           @jump-link_border:          @gray-40;
+
+
           ```
       - variation_name: Fonts
         variation_description: >-

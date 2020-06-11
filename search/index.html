@@ -715,6 +715,25 @@
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
+                    'variation_name16': 'Mixing content blocks with content layouts',
+                    'variation_description16': "You can safely combine .block with .content-l_col to achieve a column-based layout at larger screens with no top margin and a vertical layout at smaller screens that do have margins.Note that the divs with inline styles are for demonstration purposes only and should not be used in production.",
+                    'variation_code_snippet16': `&lt;div class=&quot;content-l&quot;&gt;
+    &lt;div class=&quot;block content-l_col content-l_col-1-2&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2; padding: 8px;&quot;&gt;
+            Content block that is also a content column.
+            Notice how my top margins only exist on smaller screens when
+            I need to stack vertically.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;block content-l_col content-l_col-1-2&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2; padding: 8px;&quot;&gt;
+            Content block that is also a content column.
+            Notice how my top margins only exist on smaller screens when
+            I need to stack vertically.
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
             
 
 

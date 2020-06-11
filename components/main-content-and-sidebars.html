@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Sidebars and Prefooters - CFPB Design System</title>
+  <title>Main content and sidebars - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1017,7 +1017,7 @@
             
                 
                 <li class="m-list_item">
-                    <a class="m-list_link" href="/design-system/components/sidebars-and-prefooters">Sidebars and Prefooters</a>
+                    <a class="m-list_link" href="/design-system/components/main-content-and-sidebars">Main content and sidebars</a>
                 </li>
                 
             
@@ -1414,12 +1414,34 @@
         <section class="content_main">
 
     <h1 class="component-header u-mb30">
-        Sidebars and Prefooters
+        Main content and sidebars
     </h1>
 
     
     <ul class="m-list m-list__horizontal u-mb30">
         
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#main-content-and-sidebar">
+                Main content and sidebar
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#modifiers">
+                Modifiers
+            </a>
+        </li>
+        
+        
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#custom-content-layouts">
+                Custom content layouts
+            </a>
+        </li>
         
         
     </ul>
@@ -1427,26 +1449,20 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Sidebars are present across most page templates to house information related to the main content of the page. On pages with leftside sub-navigation, sidebar content may be displayed as an optional prefooter at the bottom of the main content.</p>
+        <p>A set of HTML and CSS layout helpers.</p>
 
-<p>Sidebars may can contain related posts, calls to action, metadata, email sign ups, contact information, etc. Primary layout variations as seen in basic sidebar format. Multiple elements can be used in the sidebar/ prefooter but each should have their own slug label.</p>
-
-<p>Information about Sidebars/Prefooters can be found at:</p>
-<ul>
-  <li>http://cfpb.github.io/design-manual/page-components/sidebar-prefooter.html</li>
-  <li>https://cfpb.github.io/capital-framework/components/cf-layout/#standard-content-formats</li>
-</ul>
 
     </section>
     
 
     
     
-    <section class="o-variation_group" id="">
+    <section class="o-variation_group" id="main-content-and-sidebar">
 
         
-        
-        <div class="u-mb15"></div>
+        <h2 class="o-variation_group_title">
+            Main content and sidebar
+        </h2>
         
 
         
@@ -1570,6 +1586,132 @@
 
             
             <div class="m-variation_name">
+                <h3>Left-hand sidebar layout</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>Add a class of <code class="language-plaintext highlighter-rouge">.content__L-R</code> to <code class="language-plaintext highlighter-rouge">main.content</code> to determine the width ratio of <code class="language-plaintext highlighter-rouge">.content_main</code> and <code class="language-plaintext highlighter-rouge">.content_sidebar</code>, where ‘L’ is the left-hand item and ‘R’ is the right-hand item. The two common configurations are 1-3 (sidebar on the left, content on the right, in a ratio of 1:3) and 2-1 (content on the left, sidebar on the right, in a ratio of 2:1).</p>
+
+<p>It is assumed that the content is wider than the sidebar.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <main class="content content__1-3" role="main">
+    <div class="content_line"></div>
+    <div class="content_wrapper">
+        <aside class="content_sidebar">
+            Section navigation
+        </aside>
+        <section class="content_main">
+            <h2>Main content area</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cum corrupti tempora nam nihil qui mollitia consectetur
+                corporis nemo culpa dolorum! Laborum at eos deleniti
+                consequatur itaque officiis debitis quisquam! Provident!
+            </p>
+        </section>
+    </div>
+</main>
+<footer class="footer" role="contentinfo">
+    <div class="wrapper">
+        Footer
+    </div>
+</footer>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-left-hand-sidebar-layout-add-a-c-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-left-hand-sidebar-layout-add-a-c-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-left-hand-sidebar-layout-add-a-c-2">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-left-hand-sidebar-layout-add-a-c-html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-left-hand-sidebar-layout-add-a-c-html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;main class="content content__1-3" role="main"&gt;
+    &lt;div class="content_line"&gt;&lt;/div&gt;
+    &lt;div class="content_wrapper"&gt;
+        &lt;aside class="content_sidebar"&gt;
+            Section navigation
+        &lt;/aside&gt;
+        &lt;section class="content_main"&gt;
+            &lt;h2&gt;Main content area&lt;/h2&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cum corrupti tempora nam nihil qui mollitia consectetur
+                corporis nemo culpa dolorum! Laborum at eos deleniti
+                consequatur itaque officiis debitis quisquam! Provident!
+            &lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;footer class="footer" role="contentinfo"&gt;
+    &lt;div class="wrapper"&gt;
+        Footer
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
                 <h3>Right-hand sidebar layout</h3>
             </div>
             
@@ -1624,15 +1766,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-right-hand-sidebar-layout-add-a--2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-right-hand-sidebar-layout-add-a--2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-right-hand-sidebar-layout-add-a--3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-right-hand-sidebar-layout-add-a--3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-right-hand-sidebar-layout-add-a--2">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-right-hand-sidebar-layout-add-a--3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-right-hand-sidebar-layout-add-a--html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#details-right-hand-sidebar-layout-add-a--html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -1644,7 +1786,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-right-hand-sidebar-layout-add-a--html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="details-right-hand-sidebar-layout-add-a--html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1742,15 +1884,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-bleedbar-sidebar-styling-simply--3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-bleedbar-sidebar-styling-simply--3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-bleedbar-sidebar-styling-simply--4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-bleedbar-sidebar-styling-simply--4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-bleedbar-sidebar-styling-simply--3">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-bleedbar-sidebar-styling-simply--4">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-bleedbar-sidebar-styling-simply--html-code-snippet-3">
+                        <a class="govuk-tabs__tab" href="#details-bleedbar-sidebar-styling-simply--html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
@@ -1762,7 +1904,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-bleedbar-sidebar-styling-simply--html-code-snippet-3">
+                <section class="govuk-tabs__panel" id="details-bleedbar-sidebar-styling-simply--html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1860,15 +2002,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-narrow-content-column-option-add-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-narrow-content-column-option-add-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-narrow-content-column-option-add-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-narrow-content-column-option-add-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-narrow-content-column-option-add-4">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-narrow-content-column-option-add-5">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-narrow-content-column-option-add-html-code-snippet-4">
+                        <a class="govuk-tabs__tab" href="#details-narrow-content-column-option-add-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
@@ -1880,7 +2022,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-narrow-content-column-option-add-html-code-snippet-4">
+                <section class="govuk-tabs__panel" id="details-narrow-content-column-option-add-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1926,6 +2068,19 @@
 
         </div>
         
+    </section>
+    
+    <section class="o-variation_group" id="modifiers">
+
+        
+        <h2 class="o-variation_group_title">
+            Modifiers
+        </h2>
+        
+
+        
+
+        
         <div class="m-variation">
 
             
@@ -1934,18 +2089,45 @@
 
             
             <div class="m-variation_name">
-                <h3>Related posts</h3>
+                <h3>Flush bottom modifier</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p><img src="/design-system/images/uploads/related_posts_example.jpg" alt="Related posts example"></p>
+                <p>Add a class of <code class="language-plaintext highlighter-rouge">.content__flush-bottom</code> to <code class="language-plaintext highlighter-rouge">.content_main</code> or <code class="language-plaintext highlighter-rouge">.content_sidebar</code> to remove bottom padding.</p>
 
             </div>
             
 
             <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <main class="content content__1-3" role="main">
+    <div class="content_line"></div>
+    <div class="content_wrapper">
+        <aside class="content_sidebar content__flush-bottom">
+            Side with no bottom padding...
+        </aside>
+        <section class="content_main content__flush-bottom">
+            Main content with no bottom padding...
+            <div class="block
+                        block__flush-bottom
+                        block__flush-sides
+                        block__bg">
+                .content__flush-bottom is very useful when you have a
+                content block inside of .content_main with a background
+                and flush sides.
+            </div>
+        </section>
+    </div>
+</main>
+<footer class="footer" role="contentinfo">
+    <div class="wrapper">
+        Footer
+    </div>
+</footer>
+            </div>
             
 
             
@@ -1959,15 +2141,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-related-posts-related-posts-exam-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-related-posts-related-posts-exam-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-flush-bottom-modifier-add-a-clas-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-flush-bottom-modifier-add-a-clas-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-related-posts-related-posts-exam-5">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-flush-bottom-modifier-add-a-clas-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-related-posts-related-posts-exam-html-code-snippet-5">
+                        <a class="govuk-tabs__tab" href="#details-flush-bottom-modifier-add-a-clas-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1979,11 +2161,34 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-related-posts-related-posts-exam-html-code-snippet-5">
+                <section class="govuk-tabs__panel" id="details-flush-bottom-modifier-add-a-clas-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html"></code></pre>
+                            <pre><code class="language-html">&lt;main class="content content__1-3" role="main"&gt;
+    &lt;div class="content_line"&gt;&lt;/div&gt;
+    &lt;div class="content_wrapper"&gt;
+        &lt;aside class="content_sidebar content__flush-bottom"&gt;
+            Side with no bottom padding...
+        &lt;/aside&gt;
+        &lt;section class="content_main content__flush-bottom"&gt;
+            Main content with no bottom padding...
+            &lt;div class="block
+                        block__flush-bottom
+                        block__flush-sides
+                        block__bg"&gt;
+                .content__flush-bottom is very useful when you have a
+                content block inside of .content_main with a background
+                and flush sides.
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;footer class="footer" role="contentinfo"&gt;
+    &lt;div class="wrapper"&gt;
+        Footer
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -2012,18 +2217,37 @@
 
             
             <div class="m-variation_name">
-                <h3>Related links</h3>
+                <h3>Flush top modifier (only on small screens)</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p><img src="/design-system/images/uploads/related_links_example.jpg" alt="Related links example"></p>
+                <p>Add a class of <code class="language-plaintext highlighter-rouge">.content__flush-top-on-small</code> to <code class="language-plaintext highlighter-rouge">.content_main</code> or <code class="language-plaintext highlighter-rouge">.content_sidebar</code> to remove top padding on small screens only. ‘Small’ screens in this case refers to the breakpoint where <code class="language-plaintext highlighter-rouge">.content_main</code> and <code class="language-plaintext highlighter-rouge">.content_sidebar</code> single column layout.</p>
 
             </div>
             
 
             <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <main class="content content__1-3" role="main">
+    <div class="content_line"></div>
+    <div class="content_wrapper">
+        <aside class="content_sidebar content__flush-top-on-small">
+            Side with no top padding on small screens...
+        </aside>
+        <section class="content_main">
+            Main content
+        </section>
+    </div>
+</main>
+<footer class="footer" role="contentinfo">
+    <div class="wrapper">
+        Footer
+    </div>
+</footer>
+            </div>
             
 
             
@@ -2037,15 +2261,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-related-links-related-links-exam-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-related-links-related-links-exam-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-flush-top-modifier-only-on-small-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-flush-top-modifier-only-on-small-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-related-links-related-links-exam-6">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-flush-top-modifier-only-on-small-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-related-links-related-links-exam-html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#details-flush-top-modifier-only-on-small-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -2057,11 +2281,26 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-related-links-related-links-exam-html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="details-flush-top-modifier-only-on-small-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html"></code></pre>
+                            <pre><code class="language-html">&lt;main class="content content__1-3" role="main"&gt;
+    &lt;div class="content_line"&gt;&lt;/div&gt;
+    &lt;div class="content_wrapper"&gt;
+        &lt;aside class="content_sidebar content__flush-top-on-small"&gt;
+            Side with no top padding on small screens...
+        &lt;/aside&gt;
+        &lt;section class="content_main"&gt;
+            Main content
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;footer class="footer" role="contentinfo"&gt;
+    &lt;div class="wrapper"&gt;
+        Footer
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -2090,18 +2329,37 @@
 
             
             <div class="m-variation_name">
-                <h3>Metadata</h3>
+                <h3>Flush all modifier (only on small screens)</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p><img src="/design-system/images/uploads/metadata_example.jpg" alt="Metadata example"></p>
+                <p>Add a class of .content__flush-all-on-small to .content_main or .content_sidebar to remove all padding and border-based gutters on small screens only. ‘Small’ screens in this case refers to the breakpoint where .content_main and .content_sidebar single column layout.</p>
 
             </div>
             
 
             <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <main class="content content__1-3" role="main">
+    <div class="content_line"></div>
+    <div class="content_wrapper">
+        <aside class="content_sidebar content__flush-all-on-small">
+            Side with no padding or border-based gutters on small screens...
+        </aside>
+        <section class="content_main">
+            Main content
+        </section>
+    </div>
+</main>
+<footer class="footer" role="contentinfo">
+    <div class="wrapper">
+        Footer
+    </div>
+</footer>
+            </div>
             
 
             
@@ -2115,15 +2373,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-metadata-metadata-example-design-7" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-metadata-metadata-example-design-7" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-flush-all-modifier-only-on-small-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-flush-all-modifier-only-on-small-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-metadata-metadata-example-design-7">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-flush-all-modifier-only-on-small-3">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-metadata-metadata-example-design-html-code-snippet-7">
+                        <a class="govuk-tabs__tab" href="#details-flush-all-modifier-only-on-small-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -2135,11 +2393,279 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-metadata-metadata-example-design-html-code-snippet-7">
+                <section class="govuk-tabs__panel" id="details-flush-all-modifier-only-on-small-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html"></code></pre>
+                            <pre><code class="language-html">&lt;main class="content content__1-3" role="main"&gt;
+    &lt;div class="content_line"&gt;&lt;/div&gt;
+    &lt;div class="content_wrapper"&gt;
+        &lt;aside class="content_sidebar content__flush-all-on-small"&gt;
+            Side with no padding or border-based gutters on small screens...
+        &lt;/aside&gt;
+        &lt;section class="content_main"&gt;
+            Main content
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;footer class="footer" role="contentinfo"&gt;
+    &lt;div class="wrapper"&gt;
+        Footer
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="custom-content-layouts">
+
+        
+        <h2 class="o-variation_group_title">
+            Custom content layouts
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Grid with content</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>The content-l (“content layout”) class can be used to lay content out in a grid.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="content-l">
+    <div class="content-l_col content-l_col-1">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Full-width column (spans 12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-2">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Half-width column (spans 6/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-2">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Half-width column (spans 6/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-2-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Two thirds-width column (spans 8/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-4">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;">
+            Quarter width column (spans 3/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-3-4">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;">
+            Three-quarter width column (spans 9/12 columns)
+        </div>
+    </div>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-grid-with-content-the-content-l--1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-grid-with-content-the-content-l--1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-grid-with-content-the-content-l--1">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-grid-with-content-the-content-l--html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-grid-with-content-the-content-l--html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="content-l"&gt;
+    &lt;div class="content-l_col content-l_col-1"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Full-width column (spans 12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content-l_col content-l_col-1-2"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Half-width column (spans 6/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content-l_col content-l_col-1-2"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Half-width column (spans 6/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content-l_col content-l_col-1-3"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content-l_col content-l_col-1-3"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content-l_col content-l_col-1-3"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content-l_col content-l_col-2-3"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Two thirds-width column (spans 8/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content-l_col content-l_col-1-3"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content-l_col content-l_col-1-4"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;"&gt;
+            Quarter width column (spans 3/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content-l_col content-l_col-3-4"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;"&gt;
+            Three-quarter width column (spans 9/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -2168,18 +2694,49 @@
 
             
             <div class="m-variation_name">
-                <h3>Call to action with button</h3>
+                <h3>Large gutters modifier</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p><img src="/design-system/images/uploads/cta_example.png" alt=""></p>
+                
 
             </div>
             
 
             <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="content-l content-l__main  content-l__large-gutters">
+    <div class="content-l_col content-l_col-1">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Full-width column (spans 12 columns)
+        </div>
+    </div>
+</div>
+<div class="content-l content-l__main  content-l__large-gutters">
+    <div class="content-l_col content-l_col-1-2">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Half-width column (spans 6/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-2">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Half-width column (spans 6/12 columns)
+        </div>
+    </div>
+</div>
+            </div>
             
 
             
@@ -2193,15 +2750,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-call-to-action-with-button-desig-8" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-call-to-action-with-button-desig-8" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-large-gutters-modifier-div-class-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-large-gutters-modifier-div-class-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-call-to-action-with-button-desig-8">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-large-gutters-modifier-div-class-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-call-to-action-with-button-desig-html-code-snippet-8">
+                        <a class="govuk-tabs__tab" href="#details-large-gutters-modifier-div-class-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -2213,11 +2770,38 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-call-to-action-with-button-desig-html-code-snippet-8">
+                <section class="govuk-tabs__panel" id="details-large-gutters-modifier-div-class-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html"></code></pre>
+                            <pre><code class="language-html">&lt;div class="content-l content-l__main  content-l__large-gutters"&gt;
+    &lt;div class="content-l_col content-l_col-1"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Full-width column (spans 12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="content-l content-l__main  content-l__large-gutters"&gt;
+    &lt;div class="content-l_col content-l_col-1-2"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Half-width column (spans 6/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content-l_col content-l_col-1-2"&gt;
+        &lt;div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;"&gt;
+            Half-width column (spans 6/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -2244,116 +2828,26 @@
 
     
     
-        <section class="sticky-header u-mb45">
-
-            
-                <h2 id="use-cases">Use cases</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<h4 id="when-to-use-related-posts">When to use Related posts</h4>
-
-<ul>
-  <li>This component is used to display lists of related content dynamically pulled from elsewhere in the site – blogs, events, and newsroom items– based on topic tag selections.</li>
-  <li>The amount and types of related content may be restricted based on the subject matter and needs of the page.</li>
-</ul>
-
-<h4 id="when-other-options-are-better">When other options are better</h4>
-
-<ul>
-  <li>When lists of items should not be automatically updated consider related links instead.</li>
-  <li>When posts will be mixed with other types of content.</li>
-</ul>
-
-<h4 id="when-to-use-related-links">When to use Related links</h4>
-
-<ul>
-  <li>When a specific, static piece of content and call to action needs to be displayed in the sidebar.</li>
-  <li>When a static list of links or specific related posts need to be displayed in the sidebar.</li>
-</ul>
-
-<h4 id="when-other-options-are-better-1">When other options are better</h4>
-
-<ul>
-  <li>When all of the content is posts that can be dynamically populated.</li>
-</ul>
-
-<h4 id="when-to-use-meta-data">When to use Meta data</h4>
-
-<ul>
-  <li>When displaying relevant metadata about a specific document or set of documents, such as for a rule, notice, or report, for users to easily reference.</li>
-</ul>
-
-<h4 id="when-other-options-are-better-2">When other options are better</h4>
-
-<ul>
-  <li>When anything other than metadata for a document detail page is being displayed.</li>
-</ul>
-
-<h4 id="when-to-use-call-to-action-with-button">When to use call to action with button</h4>
-
-<ul>
-  <li>When highlighting or featuring a call to take a specific action.</li>
-</ul>
-
-<h4 id="when-other-options-are-better-3">When other options are better</h4>
-
-<ul>
-  <li>When the “action” is navigating to another page of the site or downloading a document. Refer to the buttons page for more information.</li>
-</ul>
-
-                
-            
-
-            
-                <h2 id="content-guidelines">Content guidelines</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<ul>
-  <li>Slugs should be as succinct as possible, ideally 30 characters or less. They should be limited to one line at max column width.</li>
-  <li>Description beneath heading should also be succinct, limited to 3 lines at max column width max; 100 characters.</li>
-  <li>Call to action link should be limited to one line at max column width; 40 characters or less.</li>
-  <li>Content can be one or two columns in prefooter depending on need.</li>
-  <li>In the prefooter, content is populated in a Z-order, chronologically.</li>
-</ul>
-
-                
-            
-
-            
-                <h2 id="behavior">Behavior</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<p>All variations of sidebar element move into prefooter format at screen widths less than 901 px. The sidebar area can house multiple stacked sidebar elements.</p>
-
-<p>Under 600px all elements become single column. Mobile link style should be used in place of normal links at this size.</p>
-
-<p><img src="/design-system/images/uploads/behavior_sidebar_desktop.jpg" alt="Sidebar 901+"></p>
-
-<p><img src="/design-system/images/uploads/behavior_sidebar_mobile.jpg" alt="Sidebar 900 or less (transition to prefooter)"></p>
-
-<p>Prefooter format is automatically used on pages that have a left side secondary navigation.</p>
-
-<p>Below 601 px width, for legibility link styling on clickable headings remains in the standard format, but mobile link style is applied where possible.</p>
-
-<p><img src="/design-system/images/uploads/behavior_prefooter_desktop_1.jpg" alt="Prefooter 901+ (with side nav.)"></p>
-
-<p><img src="/design-system/images/uploads/behavior_prefooter_mobile_1.jpg" alt="Prefooter 600 or less"></p>
-
-                
-            
-
-            
-        </section>
-    
 
     
 
     
 
     <div class="content-l u-mb45">
+        
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="related-items">Related Items</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <ul>
+  <li>Column dividers</li>
+  <li>Block</li>
+</ul>
+
+                </section>
+            </div>
+        </div>
         
     </div>
 <!-- .content-l -->
@@ -2384,7 +2878,7 @@
         <p>
             <small>
                 <strong>Help improve this page:</strong>
-                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content%2C+help+wanted&amp;template=component-needs-content-edits.md&amp;title=Suggestions+for%3A+%22Sidebars%20and%20Prefooters%22">
+                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content%2C+help+wanted&amp;template=component-needs-content-edits.md&amp;title=Suggestions+for%3A+%22Main%20content%20and%20sidebars%22">
                     File an issue on GitHub.
                 </a>
             </small>
@@ -2396,8 +2890,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/sidebars-prefooters.md">
-                    <time datetime="2020-05-12 11:30:07 -0400">
-                        11:30:07 AM May 12, 2020
+                    <time datetime="2020-06-11 13:16:54 -0400">
+                         1:16:54 PM Jun 11, 2020
                     </time>
                 </a>
             </small>

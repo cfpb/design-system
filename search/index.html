@@ -3056,13 +3056,18 @@ The text will be styled the same as H5 heading text.
     &lt;p class=&quot;u-hide-on-mobile&quot;&gt;Hidden on mobile&lt;/p&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name12': '&quot;Align with button&quot; mixin',
-                    'variation_description12': "Align an element vertically with the text within a button that may be to either side.Pass font-size as the argument for calculating spacing, default value is @base-font-size-px..u-align-with-btn(@font-size: @base-font-size-px);",
-                    'variation_code_snippet12': ``,
+            
+                // Determine the maximum number of variations present overall.
                 
-                    'variation_name13': '&quot;Flexible proportional containers&quot; mixin',
-                    'variation_description13': "Utilize intrinsic ratios to create a flexible container that retains an aspect ratio. When &lt;img&gt; tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.Read more about intrinsic ratios: http://alistapart.com/article/creating-intrinsic-ratios-for-video.u-flexible-container-mixin(@width: 16, @height: 9);In addition to the mixin, there are two default classes available for building 16:9 and 4:3 containers.When using the mixin, pass the width as the first argument, and the height as the second argument. Default values are 16, 9.Original mixin credit: https://gist.github.com/craigmdennis/6655047NOTE: Inline style properties for demonstration onlyTo create a 16:9 flexible video player, wrap the video element in an element with u-flexible-container and add the u-flexible-container_inner to the video element.To create a flexible container with only a background (no inner video or object element), omit the inner container.To create a 4:3 flexible video player, add the __4_3 modifier to the container.",
-                    'variation_code_snippet13': `&lt;div class=&quot;u-flexible-container&quot;&gt;
+
+                
+                    'variation_name1': '&quot;Align with button&quot; mixin',
+                    'variation_description1': "Align an element vertically with the text within a button that may be to either side.Pass font-size as the argument for calculating spacing, default value is @base-font-size-px..u-align-with-btn(@font-size: @base-font-size-px);",
+                    'variation_code_snippet1': ``,
+                
+                    'variation_name2': '&quot;Flexible proportional containers&quot; mixin',
+                    'variation_description2': "Utilize intrinsic ratios to create a flexible container that retains an aspect ratio. When &lt;img&gt; tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.Read more about intrinsic ratios: http://alistapart.com/article/creating-intrinsic-ratios-for-video.u-flexible-container-mixin(@width: 16, @height: 9);In addition to the mixin, there are two default classes available for building 16:9 and 4:3 containers.When using the mixin, pass the width as the first argument, and the height as the second argument. Default values are 16, 9.Original mixin credit: https://gist.github.com/craigmdennis/6655047NOTE: Inline style properties for demonstration onlyTo create a 16:9 flexible video player, wrap the video element in an element with u-flexible-container and add the u-flexible-container_inner to the video element.To create a flexible container with only a background (no inner video or object element), omit the inner container.To create a 4:3 flexible video player, add the __4_3 modifier to the container.",
+                    'variation_code_snippet2': `&lt;div class=&quot;u-flexible-container&quot;&gt;
     &lt;video class=&quot;u-flexible-container_inner&quot;
           style=&quot;background:#75787B;&quot;
           controls&gt;
@@ -3085,27 +3090,27 @@ The text will be styled the same as H5 heading text.
     &lt;/video&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name14': '&quot;Link color&quot; mixin',
-                    'variation_description14': "Calling the mixin without arguments will set the following states: default - #0071bc, :hover - #205493, :focus - #0071bc, :visited - #4c2c92, :active - #046b99.u-link__colors()Passing a single argument into the mixin will set the color for the default, :visited, :hover, :focus, and :active states.u-link__colors(@c)Passing two arguments into the mixin will set the color for the default, :visited, and :active states as the first argument, and :hover and :focus as the second argument.u-link__colors(@c, @h)Passing five arguments will set the color for the default, :visited, :hover, :focus, and :active states respectively.u-link__colors(@c, @v, @h, @f, @a)Passing ten arguments will set the text (default, :visited, :hover, :focus, and :active states in the first five arguments) and border colors (default, :visited, :hover, :focus, and :active states in the following five arguments) separately.u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)A base mixin of u-link__colors-base() exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use .u-link__colors(@c, @v, @h, @f, @a).",
-                    'variation_code_snippet14': ``,
+                    'variation_name3': '&quot;Link color&quot; mixin',
+                    'variation_description3': "Calling the mixin without arguments will set the following states: default - #0071bc, :hover - #205493, :focus - #0071bc, :visited - #4c2c92, :active - #046b99.u-link__colors()Passing a single argument into the mixin will set the color for the default, :visited, :hover, :focus, and :active states.u-link__colors(@c)Passing two arguments into the mixin will set the color for the default, :visited, and :active states as the first argument, and :hover and :focus as the second argument.u-link__colors(@c, @h)Passing five arguments will set the color for the default, :visited, :hover, :focus, and :active states respectively.u-link__colors(@c, @v, @h, @f, @a)Passing ten arguments will set the text (default, :visited, :hover, :focus, and :active states in the first five arguments) and border colors (default, :visited, :hover, :focus, and :active states in the following five arguments) separately.u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)A base mixin of u-link__colors-base() exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use .u-link__colors(@c, @v, @h, @f, @a).",
+                    'variation_code_snippet3': ``,
                 
-                    'variation_name15': '&quot;Link border&quot; mixin',
-                    'variation_description15': "Force the default bottom border on the default and :hover states..u-link__border()Turn off the default bottom border on the default and :hover states..u-link__no-border()Turn off the default bottom border on the default state but force a bottom border on the :hover state..u-link__hover-border()",
-                    'variation_code_snippet15': ``,
+                    'variation_name4': '&quot;Link border&quot; mixin',
+                    'variation_description4': "Force the default bottom border on the default and :hover states..u-link__border()Turn off the default bottom border on the default and :hover states..u-link__no-border()Turn off the default bottom border on the default state but force a bottom border on the :hover state..u-link__hover-border()",
+                    'variation_code_snippet4': ``,
                 
-                    'variation_name16': '&quot;Link children&quot; mixin',
-                    'variation_description16': "Calling this mixin without arguments will set the default color for the :hover state of a child within a link, without affecting the link itself..u-link__hover-child()Passing a single argument into the mixin will set a custom color for the :hover state of a child within a link, without affecting the link itself..u-link__hover-child(@c)",
-                    'variation_code_snippet16': ``,
+                    'variation_name5': '&quot;Link children&quot; mixin',
+                    'variation_description5': "Calling this mixin without arguments will set the default color for the :hover state of a child within a link, without affecting the link itself..u-link__hover-child()Passing a single argument into the mixin will set a custom color for the :hover state of a child within a link, without affecting the link itself..u-link__hover-child(@c)",
+                    'variation_code_snippet5': ``,
                 
-                    'variation_name17': '&quot;Small text utility&quot; mixin',
-                    'variation_description17': "CLASSSets the element to 14px (in ems).To be used on default 16px text only. To use on text set to another size, use the mixin below..u-small-textMIXINSets the element to 14px (in ems) based on the text size passed as @context..u-small-text(@context)// Ex..example {  font-size: unit(20px / @base-font-size-px, em);  small {    .u-small-text(20px);  }}// Compiles to.example {  font-size: 1.25em;}.example small {  font-size: 0.7em;}",
-                    'variation_code_snippet17': ``,
+                    'variation_name6': '&quot;Small text utility&quot; mixin',
+                    'variation_description6': "CLASSSets the element to 14px (in ems).To be used on default 16px text only. To use on text set to another size, use the mixin below..u-small-textMIXINSets the element to 14px (in ems) based on the text size passed as @context..u-small-text(@context)// Ex..example {  font-size: unit(20px / @base-font-size-px, em);  small {    .u-small-text(20px);  }}// Compiles to.example {  font-size: 1.25em;}.example small {  font-size: 0.7em;}",
+                    'variation_code_snippet6': ``,
                 
             
 
 
             'title': 'Helper classes and mixins',
-            'description': "Helper classes and mixins are utilities to help front-end web development meet our design standards. More information about these utilities can be found at:https://cfpb.github.io/capital-framework/components/cf-core/#utilities",
+            'description': "Helper classes and mixins are utilities to help front-end web development meet our design standards.",
             'use_cases': "",
             'content_guidelines': "",
             'behavior': "",
@@ -3738,58 +3743,6 @@ Label heading
             'research': "",
             'related_items': "  Helper text  Fieldsets",
             'url': 'components/labels-and-legends'
-        }
-        ,
-        
-
-        
-        
-
-        'components-left-hand-navigation': {
-
-            // Cycle through the variation fields of this page.
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Left-hand navigation layout',
-                    'variation_description1': "Add a class of .content__L-R to main.content to determine the width ratio of .content_main and .content_sidebar, where ‘L’ is the left-hand item and ‘R’ is the right-hand item. The two common configurations are 1-3 (sidebar on the left, content on the right, in a ratio of 1:3) and 2-1 (content on the left, sidebar on the right, in a ratio of 2:1).It is assumed that the content is wider than the sidebar.",
-                    'variation_code_snippet1': `&lt;main class=&quot;content content__1-3&quot; role=&quot;main&quot;&gt;
-    &lt;div class=&quot;content_line&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;content_wrapper&quot;&gt;
-        &lt;aside class=&quot;content_sidebar&quot;&gt;
-            Section navigation
-        &lt;/aside&gt;
-        &lt;section class=&quot;content_main&quot;&gt;
-            &lt;h2&gt;Main content area&lt;/h2&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            &lt;/p&gt;
-        &lt;/section&gt;
-    &lt;/div&gt;
-&lt;/main&gt;
-&lt;footer class=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;
-    &lt;div class=&quot;wrapper&quot;&gt;
-        Footer
-    &lt;/div&gt;
-&lt;/footer&gt;`,
-                
-            
-
-
-            'title': 'Left Hand Navigation',
-            'description': "More information can be found at:  https://cfpb.github.io/capital-framework/components/cf-layout/#standard-content-formats",
-            'use_cases': "",
-            'content_guidelines': "",
-            'behavior': "",
-            'accessibility': "",
-            'research': "",
-            'related_items': "",
-            'url': 'components/left-hand-navigation'
         }
         ,
         
@@ -5962,11 +5915,6 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
             'variation_name16',
             'variation_description16',
             'variation_code_snippet16'
-            ,
-        
-            'variation_name17',
-            'variation_description17',
-            'variation_code_snippet17'
             
         
     ];

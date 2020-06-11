@@ -287,8 +287,11 @@ variation_groups:
           @table-cell-bg_alt:          @gray-5;
           @table-row-link-bg-hover:    @pacific-80;
           @table-row-link-hover-color: @white;
+          @table-head-text:            @text;
+          @table-head-bg:              @gray-5;
           @table-scrolling-border:     @gray-40;
           @table-border:               @gray;
+
           ```
   - variation_group_name: Typography
     variations:

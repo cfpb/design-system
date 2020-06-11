@@ -400,6 +400,7 @@ variation_groups:
 
           </div><!-- /.content-67 -->
         variation_name: Don't remove the light beam
+        variation_specs: ""
       - variation_description: >+
           
           <div class="content-33 content-first warning" markdown="1">
@@ -459,7 +460,7 @@ variation_groups:
 
           </div><!-- /.content-67 -->
         variation_specs: ""
-      - variation_description: >-
+      - variation_description: >+
           <div class="content-33 content-first warning" markdown="1">
 
 
@@ -492,7 +493,10 @@ variation_groups:
 
           </div><!-- /.content-67 -->
 
-
+        variation_name: Don't outline the logo or use other colors
+        variation_specs: ""
+      - variation_name: Don't rotate
+        variation_description: >+
           <div class="content-33 content-first warning" markdown="1">
 
 
@@ -525,7 +529,8 @@ variation_groups:
 
           </div><!-- /.content-67 -->
 
-
+        variation_specs: ""
+      - variation_description: >-
           <div class="content-33 content-first warning" markdown="1">
 
 
@@ -557,5 +562,6 @@ variation_groups:
 
 
           </div><!-- /.content-67 -->
+        variation_name: Don't place directly on a colored background or photo
     variation_group_name: Examples of misuse
 ---

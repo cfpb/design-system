@@ -77,7 +77,7 @@ variation_groups:
             * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
 
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
-    variation_group_name: Standard link blobs
+    variation_group_name: Types
     variation_group_description: >-
       A link blob is a unit consisting of heading, short descriptive text, and
       call to action. There are two layout options for breakpoints above 601 px:

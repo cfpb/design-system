@@ -199,6 +199,7 @@ content_guidelines: >
   If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.
 behavior: ""
 accessibility: ""
+related_items: "* Typography"
 last_updated: 2020-01-28T15:55:47.394Z
 research: ""
 ---

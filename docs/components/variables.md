@@ -263,7 +263,23 @@ variation_groups:
           ```
         variation_name: Color
       - variation_name: Heroes and featured content modules
-        variation_description: ""
+        variation_description: |-
+          #### Color
+          ```
+          // Hero variables
+          @hero-bg:                   @gray-5;
+          @hero-knockout-bg:          @gray;
+          @hero-knockout-text:        @white;
+
+          // Featured Content Module variables
+          @fcm-bg:                    @block__bg;
+          ```
+
+          #### Sizing
+          ```
+          // Hero variables
+          @hero-desktop-height: 285px;
+          ```
   - variation_group_name: Notifications
     variations:
       - variation_name: Color

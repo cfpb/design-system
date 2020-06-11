@@ -234,24 +234,36 @@ variation_groups:
   - variation_group_name: Layout
     variation_group_description: ""
     variations:
+      - variation_description: |-
+          ```
+          // .block
+          @block__bg:                 @gray-5;
+          @block__border:             @gray-40;
+          @block__border-top:         @gray-40;
+          @block__border-right:       @gray-40;
+          @block__border-bottom:      @gray-40;
+          @block__border-left:        @gray-40;
+
+          // .content_main
+          @content_main-border:       @gray-40;
+
+          // .content_sidebar
+          @content_sidebar-bg:        @gray-5;
+          @content_sidebar-border:    @gray-40;
+
+          // .content_line
+          @content_line:              @gray-40;
+
+          // .grid_column__top-divider
+          @grid_column__top-divider:  @gray-40;
+
+          // .grid_column__top-divider
+          @grid_column__left-divider: @gray-40;
+
+          ```
+        variation_name: Color
       - variation_name: Heroes and featured content modules
         variation_description: ""
-      - variation_description: |-
-          #### Color
-          ```
-          // Hero variables
-          @hero-bg:                   @gray-5;
-          @hero-knockout-bg:          @gray;
-          @hero-knockout-text:        @white;
-
-          // Featured Content Module variables
-          @fcm-bg:                    @block__bg;
-          ```
-          #### Sizing
-          ```
-          // Hero variables
-          @hero-desktop-height: 285px;
-          ```
   - variation_group_name: Notifications
     variations:
       - variation_name: Color

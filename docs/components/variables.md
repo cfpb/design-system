@@ -178,7 +178,7 @@ variation_groups:
 
       ```
 
-      The grid’s maximum width in px. This value can be overridden in the grid_wrapper() mixin. 
+      The grid’s maximum width in px. This value can be overridden in the `grid_wrapper()` mixin. 
 
 
       ```
@@ -196,7 +196,7 @@ variation_groups:
 
       ```
 
-      The total number of columns used in calculating column widths. This value can be overridden in the grid_column() mixin.
+      The total number of columns used in calculating column widths. This value can be overridden in the `grid_column()` mixin.
 
 
       ```
@@ -206,4 +206,36 @@ variation_groups:
       ```
 
       Gives column blocks a background color if set to true.
+  - variation_group_name: Icons
+    variations:
+      - variation_name: Sizing
+        variation_description: >-
+          The standard icon height in ems matches the 19px rendered canvas of
+          text set in Avenir Next sized at 16px (19/16 = 1.1875).
+
+          ```
+
+          @cf-icon-height: 1.1875em;
+
+          ```
+  - variation_group_name: Heroes and featured content modules
+    variation_group_description: ""
+    variations:
+      - variation_name: Color
+        variation_description: |-
+          ```
+          // Hero variables
+          @hero-bg:                   @gray-5;
+          @hero-knockout-bg:          @gray;
+          @hero-knockout-text:        @white;
+
+          // Featured Content Module variables
+          @fcm-bg:                    @block__bg;
+          ```
+      - variation_name: Sizing
+        variation_description: |-
+          ```
+          // Hero variables
+          @hero-desktop-height: 285px;
+          ```
 ---

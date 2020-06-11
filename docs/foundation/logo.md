@@ -285,5 +285,277 @@ variation_groups:
 
           </div><!-- /.content-67 -->
         variation_name: Web scale
+      - variation_description: >+
+          
+          <div class="content-33 content-first" markdown="1">
+
+
+          The horizontal or vertical lockup should be used for most print applications. These are our benchmark sizes for 8.5 x 11” documents, including reports, brochures, powerpoints, and forms. For large-format print pieces, such as posters and banners, where the logo is used with a height greater than 1”, it should be used in increments of 1/2”.
+
+
+          </div><!-- /.content-33 -->
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          <div class="content-50 content-first" markdown="1">
+
+
+          #### 8.5 x 11” documents
+
+
+          ![8.5 x 11” documents print scale horizontal logo](https://cfpb.github.io/design-manual/static/img/logo/Logo11.png "8.5 x 11” documents print scale horizontal logo")
+
+
+          * Lockup: horizontal
+
+          * Height: 0.5”
+
+          * Clear space: 0.25”
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          #### 8.5 x 11” documents
+
+
+          ![8.5 x 11” documents print scale vertical logo](https://cfpb.github.io/design-manual/static/img/logo/Logo12.png "8.5 x 11” documents print scale vertical logo")
+
+
+          * Lockup: vertical
+
+          * Height: 0.77”
+
+          * Clear space: 0.25”
+
+
+          </div>
+
+
+          </div><!-- /.content-67 -->
+
+        variation_name: Print scale
+        variation_specs: ""
+      - variation_description: >+
+          <div class="content-33 content-first" markdown="1">
+
+
+          The logo should be shown on a white background for optimal appearance. When this is not possible, the logo must be contained in a white rectangle equal
+
+          to the required clear space.
+
+
+          </div><!-- /.content-33 -->
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          #### Color
+
+          ![Complex color backgrounds logo](https://cfpb.github.io/design-manual/static/img/logo/Logo13.png "Complex color backgrounds logo")
+
+
+          #### Pattern
+
+          ![Complex pattern backgrounds logo](https://cfpb.github.io/design-manual/static/img/logo/Logo14.png "Complex pattern backgrounds logo")
+
+
+          #### Photo
+
+          ![Complex photo backgrounds logo](https://cfpb.github.io/design-manual/static/img/logo/Logo15.png "Complex photo backgrounds logo")
+
+
+          </div><!-- /.content-67 -->
+
+        variation_name: Complex backgrounds
     variation_group_name: Stylistic guidelines
+  - variations:
+      - variation_description: >
+          <div class="content-33 content-first warning" markdown="1">
+
+
+          <p>{% include icons/error-round.svg %} Don’t remove the light beam. It is essential to the logo.</p>
+
+
+          </div>
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          <div class="content-50 content-first" markdown="1">
+
+
+          ![Logo with no beam](https://cfpb.github.io/design-manual/static/img/logo/Logo23.png "Logo with no beam")
+
+
+          </div>
+
+
+          </div><!-- /.content-67 -->
+        variation_name: Don't remove the light beam
+      - variation_description: >+
+          
+          <div class="content-33 content-first warning" markdown="1">
+
+
+          <p>{% include icons/error-round.svg %} Don’t stretch or condense. This weakens the brand.</p>
+
+
+          </div><!-- /.content-33 -->
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          <div class="content-50 content-first" markdown="1">
+
+
+          ![Stretched logo](https://cfpb.github.io/design-manual/static/img/logo/Logo16.png "Stretched logo")
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Condensed logo](https://cfpb.github.io/design-manual/static/img/logo/Logo24.png "Condensed logo")
+
+
+          </div>
+
+
+          </div><!-- /.content-67 -->
+
+        variation_name: Don't stretch or condense
+        variation_specs: ""
+      - variation_name: Don't apply a drop shadow
+        variation_description: >-
+          <div class="content-33 content-first warning" markdown="1">
+
+
+          <p>{% include icons/error-round.svg %} Don’t apply a drop shadow.</p>
+
+
+          </div><!-- /.content-33 -->
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          <div class="content-50 content-first" markdown="1">
+
+          ![Drop shadow logo](https://cfpb.github.io/design-manual/static/img/logo/Logo17.png "Drop shadow logo")
+
+          </div>
+
+
+          </div><!-- /.content-67 -->
+        variation_specs: ""
+      - variation_description: >-
+          <div class="content-33 content-first warning" markdown="1">
+
+
+          {% include icons/error-round.svg %} Don’t outline the logo or use other colors. This dilutes brand association.
+
+
+          </div><!-- /.content-33 -->
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          <div class="content-50 content-first" markdown="1">
+
+
+          ![Outlined logo](https://cfpb.github.io/design-manual/static/img/logo/Logo25.png "Outlined logo")
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Blue logo](https://cfpb.github.io/design-manual/static/img/logo/Logo18.png "Blue logo")
+
+
+          </div>
+
+
+          </div><!-- /.content-67 -->
+
+
+          <div class="content-33 content-first warning" markdown="1">
+
+
+          {% include icons/error-round.svg %} Don’t rotate the symbol. This changes the connotation of the light.
+
+
+          </div><!-- /.content-33 -->
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          <div class="content-50 content-first" markdown="1">
+
+
+          ![Rotated logo](https://cfpb.github.io/design-manual/static/img/logo/Logo21.png "Rotated logo")
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Rotated logo](https://cfpb.github.io/design-manual/static/img/logo/Logo22.png "Rotated logo")
+
+
+          </div>
+
+
+          </div><!-- /.content-67 -->
+
+
+          <div class="content-33 content-first warning" markdown="1">
+
+
+          {% include icons/error-round.svg %} Don’t place the logo directly on a colored background or photo without a white bounding box.
+
+
+          </div><!-- /.content-33 -->
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          <div class="content-50 content-first" markdown="1">
+
+
+          ![Colored box logo](https://cfpb.github.io/design-manual/static/img/logo/Logo20.png "Colored box logo")
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Photo box logo](https://cfpb.github.io/design-manual/static/img/logo/Logo19.png "Photo box logo")
+
+
+          </div>
+
+
+          </div><!-- /.content-67 -->
+    variation_group_name: Examples of misuse
 ---

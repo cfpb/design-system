@@ -16,16 +16,14 @@ description: >-
 
   * https://cfpb.github.io/capital-framework/components/cf-typography/#lists
 variation_groups:
-  - variations:
-      - variation_code_snippet: |-
-          <ul class="m-list m-list__unstyled">
-              <li class="m-list_item">List item 1</li>
-              <li class="m-list_item">List item 2</li>
-              <li class="m-list_item">List item 3</li>
-          </ul>
-        variation_description: Unstyled list removes bullets and other styling from a list.
-        variation_name: Unstyled list
-      - variation_code_snippet: |-
+  - variation_group_name: Types
+    variations:
+      - variation_name: Bulleted list
+        variation_description: Use a bulleted list when grouping similar items or short
+          thoughts into “bite-size” chunks. Generally, the order or count of the
+          items in a bullet list isn’t important. An exception to this may be a
+          list of states, which naturally fits into an alphabetical order.
+        variation_code_snippet: |-
           <p> Paragraph example for visual reference</p>
           <ul class="m-list">
               <li class="m-list_item">List item 1</li>
@@ -40,12 +38,9 @@ variation_groups:
               <li class="m-list_item">List item 3</li>
           </ul>
           <p> Paragraph example for visual reference</p>
-        variation_description: Use a bulleted list when grouping similar items or short
-          thoughts into “bite-size” chunks. Generally, the order or count of the
-          items in a bullet list isn’t important. An exception to this may be a
-          list of states, which naturally fits into an alphabetical order.
-        variation_name: Bulleted list
         variation_specs: >-
+          
+
           DEFAULT 
 
 
@@ -64,8 +59,14 @@ variation_groups:
 
           NESTED 
 
+
           * Bullets are open circles and flush left with the preceding line of text
-      - variation_code_snippet: |-
+      - variation_name: Numbered list
+        variation_description: When the order of information presented is important, use
+          a numbered list. This could include chronological items, things
+          presented in the order or importance, or a finite list of a counted
+          number of items.
+        variation_code_snippet: |-
           <p>Paragraph example for visual reference</p>
           <ol>
               <li>List item 1</li>
@@ -80,13 +81,11 @@ variation_groups:
               <li>List item 3</li>
           </ol>
           <p>Paragraph example for visual reference</p>
-        variation_description: >
-          When the order of information presented is important, use a numbered
-          list. This could include chronological items, things presented in the
-          order or importance, or a finite list of a counted number of items.
-        variation_name: Numbered list
         variation_specs: >-
+          
+
           DEFAULT
+
 
           * Avenir Next Regular, 16px
 
@@ -101,7 +100,17 @@ variation_groups:
 
           NESTED
 
+
           * Nested items have bullets — solid squares — that are flush left with the preceding line of text. (Note that the code sample shows letters and not bullets!)
+  - variations:
+      - variation_code_snippet: |-
+          <ul class="m-list m-list__unstyled">
+              <li class="m-list_item">List item 1</li>
+              <li class="m-list_item">List item 2</li>
+              <li class="m-list_item">List item 3</li>
+          </ul>
+        variation_description: Unstyled list removes bullets and other styling from a list.
+        variation_name: Unstyled list
       - variation_code_snippet: |-
           <ul class="m-list m-list__horizontal">
               <li class="m-list_item">List item 1</li>
@@ -166,6 +175,7 @@ variation_groups:
 
           ![](/design-system/images/uploads/28131667-787b1896-66ef-11e7-8411-c0f40ba79e2c.png)
         variation_name: Compact definition list
+    variation_group_name: Variations
 use_cases: ""
 content_guidelines: >
   

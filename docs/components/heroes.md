@@ -240,7 +240,7 @@ variation_groups:
         variation_implementation: "It’s best to avoid a non-button call to action in
           these, as it’s unlikely that the Pacific Blue will have accessible
           contrast with a non-white (or light gray) background. "
-    variation_group_name: Standard heroes
+    variation_group_name: Types
     variation_group_description: >-
       Heroes combine a heading, a small amount of subheading text, and image. 
 

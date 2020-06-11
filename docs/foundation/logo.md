@@ -124,6 +124,7 @@ variation_groups:
 
 
           </div>
+        variation_specs: ""
       - variation_description: >
           <div class="content-33 content-first" markdown="1">
 
@@ -142,4 +143,147 @@ variation_groups:
 
           </div>
         variation_name: One color logo
+        variation_specs: ""
+  - variations:
+      - variation_description: >+
+          <div class="content-33 content-first" markdown="1">
+
+
+          There should always be ample space around the logo to ensure maximum impact and keep the mark from looking cluttered.
+
+
+          </div>
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+
+          #### Isolated logo clear space
+
+
+          <div class="content-50 content-first" markdown="1">
+
+
+          ![Isolated logo clear space](https://cfpb.github.io/design-manual/static/img/logo/Logo2.png "Isolated logo clear space")
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Isolated logo clear space](https://cfpb.github.io/design-manual/static/img/logo/Logo3.png "Isolated logo clear space")
+
+
+          </div>
+
+
+          ---
+
+
+          #### Vertical logo clear space
+
+
+          <div class="content-50 content-first" markdown="1">
+
+
+          ![Vertical logo clear space](https://cfpb.github.io/design-manual/static/img/logo/Logo4.png "Vertical logo clear space")
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Vertical logo clear space](https://cfpb.github.io/design-manual/static/img/logo/Logo5.png "Vertical logo clear space")
+
+
+          </div>
+
+
+          ---
+
+
+          #### Horizontal logo clear space
+
+
+          <div class="content-50 content-first" markdown="1">
+
+
+          ![Horizontal logo clear space](https://cfpb.github.io/design-manual/static/img/logo/Logo6.png "Horizontal logo clear space")
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          ![Horizontal logo clear space](https://cfpb.github.io/design-manual/static/img/logo/Logo7.png "Horizontal logo clear space")
+
+
+          </div>
+
+
+          </div><!-- /.content-67 -->
+
+        variation_name: Clear space
+        variation_specs: ""
+      - variation_description: >
+          <div class="content-33 content-first" markdown="1">
+
+
+          The small execution logo should be used to optimize legibility of the logotype on desktop and mobile applications. These are our benchmark sizes for web, but variance may be used for specific circumstances or constraints.
+
+
+          </div><!-- /.content-33 -->
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          <div class="content-50 content-first" markdown="1">
+
+
+          #### Desktop scale
+
+
+          ![Desktop web scale logo](https://cfpb.github.io/design-manual/static/img/logo/Logo9.png "Desktop web scale logo")
+
+
+          * Lockup: small execution
+
+          * Height: 50px
+
+          * Padding: 25px
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
+          #### Mobile scale
+
+
+          ![Mobile web scale logo](https://cfpb.github.io/design-manual/static/img/logo/Logo10.png "Mobile web scale logo")
+
+
+          * Lockup: small execution
+
+          * Height: 40px
+
+          * Padding: 20px
+
+
+          </div>
+
+
+          </div><!-- /.content-67 -->
+        variation_name: Web scale
+    variation_group_name: Stylistic guidelines
 ---

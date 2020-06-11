@@ -381,8 +381,8 @@ variation_groups:
           @link-underline-active:  @navy;
 
           // .a-link__jump
-          @jump-link_bg:              @gray-10;
-          @jump-link_border:          @gray-40;
+          @jump-link_bg:           @gray-10;
+          @jump-link_border:       @gray-40;
 
           // code
           @code-text:              @text;
@@ -423,13 +423,13 @@ variation_groups:
 
           ```
 
-          @webfont-regular: 'AvenirNextLTW01-Regular';
+          @webfont-regular:     'AvenirNextLTW01-Regular';
 
-          @webfont-italic: @webfont-regular;
+          @webfont-italic:      @webfont-regular;
 
-          @webfont-medium: 'AvenirNextLTW01-Medium';
+          @webfont-medium:      'AvenirNextLTW01-Medium';
 
-          @webfont-demi: @webfont-medium;
+          @webfont-demi:        @webfont-medium;
 
           ```
 
@@ -443,13 +443,13 @@ variation_groups:
 
           ```
 
-          @webfont-regular: Arial;
+          @webfont-regular:      Arial;
 
-          @webfont-italic:  Arial;
+          @webfont-italic:       Arial;
 
-          @webfont-medium:  Arial;
+          @webfont-medium:       Arial;
 
-          @webfont-demi:    Arial;
+          @webfont-demi:         Arial;
 
           ```
         variation_code_snippet: ""

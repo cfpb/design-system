@@ -231,11 +231,13 @@ variation_groups:
           @cf-icon-height: 1.1875em;
 
           ```
-  - variation_group_name: Heroes and featured content modules
+  - variation_group_name: Layout
     variation_group_description: ""
     variations:
-      - variation_name: Color
-        variation_description: |-
+      - variation_name: Heroes and featured content modules
+        variation_description: ""
+      - variation_description: |-
+          #### Color
           ```
           // Hero variables
           @hero-bg:                   @gray-5;
@@ -245,9 +247,7 @@ variation_groups:
           // Featured Content Module variables
           @fcm-bg:                    @block__bg;
           ```
-        variation_code_snippet: ""
-      - variation_name: Sizing
-        variation_description: |-
+          #### Sizing
           ```
           // Hero variables
           @hero-desktop-height: 285px;

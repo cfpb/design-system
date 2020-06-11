@@ -285,6 +285,7 @@ variation_groups:
 
           </div><!-- /.content-67 -->
         variation_name: Web scale
+        variation_specs: ""
       - variation_description: >+
           
           <div class="content-33 content-first" markdown="1">

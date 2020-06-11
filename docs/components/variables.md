@@ -232,10 +232,35 @@ variation_groups:
           // Featured Content Module variables
           @fcm-bg:                    @block__bg;
           ```
+        variation_code_snippet: ""
       - variation_name: Sizing
         variation_description: |-
           ```
           // Hero variables
           @hero-desktop-height: 285px;
           ```
+  - variation_group_name: Notifications
+    variations:
+      - variation_name: Color
+        variation_description: |-
+          ```
+          @notification-bg:             @gray-5;
+          @notification-bg-success:     @green-10;
+          @notification-bg-warning:     @gold-10;
+          @notification-bg-error:       @red-10;
+
+          @notification-border:         @gray-40;
+          @notification-border-success: @green;
+          @notification-border-warning: @gold;
+          @notification-border-error:   @red;
+
+          @notification-icon:           @gray;
+          @notification-icon-success:   @green;
+          @notification-icon-warning:   @gold;
+          @notification-icon-error:     @red;
+          ```
+        variation_code_snippet: ""
+      - variation_name: Sizing
+        variation_description: "`@notification-padding__px: 15px;`"
+        variation_code_snippet: ""
 ---

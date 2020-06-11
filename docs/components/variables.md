@@ -206,6 +206,19 @@ variation_groups:
       ```
 
       Gives column blocks a background color if set to true.
+    variations:
+      - variation_name: Breakpoints
+        variation_description: |-
+          ```
+          @bp-xs-max:  600px;
+          @bp-sm-min:  @bp-xs-max + 1px;
+          @bp-sm-max:  900px;
+          @bp-med-min: @bp-sm-max + 1px;
+          @bp-med-max: 1020px;
+          @bp-lg-min:  @bp-med-max + 1px;
+          @bp-lg-max:  1230px;
+          @bp-xl-min:  @bp-lg-max + 1px;
+          ```
   - variation_group_name: Icons
     variations:
       - variation_name: Sizing
@@ -343,10 +356,43 @@ variation_groups:
           @jump-link_bg:              @gray-10;
           @jump-link_border:          @gray-40;
 
+          // code
+          @code-text:              @text;
+          @code-bg:                @gray-5;
+          ```
+      - variation_name: Sizing
+        variation_description: >-
+          ```
+
+          @base-font-size-px:   16px;
+
+          @base-line-height-px: 22px;
+
+          @base-line-height:    unit( @base-line-height-px / @base-font-size-px );
+
+
+          @size-xl:             48px; // Super-size
+
+
+          @size-i:              34px; // h1-size
+
+          @size-ii:             26px; // h2-size
+
+          @size-iii:            22px; // h3-size
+
+          @size-iv:             18px; // h4-size
+
+          @size-v:              14px; // h5-site
+
+          @size-vi:             12px; // h6-size
+
+          @size-code:           13px; // Custom size only for Mono code blocks
 
           ```
       - variation_name: Fonts
         variation_description: >-
+          #### Avenir
+
           ```
 
           @webfont-regular: 'AvenirNextLTW01-Regular';
@@ -359,9 +405,26 @@ variation_groups:
 
           ```
 
-          **Note**: We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.
+          *Note: We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.*
 
-          Similarly, we’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.
+
+          *Similarly, we’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.*
+
+
+          #### Arial
+
+          ```
+
+          @webfont-regular: Arial;
+
+          @webfont-italic:  Arial;
+
+          @webfont-medium:  Arial;
+
+          @webfont-demi:    Arial;
+
+          ```
+        variation_code_snippet: ""
       - variation_name: Font source variables
         variation_description: >-
           Use this variable to specify where the fonts files used in the

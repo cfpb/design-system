@@ -101,15 +101,109 @@ variation_groups:
           @expandable-group-bg:          @white;
           @expandable-group-divider:     @gray-80;
           ```
+        variation_code_snippet: ""
       - variation_name: Sizing
         variation_description: |
           ```
           @expandable_link-font-size: 14px;
           ```
+        variation_code_snippet: ""
       - variation_name: Timing
         variation_description: |-
           ```
           // Transition timing
           @expandable__transition-speed: 0.25s;
           ```
+  - variation_group_name: Forms
+    variations:
+      - variation_name: Color
+        variation_description: |-
+          ```
+          // .a-text-input borders
+          @input-border:                            @gray-60;
+          @input-border__hover:                     @pacific;
+          @input-border__focused:                   @pacific;
+          @input-border__active:                    @pacific;
+          @input-border__error:                     @red;
+          @input-border__warning:                   @gold;
+          @input-border__success:                   @green;
+          @input-border__selected:                  @pacific;
+
+          // .a-text-input backgrounds
+          @input-bg:                                @white;
+          @input-bg__selected:                      @pacific;
+          @input-bg__disabled:                      @gray-10;
+          @input-bg__disabled-selected:             @gray-40;
+
+          // .a-text-input text
+          @input-text:                              @black;
+          @input-text__disabled:                    @gray;
+          @input-text__placeholder:                 @gray;
+
+          // .a-text-input icons
+          @input-icon__error:                       @red;
+
+          // .a-select
+          @select-border:                           @input-border;
+          @select-icon-bg:                          @gray-10;
+          @select-text__disabled:                   @input-text__disabled;
+
+          // .m-form-field
+          @form-field-input-border:                 @input-border;
+          @form-field-input-border__focused:        @input-border;
+          @form-field-input-border__disabled:       @gray-60;
+
+          // .m-form-field__lg-target
+          @form-field-input-lg-target-bg:           @gray-10;
+          @form-field-input-lg-target-bg__selected: @pacific-20;
+          @form-field-input-lg-target-bg__disabled: @gray-20;
+          @form-field-input-lg-target-border:       @pacific;
+
+          // .a-label_helper
+          @label-helper:                            @gray;
+          ```
+        variation_code_snippet: ""
+      - variation_name: Sizing
+        variation_description: |-
+          ```
+          // .a-select
+          @select-height: 30px;
+          ```
+        variation_code_snippet: ""
+  - variation_group_name: Grid
+    variation_group_description: >-
+      ```
+
+      @grid_wrapper-width: 1200px;
+
+      ```
+
+      The grid’s maximum width in px. This value can be overridden in the grid_wrapper() mixin. 
+
+
+      ```
+
+      @grid_gutter-width: 30px;
+
+      ```
+
+      The fixed width between columns.
+
+
+      ```
+
+      @grid_total-columns: 12;
+
+      ```
+
+      The total number of columns used in calculating column widths. This value can be overridden in the grid_column() mixin.
+
+
+      ```
+
+      @grid_debug: false;
+
+      ```
+
+      Gives column blocks a background color if set to true.
 ---

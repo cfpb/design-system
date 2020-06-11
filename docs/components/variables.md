@@ -345,4 +345,24 @@ variation_groups:
           **Note**: We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.
 
           Similarly, we’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.
+      - variation_name: Font source variables
+        variation_description: >-
+          Use this variable to specify where the fonts files used in the
+          @webfont-* variables are located when self-hosting fonts. Can be
+          either a relative or absolute path.
+
+          ```
+
+          @cf-fonts-path: '/fonts'`
+
+          ```
+
+
+          If you want to load fonts from a Fonts.com Web Fonts project, set the following variable to true, otherwise set it to false to use the self-hosted font path:
+
+          ```
+
+          @use-font-cdn: true;
+
+          ```
 ---

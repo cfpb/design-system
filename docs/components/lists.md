@@ -4,7 +4,17 @@ layout: variation
 section: components
 secondary_section: Layout options
 status: Released
-description: "Lists are an effective way to visually highlight important information so that it can be more easily scanned and read. Before writing a list, it’s important to identify the best style needed for the information being presented.\n\nList items should:\n\n* Be capitalized\n* Avoid unnecessary repetition\n* Have a parallel structure\n* Start with an introductory clause or sentence\n* Use consistent punctuation\n\nIf the list items are complete sentences, the introductory clause should also be a complete sentence, followed by a colon. These list items should end with a period.\n\nIf the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.\n\nMore information can be found at:\n* http://cfpb.github.io/design-manual/brand-guidelines/typography.html\t\n* https://cfpb.github.io/capital-framework/components/cf-typography/#lists"
+description: >-
+  Lists are an effective way to visually highlight important information so that
+  it can be more easily scanned and read. Before writing a list, it’s important
+  to identify the best style needed for the information being presented.
+
+
+  More information can be found at:
+
+  * http://cfpb.github.io/design-manual/brand-guidelines/typography.html	
+
+  * https://cfpb.github.io/capital-framework/components/cf-typography/#lists
 variation_groups:
   - variations:
       - variation_code_snippet: |-
@@ -30,12 +40,31 @@ variation_groups:
               <li class="m-list_item">List item 3</li>
           </ul>
           <p> Paragraph example for visual reference</p>
-        variation_description: >-
-          Use a bulleted list when grouping similar items or short thoughts into
-          “bite-size” chunks. Generally, the order or count of the items in a bullet
-          list isn’t important. An exception to this may be a list of states, which
-          naturally fits into an alphabetical order.
+        variation_description: Use a bulleted list when grouping similar items or short
+          thoughts into “bite-size” chunks. Generally, the order or count of the
+          items in a bullet list isn’t important. An exception to this may be a
+          list of states, which naturally fits into an alphabetical order.
         variation_name: Bulleted list
+        variation_specs: >-
+          DEFAULT 
+
+
+          * Avenir Next Regular, 16px 
+
+          * Margin bottom (list item): 8px
+
+          * Margin top (list): 10px
+
+          * Margin bottom (list): 15px
+
+          * Bullets are solid squares
+
+          * Bullets are aligned flush with the left margin of the column of text they’re in
+
+
+          NESTED 
+
+          * Bullets are open circles and flush left with the preceding line of text
       - variation_code_snippet: |-
           <p>Paragraph example for visual reference</p>
           <ol>
@@ -52,10 +81,27 @@ variation_groups:
           </ol>
           <p>Paragraph example for visual reference</p>
         variation_description: >
-          When the order of information presented is important, use a numbered list.
-          This could include chronological items, things presented in the order or
-          importance, or a finite list of a counted number of items.
+          When the order of information presented is important, use a numbered
+          list. This could include chronological items, things presented in the
+          order or importance, or a finite list of a counted number of items.
         variation_name: Numbered list
+        variation_specs: >-
+          DEFAULT
+
+          * Avenir Next Regular, 16px
+
+          * Margin bottom (list item): 8px
+
+          * Margin top (list): 10px
+
+          * Margin bottom (list): 15px
+
+          * Numbers are right aligned to their associated period; all single-digit numbers fit inside the left margin
+
+
+          NESTED
+
+          * Nested items have bullets — solid squares — that are flush left with the preceding line of text. (Note that the code sample shows letters and not bullets!)
       - variation_code_snippet: |-
           <ul class="m-list m-list__horizontal">
               <li class="m-list_item">List item 1</li>
@@ -76,11 +122,16 @@ variation_groups:
                   <a class="m-list_link" href="#">List item 3</a>
               </li>
           </ul>
-        variation_description: >-
-          The link list modifier is intended to be used for lists where each item is
-          a link. It converts to a finger-friendly link with a large tap area on
-          smaller screens.
+        variation_description: The link list modifier is intended to be used for lists
+          where each item is a link. It converts to a finger-friendly link with
+          a large tap area on smaller screens.
         variation_name: Link list
+        variation_specs: |-
+          * Avenir Next Medium, 16px, Pacific
+          * Border bottom: 1 px, dotted, Pacific
+          * Margin bottom (list item): 8px
+          * Margin top (list): 10px
+          * Margin bottom (list): 15px
       - variation_code_snippet: |-
           <ul class="m-list m-list__spaced">
               <li class="m-list_item">List item 1</li>
@@ -89,37 +140,55 @@ variation_groups:
           </ul>
         variation_description: Spaced list adds extra padding to every element in a list.
         variation_name: Spaced list
-      - variation_code_snippet: '  '
+      - variation_code_snippet: "  "
         variation_description: >-
-          When the primary role of a list is to offer definitions or explanations
-          for a group of terms, the bolded term should appear first, followed by a
-          colon. The definition should appear after the bolded term and be written
-          in complete sentences.
+          When the primary role of a list is to offer definitions or
+          explanations for a group of terms, the bolded term should appear
+          first, followed by a colon. The definition should appear after the
+          bolded term and be written in complete sentences.
 
 
-          Each defined term should appear on its own line, without an indentation or
-          bullet.
+          Each defined term should appear on its own line, without an indentation or bullet.
         variation_name: Basic definition list
-      - variation_code_snippet: ''
-        variation_description: >-
-          Modifies the base style to make <dt> look like an h5. Used for definition
-          lists that contain key/value or term/definition pairs (i.e. lists where
-          the <dt> is fairly short, acts like a label, and is readable in all caps),
-          like the Mosaic portals and the job listings.
+      - variation_code_snippet: ""
+        variation_description: Modifies the base style to make <dt> look like an h5.
+          Used for definition lists that contain key/value or term/definition
+          pairs (i.e. lists where the <dt> is fairly short, acts like a label,
+          and is readable in all caps), like the Mosaic portals and the job
+          listings.
         variation_name: Key/value definition list
-      - variation_code_snippet: ''
+      - variation_code_snippet: ""
         variation_description: >-
-          Modifies the base style to put <dt> and <dd> on the same line (and maybe
-          also add a colon after the <dt>?). Used when the two parts of the list
-          entry should be inline, as in the job listings.
+          Modifies the base style to put <dt> and <dd> on the same line (and
+          maybe also add a colon after the <dt>?). Used when the two parts of
+          the list entry should be inline, as in the job listings.
 
 
           ![](/design-system/images/uploads/28131667-787b1896-66ef-11e7-8411-c0f40ba79e2c.png)
         variation_name: Compact definition list
-use_cases: ''
-content_guidelines: ''
-behavior: ''
-accessibility: ''
-research: ''
+use_cases: ""
+content_guidelines: >
+  
+  List items should:
+
+
+  * Be capitalized
+
+  * Avoid unnecessary repetition
+
+  * Have a parallel structure
+
+  * Start with an introductory clause or sentence
+
+  * Use consistent punctuation
+
+
+  If the list items are complete sentences, the introductory clause should also be a complete sentence, followed by a colon. These list items should end with a period.
+
+
+  If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.
+behavior: ""
+accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
+research: ""
 ---

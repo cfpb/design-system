@@ -8,59 +8,36 @@ description: >
   Component variables are used to theme a component. They likely will be left as
   is, but if needed can be overwritten by duplicating the variable in a `@key:
   value` format with a different value. This customized variable would be placed
-  in the same file where this component’s less file is imported.
+  in the same file where this component’s less file is imported. Color variables
+  referenced in comments are from cf-core cf-brand-colors.less.
 variation_groups:
   - variation_group_name: Buttons
     variations:
       - variation_name: Color
-        variation_description: >-
-          Color variables referenced in comments are from cf-core
-          cf-brand-colors.less.
-
-
+        variation_description: |-
           ```
-
           // .btn
-
           @btn-text:                  @white;
-
           @btn-bg:                    @pacific;
-
           @btn-bg-hover:              @dark-pacific;
-
           @btn-bg-active:             @navy;
 
-
           // .btn__secondary
-
           @btn__secondary-text:       @white;
-
           @btn__secondary-bg:         @gray;
-
           @btn__secondary-bg-hover:   @dark-gray;
-
           @btn__secondary-bg-active:  @black;
 
-
           // .btn__warning
-
           @btn__warning-text:         @white;
-
           @btn__warning-bg:           @red;
-
           @btn__warning-bg-hover:     @dark-red;
-
           @btn__warning-bg-active:    @dark-gray;
 
-
           // .btn__disabled
-
           @btn__disabled-text:        @gray;
-
           @btn__disabled-bg:          @gray-20;
-
           @btn__disabled-outline:     @gray-20;
-
           ```
         variation_code_snippet: ""
       - variation_name: Sizing

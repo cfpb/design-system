@@ -6,7 +6,7 @@ secondary_section: Layout options
 status: Released
 description: Cards are blocks of content that are surrounded by a border.
 variation_groups:
-  - variation_group_name: Standard cards
+  - variation_group_name: Types
     variations:
       - variation_description: |-
           A single card with multiple links.

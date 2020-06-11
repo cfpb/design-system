@@ -399,7 +399,7 @@ variation_groups:
 
 
           </div><!-- /.content-67 -->
-        variation_name: Don't remove the light beam
+        variation_name: "{% include icons/error-round.svg %} Don't remove the light beam"
         variation_specs: ""
       - variation_description: >+
           

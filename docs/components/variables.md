@@ -263,4 +263,19 @@ variation_groups:
       - variation_name: Sizing
         variation_description: "`@notification-padding__px: 15px;`"
         variation_code_snippet: ""
+  - variation_group_name: Pagination
+    variation_group_description: ""
+    variations:
+      - variation_name: Color
+        variation_description: |-
+          ```
+          @pagination-text: @gray;
+          @pagination-bg:   @gray-10;
+          ```
+        variation_code_snippet: ""
+      - variation_name: Sizing
+        variation_description: |-
+          ```
+          @pagination-btn-min-width-px: 130px;
+          ```
 ---

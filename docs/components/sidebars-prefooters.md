@@ -2,7 +2,7 @@
 title: Main content and sidebars
 layout: variation
 section: components
-secondary_section: Layout options
+secondary_section: Core development
 status: Released
 description: |+
   A set of HTML and CSS layout helpers.

@@ -144,14 +144,7 @@ variation_groups:
           minicons](https://cfpb.github.io/design-system/foundation/iconography)
           to reassure the user that an action is functioning as intended.
         variation_name: In-progress notification
-    variation_group_description: >-
-      Types of notifications include success, warning, error, and in-progress. 
-
-
-      Note that form-level alerts should appear below the form title. Field-level alerts—minicon and message—should always appear below the input field.  
-
-
-      For screen reader accessibility, include anchor links to the fields that need correction.
+    variation_group_description: Types of notifications include success, warning, error, and in-progress.
   - variation_group_name: Default (base) notification
     variations:
       - variation_code_snippet: >-
@@ -230,6 +223,15 @@ variation_groups:
 use_cases: ""
 content_guidelines: ""
 behavior: >-
+  ### Placement
+
+
+  * Form-level alerts should appear below the form title. 
+
+
+  * Field-level alerts (minicon and message) should always appear below the input field.  
+
+
   ### Validation
 
 

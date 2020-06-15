@@ -144,14 +144,14 @@ use_cases: >-
 content_guidelines: ""
 behavior: ""
 accessibility: >-
-  ### Dropdown mobile considerations 
+  ### Dropdowns
 
   * Keep in mind that dropdowns behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions. 
 
   * Mobile also doesn’t allow for the use of typeahead to navigate quickly to an item in a list, so navigating long lists can be especially cumbersome.
 
 
-  ### Multiselect considerations
+  ### Multiselects
 
   From an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multi-select component is desired, use custom JavaScript to make it accessible.
 last_updated: 2020-01-06T20:31:06.632Z

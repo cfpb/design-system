@@ -4439,17 +4439,17 @@ Label heading
 &lt;/nav&gt;`,
                 
                     'variation_name2': 'First and last pages',
-                    'variation_description2': "",
+                    'variation_description2': "When on the first or last page of paginated content, be sure to disable the appropriate buttons by adding the a_btn__disabled modifier and removing their href attribute.",
                     'variation_code_snippet2': `&lt;nav class=&quot;m-pagination&quot; role=&quot;navigation&quot; aria-label=&quot;Pagination&quot;&gt;    &lt;a class=&quot;a-btn              a-btn__disabled m-pagination_btn-prev&quot;&gt;        &lt;span class=&quot;a-btn_icon a-btn_icon__on-left&quot;&gt;{% include icons/left.svg %}&lt;/span&gt;        Newer &lt;/a&gt;    &lt;a class=&quot;a-btn              m-pagination_btn-next&quot; href=&quot;?page=2#pagination_content&quot;&gt;        Older        &lt;span class=&quot;a-btn_icon a-btn_icon__on-right&quot;&gt;{% include icons/right.svg %}&lt;/span&gt;    &lt;/a&gt;    &lt;form class=&quot;m-pagination_form&quot; action=&quot;#pagination_content&quot;&gt;        &lt;label class=&quot;m-pagination_label&quot; for=&quot;m-pagination_current-page&quot;&gt;            Page            &lt;span class=&quot;u-visually-hidden&quot;&gt;                number 1 out &lt;/span&gt;            &lt;input class=&quot;m-pagination_current-page&quot; id=&quot;m-pagination_current-page&quot; name=&quot;page&quot;                   type=&quot;number&quot; min=&quot;1&quot;                   max=&quot;149&quot; pattern=&quot;[0-9]*&quot;                   inputmode=&quot;numeric&quot; value=&quot;1&quot;&gt;            of 149        &lt;/label&gt;        &lt;button class=&quot;a-btn                       a-btn__link m-pagination_btn-submit&quot; id=&quot;m-pagination_btn-submit&quot;                type=&quot;submit&quot;&gt;Go&lt;/button&gt; &lt;/form&gt;&lt;/nav&gt;`,
                 
             
 
 
             'title': 'Pagination',
-            'description': "Default pagination consists of “Older” and “Newer” links, styled as buttons, and an inline form (input, submit button) that allows users to navigate to specific pages by number. When appropriate, the buttons may be labeled “Previous” and “Next”.More information can be found at:  http://cfpb.github.io/design-manual/page-components/tables.html#behavior  https://cfpb.github.io/capital-framework/components/cf-pagination/",
+            'description': "Pagination is used to separate long sets of data or content into shorter pieces, so as to make it easier for users to consume information.",
             'use_cases': "",
             'content_guidelines': "Tables with over 20 rows can be paired with pagination.",
-            'behavior': "@bp-xs-max: On small screens, the buttons display next to each other, stacked on top of the formCodeTo enable the component to jump directly to the paginated content, include an id on a wrapper of the paginated content (or an element directly above it), e.g., id=\"pagination_content\".When on the first or last page of paginated content, be sure to disable the appropriate buttons by adding the a_btn__disabled modifier and removing their href attribute.The cf-pagination component provides a responsive approach to multipage page navigation for Capital Framework.cf-core, cf-buttons, and cf-icons components are all dependencies of this component.NOTE: If you use cf-pagination.less directly, be sure to run the file through Autoprefixer, or your compiled Capital Framework CSS will not work perfectly in older browsers.",
+            'behavior': "@bp-xs-max: On small screens, the buttons display next to each other, stacked on top of the form",
             'accessibility': "",
             'research': "",
             'related_items': "",
@@ -5647,7 +5647,7 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                 
 
                 
-                    'variation_name1': 'Single-line text inputs',
+                    'variation_name1': '',
                     'variation_description1': "",
                     'variation_code_snippet1': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-default&quot;&gt;
 Default
@@ -5687,23 +5687,23 @@ Disabled
        disabled&gt;
 `,
                 
-                    'variation_name2': 'Textarea inputs',
-                    'variation_description2': "Use for long-form answers.",
-                    'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textarea-example-default&quot;&gt;
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Textarea inputs',
+                    'variation_description1': "Use for long-form answers.",
+                    'variation_code_snippet1': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textarea-example-default&quot;&gt;
     Label
 &lt;/label&gt;
 &lt;textarea class=&quot;a-text-input&quot;
           id=&quot;textarea-example-default&quot;
           placeholder=&quot;Enter text…&quot;&gt;Placeholder text&lt;/textarea&gt;`,
                 
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Text input with a button',
-                    'variation_description1': "These are used for simple forms where a full filter isn’t necessary.",
-                    'variation_code_snippet1': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
+                    'variation_name2': 'Text input with a button',
+                    'variation_description2': "These are used for simple forms where a full filter isn’t necessary.",
+                    'variation_code_snippet2': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
     &lt;div class=&quot;o-form__input-w-btn_input-container&quot;&gt;
         &lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; title=&quot;Test input&quot;&gt;
     &lt;/div&gt;
@@ -5712,9 +5712,9 @@ Disabled
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name2': 'Button inside a text input',
-                    'variation_description2': "These offer the user an action to take related to the input, typically to clear the input.",
-                    'variation_code_snippet2': `&lt;div class=&quot;m-btn-inside-input&quot;&gt;
+                    'variation_name3': 'Button inside a text input',
+                    'variation_description3': "These offer the user an action to take related to the input, typically to clear the input.",
+                    'variation_code_snippet3': `&lt;div class=&quot;m-btn-inside-input&quot;&gt;
     &lt;input type=&quot;text&quot;
         value=&quot;This is some really long text to make sure that the button doesn&#39;t overlap the content in such a way that this input becomes unusable.&quot;
         title=&quot;Test input&quot;
@@ -5725,9 +5725,9 @@ Disabled
     &lt;/button&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name3': 'Button inside a text input with another button',
-                    'variation_description3': "This example combines both of the previous patterns, creating a typical site search form.",
-                    'variation_code_snippet3': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
+                    'variation_name4': 'Button inside a text input with another button',
+                    'variation_description4': "This example combines both of the previous patterns, creating a typical site search form.",
+                    'variation_code_snippet4': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
     &lt;div class=&quot;o-form__input-w-btn_input-container&quot;&gt;
         &lt;div class=&quot;m-btn-inside-input&quot;&gt;
             &lt;input type=&quot;text&quot;
@@ -5745,9 +5745,9 @@ Disabled
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name4': 'Full-width text inputs',
-                    'variation_description4': "",
-                    'variation_code_snippet4': `&lt;div class=&quot;m-form-field&quot;&gt;
+                    'variation_name5': 'Full-width text inputs',
+                    'variation_description5': "",
+                    'variation_code_snippet5': `&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;full-textinput-example&quot;&gt;
         Label
     &lt;/label&gt;
@@ -5757,9 +5757,9 @@ Disabled
           value=&quot;Placeholder text&quot;&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name5': 'Full-width textarea inputs',
-                    'variation_description5': "",
-                    'variation_code_snippet5': `&lt;div class=&quot;m-form-field&quot;&gt;
+                    'variation_name6': 'Full-width textarea inputs',
+                    'variation_description6': "",
+                    'variation_code_snippet6': `&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;full-textarea-example&quot;&gt;
         Label
     &lt;/label&gt;

@@ -1421,32 +1421,38 @@
     <ul class="m-list m-list__horizontal u-mb30">
         
         
+        <li class="m-list_item">
+            <a class="m-list_link" href="#standard-pagination">
+                Standard pagination
+            </a>
+        </li>
+        
         
     </ul>
     
 
     
     <section id="description" class="u-mb30">
-        <p>Default pagination consists of “Older” and “Newer” links, styled as buttons, and an inline form (input, submit button) that allows users to navigate to specific pages by number. When appropriate, the buttons may be labeled “Previous” and “Next”.</p>
-
-<p>More information can be found at:</p>
-<ul>
-  <li>http://cfpb.github.io/design-manual/page-components/tables.html#behavior</li>
-  <li>https://cfpb.github.io/capital-framework/components/cf-pagination/</li>
-</ul>
+        <p>Pagination is used to separate long sets of data or content into shorter pieces, so as to make it easier for users to consume information.</p>
 
     </section>
     
 
     
     
-    <section class="o-variation_group" id="">
+    <section class="o-variation_group" id="standard-pagination">
 
         
-        
-        <div class="u-mb15"></div>
+        <h2 class="o-variation_group_title">
+            Standard pagination
+        </h2>
         
 
+        
+        <div class="o-variation_group_description">
+            <p>Pagination consists of “Older” and “Newer” links, styled as buttons, and an inline form (input, submit button) that allows users to navigate to specific pages by number. When appropriate, the buttons may be labeled “Previous” and “Next”.</p>
+
+        </div>
         
 
         
@@ -1530,6 +1536,12 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-default-pagination-div-id-pagina-implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                 </ul>
 
@@ -1592,6 +1604,16 @@
 
                 <!-- Implementation details -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-default-pagination-div-id-pagina-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>To enable the component to jump directly to the paginated content, include an <code class="language-plaintext highlighter-rouge">id</code> on a wrapper of the paginated content (or an element directly above it), e.g., <code class="language-plaintext highlighter-rouge">id="pagination_content"</code>.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
 
                 <!-- Specs -->
                 
@@ -1616,7 +1638,7 @@
 
             
             <div class="m-variation_description">
-                
+                <p>When on the first or last page of paginated content, be sure to disable the appropriate buttons by adding the <code class="language-plaintext highlighter-rouge">a_btn__disabled</code> modifier and removing their <code class="language-plaintext highlighter-rouge">href</code> attribute.</p>
 
             </div>
             
@@ -1639,22 +1661,22 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-first-and-last-pages-nav-class-m-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-first-and-last-pages-nav-class-m-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-first-and-last-pages-when-on-the-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-first-and-last-pages-when-on-the-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-first-and-last-pages-nav-class-m-2">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-first-and-last-pages-when-on-the-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-first-and-last-pages-nav-class-m-html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#details-first-and-last-pages-when-on-the-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-first-and-last-pages-nav-class-m-jinja-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#details-first-and-last-pages-when-on-the-jinja-code-snippet-2">
                             Jinja code snippet
                         </a>
                     </li>
@@ -1665,7 +1687,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-first-and-last-pages-nav-class-m-html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="details-first-and-last-pages-when-on-the-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1677,7 +1699,7 @@
 
                 <!-- Jinja snippet -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-first-and-last-pages-nav-class-m-jinja-code-snippet-2">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-first-and-last-pages-when-on-the-jinja-code-snippet-2">
                     <div class="variation-jinja-code-snippet">
                         <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
                         <div class="source-code">
@@ -1726,16 +1748,6 @@
                 </p>
 <p><code class="language-plaintext highlighter-rouge">@bp-xs-max</code>: On small screens, the buttons display next to each other, stacked on top of the form</p>
 
-<h3>Code</h3>
-<p>To enable the component to jump directly to the paginated content, include an <code class="language-plaintext highlighter-rouge">id</code> on a wrapper of the paginated content (or an element directly above it), e.g., <code class="language-plaintext highlighter-rouge">id="pagination_content"</code>.</p>
-
-<p>When on the first or last page of paginated content, be sure to disable the appropriate buttons by adding the <code class="language-plaintext highlighter-rouge">a_btn__disabled</code> modifier and removing their <code class="language-plaintext highlighter-rouge">href</code> attribute.</p>
-
-<p>The cf-pagination component provides a responsive approach to multipage page navigation for Capital Framework.</p>
-
-<p><code class="language-plaintext highlighter-rouge">cf-core</code>, <code class="language-plaintext highlighter-rouge">cf-buttons</code>, and <code class="language-plaintext highlighter-rouge">cf-icons</code> components are all dependencies of this component.</p>
-
-<p>NOTE: If you use <code class="language-plaintext highlighter-rouge">cf-pagination.less</code> directly, be sure to run the file through Autoprefixer, or your compiled Capital Framework CSS will not work perfectly in older browsers.</p>
 
                 
             
@@ -1791,8 +1803,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/pagination.md">
-                    <time datetime="2020-05-12 11:30:07 -0400">
-                        11:30:07 AM May 12, 2020
+                    <time datetime="2020-06-15 12:41:54 -0400">
+                        12:41:54 PM Jun 15, 2020
                     </time>
                 </a>
             </small>

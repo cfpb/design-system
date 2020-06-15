@@ -56,22 +56,10 @@ variation_groups:
           </nav>
         variation_description: ""
         variation_name: Default pagination
-        variation_implementation: >-
-          To enable the component to jump directly to the paginated content,
-          include an `id` on a wrapper of the paginated content (or an element
-          directly above it), e.g., `id="pagination_content"`.
-
-
-          When on the first or last page of paginated content, be sure to disable the appropriate buttons by adding the `a_btn__disabled` modifier and removing their `href` attribute.
-
-
-          The cf-pagination component provides a responsive approach to multipage page navigation for Capital Framework.
-
-
-          `cf-core`, `cf-buttons`, and `cf-icons` components are all dependencies of this component.
-
-
-          NOTE: If you use `cf-pagination.less` directly, be sure to run the file through Autoprefixer, or your compiled Capital Framework CSS will not work perfectly in older browsers.
+        variation_implementation: To enable the component to jump directly to the
+          paginated content, include an `id` on a wrapper of the paginated
+          content (or an element directly above it), e.g.,
+          `id="pagination_content"`.
       - variation_code_snippet: <nav class="m-pagination" role="navigation"
           aria-label="Pagination">    <a
           class="a-btn              a-btn__disabled
@@ -94,7 +82,9 @@ variation_groups:
           m-pagination_btn-submit"
           id="m-pagination_btn-submit"                type="submit">Go</button>
           </form></nav>
-        variation_description: ""
+        variation_description: When on the first or last page of paginated content, be
+          sure to disable the appropriate buttons by adding the
+          `a_btn__disabled` modifier and removing their `href` attribute.
         variation_jinja_code_snippet: ""
         variation_name: First and last pages
     variation_group_name: Standard pagination

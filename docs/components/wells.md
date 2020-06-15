@@ -34,40 +34,21 @@ variation_groups:
 
             ![Schematic of well showing padding ](/design-system/images/uploads/wells_style_mockup.png)
     variation_group_name: Standard well
-use_cases: >-
-  Use sparingly to attract users’ attention to a concise piece of content.
-  Ideally, content within a well should not take up more than a third of page
-  content.
-
-  Full width text, images, and embedded media (like video) may be placed within wells, however, if content includes imagery also consider the [Featured Content Module](/design-system/components/featured-content-module).
+use_cases: Grey wells should be used to feature content or specific calls to
+  action. Use sparingly. Ideally, content within a well should not take up more
+  than a third of page content.
 content_guidelines: >-
-  * Grey wells should be used to feature content or specific calls to action;
-  text should be succinct.
+  Text, images, and embedded media (like video) may be placed within wells,
+  however, if content includes imagery, also consider the [Featured Content
+  Module](/design-system/components/featured-content-module). Examples of types
+  of content to include: 
 
 
-  * A grey well will help visually set apart the content within it, so use it to draw attention to that content.
+  * Headings (H2 - H5). Headings should be as succinct as possible and 35 characters or less (including spaces)
 
+  * Text (including bullets and numbered lists). Text should be succinct. 
 
-  * Grey wells should take up less than a third of a page.
-
-
-  * Currently, grey wells should contain single column content only.
-
-
-
-  Types of atoms you can place in a well include:
-
-
-  * Headings (H2 - H5).
-
-
-  * Text (including bullets and numbered lists).
-
-
-  * Links.
-
-
-  * Headings should be as succinct as possible and 35 characters or less (including spaces).
+  * Links
 behavior: >-
   Wells are full width. Note that at breakpoints 600 and under there are slight
   padding adjustments to maximize real estate on smaller displays.

@@ -241,20 +241,7 @@ variation_groups:
           these, as it’s unlikely that the Pacific Blue will have accessible
           contrast with a non-white (or light gray) background. "
     variation_group_name: Types
-    variation_group_description: >-
-      Heroes combine a heading, a small amount of subheading text, and image. 
-
-
-      ##### When to use
-
-      * When orienting a user to a new section or topic
-
-      * When the page serves as a navigational tool with general information about a subject and links to lower-level pages that contain more specific information
-
-
-      ##### When other options are better
-
-      * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the text introduction or item introduction.
+    variation_group_description: "Heroes combine a heading, a small amount of subheading text, and image. "
   - variation_group_name: Variations
     variations:
       - variation_name: Hero with knockout text
@@ -321,7 +308,17 @@ variation_groups:
           this [live example of a hero with knockout
           text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
     variation_group_description: ""
-use_cases: ""
+use_cases: >-
+  ##### When to use
+
+  * When orienting a user to a new section or topic
+
+  * When the page serves as a navigational tool with general information about a subject and links to lower-level pages that contain more specific information
+
+
+  ##### When other options are better
+
+  * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the text introduction or item introduction.
 content_guidelines: >-
   Hero content should orient the user and communicate the primary goal of the
   page. Copy should be succinct and engaging, reflecting the voice and tone of

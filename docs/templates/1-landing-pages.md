@@ -10,16 +10,14 @@ description: Landing page types provide an overview of a main navigation section
   and help users quickly skim section topics and select the category that
   interests them.
 variation_groups:
-  - variation_group_name: ""
+  - variation_group_name: Types
     variations: []
-    variation_group_description: >-
+    variation_group_description: >
       | Landing page with hero | Landing page with introduction | 
 
       | -- | -- | 
 
       | ![Landing page with hero](/design-system/images/uploads/landing_top_examplea_2x.jpg) | ![Landing page with text introduction](/design-system/images/uploads/landing_top_exampleb_2x.jpg) | 
-
-      | Area 1: Hero | Area 1: Text introduction | 
 use_cases: >-
   ##### When to use
 
@@ -35,7 +33,7 @@ use_cases: >-
   * When a new page is needed within a navigation section, rather than at the top-level.
 
   * When page content includes paragraph copy or more detailed definitions or explanations.
-content_guidelines: >-
+content_guidelines: >+
   * Generally, content components should work together to provide an overview of
   the information organized below this page or about the campaign. Give users
   clear next steps and calls to actions so they can quickly decide what content
@@ -71,24 +69,17 @@ content_guidelines: >-
 
   * If using both static and dynamic content, preference for dynamic content to appear above static content.
 
-
-  #### Behavior
-
-
-  Below the 901 pixel breakpoint, the sidebar stacks below the main content area.
-
-
-  ##### Breakpoints 901 pixels or more
+behavior: >-
+  Below the 901 pixel breakpoint, the entire sidebar stacks below the main
+  content area, appearing near the bottom of the page for mobile and tablet
+  users. 
 
 
-  ![Breakpoints 901+](/design-system/images/uploads/landing_behavior_desktop_2x.jpg)
+  | Above 900 px | Below 901 px | 
 
+  | -- | -- | 
 
-  ##### Breakpoints 900 pixels or less
-
-
-  ![Breakpoints 900 and less](/design-system/images/uploads/landing_behavior_mobile_2x.jpg)
-behavior: ""
+  | ![Breakpoints 901+](/design-system/images/uploads/landing_behavior_desktop_2x.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/landing_behavior_mobile_2x.jpg) |
 related_items: |-
   * Text introduction
   * 50/50 image & text

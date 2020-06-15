@@ -11,19 +11,19 @@ function getUrlParameter( name ) {
 
 const page = getUrlParameter( 'page' );
 
-if ( page && window.PAGES_WHITELIST[page] ) {
+if ( page && window.PAGES_ALLOWED[page] ) {
   // Skip the interstitial page if they've seen it within the past two weeks
   if ( localStorage.getItem( 'cms-directions-last-seen' ) ) {
     const now = new Date();
     const lastSeen = Date.parse( localStorage.getItem( 'cms-directions-last-seen' ) );
     const daysSinceDirectionsSeen = ( now - lastSeen ) / 1000 / 60 / 60 / 24;
     if ( daysSinceDirectionsSeen <= 14 ) {
-      window.location.replace( window.PAGES_WHITELIST[page] );
+      window.location.replace( window.PAGES_ALLOWED[page] );
     }
   }
   document.querySelector( '[data-interstitial-notification]' ).classList.add( 'm-notification__visible' );
   document.querySelector( '[data-interstitial-next-step]' ).classList.remove( 'u-hidden' );
-  document.querySelector( '[data-interstitial-redirect-button]' ).setAttribute( 'href', window.PAGES_WHITELIST[page] );
+  document.querySelector( '[data-interstitial-redirect-button]' ).setAttribute( 'href', window.PAGES_ALLOWED[page] );
   document.querySelectorAll( '[data-interstitial-page-name]' ).forEach( el => {
     el.textContent = `"${ page }"`;
   } );

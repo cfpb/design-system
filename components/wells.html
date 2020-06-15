@@ -1421,6 +1421,12 @@
     <ul class="m-list m-list__horizontal u-mb30">
         
         
+        <li class="m-list_item">
+            <a class="m-list_link" href="#standard-well">
+                Standard well
+            </a>
+        </li>
+        
         
     </ul>
     
@@ -1429,23 +1435,17 @@
     <section id="description" class="u-mb30">
         <p>Wells are used to highlight specific information within a designated section of a page. This breaks up the flow of content on the page and helps to emphasize and set apart the content that is included.</p>
 
-<p>Information about Wells can be found at:</p>
-
-<ul>
-  <li>http://cfpb.github.io/design-manual/page-components/wells.html</li>
-  <li>https://cfpb.github.io/capital-framework/components/cf-layout/#wells</li>
-</ul>
-
     </section>
     
 
     
     
-    <section class="o-variation_group" id="">
+    <section class="o-variation_group" id="standard-well">
 
         
-        
-        <div class="u-mb15"></div>
+        <h2 class="o-variation_group_title">
+            Standard well
+        </h2>
         
 
         
@@ -1457,10 +1457,6 @@
             
             
 
-            
-            <div class="m-variation_name">
-                <h3>Default well</h3>
-            </div>
             
 
             
@@ -1495,15 +1491,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-default-well-div-class-o-well-h4-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-default-well-div-class-o-well-h4-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-div-class-o-well-h4-well-title-h-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-div-class-o-well-h4-well-title-h-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-default-well-div-class-o-well-h4-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-div-class-o-well-h4-well-title-h-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-default-well-div-class-o-well-h4-html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-div-class-o-well-h4-well-title-h-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1511,11 +1507,17 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-div-class-o-well-h4-well-title-h-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-default-well-div-class-o-well-h4-html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-div-class-o-well-h4-well-title-h-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1540,6 +1542,26 @@
 
                 <!-- Specs -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-div-class-o-well-h4-well-title-h-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <ul>
+  <li>Padding at breakpoints 601+: 30 (top), 30 (right) 60 (bottom), 30 (left)</li>
+  <li>Padding at breakpoints 600 and below: 30 (top), 15 (right), 60 (bottom), 15 (left)</li>
+  <li>Background color: 5% grey (#F7F7F7)</li>
+  <li>Border: 1px 50% grey (#BABBBD)</li>
+  <li>
+    <p>Single column content only.</p>
+
+    <p><img src="/design-system/images/uploads/wells_style_mockup.png" alt="Schematic of well showing padding "></p>
+  </li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
 
             </div>
 <!-- .govuk-tabs -->
@@ -1560,8 +1582,7 @@
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<p>Use sparingly to attract users’ attention to a concise piece of content. Ideally, content within a well should not take up more than a third of page content.
-Full width text, images, and embedded media (like video) may be placed within wells, however, if content includes imagery also consider the <a href="/design-system/components/featured-content-module">Featured Content Module</a>.</p>
+<p>Grey wells should be used to feature content or specific calls to action. Use sparingly. Ideally, content within a well should not take up more than a third of page content.</p>
 
                 
             
@@ -1571,36 +1592,12 @@ Full width text, images, and embedded media (like video) may be placed within we
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<ul>
-  <li>
-    <p>Grey wells should be used to feature content or specific calls to action; text should be succinct.</p>
-  </li>
-  <li>
-    <p>A grey well will help visually set apart the content within it, so use it to draw attention to that content.</p>
-  </li>
-  <li>
-    <p>Grey wells should take up less than a third of a page.</p>
-  </li>
-  <li>
-    <p>Currently, grey wells should contain single column content only.</p>
-  </li>
-</ul>
-
-<p>Types of atoms you can place in a well include:</p>
+<p>Text, images, and embedded media (like video) may be placed within wells, however, if content includes imagery, also consider the <a href="/design-system/components/featured-content-module">Featured Content Module</a>. Examples of types of content to include:</p>
 
 <ul>
-  <li>
-    <p>Headings (H2 - H5).</p>
-  </li>
-  <li>
-    <p>Text (including bullets and numbered lists).</p>
-  </li>
-  <li>
-    <p>Links.</p>
-  </li>
-  <li>
-    <p>Headings should be as succinct as possible and 35 characters or less (including spaces).</p>
-  </li>
+  <li>Headings (H2 - H5). Headings should be as succinct as possible and 35 characters or less (including spaces)</li>
+  <li>Text (including bullets and numbered lists). Text should be succinct.</li>
+  <li>Links</li>
 </ul>
 
                 
@@ -1611,15 +1608,24 @@ Full width text, images, and embedded media (like video) may be placed within we
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<h5 id="breakpoints-900">Breakpoints 900+</h5>
-<p>Page with a right sidebar
-<img src="/design-system/images/uploads/wells_behavior_mockup_1.png" alt="">
-Browse page with left nav
-<img src="/design-system/images/uploads/wells_behavior_mockup_2.png" alt=""></p>
+<p>Wells are full width. Note that at breakpoints 600 and under there are slight padding adjustments to maximize real estate on smaller displays.</p>
 
-<h5 id="breakpoints-900-and-under">Breakpoints 900 and under</h5>
-<p>Wells are full width. At breakpoints 600 and under there are slight padding adjustments to maximize real estate on smaller displays.
-<img src="/design-system/images/uploads/wells_behavior_mockup_3.png" alt=""></p>
+<table>
+  <thead>
+    <tr>
+      <th>Above 900 px, with right sidebar</th>
+      <th>Above 900 px, with left nav</th>
+      <th>Below 901 px, both page types</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/design-system/images/uploads/wells_behavior_mockup_1.png" alt=""></td>
+      <td><img src="/design-system/images/uploads/wells_behavior_mockup_2.png" alt=""></td>
+      <td><img src="/design-system/images/uploads/wells_behavior_mockup_3.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
 
                 
             
@@ -1675,8 +1681,8 @@ Browse page with left nav
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/wells.md">
-                    <time datetime="2020-05-12 11:30:07 -0400">
-                        11:30:07 AM May 12, 2020
+                    <time datetime="2020-06-15 11:50:41 -0400">
+                        11:50:41 AM Jun 15, 2020
                     </time>
                 </a>
             </small>

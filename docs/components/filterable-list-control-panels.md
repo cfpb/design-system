@@ -22,24 +22,6 @@ variation_groups:
 
 
           ![Filterable list expanded](/design-system/images/uploads/filter_expanded.png)
-
-
-          ##### When to use
-
-          * When presenting more than 20 documents or listings together for users to browse through.
-
-          * Users interacting with content will want to focus their searching activities on this specific group of content, rather than using the general site search.
-
-          * Data has relevant characteristics to filter on, for example product and issue for complaint data, location and property type for HMDA, date range and categories for articles
-
-
-          ##### When other options are better
-
-          * The total amount of content can be skimmed in a list of 20 items or less.
-
-          * Characteristics available as filter options, such as topics, dates, and categories, are not relevant to the content.
-
-          * Search alone is sufficient for user needs
         variation_name: ""
         variation_specs: "![Filter panel
           style](/design-system/images/uploads/filter_style_1.png)"
@@ -52,7 +34,23 @@ variation_groups:
 
 
       The example below shows a layout as seen on a browse filterable template.
-use_cases: ""
+use_cases: >-
+  ##### When to use
+
+  * When presenting more than 20 documents or listings together for users to browse through.
+
+  * Users interacting with content will want to focus their searching activities on this specific group of content, rather than using the general site search.
+
+  * Data has relevant characteristics to filter on, for example product and issue for complaint data, location and property type for HMDA, date range and categories for articles
+
+
+  ##### When other options are better
+
+  * The total amount of content can be skimmed in a list of 20 items or less.
+
+  * Characteristics available as filter options, such as topics, dates, and categories, are not relevant to the content.
+
+  * Search alone is sufficient for user needs
 content_guidelines: >
   * Headings and labels should be as succinct as possible, ideally 10 characters
   or less. Do not use colon (:) or other punctuation after the header.

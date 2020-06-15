@@ -18,14 +18,14 @@
                 {% endif %}
 
                 {% for variation in variation_group.variations %}
-                    'variation_name{{ forloop.index }}': '{{ variation.variation_name | xml_escape }}',
+                    'variation_name{{ forloop.index }}': '{{ variation.variation_name | escape }}',
                     'variation_description{{ forloop.index }}': {{ variation.variation_description | markdownify | strip_html | strip_newlines | jsonify }},
-                    'variation_code_snippet{{ forloop.index }}': `{{ variation.variation_code_snippet | xml_escape }}`,
+                    'variation_code_snippet{{ forloop.index }}': `{{ variation.variation_code_snippet | escape }}`,
                 {% endfor %}
             {% endfor %}
 
 
-            'title': '{{ page.title | xml_escape }}',
+            'title': '{{ page.title | escape }}',
             'description': {{ page.description | markdownify | strip_html | strip_newlines | jsonify }},
             'use_cases': {{ page.use_cases | markdownify | strip_html | strip_newlines | jsonify }},
             'content_guidelines': {{ page.content_guidelines | markdownify | strip_html | strip_newlines | jsonify }},
@@ -33,7 +33,7 @@
             'accessibility': {{ page.accessibility | markdownify | strip_html | strip_newlines | jsonify }},
             'research': {{ page.research | markdownify | strip_html | strip_newlines | jsonify }},
             'related_items': {{ page.related_items | markdownify | strip_html | strip_newlines | jsonify }},
-            'url': '{{ page.url | xml_escape }}'
+            'url': '{{ page.url | escape }}'
         }
         {% unless forloop.last %},{% endunless %}
         {% endfor %}

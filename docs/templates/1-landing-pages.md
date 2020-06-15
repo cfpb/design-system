@@ -13,6 +13,10 @@ variation_groups:
   - variation_group_name: Types
     variations: []
     variation_group_description: >
+      There are two landing page templates. One uses a hero at the top of the
+      page, and the other uses a text introduction.
+
+
       | Landing page with hero | Landing page with introduction | 
 
       | -- | -- | 

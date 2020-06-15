@@ -4,8 +4,8 @@ layout: variation
 section: components
 secondary_section: Navigation
 status: Released
-description: Pagination is used to separate long sets of data or content into
-  shorter pieces, so as to make it easier for users to consume information.
+description: Pagination is used to help split up long sets of data or content
+  into shorter pieces, so as to make it easier for users to consume information.
 variation_groups:
   - variations:
       - variation_code_snippet: >-

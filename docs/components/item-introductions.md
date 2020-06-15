@@ -20,18 +20,6 @@ variation_groups:
 
 
           ![Schematic of an item introduction](/design-system/images/uploads/itemintro_intro.png)
-
-
-          ##### WHEN TO USE
-
-          * When introducing a specific article or post (such as a press release or blog post) or document or group of documents (such as a report, rule or enforcement action) linked through a filterable list.
-
-          *  When the page contains specific content about one subject; there aren’t any child pages that drill down to anything more specific.
-
-
-          ##### WHEN OTHER OPTIONS ARE BETTER
-
-          * When creating general content pages, even if the content is detailed or lengthy.
         variation_specs: >-
           #### Style 
 
@@ -44,6 +32,17 @@ variation_groups:
           * Optional components: Subheader paragraph, author, dates, and social sharing icons.
 
           * Spacing: 45 px margin above, 60 px margin below.
+use_cases: >-
+  ##### WHEN TO USE
+
+  * When introducing a specific article or post (such as a press release or blog post) or document or group of documents (such as a report, rule or enforcement action) linked through a filterable list.
+
+  *  When the page contains specific content about one subject; there aren’t any child pages that drill down to anything more specific.
+
+
+  ##### WHEN OTHER OPTIONS ARE BETTER
+
+  * When creating general content pages, even if the content is detailed or lengthy.
 content_guidelines: >-
   Category should always be selected if it is a page type that is categorized.
 

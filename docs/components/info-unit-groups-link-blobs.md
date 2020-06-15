@@ -78,13 +78,10 @@ variation_groups:
 
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
     variation_group_name: Types
-    variation_group_description: >-
-      A link blob is a unit consisting of heading, short descriptive text, and
-      call to action. There are two layout options for breakpoints above 601 px:
-
-      - Half-width link blobs consist of two units in a row
-
-      - Third-width link blobs consist of three units in a row
+    variation_group_description: A link blob is a unit consisting of heading, short
+      descriptive text, and call to action. At breakpoints above 601 px, link
+      blobs are found in rows of two blobs (half-width link blobs) or three
+      blobs (third-width link blobs).
 use_cases: ""
 content_guidelines: >-
   Do not use blobs for multiple paragraphs of copy. Copy should be succinct.

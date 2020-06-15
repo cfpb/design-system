@@ -69,22 +69,15 @@ content_guidelines: >-
 
   * Headings should be as succinct as possible and 35 characters or less (including spaces).
 behavior: >-
-  ##### Breakpoints 900+
-
-  Page with a right sidebar
-
-  ![](/design-system/images/uploads/wells_behavior_mockup_1.png)
-
-  Browse page with left nav
-
-  ![](/design-system/images/uploads/wells_behavior_mockup_2.png)
+  Wells are full width. Note that at breakpoints 600 and under there are slight
+  padding adjustments to maximize real estate on smaller displays.
 
 
-  ##### Breakpoints 900 and under
+  | Above 900 px, with right sidebar | Above 900 px, with left nav | Below 901 px, both page types | 
 
-  Wells are full width. At breakpoints 600 and under there are slight padding adjustments to maximize real estate on smaller displays.
+  | -- | -- | -- | 
 
-  ![](/design-system/images/uploads/wells_behavior_mockup_3.png)
+  | ![](/design-system/images/uploads/wells_behavior_mockup_1.png) | ![](/design-system/images/uploads/wells_behavior_mockup_2.png) | ![](/design-system/images/uploads/wells_behavior_mockup_3.png) | 
 accessibility: ""
 last_updated: 2019-10-21T20:38:39.851Z
 research: ""

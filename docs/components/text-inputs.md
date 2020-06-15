@@ -7,7 +7,7 @@ status: Released
 description: "Text inputs can be one-line (standard text inputs) or multi-line
   (textarea inputs).  "
 variation_groups:
-  - variation_group_name: Standard text inputs
+  - variation_group_name: Standard text input
     variations:
       - variation_code_snippet: >
           <label class="a-label a-label__heading"
@@ -80,7 +80,9 @@ variation_groups:
 
           #### Disabled 
           - Background: Gray 10 (#e7e8e9)
-        variation_name: Single-line text inputs
+        variation_name: ""
+  - variation_group_name: Variations
+    variations:
       - variation_name: Textarea inputs
         variation_description: |+
           Use for long-form answers.
@@ -96,15 +98,8 @@ variation_groups:
                     placeholder="Enter text…">Placeholder text</textarea>
         variation_specs: |-
           
-
-          #### Multi-line
-
-          Use for long-form answers.
-
           * Border: 1 px, Gray 60 (#919395)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
-  - variation_group_name: Variations
-    variations:
       - variation_name: Text input with a button
         variation_description: These are used for simple forms where a full filter isn’t necessary.
         variation_code_snippet: |-
@@ -171,7 +166,7 @@ variation_groups:
               <textarea class="a-text-input a-text-input__full"
                         id="full-textarea-example">Placeholder text</textarea>
           </div>
-use_cases: ''
+use_cases: ""
 content_guidelines: >-
   Choose the appropriate width for text input fields so they match the kind of
   information requested. This makes it easier for users to quickly grasp what’s

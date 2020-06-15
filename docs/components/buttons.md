@@ -239,7 +239,7 @@ variation_groups:
               <button class="a-btn">No</button>
               <button class="a-btn">Maybe So</button>
           </div>
-        variation_name: Default buttton group
+        variation_name: Default button group
   - variation_group_name: Buttons with icons
     variations:
       - variation_name: Icon buttons

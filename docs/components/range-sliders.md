@@ -12,8 +12,10 @@ variation_groups:
   - variations:
       - variation_code_snippet: ""
         variation_description: |-
+          ### Default state
           ![](/design-system/images/uploads/slider-default.png)
 
+          ### Focus state
           ![](/design-system/images/uploads/slider-focus.png)
         variation_name: ""
         variation_specs: |-

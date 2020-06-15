@@ -108,7 +108,7 @@ variation_groups:
           <div class="content-33 content-first" markdown="1">
 
 
-          The Spanish logo should be used for Spanish language materials, such as websites and microsites, publications, aand signage.
+          The Spanish logo should be used for Spanish language materials, such as websites and microsites, publications, and signage.
 
 
           This is applicable for the horizontal, vertical, and small execution lockups.

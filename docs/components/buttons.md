@@ -24,7 +24,9 @@ variation_groups:
 
           <button class="a-btn active" title="Active state">Active state</button>
         variation_description: >-
-          Use primary buttons for actions that go to the next step.
+          Use primary buttons for actions that go to the next step. Avoid using
+          multiple primary buttons on a single page; there can be multiple
+          secondary buttons per page.
 
 
           The Primary button is an atom in our atomic design standards. You can apply the `a-btn` class to a link, button and submit input field to receive the atomic button styles.
@@ -278,14 +280,7 @@ variation_groups:
       exclusively for one action. Icons appear to the left of the button text.
       Buttons that have “forward” actions have icons to the right of the text,
       and those with “back” actions have icons to the left.
-use_cases: >-
-  Use primary buttons for actions that go to the next step. Use secondary
-  buttons for actions that happen on the current page. Generous white space
-  lends focus and makes buttons more actionable. Avoid using multiple primary
-  buttons on a single page; there can be multiple secondary buttons per page.
-
-
-  Use an animated icon in a button to reassure the user that the action they are attempting to perform is functioning as intended.
+use_cases: Generous white space lends focus and makes buttons more actionable.
 content_guidelines: >-
   Labels should be written in sentence case. Use verbs and an active voice.
   Language should be clear, succinct, and informative. Limit the copy length to

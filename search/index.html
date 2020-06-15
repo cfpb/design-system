@@ -762,7 +762,7 @@
 
                 
                     'variation_name1': 'Primary buttons',
-                    'variation_description1': "Use primary buttons for actions that go to the next step.The Primary button is an atom in our atomic design standards. You can apply the a-btn class to a link, button and submit input field to receive the atomic button styles.",
+                    'variation_description1': "Use primary buttons for actions that go to the next step. Avoid using multiple primary buttons on a single page; there can be multiple secondary buttons per page.The Primary button is an atom in our atomic design standards. You can apply the a-btn class to a link, button and submit input field to receive the atomic button styles.",
                     'variation_code_snippet1': `&lt;button class=&quot;a-btn&quot; title=&quot;Default state&quot;&gt;Default state&lt;/button&gt;
 
 &lt;button class=&quot;a-btn hover&quot; title=&quot;Hovered state&quot;&gt;Hovered state&lt;/button&gt;
@@ -880,7 +880,7 @@
 
             'title': 'Buttons',
             'description': "Buttons signal actions. They should be used sparingly; each additional button on a page reduces the visual prominence of a call to action. In contrast, links should lead users to another page or further information.",
-            'use_cases': "Use primary buttons for actions that go to the next step. Use secondary buttons for actions that happen on the current page. Generous white space lends focus and makes buttons more actionable. Avoid using multiple primary buttons on a single page; there can be multiple secondary buttons per page.Use an animated icon in a button to reassure the user that the action they are attempting to perform is functioning as intended.",
+            'use_cases': "Generous white space lends focus and makes buttons more actionable.",
             'content_guidelines': "Labels should be written in sentence case. Use verbs and an active voice. Language should be clear, succinct, and informative. Limit the copy length to 22 characters.Use icons consistently. Each icon should be used exclusively for one action. Icons appear to the left of the button text. Buttons that have “forward” actions have icons to the right of the text, and those with “back” actions have icons to the left.",
             'behavior': "",
             'accessibility': "",
@@ -1618,7 +1618,7 @@
 &lt;br&gt;
 &lt;!-- Starting a new .content-l so that the dividers from
     .content-l_col.content-l_col-1-2.content-l_col__before-divider
-    won't overlap the .content-l_col-1-3 columns. --&gt;
+    won&#39;t overlap the .content-l_col-1-3 columns. --&gt;
 &lt;div class=&quot;content-l content-l__large-gutters&quot;&gt;
     &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
         Third-width column (spans 4/12 columns)
@@ -2947,7 +2947,7 @@ The text will be styled the same as H5 heading text.
 &lt;script&gt;
       // Confirm availability of JavaScript and remove no-js class from html
       var docElement = document.documentElement;
-      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, &#39;$1$2&#39;);
 &lt;/script&gt;
 &lt;div class=&quot;u-js-only&quot;&gt;&lt;/div&gt;`,
                 
@@ -3220,36 +3220,36 @@ The text will be styled the same as H5 heading text.
     &lt;style&gt;
         #hero1 .m-hero_image {
             background-image:
-                url('https://dummyimage.com/570x236/addc91/101820');
+                url(&#39;https://dummyimage.com/570x236/addc91/101820&#39;);
             background-image: -webkit-image-set(
-                url('https://dummyimage.com/570x236/addc91/101820') 1x,
-                url('https://dummyimage.com/1140x472/addc91/101820') 2x
+                url(&#39;https://dummyimage.com/570x236/addc91/101820&#39;) 1x,
+                url(&#39;https://dummyimage.com/1140x472/addc91/101820&#39;) 2x
             );
             background-image: image-set(
-                url('https://dummyimage.com/570x236/addc91/101820') 1x,
-                url('https://dummyimage.com/1140x472/addc91/101820') 2x
+                url(&#39;https://dummyimage.com/570x236/addc91/101820&#39;) 1x,
+                url(&#39;https://dummyimage.com/1140x472/addc91/101820&#39;) 2x
             );
             filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                src='https://dummyimage.com/570x236/addc91/101820',
-                sizingMethod='scale');
+                src=&#39;https://dummyimage.com/570x236/addc91/101820&#39;,
+                sizingMethod=&#39;scale&#39;);
             padding-bottom: 41.4893617%;
         }
 
         @media screen and (min-width: 37.5625em) {
             #hero1 .m-hero_image {
                 background-image:
-                    url('https://dummyimage.com/470x195/addc91/101820');
+                    url(&#39;https://dummyimage.com/470x195/addc91/101820&#39;);
                 background-image: -webkit-image-set(
-                    url('https://dummyimage.com/470x195/addc91/101820') 1x,
-                    url('https://dummyimage.com/940x390/addc91/101820') 2x
+                    url(&#39;https://dummyimage.com/470x195/addc91/101820&#39;) 1x,
+                    url(&#39;https://dummyimage.com/940x390/addc91/101820&#39;) 2x
                 );
                 background-image: image-set(
-                    url('https://dummyimage.com/470x195/addc91/101820') 1x,
-                    url('https://dummyimage.com/940x390/addc91/101820') 2x
+                    url(&#39;https://dummyimage.com/470x195/addc91/101820&#39;) 1x,
+                    url(&#39;https://dummyimage.com/940x390/addc91/101820&#39;) 2x
                 );
                 filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                    src='https://dummyimage.com/470x195/addc91/101820',
-                    sizingMethod='scale');
+                    src=&#39;https://dummyimage.com/470x195/addc91/101820&#39;,
+                    sizingMethod=&#39;scale&#39;);
                 padding-bottom: 41.4893617%;
             }
         }
@@ -3276,36 +3276,36 @@ The text will be styled the same as H5 heading text.
     &lt;style&gt;
         #hero4 .m-hero_image {
             background-image:
-                url('https://dummyimage.com/600x250/addc91/101820');
+                url(&#39;https://dummyimage.com/600x250/addc91/101820&#39;);
             background-image: -webkit-image-set(
-                url('https://dummyimage.com/600x250/addc91/101820') 1x,
-                url('https://dummyimage.com/1200x500/addc91/101820') 2x
+                url(&#39;https://dummyimage.com/600x250/addc91/101820&#39;) 1x,
+                url(&#39;https://dummyimage.com/1200x500/addc91/101820&#39;) 2x
             );
             background-image: image-set(
-                url('https://dummyimage.com/600x250/addc91/101820') 1x,
-                url('https://dummyimage.com/1200x500/addc91/101820') 2x
+                url(&#39;https://dummyimage.com/600x250/addc91/101820&#39;) 1x,
+                url(&#39;https://dummyimage.com/1200x500/addc91/101820&#39;) 2x
             );
             filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                src='https://dummyimage.com/600x250/addc91/101820',
-                sizingMethod='scale');
+                src=&#39;https://dummyimage.com/600x250/addc91/101820&#39;,
+                sizingMethod=&#39;scale&#39;);
             padding-bottom: 41.6666667%;
         }
 
         @media screen and (min-width: 37.5625em) {
             #hero4 .m-hero_wrapper{
                 background-image:
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
+                    url(&#39;http://files.consumerfinance.gov/f/images/PC_hero.original.jpg&#39;);
                 background-image: -webkit-image-set(
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
+                    url(&#39;http://files.consumerfinance.gov/f/images/PC_hero.original.jpg&#39;) 1x,
+                    url(&#39;http://files.consumerfinance.gov/f/images/PC_hero.original.jpg&#39;) 2x
                 );
                 background-image: image-set(
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
-                    url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
+                    url(&#39;http://files.consumerfinance.gov/f/images/PC_hero.original.jpg&#39;) 1x,
+                    url(&#39;http://files.consumerfinance.gov/f/images/PC_hero.original.jpg&#39;) 2x
                 );
                 filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                    src='http://files.consumerfinance.gov/f/images/PC_hero.original.jpg',
-                    sizingMethod='scale');
+                    src=&#39;http://files.consumerfinance.gov/f/images/PC_hero.original.jpg&#39;,
+                    sizingMethod=&#39;scale&#39;);
             }
         }
     &lt;/style&gt;
@@ -3340,36 +3340,36 @@ The text will be styled the same as H5 heading text.
 
         #hero2 .m-hero_image {
             background-image:
-                url('https://dummyimage.com/570x236/addc91/101820');
+                url(&#39;https://dummyimage.com/570x236/addc91/101820&#39;);
             background-image: -webkit-image-set(
-                url('https://dummyimage.com/570x236/addc91/101820') 1x,
-                url('https://dummyimage.com/1140x472/addc91/101820') 2x
+                url(&#39;https://dummyimage.com/570x236/addc91/101820&#39;) 1x,
+                url(&#39;https://dummyimage.com/1140x472/addc91/101820&#39;) 2x
             );
             background-image: image-set(
-                url('https://dummyimage.com/570x236/addc91/101820') 1x,
-                url('https://dummyimage.com/1140x472/addc91/101820') 2x
+                url(&#39;https://dummyimage.com/570x236/addc91/101820&#39;) 1x,
+                url(&#39;https://dummyimage.com/1140x472/addc91/101820&#39;) 2x
             );
             filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                src='https://dummyimage.com/570x236/addc91/101820',
-                sizingMethod='scale');
+                src=&#39;https://dummyimage.com/570x236/addc91/101820&#39;,
+                sizingMethod=&#39;scale&#39;);
             padding-bottom: 41.4893617%;
         }
 
         @media screen and (min-width: 37.5625em) {
             #hero2 .m-hero_image {
                 background-image:
-                    url('https://dummyimage.com/470x195/addc91/101820');
+                    url(&#39;https://dummyimage.com/470x195/addc91/101820&#39;);
                 background-image: -webkit-image-set(
-                    url('https://dummyimage.com/470x195/addc91/101820') 1x,
-                    url('https://dummyimage.com/940x390/addc91/101820') 2x
+                    url(&#39;https://dummyimage.com/470x195/addc91/101820&#39;) 1x,
+                    url(&#39;https://dummyimage.com/940x390/addc91/101820&#39;) 2x
                 );
                 background-image: image-set(
-                    url('https://dummyimage.com/470x195/addc91/101820') 1x,
-                    url('https://dummyimage.com/940x390/addc91/101820') 2x
+                    url(&#39;https://dummyimage.com/470x195/addc91/101820&#39;) 1x,
+                    url(&#39;https://dummyimage.com/940x390/addc91/101820&#39;) 2x
                 );
                 filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                    src='https://dummyimage.com/470x195/addc91/101820',
-                    sizingMethod='scale');
+                    src=&#39;https://dummyimage.com/470x195/addc91/101820&#39;,
+                    sizingMethod=&#39;scale&#39;);
                 padding-bottom: 41.4893617%;
             }
         }
@@ -4086,27 +4086,27 @@ Label heading
                 
 
                 
-                    'variation_name1': 'Don't remove the light beam',
+                    'variation_name1': 'Don&#39;t remove the light beam',
                     'variation_description1': "   {% include icons/error-round.svg %}  Don’t remove the light beam. It is essential to the logo.        ",
                     'variation_code_snippet1': ``,
                 
-                    'variation_name2': 'Don't stretch or condense',
+                    'variation_name2': 'Don&#39;t stretch or condense',
                     'variation_description2': "  {% include icons/error-round.svg %} Don’t stretch or condense. This weakens the brand.                ",
                     'variation_code_snippet2': ``,
                 
-                    'variation_name3': 'Don't apply a drop shadow',
+                    'variation_name3': 'Don&#39;t apply a drop shadow',
                     'variation_description3': "  {% include icons/error-round.svg %} Don’t apply a drop shadow.        ",
                     'variation_code_snippet3': ``,
                 
-                    'variation_name4': 'Don't outline the logo or use other colors',
+                    'variation_name4': 'Don&#39;t outline the logo or use other colors',
                     'variation_description4': "  {% include icons/error-round.svg %} Don’t outline the logo or use other colors. This dilutes brand association.                ",
                     'variation_code_snippet4': ``,
                 
-                    'variation_name5': 'Don't rotate',
+                    'variation_name5': 'Don&#39;t rotate',
                     'variation_description5': "  {% include icons/error-round.svg %} Don’t rotate the symbol. This changes the connotation of the light.                ",
                     'variation_code_snippet5': ``,
                 
-                    'variation_name6': 'Don't place directly on a colored background or photo',
+                    'variation_name6': 'Don&#39;t place directly on a colored background or photo',
                     'variation_description6': "  {% include icons/error-round.svg %} Don’t place the logo directly on a colored background or photo without a white bounding box.                ",
                     'variation_code_snippet6': ``,
                 
@@ -4588,7 +4588,7 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
                     'variation_description1': "",
                     'variation_code_snippet1': `&lt;aside class=&quot;m-pull-quote&quot;&gt;
     &lt;p class=&quot;m-pull-quote_body&quot;&gt;
-      &quot;You miss 100% of the shots you don't take - Wayne Gretzky&quot;
+      &quot;You miss 100% of the shots you don&#39;t take - Wayne Gretzky&quot;
     &lt;/p&gt;
     &lt;footer&gt;
         &lt;cite class=&quot;m-pull-quote_citation&quot;&gt;
@@ -5716,7 +5716,7 @@ Disabled
                     'variation_description2': "These offer the user an action to take related to the input, typically to clear the input.",
                     'variation_code_snippet2': `&lt;div class=&quot;m-btn-inside-input&quot;&gt;
     &lt;input type=&quot;text&quot;
-        value=&quot;This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable.&quot;
+        value=&quot;This is some really long text to make sure that the button doesn&#39;t overlap the content in such a way that this input becomes unusable.&quot;
         title=&quot;Test input&quot;
         class=&quot;a-text-input&quot;&gt;
     &lt;button class=&quot;a-btn a-btn__link&quot;&gt;
@@ -5731,7 +5731,7 @@ Disabled
     &lt;div class=&quot;o-form__input-w-btn_input-container&quot;&gt;
         &lt;div class=&quot;m-btn-inside-input&quot;&gt;
             &lt;input type=&quot;text&quot;
-                value=&quot;This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable.&quot;
+                value=&quot;This is some really long text to make sure that the button doesn&#39;t overlap the content in such a way that this input becomes unusable.&quot;
                 title=&quot;Test input&quot;
                 class=&quot;a-text-input&quot;&gt;
             &lt;button class=&quot;a-btn a-btn__link&quot;&gt;
@@ -5796,21 +5796,21 @@ Disabled
                 
                     'variation_name1': ' ',
                     'variation_description1': "",
-                    'variation_code_snippet1': `&lt;h4 style=&quot;font-family:'AvenirNextLTW01-Medium';font-weight: 600;letter-spacing: 1px;&quot;&gt;Avenir Next Demi Bold&lt;br&gt;&lt;br&gt;
+                    'variation_code_snippet1': `&lt;h4 style=&quot;font-family:&#39;AvenirNextLTW01-Medium&#39;;font-weight: 600;letter-spacing: 1px;&quot;&gt;Avenir Next Demi Bold&lt;br&gt;&lt;br&gt;
 ABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;br&gt;
 abcdefghijklmnopqrstuvwxyz&lt;br&gt;
 0123456789&lt;/p&gt;&lt;/h4&gt;`,
                 
                     'variation_name2': ' ',
                     'variation_description2': "",
-                    'variation_code_snippet2': `&lt;h4 style=&quot;font-family:'AvenirNextLTW01-Medium';font-weight: 500;&quot;&gt;Avenir Next Medium&lt;br&gt;&lt;br&gt;
+                    'variation_code_snippet2': `&lt;h4 style=&quot;font-family:&#39;AvenirNextLTW01-Medium&#39;;font-weight: 500;&quot;&gt;Avenir Next Medium&lt;br&gt;&lt;br&gt;
 ABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;br&gt;
 abcdefghijklmnopqrstuvwxyz&lt;br&gt;
 0123456789&lt;/p&gt;&lt;/h4&gt;`,
                 
                     'variation_name3': ' ',
                     'variation_description3': "",
-                    'variation_code_snippet3': `&lt;h4 style=&quot;font-family:'AvenirNextLTW01-Regular';&quot;&gt;Avenir Next Regular&lt;br&gt;&lt;br&gt;
+                    'variation_code_snippet3': `&lt;h4 style=&quot;font-family:&#39;AvenirNextLTW01-Regular&#39;;&quot;&gt;Avenir Next Regular&lt;br&gt;&lt;br&gt;
 ABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;br&gt;
 abcdefghijklmnopqrstuvwxyz&lt;br&gt;
 0123456789&lt;/p&gt;&lt;/h4&gt;`,

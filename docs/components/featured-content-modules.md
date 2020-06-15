@@ -21,27 +21,6 @@ variation_groups:
 
 
           ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)
-
-
-
-          ##### When to use
-
-
-          * When content is new or relevant to—but not directly a part of—the main content on the page
-
-          * When content needs to be highlighted because it’s timely, impactful, or unique to the Bureau
-
-
-          ##### When other options are better
-
-
-          * When the content is an integral, long-term part of the intended user journey, then it should have a more permanent home on the page.
-
-
-          * When there’s no link or video for the user to interact with. If you just want to visually differentiate your content from its surroundings, consider using a well or inline text instead.
-
-
-          See  [use cases](#use-cases) and [content guidelines](#content-guidelines) for important details.
         variation_specs: >-
           Desktop style
 
@@ -169,7 +148,7 @@ variation_groups:
 
 
       The featured content module visual is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered. 
-use_cases: >
+use_cases: >+
   Featured content modules (FCMs) highlight a specific piece of content at the
   top of a page. It’s meant to call attention to a related piece of content that
   might be new or otherwise relevant to—but not directly a part of—the main
@@ -197,10 +176,22 @@ use_cases: >
   * **Unique**: Content that is specifically in the Bureau’s “wheelhouse” because of our position as an approachable, trusted, unbiased authority.
 
 
-  Featured content modules should highlight a single piece of content. That content can be almost anything, from a webpage to a blog post to a PDF to a video.
+  ##### When to use
 
 
-  FCMs can appear on any page type, though they are best suited for pages third level and below in the site map. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar.
+  * When content is new or relevant to—but not directly a part of—the main content on the page
+
+  * When content needs to be highlighted because it’s timely, impactful, or unique to the Bureau
+
+
+  ##### When other options are better
+
+
+  * When the content is an integral, long-term part of the intended user journey, then it should have a more permanent home on the page.
+
+
+  * When there’s no link or video for the user to interact with. If you just want to visually differentiate your content from its surroundings, consider using a well or inline text instead.
+
 content_guidelines: >-
   FCMs contain a headline, descriptive body copy text, an optional
   call-to-action link, and a graphical element related to the piece of content

@@ -381,7 +381,7 @@ variation_groups:
           <div class="content-33 content-first warning" markdown="1">
 
 
-          <p>{% include icons/error-round.svg %} Don’t remove the light beam. It is essential to the logo.</p>
+          <p> {% include icons/error-round.svg %}  Don’t remove the light beam. It is essential to the logo.</p>
 
 
           </div>
@@ -400,7 +400,7 @@ variation_groups:
 
 
           </div><!-- /.content-67 -->
-        variation_name: "{% include icons/error-round.svg %} Don't remove the light beam"
+        variation_name: Don't remove the light beam
         variation_specs: ""
       - variation_description: >+
           

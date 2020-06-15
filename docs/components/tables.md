@@ -577,17 +577,17 @@ content_guidelines: >
   so that the underlying meaning is quickly apparent.
 
 
-  #### Labels and Titles
+  ### Labels and Titles
 
   Give tables a meaningful title that succinctly describes the content presented so that users can understand their purpose at a glance. If presenting more than one table within a page, consider adding labels (e.g. “Table 1,” “Table 2,” etc.) in addition to titles. Labels should precede titles (e.g. “Table 1: The title given to this table”).
 
 
-  #### Long column labels
+  ### Long column labels
 
   Consider using fixed columns or truncation for column labels that are significantly longer than the expected width of the data.
 
 
-  #### Unit of measurement
+  ### Unit of measurement
 
   Make sure to indicate the unit of measurement. In terms of placement, if the units are the same across columns, indicate the unit of measurement in the title or someplace noticeable above the table.
 
@@ -597,7 +597,7 @@ content_guidelines: >
 
   If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.
 behavior: >
-  #### Sortable tables 
+  ### Sortable tables 
 
   At large screen sizes,  
 

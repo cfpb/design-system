@@ -24,6 +24,8 @@ variation_groups:
           | --- | --- | --- |
 
           | ![Sublanding page with hero](/design-system/images/uploads/sublanding_examplea.jpg) | ![Sublanding page with text introduction](/design-system/images/uploads/sublanding_examplec.jpg) | ![Sublanding page with breakout sidebar](/design-system/images/uploads/sublanding_exampleb.jpg) |
+
+          | Example: [Payday loans](https://www.consumerfinance.gov/consumer-tools/payday-loans/) | Example: [Financial education for adults](https://www.consumerfinance.gov/practitioner-resources/adult-financial-education/) | Example: [Rulemaking](https://www.consumerfinance.gov/policy-compliance/rulemaking/)
         variation_name: ""
 use_cases: >-
   #### When to use
@@ -83,7 +85,7 @@ behavior: >-
   area.
 
 
-  | 901 pixels or more | 900 pixels or less |
+  | Above 900 px | Below 901 px |
 
   | -- | -- |
 

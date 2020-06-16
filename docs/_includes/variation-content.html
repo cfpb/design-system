@@ -89,7 +89,7 @@
                 {{ variation.variation_implementation }}
                 {{ variation.variation_specs }}
             {% endcapture %}
-            {% assign variation_slug = variation_slug | strip | slugify | truncate: 40, '' %}
+            {% assign variation_slug = variation_slug | strip | markdownify | slugify | truncate: 40, '' %}
 
             <div class="a-toggle_code">
                 <button href="#{{ variation_slug }}-{{ forloop.index }}" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>

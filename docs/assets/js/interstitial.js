@@ -21,11 +21,12 @@ if ( page && window.PAGES_ALLOWED[page] ) {
       window.location.replace( window.PAGES_ALLOWED[page] );
     }
   }
+  const pageNames = document.querySelectorAll( '[data-interstitial-page-name]' );
+  for ( let i = 0; i < pageNames.length; i++ ) {
+    pageNames[i].textContent = `"${ page }"`;
+  }
   document.querySelector( '[data-interstitial-notification]' ).classList.add( 'm-notification__visible' );
   document.querySelector( '[data-interstitial-next-step]' ).classList.remove( 'u-hidden' );
   document.querySelector( '[data-interstitial-redirect-button]' ).setAttribute( 'href', window.PAGES_ALLOWED[page] );
-  document.querySelectorAll( '[data-interstitial-page-name]' ).forEach( el => {
-    el.textContent = `"${ page }"`;
-  } );
   localStorage.setItem( 'cms-directions-last-seen', new Date() );
 }

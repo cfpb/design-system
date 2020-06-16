@@ -10,17 +10,11 @@ description: "Featured content modules (FCMs) highlight one specific piece of
 variation_groups:
   - variation_group_name: Standard featured content module
     variations:
-      - variation_description: >-
-          FCMs contain a headline, body copy text, a call to action (either a
-          text link or a play button), and a graphical element related to the
-          piece of content being featured. They are a “mini story” and never
-          simply a dominant visual. FCMs appear below the page introduction,
-          and  retain that position on all screen sizes.  
-
-          <br>
-
-
-          ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)
+      - variation_description: "FCMs contain a headline, body copy text, a call to
+          action (either a text link or a play button), and a graphical element
+          related to the piece of content being featured. They are a “mini
+          story” and never simply a dominant visual. FCMs appear below the page
+          introduction, and  retain that position on all screen sizes.  "
         variation_specs: >-
           Desktop style
 
@@ -52,6 +46,29 @@ variation_groups:
           * Visual is always in a 16:9 ratio
 
           * 15px of left, right, and bottom padding around all content in the FCM
+        variation_implementation: ""
+        variation_code_snippet: >-
+          <section class="o-featured-content-module
+                          o-featured-content-module__center">
+              <div class="o-featured-content-module_text">
+                  <h2>Featured content</h2>
+                  <p>
+                      Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
+                      instructior ex pri. Cu pri inani constituto, cum aeque noster
+                      commodo cu.
+                  </p>
+                  <a class="a-link
+                            a-link__jump
+                            a-link__icon-after-text">
+                      <span class="a-link_text">Read more about the feature</span>
+                  </a>
+              </div>
+              <div class="o-featured-content-module_visual">
+                  <img class="o-featured-content-module_img"
+                      src="https://files.consumerfinance.gov/f/images/cfpb_adult_financial_education_featured.original.png"
+                      alt="">
+              </div>
+          </section>
   - variations:
       - variation_code_snippet: >-
           <section class="o-featured-content-module">

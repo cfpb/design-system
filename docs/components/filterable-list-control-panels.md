@@ -10,8 +10,7 @@ description: The filter control panel allows users to whittle down number of
   parameters, housed in an expandable above the list.
 variation_groups:
   - variations:
-      - variation_code_snippet: ""
-        variation_description: >-
+      - variation_description: >-
           #### Collapsed
 
 
@@ -25,6 +24,19 @@ variation_groups:
         variation_name: ""
         variation_specs: "![Filter panel
           style](/design-system/images/uploads/filter_style_1.png)"
+        variation_implementation: >-
+          This component's code has not yet been migrated to the Design System.
+          It can be found in
+          [cfgov-refresh](https://github.com/cfpb/cfgov-refresh).
+
+
+          - Its JavaScript is in [FilterableListControls.js](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/unprocessed/js/organisms/FilterableListControls.js).
+
+          - Its HTML is in [filterable-list-controls.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/filterable-list-controls.html).
+
+          - It is instantiated inside the larger [FilterableList](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/unprocessed/js/organisms/FilterableList.js) organism and it's used to filter the results of a filterable list.
+
+          - An example of it in action can be viewed at the top of [CFPB's blog](https://www.consumerfinance.gov/about-us/blog/).
     variation_group_name: Standard filterable list
     variation_group_description: >-
       Use filters in conjunction with search to help users narrow down large

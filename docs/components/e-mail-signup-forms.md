@@ -21,6 +21,17 @@ variation_groups:
         variation_description: "![Sidebar email signup
           mockup](/design-system/images/uploads/emailsignup_intro_mockup.png)"
         variation_name: Sidebar email sign up
+        variation_implementation: >-
+          This component's code has not yet been migrated to the Design System.
+          It can be found in
+          [cfgov-refresh](https://github.com/cfpb/cfgov-refresh).
+
+
+          - Its HTML is in [email-signup.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/email-signup.html).
+
+          - Its JavaScript is in [email-signup.js](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/unprocessed/js/routes/on-demand/email-signup.js).
+
+          - Its Less is in [email-signup.less](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/unprocessed/css/organisms/email-signup.less).
       - variation_code_snippet: ""
         variation_description: >-
           The inset email signup module is a variation on the main email signup

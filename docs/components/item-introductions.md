@@ -32,6 +32,14 @@ variation_groups:
           * Optional components: Subheader paragraph, author, dates, and social sharing icons.
 
           * Spacing: 45 px margin above, 60 px margin below.
+        variation_implementation: >-
+          This component's code has not yet been migrated to the Design System.
+          It can be found in
+          [cfgov-refresh](https://github.com/cfpb/cfgov-refresh).
+
+
+          - Its HTML is in [item-introduction.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/item-introduction.html).
+          - Its Less is in [item-introduction.less](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/unprocessed/css/organisms/item-introduction.less)
 use_cases: >-
   ##### WHEN TO USE
 

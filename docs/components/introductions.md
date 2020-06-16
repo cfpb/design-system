@@ -42,6 +42,13 @@ variation_groups:
           * Optional body paragraph and link: Avenir paragraph
 
           * At breakpoints below 600: Page title and lead paragraph drop down one type size to make reading on smaller devices easier.
+        variation_implementation: >-
+          This component's code has not yet been migrated to the Design System.
+          It can be found in
+          [cfgov-refresh](https://github.com/cfpb/cfgov-refresh).
+
+
+          - Its HTML is in [text-introduction.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/molecules/text-introduction.html).
     variation_group_name: Standard text introduction
     variation_group_description: ""
   - variation_group_name: Variation

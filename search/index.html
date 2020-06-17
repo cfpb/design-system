@@ -3745,34 +3745,50 @@ Label heading
                 
 
                 
-                    'variation_name1': '',
-                    'variation_description1': "Links are automatically underlined when they are a child of a p, li, or dd. To enable them elsewhere, simply add a border-bottom-width: 1px; to the link. Links within a nav element are not underlined.",
+                    'variation_name1': 'Inline links',
+                    'variation_description1': "Inline links should be Regular weight if inline with other text (e.g., within a paragraph like this one).",
                     'variation_code_snippet1': `&lt;!--Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.--&gt;
 
+&lt;!--
 &lt;p&gt;
     &lt;a href=&quot;#&quot;&gt;Default&lt;/a&gt;,
     &lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;Visited&lt;/a&gt;,
     &lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;Hovered&lt;/a&gt;,
     &lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;Focused&lt;/a&gt;,
     &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Active&lt;/a&gt;
-&lt;/p&gt;`,
+&lt;/p&gt;
+--&gt;
+
+&lt;p&gt;Here&#39;s the &lt;a href=&quot;#&quot;&gt;default link style&lt;/a&gt;. For reference, here&#39;s the &lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;hover link style&lt;/a&gt;. Train your eyes on the &lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;focused link style&lt;/a&gt;. Jump to the &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;active link style&lt;/a&gt;. We’ve all been to the &lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;visited link style&lt;/a&gt;.&lt;/p&gt;`,
+                
+                    'variation_name2': 'Standalone links',
+                    'variation_description2': "Standalone links (e.g., in a call to action or list of links) should be Medium weight.",
+                    'variation_code_snippet2': `&lt;ul class=&quot;medium-ex m-list m-list__unstyled&quot;&gt;
+    &lt;li class=&quot;m-list_item&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Default link style&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;m-list_item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;Hover link style&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;m-list_item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;Focused link style&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;m-list_item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Active link style&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;m-list_item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;Visited link style&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;`,
                 
             
                 // Determine the maximum number of variations present overall.
                 
 
                 
-                    'variation_name1': 'Inline link',
-                    'variation_description1': "Links that appear in body text or link lists are underlined.",
-                    'variation_code_snippet1': `&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Inline links&lt;/a&gt; should be Regular weight if inline with other text (e.g., within a paragraph like this one).&lt;/p&gt;`,
-                
-                    'variation_name2': 'Stand-alone link',
-                    'variation_description2': "Stand-alone links (e.g., in a call to action or list of links) should be Medium weight.",
-                    'variation_code_snippet2': `&lt;a href=&quot;#&quot;&gt;Default link style&lt;/a&gt;`,
-                
-                    'variation_name3': 'Link with icon',
-                    'variation_description3': "Use icons when a link needs extra emphasis. Use icons consistently, or don’t use them at all. Each icon should be used exclusively for one action.Icons appear to the right of the link text. The color and font-size of icons should be the same as the adjacent text, including state changes. Icons are never underlined.  Styles to enable adding an icon to a link and preventing the link’s underline from extending under the icon.  For the underlined icon prevention to work, you must wrap the link text with a span.icon-link_text. There can be no whitespace between the text and the opening and closing span tags.  Include the icon either prior to or after the a-link_text. It is important the text and icon are siblings to correctly handle underlines.",
-                    'variation_code_snippet3': `&lt;p&gt;
+                    'variation_name1': 'Links with icon',
+                    'variation_description1': "To prevent the link’s underline from extending under the icon, you must wrap the link text with a span.icon-link_text. There can be no whitespace between the text and the opening and closing span tags.Include the icon either prior to or after the a-link_text. It is important the text and icon are siblings to correctly handle underlines.",
+                    'variation_code_snippet1': `&lt;p&gt;
   Use the email icon to emphasize an email address like
     &lt;a class=&quot;a-link
               a-link__icon&quot;
@@ -3796,9 +3812,9 @@ Label heading
     &lt;/a&gt; for further details.
 &lt;/p&gt;`,
                 
-                    'variation_name4': 'Non-wrapping icon links',
-                    'variation_description4': "Warning: Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the __no-wrap modifier to .a-link__icon.",
-                    'variation_code_snippet4': `For more information, email
+                    'variation_name2': 'Non-wrapping icon links',
+                    'variation_description2': "Warning: Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the __no-wrap modifier to .a-link__icon.",
+                    'variation_code_snippet2': `For more information, email
 &lt;a class=&quot;a-link
           a-link__icon
           a-link__no-wrap&quot;
@@ -3807,18 +3823,24 @@ Label heading
     {% include icons/mail.svg %}
 &lt;/a&gt;.`,
                 
-                    'variation_name5': 'Jump link',
-                    'variation_description5': "“Jump links” are standalone links that respond to small screens by converting to full block links that have a finger-friendly touch area.",
-                    'variation_code_snippet5': `&lt;a class=&quot;a-link
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Jump link',
+                    'variation_description1': "",
+                    'variation_code_snippet1': `&lt;a class=&quot;a-link
           a-link__jump
           a-link__icon-after-text&quot;
   href=&quot;#&quot;&gt;
+&lt;span class=&quot;a-link_text&quot;&gt;Jump link&lt;/span&gt;
     {% include icons/right.svg %}
 &lt;/a&gt;`,
                 
-                    'variation_name6': 'Large jump link',
-                    'variation_description6': "The large jump link has an 18px font-size, compared to the default of 16px.",
-                    'variation_code_snippet6': `&lt;a class=&quot;a-link
+                    'variation_name2': 'Large jump link',
+                    'variation_description2': "The large jump link has an 18px font-size, compared to the default of 16px.",
+                    'variation_code_snippet2': `&lt;a class=&quot;a-link
           a-link__jump
           a-link__icon-after-text
           a-link__large&quot;
@@ -3827,9 +3849,9 @@ Label heading
     {% include icons/right.svg %}
 &lt;/a&gt;`,
                 
-                    'variation_name7': 'Jump link with icon on left',
-                    'variation_description7': "Jump links can also have icons before the text, like icon links.",
-                    'variation_code_snippet7': `&lt;a class=&quot;a-link
+                    'variation_name3': 'Jump link with icon on left',
+                    'variation_description3': "Jump links can also have icons before the text, like icon links.",
+                    'variation_code_snippet3': `&lt;a class=&quot;a-link
           a-link__jump
           a-link__icon-before-text&quot;
   href=&quot;#&quot;&gt;
@@ -3837,9 +3859,9 @@ Label heading
     &lt;span class=&quot;a-link_text&quot;&gt;Jump link with icon on left&lt;/span&gt;
 &lt;/a&gt;`,
                 
-                    'variation_name8': 'Jump link with background modifier',
-                    'variation_description8': "Only visible on small screens.",
-                    'variation_code_snippet8': `&lt;a class=&quot;a-link
+                    'variation_name4': 'Jump link with background modifier',
+                    'variation_description4': "A grey background is added on small screens.",
+                    'variation_code_snippet4': `&lt;a class=&quot;a-link
           a-link__jump
           a-link__icon-after-text
           a-link__bg&quot;
@@ -3849,20 +3871,34 @@ Label heading
     {% include icons/right.svg %}
 &lt;/a&gt;`,
                 
-                    'variation_name9': 'Header link',
-                    'variation_description9': "Header 2 containing a link",
-                    'variation_code_snippet9': ``,
+            
+                // Determine the maximum number of variations present overall.
                 
-                    'variation_name10': 'Navigation link',
-                    'variation_description10': "No visited link style",
-                    'variation_code_snippet10': ``,
+
+                
+                    'variation_name1': 'Header link',
+                    'variation_description1': "Generally, it is not recommended to add links in headers. Note that they are not underlined.",
+                    'variation_code_snippet1': `&lt;h2&gt;Header 2 containing &lt;a href=&quot;#&quot;&gt;a link&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet. Vestibulum orci ante, sagittis quis dolor a, fringilla dapibus nunc. Nulla in purus nisi. Curabitur vel odio et est auctor tincidunt. Et ultricies erat pellentesque nec. Suspendisse quis faucibus nec eu justo. Nulla ut massa eget dolor vehicula bibendum.&lt;/p&gt;`,
+                
+                    'variation_name2': 'Navigation links',
+                    'variation_description2': "Navigation links are not underlined and do not get a visited link style.",
+                    'variation_code_snippet2': `Needs code snippet!
+&lt;!-- 
+&lt;ul class=&quot;toc&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;News&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+--&gt;`,
                 
             
 
 
             'title': 'Links',
             'description': "Links lead users to a different page or further information. In contrast, buttons are used to signal actions. Users should be able to identify links without relying on color or styling alone.More information can be found at:  https://cfpb.github.io/design-manual/page-components/links.html  https://cfpb.github.io/capital-framework/components/cf-core/#default-links  https://cfpb.github.io/capital-framework/components/cf-typography/#link-patterns",
-            'use_cases': "Links are automatically underlined when they are a child of a paragraph p, list item li, or definition list term dd:    A child of a paragraph            A child of a list item                Definition list term                A child of a definition list description    To enable them elsewhere, simply add a border-bottom-width: 1px; to the link.Links within a nav element are not underlined.",
+            'use_cases': "",
             'content_guidelines': "",
             'behavior': "Default linksIn general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content.Opening a link in a new tabLinks should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.Add target=\"_blank\" rel=\"noopener noreferrer\" to direct these links to securely open in a new tab.Add an aria-label that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be aria-label=\"Learn why some county data are unavailable. (Link opens in new tab.)\" This meets WCAG guideline 3.2 that webpages should work in a predictable way.",
             'accessibility': "",

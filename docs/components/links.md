@@ -40,10 +40,9 @@ variation_groups:
 
 
           <p>Here's the <a href="#">default link style</a>. Here is the <a href="#" class="hover">hover link style</a>. Voila the <a href="#" class="focus">focused link style</a>. Ecco the <a href="#" class="active">active link style</a>. We’ve all been to the <a href="#" class="visited">visited link style</a>.</p>
-        variation_description: Inline links (e.g., within a paragraph) should be regular
-          weight. Specifically, links that appear in body text, link lists, or
+        variation_description: Inline links that appear in body text, link lists, or
           definitions (a child of a `p`, `li`, or `dd`) are automatically
-          underlined.
+          underlined and regular weight.
         variation_name: Inline links
         variation_implementation: "Links within a `nav` element are not underlined. To
           enable underlines elsewhere, simply add a `border-bottom-width: 1px`;

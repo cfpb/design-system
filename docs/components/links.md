@@ -103,6 +103,7 @@ variation_groups:
                     a-link__jump
                     a-link__icon-after-text"
             href="#">
+          <span class="a-link_text">Jump link</span>
               {% include icons/right.svg %}
           </a>
         variation_description: “Jump links” are standalone links that respond to small
@@ -149,6 +150,7 @@ variation_groups:
       - variation_code_snippet: ""
         variation_description: No visited link style
         variation_name: Navigation link
+    variation_group_name: Variations
 use_cases: >-
   Links are automatically underlined when they are a child of a paragraph `p`,
   list item `li`, or definition list term `dd`:

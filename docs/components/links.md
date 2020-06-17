@@ -202,8 +202,17 @@ variation_groups:
       - variation_code_snippet: ""
         variation_description: <h2>Header 2 containing <a href="#">a link</a></h2>
         variation_name: Header link
-      - variation_code_snippet: ""
-        variation_description: No visited link style
+      - variation_code_snippet: |-
+          Needs code snippet!
+          <!-- 
+          <ul class="toc">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          -->
+        variation_description: ""
         variation_name: Navigation links
         variation_specs: |-
           No underline

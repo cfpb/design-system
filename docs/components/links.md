@@ -39,14 +39,13 @@ variation_groups:
           -->
 
 
-          <p>Here's the <a href="#">default link style</a>. Here is the <a href="#" class="hover">hover link style</a>. Voila the <a href="#" class="focus">focused link style</a>. Ecco the <a href="#" class="active">active link style</a>. We’ve all been to the <a href="#" class="visited">visited link style</a>.</p>
-        variation_description: Inline links that appear in body text, link lists, or
-          definitions (a child of a `p`, `li`, or `dd`) are automatically
-          underlined and regular weight.
+          <p>Here's the <a href="#">default link style</a>. For reference, here's the <a href="#" class="hover">hover link style</a>. Train your eyes on the <a href="#" class="focus">focused link style</a>. Jump to the <a href="#" class="active">active link style</a>. We’ve all been to the <a href="#" class="visited">visited link style</a>.</p>
+        variation_description: >+
+          Inline links should be Regular weight if inline with other text (e.g.,
+          within a paragraph like this one).
+
         variation_name: Inline links
-        variation_implementation: "Links within a `nav` element are not underlined. To
-          enable underlines elsewhere, simply add a `border-bottom-width: 1px`;
-          to the link. "
+        variation_implementation: ""
       - variation_name: Standalone links
         variation_code_snippet: |-
           <ul class="medium-ex m-list m-list__unstyled">
@@ -66,9 +65,16 @@ variation_groups:
                   <a href="#" class="visited">Visited link style</a>
               </li>
           </ul>
-        variation_description: Standalone links should be medium weight (e.g., in a call
-          to action or list of links).
-    variation_group_description: ""
+        variation_description: >+
+          Standalone links (e.g., in a call to action or list of links) should
+          be Medium weight.
+
+    variation_group_description: >+
+      Links that appear in body text (`p`), link lists (`li`), or definitions
+      (`dd`) are automatically underlined. They are not underlined when included
+      in a `nav` element. To enable them elsewhere, simply add a
+      `border-bottom-width: 1px;` to the link.
+
   - variation_group_name: Links with icons
     variation_group_description: "Use icons when a link needs extra emphasis. Use
       icons consistently, or don’t use them at all. Each icon should be used

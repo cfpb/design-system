@@ -310,8 +310,8 @@
         
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#">
-                
+            <a class="m-list_link" href="#standard-browse-page">
+                Standard browse page
             </a>
         </li>
         
@@ -325,21 +325,17 @@
 
 <p>Related browse pages within a specific section can be accessed via the left side sub-navigation so users can easily move around within the topic. Browse pages can have parent-child relationships to other browse pages.</p>
 
-<p>This page is under active development. Information is being moved into it from this page:</p>
-<ul>
-  <li>http://cfpb.github.io/design-manual/global-elements/browse-page.html</li>
-</ul>
-
     </section>
     
 
     
     
-    <section class="o-variation_group" id="">
+    <section class="o-variation_group" id="standard-browse-page">
 
         
-        
-        <div class="u-mb15"></div>
+        <h2 class="o-variation_group_title">
+            Standard browse page
+        </h2>
         
 
         
@@ -352,14 +348,24 @@
             
 
             
-            <div class="m-variation_name">
-                <h3>Browse page example</h3>
-            </div>
-            
 
             
             <div class="m-variation_description">
-                <p><img src="/design-system/images/uploads/browse_example.jpg" alt="Browse page example"></p>
+                <table>
+  <thead>
+    <tr>
+      <th>Browse page wireframe</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/design-system/images/uploads/browse_example.jpg" alt="Browse page example"></td>
+      <td>Example of a browse page with navigation: <a href="https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/">TRID guidance page</a>
+</td>
+    </tr>
+  </tbody>
+</table>
 
             </div>
             
@@ -378,15 +384,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-browse-page-example-browse-page--1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-browse-page-example-browse-page--1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-browse-page-wireframe-example-br-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-browse-page-wireframe-example-br-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-browse-page-example-browse-page--1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-browse-page-wireframe-example-br-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-browse-page-example-browse-page--html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-browse-page-wireframe-example-br-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -398,7 +404,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-browse-page-example-browse-page--html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-browse-page-wireframe-example-br-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -464,10 +470,16 @@
 
 <p>Area 1: Introduction</p>
 <ul>
-  <li>Text introduction is required.
-Area 2: Main content</li>
-  <li>Must contain at least 1 component.
-Area 3: Prefooter</li>
+  <li>Text introduction is required.</li>
+</ul>
+
+<p>Area 2: Main content</p>
+<ul>
+  <li>Must contain at least 1 component.</li>
+</ul>
+
+<p>Area 3: Prefooter</p>
+<ul>
   <li>Optional.</li>
   <li>If using both static and dynamic content, preference for dynamic content to appear above static content.</li>
 </ul>
@@ -480,13 +492,22 @@ Area 3: Prefooter</li>
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<p>Below the 901 pixel breakpoint, the sub-navigation collapses into the global navigation under a hamburger menu, as seen on the <a href="http://www.consumerfinance.gov/policy-compliance/rulemaking/regulatory-agenda/">Regulatory agenda page</a>. In cases where a browse page has children browse pages, the children will appear in a special expandable navigation at the top of the page, as seen on the <a href="http://www.consumerfinance.gov/policy-compliance/guidance/implementation-guidance/">Implementation and guidance page</a>.</p>
+<p>Below the 901 pixel breakpoint, the sub-navigation collapses into the global navigation under a hamburger menu, as seen on the <a href="http://www.consumerfinance.gov/policy-compliance/rulemaking/regulatory-agenda/">Regulatory agenda page</a>. In cases where a browse page has child browse pages, the children will appear in a special expandable navigation at the top of the page, as seen on the <a href="https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/">TRID guidance page</a>.</p>
 
-<h5 id="breakpoints-901-pixels-or-more">Breakpoints 901 pixels or more</h5>
-<p><img src="/design-system/images/uploads/browse_behavior_desktop.jpg" alt="Breakpoints 901+"></p>
-
-<h5 id="breakpoints-900-pixels-or-less">Breakpoints 900 pixels or less</h5>
-<p><img src="/design-system/images/uploads/browse_behavior_mobile.jpg" alt="Breakpoints 900 and less"></p>
+<table>
+  <thead>
+    <tr>
+      <th>Above 900 px</th>
+      <th>Below 901 px</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/design-system/images/uploads/browse_behavior_desktop.jpg" alt="Breakpoints 901+"></td>
+      <td><img src="/design-system/images/uploads/browse_behavior_mobile.jpg" alt="Breakpoints 900 and less"></td>
+    </tr>
+  </tbody>
+</table>
 
                 
             
@@ -566,8 +587,8 @@ Area 3: Prefooter</li>
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/templates/3-browse-pages.md">
-                    <time datetime="2020-05-12 11:30:07 -0400">
-                        11:30:07 AM May 12, 2020
+                    <time datetime="2020-06-17 18:06:22 -0400">
+                         6:06:22 PM Jun 17, 2020
                     </time>
                 </a>
             </small>

@@ -73,19 +73,25 @@ variation_groups:
 
           More information see: <http://css-tricks.com/snippets/css/clear-fix>
         variation_name: '"Clearfix" helper class'
-      - variation_code_snippet: |-
-          <h1>
-              <a href="#">
-                  <span class="cf-icon cf-icon-twitter-square"></span>
-                  <span class="u-visually-hidden">Share on Twitter</span>
-              </a>
-          </h1>
+      - variation_code_snippet: ""
         variation_description: >-
           Hide an element from view while keeping it accessible to screen
           readers.
 
 
           For example, to create a link with a social network icon, but allow non-sighted users to understand the context, add descriptive text with the `u-visually-hidden` class.
+
+
+          ```
+
+          <h1>
+              <a href="#">
+                  <span class="cf-icon cf-icon-twitter-square"></span>
+                  <span class="u-visually-hidden">Share on Twitter</span>
+              </a>
+          </h1>
+
+          ```
         variation_name: '"Visually hidden" helper class'
       - variation_description: Use `u-hidden` to hide an element from everything
           (including screen readers). This is useful for dynamically hiding and
@@ -94,20 +100,31 @@ variation_groups:
           it after checking for browser support, use JavaScript to remove this
           class from the element after verifying support.
         variation_name: '"Totally hidden" helper class'
-      - variation_code_snippet: <div class="u-inline-block"></div>
-        variation_description: "_DEPRECATED._ Identical to `display: inline-block.`"
+      - variation_code_snippet: ""
+        variation_description: |-
+          _DEPRECATED._ Identical to `display: inline-block.`
+
+          ```
+          <div class="u-inline-block"></div>
+          ```
         variation_name: '"Inline block" helper class [DEPRECATED]'
-      - variation_code_snippet: <div class="u-right"></div>
+      - variation_code_snippet: ""
         variation_name: '"Float right" helper class'
-      - variation_code_snippet: |-
-          <div class="u-break-word">
+        variation_description: |-
+          ```
+          <div class="u-right"></div>
+          ```
+      - variation_code_snippet: >-
+          <div class="u-break-word u-mb30" style="width: 100px; padding: 0.5em;
+          border: 1px solid silver;">
               This link should break:
               <a href="#">
                   something@something.com
               </a>
-          </div>
+          </div> 
 
-          <div>
+
+          <div class="u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;">
               This link should not:
               <a href="#">
                   something@something.com

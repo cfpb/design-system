@@ -48,44 +48,6 @@ variation_groups:
           links) should be Medium weight.
         variation_name: Stand-alone link
       - variation_code_snippet: |-
-          <p>
-            Use the email icon to emphasize an email address like
-              <a class="a-link
-                        a-link__icon"
-                href="#">
-                  {% include icons/mail.svg %}
-                  <span class="a-link_text">john.smith@cfpb.gov</span>
-              </a>.
-              Documents minicons can emphasize a link that contains a
-              <a class="a-link
-                        a-link__icon"
-                href="#">
-                  <span class="a-link_text">file or document</span>
-                  {% include icons/download.svg %}
-              </a>.
-              Use the external link minicon to emphasize
-              <a class="a-link
-                        a-link__icon"
-                href="#">
-                  <span class="a-link_text">a non-CFPB webpage</span>
-                  {% include icons/external-link.svg %}
-              </a> for further details.
-          </p>
-        variation_description: >-
-          Use icons when a link needs extra emphasis. Use icons consistently, or
-          don’t use them at all. Each icon should be used exclusively for one
-          action.
-
-
-          Icons appear to the right of the link text. The color and font-size of icons should be the same as the adjacent text, including state changes. Icons are never underlined.
-
-          * Styles to enable adding an icon to a link and preventing the link’s underline from extending under the icon.
-
-          * For the underlined icon prevention to work, you must wrap the link text with a `span.icon-link_text`. There can be no whitespace between the text and the opening and closing `span` tags.
-
-          * Include the icon either prior to or after the `a-link_text`. It is important the text and icon are siblings to correctly handle underlines.
-        variation_name: Link with icon
-      - variation_code_snippet: |-
           For more information, email
           <a class="a-link
                     a-link__icon
@@ -151,6 +113,47 @@ variation_groups:
         variation_description: No visited link style
         variation_name: Navigation link
     variation_group_name: Variations
+  - variation_group_name: Links with icons
+    variation_group_description: >-
+      Use icons when a link needs extra emphasis. Use icons consistently, or
+      don’t use them at all. Each icon should be used exclusively for one
+      action. 
+
+
+      To prevent the link’s underline from extending under the icon, you must wrap the link text with a `span.icon-link_text`. There can be no whitespace between the text and the opening and closing span tags.
+
+
+      Include the icon either prior to or after the `a-link_text`. It is important the text and icon are siblings to correctly handle underlines.
+    variations:
+      - variation_specs: >
+          Icons appear to the right of the link text. The color and font-size of
+          icons should be the same as the adjacent text, including state
+          changes. Icons are never underlined.
+        variation_code_snippet: |-
+          <p>
+            Use the email icon to emphasize an email address like
+              <a class="a-link
+                        a-link__icon"
+                href="#">
+                  {% include icons/mail.svg %}
+                  <span class="a-link_text">john.smith@cfpb.gov</span>
+              </a>.
+              Documents minicons can emphasize a link that contains a
+              <a class="a-link
+                        a-link__icon"
+                href="#">
+                  <span class="a-link_text">file or document</span>
+                  {% include icons/download.svg %}
+              </a>.
+              Use the external link minicon to emphasize
+              <a class="a-link
+                        a-link__icon"
+                href="#">
+                  <span class="a-link_text">a non-CFPB webpage</span>
+                  {% include icons/external-link.svg %}
+              </a> for further details.
+          </p>
+        variation_name: Wrapping links with icon
 use_cases: >-
   Links are automatically underlined when they are a child of a paragraph `p`,
   list item `li`, or definition list term `dd`:

@@ -26,6 +26,8 @@ variation_groups:
           demonstration purposes only and should not be used in production.-->
 
 
+          <!--
+
           <p>
               <a href="#">Default</a>,
               <a href="#" class="visited">Visited</a>,
@@ -33,10 +35,41 @@ variation_groups:
               <a href="#" class="focus">Focused</a>,
               <a href="#" class="active">Active</a>
           </p>
-        variation_description: "Links are automatically underlined when they are a child
-          of a `p`, `li`, or `dd`. To enable them elsewhere, simply add a
-          `border-bottom-width: 1px`; to the link. Links within a `nav` element
-          are not underlined."
+
+          -->
+
+
+          <p>Here's the <a href="#">default link style</a>. Here is the <a href="#" class="hover">hover link style</a>. Voila the <a href="#" class="focus">focused link style</a>. Ecco the <a href="#" class="active">active link style</a>. We’ve all been to the <a href="#" class="visited">visited link style</a>.</p>
+        variation_description: Inline links (e.g., within a paragraph) should be regular
+          weight. Specifically, links that appear in body text, link lists, or
+          definitions (a child of a `p`, `li`, or `dd`) are automatically
+          underlined.
+        variation_name: Inline links
+        variation_implementation: "Links within a `nav` element are not underlined. To
+          enable underlines elsewhere, simply add a `border-bottom-width: 1px`;
+          to the link. "
+      - variation_name: Standalone links
+        variation_code_snippet: |-
+          <ul class="medium-ex m-list m-list__unstyled">
+              <li class="m-list_item">
+                  <a href="#">Default link style</a>
+              </li>
+              <li class="m-list_item">
+                  <a href="#" class="hover">Hover link style</a>
+              </li>
+              <li class="m-list_item">
+                  <a href="#" class="focus">Focused link style</a>
+              </li>
+              <li class="m-list_item">
+                  <a href="#" class="active">Active link style</a>
+              </li>
+              <li class="m-list_item">
+                  <a href="#" class="visited">Visited link style</a>
+              </li>
+          </ul>
+        variation_description: Standalone links should be medium weight (e.g., in a call
+          to action or list of links).
+    variation_group_description: ""
   - variation_group_name: Links with icons
     variation_group_description: "Use icons when a link needs extra emphasis. Use
       icons consistently, or don’t use them at all. Each icon should be used

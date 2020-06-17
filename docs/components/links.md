@@ -37,93 +37,10 @@ variation_groups:
           of a `p`, `li`, or `dd`. To enable them elsewhere, simply add a
           `border-bottom-width: 1px`; to the link. Links within a `nav` element
           are not underlined."
-  - variations:
-      - variation_code_snippet: <p><a href="#">Inline links</a> should be Regular weight
-          if inline with other text (e.g., within a paragraph like this
-          one).</p>
-        variation_description: Links that appear in body text or link lists are underlined.
-        variation_name: Inline link
-      - variation_code_snippet: <a href="#">Default link style</a>
-        variation_description: Stand-alone links (e.g., in a call to action or list of
-          links) should be Medium weight.
-        variation_name: Stand-alone link
-      - variation_code_snippet: |-
-          For more information, email
-          <a class="a-link
-                    a-link__icon
-                    a-link__no-wrap"
-            href="#">
-              <span class="a-link_text">john.smith@cfpb.gov</span>
-              {% include icons/mail.svg %}
-          </a>.
-        variation_description: "Warning: Icons added to inline links can sometimes break
-          onto the next line. If you want to prevent this, you can add the
-          `__no-wrap` modifier to `.a-link__icon`."
-        variation_name: Non-wrapping icon links
-      - variation_code_snippet: |-
-          <a class="a-link
-                    a-link__jump
-                    a-link__icon-after-text"
-            href="#">
-          <span class="a-link_text">Jump link</span>
-              {% include icons/right.svg %}
-          </a>
-        variation_description: “Jump links” are standalone links that respond to small
-          screens by converting to full block links that have a finger-friendly
-          touch area.
-        variation_name: Jump link
-      - variation_code_snippet: |-
-          <a class="a-link
-                    a-link__jump
-                    a-link__icon-after-text
-                    a-link__large"
-            href="#">
-              <span class="a-link_text">Large jump link</span>
-              {% include icons/right.svg %}
-          </a>
-        variation_description: The large jump link has an `18px` `font-size`, compared
-          to the default of `16px`.
-        variation_name: Large jump link
-      - variation_code_snippet: |-
-          <a class="a-link
-                    a-link__jump
-                    a-link__icon-before-text"
-            href="#">
-              {% include icons/left.svg %}
-              <span class="a-link_text">Jump link with icon on left</span>
-          </a>
-        variation_description: Jump links can also have icons before the text, like icon links.
-        variation_name: Jump link with icon on left
-      - variation_code_snippet: |-
-          <a class="a-link
-                    a-link__jump
-                    a-link__icon-after-text
-                    a-link__bg"
-            href="#">
-              <span class="a-link_text">Jump link with grey background and
-                  solid borders on small screens</span>
-              {% include icons/right.svg %}
-          </a>
-        variation_description: Reduce screen size to see this in action.
-        variation_name: Jump link with background modifier
-      - variation_code_snippet: ""
-        variation_description: <h2>Header 2 containing <a href="#">a link</a></h2>
-        variation_name: Header link
-      - variation_code_snippet: ""
-        variation_description: No visited link style
-        variation_name: Navigation link
-    variation_group_name: Variations
   - variation_group_name: Links with icons
-    variation_group_description: >-
-      Use icons when a link needs extra emphasis. Use icons consistently, or
-      don’t use them at all. Each icon should be used exclusively for one
-      action. 
-
-
-      To prevent the link’s underline from extending under the icon, you must wrap the link text with a `span.icon-link_text`. There can be no whitespace between the text and the opening and closing span tags.
-
-
-      Include the icon either prior to or after the `a-link_text`. It is important the text and icon are siblings to correctly handle underlines.
+    variation_group_description: "Use icons when a link needs extra emphasis. Use
+      icons consistently, or don’t use them at all. Each icon should be used
+      exclusively for one action. "
     variations:
       - variation_specs: >
           Icons appear to the right of the link text. The color and font-size of
@@ -153,7 +70,92 @@ variation_groups:
                   {% include icons/external-link.svg %}
               </a> for further details.
           </p>
-        variation_name: Wrapping links with icon
+        variation_name: Links with icon
+        variation_description: >-
+          To prevent the link’s underline from extending under the icon, you
+          must wrap the link text with a `span.icon-link_text`. There can be no
+          whitespace between the text and the opening and closing span tags.
+
+
+          Include the icon either prior to or after the `a-link_text`. It is important the text and icon are siblings to correctly handle underlines.
+      - variation_name: Non-wrapping icon links
+        variation_description: "Warning: Icons added to inline links can sometimes break
+          onto the next line. If you want to prevent this, you can add the
+          `__no-wrap` modifier to `.a-link__icon`."
+        variation_code_snippet: |-
+          For more information, email
+          <a class="a-link
+                    a-link__icon
+                    a-link__no-wrap"
+            href="#">
+              <span class="a-link_text">john.smith@cfpb.gov</span>
+              {% include icons/mail.svg %}
+          </a>.
+  - variation_group_name: Jump links
+    variations:
+      - variation_name: Jump link
+        variation_code_snippet: |-
+          <a class="a-link
+                    a-link__jump
+                    a-link__icon-after-text"
+            href="#">
+          <span class="a-link_text">Jump link</span>
+              {% include icons/right.svg %}
+          </a>
+      - variation_name: Large jump link
+        variation_description: The large jump link has an 18px `font-size`, compared to
+          the default of 16px.
+        variation_code_snippet: |-
+          <a class="a-link
+                    a-link__jump
+                    a-link__icon-after-text
+                    a-link__large"
+            href="#">
+              <span class="a-link_text">Large jump link</span>
+              {% include icons/right.svg %}
+          </a>
+      - variation_name: Jump link with icon on left
+        variation_description: Jump links can also have icons before the text, like icon links.
+        variation_code_snippet: |-
+          <a class="a-link
+                    a-link__jump
+                    a-link__icon-before-text"
+            href="#">
+              {% include icons/left.svg %}
+              <span class="a-link_text">Jump link with icon on left</span>
+          </a>
+      - variation_name: Jump link with background modifier
+        variation_code_snippet: |-
+          <a class="a-link
+                    a-link__jump
+                    a-link__icon-after-text
+                    a-link__bg"
+            href="#">
+              <span class="a-link_text">Jump link with grey background and
+                  solid borders on small screens</span>
+              {% include icons/right.svg %}
+          </a>
+        variation_description: A grey background is added on small screens.
+    variation_group_description: '"Jump links” are standalone links that respond to
+      small screens by converting to full block links that have a
+      finger-friendly touch area. Reduce screen size to see these in action.'
+  - variations:
+      - variation_code_snippet: <p><a href="#">Inline links</a> should be Regular weight
+          if inline with other text (e.g., within a paragraph like this
+          one).</p>
+        variation_description: Links that appear in body text or link lists are underlined.
+        variation_name: Inline link
+      - variation_code_snippet: <a href="#">Default link style</a>
+        variation_description: Stand-alone links (e.g., in a call to action or list of
+          links) should be Medium weight.
+        variation_name: Stand-alone link
+      - variation_code_snippet: ""
+        variation_description: <h2>Header 2 containing <a href="#">a link</a></h2>
+        variation_name: Header link
+      - variation_code_snippet: ""
+        variation_description: No visited link style
+        variation_name: Navigation link
+    variation_group_name: Variations
 use_cases: >-
   Links are automatically underlined when they are a child of a paragraph `p`,
   list item `li`, or definition list term `dd`:

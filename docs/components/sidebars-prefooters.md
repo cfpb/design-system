@@ -152,7 +152,7 @@ variation_groups:
               </div>
           </footer>
         variation_description: >-
-          Add a class of .content_main__narrow to .content_main to get a
+          Add a class of `.content_main__narrow` to `.content_main` to get a
           one-column (in a 12-column grid) gutter on the right side.
 
 

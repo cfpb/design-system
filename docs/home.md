@@ -1,7 +1,7 @@
 ---
 title: Homepage
 layout: homepage
-body: >-
+markdown: >-
   ## Welcome to the CFPB Design System
 
 

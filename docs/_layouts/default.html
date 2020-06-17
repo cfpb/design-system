@@ -30,5 +30,25 @@
   {{ content }}
   {% include footer.html %}
   <script src="{{ "/dist/js/main.js" | relative_url }}" charset="utf-8"></script>
+
+  {% if page.is_interstitial %}
+  <script>
+    {%- comment -%}
+        The interstitial page redirects users to a URL based on a query parameter.
+        To prevent malicious users from abusing this feature, we build a list of acceptable redirects.
+    {%- endcomment -%}
+    var PAGES_ALLOWED = {};
+    {%- for p in site.pages -%}
+      {%- if p.title -%}
+        {%- capture edit_url -%}
+          {{-"/admin/#/collections/" | append: p.section | append: '/entries/' | relative_url -}}{{- p.path | split: '/' | last | replace: '.md' -}}
+        {%- endcapture -%}
+        PAGES_ALLOWED['{{ p.title | strip }}'] = '{{ edit_url }}';
+      {%- endif -%}
+    {%- endfor -%}
+  </script>
+  <script src="{{ "/dist/js/interstitial.js" | relative_url }}" charset="utf-8"></script>
+  {% endif %}
+
 </body>
 </html>

@@ -3,8 +3,9 @@ const path = require( 'path' );
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
   entry: {
-    'netlify-cms': './admin/src/netlify-cms.js',
+    'interstitial': './assets/js/interstitial.js',
     'main': './assets/js/main.js',
+    'netlify-cms': './admin/src/netlify-cms.js',
     'search': './assets/js/search.js'
   },
   output: {

@@ -286,7 +286,7 @@ variation_groups:
           <br />
 
 
-          <h4>Flexible container </h4>
+          <h4>Flexible container with background</h4>
 
           <p>To create a flexible container with only a background (no inner video or object element), omit the inner container.</p>
 
@@ -346,19 +346,19 @@ variation_groups:
         variation_code_snippet: ""
       - variation_name: '"Link border" mixin'
         variation_description: >-
-          Force the default bottom border on the default and `:hover` states.
+          Force the default bottom `border` on the default and `:hover` states.
 
 
           `.u-link__border()`
 
 
-          Turn off the default bottom border on the default and `:hover` states.
+          Turn off the default bottom `border` on the default and `:hover` states.
 
 
           `.u-link__no-border()`
 
 
-          Turn off the default bottom border on the default state but force a bottom border on the `:hover` state.
+          Turn off the default bottom `border` on the default state but force a bottom border on the `:hover` state.
 
 
           `.u-link__hover-border()`

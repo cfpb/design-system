@@ -70,9 +70,9 @@ content_guidelines: >-
 
   * Must contain at least 1 component, though the [featured content module](/design-system/components/featured-content-module) or [gray well](/design-system/components/wells) should not stand on their own.
 
-  * Recommended hierarchy of components: [featured content module](/design-system/components/featured-content-module), [image & text](/design-system/components/info-unit-groups-image-and-text) components, [gray well](/design-system/components/wells) and [half width link blobs](/design-system/components/info-unit-groups-link-blobs), [full width text](/design-system/components/full-width-text), and [contact information](/design-system/components/contact-information).
+  * Recommended hierarchy of components: [featured content module](/design-system/components/featured-content-module), [info unit group](/design-system/components/info-unit-groups-image-and-text) components, [gray well](/design-system/components/wells), and full width body copy.
 
-  * [Gray well](/design-system/components/wells) component should not be used at the top of this area if the introduction area contains a hero.
+  * [Gray well](/design-system/components/wells) component should not be used at the top of this area if the hero is used to introduce the page.
 
 
   ##### Area 3: Sidebar

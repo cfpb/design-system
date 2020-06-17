@@ -12,7 +12,7 @@ description: Landing page types provide an overview of a main navigation section
 variation_groups:
   - variation_group_name: Types
     variations: []
-    variation_group_description: >
+    variation_group_description: >-
       There are two landing page templates. One uses a hero at the top of the
       page, and the other uses a text introduction.
 
@@ -22,6 +22,8 @@ variation_groups:
       | -- | -- | 
 
       | ![Landing page with hero](/design-system/images/uploads/landing_top_examplea_2x.jpg) | ![Landing page with text introduction](/design-system/images/uploads/landing_top_exampleb_2x.jpg) | 
+
+      | Example: [Consumer Tools overview page](https://www.consumerfinance.gov/consumer-tools/) | Example: [About Us overview page](https://www.consumerfinance.gov/about-us/)
 use_cases: >-
   ##### When to use
 

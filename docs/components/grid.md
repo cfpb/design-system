@@ -7,14 +7,6 @@ status: Released
 description: >
   The grid provides structure for website content. The flexible design adjusts
   for different devices.
-
-
-  Information about Grid can be found at:
-
-
-  * <http://cfpb.github.io/design-manual/global-elements/grid.html>
-
-  * <https://cfpb.github.io/capital-framework/components/cf-grid/>
 variation_groups:
   - variation_group_name: Standard grid
     variation_group_description: >-

@@ -115,8 +115,10 @@ variation_groups:
           <div class="u-right"></div>
           ```
       - variation_code_snippet: >-
-          <div class="u-break-word u-mb30" style="width: 100px; padding: 0.5em;
-          border: 1px solid silver;">
+          <!--NOTE: Inline style properties for demonstration only.-->
+
+
+          <div class="u-break-word u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;">
               This link should break:
               <a href="#">
                   something@something.com
@@ -137,7 +139,11 @@ variation_groups:
 
           _This only works in Internet Explorer 8 when the element with the `.u-break-word` class has layout. See <http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8> for more information._
         variation_name: '"Break word" helper class'
-      - variation_code_snippet: <h1 class="u-mb0">Heading with zero bottom margin</h1>
+      - variation_code_snippet: >-
+          <h5 class="u-mb0">Demonstration of heading 5 with zero bottom
+          margin</h1>
+
+          <hr>
         variation_description: >-
           Force a `margin` top or bottom on an element in pixels.
 
@@ -148,8 +154,10 @@ variation_groups:
           _`[p]` is the position, use `t` for top or `b` for bottom. `[#]` is the pixel value, available options are 0, 5, 10, 15, 20, 30, 45, 60_
         variation_name: '"Margin utilities" helper classes'
       - variation_code_snippet: >-
-          <div class="u-w100pct" style="background: #f4edf3; margin-bottom:
-          1px;">
+          <!--NOTE: Inline style properties for demonstration only.-->
+
+
+          <div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;">
               <code>.u-w100pct</code>
           </div>
 
@@ -204,31 +212,25 @@ variation_groups:
           <div class="u-w33pct" style="background: #f4edf3; margin-bottom: 1px;">
               <code>.u-w33pct</code>
           </div>
-        variation_description: |-
-          Set the `width` of an element in percentages.
-
-          **NOTE: Inline style properties for demonstration only.**
+        variation_description: Set the `width` of an element in percentages.
         variation_name: '"Width utilities" helper classes'
       - variation_code_snippet: |-
+          <!--NOTE: Inline style properties for demonstration only-->
+
           <div style="border: 1px solid black; height: 22px; padding: 5px;">
               <p class="u-show-on-mobile">Visible on mobile</p>
           </div>
         variation_description: |-
           Show or hide content based on the current display size.
-
-          **NOTE: Inline style properties for demonstration only**
-
           Displays content on screen widths under 601px.
         variation_name: '"Show on mobile" width-specific helper class'
       - variation_code_snippet: |-
+          <!--NOTE: Inline style properties for demonstration only-->
+
           <div style="border: 1px solid black; height: 22px; padding: 5px;">
               <p class="u-hide-on-mobile">Hidden on mobile</p>
           </div>
-        variation_description: |-
-          Show or hide content based on the current display size.
-
-          **NOTE: Inline style properties for demonstration only**
-
+        variation_description: Show or hide content based on the current display size.
           Hides content on screens widths under 601px.
         variation_name: '"Hide on mobile" width-specific helper class'
     variation_group_name: Helper classes

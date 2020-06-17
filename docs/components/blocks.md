@@ -117,7 +117,7 @@ variation_groups:
                   </section>
               </div>
           </main>
-        variation_description: Removes the side, top, and bottom margin from .block.
+        variation_description: Removes the side, top, and bottom `margin` from `.block`.
         variation_name: Flush modifier
       - variation_code_snippet: |-
           Main content...
@@ -143,7 +143,7 @@ variation_groups:
           </main>
         variation_description: This is an example of combining modifiers to get a flush
           `padding` and `background` with a `.block`.
-        variation_name: Background and flush-sides modifier
+        variation_name: Background and flush-sides modifier combo example
       - variation_code_snippet: |-
           Main content...
           <div class="block block__padded-top block__border-top">

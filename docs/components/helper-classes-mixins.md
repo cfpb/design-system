@@ -220,9 +220,8 @@ variation_groups:
           <div style="border: 1px solid black; height: 22px; padding: 5px;">
               <p class="u-show-on-mobile">Visible on mobile</p>
           </div>
-        variation_description: |-
-          Show or hide content based on the current display size.
-          Displays content on screen widths under 601px.
+        variation_description: Shows content on screen widths under 601px. Reduce screen
+          size to see this in action.
         variation_name: '"Show on mobile" width-specific helper class'
       - variation_code_snippet: |-
           <!--NOTE: Inline style properties for demonstration only-->
@@ -230,8 +229,8 @@ variation_groups:
           <div style="border: 1px solid black; height: 22px; padding: 5px;">
               <p class="u-hide-on-mobile">Hidden on mobile</p>
           </div>
-        variation_description: Show or hide content based on the current display size.
-          Hides content on screens widths under 601px.
+        variation_description: Hides content on screens widths under 601px. Reduce
+          screen size to see this in action.
         variation_name: '"Hide on mobile" width-specific helper class'
     variation_group_name: Helper classes
   - variation_group_name: Mixins

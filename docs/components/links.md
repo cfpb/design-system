@@ -204,45 +204,20 @@ variation_groups:
         variation_name: Header link
       - variation_code_snippet: ""
         variation_description: No visited link style
-        variation_name: Navigation link
+        variation_name: Navigation links
+        variation_specs: |-
+          No underline
+          No visited link style
     variation_group_name: Variations
-use_cases: >-
-  Links are automatically underlined when they are a child of a paragraph `p`,
-  list item `li`, or definition list term `dd`:
-
-
-  <p>
-      <a href="#">A child of a paragraph</a>
-  </p>
-
-  <ul>
-      <li>
-          <a href="#">A child of a list item</a>
-      </li>
-  </ul>
-
-  <dl>
-      <dt>
-          Definition list term
-      </dt>
-      <dd>
-          <a href="#">A child of a definition list description</a>
-      </dd>
-  </dl>
-
-
-  To enable them elsewhere, simply add a `border-bottom-width: 1px;` to the link.
-
-
-  Links within a `nav` element are not underlined.
+use_cases: ""
 content_guidelines: ""
 behavior: >-
-  Default links
+  ### Default links
 
   In general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content.
 
 
-  Opening a link in a new tab
+  ### Opening a link in a new tab
 
   Links should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.
 

@@ -108,7 +108,7 @@ variation_groups:
   - variation_group_name: Print
     variation_group_description: >-
       
-      This mixin allows us to easily write styles that target both @media print and .print.
+      This mixin allows us to easily write styles that target both `@media print` and `.print`.
 
       ```
 

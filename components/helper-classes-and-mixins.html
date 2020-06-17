@@ -1670,19 +1670,18 @@
 
 <p>For example, to create a link with a social network icon, but allow non-sighted users to understand the context, add descriptive text with the <code class="language-plaintext highlighter-rouge">u-visually-hidden</code> class.</p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h1&gt;
+    &lt;a href="#"&gt;
+        &lt;span class="cf-icon cf-icon-twitter-square"&gt;&lt;/span&gt;
+        &lt;span class="u-visually-hidden"&gt;Share on Twitter&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/h1&gt;
+</code></pre></div></div>
+
             </div>
             
 
             <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <h1>
-    <a href="#">
-        <span class="cf-icon cf-icon-twitter-square"></span>
-        <span class="u-visually-hidden">Share on Twitter</span>
-    </a>
-</h1>
-            </div>
             
 
             
@@ -1720,12 +1719,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;h1&gt;
-    &lt;a href="#"&gt;
-        &lt;span class="cf-icon cf-icon-twitter-square"&gt;&lt;/span&gt;
-        &lt;span class="u-visually-hidden"&gt;Share on Twitter&lt;/span&gt;
-    &lt;/a&gt;
-&lt;/h1&gt;</code></pre>
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -1797,14 +1791,13 @@
             <div class="m-variation_description">
                 <p><em>DEPRECATED.</em> Identical to <code class="language-plaintext highlighter-rouge">display: inline-block.</code></p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="u-inline-block"&gt;&lt;/div&gt;
+</code></pre></div></div>
+
             </div>
             
 
             <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <div class="u-inline-block"></div>
-            </div>
             
 
             
@@ -1842,7 +1835,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="u-inline-block"&gt;&lt;/div&gt;</code></pre>
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -1877,16 +1870,13 @@
 
             
             <div class="m-variation_description">
-                
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="u-right"&gt;&lt;/div&gt;
+</code></pre></div></div>
 
             </div>
             
 
             <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <div class="u-right"></div>
-            </div>
             
 
             
@@ -1924,7 +1914,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="u-right"&gt;&lt;/div&gt;</code></pre>
+                            <pre><code class="language-html"></code></pre>
                         </div>
                     </div>
                 </section>
@@ -1969,14 +1959,16 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <div class="u-break-word">
+                <!--NOTE: Inline style properties for demonstration only.-->
+
+<div class="u-break-word u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;">
     This link should break:
     <a href="#">
         something@something.com
     </a>
-</div>
+</div> 
 
-<div>
+<div class="u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;">
     This link should not:
     <a href="#">
         something@something.com
@@ -2020,14 +2012,16 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="u-break-word"&gt;
+                            <pre><code class="language-html">&lt;!--NOTE: Inline style properties for demonstration only.--&gt;
+
+&lt;div class="u-break-word u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;"&gt;
     This link should break:
     &lt;a href="#"&gt;
         something@something.com
     &lt;/a&gt;
-&lt;/div&gt;
+&lt;/div&gt; 
 
-&lt;div&gt;
+&lt;div class="u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;"&gt;
     This link should not:
     &lt;a href="#"&gt;
         something@something.com
@@ -2079,8 +2073,10 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <h1 class="u-mb0">Heading with zero bottom margin</h1>
-            </div>
+                <h5 class="u-mb0">Demonstration of heading 5 with zero bottom margin
+<hr>
+            </h5>
+</div>
             
 
             
@@ -2118,7 +2114,8 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;h1 class="u-mb0"&gt;Heading with zero bottom margin&lt;/h1&gt;</code></pre>
+                            <pre><code class="language-html">&lt;h5 class="u-mb0"&gt;Demonstration of heading 5 with zero bottom margin&lt;/h1&gt;
+&lt;hr&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -2155,15 +2152,15 @@
             <div class="m-variation_description">
                 <p>Set the <code class="language-plaintext highlighter-rouge">width</code> of an element in percentages.</p>
 
-<p><strong>NOTE: Inline style properties for demonstration only.</strong></p>
-
             </div>
             
 
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;">
+                <!--NOTE: Inline style properties for demonstration only.-->
+
+<div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;">
     <code>.u-w100pct</code>
 </div>
 <div class="u-w90pct" style="background: #f4edf3; margin-bottom: 1px;">
@@ -2243,7 +2240,9 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;"&gt;
+                            <pre><code class="language-html">&lt;!--NOTE: Inline style properties for demonstration only.--&gt;
+
+&lt;div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;"&gt;
     &lt;code&gt;.u-w100pct&lt;/code&gt;
 &lt;/div&gt;
 &lt;div class="u-w90pct" style="background: #f4edf3; margin-bottom: 1px;"&gt;
@@ -2319,11 +2318,7 @@
 
             
             <div class="m-variation_description">
-                <p>Show or hide content based on the current display size.</p>
-
-<p><strong>NOTE: Inline style properties for demonstration only</strong></p>
-
-<p>Displays content on screen widths under 601px.</p>
+                <p>Shows content on screen widths under 601px. Reduce screen size to see this in action.</p>
 
             </div>
             
@@ -2331,7 +2326,9 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <div style="border: 1px solid black; height: 22px; padding: 5px;">
+                <!--NOTE: Inline style properties for demonstration only-->
+
+<div style="border: 1px solid black; height: 22px; padding: 5px;">
     <p class="u-show-on-mobile">Visible on mobile</p>
 </div>
             </div>
@@ -2372,7 +2369,9 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div style="border: 1px solid black; height: 22px; padding: 5px;"&gt;
+                            <pre><code class="language-html">&lt;!--NOTE: Inline style properties for demonstration only--&gt;
+
+&lt;div style="border: 1px solid black; height: 22px; padding: 5px;"&gt;
     &lt;p class="u-show-on-mobile"&gt;Visible on mobile&lt;/p&gt;
 &lt;/div&gt;</code></pre>
                         </div>
@@ -2409,11 +2408,7 @@
 
             
             <div class="m-variation_description">
-                <p>Show or hide content based on the current display size.</p>
-
-<p><strong>NOTE: Inline style properties for demonstration only</strong></p>
-
-<p>Hides content on screens widths under 601px.</p>
+                <p>Hides content on screens widths under 601px. Reduce screen size to see this in action.</p>
 
             </div>
             
@@ -2421,7 +2416,9 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <div style="border: 1px solid black; height: 22px; padding: 5px;">
+                <!--NOTE: Inline style properties for demonstration only-->
+
+<div style="border: 1px solid black; height: 22px; padding: 5px;">
     <p class="u-hide-on-mobile">Hidden on mobile</p>
 </div>
             </div>
@@ -2462,7 +2459,9 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div style="border: 1px solid black; height: 22px; padding: 5px;"&gt;
+                            <pre><code class="language-html">&lt;!--NOTE: Inline style properties for demonstration only--&gt;
+
+&lt;div style="border: 1px solid black; height: 22px; padding: 5px;"&gt;
     &lt;p class="u-hide-on-mobile"&gt;Hidden on mobile&lt;/p&gt;
 &lt;/div&gt;</code></pre>
                         </div>
@@ -2606,33 +2605,33 @@
 
 <p>Original mixin credit: <a href="https://gist.github.com/craigmdennis/6655047">https://gist.github.com/craigmdennis/6655047</a></p>
 
-<p><strong>NOTE: Inline style properties for demonstration only</strong></p>
-
-<p>To create a 16:9 flexible video player, wrap the video element in an element with <code class="language-plaintext highlighter-rouge">u-flexible-container</code> and add the <code class="language-plaintext highlighter-rouge">u-flexible-container_inner</code> to the video element.</p>
-
-<p>To create a flexible container with only a background (no inner video or object element), omit the inner container.</p>
-
-<p>To create a 4:3 flexible video player, add the <code class="language-plaintext highlighter-rouge">__4_3</code> modifier to the container.</p>
-
             </div>
             
 
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <div class="u-flexible-container">
+                <!--NOTE: Inline style properties for demonstration only-->
+
+<h4>16:9 flexible video player</h4>
+<p>To create a 16:9 flexible video player, wrap the video element in an element with <code>u-flexible-container</code> and add the <code>u-flexible-container_inner</code> to the video element.</p>
+<div class="u-flexible-container">
     <video class="u-flexible-container_inner" style="background:#75787B;" controls>
     </video>
 </div>
 
 <br>
 
+<h4>Flexible container with background</h4>
+<p>To create a flexible container with only a background (no inner video or object element), omit the inner container.</p>
 <div class="u-flexible-container" style="background-image: url(https://dummyimage.com/700x394/addc91/101820);
             background-position: center center;
             background-repeat: no-repeat;"></div>
 
 <br>
 
+<h4>4:3 flexible video player</h4>
+<p>To create a 4:3 flexible video player, add the <code>__4_3 modifier</code> to the container.</p>
 <div class="u-flexible-container u-flexible-container__4-3">
     <video class="u-flexible-container_inner" style="background:#75787B;" controls>
     </video>
@@ -2675,7 +2674,11 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="u-flexible-container"&gt;
+                            <pre><code class="language-html">&lt;!--NOTE: Inline style properties for demonstration only--&gt;
+
+&lt;h4&gt;16:9 flexible video player&lt;/h4&gt;
+&lt;p&gt;To create a 16:9 flexible video player, wrap the video element in an element with &lt;code&gt;u-flexible-container&lt;/code&gt; and add the &lt;code&gt;u-flexible-container_inner&lt;/code&gt; to the video element.&lt;/p&gt;
+&lt;div class="u-flexible-container"&gt;
     &lt;video class="u-flexible-container_inner"
           style="background:#75787B;"
           controls&gt;
@@ -2684,6 +2687,8 @@
 
 &lt;br /&gt;
 
+&lt;h4&gt;Flexible container with background&lt;/h4&gt;
+&lt;p&gt;To create a flexible container with only a background (no inner video or object element), omit the inner container.&lt;/p&gt;
 &lt;div class="u-flexible-container"
     style="background-image: url(https://dummyimage.com/700x394/addc91/101820);
             background-position: center center;
@@ -2691,6 +2696,8 @@
 
 &lt;br /&gt;
 
+&lt;h4&gt;4:3 flexible video player&lt;/h4&gt;
+&lt;p&gt;To create a 4:3 flexible video player, add the &lt;code&gt;__4_3 modifier&lt;/code&gt; to the container.&lt;/p&gt;
 &lt;div class="u-flexible-container u-flexible-container__4-3"&gt;
     &lt;video class="u-flexible-container_inner"
           style="background:#75787B;"
@@ -2829,15 +2836,15 @@
 
             
             <div class="m-variation_description">
-                <p>Force the default bottom border on the default and <code class="language-plaintext highlighter-rouge">:hover</code> states.</p>
+                <p>Force the default bottom <code class="language-plaintext highlighter-rouge">border</code> on the default and <code class="language-plaintext highlighter-rouge">:hover</code> states.</p>
 
 <p><code class="language-plaintext highlighter-rouge">.u-link__border()</code></p>
 
-<p>Turn off the default bottom border on the default and <code class="language-plaintext highlighter-rouge">:hover</code> states.</p>
+<p>Turn off the default bottom <code class="language-plaintext highlighter-rouge">border</code> on the default and <code class="language-plaintext highlighter-rouge">:hover</code> states.</p>
 
 <p><code class="language-plaintext highlighter-rouge">.u-link__no-border()</code></p>
 
-<p>Turn off the default bottom border on the default state but force a bottom border on the <code class="language-plaintext highlighter-rouge">:hover</code> state.</p>
+<p>Turn off the default bottom <code class="language-plaintext highlighter-rouge">border</code> on the default state but force a bottom border on the <code class="language-plaintext highlighter-rouge">:hover</code> state.</p>
 
 <p><code class="language-plaintext highlighter-rouge">.u-link__hover-border()</code></p>
 
@@ -3107,8 +3114,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/helper-classes-mixins.md">
-                    <time datetime="2020-06-11 14:48:53 -0400">
-                         2:48:53 PM Jun 11, 2020
+                    <time datetime="2020-06-17 16:38:20 -0400">
+                         4:38:20 PM Jun 17, 2020
                     </time>
                 </a>
             </small>

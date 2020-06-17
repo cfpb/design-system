@@ -2911,36 +2911,33 @@ The text will be styled the same as H5 heading text.
 &lt;em&gt;This text would normally flow up into the black box of the box above&lt;/em&gt;`,
                 
                     'variation_name3': '&quot;Visually hidden&quot; helper class',
-                    'variation_description3': "Hide an element from view while keeping it accessible to screen readers.For example, to create a link with a social network icon, but allow non-sighted users to understand the context, add descriptive text with the u-visually-hidden class.",
-                    'variation_code_snippet3': `&lt;h1&gt;
-    &lt;a href=&quot;#&quot;&gt;
-        &lt;span class=&quot;cf-icon cf-icon-twitter-square&quot;&gt;&lt;/span&gt;
-        &lt;span class=&quot;u-visually-hidden&quot;&gt;Share on Twitter&lt;/span&gt;
-    &lt;/a&gt;
-&lt;/h1&gt;`,
+                    'variation_description3': "Hide an element from view while keeping it accessible to screen readers.For example, to create a link with a social network icon, but allow non-sighted users to understand the context, add descriptive text with the u-visually-hidden class.&lt;h1&gt;    &lt;a href=\"#\"&gt;        &lt;span class=\"cf-icon cf-icon-twitter-square\"&gt;&lt;/span&gt;        &lt;span class=\"u-visually-hidden\"&gt;Share on Twitter&lt;/span&gt;    &lt;/a&gt;&lt;/h1&gt;",
+                    'variation_code_snippet3': ``,
                 
                     'variation_name4': '&quot;Totally hidden&quot; helper class',
                     'variation_description4': "Use u-hidden to hide an element from everything (including screen readers). This is useful for dynamically hiding and showing content. It is also useful for progressive enhancement. For example, if you want to hide something initially on page load but show it after checking for browser support, use JavaScript to remove this class from the element after verifying support.",
                     'variation_code_snippet4': ``,
                 
                     'variation_name5': '&quot;Inline block&quot; helper class [DEPRECATED]',
-                    'variation_description5': "DEPRECATED. Identical to display: inline-block.",
-                    'variation_code_snippet5': `&lt;div class=&quot;u-inline-block&quot;&gt;&lt;/div&gt;`,
+                    'variation_description5': "DEPRECATED. Identical to display: inline-block.&lt;div class=\"u-inline-block\"&gt;&lt;/div&gt;",
+                    'variation_code_snippet5': ``,
                 
                     'variation_name6': '&quot;Float right&quot; helper class',
-                    'variation_description6': "",
-                    'variation_code_snippet6': `&lt;div class=&quot;u-right&quot;&gt;&lt;/div&gt;`,
+                    'variation_description6': "&lt;div class=\"u-right\"&gt;&lt;/div&gt;",
+                    'variation_code_snippet6': ``,
                 
                     'variation_name7': '&quot;Break word&quot; helper class',
                     'variation_description7': "Force word breaks within an element. Useful for small containers where text may over-run the width of the container.This only works in Internet Explorer 8 when the element with the .u-break-word class has layout. See http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8 for more information.",
-                    'variation_code_snippet7': `&lt;div class=&quot;u-break-word&quot;&gt;
+                    'variation_code_snippet7': `&lt;!--NOTE: Inline style properties for demonstration only.--&gt;
+
+&lt;div class=&quot;u-break-word u-mb30&quot; style=&quot;width: 100px; padding: 0.5em; border: 1px solid silver;&quot;&gt;
     This link should break:
     &lt;a href=&quot;#&quot;&gt;
         something@something.com
     &lt;/a&gt;
-&lt;/div&gt;
+&lt;/div&gt; 
 
-&lt;div&gt;
+&lt;div class=&quot;u-mb30&quot; style=&quot;width: 100px; padding: 0.5em; border: 1px solid silver;&quot;&gt;
     This link should not:
     &lt;a href=&quot;#&quot;&gt;
         something@something.com
@@ -2949,11 +2946,14 @@ The text will be styled the same as H5 heading text.
                 
                     'variation_name8': '&quot;Margin utilities&quot; helper classes',
                     'variation_description8': "Force a margin top or bottom on an element in pixels..u-m[p][#][p] is the position, use t for top or b for bottom. [#] is the pixel value, available options are 0, 5, 10, 15, 20, 30, 45, 60",
-                    'variation_code_snippet8': `&lt;h1 class=&quot;u-mb0&quot;&gt;Heading with zero bottom margin&lt;/h1&gt;`,
+                    'variation_code_snippet8': `&lt;h5 class=&quot;u-mb0&quot;&gt;Demonstration of heading 5 with zero bottom margin&lt;/h1&gt;
+&lt;hr&gt;`,
                 
                     'variation_name9': '&quot;Width utilities&quot; helper classes',
-                    'variation_description9': "Set the width of an element in percentages.NOTE: Inline style properties for demonstration only.",
-                    'variation_code_snippet9': `&lt;div class=&quot;u-w100pct&quot; style=&quot;background: #f4edf3; margin-bottom: 1px;&quot;&gt;
+                    'variation_description9': "Set the width of an element in percentages.",
+                    'variation_code_snippet9': `&lt;!--NOTE: Inline style properties for demonstration only.--&gt;
+
+&lt;div class=&quot;u-w100pct&quot; style=&quot;background: #f4edf3; margin-bottom: 1px;&quot;&gt;
     &lt;code&gt;.u-w100pct&lt;/code&gt;
 &lt;/div&gt;
 &lt;div class=&quot;u-w90pct&quot; style=&quot;background: #f4edf3; margin-bottom: 1px;&quot;&gt;
@@ -2997,14 +2997,18 @@ The text will be styled the same as H5 heading text.
 &lt;/div&gt;`,
                 
                     'variation_name10': '&quot;Show on mobile&quot; width-specific helper class',
-                    'variation_description10': "Show or hide content based on the current display size.NOTE: Inline style properties for demonstration onlyDisplays content on screen widths under 601px.",
-                    'variation_code_snippet10': `&lt;div style=&quot;border: 1px solid black; height: 22px; padding: 5px;&quot;&gt;
+                    'variation_description10': "Shows content on screen widths under 601px. Reduce screen size to see this in action.",
+                    'variation_code_snippet10': `&lt;!--NOTE: Inline style properties for demonstration only--&gt;
+
+&lt;div style=&quot;border: 1px solid black; height: 22px; padding: 5px;&quot;&gt;
     &lt;p class=&quot;u-show-on-mobile&quot;&gt;Visible on mobile&lt;/p&gt;
 &lt;/div&gt;`,
                 
                     'variation_name11': '&quot;Hide on mobile&quot; width-specific helper class',
-                    'variation_description11': "Show or hide content based on the current display size.NOTE: Inline style properties for demonstration onlyHides content on screens widths under 601px.",
-                    'variation_code_snippet11': `&lt;div style=&quot;border: 1px solid black; height: 22px; padding: 5px;&quot;&gt;
+                    'variation_description11': "Hides content on screens widths under 601px. Reduce screen size to see this in action.",
+                    'variation_code_snippet11': `&lt;!--NOTE: Inline style properties for demonstration only--&gt;
+
+&lt;div style=&quot;border: 1px solid black; height: 22px; padding: 5px;&quot;&gt;
     &lt;p class=&quot;u-hide-on-mobile&quot;&gt;Hidden on mobile&lt;/p&gt;
 &lt;/div&gt;`,
                 
@@ -3018,8 +3022,12 @@ The text will be styled the same as H5 heading text.
                     'variation_code_snippet1': ``,
                 
                     'variation_name2': '&quot;Flexible proportional containers&quot; mixin',
-                    'variation_description2': "Utilize intrinsic ratios to create a flexible container that retains an aspect ratio. When &lt;img&gt; tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.Read more about intrinsic ratios: http://alistapart.com/article/creating-intrinsic-ratios-for-video.u-flexible-container-mixin(@width: 16, @height: 9);In addition to the mixin, there are two default classes available for building 16:9 and 4:3 containers.When using the mixin, pass the width as the first argument, and the height as the second argument. Default values are 16, 9.Original mixin credit: https://gist.github.com/craigmdennis/6655047NOTE: Inline style properties for demonstration onlyTo create a 16:9 flexible video player, wrap the video element in an element with u-flexible-container and add the u-flexible-container_inner to the video element.To create a flexible container with only a background (no inner video or object element), omit the inner container.To create a 4:3 flexible video player, add the __4_3 modifier to the container.",
-                    'variation_code_snippet2': `&lt;div class=&quot;u-flexible-container&quot;&gt;
+                    'variation_description2': "Utilize intrinsic ratios to create a flexible container that retains an aspect ratio. When &lt;img&gt; tags scale they retain their aspect ratio, but if you need a flexible video you will need to use this mixin.Read more about intrinsic ratios: http://alistapart.com/article/creating-intrinsic-ratios-for-video.u-flexible-container-mixin(@width: 16, @height: 9);In addition to the mixin, there are two default classes available for building 16:9 and 4:3 containers.When using the mixin, pass the width as the first argument, and the height as the second argument. Default values are 16, 9.Original mixin credit: https://gist.github.com/craigmdennis/6655047",
+                    'variation_code_snippet2': `&lt;!--NOTE: Inline style properties for demonstration only--&gt;
+
+&lt;h4&gt;16:9 flexible video player&lt;/h4&gt;
+&lt;p&gt;To create a 16:9 flexible video player, wrap the video element in an element with &lt;code&gt;u-flexible-container&lt;/code&gt; and add the &lt;code&gt;u-flexible-container_inner&lt;/code&gt; to the video element.&lt;/p&gt;
+&lt;div class=&quot;u-flexible-container&quot;&gt;
     &lt;video class=&quot;u-flexible-container_inner&quot;
           style=&quot;background:#75787B;&quot;
           controls&gt;
@@ -3028,6 +3036,8 @@ The text will be styled the same as H5 heading text.
 
 &lt;br /&gt;
 
+&lt;h4&gt;Flexible container with background&lt;/h4&gt;
+&lt;p&gt;To create a flexible container with only a background (no inner video or object element), omit the inner container.&lt;/p&gt;
 &lt;div class=&quot;u-flexible-container&quot;
     style=&quot;background-image: url(https://dummyimage.com/700x394/addc91/101820);
             background-position: center center;
@@ -3035,6 +3045,8 @@ The text will be styled the same as H5 heading text.
 
 &lt;br /&gt;
 
+&lt;h4&gt;4:3 flexible video player&lt;/h4&gt;
+&lt;p&gt;To create a 4:3 flexible video player, add the &lt;code&gt;__4_3 modifier&lt;/code&gt; to the container.&lt;/p&gt;
 &lt;div class=&quot;u-flexible-container u-flexible-container__4-3&quot;&gt;
     &lt;video class=&quot;u-flexible-container_inner&quot;
           style=&quot;background:#75787B;&quot;

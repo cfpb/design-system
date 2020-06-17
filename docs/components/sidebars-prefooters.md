@@ -218,8 +218,8 @@ variation_groups:
           </footer>
       - variation_name: Flush all modifier (only on small screens)
         variation_description: >+
-          Add a class of .content__flush-all-on-small to .content_main or
-          .content_sidebar to remove all padding and border-based gutters on
+          Add a class of `.content__flush-all-on-small` to `.content_main` or
+          `.content_sidebar` to remove all padding and border-based gutters on
           small screens only. ‘Small’ screens in this case refers to the
           breakpoint where .content_main and .content_sidebar single column
           layout.

@@ -142,7 +142,7 @@ variation_groups:
                   solid borders on small screens</span>
               {% include icons/right.svg %}
           </a>
-        variation_description: Only visible on small screens.
+        variation_description: Reduce screen size to see this in action.
         variation_name: Jump link with background modifier
       - variation_code_snippet: ""
         variation_description: <h2>Header 2 containing <a href="#">a link</a></h2>

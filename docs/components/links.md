@@ -199,8 +199,12 @@ variation_groups:
       small screens by converting to full block links that have a
       finger-friendly touch area. Reduce screen size to see these in action.'
   - variations:
-      - variation_code_snippet: ""
-        variation_description: <h2>Header 2 containing <a href="#">a link</a></h2>
+      - variation_code_snippet: >-
+          <h2>Header 2 containing <a href="#">a link</a></h2>
+
+          <p>Lorem ipsum dolor sit amet. Vestibulum orci ante, sagittis quis dolor a, fringilla dapibus nunc. Nulla in purus nisi. Curabitur vel odio et est auctor tincidunt. Et ultricies erat pellentesque nec. Suspendisse quis faucibus nec eu justo. Nulla ut massa eget dolor vehicula bibendum.</p>
+        variation_description: "Generally, it is not recommended to add links in
+          headers. Note that they are not underlined. "
         variation_name: Header link
       - variation_code_snippet: |-
           Needs code snippet!
@@ -212,7 +216,8 @@ variation_groups:
               <li><a href="#">Contact us</a></li>
             </ul>
           -->
-        variation_description: ""
+        variation_description: "Navigation links are not underlined and do not get a
+          visited link style. "
         variation_name: Navigation links
         variation_specs: |-
           No underline

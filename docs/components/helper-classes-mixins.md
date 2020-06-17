@@ -73,19 +73,25 @@ variation_groups:
 
           More information see: <http://css-tricks.com/snippets/css/clear-fix>
         variation_name: '"Clearfix" helper class'
-      - variation_code_snippet: |-
-          <h1>
-              <a href="#">
-                  <span class="cf-icon cf-icon-twitter-square"></span>
-                  <span class="u-visually-hidden">Share on Twitter</span>
-              </a>
-          </h1>
+      - variation_code_snippet: ""
         variation_description: >-
           Hide an element from view while keeping it accessible to screen
           readers.
 
 
           For example, to create a link with a social network icon, but allow non-sighted users to understand the context, add descriptive text with the `u-visually-hidden` class.
+
+
+          ```
+
+          <h1>
+              <a href="#">
+                  <span class="cf-icon cf-icon-twitter-square"></span>
+                  <span class="u-visually-hidden">Share on Twitter</span>
+              </a>
+          </h1>
+
+          ```
         variation_name: '"Visually hidden" helper class'
       - variation_description: Use `u-hidden` to hide an element from everything
           (including screen readers). This is useful for dynamically hiding and
@@ -94,20 +100,33 @@ variation_groups:
           it after checking for browser support, use JavaScript to remove this
           class from the element after verifying support.
         variation_name: '"Totally hidden" helper class'
-      - variation_code_snippet: <div class="u-inline-block"></div>
-        variation_description: "_DEPRECATED._ Identical to `display: inline-block.`"
+      - variation_code_snippet: ""
+        variation_description: |-
+          _DEPRECATED._ Identical to `display: inline-block.`
+
+          ```
+          <div class="u-inline-block"></div>
+          ```
         variation_name: '"Inline block" helper class [DEPRECATED]'
-      - variation_code_snippet: <div class="u-right"></div>
+      - variation_code_snippet: ""
         variation_name: '"Float right" helper class'
-      - variation_code_snippet: |-
-          <div class="u-break-word">
+        variation_description: |-
+          ```
+          <div class="u-right"></div>
+          ```
+      - variation_code_snippet: >-
+          <!--NOTE: Inline style properties for demonstration only.-->
+
+
+          <div class="u-break-word u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;">
               This link should break:
               <a href="#">
                   something@something.com
               </a>
-          </div>
+          </div> 
 
-          <div>
+
+          <div class="u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;">
               This link should not:
               <a href="#">
                   something@something.com
@@ -120,7 +139,11 @@ variation_groups:
 
           _This only works in Internet Explorer 8 when the element with the `.u-break-word` class has layout. See <http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8> for more information._
         variation_name: '"Break word" helper class'
-      - variation_code_snippet: <h1 class="u-mb0">Heading with zero bottom margin</h1>
+      - variation_code_snippet: >-
+          <h5 class="u-mb0">Demonstration of heading 5 with zero bottom
+          margin</h1>
+
+          <hr>
         variation_description: >-
           Force a `margin` top or bottom on an element in pixels.
 
@@ -131,8 +154,10 @@ variation_groups:
           _`[p]` is the position, use `t` for top or `b` for bottom. `[#]` is the pixel value, available options are 0, 5, 10, 15, 20, 30, 45, 60_
         variation_name: '"Margin utilities" helper classes'
       - variation_code_snippet: >-
-          <div class="u-w100pct" style="background: #f4edf3; margin-bottom:
-          1px;">
+          <!--NOTE: Inline style properties for demonstration only.-->
+
+
+          <div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;">
               <code>.u-w100pct</code>
           </div>
 
@@ -187,32 +212,25 @@ variation_groups:
           <div class="u-w33pct" style="background: #f4edf3; margin-bottom: 1px;">
               <code>.u-w33pct</code>
           </div>
-        variation_description: |-
-          Set the `width` of an element in percentages.
-
-          **NOTE: Inline style properties for demonstration only.**
+        variation_description: Set the `width` of an element in percentages.
         variation_name: '"Width utilities" helper classes'
       - variation_code_snippet: |-
+          <!--NOTE: Inline style properties for demonstration only-->
+
           <div style="border: 1px solid black; height: 22px; padding: 5px;">
               <p class="u-show-on-mobile">Visible on mobile</p>
           </div>
-        variation_description: |-
-          Show or hide content based on the current display size.
-
-          **NOTE: Inline style properties for demonstration only**
-
-          Displays content on screen widths under 601px.
+        variation_description: Shows content on screen widths under 601px. Reduce screen
+          size to see this in action.
         variation_name: '"Show on mobile" width-specific helper class'
       - variation_code_snippet: |-
+          <!--NOTE: Inline style properties for demonstration only-->
+
           <div style="border: 1px solid black; height: 22px; padding: 5px;">
               <p class="u-hide-on-mobile">Hidden on mobile</p>
           </div>
-        variation_description: |-
-          Show or hide content based on the current display size.
-
-          **NOTE: Inline style properties for demonstration only**
-
-          Hides content on screens widths under 601px.
+        variation_description: Hides content on screens widths under 601px. Reduce
+          screen size to see this in action.
         variation_name: '"Hide on mobile" width-specific helper class'
     variation_group_name: Helper classes
   - variation_group_name: Mixins
@@ -249,19 +267,14 @@ variation_groups:
 
 
           Original mixin credit: <https://gist.github.com/craigmdennis/6655047>
-
-
-          **NOTE: Inline style properties for demonstration only**
-
-
-          To create a 16:9 flexible video player, wrap the video element in an element with `u-flexible-container` and add the `u-flexible-container_inner` to the video element.
-
-
-          To create a flexible container with only a background (no inner video or object element), omit the inner container.
-
-
-          To create a 4:3 flexible video player, add the `__4_3` modifier to the container.
         variation_code_snippet: >-
+          <!--NOTE: Inline style properties for demonstration only-->
+
+
+          <h4>16:9 flexible video player</h4>
+
+          <p>To create a 16:9 flexible video player, wrap the video element in an element with <code>u-flexible-container</code> and add the <code>u-flexible-container_inner</code> to the video element.</p>
+
           <div class="u-flexible-container">
               <video class="u-flexible-container_inner"
                     style="background:#75787B;"
@@ -273,6 +286,10 @@ variation_groups:
           <br />
 
 
+          <h4>Flexible container with background</h4>
+
+          <p>To create a flexible container with only a background (no inner video or object element), omit the inner container.</p>
+
           <div class="u-flexible-container"
               style="background-image: url(https://dummyimage.com/700x394/addc91/101820);
                       background-position: center center;
@@ -280,6 +297,10 @@ variation_groups:
 
           <br />
 
+
+          <h4>4:3 flexible video player</h4>
+
+          <p>To create a 4:3 flexible video player, add the <code>__4_3 modifier</code> to the container.</p>
 
           <div class="u-flexible-container u-flexible-container__4-3">
               <video class="u-flexible-container_inner"
@@ -325,19 +346,19 @@ variation_groups:
         variation_code_snippet: ""
       - variation_name: '"Link border" mixin'
         variation_description: >-
-          Force the default bottom border on the default and `:hover` states.
+          Force the default bottom `border` on the default and `:hover` states.
 
 
           `.u-link__border()`
 
 
-          Turn off the default bottom border on the default and `:hover` states.
+          Turn off the default bottom `border` on the default and `:hover` states.
 
 
           `.u-link__no-border()`
 
 
-          Turn off the default bottom border on the default state but force a bottom border on the `:hover` state.
+          Turn off the default bottom `border` on the default state but force a bottom border on the `:hover` state.
 
 
           `.u-link__hover-border()`

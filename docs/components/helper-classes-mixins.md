@@ -267,19 +267,14 @@ variation_groups:
 
 
           Original mixin credit: <https://gist.github.com/craigmdennis/6655047>
-
-
-          **NOTE: Inline style properties for demonstration only**
-
-
-          To create a 16:9 flexible video player, wrap the video element in an element with `u-flexible-container` and add the `u-flexible-container_inner` to the video element.
-
-
-          To create a flexible container with only a background (no inner video or object element), omit the inner container.
-
-
-          To create a 4:3 flexible video player, add the `__4_3` modifier to the container.
         variation_code_snippet: >-
+          <!--NOTE: Inline style properties for demonstration only-->
+
+
+          <h4>16:9 flexible video player</h4>
+
+          <p>To create a 16:9 flexible video player, wrap the video element in an element with <code>u-flexible-container</code> and add the <code>u-flexible-container_inner</code> to the video element.</p>
+
           <div class="u-flexible-container">
               <video class="u-flexible-container_inner"
                     style="background:#75787B;"
@@ -291,6 +286,10 @@ variation_groups:
           <br />
 
 
+          <h4>Flexible container </h4>
+
+          <p>To create a flexible container with only a background (no inner video or object element), omit the inner container.</p>
+
           <div class="u-flexible-container"
               style="background-image: url(https://dummyimage.com/700x394/addc91/101820);
                       background-position: center center;
@@ -298,6 +297,10 @@ variation_groups:
 
           <br />
 
+
+          <h4>4:3 flexible video player</h4>
+
+          <p>To create a 4:3 flexible video player, add the <code>__4_3 modifier</code> to the container.</p>
 
           <div class="u-flexible-container u-flexible-container__4-3">
               <video class="u-flexible-container_inner"

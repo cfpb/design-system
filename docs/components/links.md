@@ -46,6 +46,27 @@ variation_groups:
 
         variation_name: Inline links
         variation_implementation: ""
+        variation_specs: |-
+          Default
+          * Pacific Blue
+          * 1px dotted bottom border
+
+          Hover
+          * Dark Pacific Blue
+          * 1px solid bottom border
+
+          Focus
+          * Pacific Blue
+          * 1px dotted bottom border
+          * Thin dotted outline
+
+          #### Active
+          * Navy Blue
+          * 1px solid bottom border
+
+          #### Visited
+          * Teal
+          * 1px solid bottom border
       - variation_name: Standalone links
         variation_code_snippet: |-
           <ul class="medium-ex m-list m-list__unstyled">
@@ -178,15 +199,6 @@ variation_groups:
       small screens by converting to full block links that have a
       finger-friendly touch area. Reduce screen size to see these in action.'
   - variations:
-      - variation_code_snippet: <p><a href="#">Inline links</a> should be Regular weight
-          if inline with other text (e.g., within a paragraph like this
-          one).</p>
-        variation_description: Links that appear in body text or link lists are underlined.
-        variation_name: Inline link
-      - variation_code_snippet: <a href="#">Default link style</a>
-        variation_description: Stand-alone links (e.g., in a call to action or list of
-          links) should be Medium weight.
-        variation_name: Stand-alone link
       - variation_code_snippet: ""
         variation_description: <h2>Header 2 containing <a href="#">a link</a></h2>
         variation_name: Header link

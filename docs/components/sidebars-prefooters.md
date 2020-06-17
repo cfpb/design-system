@@ -365,8 +365,9 @@ content_guidelines: ""
 behavior: ""
 accessibility: ""
 related_items: |-
-  * Column dividers
   * Block
+  * Column dividers
+  * Grid
 last_updated: 2020-01-28T15:55:47.394Z
 research: ""
 ---

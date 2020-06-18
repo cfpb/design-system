@@ -52,15 +52,11 @@ content_guidelines: >
 
   * Use bulleted lists
 
-  * Requirements: At least one component in each main content area.
-
-  * Choose either a text introduction or item introduction depending on whether the template is being used to house an article or post.
-
 
   ##### Area 1: Introduction
 
 
-  * Choose between a text introduction or item introduction.
+  * Choose either a text introduction or item introduction depending on whether the template is being used to house an article or post.
 
 
   ##### Area 2: Main content
@@ -68,7 +64,7 @@ content_guidelines: >
 
   * Must contain at least 1 component.
 
-  * Include full width body text, tables, expandables, 25/75 image and text info unit groups, grey wells.  
+  * Permissible components include full width body text, tables, expandables, 25/75 image and text info unit groups, grey wells.  
 
 
   ##### Area 3: Sidebar

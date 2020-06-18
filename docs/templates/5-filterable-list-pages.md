@@ -25,7 +25,7 @@ variation_groups:
 
       | ![Sublanding page mockup](/design-system/images/uploads/sublanding_behavior_desktop-1.jpg) | ![Browse page mockup](/design-system/images/uploads/browse_behavior_desktop.jpg) | 
 
-      | Example: [Research and reports](https://www.consumerfinance.gov/data-research/research-reports/) | Example: 
+      | Example: [Research and reports](https://www.consumerfinance.gov/data-research/research-reports/) | Example: [Final rules](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/)
 use_cases: >-
   ##### WHEN TO USE
 

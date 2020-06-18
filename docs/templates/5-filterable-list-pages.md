@@ -19,7 +19,7 @@ variation_groups:
   - variation_group_name: Types
     variations: []
     variation_group_description: >-
-      | Sublanding page | Browse page |
+      | Filterable list sublanding page | Filterable list browse page |
 
       | -- | -- | 
 
@@ -33,46 +33,48 @@ use_cases: >-
   * When asking users to look through more than 20 articles, documents, or resources.
 
   * Additional content may be included before or after the filterable list, but it is not encouraged. The filterable list should be the focus of the page.
-content_guidelines: >-
+content_guidelines: >
   * Text introduction and/or full width text should be used to introduce the
   documents that are being filtered.
 
   * If any of the filtering labels are technical or require further explanation (such as categories), a full width text element can be placed above the filter control panel to provide further explanation.
 
-  * Required elements: filter control panel, list of items (displayed as post preview items) and pagination.
-behavior: >-
-  Responsive behavior follows the pattern of the base page types (sublanding
-  page or browse page).
+  * Required elements: filter control panel, list of items (displayed as post preview items) and pagination. 
 
 
-  ##### Sublanding page with filterable list
+  <!--
+
+  Commenting out because this list needs discussion...perhaps it's not needed. 
 
 
-  ###### Breakpoints 901 pixels or more
+  ##### Area 1: Introduction
 
 
-  ![Desktop mockup](/design-system/images/uploads/sublanding_behavior_desktop-1.jpg)
+  * Hero !? 
+
+  * Text introduction
+
+  * Featured content module ?!
 
 
-  ###### Breakpoints 900 pixels or less
+  ##### Area 2: Main content
 
 
-  ![Mobile mockup](/design-system/images/uploads/sublanding_behavior_mobile-1.jpg)
+  * Must contain the filter control panel, list of items, pagination. 
+
+  * Additional components may include full-width body text
 
 
-  ##### Browse page with Filterable List
+  ##### Area 3: Sidebar
 
 
-  ###### Breakpoints 901 pixels or more
+  * Must contain at least 1 component.
 
+  * If using both static and dynamic content, preference for dynamic content to appear above static content.
 
-  ![Desktop mockup](/design-system/images/uploads/browse_behavior_desktop-1.jpg)
-
-
-  ###### Breakpoints 900 pixels or less
-
-
-  ![Mobile mockup](/design-system/images/uploads/browse_behavior_mobile.jpg)
+  -->
+behavior: For responsive behavior, see guidance for the [sublanding page]() and
+  [browse page]().
 related_items: |-
   * Hero
   * Text introduction

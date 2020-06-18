@@ -10,11 +10,6 @@ description: >-
 
 
   Most filterable list pages use the browse page template layout, though in rare cases they can be housed on a sublanding page template layout. The filterable list itself is composed of post preview components that link to individual document detail pages.
-
-
-  This page is under active development. Information is being moved into it from this page:
-
-  * http://cfpb.github.io/design-manual/global-elements/filterable-list-pages.html
 variation_groups:
   - variation_group_name: Types
     variations: []

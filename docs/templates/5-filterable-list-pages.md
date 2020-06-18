@@ -39,7 +39,7 @@ content_guidelines: >
 
   <!--
 
-  Commenting out because this list needs discussion...perhaps it's not needed. 
+  Commenting out this list pasted from DM—doesn't seem needed, and has some possibly outdated items 
 
 
   ##### Area 1: Introduction

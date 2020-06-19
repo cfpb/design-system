@@ -4,20 +4,16 @@ layout: variation
 section: components
 secondary_section: Layout options
 status: Released
-description: Tables divide information into distinct columns and rows to create
-  an intersection “cell” where data is displayed.
+description: "Tables allow for the presentation of many data points grouped
+  together in a visual way. They serve a unique purpose of allowing easy
+  organization or comparison of more complex data than a chart or graph. They
+  can be read either vertically (by columns) or horizontally (by rows). "
 variation_groups:
   - variation_group_name: Standard table
-    variation_group_description: >-
-      This is the default style at the large screen breakpoint. It is also how
-      the directory table pattern appears at the large screen breakpoint. This
-      is equivalent to defining a classless `table` element.
-
-
-      Tables are not responsive by default. See options below for [responsive tables](https://cfpb-sandbox.github.io/design-system/components/tables#responsive-tables).
-
-
-      For design specs, look under the "Show detail" link.
+    variation_group_description: This is the default style at the large screen
+      breakpoint. Tables are not responsive by default; see options below for
+      [responsive
+      tables](https://cfpb-sandbox.github.io/design-system/components/tables#responsive-tables).
     variations:
       - variation_code_snippet: >-
           <table>
@@ -57,14 +53,7 @@ variation_groups:
         variation_specs: |-
           ### Color variables
 
-          | Item | Variable | 
-          | --- | --- | 
-          | @table-cell-bg: | @white; |
-          | @table-cell-bg_alt: | @gray-5; | 
-          | @table-row-link-bg-hover:  |  @pacific-80; |
-          | @table-row-link-hover-color: | @white; | 
-          | @table-scrolling-border:  | @gray-40; | 
-          | @table-border:  | @gray; |
+          https://cfpb.github.io/design-system/components/variables#tables  
 
           ### Specs for default and directory table (large screens)
 
@@ -83,6 +72,7 @@ variation_groups:
           - Font-color: Black #101820
           - Font-size: 16px
           - Padding: 10px 
+        variation_implementation: ""
   - variation_group_name: Responsive tables
     variation_group_description: >-
       Responsive tables fall into two main types: 
@@ -555,6 +545,235 @@ variation_groups:
           * The class `.sorted-up` refers to a sort from smallest to greatest (first to last), and `.sorted-down` refers to a sort from greatest to smallest (last to first). These classes are added to the `th` when sorting occurs.
 
           * Please note the importance of defining a `thead` and `tbody` to preserve the table’s header through sorting operations.
+      - variation_name: Filtering tables
+        variation_code_snippet: >-
+          <!--Code from Design Manual 
+
+          <div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true">
+              <button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false">
+                  <span class="o-expandable_header-left o-expandable_label">
+                      Filter activities
+                  </span>
+                  <span class="o-expandable_header-right o-expandable_link">
+                      <span class="o-expandable_cue-open">
+                          Show
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H549.6v213.6c0 27.6-22.4 50-50 50s-50-22.4-50-50V655.9H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h213.6V342.3c0-27.6 22.4-50 50-50s50 22.4 50 50v213.6h213.6c27.6 0 50 22.4 50 50s-22.5 50-50.1 50z"></path></svg>
+                      </span>
+                      <span class="o-expandable_cue-close">
+                          Hide
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h527.1c27.6 0 50 22.4 50 50s-22.4 50-50 50z"></path></svg>
+                      </span>
+                  </span>
+              </button>
+              <div class="o-expandable_content o-expandable_content__transition o-expandable_content__collapsed" aria-expanded="false" style="max-height: 0px;">
+                  <p>Filter options go here</p>
+              </div>
+
+          <table class="o-table o-table__stack-on-small" data-bound="true">
+              <thead>
+                  <tr>
+                      <th class="u-w20pct">
+                          Type
+                      </th>
+                      <th class="u-w55pct">
+                          Title
+                      </th>
+                      <th class="u-w25pct">
+                          Date
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td data-label="Type">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
+                      </td>
+                      <td data-label="Title">
+                          Three things to do before closing
+                      </td>
+                      <td data-label="Date">
+                          AUG 5, 2015
+                      </td>
+                  </tr>
+                  <tr>
+                      <td data-label="Type">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975.1 1200" class="cf-icon-svg"><path d="M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z"></path></svg> News
+                      </td>
+                      <td data-label="Title">
+                          Electronic Mortgage Closings Can Benefit Consumers
+                      </td>
+                      <td data-label="Date">
+                          AUG 5, 2015
+                      </td>
+                  </tr>
+                  <tr>
+                      <td data-label="Type">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
+                      </td>
+                      <td data-label="Title">
+                          National Day of Civic Hacking 2015
+                      </td>
+                      <td data-label="Date">
+                          JUL 29, 2015
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+
+          -->
+        variation_description: >-
+          Tables can be paired with a filter to show only rows that meet certain
+          criteria.
+
+
+          ![Image showing a table with filter](/design-system/images/uploads/table_filter.png)
+      - variation_name: Pagination
+        variation_description: >-
+          Tables with over 20 rows can be paired with pagination.
+
+
+
+
+          ![image showing a table with pagination](/design-system/images/uploads/table_pagination.png)
+        variation_code_snippet: >-
+          <!--Code from Design Manual 
+
+          <table class="o-table o-table__stack-on-small" data-bound="true">
+              <thead>
+                  <tr>
+                      <th class="u-w20pct">
+                          Type
+                      </th>
+                      <th class="u-w55pct">
+                          Title
+                      </th>
+                      <th class="u-w25pct">
+                          Date
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td data-label="Type">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
+                      </td>
+                      <td data-label="Title">
+                          Three things to do before closing
+                      </td>
+                      <td data-label="Date">
+                          AUG 5, 2015
+                      </td>
+                  </tr>
+                  <tr>
+                      <td data-label="Type">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975.1 1200" class="cf-icon-svg"><path d="M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z"></path></svg> News
+                      </td>
+                      <td data-label="Title">
+                          Electronic Mortgage Closings Can Benefit Consumers
+                      </td>
+                      <td data-label="Date">
+                          AUG 5, 2015
+                      </td>
+                  </tr>
+              <tr>
+                      <td colspan="3" style="text-align: center; font-weight: bold;">
+                          (18 more rows)
+                      </td>
+                  </tr>
+                  <tr>
+                      <td data-label="Type">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
+                      </td>
+                      <td data-label="Title">
+                          National Day of Civic Hacking 2015
+                      </td>
+                      <td data-label="Date">
+                          JUL 29, 2015
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+
+
+
+
+          <nav class="m-pagination" role="navigation" aria-label="Pagination">
+              <a class="a-btn
+                        a-btn__disabled
+                        m-pagination_btn-prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"><path d="M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z"></path></svg>
+                  Newer
+              </a>
+
+              <a class="a-btn
+                        m-pagination_btn-next" href="#">
+                  Older
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg>
+              </a>
+              <form class="m-pagination_form" action="#">
+                  <label class="m-pagination_label" for="m-pagination_current-page">
+                      Page
+                      <span class="u-visually-hidden">
+                          number out of 3 total pages
+                      </span>
+                      <input class="m-pagination_current-page" id="m-pagination_current-page" name="page" type="number" min="1" max="3" inputmode="numeric" value="1">
+                      of 3
+                  </label>
+                  <button class="a-btn
+                                 a-btn__link
+                                 m-pagination_submit-btn" id="pagination_submit" type="submit">Go</button>
+              </form>
+          </nav>
+
+          -->
+      - variation_name: Fixed-width column tables
+        variation_description: >-
+          Column widths are automatically set by browsers by default. If needed,
+          some or all columns can be set to specific widths instead to
+          accommodate longer data or labels.
+
+
+          Fixed-width columns at the 600 px breakpoint and less lose their custom widths and expand to full width. This is the same responsive pattern used for default tables at small screens.
+        variation_code_snippet: |-
+          <table class="o-table o-table__stack-on-small" data-bound="true">
+              <thead>
+                  <tr>
+                      <th class="u-w20pct">
+                          County
+                      </th>
+                      <th class="u-w60pct">
+                          Lien status
+                      </th>
+                      <th class="u-w20pct">
+                          Active?
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td data-label="County">
+                          Abbeville
+                      </td>
+                      <td data-label="Lien status">
+                          Secured
+                      </td>
+                      <td data-label="Active?">
+                          Yes
+                      </td>
+                  </tr>
+                  <tr>
+                      <td data-label="County">
+                          Abbey
+                      </td>
+                      <td data-label="Lien status">
+                          Secured
+                      </td>
+                      <td data-label="Active?">
+                          No
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
     variation_group_name: Variations
 use_cases: >-
   Tables allow easy organization or comparison of more complex data than a chart
@@ -571,7 +790,7 @@ use_cases: >-
   * Individual values are being presented or compared
 
   * Values across columns or rows require different units of measurement
-content_guidelines: >
+content_guidelines: >-
   As a rule, design tables so that they are easy to read. Label columns
   precisely and include units of measurement where necessary. Organize the data
   so that the underlying meaning is quickly apparent.
@@ -592,7 +811,7 @@ content_guidelines: >
   Make sure to indicate the unit of measurement. In terms of placement, if the units are the same across columns, indicate the unit of measurement in the title or someplace noticeable above the table.
 
 
-  Alternatively, if the table uses at most two units of measurement, consider using asterisks following the column label, and define the unit of measurement below the table, as shown in the example here.
+  Alternatively, if the table uses at most two units of measurement, consider using asterisks following the column label, and define the unit of measurement below the table.
 
 
   If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.
@@ -614,6 +833,9 @@ behavior: >
   If sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked. 
 accessibility: Remember to always use headers (that is, `<th>` elements) for all
   data tables to make tabular data accessible.
+related_items: "*
+  [Variables](https://cfpb.github.io/design-system/components/variables#tables
+  )"
 last_updated: 2019-08-30T15:18:28.960Z
 research: ""
 ---

@@ -4,17 +4,10 @@ layout: variation
 section: components
 secondary_section: Layout options
 status: Released
-description: >-
-  Lists are an effective way to visually highlight important information so that
-  it can be more easily scanned and read. Before writing a list, it’s important
-  to identify the best style needed for the information being presented.
-
-
-  More information can be found at:
-
-  * http://cfpb.github.io/design-manual/brand-guidelines/typography.html	
-
-  * https://cfpb.github.io/capital-framework/components/cf-typography/#lists
+description: Lists are an effective way to visually highlight important
+  information so that it can be more easily scanned and read. Before writing a
+  list, it’s important to identify the best style needed for the information
+  being presented.
 variation_groups:
   - variation_group_name: Types
     variations:
@@ -24,12 +17,11 @@ variation_groups:
           items in a bullet list isn’t important. An exception to this may be a
           list of states, which naturally fits into an alphabetical order.
         variation_code_snippet: |-
-          <p> Paragraph example for visual reference</p>
           <ul class="m-list">
               <li class="m-list_item">List item 1</li>
               <li class="m-list_item">
                   List item 2
-                  <ul class="m-list m-list__spaced">
+                  <ul class="m-list">
                       <li class="m-list_item">List item 2a</li>
                       <li class="m-list_item">List item 2b</li>
                       <li class="m-list_item">List item 2c</li>
@@ -37,11 +29,9 @@ variation_groups:
               </li>
               <li class="m-list_item">List item 3</li>
           </ul>
-          <p> Paragraph example for visual reference</p>
         variation_specs: >-
           
-
-          DEFAULT 
+          #### Default
 
 
           * Avenir Next Regular, 16px 
@@ -64,10 +54,9 @@ variation_groups:
       - variation_name: Numbered list
         variation_description: When the order of information presented is important, use
           a numbered list. This could include chronological items, things
-          presented in the order or importance, or a finite list of a counted
+          presented in the order of importance, or a finite list of a counted
           number of items.
         variation_code_snippet: |-
-          <p>Paragraph example for visual reference</p>
           <ol>
               <li>List item 1</li>
               <li>
@@ -80,7 +69,6 @@ variation_groups:
               </li>
               <li>List item 3</li>
           </ol>
-          <p>Paragraph example for visual reference</p>
         variation_specs: >-
           
 
@@ -199,7 +187,7 @@ content_guidelines: >
   If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.
 behavior: ""
 accessibility: ""
-related_items: "* Typography"
+related_items: ""
 last_updated: 2020-01-28T15:55:47.394Z
 research: ""
 ---

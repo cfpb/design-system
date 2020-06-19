@@ -1413,7 +1413,7 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Tables divide information into distinct columns and rows to create an intersection “cell” where data is displayed.</p>
+        <p>Tables allow for the presentation of many data points grouped together in a visual way. They serve a unique purpose of allowing easy organization or comparison of more complex data than a chart or graph. They can be read either vertically (by columns) or horizontally (by rows).</p>
 
     </section>
     
@@ -1430,11 +1430,7 @@
 
         
         <div class="o-variation_group_description">
-            <p>This is the default style at the large screen breakpoint. It is also how the directory table pattern appears at the large screen breakpoint. This is equivalent to defining a classless <code class="language-plaintext highlighter-rouge">table</code> element.</p>
-
-<p>Tables are not responsive by default. See options below for <a href="https://cfpb-sandbox.github.io/design-system/components/tables#responsive-tables">responsive tables</a>.</p>
-
-<p>For design specs, look under the “Show detail” link.</p>
+            <p>This is the default style at the large screen breakpoint. Tables are not responsive by default; see options below for <a href="https://cfpb-sandbox.github.io/design-system/components/tables#responsive-tables">responsive tables</a>.</p>
 
         </div>
         
@@ -1518,6 +1514,12 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-table-caption-table-caption-desc-implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#details-table-caption-table-caption-desc-specs-1">
@@ -1574,6 +1576,16 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
                 <!-- Implementation details -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-table-caption-table-caption-desc-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            
+
+                        </div>
+                    </div>
+                </section>
+                
 
                 <!-- Specs -->
                 
@@ -1583,40 +1595,7 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                         <div style="padding:40px">
                             <h3 id="color-variables">Color variables</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Variable</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>@table-cell-bg:</td>
-      <td>@white;</td>
-    </tr>
-    <tr>
-      <td>@table-cell-bg_alt:</td>
-      <td>@gray-5;</td>
-    </tr>
-    <tr>
-      <td>@table-row-link-bg-hover:</td>
-      <td>@pacific-80;</td>
-    </tr>
-    <tr>
-      <td>@table-row-link-hover-color:</td>
-      <td>@white;</td>
-    </tr>
-    <tr>
-      <td>@table-scrolling-border:</td>
-      <td>@gray-40;</td>
-    </tr>
-    <tr>
-      <td>@table-border:</td>
-      <td>@gray;</td>
-    </tr>
-  </tbody>
-</table>
+<p>https://cfpb.github.io/design-system/components/variables#tables</p>
 
 <h3 id="specs-for-default-and-directory-table-large-screens">Specs for default and directory table (large screens)</h3>
 
@@ -3011,6 +2990,648 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
         </div>
         
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Filtering tables</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>Tables can be paired with a filter to show only rows that meet certain criteria.</p>
+
+<p><img src="/design-system/images/uploads/table_filter.png" alt="Image showing a table with filter"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <!--Code from Design Manual 
+<div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true">
+    <button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false">
+        <span class="o-expandable_header-left o-expandable_label">
+            Filter activities
+        </span>
+        <span class="o-expandable_header-right o-expandable_link">
+            <span class="o-expandable_cue-open">
+                Show
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H549.6v213.6c0 27.6-22.4 50-50 50s-50-22.4-50-50V655.9H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h213.6V342.3c0-27.6 22.4-50 50-50s50 22.4 50 50v213.6h213.6c27.6 0 50 22.4 50 50s-22.5 50-50.1 50z"></path></svg>
+            </span>
+            <span class="o-expandable_cue-close">
+                Hide
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h527.1c27.6 0 50 22.4 50 50s-22.4 50-50 50z"></path></svg>
+            </span>
+        </span>
+    </button>
+    <div class="o-expandable_content o-expandable_content__transition o-expandable_content__collapsed" aria-expanded="false" style="max-height: 0px;">
+        <p>Filter options go here</p>
+    </div>
+
+<table class="o-table o-table__stack-on-small" data-bound="true">
+    <thead>
+        <tr>
+            <th class="u-w20pct">
+                Type
+            </th>
+            <th class="u-w55pct">
+                Title
+            </th>
+            <th class="u-w25pct">
+                Date
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Type">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
+            </td>
+            <td data-label="Title">
+                Three things to do before closing
+            </td>
+            <td data-label="Date">
+                AUG 5, 2015
+            </td>
+        </tr>
+        <tr>
+            <td data-label="Type">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975.1 1200" class="cf-icon-svg"><path d="M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z"></path></svg> News
+            </td>
+            <td data-label="Title">
+                Electronic Mortgage Closings Can Benefit Consumers
+            </td>
+            <td data-label="Date">
+                AUG 5, 2015
+            </td>
+        </tr>
+        <tr>
+            <td data-label="Type">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
+            </td>
+            <td data-label="Title">
+                National Day of Civic Hacking 2015
+            </td>
+            <td data-label="Date">
+                JUL 29, 2015
+            </td>
+        </tr>
+    </tbody>
+</table>
+-->
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-filtering-tables-tables-can-be-p-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-filtering-tables-tables-can-be-p-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-filtering-tables-tables-can-be-p-5">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-filtering-tables-tables-can-be-p-html-code-snippet-5">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-filtering-tables-tables-can-be-p-html-code-snippet-5">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;!--Code from Design Manual 
+&lt;div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true"&gt;
+    &lt;button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false"&gt;
+        &lt;span class="o-expandable_header-left o-expandable_label"&gt;
+            Filter activities
+        &lt;/span&gt;
+        &lt;span class="o-expandable_header-right o-expandable_link"&gt;
+            &lt;span class="o-expandable_cue-open"&gt;
+                Show
+                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" class="cf-icon-svg"&gt;&lt;path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H549.6v213.6c0 27.6-22.4 50-50 50s-50-22.4-50-50V655.9H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h213.6V342.3c0-27.6 22.4-50 50-50s50 22.4 50 50v213.6h213.6c27.6 0 50 22.4 50 50s-22.5 50-50.1 50z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;/span&gt;
+            &lt;span class="o-expandable_cue-close"&gt;
+                Hide
+                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" class="cf-icon-svg"&gt;&lt;path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h527.1c27.6 0 50 22.4 50 50s-22.4 50-50 50z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="o-expandable_content o-expandable_content__transition o-expandable_content__collapsed" aria-expanded="false" style="max-height: 0px;"&gt;
+        &lt;p&gt;Filter options go here&lt;/p&gt;
+    &lt;/div&gt;
+
+&lt;table class="o-table o-table__stack-on-small" data-bound="true"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class="u-w20pct"&gt;
+                Type
+            &lt;/th&gt;
+            &lt;th class="u-w55pct"&gt;
+                Title
+            &lt;/th&gt;
+            &lt;th class="u-w25pct"&gt;
+                Date
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Type"&gt;
+                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"&gt;&lt;path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"&gt;&lt;/path&gt;&lt;/svg&gt; Blog
+            &lt;/td&gt;
+            &lt;td data-label="Title"&gt;
+                Three things to do before closing
+            &lt;/td&gt;
+            &lt;td data-label="Date"&gt;
+                AUG 5, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Type"&gt;
+                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975.1 1200" class="cf-icon-svg"&gt;&lt;path d="M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z"&gt;&lt;/path&gt;&lt;/svg&gt; News
+            &lt;/td&gt;
+            &lt;td data-label="Title"&gt;
+                Electronic Mortgage Closings Can Benefit Consumers
+            &lt;/td&gt;
+            &lt;td data-label="Date"&gt;
+                AUG 5, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Type"&gt;
+                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"&gt;&lt;path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"&gt;&lt;/path&gt;&lt;/svg&gt; Blog
+            &lt;/td&gt;
+            &lt;td data-label="Title"&gt;
+                National Day of Civic Hacking 2015
+            &lt;/td&gt;
+            &lt;td data-label="Date"&gt;
+                JUL 29, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+--&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Pagination</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>Tables with over 20 rows can be paired with pagination.</p>
+
+<p><img src="/design-system/images/uploads/table_pagination.png" alt="image showing a table with pagination"></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <!--Code from Design Manual 
+<table class="o-table o-table__stack-on-small" data-bound="true">
+    <thead>
+        <tr>
+            <th class="u-w20pct">
+                Type
+            </th>
+            <th class="u-w55pct">
+                Title
+            </th>
+            <th class="u-w25pct">
+                Date
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Type">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
+            </td>
+            <td data-label="Title">
+                Three things to do before closing
+            </td>
+            <td data-label="Date">
+                AUG 5, 2015
+            </td>
+        </tr>
+        <tr>
+            <td data-label="Type">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975.1 1200" class="cf-icon-svg"><path d="M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z"></path></svg> News
+            </td>
+            <td data-label="Title">
+                Electronic Mortgage Closings Can Benefit Consumers
+            </td>
+            <td data-label="Date">
+                AUG 5, 2015
+            </td>
+        </tr>
+    <tr>
+            <td colspan="3" style="text-align: center; font-weight: bold;">
+                (18 more rows)
+            </td>
+        </tr>
+        <tr>
+            <td data-label="Type">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
+            </td>
+            <td data-label="Title">
+                National Day of Civic Hacking 2015
+            </td>
+            <td data-label="Date">
+                JUL 29, 2015
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<nav class="m-pagination" role="navigation" aria-label="Pagination">
+    <a class="a-btn
+              a-btn__disabled
+              m-pagination_btn-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"><path d="M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z"></path></svg>
+        Newer
+    </a>
+
+    <a class="a-btn
+              m-pagination_btn-next" href="#">
+        Older
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg>
+    </a>
+    <form class="m-pagination_form" action="#">
+        <label class="m-pagination_label" for="m-pagination_current-page">
+            Page
+            <span class="u-visually-hidden">
+                number out of 3 total pages
+            </span>
+            <input class="m-pagination_current-page" id="m-pagination_current-page" name="page" type="number" min="1" max="3" inputmode="numeric" value="1">
+            of 3
+        </label>
+        <button class="a-btn
+                       a-btn__link
+                       m-pagination_submit-btn" id="pagination_submit" type="submit">Go</button>
+    </form>
+</nav>
+-->
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-pagination-tables-with-over-20-r-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-pagination-tables-with-over-20-r-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-pagination-tables-with-over-20-r-6">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-pagination-tables-with-over-20-r-html-code-snippet-6">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-pagination-tables-with-over-20-r-html-code-snippet-6">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;!--Code from Design Manual 
+&lt;table class="o-table o-table__stack-on-small" data-bound="true"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class="u-w20pct"&gt;
+                Type
+            &lt;/th&gt;
+            &lt;th class="u-w55pct"&gt;
+                Title
+            &lt;/th&gt;
+            &lt;th class="u-w25pct"&gt;
+                Date
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Type"&gt;
+                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"&gt;&lt;path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"&gt;&lt;/path&gt;&lt;/svg&gt; Blog
+            &lt;/td&gt;
+            &lt;td data-label="Title"&gt;
+                Three things to do before closing
+            &lt;/td&gt;
+            &lt;td data-label="Date"&gt;
+                AUG 5, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Type"&gt;
+                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975.1 1200" class="cf-icon-svg"&gt;&lt;path d="M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z"&gt;&lt;/path&gt;&lt;/svg&gt; News
+            &lt;/td&gt;
+            &lt;td data-label="Title"&gt;
+                Electronic Mortgage Closings Can Benefit Consumers
+            &lt;/td&gt;
+            &lt;td data-label="Date"&gt;
+                AUG 5, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td colspan="3" style="text-align: center; font-weight: bold;"&gt;
+                (18 more rows)
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label="Type"&gt;
+                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"&gt;&lt;path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"&gt;&lt;/path&gt;&lt;/svg&gt; Blog
+            &lt;/td&gt;
+            &lt;td data-label="Title"&gt;
+                National Day of Civic Hacking 2015
+            &lt;/td&gt;
+            &lt;td data-label="Date"&gt;
+                JUL 29, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+&lt;nav class="m-pagination" role="navigation" aria-label="Pagination"&gt;
+    &lt;a class="a-btn
+              a-btn__disabled
+              m-pagination_btn-prev"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"&gt;&lt;path d="M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z"&gt;&lt;/path&gt;&lt;/svg&gt;
+        Newer
+    &lt;/a&gt;
+
+    &lt;a class="a-btn
+              m-pagination_btn-next" href="#"&gt;
+        Older
+        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"&gt;&lt;path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+    &lt;form class="m-pagination_form" action="#"&gt;
+        &lt;label class="m-pagination_label" for="m-pagination_current-page"&gt;
+            Page
+            &lt;span class="u-visually-hidden"&gt;
+                number out of 3 total pages
+            &lt;/span&gt;
+            &lt;input class="m-pagination_current-page" id="m-pagination_current-page" name="page" type="number" min="1" max="3" inputmode="numeric" value="1"&gt;
+            of 3
+        &lt;/label&gt;
+        &lt;button class="a-btn
+                       a-btn__link
+                       m-pagination_submit-btn" id="pagination_submit" type="submit"&gt;Go&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/nav&gt;
+--&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Fixed-width column tables</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>Column widths are automatically set by browsers by default. If needed, some or all columns can be set to specific widths instead to accommodate longer data or labels.</p>
+
+<p>Fixed-width columns at the 600 px breakpoint and less lose their custom widths and expand to full width. This is the same responsive pattern used for default tables at small screens.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <table class="o-table o-table__stack-on-small" data-bound="true">
+    <thead>
+        <tr>
+            <th class="u-w20pct">
+                County
+            </th>
+            <th class="u-w60pct">
+                Lien status
+            </th>
+            <th class="u-w20pct">
+                Active?
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="County">
+                Abbeville
+            </td>
+            <td data-label="Lien status">
+                Secured
+            </td>
+            <td data-label="Active?">
+                Yes
+            </td>
+        </tr>
+        <tr>
+            <td data-label="County">
+                Abbey
+            </td>
+            <td data-label="Lien status">
+                Secured
+            </td>
+            <td data-label="Active?">
+                No
+            </td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-fixed-width-column-tables-column-7" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-fixed-width-column-tables-column-7" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-fixed-width-column-tables-column-7">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-fixed-width-column-tables-column-html-code-snippet-7">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-fixed-width-column-tables-column-html-code-snippet-7">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;table class="o-table o-table__stack-on-small" data-bound="true"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class="u-w20pct"&gt;
+                County
+            &lt;/th&gt;
+            &lt;th class="u-w60pct"&gt;
+                Lien status
+            &lt;/th&gt;
+            &lt;th class="u-w20pct"&gt;
+                Active?
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label="County"&gt;
+                Abbeville
+            &lt;/td&gt;
+            &lt;td data-label="Lien status"&gt;
+                Secured
+            &lt;/td&gt;
+            &lt;td data-label="Active?"&gt;
+                Yes
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label="County"&gt;
+                Abbey
+            &lt;/td&gt;
+            &lt;td data-label="Lien status"&gt;
+                Secured
+            &lt;/td&gt;
+            &lt;td data-label="Active?"&gt;
+                No
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
     </section>
     
     
@@ -3053,7 +3674,7 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 <h3 id="unit-of-measurement">Unit of measurement</h3>
 <p>Make sure to indicate the unit of measurement. In terms of placement, if the units are the same across columns, indicate the unit of measurement in the title or someplace noticeable above the table.</p>
 
-<p>Alternatively, if the table uses at most two units of measurement, consider using asterisks following the column label, and define the unit of measurement below the table, as shown in the example here.</p>
+<p>Alternatively, if the table uses at most two units of measurement, consider using asterisks following the column label, and define the unit of measurement below the table.</p>
 
 <p>If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.</p>
 
@@ -3100,6 +3721,19 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
     <div class="content-l u-mb45">
         
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="related-items">Related Items</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <ul>
+  <li><a href="https://cfpb.github.io/design-system/components/variables#tables">Variables</a></li>
+</ul>
+
+                </section>
+            </div>
+        </div>
+        
     </div>
 <!-- .content-l -->
 
@@ -3141,8 +3775,8 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/tables.md">
-                    <time datetime="2020-06-15 13:21:47 -0400">
-                         1:21:47 PM Jun 15, 2020
+                    <time datetime="2020-06-19 12:45:27 -0400">
+                        12:45:27 PM Jun 19, 2020
                     </time>
                 </a>
             </small>

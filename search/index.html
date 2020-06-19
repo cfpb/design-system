@@ -5548,17 +5548,224 @@ Note: While th elements normally only contain raw text, they may sometimes conta
     &lt;/tbody&gt;
 &lt;/table&gt;`,
                 
+                    'variation_name5': 'Filtering tables',
+                    'variation_description5': "Tables can be paired with a filter to show only rows that meet certain criteria.",
+                    'variation_code_snippet5': `&lt;!--Code from Design Manual 
+&lt;div class=&quot;o-expandable o-expandable__filters o-expandable__padded&quot; data-bound=&quot;true&quot;&gt;
+    &lt;button class=&quot;o-expandable_header o-expandable_target o-expandable_target__collapsed&quot; aria-pressed=&quot;false&quot;&gt;
+        &lt;span class=&quot;o-expandable_header-left o-expandable_label&quot;&gt;
+            Filter activities
+        &lt;/span&gt;
+        &lt;span class=&quot;o-expandable_header-right o-expandable_link&quot;&gt;
+            &lt;span class=&quot;o-expandable_cue-open&quot;&gt;
+                Show
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 1000 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H549.6v213.6c0 27.6-22.4 50-50 50s-50-22.4-50-50V655.9H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h213.6V342.3c0-27.6 22.4-50 50-50s50 22.4 50 50v213.6h213.6c27.6 0 50 22.4 50 50s-22.5 50-50.1 50z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;/span&gt;
+            &lt;span class=&quot;o-expandable_cue-close&quot;&gt;
+                Hide
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 1000 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h527.1c27.6 0 50 22.4 50 50s-22.4 50-50 50z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;o-expandable_content o-expandable_content__transition o-expandable_content__collapsed&quot; aria-expanded=&quot;false&quot; style=&quot;max-height: 0px;&quot;&gt;
+        &lt;p&gt;Filter options go here&lt;/p&gt;
+    &lt;/div&gt;
+
+&lt;table class=&quot;o-table o-table__stack-on-small&quot; data-bound=&quot;true&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;u-w20pct&quot;&gt;
+                Type
+            &lt;/th&gt;
+            &lt;th class=&quot;u-w55pct&quot;&gt;
+                Title
+            &lt;/th&gt;
+            &lt;th class=&quot;u-w25pct&quot;&gt;
+                Date
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Type&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 825.1 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z&quot;&gt;&lt;/path&gt;&lt;/svg&gt; Blog
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Title&quot;&gt;
+                Three things to do before closing
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Date&quot;&gt;
+                AUG 5, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Type&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 975.1 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z&quot;&gt;&lt;/path&gt;&lt;/svg&gt; News
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Title&quot;&gt;
+                Electronic Mortgage Closings Can Benefit Consumers
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Date&quot;&gt;
+                AUG 5, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Type&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 825.1 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z&quot;&gt;&lt;/path&gt;&lt;/svg&gt; Blog
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Title&quot;&gt;
+                National Day of Civic Hacking 2015
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Date&quot;&gt;
+                JUL 29, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+--&gt;`,
+                
+                    'variation_name6': 'Pagination',
+                    'variation_description6': "Tables with over 20 rows can be paired with pagination.",
+                    'variation_code_snippet6': `&lt;!--Code from Design Manual 
+&lt;table class=&quot;o-table o-table__stack-on-small&quot; data-bound=&quot;true&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;u-w20pct&quot;&gt;
+                Type
+            &lt;/th&gt;
+            &lt;th class=&quot;u-w55pct&quot;&gt;
+                Title
+            &lt;/th&gt;
+            &lt;th class=&quot;u-w25pct&quot;&gt;
+                Date
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Type&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 825.1 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z&quot;&gt;&lt;/path&gt;&lt;/svg&gt; Blog
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Title&quot;&gt;
+                Three things to do before closing
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Date&quot;&gt;
+                AUG 5, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Type&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 975.1 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z&quot;&gt;&lt;/path&gt;&lt;/svg&gt; News
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Title&quot;&gt;
+                Electronic Mortgage Closings Can Benefit Consumers
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Date&quot;&gt;
+                AUG 5, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;tr&gt;
+            &lt;td colspan=&quot;3&quot; style=&quot;text-align: center; font-weight: bold;&quot;&gt;
+                (18 more rows)
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;Type&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 825.1 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z&quot;&gt;&lt;/path&gt;&lt;/svg&gt; Blog
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Title&quot;&gt;
+                National Day of Civic Hacking 2015
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Date&quot;&gt;
+                JUL 29, 2015
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+&lt;nav class=&quot;m-pagination&quot; role=&quot;navigation&quot; aria-label=&quot;Pagination&quot;&gt;
+    &lt;a class=&quot;a-btn
+              a-btn__disabled
+              m-pagination_btn-prev&quot;&gt;
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 559.6 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        Newer
+    &lt;/a&gt;
+
+    &lt;a class=&quot;a-btn
+              m-pagination_btn-next&quot; href=&quot;#&quot;&gt;
+        Older
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 559.6 1200&quot; class=&quot;cf-icon-svg&quot;&gt;&lt;path d=&quot;M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+    &lt;form class=&quot;m-pagination_form&quot; action=&quot;#&quot;&gt;
+        &lt;label class=&quot;m-pagination_label&quot; for=&quot;m-pagination_current-page&quot;&gt;
+            Page
+            &lt;span class=&quot;u-visually-hidden&quot;&gt;
+                number out of 3 total pages
+            &lt;/span&gt;
+            &lt;input class=&quot;m-pagination_current-page&quot; id=&quot;m-pagination_current-page&quot; name=&quot;page&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;3&quot; inputmode=&quot;numeric&quot; value=&quot;1&quot;&gt;
+            of 3
+        &lt;/label&gt;
+        &lt;button class=&quot;a-btn
+                       a-btn__link
+                       m-pagination_submit-btn&quot; id=&quot;pagination_submit&quot; type=&quot;submit&quot;&gt;Go&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/nav&gt;
+--&gt;`,
+                
+                    'variation_name7': 'Fixed-width column tables',
+                    'variation_description7': "Column widths are automatically set by browsers by default. If needed, some or all columns can be set to specific widths instead to accommodate longer data or labels.Fixed-width columns at the 600 px breakpoint and less lose their custom widths and expand to full width. This is the same responsive pattern used for default tables at small screens.",
+                    'variation_code_snippet7': `&lt;table class=&quot;o-table o-table__stack-on-small&quot; data-bound=&quot;true&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;u-w20pct&quot;&gt;
+                County
+            &lt;/th&gt;
+            &lt;th class=&quot;u-w60pct&quot;&gt;
+                Lien status
+            &lt;/th&gt;
+            &lt;th class=&quot;u-w20pct&quot;&gt;
+                Active?
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;County&quot;&gt;
+                Abbeville
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Lien status&quot;&gt;
+                Secured
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Active?&quot;&gt;
+                Yes
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-label=&quot;County&quot;&gt;
+                Abbey
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Lien status&quot;&gt;
+                Secured
+            &lt;/td&gt;
+            &lt;td data-label=&quot;Active?&quot;&gt;
+                No
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;`,
+                
             
 
 
             'title': 'Tables',
-            'description': "Tables divide information into distinct columns and rows to create an intersection “cell” where data is displayed.",
+            'description': "Tables allow for the presentation of many data points grouped together in a visual way. They serve a unique purpose of allowing easy organization or comparison of more complex data than a chart or graph. They can be read either vertically (by columns) or horizontally (by rows).",
             'use_cases': "Tables allow easy organization or comparison of more complex data than a chart or graph. They can be read either vertically (by columns) or horizontally (by rows).Tables work best when:  Presenting sequential data  Data being presented requires specific or precise values  Individual values are being presented or compared  Values across columns or rows require different units of measurement",
-            'content_guidelines': "As a rule, design tables so that they are easy to read. Label columns precisely and include units of measurement where necessary. Organize the data so that the underlying meaning is quickly apparent.Labels and TitlesGive tables a meaningful title that succinctly describes the content presented so that users can understand their purpose at a glance. If presenting more than one table within a page, consider adding labels (e.g. “Table 1,” “Table 2,” etc.) in addition to titles. Labels should precede titles (e.g. “Table 1: The title given to this table”).Long column labelsConsider using fixed columns or truncation for column labels that are significantly longer than the expected width of the data.Unit of measurementMake sure to indicate the unit of measurement. In terms of placement, if the units are the same across columns, indicate the unit of measurement in the title or someplace noticeable above the table.Alternatively, if the table uses at most two units of measurement, consider using asterisks following the column label, and define the unit of measurement below the table, as shown in the example here.If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.",
+            'content_guidelines': "As a rule, design tables so that they are easy to read. Label columns precisely and include units of measurement where necessary. Organize the data so that the underlying meaning is quickly apparent.Labels and TitlesGive tables a meaningful title that succinctly describes the content presented so that users can understand their purpose at a glance. If presenting more than one table within a page, consider adding labels (e.g. “Table 1,” “Table 2,” etc.) in addition to titles. Labels should precede titles (e.g. “Table 1: The title given to this table”).Long column labelsConsider using fixed columns or truncation for column labels that are significantly longer than the expected width of the data.Unit of measurementMake sure to indicate the unit of measurement. In terms of placement, if the units are the same across columns, indicate the unit of measurement in the title or someplace noticeable above the table.Alternatively, if the table uses at most two units of measurement, consider using asterisks following the column label, and define the unit of measurement below the table.If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.",
             'behavior': "Sortable tablesAt large screen sizes,  The currently sorted column is marked with an up or down triangle for ascending and descending sorts, respectively  On hover, the currently sorted column shows the opposite triangle  Columns that can sort show an up triangle on hover  Columns that cannot sort show nothing on hoverIf sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked.",
             'accessibility': "Remember to always use headers (that is, &lt;th&gt; elements) for all data tables to make tabular data accessible.",
             'research': "",
-            'related_items': "",
+            'related_items': "  Variables",
             'url': 'components/tables'
         }
         ,

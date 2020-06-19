@@ -106,23 +106,17 @@ variation_groups:
       1px;` to the link.
 
   - variation_group_name: Links with icons
-    variation_group_description: "Use icons when a link needs extra emphasis. Use
-      icons consistently, or don’t use them at all. Each icon should be used
-      exclusively for one action. "
+    variation_group_description: >-
+      Use icons when a link needs extra emphasis. Use icons consistently, or
+      don’t use them at all. Each icon should be used exclusively for one
+      action. 
+
+
+      Icons appear to the right of the link text. The color and font-size of icons should be the same as the adjacent text, including state changes. Icons are never underlined.
     variations:
-      - variation_specs: >
-          Icons appear to the right of the link text. The color and font-size of
-          icons should be the same as the adjacent text, including state
-          changes. Icons are never underlined.
+      - variation_specs: ""
         variation_code_snippet: |-
           <p>
-            Use the email icon to emphasize an email address like
-              <a class="a-link
-                        a-link__icon"
-                href="#">
-                  {% include icons/mail.svg %}
-                  <span class="a-link_text">john.smith@cfpb.gov</span>
-              </a>.
               Documents minicons can emphasize a link that contains a
               <a class="a-link
                         a-link__icon"
@@ -241,7 +235,7 @@ content_guidelines: ""
 behavior: >-
   ### Default links
 
-  In general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content.
+  In general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.
 
 
   ### Opening a link in a new tab

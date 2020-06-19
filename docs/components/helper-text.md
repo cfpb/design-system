@@ -17,10 +17,10 @@ variation_groups:
 
 
           <input class="a-text-input" type="text" id="helper-example">
-        variation_description: "Use block helper text to explain why a piece of
-          information is being requested, address security and privacy concerns,
-          or to suggest ways of providing answers other than providing
-          formatting examples. "
+        variation_description: "Block helper text appears directly below a label. Use it
+          to explain why a piece of information is being requested, address
+          security and privacy concerns, or to suggest ways of providing answers
+          other than providing formatting examples. "
         variation_name: Block helper text
         variation_specs: >-
           [Color
@@ -40,8 +40,9 @@ variation_groups:
           </label>
 
           <input class="a-text-input" type="text" id="helper-example">
-        variation_description: Use inline helper text to indicate whether a field is
-          optional. See the [behavior section](#behavior) for more information.
+        variation_description: Inline helper text appears directly after a label. Use it
+          to indicate whether a field is optional. See the [behavior
+          section](#behavior) for more information.
         variation_name: Inline helper text
         variation_specs: >-
           #### Inline helper text

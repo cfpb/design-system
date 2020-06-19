@@ -17,10 +17,10 @@ variation_groups:
 
 
           <input class="a-text-input" type="text" id="helper-example">
-        variation_description: "Block helper text appears directly below a label. Use it
-          to explain why a piece of information is being requested, address
-          security and privacy concerns, or to suggest ways of providing answers
-          other than providing formatting examples. "
+        variation_description: "Block helper text appears directly beneath a form label.
+          Use it to explain why a piece of information is being requested,
+          address security and privacy concerns, or to suggest ways of providing
+          answers other than providing formatting examples. "
         variation_name: Block helper text
         variation_specs: >-
           [Color
@@ -40,8 +40,8 @@ variation_groups:
           </label>
 
           <input class="a-text-input" type="text" id="helper-example">
-        variation_description: Inline helper text appears directly after a label. Use it
-          to indicate whether a field is optional. See the [behavior
+        variation_description: Inline helper text appears directly after a form label.
+          Use it to indicate whether a field is optional. See the [behavior
           section](#behavior) for more information.
         variation_name: Inline helper text
         variation_specs: >-
@@ -78,9 +78,9 @@ variation_groups:
                 id="textinput-example-default"
                 placeholder="Enter text…"
                 value="placeholder text">
-        variation_description: Use placeholder text for formatting examples only. Don’t
-          use for instructions. Placeholder text disappears once a user begins
-          typing in the field.
+        variation_description: Placeholder text appears within a text input field, and
+          disappears once a user begins typing in that field. Use it for
+          formatting examples only.
         variation_name: Placeholder text
         variation_specs: |-
           #### Placeholder text

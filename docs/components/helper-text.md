@@ -4,48 +4,59 @@ layout: variation
 section: components
 secondary_section: Text
 status: Released
-description: Helper text is used with form elements to give the user context
-  about their usage. Examples include indicating whether a field is optional or
-  required.
+description: "Helper text is used with form elements to give the user context
+  about their usage. "
 variation_groups:
   - variations:
       - variation_code_snippet: >-
           <label class="a-label a-label__heading">
-              A label heading
+
+          Label
               <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
           </label>
 
 
           <input class="a-text-input" type="text" id="helper-example">
-        variation_description: Use to explain why a piece of information is being
-          requested, address security and privacy concerns, or to suggest ways
-          of providing answers other than providing formatting examples. (For
-          formatting examples, use placeholder text.) Appears with labels and
-          label headings.
+        variation_description: "Block helper text appears directly below a label. Use it
+          to explain why a piece of information is being requested, address
+          security and privacy concerns, or to suggest ways of providing answers
+          other than providing formatting examples. "
         variation_name: Block helper text
-        variation_specs: |-
+        variation_specs: >-
+          [Color
+          variables](https://cfpb.github.io/design-system/components/variables#forms-1) 
+
+
           #### Block helper text
+
           - Avenir Next Regular, 16 px, Gray (#5a5d61)
+
           - Margin top: 10 px
+
           - Margin bottom: 10 px
       - variation_code_snippet: |-
           <label class="a-label a-label__heading">
-              A label heading <small class="a-label_helper">(optional)</small>
+           Label <small class="a-label_helper">(optional)</small>
           </label>
 
           <input class="a-text-input" type="text" id="helper-example">
-        variation_description: Use to indicate whether a field is optional or required.
-          Appears inline with label headings, and should be lowercase and placed
-          in parenthesis after the label.
+        variation_description: Inline helper text appears directly after a label. Use it
+          to indicate whether a field is optional. See the [behavior
+          section](#behavior) for more information.
         variation_name: Inline helper text
-        variation_specs: |-
+        variation_specs: >-
           #### Inline helper text
+
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
+
           * Margin bottom: 10 px
+
+
+          Appears inline with label headings, and should be lowercase and placed in parenthesis after the label.
       - variation_code_snippet: >-
           <label class="a-label a-label__heading"
           for="textinput-example-default">
-              A label heading
+              Label
           </label>
 
           <input class="a-text-input"
@@ -87,7 +98,13 @@ content_guidelines: >-
   Try not to design forms consisting mainly of optional fields. If you must do so, mark required field labels only with inline helper text.
 behavior: ""
 accessibility: For screen reader accessibility, consider using the
-  aria-describedby attribute for helper text, which gives screen readers users
+  `aria-describedby` attribute for helper text, which gives screen readers users
   the information if they need while allowing more flexibility with placement.
+related_items: >-
+  * Labels 
+
+  * [Variables](https://cfpb.github.io/design-system/components/variables#forms-1)
+
+  * Form principles
 last_updated: 2020-01-28T15:55:47.394Z
 ---

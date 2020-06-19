@@ -3086,18 +3086,18 @@ The text will be styled the same as H5 heading text.
 
                 
                     'variation_name1': 'Block helper text',
-                    'variation_description1': "Use to explain why a piece of information is being requested, address security and privacy concerns, or to suggest ways of providing answers other than providing formatting examples. (For formatting examples, use placeholder text.) Appears with labels and label headings.",
+                    'variation_description1': "Block helper text appears directly below a label. Use it to explain why a piece of information is being requested, address security and privacy concerns, or to suggest ways of providing answers other than providing formatting examples.",
                     'variation_code_snippet1': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
-    A label heading
+Label
     &lt;small class=&quot;a-label_helper a-label_helper__block&quot;&gt;Use block helper text for instructions&lt;/small&gt;
 &lt;/label&gt;
 
 &lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;helper-example&quot;&gt;`,
                 
                     'variation_name2': 'Inline helper text',
-                    'variation_description2': "Use to indicate whether a field is optional or required. Appears inline with label headings, and should be lowercase and placed in parenthesis after the label.",
+                    'variation_description2': "Inline helper text appears directly after a label. Use it to indicate whether a field is optional. See the behavior section for more information.",
                     'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
-    A label heading &lt;small class=&quot;a-label_helper&quot;&gt;(optional)&lt;/small&gt;
+ Label &lt;small class=&quot;a-label_helper&quot;&gt;(optional)&lt;/small&gt;
 &lt;/label&gt;
 
 &lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;helper-example&quot;&gt;`,
@@ -3105,7 +3105,7 @@ The text will be styled the same as H5 heading text.
                     'variation_name3': 'Placeholder text',
                     'variation_description3': "Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field.",
                     'variation_code_snippet3': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-default&quot;&gt;
-    A label heading
+    Label
 &lt;/label&gt;
 &lt;input class=&quot;a-text-input&quot;
       type=&quot;text&quot;
@@ -3129,13 +3129,13 @@ The text will be styled the same as H5 heading text.
 
 
             'title': 'Helper text',
-            'description': "Helper text is used with form elements to give the user context about their usage. Examples include indicating whether a field is optional or required.",
+            'description': "Helper text is used with form elements to give the user context about their usage.",
             'use_cases': "",
             'content_guidelines': "Required vs. optional fieldsWhere possible, design your forms to only include required fields. If it’s not required, ask yourself if it’s really necessary to include at all. Add instructions at the top of the form to clearly indicate that all fields are required unless otherwise noted. If a field is optional, indicate it with inline helper text, as shown above. Don’t indicate which fields are required; that would only introduce redundant visual noise.Try not to design forms consisting mainly of optional fields. If you must do so, mark required field labels only with inline helper text.",
             'behavior': "",
             'accessibility': "For screen reader accessibility, consider using the aria-describedby attribute for helper text, which gives screen readers users the information if they need while allowing more flexibility with placement.",
             'research': "",
-            'related_items': "",
+            'related_items': "  Labels  Variables  Form principles",
             'url': 'components/helper-text'
         }
         ,

@@ -4,9 +4,8 @@ layout: variation
 section: components
 secondary_section: Text
 status: Released
-description: Helper text is used with form elements to give the user context
-  about their usage. Examples include indicating whether a field is optional or
-  required.
+description: "Helper text is used with form elements to give the user context
+  about their usage. "
 variation_groups:
   - variations:
       - variation_code_snippet: >-

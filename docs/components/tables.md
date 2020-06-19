@@ -546,8 +546,9 @@ variation_groups:
 
           * Please note the importance of defining a `thead` and `tbody` to preserve the table’s header through sorting operations.
       - variation_name: Filtering tables
-        variation_code_snippet: >
-          
+        variation_code_snippet: >-
+          <!--Code from Design Manual 
+
           <div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true">
               <button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false">
                   <span class="o-expandable_header-left o-expandable_label">
@@ -618,13 +619,25 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_description: >+
+
+          -->
+        variation_description: >-
           Tables can be paired with a filter to show only rows that meet certain
           criteria.
 
+
+          ![Image showing a table with filter](/design-system/images/uploads/table_filter.png)
       - variation_name: Pagination
-        variation_description: Tables with over 20 rows can be paired with pagination.
+        variation_description: >-
+          Tables with over 20 rows can be paired with pagination.
+
+
+
+
+          ![image showing a table with pagination](/design-system/images/uploads/table_pagination.png)
         variation_code_snippet: >-
+          <!--Code from Design Manual 
+
           <table class="o-table o-table__stack-on-small" data-bound="true">
               <thead>
                   <tr>
@@ -683,7 +696,6 @@ variation_groups:
 
 
 
-          <!--Pagination-->
 
           <nav class="m-pagination" role="navigation" aria-label="Pagination">
               <a class="a-btn
@@ -698,8 +710,6 @@ variation_groups:
                   Older
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg>
               </a>
-
-
               <form class="m-pagination_form" action="#">
                   <label class="m-pagination_label" for="m-pagination_current-page">
                       Page
@@ -714,6 +724,56 @@ variation_groups:
                                  m-pagination_submit-btn" id="pagination_submit" type="submit">Go</button>
               </form>
           </nav>
+
+          -->
+      - variation_name: Fixed-width column tables
+        variation_description: >-
+          Column widths are automatically set by browsers by default. If needed,
+          some or all columns can be set to specific widths instead to
+          accommodate longer data or labels.
+
+
+          Fixed-width columns at the 600 px breakpoint and less lose their custom widths and expand to full width. This is the same responsive pattern used for default tables at small screens.
+        variation_code_snippet: |-
+          <table class="o-table o-table__stack-on-small" data-bound="true">
+              <thead>
+                  <tr>
+                      <th class="u-w20pct">
+                          County
+                      </th>
+                      <th class="u-w60pct">
+                          Lien status
+                      </th>
+                      <th class="u-w20pct">
+                          Active?
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td data-label="County">
+                          Abbeville
+                      </td>
+                      <td data-label="Lien status">
+                          Secured
+                      </td>
+                      <td data-label="Active?">
+                          Yes
+                      </td>
+                  </tr>
+                  <tr>
+                      <td data-label="County">
+                          Abbey
+                      </td>
+                      <td data-label="Lien status">
+                          Secured
+                      </td>
+                      <td data-label="Active?">
+                          No
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
     variation_group_name: Variations
 use_cases: >-
   Tables allow easy organization or comparison of more complex data than a chart

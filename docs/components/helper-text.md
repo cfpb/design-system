@@ -98,7 +98,7 @@ content_guidelines: >-
   Try not to design forms consisting mainly of optional fields. If you must do so, mark required field labels only with inline helper text.
 behavior: ""
 accessibility: For screen reader accessibility, consider using the
-  aria-describedby attribute for helper text, which gives screen readers users
+  `aria-describedby` attribute for helper text, which gives screen readers users
   the information if they need while allowing more flexibility with placement.
 related_items: >-
   * Labels 

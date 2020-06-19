@@ -1421,15 +1421,7 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Links lead users to a different page or further information. In contrast, buttons are used to signal actions. Users should be able to identify links without relying on color or styling alone.</p>
-
-<p>More information can be found at:</p>
-
-<ul>
-  <li><a href="https://cfpb.github.io/design-manual/page-components/links.html">https://cfpb.github.io/design-manual/page-components/links.html</a></li>
-  <li><a href="https://cfpb.github.io/capital-framework/components/cf-core/#default-links">https://cfpb.github.io/capital-framework/components/cf-core/#default-links</a></li>
-  <li><a href="https://cfpb.github.io/capital-framework/components/cf-typography/#link-patterns">https://cfpb.github.io/capital-framework/components/cf-typography/#link-patterns</a></li>
-</ul>
+        <p>Links lead users to a different page or further information. In contrast, <a href="/design-system/components/buttons">buttons</a> are used to signal actions. Users should be able to identify links without relying on color or styling alone.</p>
 
     </section>
     
@@ -1446,7 +1438,7 @@
 
         
         <div class="o-variation_group_description">
-            <p>Links that appear in body text (<code class="language-plaintext highlighter-rouge">p</code>), link lists (<code class="language-plaintext highlighter-rouge">li</code>), or definitions (<code class="language-plaintext highlighter-rouge">dd</code>) are automatically underlined. They are not underlined when included in a <code class="language-plaintext highlighter-rouge">nav</code> element. To enable them elsewhere, simply add a <code class="language-plaintext highlighter-rouge">border-bottom-width: 1px;</code> to the link.</p>
+            <p>Links that appear in body text (<code class="language-plaintext highlighter-rouge">p</code>), link lists (<code class="language-plaintext highlighter-rouge">li</code>), or definitions (<code class="language-plaintext highlighter-rouge">dd</code>) are automatically underlined. To enable underlines elsewhere, e.g. to underline links in a <code class="language-plaintext highlighter-rouge">nav</code> element, simply add a <code class="language-plaintext highlighter-rouge">border-bottom-width: 1px;</code> to the link.</p>
 
 
         </div>
@@ -1467,7 +1459,7 @@
 
             
             <div class="m-variation_description">
-                <p>Inline links should be Regular weight if inline with other text (e.g., within a paragraph like this one).</p>
+                <p>Inline links should be regular weight if inline with other text (e.g., within a paragraph like this one).</p>
 
             </div>
             
@@ -1578,19 +1570,21 @@
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
-                            <p>Default</p>
+                            <p><a href="https://cfpb.github.io/design-system/components/variables#typography-1">Color variables for links</a></p>
+
+<h4 id="default">Default</h4>
 <ul>
   <li>Pacific Blue</li>
   <li>1px dotted bottom border</li>
 </ul>
 
-<p>Hover</p>
+<h4 id="hover">Hover</h4>
 <ul>
   <li>Dark Pacific Blue</li>
   <li>1px solid bottom border</li>
 </ul>
 
-<p>Focus</p>
+<h4 id="focus">Focus</h4>
 <ul>
   <li>Pacific Blue</li>
   <li>1px dotted bottom border</li>
@@ -1634,7 +1628,7 @@
 
             
             <div class="m-variation_description">
-                <p>Standalone links (e.g., in a call to action or list of links) should be Medium weight.</p>
+                <p>Standalone links (e.g., in a call to action or list of links) should be medium weight.</p>
 
             </div>
             
@@ -1748,6 +1742,8 @@
         <div class="o-variation_group_description">
             <p>Use icons when a link needs extra emphasis. Use icons consistently, or don’t use them at all. Each icon should be used exclusively for one action.</p>
 
+<p>Icons appear to the right of the link text. The color and font-size of icons should be the same as the adjacent text, including state changes. Icons are never underlined.</p>
+
         </div>
         
 
@@ -1760,15 +1756,13 @@
 
             
             <div class="m-variation_name">
-                <h3>Links with icon</h3>
+                <h3>Standard link with icon</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p>To prevent the link’s underline from extending under the icon, you must wrap the link text with a <code class="language-plaintext highlighter-rouge">span.icon-link_text</code>. There can be no whitespace between the text and the opening and closing span tags.</p>
-
-<p>Include the icon either prior to or after the <code class="language-plaintext highlighter-rouge">a-link_text</code>. It is important the text and icon are siblings to correctly handle underlines.</p>
+                <p>To prevent the link’s underline from extending under the icon, wrap the link text with a <code class="language-plaintext highlighter-rouge">span.icon-link_text</code>. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the <code class="language-plaintext highlighter-rouge">a-link_text</code>. It is important the text and icon are siblings to correctly handle underlines.</p>
 
             </div>
             
@@ -1777,12 +1771,6 @@
             
             <div class="a-live_code">
                 <p>
-  Use the email icon to emphasize an email address like
-    <a class="a-link
-              a-link__icon" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 997.3 1200" class="cf-icon-svg"><path d="M962.3 396.6H35c-19.3.1-34.9 15.7-35 35v491.8c.1 19.3 15.7 34.9 35 35h927.3c19.3-.1 34.9-15.7 35-35V431.6c0-19.3-15.7-34.9-35-35zm-25 501.8H60V456.6h877.3v441.8z"></path><path d="M205.9 719h384.4v50H205.9zM205.9 609.7h384.4v50H205.9zM736.3 517.1h141.1V660H736.3z"></path></svg>
-        <span class="a-link_text">john.smith@cfpb.gov</span>
-    </a>.
     Documents minicons can emphasize a link that contains a
     <a class="a-link
               a-link__icon" href="#">
@@ -1810,15 +1798,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-links-with-icon-to-prevent-the-l-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-links-with-icon-to-prevent-the-l-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-standard-link-with-icon-to-preve-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-standard-link-with-icon-to-preve-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-links-with-icon-to-prevent-the-l-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-standard-link-with-icon-to-preve-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-links-with-icon-to-prevent-the-l-html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-standard-link-with-icon-to-preve-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -1827,7 +1815,7 @@
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-links-with-icon-to-prevent-the-l-specs-1">
+                        <a class="govuk-tabs__tab" href="#details-standard-link-with-icon-to-preve-specs-1">
                             Specs
                         </a>
                     </li>
@@ -1836,18 +1824,11 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-links-with-icon-to-prevent-the-l-html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-standard-link-with-icon-to-preve-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;p&gt;
-  Use the email icon to emphasize an email address like
-    &lt;a class="a-link
-              a-link__icon"
-      href="#"&gt;
-        {% include icons/mail.svg %}
-        &lt;span class="a-link_text"&gt;john.smith@cfpb.gov&lt;/span&gt;
-    &lt;/a&gt;.
     Documents minicons can emphasize a link that contains a
     &lt;a class="a-link
               a-link__icon"
@@ -1876,11 +1857,11 @@
 
                 <!-- Specs -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-links-with-icon-to-prevent-the-l-specs-1">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-standard-link-with-icon-to-preve-specs-1">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
-                            <p>Icons appear to the right of the link text. The color and font-size of icons should be the same as the adjacent text, including state changes. Icons are never underlined.</p>
+                            
 
                         </div>
                     </div>
@@ -1907,7 +1888,7 @@
 
             
             <div class="m-variation_description">
-                <p>Warning: Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the <code class="language-plaintext highlighter-rouge">__no-wrap</code> modifier to <code class="language-plaintext highlighter-rouge">.a-link__icon</code>.</p>
+                <p>Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the <code class="language-plaintext highlighter-rouge">__no-wrap</code> modifier to <code class="language-plaintext highlighter-rouge">.a-link__icon</code>.</p>
 
             </div>
             
@@ -1915,7 +1896,7 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                For more information, email
+                For more information on the upcoming event, or to RSVP, email
 <a class="a-link
           a-link__icon
           a-link__no-wrap" href="#">
@@ -1936,15 +1917,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-non-wrapping-icon-links-warning--2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-non-wrapping-icon-links-warning--2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-non-wrapping-icon-links-icons-ad-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-non-wrapping-icon-links-icons-ad-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-non-wrapping-icon-links-warning--2">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-non-wrapping-icon-links-icons-ad-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-non-wrapping-icon-links-warning--html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#details-non-wrapping-icon-links-icons-ad-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -1956,11 +1937,11 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-non-wrapping-icon-links-warning--html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="details-non-wrapping-icon-links-icons-ad-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">For more information, email
+                            <pre><code class="language-html">For more information on the upcoming event, or to RSVP, email
 &lt;a class="a-link
           a-link__icon
           a-link__no-wrap"
@@ -2000,7 +1981,7 @@
 
         
         <div class="o-variation_group_description">
-            <p>“Jump links” are standalone links that respond to small screens by converting to full block links that have a finger-friendly touch area. Reduce screen size to see these in action.</p>
+            <p>Jump links are standalone links that respond to small screens by converting to full block links that have a finger-friendly touch area. Reduce screen size to see these in action.</p>
 
         </div>
         
@@ -2031,7 +2012,7 @@
                 <a class="a-link
           a-link__jump
           a-link__icon-after-text" href="#">
-<span class="a-link_text">Jump link</span>
+<span class="a-link_text">Default jump link</span>
     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg>
 </a>
             </div>
@@ -2076,7 +2057,7 @@
           a-link__jump
           a-link__icon-after-text"
   href="#"&gt;
-&lt;span class="a-link_text"&gt;Jump link&lt;/span&gt;
+&lt;span class="a-link_text"&gt;Default jump link&lt;/span&gt;
     {% include icons/right.svg %}
 &lt;/a&gt;</code></pre>
                         </div>
@@ -2498,14 +2479,15 @@
             <div class="m-variation_description">
                 <p>Navigation links are not underlined and do not get a visited link style.</p>
 
+<p><img src="/design-system/images/uploads/navigation_links.png" alt="Image of navigation links"></p>
+
             </div>
             
 
             <!-- Live code example -->
             
             <div class="a-live_code">
-                Needs code snippet!
-<!-- 
+                <!-- 
 <ul class="toc">
     <li><a href="#">Home</a></li>
     <li><a href="#">About</a></li>
@@ -2557,8 +2539,7 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">Needs code snippet!
-&lt;!-- 
+                            <pre><code class="language-html">&lt;!-- 
 &lt;ul class="toc"&gt;
     &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
@@ -2615,7 +2596,7 @@ No visited link style</p>
                 <p>
                 </p>
 <h3 id="default-links">Default links</h3>
-<p>In general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content.</p>
+<p>In general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.</p>
 
 <h3 id="opening-a-link-in-a-new-tab">Opening a link in a new tab</h3>
 <p>Links should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.</p>
@@ -2636,6 +2617,21 @@ No visited link style</p>
     
 
     <div class="content-l u-mb45">
+        
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="related-items">Related Items</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <ul>
+  <li><a href="https://cfpb.github.io/design-system/components/variables#typography-1">Variables</a></li>
+  <li><a href="design-system/components/buttons">Buttons</a></li>
+  <li>Typography</li>
+</ul>
+
+                </section>
+            </div>
+        </div>
         
     </div>
 <!-- .content-l -->
@@ -2678,8 +2674,8 @@ No visited link style</p>
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/links.md">
-                    <time datetime="2020-06-17 13:15:32 -0400">
-                         1:15:32 PM Jun 17, 2020
+                    <time datetime="2020-06-19 14:42:30 -0400">
+                         2:42:30 PM Jun 19, 2020
                     </time>
                 </a>
             </small>

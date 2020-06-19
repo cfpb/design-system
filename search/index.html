@@ -3746,7 +3746,7 @@ Label heading
 
                 
                     'variation_name1': 'Inline links',
-                    'variation_description1': "Inline links should be Regular weight if inline with other text (e.g., within a paragraph like this one).",
+                    'variation_description1': "Inline links should be regular weight if inline with other text (e.g., within a paragraph like this one).",
                     'variation_code_snippet1': `&lt;!--Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.--&gt;
 
 &lt;!--
@@ -3762,7 +3762,7 @@ Label heading
 &lt;p&gt;Here&#39;s the &lt;a href=&quot;#&quot;&gt;default link style&lt;/a&gt;. For reference, here&#39;s the &lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;hover link style&lt;/a&gt;. Train your eyes on the &lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;focused link style&lt;/a&gt;. Jump to the &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;active link style&lt;/a&gt;. We’ve all been to the &lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;visited link style&lt;/a&gt;.&lt;/p&gt;`,
                 
                     'variation_name2': 'Standalone links',
-                    'variation_description2': "Standalone links (e.g., in a call to action or list of links) should be Medium weight.",
+                    'variation_description2': "Standalone links (e.g., in a call to action or list of links) should be medium weight.",
                     'variation_code_snippet2': `&lt;ul class=&quot;medium-ex m-list m-list__unstyled&quot;&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;
         &lt;a href=&quot;#&quot;&gt;Default link style&lt;/a&gt;
@@ -3786,16 +3786,9 @@ Label heading
                 
 
                 
-                    'variation_name1': 'Links with icon',
-                    'variation_description1': "To prevent the link’s underline from extending under the icon, you must wrap the link text with a span.icon-link_text. There can be no whitespace between the text and the opening and closing span tags.Include the icon either prior to or after the a-link_text. It is important the text and icon are siblings to correctly handle underlines.",
+                    'variation_name1': 'Standard link with icon',
+                    'variation_description1': "To prevent the link’s underline from extending under the icon, wrap the link text with a span.icon-link_text. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the a-link_text. It is important the text and icon are siblings to correctly handle underlines.",
                     'variation_code_snippet1': `&lt;p&gt;
-  Use the email icon to emphasize an email address like
-    &lt;a class=&quot;a-link
-              a-link__icon&quot;
-      href=&quot;#&quot;&gt;
-        {% include icons/mail.svg %}
-        &lt;span class=&quot;a-link_text&quot;&gt;john.smith@cfpb.gov&lt;/span&gt;
-    &lt;/a&gt;.
     Documents minicons can emphasize a link that contains a
     &lt;a class=&quot;a-link
               a-link__icon&quot;
@@ -3813,8 +3806,8 @@ Label heading
 &lt;/p&gt;`,
                 
                     'variation_name2': 'Non-wrapping icon links',
-                    'variation_description2': "Warning: Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the __no-wrap modifier to .a-link__icon.",
-                    'variation_code_snippet2': `For more information, email
+                    'variation_description2': "Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the __no-wrap modifier to .a-link__icon.",
+                    'variation_code_snippet2': `For more information on the upcoming event, or to RSVP, email
 &lt;a class=&quot;a-link
           a-link__icon
           a-link__no-wrap&quot;
@@ -3834,7 +3827,7 @@ Label heading
           a-link__jump
           a-link__icon-after-text&quot;
   href=&quot;#&quot;&gt;
-&lt;span class=&quot;a-link_text&quot;&gt;Jump link&lt;/span&gt;
+&lt;span class=&quot;a-link_text&quot;&gt;Default jump link&lt;/span&gt;
     {% include icons/right.svg %}
 &lt;/a&gt;`,
                 
@@ -3883,8 +3876,7 @@ Label heading
                 
                     'variation_name2': 'Navigation links',
                     'variation_description2': "Navigation links are not underlined and do not get a visited link style.",
-                    'variation_code_snippet2': `Needs code snippet!
-&lt;!-- 
+                    'variation_code_snippet2': `&lt;!-- 
 &lt;ul class=&quot;toc&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
@@ -3897,13 +3889,13 @@ Label heading
 
 
             'title': 'Links',
-            'description': "Links lead users to a different page or further information. In contrast, buttons are used to signal actions. Users should be able to identify links without relying on color or styling alone.More information can be found at:  https://cfpb.github.io/design-manual/page-components/links.html  https://cfpb.github.io/capital-framework/components/cf-core/#default-links  https://cfpb.github.io/capital-framework/components/cf-typography/#link-patterns",
+            'description': "Links lead users to a different page or further information. In contrast, buttons are used to signal actions. Users should be able to identify links without relying on color or styling alone.",
             'use_cases': "",
             'content_guidelines': "",
-            'behavior': "Default linksIn general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content.Opening a link in a new tabLinks should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.Add target=\"_blank\" rel=\"noopener noreferrer\" to direct these links to securely open in a new tab.Add an aria-label that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be aria-label=\"Learn why some county data are unavailable. (Link opens in new tab.)\" This meets WCAG guideline 3.2 that webpages should work in a predictable way.",
+            'behavior': "Default linksIn general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.Opening a link in a new tabLinks should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.Add target=\"_blank\" rel=\"noopener noreferrer\" to direct these links to securely open in a new tab.Add an aria-label that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be aria-label=\"Learn why some county data are unavailable. (Link opens in new tab.)\" This meets WCAG guideline 3.2 that webpages should work in a predictable way.",
             'accessibility': "",
             'research': "",
-            'related_items': "",
+            'related_items': "  Variables  Buttons  Typography",
             'url': 'components/links'
         }
         ,

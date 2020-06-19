@@ -1452,11 +1452,13 @@
         <span class="a-btn_icon a-btn_icon__on-left"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 559.6 1200" class="cf-icon-svg"><path d="M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z"></path></svg></span>
         Newer
     </a>
+
     <a class="a-btn
-              m-pagination_btn-next" href="?page=23#pagination_content">
+              m-pagination_btn-next" href="?page=23#pagination_content">Older
         <span class="a-btn_icon a-btn_icon__on-right"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg></span>
-        Older
+      
     </a>
+
     <form class="m-pagination_form" action="#pagination_content">
         <label class="m-pagination_label" for="m-pagination_current-page">
             Page
@@ -1507,6 +1509,12 @@
                     </li>
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-default-pagination-div-id-pagina-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
@@ -1526,12 +1534,14 @@
         &lt;span class="a-btn_icon a-btn_icon__on-left"&gt;{% include icons/left.svg %}&lt;/span&gt;
         Newer
     &lt;/a&gt;
+
     &lt;a class="a-btn
               m-pagination_btn-next"
-      href="?page=23#pagination_content"&gt;
+      href="?page=23#pagination_content"&gt;Older
         &lt;span class="a-btn_icon a-btn_icon__on-right"&gt;{% include icons/right.svg %}&lt;/span&gt;
-        Older
+      
     &lt;/a&gt;
+
     &lt;form class="m-pagination_form"
           action="#pagination_content"&gt;
         &lt;label class="m-pagination_label"
@@ -1581,6 +1591,16 @@
 
                 <!-- Specs -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-default-pagination-div-id-pagina-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <p><a href="https://cfpb.github.io/design-system/components/variables#pagination">Color and sizing variables</a></p>
+
+                        </div>
+                    </div>
+                </section>
+                
 
             </div>
 <!-- .govuk-tabs -->
@@ -1610,7 +1630,19 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <nav class="m-pagination" role="navigation" aria-label="Pagination">    <a class="a-btn              a-btn__disabled m-pagination_btn-prev">        <span class="a-btn_icon a-btn_icon__on-left"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 559.6 1200" class="cf-icon-svg"><path d="M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z"></path></svg></span>        Newer </a>    <a class="a-btn              m-pagination_btn-next" href="?page=2#pagination_content">        Older        <span class="a-btn_icon a-btn_icon__on-right"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg></span>    </a>    <form class="m-pagination_form" action="#pagination_content">        <label class="m-pagination_label" for="m-pagination_current-page">            Page            <span class="u-visually-hidden">                number 1 out </span>            <input class="m-pagination_current-page" id="m-pagination_current-page" name="page" type="number" min="1" max="149" pattern="[0-9]*" inputmode="numeric" value="1">            of 149        </label>        <button class="a-btn                       a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit" type="submit">Go</button> </form></nav>
+                <nav class="m-pagination" role="navigation" aria-label="Pagination">    
+<a class="a-btn  a-btn__disabled m-pagination_btn-prev">        
+<span class="a-btn_icon a-btn_icon__on-left"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 559.6 1200" class="cf-icon-svg"><path d="M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z"></path></svg></span>        Newer </a>    
+
+<a class="a-btn m-pagination_btn-next" href="?page=2#pagination_content">        Older        
+<span class="a-btn_icon a-btn_icon__on-right"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg></span>    
+</a>    
+
+<form class="m-pagination_form" action="#pagination_content">        
+<label class="m-pagination_label" for="m-pagination_current-page">  Page            
+<span class="u-visually-hidden">                number 1 out </span>            
+<input class="m-pagination_current-page" id="m-pagination_current-page" name="page" type="number" min="1" max="149" pattern="[0-9]*" inputmode="numeric" value="1">            of 149        </label>        <button class="a-btn                       a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit" type="submit">Go</button> </form>
+</nav>
             </div>
             
 
@@ -1655,7 +1687,19 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;nav class="m-pagination" role="navigation" aria-label="Pagination"&gt;    &lt;a class="a-btn              a-btn__disabled m-pagination_btn-prev"&gt;        &lt;span class="a-btn_icon a-btn_icon__on-left"&gt;{% include icons/left.svg %}&lt;/span&gt;        Newer &lt;/a&gt;    &lt;a class="a-btn              m-pagination_btn-next" href="?page=2#pagination_content"&gt;        Older        &lt;span class="a-btn_icon a-btn_icon__on-right"&gt;{% include icons/right.svg %}&lt;/span&gt;    &lt;/a&gt;    &lt;form class="m-pagination_form" action="#pagination_content"&gt;        &lt;label class="m-pagination_label" for="m-pagination_current-page"&gt;            Page            &lt;span class="u-visually-hidden"&gt;                number 1 out &lt;/span&gt;            &lt;input class="m-pagination_current-page" id="m-pagination_current-page" name="page"                   type="number" min="1"                   max="149" pattern="[0-9]*"                   inputmode="numeric" value="1"&gt;            of 149        &lt;/label&gt;        &lt;button class="a-btn                       a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit"                type="submit"&gt;Go&lt;/button&gt; &lt;/form&gt;&lt;/nav&gt;</code></pre>
+                            <pre><code class="language-html">&lt;nav class="m-pagination" role="navigation" aria-label="Pagination"&gt;    
+&lt;a class="a-btn  a-btn__disabled m-pagination_btn-prev"&gt;        
+&lt;span class="a-btn_icon a-btn_icon__on-left"&gt;{% include icons/left.svg %}&lt;/span&gt;        Newer &lt;/a&gt;    
+
+&lt;a class="a-btn m-pagination_btn-next" href="?page=2#pagination_content"&gt;        Older        
+&lt;span class="a-btn_icon a-btn_icon__on-right"&gt;{% include icons/right.svg %}&lt;/span&gt;    
+&lt;/a&gt;    
+
+&lt;form class="m-pagination_form" action="#pagination_content"&gt;        
+&lt;label class="m-pagination_label" for="m-pagination_current-page"&gt;  Page            
+&lt;span class="u-visually-hidden"&gt;                number 1 out &lt;/span&gt;            
+&lt;input class="m-pagination_current-page" id="m-pagination_current-page" name="page"                   type="number" min="1"                   max="149" pattern="[0-9]*"                   inputmode="numeric" value="1"&gt;            of 149        &lt;/label&gt;        &lt;button class="a-btn                       a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit"                type="submit"&gt;Go&lt;/button&gt; &lt;/form&gt;
+&lt;/nav&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1726,6 +1770,19 @@
 
     <div class="content-l u-mb45">
         
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="related-items">Related Items</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <ul>
+  <li><a href="https://cfpb.github.io/design-system/components/variables#pagination">Variables</a></li>
+</ul>
+
+                </section>
+            </div>
+        </div>
+        
     </div>
 <!-- .content-l -->
 
@@ -1767,8 +1824,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/pagination.md">
-                    <time datetime="2020-06-15 13:01:25 -0400">
-                         1:01:25 PM Jun 15, 2020
+                    <time datetime="2020-06-19 13:16:50 -0400">
+                         1:16:50 PM Jun 19, 2020
                     </time>
                 </a>
             </small>

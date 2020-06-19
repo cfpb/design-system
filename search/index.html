@@ -4410,12 +4410,14 @@ Label heading
         &lt;span class=&quot;a-btn_icon a-btn_icon__on-left&quot;&gt;{% include icons/left.svg %}&lt;/span&gt;
         Newer
     &lt;/a&gt;
+
     &lt;a class=&quot;a-btn
               m-pagination_btn-next&quot;
-      href=&quot;?page=23#pagination_content&quot;&gt;
+      href=&quot;?page=23#pagination_content&quot;&gt;Older
         &lt;span class=&quot;a-btn_icon a-btn_icon__on-right&quot;&gt;{% include icons/right.svg %}&lt;/span&gt;
-        Older
+      
     &lt;/a&gt;
+
     &lt;form class=&quot;m-pagination_form&quot;
           action=&quot;#pagination_content&quot;&gt;
         &lt;label class=&quot;m-pagination_label&quot;
@@ -4445,7 +4447,19 @@ Label heading
                 
                     'variation_name2': 'First and last pages',
                     'variation_description2': "When on the first or last page of paginated content, be sure to disable the appropriate buttons by adding the a_btn__disabled modifier and removing their href attribute.",
-                    'variation_code_snippet2': `&lt;nav class=&quot;m-pagination&quot; role=&quot;navigation&quot; aria-label=&quot;Pagination&quot;&gt;    &lt;a class=&quot;a-btn              a-btn__disabled m-pagination_btn-prev&quot;&gt;        &lt;span class=&quot;a-btn_icon a-btn_icon__on-left&quot;&gt;{% include icons/left.svg %}&lt;/span&gt;        Newer &lt;/a&gt;    &lt;a class=&quot;a-btn              m-pagination_btn-next&quot; href=&quot;?page=2#pagination_content&quot;&gt;        Older        &lt;span class=&quot;a-btn_icon a-btn_icon__on-right&quot;&gt;{% include icons/right.svg %}&lt;/span&gt;    &lt;/a&gt;    &lt;form class=&quot;m-pagination_form&quot; action=&quot;#pagination_content&quot;&gt;        &lt;label class=&quot;m-pagination_label&quot; for=&quot;m-pagination_current-page&quot;&gt;            Page            &lt;span class=&quot;u-visually-hidden&quot;&gt;                number 1 out &lt;/span&gt;            &lt;input class=&quot;m-pagination_current-page&quot; id=&quot;m-pagination_current-page&quot; name=&quot;page&quot;                   type=&quot;number&quot; min=&quot;1&quot;                   max=&quot;149&quot; pattern=&quot;[0-9]*&quot;                   inputmode=&quot;numeric&quot; value=&quot;1&quot;&gt;            of 149        &lt;/label&gt;        &lt;button class=&quot;a-btn                       a-btn__link m-pagination_btn-submit&quot; id=&quot;m-pagination_btn-submit&quot;                type=&quot;submit&quot;&gt;Go&lt;/button&gt; &lt;/form&gt;&lt;/nav&gt;`,
+                    'variation_code_snippet2': `&lt;nav class=&quot;m-pagination&quot; role=&quot;navigation&quot; aria-label=&quot;Pagination&quot;&gt;    
+&lt;a class=&quot;a-btn  a-btn__disabled m-pagination_btn-prev&quot;&gt;        
+&lt;span class=&quot;a-btn_icon a-btn_icon__on-left&quot;&gt;{% include icons/left.svg %}&lt;/span&gt;        Newer &lt;/a&gt;    
+
+&lt;a class=&quot;a-btn m-pagination_btn-next&quot; href=&quot;?page=2#pagination_content&quot;&gt;        Older        
+&lt;span class=&quot;a-btn_icon a-btn_icon__on-right&quot;&gt;{% include icons/right.svg %}&lt;/span&gt;    
+&lt;/a&gt;    
+
+&lt;form class=&quot;m-pagination_form&quot; action=&quot;#pagination_content&quot;&gt;        
+&lt;label class=&quot;m-pagination_label&quot; for=&quot;m-pagination_current-page&quot;&gt;  Page            
+&lt;span class=&quot;u-visually-hidden&quot;&gt;                number 1 out &lt;/span&gt;            
+&lt;input class=&quot;m-pagination_current-page&quot; id=&quot;m-pagination_current-page&quot; name=&quot;page&quot;                   type=&quot;number&quot; min=&quot;1&quot;                   max=&quot;149&quot; pattern=&quot;[0-9]*&quot;                   inputmode=&quot;numeric&quot; value=&quot;1&quot;&gt;            of 149        &lt;/label&gt;        &lt;button class=&quot;a-btn                       a-btn__link m-pagination_btn-submit&quot; id=&quot;m-pagination_btn-submit&quot;                type=&quot;submit&quot;&gt;Go&lt;/button&gt; &lt;/form&gt;
+&lt;/nav&gt;`,
                 
             
 
@@ -4457,7 +4471,7 @@ Label heading
             'behavior': "@bp-xs-max: On small screens, the buttons display next to each other, stacked on top of the form",
             'accessibility': "",
             'research': "",
-            'related_items': "",
+            'related_items': "  Variables",
             'url': 'components/pagination'
         }
         ,

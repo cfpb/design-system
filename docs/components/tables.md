@@ -50,42 +50,51 @@ variation_groups:
           Note: While th elements normally only contain raw text, they may sometimes contain heading elements when that would be beneficial to navigating a page’s content with a screenreader.
 
           -->
-        variation_specs: |-
-          ### Color variables
+        variation_specs: >-
+          [Color variables for
+          tables](https://cfpb.github.io/design-system/components/variables#tables)
 
-          https://cfpb.github.io/design-system/components/variables#tables  
 
           ### Specs for default and directory table (large screens)
 
+
           #### Header
+
           - Background: Gray-05 #F8F8F8
+
           - Font: Avenir Next Demi-bold, all caps
+
           - Font-color: Black #101820
+
           - Font-size: 14px
 
+
           #### Border 
+
           - Bottom: 1px, Gray-50 #BABBBD on each row, including header
 
+
           #### Cells
+
           - Background: Gray-05 #F8F8F8
+
           - Font: Avenir Next Regular Black
+
           - Font-color: Black #101820
+
           - Font-size: 16px
+
           - Padding: 10px 
         variation_implementation: ""
   - variation_group_name: Responsive tables
     variation_group_description: >-
-      Responsive tables fall into two main types: 
-
-      * Stacked, which stacks information vertically on smaller screens 
-
-      * Scrolling, which ensures that all the information can be accessed in its original tabular structure, even on a smaller screen. 
-
-
-      Note that tables are **not** responsive unless you add one of the small screen classes detailed below. 
+      Responsive tables fall into two main types: stacked, which stacks
+      information vertically on smaller screens, and scrolling, which ensures
+      that all the information can be accessed in its original tabular
+      structure, even on a smaller screen. 
 
 
-      Also note that the `data-label` attribute must be used to label each cell in a `table` for small screen responsive views. 
+      Note that tables are **not** responsive unless you add one of the small screen classes detailed below. Also note that the `data-label` attribute must be used to label each cell in a `table` for small screen responsive views. 
     variations:
       - variation_name: Responsive stacked table
         variation_description: >

@@ -4,20 +4,16 @@ layout: variation
 section: components
 secondary_section: Layout options
 status: Released
-description: Tables divide information into distinct columns and rows to create
-  an intersection “cell” where data is displayed.
+description: "Tables allow for the presentation of many data points grouped
+  together in a visual way. They serve a unique purpose of allowing easy
+  organization or comparison of more complex data than a chart or graph. They
+  can be read either vertically (by columns) or horizontally (by rows). "
 variation_groups:
   - variation_group_name: Standard table
-    variation_group_description: >-
-      This is the default style at the large screen breakpoint. It is also how
-      the directory table pattern appears at the large screen breakpoint. This
-      is equivalent to defining a classless `table` element.
-
-
-      Tables are not responsive by default. See options below for [responsive tables](https://cfpb-sandbox.github.io/design-system/components/tables#responsive-tables).
-
-
-      For design specs, look under the "Show detail" link.
+    variation_group_description: This is the default style at the large screen
+      breakpoint. Tables are not responsive by default; see options below for
+      [responsive
+      tables](https://cfpb-sandbox.github.io/design-system/components/tables#responsive-tables).
     variations:
       - variation_code_snippet: >-
           <table>
@@ -83,6 +79,7 @@ variation_groups:
           - Font-color: Black #101820
           - Font-size: 16px
           - Padding: 10px 
+        variation_implementation: ""
   - variation_group_name: Responsive tables
     variation_group_description: >-
       Responsive tables fall into two main types: 

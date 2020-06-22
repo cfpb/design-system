@@ -7,7 +7,7 @@ status: Released
 description: The seal was created as a symbol of CFPB to use in uniquely
   governmental and ceremonial contexts.
 variation_groups:
-  - variation_group_name: ""
+  - variation_group_name: Types
     variations:
       - variation_description: >-
           The primary seal should be used on materials printed in color.
@@ -15,7 +15,47 @@ variation_groups:
 
           ![CFPB primary seal](/design-system/images/uploads/cfpb_primary_seal_color_rgb.png)
         variation_name: Primary seal
-  - variation_group_name: ""
+        variation_specs: |-
+          The seal is comprised of the following colors.
+
+          <h4>Dark Navy</h4>
+
+          **CMYK:** 100, 80, 6, 32
+
+          **RGB:** 0, 45, 114
+
+          **PMS:** 288C
+
+          <h4>Beige</h4>
+
+          **CMYK:** 0, 10, 50, 30
+
+          **RGB:** 190, 169, 111
+
+          **PMS:** 4515C
+
+          <h4>Mid beige</h4>
+
+          **CMYK:** 0, 6, 30, 18
+
+          **RGB:** 216, 200, 160
+
+          **PMS:** 4515C 60%
+
+          <h4>Light beige</h4>
+
+          **CMYK:** 0, 2, 10, 6
+
+          **RGB:** 240, 232, 216
+
+          **PMS:** 4515C 30%
+
+          <h4>White</h4>
+
+          **CMYK:** 0, 0, 0, 0
+
+          **RGB:** 255, 255, 255
+  - variation_group_name: Variations
     variations:
       - variation_name: One-color seal
         variation_description: >-
@@ -78,47 +118,6 @@ restrictions:
       * Don’t rotate the seal. This impairs readability.
 
       * Don't place the seal on a background that is a pattern, photo, or color other than white or navy.
-related_items: |-
-  ## Color
-
-  The seal is comprised of the following colors.
-
-  <h4>Dark Navy</h4>
-
-  **CMYK:** 100, 80, 6, 32
-
-  **RGB:** 0, 45, 114
-
-  **PMS:** 288C
-
-  <h4>Beige</h4>
-
-  **CMYK:** 0, 10, 50, 30
-
-  **RGB:** 190, 169, 111
-
-  **PMS:** 4515C
-
-  <h4>Mid beige</h4>
-
-  **CMYK:** 0, 6, 30, 18
-
-  **RGB:** 216, 200, 160
-
-  **PMS:** 4515C 60%
-
-  <h4>Light beige</h4>
-
-  **CMYK:** 0, 2, 10, 6
-
-  **RGB:** 240, 232, 216
-
-  **PMS:** 4515C 30%
-
-  <h4>White</h4>
-
-  **CMYK:** 0, 0, 0, 0
-
-  **RGB:** 255, 255, 255
+related_items: ""
 last_updated: 2020-02-27T16:56:46.952Z
 ---

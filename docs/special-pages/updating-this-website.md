@@ -105,7 +105,7 @@ description: >-
           </button>
           <div class="o-expandable_content">
               <p>
-                  Edit content in the left hand pane of the CMS. Preview your changes in the right hand pane.
+                  Edit content in the left hand pane of the CMS. Preview your changes in the right hand pane. Check out our <a href="/design-system/components/sample-component-page">sample component page</a> for tips on how to structure a typical page.
               </p>
               <div class="o-well">
                   <img src="/design-system/images/uploads/cms-demo3.gif" alt="Screenshot showing how to edit a page in Netlify CMS" />
@@ -222,55 +222,37 @@ description: >-
   ## Creating new pages
 
 
+  1. To create a new page from scratch, click the "Create new page" button below.
 
-  1. Through the Design System site you can quickly add a new page. Navigate to
+  1. After logging into the CMS, you'll be taken to a blank page in the CMS. Follow the "Editing pages" steps above to edit and preview your new page.
 
-  the section of the site where you’d like to add a new page. For example, if
+  1. If you're unsure what sort of content you should add to a new Design System page, check out our [sample component page](/design-system/components/sample-component-page). Click its "edit" button to view the sample content laid out in the CMS.
 
-  you want to add a new component page, make sure you’re in the “Components”
-
-  section. 
-
-
-  2. Click the “+ Add new page” button at the bottom of the page.
+  1. If you'd like your new page to appear in the side navigation, see below.
 
 
-  3. If you haven’t already, log in to our CFPB GitHub repo.
+  <p>
+        <a href="/design-system/admin/#/collections/pages/new" class="a-btn" title="Create a new page for this website in Netlify CMS">Create new page</a>
+  </p>
 
 
-  4. Fill out the relevant fields of the CMS that appear on the left, a preview
-
-  of your page will appear on the right. You can edit the fields on the left as
-
-  needed. The rich text field will let you easily style the text, but you can
-
-  use additional markdown as needed to create the page content you want.
+  ## Editing the side navigation menu
 
 
-  5. Click “Save” at the top of the screen to save your work. Netlify will
+  1. To add new pages to the side navigation, or to rearrange the order of existing pages in the navigation, click the "Edit the side navigation" button below.
 
-  create a pull request in our public GitHub repo:
-
-  <https://github.com/cfpb/design-system/pulls>. 
+  1. After logging into the CMS, navigation sections and their pages can be added, edited and removed. You'll see a preview of the side navigation in the right-hand preview pane.
 
 
-  6. Your work will not be visible until your pull request has been approved and
-
-  merged.
-
+  <p>
+        <a href="/design-system/admin/#/collections/navigation/entries/side-navigation" class="a-btn" title="Edit the side navigation">Edit the side navigation</a>
+  </p>
 
 
   ## Uploading images
 
 
-
-  When editing a page, click the `+` icon to add an image. Select an image from
-
-  the current library or upload a new image from your computer. Note: Due to a
-
-  bug in Netlify CMS, the image might not immediately appear in the preview
-
-  pane.
+  When editing a page, click the `+` icon to add an image. Select an image from the current library or upload a new image from your computer. Note: Due to a bug in Netlify CMS, the image might not immediately appear in the preview pane.
 
 
 
@@ -279,22 +261,4 @@ description: >-
   CMS](/design-system/images/uploads/uploading-cms-images.png "Screenshot of
 
   image upload in CMS")
-
-
-
-  ## Updating navigation
-
-
-
-  Change a page’s location in the side navigation by changing the "Navigation
-
-  Section" field in the CMS.
-
-
-
-  ![Screenshot of navigation section in
-
-  CMS](/design-system/images/uploads/netlify-cms-navigation-section.png
-
-  "Screenshot of navigation section in CMS")
 ---

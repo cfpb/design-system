@@ -9,13 +9,6 @@ description: >-
 
 
   They are visually simple, quickly recognizable, and easy to understand. They are almost always used in context with descriptive text and function to reinforce the message of that text.
-
-
-  This page is under active development. Information is being moved into it from these pages:
-
-  * http://cfpb.github.io/design-manual/brand-guidelines/minicons.html
-
-  * https://cfpb.github.io/capital-framework/components/cf-icons/
 variation_groups:
   - variation_group_name: ""
     variations:
@@ -60,7 +53,15 @@ variation_groups:
         variation_description: "* Paired with primary headers"
         variation_name: Extra large
       - variation_code_snippet: ""
-        variation_description: ""
+        variation_description: In certain instances, minicons can be animated to aid
+          communication or to reassure the user that an action is functioning as
+          intended. Examples include saving or loading content. Depending on the
+          context, the animated minicon follows the standards of the component
+          that contains it, for example, the minicon follows the size and
+          padding standards for buttons when placed inside a [button to indicate
+          loading](http://cfpb.github.io/design-manual/page-components/buttons.html#animation)
+          or follows standards of a form-level alert within an [alert
+          message](http://cfpb.github.io/design-manual/page-components/form-fields.html#form-level-action).
         variation_name: Animated icon
       - variation_code_snippet: ""
         variation_description: >-
@@ -349,11 +350,11 @@ use_cases: >-
   ##### Spacing
 
 
-  Padding varies around icons of various primary shapes. Square, vertically and horizontally rectangular, diagonal, and most complex icons can fit within the relative padding bounding box. Circular and some complex icons should be slightly larger to offset the visual weight of surrounding negative space.
+  Padding varies around icons of various primary shapes. Square, vertically and horizontally rectangular, diagonal, and most complex icons can fit within the relative padding bounding box. Circular and some complex icons should be slightly larger to offset the visual weight of surrounding negative space. 
 
-  ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png "Icon
-  spacing diagram")
-content_guidelines: ''
+
+  ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png "Icon spacing diagram")
+content_guidelines: ""
 behavior: >-
   In certain instances, icons can be animated to aid communication or to
   reassure the user that an action is functioning as intended. Examples include

@@ -11,7 +11,7 @@ description: >-
 
   The following sets of colors maintain CFPB brand cohesion and create accessible graphics.
 variation_groups:
-  - variation_group_name: ""
+  - variation_group_name: Palettes
     variations:
       - variation_description: >-
           Our core brand color is CFPB Green. Green 60 and Green 20 play a

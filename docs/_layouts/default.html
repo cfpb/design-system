@@ -40,10 +40,12 @@
     var PAGES_ALLOWED = {};
     {%- for p in site.pages -%}
       {%- if p.title -%}
+        {% assign collection_name = p.collection_name %}
+        {% unless collection_name %}{% assign collection_name = 'pages' %}{% endunless %}
         {%- capture edit_url -%}
-          {{-"/admin/#/collections/" | append: p.section | append: '/entries/' | relative_url -}}{{- p.path | split: '/' | last | replace: '.md' -}}
+          {{-'/admin/#/collections/' | relative_url -}}{{- collection_name }}/entries/{{- p.path | split: '/' | last | replace: '.md' -}}
         {%- endcapture -%}
-        PAGES_ALLOWED['{{ p.title | strip }}'] = '{{ edit_url }}';
+        PAGES_ALLOWED['{{ p.title | strip | escape }}'] = '{{ edit_url }}';
       {%- endif -%}
     {%- endfor -%}
   </script>

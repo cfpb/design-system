@@ -15,7 +15,7 @@ module Permalinks
           slug = page.data['title'].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
         end
         # Look out for the homepage and section index pages
-        if not page.data['section'] or slug == page.data['section']
+        if page.data['is_homepage'] or page.data['section'] == slug
           slug = 'index'
         end
         page.url = "#{page.data['section']}/#{slug}"

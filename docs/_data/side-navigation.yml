@@ -1,0 +1,110 @@
+first-level:
+  - heading: Foundation
+    second-level:
+      - heading: Basics
+        nav-items:
+          - page: Color
+          - page: Grid
+      - heading: Typography
+        nav-items:
+          - page: Headings
+          - page: Paragraphs
+          - page: Quotes
+      - heading: Brand symbools
+        nav-items:
+          - page: Beam pattern
+          - page: Logo
+          - page: Seal
+      - heading: Graphics
+        nav-items:
+          - page: Iconography
+          - page: Illustration
+          - page: Photography
+      - heading: Multimedia
+        nav-items:
+          - page: Animation
+          - page: Video
+  - heading: Components
+    second-level:
+      - heading: Alerts
+        nav-items:
+          - page: Banners
+          - page: Notifications
+      - heading: Behavior
+        nav-items:
+          - page: Expandables
+      - heading: Form elements
+        nav-items:
+          - page: Buttons
+          - page: Checkboxes
+          - page: Dropdowns and multi-selects
+          - page: Fieldsets
+          - page: Helper text
+          - page: Labels and legends
+          - page: Links
+          - page: Radio Buttons
+          - page: Range Sliders
+          - page: Text Inputs
+      - heading: Lists and tables
+        nav-items:
+          - page: Lists
+          - page: Tables
+  - heading: Patterns
+    second-level:
+      - heading: Interaction patterns
+        third-level:
+          - heading: Forms
+            nav-items:
+              - page: Forms
+              - page: E-mail Signup Forms
+              - page: Feedback Forms
+          - heading: Navigation
+            nav-items:
+              - page: Filterable list pages
+              - page: Pagination
+      - heading: Layout patterns
+        third-level:
+          - heading: Introductions
+            nav-items:
+              - page: Heroes
+              - page: Text introductions
+              - page: Item introductions
+          - heading: Featured content
+            nav-items:
+              - page: Cards
+              - page: Featured Content Module
+              - page: Wells
+          - heading: Main content
+            nav-items:
+              - page: "Info Unit Groups: Image and text"
+  - heading: Pages
+    nav-items:
+      - page: Landing pages
+      - page: Sublanding pages
+      - page: Browse pages
+      - page: Learn pages
+      - page: Filterable list pages
+      - page: Document detail pages
+  - heading: Development
+    second-level:
+      - heading: Atomic
+        nav-items:
+          - page: Atomic Components
+      - heading: Layout
+        nav-items:
+          - page: Base images
+          - page: Blocks
+          - page: Column dividers
+          - page: Main content and sidebars
+      - heading: Utilities
+        nav-items:
+          - page: Helper classes and mixins
+          - page: Media queries
+          - page: Variables
+  - heading: Guidelines
+    second-level:
+      - heading: Data visualization
+        nav-items:
+          - page: Bar Charts
+          - page: Line Charts
+          - page: Pie Charts

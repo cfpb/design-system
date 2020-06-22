@@ -4,7 +4,9 @@ layout: variation
 section: components
 secondary_section: Text
 status: Released
-description: This is description
+description: Paragraph text should provide an efficient and pleasant experience
+  on every viewport size. Readable text makes good use of alignment, spacing,
+  line length and height, and contrast.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -29,14 +31,8 @@ variation_groups:
           * Applies 8px bottom `margin` to list items that are not within a nav element.
 
           * Assumes that the font size of each of these items remains the default.
-        variation_specs: >-
-          Body text should provide an efficient and pleasant experience on every
-          viewport size. Readable text makes good use of alignment, spacing,
-          line length and height, and contrast. 
-
-
+        variation_specs: |-
           * Avenir Next Regular
-
           * 16px / 22px at all browser widths
       - variation_code_snippet: >-
           <p class="lead-paragraph">Ut enim ad minim veniam, quis nostrud
@@ -48,7 +44,9 @@ variation_groups:
         variation_specs: >-
           * Also referred to as a subheading
 
-          * Lead paragraph text is responsive. Displays as a Heading 3 (22px / 28px) on large screens (>601px wide). Displays at Heading 4 (18px / 22px but still Regular weight) on small screens (<601px wide).
+          * Avenir Next Regular
+
+          * Text is responsive. Displays as a Heading 3 (22px / 28px) on large screens (>601px wide). Displays at Heading 4 (18px / 22px but still Regular weight) on small screens (<601px wide).
       - variation_code_snippet: |-
           <p class="a-micro-copy">
               Lorem ipsum dolor sit amet

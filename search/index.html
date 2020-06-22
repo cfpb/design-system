@@ -1514,8 +1514,8 @@
 
 
             'title': 'Color',
-            'description': "A minimal palette, clear hierarchy, and ample whitespace ensure a voice of authority and expertise in communication.The following sets of colors maintain CFPB brand cohesion and create accessible graphics.This page is under active development. Information is being moved into it from these pages:  http://cfpb.github.io/design-manual/brand-guidelines/color-principles.html  http://cfpb.github.io/design-manual/data-visualization/color.html",
-            'use_cases': "When used properly, color can help clarify relationships between data, provide emphasis for certain data points, and maintain a consistent brand voice. When used poorly, color can overwhelm the user, make the data confusing and break with brand standards to appear inconsistent.  To highlight part of a set of data, or show that things are related, use a tint or a shade of the main color.  Use categorical color schemes when you’re visualizing groups of things. These are discrete colors that do not imply an visual relationship between the sets of data.  When you’re displaying sequential data that shows a range of data in a ranked order, use these sequential colors to imply the relationship.NOTE: The following update information was copy-pasted from the Design Manual, but does not apply to the Design System.To update the color palette within the Design Manual:  Update the values within the CFPB Brand Colors CSV file  From terminal within this repo run npm run colors, this will auto-generate a new brand-palette.less file  Run grunt build (you may need the -f flag because of linting issues)  Run npm start and check /design-manual/brand-guidelines/color-principles.html locally  Commit the changes and open a PR.Once the PR is merged, the Less file needs to be duplicated in Capital Framework CF Core and follow that project’s release process.",
+            'description': "A minimal palette, clear hierarchy, and ample whitespace ensure a voice of authority and expertise in communication.The following sets of colors maintain CFPB brand cohesion and create accessible graphics.",
+            'use_cases': "When used properly, color can help clarify relationships between data, provide emphasis for certain data points, and maintain a consistent brand voice. When used poorly, color can overwhelm the user, make the data confusing and break with brand standards to appear inconsistent.  To highlight part of a set of data, or show that things are related, use a tint or a shade of the main color.  Use categorical color schemes when you’re visualizing groups of things. These are discrete colors that do not imply an visual relationship between the sets of data.  When you’re displaying sequential data that shows a range of data in a ranked order, use these sequential colors to imply the relationship.",
             'content_guidelines': "",
             'behavior': "",
             'accessibility': "Color should never be solely relied on to convey meaning in a visualization because of accessibility standards for people who are blind and visually impaired. There should be other clues beyond color to convey meaning or relationship; this is a key reason that also directly labeling data and using patterns is important.You can use the Color Palette Accessibility Checker to check and confirm the accessibility of CFPB colors at different type sizes.Color blindnessWhen choosing colors for a graph, keep in mind that they may look different to people with color blindness. About 1 in 12 men with Northern European ancestry have green/red color blindness.Instead of green/red, the teal/red color combination should used instead for pro/con, yes/no, positive/negative relationships. This both improves accessibility associated with color blindness, and also leaves the CFPB green color to represent the brand.This is an example of a visualization using the green/red combination, and how it can appear to someone with red/green color blindness:This is an example of a visualization using the teal/red combination, and how it can appear to someone with red/green color blindness:  Do not use color as the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.  Text should have a contrast ratio of at least 4.5 : 1, but there are exceptions.          For large text, a contrast ratio of only 3 : 1 is necessary. Large regular text is at least 18pt/24px, while large bold text is 14pt/18px.      Text or images of text that are either pure decoration or not visible, or are part of a logo, picture that contains significant other visual content, or inactive UI components (like disabled form controls) do not have a color contrast requirement.      The Colour Contrast Check is a nice tool for testing color contrast ratios.",
@@ -3086,7 +3086,7 @@ The text will be styled the same as H5 heading text.
 
                 
                     'variation_name1': 'Block helper text',
-                    'variation_description1': "Block helper text appears directly below a label. Use it to explain why a piece of information is being requested, address security and privacy concerns, or to suggest ways of providing answers other than providing formatting examples.",
+                    'variation_description1': "Block helper text appears directly beneath a form label. Use it to explain why a piece of information is being requested, address security and privacy concerns, or to suggest ways of providing answers other than providing formatting examples.",
                     'variation_code_snippet1': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
 Label
     &lt;small class=&quot;a-label_helper a-label_helper__block&quot;&gt;Use block helper text for instructions&lt;/small&gt;
@@ -3095,7 +3095,7 @@ Label
 &lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;helper-example&quot;&gt;`,
                 
                     'variation_name2': 'Inline helper text',
-                    'variation_description2': "Inline helper text appears directly after a label. Use it to indicate whether a field is optional. See the behavior section for more information.",
+                    'variation_description2': "Inline helper text appears directly after a form label. Use it to indicate whether a field is optional. See the behavior section for more information.",
                     'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
  Label &lt;small class=&quot;a-label_helper&quot;&gt;(optional)&lt;/small&gt;
 &lt;/label&gt;
@@ -3103,7 +3103,7 @@ Label
 &lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;helper-example&quot;&gt;`,
                 
                     'variation_name3': 'Placeholder text',
-                    'variation_description3': "Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field.",
+                    'variation_description3': "Placeholder text appears within a text input field, and disappears once a user begins typing in that field. Use it for formatting examples only.",
                     'variation_code_snippet3': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-default&quot;&gt;
     Label
 &lt;/label&gt;

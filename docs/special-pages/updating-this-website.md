@@ -105,7 +105,7 @@ description: >-
           </button>
           <div class="o-expandable_content">
               <p>
-                  Edit content in the left hand pane of the CMS. Preview your changes in the right hand pane. Check out our <a href="/design-system/components/sample-component-page">sample component page</a> for tips on how to structure a typical page.
+                  Edit content in the left hand pane of the CMS. Preview your changes in the right hand pane. Check out our <a href="/design-system/sample-component-page">sample component page</a> for tips on how to structure a typical page.
               </p>
               <div class="o-well">
                   <img src="/design-system/images/uploads/cms-demo3.gif" alt="Screenshot showing how to edit a page in Netlify CMS" />
@@ -226,7 +226,7 @@ description: >-
 
   1. After logging into the CMS, you'll be taken to a blank page in the CMS. Follow the "Editing pages" steps above to edit and preview your new page.
 
-  1. If you're unsure what sort of content you should add to a new Design System page, check out our [sample component page](/design-system/components/sample-component-page). Click its "edit" button to view the sample content laid out in the CMS.
+  1. If you're unsure what sort of content you should add to a new Design System page, check out our [sample component page](/design-system/sample-component-page). Click its "edit" button to view the sample content laid out in the CMS.
 
   1. If you'd like your new page to appear in the side navigation, see below.
 

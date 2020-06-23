@@ -1,46 +1,45 @@
-{% comment %}
-    Create an empty array to store secondary nav sections
-{% endcomment %}
-{% assign secondary_sections = '' | split: ',' %}
-
-{% for p in site.pages %}
-    {% if p.section == page.section and p.secondary_section %}
-        {% unless secondary_sections contains p.secondary_section %}
-            {% assign secondary_sections = secondary_sections | push: p.secondary_section %}
-        {% endunless %}
-    {% endif %}
-{% endfor %}
-
-{% comment %}
-    Alphabetize the sections
-{% endcomment %}
-{% assign secondary_sections = secondary_sections | sort %}
-
-{% if secondary_sections %}
 <ul class="m-list m-list__unstyled">
-    {% for secondary_section in secondary_sections | sort %}
+{% for first in site.data.side-navigation.first-level %}
+    {% assign first_level_slug = first.heading | slugify %}
     <li class="m-list_item u-mb15">
-        <span class="h5">{{ secondary_section }}</span>
-        <ul class="m-list m-list__links">
-            {% for p in site.pages %}
-                {% if p.section == page.section and p.secondary_section == secondary_section %}
+        <div class="h4">
+            <a class="m-list_link" href="{{ first_level_slug | relative_url }}">{{ first.heading }}</a>
+        </div>
+        {% if page.section == first_level_slug or page == blank %}
+        <div class="m-list_item-subgroup">
+            {% if first.nav-items | size > 0 %}
+            <ul class="m-list m-list__links">
+            {% for link in first.nav-items %}
                 <li class="m-list_item">
-                    <a class="m-list_link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                    <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
                 </li>
-                {% endif %}
             {% endfor %}
-        </ul>
-    </li>
-    {% endfor %}
-</ul>
-{% else %}
-<ul class="m-list m-list__links">
-    {% for p in site.pages %}
-        {% if p.section == page.section %}
-        <li class="m-list_item">
-            <a class="m-list_link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
-        </li>
+            </ul>
+            {% endif %}
+            {% for second in first.second-level %}
+                <div class="h4 u-mt0">{{ second.heading }}</div>
+                {% if second.nav-items | size > 0 %}
+                <ul class="m-list m-list__links">
+                {% for link in second.nav-items %}
+                    <li class="m-list_item">
+                        <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+                {% for third in second.third-level %}
+                    <div class="h5" style="margin-top:16px">{{ third.heading }}</div>
+                    <ul class="m-list m-list__links">
+                    {% for link in third.nav-items %}
+                        <li class="m-list_item">
+                            <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endfor %}
+            {% endfor %}
+        </div>
         {% endif %}
-    {% endfor %}
+    </li>
+{% endfor %}
 </ul>
-{% endif %}

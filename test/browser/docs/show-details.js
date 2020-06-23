@@ -14,7 +14,7 @@ describe( 'The "show details" toggling feature', function() {
     browser.setWindowSize( 1024, 768 );
     const sideNav = $( '.nav-secondary' );
     sideNav.waitForDisplayed();
-    componentPages = $$( '.nav-secondary .m-list_link' ).map( el => ( {
+    componentPages = $$( '.m-list_item-subgroup .m-list_link' ).map( el => ( {
       name: el.getText(),
       url: el.getAttribute( 'href' )
     } ) );

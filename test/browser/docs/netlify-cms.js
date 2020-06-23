@@ -12,7 +12,7 @@ describe( 'Netlify CMS', function() {
   describe( 'Editing the homepage', function() {
 
     beforeEach( function() {
-      browser.url( '/design-system/admin/#/collections/generic-pages/entries/home' );
+      browser.url( '/design-system/admin/#/collections/special-pages/entries/home' );
       loginButton = browser.react$( 'LoginButton' );
     } );
 
@@ -33,7 +33,7 @@ describe( 'Netlify CMS', function() {
       loginButton.waitForDisplayed();
       loginButton.click();
       // The homepage's body field
-      const pageBodyField = $( '#nc-root #markdown-field-1' );
+      const pageBodyField = $( '#nc-root #description-field-2' );
       pageBodyField.waitForDisplayed();
       pageBodyField.clearValue();
       pageBodyField.setValue( 'browser tests are fun' );
@@ -48,7 +48,7 @@ describe( 'Netlify CMS', function() {
   describe( 'Editing a component page', function() {
 
     beforeEach( function() {
-      browser.url( '/design-system/admin/#/collections/components/entries/buttons' );
+      browser.url( '/design-system/admin/#/collections/pages/entries/buttons' );
       // Make the browser a little wider than normal to prevent the "show details" tabs
       // from triggering their mobile media queries
       browser.setWindowSize( 1400, 800 );

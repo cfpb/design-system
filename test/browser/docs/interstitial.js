@@ -17,7 +17,7 @@ describe( 'CMS interstitial page with editing instructions', function() {
     } );
 
     it( 'should show the interstitial if the user hasn\'t seen it before', function() {
-      expect( browser ).toHaveTitle( 'Updating this documentation - CFPB Design System' );
+      expect( browser ).toHaveTitle( 'Updating this website - CFPB Design System' );
     } );
 
     it( 'should not show the interstitial if the user has already seen it', function() {

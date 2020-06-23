@@ -7,7 +7,7 @@
         </div>
         {% if page.section == first_level_slug or page == blank %}
         <div class="m-list_item-subgroup">
-            {% if first.nav-items != '' %}
+            {% if first.nav-items | size > 0 %}
             <ul class="m-list m-list__links">
             {% for link in first.nav-items %}
                 <li class="m-list_item">
@@ -18,7 +18,7 @@
             {% endif %}
             {% for second in first.second-level %}
                 <div class="h4 u-mt0">{{ second.heading }}</div>
-                {% if second.nav-items != '' %}
+                {% if second.nav-items | size > 0 %}
                 <ul class="m-list m-list__links">
                 {% for link in second.nav-items %}
                     <li class="m-list_item">

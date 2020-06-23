@@ -73,14 +73,14 @@
             </div>
             {% endunless %}
 
-            {% assign code_snippet = variation.variation_code_snippet and variation.variation_code_snippet != '' %}
-            {% assign jinja_snippet = variation.variation_jinja_code_snippet and variation.variation_jinja_code_snippet != '' %}
-            {% assign implementation = variation.variation_implementation and variation.variation_implementation != '' %}
-            {% assign specs = variation.variation_specs and variation.variation_specs != '' %}
+            {% assign code_snippet = variation.variation_code_snippet | strip %}
+            {% assign jinja_snippet = variation.variation_jinja_code_snippet | strip %}
+            {% assign implementation = variation.variation_implementation | strip %}
+            {% assign specs = variation.variation_specs | strip %}
 
-            {% if code_snippet or jinja_snippet or implementation or specs %}
+            {% if code_snippet != "" or jinja_snippet != "" or implementation != "" or specs != "" %}
 
-            {% capture variation_slug %}
+            {%- capture variation_slug -%}
                 details-
                 {{ variation.variation_name }}
                 {{ variation.variation_description }}
@@ -88,7 +88,7 @@
                 {{ variation.variation_jinja_code_snippet }}
                 {{ variation.variation_implementation }}
                 {{ variation.variation_specs }}
-            {% endcapture %}
+            {%- endcapture -%}
             {% assign variation_slug = variation_slug | strip | slugify | truncate: 40, '' %}
 
             <div class="a-toggle_code">
@@ -98,28 +98,28 @@
 
             <div class="govuk-tabs u-hidden" data-module="tabs" id="{{ variation_slug }}-{{ forloop.index }}">
                 <ul class="govuk-tabs__list">
-                    {% if code_snippet %}
+                    {% if code_snippet != "" %}
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
                         <a class="govuk-tabs__tab" href="#{{ variation_slug }}-html-code-snippet-{{ forloop.index }}">
                             HTML code snippet
                         </a>
                     </li>
                     {% endif %}
-                    {% if jinja_snippet %}
+                    {% if jinja_snippet != "" %}
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#{{ variation_slug }}-jinja-code-snippet-{{ forloop.index }}">
                             Jinja code snippet
                         </a>
                     </li>
                     {% endif %}
-                    {% if implementation %}
+                    {% if implementation != "" %}
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#{{ variation_slug }}-implementation-{{ forloop.index }}">
                             Implementation
                         </a>
                     </li>
                     {% endif %}
-                    {% if specs %}
+                    {% if specs != "" %}
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#{{ variation_slug }}-specs-{{ forloop.index }}">
                             Specs
@@ -129,48 +129,48 @@
                 </ul>
 
                 <!-- HTML snippet -->
-                {% if code_snippet %}
+                {% if code_snippet != "" %}
                 <section class="govuk-tabs__panel" id="{{ variation_slug }}-html-code-snippet-{{ forloop.index }}">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">{{ variation.variation_code_snippet | xml_escape }}</code></pre>
+                            <pre><code class="language-html">{{ code_snippet | xml_escape }}</code></pre>
                         </div>
                     </div>
                 </section>
                 {% endif %}
 
                 <!-- Jinja snippet -->
-                {% if jinja_snippet %}
+                {% if jinja_snippet != "" %}
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="{{ variation_slug }}-jinja-code-snippet-{{ forloop.index }}">
                     <div class="variation-jinja-code-snippet">
                         <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">{{ variation.variation_jinja_code_snippet | xml_escape }}</code></pre>
+                            <pre><code class="language-html">{{ jinja_snippet | xml_escape }}</code></pre>
                         </div>
                     </div>
                 </section>
                 {% endif %}
 
                 <!-- Implementation details -->
-                {% if implementation %}
+                {% if implementation != "" %}
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="{{ variation_slug }}-implementation-{{ forloop.index }}">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
-                            {{ variation.variation_implementation | markdownify }}
+                            {{ implementation | markdownify }}
                         </div>
                     </div>
                 </section>
                 {% endif %}
 
                 <!-- Specs -->
-                {% if specs %}
+                {% if specs != "" %}
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="{{ variation_slug }}-specs-{{ forloop.index }}">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
-                            {{ variation.variation_specs | markdownify }}
+                            {{ specs | markdownify }}
                         </div>
                     </div>
                 </section>

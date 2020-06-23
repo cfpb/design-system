@@ -1,6 +1,6 @@
 ---
 title: Homepage
-layout: homepage
+layout: variation
 collection_name: special-pages
 is_homepage: true
 description: >-

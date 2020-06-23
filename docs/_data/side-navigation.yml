@@ -9,7 +9,7 @@ first-level:
         nav-items:
           - page: Headings
           - page: Paragraphs
-          - page: Quotes
+          - page: Fonts
       - heading: Brand symbools
         nav-items:
           - page: Beam pattern

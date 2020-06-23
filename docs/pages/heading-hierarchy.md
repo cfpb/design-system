@@ -2,10 +2,11 @@
 title: Headings
 layout: variation
 section: foundation
-secondary_section: Text
 status: Released
-description: Consistent scaling, weights, and capitalization are used to create
-  distinction between heading levels.
+description: A successful type hierarchy establishes the order of importance of
+  elements on a page. Consistent scaling, weights, and capitalization are used
+  to create distinction between heading levels and provide users with  familiar
+  focus points when scanning text.
 variation_groups:
   - variations:
       - variation_code_snippet: |-
@@ -25,38 +26,38 @@ variation_groups:
         variation_jinja_code_snippet: ""
         variation_name: ""
         variation_specs: "| Heading   |
-          Specs                                                             |
+          Specs                                                            |
           Responsive behavior at < 601px |
 
           | --------- |
-          ----------------------------------------------------------------- |
+          ---------------------------------------------------------------- |
           ------------------------------ |
 
           | Display   | Avenir Next Regular, 48px /
-          60px\x03                                 | Drops to Heading
+          60px\x03                                | Drops to Heading
           1             |
 
-          | Heading 1 | Avenir Next Regular. 34px /
-          42px\x03                                 | Drops to Heading
+          | Heading 1 | Avenir Next Regular, 34px /
+          42px\x03                                | Drops to Heading
           2             |
 
-          | Heading 2 | Avenir Next Regular. 34px /
-          42px                                  | Drops to Heading
+          | Heading 2 | Avenir Next Regular, 26px /
+          32px                                 | Drops to Heading
           3             |
 
           | Heading 3 | Avenir Next Regular, 22px /
-          28px                                  | Drops to Heading
+          28px                                 | Drops to Heading
           4             |
 
           | Heading 4 | Avenir Next Medium, 18px /
-          22px                                   | Drops to 16px /
+          22px                                  | Drops to 16px /
           18px           |
 
-          | Heading 5 | Avenir Next Demi Bold, 14px / 18px. All caps,
-          1px letter spacing  | No change                      |
+          | Heading 5 | Avenir Next Demi Bold, 14px / 18px, All caps,
+          1px letter spacing | No change                      |
 
-          | Heading 6 | Avenir Next Demi Bold, 12px / 15px. All caps,
-          1px letter spacing  | No change                      |"
+          | Heading 6 | Avenir Next Demi Bold, 12px / 15px, All caps,
+          1px letter spacing | No change                      |"
     variation_group_name: Web headings
     variation_group_description: At screen widths of 600px and below, the Display
       heading and Headings 1-4 drop in size. Headings 5-6 remain consistent at
@@ -164,9 +165,9 @@ variation_groups:
               </h2>
           </header>
     variation_group_description: The heading variations below have specific use cases.
-use_cases: ''
+use_cases: ""
 content_guidelines: |-
-  Headings should be sentence case. 
+  * Headings should be sentence case. 
   * Do not include punctuation in headings. 
   * Keep headings to one line on desktop when possible.
 behavior: >-
@@ -183,5 +184,6 @@ accessibility: Since categories can be repetitive, we suggest placing a label
   with `.u-visually-hidden` prior to the headings with icons to add more context
   for screen readers (see Meta Header).
 last_updated: 2019-10-21T21:54:52.744Z
+secondary_section: Text
 research: ""
 ---

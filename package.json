@@ -26,9 +26,9 @@
     "build": "yarn run compile-js && yarn run compile-css && bundle exec jekyll build",
     "build-netlify": "yarn --cwd ../ && webpack && yarn run compile-css && bundle exec jekyll build",
     "changelog": "./scripts/generate-changelog.sh",
-    "compile-css": "lessc --include-path=../packages/:../node_modules/normalize-css/normalize-css/ assets/css/main.less dist/css/main.css",
+    "compile-css": "lessc --include-path=packages/:node_modules/normalize-css/normalize-css/ docs/assets/css/main.less docs/dist/css/main.css",
     "compile-js": "NODE_ENV=production webpack",
-    "copy-packages": "cp -r ../packages/ assets/",
+    "copy-icons": "cp -r packages/cfpb-icons/src/icons docs/assets/",
     "design-system-link": "lerna exec -- yarn link",
     "design-system-unlink": "lerna exec -- yarn unlink",
     "install": "yarn run copy-icons && bundle install",
@@ -106,7 +106,7 @@
     "wcag": "^0.3.0",
     "wdio-chromedriver-service": "6.0.3",
     "webpack": "4.43.0",
-    "webpack-cli": "3.3.11",
+    "webpack-cli": "^3.3.12",
     "webpack-stream": "^5.0.0"
   }
 }

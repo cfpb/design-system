@@ -56,9 +56,9 @@ exports.config = {
       }
     },
     {
-      browserName: 'safari',
+      browserName: 'MicrosoftEdge',
       browserVersion: 'latest',
-      platformName: 'macOS 10.14',
+      platformName: 'Windows 10',
       'sauce:options': {
         screenResolution: '1024x768'
       },

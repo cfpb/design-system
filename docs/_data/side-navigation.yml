@@ -12,7 +12,6 @@ first-level:
           - page: Paragraphs
       - heading: Brand symbools
         nav-items:
-          - page: Beam pattern
           - page: Logo
           - page: Seal
       - heading: Graphics

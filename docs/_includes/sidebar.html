@@ -6,7 +6,7 @@
             <a class="m-list_link" href="{{ first_level_slug | relative_url }}">{{ first.heading }}</a>
         </div>
         {% if page.section == first_level_slug or page == blank %}
-        <div class="m-list_item__tertiary">
+        <div class="m-list_item-subgroup">
             {% if first.nav-items != '' %}
             <ul class="m-list m-list__links">
             {% for link in first.nav-items %}

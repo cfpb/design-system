@@ -7,9 +7,9 @@ first-level:
           - page: Grid
       - heading: Typography
         nav-items:
+          - page: Fonts
           - page: Headings
           - page: Paragraphs
-          - page: Fonts
       - heading: Brand symbools
         nav-items:
           - page: Beam pattern

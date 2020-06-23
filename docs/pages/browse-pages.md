@@ -46,17 +46,17 @@ content_guidelines: >-
   Try to avoid creating superfluous paragraphs to contain url text; list urls where possible and minimize unnecessary content; this will help the user browse and find what they need faster, and helps to give visual clarity without the need to read the entire paragraph to find what they need.
 
 
-  Area 1: Introduction
+  ##### Area 1: Introduction
 
   * Text introduction is required.
 
 
-  Area 2: Main content
+  ##### Area 2: Main content
 
   * Must contain at least 1 component.
 
 
-  Area 3: Prefooter
+  ##### Area 3: Prefooter
 
   * Optional.
 

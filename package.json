@@ -43,6 +43,7 @@
     "watch": "webpack --watch",
     "watch-css": "less-watch-compiler --less-args include-path=../packages/:../node_modules/normalize-css/normalize-css/ assets/css dist/css main.less"
   },
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",
   "dependencies": {
     "anchor-js": "^4.2.2",
     "escape-html": "^1.0.3",

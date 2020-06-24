@@ -2,7 +2,6 @@
 
 set -eu
 
-cd docs/
 yarn
 yarn run build-netlify
 

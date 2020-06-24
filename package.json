@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "build": "yarn run compile-js && yarn run compile-css && bundle exec jekyll build",
-    "build-netlify": "yarn --cwd ../ && webpack && yarn run compile-css && bundle exec jekyll build",
+    "build-netlify": "yarn && webpack && yarn run compile-css && bundle exec jekyll build",
     "changelog": "./scripts/generate-changelog.sh",
     "compile-css": "lessc --include-path=packages/:node_modules/normalize-css/normalize-css/ docs/assets/css/main.less docs/dist/css/main.css",
     "compile-js": "NODE_ENV=production webpack",
@@ -35,7 +35,7 @@
     "process-icon-svgs": "svgo -o packages/cfpb-icons/src/cfpb-icons --enable=addClassesToSVGElement --enable=removeStyleElement --enable=removeAttrs --config='{ \"plugins\": [ { \"addClassesToSVGElement\": { \"className\": \"cf-icon-svg\" } }, { \"removeAttrs\": { \"attrs\": [ \"fill\", \"path:class\", \"circle:class\" ] } }, { \"cleanupIDs\": { \"force\": \"true\" } } ] }'",
     "release": "yarn run build && lerna publish",
     "start": "concurrently --kill-others \"yarn start-netlify\" \"bundle exec jekyll serve --watch --profile --host=localhost --port=4000\" \"yarn run watch\" \"yarn run watch-css\"",
-    "start-netlify": "cd ../ && netlify-cms-proxy-server",
+    "start-netlify": "netlify-cms-proxy-server",
     "test": "gulp test",
     "test:browser": "wdio run test/browser/webdriver.conf.js",
     "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && wdio run test/browser/webdriver-sauce.conf.js",

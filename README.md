@@ -59,9 +59,11 @@ Expandable.init( document.querySelector( '#container' ) );
 ## Documentation
 
 The Design System's website is available at https://cfpb.github.io/design-system/.
-It lives in this repository's `docs/` directory and is powered by [Netlify CMS](https://www.netlifycms.org/) and [Jekyll](https://jekyllrb.com/).
-To edit any page of the website, click the edit button at the bottom right of
-the page.
+It lives in this repository's `docs/` directory
+and is powered by [Netlify CMS](https://www.netlifycms.org/)
+and [Jekyll](https://jekyllrb.com/).
+To edit any page of the website,
+click the edit button at the bottom right of the page.
 You'll need to be added as a contributor to this repository in order to
 authenticate with Netlify CMS.
 
@@ -69,7 +71,7 @@ To run the documentation website locally:
 
 ```shell
 git clone https://github.com/cfpb/design-system.git
-cd design-system/docs
+cd design-system
 yarn
 yarn start
 ```

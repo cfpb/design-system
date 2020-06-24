@@ -64,12 +64,6 @@ coverage.xml
 # Front-End #
 #############
 node_modules/
-bower_components/
-.grunt/
-vendor/
-static/vendor/
-tmp/
-dist/
 .npmrc
 .changelog/
 yarn-error.log
@@ -79,10 +73,9 @@ test/unit-test-coverage/
 
 # Documentation #
 #################
-docs/node_modules/
 docs/dist/
 docs/assets/icons/
-_site
+docs/_site
 .sass-cache
 **/.jekyll-cache/
 .jekyll-metadata

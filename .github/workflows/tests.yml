@@ -43,11 +43,11 @@ jobs:
         ruby-version: '2.6'
 
     - name: Install dependencies with Yarn
-      run: yarn && yarn --cwd docs/
+      run: yarn
 
     - name: Start local Design System website server
       run: |
-        yarn --cwd docs/ start &
+        yarn start &
         sleep 5
 
     - name: Run browser tests

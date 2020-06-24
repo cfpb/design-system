@@ -18,8 +18,8 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: [
-          path.resolve( __dirname, './node_modules' ),
-          path.resolve( __dirname, './packages' )
+          path.resolve( __dirname, 'node_modules' ),
+          path.resolve( __dirname, 'packages' )
         ],
         use: {
           loader: 'babel-loader'

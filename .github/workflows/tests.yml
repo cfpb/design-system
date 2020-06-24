@@ -11,6 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+
+    - name: Install Bundler
+      run: gem install bundler
+
     - name: Check out the repo
       uses: actions/checkout@v2
 
@@ -19,8 +27,8 @@ jobs:
       with:
         node-version: 12
 
-    - name: Install dependencies with npm
-      run: npm install
+    - name: Install dependencies with yarn
+      run: yarn
 
     - name: Run unit tests
       run: yarn test

@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install Bundler
+      run: gem install bundler
+
     - name: Check out the repo
       uses: actions/checkout@v2
 

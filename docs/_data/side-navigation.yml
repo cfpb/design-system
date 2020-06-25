@@ -10,7 +10,7 @@ first-level:
           - page: Fonts
           - page: Headings
           - page: Paragraphs
-      - heading: Brand symbools
+      - heading: Brand symbols
         nav-items:
           - page: Logo
           - page: Seal

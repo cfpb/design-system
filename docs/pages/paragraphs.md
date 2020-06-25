@@ -20,7 +20,7 @@ variation_groups:
         variation_description: ""
         variation_name: Body text
         variation_implementation: >-
-          #### Body text vertical spacing
+          #### Vertical spacing
 
 
           * Applies 15px bottom margin to all `p`, `ul`, `ol`, `dl`, `figure`, `table`, and `blockquote` elements.
@@ -30,6 +30,12 @@ variation_groups:
           * Applies 8px bottom `margin` to list items that are not within a nav element.
 
           * Assumes that the font size of each of these items remains the default.
+
+
+          #### Italicizing
+
+
+          We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.
         variation_specs: |-
           * Avenir Next Regular
           * 16px / 22px at all browser widths

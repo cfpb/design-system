@@ -2,7 +2,6 @@
 title: Paragraphs
 layout: variation
 section: foundation
-secondary_section: Text
 status: Released
 description: Paragraph text should provide an efficient and pleasant experience
   on every viewport size. Readable text makes good use of alignment, spacing,
@@ -52,10 +51,29 @@ variation_groups:
               Lorem ipsum dolor sit amet
           </p>
         variation_name: Microcopy
+        variation_implementation: ""
+        variation_specs: |-
+          * Good for highlighting small pieces of text, typically legal copy.
+          * Avenir Next Regular
+          * 14px at all browser widths
+    variation_group_name: Web paragraphs
+  - variation_group_name: Print paragraphs
+    variations:
+      - variation_name: Body text
+        variation_specs: |-
+          * Avenir Next Regular
+          * 11pt / 16pt
+        variation_code_snippet: <p class="print-avenir-para">Lorem ipsum</p>
+      - variation_name: Subheading
+        variation_specs: |-
+          * Avenir Next Regular
+          * 16pt / 20pt
+        variation_code_snippet: <p class="print-subheading">Lorem ipsum</p>
 use_cases: ""
 content_guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2020-01-06T20:28:04.952Z
+secondary_section: Text
 research: ""
 ---

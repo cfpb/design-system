@@ -72,12 +72,13 @@ variation_groups:
           production specs. '
         variation_name: Hero with illustration
         variation_specs: >-
-          #### Standard hero with illustration
-
-
-          * All illustrations should be saved at 200% to accommodate retina displays
+          * All illustrations should be saved at 200% to accommodate retina
+          displays
 
           * When saving illustrations, use a transparent background
+
+
+          #### Standard hero with illustration
 
           * Single image for both large and small screens
 
@@ -115,12 +116,6 @@ variation_groups:
 
 
           #### Style at different breakpoints
-
-
-
-
-
-
 
 
           | Item           | Above 901 px                       | 601 - 900 px                             | Below 601 px                              |
@@ -323,7 +318,7 @@ use_cases: >-
 
   ##### When other options are better
 
-  * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions).2
+  * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
 content_guidelines: >-
   Hero content should orient the user and communicate the primary goal of the
   page. Copy should be succinct and engaging, reflecting the voice and tone of

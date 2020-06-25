@@ -59,7 +59,7 @@ first-level:
               - page: Feedback Forms
           - heading: Navigation
             nav-items:
-              - page: Filterable list pages
+              - page: Filterable List Control Panels
               - page: Pagination
       - heading: Layout patterns
         third-level:
@@ -76,6 +76,7 @@ first-level:
           - heading: Main content
             nav-items:
               - page: "Info Unit Groups: Image and text"
+              - page: Link blobs
   - heading: Pages
     nav-items:
       - page: Landing pages

@@ -2,12 +2,11 @@
 title: Heroes
 layout: variation
 section: patterns
-secondary_section: Layout options
 status: Released
-description: Heroes function as a primary focal point on landing and sublanding
-  pages. They introduce a collection of pages by combining a brief description
-  of the goals of that section along with a visually impactful graphic. To
-  introduce lower-level pages, use the [text introduction]() instead.
+description: Heroes are a primary focal point on landing and sublanding pages.
+  They introduce a collection of pages by combining a brief description of the
+  goals of that section along with a visually impactful graphic. To introduce
+  lower-level pages, use the [text introduction]() instead.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -64,13 +63,13 @@ variation_groups:
                   }
               </style>
           </section>
-        variation_description: The hero graphic may be fully contained, as shown here,
-          or bleeding. For production and style specs, as well as implementation
-          details, click on the "Show details" link. For reference, please see
-          this [live example of a hero with
+        variation_description: 'The illustration may be inset, as shown here, or
+          bleeding. See examples of a [hero with inset
           illustration](https://www.consumerfinance.gov/owning-a-home/) and
-          [live example of a hero with bleeding
+          [hero with bleeding
           illustration](https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/).
+          Click on the "show details" link below for implementation details and
+          production specs. '
         variation_name: Hero with illustration
         variation_specs: >-
           #### Standard hero with illustration
@@ -157,11 +156,16 @@ variation_groups:
 
           For larger screen sizes, media queries are used to position the illustration to the right of the text.
 
+
+          At the grid’s maximum width and above, the hero should not exceed `285px` in height. The image should be `195px` in height to conform to this standard.
+
+
       - variation_name: Hero with photograph
-        variation_description: Note hero text overlays the photograph at larger screen
-          sizes. For implementation details and production specs, click on the
-          "Show details" link. Also see this [live example of a hero with
-          photograph](https://www.consumerfinance.gov/consumer-tools/auto-loans/).
+        variation_description: 'Note hero text overlays the photograph at larger screen
+          sizes. See an example of a [hero with
+          photograph](https://www.consumerfinance.gov/consumer-tools/auto-loans/).For
+          implementation details and production specs, click on the "Show
+          details" link. '
         variation_code_snippet: >-
           <section class="m-hero m-hero__overlay" id="hero4">
               <div class="m-hero_wrapper wrapper">
@@ -241,7 +245,8 @@ variation_groups:
           these, as it’s unlikely that the Pacific Blue will have accessible
           contrast with a non-white (or light gray) background. "
     variation_group_name: Types
-    variation_group_description: "Heroes combine a heading, a small amount of subheading text, and image. "
+    variation_group_description: Heroes combine a heading, a small amount of
+      subheading text, and image. The content is vertically centered.
   - variation_group_name: Variations
     variations:
       - variation_name: Hero with knockout text
@@ -305,20 +310,20 @@ variation_groups:
           </section>
         variation_description: When using a dark background, add the `__knockout`
           modifier to the hero to switch the text to white. For reference, see
-          this [live example of a hero with knockout
+          this [example of a hero with knockout
           text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
     variation_group_description: ""
 use_cases: >-
   ##### When to use
 
-  * When orienting a user to a new section or topic
+  * When orienting a user to a new section or topic (using the [landing](https://cfpb.github.io/design-system/pages/landing-pages) or [sublanding page template](https://cfpb.github.io/design-system/pages/sublanding-pages))
 
   * When the page serves as a navigational tool with general information about a subject and links to lower-level pages that contain more specific information
 
 
   ##### When other options are better
 
-  * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the text introduction or item introduction.
+  * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions).2
 content_guidelines: >-
   Hero content should orient the user and communicate the primary goal of the
   page. Copy should be succinct and engaging, reflecting the voice and tone of
@@ -378,5 +383,6 @@ behavior: >-
   | ![Mockup of hero graphic at desktop size](/design-system/images/uploads/hero_behavior_large.png "Mockup of hero graphic at desktop size") | ![Mockup of hero graphic at small size](/design-system/images/uploads/hero_behavior_small.png "Mockup of hero graphic at small size") |
 accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
+secondary_section: Layout options
 research: ""
 ---

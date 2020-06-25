@@ -2,7 +2,6 @@
 title: Paragraphs
 layout: variation
 section: foundation
-secondary_section: Text
 status: Released
 description: Paragraph text should provide an efficient and pleasant experience
   on every viewport size. Readable text makes good use of alignment, spacing,
@@ -52,10 +51,13 @@ variation_groups:
               Lorem ipsum dolor sit amet
           </p>
         variation_name: Microcopy
+        variation_implementation: The`.a-micro-copy`class is good for highlighting small
+          pieces of text, typically legal copy.
 use_cases: ""
 content_guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2020-01-06T20:28:04.952Z
+secondary_section: Text
 research: ""
 ---

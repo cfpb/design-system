@@ -51,8 +51,11 @@ variation_groups:
               Lorem ipsum dolor sit amet
           </p>
         variation_name: Microcopy
-        variation_implementation: The`.a-micro-copy`class is good for highlighting small
-          pieces of text, typically legal copy.
+        variation_implementation: ""
+        variation_specs: |-
+          * Good for highlighting small pieces of text, typically legal copy.
+          * Avenir Next Regular
+          * 14px
 use_cases: ""
 content_guidelines: ""
 behavior: ""

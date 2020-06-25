@@ -6,7 +6,9 @@ status: Released
 description: Heroes are a primary focal point on landing and sublanding pages.
   They introduce a collection of pages by combining a brief description of the
   goals of that section along with a visually impactful graphic. To introduce
-  lower-level pages, use the [text introduction]() instead.
+  lower-level pages, use the [text
+  introduction](https://cfpb.github.io/design-system/patterns/text-introductions)
+  instead.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -377,7 +379,15 @@ behavior: >-
 
   | ![Mockup of hero graphic at desktop size](/design-system/images/uploads/hero_behavior_large.png "Mockup of hero graphic at desktop size") | ![Mockup of hero graphic at small size](/design-system/images/uploads/hero_behavior_small.png "Mockup of hero graphic at small size") |
 accessibility: ""
+research: ""
+related_items: >-
+  - [Landing pages](https://cfpb.github.io/design-system/pages/landing-pages)
+
+  - [Sublanding pages](https://cfpb.github.io/design-system/pages/sublanding-pages)
+
+  - [Text introductions](https://cfpb.github.io/design-system/patterns/text-introductions) 
+
+  - [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
 last_updated: 2020-01-28T15:55:47.394Z
 secondary_section: Layout options
-research: ""
 ---

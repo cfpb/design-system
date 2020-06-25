@@ -76,6 +76,7 @@ first-level:
           - heading: Main content
             nav-items:
               - page: "Info Unit Groups: Image and text"
+              - page: Link blobs
   - heading: Pages
     nav-items:
       - page: Landing pages

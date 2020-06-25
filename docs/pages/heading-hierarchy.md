@@ -122,16 +122,12 @@ variation_groups:
                   </a>
               </div>
           </header>
-        variation_implementation: >-
-          This example of a heading with icon shows `.m-meta-header_left` using
-          the `.a-heading__icon` pattern and `.m-meta-header_right` using the
-          `.a-date` pattern. However, you could use other patterns in place of
-          them, or even swap them so that date is attached to
-          `.m-meta-header_left` and `.a-heading.a-heading__icon` is attached to
-          `.m-meta-header_right`.
-
-
-          Since categories can be repetitive, we suggest placing a label with`.u-visually-hidden`prior to the headings to add more context for screen readers.
+        variation_implementation: This example of a heading with icon shows
+          `.m-meta-header_left` using the `.a-heading__icon` pattern and
+          `.m-meta-header_right` using the `.a-date` pattern. However, you could
+          use other patterns in place of them, or even swap them so that date is
+          attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is
+          attached to `.m-meta-header_right`.
       - variation_name: Eyebrow headings
         variation_description: >-
           Use the eyebrow heading to label page headings that are part of a
@@ -186,7 +182,7 @@ behavior: >-
   - For multiple paragraphs within the same section set the space between paragraphs to 15px.
 accessibility: Since categories can be repetitive, we suggest placing a label
   with `.u-visually-hidden` prior to the headings with icons to add more context
-  for screen readers (see Meta Header).
+  for screen readers.
 last_updated: 2019-10-21T21:54:52.744Z
 secondary_section: Text
 research: ""

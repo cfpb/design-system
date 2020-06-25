@@ -55,7 +55,7 @@ variation_groups:
         variation_specs: |-
           * Good for highlighting small pieces of text, typically legal copy.
           * Avenir Next Regular
-          * 14px
+          * 14px at all browser widths
 use_cases: ""
 content_guidelines: ""
 behavior: ""

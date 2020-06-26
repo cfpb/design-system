@@ -183,7 +183,10 @@ behavior: >-
 accessibility: Since categories can be repetitive, we suggest placing a label
   with `.u-visually-hidden` prior to the headings with icons to add more context
   for screen readers.
+research: ""
+related_items: "* [Typography
+  variables](https://cfpb.github.io/design-system/development/variables#typogra\
+  phy)"
 last_updated: 2019-10-21T21:54:52.744Z
 secondary_section: Text
-research: ""
 ---

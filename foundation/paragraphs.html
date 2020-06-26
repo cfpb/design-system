@@ -229,23 +229,26 @@
     </h1>
 
     
+
+    
+
+    
+
+    
+    
     <ul class="m-list m-list__horizontal u-mb30">
         
-        
         <li class="m-list_item">
-            <a class="m-list_link" href="#web-paragraphs">
-                Web paragraphs
-            </a>
+            <a class="m-list_link" href="#web-paragraphs">Web paragraphs</a>
         </li>
         
-        
-        
         <li class="m-list_item">
-            <a class="m-list_link" href="#print-paragraphs">
-                Print paragraphs
-            </a>
+            <a class="m-list_link" href="#print-paragraphs">Print paragraphs</a>
         </li>
         
+        <li class="m-list_item">
+            <a class="m-list_link" href="#related-items">Related items</a>
+        </li>
         
     </ul>
     
@@ -361,7 +364,7 @@ aliquip ex ea commodo consequat.&lt;/p&gt;</code></pre>
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
-                            <h4 id="body-text-vertical-spacing">Body text vertical spacing</h4>
+                            <h4 id="vertical-spacing">Vertical spacing</h4>
 
 <ul>
   <li>Applies 15px bottom margin to all <code class="language-plaintext highlighter-rouge">p</code>, <code class="language-plaintext highlighter-rouge">ul</code>, <code class="language-plaintext highlighter-rouge">ol</code>, <code class="language-plaintext highlighter-rouge">dl</code>, <code class="language-plaintext highlighter-rouge">figure</code>, <code class="language-plaintext highlighter-rouge">table</code>, and <code class="language-plaintext highlighter-rouge">blockquote</code> elements.</li>
@@ -369,6 +372,18 @@ aliquip ex ea commodo consequat.&lt;/p&gt;</code></pre>
   <li>Applies 8px bottom <code class="language-plaintext highlighter-rouge">margin</code> to list items that are not within a nav element.</li>
   <li>Assumes that the font size of each of these items remains the default.</li>
 </ul>
+
+<h3 id="italicizing">Italicizing</h3>
+
+<p><code class="language-plaintext highlighter-rouge">@webfont-italic: @webfont-regular;</code></p>
+
+<p>We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.</p>
+
+<h3 id="bolding">Bolding</h3>
+
+<p><code class="language-plaintext highlighter-rouge">@webfont-demi: @webfont-medium;</code></p>
+
+<p>We’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.</p>
 
                         </div>
                     </div>
@@ -823,6 +838,19 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;</code></pre>
 
     <div class="content-l u-mb45">
         
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="related-items">Related Items</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <ul>
+  <li><a href="https://cfpb.github.io/design-system/development/variables#typography">Typography variables</a></li>
+</ul>
+
+                </section>
+            </div>
+        </div>
+        
     </div>
 <!-- .content-l -->
 
@@ -860,8 +888,8 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;</code></pre>
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/foundation/paragraphs.md">
-                    <time datetime="2020-06-25 11:16:26 -0400">
-                        11:16:26 AM Jun 25, 2020
+                    <time datetime="2020-06-26 13:21:25 -0400">
+                         1:21:25 PM Jun 26, 2020
                     </time>
                 </a>
             </small>

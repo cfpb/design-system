@@ -4,17 +4,52 @@
         {{ page.title }}
     </h1>
 
-    {% if page.variation_groups and page.variation_groups.size > 0 %}
+    {% comment %}
+        Now we build the list of jump links. Unfortunately, Liquid templates
+        don't make it easy to create and append to arrays, so we have to use
+        some string joining/splitting to do this.
+
+        We filter out any empty variation group names, as well as any sections
+        that are empty.
+    {% endcomment %}
+
+    {% assign jump_links = '' | split: ',' %}
+
+    {% for variation_group in page.variation_groups %}
+        {% assign variation_name = variation_group.variation_group_name %}
+        {% if variation_name %}
+             {% assign jump_links = jump_links | join: ',' %}
+            {% if jump_links != '' %}
+                {% assign jump_links = jump_links | append: ',' %}
+            {% endif %}
+            {% assign jump_links = jump_links | append: variation_name | split: ',' %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign jump_sections =
+        'Use cases,Content guidelines,Behavior,Restrictions,Accessibility,Research,Related items'
+        | split: ','
+    %}
+    {% for jump_section in jump_sections %}
+        {% assign jump_section_slug = jump_section | slugify | replace: '-', '_' %}
+        {% assign page_section = page[ jump_section_slug ] %}
+        {% if page_section and page_section != '' %}
+            {% assign jump_links = jump_links | join: ',' %}
+            {% if jump_links != '' %}
+                {% assign jump_links = jump_links | append: ',' %}
+            {% endif %}
+            {% assign jump_links = jump_links | append: jump_section | split: ',' %}
+        {% endif %}
+    {% endfor %}
+
+    {%- if jump_links %}
     <ul class="m-list m-list__horizontal u-mb30">
-        {% for variation_group in page.variation_groups %}
-        {% if variation_group.variation_group_name %}
+        {% for jump_link in jump_links %}
         <li class="m-list_item">
-            <a class="m-list_link"
-               href="#{{ variation_group.variation_group_name | slugify }}">
-                {{ variation_group.variation_group_name }}
+            <a class="m-list_link" href="#{{ jump_link | slugify }}">
+                {{- jump_link -}}
             </a>
         </li>
-        {% endif %}
         {% endfor %}
     </ul>
     {% endif %}

@@ -66,7 +66,6 @@ variation_groups:
                             a-link__jump
                             a-link__icon-after-text">
                       <span class="a-link_text">Read more about the feature</span>
-                      {% include icons/right.svg %}
                   </a>
               </div>
               <div class="o-featured-content-module_visual">
@@ -93,7 +92,6 @@ variation_groups:
                             a-link__jump
                             a-link__icon-after-text">
                       <span class="a-link_text">Read more about the feature</span>
-                      {% include icons/right.svg %}
                   </a>
               </div>
               <div class="o-featured-content-module_visual">
@@ -124,7 +122,6 @@ variation_groups:
                             a-link__jump
                             a-link__icon-after-text">
                       <span class="a-link_text">Read more about the feature</span>
-                      {% include icons/right.svg %}
                   </a>
               </div>
               <div class="o-featured-content-module_visual">

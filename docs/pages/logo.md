@@ -377,9 +377,22 @@ variation_groups:
         variation_name: Complex backgrounds
       - variation_name: Supporting beam pattern
         variation_description: >-
-          A beam pattern is a graphic background element that can be paired with
-          the CFPB logo. A beam pattern provides grounding and an engaging
-          graphic reference to the beam concept in our logo. 
+          <div class="content-33 content-first" markdown="1">
+
+
+          #### Compositions
+
+
+          A beam pattern is a graphic background element that can be paired with the CFPB logo. A beam pattern provides grounding and an engaging graphic reference to the beam concept in our logo. 
+
+
+          Beam patterns are composed of overlapping beams that frame areas of white space used for titles, text, and other graphic elements. Beams always point horizontally, not vertically. 
+
+
+          </div>
+
+
+          <div class="content-67 content-last" markdown="1">
 
 
           ![Beam pattern](/design-system/images/uploads/beam_pattern_1.png)
@@ -394,21 +407,16 @@ variation_groups:
           Layered beams anchor to the bottom, leaving plenty of white space above for type. This works especially well for horizontal layouts.
 
 
+          </div>
+
+
           #### **Color**
 
 
           Beam patterns include all three CFPB Green tones. Using transparency increases the strength of the beam metaphor. Transparency should be achieved through opacity, not blending modes like multiply / darken / etc.
 
 
-          #### **Composition**
-
-
-          Beam patterns are composed of overlapping beams that frame areas of white space used for titles, text, and other graphic elements. Beams always point horizontally, not vertically. 
-
-
-
-
-          **Base shapes**
+          #### **Base shapes**
 
 
           Beam patterns are created using trapezoids and parallelograms each at a 9° angle.

@@ -282,6 +282,10 @@ variation_groups:
 
           {: class="icon-table"}
         variation_name: ""
+        variation_implementation: Each icon has a circled variant shown in the second
+          column (or square, in the case of the social media icons) that can be
+          accessed by appending`-round`(or`-square`) to the canonical name or
+          any of its aliases.
   - variation_group_name: Animated icon
     variation_group_description: ""
     variations:
@@ -326,6 +330,14 @@ variation_groups:
         variation_description: |-
           * **Web:** 16px size. Used inline with text.
           * **Print:** 14pt size. Used inline with text.
+        variation_implementation: >-
+          The standard icon height in ems matches the 19px rendered canvas of
+          text set in Avenir Next sized at 16px (19/16 = 1.1875).
+
+
+
+
+          @cf-icon-height: 1.1875em;
       - variation_name: Small
         variation_description: |-
           * **Web:** 20px size. Used on buttons.
@@ -367,7 +379,7 @@ behavior: >-
   #### SVG icon basics
 
 
-  The cf-icon component provides Scalable Vector Graphics (SVG) icons for Capital Framework. This component can be used by itself, but is designed to work with Capital Framework.
+  The cf-icon component provides Scalable Vector Graphics (SVG) icons. This component can be used by itself, but is designed to work with the Design System.
 
 
   We subscribe to the guidance offered by Chris Coyier in his article, “[A Pretty Good SVG Icon System](https://css-tricks.com/pretty-good-svg-icon-system/)”, in which he concludes, “Just include the icons inline.”

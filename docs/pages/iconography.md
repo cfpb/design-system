@@ -432,9 +432,15 @@ related_items: >-
   Our full icon set is available for desktop use as an icon font (.ttf). It can be accessed through programs like Illustrator and InDesign via the glyph panel.
 
 
+  [Download font](https://github.com/cfpb/cf-icons/blob/gh-pages/src/fonts/cf-icons.ttf?raw=true)
+
+
   #### Download vector files
 
 
-  Each of our icons is available for download as a vector (.svg) on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world. [View on Noun Project](http://thenounproject.com/cfpb_minicons/)
+  Each of our icons is available for download as a vector (.svg) on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world. 
+
+
+  [View on Noun Project](http://thenounproject.com/cfpb_minicons/)
 secondary_section: Brand guidelines
 ---

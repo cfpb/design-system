@@ -2,7 +2,6 @@
 title: Iconography
 layout: variation
 section: foundation
-secondary_section: Brand guidelines
 status: Released
 description: >-
   Icons visually reinforce an interface action, file type, status, or category.
@@ -368,24 +367,8 @@ behavior: >-
   Our previous font icon system provided modifiers to rotate any icon. We found in reality this wasn’t practical and only one icon is ever animated, `update`. We’ve provided an alias–`updating`–to be used within the UI when a user needs to be made aware that the website is working on responding to their actions.
 
 
-  #### Download
-
-
-  ##### Icon font
-
-
-  Our full icon set is available for desktop use as an icon font (.ttf). It can be accessed through programs like Illustrator and InDesign via the glyph panel.
-
-
-  ##### Vector files
-
-
-  Each of our icons is available for download as a vector (.svg) on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world.
-
-  [View on Noun Project](http://thenounproject.com/cfpb_minicons/)
-
-
   #### SVG icon basics
+
 
   The cf-icon component provides Scalable Vector Graphics (SVG) icons for Capital Framework. This component can be used by itself, but is designed to work with Capital Framework.
 
@@ -395,16 +378,18 @@ behavior: >-
 
   Because including raw SVG code is not necessarily pretty or user-friendly, we encourage using your templating system to include them by reference.
 
-  > __Note:__ Jinja2, the templating language that cfgov-refresh uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.
+
+  > **Note:** Jinja2, the templating language that cfgov-refresh uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.
 
 
   The filenames of the SVGs included with cf-icons match the names in the Icon library section. There are duplicate SVG files for each alias, as well.
 
 
-  > __Note to contributors:__ If any icon is ever updated, you must be sure to also update each of the alias SVGs.
+  > **Note to contributors:** If any icon is ever updated, you must be sure to also update each of the alias SVGs.
 
 
   ##### What the Less is doing
+
 
   If you look in `cf-icons.less`, below the aforementioned sizing variable, you’ll see this simple rule:
 
@@ -420,6 +405,7 @@ behavior: >-
 
   ```
 
+
   Referring back to the example above, you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.
 
 
@@ -427,6 +413,7 @@ behavior: >-
 
 
   ##### Caveats
+
 
   There are two modifications based on restrictions in Internet Explorer 8 and 9 (IE8/IE9).
 
@@ -439,5 +426,18 @@ behavior: >-
 
   ##### Inline SVG background
 
+
   In some cases we embed an SVG as a background image. To accomplish this, a custom less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name )`, where `@name` is the SVG icon canonical name.
+related_items: >-
+  #### Download icon font
+
+
+  Our full icon set is available for desktop use as an icon font (.ttf). It can be accessed through programs like Illustrator and InDesign via the glyph panel.
+
+
+  #### Download vector files
+
+
+  Each of our icons is available for download as a vector (.svg) on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world. [View on Noun Project](http://thenounproject.com/cfpb_minicons/)
+secondary_section: Brand guidelines
 ---

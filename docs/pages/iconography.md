@@ -336,6 +336,13 @@ variation_groups:
 
 
       Our previous font icon system provided modifiers to rotate any icon. We found in reality this wasn’t practical and only one icon is ever animated, `update`. We’ve provided an alias–`updating`–to be used within the UI when a user needs to be made aware that the website is working on responding to their actions.
+  - variation_group_name: Icon sizes
+    variations:
+      - variation_name: Extra small
+      - variation_name: Small
+      - variation_name: Medium
+      - variation_name: Large
+      - variation_name: Extra large
 use_cases: >-
   ##### Color
 

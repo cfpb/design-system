@@ -12,7 +12,34 @@ variation_groups:
   - variation_group_name: Icon library
     variations:
       - variation_code_snippet: ""
-        variation_description: ""
+        variation_description: |-
+          ### Navigation icons
+
+          \[Insert table]
+
+          ### Status icons
+
+          \[Insert table]
+
+          ### Social/Sharing icons
+
+          \[Insert table]
+
+          ### Communications icons
+
+          \[Insert table]
+
+          ### Document icons
+
+          \[Insert table]
+
+          ### Financial products, services, and concepts
+
+          \[Insert table]
+
+          ### Web application icons
+
+          \[Insert table]
         variation_name: ""
     variation_group_description: ""
   - variation_group_name: Animated icon

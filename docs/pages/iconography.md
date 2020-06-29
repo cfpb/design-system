@@ -9,7 +9,7 @@ description: >-
 
   They are visually simple, quickly recognizable, and easy to understand. They are almost always used in context with descriptive text and function to reinforce the message of that text.
 variation_groups:
-  - variation_group_name: ""
+  - variation_group_name: Icon library
     variations:
       - variation_code_snippet: >-
           <a class="a-link a-link__icon" href="#">
@@ -51,17 +51,6 @@ variation_groups:
       - variation_code_snippet: ""
         variation_description: "* Paired with primary headers"
         variation_name: Extra large
-      - variation_code_snippet: ""
-        variation_description: In certain instances, minicons can be animated to aid
-          communication or to reassure the user that an action is functioning as
-          intended. Examples include saving or loading content. Depending on the
-          context, the animated minicon follows the standards of the component
-          that contains it, for example, the minicon follows the size and
-          padding standards for buttons when placed inside a [button to indicate
-          loading](http://cfpb.github.io/design-manual/page-components/buttons.html#animation)
-          or follows standards of a form-level alert within an [alert
-          message](http://cfpb.github.io/design-manual/page-components/form-fields.html#form-level-action).
-        variation_name: Animated icon
       - variation_code_snippet: ""
         variation_description: >-
           ##### Navigation icons
@@ -333,6 +322,20 @@ variation_groups:
 
           {: class="icon-table"}
         variation_name: Icon library
+  - variation_group_name: Animated icon
+    variation_group_description: >-
+      In certain instances, minicons can be animated to aid communication or to
+      reassure the user that an action is functioning as intended. Examples
+      include saving or loading content. Depending on the context, the animated
+      minicon follows the standards of the component that contains it, for
+      example, the minicon follows the size and padding standards for buttons
+      when placed inside a [button to indicate
+      loading](http://cfpb.github.io/design-manual/page-components/buttons.html#animation)
+      or follows standards of a form-level alert within an [alert
+      message](http://cfpb.github.io/design-manual/page-components/form-fields.html#form-level-action).
+
+
+      Our previous font icon system provided modifiers to rotate any icon. We found in reality this wasn’t practical and only one icon is ever animated, `update`. We’ve provided an alias–`updating`–to be used within the UI when a user needs to be made aware that the website is working on responding to their actions.
 use_cases: >-
   ##### Color
 
@@ -355,18 +358,6 @@ use_cases: >-
   ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png "Icon spacing diagram")
 content_guidelines: ""
 behavior: >-
-  In certain instances, icons can be animated to aid communication or to
-  reassure the user that an action is functioning as intended. Examples include
-  saving or loading content. Depending on the context, the animated icon follows
-  the standards of the component that contains it, for example, the icon follows
-  the size and padding standards for buttons when placed inside a button to
-  indicate loading or follows standards of a form-level alert within an alert
-  message.
-
-
-  Our previous font icon system provided modifiers to rotate any icon. We found in reality this wasn’t practical and only one icon is ever animated, `update`. We’ve provided an alias–`updating`–to be used within the UI when a user needs to be made aware that the website is working on responding to their actions.
-
-
   #### SVG icon basics
 
 

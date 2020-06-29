@@ -328,32 +328,30 @@ variation_groups:
 
           -->
         variation_description: |-
-          * **Web:** 16px size. Used inline with text.
-          * **Print:** 14pt size. Used inline with text.
+          * **Web:** 16px size, used inline with text
+          * **Print:** 14pt size, used inline with text
         variation_implementation: >-
           The standard icon height in ems matches the 19px rendered canvas of
           text set in Avenir Next sized at 16px (19/16 = 1.1875).
 
 
-
-
-          @cf-icon-height: 1.1875em;
+          `@cf-icon-height: 1.1875em;`
       - variation_name: Small
         variation_description: |-
-          * **Web:** 20px size. Used on buttons.
-          * **Print:** 21pt size. Used for numbers and contact icons.
+          * **Web:** 20px size, used on buttons
+          * **Print:** 21pt size, used for numbers and contact icons
       - variation_name: Medium
         variation_description: |-
-          * **Web:** 25px size. Used in social media sharing sets.
-          * **Print:** 28pt size. Used for numbers and contact icons.
+          * **Web:** 25px size, used in social media sharing sets
+          * **Print:** 28pt size, used for numbers and contact icons
       - variation_name: Large
         variation_description: |-
-          * **Web:** 30px size. Used inline with large text links.
-          * **Print:** 36pt size. Used for numbers and contact icons.
+          * **Web:** 30px size, used inline with large text links
+          * **Print:** 36pt size, used for numbers and contact icons
       - variation_name: Extra large
         variation_description: |-
-          * **Web:** 40px in size. Paired with primary headings.
-          * **Print:** 48pt in size. Paired with primary headings.
+          * **Web:** 40px size, paired with primary headings
+          * **Print:** 48pt size, paired with primary headings
 use_cases: >-
   ##### Color
 

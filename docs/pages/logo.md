@@ -383,7 +383,10 @@ variation_groups:
           #### Compositions
 
 
-          A beam pattern is a graphic background element that can be paired with the CFPB logo. A beam pattern provides grounding and an engaging graphic reference to the beam concept in our logo. Beam patterns are composed of overlapping beams that frame areas of white space used for titles, text, and other graphic elements. Beams always point horizontally, not vertically. 
+          A beam pattern is a graphic background element that can be paired with the CFPB logo. A beam pattern provides grounding and an engaging graphic reference to the beam concept in our logo. 
+
+
+          Beam patterns are composed of overlapping beams that frame areas of white space used for titles, text, and other graphic elements. Beams always point horizontally, not vertically. 
 
 
           </div>

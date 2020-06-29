@@ -281,7 +281,7 @@ variation_groups:
           | {% include icons/wifi.svg %} | {% include icons/wifi-round.svg %} | wifi | wi-fi, wireless |
 
           {: class="icon-table"}
-        variation_name: Icon library
+        variation_name: ""
   - variation_group_name: Animated icon
     variation_group_description: >-
       In certain instances, minicons can be animated to aid communication or to

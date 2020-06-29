@@ -317,35 +317,22 @@ variation_groups:
 
           -->
         variation_description: |-
-          
-
           * **Web:** 16px size. Used inline with text.
           * **Print:** 14pt size. Used inline with text.
       - variation_name: Small
-        variation_description: >-
-          
-
+        variation_description: |-
           * **Web:** 20px size. Used on buttons.
-
-          * **Print:** 21pt size. Like the medium and large icon sizes, this small icon size can be used for numbers and contact icons.
+          * **Print:** 21pt size. Used for numbers and contact icons.
       - variation_name: Medium
-        variation_description: >-
-          
-
+        variation_description: |-
           * **Web:** 25px size. Used in social media sharing sets.
-
-          * **Print:** 28pt size. Like the small and large icon sizes, this medium icon size can be used for numbers and contact icons.
+          * **Print:** 28pt size. Used for numbers and contact icons.
       - variation_name: Large
-        variation_description: >-
-          
-
+        variation_description: |-
           * **Web:** 30px size. Used inline with large text links.
-
-          * **Print:** 36pt size. Like the small and medium icon sizes, this large icon size can be used for numbers and contact icons.
+          * **Print:** 36pt size. Used for numbers and contact icons.
       - variation_name: Extra large
         variation_description: |-
-          
-
           * **Web:** 40px in size. Paired with primary headings.
           * **Print:** 48pt in size. Paired with primary headings.
 use_cases: >-

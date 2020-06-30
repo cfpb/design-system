@@ -8,16 +8,18 @@ description: >+
   guidelines to create effective and consistent data visualizations. 
 
 
-  Data visualization can be an excellent way to increase understanding and make comparisons of data. Each graph should have a point that you want the user to walk away knowing.
-
-
-  Using visuals to convey meaning and to tell stories engages the user and creates a memorable experience. Part of this is choosing the correct visualization for the data. Make sure you understand the data and the relationship of your data before you choose visuals to help explain it to others.
-
-
-  Occasionally, data visualization isn’t the best approach. A well crafted sentence or table may be a better solution to convey specific points or a precise numerical interpretation. Graphs are most useful when you want the user to walk away with a general sense of the data and to interpret patterns.
-
-
 variation_groups:
+  - variation_group_name: Introduction
+    variation_group_description: >
+      Data visualization can be an excellent way to increase understanding and
+      make comparisons of data. Each graph should have a point that you want the
+      user to walk away knowing.
+
+
+      Using visuals to convey meaning and to tell stories engages the user and creates a memorable experience. Part of this is choosing the correct visualization for the data. Make sure you understand the data and the relationship of your data before you choose visuals to help explain it to others.
+
+
+      Occasionally, data visualization isn’t the best approach. A well crafted sentence or table may be a better solution to convey specific points or a precise numerical interpretation. Graphs are most useful when you want the user to walk away with a general sense of the data and to interpret patterns.
   - variation_group_name: Accessibility
     variation_group_description: >-
       Allowing all users to be able to comprehend charts and graphics is a key
@@ -54,4 +56,42 @@ variation_groups:
           * A link to a CSV or other machine-readable data format with the data so people with impaired vision can tab through the data with a screen reader. The data should have descriptive column labels and provide a link.
       - variation_name: Color contrast and color blindness
         variation_description: See the color section of these data visualization guidelines.
+  - variation_group_name: Accuracy
+    variation_group_description: >-
+      A chart is only as good as the validity of its data. It’s important to
+      check both the data and chart several times with multiple people before
+      publishing. One small error can invalidate the integrity of an entire
+      visualization. Several errors in data accuracy can damage credibility.
+
+
+      ##### KEY QUESTIONS
+
+      * Is this an accurate way to represent this data?
+
+      * Did someone else look at the chart and data for feedback?
+
+      * If there are percentages, do they add up to 100? Why not?
+
+      * What is the source of the data?
+    variations:
+      - variation_name: Notes section
+        variation_description: >-
+          When using charts that show percentages, users expect things to add up
+          to 100%. If they don’t it undermines the integrity of the visuals by
+          leaving the user with missing pieces.
+
+
+          To remedy this effect add a note at the bottom to explain the missing data.
+
+
+          > *Example*: Percentages may not sum to 100% due to rounding.
+
+
+          Use notes to add in other caveats around the data like if it was taken from a specific time period.
+
+
+          > *Example*: Percent change is based on a 3 month period (October-December) and compared to the previous year.
+
+
+          > *Example*: Company-level information should be considered in context of total complaints, company size and market share in a given geographic area.
 ---

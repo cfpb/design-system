@@ -4,7 +4,7 @@ layout: variation
 collection_name: special-pages
 is_homepage: true
 description: >-
-  ## Welcome to the CFPB Design System
+  ## Welcome to the CFPB Design System 
 
 
   Our design system is an open-source resource for CFPB teams to produce effective and visually-consistent products that are easy for consumers to access, use, and understand.

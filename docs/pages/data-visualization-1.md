@@ -94,4 +94,37 @@ variation_groups:
 
 
           > *Example*: Company-level information should be considered in context of total complaints, company size and market share in a given geographic area.
+      - variation_name: Sources section
+        variation_description: >-
+          Including the source of the data in the visualization is a must. It
+          adds credibility and transparency to the graph. The visualization
+          could then be replicated using the mentioned sources which adds
+          credibility.
+
+
+          If you’re unable to link to the source, link to a spreadsheet of the data used
+
+          to create the visualization.
+  - variation_group_name: Audience
+    variation_group_description: |-
+      Consider your audience when you’re creating data visualization.
+
+      ##### KEY QUESTIONS
+      * Who is your audience?
+      * What is their familiarity with data visualization?
+      * How much information do they need?
+    variations:
+      - variation_name: General public
+        variation_description: If your user group is general (i.e. the American public),
+          stick with basic and most common chart types that people can easily
+          understand. Adding emphasis and labels will help highlight the point
+          of the visual and tell the story of the information. Consider using
+          multiple simple charts to step the user through the data, rather than
+          one big complex visualization.
+      - variation_name: Specific users
+        variation_description: If your data visualizations are designed with a specific
+          audience in mind, take into consideration their familiarity with the
+          data, visualization types, and the terminology used to label and
+          describe data. More complex stories might necessitate more complex
+          visuals, however, this does not mean it should lack emphasis.
 ---

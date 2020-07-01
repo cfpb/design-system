@@ -2,7 +2,6 @@
 title: Radio Buttons
 layout: variation
 section: components
-secondary_section: Forms
 status: Released
 description: >
   Use radio buttons when the user can choose only one option out of a list. Use
@@ -90,7 +89,7 @@ variation_groups:
 
           Selected
           - Border: 1 px, Gray 60 (#919395)
-          - Background: 14 px x 14 px, - Pacific (#0072ce)
+          - Background: 14 px x 14 px, Pacific (#0072ce)
 
           Disabled
           - Border: 1 px, Gray 60 (#919395)
@@ -250,7 +249,8 @@ content_guidelines: ""
 behavior: ""
 accessibility: There are some issues with Voiceover reading radio buttons. To
   get around this, consider using the aria-describedby attribute.
+research: ""
 related_items: ""
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+secondary_section: Forms
 ---

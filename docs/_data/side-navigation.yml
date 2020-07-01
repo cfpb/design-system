@@ -105,6 +105,7 @@ first-level:
     second-level:
       - heading: Data visualization
         nav-items:
+          - page: Data visualization
           - page: Bar Charts
           - page: Line Charts
           - page: Pie Charts

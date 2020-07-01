@@ -328,5 +328,46 @@ variation_groups:
       * Have you accounted for color blindness?
 
 
-      Specific combinations of colors are used when creating data visualizations in order to create accessible graphics while maintaining brand cohesion. To see these color combinations and related accessibility information, [visit the main color page](./foundation/color).
+      Specific combinations of colors are used when creating data visualizations in order to create accessible graphics while maintaining brand cohesion. To see these color combinations and related accessibility information, [visit the main color page](./foundation/color). 
+  - variation_group_name: Emphasis
+    variation_group_description: >-
+      Highlighting parts of your chart will help users quickly understand the
+      point of the graphic and accurately comprehend the information.
+
+
+      ##### KEY QUESTIONS
+
+      * What is the point of the chart?
+
+      * Can someone who hasn’t seen the chart before figure out the point from a quick look and the title?
+    variations:
+      - variation_description: >-
+          Good visual hierarchy allows the user to focus on the most important
+          piece of content first and work their way into the graphic. The title
+          and subtitle should be the first thing that the user reads when
+          viewing the chart to give them context of what the chart is about.
+          Therefore, they should be the biggest thing on the chart (see the Data
+          visualization chart components section).
+
+
+          Use the squint test (take a step back from your graph, squint your eyes, and say what you see first, second, third…) to get a sense of what your users will automatically identify first.
+        variation_name: Visual hierarchy
+      - variation_name: Labels
+        variation_description: >+
+          Goals, trends, and important outliers should be highlighted to help
+          the user discern what is going on with the data. Labels will help the
+          user understand the data and make sense of what it is showing.
+
+      - variation_name: Projected values
+        variation_description: >-
+          When dealing with projected or predicted data, the predicted data
+          should be deemphasized. Use a color change to a lighter tint or dashed
+          outline for bar charts, a dotted line for line charts, and a label
+          explaining what part of the data is predicted or projected.
+
+
+          ![Line chart that has a projected values label, as well as changes in color and pattern to indicate the projected data.](/design-system/images/uploads/projected-values-1.png)
+
+
+          ![Bar chart that has a projected values label, as well as changes in color to indicate the projected data.](/design-system/images/uploads/projected-values-2.png)
 ---

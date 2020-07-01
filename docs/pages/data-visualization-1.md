@@ -151,4 +151,69 @@ variation_groups:
 
 
           While serif fonts are generally easier to read for long blocks of text, data visualizations rarely include long blocks. The lack of serifs, especially on numbers, helps cut down on the amount of lines and visual clutter. This lack also increases the legibility of small text by eliminating thin serifs.
+      - variation_name: Titles
+        variation_description: >-
+          Titles should be as descriptive as possible to give users a sense of
+          what the chart will be about. This not only provides users a framework
+          of what they are looking at, but also helps with 508 accessibility and
+          decreases the amount of text necessary in alt tags.
+
+
+
+
+          ![Labeled display of the titles in a chart](/design-system/images/uploads/parts-of-a-chart_01.png)
+      - variation_name: Labels and keys
+        variation_description: >
+          Wherever possible, charts should not include a key, and data should be
+          directly labeled. This reduces the cognitive burden for the user so
+          they are not hunting for labels and trying to connect colors to the
+          data.
+
+
+          ![Labeled display of the data on a chart](/design-system/images/uploads/parts-of-a-chart_012.png)
+
+
+          ![Labeled display of the data on a chart](/design-system/images/uploads/parts-of-a-chart_013.png)
+      - variation_name: Reports
+        variation_description: >-
+          #### Figure number
+
+
+          * Uses the`Figure number`style (all caps)
+
+
+          #### Title
+
+
+          * Gives an overview of what the graph is about
+
+          * Uses the`h3`heading style
+
+          * 2 lines of text maximum
+
+
+          #### Subtitle
+
+
+          * Explains the general trends of the graph and what that means, including why it is important
+
+          * Uses the`h4`heading style
+
+          * 3 lines of text maximum
+
+
+          #### Notes
+
+
+          * Describes any caveats or inconsistencies with the data such as explaining why numbers do not add up to 100% or the specific dates that the data is pulled from
+
+
+          #### Data source information
+
+
+          * Provides a link to the URL of a spreadsheet or to the source of the data
+
+          * Important to include for trustworthiness and validity
+
+          * Allows people to dive deeper into the data and explore the nuances for themselves or to replicate the visualization
 ---

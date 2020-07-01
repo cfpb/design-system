@@ -127,4 +127,28 @@ variation_groups:
           data, visualization types, and the terminology used to label and
           describe data. More complex stories might necessitate more complex
           visuals, however, this does not mean it should lack emphasis.
+  - variation_group_name: Chart components
+    variation_group_description: >-
+      Using the appropriate font not only increases consistency with the core
+      brand, but assures legibility and good visual hierarchy. Proper labeling
+      and titles help users quickly understand the chart and increases
+      comprehension as well as helping with accessibility.
+
+
+      ##### KEY QUESTIONS
+
+      * Does your chart have a descriptive title and subtitle so someone who cannot see the chart could understand the general trends?
+
+      * Have you included notes and a data source?
+
+      * Is it clear when the data is from?
+    variations:
+      - variation_name: Font
+        variation_description: >-
+          All data, labels and titles for data visualizations should be in a
+          sans-serif font. The preferred choices for fonts are: Avenir Next over
+          Arial, and Arial over another sans serif font.
+
+
+          While serif fonts are generally easier to read for long blocks of text, data visualizations rarely include long blocks. The lack of serifs, especially on numbers, helps cut down on the amount of lines and visual clutter. This lack also increases the legibility of small text by eliminating thin serifs.
 ---

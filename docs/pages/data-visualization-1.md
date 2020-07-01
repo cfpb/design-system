@@ -1,5 +1,5 @@
 ---
-title: Data visualization
+title: Data visualization guidelines
 collection_name: pages
 layout: variation
 section: guidelines

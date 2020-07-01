@@ -26,13 +26,10 @@
         {% endif %}
     {% endfor %}
 
-    {% assign jump_sections =
-        'Use cases,Content guidelines,Behavior,Restrictions,Accessibility,Research,Related items'
-        | split: ','
-    %}
+    {% assign jump_sections = 'Use cases,Content guidelines,Behavior,Restrictions,Accessibility,Research,Related items' | split: ',' %}
     {% for jump_section in jump_sections %}
         {% assign jump_section_slug = jump_section | slugify | replace: '-', '_' %}
-        {% assign page_section = page[ jump_section_slug ] %}
+        {% assign page_section = page[jump_section_slug] %}
         {% if page_section and page_section != '' %}
             {% assign jump_links = jump_links | join: ',' %}
             {% if jump_links != '' %}

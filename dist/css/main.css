@@ -6069,6 +6069,12 @@ pre code {
 .component-restrictions_heading-donot svg {
   color: #d14124;
 }
+.m-list__horizontal-spaced {
+  margin-bottom: 1.875em;
+}
+.m-list__horizontal-spaced > .m-list_item {
+  margin-bottom: 0.9375em;
+}
 /* Color swatches for Identity/Color page
    ========================================================================== */
 .swatches-container__primary {

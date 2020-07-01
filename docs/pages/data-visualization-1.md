@@ -310,4 +310,23 @@ variation_groups:
 
 
           * Include the CFPB logo; helps with identification and determining origin if the graphic gets re-used
+  - variation_group_name: Color
+    variation_group_description: >-
+      When used properly, color can help clarify relationships between data,
+      provide emphasis for certain data points, and maintain a consistent brand
+      voice. When used poorly, color can overwhelm the user, make the data
+      confusing and break with brand standards to appear inconsistent.
+
+
+      ##### KEY QUESTIONS
+
+
+      * Does the use of color have a purpose?
+
+      * Have you relied on more than just color to connote meaning?
+
+      * Have you accounted for color blindness?
+
+
+      Specific combinations of colors are used when creating data visualizations in order to create accessible graphics while maintaining brand cohesion. To see these color combinations and related accessibility information, [visit the main color page](./foundation/color).
 ---

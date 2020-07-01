@@ -311,7 +311,7 @@ variation_groups:
 
           * Include the CFPB logo; helps with identification and determining origin if the graphic gets re-used
   - variation_group_name: Color
-    variation_group_description: >-
+    variation_group_description: >+
       When used properly, color can help clarify relationships between data,
       provide emphasis for certain data points, and maintain a consistent brand
       voice. When used poorly, color can overwhelm the user, make the data
@@ -327,8 +327,13 @@ variation_groups:
 
       * Have you accounted for color blindness?
 
-
-      Specific combinations of colors are used when creating data visualizations in order to create accessible graphics while maintaining brand cohesion. To see these color combinations and related accessibility information, [visit the main color page](./foundation/color). 
+    variations:
+      - variation_name: Color palettes and accessibility
+        variation_description: "Specific combinations of colors are used when creating
+          data visualizations in order to create accessible graphics while
+          maintaining brand cohesion. To see these color combinations and
+          related accessibility information, [visit the main color
+          page](././foundation/color). "
   - variation_group_name: Emphasis
     variation_group_description: >-
       Highlighting parts of your chart will help users quickly understand the

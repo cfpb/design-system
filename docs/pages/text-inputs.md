@@ -2,16 +2,16 @@
 title: Text Inputs
 layout: variation
 section: components
-secondary_section: Forms
 status: Released
-description: "Text inputs can be one-line (standard text inputs) or multi-line
-  (textarea inputs).  "
+description: "Text fields give users the ability to enter text. They can be
+  single-line or multi-line (textarea inputs).  "
 variation_groups:
-  - variation_group_name: Standard text input
+  - variation_group_name: Standard text inputs
     variations:
       - variation_code_snippet: >
-          <label class="a-label a-label__heading"
-          for="textinput-example-default">
+          <!--States are shown for demonstration purposes only--> 
+
+          <label class="a-label a-label__heading" for="textinput-example-default">
 
           Default
 
@@ -80,12 +80,10 @@ variation_groups:
 
           #### Disabled 
           - Background: Gray 10 (#e7e8e9)
-        variation_name: ""
-  - variation_group_name: Variations
-    variations:
-      - variation_name: Textarea inputs
+        variation_name: Single-line text inputs
+      - variation_name: Multi-line textarea inputs
         variation_description: |+
-          Use for long-form answers.
+          Use multi-line text inputs for long-form answers.
 
         variation_code_snippet: >-
           <label class="a-label a-label__heading"
@@ -97,9 +95,31 @@ variation_groups:
                     id="textarea-example-default"
                     placeholder="Enter text…">Placeholder text</textarea>
         variation_specs: |-
-          
           * Border: 1 px, Gray 60 (#919395)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
+    variation_group_description: "\n"
+  - variation_group_name: Variations
+    variations:
+      - variation_name: Full-width text inputs
+        variation_code_snippet: >-
+          <div class="m-form-field">
+              <label class="a-label a-label__heading" for="full-textinput-example">
+                  Label
+              </label>
+              <input class="a-text-input a-text-input__full"
+                    type="text"
+                    id="full-textinput-example"
+                    value="Placeholder text">
+          </div>
+      - variation_name: Full-width textarea inputs
+        variation_code_snippet: >-
+          <div class="m-form-field">
+              <label class="a-label a-label__heading" for="full-textarea-example">
+                  Label
+              </label>
+              <textarea class="a-text-input a-text-input__full"
+                        id="full-textarea-example">Placeholder text</textarea>
+          </div>
       - variation_name: Text input with a button
         variation_description: These are used for simple forms where a full filter isn’t necessary.
         variation_code_snippet: |-
@@ -146,26 +166,6 @@ variation_groups:
                   <button class="a-btn">Search</button>
               </div>
           </div>
-      - variation_name: Full-width text inputs
-        variation_code_snippet: >-
-          <div class="m-form-field">
-              <label class="a-label a-label__heading" for="full-textinput-example">
-                  Label
-              </label>
-              <input class="a-text-input a-text-input__full"
-                    type="text"
-                    id="full-textinput-example"
-                    value="Placeholder text">
-          </div>
-      - variation_name: Full-width textarea inputs
-        variation_code_snippet: >-
-          <div class="m-form-field">
-              <label class="a-label a-label__heading" for="full-textarea-example">
-                  Label
-              </label>
-              <textarea class="a-text-input a-text-input__full"
-                        id="full-textarea-example">Placeholder text</textarea>
-          </div>
 use_cases: ""
 content_guidelines: >-
   Choose the appropriate width for text input fields so they match the kind of
@@ -199,7 +199,8 @@ accessibility: >-
 
 
   Users of screen readers use the tab key to move focus from one form control to another. Make sure that tab focus order reflects the way you would like users to navigate through the form. Consider whether tabs should move a user down or across the page.
+research: ""
 related_items: ""
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+secondary_section: Forms
 ---

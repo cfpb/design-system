@@ -30,7 +30,7 @@ description: >-
   * **Development**: The development section includes utilities, such as variables, helper classes, and mixins, and layout options, such as blocks. [Browse development](https://cfpb.github.io/design-system/development/) 
 
 
-  * **Guidelines**: This section includes guidelines for creating specific product experiences not covered in other sections, such as data visualization.  [Browse guidelines](https://cfpb.github.io/design-system/guidelines/) 
+  * **Guidelines**: This section includes guidelines for creating specific product experiences not covered in other sections. [Browse guidelines](https://cfpb.github.io/design-system/guidelines/) 
 
 
   ### Getting started for developers 
@@ -38,13 +38,18 @@ description: >-
   Learn how to integrate our design system into your project, contribute to the code base, and update the documentation. [Get started](https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md).
 
 
-  The Design System also includes [the source code for the common components](https://github.com/cfpb/design-system) that power the design of [consumerfinance.gov](https://www.consumerfinance.gov).
+  The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov). [View source code on github]((https://github.com/cfpb/design-system) ).
 
 
   ### Contributing to the Design System
 
-  We strongly encourage all of you to participate in the growth and maintenance of the Design System. To make contribution easier, the Design System is built on a tool called Netlify CMS, which allows for editing of pages in a web browser, without needing to use git or other command-line tools. [View instructions for contributing to the Design System](https://cfpb.github.io/design-system/updating-this-website/).
+  We strongly encourage you to participate in the growth and maintenance of the Design System. To make contribution easier, the Design System is built on a tool called Netlify CMS, which allows for editing of pages in a web browser, without needing to use git or other command-line tools. [View instructions for contributing to the Design System](https://cfpb.github.io/design-system/updating-this-website/).
 
+
+  <br>
+
+
+  <hr>
 
 
   ##### About the CFPB Design System
@@ -55,7 +60,7 @@ description: >-
   As a work of the United States government, all code is open source and in the public domain. We encourage you to use this framework in your own projects and to contribute back.
 
 
-  #### License
+  ##### License
 
   All content has been released as open source under the CC0 1.0 Universal Public Domain Dedication, and we’d love for other agencies, developers, or groups to adapt it for their own use.
 ---

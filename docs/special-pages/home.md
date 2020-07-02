@@ -57,7 +57,7 @@ description: >-
 
   ### Guidelines 
 
-  Guidelines include 
+  View our guidelines for areas not covered in other sections
 
 
   ## Foundation

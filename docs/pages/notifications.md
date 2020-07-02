@@ -2,7 +2,6 @@
 title: Notifications
 layout: variation
 section: components
-secondary_section: Alerts
 status: Released
 description: "This page describes notifications and form alerts, the latter
   which provide a light-touch alternative for inline form validation or feedback
@@ -249,6 +248,10 @@ accessibility: >-
   * Place form-level alerts below the form title.
 
   * In general, use distinct icons, contrasting colors, prominent placement, and text to indicate errors. Don’t rely on just one method, as users can have many different accessibility needs (color blind users, visually impaired users, users with motor control issues, etc.).
-last_updated: 2020-01-28T15:55:47.394Z
 research: ""
+related_items: "* [Notifications
+  variables](https://cfpb.github.io/design-system/development/variables#notific\
+  ations)"
+last_updated: 2020-01-28T15:55:47.394Z
+secondary_section: Alerts
 ---

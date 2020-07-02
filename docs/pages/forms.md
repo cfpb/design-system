@@ -1,369 +1,289 @@
 ---
-title: Forms
+title: Designing forms
 layout: variation
 section: patterns
 status: Legacy
-description: >-
+description: >
   Web forms provide an incredible advantage over paper forms in their potential
   for accessibility, usability, and operational efficiency, but when designed
   without users in mind, they can lose many of these benefits. In this guide,
   we’ve outlined several ways to ensure the best possible user experience.
+variation_groups:
+  - variation_group_name: Choosing a form structure
+    variation_group_description: >+
+      The structure of your form should fit with the ways in which your users
+      will want to use it.
 
 
-  This page is under active development. Information is being moved into it from
-  this page:
+      Ask yourself:
 
-  * http://cfpb.github.io/design-manual/page-components/form-fields.html
+      * Will your users want to move through the form in a fixed order, or one of their choosing?
 
+      * Will they be able to complete the form in a single go?
 
-  ### Choosing a form structure
+      * Will their answers affect other parts of the form?
 
-  The structure of your form should fit with the ways in which your users will
-  want to use it.
+      * Will they want to go back and review or change answers to previous questions?
 
+      * Will they need to add or remove items from a list, or change the order of things?
 
-  Ask yourself:
+      * How many parties are involved in the form?
 
-  * Will your users want to move through the form in a fixed order, or one of
-  their choosing?
+      * Do any parts of the form take place offline?
 
-  * Will they be able to complete the form in a single go?
+      * At what point is the form regarded as complete?
 
-  * Will their answers affect other parts of the form?
 
-  * Will they want to go back and review or change answers to previous
-  questions?
+      How you answer these questions will help you decide how to structure the form. It can help to think in terms of levels: sections, subsections, groups, etc. Try not to worry about how those levels should be represented in the interface until you have a broader understanding of the overall structure.
 
-  * Will they need to add or remove items from a list, or change the order of
-  things?
 
-  * How many parties are involved in the form?
+      For example, on a website, you might choose to have one section per page, or multiple sections per page. It depends on what’s going to work best for your users.
 
-  * Do any parts of the form take place offline?
 
-  * At what point is the form regarded as complete?
+      See the example structures below.
 
+    variations:
+      - variation_description: >+
+          All sections are positioned on a single page.
 
-  How you answer these questions will help you decide how to structure the form.
-  It can help to think in terms of levels: sections, subsections, groups, etc.
-  Try not to worry about how those levels should be represented in the interface
-  until you have a broader understanding of the overall structure.
 
+          ![Diagram showing all sections on a page](/design-system/images/uploads/effectiveforms1-2x.png)
 
-  For example, on a website, you might choose to have one section per page, or
-  multiple sections per page. It depends on what’s going to work best for your
-  users.
 
+          ##### The good
 
-  ### Example structures
+          * There’s only one submit button to press
 
+          * A single URL gives access to all form fields
 
-  #### Option 1: Single page
+          * It doesn’t force a fixed order of completion
 
+          * You benefit from context of neighboring sections
 
-  All sections are positioned on a single page.
+          * Progress is self-evident
 
 
-  ![Diagram showing all sections on a
-  page](/design-system/images/uploads/effectiveforms1-2x.png)
+          ##### The bad
 
+          * Long forms can be overwhelming and off-putting
 
-  ##### The good
+          * It’s less well suited to branching or non-linear flow
 
-  * There’s only one submit button to press
+          * How do you save partial progress?
 
-  * A single URL gives access to all form fields
+          * Can be harder to track analytics like drop-off rates
 
-  * It doesn’t force a fixed order of completion
+        variation_name: "Option 1: Single page"
+      - variation_name: "Option 2: Wizard"
+        variation_description: >
+          Each section goes on its own page.
 
-  * You benefit from context of neighboring sections
 
-  * Progress is self-evident
+          ![Diagram showing each section on its own page](/design-system/images/uploads/effectiveforms2-2x.png)
 
 
-  ##### The bad
+          ##### The good
 
-  * Long forms can be overwhelming and off-putting
+          * It’s easier to handle branching and dependencies between sections
 
-  * It’s less well suited to branching or non-linear flow
+          * It’s easier to let the user save progress
 
-  * How do you save partial progress?
+          * A long form can feel more manageable
 
-  * Can be harder to track analytics like drop-off rates
+          * Easier to guide a user through an unfamiliar process
 
+          * Easier to capture analytics like drop-off rates for each section
 
-  #### Option 2: Wizard
 
+          ##### The bad
 
-  Each section goes on its own page.
+          * Can be harder for users to see where they are within the form
 
+          * It can slow users down as they have to click and load each section
 
-  ![Diagram showing each section on its own
-  page](/design-system/images/uploads/effectiveforms2-2x.png)
+          * You lose the contextual information from neighboring sections
 
+          * Harder for users to review and edit previous sections
 
-  ##### The good
+          * There’s no single place for users to go back and edit their data
 
-  * It’s easier to handle branching and dependencies between sections
+          * Not a natural fit for non-linear processes like looping, adding and removing
+      - variation_name: "Option 3: Accordion"
+        variation_description: >
+          All sections on a single page, but each new section only appears once
+          the previous section has been completed. Done well, option 3 is a
+          hybrid of the other two that has benefits of both the other options.
 
-  * It’s easier to let the user save progress
 
-  * A long form can feel more manageable
+          Within this hybrid option there are still some important design decisions to make, for example:
 
-  * Easier to guide a user through an unfamiliar process
+          * Will future questions be shown in any way or will you only see the questions you’ve answered?
 
-  * Easier to capture analytics like drop-off rates for each section
+          * What happens if you go back and edit a previous question?
 
+          * Does the current question stay open or closed?
 
-  ##### The bad
+          * How do you get back to the current question once you’ve edited a previous one?
 
-  * Can be harder for users to see where they are within the form
+          * Do you lose all your answers to questions that follow the one you go back to edit?
 
-  * It can slow users down as they have to click and load each section
 
-  * You lose the contextual information from neighboring sections
+          ![Diagram showing an accordion form](/design-system/images/uploads/effectiveforms3-2x.png)
 
-  * Harder for users to review and edit previous sections
 
-  * There’s no single place for users to go back and edit their data
+          ##### The good
 
-  * Not a natural fit for non-linear processes like looping, adding and removing
+          * Can handle branching and dependencies between sections
 
+          * Can easily review and edit previous questions
 
-  #### Option 3: Accordion form
+          * Can help guide a user through an unfamiliar process
 
-  All sections on a single page, but each new section only appears once the
-  previous section has been completed. Done well, option 3 is a hybrid of the
-  other two that has benefits of both the other options.
+          * User still benefits from some surrounding context
 
+          * Progress is clear
 
-  Within this hybrid option there are still some important design decisions to
-  make, for example:
 
-  * Will future questions be shown in any way or will you only see the questions
-  you’ve answered?
+          ##### The bad
 
-  * What happens if you go back and edit a previous question?
+          * Implementation and interface is more complex
+      - variation_name: "Option 4: Hybrid"
+        variation_description: >-
+          
 
-  * Does the current question stay open or closed?
+          For more complicated forms, some combination of the other options might be your best bet. Done well, this can give you the benefits of both the single page and wizard approaches. It also allows you to create a sense of rhythm to the overall flow, which can help users understand when they have moved into a different part of the form, and break up the monotony of filling in forms.
 
-  * How do you get back to the current question once you’ve edited a previous
-  one?
 
-  * Do you lose all your answers to questions that follow the one you go back to
-  edit?
+          As always, these design decisions must have a strong, user-centred rationale behind them.
 
 
-  ![Diagram showing an accordion
-  form](/design-system/images/uploads/effectiveforms3-2x.png)
+          ![Diagram showing a hybrid form](/design-system/images/uploads/effectiveforms4-2x.png)
+  - variation_group_description: >+
+      You should be aiming for a service that’s so intuitive people don’t need
+      any help in using it. If you find yourself explaining the interface within
+      the interface it’s a sign that something has gone wrong.
 
 
-  ##### The good
+      Sometimes though, people are going to need extra help. Many government forms involve concepts and terminology that people will be unfamiliar with. Some of this stuff takes a lot of explaining, so we need a way of providing contextual help of varying degrees of detail throughout a form.
 
-  * Can handle branching and dependencies between sections
 
-  * Can easily review and edit previous questions
+      #### Methods for providing extra help:
 
-  * Can help guide a user through an unfamiliar process
 
-  * User still benefits from some surrounding context
+      ##### INLINE HELP
 
-  * Progress is clear
 
+      Short, snappy text, positioned near the part of the interface it refers to. If it’s something that everyone needs to know, make it permanently visible.
 
-  ##### The bad
 
-  * Implementation and interface is more complex
+      ##### PROGRESSIVE DISCLOSURE
 
 
-  #### Option 4: Hybrid
+      A fancy phrase for hiding stuff until it’s clicked on. Used carefully this is a good way of keeping the interface free from potentially confusing clutter. Only use this for help that’s intended for a small subset of your audience (say, less than 10%).
 
-  For more complicated forms, some combination of the other options might be
-  your best bet. Done well, this can give you the benefits of both the single
-  page and wizard approaches. It also allows you to create a sense of rhythm to
-  the overall flow, which can help users understand when they have moved into a
-  different part of the form, and break up the monotony of filling in forms.
 
+      ##### FIELD MASKING
 
-  As always, these design decisions must have a strong, user-centred rationale
-  behind them.
 
+      When a specific data entry format is required, as for phone numbers, dates, and social security numbers, provide an example of the required format (e.g., XXX-XX-XXXX).
 
-  ![Diagram showing a hybrid
-  form](/design-system/images/uploads/effectiveforms4-2x.png)
 
+      ##### RICH CONTEXTUAL HELP
 
-  ### Helping users
 
+      Sometimes you need to give users access to supporting content, in case they’re unfamiliar with the terminology or concepts involved in the form. This kind of content should probably exist as a page outside of the form, and then be repurposed in some way within the form.
 
-  You should be aiming for a service that’s so intuitive people don’t need any
-  help in using it. If you find yourself explaining the interface within the
-  interface it’s a sign that something has gone wrong.
+    variation_group_name: Helping users
+  - variation_group_name: Communicating errors
+    variation_group_description: >-
+      Despite providing the best possible helper text and contextual help, you
+      should still plan for when users make errors when filling out your forms.
 
 
-  Sometimes though, people are going to need extra help. Many government forms
-  involve concepts and terminology that people will be unfamiliar with. Some of
-  this stuff takes a lot of explaining, so we need a way of providing contextual
-  help of varying degrees of detail throughout a form.
+      #### Tips for communicating errors:
 
 
-  #### Methods for providing extra help:
+      ##### INDICATE OPTIONAL AND/OR REQUIRED FIELDS
 
 
-  ##### INLINE HELP
+      If most of the fields are required, leave them alone and just mark the optional fields as optional. If most of the fields are optional, leave them alone and just mark the required fields as required. If it’s close to a tie, go with whichever choice might be better for your users.
 
 
-  Short, snappy text, positioned near the part of the interface it refers to. If
-  it’s something that everyone needs to know, make it permanently visible.
+      ##### COMBINE FIELD-LEVEL ERROR TEXT WITH A PAGE-LEVEL ERROR MESSAGE
 
 
-  ##### PROGRESSIVE DISCLOSURE
+      This is particularly important for accessibility. If someone is using a screenreader to navigate the page, a digest of errors at the top of the page will help them understand which fields need fixing. Including anchor links to the invalid fields will allow them to find and fix the error without re-navigating the entire form.
 
 
-  A fancy phrase for hiding stuff until it’s clicked on. Used carefully this is
-  a good way of keeping the interface free from potentially confusing clutter.
-  Only use this for help that’s intended for a small subset of your audience
-  (say, less than 10%).
+      ##### BE DESCRIPTIVE WITH ERROR TEXT
 
 
-  ##### FIELD MASKING
+      Tell the user what caused the error and how to correct it.
 
 
-  When a specific data entry format is required, as for phone numbers, dates,
-  and social security numbers, provide an example of the required format (e.g.,
-  XXX-XX-XXXX).
+      ##### VALIDATE FIELDS BEFORE THE USER SUBMITS
 
 
-  ##### RICH CONTEXTUAL HELP
+      Check for errors as the user fills out the form (e.g., using javascript) and provide inline messaging with instructions for how to correct the error.
 
 
-  Sometimes you need to give users access to supporting content, in case they’re
-  unfamiliar with the terminology or concepts involved in the form. This kind of
-  content should probably exist as a page outside of the form, and then be
-  repurposed in some way within the form.
+      Also consider including affirmative inline validation (such as green checkmarks) for required text fields, especially those that require specific formats or character counts, such as Zip Codes and passwords.
+  - variation_group_name: Saving progress
+    variation_group_description: >
+      If the average time to complete a form is more than you can reasonably
+      expect your users to spend in a single session, then you need to provide a
+      way for them to save their progress.
 
 
-  ### Communicating errors
+      The same goes if the session is likely to be interrupted for some reason. For example, if the user is suddenly asked for information which they might not have immediately on hand (a way to mitigate this is to warn users if they’re going to be asked for that kind of information). Another example is that the user might start a form on their mobile device and want to continue filling it out on their desktop computer.
+  - variation_group_description: >
+      The further in to a form someone gets, the more time they have invested in
+      it and the greater their annoyance if they have to abandon it for some
+      reason.
 
 
-  Despite providing the best possible helper text and contextual help, you
-  should still plan for when users make errors when filling out your forms.
+      Be honest about what you’re offering users, and what you’re not offering them. In particular, people need to know up front about any:
 
+      * Costs involved
 
-  #### Tips for communicating errors:
+      * Waiting periods or delays
 
+      * Uncommon or hard-to-find infomation they’ll need to provide
 
-  ##### INDICATE OPTIONAL AND/OR REQUIRED FIELDS
+      * Constraints on who can complete the form (age, nationality, etc)
 
+      * Equipment that will be required (e.g., a printer)
 
-  If most of the fields are required, leave them alone and just mark the
-  optional fields as optional. If most of the fields are optional, leave them
-  alone and just mark the required fields as required. If it’s close to a tie,
-  go with whichever choice might be better for your users.
+      * Non-digital parts of the form
 
 
-  ##### COMBINE FIELD-LEVEL ERROR TEXT WITH A PAGE-LEVEL ERROR MESSAGE
+      Use common sense, though. Don’t try to make everyone read a page of terms and conditions before they start (they won’t).
 
 
-  This is particularly important for accessibility. If someone is using a
-  screenreader to navigate the page, a digest of errors at the top of the page
-  will help them understand which fields need fixing. Including anchor links to
-  the invalid fields will allow them to find and fix the error without
-  re-navigating the entire form.
+      The best approach is to meet (or exceed) people’s expectations. For example, if your delivery times are typical and you accept all the usual payment methods then you won’t need to warn everyone about them up front.
+    variation_group_name: Setting expectations
+  - variation_group_name: Keeping it simple
+    variation_group_description: >-
+      Every request for information from the user:
 
+      * Requires additional physical and cognitive effort
 
-  ##### BE DESCRIPTIVE WITH ERROR TEXT
+      * Creates another opportunity for them to get something ‘wrong’
 
+      * Increases the time it takes to complete the form
 
-  Tell the user what caused the error and how to correct it.
+      * Increases the perception that the service is invasive
 
+      * Increases the risk that users will give up or fail to submit your form
 
-  ##### VALIDATE FIELDS BEFORE THE USER SUBMITS
 
-
-  Check for errors as the user fills out the form (e.g., using javascript) and
-  provide inline messaging with instructions for how to correct the error.
-
-
-  Also consider including affirmative inline validation (such as green
-  checkmarks) for required text fields, especially those that require specific
-  formats or character counts, such as Zip Codes and passwords.
-
-
-  ### Saving progress
-
-
-  If the average time to complete a form is more than you can reasonably expect
-  your users to spend in a single session, then you need to provide a way for
-  them to save their progress.
-
-
-  The same goes if the session is likely to be interrupted for some reason. For
-  example, if the user is suddenly asked for information which they might not
-  have immediately on hand (a way to mitigate this is to warn users if they’re
-  going to be asked for that kind of information). Another example is that the
-  user might start a form on their mobile device and want to continue filling it
-  out on their desktop computer.
-
-
-  ### Setting expectations
-
-
-  The further in to a form someone gets, the more time they have invested in it
-  and the greater their annoyance if they have to abandon it for some reason.
-
-
-  Be honest about what you’re offering users, and what you’re not offering them.
-  In particular, people need to know up front about any:
-
-  * Costs involved
-
-  * Waiting periods or delays
-
-  * Uncommon or hard-to-find infomation they’ll need to provide
-
-  * Constraints on who can complete the form (age, nationality, etc)
-
-  * Equipment that will be required (e.g., a printer)
-
-  * Non-digital parts of the form
-
-
-  Use common sense, though. Don’t try to make everyone read a page of terms and
-  conditions before they start (they won’t).
-
-
-  The best approach is to meet (or exceed) people’s expectations. For example,
-  if your delivery times are typical and you accept all the usual payment
-  methods then you won’t need to warn everyone about them up front.
-
-
-  ### Keeping it simple
-
-
-  Every request for information from the user:
-
-  * Requires additional physical and cognitive effort
-
-  * Creates another opportunity for them to get something ‘wrong’
-
-  * Increases the time it takes to complete the form
-
-  * Increases the perception that the service is invasive
-
-  * Increases the risk that users will give up or fail to submit your form
-
-
-  Asking for information because ‘it might be useful’ or ‘it helps with our
-  record keeping’ should be considered against all of these factors.
-
-
-  ### Attribution
-
-  This guide on effective forms has been adapted from the guide [Designing
-  transactions](https://www.gov.uk/service-manual/user-centred-design/designing-transactions.html)
-  in the [GOV.UK Government Service Design
-  Manual](https://www.gov.uk/service-manual), which is licensed under the [Open
-  Government License
-  v2.0](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/).
+      Asking for information because ‘it might be useful’ or ‘it helps with our record keeping’ should be considered against all of these factors.
+  - variation_group_name: Attribution
+    variation_group_description: This guide on effective forms has been adapted from
+      the guide [Designing
+      transactions](https://www.gov.uk/service-manual/user-centred-design/designing-transactions.html)
+      in the [GOV.UK Government Service Design
+      Manual](https://www.gov.uk/service-manual), which is licensed under the
+      [Open Government License
+      v2.0](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/).
 ---

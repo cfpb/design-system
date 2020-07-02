@@ -5,7 +5,7 @@ section: components
 status: Released
 description: >-
   The fieldset element is used to group several controls as well as labels
-  within a web form. It includes each of the following:
+  within a web form. A fieldset includes each of the following:
 
 
   * [Legend](https://cfpb.github.io/design-system/components/labels-and-legends)

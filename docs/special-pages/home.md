@@ -10,29 +10,36 @@ description: >-
   The Design System is an open-source resource for the Consumer Financial Protection Bureau (CFPB) teams to produce effective, accessible, and consistent products that are easy for the American public to access, use, and understand. 
 
 
-  Start by reading our [general principles](https://cfpb.github.io/design-system/foundation/general-principles) and [accessibility principles](https://cfpb.github.io/design-system/foundation/accessibility). Then go to one of the sections below to get started. 
+  ### Where to go first
+
+  Start by reading our [general principles](https://cfpb.github.io/design-system/foundation/general-principles) and [accessibility principles](https://cfpb.github.io/design-system/foundation/accessibility). Developers can view the [getting started]() information listed below. Then go to one of the sections below for detailed information.
 
 
-  **Foundation**: This section includes our visual identity standards, such as color, grid, and typography. It forms the foundation for the CFPB’s website and external-facing materials. [Browse foundation](https://cfpb.github.io/design-system/foundation/)
+  * **Foundation**: This section includes our visual identity standards, such as color, grid, and typography. It forms the foundation for the CFPB’s website and external-facing materials. [Browse foundation](https://cfpb.github.io/design-system/foundation/)
 
 
-  **Components**: Components contain the key building blocks of the design system that, when combined, can be used to create a website. Examples of components include buttons, text inputs, tables, and alerts. [Browse components](https://cfpb.github.io/design-system/components/)
+  * **Components**: Components contain the key building blocks of the design system that, when combined, can be used to create a website. Examples of components include buttons, text inputs, tables, and alerts. [Browse components](https://cfpb.github.io/design-system/components/)
 
 
-  **Patterns**:  Patterns include interaction patterns, which combine components into best practice design solutions in order to allow users to achieve a goal; and layout patterns, for designers to use to organize content into clear, accessible web pages. [Browse patterns](https://cfpb.github.io/design-system/patterns/)
+  * **Patterns**:  Patterns include interaction patterns, which combine components into best practice design solutions in order to allow users to achieve a goal; and layout patterns, for designers to use to organize content into clear, accessible web pages. [Browse patterns](https://cfpb.github.io/design-system/patterns/)
 
 
-  **Pages**: Find out more about the common page types that we use within our content management system, which are documented for easy reference. [Browse pages](https://cfpb.github.io/design-system/pages/)
+  * **Pages**: Find out more about the common page types that we use within our content management system, which are documented for easy reference. [Browse pages](https://cfpb.github.io/design-system/pages/)
 
 
-  **Development**: The development section includes utilities, such as variables, helper classes, and mixins, and layout options, such as blocks. [Browse development](https://cfpb.github.io/design-system/development/) 
+  * **Development**: The development section includes utilities, such as variables, helper classes, and mixins, and layout options, such as blocks. [Browse development](https://cfpb.github.io/design-system/development/) 
 
 
-  **Guidelines**: This section includes guidelines for creating specific product experiences not covered in other sections, such as data visualization.  [Browse guidelines](https://cfpb.github.io/design-system/guidelines/) 
+  * **Guidelines**: This section includes guidelines for creating specific product experiences not covered in other sections, such as data visualization.  [Browse guidelines](https://cfpb.github.io/design-system/guidelines/) 
 
 
-  Learn how to integrate our design system into your project, contribute to the code base, and update the documentation. [Get started](https://cfpb.github.io/design-system/getting-started/)
-   
+  ### Getting started for developers 
+
+  Learn how to integrate our design system into your project, contribute to the code base, and update the documentation. [Get started](https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md).
+
+
+  The Design System also includes [the source code for the common components](https://github.com/cfpb/design-system) that power the design of [consumerfinance.gov.](https://www.consumerfinance.gov) 
+
 
   ### About the CFPB Design System
 

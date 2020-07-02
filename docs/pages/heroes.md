@@ -381,6 +381,9 @@ behavior: >-
 accessibility: ""
 research: ""
 related_items: >-
+  -
+  [Variables](https://cfpb.github.io/design-system/development/variables#heroes-and-featured-content-modules)
+
   - [Landing pages](https://cfpb.github.io/design-system/pages/landing-pages)
 
   - [Sublanding pages](https://cfpb.github.io/design-system/pages/sublanding-pages)

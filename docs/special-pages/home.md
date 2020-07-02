@@ -6,7 +6,7 @@ is_homepage: true
 description: >-
   The Design System is an open-source resource for teams at the Consumer
   Financial Protection Bureau (CFPB). It helps us produce consistent, effective,
-  and accessible products aimed at the American public.
+  and accessible products for the American public.
 
 
   ### Where to go first

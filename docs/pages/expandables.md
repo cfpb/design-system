@@ -2,22 +2,11 @@
 title: Expandables
 layout: variation
 section: components
-secondary_section: Layout options
 status: Released
-description: >-
-  Expandables are components that have additional content that can be opened
-  (expanded) and closed (collapsed). They can appear on their own or in groups.
-
-
-  They can be used for displaying non-essential information on a page. They are also helpful for FAQ sections, schedules, and for conserving vertical space by collapsing secondary information on mobile devices.
-
-
-  Information about Expandables can be found at:
-
-
-  * http://cfpb.github.io/design-manual/page-components/expandables.html
-
-  * https://cfpb.github.io/capital-framework/components/cf-expandables/
+description: Expandables are components that have additional content that can be
+  opened (expanded) and closed (collapsed). They can appear on their own or in
+  groups. They may be helpful for FAQ sections, schedules, and for conserving
+  vertical space by collapsing secondary information on mobile devices.
 variation_groups:
   - variation_group_name: Standard expandables
     variations:
@@ -55,6 +44,36 @@ variation_groups:
                   </p>
               </div>
           </div>
+        variation_specs: >-
+          When only one expandable is used, it should include a stroke on all
+          sides, heading text, and the expand/collapse minicon within a circle
+          with a label reading “Show” or “Hide” (when possible). A white or 5%
+          gray background can be used to highlight the section from the page
+          background.
+
+
+          The entire bar is actionable. The header should clearly indicate what the user will see when the content is expanded (it should not be a call to action). Expand icons stay aligned at the top of the row when the title breaks to multiple lines.
+
+
+          ##### Specifications
+
+
+          * 60% gray 1px strokes. All sides on individual, or top and bottom for grouping.
+
+          * Optional 5% gray or white background for individual expandable.
+
+          * 10px top and bottom padding.
+
+          * 15px left and right padding.
+
+          * 15px padding between title and minicon with label.
+
+          * Avenir paragraph (medium) or H4 title text.
+
+          * Pacific blue minicon and label.
+
+
+          ![Image showing vertical and horizontal padding within expandable elements](/design-system/images/uploads/expandables-spec.png)
       - variation_name: Standard expandable (open on load)
         variation_code_snippet: >-
           <div class="o-expandable
@@ -182,6 +201,38 @@ variation_groups:
               </div>
           </div>
         variation_name: Expandable group
+        variation_specs: >-
+          When expandable sections are used in a group, they are stacked
+          vertically, with each row sharing its top or bottom stroke with the
+          adjacent row. In this use case, expandables have no background color
+          of their own, but match whatever color they are used on (this would
+          typically be a white page or 5% gray well). Title text should be
+          consistent across a group of expandables.
+
+
+          ##### Specifications
+
+
+          * 60% gray 1px strokes. All sides on individual, or top and bottom for grouping.
+
+          * Optional 5% gray or white background for individual expandable.
+
+          * 10px top and bottom padding.
+
+          * 15px left and right padding.
+
+          * 15px padding between title and minicon with label.
+
+          * Avenir paragraph (medium) or H4 title text.
+
+          * Pacific blue minicon and label.
+
+
+          ![Image showing vertical and horizontal padding within expandable elements](/design-system/images/uploads/expandables-spec.png)
+        variation_description: >
+          In the default mode, users are able to have multiple sections of an
+          expandable group expanded at the same time, which allows users to
+          easily compare information that is available in different sections.
       - variation_code_snippet: >-
           <div class="o-expandable-group o-expandable-group__accordion">
               <div class="o-expandable o-expandable__padded">
@@ -269,9 +320,9 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: Accordions can only show one open expandable at a time.
-          Add the `o-expandable-group__accordion` class to the expandable group
-          to activate the accordion mode.
+        variation_description: To show only one open expandable at a time, use an
+          accordion group. Add the `o-expandable-group__accordion` class to the
+          expandable group to activate the accordion mode.
         variation_name: Accordion-style group
     variation_group_name: Groups
     variation_group_description: ""
@@ -281,13 +332,10 @@ variation_groups:
       elements and modifiers described throughout.
     variations:
       - variation_name: Barebones expandable
-        variation_description: >-
-          This is the barebones structure for expandables that can be used
-          (along with other expanable elements and modifiers) to create custom
-          expandable patterns.
-
-
-          In this barebones example there are no visual styles.
+        variation_description: This is the barebones structure for expandables that can
+          be used (along with other expanable elements and modifiers) to create
+          custom expandable patterns. In this barebones example there are no
+          visual styles.
         variation_code_snippet: >-
           <div class="o-expandable">
               <button class="o-expandable_target" title="Expand content">
@@ -325,10 +373,9 @@ variation_groups:
       - variation_name: Padded modifier
         variation_description: >-
           Adds padding and a background color to `.o-expandable_header` and
-          `.o-expandable_content`.
-
-
-          In addition to using the `.o-expandable__padded` modifier you also need to make sure you are using `.o-expandable_header`.
+          `.o-expandable_content`. In addition to using the
+          `.o-expandable__padded` modifier you also need to make sure you are
+          using `.o-expandable_header`.
 
 
           ```
@@ -375,15 +422,13 @@ variation_groups:
       - variation_name: Header elements
         variation_description: >
           
+          These additional elements are useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.
 
 
           #### Header
 
 
-          Creates a full-width container to house information that is always visible. This is useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.
-
-
-          Combine `.o-expandable_header` with `.o-expandable_target` for a full-width trigger.
+          Creates a full-width container to house information that is always visible. Combine `.o-expandable_header` with `.o-expandable_target` for a full-width trigger.
 
 
           ```
@@ -450,20 +495,7 @@ variation_groups:
 
       * {string} The text of the expandable’s label.
 use_cases: ""
-content_guidelines: >-
-  ### Individual
-
-
-  When only one expandable is used, it should include a stroke on all sides, heading text, and the expand/collapse minicon within a circle with a label reading “Show” or “Hide” (when possible). A white or 5% gray background can be used to highlight the section from the page background.
-
-
-  The entire bar is actionable. The header should clearly indicate what the user will see when the content is expanded (it should not be a call to action). Expand icons stay aligned at the top of the row when the title breaks to multiple lines.
-
-
-  ### Group
-
-
-  When expandable sections are used in a group, they are stacked vertically, with each row sharing its top or bottom stroke with the adjacent row. In this use case, expandables have no background color of their own, but match whatever color they are used on (this would typically be a white page or 5% gray well). Title text should be consistent across a group of expandables.
+content_guidelines: ""
 behavior: >
   ### Collapsed
 
@@ -478,15 +510,10 @@ behavior: >
 
 
   Expandables can make use of an optional stroke under the title when expanded. The title stroke can help to define the title from the expanded content for longer sections of text. It should be indented left and right to match the text within the expandable section.
-
-
-  In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.
 accessibility: The `find` function will not discover information hidden by a
   collapsed expandable, so use good judgement in deciding which information to
   hide. Non-javaScript users should default to the expanded state. Otherwise,
   the default state (expanded or collapsed) will depend on the circumstance.
-related_items: ""
-last_updated: 2019-12-16T18:43:19.784Z
 research: "### Google Tag Manager
 
 
@@ -552,4 +579,9 @@ research: "### Google Tag Manager
   Element has parentNode with a className that does not contain
   `nav-secondary`, since the secondary navigation at mobile uses an expandable
   as well."
+related_items: "* [Expandables
+  variables](https://cfpb.github.io/design-system/development/variables#expanda\
+  bles) "
+last_updated: 2019-12-16T18:43:19.784Z
+secondary_section: Layout options
 ---

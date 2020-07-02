@@ -259,10 +259,6 @@
         </li>
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#content-guidelines">Content guidelines</a>
-        </li>
-        
-        <li class="m-list_item">
             <a class="m-list_link" href="#behavior">Behavior</a>
         </li>
         
@@ -274,21 +270,16 @@
             <a class="m-list_link" href="#research">Research</a>
         </li>
         
+        <li class="m-list_item">
+            <a class="m-list_link" href="#related-items">Related items</a>
+        </li>
+        
     </ul>
     
 
     
     <section id="description" class="u-mb30">
-        <p>Expandables are components that have additional content that can be opened (expanded) and closed (collapsed). They can appear on their own or in groups.</p>
-
-<p>They can be used for displaying non-essential information on a page. They are also helpful for FAQ sections, schedules, and for conserving vertical space by collapsing secondary information on mobile devices.</p>
-
-<p>Information about Expandables can be found at:</p>
-
-<ul>
-  <li>http://cfpb.github.io/design-manual/page-components/expandables.html</li>
-  <li>https://cfpb.github.io/capital-framework/components/cf-expandables/</li>
-</ul>
+        <p>Expandables are components that have additional content that can be opened (expanded) and closed (collapsed). They can appear on their own or in groups. They may be helpful for FAQ sections, schedules, and for conserving vertical space by collapsing secondary information on mobile devices.</p>
 
     </section>
     
@@ -390,6 +381,12 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-standard-expandable-the-followin-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
@@ -441,6 +438,32 @@
                 
 
                 <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-standard-expandable-the-followin-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <p>When only one expandable is used, it should include a stroke on all sides, heading text, and the expand/collapse minicon within a circle with a label reading “Show” or “Hide” (when possible). A white or 5% gray background can be used to highlight the section from the page background.</p>
+
+<p>The entire bar is actionable. The header should clearly indicate what the user will see when the content is expanded (it should not be a call to action). Expand icons stay aligned at the top of the row when the title breaks to multiple lines.</p>
+
+<h5 id="specifications">Specifications</h5>
+
+<ul>
+  <li>60% gray 1px strokes. All sides on individual, or top and bottom for grouping.</li>
+  <li>Optional 5% gray or white background for individual expandable.</li>
+  <li>10px top and bottom padding.</li>
+  <li>15px left and right padding.</li>
+  <li>15px padding between title and minicon with label.</li>
+  <li>Avenir paragraph (medium) or H4 title text.</li>
+  <li>Pacific blue minicon and label.</li>
+</ul>
+
+<p><img src="/design-system/images/uploads/expandables-spec.png" alt="Image showing vertical and horizontal padding within expandable elements"></p>
+
+                        </div>
+                    </div>
+                </section>
                 
 
             </div>
@@ -619,7 +642,7 @@
 
             
             <div class="m-variation_description">
-                
+                <p>In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.</p>
 
             </div>
             
@@ -721,15 +744,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-expandable-group-div-class-o-exp-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-expandable-group-div-class-o-exp-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-expandable-group-in-the-default--1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-expandable-group-in-the-default--1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-expandable-group-div-class-o-exp-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-expandable-group-in-the-default--1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-expandable-group-div-class-o-exp-html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-expandable-group-in-the-default--html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -737,11 +760,17 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-expandable-group-in-the-default--specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-expandable-group-div-class-o-exp-html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-expandable-group-in-the-default--html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -844,6 +873,30 @@
 
                 <!-- Specs -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-expandable-group-in-the-default--specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <p>When expandable sections are used in a group, they are stacked vertically, with each row sharing its top or bottom stroke with the adjacent row. In this use case, expandables have no background color of their own, but match whatever color they are used on (this would typically be a white page or 5% gray well). Title text should be consistent across a group of expandables.</p>
+
+<h5 id="specifications">Specifications</h5>
+
+<ul>
+  <li>60% gray 1px strokes. All sides on individual, or top and bottom for grouping.</li>
+  <li>Optional 5% gray or white background for individual expandable.</li>
+  <li>10px top and bottom padding.</li>
+  <li>15px left and right padding.</li>
+  <li>15px padding between title and minicon with label.</li>
+  <li>Avenir paragraph (medium) or H4 title text.</li>
+  <li>Pacific blue minicon and label.</li>
+</ul>
+
+<p><img src="/design-system/images/uploads/expandables-spec.png" alt="Image showing vertical and horizontal padding within expandable elements"></p>
+
+                        </div>
+                    </div>
+                </section>
+                
 
             </div>
 <!-- .govuk-tabs -->
@@ -865,7 +918,7 @@
 
             
             <div class="m-variation_description">
-                <p>Accordions can only show one open expandable at a time. Add the <code class="language-plaintext highlighter-rouge">o-expandable-group__accordion</code> class to the expandable group to activate the accordion mode.</p>
+                <p>To show only one open expandable at a time, use an accordion group. Add the <code class="language-plaintext highlighter-rouge">o-expandable-group__accordion</code> class to the expandable group to activate the accordion mode.</p>
 
             </div>
             
@@ -967,15 +1020,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-accordion-style-group-accordions-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-accordion-style-group-accordions-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-accordion-style-group-to-show-on-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-accordion-style-group-to-show-on-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-accordion-style-group-accordions-2">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-accordion-style-group-to-show-on-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-accordion-style-group-accordions-html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#details-accordion-style-group-to-show-on-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -987,7 +1040,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-accordion-style-group-accordions-html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="details-accordion-style-group-to-show-on-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1129,9 +1182,7 @@
 
             
             <div class="m-variation_description">
-                <p>This is the barebones structure for expandables that can be used (along with other expanable elements and modifiers) to create custom expandable patterns.</p>
-
-<p>In this barebones example there are no visual styles.</p>
+                <p>This is the barebones structure for expandables that can be used (along with other expanable elements and modifiers) to create custom expandable patterns. In this barebones example there are no visual styles.</p>
 
             </div>
             
@@ -1282,9 +1333,7 @@
 
             
             <div class="m-variation_description">
-                <p>Adds padding and a background color to <code class="language-plaintext highlighter-rouge">.o-expandable_header</code> and <code class="language-plaintext highlighter-rouge">.o-expandable_content</code>.</p>
-
-<p>In addition to using the <code class="language-plaintext highlighter-rouge">.o-expandable__padded</code> modifier you also need to make sure you are using <code class="language-plaintext highlighter-rouge">.o-expandable_header</code>.</p>
+                <p>Adds padding and a background color to <code class="language-plaintext highlighter-rouge">.o-expandable_header</code> and <code class="language-plaintext highlighter-rouge">.o-expandable_content</code>. In addition to using the <code class="language-plaintext highlighter-rouge">.o-expandable__padded</code> modifier you also need to make sure you are using <code class="language-plaintext highlighter-rouge">.o-expandable_header</code>.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.o-expandable__padded
 </code></pre></div></div>
@@ -1400,11 +1449,11 @@ Note: only use this in the expandable header</p>
 
             
             <div class="m-variation_description">
-                <h4 id="header">Header</h4>
+                <p>These additional elements are useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.</p>
 
-<p>Creates a full-width container to house information that is always visible. This is useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.</p>
+<h4 id="header">Header</h4>
 
-<p>Combine <code class="language-plaintext highlighter-rouge">.o-expandable_header</code> with <code class="language-plaintext highlighter-rouge">.o-expandable_target</code> for a full-width trigger.</p>
+<p>Creates a full-width container to house information that is always visible. Combine <code class="language-plaintext highlighter-rouge">.o-expandable_header</code> with <code class="language-plaintext highlighter-rouge">.o-expandable_target</code> for a full-width trigger.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.o-expandable_header
 </code></pre></div></div>
@@ -1490,22 +1539,6 @@ Return:</p>
             
 
             
-                <h2 id="content-guidelines">Content guidelines</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<h3 id="individual">Individual</h3>
-
-<p>When only one expandable is used, it should include a stroke on all sides, heading text, and the expand/collapse minicon within a circle with a label reading “Show” or “Hide” (when possible). A white or 5% gray background can be used to highlight the section from the page background.</p>
-
-<p>The entire bar is actionable. The header should clearly indicate what the user will see when the content is expanded (it should not be a call to action). Expand icons stay aligned at the top of the row when the title breaks to multiple lines.</p>
-
-<h3 id="group">Group</h3>
-
-<p>When expandable sections are used in a group, they are stacked vertically, with each row sharing its top or bottom stroke with the adjacent row. In this use case, expandables have no background color of their own, but match whatever color they are used on (this would typically be a white page or 5% gray well). Title text should be consistent across a group of expandables.</p>
-
-                
-            
 
             
                 <h2 id="behavior">Behavior</h2>
@@ -1521,8 +1554,6 @@ Return:</p>
 <p>The content of an expandable can contain normal paragraphs, headings, lists, wells, and images.</p>
 
 <p>Expandables can make use of an optional stroke under the title when expanded. The title stroke can help to define the title from the expanded content for longer sections of text. It should be indented left and right to match the text within the expandable section.</p>
-
-<p>In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.</p>
 
                 
             
@@ -1595,7 +1626,9 @@ return text;
                 <section>
                     <h2 id="related-items">Related Items</h2>
                     <div class="content_line__wide content_line content_line u-mb20"></div>
-                    
+                    <ul>
+  <li><a href="https://cfpb.github.io/design-system/development/variables#expandables">Expandables variables</a></li>
+</ul>
 
                 </section>
             </div>
@@ -1638,8 +1671,8 @@ return text;
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/expandables.md">
-                    <time datetime="2020-06-23 13:00:50 -0400">
-                         1:00:50 PM Jun 23, 2020
+                    <time datetime="2020-07-02 14:32:18 -0400">
+                         2:32:18 PM Jul 02, 2020
                     </time>
                 </a>
             </small>

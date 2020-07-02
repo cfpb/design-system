@@ -1902,7 +1902,7 @@
 
                 
                     'variation_name1': 'Expandable group',
-                    'variation_description1': "\n",
+                    'variation_description1': "In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.\n",
                     'variation_code_snippet1': `&lt;div class=&quot;o-expandable-group&quot;&gt;
     &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
         &lt;button class=&quot;o-expandable_header o-expandable_target&quot;
@@ -1991,7 +1991,7 @@
 &lt;/div&gt;`,
                 
                     'variation_name2': 'Accordion-style group',
-                    'variation_description2': "Accordions can only show one open expandable at a time. Add the o-expandable-group__accordion class to the expandable group to activate the accordion mode.\n",
+                    'variation_description2': "To show only one open expandable at a time, use an accordion group. Add the o-expandable-group__accordion class to the expandable group to activate the accordion mode.\n",
                     'variation_code_snippet2': `&lt;div class=&quot;o-expandable-group o-expandable-group__accordion&quot;&gt;
     &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
         &lt;button class=&quot;o-expandable_header o-expandable_target&quot;
@@ -2085,7 +2085,7 @@
 
                 
                     'variation_name1': 'Barebones expandable',
-                    'variation_description1': "This is the barebones structure for expandables that can be used (along with other expanable elements and modifiers) to create custom expandable patterns.\n\nIn this barebones example there are no visual styles.\n",
+                    'variation_description1': "This is the barebones structure for expandables that can be used (along with other expanable elements and modifiers) to create custom expandable patterns. In this barebones example there are no visual styles.\n",
                     'variation_code_snippet1': `&lt;div class=&quot;o-expandable&quot;&gt;
     &lt;button class=&quot;o-expandable_target&quot; title=&quot;Expand content&quot;&gt;
         &lt;span class=&quot;o-expandable_cue o-expandable_cue-open&quot;&gt;
@@ -2112,7 +2112,7 @@
                     'variation_code_snippet2': ``,
                 
                     'variation_name3': 'Padded modifier',
-                    'variation_description3': "Adds padding and a background color to .o-expandable_header and .o-expandable_content.\n\nIn addition to using the .o-expandable__padded modifier you also need to make sure you are using .o-expandable_header.\n\n.o-expandable__padded\n\n",
+                    'variation_description3': "Adds padding and a background color to .o-expandable_header and .o-expandable_content. In addition to using the .o-expandable__padded modifier you also need to make sure you are using .o-expandable_header.\n\n.o-expandable__padded\n\n",
                     'variation_code_snippet3': ``,
                 
                     'variation_name4': 'Spaced header modifier',
@@ -2124,7 +2124,7 @@
                     'variation_code_snippet5': ``,
                 
                     'variation_name6': 'Header elements',
-                    'variation_description6': "\nHeader\n\nCreates a full-width container to house information that is always visible. This is useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.\n\nCombine .o-expandable_header with .o-expandable_target for a full-width trigger.\n\n.o-expandable_header\n\n\nHeader left/right\n\nAllows you to float information left and right.\n\n.o-expandable_header-left\n.o-expandable_header-right\n\n",
+                    'variation_description6': "\nThese additional elements are useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.\n\nHeader\n\nCreates a full-width container to house information that is always visible. Combine .o-expandable_header with .o-expandable_target for a full-width trigger.\n\n.o-expandable_header\n\n\nHeader left/right\n\nAllows you to float information left and right.\n\n.o-expandable_header-left\n.o-expandable_header-right\n\n",
                     'variation_code_snippet6': ``,
                 
             
@@ -2136,13 +2136,13 @@
 
 
             'title': 'Expandables',
-            'description': "Expandables are components that have additional content that can be opened (expanded) and closed (collapsed). They can appear on their own or in groups.\n\nThey can be used for displaying non-essential information on a page. They are also helpful for FAQ sections, schedules, and for conserving vertical space by collapsing secondary information on mobile devices.\n\nInformation about Expandables can be found at:\n\n\n  http://cfpb.github.io/design-manual/page-components/expandables.html\n  https://cfpb.github.io/capital-framework/components/cf-expandables/\n\n",
+            'description': "Expandables are components that have additional content that can be opened (expanded) and closed (collapsed). They can appear on their own or in groups. They may be helpful for FAQ sections, schedules, and for conserving vertical space by collapsing secondary information on mobile devices.\n",
             'use_cases': "\n",
-            'content_guidelines': "Individual\n\nWhen only one expandable is used, it should include a stroke on all sides, heading text, and the expand/collapse minicon within a circle with a label reading “Show” or “Hide” (when possible). A white or 5% gray background can be used to highlight the section from the page background.\n\nThe entire bar is actionable. The header should clearly indicate what the user will see when the content is expanded (it should not be a call to action). Expand icons stay aligned at the top of the row when the title breaks to multiple lines.\n\nGroup\n\nWhen expandable sections are used in a group, they are stacked vertically, with each row sharing its top or bottom stroke with the adjacent row. In this use case, expandables have no background color of their own, but match whatever color they are used on (this would typically be a white page or 5% gray well). Title text should be consistent across a group of expandables.\n",
-            'behavior': "Collapsed\n\nThe default collapsed state should include the expand/collapse minicon within a circle and a label (if space allows). The Show/Hide label can be hidden at narrower screen widths to prevent titles prematurely breaking onto multiple lines and to reduced visual clutter.\n\nExpanded\n\nThe content of an expandable can contain normal paragraphs, headings, lists, wells, and images.\n\nExpandables can make use of an optional stroke under the title when expanded. The title stroke can help to define the title from the expanded content for longer sections of text. It should be indented left and right to match the text within the expandable section.\n\nIn the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.\n",
+            'content_guidelines': "\n",
+            'behavior': "Collapsed\n\nThe default collapsed state should include the expand/collapse minicon within a circle and a label (if space allows). The Show/Hide label can be hidden at narrower screen widths to prevent titles prematurely breaking onto multiple lines and to reduced visual clutter.\n\nExpanded\n\nThe content of an expandable can contain normal paragraphs, headings, lists, wells, and images.\n\nExpandables can make use of an optional stroke under the title when expanded. The title stroke can help to define the title from the expanded content for longer sections of text. It should be indented left and right to match the text within the expandable section.\n",
             'accessibility': "The find function will not discover information hidden by a collapsed expandable, so use good judgement in deciding which information to hide. Non-javaScript users should default to the expanded state. Otherwise, the default state (expanded or collapsed) will depend on the circumstance.\n",
             'research': "Google Tag Manager\n\nBelow is a list of items that Digital Analytics references in the tag that captures expandables.\n\nTAG ITEMS\n\nCategory: Page Interaction (hardcoded)\n\nAction: Dropdown (hardcoded)\n\nLabel: where {{element}} = element clicked\n\nvar elem = {{element}};\n\nvar closestElem = closest(elem, '.o-expandable_target');\nvar textElem = closestElem.querySelector('.o-expandable_label') || closestElem.querySelector('.o-expandable_cue')\n;\nvar text = textElem.textContent.trim();\nreturn text;\n\n\nOR\n\nvar elem = {{element}};\nvar closestElem = closest(elem, '.expandable_target');\nvar text = closestElem.querySelector('.expandable_label').textContent.trim();\nreturn text;\n\n\nTRIGGER ITEMS\n\nElement has a parentNode with className matching RegEx expandable_header|expandable__padded.\n\nElement has parentNode with a className that does not contain nav-secondary, since the secondary navigation at mobile uses an expandable as well.\n",
-            'related_items': "\n",
+            'related_items': "\n  Expandables variables\n\n",
             'url': 'components/expandables'
         }
         ,

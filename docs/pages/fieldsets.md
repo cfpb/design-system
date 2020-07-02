@@ -2,21 +2,19 @@
 title: Fieldsets
 layout: variation
 section: components
-secondary_section: Forms
 status: Released
 description: >-
   The fieldset element is used to group several controls as well as labels
-  within a web form. 
+  within a web form. It includes each of the following:
 
 
-  More information can be found at:
+  * [Legend](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-  * http://cfpb.github.io/design-manual/page-components/form-fields.html	
+  * Set of controls such as [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) or [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons)
 
-  * https://cfpb.github.io/capital-framework/components/cf-forms/#fieldsets
+  * [Inline labels](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-
-  *NOTE: The code doesn't match description in that the code doesn't include a legend, block helper text, or inline labels.
+  * [Block helper text](https://cfpb.github.io/design-system/components/helper-text) (if necessary)
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -34,7 +32,7 @@ variation_groups:
                   </fieldset>
               </div>
           </form>
-        variation_description: " "
+        variation_description: ""
         variation_name: Fieldset with checkboxes
       - variation_code_snippet: >-
           <form class="o-form">
@@ -51,11 +49,10 @@ variation_groups:
                   </fieldset>
               </div>
           </form>
-        variation_description: " "
+        variation_description: ""
         variation_name: Fieldset with radio buttons
     variation_group_name: Types
-    variation_group_description: The fieldset includes the legend, optional block
-      helper text, inline labels, and a set of controls.
+    variation_group_description: ""
   - variation_group_name: Sizes
     variations:
       - variation_name: Large target fieldset with checkboxes
@@ -117,5 +114,6 @@ content_guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
+secondary_section: Forms
 research: ""
 ---

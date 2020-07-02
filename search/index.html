@@ -459,7 +459,7 @@
             'behavior': "\n",
             'accessibility': "\n",
             'research': "\n",
-            'related_items': "\n",
+            'related_items': "\n  Layout variables\n\n",
             'url': 'development/blocks'
         }
         ,
@@ -631,7 +631,7 @@
             'behavior': "\n",
             'accessibility': "\n",
             'research': "\n",
-            'related_items': "\n  related items\n\n",
+            'related_items': "\n  Button variables\n\n",
             'url': 'components/buttons'
         }
         ,
@@ -2160,7 +2160,7 @@
 
                 
                     'variation_name1': '',
-                    'variation_description1': "FCMs contain a headline, body copy text, a call to action (either a text link or a play button), and a graphical element related to the piece of content being featured. They are a “mini story” and never simply a dominant visual.\nFCMs appear below the page introduction, and retain that position on all screen sizes. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. \\ \n\n\n",
+                    'variation_description1': "FCMs contain a headline, body copy text, a call to action (either a text link or a play button), and a graphical element related to the piece of content being featured. They are a “mini story” and never simply a dominant visual.\nFCMs appear below the page introduction, and retain that position on all screen sizes. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. \n\n\n",
                     'variation_code_snippet1': ``,
                 
             
@@ -2249,7 +2249,7 @@
             'behavior': "\n  \n    \n      Above 600 px\n      Below 601 px\n    \n  \n  \n    \n      \n      \n    \n  \n\n\nResponsive visual behavior\n\nAt desktop size, the ratio of text and visual changes with screen size to keep the full height of the image visible. As available width dips below the maximum page width, the text area shrinks in width while the visual maintains a fixed width of 270px. That means that the height and aspect ratio of the visual will change as the screen shrinks, and the image will be cropped between 16% and 29% from each side.\n\nAt larger screen sizes, the image moves to the right of the text, occupying a fixed width of 270px (equal to 3 of 12 columns at max page width). By default, the left edge of the image is anchored to the left side of the visual’s 270px-wide area, and the right side is cropped off. The aspect ratio of the visual area increases as screen size increases, resulting in slightly different image cropping at different screen sizes, but the left edge of the image remains anchored in view. The full height of the image is always in view; the top and bottom are never cropped. See above for modifiers that change the image’s horizontal anchoring.\n",
             'accessibility': "\n",
             'research': "\n",
-            'related_items': "\n",
+            'related_items': "\n  Variables for featured content modules\n\n",
             'url': 'patterns/featured-content-module'
         }
         ,
@@ -3463,7 +3463,7 @@ Label
             'behavior': "For style at different breakpoints, see specs for standard heroes.\n\n\n  \n    \n      Above 600 px\n      Below 601 px\n    \n  \n  \n    \n      Text and hero image appear side-by-side\n      Text and hero image stack vertically\n    \n    \n      \n      \n    \n  \n\n",
             'accessibility': "\n",
             'research': "\n",
-            'related_items': "\n  Landing pages\n  Sublanding pages\n  Text introductions\n  Item introductions\n\n",
+            'related_items': "\n  Variables\n  Landing pages\n  Sublanding pages\n  Text introductions\n  Item introductions\n\n",
             'url': 'patterns/heroes'
         }
         ,
@@ -4654,7 +4654,7 @@ Label heading
             'behavior': "Placement\n\n\n  \n    Form-level alerts should appear below the form title.\n  \n  \n    Field-level alerts (minicon and message) should always appear below the input field.\n  \n\n\nValidation\n\nWhere possible, display formatting errors immediately using client-side validation so the user doesn’t have to wait until submitting to see what went wrong (this is especially frustrating if the information the user enters the first time around is not cached on submit and they have to fill out all the fields again from scratch). If letters are entered in a date field, if an email address is missing the “@” sign, let the user know right away by showing a field-level error on blur.\n\nThat said, it’s a good idea to always validate on the server side even if you use client-side validation for formatting checks. That’s because JavaScript validation may not work on all clients; JavaScript errors could occur no matter the client; and JS validation can easily be bypassed, which raises security concerns.\n\nIn general, the best practice for server-side validation is to mark errors with both form-level and field-level errors.\n",
             'accessibility': "\n  For screen reader accessibility, form-level errors should include anchor links to the problem field in question.\n  Place form-level alerts below the form title.\n  In general, use distinct icons, contrasting colors, prominent placement, and text to indicate errors. Don’t rely on just one method, as users can have many different accessibility needs (color blind users, visually impaired users, users with motor control issues, etc.).\n\n",
             'research': "\n",
-            'related_items': "\n",
+            'related_items': "\n  Notifications variables\n\n",
             'url': 'components/notifications'
         }
         ,

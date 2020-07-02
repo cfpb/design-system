@@ -2,7 +2,6 @@
 title: Labels and legends
 layout: variation
 section: components
-secondary_section: Text
 status: Released
 description: "Labels and legends are used to help users understand the meaning
   of a form input. Legends are used exclusively for
@@ -15,11 +14,7 @@ variation_groups:
           </label>
         variation_description: ""
         variation_name: Basic label
-        variation_specs: |-
-          #### Basic label
-          * Avenir Next Medium, 18 px, Black (#101820)
-          * Positioned above the input field, left aligned
-          * Margin bottom: 10 px
+        variation_specs: ""
       - variation_code_snippet: |-
           <label class="a-label a-label__heading">
           Label heading
@@ -73,9 +68,10 @@ use_cases: ""
 content_guidelines: ""
 behavior: ""
 accessibility: ""
+research: ""
 related_items: |-
   * [Helper text](https://cfpb.github.io/design-system/components/helper-text)
   * [Fieldsets](https://cfpb.github.io/design-system/components/fieldsets)
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+secondary_section: Text
 ---

@@ -42,3 +42,41 @@ function handleDocumentClick( event ) {
 }
 
 document.addEventListener( 'click', handleDocumentClick, false );
+
+// Show redirect banner if we're coming from the now-deprecated Capital
+// Framework or Design Manual websites.
+if ( window.location.search.match( /[?&]utm_medium=redirect([&#]|$)/ ) ) {
+    const match = window.location.search.match( /[?&]utm_source=([^&#]*)/ );
+
+    const redirectSources = {
+        capitalframework: {
+            name: 'Capital Framework',
+            url: 'https://cfpb.github.io/capital-framework-archive/'
+        },
+        designmanual: {
+            name: 'the CFPB Design Manual',
+            url: 'https://cfpb.github.io/design-manual-archive/'
+        }
+    };
+
+    if ( match ) {
+        const source = redirectSources[ match[ 1 ] ];
+
+        if ( source ) {
+            const banner = document.querySelector( '#redirect-banner' );
+
+            banner.querySelectorAll( 'span.redirect-source-name' ).forEach(
+                name => { name.textContent = source.name; }
+            );
+
+            banner.querySelectorAll( 'a.redirect-archive-website' ).forEach(
+                link => {
+                    link.textContent = source.url;
+                    link.href = source.url;
+                }
+            );
+
+            banner.classList.remove( 'u-hidden' );
+        }
+    }
+}

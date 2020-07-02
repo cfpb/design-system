@@ -229,6 +229,10 @@ variation_groups:
 
 
           ![Image showing vertical and horizontal padding within expandable elements](/design-system/images/uploads/expandables-spec.png)
+        variation_description: >
+          In the default mode, users are able to have multiple sections of an
+          expandable group expanded at the same time, which allows users to
+          easily compare information that is available in different sections.
       - variation_code_snippet: >-
           <div class="o-expandable-group o-expandable-group__accordion">
               <div class="o-expandable o-expandable__padded">
@@ -506,9 +510,6 @@ behavior: >
 
 
   Expandables can make use of an optional stroke under the title when expanded. The title stroke can help to define the title from the expanded content for longer sections of text. It should be indented left and right to match the text within the expandable section.
-
-
-  In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.
 accessibility: The `find` function will not discover information hidden by a
   collapsed expandable, so use good judgement in deciding which information to
   hide. Non-javaScript users should default to the expanded state. Otherwise,

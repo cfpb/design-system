@@ -210,7 +210,10 @@ use_cases: ""
 content_guidelines: ""
 behavior: ""
 accessibility: ""
+research: ""
+related_items: "* [Layout
+  variables](https://cfpb.github.io/design-system/development/variables#color-4\
+  )"
 last_updated: 2020-01-06T20:29:09.912Z
 secondary_section: Core development
-research: ""
 ---

@@ -2,17 +2,10 @@
 title: Blocks
 layout: variation
 section: development
-secondary_section: Core development
 status: Released
-description: >-
+description: >
   `.block` is a base class with several modifiers that help you separate chunks
   of content via `margin`, `padding`, `border`, and `background`.
-
-
-  This page is under active development. Information is being moved into it from these pages:
-
-
-  https://cfpb.github.io/capital-framework/components/cf-layout/#block
 variation_groups:
   - variations:
       - variation_code_snippet: |
@@ -218,5 +211,6 @@ content_guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2020-01-06T20:29:09.912Z
+secondary_section: Core development
 research: ""
 ---

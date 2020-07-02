@@ -14,9 +14,9 @@ variation_groups:
           FCMs contain a headline, body copy text, a call to action (either a
           text link or a play button), and a graphical element related to the
           piece of content being featured. They are a “mini story” and never
-          simply a dominant visual. FCMs appear below the page introduction,
-          and  retain that position on all screen sizes.  
+          simply a dominant visual.
 
+          FCMs appear below the page introduction, and retain that position on all screen sizes. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. \
           <br>
 
 
@@ -145,17 +145,18 @@ variation_groups:
 
 
       The featured content module visual is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered. 
-use_cases: >+
+use_cases: >-
   Featured content modules (FCMs) highlight a specific piece of content at the
-  top of a page. It’s meant to call attention to a related piece of content that
-  might be new or otherwise relevant to—but not directly a part of—the main
-  content on the page, the primary intended user action, or the user journey.
+  top of a page. They are meant to call attention to a related piece of content
+  that might be new or otherwise relevant to — but not directly a part of — the
+  main content on the page, the primary intended user action, or the user
+  journey.
 
 
-  The goal of the FCM is to have the user do one of three things: learn something (usually by navigating to other content), watch something, or download something (a printable tool or resource). Because this content is being featured temporarily, and not meant to be permanent, it shouldn’t be seen as integral to the page, meaning the content could be changed or removed from the page without taking away vital information the user needs or interrupting the user journey. Therefore, this module is not intended to support the site IA as the primary, permanent location for content.
+  The goal of an FCM is to have the user do one of three things: learn something (usually by navigating to other content), watch something, or download something (a printable tool or resource). FCMs can appear on any page type, though they are best suited for pages third level and below in the site map.
 
 
-  FCMs appear below the title and introductory paragraph on a page, and retain that position on all screen sizes. FCMs can appear on any page type, though they are best suited for pages third level and below in the site map. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. 
+  FCM content shouldn’t be seen as integral to the page, meaning it could be changed or removed without taking away vital information the user needs or interrupting the user journey. Therefore, this module is not intended to support the site IA as the primary, permanent location for content. When the content is an integral, long-term part of the intended user journey, then it should have a more permanent home on the page.
 
 
   Use a featured content module (FCM) when you want to highlight something that’s:
@@ -163,32 +164,14 @@ use_cases: >+
 
   * **Timely**: Highlights a new tool or development. Keep in mind: When you remove dated content from a FCM, make sure you're not getting rid of the only way users can navigate to it. Make sure to plan a permanent home for the content.
 
-
-  * **Impactful**: Lets people know immediately how the content will affect them, how they can use it, and how it might enhance their understanding of—or experience with—the primary page content.
-
+  * **Impactful**: Lets people know immediately how the content will affect them, how they can use it, and how it might enhance their understanding of — or experience with — the primary page content.
 
   * **Localized**: New content that specifically applies to people in a specific geographic area; it may be important for that audience to see their specific content first, and when it’s removed from the page it won’t disrupt the usual user flow.
-
 
   * **Unique**: Content that is specifically in the Bureau’s “wheelhouse” because of our position as an approachable, trusted, unbiased authority.
 
 
-  ##### When to use
-
-
-  * When content is new or relevant to—but not directly a part of—the main content on the page
-
-  * When content needs to be highlighted because it’s timely, impactful, or unique to the Bureau
-
-
-  ##### When other options are better
-
-
-  * When the content is an integral, long-term part of the intended user journey, then it should have a more permanent home on the page.
-
-
-  * When there’s no link or video for the user to interact with. If you just want to visually differentiate your content from its surroundings, consider using a well or inline text instead.
-
+  When there’s no link or video for the user to interact with, and you still want to visually differentiate your content from its surroundings, consider using a well or inline text instead.
 content_guidelines: >-
   FCMs contain a headline, descriptive body copy text, an optional
   call-to-action link, and a graphical element related to the piece of content

@@ -12,10 +12,7 @@ description: >-
 
   ### Where to go first
 
-  Start by reading our [general principles](https://cfpb.github.io/design-system/foundation/general-principles), which form the strategic underpinnings for the CFPB’s design and development standards, and [accessibility principles](https://cfpb.github.io/design-system/foundation/accessibility), which lay the foundation for ensuring that web content is available for all users. 
-
-
-  Then go to one of the sections below to find information.
+  Start by reading our [general principles](https://cfpb.github.io/design-system/foundation/general-principles), which form the strategic underpinnings for the CFPB’s design and development standards, and [accessibility principles](https://cfpb.github.io/design-system/foundation/accessibility), which lay the foundation for ensuring that our web content is available for all users. Then go to one of the sections below to find information.
 
 
   * **Foundation**: This section includes our visual identity standards, such as color, grid, and typography. It forms the foundation for the CFPB’s website and external-facing materials. [Browse foundation](https://cfpb.github.io/design-system/foundation/)
@@ -44,12 +41,13 @@ description: >-
   The Design System also includes [the source code for the common components](https://github.com/cfpb/design-system) that power the design of [consumerfinance.gov](https://www.consumerfinance.gov).
 
 
-  ontributing to the Design System
+  ### Contributing to the Design System
 
-  The Design System is built on a tool called Netlify CMS, which allows for editing of pages in a web browser, without needing to use git or other command-line tools. Instructions for contributing are included on the DS website and all are encouraged to participate in its growth and maintenance. 
+  We strongly encourage all of you to participate in the growth and maintenance of the Design System. To make contribution easier, the Design System is built on a tool called Netlify CMS, which allows for editing of pages in a web browser, without needing to use git or other command-line tools. [View instructions for contributing to the Design System](https://cfpb.github.io/design-system/updating-this-website/).
 
 
-  ### About the CFPB Design System
+
+  ##### About the CFPB Design System
 
 
   Our design system has been created to work with a wide range of devices and browsers. Following a modern, mobile first responsive approach, sites built with our Design System easily adapt to a wide range of screen sizes, all while carefully following accessibility best practices.

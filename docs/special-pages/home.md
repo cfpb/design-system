@@ -12,7 +12,10 @@ description: >-
 
   ### Where to go first
 
-  Start by reading our [general principles](https://cfpb.github.io/design-system/foundation/general-principles) and [accessibility principles](https://cfpb.github.io/design-system/foundation/accessibility). Developers can view the [getting started]() information listed below. Then go to one of the sections below for detailed information.
+  Start by reading our [general principles](https://cfpb.github.io/design-system/foundation/general-principles), which form the strategic underpinnings for the CFPB’s design and development standards, and [accessibility principles](https://cfpb.github.io/design-system/foundation/accessibility), which lay the foundation for ensuring that web content is available for all users. 
+
+
+  Then go to one of the sections below to find information.
 
 
   * **Foundation**: This section includes our visual identity standards, such as color, grid, and typography. It forms the foundation for the CFPB’s website and external-facing materials. [Browse foundation](https://cfpb.github.io/design-system/foundation/)
@@ -38,7 +41,12 @@ description: >-
   Learn how to integrate our design system into your project, contribute to the code base, and update the documentation. [Get started](https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md).
 
 
-  The Design System also includes [the source code for the common components](https://github.com/cfpb/design-system) that power the design of [consumerfinance.gov.](https://www.consumerfinance.gov) 
+  The Design System also includes [the source code for the common components](https://github.com/cfpb/design-system) that power the design of [consumerfinance.gov](https://www.consumerfinance.gov).
+
+
+  ontributing to the Design System
+
+  The Design System is built on a tool called Netlify CMS, which allows for editing of pages in a web browser, without needing to use git or other command-line tools. Instructions for contributing are included on the DS website and all are encouraged to participate in its growth and maintenance. 
 
 
   ### About the CFPB Design System

@@ -2,7 +2,6 @@
 title: Buttons
 layout: variation
 section: components
-secondary_section: Forms
 status: Released
 description: Buttons signal actions. They should be used sparingly; each
   additional button on a page reduces the visual prominence of a call to action.
@@ -310,7 +309,10 @@ restrictions:
           </span>
       </button>
 accessibility: ""
-related_items: "- related items"
-last_updated: 2020-01-28T15:55:47.394Z
 research: ""
+related_items: "* [Button
+  variables](https://cfpb.github.io/design-system/development/variables#buttons\
+  )"
+last_updated: 2020-01-28T15:55:47.394Z
+secondary_section: Forms
 ---

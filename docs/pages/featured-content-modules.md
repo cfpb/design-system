@@ -2,7 +2,6 @@
 title: Featured Content Module
 layout: variation
 section: patterns
-secondary_section: Layout options
 status: Released
 description: "Featured content modules (FCMs) highlight one specific piece of
   content at the top of a page. Content is featured temporarily and not a
@@ -16,8 +15,7 @@ variation_groups:
           piece of content being featured. They are a “mini story” and never
           simply a dominant visual.
 
-          FCMs appear below the page introduction, and retain that position on all screen sizes. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. \
-          <br>
+          FCMs appear below the page introduction, and retain that position on all screen sizes. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. <br>
 
 
           ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)
@@ -206,6 +204,10 @@ behavior: >-
 
   At larger screen sizes, the image moves to the right of the text, occupying a fixed width of 270px (equal to 3 of 12 columns at max page width). By default, the left edge of the image is anchored to the left side of the visual’s 270px-wide area, and the right side is cropped off. The aspect ratio of the visual area increases as screen size increases, resulting in slightly different image cropping at different screen sizes, but the left edge of the image remains anchored in view. The full height of the image is always in view; the top and bottom are never cropped. See above for modifiers that change the image’s horizontal anchoring.
 accessibility: ""
-last_updated: 2019-10-17T14:52:11.082Z
 research: ""
+related_items: "* [Variables for featured content
+  modules](https://cfpb.github.io/design-system/development/variables#heroes-an\
+  d-featured-content-modules)"
+last_updated: 2019-10-17T14:52:11.082Z
+secondary_section: Layout options
 ---

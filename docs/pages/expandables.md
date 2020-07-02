@@ -320,9 +320,9 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: Accordions can only show one open expandable at a time.
-          Add the `o-expandable-group__accordion` class to the expandable group
-          to activate the accordion mode.
+        variation_description: To show only one open expandable at a time, use an
+          accordion group. Add the `o-expandable-group__accordion` class to the
+          expandable group to activate the accordion mode.
         variation_name: Accordion-style group
     variation_group_name: Groups
     variation_group_description: ""

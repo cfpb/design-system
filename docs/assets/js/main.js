@@ -48,18 +48,18 @@ document.addEventListener( 'click', handleDocumentClick, false );
 if ( window.location.search.match( /[?&]utm_medium=redirect([&#]|$)/ ) ) {
     const match = window.location.search.match( /[?&]utm_source=([^&#]*)/ );
 
-    const redirectSources = {
-        capitalframework: {
-            name: 'Capital Framework',
-            url: 'https://cfpb.github.io/capital-framework-archive/'
-        },
-        designmanual: {
-            name: 'the CFPB Design Manual',
-            url: 'https://cfpb.github.io/design-manual-archive/'
-        }
-    };
-
     if ( match ) {
+        const redirectSources = {
+            capitalframework: {
+                name: 'Capital Framework',
+                url: 'https://cfpb.github.io/capital-framework-archive/'
+            },
+            designmanual: {
+                name: 'the CFPB Design Manual',
+                url: 'https://cfpb.github.io/design-manual-archive/'
+            }
+        };
+
         const source = redirectSources[ match[ 1 ] ];
 
         if ( source ) {

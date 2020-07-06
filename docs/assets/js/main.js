@@ -64,17 +64,17 @@ if ( window.location.search.match( /[?&]utm_medium=redirect([&#]|$)/ ) ) {
 
         if ( source ) {
             const banner = document.querySelector( '#redirect-banner' );
+            const sourceNames = banner.querySelectorAll( 'span.redirect-source-name' );
+            const links = banner.querySelectorAll( 'a.redirect-archive-website' );
 
-            banner.querySelectorAll( 'span.redirect-source-name' ).forEach(
-                name => { name.textContent = source.name; }
-            );
+            for ( let i = 0, len = sourceNames.length; i < len; i++ ) {
+                sourceNames[i].textContent = source.name;
+            }
 
-            banner.querySelectorAll( 'a.redirect-archive-website' ).forEach(
-                link => {
-                    link.textContent = source.url;
-                    link.href = source.url;
-                }
-            );
+            for ( let i = 0, len = links.length; i < len; i++ ) {
+                links[i].textContent = source.url;
+                links[i].href = source.url;
+            }
 
             banner.classList.remove( 'u-hidden' );
         }

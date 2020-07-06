@@ -64,8 +64,8 @@ if ( window.location.search.match( /[?&]utm_medium=redirect([&#]|$)/ ) ) {
 
         if ( source ) {
             const banner = document.querySelector( '#redirect-banner' );
-            const sourceNames = banner.querySelectorAll( 'span.redirect-source-name' );
-            const links = banner.querySelectorAll( 'a.redirect-archive-website' );
+            const sourceNames = banner.querySelectorAll( 'span[data-redirect=source-name]' );
+            const links = banner.querySelectorAll( 'a[data-redirect=archive-website]' );
 
             for ( let i = 0, len = sourceNames.length; i < len; i++ ) {
                 sourceNames[i].textContent = source.name;

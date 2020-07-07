@@ -4,7 +4,7 @@ layout: variation
 collection_name: special-pages
 is_homepage: true
 description: >-
-  The Design System is an open-source resource for teams at the Consumer
+  ### The Design System is an open-source resource for teams at the Consumer
   Financial Protection Bureau (CFPB). It is intended to help teams produce
   consistent, effective, and accessible products for the American public
 
@@ -16,6 +16,7 @@ description: >-
 
   ## Browse the Design System
 
+  After reading about our principles, check out the six sections of our Design System. 
 
   <div class="content-33 content-last" markdown="1">
 
@@ -75,16 +76,20 @@ description: >-
 
   ## Getting started for developers 
 
+  <div class="content-50 content-last" markdown="1">
+
   Learn how to integrate our design system into your project, contribute to the code base, and update the documentation. **[Get started](https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md)**.
 
+  </div>
 
-  The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov). 
+
+  <div class="content-50 content-last" markdown="1">
+
+  The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov). **[View source code on github]((https://github.com/cfpb/design-system)**.
+
+  </div>
 
   <br>
-
-  <br>
-
-  **[View source code on github]((https://github.com/cfpb/design-system)**
 
 
   ## Contributing to the Design System

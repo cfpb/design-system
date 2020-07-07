@@ -2,14 +2,10 @@
 title: Color
 layout: variation
 section: foundation
-secondary_section: Brand guidelines
 status: Released
-description: >-
-  A minimal palette, clear hierarchy, and ample whitespace ensure a voice of
-  authority and expertise in communication.
-
-
-  The following sets of colors maintain CFPB brand cohesion and create accessible graphics.
+description: A minimal palette, clear hierarchy, and ample whitespace ensure a
+  voice of authority and expertise in communication. The following sets of
+  colors maintain CFPB brand cohesion and create accessible graphics.
 variation_groups:
   - variation_group_name: Palettes
     variations:
@@ -1121,4 +1117,5 @@ accessibility: >-
 
   The [Colour Contrast Check](http://www.snook.ca/technical/colour_contrast/colour.html) is a nice tool for testing color contrast ratios.
 last_updated: 2019-08-30T18:31:00.000Z
+secondary_section: Brand guidelines
 ---

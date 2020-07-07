@@ -4,7 +4,7 @@ layout: variation
 section: guidelines
 description: >-
   <p class="lead-paragraph">This section includes guidelines for creating
-  specific product experiences not covered in other sections.</p>
+  specific product experiences.</p>
 
 
   Currently, we have a handful of data visualization guidelines.

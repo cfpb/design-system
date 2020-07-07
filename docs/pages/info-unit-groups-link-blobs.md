@@ -2,7 +2,6 @@
 title: Link blobs
 layout: variation
 section: patterns
-secondary_section: Layout options
 status: Released
 description: Link blobs are text-only layout modules. They provide brief context
   to lead users from a parent page ([landing
@@ -77,6 +76,47 @@ variation_groups:
             * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
 
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
+      - variation_name: 25/75 image and text component
+        variation_description: >-
+          ![Info unit group: example of third width link
+          blob](/design-system/images/uploads/third_width_link_blob_intro.png
+          "Info unit group: example of third width link blob")
+
+
+          ![]()
+
+
+          The 25/75 image and text component is used to draw the user’s eye to key information and navigation links, and aid comprehension by pairing content with illustration/imagery.
+
+
+          When used in conjunction with half width link blob, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
+
+
+          ##### When to use
+
+
+          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
+
+          * When an image or illustration helps users better understand the purpose of content.
+
+          * Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.
+
+
+          ##### When other options are better
+
+
+          * When content doesn’t require imagery. Suggest using the half width link blob pattern instead.
+
+          * When there are multiple paragraphs of copy.
+        variation_specs: >-
+          * ![diagram of the 25/75 image and text module with 30px of spacing
+          shown](/design-system/images/uploads/25-75_style_desktop_1.jpg "Info
+          unit group: specs for 25/75 image and text")
+
+            Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
+          * Padding: 30px padding for imagery across responsive sizes
+
+          * Headings: Any heading size may be used, recommend H2-6
     variation_group_name: Types
     variation_group_description: A link blob is a unit consisting of heading, short
       descriptive text, and call to action. At breakpoints above 601 px, link
@@ -130,4 +170,5 @@ related_items: >-
 
   * [Typography](https://cfpb.github.io/design-system/foundation/typography)
 last_updated: 2019-08-30T16:07:00.000Z
+secondary_section: Layout options
 ---

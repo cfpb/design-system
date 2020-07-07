@@ -56,37 +56,37 @@ exports.config = {
       }
     },
     {
-      browserName: 'MicrosoftEdge',
-      browserVersion: 'latest',
-      platformName: 'Windows 10',
+      'browserName': 'MicrosoftEdge',
+      'browserVersion': 'latest',
+      'platformName': 'Windows 10',
       'sauce:options': {
         screenResolution: '1024x768'
       },
-      exclude: [
+      'exclude': [
         // Netlify CMS is only tested with Chrome
         'test/browser/docs/netlify-cms.js'
       ]
     },
     {
-      browserName: 'internet explorer',
-      browserVersion: '11.285',
-      platformName: 'Windows 10',
+      'browserName': 'internet explorer',
+      'browserVersion': '11.285',
+      'platformName': 'Windows 10',
       'sauce:options': {
         screenResolution: '1024x768'
       },
-      exclude: [
+      'exclude': [
         // Netlify CMS is only tested with Chrome
         'test/browser/docs/netlify-cms.js'
       ]
     },
     {
-      browserName: 'firefox',
-      browserVersion: 'latest',
-      platformName: 'Windows 10',
+      'browserName': 'firefox',
+      'browserVersion': 'latest',
+      'platformName': 'Windows 10',
       'sauce:options': {
         screenResolution: '1024x768'
       },
-      exclude: [
+      'exclude': [
         // Netlify CMS is only tested with Chrome
         'test/browser/docs/netlify-cms.js'
       ]
@@ -207,10 +207,11 @@ exports.config = {
        * @param {Array.<Object>} capabilities list of capabilities details
        * @param {Array.<String>} specs List of spec file paths that are to be run
        */
-  beforeSession: function (config, capabilities, specs) {
+  beforeSession: function( config, capabilities, specs ) {
     // Set a global variable indicating the tests are being run via Sauce Labs
     global.SAUCE_LABS = true;
   }
+
   /**
        * Gets executed before test execution begins. At this point you can access to all global
        * variables like `browser`. It is the perfect place to define custom commands.

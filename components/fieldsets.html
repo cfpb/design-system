@@ -283,15 +283,17 @@
 
     
     <section id="description" class="u-mb30">
-        <p>The fieldset element is used to group several controls as well as labels within a web form.</p>
+        <p>The fieldset element is used to group several controls as well as labels within a web form. A fieldset includes each of the following:</p>
 
-<p>More information can be found at:</p>
 <ul>
-  <li>http://cfpb.github.io/design-manual/page-components/form-fields.html</li>
-  <li>https://cfpb.github.io/capital-framework/components/cf-forms/#fieldsets</li>
+  <li><a href="https://cfpb.github.io/design-system/components/labels-and-legends">Legend</a></li>
+  <li>
+<a href="https://cfpb.github.io/design-system/components/helper-text">Block helper text</a> (if necessary)</li>
+  <li><a href="https://cfpb.github.io/design-system/components/labels-and-legends">Inline labels</a></li>
+  <li>
+<a href="https://cfpb.github.io/design-system/components/helper-text"></a>Set of controls such as <a href="https://cfpb.github.io/design-system/components/checkboxes">checkboxes</a> or <a href="https://cfpb.github.io/design-system/components/radio-buttons">radio buttons</a>
+</li>
 </ul>
-
-<p>*NOTE: The code doesn’t match description in that the code doesn’t include a legend, block helper text, or inline labels.</p>
 
     </section>
     
@@ -308,7 +310,7 @@
 
         
         <div class="o-variation_group_description">
-            <p>The fieldset includes the legend, optional block helper text, inline labels, and a set of controls.</p>
+            
 
         </div>
         
@@ -337,15 +339,19 @@
             
             <div class="a-live_code">
                 <form class="o-form">
+<legend class="a-legend">
+Basic legend
+    <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
+</legend>
     <div class="o-form_group">
         <fieldset class="o-form_fieldset">
             <div class="m-form-field m-form-field__checkbox">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_1" name="test_checkbox">
-                <label class="a-label" for="test_checkbox_1">Label</label>
+                <label class="a-label" for="test_checkbox_1">Inline label</label>
             </div>
             <div class="m-form-field m-form-field__checkbox">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_2" name="test_checkbox">
-                <label class="a-label" for="test_checkbox_2">Label</label>
+                <label class="a-label" for="test_checkbox_2">Inline label</label>
             </div>
         </fieldset>
     </div>
@@ -386,15 +392,19 @@
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;form class="o-form"&gt;
+&lt;legend class="a-legend"&gt;
+Basic legend
+    &lt;small class="a-label_helper a-label_helper__block"&gt;Use block helper text for instructions&lt;/small&gt;
+&lt;/legend&gt;
     &lt;div class="o-form_group"&gt;
         &lt;fieldset class="o-form_fieldset"&gt;
             &lt;div class="m-form-field m-form-field__checkbox"&gt;
                 &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_1" name="test_checkbox"&gt;
-                &lt;label class="a-label" for="test_checkbox_1"&gt;Label&lt;/label&gt;
+                &lt;label class="a-label" for="test_checkbox_1"&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class="m-form-field m-form-field__checkbox"&gt;
                 &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_2" name="test_checkbox"&gt;
-                &lt;label class="a-label" for="test_checkbox_2"&gt;Label&lt;/label&gt;
+                &lt;label class="a-label" for="test_checkbox_2"&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
         &lt;/fieldset&gt;
     &lt;/div&gt;
@@ -442,15 +452,19 @@
             
             <div class="a-live_code">
                 <form class="o-form">
+<legend class="a-legend">
+Basic legend
+    <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
+</legend>
     <div class="o-form_group">
         <fieldset class="o-form_fieldset">
             <div class="m-form-field m-form-field__radio">
                 <input class="a-radio" type="radio" id="test_radio_1" name="test_radio">
-                <label class="a-label" for="test_radio_1">Label</label>
+                <label class="a-label" for="test_radio_1">Inline label</label>
             </div>
             <div class="m-form-field m-form-field__radio">
                 <input class="a-radio" type="radio" id="test_radio_2" name="test_radio">
-                <label class="a-label" for="test_radio_2">Label</label>
+                <label class="a-label" for="test_radio_2">Inline label</label>
             </div>
         </fieldset>
     </div>
@@ -491,15 +505,19 @@
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;form class="o-form"&gt;
+&lt;legend class="a-legend"&gt;
+Basic legend
+    &lt;small class="a-label_helper a-label_helper__block"&gt;Use block helper text for instructions&lt;/small&gt;
+&lt;/legend&gt;
     &lt;div class="o-form_group"&gt;
         &lt;fieldset class="o-form_fieldset"&gt;
             &lt;div class="m-form-field m-form-field__radio"&gt;
                 &lt;input class="a-radio" type="radio" id="test_radio_1" name="test_radio"&gt;
-                &lt;label class="a-label" for="test_radio_1"&gt;Label&lt;/label&gt;
+                &lt;label class="a-label" for="test_radio_1"&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class="m-form-field m-form-field__radio"&gt;
                 &lt;input class="a-radio" type="radio" id="test_radio_2" name="test_radio"&gt;
-                &lt;label class="a-label" for="test_radio_2"&gt;Label&lt;/label&gt;
+                &lt;label class="a-label" for="test_radio_2"&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
         &lt;/fieldset&gt;
     &lt;/div&gt;
@@ -560,23 +578,27 @@
             
             <div class="a-live_code">
                 <form class="o-form">
+<legend class="a-legend">
+Basic legend
+    <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
+</legend>
     <div class="o-form_group">
         <fieldset class="o-form_fieldset">
             <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_1">
-                <label class="a-label" for="test_checkbox_lg_default_1">Label</label>
+                <label class="a-label" for="test_checkbox_lg_default_1">Inline label</label>
             </div>
             <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_2">
-                <label class="a-label" for="test_checkbox_lg_default_2">Label</label>
+                <label class="a-label" for="test_checkbox_lg_default_2">Inline label</label>
             </div>
             <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3">
-                <label class="a-label" for="test_checkbox_lg_default_3">Label</label>
+                <label class="a-label" for="test_checkbox_lg_default_3">This is a very long label that wraps to a second line. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<small class="“a-label_helper’">(This is helper text)</small></label>
             </div>
             <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4">
-                <label class="a-label" for="test_checkbox_lg_default_4">Label</label>
+                <label class="a-label" for="test_checkbox_lg_default_4">Inline label</label>
             </div>
         </fieldset>
     </div>
@@ -617,23 +639,27 @@
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;form class="o-form"&gt;
+&lt;legend class="a-legend"&gt;
+Basic legend
+    &lt;small class="a-label_helper a-label_helper__block"&gt;Use block helper text for instructions&lt;/small&gt;
+&lt;/legend&gt;
     &lt;div class="o-form_group"&gt;
         &lt;fieldset class="o-form_fieldset"&gt;
             &lt;div class="m-form-field m-form-field__checkbox m-form-field__lg-target"&gt;
                 &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_1"&gt;
-                &lt;label class="a-label" for="test_checkbox_lg_default_1"&gt;Label&lt;/label&gt;
+                &lt;label class="a-label" for="test_checkbox_lg_default_1"&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class="m-form-field m-form-field__checkbox m-form-field__lg-target"&gt;
                 &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_2"&gt;
-                &lt;label class="a-label" for="test_checkbox_lg_default_2"&gt;Label&lt;/label&gt;
+                &lt;label class="a-label" for="test_checkbox_lg_default_2"&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class="m-form-field m-form-field__checkbox m-form-field__lg-target"&gt;
                 &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3"&gt;
-                &lt;label class="a-label" for="test_checkbox_lg_default_3"&gt;Label&lt;/label&gt;
+                &lt;label class="a-label" for="test_checkbox_lg_default_3"&gt;This is a very long label that wraps to a second line. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;small class=“a-label_helper’&gt;(This is helper text)&lt;/small&gt;&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class="m-form-field m-form-field__checkbox m-form-field__lg-target"&gt;
                 &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4"&gt;
-                &lt;label class="a-label" for="test_checkbox_lg_default_4"&gt;Label&lt;/label&gt;
+                &lt;label class="a-label" for="test_checkbox_lg_default_4"&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
         &lt;/fieldset&gt;
     &lt;/div&gt;
@@ -681,8 +707,10 @@
             
             <div class="a-live_code">
                 <fieldset class="o-form_fieldset">
-                <legend class="a-legend">Basic legend
-                </legend>
+<legend class="a-legend">
+Basic legend
+    <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
+</legend>
 
                 <div class="m-form-field m-form-field__radio m-form-field__lg-target">
                     <input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1">
@@ -744,8 +772,10 @@
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;fieldset class="o-form_fieldset"&gt;
-                &lt;legend class="a-legend"&gt;Basic legend
-                &lt;/legend&gt;
+&lt;legend class="a-legend"&gt;
+Basic legend
+    &lt;small class="a-label_helper a-label_helper__block"&gt;Use block helper text for instructions&lt;/small&gt;
+&lt;/legend&gt;
 
                 &lt;div class="m-form-field m-form-field__radio m-form-field__lg-target"&gt;
                     &lt;input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1"&gt;
@@ -842,8 +872,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/fieldsets.md">
-                    <time datetime="2020-06-23 13:00:50 -0400">
-                         1:00:50 PM Jun 23, 2020
+                    <time datetime="2020-07-07 10:16:12 -0400">
+                        10:16:12 AM Jul 07, 2020
                     </time>
                 </a>
             </small>

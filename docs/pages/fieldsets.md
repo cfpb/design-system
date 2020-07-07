@@ -2,82 +2,97 @@
 title: Fieldsets
 layout: variation
 section: components
-secondary_section: Forms
 status: Released
 description: >-
   The fieldset element is used to group several controls as well as labels
-  within a web form. 
+  within a web form. A fieldset includes each of the following:
 
 
-  More information can be found at:
+  * [Legend](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-  * http://cfpb.github.io/design-manual/page-components/form-fields.html	
+  * [Block helper text](https://cfpb.github.io/design-system/components/helper-text) (if necessary)
 
-  * https://cfpb.github.io/capital-framework/components/cf-forms/#fieldsets
+  * [Inline labels](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-
-  *NOTE: The code doesn't match description in that the code doesn't include a legend, block helper text, or inline labels.
+  * [](https://cfpb.github.io/design-system/components/helper-text)Set of controls such as [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) or [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons)
 variation_groups:
   - variations:
       - variation_code_snippet: >-
           <form class="o-form">
+
+          <legend class="a-legend">
+
+          Basic legend
+              <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
+          </legend>
               <div class="o-form_group">
                   <fieldset class="o-form_fieldset">
                       <div class="m-form-field m-form-field__checkbox">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_1" name="test_checkbox">
-                          <label class="a-label" for="test_checkbox_1">Label</label>
+                          <label class="a-label" for="test_checkbox_1">Inline label</label>
                       </div>
                       <div class="m-form-field m-form-field__checkbox">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_2" name="test_checkbox">
-                          <label class="a-label" for="test_checkbox_2">Label</label>
+                          <label class="a-label" for="test_checkbox_2">Inline label</label>
                       </div>
                   </fieldset>
               </div>
           </form>
-        variation_description: " "
+        variation_description: ""
         variation_name: Fieldset with checkboxes
       - variation_code_snippet: >-
           <form class="o-form">
+
+          <legend class="a-legend">
+
+          Basic legend
+              <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
+          </legend>
               <div class="o-form_group">
                   <fieldset class="o-form_fieldset">
                       <div class="m-form-field m-form-field__radio">
                           <input class="a-radio" type="radio" id="test_radio_1" name="test_radio">
-                          <label class="a-label" for="test_radio_1">Label</label>
+                          <label class="a-label" for="test_radio_1">Inline label</label>
                       </div>
                       <div class="m-form-field m-form-field__radio">
                           <input class="a-radio" type="radio" id="test_radio_2" name="test_radio">
-                          <label class="a-label" for="test_radio_2">Label</label>
+                          <label class="a-label" for="test_radio_2">Inline label</label>
                       </div>
                   </fieldset>
               </div>
           </form>
-        variation_description: " "
+        variation_description: ""
         variation_name: Fieldset with radio buttons
     variation_group_name: Types
-    variation_group_description: The fieldset includes the legend, optional block
-      helper text, inline labels, and a set of controls.
+    variation_group_description: ""
   - variation_group_name: Sizes
     variations:
       - variation_name: Large target fieldset with checkboxes
         variation_code_snippet: >-
           <form class="o-form">
+
+          <legend class="a-legend">
+
+          Basic legend
+              <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
+          </legend>
               <div class="o-form_group">
                   <fieldset class="o-form_fieldset">
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_1">
-                          <label class="a-label" for="test_checkbox_lg_default_1">Label</label>
+                          <label class="a-label" for="test_checkbox_lg_default_1">Inline label</label>
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_2">
-                          <label class="a-label" for="test_checkbox_lg_default_2">Label</label>
+                          <label class="a-label" for="test_checkbox_lg_default_2">Inline label</label>
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3">
-                          <label class="a-label" for="test_checkbox_lg_default_3">Label</label>
+                          <label class="a-label" for="test_checkbox_lg_default_3">This is a very long label that wraps to a second line. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<small class=“a-label_helper’>(This is helper text)</small></label>
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4">
-                          <label class="a-label" for="test_checkbox_lg_default_4">Label</label>
+                          <label class="a-label" for="test_checkbox_lg_default_4">Inline label</label>
                       </div>
                   </fieldset>
               </div>
@@ -85,8 +100,12 @@ variation_groups:
       - variation_name: Large target fieldset with radio buttons
         variation_code_snippet: >-
           <fieldset class="o-form_fieldset">
-                          <legend class="a-legend">Basic legend
-                          </legend>
+
+          <legend class="a-legend">
+
+          Basic legend
+              <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
+          </legend>
 
                           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
                               <input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1">
@@ -117,5 +136,6 @@ content_guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
+secondary_section: Forms
 research: ""
 ---

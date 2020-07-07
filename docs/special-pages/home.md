@@ -25,6 +25,8 @@ description: >-
 
   <br>
 
+  <br>
+
   **[Browse foundation](https://cfpb.github.io/design-system/foundation/)**
 
   </div>
@@ -35,6 +37,8 @@ description: >-
   ### Components
 
   Components contain the key building blocks of the design system that, when combined, can be used to create a website. Examples of components include buttons, text inputs, tables, and alerts. 
+
+  <br>
 
   <br>
 
@@ -51,6 +55,8 @@ description: >-
 
   <br>
 
+  <br>
+
   **[Browse patterns](https://cfpb.github.io/design-system/patterns/)**
 
   </div>
@@ -61,6 +67,8 @@ description: >-
   ### Pages
 
   Find out more about the common page types that we use within our content management system, which are documented for easy reference. 
+
+  <br>
 
   <br>
 
@@ -77,6 +85,8 @@ description: >-
 
   <br>
 
+  <br>
+
   **[Browse development](https://cfpb.github.io/design-system/development/)** 
 
   </div>
@@ -90,13 +100,13 @@ description: >-
 
   <br>
 
+  <br>
+
   **[Browse guidelines](https://cfpb.github.io/design-system/guidelines/)** 
 
   </div>
 
-
   <br>
-
 
   ## Getting started for developers 
 

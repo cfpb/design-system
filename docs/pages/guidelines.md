@@ -3,7 +3,8 @@ title: Guidelines
 layout: variation
 section: guidelines
 description: >-
-  <p class="lead-paragraph">As our design system evolves, so do our general guidelines.</p>
+  <p class="lead-paragraph">This section includes guidelines for creating
+  specific product experiences not covered in other sections.</p>
 
 
   Currently, we have a handful of data visualization guidelines.

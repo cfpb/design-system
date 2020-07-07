@@ -1,8 +1,7 @@
 ---
-title: Dropdowns and multi-selects
+title: Dropdowns and Multi-selects
 layout: variation
 section: components
-secondary_section: Forms
 status: Released
 description: Dropdowns allow the user to choose from a finite list of options.
   They are not always the best choice from a usability perspective; see the use
@@ -155,5 +154,6 @@ accessibility: >-
 
   From an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multi-select component is desired, use custom JavaScript to make it accessible.
 last_updated: 2020-01-06T20:31:06.632Z
+secondary_section: Forms
 research: ""
 ---

@@ -19,6 +19,8 @@ variation_groups:
   - variations:
       - variation_code_snippet: >-
           <form class="o-form">
+                          <legend class="a-legend">Basic legend
+                          </legend>
               <div class="o-form_group">
                   <fieldset class="o-form_fieldset">
                       <div class="m-form-field m-form-field__checkbox">
@@ -36,6 +38,8 @@ variation_groups:
         variation_name: Fieldset with checkboxes
       - variation_code_snippet: >-
           <form class="o-form">
+                          <legend class="a-legend">Basic legend
+                          </legend>
               <div class="o-form_group">
                   <fieldset class="o-form_fieldset">
                       <div class="m-form-field m-form-field__radio">
@@ -58,6 +62,10 @@ variation_groups:
       - variation_name: Large target fieldset with checkboxes
         variation_code_snippet: >-
           <form class="o-form">
+
+          <legend class="a-legend">Basic legend
+
+          </legend>
               <div class="o-form_group">
                   <fieldset class="o-form_fieldset">
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">

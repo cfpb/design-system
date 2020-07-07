@@ -114,7 +114,7 @@ content_guidelines: >-
   When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
 
 
-  ![Body copy followed by heading](/design-system/images/uploads/body_copy_followed_by_heading.png)
+  ![Body copy followed by heading](/design-system/images/uploads/test-03.png)
 
 
   ##### Heading followed by a heading

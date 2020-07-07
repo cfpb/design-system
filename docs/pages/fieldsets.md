@@ -23,11 +23,11 @@ variation_groups:
                   <fieldset class="o-form_fieldset">
                       <div class="m-form-field m-form-field__checkbox">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_1" name="test_checkbox">
-                          <label class="a-label" for="test_checkbox_1">Label</label>
+                          <label class="a-label" for="test_checkbox_1">Inline label</label>
                       </div>
                       <div class="m-form-field m-form-field__checkbox">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_2" name="test_checkbox">
-                          <label class="a-label" for="test_checkbox_2">Label</label>
+                          <label class="a-label" for="test_checkbox_2">Inline label</label>
                       </div>
                   </fieldset>
               </div>
@@ -40,11 +40,11 @@ variation_groups:
                   <fieldset class="o-form_fieldset">
                       <div class="m-form-field m-form-field__radio">
                           <input class="a-radio" type="radio" id="test_radio_1" name="test_radio">
-                          <label class="a-label" for="test_radio_1">Label</label>
+                          <label class="a-label" for="test_radio_1">Inline label</label>
                       </div>
                       <div class="m-form-field m-form-field__radio">
                           <input class="a-radio" type="radio" id="test_radio_2" name="test_radio">
-                          <label class="a-label" for="test_radio_2">Label</label>
+                          <label class="a-label" for="test_radio_2">Inline label</label>
                       </div>
                   </fieldset>
               </div>
@@ -62,11 +62,11 @@ variation_groups:
                   <fieldset class="o-form_fieldset">
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_1">
-                          <label class="a-label" for="test_checkbox_lg_default_1">Label</label>
+                          <label class="a-label" for="test_checkbox_lg_default_1">Inline label</label>
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_2">
-                          <label class="a-label" for="test_checkbox_lg_default_2">Label</label>
+                          <label class="a-label" for="test_checkbox_lg_default_2">Inline label</label>
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3">
@@ -74,7 +74,7 @@ variation_groups:
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4">
-                          <label class="a-label" for="test_checkbox_lg_default_4">Label</label>
+                          <label class="a-label" for="test_checkbox_lg_default_4">Inline label</label>
                       </div>
                   </fieldset>
               </div>

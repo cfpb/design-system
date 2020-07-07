@@ -1,14 +1,12 @@
 ---
-title: Atomic Components
+variations: []
+title: Atomic components
 layout: variation
 section: development
-secondary_section: Core development
 status: Released
-description: >-
-  Atomic Component is a micro framework for building Atomic Design components
-  that utilize JavaScript. It is a dependency of other packages and isn’t used
-  on its own.
-variations: []
+description: Atomic Component is a micro framework for building Atomic Design
+  components that utilize JavaScript. It is a dependency of other packages and
+  isn’t used on its own.
 use_cases: >-
   This framework is intended to be used in conjunction with adherence to Atomic
   Design principles. It helps provide a uniform way to build Atomic components
@@ -79,9 +77,10 @@ use_cases: >-
   NotificationMolecule.init();
 
   ```
-content_guidelines: ''
-behavior: ''
-accessibility: ''
-research: ''
+content_guidelines: ""
+behavior: ""
+accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
+secondary_section: Core development
+research: ""
 ---

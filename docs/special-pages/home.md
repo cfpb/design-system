@@ -19,90 +19,54 @@ description: >-
 
   <div class="content-33 content-last" markdown="1">
 
-  ### Foundation
+  ### [Foundation](https://cfpb.github.io/design-system/foundation/)
 
-  This section includes our visual identity standards, such as color, grid, and typography. It forms the foundation for the CFPB’s website and external-facing materials. 
-
-  <br>
-
-  <br>
-
-  **[Browse foundation](https://cfpb.github.io/design-system/foundation/)**
+  This section includes our visual identity standards, such as color, grid, and typography. It forms the foundation for the CFPB’s website and external-facing materials. **[Browse foundation](https://cfpb.github.io/design-system/foundation/)**
 
   </div>
 
 
   <div class="content-33 content-last" markdown="1">
 
-  ### Components
+  ### [Components](https://cfpb.github.io/design-system/components/)
 
-  Components contain the key building blocks of the design system that, when combined, can be used to create a website. Examples of components include buttons, text inputs, tables, and alerts. 
-
-  <br>
-
-  <br>
-
-  **[Browse components](https://cfpb.github.io/design-system/components/)**
+  Components contain the key building blocks of the design system that, when combined, can be used to create a website. Examples of components include buttons, text inputs, tables, and alerts. **[Browse components](https://cfpb.github.io/design-system/components/)**
 
   </div>
 
 
   <div class="content-33 content-last" markdown="1">
 
-  ### Patterns
+  ### [Patterns](https://cfpb.github.io/design-system/patterns/)
 
-  Patterns are combinations of components used in conjunction to achieve a goal. Interaction patterns are best practice design solutions to common user tasks. Layout patterns are used by designers to organize content into clear, accessible web pages. 
-
-  <br>
-
-  <br>
-
-  **[Browse patterns](https://cfpb.github.io/design-system/patterns/)**
+  Patterns are combinations of components used in conjunction to achieve a goal. Interaction patterns are best practice design solutions to common user tasks. Layout patterns are used by designers to organize content into clear, accessible web pages. **[Browse patterns](https://cfpb.github.io/design-system/patterns/)**
 
   </div>
 
 
   <div class="content-33 content-last" markdown="1">
 
-  ### Pages
+  ### [Pages](https://cfpb.github.io/design-system/pages/)
 
-  Find out more about the common page types that we use within our content management system, which are documented for easy reference. 
-
-  <br>
-
-  <br>
-
-  **[Browse pages](https://cfpb.github.io/design-system/pages/)**
+  Find out more about the common page types that we use within our content management system, which are documented for easy reference. **[Browse pages](https://cfpb.github.io/design-system/pages/)**
 
   </div>
 
 
   <div class="content-33 content-last" markdown="1">
 
-  ### Development
+  ### [Development](https://cfpb.github.io/design-system/development/) 
 
-  The development section includes utilities, such as variables, helper classes, and mixins, and layout options, such as blocks. 
-
-  <br>
-
-  <br>
-
-  **[Browse development](https://cfpb.github.io/design-system/development/)** 
+  The development section includes utilities, such as variables, helper classes, and mixins, and layout options, such as blocks. **[Browse development](https://cfpb.github.io/design-system/development/)** 
 
   </div>
 
 
   <div class="content-33 content-last" markdown="1">
 
-  ### Guidelines
+  ### [Guidelines](https://cfpb.github.io/design-system/guidelines/)
 
-  This section includes guidelines for creating specific product experiences not covered in other sections. 
-
-  <br>
-
-  <br>
-
-  **[Browse guidelines](https://cfpb.github.io/design-system/guidelines/)** 
+  This section includes guidelines for creating specific product experiences not covered in other sections. **[Browse guidelines](https://cfpb.github.io/design-system/guidelines/)** 
 
   </div>
 

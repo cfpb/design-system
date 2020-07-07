@@ -114,7 +114,7 @@ content_guidelines: >-
   When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
 
 
-  ![Body copy followed by heading](/design-system/images/uploads/test-03.png)
+  ![Body copy followed by heading](/design-system/images/uploads/body_copy_followed_by_header.png)
 
 
   ##### Heading followed by a heading
@@ -132,7 +132,7 @@ content_guidelines: >-
   For multiple paragraphs within the same section set the space between paragraphs to 15px.
 
 
-  ![](/design-system/images/uploads/typography_typesetting05_in-body_-2.png)
+  ![Body copy spacing](/design-system/images/uploads/body_copy_spacing.png)
 behavior: ""
 accessibility: >-
   #### Text contrast

@@ -1,5 +1,5 @@
 ---
-title: Welcome to the CFPB Design System
+title: Welcome to the CFPB Design System.
 layout: variation
 collection_name: special-pages
 is_homepage: true
@@ -94,8 +94,6 @@ description: >-
 
   </div>
 
-
-  <br>
 
   <br>
 

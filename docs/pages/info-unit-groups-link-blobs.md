@@ -146,26 +146,7 @@ content_guidelines: >-
 
     * For half-width link blobs, one or two lines different is ok
     * For third-width link blobs, a difference of one line is ok
-behavior: >-
-  ![]()
-
-
-  ![]()
-
-
-  ![]()
-
-
-  At breakpoints below 601, side-by-side modules stack vertically in Z-order as shown below, and the mobile link style is used for the call to action link(s)
-
-
-  ![Below 600 px the 25/75 image and text components collapse with the image above the header and description text](/design-system/images/uploads/25-75-behavior-600.png "Breakpoint diagram for how 25/75 image and text component works at smaller screen sizes")
-
-
-
-
-
-
+behavior: >
   #### Half-width link blob
 
 
@@ -189,11 +170,10 @@ behavior: >-
   #### 25/75 image and text component
 
 
-  | Above 600 px                                                            | Below 601 px                                                            |
+  At breakpoints below 601, side-by-side modules stack vertically in Z-order as shown below, and the mobile link style is used for the call to action link(s)
 
-  | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 
-  | ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png) |
+  ![Below 600 px the 25/75 image and text components collapse with the image above the header and description text](/design-system/images/uploads/25-75-behavior-600.png "Breakpoint diagram for how 25/75 image and text component works at smaller screen sizes")
 accessibility: ""
 related_items: >-
   * [Info Unit Groups: image and

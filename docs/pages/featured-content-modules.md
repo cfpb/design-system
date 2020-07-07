@@ -1,5 +1,5 @@
 ---
-title: Featured Content Module
+title: Featured content module
 layout: variation
 section: patterns
 status: Released

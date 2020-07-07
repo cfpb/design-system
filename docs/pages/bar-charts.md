@@ -3,18 +3,10 @@ title: Bar charts
 layout: variation
 section: guidelines
 status: Released
-description: >-
-  Use bar or column charts to show comparisons of different discrete items,
-  factors or categories. Comparisons could include items that can be counted and
-  categorized. These are some of the easiest charts to interpret because the
-  data is shown by length of bar.
-
-
-
-  Information about Bar Charts can be found at:
-
-
-  http://cfpb.github.io/design-manual/data-visualization/chart-types.html#bar-or-column-charts
+description: Use bar or column charts to show comparisons of different discrete
+  items, factors or categories. Comparisons could include items that can be
+  counted and categorized. These are some of the easiest charts to interpret
+  because the data is shown by length of bar.
 variation_groups:
   - variations:
       - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>

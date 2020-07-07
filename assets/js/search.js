@@ -2,6 +2,7 @@ const lunr = require( 'lunr' );
 
 /**
  * Update page markup with search results.
+ * @param {HTMLNode} elm - The element to inject the search results into.
  * @param {Array} results - A list of search result hits as objects.
  * @param {Object} store - search index/meta data store in the window object.
  */
@@ -118,12 +119,12 @@ const searchTerm = getURLParam( 'searchQuery' );
 const searchResultsElm = document.getElementById( 'search-results' );
 let results = [];
 
+// Get the global search store.
+const searchStore = window.searchStore;
+
 // Check if the URL has a search term set.
 if ( searchTerm ) {
   document.getElementById( 'search-box' ).setAttribute( 'value', searchTerm );
-
-  // Get the global search store.
-  const searchStore = window.searchStore;
 
   // Get the lunr index.
   const idx = initializeSearchIndex( searchStore );

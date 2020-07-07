@@ -8,8 +8,8 @@ export const TOGGLE_ATTRIBUTE = 'data-toggle-details';
 export function toggleDetails( button, document = window.document ) {
   const container = button.parentNode;
   const codeEl = document.querySelector( button.getAttribute( 'href' ) );
-  const hideCodeBtn = container.querySelector( `[${TOGGLE_ATTRIBUTE}="hide"]` );
-  const showCodeBtn = container.querySelector( `[${TOGGLE_ATTRIBUTE}="show"]` );
+  const hideCodeBtn = container.querySelector( `[${ TOGGLE_ATTRIBUTE }="hide"]` );
+  const showCodeBtn = container.querySelector( `[${ TOGGLE_ATTRIBUTE }="show"]` );
   if ( codeEl && codeEl.classList.contains( HIDDEN_CLASS ) ) {
     codeEl.classList.remove( HIDDEN_CLASS );
     hideCodeBtn.classList.remove( HIDDEN_CLASS );

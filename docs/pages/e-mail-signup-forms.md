@@ -3,17 +3,10 @@ title: E-mail Signup Forms
 layout: variation
 section: patterns
 status: Released
-description: >-
-  Email sign-ups allow users to stay engaged on a specific topic or content type
-  produced by the Bureau. They are used to add individual email addresses to a
-  specific mailing list that is relevant to the content on the page or the
-  section it is contained within.
-
-
-  More information can be found at:
-
-
-  http://cfpb.github.io/design-manual/page-components/email-sign-up.html
+description: Email sign-ups allow users to stay engaged on a specific topic or
+  content type produced by the Bureau. They are used to add individual email
+  addresses to a specific mailing list that is relevant to the content on the
+  page or the section it is contained within.
 variation_groups:
   - variations:
       - variation_code_snippet: ""

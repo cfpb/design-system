@@ -1,10 +1,11 @@
 ---
-title: Link blobs
+title: Info Unit Groups
 layout: variation
 section: patterns
 status: Released
-description: Link blobs are text-only layout modules. They provide brief context
-  to lead users from a parent page ([landing
+description: In general, info unit groups provide context and lead users to
+  additional content off the page. They provide brief context to lead users from
+  a parent page ([landing
   pages](https://cfpb.github.io/design-system/templates/landing-pages),
   [sublanding
   pages](https://cfpb.github.io/design-system/templates/sublanding-pages), and
@@ -78,9 +79,9 @@ variation_groups:
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
       - variation_name: 25/75 image and text component
         variation_description: >-
-          ![Info unit group: example of third width link
-          blob](/design-system/images/uploads/third_width_link_blob_intro.png
-          "Info unit group: example of third width link blob")
+          ![Info unit group: example of
+          25/75](/design-system/images/uploads/2575example_desktop.jpg "Info
+          unit group: example of 25/75")
 
 
           ![]()
@@ -118,21 +119,17 @@ variation_groups:
 
           * Headings: Any heading size may be used, recommend H2-6
     variation_group_name: Types
-    variation_group_description: A link blob is a unit consisting of heading, short
-      descriptive text, and call to action. At breakpoints above 601 px, link
-      blobs are found in rows of two blobs (half-width link blobs) or three
-      blobs (third-width link blobs).
+    variation_group_description: "A link blob is a unit consisting of heading, short
+      descriptive text, and call to action. "
 use_cases: ""
 content_guidelines: >-
-  Do not use blobs for multiple paragraphs of copy. Copy should be succinct.
-
-
   * Headings
 
     * Half-width and third-width link blobs: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
     * 25/75 image and text component: 60 characters or less, ideally rendering as one line.
   * Descriptions
 
+    *  Do not use info unit groups for multiple paragraphs of copy. Copy should be succinct.
     * Half-width link blobs: 100-250 characters max
     * Third-width link blobs: 90-150 characters max
     * 25/75 image and text component: 275 characters max.
@@ -146,26 +143,7 @@ content_guidelines: >-
 
     * For half-width link blobs, one or two lines different is ok
     * For third-width link blobs, a difference of one line is ok
-behavior: >-
-  ![]()
-
-
-  ![]()
-
-
-  ![]()
-
-
-  At breakpoints below 601, side-by-side modules stack vertically in Z-order as shown below, and the mobile link style is used for the call to action link(s)
-
-
-  ![Below 600 px the 25/75 image and text components collapse with the image above the header and description text](/design-system/images/uploads/25-75-behavior-600.png "Breakpoint diagram for how 25/75 image and text component works at smaller screen sizes")
-
-
-
-
-
-
+behavior: >
   #### Half-width link blob
 
 
@@ -189,18 +167,13 @@ behavior: >-
   #### 25/75 image and text component
 
 
-  | Above 600 px                                                            | Below 601 px                                                            |
+  At breakpoints below 601, side-by-side modules stack vertically in Z-order as shown below, and the mobile link style is used for the call to action link(s)
 
-  | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 
-  | ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png) |
+  ![Below 600 px the 25/75 image and text components collapse with the image above the header and description text](/design-system/images/uploads/25-75-behavior-600.png "Breakpoint diagram for how 25/75 image and text component works at smaller screen sizes")
 accessibility: ""
-related_items: >-
-  * [Info Unit Groups: image and
-  text](https://cfpb.github.io/design-system/components/info-unit-groups-image-and-text)
-
+related_items: |-
   * [Links](https://cfpb.github.io/design-system/components/links)
-
   * [Typography](https://cfpb.github.io/design-system/foundation/typography)
 last_updated: 2019-08-30T16:07:00.000Z
 secondary_section: Layout options

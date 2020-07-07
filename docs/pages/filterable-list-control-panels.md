@@ -1,8 +1,7 @@
 ---
-title: Filterable List Control Panels
+title: Filterable list control panels
 layout: variation
 section: patterns
-secondary_section: Layout options
 status: Released
 description: The filter control panel allows users to whittle down number of
   items in a list to help them focus in on a specific piece of content they may
@@ -81,9 +80,10 @@ behavior: >-
 
   When a user applies a filter setting, a notification automatically appears below the panel indicating number of results or errors.
 accessibility: ""
+research: ""
 related_items: "*
   [Notifications](https://cfpb.github.io/design-system/components/notifications\
   )"
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+secondary_section: Layout options
 ---

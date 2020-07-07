@@ -104,7 +104,7 @@ content_guidelines: >-
   When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
 
 
-  ![](/design-system/images/uploads/typography_typesetting05_above-headings_-2.png)
+  ![](/design-system/images/uploads/body_copy_followed_by_heading.png)
 
 
   ##### Heading followed by a heading
@@ -113,7 +113,7 @@ content_guidelines: >-
   For stacked headings, include 30 px of space after the primary heading.
 
 
-  ![](/design-system/images/uploads/typography_typesetting05_between-headings_-2.png)
+  ![](/design-system/images/uploads/heading_followed_by_heading.png)
 
 
   ##### Body copy spacing

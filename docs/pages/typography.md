@@ -69,7 +69,7 @@ content_guidelines: >-
   Typography should be set flush left. This provides the eye a constant starting point for each line, making text easier to read.
 
 
-  ![](/design-system/images/uploads/typography_typesetting01_-2.png)
+  ![Alignment](/design-system/images/uploads/alignment.png)
 
 
   #### Line height
@@ -78,7 +78,7 @@ content_guidelines: >-
   Ample space between lines of type promotes an open feeling and lends flow to body copy. When setting body copy, the leading should be 1.375 times the type size, or 37.5% larger.
 
 
-  ![](/design-system/images/uploads/typography_typesetting03_-2.png)
+  ![Line height](/design-system/images/uploads/line_height.png)
 
 
   #### Line length
@@ -90,7 +90,7 @@ content_guidelines: >-
   For a single column of text, line length should be an average of 66 characters per line, including spaces, but may range from 50 to 75 characters.
 
 
-  ![](/design-system/images/uploads/typography_typesetting04_-2.png)
+  ![Line length](/design-system/images/uploads/line_length.png)
 
 
   #### Spacing

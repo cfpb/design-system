@@ -1,8 +1,7 @@
 ---
-title: Range Sliders
+title: Range sliders
 layout: variation
 section: components
-secondary_section: Forms
 status: Released
 description: Range sliders allow the user to select a value between a defined
   minimum and maximum range. They can work well for discovery and education, but
@@ -52,5 +51,6 @@ content_guidelines: ""
 behavior: ""
 accessibility: Make sure that sliders are accessible by keyboard using the arrow keys.
 last_updated: 2020-01-28T15:55:47.394Z
+secondary_section: Forms
 research: ""
 ---

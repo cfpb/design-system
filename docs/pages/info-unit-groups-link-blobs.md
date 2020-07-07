@@ -124,15 +124,13 @@ variation_groups:
       blobs (third-width link blobs).
 use_cases: ""
 content_guidelines: >-
-  Do not use blobs for multiple paragraphs of copy. Copy should be succinct.
-
-
   * Headings
 
     * Half-width and third-width link blobs: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
     * 25/75 image and text component: 60 characters or less, ideally rendering as one line.
   * Descriptions
 
+    *  Do not use info unit groups for multiple paragraphs of copy. Copy should be succinct.
     * Half-width link blobs: 100-250 characters max
     * Third-width link blobs: 90-150 characters max
     * 25/75 image and text component: 275 characters max.

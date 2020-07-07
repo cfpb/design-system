@@ -1,5 +1,5 @@
 ---
-title: E-mail Signup Forms
+title: E-mail signup forms
 layout: variation
 section: patterns
 status: Released

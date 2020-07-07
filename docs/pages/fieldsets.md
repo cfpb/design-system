@@ -70,7 +70,7 @@ variation_groups:
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3">
-                          <label class="a-label" for="test_checkbox_lg_default_3">Label</label>
+                          <label class="a-label" for="test_checkbox_lg_default_3">This is a very long label that wraps to a second line. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<small class=“a-label_helper’>(This is helper text)</small></label>
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4">

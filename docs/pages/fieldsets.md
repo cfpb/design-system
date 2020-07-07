@@ -10,11 +10,11 @@ description: >-
 
   * [Legend](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-  * Set of controls such as [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) or [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons)
+  * [Block helper text](https://cfpb.github.io/design-system/components/helper-text) (if necessary)
 
   * [Inline labels](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-  * [Block helper text](https://cfpb.github.io/design-system/components/helper-text) (if necessary)
+  * [](https://cfpb.github.io/design-system/components/helper-text)Set of controls such as [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) or [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons)
 variation_groups:
   - variations:
       - variation_code_snippet: >-

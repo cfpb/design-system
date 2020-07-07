@@ -2,7 +2,6 @@
 title: Link blobs
 layout: variation
 section: patterns
-secondary_section: Layout options
 status: Released
 description: Link blobs are text-only layout modules. They provide brief context
   to lead users from a parent page ([landing
@@ -77,6 +76,47 @@ variation_groups:
             * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
 
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
+      - variation_name: 25/75 image and text component
+        variation_description: >-
+          ![Info unit group: example of third width link
+          blob](/design-system/images/uploads/third_width_link_blob_intro.png
+          "Info unit group: example of third width link blob")
+
+
+          ![]()
+
+
+          The 25/75 image and text component is used to draw the user’s eye to key information and navigation links, and aid comprehension by pairing content with illustration/imagery.
+
+
+          When used in conjunction with half width link blob, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
+
+
+          ##### When to use
+
+
+          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
+
+          * When an image or illustration helps users better understand the purpose of content.
+
+          * Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.
+
+
+          ##### When other options are better
+
+
+          * When content doesn’t require imagery. Suggest using the half width link blob pattern instead.
+
+          * When there are multiple paragraphs of copy.
+        variation_specs: >-
+          * ![diagram of the 25/75 image and text module with 30px of spacing
+          shown](/design-system/images/uploads/25-75_style_desktop_1.jpg "Info
+          unit group: specs for 25/75 image and text")
+
+            Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
+          * Padding: 30px padding for imagery across responsive sizes
+
+          * Headings: Any heading size may be used, recommend H2-6
     variation_group_name: Types
     variation_group_description: A link blob is a unit consisting of heading, short
       descriptive text, and call to action. At breakpoints above 601 px, link
@@ -86,41 +126,74 @@ use_cases: ""
 content_guidelines: >-
   Do not use blobs for multiple paragraphs of copy. Copy should be succinct.
 
+
   * Headings
-    * 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
+
+    * Half-width and third-width link blobs: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
+    * 25/75 image and text component: 60 characters or less, ideally rendering as one line.
   * Descriptions
+
     * Half-width link blobs: 100-250 characters max
     * Third-width link blobs: 90-150 characters max
+    * 25/75 image and text component: 275 characters max.
   * Call to action
+
     * Half-width link blobs: 40 characters max
     * Third-width link blobs: 30 characters max
+    * 25/75 image and text component: 65 characters max.
     * Follow [link guidelines](https://cfpb.github.io/design-system/components/links).
   * When these components are featured together (which is ideal), the amount of content in each component should be as close to the same number of total lines as possible.
+
     * For half-width link blobs, one or two lines different is ok
     * For third-width link blobs, a difference of one line is ok
 behavior: >-
-  At breakpoints below 601, side-by-side modules stack vertically in Z-order as
-  shown below, and the mobile link style is used for the call to action link(s)
+  ![]()
+
+
+  ![]()
+
+
+  ![]()
+
+
+  At breakpoints below 601, side-by-side modules stack vertically in Z-order as shown below, and the mobile link style is used for the call to action link(s)
+
+
+  ![Below 600 px the 25/75 image and text components collapse with the image above the header and description text](/design-system/images/uploads/25-75-behavior-600.png "Breakpoint diagram for how 25/75 image and text component works at smaller screen sizes")
+
+
+
+
 
 
   #### Half-width link blob
 
 
-  Above 600 px | Below 601 px
+  | Above 600 px                                                           | Below 601 px                                                           |
 
-  --- | ---
+  | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 
-  ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png)
+  | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png) |
 
 
   #### Third-width link blob
 
 
-  Above 600 px | Below 601 px
+  | Above 600 px                                                            | Below 601 px                                                            |
 
-  --- | ---
+  | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 
-  ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png)
+  | ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png) |
+
+
+  #### 25/75 image and text component
+
+
+  | Above 600 px                                                            | Below 601 px                                                            |
+
+  | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+
+  | ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png) |
 accessibility: ""
 related_items: >-
   * [Info Unit Groups: image and
@@ -130,4 +203,5 @@ related_items: >-
 
   * [Typography](https://cfpb.github.io/design-system/foundation/typography)
 last_updated: 2019-08-30T16:07:00.000Z
+secondary_section: Layout options
 ---

@@ -20,11 +20,11 @@ variation_groups:
       - variation_code_snippet: >-
           <form class="o-form">
 
-          <label class="a-label a-label__heading">
+          <legend class="a-legend">
 
           Basic legend
               <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
-          </label>
+          </legend>
               <div class="o-form_group">
                   <fieldset class="o-form_fieldset">
                       <div class="m-form-field m-form-field__checkbox">
@@ -71,8 +71,10 @@ variation_groups:
         variation_code_snippet: >-
           <form class="o-form">
 
-          <legend class="a-legend">Basic legend
+          <legend class="a-legend">
 
+          Basic legend
+              <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
           </legend>
               <div class="o-form_group">
                   <fieldset class="o-form_fieldset">
@@ -98,8 +100,12 @@ variation_groups:
       - variation_name: Large target fieldset with radio buttons
         variation_code_snippet: >-
           <fieldset class="o-form_fieldset">
-                          <legend class="a-legend">Basic legend
-                          </legend>
+
+          <legend class="a-legend">
+
+          Basic legend
+              <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
+          </legend>
 
                           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
                               <input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1">

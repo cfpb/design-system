@@ -54,7 +54,7 @@ first-level:
         third-level:
           - heading: Forms
             nav-items:
-              - page: Forms
+              - page: Designing forms
               - page: E-mail Signup Forms
               - page: Feedback Forms
           - heading: Navigation

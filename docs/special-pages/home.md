@@ -9,12 +9,12 @@ description: >-
   consistent, effective, and accessible products for the American public
 
 
-  ## Where to go first
+  ## Start with our principles
 
-  Start by reading our [general principles](https://cfpb.github.io/design-system/foundation/general-principles), which form the strategic underpinnings for the CFPB’s design and development standards, and [accessibility principles](https://cfpb.github.io/design-system/foundation/accessibility), which lay the foundation for ensuring that our web content is available for all users. 
+  Start by reading our **[general principles](https://cfpb.github.io/design-system/foundation/general-principles)**, which form the strategic underpinnings for the CFPB’s design and development standards, and **[accessibility principles](https://cfpb.github.io/design-system/foundation/accessibility)**, which lay the foundation for ensuring that our web content is available for all users. 
 
 
-  #### Then go to one of the sections below to find information.
+  ## Browse the Design System
 
 
   <div class="content-33 content-last" markdown="1">
@@ -72,17 +72,30 @@ description: >-
 
   <br>
 
+
   ## Getting started for developers 
 
-  Learn how to integrate our design system into your project, contribute to the code base, and update the documentation. [Get started](https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md).
+  Learn how to integrate our design system into your project, contribute to the code base, and update the documentation. **[Get started](https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md)**.
 
 
-  The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov). [View source code on github]((https://github.com/cfpb/design-system) ).
+  The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov). 
+
+  <br>
+
+  <br>
+
+  **[View source code on github]((https://github.com/cfpb/design-system)**
 
 
   ## Contributing to the Design System
 
-  We strongly encourage you to participate in the growth and maintenance of the Design System. To make contribution easier, the Design System is built on a tool called Netlify CMS, which allows for editing of pages in a web browser, without needing to use git or other command-line tools. [View instructions for contributing to the Design System](https://cfpb.github.io/design-system/updating-this-website/).
+  We strongly encourage you to participate in the growth and maintenance of the Design System. To make contribution easier, the Design System is built on a tool called Netlify CMS, which allows for editing of pages in a web browser, without needing to use git or other command-line tools. 
+
+  <br>
+
+  <br>
+
+  **[View instructions for contributing to the Design System](https://cfpb.github.io/design-system/updating-this-website/)**
 
 
   <br>

@@ -3,8 +3,9 @@ title: Info Unit Groups
 layout: variation
 section: patterns
 status: Released
-description: Link blobs are text-only layout modules. They provide brief context
-  to lead users from a parent page ([landing
+description: In general, info unit groups provide context and lead users to
+  additional content off the page. They provide brief context to lead users from
+  a parent page ([landing
   pages](https://cfpb.github.io/design-system/templates/landing-pages),
   [sublanding
   pages](https://cfpb.github.io/design-system/templates/sublanding-pages), and
@@ -78,9 +79,9 @@ variation_groups:
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
       - variation_name: 25/75 image and text component
         variation_description: >-
-          ![Info unit group: example of third width link
-          blob](/design-system/images/uploads/third_width_link_blob_intro.png
-          "Info unit group: example of third width link blob")
+          ![Info unit group: example of
+          25/75](/design-system/images/uploads/2575example_desktop.jpg "Info
+          unit group: example of 25/75")
 
 
           ![]()
@@ -118,10 +119,8 @@ variation_groups:
 
           * Headings: Any heading size may be used, recommend H2-6
     variation_group_name: Types
-    variation_group_description: A link blob is a unit consisting of heading, short
-      descriptive text, and call to action. At breakpoints above 601 px, link
-      blobs are found in rows of two blobs (half-width link blobs) or three
-      blobs (third-width link blobs).
+    variation_group_description: "A link blob is a unit consisting of heading, short
+      descriptive text, and call to action. "
 use_cases: ""
 content_guidelines: >-
   * Headings

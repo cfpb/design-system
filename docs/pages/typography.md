@@ -63,7 +63,7 @@ content_guidelines: >-
   readability.
 
 
-  #### Alignment
+  ### Alignment
 
 
   Typography should be set flush left. This provides the eye a constant starting point for each line, making text easier to read.
@@ -72,7 +72,7 @@ content_guidelines: >-
   ![Alignment](/design-system/images/uploads/alignment.png)
 
 
-  #### Line height
+  ### Line height
 
 
   Ample space between lines of type promotes an open feeling and lends flow to body copy. When setting body copy, the leading should be 1.375 times the type size, or 37.5% larger.
@@ -81,7 +81,7 @@ content_guidelines: >-
   ![Line height](/design-system/images/uploads/line_height.png)
 
 
-  #### Line length
+  ### Line length
 
 
   Comfortable line length allows the user’s eyes to flow easily from the end of one line to the beginning of the next.
@@ -93,13 +93,13 @@ content_guidelines: >-
   ![Line length](/design-system/images/uploads/line_length.png)
 
 
-  #### Spacing
+  ### Spacing
 
 
   White space affects how the user focuses their attention on the content. It makes it easier to know what to read and where to begin. Spacing between typographic elements should be open enough to feel light, but close enough to establish a proper relationship between elements.
 
 
-  ##### Heading followed by body copy
+  #### Heading followed by body copy
 
 
   When a heading is followed by paragraph text, include 30px of space below Display and 15px below Headings 1–6.
@@ -108,7 +108,7 @@ content_guidelines: >-
   ![](/design-system/images/uploads/typography_typesetting05_below-headings_-2.png)
 
 
-  ##### Body copy followed by a heading
+  #### Body copy followed by a heading
 
 
   When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
@@ -117,7 +117,7 @@ content_guidelines: >-
   ![Body copy followed by heading](/design-system/images/uploads/body_copy_followed_by_header.png)
 
 
-  ##### Heading followed by a heading
+  #### Heading followed by a heading
 
 
   For stacked headings, include 30 px of space after the primary heading.
@@ -126,7 +126,7 @@ content_guidelines: >-
   ![Heading followed by heading](/design-system/images/uploads/heading_followed_by_heading.png)
 
 
-  ##### Body copy spacing
+  #### Body copy spacing
 
 
   For multiple paragraphs within the same section set the space between paragraphs to 15px.

@@ -126,41 +126,74 @@ use_cases: ""
 content_guidelines: >-
   Do not use blobs for multiple paragraphs of copy. Copy should be succinct.
 
+
   * Headings
-    * 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
+
+    * Half-width and third-width link blobs: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
+    * 25/75 image and text component: 60 characters or less, ideally rendering as one line.
   * Descriptions
+
     * Half-width link blobs: 100-250 characters max
     * Third-width link blobs: 90-150 characters max
+    * 25/75 image and text component: 275 characters max.
   * Call to action
+
     * Half-width link blobs: 40 characters max
     * Third-width link blobs: 30 characters max
+    * 25/75 image and text component: 65 characters max.
     * Follow [link guidelines](https://cfpb.github.io/design-system/components/links).
   * When these components are featured together (which is ideal), the amount of content in each component should be as close to the same number of total lines as possible.
+
     * For half-width link blobs, one or two lines different is ok
     * For third-width link blobs, a difference of one line is ok
 behavior: >-
-  At breakpoints below 601, side-by-side modules stack vertically in Z-order as
-  shown below, and the mobile link style is used for the call to action link(s)
+  ![]()
+
+
+  ![]()
+
+
+  ![]()
+
+
+  At breakpoints below 601, side-by-side modules stack vertically in Z-order as shown below, and the mobile link style is used for the call to action link(s)
+
+
+  ![Below 600 px the 25/75 image and text components collapse with the image above the header and description text](/design-system/images/uploads/25-75-behavior-600.png "Breakpoint diagram for how 25/75 image and text component works at smaller screen sizes")
+
+
+
+
 
 
   #### Half-width link blob
 
 
-  Above 600 px | Below 601 px
+  | Above 600 px                                                           | Below 601 px                                                           |
 
-  --- | ---
+  | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 
-  ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png)
+  | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png) |
 
 
   #### Third-width link blob
 
 
-  Above 600 px | Below 601 px
+  | Above 600 px                                                            | Below 601 px                                                            |
 
-  --- | ---
+  | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 
-  ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png)
+  | ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png) |
+
+
+  #### 25/75 image and text component
+
+
+  | Above 600 px                                                            | Below 601 px                                                            |
+
+  | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+
+  | ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png) |
 accessibility: ""
 related_items: >-
   * [Info Unit Groups: image and

@@ -1,5 +1,5 @@
 ---
-title: Link blobs
+title: Info Unit Groups
 layout: variation
 section: patterns
 status: Released
@@ -173,12 +173,8 @@ behavior: >
 
   ![Below 600 px the 25/75 image and text components collapse with the image above the header and description text](/design-system/images/uploads/25-75-behavior-600.png "Breakpoint diagram for how 25/75 image and text component works at smaller screen sizes")
 accessibility: ""
-related_items: >-
-  * [Info Unit Groups: image and
-  text](https://cfpb.github.io/design-system/components/info-unit-groups-image-and-text)
-
+related_items: |-
   * [Links](https://cfpb.github.io/design-system/components/links)
-
   * [Typography](https://cfpb.github.io/design-system/foundation/typography)
 last_updated: 2019-08-30T16:07:00.000Z
 secondary_section: Layout options

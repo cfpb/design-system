@@ -10,18 +10,6 @@ description: >-
 
 
   ![Info unit group: example of 50/50 image and text component](/design-system/images/uploads/50_50_intro_mockup.png "Info unit group: example of 50/50 image and text component")
-
-
-  More information about Info Unit Group image and text components can be found at:
-
-
-  * [https://cfpb.github.io/design-manual/page-components/25-75.html](https://cfpb.github.io/design-manual/page-components/25-75.html)
-
-  * [https://cfpb.github.io/design-manual/page-components/50-50.html](https://cfpb.github.io/design-manual/page-components/50-50.html)
-
-  * [https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts](https://cfpb.github.io/capital-framework/components/cf-layout/#custom-content-layouts)
-
-  * [https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group](https://github.com/cfpb/cfgov-refresh/search?q=info-unit-group)
 variation_groups:
   - variations:
       - variation_code_snippet: TBD

@@ -1,5 +1,5 @@
 ---
-title: Text Inputs
+title: Text inputs
 layout: variation
 section: components
 status: Released

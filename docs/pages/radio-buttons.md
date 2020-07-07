@@ -1,5 +1,5 @@
 ---
-title: Radio Buttons
+title: Radio buttons
 layout: variation
 section: components
 status: Released

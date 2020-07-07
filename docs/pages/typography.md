@@ -12,36 +12,46 @@ description: A clear typographic hierarchy is critical to the effective
 variation_groups:
   - variation_group_name: Typefaces
     variations:
-      - variation_code_snippet: >-
-          <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight:
-          600;letter-spacing: 1px;">Avenir Next Demi Bold<br><br>
+      - variation_code_snippet: >+
+          <h3 style="font-family:'AvenirNextLTW01-Medium';font-weight:
+          600;letter-spacing: 1px;">Avenir Next Demi Bold</h3>
+
+
+          <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight: 600;letter-spacing: 1px;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+
+          abcdefghijklmnopqrstuvwxyz<br>
+
+          0123456789</h4>
+
+        variation_name: ""
+      - variation_code_snippet: >+
+          <h3 style="font-family:'AvenirNextLTW01-Medium';font-weight:
+          500;">Avenir Next Medium</h3>
+
+
+          <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight: 500;">
 
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
 
           abcdefghijklmnopqrstuvwxyz<br>
 
-          0123456789</p></h4>
-        variation_name: " Avenir Next Demi Bold"
+          0123456789</h4>
+
+
+        variation_name: ""
       - variation_code_snippet: >-
-          <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight:
-          500;">Avenir Next Medium<br><br>
+          <h3 style="font-family:'AvenirNextLTW01-Regular';">Avenir Next
+          Regular</h3>
+
+
+          <h4 style="font-family:'AvenirNextLTW01-Regular';">
 
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
 
           abcdefghijklmnopqrstuvwxyz<br>
 
-          0123456789</p></h4>
-        variation_name: " Avenir Next Medium"
-      - variation_code_snippet: >-
-          <h4 style="font-family:'AvenirNextLTW01-Regular';">Avenir Next
-          Regular<br><br>
-
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-
-          abcdefghijklmnopqrstuvwxyz<br>
-
-          0123456789</p></h4>
-        variation_name: "Avenir Next Regular "
+          0123456789</h4>
+        variation_name: ""
     variation_group_description: Avenir Next is the primary brand typeface and can
       be used across all formats from print to digital. Its round and geometric
       letterforms are approachable and modern.
@@ -104,7 +114,7 @@ content_guidelines: >-
   When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
 
 
-  ![](/design-system/images/uploads/body_copy_followed_by_heading.png)
+  ![Body copy followed by heading](/design-system/images/uploads/body_copy_followed_by_heading.png)
 
 
   ##### Heading followed by a heading
@@ -113,7 +123,7 @@ content_guidelines: >-
   For stacked headings, include 30 px of space after the primary heading.
 
 
-  ![](/design-system/images/uploads/heading_followed_by_heading.png)
+  ![Heading followed by heading](/design-system/images/uploads/heading_followed_by_heading.png)
 
 
   ##### Body copy spacing

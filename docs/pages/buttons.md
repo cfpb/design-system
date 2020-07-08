@@ -5,7 +5,7 @@ section: components
 status: Released
 description: Buttons signal actions. They should be used sparingly; each
   additional button on a page reduces the visual prominence of a call to action.
-  In contrast, [links](https://cfpb.github.io/design-system/components/link)
+  In contrast, [links](https://cfpb.github.io/design-system/components/links)
   should lead users to another page or further information.
 variation_groups:
   - variation_group_name: Types

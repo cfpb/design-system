@@ -2,7 +2,6 @@
 title: Links
 layout: variation
 section: components
-secondary_section: Text
 status: Released
 description: Links lead users to a different page or further information. In
   contrast, [buttons](/design-system/components/buttons) are used to signal
@@ -248,13 +247,14 @@ behavior: >-
 
   Add an `aria-label` that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be `aria-label="Learn why some county data are unavailable. (Link opens in new tab.)"` This meets [WCAG guideline 3.2 that webpages should work in a predictable way](https://www.w3.org/TR/WCAG20-TECHS/G201.html).
 accessibility: ""
+research: ""
 related_items: >-
   *
-  [Variables](https://cfpb.github.io/design-system/components/variables#typography-1) 
+  [Variables](https://cfpb.github.io/design-system/development/variables#typography-1) 
 
-  * [Buttons](design-system/components/buttons)
+  * [Buttons](https://cfpb.github.io/design-system/components/buttons)
 
-  * Typography
+  * [Typography](https://cfpb.github.io/design-system/foundation/fonts)
 last_updated: 2019-09-17T14:52:22.684Z
-research: ""
+secondary_section: Text
 ---

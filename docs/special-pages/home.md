@@ -8,11 +8,6 @@ description: >-
   Financial Protection Bureau (CFPB). It is intended to help teams produce
   consistent, effective, and accessible products for the American public
 
-  <br>
-
-  <hr>
-
-  <br>
 
 
   ## Start with our principles
@@ -77,9 +72,6 @@ description: >-
   </div>
 
 
-  <br>
-
-
   ## Getting started for developers
 
 
@@ -103,8 +95,6 @@ description: >-
 
   </div>
 
-
-  <br>
 
 
   ## Contributing to the Design System

@@ -84,15 +84,23 @@ behavior: >-
   | -- | -- | 
 
   | ![Breakpoints 901+](/design-system/images/uploads/landing_behavior_desktop_2x.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/landing_behavior_mobile_2x.jpg) |
-related_items: |-
+related_items: >-
   Page introductions
+
   * [Heroes](/design-system/patterns/heroes)
+
   * [Text introduction](/design-system/patterns/text-introductions)
 
+
   Content
+
   * [Image and text](/design-system/patterns/info-unit-groups-image-and-text)
+
   * Half width link blob
+
   * [Wells](/design-system/patterns/wells)
+
+  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms) 
 last_updated: 2019-10-24T20:28:47.366Z
 secondary_section: Web templates
 ---

@@ -2,13 +2,12 @@
 title: Sublanding pages
 layout: variation
 section: pages
-secondary_section: Web templates
 status: Released
 description: >-
   Sub-landing page types provide an overview of a topic and/or group of related
   content within a main navigation area. The sub-landing page template should
   always be used as a child page to the [landing
-  page](/design-system/templates/landing-pages) template.
+  page](/design-system/pages/landing-pages) template.
 
 
   Similar to landing pages, the focus of these pages is enabling users to quickly understand a topic area and select the specific information that meets their need. Unlike the landing page, this template allows for lengthier content components to allow for further explanation of a topic if needed.
@@ -60,7 +59,7 @@ content_guidelines: >-
   ##### Area 1: Introduction
 
 
-  * Choose between a [hero](/design-system/components/heroes) or [text introduction](/design-system/components/introductions) for this area.
+  * Choose between a [hero](/design-system/patterns/heroes) or [text introduction](/design-system/patterns/text-introductions) for this area.
 
   * Option for using breakout sidebar variation of the text introduction.
 
@@ -68,11 +67,11 @@ content_guidelines: >-
   ##### Area 2: Main content
 
 
-  * Must contain at least 1 component, though the [featured content module](/design-system/components/featured-content-module) or [gray well](/design-system/components/wells) should not stand on their own.
+  * Must contain at least 1 pattern, though the [featured content module](/design-system/patterns/featured-content-module) or [well](/design-system/patterns/wells) should not stand on their own.
 
-  * Recommended hierarchy of components: [featured content module](/design-system/components/featured-content-module), [info unit group](/design-system/components/info-unit-groups-image-and-text) components, [gray well](/design-system/components/wells), and full width body copy.
+  * Recommended hierarchy of patterns: [featured content module](/design-system/patterns/featured-content-module), [info unit groups](/design-system/patterns/info-unit-groups-image-and-text), [wells](/design-system/patterns/wells), and full width body copy.
 
-  * [Gray well](/design-system/components/wells) component should not be used at the top of this area if the hero is used to introduce the page.
+  * [Wells](/design-system/patterns/wells)  should not be used at the top of this area if the hero is used to introduce the page.
 
 
   ##### Area 3: Sidebar
@@ -90,18 +89,24 @@ behavior: >-
   | -- | -- |
 
   | ![Sublanding behavior desktop](/design-system/images/uploads/sublanding_behavior_desktop.jpg) | ![Sublanding behavior mobile](/design-system/images/uploads/sublanding_behavior_mobile.jpg) |
-related_items: |-
-  * Hero
-  * Text introduction (with optional breakout sidebar)
-  * 50/50 image & text
-  * 25/75 image & text
-  * Featured content module
-  * Full width text
+related_items: >+
+  Page introductions
+
+  * [Heroes](/design-system/patterns/heroes)
+
+  * [Text introduction (with optional breakout sidebar)](/design-system/patterns/text-introductions) 
+
+
+  Content
+
+  * [Image and text](/design-system/patterns/info-unit-groups-image-and-text)
+
   * Half width link blob
-  * Gray well
-  * Contact information
-  * Related posts / Related links
-  * Email signup
-  * Contact information
+
+  * [Featured content module](/design-system/patterns/featured-content-module)
+
+  * [Wells](/design-system/patterns/wells)
+
 last_updated: 2020-03-30T16:36:53.821Z
+secondary_section: Web templates
 ---

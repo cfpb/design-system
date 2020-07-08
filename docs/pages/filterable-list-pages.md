@@ -2,7 +2,6 @@
 title: Filterable list pages
 layout: variation
 section: pages
-secondary_section: Web templates
 status: Released
 description: >-
   Filterable list page types are used to house searchable lists of articles,
@@ -68,18 +67,37 @@ guidelines: >
   * If using both static and dynamic content, preference for dynamic content to appear above static content.
 
   -->
-behavior: For responsive behavior, see guidance for the [sublanding page]() and
-  [browse page]().
-related_items: |-
-  * Hero
-  * Text introduction
-  * Featured content module
-  * Full-width text
-  * Filter control panel
-  * Post preview of document detail
-  * Pagination
-  * Sidebar breakout
-  * Sidebar
-  * Email sign-up
+behavior: For responsive behavior, see guidance for the [sublanding
+  page](https://cfpb.github.io/design-system/pages/sublanding-pages) and [browse
+  page](https://cfpb.github.io/design-system/pages/browse-pages).
+related_items: >-
+  Pages
+
+  * [Document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
+
+  * [Sublanding page](https://cfpb.github.io/design-system/pages/sublanding-pages) 
+
+  * [Browse page](https://cfpb.github.io/design-system/pages/browse-pages)
+
+
+  Page introductions 
+
+  * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
+
+  * [Text introduction](https://cfpb.github.io/design-system/patterns/text-introductions)
+
+
+  Content
+
+  * [Filterable list control panels](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels)
+
+  * [Featured content module](https://cfpb.github.io/design-system/patterns/featured-content-module)
+
+  * Post preview of [document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
+
+  * [Pagination](https://cfpb.github.io/design-system/patterns/pagination)
+
+  * [Email sign-up form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
 last_updated: 2020-01-13T23:28:26.904Z
+secondary_section: Web templates
 ---

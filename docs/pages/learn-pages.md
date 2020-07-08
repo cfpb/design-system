@@ -2,7 +2,6 @@
 title: Learn pages
 layout: variation
 section: pages
-secondary_section: Web templates
 status: Released
 description: >-
   Learn page types provide focused, detailed information about a specific topic.
@@ -22,7 +21,7 @@ variation_groups:
 
           | ![Learn page example](/design-system/images/uploads/learn_example.jpg) | Example: |
         variation_name: ""
-use_cases: >-
+use_cases: >
   ##### When to use
 
 
@@ -35,8 +34,9 @@ use_cases: >-
 
   ##### When other options are better
 
+  * When page content covers a variety of related topics or is focused on directing users to navigate to other locations on the site or the internet.
 
-  When page content covers a variety of related topics or is focused on directing users to navigate to other locations on the site or the internet.
+  * When the primary goal of the page is to encourage users to download a resource or understand the context around a document, and the page is a child of a filterable list of items, use the [document detail page](https://cfpb.github.io/design-system/pages/document-detail-pages) instead.
 guidelines: >
   Users will likely be spending more time on these page types than others since
   they will hold more content. Consider ways to visually break up the content to
@@ -56,15 +56,15 @@ guidelines: >
   ##### Area 1: Introduction
 
 
-  * Choose either a text introduction or item introduction depending on whether the template is being used to house an article or post.
+  * Choose either a [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions) depending on whether the template is being used to house an article or post.
 
 
   ##### Area 2: Main content
 
 
-  * Must contain at least 1 component.
+  * Must contain at least 1 pattern.
 
-  * Permissible components include full width body text, tables, expandables, 25/75 image and text info unit groups, grey wells.
+  * Permissible patterns include full width body text, [tables](https://cfpb.github.io/design-system/components/tables), [expandables](https://cfpb.github.io/design-system/components/expandables), 25/75 image and text info unit groups, [wells](https://cfpb.github.io/design-system/patterns/wells).  
 
 
   ##### Area 3: Sidebar
@@ -90,10 +90,10 @@ related_items: |-
   * Tables
   * Expandables
   * 25/75 image & text
-  * Gray well
-  * Contact information
-  * Related posts / Related links
-  * Email signup
-  * Contact information
+
+  * [Wells](/design-system/patterns/wells)
+
+  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms) 
 last_updated: 2020-01-13T23:26:34.507Z
+secondary_section: Web templates
 ---

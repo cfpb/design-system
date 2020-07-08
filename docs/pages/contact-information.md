@@ -75,7 +75,7 @@ use_cases: >-
 
   * When no contact information is needed or no specific action is tied to the contact information.
 guidelines: >-
-  <h3>Guidelines</h3>
+  <h3>Content Guidelines</h3>
 
   Headings should be the official name of the office.
 

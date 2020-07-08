@@ -2,17 +2,21 @@
 title: Item introductions
 layout: variation
 section: patterns
-description: The item introduction pattern is used on learn and document detail
-  pages typically found through filterable lists.
+description: The item introduction is used on learn and document detail pages
+  typically found through filterable lists.
 variation_groups:
   - variation_group_name: Standard item introduction
     variations:
       - variation_description: >-
           The item introduction consists of a heading, sometimes referred to as
-          the post title, with a category label above it in the vast majority of
-          cases. The item introduction may also include a minicon next to the
-          category label, subheading paragraph, dates, and/or social sharing
-          icons. Layout as seen on a Learn page template:
+          the post title, with a category label plus icon above it in some
+          cases. The item introduction may also include author names, date,
+          subheading paragraph, and/or social sharing icons. For reference, see
+          this [example of a blog post using the item
+          introduction](https://www.consumerfinance.gov/about-us/blog/innovation-spotlight-providing-adverse-action-notices-when-using-ai-ml-models/). 
+
+
+          Layout as seen on a Learn page template:
 
 
           ![Schematic of an item introduction](/design-system/images/uploads/itemintro_intro.png)
@@ -62,5 +66,9 @@ behavior: >-
   | Item intro with sidebar to the right | Item intro takes up full width of viewport |
 
   | ![Schematic of an item intro at breakpoints above 900 px](/design-system/images/uploads/itemintro_behavior1.png) | ![schematic of an item intro at breakpionts below 901 px](/design-system/images/uploads/itemintro_behavior2.png) |
+related_items: >-
+  * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
+
+  * [Text introductions](https://cfpb.github.io/design-system/patterns/text-introductions)
 secondary_section: Layout options
 ---

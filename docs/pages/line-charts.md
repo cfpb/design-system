@@ -17,6 +17,7 @@ variation_groups:
           agreement trends between 2009 and
           2015.](/design-system/images/uploads/line-chart-2.png)"
         variation_name: Line chart showing trends
+    variation_group_name: Types
 use_cases: ""
 content_guidelines: >-
   * Label your lines directly or use different patterns for each line.

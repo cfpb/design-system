@@ -74,24 +74,16 @@ behavior: >-
   | -- | -- | 
 
   | ![Breakpoints 901+](/design-system/images/uploads/browse_behavior_desktop.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/browse_behavior_mobile.jpg) |
-related_items: >
+related_items: |
   Page introductions
-
-  * [Text introduction (with optional breakout sidebar)](/design-system/patterns/text-introductions) 
-
+  * [Text introduction](/design-system/patterns/text-introductions) 
 
   Content
-
   * [Image and text](/design-system/patterns/info-unit-groups-image-and-text)
-
   * Half width link blob
-
   * [Featured content module](/design-system/patterns/featured-content-module)
-
   * [Wells](/design-system/patterns/wells)
-
   * [Expandables](/design-system/components/expandables)
-
   * [Tables](/design-system/components/tables)
 last_updated: 2020-01-13T23:25:20.183Z
 secondary_section: Web templates

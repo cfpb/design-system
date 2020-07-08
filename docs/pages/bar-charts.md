@@ -36,6 +36,7 @@ variation_groups:
           other financial services
           category.](/design-system/images/uploads/bar-chart-3.png)"
         variation_name: Stacked bar chart
+    variation_group_name: Types
 use_cases: ""
 content_guidelines: >-
   * If exact numbers are important, the bars should be labeled with the value.

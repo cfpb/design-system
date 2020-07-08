@@ -2,7 +2,6 @@
 title: Helper text
 layout: variation
 section: components
-secondary_section: Text
 status: Released
 description: "Helper text is used with form elements to give the user context
   about their usage. "
@@ -23,8 +22,8 @@ variation_groups:
           answers other than providing formatting examples. "
         variation_name: Block helper text
         variation_specs: >-
-          [Color
-          variables](https://cfpb.github.io/design-system/components/variables#forms-1) 
+          [Color variables for helper
+          text](https://cfpb.github.io/design-system/development/variables#forms) 
 
 
           #### Block helper text
@@ -101,10 +100,12 @@ accessibility: For screen reader accessibility, consider using the
   `aria-describedby` attribute for helper text, which gives screen readers users
   the information if they need while allowing more flexibility with placement.
 related_items: >-
-  * Labels 
+  * [Labels and
+  legends](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-  * [Variables](https://cfpb.github.io/design-system/components/variables#forms-1)
+  * [Color variables for helper text](https://cfpb.github.io/design-system/development/variables#forms) 
 
-  * Form principles
+  * [Designing forms](https://cfpb.github.io/design-system/patterns/designing-forms)
 last_updated: 2020-01-28T15:55:47.394Z
+secondary_section: Text
 ---

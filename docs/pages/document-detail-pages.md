@@ -2,7 +2,6 @@
 title: Document detail pages
 layout: variation
 section: pages
-secondary_section: Web templates
 status: Released
 description: Document detail page types provide summary information about a
   document or related group of documents. These pages help users better
@@ -29,7 +28,7 @@ use_cases: >-
   ##### When other options are better
 
 
-  * When providing the full text of an article or detailed content, but not specifically focused on a document for download, use the more general Learn page template.
+  * When providing the full text of an article or detailed content, but not specifically focused on a document for download, use the more general [Learn page template](https://cfpb.github.io/design-system/pages/learn-pages).
 content_guidelines: >-
   * Page content should provide context for the document housed on the page and
   should help users get a sense of what will be in the document before the
@@ -41,13 +40,13 @@ content_guidelines: >-
   ###### Area 1: Item introduction
 
 
-  * Using the item introduction is required.
+  * Using the [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions) is required.
 
 
   ###### Area 2: Main content
 
 
-  * At least one component is required here.
+  * At least one pattern is required here.
 
 
   ###### Area 3: Sidebar
@@ -122,18 +121,28 @@ behavior: >-
   | -- | -- | 
 
   | ![Post preview within a filterable list at breakpoints 601+](/design-system/images/uploads/post_preview_desktop_1.jpg) | ![Post preview within a filterable list at breakpoints 600 and less](/design-system/images/uploads/post_preview_mobile_1.jpg) |
-related_items: |-
-  * Item introduction
-  * Full width text
-  * Table
-  * Expandable
+related_items: >-
+  Pages
+
+  * [Learn page](https://cfpb.github.io/design-system/pages/learn-pages)
+
+  * [Filterable list page](https://cfpb.github.io/design-system/pages/filterable-list-pages)
+
+
+  Page introductions 
+
+  * [Item introduction](https://cfpb.github.io/design-system/patterns/item-introductions)
+
+
+  Content
+
+  * [Tables](/design-system/components/tables)
+
+  * [Expandables](/design-system/components/expandables)
+
   * Metadata / Related posts / Related links
-  * Contact information
-  * Email sign up
-  * Illustration
-  * Links
-  * Icons
-  * Photography
-  * Typography
+
+  * [Email sign-up form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
 last_updated: 2020-01-13T23:29:43.319Z
+secondary_section: Web templates
 ---

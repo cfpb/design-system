@@ -96,6 +96,9 @@ description: >-
   </div>
 
 
+  <br>
+
+
   ## Getting started for developers
 
 
@@ -127,6 +130,8 @@ description: >-
 
   </div>
 
+
+  <br>
 
 
   ## Contributing to the Design System

@@ -4,8 +4,10 @@ layout: variation
 section: patterns
 status: Released
 description: The text introduction is the standard page introduction pattern
-  used across all pages that do not have a hero or item introduction. They
-  introduce a page, or collection of pages, with a brief description of the
+  used across all pages that do not have a
+  [hero](https://cfpb.github.io/design-system/patterns/heroes) or [item
+  introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
+  They introduce a page, or collection of pages, with a brief description of the
   goals of that section.
 variation_groups:
   - variations:
@@ -78,8 +80,9 @@ variation_groups:
           ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/textintro_intro2.png)
 use_cases: ""
 content_guidelines: >-
-  Headings should be as succinct as possible, ideally staying on a single line
-  at max column width; 35 characters or less.
+  #### Headings
+
+  Headings should be as succinct as possible, ideally staying on a single line at max column width; 35 characters or less.
 
 
   * Heading should be in sentence case
@@ -87,8 +90,12 @@ content_guidelines: >-
   * Use the word “and” instead of “&”
 
 
+  #### Lead paragraph
+
   Lead paragraph beneath heading should also be succinct, roughly 1-3 sentences; 350 characters maximum. This paragraph should explain why the page exists (how does its content tie back to the CFPB mission?) and the value add to the user (what will they get out of the content on this page?).
 
+
+  #### Descriptive paragraph (optional)
 
   The optional description paragraph can be anywhere between 1-5 sentences; 100-800 characters, depending on the needs of the page.
 
@@ -97,6 +104,8 @@ content_guidelines: >-
 
   * For emphasis, a call to action last sentence can be entered as its own paragraph underneath this lead paragraph, either linked to a url or not
 
+
+  #### Call-to-action link (optional)
 
   The optional call-to-action link should be one line; about 40 characters or less. Link content should follow [link guidelines](https://cfpb.github.io/design-system/components/links).
 behavior: >-
@@ -123,7 +132,11 @@ behavior: >-
 
   | ![Mockup of 900+ pixel layout](/design-system/images/uploads/textintro_behavior2.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior4.jpg) |
 accessibility: ""
+research: ""
+related_items: >-
+  * [Heroes](https://cfpb.github.io/design-system/patterns/heroes) 
+
+  * [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
 last_updated: 2020-01-28T15:55:47.394Z
 secondary_section: Layout options
-research: ""
 ---

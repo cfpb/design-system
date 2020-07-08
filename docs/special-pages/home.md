@@ -8,6 +8,7 @@ description: >-
   Financial Protection Bureau (CFPB). It is intended to help teams produce
   consistent, effective, and accessible products for the American public
 
+  <br>
 
   <hr>
 
@@ -24,7 +25,7 @@ description: >-
 
   <div class="content-33 content-last" markdown="1">
 
-  ### [Foundation](https://cfpb.github.io/design-system/foundation/)
+  ### Foundation
 
   This section includes our visual identity standards, such as color, grid, and typography. It forms the foundation for the CFPB’s website and external-facing materials. [Browse foundation](https://cfpb.github.io/design-system/foundation/)
 
@@ -33,7 +34,7 @@ description: >-
 
   <div class="content-33 content-last" markdown="1">
 
-  ### [Components](https://cfpb.github.io/design-system/components/)
+  ### Components
 
   Components contain the key building blocks of the design system that, when combined, can be used to create a website. Examples of components include buttons, text inputs, tables, and alerts. [Browse components](https://cfpb.github.io/design-system/components/)
 
@@ -42,7 +43,7 @@ description: >-
 
   <div class="content-33 content-last" markdown="1">
 
-  ### [Patterns](https://cfpb.github.io/design-system/patterns/)
+  ### Patterns
 
   Patterns are combinations of components used in conjunction to achieve a goal. Interaction patterns are best practice design solutions to common user tasks. Layout patterns are used by designers to organize content into clear, accessible web pages. [Browse patterns](https://cfpb.github.io/design-system/patterns/)
 
@@ -51,7 +52,7 @@ description: >-
 
   <div class="content-33 content-last" markdown="1">
 
-  ### [Pages](https://cfpb.github.io/design-system/pages/)
+  ### Pages
 
   Find out more about the common page types that we use within our content management system, which are documented for easy reference. [Browse pages](https://cfpb.github.io/design-system/pages/)
 
@@ -60,7 +61,7 @@ description: >-
 
   <div class="content-33 content-last" markdown="1">
 
-  ### [Development](https://cfpb.github.io/design-system/development/) 
+  ### Development
 
   The development section includes utilities, such as variables, helper classes, and mixins, and layout options, such as blocks. [Browse development](https://cfpb.github.io/design-system/development/) 
 
@@ -69,11 +70,12 @@ description: >-
 
   <div class="content-33 content-last" markdown="1">
 
-  ### [Guidelines](https://cfpb.github.io/design-system/guidelines/)
+  ### Guidelines
 
   This section includes guidelines for creating specific product experiences not covered in other sections. [Browse guidelines](https://cfpb.github.io/design-system/guidelines/)
 
   </div>
+
 
   <br>
 
@@ -97,9 +99,12 @@ description: >-
   #### Using source code
 
 
-  The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov). [View source code on github]((https://github.com/cfpb/design-system).
+  The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov). [View source code on github](https://github.com/cfpb/design-system).
 
   </div>
+
+
+  <br>
 
 
   ## Contributing to the Design System

@@ -1042,17 +1042,20 @@ variation_groups:
 
             </tbody></table>
         variation_name: Tints
-  - variation_group_name: Data visualization
+  - variation_group_name: Data visualization color schemes
     variations:
       - variation_name: Data visualization main palette
         variation_description: "![](/design-system/images/uploads/datavis_color_main.png)"
-      - variation_name: Data visualization positive-negative palette
-        variation_description: "![](/design-system/images/uploads/datavis_color_pos-neg.png)"
-      - variation_name: Data visualization divergent palette
-        variation_description: "![](/design-system/images/uploads/datavis_color_divergent.png)"
-      - variation_name: Data visualization cool palette
+      - variation_name: Positive-negative palette
+        variation_description: |-
+          ![](/design-system/images/uploads/datavis_color_pos-neg.png)
+
+          Divergent palette
+
+          ![](/design-system/images/uploads/datavis_color_divergent.png)
+      - variation_name: Cool palette
         variation_description: "![](/design-system/images/uploads/datavis_color_cool.png)"
-      - variation_name: Data visualization warm palette
+      - variation_name: Warm palette
         variation_description: "![](/design-system/images/uploads/datavis_color_warm.png)"
 use_cases: >-
   When used properly, color can help clarify relationships between data, provide
@@ -1061,22 +1064,67 @@ use_cases: >-
   with brand standards to appear inconsistent.
 
 
-  * To highlight part of a set of data, or show that things are related, use a tint or a shade of the main color.
+  <div class="content-33 content-first" markdown="1">
+
+
+  \#### Subsets and relationships
+
+
+  To highlight part of a set of data, or show that things are related, use a tint or a shade of the main color.
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
 
 
   ![](/design-system/images/uploads/subsets-and-relationships-color-1.png)
 
 
-  * Use categorical color schemes when you’re visualizing groups of things. These are discrete colors that do not imply an visual relationship between the sets of data.
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  \#### Categorical
+
+
+  Use categorical color schemes when you’re visualizing groups of things. These are discrete colors that do not imply a visual relationship between the sets of data.
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
 
 
   ![](/design-system/images/uploads/categorical-color-1.png)
 
 
-  * When you’re displaying sequential data that shows a range of data in a ranked order, use these sequential colors to imply the relationship.
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  \#### Sequential
+
+
+  When you’re displaying sequential data that shows a range of data in a ranked order, use these sequential colors to imply the relationship.
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
 
 
   ![](/design-system/images/uploads/sequential-color-1.png)
+
+
+  </div>
 content_guidelines: ""
 behavior: ""
 accessibility: >-
@@ -1090,7 +1138,7 @@ accessibility: >-
   You can use the [Color Palette Accessibility Checker](https://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&colors=1e9642,20aa3f,66c368,addc91,c7e5b3,e2efd8,005e5d,257675,579695,89b6b5,b4d2d1,d4e7e6,0050b4,0072ce,4497dc,7eb7e8,afd2f2,d6e8fa,002d72,254b87,5674a3,889cc0,b3c0d9,d3daeb,a01b68,b4267a,c55998,d486b2,e3b2cc,f0d8e2,b63014,d14124,dd735d,e79e8e,f0c3b8,f7e0d9,dc731c,ff9e1b,ffb858,ffce8d,ffe1b9,fff0dd,745745,8a6c57,a18573,baa496,d3c5bc,e7ddd7,101820,43484e,5a5d61,75787b,919395,b4b5b6,d2d3d5,e7e8e9,f7f8f9,ffffff&main=ffffff&level=AA) to check and confirm the accessibility of CFPB colors at different type sizes.
 
 
-  #### Color blindness
+  ### Color blindness
 
 
   When choosing colors for a graph, keep in mind that they may look different to people with color blindness. About [1 in 12 men with Northern European ancestry have green/red color blindness](https://nei.nih.gov/health/color_blindness/facts_about).
@@ -1114,6 +1162,7 @@ accessibility: >-
   * Do not use color as the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
 
   * Text should have a contrast ratio of at least 4.5 : 1, but there are exceptions.
+
     * For large text, a contrast ratio of only 3 : 1 is necessary. Large regular text is at least 18pt/24px, while large bold text is 14pt/18px.
     * Text or images of text that are either pure decoration or not visible, or are part of a logo, picture that contains significant other visual content, or inactive UI components (like disabled form controls) do not have a color contrast requirement.
 

@@ -207,7 +207,7 @@ variation_groups:
               </div>
           </div>
 use_cases: ""
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: ""
 research: ""

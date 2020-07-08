@@ -74,13 +74,10 @@ use_cases: >-
 
 
   * When no contact information is needed or no specific action is tied to the contact information.
-
-
-  <h3>Content guidelines</h3>
-
+guidelines: >-
+  <h3>Guidelines</h3>
 
   Headings should be the official name of the office.
-
 
   Description beneath heading should clearly state why a user would need to contact the office. This description should closely follow the office descriptions linked through the bureau structure page. About 2-3 sentences in length (150-300 characters).
 
@@ -106,7 +103,6 @@ use_cases: >-
   * Sidebar pattern includes the option for map imagery.
 
   * Pre-set minicons are used to help visually reinforce the type of contact method.
-content_guidelines: ""
 behavior: >-
   The mockups below show simultaneously how this pattern works within either the
   main content area or the sidebar:

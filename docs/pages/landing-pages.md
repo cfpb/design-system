@@ -16,11 +16,11 @@ variation_groups:
       page, and the other uses a text introduction.
 
 
-      | Landing page with hero | Landing page with text introduction | 
+      | Landing page with hero | Landing page with text introduction |
 
-      | -- | -- | 
+      | -- | -- |
 
-      | ![Landing page with hero](/design-system/images/uploads/landing_top_examplea_2x.jpg) | ![Landing page with text introduction](/design-system/images/uploads/landing_top_exampleb_2x.jpg) | 
+      | ![Landing page with hero](/design-system/images/uploads/landing_top_examplea_2x.jpg) | ![Landing page with text introduction](/design-system/images/uploads/landing_top_exampleb_2x.jpg) |
 
       | Example: [Consumer Tools overview page](https://www.consumerfinance.gov/consumer-tools/) | Example: [About Us overview page](https://www.consumerfinance.gov/about-us/)
 use_cases: >-
@@ -38,7 +38,7 @@ use_cases: >-
   * When a new page is needed within a navigation section, rather than at the top-level.
 
   * When page content includes paragraph copy or more detailed definitions or explanations.
-content_guidelines: >-
+guidelines: >-
   * Generally, content components should work together to provide an overview of
   the information organized below this page or about the campaign. Give users
   clear next steps and calls to actions so they can quickly decide what content
@@ -76,12 +76,12 @@ content_guidelines: >-
 behavior: >-
   Below the 901 pixel breakpoint, the entire sidebar stacks below the main
   content area, appearing near the bottom of the page for mobile and tablet
-  users. 
+  users.
 
 
-  | Above 900 px | Below 901 px | 
+  | Above 900 px | Below 901 px |
 
-  | -- | -- | 
+  | -- | -- |
 
   | ![Breakpoints 901+](/design-system/images/uploads/landing_behavior_desktop_2x.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/landing_behavior_mobile_2x.jpg) |
 related_items: >-
@@ -100,7 +100,7 @@ related_items: >-
 
   * [Wells](/design-system/patterns/wells)
 
-  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms) 
+  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
 last_updated: 2019-10-24T20:28:47.366Z
 secondary_section: Web templates
 ---

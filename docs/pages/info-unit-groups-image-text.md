@@ -162,7 +162,7 @@ variation_groups:
 
         variation_name: 50/50 image and text component
 use_cases: ""
-content_guidelines: >-
+guidelines: >-
   **When to use**
 
   * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.

@@ -280,7 +280,7 @@ variation_groups:
       Buttons that have “forward” actions have icons to the right of the text,
       and those with “back” actions have icons to the left.
 use_cases: Generous white space lends focus and makes buttons more actionable.
-content_guidelines: >-
+guidelines: >-
   Labels should be written in sentence case. Use verbs and an active voice.
   Language should be clear, succinct, and informative. Limit the copy length to
   22 characters.

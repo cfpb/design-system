@@ -56,7 +56,7 @@ variation_groups:
       be used across all formats from print to digital. Its round and geometric
       letterforms are approachable and modern.
 use_cases: ""
-content_guidelines: >-
+guidelines: >-
   Readable text allows users to efficiently read and take in textual
   information. Text that is not readable turns off readers or makes it
   challenging for them to stay focused. The following guidelines promote good

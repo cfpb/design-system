@@ -210,8 +210,8 @@ collections:
         widget: 'markdown'
         minimal: true
         required: false
-      - name: 'content_guidelines'
-        label: 'Content guidelines'
+      - name: 'guidelines'
+        label: 'Guidelines'
         widget: 'markdown'
         minimal: true
         required: false

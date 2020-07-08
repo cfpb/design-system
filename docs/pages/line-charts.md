@@ -19,7 +19,7 @@ variation_groups:
         variation_name: Line chart showing trends
     variation_group_name: Types
 use_cases: ""
-content_guidelines: >-
+guidelines: >-
   * Label your lines directly or use different patterns for each line.
 
   * Generally show five or fewer lines to avoid confusion.

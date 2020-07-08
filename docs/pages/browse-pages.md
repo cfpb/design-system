@@ -15,9 +15,9 @@ variation_groups:
     variations:
       - variation_code_snippet: ""
         variation_description: >-
-          | Browse page wireframe | Example | 
+          | Browse page wireframe | Example |
 
-          | -- | -- | 
+          | -- | -- |
 
           | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [TRID guidance page](https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/) |
         variation_name: ""
@@ -34,7 +34,7 @@ use_cases: >-
   ##### When other options are better
 
   * When page content is a lengthy article or text.
-content_guidelines: >-
+guidelines: >-
   Content should be displayed in a way that allows for ease of browsing; group
   content in ways that makes it easy to find.
 
@@ -63,21 +63,21 @@ content_guidelines: >-
 behavior: >-
   Below the 901 pixel breakpoint, the sub-navigation collapses into the global
   navigation under a hamburger menu, as seen on the [Regulatory agenda
-  page](http://www.consumerfinance.gov/policy-compliance/rulemaking/regulatory-agenda/). 
+  page](http://www.consumerfinance.gov/policy-compliance/rulemaking/regulatory-agenda/).
 
 
   Also below the 901 pixel breakpoint, if a browse page has child browse pages, the children appear in a special expandable navigation at the top of the page, as seen on the [TRID guidance page](https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/).
 
 
-  | Above 900 px | Below 901 px | 
+  | Above 900 px | Below 901 px |
 
-  | -- | -- | 
+  | -- | -- |
 
   | ![Breakpoints 901+](/design-system/images/uploads/browse_behavior_desktop.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/browse_behavior_mobile.jpg) |
 related_items: >-
   Page introductions
 
-  * [Text introduction](/design-system/patterns/text-introductions) 
+  * [Text introduction](/design-system/patterns/text-introductions)
 
 
   Content
@@ -94,7 +94,7 @@ related_items: >-
 
   * [Tables](/design-system/components/tables)
 
-  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms) 
+  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
 last_updated: 2020-01-13T23:25:20.183Z
 secondary_section: Web templates
 ---

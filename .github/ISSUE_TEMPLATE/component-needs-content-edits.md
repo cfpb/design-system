@@ -17,7 +17,7 @@ What content needs to be created?
    - [ ] Jinja links/snippet(s)
    - [ ] Variations specifications
 - [ ] Use cases
-- [ ] Content guidelines
+- [ ] Guidelines
 - [ ] Behavior
 - [ ] Accessibility
 - [ ] Research
@@ -35,7 +35,7 @@ What content exists already but needs **edits**?
    - [ ] Jinja links/snippet(s)
    - [ ] Variations specifications
 - [ ] Use cases
-- [ ] Content guidelines
+- [ ] Guidelines
 - [ ] Behavior
 - [ ] Accessibility
 - [ ] Research

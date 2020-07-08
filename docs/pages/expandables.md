@@ -421,7 +421,7 @@ variation_groups:
         variation_code_snippet: ""
       - variation_name: Header elements
         variation_description: >
-          
+
           These additional elements are useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.
 
 
@@ -495,7 +495,7 @@ variation_groups:
 
       * {string} The text of the expandable’s label.
 use_cases: ""
-content_guidelines: ""
+guidelines: ""
 behavior: >
   ### Collapsed
 
@@ -518,7 +518,7 @@ research: "### Google Tag Manager
 
 
   Below is a list of items that Digital Analytics references in the tag that
-  captures expandables.\ 
+  captures expandables.\
 
 
   #### TAG ITEMS

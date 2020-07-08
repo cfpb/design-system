@@ -31,7 +31,7 @@ variation_groups:
           #### Focus
           - Border: 2 px, Pacific (#0072ce)
           - Background: Pacific 20 (#d6e8fa)
-          #### 
+          ####
     variation_group_name: Standard range slider
 use_cases: >-
   Range sliders can work well for discovery and education, where the inputs are
@@ -43,11 +43,11 @@ use_cases: >-
   lowest fares.
 
 
-  Because they’re imprecise and difficult to manipulate, range sliders are not a good choice when the user is likely to have a specific number that they want to input. If you choose to implement a slider in this latter case, consider adding steppers or an input box as an alternative means of entering the same data. 
+  Because they’re imprecise and difficult to manipulate, range sliders are not a good choice when the user is likely to have a specific number that they want to input. If you choose to implement a slider in this latter case, consider adding steppers or an input box as an alternative means of entering the same data.
 
 
   Also consider the balance between the length of the slider and the number of data points it covers (the range, as well as how discrete the points are). The more points to choose from, the harder it is for the user to target a specific number.
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: Make sure that sliders are accessible by keyboard using the arrow keys.
 last_updated: 2020-01-28T15:55:47.394Z

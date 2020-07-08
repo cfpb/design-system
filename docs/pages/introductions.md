@@ -79,7 +79,7 @@ variation_groups:
 
           ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/textintro_intro2.png)
 use_cases: ""
-content_guidelines: >-
+guidelines: >-
   #### Headings
 
   Headings should be as succinct as possible, ideally staying on a single line at max column width; 35 characters or less.
@@ -134,7 +134,7 @@ behavior: >-
 accessibility: ""
 research: ""
 related_items: >-
-  * [Heroes](https://cfpb.github.io/design-system/patterns/heroes) 
+  * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
 
   * [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
 last_updated: 2020-01-28T15:55:47.394Z

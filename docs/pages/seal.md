@@ -93,7 +93,7 @@ use_cases: >-
   * Employee awards, commendations, and certificates from the Director
 
   * Delegations of Authority from the Director
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 restrictions:
   - restrictions_do: >-

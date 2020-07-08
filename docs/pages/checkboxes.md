@@ -63,7 +63,7 @@ variation_groups:
         variation_description: ""
         variation_name: ""
         variation_specs: |-
-          #### Default checkbox 
+          #### Default checkbox
           - Height: 20 px
           - Width: 20 px
           - Margin right: 10 px
@@ -237,7 +237,7 @@ use_cases: >-
   * Clicking on the parent checkbox selects the parent option and all child options.
 
   * Clicking on the parent checkbox does not change the state of the open/close expansion (if it’s checked with the children expanded, it stays expanded, for instance).
-content_guidelines: >-
+guidelines: >-
   * Label text should be concise
 
   * Text spacing should inform spacing of checkboxes and checkbox should be vertically centered with the first line of text in an option.

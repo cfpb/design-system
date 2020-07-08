@@ -90,7 +90,7 @@ variation_groups:
           * 16pt / 20pt
         variation_code_snippet: <p class="print-subheading">Lorem ipsum</p>
 use_cases: ""
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: ""
 research: ""

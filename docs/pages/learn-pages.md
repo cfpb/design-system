@@ -16,9 +16,9 @@ variation_groups:
     variations:
       - variation_code_snippet: ""
         variation_description: >-
-          | Learn page wireframe | Example | 
+          | Learn page wireframe | Example |
 
-          | -- | -- | 
+          | -- | -- |
 
           | ![Learn page example](/design-system/images/uploads/learn_example.jpg) | Example: |
         variation_name: ""
@@ -37,7 +37,7 @@ use_cases: >-
 
 
   When page content covers a variety of related topics or is focused on directing users to navigate to other locations on the site or the internet.
-content_guidelines: >
+guidelines: >
   Users will likely be spending more time on these page types than others since
   they will hold more content. Consider ways to visually break up the content to
   organize it and make it easier for users to skim to find the specific content
@@ -64,7 +64,7 @@ content_guidelines: >
 
   * Must contain at least 1 component.
 
-  * Permissible components include full width body text, tables, expandables, 25/75 image and text info unit groups, grey wells.  
+  * Permissible components include full width body text, tables, expandables, 25/75 image and text info unit groups, grey wells.
 
 
   ##### Area 3: Sidebar
@@ -78,11 +78,11 @@ behavior: >-
   area.
 
 
-  | Above 900 px | Below 901 px | 
+  | Above 900 px | Below 901 px |
 
-  | -- | -- | 
+  | -- | -- |
 
-  | ![Breakpoints 901+](/design-system/images/uploads/learn_behavior_desktop.jpg) | ![Breakpoints 90o and less](/design-system/images/uploads/learn_behavior_mobile.jpg) | 
+  | ![Breakpoints 901+](/design-system/images/uploads/learn_behavior_desktop.jpg) | ![Breakpoints 90o and less](/design-system/images/uploads/learn_behavior_mobile.jpg) |
 related_items: |-
   * Text introduction
   * Item introduction

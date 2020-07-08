@@ -122,7 +122,7 @@ variation_groups:
     variation_group_description: "A link blob is a unit consisting of heading, short
       descriptive text, and call to action. "
 use_cases: ""
-content_guidelines: >-
+guidelines: >-
   * Headings
 
     * Half-width and third-width link blobs: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.

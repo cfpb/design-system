@@ -16,9 +16,9 @@ variation_groups:
     variation_group_description: >-
       | Filterable list sublanding page | Filterable list browse page |
 
-      | -- | -- | 
+      | -- | -- |
 
-      | ![Sublanding page mockup](/design-system/images/uploads/sublanding_behavior_desktop-1.jpg) | ![Browse page mockup](/design-system/images/uploads/browse_behavior_desktop.jpg) | 
+      | ![Sublanding page mockup](/design-system/images/uploads/sublanding_behavior_desktop-1.jpg) | ![Browse page mockup](/design-system/images/uploads/browse_behavior_desktop.jpg) |
 
       | Example: [Research and reports](https://www.consumerfinance.gov/data-research/research-reports/) | Example: [Final rules](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/)
 use_cases: >-
@@ -28,24 +28,24 @@ use_cases: >-
   * When asking users to look through more than 20 articles, documents, or resources.
 
   * Additional content may be included before or after the filterable list, but it is not encouraged. The filterable list should be the focus of the page.
-content_guidelines: >
+guidelines: >
   * Text introduction and/or full width text should be used to introduce the
   documents that are being filtered.
 
   * If any of the filtering labels are technical or require further explanation (such as categories), a full width text element can be placed above the filter control panel to provide further explanation.
 
-  * Required elements: filter control panel, list of items (displayed as post preview items) and pagination. 
+  * Required elements: filter control panel, list of items (displayed as post preview items) and pagination.
 
 
   <!--
 
-  Commenting out this list pasted from DM—doesn't seem needed, and has some possibly outdated items 
+  Commenting out this list pasted from DM—doesn't seem needed, and has some possibly outdated items
 
 
   ##### Area 1: Introduction
 
 
-  * Hero !? 
+  * Hero !?
 
   * Text introduction
 
@@ -55,7 +55,7 @@ content_guidelines: >
   ##### Area 2: Main content
 
 
-  * Must contain the filter control panel, list of items, pagination. 
+  * Must contain the filter control panel, list of items, pagination.
 
   * Additional components may include full-width body text
 

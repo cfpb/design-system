@@ -23,7 +23,7 @@ variation_groups:
         variation_name: Block helper text
         variation_specs: >-
           [Color variables for helper
-          text](https://cfpb.github.io/design-system/development/variables#forms) 
+          text](https://cfpb.github.io/design-system/development/variables#forms)
 
 
           #### Block helper text
@@ -88,7 +88,7 @@ variation_groups:
     variation_group_description: "Types of helper text include block helper text,
       inline helper text, and placeholder text. "
 use_cases: ""
-content_guidelines: >-
+guidelines: >-
   ### Required vs. optional fields
 
   Where possible, design your forms to only include required fields. If it’s not required, ask yourself if it’s really necessary to include at all. Add instructions at the top of the form to clearly indicate that all fields are required unless otherwise noted. If a field is optional, indicate it with inline helper text, as shown above. Don’t indicate which fields are required; that would only introduce redundant visual noise.
@@ -103,7 +103,7 @@ related_items: >-
   * [Labels and
   legends](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-  * [Color variables for helper text](https://cfpb.github.io/design-system/development/variables#forms) 
+  * [Color variables for helper text](https://cfpb.github.io/design-system/development/variables#forms)
 
   * [Designing forms](https://cfpb.github.io/design-system/patterns/designing-forms)
 last_updated: 2020-01-28T15:55:47.394Z

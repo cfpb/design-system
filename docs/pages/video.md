@@ -49,7 +49,7 @@ variation_groups:
           ![Still from Consumer Stories Video](/design-system/images/uploads/video_4.jpg "Documentary video")
         variation_name: Documentary
 use_cases: ""
-content_guidelines: >-
+guidelines: >-
   #### Logo
 
 

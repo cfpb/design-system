@@ -123,7 +123,7 @@ variation_groups:
               <a href="#">
                   something@something.com
               </a>
-          </div> 
+          </div>
 
 
           <div class="u-mb30" style="width: 100px; padding: 0.5em; border: 1px solid silver;">
@@ -427,7 +427,7 @@ variation_groups:
 
           ```
 use_cases: ""
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2019-09-13T18:46:32.716Z

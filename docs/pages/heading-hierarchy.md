@@ -89,7 +89,7 @@ variation_groups:
           | Heading 2 | Avenir Next Regular, 26pt / 28pt |
           | Heading 3 | Avenir Next Regular, 16pt / 18pt |
           | Heading 4 | Avenir Next Medium, 14pt / 16pt  |
-          | Heading 5 | Avenir Next Demi Bold, 10pt / 12pt, All caps | 
+          | Heading 5 | Avenir Next Demi Bold, 10pt / 12pt, All caps |
           | Heading 6 | Avenir Next Medium, 12pt /14 pt |
     variation_group_description: >+
       This hierarchy should serve as a basis for 8.5 x 11” documents, but
@@ -135,7 +135,7 @@ variation_groups:
           orient the user to the page’s purpose.
 
 
-          The eyebrow heading is secondary to and serves to support the main page heading. So it should be concise and shorter than the main page heading. 
+          The eyebrow heading is secondary to and serves to support the main page heading. So it should be concise and shorter than the main page heading.
 
 
           An example of the eyebrow heading can be found on the [Buying a House journey pages](https://www.consumerfinance.gov/owning-a-home/process/prepare/).
@@ -166,9 +166,9 @@ variation_groups:
           </header>
     variation_group_description: The heading variations below have specific use cases.
 use_cases: ""
-content_guidelines: |-
-  * Headings should be sentence case. 
-  * Do not include punctuation in headings. 
+guidelines: |-
+  * Headings should be sentence case.
+  * Do not include punctuation in headings.
   * Keep headings to one line on desktop when possible.
 behavior: >-
   #### Spacing for web headings

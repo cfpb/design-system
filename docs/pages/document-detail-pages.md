@@ -12,9 +12,9 @@ variation_groups:
   - variation_group_name: Standard document detail page
     variations: []
     variation_group_description: >
-      | Document detail page wireframe | Example | 
+      | Document detail page wireframe | Example |
 
-      | -- | -- | 
+      | -- | -- |
 
       | ![](/design-system/images/uploads/docdetail_top_example.jpg) | Example: [2019 Consumer Response annual report](https://www.consumerfinance.gov/data-research/research-reports/2019-consumer-response-annual-report/)
 use_cases: >-
@@ -30,7 +30,7 @@ use_cases: >-
 
 
   * When providing the full text of an article or detailed content, but not specifically focused on a document for download, use the more general Learn page template.
-content_guidelines: >-
+guidelines: >-
   * Page content should provide context for the document housed on the page and
   should help users get a sense of what will be in the document before the
   download it; what answers it provides, what they will learn, etc.
@@ -100,9 +100,9 @@ behavior: >-
   area.
 
 
-  | Above 900 px | Below 901 px | 
+  | Above 900 px | Below 901 px |
 
-  | -- | -- | 
+  | -- | -- |
 
   | ![Breakpoints 901+](/design-system/images/uploads/docdetail_behavior_desktop.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/docdetail_behavior_mobile.jpg) |
 
@@ -114,12 +114,12 @@ behavior: >-
 
 
 
-  ###### Post preview within a filterable list 
+  ###### Post preview within a filterable list
 
 
-  | Above 600 px | Below 601 px | 
+  | Above 600 px | Below 601 px |
 
-  | -- | -- | 
+  | -- | -- |
 
   | ![Post preview within a filterable list at breakpoints 601+](/design-system/images/uploads/post_preview_desktop_1.jpg) | ![Post preview within a filterable list at breakpoints 600 and less](/design-system/images/uploads/post_preview_mobile_1.jpg) |
 related_items: |-

@@ -14,7 +14,7 @@ variation_groups:
 
           <div class="m-form-field m-form-field__select">
               <label class="a-label a-label__heading" for="test_select_default">
-                  Default 
+                  Default
               </label>
               <div class="a-select">
                   <select id="test_select_default">
@@ -88,7 +88,7 @@ variation_groups:
         variation_description: ""
         variation_name: ""
         variation_specs: |-
-          Default 
+          Default
           - Height: 35 px
           - Padding: 7 px
           - Border: 1 px, Gray 60 (#919395)
@@ -140,12 +140,12 @@ use_cases: >-
   * You need structured data for a long list. For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a dropdown facilitates this standardization.
 
   * The list options are familiar to the user. A dropdown is not a good place to introduce new or complicated terms or concepts. For instance, if the question is “What’s your favorite color of the rainbow,” a dropdown could be a good choice. The options are familiar and there are more than six. You don’t want the user to have to read and absorb a lot of new information in a dropdown.
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: >-
   ### Dropdowns
 
-  * Keep in mind that dropdowns behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions. 
+  * Keep in mind that dropdowns behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions.
 
   * Mobile also doesn’t allow for the use of typeahead to navigate quickly to an item in a list, so navigating long lists can be especially cumbersome.
 

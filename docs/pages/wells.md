@@ -41,20 +41,20 @@ variation_groups:
 use_cases: >-
   Grey wells should be used to feature content or specific calls to action.
   They  will help visually set apart the content within it, so use sparingly to
-  draw attention to that content. 
+  draw attention to that content.
 
 
   Ideally, content within a well should not take up more than a third of page content.
-content_guidelines: >-
+guidelines: >-
   Text, images, and embedded media (like video) may be placed within wells,
   however, if content includes imagery, also consider the [featured content
   module](/design-system/patterns/featured-content-module). Examples of types of
-  content to include: 
+  content to include:
 
 
   * Headings (H2 - H5). Headings should be as succinct as possible and 35 characters or less (including spaces)
 
-  * Text (including bullets and numbered lists). Text should be succinct. 
+  * Text (including bullets and numbered lists). Text should be succinct.
 
   * Links
 behavior: >-
@@ -62,11 +62,11 @@ behavior: >-
   padding adjustments to maximize real estate on smaller displays.
 
 
-  | Above 900 px, with right sidebar | Above 900 px, with left nav | Below 901 px, both page types | 
+  | Above 900 px, with right sidebar | Above 900 px, with left nav | Below 901 px, both page types |
 
-  | -- | -- | -- | 
+  | -- | -- | -- |
 
-  | ![](/design-system/images/uploads/wells_behavior_mockup_1.png) | ![](/design-system/images/uploads/wells_behavior_mockup_2.png) | ![](/design-system/images/uploads/wells_behavior_mockup_3.png) | 
+  | ![](/design-system/images/uploads/wells_behavior_mockup_1.png) | ![](/design-system/images/uploads/wells_behavior_mockup_2.png) | ![](/design-system/images/uploads/wells_behavior_mockup_3.png) |
 accessibility: ""
 research: ""
 related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"

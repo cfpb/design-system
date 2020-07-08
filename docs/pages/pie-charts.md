@@ -18,9 +18,9 @@ variation_groups:
         variation_name: Donut chart
     variation_group_name: Examples
 use_cases: ""
-content_guidelines: |-
+guidelines: |-
   * The slices should add up to 100%.  *Use 5 or less slices.
-  *  Directly label all slices. 
+  *  Directly label all slices.
   * Use a white outline or stroke to create contrast between the slices.
 behavior: ""
 accessibility: ""

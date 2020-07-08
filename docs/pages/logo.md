@@ -434,7 +434,7 @@ variation_groups:
           </div>
     variation_group_name: Stylistic guidelines
   - variations:
-      - variation_description: >
+      - variation_description: >-
           <div class="content-33 content-first warning" markdown="1">
 
 
@@ -457,7 +457,7 @@ variation_groups:
 
 
           </div><!-- /.content-67 -->
-        variation_name: Don't remove the light beam
+        variation_name: ""
         variation_specs: ""
       - variation_description: >+
           
@@ -493,9 +493,9 @@ variation_groups:
 
           </div><!-- /.content-67 -->
 
-        variation_name: Don't stretch or condense
+        variation_name: ""
         variation_specs: ""
-      - variation_name: Don't apply a drop shadow
+      - variation_name: ""
         variation_description: >-
           <div class="content-33 content-first warning" markdown="1">
 
@@ -551,9 +551,9 @@ variation_groups:
 
           </div><!-- /.content-67 -->
 
-        variation_name: Don't outline the logo or use other colors
+        variation_name: ""
         variation_specs: ""
-      - variation_name: Don't rotate
+      - variation_name: ""
         variation_description: >+
           <div class="content-33 content-first warning" markdown="1">
 
@@ -620,6 +620,6 @@ variation_groups:
 
 
           </div><!-- /.content-67 -->
-        variation_name: Don't place directly on a colored background or photo
+        variation_name: ""
     variation_group_name: Examples of misuse
 ---

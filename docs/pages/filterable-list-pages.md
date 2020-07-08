@@ -75,6 +75,10 @@ related_items: >-
 
   * [Document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
 
+  * [Sublanding page](https://cfpb.github.io/design-system/pages/sublanding-pages) 
+
+  * [Browse page](https://cfpb.github.io/design-system/pages/browse-pages)
+
 
   Page introductions 
 

@@ -1,5 +1,5 @@
 ---
-title: Dropdowns and Multi-selects
+title: Dropdowns and multi-selects
 layout: variation
 section: components
 status: Released

@@ -2,7 +2,6 @@
 title: Pagination
 layout: variation
 section: patterns
-secondary_section: Navigation
 status: Released
 description: Pagination is used to help split up long sets of data or content
   into shorter pieces, so as to make it easier for users to consume information.
@@ -107,9 +106,10 @@ behavior: >+
   stacked on top of the form
 
 accessibility: ""
-related_items: "*
-  [Variables](https://cfpb.github.io/design-system/components/variables#paginat\
-  ion)"
-last_updated: 2020-01-28T15:55:47.394Z
 research: ""
+related_items: "* [Pagination
+  variables](https://cfpb.github.io/design-system/development/variables#paginat\
+  ion-1)"
+last_updated: 2020-01-28T15:55:47.394Z
+secondary_section: Navigation
 ---

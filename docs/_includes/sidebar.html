@@ -1,45 +1,61 @@
-<ul class="m-list m-list__unstyled">
-{% for first in site.data.side-navigation.first-level %}
-    {% assign first_level_slug = first.heading | slugify %}
-    <li class="m-list_item u-mb15">
-        <div class="h4">
-            <a class="m-list_link" href="{{ first_level_slug | relative_url }}">{{ first.heading }}</a>
-        </div>
-        {% if page.section == first_level_slug or page == blank %}
-        <div class="m-list_item-subgroup">
-            {% if first.nav-items.size > 0 %}
-            <ul class="m-list m-list__links">
-            {% for link in first.nav-items %}
-                <li class="m-list_item">
-                    <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
-                </li>
-            {% endfor %}
-            </ul>
-            {% endif %}
-            {% for second in first.second-level %}
-                <div class="h4 u-mt0">{{ second.heading }}</div>
-                {% if second.nav-items.size > 0 %}
+<aside class="ds-sidebar">
+
+<details open class="ds-nav-container">
+
+    <summary class="h4">Navigation</summary>
+
+    <ul class="m-list m-list__links">
+    {% for first in site.data.side-navigation.first-level %}
+        {% assign first_level_slug = first.heading | slugify %}
+        <li class="m-list_item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="m-list_link" href="{{ first_level_slug | relative_url }}">{{ first.heading }}</a>
+                </div>
+
+            {% if page.section == first_level_slug or page == blank %}
+                {% if first.nav-items.size > 0 %}
                 <ul class="m-list m-list__links">
-                {% for link in second.nav-items %}
+                {% for link in first.nav-items %}
                     <li class="m-list_item">
                         <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
                     </li>
                 {% endfor %}
                 </ul>
                 {% endif %}
-                {% for third in second.third-level %}
-                    <div class="h5" style="margin-top:16px">{{ third.heading }}</div>
-                    <ul class="m-list m-list__links">
-                    {% for link in third.nav-items %}
-                        <li class="m-list_item">
-                            <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
-                        </li>
+                {% for second in first.second-level %}
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">{{ second.heading }}</div>
+                        {% if second.nav-items.size > 0 %}
+                        <ul class="m-list m-list__links">
+                        {% for link in second.nav-items %}
+                            <li class="m-list_item">
+                                <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {% for third in second.third-level %}
+                    <div class="ds-nav ds-nav-3">
+                        <div class="h6">{{ third.heading }}</div>
+                        <ul class="m-list m-list__links">
+                        {% for link in third.nav-items %}
+                            <li class="m-list_item">
+                                <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
                     {% endfor %}
-                    </ul>
+                </div>
                 {% endfor %}
-            {% endfor %}
-        </div>
-        {% endif %}
-    </li>
-{% endfor %}
-</ul>
+            {% endif %}
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+
+</details>
+
+</aside>

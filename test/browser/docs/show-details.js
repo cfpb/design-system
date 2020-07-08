@@ -12,9 +12,9 @@ describe( 'The "show details" toggling feature', function() {
   before( function() {
     browser.url( '/design-system/components/' );
     browser.setWindowSize( 1024, 768 );
-    const sideNav = $( '.nav-secondary' );
+    const sideNav = $( '.ds-nav' );
     sideNav.waitForDisplayed();
-    componentPages = $$( '.m-list_item-subgroup .m-list_link' ).map( el => ( {
+    componentPages = $$( '.ds-nav .m-list_link' ).map( el => ( {
       name: el.getText(),
       url: el.getAttribute( 'href' )
     } ) );

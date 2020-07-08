@@ -4,8 +4,10 @@ import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
 import Table from '@cfpb/cfpb-tables/src/Table';
 import { Tabs } from 'govuk-frontend';
 import redirectBanner from './redirect-banner.js';
+import sidebar from './sidebar.js';
 
 redirectBanner.init();
+sidebar.init();
 
 const anchors = new AnchorJS();
 // Add anchors to all headings (except page title headings)

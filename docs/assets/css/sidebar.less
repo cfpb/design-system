@@ -1,0 +1,82 @@
+.ds-nav a {
+    border-bottom-width: 0;
+
+    &:hover {
+        border-bottom-width: 1px;
+    }
+}
+
+.ds-nav ul:last-child {
+    margin-bottom: 30px;
+}
+
+.ds-nav > .h5:first-of-type {
+    margin-top: 0;
+}
+
+
+.ds-nav__subnav {
+    & .h5,
+    & ul {
+        margin-left: 15px;
+    }
+
+    & .h6 {
+        margin-left: 30px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+// Desktop and tablet size.
+.respond-to-min( @bp-sm-min, {
+    // Hide the top-level expandable details on desktop.
+    .ds-nav-container > summary {
+        display: none;
+    }
+
+    .ds-nav-container > .m-list > .m-list_item {
+        margin-bottom: 15px;
+    }
+
+    .ds-nav {
+        margin-left: 15px;
+    }
+
+    .ds-nav-1 {
+        border-bottom: 1px solid @gray-40;
+    }
+} );
+
+// Mobile size.
+.respond-to-max( @bp-xs-max, {
+    .ds-nav .h4 {
+        margin-bottom: 0;
+    }
+
+    .ds-nav-2 {
+        margin-top: 15px;
+    }
+
+    .ds-nav-container {
+        border-top: 1px solid @gray-40;
+        border-bottom: 1px solid @gray-40;
+
+        & > summary {
+            padding: 15px;
+            margin-bottom: 0;
+
+            // Adjust details/summary arrow positioning.
+            &:after {
+                top: 20px;
+                right: 15px;
+            }
+        }
+
+        & > .m-list {
+            padding: 15px;
+            padding-top: 0;
+        }
+    }
+
+} );

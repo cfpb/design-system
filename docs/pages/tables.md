@@ -2,7 +2,6 @@
 title: Tables
 layout: variation
 section: components
-secondary_section: Layout options
 status: Released
 description: "Tables allow for the presentation of many data points grouped
   together in a visual way. They serve a unique purpose of allowing easy
@@ -52,13 +51,13 @@ variation_groups:
           -->
         variation_specs: >-
           [Color variables for
-          tables](https://cfpb.github.io/design-system/components/variables#tables)
+          tables](https://cfpb.github.io/design-system/development/variables#tables-1)
 
 
-          ### Specs for default and directory table (large screens)
+          #### Specs for default and directory table (large screens)
 
 
-          #### Header
+          Header
 
           - Background: Gray-05 #F8F8F8
 
@@ -69,12 +68,12 @@ variation_groups:
           - Font-size: 14px
 
 
-          #### Border 
+          Border 
 
           - Bottom: 1px, Gray-50 #BABBBD on each row, including header
 
 
-          #### Cells
+          Cells
 
           - Background: Gray-05 #F8F8F8
 
@@ -133,18 +132,18 @@ variation_groups:
               </tbody>
           </table>
         variation_specs: |-
-          ### Default table (small screens) 
+          #### Default table (small screens) 
 
-          #### Border 
-          Bottom: 1px, Gray-50 #BABBBD
+          Border 
+          - Bottom: 1px, Gray-50 #BABBBD
 
-          #### Cells
+          Cells
           - Font: 16px Avenir Next Regular Black
           - Font-color: Black #101820
           - Labels font: 14px Avenir Next Regular, all caps
           - Labels font-color: Black #101820
 
-          #### Padding
+          Padding
           - Padding, label / content: 15px
           - Padding, content / next label: 30px
           - Padding, rule line / first label: 15px
@@ -192,7 +191,7 @@ variation_groups:
               </tbody>
           </table>
         variation_specs: |-
-          ### Style for directory tables (small screens)
+          Style for directory tables (small screens)
           - Bottom border: 1px, Gray-50 #BABBBD on each row
           - Font: 16px Avenir Next Regular Black
           - Font-color: Black #101820
@@ -271,7 +270,7 @@ variation_groups:
               </table>
           </div>
         variation_specs: |-
-          ### Styles for scrolling tables
+          #### Styles for scrolling tables
 
           * Border: 1px, Gray-50 #BABBBD around the scrolling table
           * Alternate row striping: Grey-05 #F8F8F8
@@ -348,7 +347,7 @@ variation_groups:
           Left-align columns of numbers when they're nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).
         variation_name: Right-aligned table
         variation_specs: |
-          ### Style for striped rows
+          #### Style for striped rows
           - Alternate row background: Grey-05 #F8F8F8
       - variation_code_snippet: |-
           <table class="o-table o-table__row-links">
@@ -704,8 +703,6 @@ variation_groups:
           </table>
 
 
-
-
           <nav class="m-pagination" role="navigation" aria-label="Pagination">
               <a class="a-btn
                         a-btn__disabled
@@ -842,9 +839,10 @@ behavior: >
   If sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked. 
 accessibility: Remember to always use headers (that is, `<th>` elements) for all
   data tables to make tabular data accessible.
-related_items: "*
-  [Variables](https://cfpb.github.io/design-system/components/variables#tables
-  )"
-last_updated: 2019-08-30T15:18:28.960Z
 research: ""
+related_items: "* [Tables
+  variables](https://cfpb.github.io/design-system/development/variables#tables-\
+  1)"
+last_updated: 2019-08-30T15:18:28.960Z
+secondary_section: Layout options
 ---

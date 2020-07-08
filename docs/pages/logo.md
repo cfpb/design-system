@@ -416,7 +416,7 @@ variation_groups:
           <div class="content-67 content-last" markdown="1">
 
 
-          ![base shapes](/design-system/images/uploads/beam_base_shapes.png)
+          ![base shapes](/design-system/images/uploads/base_shape_beam.png)
 
 
           </div>

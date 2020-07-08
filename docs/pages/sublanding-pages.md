@@ -89,7 +89,7 @@ behavior: >-
   | -- | -- |
 
   | ![Sublanding behavior desktop](/design-system/images/uploads/sublanding_behavior_desktop.jpg) | ![Sublanding behavior mobile](/design-system/images/uploads/sublanding_behavior_mobile.jpg) |
-related_items: >+
+related_items: >
   Page introductions
 
   * [Heroes](/design-system/patterns/heroes)
@@ -107,6 +107,7 @@ related_items: >+
 
   * [Wells](/design-system/patterns/wells)
 
+  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms) 
 last_updated: 2020-03-30T16:36:53.821Z
 secondary_section: Web templates
 ---

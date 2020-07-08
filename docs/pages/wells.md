@@ -2,12 +2,15 @@
 title: Wells
 layout: variation
 section: patterns
-secondary_section: Layout options
 status: Released
 description: Wells are used to highlight specific information within a
   designated section of a page. This breaks up the flow of content on the page
   and helps to emphasize and set apart the content that is included. They are
-  generally used on browse, learn, and document detail pages.
+  generally used on
+  [browse](https://cfpb.github.io/design-system/pages/browse-pages),
+  [learn](https://cfpb.github.io/design-system/pages/learn-pages), and [document
+  detail
+  pages](https://cfpb.github.io/design-system/pages/document-detail-pages).
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -44,9 +47,9 @@ use_cases: >-
   Ideally, content within a well should not take up more than a third of page content.
 content_guidelines: >-
   Text, images, and embedded media (like video) may be placed within wells,
-  however, if content includes imagery, also consider the [Featured Content
-  Module](/design-system/components/featured-content-module). Examples of types
-  of content to include: 
+  however, if content includes imagery, also consider the [featured content
+  module](/design-system/patterns/featured-content-module). Examples of types of
+  content to include: 
 
 
   * Headings (H2 - H5). Headings should be as succinct as possible and 35 characters or less (including spaces)
@@ -65,7 +68,8 @@ behavior: >-
 
   | ![](/design-system/images/uploads/wells_behavior_mockup_1.png) | ![](/design-system/images/uploads/wells_behavior_mockup_2.png) | ![](/design-system/images/uploads/wells_behavior_mockup_3.png) | 
 accessibility: ""
-related_items: ""
-last_updated: 2019-10-21T20:38:39.851Z
 research: ""
+related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"
+last_updated: 2019-10-21T20:38:39.851Z
+secondary_section: Layout options
 ---

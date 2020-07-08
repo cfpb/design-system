@@ -3877,7 +3877,7 @@ Label heading
             'behavior': "\n",
             'accessibility': "\n",
             'research': "\n",
-            'related_items': "\n  Helper text\n  Fieldsets\n\n",
+            'related_items': "\n  Helper text\n  Fieldsets\n  Designing forms\n\n",
             'url': 'components/labels-and-legends'
         }
         ,
@@ -4170,7 +4170,7 @@ Label heading
                 
                     'variation_name2': 'Navigation links',
                     'variation_description2': "Navigation links are not underlined and do not get a visited link style.\n\n\n",
-                    'variation_code_snippet2': `&lt;!-- 
+                    'variation_code_snippet2': `&lt;!--
 &lt;ul class=&quot;toc&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
@@ -4187,7 +4187,7 @@ Label heading
             'use_cases': "\n",
             'content_guidelines': "\n",
             'behavior': "Default links\nIn general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.\n\nOpening a link in a new tab\nLinks should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.\n\nAdd target=\"_blank\" rel=\"noopener noreferrer\" to direct these links to securely open in a new tab.\n\nAdd an aria-label that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be aria-label=\"Learn why some county data are unavailable. (Link opens in new tab.)\" This meets WCAG guideline 3.2 that webpages should work in a predictable way.\n",
-            'accessibility': "\n",
+            'accessibility': "Link text should clearly describe where it will take the user if activated. If a screen reader user is cycling through the links on a page, link text such as “Read more” or “Click here” is not helpful for knowing where that link will take them. Write the link with language clearly describing the link’s destination.\n\nIn situations where that’s untenable, you can improve the situation for screen reader users by coding the link with the aria-label attribute and adding more descriptive link text, which will be read aloud by screen readers.\n",
             'research': "\n",
             'related_items': "\n  Variables\n  Buttons\n  Typography\n\n",
             'url': 'components/links'

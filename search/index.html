@@ -505,7 +505,7 @@
 
                 
                     'variation_name1': '',
-                    'variation_description1': "\n  \n    \n      Browse page wireframe\n      Example\n    \n  \n  \n    \n      \n      Example of a browse page with navigation: TRID guidance page\n    \n  \n\n",
+                    'variation_description1': "\n  \n    \n      Browse page wireframe\n      Example\n    \n  \n  \n    \n      \n      Example of a browse page: TRID guidance page\n    \n  \n\n",
                     'variation_code_snippet1': ``,
                 
             
@@ -513,12 +513,12 @@
 
             'title': 'Browse pages',
             'description': "Browse page types provide specific topic or product overviews and information. Often these pages contain medium-length content, access to specific documents or other resources, or descriptions of action steps.\n\nRelated browse pages within a specific section can be accessed via the left side sub-navigation so users can easily move around within the topic. Browse pages can have parent-child relationships to other browse pages.\n",
-            'use_cases': "When to use\n\n  When adding new information to an existing topic area within one of the main navigation verticals.\n  When introducing a sub-topic, describing action items, or listing out resources.\n  Target user is primarily in a browse mindset, interested in quickly consuming information and keeping an eye out for key phrases, so content on this page should be grouped to help them quickly find relevant information.\n\n\nWhen other options are better\n\n  When page content is a lengthy article or text.\n\n",
-            'content_guidelines': "Content should be displayed in a way that allows for ease of browsing; group content in ways that makes it easy to find.\n\nPage titles are sentence case and use the word “and” instead of “&amp;”. Left side sub-navigation and breadcrumb labels follow same style as the main menu.\n\nTry to avoid creating superfluous paragraphs to contain url text; list urls where possible and minimize unnecessary content; this will help the user browse and find what they need faster, and helps to give visual clarity without the need to read the entire paragraph to find what they need.\n\nArea 1: Introduction\n\n  Text introduction is required.\n\n\nArea 2: Main content\n\n  Must contain at least 1 component.\n\n\nArea 3: Prefooter\n\n  Optional.\n  If using both static and dynamic content, preference for dynamic content to appear above static content.\n\n",
-            'behavior': "Below the 901 pixel breakpoint, the sub-navigation collapses into the global navigation under a hamburger menu, as seen on the Regulatory agenda page. In cases where a browse page has child browse pages, the children will appear in a special expandable navigation at the top of the page, as seen on the TRID guidance page.\n\n\n  \n    \n      Above 900 px\n      Below 901 px\n    \n  \n  \n    \n      \n      \n    \n  \n\n",
+            'use_cases': "When to use\n\n  Target user is primarily in a browse mindset, interested in quickly consuming information and keeping an eye out for key phrases, so content on this page should be grouped to help them quickly find relevant information.\n  When adding new information to an existing topic area within one of the main navigation verticals.\n  When introducing a sub-topic, describing action items, or listing out resources.\n\n\nWhen other options are better\n\n  When page content is a lengthy article or text.\n\n",
+            'content_guidelines': "Content should be displayed in a way that allows for ease of browsing; group content in ways that makes it easy to find.\n\nPage titles are sentence case and use the word “and” instead of “&amp;”. Left side sub-navigation and breadcrumb labels follow same style as the main menu.\n\nTry to avoid creating superfluous paragraphs to contain url text; list urls where possible and minimize unnecessary content; this will help the user browse and find what they need faster, and helps to give visual clarity without the need to read the entire paragraph to find what they need.\n\nArea 1: Introduction\n\n  Text introduction is required.\n\n\nArea 2: Main content\n\n  Must contain at least 1 pattern.\n\n\nArea 3: Prefooter\n\n  Optional.\n  If using both static and dynamic content, preference for dynamic content to appear above static content.\n\n",
+            'behavior': "Below the 901 pixel breakpoint, the sub-navigation collapses into the global navigation under a hamburger menu, as seen on the Regulatory agenda page.\n\nAlso below the 901 pixel breakpoint, if a browse page has child browse pages, the children appear in a special expandable navigation at the top of the page, as seen on the TRID guidance page.\n\n\n  \n    \n      Above 900 px\n      Below 901 px\n    \n  \n  \n    \n      \n      \n    \n  \n\n",
             'accessibility': "\n",
             'research': "\n",
-            'related_items': "\n  Text introduction\n  50/50 image &amp; text\n  25/75 image &amp; text\n  Expandable\n  Featured content module\n  Full width text\n  Gray well\n  Half width link blob\n  Table\n  Related posts / Related links\n  Email signup\n  Contact information\n\n",
+            'related_items': "Page introductions\n\n  Text introduction\n\n\nContent\n\n  Image and text\n  Half width link blob\n  Featured content module\n  Wells\n  Expandables\n  Tables\n  Email signup form\n\n",
             'url': 'pages/browse-pages'
         }
         ,
@@ -1617,28 +1617,6 @@
             'research': "\n",
             'related_items': "\n",
             'url': 'guidelines/data-visualization-guidelines'
-        }
-        ,
-        
-
-        
-        
-
-        'index': {
-
-            // Cycle through the variation fields of this page.
-            
-
-
-            'title': '',
-            'description': "\n",
-            'use_cases': "\n",
-            'content_guidelines': "\n",
-            'behavior': "\n",
-            'accessibility': "\n",
-            'research': "\n",
-            'related_items': "\n",
-            'url': '/index'
         }
         ,
         
@@ -3944,58 +3922,6 @@ Label heading
         
         
 
-        'components-left-hand-navigation': {
-
-            // Cycle through the variation fields of this page.
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Left-hand navigation layout',
-                    'variation_description1': "Add a class of .content__L-R to main.content to determine the width ratio of .content_main and .content_sidebar, where ‘L’ is the left-hand item and ‘R’ is the right-hand item. The two common configurations are 1-3 (sidebar on the left, content on the right, in a ratio of 1:3) and 2-1 (content on the left, sidebar on the right, in a ratio of 2:1).\n\nIt is assumed that the content is wider than the sidebar.\n",
-                    'variation_code_snippet1': `&lt;main class=&quot;content content__1-3&quot; role=&quot;main&quot;&gt;
-    &lt;div class=&quot;content_line&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;content_wrapper&quot;&gt;
-        &lt;aside class=&quot;content_sidebar&quot;&gt;
-            Section navigation
-        &lt;/aside&gt;
-        &lt;section class=&quot;content_main&quot;&gt;
-            &lt;h2&gt;Main content area&lt;/h2&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            &lt;/p&gt;
-        &lt;/section&gt;
-    &lt;/div&gt;
-&lt;/main&gt;
-&lt;footer class=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;
-    &lt;div class=&quot;wrapper&quot;&gt;
-        Footer
-    &lt;/div&gt;
-&lt;/footer&gt;`,
-                
-            
-
-
-            'title': 'Left Hand Navigation',
-            'description': "More information can be found at:\n\n  https://cfpb.github.io/capital-framework/components/cf-layout/#standard-content-formats\n\n",
-            'use_cases': "\n",
-            'content_guidelines': "\n",
-            'behavior': "\n",
-            'accessibility': "\n",
-            'research': "\n",
-            'related_items': "\n",
-            'url': 'components/left-hand-navigation'
-        }
-        ,
-        
-
-        
-        
-
         'guidelines-line-charts': {
 
             // Cycle through the variation fields of this page.
@@ -5712,7 +5638,7 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
             'behavior': "Below the 901 pixel breakpoint, the sidebar stacks below the main content area.\n\n\n  \n    \n      Above 900 px\n      Below 901 px\n    \n  \n  \n    \n      \n      \n    \n  \n\n",
             'accessibility': "\n",
             'research': "\n",
-            'related_items': "Page introductions\n\n  Heroes\n  Text introduction (with optional breakout sidebar)\n\n\nContent\n\n  Image and text\n  Half width link blob\n  Featured content module\n  Wells\n\n\n",
+            'related_items': "Page introductions\n\n  Heroes\n  Text introduction (with optional breakout sidebar)\n\n\nContent\n\n  Image and text\n  Half width link blob\n  Featured content module\n  Wells\n  Email signup form\n\n",
             'url': 'pages/sublanding-pages'
         }
         ,

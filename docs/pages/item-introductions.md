@@ -2,7 +2,10 @@
 title: Item introductions
 layout: variation
 section: patterns
-description: The item introduction is used on learn and document detail pages
+description: The item introduction is used on
+  [learn](https://cfpb.github.io/design-system/pages/learn-pages) and [document
+  detail
+  pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
   typically found through [filterable list
   pages](https://cfpb.github.io/design-system/pages/filterable-list-pages).
 variation_groups:
@@ -68,10 +71,12 @@ behavior: >-
 
   | ![Schematic of an item intro at breakpoints above 900 px](/design-system/images/uploads/itemintro_behavior1.png) | ![schematic of an item intro at breakpionts below 901 px](/design-system/images/uploads/itemintro_behavior2.png) |
 related_items: >-
+  * [Learn pages](https://cfpb.github.io/design-system/pages/learn-pages) 
+
+  * [Document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)  
+
   * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
 
   * [Text introductions](https://cfpb.github.io/design-system/patterns/text-introductions)
-
-  * [Filterable list pages](https://cfpb.github.io/design-system/pages/filterable-list-pages)
 secondary_section: Layout options
 ---

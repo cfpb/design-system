@@ -11,6 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+
+    - name: Install Bundler
+      run: gem install bundler
+
     - name: Check out the repo
       uses: actions/checkout@v2
 
@@ -43,11 +51,11 @@ jobs:
         ruby-version: '2.6'
 
     - name: Install dependencies with Yarn
-      run: yarn && yarn --cwd docs/
+      run: yarn
 
     - name: Start local Design System website server
       run: |
-        yarn --cwd docs/ start &
+        yarn start &
         sleep 5
 
     - name: Run browser tests

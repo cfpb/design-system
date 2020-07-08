@@ -2,7 +2,6 @@
    Settings for webpack JavaScript bundling system.
    ========================================================================== */
 
-const BROWSER_LIST = require( './browser-list-config' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
 
 /* Commmon webpack 'module' option used in each configuration.
@@ -13,9 +12,9 @@ const COMMON_MODULE_CONFIG = {
       loader: 'babel-loader?cacheDirectory=true',
       options: {
         presets: [ [ '@babel/preset-env', {
-          targets: {
-            browsers: BROWSER_LIST.LAST_2_PLUS_IE_9_AND_UP
-          },
+          /* Use useBuiltIns: 'usage' and set `debug: true` to see what
+             scripts require polyfilling. */
+          useBuiltIns: false,
           debug: false
         } ] ]
       }

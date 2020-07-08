@@ -2,7 +2,6 @@
 title: Landing pages
 layout: variation
 section: pages
-secondary_section: Web templates
 status: Released
 description: Landing page types provide an overview of a main navigation section
   and helps users situate themselves within the site and the subject matter.
@@ -17,7 +16,7 @@ variation_groups:
       page, and the other uses a text introduction.
 
 
-      | Landing page with hero | Landing page with introduction | 
+      | Landing page with hero | Landing page with text introduction | 
 
       | -- | -- | 
 
@@ -39,7 +38,7 @@ use_cases: >-
   * When a new page is needed within a navigation section, rather than at the top-level.
 
   * When page content includes paragraph copy or more detailed definitions or explanations.
-content_guidelines: >+
+content_guidelines: >-
   * Generally, content components should work together to provide an overview of
   the information organized below this page or about the campaign. Give users
   clear next steps and calls to actions so they can quickly decide what content
@@ -55,17 +54,17 @@ content_guidelines: >+
   ##### Area 1: Introduction
 
 
-  * Choose between a [hero](/design-system/components/heroes) or [text introduction](/design-system/components/introductions) for this area.
+  * Choose between a [hero](https://cfpb.github.io/design-system/patterns/heroes) or [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) for this area.
 
 
   ##### Area 2: Main content
 
 
-  * Must contain at least 1 component.
+  * Must contain at least 1 pattern.
 
-  * Recommended hierarchy of components: [image & text](/design-system/components/info-unit-groups-image-and-text) components, [gray well](/design-system/components/wells), and [half width link blobs](/design-system/components/info-unit-groups-link-blobs).
+  * Recommended hierarchy of patterns: [image & text](/design-system/patterns/info-unit-groups-image-and-text), [well](/design-system/patterns/wells),  half width link blobs.
 
-  * The [gray well](/design-system/components/wells) component should not be used at the top of this area if the introduction area contains a hero.
+  * [Wells](/design-system/patterns/wells) should not be used at the top of this area if the introduction area contains a hero.
 
 
   ##### Area 3: Sidebar
@@ -74,7 +73,6 @@ content_guidelines: >+
   * Must contain at least 1 component.
 
   * If using both static and dynamic content, preference for dynamic content to appear above static content.
-
 behavior: >-
   Below the 901 pixel breakpoint, the entire sidebar stacks below the main
   content area, appearing near the bottom of the page for mobile and tablet
@@ -87,12 +85,11 @@ behavior: >-
 
   | ![Breakpoints 901+](/design-system/images/uploads/landing_behavior_desktop_2x.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/landing_behavior_mobile_2x.jpg) |
 related_items: |-
-  * Text introduction
-  * 50/50 image & text
-  * 25/75 image & text
+  * [Heroes](/design-system/patterns/heroes)
+  * [Text introduction](/design-system/patterns/text-introductions)
+  * [Image and text](/design-system/patterns/info-unit-groups-image-and-text)
   * Half width link blob
-  * Gray well
-  * Related posts / Related links
-  * Email signup
+  * [Wells](/design-system/patterns/wells)
 last_updated: 2019-10-24T20:28:47.366Z
+secondary_section: Web templates
 ---

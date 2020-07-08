@@ -17,7 +17,7 @@ description: >-
   <div class="content-33 content-last" markdown="1">
 
 
-  [image]
+  <img src="cfpb_dm_home.png" alt=“homepage”>
 
 
   </div>

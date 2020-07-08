@@ -1,5 +1,5 @@
 ---
-title: Dropdowns and Multi-selects
+title: Dropdowns and multi-selects
 layout: variation
 section: components
 status: Released
@@ -155,8 +155,8 @@ accessibility: >-
   From an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multi-select component is desired, use custom JavaScript to make it accessible.
 research: ""
 related_items: "* [Forms
-  variables]((https://cfpb.github.io/design-system/development/variables#forms-\
-  1)"
+  variables](https://cfpb.github.io/design-system/development/variables#forms-1\
+  )"
 last_updated: 2020-01-06T20:31:06.632Z
 secondary_section: Forms
 ---

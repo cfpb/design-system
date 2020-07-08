@@ -1067,7 +1067,7 @@ use_cases: >-
   <div class="content-33 content-first" markdown="1">
 
 
-  \#### Subsets and relationships
+  #### Subsets and relationships
 
 
   To highlight part of a set of data, or show that things are related, use a tint or a shade of the main color.
@@ -1088,7 +1088,7 @@ use_cases: >-
   <div class="content-33 content-first" markdown="1">
 
 
-  \#### Categorical
+  #### Categorical
 
 
   Use categorical color schemes when you’re visualizing groups of things. These are discrete colors that do not imply a visual relationship between the sets of data.
@@ -1109,7 +1109,7 @@ use_cases: >-
   <div class="content-33 content-first" markdown="1">
 
 
-  \#### Sequential
+  #### Sequential
 
 
   When you’re displaying sequential data that shows a range of data in a ranked order, use these sequential colors to imply the relationship.

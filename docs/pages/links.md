@@ -37,7 +37,7 @@ variation_groups:
         variation_implementation: ""
         variation_specs: >-
           [Color variables for
-          links](https://cfpb.github.io/design-system/components/variables#typography-1) 
+          links](https://cfpb.github.io/design-system/development/variables#typography-1) 
 
 
           #### Default
@@ -208,7 +208,7 @@ variation_groups:
           headers. Note that they are not underlined. "
         variation_name: Header link
       - variation_code_snippet: |-
-          <!-- 
+          <!--
           <ul class="toc">
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
@@ -246,7 +246,15 @@ behavior: >-
 
 
   Add an `aria-label` that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be `aria-label="Learn why some county data are unavailable. (Link opens in new tab.)"` This meets [WCAG guideline 3.2 that webpages should work in a predictable way](https://www.w3.org/TR/WCAG20-TECHS/G201.html).
-accessibility: ""
+accessibility: >-
+  Link text should clearly describe where it will take the user if activated. If
+  a screen reader user is cycling through the links on a page, link text such as
+  "Read more" or "Click here" is not helpful for knowing where that link will
+  take them. Write the link with language clearly describing the link's
+  destination.
+
+
+  In situations where that's untenable, you can improve the situation for screen reader users by coding the link with the `aria-label` attribute and adding more descriptive link text, which will be read aloud by screen readers.
 research: ""
 related_items: >-
   *

@@ -96,7 +96,10 @@ description: >-
   </div>
 
 
-  ## Getting started for developers
+  <br>
+
+
+  ## Get started as a developer
 
 
   <div class="content-50 content-last" markdown="1">
@@ -128,8 +131,10 @@ description: >-
   </div>
 
 
+  <br>
 
-  ## Contributing to the Design System
+
+  ## Contribute to the Design System
 
   We strongly encourage you to participate in the growth and maintenance of the Design System. To make contribution easier, the Design System is built on a tool called Netlify CMS, which allows for editing of pages in a web browser, without needing to use git or other command-line tools. 
 

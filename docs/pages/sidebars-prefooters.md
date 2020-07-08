@@ -2,7 +2,6 @@
 title: Main content and sidebars
 layout: variation
 section: development
-secondary_section: Core development
 status: Released
 description: |+
   A set of HTML and CSS layout helpers.
@@ -364,10 +363,13 @@ use_cases: ""
 content_guidelines: ""
 behavior: ""
 accessibility: ""
-related_items: |-
-  * Block
-  * Column dividers
-  * Grid
-last_updated: 2020-01-28T15:55:47.394Z
 research: ""
+related_items: >-
+  * [Blocks](https://cfpb.github.io/design-system/development/blocks)
+
+  * [Column dividers](https://cfpb.github.io/design-system/development/column-dividers)
+
+  * [Grid](https://cfpb.github.io/design-system/foundation/grid)
+last_updated: 2020-01-28T15:55:47.394Z
+secondary_section: Core development
 ---

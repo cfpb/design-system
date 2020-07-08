@@ -4,17 +4,8 @@ layout: variation
 section: foundation
 secondary_section: Brand guidelines
 description: >-
-  <div class="content-67 content-first" markdown="1">
-
+  
   The CFPB logo was designed to symbolize vigilance, transparency, and a consumer focus. Consumers are the foundation and focus of our mission and our logo reflects that. A soft beam of light symbolizes our efforts to illuminate the financial landscape and foster transparency in the marketplace.
-
-  </div>
-
-  <div class="content-33 content-last" markdown="1">
-
-  ![Feature logo](https://cfpb.github.io/design-manual/static/img/logo/Logo0_@2.png)
-
-  </div>
 variation_groups:
   - variation_group_name: Lockups
     variation_group_description: ""
@@ -410,10 +401,7 @@ variation_groups:
           </div>
 
 
-          #### **Color**
-
-
-          Beam patterns include all three CFPB Green tones. Using transparency increases the strength of the beam metaphor. Transparency should be achieved through opacity, not blending modes like multiply / darken / etc.
+          <div class="content-33 content-first" markdown="1">
 
 
           #### **Base shapes**
@@ -422,10 +410,31 @@ variation_groups:
           Beam patterns are created using trapezoids and parallelograms each at a 9° angle.
 
 
-          ![Base shapes](/design-system/images/uploads/base_shapes.png)
+          </div>
+
+
+          <div class="content-67 content-last" markdown="1">
+
+
+          ![base shapes](/design-system/images/uploads/beam_base_shapes.png)
+
+
+          </div>
+
+
+          <div class="content-33 content-first" markdown="1">
+
+
+          #### **Color**
+
+
+          Beam patterns include all three CFPB Green tones. Using transparency increases the strength of the beam metaphor. Transparency should be achieved through opacity, not blending modes like multiply / darken / etc.
+
+
+          </div>
     variation_group_name: Stylistic guidelines
   - variations:
-      - variation_description: >
+      - variation_description: >-
           <div class="content-33 content-first warning" markdown="1">
 
 
@@ -448,7 +457,7 @@ variation_groups:
 
 
           </div><!-- /.content-67 -->
-        variation_name: Don't remove the light beam
+        variation_name: ""
         variation_specs: ""
       - variation_description: >+
           
@@ -484,9 +493,9 @@ variation_groups:
 
           </div><!-- /.content-67 -->
 
-        variation_name: Don't stretch or condense
+        variation_name: ""
         variation_specs: ""
-      - variation_name: Don't apply a drop shadow
+      - variation_name: ""
         variation_description: >-
           <div class="content-33 content-first warning" markdown="1">
 
@@ -542,9 +551,9 @@ variation_groups:
 
           </div><!-- /.content-67 -->
 
-        variation_name: Don't outline the logo or use other colors
+        variation_name: ""
         variation_specs: ""
-      - variation_name: Don't rotate
+      - variation_name: ""
         variation_description: >+
           <div class="content-33 content-first warning" markdown="1">
 
@@ -611,6 +620,6 @@ variation_groups:
 
 
           </div><!-- /.content-67 -->
-        variation_name: Don't place directly on a colored background or photo
+        variation_name: ""
     variation_group_name: Examples of misuse
 ---

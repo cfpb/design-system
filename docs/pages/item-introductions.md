@@ -3,7 +3,8 @@ title: Item introductions
 layout: variation
 section: patterns
 description: The item introduction is used on learn and document detail pages
-  typically found through filterable lists.
+  typically found through [filterable list
+  pages](https://cfpb.github.io/design-system/pages/filterable-list-pages).
 variation_groups:
   - variation_group_name: Standard item introduction
     variations:
@@ -70,5 +71,7 @@ related_items: >-
   * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
 
   * [Text introductions](https://cfpb.github.io/design-system/patterns/text-introductions)
+
+  * [Filterable list pages](https://cfpb.github.io/design-system/pages/filterable-list-pages)
 secondary_section: Layout options
 ---

@@ -41,9 +41,9 @@ first-level:
           - page: Helper text
           - page: Labels and legends
           - page: Links
-          - page: Radio Buttons
-          - page: Range Sliders
-          - page: Text Inputs
+          - page: Radio buttons
+          - page: Range sliders
+          - page: Text inputs
       - heading: Lists and tables
         nav-items:
           - page: Lists
@@ -55,11 +55,11 @@ first-level:
           - heading: Forms
             nav-items:
               - page: Designing forms
-              - page: E-mail Signup Forms
-              - page: Feedback Forms
+              - page: E-mail signup forms
+              - page: Feedback forms
           - heading: Navigation
             nav-items:
-              - page: Filterable List Control Panels
+              - page: Filterable list control panels
               - page: Pagination
       - heading: Layout patterns
         third-level:
@@ -89,7 +89,7 @@ first-level:
     second-level:
       - heading: Atomic
         nav-items:
-          - page: Atomic Components
+          - page: Atomic components
       - heading: Layout
         nav-items:
           - page: Base images
@@ -106,6 +106,6 @@ first-level:
       - heading: Data visualization
         nav-items:
           - page: Data visualization guidelines
-          - page: Bar Charts
-          - page: Line Charts
-          - page: Pie Charts
+          - page: Bar charts
+          - page: Line charts
+          - page: Pie charts

@@ -71,7 +71,7 @@ first-level:
           - heading: Featured content
             nav-items:
               - page: Cards
-              - page: Featured Content Module
+              - page: Featured content module
               - page: Wells
           - heading: Main content
             nav-items:

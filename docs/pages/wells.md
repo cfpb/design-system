@@ -6,7 +6,11 @@ status: Released
 description: Wells are used to highlight specific information within a
   designated section of a page. This breaks up the flow of content on the page
   and helps to emphasize and set apart the content that is included. They are
-  generally used on browse, learn, and document detail pages.
+  generally used on
+  [browse](https://cfpb.github.io/design-system/pages/browse-pages),
+  [learn](https://cfpb.github.io/design-system/pages/learn-pages), and [document
+  detail
+  pages](https://cfpb.github.io/design-system/pages/document-detail-pages).
 variation_groups:
   - variations:
       - variation_code_snippet: >-

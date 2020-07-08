@@ -2,7 +2,6 @@
 title: Grid
 layout: variation
 section: foundation
-secondary_section: Core development
 status: Released
 description: >
   The grid provides structure for website content. The flexible design adjusts
@@ -100,50 +99,8 @@ variation_groups:
       * `xl`: 1231px and up
   - variations:
       - variation_code_snippet: ""
-        variation_description: >-
-          Component variables are used to theme a component.
-
-          They likely will be left as is, but if needed can be overwritten by duplicating
-
-          the variable in a `@key: value` format with a different value.
-
-          This customized variable would be placed in the same file
-
-          where this component's less file is imported.
-
-
-          ```
-
-          @grid_wrapper-width: 1200px;
-
-          ```
-
-
-          The grid's maximum width in px.
-
-          This value can be overridden in the `grid_wrapper()` mixin.
-
-
-          ```
-
-          @grid_gutter-width: 30px;
-
-          ```
-
-
-          The fixed width between columns.
-
-
-          ```
-
-          @grid_total-columns: 12;
-
-          ```
-
-
-          The total number of columns used in calculating column widths.
-
-          This value can be overridden in the `grid_column()` mixin.
+        variation_description: See [grid
+          variables](https://cfpb.github.io/design-system/development/variables#grid-1).
         variation_name: Variables
       - variation_code_snippet: >-
           <div class="main-wrapper" style="background-color: #f9f9f9">This
@@ -515,7 +472,9 @@ use_cases: ""
 content_guidelines: ""
 behavior: ""
 accessibility: ""
-related_items: ""
-last_updated: 2019-09-10T15:02:08.752Z
 research: ""
+related_items: "* [Grid
+  variables](https://cfpb.github.io/design-system/development/variables#grid-1)"
+last_updated: 2019-09-10T15:02:08.752Z
+secondary_section: Core development
 ---

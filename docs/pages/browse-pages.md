@@ -2,7 +2,6 @@
 title: Browse pages
 layout: variation
 section: pages
-secondary_section: Web templates
 status: Released
 description: >-
   Browse page types provide specific topic or product overviews and information.
@@ -20,16 +19,16 @@ variation_groups:
 
           | -- | -- | 
 
-          | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page with navigation: [TRID guidance page](https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/) |
+          | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [TRID guidance page](https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/) |
         variation_name: ""
 use_cases: >-
   ##### When to use
 
+  * Target user is primarily in a browse mindset, interested in quickly consuming information and keeping an eye out for key phrases, so content on this page should be grouped to help them quickly find relevant information.
+
   * When adding new information to an existing topic area within one of the main navigation verticals.
 
   * When introducing a sub-topic, describing action items, or listing out resources.
-
-  * Target user is primarily in a browse mindset, interested in quickly consuming information and keeping an eye out for key phrases, so content on this page should be grouped to help them quickly find relevant information.
 
 
   ##### When other options are better
@@ -48,12 +47,12 @@ content_guidelines: >-
 
   ##### Area 1: Introduction
 
-  * Text introduction is required.
+  * [Text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) is required.
 
 
   ##### Area 2: Main content
 
-  * Must contain at least 1 component.
+  * Must contain at least 1 pattern.
 
 
   ##### Area 3: Prefooter
@@ -64,11 +63,10 @@ content_guidelines: >-
 behavior: >-
   Below the 901 pixel breakpoint, the sub-navigation collapses into the global
   navigation under a hamburger menu, as seen on the [Regulatory agenda
-  page](http://www.consumerfinance.gov/policy-compliance/rulemaking/regulatory-agenda/).
-  In cases where a browse page has child browse pages, the children will appear
-  in a special expandable navigation at the top of the page, as seen on the
-  [TRID guidance
-  page](https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/).
+  page](http://www.consumerfinance.gov/policy-compliance/rulemaking/regulatory-agenda/). 
+
+
+  Also below the 901 pixel breakpoint, if a browse page has child browse pages, the children appear in a special expandable navigation at the top of the page, as seen on the [TRID guidance page](https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/).
 
 
   | Above 900 px | Below 901 px | 
@@ -76,18 +74,27 @@ behavior: >-
   | -- | -- | 
 
   | ![Breakpoints 901+](/design-system/images/uploads/browse_behavior_desktop.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/browse_behavior_mobile.jpg) |
-related_items: |-
-  * Text introduction
-  * 50/50 image & text
-  * 25/75 image & text
-  * Expandable
-  * Featured content module
-  * Full width text
-  * Gray well
+related_items: >-
+  Page introductions
+
+  * [Text introduction](/design-system/patterns/text-introductions) 
+
+
+  Content
+
+  * [Image and text](/design-system/patterns/info-unit-groups-image-and-text)
+
   * Half width link blob
-  * Table
-  * Related posts / Related links
-  * Email signup
-  * Contact information
+
+  * [Featured content module](/design-system/patterns/featured-content-module)
+
+  * [Wells](/design-system/patterns/wells)
+
+  * [Expandables](/design-system/components/expandables)
+
+  * [Tables](/design-system/components/tables)
+
+  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms) 
 last_updated: 2020-01-13T23:25:20.183Z
+secondary_section: Web templates
 ---

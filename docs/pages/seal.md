@@ -2,7 +2,6 @@
 title: Seal
 layout: variation
 section: foundation
-secondary_section: Brand guidelines
 status: Released
 description: The seal was created as a symbol of CFPB to use in uniquely
   governmental and ceremonial contexts.
@@ -64,7 +63,7 @@ variation_groups:
           seal should always be placed on a white background.
 
 
-          ![one-color seal](/design-system/images/uploads/bcfp_primary_seal_black_rgb.png)
+          ![CFPB one-color seal](/design-system/images/uploads/bcfp_primary_seal_black_rgb.png)
 use_cases: >-
   Use of the seal is very limited. It should never be used on consumer-facing
   materials, as it is important that the CFPB logo is consistently used to help
@@ -120,4 +119,5 @@ restrictions:
       * Don't place the seal on a background that is a pattern, photo, or color other than white or navy.
 related_items: ""
 last_updated: 2020-02-27T16:56:46.952Z
+secondary_section: Brand guidelines
 ---

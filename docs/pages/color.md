@@ -1098,7 +1098,7 @@ variation_groups:
         variation_description: |-
           ![](/design-system/images/uploads/datavis_color_cool.png)
 
-           <table class="color-table">
+          <table class="color-table">
               <thead>
                   <tr><th></th>
                   <th>Name</th>
@@ -1164,7 +1164,82 @@ variation_groups:
               </tr>
           </tbody></table>
       - variation_name: Warm palette
-        variation_description: "![](/design-system/images/uploads/datavis_color_warm.png)"
+        variation_description: |-2
+            </tbody></table>
+            <table class="color-table">
+                <thead>
+                    <tr><th></th>
+                    <th>Name</th>
+                    <th>Hex</th>
+                    <th>RGB</th>
+                    <th>CMYK</th>
+                </tr></thead>
+
+            <tbody><tr>
+                <td class="swatch_field swatch_field__gold-60"></td>
+                <td>Gold 60</td>
+                <td>#ffce8d</td>
+                <td>255, 206, 141</td>
+                <td>0, 21, 49, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__dark-gold"></td>
+                <td>Dark Gold</td>
+                <td>#dc731c</td>
+                <td>220, 115, 28</td>
+                <td>10, 60, 100, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__neutral-60"></td>
+                <td>Neutral 60</td>
+                <td>#baa496</td>
+                <td>186, 164, 150</td>
+                <td>28, 34, 32, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__dark-neutral"></td>
+                <td>Dark Neutral</td>
+                <td>#745745</td>
+                <td>116, 87, 69</td>
+                <td>50, 60, 57, 28</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__purple-60"></td>
+                <td>Purple 60</td>
+                <td>#d486b2</td>
+                <td>212, 134, 178</td>
+                <td>14, 58, 8, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__dark-purple"></td>
+                <td>Dark Purple</td>
+                <td>#a01b68</td>
+                <td>160, 27, 104</td>
+                <td>40, 100, 30, 10</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__red-60"></td>
+                <td>Red 60</td>
+                <td>#e79e8e</td>
+                <td>231, 158, 142</td>
+                <td>0, 51, 46, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__red"></td>
+                <td>Red</td>
+                <td>#d14124</td>
+                <td>209, 65, 36</td>
+                <td>0, 85, 100, 4</td>
+            </tr>
+
+            </tbody></table>
 use_cases: >-
   When used properly, color can help clarify relationships between data, provide
   emphasis for certain data points, and maintain a consistent brand voice. When

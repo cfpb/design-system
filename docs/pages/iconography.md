@@ -359,8 +359,9 @@ variation_groups:
         variation_description: |-
           * **Web:** 40px size, paired with primary headings
           * **Print:** 48pt size, paired with primary headings
-use_cases: >-
-  ##### Color
+use_cases: ""
+guidelines: >-
+  ### Color
 
 
   Icons should always be one color. If used over a color field, negative space should be knocked out.
@@ -372,14 +373,13 @@ use_cases: >-
   ![One color icon example and negative space knocked out icon example](/design-system/images/uploads/minicons3a_-2.png)
 
 
-  ##### Spacing
+  ### Spacing
 
 
   Padding varies around icons of various primary shapes. Square, vertically and horizontally rectangular, diagonal, and most complex icons can fit within the relative padding bounding box. Circular and some complex icons should be slightly larger to offset the visual weight of surrounding negative space.
 
 
-  ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png "Icon spacing diagram")
-guidelines: ""
+  ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png)
 behavior: >-
   #### SVG icon basics
 

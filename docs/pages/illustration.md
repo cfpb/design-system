@@ -2,7 +2,6 @@
 title: Illustration
 layout: variation
 section: foundation
-secondary_section: Brand guidelines
 status: Released
 description: Illustrations are an important tool for introducing the subject
   matter of a page, event, or topic. Illustrations are vector-based graphics
@@ -34,7 +33,8 @@ variation_groups:
 
           ![Paying for College illustration](/design-system/images/uploads/illustration6_-2.png)
         variation_name: Top-facing
-use_cases: >-
+use_cases: ""
+guidelines: >-
   Illustrations are universally relatable and set a friendly tone when
   communicating complex topics.
 
@@ -42,7 +42,7 @@ use_cases: >-
   The color palette should use the full range of primary and secondary colors, but selectively use a maximum of 3-4 colors, using midtones and tints to differentiate components. Illustrations should also make use of 100% white and black.
 
 
-  #### Composition
+  ### Composition
 
 
   All illustrations should have relative sizing when more than one object is included. Illustrations should appear natural, but stylized. Do not scale-up or collage minicons or isocons for use in illustrations. Minicons can be used as graphic details when scaled appropriately.
@@ -54,10 +54,10 @@ use_cases: >-
   Do not use negative space to define outlines.
 
 
-  ![Library campaign illustration](/design-system/images/uploads/illustration7_-2.png)
+  ![Illustration composition](/design-system/images/uploads/illustration7_-2.png)
 
 
-  #### Form
+  ### Form
 
 
   All illustrations should be based on commonly used geometric shapes like circles, triangles, beams, and rectangles.
@@ -66,10 +66,10 @@ use_cases: >-
   To stylize illustrations according to CFPB standards, use relative sizing on stroke weights with a rounded end cap. For curved lines, the stylized stroke is recommended throughout illustrations.
 
 
-  ![Base forms of an illustration](/design-system/images/uploads/illustration10_-2.png)
+  ![Illustration form](/design-system/images/uploads/illustration10_-2.png)
 
 
-  #### Shading and highlights
+  ### Shading and highlights
 
 
   Objects should be lit from the upper-left side. This is consistent with the beam in our logo. The overall placement of highlights and shading should be carefully decided by the designer and consistent throughout the project.
@@ -81,10 +81,10 @@ use_cases: >-
   There are two types of highlights available for illustrations; curved and diagonal. The curved highlight is recommended when the object is round. Diagonal highlights are mostly used in rectangular objects. They are also frequently used to show reflections. To create a diagonal highlight, a tint of the background color is cast from the top-right corner of an object at a 45º angle.
 
 
-  ![Examples of shading and highlights in illustration](/design-system/images/uploads/illustration9_-2.png)
+  ![Illustration shading and highlights](/design-system/images/uploads/illustration9_-2.png)
 
 
-  #### Shadows
+  ### Shadows
 
 
   Shadows are created using a darker tint of the background color. They are appropriate when objects overlap but should not extend outside of objects. In top-facing illustrations, shadows around objects can be used to create realism.
@@ -93,18 +93,19 @@ use_cases: >-
   The overall placement of shadows should be carefully decided by the designer and consistent throughout the project.
 
 
-  ![Example of shadows in llustration](/design-system/images/uploads/illustration8_-2.png)
-guidelines: ""
+  ![Illustration shadows](/design-system/images/uploads/illustration8_-2.png)
 behavior: ""
 accessibility: >-
-  #### Include text alternatives for non-text content
+  ### Include text alternatives for non-text content
 
 
   For any content that is not text-based (images, audio, video, animations, charts, graphs, etc), provide an alternative version of that content that is text-based.
+
 
   * Use the `alt` and `title` attributes on images and other graphical elements.
 
   * Use the `<title>` and `<desc>` elements in SVG drawings.
 
   * Include descriptive text near images (for example, a pie chart legend with percentages of each item).
+secondary_section: Brand guidelines
 ---

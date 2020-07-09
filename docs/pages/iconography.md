@@ -344,7 +344,7 @@ variation_groups:
           when placed inside a button to indicate loading or follows standards
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
-  - variation_group_name: Icon sizes
+  - variation_group_name: Icon with text
     variations:
       - variation_name: Extra small
         variation_code_snippet: >-

@@ -644,7 +644,7 @@ guidelines: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  image
+  ![Isolated logo clear space](/design-system/images/uploads/isolated_logo_clear_space.png)
 
 
   </div>
@@ -653,7 +653,7 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  image
+  ![Isolated logo clear space](/design-system/images/uploads/isolated_logo_clear_space_2.png)
 
 
   </div>
@@ -668,7 +668,7 @@ guidelines: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  image
+  ![Vertical logo clear space](/design-system/images/uploads/vertical_logo_clear_space.png)
 
 
   </div>
@@ -677,7 +677,7 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  image
+  ![Vertical logo clear space](/design-system/images/uploads/vertical_logo_clear_space_2.png)
 
 
   </div>
@@ -692,13 +692,16 @@ guidelines: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  image
+  ![Horizontal logo clear space](/design-system/images/uploads/horizontal_logo_clear_space.png)
 
 
   </div>
 
 
   <div class="content-50 content-last" markdown="1">
+
+
+  ![Horizontal logo clear space](/design-system/images/uploads/horizontal_logo_clear_space_2.png)
 
 
   </div>
@@ -763,8 +766,6 @@ guidelines: >-
   </div><!-- /.content-67 -->
 
 
-
-
   \## Print scale
 
 
@@ -808,8 +809,6 @@ guidelines: >-
   image
 
 
-
-
   * Lockup: vertical
 
   * Height: 0.77”
@@ -821,8 +820,6 @@ guidelines: >-
 
 
   </div><!-- /.content-67 -->
-
-
 
 
   \## Complex backgrounds

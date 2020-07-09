@@ -433,7 +433,7 @@ guidelines: >-
   #### Desktop scale
 
 
-  <!--add image-->
+  ![Desktop scale](/design-system/images/uploads/logo_desktop_scale.png)
 
 
   * Lockup: small execution
@@ -452,7 +452,7 @@ guidelines: >-
   #### Mobile scale
 
 
-  <!--add image-->
+  ![Mobile scale](/design-system/images/uploads/logo_mobile_scale.png)
 
 
   * Lockup: small execution
@@ -489,7 +489,7 @@ guidelines: >-
   #### 8.5 x 11” documents
 
 
-  <!--add image-->
+  ![8.5x11" documents](/design-system/images/uploads/logo_print_scale.png)
 
 
   * Lockup: horizontal
@@ -508,7 +508,7 @@ guidelines: >-
   #### 8.5 x 11” documents
 
 
-  <!--add image-->
+  ![8.5x11" documents](/design-system/images/uploads/logo_print_scale_2.png)
 
 
   * Lockup: vertical
@@ -544,19 +544,19 @@ guidelines: >-
   #### Color
 
 
-  <!--add image-->
+  ![Logo on color background](/design-system/images/uploads/logo_background_color.png)
 
 
   #### Pattern
 
 
-  <!--add image-->
+  ![Logo on pattern background](/design-system/images/uploads/logo_background_pattern.png)
 
 
   #### Photo
 
 
-  <!--add image-->
+  ![Logo on photo background](/design-system/images/uploads/logo_background_photo.png)
 
 
   </div>
@@ -583,13 +583,13 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  <!--add image-->
+  ![Beam pattern green background](/design-system/images/uploads/beam_pattern_1.png)
 
 
   Solid green beam bleeds off the top of the layout. Beams alternate direction to create layered beam shapes.
 
 
-  <!--add image-->
+  ![Beam pattern white background](/design-system/images/uploads/beam_pattern_2.png)
 
 
   Layered beams anchor to the bottom, leaving plenty of white space above for type. This works especially well for horizontal layouts.
@@ -613,7 +613,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  <!--add image-->
+  ![Beam base shapes](/design-system/images/uploads/base_shape_beam.png)
 
 
   </div>

@@ -2,7 +2,6 @@
 title: Video
 layout: variation
 section: foundation
-secondary_section: Brand guidelines
 status: Released
 description: >-
   Video is a powerful tool that can be used to educate viewers about the
@@ -50,7 +49,7 @@ variation_groups:
         variation_name: Documentary
 use_cases: ""
 guidelines: >-
-  #### Logo
+  ### Logo
 
 
   The horizontal lockup should be used in the introduction and conclusion of a video, centered on a white background without any other visual content.
@@ -65,7 +64,7 @@ guidelines: >-
   ![Still from Video title slide](/design-system/images/uploads/video_6.jpg "Logo in Video")
 
 
-  #### Typography
+  ### Typography
 
 
   Typography should be balanced with other visual content, such as live footage or illustration. Type should not overlap other content. Key messages can also be highlighted on their own using display text.
@@ -77,7 +76,7 @@ guidelines: >-
   ![Still from HMDA Video](/design-system/images/uploads/video_3.jpg "Example of typography in Video")
 
 
-  #### Title slides
+  ### Title slides
 
 
   Title slides for educational videos should feature clean typography with ample white space. A beam pattern may be used either as the background or anchored to the bottom of the composition.
@@ -89,20 +88,23 @@ guidelines: >-
   ![Still from CFPB Training Video](/design-system/images/uploads/video_10.jpg "Example of title slide in Video")
 behavior: ""
 accessibility: >-
-  #### Include text alternatives for non-text content
+  ### Include text alternatives for non-text content
 
 
   For any content that is not text-based (images, audio, video, animations, charts, graphs, etc), provide an alternative version of that content that is text-based.
 
+
   * Provide transcripts of audio and video recordings.
 
 
-  #### Provide alternatives for multimedia
+  ### Provide alternatives for multimedia
+
 
   Multimedia such as audio, video, and animations will usually require more than just descriptive text. In most cases, the timing of text and descriptions in these files is important and should therefore be incorporated in an accessible manner.
 
 
-  ##### PRERECORDED CONTENT
+  #### Prerecorded content
+
 
   * For audio-only content, provide a transcript of both spoken words and descriptions of other sounds.
 
@@ -111,24 +113,29 @@ accessibility: >-
   * Combined audio and video content should accommodate alternatives for both (e.g., closed captioning or sign interpretation for audio, and an audio track or a screenplay-like document that transcribes dialog and descriptions of sounds and action for video).
 
 
-  ##### LIVE CONTENT
+  #### Live content
+
 
   * Closed captioning or sign language interpretation should always be available, but in some cases providing the prepared remarks or script alongside the audio/video may suffice.
 
 
-  #### Make content easily distinguishable from its surroundings
+  ### Make content easily distinguishable from its surroundings
 
 
   These guidelines help ensure that content is perceivable for sighted users.
 
 
-  ##### AUDIO
+  #### Audio
+
 
   * Avoid auto-playing audio. If this is absolutely unavoidable, provide a control that allows the user to stop the audio and adjust or mute the volume.
 
   * In recorded audio, background sounds should be at least 20 dB lower than foreground sounds and speech. This does not apply to music.
 
 
-  #### Do not create designs or interactions that may cause seizures
-   * Nothing on the page should flash more than 3 times in 1 second.
+  ### Do not create designs or interactions that may cause seizures
+
+
+  * Nothing on the page should flash more than 3 times in 1 second.
+secondary_section: Brand guidelines
 ---

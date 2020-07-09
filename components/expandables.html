@@ -283,10 +283,6 @@
         </li>
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#javascript-api">JavaScript API</a>
-        </li>
-        
-        <li class="m-list_item">
             <a class="m-list_link" href="#behavior">Behavior</a>
         </li>
         
@@ -408,6 +404,12 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-standard-expandable-the-followin-implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#details-standard-expandable-the-followin-specs-1">
@@ -463,6 +465,41 @@
                 
 
                 <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-standard-expandable-the-followin-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A new array of Expandable instances can be created with <code class="language-plaintext highlighter-rouge">const expandables = Expandable.init();</code>. Each instance has the following methods for public consumption:</p>
+
+<h4 id="toggletargetstate-element-">toggleTargetState( element )</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const` element = document.querySelector( '.o-expandable_target' );
+expandables[0].toggleTargetState( element );
+</code></pre></div></div>
+
+<p>Toggle an expandable to open or closed.
+Parameters:</p>
+
+<ul>
+  <li>element {HTMLNode} The expandable target HTML DOM element.</li>
+</ul>
+
+<h4 id="getlabeltext">getLabelText()</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>expandables[0].getLabelText();
+</code></pre></div></div>
+
+<p>Retrieve the label text of the expandable header.
+Return:</p>
+
+<ul>
+  <li>{string} The text of the expandable’s label.</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
                 
 
                 <!-- Specs -->
@@ -578,6 +615,12 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-standard-expandable-open-on-load-implementation-2">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                 </ul>
 
@@ -627,6 +670,16 @@
                 
 
                 <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-standard-expandable-open-on-load-implementation-2">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A new array of Expandable instances can be created using a JavaScript API. For information, <a href="https://cfpb.github.io/design-system/components/expandables#standard-expandables">open the “Implementation” tab under Standard expandable</a>.</p>
+
+                        </div>
+                    </div>
+                </section>
                 
 
                 <!-- Specs -->
@@ -787,6 +840,12 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-expandable-group-in-the-default--implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#details-expandable-group-in-the-default--specs-1">
@@ -897,6 +956,16 @@
                 
 
                 <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-expandable-group-in-the-default--implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A new array of Expandable instances can be created using a JavaScript API. For information, <a href="https://cfpb.github.io/design-system/components/expandables#standard-expandables">open the “Implementation” tab under Standard expandable</a>.</p>
+
+                        </div>
+                    </div>
+                </section>
                 
 
                 <!-- Specs -->
@@ -1063,6 +1132,12 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-accordion-style-group-to-show-on-implementation-2">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                 </ul>
 
@@ -1168,6 +1243,16 @@
 
                 <!-- Implementation details -->
                 
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-accordion-style-group-to-show-on-implementation-2">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A new array of Expandable instances can be created using a JavaScript API. For information, <a href="https://cfpb.github.io/design-system/components/expandables#standard-expandables">open the “Implementation” tab under Standard expandable</a>.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
 
                 <!-- Specs -->
                 
@@ -1264,6 +1349,12 @@
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-barebones-expandable-this-is-the-implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                 </ul>
 
@@ -1302,6 +1393,16 @@
                 
 
                 <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-barebones-expandable-this-is-the-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A new array of Expandable instances can be created using a JavaScript API. For information, <a href="https://cfpb.github.io/design-system/components/expandables#standard-expandables">open the “Implementation” tab under Standard expandable</a>.</p>
+
+                        </div>
+                    </div>
+                </section>
                 
 
                 <!-- Specs -->
@@ -1345,6 +1446,51 @@
 
             
 
+            <div class="a-toggle_code">
+                <button href="#details-expanded-modifier-sometimes-you--2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-expanded-modifier-sometimes-you--2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-expanded-modifier-sometimes-you--2">
+                <ul class="govuk-tabs__list">
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-expanded-modifier-sometimes-you--implementation-2">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-expanded-modifier-sometimes-you--implementation-2">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A new array of Expandable instances can be created using a JavaScript API. For information, <a href="https://cfpb.github.io/design-system/components/expandables#standard-expandables">open the “Implementation” tab under Standard expandable</a>.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
         </div>
         
         <div class="m-variation">
@@ -1379,6 +1525,51 @@
 
             
 
+            <div class="a-toggle_code">
+                <button href="#details-padded-modifier-adds-padding-and-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-padded-modifier-adds-padding-and-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-padded-modifier-adds-padding-and-3">
+                <ul class="govuk-tabs__list">
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-padded-modifier-adds-padding-and-implementation-3">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-padded-modifier-adds-padding-and-implementation-3">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A new array of Expandable instances can be created using a JavaScript API. For information, <a href="https://cfpb.github.io/design-system/components/expandables#standard-expandables">open the “Implementation” tab under Standard expandable</a>.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
         </div>
         
         <div class="m-variation">
@@ -1411,6 +1602,51 @@
             
             
 
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-spaced-header-modifier-allows-yo-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-spaced-header-modifier-allows-yo-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-spaced-header-modifier-allows-yo-4">
+                <ul class="govuk-tabs__list">
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-spaced-header-modifier-allows-yo-implementation-4">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-spaced-header-modifier-allows-yo-implementation-4">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A new array of Expandable instances can be created using a JavaScript API. For information, <a href="https://cfpb.github.io/design-system/components/expandables#standard-expandables">open the “Implementation” tab under Standard expandable</a>.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
             
 
         </div>
@@ -1459,6 +1695,51 @@ Note: only use this in the expandable header</p>
             
             
 
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-text-elements-label-allows-you-t-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-text-elements-label-allows-you-t-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-text-elements-label-allows-you-t-5">
+                <ul class="govuk-tabs__list">
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-text-elements-label-allows-you-t-implementation-5">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-text-elements-label-allows-you-t-implementation-5">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A new array of Expandable instances can be created using a JavaScript API. For information, <a href="https://cfpb.github.io/design-system/components/expandables#standard-expandables">open the “Implementation” tab under Standard expandable</a>.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
             
 
         </div>
@@ -1511,50 +1792,52 @@ Note: only use this in the expandable header</p>
 
             
 
+            <div class="a-toggle_code">
+                <button href="#details-header-elements-these-additional-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-header-elements-these-additional-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-header-elements-these-additional-6">
+                <ul class="govuk-tabs__list">
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-header-elements-these-additional-implementation-6">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-header-elements-these-additional-implementation-6">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A new array of Expandable instances can be created using a JavaScript API. For information, <a href="https://cfpb.github.io/design-system/components/expandables#standard-expandables">open the “Implementation” tab under Standard expandable</a>.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
         </div>
-        
-    </section>
-    
-    <section class="o-variation_group" id="javascript-api">
-
-        
-        <h2 class="o-variation_group_title">
-            JavaScript API
-        </h2>
-        
-
-        
-        <div class="o-variation_group_description">
-            <p>A new array of Expandable instances can be created with <code class="language-plaintext highlighter-rouge">const expandables = Expandable.init();</code>. Each instance has the following methods for public consumption:</p>
-
-<h3 id="toggletargetstate-element-">toggleTargetState( element )</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const` element = document.querySelector( '.o-expandable_target' );
-expandables[0].toggleTargetState( element );
-</code></pre></div></div>
-
-<p>Toggle an expandable to open or closed.
-Parameters:</p>
-
-<ul>
-  <li>element {HTMLNode} The expandable target HTML DOM element.</li>
-</ul>
-
-<h3 id="getlabeltext">getLabelText()</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>expandables[0].getLabelText();
-</code></pre></div></div>
-
-<p>Retrieve the label text of the expandable header.
-Return:</p>
-
-<ul>
-  <li>{string} The text of the expandable’s label.</li>
-</ul>
-
-        </div>
-        
-
         
     </section>
     
@@ -1611,7 +1894,6 @@ Return:</p>
 <h3 id="google-tag-manager">Google Tag Manager</h3>
 
 <p>Below is a list of items that Digital Analytics references in the tag that captures expandables.</p>
-
 <h4 id="tag-items">TAG ITEMS</h4>
 
 <p><strong>Category:</strong> Page Interaction (hardcoded)</p>
@@ -1700,8 +1982,8 @@ return text;
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/expandables.md">
-                    <time datetime="2020-07-08 16:12:19 -0400">
-                         4:12:19 PM Jul 08, 2020
+                    <time datetime="2020-07-09 14:54:39 -0400">
+                         2:54:39 PM Jul 09, 2020
                     </time>
                 </a>
             </small>

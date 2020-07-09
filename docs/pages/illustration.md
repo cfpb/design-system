@@ -96,10 +96,11 @@ guidelines: >-
   ![Illustration shadows](/design-system/images/uploads/illustration8_-2.png)
 behavior: ""
 accessibility: >-
-  #### Include text alternatives for non-text content
+  ### Include text alternatives for non-text content
 
 
   For any content that is not text-based (images, audio, video, animations, charts, graphs, etc), provide an alternative version of that content that is text-based.
+
 
   * Use the `alt` and `title` attributes on images and other graphical elements.
 

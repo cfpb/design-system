@@ -26,7 +26,7 @@
         {% endif %}
     {% endfor %}
 
-    {% assign jump_sections = 'Use cases,Content guidelines,Behavior,Restrictions,Accessibility,Research,Related items' | split: ',' %}
+    {% assign jump_sections = 'Use cases,Guidelines,Behavior,Restrictions,Accessibility,Research,Related items' | split: ',' %}
     {% for jump_section in jump_sections %}
         {% assign jump_section_slug = jump_section | slugify | replace: '-', '_' %}
         {% assign page_section = page[jump_section_slug] %}
@@ -218,7 +218,7 @@
     {% endif %}
 
     {% comment %} liquid templates' order of operations is from right to left, see https://help.shopify.com/en/themes/liquid/basics/operators for examples explaining the nonsense below {% endcomment %}
-    {% if page.use_cases != '' or page.content_guidelines != '' or page.behavior != '' or page.restrictions and page.restrictions != empty %}
+    {% if page.use_cases != '' or page.guidelines != '' or page.behavior != '' or page.restrictions and page.restrictions != empty %}
         <section class="sticky-header u-mb45">
 
             {% if page.use_cases and page.use_cases != '' %}
@@ -229,11 +229,11 @@
                 </p>
             {% endif %}
 
-            {% if page.content_guidelines and page.content_guidelines != '' %}
-                <h2 id="content-guidelines">Content guidelines</h2>
+            {% if page.guidelines and page.guidelines != '' %}
+                <h2 id="guidelines">Guidelines</h2>
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
-                {{ page.content_guidelines | markdownify }}
+                {{ page.guidelines | markdownify }}
                 </p>
             {% endif %}
 

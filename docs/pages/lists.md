@@ -30,11 +30,11 @@ variation_groups:
               <li class="m-list_item">List item 3</li>
           </ul>
         variation_specs: >-
-          
+
           #### Default
 
 
-          * Avenir Next Regular, 16px 
+          * Avenir Next Regular, 16px
 
           * Margin bottom (list item): 8px
 
@@ -47,7 +47,7 @@ variation_groups:
           * Bullets are aligned flush with the left margin of the column of text they’re in
 
 
-          NESTED 
+          NESTED
 
 
           * Bullets are open circles and flush left with the preceding line of text
@@ -70,7 +70,7 @@ variation_groups:
               <li>List item 3</li>
           </ol>
         variation_specs: >-
-          
+
 
           DEFAULT
 
@@ -165,8 +165,8 @@ variation_groups:
         variation_name: Compact definition list
     variation_group_name: Variations
 use_cases: ""
-content_guidelines: >
-  
+guidelines: >
+
   List items should:
 
 

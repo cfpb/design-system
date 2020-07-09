@@ -44,12 +44,12 @@ variation_groups:
       The email sign up form is comprised of standard slug text ("Email
       updates"), custom description text, a form field for the user to enter
       their email address, a standardized link to a privacy policy statement,
-      and a standardized sign up button.  
+      and a standardized sign up button.
 
 
       Different page types will be connected to the corresponding GovDelivery list based on the page topic (i.e. HMDA) or page type (i.e. blog).
 use_cases: ""
-content_guidelines: >-
+guidelines: >-
   * Use standard slug text: “Email updates”
 
   * Description text will be unique to each mailing list and should clearly set expectations for what a user will receive as a result of signing up. Email address field should always be marked required.
@@ -72,33 +72,33 @@ behavior: >-
   sidebar or a prefooter area.
 
 
-  ### Sidebar email sign up module: Sublanding pages 
+  ### Sidebar email sign up module: Sublanding pages
 
 
   At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
 
 
-  | Above 900 px | 601-900 px | Below 601 px | 
+  | Above 900 px | 601-900 px | Below 601 px |
 
-  | -- | -- | -- | 
+  | -- | -- | -- |
 
   | ![Sublanding page](/design-system/images/uploads/emailsignup_behavior_mockup_1.jpg) | ![Breakpoints 900 - 601](/design-system/images/uploads/emailsignup_behavior_mockup_3.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)  |
 
 
-  ### Sidebar email sign up module: Browse pages 
+  ### Sidebar email sign up module: Browse pages
 
 
-  Browse pages do not have a sidebar. The sidebar email sign up module appears in the prefooter at the bottom of the page. 
+  Browse pages do not have a sidebar. The sidebar email sign up module appears in the prefooter at the bottom of the page.
 
 
   For breakpoints below 601, heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
 
 
-  | Above 600 px | Below 601 px | 
+  | Above 600 px | Below 601 px |
 
-  | -- | -- | 
+  | -- | -- |
 
-  | ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)  | 
+  | ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)  |
 
 
   ### Inset
@@ -111,9 +111,9 @@ behavior: >-
 
 
 
-  | Above 900 px | 601-900 px | Below 601 px | 
+  | Above 900 px | 601-900 px | Below 601 px |
 
-  | -- | -- | -- | 
+  | -- | -- | -- |
 
   | ![Inset email sign up 900 breakpoint](/design-system/images/uploads/email-sign-up_learn.png) | ![Inset breakpoint 601](/design-system/images/uploads/email-sign-up_learn_601.png) | ![Inset breakpoint 320](/design-system/images/uploads/email-sign-up_learn_320.png) |
 accessibility: ""

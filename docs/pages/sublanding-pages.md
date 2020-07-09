@@ -16,7 +16,7 @@ variation_groups:
     variations:
       - variation_code_snippet: ""
         variation_description: >-
-          
+
 
           | With hero | With text introduction | With breakout sidebar |
 
@@ -40,7 +40,7 @@ use_cases: >-
   * When page content includes multiple paragraphs of copy or more detailed definitions or explanations.
 
   * When the desired user interaction is more geared toward encouraging users to sit down and read something or engage deeply with an interactive tool.
-content_guidelines: >-
+guidelines: >-
   * The content components should work together to create an overview of the
   information held within the section and how it relates back to the main
   navigation section.
@@ -94,7 +94,7 @@ related_items: >
 
   * [Heroes](/design-system/patterns/heroes)
 
-  * [Text introduction (with optional breakout sidebar)](/design-system/patterns/text-introductions) 
+  * [Text introduction (with optional breakout sidebar)](/design-system/patterns/text-introductions)
 
 
   Content
@@ -107,7 +107,7 @@ related_items: >
 
   * [Wells](/design-system/patterns/wells)
 
-  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms) 
+  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
 last_updated: 2020-03-30T16:36:53.821Z
 secondary_section: Web templates
 ---

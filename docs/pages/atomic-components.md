@@ -77,7 +77,7 @@ use_cases: >-
   NotificationMolecule.init();
 
   ```
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z

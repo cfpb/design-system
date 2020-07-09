@@ -37,7 +37,7 @@ variation_groups:
         variation_implementation: ""
         variation_specs: >-
           [Color variables for
-          links](https://cfpb.github.io/design-system/development/variables#typography-1) 
+          links](https://cfpb.github.io/design-system/development/variables#typography-1)
 
 
           #### Default
@@ -108,7 +108,7 @@ variation_groups:
     variation_group_description: >-
       Use icons when a link needs extra emphasis. Use icons consistently, or
       don’t use them at all. Each icon should be used exclusively for one
-      action. 
+      action.
 
 
       Icons appear to the right of the link text. The color and font-size of icons should be the same as the adjacent text, including state changes. Icons are never underlined.
@@ -218,7 +218,7 @@ variation_groups:
           -->
         variation_description: >-
           Navigation links are not underlined and do not get a visited link
-          style. 
+          style.
 
 
 
@@ -230,7 +230,7 @@ variation_groups:
           No visited link style
     variation_group_name: Variations
 use_cases: ""
-content_guidelines: ""
+guidelines: ""
 behavior: >-
   ### Default links
 
@@ -258,7 +258,7 @@ accessibility: >-
 research: ""
 related_items: >-
   *
-  [Variables](https://cfpb.github.io/design-system/development/variables#typography-1) 
+  [Variables](https://cfpb.github.io/design-system/development/variables#typography-1)
 
   * [Buttons](https://cfpb.github.io/design-system/components/buttons)
 

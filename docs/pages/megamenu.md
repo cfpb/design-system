@@ -69,7 +69,7 @@ description: >-
   monitor analytics information.**
 variation_groups: []
 use_cases: ''
-content_guidelines: >-
+guidelines: >-
   #### Maximum number of links
 
   Analytics review suggests that 7 links per column should be the maximum,

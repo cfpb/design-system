@@ -29,7 +29,7 @@ variation_groups:
       Use filters in conjunction with search to help users narrow down large
       amounts of data or content. Follow form patterns for grouping, layout, and
       messaging.  Note that notification messaging sits below the filter and
-      above results. 
+      above results.
 
 
       The example below shows a layout as seen on a browse filterable template.
@@ -50,7 +50,7 @@ use_cases: >-
   * Characteristics available as filter options, such as topics, dates, and categories, are not relevant to the content.
 
   * Search alone is sufficient for user needs
-content_guidelines: >
+guidelines: >
   * Headings and labels should be as succinct as possible, ideally 10 characters
   or less. Do not use colon (:) or other punctuation after the header.
 
@@ -67,7 +67,7 @@ behavior: >-
 
   | ------------ | ------------ |
 
-  | 2-3 columns | 1 column, stacked | 
+  | 2-3 columns | 1 column, stacked |
 
   |  ![filter desktop](/design-system/images/uploads/filter_behavior_desktop_1.jpg) | ![filter mobile](/design-system/images/uploads/filter_behavior_mobile_1.jpg) |
 

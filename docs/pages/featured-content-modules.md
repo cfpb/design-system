@@ -142,7 +142,7 @@ variation_groups:
       visible at different desktop breakpoints.
 
 
-      The featured content module visual is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered. 
+      The featured content module visual is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered.
 use_cases: >-
   Featured content modules (FCMs) highlight a specific piece of content at the
   top of a page. They are meant to call attention to a related piece of content
@@ -170,7 +170,7 @@ use_cases: >-
 
 
   When there’s no link or video for the user to interact with, and you still want to visually differentiate your content from its surroundings, consider using a well or inline text instead.
-content_guidelines: >-
+guidelines: >-
   FCMs contain a headline, descriptive body copy text, an optional
   call-to-action link, and a graphical element related to the piece of content
   being featured. They are a “mini story” and never simply a dominant visual.
@@ -195,7 +195,7 @@ behavior: >-
   | ------------ | ------------ |
 
   | ![](/design-system/images/uploads/fcm-desktop02.png) | ![](/design-system/images/uploads/fcm-mobile02.png) |
-   
+
   ### Responsive visual behavior
 
 

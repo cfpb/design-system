@@ -397,7 +397,7 @@ variation_groups:
         variation_code_snippet: ""
     variation_group_name: Development
     variation_group_description: >-
-      
+
       **Warning:** _This document is written for people who might want to create a grid system using our Less mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write._
 
 
@@ -469,7 +469,7 @@ variation_groups:
 
       >   not work perfectly in older browsers.
 use_cases: ""
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: ""
 research: ""

@@ -82,7 +82,7 @@ variation_groups:
           ```
         variation_name: Column divider modifiers
 use_cases: ""
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2019-09-13T19:34:43.025Z

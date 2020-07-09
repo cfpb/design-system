@@ -254,9 +254,9 @@ description: >-
 
 
   Note that this is specific to HTML and does not include CSS.
-use_cases: ""
-content_guidelines: ""
-behavior: ""
+use_cases: ''
+guidelines: ''
+behavior: ''
 accessibility: >-
   ## Testing accessibility issues
 

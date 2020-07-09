@@ -32,7 +32,7 @@ variation_groups:
           * Success icon and message should always appear below input field.
       - variation_name: Success notification (field-level)
         variation_code_snippet: >-
-          
+
           <div class="m-form-field m-form-field__success">
               <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
               <div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert">
@@ -220,15 +220,15 @@ variation_groups:
           explanation as a `m-list` unordered list.
         variation_name: ""
 use_cases: ""
-content_guidelines: ""
+guidelines: ""
 behavior: >-
   ### Placement
 
 
-  * Form-level alerts should appear below the form title. 
+  * Form-level alerts should appear below the form title.
 
 
-  * Field-level alerts (minicon and message) should always appear below the input field.  
+  * Field-level alerts (minicon and message) should always appear below the input field.
 
 
   ### Validation

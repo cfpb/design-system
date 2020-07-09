@@ -52,7 +52,7 @@ use_cases: >-
 
   * Focus attention on the need to accept or acknowledge something before the
   user can proceed
-content_guidelines: >-
+guidelines: >-
   ##### Heading
 
   Modal windows should have a clear heading at the top of the window. This

@@ -94,7 +94,7 @@ use_cases: >-
 
 
   ![Example of shadows in llustration](/design-system/images/uploads/illustration8_-2.png)
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: >-
   #### Include text alternatives for non-text content

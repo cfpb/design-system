@@ -30,7 +30,7 @@ variation_groups:
           <br>
 
 
-          <!--Focus--> 
+          <!--Focus-->
 
           <div class="m-form-field m-form-field__radio">
               <input class="a-radio focus" type="radio" id="test_radio_basic_focus">
@@ -47,7 +47,7 @@ variation_groups:
               <label class="a-label" for="test_radio_basic_checked">Label</label>
           </div>
 
-          <br> 
+          <br>
 
 
           <!--Disabled-->
@@ -165,7 +165,7 @@ variation_groups:
           <br>
 
 
-          <!--Hover--> 
+          <!--Hover-->
 
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio hover" type="radio" id="test_radio_lg_hover">
@@ -206,7 +206,7 @@ variation_groups:
           <br>
 
 
-          <!--Disabled/selected--> 
+          <!--Disabled/selected-->
 
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio"
@@ -245,7 +245,7 @@ use_cases: >-
 
 
   Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the default style shown below, make sure the target area is at least 45 x 45 px and includes the option text.
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: There are some issues with Voiceover reading radio buttons. To
   get around this, consider using the aria-describedby attribute.

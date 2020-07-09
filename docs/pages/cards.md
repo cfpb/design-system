@@ -472,7 +472,7 @@ variation_groups:
           </div>
     variation_group_name: Groups
 use_cases: ""
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2019-10-21T20:38:39.851Z

@@ -24,7 +24,7 @@ variation_groups:
       *If your component doesn't have just one standard default, but rather more than one type with different use cases, add the label "Types" to the field "Component variation group name" above. Examples: [E-mail signup forms](*https://cfpb.github.io/design-system/components/e-mail-signup-forms*) and [buttons](*https://cfpb.github.io/design-system/components/buttons*).*
 
 
-      *2) Click on the "Add variations" button below. Leave the "Variation name" field blank if there's one standard component. If you're adding types, then you'll need to add more than one variation; add the name of each type to the "Variation name" field.* 
+      *2) Click on the "Add variations" button below. Leave the "Variation name" field blank if there's one standard component. If you're adding types, then you'll need to add more than one variation; add the name of each type to the "Variation name" field.*
 
 
       *3) If there are states, add a single code snippet showing them, as shown in this example. If necessary, you can add an image instead of a code snippet, but live samples are strongly preferred.*
@@ -88,9 +88,9 @@ variation_groups:
           `.o-blahblah` class to `blahblah` if you're doing this or that,
           otherwise this bad thing will happen.
         variation_specs: |-
-          You can add images here too. 
+          You can add images here too.
 
-          #### Default checkbox 
+          #### Default checkbox
           - Height: 20 px
           - Width: 20 px
           - Margin right: 10 px
@@ -116,7 +116,7 @@ variation_groups:
           - Avenir Next Regular, 16 px, Gray (#5a5d61)
   - variation_group_name: Variations
     variation_group_description: >-
-      Optional descriptive text. 1-3 sentences, 200-350 characters. 
+      Optional descriptive text. 1-3 sentences, 200-350 characters.
 
 
       ### Instructions
@@ -143,7 +143,7 @@ use_cases: >-
   Provide details on when and where to use this component. Use active voice. No character limit. Paragraph content is optional.
 
 
-  ### Content guidelines
+  ### Guidelines
 
 
   Include character count restrictions/recommendations, casing guidelines, voice, etc. No character limit. Paragraph content is optional.
@@ -152,7 +152,7 @@ use_cases: >-
   ### Behavior
 
 
-  Responsive guidelines.   
+  Responsive guidelines.
 
 
   | Above 600 px                                                         | Below 601 px                                                 |

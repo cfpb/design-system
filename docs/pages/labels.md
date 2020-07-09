@@ -65,7 +65,7 @@ variation_groups:
           * Positioned above a group of input fields, left aligned
     variation_group_name: Types
 use_cases: ""
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: ""
 research: ""

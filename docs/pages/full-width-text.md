@@ -109,7 +109,7 @@ variation_groups:
           pages](https://cfpb.github.io/design-system/templates/document-detail-pages)
         variation_name: Inset content
 use_cases: ''
-content_guidelines: >-
+guidelines: >-
   Content and image elements that are full width at desktop size remain full
   width across all breakpoints. Heading, link, and buttons all follow responsive
   patterns.

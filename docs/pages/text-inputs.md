@@ -9,7 +9,7 @@ variation_groups:
   - variation_group_name: Standard text inputs
     variations:
       - variation_code_snippet: >
-          <!--States are shown for demonstration purposes only--> 
+          <!--States are shown for demonstration purposes only-->
 
           <label class="a-label a-label__heading" for="textinput-example-default">
 
@@ -64,7 +64,7 @@ variation_groups:
                  disabled>
         variation_specs: |-
           #### Default
-          - Border: 1 px, Gray 60 (#919395) 
+          - Border: 1 px, Gray 60 (#919395)
           - Height: 35 px
           - Padding: 7px
           - Avenir Next Regular, 16px, Gray (#5a5d61)
@@ -78,7 +78,7 @@ variation_groups:
           - Outline: Dotted 1px, Pacific (#0072ce)
           - Outline offset: 1px
 
-          #### Disabled 
+          #### Disabled
           - Background: Gray 10 (#e7e8e9)
         variation_name: Single-line text inputs
       - variation_name: Multi-line textarea inputs
@@ -167,7 +167,7 @@ variation_groups:
               </div>
           </div>
 use_cases: ""
-content_guidelines: >-
+guidelines: >-
   Choose the appropriate width for text input fields so they match the kind of
   information requested. This makes it easier for users to quickly grasp what’s
   being asked.

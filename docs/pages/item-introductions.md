@@ -17,7 +17,7 @@ variation_groups:
           cases. The item introduction may also include author names, date,
           subheading paragraph, and/or social sharing icons. For reference, see
           this [example of a blog post using the item
-          introduction](https://www.consumerfinance.gov/about-us/blog/innovation-spotlight-providing-adverse-action-notices-when-using-ai-ml-models/). 
+          introduction](https://www.consumerfinance.gov/about-us/blog/innovation-spotlight-providing-adverse-action-notices-when-using-ai-ml-models/).
 
 
           Layout as seen on a Learn page template:
@@ -49,7 +49,7 @@ use_cases: >-
 
 
   * When creating general content pages, even if the content is detailed or lengthy.
-content_guidelines: >-
+guidelines: >-
   Category should always be selected if it is a page type that is categorized
   (for example, enforcement actions do not have a category).
 

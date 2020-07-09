@@ -68,7 +68,7 @@ variation_groups:
           - Font-size: 14px
 
 
-          Border 
+          Border
 
           - Bottom: 1px, Gray-50 #BABBBD on each row, including header
 
@@ -83,22 +83,22 @@ variation_groups:
 
           - Font-size: 16px
 
-          - Padding: 10px 
+          - Padding: 10px
         variation_implementation: ""
   - variation_group_name: Responsive tables
     variation_group_description: >-
       Responsive tables fall into two main types: stacked, which stacks
       information vertically on smaller screens, and scrolling, which ensures
       that all the information can be accessed in its original tabular
-      structure, even on a smaller screen. 
+      structure, even on a smaller screen.
 
 
-      Note that tables are **not** responsive unless you add one of the small screen classes detailed below. Also note that the `data-label` attribute must be used to label each cell in a `table` for small screen responsive views. 
+      Note that tables are **not** responsive unless you add one of the small screen classes detailed below. Also note that the `data-label` attribute must be used to label each cell in a `table` for small screen responsive views.
     variations:
       - variation_name: Responsive stacked table
         variation_description: >
           To stack table information on smaller screens and make the information
-          legible, use the `.o-table__stack-on-small` class. 
+          legible, use the `.o-table__stack-on-small` class.
         variation_code_snippet: |-
           <table class="o-table o-table__stack-on-small">
               <thead>
@@ -132,9 +132,9 @@ variation_groups:
               </tbody>
           </table>
         variation_specs: |-
-          #### Default table (small screens) 
+          #### Default table (small screens)
 
-          Border 
+          Border
           - Bottom: 1px, Gray-50 #BABBBD
 
           Cells
@@ -155,9 +155,9 @@ variation_groups:
           rows.
 
 
-          This is useful when data is read across rows, instead of down columns. For instance, contact information is comprised of a name, phone number, and email address. An event is made up of the name of the event, time, and location. You need all three pieces of data to create an understanding of the thing being shown, and the first column of data is the key to that understanding. 
-           
-          At the small screen breakpoint, the first column (in the example shown below, employee names) become headers, and the remaining data points in the same row (phone number, email address) are stacked below.  
+          This is useful when data is read across rows, instead of down columns. For instance, contact information is comprised of a name, phone number, and email address. An event is made up of the name of the event, time, and location. You need all three pieces of data to create an understanding of the thing being shown, and the first column of data is the key to that understanding.
+
+          At the small screen breakpoint, the first column (in the example shown below, employee names) become headers, and the remaining data points in the same row (phone number, email address) are stacked below.
 
 
           The `.o-table__entry-header-on-small` class in addition to `.o-table__stack-on-small` class changes the first column to be styled as an entry header. This style requires both classes be added.
@@ -206,7 +206,7 @@ variation_groups:
           Use a table with horizontal scroll when the data you’re presenting has
           more columns than will fit comfortably on the screen, and you want to
           ensure all information can be accessed in its original tabular
-          structure, even on smaller screens. 
+          structure, even on smaller screens.
 
 
           The `.o-table-wrapper__scrolling` class must be added to the parent element of the `table` (by adding a wrapping `div`, in most cases). The `table` element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the o-table__striped class, below).
@@ -555,7 +555,7 @@ variation_groups:
           * Please note the importance of defining a `thead` and `tbody` to preserve the table’s header through sorting operations.
       - variation_name: Filtering tables
         variation_code_snippet: >-
-          <!--Code from Design Manual 
+          <!--Code from Design Manual
 
           <div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true">
               <button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false">
@@ -644,7 +644,7 @@ variation_groups:
 
           ![image showing a table with pagination](/design-system/images/uploads/table_pagination.png)
         variation_code_snippet: >-
-          <!--Code from Design Manual 
+          <!--Code from Design Manual
 
           <table class="o-table o-table__stack-on-small" data-bound="true">
               <thead>
@@ -796,7 +796,7 @@ use_cases: >-
   * Individual values are being presented or compared
 
   * Values across columns or rows require different units of measurement
-content_guidelines: >-
+guidelines: >-
   As a rule, design tables so that they are easy to read. Label columns
   precisely and include units of measurement where necessary. Organize the data
   so that the underlying meaning is quickly apparent.
@@ -822,9 +822,9 @@ content_guidelines: >-
 
   If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.
 behavior: >
-  ### Sortable tables 
+  ### Sortable tables
 
-  At large screen sizes,  
+  At large screen sizes,
 
 
   * The currently sorted column is marked with an up or down triangle for ascending and descending sorts, respectively
@@ -836,7 +836,7 @@ behavior: >
   * Columns that cannot sort show nothing on hover
 
 
-  If sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked. 
+  If sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked.
 accessibility: Remember to always use headers (that is, `<th>` elements) for all
   data tables to make tabular data accessible.
 research: ""

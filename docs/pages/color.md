@@ -1204,7 +1204,7 @@ use_cases: >-
 
 
   </div>
-content_guidelines: ""
+guidelines: ""
 behavior: ""
 accessibility: >-
   Color should never be solely relied on to convey meaning in a visualization

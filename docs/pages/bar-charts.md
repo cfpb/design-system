@@ -38,7 +38,7 @@ variation_groups:
         variation_name: Stacked bar chart
     variation_group_name: Types
 use_cases: ""
-content_guidelines: >-
+guidelines: >-
   * If exact numbers are important, the bars should be labeled with the value.
 
   * When possible label directly rather than relying on color.

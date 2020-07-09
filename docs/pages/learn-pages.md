@@ -15,9 +15,9 @@ variation_groups:
     variations:
       - variation_code_snippet: ""
         variation_description: >-
-          | Learn page wireframe | Example | 
+          | Learn page wireframe | Example |
 
-          | -- | -- | 
+          | -- | -- |
 
           | ![Learn page example](/design-system/images/uploads/learn_example.jpg) | Example: |
         variation_name: ""
@@ -38,7 +38,7 @@ use_cases: >
   * When page content covers a variety of related topics or is focused on directing users to navigate to other locations on the site or the internet.
 
   * When the primary goal of the page is to encourage users to download a resource or understand the context around a document, and the page is a child of a filterable list of items, use the [document detail page](https://cfpb.github.io/design-system/pages/document-detail-pages) instead.
-content_guidelines: >
+guidelines: >
   Users will likely be spending more time on these page types than others since
   they will hold more content. Consider ways to visually break up the content to
   organize it and make it easier for users to skim to find the specific content
@@ -65,7 +65,7 @@ content_guidelines: >
 
   * Must contain at least 1 pattern.
 
-  * Permissible patterns include full width body text, [tables](https://cfpb.github.io/design-system/components/tables), [expandables](https://cfpb.github.io/design-system/components/expandables), 25/75 image and text info unit groups, [wells](https://cfpb.github.io/design-system/patterns/wells).  
+  * Permissible patterns include full width body text, [tables](https://cfpb.github.io/design-system/components/tables), [expandables](https://cfpb.github.io/design-system/components/expandables), 25/75 image and text info unit groups, [wells](https://cfpb.github.io/design-system/patterns/wells).
 
 
   ##### Area 3: Sidebar
@@ -79,20 +79,20 @@ behavior: >-
   area.
 
 
-  | Above 900 px | Below 901 px | 
+  | Above 900 px | Below 901 px |
 
-  | -- | -- | 
+  | -- | -- |
 
-  | ![Breakpoints 901+](/design-system/images/uploads/learn_behavior_desktop.jpg) | ![Breakpoints 90o and less](/design-system/images/uploads/learn_behavior_mobile.jpg) | 
+  | ![Breakpoints 901+](/design-system/images/uploads/learn_behavior_desktop.jpg) | ![Breakpoints 90o and less](/design-system/images/uploads/learn_behavior_mobile.jpg) |
 related_items: >
   Pages
 
-  * [Document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages) 
+  * [Document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
 
 
   Page introductions
 
-  * [Text introduction](/design-system/patterns/text-introductions) 
+  * [Text introduction](/design-system/patterns/text-introductions)
 
   * [Item introduction](https://cfpb.github.io/design-system/patterns/item-introductions)
 
@@ -107,7 +107,7 @@ related_items: >
 
   * [Wells](/design-system/patterns/wells)
 
-  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms) 
+  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
 last_updated: 2020-01-13T23:26:34.507Z
 secondary_section: Web templates
 ---

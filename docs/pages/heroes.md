@@ -132,11 +132,11 @@ variation_groups:
 
           | Text alignment | Vertically centered                | Vertically centered                      | \-                                        |
 
-          | Height         | 285px (fixed)                      | Module height is flexible to text height | Module height is flexible to text height |  
+          | Height         | 285px (fixed)                      | Module height is flexible to text height | Module height is flexible to text height |
 
           | Image | ![hero desktop style](/design-system/images/uploads/hero_style_desktop.png) | ![hero tablet style](/design-system/images/uploads/hero_style_tablet.png) | ![hero mobile style](/design-system/images/uploads/hero_style_mobile.png) |
         variation_implementation: >+
-          #### Bleeding illustrations 
+          #### Bleeding illustrations
 
           When using an illustration that bleeds top to bottom at larger screen sizes, add the `__bleeding` modifier to the hero and add an additional `m-hero_bleeding-image` as a sibling to `m-hero_image`.
 
@@ -321,7 +321,7 @@ use_cases: >-
   ##### When other options are better
 
   * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
-content_guidelines: >-
+guidelines: >-
   Hero content should orient the user and communicate the primary goal of the
   page. Copy should be succinct and engaging, reflecting the voice and tone of
   the CFPB.
@@ -368,7 +368,7 @@ content_guidelines: >-
   * After two-line heading: Between 108 and 124 characters (two lines at largest breakpoint)
 behavior: >-
   For style at different breakpoints, see [specs for standard
-  heroes](#standard-heroes). 
+  heroes](#standard-heroes).
 
 
   | Above 600 px | Below 601 px |
@@ -388,7 +388,7 @@ related_items: >-
 
   - [Sublanding pages](https://cfpb.github.io/design-system/pages/sublanding-pages)
 
-  - [Text introductions](https://cfpb.github.io/design-system/patterns/text-introductions) 
+  - [Text introductions](https://cfpb.github.io/design-system/patterns/text-introductions)
 
   - [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
 last_updated: 2020-01-28T15:55:47.394Z

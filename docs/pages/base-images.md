@@ -19,7 +19,7 @@ variation_groups:
           bottom inline spacing from `img` elements within.
         variation_name: Figure
 use_cases: ''
-content_guidelines: ''
+guidelines: ''
 behavior: ''
 accessibility: ''
 research: ''

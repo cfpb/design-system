@@ -26,7 +26,7 @@ variation_groups:
                         m-pagination_btn-next"
                 href="?page=23#pagination_content">Older
                   <span class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg %}</span>
-                
+
               </a>
 
               <form class="m-pagination_form"
@@ -66,25 +66,25 @@ variation_groups:
           pagination)"
       - variation_code_snippet: >-
           <nav class="m-pagination" role="navigation"
-          aria-label="Pagination">    
+          aria-label="Pagination">
 
-          <a class="a-btn  a-btn__disabled m-pagination_btn-prev">        
+          <a class="a-btn  a-btn__disabled m-pagination_btn-prev">
 
-          <span class="a-btn_icon a-btn_icon__on-left">{% include icons/left.svg %}</span>        Newer </a>    
-
-
-          <a class="a-btn m-pagination_btn-next" href="?page=2#pagination_content">        Older        
-
-          <span class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg %}</span>    
-
-          </a>    
+          <span class="a-btn_icon a-btn_icon__on-left">{% include icons/left.svg %}</span>        Newer </a>
 
 
-          <form class="m-pagination_form" action="#pagination_content">        
+          <a class="a-btn m-pagination_btn-next" href="?page=2#pagination_content">        Older
 
-          <label class="m-pagination_label" for="m-pagination_current-page">  Page            
+          <span class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg %}</span>
 
-          <span class="u-visually-hidden">                number 1 out </span>            
+          </a>
+
+
+          <form class="m-pagination_form" action="#pagination_content">
+
+          <label class="m-pagination_label" for="m-pagination_current-page">  Page
+
+          <span class="u-visually-hidden">                number 1 out </span>
 
           <input class="m-pagination_current-page" id="m-pagination_current-page" name="page"                   type="number" min="1"                   max="149" pattern="[0-9]*"                   inputmode="numeric" value="1">            of 149        </label>        <button class="a-btn                       a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit"                type="submit">Go</button> </form>
 
@@ -100,7 +100,7 @@ variation_groups:
       users to navigate to specific pages by number. When appropriate, the
       buttons may be labeled “Previous” and “Next”.
 use_cases: ""
-content_guidelines: Tables with over 20 rows can be paired with pagination.
+guidelines: Tables with over 20 rows can be paired with pagination.
 behavior: >+
   `@bp-xs-max`: On small screens, the buttons display next to each other,
   stacked on top of the form

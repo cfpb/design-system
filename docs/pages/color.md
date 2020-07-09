@@ -1073,9 +1073,9 @@ variation_groups:
 
           <td>Emphasis</>
                   <td>Mid Dark Green</td>
-                  <td>#20aa3f</td>
-                  <td>32, 170, 63</td>
-                  <td>80, 0, 100, 0</td>
+                  <td>#1fa040</td>
+                  <td>31, 160, 64</td>
+                  <td>80, 0, 100, 8</td>
               </tr>
               <tr>
                   <td class="swatch_field swatch_field__gray-20"></td>
@@ -1117,9 +1117,9 @@ variation_groups:
             <tr>
                 <td class="swatch_field swatch_field__dark-green"></td>
                 <td>Mid Dark Green</td>
-                <td>#1e9642</td>
-                <td>30, 150, 66</td>
-                <td>80, 0, 100, 17</td>
+                <td>#1fa040</td>
+                <td>31, 160, 64</td>
+                <td>80, 0, 100, 8</td>
             </tr>
 
             <tr>
@@ -1157,9 +1157,9 @@ variation_groups:
             <tr>
                 <td class="swatch_field swatch_field__navy-60"></td>
                 <td>Navy 50</td>
-                <td>#889cc0</td>
-                <td>136, 156, 192</td>
-                <td>36, 21, 0, 17</td>
+                <td>#9daecc</td>
+                <td>157, 174, 204</td>
+                <td>29, 17, 0, 12</td>
             </tr>
 
             <tr>
@@ -1186,9 +1186,9 @@ variation_groups:
             <tbody><tr>
                 <td class="swatch_field swatch_field__gold-60"></td>
                 <td>Gold 70</td>
-                <td>#ffce8d</td>
-                <td>255, 206, 141</td>
-                <td>0, 21, 49, 0</td>
+                <td>#ffc372</td>
+                <td>255, 195, 114</td>
+                <td>0, 27, 62, 0</td>
             </tr>
 
             <tr>
@@ -1218,9 +1218,9 @@ variation_groups:
             <tr>
                 <td class="swatch_field swatch_field__purple-60"></td>
                 <td>Purple 50</td>
-                <td>#d486b2</td>
-                <td>212, 134, 178</td>
-                <td>14, 58, 8, 0</td>
+                <td>#dc9cbf</td>
+                <td>220, 156, 191</td>
+                <td>12, 47, 7, 0</td>
             </tr>
 
             <tr>

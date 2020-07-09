@@ -1101,8 +1101,6 @@ variation_groups:
                   </figure>
                   <figure class="swatch swatch__primary">
 
-          <br>
-
           <h4>No data</h4>
                       <div class="swatch_field swatch_field__gray-20"></div>
                       <figcaption class="swatch_label">
@@ -1204,7 +1202,7 @@ use_cases: >-
 
 
   </div>
-guidelines: ""
+content_guidelines: ""
 behavior: ""
 accessibility: >-
   Color should never be solely relied on to convey meaning in a visualization

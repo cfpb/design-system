@@ -3,23 +3,36 @@ title: Welcome to the CFPB Design System
 layout: variation
 collection_name: special-pages
 is_homepage: true
-description: >-
-  <div class="content-67 content-last" markdown="1">
+description: >
+  <div class="content-75 content-last" markdown="1">
+
 
   ### The Design System is an open-source resource for teams at the Consumer Financial Protection Bureau (CFPB). It's intended to help teams produce consistent, effective, and accessible products for the American public.
+
+
+  </div>
 
 
   ## Start with our principles
 
 
+  <div class="content-75 content-last" markdown="1">
+
+
   Our [general principles](https://cfpb.github.io/design-system/general-principles) form the strategic underpinnings for the CFPB’s design and development standards. Our [accessibility principles](https://cfpb.github.io/design-system/accessibility) lay the foundation for ensuring that our web content is available for all users. 
+
 
   </div>
 
 
+  <br>
+
+
   ## Browse the Design System
 
+
   <div class="content-33 content-last" markdown="1">
+
 
   ### Foundation
 
@@ -34,6 +47,7 @@ description: >-
 
   <div class="content-33 content-last" markdown="1">
 
+
   ### Components
 
   Components contain the key building blocks of the design system that, when combined, can be used to create a website. Examples of components include buttons, text inputs, tables, and alerts. 
@@ -46,6 +60,7 @@ description: >-
 
 
   <div class="content-33 content-last" markdown="1">
+
 
   ### Patterns
 
@@ -60,6 +75,7 @@ description: >-
 
   <div class="content-33 content-last" markdown="1">
 
+
   ### Pages
 
   Find out more about the common page types that we use within our content management system, which are documented for easy reference. 
@@ -73,6 +89,7 @@ description: >-
 
   <div class="content-33 content-last" markdown="1">
 
+
   ### Development
 
   The development section includes utilities, such as variables, helper classes, and mixins, and layout options, such as blocks. 
@@ -85,6 +102,7 @@ description: >-
 
 
   <div class="content-33 content-last" markdown="1">
+
 
   ### Guidelines
 
@@ -137,6 +155,10 @@ description: >-
 
   ## Contribute to the Design System
 
+
+  <div class="content-75 content-last" markdown="1">
+
+
   We strongly encourage you to participate in the growth and maintenance of the Design System. To make contribution easier, the Design System is built on a tool called Netlify CMS, which allows for editing of pages in a web browser, without needing to use git or other command-line tools. 
 
   <br>
@@ -144,10 +166,17 @@ description: >-
   [View instructions for contributing to the Design System](https://cfpb.github.io/design-system/updating-this-website/).
 
 
+  </div>
+
+
+
   <br>
 
 
   <hr>
+
+
+  <div class="content-75 content-last" markdown="1">
 
 
   ##### About the CFPB Design System
@@ -160,5 +189,9 @@ description: >-
 
   ##### License
 
+
   All content has been released as open source under the CC0 1.0 Universal Public Domain Dedication, and we’d love for other agencies, developers, or groups to adapt it for their own use.
+
+
+  </div>
 ---

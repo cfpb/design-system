@@ -75,8 +75,7 @@ first-level:
               - page: Wells
           - heading: Main content
             nav-items:
-              - page: "Info Unit Groups: Image and text"
-              - page: Link blobs
+              - page: Info Unit Groups
   - heading: Pages
     nav-items:
       - page: Landing pages

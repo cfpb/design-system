@@ -1058,7 +1058,7 @@ variation_groups:
 
           </thead>
 
-          \    <tbody>
+          <tbody>
 
           <tr>
                   <td class="swatch_field swatch_field__green-60"></td>
@@ -1101,10 +1101,9 @@ variation_groups:
         variation_description: |-
           ![](/design-system/images/uploads/data_viz_cool.png)
 
-           
             <table class="color-table">
                 <thead>
-                    <tr><th></th>
+                    <tr>
                     <th>Name</th>
                     <th>Hex</th>
                     <th>RGB</th>
@@ -1180,17 +1179,20 @@ variation_groups:
         variation_description: |-
           ![](/design-system/images/uploads/data_viz_warm.png)
 
-
             <table class="color-table">
                 <thead>
-                    <tr><th></th>
+                    <tr>
                     <th>Name</th>
                     <th>Hex</th>
                     <th>RGB</th>
                     <th>CMYK</th>
-                </tr></thead>
+                </tr>
 
-            <tbody><tr>
+          </thead>
+
+            <tbody>
+
+          <tr>
                 <td class="swatch_field swatch_field__gold-60"></td>
                 <td>Gold 70</td>
                 <td>#ffc372</td>

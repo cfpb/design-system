@@ -433,9 +433,6 @@ guidelines: >-
   #### Desktop scale
 
 
-  image
-
-
   * Lockup: small execution
 
   * Height: 50px

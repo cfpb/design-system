@@ -13,43 +13,33 @@ variation_groups:
   - variation_group_name: Typefaces
     variations:
       - variation_code_snippet: >+
-          <h3 style="font-family:'AvenirNextLTW01-Medium';font-weight:
-          600;letter-spacing: 1px;">Avenir Next Demi Bold</h3>
+          <h3 style="font-weight: 600;letter-spacing: 1px;">Avenir Next Demi
+          Bold</h3>
 
 
-          <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight: 600;letter-spacing: 1px;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+          <h4 style="font-weight: 600;letter-spacing: 1px;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
 
           abcdefghijklmnopqrstuvwxyz<br>
 
           0123456789</h4>
 
         variation_name: ""
-      - variation_code_snippet: >+
-          <h3 style="font-family:'AvenirNextLTW01-Medium';font-weight:
-          500;">Avenir Next Medium</h3>
+      - variation_code_snippet: |+
+          <h3 style="font-weight: 500;">Avenir Next Medium</h3>
 
-
-          <h4 style="font-family:'AvenirNextLTW01-Medium';font-weight: 500;">
-
+          <h4 style="font-weight: 500;">
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-
           abcdefghijklmnopqrstuvwxyz<br>
-
           0123456789</h4>
 
 
         variation_name: ""
-      - variation_code_snippet: >-
-          <h3 style="font-family:'AvenirNextLTW01-Regular';">Avenir Next
-          Regular</h3>
+      - variation_code_snippet: |-
+          <h3>Avenir Next Regular</h3>
 
-
-          <h4 style="font-family:'AvenirNextLTW01-Regular';">
-
+          <h4>
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-
           abcdefghijklmnopqrstuvwxyz<br>
-
           0123456789</h4>
         variation_name: ""
     variation_group_description: Avenir Next is the primary brand typeface and can

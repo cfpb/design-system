@@ -1049,6 +1049,8 @@ variation_groups:
               <thead>
                   <tr>
 
+          <th></th>
+
           <th>Purpose</th>
                   <th>Name</th>
                   <th>Hex</th>
@@ -1104,6 +1106,8 @@ variation_groups:
             <table class="color-table">
                 <thead>
                     <tr>
+
+          <th></th>
                     <th>Name</th>
                     <th>Hex</th>
                     <th>RGB</th>
@@ -1182,6 +1186,8 @@ variation_groups:
             <table class="color-table">
                 <thead>
                     <tr>
+
+          <th></th>
                     <th>Name</th>
                     <th>Hex</th>
                     <th>RGB</th>

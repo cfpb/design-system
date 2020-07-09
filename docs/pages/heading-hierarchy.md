@@ -166,20 +166,22 @@ variation_groups:
           </header>
     variation_group_description: The heading variations below have specific use cases.
 use_cases: ""
-guidelines: |-
+guidelines: >-
+  ### Content
+
+
   * Headings should be sentence case.
+
   * Do not include punctuation in headings.
+
   * Keep headings to one line on desktop when possible.
-behavior: >-
-  #### Spacing for web headings
 
-  - When a heading is followed by paragraph text, include 30px of space below Display and 15px below Headings 1–6.
 
-  - When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
+  ### Spacing
 
-  - For stacked headings, include 30 px of space after the primary heading.
 
-  - For multiple paragraphs within the same section set the space between paragraphs to 15px.
+  Refer to the [Guidelines section of the Fonts page](<https://cfpb.github.io/design-system/foundation/fonts#guidelines>) for information about heading spacing.
+behavior: ""
 accessibility: Since categories can be repetitive, we suggest placing a label
   with `.u-visually-hidden` prior to the headings with icons to add more context
   for screen readers.

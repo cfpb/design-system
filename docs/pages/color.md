@@ -1047,7 +1047,7 @@ variation_groups:
     variations:
       - variation_name: Data visualization main palette
         variation_description: |-
-          ![](/design-system/images/uploads/data_viz-01.png)
+          ![](/design-system/images/uploads/data_viz_main.png)
 
            <table class="color-table">
               <thead>
@@ -1095,7 +1095,9 @@ variation_groups:
 
           ![](/design-system/images/uploads/datavis_color_divergent.png)
       - variation_name: Cool palette
-        variation_description: |-2
+        variation_description: |-
+          ![](/design-system/images/uploads/data_viz_cool.png)
+
             </tbody></table>
             <table class="color-table">
                 <thead>
@@ -1172,7 +1174,9 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Warm palette
-        variation_description: |-2
+        variation_description: |-
+          ![](/design-system/images/uploads/data_viz_warm.png)
+
             </tbody></table>
             <table class="color-table">
                 <thead>

@@ -39,10 +39,46 @@ nav ul {
     padding: 0;
 }
 
+
+// Default details element styles
+details summary:focus {
+    border: none;
+    outline: 1px dotted @pacific;
+    outline-offset: 2px;
+}
+
+details summary:hover {
+    cursor: pointer;
+}
+
+// Hide default open/close arrow.
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary {
+    position: relative;
+}
+
+details summary:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 10px;
+    display: block;
+    content: '';
+    .u-svg-inline-bg( 'down' );
+}
+
+details[open] summary:after {
+    .u-svg-inline-bg( 'up' );
+}
+
 // Set padding for main content blocks.
 .m-global-eyebrow .a-tagline,
 .site-header,
-.footer {
+.ds-footer {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 30px;
@@ -56,15 +92,62 @@ nav ul {
     }
 }
 
-// Tablet and mobile size.
-.respond-to-max( @bp-sm-max, {
+main {
+    max-width: 1170px;
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.ds-sidebar,
+.ds-content {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.ds-sidebar {
+    width: 250px;
+    padding-right: 30px;
+    border-right: 1px solid @gray-40;
+    padding-bottom: 30px;
+}
+
+.ds-content {
+    padding-left: 30px;
+}
+
+// Mobile size.
+.respond-to-max( @bp-xs-max, {
+
+    main {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .ds-sidebar,
+    .ds-content {
+        display: block;
+    }
+
+    .ds-content {
+        padding-left: 15px;
+    }
+
+    .ds-sidebar {
+        width: auto;
+        border-right: none;
+        padding-right: 0;
+    }
+
     .m-global-eyebrow,
-    .footer {
+    .ds-footer {
         padding: 0 15px;
     }
 } );
 
+
 // custom modules
+@import (less) "sidebar.less";
+@import (less) "footer.less";
 @import (less) "skip-nav.less";
 @import (less) "global-eyebrow.less";
 @import (less) "tagline.less";
@@ -72,8 +155,6 @@ nav ul {
 @import (less) "header.less";
 @import (less) "hero.less";
 @import (less) "main-content.less";
-@import (less) "footer.less";
-@import (less) "secondary-nav.less";
 @import (less) "code.less";
 @import (less) "grid-demo.less";
 @import (less) "netlify.less";

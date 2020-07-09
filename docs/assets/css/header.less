@@ -23,8 +23,8 @@
     vertical-align: middle;
 }
 
-// Tablet and mobile size.
-.respond-to-max( @bp-sm-max, {
+// Mobile size.
+.respond-to-max( @bp-xs-max, {
 
     .site-header {
         background-color: @gray-5;
@@ -68,8 +68,8 @@
     }
 } );
 
-// Desktop size.
-.respond-to-min( @bp-sm-max, {
+// Desktop and tablet size.
+.respond-to-min( @bp-sm-min, {
 
     #search-form {
         margin: 0;

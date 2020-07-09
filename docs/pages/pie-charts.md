@@ -19,8 +19,9 @@ variation_groups:
     variation_group_name: Examples
 use_cases: ""
 guidelines: |-
-  * The slices should add up to 100%.  *Use 5 or less slices.
-  *  Directly label all slices.
+  * The slices should add up to 100%.  
+  * Use 5 or less slices.
+  * Directly label all slices.
   * Use a white outline or stroke to create contrast between the slices.
 behavior: ""
 accessibility: ""

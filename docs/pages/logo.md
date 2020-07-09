@@ -622,4 +622,306 @@ variation_groups:
           </div><!-- /.content-67 -->
         variation_name: ""
     variation_group_name: Examples of misuse
+guidelines: >-
+  \## Clear space
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  There should always be ample space around the logo to ensure maximum impact and keep the mark from looking cluttered.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  #### Isolated logo clear space
+
+
+  <div class="content-50 content-first" markdown="1">
+
+
+  image
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  image
+
+
+  </div>
+
+
+  - - -
+
+
+  #### Vertical logo clear space
+
+
+  <div class="content-50 content-first" markdown="1">
+
+
+  image
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  image
+
+
+  </div>
+
+
+  - - -
+
+
+  #### Horizontal logo clear space
+
+
+  <div class="content-50 content-first" markdown="1">
+
+
+  image
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  </div>
+
+
+  </div><!-- /.content-67 -->
+
+
+  \## Web scale
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  The small execution logo should be used to optimize legibility of the logotype on desktop and mobile applications. These are our benchmark sizes for web, but variance may be used for specific circumstances or constraints.
+
+
+  </div><!-- /.content-33 -->
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  <div class="content-50 content-first" markdown="1">
+
+
+  #### Desktop scale
+
+
+  image
+
+
+  * Lockup: small execution
+
+  * Height: 50px
+
+  * Padding: 25px
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  #### Mobile scale
+
+
+  image
+
+
+  * Lockup: small execution
+
+  * Height: 40px
+
+  * Padding: 20px
+
+
+  </div>
+
+
+  </div><!-- /.content-67 -->
+
+
+
+
+  \## Print scale
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  The horizontal or vertical lockup should be used for most print applications. These are our benchmark sizes for 8.5 x 11” documents, including reports, brochures, powerpoints, and forms. For large-format print pieces, such as posters and banners, where the logo is used with a height greater than 1”, it should be used in increments of 1/2”.
+
+
+  </div><!-- /.content-33 -->
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  <div class="content-50 content-first" markdown="1">
+
+
+  #### 8.5 x 11” documents
+
+
+  image
+
+
+  * Lockup: horizontal
+
+  * Height: 0.5”
+
+  * Clear space: 0.25”
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  #### 8.5 x 11” documents
+
+
+  image
+
+
+
+
+  * Lockup: vertical
+
+  * Height: 0.77”
+
+  * Clear space: 0.25”
+
+
+  </div>
+
+
+  </div><!-- /.content-67 -->
+
+
+
+
+  \## Complex backgrounds
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  The logo should be shown on a white background for optimal appearance. When this is not possible, the logo must be contained in a white rectangle equal
+
+  to the required clear space.
+
+
+  </div><!-- /.content-33 -->
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  #### Color
+
+
+  image
+
+
+  #### Pattern
+
+
+  image
+
+
+  #### Photo
+
+
+  </div><!-- /.content-67 -->
+
+
+  Supporting beam pattern
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  #### Compositions
+
+
+  A beam pattern is a graphic background element that can be paired with the CFPB logo. A beam pattern provides grounding and an engaging graphic reference to the beam concept in our logo. 
+
+
+  Beam patterns are composed of overlapping beams that frame areas of white space used for titles, text, and other graphic elements. Beams always point horizontally, not vertically. 
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  image
+
+
+  Solid green beam bleeds off the top of the layout. Beams alternate direction to create layered beam shapes.
+
+
+  Layered beams anchor to the bottom, leaving plenty of white space above for type. This works especially well for horizontal layouts.
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  #### **Base shapes**
+
+
+  Beam patterns are created using trapezoids and parallelograms each at a 9° angle.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  image
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  #### **Color**
+
+
+  Beam patterns include all three CFPB Green tones. Using transparency increases the strength of the beam metaphor. Transparency should be achieved through opacity, not blending modes like multiply / darken / etc.
+
+
+  </div>
 ---

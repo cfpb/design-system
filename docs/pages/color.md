@@ -1,11 +1,7 @@
 ---
-title: Color
 layout: variation
 section: foundation
 status: Released
-description: A minimal palette, clear hierarchy, and ample whitespace ensure a
-  voice of authority and expertise in communication. The following sets of
-  colors maintain CFPB brand cohesion and create accessible graphics.
 variation_groups:
   - variation_group_name: Palettes
     variations:
@@ -1051,18 +1047,25 @@ variation_groups:
 
            <table class="color-table">
               <thead>
-                  <tr><th></th>
+                  <tr>
 
-          <th>Purpose</>
+          <th></th>
+
+          <th>Purpose</th>
                   <th>Name</th>
                   <th>Hex</th>
                   <th>RGB</th>
                   <th>CMYK</th>
-              </tr></thead>
-              <tbody><tr>
+              </tr>
+
+          </thead>
+
+          <tbody>
+
+          <tr>
                   <td class="swatch_field swatch_field__green-60"></td>
 
-          <td>Main color</>
+          <td>Main color</td>
                   <td>Green 60</td>
                   <td>#addc91</td>
                   <td>173, 220, 145</td>
@@ -1071,7 +1074,7 @@ variation_groups:
               <tr>
                   <td class="swatch_field swatch_field__dark-green"></td>
 
-          <td>Emphasis</>
+          <td>Emphasis</td>
                   <td>Mid Dark Green</td>
                   <td>#1fa040</td>
                   <td>31, 160, 64</td>
@@ -1080,13 +1083,15 @@ variation_groups:
               <tr>
                   <td class="swatch_field swatch_field__gray-20"></td>
 
-          <td>No data</>
+          <td>No data</td>
                   <td>Gray 20</td>
                   <td>#d2d3d5</td>
                   <td>210, 211, 213</td>
                   <td>0, 0, 0, 20</td>
               </tr>
-          </tbody></table>
+          </tbody>
+
+          </table>
       - variation_name: Positive-negative palette
         variation_description: |-
           ![](/design-system/images/uploads/datavis_color_pos-neg.png)
@@ -1098,10 +1103,11 @@ variation_groups:
         variation_description: |-
           ![](/design-system/images/uploads/data_viz_cool.png)
 
-            </tbody></table>
             <table class="color-table">
                 <thead>
-                    <tr><th></th>
+                    <tr>
+
+          <th></th>
                     <th>Name</th>
                     <th>Hex</th>
                     <th>RGB</th>
@@ -1177,17 +1183,22 @@ variation_groups:
         variation_description: |-
           ![](/design-system/images/uploads/data_viz_warm.png)
 
-            </tbody></table>
             <table class="color-table">
                 <thead>
-                    <tr><th></th>
+                    <tr>
+
+          <th></th>
                     <th>Name</th>
                     <th>Hex</th>
                     <th>RGB</th>
                     <th>CMYK</th>
-                </tr></thead>
+                </tr>
 
-            <tbody><tr>
+          </thead>
+
+            <tbody>
+
+          <tr>
                 <td class="swatch_field swatch_field__gold-60"></td>
                 <td>Gold 70</td>
                 <td>#ffc372</td>
@@ -1252,6 +1263,11 @@ variation_groups:
             </tr>
 
             </tbody></table>
+content_guidelines: ""
+title: Color
+description: A minimal palette, clear hierarchy, and ample whitespace ensure a
+  voice of authority and expertise in communication. The following sets of
+  colors maintain CFPB brand cohesion and create accessible graphics.
 use_cases: >-
   When used properly, color can help clarify relationships between data, provide
   emphasis for certain data points, and maintain a consistent brand voice. When
@@ -1320,7 +1336,6 @@ use_cases: >-
 
 
   </div>
-content_guidelines: ""
 behavior: ""
 accessibility: >-
   Color should never be solely relied on to convey meaning in a visualization

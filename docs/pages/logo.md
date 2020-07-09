@@ -433,6 +433,9 @@ guidelines: >-
   #### Desktop scale
 
 
+  <!--add image-->
+
+
   * Lockup: small execution
 
   * Height: 50px
@@ -449,7 +452,7 @@ guidelines: >-
   #### Mobile scale
 
 
-  image
+  <!--add image-->
 
 
   * Lockup: small execution
@@ -486,7 +489,7 @@ guidelines: >-
   #### 8.5 x 11” documents
 
 
-  image
+  <!--add image-->
 
 
   * Lockup: horizontal
@@ -505,7 +508,7 @@ guidelines: >-
   #### 8.5 x 11” documents
 
 
-  image
+  <!--add image-->
 
 
   * Lockup: vertical
@@ -541,16 +544,19 @@ guidelines: >-
   #### Color
 
 
-  image
+  <!--add image-->
 
 
   #### Pattern
 
 
-  image
+  <!--add image-->
 
 
   #### Photo
+
+
+  <!--add image-->
 
 
   </div>
@@ -577,13 +583,13 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  image
+  <!--add image-->
 
 
   Solid green beam bleeds off the top of the layout. Beams alternate direction to create layered beam shapes.
 
 
-  image
+  <!--add image-->
 
 
   Layered beams anchor to the bottom, leaving plenty of white space above for type. This works especially well for horizontal layouts.
@@ -607,7 +613,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  image
+  <!--add image-->
 
 
   </div>

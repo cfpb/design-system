@@ -22,13 +22,9 @@ variation_groups:
 
 
           <button class="a-btn active" title="Active state">Active state</button>
-        variation_description: >-
-          Use primary buttons for actions that go to the next step. Avoid using
-          multiple primary buttons on a single page; there can be multiple
-          secondary buttons per page.
-
-
-          The Primary button is an atom in our atomic design standards. You can apply the `a-btn` class to a link, button and submit input field to receive the atomic button styles.
+        variation_description: Use primary buttons for actions that go to the next step.
+          Avoid using multiple primary buttons on a single page; there can be
+          multiple secondary buttons per page.
         variation_jinja_code_snippet: |-
           {% macro render(value) -%}
 
@@ -44,6 +40,9 @@ variation_groups:
           link
 
           when possible.
+
+
+          Apply the `a-btn` class to a link, button and submit input field to receive the atomic button styles. For more information, see [cf.gov refresh documentation on atomic styles](https://cfpb.github.io/cfgov-refresh/atomic-structure/).
         variation_specs: |-
           Default
           - Avenir Next Medium, 16px, (#ffffff)

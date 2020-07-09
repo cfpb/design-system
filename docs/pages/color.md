@@ -1072,7 +1072,7 @@ variation_groups:
                   <td>32, 0, 52, 0</td>
               </tr>
               <tr>
-                  <td class="swatch_field swatch_field__dark-green"></td>
+                  <td class="swatch_field swatch_field__mid-dark-green"></td>
 
           <td>Emphasis</td>
                   <td>Mid Dark Green</td>
@@ -1123,7 +1123,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__dark-green"></td>
+                <td class="swatch_field swatch_field__mid-dark-green"></td>
                 <td>Mid Dark Green</td>
                 <td>#1fa040</td>
                 <td>31, 160, 64</td>
@@ -1163,7 +1163,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__navy-60"></td>
+                <td class="swatch_field swatch_field__navy-50"></td>
                 <td>Navy 50</td>
                 <td>#9daecc</td>
                 <td>157, 174, 204</td>
@@ -1199,7 +1199,7 @@ variation_groups:
             <tbody>
 
           <tr>
-                <td class="swatch_field swatch_field__gold-60"></td>
+                <td class="swatch_field swatch_field__gold-70"></td>
                 <td>Gold 70</td>
                 <td>#ffc372</td>
                 <td>255, 195, 114</td>
@@ -1231,7 +1231,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__purple-60"></td>
+                <td class="swatch_field swatch_field__purple-50"></td>
                 <td>Purple 50</td>
                 <td>#dc9cbf</td>
                 <td>220, 156, 191</td>

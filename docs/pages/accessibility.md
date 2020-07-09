@@ -2,8 +2,9 @@
 title: Accessibility
 layout: variation
 section: null
+secondary_section: null
 description: >-
-  
+
   The following four principles, as defined by the W3C®, lay the foundation for ensuring that web content is available for all users, including users with disabilities and users on non-desktop devices. They also enable future compatibility in the event that future devices are radically different from those in use today.
 
   - [Perceivable](#perceivable)
@@ -255,6 +256,7 @@ description: >-
   Note that this is specific to HTML and does not include CSS.
 use_cases: ""
 content_guidelines: ""
+behavior: ""
 accessibility: >-
   ## Testing accessibility issues
 
@@ -273,6 +275,4 @@ accessibility: >-
    - To enable VoiceOver, press _command + f5_.
    - With VoiceOver enabled, optionally enable the "rotor" by pressing _control +option+U_.
 last_updated: 2019-12-10T22:50:48.793Z
-behavior: ""
-secondary_section: Principles
 ---

@@ -10,13 +10,13 @@ description: Atomic Component is a micro framework for building Atomic Design
 use_cases: >-
   This framework is intended to be used in conjunction with adherence to Atomic
   Design principles. It helps provide a uniform way to build Atomic components
-  using HTML, CSS, and JavaScript.
+  using HTML, CSS, and JavaScript. 
 
 
-  An example use case in building a Molecule is as follows:
+  Atomic prefixing standards for atoms, molecules, and organisms are covered in greater detail in [cfgov-refresh documentation](https://cfpb.github.io/cfgov-refresh/atomic-structure/). 
 
 
-  Molecules are prefixed with “m-” in CSS, JavaScript, and HTML files.
+  An example use case in building a Molecule: molecules are prefixed with “m-” in CSS, JavaScript, and HTML files, as demonstrated below.
 
 
   #### HTML:

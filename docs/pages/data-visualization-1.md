@@ -329,11 +329,15 @@ variation_groups:
 
     variations:
       - variation_name: Color palettes and accessibility
-        variation_description: "Specific combinations of colors are used when creating
-          data visualizations in order to create accessible graphics while
-          maintaining brand cohesion. To see these color combinations and
-          related accessibility information, [visit the main color
-          page](././foundation/color). "
+        variation_description: >-
+          We use specific color combinations to create accessible, on-brand data
+          visualizations. [View our data visualization color
+          palettes](https://cfpb.github.io/design-system//foundation/color#data-visualization-palettes-1).
+
+
+          We also have a set of guidelines around the accessible use of color in both web and print. 
+
+          [View color accessibility guidelines ](https://cfpb.github.io/design-system//foundation/color#accessibility).
   - variation_group_name: Emphasis
     variation_group_description: >-
       Highlighting parts of your chart will help users quickly understand the

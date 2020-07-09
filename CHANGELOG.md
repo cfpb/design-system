@@ -1,4 +1,3 @@
-
 ## Unreleased (2020-04-10)
 
 #### :bug: Bug Fix
@@ -55,12 +54,6 @@
 
 #### Committers: 1
 - Ans ([@anselmbradford](https://github.com/anselmbradford))
-
-
-
-
-
-
 
 
 

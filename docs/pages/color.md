@@ -14,6 +14,7 @@ variation_groups:
           supporting role in basic branded pieces. Black is typically used for
           type and icons while grays are used for wells and accents, such as
           rules and borders.
+
             <div class="swatches-container__primary">
               <div class="swatches swatches__primary">
                   <figure class="swatch swatch__primary">
@@ -1045,7 +1046,85 @@ variation_groups:
   - variation_group_name: Data visualization color schemes
     variations:
       - variation_name: Data visualization main palette
-        variation_description: "![](/design-system/images/uploads/datavis_color_main.png)"
+        variation_description: |-
+          ![](/design-system/images/uploads/data_viz-01.png)
+
+          <div class="swatches-container__primary">
+              <div class="swatches swatches__primary">
+                  <figure class="swatch swatch__primary">
+
+          <h4>Main color</h4>
+                      <div class="swatch_field swatch_field__green-60"></div>
+                      <figcaption class="swatch_label">
+                          <p class="swatch_head"><strong>Green 60</strong></p>
+                          <table class="swatch_table">
+                              <tbody>
+                                  <tr>
+                                      <th>Hex</th>
+                                      <td>#addc91</td>
+                                  </tr>
+                                  <tr>
+                                      <th>RGB</th>
+                                      <td>173, 220, 145</td>
+                                  </tr>
+                                  <tr>
+                                      <th>CMYK</th>
+                                      <td>32, 0, 52, 0</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </figcaption>
+                  </figure>
+                  <figure class="swatch swatch__primary">
+
+          <h4>Emphasis</h4>
+                      <div class="swatch_field swatch_field__dark-green"></div>
+                      <figcaption class="swatch_label">
+                          <p class="swatch_head"><strong>Dark Green</strong></p>
+                          <table class="swatch_table">
+                              <tbody>
+                                  <tr>
+                                      <th>Hex</th>
+                                      <td>#1e9642</td>
+                                  </tr>
+                                  <tr>
+                                      <th>RGB</th>
+                                      <td>30, 150, 66</td>
+                                  </tr>
+                                  <tr>
+                                      <th>CMYK</th>
+                                      <td>80, 0, 100, 17</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </figcaption>
+                  </figure>
+                  <figure class="swatch swatch__primary">
+
+          <br>
+
+          <h4>No data</h4>
+                      <div class="swatch_field swatch_field__gray-20"></div>
+                      <figcaption class="swatch_label">
+                          <p class="swatch_head"><strong>Gray 20</strong></p>
+                          <table class="swatch_table">
+                              <tbody>
+                                  <tr>
+                                      <th>Hex</th>
+                                      <td>#d2d3d5</td>
+                                  </tr>
+                                  <tr>
+                                      <th>RGB</th>
+                                      <td>210, 211, 213</td>
+                                  </tr>
+                                  <tr>
+                                      <th>CMYK</th>
+                                      <td>0, 0, 0, 20</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </figcaption>
+                  </figure>
       - variation_name: Positive-negative palette
         variation_description: |-
           ![](/design-system/images/uploads/datavis_color_pos-neg.png)

@@ -1,5 +1,4 @@
 const autoprefixer = require( 'autoprefixer' );
-const BROWSER_LIST = require( '../../config/browser-list-config' );
 const gulp = require( 'gulp' );
 const gulpPostcss = require( 'gulp-postcss' );
 const gulpIgnore = require( 'gulp-ignore' );
@@ -25,9 +24,7 @@ function stylesComponents() {
       paths: [ 'node_modules/cfpb-*/src/' ]
     } ) )
     .pipe( gulpPostcss( [
-      autoprefixer( {
-        browsers: BROWSER_LIST.LAST_2_PLUS_IE_8_AND_UP
-      } )
+      autoprefixer()
     ] ) )
     .pipe( gulpRename( path => {
       path.dirname = path.dirname.replace( '/src', '' );

@@ -1043,88 +1043,50 @@ variation_groups:
 
             </tbody></table>
         variation_name: Tints
-  - variation_group_name: Data visualization color schemes
+  - variation_group_name: Data visualization palettes
     variations:
       - variation_name: Data visualization main palette
         variation_description: |-
-          ![](/design-system/images/uploads/data_viz-01.png)
+          ![](/design-system/images/uploads/data_viz_main.png)
 
-          <div class="swatches-container__primary">
-              <div class="swatches swatches__primary">
-                  <figure class="swatch swatch__primary">
+           <table class="color-table">
+              <thead>
+                  <tr><th></th>
 
-          <h4>Main color</h4>
-                      <div class="swatch_field swatch_field__green-60"></div>
-                      <figcaption class="swatch_label">
-                          <p class="swatch_head"><strong>Green 60</strong></p>
-                          <table class="swatch_table">
-                              <tbody>
-                                  <tr>
-                                      <th>Hex</th>
-                                      <td>#addc91</td>
-                                  </tr>
-                                  <tr>
-                                      <th>RGB</th>
-                                      <td>173, 220, 145</td>
-                                  </tr>
-                                  <tr>
-                                      <th>CMYK</th>
-                                      <td>32, 0, 52, 0</td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </figcaption>
-                  </figure>
-                  <figure class="swatch swatch__primary">
+          <th>Purpose</>
+                  <th>Name</th>
+                  <th>Hex</th>
+                  <th>RGB</th>
+                  <th>CMYK</th>
+              </tr></thead>
+              <tbody><tr>
+                  <td class="swatch_field swatch_field__green-60"></td>
 
-          <h4>Emphasis</h4>
-                      <div class="swatch_field swatch_field__dark-green"></div>
-                      <figcaption class="swatch_label">
-                          <p class="swatch_head"><strong>Dark Green</strong></p>
-                          <table class="swatch_table">
-                              <tbody>
-                                  <tr>
-                                      <th>Hex</th>
-                                      <td>#1e9642</td>
-                                  </tr>
-                                  <tr>
-                                      <th>RGB</th>
-                                      <td>30, 150, 66</td>
-                                  </tr>
-                                  <tr>
-                                      <th>CMYK</th>
-                                      <td>80, 0, 100, 17</td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </figcaption>
-                  </figure>
-                  <figure class="swatch swatch__primary">
+          <td>Main color</>
+                  <td>Green 60</td>
+                  <td>#addc91</td>
+                  <td>173, 220, 145</td>
+                  <td>32, 0, 52, 0</td>
+              </tr>
+              <tr>
+                  <td class="swatch_field swatch_field__dark-green"></td>
 
-          <br>
+          <td>Emphasis</>
+                  <td>Mid Dark Green</td>
+                  <td>#1fa040</td>
+                  <td>31, 160, 64</td>
+                  <td>80, 0, 100, 8</td>
+              </tr>
+              <tr>
+                  <td class="swatch_field swatch_field__gray-20"></td>
 
-          <h4>No data</h4>
-                      <div class="swatch_field swatch_field__gray-20"></div>
-                      <figcaption class="swatch_label">
-                          <p class="swatch_head"><strong>Gray 20</strong></p>
-                          <table class="swatch_table">
-                              <tbody>
-                                  <tr>
-                                      <th>Hex</th>
-                                      <td>#d2d3d5</td>
-                                  </tr>
-                                  <tr>
-                                      <th>RGB</th>
-                                      <td>210, 211, 213</td>
-                                  </tr>
-                                  <tr>
-                                      <th>CMYK</th>
-                                      <td>0, 0, 0, 20</td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </figcaption>
-                  </figure>
+          <td>No data</>
+                  <td>Gray 20</td>
+                  <td>#d2d3d5</td>
+                  <td>210, 211, 213</td>
+                  <td>0, 0, 0, 20</td>
+              </tr>
+          </tbody></table>
       - variation_name: Positive-negative palette
         variation_description: |-
           ![](/design-system/images/uploads/datavis_color_pos-neg.png)
@@ -1133,9 +1095,163 @@ variation_groups:
 
           ![](/design-system/images/uploads/datavis_color_divergent.png)
       - variation_name: Cool palette
-        variation_description: "![](/design-system/images/uploads/datavis_color_cool.png)"
+        variation_description: |-
+          ![](/design-system/images/uploads/data_viz_cool.png)
+
+            </tbody></table>
+            <table class="color-table">
+                <thead>
+                    <tr><th></th>
+                    <th>Name</th>
+                    <th>Hex</th>
+                    <th>RGB</th>
+                    <th>CMYK</th>
+                </tr></thead>
+
+            <tbody><tr>
+                <td class="swatch_field swatch_field__green-60"></td>
+                <td>Green 60</td>
+                <td>#addc91</td>
+                <td>173, 220, 145</td>
+                <td>32, 0, 52, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__dark-green"></td>
+                <td>Mid Dark Green</td>
+                <td>#1fa040</td>
+                <td>31, 160, 64</td>
+                <td>80, 0, 100, 8</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__pacific-60"></td>
+                <td>Pacific 60</td>
+                <td>#7eb7e8</td>
+                <td>126, 183, 232</td>
+                <td>46, 16, 0, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__pacific"></td>
+                <td>Pacific</td>
+                <td>#0072ce</td>
+                <td>0, 114, 206</td>
+                <td>90, 48, 0, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__teal-60"></td>
+                <td>Teal 60</td>
+                <td>#89b6b5</td>
+                <td>137, 182, 181</td>
+                <td>36, 0, 13, 19</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__teal"></td>
+                <td>Teal</td>
+                <td>#257675</td>
+                <td>37, 118, 117</td>
+                <td>85, 0, 30, 44</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__navy-60"></td>
+                <td>Navy 50</td>
+                <td>#9daecc</td>
+                <td>157, 174, 204</td>
+                <td>29, 17, 0, 12</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__navy"></td>
+                <td>Navy</td>
+                <td>#254b87</td>
+                <td>37, 75, 135</td>
+                <td>82, 58, 0, 31</td>
+            </tr>
+
+            </tbody></table>
       - variation_name: Warm palette
-        variation_description: "![](/design-system/images/uploads/datavis_color_warm.png)"
+        variation_description: |-
+          ![](/design-system/images/uploads/data_viz_warm.png)
+
+            </tbody></table>
+            <table class="color-table">
+                <thead>
+                    <tr><th></th>
+                    <th>Name</th>
+                    <th>Hex</th>
+                    <th>RGB</th>
+                    <th>CMYK</th>
+                </tr></thead>
+
+            <tbody><tr>
+                <td class="swatch_field swatch_field__gold-60"></td>
+                <td>Gold 70</td>
+                <td>#ffc372</td>
+                <td>255, 195, 114</td>
+                <td>0, 27, 62, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__dark-gold"></td>
+                <td>Dark Gold</td>
+                <td>#dc731c</td>
+                <td>220, 115, 28</td>
+                <td>10, 60, 100, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__neutral-60"></td>
+                <td>Neutral 60</td>
+                <td>#baa496</td>
+                <td>186, 164, 150</td>
+                <td>28, 34, 32, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__dark-neutral"></td>
+                <td>Dark Neutral</td>
+                <td>#745745</td>
+                <td>116, 87, 69</td>
+                <td>50, 60, 57, 28</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__purple-60"></td>
+                <td>Purple 50</td>
+                <td>#dc9cbf</td>
+                <td>220, 156, 191</td>
+                <td>12, 47, 7, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__dark-purple"></td>
+                <td>Dark Purple</td>
+                <td>#a01b68</td>
+                <td>160, 27, 104</td>
+                <td>40, 100, 30, 10</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__red-60"></td>
+                <td>Red 60</td>
+                <td>#e79e8e</td>
+                <td>231, 158, 142</td>
+                <td>0, 51, 46, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__red"></td>
+                <td>Red</td>
+                <td>#d14124</td>
+                <td>209, 65, 36</td>
+                <td>0, 85, 100, 4</td>
+            </tr>
+
+            </tbody></table>
 use_cases: >-
   When used properly, color can help clarify relationships between data, provide
   emphasis for certain data points, and maintain a consistent brand voice. When
@@ -1204,7 +1320,7 @@ use_cases: >-
 
 
   </div>
-guidelines: ""
+content_guidelines: ""
 behavior: ""
 accessibility: >-
   Color should never be solely relied on to convey meaning in a visualization

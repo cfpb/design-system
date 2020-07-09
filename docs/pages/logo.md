@@ -325,7 +325,7 @@ variation_groups:
         variation_name: ""
     variation_group_name: Examples of misuse
 guidelines: >-
-  \## Clear space
+  ### Clear space
 
 
   <div class="content-33 content-first" markdown="1">
@@ -412,10 +412,13 @@ guidelines: >-
   </div>
 
 
+  <br>
+
+
   <div class="content-33 content-first" markdown="1">
 
 
-  \## Web scale
+  ### Web scale
 
 
   The small execution logo should be used to optimize legibility of the logotype on desktop and mobile applications. These are our benchmark sizes for web, but variance may be used for specific circumstances or constraints.
@@ -468,10 +471,13 @@ guidelines: >-
   </div>
 
 
+  <br>
+
+
   <div class="content-33 content-first" markdown="1">
 
 
-  \## Print scale
+  ### Print scale
 
 
   The horizontal or vertical lockup should be used for most print applications. These are our benchmark sizes for 8.5 x 11” documents, including reports, brochures, powerpoints, and forms. For large-format print pieces, such as posters and banners, where the logo is used with a height greater than 1”, it should be used in increments of 1/2”.
@@ -524,10 +530,13 @@ guidelines: >-
   </div>
 
 
+  <br>
+
+
   <div class="content-33 content-first" markdown="1">
 
 
-  \## Complex backgrounds
+  ### Complex backgrounds
 
 
   The logo should be shown on a white background for optimal appearance. When this is not possible, the logo must be contained in a white rectangle equal
@@ -562,10 +571,13 @@ guidelines: >-
   </div>
 
 
+  <br>
+
+
   <div class="content-33 content-first" markdown="1">
 
 
-  \## Supporting beam pattern
+  ### Supporting beam pattern
 
 
   #### Compositions
@@ -626,6 +638,180 @@ guidelines: >-
 
 
   Beam patterns include all three CFPB Green tones. Using transparency increases the strength of the beam metaphor. Transparency should be achieved through opacity, not blending modes like multiply / darken / etc.
+
+
+  </div>
+
+
+  <br>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  ### Examples of Misuse
+
+
+  {% include icons/error-round.svg %} Don’t remove the light beam. It is essential to the logo.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  ![Example of misuse: logo with beam](/design-system/images/uploads/logo_misuse_beam_removed.png)
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  {% include icons/error-round.svg %} Don’t stretch or condense. This weakens the brand.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Example of misuse: stretched logo](/design-system/images/uploads/logo_misuse_stretch.png)
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Example of misuse: condensed logo](/design-system/images/uploads/logo_misuse_condense.png)
+
+
+  </div>
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  {% include icons/error-round.svg %} Don’t apply a drop shadow.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  ![Example of misuse: logo with drop shadow](/design-system/images/uploads/logo_misuse_drop_shadow.png)
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  {% include icons/error-round.svg %} Don’t outline the logo or use other colors. This dilutes brand association.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Example of misuse: outlined logo](/design-system/images/uploads/logo_misuse_outline.png)
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Example of misuse: logo with wrong colors](/design-system/images/uploads/logo_misuse_wrong_colors.png)
+
+
+  </div>
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  {% include icons/error-round.svg %} Don’t rotate the symbol. This changes the connotation of the light.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Example of misuse: rotated logo](/design-system/images/uploads/logo_misuse_rotate.png)
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Example of misuse: rotated logo](/design-system/images/uploads/logo_misuse_rotate_2.png)
+
+
+  </div>
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  {% include icons/error-round.svg %} Don’t place the logo directly on a colored background or photo without a white bounding box.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Example of misuse: logo directly on color background](/design-system/images/uploads/logo_misuse_background.png)
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Example of misuse: logo directly on photo background](/design-system/images/uploads/logo_misuse_background_2.png)
+
+
+  </div>
 
 
   </div>

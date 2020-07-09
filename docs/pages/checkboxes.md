@@ -2,7 +2,6 @@
 title: Checkboxes
 layout: variation
 section: components
-secondary_section: Forms
 status: Released
 description: Use checkboxes when the user can select more than one option from a
   list. Make clear with helper text that this is the case. Use [radio
@@ -212,31 +211,7 @@ variation_groups:
           checkboxes.
         variation_name: Large target area checkboxes
     variation_group_name: Sizes
-use_cases: >-
-  #### Nested checkboxes
-
-
-  There are times when checkboxes may be nested with parent/child relationships. This is common when used within filter interactions.
-
-
-  ##### Usability
-
-
-  In this case, the following behavior and design should be followed:
-
-  * Parent is “collapsed” and displays an expandable arrow at the end of the text.
-
-  * The label of the parent checkbox should be clickable.
-
-  * Clicking on the label or arrow toggles the opening/closing of the child options.
-
-  * In open state, arrow points up; in closed state, arrow points down.
-
-  * Child options are in black text and not clickable.
-
-  * Clicking on the parent checkbox selects the parent option and all child options.
-
-  * Clicking on the parent checkbox does not change the state of the open/close expansion (if it’s checked with the children expanded, it stays expanded, for instance).
+use_cases: ""
 guidelines: >-
   * Label text should be concise
 
@@ -250,5 +225,6 @@ behavior: >-
 accessibility: To optimize screen reader accessibility, lay out checkboxes
   vertically rather than horizontally.
 last_updated: 2019-09-17T14:30:15.293Z
+secondary_section: Forms
 research: ""
 ---

@@ -4587,9 +4587,36 @@ nav ul {
   margin: 0;
   padding: 0;
 }
+details summary:focus {
+  border: none;
+  outline: 1px dotted #0072ce;
+  outline-offset: 2px;
+}
+details summary:hover {
+  cursor: pointer;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary {
+  position: relative;
+}
+details summary:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 10px;
+  display: block;
+  content: '';
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 988.2 1200" fill="rgb(16, 24, 32)"><path d="M494.1 967.2c-17.3 0-33.8-6.8-46-19L18.6 518.6c-25.1-25.6-24.8-66.8.8-91.9 25.3-24.8 65.8-24.8 91.1 0l383.6 383.6 383.6-383.6c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L540.1 948.1c-12.2 12.2-28.7 19.1-46 19.1z"/></svg>');
+}
+details[open] summary:after {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 988.7 1200" fill="rgb(16, 24, 32)"><path d="M923.6 967.6c-17.3 0-33.8-6.8-46-19L494.1 565 110.5 948.5c-25.6 25.1-66.8 24.8-91.9-.8-24.8-25.3-24.8-65.8 0-91.1l429.5-429.5c25.4-25.4 66.5-25.4 91.9 0l429.6 429.5c25.4 25.4 25.4 66.5.1 91.9-12.3 12.3-28.8 19.1-46.1 19.1z"/></svg>');
+}
 .m-global-eyebrow .a-tagline,
 .site-header,
-.footer {
+.ds-footer {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 30px;
@@ -4600,11 +4627,111 @@ nav ul {
 .m-global-eyebrow .a-tagline {
   max-width: 1140px;
 }
-@media only all and (max-width: 56.25em) {
+main {
+  max-width: 1170px;
+  margin: 30px auto;
+  padding: 0 30px;
+}
+.ds-sidebar,
+.ds-content {
+  display: table-cell;
+  vertical-align: top;
+}
+.ds-sidebar {
+  width: 250px;
+  padding-right: 30px;
+  border-right: 1px solid #b4b5b6;
+  padding-bottom: 30px;
+}
+.ds-content {
+  padding-left: 30px;
+}
+@media only all and (max-width: 37.5em) {
+  main {
+    padding: 0;
+    margin-top: 0;
+  }
+  .ds-sidebar,
+  .ds-content {
+    display: block;
+  }
+  .ds-content {
+    padding-left: 15px;
+  }
+  .ds-sidebar {
+    width: auto;
+    border-right: none;
+    padding-right: 0;
+  }
   .m-global-eyebrow,
-  .footer {
+  .ds-footer {
     padding: 0 15px;
   }
+}
+.ds-nav a {
+  border-bottom-width: 0;
+}
+.ds-nav a:hover {
+  border-bottom-width: 1px;
+}
+.ds-nav ul:last-child {
+  margin-bottom: 30px;
+}
+.ds-nav > .h5:first-of-type {
+  margin-top: 0;
+}
+.ds-nav__subnav .h5,
+.ds-nav__subnav ul {
+  margin-left: 15px;
+}
+.ds-nav__subnav .h6 {
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+@media only all and (min-width: 37.5625em) {
+  .ds-nav-container > summary {
+    display: none;
+  }
+  .ds-nav-container > .m-list > .m-list_item {
+    margin-bottom: 15px;
+  }
+  .ds-nav {
+    margin-left: 15px;
+  }
+  .ds-nav-1 {
+    border-bottom: 1px solid #b4b5b6;
+  }
+}
+@media only all and (max-width: 37.5em) {
+  .ds-nav .h4 {
+    margin-bottom: 0;
+  }
+  .ds-nav-2 {
+    margin-top: 15px;
+  }
+  .ds-nav-container {
+    border-top: 1px solid #b4b5b6;
+    border-bottom: 1px solid #b4b5b6;
+  }
+  .ds-nav-container > summary {
+    padding: 15px;
+    margin-bottom: 0;
+  }
+  .ds-nav-container > summary:after {
+    top: 20px;
+    right: 15px;
+  }
+  .ds-nav-container > .m-list {
+    padding: 15px;
+    padding-top: 0;
+  }
+}
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.ds-footer a {
+  border-bottom-width: 1px;
 }
 /* ==========================================================================
    cfgov-refresh
@@ -4810,7 +4937,7 @@ input.skip-nav_link:focus::-moz-focus-inner {
   font-weight: 500;
   vertical-align: middle;
 }
-@media only all and (max-width: 56.25em) {
+@media only all and (max-width: 37.5em) {
   .site-header {
     background-color: #f7f8f9;
     display: table;
@@ -4843,7 +4970,7 @@ input.skip-nav_link:focus::-moz-focus-inner {
     padding: 1em;
   }
 }
-@media only all and (min-width: 56.25em) {
+@media only all and (min-width: 37.5625em) {
   #search-form {
     margin: 0;
     float: right;
@@ -5051,75 +5178,6 @@ input.skip-nav_link:focus::-moz-focus-inner {
     border-bottom: 1px solid #e7e8e9;
     margin-bottom: 1em;
   }
-}
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-.footer a {
-  border-bottom-width: 1px;
-}
-/* ==========================================================================
-   Secondary Nav
-   Creates an expandable show/hide toggle nav on small screens, and a regular left sidebar on large screens
-   Use the following classes on the sidebar container element to add this styling:
-        .content_sidebar
-        .o-expandable
-        .o-expandable__padded
-        .o-expandable__background
-    And use these for child div where the navigation links are:
-        .o-expandable_content
-        .nav-secondary
-   ========================================================================== */
-.content_sidebar.o-expandable {
-  padding: 0.46875em 0px 0px;
-}
-@media only all and (min-width: 56.3125em) {
-  .content_sidebar.o-expandable .o-expandable_header {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-  }
-}
-@media only all and (min-width: 56.3125em) {
-  .content_sidebar.o-expandable .o-expandable_content {
-    margin-top: 1.875em;
-    padding-left: 0;
-  }
-}
-@media only all and (min-width: 56.3125em) {
-  .content_sidebar.o-expandable .o-expandable_content__collapsed {
-    max-height: initial !important;
-    overflow: visible;
-    display: block;
-  }
-}
-@media only all and (min-width: 56.3125em) {
-  .content_sidebar.o-expandable__padded .o-expandable_content:before {
-    border: none;
-  }
-}
-@media only all and (min-width: 56.3125em) {
-  .content_sidebar.o-expandable__background {
-    background: transparent;
-  }
-}
-.content_sidebar .m-list_item-subgroup {
-  margin-left: 1.25em;
-}
-.content_sidebar .m-list_link {
-  border: none;
-}
-.content_sidebar .m-list_link:visited {
-  color: #0072ce;
-}
-.content_sidebar .m-list_link:hover {
-  border-bottom: 1px solid #254b87;
-  color: #254b87;
 }
 /* ==========================================================================
    Syntax highlighting
@@ -6372,10 +6430,6 @@ pre code {
 }
 .color-table td:not( :first-of-type ) {
   white-space: nowrap;
-}
-#search-results {
-  margin: 15px;
-  margin-left: 0;
 }
 #search-results {
   list-style: none;

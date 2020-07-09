@@ -213,6 +213,9 @@ variation_groups:
     variation_group_name: Sizes
 use_cases: ""
 guidelines: >-
+  ### Content guidelines
+
+
   * Label text should be concise
 
   * Text spacing should inform spacing of checkboxes and checkbox should be vertically centered with the first line of text in an option.

@@ -90,7 +90,9 @@ variation_groups:
           * 16pt / 20pt
         variation_code_snippet: <p class="print-subheading">Lorem ipsum</p>
 use_cases: ""
-guidelines: ""
+guidelines: Refer to the [Guidelines section of the Fonts
+  page](https://cfpb.github.io/design-system/foundation/fonts#guidelines) for
+  information about alignment, line height, line length, and spacing.
 behavior: ""
 accessibility: ""
 research: ""

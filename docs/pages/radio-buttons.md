@@ -222,6 +222,8 @@ variation_groups:
           smaller screens) and harder to miss. They are especially desirable
           when the form will have heavy mobile usage. Given the amount of real
           estate they occupy, they’re probably not suited for all use cases.
+        variation_specs: These are covered in [specs for large target area
+          checkboxes](https://cfpb.github.io/design-system/components/checkboxes#large-target-area-checkboxes).
       - variation_code_snippet: |-
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_helper">

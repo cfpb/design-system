@@ -25,7 +25,7 @@ anchors.remove( `
 Expandable.init();
 Table.init();
 
-const main = document.querySelector( 'main.content' );
+const main = document.querySelector( '#main' );
 const tabs = document.querySelectorAll( '[data-module="tabs"]' );
 
 if ( tabs && tabs.length > 0 ) {

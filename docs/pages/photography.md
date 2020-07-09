@@ -2,7 +2,6 @@
 title: Photography
 layout: variation
 section: foundation
-secondary_section: Brand guidelines
 status: Released
 description: >-
   Photography is an important tool that helps us relate to consumers,
@@ -28,23 +27,27 @@ variation_groups:
 
           ![Photo of Confirmation Day: Director Cordray taking a moment to make calls and share the big news](/design-system/images/uploads/photography_2_550px_wide.jpg)
         variation_name: Editorial
-use_cases: >-
-  #### Treatment
+use_cases: ""
+guidelines: >-
+  ### Treatment
 
 
   Photographs should not be collaged, staged, unrealistic, or use still lifes to illustrate concepts. Image manipulation should be limited to adjusting levels, contrast, and natural color balance.
 
 
-  ![Photo of Olivia Calderon talking about financial empowerment efforts for low-income and unauthorized immigrants](/design-system/images/uploads/photography_3_550px_wide.jpg)
+  ![Photo of Olivia Calderon talking about financial empowerment efforts for low-income and unauthorized immigrantsPhoto of Olivia Calderon talking about financial empowerment efforts for low-income and unauthorized immigrants](/design-system/images/uploads/photography_3_550px_wide.jpg)
 
 
   ![Photo of Director Cordray addressing the Bureau at the 2012 All Hands Meeting in Washington DC](/design-system/images/uploads/photography_4_550px_wide.jpg)
 accessibility: >-
-  #### Include text alternatives for non-text content
+  ### Include text alternatives for non-text content
+
 
   For any content that is not text-based (images, audio, video, animations, charts, graphs, etc), provide an alternative version of that content that is text-based.
+
 
   * Use the `alt` and `title` attributes on images and other graphical elements.
 
   * Include descriptive text near images (for example, a pie chart legend with percentages of each item).
+secondary_section: Brand guidelines
 ---

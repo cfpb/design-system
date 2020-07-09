@@ -105,7 +105,7 @@ content_guidelines: >-
   When a heading is followed by paragraph text, include 30px of space below Display and 15px below Headings 1–6.
 
 
-  ![](/design-system/images/uploads/type_heading_body_copy.png)
+  ![](/design-system/images/uploads/fonts_heading_body.png)
 
 
   #### Body copy followed by a heading
@@ -114,7 +114,7 @@ content_guidelines: >-
   When body copy is followed by a heading, include 45px of space above Heading 2 and 30px above Headings 3–6.
 
 
-  ![Body copy followed by heading](/design-system/images/uploads/type_body_copy_heading.png)
+  ![Body copy followed by heading](/design-system/images/uploads/fonts_body_heading.png)
 
 
   #### Heading followed by a heading
@@ -189,7 +189,7 @@ accessibility: >-
   <div class="content-33 content-first" markdown="1">
 
 
-  #### {% include icons/error-round.svg %}  Non-accessible combinations
+  #### Non-accessible combinations
 
 
   Never set CFPB Green type on a white background or white type on CFPB Green background as these combinations are not accessible. Never set type on a patterned background.
@@ -210,7 +210,7 @@ accessibility: >-
   <div class="content-33 content-first" markdown="1">
 
 
-  #### {% include icons/error-round.svg %}  Undesirable combinations
+  #### Undesirable combinations
 
 
   Although CFPB Green and black are accessible for large scale type, this color combination should never be used for web or print type.

@@ -409,19 +409,19 @@ guidelines: >-
   </div>
 
 
-  </div><!-- /.content-67 -->
-
-
-  \## Web scale
+  </div>
 
 
   <div class="content-33 content-first" markdown="1">
 
 
+  \## Web scale
+
+
   The small execution logo should be used to optimize legibility of the logotype on desktop and mobile applications. These are our benchmark sizes for web, but variance may be used for specific circumstances or constraints.
 
 
-  </div><!-- /.content-33 -->
+  </div>
 
 
   <div class="content-67 content-last" markdown="1">
@@ -462,19 +462,19 @@ guidelines: >-
   </div>
 
 
-  </div><!-- /.content-67 -->
-
-
-  \## Print scale
+  </div>
 
 
   <div class="content-33 content-first" markdown="1">
 
 
+  \## Print scale
+
+
   The horizontal or vertical lockup should be used for most print applications. These are our benchmark sizes for 8.5 x 11” documents, including reports, brochures, powerpoints, and forms. For large-format print pieces, such as posters and banners, where the logo is used with a height greater than 1”, it should be used in increments of 1/2”.
 
 
-  </div><!-- /.content-33 -->
+  </div>
 
 
   <div class="content-67 content-last" markdown="1">
@@ -518,13 +518,13 @@ guidelines: >-
   </div>
 
 
-  </div><!-- /.content-67 -->
-
-
-  \## Complex backgrounds
+  </div>
 
 
   <div class="content-33 content-first" markdown="1">
+
+
+  \## Complex backgrounds
 
 
   The logo should be shown on a white background for optimal appearance. When this is not possible, the logo must be contained in a white rectangle equal
@@ -532,7 +532,7 @@ guidelines: >-
   to the required clear space.
 
 
-  </div><!-- /.content-33 -->
+  </div>
 
 
   <div class="content-67 content-last" markdown="1">
@@ -553,13 +553,13 @@ guidelines: >-
   #### Photo
 
 
-  </div><!-- /.content-67 -->
-
-
-  Supporting beam pattern
+  </div>
 
 
   <div class="content-33 content-first" markdown="1">
+
+
+  \## Supporting beam pattern
 
 
   #### Compositions
@@ -581,6 +581,9 @@ guidelines: >-
 
 
   Solid green beam bleeds off the top of the layout. Beams alternate direction to create layered beam shapes.
+
+
+  image
 
 
   Layered beams anchor to the bottom, leaving plenty of white space above for type. This works especially well for horizontal layouts.

@@ -661,7 +661,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  image
+  ![Example of misuse: logo with beam](/design-system/images/uploads/logo_misuse_beam_removed.png)
 
 
   </div>
@@ -682,7 +682,7 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  image
+  ![Example of misuse: stretched logo](/design-system/images/uploads/logo_misuse_stretch.png)
 
 
   </div>
@@ -691,17 +691,13 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  image
+  ![Example of misuse: condensed logo](/design-system/images/uploads/logo_misuse_condense.png)
 
 
   </div>
 
 
   </div>
-
-
-
-
 
 
   <div class="content-33 content-first" markdown="1">
@@ -716,14 +712,10 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  image
+  ![Example of misuse: logo with drop shadow](/design-system/images/uploads/logo_misuse_drop_shadow.png)
 
 
   </div>
-
-
-
-
 
 
   <div class="content-33 content-first" markdown="1">
@@ -741,7 +733,7 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  image
+  ![Example of misuse: outlined logo](/design-system/images/uploads/logo_misuse_outline.png)
 
 
   </div>
@@ -750,17 +742,13 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  image
+  ![Example of misuse: logo with wrong colors](/design-system/images/uploads/logo_misuse_wrong_colors.png)
 
 
   </div>
 
 
   </div>
-
-
-
-
 
 
   <div class="content-33 content-first" markdown="1">
@@ -778,7 +766,7 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  image
+  ![Example of misuse: rotated logo](/design-system/images/uploads/logo_misuse_rotate.png)
 
 
   </div>
@@ -787,17 +775,13 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  image
+  ![Example of misuse: rotated logo](/design-system/images/uploads/logo_misuse_rotate_2.png)
 
 
   </div>
 
 
   </div>
-
-
-
-
 
 
   <div class="content-33 content-first" markdown="1">
@@ -815,7 +799,7 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  image
+  ![Example of misuse: logo directly on color background](/design-system/images/uploads/logo_misuse_background.png)
 
 
   </div>
@@ -824,7 +808,7 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  image
+  ![Example of misuse: logo directly on photo background](/design-system/images/uploads/logo_misuse_background_2.png)
 
 
   </div>

@@ -74,6 +74,48 @@ variation_groups:
 
 
           ![Image showing vertical and horizontal padding within expandable elements](/design-system/images/uploads/expandables-spec.png)
+        variation_implementation: >-
+          A new array of Expandable instances can be created with `const
+          expandables = Expandable.init();`. Each instance has the following
+          methods for public consumption:
+
+
+          #### toggleTargetState( element )
+
+
+          ```
+
+          const` element = document.querySelector( '.o-expandable_target' );
+
+          expandables[0].toggleTargetState( element );
+
+          ```
+
+
+          Toggle an expandable to open or closed.
+
+          Parameters:
+
+
+          * element {HTMLNode} The expandable target HTML DOM element.
+
+
+          #### getLabelText()
+
+
+          ```
+
+          expandables[0].getLabelText();
+
+          ```
+
+
+          Retrieve the label text of the expandable header.
+
+          Return:
+
+
+          * {string} The text of the expandable’s label.
       - variation_name: Standard expandable (open on load)
         variation_code_snippet: >-
           <div class="o-expandable
@@ -111,6 +153,10 @@ variation_groups:
           default. This is as easy as adding the
           `.o-expandable_content__onload-open` modifier to the
           `.o-expandable_content` block.
+        variation_implementation: A new array of Expandable instances can be created
+          using a JavaScript API. For information, [open the "Implementation"
+          tab under Standard
+          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
     variation_group_description: ""
   - variations:
       - variation_code_snippet: >-
@@ -233,6 +279,10 @@ variation_groups:
           In the default mode, users are able to have multiple sections of an
           expandable group expanded at the same time, which allows users to
           easily compare information that is available in different sections.
+        variation_implementation: A new array of Expandable instances can be created
+          using a JavaScript API. For information, [open the "Implementation"
+          tab under Standard
+          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
       - variation_code_snippet: >-
           <div class="o-expandable-group o-expandable-group__accordion">
               <div class="o-expandable o-expandable__padded">
@@ -324,6 +374,10 @@ variation_groups:
           accordion group. Add the `o-expandable-group__accordion` class to the
           expandable group to activate the accordion mode.
         variation_name: Accordion-style group
+        variation_implementation: A new array of Expandable instances can be created
+          using a JavaScript API. For information, [open the "Implementation"
+          tab under Standard
+          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
     variation_group_name: Groups
     variation_group_description: ""
   - variation_group_name: Variations
@@ -357,6 +411,10 @@ variation_groups:
                   </p>
               </div>
           </div>
+        variation_implementation: A new array of Expandable instances can be created
+          using a JavaScript API. For information, [open the "Implementation"
+          tab under Standard
+          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
       - variation_name: Expanded modifier
         variation_description: >-
           Sometimes you may want the expandable to be open by default. This is
@@ -370,6 +428,10 @@ variation_groups:
 
           ```
         variation_code_snippet: ""
+        variation_implementation: A new array of Expandable instances can be created
+          using a JavaScript API. For information, [open the "Implementation"
+          tab under Standard
+          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
       - variation_name: Padded modifier
         variation_description: >-
           Adds padding and a background color to `.o-expandable_header` and
@@ -384,6 +446,10 @@ variation_groups:
 
           ```
         variation_code_snippet: ""
+        variation_implementation: A new array of Expandable instances can be created
+          using a JavaScript API. For information, [open the "Implementation"
+          tab under Standard
+          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
       - variation_name: Spaced header modifier
         variation_description: >-
           Allows you to add space between `.o-expandable_header` and
@@ -396,6 +462,10 @@ variation_groups:
 
           ```
         variation_code_snippet: ""
+        variation_implementation: A new array of Expandable instances can be created
+          using a JavaScript API. For information, [open the "Implementation"
+          tab under Standard
+          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
       - variation_name: Text elements
         variation_description: |
           #### Label
@@ -419,9 +489,13 @@ variation_groups:
           </span>
           ```
         variation_code_snippet: ""
+        variation_implementation: A new array of Expandable instances can be created
+          using a JavaScript API. For information, [open the "Implementation"
+          tab under Standard
+          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
       - variation_name: Header elements
         variation_description: >
-
+          
           These additional elements are useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.
 
 
@@ -451,49 +525,10 @@ variation_groups:
           .o-expandable_header-right
 
           ```
-  - variation_group_name: JavaScript API
-    variation_group_description: >-
-      A new array of Expandable instances can be created with `const expandables
-      = Expandable.init();`. Each instance has the following methods for public
-      consumption:
-
-
-      ### toggleTargetState( element )
-
-
-      ```
-
-      const` element = document.querySelector( '.o-expandable_target' );
-
-      expandables[0].toggleTargetState( element );
-
-      ```
-
-
-      Toggle an expandable to open or closed.
-
-      Parameters:
-
-
-      * element {HTMLNode} The expandable target HTML DOM element.
-
-
-      ### getLabelText()
-
-
-      ```
-
-      expandables[0].getLabelText();
-
-      ```
-
-
-      Retrieve the label text of the expandable header.
-
-      Return:
-
-
-      * {string} The text of the expandable’s label.
+        variation_implementation: A new array of Expandable instances can be created
+          using a JavaScript API. For information, [open the "Implementation"
+          tab under Standard
+          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
 use_cases: ""
 guidelines: ""
 behavior: >
@@ -518,8 +553,7 @@ research: "### Google Tag Manager
 
 
   Below is a list of items that Digital Analytics references in the tag that
-  captures expandables.\
-
+  captures expandables.
 
   #### TAG ITEMS
 

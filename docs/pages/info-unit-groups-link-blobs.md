@@ -1,5 +1,5 @@
 ---
-title: Info Unit Groups
+title: Info unit groups
 layout: variation
 section: patterns
 status: Released

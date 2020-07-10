@@ -1093,8 +1093,10 @@ variation_groups:
 
           </table>
       - variation_name: Divergent palette
-        variation_description: |-
-          ![](/design-system/images/uploads/datavis_color_pos-neg.png)
+        variation_description: >-
+          ![Divergent
+          palette](/design-system/images/uploads/data_visualization_divergent_palette.png)
+
 
           <table class="color-table">
                 <thead>

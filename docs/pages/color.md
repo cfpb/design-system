@@ -1324,7 +1324,7 @@ use_cases: >-
   To highlight part of a set of data, or show that things are related, use a tint or a shade of the main color.
 
 
-  ![Subsets and relationships example](/design-system/images/uploads/data_visualization_subsets_relationships.png)
+  ![Subsets and relationships example](/design-system/images/uploads/data_subsets_relationships.png)
 
 
   ### Categorical
@@ -1333,7 +1333,7 @@ use_cases: >-
   Use categorical color schemes when you’re visualizing groups of things. These are discrete colors that do not imply a visual relationship between the sets of data.
 
 
-  ![Categorical example](/design-system/images/uploads/data_visualization_categorical.png)
+  ![Categorical example](/design-system/images/uploads/data_categorical.png)
 
 
   ### Sequential

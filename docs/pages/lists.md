@@ -85,10 +85,10 @@ variation_groups:
           * Numbers are right aligned to their associated period; all single-digit numbers fit inside the left margin
 
 
-          NESTED
+          NESTED ITEMS
 
 
-          * Nested items have bullets — solid squares — that are flush left with the preceding line of text. (Note that the code sample shows letters and not bullets!)
+          * Depending on the content and use case, nested items may either appear as bullets — solid squares — that are flush left with the preceding line of text, or lower-cased letters, as shown in the example.
   - variations:
       - variation_code_snippet: |-
           <ul class="m-list m-list__unstyled">
@@ -136,32 +136,6 @@ variation_groups:
           </ul>
         variation_description: Spaced list adds extra padding to every element in a list.
         variation_name: Spaced list
-      - variation_code_snippet: "  "
-        variation_description: >-
-          When the primary role of a list is to offer definitions or
-          explanations for a group of terms, the bolded term should appear
-          first, followed by a colon. The definition should appear after the
-          bolded term and be written in complete sentences.
-
-
-          Each defined term should appear on its own line, without an indentation or bullet.
-        variation_name: Basic definition list
-      - variation_code_snippet: ""
-        variation_description: Modifies the base style to make <dt> look like an h5.
-          Used for definition lists that contain key/value or term/definition
-          pairs (i.e. lists where the <dt> is fairly short, acts like a label,
-          and is readable in all caps), like the Mosaic portals and the job
-          listings.
-        variation_name: Key/value definition list
-      - variation_code_snippet: ""
-        variation_description: >-
-          Modifies the base style to put <dt> and <dd> on the same line (and
-          maybe also add a colon after the <dt>?). Used when the two parts of
-          the list entry should be inline, as in the job listings.
-
-
-          ![](/design-system/images/uploads/28131667-787b1896-66ef-11e7-8411-c0f40ba79e2c.png)
-        variation_name: Compact definition list
     variation_group_name: Variations
 use_cases: ""
 guidelines: >-

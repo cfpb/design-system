@@ -2,7 +2,6 @@
 title: Lists
 layout: variation
 section: components
-secondary_section: Layout options
 status: Released
 description: Lists are an effective way to visually highlight important
   information so that it can be more easily scanned and read. Before writing a
@@ -30,7 +29,7 @@ variation_groups:
               <li class="m-list_item">List item 3</li>
           </ul>
         variation_specs: >-
-
+          
           #### Default
 
 
@@ -70,7 +69,7 @@ variation_groups:
               <li>List item 3</li>
           </ol>
         variation_specs: >-
-
+          
 
           DEFAULT
 
@@ -165,7 +164,9 @@ variation_groups:
         variation_name: Compact definition list
     variation_group_name: Variations
 use_cases: ""
-guidelines: >
+guidelines: >-
+  ### Content guidelines
+
 
   List items should:
 
@@ -187,7 +188,8 @@ guidelines: >
   If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.
 behavior: ""
 accessibility: ""
+research: ""
 related_items: ""
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+secondary_section: Layout options
 ---

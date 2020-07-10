@@ -1092,13 +1092,56 @@ variation_groups:
           </tbody>
 
           </table>
-      - variation_name: Positive-negative palette
-        variation_description: |-
-          ![](/design-system/images/uploads/datavis_color_pos-neg.png)
+      - variation_name: Divergent palette
+        variation_description: >-
+          ![Divergent
+          palette](/design-system/images/uploads/data_visualization_divergent_palette.png)
 
-          Divergent palette
 
-          ![](/design-system/images/uploads/datavis_color_divergent.png)
+          <table class="color-table">
+                <thead>
+                    <tr>
+
+          <th></th>
+                    <th>Name</th>
+                    <th>Hex</th>
+                    <th>RGB</th>
+                    <th>CMYK</th>
+                </tr></thead>
+
+            <tbody><tr>
+                <td class="swatch_field swatch_field__teal-60"></td>
+                <td>Teal 60</td>
+                <td>#89b6b5</td>
+                <td>137, 182, 181</td>
+                <td>36, 0, 13, 19</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__teal"></td>
+                <td>Teal</td>
+                <td>#257675</td>
+                <td>37, 118, 117</td>
+                <td>85, 0, 30, 44</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__red-60"></td>
+                <td>Red 60</td>
+                <td>#e79e8e</td>
+                <td>231, 158, 142</td>
+                <td>0, 51, 46, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__red"></td>
+                <td>Red</td>
+                <td>#d14124</td>
+                <td>209, 65, 36</td>
+                <td>0, 85, 100, 4</td>
+            </tr>
+
+            </tbody></table>
       - variation_name: Cool palette
         variation_description: |-
           ![](/design-system/images/uploads/data_viz_cool.png)
@@ -1275,67 +1318,31 @@ use_cases: >-
   with brand standards to appear inconsistent.
 
 
-  <div class="content-33 content-first" markdown="1">
-
-
-  #### Subsets and relationships
+  ### Subsets and relationships
 
 
   To highlight part of a set of data, or show that things are related, use a tint or a shade of the main color.
 
 
-  </div>
+  ![Subsets and relationships example](/design-system/images/uploads/data_visualization_subsets_relationships.png)
 
 
-  <div class="content-50 content-last" markdown="1">
-
-
-  ![](/design-system/images/uploads/subsets-and-relationships-color-1.png)
-
-
-  </div>
-
-
-  <div class="content-33 content-first" markdown="1">
-
-
-  #### Categorical
+  ### Categorical
 
 
   Use categorical color schemes when you’re visualizing groups of things. These are discrete colors that do not imply a visual relationship between the sets of data.
 
 
-  </div>
+  ![Categorical example](/design-system/images/uploads/data_visualization_categorical.png)
 
 
-  <div class="content-50 content-last" markdown="1">
-
-
-  ![](/design-system/images/uploads/categorical-color-1.png)
-
-
-  </div>
-
-
-  <div class="content-33 content-first" markdown="1">
-
-
-  #### Sequential
+  ### Sequential
 
 
   When you’re displaying sequential data that shows a range of data in a ranked order, use these sequential colors to imply the relationship.
 
 
-  </div>
-
-
-  <div class="content-50 content-last" markdown="1">
-
-
-  ![](/design-system/images/uploads/sequential-color-1.png)
-
-
-  </div>
+  ![Sequential example](/design-system/images/uploads/sequential-color-1.png)
 behavior: ""
 accessibility: >-
   Color should never be solely relied on to convey meaning in a visualization

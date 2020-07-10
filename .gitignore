@@ -76,6 +76,7 @@ test/unit-test-coverage/
 docs/dist/
 docs/assets/icons/
 docs/_site
+.lighthouseci
 .sass-cache
 **/.jekyll-cache/
 .jekyll-metadata

@@ -13,6 +13,15 @@ variation_groups:
         variation_description: "![Sidebar email signup
           mockup](/design-system/images/uploads/emailsignup_intro_mockup.png)"
         variation_name: Sidebar email sign up
+        variation_specs: >-
+          * Headings: Any heading size may be used, recommend H2-4.
+
+          * Body copy: Avenir paragraph.
+
+          * At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
+
+
+          ![](/design-system/images/uploads/emailsignup_style_mockup.png)
       - variation_code_snippet: ""
         variation_description: >-
           The inset email signup module is a variation on the main email signup

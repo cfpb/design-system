@@ -75,7 +75,7 @@ first-level:
               - page: Wells
           - heading: Main content
             nav-items:
-              - page: Info Unit Groups
+              - page: Info unit groups
   - heading: Pages
     nav-items:
       - page: Landing pages

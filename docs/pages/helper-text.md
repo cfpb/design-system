@@ -52,31 +52,26 @@ variation_groups:
 
 
           Appears inline with label headings, and should be lowercase and placed in parenthesis after the label.
-      - variation_code_snippet: >-
+      - variation_code_snippet: >
           <label class="a-label a-label__heading"
           for="textinput-example-default">
-              Label
+              Birth date
           </label>
 
           <input class="a-text-input"
                 type="text"
                 id="textinput-example-default"
-                placeholder="Enter text…"
-                value="mm/dd/yyyy">
+                placeholder="mm/dd/yyyy">
           <br><br>
+
+          <label class="a-label a-label__heading" for="textinput-example-default">
+              Email address
+          </label>
 
           <input class="a-text-input"
                 type="text"
                 id="textinput-example-default"
-                placeholder="Enter text…"
-                value="email@example.com">
-          <br><br>
-
-          <input class="a-text-input"
-                type="text"
-                id="textinput-example-default"
-                placeholder="Enter text…"
-                value="placeholder text">
+                placeholder="email@example.com">
         variation_description: Placeholder text appears within a text input field, and
           disappears once a user begins typing in that field. Use it for
           formatting examples only.

@@ -1,11 +1,12 @@
 const HIDDEN_CLASS = 'u-hidden';
-export const TOGGLE_ATTRIBUTE = 'data-toggle-details';
+const TOGGLE_ATTRIBUTE = 'data-toggle-details';
 
 /**
+ * Toggle details for a single variation.
  * @param {DOMNode} button - Button element that controls the toggling
  * @param {DOMNode} document - Defaults to window.document but overridable for ReactDOM
  */
-export function toggleDetails( button, document = window.document ) {
+function toggleDetails( button, document = window.document ) {
   const container = button.parentNode;
   const codeEl = document.querySelector( button.getAttribute( 'href' ) );
   const hideCodeBtn = container.querySelector( `[${ TOGGLE_ATTRIBUTE }="hide"]` );
@@ -19,4 +20,22 @@ export function toggleDetails( button, document = window.document ) {
     hideCodeBtn.classList.add( HIDDEN_CLASS );
     showCodeBtn.classList.remove( HIDDEN_CLASS );
   }
+}
+
+/**
+ * Toggle all details for a page.
+ */
+function toggleAllDetails() {
+  const codeEls = document.querySelectorAll( '.a-toggle_code' );
+  let buttonElm;
+  for ( let i = 0, len = codeEls.length; i < len; i++ ) {
+    buttonElm = codeEls[i].querySelector( 'button:not(.u-hidden)' )
+    toggleDetails( buttonElm );
+  }
+}
+
+export {
+  TOGGLE_ATTRIBUTE,
+  toggleDetails,
+  toggleAllDetails
 }

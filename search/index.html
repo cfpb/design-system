@@ -3244,25 +3244,21 @@ Label
                     'variation_name3': 'Placeholder text',
                     'variation_description3': "Placeholder text appears within a text input field, and disappears once a user begins typing in that field. Use it for formatting examples only.\n",
                     'variation_code_snippet3': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-default&quot;&gt;
-    Label
+    Birth date
 &lt;/label&gt;
 &lt;input class=&quot;a-text-input&quot;
       type=&quot;text&quot;
       id=&quot;textinput-example-default&quot;
-      placeholder=&quot;Enter text…&quot;
-      value=&quot;mm/dd/yyyy&quot;&gt;
+      placeholder=&quot;mm/dd/yyyy&quot;&gt;
 &lt;br&gt;&lt;br&gt;
+&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-default&quot;&gt;
+    Email address
+&lt;/label&gt;
 &lt;input class=&quot;a-text-input&quot;
       type=&quot;text&quot;
       id=&quot;textinput-example-default&quot;
-      placeholder=&quot;Enter text…&quot;
-      value=&quot;email@example.com&quot;&gt;
-&lt;br&gt;&lt;br&gt;
-&lt;input class=&quot;a-text-input&quot;
-      type=&quot;text&quot;
-      id=&quot;textinput-example-default&quot;
-      placeholder=&quot;Enter text…&quot;
-      value=&quot;placeholder text&quot;&gt;`,
+      placeholder=&quot;email@example.com&quot;&gt;
+`,
                 
             
 
@@ -3797,30 +3793,24 @@ Label
                 
 
                 
-                    'variation_name1': 'Basic label',
+                    'variation_name1': 'Label heading',
                     'variation_description1': "\n",
-                    'variation_code_snippet1': `&lt;label class=&quot;a-label&quot;&gt;
-    A basic label
-&lt;/label&gt;`,
-                
-                    'variation_name2': 'Label heading',
-                    'variation_description2': "\n",
-                    'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
+                    'variation_code_snippet1': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
 Label heading
 &lt;/label&gt;
 
 &lt;input class=&quot;a-text-input&quot; type=&quot;text&quot;&gt;`,
                 
-                    'variation_name3': 'Inline label',
-                    'variation_description3': "\n",
-                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
+                    'variation_name2': 'Inline label',
+                    'variation_description2': "\n",
+                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox&quot;&gt;Inline label&lt;/label&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name4': 'Basic legend',
-                    'variation_description4': "The legend serves as the heading for a fieldset.\n",
-                    'variation_code_snippet4': `&lt;fieldset class=&quot;o-form_fieldset&quot;&gt;
+                    'variation_name3': 'Basic legend',
+                    'variation_description3': "The legend serves as the heading for a fieldset.\n",
+                    'variation_code_snippet3': `&lt;fieldset class=&quot;o-form_fieldset&quot;&gt;
                 &lt;legend class=&quot;a-legend&quot;&gt;Basic legend
                 &lt;/legend&gt;
 
@@ -4020,14 +4010,16 @@ Label heading
                 
                     'variation_name2': 'Non-wrapping icon links',
                     'variation_description2': "Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the __no-wrap modifier to .a-link__icon.\n",
-                    'variation_code_snippet2': `For more information on the upcoming event, or to RSVP, email
-&lt;a class=&quot;a-link
+                    'variation_code_snippet2': `&lt;p&gt;
+    Documents minicons can emphasize a link that contains a
+    &lt;a class=&quot;a-link
           a-link__icon
           a-link__no-wrap&quot;
   href=&quot;#&quot;&gt;
-    &lt;span class=&quot;a-link_text&quot;&gt;john.smith@cfpb.gov&lt;/span&gt;
-    {% include icons/mail.svg %}
-&lt;/a&gt;.`,
+        &lt;span class=&quot;a-link_text&quot;&gt;file or document&lt;/span&gt;
+        {% include icons/download.svg %}
+    &lt;/a&gt;.
+&lt;/p&gt;`,
                 
             
                 // Determine the maximum number of variations present overall.
@@ -4078,27 +4070,6 @@ Label heading
 &lt;/a&gt;`,
                 
             
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Header link',
-                    'variation_description1': "Generally, it is not recommended to add links in headers. Note that they are not underlined.\n",
-                    'variation_code_snippet1': `&lt;h2&gt;Header 2 containing &lt;a href=&quot;#&quot;&gt;a link&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet. Vestibulum orci ante, sagittis quis dolor a, fringilla dapibus nunc. Nulla in purus nisi. Curabitur vel odio et est auctor tincidunt. Et ultricies erat pellentesque nec. Suspendisse quis faucibus nec eu justo. Nulla ut massa eget dolor vehicula bibendum.&lt;/p&gt;`,
-                
-                    'variation_name2': 'Navigation links',
-                    'variation_description2': "Navigation links are not underlined and do not get a visited link style.\n\n\n",
-                    'variation_code_snippet2': `&lt;!--
-&lt;ul class=&quot;toc&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;News&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact us&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
---&gt;`,
-                
-            
 
 
             'title': 'Links',
@@ -4108,7 +4079,7 @@ Label heading
             'behavior': "Default links\nIn general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.\n\nOpening a link in a new tab\nLinks should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.\n\nAdd target=\"_blank\" rel=\"noopener noreferrer\" to direct these links to securely open in a new tab.\n\nAdd an aria-label that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be aria-label=\"Learn why some county data are unavailable. (Link opens in new tab.)\" This meets WCAG guideline 3.2 that webpages should work in a predictable way.\n",
             'accessibility': "Link text should clearly describe where it will take the user if activated. If a screen reader user is cycling through the links on a page, link text such as “Read more” or “Click here” is not helpful for knowing where that link will take them. Write the link with language clearly describing the link’s destination.\n\nIn situations where that’s untenable, you can improve the situation for screen reader users by coding the link with the aria-label attribute and adding more descriptive link text, which will be read aloud by screen readers.\n",
             'research': "\n",
-            'related_items': "\n  Variables\n  Buttons\n  Typography\n\n",
+            'related_items': "\n  Variables\n  Buttons\n  Typography\n  Iconography\n\n",
             'url': 'components/links'
         }
         ,

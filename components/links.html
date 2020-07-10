@@ -300,10 +300,6 @@
         </li>
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#variations">Variations</a>
-        </li>
-        
-        <li class="m-list_item">
             <a class="m-list_link" href="#behavior">Behavior</a>
         </li>
         
@@ -754,13 +750,15 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                For more information on the upcoming event, or to RSVP, email
-<a class="a-link
+                <p>
+    Documents minicons can emphasize a link that contains a
+    <a class="a-link
           a-link__icon
           a-link__no-wrap" href="#">
-    <span class="a-link_text">john.smith@cfpb.gov</span>
-    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 997.3 1200" class="cf-icon-svg"><path d="M962.3 396.6H35c-19.3.1-34.9 15.7-35 35v491.8c.1 19.3 15.7 34.9 35 35h927.3c19.3-.1 34.9-15.7 35-35V431.6c0-19.3-15.7-34.9-35-35zm-25 501.8H60V456.6h877.3v441.8z"></path><path d="M205.9 719h384.4v50H205.9zM205.9 609.7h384.4v50H205.9zM736.3 517.1h141.1V660H736.3z"></path></svg>
-</a>.
+        <span class="a-link_text">file or document</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 651.7 1200" class="cf-icon-svg"><path d="M507.1 692.8c-15.6-15.6-40.9-15.6-56.6 0l-85.1 85.1V466.6c0-22.1-17.9-40-40-40s-40 17.9-40 40V778l-85.1-85.1c-15.6-15.6-40.9-15.6-56.6 0-15.6 15.6-15.6 40.9 0 56.6L297 902.9c7.5 7.5 17.7 11.7 28.3 11.7s20.8-4.2 28.3-11.7l153.3-153.4c15.8-15.7 15.8-41 .2-56.7z"></path><path d="M30 161c-16.5 0-30 13.5-30 30v827.8c0 16.5 13.5 30 30 30h591.7c16.5 0 30-13.5 30-30V343.7L469 161H30zm389.6 60v134.8c0 19.9 16.3 36.2 36.2 36.2h135.9V988.8H60V221h359.6z"></path></svg>
+    </a>.
+</p>
             </div>
             
 
@@ -796,14 +794,16 @@
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">For more information on the upcoming event, or to RSVP, email
-&lt;a class="a-link
+                            <pre><code class="language-html">&lt;p&gt;
+    Documents minicons can emphasize a link that contains a
+    &lt;a class="a-link
           a-link__icon
           a-link__no-wrap"
   href="#"&gt;
-    &lt;span class="a-link_text"&gt;john.smith@cfpb.gov&lt;/span&gt;
-    {% include icons/mail.svg %}
-&lt;/a&gt;.</code></pre>
+        &lt;span class="a-link_text"&gt;file or document&lt;/span&gt;
+        {% include icons/download.svg %}
+    &lt;/a&gt;.
+&lt;/p&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1210,213 +1210,6 @@
         
     </section>
     
-    <section class="o-variation_group" id="variations">
-
-        
-        <h2 class="o-variation_group_title">
-            Variations
-        </h2>
-        
-
-        
-
-        
-        <div class="m-variation">
-
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Header link</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Generally, it is not recommended to add links in headers. Note that they are not underlined.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <h2>Header 2 containing <a href="#">a link</a>
-</h2>
-<p>Lorem ipsum dolor sit amet. Vestibulum orci ante, sagittis quis dolor a, fringilla dapibus nunc. Nulla in purus nisi. Curabitur vel odio et est auctor tincidunt. Et ultricies erat pellentesque nec. Suspendisse quis faucibus nec eu justo. Nulla ut massa eget dolor vehicula bibendum.</p>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-header-link-generally-it-is-not--1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-header-link-generally-it-is-not--1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-header-link-generally-it-is-not--1">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-header-link-generally-it-is-not--html-code-snippet-1">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="details-header-link-generally-it-is-not--html-code-snippet-1">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;h2&gt;Header 2 containing &lt;a href="#"&gt;a link&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet. Vestibulum orci ante, sagittis quis dolor a, fringilla dapibus nunc. Nulla in purus nisi. Curabitur vel odio et est auctor tincidunt. Et ultricies erat pellentesque nec. Suspendisse quis faucibus nec eu justo. Nulla ut massa eget dolor vehicula bibendum.&lt;/p&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Navigation links</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Navigation links are not underlined and do not get a visited link style.</p>
-
-<p><img src="/design-system/images/uploads/navigation_links.png" alt="Image of navigation links"></p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <!--
-<ul class="toc">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Contact us</a></li>
-  </ul>
--->
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-navigation-links-navigation-link-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-navigation-links-navigation-link-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-navigation-links-navigation-link-2">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-navigation-links-navigation-link-html-code-snippet-2">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-navigation-links-navigation-link-specs-2">
-                            Specs
-                        </a>
-                    </li>
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="details-navigation-links-navigation-link-html-code-snippet-2">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;!--
-&lt;ul class="toc"&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;News&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Contact us&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
---&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-navigation-links-navigation-link-specs-2">
-                    <div>
-                        <h4 class="variation-specs-title">Specs</h4>
-                        <div style="padding:40px">
-                            <p>No underline
-No visited link style</p>
-
-                        </div>
-                    </div>
-                </section>
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-    </section>
-    
     
 
     
@@ -1476,6 +1269,7 @@ No visited link style</p>
   <li><a href="https://cfpb.github.io/design-system/development/variables#typography-1">Variables</a></li>
   <li><a href="https://cfpb.github.io/design-system/components/buttons">Buttons</a></li>
   <li><a href="https://cfpb.github.io/design-system/foundation/fonts">Typography</a></li>
+  <li><a href="https://cfpb.github.io/design-system/foundation/iconography">Iconography</a></li>
 </ul>
 
                 </section>
@@ -1520,8 +1314,8 @@ No visited link style</p>
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/links.md">
-                    <time datetime="2020-07-08 16:12:19 -0400">
-                         4:12:19 PM Jul 08, 2020
+                    <time datetime="2020-07-10 14:28:56 -0400">
+                         2:28:56 PM Jul 10, 2020
                     </time>
                 </a>
             </small>

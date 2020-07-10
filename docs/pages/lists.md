@@ -85,10 +85,10 @@ variation_groups:
           * Numbers are right aligned to their associated period; all single-digit numbers fit inside the left margin
 
 
-          NESTED
+          NESTED ITEMS
 
 
-          * Nested items have bullets — solid squares — that are flush left with the preceding line of text. (Note that the code sample shows letters and not bullets!)
+          * Depending on the content and use case, nested items may either appear as bullets — solid squares — that are flush left with the preceding line of text, or lower-cased letters, as shown in the example.
   - variations:
       - variation_code_snippet: |-
           <ul class="m-list m-list__unstyled">

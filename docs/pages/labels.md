@@ -9,13 +9,6 @@ description: "Labels and legends are used to help users understand the meaning
 variation_groups:
   - variations:
       - variation_code_snippet: |-
-          <label class="a-label">
-              A basic label
-          </label>
-        variation_description: ""
-        variation_name: Basic label
-        variation_specs: ""
-      - variation_code_snippet: |-
           <label class="a-label a-label__heading">
           Label heading
           </label>

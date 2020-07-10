@@ -554,9 +554,8 @@ variation_groups:
 
           * Please note the importance of defining a `thead` and `tbody` to preserve the table’s header through sorting operations.
       - variation_name: Filtering tables
-        variation_code_snippet: >-
-          <!--Code from Design Manual
-
+        variation_code_snippet: >
+          
           <div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true">
               <button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false">
                   <span class="o-expandable_header-left o-expandable_label">
@@ -627,14 +626,9 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-
-          -->
-        variation_description: >-
+        variation_description: >
           Tables can be paired with a filter to show only rows that meet certain
           criteria.
-
-
-          ![Image showing a table with filter](/design-system/images/uploads/table_filter.png)
       - variation_name: Pagination
         variation_description: >-
           Tables with over 20 rows can be paired with pagination.

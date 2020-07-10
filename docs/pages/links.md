@@ -143,14 +143,16 @@ variation_groups:
           next line. If you want to prevent this, you can add the `__no-wrap`
           modifier to `.a-link__icon`.
         variation_code_snippet: |-
-          For more information on the upcoming event, or to RSVP, email
-          <a class="a-link
+          <p>
+              Documents minicons can emphasize a link that contains a
+              <a class="a-link
                     a-link__icon
                     a-link__no-wrap"
             href="#">
-              <span class="a-link_text">john.smith@cfpb.gov</span>
-              {% include icons/mail.svg %}
-          </a>.
+                  <span class="a-link_text">file or document</span>
+                  {% include icons/download.svg %}
+              </a>.
+          </p>
   - variation_group_name: Jump links
     variations:
       - variation_name: Jump link
@@ -199,36 +201,6 @@ variation_groups:
     variation_group_description: Jump links are standalone links that respond to
       small screens by converting to full block links that have a
       finger-friendly touch area. Reduce screen size to see these in action.
-  - variations:
-      - variation_code_snippet: >-
-          <h2>Header 2 containing <a href="#">a link</a></h2>
-
-          <p>Lorem ipsum dolor sit amet. Vestibulum orci ante, sagittis quis dolor a, fringilla dapibus nunc. Nulla in purus nisi. Curabitur vel odio et est auctor tincidunt. Et ultricies erat pellentesque nec. Suspendisse quis faucibus nec eu justo. Nulla ut massa eget dolor vehicula bibendum.</p>
-        variation_description: "Generally, it is not recommended to add links in
-          headers. Note that they are not underlined. "
-        variation_name: Header link
-      - variation_code_snippet: |-
-          <!--
-          <ul class="toc">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Contact us</a></li>
-            </ul>
-          -->
-        variation_description: >-
-          Navigation links are not underlined and do not get a visited link
-          style.
-
-
-
-
-          ![Image of navigation links](/design-system/images/uploads/navigation_links.png)
-        variation_name: Navigation links
-        variation_specs: |-
-          No underline
-          No visited link style
-    variation_group_name: Variations
 use_cases: ""
 guidelines: ""
 behavior: >-
@@ -263,6 +235,8 @@ related_items: >-
   * [Buttons](https://cfpb.github.io/design-system/components/buttons)
 
   * [Typography](https://cfpb.github.io/design-system/foundation/fonts)
+
+  * [Iconography](https://cfpb.github.io/design-system/foundation/iconography)
 last_updated: 2019-09-17T14:52:22.684Z
 secondary_section: Text
 ---

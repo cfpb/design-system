@@ -18,6 +18,9 @@ variation_groups:
       ***Use the following prompts to get started on your component page:***
 
 
+      *First, add a variation group.*
+
+
       *1) In the "Variation group name" field,*  
 
 
@@ -27,7 +30,7 @@ variation_groups:
       * *Use the label "Types" if there is **more than one** standard component with different use cases. See [buttons](https://cfpb.github.io/design-system/components/buttons) as an example.*
 
 
-      *2) Click on the "Add variations" button below. 
+      *2) Click on the "Add variations" button below.* 
 
       * *If there's one standard component, leave the "Variation name" field blank.* 
 
@@ -37,7 +40,7 @@ variation_groups:
       *3) If there are states, add a single code snippet showing them, as shown in this example. If necessary, you can add an image instead of a code snippet, but live samples are strongly preferred.*
 
 
-      *4) If you have them, add implementation notes to the "Implementation details" tab. Add design and style notes to the "Optional specs" tab.*
+      *4) If you have them, add implementation notes to the "Implementation details" tab. Add design, production, and style notes to the "Optional specs" tab.*
     variations:
       - variation_name: ""
         variation_description: ""
@@ -126,13 +129,9 @@ variation_groups:
       Optional descriptive text. 1-3 sentences, 200-350 characters.
 
 
-      ### Instructions
 
 
-      ***Use the following prompts to add variations:***
-
-
-      *Add variations to this group. To get started, click on the "Add variations" button. Add a "Variation name" in the corresponding field, and fill in the description, code snippet, implementation, and specs fields.*
+      *If your component also has variations, add a second "variation group", add as many variations as needed, and label each in the "Variation name" field. Fill in details as needed.*
 
 
       *Occasionally, "Variations" may not be the right label for this group. Some other instances of this label: "Groups", "Sizes", "Responsive \[component]." see [checkboxes](https://cfpb.github.io/design-system/components/checkboxes), [buttons](https://cfpb.github.io/design-system/components/buttons), and  [tables](https://cfpb-sandbox.github.io/design-system/components/tables) for other ways to group samples.*

@@ -7,7 +7,7 @@ description: "Intro: Describe this component in 1-3 sentences. Explain why the
   page exists and what users will get out of the content on this page. Be brief.
   Limit to around 400 characters with spaces."
 variation_groups:
-  - variation_group_name: Standard [component name]
+  - variation_group_name: Standard [component name] or Types
     variation_group_description: >-
       Optional description. 1-3 sentences, 200-350 characters.
 
@@ -18,10 +18,13 @@ variation_groups:
       ***Use the following prompts to get started on your component page:***
 
 
-      *1) If there is one standard default component, add the label "Standard \[component]" to the field "Component variation group name" above. Examples: See [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) and [tables](https://cfpb-sandbox.github.io/design-system/components/tables).*
+      *In the "Variation group name" field,*  
 
 
-      *If your component doesn't have just one standard default, but rather more than one type with different use cases, add the label "Types" to the field "Component variation group name" above. Examples: [E-mail signup forms](*https://cfpb.github.io/design-system/components/e-mail-signup-forms*) and [buttons](*https://cfpb.github.io/design-system/components/buttons*).*
+      * *Use the label "Standard \[component]" if there is one standard default component. See [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) and [tables](https://cfpb-sandbox.github.io/design-system/components/tables) as examples.*
+
+
+      * Use the label "Types" if there is more than one standard component with different use cases. See [buttons](https://cfpb.github.io/design-system/components/buttons) as an example.*
 
 
       *2) Click on the "Add variations" button below. Leave the "Variation name" field blank if there's one standard component. If you're adding types, then you'll need to add more than one variation; add the name of each type to the "Variation name" field.*

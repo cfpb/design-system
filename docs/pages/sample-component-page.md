@@ -125,16 +125,25 @@ variation_groups:
           - Background: Gray 10 (#e7e8e9)
           - Avenir Next Regular, 16 px, Gray (#5a5d61)
   - variation_group_name: Variations
-    variation_group_description: >-
+    variation_group_description: >
       Optional descriptive text. 1-3 sentences, 200-350 characters.
 
 
+      *If your component has further variations beyond what's shown in the Standard/Types group above, add an additional "Variation group", and name it using the "Variation group name" field.*
 
 
-      *If your component also has variations, add a second "variation group", add as many variations as needed, and label each in the "Variation name" field. Fill in details as needed.*
+      *The name of this group may vary depending on use case. For example:*
+
+      * *Use the label "Groups" if you're showing component groupings. See [expandables](https://cfpb.github.io/design-system/components/expandables#groups) for an example.* 
+
+      * *Use the label "Sizes" if you're showing alternate component sizes. See [checkboxes](https://cfpb.github.io/design-system/components/checkboxes#sizes) for an example.*
+
+      * *One-off labels may also be appropriate (for example, "[Responsive tables](https://cfpb.github.io/design-system/components/tables#responsive-tables)", "[Links with icons](https://cfpb.github.io/design-system/components/links#links-with-icons))* 
+
+      * *If in doubt, use the label "Variations"* 
 
 
-      *Occasionally, "Variations" may not be the right label for this group. Some other instances of this label: "Groups", "Sizes", "Responsive \[component]." see [checkboxes](https://cfpb.github.io/design-system/components/checkboxes), [buttons](https://cfpb.github.io/design-system/components/buttons), and  [tables](https://cfpb-sandbox.github.io/design-system/components/tables) for other ways to group samples.*
+      *Once you've done that, click on the "Add variations" button, label each variation, and add implementation and specs details as needed.*
     variations:
       - variation_name: Feathered checkbox
         variation_description: Brief statement of what this is, if needed. Sample would appear below.

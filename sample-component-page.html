@@ -185,7 +185,7 @@
     <ul class="m-list m-list__horizontal m-list__horizontal-spaced">
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#standard-component-name">Standard [component name]</a>
+            <a class="m-list_link" href="#standard-component-name-or-types">Standard [component name] or Types</a>
         </li>
         
         <li class="m-list_item">
@@ -212,11 +212,11 @@
 
     
     
-    <section class="o-variation_group" id="standard-component-name">
+    <section class="o-variation_group" id="standard-component-name-or-types">
 
         
         <h2 class="o-variation_group_title">
-            Standard [component name]
+            Standard [component name] or Types
         </h2>
         
 
@@ -228,15 +228,28 @@
 
 <p><strong><em>Use the following prompts to get started on your component page:</em></strong></p>
 
-<p><em>1) If there is one standard default component, add the label “Standard [component]” to the field “Component variation group name” above. Examples: See <a href="https://cfpb.github.io/design-system/components/checkboxes">checkboxes</a> and <a href="https://cfpb-sandbox.github.io/design-system/components/tables">tables</a>.</em></p>
+<p><em>First, add a variation group.</em></p>
 
-<p><em>If your component doesn’t have just one standard default, but rather more than one type with different use cases, add the label “Types” to the field “Component variation group name” above. Examples: <a href="*https://cfpb.github.io/design-system/components/e-mail-signup-forms*">E-mail signup forms</a> and <a href="*https://cfpb.github.io/design-system/components/buttons*">buttons</a>.</em></p>
+<p><em>1) In the “Variation group name” field,</em></p>
 
-<p><em>2) Click on the “Add variations” button below. Leave the “Variation name” field blank if there’s one standard component. If you’re adding types, then you’ll need to add more than one variation; add the name of each type to the “Variation name” field.</em></p>
+<ul>
+  <li>
+    <p><em>Use the label “Standard [component]” if there is <strong>one</strong> standard default component. See <a href="https://cfpb.github.io/design-system/components/checkboxes">checkboxes</a> and <a href="https://cfpb-sandbox.github.io/design-system/components/tables">tables</a> as examples.</em></p>
+  </li>
+  <li>
+    <p><em>Use the label “Types” if there is <strong>more than one</strong> standard component with different use cases. See <a href="https://cfpb.github.io/design-system/components/buttons">buttons</a> as an example.</em></p>
+  </li>
+</ul>
+
+<p><em>2) Click on the “Add variations” button below.</em></p>
+<ul>
+  <li><em>If there’s one standard component, leave the “Variation name” field blank.</em></li>
+  <li><em>If there are types, add as many variations as needed. Add the name of each type to the “Variation name” field.</em></li>
+</ul>
 
 <p><em>3) If there are states, add a single code snippet showing them, as shown in this example. If necessary, you can add an image instead of a code snippet, but live samples are strongly preferred.</em></p>
 
-<p><em>4) If you have them, add implementation notes to the “Implementation details” tab. Add design and style notes to the “Optional specs” tab.</em></p>
+<p><em>4) If you have them, add implementation notes to the “Implementation details” tab. Add design, production, and style notes to the “Optional specs” tab.</em></p>
 
         </div>
         
@@ -464,13 +477,17 @@
         <div class="o-variation_group_description">
             <p>Optional descriptive text. 1-3 sentences, 200-350 characters.</p>
 
-<h3 id="instructions">Instructions</h3>
+<p><em>If your component has further variations beyond what’s shown in the Standard/Types group above, add an additional “Variation group”, and name it using the “Variation group name” field.</em></p>
 
-<p><strong><em>Use the following prompts to add variations:</em></strong></p>
+<p><em>The name of this group may vary depending on use case. For example:</em></p>
+<ul>
+  <li><em>Use the label “Groups” if you’re showing component groupings. See <a href="https://cfpb.github.io/design-system/components/expandables#groups">expandables</a> for an example.</em></li>
+  <li><em>Use the label “Sizes” if you’re showing alternate component sizes. See <a href="https://cfpb.github.io/design-system/components/checkboxes#sizes">checkboxes</a> for an example.</em></li>
+  <li><em>One-off labels may also be appropriate (for example, “<a href="https://cfpb.github.io/design-system/components/tables#responsive-tables">Responsive tables</a>”, “<a href="https://cfpb.github.io/design-system/components/links#links-with-icons">Links with icons</a>)</em></li>
+  <li><em>If in doubt, use the label “Variations”</em></li>
+</ul>
 
-<p><em>Add variations to this group. To get started, click on the “Add variations” button. Add a “Variation name” in the corresponding field, and fill in the description, code snippet, implementation, and specs fields.</em></p>
-
-<p><em>Occasionally, “Variations” may not be the right label for this group. Some other instances of this label: “Groups”, “Sizes”, “Responsive [component].” see <a href="https://cfpb.github.io/design-system/components/checkboxes">checkboxes</a>, <a href="https://cfpb.github.io/design-system/components/buttons">buttons</a>, and  <a href="https://cfpb-sandbox.github.io/design-system/components/tables">tables</a> for other ways to group samples.</em></p>
+<p><em>Once you’ve done that, click on the “Add variations” button, label each variation, and add implementation and specs details as needed.</em></p>
 
         </div>
         
@@ -724,8 +741,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/sample-component-page.md">
-                    <time datetime="2020-07-08 16:12:19 -0400">
-                         4:12:19 PM Jul 08, 2020
+                    <time datetime="2020-07-13 12:43:31 -0400">
+                        12:43:31 PM Jul 13, 2020
                     </time>
                 </a>
             </small>

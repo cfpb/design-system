@@ -196,6 +196,7 @@ behavior: >-
 
   | ![](/design-system/images/uploads/fcm-desktop02.png) | ![](/design-system/images/uploads/fcm-mobile02.png) |
 
+
   ### Responsive visual behavior
 
 

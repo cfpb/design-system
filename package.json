@@ -46,6 +46,7 @@
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",
   "dependencies": {
     "anchor-js": "^4.2.2",
+    "core-js": "^3.6.5",
     "escape-html": "^1.0.3",
     "ftdomdelegate": "4.0.2",
     "govuk-frontend": "^3.6.0",
@@ -57,6 +58,7 @@
     "normalize-legacy-addon": "^0.1.0",
     "react": "16.13.1",
     "react-liquid": "2.0.1",
+    "regenerator-runtime": "^0.13.5",
     "slugify": "1.4.4"
   },
   "devDependencies": {

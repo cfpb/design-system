@@ -1,3 +1,5 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import CMS from 'netlify-cms';
 import StringTrimmedControl from './widgets/StringTrimmed';
 import genericPreviewTemplate from './widgets/genericPreviewTemplate';

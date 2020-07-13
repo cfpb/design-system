@@ -1,3 +1,7 @@
+/**
+ * Initialize the side navigation script to handle opening the sidebar
+ * when the page is resized between mobile and desktop sizes.
+ */
 function init() {
   const secondaryNavCat = document.querySelector( '.ds-nav-container' );
 

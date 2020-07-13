@@ -18,16 +18,20 @@ variation_groups:
       ***Use the following prompts to get started on your component page:***
 
 
-      *In the "Variation group name" field,*  
+      *1) In the "Variation group name" field,*  
 
 
-      * *Use the label "Standard \[component]" if there is one standard default component. See [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) and [tables](https://cfpb-sandbox.github.io/design-system/components/tables) as examples.*
+      * *Use the label "Standard \[component]" if there is **one** standard default component. See [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) and [tables](https://cfpb-sandbox.github.io/design-system/components/tables) as examples.*
 
 
-      * Use the label "Types" if there is more than one standard component with different use cases. See [buttons](https://cfpb.github.io/design-system/components/buttons) as an example.*
+      * *Use the label "Types" if there is **more than one** standard component with different use cases. See [buttons](https://cfpb.github.io/design-system/components/buttons) as an example.*
 
 
-      *2) Click on the "Add variations" button below. Leave the "Variation name" field blank if there's one standard component. If you're adding types, then you'll need to add more than one variation; add the name of each type to the "Variation name" field.*
+      *2) Click on the "Add variations" button below. 
+
+      * *If there's one standard component, leave the "Variation name" field blank.* 
+
+      * *If there are types, add as many variations as needed. Add the name of each type to the "Variation name" field.*
 
 
       *3) If there are states, add a single code snippet showing them, as shown in this example. If necessary, you can add an image instead of a code snippet, but live samples are strongly preferred.*

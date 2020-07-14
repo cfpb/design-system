@@ -39,7 +39,7 @@ guidelines: >-
   communicating complex topics.
 
 
-  The color palette should use the full range of primary and secondary colors, but selectively use a maximum of 3-4 colors, using midtones and tints to differentiate components. Illustrations should also make use of 100% white and black.
+  The color palette should use the full range of primary and secondary colors, but selectively use a maximum of 3-4 colors, using midtones and tints to differentiate components. Illustrations should also make use of 100% white and black. Visit the [color page](https://cfpb.github.io/design-system/foundation/color) for color values. 
 
 
   ### Composition

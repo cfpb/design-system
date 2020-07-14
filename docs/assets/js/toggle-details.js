@@ -43,7 +43,7 @@ function toggleDetails( button, document = window.document, state ) {
  * @param {HTMLNode} toggleBtn - The button that called this method.
  */
 function toggleAllDetails( toggleBtn ) {
-  if ( isShowingAllDetails ) {
+  if ( isShowingAllDetails ) {
     toggleBtn.querySelector( '.a-btn_text' ).innerHTML = 'Show all details';
     toggleBtn.setAttribute( 'title', 'Show all details' );
   } else {
@@ -54,7 +54,7 @@ function toggleAllDetails( toggleBtn ) {
   const codeEls = document.querySelectorAll( '.a-toggle_code' );
   let buttonElm;
   for ( let i = 0, len = codeEls.length; i < len; i++ ) {
-    buttonElm = codeEls[i].querySelector( 'button:not(.u-hidden)' )
+    buttonElm = codeEls[i].querySelector( 'button:not(.u-hidden)' );
     toggleDetails(
       buttonElm,
       window.document,
@@ -69,4 +69,4 @@ export {
   TOGGLE_ATTRIBUTE,
   toggleDetails,
   toggleAllDetails
-}
+};

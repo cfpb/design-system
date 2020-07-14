@@ -1,6 +1,6 @@
 import {
-  toggleDetails,
-  toggleAllDetails
+  toggleAllDetails,
+  toggleDetails
 } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
@@ -39,6 +39,18 @@ if ( tabs && tabs.length > 0 ) {
   }
 }
 
+const toggleAllBtn = document.querySelector( '#toggle-details' );
+const toggleBtns = document.querySelectorAll( '.a-toggle_code button' );
+
+toggleAllBtn.addEventListener( 'click', handleToggleAllClick, false );
+
+for ( let i = 0, len = toggleBtns.length; i < len; i++ ) {
+  toggleBtns[i].addEventListener( 'click', handleToggleClick, false );
+}
+
+/**
+ * @param {MouseEvent} event - The mouse event object from the click.
+ */
 function handleToggleAllClick( event ) {
   event.preventDefault();
   toggleAllDetails( toggleAllBtn );
@@ -48,15 +60,6 @@ function handleToggleAllClick( event ) {
  * @param {MouseEvent} event - The mouse event object from the click.
  */
 function handleToggleClick( event ) {
-  let target = event.target;
+  const target = event.target;
   toggleDetails( target );
-}
-
-const toggleAllBtn = document.querySelector( '#toggle-details' );
-const toggleBtns = document.querySelectorAll( '.a-toggle_code button' );
-
-toggleAllBtn.addEventListener( 'click', handleToggleAllClick, false );
-
-for ( let i = 0, len = toggleBtns.length; i < len; i++ ) {
-  toggleBtns[i].addEventListener( 'click', handleToggleClick, false );
 }

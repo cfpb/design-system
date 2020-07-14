@@ -498,13 +498,13 @@
 
             
             <div class="m-variation_name">
-                <h3>Standalone links</h3>
+                <h3>Call-to-action links</h3>
             </div>
             
 
             
             <div class="m-variation_description">
-                <p>Standalone links (e.g., in a call to action or list of links) should be medium weight.</p>
+                <p>Call-to-action links are standalone links underneath paragraphs that highlight users’ next steps. They are medium weight and often used in unordered lists.</p>
 
             </div>
             
@@ -512,21 +512,12 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <ul class="medium-ex m-list m-list__unstyled">
+                <ul class="m-list m-list__links">
     <li class="m-list_item">
-        <a href="#">Default link style</a>
+        <a class="m-list_link" href="#">Sample call-to-action link</a>
     </li>
     <li class="m-list_item">
-        <a href="#" class="hover">Hover link style</a>
-    </li>
-    <li class="m-list_item">
-        <a href="#" class="focus">Focused link style</a>
-    </li>
-    <li class="m-list_item">
-        <a href="#" class="active">Active link style</a>
-    </li>
-    <li class="m-list_item">
-        <a href="#" class="visited">Visited link style</a>
+        <a class="m-list_link" href="#">Another sample call-to-action link</a>
     </li>
 </ul>
             </div>
@@ -540,45 +531,42 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-standalone-links-standalone-link-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-standalone-links-standalone-link-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-call-to-action-links-call-to-act-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-call-to-action-links-call-to-act-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-standalone-links-standalone-link-2">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-call-to-action-links-call-to-act-2">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-standalone-links-standalone-link-html-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#details-call-to-action-links-call-to-act-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
                     
                     
                     
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-call-to-action-links-call-to-act-implementation-2">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-standalone-links-standalone-link-html-code-snippet-2">
+                <section class="govuk-tabs__panel" id="details-call-to-action-links-call-to-act-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;ul class="medium-ex m-list m-list__unstyled"&gt;
+                            <pre><code class="language-html">&lt;ul class="m-list m-list__links"&gt;
     &lt;li class="m-list_item"&gt;
-        &lt;a href="#"&gt;Default link style&lt;/a&gt;
+        &lt;a class="m-list_link" href="#"&gt;Sample call-to-action link&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class="m-list_item"&gt;
-        &lt;a href="#" class="hover"&gt;Hover link style&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class="m-list_item"&gt;
-        &lt;a href="#" class="focus"&gt;Focused link style&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class="m-list_item"&gt;
-        &lt;a href="#" class="active"&gt;Active link style&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class="m-list_item"&gt;
-        &lt;a href="#" class="visited"&gt;Visited link style&lt;/a&gt;
+        &lt;a class="m-list_link" href="#"&gt;Another sample call-to-action link&lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
                         </div>
@@ -590,6 +578,16 @@
                 
 
                 <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-call-to-action-links-call-to-act-implementation-2">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Call-to-action links are used in <a href="https://cfpb.github.io/design-system/patterns/cards">cards</a> and <a href="https://cfpb.github.io/design-system/patterns/info-unit-groups">info unit groups</a>, among other places.</p>
+
+                        </div>
+                    </div>
+                </section>
                 
 
                 <!-- Specs -->
@@ -1314,8 +1312,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/components/links.md">
-                    <time datetime="2020-07-10 14:28:56 -0400">
-                         2:28:56 PM Jul 10, 2020
+                    <time datetime="2020-07-14 12:27:13 -0400">
+                        12:27:13 PM Jul 14, 2020
                     </time>
                 </a>
             </small>

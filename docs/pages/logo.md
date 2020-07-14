@@ -80,7 +80,7 @@ variation_groups:
           <div class="content-67 content-last" markdown="1">
 
 
-          ![Small execution logo](/design-system/images/uploads/logo1_small-execution_-2.png "Small execution logo")
+          ![Small execution logo](/design-system/images/uploads/logo1_small-execution.png "Small execution logo")
 
 
           </div>
@@ -105,7 +105,7 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![Spanish logo](/design-system/images/uploads/logo1_spanish_-2.png "Spanish logo")
+          ![Spanish logo](/design-system/images/uploads/logo1_spanish.png "Spanish logo")
 
 
           </div>
@@ -123,7 +123,7 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![One color logo](/design-system/images/uploads/logo1_one-color_-2.png "One color logo")
+          ![One color logo](/design-system/images/uploads/logo1_one-color.png "One color logo")
 
 
           </div>

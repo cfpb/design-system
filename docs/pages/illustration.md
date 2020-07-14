@@ -54,7 +54,13 @@ guidelines: >-
   Do not use negative space to define outlines.
 
 
+  <div class="content-67 content-first" markdown="1">
+
+
   ![Illustration composition](/design-system/images/uploads/illustration7_-2.png)
+
+
+  </div>
 
 
   ### Form
@@ -66,7 +72,13 @@ guidelines: >-
   To stylize illustrations according to CFPB standards, use relative sizing on stroke weights with a rounded end cap. For curved lines, the stylized stroke is recommended throughout illustrations.
 
 
+  <div class="content-50 content-first" markdown="1">
+
+
   ![Illustration form](/design-system/images/uploads/illustration10_-2.png)
+
+
+  </div>
 
 
   ### Shading and highlights
@@ -81,7 +93,13 @@ guidelines: >-
   There are two types of highlights available for illustrations; curved and diagonal. The curved highlight is recommended when the object is round. Diagonal highlights are mostly used in rectangular objects. They are also frequently used to show reflections. To create a diagonal highlight, a tint of the background color is cast from the top-right corner of an object at a 45º angle.
 
 
+  <div class="content-50 content-first" markdown="1">
+
+
   ![Illustration shading and highlights](/design-system/images/uploads/illustration9_-2.png)
+
+
+  </div>
 
 
   ### Shadows
@@ -93,7 +111,13 @@ guidelines: >-
   The overall placement of shadows should be carefully decided by the designer and consistent throughout the project.
 
 
+  <div class="content-50 content-first" markdown="1">
+
+
   ![Illustration shadows](/design-system/images/uploads/illustration8_-2.png)
+
+
+  </div>
 behavior: ""
 accessibility: >-
   ### Include text alternatives for non-text content

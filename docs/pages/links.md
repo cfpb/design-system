@@ -75,29 +75,26 @@ variation_groups:
           * Teal
 
           * 1px solid bottom border
-      - variation_name: Standalone links
-        variation_code_snippet: |-
-          <ul class="medium-ex m-list m-list__unstyled">
+      - variation_name: Call-to-action links
+        variation_code_snippet: >-
+          <ul class="m-list m-list__links">
               <li class="m-list_item">
-                  <a href="#">Default link style</a>
+                  <a class="m-list_link" href="#">Sample call-to-action link</a>
               </li>
               <li class="m-list_item">
-                  <a href="#" class="hover">Hover link style</a>
-              </li>
-              <li class="m-list_item">
-                  <a href="#" class="focus">Focused link style</a>
-              </li>
-              <li class="m-list_item">
-                  <a href="#" class="active">Active link style</a>
-              </li>
-              <li class="m-list_item">
-                  <a href="#" class="visited">Visited link style</a>
+                  <a class="m-list_link" href="#">Another sample call-to-action link</a>
               </li>
           </ul>
         variation_description: >+
-          Standalone links (e.g., in a call to action or list of links) should
-          be medium weight.
+          Call-to-action links are standalone links underneath paragraphs that
+          highlight users' next steps. They are medium weight and often used in
+          unordered lists.
 
+        variation_implementation: Call-to-action links are used in
+          [cards](https://cfpb.github.io/design-system/patterns/cards) and [info
+          unit
+          groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
+          among other places.
     variation_group_description: >+
       Links that appear in body text (`p`), link lists (`li`), or definitions
       (`dd`) are automatically underlined. To enable underlines elsewhere, e.g.

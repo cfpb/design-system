@@ -35,7 +35,7 @@ describe( 'The "show details" toggling feature', function() {
         before( function() {
           browser.url( componentPage.url );
           browser.refresh();
-          browser.setWindowSize( 1024, 768 );
+          browser.setWindowSize( 1400, 800 );
           showDetailsButton = $( 'button=Show details' );
           hideDetailsButton = $( 'button=Hide details' );
           detailsTabs = [ ...$$( '.govuk-tabs' ) ];

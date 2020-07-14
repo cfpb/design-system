@@ -9,6 +9,9 @@ let isShowingAllDetails = false;
  * Toggle details for a single variation.
  * @param {DOMNode} button - Button element that controls the toggling
  * @param {DOMNode} document - Defaults to window.document but overridable for ReactDOM
+ * @param {string} [state] -
+ *   Optional param to specify whether to force showing or hiding of the details
+ *   Value should be either 'show' or 'hide'.
  */
 function toggleDetails( button, document = window.document, state ) {
   const container = button.parentNode;

@@ -3,7 +3,7 @@ const TOGGLE_ATTRIBUTE = 'data-toggle-details';
 const STATE_SHOW = 'show';
 const STATE_HIDE = 'hide';
 
-let isShowingAllDetails = true;
+let isShowingAllDetails = false;
 
 /**
  * Toggle details for a single variation.
@@ -40,7 +40,6 @@ function toggleDetails( button, document = window.document, state ) {
  * @param {HTMLNode} toggleBtn - The button that called this method.
  */
 function toggleAllDetails( toggleBtn ) {
-  isShowingAllDetails = !isShowingAllDetails;
   if ( isShowingAllDetails ) {
     toggleBtn.querySelector( '.a-btn_text' ).innerHTML = 'Show all details';
     toggleBtn.setAttribute( 'title', 'Show all details' );
@@ -48,6 +47,7 @@ function toggleAllDetails( toggleBtn ) {
     toggleBtn.querySelector( '.a-btn_text' ).innerHTML = 'Hide all details';
     toggleBtn.setAttribute( 'title', 'Hide all details' );
   }
+
   const codeEls = document.querySelectorAll( '.a-toggle_code' );
   let buttonElm;
   for ( let i = 0, len = codeEls.length; i < len; i++ ) {
@@ -58,6 +58,8 @@ function toggleAllDetails( toggleBtn ) {
       isShowingAllDetails ? STATE_HIDE : STATE_SHOW
     );
   }
+
+  isShowingAllDetails = !isShowingAllDetails;
 }
 
 export {

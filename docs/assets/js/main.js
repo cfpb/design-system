@@ -41,7 +41,7 @@ if ( tabs && tabs.length > 0 ) {
 
 function handleToggleAllClick( event ) {
   event.preventDefault();
-  toggleAllDetails();
+  toggleAllDetails( toggleAllBtn );
 }
 
 /**

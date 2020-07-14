@@ -10,8 +10,7 @@ variation_groups:
   - variation_group_name: Lockups
     variation_group_description: ""
     variations:
-      - variation_description: >+
-          
+      - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
 
@@ -24,18 +23,15 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![Horizontal lockup logo](https://cfpb.github.io/design-manual/static/img/logo/Logo1_horizontal-lockup_@2.png "Horizontal lockup logo")
+          ![Horizontal lockup logo](/design-system/images/uploads/horizontal_logo_clear_space.png "Horizontal lockup logo")
 
 
           </div>
-
         variation_name: Horizontal
         variation_specs: ""
       - variation_name: Vertical
-        variation_description: >
-          
+        variation_description: >-
           <div class="content-33 content-first" markdown="1">
-
 
 
           The vertical lockup is useful for square frames or narrow columns.
@@ -47,14 +43,13 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![Vertical lockup logo](https://cfpb.github.io/design-manual/static/img/logo/Logo1_vertical-lockup_@2.png "Vertical lockup logo")
+          ![Vertical lockup logo](/design-system/images/uploads/vertical_logo_clear_space.png "Vertical lockup logo")
 
 
           </div>
         variation_specs: ""
       - variation_name: Isolated
-        variation_description: >
-          
+        variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
 
@@ -67,13 +62,12 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![Isolated logo](https://cfpb.github.io/design-manual/static/img/logo/Logo1_isolated-lockup_@2.png "Isolated logo")
+          ![Isolated logo](/design-system/images/uploads/isolated_logo_clear_space.png "Isolated logo")
 
 
           </div>
         variation_specs: ""
-      - variation_description: >
-          
+      - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
 
@@ -86,7 +80,7 @@ variation_groups:
           <div class="content-67 content-last" markdown="1">
 
 
-          ![Small execution logo](https://cfpb.github.io/design-manual/static/img/logo/Logo1_small-execution_@2.png "Small execution logo")
+          ![Small execution logo](/design-system/images/uploads/logo1_small-execution_-2.png "Small execution logo")
 
 
           </div>
@@ -95,7 +89,7 @@ variation_groups:
     variation_group_name: Variations
     variations:
       - variation_name: Spanish logo
-        variation_description: >
+        variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
 
@@ -111,12 +105,12 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![Spanish logo](https://cfpb.github.io/design-manual/static/img/logo/Logo1_spanish_@2.png "Spanish logo")
+          ![Spanish logo](/design-system/images/uploads/logo1_spanish_-2.png "Spanish logo")
 
 
           </div>
         variation_specs: ""
-      - variation_description: >
+      - variation_description: >-
           <div class="content-33 content-first" markdown="1">
 
 
@@ -129,7 +123,7 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![One color logo](https://cfpb.github.io/design-manual/static/img/logo/Logo1_one-color_@2.png "One color logo")
+          ![One color logo](/design-system/images/uploads/logo1_one-color_-2.png "One color logo")
 
 
           </div>

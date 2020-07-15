@@ -17,7 +17,7 @@ variation_groups:
 
       | ![](/design-system/images/uploads/docdetail_top_example.jpg) | Example: [2019 Consumer Response annual report](https://www.consumerfinance.gov/data-research/research-reports/2019-consumer-response-annual-report/)
 use_cases: >-
-  ##### When to use
+  ### When to use
 
 
   * When the primary goal of the page is to encourage users to download a resource or understand the context around a document.
@@ -25,30 +25,32 @@ use_cases: >-
   * When creating a filterable list of items, document detail pages house the items within the filterable list.
 
 
-  ##### When other options are better
+  ### When other options are better
+
 
   * When providing the full text of an article or detailed content, but not specifically focused on a document for download, use the more general [Learn page template](https://cfpb.github.io/design-system/pages/learn-pages).
 guidelines: >-
-  * Page content should provide context for the document housed on the page and
-  should help users get a sense of what will be in the document before the
-  download it; what answers it provides, what they will learn, etc.
+  ### Content guidelines
+
+
+  * Page content should provide context for the document housed on the page and should help users get a sense of what will be in the document before the download it; what answers it provides, what they will learn, etc.
 
   * Multiple documents should only be grouped on a single page when they are different versions of a single document, or provide context for one another.
 
 
-  ###### Area 1: Item introduction
+  #### Area 1: Item introduction
 
 
   * Using the [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions) is required.
 
 
-  ###### Area 2: Main content
+  #### Area 2: Main content
 
 
   * At least one pattern is required here.
 
 
-  ###### Area 3: Sidebar
+  #### Area 3: Sidebar
 
 
   * Strongly recommend using the metadata sidebar component in order to display basic information about the document(s) housed on this page.
@@ -56,7 +58,7 @@ guidelines: >-
   * When the metadata sidebar is used, it must appear at the top of the sidebar area.
 
 
-  ##### Post preview
+  #### Post preview
 
 
   * Function of the post preview is to provide context to the user to help them decide if the document has the information they need as they browse through a list.
@@ -68,7 +70,7 @@ guidelines: >-
   * Post preview description text should be limited to 2-3 sentences; 50 words. Language should provide a “nudge” to action.
 
 
-  ###### Possible metadata inputs shown
+  ##### Possible metadata inputs shown
 
 
   ![Possible metadata inputs shown](/design-system/images/uploads/post_style.jpg)
@@ -76,17 +78,17 @@ guidelines: >-
 
   1. Category label - minicon, H4 (2 max)
 
-  2. Date - H5 Grey #75797C __(required)__
+  2. Date - H5 Grey #75797C **(required)**
 
   3. Image (thumbnail) - 30px padding
 
   4. Event date icon - Unique option for events, dynamic icon with 15px padding
 
-  5. Post title - H3 __(required)__
+  5. Post title - H3 **(required)**
 
   6. Sub-heading - H6
 
-  7. Description - Avenir paragraph __(required)__
+  7. Description - Avenir paragraph **(required)**
 
   8. Author label - Avenir paragraph
 
@@ -98,26 +100,25 @@ behavior: >-
   area.
 
 
-  | Above 900 px | Below 901 px |
+  | Above 900 px                                                                      | Below 901 px                                                                             |
 
-  | -- | -- |
+  | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 
   | ![Breakpoints 901+](/design-system/images/uploads/docdetail_behavior_desktop.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/docdetail_behavior_mobile.jpg) |
 
 
-  ##### Post preview
+  #### Post preview
 
 
   When document detail pages are accessed via entries within a filterable list, information about each page is displayed on filterable list pages via the post preview component.
 
 
+  #### Post preview within a filterable list
 
-  ###### Post preview within a filterable list
 
+  | Above 600 px                                                                                                           | Below 601 px                                                                                                                  |
 
-  | Above 600 px | Below 601 px |
-
-  | -- | -- |
+  | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 
   | ![Post preview within a filterable list at breakpoints 601+](/design-system/images/uploads/post_preview_desktop_1.jpg) | ![Post preview within a filterable list at breakpoints 600 and less](/design-system/images/uploads/post_preview_mobile_1.jpg) |
 related_items: >-

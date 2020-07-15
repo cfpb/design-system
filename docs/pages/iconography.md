@@ -411,7 +411,7 @@ guidelines: >-
 
   ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png)
 behavior: >-
-  #### SVG icon basics
+  ### SVG icon basics
 
 
   The cf-icon component provides Scalable Vector Graphics (SVG) icons. This component can be used by itself, but is designed to work with the Design System.
@@ -432,7 +432,7 @@ behavior: >-
   > **Note to contributors:** If any icon is ever updated, you must be sure to also update each of the alias SVGs.
 
 
-  ##### What the Less is doing
+  #### What the Less is doing
 
 
   If you look in `cf-icons.less`, below the aforementioned sizing variable, you’ll see this simple rule:
@@ -456,7 +456,7 @@ behavior: >-
   We start by limiting the size of the SVG to a proportion of the text height, using the `@cf-icon-height` variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set `vertical-align: text-top;`. Finally, setting `fill: currentColor;` tells the SVG to set its path’s fill `color` to match the color value of its parent element.
 
 
-  ##### Caveats
+  #### Caveats
 
 
   There are two modifications based on restrictions in Internet Explorer 8 and 9 (IE8/IE9).
@@ -468,7 +468,7 @@ behavior: >-
   Second, IE9 displays SVGs as full width by default (not the paths, just the SVG container). To eliminate this issue we’ve set the width of the SVGs to match the height. The whitespace to the left or right may not be quite accurate, but we determined this is an acceptable difference for a legacy browser like IE9.
 
 
-  ##### Inline SVG background
+  #### Inline SVG background
 
 
   In some cases we embed an SVG as a background image. To accomplish this, a custom less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name )`, where `@name` is the SVG icon canonical name.

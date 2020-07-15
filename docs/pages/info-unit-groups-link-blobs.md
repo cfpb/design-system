@@ -10,7 +10,7 @@ description: In general, info unit groups provide context and lead users to
   [sublanding
   pages](https://cfpb.github.io/design-system/templates/sublanding-pages), and
   [browse pages](https://cfpb.github.io/design-system/templates/browse-pages))
-  to a child or sibling page.
+  to a child or sibling page. Yes.
 variation_groups:
   - variations:
       - variation_code_snippet: ""
@@ -20,13 +20,13 @@ variation_groups:
           "Info unit group: example of half width link blob")
 
 
-          ##### When to use
+          #### When to use
 
 
           * Ideally, when an even number of these components can be featured together.
 
 
-          ##### When other options are better
+          #### When other options are better
 
 
           * When the number of components would be better featured in multiples of 3, use the third-width link blob.
@@ -51,13 +51,13 @@ variation_groups:
           "Info unit group: example of third width link blob")
 
 
-          ##### When to use
+          #### When to use
 
 
           * Ideally, when a group of these components can be featured together in multiples of three (3, 6, 9, etc.).
 
 
-          ##### When other options are better
+          #### When other options are better
 
 
           * When the number of components would be better featured in multiples of 2, use the half-width link blob instead
@@ -93,7 +93,7 @@ variation_groups:
           When used in conjunction with half width link blob, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
 
 
-          ##### When to use
+          #### When to use
 
 
           * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
@@ -103,7 +103,7 @@ variation_groups:
           * Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.
 
 
-          ##### When other options are better
+          #### When other options are better
 
 
           * When content doesn’t require imagery. Suggest using the half width link blob pattern instead.
@@ -143,8 +143,8 @@ guidelines: >-
 
     * For half-width link blobs, one or two lines different is ok
     * For third-width link blobs, a difference of one line is ok
-behavior: >
-  #### Half-width link blob
+behavior: >-
+  ### Half-width link blob
 
 
   | Above 600 px                                                           | Below 601 px                                                           |
@@ -154,7 +154,7 @@ behavior: >
   | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png) |
 
 
-  #### Third-width link blob
+  ### Third-width link blob
 
 
   | Above 600 px                                                            | Below 601 px                                                            |
@@ -164,7 +164,7 @@ behavior: >
   | ![](/design-system/images/uploads/third_width_link_blob_behavior_1.png) | ![](/design-system/images/uploads/third_width_link_blob_behavior_2.png) |
 
 
-  #### 25/75 image and text component
+  ### 25/75 image and text component
 
 
   At breakpoints below 601, side-by-side modules stack vertically in Z-order as shown below, and the mobile link style is used for the call to action link(s)

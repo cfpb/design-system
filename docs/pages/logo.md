@@ -454,7 +454,7 @@ guidelines: >-
   <div class="content-33 content-first misuse" markdown="1">
 
 
-  ### Examples of Misuse
+  ### Misuse
 
 
   {% include icons/error-round.svg %} Don’t remove the light beam. It is essential to the logo.

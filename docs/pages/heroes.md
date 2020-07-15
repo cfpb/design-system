@@ -311,29 +311,35 @@ variation_groups:
           text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
     variation_group_description: ""
 use_cases: >-
-  ##### When to use
+  ### When to use
+
 
   * When orienting a user to a new section or topic (using the [landing](https://cfpb.github.io/design-system/pages/landing-pages) or [sublanding page template](https://cfpb.github.io/design-system/pages/sublanding-pages))
 
   * When the page serves as a navigational tool with general information about a subject and links to lower-level pages that contain more specific information
 
 
-  ##### When other options are better
+  ### When other options are better
+
 
   * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
 guidelines: >-
-  Hero content should orient the user and communicate the primary goal of the
-  page. Copy should be succinct and engaging, reflecting the voice and tone of
-  the CFPB.
+  ### Content guidelines
+
+
+  Hero content should orient the user and communicate the primary goal of the page. Copy should be succinct and engaging, reflecting the voice and tone of the CFPB.
 
 
   #### Do
 
+
   * Write hero copy from the user’s perspective.
+
     * Orient the user: "Is this page what I was looking for?"
     * Engage the user: "Do I want to keep reading?"
 
   #### Don't
+
 
   * Don't write copy from the perspective of what the Bureau does or offers. It’s less about what we can do for them or what we can offer them, and more about what the user can do with the resources we provide.
 

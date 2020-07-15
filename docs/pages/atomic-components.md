@@ -19,7 +19,8 @@ use_cases: >-
   An example use case in building a Molecule: molecules are prefixed with “m-” in CSS, JavaScript, and HTML files, as demonstrated below.
 
 
-  #### HTML:
+  ### HTML:
+
 
   ```
 
@@ -36,7 +37,9 @@ use_cases: >-
 
   ```
 
-  #### CSS:
+
+  ### CSS:
+
 
   ```
 
@@ -47,7 +50,9 @@ use_cases: >-
       …
   ```
 
-  #### JavaScript:
+
+  ### JavaScript:
+
 
   ```
 

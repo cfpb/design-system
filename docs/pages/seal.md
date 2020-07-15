@@ -9,10 +9,22 @@ variation_groups:
   - variation_group_name: Types
     variations:
       - variation_description: >-
+          <div class="content-33 content-first" markdown="1">
+
+
           The primary seal should be used on materials printed in color.
 
 
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
+
+
           ![CFPB primary seal](/design-system/images/uploads/cfpb_primary_seal_color_rgb.png)
+
+
+          </div>
         variation_name: Primary seal
         variation_specs: |-
           The seal is comprised of the following colors.
@@ -58,12 +70,22 @@ variation_groups:
     variations:
       - variation_name: One-color seal
         variation_description: >-
-          For the rare case that the seal is on a material not being printed in
-          full color, the one-color seal in black should be used. The one-color
-          seal should always be placed on a white background.
+          <div class="content-33 content-first" markdown="1">
+
+
+          For the rare case that the seal is on a material not being printed in full color, the one-color seal in black should be used. The one-color seal should always be placed on a white background.
+
+
+          </div>
+
+
+          <div class="content-50 content-last" markdown="1">
 
 
           ![CFPB one-color seal](/design-system/images/uploads/bcfp_primary_seal_black_rgb.png)
+
+
+          </div>
 use_cases: >-
   Use of the seal is very limited. It should never be used on consumer-facing
   materials, as it is important that the CFPB logo is consistently used to help
@@ -92,31 +114,45 @@ use_cases: >-
   * Employee awards, commendations, and certificates from the Director
 
   * Delegations of Authority from the Director
-guidelines: ""
+guidelines: >-
+  ### Cleaspace
+
+
+  Use ample space around the seal to ensure maximum impact and keep the mark from looking cluttered. The clear space on each side of the seal should be ¼” of the seal’s size. 
+
+
+  ### Scale
+
+
+  Use the seal at its benchmark size of 1.75” for most materials, such as a report cover. For materials such as signage and flags where the seal needs to appear larger, increase the seal's size in increments of 0.5”. 
+
+
+  ### Background
+
+
+  Place the seal on a white background. The only other color the seal may be placed on is navy, and this is reserved for select cases, such as the CFPB's flag.
+
+
+
+
+  ### Misuse
+
+
+  * Don’t stretch or condense the seal. This weakens the brand. 
+
+  * Don’t alter the text of the seal in any way.
+
+  * Don’t remove design or text elements from the seal. 
+
+  * Don’t apply a drop shadow.
+
+  * Don’t outline the seal or change its colors.
+
+  * Don’t rotate the seal. This impairs readability.
+
+  * Don't place the seal on a background that is a pattern, photo, or color other than white or navy.
 behavior: ""
-restrictions:
-  - restrictions_do: >-
-      * Use the seal at its benchmark size of 1.75” for most materials, such as
-      a report cover. For materials such as signage and flags where the seal
-      needs to appear larger, increase the seal's size in increments of 0.5”. 
-
-      * Use ample space around the seal to ensure maximum impact and keep the mark from looking cluttered. The clear space on each side of the seal should be ¼” of the seal’s size. 
-
-      * Place the seal on a white background. The only other color the seal may be placed on is navy, and this is reserved for select cases, such as the CFPB's flag.
-    restrictions_do_not: >-
-      * Don’t stretch or condense the seal. This weakens the brand. 
-
-      * Don’t alter the text of the seal in any way.
-
-      * Don’t remove design or text elements from the seal. 
-
-      * Don’t apply a drop shadow.
-
-      * Don’t outline the seal or change its colors.
-
-      * Don’t rotate the seal. This impairs readability.
-
-      * Don't place the seal on a background that is a pattern, photo, or color other than white or navy.
+restrictions: []
 related_items: ""
 last_updated: 2020-02-27T16:56:46.952Z
 secondary_section: Brand guidelines

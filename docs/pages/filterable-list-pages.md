@@ -21,7 +21,7 @@ variation_groups:
 
       | Example: [Research and reports](https://www.consumerfinance.gov/data-research/research-reports/) | Example: [Final rules](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/)
 use_cases: >-
-  ### WHEN TO USE
+  ### When to use
 
 
   * When asking users to look through more than 20 articles, documents, or resources.

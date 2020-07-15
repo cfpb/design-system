@@ -54,8 +54,9 @@ variation_groups:
           * Avenir Next Regular
           * 16px / 22px at all browser widths
       - variation_code_snippet: >-
-          <p class="lead-paragraph">Ut enim ad minim veniam, quis nostrud
-          exercitation
+          <p class="lead-paragraph">Avenir Next Regular, 22px / 28px on large
+          screens and 18px / 22px on small screens. Ut enim ad minim veniam,
+          quis nostrud exercitation
 
           ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         variation_description: ""

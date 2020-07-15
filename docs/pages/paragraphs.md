@@ -84,8 +84,15 @@ variation_groups:
           * Avenir Next Regular
           * 11pt / 16pt
         variation_code_snippet: ""
-        variation_description: "![Print body
-          text](/design-system/images/uploads/paragraphs_071520-01.png)"
+        variation_description: >-
+          <p style="font-size: 11pt; font-weight: 400; line-height:16pt">Avenir
+          Next Regular, 11pt / 16pt. Lorem ipsum dolor sit amet, ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
+
+
+          <br>
       - variation_name: Subheading
         variation_specs: |-
           * Avenir Next Regular
@@ -94,7 +101,10 @@ variation_groups:
         variation_description: >-
           
 
-          ![Print subheading](/design-system/images/uploads/paragraphs_071520-02.png)
+          <p style="font-size: 16pt; font-weight: 400; line-height:20pt">Avenir Next Regular, 16pt / 20pt. Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+          <br>
 use_cases: ""
 guidelines: Refer to the [Guidelines section of the Fonts
   page](https://cfpb.github.io/design-system/foundation/fonts#guidelines) for

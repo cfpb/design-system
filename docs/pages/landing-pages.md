@@ -24,7 +24,7 @@ variation_groups:
 
       | Example: [Consumer Tools overview page](https://www.consumerfinance.gov/consumer-tools/) | Example: [About Us overview page](https://www.consumerfinance.gov/about-us/)
 use_cases: >-
-  ##### When to use
+  ### When to use
 
 
   * The landing page template should only be used for the top-level page under each main navigation section on the site to help users navigate to the various sub-sections within the navigation vertical. Examples: [Data & research overview](https://www.consumerfinance.gov/data-research/), [Policy & compliance overview](https://www.consumerfinance.gov/policy-compliance/).
@@ -32,17 +32,17 @@ use_cases: >-
   * This template may also be used for campaign pages.
 
 
-  ##### When other options are better
+  ### When other options are better
 
 
   * When a new page is needed within a navigation section, rather than at the top-level.
 
   * When page content includes paragraph copy or more detailed definitions or explanations.
 guidelines: >-
-  * Generally, content components should work together to provide an overview of
-  the information organized below this page or about the campaign. Give users
-  clear next steps and calls to actions so they can quickly decide what content
-  is relevant to them and where they should go next.
+  ### Content guidelines
+
+
+  * Generally, content components should work together to provide an overview of the information organized below this page or about the campaign. Give users clear next steps and calls to actions so they can quickly decide what content is relevant to them and where they should go next.
 
   * This page should be written and organized in a way that aids the user in skimming and quickly navigating to lower-level pages.
 
@@ -51,13 +51,13 @@ guidelines: >-
   * Email signup component should only be used on campaign landing pages. This component is not used on Landing pages.
 
 
-  ##### Area 1: Introduction
+  #### Area 1: Introduction
 
 
   * Choose between a [hero](https://cfpb.github.io/design-system/patterns/heroes) or [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) for this area.
 
 
-  ##### Area 2: Main content
+  #### Area 2: Main content
 
 
   * Must contain at least 1 pattern.
@@ -67,7 +67,7 @@ guidelines: >-
   * [Wells](/design-system/patterns/wells) should not be used at the top of this area if the introduction area contains a hero.
 
 
-  ##### Area 3: Sidebar
+  #### Area 3: Sidebar
 
 
   * Must contain at least 1 component.

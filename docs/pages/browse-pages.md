@@ -22,7 +22,8 @@ variation_groups:
           | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [TRID guidance page](https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/) |
         variation_name: ""
 use_cases: >-
-  ##### When to use
+  ### When to use
+
 
   * Target user is primarily in a browse mindset, interested in quickly consuming information and keeping an eye out for key phrases, so content on this page should be grouped to help them quickly find relevant information.
 
@@ -31,12 +32,15 @@ use_cases: >-
   * When introducing a sub-topic, describing action items, or listing out resources.
 
 
-  ##### When other options are better
+  ### When other options are better
+
 
   * When page content is a lengthy article or text.
 guidelines: >-
-  Content should be displayed in a way that allows for ease of browsing; group
-  content in ways that makes it easy to find.
+  ### Content guidelines
+
+
+  Content should be displayed in a way that allows for ease of browsing; group content in ways that makes it easy to find.
 
 
   Page titles are sentence case and use the word “and” instead of “&”. Left side sub-navigation and breadcrumb labels follow same style as the main menu.
@@ -45,17 +49,20 @@ guidelines: >-
   Try to avoid creating superfluous paragraphs to contain url text; list urls where possible and minimize unnecessary content; this will help the user browse and find what they need faster, and helps to give visual clarity without the need to read the entire paragraph to find what they need.
 
 
-  ##### Area 1: Introduction
+  #### Area 1: Introduction
+
 
   * [Text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) is required.
 
 
-  ##### Area 2: Main content
+  #### Area 2: Main content
+
 
   * Must contain at least 1 pattern.
 
 
-  ##### Area 3: Prefooter
+  #### Area 3: Prefooter
+
 
   * Optional.
 

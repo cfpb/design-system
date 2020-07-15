@@ -1,43 +1,32 @@
 ---
-name: Component needs content edits
-about: For issues about missing content or content that needs editing on Components
-  pages.
-title: 'Edit component page content: "COMPONENT"'
-labels: content, help wanted
+name: [Enter name of Design System page]: [Enter issue label]  
+about: Issue template for content issues.
+title: 'Submit a content issue'
+labels: content 
 assignees: ''
 
 ---
+**Which page is this about?** 
+Add a link to the page.
 
-What content needs to be created?
-[Delete items below that already exist. Leave missing items unchecked.]
+**What kind of issue is this?**
+Add one or more of the labels below to the right-hand sidebar AND issue title. 
+(We strongly encourage you to make these changes yourself!)
+- [ ] Info incorrect 
+- [ ] Content enhancement (e.g. confusing or redundant content, small content items need to be added, etc.) 
+- [ ] Needs content written (missing key information, like use cases)
+- [ ] Needs code snippet
+- [ ] Overhaul page (needs large-scale content rewriting and restructuring) 
+- [ ] Something else (please explain)
 
-- [ ] Intro
-- [ ] Variations
-   - [ ] HTML snippet(s)
-   - [ ] Jinja links/snippet(s)
-   - [ ] Variations specifications
-- [ ] Use cases
-- [ ] Guidelines
-- [ ] Behavior
-- [ ] Accessibility
-- [ ] Research
-- [ ] Related Items
-- [ ] Etc
+**Describe your issue** 
+Keep this ticket small: e.g., break multiple issues for a single page into separate tickets. 
+Specify where on the page this issue pertains to, and 
+ 
+**Size this request (1=tiny, 5=enormous)**
+Add a sizing label to the right-hand sidebar.  
 
----
+**Add any additional background info as needed** 
+Make sure NOT to include internal links.
 
-What content exists already but needs **edits**?
-[Delete items below that need no edits. Leave remaining items unchecked.]
-
-- [ ] Intro
-- [ ] Variations
-   - [ ] HTML snippet(s)
-   - [ ] Jinja links/snippet(s)
-   - [ ] Variations specifications
-- [ ] Use cases
-- [ ] Guidelines
-- [ ] Behavior
-- [ ] Accessibility
-- [ ] Research
-- [ ] Related Items
-- [ ] Etc
+***Thanks. Don't forget to add labels indicating issue type and size!***

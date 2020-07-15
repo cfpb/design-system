@@ -9,8 +9,8 @@ description: Paragraph text should provide an efficient and pleasant experience
 variation_groups:
   - variations:
       - variation_code_snippet: >-
-          <p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>,
-          sed do
+          <p>Avenir Next Regular, 16px / 22px at all browser widths. Lorem ipsum
+          dolor sit amet, <em>consectetur adipisicing elit</em>, sed do
 
           eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
 
@@ -54,8 +54,9 @@ variation_groups:
           * Avenir Next Regular
           * 16px / 22px at all browser widths
       - variation_code_snippet: >-
-          <p class="lead-paragraph">Ut enim ad minim veniam, quis nostrud
-          exercitation
+          <p class="lead-paragraph">Avenir Next Regular, 22px / 28px on large
+          screens and 18px / 22px on small screens. Ut enim ad minim veniam,
+          quis nostrud exercitation
 
           ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         variation_description: ""
@@ -84,8 +85,15 @@ variation_groups:
           * Avenir Next Regular
           * 11pt / 16pt
         variation_code_snippet: ""
-        variation_description: "![Print body
-          text](/design-system/images/uploads/paragraphs_071520-01.png)"
+        variation_description: >-
+          <p style="font-size: 11pt; font-weight: 400; line-height:16pt">Avenir
+          Next Regular, 11pt / 16pt. Lorem ipsum dolor sit amet, ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
+
+
+          <br>
       - variation_name: Subheading
         variation_specs: |-
           * Avenir Next Regular
@@ -94,7 +102,10 @@ variation_groups:
         variation_description: >-
           
 
-          ![Print subheading](/design-system/images/uploads/paragraphs_071520-02.png)
+          <p style="font-size: 16pt; font-weight: 400; line-height:20pt">Avenir Next Regular, 16pt / 20pt. Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+          <br>
 use_cases: ""
 guidelines: Refer to the [Guidelines section of the Fonts
   page](https://cfpb.github.io/design-system/foundation/fonts#guidelines) for

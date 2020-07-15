@@ -16,7 +16,7 @@ variation_groups:
     variations:
       - variation_code_snippet: ""
         variation_description: >-
-
+          
 
           | With hero | With text introduction | With breakout sidebar |
 
@@ -27,7 +27,7 @@ variation_groups:
           | Example: [Payday loans](https://www.consumerfinance.gov/consumer-tools/payday-loans/) | Example: [Financial education for adults](https://www.consumerfinance.gov/practitioner-resources/adult-financial-education/) | Example: [Rulemaking](https://www.consumerfinance.gov/policy-compliance/rulemaking/)
         variation_name: ""
 use_cases: >-
-  #### When to use
+  ### When to use
 
 
   * When creating a new topic area within one of the main navigation verticals.
@@ -35,15 +35,17 @@ use_cases: >-
   * Target user is primarily in an explore mindset, so the main content of this page should be focused on introducing them to the topic and directing them to the specific content that will meet their needs.
 
 
-  #### When other options are better
+  ### When other options are better
+
 
   * When page content includes multiple paragraphs of copy or more detailed definitions or explanations.
 
   * When the desired user interaction is more geared toward encouraging users to sit down and read something or engage deeply with an interactive tool.
 guidelines: >-
-  * The content components should work together to create an overview of the
-  information held within the section and how it relates back to the main
-  navigation section.
+  ### Content guidelines
+
+
+  * The content components should work together to create an overview of the information held within the section and how it relates back to the main navigation section.
 
   * Should be written and organized in a way that aids the user in skimming and quickly navigating to lower-level pages where they’ll find the information they need.
 
@@ -56,7 +58,7 @@ guidelines: >-
   * While full width body copy (including bulleted lists) is an option in this template, it should be used sparingly.
 
 
-  ##### Area 1: Introduction
+  #### Area 1: Introduction
 
 
   * Choose between a [hero](/design-system/patterns/heroes) or [text introduction](/design-system/patterns/text-introductions) for this area.
@@ -64,7 +66,7 @@ guidelines: >-
   * Option for using breakout sidebar variation of the text introduction.
 
 
-  ##### Area 2: Main content
+  #### Area 2: Main content
 
 
   * Must contain at least 1 pattern, though the [featured content module](/design-system/patterns/featured-content-module) or [well](/design-system/patterns/wells) should not stand on their own.
@@ -74,7 +76,8 @@ guidelines: >-
   * [Wells](/design-system/patterns/wells)  should not be used at the top of this area if the hero is used to introduce the page.
 
 
-  ##### Area 3: Sidebar
+  #### Area 3: Sidebar
+
 
   * Must contain at least 1 component.
 

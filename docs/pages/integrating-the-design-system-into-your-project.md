@@ -28,7 +28,7 @@ description: >-
   Pick one:
 
 
-  ```sh
+  ```
 
   yarn add cf-buttons cf-icons
 
@@ -38,17 +38,17 @@ description: >-
   or
 
 
-  ```sh
+  ```
 
   npm install cf-buttons cf-icons
 
   ```
 
 
-  ### Import CSS
+  ### Import Less
 
 
-  ```css
+  ```less
 
   // adjust paths to the modules as necessary
 
@@ -56,13 +56,10 @@ description: >-
 
   @import "node_modules/@cfpb/cfpb-icons/src/cfpb-icons.less";
 
-
-  // the rest of your stylesheet…
-
   ```
 
 
-  NOTE: Be sure to run the Less files through
+  _Note:_ Be sure to run the Less files through
 
   [Autoprefixer](https://github.com/postcss/autoprefixer),
 
@@ -74,7 +71,7 @@ description: >-
 
   ```js
 
-  import Expandable from '@cfpb/cfpb-expandables/src/Expandable'';
+  import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
 
 
   // initialize all expandables with class .o-expandable

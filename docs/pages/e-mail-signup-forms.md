@@ -33,7 +33,7 @@ variation_groups:
           ![Inset email signup](/design-system/images/uploads/2e07e378-4adf-11e8-96a7-67d2534eec85.png)
 
 
-          ##### When to use inset email signup
+          #### When to use inset email signup
 
 
           * On Learn pages, only use the inset email module when signing up for the email list is a primary user goal for the page, for example job seekers signing up for job announcements.
@@ -41,7 +41,7 @@ variation_groups:
           * On Browse pages, use the inset email module when feedback modules or other prefooter content competes with the prefooter email signup CTA, or when signing up for the email list is a primary user goal.
 
 
-          ##### When other options are better
+          #### When other options are better
 
 
           * On Learn pages when we want to encourage visitors to sign up for an email list but the list itself is not a primary user goal, use the standard sidebar email signup.
@@ -59,6 +59,9 @@ variation_groups:
       Different page types will be connected to the corresponding GovDelivery list based on the page topic (i.e. HMDA) or page type (i.e. blog).
 use_cases: ""
 guidelines: >-
+  ### Content guidelines
+
+
   * Use standard slug text: “Email updates”
 
   * Description text will be unique to each mailing list and should clearly set expectations for what a user will receive as a result of signing up. Email address field should always be marked required.
@@ -68,10 +71,11 @@ guidelines: >-
   * Use standard button text: “Sign up”
 
 
-  ##### Inset
+  #### Inset
 
 
   * The module heading should provide a strong call to action that clearly sets expectations for what a user will receive as a result of signing up.
+
     * Uncheck "Default heading style" to get the alternate heading style that we want in this inset module
   * The additional body text can further clarify what kind of information will be in the emails, with a focus on the value users will receive from the emails.
 

@@ -222,6 +222,8 @@ description: >-
   ## Creating new pages
 
 
+  If you're adding a new standard to the Design System, make sure it's been discussed and approved first in Hubcap, our internal repository.
+
   1. To create a new page from scratch, click the "Create new page" button below.
 
   1. After logging into the CMS, you'll be taken to a blank page in the CMS. Follow the "Editing pages" steps above to edit and preview your new page.

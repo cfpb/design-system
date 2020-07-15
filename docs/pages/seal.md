@@ -26,7 +26,114 @@ variation_groups:
 
           </div>
         variation_name: Primary seal
-        variation_specs: |-
+        variation_specs: |-2
+           <table class="color-table">
+                <thead>
+                    <tr>
+
+          <th></th>
+                    <th>Name</th>
+                    <th>Hex</th>
+                    <th>RGB</th>
+                    <th>CMYK</th>
+                </tr>
+
+          </thead>
+
+            <tbody>
+
+          <tr>
+                <td class="swatch_field swatch_field__gold-70"></td>
+                <td>Gold 70</td>
+                <td>#ffc372</td>
+                <td>255, 195, 114</td>
+                <td>0, 27, 62, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__dark-gold"></td>
+                <td>Dark Gold</td>
+                <td>#dc731c</td>
+                <td>220, 115, 28</td>
+                <td>10, 60, 100, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__neutral-60"></td>
+                <td>Neutral 60</td>
+                <td>#baa496</td>
+                <td>186, 164, 150</td>
+                <td>28, 34, 32, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__dark-neutral"></td>
+                <td>Dark Neutral</td>
+                <td>#745745</td>
+                <td>116, 87, 69</td>
+                <td>50, 60, 57, 28</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__purple-50"></td>
+                <td>Purple 50</td>
+                <td>#dc9cbf</td>
+                <td>220, 156, 191</td>
+                <td>12, 47, 7, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__dark-purple"></td>
+                <td>Dark Purple</td>
+                <td>#a01b68</td>
+                <td>160, 27, 104</td>
+                <td>40, 100, 30, 10</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__red-60"></td>
+                <td>Red 60</td>
+                <td>#e79e8e</td>
+                <td>231, 158, 142</td>
+                <td>0, 51, 46, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__red"></td>
+                <td>Red</td>
+                <td>#d14124</td>
+                <td>209, 65, 36</td>
+                <td>0, 85, 100, 4</td>
+            </tr>
+
+            </tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           The seal is comprised of the following colors.
 
           <h4>Dark Navy</h4>

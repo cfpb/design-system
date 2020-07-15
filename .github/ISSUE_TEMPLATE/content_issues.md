@@ -1,6 +1,6 @@
 ---
 name: Content issue
-about: Template for new content issues
+about: Suggest a content addition or improvement
 title: 'Add Design System page title | Add issue label'
 labels: content 
 assignees: ''
@@ -12,7 +12,7 @@ Add a link to the page.
 
 **What kind of issue is this?**
 Add one or more of the issue labels below to the right-hand sidebar AND issue title. 
-(We strongly encourage you to make these changes yourself!)
+(We strongly encourage you to make content changes yourself where possible!)
 - [ ] Info incorrect 
 - [ ] Content enhancement (e.g. confusing or redundant content, small content items need to be added, etc.) 
 - [ ] Needs content written (page is missing key information, e.g. use cases)

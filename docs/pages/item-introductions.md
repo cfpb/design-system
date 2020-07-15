@@ -37,7 +37,7 @@ variation_groups:
 
           * Spacing: 45 px margin above, 60 px margin below.
 use_cases: >-
-  ##### WHEN TO USE
+  ### When to use
 
 
   * When introducing a specific document or group of documents (such as a report, rule, or enforcement action) linked through a filterable list.
@@ -45,7 +45,7 @@ use_cases: >-
   * When the page contains specific content about one subject; there aren’t any child pages that drill down to anything more specific.
 
 
-  ##### WHEN OTHER OPTIONS ARE BETTER
+  ### When other options are better
 
 
   * When creating general content pages, even if the content is detailed or lengthy.

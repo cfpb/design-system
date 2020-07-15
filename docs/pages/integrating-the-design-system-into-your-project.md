@@ -48,9 +48,9 @@ description: >-
   ### Import Less
 
 
-  ```less
+  ```css
 
-  // adjust paths to the modules as necessary
+  /* adjust paths to the modules as necessary */
 
   @import "node_modules/@cfpb/cfpb-buttons/src/cfpb-buttons.less";
 

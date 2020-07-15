@@ -83,12 +83,18 @@ variation_groups:
         variation_specs: |-
           * Avenir Next Regular
           * 11pt / 16pt
-        variation_code_snippet: <p class="print-avenir-para">Lorem ipsum</p>
+        variation_code_snippet: ""
+        variation_description: "![Print body
+          text](/design-system/images/uploads/paragraphs_071520-01.png)"
       - variation_name: Subheading
         variation_specs: |-
           * Avenir Next Regular
           * 16pt / 20pt
-        variation_code_snippet: <p class="print-subheading">Lorem ipsum</p>
+        variation_code_snippet: ""
+        variation_description: >-
+          
+
+          ![Print subheading](/design-system/images/uploads/paragraphs_071520-02.png)
 use_cases: ""
 guidelines: Refer to the [Guidelines section of the Fonts
   page](https://cfpb.github.io/design-system/foundation/fonts#guidelines) for

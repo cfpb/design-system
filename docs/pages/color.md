@@ -1042,14 +1042,16 @@ variation_groups:
   - variation_group_name: Data visualization palettes
     variations:
       - variation_name: Data visualization main palette
-        variation_description: |-
-          ![](/design-system/images/uploads/data_viz_main.png)
+        variation_description: >-
+          ![Main
+          palette](/design-system/images/uploads/data_viz_main_071520.png)
 
            <table class="color-table">
               <thead>
                   <tr>
 
           <th></th>
+
 
           <th>Purpose</th>
                   <th>Name</th>
@@ -1060,7 +1062,9 @@ variation_groups:
 
           </thead>
 
+
           <tbody>
+
 
           <tr>
                   <td class="swatch_field swatch_field__green-60"></td>
@@ -1091,11 +1095,12 @@ variation_groups:
               </tr>
           </tbody>
 
+
           </table>
       - variation_name: Divergent palette
         variation_description: >-
           ![Divergent
-          palette](/design-system/images/uploads/data_visualization_divergent_palette.png)
+          palette](/design-system/images/uploads/data_viz_divergent_071520.png)
 
 
           <table class="color-table">
@@ -1143,8 +1148,9 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Cool palette
-        variation_description: |-
-          ![](/design-system/images/uploads/data_viz_cool.png)
+        variation_description: >-
+          ![Cool
+          palette](/design-system/images/uploads/data_viz_cool_071520.png)
 
             <table class="color-table">
                 <thead>
@@ -1223,8 +1229,9 @@ variation_groups:
 
             </tbody></table>
       - variation_name: Warm palette
-        variation_description: |-
-          ![](/design-system/images/uploads/data_viz_warm.png)
+        variation_description: >-
+          ![Warm
+          palette](/design-system/images/uploads/data_viz_warm_071520.png)
 
             <table class="color-table">
                 <thead>

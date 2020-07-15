@@ -26,16 +26,20 @@ variation_groups:
 
           </div>
         variation_name: Primary seal
-        variation_specs: |-2
-           <table class="color-table">
+        variation_specs: |-
+          The seal is comprised of the following colors. 
+
+          <table class="color-table">
                 <thead>
                     <tr>
 
           <th></th>
                     <th>Name</th>
-                    <th>Hex</th>
-                    <th>RGB</th>
                     <th>CMYK</th>
+
+          \    <th>PMS</th>
+
+          \    <th>RGB</th>
                 </tr>
 
           </thead>
@@ -43,136 +47,56 @@ variation_groups:
             <tbody>
 
           <tr>
-                <td class="swatch_field swatch_field__gold-70"></td>
-                <td>Gold 70</td>
-                <td>#ffc372</td>
-                <td>255, 195, 114</td>
-                <td>0, 27, 62, 0</td>
+                <td class="swatch_field swatch_field__dark-navy"></td>
+                <td>Dark Navy</td>
+                <td>100, 80, 6, 32</td>
+
+          \    <td>288C</td>
+
+          \    <td>0, 45, 114</td>
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__dark-gold"></td>
-                <td>Dark Gold</td>
-                <td>#dc731c</td>
-                <td>220, 115, 28</td>
-                <td>10, 60, 100, 0</td>
+                <td class="swatch_field swatch_field__beige"></td>
+                <td>Beige</td>
+                <td>0, 10, 50, 30</td>
+
+          \    <td>4515C</td>
+
+          \    <td>190, 169, 111</td>
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__neutral-60"></td>
-                <td>Neutral 60</td>
-                <td>#baa496</td>
-                <td>186, 164, 150</td>
-                <td>28, 34, 32, 0</td>
+                <td class="swatch_field swatch_field__beige-60"></td>
+                <td>Beige 60</td>
+                <td>0, 6, 30, 18</td>
+
+          \    <td>4515C 60%</td>
+
+          \    <td>216, 200, 160</td>
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__dark-neutral"></td>
-                <td>Dark Neutral</td>
-                <td>#745745</td>
-                <td>116, 87, 69</td>
-                <td>50, 60, 57, 28</td>
+                <td class="swatch_field swatch_field__beige-30"></td>
+                <td>Beige 30</td>
+                <td>0, 2, 10, 6</td>
+
+          \    <td>4515C 30%</td>
+
+          \    <td>240, 232, 216</td>
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__purple-50"></td>
-                <td>Purple 50</td>
-                <td>#dc9cbf</td>
-                <td>220, 156, 191</td>
-                <td>12, 47, 7, 0</td>
-            </tr>
+                <td class="swatch_field swatch_field__white"></td>
+                <td>White</td>
+                <td>0, 0, 0, 0</td>
 
-            <tr>
-                <td class="swatch_field swatch_field__dark-purple"></td>
-                <td>Dark Purple</td>
-                <td>#a01b68</td>
-                <td>160, 27, 104</td>
-                <td>40, 100, 30, 10</td>
-            </tr>
+          \    <td></td>
 
-            <tr>
-                <td class="swatch_field swatch_field__red-60"></td>
-                <td>Red 60</td>
-                <td>#e79e8e</td>
-                <td>231, 158, 142</td>
-                <td>0, 51, 46, 0</td>
-            </tr>
-
-            <tr>
-                <td class="swatch_field swatch_field__red"></td>
-                <td>Red</td>
-                <td>#d14124</td>
-                <td>209, 65, 36</td>
-                <td>0, 85, 100, 4</td>
+          \    <td>255, 255, 255</td>
             </tr>
 
             </tbody></table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          The seal is comprised of the following colors.
-
-          <h4>Dark Navy</h4>
-
-          **CMYK:** 100, 80, 6, 32
-
-          **RGB:** 0, 45, 114
-
-          **PMS:** 288C
-
-          <h4>Beige</h4>
-
-          **CMYK:** 0, 10, 50, 30
-
-          **RGB:** 190, 169, 111
-
-          **PMS:** 4515C
-
-          <h4>Mid beige</h4>
-
-          **CMYK:** 0, 6, 30, 18
-
-          **RGB:** 216, 200, 160
-
-          **PMS:** 4515C 60%
-
-          <h4>Light beige</h4>
-
-          **CMYK:** 0, 2, 10, 6
-
-          **RGB:** 240, 232, 216
-
-          **PMS:** 4515C 30%
-
-          <h4>White</h4>
-
-          **CMYK:** 0, 0, 0, 0
-
-          **RGB:** 255, 255, 255
   - variation_group_name: Variations
     variations:
       - variation_name: One-color seal

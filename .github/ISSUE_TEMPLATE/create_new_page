@@ -1,0 +1,18 @@
+---
+name: Create a new page - Add new Design System page title here
+about: Issue template for new pages added to the Design System.
+title: 'Track work on a new page'
+labels: content 
+assignees: ''
+
+---
+Use this issue to track work on a new page you're adding to the Design System. [Follow these instructions in order to add a new page](https://cfpb.github.io/design-system/updating-this-website/#creating-new-pages).
+New standards should be discussed in Hubcap first before being added to the Design System. 
+
+
+**What is the standard you're documenting?** 
+
+**What section will it live in?** 
+
+
+When you're ready to share a draft of the page, or want to raise questions, use this issue to track the discussion.

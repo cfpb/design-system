@@ -52,7 +52,7 @@ exports.config = {
       'platformName': 'Windows 10',
       // Increase the VM's resolution for Netlify CMS tests that require a wider viewport.
       'sauce:options': {
-        screenResolution: '1440x900'
+        screenResolution: '1600x1200'
       }
     },
     {
@@ -60,7 +60,7 @@ exports.config = {
       'browserVersion': 'latest',
       'platformName': 'Windows 10',
       'sauce:options': {
-        screenResolution: '1024x768'
+        screenResolution: '1600x1200'
       },
       'exclude': [
         // Netlify CMS is only tested with Chrome
@@ -72,7 +72,7 @@ exports.config = {
       'browserVersion': '11.285',
       'platformName': 'Windows 10',
       'sauce:options': {
-        screenResolution: '1024x768'
+        screenResolution: '1600x1200'
       },
       'exclude': [
         // Netlify CMS is only tested with Chrome
@@ -84,7 +84,7 @@ exports.config = {
       'browserVersion': 'latest',
       'platformName': 'Windows 10',
       'sauce:options': {
-        screenResolution: '1024x768'
+        screenResolution: '1600x1200'
       },
       'exclude': [
         // Netlify CMS is only tested with Chrome

@@ -294,7 +294,7 @@
         </li>
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#icon-sizes">Icon sizes</a>
+            <a class="m-list_link" href="#icon-with-text">Icon with text</a>
         </li>
         
         <li class="m-list_item">
@@ -1262,11 +1262,11 @@
         
     </section>
     
-    <section class="o-variation_group" id="icon-sizes">
+    <section class="o-variation_group" id="icon-with-text">
 
         
         <h2 class="o-variation_group_title">
-            Icon sizes
+            Icon with text
         </h2>
         
 
@@ -1596,7 +1596,7 @@
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<h4 id="svg-icon-basics">SVG icon basics</h4>
+<h3 id="svg-icon-basics">SVG icon basics</h3>
 
 <p>The cf-icon component provides Scalable Vector Graphics (SVG) icons. This component can be used by itself, but is designed to work with the Design System.</p>
 
@@ -1614,7 +1614,7 @@
   <p><strong>Note to contributors:</strong> If any icon is ever updated, you must be sure to also update each of the alias SVGs.</p>
 </blockquote>
 
-<h5 id="what-the-less-is-doing">What the Less is doing</h5>
+<h4 id="what-the-less-is-doing">What the Less is doing</h4>
 
 <p>If you look in <code class="language-plaintext highlighter-rouge">cf-icons.less</code>, below the aforementioned sizing variable, you’ll see this simple rule:</p>
 
@@ -1630,7 +1630,7 @@
 
 <p>We start by limiting the size of the SVG to a proportion of the text height, using the <code class="language-plaintext highlighter-rouge">@cf-icon-height</code> variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set <code class="language-plaintext highlighter-rouge">vertical-align: text-top;</code>. Finally, setting <code class="language-plaintext highlighter-rouge">fill: currentColor;</code> tells the SVG to set its path’s fill <code class="language-plaintext highlighter-rouge">color</code> to match the color value of its parent element.</p>
 
-<h5 id="caveats">Caveats</h5>
+<h4 id="caveats">Caveats</h4>
 
 <p>There are two modifications based on restrictions in Internet Explorer 8 and 9 (IE8/IE9).</p>
 
@@ -1638,7 +1638,7 @@
 
 <p>Second, IE9 displays SVGs as full width by default (not the paths, just the SVG container). To eliminate this issue we’ve set the width of the SVGs to match the height. The whitespace to the left or right may not be quite accurate, but we determined this is an acceptable difference for a legacy browser like IE9.</p>
 
-<h5 id="inline-svg-background">Inline SVG background</h5>
+<h4 id="inline-svg-background">Inline SVG background</h4>
 
 <p>In some cases we embed an SVG as a background image. To accomplish this, a custom less plugin is used to inject the SVG icon source file inline into the CSS <code class="language-plaintext highlighter-rouge">background-image</code> property. This is exposed via a mixin, <code class="language-plaintext highlighter-rouge">.u-svg-inline-bg( @name )</code>, where <code class="language-plaintext highlighter-rouge">@name</code> is the SVG icon canonical name.</p>
 
@@ -1706,8 +1706,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/pages/iconography.md">
-                    <time datetime="2020-07-09 16:52:22 -0400">
-                         4:52:22 PM Jul 09, 2020
+                    <time datetime="2020-07-15 13:18:32 -0400">
+                         1:18:32 PM Jul 15, 2020
                     </time>
                 </a>
             </small>

@@ -1,7 +1,7 @@
 ---
 name: Content issue
 about: Suggest a content addition or improvement
-title: 'Add Design System page title | Add issue label'
+title: 'Add Design System page title: Add issue label'
 labels: content 
 assignees: ''
 

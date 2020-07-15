@@ -1,11 +1,12 @@
 ---
-name: [Enter name of Design System page]: [Enter issue label]  
+name: Add Design System page title - Add issue label
 about: Issue template for content issues.
 title: 'Submit a content issue'
 labels: content 
 assignees: ''
 
 ---
+
 **Which page is this about?** 
 Add a link to the page.
 

@@ -10,7 +10,7 @@ description: In general, info unit groups provide context and lead users to
   [sublanding
   pages](https://cfpb.github.io/design-system/templates/sublanding-pages), and
   [browse pages](https://cfpb.github.io/design-system/templates/browse-pages))
-  to a child or sibling page.
+  to a child or sibling page. Yes.
 variation_groups:
   - variations:
       - variation_code_snippet: ""

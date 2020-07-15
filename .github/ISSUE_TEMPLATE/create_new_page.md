@@ -1,7 +1,7 @@
 ---
-name: Track work on a new page
-about: Issue template for new pages added to the Design System.
-title: 'New page | Add new Design System page title here'
+name: New page
+about: Track work on new pages added to the Design System
+title: 'New page: Add new Design System page title here'
 labels: content 
 assignees: ''
 

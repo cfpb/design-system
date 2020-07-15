@@ -9,8 +9,8 @@ description: Paragraph text should provide an efficient and pleasant experience
 variation_groups:
   - variations:
       - variation_code_snippet: >-
-          <p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>,
-          sed do
+          <p>Avenir Next Regular, 16px / 22px at all browser widths. Lorem ipsum
+          dolor sit amet, <em>consectetur adipisicing elit</em>, sed do
 
           eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
 

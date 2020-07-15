@@ -97,7 +97,7 @@ variation_groups:
         variation_specs: |-
           * Border: 1 px, Gray 60 (#919395)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
-    variation_group_description: "\n"
+    variation_group_description: ""
   - variation_group_name: Variations
     variations:
       - variation_name: Full-width text inputs
@@ -168,9 +168,10 @@ variation_groups:
           </div>
 use_cases: ""
 guidelines: >-
-  Choose the appropriate width for text input fields so they match the kind of
-  information requested. This makes it easier for users to quickly grasp what’s
-  being asked.
+  ### Stylistic guidelines
+
+
+  Choose the appropriate width for text input fields so they match the kind of information requested. This makes it easier for users to quickly grasp what’s being asked.
 
 
   For example, it’s hard to understand at a glance that a single 1,000 px-wide text field is asking for your phone number or birth date. When possible, be even more explicit with the width by dividing it into known character counts. For instance, social security number should be three characters, then two, then four. Be mindful of not getting too restrictive, however. This approach could work for phone numbers, but only if international numbers are not permitted.
@@ -184,6 +185,9 @@ guidelines: >-
   * Date, month, or year
 
   * State abbreviation
+
+
+  ### Content guidelines
 
 
   Text should be in sentence case.

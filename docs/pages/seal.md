@@ -21,7 +21,7 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![CFPB primary seal](/design-system/images/uploads/cfpb_primary_seal_color_rgb.png)
+          ![CFPB primary seal](/design-system/images/uploads/cfpb_seal_071520.png)
 
 
           </div>
@@ -113,7 +113,7 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![CFPB one-color seal](/design-system/images/uploads/bcfp_primary_seal_black_rgb.png)
+          ![CFPB one-color seal](/design-system/images/uploads/cfpb_seal_bw_071520.png)
 
 
           </div>
@@ -152,10 +152,18 @@ guidelines: >-
   Use ample space around the seal to ensure maximum impact and keep the mark from looking cluttered. The clear space on each side of the seal should be ¼” of the seal’s size. 
 
 
+  ![Seal clearspace](/design-system/images/uploads/cfpb_seal_clearspace_071520.png)
+
+
+
+
   ### Scale
 
 
   Use the seal at its benchmark size of 1.75” for most materials, such as a report cover. For materials such as signage and flags where the seal needs to appear larger, increase the seal's size in increments of 0.5”. 
+
+
+  ![Seal benchmark size](/design-system/images/uploads/cfpb_seal_benchmark_size_071520.png)
 
 
   ### Background
@@ -164,6 +172,7 @@ guidelines: >-
   Place the seal on a white background. The only other color the seal may be placed on is navy, and this is reserved for select cases, such as the CFPB's flag.
 
 
+  ![Seal backgrounds](/design-system/images/uploads/cfpb_seal_backgrounds_071520.png)
 
 
   ### Misuse

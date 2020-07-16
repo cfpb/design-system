@@ -3,15 +3,102 @@ title: Info unit groups
 layout: variation
 section: patterns
 status: Released
-description: In general, info unit groups provide context and lead users to
-  additional content off the page. They provide brief context to lead users from
-  a parent page ([landing
+description: "Info unit groups are generally used to provide brief context as
+  they lead users from a parent page ([landing
   pages](https://cfpb.github.io/design-system/templates/landing-pages),
   [sublanding
   pages](https://cfpb.github.io/design-system/templates/sublanding-pages), and
   [browse pages](https://cfpb.github.io/design-system/templates/browse-pages))
-  to a child or sibling page. Yes.
+  to additional content on a child or sibling page. There are two types: image
+  and text, or text only."
 variation_groups:
+  - variation_group_name: Image and text
+    variations:
+      - variation_name: 25/75 image and text component
+        variation_description: >-
+          ![Info unit group: example of
+          25/75](/design-system/images/uploads/2575example_desktop.jpg "Info
+          unit group: example of 25/75")
+
+
+          ![]()
+
+
+          The 25/75 image and text component is used to draw the user’s eye to key information and navigation links, and aid comprehension by pairing content with illustration/imagery.
+
+
+          When used in conjunction with 50/50 text components, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
+
+
+          #### When to use
+
+
+          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
+
+          * When an image or illustration helps users better understand the purpose of content.
+
+          * Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.
+
+
+          #### When other options are better
+
+
+          * When content doesn’t require imagery. 
+
+          * When there are multiple paragraphs of copy.
+        variation_specs: >-
+          * ![diagram of the 25/75 image and text module with 30px of spacing
+          shown](/design-system/images/uploads/25-75_style_desktop_1.jpg "Info
+          unit group: specs for 25/75 image and text")
+
+            Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
+          * Padding: 30px padding for imagery across responsive sizes
+
+          * Headings: Any heading size may be used, recommend H2-6
+      - variation_name: 50/50 image and text component
+        variation_description: >-
+          ![Image showing layout of a 50/50 image and text
+          component](/design-system/images/uploads/50_50_intro_mockup.png)
+
+
+          The 50/50 image and text component is used to call attention to linked content on a page. At larger breakpoints, this component has a two column layout to utilize extra screen real estate.
+
+
+          The 50/50 text component is a variation of the 50/50 image and text that does **not** use imagery.
+
+
+          #### When to use
+
+
+          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
+
+          * When an image or illustration helps users better understand the purpose of content.
+
+          * Ideally, when an even number of these components can be featured together.
+
+          * To help establish a hierarchy of linked content on this page.
+
+
+          #### When other options are better
+
+
+          * When content doesn’t require imagery. 
+
+          * When there are multiple paragraphs of copy.
+        variation_specs: >-
+          ![](/design-system/images/uploads/50_50_style_mockup.png)
+
+
+          * Imagery: 16:9 ratio, recommend 1600 x 900 pixels to account for retina displays.
+
+          * Headings: Any heading size may be used, recommend H2-4.
+
+          * Body copy: Avenir paragraph.
+
+          * At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
+    variation_group_description: "Image and text components consist of an image,
+      plus a heading, short descriptive text, and call to action. There are two
+      types of image and text component: 25/75 and 50/50."
   - variations:
       - variation_code_snippet: ""
         variation_description: >-
@@ -29,7 +116,7 @@ variation_groups:
           #### When other options are better
 
 
-          * When the number of components would be better featured in multiples of 3, use the third-width link blob.
+          * When the number of components would be better featured in multiples of 3, use the 33/33/33 text component instead.
 
           * When content requires imagery, use the 50/50 image and text or 25/75 image and text components.
         variation_jinja_code_snippet: >-
@@ -37,11 +124,11 @@ variation_groups:
 
 
           https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/half-width-link-blob-group.html
-        variation_name: Half-width link blob
+        variation_name: 50/50 text component
         variation_specs: >-
           * Headings: Use H3 or H4. Do not use both.
-            * H3: Use when you wish to give the blob heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
-            * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
+            * H3: Use when you wish to give the heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
+            * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the component follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
 
           ![](/design-system/images/uploads/halfwidthblob_style_mockup.png)
       - variation_code_snippet: ""
@@ -60,7 +147,7 @@ variation_groups:
           #### When other options are better
 
 
-          * When the number of components would be better featured in multiples of 2, use the half-width link blob instead
+          * When the number of components would be better featured in multiples of 2, use the 50/50 text component instead
 
           * When headings are too long for the narrower width, for example, when they break to 3 lines or more.
 
@@ -70,81 +157,51 @@ variation_groups:
 
 
           https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html
-        variation_name: Third-width link blob
+        variation_name: 33/33/33 text component
         variation_specs: >-
           * Headings: Use H3 or H4. Do not use both.
-            * H3: Use when you wish to give the blob heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
-            * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
+            * H3: Use when you wish to give the heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
+            * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the component follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
 
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
-      - variation_name: 25/75 image and text component
-        variation_description: >-
-          ![Info unit group: example of
-          25/75](/design-system/images/uploads/2575example_desktop.jpg "Info
-          unit group: example of 25/75")
-
-
-          ![]()
-
-
-          The 25/75 image and text component is used to draw the user’s eye to key information and navigation links, and aid comprehension by pairing content with illustration/imagery.
-
-
-          When used in conjunction with half width link blob, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
-
-
-          #### When to use
-
-
-          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
-
-          * When an image or illustration helps users better understand the purpose of content.
-
-          * Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.
-
-
-          #### When other options are better
-
-
-          * When content doesn’t require imagery. Suggest using the half width link blob pattern instead.
-
-          * When there are multiple paragraphs of copy.
-        variation_specs: >-
-          * ![diagram of the 25/75 image and text module with 30px of spacing
-          shown](/design-system/images/uploads/25-75_style_desktop_1.jpg "Info
-          unit group: specs for 25/75 image and text")
-
-            Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
-          * Padding: 30px padding for imagery across responsive sizes
-
-          * Headings: Any heading size may be used, recommend H2-6
-    variation_group_name: Types
-    variation_group_description: "A link blob is a unit consisting of heading, short
-      descriptive text, and call to action. "
+    variation_group_name: Text only
+    variation_group_description: "Text components consist of a heading, short
+      descriptive text, and call to action. There are two types: 50/50 and
+      33/33/33."
 use_cases: ""
 guidelines: >-
+  ### Content guidelines
+
   * Headings
 
-    * Half-width and third-width link blobs: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
     * 25/75 image and text component: 60 characters or less, ideally rendering as one line.
+    * 50/50 image and text component: 30 characters or less, ideally rendering as one line.
+    * 50/50 and 33/33/33 text components: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
+
   * Descriptions
 
     *  Do not use info unit groups for multiple paragraphs of copy. Copy should be succinct.
-    * Half-width link blobs: 100-250 characters max
-    * Third-width link blobs: 90-150 characters max
-    * 25/75 image and text component: 275 characters max.
+    * 50/50 text components: 100-250 characters max
+    * 33/33/33 text components: 90-150 characters max
+    * 25/75 image and text component: 275 characters max
+    * 50/50 image and text component: 50 characters min, 130 characters max, which renders as 2-3 lines at max column width.
+
   * Call to action
 
-    * Half-width link blobs: 40 characters max
-    * Third-width link blobs: 30 characters max
-    * 25/75 image and text component: 65 characters max.
+    * 25/75 image and text component: 65 characters max 
+    * 50/50 image and text component: 40 characters max
+    * 50/50 text components: 40 characters max
+    * 33/33/33 text components: 30 characters max
     * Follow [link guidelines](https://cfpb.github.io/design-system/components/links).
   * When these components are featured together (which is ideal), the amount of content in each component should be as close to the same number of total lines as possible.
 
-    * For half-width link blobs, one or two lines different is ok
-    * For third-width link blobs, a difference of one line is ok
+    * For 50/50 text components, one or two lines different is ok
+    * For 33/33/33 text components, a difference of one line is ok
 behavior: >-
-  ### Half-width link blob
+  ### 50/50 components
+
+
+  Both the image and text and text-only components behave similarly. The text-only component is shown here.
 
 
   | Above 600 px                                                           | Below 601 px                                                           |
@@ -154,7 +211,7 @@ behavior: >-
   | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png) |
 
 
-  ### Third-width link blob
+  ### 33/33/33 text component
 
 
   | Above 600 px                                                            | Below 601 px                                                            |

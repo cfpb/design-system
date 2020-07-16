@@ -44,39 +44,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      # Build the docs and list of URLs to test.
-      - name: Build the documentation site
-        run: |
-          bundle config path vendor/bundle
-          yarn
-          yarn build
-
-      - name: Generate list of URLs to test
-        run: >
-          find docs/_site -type f -name "*.html" |
-          sed 's|^docs/_site||' |
-          sed '/^\/admin/d' |
-          sed 's/index.html$//' |
-          sed 's/.html$//' |
-          sort > urls.txt
-
-      - name: Try to set variable
-        run: echo "::set-env name=URLS::$(cat urls.txt | sed 's/^/--collect.url=http:\/\/localhost:4000\/design-system/' | tr '\n' ' ')"
+      # Build the documentation site.
+      # This is needed so we can determine the list of URLs to test.
+      - name: Build documentation site
+        run: yarn build-netlify
 
       # Install and run Lighthouse CI
       - name: Install Lighthouse CI
         run: npm install -g @lhci/cli@0.4.x
 
       - name: Run Lighthouse CI
-        run: >
-          lhci autorun
-          --collect.settings.emulatedFormFactor=desktop
-          --collect.settings.onlyCategories=accessibility
-          --collect.numberOfRuns=1
-          --collect.startServerCommand="bundle exec jekyll serve --host=localhost --port=4000"
-          --collect.startServerReadyPattern="  Server running... press ctrl-c to stop."
-          ${{ env.URLS }}
-          --upload.target=temporary-public-storage
+        run: lhci autorun
 
       - name: Attach results as artifact to GitHub Actions run
         uses: actions/upload-artifact@v1

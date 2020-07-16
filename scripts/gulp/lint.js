@@ -58,6 +58,7 @@ function lintTests() {
  */
 function lintScripts() {
   return _genericLintJs( [
+    'lighthouserc.js',
     'packages/*/src/**/*.js',
     'docs/assets/js/**/*.js'
   ] );

@@ -215,7 +215,7 @@ guidelines: >-
   ### Misuse
 
 
-  Don’t stretch or condense the seal. This weakens the brand. 
+  {% include icons/error-round.svg %} Don’t stretch or condense the seal. This weakens the brand. 
 
 
   </div>
@@ -233,7 +233,7 @@ guidelines: >-
   <div class="content-33 content-first" markdown="1">
 
 
-  Don’t apply a drop shadow.
+  {% include icons/error-round.svg %} Don’t apply a drop shadow.
 
 
   </div>
@@ -251,7 +251,7 @@ guidelines: >-
   <div class="content-33 content-first" markdown="1">
 
 
-  Don’t outline the seal or change its colors.
+  {% include icons/error-round.svg %} Don’t outline the seal or change its colors.
 
 
   </div>
@@ -269,7 +269,7 @@ guidelines: >-
   <div class="content-33 content-first" markdown="1">
 
 
-  Don’t rotate the seal. This impairs readability.
+  {% include icons/error-round.svg %} Don’t rotate the seal. This impairs readability.
 
 
   </div>
@@ -287,7 +287,7 @@ guidelines: >-
   <div class="content-33 content-first" markdown="1">
 
 
-  Don't place the seal on a background that is a pattern, photo, or color other than white or navy.
+  {% include icons/error-round.svg %} Don't place the seal on a background that is a pattern, photo, or color other than white or navy.
 
 
   </div>

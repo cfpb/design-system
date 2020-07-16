@@ -14,7 +14,7 @@ description: "Info unit groups are generally used to provide brief context as
 variation_groups:
   - variation_group_name: Image and text
     variations:
-      - variation_name: 25/75 image and text
+      - variation_name: 25/75 image and text component
         variation_description: >-
           ![Info unit group: example of
           25/75](/design-system/images/uploads/2575example_desktop.jpg "Info
@@ -55,7 +55,7 @@ variation_groups:
           * Padding: 30px padding for imagery across responsive sizes
 
           * Headings: Any heading size may be used, recommend H2-6
-      - variation_name: 50/50 image and text
+      - variation_name: 50/50 image and text component
         variation_description: >-
           ![Image showing layout of a 50/50 image and text
           component](/design-system/images/uploads/50_50_intro_mockup.png)
@@ -96,8 +96,9 @@ variation_groups:
           * Body copy: Avenir paragraph.
 
           * At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
-    variation_group_description: "There are two types of image and text component:
-      25/75 and 50/50, named after their layout "
+    variation_group_description: "Image and text components consist of an image,
+      plus a heading, short descriptive text, and call to action. There are two
+      types of image and text component: 25/75 and 50/50."
   - variations:
       - variation_code_snippet: ""
         variation_description: >-
@@ -164,9 +165,9 @@ variation_groups:
 
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
     variation_group_name: Text only
-    variation_group_description: Text only units consist of a heading, short
-      descriptive text, and call to action. They are also referred to as "link
-      blobs".
+    variation_group_description: "Text components consist of a heading, short
+      descriptive text, and call to action. There are two types: 50/50 and
+      33/33/33."
 use_cases: ""
 guidelines: >-
   ### Content guidelines

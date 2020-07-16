@@ -3,15 +3,58 @@ title: Info unit groups
 layout: variation
 section: patterns
 status: Released
-description: In general, info unit groups provide context and lead users to
-  additional content off the page. They provide brief context to lead users from
-  a parent page ([landing
+description: "Info unit groups are generally used to provide brief context as
+  they lead users from a parent page ([landing
   pages](https://cfpb.github.io/design-system/templates/landing-pages),
   [sublanding
   pages](https://cfpb.github.io/design-system/templates/sublanding-pages), and
   [browse pages](https://cfpb.github.io/design-system/templates/browse-pages))
-  to a child or sibling page. Yes.
+  to additional content on a child or sibling page. There are two types: image
+  and text, or text only."
 variation_groups:
+  - variation_group_name: Image and text
+    variations:
+      - variation_name: 25/75
+        variation_description: >-
+          ![Info unit group: example of
+          25/75](/design-system/images/uploads/2575example_desktop.jpg "Info
+          unit group: example of 25/75")
+
+
+          ![]()
+
+
+          The 25/75 image and text component is used to draw the user’s eye to key information and navigation links, and aid comprehension by pairing content with illustration/imagery.
+
+
+          When used in conjunction with half width link blob, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
+
+
+          #### When to use
+
+
+          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
+
+          * When an image or illustration helps users better understand the purpose of content.
+
+          * Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.
+
+
+          #### When other options are better
+
+
+          * When content doesn’t require imagery. Suggest using the half width link blob pattern instead.
+
+          * When there are multiple paragraphs of copy.
+        variation_specs: >-
+          * ![diagram of the 25/75 image and text module with 30px of spacing
+          shown](/design-system/images/uploads/25-75_style_desktop_1.jpg "Info
+          unit group: specs for 25/75 image and text")
+
+            Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
+          * Padding: 30px padding for imagery across responsive sizes
+
+          * Headings: Any heading size may be used, recommend H2-6
   - variations:
       - variation_code_snippet: ""
         variation_description: >-
@@ -118,9 +161,10 @@ variation_groups:
           * Padding: 30px padding for imagery across responsive sizes
 
           * Headings: Any heading size may be used, recommend H2-6
-    variation_group_name: Types
-    variation_group_description: "A link blob is a unit consisting of heading, short
-      descriptive text, and call to action. "
+    variation_group_name: Text only
+    variation_group_description: Text only units consist of a heading, short
+      descriptive text, and call to action. They are also referred to as "link
+      blobs".
 use_cases: ""
 guidelines: >-
   * Headings

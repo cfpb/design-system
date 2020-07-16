@@ -47,6 +47,9 @@ variation_groups:
           * On Learn pages when we want to encourage visitors to sign up for an email list but the list itself is not a primary user goal, use the standard sidebar email signup.
 
           * On Browse pages, when email signups are not a primary user goal, and the prefooter/end of page content has no other CTAs to compete with the email signup, use the standard prefooter email signup.
+
+
+          <br>
         variation_name: Inset email sign up
     variation_group_name: Types
     variation_group_description: >-

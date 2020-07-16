@@ -151,21 +151,21 @@ variation_groups:
         variation_description: Brief statement of what this is, if needed. Sample would appear below.
       - variation_name: Pleated checkbox
         variation_description: Brief statement of what this is, if needed. Sample would appear below.
-use_cases: >-
-  ### Use cases
-
-
-  Provide details on when and where to use this component. Use active voice. No character limit. Paragraph content is optional.
-
-
-  ### Guidelines
+use_cases: Provide details on when and where to use this component. Use active
+  voice. No character limit. Paragraph content is optional.
+guidelines: >-
+  ### Content guidelines
 
 
   Include character count restrictions/recommendations, casing guidelines, voice, etc. No character limit. Paragraph content is optional.
 
 
-  ### Behavior
+  ### Stylistic guidelines
 
+
+  If applicable, include information on how the component is styled or used. This is not used often in component pages, mostly foundations pages.
+behavior: >-
+  
 
   Responsive guidelines.
 

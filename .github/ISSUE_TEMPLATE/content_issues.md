@@ -30,3 +30,4 @@ Add a sizing label to the right-hand sidebar.
 Make sure NOT to include internal links.
 
 ***Thanks. Don't forget to add labels indicating issue type and size before submitting!***
+***Once you've submitted your issue, please add it to the content backlog project board: https://github.com/cfpb/design-system/projects/1***

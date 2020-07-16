@@ -8,21 +8,16 @@ description: The seal was created as a symbol of CFPB to use in uniquely
 variation_groups:
   - variation_group_name: Types
     variations:
-      - variation_description: >-
+      - variation_description: |-
           <div class="content-33 content-first" markdown="1">
-
 
           The primary seal should be used on materials printed in color.
 
-
           </div>
-
 
           <div class="content-50 content-last" markdown="1">
 
-
-          ![CFPB primary seal](/design-system/images/uploads/cfpb_seal_071520.png)
-
+          ![CFPB primary seal](/design-system/images/uploads/seal_071620.png)
 
           </div>
         variation_name: Primary seal
@@ -113,7 +108,7 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![CFPB one-color seal](/design-system/images/uploads/cfpb_seal_bw_071520.png)
+          ![CFPB one-color seal](/design-system/images/uploads/seal_bw_071620.png)
 
 
           </div>
@@ -149,48 +144,157 @@ guidelines: >-
   ### Cleaspace
 
 
+  <div class="content-33 content-first" markdown="1">
+
+
   Use ample space around the seal to ensure maximum impact and keep the mark from looking cluttered. The clear space on each side of the seal should be ¼” of the seal’s size. 
 
 
-  ![Seal clearspace](/design-system/images/uploads/cfpb_seal_clearspace_071520.png)
+  </div>
 
 
+  <div class="content-67 content-last" markdown="1">
+
+
+  ![Seal clearspace](/design-system/images/uploads/seal_clearspace_071620.png)
+
+
+  </div>
 
 
   ### Scale
 
 
+  <div class="content-33 content-first" markdown="1">
+
+
   Use the seal at its benchmark size of 1.75” for most materials, such as a report cover. For materials such as signage and flags where the seal needs to appear larger, increase the seal's size in increments of 0.5”. 
 
 
-  ![Seal benchmark size](/design-system/images/uploads/cfpb_seal_benchmark_size_071520.png)
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  ![Seal benchmark size](/design-system/images/uploads/seal_size_071620.png)
+
+
+  </div>
 
 
   ### Background
 
 
+  <div class="content-33 content-first" markdown="1">
+
+
   Place the seal on a white background. The only other color the seal may be placed on is navy, and this is reserved for select cases, such as the CFPB's flag.
 
 
-  ![Seal backgrounds](/design-system/images/uploads/cfpb_seal_backgrounds_071520.png)
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  ![Seal backgrounds](/design-system/images/uploads/seal_background_071620.png)
+
+
+  </div>
 
 
   ### Misuse
 
 
-  * Don’t stretch or condense the seal. This weakens the brand. 
+  <div class="content-33 content-first" markdown="1">
 
-  * Don’t alter the text of the seal in any way.
 
-  * Don’t remove design or text elements from the seal. 
+  Don’t stretch or condense the seal. This weakens the brand. 
 
-  * Don’t apply a drop shadow.
 
-  * Don’t outline the seal or change its colors.
+  </div>
 
-  * Don’t rotate the seal. This impairs readability.
 
-  * Don't place the seal on a background that is a pattern, photo, or color other than white or navy.
+  <div class="content-67 content-last" markdown="1">
+
+
+  ![Misuse: stretched seal](/design-system/images/uploads/seal_misuse_stretch_071620.png)
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  Don’t apply a drop shadow.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  ![Misuse: drop shadow on seal](/design-system/images/uploads/seal_misuse_drop_shadow_071620.png)
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  Don’t outline the seal or change its colors.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  ![Misuse: seal color](/design-system/images/uploads/seal_misuse_color_071620.png)
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  Don’t rotate the seal. This impairs readability.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  ![Misuse: rotated seal](/design-system/images/uploads/seal_misuse_rotate_071620.png)
+
+
+  </div>
+
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  Don't place the seal on a background that is a pattern, photo, or color other than white or navy.
+
+
+  </div>
+
+
+  <div class="content-67 content-last" markdown="1">
+
+
+  ![Misuse: seal background](/design-system/images/uploads/seal_misuse_background_071620.png)
+
+
+  </div>
 behavior: ""
 restrictions: []
 related_items: ""

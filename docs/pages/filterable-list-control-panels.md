@@ -23,7 +23,8 @@ variation_groups:
           ![Filterable list expanded](/design-system/images/uploads/filter_expanded.png)
         variation_name: ""
         variation_specs: "![Filter panel
-          style](/design-system/images/uploads/filter_style_1.png)"
+          style](/design-system/images/uploads/filterable_list_control_panels_0\
+          71620.png)"
     variation_group_name: Standard filterable list
     variation_group_description: >-
       Use filters in conjunction with search to help users narrow down large

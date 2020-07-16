@@ -26,14 +26,10 @@ variation_groups:
           style](/design-system/images/uploads/filterable_list_control_panels_s\
           pecs_071620.png)"
     variation_group_name: Standard filterable list
-    variation_group_description: >-
-      Use filters in conjunction with search to help users narrow down large
-      amounts of data or content. Follow form patterns for grouping, layout, and
-      messaging.  Note that notification messaging sits below the filter and
-      above results.
-
-
-      The example below shows a layout as seen on a browse filterable template.
+    variation_group_description: Use filters in conjunction with search to help
+      users narrow down large amounts of data or content. Follow form patterns
+      for grouping, layout, and messaging.  Note that notification messaging
+      sits below the filter and above results.
 use_cases: >-
   ### When to use
 
@@ -84,9 +80,11 @@ behavior: >-
   When a user applies a filter setting, a notification automatically appears below the panel indicating number of results or errors.
 accessibility: ""
 research: ""
-related_items: "*
-  [Notifications](https://cfpb.github.io/design-system/components/notifications\
-  )"
+related_items: >-
+  *
+  [Notifications](https://cfpb.github.io/design-system/components/notifications)
+
+  * [Filterable list pages](https://cfpb.github.io/design-system/pages/filterable-list-pages)
 last_updated: 2020-01-28T15:55:47.394Z
 secondary_section: Layout options
 ---

@@ -18,11 +18,16 @@ variation_groups:
         variation_name: Donut chart
     variation_group_name: Types
 use_cases: ""
-guidelines: |-
+guidelines: >-
   * The slices should add up to 100%.  
+
   * Use 5 or less slices.
+
   * Directly label all slices.
+
   * Use a white outline or stroke to create contrast between the slices.
+
+  * For color guidance, view [Data visualization palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes) on the Color page.
 behavior: ""
 accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z

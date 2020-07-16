@@ -44,6 +44,8 @@ guidelines: >-
   * When possible label directly rather than relying on color.
 
   * For stacked charts, use a white line or stroke to create contrast between bar chunks.
+
+  * For color guidance, view [Data visualization palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes) on the Color page.
 behavior: ""
 accessibility: ""
 research: ""

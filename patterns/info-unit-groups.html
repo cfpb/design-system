@@ -283,7 +283,11 @@
     <ul class="m-list m-list__horizontal m-list__horizontal-spaced">
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#types">Types</a>
+            <a class="m-list_link" href="#image-and-text">Image and text</a>
+        </li>
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#text-only">Text only</a>
         </li>
         
         <li class="m-list_item">
@@ -303,24 +307,24 @@
 
     
     <section id="description" class="u-mb30">
-        <p>In general, info unit groups provide context and lead users to additional content off the page. They provide brief context to lead users from a parent page (<a href="https://cfpb.github.io/design-system/templates/landing-pages">landing pages</a>, <a href="https://cfpb.github.io/design-system/templates/sublanding-pages">sublanding pages</a>, and <a href="https://cfpb.github.io/design-system/templates/browse-pages">browse pages</a>) to a child or sibling page. Yes.</p>
+        <p>Info unit groups are generally used to provide brief context as they lead users from a parent page (<a href="https://cfpb.github.io/design-system/templates/landing-pages">landing pages</a>, <a href="https://cfpb.github.io/design-system/templates/sublanding-pages">sublanding pages</a>, and <a href="https://cfpb.github.io/design-system/templates/browse-pages">browse pages</a>) to additional content on a child or sibling page. There are two types: image and text, or text only.</p>
 
     </section>
     
 
     
     
-    <section class="o-variation_group" id="types">
+    <section class="o-variation_group" id="image-and-text">
 
         
         <h2 class="o-variation_group_title">
-            Types
+            Image and text
         </h2>
         
 
         
         <div class="o-variation_group_description">
-            <p>A link blob is a unit consisting of heading, short descriptive text, and call to action.</p>
+            <p>Image and text components consist of an image, plus a heading, short descriptive text, and call to action. There are two types of image and text component: 25/75 and 50/50.</p>
 
         </div>
         
@@ -334,7 +338,241 @@
 
             
             <div class="m-variation_name">
-                <h3>Half-width link blob</h3>
+                <h3>25/75 image and text component</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p><img src="/design-system/images/uploads/2575example_desktop.jpg" alt="Info unit group: example of 25/75" title="Info unit group: example of 25/75"></p>
+
+<p><img src="" alt=""></p>
+
+<p>The 25/75 image and text component is used to draw the user’s eye to key information and navigation links, and aid comprehension by pairing content with illustration/imagery.</p>
+
+<p>When used in conjunction with 50/50 text components, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.</p>
+
+<h4 id="when-to-use">When to use</h4>
+
+<ul>
+  <li>When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.</li>
+  <li>When an image or illustration helps users better understand the purpose of content.</li>
+  <li>Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.</li>
+</ul>
+
+<h4 id="when-other-options-are-better">When other options are better</h4>
+
+<ul>
+  <li>When content doesn’t require imagery.</li>
+  <li>When there are multiple paragraphs of copy.</li>
+</ul>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-25-75-image-and-text-component-i-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-25-75-image-and-text-component-i-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-25-75-image-and-text-component-i-1">
+                <ul class="govuk-tabs__list">
+                    
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-25-75-image-and-text-component-i-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-25-75-image-and-text-component-i-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <ul>
+  <li>
+    <p><img src="/design-system/images/uploads/25-75_style_desktop_1.jpg" alt="diagram of the 25/75 image and text module with 30px of spacing shown" title="Info unit group: specs for 25/75 image and text"></p>
+
+    <p>Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below</p>
+  </li>
+  <li>Padding: 30px padding for imagery across responsive sizes</li>
+  <li>Headings: Any heading size may be used, recommend H2-6</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>50/50 image and text component</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p><img src="/design-system/images/uploads/50_50_intro_mockup.png" alt="Image showing layout of a 50/50 image and text component"></p>
+
+<p>The 50/50 image and text component is used to call attention to linked content on a page. At larger breakpoints, this component has a two column layout to utilize extra screen real estate.</p>
+
+<p>The 50/50 text component is a variation of the 50/50 image and text that does <strong>not</strong> use imagery.</p>
+
+<h4 id="when-to-use">When to use</h4>
+
+<ul>
+  <li>When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.</li>
+  <li>When an image or illustration helps users better understand the purpose of content.</li>
+  <li>Ideally, when an even number of these components can be featured together.</li>
+  <li>To help establish a hierarchy of linked content on this page.</li>
+</ul>
+
+<h4 id="when-other-options-are-better">When other options are better</h4>
+
+<ul>
+  <li>When content doesn’t require imagery.</li>
+  <li>When there are multiple paragraphs of copy.</li>
+</ul>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-50-50-image-and-text-component-i-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-50-50-image-and-text-component-i-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-50-50-image-and-text-component-i-2">
+                <ul class="govuk-tabs__list">
+                    
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-50-50-image-and-text-component-i-specs-2">
+                            Specs
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-50-50-image-and-text-component-i-specs-2">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <p><img src="/design-system/images/uploads/50_50_style_mockup.png" alt=""></p>
+
+<ul>
+  <li>Imagery: 16:9 ratio, recommend 1600 x 900 pixels to account for retina displays.</li>
+  <li>Headings: Any heading size may be used, recommend H2-4.</li>
+  <li>Body copy: Avenir paragraph.</li>
+  <li>At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation_group" id="text-only">
+
+        
+        <h2 class="o-variation_group_title">
+            Text only
+        </h2>
+        
+
+        
+        <div class="o-variation_group_description">
+            <p>Text components consist of a heading, short descriptive text, and call to action. There are two types: 50/50 and 33/33/33.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>50/50 text component</h3>
             </div>
             
 
@@ -351,7 +589,7 @@
 <h4 id="when-other-options-are-better">When other options are better</h4>
 
 <ul>
-  <li>When the number of components would be better featured in multiples of 3, use the third-width link blob.</li>
+  <li>When the number of components would be better featured in multiples of 3, use the 33/33/33 text component instead.</li>
   <li>When content requires imagery, use the 50/50 image and text or 25/75 image and text components.</li>
 </ul>
 
@@ -369,16 +607,16 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-half-width-link-blob-info-unit-g-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-half-width-link-blob-info-unit-g-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-50-50-text-component-info-unit-g-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-50-50-text-component-info-unit-g-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-half-width-link-blob-info-unit-g-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-50-50-text-component-info-unit-g-1">
                 <ul class="govuk-tabs__list">
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-half-width-link-blob-info-unit-g-jinja-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-50-50-text-component-info-unit-g-jinja-code-snippet-1">
                             Jinja code snippet
                         </a>
                     </li>
@@ -386,7 +624,7 @@
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-half-width-link-blob-info-unit-g-specs-1">
+                        <a class="govuk-tabs__tab" href="#details-50-50-text-component-info-unit-g-specs-1">
                             Specs
                         </a>
                     </li>
@@ -398,7 +636,7 @@
 
                 <!-- Jinja snippet -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-half-width-link-blob-info-unit-g-jinja-code-snippet-1">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-50-50-text-component-info-unit-g-jinja-code-snippet-1">
                     <div class="variation-jinja-code-snippet">
                         <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
                         <div class="source-code">
@@ -415,15 +653,15 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
 
                 <!-- Specs -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-half-width-link-blob-info-unit-g-specs-1">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-50-50-text-component-info-unit-g-specs-1">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
                             <ul>
   <li>Headings: Use H3 or H4. Do not use both.
     <ul>
-      <li>H3: Use when you wish to give the blob heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.</li>
-      <li>H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.</li>
+      <li>H3: Use when you wish to give the heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.</li>
+      <li>H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the component follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.</li>
     </ul>
   </li>
 </ul>
@@ -449,7 +687,7 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
 
             
             <div class="m-variation_name">
-                <h3>Third-width link blob</h3>
+                <h3>33/33/33 text component</h3>
             </div>
             
 
@@ -466,7 +704,7 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
 <h4 id="when-other-options-are-better">When other options are better</h4>
 
 <ul>
-  <li>When the number of components would be better featured in multiples of 2, use the half-width link blob instead</li>
+  <li>When the number of components would be better featured in multiples of 2, use the 50/50 text component instead</li>
   <li>When headings are too long for the narrower width, for example, when they break to 3 lines or more.</li>
   <li>When content requires imagery, use the 50/50 image and text or the 25/75 image and text instead.</li>
 </ul>
@@ -485,16 +723,16 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
             
 
             <div class="a-toggle_code">
-                <button href="#details-third-width-link-blob-info-unit--2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-third-width-link-blob-info-unit--2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-33-33-33-text-component-info-uni-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-33-33-33-text-component-info-uni-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-third-width-link-blob-info-unit--2">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-33-33-33-text-component-info-uni-2">
                 <ul class="govuk-tabs__list">
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-third-width-link-blob-info-unit--jinja-code-snippet-2">
+                        <a class="govuk-tabs__tab" href="#details-33-33-33-text-component-info-uni-jinja-code-snippet-2">
                             Jinja code snippet
                         </a>
                     </li>
@@ -502,7 +740,7 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
                     
                     
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-third-width-link-blob-info-unit--specs-2">
+                        <a class="govuk-tabs__tab" href="#details-33-33-33-text-component-info-uni-specs-2">
                             Specs
                         </a>
                     </li>
@@ -514,7 +752,7 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
 
                 <!-- Jinja snippet -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-third-width-link-blob-info-unit--jinja-code-snippet-2">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-33-33-33-text-component-info-uni-jinja-code-snippet-2">
                     <div class="variation-jinja-code-snippet">
                         <h4 class="variation-jinja-code-snippet-title">Jinja code snippet</h4>
                         <div class="source-code">
@@ -531,129 +769,20 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
 
                 <!-- Specs -->
                 
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-third-width-link-blob-info-unit--specs-2">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-33-33-33-text-component-info-uni-specs-2">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
                             <ul>
   <li>Headings: Use H3 or H4. Do not use both.
     <ul>
-      <li>H3: Use when you wish to give the blob heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.</li>
-      <li>H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.</li>
+      <li>H3: Use when you wish to give the heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.</li>
+      <li>H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the component follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.</li>
     </ul>
   </li>
 </ul>
 
 <p><img src="/design-system/images/uploads/third_width_link_blob_style.png" alt=""></p>
-
-                        </div>
-                    </div>
-                </section>
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>25/75 image and text component</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p><img src="/design-system/images/uploads/2575example_desktop.jpg" alt="Info unit group: example of 25/75" title="Info unit group: example of 25/75"></p>
-
-<p><img src="" alt=""></p>
-
-<p>The 25/75 image and text component is used to draw the user’s eye to key information and navigation links, and aid comprehension by pairing content with illustration/imagery.</p>
-
-<p>When used in conjunction with half width link blob, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.</p>
-
-<h4 id="when-to-use">When to use</h4>
-
-<ul>
-  <li>When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.</li>
-  <li>When an image or illustration helps users better understand the purpose of content.</li>
-  <li>Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.</li>
-</ul>
-
-<h4 id="when-other-options-are-better">When other options are better</h4>
-
-<ul>
-  <li>When content doesn’t require imagery. Suggest using the half width link blob pattern instead.</li>
-  <li>When there are multiple paragraphs of copy.</li>
-</ul>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-25-75-image-and-text-component-i-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-25-75-image-and-text-component-i-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-25-75-image-and-text-component-i-3">
-                <ul class="govuk-tabs__list">
-                    
-                    
-                    
-                    
-                    <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-25-75-image-and-text-component-i-specs-3">
-                            Specs
-                        </a>
-                    </li>
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-25-75-image-and-text-component-i-specs-3">
-                    <div>
-                        <h4 class="variation-specs-title">Specs</h4>
-                        <div style="padding:40px">
-                            <ul>
-  <li>
-    <p><img src="/design-system/images/uploads/25-75_style_desktop_1.jpg" alt="diagram of the 25/75 image and text module with 30px of spacing shown" title="Info unit group: specs for 25/75 image and text"></p>
-
-    <p>Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below</p>
-  </li>
-  <li>Padding: 30px padding for imagery across responsive sizes</li>
-  <li>Headings: Any heading size may be used, recommend H2-6</li>
-</ul>
 
                         </div>
                     </div>
@@ -681,13 +810,15 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
+<h3 id="content-guidelines">Content guidelines</h3>
 <ul>
   <li>
     <p>Headings</p>
 
     <ul>
-      <li>Half-width and third-width link blobs: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.</li>
       <li>25/75 image and text component: 60 characters or less, ideally rendering as one line.</li>
+      <li>50/50 image and text component: 30 characters or less, ideally rendering as one line.</li>
+      <li>50/50 and 33/33/33 text components: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.</li>
     </ul>
   </li>
   <li>
@@ -695,18 +826,20 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
 
     <ul>
       <li>Do not use info unit groups for multiple paragraphs of copy. Copy should be succinct.</li>
-      <li>Half-width link blobs: 100-250 characters max</li>
-      <li>Third-width link blobs: 90-150 characters max</li>
-      <li>25/75 image and text component: 275 characters max.</li>
+      <li>50/50 text components: 100-250 characters max</li>
+      <li>33/33/33 text components: 90-150 characters max</li>
+      <li>25/75 image and text component: 275 characters max</li>
+      <li>50/50 image and text component: 50 characters min, 130 characters max, which renders as 2-3 lines at max column width.</li>
     </ul>
   </li>
   <li>
     <p>Call to action</p>
 
     <ul>
-      <li>Half-width link blobs: 40 characters max</li>
-      <li>Third-width link blobs: 30 characters max</li>
-      <li>25/75 image and text component: 65 characters max.</li>
+      <li>25/75 image and text component: 65 characters max</li>
+      <li>50/50 image and text component: 40 characters max</li>
+      <li>50/50 text components: 40 characters max</li>
+      <li>33/33/33 text components: 30 characters max</li>
       <li>Follow <a href="https://cfpb.github.io/design-system/components/links">link guidelines</a>.</li>
     </ul>
   </li>
@@ -714,8 +847,8 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
     <p>When these components are featured together (which is ideal), the amount of content in each component should be as close to the same number of total lines as possible.</p>
 
     <ul>
-      <li>For half-width link blobs, one or two lines different is ok</li>
-      <li>For third-width link blobs, a difference of one line is ok</li>
+      <li>For 50/50 text components, one or two lines different is ok</li>
+      <li>For 33/33/33 text components, a difference of one line is ok</li>
     </ul>
   </li>
 </ul>
@@ -728,7 +861,9 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<h3 id="half-width-link-blob">Half-width link blob</h3>
+<h3 id="5050-components">50/50 components</h3>
+
+<p>Both the image and text and text-only components behave similarly. The text-only component is shown here.</p>
 
 <table>
   <thead>
@@ -745,7 +880,7 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
   </tbody>
 </table>
 
-<h3 id="third-width-link-blob">Third-width link blob</h3>
+<h3 id="333333-text-component">33/33/33 text component</h3>
 
 <table>
   <thead>
@@ -849,8 +984,8 @@ https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/pages/info-unit-groups-link-blobs.md">
-                    <time datetime="2020-07-15 15:31:56 -0400">
-                         3:31:56 PM Jul 15, 2020
+                    <time datetime="2020-07-16 11:59:36 -0400">
+                        11:59:36 AM Jul 16, 2020
                     </time>
                 </a>
             </small>

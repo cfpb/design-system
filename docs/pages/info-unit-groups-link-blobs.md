@@ -72,7 +72,7 @@ variation_groups:
           #### When other options are better
 
 
-          * When the number of components would be better featured in multiples of 3, use the third-width link blob.
+          * When the number of components would be better featured in multiples of 3, use the 33/33/33 text component instead.
 
           * When content requires imagery, use the 50/50 image and text or 25/75 image and text components.
         variation_jinja_code_snippet: >-
@@ -103,7 +103,7 @@ variation_groups:
           #### When other options are better
 
 
-          * When the number of components would be better featured in multiples of 2, use the half-width link blob instead
+          * When the number of components would be better featured in multiples of 2, use the 50/50 text component instead
 
           * When headings are too long for the narrower width, for example, when they break to 3 lines or more.
 
@@ -116,8 +116,8 @@ variation_groups:
         variation_name: 33/33/33 text component
         variation_specs: >-
           * Headings: Use H3 or H4. Do not use both.
-            * H3: Use when you wish to give the blob heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
-            * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
+            * H3: Use when you wish to give the heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
+            * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the component follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
 
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
     variation_group_name: Text only
@@ -126,28 +126,33 @@ variation_groups:
       blobs".
 use_cases: ""
 guidelines: >-
+  ### Content guidelines
+
   * Headings
 
-    * Half-width and third-width link blobs: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
+    * 50/50 and 33/33/33 text components: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
     * 25/75 image and text component: 60 characters or less, ideally rendering as one line.
   * Descriptions
 
     *  Do not use info unit groups for multiple paragraphs of copy. Copy should be succinct.
-    * Half-width link blobs: 100-250 characters max
-    * Third-width link blobs: 90-150 characters max
+    * 50/50 text components: 100-250 characters max
+    * 33/33/33 text components: 90-150 characters max
     * 25/75 image and text component: 275 characters max.
   * Call to action
 
-    * Half-width link blobs: 40 characters max
-    * Third-width link blobs: 30 characters max
+    * 50/50 text components: 40 characters max
+    * 33/33/33 text components: 30 characters max
     * 25/75 image and text component: 65 characters max.
     * Follow [link guidelines](https://cfpb.github.io/design-system/components/links).
   * When these components are featured together (which is ideal), the amount of content in each component should be as close to the same number of total lines as possible.
 
-    * For half-width link blobs, one or two lines different is ok
-    * For third-width link blobs, a difference of one line is ok
+    * For 50/50 text components, one or two lines different is ok
+    * For 33/33/33 text components, a difference of one line is ok
 behavior: >-
-  ### Half-width link blob
+  ### 50/50 components
+
+
+  Both the image and text and text-only components behave similarly. The text-only component is shown here.
 
 
   | Above 600 px                                                           | Below 601 px                                                           |

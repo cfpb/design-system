@@ -25,6 +25,8 @@ guidelines: >-
   * Generally show five or fewer lines to avoid confusion.
 
   * Consider using many small line charts if you need to show more factors. (These are called small multiples charts.)
+
+  * For color guidance, view [Data visualization palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes) on the Color page.
 behavior: ""
 accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z

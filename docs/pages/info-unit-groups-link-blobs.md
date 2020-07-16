@@ -85,6 +85,17 @@ variation_groups:
           * When content doesn’t require imagery. 
 
           * When there are multiple paragraphs of copy.
+        variation_specs: >-
+          ![](/design-system/images/uploads/50_50_style_mockup.png)
+
+
+          * Imagery: 16:9 ratio, recommend 1600 x 900 pixels to account for retina displays.
+
+          * Headings: Any heading size may be used, recommend H2-4.
+
+          * Body copy: Avenir paragraph.
+
+          * At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
     variation_group_description: "There are two types of image and text component:
       25/75 and 50/50, named after their layout "
   - variations:
@@ -162,19 +173,24 @@ guidelines: >-
 
   * Headings
 
-    * 50/50 and 33/33/33 text components: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
     * 25/75 image and text component: 60 characters or less, ideally rendering as one line.
+    * 50/50 image and text component: 30 characters or less, ideally rendering as one line.
+    * 50/50 and 33/33/33 text components: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
+
   * Descriptions
 
     *  Do not use info unit groups for multiple paragraphs of copy. Copy should be succinct.
     * 50/50 text components: 100-250 characters max
     * 33/33/33 text components: 90-150 characters max
-    * 25/75 image and text component: 275 characters max.
+    * 25/75 image and text component: 275 characters max
+    * 50/50 image and text component: 50 characters min, 130 characters max, which renders as 2-3 lines at max column width.
+
   * Call to action
 
+    * 25/75 image and text component: 65 characters max 
+    * 50/50 image and text component: 40 characters max
     * 50/50 text components: 40 characters max
     * 33/33/33 text components: 30 characters max
-    * 25/75 image and text component: 65 characters max.
     * Follow [link guidelines](https://cfpb.github.io/design-system/components/links).
   * When these components are featured together (which is ideal), the amount of content in each component should be as close to the same number of total lines as possible.
 

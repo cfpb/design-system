@@ -21,7 +21,7 @@ Add one or more of the issue labels below to the right-hand sidebar AND issue ti
 - [ ] Something else (please explain)
 
 **Describe your issue** 
-Keep this issue as small and specific as poossible. E.g., break multiple issues for a single Design System page into separate tickets. Make clear what section of the page this issue is about.
+Keep this issue as small and specific as possible. Make clear what section of the page this issue is about.
  
 **Size this request (1=tiny, 5=enormous)**
 Add a sizing label to the right-hand sidebar.  

@@ -13,6 +13,16 @@ description: >
   </div>
 
 
+  <div class="content-25 content-last" markdown="1">
+
+
+  ![Homepage image](/design-system/images/uploads/cfpb_dm_home.png) 
+
+
+  </div>
+
+
+
   ## Start with our principles
 
 

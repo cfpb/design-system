@@ -23,14 +23,14 @@ variation_groups:
           Layout as seen with a standard right sidebar:
 
 
-          ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/textintro_intro.png)
+          ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/text_introduction_071620.png)
         variation_jinja_code_snippet: ""
         variation_name: ""
         variation_specs: >-
           #### Style
 
 
-          ![Image of text intro showing grid and design specs](/design-system/images/uploads/textintro_style1.png)
+          ![Image of text intro showing grid and design specs](/design-system/images/uploads/text_introduction_specs_071620.png)
 
 
           * Spacing: 45px margin above, 60 px margin below.
@@ -119,13 +119,13 @@ behavior: >-
   ### Text introduction
 
 
-  | Above 900 px                                                                          | Below 901 px                                                                                   |
+  | Above 900 px                                   | Below 901 px                                                                                   |
 
-  | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+  | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 
-  | With standard grey-welled sidebar on the right                                        | With standard grey-welled sidebar stacked to prefooter                                         |
+  | With standard grey-welled sidebar on the right | With standard grey-welled sidebar stacked to prefooter                                         |
 
-  | ![Mockup of 900+ pixel layout](/design-system/images/uploads/textintro_behavior1.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior3.jpg) |
+  | fff                                            | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior3.jpg) |
 
 
   ### Text introduction with breakout sidebar

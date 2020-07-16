@@ -162,7 +162,7 @@ behavior: >-
   | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_1.png) | ![](/design-system/images/uploads/halfwidthblob_behavior_mockup_2.png) |
 
 
-  ### Third-width link blob
+  ### 33/33/33 text component
 
 
   | Above 600 px                                                            | Below 601 px                                                            |

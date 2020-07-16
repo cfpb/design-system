@@ -27,7 +27,7 @@ variation_groups:
           The 25/75 image and text component is used to draw the user’s eye to key information and navigation links, and aid comprehension by pairing content with illustration/imagery.
 
 
-          When used in conjunction with half width link blob, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
+          When used in conjunction with 50/50 text components, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
 
 
           #### When to use
@@ -43,7 +43,7 @@ variation_groups:
           #### When other options are better
 
 
-          * When content doesn’t require imagery. Suggest using the half width link blob pattern instead.
+          * When content doesn’t require imagery. 
 
           * When there are multiple paragraphs of copy.
         variation_specs: >-
@@ -55,6 +55,35 @@ variation_groups:
           * Padding: 30px padding for imagery across responsive sizes
 
           * Headings: Any heading size may be used, recommend H2-6
+      - variation_name: 50/50 image and text
+        variation_description: >-
+          ![Image showing layout of a 50/50 image and text
+          component](/design-system/images/uploads/50_50_intro_mockup.png)
+
+
+          The 50/50 image and text component is used to call attention to specific linked content on a page and feature it prodominantly. At larger breakpoints, this component has a two column layout to utilize extra screen real estate.
+
+
+          The half-width link blob component is a variation of the 50/50 image and text that does not use imagery.
+
+
+          When to use
+
+
+          When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
+
+          When an image or illustration helps users better understand the purpose of content.
+
+          Ideally, when an even number of these components can be featured together.
+
+          To help establish a hierarchy of linked content on this page.
+
+          When other options are better
+
+
+          When content doesn’t require imagery. Suggest using the half-width link blob component instead.
+
+          When there are multiple paragraphs of copy.
   - variations:
       - variation_code_snippet: ""
         variation_description: >-

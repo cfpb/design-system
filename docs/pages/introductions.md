@@ -41,6 +41,8 @@ variation_groups:
 
           * Optional body paragraph and link: Avenir paragraph
 
+          * Text spans seven columns
+
           * At breakpoints below 600: Page title and lead paragraph drop down one type size to make reading on smaller devices easier.
     variation_group_name: Standard text introduction
     variation_group_description: ""
@@ -125,7 +127,7 @@ behavior: >-
 
   | With standard grey-welled sidebar on the right | With standard grey-welled sidebar stacked to prefooter                                         |
 
-  | ![Mockup of 901 pixel and above layout](/design-system/images/uploads/text_introduction_above_900px_071620.png)                                            | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/text_introduction_below_901px_071620.png) |
+  | ![Mockup of 901 pixel and above layout](/design-system/images/uploads/text_introduction_above_900_071620.png)                                            | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/text_introduction_below_901_071620.png) |
 
 
   ### Text introduction with breakout sidebar

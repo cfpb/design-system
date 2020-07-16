@@ -14,7 +14,7 @@ variation_groups:
           ### Collapsed
 
 
-          ![filter control collapsed](/design-system/images/uploads/filterable_list_control_panels_collapsed_071620.png)
+          ![Filterable list collapsed](/design-system/images/uploads/filterable_list_control_panels_collapsed_071620.png)
 
 
           ### Expanded

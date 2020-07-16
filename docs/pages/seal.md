@@ -19,7 +19,7 @@ variation_groups:
 
           <div class="content-50 content-last" markdown="1">
 
-          ![CFPB primary seal](/design-system/images/uploads/seal_071620.png)
+          ![CFPB primary seal](/design-system/images/uploads/seal.png)
 
           </div>
         variation_name: ""
@@ -113,7 +113,7 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![CFPB one-color seal](/design-system/images/uploads/seal_bw_071620.png)
+          ![CFPB one-color seal](/design-system/images/uploads/seal_one-color.png)
 
 
           </div>
@@ -161,7 +161,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  ![Seal clearspace](/design-system/images/uploads/seal_clearspace_071620.png)
+  ![Seal clearspace](/design-system/images/uploads/seal_clearspace.png)
 
 
   </div>
@@ -182,7 +182,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  ![Seal benchmark size](/design-system/images/uploads/seal_size_071620.png)
+  ![Seal benchmark size](/design-system/images/uploads/seal_size.png)
 
 
   </div>
@@ -203,7 +203,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  ![Seal backgrounds](/design-system/images/uploads/seal_background_071620.png)
+  ![Seal backgrounds](/design-system/images/uploads/seal_backgrounds.png)
 
 
   </div>
@@ -224,7 +224,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  ![Misuse: stretched seal](/design-system/images/uploads/seal_misuse_stretch_071620.png)
+  ![Misuse: stretched seal](/design-system/images/uploads/seal_misuse_stretch.png)
 
 
   </div>
@@ -242,7 +242,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  ![Misuse: drop shadow on seal](/design-system/images/uploads/seal_misuse_drop_shadow_071620.png)
+  ![Misuse: drop shadow on seal](/design-system/images/uploads/seal_misuse_shadow.png)
 
 
   </div>
@@ -260,7 +260,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  ![Misuse: seal color](/design-system/images/uploads/seal_misuse_color_071620.png)
+  ![Misuse: seal color](/design-system/images/uploads/seal_misuse_color.png)
 
 
   </div>
@@ -278,7 +278,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  ![Misuse: rotated seal](/design-system/images/uploads/seal_misuse_rotate_071620.png)
+  ![Misuse: rotated seal](/design-system/images/uploads/seal_misuse_rotate.png)
 
 
   </div>
@@ -296,7 +296,7 @@ guidelines: >-
   <div class="content-67 content-last" markdown="1">
 
 
-  ![Misuse: seal background](/design-system/images/uploads/seal_misuse_background_071620.png)
+  ![Misuse: seal background](/design-system/images/uploads/seal_misuse_background.png)
 
 
   </div>

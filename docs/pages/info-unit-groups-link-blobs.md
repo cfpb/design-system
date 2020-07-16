@@ -61,29 +61,29 @@ variation_groups:
           component](/design-system/images/uploads/50_50_intro_mockup.png)
 
 
-          The 50/50 image and text component is used to call attention to specific linked content on a page and feature it prodominantly. At larger breakpoints, this component has a two column layout to utilize extra screen real estate.
+          The 50/50 image and text component is used to call attention to linked content on a page. At larger breakpoints, this component has a two column layout to utilize extra screen real estate.
 
 
-          The half-width link blob component is a variation of the 50/50 image and text that does not use imagery.
+          The 50/50 text component is a variation of the 50/50 image and text that does **not** use imagery.
 
 
-          When to use
+          #### When to use
 
 
-          When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
+          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
 
-          When an image or illustration helps users better understand the purpose of content.
+          * When an image or illustration helps users better understand the purpose of content.
 
-          Ideally, when an even number of these components can be featured together.
+          * Ideally, when an even number of these components can be featured together.
 
-          To help establish a hierarchy of linked content on this page.
+          * To help establish a hierarchy of linked content on this page.
 
-          When other options are better
+          #### When other options are better
 
 
-          When content doesn’t require imagery. Suggest using the half-width link blob component instead.
+          * When content doesn’t require imagery. 
 
-          When there are multiple paragraphs of copy.
+          * When there are multiple paragraphs of copy.
   - variations:
       - variation_code_snippet: ""
         variation_description: >-

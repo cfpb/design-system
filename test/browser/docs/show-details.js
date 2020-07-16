@@ -11,10 +11,10 @@ describe( 'The "show details" toggling feature', function() {
 
   before( function() {
     browser.url( '/design-system/components/' );
-    browser.setWindowSize( 1024, 768 );
+    browser.setWindowSize( 1600, 1200 );
     const sideNav = $( '.ds-nav' );
     sideNav.waitForDisplayed();
-    componentPages = $$( '.ds-nav .m-list_link' ).map( el => ( {
+    componentPages = $$( '.ds-nav-2 .m-list_link' ).map( el => ( {
       name: el.getText(),
       url: el.getAttribute( 'href' )
     } ) );
@@ -35,7 +35,6 @@ describe( 'The "show details" toggling feature', function() {
         before( function() {
           browser.url( componentPage.url );
           browser.refresh();
-          browser.setWindowSize( 1024, 768 );
           showDetailsButton = $( 'button=Show details' );
           hideDetailsButton = $( 'button=Hide details' );
           detailsTabs = [ ...$$( '.govuk-tabs' ) ];

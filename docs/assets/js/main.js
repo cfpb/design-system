@@ -1,4 +1,7 @@
-import { TOGGLE_ATTRIBUTE, toggleDetails } from './toggle-details.js';
+import {
+  toggleAllDetails,
+  toggleDetails
+} from './toggle-details.js';
 import AnchorJS from 'anchor-js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
 import Table from '@cfpb/cfpb-tables/src/Table';
@@ -36,14 +39,27 @@ if ( tabs && tabs.length > 0 ) {
   }
 }
 
+const toggleAllBtn = document.querySelector( '#toggle-details' );
+const toggleBtns = document.querySelectorAll( '.a-toggle_code button' );
+
+toggleAllBtn.addEventListener( 'click', handleToggleAllClick, false );
+
+for ( let i = 0, len = toggleBtns.length; i < len; i++ ) {
+  toggleBtns[i].addEventListener( 'click', handleToggleClick, false );
+}
+
 /**
  * @param {MouseEvent} event - The mouse event object from the click.
  */
-function handleDocumentClick( event ) {
-  const target = event.target;
-  if ( target.matches( `[${ TOGGLE_ATTRIBUTE }]` ) ) {
-    toggleDetails( target );
-  }
+function handleToggleAllClick( event ) {
+  event.preventDefault();
+  toggleAllDetails( toggleAllBtn );
 }
 
-document.addEventListener( 'click', handleDocumentClick, false );
+/**
+ * @param {MouseEvent} event - The mouse event object from the click.
+ */
+function handleToggleClick( event ) {
+  const target = event.target;
+  toggleDetails( target );
+}

@@ -5871,6 +5871,9 @@ pre code {
   right: 30px;
   z-index: 1;
 }
+.o-editor_link#toggle-details {
+  bottom: 75px;
+}
 .o-editor_link .a-btn {
   border-radius: 8px;
   box-shadow: 1px 1px 3px #999;
@@ -5878,13 +5881,13 @@ pre code {
 .o-editor_link .a-btn_text {
   display: none;
 }
-.o-editor_link:hover .a-btn {
+.o-editor_link .a-btn {
   display: inline-block;
 }
-.o-editor_link:hover .a-btn_text {
+.o-editor_link .a-btn_text {
   display: inline;
 }
-.o-editor_link:hover .a-btn_icon {
+.o-editor_link .a-btn_icon {
   padding-left: 0.6875em;
   border-left: 1px solid #80b9e7;
   margin-left: 0.4375em;

@@ -64,7 +64,7 @@ variation_groups:
           The 50/50 image and text component is used to call attention to linked content on a page. At larger breakpoints, this component has a two column layout to utilize extra screen real estate.
 
 
-          The 50/50 text component is a variation of the 50/50 image and text that does **not** use imagery.
+          The 50/50 text component is a variation of the 50/50 image and text. The text-only version does not use imagery.
 
 
           #### When to use

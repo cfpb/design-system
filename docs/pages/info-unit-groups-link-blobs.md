@@ -78,12 +78,15 @@ variation_groups:
 
           * To help establish a hierarchy of linked content on this page.
 
+
           #### When other options are better
 
 
           * When content doesn’t require imagery. 
 
           * When there are multiple paragraphs of copy.
+    variation_group_description: "There are two types of image and text component:
+      25/75 and 50/50, named after their layout "
   - variations:
       - variation_code_snippet: ""
         variation_description: >-

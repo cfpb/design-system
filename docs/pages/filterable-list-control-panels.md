@@ -14,17 +14,17 @@ variation_groups:
           ### Collapsed
 
 
-          ![filter control collapsed](/design-system/images/uploads/filter_collapsed.png)
+          ![filter control collapsed](/design-system/images/uploads/filterable_list_control_panels_collapsed_071620.png)
 
 
           ### Expanded
 
 
-          ![Filterable list expanded](/design-system/images/uploads/filter_expanded.png)
+          ![Filterable list expanded](/design-system/images/uploads/filterable_list_control_panels_expanded_071620.png)
         variation_name: ""
         variation_specs: "![Filter panel
-          style](/design-system/images/uploads/filterable_list_control_panels_0\
-          71620.png)"
+          style](/design-system/images/uploads/filterable_list_control_panels_s\
+          pecs_071620.png)"
     variation_group_name: Standard filterable list
     variation_group_description: >-
       Use filters in conjunction with search to help users narrow down large

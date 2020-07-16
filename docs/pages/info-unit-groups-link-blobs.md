@@ -14,7 +14,7 @@ description: "Info unit groups are generally used to provide brief context as
 variation_groups:
   - variation_group_name: Image and text
     variations:
-      - variation_name: 25/75
+      - variation_name: 25/75 image and text
         variation_description: >-
           ![Info unit group: example of
           25/75](/design-system/images/uploads/2575example_desktop.jpg "Info
@@ -80,11 +80,11 @@ variation_groups:
 
 
           https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/half-width-link-blob-group.html
-        variation_name: Half-width link blob
+        variation_name: 50/50 text component
         variation_specs: >-
           * Headings: Use H3 or H4. Do not use both.
-            * H3: Use when you wish to give the blob heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
-            * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
+            * H3: Use when you wish to give the heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
+            * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the component follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
 
           ![](/design-system/images/uploads/halfwidthblob_style_mockup.png)
       - variation_code_snippet: ""
@@ -113,54 +113,13 @@ variation_groups:
 
 
           https://github.com/cfpb/cfgov-refresh/blob/e67d1ad321551c221c01eaa62589dfdd1177d1dc/cfgov/jinja2/v1/_includes/organisms/third-width-link-blob-group.html
-        variation_name: Third-width link blob
+        variation_name: 33/33/33 text component
         variation_specs: >-
           * Headings: Use H3 or H4. Do not use both.
             * H3: Use when you wish to give the blob heading text a higher level of prominence within the page hierarchy. Avoid using H3 when it will cause the heading to break to 3 lines or more.
             * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the blob set follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
 
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
-      - variation_name: 25/75 image and text component
-        variation_description: >-
-          ![Info unit group: example of
-          25/75](/design-system/images/uploads/2575example_desktop.jpg "Info
-          unit group: example of 25/75")
-
-
-          ![]()
-
-
-          The 25/75 image and text component is used to draw the user’s eye to key information and navigation links, and aid comprehension by pairing content with illustration/imagery.
-
-
-          When used in conjunction with half width link blob, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
-
-
-          #### When to use
-
-
-          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
-
-          * When an image or illustration helps users better understand the purpose of content.
-
-          * Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.
-
-
-          #### When other options are better
-
-
-          * When content doesn’t require imagery. Suggest using the half width link blob pattern instead.
-
-          * When there are multiple paragraphs of copy.
-        variation_specs: >-
-          * ![diagram of the 25/75 image and text module with 30px of spacing
-          shown](/design-system/images/uploads/25-75_style_desktop_1.jpg "Info
-          unit group: specs for 25/75 image and text")
-
-            Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
-          * Padding: 30px padding for imagery across responsive sizes
-
-          * Headings: Any heading size may be used, recommend H2-6
     variation_group_name: Text only
     variation_group_description: Text only units consist of a heading, short
       descriptive text, and call to action. They are also referred to as "link

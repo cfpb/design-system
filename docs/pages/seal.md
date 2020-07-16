@@ -11,6 +11,8 @@ variation_groups:
       - variation_description: |-
           <div class="content-33 content-first" markdown="1">
 
+          ### Primary seal
+
           The primary seal should be used on materials printed in color.
 
           </div>
@@ -20,7 +22,7 @@ variation_groups:
           ![CFPB primary seal](/design-system/images/uploads/seal_071620.png)
 
           </div>
-        variation_name: Primary seal
+        variation_name: ""
         variation_specs: |-
           The seal is comprised of the following colors. 
 
@@ -94,9 +96,12 @@ variation_groups:
             </tbody></table>
   - variation_group_name: Variations
     variations:
-      - variation_name: One-color seal
+      - variation_name: ""
         variation_description: >-
           <div class="content-33 content-first" markdown="1">
+
+
+          ### One-color seal
 
 
           For the rare case that the seal is on a material not being printed in full color, the one-color seal in black should be used. The one-color seal should always be placed on a white background.
@@ -141,10 +146,10 @@ use_cases: >-
 
   * Delegations of Authority from the Director
 guidelines: >-
-  ### Cleaspace
-
-
   <div class="content-33 content-first" markdown="1">
+
+
+  ### Cleaspace
 
 
   Use ample space around the seal to ensure maximum impact and keep the mark from looking cluttered. The clear space on each side of the seal should be ¼” of the seal’s size. 
@@ -162,10 +167,10 @@ guidelines: >-
   </div>
 
 
-  ### Scale
-
-
   <div class="content-33 content-first" markdown="1">
+
+
+  ### Scale
 
 
   Use the seal at its benchmark size of 1.75” for most materials, such as a report cover. For materials such as signage and flags where the seal needs to appear larger, increase the seal's size in increments of 0.5”. 
@@ -183,10 +188,10 @@ guidelines: >-
   </div>
 
 
-  ### Background
-
-
   <div class="content-33 content-first" markdown="1">
+
+
+  ### Background
 
 
   Place the seal on a white background. The only other color the seal may be placed on is navy, and this is reserved for select cases, such as the CFPB's flag.
@@ -204,10 +209,10 @@ guidelines: >-
   </div>
 
 
-  ### Misuse
-
-
   <div class="content-33 content-first" markdown="1">
+
+
+  ### Misuse
 
 
   Don’t stretch or condense the seal. This weakens the brand. 

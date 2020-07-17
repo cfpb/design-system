@@ -127,7 +127,7 @@ behavior: >-
 
   | With standard grey-welled sidebar on the right | With standard grey-welled sidebar stacked to prefooter                                         |
 
-  | ![Mockup of 901 pixel and above layout](/design-system/images/uploads/text_introduction_above_900_071620.png)                                            | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/text_introduction_below_901_071620.png) |
+  | ![Mockup of 901 pixel and above layout](/design-system/images/uploads/text_introduction_above-900px_071720.png)                                            | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/text_introduction_below-901px_071720.png) |
 
 
   ### Text introduction with breakout sidebar

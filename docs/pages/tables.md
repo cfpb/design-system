@@ -555,8 +555,8 @@ variation_groups:
           * Please note the importance of defining a `thead` and `tbody` to preserve the table’s header through sorting operations.
       - variation_name: Filtering tables
         variation_code_snippet: >
-          
-          <div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true">
+
+          <div class="o-expandable o-expandable__padded">
               <button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false">
                   <span class="o-expandable_header-left o-expandable_label">
                       Filter activities
@@ -575,6 +575,7 @@ variation_groups:
               <div class="o-expandable_content o-expandable_content__transition o-expandable_content__collapsed" aria-expanded="false" style="max-height: 0px;">
                   <p>Filter options go here</p>
               </div>
+          </div>
 
           <table class="o-table o-table__stack-on-small" data-bound="true">
               <thead>

@@ -6423,6 +6423,18 @@ pre code {
 .swatch_field__dark-green {
   background: #1e9642;
 }
+.swatch_field__mid-dark-green {
+  background: #1fa040;
+}
+.swatch_field__navy-50 {
+  background: #9daecc;
+}
+.swatch_field__gold-70 {
+  background: #ffc372;
+}
+.swatch_field__purple-50 {
+  background: #dc9cbf;
+}
 .color-table {
   width: 100%;
   margin-bottom: 2.8125em;

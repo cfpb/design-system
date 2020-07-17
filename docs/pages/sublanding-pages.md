@@ -71,7 +71,7 @@ guidelines: >-
 
   * Must contain at least 1 pattern, though the [featured content module](/design-system/patterns/featured-content-module) or [well](/design-system/patterns/wells) should not stand on their own.
 
-  * Recommended hierarchy of patterns: [featured content module](/design-system/patterns/featured-content-module), [info unit groups](/design-system/patterns/info-unit-groups-image-and-text), [wells](/design-system/patterns/wells), and full width body copy.
+  * Recommended hierarchy of patterns: [featured content module](/design-system/patterns/featured-content-module), [info unit groups](/design-system/patterns/info-unit-groups), [wells](/design-system/patterns/wells), and full width body copy.
 
   * [Wells](/design-system/patterns/wells)  should not be used at the top of this area if the hero is used to introduce the page.
 
@@ -102,9 +102,7 @@ related_items: >
 
   Content
 
-  * [Image and text](/design-system/patterns/info-unit-groups-image-and-text)
-
-  * Half width link blob
+  * [Info unit groups](/design-system/patterns/info-unit-groups)
 
   * [Featured content module](/design-system/patterns/featured-content-module)
 

@@ -89,9 +89,9 @@ related_items: >-
 
   Content
 
-  * [Image and text](/design-system/patterns/info-unit-groups-image-and-text)
+  * [Image and text component](/design-system/patterns/info-unit-groups#image-and-text-1)
 
-  * Half width link blob
+  * [Text component](/design-system/patterns/info-unit-groups#text-only-1)
 
   * [Featured content module](/design-system/patterns/featured-content-module)
 

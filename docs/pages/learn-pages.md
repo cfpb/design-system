@@ -103,7 +103,7 @@ related_items: >
 
   * [Expandables](/design-system/components/expandables)
 
-  * 25/75 image & text
+  * [25/75 image & text component](/design-system/patterns/info-unit-groups#25-75-image-and-text-component)
 
   * [Wells](/design-system/patterns/wells)
 

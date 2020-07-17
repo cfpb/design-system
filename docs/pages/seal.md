@@ -26,6 +26,8 @@ variation_groups:
         variation_specs: |-
           The seal is comprised of the following colors. 
 
+
+
           <table class="color-table">
                 <thead>
                     <tr>
@@ -34,10 +36,10 @@ variation_groups:
                     <th>Name</th>
                     <th>CMYK</th>
 
-          \    <th>PMS</th>
+           <th>PMS</th>
 
-          \    <th>RGB</th>
-                </tr>
+           <th>RGB</th>
+          </tr>
 
           </thead>
 
@@ -48,9 +50,10 @@ variation_groups:
                 <td>Dark Navy</td>
                 <td>100, 80, 6, 32</td>
 
-          \    <td>288C</td>
+          <td>288C</td>
 
-          \    <td>0, 45, 114</td>
+          <td>0, 45, 114</td>
+
             </tr>
 
             <tr>
@@ -58,9 +61,10 @@ variation_groups:
                 <td>Beige</td>
                 <td>0, 10, 50, 30</td>
 
-          \    <td>4515C</td>
+          <td>4515C</td>
 
-          \    <td>190, 169, 111</td>
+           <td>190, 169, 111</td>
+
             </tr>
 
             <tr>
@@ -68,9 +72,10 @@ variation_groups:
                 <td>Beige 60</td>
                 <td>0, 6, 30, 18</td>
 
-          \    <td>4515C 60%</td>
+          <td>4515C 60%</td>
 
-          \    <td>216, 200, 160</td>
+          <td>216, 200, 160</td>
+
             </tr>
 
             <tr>
@@ -78,9 +83,10 @@ variation_groups:
                 <td>Beige 30</td>
                 <td>0, 2, 10, 6</td>
 
-          \    <td>4515C 30%</td>
+          <td>4515C 30%</td>
 
-          \    <td>240, 232, 216</td>
+          <td>240, 232, 216</td>
+
             </tr>
 
             <tr>
@@ -88,9 +94,10 @@ variation_groups:
                 <td>White</td>
                 <td>0, 0, 0, 0</td>
 
-          \    <td></td>
+          <td></td>
 
-          \    <td>255, 255, 255</td>
+          <td>255, 255, 255</td>
+
             </tr>
 
             </tbody></table>

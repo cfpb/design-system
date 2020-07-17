@@ -62,7 +62,7 @@ guidelines: >-
 
   * Must contain at least 1 pattern.
 
-  * Recommended hierarchy of patterns: [image & text](/design-system/patterns/info-unit-groups-image-and-text), [well](/design-system/patterns/wells),  half width link blobs.
+  * Recommended hierarchy of patterns: [image & text info unit groups](/design-system/patterns/info-unit-groups#image-and-text-1), [well](/design-system/patterns/wells), [text info unit groups(/design-system/patterns/info-unit-groups#text-only).
 
   * [Wells](/design-system/patterns/wells) should not be used at the top of this area if the introduction area contains a hero.
 
@@ -94,9 +94,9 @@ related_items: >-
 
   Content
 
-  * [Image and text](/design-system/patterns/info-unit-groups-image-and-text)
+  * [Image and text](/design-system/patterns/info-unit-groups#image-and-text-1)
 
-  * Half width link blob
+  * [Text info unit groups](/design-system/patterns/info-unit-groups#text-only)
 
   * [Wells](/design-system/patterns/wells)
 

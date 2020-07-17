@@ -23,7 +23,7 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![Horizontal lockup logo](/design-system/images/uploads/horizontal_logo_clear_space.png "Horizontal lockup logo")
+          ![Horizontal lockup logo](/design-system/images/uploads/logo_horizontal_071720.png "Horizontal lockup logo")
 
 
           </div>
@@ -43,7 +43,7 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![Vertical lockup logo](/design-system/images/uploads/vertical_logo_clear_space.png "Vertical lockup logo")
+          ![Vertical lockup logo](/design-system/images/uploads/logo_vertical_071720.png "Vertical lockup logo")
 
 
           </div>
@@ -62,7 +62,7 @@ variation_groups:
           <div class="content-50 content-last" markdown="1">
 
 
-          ![Isolated logo](/design-system/images/uploads/isolated_logo_clear_space.png "Isolated logo")
+          ![Isolated logo](/design-system/images/uploads/logo_isolated_071720.png "Isolated logo")
 
 
           </div>
@@ -466,7 +466,7 @@ guidelines: >-
   <div class="content-67 content-last misuse" markdown="1">
 
 
-  ![Example of misuse: logo with beam](/design-system/images/uploads/logo_misuse_beam_removed.png)
+  ![Example of misuse: logo with beam](/design-system/images/uploads/logo_misuse_no_beam_071720.png)
 
 
   </div>
@@ -484,22 +484,7 @@ guidelines: >-
   <div class="content-67 content-last misuse" markdown="1">
 
 
-  <div class="content-50 content-last misuse" markdown="1">
-
-
-  ![Example of misuse: stretched logo](/design-system/images/uploads/logo_misuse_stretch.png)
-
-
-  </div>
-
-
-  <div class="content-50 content-last misuse" markdown="1">
-
-
-  ![Example of misuse: condensed logo](/design-system/images/uploads/logo_misuse_condense.png)
-
-
-  </div>
+  ![Example of misuse: stretched logo](/design-system/images/uploads/logo_misuse_stretch_071720.png)
 
 
   </div>
@@ -517,7 +502,7 @@ guidelines: >-
   <div class="content-67 content-last misuse" markdown="1">
 
 
-  ![Example of misuse: logo with drop shadow](/design-system/images/uploads/logo_misuse_drop_shadow.png)
+  ![Example of misuse: logo with drop shadow](/design-system/images/uploads/logo_misuse_shadow_071720.png)
 
 
   </div>
@@ -535,22 +520,7 @@ guidelines: >-
   <div class="content-67 content-last misuse" markdown="1">
 
 
-  <div class="content-50 content-last misuse" markdown="1">
-
-
-  ![Example of misuse: outlined logo](/design-system/images/uploads/logo_misuse_outline.png)
-
-
-  </div>
-
-
-  <div class="content-50 content-last misuse" markdown="1">
-
-
-  ![Example of misuse: logo with wrong colors](/design-system/images/uploads/logo_misuse_wrong_colors.png)
-
-
-  </div>
+  ![Example of misuse: outlined logo](/design-system/images/uploads/logo_misuse_color_071720.png)
 
 
   </div>
@@ -568,22 +538,7 @@ guidelines: >-
   <div class="content-67 content-last misuse" markdown="1">
 
 
-  <div class="content-50 content-last misuse" markdown="1">
-
-
-  ![Example of misuse: rotated logo](/design-system/images/uploads/logo_misuse_rotate.png)
-
-
-  </div>
-
-
-  <div class="content-50 content-last misuse" markdown="1">
-
-
-  ![Example of misuse: rotated logo](/design-system/images/uploads/logo_misuse_rotate_2.png)
-
-
-  </div>
+  ![Example of misuse: rotated logo](/design-system/images/uploads/logo_misuse_rotate_071720.png)
 
 
   </div>
@@ -601,22 +556,7 @@ guidelines: >-
   <div class="content-67 content-last misuse" markdown="1">
 
 
-  <div class="content-50 content-last misuse" markdown="1">
-
-
-  ![Example of misuse: logo directly on color background](/design-system/images/uploads/logo_misuse_background.png)
-
-
-  </div>
-
-
-  <div class="content-50 content-last misuse" markdown="1">
-
-
-  ![Example of misuse: logo directly on photo background](/design-system/images/uploads/logo_misuse_background_2.png)
-
-
-  </div>
+  ![Example of misuse: logo directly on color background](/design-system/images/uploads/logo_misuse_background_071720.png)
 
 
   </div>

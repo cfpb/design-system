@@ -62,7 +62,7 @@ guidelines: >-
 
   * Must contain at least 1 pattern.
 
-  * Recommended hierarchy of patterns: [image & text](/design-system/patterns/info-unit-groups-image-and-text), [well](/design-system/patterns/wells),  half width link blobs.
+  * Recommended hierarchy of patterns: [image & text components](/design-system/patterns/info-unit-groups#image-and-text-1), [well](/design-system/patterns/wells), [text components](/design-system/patterns/info-unit-groups#text-only).
 
   * [Wells](/design-system/patterns/wells) should not be used at the top of this area if the introduction area contains a hero.
 
@@ -94,11 +94,11 @@ related_items: >-
 
   Content
 
-  * [Image and text](/design-system/patterns/info-unit-groups-image-and-text)
-
-  * Half width link blob
+  * [Image and text components](/design-system/patterns/info-unit-groups#image-and-text-1)
 
   * [Wells](/design-system/patterns/wells)
+
+  * [Text components](/design-system/patterns/info-unit-groups#text-only)
 
   * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
 last_updated: 2019-10-24T20:28:47.366Z

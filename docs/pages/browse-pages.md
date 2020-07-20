@@ -82,12 +82,14 @@ behavior: >-
 
   | ![Breakpoints 901+](/design-system/images/uploads/browse_behavior_desktop.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/browse_behavior_mobile.jpg) |
 related_items: >-
-  Page introductions
+  ### Page introductions
+
 
   * [Text introduction](/design-system/patterns/text-introductions)
 
 
-  Content
+  ### Content
+
 
   * [Image and text component](/design-system/patterns/info-unit-groups#image-and-text-1)
 

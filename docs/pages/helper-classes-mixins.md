@@ -2,7 +2,6 @@
 title: Helper classes and mixins
 layout: variation
 section: development
-secondary_section: Core development
 status: Released
 description: "Helper classes and mixins are utilities to help front-end web
   development meet our design standards. "
@@ -380,19 +379,19 @@ variation_groups:
         variation_code_snippet: ""
       - variation_name: '"Small text utility" mixin'
         variation_description: >-
-          **CLASS**
+          #### **Class**
 
 
           Sets the element to `14px` (in `em`s).
 
 
-          _To be used on default `16px` text only. To use on text set to another size, use the mixin below._
+          *To be used on default `16px` text only. To use on text set to another size, use the mixin below.*
 
 
           `.u-small-text`
 
 
-          **MIXIN**
+          #### **Mixin**
 
 
           Sets the element to `14px` (in `em`s) based on the text size passed as `@context`.
@@ -431,5 +430,6 @@ guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2019-09-13T18:46:32.716Z
+secondary_section: Core development
 research: ""
 ---

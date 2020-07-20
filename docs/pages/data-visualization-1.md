@@ -31,7 +31,8 @@ variation_groups:
       visualization color section).
 
 
-      ##### KEY QUESTIONS
+      ### Key questions
+
 
       * How would someone using a screen reader interact with this visualization?
 
@@ -64,7 +65,8 @@ variation_groups:
       visualization. Several errors in data accuracy can damage credibility.
 
 
-      ##### KEY QUESTIONS
+      ### Key questions
+
 
       * Is this an accurate way to represent this data?
 
@@ -109,7 +111,8 @@ variation_groups:
     variation_group_description: |-
       Consider your audience when you’re creating data visualization.
 
-      ##### KEY QUESTIONS
+      ### Key questions
+
       * Who is your audience?
       * What is their familiarity with data visualization?
       * How much information do they need?
@@ -135,7 +138,8 @@ variation_groups:
       comprehension as well as helping with accessibility.
 
 
-      ##### KEY QUESTIONS
+      ### Key questions
+
 
       * Does your chart have a descriptive title and subtitle so someone who cannot see the chart could understand the general trends?
 
@@ -311,14 +315,14 @@ variation_groups:
 
           * Include the CFPB logo; helps with identification and determining origin if the graphic gets re-used
   - variation_group_name: Color
-    variation_group_description: >+
+    variation_group_description: >-
       When used properly, color can help clarify relationships between data,
       provide emphasis for certain data points, and maintain a consistent brand
       voice. When used poorly, color can overwhelm the user, make the data
       confusing and break with brand standards to appear inconsistent.
 
 
-      ##### KEY QUESTIONS
+      ### Key questions
 
 
       * Does the use of color have a purpose?
@@ -326,7 +330,6 @@ variation_groups:
       * Have you relied on more than just color to connote meaning?
 
       * Have you accounted for color blindness?
-
     variations:
       - variation_name: Color palettes and accessibility
         variation_description: >-
@@ -344,7 +347,8 @@ variation_groups:
       point of the graphic and accurately comprehend the information.
 
 
-      ##### KEY QUESTIONS
+      ### Key questions
+
 
       * What is the point of the chart?
 

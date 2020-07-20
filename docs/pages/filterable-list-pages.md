@@ -71,7 +71,8 @@ behavior: For responsive behavior, see guidance for the [sublanding
   page](https://cfpb.github.io/design-system/pages/sublanding-pages) and [browse
   page](https://cfpb.github.io/design-system/pages/browse-pages).
 related_items: >-
-  Pages
+  ### Pages
+
 
   * [Document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
 
@@ -80,14 +81,16 @@ related_items: >-
   * [Browse page](https://cfpb.github.io/design-system/pages/browse-pages)
 
 
-  Page introductions 
+  ### Page introductions 
+
 
   * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
 
   * [Text introduction](https://cfpb.github.io/design-system/patterns/text-introductions)
 
 
-  Content
+  ### Content
+
 
   * [Filterable list control panels](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels)
 

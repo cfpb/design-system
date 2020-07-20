@@ -44,23 +44,27 @@ variation_groups:
 
           Apply the `a-btn` class to a link, button and submit input field to receive the atomic button styles. For more information, see [cf.gov refresh documentation on atomic styles](https://cfpb.github.io/cfgov-refresh/atomic-structure/).
         variation_specs: |-
-          Default
-          - Avenir Next Medium, 16px, (#ffffff)
-          - Background: Pacific (#0072ce)
-          - Top and bottom padding: 10px
-          - Left and right padding: 15px
-          - Border radius: 4px
+          #### Default
 
-          Hover
-          - Background: Dark Pacific (#0050b4)
+          * Avenir Next Medium, 16px, (#ffffff)
+          * Background: Pacific (#0072ce)
+          * Top and bottom padding: 10px
+          * Left and right padding: 15px
+          * Border radius: 4px
 
-          Focused
-          - Background: Dark Pacific (#0050b4)
-          - Outline: Dotted 1px, Pacific (#0072ce)
-          - Outline offset: 1px
+          #### Hover
 
-          Active
-          - Background: Navy (#254b87)
+          * Background: Dark Pacific (#0050b4)
+
+          #### Focused
+
+          * Background: Dark Pacific (#0050b4)
+          * Outline: Dotted 1px, Pacific (#0072ce)
+          * Outline offset: 1px
+
+          #### Active
+
+          * Background: Navy (#254b87)
         variation_name: Primary buttons
       - variation_code_snippet: >-
           <button class="a-btn a-btn__secondary" title="Default state">Default
@@ -87,22 +91,26 @@ variation_groups:
           {%- endmacro %}
         variation_name: Secondary buttons
         variation_specs: |-
-          Default
-          - Background: Gray (#5a5d61)
+          #### Default
 
-          Hover
-          - Background: Dark Gray (#43484e)
+          * Background: Gray (#5a5d61)
 
-          Focused
-          - Background: Dark Gray (#43484e)
-          - Outline: Dotted 1px, Gray (#5a5d61)
-          - Outline offset: 1px
+          #### Hover
 
-          Active
-          - Background: CFPB Black (#101820)
+          * Background: Dark Gray (#43484e)
+
+          #### Focused
+
+          * Background: Dark Gray (#43484e)
+          * Outline: Dotted 1px, Gray (#5a5d61)
+          * Outline offset: 1px
+
+          #### Active
+
+          * Background: CFPB Black (#101820)
       - variation_code_snippet: >-
-          <button class="a-btn a-btn__disabled" title="Default state" disabled>Default
-          state</button>
+          <button class="a-btn a-btn__disabled" title="Default state"
+          disabled>Default state</button>
 
 
           <button class="a-btn a-btn__disabled hover" title="Hovered state" disabled>Hovered state</button>
@@ -122,14 +130,16 @@ variation_groups:
           {%- endmacro %}
         variation_name: Disabled buttons
         variation_specs: |-
-          Default/Hover/Active
-          - Avenir Next Medium, 16px, Gray (#5a5d61)
-          - Background: Gray 20 (#d2d3d5)
-          - Cursor set to `not-allowed`
+          #### Default/Hover/Active
 
-          Focused
-          - Outline: Dotted 1px, Gray 20 (#d2d3d5)
-          - Outline offset: 1px
+          * Avenir Next Medium, 16px, Gray (#5a5d61)
+          * Background: Gray 20 (#d2d3d5)
+          * Cursor set to `not-allowed`
+
+          #### Focused
+
+          * Outline: Dotted 1px, Gray 20 (#d2d3d5)
+          * Outline offset: 1px
       - variation_code_snippet: >-
           <button class="a-btn a-btn__warning" title="Default state">Default
           state</button>
@@ -151,19 +161,23 @@ variation_groups:
           {%- endmacro %}
         variation_name: Destructive buttons
         variation_specs: |-
-          Default
-          - Background: Red (#d14124)
+          #### Default
 
-          Hover
-          - Background: Dark Red (#b63014)
+          * Background: Red (#d14124)
 
-          Focused
-          - Background: Dark Red (#b63014)
-          - Outline: Dotted 1px, Red (#d14124)
-          - Outline offset: 1px
+          #### Hover
 
-          Active
-          - Background: Dark Gray (#43484e)
+          * Background: Dark Red (#b63014)
+
+          #### Focused
+
+          * Background: Dark Red (#b63014)
+          * Outline: Dotted 1px, Red (#d14124)
+          * Outline offset: 1px
+
+          #### Active
+
+          * Background: Dark Gray (#43484e)
       - variation_name: Destructive actions
         variation_code_snippet: >-
           <div class="m-btn-group">

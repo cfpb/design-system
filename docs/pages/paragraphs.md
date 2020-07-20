@@ -32,7 +32,7 @@ variation_groups:
           * Assumes that the font size of each of these items remains the default.
 
 
-          ### Italicizing
+          #### Italicizing
 
 
           `@webfont-italic: @webfont-regular;`
@@ -41,9 +41,7 @@ variation_groups:
           We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.
 
 
-
-
-          ### Bolding
+          #### Bolding
 
 
           `@webfont-demi: @webfont-medium;`

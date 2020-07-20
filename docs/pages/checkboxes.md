@@ -157,51 +157,61 @@ variation_groups:
         variation_specs: |-
           #### Default
 
-          Target area
-          - Minimum height: 50px
-          - Background: Gray 10 (#e7e8e9)
-          - Padding: 15 px
+          ##### Target area
 
-          Radio button (or checkbox) and text
-          - Border: 1 px, Gray 60 (#919395)
-          - Background: 20 px x 20 px, White (#ffffff)
-          - Avenir Next Regular, 16 px, Black (#101820)
+          * Minimum height: 50px
+          * Background: Gray 10 (#e7e8e9)
+          * Padding: 15 px
+
+          ##### Radio button (or checkbox) and text
+
+          * Border: 1 px, Gray 60 (#919395)
+          * Background: 20 px x 20 px, White (#ffffff)
+          * Avenir Next Regular, 16 px, Black (#101820)
 
           #### Hover
-          Target area
-          - Border: 2 px, Pacific (#0072ce)
-          - Background: Gray 10 (#e7e8e9)
-          - Radio button (or checkbox)
 
-          Checkbox
-          - Border: 2 px, Pacific (#0072ce)
+          ##### Target area
+
+          * Border: 2 px, Pacific (#0072ce)
+          * Background: Gray 10 (#e7e8e9)
+          * Radio button (or checkbox)
+
+          ##### Checkbox
+
+          * Border: 2 px, Pacific (#0072ce)
 
           #### Focus
 
-          Target area
-          - Border: 2 px, Pacific (#0072ce)
-          - Background: Gray 10 (#e7e8e9)
-          - Outline: Dotted 1px, Pacific (#0072ce)
+          ##### Target area
 
-          Checkbox
-          - Border: 2 px, Pacific (#0072ce)
+          * Border: 2 px, Pacific (#0072ce)
+          * Background: Gray 10 (#e7e8e9)
+          * Outline: Dotted 1px, Pacific (#0072ce)
+
+          ##### Checkbox
+
+          * Border: 2 px, Pacific (#0072ce)
 
           #### Selected
 
-          Target area
-          - Border: 1 px, Pacific (#0072ce)
-          - Background: Pacific 20 (#d6e8fa)
+          ##### Target area
 
-          Checkbox
-          - Border: 1 px, Gray 60 (#919395)
-          - Background: 14 x 14 px, Pacific (#0072ce)
+          * Border: 1 px, Pacific (#0072ce)
+          * Background: Pacific 20 (#d6e8fa)
+
+          ##### Checkbox
+
+          * Border: 1 px, Gray 60 (#919395)
+          * Background: 14 x 14 px, Pacific (#0072ce)
 
           #### Disabled
 
-          Checkbox
-          - Border: 1 px, Gray 60 (#919395)
-          - Background: Gray 20 (#d2d3d5)
-          - Avenir Next Regular, 16 px, Gray (#5a5d61)
+          ##### Checkbox
+
+          * Border: 1 px, Gray 60 (#919395)
+          * Background: Gray 20 (#d2d3d5)
+          * Avenir Next Regular, 16 px, Gray (#5a5d61)
         variation_description: For better usability, consider using checkboxes with
           large target areas. These are easier to interact with (especially on
           smaller screens) and harder to miss. They are especially desirable

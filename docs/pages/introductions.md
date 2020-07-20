@@ -127,7 +127,7 @@ behavior: >-
 
   | With standard grey-welled sidebar on the right | With standard grey-welled sidebar stacked to prefooter                                         |
 
-  | ![Mockup of 901 pixel and above layout](/design-system/images/uploads/text_introduction_above-900px_071720.png)                                            | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/text_introduction_below-901px_071720.png) |
+  | ![Mockup of 900 pixel and above layout](/design-system/images/uploads/text_introduction_above900_072020.png)                                            | ![Mockup of 901 pixel and below layout](/design-system/images/uploads/text_introduction_below901_072020.png)|
 
 
   ### Text introduction with breakout sidebar
@@ -139,7 +139,7 @@ behavior: >-
 
   | Breakout sidebar on the right                                                         | Breakout sidebar stacked immediately after text intro                                          |
 
-  | ![Mockup of 900+ pixel layout](/design-system/images/uploads/textintro_behavior2.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior4.jpg) |
+  | ![Mockup of 900+ pixel layout](/design-system/images/uploads/breakout_sidebar_above900_072020.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/breakout_sidebar_below901_072020.png) |
 accessibility: ""
 research: ""
 related_items: >-

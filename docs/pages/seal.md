@@ -26,8 +26,6 @@ variation_groups:
         variation_specs: |-
           The seal is comprised of the following colors. 
 
-
-
           <table class="color-table">
                 <thead>
                     <tr>
@@ -39,6 +37,8 @@ variation_groups:
            <th>PMS</th>
 
            <th>RGB</th>
+
+          <th>HEX</th>
           </tr>
 
           </thead>
@@ -54,6 +54,8 @@ variation_groups:
 
           <td>0, 45, 114</td>
 
+          <td>#002d72</td>
+
             </tr>
 
             <tr>
@@ -64,6 +66,8 @@ variation_groups:
           <td>4515C</td>
 
            <td>190, 169, 111</td>
+
+          <td>#bea96f</td>
 
             </tr>
 
@@ -76,6 +80,8 @@ variation_groups:
 
           <td>216, 200, 160</td>
 
+          <td>#d8c8a0</td>
+
             </tr>
 
             <tr>
@@ -87,6 +93,8 @@ variation_groups:
 
           <td>240, 232, 216</td>
 
+          <td>#f0e8d8</td>
+
             </tr>
 
             <tr>
@@ -97,6 +105,8 @@ variation_groups:
           <td></td>
 
           <td>255, 255, 255</td>
+
+          <td>#ffffff</td>
 
             </tr>
 

@@ -27,10 +27,8 @@ variation_groups:
         variation_jinja_code_snippet: ""
         variation_name: ""
         variation_specs: >-
-          #### Style
-
-
-          ![Image of text intro showing grid and design specs](/design-system/images/uploads/text_introduction_specs_072020.png)
+          ![Image of text intro showing grid and design
+          specs](/design-system/images/uploads/text_introduction_specs_072020.png)
 
 
           * Spacing: 45px margin above, 60 px margin below.
@@ -50,10 +48,8 @@ variation_groups:
     variation_group_description: ""
     variations:
       - variation_specs: >-
-          #### Style
-
-
-          ![Image of text intro with breakout sidebar showing grid and design specs](/design-system/images/uploads/breakout_sidebar_specs_072020.png)
+          ![Image of text intro with breakout sidebar showing grid and design
+          specs](/design-system/images/uploads/breakout_sidebar_specs_072020.png)
 
 
           * Spacing: The breakout may be taller than the Text Intro content, in which case the margin beneath the breakout should be 60px.

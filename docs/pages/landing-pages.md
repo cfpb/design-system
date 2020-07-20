@@ -85,14 +85,16 @@ behavior: >-
 
   | ![Breakpoints 901+](/design-system/images/uploads/landing_behavior_desktop_2x.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/landing_behavior_mobile_2x.jpg) |
 related_items: >-
-  Page introductions
+  ### Page introductions
+
 
   * [Heroes](/design-system/patterns/heroes)
 
   * [Text introduction](/design-system/patterns/text-introductions)
 
 
-  Content
+  ### Content
+
 
   * [Image and text components](/design-system/patterns/info-unit-groups#image-and-text-1)
 

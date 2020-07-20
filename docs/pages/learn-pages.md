@@ -84,20 +84,23 @@ behavior: >-
   | -- | -- |
 
   | ![Breakpoints 901+](/design-system/images/uploads/learn_behavior_desktop.jpg) | ![Breakpoints 90o and less](/design-system/images/uploads/learn_behavior_mobile.jpg) |
-related_items: >
-  Pages
+related_items: >-
+  ### Pages
+
 
   * [Document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
 
 
-  Page introductions
+  ### Page introductions
+
 
   * [Text introduction](/design-system/patterns/text-introductions)
 
   * [Item introduction](https://cfpb.github.io/design-system/patterns/item-introductions)
 
 
-  Content
+  ### Content
+
 
   * [Tables](/design-system/components/tables)
 

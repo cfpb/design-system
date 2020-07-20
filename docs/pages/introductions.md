@@ -23,14 +23,14 @@ variation_groups:
           Layout as seen with a standard right sidebar:
 
 
-          ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/text_introduction_071620.png)
+          ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/text_introduction_072020.png)
         variation_jinja_code_snippet: ""
         variation_name: ""
         variation_specs: >-
           #### Style
 
 
-          ![Image of text intro showing grid and design specs](/design-system/images/uploads/text_introduction_specs_071620.png)
+          ![Image of text intro showing grid and design specs](/design-system/images/uploads/text_introduction_specs_072020.png)
 
 
           * Spacing: 45px margin above, 60 px margin below.
@@ -53,7 +53,7 @@ variation_groups:
           #### Style
 
 
-          ![Image of text intro with breakout sidebar showing grid and design specs](/design-system/images/uploads/textintro_style2.png)
+          ![Image of text intro with breakout sidebar showing grid and design specs](/design-system/images/uploads/breakout_sidebar_specs_072020.png)
 
 
           * Spacing: The breakout may be taller than the Text Intro content, in which case the margin beneath the breakout should be 60px.
@@ -79,7 +79,7 @@ variation_groups:
           Layout as seen with a ‘breakout’ highlight in the right sidebar area:
 
 
-          ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/textintro_intro2.png)
+          ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/breakout_sidebar_072020.png)
 use_cases: ""
 guidelines: >-
   ### Content guidelines
@@ -127,7 +127,7 @@ behavior: >-
 
   | With standard grey-welled sidebar on the right | With standard grey-welled sidebar stacked to prefooter                                         |
 
-  | ![Mockup of 901 pixel and above layout](/design-system/images/uploads/text_introduction_above-900px_071720.png)                                            | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/text_introduction_below-901px_071720.png) |
+  | ![Mockup of 900 pixel and above layout](/design-system/images/uploads/text_introduction_above900_072020.png)                                            | ![Mockup of 901 pixel and below layout](/design-system/images/uploads/text_introduction_below901_072020.png)|
 
 
   ### Text introduction with breakout sidebar
@@ -139,7 +139,7 @@ behavior: >-
 
   | Breakout sidebar on the right                                                         | Breakout sidebar stacked immediately after text intro                                          |
 
-  | ![Mockup of 900+ pixel layout](/design-system/images/uploads/textintro_behavior2.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/textintro_behavior4.jpg) |
+  | ![Mockup of 900+ pixel layout](/design-system/images/uploads/breakout_sidebar_above900_072020.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/breakout_sidebar_below901_072020.png) |
 accessibility: ""
 research: ""
 related_items: >-

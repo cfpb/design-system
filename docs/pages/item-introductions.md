@@ -25,9 +25,6 @@ variation_groups:
 
           ![Schematic of an item introduction](/design-system/images/uploads/itemintro_intro.png)
         variation_specs: >-
-          #### Style
-
-
           ![](/design-system/images/uploads/itemintro_style.png)
 
 

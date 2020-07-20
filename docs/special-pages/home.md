@@ -134,7 +134,7 @@ description: >
   <div class="content-50 content-last" markdown="1">
 
 
-  #### Setup and contribution
+  ### Setup and contribution
 
   Learn how to integrate our design system into your project, contribute to the code base, and update the documentation. 
 
@@ -148,7 +148,7 @@ description: >
   <div class="content-50 content-last" markdown="1">
 
 
-  #### Using source code
+  ### Using source code
 
 
   The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov). 

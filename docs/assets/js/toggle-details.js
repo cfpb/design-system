@@ -46,9 +46,11 @@ function toggleAllDetails( toggleBtn ) {
   if ( isShowingAllDetails ) {
     toggleBtn.querySelector( '.a-btn_text' ).innerHTML = 'Show all details';
     toggleBtn.setAttribute( 'title', 'Show all details' );
+    window.localStorage.setItem( 'toggleState', 'show' );
   } else {
     toggleBtn.querySelector( '.a-btn_text' ).innerHTML = 'Hide all details';
     toggleBtn.setAttribute( 'title', 'Hide all details' );
+    window.localStorage.setItem( 'toggleState', 'hide' );
   }
 
   const codeEls = document.querySelectorAll( '.a-toggle_code' );

@@ -265,15 +265,11 @@ variation_groups:
           they are attempting to perform is functioning as intended.
 
         variation_code_snippet: >-
-          <!--
-
           <button class="a-btn">
               Submit your complaint
               <span class="a-btn_icon
                            a-btn_icon__on-right">{% include icons/updating.svg %}</span>
           </button>
-
-          -->
     variation_group_description: Use icons consistently. Each icon should be used
       exclusively for one action. Icons appear to the left of the button text.
       Buttons that have “forward” actions have icons to the right of the text,

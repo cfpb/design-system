@@ -47,11 +47,13 @@ variation_groups:
 
           * When there are multiple paragraphs of copy.
         variation_specs: >-
-          * ![diagram of the 25/75 image and text module with 30px of spacing
+          ![diagram of the 25/75 image and text module with 30px of spacing
           shown](/design-system/images/uploads/25-75_style_desktop_1.jpg "Info
           unit group: specs for 25/75 image and text")
 
-            Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
+
+          * Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
+
           * Padding: 30px padding for imagery across responsive sizes
 
           * Headings: Any heading size may be used, recommend H2-6
@@ -172,31 +174,47 @@ use_cases: ""
 guidelines: >-
   ### Content guidelines
 
-  * Headings
 
-    * 25/75 image and text component: 60 characters or less, ideally rendering as one line.
-    * 50/50 image and text component: 30 characters or less, ideally rendering as one line.
-    * 50/50 and 33/33/33 text components: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
+  #### Headings
 
-  * Descriptions
 
-    *  Do not use info unit groups for multiple paragraphs of copy. Copy should be succinct.
-    * 50/50 text components: 100-250 characters max
-    * 33/33/33 text components: 90-150 characters max
-    * 25/75 image and text component: 275 characters max
-    * 50/50 image and text component: 50 characters min, 130 characters max, which renders as 2-3 lines at max column width.
+  * 25/75 image and text component: 60 characters or less, ideally rendering as one line.
 
-  * Call to action
+  * 50/50 image and text component: 30 characters or less, ideally rendering as one line.
 
-    * 25/75 image and text component: 65 characters max 
-    * 50/50 image and text component: 40 characters max
-    * 50/50 text components: 40 characters max
-    * 33/33/33 text components: 30 characters max
-    * Follow [link guidelines](https://cfpb.github.io/design-system/components/links).
+  * 50/50 and 33/33/33 text components: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
+
+
+  #### Descriptions
+
+
+  * Do not use info unit groups for multiple paragraphs of copy. Copy should be succinct.
+
+  * 50/50 text components: 100-250 characters max
+
+  * 33/33/33 text components: 90-150 characters max
+
+  * 25/75 image and text component: 275 characters max
+
+  * 50/50 image and text component: 50 characters min, 130 characters max, which renders as 2-3 lines at max column width.
+
   * When these components are featured together (which is ideal), the amount of content in each component should be as close to the same number of total lines as possible.
 
     * For 50/50 text components, one or two lines different is ok
     * For 33/33/33 text components, a difference of one line is ok
+
+  #### Call to action
+
+
+  * 25/75 image and text component: 65 characters max 
+
+  * 50/50 image and text component: 40 characters max
+
+  * 50/50 text components: 40 characters max
+
+  * 33/33/33 text components: 30 characters max
+
+  * Follow [link guidelines](https://cfpb.github.io/design-system/components/links).
 behavior: >-
   ### 50/50 components
 

@@ -29,7 +29,6 @@ variation_groups:
               <li class="m-list_item">List item 3</li>
           </ul>
         variation_specs: >-
-          
           #### Default
 
 
@@ -46,7 +45,7 @@ variation_groups:
           * Bullets are aligned flush with the left margin of the column of text they’re in
 
 
-          NESTED
+          #### Nested
 
 
           * Bullets are open circles and flush left with the preceding line of text
@@ -69,9 +68,7 @@ variation_groups:
               <li>List item 3</li>
           </ol>
         variation_specs: >-
-          
-
-          DEFAULT
+          #### Default
 
 
           * Avenir Next Regular, 16px
@@ -85,7 +82,7 @@ variation_groups:
           * Numbers are right aligned to their associated period; all single-digit numbers fit inside the left margin
 
 
-          NESTED ITEMS
+          #### Nested
 
 
           * Depending on the content and use case, nested items may either appear as bullets — solid squares — that are flush left with the preceding line of text, or lower-cased letters, as shown in the example.

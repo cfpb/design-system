@@ -23,14 +23,14 @@ variation_groups:
           Layout as seen with a standard right sidebar:
 
 
-          ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/text_introduction_071620.png)
+          ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/text_introduction_072020.png)
         variation_jinja_code_snippet: ""
         variation_name: ""
         variation_specs: >-
           #### Style
 
 
-          ![Image of text intro showing grid and design specs](/design-system/images/uploads/text_introduction_specs_071620.png)
+          ![Image of text intro showing grid and design specs](/design-system/images/uploads/text_introduction_specs_072020.png)
 
 
           * Spacing: 45px margin above, 60 px margin below.
@@ -53,7 +53,7 @@ variation_groups:
           #### Style
 
 
-          ![Image of text intro with breakout sidebar showing grid and design specs](/design-system/images/uploads/textintro_style2.png)
+          ![Image of text intro with breakout sidebar showing grid and design specs](/design-system/images/uploads/breakout_sidebar_specs_072020.png)
 
 
           * Spacing: The breakout may be taller than the Text Intro content, in which case the margin beneath the breakout should be 60px.
@@ -79,7 +79,7 @@ variation_groups:
           Layout as seen with a ‘breakout’ highlight in the right sidebar area:
 
 
-          ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/textintro_intro2.png)
+          ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/breakout_sidebar_072020.png)
 use_cases: ""
 guidelines: >-
   ### Content guidelines

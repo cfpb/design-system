@@ -55,7 +55,7 @@ variation_groups:
           The entire bar is actionable. The header should clearly indicate what the user will see when the content is expanded (it should not be a call to action). Expand icons stay aligned at the top of the row when the title breaks to multiple lines.
 
 
-          ##### Specifications
+          #### Specifications
 
 
           * 60% gray 1px strokes. All sides on individual, or top and bottom for grouping.
@@ -256,7 +256,7 @@ variation_groups:
           consistent across a group of expandables.
 
 
-          ##### Specifications
+          #### Specifications
 
 
           * 60% gray 1px strokes. All sides on individual, or top and bottom for grouping.
@@ -549,21 +549,20 @@ accessibility: The `find` function will not discover information hidden by a
   collapsed expandable, so use good judgement in deciding which information to
   hide. Non-javaScript users should default to the expanded state. Otherwise,
   the default state (expanded or collapsed) will depend on the circumstance.
-research: "### Google Tag Manager
+research: >-
+  ### Google Tag Manager
 
 
-  Below is a list of items that Digital Analytics references in the tag that
-  captures expandables.
+  Below is a list of items that Digital Analytics references in the tag that captures expandables.
 
-  #### TAG ITEMS
+
+  #### Tag items
 
 
   **Category:** Page Interaction (hardcoded)
 
 
-
   **Action:** Dropdown (hardcoded)
-
 
 
   **Label:** where {{element}} = element clicked
@@ -573,12 +572,14 @@ research: "### Google Tag Manager
 
   var elem = {{element}};
 
-  \rvar closestElem = closest(elem, '.o-expandable_target');\r
 
-  var textElem = closestElem.querySelector('.o-expandable_label') ||
-  closestElem.querySelector('.o-expandable_cue')\r;
+  var closestElem = closest(elem, '.o-expandable_target');
 
-  var text = textElem.textContent.trim();\r
+  var textElem = closestElem.querySelector('.o-expandable_label') || closestElem.querySelector('.o-expandable_cue')
+
+  ;
+
+  var text = textElem.textContent.trim();
 
   return text;
 
@@ -590,29 +591,24 @@ research: "### Google Tag Manager
 
   ```
 
-  var elem = {{element}};\rvar closestElem = closest(elem,
-  '.expandable_target');
+  var elem = {{element}};
 
-  var text =
-  closestElem.querySelector('.expandable_label').textContent.trim();
+  var closestElem = closest(elem, '.expandable_target');
+
+  var text = closestElem.querySelector('.expandable_label').textContent.trim();
 
   return text;
 
   ```
 
 
+  #### Trigger items
 
 
-  #### TRIGGER ITEMS
+  Element has a parentNode with className matching RegEx `expandable_header|expandable__padded`.
 
 
-  Element has a parentNode with className matching RegEx
-  `expandable_header|expandable__padded`.
-
-
-  Element has parentNode with a className that does not contain
-  `nav-secondary`, since the secondary navigation at mobile uses an expandable
-  as well."
+  Element has parentNode with a className that does not contain `nav-secondary`, since the secondary navigation at mobile uses an expandable as well.
 related_items: "* [Expandables
   variables](https://cfpb.github.io/design-system/development/variables#expanda\
   bles) "

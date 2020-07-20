@@ -555,11 +555,11 @@
                 
                     'variation_name3': 'Disabled buttons',
                     'variation_description3': "\n",
-                    'variation_code_snippet3': `&lt;button class=&quot;a-btn a-btn__disabled&quot; title=&quot;Default state&quot;&gt;Default state&lt;/button&gt;
+                    'variation_code_snippet3': `&lt;button class=&quot;a-btn a-btn__disabled&quot; title=&quot;Default state&quot; disabled&gt;Default state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn__disabled hover&quot; title=&quot;Hovered state&quot;&gt;Hovered state&lt;/button&gt;
+&lt;button class=&quot;a-btn a-btn__disabled hover&quot; title=&quot;Hovered state&quot; disabled&gt;Hovered state&lt;/button&gt;
 
-&lt;button class=&quot;a-btn a-btn__disabled focus&quot; title=&quot;Focused state&quot;&gt;Focused state&lt;/button&gt;`,
+&lt;button class=&quot;a-btn a-btn__disabled focus&quot; title=&quot;Focused state&quot; disabled&gt;Focused state&lt;/button&gt;`,
                 
                     'variation_name4': 'Destructive buttons',
                     'variation_description4': "\n",
@@ -1183,8 +1183,8 @@
 &lt;br&gt;
 &lt;!--Disabled/selected--&gt;
 &lt;div class=&quot;m-form-field m-form-field__checkbox&quot;&gt;
-    &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_basic_disabled&quot; disabled checked&gt;
-    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_disabled&quot;&gt;Disabled/selected&lt;/label&gt;
+    &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_basic_disabled_selected&quot; disabled checked&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_disabled_selected&quot;&gt;Disabled/selected&lt;/label&gt;
 &lt;/div&gt;`,
                 
             
@@ -3202,37 +3202,37 @@ The text will be styled the same as H5 heading text.
                 
                     'variation_name1': 'Block helper text',
                     'variation_description1': "Block helper text appears directly beneath a form label. Use it to explain why a piece of information is being requested, address security and privacy concerns, or to suggest ways of providing answers other than providing formatting examples.\n",
-                    'variation_code_snippet1': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
+                    'variation_code_snippet1': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;helper-block-example&quot;&gt;
 Label
     &lt;small class=&quot;a-label_helper a-label_helper__block&quot;&gt;Use block helper text for instructions&lt;/small&gt;
 &lt;/label&gt;
 
-&lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;helper-example&quot;&gt;`,
+&lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;helper-block-example&quot;&gt;`,
                 
                     'variation_name2': 'Inline helper text',
                     'variation_description2': "Inline helper text appears directly after a form label. Use it to indicate whether a field is optional. See the behavior section for more information.\n",
-                    'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
+                    'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;helper-inline-example&quot;&gt;
  Label &lt;small class=&quot;a-label_helper&quot;&gt;(optional)&lt;/small&gt;
 &lt;/label&gt;
 
-&lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;helper-example&quot;&gt;`,
+&lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;helper-inline-example&quot;&gt;`,
                 
                     'variation_name3': 'Placeholder text',
                     'variation_description3': "Placeholder text appears within a text input field, and disappears once a user begins typing in that field. Use it for formatting examples only.\n",
-                    'variation_code_snippet3': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-default&quot;&gt;
+                    'variation_code_snippet3': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-birthdate-default&quot;&gt;
     Birth date
 &lt;/label&gt;
 &lt;input class=&quot;a-text-input&quot;
       type=&quot;text&quot;
-      id=&quot;textinput-example-default&quot;
+      id=&quot;textinput-example-birthdate-default&quot;
       placeholder=&quot;mm/dd/yyyy&quot;&gt;
 &lt;br&gt;&lt;br&gt;
-&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-default&quot;&gt;
+&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-email-default&quot;&gt;
     Email address
 &lt;/label&gt;
 &lt;input class=&quot;a-text-input&quot;
       type=&quot;text&quot;
-      id=&quot;textinput-example-default&quot;
+      id=&quot;textinput-example-email-default&quot;
       placeholder=&quot;email@example.com&quot;&gt;
 `,
                 
@@ -3780,11 +3780,11 @@ Label
                 
                     'variation_name1': 'Label heading',
                     'variation_description1': "\n",
-                    'variation_code_snippet1': `&lt;label class=&quot;a-label a-label__heading&quot;&gt;
+                    'variation_code_snippet1': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;label-heading-example&quot;&gt;
 Label heading
 &lt;/label&gt;
 
-&lt;input class=&quot;a-text-input&quot; type=&quot;text&quot;&gt;`,
+&lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; id=&quot;label-heading-example&quot;&gt;`,
                 
                     'variation_name2': 'Inline label',
                     'variation_description2': "\n",

@@ -19,19 +19,22 @@ variation_groups:
         variation_name: ""
         variation_specs: |-
           #### Default
-          Track
-          - Height: 9 px
-          - Border: 1 px, Gray 40 (#b4b5b6)
-          - Background: Gray 80 (#75787b)
 
-          Handle
-          - Border: 1 px, Gray 40 (#b4b5b6)
-          - Background: 45 px x 45 px, Gray 10 (#e7e8e9)
+          ##### Track
+
+          * Height: 9 px
+          * Border: 1 px, Gray 40 (#b4b5b6)
+          * Background: Gray 80 (#75787b)
+
+          ##### Handle
+
+          * Border: 1 px, Gray 40 (#b4b5b6)
+          * Background: 45 px x 45 px, Gray 10 (#e7e8e9)
 
           #### Focus
-          - Border: 2 px, Pacific (#0072ce)
-          - Background: Pacific 20 (#d6e8fa)
-          ####
+
+          * Border: 2 px, Pacific (#0072ce)
+          * Background: Pacific 20 (#d6e8fa)
     variation_group_name: Standard range slider
 use_cases: >-
   Range sliders can work well for discovery and education, where the inputs are

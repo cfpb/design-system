@@ -92,15 +92,17 @@ behavior: >-
   | -- | -- |
 
   | ![Sublanding behavior desktop](/design-system/images/uploads/sublanding_behavior_desktop.jpg) | ![Sublanding behavior mobile](/design-system/images/uploads/sublanding_behavior_mobile.jpg) |
-related_items: >
-  Page introductions
+related_items: >-
+  ### Page introductions
+
 
   * [Heroes](/design-system/patterns/heroes)
 
   * [Text introduction (with optional breakout sidebar)](/design-system/patterns/text-introductions)
 
 
-  Content
+  ### Content
+
 
   * [Info unit groups](/design-system/patterns/info-unit-groups)
 

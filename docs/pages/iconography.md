@@ -13,7 +13,7 @@ description: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  #### Download the icon font
+  ### Download the icon font
 
 
   Our full icon set is available for desktop use as an icon font (.ttf). It can be accessed through programs like Illustrator and InDesign via the glyph panel.
@@ -28,7 +28,7 @@ description: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  #### Download vector files
+  ### Download vector files
 
 
   Each of our icons is available for download as a vector (.svg) on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world.
@@ -43,7 +43,7 @@ variation_groups:
     variations:
       - variation_code_snippet: ""
         variation_description: >-
-          #### Navigation icons
+          ### Navigation icons
 
 
           | icon                                | icon-round                                | canonical name | aliases       |
@@ -70,7 +70,7 @@ variation_groups:
           {: class="icon-table"}
 
 
-          #### Status icons
+          ### Status icons
 
 
           | icon                               | icon-round                               | canonical name | aliases                                            |
@@ -103,7 +103,7 @@ variation_groups:
           {: class="icon-table"}
 
 
-          #### Social/sharing icons
+          ### Social/sharing icons
 
 
           | icon                             | icon-square                             | canonical name | aliases                 |
@@ -128,7 +128,7 @@ variation_groups:
           {: class="icon-table"}
 
 
-          #### Communications icons
+          ### Communications icons
 
 
           | icon                               | icon-round                               | canonical name | aliases            |
@@ -151,7 +151,7 @@ variation_groups:
           {: class="icon-table"}
 
 
-          #### Document icons
+          ### Document icons
 
 
           | icon                               | icon-round                               | canonical name | aliases            |
@@ -184,7 +184,7 @@ variation_groups:
           {: class="icon-table"}
 
 
-          #### Financial products, services, and concepts
+          ### Financial products, services, and concepts
 
 
           | icon                                          | icon-round                                          | canonical name        | aliases                                   |
@@ -239,7 +239,7 @@ variation_groups:
           {: class="icon-table"}
 
 
-          #### Web application icons
+          ### Web application icons
 
 
           | icon                                  | icon-round                                  | canonical name | aliases                          |

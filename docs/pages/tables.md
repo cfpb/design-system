@@ -57,33 +57,36 @@ variation_groups:
           #### Specs for default and directory table (large screens)
 
 
-          Header
-
-          - Background: Gray-05 #F8F8F8
-
-          - Font: Avenir Next Demi-bold, all caps
-
-          - Font-color: Black #101820
-
-          - Font-size: 14px
+          ##### Header
 
 
-          Border
+          * Background: Gray-05 #F8F8F8
 
-          - Bottom: 1px, Gray-50 #BABBBD on each row, including header
+          * Font: Avenir Next Demi-bold, all caps
+
+          * Font-color: Black #101820
+
+          * Font-size: 14px
 
 
-          Cells
+          ##### Border
 
-          - Background: Gray-05 #F8F8F8
 
-          - Font: Avenir Next Regular Black
+          * Bottom: 1px, Gray-50 #BABBBD on each row, including header
 
-          - Font-color: Black #101820
 
-          - Font-size: 16px
+          ##### Cells
 
-          - Padding: 10px
+
+          * Background: Gray-05 #F8F8F8
+
+          * Font: Avenir Next Regular Black
+
+          * Font-color: Black #101820
+
+          * Font-size: 16px
+
+          * Padding: 10px
         variation_implementation: ""
   - variation_group_name: Responsive tables
     variation_group_description: >-
@@ -134,19 +137,22 @@ variation_groups:
         variation_specs: |-
           #### Default table (small screens)
 
-          Border
-          - Bottom: 1px, Gray-50 #BABBBD
+          ##### Border
 
-          Cells
-          - Font: 16px Avenir Next Regular Black
-          - Font-color: Black #101820
-          - Labels font: 14px Avenir Next Regular, all caps
-          - Labels font-color: Black #101820
+          * Bottom: 1px, Gray-50 #BABBBD
 
-          Padding
-          - Padding, label / content: 15px
-          - Padding, content / next label: 30px
-          - Padding, rule line / first label: 15px
+          ##### Cells
+
+          * Font: 16px Avenir Next Regular Black
+          * Font-color: Black #101820
+          * Labels font: 14px Avenir Next Regular, all caps
+          * Labels font-color: Black #101820
+
+          ##### Padding
+
+          * Padding, label / content: 15px
+          * Padding, content / next label: 30px
+          * Padding, rule line / first label: 15px
       - variation_name: Responsive stacked table with header (directory tables)
         variation_description: >-
           The directory table is a variation of the stacked table. At the small
@@ -191,16 +197,17 @@ variation_groups:
               </tbody>
           </table>
         variation_specs: |-
-          Style for directory tables (small screens)
-          - Bottom border: 1px, Gray-50 #BABBBD on each row
-          - Font: 16px Avenir Next Regular Black
-          - Font-color: Black #101820
-          - Header background color: #f1f1f1
-          - Labels font: 14px Avenir Next Regular, all caps
-          - Labels font-color: Black #101820
-          - Padding, column label/bottom border: 15px
-          - Padding, bottom border/content: 15px
-          - Padding, content / next label: 30px
+          #### Style for directory tables (small screens)
+
+          * Bottom border: 1px, Gray-50 #BABBBD on each row
+          * Font: 16px Avenir Next Regular Black
+          * Font-color: Black #101820
+          * Header background color: #f1f1f1
+          * Labels font: 14px Avenir Next Regular, all caps
+          * Labels font-color: Black #101820
+          * Padding, column label/bottom border: 15px
+          * Padding, bottom border/content: 15px
+          * Padding, content / next label: 30px
       - variation_name: Responsive table with horizontal scroll
         variation_description: >-
           Use a table with horizontal scroll when the data you’re presenting has

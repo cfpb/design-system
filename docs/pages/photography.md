@@ -25,7 +25,7 @@ variation_groups:
           ![Photo of a woman at an Atlanta, GA Field Hearing on Mortgage Servicing](/design-system/images/uploads/photography_1_550px_wide.jpg)
 
 
-          ![Photo of Confirmation Day: Director Cordray taking a moment to make calls and share the big news](/design-system/images/uploads/photography_2_550px_wide.jpg)
+          ![ARC Meeting, 10/25/19, Washington, DC](/design-system/images/uploads/48981507428_2900d6be0f_c.jpg)
         variation_name: Editorial
 use_cases: ""
 guidelines: >-
@@ -38,7 +38,7 @@ guidelines: >-
   ![Photo of Olivia Calderon talking about financial empowerment efforts for low-income and unauthorized immigrantsPhoto of Olivia Calderon talking about financial empowerment efforts for low-income and unauthorized immigrants](/design-system/images/uploads/photography_3_550px_wide.jpg)
 
 
-  ![Photo of Director Cordray addressing the Bureau at the 2012 All Hands Meeting in Washington DC](/design-system/images/uploads/photography_4_550px_wide.jpg)
+  ![CBAC Public Session, 9/28/17, Washington, DC](/design-system/images/uploads/36783245923_32cf14a788_c.jpg)
 accessibility: >-
   ### Include text alternatives for non-text content
 

@@ -9,11 +9,11 @@ description: "Labels and legends are used to help users understand the meaning
 variation_groups:
   - variations:
       - variation_code_snippet: |-
-          <label class="a-label a-label__heading">
+          <label class="a-label a-label__heading" for="label-heading-example">
           Label heading
           </label>
 
-          <input class="a-text-input" type="text">
+          <input class="a-text-input" type="text" id="label-heading-example">
         variation_description: ""
         variation_name: Label heading
         variation_specs: |-

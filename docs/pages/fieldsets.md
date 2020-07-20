@@ -14,7 +14,7 @@ description: >-
 
   * [Inline labels](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-  * [](https://cfpb.github.io/design-system/components/helper-text)Set of controls such as [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) or [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons)
+  * Set of controls such as [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) or [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons)
 variation_groups:
   - variations:
       - variation_code_snippet: >-

@@ -101,20 +101,21 @@ variation_groups:
           Active
           - Background: CFPB Black (#101820)
       - variation_code_snippet: >-
-          <button class="a-btn a-btn__disabled" title="Default state">Default
+          <button class="a-btn a-btn__disabled" title="Default state" disabled>Default
           state</button>
 
 
-          <button class="a-btn a-btn__disabled hover" title="Hovered state">Hovered state</button>
+          <button class="a-btn a-btn__disabled hover" title="Hovered state" disabled>Hovered state</button>
 
 
-          <button class="a-btn a-btn__disabled focus" title="Focused state">Focused state</button>
+          <button class="a-btn a-btn__disabled focus" title="Focused state" disabled>Focused state</button>
         variation_jinja_code_snippet: |-
           {% macro render(value) -%}
 
           <div class="o-form-actions">
               <input class="a-btn a-btn__disabled form-actions_item"
                     type="submit"
+                    disabled
                     value="{{ value.button_text }}">
           </div>
 

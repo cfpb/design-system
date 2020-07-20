@@ -8,14 +8,14 @@ description: "Helper text is used with form elements to give the user context
 variation_groups:
   - variations:
       - variation_code_snippet: >-
-          <label class="a-label a-label__heading">
+          <label class="a-label a-label__heading" for="helper-block-example">
 
           Label
               <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
           </label>
 
 
-          <input class="a-text-input" type="text" id="helper-example">
+          <input class="a-text-input" type="text" id="helper-block-example">
         variation_description: "Block helper text appears directly beneath a form label.
           Use it to explain why a piece of information is being requested,
           address security and privacy concerns, or to suggest ways of providing
@@ -34,11 +34,11 @@ variation_groups:
 
           - Margin bottom: 10 px
       - variation_code_snippet: |-
-          <label class="a-label a-label__heading">
+          <label class="a-label a-label__heading" for="helper-inline-example">
            Label <small class="a-label_helper">(optional)</small>
           </label>
 
-          <input class="a-text-input" type="text" id="helper-example">
+          <input class="a-text-input" type="text" id="helper-inline-example">
         variation_description: Inline helper text appears directly after a form label.
           Use it to indicate whether a field is optional. See the [behavior
           section](#behavior) for more information.
@@ -54,23 +54,23 @@ variation_groups:
           Appears inline with label headings, and should be lowercase and placed in parenthesis after the label.
       - variation_code_snippet: >
           <label class="a-label a-label__heading"
-          for="textinput-example-default">
+          for="textinput-example-birthdate-default">
               Birth date
           </label>
 
           <input class="a-text-input"
                 type="text"
-                id="textinput-example-default"
+                id="textinput-example-birthdate-default"
                 placeholder="mm/dd/yyyy">
           <br><br>
 
-          <label class="a-label a-label__heading" for="textinput-example-default">
+          <label class="a-label a-label__heading" for="textinput-example-email-default">
               Email address
           </label>
 
           <input class="a-text-input"
                 type="text"
-                id="textinput-example-default"
+                id="textinput-example-email-default"
                 placeholder="email@example.com">
         variation_description: Placeholder text appears within a text input field, and
           disappears once a user begins typing in that field. Use it for

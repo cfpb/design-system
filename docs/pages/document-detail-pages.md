@@ -107,13 +107,13 @@ behavior: >-
   | ![Breakpoints 901+](/design-system/images/uploads/docdetail_behavior_desktop.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/docdetail_behavior_mobile.jpg) |
 
 
-  #### Post preview
+  ### Post preview
 
 
   When document detail pages are accessed via entries within a filterable list, information about each page is displayed on filterable list pages via the post preview component.
 
 
-  #### Post preview within a filterable list
+  ### Post preview within a filterable list
 
 
   | Above 600 px                                                                                                           | Below 601 px                                                                                                                  |
@@ -122,19 +122,22 @@ behavior: >-
 
   | ![Post preview within a filterable list at breakpoints 601+](/design-system/images/uploads/post_preview_desktop_1.jpg) | ![Post preview within a filterable list at breakpoints 600 and less](/design-system/images/uploads/post_preview_mobile_1.jpg) |
 related_items: >-
-  Pages
+  ### Pages
+
 
   * [Learn page](https://cfpb.github.io/design-system/pages/learn-pages)
 
   * [Filterable list page](https://cfpb.github.io/design-system/pages/filterable-list-pages)
 
 
-  Page introductions 
+  ### Page introductions 
+
 
   * [Item introduction](https://cfpb.github.io/design-system/patterns/item-introductions)
 
 
-  Content
+  ### Content
+
 
   * [Tables](/design-system/components/tables)
 

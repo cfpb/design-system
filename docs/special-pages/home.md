@@ -22,10 +22,6 @@ description: >
   </div>
 
 
-
-  ## Start with our principles
-
-
   <div class="content-75 content-last" markdown="1">
 
 

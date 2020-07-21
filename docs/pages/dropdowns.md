@@ -88,7 +88,7 @@ variation_groups:
         variation_description: ""
         variation_name: ""
         variation_specs: |-
-          #### Default
+          <h3 class="h4">Default</h3>
 
           * Height: 35 px
           * Padding: 7 px
@@ -97,16 +97,22 @@ variation_groups:
           * Minicon: Gray 80 (#75787b)
           * Body (Avenir Next Regular, 16px), Black (#101820)
 
-          #### Hover
+
+
+          <h3 class="h4">Hover</h3>
 
           * Border: 2 px, Pacific (#0072ce)
 
-          #### Focus
+
+
+          <h3 class="h4">Focus</h3>
 
           * Border: 2 px, Pacific (#0072ce)
           * Outline: Dotted 1px, Pacific (#0072ce)
 
-          #### Disabled
+
+
+          <h3 class="h4">Disabled</h3>
 
           * Background: Gray 10 (#e7e8e9)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)

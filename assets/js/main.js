@@ -42,7 +42,13 @@ if ( tabs && tabs.length > 0 ) {
 const toggleAllBtn = document.querySelector( '#toggle-details' );
 const toggleBtns = document.querySelectorAll( '.a-toggle_code button' );
 
-toggleAllBtn.addEventListener( 'click', handleToggleAllClick, false );
+if ( toggleAllBtn ) {
+  toggleAllBtn.addEventListener( 'click', handleToggleAllClick, false );
+
+  if ( window.localStorage.getItem( 'toggleState' ) === 'hide' ) {
+    toggleAllDetails( toggleAllBtn );
+  }
+}
 
 for ( let i = 0, len = toggleBtns.length; i < len; i++ ) {
   toggleBtns[i].addEventListener( 'click', handleToggleClick, false );

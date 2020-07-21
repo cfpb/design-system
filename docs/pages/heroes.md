@@ -314,9 +314,9 @@ use_cases: >-
   ### When to use
 
 
-  * When orienting a user to a new section or topic (using the [landing](https://cfpb.github.io/design-system/pages/landing-pages) or [sublanding page template](https://cfpb.github.io/design-system/pages/sublanding-pages)).
+  * When orienting a user to a new section or topic (using the [landing](https://cfpb.github.io/design-system/pages/landing-pages) or [sublanding page template](https://cfpb.github.io/design-system/pages/sublanding-pages))
 
-  * When the page serves as a navigational tool with general information about a subject and links to lower-level pages that contain more specific information.
+  * When the page serves as a navigational tool with general information about a subject and links to lower-level pages that contain more specific information
 
 
   ### When other options are better

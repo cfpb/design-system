@@ -2,7 +2,6 @@
 title: Column dividers
 layout: variation
 section: development
-secondary_section: Core development
 status: Released
 description: Information about content lines and column dividers.
 variation_groups:
@@ -81,10 +80,12 @@ variation_groups:
 
           ```
         variation_name: Column divider modifiers
+    variation_group_name: Types
 use_cases: ""
 guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2019-09-13T19:34:43.025Z
+secondary_section: Core development
 research: ""
 ---

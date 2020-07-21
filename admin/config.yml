@@ -112,7 +112,7 @@ collections:
     fields:
       - name: 'title'
         label: 'Page title'
-        widget: 'string-trimmed'
+        widget: 'string-with-instructions'
       - name: 'collection_name'
         value: 'pages'
         default: 'pages'
@@ -257,7 +257,7 @@ collections:
     fields:
       - name: 'title'
         label: 'Page title'
-        widget: 'string-trimmed'
+        widget: 'string-with-instructions'
       - name: 'collection_name'
         value: 'special-pages'
         default: 'special-pages'

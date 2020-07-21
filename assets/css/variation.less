@@ -41,12 +41,19 @@
 
 
 .m-variation {
+    border-bottom: 1px solid @gray-40;
+
     &_name {
         margin-top: 2rem;
     }
 
     &:first-child .m-variation_name {
         margin-top: 0;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+        padding-bottom: 1rem;
     }
 }
 

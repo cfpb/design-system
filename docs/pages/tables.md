@@ -54,10 +54,10 @@ variation_groups:
           tables](https://cfpb.github.io/design-system/development/variables#tables-1)
 
 
-          #### Specs for default and directory table (large screens)
+          ### Specs for default and directory table (large screens)
 
 
-          ##### Header
+          #### Header
 
 
           * Background: Gray-05 #F8F8F8
@@ -69,13 +69,13 @@ variation_groups:
           * Font-size: 14px
 
 
-          ##### Border
+          #### Border
 
 
           * Bottom: 1px, Gray-50 #BABBBD on each row, including header
 
 
-          ##### Cells
+          #### Cells
 
 
           * Background: Gray-05 #F8F8F8
@@ -135,20 +135,20 @@ variation_groups:
               </tbody>
           </table>
         variation_specs: |-
-          #### Default table (small screens)
+          ### Default table (small screens)
 
-          ##### Border
+          #### Border
 
           * Bottom: 1px, Gray-50 #BABBBD
 
-          ##### Cells
+          #### Cells
 
           * Font: 16px Avenir Next Regular Black
           * Font-color: Black #101820
           * Labels font: 14px Avenir Next Regular, all caps
           * Labels font-color: Black #101820
 
-          ##### Padding
+          #### Padding
 
           * Padding, label / content: 15px
           * Padding, content / next label: 30px
@@ -197,7 +197,7 @@ variation_groups:
               </tbody>
           </table>
         variation_specs: |-
-          #### Style for directory tables (small screens)
+          ### Style for directory tables (small screens)
 
           * Bottom border: 1px, Gray-50 #BABBBD on each row
           * Font: 16px Avenir Next Regular Black
@@ -277,7 +277,7 @@ variation_groups:
               </table>
           </div>
         variation_specs: |-
-          #### Styles for scrolling tables
+          ### Styles for scrolling tables
 
           * Border: 1px, Gray-50 #BABBBD around the scrolling table
           * Alternate row striping: Grey-05 #F8F8F8
@@ -353,9 +353,7 @@ variation_groups:
 
           Left-align columns of numbers when they're nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).
         variation_name: Right-aligned table
-        variation_specs: |
-          #### Style for striped rows
-          - Alternate row background: Grey-05 #F8F8F8
+        variation_specs: "* Alternate row background: Grey-05 #F8F8F8"
       - variation_code_snippet: |-
           <table class="o-table o-table__row-links">
               <thead>
@@ -562,8 +560,8 @@ variation_groups:
           * Please note the importance of defining a `thead` and `tbody` to preserve the table’s header through sorting operations.
       - variation_name: Filtering tables
         variation_code_snippet: >
-
-          <div class="o-expandable o-expandable__padded">
+          
+          <div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true">
               <button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false">
                   <span class="o-expandable_header-left o-expandable_label">
                       Filter activities
@@ -582,7 +580,6 @@ variation_groups:
               <div class="o-expandable_content o-expandable_content__transition o-expandable_content__collapsed" aria-expanded="false" style="max-height: 0px;">
                   <p>Filter options go here</p>
               </div>
-          </div>
 
           <table class="o-table o-table__stack-on-small" data-bound="true">
               <thead>

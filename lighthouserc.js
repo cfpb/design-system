@@ -27,9 +27,9 @@ const urls = filenames.map( function( filename ) {
 module.exports = {
   ci: {
     collect: {
-      emulatedFormFactor: 'desktop',
       numberOfRuns: 1,
       settings: {
+        emulatedFormFactor: 'desktop',
         onlyCategories: 'accessibility'
       },
       startServerCommand:

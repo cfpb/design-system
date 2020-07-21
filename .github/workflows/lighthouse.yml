@@ -57,6 +57,7 @@ jobs:
         run: lhci autorun
 
       - name: Attach results as artifact to GitHub Actions run
+        if: ${{ always() }}
         uses: actions/upload-artifact@v1
         with:
           name: lighthouse-results

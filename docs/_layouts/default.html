@@ -32,7 +32,9 @@
 
   {{ content }}
 
+  {% if page.url != 'search/index' and page.url != '/index' %}
   {% include footer.html %}
+  {% endif %}
   <script src="{{ "/dist/js/main.js" | relative_url }}" charset="utf-8"></script>
 
   {% if page.is_interstitial %}

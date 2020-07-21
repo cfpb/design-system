@@ -206,6 +206,7 @@ variation_groups:
                   </div>
               </div>
           </div>
+    variation_group_name: Types
 use_cases: ""
 guidelines: ""
 behavior: ""

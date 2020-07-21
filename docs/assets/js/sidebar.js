@@ -6,7 +6,7 @@ function init() {
   const secondaryNavCat = document.querySelector( '.ds-nav-container' );
 
   // First collapse the navigation if in mobile.
-  let windowWidth = window.innerWidth;
+  const windowWidth = window.innerWidth;
   if ( windowWidth < 601 ) {
     secondaryNavCat.removeAttribute( 'open' );
   }
@@ -18,7 +18,7 @@ function init() {
     // Collapse the navigation if we resize to mobile,
     // but only if we haven't already.
     // Otherwise, we're on desktop size, so open the navigation.
-    let innerWidth = window.innerWidth;
+    const innerWidth = window.innerWidth;
     if ( innerWidth === windowWidth ) {
       return;
     }

@@ -88,24 +88,28 @@ variation_groups:
         variation_description: ""
         variation_name: ""
         variation_specs: |-
-          Default
-          - Height: 35 px
-          - Padding: 7 px
-          - Border: 1 px, Gray 60 (#919395)
-          - Background (down caret box): Gray 10 (#e7e8e9)
-          - Minicon: Gray 80 (#75787b)
-          - Body (Avenir Next Regular, 16px), Black (#101820)
+          #### Default
 
-          Hover
-          - Border: 2 px, Pacific (#0072ce)
+          * Height: 35 px
+          * Padding: 7 px
+          * Border: 1 px, Gray 60 (#919395)
+          * Background (down caret box): Gray 10 (#e7e8e9)
+          * Minicon: Gray 80 (#75787b)
+          * Body (Avenir Next Regular, 16px), Black (#101820)
 
-          Focus
-          - Border: 2 px, Pacific (#0072ce)
-          - Outline: Dotted 1px, Pacific (#0072ce)
+          #### Hover
 
-          Disabled
-          - Background: Gray 10 (#e7e8e9)
-          - Avenir Next Regular, 16 px, Gray (#5a5d61)
+          * Border: 2 px, Pacific (#0072ce)
+
+          #### Focus
+
+          * Border: 2 px, Pacific (#0072ce)
+          * Outline: Dotted 1px, Pacific (#0072ce)
+
+          #### Disabled
+
+          * Background: Gray 10 (#e7e8e9)
+          * Avenir Next Regular, 16 px, Gray (#5a5d61)
     variation_group_name: Dropdowns
   - variation_group_name: Multiselects
     variations:

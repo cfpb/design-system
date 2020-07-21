@@ -54,10 +54,10 @@ variation_groups:
           tables](https://cfpb.github.io/design-system/development/variables#tables-1)
 
 
-          #### Specs for default and directory table (large screens)
+          ### Specs for default and directory table (large screens)
 
 
-          ##### Header
+          #### Header
 
 
           * Background: Gray-05 #F8F8F8
@@ -69,13 +69,13 @@ variation_groups:
           * Font-size: 14px
 
 
-          ##### Border
+          #### Border
 
 
           * Bottom: 1px, Gray-50 #BABBBD on each row, including header
 
 
-          ##### Cells
+          #### Cells
 
 
           * Background: Gray-05 #F8F8F8
@@ -562,8 +562,8 @@ variation_groups:
           * Please note the importance of defining a `thead` and `tbody` to preserve the table’s header through sorting operations.
       - variation_name: Filtering tables
         variation_code_snippet: >
-
-          <div class="o-expandable o-expandable__padded">
+          
+          <div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true">
               <button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false">
                   <span class="o-expandable_header-left o-expandable_label">
                       Filter activities
@@ -582,7 +582,6 @@ variation_groups:
               <div class="o-expandable_content o-expandable_content__transition o-expandable_content__collapsed" aria-expanded="false" style="max-height: 0px;">
                   <p>Filter options go here</p>
               </div>
-          </div>
 
           <table class="o-table o-table__stack-on-small" data-bound="true">
               <thead>

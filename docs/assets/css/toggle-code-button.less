@@ -1,14 +1,18 @@
 // Button to show/hide code snippets and specs on component pages
 
 .a-toggle_code {
-    border-bottom: 1px solid @gray-40;
     text-align: right;
     margin: 0 -1rem;
     padding: 0 2rem 1rem;
+
     .a-btn {
         text-transform: uppercase;
         &.u-hidden {
             display: none;
         }
     }
+}
+
+.m-variation:last-child .a-toggle_code {
+        padding-bottom: 0;
 }

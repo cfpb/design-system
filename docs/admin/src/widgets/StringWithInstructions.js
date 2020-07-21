@@ -54,7 +54,7 @@ export default class StringTrimmedControl extends React.Component {
         />
         <div style={instructionsContainerStyle}>
           Need help? Check out our guide on&nbsp;
-          <a href='/design-system/updating-this-website/' target='_blank' style={instructionsLinkStyle}>
+          <a href='/design-system/updating-this-website/' target='_blank' rel='noopener noreferrer' style={instructionsLinkStyle}>
             how to use this CMS
           </a>.
         </div>

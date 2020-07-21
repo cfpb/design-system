@@ -5,13 +5,26 @@
 function init() {
   const secondaryNavCat = document.querySelector( '.ds-nav-container' );
 
+  // First collapse the navigation if in mobile.
+  const windowWidth = window.innerWidth;
+  if ( windowWidth < 601 ) {
+    secondaryNavCat.removeAttribute( 'open' );
+  }
+
   /**
    * Test the viewport size and set whether the test passes on the instance.
    */
   function handleViewportChange() {
-    if ( window.innerWidth < 601 ) {
-      secondaryNavCat.removeAttribute( 'open' );
+    // Collapse the navigation if we resize to mobile,
+    // but only if we haven't already.
+    // Otherwise, we're on desktop size, so open the navigation.
+    const innerWidth = window.innerWidth;
+    if ( innerWidth === windowWidth ) {
+      return;
+    }
 
+    if ( innerWidth < 601 ) {
+      secondaryNavCat.removeAttribute( 'open' );
     } else {
       secondaryNavCat.setAttribute( 'open', 'open' );
     }

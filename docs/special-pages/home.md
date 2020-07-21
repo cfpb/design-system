@@ -172,7 +172,7 @@ description: >-
   <hr>
 
 
-  ##### About the CFPB Design System
+  <h3 class="h4">About the CFPB Design System</h3>
 
 
   Our design system has been created to work with a wide range of devices and browsers. Following a modern, mobile first responsive approach, sites built with our Design System easily adapt to a wide range of screen sizes, all while carefully following accessibility best practices.
@@ -180,7 +180,7 @@ description: >-
   As a work of the United States government, all code is open source and in the public domain. We encourage you to use this framework in your own projects and to contribute back.
 
 
-  ##### License
+  <h3 class="h4">License</h3>
 
 
   All content has been released as open source under the CC0 1.0 Universal Public Domain Dedication, and we’d love for other agencies, developers, or groups to adapt it for their own use.

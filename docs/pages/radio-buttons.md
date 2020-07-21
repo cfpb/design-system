@@ -71,7 +71,7 @@ variation_groups:
               <label class="a-label" for="test_radio_basic_disabled">Label</label>
           </div>
         variation_specs: |-
-          #### Default
+          <h3 class="h4">Default</h3>
 
           * Height: 20 px
           * Width: 20 px
@@ -80,22 +80,22 @@ variation_groups:
           * Margin right: 10 px
           * Avenir Next Regular, 16 px, Black (#101820)
 
-          #### Hover
+          <h3 class="h4">Hover</h3>
 
           * Border: 2 px, Pacific (#0072ce)
 
-          #### Focus
+          <h3 class="h4">Focus</h3>
 
           * Border: 2 px, Pacific (#0072ce)
           * Outline: Dotted 1px, Pacific (#0072ce)
           * Outline offset: 1px
 
-          #### Selected
+          <h3 class="h4">Selected</h3>
 
           * Border: 1 px, Gray 60 (#919395)
           * Background: 14 px x 14 px, Pacific (#0072ce)
 
-          #### Disabled
+          <h3 class="h4">Disabled</h3>
 
           * Border: 1 px, Gray 60 (#919395)
           * Background: Gray 10 (#e7e8e9)

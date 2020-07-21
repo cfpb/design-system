@@ -71,8 +71,6 @@ variation_groups:
           * Background: White (#ffffff)
           * Avenir Next Regular, 16 px, Black (#101820)
 
-
-
           <h3 class="h4">Hover</h3>
 
           * Border: 2 px, Pacific (#0072ce)

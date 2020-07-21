@@ -20,7 +20,7 @@ variation_groups:
 
           ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)
         variation_specs: >-
-          #### Desktop style
+          ### Desktop style
 
 
           * Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page.
@@ -42,7 +42,7 @@ variation_groups:
           * Play button (for FCMs with a video): 60px diameter, Black background at 75% opacity that changes to Pacific on hover, White icon, 2px Gray 5 border, centered in the visual
 
 
-          #### Differences in style at mobile size
+          ### Differences in style at mobile size
 
 
           * Text and visual are stacked instead of side by side with 30px space between text and top of visual

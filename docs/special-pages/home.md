@@ -16,7 +16,7 @@ description: >-
   <div class="content-25 content-last" markdown="1">
 
 
-  ![Homepage image](/design-system/images/uploads/cfpb_dm_home.png) 
+  ![Homepage image](/design-system/images/uploads/cfpb_ds_home.png) 
 
 
   </div>

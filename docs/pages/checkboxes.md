@@ -60,7 +60,7 @@ variation_groups:
               <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
           </div>
         variation_description: ""
-        variation_name: ""
+        variation_name: Standard checkboxes
         variation_specs: |-
           #### Default checkbox
 
@@ -70,8 +70,6 @@ variation_groups:
           * Border: 1 px, Gray 60 (#919395)
           * Background: White (#ffffff)
           * Avenir Next Regular, 16 px, Black (#101820)
-
-
 
           <h3 class="h4">Hover</h3>
 
@@ -93,7 +91,7 @@ variation_groups:
           * Border: 1 px, Gray 60 (#919395)
           * Background: Gray 10 (#e7e8e9)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
-    variation_group_name: Standard checkboxes
+    variation_group_name: Types
   - variation_group_description: ""
     variations:
       - variation_code_snippet: >-

@@ -151,7 +151,7 @@ guidelines: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  ![Isolated logo clear space](/design-system/images/uploads/isolated_logo_clear_space.png)
+  ![Isolated logo clear space](/design-system/images/uploads/isolated_logo_clearspace_072120.png)
 
 
   </div>
@@ -160,7 +160,7 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  ![Isolated logo clear space](/design-system/images/uploads/isolated_logo_clear_space_2.png)
+  ![Isolated logo clear space](/design-system/images/uploads/isolated_logo_clearspace_guides_072120.png)
 
 
   </div>
@@ -175,7 +175,7 @@ guidelines: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  ![Vertical logo clear space](/design-system/images/uploads/vertical_logo_clear_space.png)
+  ![Vertical logo clear space](/design-system/images/uploads/vertical_logo_clearspace_072120.png)
 
 
   </div>
@@ -184,7 +184,7 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  ![Vertical logo clear space](/design-system/images/uploads/vertical_logo_clear_space_2.png)
+  ![Vertical logo clear space](/design-system/images/uploads/vertical_logo_clearspace_guides_072120.png)
 
 
   </div>
@@ -199,7 +199,7 @@ guidelines: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  ![Horizontal logo clear space](/design-system/images/uploads/horizontal_logo_clear_space.png)
+  ![Horizontal logo clear space](/design-system/images/uploads/horizontal_logo_clearspace_072120.png)
 
 
   </div>
@@ -208,7 +208,7 @@ guidelines: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  ![Horizontal logo clear space](/design-system/images/uploads/horizontal_logo_clear_space_2.png)
+  ![Horizontal logo clear space](/design-system/images/uploads/horizontal_logo_clearspace_guides_072120.png)
 
 
   </div>

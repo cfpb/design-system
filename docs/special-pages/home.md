@@ -63,9 +63,7 @@ description: >-
 
   Patterns are combinations of components used in conjunction to achieve a goal. Interaction patterns are best practice design solutions to common user tasks. Layout patterns are used by designers to organize content into clear, accessible web pages. 
 
-  <br>
-
-  [Browse patterns](https://cfpb.github.io/design-system/patterns/)
+  <p><a href="https://cfpb.github.io/design-system/patterns/">Browse patterns</a></p>
 
   </div>
 

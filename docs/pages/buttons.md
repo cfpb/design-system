@@ -23,6 +23,8 @@ variation_groups:
 
           <button class="a-btn active" title="Active state">Active state</button>
         variation_description: Use primary buttons for actions that go to the next step.
+          Avoid using multiple primary buttons on a single page; there can be
+          multiple secondary buttons per page.
         variation_jinja_code_snippet: |-
           {% macro render(value) -%}
 

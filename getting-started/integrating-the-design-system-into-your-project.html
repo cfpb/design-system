@@ -189,158 +189,70 @@
 
     
     <section id="description" class="u-mb30">
-        
-<p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be used both collectively and individually. There are several ways to integrate it into your project:</p>
+        <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be used both collectively and individually. There are several ways to integrate it into your project:</p>
 
 <ol>
-  <li><a href="#installing-a-single-component-with-npm-or-yarn">Installing a single component with npm or yarn</a></li>
-  <li><a href="#using-the-generator">Using the generator</a></li>
-  <li><a href="#using-less">Using Less</a></li>
+  <li><a href="#installing-individual-components-with-yarn-or-npm">Installing individual components with npm or Yarn</a></li>
   <li><a href="#downloading-the-compiled-css">Downloading the compiled CSS</a></li>
 </ol>
 
-<p>Our recommended workflow if you are starting a new codebase is to use the generator to scaffold out a new Design System project. This allows you to pick and choose your modules as well as providing a solid front end build process.</p>
-
-<h2 id="installing-a-single-component-with-npm-or-yarn">Installing a single component with npm or yarn</h2>
+<h2 id="installing-individual-components-with-yarn-or-npm">Installing individual components with Yarn or npm</h2>
 
 <p>Just want one or two CF components and not the entire framework?
 Simply install and <code class="language-plaintext highlighter-rouge">@import</code> only the components you need.</p>
 
-<h3 id="install-with-yarn-or-npm">Install with yarn or npm</h3>
+<h3 id="install-with-yarn-or-npm">Install with Yarn or npm</h3>
+
 <p>Pick one:</p>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add cf-buttons cf-icons
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add cf-buttons cf-icons
 </code></pre></div></div>
+
 <p>or</p>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>cf-buttons cf-icons
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install cf-buttons cf-icons
 </code></pre></div></div>
 
-<h3 id="import-css">Import CSS</h3>
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="p">(</span><span class="n">less</span><span class="p">)</span> <span class="s1">"node_modules/@cfpb/cfpb-buttons/src/cfpb-buttons.less"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="p">(</span><span class="n">less</span><span class="p">)</span> <span class="s1">"node_modules/@cfpb/cfpb-icons/src/cfpb-icons.less"</span><span class="p">;</span>
+<h3 id="import-less">Import Less</h3>
 
-<span class="c">/* the rest of your stylesheet… */</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* adjust paths to the modules as necessary */</span>
+<span class="k">@import</span> <span class="s1">"node_modules/@cfpb/cfpb-buttons/src/cfpb-buttons.less"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s1">"node_modules/@cfpb/cfpb-icons/src/cfpb-icons.less"</span><span class="p">;</span>
 </code></pre></div></div>
 
-<blockquote>
-  <p>NOTE: Be sure to run the Less files through
-  <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>,
-  or your compiled CSS might not work perfectly in older browsers.</p>
-</blockquote>
+<p><em>Note:</em> Be sure to run the Less files through
+<a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>,
+or your compiled CSS might not work perfectly in older browsers.</p>
 
 <h3 id="import-javascript">Import JavaScript</h3>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Expandable</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@cfpb/cfpb-expandables/src/Expandable</span><span class="dl">''</span><span class="s1">;
 
-Expandable.init( document.querySelector( </span><span class="dl">'</span><span class="err">#</span><span class="nx">container</span><span class="dl">'</span><span class="s1"> ) );
-</span></code></pre></div></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Expandable</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@cfpb/cfpb-expandables/src/Expandable</span><span class="dl">'</span><span class="p">;</span>
 
-<h2 id="using-the-generator">Using the generator</h2>
-
-<p>To use the generator, you will need <a href="http://nodejs.org/">Node.js</a>,
-<a href="http://yeoman.io/">Yeoman</a>, and <a href="http://gulpjs.com/">Gulp</a>.</p>
-
-<h3 id="installing-dependencies">Installing dependencies</h3>
-
-<p><a href="http://nodejs.org/">Node.js</a> can be downloaded and installed directly from the Node website, or by using a package manager for your system. At the CFPB we use Homebrew. To install the dependencies:</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>node  <span class="c"># if installing node with Homebrew</span>
-npm <span class="nb">install</span> <span class="nt">--global</span> gulp yo generator-cf
+<span class="c1">// initialize all expandables with class .o-expandable</span>
+<span class="c1">// if they are within an element with id #container</span>
+<span class="nx">Expandable</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span> <span class="dl">'</span><span class="s1">#container</span><span class="dl">'</span> <span class="p">)</span> <span class="p">);</span>
 </code></pre></div></div>
 
-<h3 id="scaffolding-out-a-project">Scaffolding out a project</h3>
+<h2 id="downloading-the-compiled-css-and-javascript">Downloading the compiled CSS and JavaScript</h2>
 
-<p>To create a new project, create a directory, cd into that directory, and run the <code class="language-plaintext highlighter-rouge">yo cf</code> command:</p>
+<p>While we recommend the above installation method to make future updates smaller and safer by allowing you to update one component at a time, there may be some use cases where it’s more appropriate to just grab a snapshot of the full Design System’s compiled CSS and JavaScript and drop it into a page. <a class="cf-download" href="https://npmcdn.com/@cfpb/cfpb-design-system/">You can download the compiled Design System CSS and JavaScript from UNPKG.</a></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>my-awesome-project
-<span class="nb">cd </span>my-awesome-project
-yo cf
-</code></pre></div></div>
-
-<p>The generator will prompt you to complete information about the project and choose the Design System modules you would like to use.</p>
-
-<h3 id="navigating-the-project-folder">Navigating the project folder</h3>
-
-<p>Once the generator has finished you’ll have a folder full of files and folders.
-Here’s a quick guide on working with these files:</p>
-
-<ul>
-  <li>Run <code class="language-plaintext highlighter-rouge">npm run build</code> to process the files in <code class="language-plaintext highlighter-rouge">src</code> and output them to <code class="language-plaintext highlighter-rouge">dist</code>.</li>
-  <li>To view your site, go to the dist directory and start a local server: <code class="language-plaintext highlighter-rouge">cd dist &amp;&amp; python -m SimpleHTTPServer</code>. You can now navigate to <code class="language-plaintext highlighter-rouge">localhost:8000</code> in your web browser.</li>
-  <li>Edit files within the <code class="language-plaintext highlighter-rouge">src</code> directory and re-run <code class="language-plaintext highlighter-rouge">npm run build</code> to view changes.</li>
-</ul>
-
-<h4 id="editing-the-less-and-js">Editing the Less and JS</h4>
-
-<p>The generator has created a starter Less file at <code class="language-plaintext highlighter-rouge">src/static/css/main.less</code>.
-This file includes all of the necessary imports needed for Capital Framework.
-There is also a starter JavaScript file at <code class="language-plaintext highlighter-rouge">src/static/js/main.js</code>.
-Both <code class="language-plaintext highlighter-rouge">main.less</code> and <code class="language-plaintext highlighter-rouge">main.js</code> are already wired into <code class="language-plaintext highlighter-rouge">Gruntfile.js</code> (or <code class="language-plaintext highlighter-rouge">gulp/tasks/</code>
-if you selected gulp) so compiling is as easy as running <code class="language-plaintext highlighter-rouge">npm run build</code>. It also
-copies files from <code class="language-plaintext highlighter-rouge">src</code> into <code class="language-plaintext highlighter-rouge">dist</code>, which will update what you see at <code class="language-plaintext highlighter-rouge">localhost:8000/</code>.</p>
-
-<h3 id="theming--customizing">Theming / Customizing</h3>
-
-<p>You can override component UI colors within <code class="language-plaintext highlighter-rouge">src/static/css/cf-theme-overrides.less</code>.
-This is already set up for you and gets imported by <code class="language-plaintext highlighter-rouge">main.less</code>.
-If you would like to use your own color palette simply replace the contents of
-<code class="language-plaintext highlighter-rouge">brand-palette.less</code> with your own color variables,
-then update <code class="language-plaintext highlighter-rouge">cf-theme-overrides.less</code> by overriding each UI color variable
-with a color from <code class="language-plaintext highlighter-rouge">brand-palette.less</code> or any color of your choosing.</p>
-
-<p>The same applies when you need to add custom styles to your project.
-You can add any custom <code class="language-plaintext highlighter-rouge">.less</code> files to your project that you may need,
-just remember to import them in <code class="language-plaintext highlighter-rouge">main.less</code> using the correct path.</p>
-
-<h2 id="using-less">Using Less</h2>
-
-<p>If you don’t want to use the generator,
-you can just download the source files and import them into your project.</p>
-
-<blockquote>
-  <p>NOTE: Be sure to run the Less files through
-  <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>,
-  or your compiled CSS will
-  not work perfectly in older browsers.</p>
-</blockquote>
-
-<p>Run <code class="language-plaintext highlighter-rouge">npm install capital-framework</code>. This will download Capital Framework to your
-project’s <code class="language-plaintext highlighter-rouge">node_modules</code> directory. You can then import the framework into
-your application’s primary Less file:</p>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="p">(</span><span class="n">less</span><span class="p">)</span> <span class="s1">"node_modules/capital-framework/src/capital-framework.less"</span><span class="p">;</span>
-
-<span class="c">/* the rest of your stylesheet… */</span>
-</code></pre></div></div>
-
-<p>Just want one or two CF components and not the entire framework?
-Simply install and <code class="language-plaintext highlighter-rouge">@import</code> only the components you need.</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>cf-buttons cf-icons
-</code></pre></div></div>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="p">(</span><span class="n">less</span><span class="p">)</span> <span class="s1">"node_modules/cf-buttons/src/cfpb-buttons.less"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="p">(</span><span class="n">less</span><span class="p">)</span> <span class="s1">"node_modules/cf-icons/src/cfpb-icons.less"</span><span class="p">;</span>
-
-<span class="c">/* the rest of your stylesheet… */</span>
-</code></pre></div></div>
-
-<h2 id="downloading-the-compiled-css">Downloading the compiled CSS</h2>
-
-<p>Capital Framework’s compiled CSS can be <a class="cf-download" href="https://npmcdn.com/capital-framework/dist/">downloaded here</a>.
-Download it and copy the files found in the <code class="language-plaintext highlighter-rouge">dist/</code> directory to your project.
-Use standard <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tags.</p>
+<p>Download the <code class="language-plaintext highlighter-rouge">cfpb-design-system.css</code> and <code class="language-plaintext highlighter-rouge">cfpb-design-system.js</code> files to your project and use standard <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tags to include them. For example:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;title&gt;</span>My Awesome Project<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"capital-framework.min.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/cfpb-design-system.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/your-project-styles.css"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
     <span class="c">&lt;!-- Your project's HTML goes here. --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"capital-framework.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/cfpb-design-system.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/your-project-scripts.js&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</span></code></pre></div></div>
 
     </section>
     
@@ -413,8 +325,8 @@ Use standard <code class="language-plaintext highlighter-rouge">&lt;link&gt;</co
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/pages/integrating-the-design-system-into-your-project.md">
-                    <time datetime="2020-06-23 13:00:50 -0400">
-                         1:00:50 PM Jun 23, 2020
+                    <time datetime="2020-07-22 11:51:52 -0400">
+                        11:51:52 AM Jul 22, 2020
                     </time>
                 </a>
             </small>

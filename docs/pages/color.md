@@ -363,7 +363,8 @@ variation_groups:
       - variation_description: >-
           Tints expand upon the primary and secondary color palettes to help
           create visual cohesion when incorporating complex illustrations and
-          data visualizations.
+          data visualizations. 
+
             <table class="color-table">
               <thead>
                   <tr><th></th>
@@ -438,7 +439,6 @@ variation_groups:
                 <td>89, 0, 35, 60</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__teal"></td>
                 <td>Teal</td>
@@ -446,7 +446,6 @@ variation_groups:
                 <td>37, 118, 117</td>
                 <td>85, 0, 30, 44</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__teal-80"></td>
@@ -456,7 +455,6 @@ variation_groups:
                 <td>53, 0, 20, 30</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__teal-60"></td>
                 <td>Teal 60</td>
@@ -464,7 +462,6 @@ variation_groups:
                 <td>137, 182, 181</td>
                 <td>36, 0, 13, 19</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__teal-40"></td>
@@ -474,7 +471,6 @@ variation_groups:
                 <td>20, 0, 8, 12</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__teal-20"></td>
                 <td>Teal 20</td>
@@ -483,7 +479,6 @@ variation_groups:
                 <td>10, 0, 4, 6</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__teal-10"></td>
                 <td>Teal 10</td>
@@ -491,8 +486,6 @@ variation_groups:
                 <td>240, 247, 246</td>
                 <td></td>
             </tr>
-
-
 
             </tbody></table>
             <table class="color-table">
@@ -512,7 +505,6 @@ variation_groups:
                 <td>100, 51, 0, 20</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__pacific"></td>
                 <td>Pacific</td>
@@ -520,7 +512,6 @@ variation_groups:
                 <td>0, 114, 206</td>
                 <td>90, 48, 0, 0</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__pacific-80"></td>
@@ -530,7 +521,6 @@ variation_groups:
                 <td>68, 30, 0, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__pacific-60"></td>
                 <td>Pacific 60</td>
@@ -538,7 +528,6 @@ variation_groups:
                 <td>126, 183, 232</td>
                 <td>46, 16, 0, 0</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__pacific-40"></td>
@@ -548,7 +537,6 @@ variation_groups:
                 <td>29, 8, 0, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__pacific-20"></td>
                 <td>Pacific 20</td>
@@ -557,7 +545,6 @@ variation_groups:
                 <td>16, 3, 0, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__pacific-10"></td>
                 <td>Pacific 10</td>
@@ -565,8 +552,6 @@ variation_groups:
                 <td>239, 248, 253</td>
                 <td></td>
             </tr>
-
-
 
             </tbody></table>
             <table class="color-table">
@@ -586,7 +571,6 @@ variation_groups:
                 <td>100, 80, 6, 32</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__navy"></td>
                 <td>Navy</td>
@@ -594,7 +578,6 @@ variation_groups:
                 <td>37, 75, 135</td>
                 <td>82, 58, 0, 31</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__navy-80"></td>
@@ -604,7 +587,6 @@ variation_groups:
                 <td>60, 35, 0, 26</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__navy-60"></td>
                 <td>Navy 60</td>
@@ -612,7 +594,6 @@ variation_groups:
                 <td>136, 156, 192</td>
                 <td>36, 21, 0, 17</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__navy-40"></td>
@@ -622,7 +603,6 @@ variation_groups:
                 <td>23, 13, 0, 7</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__navy-20"></td>
                 <td>Navy 20</td>
@@ -631,7 +611,6 @@ variation_groups:
                 <td>13, 8, 0, 4</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__navy-10"></td>
                 <td>Navy 10</td>
@@ -639,8 +618,6 @@ variation_groups:
                 <td>244, 246, 250</td>
                 <td></td>
             </tr>
-
-
 
             </tbody></table>
             <table class="color-table">
@@ -660,7 +637,6 @@ variation_groups:
                 <td>40, 100, 30, 10</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__purple"></td>
                 <td>Purple</td>
@@ -668,7 +644,6 @@ variation_groups:
                 <td>180, 38, 122</td>
                 <td>27, 100, 10, 0</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__purple-80"></td>
@@ -678,7 +653,6 @@ variation_groups:
                 <td>21, 79, 9, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__purple-60"></td>
                 <td>Purple 60</td>
@@ -686,7 +660,6 @@ variation_groups:
                 <td>212, 134, 178</td>
                 <td>14, 58, 8, 0</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__purple-40"></td>
@@ -696,7 +669,6 @@ variation_groups:
                 <td>9, 36, 6, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__purple-20"></td>
                 <td>Purple 20</td>
@@ -705,7 +677,6 @@ variation_groups:
                 <td>4, 15, 2, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__purple-10"></td>
                 <td>Purple 10</td>
@@ -713,8 +684,6 @@ variation_groups:
                 <td>253, 243, 248</td>
                 <td></td>
             </tr>
-
-
 
             </tbody></table>
             <table class="color-table">
@@ -734,7 +703,6 @@ variation_groups:
                 <td>0, 90, 100, 20</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__red"></td>
                 <td>Red</td>
@@ -742,7 +710,6 @@ variation_groups:
                 <td>209, 65, 36</td>
                 <td>0, 85, 100, 4</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__red-80"></td>
@@ -752,7 +719,6 @@ variation_groups:
                 <td>0, 75, 75, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__red-60"></td>
                 <td>Red 60</td>
@@ -760,7 +726,6 @@ variation_groups:
                 <td>231, 158, 142</td>
                 <td>0, 51, 46, 0</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__red-40"></td>
@@ -770,7 +735,6 @@ variation_groups:
                 <td>0, 28, 25, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__red-20"></td>
                 <td>Red 20</td>
@@ -779,7 +743,6 @@ variation_groups:
                 <td>0, 13, 12, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__red-10"></td>
                 <td>Red 10</td>
@@ -787,8 +750,6 @@ variation_groups:
                 <td>251, 239, 236</td>
                 <td></td>
             </tr>
-
-
 
             </tbody></table>
             <table class="color-table">
@@ -808,7 +769,6 @@ variation_groups:
                 <td>10, 60, 100, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__gold"></td>
                 <td>Gold</td>
@@ -816,7 +776,6 @@ variation_groups:
                 <td>255, 158, 27</td>
                 <td>0, 45, 94, 0</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__gold-80"></td>
@@ -826,7 +785,6 @@ variation_groups:
                 <td>0, 34, 76, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__gold-60"></td>
                 <td>Gold 60</td>
@@ -834,7 +792,6 @@ variation_groups:
                 <td>255, 206, 141</td>
                 <td>0, 21, 49, 0</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__gold-40"></td>
@@ -844,7 +801,6 @@ variation_groups:
                 <td>0, 13, 31, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__gold-20"></td>
                 <td>Gold 20</td>
@@ -853,7 +809,6 @@ variation_groups:
                 <td>0, 6, 15, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__gold-10"></td>
                 <td>Gold 10</td>
@@ -861,8 +816,6 @@ variation_groups:
                 <td>255, 246, 236</td>
                 <td></td>
             </tr>
-
-
 
             </tbody></table>
             <table class="color-table">
@@ -882,7 +835,6 @@ variation_groups:
                 <td>50, 60, 57, 28</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__neutral"></td>
                 <td>Neutral</td>
@@ -890,7 +842,6 @@ variation_groups:
                 <td>138, 108, 87</td>
                 <td>50, 60, 57, 7</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__neutral-80"></td>
@@ -900,7 +851,6 @@ variation_groups:
                 <td>42, 50, 47, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__neutral-60"></td>
                 <td>Neutral 60</td>
@@ -908,7 +858,6 @@ variation_groups:
                 <td>186, 164, 150</td>
                 <td>28, 34, 32, 0</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__neutral-40"></td>
@@ -918,7 +867,6 @@ variation_groups:
                 <td>19, 22, 21, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__neutral-20"></td>
                 <td>Neutral 20</td>
@@ -927,7 +875,6 @@ variation_groups:
                 <td>9, 11, 10, 0</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__neutral-10"></td>
                 <td>Neutral 10</td>
@@ -935,8 +882,6 @@ variation_groups:
                 <td>248, 245, 242</td>
                 <td></td>
             </tr>
-
-
 
             </tbody></table>
             <table class="color-table">
@@ -956,7 +901,6 @@ variation_groups:
                 <td>0, 0, 0, 100</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__dark-gray"></td>
                 <td>Dark Gray</td>
@@ -964,7 +908,6 @@ variation_groups:
                 <td>67, 71, 78</td>
                 <td>0, 0, 0, 87</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__gray"></td>
@@ -974,7 +917,6 @@ variation_groups:
                 <td>0, 0, 0, 77</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__gray-80"></td>
                 <td>Gray 80</td>
@@ -982,7 +924,6 @@ variation_groups:
                 <td>117, 120, 123</td>
                 <td>0, 0, 0, 65</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__gray-60"></td>
@@ -992,7 +933,6 @@ variation_groups:
                 <td>0, 0, 0, 50</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__gray-40"></td>
                 <td>Gray 40</td>
@@ -1000,7 +940,6 @@ variation_groups:
                 <td>180, 181, 182</td>
                 <td>0, 0, 0, 35</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__gray-20"></td>
@@ -1010,7 +949,6 @@ variation_groups:
                 <td>0, 0, 0, 20</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__gray-10"></td>
                 <td>Gray 10</td>
@@ -1019,7 +957,6 @@ variation_groups:
                 <td>0, 0, 0, 10</td>
             </tr>
 
-
             <tr>
                 <td class="swatch_field swatch_field__gray-5"></td>
                 <td>Gray 5</td>
@@ -1027,7 +964,6 @@ variation_groups:
                 <td>247, 248, 249</td>
                 <td>0, 0, 0, 5</td>
             </tr>
-
 
             <tr>
                 <td class="swatch_field swatch_field__white"></td>

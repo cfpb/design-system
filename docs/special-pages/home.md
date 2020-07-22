@@ -75,9 +75,7 @@ description: >-
 
   Find out more about the common page types that we use within our content management system, which are documented for easy reference. 
 
-  <br>
-
-  [Browse pages](https://cfpb.github.io/design-system/pages/)
+  <p><a href="https://cfpb.github.io/design-system/pages/">Browse pages</a></p>
 
   </div>
 
@@ -89,9 +87,7 @@ description: >-
 
   The development section includes utilities, such as variables, helper classes, and mixins, and layout options, such as blocks. 
 
-  <br>
-
-  [Browse development](https://cfpb.github.io/design-system/development/) 
+  <p><a href="https://cfpb.github.io/design-system/development/">Browse development</a></p>
 
   </div>
 
@@ -103,12 +99,12 @@ description: >-
 
   This section includes guidelines for creating specific product experiences not covered in other sections. 
 
-  <br>
-
-  [Browse guidelines](https://cfpb.github.io/design-system/guidelines/)
+  <p><a href="https://cfpb.github.io/design-system/guidelines/">Browse guidelines</a></p>
 
   </div>
 
+
+  <br>
 
   <br>
 
@@ -121,11 +117,11 @@ description: >-
 
   ### Setup and contribution
 
-  <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be integrated into your project. <a href="https://cfpb.github.io/design-system/getting-started/integrating-the-design-system-into-your-project">Integrate the Design System into your project</a>  </p>
+  <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be integrated into your project. <a href="https://cfpb.github.io/design-system/getting-started/integrating-the-design-system-into-your-project">Integrate the Design System into your project</a>.</p>
 
   <p>
 
-  Learn how to contribute to the Design System code base and update the documentation.  <a href="https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md">Get started</a>
+  Learn how to contribute to the Design System code base and update the documentation.  <a href="https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md">Get started</a>.
 
   </p>
 
@@ -142,8 +138,10 @@ description: >-
 
   <p>
 
-  <a href="https://github.com/cfpb/design-system">View source code on github.</a></div>
+  <a href="https://github.com/cfpb/design-system">View source code on github</a></div>
 
+
+  <br>
 
   <br>
 
@@ -153,10 +151,7 @@ description: >-
 
   We strongly encourage you to participate in the growth and maintenance of the Design System. To make contribution easier, the Design System is built on a tool called Netlify CMS, which allows for editing of pages in a web browser, without needing to use git or other command-line tools. 
 
-  <br>
-
-  [View instructions for contributing to the Design System](https://cfpb.github.io/design-system/updating-this-website/).
-
+  <p><a href="https://cfpb.github.io/design-system/updating-this-website/">View instructions for contributing to the Design System</a></p>
 
   <br>
 

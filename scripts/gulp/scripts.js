@@ -1,7 +1,7 @@
 const gulp = require( 'gulp' );
 const vinylNamed = require( 'vinyl-named' );
 const webpack = require( 'webpack' );
-const webpackConfig = require( '../../config/webpack-config' );
+const webpackConfig = require( '../../webpack.config.packages.js' );
 const handleErrors = require( '../utils/handle-errors' );
 const webpackStream = require( 'webpack-stream' );
 

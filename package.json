@@ -24,10 +24,10 @@
   ],
   "scripts": {
     "build": "yarn run compile-js && yarn run compile-css && bundle exec jekyll build",
-    "build-netlify": "yarn && webpack && yarn run compile-css && bundle exec jekyll build",
+    "build-netlify": "yarn && webpack --config webpack.config.docs.js && yarn run compile-css && bundle exec jekyll build",
     "changelog": "./scripts/generate-changelog.sh",
     "compile-css": "lessc --include-path=packages/:node_modules/normalize-css/normalize-css/ docs/assets/css/main.less docs/dist/css/main.css",
-    "compile-js": "NODE_ENV=production webpack",
+    "compile-js": "NODE_ENV=production webpack --config webpack.config.docs.js",
     "copy-icons": "cp -r packages/cfpb-icons/src/icons docs/assets/",
     "design-system-link": "lerna exec -- yarn link",
     "design-system-unlink": "lerna exec -- yarn unlink",
@@ -40,7 +40,7 @@
     "test:browser": "wdio run test/browser/webdriver.conf.js",
     "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && wdio run test/browser/webdriver-sauce.conf.js",
     "version": "yarn run changelog && git add CHANGELOG.md",
-    "watch": "webpack --watch",
+    "watch": "webpack --config webpack.config.docs.js --watch",
     "watch-css": "less-watch-compiler --less-args include-path=packages/:node_modules/normalize-css/normalize-css/ docs/assets/css docs/dist/css main.less"
   },
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",
@@ -58,7 +58,7 @@
     "normalize-legacy-addon": "^0.1.0",
     "react": "16.13.1",
     "react-liquid": "2.0.1",
-    "regenerator-runtime": "^0.13.5",
+    "regenerator-runtime": "0.13.6",
     "slugify": "1.4.4"
   },
   "devDependencies": {

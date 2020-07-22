@@ -41,11 +41,7 @@ description: >-
 
   This section includes our visual identity standards, such as color, grid, and typography. It forms the foundation for the CFPB’s website and external-facing materials. 
 
-  <br>
-
-  [Browse foundation](https://cfpb.github.io/design-system/foundation/)
-
-  </div>
+  <p><a href="https://cfpb.github.io/design-system/foundation/">Browse foundation</a></p></div>
 
 
   <div class="content-33 content-last" markdown="1">
@@ -55,9 +51,7 @@ description: >-
 
   Components contain the key building blocks of the design system that, when combined, can be used to create a website. Examples of components include buttons, text inputs, tables, and alerts. 
 
-  <br>
-
-  [Browse components](https://cfpb.github.io/design-system/components/)
+  <p><a href="https://cfpb.github.io/design-system/components/">Browse components</a></p>
 
   </div>
 
@@ -129,11 +123,13 @@ description: >-
 
   ### Setup and contribution
 
-  Learn how to integrate our design system into your project, contribute to the code base, and update the documentation. 
+  <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be integrated into your project. <a href="https://cfpb.github.io/design-system/getting-started/integrating-the-design-system-into-your-project">Integrate the Design System into your project</a>  </p>
 
-  <br>
+  <p>
 
-  [Get started](https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md)
+  Learn how to contribute to the Design System code base and update the documentation.  <a href="https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md">Get started</a>
+
+  </p>
 
   </div>
 
@@ -146,11 +142,9 @@ description: >-
 
   The Design System also includes the source code for the common components that power the design of [consumerfinance.gov](https://www.consumerfinance.gov). 
 
-  <br>
+  <p>
 
-  [View source code on github](https://github.com/cfpb/design-system).
-
-  </div>
+  <a href="https://github.com/cfpb/design-system">View source code on github.</a></div>
 
 
   <br>

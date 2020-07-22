@@ -28,9 +28,7 @@ if ( !urlsSpecified ) {
 
   extraCollect = {
     // Start the documentation site locally when Lighthouse runs.
-    startServerCommand:
-      '
-      'bundle exec jekyll serve --host=localhost --port=4000',
+    startServerCommand: 'yarn start-jekyll',
     startServerReadyPattern: '  Server running... press ctrl-c to stop.',
 
     // Run Lighthouse against every URL in the local site.

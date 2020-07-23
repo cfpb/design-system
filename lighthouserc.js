@@ -29,16 +29,19 @@ if ( !urlsSpecified ) {
   }
 
   extraCollect = {
-    // Start the documentation site locally when Lighthouse runs.
-    startServerCommand: 'yarn start-jekyll',
-    startServerReadyPattern: '  Server running... press ctrl-c to stop.',
+    // Serve the documentation site locally when Lighthouse runs. Serve the
+    // already-built HTML files using the Node http-server package, which
+    // defaults to port 8080 and is simpler and reliably faster than using the
+    // Jekyll server.
+    startServerCommand: 'yarn serve-html',
+    startServerReadyPattern: 'Hit CTRL-C to stop the server',
 
     // Run Lighthouse against every URL in the local site.
     url: filenames.map(
       filename => filename
         .replace( /index.html$/, '' )
         .replace( /.html$/, '' )
-        .replace( /^/, 'http://localhost:4000/design-system/' )
+        .replace( /^/, 'http://localhost:8080/design-system/' )
     ).sort()
   };
 }

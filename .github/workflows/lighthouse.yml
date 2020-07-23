@@ -49,12 +49,9 @@ jobs:
       - name: Build documentation site
         run: yarn build-netlify
 
-      # Install and run Lighthouse CI
-      - name: Install Lighthouse CI
-        run: npm install -g @lhci/cli@0.4.x
-
+      # Run Lighthouse CI
       - name: Run Lighthouse CI
-        run: lhci autorun
+        run: yarn run lhci autorun
 
       - name: Attach results as artifact to GitHub Actions run
         if: ${{ always() }}

@@ -8,7 +8,7 @@ exclude: [package.json, webpack.config.js, yarn.lock]
 highlighter: rouge
 timezone: America/New_York
 source: docs
-destination: docs/_site
+destination: docs/_site/design-system
 
 # Organization
 org: CFPB

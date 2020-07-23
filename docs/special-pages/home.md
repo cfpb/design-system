@@ -138,7 +138,7 @@ description: >-
 
   <p>
 
-  <a href="https://github.com/cfpb/design-system">View source code on github</a></p></div>
+  <a href="https://github.com/cfpb/design-system">View source code on GitHub</a></p></div>
 
 
   <br>

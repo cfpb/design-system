@@ -2,7 +2,7 @@ const glob = require( 'glob' );
 const path = require( 'path' );
 
 const filenames = glob.sync( '**/*.html', {
-  cwd: path.join( __dirname, 'docs/_site' ),
+  cwd: path.join( __dirname, 'docs/_site/design-system' ),
   ignore: 'admin/**',
   nonull: false
 } );

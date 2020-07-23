@@ -8,7 +8,7 @@ repo_uri="https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
 remote_name="origin"
 main_branch="master"
 target_branch="gh-pages"
-target_dir="docs/_site/"
+target_dir="docs/_site/design-system/"
 
 cd "$GITHUB_WORKSPACE"
 

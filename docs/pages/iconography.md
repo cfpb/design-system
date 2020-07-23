@@ -13,7 +13,7 @@ description: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  ### Download the icon font
+  <h2 class="h3">Download the icon font</h2>
 
 
   Our full icon set is available for desktop use as an icon font (.ttf). It can be accessed through programs like Illustrator and InDesign via the glyph panel.
@@ -28,7 +28,7 @@ description: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  ### Download vector files
+  <h2 class="h3">Download vector files</h2>
 
 
   Each of our icons is available for download as a vector (.svg) on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world.

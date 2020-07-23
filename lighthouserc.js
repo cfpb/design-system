@@ -7,7 +7,9 @@ let extraCollect = {};
 // website locally and run Lighthouse against all pages. Determine the list of
 // URLs by finding all HTML files in the output documentation directory;
 // this requires that the docs have already been built before this code is run.
-const urlsSpecified = process.argv.some( arg => arg.startsWith( '--url=' ) );
+const urlsSpecified = process.argv.some(
+  arg => arg.match( /^--(collect\.)?url=/ )
+);
 
 if ( !urlsSpecified ) {
   const filenames = glob.sync( '**/*.html', {

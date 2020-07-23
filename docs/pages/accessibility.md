@@ -2,27 +2,31 @@
 title: Accessibility
 layout: variation
 section: null
-secondary_section: null
 description: >-
+  The following four principles, as defined by the W3C®, lay the foundation for
+  ensuring that web content is available for all users, including users with
+  disabilities and users on non-desktop devices. They also enable future
+  compatibility in the event that future devices are radically different from
+  those in use today.
 
-  The following four principles, as defined by the W3C®, lay the foundation for ensuring that web content is available for all users, including users with disabilities and users on non-desktop devices. They also enable future compatibility in the event that future devices are radically different from those in use today.
 
-  - [Perceivable](#perceivable)
+  * [Perceivable](#perceivable)
 
-  - [Operable](#operable)
+  * [Operable](#operable)
 
-  - [Understandable](#understandable)
+  * [Understandable](#understandable)
 
-  - [Robust](#robust)
+  * [Robust](#robust)
 
 
   Note: While this document can function as a checklist – and at times, it will – that isn’t the primary purpose. The goal is to foster understanding of why these guidelines are important.
 
 
-  _This guide is adapted from the [Web Content Accessibility Guidelines 2.0](http://www.w3.org/TR/2008/REC-WCAG20-20081211/), a [W3C](http://www.w3.org/) Recommendation. [More info](http://cfpb.github.io/design-manual/best-practices/accessibility-best-practices.html#attribution)._
+  *This guide is adapted from the [Web Content Accessibility Guidelines 2.0](http://www.w3.org/TR/2008/REC-WCAG20-20081211/), a [W3C](http://www.w3.org/) Recommendation. [More info](http://cfpb.github.io/design-manual/best-practices/accessibility-best-practices.html#attribution).*
 
 
   ## Perceivable
+
 
   ([View on W3C site](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#perceivable))
 
@@ -32,7 +36,9 @@ description: >-
 
   ### Include text alternatives for non-text content
 
+
   For any content that is not text-based (images, audio, video, animations, charts, graphs, etc), provide an alternative version of that content that is text-based.
+
 
   * Use the alt and title attributes on images and other graphical elements.
 
@@ -51,6 +57,7 @@ description: >-
 
   #### Prerecorded content
 
+
   * For audio-only content, provide a transcript of both spoken words and descriptions of other sounds.
 
   * For video-only content, provide an audio track or transcript that describes the video.
@@ -60,12 +67,15 @@ description: >-
 
   #### Live content
 
+
   * Closed captioning or sign language interpretation should always be available, but in some cases providing the prepared remarks or script alongside the audio/video may suffice.
 
 
   ### Organize content semantically
 
+
   Semantic content allows user agents to correctly parse documents and present it to end users in a way that is appropriate for their device and medium without losing information or structure.
+
 
   * Use semantic HTML, including relative header tags, lists, and semantic tags like `<aside>`, and `<figure>`
 
@@ -80,10 +90,12 @@ description: >-
 
   ### Make content easily distinguishable from its surroundings
 
+
   These guidelines help ensure that content is perceivable for sighted users.
 
 
   #### Text
+
 
   * Choose easy-to-read fonts.
 
@@ -98,12 +110,14 @@ description: >-
   * Do not use color as the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
 
   * Text should have a contrast ratio of at least 4.5 : 1, but there are exceptions.
+
     * For large text, a contrast ratio of only 3 : 1 is necessary. Large regular text is at least 18pt/24px, while large bold text is 14pt/18px.
     * Text or images of text that are either pure decoration or not visible, or are part of a logo, picture that contains significant other visual content, or inactive UI components (like disabled form controls) do not have a color contrast requirement.
   * The [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) is a good tool for testing color contrast ratios.
 
 
   #### Audio
+
 
   * Avoid auto-playing audio. If this is absolutely unavoidable, provide a control that allows the user to stop the audio and adjust or mute the volume.
 
@@ -112,14 +126,18 @@ description: >-
 
   ## Operable
 
+
   ([view on W3C site](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#operable))
 
 
   User interface components and navigation must be operable: an interface cannot require interaction that a user cannot perform. Following these guidelines will guarantee that all users can navigate a website or app regardless of their input device (mouse, keyboard, touchscreen, screen reader, etc).
 
+
   ### Ensure that all content is keyboard accessible
 
+
   In general, if a website can be operated using only the keyboard, it will also be operable with less-common input devices.
+
 
   * All controls must be addressable by the keyboard. By default, this includes `<a>`, `<area>`, `<object>`, and all form elements. Other elements can be made addressable by applying a `tabindex` value.
 
@@ -129,6 +147,7 @@ description: >-
 
 
   ### Give users ample time to interact with content
+
 
   You should not use time limits. For cases in which time limits are unavoidable:
 
@@ -142,6 +161,7 @@ description: >-
 
   ### Avoid interrupting users
 
+
   * Avoid popups or other modal dialogs that haven not been prompted by explicit user action or are alerting the user about something that is time-sensitive.
 
   * Allow users to pause, stop, or hide anything moving, blinking, or scrolling on the screen if the motion lasts longer than 5 seconds.
@@ -151,10 +171,12 @@ description: >-
 
   ### Do not create designs or interactions that may cause seizures
 
+
   Nothing on the page should flash more than 3 times in 1 second.
 
 
   ### Help users navigate, find content, and determine where they are
+
 
   * Allow users to bypass blocks of content that appear repeatedly on a website, like navigation, with a “skip to main content” or similar link.
 
@@ -171,6 +193,7 @@ description: >-
 
   ### Manage focus
 
+
   When users navigate a webpage using the keyboard or another alternative input device, only one element on the page will be in focus at a given time.
 
 
@@ -183,6 +206,7 @@ description: >-
 
   ## Understandable
 
+
   ([view on W3C site](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#understandable))
 
 
@@ -190,6 +214,7 @@ description: >-
 
 
   ### Create text content that is machine- and human-readable
+
 
   * Specify the language of the content in a machine-readable way. Generally, this means using `<html lang="en-us">` or the equivalent for another language. This will help with translation software and ensures that screen readers will use the correct pronunciation.
 
@@ -214,6 +239,7 @@ description: >-
 
   ### Maintain context
 
+
   Avoid changing a user’s context without an explicit request from the user, like clicking a button. If an automatic context change is necessary, warn the user in advance, and give them an opportunity to stop it.
 
 
@@ -235,14 +261,18 @@ description: >-
 
   ## Robust
 
+
   ([View on W3C site](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#robust))
 
 
   Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies. A robust site will be broadly compatible with past, current, and future web browsers and devices.
 
-  #### Follow standard web best practices
+
+  ### Follow standard web best practices
+
 
   This means using standard HTML markup. If complex widgets are required, use WAI-ARIA to make the use, states, and properties clear to browsers and assistive technologies.
+
 
   * Make sure your HTML validates.
 
@@ -254,9 +284,8 @@ description: >-
 
 
   Note that this is specific to HTML and does not include CSS.
-use_cases: ''
-guidelines: ''
-behavior: ''
+use_cases: ""
+guidelines: ""
 accessibility: >-
   ## Testing accessibility issues
 
@@ -275,4 +304,6 @@ accessibility: >-
    - To enable VoiceOver, press _command + f5_.
    - With VoiceOver enabled, optionally enable the "rotor" by pressing _control +option+U_.
 last_updated: 2019-12-10T22:50:48.793Z
+behavior: ""
+secondary_section: null
 ---

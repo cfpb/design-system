@@ -52,6 +52,12 @@ variation_groups:
           * Visual is always in a 16:9 ratio
 
           * 15px of left, right, and bottom padding around all content in the FCM
+
+
+          ### Video thumbnails 
+
+
+          * For videos, a 60x60 px play button appears in the center of the image area (horizontally and vertically centered). Make sure the subject of the thumbnail image is not awkwardly obscured by the play button. In particular, make sure that no faces are covered by the play button. This may require a photo composed with the subject on the left or right side of the image.
   - variations:
       - variation_code_snippet: >-
           <section class="o-featured-content-module">
@@ -130,12 +136,16 @@ variation_groups:
                       alt="">
               </div>
           </section>
-        variation_description: When the featured content module visual is a video, or a
-          static image composed with its subject in the middle, add the
+        variation_description: >-
+          When the featured content module visual is a video, or a static image
+          composed with its subject in the middle, add the
           `o-featured-content-module__center` modifier class to the
           `o-featured-content-module` organism. This anchors the center of the
           image to the center of the available space so that the focal point of
-          the visual remains in view at all screen sizes.
+          the visual remains in view at all screen sizes. 
+
+
+          For videos, note that a 60 x 60 px play button appears centered within the image area. Make sure the subject of the thumbnail photo is not awkwardly obscured by the play button.
         variation_name: Centered visual
     variation_group_name: Variations
     variation_group_description: >-

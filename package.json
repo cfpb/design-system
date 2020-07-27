@@ -23,6 +23,7 @@
     "packages/*"
   ],
   "scripts": {
+    "a11y": "lhci autorun",
     "build": "yarn run compile-js && yarn run compile-css && bundle exec jekyll build",
     "build-netlify": "yarn && webpack --config webpack.config.docs.js && yarn run compile-css && bundle exec jekyll build",
     "changelog": "./scripts/generate-changelog.sh",

@@ -65,10 +65,10 @@ variation_groups:
           <div class="m-form-field m-form-field__radio">
               <input class="a-radio"
                      type="radio"
-                     id="test_radio_basic_disabled"
+                     id="test_radio_basic_disabled_selected"
                      disabled
                      checked>
-              <label class="a-label" for="test_radio_basic_disabled">Label</label>
+              <label class="a-label" for="test_radio_basic_disabled_selected">Label</label>
           </div>
         variation_specs: |-
           <h3 class="h4">Default</h3>
@@ -228,10 +228,10 @@ variation_groups:
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio"
                      type="radio"
-                     id="test_radio_lg_disabled"
+                     id="test_radio_lg_disabled_selected"
                      disabled
                      checked>
-              <label class="a-label" for="test_radio_lg_disabled">Disabled/selected</label>
+              <label class="a-label" for="test_radio_lg_disabled_selected">Disabled/selected</label>
           </div>
         variation_name: Large target area radio buttons
         variation_description: For better usability, consider using radio buttons with

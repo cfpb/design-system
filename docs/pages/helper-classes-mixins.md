@@ -139,8 +139,8 @@ variation_groups:
           _This only works in Internet Explorer 8 when the element with the `.u-break-word` class has layout. See <http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8> for more information._
         variation_name: '"Break word" helper class'
       - variation_code_snippet: >-
-          <h5 class="u-mb0">Demonstration of heading 5 with zero bottom
-          margin</h1>
+          <h4 class="u-mb0">Demonstration of heading 4 with zero bottom
+          margin</h4>
 
           <hr>
         variation_description: >-

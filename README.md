@@ -80,6 +80,11 @@ Visit http://localhost:4000/design-system/ to view the site.
 Editing a page locally will change your local files, using
 [an experimental Netlify CMS feature](https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository).
 
+To run accessibility tests against your local files:
+
+```shell
+yarn a11y
+```
 
 ## Contributing
 

@@ -1,28 +1,50 @@
 const glob = require( 'glob' );
 const path = require( 'path' );
 
-const filenames = glob.sync( '**/*.html', {
-  cwd: path.join( __dirname, 'docs/_site/design-system' ),
-  ignore: 'admin/**',
-  nonull: false
-} );
+let extraCollect = {};
 
-if ( !filenames.length ) {
-  // eslint-disable-next-line no-console
-  console.error(
-    "No HTML files found; build the docs first with 'yarn build-netlify'."
-  );
+// If URLs aren't being specified on the command line, start the documentation
+// website locally and run Lighthouse against all pages. Determine the list of
+// URLs by finding all HTML files in the output documentation directory;
+// this requires that the docs have already been built before this code is run.
+const urlsSpecified = process.argv.some(
+  arg => arg.match( /^--(collect\.)?url=/ )
+);
 
-  // eslint-disable-next-line no-process-exit
-  process.exit( 1 );
+if ( !urlsSpecified ) {
+  const filenames = glob.sync( '**/*.html', {
+    cwd: path.join( __dirname, 'docs/_site/design-system' ),
+    ignore: 'admin/**',
+    nonull: false
+  } );
+
+  if ( !filenames.length ) {
+    // eslint-disable-next-line no-console
+    console.error(
+      "No HTML files found; build the docs first with 'yarn build-netlify'."
+    );
+
+    // eslint-disable-next-line no-process-exit
+    process.exit( 1 );
+  }
+
+  extraCollect = {
+    // Serve the documentation site locally when Lighthouse runs. Serve the
+    // already-built HTML files using the Node http-server package, which
+    // defaults to port 8080 and is simpler and reliably faster than using the
+    // Jekyll server.
+    startServerCommand: 'yarn serve-html',
+    startServerReadyPattern: 'Hit CTRL-C to stop the server',
+
+    // Run Lighthouse against every URL in the local site.
+    url: filenames.map(
+      filename => filename
+        .replace( /index.html$/, '' )
+        .replace( /.html$/, '' )
+        .replace( /^/, 'http://localhost:8080/design-system/' )
+    ).sort()
+  };
 }
-
-const urls = filenames.map( function( filename ) {
-  return filename
-    .replace( /index.html$/, '' )
-    .replace( /.html$/, '' )
-    .replace( /^/, 'http://localhost:4000/design-system/' );
-} ).sort();
 
 module.exports = {
   ci: {
@@ -32,10 +54,7 @@ module.exports = {
         emulatedFormFactor: 'desktop',
         onlyCategories: 'accessibility'
       },
-      startServerCommand:
-        'bundle exec jekyll serve --host=localhost --port=4000',
-      startServerReadyPattern: '  Server running... press ctrl-c to stop.',
-      url: urls
+      ...extraCollect
     },
     assert: {
       assertions: {

@@ -34,6 +34,7 @@ variation_groups:
         variation_code_snippet: >-
 
           <div class="m-form-field m-form-field__success">
+              <label class="a-label a-label__heading" for="form-input-success">Input label</label>
               <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
               <div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert">
                   {% include icons/approved-round.svg %}
@@ -72,6 +73,7 @@ variation_groups:
       - variation_name: Warning notification (field-level)
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__warning">
+              <label class="a-label a-label__heading" for="form-input-warning">Input label</label>
               <input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message">
               <div class="a-form-alert a-form-alert__warning" id="form-input-warning_message" role="alert">
                   {% include icons/warning-round.svg %}
@@ -118,6 +120,7 @@ variation_groups:
       - variation_name: Error notification (field-level)
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__error">
+              <label class="a-label a-label__heading" for="form-input-error">Input label</label>
               <input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message">
               <div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert">
                   {% include icons/error-round.svg %}

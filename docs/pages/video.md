@@ -11,7 +11,7 @@ description: >-
   CFPB videos must contain strong emotional and creative imagery while maintaining visual simplicity. Video is a complex medium, so it is essential to pay attention to every detail, for example: composition, color treatment, typography and timing. The audience should recognize a CFPB video through its unique visual treatment.
 
 
-  View a selection of our videos at <https://www.youtube.com/user/cfpbvideo>[](http://flickr.com/photos/cfpbphotos).
+  View a selection of our videos at <https://www.youtube.com/user/cfpbvideo>.
 variation_groups:
   - variation_group_name: Types
     variations:

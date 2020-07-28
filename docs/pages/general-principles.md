@@ -42,7 +42,7 @@ description: >-
   ## Aesthetic integrity
 
 
-  Aesthetic integrity is not merely “attractiveness;” it implies the successful integration of design and function. We align appearance with purpose by using clear and intuitive designs to create a trustworthy tone and powerful platform for supporting the CFPB’s mission. We maintain consistency and clarity to empower users to seamlessly transfer their knowledge and skills from one product to another. Focusing on consistency helps uphold aesthetic integrity.
+  Aesthetic integrity is not merely “attractiveness”; it implies the successful integration of design and function. We align appearance with purpose by using clear and intuitive designs to create a trustworthy tone and powerful platform for supporting the CFPB’s mission. We maintain consistency and clarity to empower users to seamlessly transfer their knowledge and skills from one product to another. Focusing on consistency helps uphold aesthetic integrity.
 
 
   </div>

@@ -5584,6 +5584,25 @@ pre code {
   margin-bottom: 1rem;
   border-radius: 4px;
 }
+/* Make certain code highlighting darker to improve text contrast. */
+.highlight .c {
+  color: #5a5d61;
+}
+.highlight .c1 {
+  color: #5a5d61;
+}
+.highlight .cp {
+  color: #257675;
+}
+.highlight .cs {
+  color: #5a5d61;
+}
+.highlight .na {
+  color: #0072ce;
+}
+.highlight .s {
+  color: #b63014;
+}
 .highlight pre {
   margin-bottom: 0;
 }

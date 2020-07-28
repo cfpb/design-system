@@ -15,7 +15,7 @@ variation_groups:
   - variations:
       - variation_code_snippet: >-
           <div class="o-well">
-              <h4>Well title</h4>
+              <p class="h4">Well title</p>
               <p>
                   Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
                   instructior ex pri. Cu pri inani constituto, cum aeque noster commodo

@@ -91,8 +91,8 @@ variation_groups:
           <!--Disabled/selected-->
 
           <div class="m-form-field m-form-field__checkbox">
-              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled checked>
-              <label class="a-label" for="test_checkbox_basic_disabled">Disabled/selected</label>
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
+              <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
           </div>
         variation_implementation: This is developer-focused stuff. Be sure to add the
           `.o-blahblah` class to `blahblah` if you're doing this or that,

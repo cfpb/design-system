@@ -38,7 +38,7 @@ variation_groups:
                           number 22 out
                       </span>
                       <input class="m-pagination_current-page"
-                            id="m-pagination_current-page"
+                            id="m-pagination_current-page-default"
                             name="page"
                             type="number"
                             min="1"
@@ -51,7 +51,7 @@ variation_groups:
                   <button class="a-btn
                                 a-btn__link
                                 m-pagination_btn-submit"
-                          id="m-pagination_btn-submit"
+                          id="m-pagination_btn-submit-default"
                           type="submit">Go</button>
               </form>
           </nav>
@@ -81,12 +81,20 @@ variation_groups:
 
 
           <form class="m-pagination_form" action="#pagination_content">
-
-          <label class="m-pagination_label" for="m-pagination_current-page">  Page
-
-          <span class="u-visually-hidden">                number 1 out </span>
-
-          <input class="m-pagination_current-page" id="m-pagination_current-page" name="page"                   type="number" min="1"                   max="149" pattern="[0-9]*"                   inputmode="numeric" value="1">            of 149        </label>        <button class="a-btn                       a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit"                type="submit">Go</button> </form>
+            <label class="m-pagination_label" for="m-pagination_current-page">  Page
+              <span class="u-visually-hidden">number 1 out</span>
+              <input class="m-pagination_current-page"
+                id="m-pagination_current-page-first-last"
+                name="page"
+                type="number"
+                min="1"
+                max="149"
+                pattern="[0-9]*"
+                inputmode="numeric" value="1">
+             of 149
+            </label>
+          <button class="a-btn a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit-first-last" type="submit">Go</button>
+          </form>
 
           </nav>
         variation_description: When on the first or last page of paginated content, be

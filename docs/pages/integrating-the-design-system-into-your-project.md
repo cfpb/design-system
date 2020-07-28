@@ -108,7 +108,7 @@ description: >-
   <body>
       <!-- Your project's HTML goes here. -->
       <script src="js/cfpb-design-system.js"></script>
-      <script src="js/your-project-scripts.js></script>
+      <script src="js/your-project-scripts.js"></script>
   </body>
 
   </html>

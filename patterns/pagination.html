@@ -371,12 +371,12 @@
             <span class="u-visually-hidden">
                 number 22 out
             </span>
-            <input class="m-pagination_current-page" id="m-pagination_current-page" name="page" type="number" min="1" max="149" pattern="[0-9]*" inputmode="numeric" value="22">
+            <input class="m-pagination_current-page" id="m-pagination_current-page-default" name="page" type="number" min="1" max="149" pattern="[0-9]*" inputmode="numeric" value="22">
             of 149
         </label>
         <button class="a-btn
                       a-btn__link
-                      m-pagination_btn-submit" id="m-pagination_btn-submit" type="submit">Go</button>
+                      m-pagination_btn-submit" id="m-pagination_btn-submit-default" type="submit">Go</button>
     </form>
 </nav>
             </div>
@@ -454,7 +454,7 @@
                 number 22 out
             &lt;/span&gt;
             &lt;input class="m-pagination_current-page"
-                  id="m-pagination_current-page"
+                  id="m-pagination_current-page-default"
                   name="page"
                   type="number"
                   min="1"
@@ -467,7 +467,7 @@
         &lt;button class="a-btn
                       a-btn__link
                       m-pagination_btn-submit"
-                id="m-pagination_btn-submit"
+                id="m-pagination_btn-submit-default"
                 type="submit"&gt;Go&lt;/button&gt;
     &lt;/form&gt;
 &lt;/nav&gt;</code></pre>
@@ -542,9 +542,12 @@
 </a>
 
 <form class="m-pagination_form" action="#pagination_content">
-<label class="m-pagination_label" for="m-pagination_current-page">  Page
-<span class="u-visually-hidden">                number 1 out </span>
-<input class="m-pagination_current-page" id="m-pagination_current-page" name="page" type="number" min="1" max="149" pattern="[0-9]*" inputmode="numeric" value="1">            of 149        </label>        <button class="a-btn                       a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit" type="submit">Go</button> </form>
+  <label class="m-pagination_label" for="m-pagination_current-page">  Page
+    <span class="u-visually-hidden">number 1 out</span>
+    <input class="m-pagination_current-page" id="m-pagination_current-page-first-last" name="page" type="number" min="1" max="149" pattern="[0-9]*" inputmode="numeric" value="1">
+   of 149
+  </label>
+<button class="a-btn a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit-first-last" type="submit">Go</button> </form>
 </nav>
             </div>
             
@@ -590,9 +593,19 @@
 &lt;/a&gt;
 
 &lt;form class="m-pagination_form" action="#pagination_content"&gt;
-&lt;label class="m-pagination_label" for="m-pagination_current-page"&gt;  Page
-&lt;span class="u-visually-hidden"&gt;                number 1 out &lt;/span&gt;
-&lt;input class="m-pagination_current-page" id="m-pagination_current-page" name="page"                   type="number" min="1"                   max="149" pattern="[0-9]*"                   inputmode="numeric" value="1"&gt;            of 149        &lt;/label&gt;        &lt;button class="a-btn                       a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit"                type="submit"&gt;Go&lt;/button&gt; &lt;/form&gt;
+  &lt;label class="m-pagination_label" for="m-pagination_current-page"&gt;  Page
+    &lt;span class="u-visually-hidden"&gt;number 1 out&lt;/span&gt;
+    &lt;input class="m-pagination_current-page"
+      id="m-pagination_current-page-first-last"
+      name="page"
+      type="number"
+      min="1"
+      max="149"
+      pattern="[0-9]*"
+      inputmode="numeric" value="1"&gt;
+   of 149
+  &lt;/label&gt;
+&lt;button class="a-btn a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit-first-last" type="submit"&gt;Go&lt;/button&gt; &lt;/form&gt;
 &lt;/nav&gt;</code></pre>
                         </div>
                     </div>
@@ -723,8 +736,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/pages/pagination.md">
-                    <time datetime="2020-07-08 16:12:19 -0400">
-                         4:12:19 PM Jul 08, 2020
+                    <time datetime="2020-07-28 10:49:17 -0400">
+                        10:49:17 AM Jul 28, 2020
                     </time>
                 </a>
             </small>

@@ -3255,7 +3255,7 @@ Label
                     'variation_code_snippet1': `&lt;section class=&quot;m-hero&quot; id=&quot;hero1&quot;&gt;
     &lt;div class=&quot;m-hero_wrapper wrapper&quot;&gt;
         &lt;div class=&quot;m-hero_text&quot;&gt;
-            &lt;h1 class=&quot;m-hero_heading&quot;&gt;41 chars max for a one-line heading&lt;/h1&gt;
+            &lt;p class=&quot;h1 m-hero_heading&quot;&gt;41 chars max for a one-line heading&lt;/p&gt;
             &lt;p class=&quot;m-hero_subhead&quot;&gt;
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
@@ -3311,7 +3311,7 @@ Label
                     'variation_code_snippet2': `&lt;section class=&quot;m-hero m-hero__overlay&quot; id=&quot;hero4&quot;&gt;
     &lt;div class=&quot;m-hero_wrapper wrapper&quot;&gt;
         &lt;div class=&quot;m-hero_text&quot;&gt;
-            &lt;h1 class=&quot;m-hero_heading&quot;&gt;41 chars max for a one-line heading&lt;/h1&gt;
+            &lt;p class=&quot;h1 m-hero_heading&quot;&gt;41 chars max for a one-line heading&lt;/p&gt;
             &lt;p class=&quot;m-hero_subhead&quot;&gt;
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
@@ -3371,7 +3371,7 @@ Label
                     'variation_code_snippet1': `&lt;section class=&quot;m-hero m-hero__knockout&quot; id=&quot;hero2&quot;&gt;
     &lt;div class=&quot;m-hero_wrapper wrapper&quot;&gt;
         &lt;div class=&quot;m-hero_text&quot;&gt;
-            &lt;h1 class=&quot;m-hero_heading&quot;&gt;Max of 41 chars for a one-line heading&lt;/h1&gt;
+            &lt;p class=&quot;h1 m-hero_heading&quot;&gt;Max of 41 chars for a one-line heading&lt;/p&gt;
             &lt;p class=&quot;m-hero_subhead&quot;&gt;
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
@@ -4525,7 +4525,7 @@ Label heading
                 number 22 out
             &lt;/span&gt;
             &lt;input class=&quot;m-pagination_current-page&quot;
-                  id=&quot;m-pagination_current-page&quot;
+                  id=&quot;m-pagination_current-page-default&quot;
                   name=&quot;page&quot;
                   type=&quot;number&quot;
                   min=&quot;1&quot;
@@ -4538,7 +4538,7 @@ Label heading
         &lt;button class=&quot;a-btn
                       a-btn__link
                       m-pagination_btn-submit&quot;
-                id=&quot;m-pagination_btn-submit&quot;
+                id=&quot;m-pagination_btn-submit-default&quot;
                 type=&quot;submit&quot;&gt;Go&lt;/button&gt;
     &lt;/form&gt;
 &lt;/nav&gt;`,
@@ -4554,9 +4554,19 @@ Label heading
 &lt;/a&gt;
 
 &lt;form class=&quot;m-pagination_form&quot; action=&quot;#pagination_content&quot;&gt;
-&lt;label class=&quot;m-pagination_label&quot; for=&quot;m-pagination_current-page&quot;&gt;  Page
-&lt;span class=&quot;u-visually-hidden&quot;&gt;                number 1 out &lt;/span&gt;
-&lt;input class=&quot;m-pagination_current-page&quot; id=&quot;m-pagination_current-page&quot; name=&quot;page&quot;                   type=&quot;number&quot; min=&quot;1&quot;                   max=&quot;149&quot; pattern=&quot;[0-9]*&quot;                   inputmode=&quot;numeric&quot; value=&quot;1&quot;&gt;            of 149        &lt;/label&gt;        &lt;button class=&quot;a-btn                       a-btn__link m-pagination_btn-submit&quot; id=&quot;m-pagination_btn-submit&quot;                type=&quot;submit&quot;&gt;Go&lt;/button&gt; &lt;/form&gt;
+  &lt;label class=&quot;m-pagination_label&quot; for=&quot;m-pagination_current-page&quot;&gt;  Page
+    &lt;span class=&quot;u-visually-hidden&quot;&gt;number 1 out&lt;/span&gt;
+    &lt;input class=&quot;m-pagination_current-page&quot;
+      id=&quot;m-pagination_current-page-first-last&quot;
+      name=&quot;page&quot;
+      type=&quot;number&quot;
+      min=&quot;1&quot;
+      max=&quot;149&quot;
+      pattern=&quot;[0-9]*&quot;
+      inputmode=&quot;numeric&quot; value=&quot;1&quot;&gt;
+   of 149
+  &lt;/label&gt;
+&lt;button class=&quot;a-btn a-btn__link m-pagination_btn-submit&quot; id=&quot;m-pagination_btn-submit-first-last&quot; type=&quot;submit&quot;&gt;Go&lt;/button&gt; &lt;/form&gt;
 &lt;/nav&gt;`,
                 
             

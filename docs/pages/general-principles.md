@@ -10,9 +10,7 @@ description: >-
   for consumers.
 
 
-
-
-  <div class="content-33 content-last" markdown="1">
+  <div class="content-50 content-last" markdown="1">
 
 
   ## Public service, public trust
@@ -24,7 +22,7 @@ description: >-
   </div>
 
 
-  <div class="content-33 content-last" markdown="1">
+  <div class="content-50 content-last" markdown="1">
 
 
   ## Giving the user control
@@ -36,7 +34,7 @@ description: >-
   </div>
 
 
-  <div class="content-33 content-last" markdown="1">
+  <div class="content-50 content-last" markdown="1">
 
 
   ## Aesthetic integrity
@@ -48,7 +46,7 @@ description: >-
   </div>
 
 
-  <div class="content-33 content-last" markdown="1">
+  <div class="content-50 content-last" markdown="1">
 
 
   ## Designing with data
@@ -60,7 +58,7 @@ description: >-
   </div>
 
 
-  <div class="content-33 content-last" markdown="1">
+  <div class="content-50 content-last" markdown="1">
 
 
   ## Inclusion and accessibility
@@ -72,7 +70,7 @@ description: >-
   </div>
 
 
-  <div class="content-33 content-last" markdown="1">
+  <div class="content-50 content-last" markdown="1">
 
 
   ## Coherent end-to-end user experience

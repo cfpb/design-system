@@ -152,9 +152,9 @@ variation_groups:
           -->
 
 
-          <h5>eyebrow heading</h5>
+          <div class="h5">eyebrow heading</div>
 
-          <h1>Heading 1</h1>
+          <div class="h1">Heading 1</div>
       - variation_name: Slug heading
         variation_description: "Slug headings are used to lead content on sidebars and
           prefooters, inset modules, and inset email modules. "

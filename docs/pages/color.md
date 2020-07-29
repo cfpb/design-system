@@ -462,8 +462,9 @@ variation_groups:
                   <td>Green 10</td>
                   <td>#f0f8eb</td>
                   <td>240, 248, 235</td>
-                  <td>*Only for web*</td>
+                  <td>Only for web</td>
               </tr>
+
           </tbody></table> <table class="color-table">
                 <thead>
                     <tr><th></th>
@@ -473,12 +474,22 @@ variation_groups:
                     <th>CMYK</th>
                 </tr></thead>
 
-            <tbody><tr>
+            <tbody>
+
+          <tr>
                 <td class="swatch_field swatch_field__dark-teal"></td>
                 <td>Dark Teal</td>
                 <td>#005e5d</td>
                 <td>0, 94, 93</td>
                 <td>89, 0, 35, 60</td>
+            </tr>
+
+          <tr>
+                <td class="swatch_field swatch_field__mid-dark-teal"></td>
+                <td>Mid Dark Teal</td>
+                <td>#126b69</td>
+                <td>18, 107, 105</td>
+                <td>87, 0, 32, 52</td>
             </tr>
 
             <tr>
@@ -490,11 +501,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__teal-90"></td>
+                <td>Teal 90</td>
+                <td>#3e8685</td>
+                <td>62, 134, 133</td>
+                <td>69, 0, 25, 37</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__teal-80"></td>
                 <td>Teal 80</td>
                 <td>#579695</td>
                 <td>87, 150, 149</td>
                 <td>53, 0, 20, 30</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__teal-70"></td>
+                <td>Teal 70</td>
+                <td>#70a6a5</td>
+                <td>112, 166, 165</td>
+                <td>44, 0, 16, 24</td>
             </tr>
 
             <tr>
@@ -506,11 +533,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__teal-50"></td>
+                <td>Teal 50</td>
+                <td>#9ec4c3</td>
+                <td>158, 196, 195</td>
+                <td>28, 0, 10, 15</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__teal-40"></td>
                 <td>Teal 40</td>
                 <td>#b4d2d1</td>
                 <td>180, 210, 209</td>
                 <td>20, 0, 8, 12</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__teal-30"></td>
+                <td>Teal 30</td>
+                <td>#c4dddc</td>
+                <td>196, 221, 220</td>
+                <td>15, 0, 6, 9</td>
             </tr>
 
             <tr>
@@ -526,7 +569,7 @@ variation_groups:
                 <td>Teal 10</td>
                 <td>#f0f7f6</td>
                 <td>240, 247, 246</td>
-                <td></td>
+                <td>Only for web</td>
             </tr>
 
             </tbody></table>
@@ -547,12 +590,28 @@ variation_groups:
                 <td>100, 51, 0, 20</td>
             </tr>
 
+          <tr>
+                <td class="swatch_field swatch_field__mid-dark-pacific"></td>
+                <td>Mid Dark Pacific</td>
+                <td>#0061c1</td>
+                <td>0, 97, 193</td>
+                <td>95, 49, 0, 9</td>
+            </tr>
+
             <tr>
                 <td class="swatch_field swatch_field__pacific"></td>
                 <td>Pacific</td>
                 <td>#0072ce</td>
                 <td>0, 114, 206</td>
                 <td>90, 48, 0, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__pacific-90"></td>
+                <td>Pacific 90</td>
+                <td>#2284d5</td>
+                <td>34, 132, 213</td>
+                <td>79, 39, 0, 0</td>
             </tr>
 
             <tr>
@@ -564,6 +623,14 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__pacific-70"></td>
+                <td>Pacific 70</td>
+                <td>#61a7e2</td>
+                <td>97, 167, 226</td>
+                <td>57, 23, 0, 0</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__pacific-60"></td>
                 <td>Pacific 60</td>
                 <td>#7eb7e8</td>
@@ -572,11 +639,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__pacific-50"></td>
+                <td>Pacific 50</td>
+                <td>#96c4ed</td>
+                <td>150, 196, 237</td>
+                <td>37, 12, 0, 0</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__pacific-40"></td>
                 <td>Pacific 40</td>
                 <td>#afd2f2</td>
                 <td>175, 210, 242</td>
                 <td>29, 8, 0, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__pacific-30"></td>
+                <td>Pacific 30</td>
+                <td>#c3ddf6</td>
+                <td>195, 221, 246</td>
+                <td>22, 6, 0, 0</td>
             </tr>
 
             <tr>
@@ -592,7 +675,7 @@ variation_groups:
                 <td>Pacific 10</td>
                 <td>#eff8fd</td>
                 <td>239, 248, 253</td>
-                <td></td>
+                <td>Only for web</td>
             </tr>
 
             </tbody></table>

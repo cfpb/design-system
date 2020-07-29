@@ -398,7 +398,7 @@ variation_groups:
                   <td>80, 0, 100, 0</td>
               </tr>
 
-          \    <tr>
+          <tr>
                   <td class="swatch_field swatch_field__green-90"></td>
                   <td>Green 90</td>
                   <td>#48b753</td>
@@ -428,7 +428,7 @@ variation_groups:
                   <td>32, 0, 52, 0</td>
               </tr>
 
-          \    <tr>
+          <tr>
                   <td class="swatch_field swatch_field__green-50"></td>
                   <td>Green 50</td>
                   <td>#bae0a2</td>
@@ -443,7 +443,7 @@ variation_groups:
                   <td>22, 0, 36, 0</td>
               </tr>
 
-          \    <tr>
+          <tr>
                   <td class="swatch_field swatch_field__green-30"></td>
                   <td>Green 30</td>
                   <td>#d4eac6</td>
@@ -696,12 +696,28 @@ variation_groups:
                 <td>100, 80, 6, 32</td>
             </tr>
 
+          <tr>
+                <td class="swatch_field swatch_field__mid-dark-navy"></td>
+                <td>Mid Dark Navy</td>
+                <td>#123c7c</td>
+                <td>18, 60, 124</td>
+                <td>91, 69, 0, 31</td>
+            </tr>
+
             <tr>
                 <td class="swatch_field swatch_field__navy"></td>
                 <td>Navy</td>
                 <td>#254b87</td>
                 <td>37, 75, 135</td>
                 <td>82, 58, 0, 31</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__navy-90"></td>
+                <td>Navy 90</td>
+                <td>#3e5f95</td>
+                <td>62, 95, 149</td>
+                <td>71, 46, 0, 28</td>
             </tr>
 
             <tr>
@@ -713,6 +729,14 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__navy-70"></td>
+                <td>Navy 70</td>
+                <td>#6f88b2</td>
+                <td>111, 136, 178</td>
+                <td>48, 28, 0, 21</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__navy-60"></td>
                 <td>Navy 60</td>
                 <td>#889cc0</td>
@@ -721,11 +745,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__navy-50"></td>
+                <td>Navy 50</td>
+                <td>#9daecc</td>
+                <td>157, 174, 204</td>
+                <td>29, 17, 0, 12</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__navy-40"></td>
                 <td>Navy 40</td>
                 <td>#b3c0d9</td>
                 <td>179, 192, 217</td>
                 <td>23, 13, 0, 7</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__navy-30"></td>
+                <td>Navy 30</td>
+                <td>#c3cde2</td>
+                <td>195, 205, 226</td>
+                <td>18, 10, 0, 5</td>
             </tr>
 
             <tr>
@@ -741,7 +781,7 @@ variation_groups:
                 <td>Navy 10</td>
                 <td>#f4f6fa</td>
                 <td>244, 246, 250</td>
-                <td></td>
+                <td>Only for web</td>
             </tr>
 
             </tbody></table>
@@ -762,12 +802,28 @@ variation_groups:
                 <td>40, 100, 30, 10</td>
             </tr>
 
+          <tr>
+                <td class="swatch_field swatch_field__mid-dark-purple"></td>
+                <td>Mid Dark Purple</td>
+                <td>#aa2071</td>
+                <td>170, 32, 113</td>
+                <td>33, 100, 20, 5</td>
+            </tr>
+
             <tr>
                 <td class="swatch_field swatch_field__purple"></td>
                 <td>Purple</td>
                 <td>#b4267a</td>
                 <td>180, 38, 122</td>
                 <td>27, 100, 10, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__purple-90"></td>
+                <td>Purple 90</td>
+                <td>#be438b</td>
+                <td>190, 67, 139</td>
+                <td>22, 89, 10, 0</td>
             </tr>
 
             <tr>
@@ -779,6 +835,14 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__purple-70"></td>
+                <td>Purple 70</td>
+                <td>#cd70a5</td>
+                <td>205, 112, 165</td>
+                <td>17, 68, 9, 0</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__purple-60"></td>
                 <td>Purple 60</td>
                 <td>#d486b2</td>
@@ -787,11 +851,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__purple-50"></td>
+                <td>Purple 50</td>
+                <td>#dc9cbf</td>
+                <td>220, 156, 191</td>
+                <td>12, 47, 7, 0</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__purple-40"></td>
                 <td>Purple 40</td>
                 <td>#e3b2cc</td>
                 <td>227, 178, 204</td>
                 <td>9, 36, 6, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__purple-30"></td>
+                <td>Purple 30</td>
+                <td>#ebc9d9</td>
+                <td>235, 201, 217</td>
+                <td>6, 25, 4, 0</td>
             </tr>
 
             <tr>
@@ -807,7 +887,7 @@ variation_groups:
                 <td>Purple 10</td>
                 <td>#fdf3f8</td>
                 <td>253, 243, 248</td>
-                <td></td>
+                <td>Only for web</td>
             </tr>
 
             </tbody></table>

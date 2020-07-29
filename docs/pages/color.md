@@ -1227,11 +1227,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__darker-gray"></td>
+                <td>Darker Gray</td>
+                <td>#293037</td>
+                <td>41, 48, 55</td>
+                <td>0, 0, 0, 92</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__dark-gray"></td>
                 <td>Dark Gray</td>
                 <td>#43484e</td>
                 <td>67, 71, 78</td>
                 <td>0, 0, 0, 87</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__mid-dark-gray"></td>
+                <td>Mid Dark Gray</td>
+                <td>#4f5257</td>
+                <td>79, 82, 87</td>
+                <td>0, 0, 0, 82</td>
             </tr>
 
             <tr>
@@ -1243,11 +1259,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__gray-90"></td>
+                <td>Gray 90</td>
+                <td>#676a6f</td>
+                <td>103, 106, 111</td>
+                <td>0, 0, 0, 71</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__gray-80"></td>
                 <td>Gray 80</td>
                 <td>#75787b</td>
                 <td>117, 120, 123</td>
                 <td>0, 0, 0, 65</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__gray-70"></td>
+                <td>Gray 70</td>
+                <td>#838588</td>
+                <td>131, 133, 136</td>
+                <td>0, 0, 0, 57</td>
             </tr>
 
             <tr>
@@ -1259,6 +1291,14 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__gray-50"></td>
+                <td>Gray 50</td>
+                <td>#a2a3a4</td>
+                <td>162, 163, 164</td>
+                <td>0, 0, 0, 42</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__gray-40"></td>
                 <td>Gray 40</td>
                 <td>#b4b5b6</td>
@@ -1267,11 +1307,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__gray-30"></td>
+                <td>Gray 30</td>
+                <td>#c3c4c4</td>
+                <td>195, 196, 196</td>
+                <td>0, 0, 0, 27</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__gray-20"></td>
                 <td>Gray 20</td>
                 <td>#d2d3d5</td>
                 <td>210, 211, 213</td>
                 <td>0, 0, 0, 20</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__gray-15"></td>
+                <td>Gray 15</td>
+                <td>#dcdddf</td>
+                <td>220, 221, 223</td>
+                <td>0, 0, 0, 15</td>
             </tr>
 
             <tr>

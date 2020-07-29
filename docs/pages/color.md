@@ -42,7 +42,7 @@ variation_groups:
                   <figure class="swatch swatch__primary">
                       <div class="swatch_field swatch_field__green-60"></div>
                       <figcaption class="swatch_label">
-                          <h4 class="swatch_head">Green 60</h4>
+                          <h4 class="swatch_head">Green 60 (Midtone Green)</h4>
                           <table class="swatch_table">
                               <tbody>
                                   <tr>

@@ -1120,12 +1120,28 @@ variation_groups:
                 <td>50, 60, 57, 28</td>
             </tr>
 
+          <tr>
+                <td class="swatch_field swatch_field__mid-dark-neutral"></td>
+                <td>Mid Dark Neutral</td>
+                <td>#7d604b</td>
+                <td>125, 96, 75</td>
+                <td>50, 60, 57, 17</td>
+            </tr>
+
             <tr>
                 <td class="swatch_field swatch_field__neutral"></td>
                 <td>Neutral</td>
                 <td>#8a6c57</td>
                 <td>138, 108, 87</td>
                 <td>50, 60, 57, 7</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__neutral-90"></td>
+                <td>Neutral 90</td>
+                <td>#957865</td>
+                <td>149, 120, 101</td>
+                <td>47, 56, 54, 0</td>
             </tr>
 
             <tr>
@@ -1137,6 +1153,14 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__neutral-70"></td>
+                <td>Neutral 70</td>
+                <td>#ad9484</td>
+                <td>173, 148, 132</td>
+                <td>35, 42, 40, 0</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__neutral-60"></td>
                 <td>Neutral 60</td>
                 <td>#baa496</td>
@@ -1145,11 +1169,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__neutral-50"></td>
+                <td>Neutral 50</td>
+                <td>#c6b4a9</td>
+                <td>198, 180, 169</td>
+                <td>23, 28, 26, 0</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__neutral-40"></td>
                 <td>Neutral 40</td>
                 <td>#d3c5bc</td>
                 <td>211, 197, 188</td>
                 <td>19, 22, 21, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__neutral-30"></td>
+                <td>Neutral 30</td>
+                <td>#ddd1c9</td>
+                <td>221, 209, 201</td>
+                <td>13, 16, 15, 0</td>
             </tr>
 
             <tr>
@@ -1165,7 +1205,7 @@ variation_groups:
                 <td>Neutral 10</td>
                 <td>#f8f5f2</td>
                 <td>248, 245, 242</td>
-                <td></td>
+                <td>Only for web</td>
             </tr>
 
             </tbody></table>

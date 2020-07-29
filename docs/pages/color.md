@@ -373,12 +373,22 @@ variation_groups:
                   <th>RGB</th>
                   <th>CMYK</th>
               </tr></thead>
-              <tbody><tr>
+              <tbody>
+
+          <tr>
                   <td class="swatch_field swatch_field__dark-green"></td>
                   <td>Dark Green</td>
                   <td>#1e9642</td>
                   <td>30, 150, 66</td>
                   <td>80, 0, 100, 17</td>
+              </tr>
+
+          <tr>
+                  <td class="swatch_field swatch_field__mid-dark-green"></td>
+                  <td>Mid Dark Green</td>
+                  <td>#1fa040</td>
+                  <td>31, 160, 64</td>
+                  <td>80, 0, 100, 8</td>
               </tr>
               <tr>
                   <td class="swatch_field swatch_field__green"></td>
@@ -387,6 +397,14 @@ variation_groups:
                   <td>32, 170, 63</td>
                   <td>80, 0, 100, 0</td>
               </tr>
+
+          \    <tr>
+                  <td class="swatch_field swatch_field__green-90"></td>
+                  <td>Green 90</td>
+                  <td>#48b753</td>
+                  <td>72, 183, 83</td>
+                  <td>67, 0, 88, 0</td>
+              </tr>
               <tr>
                   <td class="swatch_field swatch_field__green-80"></td>
                   <td>Green 80</td>
@@ -394,12 +412,28 @@ variation_groups:
                   <td>102, 195, 104</td>
                   <td>55, 0, 76, 0</td>
               </tr>
+
+          <tr>
+                  <td class="swatch_field swatch_field__green-70"></td>
+                  <td>Green 70</td>
+                  <td>#93cf7c</td>
+                  <td>147, 207, 124</td>
+                  <td>43, 0, 66, 0</td>
+              </tr>
               <tr>
                   <td class="swatch_field swatch_field__green-60"></td>
-                  <td>Green 60</td>
+                  <td>Green 60 (Midtone Green)</td>
                   <td>#addc91</td>
                   <td>173, 220, 145</td>
                   <td>32, 0, 52, 0</td>
+              </tr>
+
+          \    <tr>
+                  <td class="swatch_field swatch_field__green-50"></td>
+                  <td>Green 50</td>
+                  <td>#bae0a2</td>
+                  <td>186, 224, 162</td>
+                  <td>27, 0, 44, 0</td>
               </tr>
               <tr>
                   <td class="swatch_field swatch_field__green-40"></td>
@@ -407,6 +441,14 @@ variation_groups:
                   <td>#c7e5b3</td>
                   <td>199, 229, 179</td>
                   <td>22, 0, 36, 0</td>
+              </tr>
+
+          \    <tr>
+                  <td class="swatch_field swatch_field__green-30"></td>
+                  <td>Green 30</td>
+                  <td>#d4eac6</td>
+                  <td>212, 234, 198</td>
+                  <td>17, 0, 27, 0</td>
               </tr>
               <tr>
                   <td class="swatch_field swatch_field__green-20"></td>
@@ -420,7 +462,7 @@ variation_groups:
                   <td>Green 10</td>
                   <td>#f0f8eb</td>
                   <td>240, 248, 235</td>
-                  <td></td>
+                  <td>*Only for web*</td>
               </tr>
           </tbody></table> <table class="color-table">
                 <thead>

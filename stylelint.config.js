@@ -27,14 +27,14 @@ selector-pseudo-element-colon-notation -
   Remove this rule after dropping IE8 CSS support.
 */
 module.exports = {
-  extends: 'stylelint-config-standard',
-  syntax: 'less',
-  rules: {
+  'extends': 'stylelint-config-standard',
+  'syntax': 'less',
+  'rules': {
     'at-rule-no-unknown': [ true, { ignoreAtRules: 'plugin' } ],
     'declaration-colon-newline-after': null,
     'function-name-case': [
       'lower',
-      { ignoreFunctions: [ 'filter' ] }
+      { ignoreFunctions: [ 'filter' ]}
     ],
     'function-parentheses-space-inside': 'always',
     'rule-empty-line-before': [
@@ -56,4 +56,4 @@ module.exports = {
     'selector-list-comma-newline-after': null,
     'selector-pseudo-element-colon-notation': 'single'
   }
-}
+};

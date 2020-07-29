@@ -35,6 +35,8 @@ function _genericLintJs( src ) {
 function lintBuild() {
   return _genericLintJs( [
     'gulpfile.js',
+    '**.config.js',
+    'webpack.config.**.js',
     'scripts/gulp/**/*.js',
     'scripts/npm/prepublish/**/*.js'
   ] );

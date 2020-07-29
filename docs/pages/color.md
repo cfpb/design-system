@@ -908,12 +908,28 @@ variation_groups:
                 <td>0, 90, 100, 20</td>
             </tr>
 
+          <tr>
+                <td class="swatch_field swatch_field__mid-dark-red"></td>
+                <td>Mid Dark Red</td>
+                <td>#c3381c</td>
+                <td>195, 56, 28</td>
+                <td>0, 88, 100, 13</td>
+            </tr>
+
             <tr>
                 <td class="swatch_field swatch_field__red"></td>
                 <td>Red</td>
                 <td>#d14124</td>
                 <td>209, 65, 36</td>
                 <td>0, 85, 100, 4</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__red-90"></td>
+                <td>Red 90</td>
+                <td>#d75a40</td>
+                <td>215, 90, 64</td>
+                <td>0, 80, 87, 2</td>
             </tr>
 
             <tr>
@@ -925,6 +941,14 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__red-70"></td>
+                <td>Red 70</td>
+                <td>#e28875</td>
+                <td>226, 136, 117</td>
+                <td>0, 63, 60, 0</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__red-60"></td>
                 <td>Red 60</td>
                 <td>#e79e8e</td>
@@ -933,11 +957,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__red-50"></td>
+                <td>Red 50</td>
+                <td>#ebb0a3</td>
+                <td>235, 176, 163</td>
+                <td>0, 39, 35, 0</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__red-40"></td>
                 <td>Red 40</td>
                 <td>#f0c3b8</td>
                 <td>240, 195, 184</td>
                 <td>0, 28, 25, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__red-30"></td>
+                <td>Red 30</td>
+                <td>#f3d1c8</td>
+                <td>243, 209, 200</td>
+                <td>0, 20, 18, 0</td>
             </tr>
 
             <tr>
@@ -953,7 +993,7 @@ variation_groups:
                 <td>Red 10</td>
                 <td>#fbefec</td>
                 <td>251, 239, 236</td>
-                <td></td>
+                <td>Only for web</td>
             </tr>
 
             </tbody></table>
@@ -974,12 +1014,28 @@ variation_groups:
                 <td>10, 60, 100, 0</td>
             </tr>
 
+          <tr>
+                <td class="swatch_field swatch_field__mid-dark-gold"></td>
+                <td>Mid Dark Gold</td>
+                <td>#ed881b</td>
+                <td>237, 136, 27</td>
+                <td>4, 52, 97, 0</td>
+            </tr>
+
             <tr>
                 <td class="swatch_field swatch_field__gold"></td>
                 <td>Gold</td>
                 <td>#ff9e1b</td>
                 <td>255, 158, 27</td>
                 <td>0, 45, 94, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__gold-90"></td>
+                <td>Gold 90</td>
+                <td>#ffab39</td>
+                <td>255, 171, 57</td>
+                <td>0, 39, 85, 0</td>
             </tr>
 
             <tr>
@@ -991,6 +1047,14 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__gold-70"></td>
+                <td>Gold 70</td>
+                <td>#ffc372</td>
+                <td>255, 195, 114</td>
+                <td>0, 27, 62, 0</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__gold-60"></td>
                 <td>Gold 60</td>
                 <td>#ffce8d</td>
@@ -999,11 +1063,27 @@ variation_groups:
             </tr>
 
             <tr>
+                <td class="swatch_field swatch_field__gold-50"></td>
+                <td>Gold 50</td>
+                <td>#ffd8a3</td>
+                <td>255, 216, 163</td>
+                <td>0, 17, 40, 0</td>
+            </tr>
+
+            <tr>
                 <td class="swatch_field swatch_field__gold-40"></td>
                 <td>Gold 40</td>
                 <td>#ffe1b9</td>
                 <td>255, 225, 185</td>
                 <td>0, 13, 31, 0</td>
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__gold-30"></td>
+                <td>Gold 30</td>
+                <td>#ffe8cb</td>
+                <td>255, 232, 203</td>
+                <td>0, 9, 23, 0</td>
             </tr>
 
             <tr>
@@ -1019,7 +1099,7 @@ variation_groups:
                 <td>Gold 10</td>
                 <td>#fff6ec</td>
                 <td>255, 246, 236</td>
-                <td></td>
+                <td>Only for web</td>
             </tr>
 
             </tbody></table>

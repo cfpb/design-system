@@ -81,14 +81,14 @@ module.exports = ( env, argv ) => {
   if ( argv.mode === 'development' ) {
     config.mode = 'development';
     config.devtool = 'source-map';
-    config.optimization = {
-      minimizer: [ new TerserJSPlugin(), new OptimizeCSSAssetsPlugin() ]
-    };
   }
 
   // Production-specific settings can be added here.
   if ( argv.mode === 'production' ) {
     config.mode = 'production';
+    config.optimization = {
+      minimizer: [ new TerserJSPlugin(), new OptimizeCSSAssetsPlugin() ]
+    };
   }
 
   return config;

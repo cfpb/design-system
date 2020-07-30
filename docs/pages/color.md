@@ -365,6 +365,14 @@ variation_groups:
           create visual cohesion when incorporating complex illustrations and
           data visualizations. 
 
+
+          Please note that we've only defined PMS values for colors in our primary and secondary palettes with the exception of two tints.
+
+
+          * Gray 20: Cool Gray 3C
+
+          * Gray 5: Cool Gray 1C @ 50%
+
             <table class="color-table">
               <thead>
                   <tr><th></th>
@@ -1216,8 +1224,6 @@ variation_groups:
                     <th>Hex</th>
                     <th>RGB</th>
                     <th>CMYK</th>
-
-          <th>PMS</th>
                 </tr></thead>
 
             <tbody><tr>
@@ -1226,8 +1232,6 @@ variation_groups:
                 <td>#101820</td>
                 <td>16, 24, 32</td>
                 <td>0, 0, 0, 100</td>
-
-          <td>Black 6</td>
             </tr>
 
             <tr>
@@ -1236,8 +1240,6 @@ variation_groups:
                 <td>#293037</td>
                 <td>41, 48, 55</td>
                 <td>0, 0, 0, 92</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1246,8 +1248,6 @@ variation_groups:
                 <td>#43484e</td>
                 <td>67, 71, 78</td>
                 <td>0, 0, 0, 87</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1256,8 +1256,6 @@ variation_groups:
                 <td>#4f5257</td>
                 <td>79, 82, 87</td>
                 <td>0, 0, 0, 82</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1266,8 +1264,6 @@ variation_groups:
                 <td>#5a5d61</td>
                 <td>90, 93, 97</td>
                 <td>0, 0, 0, 77</td>
-
-          <td>Gray 9C</td>
             </tr>
 
             <tr>
@@ -1276,8 +1272,6 @@ variation_groups:
                 <td>#676a6f</td>
                 <td>103, 106, 111</td>
                 <td>0, 0, 0, 71</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1286,8 +1280,6 @@ variation_groups:
                 <td>#75787b</td>
                 <td>117, 120, 123</td>
                 <td>0, 0, 0, 65</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1296,8 +1288,6 @@ variation_groups:
                 <td>#838588</td>
                 <td>131, 133, 136</td>
                 <td>0, 0, 0, 57</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1306,8 +1296,6 @@ variation_groups:
                 <td>#919395</td>
                 <td>145, 147, 149</td>
                 <td>0, 0, 0, 50</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1316,8 +1304,6 @@ variation_groups:
                 <td>#a2a3a4</td>
                 <td>162, 163, 164</td>
                 <td>0, 0, 0, 42</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1326,8 +1312,6 @@ variation_groups:
                 <td>#b4b5b6</td>
                 <td>180, 181, 182</td>
                 <td>0, 0, 0, 35</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1336,8 +1320,6 @@ variation_groups:
                 <td>#c3c4c4</td>
                 <td>195, 196, 196</td>
                 <td>0, 0, 0, 27</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1346,8 +1328,6 @@ variation_groups:
                 <td>#d2d3d5</td>
                 <td>210, 211, 213</td>
                 <td>0, 0, 0, 20</td>
-
-          <td>Cool Gray 3C</td>
             </tr>
 
             <tr>
@@ -1356,8 +1336,6 @@ variation_groups:
                 <td>#dcdddf</td>
                 <td>220, 221, 223</td>
                 <td>0, 0, 0, 15</td>
-
-          <td></td>
             </tr>
 
             <tr>
@@ -1366,8 +1344,6 @@ variation_groups:
                 <td>#e7e8e9</td>
                 <td>231, 231, 233</td>
                 <td>0, 0, 0, 10</td>
-
-          <td>Cool Gray 1C</td>
             </tr>
 
             <tr>
@@ -1376,8 +1352,6 @@ variation_groups:
                 <td>#f7f8f9</td>
                 <td>247, 248, 249</td>
                 <td>0, 0, 0, 5</td>
-
-          <td>Cool Gray 1C @ 50%</td>
             </tr>
 
             <tr>
@@ -1386,8 +1360,6 @@ variation_groups:
                 <td>#ffffff</td>
                 <td>255, 255, 255</td>
                 <td>0,  0,  0,  0</td>
-
-          <td></td>
             </tr>
 
             </tbody></table>

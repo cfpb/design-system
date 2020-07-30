@@ -470,7 +470,7 @@ variation_groups:
                   <td>Green 10</td>
                   <td>#f0f8eb</td>
                   <td>240, 248, 235</td>
-                  <td>\\\*Web only\\\*</td>
+                  <td>Web only</td>
               </tr>
 
           </tbody>
@@ -583,7 +583,7 @@ variation_groups:
                 <td>Teal 10</td>
                 <td>#f0f7f6</td>
                 <td>240, 247, 246</td>
-                <td>\\\*Web only\\\*</td>
+                  <td>Web only</td>
             </tr>
 
             </tbody></table>
@@ -689,7 +689,7 @@ variation_groups:
                 <td>Pacific 10</td>
                 <td>#eff8fd</td>
                 <td>239, 248, 253</td>
-                <td>\\\*Web only\\\*</td>
+                  <td>Web only</td>
             </tr>
 
             </tbody></table>
@@ -795,7 +795,7 @@ variation_groups:
                 <td>Navy 10</td>
                 <td>#f4f6fa</td>
                 <td>244, 246, 250</td>
-                <td>\\\*Web only\\\*</td>
+                  <td>Web only</td>
             </tr>
 
             </tbody></table>
@@ -901,7 +901,7 @@ variation_groups:
                 <td>Purple 10</td>
                 <td>#fdf3f8</td>
                 <td>253, 243, 248</td>
-                <td>\\\*Web only\\\*</td>
+                  <td>Web only</td>
             </tr>
 
             </tbody></table>
@@ -1007,7 +1007,7 @@ variation_groups:
                 <td>Red 10</td>
                 <td>#fbefec</td>
                 <td>251, 239, 236</td>
-                <td>\\\*Web only\\\*</td>
+                  <td>Web only</td>
             </tr>
 
             </tbody></table>
@@ -1113,7 +1113,7 @@ variation_groups:
                 <td>Gold 10</td>
                 <td>#fff6ec</td>
                 <td>255, 246, 236</td>
-                <td>\\\*Web only\\\*</td>
+                  <td>Web only</td>
             </tr>
 
             </tbody></table>
@@ -1219,7 +1219,7 @@ variation_groups:
                 <td>Neutral 10</td>
                 <td>#f8f5f2</td>
                 <td>248, 245, 242</td>
-                <td>\\\*Web only\\\*</td>
+                  <td>Web only</td>
             </tr>
 
             </tbody></table>

@@ -1868,225 +1868,6 @@ At the small screen breakpoint, the first column (in the example shown below, em
 
             
             <div class="m-variation_name">
-                <h3>Filtering tables</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Tables can be paired with a filter to show only rows that meet certain criteria.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                
-<div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true">
-    <button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false">
-        <span class="o-expandable_header-left o-expandable_label">
-            Filter activities
-        </span>
-        <span class="o-expandable_header-right o-expandable_link">
-            <span class="o-expandable_cue-open">
-                Show
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H549.6v213.6c0 27.6-22.4 50-50 50s-50-22.4-50-50V655.9H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h213.6V342.3c0-27.6 22.4-50 50-50s50 22.4 50 50v213.6h213.6c27.6 0 50 22.4 50 50s-22.5 50-50.1 50z"></path></svg>
-            </span>
-            <span class="o-expandable_cue-close">
-                Hide
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1200" class="cf-icon-svg"><path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h527.1c27.6 0 50 22.4 50 50s-22.4 50-50 50z"></path></svg>
-            </span>
-        </span>
-    </button>
-    <div class="o-expandable_content o-expandable_content__transition o-expandable_content__collapsed" aria-expanded="false" style="max-height: 0px;">
-        <p>Filter options go here</p>
-    </div>
-
-<table class="o-table o-table__stack-on-small" data-bound="true">
-    <thead>
-        <tr>
-            <th class="u-w20pct">
-                Type
-            </th>
-            <th class="u-w55pct">
-                Title
-            </th>
-            <th class="u-w25pct">
-                Date
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Type">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
-            </td>
-            <td data-label="Title">
-                Three things to do before closing
-            </td>
-            <td data-label="Date">
-                AUG 5, 2015
-            </td>
-        </tr>
-        <tr>
-            <td data-label="Type">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 975.1 1200" class="cf-icon-svg"><path d="M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z"></path></svg> News
-            </td>
-            <td data-label="Title">
-                Electronic Mortgage Closings Can Benefit Consumers
-            </td>
-            <td data-label="Date">
-                AUG 5, 2015
-            </td>
-        </tr>
-        <tr>
-            <td data-label="Type">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
-            </td>
-            <td data-label="Title">
-                National Day of Civic Hacking 2015
-            </td>
-            <td data-label="Date">
-                JUL 29, 2015
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-filtering-tables-tables-can-be-p-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-filtering-tables-tables-can-be-p-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-filtering-tables-tables-can-be-p-5">
-                <ul class="govuk-tabs__list">
-                    
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-filtering-tables-tables-can-be-p-html-code-snippet-5">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="govuk-tabs__panel" id="details-filtering-tables-tables-can-be-p-html-code-snippet-5">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="o-expandable o-expandable__filters o-expandable__padded" data-bound="true"&gt;
-    &lt;button class="o-expandable_header o-expandable_target o-expandable_target__collapsed" aria-pressed="false"&gt;
-        &lt;span class="o-expandable_header-left o-expandable_label"&gt;
-            Filter activities
-        &lt;/span&gt;
-        &lt;span class="o-expandable_header-right o-expandable_link"&gt;
-            &lt;span class="o-expandable_cue-open"&gt;
-                Show
-                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" class="cf-icon-svg"&gt;&lt;path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H549.6v213.6c0 27.6-22.4 50-50 50s-50-22.4-50-50V655.9H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h213.6V342.3c0-27.6 22.4-50 50-50s50 22.4 50 50v213.6h213.6c27.6 0 50 22.4 50 50s-22.5 50-50.1 50z"&gt;&lt;/path&gt;&lt;/svg&gt;
-            &lt;/span&gt;
-            &lt;span class="o-expandable_cue-close"&gt;
-                Hide
-                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" class="cf-icon-svg"&gt;&lt;path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm263.1 550.7H236c-27.6 0-50-22.4-50-50s22.4-50 50-50h527.1c27.6 0 50 22.4 50 50s-22.4 50-50 50z"&gt;&lt;/path&gt;&lt;/svg&gt;
-            &lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/button&gt;
-    &lt;div class="o-expandable_content o-expandable_content__transition o-expandable_content__collapsed" aria-expanded="false" style="max-height: 0px;"&gt;
-        &lt;p&gt;Filter options go here&lt;/p&gt;
-    &lt;/div&gt;
-
-&lt;table class="o-table o-table__stack-on-small" data-bound="true"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th class="u-w20pct"&gt;
-                Type
-            &lt;/th&gt;
-            &lt;th class="u-w55pct"&gt;
-                Title
-            &lt;/th&gt;
-            &lt;th class="u-w25pct"&gt;
-                Date
-            &lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Type"&gt;
-                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"&gt;&lt;path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"&gt;&lt;/path&gt;&lt;/svg&gt; Blog
-            &lt;/td&gt;
-            &lt;td data-label="Title"&gt;
-                Three things to do before closing
-            &lt;/td&gt;
-            &lt;td data-label="Date"&gt;
-                AUG 5, 2015
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Type"&gt;
-                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975.1 1200" class="cf-icon-svg"&gt;&lt;path d="M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z"&gt;&lt;/path&gt;&lt;/svg&gt; News
-            &lt;/td&gt;
-            &lt;td data-label="Title"&gt;
-                Electronic Mortgage Closings Can Benefit Consumers
-            &lt;/td&gt;
-            &lt;td data-label="Date"&gt;
-                AUG 5, 2015
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td data-label="Type"&gt;
-                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"&gt;&lt;path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"&gt;&lt;/path&gt;&lt;/svg&gt; Blog
-            &lt;/td&gt;
-            &lt;td data-label="Title"&gt;
-                National Day of Civic Hacking 2015
-            &lt;/td&gt;
-            &lt;td data-label="Date"&gt;
-                JUL 29, 2015
-            &lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-<!-- .govuk-tabs -->
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-
-            
-            <div class="m-variation_name">
                 <h3>Pagination</h3>
             </div>
             
@@ -2199,15 +1980,15 @@ At the small screen breakpoint, the first column (in the example shown below, em
             
 
             <div class="a-toggle_code">
-                <button href="#details-pagination-tables-with-over-20-r-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-pagination-tables-with-over-20-r-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-pagination-tables-with-over-20-r-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-pagination-tables-with-over-20-r-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-pagination-tables-with-over-20-r-6">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-pagination-tables-with-over-20-r-5">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-pagination-tables-with-over-20-r-html-code-snippet-6">
+                        <a class="govuk-tabs__tab" href="#details-pagination-tables-with-over-20-r-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
@@ -2219,7 +2000,7 @@ At the small screen breakpoint, the first column (in the example shown below, em
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-pagination-tables-with-over-20-r-html-code-snippet-6">
+                <section class="govuk-tabs__panel" id="details-pagination-tables-with-over-20-r-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2402,15 +2183,15 @@ At the small screen breakpoint, the first column (in the example shown below, em
             
 
             <div class="a-toggle_code">
-                <button href="#details-fixed-width-column-tables-column-7" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-fixed-width-column-tables-column-7" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-fixed-width-column-tables-column-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-fixed-width-column-tables-column-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-fixed-width-column-tables-column-7">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-fixed-width-column-tables-column-6">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-fixed-width-column-tables-column-html-code-snippet-7">
+                        <a class="govuk-tabs__tab" href="#details-fixed-width-column-tables-column-html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
@@ -2422,7 +2203,7 @@ At the small screen breakpoint, the first column (in the example shown below, em
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-fixed-width-column-tables-column-html-code-snippet-7">
+                <section class="govuk-tabs__panel" id="details-fixed-width-column-tables-column-html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2485,7 +2266,7 @@ At the small screen breakpoint, the first column (in the example shown below, em
 
         </div>
         
-    
+    </section>
     
     
 
@@ -2590,7 +2371,7 @@ At the small screen breakpoint, the first column (in the example shown below, em
     </div>
 <!-- .content-l -->
 
-<!-- .content_main -->
+</section><!-- .content_main -->
 
 
 
@@ -2613,7 +2394,7 @@ At the small screen breakpoint, the first column (in the example shown below, em
         </div>
 
     </div>
-
+</main>
 
 
   
@@ -2642,8 +2423,8 @@ At the small screen breakpoint, the first column (in the example shown below, em
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/master/docs/pages/tables.md">
-                    <time datetime="2020-07-21 14:17:07 -0400">
-                         2:17:07 PM Jul 21, 2020
+                    <time datetime="2020-07-23 13:42:00 -0400">
+                         1:42:00 PM Jul 23, 2020
                     </time>
                 </a>
             </small>
@@ -2657,7 +2438,5 @@ At the small screen breakpoint, the first column (in the example shown below, em
 
   
 
-</section></section>
-</div></main>
 </body>
 </html>

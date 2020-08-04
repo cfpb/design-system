@@ -163,14 +163,23 @@ variation_groups:
           * All caps
           * <601px wide: No change
       - variation_name: Slug heading
-        variation_description: "Slug headings are used to lead content on sidebars and
-          prefooters, inset modules, and inset email modules. "
+        variation_description: Slug headings are used to call attention to and lead
+          content on sidebars and prefooters, inset modules, and inset email
+          modules.
         variation_code_snippet: |-
           <header class="m-slug-header">
               <h2 class="a-heading">
                   Slug heading
               </h2>
           </header>
+        variation_specs: >-
+          * Slug title: H5
+
+
+          * 5px thick CFPB Green top border that spans the length of the title
+
+
+          * 1px thick Gray 50 top border that spans the width of the module or column
     variation_group_description: The heading variations below have specific use cases.
 use_cases: ""
 guidelines: >-

@@ -49,13 +49,15 @@ use_cases: >-
   * Characteristics available as filter options, such as topics, dates, and categories, are not relevant to the content.
 
   * Search alone is sufficient for user needs
-guidelines: >
-  * Headings and labels should be as succinct as possible, ideally 10 characters
-  or less. Do not use colon (:) or other punctuation after the header.
+guidelines: >-
+  ### Content guidelines
+
+
+  * Headings and labels should be as succinct as possible, ideally 10 characters or less. Do not use colon (:) or other punctuation after the header.
 
   * Help text in text fields should be 40 characters or less.
 
-  Answer options beneath heading should also be succinct, roughly 25 characters or less.
+  * Answer options beneath heading should also be succinct, roughly 25 characters or less.
 
   * Headings and answer options should be sentence case (unless specifically proper nouns or titles)
 behavior: >-

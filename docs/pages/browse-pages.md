@@ -58,15 +58,23 @@ guidelines: >-
   #### Area 2: Main content
 
 
-  * Must contain at least 1 pattern.
+  * Must contain at least one pattern.
 
 
   #### Area 3: Prefooter
 
 
-  * Optional.
+  * Optional
 
   * If using both static and dynamic content, preference for dynamic content to appear above static content.
+
+
+  #### Area 4: Secondary navigation
+
+
+  * If this browse page sits below a sublanding page (majority of cases), a breadcrumb displaying the sublanding page is required. 
+
+  * Left side navigation shows all sibling browse pages that sit beneath a sublanding page.
 behavior: >-
   Below the 901 pixel breakpoint, the sub-navigation collapses into the global
   navigation under a hamburger menu, as seen on the [Regulatory agenda

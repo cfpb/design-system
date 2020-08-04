@@ -410,6 +410,22 @@ guidelines: >-
 
 
   ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png)
+
+
+  ### Content guidelines
+
+
+  * Icons are typically used in conjunction with text. 
+
+  * They typically match the color of the corresponding text. 
+
+  * The size of the icon should match the size of the text it corresponds to. 
+
+
+  ### Interaction details
+
+
+  Please reference the [Links](https://cfpb.github.io/design-system/components/links#links-with-icons) page for guidance regarding icons paired with links.
 behavior: >-
   ### SVG icon basics
 

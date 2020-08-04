@@ -130,9 +130,11 @@ variation_groups:
           attached to `.m-meta-header_right`.
       - variation_name: Eyebrow headings
         variation_description: >-
-          Use the eyebrow heading to label page headings that are part of a
-          larger group of related pages, or when additional context can help
-          orient the user to the page’s purpose.
+          The eyebrow heading is an additional label that can be used to support
+          the main H1 heading on a page, provide additional context, or
+          orientation when necessary. Use the eyebrow heading to label page
+          headings that are part of a larger group of related pages, or when
+          additional context can help orient the user to the page’s purpose.
 
 
           The eyebrow heading is secondary to and serves to support the main page heading. So it should be concise and shorter than the main page heading.
@@ -155,6 +157,11 @@ variation_groups:
           <div class="h5">eyebrow heading</div>
 
           <div class="h1">Heading 1</div>
+        variation_specs: |-
+          * Avenir Next Demi Bold
+          * 14px / 18px, 1px letter spacing
+          * All caps
+          * <601px wide: No change
       - variation_name: Slug heading
         variation_description: "Slug headings are used to lead content on sidebars and
           prefooters, inset modules, and inset email modules. "

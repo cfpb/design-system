@@ -27,16 +27,15 @@ use_cases: >-
   ### When to use
 
 
-  * The landing page template should only be used for the top-level page under each main navigation section on the site to help users navigate to the various sub-sections within the navigation vertical. Examples: [Data & research overview](https://www.consumerfinance.gov/data-research/), [Policy & compliance overview](https://www.consumerfinance.gov/policy-compliance/).
+  * The landing page template should only be used for the top-level page under each main navigation section on the site to help users navigate to the various sub-sections within the navigation vertical. Examples: [Data & Research overview](https://www.consumerfinance.gov/data-research/), [Policy & Compliance overview](https://www.consumerfinance.gov/policy-compliance/).
 
-  * This template may also be used for campaign pages.
+  * This template may be used for campaign pages that need a sidebar.
 
 
   ### When other options are better
 
 
   * When a new page is needed within a navigation section, rather than at the top-level, consider using a [Sublanding page](https://cfpb.github.io/design-system/pages/sublanding-pages). 
-
 
   * When page content includes paragraph copy or more detailed definitions or explanations, consider using a [Learn page](https://cfpb.github.io/design-system/pages/learn-pages).
 guidelines: >-

@@ -63,7 +63,7 @@ guidelines: >-
   #### Area 2: Main content
 
 
-  * Must contain at least 1 pattern.
+  * Must contain at least one pattern.
 
   * Permissible patterns include full width body text, [tables](https://cfpb.github.io/design-system/components/tables), [expandables](https://cfpb.github.io/design-system/components/expandables), 25/75 image and text info unit groups, [wells](https://cfpb.github.io/design-system/patterns/wells).
 
@@ -71,7 +71,7 @@ guidelines: >-
   #### Area 3: Sidebar
 
 
-  * Must contain at least 1 component.
+  * Must contain at least one component.
 
   * If using both static and dynamic content, preference for dynamic content to appear above static content.
 behavior: >-

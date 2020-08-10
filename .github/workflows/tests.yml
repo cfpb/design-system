@@ -59,6 +59,11 @@ jobs:
         sleep 5
 
     - name: Run browser tests
+      # Don't run these tests on forks. It would be nice to instead check
+      # to see if the Sauce Labs environment variables are defined, but that
+      # doesn't seem currently possible:
+      # https://github.com/actions/runner/issues/520
+      if: ${{ github.repository_owner == 'cfpb' }}
       env:
         # These credentials are from @contolini's CFPB Sauce Labs account
         # They're defined on the repo's settings page:

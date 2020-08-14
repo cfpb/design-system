@@ -25,9 +25,11 @@ variation_groups:
       - variation_code_snippet: ""
         variation_description: >-
           The inset email signup module is a variation on the main email signup
-          that can be used in the body content of Learn and Browse pages. It
-          should be used when the email CTA is more important to the purpose of
-          the page than the sidebar or prefooter placement reflects.
+          that can be used in the body content of
+          [Learn](https://cfpb.github.io/design-system/pages/learn-pages) and
+          [Browse](https://cfpb.github.io/design-system/pages/browse-pages)
+          pages. It should be used when the email CTA is more important to the
+          purpose of the page than the sidebar or prefooter placement reflects.
 
 
           ![Inset email signup](/design-system/images/uploads/2e07e378-4adf-11e8-96a7-67d2534eec85.png)
@@ -36,17 +38,17 @@ variation_groups:
           #### When to use inset email signup
 
 
-          * On Learn pages, only use the inset email module when signing up for the email list is a primary user goal for the page, for example job seekers signing up for job announcements.
+          * On [Learn](https://cfpb.github.io/design-system/pages/learn-pages) pages, only use the inset email module when signing up for the email list is a primary user goal for the page, for example job seekers signing up for job announcements.
 
-          * On Browse pages, use the inset email module when feedback modules or other prefooter content competes with the prefooter email signup CTA, or when signing up for the email list is a primary user goal.
+          * On [Browse](https://cfpb.github.io/design-system/pages/browse-pages) pages, use the inset email module when feedback modules or other prefooter content competes with the prefooter email signup CTA, or when signing up for the email list is a primary user goal.
 
 
           #### When other options are better
 
 
-          * On Learn pages when we want to encourage visitors to sign up for an email list but the list itself is not a primary user goal, use the standard sidebar email signup.
+          * On [Learn](https://cfpb.github.io/design-system/pages/learn-pages) pages when we want to encourage visitors to sign up for an email list but the list itself is not a primary user goal, use the standard sidebar email signup.
 
-          * On Browse pages, when email signups are not a primary user goal, and the prefooter/end of page content has no other CTAs to compete with the email signup, use the standard prefooter email signup.
+          * On [Browse](https://cfpb.github.io/design-system/pages/browse-pages) pages, when email signups are not a primary user goal, and the prefooter/end of page content has no other CTAs to compete with the email signup, use the standard prefooter email signup.
         variation_name: Inset email sign up
     variation_group_name: Types
     variation_group_description: >-

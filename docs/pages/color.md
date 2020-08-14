@@ -1430,7 +1430,7 @@ variation_groups:
 
 
           </table>
-      - variation_name: Divergent palette
+      - variation_name: Diverging palette
         variation_description: >-
           ![Divergent
           palette](/design-system/images/uploads/data_viz_divergent_071520.png)

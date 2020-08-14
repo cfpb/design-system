@@ -13,13 +13,9 @@ variation_groups:
         variation_description: "![Sidebar email signup
           mockup](/design-system/images/uploads/emailsignup_intro_mockup.png)"
         variation_name: Sidebar email sign up
-        variation_specs: >-
-          * Headings: Any heading size may be used, recommend H2-4.
-
-          * Body copy: Avenir paragraph.
-
-          * At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
-
+        variation_specs: |-
+          * Heading: H5 slug
+          * Body copy: Avenir paragraph
 
           ![](/design-system/images/uploads/emailsignup_style_mockup.png)
       - variation_code_snippet: ""
@@ -50,12 +46,14 @@ variation_groups:
 
           * On [Browse](https://cfpb.github.io/design-system/pages/browse-pages) pages, when email signups are not a primary user goal, and the prefooter/end of page content has no other CTAs to compete with the email signup, use the standard prefooter email signup.
         variation_name: Inset email sign up
+        variation_specs: |-
+          * Heading: H3
+          * Body copy: Avenir paragraph
     variation_group_name: Types
     variation_group_description: >-
-      The email sign up form is comprised of standard slug text ("Email
-      updates"), custom description text, a form field for the user to enter
-      their email address, a standardized link to a privacy policy statement,
-      and a standardized sign up button.
+      The email sign up form is comprised of a slug heading, custom description
+      text, form field for the user to enter their email address, standardized
+      link to a privacy policy statement, and standardized sign up button.
 
 
       Different page types will be connected to the corresponding GovDelivery list based on the page topic (i.e. HMDA) or page type (i.e. blog).
@@ -64,7 +62,10 @@ guidelines: >-
   ### Content guidelines
 
 
-  * Use standard slug text: “Email updates”
+  #### Sidebar email sign up
+
+
+  * Default slug text: “Email updates”
 
   * Description text will be unique to each mailing list and should clearly set expectations for what a user will receive as a result of signing up. Email address field should always be marked required.
 
@@ -73,12 +74,11 @@ guidelines: >-
   * Use standard button text: “Sign up”
 
 
-  #### Inset
+  #### Inset email sign up
 
 
-  * The module heading should provide a strong call to action that clearly sets expectations for what a user will receive as a result of signing up.
+  * The module heading should provide a strong call to action that clearly sets expectations for what a user will receive as a result of signing up. Uncheck "Default heading style" to use H3.
 
-    * Uncheck "Default heading style" to get the alternate heading style that we want in this inset module
   * The additional body text can further clarify what kind of information will be in the emails, with a focus on the value users will receive from the emails.
 
   * The placement of the email signup on the page should not interfere with the primary page goal. Users respond better to follow-on requests that happen after their primary goal has been met.
@@ -90,14 +90,11 @@ behavior: >-
   ### Sidebar email sign up module: Sublanding pages
 
 
-  At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
+  | Above 900 px                                                                        | 601-900 px                                                                                | Below 601 px                                                                                 |
 
+  | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 
-  | Above 900 px | 601-900 px | Below 601 px |
-
-  | -- | -- | -- |
-
-  | ![Sublanding page](/design-system/images/uploads/emailsignup_behavior_mockup_1.jpg) | ![Breakpoints 900 - 601](/design-system/images/uploads/emailsignup_behavior_mockup_3.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)  |
+  | ![Sublanding page](/design-system/images/uploads/emailsignup_behavior_mockup_1.jpg) | ![Breakpoints 900 - 601](/design-system/images/uploads/emailsignup_behavior_mockup_3.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg) |
 
 
   ### Sidebar email sign up module: Browse pages
@@ -106,14 +103,11 @@ behavior: >-
   Browse pages do not have a sidebar. The sidebar email sign up module appears in the prefooter at the bottom of the page.
 
 
-  For breakpoints below 601, heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
+  | Above 600 px                                                                    | Below 601 px                                                                                 |
 
+  | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 
-  | Above 600 px | Below 601 px |
-
-  | -- | -- |
-
-  | ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg)  |
+  | ![Browse page](/design-system/images/uploads/emailsignup_behavior_mockup_2.jpg) | ![Breakpoints 601 and less](/design-system/images/uploads/emailsignup_behavior_mockup_4.jpg) |
 
 
   ### Inset
@@ -125,10 +119,9 @@ behavior: >-
   At breakpoints below 601px, the inset module transitions to a single column and stacks above the full-width text. The signup button extends the full width of the module at the smallest breakpoint, 320px.
 
 
+  | Above 900 px                                                                                 | 601-900 px                                                                         | Below 601 px                                                                       |
 
-  | Above 900 px | 601-900 px | Below 601 px |
-
-  | -- | -- | -- |
+  | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 
   | ![Inset email sign up 900 breakpoint](/design-system/images/uploads/email-sign-up_learn.png) | ![Inset breakpoint 601](/design-system/images/uploads/email-sign-up_learn_601.png) | ![Inset breakpoint 320](/design-system/images/uploads/email-sign-up_learn_320.png) |
 accessibility: ""

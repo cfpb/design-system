@@ -60,7 +60,7 @@ variation_groups:
 
           * Padding: 30px padding for imagery across responsive sizes
 
-          * Headings: Any heading size may be used, recommend H2-6
+          * Headings: H2-4 can be used
       - variation_name: 50/50 image and text component
         variation_description: >-
           ![Image showing layout of a 50/50 image and text
@@ -97,9 +97,9 @@ variation_groups:
 
           * Imagery: 16:9 ratio, recommend 1600 x 900 pixels to account for retina displays.
 
-          * Headings: Any heading size may be used, recommend H2-4.
+          * Headings: H2-4 can be used
 
-          * Body copy: Avenir paragraph.
+          * Body copy: Avenir paragraph
 
           * At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
     variation_group_description: "Image and text components consist of an image,

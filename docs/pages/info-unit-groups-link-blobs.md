@@ -9,7 +9,8 @@ description: "Info unit groups are generally used to provide brief context as
   [sublanding
   pages](https://cfpb.github.io/design-system/templates/sublanding-pages), and
   [browse pages](https://cfpb.github.io/design-system/templates/browse-pages))
-  to additional content on a child or sibling page. There are two types: image
+  to additional content on a child or sibling page. Info units provide the
+  ability to create content with multicolumn layouts. There are two types: image
   and text, or text only."
 variation_groups:
   - variation_group_name: Image and text
@@ -28,6 +29,9 @@ variation_groups:
 
 
           When used in conjunction with 50/50 text components, it can help create a hierarchy of child pages or other content on the page, or can help feature a particular link over others.
+
+
+          The 25/75 image and text component is the only format where the format name, 25/75, refers to how each individual unit it laid out, not to how multiple units are laid out.
 
 
           #### When to use
@@ -184,6 +188,8 @@ guidelines: >-
 
   * 50/50 and 33/33/33 text components: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
 
+  * Option to give the entire info unit group a heading
+
 
   #### Descriptions
 
@@ -202,6 +208,8 @@ guidelines: >-
 
     * For 50/50 text components, one or two lines different is ok
     * For 33/33/33 text components, a difference of one line is ok
+  * Option to give the entire info unit group an introductory paragraph
+
 
   #### Call to action
 
@@ -214,7 +222,24 @@ guidelines: >-
 
   * 33/33/33 text components: 30 characters max
 
+  * Option to include sharing links below the info units
+
   * Follow [link guidelines](https://cfpb.github.io/design-system/components/links).
+
+
+
+
+  ### Stylistic guidelines
+
+
+  * If an info unit group contains both an image and a call to action link, you have the option of having the image link to the call to action URL. If there are multiple call to action links, the image will link to the first link. 
+
+
+
+  * Option to include a rule above an info unit group to separate it from the previous section on the page
+
+
+  * Option to include a rule between rows of info units (or between each info unit in the case of a 25/75 layout)
 behavior: >-
   ### 50/50 components
 

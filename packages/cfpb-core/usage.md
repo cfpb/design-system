@@ -72,8 +72,8 @@ Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.l
 @link-underline:         @pacific;
 @link-text-visited:      @teal;
 @link-underline-visited: @teal;
-@link-text-hover:        @dark-pacific;
-@link-underline-hover:   @dark-pacific;
+@link-text-hover:        @pacific-dark;
+@link-underline-hover:   @pacific-dark;
 @link-text-active:       @navy;
 @link-underline-active:  @navy;
 

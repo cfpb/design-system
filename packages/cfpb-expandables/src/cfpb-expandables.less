@@ -62,12 +62,14 @@
             display: none;
         }
 
-        &__expanded .o-expandable_cue-close {
-            display: block;
-        }
-
+        &__expanded .o-expandable_cue-close,
         &__collapsed .o-expandable_cue-open {
             display: block;
+
+            // Hide the interactive expandable cues when printing
+            .respond-to-print({
+                display: none;
+            });
         }
     }
 
@@ -84,6 +86,14 @@
 
         &__collapsed {
             max-height: 0;
+
+            // Ensure all expandables are expanded when printing.
+            // To accommodate print stylesheets that display the raw URL after links,
+            // set an enormous max height to accommodate expandables that have a lot of links.
+            .respond-to-print({
+                display: block;
+                max-height: 99999px !important;
+            });
         }
 
         &__expanded {

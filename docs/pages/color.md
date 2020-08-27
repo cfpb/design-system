@@ -155,7 +155,7 @@ variation_groups:
                                   </tr>
                                   <tr>
                                       <th>RGB</th>
-                                      <td>231, 231, 233</td>
+                                      <td>231, 232, 233</td>
                                   </tr>
                                   <tr>
                                       <th>PMS</th>
@@ -738,7 +738,7 @@ variation_groups:
                 <td class="swatch_field swatch_field__navy-80"></td>
                 <td>Navy 80</td>
                 <td>#5674a3</td>
-                <td>186, 116, 163</td>
+                <td>86, 116, 163</td>
                 <td>60, 35, 0, 26</td>
             </tr>
 
@@ -935,7 +935,7 @@ variation_groups:
                 <td>Red</td>
                 <td>#d14124</td>
                 <td>209, 65, 36</td>
-                <td>0, 85, 100, 4</td>
+                <td>0, 85, 100, 7</td>
             </tr>
 
             <tr>
@@ -1254,7 +1254,7 @@ variation_groups:
                 <td class="swatch_field swatch_field__dark-gray"></td>
                 <td>Dark Gray</td>
                 <td>#43484e</td>
-                <td>67, 71, 78</td>
+                <td>67, 72, 78</td>
                 <td>0, 0, 0, 87</td>
             </tr>
 
@@ -1350,7 +1350,7 @@ variation_groups:
                 <td class="swatch_field swatch_field__gray-10"></td>
                 <td>Gray 10</td>
                 <td>#e7e8e9</td>
-                <td>231, 231, 233</td>
+                <td>231, 232, 233</td>
                 <td>0, 0, 0, 10</td>
             </tr>
 
@@ -1642,7 +1642,7 @@ variation_groups:
                 <td>Red</td>
                 <td>#d14124</td>
                 <td>209, 65, 36</td>
-                <td>0, 85, 100, 4</td>
+                <td>0, 85, 100, 7</td>
             </tr>
 
             </tbody></table>

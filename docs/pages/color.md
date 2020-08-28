@@ -1590,7 +1590,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__dark-gold"></td>
+                <td class="swatch_field swatch_field__gold-dark"></td>
                 <td>Dark Gold</td>
                 <td>#dc731c</td>
                 <td>220, 115, 28</td>
@@ -1606,7 +1606,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__dark-neutral"></td>
+                <td class="swatch_field swatch_field__neutral-dark"></td>
                 <td>Dark Neutral</td>
                 <td>#745745</td>
                 <td>116, 87, 69</td>
@@ -1622,7 +1622,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__dark-purple"></td>
+                <td class="swatch_field swatch_field__purple-dark"></td>
                 <td>Dark Purple</td>
                 <td>#a01b68</td>
                 <td>160, 27, 104</td>

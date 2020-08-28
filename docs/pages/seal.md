@@ -24,7 +24,7 @@ variation_groups:
           </div>
         variation_name: ""
         variation_specs: |-
-          The seal is comprised of the following colors. 
+          The seal is comprised of the following colors.
 
           <table class="color-table">
                 <thead>
@@ -46,7 +46,7 @@ variation_groups:
             <tbody>
 
           <tr>
-                <td class="swatch_field swatch_field__dark-navy"></td>
+                <td class="swatch_field swatch_field__navy-dark"></td>
                 <td>Dark Navy</td>
                 <td>100, 80, 6, 32</td>
 

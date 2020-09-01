@@ -585,21 +585,6 @@ input[type="radio"] {
    Design System
    Color variables
    ========================================================================== */
-/**
- * When adding this theme to a CFPB project using a version of our color palette
- * that predates November 13, 2015, you will have some deprecated color
- * variables to deal with.
- *
- * Run the list of project-wide Find and Replace actions given below
- * to update deprecated variables to their current equivalents.
- *
- * IMPORTANT: You must execute these in the specified order
- * to ensure that you don't overwrite previous updates.
- *
- * ALSO IMPORTANT: When running replacements #3, #7, and #19, ensure that you
- * have the regular expression option turned on in your editor.
- * Failure to do so will replace the partial match in every tint of that color.
- */
 /* ==========================================================================
    Design System
    Breakpoint Less variables.
@@ -2946,7 +2931,7 @@ a.a-heading__icon.active {
 }
 .m-card {
   width: 100%;
-  background: #fff;
+  background: #ffffff;
 }
 .m-card:not(.m-card__featured),
 .m-card > a {
@@ -3190,7 +3175,7 @@ a.a-heading__icon.active {
 }
 .m-hero__knockout {
   background-color: #5a5d61;
-  color: #fff;
+  color: #ffffff;
 }
 @media only all and (min-width: 37.5625em) {
   .m-hero__bleeding .m-hero_wrapper {
@@ -3425,7 +3410,7 @@ _:-ms-lang(x),
 .a-btn:link,
 .a-btn:visited {
   background-color: #0072ce;
-  color: #fff;
+  color: #ffffff;
 }
 .a-btn:hover,
 .a-btn.hover,
@@ -3450,7 +3435,7 @@ input.a-btn::-moz-focus-inner {
 .a-btn__secondary:link,
 .a-btn__secondary:visited {
   background-color: #5a5d61;
-  color: #fff;
+  color: #ffffff;
 }
 .a-btn__secondary:hover,
 .a-btn__secondary.hover,
@@ -3470,7 +3455,7 @@ input.a-btn::-moz-focus-inner {
 .a-btn__warning:link,
 .a-btn__warning:visited {
   background-color: #d14124;
-  color: #fff;
+  color: #ffffff;
 }
 .a-btn__warning:hover,
 .a-btn__warning.hover,
@@ -3772,7 +3757,7 @@ h6 + .a-legend,
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 0;
   color: #101820;
 }
@@ -3836,7 +3821,7 @@ h6 + .a-legend,
   display: inline-block;
   padding: 0.4375em;
   border: 1px solid #919395;
-  background: #fff;
+  background: #ffffff;
   color: #101820;
 }
 .a-text-input:hover,
@@ -3935,7 +3920,7 @@ h6 + .a-legend,
   height: 1.125em;
   width: 1.125em;
   margin-right: 10px;
-  background-color: #fff;
+  background-color: #ffffff;
   content: '';
   vertical-align: top;
   position: relative;
@@ -4070,7 +4055,7 @@ h6 + .a-legend,
 }
 .m-form-field__radio .a-radio:checked + .a-label:before {
   background-color: #0072ce;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px #ffffff;
 }
 .m-form-field__radio .a-radio:checked:disabled + .a-label:before {
   background-color: #b4b5b6;
@@ -4079,12 +4064,12 @@ h6 + .a-legend,
 .m-form-field__radio .a-radio:focus:checked + .a-label:before,
 .m-form-field__radio .a-radio.focus:checked + .a-label:before {
   border-color: #0072ce;
-  box-shadow: 0 0 0 1px #0072ce, inset 0 0 0 2px #fff;
+  box-shadow: 0 0 0 1px #0072ce, inset 0 0 0 2px #ffffff;
 }
 .m-form-field__radio .a-radio:hover:checked + .a-label:before,
 .m-form-field__radio .a-radio.hover:checked + .a-label:before {
   border-color: #0072ce;
-  box-shadow: 0 0 0 1px #0072ce, inset 0 0 0 2px #fff;
+  box-shadow: 0 0 0 1px #0072ce, inset 0 0 0 2px #ffffff;
 }
 .m-form-field__lg-target {
   display: block;
@@ -4481,11 +4466,11 @@ button.o-expandable_header {
 @media only all and (min-width: 56.3125em) {
   .o-table__row-links tr:hover td {
     background: #4497dc;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
   }
   .o-table__row-links tr:hover a {
-    color: #fff;
+    color: #ffffff;
   }
 }
 .o-table-wrapper__scrolling {
@@ -4553,7 +4538,7 @@ button.o-expandable_header {
   }
   .o-table__striped tr:nth-child(even) > th,
   .o-table__striped tr:nth-child(even) > td {
-    background: #fff;
+    background: #ffffff;
   }
   .o-table__stack-on-small tr,
   .o-table__stack-on-small td {
@@ -4813,7 +4798,7 @@ main {
 .skip-nav_link:focus:link,
 .skip-nav_link:focus:visited {
   background-color: #0072ce;
-  color: #fff;
+  color: #ffffff;
 }
 .skip-nav_link:focus:hover,
 .skip-nav_link:focus.hover,
@@ -4838,7 +4823,7 @@ input.skip-nav_link:focus::-moz-focus-inner {
 .skip-nav_link:focus__secondary:link,
 .skip-nav_link:focus__secondary:visited {
   background-color: #5a5d61;
-  color: #fff;
+  color: #ffffff;
 }
 .skip-nav_link:focus__secondary:hover,
 .skip-nav_link:focus__secondary.hover,
@@ -4858,7 +4843,7 @@ input.skip-nav_link:focus::-moz-focus-inner {
 .skip-nav_link:focus__warning:link,
 .skip-nav_link:focus__warning:visited {
   background-color: #d14124;
-  color: #fff;
+  color: #ffffff;
 }
 .skip-nav_link:focus__warning:hover,
 .skip-nav_link:focus__warning.hover,
@@ -6080,7 +6065,7 @@ pre code {
 .variation-jinja-code-snippet-title,
 .variation-implementation-title,
 .variation-specs-title {
-  background-color: #fff;
+  background-color: #ffffff;
   border-bottom: 1px solid #5a5d61;
   margin: 0;
   padding: 20px 40px 7px;
@@ -6181,7 +6166,7 @@ pre code {
   border: none;
 }
 .variation-code-specs td {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .component-restrictions_heading-do svg {
   color: #20aa3f;
@@ -6285,7 +6270,7 @@ pre code {
   }
 }
 .swatch_field__white {
-  background: #fff;
+  background: #ffffff;
 }
 .swatch_field__black {
   background: #101820;
@@ -6296,44 +6281,80 @@ pre code {
 .swatch_field__gray-10 {
   background: #e7e8e9;
 }
+.swatch_field__gray-15 {
+  background: #dcdddf;
+}
 .swatch_field__gray-20 {
   background: #d2d3d5;
+}
+.swatch_field__gray-30 {
+  background: #c3c4c4;
 }
 .swatch_field__gray-40 {
   background: #b4b5b6;
 }
+.swatch_field__gray-50 {
+  background: #a2a3a4;
+}
 .swatch_field__gray-60 {
   background: #919395;
+}
+.swatch_field__gray-70 {
+  background: #838588;
 }
 .swatch_field__gray-80 {
   background: #75787b;
 }
+.swatch_field__gray-90 {
+  background: #676a6f;
+}
 .swatch_field__gray {
   background: #5a5d61;
 }
-.swatch_field__dark-gray {
+.swatch_field__gray-mid-dark {
+  background: #4f5257;
+}
+.swatch_field__gray-dark {
   background: #43484e;
+}
+.swatch_field__gray-darker {
+  background: #293037;
 }
 .swatch_field__neutral-10 {
   background: #f8f5f2;
 }
 .swatch_field__neutral-20 {
-  background: #e3e2df;
+  background: #e7ddd7;
+}
+.swatch_field__neutral-30 {
+  background: #ddd1c9;
 }
 .swatch_field__neutral-40 {
-  background: #cdc7c2;
+  background: #d3c5bc;
+}
+.swatch_field__neutral-50 {
+  background: #c6b4a9;
 }
 .swatch_field__neutral-60 {
-  background: #b5aca5;
+  background: #baa496;
+}
+.swatch_field__neutral-70 {
+  background: #ad9484;
 }
 .swatch_field__neutral-80 {
-  background: #948b84;
+  background: #a18573;
+}
+.swatch_field__neutral-90 {
+  background: #957865;
 }
 .swatch_field__neutral {
-  background: #796e65;
+  background: #8a6c57;
 }
-.swatch_field__dark-neutral {
-  background: #63574e;
+.swatch_field__neutral-mid-dark {
+  background: #7d604b;
+}
+.swatch_field__neutral-dark {
+  background: #745745;
 }
 .swatch_field__gold-10 {
   background: #fff6ec;
@@ -6341,19 +6362,34 @@ pre code {
 .swatch_field__gold-20 {
   background: #fff0dd;
 }
+.swatch_field__gold-30 {
+  background: #ffe8cb;
+}
 .swatch_field__gold-40 {
   background: #ffe1b9;
+}
+.swatch_field__gold-50 {
+  background: #ffd8a3;
 }
 .swatch_field__gold-60 {
   background: #ffce8d;
 }
+.swatch_field__gold-70 {
+  background: #ffc372;
+}
 .swatch_field__gold-80 {
   background: #ffb858;
+}
+.swatch_field__gold-90 {
+  background: #ffab39;
 }
 .swatch_field__gold {
   background: #ff9e1b;
 }
-.swatch_field__dark-gold {
+.swatch_field__gold-mid-dark {
+  background: #ed881b;
+}
+.swatch_field__gold-dark {
   background: #dc731c;
 }
 .swatch_field__red-10 {
@@ -6362,19 +6398,34 @@ pre code {
 .swatch_field__red-20 {
   background: #f7e0d9;
 }
+.swatch_field__red-30 {
+  background: #f3d1c8;
+}
 .swatch_field__red-40 {
   background: #f0c3b8;
+}
+.swatch_field__red-50 {
+  background: #ebb0a3;
 }
 .swatch_field__red-60 {
   background: #e79e8e;
 }
+.swatch_field__red-70 {
+  background: #e28875;
+}
 .swatch_field__red-80 {
   background: #dd735d;
+}
+.swatch_field__red-90 {
+  background: #d75a40;
 }
 .swatch_field__red {
   background: #d14124;
 }
-.swatch_field__dark-red {
+.swatch_field__red-mid-dark {
+  background: #c3381c;
+}
+.swatch_field__red-dark {
   background: #b63014;
 }
 .swatch_field__purple-10 {
@@ -6383,19 +6434,34 @@ pre code {
 .swatch_field__purple-20 {
   background: #f0d8e2;
 }
+.swatch_field__purple-30 {
+  background: #ebc9d9;
+}
 .swatch_field__purple-40 {
   background: #e3b2cc;
+}
+.swatch_field__purple-50 {
+  background: #dc9cbf;
 }
 .swatch_field__purple-60 {
   background: #d486b2;
 }
+.swatch_field__purple-70 {
+  background: #cd70a5;
+}
 .swatch_field__purple-80 {
   background: #c55998;
+}
+.swatch_field__purple-90 {
+  background: #be438b;
 }
 .swatch_field__purple {
   background: #b4267a;
 }
-.swatch_field__dark-purple {
+.swatch_field__purple-mid-dark {
+  background: #aa2071;
+}
+.swatch_field__purple-dark {
   background: #a01b68;
 }
 .swatch_field__navy-10 {
@@ -6404,19 +6470,34 @@ pre code {
 .swatch_field__navy-20 {
   background: #d3daeb;
 }
+.swatch_field__navy-30 {
+  background: #c3cde2;
+}
 .swatch_field__navy-40 {
   background: #b3c0d9;
+}
+.swatch_field__navy-50 {
+  background: #9daecc;
 }
 .swatch_field__navy-60 {
   background: #889cc0;
 }
+.swatch_field__navy-70 {
+  background: #6f88b2;
+}
 .swatch_field__navy-80 {
   background: #5674a3;
+}
+.swatch_field__navy-90 {
+  background: #3e5f95;
 }
 .swatch_field__navy {
   background: #254b87;
 }
-.swatch_field__dark-navy {
+.swatch_field__navy-mid-dark {
+  background: #123c7c;
+}
+.swatch_field__navy-dark {
   background: #002d72;
 }
 .swatch_field__pacific-10 {
@@ -6425,19 +6506,34 @@ pre code {
 .swatch_field__pacific-20 {
   background: #d6e8fa;
 }
+.swatch_field__pacific-30 {
+  background: #c3ddf6;
+}
 .swatch_field__pacific-40 {
   background: #afd2f2;
+}
+.swatch_field__pacific-50 {
+  background: #96c4ed;
 }
 .swatch_field__pacific-60 {
   background: #7eb7e8;
 }
+.swatch_field__pacific-70 {
+  background: #61a7e2;
+}
 .swatch_field__pacific-80 {
   background: #4497dc;
+}
+.swatch_field__pacific-90 {
+  background: #2284d5;
 }
 .swatch_field__pacific {
   background: #0072ce;
 }
-.swatch_field__dark-pacific {
+.swatch_field__pacific-mid-dark {
+  background: #0061c1;
+}
+.swatch_field__pacific-dark {
   background: #0050b4;
 }
 .swatch_field__teal-10 {
@@ -6446,19 +6542,34 @@ pre code {
 .swatch_field__teal-20 {
   background: #d4e7e6;
 }
+.swatch_field__teal-30 {
+  background: #c4dddc;
+}
 .swatch_field__teal-40 {
   background: #b4d2d1;
+}
+.swatch_field__teal-50 {
+  background: #9ec4c3;
 }
 .swatch_field__teal-60 {
   background: #89b6b5;
 }
+.swatch_field__teal-70 {
+  background: #70a6a5;
+}
 .swatch_field__teal-80 {
   background: #579695;
+}
+.swatch_field__teal-90 {
+  background: #3e8685;
 }
 .swatch_field__teal {
   background: #257675;
 }
-.swatch_field__dark-teal {
+.swatch_field__teal-mid-dark {
+  background: #126b69;
+}
+.swatch_field__teal-dark {
   background: #005e5d;
 }
 .swatch_field__green-10 {
@@ -6467,32 +6578,35 @@ pre code {
 .swatch_field__green-20 {
   background: #e2efd8;
 }
+.swatch_field__green-30 {
+  background: #d4eac6;
+}
 .swatch_field__green-40 {
   background: #c7e5b3;
+}
+.swatch_field__green-50 {
+  background: #bae0a2;
 }
 .swatch_field__green-60 {
   background: #addc91;
 }
+.swatch_field__green-70 {
+  background: #93cf7c;
+}
 .swatch_field__green-80 {
   background: #66c368;
+}
+.swatch_field__green-90 {
+  background: #48b753;
 }
 .swatch_field__green {
   background: #20aa3f;
 }
-.swatch_field__dark-green {
-  background: #1e9642;
-}
-.swatch_field__mid-dark-green {
+.swatch_field__green-mid-dark {
   background: #1fa040;
 }
-.swatch_field__navy-50 {
-  background: #9daecc;
-}
-.swatch_field__gold-70 {
-  background: #ffc372;
-}
-.swatch_field__purple-50 {
-  background: #dc9cbf;
+.swatch_field__green-dark {
+  background: #1e9642;
 }
 .color-table {
   width: 100%;

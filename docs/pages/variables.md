@@ -19,20 +19,20 @@ variation_groups:
           // .btn
           @btn-text:                  @white;
           @btn-bg:                    @pacific;
-          @btn-bg-hover:              @dark-pacific;
+          @btn-bg-hover:              @pacific-dark;
           @btn-bg-active:             @navy;
 
           // .btn__secondary
           @btn__secondary-text:       @white;
           @btn__secondary-bg:         @gray;
-          @btn__secondary-bg-hover:   @dark-gray;
+          @btn__secondary-bg-hover:   @gray-dark;
           @btn__secondary-bg-active:  @black;
 
           // .btn__warning
           @btn__warning-text:         @white;
           @btn__warning-bg:           @red;
-          @btn__warning-bg-hover:     @dark-red;
-          @btn__warning-bg-active:    @dark-gray;
+          @btn__warning-bg-hover:     @red-dark;
+          @btn__warning-bg-active:    @gray-dark;
 
           // .btn__disabled
           @btn__disabled-text:        @gray;
@@ -155,7 +155,7 @@ variation_groups:
 
       ```
 
-      The grid’s maximum width in px. This value can be overridden in the `grid_wrapper()` mixin. 
+      The grid’s maximum width in px. This value can be overridden in the `grid_wrapper()` mixin.
 
 
       ```
@@ -352,8 +352,8 @@ variation_groups:
           @link-underline:         @pacific;
           @link-text-visited:      @teal;
           @link-underline-visited: @teal;
-          @link-text-hover:        @dark-pacific;
-          @link-underline-hover:   @dark-pacific;
+          @link-text-hover:        @pacific-dark;
+          @link-underline-hover:   @pacific-dark;
           @link-text-active:       @navy;
           @link-underline-active:  @navy;
 

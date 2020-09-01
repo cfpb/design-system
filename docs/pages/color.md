@@ -363,7 +363,7 @@ variation_groups:
       - variation_description: >-
           Tints expand upon the primary and secondary color palettes to help
           create visual cohesion when incorporating complex illustrations and
-          data visualizations. 
+          data visualizations.
 
 
           Please note that we've only defined PMS values for colors in our primary and secondary palettes with the exception of two tints. Gray 20: Cool Gray 3C. Gray 5: Cool Gray 1C @ 50%.
@@ -383,7 +383,7 @@ variation_groups:
             <tbody>
 
           <tr>
-                  <td class="swatch_field swatch_field__dark-green"></td>
+                  <td class="swatch_field swatch_field__green-dark"></td>
                   <td>Dark Green</td>
                   <td>#1e9642</td>
                   <td>30, 150, 66</td>
@@ -391,7 +391,7 @@ variation_groups:
               </tr>
 
           <tr>
-                  <td class="swatch_field swatch_field__mid-dark-green"></td>
+                  <td class="swatch_field swatch_field__green-mid-dark"></td>
                   <td>Mid Dark Green</td>
                   <td>#1fa040</td>
                   <td>31, 160, 64</td>
@@ -476,7 +476,7 @@ variation_groups:
           </tbody>
 
 
-          </table> 
+          </table>
 
 
           <table class="color-table">
@@ -491,7 +491,7 @@ variation_groups:
             <tbody>
 
           <tr>
-                <td class="swatch_field swatch_field__dark-teal"></td>
+                <td class="swatch_field swatch_field__teal-dark"></td>
                 <td>Dark Teal</td>
                 <td>#005e5d</td>
                 <td>0, 94, 93</td>
@@ -499,7 +499,7 @@ variation_groups:
             </tr>
 
           <tr>
-                <td class="swatch_field swatch_field__mid-dark-teal"></td>
+                <td class="swatch_field swatch_field__teal-mid-dark"></td>
                 <td>Mid Dark Teal</td>
                 <td>#126b69</td>
                 <td>18, 107, 105</td>
@@ -597,7 +597,7 @@ variation_groups:
                 </tr></thead>
 
             <tbody><tr>
-                <td class="swatch_field swatch_field__dark-pacific"></td>
+                <td class="swatch_field swatch_field__pacific-dark"></td>
                 <td>Dark Pacific</td>
                 <td>#0050b4</td>
                 <td>0, 80, 180</td>
@@ -605,7 +605,7 @@ variation_groups:
             </tr>
 
           <tr>
-                <td class="swatch_field swatch_field__mid-dark-pacific"></td>
+                <td class="swatch_field swatch_field__pacific-mid-dark"></td>
                 <td>Mid Dark Pacific</td>
                 <td>#0061c1</td>
                 <td>0, 97, 193</td>
@@ -703,7 +703,7 @@ variation_groups:
                 </tr></thead>
 
             <tbody><tr>
-                <td class="swatch_field swatch_field__dark-navy"></td>
+                <td class="swatch_field swatch_field__navy-dark"></td>
                 <td>Dark Navy</td>
                 <td>#002d72</td>
                 <td>0, 45, 114</td>
@@ -711,7 +711,7 @@ variation_groups:
             </tr>
 
           <tr>
-                <td class="swatch_field swatch_field__mid-dark-navy"></td>
+                <td class="swatch_field swatch_field__navy-mid-dark"></td>
                 <td>Mid Dark Navy</td>
                 <td>#123c7c</td>
                 <td>18, 60, 124</td>
@@ -809,7 +809,7 @@ variation_groups:
                 </tr></thead>
 
             <tbody><tr>
-                <td class="swatch_field swatch_field__dark-purple"></td>
+                <td class="swatch_field swatch_field__purple-dark"></td>
                 <td>Dark Purple</td>
                 <td>#a01b68</td>
                 <td>160, 27, 104</td>
@@ -817,7 +817,7 @@ variation_groups:
             </tr>
 
           <tr>
-                <td class="swatch_field swatch_field__mid-dark-purple"></td>
+                <td class="swatch_field swatch_field__purple-mid-dark"></td>
                 <td>Mid Dark Purple</td>
                 <td>#aa2071</td>
                 <td>170, 32, 113</td>
@@ -915,7 +915,7 @@ variation_groups:
                 </tr></thead>
 
             <tbody><tr>
-                <td class="swatch_field swatch_field__dark-red"></td>
+                <td class="swatch_field swatch_field__red-dark"></td>
                 <td>Dark Red</td>
                 <td>#b63014</td>
                 <td>182, 48, 20</td>
@@ -923,7 +923,7 @@ variation_groups:
             </tr>
 
           <tr>
-                <td class="swatch_field swatch_field__mid-dark-red"></td>
+                <td class="swatch_field swatch_field__red-mid-dark"></td>
                 <td>Mid Dark Red</td>
                 <td>#c3381c</td>
                 <td>195, 56, 28</td>
@@ -1021,7 +1021,7 @@ variation_groups:
                 </tr></thead>
 
             <tbody><tr>
-                <td class="swatch_field swatch_field__dark-gold"></td>
+                <td class="swatch_field swatch_field__gold-dark"></td>
                 <td>Dark Gold</td>
                 <td>#dc731c</td>
                 <td>220, 115, 28</td>
@@ -1029,7 +1029,7 @@ variation_groups:
             </tr>
 
           <tr>
-                <td class="swatch_field swatch_field__mid-dark-gold"></td>
+                <td class="swatch_field swatch_field__gold-mid-dark"></td>
                 <td>Mid Dark Gold</td>
                 <td>#ed881b</td>
                 <td>237, 136, 27</td>
@@ -1127,7 +1127,7 @@ variation_groups:
                 </tr></thead>
 
             <tbody><tr>
-                <td class="swatch_field swatch_field__dark-neutral"></td>
+                <td class="swatch_field swatch_field__neutral-dark"></td>
                 <td>Dark Neutral</td>
                 <td>#745745</td>
                 <td>116, 87, 69</td>
@@ -1135,7 +1135,7 @@ variation_groups:
             </tr>
 
           <tr>
-                <td class="swatch_field swatch_field__mid-dark-neutral"></td>
+                <td class="swatch_field swatch_field__neutral-mid-dark"></td>
                 <td>Mid Dark Neutral</td>
                 <td>#7d604b</td>
                 <td>125, 96, 75</td>
@@ -1223,7 +1223,7 @@ variation_groups:
             </tr>
 
             </tbody></table>
-           
+
 
            <table class="color-table">
                 <thead>
@@ -1243,7 +1243,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__darker-gray"></td>
+                <td class="swatch_field swatch_field__gray-darker"></td>
                 <td>Darker Gray</td>
                 <td>#293037</td>
                 <td>41, 48, 55</td>
@@ -1251,7 +1251,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__dark-gray"></td>
+                <td class="swatch_field swatch_field__gray-dark"></td>
                 <td>Dark Gray</td>
                 <td>#43484e</td>
                 <td>67, 72, 78</td>
@@ -1259,7 +1259,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__mid-dark-gray"></td>
+                <td class="swatch_field swatch_field__gray-mid-dark"></td>
                 <td>Mid Dark Gray</td>
                 <td>#4f5257</td>
                 <td>79, 82, 87</td>
@@ -1409,7 +1409,7 @@ variation_groups:
                   <td>32, 0, 52, 0</td>
               </tr>
               <tr>
-                  <td class="swatch_field swatch_field__mid-dark-green"></td>
+                  <td class="swatch_field swatch_field__green-mid-dark"></td>
 
           <td>Emphasis</td>
                   <td>Mid Dark Green</td>
@@ -1505,7 +1505,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__mid-dark-green"></td>
+                <td class="swatch_field swatch_field__green-mid-dark"></td>
                 <td>Mid Dark Green</td>
                 <td>#1fa040</td>
                 <td>31, 160, 64</td>
@@ -1590,7 +1590,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__dark-gold"></td>
+                <td class="swatch_field swatch_field__gold-dark"></td>
                 <td>Dark Gold</td>
                 <td>#dc731c</td>
                 <td>220, 115, 28</td>
@@ -1606,7 +1606,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__dark-neutral"></td>
+                <td class="swatch_field swatch_field__neutral-dark"></td>
                 <td>Dark Neutral</td>
                 <td>#745745</td>
                 <td>116, 87, 69</td>
@@ -1622,7 +1622,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__dark-purple"></td>
+                <td class="swatch_field swatch_field__purple-dark"></td>
                 <td>Dark Purple</td>
                 <td>#a01b68</td>
                 <td>160, 27, 104</td>

@@ -4,147 +4,161 @@
    ========================================================================== */
 
 // Official CFPB color palette.
-// Current as of October 23, 2018.
-// To view the colors in the Design Manual, visit:
-// https://cfpb.github.io/design-manual/identity/color-principles.html#palette
+// Current as of August 26, 2020.
+// To view the colors in the Design System, visit:
+// https://cfpb.github.io/design-system/foundation/color
 //
-//      | Green  | Teal   | Pacific | Navy   | Purple | Red    | Gold   | Neutral | Gray   |
-//      | ------ | ------ | ------- | ------ | ------ | ------ | ------ | ------- | ------ |
-// dark | 1e9642 | 005e5d | 0050b4  | 002d72 | a01b68 | b63014 | dc731c | 63574e  | 43484e |
-// base | 20aa3f | 257675 | 0072ce  | 254b87 | b4267a | d14124 | ff9e1b | 796e65  | 5a5d61 |
-//   80 | 66c368 | 579695 | 4497dc  | 5674a3 | c55998 | dd735d | ffb858 | 948b84  | 75787b |
-//   60 | addc91 | 89b6b5 | 7eb7e8  | 889cc0 | d486b2 | e79e8e | ffce8d | b5aca5  | 919395 |
-//   40 | c7e5b3 | b4d2d1 | afd2f2  | b3c0d9 | e3b2cc | f0c3b8 | ffe1b9 | cdc7c2  | b4b5b6 |
-//   20 | e2efd8 | d4e7e6 | d6e8fa  | d3daeb | f0d8e2 | f7e0d9 | fff0dd | e3e2df  | d2d3d5 |
-//   10 | f0f8eb | f0f7f6 | eff8fd  | f4f6fa | fdf3f8 | fbefec | fff6ec | f8f5f2  | e7e8e9 |
-//    5 |        |        |         |        |        |        |        |         | f7f8f9 |
+//           | Green  | Teal   | Pacific | Navy   | Purple | Red    | Gold   | Neutral | Gray   |
+//           | ------ | ------ | ------- | ------ | ------ | ------ | ------ | ------- | ------ |
+// darker    |        |        |         |        |        |        |        |         | 293037 |
+// dark      | 1e9642 | 005e5d | 0050b4  | 002d72 | a01b68 | b63014 | dc731c | 745745  | 43484e |
+// mid-dark  | 1fa040 | 126b69 | 0061c1  | 123c7c | aa2071 | c3381c | ed881b | 7d604b  | 4f5257 |
+// base      | 20aa3f | 257675 | 0072ce  | 254b87 | b4267a | d14124 | ff9e1b | 8a6c57  | 5a5d61 |
+//   90      | 48b753 | 3e8685 | 2284d5  | 3e5f95 | be438b | d75a40 | ffab39 | 957865  | 676a6f |
+//   80      | 66c368 | 579695 | 4497dc  | 5674a3 | c55998 | dd735d | ffb858 | a18573  | 75787b |
+//   70      | 93cf7c | 70a6a5 | 61a7e2  | 6f88b2 | cd70a5 | e28875 | ffc372 | ad9484  | 838588 |
+//   60      | addc91 | 89b6b5 | 7eb7e8  | 889cc0 | d486b2 | e79e8e | ffce8d | baa496  | 919395 |
+//   50      | bae0a2 | 9ec4c3 | 96c4ed  | 9daecc | dc9cbf | ebb0a3 | ffd8a3 | c6b4a9  | a2a3a4 |
+//   40      | c7e5b3 | b4d2d1 | afd2f2  | b3c0d9 | e3b2cc | f0c3b8 | ffe1b9 | d3c5bc  | b4b5b6 |
+//   30      | d4eac6 | c4dddc | c3ddf6  | c3cde2 | ebc9d9 | f3d1c8 | ffe8cb | ddd1c9  | c3c4c4 |
+//   20      | e2efd8 | d4e7e6 | d6e8fa  | d3daeb | f0d8e2 | f7e0d9 | fff0dd | e7ddd7  | d2d3d5 |
+//   15      |        |        |         |        |        |        |        |         | dcdddf |
+//   10      | f0f8eb | f0f7f6 | eff8fd  | f4f6fa | fdf3f8 | fbefec | fff6ec | f8f5f2  | e7e8e9 |
+//    5      |        |        |         |        |        |        |        |         | f7f8f9 |
 //
 // CFPB Black: 101820
+// CFPB White: ffffff
 
 
 // Green family
-@dark-green:   #1e9642;
-@green:        #20aa3f; // Primary brand green color
-@green-80:     #66c368;
-@green-60:     #addc91; // Formerly known as "Green: Midtone"
-@green-40:     #c7e5b3;
-@green-20:     #e2efd8;
-@green-10:     #f0f8eb;
+@green-dark:       #1e9642;
+@green-mid-dark:   #1fa040;
+@green:            #20aa3f; // Primary brand green color, aka "CFPB Green"
+@green-90:         #48b753;
+@green-80:         #66c368;
+@green-70:         #93cf7c;
+@green-60:         #addc91;
+@green-50:         #bae0a2;
+@green-40:         #c7e5b3;
+@green-30:         #d4eac6;
+@green-20:         #e2efd8;
+@green-10:         #f0f8eb;
 
 // Teal family
-@dark-teal:    #005e5d; // Formerly known as regular ol' "Teal"
-@teal:         #257675; // Close to what was previously called "Teal 80"
-@teal-80:      #579695;
-@teal-60:      #89b6b5;
-@teal-40:      #b4d2d1;
-@teal-20:      #d4e7e6;
-@teal-10:      #f0f7f6;
+@teal-dark:        #005e5d;
+@teal-mid-dark:    #126b69;
+@teal:             #257675;
+@teal-90:          #3e8685;
+@teal-80:          #579695;
+@teal-70:          #70a6a5;
+@teal-60:          #89b6b5;
+@teal-50:          #9ec4c3;
+@teal-40:          #b4d2d1;
+@teal-30:          #c4dddc;
+@teal-20:          #d4e7e6;
+@teal-10:          #f0f7f6;
 
 // Pacific family
-@dark-pacific: #0050b4;
-@pacific:      #0072ce;
-@pacific-80:   #4497dc;
-@pacific-60:   #7eb7e8;
-@pacific-40:   #afd2f2;
-@pacific-20:   #d6e8fa;
-@pacific-10:   #eff8fd;
+@pacific-dark:     #0050b4;
+@pacific-mid-dark: #0061c1;
+@pacific:          #0072ce;
+@pacific-90:       #2284d5;
+@pacific-80:       #4497dc;
+@pacific-70:       #61a7e2;
+@pacific-60:       #7eb7e8;
+@pacific-50:       #96c4ed;
+@pacific-40:       #afd2f2;
+@pacific-30:       #c3ddf6;
+@pacific-20:       #d6e8fa;
+@pacific-10:       #eff8fd;
 
 // Navy family
-@dark-navy:    #002d72; // Formerly known as regular ol' "Navy"
-@navy:         #254b87; // Close to what was previously called "Navy 80"
-@navy-80:      #5674a3;
-@navy-60:      #889cc0;
-@navy-40:      #b3c0d9;
-@navy-20:      #d3daeb;
-@navy-10:      #f4f6fa;
+@navy-dark:        #002d72;
+@navy-mid-dark:    #123c7c;
+@navy:             #254b87;
+@navy-90:          #3e5f95;
+@navy-80:          #5674a3;
+@navy-70:          #6f88b2;
+@navy-60:          #889cc0;
+@navy-50:          #9daecc;
+@navy-40:          #b3c0d9;
+@navy-30:          #c3cde2;
+@navy-20:          #d3daeb;
+@navy-10:          #f4f6fa;
 
 // Purple family
-@dark-purple:  #a01b68;
-@purple:       #b4267a;
-@purple-80:    #c55998;
-@purple-60:    #d486b2;
-@purple-40:    #e3b2cc;
-@purple-20:    #f0d8e2;
-@purple-10:    #fdf3f8;
+@purple-dark:      #a01b68;
+@purple-mid-dark:  #aa2071;
+@purple:           #b4267a;
+@purple-90:        #be438b;
+@purple-80:        #c55998;
+@purple-70:        #cd70a5;
+@purple-60:        #d486b2;
+@purple-50:        #dc9cbf;
+@purple-40:        #e3b2cc;
+@purple-30:        #ebc9d9;
+@purple-20:        #f0d8e2;
+@purple-10:        #fdf3f8;
 
-// Red family (formerly known as "Red Orange")
-@dark-red:     #b63014;
-@red:          #d14124;
-@red-80:       #dd735d;
-@red-60:       #e79e8e;
-@red-40:       #f0c3b8;
-@red-20:       #f7e0d9;
-@red-10:       #fbefec;
+// Red family
+@red-dark:         #b63014;
+@red-mid-dark:     #c3381c;
+@red:              #d14124;
+@red-90:           #d75a40;
+@red-80:           #dd735d;
+@red-70:           #e28875;
+@red-60:           #e79e8e;
+@red-50:           #ebb0a3;
+@red-40:           #f0c3b8;
+@red-30:           #f3d1c8;
+@red-20:           #f7e0d9;
+@red-10:           #fbefec;
 
 // Gold family
-@dark-gold:    #dc731c;
-@gold:         #ff9e1b;
-@gold-80:      #ffb858;
-@gold-60:      #ffce8d;
-@gold-40:      #ffe1b9;
-@gold-20:      #fff0dd;
-@gold-10:      #fff6ec;
+@gold-dark:        #dc731c;
+@gold-mid-dark:    #ed881b;
+@gold:             #ff9e1b;
+@gold-90:          #ffab39;
+@gold-80:          #ffb858;
+@gold-70:          #ffc372;
+@gold-60:          #ffce8d;
+@gold-50:          #ffd8a3;
+@gold-40:          #ffe1b9;
+@gold-30:          #ffe8cb;
+@gold-20:          #fff0dd;
+@gold-10:          #fff6ec;
 
 // Neutral family
-@dark-neutral: #63574e;
-@neutral:      #796e65;
-@neutral-80:   #948b84;
-@neutral-60:   #b5aca5;
-@neutral-40:   #cdc7c2;
-@neutral-20:   #e3e2df;
-@neutral-10:   #f8f5f2;
+@neutral-dark:     #745745;
+@neutral-mid-dark: #7d604b;
+@neutral:          #8a6c57;
+@neutral-90:       #957865;
+@neutral-80:       #a18573;
+@neutral-70:       #ad9484;
+@neutral-60:       #baa496;
+@neutral-50:       #c6b4a9;
+@neutral-40:       #d3c5bc;
+@neutral-30:       #ddd1c9;
+@neutral-20:       #e7ddd7;
+@neutral-10:       #f8f5f2;
 
 // Gray family
-@dark-gray:    #43484e;
-@gray:         #5a5d61;
-@gray-80:      #75787b; // Formerly known as regular ol' "Gray"
-@gray-60:      #919395; // Formerly known as "Gray 80"
-@gray-40:      #b4b5b6; // Close to what was known as "Gray 50"
-@gray-20:      #d2d3d5;
-@gray-10:      #e7e8e9; // Close to what was known as "Gray 20"
-@gray-5:       #f7f8f9;
+@gray-darker:      #293037;
+@gray-dark:        #43484e;
+@gray-mid-dark:    #4f5257;
+@gray:             #5a5d61;
+@gray-90:          #676a6f;
+@gray-80:          #75787b;
+@gray-70:          #838588;
+@gray-60:          #919395;
+@gray-50:          #a2a3a4;
+@gray-40:          #b4b5b6;
+@gray-30:          #c3c4c4;
+@gray-20:          #d2d3d5;
+@gray-15:          #dcdddf;
+@gray-10:          #e7e8e9;
+@gray-5:           #f7f8f9;
 
 // with special guests
-@black:        #101820; // Also known as "CFPB Black"
-@white:        #fff;
-
-
-/**
- * When adding this theme to a CFPB project using a version of our color palette
- * that predates November 13, 2015, you will have some deprecated color
- * variables to deal with.
- *
- * Run the list of project-wide Find and Replace actions given below
- * to update deprecated variables to their current equivalents.
- *
- * IMPORTANT: You must execute these in the specified order
- * to ensure that you don't overwrite previous updates.
- *
- * ALSO IMPORTANT: When running replacements #3, #7, and #19, ensure that you
- * have the regular expression option turned on in your editor.
- * Failure to do so will replace the partial match in every tint of that color.
- */
-
-//     Replace:                 With:
-// ----------------------------------------
-//  1. @green-midtone           @green-60
-//  2. @green-tint              @green-20
-//  3. @teal(?![a-zA-Z0-9\-_])  @dark-teal
-//  4. @teal-80                 @teal
-//  5. @teal-50                 @teal-60
-//  6. @pacific-50              @pacific-60
-//  7. @navy(?![a-zA-Z0-9\-_])  @dark-navy
-//  8. @navy-80                 @navy
-//  9. @navy-50                 @navy-60
-// 10. @dark-redorange          @dark-red
-// 11. @redorange               @red
-// 12. @redorange-80            @red-80
-// 13. @redorange-50            @red-60
-// 14. @redorange-20            @red-20
-// 15. @gold-50                 @gold-60
-// 16. @neutral-50              @neutral-60
-// 17. @darkgray                @dark-gray
-// 18. @gray-80                 @gray-60
-// 19. @gray(?![a-zA-Z0-9\-_])  @gray-80
-// 20. @gray-50                 @gray-40
-// 21. @gray-20                 @gray-10
+@black:            #101820; // Also known as "CFPB Black"
+@white:            #ffffff;

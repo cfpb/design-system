@@ -133,7 +133,7 @@ variation_groups:
                                   </tr>
                                   <tr>
                                       <th>PMS</th>
-                                      <td>Cool Gray 9C</td>
+                                      <td>Cool Gray 11C</td>
                                   </tr>
                                   <tr>
                                       <th>CMYK</th>
@@ -336,9 +336,6 @@ variation_groups:
           Tints expand upon the primary and secondary color palettes to help
           create visual cohesion when incorporating complex illustrations and
           data visualizations.
-
-
-          Please note that we've only defined PMS values for colors in our primary and secondary palettes with the exception of two tints. Gray 20: Cool Gray 3C. Gray 5: Cool Gray 1C @ 50%.
 
 
           <table class="color-table">

@@ -338,9 +338,6 @@ variation_groups:
           data visualizations.
 
 
-          Please note that we've only defined PMS values for colors in our primary and secondary palettes with the exception of two tints. Gray 20: Cool Gray 3C. Gray 5: Cool Gray 1C @ 50%.
-
-
           <table class="color-table">
                 <thead>
                     <tr><th></th>

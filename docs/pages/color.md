@@ -191,10 +191,6 @@ variation_groups:
                                   <td>37, 118, 117</td>
                               </tr>
                               <tr>
-                                  <th>PMS</th>
-                                  <td>7721</td>
-                              </tr>
-                              <tr>
                                   <th>CMYK</th>
                                   <td>85, 0, 30, 44</td>
                               </tr>
@@ -215,10 +211,6 @@ variation_groups:
                               <tr>
                                   <th>RGB</th>
                                   <td>0, 114, 206</td>
-                              </tr>
-                              <tr>
-                                  <th>PMS</th>
-                                  <td>285</td>
                               </tr>
                               <tr>
                                   <th>CMYK</th>
@@ -243,10 +235,6 @@ variation_groups:
                                   <td>37, 75, 135</td>
                               </tr>
                               <tr>
-                                  <th>PMS</th>
-                                  <td>288</td>
-                              </tr>
-                              <tr>
                                   <th>CMYK</th>
                                   <td>82, 58, 0, 31</td>
                               </tr>
@@ -267,10 +255,6 @@ variation_groups:
                               <tr>
                                   <th>RGB</th>
                                   <td>180, 38, 122</td>
-                              </tr>
-                              <tr>
-                                  <th>PMS</th>
-                                  <td></td>
                               </tr>
                               <tr>
                                   <th>CMYK</th>
@@ -295,10 +279,6 @@ variation_groups:
                                   <td>209, 65, 36</td>
                               </tr>
                               <tr>
-                                  <th>PMS</th>
-                                  <td>7597</td>
-                              </tr>
-                              <tr>
                                   <th>CMYK</th>
                                   <td>0, 85, 100, 4</td>
                               </tr>
@@ -321,10 +301,6 @@ variation_groups:
                                   <td>255, 158, 27</td>
                               </tr>
                               <tr>
-                                  <th>PMS</th>
-                                  <td>1375</td>
-                              </tr>
-                              <tr>
                                   <th>CMYK</th>
                                   <td>0, 45, 94, 0</td>
                               </tr>
@@ -345,10 +321,6 @@ variation_groups:
                               <tr>
                                   <th>RGB</th>
                                   <td>138, 108, 87</td>
-                              </tr>
-                              <tr>
-                                  <th>PMS</th>
-                                  <td></td>
                               </tr>
                               <tr>
                                   <th>CMYK</th>

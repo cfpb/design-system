@@ -133,7 +133,7 @@ variation_groups:
                                   </tr>
                                   <tr>
                                       <th>PMS</th>
-                                      <td>Cool Gray 9C</td>
+                                      <td>Cool Gray 11C</td>
                                   </tr>
                                   <tr>
                                       <th>CMYK</th>

@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-grid",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Design System grid",
   "less": "src/cfpb-grid.less",
   "style": "cfpb-grid.css",

@@ -2,6 +2,17 @@
 ## Unreleased (2020-09-10)
 
 #### :bug: Bug Fix
+* `cfpb-expandables`
+  * [#1050](https://github.com/cfpb/design-system/pull/1050) Expand expandables when printing ([@contolini](https://github.com/contolini))
+
+#### Committers: 1
+- Chris Contolini ([@contolini](https://github.com/contolini))
+
+
+
+## Unreleased (2020-09-10)
+
+#### :bug: Bug Fix
 * `cfpb-buttons`, `cfpb-core`, `cfpb-layout`
   * [#1049](https://github.com/cfpb/design-system/pull/1049) Colors: Update swatches ([@anselmbradford](https://github.com/anselmbradford))
 

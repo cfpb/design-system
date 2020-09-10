@@ -4456,6 +4456,24 @@ button.o-expandable_header {
 .o-expandable-group .o-expandable__padded:first-child {
   border-top: 1px solid #b4b5b6;
 }
+@media print {
+  .o-expandable_target__expanded .o-expandable_cue-close,
+  .o-expandable_target__collapsed .o-expandable_cue-open {
+    display: none;
+  }
+  .o-expandable_content__collapsed {
+    display: block;
+    max-height: 99999px !important;
+  }
+}
+.print .o-expandable_target__expanded .print .o-expandable_cue-close,
+.print .o-expandable_target__collapsed .print .o-expandable_cue-open {
+  display: none;
+}
+.print .o-expandable_content__collapsed {
+  display: block;
+  max-height: 99999px !important;
+}
 /* ==========================================================================
    Design System
    Table Styling
@@ -5925,6 +5943,14 @@ pre code {
   padding-left: 0.6875em;
   border-left: 1px solid #80b9e7;
   margin-left: 0.4375em;
+}
+@media print {
+  .o-editor_link {
+    display: none;
+  }
+}
+.print .o-editor_link {
+  display: none;
 }
 .frame-content #toggle-code {
   display: none;

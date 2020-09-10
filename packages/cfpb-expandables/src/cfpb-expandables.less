@@ -197,4 +197,20 @@
             }
         }
     }
+
+    .respond-to-print( {
+        // Hide the interactive expandable cues when printing
+        &_target__expanded &_cue-close,
+        &_target__collapsed &_cue-open {
+            display: none;
+        }
+
+        // Ensure all expandables are expanded when printing.
+        // To accommodate print stylesheets that display the raw URL after links,
+        // set an enormous max height to accommodate expandables that have a lot of links.
+        &_content__collapsed {
+            display: block;
+            max-height: 99999px !important;
+        }
+    } );
 }

@@ -1,5 +1,4 @@
-
-## Unreleased (2020-09-10)
+## v0.3.0 (2020-09-10)
 
 #### :bug: Bug Fix
 * `cfpb-expandables`
@@ -9,8 +8,7 @@
 - Chris Contolini ([@contolini](https://github.com/contolini))
 
 
-
-## Unreleased (2020-09-10)
+## v0.2.0 (2020-09-10)
 
 #### :bug: Bug Fix
 * `cfpb-buttons`, `cfpb-core`, `cfpb-layout`

@@ -1,4 +1,4 @@
-## Unreleased (2020-04-10)
+## v0.1.1 (2020-04-10)
 
 #### :bug: Bug Fix
 * `cfpb-layout`, `cfpb-notifications`
@@ -10,7 +10,7 @@
 
 
 
-## Unreleased (2020-04-06)
+## v0.1.0 (2020-04-06)
 
 #### :rocket: Enhancement
 * `cfpb-layout`
@@ -31,7 +31,7 @@
 
 
 
-## Unreleased (2020-01-22)
+## v0.0.9 (2020-01-22)
 
 #### :bug: Bug Fix
 * `cfpb-forms`, `cfpb-icons`
@@ -46,7 +46,7 @@
 
 
 
-## Unreleased (2020-01-16)
+## v0.0.8 (2020-01-16)
 
 #### :house: Internal
 * `cfpb-buttons`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
@@ -57,7 +57,7 @@
 
 
 
-## Unreleased (2020-01-13)
+## v0.0.5 (2020-01-13)
 
 #### :house: Internal
 * `cfpb-core`
@@ -73,7 +73,7 @@
 
 
 
-## Unreleased (2019-11-04)
+## v0.0.4 (2019-11-04)
 
 #### :house: Internal
 * `cfpb-design-system`, `cfpb-grid`

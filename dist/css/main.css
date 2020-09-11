@@ -3869,9 +3869,6 @@ h6 + .a-legend,
 :-ms-input-placeholder {
   color: #5a5d61;
 }
-::-ms-input-placeholder {
-  color: #5a5d61;
-}
 ::placeholder {
   color: #5a5d61;
 }

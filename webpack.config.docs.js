@@ -1,5 +1,5 @@
 const autoprefixer = require( 'autoprefixer' );
-const cssnano = require( 'cssnano ' );
+const cssnano = require( 'cssnano' );
 const path = require( 'path' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const TerserJSPlugin = require( 'terser-webpack-plugin' );

@@ -1,5 +1,5 @@
 
-## Unreleased (2020-09-11)
+## v0.3.1 (2020-09-11)
 
 #### :house: Internal
 * `cfpb-atomic-component`, `cfpb-buttons`, `cfpb-core`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-grid`, `cfpb-icons`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`

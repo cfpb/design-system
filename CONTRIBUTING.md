@@ -1,7 +1,7 @@
 All contributions to this project will be released under the CC0 public domain
 dedication. By submitting a pull request or filing a bug, issue, or
 feature request, you are agreeing to comply with this waiver of copyright interest.
-Details can be found in our [TERMS](https://github.com/cfpb/design-system/blob/master/TERMS.md) and [LICENSE](https://github.com/cfpb/design-system/blob/master/LICENSE).
+Details can be found in our [TERMS](https://github.com/cfpb/design-system/blob/main/TERMS.md) and [LICENSE](https://github.com/cfpb/design-system/blob/main/LICENSE).
 
 --------------------------------------------------------------------------------
 
@@ -23,9 +23,9 @@ then follow the _Changing the codebase_ guidance below.
 
 ## Changing the codebase
 
-We work off feature branches from the `master` branch.
+We work off feature branches from the `main` branch.
 After you've edited a component,
-open a Pull Request to merge your feature branch back into `master`.
+open a Pull Request to merge your feature branch back into `main`.
 
 For example, if you wanted to change `@cfpb/cfpb-buttons` and use it in
 [cfgov-refresh](https://github.com/cfpb/cfgov-refresh),
@@ -33,7 +33,7 @@ here's what you'd do:
 
 1. `git clone git@github.com:cfpb/design-system.git`, if you haven't already.
 1. `cd design-system`
-1. `git checkout master && git pull` to ensure you're on the latest changes (this step is not necessary when cloning for the first time).
+1. `git checkout main && git pull` to ensure you're on the latest changes (this step is not necessary when cloning for the first time).
 1. `yarn` to install dependencies and set up [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
 1. `git checkout -b button-fix` to create a new branch for your changes.
 1. Edit file(s) in `/packages/cfpb-buttons/` however you want.
@@ -44,7 +44,7 @@ here's what you'd do:
 1. [Start cfgov-refresh](https://cfpb.github.io/cfgov-refresh/usage/) and navigate to a page with buttons to view your @cfpb/cfpb-buttons changes.
 1. When you're pleased with your changes, `cd` back to your `design-system` repo and commit your changes: `git commit -am "Fix button border radius"`
 1. `git push origin button-fix` to push your branch up to GitHub.
-1. Go to https://github.com/cfpb/design-system and open a pull request to merge `button-fix` into `master`.
+1. Go to https://github.com/cfpb/design-system and open a pull request to merge `button-fix` into `main`.
 
 If you are not a current contributor to this repository,
 use forks by first clicking the fork button on top of the repository
@@ -155,7 +155,7 @@ features. For more information visit the [Babel documentation site]
 
 Ready to publish changes to npm?
 
-1. Ensure you're on `master` and `git pull` to confirm you're up-to-date.
+1. Ensure you're on `main` and `git pull` to confirm you're up-to-date.
 1. Export a personal access token called
    [`GITHUB_AUTH`](https://github.com/lerna/lerna-changelog#github-token).
 1. Run `yarn run changelog` and open `CHANGELOG.md` to see a preview
@@ -168,7 +168,7 @@ Ready to publish changes to npm?
    `git checkout CHANGELOG.md` to reset it.
 1. Run `yarn run release` to start the release.
 1. If all packages are shown as having been published,
-   run `git push` to push changes to the remote `master` branch.
+   run `git push` to push changes to the remote `main` branch.
 
 Lerna will update the changelog, ask for a new version number, create a git tag,
 push to GitHub and publish to npm.

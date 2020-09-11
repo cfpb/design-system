@@ -6,7 +6,7 @@ set -eu
 # https://help.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners
 repo_uri="https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
 remote_name="origin"
-main_branch="master"
+main_branch="main"
 target_branch="gh-pages"
 target_dir="docs/_site/design-system/"
 

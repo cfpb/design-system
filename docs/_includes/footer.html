@@ -24,7 +24,7 @@
                     {% assign page_collection_name = page.collection_name %}
                 {% endif %}
                 {% assign file_url_path = page_collection_name | append: '/' | append: file_url_path %}
-                <a href="https://github.com/{{ site.repository }}/commits/master/docs/{{ file_url_path }}">
+                <a href="https://github.com/{{ site.repository }}/commits/main/docs/{{ file_url_path }}">
                     <time datetime="{{ page.last_modified_at }}">
                         {{ page.last_modified_at | date: "%l:%M:%S %p %b %d, %Y" }}
                     </time>

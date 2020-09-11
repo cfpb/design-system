@@ -16,7 +16,7 @@ Detailed instructions can be found at the Design System
 
 We welcome your feedback and contributions.
 
-- [Find out about contributing](https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md)
+- [Find out about contributing](https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md)
 - [File a bug](https://github.com/cfpb/design-system/issues/new?labels=bug)
 
 ---

@@ -38,7 +38,7 @@ all uses of the work, to the fullest extent permitted by applicable law.
 When using or citing the work, you should not imply endorsement by the
 author or the affirmer.
 
-[policy]: https://github.com/cfpb/design-system/blob/master/TERMS.md
+[policy]: https://github.com/cfpb/design-system/blob/main/TERMS.md
 [CC0]: http://creativecommons.org/publicdomain/zero/1.0/legalcode
 
 ## This project makes use of:

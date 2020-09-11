@@ -15,11 +15,11 @@ variation_groups:
           category.](/design-system/images/uploads/bar-chart-1.png)"
         variation_jinja_code_snippet: >-
           *
-          [_includes/organisms/chart.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/chart.html)
+          [_includes/organisms/chart.html](https://github.com/cfpb/consumerfinance.gov/blob/main/cfgov/jinja2/v1/_includes/organisms/chart.html)
 
-          * [_includes/organisms/mortgage-chart.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/mortgage-chart.html)
+          * [_includes/organisms/mortgage-chart.html](https://github.com/cfpb/consumerfinance.gov/blob/main/cfgov/jinja2/v1/_includes/organisms/mortgage-chart.html)
 
-          * [_includes/organisms/mortgage-map.html](https://github.com/cfpb/cfgov-refresh/blob/master/cfgov/jinja2/v1/_includes/organisms/mortgage-map.html)
+          * [_includes/organisms/mortgage-map.html](https://github.com/cfpb/consumerfinance.gov/blob/main/cfgov/jinja2/v1/_includes/organisms/mortgage-map.html)
         variation_name: Simple bar chart
       - variation_code_snippet: ""
         variation_description: "![Bar charts showing complaints by type for New York

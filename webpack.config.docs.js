@@ -1,3 +1,5 @@
+const autoprefixer = require( 'autoprefixer' );
+const cssnano = require( 'cssnano ' );
 const path = require( 'path' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const TerserJSPlugin = require( 'terser-webpack-plugin' );
@@ -42,7 +44,9 @@ module.exports = ( env, argv ) => {
             {
               loader: 'postcss-loader',
               options: {
-                plugins: () => _postCSSPlugins(),
+                postcssOptions: {
+                  plugins: _postCSSPlugins()
+                },
                 sourceMap: true
               }
             },
@@ -90,14 +94,15 @@ module.exports = ( env, argv ) => {
   /**
    * CSS plugins to add to PostCSS loader step.
    * Minimizer (cssnano) is added only in production mode.
+   * @returns {Array} List of PostCSS plugins.
    */
   function _postCSSPlugins() {
     const plugins = [];
-    plugins.push( require( 'autoprefixer' ) );
+    plugins.push( autoprefixer );
 
     if ( argv.mode === 'production' ) {
-      plugins.push( require( 'cssnano' )( {
-        preset: 'default',
+      plugins.push( cssnano( {
+        preset: 'default'
       } ) );
     }
 

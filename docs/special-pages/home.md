@@ -121,7 +121,7 @@ description: >-
 
   <p>
 
-  Learn how to contribute to the Design System code base and update the documentation.  <a href="https://github.com/cfpb/design-system/blob/master/CONTRIBUTING.md">Get started</a>.
+  Learn how to contribute to the Design System code base and update the documentation.  <a href="https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md">Get started</a>.
 
   </p>
 

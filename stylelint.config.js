@@ -32,6 +32,7 @@ module.exports = {
   'rules': {
     'at-rule-no-unknown': [ true, { ignoreAtRules: 'plugin' } ],
     'declaration-colon-newline-after': null,
+    'declaration-empty-line-before': null,
     'function-name-case': [
       'lower',
       { ignoreFunctions: [ 'filter' ]}

@@ -1,5 +1,5 @@
 
-## Unreleased (2020-09-11)
+## v0.3.2 (2020-09-11)
 
 #### :house: Internal
 * `cfpb-icons`

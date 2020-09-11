@@ -1,4 +1,15 @@
 
+## Unreleased (2020-09-11)
+
+#### :house: Internal
+* `cfpb-icons`
+  * [#1062](https://github.com/cfpb/design-system/pull/1062) Fix plugin path to remove hardcoding ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.3.1 (2020-09-11)
 
 #### :house: Internal

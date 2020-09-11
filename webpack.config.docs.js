@@ -42,7 +42,9 @@ module.exports = ( env, argv ) => {
             {
               loader: 'postcss-loader',
               options: {
-                plugins: () => _postCSSPlugins(),
+                postcssOptions: {
+                  plugins: _postCSSPlugins()
+                },
                 sourceMap: true
               }
             },

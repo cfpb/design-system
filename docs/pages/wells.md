@@ -46,10 +46,10 @@ use_cases: >-
 
   Ideally, content within a well should not take up more than a third of page content.
 guidelines: >-
-  Text, images, and embedded media (like video) may be placed within wells,
-  however, if content includes imagery, also consider the [featured content
-  module](/design-system/patterns/featured-content-module). Examples of types of
-  content to include:
+  Wells should generally be text-based. If content must include imagery or
+  videos, use the [featured content
+  module](/design-system/patterns/featured-content-module) instead. Examples of
+  types of content to include:
 
 
   * Headings (H2 - H5). Headings should be as succinct as possible and 35 characters or less (including spaces)

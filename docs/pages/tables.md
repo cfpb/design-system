@@ -11,8 +11,7 @@ variation_groups:
   - variation_group_name: Standard table
     variation_group_description: This is the default style at the large screen
       breakpoint. Tables are not responsive by default; see options below for
-      [responsive
-      tables](https://cfpb-sandbox.github.io/design-system/components/tables#responsive-tables).
+      [responsive tables](#responsive-tables).
     variations:
       - variation_code_snippet: >-
           <table>

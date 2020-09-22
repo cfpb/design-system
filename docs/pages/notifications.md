@@ -28,11 +28,11 @@ variation_groups:
         variation_specs: |-
           * Border: 2 px, CFPB Green (#20aa3f)
           * Icon: 18 px, CFPB Green (#20aa3f)
-          * Background color: Green 20 (#e2efd8)
+          * Background color: Green 10 (#f0f8eb)
           * Success icon and message should always appear below input field.
       - variation_name: Success notification (field-level)
         variation_code_snippet: >-
-
+          
           <div class="m-form-field m-form-field__success">
               <label class="a-label a-label__heading" for="form-input-success">Input label</label>
               <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
@@ -68,7 +68,7 @@ variation_groups:
         variation_name: Warning notification
         variation_specs: |-
           * Border: 2 px, Gold (#ff9e1b)
-          * Background: Gold 20 (#fff0dd)
+          * Background: Gold 10 (#fff6ec)
           * Minicon: 18px, Gold (#ff9e1b)
       - variation_name: Warning notification (field-level)
         variation_code_snippet: >-
@@ -115,7 +115,7 @@ variation_groups:
         variation_name: Error notification
         variation_specs: |-
           * Border: 2 px, Red (#d14124)
-          * Background: Red 20 (#fff0dd)
+          * Background: Red 10 (#fbefec)
           * Minicon: 18px, Red (#d14124)
       - variation_name: Error notification (field-level)
         variation_code_snippet: >-

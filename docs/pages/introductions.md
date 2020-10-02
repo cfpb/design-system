@@ -49,7 +49,7 @@ variation_groups:
     variations:
       - variation_specs: >-
           ![Image of text intro with breakout sidebar showing grid and design
-          specs](/design-system/images/uploads/breakout_sidebar_with_specs.png)
+          specs ](/design-system/images/uploads/breakout_sidebar_with_specs.png)
 
 
           * Spacing: The breakout may be taller than the Text Intro content, in which case the margin beneath the breakout should be 60px.

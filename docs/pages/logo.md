@@ -28,7 +28,69 @@ variation_groups:
 
           </div>
         variation_name: Horizontal
-        variation_specs: ""
+        variation_specs: |-
+          The logo is comprised of the following colors.
+
+          <table class="color-table">
+                <thead>
+                    <tr>
+
+          <th></th>
+                    <th>Name</th>
+                    <th>CMYK</th>
+
+           <th>PMS</th>
+
+           <th>RGB</th>
+
+          <th>HEX</th>
+          </tr>
+
+          </thead>
+
+            <tbody>
+
+          <tr>
+                <td class="swatch_field swatch_field__green"></td>
+                <td>CFPB green</td>
+
+            <td>80, 0, 100, 0</td>
+
+          <td>361</td>
+
+          <td>32, 170, 63</td>
+
+          <td>#20aa3f</td>
+
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__green-60"></td>
+                <td>Green 60 (Midtone Green)</td>
+                <td>32, 0, 52, 0</td>
+
+          <td>358</td>
+
+           <td>173, 220, 145</td>
+
+          <td>#addc91</td>
+
+            </tr>
+
+            <tr>
+                <td class="swatch_field swatch_field__gray"></td>
+                <td>Gray</td>
+                <td>0, 0, 0, 77</td>
+
+          <td>Cool Gray 11C</td>
+
+          <td>90, 93, 97</td>
+
+          <td>#5a5d61</td>
+
+            </tr>
+
+            </tbody></table>
       - variation_name: Vertical
         variation_description: >-
           <div class="content-33 content-first" markdown="1">

@@ -23,12 +23,12 @@ variation_groups:
           Layout as seen with a standard right sidebar:
 
 
-          ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/text_introduction_072020.png)
+          ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/text_introduction.png)
         variation_jinja_code_snippet: ""
         variation_name: ""
         variation_specs: >-
           ![Image of text intro showing grid and design
-          specs](/design-system/images/uploads/text_introduction_specs_072020.png)
+          specs](/design-system/images/uploads/text_introduction_with_specs.png)
 
 
           * Spacing: 45px margin above, 60 px margin below.
@@ -49,7 +49,7 @@ variation_groups:
     variations:
       - variation_specs: >-
           ![Image of text intro with breakout sidebar showing grid and design
-          specs](/design-system/images/uploads/breakout_sidebar_specs_072020.png)
+          specs](/design-system/images/uploads/breakout_sidebar_with_specs.png)
 
 
           * Spacing: The breakout may be taller than the Text Intro content, in which case the margin beneath the breakout should be 60px.
@@ -75,7 +75,7 @@ variation_groups:
           Layout as seen with a ‘breakout’ highlight in the right sidebar area:
 
 
-          ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/breakout_sidebar_072020.png)
+          ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/breakout_sidebar.png)
 use_cases: ""
 guidelines: >-
   ### Content guidelines
@@ -135,7 +135,7 @@ behavior: >-
 
   | Breakout sidebar on the right                                                         | Breakout sidebar stacked immediately after text intro                                          |
 
-  | ![Mockup of 900+ pixel layout](/design-system/images/uploads/breakout_sidebar_above900_072020.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/breakout_sidebar_below901_072020.png) |
+  | ![Mockup of 900+ pixel layout](/design-system/images/uploads/breakout_sidebar_breakpoint_large.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/breakout_sidebar_breakpoint_small.png) |
 accessibility: ""
 research: ""
 related_items: >-

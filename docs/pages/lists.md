@@ -63,9 +63,23 @@ variation_groups:
                         <li>Nested item 2-1</li>
                         <li>Nested item 2-2</li>
                         <li>Nested item 2-3</li>
+                        <li>Nested item 2-4</li>
+                        <li>Nested item 2-5</li>
+                        <li>Nested item 2-6</li>
+                        <li>Nested item 2-7</li>
+                        <li>Nested item 2-8</li>
+                        <li>Nested item 2-9</li>
+                        <li>Nested item 2-10</li>
                   </ol>
               </li>
               <li>List item 3</li>
+              <li>List item 4</li>
+              <li>List item 5</li>
+              <li>List item 6</li>
+              <li>List item 7</li>
+              <li>List item 8</li>
+              <li>List item 9</li>
+              <li>List item 10</li>
           </ol>
         variation_specs: >-
           #### Default

@@ -102,6 +102,38 @@ variation_groups:
           * Body copy: Avenir paragraph
 
           * At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
+      - variation_name: 33/33/33 image and text component
+        variation_description: >-
+          
+
+          ![Info unit group: 33/33/33 with image and text](/design-system/images/uploads/33-33-33_image_text.jpg "Info unit group: example of 33/33/33 with image and text")
+
+
+          #### When to use
+
+
+          * Ideally, when a group of these components can be featured together in multiples of three (3, 6, 9, etc.).
+
+
+          * When an image or illustration helps users better understand the purpose of content.
+
+
+          #### When other options are better
+
+
+          * When the number of components would be better featured in multiples of 2, use the 50/50 text component instead
+
+          * When headings are too long for the narrower width, for example, when they break to 3 lines or more. 
+
+          * When content doesn't require imagery
+
+          * When there are multiple paragraphs of copy
+        variation_specs: >-
+          * Imagery: 1:1 ratio, may be illustration, isocon, or photography. 
+
+          * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
+
+          * Headings: H2-4 can be used
     variation_group_description: "Image and text components consist of an image,
       plus a heading, short descriptive text, and call to action. There are two
       types of image and text component: 25/75 and 50/50."

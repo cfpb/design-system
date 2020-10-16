@@ -371,11 +371,6 @@ li {
     }
 }
 
-ol li {
-    // 0.3rem.
-    margin-left: unit( 4.8px / @base-font-size-px, rem );
-}
-
 ol ol {
     list-style-type: lower-alpha;
 }
@@ -461,6 +456,19 @@ ol {
     // Slightly larger than necessary, but this is the minimum value
     // for numbers to not be partially in the margin in Internet Explorer.
     padding-left: unit( 21px / @base-font-size-px, em );
+
+    li:nth-last-child(n+10),
+    li:nth-last-child(n+10) ~ li {
+        // 0.5rem.
+        margin-left: unit( 8px / @base-font-size-px, rem );
+    }
+}
+
+ol ol {
+    // Negate margin added to lists longer than 9 items.
+    li {
+        margin-left: 0 !important;
+    }
 }
 
 //

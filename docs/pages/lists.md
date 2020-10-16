@@ -64,7 +64,7 @@ variation_groups:
 
           <p>
             More than 9 items is indented to align double digits.
-            Inner lists are not indented, regardless of number of items.
+            Inner lists are not indented, regardless of the number of items.
           </p>
           <ol>
               <li>List item 1</li>

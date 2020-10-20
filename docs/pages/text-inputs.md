@@ -120,6 +120,17 @@ variation_groups:
               <textarea class="a-text-input a-text-input__full"
                         id="full-textarea-example">Placeholder text</textarea>
           </div>
+      - variation_name: Datepicker inputs
+        variation_code_snippet: >-
+          <div class="m-form-field">
+              <label class="a-label a-label__heading" for="datepicker-example">
+                  Label
+              </label>
+              <input class="a-text-input"
+                    type="date"
+                    id="datepicker-example"
+                    placeholder="mm/dd/yyyy">
+          </div>
       - variation_name: Text input with a button
         variation_description: These are used for simple forms where a full filter isn’t necessary.
         variation_code_snippet: |-

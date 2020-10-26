@@ -187,7 +187,8 @@ variation_groups:
         variation_description: When paired with a primary action, indicate the
           destructive action using a destructive action button link to the right
           of the primary button.
-        variation_specs: "-  Destructive action link: Avenir Next Medium, 16px, Red (#d14124"
+        variation_specs: "* Destructive action link: Avenir Next Medium, 16px, Mid dark
+          red (#c3381c)"
   - variation_group_name: Sizes
     variation_group_description: ""
     variations:
@@ -255,9 +256,8 @@ variation_groups:
         variation_name: Default button group
   - variation_group_name: Buttons with icons
     variations:
-      - variation_name: Icon buttons
-        variation_description: Example below of buttons with icon on left ("back"
-          button) and icon on right ("next" button)
+      - variation_name: ""
+        variation_description: ""
         variation_code_snippet: |-
           <button class="a-btn">
               <span class="a-btn_icon
@@ -286,19 +286,28 @@ variation_groups:
                            a-btn_icon__on-right">{% include icons/updating.svg %}</span>
           </button>
     variation_group_description: >-
-      * An icon should appear after the text it represents. The only exception
-      is the back button, in which the icon should appear before the button’s
-      text. 
+      \### Static icon buttons
+
+
+      * An icon should appear after the text it represents. The only exception is the back button, in which the icon should appear before the button’s text. 
+
 
       * Each icon should be used exclusively and consistently for one action.
-use_cases: Generous white space lends focus and makes buttons more actionable.
+use_cases: Buttons signal actions. They should be used sparingly; each
+  additional button on a page reduces the visual prominence of a call to action.
+  In contrast, [links](https://cfpb.github.io/design-system/components/links)
+  should lead users to another page or further information.
 guidelines: >-
-  Labels should be written in sentence case. Use verbs and an active voice.
-  Language should be clear, succinct, and informative. Limit the copy length to
-  22 characters.
+  * Use generous white space to bring focus to a button and make it appear
+  actionable.
 
+  * Write labels in sentence case.
 
-  Use icons consistently. Each icon should be used exclusively for one action. Icons appear to the left of the button text. Buttons that have “forward” actions have icons to the right of the text, and those with “back” actions have icons to the left.
+  * Use verbs and an active voice.
+
+  * Use clear, succinct, and informative language. 
+
+  * Limit the copy length to 22 characters.
 behavior: ""
 restrictions:
   - restrictions_do: <button class="a-btn" title="Test button">Short label</button>

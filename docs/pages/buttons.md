@@ -274,7 +274,7 @@ variation_groups:
                   {% include icons/right.svg %}
               </span>
           </button>
-      - variation_name: Animated icon
+      - variation_name: Animated icon buttons
         variation_description: >+
           Use an animated icon in a button to reassure the user that the action
           they are attempting to perform is functioning as intended.

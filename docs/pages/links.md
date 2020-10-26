@@ -103,12 +103,13 @@ variation_groups:
 
   - variation_group_name: Links with icons
     variation_group_description: >-
-      Use icons when a link needs extra emphasis. Use icons consistently, or
-      don’t use them at all. Each icon should be used exclusively for one
-      action.
+      * An icon should appear after the text it represents.  
 
+      * Each icon should be used exclusively and consistently for one action.
 
-      Icons appear to the right of the link text. The color and font-size of icons should be the same as the adjacent text, including state changes. Icons are never underlined.
+      * The color and font-size of an icon should be the same as the text it represents, including state changes. 
+
+      * Icons are never underlined.
     variations:
       - variation_specs: ""
         variation_code_snippet: |-

@@ -109,7 +109,7 @@ variation_groups:
 
       * The color and font-size of an icon should be the same as the text it represents, including state changes. 
 
-      * Icons are never underlined.
+      * Icons should never be underlined.
     variations:
       - variation_specs: ""
         variation_code_snippet: |-

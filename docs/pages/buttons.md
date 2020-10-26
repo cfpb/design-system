@@ -285,10 +285,12 @@ variation_groups:
               <span class="a-btn_icon
                            a-btn_icon__on-right">{% include icons/updating.svg %}</span>
           </button>
-    variation_group_description: Use icons consistently. Each icon should be used
-      exclusively for one action. Icons appear to the left of the button text.
-      Buttons that have “forward” actions have icons to the right of the text,
-      and those with “back” actions have icons to the left.
+    variation_group_description: >-
+      * An icon should appear after the text it represents. The only exception
+      is the back button, in which the icon should appear before the button’s
+      text. 
+
+      * Each icon should be used exclusively and consistently for one action.
 use_cases: Generous white space lends focus and makes buttons more actionable.
 guidelines: >-
   Labels should be written in sentence case. Use verbs and an active voice.

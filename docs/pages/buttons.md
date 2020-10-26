@@ -256,7 +256,7 @@ variation_groups:
         variation_name: Default button group
   - variation_group_name: Buttons with icons
     variations:
-      - variation_name: ""
+      - variation_name: Static icon buttons
         variation_description: ""
         variation_code_snippet: |-
           <button class="a-btn">
@@ -286,16 +286,15 @@ variation_groups:
                            a-btn_icon__on-right">{% include icons/updating.svg %}</span>
           </button>
     variation_group_description: >-
-      ### Static icon buttons
-
-
-      * An icon should appear after the text it represents. The only exception is the back button, in which the icon should appear before the button’s text. 
+      * An icon should appear after the text it represents. The only exception
+      is the back button, in which the icon should appear before the button’s
+      text. 
 
       * Each icon should be used exclusively and consistently for one action.
 
       * The color and font-size of an icon should be the same as the text it represents.
 
-      * Icons are never underlined.
+      * Icons should never be underlined.
 use_cases: Buttons signal actions. They should be used sparingly; each
   additional button on a page reduces the visual prominence of a call to action.
   In contrast, [links](https://cfpb.github.io/design-system/components/links)

@@ -114,14 +114,14 @@ variation_groups:
       - variation_specs: ""
         variation_code_snippet: |-
           <p>
-              Documents minicons can emphasize a link that contains a
+            The document icon can emphasize a link that contains a
               <a class="a-link
                         a-link__icon"
                 href="#">
                   <span class="a-link_text">file or document</span>
                   {% include icons/download.svg %}
               </a>.
-              Use the external link minicon to emphasize
+              Use the external link icon to emphasize
               <a class="a-link
                         a-link__icon"
                 href="#">
@@ -142,7 +142,7 @@ variation_groups:
           modifier to `.a-link__icon`.
         variation_code_snippet: |-
           <p>
-              Documents minicons can emphasize a link that contains a
+              The document icon can emphasize a link that contains a
               <a class="a-link
                     a-link__icon
                     a-link__no-wrap"

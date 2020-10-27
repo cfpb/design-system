@@ -292,16 +292,14 @@ variation_groups:
 
       * Each icon should be used exclusively and consistently for one action.
 
-      * The color and font-size of an icon should be the same as the text it represents.
-
       * Icons should never be underlined.
 use_cases: Buttons signal actions. They should be used sparingly; each
   additional button on a page reduces the visual prominence of a call to action.
   In contrast, [links](https://cfpb.github.io/design-system/components/links)
   should lead users to another page or further information.
 guidelines: >-
-  * Use generous white space to bring focus to a button and make it appear
-  actionable.
+  * Use generous white space to bring focus to a button and better make it
+  appear actionable.
 
   * Write labels in sentence case.
 

@@ -56,7 +56,9 @@ variation_groups:
           unit group: specs for 25/75 image and text")
 
 
-          * Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
+          * Imagery: 1:1 ratio, may be illustration or photography. 
+
+          * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
 
           * Padding: 30px padding for imagery across responsive sizes
 
@@ -95,7 +97,7 @@ variation_groups:
           ![](/design-system/images/uploads/50_50_style_mockup.png)
 
 
-          * Imagery: 16:9 ratio, recommend 1600 x 900 pixels to account for retina displays.
+          * Imagery: 16:9 ratio, recommend 1600 x 900 pixels to account for retina displays
 
           * Headings: H2-4 can be used
 
@@ -129,14 +131,15 @@ variation_groups:
 
           * When there are multiple paragraphs of copy
         variation_specs: >-
-          * Imagery: 1:1 ratio, may be illustration, isocon, or photography. 
+          * Imagery: 1:1 ratio, may be illustration or photography. 
 
           * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
 
           * Headings: H2-4 can be used
     variation_group_description: "Image and text components consist of an image,
-      plus a heading, short descriptive text, and call to action. There are two
-      types of image and text component: 25/75 and 50/50."
+      plus a heading, short descriptive text, and call to action. There are
+      three layouts that allow you to pair text with images: 25/75, 50/50, and
+      33/33/33 components."
   - variations:
       - variation_code_snippet: ""
         variation_description: >-

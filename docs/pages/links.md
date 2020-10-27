@@ -114,7 +114,7 @@ variation_groups:
       - variation_specs: ""
         variation_code_snippet: |-
           <p>
-            The document icon can emphasize a link that contains a
+            The document icon should emphasize a link that contains a
               <a class="a-link
                         a-link__icon"
                 href="#">
@@ -142,7 +142,7 @@ variation_groups:
           modifier to `.a-link__icon`.
         variation_code_snippet: |-
           <p>
-              The document icon can emphasize a link that contains a
+              The document icon should emphasize a link that contains a
               <a class="a-link
                     a-link__icon
                     a-link__no-wrap"

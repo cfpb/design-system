@@ -37,26 +37,28 @@ variation_groups:
           #### When to use
 
 
-          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
+          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page
 
-          * When an image or illustration helps users better understand the purpose of content.
+          * When an image or illustration helps users better understand the purpose of content
 
-          * Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format.
+          * Can be used for an even or odd number of items and may imply a hierarchy of information given the list style format
 
 
           #### When other options are better
 
 
-          * When content doesn’t require imagery. 
+          * When content doesn’t require imagery 
 
-          * When there are multiple paragraphs of copy.
+          * When there are multiple paragraphs of copy
         variation_specs: >-
           ![diagram of the 25/75 image and text module with 30px of spacing
           shown](/design-system/images/uploads/25-75_style_desktop_1.jpg "Info
           unit group: specs for 25/75 image and text")
 
 
-          * Imagery: 1:1 ratio, may be illustration, isocon, or photography. * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
+          * Imagery: 1:1 ratio, may be illustration or photography 
+
+          * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
 
           * Padding: 30px padding for imagery across responsive sizes
 
@@ -76,26 +78,26 @@ variation_groups:
           #### When to use
 
 
-          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page.
+          * When a call-to-action, leading users to a deeper page in the section, needs a visual highlight on the page
 
-          * When an image or illustration helps users better understand the purpose of content.
+          * When an image or illustration helps users better understand the purpose of content
 
-          * Ideally, when an even number of these components can be featured together.
+          * Ideally, when an even number of these components can be featured together
 
-          * To help establish a hierarchy of linked content on this page.
+          * To help establish a hierarchy of linked content on this page
 
 
           #### When other options are better
 
 
-          * When content doesn’t require imagery. 
+          * When content doesn’t require imagery 
 
-          * When there are multiple paragraphs of copy.
+          * When there are multiple paragraphs of copy
         variation_specs: >-
           ![](/design-system/images/uploads/50_50_style_mockup.png)
 
 
-          * Imagery: 16:9 ratio, recommend 1600 x 900 pixels to account for retina displays.
+          * Imagery: 16:9 ratio, recommend 1600 x 900 pixels to account for retina displays
 
           * Headings: H2-4 can be used
 
@@ -112,10 +114,10 @@ variation_groups:
           #### When to use
 
 
-          * Ideally, when a group of these components can be featured together in multiples of three (3, 6, 9, etc.).
+          * Ideally, when a group of these components can be featured together in multiples of three (3, 6, 9, etc.)
 
 
-          * When an image or illustration helps users better understand the purpose of content.
+          * When an image or illustration helps users better understand the purpose of content
 
 
           #### When other options are better
@@ -123,20 +125,21 @@ variation_groups:
 
           * When the number of components would be better featured in multiples of 2, use the 50/50 text component instead
 
-          * When headings are too long for the narrower width, for example, when they break to 3 lines or more. 
+          * When headings are too long for the narrower width, for example, when they break to 3 lines or more 
 
           * When content doesn't require imagery
 
           * When there are multiple paragraphs of copy
         variation_specs: >-
-          * Imagery: 1:1 ratio, may be illustration, isocon, or photography. 
+          * Imagery: 1:1 ratio, may be illustration or photography 
 
           * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
 
           * Headings: H2-4 can be used
     variation_group_description: "Image and text components consist of an image,
-      plus a heading, short descriptive text, and call to action. There are two
-      types of image and text component: 25/75 and 50/50."
+      plus a heading, short descriptive text, and call to action. There are
+      three layouts that allow you to pair text with images: 25/75, 50/50, and
+      33/33/33 components."
   - variations:
       - variation_code_snippet: ""
         variation_description: >-
@@ -148,15 +151,15 @@ variation_groups:
           #### When to use
 
 
-          * Ideally, when an even number of these components can be featured together.
+          * Ideally, when an even number of these components can be featured together
 
 
           #### When other options are better
 
 
-          * When the number of components would be better featured in multiples of 3, use the 33/33/33 text component instead.
+          * When the number of components would be better featured in multiples of 3, use the 33/33/33 text component instead
 
-          * When content requires imagery, use the 50/50 image and text or 25/75 image and text components.
+          * When content requires imagery, use the 50/50 image and text or 25/75 image and text components
         variation_jinja_code_snippet: >-
           File in https://github.com/cfpb/cfgov-refresh:
 
@@ -179,17 +182,17 @@ variation_groups:
           #### When to use
 
 
-          * Ideally, when a group of these components can be featured together in multiples of three (3, 6, 9, etc.).
+          * Ideally, when a group of these components can be featured together in multiples of three (3, 6, 9, etc.)
 
 
           #### When other options are better
 
 
-          * When the number of components would be better featured in multiples of 2, use the 50/50 text component instead
+          * When the number of components would be better featured in multiples of 2, use the 50/50 text component instead.
 
-          * When headings are too long for the narrower width, for example, when they break to 3 lines or more.
+          * When headings are too long for the narrower width, for example, when they break to 3 lines or more
 
-          * When content requires imagery, use the 50/50 image and text or the 25/75 image and text instead.
+          * When content requires imagery, use the 50/50 image and text or the 25/75 image and text instead
         variation_jinja_code_snippet: >-
           File in https://github.com/cfpb/cfgov-refresh:
 
@@ -214,9 +217,9 @@ guidelines: >-
   #### Headings
 
 
-  * 25/75 image and text component: 60 characters or less, ideally rendering as one line.
+  * 25/75 image and text component: 60 characters or less, ideally rendering as one line
 
-  * 50/50 image and text component: 30 characters or less, ideally rendering as one line.
+  * 50/50 image and text component: 30 characters or less, ideally rendering as one line
 
   * 50/50 and 33/33/33 text components: 45 characters max. 25 characters max is preferred, which renders as one line at max column width.
 
@@ -234,13 +237,13 @@ guidelines: >-
 
   * 25/75 image and text component: 275 characters max
 
-  * 50/50 image and text component: 50 characters min, 130 characters max, which renders as 2-3 lines at max column width.
+  * 50/50 image and text component: 50 characters min, 130 characters max, which renders as 2-3 lines at max column width
 
   * When these components are featured together (which is ideal), the amount of content in each component should be as close to the same number of total lines as possible.
 
-    * For 50/50 text components, one or two lines different is ok
-    * For 33/33/33 text components, a difference of one line is ok
-  * Option to give the entire info unit group an introductory paragraph
+    * For 50/50 text components, one or two lines different is ok.
+    * For 33/33/33 text components, a difference of one line is ok.
+  * Option to give the entire info unit group an introductory paragraph.
 
 
   #### Call to action
@@ -299,7 +302,7 @@ behavior: >-
   ### 25/75 image and text component
 
 
-  At breakpoints below 601, side-by-side modules stack vertically in Z-order as shown below, and the mobile link style is used for the call to action link(s)
+  At breakpoints below 601, side-by-side modules stack vertically in Z-order as shown below, and the mobile link style is used for the call to action link(s).
 
 
   ![Below 600 px the 25/75 image and text components collapse with the image above the header and description text](/design-system/images/uploads/25-75-behavior-600.png "Breakpoint diagram for how 25/75 image and text component works at smaller screen sizes")

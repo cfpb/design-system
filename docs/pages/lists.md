@@ -55,6 +55,17 @@ variation_groups:
           presented in the order of importance, or a finite list of a counted
           number of items.
         variation_code_snippet: |-
+          <p>Less than 10 items is not indented.</p>
+          <ol>
+              <li>List item 1</li>
+              <li>List item 2</li>
+              <li>List item 3</li>
+          </ol>
+
+          <p>
+            More than 9 items is indented to align double digits.
+            Inner lists are not indented, regardless of the number of items.
+          </p>
           <ol>
               <li>List item 1</li>
               <li>
@@ -63,9 +74,30 @@ variation_groups:
                         <li>Nested item 2-1</li>
                         <li>Nested item 2-2</li>
                         <li>Nested item 2-3</li>
+                        <li>Nested item 2-4</li>
+                        <li>Nested item 2-5</li>
+                        <li>Nested item 2-6</li>
+                        <li>Nested item 2-7</li>
+                        <li>Nested item 2-8</li>
+                        <li>Nested item 2-9</li>
+                        <li>Nested item 2-10</li>
+
                   </ol>
               </li>
-              <li>List item 3</li>
+              <li>List item 3
+                  <ol>
+                        <li>Nested item 3-1</li>
+                        <li>Nested item 3-2</li>
+                        <li>Nested item 3-3</li>
+                  </ol>
+              </li>
+              <li>List item 4</li>
+              <li>List item 5</li>
+              <li>List item 6</li>
+              <li>List item 7</li>
+              <li>List item 8</li>
+              <li>List item 9</li>
+              <li>List item 10</li>
           </ol>
         variation_specs: >-
           #### Default

@@ -1272,6 +1272,13 @@ ul ul {
 ol {
   padding-left: 1.3125em;
 }
+ol li:nth-last-child(n+10),
+ol li:nth-last-child(n+10) ~ li {
+  margin-left: 0.5625rem;
+}
+ol ol li {
+  margin-left: 0 !important;
+}
 caption {
   margin-bottom: 0.625em;
   text-align: left;

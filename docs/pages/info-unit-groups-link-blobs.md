@@ -106,16 +106,14 @@ variation_groups:
           * At breakpoints below 601: Heading sizes H3 and above automatically drop down one level and the mobile link style is used for the call to action link(s).
       - variation_name: 33/33/33 image and text component
         variation_description: >-
-          
-
-          ![Info unit group: 33/33/33 with image and text](/design-system/images/uploads/33-33-33_image_text.jpg "Info unit group: example of 33/33/33 with image and text")
+          ![Image of a 33/33/33 image and text
+          component](/design-system/images/uploads/33-33-33_image_text.jpg)
 
 
           #### When to use
 
 
           * Ideally, when a group of these components can be featured together in multiples of three (3, 6, 9, etc.)
-
 
           * When an image or illustration helps users better understand the purpose of content
 

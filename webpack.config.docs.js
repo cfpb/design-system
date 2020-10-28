@@ -2,7 +2,7 @@ const autoprefixer = require( 'autoprefixer' );
 const cssnano = require( 'cssnano' );
 const path = require( 'path' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
-const TerserJSPlugin = require( 'terser-webpack-plugin' );
+const TerserWebpackPlugin = require( 'terser-webpack-plugin' );
 
 module.exports = ( env, argv ) => {
 
@@ -118,7 +118,7 @@ module.exports = ( env, argv ) => {
   if ( argv.mode === 'production' ) {
     config.mode = 'production';
     config.optimization = {
-      minimizer: [ new TerserJSPlugin() ]
+      minimizer: [ new TerserWebpackPlugin() ]
     };
   }
 

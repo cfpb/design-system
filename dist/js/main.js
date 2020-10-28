@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/anchor-js/anchor.js":
@@ -36,15 +36,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
      * @param {Object} opts - Options object
      */
     function _applyRemainingDefaultOptions(opts) {
-      opts.icon = opts.hasOwnProperty('icon') ? opts.icon : '\ue9cb'; // Accepts characters (and also URLs?), like  '#', '¶', '❡', or '§'.
-      opts.visible = opts.hasOwnProperty('visible') ? opts.visible : 'hover'; // Also accepts 'always' & 'touch'
-      opts.placement = opts.hasOwnProperty('placement') ? opts.placement : 'right'; // Also accepts 'left'
-      opts.ariaLabel = opts.hasOwnProperty('ariaLabel') ? opts.ariaLabel : 'Anchor'; // Accepts any text.
-      opts.class = opts.hasOwnProperty('class') ? opts.class : ''; // Accepts any class name.
-      opts.base = opts.hasOwnProperty('base') ? opts.base : ''; // Accepts any base URI.
+      opts.icon = Object.prototype.hasOwnProperty.call(opts, 'icon') ? opts.icon : '\ue9cb'; // Accepts characters (and also URLs?), like  '#', '¶', '❡', or '§'.
+      opts.visible = Object.prototype.hasOwnProperty.call(opts, 'visible') ? opts.visible : 'hover'; // Also accepts 'always' & 'touch'
+      opts.placement = Object.prototype.hasOwnProperty.call(opts, 'placement') ? opts.placement : 'right'; // Also accepts 'left'
+      opts.ariaLabel = Object.prototype.hasOwnProperty.call(opts, 'ariaLabel') ? opts.ariaLabel : 'Anchor'; // Accepts any text.
+      opts.class = Object.prototype.hasOwnProperty.call(opts, 'class') ? opts.class : ''; // Accepts any class name.
+      opts.base = Object.prototype.hasOwnProperty.call(opts, 'base') ? opts.base : ''; // Accepts any base URI.
       // Using Math.floor here will ensure the value is Number-cast and an integer.
-      opts.truncate = opts.hasOwnProperty('truncate') ? Math.floor(opts.truncate) : 64; // Accepts any value that can be typecast to a number.
-      opts.titleText = opts.hasOwnProperty('titleText') ? opts.titleText : ''; // Accepts any text.
+      opts.truncate = Object.prototype.hasOwnProperty.call(opts, 'truncate') ? Math.floor(opts.truncate) : 64; // Accepts any value that can be typecast to a number.
+      opts.titleText = Object.prototype.hasOwnProperty.call(opts, 'titleText') ? opts.titleText : ''; // Accepts any text.
     }
 
     _applyRemainingDefaultOptions(this.options);
@@ -55,7 +55,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
      * @return {Boolean} - true if the current device supports touch.
      */
     this.isTouchDevice = function() {
-      return !!(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
+      return Boolean('ontouchstart' in window || window.TouchEvent || window.DocumentTouch && document instanceof DocumentTouch);
     };
 
     /**
@@ -105,7 +105,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
       // We produce a list of existing IDs so we don't generate a duplicate.
       elsWithIds = document.querySelectorAll('[id]');
-      idList = [].map.call(elsWithIds, function assign(el) {
+      idList = [].map.call(elsWithIds, function(el) {
         return el.id;
       });
 
@@ -134,6 +134,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
             index = idList.indexOf(newTidyText);
             count += 1;
           } while (index !== -1);
+
           index = undefined;
           idList.push(newTidyText);
 
@@ -155,6 +156,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         if (this.options.titleText) {
           anchor.title = this.options.titleText;
         }
+
         // Adjust the href if there's a <base> tag. See https://github.com/bryanbraun/anchorjs/issues/98
         hrefBase = document.querySelector('base') ? window.location.pathname + window.location.search : '';
         hrefBase = this.options.base || hrefBase;
@@ -179,10 +181,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         if (this.options.placement === 'left') {
           anchor.style.position = 'absolute';
           anchor.style.marginLeft = '-1em';
-          anchor.style.paddingRight = '0.5em';
+          anchor.style.paddingRight = '.5em';
           elements[i].insertBefore(anchor, elements[i].firstChild);
         } else { // if the option provided is `right` (or anything else).
-          anchor.style.paddingLeft = '0.375em';
+          anchor.style.paddingLeft = '.375em';
           elements[i].appendChild(anchor);
         }
       }
@@ -190,6 +192,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       for (i = 0; i < indexesToDrop.length; i++) {
         elements.splice(indexesToDrop[i] - i, 1);
       }
+
       this.elements = this.elements.concat(elements);
 
       return this;
@@ -214,10 +217,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           if (index !== -1) {
             this.elements.splice(index, 1);
           }
+
           // Remove the anchor from the DOM.
           elements[i].removeChild(domAnchor);
         }
       }
+
       return this;
     };
 
@@ -238,8 +243,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
      * @return {String}      - hyphen-delimited text for use in IDs and URLs.
      */
     this.urlify = function(text) {
-      // Regex for finding the non-safe URL characters (many need escaping): & +$,:;=?@"#{}|^~[`%!'<>]./()*\ (newlines, tabs, backspace, & vertical tabs)
-      var nonsafeChars = /[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,
+      // Decode HTML characters such as '&nbsp;' first.
+      var textareaElement = document.createElement('textarea');
+      textareaElement.innerHTML = text;
+      text = textareaElement.value;
+
+      // Regex for finding the non-safe URL characters (many need escaping):
+      //   & +$,:;=?@"#{}|^~[`%!'<>]./()*\ (newlines, tabs, backspace, vertical tabs, and non-breaking space)
+      var nonsafeChars = /[& +$,:;=?@"#{}|^~[`%!'<>\]./()*\\\n\t\b\v\u00A0]/g,
           urlText;
 
       // The reason we include this _applyRemainingDefaultOptions is so urlify can be called independently,
@@ -251,7 +262,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       // Note: we trim hyphens after truncating because truncating can cause dangling hyphens.
       // Example string:                      // " ⚡⚡ Don't forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
       urlText = text.trim()                   // "⚡⚡ Don't forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
-        .replace(/\'/gi, '')                  // "⚡⚡ Dont forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
+        .replace(/'/gi, '')                   // "⚡⚡ Dont forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
         .replace(nonsafeChars, '-')           // "⚡⚡-Dont-forget--URL-fragments-should-be-i18n-friendly--hyphenated--short--and-clean-"
         .replace(/-{2,}/g, '-')               // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-short-and-clean-"
         .substring(0, this.options.truncate)  // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-"
@@ -268,8 +279,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
      * @return   {Boolean}     true/false
      */
     this.hasAnchorJSLink = function(el) {
-      var hasLeftAnchor = el.firstChild && ((' ' + el.firstChild.className + ' ').indexOf(' anchorjs-link ') > -1),
-          hasRightAnchor = el.lastChild && ((' ' + el.lastChild.className + ' ').indexOf(' anchorjs-link ') > -1);
+      var hasLeftAnchor = el.firstChild && (' ' + el.firstChild.className + ' ').indexOf(' anchorjs-link ') > -1,
+          hasRightAnchor = el.lastChild && (' ' + el.lastChild.className + ' ').indexOf(' anchorjs-link ') > -1;
 
       return hasLeftAnchor || hasRightAnchor || false;
     };
@@ -290,8 +301,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       } else if (Array.isArray(input) || input instanceof NodeList) {
         elements = [].slice.call(input);
       } else {
-        throw new Error('The selector provided to AnchorJS was invalid.');
+        throw new TypeError('The selector provided to AnchorJS was invalid.');
       }
+
       return elements;
     }
 
@@ -307,26 +319,26 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
       var style = document.createElement('style'),
           linkRule =
-          ' .anchorjs-link {'                       +
-          '   opacity: 0;'                          +
-          '   text-decoration: none;'               +
-          '   -webkit-font-smoothing: antialiased;' +
-          '   -moz-osx-font-smoothing: grayscale;'  +
-          ' }',
+          '.anchorjs-link{'                        +
+            'opacity:0;'                           +
+            'text-decoration:none;'                +
+            '-webkit-font-smoothing:antialiased;'  +
+            '-moz-osx-font-smoothing:grayscale'    +
+          '}',
           hoverRule =
-          ' *:hover > .anchorjs-link,'              +
-          ' .anchorjs-link:focus  {'                +
-          '   opacity: 1;'                          +
-          ' }',
+          ':hover>.anchorjs-link,'                 +
+          '.anchorjs-link:focus{'                  +
+            'opacity:1'                            +
+          '}',
           anchorjsLinkFontFace =
-          ' @font-face {'                           +
-          '   font-family: "anchorjs-icons";'       + // Icon from icomoon; 10px wide & 10px tall; 2 empty below & 4 above
-          '   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype");' +
-          ' }',
+          '@font-face{'                            +
+            'font-family:anchorjs-icons;'          + // Icon from icomoon; 10px wide & 10px tall; 2 empty below & 4 above
+            'src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")' +
+          '}',
           pseudoElContent =
-          ' [data-anchorjs-icon]::after {'          +
-          '   content: attr(data-anchorjs-icon);'   +
-          ' }',
+          '[data-anchorjs-icon]::after{'           +
+            'content:attr(data-anchorjs-icon)'     +
+          '}',
           firstStyleEl;
 
       style.className = 'anchorjs';
@@ -335,7 +347,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       // We place it in the head with the other style tags, if possible, so as to
       // not look out of place. We insert before the others so these styles can be
       // overridden if necessary.
-      firstStyleEl = document.head.querySelector('[rel="stylesheet"], style');
+      firstStyleEl = document.head.querySelector('[rel="stylesheet"],style');
       if (firstStyleEl === undefined) {
         document.head.appendChild(style);
       } else {
@@ -362,7 +374,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /*! namespace exports */
 /*! exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -447,14 +459,11 @@ function handleToggleClick(event) {
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
 /**
  * Retrieve redirect source name and URL.
  * @param {Array} match - Matched URL UTM source.
@@ -518,7 +527,7 @@ function init() {
   }
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+/* harmony default export */ __webpack_exports__["default"] = ({
   init: init
 });
 
@@ -531,14 +540,11 @@ function init() {
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
 /**
  * Initialize the side navigation script to handle opening the sidebar
  * when the page is resized between mobile and desktop sizes.
@@ -581,7 +587,7 @@ function init() {
   });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+/* harmony default export */ __webpack_exports__["default"] = ({
   init: init
 });
 
@@ -597,14 +603,14 @@ function init() {
 /*! export toggleDetails [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TOGGLE_ATTRIBUTE": () => /* binding */ TOGGLE_ATTRIBUTE,
-/* harmony export */   "toggleDetails": () => /* binding */ toggleDetails,
-/* harmony export */   "toggleAllDetails": () => /* binding */ toggleAllDetails
+/* harmony export */   "TOGGLE_ATTRIBUTE": function() { return /* binding */ TOGGLE_ATTRIBUTE; },
+/* harmony export */   "toggleDetails": function() { return /* binding */ toggleDetails; },
+/* harmony export */   "toggleAllDetails": function() { return /* binding */ toggleAllDetails; }
 /* harmony export */ });
 var HIDDEN_CLASS = 'u-hidden';
 var TOGGLE_ATTRIBUTE = 'data-toggle-details';
@@ -2650,55 +2656,49 @@ ErrorSummary.prototype.getAssociatedLegendOrLabel = function ($input) {
 
 function Header ($module) {
   this.$module = $module;
+  this.$menuButton = $module && $module.querySelector('.govuk-js-header-toggle');
+  this.$menu = this.$menuButton && $module.querySelector(
+    '#' + this.$menuButton.getAttribute('aria-controls')
+  );
 }
 
+/**
+ * Initialise header
+ *
+ * Check for the presence of the header, menu and menu button – if any are
+ * missing then there's nothing to do so return early.
+ */
 Header.prototype.init = function () {
-  // Check for module
-  var $module = this.$module;
-  if (!$module) {
+  if (!this.$module || !this.$menuButton || !this.$menu) {
     return
   }
 
-  // Check for button
-  var $toggleButton = $module.querySelector('.govuk-js-header-toggle');
-  if (!$toggleButton) {
-    return
-  }
-
-  // Handle $toggleButton click events
-  $toggleButton.addEventListener('click', this.handleClick.bind(this));
+  this.syncState(this.$menu.classList.contains('govuk-header__navigation--open'));
+  this.$menuButton.addEventListener('click', this.handleMenuButtonClick.bind(this));
 };
 
 /**
-* Toggle class
-* @param {object} node element
-* @param {string} className to toggle
-*/
-Header.prototype.toggleClass = function (node, className) {
-  if (node.className.indexOf(className) > 0) {
-    node.className = node.className.replace(' ' + className, '');
-  } else {
-    node.className += ' ' + className;
-  }
+ * Sync menu state
+ *
+ * Sync the menu button class and the accessible state of the menu and the menu
+ * button with the visible state of the menu
+ *
+ * @param {boolean} isVisible Whether the menu is currently visible
+ */
+Header.prototype.syncState = function (isVisible) {
+  this.$menuButton.classList.toggle('govuk-header__menu-button--open', isVisible);
+  this.$menuButton.setAttribute('aria-expanded', isVisible);
 };
 
 /**
-* An event handler for click event on $toggleButton
-* @param {object} event event
-*/
-Header.prototype.handleClick = function (event) {
-  var $module = this.$module;
-  var $toggleButton = event.target || event.srcElement;
-  var $target = $module.querySelector('#' + $toggleButton.getAttribute('aria-controls'));
-
-  // If a button with aria-controls, handle click
-  if ($toggleButton && $target) {
-    this.toggleClass($target, 'govuk-header__navigation--open');
-    this.toggleClass($toggleButton, 'govuk-header__menu-button--open');
-
-    $toggleButton.setAttribute('aria-expanded', $toggleButton.getAttribute('aria-expanded') !== 'true');
-    $target.setAttribute('aria-hidden', $target.getAttribute('aria-hidden') === 'false');
-  }
+ * Handle menu button click
+ *
+ * When the menu button is clicked, change the visibility of the menu and then
+ * sync the accessibility state and menu button state
+ */
+Header.prototype.handleMenuButtonClick = function () {
+  var isVisible = this.$menu.classList.toggle('govuk-header__navigation--open');
+  this.syncState(isVisible);
 };
 
 function Radios ($module) {
@@ -3202,11 +3202,15 @@ exports.Tabs = Tabs;
 /*!***********************************!*\
   !*** ./docs/assets/css/main.less ***!
   \***********************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements:  */
-/***/ (() => {
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -3217,7 +3221,7 @@ exports.Tabs = Tabs;
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
 /*! CommonJS bailout: module.exports is used directly at 6:0-14 */
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 /*jshint browser:true, node:true*/
@@ -3709,7 +3713,7 @@ Delegate.prototype.destroy = function() {
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module, __webpack_require__ */
 /*! CommonJS bailout: module.exports is used directly at 14:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 /*jshint browser:true, node:true*/
@@ -3741,7 +3745,7 @@ module.exports.Delegate = Delegate;
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: __webpack_require__, module */
 /*! CommonJS bailout: module.exports is used directly at 310:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /* ==========================================================================
    AtomicComponent
@@ -4064,7 +4068,7 @@ module.exports = AtomicComponent;
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: __webpack_require__, module */
 /*! CommonJS bailout: module.exports is used directly at 16:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /* ==========================================================================
    Organism
@@ -4093,7 +4097,7 @@ module.exports = Organism;
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
 /*! CommonJS bailout: module.exports is used directly at 57:0-14 */
-/***/ ((module) => {
+/***/ (function(module) {
 
 /* ==========================================================================
    Events
@@ -4163,7 +4167,7 @@ module.exports = Events;
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
 /*! CommonJS bailout: module.exports is used directly at 47:0-14 */
-/***/ ((module) => {
+/***/ (function(module) {
 
 /* ==========================================================================
    Atomic configurations and constants
@@ -4229,7 +4233,7 @@ module.exports = {
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
 /*! CommonJS bailout: module.exports is used directly at 44:0-14 */
-/***/ ((module) => {
+/***/ (function(module) {
 
 /* ==========================================================================
    Dom closest
@@ -4288,7 +4292,7 @@ module.exports = {
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
 /*! CommonJS bailout: module.exports is used directly at 51:0-14 */
-/***/ ((module) => {
+/***/ (function(module) {
 
 /* ==========================================================================
    Assign
@@ -4352,7 +4356,7 @@ module.exports = { assign: assign };
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module, __webpack_require__ */
 /*! CommonJS bailout: module.exports is used directly at 261:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 // Required modules.
 const Events = __webpack_require__( /*! ../../mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js" );
@@ -4626,7 +4630,7 @@ module.exports = BaseTransition;
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
 /*! CommonJS bailout: module.exports is used directly at 166:0-14 */
-/***/ ((module) => {
+/***/ (function(module) {
 
 /* ==========================================================================
    Javascript Type Checkers
@@ -4815,7 +4819,7 @@ module.exports = {
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: __webpack_require__, module */
 /*! CommonJS bailout: module.exports is used directly at 137:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /* ==========================================================================
    Expandable Organism
@@ -4963,7 +4967,7 @@ module.exports = Expandable;
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module, __webpack_require__ */
 /*! CommonJS bailout: module.exports is used directly at 130:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 // Required modules.
 const Events = __webpack_require__( /*! @cfpb/cfpb-atomic-component/src/mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js" );
@@ -5106,7 +5110,7 @@ module.exports = ExpandableTransition;
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module, __webpack_require__ */
 /*! CommonJS bailout: module.exports is used directly at 21:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /* ==========================================================================
    Table Organism
@@ -5140,7 +5144,7 @@ module.exports = Table;
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: __webpack_require__, module */
 /*! CommonJS bailout: module.exports is used directly at 41:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /* ==========================================================================
    Table Row Links
@@ -5192,7 +5196,7 @@ module.exports = TableRowLinks;
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: __webpack_require__, module */
 /*! CommonJS bailout: module.exports is used directly at 220:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /* ==========================================================================
    Table Sortablle
@@ -5443,31 +5447,31 @@ module.exports = TableSortable;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
+/******/ 		__webpack_require__.n = function(module) {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => module['default'] :
-/******/ 				() => module;
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		__webpack_require__.g = (function() {
 /******/ 			if (typeof globalThis === 'object') return globalThis;
 /******/ 			try {
@@ -5476,23 +5480,23 @@ module.exports = TableSortable;
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 /******/ 	// startup

@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/lunr/lunr.js":
@@ -7,7 +7,7 @@
   \***********************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: __webpack_require__, __webpack_exports__, module */
-/***/ ((module, exports, __webpack_require__) => {
+/***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
  * lunr - http://lunrjs.com - A bit like Solr, but much smaller and not as bright - 2.3.9
@@ -3508,8 +3508,7 @@ lunr.QueryParser.parseBoost = function (parser) {
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/************************************************************************/
-(() => {
+!function() {
 /*!**********************************!*\
   !*** ./docs/assets/js/search.js ***!
   \**********************************/
@@ -3643,8 +3642,7 @@ if (results.length === 0) {
   // Display the results of the search.
   displaySearchResults(searchResultsElm, results, searchStore);
 }
-})();
-
+}();
 /******/ })()
 ;
 //# sourceMappingURL=search.js.map

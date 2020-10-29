@@ -18,7 +18,7 @@ variation_groups:
       - variation_name: 25/75 image and text component
         variation_description: >-
           ![Info unit group: example of
-          25/75](/design-system/images/uploads/2575example_desktop.jpg "Info
+          25/75](/design-system/images/uploads/2575example_desktop-1-.jpg "Info
           unit group: example of 25/75")
 
 

@@ -45,6 +45,15 @@
     "version": "yarn run changelog && git add CHANGELOG.md"
   },
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",
+  "changelog": {
+    "labels": {
+      "lerna-changelog/breaking": "Breaking Change",
+      "lerna-changelog/enhancement": "Enhancement",
+      "lerna-changelog/bug": "Bug Fix",
+      "lerna-changelog/documentation": "Documentation",
+      "lerna-changelog/internal": "Internal"
+    }
+  },
   "dependencies": {
     "anchor-js": "4.3.0",
     "core-js": "^3.6.5",

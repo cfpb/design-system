@@ -41,6 +41,6 @@ function closest( element, selector ) {
 /* eslint-enable complexity */
 
 // Expose public methods.
-module.exports = {
-  closest: closest
+export {
+  closest
 };

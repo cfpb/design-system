@@ -1,5 +1,5 @@
 import simulateEvent from '../../../../util/simulate-event';
-const Table = require( '../../../../../packages/cfpb-tables/src/Table' );
+import Table from '../../../../../packages/cfpb-tables/src/Table';
 
 const HTML_SNIPPET = `
 <table id="test-one" class="o-table o-table__sortable">

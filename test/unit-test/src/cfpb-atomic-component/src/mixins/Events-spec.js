@@ -1,5 +1,4 @@
-const srcPath = require( '../src-path' );
-const Events = require( srcPath + '/mixins/Events' );
+import Events from '../../../../../../packages/cfpb-atomic-component/src/mixins/Events';
 
 const HTML_SNIPPET = '<!DOCTYPE html>';
 

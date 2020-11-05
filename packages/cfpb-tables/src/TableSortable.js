@@ -5,10 +5,9 @@
    ========================================================================== */
 
 
-const config = require( '@cfpb/cfpb-atomic-component/src/utilities/config' );
-const closest = require(
-  '@cfpb/cfpb-atomic-component/src/utilities/dom-closest'
-).closest;
+import config from '@cfpb/cfpb-atomic-component/src/utilities/config';
+import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-closest';
+
 const DIRECTIONS = config.DIRECTIONS;
 const UNDEFINED = config.UNDEFINED;
 
@@ -217,4 +216,4 @@ function onSortableClick( event ) {
   return this;
 }
 
-module.exports = TableSortable;
+export default TableSortable;

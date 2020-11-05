@@ -1,6 +1,4 @@
-const ExpandableTransition = require(
-  '../../../../../packages/cfpb-expandables/src/ExpandableTransition'
-);
+import ExpandableTransition from '../../../../../packages/cfpb-expandables/src/ExpandableTransition';
 
 const HTML_SNIPPET = `
 <div class="o-expandable_content" id="test-subject-one">

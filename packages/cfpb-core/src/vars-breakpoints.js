@@ -7,7 +7,7 @@
          they need to be adjusted in vars-breakpoints.less as well.
    ========================================================================== */
 
-module.exports = {
+export default {
   bpXS: {
     min: 0,
     max: 600

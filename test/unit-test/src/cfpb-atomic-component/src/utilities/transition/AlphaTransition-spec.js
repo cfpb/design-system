@@ -1,6 +1,4 @@
-const srcPath = require( '../../src-path' );
-const AlphaTransition =
-  require( '../' + srcPath + 'utilities/transition/AlphaTransition' );
+import AlphaTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition';
 
 let transition;
 

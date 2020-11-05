@@ -1,6 +1,6 @@
 // Required modules.
-const Events = require( '@cfpb/cfpb-atomic-component/src/mixins/Events.js' );
-const BaseTransition = require( '@cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition' );
+import Events from '@cfpb/cfpb-atomic-component/src/mixins/Events.js';
+import BaseTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition';
 
 // Exported constants.
 const CLASSES = {
@@ -127,4 +127,4 @@ function ExpandableTransition( element ) {
 // Public static properties.
 ExpandableTransition.CLASSES = CLASSES;
 
-module.exports = ExpandableTransition;
+export default ExpandableTransition;

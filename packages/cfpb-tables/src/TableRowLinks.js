@@ -5,9 +5,7 @@
    ========================================================================== */
 
 
-const closest = require(
-  '@cfpb/cfpb-atomic-component/src/utilities/dom-closest'
-).closest;
+import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-closest';
 
 const TableRowLinks = {
   ui: {
@@ -38,4 +36,4 @@ function onRowLinkClick( event ) {
   }
 }
 
-module.exports = TableRowLinks;
+export default TableRowLinks;

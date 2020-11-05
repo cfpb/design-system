@@ -1,5 +1,5 @@
 // Required modules.
-const Events = require( '../../mixins/Events.js' );
+import Events from '../../mixins/Events.js';
 
 /* eslint-disable max-lines-per-function, max-statements */
 /**
@@ -258,4 +258,4 @@ BaseTransition.BEGIN_EVENT = 'transitionBegin';
 BaseTransition.END_EVENT = 'transitionEnd';
 BaseTransition.NO_ANIMATION_CLASS = 'u-no-animation';
 
-module.exports = BaseTransition;
+export default BaseTransition;

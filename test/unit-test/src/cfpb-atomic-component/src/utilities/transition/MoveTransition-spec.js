@@ -1,6 +1,4 @@
-const srcPath = require( '../../src-path' );
-const MoveTransition =
-  require( '../' + srcPath + 'utilities/transition/MoveTransition' );
+import MoveTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/MoveTransition';
 
 let transition;
 

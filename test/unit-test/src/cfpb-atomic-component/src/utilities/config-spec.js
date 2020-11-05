@@ -1,5 +1,4 @@
-const srcPath = require( '../src-path' );
-const config = require( srcPath + '/utilities/config' );
+import config from '../../../../../../packages/cfpb-atomic-component/src/utilities/config';
 
 describe( 'config', () => {
   it( 'should return the proper configurations and constants', () => {

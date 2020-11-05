@@ -1,6 +1,6 @@
 // Required modules.
-const Events = require( '../../mixins/Events.js' );
-const BaseTransition = require( './BaseTransition' );
+import Events from '../../mixins/Events.js';
+import BaseTransition from './BaseTransition';
 
 // Exported constants.
 const CLASSES = {
@@ -126,4 +126,4 @@ function MoveTransition( element ) {
 // Public static properties.
 MoveTransition.CLASSES = CLASSES;
 
-module.exports = MoveTransition;
+export default MoveTransition;

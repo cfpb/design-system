@@ -1,5 +1,4 @@
-const srcPath = require( '../src-path' );
-let AtomicComponent = require( srcPath + '/components/AtomicComponent' );
+import AtomicComponent from '../../../../../../packages/cfpb-atomic-component/src/components/AtomicComponent';
 
 const HTML_SNIPPET = `
 <div id="test-block-a" class="test-class">
@@ -18,7 +17,6 @@ describe( 'AtomicComponent', () => {
 
   beforeEach( () => {
     document.body.innerHTML = HTML_SNIPPET;
-    AtomicComponent = require( srcPath + '/components/AtomicComponent' );
   } );
 
   it( 'should correctly create an Atomic Component instance', () => {

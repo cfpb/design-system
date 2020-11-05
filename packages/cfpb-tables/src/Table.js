@@ -3,10 +3,10 @@
    ========================================================================== */
 
 
-const config = require( '@cfpb/cfpb-atomic-component/src/utilities/config' );
-const Organism = require( '@cfpb/cfpb-atomic-component/src/components/Organism' );
-const TableSortable = require( './TableSortable' );
-const TableRowLinks = require( './TableRowLinks' );
+import config from '@cfpb/cfpb-atomic-component/src/utilities/config';
+import Organism from '@cfpb/cfpb-atomic-component/src/components/Organism';
+import TableSortable from './TableSortable';
+import TableRowLinks from './TableRowLinks';
 
 const Table = Organism.extend( {
   ui: {
@@ -18,4 +18,4 @@ const Table = Organism.extend( {
 
 Table.constants.DIRECTIONS = config.DIRECTIONS;
 
-module.exports = Table;
+export default Table;

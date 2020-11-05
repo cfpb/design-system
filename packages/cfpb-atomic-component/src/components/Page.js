@@ -5,12 +5,12 @@
 
    ========================================================================== */
 
-const AtomicComponent = require( './AtomicComponent' );
-const TYPES = require( '../utilities/config' ).TYPES;
+import AtomicComponent from './AtomicComponent';
+import config from '../utilities/config';
 
 const Page = AtomicComponent.extend( {
-  TYPE: TYPES.TEMPLATE,
-  CHILD_TYPES: [ TYPES.TEMPLATE, TYPES.ORGANISM, TYPES.MOLECULE, TYPES.ATOM ]
+  TYPE: config.TYPES.TEMPLATE,
+  CHILD_TYPES: [ config.TYPES.TEMPLATE, config.TYPES.ORGANISM, config.TYPES.MOLECULE, config.TYPES.ATOM ]
 } );
 
-module.exports = Page;
+export default Page;

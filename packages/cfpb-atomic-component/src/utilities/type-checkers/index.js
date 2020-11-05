@@ -163,14 +163,14 @@ function isEmpty( value ) {
 /* eslint-enable complexity, no-mixed-operators */
 
 // Expose public methods.
-module.exports = {
-  isUndefined: isUndefined,
-  isDefined:   isDefined,
-  isObject:    isObject,
-  isString:    isString,
-  isNumber:    isNumber,
-  isDate:      isDate,
-  isArray:     isArray,
-  isFunction:  isFunction,
-  isEmpty:     isEmpty
+export default {
+  isUndefined,
+  isDefined,
+  isObject,
+  isString,
+  isNumber,
+  isDate,
+  isArray,
+  isFunction,
+  isEmpty
 };

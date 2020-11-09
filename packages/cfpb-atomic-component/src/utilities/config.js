@@ -44,7 +44,7 @@ function NO_OP_FUNCTION() { return; }
 
 let UNDEFINED;
 
-module.exports = {
+export default {
   DIRECTIONS:     DIRECTIONS,
   NO_OP_FUNCTION: NO_OP_FUNCTION,
   PREFIXES:       PREFIXES,

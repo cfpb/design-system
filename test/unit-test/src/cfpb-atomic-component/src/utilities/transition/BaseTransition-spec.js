@@ -1,6 +1,4 @@
-const srcPath = require( '../../src-path' );
-const BaseTransition =
-  require( '../' + srcPath + 'utilities/transition/BaseTransition' );
+import BaseTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/BaseTransition';
 
 let transition;
 

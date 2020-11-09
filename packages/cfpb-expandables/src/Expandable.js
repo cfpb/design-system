@@ -2,12 +2,10 @@
    Expandable Organism
    ========================================================================== */
 
-const closest = require(
-  '@cfpb/cfpb-atomic-component/src/utilities/dom-closest'
-).closest;
-const Events = require( '@cfpb/cfpb-atomic-component/src/mixins/Events.js' );
-const Organism = require( '@cfpb/cfpb-atomic-component/src/components/Organism' );
-const ExpandableTransition = require( './ExpandableTransition' );
+import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-closest';
+import Events from '@cfpb/cfpb-atomic-component/src/mixins/Events.js';
+import Organism from '@cfpb/cfpb-atomic-component/src/components/Organism';
+import ExpandableTransition from './ExpandableTransition';
 
 const Expandable = Organism.extend( {
   ui: {
@@ -134,4 +132,4 @@ function getLabelText() {
   return this.ui.label.textContent.trim();
 }
 
-module.exports = Expandable;
+export default Expandable;

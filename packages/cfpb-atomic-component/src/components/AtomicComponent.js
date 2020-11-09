@@ -10,10 +10,10 @@
 
    ========================================================================== */
 
-const assign = require( '../utilities/object-assign' ).assign;
+import { assign } from '../utilities/object-assign';
 const Delegate = require( 'ftdomdelegate' ).Delegate;
-const Events = require( '../mixins/Events' );
-const isFunction = require( '../utilities/type-checkers' ).isFunction;
+import Events from '../mixins/Events';
+import typeCheckers from '../utilities/type-checkers';
 
 
 /**
@@ -34,7 +34,7 @@ function AtomicComponent( element, attributes ) {
   this.setCachedElements();
   this.initializers.push( this.initialize );
   this.initializers.forEach( function( func ) {
-    if ( isFunction( func ) ) func.apply( this, arguments );
+    if ( typeCheckers.isFunction( func ) ) func.apply( this, arguments );
   }, this );
   this.trigger( 'component:initialized' );
 }
@@ -194,7 +194,7 @@ assign( AtomicComponent.prototype, Events, {
     for ( key in events ) {
       if ( {}.hasOwnProperty.call( events, key ) ) {
         method = events[key];
-        if ( isFunction( this[method] ) ) method = this[method];
+        if ( typeCheckers.isFunction( this[method] ) ) method = this[method];
         if ( method ) {
           match = key.match( delegateEventSplitter );
           this.delegate( match[1], match[2], method.bind( this ) );
@@ -307,4 +307,4 @@ AtomicComponent.init = function( scope ) {
   return components;
 };
 
-module.exports = AtomicComponent;
+export default AtomicComponent;

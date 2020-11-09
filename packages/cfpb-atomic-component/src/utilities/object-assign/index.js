@@ -48,4 +48,6 @@ function assign( destination ) {
 /* eslint-enable complexity */
 
 // Expose public methods.
-module.exports = { assign: assign };
+export {
+  assign
+};

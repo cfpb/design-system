@@ -1,5 +1,4 @@
-const srcPath = require( '../src-path' );
-const assign = require( srcPath + '/utilities/object-assign' ).assign;
+import { assign } from '../../../../../../packages/cfpb-atomic-component/src/utilities/object-assign';
 
 let testObjectA;
 let testObjectB;

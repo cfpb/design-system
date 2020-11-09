@@ -1,5 +1,4 @@
-const srcPath = require( '../src-path' );
-const typeCheckers = require( srcPath + '/utilities/type-checkers' );
+import typeCheckers from '../../../../../../packages/cfpb-atomic-component/src/utilities/type-checkers';
 
 const blankVar = '';
 const aString = 'bar';

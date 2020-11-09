@@ -382,9 +382,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! anchor-js */ "./node_modules/anchor-js/anchor.js");
 /* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(anchor_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Expandable */ "./packages/cfpb-expandables/src/Expandable.js");
-/* harmony import */ var _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table */ "./packages/cfpb-tables/src/Table.js");
-/* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! govuk-frontend */ "./node_modules/govuk-frontend/govuk/all.js");
 /* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(govuk_frontend__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
@@ -403,8 +401,8 @@ var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())(); // Add a
 anchors.add('h2:not(.title), h3, h4, h5'); // Ensure there are no anchors in inconvenient places
 
 anchors.remove("\n  .live-code-example h2,\n  .live-code-example h3,\n  .live-code-example h4,\n  .live-code-example h5,\n  .o-expandable_label,\n  #search-results h3\n");
-_cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2___default().init();
-_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_3___default().init();
+_cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__.default.init();
+_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_3__.default.init();
 var main = document.querySelector('#main');
 var tabs = document.querySelectorAll('[data-module="tabs"]');
 
@@ -3742,11 +3740,17 @@ module.exports.Delegate = Delegate;
 /*!**************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/components/AtomicComponent.js ***!
   \**************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 310:0-14 */
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/object-assign */ "./packages/cfpb-atomic-component/src/utilities/object-assign/index.js");
+/* harmony import */ var _mixins_Events__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixins/Events */ "./packages/cfpb-atomic-component/src/mixins/Events.js");
+/* harmony import */ var _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/type-checkers */ "./packages/cfpb-atomic-component/src/utilities/type-checkers/index.js");
 /* ==========================================================================
    AtomicComponent
 
@@ -3759,10 +3763,10 @@ module.exports.Delegate = Delegate;
 
    ========================================================================== */
 
-const assign = __webpack_require__(/*! ../utilities/object-assign */ "./packages/cfpb-atomic-component/src/utilities/object-assign/index.js").assign;
+
 const Delegate = __webpack_require__(/*! ftdomdelegate */ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js").Delegate;
-const Events = __webpack_require__( /*! ../mixins/Events */ "./packages/cfpb-atomic-component/src/mixins/Events.js" );
-const isFunction = __webpack_require__(/*! ../utilities/type-checkers */ "./packages/cfpb-atomic-component/src/utilities/type-checkers/index.js").isFunction;
+
+
 
 
 /**
@@ -3777,19 +3781,19 @@ function AtomicComponent( element, attributes ) {
   this.element = element;
   this.initializers = [];
   this.uId = this.uniqueId( 'ac' );
-  assign( this, attributes );
+  (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__.assign)( this, attributes );
   this.processModifiers();
   this.ensureElement();
   this.setCachedElements();
   this.initializers.push( this.initialize );
   this.initializers.forEach( function( func ) {
-    if ( isFunction( func ) ) func.apply( this, arguments );
+    if ( _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__.default.isFunction( func ) ) func.apply( this, arguments );
   }, this );
   this.trigger( 'component:initialized' );
 }
 
 // Public instance Methods and properties.
-assign( AtomicComponent.prototype, Events, {
+(0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__.assign)( AtomicComponent.prototype, _mixins_Events__WEBPACK_IMPORTED_MODULE_1__.default, {
 
   tagName: 'div',
 
@@ -3812,7 +3816,7 @@ assign( AtomicComponent.prototype, Events, {
           this.initializers.push( modifier.initialize );
           delete modifier.initialize;
         }
-        assign( this, modifier );
+        (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__.assign)( this, modifier );
       }
     }, this );
   },
@@ -3831,7 +3835,7 @@ assign( AtomicComponent.prototype, Events, {
    */
   ensureElement: function() {
     if ( !this.element ) { // eslint-disable-line no-negated-condition
-      const attrs = assign( {}, this.attributes );
+      const attrs = (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__.assign)( {}, this.attributes );
       attrs.id = this.id || this.u_id;
       if ( this.className ) attrs.class = this.className;
       this.setElement( document.createElement( this.tagName ) );
@@ -3866,7 +3870,7 @@ assign( AtomicComponent.prototype, Events, {
    * @returns {Object} Hash of event names and cached elements.
    */
   setCachedElements: function() {
-    const ui = assign( {}, this.ui );
+    const ui = (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__.assign)( {}, this.ui );
     let key;
     let element;
 
@@ -3943,7 +3947,7 @@ assign( AtomicComponent.prototype, Events, {
     for ( key in events ) {
       if ( {}.hasOwnProperty.call( events, key ) ) {
         method = events[key];
-        if ( isFunction( this[method] ) ) method = this[method];
+        if ( _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__.default.isFunction( this[method] ) ) method = this[method];
         if ( method ) {
           match = key.match( delegateEventSplitter );
           this.delegate( match[1], match[2], method.bind( this ) );
@@ -4019,8 +4023,8 @@ AtomicComponent.extend = function( attributes ) {
   }
 
   child.prototype = Object.create( AtomicComponent.prototype );
-  assign( child.prototype, attributes );
-  assign( child, AtomicComponent );
+  (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__.assign)( child.prototype, attributes );
+  (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__.assign)( child, AtomicComponent );
 
   if ( attributes.hasOwnProperty( 'ui' ) &&
        attributes.ui.hasOwnProperty( 'base' ) ) {
@@ -4056,7 +4060,7 @@ AtomicComponent.init = function( scope ) {
   return components;
 };
 
-module.exports = AtomicComponent;
+/* harmony default export */ __webpack_exports__["default"] = (AtomicComponent);
 
 
 /***/ }),
@@ -4065,11 +4069,16 @@ module.exports = AtomicComponent;
 /*!*******************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/components/Organism.js ***!
   \*******************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 16:0-14 */
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AtomicComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AtomicComponent */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
+/* harmony import */ var _utilities_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js");
 /* ==========================================================================
    Organism
 
@@ -4077,15 +4086,15 @@ module.exports = AtomicComponent;
 
    ========================================================================== */
 
-const AtomicComponent = __webpack_require__( /*! ./AtomicComponent */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js" );
-const TYPES = __webpack_require__(/*! ../utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js").TYPES;
 
-const Organism = AtomicComponent.extend( {
-  TYPE: TYPES.ORGANISM,
-  CHILD_TYPES: [ TYPES.MOLECULE, TYPES.ATOM ]
+
+
+const Organism = _AtomicComponent__WEBPACK_IMPORTED_MODULE_0__.default.extend( {
+  TYPE: _utilities_config__WEBPACK_IMPORTED_MODULE_1__.default.TYPES.ORGANISM,
+  CHILD_TYPES: [ _utilities_config__WEBPACK_IMPORTED_MODULE_1__.default.TYPES.MOLECULE, _utilities_config__WEBPACK_IMPORTED_MODULE_1__.default.TYPES.ATOM ]
 } );
 
-module.exports = Organism;
+/* harmony default export */ __webpack_exports__["default"] = (Organism);
 
 
 /***/ }),
@@ -4094,11 +4103,14 @@ module.exports = Organism;
 /*!*************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/mixins/Events.js ***!
   \*************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 57:0-14 */
-/***/ (function(module) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* ==========================================================================
    Events
 
@@ -4155,7 +4167,7 @@ const Events = {
   }
 };
 
-module.exports = Events;
+/* harmony default export */ __webpack_exports__["default"] = (Events);
 
 
 /***/ }),
@@ -4164,11 +4176,14 @@ module.exports = Events;
 /*!****************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/config.js ***!
   \****************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 47:0-14 */
-/***/ (function(module) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* ==========================================================================
    Atomic configurations and constants
 
@@ -4215,13 +4230,13 @@ function NO_OP_FUNCTION() { return; }
 
 let UNDEFINED;
 
-module.exports = {
+/* harmony default export */ __webpack_exports__["default"] = ({
   DIRECTIONS:     DIRECTIONS,
   NO_OP_FUNCTION: NO_OP_FUNCTION,
   PREFIXES:       PREFIXES,
   TYPES:          TYPES,
   UNDEFINED:      UNDEFINED
-};
+});
 
 
 /***/ }),
@@ -4230,11 +4245,17 @@ module.exports = {
 /*!***************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js ***!
   \***************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 44:0-14 */
-/***/ (function(module) {
+/*! namespace exports */
+/*! export closest [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "closest": function() { return /* binding */ closest; }
+/* harmony export */ });
 /* ==========================================================================
    Dom closest
 
@@ -4278,9 +4299,7 @@ function closest( element, selector ) {
 /* eslint-enable complexity */
 
 // Expose public methods.
-module.exports = {
-  closest: closest
-};
+
 
 
 /***/ }),
@@ -4289,11 +4308,17 @@ module.exports = {
 /*!*****************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/object-assign/index.js ***!
   \*****************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 51:0-14 */
-/***/ (function(module) {
+/*! namespace exports */
+/*! export assign [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "assign": function() { return /* binding */ assign; }
+/* harmony export */ });
 /* ==========================================================================
    Assign
 
@@ -4344,7 +4369,7 @@ function assign( destination ) {
 /* eslint-enable complexity */
 
 // Expose public methods.
-module.exports = { assign: assign };
+
 
 
 /***/ }),
@@ -4353,13 +4378,17 @@ module.exports = { assign: assign };
 /*!***********************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js ***!
   \***********************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 261:0-14 */
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js");
 // Required modules.
-const Events = __webpack_require__( /*! ../../mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js" );
+
 
 /* eslint-disable max-lines-per-function, max-statements */
 /**
@@ -4596,9 +4625,9 @@ function BaseTransition( element, classes ) {
   /* eslint-enable complexity */
 
   // Attach public events.
-  this.addEventListener = Events.on;
-  this.trigger = Events.trigger;
-  this.removeEventListener = Events.off;
+  this.addEventListener = _mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.on;
+  this.trigger = _mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.trigger;
+  this.removeEventListener = _mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.off;
 
   this.animateOff = animateOff;
   this.animateOn = animateOn;
@@ -4618,7 +4647,7 @@ BaseTransition.BEGIN_EVENT = 'transitionBegin';
 BaseTransition.END_EVENT = 'transitionEnd';
 BaseTransition.NO_ANIMATION_CLASS = 'u-no-animation';
 
-module.exports = BaseTransition;
+/* harmony default export */ __webpack_exports__["default"] = (BaseTransition);
 
 
 /***/ }),
@@ -4627,11 +4656,14 @@ module.exports = BaseTransition;
 /*!*****************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/type-checkers/index.js ***!
   \*****************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 166:0-14 */
-/***/ (function(module) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* ==========================================================================
    Javascript Type Checkers
 
@@ -4797,17 +4829,17 @@ function isEmpty( value ) {
 /* eslint-enable complexity, no-mixed-operators */
 
 // Expose public methods.
-module.exports = {
-  isUndefined: isUndefined,
-  isDefined:   isDefined,
-  isObject:    isObject,
-  isString:    isString,
-  isNumber:    isNumber,
-  isDate:      isDate,
-  isArray:     isArray,
-  isFunction:  isFunction,
-  isEmpty:     isEmpty
-};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  isUndefined,
+  isDefined,
+  isObject,
+  isString,
+  isNumber,
+  isDate,
+  isArray,
+  isFunction,
+  isEmpty
+});
 
 
 /***/ }),
@@ -4816,21 +4848,28 @@ module.exports = {
 /*!*****************************************************!*\
   !*** ./packages/cfpb-expandables/src/Expandable.js ***!
   \*****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 137:0-14 */
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_components_Organism__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/Organism */ "./packages/cfpb-atomic-component/src/components/Organism.js");
+/* harmony import */ var _ExpandableTransition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ExpandableTransition */ "./packages/cfpb-expandables/src/ExpandableTransition.js");
 /* ==========================================================================
    Expandable Organism
    ========================================================================== */
 
-const closest = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js").closest;
-const Events = __webpack_require__( /*! @cfpb/cfpb-atomic-component/src/mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js" );
-const Organism = __webpack_require__( /*! @cfpb/cfpb-atomic-component/src/components/Organism */ "./packages/cfpb-atomic-component/src/components/Organism.js" );
-const ExpandableTransition = __webpack_require__( /*! ./ExpandableTransition */ "./packages/cfpb-expandables/src/ExpandableTransition.js" );
 
-const Expandable = Organism.extend( {
+
+
+
+
+const Expandable = _cfpb_cfpb_atomic_component_src_components_Organism__WEBPACK_IMPORTED_MODULE_2__.default.extend( {
   ui: {
     base:    '.o-expandable',
     target:  '.o-expandable_target',
@@ -4864,27 +4903,27 @@ const Expandable = Organism.extend( {
  * Initialize a new expandable.
  */
 function initialize() {
-  const transition = new ExpandableTransition(
+  const transition = new _ExpandableTransition__WEBPACK_IMPORTED_MODULE_3__.default(
     this.ui.content
   );
   this.transition = transition.init();
   this.transition.addEventListener( 'expandBegin', expandBeginHandler.bind( this ) );
   this.transition.addEventListener( 'collapseEnd', collapseEndHandler.bind( this ) );
 
-  if ( this.ui.content.classList.contains( ExpandableTransition.CLASSES.EXPANDED ) ) {
+  if ( this.ui.content.classList.contains( _ExpandableTransition__WEBPACK_IMPORTED_MODULE_3__.default.CLASSES.EXPANDED ) ) {
     this.ui.target.classList.add( this.classes.targetExpanded );
   } else {
     this.ui.target.classList.add( this.classes.targetCollapsed );
     this.ui.content.classList.add( 'u-hidden' );
   }
 
-  const expandableGroup = closest( this.ui.target, '.' + this.classes.group );
+  const expandableGroup = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__.closest)( this.ui.target, '.' + this.classes.group );
 
   this.isAccordionGroup = expandableGroup !== null &&
     expandableGroup.classList.contains( this.classes.groupAccordion );
 
   if ( this.isAccordionGroup ) {
-    Events.on(
+    _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_1__.default.on(
       'accordionActivated',
       _accordionActivatedHandler.bind( this )
     );
@@ -4913,7 +4952,7 @@ function expandableClickHandler() {
     if ( this.activeAccordion ) {
       this.activeAccordion = false;
     } else {
-      Events.trigger( 'accordionActivated', { target: this } );
+      _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_1__.default.trigger( 'accordionActivated', { target: this } );
       this.activeAccordion = true;
     }
   }
@@ -4955,7 +4994,7 @@ function getLabelText() {
   return this.ui.label.textContent.trim();
 }
 
-module.exports = Expandable;
+/* harmony default export */ __webpack_exports__["default"] = (Expandable);
 
 
 /***/ }),
@@ -4964,14 +5003,19 @@ module.exports = Expandable;
 /*!***************************************************************!*\
   !*** ./packages/cfpb-expandables/src/ExpandableTransition.js ***!
   \***************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 130:0-14 */
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
 // Required modules.
-const Events = __webpack_require__( /*! @cfpb/cfpb-atomic-component/src/mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js" );
-const BaseTransition = __webpack_require__( /*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js" );
+
+
 
 // Exported constants.
 const CLASSES = {
@@ -4992,7 +5036,7 @@ const CLASSES = {
  * @returns {ExpandableTransition} An instance.
  */
 function ExpandableTransition( element ) {
-  const _baseTransition = new BaseTransition( element, CLASSES );
+  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition__WEBPACK_IMPORTED_MODULE_1__.default( element, CLASSES );
   let previousHeight;
 
   /**
@@ -5001,7 +5045,7 @@ function ExpandableTransition( element ) {
   function init() {
     _baseTransition.init();
     _baseTransition.addEventListener(
-      BaseTransition.END_EVENT,
+      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition__WEBPACK_IMPORTED_MODULE_1__.default.END_EVENT,
       _transitionComplete.bind( this )
     );
 
@@ -5075,9 +5119,9 @@ function ExpandableTransition( element ) {
   }
 
   // Attach public events.
-  this.addEventListener = Events.on;
-  this.dispatchEvent = Events.trigger;
-  this.removeEventListener = Events.off;
+  this.addEventListener = _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.on;
+  this.dispatchEvent = _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.trigger;
+  this.removeEventListener = _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.off;
 
   this.animateOff = _baseTransition.animateOff;
   this.animateOn = _baseTransition.animateOn;
@@ -5098,7 +5142,7 @@ function ExpandableTransition( element ) {
 // Public static properties.
 ExpandableTransition.CLASSES = CLASSES;
 
-module.exports = ExpandableTransition;
+/* harmony default export */ __webpack_exports__["default"] = (ExpandableTransition);
 
 
 /***/ }),
@@ -5107,32 +5151,39 @@ module.exports = ExpandableTransition;
 /*!*******************************************!*\
   !*** ./packages/cfpb-tables/src/Table.js ***!
   \*******************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 21:0-14 */
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_components_Organism__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/Organism */ "./packages/cfpb-atomic-component/src/components/Organism.js");
+/* harmony import */ var _TableSortable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TableSortable */ "./packages/cfpb-tables/src/TableSortable.js");
+/* harmony import */ var _TableRowLinks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TableRowLinks */ "./packages/cfpb-tables/src/TableRowLinks.js");
 /* ==========================================================================
    Table Organism
    ========================================================================== */
 
 
-const config = __webpack_require__( /*! @cfpb/cfpb-atomic-component/src/utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js" );
-const Organism = __webpack_require__( /*! @cfpb/cfpb-atomic-component/src/components/Organism */ "./packages/cfpb-atomic-component/src/components/Organism.js" );
-const TableSortable = __webpack_require__( /*! ./TableSortable */ "./packages/cfpb-tables/src/TableSortable.js" );
-const TableRowLinks = __webpack_require__( /*! ./TableRowLinks */ "./packages/cfpb-tables/src/TableRowLinks.js" );
 
-const Table = Organism.extend( {
+
+
+
+
+const Table = _cfpb_cfpb_atomic_component_src_components_Organism__WEBPACK_IMPORTED_MODULE_1__.default.extend( {
   ui: {
     base: '.o-table'
   },
 
-  modifiers: [ TableSortable, TableRowLinks ]
+  modifiers: [ _TableSortable__WEBPACK_IMPORTED_MODULE_2__.default, _TableRowLinks__WEBPACK_IMPORTED_MODULE_3__.default ]
 } );
 
-Table.constants.DIRECTIONS = config.DIRECTIONS;
+Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_0__.default.DIRECTIONS;
 
-module.exports = Table;
+/* harmony default export */ __webpack_exports__["default"] = (Table);
 
 
 /***/ }),
@@ -5141,11 +5192,15 @@ module.exports = Table;
 /*!***************************************************!*\
   !*** ./packages/cfpb-tables/src/TableRowLinks.js ***!
   \***************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 41:0-14 */
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js");
 /* ==========================================================================
    Table Row Links
 
@@ -5153,7 +5208,7 @@ module.exports = Table;
    ========================================================================== */
 
 
-const closest = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js").closest;
+
 
 const TableRowLinks = {
   ui: {
@@ -5177,14 +5232,14 @@ function onRowLinkClick( event ) {
   if ( target && target.tagName === 'A' ) {
     return;
   }
-  target = closest( event.target, 'tr' );
+  target = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__.closest)( event.target, 'tr' );
   const link = target.querySelector( 'a' );
   if ( link ) {
     window.location = link.getAttribute( 'href' );
   }
 }
 
-module.exports = TableRowLinks;
+/* harmony default export */ __webpack_exports__["default"] = (TableRowLinks);
 
 
 /***/ }),
@@ -5193,11 +5248,16 @@ module.exports = TableRowLinks;
 /*!***************************************************!*\
   !*** ./packages/cfpb-tables/src/TableSortable.js ***!
   \***************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 220:0-14 */
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js");
 /* ==========================================================================
    Table Sortablle
 
@@ -5205,10 +5265,11 @@ module.exports = TableRowLinks;
    ========================================================================== */
 
 
-const config = __webpack_require__( /*! @cfpb/cfpb-atomic-component/src/utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js" );
-const closest = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js").closest;
-const DIRECTIONS = config.DIRECTIONS;
-const UNDEFINED = config.UNDEFINED;
+
+
+
+const DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_0__.default.DIRECTIONS;
+const UNDEFINED = _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_0__.default.UNDEFINED;
 
 const TableSortable = {
   ui: {
@@ -5286,7 +5347,7 @@ function bindProperties() {
  * @returns {number} The column index of the active sort column.
  */
 function getColumnIndex( element ) {
-  return closest( element || this.ui.sortButton, 'td, th' ).cellIndex;
+  return (0,_cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_1__.closest)( element || this.ui.sortButton, 'td, th' ).cellIndex;
 }
 
 /**
@@ -5415,7 +5476,7 @@ function onSortableClick( event ) {
   return this;
 }
 
-module.exports = TableSortable;
+/* harmony default export */ __webpack_exports__["default"] = (TableSortable);
 
 
 /***/ })

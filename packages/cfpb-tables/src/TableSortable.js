@@ -145,7 +145,7 @@ function updateTableDom() {
   }
 
   tableBody.appendChild( documentFragment );
-  this.trigger( 'table:updated' );
+  this.dispatchEvent( 'table:updated' );
 
   return tableBody;
 }

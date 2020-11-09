@@ -1,5 +1,5 @@
 // Required modules.
-import Events from '../../mixins/Events.js';
+import EventObserver from '../../mixins/EventObserver.js';
 
 /* eslint-disable max-lines-per-function, max-statements */
 /**
@@ -119,9 +119,9 @@ function BaseTransition( element, classes ) {
         _transitionEndEvent,
         _transitionCompleteBinded
       );
-      this.trigger( BaseTransition.BEGIN_EVENT, { target: this } );
+      this.dispatchEvent( BaseTransition.BEGIN_EVENT, { target: this } );
     } else {
-      this.trigger( BaseTransition.BEGIN_EVENT, { target: this } );
+      this.dispatchEvent( BaseTransition.BEGIN_EVENT, { target: this } );
       _transitionCompleteBinded();
     }
   }
@@ -138,7 +138,7 @@ function BaseTransition( element, classes ) {
    */
   function _transitionComplete() {
     _removeEventListener();
-    this.trigger( BaseTransition.END_EVENT, { target: this } );
+    this.dispatchEvent( BaseTransition.END_EVENT, { target: this } );
     _isAnimating = false;
   }
 
@@ -236,9 +236,10 @@ function BaseTransition( element, classes ) {
   /* eslint-enable complexity */
 
   // Attach public events.
-  this.addEventListener = Events.on;
-  this.trigger = Events.trigger;
-  this.removeEventListener = Events.off;
+  const events = new EventObserver();
+  this.addEventListener = events.addEventListener;
+  this.dispatchEvent = events.dispatchEvent;
+  this.removeEventListener = events.removeEventListener;
 
   this.animateOff = animateOff;
   this.animateOn = animateOn;

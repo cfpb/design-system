@@ -1,4 +1,4 @@
-import BaseTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/BaseTransition';
+import BaseTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js';
 
 let transition;
 

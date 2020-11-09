@@ -1,5 +1,5 @@
 ---
-title: Dropdowns and multi-selects
+title: Dropdowns and multiselects
 layout: variation
 section: components
 status: Released
@@ -124,15 +124,15 @@ variation_groups:
               <label class="a-label a-label__heading" for="test_select__multiple">
                   Label
               </label>
-              <select class="a-multiselect" id="test_select__multiple" multiple>
+              <select class="o-multiselect" id="test_select__multiple" multiple>
                   <option value="option1">Option 1</option>
                   <option value="option2">Option 2</option>
                   <option value="option3">Option 3</option>
                   <option value="option4">Option 4</option>
-                  <option value="option1">Option 5</option>
-                  <option value="option2">Option 6</option>
-                  <option value="option3">Option 7</option>
-                  <option value="option4">Option 8</option>
+                  <option value="option5">Option 5</option>
+                  <option value="option6">Option 6</option>
+                  <option value="option7">Option 7</option>
+                  <option value="option8">Option 8</option>
               </select>
           </div>
     variation_group_description: "Custom JavaScript may be required to make the
@@ -162,7 +162,7 @@ accessibility: >-
 
   ### Multiselects
 
-  From an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multi-select component is desired, use custom JavaScript to make it accessible.
+  From an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multiselect component is desired, use custom JavaScript to make it accessible.
 research: ""
 related_items: "* [Forms
   variables](https://cfpb.github.io/design-system/development/variables#forms-1\

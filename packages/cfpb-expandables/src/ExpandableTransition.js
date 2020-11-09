@@ -1,5 +1,5 @@
 // Required modules.
-import Events from '@cfpb/cfpb-atomic-component/src/mixins/Events.js';
+import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 import BaseTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition';
 
 // Exported constants.
@@ -104,9 +104,10 @@ function ExpandableTransition( element ) {
   }
 
   // Attach public events.
-  this.addEventListener = Events.on;
-  this.dispatchEvent = Events.trigger;
-  this.removeEventListener = Events.off;
+  const eventObserver = new EventObserver();
+  this.addEventListener = eventObserver.addEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+  this.removeEventListener = eventObserver.removeEventListener;
 
   this.animateOff = _baseTransition.animateOff;
   this.animateOn = _baseTransition.animateOn;

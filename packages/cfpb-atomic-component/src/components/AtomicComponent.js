@@ -12,9 +12,8 @@
 
 import { assign } from '../utilities/object-assign';
 const Delegate = require( 'ftdomdelegate' ).Delegate;
-import Events from '../mixins/Events';
+import EventObserver from '../mixins/EventObserver.js';
 import typeCheckers from '../utilities/type-checkers';
-
 
 /**
  * Function as the constrcutor for the AtomicComponent.
@@ -36,11 +35,11 @@ function AtomicComponent( element, attributes ) {
   this.initializers.forEach( function( func ) {
     if ( typeCheckers.isFunction( func ) ) func.apply( this, arguments );
   }, this );
-  this.trigger( 'component:initialized' );
+  this.dispatchEvent( 'component:initialized' );
 }
 
 // Public instance Methods and properties.
-assign( AtomicComponent.prototype, Events, {
+assign( AtomicComponent.prototype, new EventObserver(), {
 
   tagName: 'div',
 
@@ -152,7 +151,7 @@ assign( AtomicComponent.prototype, Events, {
       delete this.element;
     }
     this.undelegateEvents();
-    this.trigger( 'component:destroyed' );
+    this.dispatchEvent( 'component:destroyed' );
 
     return true;
   },
@@ -201,7 +200,7 @@ assign( AtomicComponent.prototype, Events, {
         }
       }
     }
-    this.trigger( 'component:bound' );
+    this.dispatchEvent( 'component:bound' );
 
     return this;
   },

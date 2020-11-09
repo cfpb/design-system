@@ -3,11 +3,14 @@
    ========================================================================== */
 
 import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-closest';
-import Events from '@cfpb/cfpb-atomic-component/src/mixins/Events.js';
+import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 import AtomicComponent from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
 import ExpandableTransition from './ExpandableTransition';
 
+const eventObserver = new EventObserver();
+
 const Expandable = AtomicComponent.extend( {
+
   ui: {
     base:    '.o-expandable',
     target:  '.o-expandable_target',
@@ -61,7 +64,7 @@ function initialize() {
     expandableGroup.classList.contains( this.classes.groupAccordion );
 
   if ( this.isAccordionGroup ) {
-    Events.on(
+    eventObserver.addEventListener(
       'accordionActivated',
       _accordionActivatedHandler.bind( this )
     );
@@ -90,7 +93,7 @@ function expandableClickHandler() {
     if ( this.activeAccordion ) {
       this.activeAccordion = false;
     } else {
-      Events.trigger( 'accordionActivated', { target: this } );
+      eventObserver.dispatchEvent( 'accordionActivated', { target: this } );
       this.activeAccordion = true;
     }
   }

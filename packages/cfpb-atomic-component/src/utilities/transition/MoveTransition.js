@@ -1,5 +1,5 @@
 // Required modules.
-import Events from '../../mixins/Events.js';
+import EventObserver from '../../mixins/EventObserver.js';
 import BaseTransition from './BaseTransition';
 
 // Exported constants.
@@ -45,7 +45,7 @@ function MoveTransition( element ) {
    * Handle the end of a transition.
    */
   function _transitionComplete() {
-    this.trigger( BaseTransition.END_EVENT, { target: this } );
+    this.dispatchEvent( BaseTransition.END_EVENT, { target: this } );
   }
 
   /**
@@ -102,9 +102,10 @@ function MoveTransition( element ) {
   }
 
   // Attach public events.
-  this.addEventListener = Events.on;
-  this.trigger = Events.trigger;
-  this.removeEventListener = Events.off;
+  const eventObserver = new EventObserver();
+  this.addEventListener = eventObserver.addEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+  this.removeEventListener = eventObserver.removeEventListener;
 
   this.animateOff = _baseTransition.animateOff;
   this.animateOn = _baseTransition.animateOn;

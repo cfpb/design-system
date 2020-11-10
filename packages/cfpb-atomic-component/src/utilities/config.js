@@ -11,15 +11,6 @@ const DIRECTIONS = {
   LEFT:  -2
 };
 
-// Atomic component types used for describing component hierarchy.
-const TYPES = {
-  PAGE:     1,
-  TEMPLATE: 2,
-  ORGANISM: 3,
-  MOLECULE: 4,
-  ATOM:     5
-};
-
 /*
   Atomic Prefixes used for standardizing naming conventions
   across HTML, CSS, and Javascript.
@@ -48,6 +39,5 @@ export default {
   DIRECTIONS:     DIRECTIONS,
   NO_OP_FUNCTION: NO_OP_FUNCTION,
   PREFIXES:       PREFIXES,
-  TYPES:          TYPES,
   UNDEFINED:      UNDEFINED
 };

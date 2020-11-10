@@ -4065,40 +4065,6 @@ AtomicComponent.init = function( scope ) {
 
 /***/ }),
 
-/***/ "./packages/cfpb-atomic-component/src/components/Organism.js":
-/*!*******************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/src/components/Organism.js ***!
-  \*******************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _AtomicComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AtomicComponent */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
-/* harmony import */ var _utilities_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js");
-/* ==========================================================================
-   Organism
-
-   Organism Atomic Component
-
-   ========================================================================== */
-
-
-
-
-const Organism = _AtomicComponent__WEBPACK_IMPORTED_MODULE_0__.default.extend( {
-  TYPE: _utilities_config__WEBPACK_IMPORTED_MODULE_1__.default.TYPES.ORGANISM,
-  CHILD_TYPES: [ _utilities_config__WEBPACK_IMPORTED_MODULE_1__.default.TYPES.MOLECULE, _utilities_config__WEBPACK_IMPORTED_MODULE_1__.default.TYPES.ATOM ]
-} );
-
-/* harmony default export */ __webpack_exports__["default"] = (Organism);
-
-
-/***/ }),
-
 /***/ "./packages/cfpb-atomic-component/src/mixins/Events.js":
 /*!*************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/mixins/Events.js ***!
@@ -4197,15 +4163,6 @@ const DIRECTIONS = {
   LEFT:  -2
 };
 
-// Atomic component types used for describing component hierarchy.
-const TYPES = {
-  PAGE:     1,
-  TEMPLATE: 2,
-  ORGANISM: 3,
-  MOLECULE: 4,
-  ATOM:     5
-};
-
 /*
   Atomic Prefixes used for standardizing naming conventions
   across HTML, CSS, and Javascript.
@@ -4234,7 +4191,6 @@ let UNDEFINED;
   DIRECTIONS:     DIRECTIONS,
   NO_OP_FUNCTION: NO_OP_FUNCTION,
   PREFIXES:       PREFIXES,
-  TYPES:          TYPES,
   UNDEFINED:      UNDEFINED
 });
 
@@ -4858,7 +4814,7 @@ function isEmpty( value ) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_components_Organism__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/Organism */ "./packages/cfpb-atomic-component/src/components/Organism.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
 /* harmony import */ var _ExpandableTransition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ExpandableTransition */ "./packages/cfpb-expandables/src/ExpandableTransition.js");
 /* ==========================================================================
    Expandable Organism
@@ -4869,7 +4825,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Expandable = _cfpb_cfpb_atomic_component_src_components_Organism__WEBPACK_IMPORTED_MODULE_2__.default.extend( {
+const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_2__.default.extend( {
   ui: {
     base:    '.o-expandable',
     target:  '.o-expandable_target',
@@ -5160,7 +5116,7 @@ ExpandableTransition.CLASSES = CLASSES;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_components_Organism__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/Organism */ "./packages/cfpb-atomic-component/src/components/Organism.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
 /* harmony import */ var _TableSortable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TableSortable */ "./packages/cfpb-tables/src/TableSortable.js");
 /* harmony import */ var _TableRowLinks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TableRowLinks */ "./packages/cfpb-tables/src/TableRowLinks.js");
 /* ==========================================================================
@@ -5172,8 +5128,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const Table = _cfpb_cfpb_atomic_component_src_components_Organism__WEBPACK_IMPORTED_MODULE_1__.default.extend( {
+const Table = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_1__.default.extend( {
   ui: {
     base: '.o-table'
   },

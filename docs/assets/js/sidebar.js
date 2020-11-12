@@ -39,4 +39,6 @@ function init() {
   } );
 }
 
-export default { init };
+export default {
+  init: init
+};

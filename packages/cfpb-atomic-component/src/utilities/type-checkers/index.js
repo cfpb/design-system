@@ -164,13 +164,13 @@ function isEmpty( value ) {
 
 // Expose public methods.
 export default {
-  isUndefined,
-  isDefined,
-  isObject,
-  isString,
-  isNumber,
-  isDate,
-  isArray,
-  isFunction,
-  isEmpty
+  isUndefined: isUndefined,
+  isDefined: isDefined,
+  isObject: isObject,
+  isString: isString,
+  isNumber: isNumber,
+  isDate: isDate,
+  isArray: isArray,
+  isFunction: isFunction,
+  isEmpty: isEmpty
 };

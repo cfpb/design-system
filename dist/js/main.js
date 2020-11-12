@@ -3749,7 +3749,7 @@ module.exports.Delegate = Delegate;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/object-assign */ "./packages/cfpb-atomic-component/src/utilities/object-assign/index.js");
-/* harmony import */ var _mixins_Events__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixins/Events */ "./packages/cfpb-atomic-component/src/mixins/Events.js");
+/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 /* harmony import */ var _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/type-checkers */ "./packages/cfpb-atomic-component/src/utilities/type-checkers/index.js");
 /* ==========================================================================
    AtomicComponent
@@ -3765,7 +3765,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Delegate = __webpack_require__(/*! ftdomdelegate */ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js").Delegate;
-
 
 
 
@@ -3789,11 +3788,11 @@ function AtomicComponent( element, attributes ) {
   this.initializers.forEach( function( func ) {
     if ( _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__.default.isFunction( func ) ) func.apply( this, arguments );
   }, this );
-  this.trigger( 'component:initialized' );
+  this.dispatchEvent( 'component:initialized' );
 }
 
 // Public instance Methods and properties.
-(0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__.assign)( AtomicComponent.prototype, _mixins_Events__WEBPACK_IMPORTED_MODULE_1__.default, {
+(0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_0__.assign)( AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default(), {
 
   tagName: 'div',
 
@@ -3905,7 +3904,7 @@ function AtomicComponent( element, attributes ) {
       delete this.element;
     }
     this.undelegateEvents();
-    this.trigger( 'component:destroyed' );
+    this.dispatchEvent( 'component:destroyed' );
 
     return true;
   },
@@ -3954,7 +3953,7 @@ function AtomicComponent( element, attributes ) {
         }
       }
     }
-    this.trigger( 'component:bound' );
+    this.dispatchEvent( 'component:bound' );
 
     return this;
   },
@@ -4065,10 +4064,10 @@ AtomicComponent.init = function( scope ) {
 
 /***/ }),
 
-/***/ "./packages/cfpb-atomic-component/src/mixins/Events.js":
-/*!*************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/src/mixins/Events.js ***!
-  \*************************************************************/
+/***/ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js":
+/*!********************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/mixins/EventObserver.js ***!
+  \********************************************************************/
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
@@ -4077,63 +4076,93 @@ AtomicComponent.init = function( scope ) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* ==========================================================================
-   Events
+/**
+ * EventObserver
+ * @class
+ *
+ * @classdesc Used for creating an object
+ *   that can be used to dispatch and listen to custom events.
+ * @returns {Object} An EventObserver instance.
+ */
+function EventObserver() {
 
-   Mixin to add basic event callback functionality.
-   ========================================================================== */
-
-const Events = {
-
-  /**
-   * Function used to add events to an event stack.
-   *
-   * @param {string} eventName -
-   *   The name of the event to add to the event stack.
-   * @param {Function} callback - Function to call when event is triggered.
-   * @returns {Object} An instance.
-   */
-  on: function( eventName, callback ) {
-    const events = this.events = this.events || {};
-    events[eventName] = this.events[eventName] || [];
-    events[eventName].push( callback );
-
-    return this;
-  },
+  // The events registered on this instance.
+  const _events = {};
 
   /**
-   * Function used to remove events from an event stack.
-   *
-   * @param {string} eventName -
-   *   The name of the event to remove from the event stack.
-   * @returns {Object} An instance.
+   * Register an event listener.
+   * @param {string} event - The event name to listen for.
+   * @param {Function} callback - The function called when the event has fired.
+   * @returns {Object} The instance this EventObserver instance is decorating.
    */
-  off: function( eventName ) {
-    if ( this.events && this.events[eventName] ) delete this.events[eventName];
-
-    return this;
-  },
-
-  /**
-   * Function used to trigger events that exist on the event stack.
-   *
-   * @param {string} eventName - The name of the event to trigger.
-   * @returns {Object} An instance.
-   */
-  trigger: function( eventName ) {
-    const events = this.events || {};
-    if ( events.hasOwnProperty( eventName ) === false ) {
-      return this;
-    }
-    for ( let i = 0, len = events[eventName].length; i < len; i++ ) {
-      this.events[eventName][i].apply( this, arguments );
+  function addEventListener( event, callback ) {
+    if ( _events.hasOwnProperty( event ) ) {
+      _events[event].push( callback );
+    } else {
+      _events[event] = [ callback ];
     }
 
     return this;
   }
-};
 
-/* harmony default export */ __webpack_exports__["default"] = (Events);
+  /**
+   * Remove an added event listener.
+   * Must match a call made to addEventListener.
+   * @param {string} event - The event name to remove.
+   * @param {Function} callback - The function attached to the event.
+   * @returns {Object} The instance this EventObserver instance is decorating.
+   */
+  function removeEventListener( event, callback ) {
+    if ( !_events.hasOwnProperty( event ) ) {
+      return this;
+    }
+
+    const index = _events[event].indexOf( callback );
+    // Check if there are any callbacks associated with a particular event.
+    if ( index !== -1 ) {
+      _events[event].splice( index, 1 );
+    }
+
+    return this;
+  }
+
+  /**
+   * Broadcast an event.
+   * @param {string} event - The type of event to broadcast.
+   * @param {Object} options - The event object to pass to the event handler.
+   * @returns {Object} The instance this EventObserver instance is decorating.
+   */
+  function dispatchEvent( event, options ) {
+    if ( !_events.hasOwnProperty( event ) ) {
+      return this;
+    }
+
+    options = options || {};
+
+    const evts = _events[event];
+    for ( let i = 0, len = evts.length; i < len; i++ ) {
+      evts[i].call( this, options );
+    }
+
+    return this;
+  }
+
+  /**
+   * @returns {Object} Map of registered events.
+   */
+  function getRegisteredEvents() {
+    return _events;
+  }
+
+  this.addEventListener = addEventListener;
+  this.removeEventListener = removeEventListener;
+  this.dispatchEvent = dispatchEvent;
+  this.getRegisteredEvents = getRegisteredEvents;
+
+  return this;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (EventObserver);
 
 
 /***/ }),
@@ -4342,7 +4371,7 @@ function assign( destination ) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js");
+/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 // Required modules.
 
 
@@ -4464,9 +4493,9 @@ function BaseTransition( element, classes ) {
         _transitionEndEvent,
         _transitionCompleteBinded
       );
-      this.trigger( BaseTransition.BEGIN_EVENT, { target: this } );
+      this.dispatchEvent( BaseTransition.BEGIN_EVENT, { target: this } );
     } else {
-      this.trigger( BaseTransition.BEGIN_EVENT, { target: this } );
+      this.dispatchEvent( BaseTransition.BEGIN_EVENT, { target: this } );
       _transitionCompleteBinded();
     }
   }
@@ -4483,7 +4512,7 @@ function BaseTransition( element, classes ) {
    */
   function _transitionComplete() {
     _removeEventListener();
-    this.trigger( BaseTransition.END_EVENT, { target: this } );
+    this.dispatchEvent( BaseTransition.END_EVENT, { target: this } );
     _isAnimating = false;
   }
 
@@ -4581,9 +4610,10 @@ function BaseTransition( element, classes ) {
   /* eslint-enable complexity */
 
   // Attach public events.
-  this.addEventListener = _mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.on;
-  this.trigger = _mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.trigger;
-  this.removeEventListener = _mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.off;
+  const eventObserver = new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__.default();
+  this.addEventListener = eventObserver.addEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+  this.removeEventListener = eventObserver.removeEventListener;
 
   this.animateOff = animateOff;
   this.animateOn = animateOn;
@@ -4786,15 +4816,15 @@ function isEmpty( value ) {
 
 // Expose public methods.
 /* harmony default export */ __webpack_exports__["default"] = ({
-  isUndefined,
-  isDefined,
-  isObject,
-  isString,
-  isNumber,
-  isDate,
-  isArray,
-  isFunction,
-  isEmpty
+  isUndefined: isUndefined,
+  isDefined: isDefined,
+  isObject: isObject,
+  isString: isString,
+  isNumber: isNumber,
+  isDate: isDate,
+  isArray: isArray,
+  isFunction: isFunction,
+  isEmpty: isEmpty
 });
 
 
@@ -4813,7 +4843,7 @@ function isEmpty( value ) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
 /* harmony import */ var _ExpandableTransition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ExpandableTransition */ "./packages/cfpb-expandables/src/ExpandableTransition.js");
 /* ==========================================================================
@@ -4825,7 +4855,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
+
 const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_2__.default.extend( {
+
   ui: {
     base:    '.o-expandable',
     target:  '.o-expandable_target',
@@ -4879,7 +4912,7 @@ function initialize() {
     expandableGroup.classList.contains( this.classes.groupAccordion );
 
   if ( this.isAccordionGroup ) {
-    _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_1__.default.on(
+    eventObserver.addEventListener(
       'accordionActivated',
       _accordionActivatedHandler.bind( this )
     );
@@ -4908,7 +4941,7 @@ function expandableClickHandler() {
     if ( this.activeAccordion ) {
       this.activeAccordion = false;
     } else {
-      _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_1__.default.trigger( 'accordionActivated', { target: this } );
+      eventObserver.dispatchEvent( 'accordionActivated', { target: this } );
       this.activeAccordion = true;
     }
   }
@@ -4967,7 +5000,7 @@ function getLabelText() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/Events.js */ "./packages/cfpb-atomic-component/src/mixins/Events.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
 // Required modules.
 
@@ -5075,9 +5108,10 @@ function ExpandableTransition( element ) {
   }
 
   // Attach public events.
-  this.addEventListener = _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.on;
-  this.dispatchEvent = _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.trigger;
-  this.removeEventListener = _cfpb_cfpb_atomic_component_src_mixins_Events_js__WEBPACK_IMPORTED_MODULE_0__.default.off;
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__.default();
+  this.addEventListener = eventObserver.addEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+  this.removeEventListener = eventObserver.removeEventListener;
 
   this.animateOff = _baseTransition.animateOff;
   this.animateOn = _baseTransition.animateOn;
@@ -5360,7 +5394,7 @@ function updateTableDom() {
   }
 
   tableBody.appendChild( documentFragment );
-  this.trigger( 'table:updated' );
+  this.dispatchEvent( 'table:updated' );
 
   return tableBody;
 }

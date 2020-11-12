@@ -102,10 +102,10 @@ function MoveTransition( element ) {
   }
 
   // Attach public events.
-  const events = new EventObserver();
-  this.addEventListener = events.addEventListener;
-  this.dispatchEvent = events.dispatchEvent;
-  this.removeEventListener = events.removeEventListener;
+  const eventObserver = new EventObserver();
+  this.addEventListener = eventObserver.addEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+  this.removeEventListener = eventObserver.removeEventListener;
 
   this.animateOff = _baseTransition.animateOff;
   this.animateOn = _baseTransition.animateOn;

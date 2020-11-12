@@ -70,7 +70,16 @@ module.exports = ( env, argv ) => {
             path.resolve( __dirname, 'packages' )
           ],
           use: {
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            options: {
+              presets: [ [ '@babel/preset-env', {
+
+                /* Use useBuiltIns: 'usage' and set `debug: true` to see what
+                   scripts require polyfilling. */
+                useBuiltIns: false,
+                debug: false
+              } ] ]
+            }
           }
         },
         {

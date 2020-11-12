@@ -236,10 +236,10 @@ function BaseTransition( element, classes ) {
   /* eslint-enable complexity */
 
   // Attach public events.
-  const events = new EventObserver();
-  this.addEventListener = events.addEventListener;
-  this.dispatchEvent = events.dispatchEvent;
-  this.removeEventListener = events.removeEventListener;
+  const eventObserver = new EventObserver();
+  this.addEventListener = eventObserver.addEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+  this.removeEventListener = eventObserver.removeEventListener;
 
   this.animateOff = animateOff;
   this.animateOn = animateOn;

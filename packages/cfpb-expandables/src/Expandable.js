@@ -9,7 +9,10 @@ import ExpandableTransition from './ExpandableTransition.js';
 
 const events = new EventObserver();
 
+const eventObserver = new EventObserver();
+
 const Expandable = AtomicComponent.extend( {
+
   ui: {
     base:    '.o-expandable',
     target:  '.o-expandable_target',
@@ -63,7 +66,7 @@ function initialize() {
     expandableGroup.classList.contains( this.classes.groupAccordion );
 
   if ( this.isAccordionGroup ) {
-    events.addEventListener(
+    eventObserver.addEventListener(
       'accordionActivated',
       _accordionActivatedHandler.bind( this )
     );
@@ -92,7 +95,7 @@ function expandableClickHandler() {
     if ( this.activeAccordion ) {
       this.activeAccordion = false;
     } else {
-      events.dispatchEvent( 'accordionActivated', { target: this } );
+      eventObserver.dispatchEvent( 'accordionActivated', { target: this } );
       this.activeAccordion = true;
     }
   }

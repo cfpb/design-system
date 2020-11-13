@@ -76,6 +76,6 @@ function _getMatchesMethod( elem ) {
 }
 
 export default {
-  queryOne,
-  closest
+  queryOne: queryOne,
+  closest: closest
 };

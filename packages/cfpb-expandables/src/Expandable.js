@@ -7,8 +7,6 @@ import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.
 import AtomicComponent from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
 import ExpandableTransition from './ExpandableTransition.js';
 
-const events = new EventObserver();
-
 const eventObserver = new EventObserver();
 
 const Expandable = AtomicComponent.extend( {

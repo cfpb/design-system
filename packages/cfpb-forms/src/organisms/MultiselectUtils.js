@@ -57,6 +57,6 @@ function create( tag, options ) {
 }
 
 export default {
-  indexOfObject,
-  create
+  indexOfObject: indexOfObject,
+  create: create
 }

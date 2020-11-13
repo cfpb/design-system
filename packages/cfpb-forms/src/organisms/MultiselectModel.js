@@ -6,11 +6,11 @@ const MAX_SELECTIONS = 5;
 
 /**
  * Escapes a string.
- * @param   {string} s The string to escape.
- * @returns {string}   The escaped string.
+ * @param {string} str The string to escape.
+ * @returns {string} The escaped string.
  */
-function stringEscape( s ) {
-  return s.replace( /[-\\^$*+?.()|[\]{}]/g, '\\$&' );
+function stringEscape( str ) {
+  return str.replace( /[-\\^$*+?.()|[\]{}]/g, '\\$&' );
 }
 
 /**
@@ -119,6 +119,10 @@ function MultiselectModel( options ) {
    * @returns {Array} List of indices of the matching entries from the options.
    */
   function filterIndices( query ) {
+    // Convert query to a string if its not.
+    if ( Object.prototype.toString.call( query ) !== '[object String]' ) {
+      query = '';
+    }
     _lastFilterIndices = _filterIndices;
     if ( _optionsData.length > 0 ) {
       _filterIndices = _optionsData.reduce(

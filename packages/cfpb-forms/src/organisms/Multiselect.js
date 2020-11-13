@@ -1,8 +1,8 @@
 // Required modules.
 //import { checkDom, setInitFlag } from '../modules/util/atomic-helpers';
-import EventObserver from '../../../cfpb-atomic-component/src/mixins/EventObserver';
-import MultiselectModel from './MultiselectModel';
-import MultiselectUtils from './MultiselectUtils';
+import EventObserver from '../../../cfpb-atomic-component/src/mixins/EventObserver.js';
+import MultiselectModel from './MultiselectModel.js';
+import MultiselectUtils from './MultiselectUtils.js';
 import domEvents from '../../../cfpb-atomic-component/src/utilities/dom-events';
 
 import closeIcon from '../../../cfpb-icons/src/icons/close.svg';
@@ -338,7 +338,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @param {Array} filterIndices - List of indices to filter from the options.
    * @returns {boolean} True if options are filtered, false otherwise.
    */
-  function _filterList( filterIndices = [] ) {
+  function _filterList( filterIndices ) {
     if ( filterIndices.length > 0 ) {
       _filterMatches( filterIndices );
       return true;

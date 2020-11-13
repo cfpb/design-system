@@ -125,6 +125,10 @@ describe( 'MultiselectModel', () => {
       expect( multiselectModel.filterIndices( 'fin' )[1] ).toBe( 2 );
       expect( multiselectModel.filterIndices( 'being' ).length ).toBe( 1 );
       expect( multiselectModel.filterIndices( 'being' )[0] ).toBe( 2 );
+      expect( multiselectModel.filterIndices( '' ).length ).toBe( 6 );
+      expect( multiselectModel.filterIndices().length ).toBe( 6 );
+      expect( multiselectModel.filterIndices( [] ).length ).toBe( 6 );
+      expect( multiselectModel.filterIndices( {} ).length ).toBe( 6 );
     } );
   } );
 

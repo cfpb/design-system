@@ -368,12 +368,12 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   function _filterMatches( filterIndices ) {
     _optionsDom.classList.remove( 'u-no-results' );
     _optionsDom.classList.add( 'u-filtered' );
-    _model.getLastFilterIndices().forEach( index => {
-      _optionItemDoms[index].classList.remove( 'u-filter-match' );
-    } );
-    _model.getFilterIndices().forEach( index => {
-      _optionItemDoms[index].classList.add( 'u-filter-match' );
-    } );
+    for ( let i = 0, len = _model.getLastFilterIndices(); i < len; i++ ) {
+      _optionItemDoms[i].classList.remove( 'u-filter-match' );
+    }
+    for ( let j = 0, len = _model.getFilterIndices(); j < len; j++ ) {
+      _optionItemDoms[j].classList.add( 'u-filter-match' );
+    }
   }
 
   /**

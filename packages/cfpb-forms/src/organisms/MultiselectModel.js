@@ -98,7 +98,9 @@ function MultiselectModel( options ) {
     // We're over the max selections, reverse the check of the option.
     _optionsData[index].checked = false;
     _selectedIndices = _selectedIndices.filter(
-      currIndex => currIndex !== index
+      function( currIndex ) {
+        return currIndex !== index;
+      }
     );
 
     return false;
@@ -126,7 +128,9 @@ function MultiselectModel( options ) {
     _lastFilterIndices = _filterIndices;
     if ( _optionsData.length > 0 ) {
       _filterIndices = _optionsData.reduce(
-        ( acc, item, index ) => _searchAggregator( acc, item, index, query ),
+        function( acc, item, index ) {
+          return _searchAggregator( acc, item, index, query )
+        },
         []
       );
     }
@@ -187,29 +191,29 @@ function MultiselectModel( options ) {
 
   // This is used to check an item in the collection.
   this.toggleOption = toggleOption;
-  this.getSelectedIndices = () => _selectedIndices;
+  this.getSelectedIndices = function() { return _selectedIndices; };
   this.isAtMaxSelections = isAtMaxSelections;
 
   // This is used to search the items in the collection.
   this.filterIndices = filterIndices;
-  this.clearFilter = () => {
+  this.clearFilter = function() {
     _filterIndices = _lastFilterIndices = [];
     return UNDEFINED;
   };
-  this.getFilterIndices = () => _filterIndices;
-  this.getLastFilterIndices = () => _lastFilterIndices;
+  this.getFilterIndices = function() { return _filterIndices; };
+  this.getLastFilterIndices = function() { return _lastFilterIndices; };
 
   // These are used to highlight items in the collection.
   this.getIndex = getIndex;
   this.setIndex = setIndex;
-  this.resetIndex = () => {
+  this.resetIndex = function() {
     _index = -1;
     return _index;
   };
 
   // This is used to retrieve items from the collection.
   this.getOption = getOption;
-  this.getOptions = () => _optionsData;
+  this.getOptions = function() { return _optionsData; };
 
   return this;
 }

@@ -8,10 +8,10 @@ description: Feedback forms are used to allow users to respond whether a given
   text.
 variation_groups:
   - variations:
-      - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+      - variation_code_snippet: ""
         variation_description: The default state is the most default state of them all.
         variation_name: Default state
-      - variation_code_snippet: <marquee>Some sample code will eventually show up here.</marquee>
+      - variation_code_snippet: ""
         variation_description: The secondary state is very secondary.
         variation_name: Secondary state
     variation_group_name: Types

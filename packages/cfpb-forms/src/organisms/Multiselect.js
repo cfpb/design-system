@@ -1,5 +1,4 @@
 // Required modules.
-//import { checkDom, setInitFlag } from '../modules/util/atomic-helpers';
 import EventObserver from '../../../cfpb-atomic-component/src/mixins/EventObserver.js';
 import MultiselectModel from './MultiselectModel.js';
 import MultiselectUtils from './MultiselectUtils.js';
@@ -67,10 +66,6 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @returns {Multiselect} An instance.
    */
   function init() {
-    /*if ( !setInitFlag( _dom ) ) {
-      return this;
-    }*/
-
     _instance = this;
     _name = _dom.name;
     _placeholder = _dom.getAttribute( 'placeholder' );
@@ -85,10 +80,6 @@ function Multiselect( element ) { // eslint-disable-line max-statements
          and re-assign DOM reference. */
       _dom.parentNode.removeChild( _dom );
       _dom = newDom;
-
-      /* We need to set init flag again since we've created a new <div>
-         to replace the <select> element. */
-      //setInitFlag( _dom );
 
       _bindEvents();
     }

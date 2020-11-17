@@ -56,7 +56,6 @@ first-level:
             nav-items:
               - page: Designing forms
               - page: E-mail signup forms
-              - page: Feedback forms
           - heading: Navigation
             nav-items:
               - page: Filterable list control panels

@@ -82,28 +82,30 @@ describe( 'Multiselect', () => {
       expect( document.activeElement.id ).toBe( 'Debt collection' );
     } );
 
-    xit( 'should open when the search input is clicked', function() {
+    it( 'should open when the search input is focused', function() {
       multiselect.init();
       multiselectDom = document.querySelector( '.o-multiselect' );
       const fieldset = multiselectDom.querySelector(
         '.o-multiselect_fieldset'
       );
       const search = document.querySelector( '#test-select' );
-      search.click();
+      search.focus();
 
       expect( document.activeElement.id ).toBe( 'test-select' );
       expect( multiselectDom.className ).toBe( 'o-multiselect u-active' );
       expect( fieldset.getAttribute( 'aria-hidden' ) ).toBe( 'false' );
     } );
 
-    xit( 'should close when the body is clicked', function() {
+    it( 'should close when the search input is blurred', function() {
       multiselect.init();
       multiselect.expand();
       multiselectDom = document.querySelector( '.o-multiselect' );
       const fieldset = multiselectDom.querySelector(
         '.o-multiselect_fieldset'
       );
-      document.click();
+      const search = document.querySelector( '#test-select' );
+      search.focus();
+      search.blur();
 
       expect( multiselectDom.className ).toBe( 'o-multiselect' );
       expect( fieldset.getAttribute( 'aria-hidden' ) ).toBe( 'true' );

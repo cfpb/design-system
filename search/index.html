@@ -2186,41 +2186,6 @@
         
         
 
-        'patterns-feedback-forms': {
-
-            // Cycle through the variation fields of this page.
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Default state',
-                    'variation_description1': "The default state is the most default state of them all.\n",
-                    'variation_code_snippet1': ``,
-                
-                    'variation_name2': 'Secondary state',
-                    'variation_description2': "The secondary state is very secondary.\n",
-                    'variation_code_snippet2': ``,
-                
-            
-
-
-            'title': 'Feedback forms',
-            'description': "Feedback forms are used to allow users to respond whether a given page was helpful. They can also provide an additional comment as free-form text.\n",
-            'use_cases': "Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus.\n",
-            'guidelines': "Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in.\n",
-            'behavior': "\n",
-            'accessibility': "Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec.\n",
-            'research': "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit.\n\nOdio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur.\n\nVulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.\n",
-            'related_items': "\n",
-            'url': 'patterns/feedback-forms'
-        }
-        ,
-        
-
-        
-        
-
         'components-fieldsets': {
 
             // Cycle through the variation fields of this page.
@@ -5887,9 +5852,21 @@ Disabled
               id=&quot;full-textarea-example&quot;&gt;Placeholder text&lt;/textarea&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name3': 'Text input with a button',
-                    'variation_description3': "These are used for simple forms where a full filter isn’t necessary.\n",
-                    'variation_code_snippet3': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
+                    'variation_name3': 'Datepicker inputs',
+                    'variation_description3': "\n",
+                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field&quot;&gt;
+    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;datepicker-example&quot;&gt;
+        Label
+    &lt;/label&gt;
+    &lt;input class=&quot;a-text-input&quot;
+          type=&quot;date&quot;
+          id=&quot;datepicker-example&quot;
+          placeholder=&quot;mm/dd/yyyy&quot;&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name4': 'Text input with a button',
+                    'variation_description4': "These are used for simple forms where a full filter isn’t necessary.\n",
+                    'variation_code_snippet4': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
     &lt;div class=&quot;o-form__input-w-btn_input-container&quot;&gt;
         &lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; title=&quot;Test input&quot;&gt;
     &lt;/div&gt;
@@ -5898,9 +5875,9 @@ Disabled
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name4': 'Button inside a text input',
-                    'variation_description4': "These offer the user an action to take related to the input, typically to clear the input.\n",
-                    'variation_code_snippet4': `&lt;div class=&quot;m-btn-inside-input&quot;&gt;
+                    'variation_name5': 'Button inside a text input',
+                    'variation_description5': "These offer the user an action to take related to the input, typically to clear the input.\n",
+                    'variation_code_snippet5': `&lt;div class=&quot;m-btn-inside-input&quot;&gt;
     &lt;input type=&quot;text&quot;
         value=&quot;This is some really long text to make sure that the button doesn&#39;t overlap the content in such a way that this input becomes unusable.&quot;
         title=&quot;Test input&quot;
@@ -5911,9 +5888,9 @@ Disabled
     &lt;/button&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name5': 'Button inside a text input with another button',
-                    'variation_description5': "This example combines both of the previous patterns, creating a typical site search form.\n",
-                    'variation_code_snippet5': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
+                    'variation_name6': 'Button inside a text input with another button',
+                    'variation_description6': "This example combines both of the previous patterns, creating a typical site search form.\n",
+                    'variation_code_snippet6': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
     &lt;div class=&quot;o-form__input-w-btn_input-container&quot;&gt;
         &lt;div class=&quot;m-btn-inside-input&quot;&gt;
             &lt;input type=&quot;text&quot;

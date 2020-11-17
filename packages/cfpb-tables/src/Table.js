@@ -2,10 +2,10 @@
    Table Organism
    ========================================================================== */
 
-import config from '@cfpb/cfpb-atomic-component/src/utilities/config';
+import config from '@cfpb/cfpb-atomic-component/src/utilities/config.js';
 import AtomicComponent from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
-import TableSortable from './TableSortable';
-import TableRowLinks from './TableRowLinks';
+import TableSortable from './TableSortable.js';
+import TableRowLinks from './TableRowLinks.js';
 
 const Table = AtomicComponent.extend( {
   ui: {

@@ -36,7 +36,7 @@ first-level:
         nav-items:
           - page: Buttons
           - page: Checkboxes
-          - page: Dropdowns and multi-selects
+          - page: Dropdowns and multiselects
           - page: Fieldsets
           - page: Helper text
           - page: Labels and legends

@@ -6,7 +6,7 @@
    Contains code copied from the following with major modifications :
 
    - Backbone.js ( http://backbonejs.org/docs/backbone.html ).
-   - Marionette ( http://marionettejs.com/ ).
+   - Marionette ( http://marionettejs.com ).
 
    ========================================================================== */
 
@@ -33,7 +33,9 @@ function AtomicComponent( element, attributes ) {
   this.setCachedElements();
   this.initializers.push( this.initialize );
   this.initializers.forEach( function( func ) {
-    if ( typeCheckers.isFunction( func ) ) func.apply( this, arguments );
+    if ( typeCheckers.isFunction( func ) ) {
+      func.apply( this, arguments );
+    }
   }, this );
   this.dispatchEvent( 'component:initialized' );
 }
@@ -187,13 +189,18 @@ assign( AtomicComponent.prototype, new EventObserver(), {
     let match;
 
     events = events || ( events = this.events );
-    if ( !events ) return this;
+    if ( !events ) {
+      return this;
+    }
+
     this.undelegateEvents();
     this._delegate = new Delegate( this.element );
     for ( key in events ) {
       if ( {}.hasOwnProperty.call( events, key ) ) {
         method = events[key];
-        if ( typeCheckers.isFunction( this[method] ) ) method = this[method];
+        if ( typeCheckers.isFunction( this[method] ) ) {
+          method = this[method];
+        }
         if ( method ) {
           match = key.match( delegateEventSplitter );
           this.delegate( match[1], match[2], method.bind( this ) );
@@ -259,10 +266,9 @@ assign( AtomicComponent.prototype, new EventObserver(), {
 AtomicComponent.extend = function( attributes ) {
 
   /**
- * Function used as constructor in order to establish inheritance
- * chain.
- * @returns {AtomicComponent} An instance.
- */
+   * Function used as constructor in order to establish inheritance chain.
+   * @returns {AtomicComponent} An instance.
+   */
   function child() {
     this._super = AtomicComponent.prototype;
     return AtomicComponent.apply( this, arguments );
@@ -286,16 +292,16 @@ AtomicComponent.extend = function( attributes ) {
 /**
  * Function used to instantiate all instances of the particular
  * atomic component on a page.
- * @param {HTMLNode} scope - Where to search for components within.
  *
+ * @param {HTMLNode} scope - Where to search for components within.
  * @returns {Array} List of AtomicComponent instances.
  */
 AtomicComponent.init = function( scope ) {
   const base = scope || document;
   const elements = base.querySelectorAll( this.selector );
   const components = [];
-  let element;
 
+  let element;
   for ( let i = 0, len = elements.length; i < len; i++ ) {
     element = elements[i];
     if ( element.hasAttribute( 'data-bound' ) === false ) {

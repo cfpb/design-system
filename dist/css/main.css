@@ -4206,6 +4206,101 @@ h6 + .a-legend,
   box-sizing: border-box;
   width: 100%;
 }
+select.o-multiselect {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.4375em;
+}
+.o-multiselect {
+  position: relative;
+}
+.o-multiselect_header {
+  position: relative;
+}
+.o-multiselect_search[type="text"] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+.o-multiselect_fieldset {
+  border-color: #919395;
+  border-top: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  position: absolute;
+  z-index: 10;
+  max-height: 0;
+  margin-top: -1px;
+  width: 100%;
+  transition: max-height 0.25s ease-out;
+}
+.o-multiselect.u-active .o-multiselect_fieldset {
+  margin-top: 0;
+  max-height: 140px;
+  border-color: #0072ce;
+  border-width: 2px;
+  border-top: 0;
+}
+.o-multiselect_options {
+  background-color: #ffffff;
+  padding: 0.625em;
+}
+.o-multiselect_options li:last-child {
+  margin-bottom: 0;
+}
+.o-multiselect_options.u-filtered li:not( .u-filter-match ) {
+  display: none;
+}
+.o-multiselect_options.u-no-results li,
+.o-multiselect_options.u-max-selections li {
+  display: none;
+}
+.o-multiselect_options.u-no-results:after,
+.o-multiselect_options.u-max-selections:after {
+  display: list-item;
+}
+.o-multiselect_options.u-no-results:after {
+  content: 'No results found';
+}
+.o-multiselect_options.u-max-selections:after {
+  content: 'Reached maximum of five selections';
+}
+.o-multiselect_choices {
+  margin-right: -0.625em;
+  margin-bottom: 0;
+}
+.o-multiselect_choices li {
+  display: inline-block;
+  margin-right: 0.625em;
+}
+.o-multiselect_choices li:last-child {
+  margin-bottom: 0.625em;
+}
+.o-multiselect_choices label {
+  display: inline-block;
+  padding: 2px 5px;
+  padding-right: 1.78571429em;
+  background-color: #5674a3;
+  border-radius: 0.28571429em;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.875em;
+  position: relative;
+}
+.o-multiselect_choices label:hover {
+  background-color: #254b87;
+}
+.o-multiselect_choices label:hover:after {
+  color: #ffffff;
+}
+.o-multiselect_choices label .cf-icon-svg {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  fill: #d3daeb;
+}
 /* ==========================================================================
    Design System
    Notifications Styling

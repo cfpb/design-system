@@ -382,11 +382,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! anchor-js */ "./node_modules/anchor-js/anchor.js");
 /* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(anchor_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Expandable */ "./packages/cfpb-expandables/src/Expandable.js");
-/* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table */ "./packages/cfpb-tables/src/Table.js");
-/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! govuk-frontend */ "./node_modules/govuk-frontend/govuk/all.js");
-/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(govuk_frontend__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
-/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
+/* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
+/* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table */ "./packages/cfpb-tables/src/Table.js");
+/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! govuk-frontend */ "./node_modules/govuk-frontend/govuk/all.js");
+/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(govuk_frontend__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
+/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
 
 
 
@@ -394,15 +395,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_redirect_banner_js__WEBPACK_IMPORTED_MODULE_5__.default.init();
-_sidebar_js__WEBPACK_IMPORTED_MODULE_6__.default.init();
+
+_redirect_banner_js__WEBPACK_IMPORTED_MODULE_6__.default.init();
+_sidebar_js__WEBPACK_IMPORTED_MODULE_7__.default.init();
 var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())(); // Add anchors to all headings (except page title headings)
 
 anchors.add('h2:not(.title), h3, h4, h5'); // Ensure there are no anchors in inconvenient places
 
 anchors.remove("\n  .live-code-example h2,\n  .live-code-example h3,\n  .live-code-example h4,\n  .live-code-example h5,\n  .o-expandable_label,\n  #search-results h3\n");
+var multiselectDom = document.querySelector('.o-multiselect');
+
+if (multiselectDom) {
+  var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__.default(multiselectDom);
+  multiselect.init();
+}
+
 _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__.default.init();
-_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_3__.default.init();
+_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_4__.default.init();
 var main = document.querySelector('#main');
 var tabs = document.querySelectorAll('[data-module="tabs"]');
 
@@ -411,7 +420,7 @@ if (tabs && tabs.length > 0) {
 
   for (var i = 0; i < tabs.length; i++) {
     var tab = tabs[i];
-    new govuk_frontend__WEBPACK_IMPORTED_MODULE_4__.Tabs(tab).init();
+    new govuk_frontend__WEBPACK_IMPORTED_MODULE_5__.Tabs(tab).init();
   }
 }
 
@@ -3212,6 +3221,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./packages/cfpb-icons/src/icons/close.svg":
+/*!*************************************************!*\
+  !*** ./packages/cfpb-icons/src/icons/close.svg ***!
+  \*************************************************/
+/*! unknown exports (runtime-defined) */
+/*! runtime requirements: module */
+/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
+/***/ (function(module) {
+
+module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 718.9 1200\" class=\"cf-icon-svg\"><path d=\"M451.4 613.7l248.1-248.1c25.6-25.1 26-66.3.8-91.9s-66.3-26-91.9-.8l-.8.8-248.1 248.1-248.1-248.1c-25.4-25.4-66.5-25.4-91.9 0s-25.4 66.5 0 91.9l248.1 248.1L19.5 861.8c-25.6 25.1-26 66.3-.8 91.9s66.3 26 91.9.8l.8-.8 248.1-248.1 248.1 248.1c25.4 25.4 66.5 25.4 91.9 0s25.4-66.5 0-91.9L451.4 613.7z\"></path></svg>"
+
+/***/ }),
+
 /***/ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/delegate.js":
 /*!***********************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/delegate.js ***!
@@ -3759,7 +3781,7 @@ __webpack_require__.r(__webpack_exports__);
    Contains code copied from the following with major modifications :
 
    - Backbone.js ( http://backbonejs.org/docs/backbone.html ).
-   - Marionette ( http://marionettejs.com/ ).
+   - Marionette ( http://marionettejs.com ).
 
    ========================================================================== */
 
@@ -3786,7 +3808,9 @@ function AtomicComponent( element, attributes ) {
   this.setCachedElements();
   this.initializers.push( this.initialize );
   this.initializers.forEach( function( func ) {
-    if ( _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__.default.isFunction( func ) ) func.apply( this, arguments );
+    if ( _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__.default.isFunction( func ) ) {
+      func.apply( this, arguments );
+    }
   }, this );
   this.dispatchEvent( 'component:initialized' );
 }
@@ -3940,13 +3964,18 @@ function AtomicComponent( element, attributes ) {
     let match;
 
     events = events || ( events = this.events );
-    if ( !events ) return this;
+    if ( !events ) {
+      return this;
+    }
+
     this.undelegateEvents();
     this._delegate = new Delegate( this.element );
     for ( key in events ) {
       if ( {}.hasOwnProperty.call( events, key ) ) {
         method = events[key];
-        if ( _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__.default.isFunction( this[method] ) ) method = this[method];
+        if ( _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__.default.isFunction( this[method] ) ) {
+          method = this[method];
+        }
         if ( method ) {
           match = key.match( delegateEventSplitter );
           this.delegate( match[1], match[2], method.bind( this ) );
@@ -4012,10 +4041,9 @@ function AtomicComponent( element, attributes ) {
 AtomicComponent.extend = function( attributes ) {
 
   /**
- * Function used as constructor in order to establish inheritance
- * chain.
- * @returns {AtomicComponent} An instance.
- */
+   * Function used as constructor in order to establish inheritance chain.
+   * @returns {AtomicComponent} An instance.
+   */
   function child() {
     this._super = AtomicComponent.prototype;
     return AtomicComponent.apply( this, arguments );
@@ -4039,16 +4067,16 @@ AtomicComponent.extend = function( attributes ) {
 /**
  * Function used to instantiate all instances of the particular
  * atomic component on a page.
- * @param {HTMLNode} scope - Where to search for components within.
  *
+ * @param {HTMLNode} scope - Where to search for components within.
  * @returns {Array} List of AtomicComponent instances.
  */
 AtomicComponent.init = function( scope ) {
   const base = scope || document;
   const elements = base.querySelectorAll( this.selector );
   const components = [];
-  let element;
 
+  let element;
   for ( let i = 0, len = elements.length; i < len; i++ ) {
     element = elements[i];
     if ( element.hasAttribute( 'data-bound' ) === false ) {
@@ -4285,6 +4313,140 @@ function closest( element, selector ) {
 
 // Expose public methods.
 
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-atomic-component/src/utilities/dom-events/index.js":
+/*!**************************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/dom-events/index.js ***!
+  \**************************************************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Shortcut for binding event listeners to elements.
+ * @param  {HTMLNode} elem   The element to attach the event listener to.
+ * @param  {Object}   events The list of events to attach to the element.
+ */
+function bindEvent( elem, events ) {
+  let callback;
+
+  let event;
+  for ( event in events ) {
+    if ( events.hasOwnProperty( event ) ) {
+      callback = events[event];
+      elem.addEventListener( event, callback );
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  bindEvent: bindEvent
+});
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js":
+/*!****************************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js ***!
+  \****************************************************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _type_checkers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../type-checkers */ "./packages/cfpb-atomic-component/src/utilities/type-checkers/index.js");
+
+
+/**
+ * Queries for the first match unless an HTMLNode is passed
+ * @param   {(HTMLNode|string)} expr HTMLNode or string to query for
+ * @param   {Object}          con  The document location to query
+ * @returns {HTMLNode}             The elem
+ */
+function queryOne( expr, con ) {
+  return _type_checkers__WEBPACK_IMPORTED_MODULE_0__.default.isString( expr ) ?
+    ( con || document ).querySelector( expr ) :
+    expr || null;
+}
+
+/**
+ * Return a list, with an element excluded.
+ *
+ * @param {NodeList} elems - List of DOM elements.
+ * @param {HTMLNode} exclude - DOM element to exlude from elems.
+ * @returns {Array} edited elems list or original elems list,
+ *   if exlude was not found.
+ */
+function not( elems, exclude ) {
+  const elemsArr = Array.prototype.slice.call( elems );
+  const index = elemsArr.indexOf( exclude );
+
+  if ( index > -1 ) {
+    elemsArr.splice( index, 1 );
+  }
+
+  return elemsArr;
+}
+
+/**
+ * Get the nearest parent node of an element.
+ *
+ * @param {HTMLNode} elem - A DOM element.
+ * @param {string} selector - CSS selector.
+ * @returns {HTMLNode} Nearest parent node that matches the selector.
+ */
+function closest( elem, selector ) {
+  elem = elem.parentNode;
+
+  const matchesSelector = _getMatchesMethod( elem );
+  let match;
+
+  try {
+    while ( elem ) {
+      if ( matchesSelector.bind( elem )( selector ) ) {
+        match = elem;
+      } else {
+        elem = elem.parentNode;
+      }
+
+      if ( match ) { return elem; }
+    }
+  } catch ( err ) {
+    return null;
+  }
+
+  return null;
+}
+
+/**
+ * Search for support of the matches() method by looking at
+ * browser prefixes.
+ * @param {HTMLNode} elem
+ *   The element to check for support of matches() method.
+ * @returns {Function} The appropriate matches() method of elem.
+ */
+function _getMatchesMethod( elem ) {
+  return elem.matches ||
+         elem.webkitMatchesSelector ||
+         elem.mozMatchesSelector ||
+         elem.msMatchesSelector;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  queryOne: queryOne,
+  closest: closest
+});
 
 
 /***/ }),
@@ -4845,7 +5007,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
-/* harmony import */ var _ExpandableTransition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ExpandableTransition */ "./packages/cfpb-expandables/src/ExpandableTransition.js");
+/* harmony import */ var _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ExpandableTransition.js */ "./packages/cfpb-expandables/src/ExpandableTransition.js");
 /* ==========================================================================
    Expandable Organism
    ========================================================================== */
@@ -4892,14 +5054,14 @@ const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js
  * Initialize a new expandable.
  */
 function initialize() {
-  const transition = new _ExpandableTransition__WEBPACK_IMPORTED_MODULE_3__.default(
+  const transition = new _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_3__.default(
     this.ui.content
   );
   this.transition = transition.init();
   this.transition.addEventListener( 'expandBegin', expandBeginHandler.bind( this ) );
   this.transition.addEventListener( 'collapseEnd', collapseEndHandler.bind( this ) );
 
-  if ( this.ui.content.classList.contains( _ExpandableTransition__WEBPACK_IMPORTED_MODULE_3__.default.CLASSES.EXPANDED ) ) {
+  if ( this.ui.content.classList.contains( _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_3__.default.CLASSES.EXPANDED ) ) {
     this.ui.target.classList.add( this.classes.targetExpanded );
   } else {
     this.ui.target.classList.add( this.classes.targetCollapsed );
@@ -5001,7 +5163,7 @@ function getLabelText() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
 // Required modules.
 
 
@@ -5025,7 +5187,7 @@ const CLASSES = {
  * @returns {ExpandableTransition} An instance.
  */
 function ExpandableTransition( element ) {
-  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition__WEBPACK_IMPORTED_MODULE_1__.default( element, CLASSES );
+  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__.default( element, CLASSES );
   let previousHeight;
 
   /**
@@ -5034,7 +5196,7 @@ function ExpandableTransition( element ) {
   function init() {
     _baseTransition.init();
     _baseTransition.addEventListener(
-      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition__WEBPACK_IMPORTED_MODULE_1__.default.END_EVENT,
+      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__.default.END_EVENT,
       _transitionComplete.bind( this )
     );
 
@@ -5137,6 +5299,835 @@ ExpandableTransition.CLASSES = CLASSES;
 
 /***/ }),
 
+/***/ "./packages/cfpb-forms/src/organisms/Multiselect.js":
+/*!**********************************************************!*\
+  !*** ./packages/cfpb-forms/src/organisms/Multiselect.js ***!
+  \**********************************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
+/* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
+/* harmony import */ var _cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../cfpb-atomic-component/src/utilities/dom-events */ "./packages/cfpb-atomic-component/src/utilities/dom-events/index.js");
+/* harmony import */ var _cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
+/* harmony import */ var _cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4__);
+// Required modules.
+
+
+
+
+
+
+
+const BASE_CLASS = 'o-multiselect';
+
+/**
+ * Multiselect
+ * @class
+ *
+ * @classdesc Initializes a new Multiselect molecule.
+ *
+ * @param {HTMLNode} element
+ *   The DOM element within which to search for the molecule.
+ * @returns {Multiselect} An instance.
+ */
+function Multiselect( element ) { // eslint-disable-line max-statements
+
+  const LIST_CLASS = 'm-list';
+  const CHECKBOX_INPUT_CLASS = 'a-checkbox';
+  const TEXT_INPUT_CLASS = 'a-text-input';
+
+  /* TODO: As the multiselect is developed further
+     explore whether it should use an updated
+     class name or data-* attribute in the
+     markup so that it doesn't apply globally by default. */
+  element.classList.add( BASE_CLASS );
+
+  // Constants for direction.
+  const DIR_PREV = 'prev';
+  const DIR_NEXT = 'next';
+
+  // Constants for key binding.
+  const KEY_RETURN = 13;
+  const KEY_ESCAPE = 27;
+  const KEY_UP = 38;
+  const KEY_DOWN = 40;
+  const KEY_TAB = 9;
+
+  // Internal vars.
+  //let _dom = checkDom( element, BASE_CLASS );
+  let _dom = element;
+  let _isBlurSkipped = false;
+  let _name;
+  let _placeholder;
+  let _model;
+  let _options;
+  let _optionsData;
+
+  // Markup elems, conver this to templating engine in the future.
+  let _containerDom;
+  let _selectionsDom;
+  let _headerDom;
+  let _searchDom;
+  let _fieldsetDom;
+  let _optionsDom;
+  const _optionItemDoms = [];
+  let _instance;
+
+  /**
+   * Set up and create the multiselect.
+   * @returns {Multiselect} An instance.
+   */
+  function init() {
+    _instance = this;
+    _name = _dom.name;
+    _placeholder = _dom.getAttribute( 'placeholder' );
+    _options = _dom.options || [];
+
+    if ( _options.length > 0 ) {
+      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__.default( _options ).init();
+      _optionsData = _model.getOptions();
+      const newDom = _populateMarkup();
+
+      /* Removes <select> element,
+         and re-assign DOM reference. */
+      _dom.parentNode.removeChild( _dom );
+      _dom = newDom;
+
+      _bindEvents();
+    }
+
+    return this;
+  }
+
+  /**
+   * Expand the multiselect drop down.
+   * @returns {Multiselect} An instance.
+   */
+  function expand() {
+    _containerDom.classList.add( 'u-active' );
+    _fieldsetDom.classList.remove( 'u-invisible' );
+    _fieldsetDom.setAttribute( 'aria-hidden', false );
+    _instance.dispatchEvent( 'expandBegin', { target: _instance } );
+
+    return _instance;
+  }
+
+  /**
+   * Collapse the multiselect drop down.
+   * @returns {Multiselect} An instance.
+   */
+  function collapse() {
+    _containerDom.classList.remove( 'u-active' );
+    _fieldsetDom.classList.add( 'u-invisible' );
+    _fieldsetDom.setAttribute( 'aria-hidden', true );
+    _model.resetIndex();
+    _instance.dispatchEvent( 'expandEnd', { target: _instance } );
+
+    return _instance;
+  }
+
+  /**
+   * Populates and injects the markup for the custom multiselect.
+   * @returns {HTMLNode} Newly created <div> element to hold the multiselect.
+   */
+  function _populateMarkup() {
+    // Add a container for our markup
+    _containerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'div', {
+      className: BASE_CLASS,
+      around:    _dom
+    } );
+
+    // Create all our markup but wait to manipulate the DOM just once
+    _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'ul', {
+      className: LIST_CLASS + ' ' +
+                 LIST_CLASS + '__unstyled ' +
+                 BASE_CLASS + '_choices',
+      inside:    _containerDom
+    } );
+
+    _headerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'header', {
+      className: BASE_CLASS + '_header'
+    } );
+
+    _searchDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'input', {
+      className:    BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
+      type:         'text',
+      placeholder:  _placeholder || 'Choose up to five',
+      inside:       _headerDom,
+      id:           _name,
+      autocomplete: 'off'
+    } );
+
+    _fieldsetDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'fieldset', {
+      'className':   BASE_CLASS + '_fieldset u-invisible',
+      'aria-hidden': 'true'
+    } );
+
+    _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'ul', {
+      className: LIST_CLASS + ' ' +
+                 LIST_CLASS + '__unstyled ' +
+                 BASE_CLASS + '_options',
+      inside:    _fieldsetDom
+    } );
+
+    _optionsData.forEach( function( option ) {
+      const _optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'li', {
+        'data-option': option.value,
+        'class': 'm-form-field m-form-field__checkbox'
+      } );
+
+      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'input', {
+        'id':     option.value,
+        // Type must come before value or IE fails
+        'type':    'checkbox',
+        'value':   option.value,
+        'name':    _name,
+        'class':   CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
+        'inside':  _optionsItemDom,
+        'checked': option.checked
+      } );
+
+      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'label', {
+        'for':         option.value,
+        'textContent': option.text,
+        'className':   BASE_CLASS + '_label a-label',
+        'inside':      _optionsItemDom
+      } );
+
+      _optionItemDoms.push( _optionsItemDom );
+      _optionsDom.appendChild( _optionsItemDom );
+
+      if ( option.checked ) {
+        const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'li', {
+          'data-option': option.value,
+          'class': 'm-form-field m-form-field__checkbox'
+        } );
+
+        _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'label', {
+          'for':       option.value,
+          'innerHTML': option.text + (_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default()),
+          'className': BASE_CLASS + '_label',
+          'inside':    selectionsItemDom
+        } );
+
+        _selectionsDom.appendChild( selectionsItemDom );
+      }
+    } );
+
+    // Write our new markup to the DOM.
+    _containerDom.appendChild( _headerDom );
+    _containerDom.appendChild( _fieldsetDom );
+
+    return _containerDom;
+  }
+
+  /**
+   * Highlights an option in the list.
+   * @param {string} direction Direction to highlight compared to the
+   *                           current focus.
+   */
+  function _highlight( direction ) {
+    if ( direction === DIR_NEXT ) {
+      _model.setIndex( _model.getIndex() + 1 );
+    } else if ( direction === DIR_PREV ) {
+      _model.setIndex( _model.getIndex() - 1 );
+    }
+
+    const index = _model.getIndex();
+    if ( index > -1 ) {
+      let filteredIndex = index;
+      const filterIndices = _model.getFilterIndices();
+      if ( filterIndices.length > 0 ) {
+        filteredIndex = filterIndices[index];
+      }
+      const option = _model.getOption( filteredIndex );
+      const value = option.value;
+      const item = _optionsDom.querySelector( '[data-option="' + value + '"]' );
+      const input = item.querySelector( 'input' );
+
+      _isBlurSkipped = true;
+      input.focus();
+    } else {
+      _isBlurSkipped = false;
+      _searchDom.focus();
+    }
+  }
+
+  /**
+   * Tracks a user's selections and updates the list in the dom.
+   * @param {string} value The value of the option the user has chosen.
+   */
+  function _updateSelections( value ) {
+    const optionIndex = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.indexOfObject(
+      _optionsData,
+      'value',
+      value
+    );
+    const option = _optionsData[optionIndex] || _optionsData[_model.getIndex()];
+
+    if ( option ) {
+      let _selectionsItemDom;
+
+      if ( option.checked ) {
+        if ( _optionsDom.classList.contains( 'u-max-selections' ) ) {
+          _optionsDom.classList.remove( 'u-max-selections' );
+        }
+
+        const dataOptionSel = '[data-option="' + option.value + '"]';
+        _selectionsItemDom = _selectionsDom.querySelector( dataOptionSel );
+
+        if ( _selectionsItemDom ) {
+          _selectionsDom.removeChild( _selectionsItemDom );
+        }
+      } else {
+        _selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'li', {
+          'data-option': option.value
+        } );
+
+        const _selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'label', {
+          'innerHTML': option.text + (_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default()),
+          'for':       option.value,
+          'inside':    _selectionsItemDom
+        } );
+
+        _selectionsDom.appendChild( _selectionsItemDom );
+        _selectionsItemDom.appendChild( _selectionsItemLabelDom );
+      }
+      _model.toggleOption( optionIndex );
+
+      if ( _model.isAtMaxSelections() ) {
+        _optionsDom.classList.add( 'u-max-selections' );
+      }
+
+      _instance.dispatchEvent( 'selectionsUpdated', { target: _instance } );
+    }
+
+    _model.resetIndex();
+    _isBlurSkipped = false;
+
+    if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
+      _searchDom.focus();
+    }
+  }
+
+  /**
+   * Evaluates the list of options based on the user's query in the
+   * search input.
+   * @param {string} value Text the user has entered in the search query.
+   */
+  function _evaluate( value ) {
+    _resetFilter();
+    _model.resetIndex();
+    const matchedIndices = _model.filterIndices( value );
+    _filterList( matchedIndices );
+  }
+
+  /**
+   * Resets the search input and filtering.
+   */
+  function _resetSearch() {
+    _searchDom.value = '';
+    _resetFilter();
+  }
+
+  /**
+   * Filter the options list.
+   * Every time we filter we have two lists of indices:
+   * - The matching options (filterIndices).
+   * - The matching options of the last filter (_lastFilterIndices).
+   * We need to turn off the filter for any of the last filter matches
+   * that are not in the new set, and turn on the filter for the matches
+   * that are not in the last set.
+   * @param {Array} filterIndices - List of indices to filter from the options.
+   * @returns {boolean} True if options are filtered, false otherwise.
+   */
+  function _filterList( filterIndices ) {
+    if ( filterIndices.length > 0 ) {
+      _filterMatches( filterIndices );
+      return true;
+    }
+
+    _filterNoMatches();
+    return false;
+  }
+
+  /**
+   * Resets the filtered option list.
+   */
+  function _resetFilter() {
+    _optionsDom.classList.remove( 'u-filtered', 'u-no-results' );
+
+    for ( let i = 0, len = _optionsDom.children.length; i < len; i++ ) {
+      _optionsDom.children[i].classList.remove( 'u-filter-match' );
+    }
+
+    _model.clearFilter();
+  }
+
+  /**
+   * Set the filtered matched state.
+   * @param {Array} filterIndices - List of indices to filter from the options.
+   */
+  function _filterMatches( filterIndices ) {
+    _optionsDom.classList.remove( 'u-no-results' );
+    _optionsDom.classList.add( 'u-filtered' );
+    for ( let i = 0, len = _model.getLastFilterIndices(); i < len; i++ ) {
+      _optionItemDoms[i].classList.remove( 'u-filter-match' );
+    }
+    for ( let j = 0, len = _model.getFilterIndices(); j < len; j++ ) {
+      _optionItemDoms[j].classList.add( 'u-filter-match' );
+    }
+  }
+
+  /**
+   * Updates the list of options to show the user there
+   * are no matching results.
+   */
+  function _filterNoMatches() {
+    _optionsDom.classList.add( 'u-no-results' );
+    _optionsDom.classList.remove( 'u-filtered' );
+  }
+
+  /**
+   * Binds events to the search input, option list, and checkboxes.
+   */
+  function _bindEvents() {
+    const inputs = _optionsDom.querySelectorAll( 'input' );
+
+    _cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.default.bindEvent( _searchDom, {
+      input: function() {
+        _evaluate( this.value );
+      },
+      focus: function() {
+        if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' ) {
+          expand();
+        }
+      },
+      blur: function() {
+        if ( !_isBlurSkipped &&
+              _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
+          collapse();
+        }
+      },
+      keydown: function( event ) {
+        const key = event.keyCode;
+
+        if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' &&
+             key !== KEY_TAB ) {
+          expand();
+        }
+
+        if ( key === KEY_RETURN ) {
+          event.preventDefault();
+          _highlight( DIR_NEXT );
+        } else if ( key === KEY_ESCAPE ) {
+          _resetSearch();
+          collapse();
+        } else if ( key === KEY_DOWN ) {
+          _highlight( DIR_NEXT );
+        } else if ( key === KEY_TAB &&
+                    !event.shiftKey &&
+                    _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
+          collapse();
+        }
+      }
+    } );
+
+    _cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.default.bindEvent( _optionsDom, {
+      mousedown: function() {
+        _isBlurSkipped = true;
+      },
+      keydown: function( event ) {
+        const key = event.keyCode;
+        const target = event.target;
+        const checked = target.checked;
+
+        if ( key === KEY_RETURN ) {
+          event.preventDefault();
+
+          /* Programmatically checking a checkbox does not fire a change event
+          so we need to manually create an event and dispatch it from the input.
+          */
+          target.checked = !checked;
+          const evt = document.createEvent( 'HTMLEvents' );
+          evt.initEvent( 'change', false, true );
+          target.dispatchEvent( evt );
+        } else if ( key === KEY_ESCAPE ) {
+          _searchDom.focus();
+          collapse();
+        } else if ( key === KEY_UP ) {
+          _highlight( DIR_PREV );
+        } else if ( key === KEY_DOWN ) {
+          _highlight( DIR_NEXT );
+        }
+      }
+    } );
+
+    _cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.default.bindEvent( _fieldsetDom, {
+      mousedown: function() {
+        _isBlurSkipped = true;
+      }
+    } );
+
+    for ( let i = 0, len = inputs.length; i < len; i++ ) {
+      _cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.default.bindEvent( inputs[i], {
+        change: _changeHandler
+      } );
+    }
+  }
+
+  /**
+   * Handles the functions to trigger on the checkbox change.
+   * @param   {Event} event The checkbox change event.
+   */
+  function _changeHandler( event ) {
+    _updateSelections( event.target.value );
+    _resetSearch();
+  }
+
+  // Attach public events.
+  this.init = init;
+  this.expand = expand;
+  this.collapse = collapse;
+
+  const eventObserver = new _cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__.default();
+  this.addEventListener = eventObserver.addEventListener;
+  this.removeEventListener = eventObserver.removeEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+
+  return this;
+}
+
+Multiselect.BASE_CLASS = BASE_CLASS;
+
+/* harmony default export */ __webpack_exports__["default"] = (Multiselect);
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-forms/src/organisms/MultiselectModel.js":
+/*!***************************************************************!*\
+  !*** ./packages/cfpb-forms/src/organisms/MultiselectModel.js ***!
+  \***************************************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Undefined return value for void methods.
+let UNDEFINED;
+
+// How many options may be checked.
+const MAX_SELECTIONS = 5;
+
+/**
+ * Escapes a string.
+ * @param {string} str The string to escape.
+ * @returns {string} The escaped string.
+ */
+function stringEscape( str ) {
+  return str.replace( /[-\\^$*+?.()|[\]{}]/g, '\\$&' );
+}
+
+/**
+ * Tests whether a string matches another.
+ * @param   {string}  x The control string.
+ * @param   {string}  y The comparison string.
+ * @returns {boolean}   True if `x` and `y` match, false otherwise.
+ */
+function stringMatch( x, y ) {
+  return RegExp( stringEscape( y.trim() ), 'i' ).test( x );
+}
+
+/**
+ * @class
+ * MultiselectModel
+ * @param {HTMLOptionsCollection} options -
+ *   Set of options from a <select> element.
+ */
+function MultiselectModel( options ) {
+  const _options = options;
+  let _optionsData = [];
+
+  let _selectedIndices = [];
+  let _filterIndices = [];
+
+  /* When the options list is filtered, we store a list of filtered indices
+  so that when the filter changes we can reset the last matched options. */
+  let _lastFilterIndices = [];
+
+  // Which option is in focus. -1 means the focus is on the search input.
+  let _index = -1;
+
+  /**
+   * @returns {MultiselectModel} An instance.
+   */
+  function init() {
+    _optionsData = _formatOptions( _options );
+
+    return this;
+  }
+
+  /**
+   * Cleans up a list of options for saving to memory.
+   * @param {HTMLOptionsCollection} list - The options from a select element.
+   * @returns {Array} An array of option objects.
+   */
+  function _formatOptions( list ) {
+    let item;
+    const cleaned = [];
+
+    let isChecked = false;
+    for ( let i = 0, len = list.length; i < len; i++ ) {
+      item = list[i];
+      isChecked = item.defaultSelected;
+      cleaned.push( {
+        value:   item.value,
+        text:    item.text,
+        checked: isChecked
+      } );
+
+      // If an option is initially checked, we need to record it.
+      if ( isChecked ) {
+        _selectedIndices.push( i );
+      }
+    }
+
+    return cleaned;
+  }
+
+  /**
+   * Toggle checked value of an option.
+   * @param {number} index - The index position of the option in the list.
+   * @returns {boolean} A value of true is checked and false is unchecked.
+   */
+  function toggleOption( index ) {
+    _optionsData[index].checked = !_optionsData[index].checked;
+
+    if ( _selectedIndices.length < MAX_SELECTIONS &&
+         _optionsData[index].checked ) {
+      _selectedIndices.push( index );
+      _selectedIndices.sort();
+
+      return true;
+    }
+    // We're over the max selections, reverse the check of the option.
+    _optionsData[index].checked = false;
+    _selectedIndices = _selectedIndices.filter(
+      function( currIndex ) {
+        return currIndex !== index;
+      }
+    );
+
+    return false;
+  }
+
+  /**
+   * @returns {boolean}
+   *   True if the maximum number of options are checked, false otherwise.
+   */
+  function isAtMaxSelections() {
+    return _selectedIndices.length === MAX_SELECTIONS;
+  }
+
+  /**
+   * Search for a query string in the options text and return the indices of
+   * the matching positions in the options array.
+   * @param {string} query - A query string.
+   * @returns {Array} List of indices of the matching entries from the options.
+   */
+  function filterIndices( query ) {
+    // Convert query to a string if its not.
+    if ( Object.prototype.toString.call( query ) !== '[object String]' ) {
+      query = '';
+    }
+    _lastFilterIndices = _filterIndices;
+    if ( _optionsData.length > 0 ) {
+      _filterIndices = _optionsData.reduce(
+        function( acc, item, index ) {
+          return _searchAggregator( acc, item, index, query )
+        },
+        []
+      );
+    }
+    // Reset index position.
+    _index = -1;
+
+    return _filterIndices;
+  }
+
+  /**
+   * Retrieve an option object from the options list.
+   * @param {number} index - The index position in the options list.
+   * @returns {Object} The option object with text, value, and checked value.
+   */
+  function getOption( index ) {
+    return _optionsData[index];
+  }
+
+  /**
+   * Utility function for Array.reduce() used in searchIndices.
+   * @param {Array} aggregate - The reducer's accumulator.
+   * @param {Object} item - Each item in the collection.
+   * @param {number} index - The index of item in the collection.
+   * @param {string} value - The value of item in the collection.
+   * @returns {Array} The reducer's accumulator.
+   */
+  function _searchAggregator( aggregate, item, index, value ) {
+    if ( stringMatch( item.text, value ) ) {
+      aggregate.push( index );
+    }
+    return aggregate;
+  }
+
+  /**
+   * Set the index of the collection (represents the highlighted option).
+   * @param {number} value - The index to set.
+   */
+  function setIndex( value ) {
+    const filterCount = _filterIndices.length;
+    const count = filterCount === 0 ? _optionsData.length : filterCount;
+    if ( value < 0 ) {
+      _index = -1;
+    } else if ( value >= count ) {
+      _index = count - 1;
+    } else {
+      _index = value;
+    }
+  }
+
+  /**
+   * @returns {number} The current index (highlighted option).
+   */
+  function getIndex() {
+    return _index;
+  }
+
+  this.init = init;
+
+  // This is used to check an item in the collection.
+  this.toggleOption = toggleOption;
+  this.getSelectedIndices = function() { return _selectedIndices; };
+  this.isAtMaxSelections = isAtMaxSelections;
+
+  // This is used to search the items in the collection.
+  this.filterIndices = filterIndices;
+  this.clearFilter = function() {
+    _filterIndices = _lastFilterIndices = [];
+    return UNDEFINED;
+  };
+  this.getFilterIndices = function() { return _filterIndices; };
+  this.getLastFilterIndices = function() { return _lastFilterIndices; };
+
+  // These are used to highlight items in the collection.
+  this.getIndex = getIndex;
+  this.setIndex = setIndex;
+  this.resetIndex = function() {
+    _index = -1;
+    return _index;
+  };
+
+  // This is used to retrieve items from the collection.
+  this.getOption = getOption;
+  this.getOptions = function() { return _optionsData; };
+
+  return this;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MultiselectModel);
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js":
+/*!***************************************************************!*\
+  !*** ./packages/cfpb-forms/src/organisms/MultiselectUtils.js ***!
+  \***************************************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../cfpb-atomic-component/src/utilities/dom-traverse */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js");
+
+
+/**
+ * Searches an array for the first object with the matching key:value pair.
+ * @param   {Array}  array - List to query through for the expected value.
+ * @param   {string} key   - The key to check the value against.
+ * @param   {string} val   - The value to match to the key.
+ * @returns {number}       Returns the index of a match, otherwise -1.
+ */
+function indexOfObject( array, key, val ) {
+  let match = -1;
+
+  if ( !array.length > 0 ) {
+    return match;
+  }
+
+  array.forEach( function( item, index ) {
+    if ( item[key] === val ) {
+      match = index;
+    }
+  } );
+
+  return match;
+}
+
+/**
+ * Shortcut for creating new dom elements.
+ * @param {string} tag - The html elem to create.
+ * @param {Object} options - The options for building the elem.
+ * @returns {HTMLNode} The created elem.
+ */
+function create( tag, options ) {
+  const elem = document.createElement( tag );
+
+  let i;
+  for ( i in options ) {
+    if ( options.hasOwnProperty( i ) ) {
+      const val = options[i];
+      let ref;
+
+      if ( i === 'inside' ) {
+        ref = _cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__.default.queryOne( val );
+        ref.appendChild( elem );
+      } else if ( i === 'around' ) {
+        ref = _cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__.default.queryOne( val );
+        ref.parentNode.insertBefore( elem, ref );
+        elem.appendChild( ref );
+      } else if ( i in elem ) {
+        elem[i] = val;
+      } else {
+        elem.setAttribute( i, val );
+      }
+    }
+  }
+
+  return elem;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  indexOfObject: indexOfObject,
+  create: create
+});
+
+
+/***/ }),
+
 /***/ "./packages/cfpb-tables/src/Table.js":
 /*!*******************************************!*\
   !*** ./packages/cfpb-tables/src/Table.js ***!
@@ -5149,10 +6140,10 @@ ExpandableTransition.CLASSES = CLASSES;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_config_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/config.js */ "./packages/cfpb-atomic-component/src/utilities/config.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
-/* harmony import */ var _TableSortable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TableSortable */ "./packages/cfpb-tables/src/TableSortable.js");
-/* harmony import */ var _TableRowLinks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TableRowLinks */ "./packages/cfpb-tables/src/TableRowLinks.js");
+/* harmony import */ var _TableSortable_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TableSortable.js */ "./packages/cfpb-tables/src/TableSortable.js");
+/* harmony import */ var _TableRowLinks_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TableRowLinks.js */ "./packages/cfpb-tables/src/TableRowLinks.js");
 /* ==========================================================================
    Table Organism
    ========================================================================== */
@@ -5167,10 +6158,10 @@ const Table = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEB
     base: '.o-table'
   },
 
-  modifiers: [ _TableSortable__WEBPACK_IMPORTED_MODULE_2__.default, _TableRowLinks__WEBPACK_IMPORTED_MODULE_3__.default ]
+  modifiers: [ _TableSortable_js__WEBPACK_IMPORTED_MODULE_2__.default, _TableRowLinks_js__WEBPACK_IMPORTED_MODULE_3__.default ]
 } );
 
-Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_0__.default.DIRECTIONS;
+Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_config_js__WEBPACK_IMPORTED_MODULE_0__.default.DIRECTIONS;
 
 /* harmony default export */ __webpack_exports__["default"] = (Table);
 

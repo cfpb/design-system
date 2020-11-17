@@ -4,6 +4,7 @@ import {
 } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
+import Multiselect from '@cfpb/cfpb-forms/src/organisms/Multiselect';
 import Table from '@cfpb/cfpb-tables/src/Table';
 import { Tabs } from 'govuk-frontend';
 import redirectBanner from './redirect-banner.js';
@@ -24,6 +25,12 @@ anchors.remove( `
   .o-expandable_label,
   #search-results h3
 ` );
+
+const multiselectDom = document.querySelector( '.o-multiselect' );
+if ( multiselectDom ) {
+  const multiselect = new Multiselect( multiselectDom );
+  multiselect.init();
+}
 
 Expandable.init();
 Table.init();

@@ -28,6 +28,7 @@ select.o-multiselect {
 
         // Styles
         box-sizing: border-box;
+        overflow-x: hidden;
         overflow-y: scroll;
         position: absolute;
         z-index: 10;
@@ -53,6 +54,8 @@ select.o-multiselect {
     &_options {
         background-color: @white;
         padding: unit( 10px / @base-font-size-px, em );
+        // Double padding on the right to accommodate the fieldset's forced y scrollbar above
+        padding-right: unit( 20px / @base-font-size-px, em );
 
         li:last-child {
             margin-bottom: 0;

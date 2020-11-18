@@ -1,4 +1,29 @@
 
+## Unreleased (2020-11-18)
+
+#### Breaking Change
+* `cfpb-core`, `cfpb-grid`
+  * [#1102](https://github.com/cfpb/design-system/pull/1102) Update normalize paths ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-expandables`, `cfpb-forms`, `cfpb-tables`
+  * [#1096](https://github.com/cfpb/design-system/pull/1096) Migrate multiselect into design system ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-expandables`, `cfpb-tables`
+  * [#1097](https://github.com/cfpb/design-system/pull/1097) Replace Events mixin with EventObserver ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-atomic-component`
+  * [#1098](https://github.com/cfpb/design-system/pull/1098) Remove object shorthand to aid IE11 ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-atomic-component`, `cfpb-core`, `cfpb-expandables`, `cfpb-tables`
+  * [#1094](https://github.com/cfpb/design-system/pull/1094) Migrate to ES6 export/import syntax ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+- Stephanie Osan ([@stephanieosan](https://github.com/stephanieosan))
+
+
+
 ## Unreleased (2020-10-28)
 
 #### :rocket: Enhancement

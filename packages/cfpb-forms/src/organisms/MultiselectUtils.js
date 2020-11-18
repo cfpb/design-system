@@ -1,4 +1,4 @@
-import domTraverse from '../../../cfpb-atomic-component/src/utilities/dom-traverse';
+import { queryOne } from '../../../cfpb-atomic-component/src/utilities/dom-traverse';
 
 /**
  * Searches an array for the first object with the matching key:value pair.
@@ -39,10 +39,10 @@ function create( tag, options ) {
       let ref;
 
       if ( i === 'inside' ) {
-        ref = domTraverse.queryOne( val );
+        ref = queryOne( val );
         ref.appendChild( elem );
       } else if ( i === 'around' ) {
-        ref = domTraverse.queryOne( val );
+        ref = queryOne( val );
         ref.parentNode.insertBefore( elem, ref );
         elem.appendChild( ref );
       } else if ( i in elem ) {

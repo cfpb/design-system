@@ -2,7 +2,7 @@
    Expandable Organism
    ========================================================================== */
 
-import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-closest';
+import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse';
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 import AtomicComponent from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
 import ExpandableTransition from './ExpandableTransition.js';

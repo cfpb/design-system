@@ -15,6 +15,6 @@ function bindEvent( elem, events ) {
   }
 }
 
-export default {
-  bindEvent: bindEvent
+export {
+  bindEvent
 };

@@ -132,7 +132,7 @@ variation_groups:
                   <option value="option5">Option 5</option>
                   <option value="option6">Option 6</option>
                   <option value="option7">Option 7</option>
-                  <option value="option8">Option 8</option>
+                  <option value="option8">Multiselect options can also contain long words that will be wrapped like supercalifragilisticexpialidocious</option>
               </select>
           </div>
     variation_group_description: "Custom JavaScript may be required to make the

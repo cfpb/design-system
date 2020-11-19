@@ -26,6 +26,8 @@
             grid-template-columns: unit( 30px / @base-font-size-px, em ) auto;
             vertical-align: top;
             cursor: pointer;
+            // Wrap long words in narrow form fields to prevent clipping
+            overflow-wrap: anywhere;
 
             &:before {
                 display: inline-block;

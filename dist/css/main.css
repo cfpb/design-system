@@ -3914,6 +3914,7 @@ h6 + .a-legend,
   grid-template-columns: 1.875em auto;
   vertical-align: top;
   cursor: pointer;
+  overflow-wrap: anywhere;
 }
 .m-form-field__checkbox .a-label:before,
 .m-form-field__radio .a-label:before {
@@ -4228,6 +4229,7 @@ select.o-multiselect {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
   overflow-y: scroll;
   position: absolute;
   z-index: 10;
@@ -4246,6 +4248,7 @@ select.o-multiselect {
 .o-multiselect_options {
   background-color: #ffffff;
   padding: 0.625em;
+  padding-right: 1.25em;
 }
 .o-multiselect_options li:last-child {
   margin-bottom: 0;

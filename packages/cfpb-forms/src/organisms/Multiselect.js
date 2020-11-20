@@ -206,14 +206,14 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     } );
 
     const selectionsItemLabelDom = MultiselectUtils.create( 'button', {
-      'innerHTML': `<label for=${ option.value }>${ option.text + closeIcon }</label>`,
-      'inside':    selectionsItemDom
+      innerHTML: `<label for=${ option.value }>${ option.text + closeIcon }</label>`,
+      inside:    selectionsItemDom
     } );
 
     selectionsDom.appendChild( selectionsItemDom );
     selectionsItemDom.appendChild( selectionsItemLabelDom );
 
-    selectionsItemLabelDom.addEventListener( 'keydown',  _selectionKeyDownHandler );
+    selectionsItemLabelDom.addEventListener( 'keydown', _selectionKeyDownHandler );
   }
 
   /**
@@ -348,9 +348,8 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
   /**
    * Set the filtered matched state.
-   * @param {Array} filterIndices - List of indices to filter from the options.
    */
-  function _filterMatches( filterIndices ) {
+  function _filterMatches() {
     _optionsDom.classList.remove( 'u-no-results' );
     _optionsDom.classList.add( 'u-filtered' );
     for ( let i = 0, len = _model.getLastFilterIndices(); i < len; i++ ) {
@@ -416,7 +415,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     } );
 
     _optionsDom.addEventListener( 'mousedown', function() {
-        _isBlurSkipped = true;
+      _isBlurSkipped = true;
     } );
 
     _optionsDom.addEventListener( 'keydown', function( event ) {

@@ -6,7 +6,7 @@
 
 
 import config from '@cfpb/cfpb-atomic-component/src/utilities/config';
-import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-closest';
+import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse';
 
 const DIRECTIONS = config.DIRECTIONS;
 const UNDEFINED = config.UNDEFINED;

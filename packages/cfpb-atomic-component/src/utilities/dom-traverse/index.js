@@ -13,49 +13,31 @@ function queryOne( expr, con ) {
 }
 
 /**
- * Return a list, with an element excluded.
- *
- * @param {NodeList} elems - List of DOM elements.
- * @param {HTMLNode} exclude - DOM element to exlude from elems.
- * @returns {Array} edited elems list or original elems list,
- *   if exlude was not found.
- */
-function not( elems, exclude ) {
-  const elemsArr = Array.prototype.slice.call( elems );
-  const index = elemsArr.indexOf( exclude );
-
-  if ( index > -1 ) {
-    elemsArr.splice( index, 1 );
-  }
-
-  return elemsArr;
-}
-
-/**
  * Get the nearest parent node of an element.
  *
  * @param {HTMLNode} elem - A DOM element.
  * @param {string} selector - CSS selector.
  * @returns {HTMLNode} Nearest parent node that matches the selector.
  */
-function closest( elem, selector ) {
-  elem = elem.parentNode;
+function closest( element, selector ) {
+  if ( 'closest' in element ) {
+    return element.closest( selector );
+  }
 
-  const matchesSelector = _getMatchesMethod( elem );
+  const matchesSelector = element.matches ||
+                          element.webkitMatchesSelector ||
+                          element.mozMatchesSelector ||
+                          element.msMatchesSelector;
   let match;
 
-  try {
-    while ( elem ) {
-      if ( matchesSelector.bind( elem )( selector ) ) {
-        match = elem;
-      } else {
-        elem = elem.parentNode;
-      }
-
-      if ( match ) { return elem; }
+  while ( element ) {
+    if ( matchesSelector.bind( element )( selector ) ) {
+      match = element;
+    } else {
+      element = element.parentElement;
     }
-  } catch ( err ) {
-    return null;
+
+    if ( match ) { return element; }
   }
 
   return null;
@@ -75,7 +57,7 @@ function _getMatchesMethod( elem ) {
          elem.msMatchesSelector;
 }
 
-export default {
-  queryOne: queryOne,
-  closest: closest
+export {
+  queryOne,
+  closest
 };

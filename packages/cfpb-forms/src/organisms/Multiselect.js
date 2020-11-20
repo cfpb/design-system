@@ -2,7 +2,7 @@
 import EventObserver from '../../../cfpb-atomic-component/src/mixins/EventObserver.js';
 import MultiselectModel from './MultiselectModel.js';
 import MultiselectUtils from './MultiselectUtils.js';
-import domEvents from '../../../cfpb-atomic-component/src/utilities/dom-events';
+import { bindEvent } from '../../../cfpb-atomic-component/src/utilities/dom-events';
 
 import closeIcon from '../../../cfpb-icons/src/icons/close.svg';
 
@@ -382,7 +382,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   function _bindEvents() {
     const inputs = _optionsDom.querySelectorAll( 'input' );
 
-    domEvents.bindEvent( _searchDom, {
+    bindEvent( _searchDom, {
       input: function() {
         _evaluate( this.value );
       },
@@ -421,7 +421,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       }
     } );
 
-    domEvents.bindEvent( _optionsDom, {
+    bindEvent( _optionsDom, {
       mousedown: function() {
         _isBlurSkipped = true;
       },
@@ -451,14 +451,14 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       }
     } );
 
-    domEvents.bindEvent( _fieldsetDom, {
+    bindEvent( _fieldsetDom, {
       mousedown: function() {
         _isBlurSkipped = true;
       }
     } );
 
     for ( let i = 0, len = inputs.length; i < len; i++ ) {
-      domEvents.bindEvent( inputs[i], {
+      bindEvent( inputs[i], {
         change: _changeHandler
       } );
     }

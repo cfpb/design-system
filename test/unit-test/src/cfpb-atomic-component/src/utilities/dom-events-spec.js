@@ -1,4 +1,4 @@
-import domEvents from '../../../../../../packages/cfpb-atomic-component/src/utilities/dom-events';
+import { bindEvent } from '../../../../../../packages/cfpb-atomic-component/src/utilities/dom-events';
 let input;
 let clicked;
 
@@ -11,14 +11,14 @@ describe( 'Dom Events bindEvent', () => {
   } );
 
   it( 'should not update the var until event is triggered', () => {
-    domEvents.bindEvent( input, {
+    bindEvent( input, {
       click: function() { clicked = true; }
     } );
     expect( clicked ).toBe( false );
   } );
 
   it( 'should not update the var if another event is triggered', () => {
-    domEvents.bindEvent( input, {
+    bindEvent( input, {
       click: function() { clicked = true; }
     } );
     input.focus();
@@ -26,7 +26,7 @@ describe( 'Dom Events bindEvent', () => {
   } );
 
   it( 'should update the var when the event is triggered', () => {
-    domEvents.bindEvent( input, {
+    bindEvent( input, {
       click: function() { clicked = true; }
     } );
     input.click();

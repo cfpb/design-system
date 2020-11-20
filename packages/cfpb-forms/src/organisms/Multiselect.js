@@ -2,7 +2,6 @@
 import EventObserver from '../../../cfpb-atomic-component/src/mixins/EventObserver.js';
 import MultiselectModel from './MultiselectModel.js';
 import MultiselectUtils from './MultiselectUtils.js';
-import { bindEvent } from '../../../cfpb-atomic-component/src/utilities/dom-events';
 
 import closeIcon from '../../../cfpb-icons/src/icons/close.svg';
 
@@ -36,6 +35,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
   // Constants for key binding.
   const KEY_RETURN = 13;
+  const KEY_SPACE = 32;
   const KEY_ESCAPE = 27;
   const KEY_UP = 38;
   const KEY_DOWN = 40;
@@ -185,19 +185,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       _optionsDom.appendChild( _optionsItemDom );
 
       if ( option.checked ) {
-        const selectionsItemDom = MultiselectUtils.create( 'li', {
-          'data-option': option.value,
-          'class': 'm-form-field m-form-field__checkbox'
-        } );
-
-        MultiselectUtils.create( 'label', {
-          'for':       option.value,
-          'innerHTML': option.text + closeIcon,
-          'className': BASE_CLASS + '_label',
-          'inside':    selectionsItemDom
-        } );
-
-        _selectionsDom.appendChild( selectionsItemDom );
+        _createSelectedItem( _selectionsDom, option );
       }
     } );
 
@@ -206,6 +194,26 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     _containerDom.appendChild( _fieldsetDom );
 
     return _containerDom;
+  }
+
+  /**
+   * @param {HTMLNode} selectionsDom - The UL item to inject list item into.
+   * @param {HTMLNode} option - The OPTION item to extract content from.
+   */
+  function _createSelectedItem( selectionsDom, option ) {
+    const selectionsItemDom = MultiselectUtils.create( 'li', {
+      'data-option': option.value
+    } );
+
+    const selectionsItemLabelDom = MultiselectUtils.create( 'button', {
+      'innerHTML': `<label for=${ option.value }>${ option.text + closeIcon }</label>`,
+      'inside':    selectionsItemDom
+    } );
+
+    selectionsDom.appendChild( selectionsItemDom );
+    selectionsItemDom.appendChild( selectionsItemLabelDom );
+
+    selectionsItemLabelDom.addEventListener( 'keydown',  _selectionKeyDownHandler );
   }
 
   /**
@@ -253,32 +261,19 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     const option = _optionsData[optionIndex] || _optionsData[_model.getIndex()];
 
     if ( option ) {
-      let _selectionsItemDom;
-
       if ( option.checked ) {
         if ( _optionsDom.classList.contains( 'u-max-selections' ) ) {
           _optionsDom.classList.remove( 'u-max-selections' );
         }
 
         const dataOptionSel = '[data-option="' + option.value + '"]';
-        _selectionsItemDom = _selectionsDom.querySelector( dataOptionSel );
+        const _selectionsItemDom = _selectionsDom.querySelector( dataOptionSel );
 
-        if ( _selectionsItemDom ) {
+        if ( typeof _selectionsItemDom !== 'undefined' ) {
           _selectionsDom.removeChild( _selectionsItemDom );
         }
       } else {
-        _selectionsItemDom = MultiselectUtils.create( 'li', {
-          'data-option': option.value
-        } );
-
-        const _selectionsItemLabelDom = MultiselectUtils.create( 'label', {
-          'innerHTML': option.text + closeIcon,
-          'for':       option.value,
-          'inside':    _selectionsItemDom
-        } );
-
-        _selectionsDom.appendChild( _selectionsItemDom );
-        _selectionsItemDom.appendChild( _selectionsItemLabelDom );
+        _createSelectedItem( _selectionsDom, option );
       }
       _model.toggleOption( optionIndex );
 
@@ -379,87 +374,101 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * Binds events to the search input, option list, and checkboxes.
    */
   function _bindEvents() {
+
+    _searchDom.addEventListener( 'input', function() {
+      _evaluate( this.value );
+    } );
+
+    _searchDom.addEventListener( 'focus', function() {
+      if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' ) {
+        expand();
+      }
+    } );
+
+    _searchDom.addEventListener( 'blur', function() {
+      if ( !_isBlurSkipped &&
+           _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
+        collapse();
+      }
+    } );
+
+    _searchDom.addEventListener( 'keydown', function( event ) {
+      const key = event.keyCode;
+
+      if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' &&
+            key !== KEY_TAB ) {
+        expand();
+      }
+
+      if ( key === KEY_RETURN ) {
+        event.preventDefault();
+        _highlight( DIR_NEXT );
+      } else if ( key === KEY_ESCAPE ) {
+        _resetSearch();
+        collapse();
+      } else if ( key === KEY_DOWN ) {
+        _highlight( DIR_NEXT );
+      } else if ( key === KEY_TAB &&
+                  !event.shiftKey &&
+                  _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
+        collapse();
+      }
+    } );
+
+    _optionsDom.addEventListener( 'mousedown', function() {
+        _isBlurSkipped = true;
+    } );
+
+    _optionsDom.addEventListener( 'keydown', function( event ) {
+      const key = event.keyCode;
+      const target = event.target;
+      const checked = target.checked;
+
+      if ( key === KEY_RETURN ) {
+        event.preventDefault();
+
+        /* Programmatically checking a checkbox does not fire a change event
+        so we need to manually create an event and dispatch it from the input.
+        */
+        target.checked = !checked;
+        const evt = document.createEvent( 'HTMLEvents' );
+        evt.initEvent( 'change', false, true );
+        target.dispatchEvent( evt );
+      } else if ( key === KEY_ESCAPE ) {
+        _searchDom.focus();
+        collapse();
+      } else if ( key === KEY_UP ) {
+        _highlight( DIR_PREV );
+      } else if ( key === KEY_DOWN ) {
+        _highlight( DIR_NEXT );
+      }
+    } );
+
+    _fieldsetDom.addEventListener( 'mousedown', function() {
+      _isBlurSkipped = true;
+    } );
+
     const inputs = _optionsDom.querySelectorAll( 'input' );
-
-    bindEvent( _searchDom, {
-      input: function() {
-        _evaluate( this.value );
-      },
-      focus: function() {
-        if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' ) {
-          expand();
-        }
-      },
-      blur: function() {
-        if ( !_isBlurSkipped &&
-              _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
-          collapse();
-        }
-      },
-      keydown: function( event ) {
-        const key = event.keyCode;
-
-        if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' &&
-             key !== KEY_TAB ) {
-          expand();
-        }
-
-        if ( key === KEY_RETURN ) {
-          event.preventDefault();
-          _highlight( DIR_NEXT );
-        } else if ( key === KEY_ESCAPE ) {
-          _resetSearch();
-          collapse();
-        } else if ( key === KEY_DOWN ) {
-          _highlight( DIR_NEXT );
-        } else if ( key === KEY_TAB &&
-                    !event.shiftKey &&
-                    _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
-          collapse();
-        }
-      }
-    } );
-
-    bindEvent( _optionsDom, {
-      mousedown: function() {
-        _isBlurSkipped = true;
-      },
-      keydown: function( event ) {
-        const key = event.keyCode;
-        const target = event.target;
-        const checked = target.checked;
-
-        if ( key === KEY_RETURN ) {
-          event.preventDefault();
-
-          /* Programmatically checking a checkbox does not fire a change event
-          so we need to manually create an event and dispatch it from the input.
-          */
-          target.checked = !checked;
-          const evt = document.createEvent( 'HTMLEvents' );
-          evt.initEvent( 'change', false, true );
-          target.dispatchEvent( evt );
-        } else if ( key === KEY_ESCAPE ) {
-          _searchDom.focus();
-          collapse();
-        } else if ( key === KEY_UP ) {
-          _highlight( DIR_PREV );
-        } else if ( key === KEY_DOWN ) {
-          _highlight( DIR_NEXT );
-        }
-      }
-    } );
-
-    bindEvent( _fieldsetDom, {
-      mousedown: function() {
-        _isBlurSkipped = true;
-      }
-    } );
-
     for ( let i = 0, len = inputs.length; i < len; i++ ) {
-      bindEvent( inputs[i], {
-        change: _changeHandler
-      } );
+      inputs[i].addEventListener( 'change', _changeHandler );
+    }
+
+    // Add event listeners to any selections that are present at page load.
+    const labelButtons = _selectionsDom.querySelectorAll( 'button' );
+    for ( let j = 0, len = labelButtons.length; j < len; j++ ) {
+      labelButtons[j].addEventListener( 'keydown', _selectionKeyDownHandler );
+    }
+  }
+
+  /**
+   * @param {KeyEvent} event - The key down event object.
+   */
+  function _selectionKeyDownHandler( event ) {
+    if ( event.keyCode === KEY_SPACE ||
+         event.keyCode === KEY_RETURN ) {
+      const label = event.target.querySelector( 'label' );
+      const checkbox = _optionsDom.querySelector( '#' + label.getAttribute( 'for' ) );
+      checkbox.click();
     }
   }
 

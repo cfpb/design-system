@@ -4254,12 +4254,12 @@ let UNDEFINED;
 
 /***/ }),
 
-/***/ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js":
-/*!***************************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js ***!
-  \***************************************************************************/
+/***/ "./packages/cfpb-atomic-component/src/utilities/dom-events/index.js":
+/*!**************************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/dom-events/index.js ***!
+  \**************************************************************************/
 /*! namespace exports */
-/*! export closest [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export bindEvent [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -4267,22 +4267,66 @@ let UNDEFINED;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "bindEvent": function() { return /* binding */ bindEvent; }
+/* harmony export */ });
+/**
+ * Shortcut for binding event listeners to elements.
+ * @param  {HTMLNode} elem   The element to attach the event listener to.
+ * @param  {Object}   events The list of events to attach to the element.
+ */
+function bindEvent( elem, events ) {
+  let callback;
+
+  let event;
+  for ( event in events ) {
+    if ( events.hasOwnProperty( event ) ) {
+      callback = events[event];
+      elem.addEventListener( event, callback );
+    }
+  }
+}
+
+
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js":
+/*!****************************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js ***!
+  \****************************************************************************/
+/*! namespace exports */
+/*! export closest [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export queryOne [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "queryOne": function() { return /* binding */ queryOne; },
 /* harmony export */   "closest": function() { return /* binding */ closest; }
 /* harmony export */ });
-/* ==========================================================================
-   Dom closest
+/* harmony import */ var _type_checkers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../type-checkers */ "./packages/cfpb-atomic-component/src/utilities/type-checkers/index.js");
 
-   Utility for retrieving the closest DOM element that
-   matches a give selector.
 
-   ========================================================================== */
-
-// TODO Fix complexity issue
-/* eslint-disable complexity */
 /**
- * Get the nearest parent node of an elementent.
+ * Queries for the first match unless an HTMLNode is passed
+ * @param   {(HTMLNode|string)} expr HTMLNode or string to query for
+ * @param   {Object}          con  The document location to query
+ * @returns {HTMLNode}             The elem
+ */
+function queryOne( expr, con ) {
+  return _type_checkers__WEBPACK_IMPORTED_MODULE_0__.default.isString( expr ) ?
+    ( con || document ).querySelector( expr ) :
+    expr || null;
+}
+
+/**
+ * Get the nearest parent node of an element.
  *
- * @param {HTMLNode} element - A DOM elementent.
+ * @param {HTMLNode} elem - A DOM element.
  * @param {string} selector - CSS selector.
  * @returns {HTMLNode} Nearest parent node that matches the selector.
  */
@@ -4309,125 +4353,6 @@ function closest( element, selector ) {
 
   return null;
 }
-/* eslint-enable complexity */
-
-// Expose public methods.
-
-
-
-/***/ }),
-
-/***/ "./packages/cfpb-atomic-component/src/utilities/dom-events/index.js":
-/*!**************************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/src/utilities/dom-events/index.js ***!
-  \**************************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/**
- * Shortcut for binding event listeners to elements.
- * @param  {HTMLNode} elem   The element to attach the event listener to.
- * @param  {Object}   events The list of events to attach to the element.
- */
-function bindEvent( elem, events ) {
-  let callback;
-
-  let event;
-  for ( event in events ) {
-    if ( events.hasOwnProperty( event ) ) {
-      callback = events[event];
-      elem.addEventListener( event, callback );
-    }
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  bindEvent: bindEvent
-});
-
-
-/***/ }),
-
-/***/ "./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js":
-/*!****************************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js ***!
-  \****************************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _type_checkers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../type-checkers */ "./packages/cfpb-atomic-component/src/utilities/type-checkers/index.js");
-
-
-/**
- * Queries for the first match unless an HTMLNode is passed
- * @param   {(HTMLNode|string)} expr HTMLNode or string to query for
- * @param   {Object}          con  The document location to query
- * @returns {HTMLNode}             The elem
- */
-function queryOne( expr, con ) {
-  return _type_checkers__WEBPACK_IMPORTED_MODULE_0__.default.isString( expr ) ?
-    ( con || document ).querySelector( expr ) :
-    expr || null;
-}
-
-/**
- * Return a list, with an element excluded.
- *
- * @param {NodeList} elems - List of DOM elements.
- * @param {HTMLNode} exclude - DOM element to exlude from elems.
- * @returns {Array} edited elems list or original elems list,
- *   if exlude was not found.
- */
-function not( elems, exclude ) {
-  const elemsArr = Array.prototype.slice.call( elems );
-  const index = elemsArr.indexOf( exclude );
-
-  if ( index > -1 ) {
-    elemsArr.splice( index, 1 );
-  }
-
-  return elemsArr;
-}
-
-/**
- * Get the nearest parent node of an element.
- *
- * @param {HTMLNode} elem - A DOM element.
- * @param {string} selector - CSS selector.
- * @returns {HTMLNode} Nearest parent node that matches the selector.
- */
-function closest( elem, selector ) {
-  elem = elem.parentNode;
-
-  const matchesSelector = _getMatchesMethod( elem );
-  let match;
-
-  try {
-    while ( elem ) {
-      if ( matchesSelector.bind( elem )( selector ) ) {
-        match = elem;
-      } else {
-        elem = elem.parentNode;
-      }
-
-      if ( match ) { return elem; }
-    }
-  } catch ( err ) {
-    return null;
-  }
-
-  return null;
-}
 
 /**
  * Search for support of the matches() method by looking at
@@ -4443,10 +4368,7 @@ function _getMatchesMethod( elem ) {
          elem.msMatchesSelector;
 }
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  queryOne: queryOne,
-  closest: closest
-});
+
 
 
 /***/ }),
@@ -5004,7 +4926,7 @@ function isEmpty( value ) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-traverse */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
 /* harmony import */ var _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ExpandableTransition.js */ "./packages/cfpb-expandables/src/ExpandableTransition.js");
@@ -5068,7 +4990,7 @@ function initialize() {
     this.ui.content.classList.add( 'u-hidden' );
   }
 
-  const expandableGroup = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__.closest)( this.ui.target, '.' + this.classes.group );
+  const expandableGroup = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__.closest)( this.ui.target, '.' + this.classes.group );
 
   this.isAccordionGroup = expandableGroup !== null &&
     expandableGroup.classList.contains( this.classes.groupAccordion );
@@ -5701,7 +5623,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   function _bindEvents() {
     const inputs = _optionsDom.querySelectorAll( 'input' );
 
-    _cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.default.bindEvent( _searchDom, {
+    (0,_cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.bindEvent)( _searchDom, {
       input: function() {
         _evaluate( this.value );
       },
@@ -5740,7 +5662,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       }
     } );
 
-    _cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.default.bindEvent( _optionsDom, {
+    (0,_cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.bindEvent)( _optionsDom, {
       mousedown: function() {
         _isBlurSkipped = true;
       },
@@ -5770,14 +5692,14 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       }
     } );
 
-    _cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.default.bindEvent( _fieldsetDom, {
+    (0,_cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.bindEvent)( _fieldsetDom, {
       mousedown: function() {
         _isBlurSkipped = true;
       }
     } );
 
     for ( let i = 0, len = inputs.length; i < len; i++ ) {
-      _cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.default.bindEvent( inputs[i], {
+      (0,_cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.bindEvent)( inputs[i], {
         change: _changeHandler
       } );
     }
@@ -6103,10 +6025,10 @@ function create( tag, options ) {
       let ref;
 
       if ( i === 'inside' ) {
-        ref = _cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__.default.queryOne( val );
+        ref = (0,_cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__.queryOne)( val );
         ref.appendChild( elem );
       } else if ( i === 'around' ) {
-        ref = _cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__.default.queryOne( val );
+        ref = (0,_cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__.queryOne)( val );
         ref.parentNode.insertBefore( elem, ref );
         elem.appendChild( ref );
       } else if ( i in elem ) {
@@ -6180,7 +6102,7 @@ Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_config_js
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-traverse */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js");
 /* ==========================================================================
    Table Row Links
 
@@ -6212,7 +6134,7 @@ function onRowLinkClick( event ) {
   if ( target && target.tagName === 'A' ) {
     return;
   }
-  target = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_0__.closest)( event.target, 'tr' );
+  target = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_0__.closest)( event.target, 'tr' );
   const link = target.querySelector( 'a' );
   if ( link ) {
     window.location = link.getAttribute( 'href' );
@@ -6237,7 +6159,7 @@ function onRowLinkClick( event ) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-closest */ "./packages/cfpb-atomic-component/src/utilities/dom-closest/index.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-traverse */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js");
 /* ==========================================================================
    Table Sortablle
 
@@ -6327,7 +6249,7 @@ function bindProperties() {
  * @returns {number} The column index of the active sort column.
  */
 function getColumnIndex( element ) {
-  return (0,_cfpb_cfpb_atomic_component_src_utilities_dom_closest__WEBPACK_IMPORTED_MODULE_1__.closest)( element || this.ui.sortButton, 'td, th' ).cellIndex;
+  return (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse__WEBPACK_IMPORTED_MODULE_1__.closest)( element || this.ui.sortButton, 'td, th' ).cellIndex;
 }
 
 /**

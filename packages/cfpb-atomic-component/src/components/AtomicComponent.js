@@ -10,9 +10,9 @@
 
    ========================================================================== */
 
-import { assign } from '../utilities/object-assign';
 const Delegate = require( 'ftdomdelegate' ).Delegate;
 import EventObserver from '../mixins/EventObserver.js';
+import { assign } from '../utilities/object-assign';
 import typeCheckers from '../utilities/type-checkers';
 
 /**

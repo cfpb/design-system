@@ -59,4 +59,4 @@ function create( tag, options ) {
 export default {
   indexOfObject: indexOfObject,
   create: create
-}
+};

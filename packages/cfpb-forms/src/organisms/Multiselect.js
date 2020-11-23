@@ -42,7 +42,6 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   const KEY_TAB = 9;
 
   // Internal vars.
-  //let _dom = checkDom( element, BASE_CLASS );
   let _dom = element;
   let _isBlurSkipped = false;
   let _name;

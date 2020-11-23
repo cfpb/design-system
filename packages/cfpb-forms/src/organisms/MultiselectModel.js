@@ -129,7 +129,7 @@ function MultiselectModel( options ) {
     if ( _optionsData.length > 0 ) {
       _filterIndices = _optionsData.reduce(
         function( acc, item, index ) {
-          return _searchAggregator( acc, item, index, query )
+          return _searchAggregator( acc, item, index, query );
         },
         []
       );

@@ -6736,6 +6736,15 @@ pre code {
 .swatch_field__green-dark {
   background: #1e9642;
 }
+.swatch_field__beige-60 {
+  background: #d8c8a0;
+}
+.swatch_field__beige-30 {
+  background: #f0e8d8;
+}
+.swatch_field__beige {
+  background: #bea96f;
+}
 .color-table {
   width: 100%;
   margin-bottom: 2.8125em;

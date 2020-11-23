@@ -5,8 +5,8 @@
    ========================================================================== */
 
 
-import config from '@cfpb/cfpb-atomic-component/src/utilities/config';
 import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse';
+import config from '@cfpb/cfpb-atomic-component/src/utilities/config';
 
 const DIRECTIONS = config.DIRECTIONS;
 const UNDEFINED = config.UNDEFINED;

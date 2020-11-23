@@ -1,6 +1,6 @@
 // Required modules.
-import EventObserver from '../../mixins/EventObserver.js';
 import BaseTransition from './BaseTransition.js';
+import EventObserver from '../../mixins/EventObserver.js';
 
 // Exported constants.
 const CLASSES = {

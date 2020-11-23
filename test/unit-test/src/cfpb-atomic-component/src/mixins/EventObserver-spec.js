@@ -9,7 +9,7 @@ let spy2;
 describe( 'EventObserver', () => {
 
   beforeEach( () => {
-    mockEvent = { events: {} };
+    mockEvent = { events: {}};
     mockEvent = Object.assign( mockEvent, new EventObserver() );
     spy1 = jest.fn();
     spy2 = jest.fn();

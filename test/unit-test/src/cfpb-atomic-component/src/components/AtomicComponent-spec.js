@@ -60,7 +60,7 @@ describe( 'AtomicComponent', () => {
   it( 'should add the bound attribute to passed elements', () => {
     const element = document.getElementById( 'test-block-a' );
     const atomicComponent = new AtomicComponent( element );
-    expect( atomicComponent.element.hasAttribute( 'data-bound' ) ).toBe( true );
+    expect( atomicComponent.element.hasAttribute( 'data-js-hook' ) ).toBe( true );
   } );
 
   it( 'should initialize all instances in the DOM', () => {

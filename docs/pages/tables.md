@@ -568,7 +568,7 @@ variation_groups:
         variation_code_snippet: >-
           <!--Code from Design Manual
 
-          <table class="o-table o-table__stack-on-small" data-bound="true">
+          <table class="o-table o-table__stack-on-small">
               <thead>
                   <tr>
                       <th class="u-w20pct">
@@ -663,7 +663,7 @@ variation_groups:
 
           Fixed-width columns at the 600 px breakpoint and less lose their custom widths and expand to full width. This is the same responsive pattern used for default tables at small screens.
         variation_code_snippet: |-
-          <table class="o-table o-table__stack-on-small" data-bound="true">
+          <table class="o-table o-table__stack-on-small">
               <thead>
                   <tr>
                       <th class="u-w20pct">

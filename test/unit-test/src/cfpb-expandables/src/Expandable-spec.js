@@ -84,9 +84,9 @@ describe( 'standard Expandable', () => {
   } );
 
   describe( 'initialized state', () => {
-    it( 'should be data-bound', () => {
-      expect( expandableDom1.getAttribute( 'data-bound' ) ).toBe( 'true' );
-      expect( expandableDom2.getAttribute( 'data-bound' ) ).toBe( 'true' );
+    it( 'should be initialized', () => {
+      expect( expandableDom1.getAttribute( 'data-js-hook' ) ).toBe( 'state_atomic_init' );
+      expect( expandableDom2.getAttribute( 'data-js-hook' ) ).toBe( 'state_atomic_init' );
     } );
 
     it( 'should be collapsed when the OPEN_DEFAULT class is not present',
@@ -161,9 +161,9 @@ describe( 'accordion Expandables', () => {
   } );
 
   describe( 'initialized state', () => {
-    it( 'should be data-bound', () => {
-      expect( expandableDom1.getAttribute( 'data-bound' ) ).toBe( 'true' );
-      expect( expandableDom2.getAttribute( 'data-bound' ) ).toBe( 'true' );
+    it( 'should be initialized', () => {
+      expect( expandableDom1.getAttribute( 'data-js-hook' ) ).toBe( 'state_atomic_init' );
+      expect( expandableDom2.getAttribute( 'data-js-hook' ) ).toBe( 'state_atomic_init' );
     } );
 
     it( 'should be collapsed when the OPEN_DEFAULT class is not present',

@@ -206,7 +206,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     } );
 
     const selectionsItemLabelDom = MultiselectUtils.create( 'button', {
-      innerHTML: `<label for=${ option.value }>${ option.text + closeIcon }</label>`,
+      innerHTML: '<label for=' + option.value + '>' + option.text + closeIcon + '</label>',
       inside:    selectionsItemDom
     } );
 

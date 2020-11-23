@@ -4253,7 +4253,7 @@ select.o-multiselect {
 .o-multiselect_options li:last-child {
   margin-bottom: 0;
 }
-.o-multiselect_options.u-filtered li:not( .u-filter-match ) {
+.o-multiselect_options.u-filtered li:not(.u-filter-match) {
   display: none;
 }
 .o-multiselect_options.u-no-results li,

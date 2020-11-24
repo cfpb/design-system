@@ -4284,6 +4284,15 @@ select.o-multiselect {
 .o-multiselect_choices li:last-child {
   margin-bottom: 0.625em;
 }
+.o-multiselect_choices button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+.o-multiselect_choices button:focus {
+  outline: 1px dotted #0072ce;
+  outline-offset: 1px;
+}
 .o-multiselect_choices label {
   display: inline-block;
   padding: 2px 5px;
@@ -4303,7 +4312,7 @@ select.o-multiselect {
 }
 .o-multiselect_choices label .cf-icon-svg {
   position: absolute;
-  top: 3px;
+  top: 2px;
   right: 5px;
   fill: #d3daeb;
 }

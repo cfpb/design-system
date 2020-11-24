@@ -4311,43 +4311,6 @@ let UNDEFINED;
 
 /***/ }),
 
-/***/ "./packages/cfpb-atomic-component/src/utilities/dom-events/index.js":
-/*!**************************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/src/utilities/dom-events/index.js ***!
-  \**************************************************************************/
-/*! namespace exports */
-/*! export bindEvent [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "bindEvent": function() { return /* binding */ bindEvent; }
-/* harmony export */ });
-/**
- * Shortcut for binding event listeners to elements.
- * @param  {HTMLNode} elem   The element to attach the event listener to.
- * @param  {Object}   events The list of events to attach to the element.
- */
-function bindEvent( elem, events ) {
-  let callback;
-
-  let event;
-  for ( event in events ) {
-    if ( events.hasOwnProperty( event ) ) {
-      callback = events[event];
-      elem.addEventListener( event, callback );
-    }
-  }
-}
-
-
-
-
-/***/ }),
-
 /***/ "./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js":
 /*!****************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/dom-traverse/index.js ***!
@@ -5279,11 +5242,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 /* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
 /* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
-/* harmony import */ var _cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../cfpb-atomic-component/src/utilities/dom-events */ "./packages/cfpb-atomic-component/src/utilities/dom-events/index.js");
-/* harmony import */ var _cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
-/* harmony import */ var _cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
+/* harmony import */ var _cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3__);
 // Required modules.
-
 
 
 
@@ -5320,6 +5281,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
   // Constants for key binding.
   const KEY_RETURN = 13;
+  const KEY_SPACE = 32;
   const KEY_ESCAPE = 27;
   const KEY_UP = 38;
   const KEY_DOWN = 40;
@@ -5469,19 +5431,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       _optionsDom.appendChild( _optionsItemDom );
 
       if ( option.checked ) {
-        const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'li', {
-          'data-option': option.value,
-          'class': 'm-form-field m-form-field__checkbox'
-        } );
-
-        _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'label', {
-          'for':       option.value,
-          'innerHTML': option.text + (_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default()),
-          'className': BASE_CLASS + '_label',
-          'inside':    selectionsItemDom
-        } );
-
-        _selectionsDom.appendChild( selectionsItemDom );
+        _createSelectedItem( _selectionsDom, option );
       }
     } );
 
@@ -5490,6 +5440,26 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     _containerDom.appendChild( _fieldsetDom );
 
     return _containerDom;
+  }
+
+  /**
+   * @param {HTMLNode} selectionsDom - The UL item to inject list item into.
+   * @param {HTMLNode} option - The OPTION item to extract content from.
+   */
+  function _createSelectedItem( selectionsDom, option ) {
+    const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'li', {
+      'data-option': option.value
+    } );
+
+    const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'button', {
+      innerHTML: '<label for=' + option.value + '>' + option.text + (_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3___default()) + '</label>',
+      inside:    selectionsItemDom
+    } );
+
+    selectionsDom.appendChild( selectionsItemDom );
+    selectionsItemDom.appendChild( selectionsItemLabelDom );
+
+    selectionsItemLabelDom.addEventListener( 'keydown', _selectionKeyDownHandler );
   }
 
   /**
@@ -5537,32 +5507,19 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     const option = _optionsData[optionIndex] || _optionsData[_model.getIndex()];
 
     if ( option ) {
-      let _selectionsItemDom;
-
       if ( option.checked ) {
         if ( _optionsDom.classList.contains( 'u-max-selections' ) ) {
           _optionsDom.classList.remove( 'u-max-selections' );
         }
 
         const dataOptionSel = '[data-option="' + option.value + '"]';
-        _selectionsItemDom = _selectionsDom.querySelector( dataOptionSel );
+        const _selectionsItemDom = _selectionsDom.querySelector( dataOptionSel );
 
-        if ( _selectionsItemDom ) {
+        if ( typeof _selectionsItemDom !== 'undefined' ) {
           _selectionsDom.removeChild( _selectionsItemDom );
         }
       } else {
-        _selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'li', {
-          'data-option': option.value
-        } );
-
-        const _selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'label', {
-          'innerHTML': option.text + (_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default()),
-          'for':       option.value,
-          'inside':    _selectionsItemDom
-        } );
-
-        _selectionsDom.appendChild( _selectionsItemDom );
-        _selectionsItemDom.appendChild( _selectionsItemLabelDom );
+        _createSelectedItem( _selectionsDom, option );
       }
       _model.toggleOption( optionIndex );
 
@@ -5637,9 +5594,8 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
   /**
    * Set the filtered matched state.
-   * @param {Array} filterIndices - List of indices to filter from the options.
    */
-  function _filterMatches( filterIndices ) {
+  function _filterMatches() {
     _optionsDom.classList.remove( 'u-no-results' );
     _optionsDom.classList.add( 'u-filtered' );
     for ( let i = 0, len = _model.getLastFilterIndices(); i < len; i++ ) {
@@ -5663,87 +5619,101 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * Binds events to the search input, option list, and checkboxes.
    */
   function _bindEvents() {
+
+    _searchDom.addEventListener( 'input', function() {
+      _evaluate( this.value );
+    } );
+
+    _searchDom.addEventListener( 'focus', function() {
+      if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' ) {
+        expand();
+      }
+    } );
+
+    _searchDom.addEventListener( 'blur', function() {
+      if ( !_isBlurSkipped &&
+           _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
+        collapse();
+      }
+    } );
+
+    _searchDom.addEventListener( 'keydown', function( event ) {
+      const key = event.keyCode;
+
+      if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' &&
+            key !== KEY_TAB ) {
+        expand();
+      }
+
+      if ( key === KEY_RETURN ) {
+        event.preventDefault();
+        _highlight( DIR_NEXT );
+      } else if ( key === KEY_ESCAPE ) {
+        _resetSearch();
+        collapse();
+      } else if ( key === KEY_DOWN ) {
+        _highlight( DIR_NEXT );
+      } else if ( key === KEY_TAB &&
+                  !event.shiftKey &&
+                  _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
+        collapse();
+      }
+    } );
+
+    _optionsDom.addEventListener( 'mousedown', function() {
+      _isBlurSkipped = true;
+    } );
+
+    _optionsDom.addEventListener( 'keydown', function( event ) {
+      const key = event.keyCode;
+      const target = event.target;
+      const checked = target.checked;
+
+      if ( key === KEY_RETURN ) {
+        event.preventDefault();
+
+        /* Programmatically checking a checkbox does not fire a change event
+        so we need to manually create an event and dispatch it from the input.
+        */
+        target.checked = !checked;
+        const evt = document.createEvent( 'HTMLEvents' );
+        evt.initEvent( 'change', false, true );
+        target.dispatchEvent( evt );
+      } else if ( key === KEY_ESCAPE ) {
+        _searchDom.focus();
+        collapse();
+      } else if ( key === KEY_UP ) {
+        _highlight( DIR_PREV );
+      } else if ( key === KEY_DOWN ) {
+        _highlight( DIR_NEXT );
+      }
+    } );
+
+    _fieldsetDom.addEventListener( 'mousedown', function() {
+      _isBlurSkipped = true;
+    } );
+
     const inputs = _optionsDom.querySelectorAll( 'input' );
-
-    (0,_cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.bindEvent)( _searchDom, {
-      input: function() {
-        _evaluate( this.value );
-      },
-      focus: function() {
-        if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' ) {
-          expand();
-        }
-      },
-      blur: function() {
-        if ( !_isBlurSkipped &&
-              _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
-          collapse();
-        }
-      },
-      keydown: function( event ) {
-        const key = event.keyCode;
-
-        if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' &&
-             key !== KEY_TAB ) {
-          expand();
-        }
-
-        if ( key === KEY_RETURN ) {
-          event.preventDefault();
-          _highlight( DIR_NEXT );
-        } else if ( key === KEY_ESCAPE ) {
-          _resetSearch();
-          collapse();
-        } else if ( key === KEY_DOWN ) {
-          _highlight( DIR_NEXT );
-        } else if ( key === KEY_TAB &&
-                    !event.shiftKey &&
-                    _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
-          collapse();
-        }
-      }
-    } );
-
-    (0,_cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.bindEvent)( _optionsDom, {
-      mousedown: function() {
-        _isBlurSkipped = true;
-      },
-      keydown: function( event ) {
-        const key = event.keyCode;
-        const target = event.target;
-        const checked = target.checked;
-
-        if ( key === KEY_RETURN ) {
-          event.preventDefault();
-
-          /* Programmatically checking a checkbox does not fire a change event
-          so we need to manually create an event and dispatch it from the input.
-          */
-          target.checked = !checked;
-          const evt = document.createEvent( 'HTMLEvents' );
-          evt.initEvent( 'change', false, true );
-          target.dispatchEvent( evt );
-        } else if ( key === KEY_ESCAPE ) {
-          _searchDom.focus();
-          collapse();
-        } else if ( key === KEY_UP ) {
-          _highlight( DIR_PREV );
-        } else if ( key === KEY_DOWN ) {
-          _highlight( DIR_NEXT );
-        }
-      }
-    } );
-
-    (0,_cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.bindEvent)( _fieldsetDom, {
-      mousedown: function() {
-        _isBlurSkipped = true;
-      }
-    } );
-
     for ( let i = 0, len = inputs.length; i < len; i++ ) {
-      (0,_cfpb_atomic_component_src_utilities_dom_events__WEBPACK_IMPORTED_MODULE_3__.bindEvent)( inputs[i], {
-        change: _changeHandler
-      } );
+      inputs[i].addEventListener( 'change', _changeHandler );
+    }
+
+    // Add event listeners to any selections that are present at page load.
+    const labelButtons = _selectionsDom.querySelectorAll( 'button' );
+    for ( let j = 0, len = labelButtons.length; j < len; j++ ) {
+      labelButtons[j].addEventListener( 'keydown', _selectionKeyDownHandler );
+    }
+  }
+
+  /**
+   * @param {KeyEvent} event - The key down event object.
+   */
+  function _selectionKeyDownHandler( event ) {
+    if ( event.keyCode === KEY_SPACE ||
+         event.keyCode === KEY_RETURN ) {
+      const label = event.target.querySelector( 'label' );
+      const checkbox = _optionsDom.querySelector( '#' + label.getAttribute( 'for' ) );
+      checkbox.click();
     }
   }
 

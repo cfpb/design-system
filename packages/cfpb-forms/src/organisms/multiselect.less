@@ -103,6 +103,17 @@ select.o-multiselect {
             margin-bottom: unit( 10px / @base-font-size-px, em );
         }
 
+        button {
+            border: none;
+            background: none;
+            padding: 0;
+
+            &:focus {
+                outline: 1px dotted @pacific;
+                outline-offset: 1px;
+            }
+        }
+
         label {
             display: inline-block;
             padding: 2px 5px;
@@ -125,7 +136,7 @@ select.o-multiselect {
 
             .cf-icon-svg {
                 position: absolute;
-                top: 3px;
+                top: 2px;
                 right: 5px;
                 fill: @navy-20;
             }

@@ -650,6 +650,9 @@ input[type="radio"] {
 .u-hidden {
   display: none;
 }
+.u-invisible {
+  visibility: hidden;
+}
 .u-inline-block {
   display: inline-block;
 }

@@ -107,6 +107,11 @@ select.o-multiselect {
             border: none;
             background: none;
             padding: 0;
+
+            &:focus {
+                outline: 1px dotted @pacific;
+                outline-offset: 1px;
+            }
         }
 
         label {

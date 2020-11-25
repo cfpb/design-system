@@ -44,13 +44,12 @@ function testUnit( cb ) {
     fileTestRegex += '.*-spec.js';
   }
 
-  fileSrcPath = [ fileSrcPath, '!docs/**' ];
-
   const testProcess = spawn(
     fsHelper.getBinary( 'jest-cli', 'jest.js', '../bin' ),
     [
       '--config=jest.config.js',
       `--collectCoverageFrom=${ fileSrcPath }`,
+      `--collectCoverageFrom='!docs/**'`,
       `--testRegex=${ fileTestRegex }`,
       '--detectOpenHandles'
     ],

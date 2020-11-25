@@ -91,7 +91,7 @@ assign( AtomicComponent.prototype, new EventObserver(), {
     } else {
       this.setElement( this.element );
     }
-    this.element.setAttribute( 'data-bound', true );
+    this.element.setAttribute( 'data-js-hook', 'state_atomic_init' );
   },
 
   /**
@@ -236,7 +236,7 @@ assign( AtomicComponent.prototype, new EventObserver(), {
     if ( this._delegate ) {
       this._delegate.destroy();
     }
-    this.element.removeAttribute( 'data-bound' );
+    this.element.removeAttribute( 'data-js-hook' );
 
     return this;
   },
@@ -304,7 +304,7 @@ AtomicComponent.init = function( scope ) {
   let element;
   for ( let i = 0, len = elements.length; i < len; i++ ) {
     element = elements[i];
-    if ( element.hasAttribute( 'data-bound' ) === false ) {
+    if ( element.hasAttribute( 'data-js-hook' ) === false ) {
       components.push( new this( element ) );
     }
   }

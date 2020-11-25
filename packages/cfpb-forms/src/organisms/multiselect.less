@@ -38,6 +38,12 @@ select.o-multiselect {
         width: 100%;
 
         transition: max-height 0.25s ease-out;
+
+        // Chrome doesn't properly handle fieldset display properties
+        // See https://bugs.chromium.org/p/chromium/issues/detail?id=375693
+        // and https://codepen.io/contolini/pen/rNLXrvP
+        // and https://codepen.io/pembe180/pen/wCsIk
+        display: -webkit-box;
     }
 
     &.u-active {

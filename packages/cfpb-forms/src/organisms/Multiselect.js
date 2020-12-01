@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 // Required modules.
 import EventObserver from '../../../cfpb-atomic-component/src/mixins/EventObserver.js';
 import MultiselectModel from './MultiselectModel.js';
@@ -349,14 +350,14 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   /**
    * Set the filtered matched state.
    */
-  function _filterMatches() {
+  function _filterMatches( filterIndices ) {
     _optionsDom.classList.remove( 'u-no-results' );
     _optionsDom.classList.add( 'u-filtered' );
-    for ( let i = 0, len = _model.getLastFilterIndices(); i < len; i++ ) {
+    for ( let i = 0, len = filterIndices.length; i < len; i++ ) {
       _optionItemDoms[i].classList.remove( 'u-filter-match' );
     }
-    for ( let j = 0, len = _model.getFilterIndices(); j < len; j++ ) {
-      _optionItemDoms[j].classList.add( 'u-filter-match' );
+    for ( let j = 0, len = filterIndices.length; j < len; j++ ) {
+      _optionItemDoms[ filterIndices[j] ].classList.add( 'u-filter-match' );
     }
   }
 

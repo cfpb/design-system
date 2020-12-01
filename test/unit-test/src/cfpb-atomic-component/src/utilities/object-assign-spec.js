@@ -1,4 +1,4 @@
-import { assign } from '../../../../../../packages/cfpb-atomic-component/src/utilities/object-assign';
+import { assign } from '../../../../../../packages/cfpb-atomic-component/src/utilities/object-assign.js';
 
 let testObjectA;
 let testObjectB;

@@ -11,6 +11,62 @@ a front end framework developed at the
 Detailed instructions can be found at the Design System
 [documentation site](https://cfpb.github.io/design-system/).
 
+## Utility descriptions
+
+### object-assign
+
+Utility used to copy Javascript object properties from one or more source objects to a target object
+
+#### Example
+
+```
+var assert = require( 'assert' );
+import { assign } from '../utilities/object-assign.js';
+var testObjectA = {
+    str:  'test',
+    func: function() { return 'testStr'; },
+    num:  1
+ };
+ var testObjectB = {
+    obj:   { test: 2 },
+    arr:   [ 3 ],
+   	_null: null
+ };
+ assign( testObjectA, testObjectB );
+ assert( testObjectA.hasOwnProperty( 'obj' ), true ) ;
+ assert( testObjectA.hasOwnProperty( 'arr' ) );
+ assert( testObjectA.hasOwnProperty( '_null' ), true );
+```
+
+### Type Checkers
+
+ Utility functions for checking Javascript types and primitives.
+
+#### Example
+
+```
+var assert = require( 'assert' );
+import typeCheckers from '../utilities/type-checkers.js';
+
+var UNDEFINED;
+
+var date = new Date( 2011, 7, 21 );
+
+function func() {
+  return true;
+}
+
+var object = {
+  a: '1',
+  b: '2',
+  c: '3'
+};
+
+assert.equal( typeCheckers.isUndefined( UNDEFINED ), true );
+assert.equal( typeCheckers.isObject( object ), true );
+assert.equal( typeCheckers.isFunction( func ), true );
+assert.equal( typeCheckers.isDate( date ), true );
+```
 
 ## Getting involved
 

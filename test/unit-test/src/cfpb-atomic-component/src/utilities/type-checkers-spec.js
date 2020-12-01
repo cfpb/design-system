@@ -1,4 +1,4 @@
-import typeCheckers from '../../../../../../packages/cfpb-atomic-component/src/utilities/type-checkers';
+import typeCheckers from '../../../../../../packages/cfpb-atomic-component/src/utilities/type-checkers.js';
 
 const blankVar = '';
 const aString = 'bar';

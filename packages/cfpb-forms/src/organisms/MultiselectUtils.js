@@ -1,4 +1,4 @@
-import { queryOne } from '../../../cfpb-atomic-component/src/utilities/dom-traverse';
+import { queryOne } from '../../../cfpb-atomic-component/src/utilities/dom-traverse.js';
 
 /**
  * Searches an array for the first object with the matching key:value pair.

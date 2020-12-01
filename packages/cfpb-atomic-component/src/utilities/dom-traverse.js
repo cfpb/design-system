@@ -1,4 +1,4 @@
-import typeCheckers from '../type-checkers';
+import typeCheckers from './type-checkers.js';
 
 /**
  * Queries for the first match unless an HTMLNode is passed

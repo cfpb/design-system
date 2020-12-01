@@ -1,4 +1,4 @@
-import { closest, queryOne } from '../../../../../../packages/cfpb-atomic-component/src/utilities/dom-traverse';
+import { closest, queryOne } from '../../../../../../packages/cfpb-atomic-component/src/utilities/dom-traverse.js';
 
 let testBlockA;
 let testBlockB;

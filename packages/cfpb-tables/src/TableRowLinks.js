@@ -5,7 +5,7 @@
    ========================================================================== */
 
 
-import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse';
+import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js';
 
 const TableRowLinks = {
   ui: {

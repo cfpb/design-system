@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 // Required modules.
 import EventObserver from '../../../cfpb-atomic-component/src/mixins/EventObserver.js';
 import MultiselectModel from './MultiselectModel.js';

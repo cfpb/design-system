@@ -326,7 +326,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    */
   function _filterList( filterIndices ) {
     if ( filterIndices.length > 0 ) {
-      _filterMatches( filterIndices );
+      _filterMatches();
       return true;
     }
 
@@ -350,14 +350,18 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   /**
    * Set the filtered matched state.
    */
-  function _filterMatches( filterIndices ) {
+  function _filterMatches() {
     _optionsDom.classList.remove( 'u-no-results' );
     _optionsDom.classList.add( 'u-filtered' );
-    for ( let i = 0, len = filterIndices.length; i < len; i++ ) {
-      _optionItemDoms[i].classList.remove( 'u-filter-match' );
+
+    let filteredIndices = _model.getLastFilterIndices();
+    for ( let i = 0, len = filteredIndices.length; i < len; i++ ) {
+      _optionItemDoms[filteredIndices[i]].classList.remove( 'u-filter-match' );
     }
-    for ( let j = 0, len = filterIndices.length; j < len; j++ ) {
-      _optionItemDoms[ filterIndices[j] ].classList.add( 'u-filter-match' );
+
+    filteredIndices = _model.getFilterIndices();
+    for ( let j = 0, len = filteredIndices.length; j < len; j++ ) {
+      _optionItemDoms[filteredIndices[j]].classList.add( 'u-filter-match' );
     }
   }
 

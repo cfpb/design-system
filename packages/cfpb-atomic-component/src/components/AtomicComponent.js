@@ -12,8 +12,11 @@
 
 const Delegate = require( 'ftdomdelegate' ).Delegate;
 import EventObserver from '../mixins/EventObserver.js';
-import { assign } from '../utilities/object-assign';
-import typeCheckers from '../utilities/type-checkers';
+import { assign } from '../utilities/object-assign.js';
+import { instantiateAll, setInitFlag } from '../utilities/atomic-helpers.js';
+import typeCheckers from '../utilities/type-checkers.js';
+
+const TAG_NAME = 'div';
 
 /**
  * Function as the constrcutor for the AtomicComponent.
@@ -32,18 +35,24 @@ function AtomicComponent( element, attributes ) {
   this.ensureElement();
   this.setCachedElements();
   this.initializers.push( this.initialize );
-  this.initializers.forEach( function( func ) {
-    if ( typeCheckers.isFunction( func ) ) {
-      func.apply( this, arguments );
-    }
-  }, this );
-  this.dispatchEvent( 'component:initialized' );
 }
 
 // Public instance Methods and properties.
 assign( AtomicComponent.prototype, new EventObserver(), {
 
-  tagName: 'div',
+  /**
+   * Run through and call the component's initializers.
+   */
+  init: function() {
+    this.initializers.forEach( function( func ) {
+      if ( typeCheckers.isFunction( func ) ) {
+        func.apply( this, arguments );
+      }
+    }, this );
+    this.dispatchEvent( 'component:initialized' );
+
+    return this;
+  },
 
   /**
    * Function used to process class modifiers. These should
@@ -86,12 +95,12 @@ assign( AtomicComponent.prototype, new EventObserver(), {
       const attrs = assign( {}, this.attributes );
       attrs.id = this.id || this.u_id;
       if ( this.className ) attrs.class = this.className;
-      this.setElement( document.createElement( this.tagName ) );
+      this.setElement( document.createElement( TAG_NAME ) );
       this.setElementAttributes( attrs );
     } else {
       this.setElement( this.element );
     }
-    this.element.setAttribute( 'data-js-hook', 'state_atomic_init' );
+    setInitFlag( this.element );
   },
 
   /**
@@ -255,7 +264,6 @@ assign( AtomicComponent.prototype, new EventObserver(), {
 
 // Static Methods
 
-
 /**
  * Function used to set the attributes on an element.
  * and unbind events.
@@ -263,7 +271,7 @@ assign( AtomicComponent.prototype, new EventObserver(), {
  * @param {Object} attributes - Hash of attributes to set on base element.
  * @returns {Function} Extended child constructor function.
  */
-AtomicComponent.extend = function( attributes ) {
+function extend( attributes ) {
 
   /**
    * Function used as constructor in order to establish inheritance chain.
@@ -288,7 +296,6 @@ AtomicComponent.extend = function( attributes ) {
   return child;
 };
 
-
 /**
  * Function used to instantiate all instances of the particular
  * atomic component on a page.
@@ -296,20 +303,13 @@ AtomicComponent.extend = function( attributes ) {
  * @param {HTMLNode} scope - Where to search for components within.
  * @returns {Array} List of AtomicComponent instances.
  */
-AtomicComponent.init = function( scope ) {
-  const base = scope || document;
-  const elements = base.querySelectorAll( this.selector );
-  const components = [];
-
-  let element;
-  for ( let i = 0, len = elements.length; i < len; i++ ) {
-    element = elements[i];
-    if ( element.hasAttribute( 'data-js-hook' ) === false ) {
-      components.push( new this( element ) );
-    }
-  }
-
+ function init( scope ) {
+  const components = instantiateAll( this.selector, this, scope );
   return components;
 };
+
+// Set public static methods.
+AtomicComponent.init = init;
+AtomicComponent.extend = extend;
 
 export default AtomicComponent;

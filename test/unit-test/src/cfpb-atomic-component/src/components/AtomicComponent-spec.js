@@ -31,6 +31,7 @@ describe( 'AtomicComponent', () => {
     };
 
     const atomicComponent = new AtomicComponent( element, options );
+    atomicComponent.init();
     expect( atomicComponent.element === element ).toBe( true );
     expect( atomicComponent.events ).toBeInstanceOf( Object );
     expect( initialize ).toHaveBeenCalledTimes( 1 );

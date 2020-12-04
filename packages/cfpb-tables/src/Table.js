@@ -5,7 +5,7 @@
 import AtomicComponent from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
 import TableRowLinks from './TableRowLinks.js';
 import TableSortable from './TableSortable.js';
-import config from '@cfpb/cfpb-atomic-component/src/utilities/config.js';
+import { DIRECTIONS } from '@cfpb/cfpb-atomic-component/src/utilities/standard-type.js';
 
 const Table = AtomicComponent.extend( {
   ui: {
@@ -15,6 +15,6 @@ const Table = AtomicComponent.extend( {
   modifiers: [ TableSortable, TableRowLinks ]
 } );
 
-Table.constants.DIRECTIONS = config.DIRECTIONS;
+Table.constants.DIRECTIONS = DIRECTIONS;
 
 export default Table;

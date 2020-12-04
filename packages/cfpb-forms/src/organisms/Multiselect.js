@@ -1,9 +1,10 @@
 // Required modules.
-import EventObserver from '../../../cfpb-atomic-component/src/mixins/EventObserver.js';
+import { checkDom, setInitFlag } from '@cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js';
+import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 import MultiselectModel from './MultiselectModel.js';
 import MultiselectUtils from './MultiselectUtils.js';
 
-import closeIcon from '../../../cfpb-icons/src/icons/close.svg';
+import closeIcon from '@cfpb/cfpb-icons/src/icons/close.svg';
 
 const BASE_CLASS = 'o-multiselect';
 
@@ -42,7 +43,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   const KEY_TAB = 9;
 
   // Internal vars.
-  let _dom = element;
+  let _dom = checkDom( element, BASE_CLASS );
   let _isBlurSkipped = false;
   let _name;
   let _placeholder;
@@ -65,6 +66,10 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @returns {Multiselect} An instance.
    */
   function init() {
+    if ( !setInitFlag( _dom ) ) {
+      return this;
+    }
+
     _instance = this;
     _name = _dom.name;
     _placeholder = _dom.getAttribute( 'placeholder' );
@@ -79,6 +84,10 @@ function Multiselect( element ) { // eslint-disable-line max-statements
          and re-assign DOM reference. */
       _dom.parentNode.removeChild( _dom );
       _dom = newDom;
+
+      /* We need to set init flag again since we've created a new <div>
+         to replace the <select> element. */
+      setInitFlag( _dom );
 
       _bindEvents();
     }

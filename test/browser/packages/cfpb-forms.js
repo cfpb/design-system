@@ -36,4 +36,27 @@ describe( 'Multiselect', function() {
     expect( multiselectFieldsetScrollTop ).toBeGreaterThan( 0 );
   } );
 
+  it( 'should correctly filter the multiselect options', function() {
+    multiselectInput.scrollIntoView();
+    multiselectInput.click();
+    // Ensure multiselect has fully expanded
+    browser.pause( 300 );
+
+    const firstMultiSelectOption = $( '.a-live_code .o-multiselect_options li[data-option=option1]' );
+    const fourthMultiSelectOption = $( '.a-live_code .o-multiselect_options li[data-option=option4]' );
+    const longMultiSelectOption = $( '.a-live_code .o-multiselect_options li[data-option=option8]' );
+
+    // Find option #4
+    multiselectInput.setValue( 'ion 4' );
+    expect( firstMultiSelectOption.isDisplayed() ).toBeFalsy();
+    expect( fourthMultiSelectOption.isDisplayed() ).toBeTruthy();
+    expect( longMultiSelectOption.isDisplayed() ).toBeFalsy();
+
+    // Find the last really long option
+    multiselectInput.setValue( 'superca' );
+    expect( firstMultiSelectOption.isDisplayed() ).toBeFalsy();
+    expect( fourthMultiSelectOption.isDisplayed() ).toBeFalsy();
+    expect( longMultiSelectOption.isDisplayed() ).toBeTruthy();
+  } );
+
 } );

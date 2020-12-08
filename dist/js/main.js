@@ -3828,8 +3828,9 @@ module.exports.Delegate = Delegate;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _utilities_object_assign__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/object-assign */ "./packages/cfpb-atomic-component/src/utilities/object-assign.js");
-/* harmony import */ var _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/type-checkers */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
+/* harmony import */ var _utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/object-assign.js */ "./packages/cfpb-atomic-component/src/utilities/object-assign.js");
+/* harmony import */ var _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
+/* harmony import */ var _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utilities/type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
 /* ==========================================================================
    AtomicComponent
 
@@ -3847,6 +3848,9 @@ const Delegate = __webpack_require__(/*! ftdomdelegate */ "./packages/cfpb-atomi
 
 
 
+
+const TAG_NAME = 'div';
+
 /**
  * Function as the constrcutor for the AtomicComponent.
  * Sets up initial instance properties and calls
@@ -3859,23 +3863,29 @@ function AtomicComponent( element, attributes ) {
   this.element = element;
   this.initializers = [];
   this.uId = this.uniqueId( 'ac' );
-  (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_1__.assign)( this, attributes );
+  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( this, attributes );
   this.processModifiers();
   this.ensureElement();
   this.setCachedElements();
   this.initializers.push( this.initialize );
-  this.initializers.forEach( function( func ) {
-    if ( _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__.default.isFunction( func ) ) {
-      func.apply( this, arguments );
-    }
-  }, this );
-  this.dispatchEvent( 'component:initialized' );
 }
 
 // Public instance Methods and properties.
-(0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_1__.assign)( AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__.default(), {
+(0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__.default(), {
 
-  tagName: 'div',
+  /**
+   * Run through and call the component's initializers.
+   */
+  init: function() {
+    this.initializers.forEach( function( func ) {
+      if ( _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__.default.isFunction( func ) ) {
+        func.apply( this, arguments );
+      }
+    }, this );
+    this.dispatchEvent( 'component:initialized' );
+
+    return this;
+  },
 
   /**
    * Function used to process class modifiers. These should
@@ -3896,7 +3906,7 @@ function AtomicComponent( element, attributes ) {
           this.initializers.push( modifier.initialize );
           delete modifier.initialize;
         }
-        (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_1__.assign)( this, modifier );
+        (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( this, modifier );
       }
     }, this );
   },
@@ -3915,15 +3925,15 @@ function AtomicComponent( element, attributes ) {
    */
   ensureElement: function() {
     if ( !this.element ) { // eslint-disable-line no-negated-condition
-      const attrs = (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_1__.assign)( {}, this.attributes );
+      const attrs = (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( {}, this.attributes );
       attrs.id = this.id || this.u_id;
       if ( this.className ) attrs.class = this.className;
-      this.setElement( document.createElement( this.tagName ) );
+      this.setElement( document.createElement( TAG_NAME ) );
       this.setElementAttributes( attrs );
     } else {
       this.setElement( this.element );
     }
-    this.element.setAttribute( 'data-js-hook', 'state_atomic_init' );
+    (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.setInitFlag)( this.element );
   },
 
   /**
@@ -3950,7 +3960,7 @@ function AtomicComponent( element, attributes ) {
    * @returns {Object} Hash of event names and cached elements.
    */
   setCachedElements: function() {
-    const ui = (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_1__.assign)( {}, this.ui );
+    const ui = (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( {}, this.ui );
     let key;
     let element;
 
@@ -4030,7 +4040,7 @@ function AtomicComponent( element, attributes ) {
     for ( key in events ) {
       if ( {}.hasOwnProperty.call( events, key ) ) {
         method = events[key];
-        if ( _utilities_type_checkers__WEBPACK_IMPORTED_MODULE_2__.default.isFunction( this[method] ) ) {
+        if ( _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__.default.isFunction( this[method] ) ) {
           method = this[method];
         }
         if ( method ) {
@@ -4087,7 +4097,6 @@ function AtomicComponent( element, attributes ) {
 
 // Static Methods
 
-
 /**
  * Function used to set the attributes on an element.
  * and unbind events.
@@ -4095,7 +4104,7 @@ function AtomicComponent( element, attributes ) {
  * @param {Object} attributes - Hash of attributes to set on base element.
  * @returns {Function} Extended child constructor function.
  */
-AtomicComponent.extend = function( attributes ) {
+function extend( attributes ) {
 
   /**
    * Function used as constructor in order to establish inheritance chain.
@@ -4107,8 +4116,8 @@ AtomicComponent.extend = function( attributes ) {
   }
 
   child.prototype = Object.create( AtomicComponent.prototype );
-  (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_1__.assign)( child.prototype, attributes );
-  (0,_utilities_object_assign__WEBPACK_IMPORTED_MODULE_1__.assign)( child, AtomicComponent );
+  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( child.prototype, attributes );
+  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( child, AtomicComponent );
 
   if ( attributes.hasOwnProperty( 'ui' ) &&
        attributes.ui.hasOwnProperty( 'base' ) ) {
@@ -4120,7 +4129,6 @@ AtomicComponent.extend = function( attributes ) {
   return child;
 };
 
-
 /**
  * Function used to instantiate all instances of the particular
  * atomic component on a page.
@@ -4128,21 +4136,14 @@ AtomicComponent.extend = function( attributes ) {
  * @param {HTMLNode} scope - Where to search for components within.
  * @returns {Array} List of AtomicComponent instances.
  */
-AtomicComponent.init = function( scope ) {
-  const base = scope || document;
-  const elements = base.querySelectorAll( this.selector );
-  const components = [];
-
-  let element;
-  for ( let i = 0, len = elements.length; i < len; i++ ) {
-    element = elements[i];
-    if ( element.hasAttribute( 'data-js-hook' ) === false ) {
-      components.push( new this( element ) );
-    }
-  }
-
+ function init( scope ) {
+  const components = (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.instantiateAll)( this.selector, this, scope );
   return components;
 };
+
+// Set public static methods.
+AtomicComponent.init = init;
+AtomicComponent.extend = extend;
 
 /* harmony default export */ __webpack_exports__["default"] = (AtomicComponent);
 
@@ -4252,61 +4253,255 @@ function EventObserver() {
 
 /***/ }),
 
-/***/ "./packages/cfpb-atomic-component/src/utilities/config.js":
-/*!****************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/src/utilities/config.js ***!
-  \****************************************************************/
+/***/ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js":
+/*!************************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js ***!
+  \************************************************************************/
 /*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export checkDom [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export destroyInitFlag [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export instantiateAll [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export setInitFlag [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "checkDom": function() { return /* binding */ checkDom; },
+/* harmony export */   "destroyInitFlag": function() { return /* binding */ destroyInitFlag; },
+/* harmony export */   "instantiateAll": function() { return /* binding */ instantiateAll; },
+/* harmony export */   "setInitFlag": function() { return /* binding */ setInitFlag; }
+/* harmony export */ });
+/* harmony import */ var _data_hook__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-hook */ "./packages/cfpb-atomic-component/src/utilities/data-hook.js");
+/* harmony import */ var _standard_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./standard-type */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
 /* ==========================================================================
-   Atomic configurations and constants
+   Atomic Helpers.
+   Utilities for helping validate atomic design element architecture.
+   In descending order of scope, atomic components are:
+   - Page
+   - Template
+   - Organism
+   - Molecule
+   - Atom
+   ========================================================================= */
 
-   ========================================================================== */
 
-// Bit values intended to be used for bit inversion.
-const DIRECTIONS = {
-  UP:    0,
-  RIGHT: 1,
-  DOWN:  -1,
-  LEFT:  -2
-};
 
-/*
-  Atomic Prefixes used for standardizing naming conventions
-  across HTML, CSS, and Javascript.
-*/
-const PREFIXES = {
-  PAGE:     'p-',
-  TEMPLATE: 't-',
-  ORGANISM: 'o-',
-  MOLECULE: 'm-',
-  ATOM:     'a-'
-};
 
-/* eslint-disable no-useless-return */
 /**
- * Function used as a non-operational method that
- * is intended to be overriden.
- *
- * @returns {undefined}.
+ * @constant
+ * @type {string}
+ * @description
+ * Flag that gets set on an atomic component after its .init()
+ * method has been called. This is used so that an atomic
+ * component won't get initialized a second time after it
+ * has already been initialized.
  */
-function NO_OP_FUNCTION() { return; }
-/* eslint-enable no-useless-return */
+const INIT_FLAG = _standard_type__WEBPACK_IMPORTED_MODULE_1__.STATE_PREFIX + 'atomic_init';
 
-let UNDEFINED;
+/**
+ * Check that a particular element passed into the constructor of
+ * an atomic component exists and that the correct atomic class
+ * is present on the element.
+ * @param {HTMLNode} element
+ *   The DOM element within which to search for the atomic element class.
+ * @param {string} baseClass - The CSS class name for the atomic element.
+ * @returns {HTMLNode} The DOM element for the atomic element.
+ * @throws {Error} If DOM element passed into the atomic element is not valid.
+ */
+function checkDom( element, baseClass ) {
+  _verifyElementExists( element, baseClass );
+  const dom = _verifyClassExists( element, baseClass );
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  DIRECTIONS:     DIRECTIONS,
-  NO_OP_FUNCTION: NO_OP_FUNCTION,
-  PREFIXES:       PREFIXES,
-  UNDEFINED:      UNDEFINED
-});
+  return dom;
+}
+
+/**
+ * @param {HTMLNode} element
+ *   The DOM element within which to search for the atomic element class.
+ * @param {string} baseClass - The CSS class name for the atomic element.
+ * @returns {HTMLNode} The DOM element for the atomic element.
+ * @throws {Error} If DOM element passed into the atomic element is not valid.
+ */
+function _verifyElementExists( element, baseClass ) {
+  if ( !element || !element.classList ) {
+    const msg = element + ' is not valid. ' +
+              'Check that element is a DOM node with class "' +
+              baseClass + '"';
+    throw new Error( msg );
+  }
+
+  return element;
+}
+
+/**
+ * @param {HTMLNode} element
+ *   The DOM element within which to search for the atomic element class.
+ * @param {string} baseClass The CSS class name for the atomic element.
+ * @returns {HTMLNode} The DOM element for the atomic element.
+ * @throws {Error} If baseClass was not found on the element.
+ */
+function _verifyClassExists( element, baseClass ) {
+  const dom = element.classList.contains( baseClass ) ?
+    element : element.querySelector( '.' + baseClass );
+  if ( !dom ) {
+    const msg = baseClass + ' not found on or in passed DOM node.';
+    throw new Error( msg );
+  }
+
+  return dom;
+}
+
+/**
+ * Set a flag on an atomic component when it is initialized.
+ * Use the returned boolean to handle cases where an atomic component
+ * is initializing when it has already been initialized elsewhere.
+ * @param {HTMLNode} element - The DOM element for the atomic component.
+ * @param {null} destroy - Pass in true to .
+ * @returns {boolean} True if the init data-js-* hook attribute was set,
+ *   false otherwise.
+ */
+function setInitFlag( element ) {
+  if ( _data_hook__WEBPACK_IMPORTED_MODULE_0__.contains( element, INIT_FLAG ) ) {
+    return false;
+  }
+
+  _data_hook__WEBPACK_IMPORTED_MODULE_0__.add( element, INIT_FLAG );
+
+  return true;
+}
+
+/**
+ * Remove the initialization flag on an atomic component.
+ * This might be used if the DOM of an atomic element is cloned.
+ * @param {HTMLNode} element - The DOM element for the atomic component.
+ * @returns {boolean} True if the init data-js-* hook attribute was destroyed,
+ *   otherwise false if it didn't exist.
+ */
+function destroyInitFlag( element ) {
+  if ( !_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains( element, INIT_FLAG ) ) {
+    return false;
+  }
+
+  _data_hook__WEBPACK_IMPORTED_MODULE_0__.remove( element, INIT_FLAG );
+
+  return true;
+}
+
+/**
+ * @param {string} selector - Selector to search for in the document.
+ * @param {Function} Constructor - A constructor function.
+ * @param {HTMLNode} [scope] - A dom node in which to query the selector.
+ *   If not supplied, it defaults to the `document`.
+ * @returns {Array} List of instances that were instantiated.
+ */
+function instantiateAll( selector, Constructor, scope ) {
+  const base = scope || document;
+  const elements = base.querySelectorAll( selector );
+  const insts = [];
+  let inst;
+  let element;
+  for ( let i = 0, len = elements.length; i < len; i++ ) {
+    element = elements[i];
+    if ( element.hasAttribute( 'data-js-hook' ) === false ) {
+      inst = new Constructor( element );
+      inst.init();
+      insts.push( inst );
+    }
+  }
+  return insts;
+}
+
+// Expose public methods.
+
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-atomic-component/src/utilities/data-hook.js":
+/*!*******************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/data-hook.js ***!
+  \*******************************************************************/
+/*! namespace exports */
+/*! export add [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export contains [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export remove [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "add": function() { return /* binding */ add; },
+/* harmony export */   "contains": function() { return /* binding */ contains; },
+/* harmony export */   "remove": function() { return /* binding */ remove; }
+/* harmony export */ });
+/* harmony import */ var _standard_type__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./standard-type */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
+// Required modules.
+
+
+/**
+ * @param {HTMLNode} element - DOM element.
+ * @param {string} value
+ *   Value to add to the element's JS data-* hook.
+ * @returns {string} The value that was added.
+ * @throws {Error} If supplied value contains a space,
+ *   meaning it would be two values, which is likely a typo.
+ */
+function add( element, value ) {
+  if ( value.indexOf( ' ' ) !== -1 ) {
+    const msg = _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK + ' values cannot contain spaces!';
+    throw new Error( msg );
+  }
+
+  const values = element.getAttribute( _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK );
+  if ( values !== null ) {
+    value = values + ' ' + value;
+  }
+  element.setAttribute( _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, value );
+
+  return value;
+}
+
+/**
+ * @param {HTMLNode} element - DOM element.
+ * @param {string} value
+ *   Value to remove from the JS data-* hook value.
+ * @returns {boolean} True if value was removed, false otherwise.
+ */
+function remove( element, value ) {
+  const values = element.getAttribute( _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK );
+  const index = values.indexOf( value );
+  const valuesList = values.split( ' ' );
+  if ( index > -1 ) {
+    valuesList.splice( index, 1 );
+    element.setAttribute( _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, valuesList.join( ' ' ) );
+    return true;
+  }
+
+  return false;
+}
+
+/**
+ * @param {HTMLNode} element - DOM element.
+ * @param {string} value
+ *   Value to check as existing as a JS data-* hook value.
+ * @returns {boolean} True if the data-* hook value exists, false otherwise.
+ */
+function contains( element, value ) {
+  if ( !element ) { return false; }
+  let values = element.getAttribute( _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK );
+  // If JS data-* hook is not set return immediately.
+  if ( !values ) { return false; }
+  values = values.split( ' ' );
+
+  return values.indexOf( value ) > -1 ? true : false;
+}
+
+
 
 
 /***/ }),
@@ -4444,6 +4639,98 @@ function assign( destination ) {
 /* eslint-enable complexity */
 
 // Expose public methods.
+
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-atomic-component/src/utilities/standard-type.js":
+/*!***********************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/standard-type.js ***!
+  \***********************************************************************/
+/*! namespace exports */
+/*! export BEHAVIOR_PREFIX [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export DIRECTIONS [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export JS_HOOK [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export STATE_PREFIX [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export noopFunct [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BEHAVIOR_PREFIX": function() { return /* binding */ BEHAVIOR_PREFIX; },
+/* harmony export */   "JS_HOOK": function() { return /* binding */ JS_HOOK; },
+/* harmony export */   "noopFunct": function() { return /* binding */ noopFunct; },
+/* harmony export */   "STATE_PREFIX": function() { return /* binding */ STATE_PREFIX; },
+/* harmony export */   "DIRECTIONS": function() { return /* binding */ DIRECTIONS; }
+/* harmony export */ });
+/**
+ * @constant
+ * @type {string}
+ * @description
+ * Constant for the name of the data-* attribute set on
+ * HTML DOM elements for access by JavaScript.
+ */
+const JS_HOOK = 'data-js-hook';
+
+/**
+ * @constant
+ * @type {string}
+ * @description
+ * Flag prefix for settings that describe what JavaScript
+ * behaviors should be attached to a component.
+ * This would be set in the markup and initialized when
+ * the JavaScript loads.
+ *
+ * @example
+ * A component may flag that it has certain JavaScript behaviors attached,
+ * such as:
+ * `data-js-hook="behavior_flyout-menu behavior_clearable-input"`,
+ * which defines that two scripts (FlyoutMenu) and (ClearableInput)
+ * should access this DOM element and initialize its behaviors.
+ */
+const BEHAVIOR_PREFIX = 'behavior_';
+
+/**
+ * @constant
+ * @type {string}
+ * @description
+ * Flag prefix for settings related to changes in a components
+ * state set in the data-* JavaScript hook.
+ *
+ * @example
+ * A component may flag that it has been initialized by setting
+ * `data-js-hook="state_atomic_init"` after page load.
+ * Which specifies that the init method of a atomic constructor
+ * has been called, such as
+ * `var globalSearch = new GlobalSearch( 'm-global-search' ).init()`.
+ */
+const STATE_PREFIX = 'state_';
+
+/**
+ * Empty function that will do nothing.
+ * A usecase is when an object has empty functions used for callbacks,
+ * which are meant to be overridden with functionality, but if not,
+ * noopFunct will fire and do nothing instead.
+ *
+ * @example
+ * callback.onComplete = standardType.noopFunct;
+ */
+function noopFunct() {
+  // Placeholder function meant to be overridden.
+}
+
+// Bit values intended to be used for bit inversion.
+const DIRECTIONS = {
+  UP:    0,
+  RIGHT: 1,
+  DOWN:  -1,
+  LEFT:  -2
+};
+
 
 
 
@@ -5239,12 +5526,14 @@ ExpandableTransition.CLASSES = CLASSES;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
-/* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
-/* harmony import */ var _cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
-/* harmony import */ var _cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
+/* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
+/* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
+/* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4__);
 // Required modules.
+
 
 
 
@@ -5288,7 +5577,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   const KEY_TAB = 9;
 
   // Internal vars.
-  let _dom = element;
+  let _dom = (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.checkDom)( element, BASE_CLASS );
   let _isBlurSkipped = false;
   let _name;
   let _placeholder;
@@ -5311,13 +5600,17 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @returns {Multiselect} An instance.
    */
   function init() {
+    if ( !(0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)( _dom ) ) {
+      return this;
+    }
+
     _instance = this;
     _name = _dom.name;
     _placeholder = _dom.getAttribute( 'placeholder' );
     _options = _dom.options || [];
 
     if ( _options.length > 0 ) {
-      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__.default( _options ).init();
+      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_2__.default( _options ).init();
       _optionsData = _model.getOptions();
       const newDom = _populateMarkup();
 
@@ -5325,6 +5618,10 @@ function Multiselect( element ) { // eslint-disable-line max-statements
          and re-assign DOM reference. */
       _dom.parentNode.removeChild( _dom );
       _dom = newDom;
+
+      /* We need to set init flag again since we've created a new <div>
+         to replace the <select> element. */
+      (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)( _dom );
 
       _bindEvents();
     }
@@ -5365,24 +5662,24 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    */
   function _populateMarkup() {
     // Add a container for our markup
-    _containerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'div', {
+    _containerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'div', {
       className: BASE_CLASS,
       around:    _dom
     } );
 
     // Create all our markup but wait to manipulate the DOM just once
-    _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'ul', {
+    _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'ul', {
       className: LIST_CLASS + ' ' +
                  LIST_CLASS + '__unstyled ' +
                  BASE_CLASS + '_choices',
       inside:    _containerDom
     } );
 
-    _headerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'header', {
+    _headerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'header', {
       className: BASE_CLASS + '_header'
     } );
 
-    _searchDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'input', {
+    _searchDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'input', {
       className:    BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
       type:         'text',
       placeholder:  _placeholder || 'Choose up to five',
@@ -5391,12 +5688,12 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       autocomplete: 'off'
     } );
 
-    _fieldsetDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'fieldset', {
+    _fieldsetDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'fieldset', {
       'className':   BASE_CLASS + '_fieldset u-invisible',
       'aria-hidden': 'true'
     } );
 
-    _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'ul', {
+    _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'ul', {
       className: LIST_CLASS + ' ' +
                  LIST_CLASS + '__unstyled ' +
                  BASE_CLASS + '_options',
@@ -5404,12 +5701,12 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     } );
 
     _optionsData.forEach( function( option ) {
-      const _optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'li', {
+      const _optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'li', {
         'data-option': option.value,
         'class': 'm-form-field m-form-field__checkbox'
       } );
 
-      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'input', {
+      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'input', {
         'id':     option.value,
         // Type must come before value or IE fails
         'type':    'checkbox',
@@ -5420,7 +5717,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
         'checked': option.checked
       } );
 
-      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'label', {
+      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'label', {
         'for':         option.value,
         'textContent': option.text,
         'className':   BASE_CLASS + '_label a-label',
@@ -5447,12 +5744,12 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @param {HTMLNode} option - The OPTION item to extract content from.
    */
   function _createSelectedItem( selectionsDom, option ) {
-    const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'li', {
+    const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'li', {
       'data-option': option.value
     } );
 
-    const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.create( 'button', {
-      innerHTML: '<label for=' + option.value + '>' + option.text + (_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3___default()) + '</label>',
+    const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'button', {
+      innerHTML: '<label for=' + option.value + '>' + option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default()) + '</label>',
       inside:    selectionsItemDom
     } );
 
@@ -5499,7 +5796,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @param {string} value The value of the option the user has chosen.
    */
   function _updateSelections( value ) {
-    const optionIndex = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.default.indexOfObject(
+    const optionIndex = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.indexOfObject(
       _optionsData,
       'value',
       value
@@ -5735,7 +6032,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   this.expand = expand;
   this.collapse = collapse;
 
-  const eventObserver = new _cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__.default();
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
   this.addEventListener = eventObserver.addEventListener;
   this.removeEventListener = eventObserver.removeEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
@@ -5999,7 +6296,7 @@ function MultiselectModel( options ) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../cfpb-atomic-component/src/utilities/dom-traverse.js */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse.js");
 
 
 /**
@@ -6041,10 +6338,10 @@ function create( tag, options ) {
       let ref;
 
       if ( i === 'inside' ) {
-        ref = (0,_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.queryOne)( val );
+        ref = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.queryOne)( val );
         ref.appendChild( elem );
       } else if ( i === 'around' ) {
-        ref = (0,_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.queryOne)( val );
+        ref = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.queryOne)( val );
         ref.parentNode.insertBefore( elem, ref );
         elem.appendChild( ref );
       } else if ( i in elem ) {
@@ -6081,7 +6378,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
 /* harmony import */ var _TableRowLinks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TableRowLinks.js */ "./packages/cfpb-tables/src/TableRowLinks.js");
 /* harmony import */ var _TableSortable_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TableSortable.js */ "./packages/cfpb-tables/src/TableSortable.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_config_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/config.js */ "./packages/cfpb-atomic-component/src/utilities/config.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
 /* ==========================================================================
    Table Organism
    ========================================================================== */
@@ -6099,7 +6396,7 @@ const Table = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEB
   modifiers: [ _TableSortable_js__WEBPACK_IMPORTED_MODULE_2__.default, _TableRowLinks_js__WEBPACK_IMPORTED_MODULE_1__.default ]
 } );
 
-Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_config_js__WEBPACK_IMPORTED_MODULE_3__.default.DIRECTIONS;
+Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_3__.DIRECTIONS;
 
 /* harmony default export */ __webpack_exports__["default"] = (Table);
 
@@ -6175,7 +6472,7 @@ function onRowLinkClick( event ) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/config */ "./packages/cfpb-atomic-component/src/utilities/config.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
 /* ==========================================================================
    Table Sortablle
 
@@ -6186,8 +6483,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_1__.default.DIRECTIONS;
-const UNDEFINED = _cfpb_cfpb_atomic_component_src_utilities_config__WEBPACK_IMPORTED_MODULE_1__.default.UNDEFINED;
+let UNDEFINED;
 
 const TableSortable = {
   ui: {
@@ -6227,9 +6523,9 @@ function initialize() {
   if ( this.ui.sortButton ) {
     this.sortColumnIndex = this.getColumnIndex();
 
-    this.sortDirection = DIRECTIONS.UP;
+    this.sortDirection = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.UP;
     if ( this.ui.sortButton.classList.contains( this.classes.sortDown ) ) {
-      this.sortDirection = DIRECTIONS.DOWN;
+      this.sortDirection = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.DOWN;
     }
 
     this.updateTable();
@@ -6248,9 +6544,9 @@ function bindProperties() {
       return sortDirection;
     },
     set: function( value ) {
-      if ( value === DIRECTIONS.UP ) {
+      if ( value === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.UP ) {
         this.sortClass = this.classes.sortUp;
-      } else if ( value === DIRECTIONS.DOWN ) {
+      } else if ( value === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.DOWN ) {
         this.sortClass = this.classes.sortDown;
       }
       sortDirection = value;
@@ -6344,7 +6640,7 @@ function updateTableDom() {
  */
 function tableDataSorter( direction, sortType ) {
   return function( a, b ) {
-    const sign = direction === DIRECTIONS.DOWN ? -1 : 1;
+    const sign = direction === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.DOWN ? -1 : 1;
     let order = 0;
     const regex = /[^\d.-]/g;
 
@@ -6385,7 +6681,7 @@ function onSortableClick( event ) {
   } else {
     this.ui.sortButton = event.target;
     this.sortColumnIndex = this.getColumnIndex();
-    this.sortDirection = DIRECTIONS.UP;
+    this.sortDirection = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.UP;
   }
   // The active sort class is changing when the sort direction changes.
   this.ui.sortButton.classList.add( this.sortClass );

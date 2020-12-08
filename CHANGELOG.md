@@ -1,4 +1,32 @@
 
+## Unreleased (2020-12-08)
+
+#### Breaking Change
+* `cfpb-atomic-component`, `cfpb-design-system`, `cfpb-forms`, `cfpb-tables`
+  * [#1120](https://github.com/cfpb/design-system/pull/1120) Multiselect: refactor atomic component configuration to allow consistent init flag config ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-tables`
+  * [#1118](https://github.com/cfpb/design-system/pull/1118) Remove utility individual packages from cfpb-atomic-component ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-atomic-component`, `cfpb-forms`
+  * [#1107](https://github.com/cfpb/design-system/pull/1107) Multiselect: make selected items accessible via keyboard ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-forms`
+  * [#1119](https://github.com/cfpb/design-system/pull/1119) Fix multiselect filtering ([@contolini](https://github.com/contolini))
+  * [#1117](https://github.com/cfpb/design-system/pull/1117) Accommodate Chrome's improper handling of fieldset display properties ([@contolini](https://github.com/contolini))
+  * [#1105](https://github.com/cfpb/design-system/pull/1105) Hide multiselect horizontal scroll, wrap checkbox label text ([@contolini](https://github.com/contolini))
+* `cfpb-core`
+  * [#1113](https://github.com/cfpb/design-system/pull/1113) Add missing invisibility utility class ([@contolini](https://github.com/contolini))
+* `cfpb-atomic-component`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-tables`
+  * [#1106](https://github.com/cfpb/design-system/pull/1106) Clean up DOM utilities ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Chris Contolini ([@contolini](https://github.com/contolini))
+
+
+
 ## Unreleased (2020-11-18)
 
 #### Breaking Change

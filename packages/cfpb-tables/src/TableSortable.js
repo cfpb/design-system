@@ -6,10 +6,9 @@
 
 
 import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js';
-import config from '@cfpb/cfpb-atomic-component/src/utilities/config';
+import { DIRECTIONS } from '@cfpb/cfpb-atomic-component/src/utilities/standard-type.js';
 
-const DIRECTIONS = config.DIRECTIONS;
-const UNDEFINED = config.UNDEFINED;
+let UNDEFINED;
 
 const TableSortable = {
   ui: {

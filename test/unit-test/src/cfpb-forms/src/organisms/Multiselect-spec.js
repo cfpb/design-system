@@ -79,6 +79,7 @@ describe( 'Multiselect', () => {
       search.click();
       simulateEvent( 'keydown', search, { keyCode: 40 } );
 
+      expect( document.activeElement.id ).toBe( 'test-select-debt-collection' );
       expect( document.activeElement.value ).toBe( 'Debt collection' );
     } );
 

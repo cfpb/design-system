@@ -79,7 +79,8 @@ describe( 'Multiselect', () => {
       search.click();
       simulateEvent( 'keydown', search, { keyCode: 40 } );
 
-      expect( document.activeElement.id ).toBe( 'Debt collection' );
+      expect( document.activeElement.id ).toBe( 'test-select-debt-collection' );
+      expect( document.activeElement.value ).toBe( 'Debt collection' );
     } );
 
     it( 'should open when the search input is focused', function() {

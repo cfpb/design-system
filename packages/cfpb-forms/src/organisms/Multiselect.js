@@ -210,8 +210,10 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     } );
 
     const selectionsItemLabelDom = MultiselectUtils.create( 'button', {
-      innerHTML: '<label for=' + option.id + '>' + option.text + closeIcon + '</label>',
-      inside:    selectionsItemDom
+      type: 'button',
+      innerHTML: '<label for=' + option.id + '>' +
+                 option.text + closeIcon + '</label>',
+      inside: selectionsItemDom
     } );
 
     selectionsDom.appendChild( selectionsItemDom );

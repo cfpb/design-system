@@ -47,7 +47,7 @@ module.exports = {
         'class="cf-icon-svg"', `fill="${ svgFillColor.value }"`
       );
 
-      return svg;
+      return encodeURI( svg );
     } );
   }
 };

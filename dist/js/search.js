@@ -5,8 +5,6 @@
 /*!***********************************!*\
   !*** ./node_modules/lunr/lunr.js ***!
   \***********************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, module */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -3512,8 +3510,6 @@ lunr.QueryParser.parseBoost = function (parser) {
 /*!**********************************!*\
   !*** ./docs/assets/js/search.js ***!
   \**********************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
 var lunr = __webpack_require__(/*! lunr */ "./node_modules/lunr/lunr.js");
 /**
  * Update page markup with search results.

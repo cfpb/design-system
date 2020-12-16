@@ -5,9 +5,6 @@
 /*!******************************************!*\
   !*** ./node_modules/anchor-js/anchor.js ***!
   \******************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: top-level-this-exports, __webpack_exports__, module */
-/*! CommonJS bailout: this is used directly at 21:2-6 */
 /***/ (function(module, exports) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* eslint-env amd */
@@ -371,9 +368,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /*!********************************!*\
   !*** ./docs/assets/js/main.js ***!
   \********************************/
-/*! namespace exports */
-/*! exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -463,10 +457,6 @@ function handleToggleClick(event) {
 /*!*******************************************!*\
   !*** ./docs/assets/js/redirect-banner.js ***!
   \*******************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -544,10 +534,6 @@ function init() {
 /*!***********************************!*\
   !*** ./docs/assets/js/sidebar.js ***!
   \***********************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -604,12 +590,6 @@ function init() {
 /*!******************************************!*\
   !*** ./docs/assets/js/toggle-details.js ***!
   \******************************************/
-/*! namespace exports */
-/*! export TOGGLE_ATTRIBUTE [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export toggleAllDetails [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export toggleDetails [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -695,10 +675,6 @@ function toggleAllDetails(toggleBtn) {
 /*!**************************************************!*\
   !*** ./node_modules/govuk-frontend/govuk/all.js ***!
   \**************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_exports__, top-level-this-exports, __webpack_require__.g, __webpack_require__.* */
-/*! CommonJS bailout: this is used directly at 5:2-6 */
-/*! CommonJS bailout: exports is used directly at 2:72-79 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 (function (global, factory) {
@@ -3266,9 +3242,6 @@ exports.Tabs = Tabs;
 /*!***********************************!*\
   !*** ./docs/assets/css/main.less ***!
   \***********************************/
-/*! namespace exports */
-/*! exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3282,9 +3255,6 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************************************!*\
   !*** ./packages/cfpb-icons/src/icons/close.svg ***!
   \*************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
 /***/ (function(module) {
 
 module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 718.9 1200\" class=\"cf-icon-svg\"><path d=\"M451.4 613.7l248.1-248.1c25.6-25.1 26-66.3.8-91.9s-66.3-26-91.9-.8l-.8.8-248.1 248.1-248.1-248.1c-25.4-25.4-66.5-25.4-91.9 0s-25.4 66.5 0 91.9l248.1 248.1L19.5 861.8c-25.6 25.1-26 66.3-.8 91.9s66.3 26 91.9.8l.8-.8 248.1-248.1 248.1 248.1c25.4 25.4 66.5 25.4 91.9 0s25.4-66.5 0-91.9L451.4 613.7z\"></path></svg>"
@@ -3295,9 +3265,6 @@ module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 718.9 
 /*!***********************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/delegate.js ***!
   \***********************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 6:0-14 */
 /***/ (function(module) {
 
 "use strict";
@@ -3787,9 +3754,6 @@ Delegate.prototype.destroy = function() {
 /*!********************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js ***!
   \********************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 14:0-14 */
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -3819,10 +3783,6 @@ module.exports.Delegate = Delegate;
 /*!**************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/components/AtomicComponent.js ***!
   \**************************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4154,10 +4114,6 @@ AtomicComponent.extend = extend;
 /*!********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/mixins/EventObserver.js ***!
   \********************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4257,13 +4213,6 @@ function EventObserver() {
 /*!************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js ***!
   \************************************************************************/
-/*! namespace exports */
-/*! export checkDom [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export destroyInitFlag [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export instantiateAll [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export setInitFlag [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4424,12 +4373,6 @@ function instantiateAll( selector, Constructor, scope ) {
 /*!*******************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/data-hook.js ***!
   \*******************************************************************/
-/*! namespace exports */
-/*! export add [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export contains [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export remove [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4510,11 +4453,6 @@ function contains( element, value ) {
 /*!**********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/dom-traverse.js ***!
   \**********************************************************************/
-/*! namespace exports */
-/*! export closest [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export queryOne [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4578,10 +4516,6 @@ function closest( element, selector ) {
 /*!***********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/object-assign.js ***!
   \***********************************************************************/
-/*! namespace exports */
-/*! export assign [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4648,14 +4582,6 @@ function assign( destination ) {
 /*!***********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/standard-type.js ***!
   \***********************************************************************/
-/*! namespace exports */
-/*! export BEHAVIOR_PREFIX [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export DIRECTIONS [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export JS_HOOK [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export STATE_PREFIX [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export noopFunct [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4740,10 +4666,6 @@ const DIRECTIONS = {
 /*!***********************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js ***!
   \***********************************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5019,10 +4941,6 @@ BaseTransition.NO_ANIMATION_CLASS = 'u-no-animation';
 /*!***********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/type-checkers.js ***!
   \***********************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5211,10 +5129,6 @@ function isEmpty( value ) {
 /*!*****************************************************!*\
   !*** ./packages/cfpb-expandables/src/Expandable.js ***!
   \*****************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5369,10 +5283,6 @@ function getLabelText() {
 /*!***************************************************************!*\
   !*** ./packages/cfpb-expandables/src/ExpandableTransition.js ***!
   \***************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5518,10 +5428,6 @@ ExpandableTransition.CLASSES = CLASSES;
 /*!**********************************************************!*\
   !*** ./packages/cfpb-forms/src/organisms/Multiselect.js ***!
   \**********************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6048,10 +5954,6 @@ Multiselect.BASE_CLASS = BASE_CLASS;
 /*!***************************************************************!*\
   !*** ./packages/cfpb-forms/src/organisms/MultiselectModel.js ***!
   \***************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6285,10 +6187,6 @@ function MultiselectModel( options ) {
 /*!***************************************************************!*\
   !*** ./packages/cfpb-forms/src/organisms/MultiselectUtils.js ***!
   \***************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6364,10 +6262,6 @@ function create( tag, options ) {
 /*!*******************************************!*\
   !*** ./packages/cfpb-tables/src/Table.js ***!
   \*******************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6404,10 +6298,6 @@ Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_standard_
 /*!***************************************************!*\
   !*** ./packages/cfpb-tables/src/TableRowLinks.js ***!
   \***************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6460,10 +6350,6 @@ function onRowLinkClick( event ) {
 /*!***************************************************!*\
   !*** ./packages/cfpb-tables/src/TableSortable.js ***!
   \***************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

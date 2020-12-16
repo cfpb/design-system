@@ -478,10 +478,10 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    */
   function _selectionClickHandler( event ) {
     const target = event.target;
-    if ( target.tagName === 'BUTTON' ) {
+    if ( target.tagName === 'BUTTON' ) {
       event.preventDefault();
       target.removeEventListener( 'click', _selectionClickHandler );
-      target.querySelector('label').click();
+      target.querySelector( 'label' ).click();
     }
   }
 

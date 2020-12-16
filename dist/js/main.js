@@ -3787,9 +3787,9 @@ module.exports.Delegate = Delegate;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
 /* harmony import */ var _utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/object-assign.js */ "./packages/cfpb-atomic-component/src/utilities/object-assign.js");
-/* harmony import */ var _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
+/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 /* harmony import */ var _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utilities/type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
 /* ==========================================================================
    AtomicComponent
@@ -3803,9 +3803,9 @@ __webpack_require__.r(__webpack_exports__);
 
    ========================================================================== */
 
+
+
 const Delegate = __webpack_require__(/*! ftdomdelegate */ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js").Delegate;
-
-
 
 
 
@@ -3831,10 +3831,11 @@ function AtomicComponent( element, attributes ) {
 }
 
 // Public instance Methods and properties.
-(0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__.default(), {
+(0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__.default(), {
 
   /**
    * Run through and call the component's initializers.
+   * @returns {AtomicComponent} An instance.
    */
   init: function() {
     this.initializers.forEach( function( func ) {
@@ -3893,7 +3894,7 @@ function AtomicComponent( element, attributes ) {
     } else {
       this.setElement( this.element );
     }
-    (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.setInitFlag)( this.element );
+    (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)( this.element );
   },
 
   /**
@@ -4087,7 +4088,7 @@ function extend( attributes ) {
   child.constants = {};
 
   return child;
-};
+}
 
 /**
  * Function used to instantiate all instances of the particular
@@ -4096,10 +4097,10 @@ function extend( attributes ) {
  * @param {HTMLNode} scope - Where to search for components within.
  * @returns {Array} List of AtomicComponent instances.
  */
- function init( scope ) {
-  const components = (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.instantiateAll)( this.selector, this, scope );
+function init( scope ) {
+  const components = (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)( this.selector, this, scope );
   return components;
-};
+}
 
 // Set public static methods.
 AtomicComponent.init = init;

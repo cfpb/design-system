@@ -4275,6 +4275,7 @@ select.o-multiselect {
   content: 'Reached maximum of five selections';
 }
 .o-multiselect_choices {
+  padding-left: 0;
   margin-right: -0.625em;
   margin-bottom: 0;
 }

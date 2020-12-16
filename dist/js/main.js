@@ -5554,7 +5554,6 @@ const BASE_CLASS = 'o-multiselect';
  */
 function Multiselect( element ) { // eslint-disable-line max-statements
 
-  const LIST_CLASS = 'm-list';
   const CHECKBOX_INPUT_CLASS = 'a-checkbox';
   const TEXT_INPUT_CLASS = 'a-text-input';
 
@@ -5669,9 +5668,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
     // Create all our markup but wait to manipulate the DOM just once
     _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'ul', {
-      className: LIST_CLASS + ' ' +
-                 LIST_CLASS + '__unstyled ' +
-                 BASE_CLASS + '_choices',
+      className: BASE_CLASS + '_choices',
       inside:    _containerDom
     } );
 
@@ -5694,9 +5691,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     } );
 
     _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'ul', {
-      className: LIST_CLASS + ' ' +
-                 LIST_CLASS + '__unstyled ' +
-                 BASE_CLASS + '_options',
+      className: BASE_CLASS + '_options',
       inside:    _fieldsetDom
     } );
 

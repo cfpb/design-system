@@ -49,7 +49,7 @@ function testUnit( cb ) {
     [
       '--config=jest.config.js',
       `--collectCoverageFrom=${ fileSrcPath }`,
-      `--collectCoverageFrom='!docs/**'`,
+      '--collectCoverageFrom=\'!docs/**\'',
       `--testRegex=${ fileTestRegex }`,
       '--detectOpenHandles'
     ],

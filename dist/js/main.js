@@ -5651,8 +5651,10 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     } );
 
     const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'button', {
-      innerHTML: '<label for=' + option.id + '>' + option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default()) + '</label>',
-      inside:    selectionsItemDom
+      type: 'button',
+      innerHTML: '<label for=' + option.id + '>' +
+                 option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default()) + '</label>',
+      inside: selectionsItemDom
     } );
 
     selectionsDom.appendChild( selectionsItemDom );

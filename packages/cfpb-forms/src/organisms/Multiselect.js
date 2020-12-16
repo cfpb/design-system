@@ -75,7 +75,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     _options = _dom.options || [];
 
     if ( _options.length > 0 ) {
-      _model = new MultiselectModel( _options ).init();
+      _model = new MultiselectModel( _options, _name ).init();
       _optionsData = _model.getOptions();
       const newDom = _populateMarkup();
 
@@ -166,8 +166,6 @@ function Multiselect( element ) { // eslint-disable-line max-statements
         'data-option': option.value,
         'class': 'm-form-field m-form-field__checkbox'
       } );
-
-      option.id = _name + '-' + option.value.trim().replace( /\s+/g, '-' ).toLowerCase();
 
       MultiselectUtils.create( 'input', {
         'id':      option.id,

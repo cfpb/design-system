@@ -217,6 +217,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     selectionsDom.appendChild( selectionsItemDom );
     selectionsItemDom.appendChild( selectionsItemLabelDom );
 
+    selectionsItemLabelDom.addEventListener( 'click', _selectionClickHandler );
     selectionsItemLabelDom.addEventListener( 'keydown', _selectionKeyDownHandler );
   }
 
@@ -463,7 +464,24 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     // Add event listeners to any selections that are present at page load.
     const labelButtons = _selectionsDom.querySelectorAll( 'button' );
     for ( let j = 0, len = labelButtons.length; j < len; j++ ) {
+      labelButtons[j].addEventListener( 'click', _selectionClickHandler );
       labelButtons[j].addEventListener( 'keydown', _selectionKeyDownHandler );
+    }
+  }
+
+  /**
+   * This passes the click of the selected item button down to the label it
+   * contains. This is only required for browsers (IE11) that prevent the
+   * click of a selected item from cascading from the button down to the label
+   * it contains.
+   * @param {MouseEvent} event - The mouse click event object.
+   */
+  function _selectionClickHandler( event ) {
+    const target = event.target;
+    if ( target.tagName === 'BUTTON' ) {
+      event.preventDefault();
+      target.removeEventListener( 'click', _selectionClickHandler );
+      target.querySelector( 'label' ).click();
     }
   }
 

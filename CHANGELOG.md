@@ -1,3 +1,8 @@
+FetchError: invalid json response body at https://api.github.com/users/anselmbradford reason: Unexpected token < in JSON at position 0
+    at /Users/bradforda/Projects/design-system/node_modules/minipass-fetch/lib/body.js:77:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+
+
 
 ## Unreleased (2020-12-16)
 

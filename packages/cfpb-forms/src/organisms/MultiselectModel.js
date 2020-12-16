@@ -28,9 +28,11 @@ function stringMatch( x, y ) {
  * MultiselectModel
  * @param {HTMLOptionsCollection} options -
  *   Set of options from a <select> element.
+ * @param {string} name - a unique name for this multiselect.
  */
-function MultiselectModel( options ) {
+function MultiselectModel( options, name ) {
   const _options = options;
+  const _name = name;
   let _optionsData = [];
 
   let _selectedIndices = [];
@@ -66,6 +68,7 @@ function MultiselectModel( options ) {
       item = list[i];
       isChecked = item.defaultSelected;
       cleaned.push( {
+        id:      _getOptionId( item ),
         value:   item.value,
         text:    item.text,
         checked: isChecked
@@ -185,6 +188,15 @@ function MultiselectModel( options ) {
    */
   function getIndex() {
     return _index;
+  }
+
+  /**
+   * @param {HTMLNode} item - An option HTML node.
+   * @returns {string} A (hopefully) unique ID.
+   *   If it's not unique, we have a duplicate option value.
+   */
+  function _getOptionId( item ) {
+    return _name + '-' + item.value.trim().replace( /\s+/g, '-' ).toLowerCase();
   }
 
   this.init = init;

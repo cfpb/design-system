@@ -59,4 +59,29 @@ describe( 'Multiselect', function() {
     expect( longMultiSelectOption.isDisplayed() ).toBeTruthy();
   } );
 
+  it( 'should let the user remove a choice', function() {
+    multiselectInput.scrollIntoView();
+
+    // Verify option1 is selected by default
+    const multiSelectChoice = $( '.o-multiselect_choices label[for=test_select__multiple-option1]' );
+    expect( multiSelectChoice.isDisplayed() ).toBeTruthy();
+
+    // Verify option1 can be removed
+    multiSelectChoice.click();
+    expect( multiSelectChoice.isDisplayed() ).toBeFalsy();
+  } );
+
+  it( 'should let the user add a choice', function() {
+    multiselectInput.scrollIntoView();
+    multiselectInput.click();
+    // Ensure multiselect has fully expanded
+    browser.pause( 300 );
+
+    const secondMultiSelectOption = $( '.a-live_code .o-multiselect_options li[data-option=option2] label' );
+    secondMultiSelectOption.click();
+
+    const secondMultiSelectChoice = $( '.a-live_code .o-multiselect_choices label[for=test_select__multiple-option2]' );
+    expect( secondMultiSelectChoice.isDisplayed() ).toBeTruthy();
+  } );
+
 } );

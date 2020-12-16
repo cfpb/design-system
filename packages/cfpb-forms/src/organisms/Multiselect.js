@@ -477,9 +477,12 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @param {MouseEvent} event - The mouse click event object.
    */
   function _selectionClickHandler( event ) {
-    event.preventDefault();
-    event.target.removeEventListener( 'click', _selectionClickHandler );
-    event.target.querySelector('label').click();
+    const target = event.target;
+    if ( target.tagName === 'BUTTON' ) {
+      event.preventDefault();
+      target.removeEventListener( 'click', _selectionClickHandler );
+      target.querySelector('label').click();
+    }
   }
 
   /**

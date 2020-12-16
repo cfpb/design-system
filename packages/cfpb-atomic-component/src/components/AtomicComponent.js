@@ -10,10 +10,10 @@
 
    ========================================================================== */
 
+import { instantiateAll, setInitFlag } from '../utilities/atomic-helpers.js';
+import { assign } from '../utilities/object-assign.js';
 const Delegate = require( 'ftdomdelegate' ).Delegate;
 import EventObserver from '../mixins/EventObserver.js';
-import { assign } from '../utilities/object-assign.js';
-import { instantiateAll, setInitFlag } from '../utilities/atomic-helpers.js';
 import typeCheckers from '../utilities/type-checkers.js';
 
 const TAG_NAME = 'div';
@@ -42,6 +42,7 @@ assign( AtomicComponent.prototype, new EventObserver(), {
 
   /**
    * Run through and call the component's initializers.
+   * @returns {AtomicComponent} An instance.
    */
   init: function() {
     this.initializers.forEach( function( func ) {
@@ -294,7 +295,7 @@ function extend( attributes ) {
   child.constants = {};
 
   return child;
-};
+}
 
 /**
  * Function used to instantiate all instances of the particular
@@ -303,10 +304,10 @@ function extend( attributes ) {
  * @param {HTMLNode} scope - Where to search for components within.
  * @returns {Array} List of AtomicComponent instances.
  */
- function init( scope ) {
+function init( scope ) {
   const components = instantiateAll( this.selector, this, scope );
   return components;
-};
+}
 
 // Set public static methods.
 AtomicComponent.init = init;

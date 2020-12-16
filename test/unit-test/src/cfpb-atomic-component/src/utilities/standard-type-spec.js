@@ -1,9 +1,9 @@
 import {
   BEHAVIOR_PREFIX,
+  DIRECTIONS,
   JS_HOOK,
-  noopFunct,
   STATE_PREFIX,
-  DIRECTIONS
+  noopFunct
 } from '../../../../../../packages/cfpb-atomic-component/src/utilities/standard-type.js';
 
 describe( 'standard-type', () => {

@@ -167,10 +167,10 @@ function Multiselect( element ) { // eslint-disable-line max-statements
         'class': 'm-form-field m-form-field__checkbox'
       } );
 
-      const checkboxId = _name + '-' + option.value.trim().replace( /\s+/g, '-' ).toLowerCase();
+      option.id = _name + '-' + option.value.trim().replace( /\s+/g, '-' ).toLowerCase();
 
       MultiselectUtils.create( 'input', {
-        'id':      checkboxId,
+        'id':      option.id,
         // Type must come before value or IE fails
         'type':    'checkbox',
         'value':   option.value,
@@ -181,7 +181,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       } );
 
       MultiselectUtils.create( 'label', {
-        'for':         checkboxId,
+        'for':         option.id,
         'textContent': option.text,
         'className':   BASE_CLASS + '_label a-label',
         'inside':      _optionsItemDom
@@ -212,7 +212,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     } );
 
     const selectionsItemLabelDom = MultiselectUtils.create( 'button', {
-      innerHTML: '<label for=' + option.value + '>' + option.text + closeIcon + '</label>',
+      innerHTML: '<label for=' + option.id + '>' + option.text + closeIcon + '</label>',
       inside:    selectionsItemDom
     } );
 

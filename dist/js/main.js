@@ -5515,7 +5515,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     _options = _dom.options || [];
 
     if ( _options.length > 0 ) {
-      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_2__.default( _options ).init();
+      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_2__.default( _options, _name ).init();
       _optionsData = _model.getOptions();
       const newDom = _populateMarkup();
 
@@ -5607,10 +5607,8 @@ function Multiselect( element ) { // eslint-disable-line max-statements
         'class': 'm-form-field m-form-field__checkbox'
       } );
 
-      const checkboxId = _name + '-' + option.value.trim().replace( /\s+/g, '-' ).toLowerCase();
-
       _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'input', {
-        'id':      checkboxId,
+        'id':      option.id,
         // Type must come before value or IE fails
         'type':    'checkbox',
         'value':   option.value,
@@ -5621,7 +5619,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       } );
 
       _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'label', {
-        'for':         checkboxId,
+        'for':         option.id,
         'textContent': option.text,
         'className':   BASE_CLASS + '_label a-label',
         'inside':      _optionsItemDom
@@ -5652,7 +5650,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     } );
 
     const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'button', {
-      innerHTML: '<label for=' + option.value + '>' + option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default()) + '</label>',
+      innerHTML: '<label for=' + option.id + '>' + option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default()) + '</label>',
       inside:    selectionsItemDom
     } );
 
@@ -5988,9 +5986,11 @@ function stringMatch( x, y ) {
  * MultiselectModel
  * @param {HTMLOptionsCollection} options -
  *   Set of options from a <select> element.
+ * @param {string} name - a unique name for this multiselect.
  */
-function MultiselectModel( options ) {
+function MultiselectModel( options, name ) {
   const _options = options;
+  const _name = name;
   let _optionsData = [];
 
   let _selectedIndices = [];
@@ -6026,6 +6026,7 @@ function MultiselectModel( options ) {
       item = list[i];
       isChecked = item.defaultSelected;
       cleaned.push( {
+        id:      _getOptionId( item ),
         value:   item.value,
         text:    item.text,
         checked: isChecked
@@ -6145,6 +6146,15 @@ function MultiselectModel( options ) {
    */
   function getIndex() {
     return _index;
+  }
+
+  /**
+   * @param {HTMLNode} item - An option HTML node.
+   * @returns {string} A (hopefully) unique ID.
+   *   If it's not unique, we have a duplicate option value.
+   */
+  function _getOptionId( item ) {
+    return _name + '-' + item.value.trim().replace( /\s+/g, '-' ).toLowerCase();
   }
 
   this.init = init;

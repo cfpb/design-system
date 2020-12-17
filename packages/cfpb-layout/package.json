@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-layout",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "description": "Design System layouts",
   "less": "src/cfpb-layout.less",
   "style": "cfpb-layout.css",
@@ -8,8 +8,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/cfpb-core": "^0.7.0",
-    "@cfpb/cfpb-grid": "^0.7.0"
+    "@cfpb/cfpb-core": "^0.7.2",
+    "@cfpb/cfpb-grid": "^0.7.2"
   },
   "keywords": [
     "layout"

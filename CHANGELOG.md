@@ -1,4 +1,33 @@
 
+## v0.7.1 (2020-12-17)
+
+#### Enhancement
+* `cfpb-design-system`, `cfpb-forms`
+  * [#1125](https://github.com/cfpb/design-system/pull/1125) Multiselect: Remove list classes mashup ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-atomic-component`
+  * [#1131](https://github.com/cfpb/design-system/pull/1131) Update dom-traverse.js ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-design-system`, `cfpb-forms`
+  * [#1130](https://github.com/cfpb/design-system/pull/1130) Multiselect: Explicitly set button type ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-forms`
+  * [#1128](https://github.com/cfpb/design-system/pull/1128) Multiselect: Pass clicks of the selected item's button down to the label it contains ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1126](https://github.com/cfpb/design-system/pull/1126) Fix multiselect removal bug ([@contolini](https://github.com/contolini))
+  * [#1121](https://github.com/cfpb/design-system/pull/1121) Ensure correct multiselect input labels and IDs ([@chosak](https://github.com/chosak))
+* `cfpb-icons`
+  * [#1127](https://github.com/cfpb/design-system/pull/1127) Encode inline SVGs for IE11 support ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-atomic-component`
+  * [#1129](https://github.com/cfpb/design-system/pull/1129) Linter fixes ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Andy Chosak ([@chosak](https://github.com/chosak))
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Chris Contolini ([@contolini](https://github.com/contolini))
+
+
+
 
 ## v0.7.1 (2020-12-16)
 

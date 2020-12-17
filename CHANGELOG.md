@@ -1,10 +1,6 @@
-FetchError: invalid json response body at https://api.github.com/users/anselmbradford reason: Unexpected token < in JSON at position 0
-    at /Users/bradforda/Projects/design-system/node_modules/minipass-fetch/lib/body.js:77:31
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
 
 
-
-## Unreleased (2020-12-16)
+## v0.7.1 (2020-12-16)
 
 #### Enhancement
 * `cfpb-design-system`, `cfpb-forms`
@@ -29,7 +25,7 @@ FetchError: invalid json response body at https://api.github.com/users/anselmbra
 
 
 
-## Unreleased (2020-12-08)
+## v0.7.0 (2020-12-08)
 
 #### Breaking Change
 * `cfpb-atomic-component`, `cfpb-design-system`, `cfpb-forms`, `cfpb-tables`
@@ -57,7 +53,7 @@ FetchError: invalid json response body at https://api.github.com/users/anselmbra
 
 
 
-## Unreleased (2020-12-08)
+## v0.6.0 (2020-12-08)
 
 #### Breaking Change
 * `cfpb-atomic-component`, `cfpb-design-system`, `cfpb-forms`, `cfpb-tables`
@@ -85,7 +81,7 @@ FetchError: invalid json response body at https://api.github.com/users/anselmbra
 
 
 
-## Unreleased (2020-11-18)
+## v0.5.0 (2020-11-18)
 
 #### Breaking Change
 * `cfpb-core`, `cfpb-grid`
@@ -110,7 +106,7 @@ FetchError: invalid json response body at https://api.github.com/users/anselmbra
 
 
 
-## Unreleased (2020-10-28)
+## v0.4.0 (2020-10-28)
 
 #### :rocket: Enhancement
 * `cfpb-core`
@@ -126,7 +122,6 @@ FetchError: invalid json response body at https://api.github.com/users/anselmbra
 - Ans ([@anselmbradford](https://github.com/anselmbradford))
 - Sonna Kim ([@sonnakim](https://github.com/sonnakim))
 - [@huetingj](https://github.com/huetingj)
-
 
 
 ## v0.3.2 (2020-09-11)

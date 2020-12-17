@@ -13,11 +13,15 @@ function queryOne( expr, con ) {
 }
 
 /**
- * Get the nearest parent node of an element.
+ * Traverse the element and its parents (heading toward the document root)
+ * until a node is found that matches the provided selector string.
+ * Will return itself or the matching ancestor.
+ * If no such element exists, it returns null.
  *
  * @param {HTMLNode} elem - A DOM element.
  * @param {string} selector - CSS selector.
- * @returns {HTMLNode} Nearest parent node that matches the selector.
+ * @returns {HTMLNode} Element or nearest parent node that matches the selector.
+ *   Or null, if nothing is found.
  */
 function closest( elem, selector ) {
   if ( 'closest' in elem ) {

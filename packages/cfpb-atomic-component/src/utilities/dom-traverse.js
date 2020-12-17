@@ -20,20 +20,25 @@ function queryOne( expr, con ) {
  * @returns {HTMLNode} Nearest parent node that matches the selector.
  */
 function closest( elem, selector ) {
-  elem = elem.parentNode;
+  if ( 'closest' in elem ) {
+    return elem.closest( selector );
+  }
 
   const matchesSelector = _getMatchesMethod( elem );
-  let match;
 
   try {
-    while ( elem ) {
-      if ( matchesSelector.bind( elem )( selector ) ) {
-        match = elem;
+    let parent = elem;
+    let match;
+    while ( parent ) {
+      if ( matchesSelector.bind( parent )( selector ) ) {
+        match = parent;
       } else {
-        elem = elem.parentNode;
+        parent = parent.parentNode;
       }
 
-      if ( match ) { return elem; }
+      if ( match ) {
+        return parent;
+      }
     }
   } catch ( err ) {
     return null;
@@ -50,6 +55,7 @@ function closest( elem, selector ) {
  * @returns {Function} The appropriate matches() method of elem.
  */
 function _getMatchesMethod( elem ) {
+
   return elem.matches ||
          elem.webkitMatchesSelector ||
          elem.mozMatchesSelector ||

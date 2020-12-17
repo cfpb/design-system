@@ -15,32 +15,45 @@ function queryOne( expr, con ) {
 /**
  * Get the nearest parent node of an element.
  *
- * @param {HTMLNode} element - A DOM element.
+ * @param {HTMLNode} elem - A DOM element.
  * @param {string} selector - CSS selector.
  * @returns {HTMLNode} Nearest parent node that matches the selector.
  */
-function closest( element, selector ) {
-  if ( 'closest' in element ) {
-    return element.closest( selector );
-  }
+function closest( elem, selector ) {
+  elem = elem.parentNode;
 
-  const matchesSelector = element.matches ||
-                          element.webkitMatchesSelector ||
-                          element.mozMatchesSelector ||
-                          element.msMatchesSelector;
+  const matchesSelector = _getMatchesMethod( elem );
   let match;
 
-  while ( element ) {
-    if ( matchesSelector.bind( element )( selector ) ) {
-      match = element;
-    } else {
-      element = element.parentElement;
-    }
+  try {
+    while ( elem ) {
+      if ( matchesSelector.bind( elem )( selector ) ) {
+        match = elem;
+      } else {
+        elem = elem.parentNode;
+      }
 
-    if ( match ) { return element; }
+      if ( match ) { return elem; }
+    }
+  } catch ( err ) {
+    return null;
   }
 
   return null;
+}
+
+/**
+ * Search for support of the matches() method by looking at
+ * browser prefixes.
+ * @param {HTMLNode} elem
+ *   The element to check for support of matches() method.
+ * @returns {Function} The appropriate matches() method of elem.
+ */
+function _getMatchesMethod( elem ) {
+  return elem.matches ||
+         elem.webkitMatchesSelector ||
+         elem.mozMatchesSelector ||
+         elem.msMatchesSelector;
 }
 
 export {

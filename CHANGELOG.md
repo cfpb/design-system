@@ -1,5 +1,5 @@
 
-## v0.7.1 (2020-12-17)
+## v0.7.2 (2020-12-17)
 
 #### Enhancement
 * `cfpb-design-system`, `cfpb-forms`

@@ -13,34 +13,57 @@ function queryOne( expr, con ) {
 }
 
 /**
- * Get the nearest parent node of an element.
+ * Traverse the element and its parents (heading toward the document root)
+ * until a node is found that matches the provided selector string.
+ * Will return itself or the matching ancestor.
+ * If no such element exists, it returns null.
  *
- * @param {HTMLNode} element - A DOM element.
+ * @param {HTMLNode} elem - A DOM element.
  * @param {string} selector - CSS selector.
- * @returns {HTMLNode} Nearest parent node that matches the selector.
+ * @returns {HTMLNode} Element or nearest parent node that matches the selector.
+ *   Or null, if nothing is found.
  */
-function closest( element, selector ) {
-  if ( 'closest' in element ) {
-    return element.closest( selector );
+function closest( elem, selector ) {
+  if ( 'closest' in elem ) {
+    return elem.closest( selector );
   }
 
-  const matchesSelector = element.matches ||
-                          element.webkitMatchesSelector ||
-                          element.mozMatchesSelector ||
-                          element.msMatchesSelector;
-  let match;
+  const matchesSelector = _getMatchesMethod( elem );
 
-  while ( element ) {
-    if ( matchesSelector.bind( element )( selector ) ) {
-      match = element;
-    } else {
-      element = element.parentElement;
+  try {
+    let parent = elem;
+    let match;
+    while ( parent ) {
+      if ( matchesSelector.bind( parent )( selector ) ) {
+        match = parent;
+      } else {
+        parent = parent.parentNode;
+      }
+
+      if ( match ) {
+        return parent;
+      }
     }
-
-    if ( match ) { return element; }
+  } catch ( err ) {
+    return null;
   }
 
   return null;
+}
+
+/**
+ * Search for support of the matches() method by looking at
+ * browser prefixes.
+ * @param {HTMLNode} elem
+ *   The element to check for support of matches() method.
+ * @returns {Function} The appropriate matches() method of elem.
+ */
+function _getMatchesMethod( elem ) {
+
+  return elem.matches ||
+         elem.webkitMatchesSelector ||
+         elem.mozMatchesSelector ||
+         elem.msMatchesSelector;
 }
 
 export {

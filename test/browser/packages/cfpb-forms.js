@@ -63,7 +63,7 @@ describe( 'Multiselect', function() {
     multiselectInput.scrollIntoView();
 
     // Verify option1 is selected by default
-    const multiSelectChoice = $( '.o-multiselect_choices label[for=test_select__multiple-option1]' );
+    const multiSelectChoice = $( '.a-live_code .o-multiselect_choices li[data-option=option1] label' );
     expect( multiSelectChoice.isDisplayed() ).toBeTruthy();
 
     // Verify option1 can be removed
@@ -80,7 +80,7 @@ describe( 'Multiselect', function() {
     const secondMultiSelectOption = $( '.a-live_code .o-multiselect_options li[data-option=option2] label' );
     secondMultiSelectOption.click();
 
-    const secondMultiSelectChoice = $( '.a-live_code .o-multiselect_choices label[for=test_select__multiple-option2]' );
+    const secondMultiSelectChoice = $( '.a-live_code .o-multiselect_choices li[data-option=option2] label' );
     expect( secondMultiSelectChoice.isDisplayed() ).toBeTruthy();
   } );
 

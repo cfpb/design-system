@@ -5,6 +5,7 @@ import MultiselectModel from './MultiselectModel.js';
 import MultiselectUtils from './MultiselectUtils.js';
 
 import closeIcon from '@cfpb/cfpb-icons/src/icons/close.svg';
+import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js';
 
 const BASE_CLASS = 'o-multiselect';
 
@@ -170,19 +171,21 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       MultiselectUtils.create( 'input', {
         'id':      option.id,
         // Type must come before value or IE fails
-        'type':    'checkbox',
-        'value':   option.value,
-        'name':    _name,
-        'class':   CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
-        'inside':  _optionsItemDom,
-        'checked': option.checked
+        'type':            'checkbox',
+        'value':           option.value,
+        'name':            _name,
+        'class':           CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
+        'inside':          _optionsItemDom,
+        'checked':         option.checked,
+        'aria-labelledby': option.id + '-label'
       } );
 
       MultiselectUtils.create( 'label', {
         'for':         option.id,
         'textContent': option.text,
         'className':   BASE_CLASS + '_label a-label',
-        'inside':      _optionsItemDom
+        'inside':      _optionsItemDom,
+        'id':          option.id + '-label'
       } );
 
       _optionItemDoms.push( _optionsItemDom );
@@ -211,7 +214,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
     const selectionsItemLabelDom = MultiselectUtils.create( 'button', {
       type: 'button',
-      innerHTML: '<label for=' + option.id + '>' +
+      innerHTML: '<label id="' + option.id + '-selected">' +
                  option.text + closeIcon + '</label>',
       inside: selectionsItemDom
     } );
@@ -278,9 +281,11 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
         if ( typeof _selectionsItemDom !== 'undefined' ) {
           _selectionsDom.removeChild( _selectionsItemDom );
+          _optionsDom.querySelector( '#' + option.id ).setAttribute( 'aria-labelledby', option.id + '-label' );
         }
       } else {
         _createSelectedItem( _selectionsDom, option );
+        _optionsDom.querySelector( '#' + option.id ).setAttribute( 'aria-labelledby', option.id + '-label ' + option.id + '-selected' );
       }
       _model.toggleOption( optionIndex );
 
@@ -472,19 +477,19 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   }
 
   /**
-   * This passes the click of the selected item button down to the label it
-   * contains. This is only required for browsers (IE11) that prevent the
-   * click of a selected item from cascading from the button down to the label
-   * it contains.
+   * This passes the click of the selected item button to the label next
+   * to the appropriate checkbox. We are unable to have multiple labels
+   * with `for` attributes because it's a WCAG violation so instead we're
+   * manually connecting the selected option buttons to the checkboxes.
    * @param {MouseEvent} event - The mouse click event object.
    */
   function _selectionClickHandler( event ) {
     const target = event.target;
-    if ( target.tagName === 'BUTTON' ) {
-      event.preventDefault();
-      target.removeEventListener( 'click', _selectionClickHandler );
-      target.querySelector( 'label' ).click();
-    }
+    event.preventDefault();
+    const button = closest( target, 'button' );
+    button.removeEventListener( 'click', _selectionClickHandler );
+    const inputLabelId = button.querySelector( 'label' ).id.replace( '-selected', '-label' );
+    _optionsDom.querySelector( '#' + inputLabelId ).click();
   }
 
   /**
@@ -494,8 +499,8 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     if ( event.keyCode === KEY_SPACE ||
          event.keyCode === KEY_RETURN ) {
       const label = event.target.querySelector( 'label' );
-      const checkbox = _optionsDom.querySelector( '#' + label.getAttribute( 'for' ) );
-      checkbox.click();
+      const inputLabelId = label.id.replace( '-selected', '-label' );
+      _optionsDom.querySelector( '#' + inputLabelId ).click();
     }
   }
 

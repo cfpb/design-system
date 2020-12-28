@@ -57,7 +57,6 @@
   "dependencies": {
     "anchor-js": "4.3.0",
     "core-js": "3.8.1",
-    "escape-html": "^1.0.3",
     "ftdomdelegate": "4.0.6",
     "govuk-frontend": "3.10.2",
     "html-entities": "^1.4.0",
@@ -79,6 +78,7 @@
     "@babel/plugin-syntax-export-extensions": "^7.0.0-beta.32",
     "@babel/preset-env": "7.12.11",
     "@babel/preset-react": "7.12.10",
+    "escape-html": "^1.0.3",
     "@lhci/cli": "0.6.1",
     "@wdio/cli": "6.10.11",
     "@wdio/local-runner": "6.10.13",

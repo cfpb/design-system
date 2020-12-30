@@ -10,7 +10,15 @@ variation_groups:
   - variations:
       - variation_name: Move transition
         variation_description: A transition that moves from one position to another.
-        variation_code_snippet: <div class="u-move-transition example-box">Click me!</div>
+        variation_code_snippet: >-
+            <div class="u-move-transition example-box">Click me!</div>
+            <script>
+                const moveTransitionExample = document.querySelector( '.example-box.u-move-transition' );
+                const moveTransition = new MoveTransition( moveTransitionExample ).init();
+                moveTransitionExample.addEventListener( 'click', () => {
+                    moveTransition.moveRight();
+                } );
+            </script>
         variation_implementation: >-
           The move transition is added to an element by creating a new
           MoveTransition instance in JavaScript and calling its methods:

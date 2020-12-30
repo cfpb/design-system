@@ -43,6 +43,9 @@ if ( moveTransitionExample !== null ) {
   const moveTransition = new MoveTransition( moveTransitionExample ).init();
   moveTransitionExample.addEventListener( 'click', () => {
     moveTransition.moveRight();
+    setTimeout( () => {
+      moveTransition.moveToOrigin();
+    }, 2000 );
   } );
 }
 

@@ -4,6 +4,7 @@ import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.
 
 // Exported constants.
 const CLASSES = {
+  CSS_PROPERTY: 'max-height',
   BASE_CLASS:   'o-expandable_content__transition',
   EXPANDED:     'o-expandable_content__expanded',
   COLLAPSED:    'o-expandable_content__collapsed',

@@ -1,9 +1,10 @@
 // Required modules.
 import BaseTransition from './BaseTransition.js';
-import EventObserver from '../../mixins/EventObserver.js';
+import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 
 // Exported constants.
 const CLASSES = {
+  CSS_PROPERTY:   'transform',
   BASE_CLASS:     'u-move-transition',
   MOVE_TO_ORIGIN: 'u-move-to-origin',
   MOVE_LEFT:      'u-move-left',
@@ -13,7 +14,6 @@ const CLASSES = {
   MOVE_UP:        'u-move-up'
 };
 
-/* eslint-disable max-lines-per-function */
 /**
  * MoveTransition
  * @class
@@ -122,7 +122,6 @@ function MoveTransition( element ) {
 
   return this;
 }
-/* eslint-enable max-lines-per-function */
 
 // Public static properties.
 MoveTransition.CLASSES = CLASSES;

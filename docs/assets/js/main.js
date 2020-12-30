@@ -5,6 +5,8 @@ import {
 import AnchorJS from 'anchor-js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
 import Multiselect from '@cfpb/cfpb-forms/src/organisms/Multiselect';
+import AlphaTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js';
+import MoveTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
 import Table from '@cfpb/cfpb-tables/src/Table';
 import { Tabs } from 'govuk-frontend';
 import redirectBanner from './redirect-banner.js';
@@ -34,6 +36,23 @@ if ( multiselectDom ) {
 
 Expandable.init();
 Table.init();
+
+// Transition example code.
+const moveTransitionExample = document.querySelector( '.example-box.u-move-transition' );
+if ( moveTransitionExample !== null ) {
+  const moveTransition = new MoveTransition( moveTransitionExample ).init();
+  moveTransitionExample.addEventListener( 'click', () => {
+    moveTransition.moveRight();
+  } );
+}
+
+const alphaTransitionExample = document.querySelector( '.example-box.u-alpha-transition' );
+if ( alphaTransitionExample !== null ) {
+  const alphaTransition = new AlphaTransition( alphaTransitionExample ).init();
+  alphaTransitionExample.addEventListener( 'click', () => {
+    alphaTransition.fadeOut();
+  } );
+}
 
 const main = document.querySelector( '#main' );
 const tabs = document.querySelectorAll( '[data-module="tabs"]' );

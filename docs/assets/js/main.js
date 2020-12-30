@@ -51,6 +51,9 @@ if ( alphaTransitionExample !== null ) {
   const alphaTransition = new AlphaTransition( alphaTransitionExample ).init();
   alphaTransitionExample.addEventListener( 'click', () => {
     alphaTransition.fadeOut();
+    setTimeout( () => {
+      alphaTransition.fadeIn();
+    }, 2000 );
   } );
 }
 

@@ -37,28 +37,10 @@ if ( multiselectDom ) {
 Expandable.init();
 Table.init();
 
-// Transition example code.
-const moveTransitionExample = document.querySelector( '.example-box.u-move-transition' );
-if ( moveTransitionExample !== null ) {
-  const moveTransition = new MoveTransition( moveTransitionExample ).init();
-  moveTransitionExample.addEventListener( 'click', () => {
-    moveTransition.moveRight();
-    setTimeout( () => {
-      moveTransition.moveToOrigin();
-    }, 2000 );
-  } );
-}
-
-const alphaTransitionExample = document.querySelector( '.example-box.u-alpha-transition' );
-if ( alphaTransitionExample !== null ) {
-  const alphaTransition = new AlphaTransition( alphaTransitionExample ).init();
-  alphaTransitionExample.addEventListener( 'click', () => {
-    alphaTransition.fadeOut();
-    setTimeout( () => {
-      alphaTransition.fadeIn();
-    }, 2000 );
-  } );
-}
+// Exporting these classes to the window so that the transition-patterns.md
+// page can use them in its code snippets.
+window.AlphaTransition = AlphaTransition;
+window.MoveTransition = MoveTransition;
 
 const main = document.querySelector( '#main' );
 const tabs = document.querySelectorAll( '[data-module="tabs"]' );

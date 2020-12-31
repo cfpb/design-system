@@ -189,6 +189,11 @@ collections:
                 label: 'Variation code snippet'
                 widget: 'text'
                 required: false
+              - name: 'variation_code_snippet_rendered'
+                label: 'Variation code snippet rendered'
+                hint: 'This code snippet is optional and will be rendered in place of the above code snippet. Use it if you want to secretly include some JS in order to get the snippet to properly render.'
+                widget: 'text'
+                required: false
               - name: 'variation_jinja_code_snippet'
                 label: 'Variation Jinja links or snippet'
                 hint: 'Use this field to add links to Jinja2 templates in cfgov-refresh.'

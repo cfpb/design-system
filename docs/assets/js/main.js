@@ -5,6 +5,8 @@ import {
 import AnchorJS from 'anchor-js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
 import Multiselect from '@cfpb/cfpb-forms/src/organisms/Multiselect';
+import AlphaTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js';
+import MoveTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
 import Table from '@cfpb/cfpb-tables/src/Table';
 import { Tabs } from 'govuk-frontend';
 import redirectBanner from './redirect-banner.js';
@@ -34,6 +36,11 @@ if ( multiselectDom ) {
 
 Expandable.init();
 Table.init();
+
+// Exporting these classes to the window so that the transition-patterns.md
+// page can use them in its code snippets.
+window.AlphaTransition = AlphaTransition;
+window.MoveTransition = MoveTransition;
 
 const main = document.querySelector( '#main' );
 const tabs = document.querySelectorAll( '[data-module="tabs"]' );

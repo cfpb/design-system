@@ -85,6 +85,9 @@
             {% assign variation_name = variation.variation_name | strip %}
             {% assign variation_description = variation.variation_description | strip | markdownify %}
             {% assign variation_code_snippet = variation.variation_code_snippet %}
+            {% if variation.variation_code_snippet_rendered and variation.variation_code_snippet_rendered != '' %}
+                {% assign variation_code_snippet = variation.variation_code_snippet_rendered %}
+            {% endif %}
 
             {% if variation_name and variation_name != '' %}
             <div class="m-variation_name">

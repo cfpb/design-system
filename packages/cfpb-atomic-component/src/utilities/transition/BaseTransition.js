@@ -1,7 +1,7 @@
 // Required modules.
-import EventObserver from '../../mixins/EventObserver.js';
+import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 
-/* eslint-disable max-lines-per-function, max-statements */
+// eslint-disable-next-line max-statements
 /**
  * BaseTransition
  * @class
@@ -26,6 +26,15 @@ function BaseTransition( element, classes ) {
   let _addEventListenerBinded;
   let _isAnimating = false;
   let _isFlushed = false;
+
+  // Make sure required attributes are passed in.
+  if ( typeof _classes.CSS_PROPERTY === 'undefined' ||
+       typeof _classes.BASE_CLASS === 'undefined' ) {
+    throw new Error(
+      'Transitions require CSS_PROPERTY and BASE_CLASS ' +
+      'to be passed into BaseTransition.'
+    );
+  }
 
   /**
    * @returns {BaseTransition} An instance.
@@ -112,6 +121,7 @@ function BaseTransition( element, classes ) {
    * complete handler immediately if transition not supported.
    */
   function _addEventListener() {
+    _dom.classList.add( BaseTransition.ANIMATING_CLASS );
     _isAnimating = true;
     // If transition is not supported, call handler directly (IE9/OperaMini).
     if ( _transitionEndEvent ) {
@@ -135,15 +145,22 @@ function BaseTransition( element, classes ) {
 
   /**
    * Handle the end of a transition.
+   * @param {TransitionEvent} evt - Transition event object.
+   * @returns {boolean} True if transition was cleaned up,
+   *   false if an outside transitioning property triggered this event handler.
    */
-  function _transitionComplete() {
+  function _transitionComplete( evt ) {
+    if ( evt && evt.propertyName !== _classes.CSS_PROPERTY ) {
+      return false;
+    }
+
     _removeEventListener();
+    _dom.classList.remove( BaseTransition.ANIMATING_CLASS );
     this.dispatchEvent( BaseTransition.END_EVENT, { target: this } );
     _isAnimating = false;
+    return true;
   }
 
-  // TODO Fix complexity issue
-  /* eslint-disable complexity */
   /**
    * Search for and remove initial BaseTransition classes that have
    * already been applied to this BaseTransition's target element.
@@ -158,7 +175,6 @@ function BaseTransition( element, classes ) {
       }
     }
   }
-  /* eslint-enable complexity */
 
   /**
    * Remove all transition classes, if transition is initialized.
@@ -202,8 +218,6 @@ function BaseTransition( element, classes ) {
     return true;
   }
 
-  // TODO Fix complexity issue
-  /* eslint-disable complexity */
   /**
    * @param {HTMLNode} elem
    *   The element to check for support of transition end event.
@@ -223,17 +237,16 @@ function BaseTransition( element, classes ) {
       transition:       'transitionend'
     };
 
-    let transitionEnd;
-    for ( transitionEnd in transitions ) {
-      if ( transitions.hasOwnProperty( transitionEnd ) &&
-           typeof elem.style[transitionEnd] !== 'undefined' ) {
-        transition = transitions[transitionEnd];
+    let transitionEvent;
+    for ( transitionEvent in transitions ) {
+      if ( transitions.hasOwnProperty( transitionEvent ) &&
+           typeof elem.style[transitionEvent] !== 'undefined' ) {
+        transition = transitions[transitionEvent];
         break;
       }
     }
     return transition;
   }
-  /* eslint-enable complexity */
 
   // Attach public events.
   const eventObserver = new EventObserver();
@@ -252,11 +265,11 @@ function BaseTransition( element, classes ) {
 
   return this;
 }
-/* eslint-enable max-lines-per-function, max-statements */
 
 // Public static constants.
 BaseTransition.BEGIN_EVENT = 'transitionBegin';
 BaseTransition.END_EVENT = 'transitionEnd';
 BaseTransition.NO_ANIMATION_CLASS = 'u-no-animation';
+BaseTransition.ANIMATING_CLASS = 'u-is-animating';
 
 export default BaseTransition;

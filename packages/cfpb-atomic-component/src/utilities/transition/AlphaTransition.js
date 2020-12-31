@@ -1,12 +1,13 @@
 // Required modules.
 import BaseTransition from './BaseTransition.js';
-import EventObserver from '../../mixins/EventObserver.js';
+import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 
 // Exported constants.
 const CLASSES = {
-  BASE_CLASS: 'u-alpha-transition',
-  ALPHA_100:  'u-alpha-100',
-  ALPHA_0:    'u-alpha-0'
+  CSS_PROPERTY: 'opacity',
+  BASE_CLASS:   'u-alpha-transition',
+  ALPHA_100:    'u-alpha-100',
+  ALPHA_0:      'u-alpha-0'
 };
 
 /**

@@ -1,4 +1,15 @@
 
+## Unreleased (2020-12-31)
+
+#### Breaking Change
+* `cfpb-atomic-component`, `cfpb-expandables`
+  * [#1134](https://github.com/cfpb/design-system/pull/1134) Update transitions and add transitions page to DS ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.7.2 (2020-12-17)
 
 #### Enhancement

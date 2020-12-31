@@ -144,6 +144,24 @@ main {
     }
 } );
 
+// Example shapes - for transition examples.
+
+.example-box {
+    width: 100px;
+    height: 100px;
+    background-color: @red;
+    text-align: center;
+    vertical-align: middle;
+    color: @white;
+    display: table-cell;
+    cursor: pointer;
+
+    &.u-is-animating {
+        outline: 5px solid @gray-40;
+    }
+}
+
+
 
 // custom modules
 @import (less) "sidebar.less";

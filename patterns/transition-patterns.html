@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Wells - CFPB Design System</title>
+  <title>Transition patterns - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -276,7 +276,7 @@
         <section>
 
     <h1 class="component-header u-mb30">
-        Wells
+        Transition patterns
     </h1>
 
     
@@ -290,23 +290,7 @@
     <ul class="m-list m-list__horizontal m-list__horizontal-spaced">
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#standard-well">Standard well</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#use-cases">Use cases</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#guidelines">Guidelines</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#behavior">Behavior</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#related-items">Related items</a>
+            <a class="m-list_link" href="#types">Types</a>
         </li>
         
     </ul>
@@ -314,21 +298,26 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Wells are used to highlight specific information within a designated section of a page. This breaks up the flow of content on the page and helps to emphasize and set apart the content that is included. They are generally used on <a href="https://cfpb.github.io/design-system/pages/browse-pages">browse</a>, <a href="https://cfpb.github.io/design-system/pages/learn-pages">learn</a>, and <a href="https://cfpb.github.io/design-system/pages/document-detail-pages">document detail pages</a>.</p>
+        <p>Transition patterns are animations that happen when a user interacts with an element on the page. They are CSS transition styles that are controlled via JavaScript.</p>
 
     </section>
     
 
     
     
-    <section class="o-variation_group" id="standard-well">
+    <section class="o-variation_group" id="types">
 
         
         <h2 class="o-variation_group_title">
-            Standard well
+            Types
         </h2>
         
 
+        
+        <div class="o-variation_group_description">
+            
+
+        </div>
         
 
         
@@ -340,10 +329,14 @@
             
 
             
+            <div class="m-variation_name">
+                <h3>Move transition</h3>
+            </div>
+            
 
             
             <div class="m-variation_description">
-                
+                <p>A transition that moves from one position to another.</p>
 
             </div>
             
@@ -351,14 +344,18 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <div class="o-well">
-    <p class="h4">Well title</p>
-    <p>
-        Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-        instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
-        cu.
-    </p>
-</div>
+                <div class="u-move-transition example-box">Click me!</div> <script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    const moveTransitionExample = document.querySelector( '.example-box.u-move-transition' );
+    const moveTransition = new MoveTransition( moveTransitionExample ).init();
+    moveTransitionExample.addEventListener( 'click', function() {
+      moveTransition.moveRight();
+      setTimeout( function() {
+        moveTransition.moveToOrigin();
+      }, 1000 );
+    } );
+  } );
+</script>
             </div>
             
 
@@ -370,44 +367,47 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-div-class-o-well-p-class-h4-well-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-div-class-o-well-p-class-h4-well-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-move-transition-a-transition-tha-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-move-transition-a-transition-tha-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-div-class-o-well-p-class-h4-well-1">
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-move-transition-a-transition-tha-1">
                 <ul class="govuk-tabs__list">
                     
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                        <a class="govuk-tabs__tab" href="#details-div-class-o-well-p-class-h4-well-html-code-snippet-1">
+                        <a class="govuk-tabs__tab" href="#details-move-transition-a-transition-tha-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
                     
                     
                     
-                    
                     <li class="govuk-tabs__list-item">
-                        <a class="govuk-tabs__tab" href="#details-div-class-o-well-p-class-h4-well-specs-1">
-                            Specs
+                        <a class="govuk-tabs__tab" href="#details-move-transition-a-transition-tha-implementation-1">
+                            Implementation
                         </a>
                     </li>
+                    
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="govuk-tabs__panel" id="details-div-class-o-well-p-class-h4-well-html-code-snippet-1">
+                <section class="govuk-tabs__panel" id="details-move-transition-a-transition-tha-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="o-well"&gt;
-    &lt;p class="h4"&gt;Well title&lt;/p&gt;
-    &lt;p&gt;
-        Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-        instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
-        cu.
-    &lt;/p&gt;
-&lt;/div&gt;</code></pre>
+                            <pre><code class="language-html">&lt;div class="u-move-transition example-box"&gt;Click me!&lt;/div&gt;
+&lt;script&gt;
+  const moveTransitionExample = document.querySelector( '.example-box.u-move-transition' );
+  const moveTransition = new MoveTransition( moveTransitionExample ).init();
+  moveTransitionExample.addEventListener( 'click', () =&gt; {
+      moveTransition.moveRight();
+      setTimeout( () =&gt; {
+        moveTransition.moveToOrigin();
+      }, 1000 );
+  } );
+&lt;/script&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -418,28 +418,161 @@
 
                 <!-- Implementation details -->
                 
-
-                <!-- Specs -->
-                
-                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-div-class-o-well-p-class-h4-well-specs-1">
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-move-transition-a-transition-tha-implementation-1">
                     <div>
-                        <h4 class="variation-specs-title">Specs</h4>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
-                            <ul>
-  <li>Padding at breakpoints 601+: 30 (top), 30 (right) 60 (bottom), 30 (left)</li>
-  <li>Padding at breakpoints 600 and below: 30 (top), 15 (right), 60 (bottom), 15 (left)</li>
-  <li>Background color: 5% grey (#F7F7F7)</li>
-  <li>Border: 1px 50% grey (#BABBBD)</li>
-  <li>
-    <p>Single column content only.</p>
+                            <p>The move transition is added to an element by creating a new MoveTransition instance in JavaScript and calling its methods:</p>
 
-    <p><img src="/design-system/images/uploads/wells_style_mockup.png" alt="Schematic of well showing padding "></p>
-  </li>
-</ul>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Create reference to an element in the DOM.
+const element = document.querySelector( '.example-box' );
+
+// Create a new transition instance and pass in the element reference.
+const transition = new MoveTransition( element );
+
+// Initialize the transition.
+transition.init();
+
+// Call methods on the transition.
+transition.moveRight();
+</code></pre></div></div>
 
                         </div>
                     </div>
                 </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>Alpha transition</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>A transition that fades from one opacity to another.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="u-alpha-transition example-box">Click me!</div> <script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    const alphaTransitionExample = document.querySelector( '.example-box.u-alpha-transition' );
+    const alphaTransition = new AlphaTransition( alphaTransitionExample ).init();
+    alphaTransitionExample.addEventListener( 'click', function() {
+      alphaTransition.fadeOut();
+      setTimeout( function() {
+        alphaTransition.fadeIn();
+      }, 1000 );
+    } );
+  } );
+</script>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-alpha-transition-a-transition-th-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-alpha-transition-a-transition-th-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-alpha-transition-a-transition-th-2">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-alpha-transition-a-transition-th-html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-alpha-transition-a-transition-th-implementation-2">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-alpha-transition-a-transition-th-html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="u-alpha-transition example-box"&gt;Click me!&lt;/div&gt;
+&lt;script&gt;
+  const alphaTransitionExample = document.querySelector( '.example-box.u-alpha-transition' );
+  const alphaTransition = new AlphaTransition( alphaTransitionExample ).init();
+  alphaTransitionExample.addEventListener( 'click', () =&gt; {
+    alphaTransition.fadeOut();
+    setTimeout( () =&gt; {
+      alphaTransition.fadeIn();
+    }, 1000 );
+  } );
+&lt;/script&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-alpha-transition-a-transition-th-implementation-2">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>The alpha (opacity) transition is added to an element by creating a new AlphaTransition instance in JavaScript and calling its methods:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Create reference to an element in the DOM.
+const element = document.querySelector( '.example-box' );
+
+// Create a new transition instance and pass in the element reference.
+const transition = new AlphaTransition( element );
+
+// Initialize the transition.
+transition.init();
+
+// Call methods on the transition.
+transition.fadeOut();
+</code></pre></div></div>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
                 
 
             </div>
@@ -454,85 +587,12 @@
 
     
     
-        <section class="sticky-header u-mb45">
-
-            
-                <h2 id="use-cases">Use cases</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<p>Grey wells should be used to feature content or specific calls to action. They  will help visually set apart the content within it, so use sparingly to draw attention to that content.</p>
-
-<p>Ideally, content within a well should not take up more than a third of page content.</p>
-
-                
-            
-
-            
-                <h2 id="guidelines">Guidelines</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<p>Wells should generally be text-based. If content must include imagery or videos, use the <a href="/design-system/patterns/featured-content-module">featured content module</a> instead. Examples of types of content to include:</p>
-
-<ul>
-  <li>Headings (H2 - H5). Headings should be as succinct as possible and 35 characters or less (including spaces)</li>
-  <li>Text (including bullets and numbered lists). Text should be succinct.</li>
-  <li>Links</li>
-</ul>
-
-                
-            
-
-            
-                <h2 id="behavior">Behavior</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<p>Wells are full width. Note that at breakpoints 600 and under there are slight padding adjustments to maximize real estate on smaller displays.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Above 900 px, with right sidebar</th>
-      <th>Above 900 px, with left nav</th>
-      <th>Below 901 px, both page types</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img src="/design-system/images/uploads/wells_behavior_mockup_1.png" alt=""></td>
-      <td><img src="/design-system/images/uploads/wells_behavior_mockup_2.png" alt=""></td>
-      <td><img src="/design-system/images/uploads/wells_behavior_mockup_3.png" alt=""></td>
-    </tr>
-  </tbody>
-</table>
-
-                
-            
-
-            
-        </section>
-    
 
     
 
     
 
     <div class="content-l u-mb45">
-        
-        <div class="content-l_col content-l_col-1-2">
-            <div>
-                <section>
-                    <h2 id="related-items">Related Items</h2>
-                    <div class="content_line__wide content_line content_line u-mb20"></div>
-                    <ul>
-  <li><a href="/design-system/patterns/featured-content-module">Featured content module</a></li>
-</ul>
-
-                </section>
-            </div>
-        </div>
         
     </div>
 <!-- .content-l -->
@@ -553,7 +613,7 @@
         
 
         <div class="o-editor_link" id="edit-page">
-            <a class="a-btn" href="/design-system/updating-this-website?page=Wells" title="Edit this page in Netlify CMS">
+            <a class="a-btn" href="/design-system/updating-this-website?page=Transition+patterns" title="Edit this page in Netlify CMS">
                 <span class="a-btn_text">Edit page</span>
                 <span class="a-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 833.4 1200" class="cf-icon-svg"><path d="M233 203.1c-27.2-27.2-71.8-27.2-99 0L20.4 316.7c-27.2 27.2-27.2 71.8 0 99l89.7 89.7 212.7-212.7-89.8-89.6zM832.6 992.7l-48.6-216c-3.4-15.3-14.9-36.5-26-48.6l-1.8-1.8-121.8-121.9-110.6-110.6-165.7-165.7-54.8 54.8 400 400 21.4-21.4c5.3 6.4 11.9 18.9 13.5 25.6l21.4 95.2-60 60-95.2-21.4c-6.7-1.5-19.2-8.2-25.6-13.5l89.2-89.2-400-400-122.6 122.6 165.7 165.7 110.6 110.6 121.8 121.8 1.8 1.8c12.1 11.1 33.3 22.6 48.6 26l215.9 48.6c2.2.5 4.3.7 6.2.7 12.6.1 19.8-9.4 16.6-23.3z"></path></svg></span>
             </a>
@@ -575,7 +635,7 @@
                 If you see something wrong or missing,
                 <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
                 If you can’t make those changes yourself,
-                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Wells%3A+Add+issue+description">file an issue</a>.
+                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Transition%20patterns%3A+Add+issue+description">file an issue</a>.
                 If you have a substantial change to an existing page, or a new standard you want to add,
                 <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
             </small>
@@ -588,9 +648,9 @@
                 
                 
                 
-                <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/wells.md">
-                    <time datetime="2020-09-18 13:35:04 -0400">
-                         1:35:04 PM Sep 18, 2020
+                <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/transition-patterns.md">
+                    <time datetime="2020-12-31 13:15:47 -0500">
+                         1:15:47 PM Dec 31, 2020
                     </time>
                 </a>
             </small>

@@ -377,11 +377,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(anchor_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Expandable */ "./packages/cfpb-expandables/src/Expandable.js");
 /* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
-/* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table */ "./packages/cfpb-tables/src/Table.js");
-/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! govuk-frontend */ "./node_modules/govuk-frontend/govuk/all.js");
-/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(govuk_frontend__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
-/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
+/* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table */ "./packages/cfpb-tables/src/Table.js");
+/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! govuk-frontend */ "./node_modules/govuk-frontend/govuk/all.js");
+/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(govuk_frontend__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
+/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
 
 
 
@@ -390,8 +392,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_redirect_banner_js__WEBPACK_IMPORTED_MODULE_6__.default.init();
-_sidebar_js__WEBPACK_IMPORTED_MODULE_7__.default.init();
+
+
+_redirect_banner_js__WEBPACK_IMPORTED_MODULE_8__.default.init();
+_sidebar_js__WEBPACK_IMPORTED_MODULE_9__.default.init();
 var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())(); // Add anchors to all headings (except page title headings)
 
 anchors.add('h2:not(.title), h3, h4, h5'); // Ensure there are no anchors in inconvenient places
@@ -405,7 +409,11 @@ if (multiselectDom) {
 }
 
 _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__.default.init();
-_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_4__.default.init();
+_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_6__.default.init(); // Exporting these classes to the window so that the transition-patterns.md
+// page can use them in its code snippets.
+
+window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__.default;
+window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__.default;
 var main = document.querySelector('#main');
 var tabs = document.querySelectorAll('[data-module="tabs"]');
 
@@ -414,7 +422,7 @@ if (tabs && tabs.length > 0) {
 
   for (var i = 0; i < tabs.length; i++) {
     var tab = tabs[i];
-    new govuk_frontend__WEBPACK_IMPORTED_MODULE_5__.Tabs(tab).init();
+    new govuk_frontend__WEBPACK_IMPORTED_MODULE_7__.Tabs(tab).init();
   }
 }
 
@@ -4686,6 +4694,110 @@ const DIRECTIONS = {
 
 /***/ }),
 
+/***/ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js":
+/*!************************************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js ***!
+  \************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+// Required modules.
+
+
+
+// Exported constants.
+const CLASSES = {
+  CSS_PROPERTY: 'opacity',
+  BASE_CLASS:   'u-alpha-transition',
+  ALPHA_100:    'u-alpha-100',
+  ALPHA_0:      'u-alpha-0'
+};
+
+/**
+ * AlphaTransition
+ * @class
+ *
+ * @classdesc Initializes new AlphaTransition behavior.
+ *
+ * @param {HTMLNode} element
+ *   DOM element to apply opacity transition to.
+ * @returns {AlphaTransition} An instance.
+ */
+function AlphaTransition( element ) {
+
+  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default( element, CLASSES );
+
+  /**
+   * @returns {AlphaTransition} An instance.
+   */
+  function init() {
+    _baseTransition.init();
+    const _transitionCompleteBinded = _transitionComplete.bind( this );
+    _baseTransition.addEventListener(
+      _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT,
+      _transitionCompleteBinded
+    );
+    return this;
+  }
+
+  /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    this.dispatchEvent( _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT, { target: this } );
+  }
+
+  /**
+   * Fade to 100% by applying a utility alpha class.
+   * @returns {AlphaTransition} An instance.
+   */
+  function fadeIn() {
+    _baseTransition.applyClass( CLASSES.ALPHA_100 );
+
+    return this;
+  }
+
+  /**
+   * Fade to nothing by applying a utility alpha class.
+   * @returns {AlphaTransition} An instance.
+   */
+  function fadeOut() {
+    _baseTransition.applyClass( CLASSES.ALPHA_0 );
+
+    return this;
+  }
+
+  // Attach public events.
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
+  this.addEventListener = eventObserver.addEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+  this.removeEventListener = eventObserver.removeEventListener;
+
+  this.animateOff = _baseTransition.animateOff;
+  this.animateOn = _baseTransition.animateOn;
+  this.halt = _baseTransition.halt;
+  this.isAnimated = _baseTransition.isAnimated;
+  this.remove = _baseTransition.remove;
+  this.setElement = _baseTransition.setElement;
+
+  this.fadeIn = fadeIn;
+  this.fadeOut = fadeOut;
+  this.init = init;
+
+  return this;
+}
+
+// Public static properties.
+AlphaTransition.CLASSES = CLASSES;
+
+/* harmony default export */ __webpack_exports__["default"] = (AlphaTransition);
+
+
+/***/ }),
+
 /***/ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js":
 /*!***********************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js ***!
@@ -4694,11 +4806,11 @@ const DIRECTIONS = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 // Required modules.
 
 
-/* eslint-disable max-lines-per-function, max-statements */
+// eslint-disable-next-line max-statements
 /**
  * BaseTransition
  * @class
@@ -4723,6 +4835,15 @@ function BaseTransition( element, classes ) {
   let _addEventListenerBinded;
   let _isAnimating = false;
   let _isFlushed = false;
+
+  // Make sure required attributes are passed in.
+  if ( typeof _classes.CSS_PROPERTY === 'undefined' ||
+       typeof _classes.BASE_CLASS === 'undefined' ) {
+    throw new Error(
+      'Transitions require CSS_PROPERTY and BASE_CLASS ' +
+      'to be passed into BaseTransition.'
+    );
+  }
 
   /**
    * @returns {BaseTransition} An instance.
@@ -4809,6 +4930,7 @@ function BaseTransition( element, classes ) {
    * complete handler immediately if transition not supported.
    */
   function _addEventListener() {
+    _dom.classList.add( BaseTransition.ANIMATING_CLASS );
     _isAnimating = true;
     // If transition is not supported, call handler directly (IE9/OperaMini).
     if ( _transitionEndEvent ) {
@@ -4832,15 +4954,22 @@ function BaseTransition( element, classes ) {
 
   /**
    * Handle the end of a transition.
+   * @param {TransitionEvent} evt - Transition event object.
+   * @returns {boolean} True if transition was cleaned up,
+   *   false if an outside transitioning property triggered this event handler.
    */
-  function _transitionComplete() {
+  function _transitionComplete( evt ) {
+    if ( evt && evt.propertyName !== _classes.CSS_PROPERTY ) {
+      return false;
+    }
+
     _removeEventListener();
+    _dom.classList.remove( BaseTransition.ANIMATING_CLASS );
     this.dispatchEvent( BaseTransition.END_EVENT, { target: this } );
     _isAnimating = false;
+    return true;
   }
 
-  // TODO Fix complexity issue
-  /* eslint-disable complexity */
   /**
    * Search for and remove initial BaseTransition classes that have
    * already been applied to this BaseTransition's target element.
@@ -4855,7 +4984,6 @@ function BaseTransition( element, classes ) {
       }
     }
   }
-  /* eslint-enable complexity */
 
   /**
    * Remove all transition classes, if transition is initialized.
@@ -4899,8 +5027,6 @@ function BaseTransition( element, classes ) {
     return true;
   }
 
-  // TODO Fix complexity issue
-  /* eslint-disable complexity */
   /**
    * @param {HTMLNode} elem
    *   The element to check for support of transition end event.
@@ -4920,20 +5046,19 @@ function BaseTransition( element, classes ) {
       transition:       'transitionend'
     };
 
-    let transitionEnd;
-    for ( transitionEnd in transitions ) {
-      if ( transitions.hasOwnProperty( transitionEnd ) &&
-           typeof elem.style[transitionEnd] !== 'undefined' ) {
-        transition = transitions[transitionEnd];
+    let transitionEvent;
+    for ( transitionEvent in transitions ) {
+      if ( transitions.hasOwnProperty( transitionEvent ) &&
+           typeof elem.style[transitionEvent] !== 'undefined' ) {
+        transition = transitions[transitionEvent];
         break;
       }
     }
     return transition;
   }
-  /* eslint-enable complexity */
 
   // Attach public events.
-  const eventObserver = new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__.default();
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__.default();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -4949,14 +5074,157 @@ function BaseTransition( element, classes ) {
 
   return this;
 }
-/* eslint-enable max-lines-per-function, max-statements */
 
 // Public static constants.
 BaseTransition.BEGIN_EVENT = 'transitionBegin';
 BaseTransition.END_EVENT = 'transitionEnd';
 BaseTransition.NO_ANIMATION_CLASS = 'u-no-animation';
+BaseTransition.ANIMATING_CLASS = 'u-is-animating';
 
 /* harmony default export */ __webpack_exports__["default"] = (BaseTransition);
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js":
+/*!***********************************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js ***!
+  \***********************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+// Required modules.
+
+
+
+// Exported constants.
+const CLASSES = {
+  CSS_PROPERTY:   'transform',
+  BASE_CLASS:     'u-move-transition',
+  MOVE_TO_ORIGIN: 'u-move-to-origin',
+  MOVE_LEFT:      'u-move-left',
+  MOVE_LEFT_2X:   'u-move-left-2x',
+  MOVE_LEFT_3X:   'u-move-left-3x',
+  MOVE_RIGHT:     'u-move-right',
+  MOVE_UP:        'u-move-up'
+};
+
+/**
+ * MoveTransition
+ * @class
+ *
+ * @classdesc Initializes new MoveTransition behavior.
+ *
+ * @param {HTMLNode} element
+ *   DOM element to apply move transition to.
+ * @returns {MoveTransition} An instance.
+ */
+function MoveTransition( element ) {
+
+  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default( element, CLASSES );
+
+  /**
+   * @returns {MoveTransition} An instance.
+   */
+  function init() {
+    _baseTransition.init();
+    const _transitionCompleteBinded = _transitionComplete.bind( this );
+    _baseTransition.addEventListener(
+      _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT,
+      _transitionCompleteBinded
+    );
+    return this;
+  }
+
+  /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    this.dispatchEvent( _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT, { target: this } );
+  }
+
+  /**
+   * Move to the element's original coordinates.
+   * @returns {MoveTransition} An instance.
+   */
+  function moveToOrigin() {
+    _baseTransition.applyClass( CLASSES.MOVE_TO_ORIGIN );
+
+    return this;
+  }
+
+  /**
+   * Move to the left by applying a utility move class.
+   * @param {Number} count
+   *   How many times to move left as a multiplication of the element's width.
+   * @returns {MoveTransition} An instance.
+   */
+  function moveLeft( count ) {
+    count = count || 1;
+    const moveClasses = [
+      CLASSES.MOVE_LEFT,
+      CLASSES.MOVE_LEFT_2X,
+      CLASSES.MOVE_LEFT_3X
+    ];
+
+    if ( count < 1 || count > moveClasses.length ) {
+      throw new Error( 'MoveTransition: moveLeft count is out of range!' );
+    }
+
+    _baseTransition.applyClass( moveClasses[count - 1] );
+
+    return this;
+  }
+
+  /**
+   * Move to the right by applying a utility move class.
+   * @returns {MoveTransition} An instance.
+   */
+  function moveRight() {
+    _baseTransition.applyClass( CLASSES.MOVE_RIGHT );
+
+    return this;
+  }
+
+  /**
+   * Move up by applying a utility move class.
+   * @returns {MoveTransition} An instance.
+   */
+  function moveUp() {
+    _baseTransition.applyClass( CLASSES.MOVE_UP );
+
+    return this;
+  }
+
+  // Attach public events.
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
+  this.addEventListener = eventObserver.addEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+  this.removeEventListener = eventObserver.removeEventListener;
+
+  this.animateOff = _baseTransition.animateOff;
+  this.animateOn = _baseTransition.animateOn;
+  this.halt = _baseTransition.halt;
+  this.isAnimated = _baseTransition.isAnimated;
+  this.setElement = _baseTransition.setElement;
+  this.remove = _baseTransition.remove;
+
+  this.init = init;
+  this.moveLeft = moveLeft;
+  this.moveRight = moveRight;
+  this.moveToOrigin = moveToOrigin;
+  this.moveUp = moveUp;
+
+  return this;
+}
+
+// Public static properties.
+MoveTransition.CLASSES = CLASSES;
+
+/* harmony default export */ __webpack_exports__["default"] = (MoveTransition);
 
 
 /***/ }),
@@ -5319,6 +5587,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // Exported constants.
 const CLASSES = {
+  CSS_PROPERTY: 'max-height',
   BASE_CLASS:   'o-expandable_content__transition',
   EXPANDED:     'o-expandable_content__expanded',
   COLLAPSED:    'o-expandable_content__collapsed',

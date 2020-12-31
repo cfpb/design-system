@@ -5927,6 +5927,61 @@ Disabled
         
         
 
+        'patterns-transition-patterns': {
+
+            // Cycle through the variation fields of this page.
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Move transition',
+                    'variation_description1': "A transition that moves from one position to another.\n",
+                    'variation_code_snippet1': `&lt;div class=&quot;u-move-transition example-box&quot;&gt;Click me!&lt;/div&gt;
+&lt;script&gt;
+  const moveTransitionExample = document.querySelector( &#39;.example-box.u-move-transition&#39; );
+  const moveTransition = new MoveTransition( moveTransitionExample ).init();
+  moveTransitionExample.addEventListener( &#39;click&#39;, () =&gt; {
+      moveTransition.moveRight();
+      setTimeout( () =&gt; {
+        moveTransition.moveToOrigin();
+      }, 1000 );
+  } );
+&lt;/script&gt;`,
+                
+                    'variation_name2': 'Alpha transition',
+                    'variation_description2': "A transition that fades from one opacity to another.\n",
+                    'variation_code_snippet2': `&lt;div class=&quot;u-alpha-transition example-box&quot;&gt;Click me!&lt;/div&gt;
+&lt;script&gt;
+  const alphaTransitionExample = document.querySelector( &#39;.example-box.u-alpha-transition&#39; );
+  const alphaTransition = new AlphaTransition( alphaTransitionExample ).init();
+  alphaTransitionExample.addEventListener( &#39;click&#39;, () =&gt; {
+    alphaTransition.fadeOut();
+    setTimeout( () =&gt; {
+      alphaTransition.fadeIn();
+    }, 1000 );
+  } );
+&lt;/script&gt;`,
+                
+            
+
+
+            'title': 'Transition patterns',
+            'description': "Transition patterns are animations that happen when a user interacts with an element on the page. They are CSS transition styles that are controlled via JavaScript.\n",
+            'use_cases': "\n",
+            'guidelines': "\n",
+            'behavior': "\n",
+            'accessibility': "\n",
+            'research': "\n",
+            'related_items': "\n",
+            'url': 'patterns/transition-patterns'
+        }
+        ,
+        
+
+        
+        
+
         'foundation-fonts': {
 
             // Cycle through the variation fields of this page.

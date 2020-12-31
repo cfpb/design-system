@@ -65,7 +65,7 @@ variation_groups:
 
           ```
       - variation_name: Alpha transition
-        variation_description: A transition that fades from one position to another.
+        variation_description: A transition that fades from one opacity to another.
         variation_code_snippet: >-
           <div class="u-alpha-transition example-box">Click me!</div>
 

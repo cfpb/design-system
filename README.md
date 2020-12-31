@@ -1,4 +1,4 @@
-# CFPB Design System [![Travis](https://img.shields.io/travis/cfpb/design-system.svg?style=flat-square)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/@cfpb/design-system.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/design-system)
+# CFPB Design System [![Travis](https://img.shields.io/travis/cfpb/design-system.svg?style=flat-square)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/@cfpb/design-system.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-design-system)
 
 The Consumer Financial Protection Bureau's user interface framework and documentation.
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ReactLiquid, liquidEngine } from 'react-liquid';
 import { TOGGLE_ATTRIBUTE, toggleDetails } from '../../../assets/js/toggle-details.js';
 import { changeTab, init as initTabs } from '../../../assets/js/tabs.js';
-import { AllHtmlEntities } from 'html-entities';
+import { encode } from 'html-entities';
 import ReactDOM from 'react-dom';
 import marked from 'marked';
 import slugify from 'slugify';
@@ -20,10 +20,9 @@ export default class Preview extends Component {
 
   constructor( props ) {
     super( props );
-    const entities = new AllHtmlEntities();
 
     liquidEngine.registerFilter( 'slugify', initial => slugify( initial || '', { lower: true } ) );
-    liquidEngine.registerFilter( 'xml_escape', initial => entities.encode( initial ) );
+    liquidEngine.registerFilter( 'xml_escape', initial => encode( initial ) );
     liquidEngine.registerFilter( 'markdownify', initial => marked( initial || '' ) );
     liquidEngine.registerFilter( 'strip', initial => initial && initial.trim() );
 

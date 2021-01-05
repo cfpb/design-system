@@ -316,7 +316,7 @@
 
   <h2 class="h3">Download the icon font</h2>
 
-  <p>Our full icon set is available for desktop use as an icon font (.ttf). It can be accessed through programs like Illustrator and InDesign via the glyph panel.</p>
+  <p>Our full icon set is available for desktop use as an icon font (.ttf). It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the glyph panel.</p>
 
   <p><a href="https://github.com/cfpb/cf-icons/blob/gh-pages/src/fonts/cf-icons.ttf?raw=true">Download font</a></p>
 
@@ -1601,7 +1601,7 @@
                 </p>
 <h3 id="svg-icon-basics">SVG icon basics</h3>
 
-<p>The cf-icon component provides Scalable Vector Graphics (SVG) icons. This component can be used by itself, but is designed to work with the Design System.</p>
+<p>The cfpb-icon component provides Scalable Vector Graphics (SVG) icons. This component can be used by itself, but is designed to work with the Design System.</p>
 
 <p>We subscribe to the guidance offered by Chris Coyier in his article, “<a href="https://css-tricks.com/pretty-good-svg-icon-system/">A Pretty Good SVG Icon System</a>”, in which he concludes, “Just include the icons inline.”</p>
 
@@ -1611,7 +1611,7 @@
   <p><strong>Note:</strong> Jinja2, the templating language that cfgov-refresh uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: <code class="language-plaintext highlighter-rouge">{% include 'icons/download.svg' %}</code>.</p>
 </blockquote>
 
-<p>The filenames of the SVGs included with cf-icons match the names in the Icon library section. There are duplicate SVG files for each alias, as well.</p>
+<p>The filenames of the SVGs included with cfpb-icons match the names in the icon library section. There are duplicate SVG files for each alias, as well.</p>
 
 <blockquote>
   <p><strong>Note to contributors:</strong> If any icon is ever updated, you must be sure to also update each of the alias SVGs.</p>
@@ -1619,7 +1619,7 @@
 
 <h4 id="what-the-less-is-doing">What the Less is doing</h4>
 
-<p>If you look in <code class="language-plaintext highlighter-rouge">cf-icons.less</code>, below the aforementioned sizing variable, you’ll see this simple rule:</p>
+<p>If you look in <code class="language-plaintext highlighter-rouge">cfpb-icons.less</code>, below the aforementioned sizing variable, you’ll see this simple rule:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.cf-icon-svg {
     height: @cf-icon-height;
@@ -1643,7 +1643,7 @@
 
 <h4 id="inline-svg-background">Inline SVG background</h4>
 
-<p>In some cases we embed an SVG as a background image. To accomplish this, a custom less plugin is used to inject the SVG icon source file inline into the CSS <code class="language-plaintext highlighter-rouge">background-image</code> property. This is exposed via a mixin, <code class="language-plaintext highlighter-rouge">.u-svg-inline-bg( @name )</code>, where <code class="language-plaintext highlighter-rouge">@name</code> is the SVG icon canonical name.</p>
+<p>In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS <code class="language-plaintext highlighter-rouge">background-image</code> property. This is exposed via a mixin, <code class="language-plaintext highlighter-rouge">.u-svg-inline-bg( @name, @color: @black )</code>, where <code class="language-plaintext highlighter-rouge">@name</code> is the SVG icon canonical name and <code class="language-plaintext highlighter-rouge">@color</code> is the SVG fill color (which defaults to black).</p>
 
                 
             
@@ -1713,8 +1713,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/iconography.md">
-                    <time datetime="2020-08-04 15:27:00 -0400">
-                         3:27:00 PM Aug 04, 2020
+                    <time datetime="2021-01-05 16:03:24 -0500">
+                         4:03:24 PM Jan 05, 2021
                     </time>
                 </a>
             </small>

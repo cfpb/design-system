@@ -16,7 +16,7 @@ description: >-
   <h2 class="h3">Download the icon font</h2>
 
 
-  Our full icon set is available for desktop use as an icon font (.ttf). It can be accessed through programs like Illustrator and InDesign via the glyph panel.
+  Our full icon set is available for desktop use as an icon font (.ttf). It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the glyph panel.
 
 
   [Download font](https://github.com/cfpb/cf-icons/blob/gh-pages/src/fonts/cf-icons.ttf?raw=true)
@@ -430,7 +430,7 @@ behavior: >-
   ### SVG icon basics
 
 
-  The cf-icon component provides Scalable Vector Graphics (SVG) icons. This component can be used by itself, but is designed to work with the Design System.
+  The cfpb-icon component provides Scalable Vector Graphics (SVG) icons. This component can be used by itself, but is designed to work with the Design System.
 
 
   We subscribe to the guidance offered by Chris Coyier in his article, “[A Pretty Good SVG Icon System](https://css-tricks.com/pretty-good-svg-icon-system/)”, in which he concludes, “Just include the icons inline.”
@@ -442,7 +442,7 @@ behavior: >-
   > **Note:** Jinja2, the templating language that cfgov-refresh uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.
 
 
-  The filenames of the SVGs included with cf-icons match the names in the Icon library section. There are duplicate SVG files for each alias, as well.
+  The filenames of the SVGs included with cfpb-icons match the names in the icon library section. There are duplicate SVG files for each alias, as well.
 
 
   > **Note to contributors:** If any icon is ever updated, you must be sure to also update each of the alias SVGs.
@@ -451,7 +451,7 @@ behavior: >-
   #### What the Less is doing
 
 
-  If you look in `cf-icons.less`, below the aforementioned sizing variable, you’ll see this simple rule:
+  If you look in `cfpb-icons.less`, below the aforementioned sizing variable, you’ll see this simple rule:
 
 
   ```
@@ -487,7 +487,7 @@ behavior: >-
   #### Inline SVG background
 
 
-  In some cases we embed an SVG as a background image. To accomplish this, a custom less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name )`, where `@name` is the SVG icon canonical name.
+  In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where `@name` is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black).
 related_items: ""
 secondary_section: Brand guidelines
 ---

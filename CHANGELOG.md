@@ -1,4 +1,15 @@
 
+## Unreleased (2021-01-07)
+
+#### Bug Fix
+* `cfpb-atomic-component`, `cfpb-core`
+  * [#1138](https://github.com/cfpb/design-system/pull/1138) Add important! to u-hidden and u-no-animation rules ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## Unreleased (2020-12-31)
 
 #### Breaking Change

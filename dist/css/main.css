@@ -18,7 +18,7 @@
   transition: opacity 0.25s linear;
 }
 .u-no-animation {
-  transition-duration: 0s;
+  transition-duration: 0s !important;
 }
 .u-move-to-origin {
   transform: translate3d(0, 0, 0);
@@ -648,7 +648,7 @@ input[type="radio"] {
   }
 }
 .u-hidden {
-  display: none;
+  display: none !important;
 }
 .u-invisible {
   visibility: hidden;

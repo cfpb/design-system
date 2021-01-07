@@ -8,11 +8,8 @@ let contentDom;
 const HTML_SNIPPET = '<div class="content-1"></div>';
 
 describe( 'MoveTransition', () => {
-  beforeAll( () => {
-    document.body.innerHTML = HTML_SNIPPET;
-  } );
-
   beforeEach( () => {
+    document.body.innerHTML = HTML_SNIPPET;
     contentDom = document.querySelector( '.content-1' );
     transition = new MoveTransition( contentDom );
     transition.init();
@@ -33,6 +30,19 @@ describe( 'MoveTransition', () => {
         expect( contentDom.className ).toStrictEqual( classes );
       } );
     } );
+
+    it( 'should remove u-is-animating class when transition duration is zero',
+      () => {
+        transition.animateOff();
+        transition.moveToOrigin();
+        const classes = 'content-1 u-move-transition ' +
+                      'u-no-animation u-move-to-origin';
+        expect( contentDom.className ).toStrictEqual( classes );
+        transition.addEventListener( 'transitionend', () => {
+          const classes = 'content-1 u-move-transition u-move-to-origin';
+          expect( contentDom.className ).toStrictEqual( classes );
+        } );
+      } );
   } );
 
   describe( '.moveRight()', () => {

@@ -4,7 +4,7 @@ layout: variation
 section: components
 secondary_section: Alerts
 status: Beta
-description: This component provides banner boxes at the top of the page's
+description: This component provides banner boxes at the top of a page's
   content. This is similar to a notification, but is intended to be full width.
 variation_groups:
   - variations:

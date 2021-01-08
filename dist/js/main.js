@@ -4932,12 +4932,15 @@ function BaseTransition( element, classes ) {
   function _addEventListener() {
     _dom.classList.add( BaseTransition.ANIMATING_CLASS );
     _isAnimating = true;
-    // If transition is not supported, call handler directly (IE9/OperaMini).
-    if ( _transitionEndEvent ) {
-      _dom.addEventListener(
-        _transitionEndEvent,
-        _transitionCompleteBinded
-      );
+
+    /*
+      If transition is not supported, call handler directly (IE9/OperaMini).
+      Also, if "transition-duration: 0s" is set, transitionEnd event will not
+      fire, so we need to call the handler straight away.
+    */
+    if ( _transitionEndEvent &&
+         !_dom.classList.contains( BaseTransition.NO_ANIMATION_CLASS ) ) {
+      _dom.addEventListener( _transitionEndEvent, _transitionCompleteBinded );
       this.dispatchEvent( BaseTransition.BEGIN_EVENT, { target: this } );
     } else {
       this.dispatchEvent( BaseTransition.BEGIN_EVENT, { target: this } );

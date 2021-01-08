@@ -1,4 +1,16 @@
 
+## Unreleased (2021-01-08)
+
+#### Bug Fix
+* `cfpb-atomic-component`
+  * [#1140](https://github.com/cfpb/design-system/pull/1140) Transitions: Call transitionComplete handler if transition duration is zero ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Chris Contolini ([@contolini](https://github.com/contolini))
+
+
+
 ## Unreleased (2021-01-07)
 
 #### Bug Fix

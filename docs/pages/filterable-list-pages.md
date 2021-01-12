@@ -24,9 +24,6 @@ variation_groups:
 
       | Example: [Research and reports](https://www.consumerfinance.gov/data-research/research-reports/) | Example: [Final rules](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/) |
 use_cases: >-
-  ![](/design-system/images/uploads/filterable-list-sublanding-wireframe.png)
-
-
   ### When to use
 
 

@@ -30,17 +30,17 @@ variation_groups:
               <style>
                   #hero1 .m-hero_image {
                       background-image:
-                          url('https://dummyimage.com/570x236/addc91/101820');
+                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
                       background-image: -webkit-image-set(
-                          url('https://dummyimage.com/570x236/addc91/101820') 1x,
-                          url('https://dummyimage.com/1140x472/addc91/101820') 2x
+                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
                       );
                       background-image: image-set(
-                          url('https://dummyimage.com/570x236/addc91/101820') 1x,
-                          url('https://dummyimage.com/1140x472/addc91/101820') 2x
+                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
                       );
                       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='https://dummyimage.com/570x236/addc91/101820',
+                          src='https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png',
                           sizingMethod='scale');
                       padding-bottom: 41.4893617%;
                   }
@@ -48,17 +48,17 @@ variation_groups:
                   @media screen and (min-width: 37.5625em) {
                       #hero1 .m-hero_image {
                           background-image:
-                              url('https://dummyimage.com/470x195/addc91/101820');
+                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
                           background-image: -webkit-image-set(
-                              url('https://dummyimage.com/470x195/addc91/101820') 1x,
-                              url('https://dummyimage.com/940x390/addc91/101820') 2x
+                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
                           );
                           background-image: image-set(
-                              url('https://dummyimage.com/470x195/addc91/101820') 1x,
-                              url('https://dummyimage.com/940x390/addc91/101820') 2x
+                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
                           );
                           filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='https://dummyimage.com/470x195/addc91/101820',
+                              src='https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png',
                               sizingMethod='scale');
                           padding-bottom: 41.4893617%;
                       }
@@ -74,13 +74,15 @@ variation_groups:
           production specs. '
         variation_name: Hero with illustration
         variation_specs: >-
-          * All illustrations should be saved at 200% to accommodate retina
-          displays
+          * Save illustrations at 200% to accommodate retina displays.
 
-          * When saving illustrations, use a transparent background
+          * Use a transparent background.
+
+          * Export illustrations as PNG files. 
 
 
           #### Standard hero with illustration
+
 
           * Single image for both large and small screens
 
@@ -120,21 +122,21 @@ variation_groups:
           #### Style at different breakpoints
 
 
-          | Item           | Above 901 px                       | 601 - 900 px                             | Below 601 px                              |
+          | Item           | Above 901 px                                                                | 601 - 900 px                                                              | Below 601 px                                                              |
 
-          | -------------- | ---------------------------------- | ---------------------------------------- | ----------------------------------------- |
+          | -------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 
-          | Heading        | H1                                 | H2                                       | H2                                        |
+          | Heading        | H1                                                                          | H2                                                                        | H2                                                                        |
 
-          | Subheading     | Avenir Next Regular, 22px/28px     | Avenir Next Regular, 18px/22px           | Avenir Next Regular, 18px/22px            |
+          | Subheading     | Avenir Next Regular, 22px/28px                                              | Avenir Next Regular, 18px/22px                                            | Avenir Next Regular, 18px/22px                                            |
 
-          | Padding        | Top/bottom: 45px, left/right: 30px | All sides: 30px                          | Top/bottom: 30px, left/right: 15px        |
+          | Padding        | Top/bottom: 45px, left/right: 30px                                          | All sides: 30px                                                           | Top/bottom: 30px, left/right: 15px                                        |
 
-          | Text alignment | Vertically centered                | Vertically centered                      | \-                                        |
+          | Text alignment | Vertically centered                                                         | Vertically centered                                                       | \-                                                                        |
 
-          | Height         | 285px (fixed)                      | Module height is flexible to text height | Module height is flexible to text height |
+          | Height         | 285px (fixed)                                                               | Module height is flexible to text height                                  | Module height is flexible to text height                                  |
 
-          | Image | ![hero desktop style](/design-system/images/uploads/hero_style_desktop.png) | ![hero tablet style](/design-system/images/uploads/hero_style_tablet.png) | ![hero mobile style](/design-system/images/uploads/hero_style_mobile.png) |
+          | Image          | ![hero desktop style](/design-system/images/uploads/hero_style_desktop.png) | ![hero tablet style](/design-system/images/uploads/hero_style_tablet.png) | ![hero mobile style](/design-system/images/uploads/hero_style_mobile.png) |
         variation_implementation: >+
           #### Bleeding illustrations
 
@@ -158,11 +160,11 @@ variation_groups:
 
 
       - variation_name: Hero with photograph
-        variation_description: 'Note hero text overlays the photograph at larger screen
+        variation_description: Note hero text overlays the photograph at larger screen
           sizes. See an example of a [hero with
-          photograph](https://www.consumerfinance.gov/consumer-tools/auto-loans/).For
-          implementation details and production specs, click on the "Show
-          details" link. '
+          photograph](https://www.consumerfinance.gov/consumer-tools/auto-loans/).
+          For implementation details and production specs, click on the "Show
+          details" link.
         variation_code_snippet: >-
           <section class="m-hero m-hero__overlay" id="hero4">
               <div class="m-hero_wrapper wrapper">
@@ -219,19 +221,22 @@ variation_groups:
         variation_specs: >-
           #### Hero with photograph
 
-          * Two images must be created, one for large and one for small screens
 
-          * Large and small screen images should contain the same elements but can differ compositionally
+          * Two images must be created, one for large and one for small screens.
 
-          * When selecting a photo include a 30px horizontal margin of clear space between text and image area
+          * Large and small screen images should contain the same elements but can differ compositionally.
 
-          * Type contrast ratios cannot be mathematically determined for photos so special care should be paid when selecting these images
+          * When selecting a photo, include a 30px horizontal margin of clear space between text and image area.
 
-          * To conserve vertical space, small screen image should be as short as possible
+          * Type contrast ratios cannot be mathematically determined for photos, so special care should be paid when selecting these images.
+
+          * To conserve vertical space, small screen image should be as short as possible.
 
           * Photo dimensions for large screens (exact): 1230px x 285px
 
           * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
+
+          * Export photos as PNG files. 
 
 
           ![Image of larger photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_large.png "Image of larger photographic hero graphic with dimensions")

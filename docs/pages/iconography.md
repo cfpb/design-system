@@ -65,8 +65,7 @@ variation_groups:
           | {% include icons/arrow-down.svg %}  | {% include icons/arrow-down-round.svg %}  | arrow-down     |               |
 
           | {% include icons/arrow-left.svg %}  | {% include icons/arrow-left-round.svg %}  | arrow-left     |               |
-
-
+          
           {: class="icon-table"}
 
 
@@ -99,7 +98,6 @@ variation_groups:
 
           | {% include icons/percentage.svg %} | {% include icons/percentage-round.svg %} | percentage     | percent                                            |
 
-
           {: class="icon-table"}
 
 
@@ -124,7 +122,6 @@ variation_groups:
 
           | {% include icons/youtube.svg %}  | {% include icons/youtube-square.svg %}  | youtube        |                         |
 
-
           {: class="icon-table"}
 
 
@@ -146,7 +143,6 @@ variation_groups:
           | {% include icons/technology.svg %} | {% include icons/technology-round.svg %} | technology     | cellphone, tablet  |
 
           | {% include icons/web.svg %}        | {% include icons/web-round.svg %}        | web            | globe, world       |
-
 
           {: class="icon-table"}
 
@@ -179,7 +175,6 @@ variation_groups:
           | {% include icons/save.svg %}       | {% include icons/save-round.svg %}       | save           | disk               |
 
           | {% include icons/supplement.svg %} | {% include icons/supplement-round.svg %} | supplement     |                    |
-
 
           {: class="icon-table"}
 
@@ -234,7 +229,6 @@ variation_groups:
           | {% include icons/piggy-bank-check.svg %}      | {% include icons/piggy-bank-check-round.svg %}      | piggy-bank-check      |                                           |
 
           | {% include icons/split.svg %}                 | {% include icons/split-round.svg %}                 | split                 |                                           |
-
 
           {: class="icon-table"}
 
@@ -315,7 +309,6 @@ variation_groups:
           | {% include icons/user.svg %}          | {% include icons/user-round.svg %}          | user           | person                           |
 
           | {% include icons/wifi.svg %}          | {% include icons/wifi-round.svg %}          | wifi           | wi-fi, wireless                  |
-
 
           {: class="icon-table"}
         variation_name: ""

@@ -199,6 +199,12 @@ use_cases: >-
   * Date, month, or year
 
   * State abbreviation
+
+
+  Multi-line text input fields should be used for longer form answers 
+
+
+  Read information about \[placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1)
 guidelines: >-
   ### Stylistic guidelines
 

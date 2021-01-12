@@ -221,19 +221,22 @@ variation_groups:
         variation_specs: >-
           #### Hero with photograph
 
-          * Two images must be created, one for large and one for small screens
 
-          * Large and small screen images should contain the same elements but can differ compositionally
+          * Two images must be created, one for large and one for small screens.
 
-          * When selecting a photo include a 30px horizontal margin of clear space between text and image area
+          * Large and small screen images should contain the same elements but can differ compositionally.
 
-          * Type contrast ratios cannot be mathematically determined for photos so special care should be paid when selecting these images
+          * When selecting a photo, include a 30px horizontal margin of clear space between text and image area.
 
-          * To conserve vertical space, small screen image should be as short as possible
+          * Type contrast ratios cannot be mathematically determined for photos, so special care should be paid when selecting these images.
+
+          * To conserve vertical space, small screen image should be as short as possible.
 
           * Photo dimensions for large screens (exact): 1230px x 285px
 
           * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
+
+          * Export photos as PNG files. 
 
 
           ![Image of larger photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_large.png "Image of larger photographic hero graphic with dimensions")

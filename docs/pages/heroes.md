@@ -160,11 +160,11 @@ variation_groups:
 
 
       - variation_name: Hero with photograph
-        variation_description: 'Note hero text overlays the photograph at larger screen
+        variation_description: Note hero text overlays the photograph at larger screen
           sizes. See an example of a [hero with
-          photograph](https://www.consumerfinance.gov/consumer-tools/auto-loans/).For
-          implementation details and production specs, click on the "Show
-          details" link. '
+          photograph](https://www.consumerfinance.gov/consumer-tools/auto-loans/).
+          For implementation details and production specs, click on the "Show
+          details" link.
         variation_code_snippet: >-
           <section class="m-hero m-hero__overlay" id="hero4">
               <div class="m-hero_wrapper wrapper">

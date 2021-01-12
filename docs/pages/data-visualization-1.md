@@ -183,7 +183,7 @@ variation_groups:
           #### Figure number
 
 
-          * Uses the`Figure number`style (all caps)
+          * Uses the `Figure number` style (all caps)
 
 
           #### Title
@@ -191,7 +191,7 @@ variation_groups:
 
           * Gives an overview of what the graph is about
 
-          * Uses the`h3`heading style
+          * Uses the `h3` heading style
 
           * 2 lines of text maximum
 
@@ -201,7 +201,7 @@ variation_groups:
 
           * Explains the general trends of the graph and what that means, including why it is important
 
-          * Uses the`h4`heading style
+          * Uses the `body text` paragraph style
 
           * 3 lines of text maximum
 
@@ -229,7 +229,7 @@ variation_groups:
 
           * Gives an overview of what the graph is about
 
-          * Uses the`h3`heading style
+          * Uses the `h3` heading style
 
           * 2 lines of text maximum
 
@@ -239,7 +239,7 @@ variation_groups:
 
           * Explains the general trends of the graph and what that means, including why it is important
 
-          * Uses the`h4`heading style
+          * Uses the `body text` paragraph style
 
           * 3 lines of text maximum
 
@@ -273,7 +273,7 @@ variation_groups:
 
           * Gives an overview of what the graph is about
 
-          * Uses the`h3`heading style
+          * Uses the `h3` heading style
 
           * 2 lines of text maximum
 
@@ -283,7 +283,7 @@ variation_groups:
 
           * Explains the general trends of the graph and what that means, including why it is important
 
-          * Uses the`h4`heading style
+          * Uses the `body text` paragraph style
 
           * 3 lines of text maximum
 

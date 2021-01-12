@@ -20,7 +20,7 @@ variation_groups:
 
       | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
 
-      | ![Sublanding page filterable list mockup](/design-system/images/uploads/filterable-list-sublanding-wireframe.png)                                                                                                 | ![Browse page filterable list mockup](/design-system/images/uploads/filterable-list-browse-wireframe.png)                  |
+      | ![Sublanding page filterable list mockup](/docs/images/uploads/filterable-list-sublanding-wireframe.png)                                                                                                 | ![Browse page filterable list mockup](/docs/images/uploads/filterable-list-browse-wireframe.png)                  |
 
       | Example: [Research and reports](https://www.consumerfinance.gov/data-research/research-reports/) | Example: [Final rules](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/) |
 use_cases: >-

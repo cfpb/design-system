@@ -81,10 +81,13 @@ variation_groups:
           #### Disabled
           - Background: Gray 10 (#e7e8e9)
         variation_name: Single-line text inputs
+        variation_description: Use to input single lines of text, for example email
+          addresses, names, or search queries. The length of the input field
+          should be proportional to the expected user input, so that the user
+          can see what they've typed without having to scroll to reveal hidden
+          content.
       - variation_name: Multi-line textarea inputs
-        variation_description: |+
-          Use multi-line text inputs for long-form answers.
-
+        variation_description: Use for long-form answers where .
         variation_code_snippet: >-
           <label class="a-label a-label__heading"
           for="textarea-example-default">
@@ -121,7 +124,7 @@ variation_groups:
                         id="full-textarea-example">Placeholder text</textarea>
           </div>
       - variation_name: Datepicker inputs
-        variation_code_snippet: >-
+        variation_code_snippet: |-
           <div class="m-form-field">
               <label class="a-label a-label__heading" for="datepicker-example">
                   Label
@@ -177,7 +180,8 @@ variation_groups:
                   <button class="a-btn">Search</button>
               </div>
           </div>
-use_cases: ""
+use_cases: The choice of input field type (single vs. multi-line) should be
+  proportional to the expected user input. If you're expecting a
 guidelines: >-
   ### Stylistic guidelines
 

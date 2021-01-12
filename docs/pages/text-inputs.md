@@ -88,10 +88,10 @@ variation_groups:
           content. See the guidelines section below for more information.
       - variation_name: Multi-line textarea inputs
         variation_description: Use for long-form answers that are more than a single
-          word or two, in particular answers written as full sentences. The size
-          of the multi-line input field should be proportional to the expected
-          user input, so that the user can see what they've typed without having
-          to scroll to reveal hidden content.
+          word or two. Make sure the input size is big enough that the user can
+          see what they've typed without having to scroll to reveal hidden
+          content, and small enough that the user doesn't have  to navigate the
+          viewport in order to see the entire field at once.
         variation_code_snippet: >-
           <label class="a-label a-label__heading"
           for="textarea-example-default">

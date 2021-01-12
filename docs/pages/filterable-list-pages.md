@@ -27,6 +27,7 @@ use_cases: >-
   ### When to use
 
 
+
   ![](/design-system/images/uploads/filterable-list-browse-wireframe.png)
 
 

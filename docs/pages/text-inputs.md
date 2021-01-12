@@ -81,10 +81,17 @@ variation_groups:
           #### Disabled
           - Background: Gray 10 (#e7e8e9)
         variation_name: Single-line text inputs
+        variation_description: Use to input single lines of text, for example email
+          addresses, names, or search queries. The length of the input field
+          should be proportional to the expected user input, so that the user
+          can see what they've typed without having to scroll to reveal hidden
+          content. See the guidelines section below for more information.
       - variation_name: Multi-line textarea inputs
-        variation_description: |+
-          Use multi-line text inputs for long-form answers.
-
+        variation_description: Use for long-form answers that are more than a single
+          word or two. Make sure the input size is big enough that the user can
+          see what they've typed without having to scroll to reveal hidden
+          content, and small enough that the user doesn't have  to navigate the
+          viewport in order to see the entire field at once.
         variation_code_snippet: >-
           <label class="a-label a-label__heading"
           for="textarea-example-default">
@@ -121,7 +128,7 @@ variation_groups:
                         id="full-textarea-example">Placeholder text</textarea>
           </div>
       - variation_name: Datepicker inputs
-        variation_code_snippet: >-
+        variation_code_snippet: |-
           <div class="m-form-field">
               <label class="a-label a-label__heading" for="datepicker-example">
                   Label
@@ -204,7 +211,7 @@ guidelines: >-
   Text should be in sentence case.
 
 
-  Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field.
+  Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
 behavior: As the screen size gets smaller, break multi-column inputs into a
   single, stacked column. Fields that are next to each other on a large screen,
   should stack at smaller screen sizes. When possible, fields should span the

@@ -221,14 +221,6 @@ variation_groups:
           #### Figure number
 
           * Uses the `Figure number` style (all caps)
-      - variation_name: Blog posts
-        variation_description: Uses standard styles, no figure number.
-      - variation_name: Social media
-        variation_description: >-
-          #### CFPB logo
-
-
-          * Include the CFPB logo; helps with identification and determining origin if the graphic gets re-used
       - variation_name: Web pages
         variation_description: >-
           Generally presented as interactive visualizations rather than static
@@ -239,6 +231,14 @@ variation_groups:
 
 
           * Uses the `H5` heading style
+      - variation_name: Blog posts
+        variation_description: Uses standard styles, no figure number.
+      - variation_name: Social media
+        variation_description: >-
+          #### CFPB logo
+
+
+          * Include the CFPB logo; helps with identification and determining origin if the graphic gets re-used
   - variation_group_name: Color
     variation_group_description: >-
       When used properly, color can help clarify relationships between data,

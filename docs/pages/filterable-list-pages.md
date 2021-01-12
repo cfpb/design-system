@@ -13,16 +13,18 @@ variation_groups:
   - variation_group_name: Types
     variations: []
     variation_group_description: >-
-      | Filterable list sublanding page | Filterable list browse page |
+      | Filterable list sublanding
+      page                                                                  |
+      Filterable list browse
+      page                                                                       |
 
-      | -- | -- |
+      | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
 
-      | ![Sublanding page mockup](/design-system/images/uploads/sublanding_behavior_desktop-1.jpg) | ![Browse page mockup](/design-system/images/uploads/browse_behavior_desktop.jpg) |
+      | ![Sublanding page filterable list mockup](/docs/images/uploads/filterable-list-sublanding-wireframe.png)                                                                                                 | ![Browse page filterable list mockup](/docs/images/uploads/filterable-list-browse-wireframe.png)                  |
 
-      | Example: [Research and reports](https://www.consumerfinance.gov/data-research/research-reports/) | Example: [Final rules](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/)
+      | Example: [Research and reports](https://www.consumerfinance.gov/data-research/research-reports/) | Example: [Final rules](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/) |
 use_cases: >-
   ### When to use
-
 
   * When asking users to look through more than 20 articles, documents, or resources.
 

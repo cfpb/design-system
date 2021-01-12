@@ -131,10 +131,10 @@ description: >-
           </button>
           <div class="o-expandable_content">
               <p>
-                  Click the blue 'save' button in the top left to save your changes as a draft. 
+                  Click the blue 'Save' button in the top left to save your changes as a draft. 
                   Don't worry, the live site won't be affected. 
                   Netlify CMS will build a temporary version of the website with your changes so that you can preview them. 
-                  After you click the 'save' button you can close the tab and come back to it later if you want, your temporary changes will persist.
+                  After you click the 'Save' button you can close the tab and come back to it later if you want, your temporary changes will persist.
               </p>
               <div class="o-well">
                   <img src="/design-system/images/uploads/cms-demo4.gif" alt="Screenshot showing how to save changes in Netlify CMS" />

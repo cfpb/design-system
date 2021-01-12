@@ -180,8 +180,25 @@ variation_groups:
                   <button class="a-btn">Search</button>
               </div>
           </div>
-use_cases: The choice of input field type (single vs. multi-line) should be
-  proportional to the expected user input. If you're expecting a
+use_cases: >-
+  The length of single-line text input fields should be proportional to the
+  expected user input, so that the user can see what they've typed without
+  having to scroll to reveal hidden content. In addition, choosing the
+  appropriate width for text input fields to match the kind of information
+  requested makes it easier for users to quickly grasp what’s being asked. 
+
+
+  For example, it’s hard to understand at a glance that a single 1,000 px-wide text field is asking for your phone number or birth date. When possible, be explicit with the width by dividing it into known character counts. For instance, social security number should be three characters, then two, then four. (Be mindful of not getting too restrictive, however. This approach could work for phone numbers, but only if international numbers are not permitted.)
+
+
+  These types of inputs should always be smaller widths:
+
+
+  * Middle initial
+
+  * Date, month, or year
+
+  * State abbreviation
 guidelines: >-
   ### Stylistic guidelines
 

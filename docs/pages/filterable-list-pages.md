@@ -26,6 +26,8 @@ variation_groups:
 use_cases: >-
   ### When to use
 
+
+
   * When asking users to look through more than 20 articles, documents, or resources.
 
   * Additional content may be included before or after the filterable list, but it is not encouraged. The filterable list should be the focus of the page.

@@ -28,40 +28,24 @@ variation_groups:
                   </div>
               </div>
               <style>
+                   #hero1 .m-hero_wrapper {
+                     background-color: #d4e7e6;
+                   }
                   #hero1 .m-hero_image {
                       background-image:
-                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
+                          url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png');
                       background-image: -webkit-image-set(
-                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
-                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+                          url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
+                          url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 2x
                       );
                       background-image: image-set(
-                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
-                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+                          url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
+                          url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 2x
                       );
                       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png',
+                          src='https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png',
                           sizingMethod='scale');
                       padding-bottom: 41.4893617%;
-                  }
-
-                  @media screen and (min-width: 37.5625em) {
-                      #hero1 .m-hero_image {
-                          background-image:
-                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
-                          background-image: -webkit-image-set(
-                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
-                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
-                          );
-                          background-image: image-set(
-                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
-                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
-                          );
-                          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png',
-                              sizingMethod='scale');
-                          padding-bottom: 41.4893617%;
-                      }
                   }
               </style>
           </section>

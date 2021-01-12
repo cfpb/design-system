@@ -229,6 +229,16 @@ variation_groups:
 
 
           * Include the CFPB logo; helps with identification and determining origin if the graphic gets re-used
+      - variation_name: Web pages
+        variation_description: >-
+          Generally presented as interactive visualizations rather than static
+          images.
+
+
+          #### Figure number
+
+
+          * Uses the `H5` heading style
   - variation_group_name: Color
     variation_group_description: >-
       When used properly, color can help clarify relationships between data,

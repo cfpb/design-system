@@ -5,13 +5,16 @@ section: pages
 status: Released
 description: >-
   **Live example:**
-  <https://www.consumerfinance.gov/coronavirus/mortgage-and-housing-assistance/request-forbearance-or-mortgage-relief/>
+  https://www.consumerfinance.gov/owning-a-home/process/prepare/
 
 
   "Browse" page types provide detailed information related to a larger topic (consumer information, product overviews, etc). These pages typically contain medium-length content, include "how-to" action steps for specific tasks, and may provide links to specific documents or resources.
 
 
-  The "Browse" page template automatically includes **left-hand sub-navigation** for all children pages that share the parent page. (For example, note that all the navigation items in the **Live example** are housed under the parent [Mortgage and Housing Assistance](https://content.consumerfinance.gov/coronavirus/mortgage-and-housing-assistance/) page.) Browse pages can also have parent-child relationships to other browse pages.
+  The "Browse" page template automatically includes **left-hand sub-navigation** for all children pages that share the parent page. (For example, note how all the navigation items in the **Live example** are housed under the parent [Buying a house](https://content.consumerfinance.gov/owning-a-home/)[](https://content.consumerfinance.gov/coronavirus/mortgage-and-housing-assistance/) page.)
+
+
+  Browse pages can also have parent-child relationships to other browse pages; note the children pages from the **live example**, e.g. [Check your credit](https://content.consumerfinance.gov/owning-a-home/process/prepare/check-your-credit/).
 variation_groups:
   - variation_group_name: Standard browse page
     variations:

@@ -3,11 +3,12 @@ title: Notifications
 layout: variation
 section: components
 status: Released
-description: "This page describes notifications and form alerts, the latter
-  which provide a light-touch alternative for inline form validation or feedback
-  to a user’s input. The default (base) notification is also described; it is
-  modified by scripting in production to update the state and message based on
-  user input.  "
+description: Notifications alert users to the state of a form or page. In forms,
+  notifications can appear at the top of the form or in line with form fields
+  and can highlight successful submissions, errors that need to be corrected, or
+  details to know before submitting the form. When used on a page, notifications
+  can call out important information about the content (including if the content
+  is still loading).
 variation_groups:
   - variation_group_name: Types
     variations:

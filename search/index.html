@@ -5776,7 +5776,7 @@ Note: While th elements normally only contain raw text, they may sometimes conta
 
                 
                     'variation_name1': 'Single-line text inputs',
-                    'variation_description1': "\n",
+                    'variation_description1': "Use to input single lines of text, for example email addresses, names, or search queries. The length of the input field should be proportional to the expected user input, so that the user can see what they’ve typed without having to scroll to reveal hidden content. See the guidelines section below for more information.\n",
                     'variation_code_snippet1': `&lt;!--States are shown for demonstration purposes only--&gt;
 &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-default&quot;&gt;
 Default
@@ -5817,7 +5817,7 @@ Disabled
 `,
                 
                     'variation_name2': 'Multi-line textarea inputs',
-                    'variation_description2': "Use multi-line text inputs for long-form answers.\n\n",
+                    'variation_description2': "Use for long-form answers that are more than a single word or two. Make sure the input size is big enough that the user can see what they’ve typed without having to scroll to reveal hidden content, and small enough that the user doesn’t have  to navigate the viewport in order to see the entire field at once.\n",
                     'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textarea-example-default&quot;&gt;
     Label
 &lt;/label&gt;
@@ -5914,7 +5914,7 @@ Disabled
             'title': 'Text inputs',
             'description': "Text fields give users the ability to enter text. They can be single-line or multi-line (textarea inputs).\n",
             'use_cases': "\n",
-            'guidelines': "Stylistic guidelines\n\nChoose the appropriate width for text input fields so they match the kind of information requested. This makes it easier for users to quickly grasp what’s being asked.\n\nFor example, it’s hard to understand at a glance that a single 1,000 px-wide text field is asking for your phone number or birth date. When possible, be even more explicit with the width by dividing it into known character counts. For instance, social security number should be three characters, then two, then four. Be mindful of not getting too restrictive, however. This approach could work for phone numbers, but only if international numbers are not permitted.\n\nThese types of inputs should always be smaller widths:\n\n\n  Middle initial\n  Date, month, or year\n  State abbreviation\n\n\nContent guidelines\n\nText should be in sentence case.\n\nUse placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field.\n",
+            'guidelines': "Stylistic guidelines\n\nChoose the appropriate width for text input fields so they match the kind of information requested. This makes it easier for users to quickly grasp what’s being asked.\n\nFor example, it’s hard to understand at a glance that a single 1,000 px-wide text field is asking for your phone number or birth date. When possible, be even more explicit with the width by dividing it into known character counts. For instance, social security number should be three characters, then two, then four. Be mindful of not getting too restrictive, however. This approach could work for phone numbers, but only if international numbers are not permitted.\n\nThese types of inputs should always be smaller widths:\n\n\n  Middle initial\n  Date, month, or year\n  State abbreviation\n\n\nContent guidelines\n\nText should be in sentence case.\n\nUse placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see Design System guidance on placeholder text.\n",
             'behavior': "As the screen size gets smaller, break multi-column inputs into a single, stacked column. Fields that are next to each other on a large screen, should stack at smaller screen sizes. When possible, fields should span the entire width of the screen at the smallest screen sizes.\n",
             'accessibility': "Inputs should always be paired with a label for accessibility reasons.\n\nUsers of screen readers use the tab key to move focus from one form control to another. Make sure that tab focus order reflects the way you would like users to navigate through the form. Consider whether tabs should move a user down or across the page.\n",
             'research': "\n",

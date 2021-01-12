@@ -4,12 +4,14 @@ layout: variation
 section: pages
 status: Released
 description: >-
-  Browse page types provide specific topic or product overviews and information.
-  Often these pages contain medium-length content, access to specific documents
-  or other resources, or descriptions of action steps.
+  **Live example:**
+  <https://www.consumerfinance.gov/coronavirus/mortgage-and-housing-assistance/request-forbearance-or-mortgage-relief/>
 
 
-  Related browse pages within a specific section can be accessed via the left side sub-navigation so users can easily move around within the topic. Browse pages can have parent-child relationships to other browse pages.
+  "Browse" page types provide detailed information related to a larger topic (consumer information, product overviews, etc). These pages typically contain medium-length content, include "how-to" action steps for specific tasks, and may provide links to specific documents or resources.
+
+
+  The "Browse" page template automatically includes **left-hand sub-navigation** for all children pages that share the parent page. (For example, note that all the navigation items in the **Live example** are housed under the parent [Mortgage and Housing Assistance](https://content.consumerfinance.gov/coronavirus/mortgage-and-housing-assistance/) page.) Browse pages can also have parent-child relationships to other browse pages.
 variation_groups:
   - variation_group_name: Standard browse page
     variations:

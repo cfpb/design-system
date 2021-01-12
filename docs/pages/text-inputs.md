@@ -85,9 +85,13 @@ variation_groups:
           addresses, names, or search queries. The length of the input field
           should be proportional to the expected user input, so that the user
           can see what they've typed without having to scroll to reveal hidden
-          content.
+          content. See the guidelines section below for more information.
       - variation_name: Multi-line textarea inputs
-        variation_description: Use for long-form answers where .
+        variation_description: Use for long-form answers that are more than a single
+          word or two, in particular answers written as full sentences. The size
+          of the multi-line input field should be proportional to the expected
+          user input, so that the user can see what they've typed without having
+          to scroll to reveal hidden content.
         variation_code_snippet: >-
           <label class="a-label a-label__heading"
           for="textarea-example-default">
@@ -180,31 +184,7 @@ variation_groups:
                   <button class="a-btn">Search</button>
               </div>
           </div>
-use_cases: >-
-  The length of single-line text input fields should be proportional to the
-  expected user input, so that the user can see what they've typed without
-  having to scroll to reveal hidden content. In addition, choosing the
-  appropriate width for text input fields to match the kind of information
-  requested makes it easier for users to quickly grasp what’s being asked. 
-
-
-  For example, it’s hard to understand at a glance that a single 1,000 px-wide text field is asking for your phone number or birth date. When possible, be explicit with the width by dividing it into known character counts. For instance, social security number should be three characters, then two, then four. (Be mindful of not getting too restrictive, however. This approach could work for phone numbers, but only if international numbers are not permitted.)
-
-
-  These types of inputs should always be smaller widths:
-
-
-  * Middle initial
-
-  * Date, month, or year
-
-  * State abbreviation
-
-
-  Multi-line text input fields should be used for longer form answers 
-
-
-  Read information about \[placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1)
+use_cases: ""
 guidelines: >-
   ### Stylistic guidelines
 
@@ -231,7 +211,7 @@ guidelines: >-
   Text should be in sentence case.
 
 
-  Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field.
+  Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. See [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
 behavior: As the screen size gets smaller, break multi-column inputs into a
   single, stacked column. Fields that are next to each other on a large screen,
   should stack at smaller screen sizes. When possible, fields should span the

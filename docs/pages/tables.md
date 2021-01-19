@@ -201,7 +201,7 @@ variation_groups:
           * Bottom border: 1px, Gray-50 #a2a3a4 on each row
           * Font: 16px Avenir Next Regular Black
           * Font-color: Black #101820
-          * Header background color: #f1f1f1
+          * Header background color: Gray-05 #f7f8f9
           * Labels font: 14px Avenir Next Regular, all caps
           * Labels font-color: Black #101820
           * Padding, column label/bottom border: 15px

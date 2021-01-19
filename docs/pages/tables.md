@@ -59,7 +59,7 @@ variation_groups:
           #### Header
 
 
-          * Background: Gray-05 #F8F8F8
+          * Background: Gray-05 #f7f8f9
 
           * Font: Avenir Next Demi-bold, all caps
 
@@ -77,7 +77,7 @@ variation_groups:
           #### Cells
 
 
-          * Background: Gray-05 #F8F8F8
+          * Background: Gray-05 #f7f8f9
 
           * Font: Avenir Next Regular Black
 
@@ -279,7 +279,7 @@ variation_groups:
           ### Styles for scrolling tables
 
           * Border: 1px, Gray-50 #BABBBD around the scrolling table
-          * Alternate row striping: Grey-05 #F8F8F8
+          * Alternate row striping: Grey-05 #f7f8f9
   - variations:
       - variation_code_snippet: |-
           <table class="o-table o-table__striped">

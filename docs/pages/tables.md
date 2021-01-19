@@ -59,7 +59,7 @@ variation_groups:
           #### Header
 
 
-          * Background: Gray-05 #F8F8F8
+          * Background: Gray-05 #f7f8f9
 
           * Font: Avenir Next Demi-bold, all caps
 
@@ -71,13 +71,13 @@ variation_groups:
           #### Border
 
 
-          * Bottom: 1px, Gray-50 #BABBBD on each row, including header
+          * Bottom: 1px, Gray-50 #a2a3a4 on each row, including header
 
 
           #### Cells
 
 
-          * Background: Gray-05 #F8F8F8
+          * Background: Gray-05 #f7f8f9
 
           * Font: Avenir Next Regular Black
 
@@ -138,7 +138,7 @@ variation_groups:
 
           #### Border
 
-          * Bottom: 1px, Gray-50 #BABBBD
+          * Bottom: 1px, Gray-50 #a2a3a4
 
           #### Cells
 
@@ -198,10 +198,10 @@ variation_groups:
         variation_specs: |-
           ### Style for directory tables (small screens)
 
-          * Bottom border: 1px, Gray-50 #BABBBD on each row
+          * Bottom border: 1px, Gray-50 #a2a3a4 on each row
           * Font: 16px Avenir Next Regular Black
           * Font-color: Black #101820
-          * Header background color: #f1f1f1
+          * Header background color: Gray-05 #f7f8f9
           * Labels font: 14px Avenir Next Regular, all caps
           * Labels font-color: Black #101820
           * Padding, column label/bottom border: 15px
@@ -278,8 +278,8 @@ variation_groups:
         variation_specs: |-
           ### Styles for scrolling tables
 
-          * Border: 1px, Gray-50 #BABBBD around the scrolling table
-          * Alternate row striping: Grey-05 #F8F8F8
+          * Border: 1px, Gray-50 #a2a3a4 around the scrolling table
+          * Alternate row striping: Grey-05 #f7f8f9
   - variations:
       - variation_code_snippet: |-
           <table class="o-table o-table__striped">

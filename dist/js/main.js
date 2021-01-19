@@ -4363,7 +4363,7 @@ function instantiateAll( selector, Constructor, scope ) {
   let element;
   for ( let i = 0, len = elements.length; i < len; i++ ) {
     element = elements[i];
-    if ( element.hasAttribute( 'data-js-hook' ) === false ) {
+    if ( _data_hook__WEBPACK_IMPORTED_MODULE_0__.contains( element, INIT_FLAG ) === false ) {
       inst = new Constructor( element );
       inst.init();
       insts.push( inst );

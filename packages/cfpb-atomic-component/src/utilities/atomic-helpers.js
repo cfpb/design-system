@@ -9,7 +9,7 @@
    - Atom
    ========================================================================= */
 
-import * as dataHook from './data-hook';
+import { add, contains, remove } from './data-hook';
 import { STATE_PREFIX } from './standard-type';
 
 /**
@@ -86,11 +86,11 @@ function _verifyClassExists( element, baseClass ) {
  *   false otherwise.
  */
 function setInitFlag( element ) {
-  if ( dataHook.contains( element, INIT_FLAG ) ) {
+  if ( contains( element, INIT_FLAG ) ) {
     return false;
   }
 
-  dataHook.add( element, INIT_FLAG );
+  add( element, INIT_FLAG );
 
   return true;
 }
@@ -103,11 +103,11 @@ function setInitFlag( element ) {
  *   otherwise false if it didn't exist.
  */
 function destroyInitFlag( element ) {
-  if ( !dataHook.contains( element, INIT_FLAG ) ) {
+  if ( !contains( element, INIT_FLAG ) ) {
     return false;
   }
 
-  dataHook.remove( element, INIT_FLAG );
+  remove( element, INIT_FLAG );
 
   return true;
 }
@@ -127,7 +127,7 @@ function instantiateAll( selector, Constructor, scope ) {
   let element;
   for ( let i = 0, len = elements.length; i < len; i++ ) {
     element = elements[i];
-    if ( dataHook.contains( element, INIT_FLAG ) === false ) {
+    if ( contains( element, INIT_FLAG ) === false ) {
       inst = new Constructor( element );
       inst.init();
       insts.push( inst );

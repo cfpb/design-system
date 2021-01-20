@@ -120,6 +120,72 @@ variation_groups:
           transition.fadeOut();
 
           ```
+      - variation_name: MaxHeight transition
+        variation_description: A transition that changes the height of an element.
+        variation_code_snippet: >-
+          <div class="u-max-height-summary example-box">
+            Click me!
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
+
+          <script>
+            const maxHeightTransitionExample = document.querySelector( '.example-box.u-max-height-summary' );
+            const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init();
+            maxHeightTransitionExample.addEventListener( 'click', () => {
+              maxHeightTransition.maxHeightDefault();
+              setTimeout( () => {
+                maxHeightTransition.maxHeightSummary();
+              }, 1000 );
+            } );
+          </script>
+        variation_code_snippet_rendered: >-
+          <div class="u-max-height-summary example-box" style="height: auto;">
+            Click me!
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
+          <script>
+            document.addEventListener( 'DOMContentLoaded', function() {
+              const maxHeightTransitionExample = document.querySelector( '.example-box.u-max-height-summary' );
+              const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init();
+              maxHeightTransitionExample.addEventListener( 'click', function() {
+                maxHeightTransition.maxHeightDefault();
+                setTimeout( function() {
+                  maxHeightTransition.maxHeightSummary();
+                }, 1000 );
+              } );
+            } );
+          </script>
+        variation_implementation: >-
+          The alpha (opacity) transition is added to an element by creating a
+          new AlphaTransition instance in JavaScript and calling its methods:
+
+
+          ```
+
+          // Create reference to an element in the DOM.
+
+          const element = document.querySelector( '.example-box' );
+
+
+          // Create a new transition instance and pass in the element reference.
+
+          const transition = new MaxHeightTransition( element );
+
+
+          // Initialize the transition.
+
+          transition.init();
+
+
+          // Call methods on the transition.
+
+          transition.maxHeightSummary();
+
+          ```
     variation_group_name: Types
     variation_group_description: ""
 use_cases: ""

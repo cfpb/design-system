@@ -5,14 +5,6 @@
    and for the removing the transition duration.
    ========================================================================== */
 
-.u-move-transition {
-    transition: transform 0.25s ease-out;
-}
-
-.u-alpha-transition {
-    transition: opacity 0.25s linear;
-}
-
 .u-no-animation {
     transition-duration: 0s !important;
 }
@@ -20,6 +12,10 @@
 //
 // Utility classes for moving an element using transform translate values.
 //
+
+.u-move-transition {
+    transition: transform 0.25s ease-out;
+}
 
 .u-move-to-origin {
     transform: translate3d( 0, 0, 0 );
@@ -49,10 +45,38 @@
 //
 // Utility classes for setting an element's opacity.
 //
+
+.u-alpha-transition {
+    transition: opacity 0.25s linear;
+}
+
 .u-alpha-100 {
     opacity: 1;
 }
 
 .u-alpha-0 {
     opacity: 0;
+}
+
+//
+// Utility classes for setting an element's height.
+//
+
+.u-max-height-transition {
+    // This is an arbitrary value to give max-height an initial value.
+    max-height: 1000px;
+
+    transition: max-height 0.25s ease-out;
+}
+
+.u-max-height-default {
+    max-height: 1000px;
+}
+
+.u-max-height-zero {
+    max-height: 0 !important;
+}
+
+.u-max-height-summary {
+    max-height: unit( @base-line-height-px * 4 / @base-font-size-px, em ) !important;
 }

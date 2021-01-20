@@ -55,7 +55,7 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 // .btn__warning
 @btn__warning-text:         @white;
-@btn__warning-bg:           @red;
+@btn__warning-bg:           @red-mid-dark;
 @btn__warning-bg-hover:     @red-dark;
 @btn__warning-bg-active:    @gray-dark;
 

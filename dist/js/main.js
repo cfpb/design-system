@@ -4322,11 +4322,11 @@ function _verifyClassExists( element, baseClass ) {
  *   false otherwise.
  */
 function setInitFlag( element ) {
-  if ( _data_hook__WEBPACK_IMPORTED_MODULE_0__.contains( element, INIT_FLAG ) ) {
+  if ( (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)( element, INIT_FLAG ) ) {
     return false;
   }
 
-  _data_hook__WEBPACK_IMPORTED_MODULE_0__.add( element, INIT_FLAG );
+  (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.add)( element, INIT_FLAG );
 
   return true;
 }
@@ -4339,11 +4339,11 @@ function setInitFlag( element ) {
  *   otherwise false if it didn't exist.
  */
 function destroyInitFlag( element ) {
-  if ( !_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains( element, INIT_FLAG ) ) {
+  if ( !(0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)( element, INIT_FLAG ) ) {
     return false;
   }
 
-  _data_hook__WEBPACK_IMPORTED_MODULE_0__.remove( element, INIT_FLAG );
+  (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.remove)( element, INIT_FLAG );
 
   return true;
 }
@@ -4363,7 +4363,7 @@ function instantiateAll( selector, Constructor, scope ) {
   let element;
   for ( let i = 0, len = elements.length; i < len; i++ ) {
     element = elements[i];
-    if ( _data_hook__WEBPACK_IMPORTED_MODULE_0__.contains( element, INIT_FLAG ) === false ) {
+    if ( (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)( element, INIT_FLAG ) === false ) {
       inst = new Constructor( element );
       inst.init();
       insts.push( inst );

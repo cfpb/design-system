@@ -163,9 +163,7 @@ variation_groups:
           decreases the amount of text necessary in alt tags.
 
 
-
-
-          ![Labeled display of the titles in a chart](/design-system/images/uploads/parts-of-a-chart_01.png)
+          ![Labeled display of the titles in a chart](/design-system/images/uploads/parts-of-a-chart_titles.png)
       - variation_name: Labels and keys
         variation_description: >
           Wherever possible, charts should not include a key, and data should be
@@ -178,138 +176,65 @@ variation_groups:
 
 
           ![Labeled display of the data on a chart](/design-system/images/uploads/parts-of-a-chart_013.png)
-      - variation_name: Reports
+      - variation_name: Standard visualizations
         variation_description: >-
+          All variations use these base styles and guidelines unless otherwise
+          noted.
+
+
+          #### Title
+
+
+          * Gives an overview of what the graph is about
+
+          * Uses the `h3` heading style
+
+          * 2 lines of text maximum
+
+
+          #### Subtitle
+
+
+          * Explains the general trends of the graph and what that means, including why it is important
+
+          * Uses the `body text` paragraph style
+
+          * 3 lines of text maximum
+
+
+          #### Notes
+
+
+          * Describes any caveats or inconsistencies with the data such as explaining why numbers do not add up to 100% or the specific dates that the data is pulled from
+
+
+          #### Data source information
+
+
+          * Provides a link to the URL of a spreadsheet or to the source of the data
+
+          * Important to include for trustworthiness and validity
+
+          * Allows people to dive deeper into the data and explore the nuances for themselves or to replicate the visualization
+      - variation_name: Reports
+        variation_description: |
+          #### Figure number
+
+          * Uses the `Figure number` style (all caps)
+      - variation_name: Web pages
+        variation_description: >-
+          Generally presented as interactive visualizations rather than static
+          images.
+
+
           #### Figure number
 
 
-          * Uses the `Figure number` style (all caps)
-
-
-          #### Title
-
-
-          * Gives an overview of what the graph is about
-
-          * Uses the `h3` heading style
-
-          * 2 lines of text maximum
-
-
-          #### Subtitle
-
-
-          * Explains the general trends of the graph and what that means, including why it is important
-
-          * Uses the `body text` paragraph style
-
-          * 3 lines of text maximum
-
-
-          #### Notes
-
-
-          * Describes any caveats or inconsistencies with the data such as explaining why numbers do not add up to 100% or the specific dates that the data is pulled from
-
-
-          #### Data source information
-
-
-          * Provides a link to the URL of a spreadsheet or to the source of the data
-
-          * Important to include for trustworthiness and validity
-
-          * Allows people to dive deeper into the data and explore the nuances for themselves or to replicate the visualization
+          * Uses the `H5` heading style
       - variation_name: Blog posts
-        variation_description: >-
-          
-
-          #### Title
-
-
-          * Gives an overview of what the graph is about
-
-          * Uses the `h3` heading style
-
-          * 2 lines of text maximum
-
-
-          #### Subtitle
-
-
-          * Explains the general trends of the graph and what that means, including why it is important
-
-          * Uses the `body text` paragraph style
-
-          * 3 lines of text maximum
-
-
-          #### Notes
-
-
-          * Describes any caveats or inconsistencies with the data such as explaining why numbers do not add up to 100% or the specific dates that the data is pulled from
-
-
-          #### Date
-
-
-          * Include a date to at least the month and year of when the data was collected to provide context and accuracy over time.
-
-
-          #### Data source information
-
-
-          * Provides a link to the URL of a spreadsheet or to the source of the data
-
-          * Important to include for trustworthiness and validity
-
-          * Allows people to dive deeper into the data and explore the nuances for themselves or to replicate the visualization
+        variation_description: Uses standard styles, no figure number.
       - variation_name: Social media
         variation_description: >-
-          
-
-          #### Title
-
-
-          * Gives an overview of what the graph is about
-
-          * Uses the `h3` heading style
-
-          * 2 lines of text maximum
-
-
-          #### Subtitle
-
-
-          * Explains the general trends of the graph and what that means, including why it is important
-
-          * Uses the `body text` paragraph style
-
-          * 3 lines of text maximum
-
-
-          #### Notes
-
-
-          * Describes any caveats or inconsistencies with the data such as explaining why numbers do not add up to 100% or the specific dates that the data is pulled from
-
-
-          #### Date
-
-
-          * Include a date to at least the month and year of when the data was collected to provide context and accuracy over time.
-
-
-          #### Data source information
-
-
-          * Provides a link to the URL of a spreadsheet or to the source of the data
-
-          * Important to include for trustworthiness and validity
-
-          * Allows people to dive deeper into the data and explore the nuances for themselves or to replicate the visualization
-
-
           #### CFPB logo
 
 

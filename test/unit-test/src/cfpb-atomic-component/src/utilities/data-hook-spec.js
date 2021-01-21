@@ -37,11 +37,4 @@ describe( 'Data hook', () => {
       expect( testComponent.getAttribute( 'data-js-hook' ) ).toBe( '' );
     } );
   } );
-
-  describe( 'remove()', () => {
-    it( 'should remove a value to the data-* attribute of the element', () => {
-      remove( testComponent, 'test_behavior' );
-      expect( testComponent.getAttribute( 'data-js-hook' ) ).toBe( '' );
-    } );
-  } );
 } );

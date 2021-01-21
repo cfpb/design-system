@@ -160,8 +160,8 @@ variation_groups:
             } );
           </script>
         variation_implementation: >-
-          The alpha (opacity) transition is added to an element by creating a
-          new AlphaTransition instance in JavaScript and calling its methods:
+          The max-height transition is added to an element by creating a
+          new MaxHeightTransition instance in JavaScript and calling its methods:
 
 
           ```

@@ -62,12 +62,22 @@ describe( 'atomic-helpers', () => {
       const instArr = instantiateAll( `.${ testClass }`, AtomicComponent );
       expect( instArr ).toBeInstanceOf( Array );
       expect( instArr.length ).toBe( 2 );
+      const instArr2 = instantiateAll( `.${ testClass }`, AtomicComponent );
+      expect( instArr2 ).toBeInstanceOf( Array );
+      expect( instArr2.length ).toBe( 0 );
     } );
 
     it( 'should return an empty array if no instances found', () => {
       const instArr = instantiateAll( '.missing-class', AtomicComponent );
       expect( instArr ).toBeInstanceOf( Array );
       expect( instArr.length ).toBe( 0 );
+    } );
+
+    it( 'should not return instances that have already been initialized', () => {
+      componentDom.setAttribute( 'data-js-hook', 'state_atomic_init' );
+      const instArr = instantiateAll( `.${ testClass }`, AtomicComponent );
+      expect( instArr ).toBeInstanceOf( Array );
+      expect( instArr.length ).toBe( 1 );
     } );
   } );
 

@@ -385,6 +385,16 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    */
   function _bindEvents() {
 
+    _headerDom.addEventListener( 'mousemove', function( event ) {
+      const target = event.target;
+      // Check if we're over the down-arrow on the right side of the input.
+      if ( event.layerX > target.offsetWidth - 35 ) {
+        target.style.cursor = 'pointer';
+      } else {
+        target.style.cursor = 'auto';
+      }
+    } );
+
     _searchDom.addEventListener( 'input', function() {
       _evaluate( this.value );
     } );

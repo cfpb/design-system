@@ -4221,6 +4221,23 @@ select.o-multiselect {
 .o-multiselect_header {
   position: relative;
 }
+.o-multiselect_header:after {
+  width: 2.1875em;
+  box-sizing: border-box;
+  border-left: 1px solid #919395;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e7e8e9;
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20988.2%201200%22%20fill=%22rgb(16,%2024,%2032)%22%3E%3Cpath%20d=%22M494.1%20967.2c-17.3%200-33.8-6.8-46-19L18.6%20518.6c-25.1-25.6-24.8-66.8.8-91.9%2025.3-24.8%2065.8-24.8%2091.1%200l383.6%20383.6%20383.6-383.6c25.6-25.1%2066.8-24.8%2091.9.8%2024.8%2025.3%2024.8%2065.8%200%2091.1L540.1%20948.1c-12.2%2012.2-28.7%2019.1-46%2019.1z%22/%3E%3C/svg%3E');
+  background-size: auto 1.1875em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid #919395;
+  content: '';
+  pointer-events: none;
+}
 .o-multiselect_search[type="text"] {
   display: block;
   box-sizing: border-box;
@@ -4273,6 +4290,9 @@ select.o-multiselect {
 }
 .o-multiselect_options.u-max-selections:after {
   content: 'Reached maximum of five selections';
+}
+.o-multiselect_options .a-label {
+  width: 100%;
 }
 .o-multiselect_choices {
   padding-left: 0;

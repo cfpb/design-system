@@ -327,7 +327,7 @@
 
         
         <div class="o-variation_group_description">
-            <p>Pagination consists of “Older” and “Newer” links, styled as buttons, and an inline form (input, submit button) that allows users to navigate to specific pages by number. When appropriate, the buttons may be labeled “Previous” and “Next”.</p>
+            <p>Pagination consists of buttons to navigate through content, along with an inline form (input field, submit button) to enable users to navigate to specific pages by number.</p>
 
         </div>
         
@@ -651,7 +651,11 @@
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<p>Tables with over 20 rows can be paired with pagination.</p>
+<ul>
+  <li>In general, show 20-25 results per page, depending on the nature of the content being displayed.</li>
+  <li>If content is sorted by date, label the navigation buttons “Older” and “Newer”; otherwise, label the buttons “Previous” and “Next”.</li>
+  <li>Tables with over 20 rows can be paired with pagination.</li>
+</ul>
 
                 
             
@@ -661,8 +665,22 @@
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<p><code class="language-plaintext highlighter-rouge">@bp-xs-max</code>: On small screens, the buttons display next to each other, stacked on top of the form</p>
+<p>On small screens, the buttons display next to each other, stacked on top of the form (<code class="language-plaintext highlighter-rouge">@bp-xs-max</code>).</p>
 
+<table>
+  <thead>
+    <tr>
+      <th>Above 600 px</th>
+      <th>Below 601 px</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.03-pm.png" alt="Pagination at breakpoints above 600 px"></td>
+      <td><img src="/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.30-pm.png" alt="Pagination at breakpoints below 601 px"></td>
+    </tr>
+  </tbody>
+</table>
 
                 
             
@@ -745,8 +763,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/pagination.md">
-                    <time datetime="2020-07-28 10:49:17 -0400">
-                        10:49:17 AM Jul 28, 2020
+                    <time datetime="2021-01-22 17:07:07 -0500">
+                         5:07:07 PM Jan 22, 2021
                     </time>
                 </a>
             </small>

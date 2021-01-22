@@ -485,11 +485,12 @@ td {
     padding: unit( 10px / @base-font-size-px, em );
 
     thead & {
-        .h5();
-
-        padding: unit( 10px / @font-size, em );
+        // 10px / 14px
+        padding: unit( 10px / @size-v, em );
         background: @table-head-bg;
         color: @table-head-text;
+        font-size: unit( 16px / @base-font-size-px, em );
+        vertical-align: top;
     }
 }
 

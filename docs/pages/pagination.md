@@ -102,15 +102,16 @@ variation_groups:
         variation_name: First and last pages
     variation_group_name: Standard pagination
     variation_group_description: Pagination consists of buttons to navigate through
-      content. Buttons are labeled "Older" and "Newer" if content is sorted by
-      date, or otherwise labeled "Previous" and "Next". To enable users to
-      navigate to specific pages by number, pagination also contains an inline
-      form with an input field and submit button.
+      content, along with an inline form (input field, submit button) to enable
+      users to navigate to specific pages by number.
 use_cases: ""
-guidelines: In general, show 20-25 results per page, depending on the nature of
-  the content being displayed. If content is sorted by date, label the
-  navigation buttons "Older" and "Newer"; otherwise, label the buttons
-  "Previous" and "Next". Tables with over 20 rows can be paired with pagination.
+guidelines: >-
+  * In general, show 20-25 results per page, depending on the nature of the
+  content being displayed. 
+
+  * If content is sorted by date, label the navigation buttons "Older" and "Newer"; otherwise, label the buttons "Previous" and "Next". 
+
+  * Tables with over 20 rows can be paired with pagination.
 behavior: >-
   On small screens, the buttons display next to each other, stacked on top of
   the form (`@bp-xs-max`).

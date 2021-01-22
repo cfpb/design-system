@@ -65,8 +65,7 @@ variation_groups:
           variables](https://cfpb.github.io/design-system/components/variables#\
           pagination)"
       - variation_code_snippet: >-
-          <nav class="m-pagination" role="navigation"
-          aria-label="Pagination">
+          <nav class="m-pagination" role="navigation" aria-label="Pagination">
 
           <a class="a-btn  a-btn__disabled m-pagination_btn-prev">
 
@@ -93,8 +92,7 @@ variation_groups:
                 inputmode="numeric" value="1">
              of 149
             </label>
-          <button class="a-btn a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit-first-last" type="submit">Go</button>
-          </form>
+          <button class="a-btn a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit-first-last" type="submit">Go</button> </form>
 
           </nav>
         variation_description: When on the first or last page of paginated content, be
@@ -103,12 +101,16 @@ variation_groups:
         variation_jinja_code_snippet: ""
         variation_name: First and last pages
     variation_group_name: Standard pagination
-    variation_group_description: Pagination consists of “Older” and “Newer” links,
-      styled as buttons, and an inline form (input, submit button) that allows
-      users to navigate to specific pages by number. When appropriate, the
-      buttons may be labeled “Previous” and “Next”.
+    variation_group_description: Pagination consists of buttons to navigate through
+      content. Buttons are labeled "Older" and "Newer" if content is sorted by
+      date, or otherwise labeled "Previous" and "Next". To enable users to
+      navigate to specific pages by number, pagination also contains an inline
+      form with an input field and submit button.
 use_cases: ""
-guidelines: Tables with over 20 rows can be paired with pagination.
+guidelines: In general, show 20-25 results per page, depending on the nature of
+  the content displayed. If content is sorted by date, label the navigation
+  buttons "Older" and "Newer"; otherwise, label the buttons "Previous" and
+  "Next". Tables with over 20 rows can be paired with pagination.
 behavior: >+
   `@bp-xs-max`: On small screens, the buttons display next to each other,
   stacked on top of the form

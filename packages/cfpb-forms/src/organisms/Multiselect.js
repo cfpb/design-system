@@ -145,7 +145,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     _searchDom = MultiselectUtils.create( 'input', {
       className:    BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
       type:         'text',
-      placeholder:  _placeholder || 'Choose up to five',
+      placeholder:  _placeholder || 'Select up to five',
       inside:       _headerDom,
       id:           _name,
       autocomplete: 'off'
@@ -384,6 +384,16 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * Binds events to the search input, option list, and checkboxes.
    */
   function _bindEvents() {
+
+    _headerDom.addEventListener( 'mousemove', function( event ) {
+      const target = event.target;
+      // Check if we're over the down-arrow on the right side of the input.
+      if ( event.layerX > target.offsetWidth - 35 ) {
+        target.style.cursor = 'pointer';
+      } else {
+        target.style.cursor = 'auto';
+      }
+    } );
 
     _searchDom.addEventListener( 'input', function() {
       _evaluate( this.value );

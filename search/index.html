@@ -5955,6 +5955,25 @@ Disabled
   } );
 &lt;/script&gt;`,
                 
+                    'variation_name3': 'MaxHeight transition',
+                    'variation_description3': "A transition that changes the height of an element.\n",
+                    'variation_code_snippet3': `&lt;div class=&quot;u-max-height-summary example-box&quot;&gt;
+  Click me!
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+&lt;/div&gt;
+&lt;script&gt;
+  const maxHeightTransitionExample = document.querySelector( &#39;.example-box.u-max-height-summary&#39; );
+  const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init();
+  maxHeightTransitionExample.addEventListener( &#39;click&#39;, () =&gt; {
+    maxHeightTransition.maxHeightDefault();
+    setTimeout( () =&gt; {
+      maxHeightTransition.maxHeightSummary();
+    }, 1000 );
+  } );
+&lt;/script&gt;`,
+                
             
 
 

@@ -581,6 +581,146 @@ transition.fadeOut();
 
         </div>
         
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>MaxHeight transition</h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>A transition that changes the height of an element.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="u-max-height-summary example-box" style="height: auto;">
+  Click me!
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</div> <script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    const maxHeightTransitionExample = document.querySelector( '.example-box.u-max-height-summary' );
+    const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init();
+    maxHeightTransitionExample.addEventListener( 'click', function() {
+      maxHeightTransition.maxHeightDefault();
+      setTimeout( function() {
+        maxHeightTransition.maxHeightSummary();
+      }, 1000 );
+    } );
+  } );
+</script>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-maxheight-transition-a-transitio-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-maxheight-transition-a-transitio-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="govuk-tabs u-hidden" data-module="tabs" id="details-maxheight-transition-a-transitio-3">
+                <ul class="govuk-tabs__list">
+                    
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#details-maxheight-transition-a-transitio-html-code-snippet-3">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#details-maxheight-transition-a-transitio-implementation-3">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="govuk-tabs__panel" id="details-maxheight-transition-a-transitio-html-code-snippet-3">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="u-max-height-summary example-box"&gt;
+  Click me!
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+&lt;/div&gt;
+&lt;script&gt;
+  const maxHeightTransitionExample = document.querySelector( '.example-box.u-max-height-summary' );
+  const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init();
+  maxHeightTransitionExample.addEventListener( 'click', () =&gt; {
+    maxHeightTransition.maxHeightDefault();
+    setTimeout( () =&gt; {
+      maxHeightTransition.maxHeightSummary();
+    }, 1000 );
+  } );
+&lt;/script&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details-maxheight-transition-a-transitio-implementation-3">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>The max-height transition is added to an element by creating a new MaxHeightTransition instance in JavaScript and calling its methods:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Create reference to an element in the DOM.
+const element = document.querySelector( '.example-box' );
+
+// Create a new transition instance and pass in the element reference.
+const transition = new MaxHeightTransition( element );
+
+// Initialize the transition.
+transition.init();
+
+// Call methods on the transition.
+transition.maxHeightSummary();
+</code></pre></div></div>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+<!-- .govuk-tabs -->
+            
+
+        </div>
+        
     </section>
     
     
@@ -649,8 +789,8 @@ transition.fadeOut();
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/transition-patterns.md">
-                    <time datetime="2020-12-31 13:15:47 -0500">
-                         1:15:47 PM Dec 31, 2020
+                    <time datetime="2021-01-21 09:14:43 -0500">
+                         9:14:43 AM Jan 21, 2021
                     </time>
                 </a>
             </small>

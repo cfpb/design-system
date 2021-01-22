@@ -11,14 +11,11 @@
    Adds transitions utilty classes for transform, opacity,
    and for the removing the transition duration.
    ========================================================================== */
-.u-move-transition {
-  transition: transform 0.25s ease-out;
-}
-.u-alpha-transition {
-  transition: opacity 0.25s linear;
-}
 .u-no-animation {
   transition-duration: 0s !important;
+}
+.u-move-transition {
+  transition: transform 0.25s ease-out;
 }
 .u-move-to-origin {
   transform: translate3d(0, 0, 0);
@@ -38,11 +35,27 @@
 .u-move-up {
   transform: translate3d(0, -100%, 0);
 }
+.u-alpha-transition {
+  transition: opacity 0.25s linear;
+}
 .u-alpha-100 {
   opacity: 1;
 }
 .u-alpha-0 {
   opacity: 0;
+}
+.u-max-height-transition {
+  max-height: 1000px;
+  transition: max-height 0.25s ease-out;
+}
+.u-max-height-default {
+  max-height: 1000px;
+}
+.u-max-height-zero {
+  max-height: 0 !important;
+}
+.u-max-height-summary {
+  max-height: 5.5em !important;
 }
 /* ==========================================================================
    Design System
@@ -4790,11 +4803,10 @@ main {
 .example-box {
   width: 100px;
   height: 100px;
+  padding: 10px;
   background-color: #d14124;
   text-align: center;
-  vertical-align: middle;
   color: #ffffff;
-  display: table-cell;
   cursor: pointer;
 }
 .example-box.u-is-animating {

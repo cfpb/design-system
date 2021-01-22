@@ -379,11 +379,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
-/* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table */ "./packages/cfpb-tables/src/Table.js");
-/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! govuk-frontend */ "./node_modules/govuk-frontend/govuk/all.js");
-/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(govuk_frontend__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
-/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
+/* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table */ "./packages/cfpb-tables/src/Table.js");
+/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! govuk-frontend */ "./node_modules/govuk-frontend/govuk/all.js");
+/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(govuk_frontend__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
+/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
 
 
 
@@ -394,8 +395,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_redirect_banner_js__WEBPACK_IMPORTED_MODULE_8__.default.init();
-_sidebar_js__WEBPACK_IMPORTED_MODULE_9__.default.init();
+
+_redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__.default.init();
+_sidebar_js__WEBPACK_IMPORTED_MODULE_10__.default.init();
 var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())(); // Add anchors to all headings (except page title headings)
 
 anchors.add('h2:not(.title), h3, h4, h5'); // Ensure there are no anchors in inconvenient places
@@ -409,11 +411,12 @@ if (multiselectDom) {
 }
 
 _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__.default.init();
-_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_6__.default.init(); // Exporting these classes to the window so that the transition-patterns.md
+_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__.default.init(); // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.
 
 window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__.default;
 window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__.default;
+window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__.default;
 var main = document.querySelector('#main');
 var tabs = document.querySelectorAll('[data-module="tabs"]');
 
@@ -422,7 +425,7 @@ if (tabs && tabs.length > 0) {
 
   for (var i = 0; i < tabs.length; i++) {
     var tab = tabs[i];
-    new govuk_frontend__WEBPACK_IMPORTED_MODULE_7__.Tabs(tab).init();
+    new govuk_frontend__WEBPACK_IMPORTED_MODULE_8__.Tabs(tab).init();
   }
 }
 
@@ -5085,6 +5088,149 @@ BaseTransition.NO_ANIMATION_CLASS = 'u-no-animation';
 BaseTransition.ANIMATING_CLASS = 'u-is-animating';
 
 /* harmony default export */ __webpack_exports__["default"] = (BaseTransition);
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js":
+/*!****************************************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js ***!
+  \****************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+// Required modules.
+
+
+
+// Exported constants.
+const CLASSES = {
+  CSS_PROPERTY: 'max-height',
+  BASE_CLASS:   'u-max-height-transition',
+  MH_DEFAULT:   'u-max-height-default',
+  MH_SUMMARY:   'u-max-height-summary',
+  MH_ZERO:      'u-max-height-zero'
+};
+
+/**
+ * MoveTransition
+ * @class
+ *
+ * @classdesc Initializes new MoveTransition behavior.
+ *
+ * @param {HTMLNode} element
+ *   DOM element to apply transition to.
+ * @returns {MaxHeightTransition} An instance.
+ */
+function MaxHeightTransition( element ) {
+  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default( element, CLASSES );
+  let previousHeight;
+
+  /**
+   * @returns {MaxHeightTransition} An instance.
+   */
+  function init() {
+    _baseTransition.init();
+
+    element.style.maxHeight = element.scrollHeight + 'px';
+
+    const _transitionCompleteBinded = _transitionComplete.bind( this );
+    _baseTransition.addEventListener(
+      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT,
+      _transitionCompleteBinded
+    );
+
+    return this;
+  }
+
+  /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    this.dispatchEvent( _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT, { target: this } );
+
+    if ( element.scrollHeight > previousHeight ) {
+      element.style.maxHeight = element.scrollHeight + 'px';
+    }
+  }
+
+  /**
+   * Reset the max-height to the default size.
+   * @returns {PostitionTransition} An instance.
+   */
+  function maxHeightDefault() {
+    _baseTransition.applyClass( CLASSES.MH_DEFAULT );
+
+    if ( !previousHeight || element.scrollHeight > previousHeight ) {
+      previousHeight = element.scrollHeight;
+    }
+
+    return this;
+  }
+
+  /**
+   * Collapses the max-height to just a summary height.
+   * @returns {PostitionTransition} An instance.
+   */
+  function maxHeightSummary() {
+    _baseTransition.applyClass( CLASSES.MH_SUMMARY );
+
+    previousHeight = element.scrollHeight;
+
+    return this;
+  }
+
+  /**
+   * Collapses thte max-height completely.
+   * @returns {PostitionTransition} An instance.
+   */
+  function maxHeightZero() {
+    _baseTransition.applyClass( CLASSES.MH_ZERO );
+
+    previousHeight = element.scrollHeight;
+
+    return this;
+  }
+
+  /**
+   * Remove style attribute.
+   * Remove all transition classes, if transition is initialized.
+   * @returns {boolean}
+   *   True, if the element's CSS classes were touched, false otherwise.
+   */
+  function remove() {
+    element.style.maxHeight = '';
+    return _baseTransition.remove();
+  }
+
+  // Attach public events.
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
+  this.addEventListener = eventObserver.addEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+  this.removeEventListener = eventObserver.removeEventListener;
+
+  this.animateOff = _baseTransition.animateOff;
+  this.animateOn = _baseTransition.animateOn;
+  this.halt = _baseTransition.halt;
+  this.isAnimated = _baseTransition.isAnimated;
+  this.setElement = _baseTransition.setElement;
+  this.remove = remove;
+
+  this.init = init;
+  this.maxHeightDefault = maxHeightDefault;
+  this.maxHeightSummary = maxHeightSummary;
+  this.maxHeightZero = maxHeightZero;
+
+  return this;
+}
+
+// Public static properties.
+MaxHeightTransition.CLASSES = CLASSES;
+
+/* harmony default export */ __webpack_exports__["default"] = (MaxHeightTransition);
 
 
 /***/ }),

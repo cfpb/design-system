@@ -1,4 +1,35 @@
 
+## Unreleased (2021-01-22)
+
+#### Enhancement
+* `cfpb-atomic-component`
+  * [#1161](https://github.com/cfpb/design-system/pull/1161) Add MaxHeightTransition ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-core`
+  * [#1154](https://github.com/cfpb/design-system/pull/1154) Tables: Adjust table header style ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-design-system`, `cfpb-forms`
+  * [#1162](https://github.com/cfpb/design-system/pull/1162) Multiselect: Add down arrow to multiselect ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-buttons`
+  * [#1163](https://github.com/cfpb/design-system/pull/1163) Buttons: Darken red warning button text ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`
+  * [#1159](https://github.com/cfpb/design-system/pull/1159) Add unit test for data-hook and instantiateAll ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1158](https://github.com/cfpb/design-system/pull/1158) InstantiateAll: Check for value in data-js-hook as opposed to existence of attribute ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 10
+- Adam Scott ([@ascott1](https://github.com/ascott1))
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Chris Contolini ([@contolini](https://github.com/contolini))
+- Chuck Sebian-Lander ([@csebianlander](https://github.com/csebianlander))
+- Lorelei Kelly ([@ielerol](https://github.com/ielerol))
+- Nicholas Johnson ([@niqjohnson](https://github.com/niqjohnson))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+- Stephanie Osan ([@stephanieosan](https://github.com/stephanieosan))
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
+- [@huetingj](https://github.com/huetingj)
+
+
+
 ## Unreleased (2021-01-08)
 
 #### Bug Fix

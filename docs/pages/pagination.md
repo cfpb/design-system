@@ -108,13 +108,19 @@ variation_groups:
       form with an input field and submit button.
 use_cases: ""
 guidelines: In general, show 20-25 results per page, depending on the nature of
-  the content displayed. If content is sorted by date, label the navigation
-  buttons "Older" and "Newer"; otherwise, label the buttons "Previous" and
-  "Next". Tables with over 20 rows can be paired with pagination.
-behavior: >+
-  `@bp-xs-max`: On small screens, the buttons display next to each other,
-  stacked on top of the form
+  the content being displayed. If content is sorted by date, label the
+  navigation buttons "Older" and "Newer"; otherwise, label the buttons
+  "Previous" and "Next". Tables with over 20 rows can be paired with pagination.
+behavior: >-
+  On small screens, the buttons display next to each other, stacked on top of
+  the form (`@bp-xs-max`).
 
+
+  | Above 600 px | Below 601 px |
+
+  | ------------ | ------------ |
+
+  | ![Pagination at breakpoints above 600 px](/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.03-pm.png) | ![Pagination at breakpoints below 601 px](/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.30-pm.png) |
 accessibility: ""
 research: ""
 related_items: "* [Pagination

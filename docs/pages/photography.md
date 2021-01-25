@@ -18,15 +18,13 @@ variation_groups:
           consider the accompanying content and the intent of the photo.
 
 
-          ![Student planning her finances](/design-system/images/uploads/student_loans_hero_small.original.jpg)
+          ![Student planning her finances](/design-system/images/uploads/editorial_example_1.jpg)
 
 
+          ![Consumer opening a bank account](/design-system/images/uploads/editorial_example_2.png)
 
 
-          ![Consumer opening a bank account](/design-system/images/uploads/small_bank_hero.original.png)
-
-
-          ![Consumers discussing a financial decision](/design-system/images/uploads/shutterstock_1329029651.jpg)
+          ![Consumers discussing a financial decision](/design-system/images/uploads/editorial_example_3.png)
         variation_name: Editorial
       - variation_name: Event photos
         variation_description: >-
@@ -54,27 +52,24 @@ guidelines: >-
   to convey.   
 
 
-  ### Purpose 
+  ### Image type
 
 
   Before choosing or creating an image, articulate the image’s purpose. Is it being used to explain a financial concept? Is its intention to encourage consumers to take an action? Based on the image’s purpose, consider if an illustration, custom photo, or stock photo would best serve that purpose.  
 
 
-  #### Illustration 
+  #### Illustration vs. photography
 
 
   Illustration can help explain complex processes. Illustration also has the ability to be socially and politically neutral. Visit the [Illustration page](https://cfpb.github.io/design-system/foundation/illustration) for more guidance. 
 
 
-  #### Photography 
-
-
   Photography can show real-life scenarios and people. Photography has the ability to convey a serious tone, which may be better suited than illustrations for complicated, sensitive subject matter.  
 
 
-  * **Custom photography** allows you to determine several details such as a photo’s background, props, models, and color palette. Custom photos require planning and coordination, and it is difficult to capture a spontaneous environment, such as a natural disaster, in a custom photo.   
+  * Custom photography allows you to determine several details such as a photo’s background, props, models, and color palette. Custom photos require planning and coordination, and it is difficult to capture a spontaneous environment, such as a natural disaster, in a custom photo.   
 
-  * **Stock photography** offers a range of complex scenes and is instantly available so does not require photoshoot planning. A stock photo’s details cannot be controlled, so pay careful attention to its details to ensure it feels authentic.
+  * Stock photography offers a range of complex scenes and is instantly available so does not require photoshoot planning. A stock photo’s details cannot be controlled, so pay careful attention to its details to ensure it feels authentic.
 
 
   ### Platform and format 
@@ -117,17 +112,17 @@ guidelines: >-
   These qualities come through in a photo’s visual details. Aim to achieve the following details when shooting photos or choosing stock images.
 
 
-  | Visual detail                                                                                                                                                                                                                         | Example                                                             |
+  | Visual detail                                                                                                                                                                                                                         | Example                                                                                                                                 |
 
-  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 
-  | **Natural interaction:** If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | ![](/design-system/images/uploads/shutterstock_1329029651.jpg)      |
+  | **Natural interaction:** If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | ![Consumers discussing a financial decision](/design-system/images/uploads/editorial_example_3.png)                                                                          |
 
-  | **Authentic atmosphere:** The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario.                                                                                                               | ![](/design-system/images/uploads/kbyo_example.png)                 |
+  | **Authentic atmosphere:** The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario.                                                                                                               | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_2.png)                                                                                     |
 
-  | **Inclusive:** When photographing or choosing images, consider skin color, age, gender identity, income level, and range of ability. Be inclusive and representative of the American public. Be mindful not to reinforce stereotypes. | ![](/design-system/images/uploads/design_system_tone_example_1.jpg) ![](/design-system/images/uploads/design_system_tone_example_2.jpg) |
+  | **Inclusive:** When photographing or choosing images, consider skin color, age, gender identity, income level, and range of ability. Be inclusive and representative of the American public. Be mindful not to reinforce stereotypes. | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_3.jpg) ![Consumer taking a financial action](/design-system/images/uploads/tone_example_4.jpg) |
 
-  | **Feeling of being in control:** When showing a person accomplishing a task, the composition feels organized and actionable.                                                                                                          | ![](/design-system/images/uploads/small_debt_hero.original.png)     |
+  | **Feeling of being in control:** When showing a person accomplishing a task, the composition feels organized and actionable.                                                                                                          | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_5.png)                                                                         |
 accessibility: >-
   ### Ensure text is legible  
 

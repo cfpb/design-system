@@ -117,17 +117,17 @@ guidelines: >-
   These qualities come through in a photo’s visual details. Aim to achieve the following details when shooting photos or choosing stock images.
 
 
-  | Visual detail                                                                                                                                                                                                                         | Example                                                         |
+  | Visual detail                                                                                                                                                                                                                         | Example                                                             |
 
-  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 
-  | **Natural interaction:** If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | ![](/design-system/images/uploads/shutterstock_1329029651.jpg)  |
+  | **Natural interaction:** If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | ![](/design-system/images/uploads/shutterstock_1329029651.jpg)      |
 
-  | **Authentic atmosphere:** The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario.                                                                                                               | ![](/design-system/images/uploads/kbyo_example.png)                                                             |
+  | **Authentic atmosphere:** The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario.                                                                                                               | ![](/design-system/images/uploads/kbyo_example.png)                 |
 
-  | **Inclusive:** When photographing or choosing images, consider skin color, age, gender identity, income level, and range of ability. Be inclusive and representative of the American public. Be mindful not to reinforce stereotypes. | XXX                                                             |
+  | **Inclusive:** When photographing or choosing images, consider skin color, age, gender identity, income level, and range of ability. Be inclusive and representative of the American public. Be mindful not to reinforce stereotypes. | ![](/design-system/images/uploads/design_system_tone_example_1.jpg) ![](/design-system/images/uploads/design_system_tone_example_2.jpg) |
 
-  | **Feeling of being in control:** When showing a person accomplishing a task, the composition feels organized and actionable.                                                                                                          | ![](/design-system/images/uploads/small_debt_hero.original.png) |
+  | **Feeling of being in control:** When showing a person accomplishing a task, the composition feels organized and actionable.                                                                                                          | ![](/design-system/images/uploads/small_debt_hero.original.png)     |
 accessibility: >-
   ### Ensure text is legible  
 

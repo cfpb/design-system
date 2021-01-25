@@ -59,24 +59,6 @@ guidelines: >-
   * **Stock photography** offers a range of complex scenes and is instantly available so does not require photoshoot planning. A stock photo’s details cannot be controlled, so pay careful attention to its details to ensure it feels authentic.
 
 
-  ### Tone 
-
-
-  A photo can instantly convey a feeling. Regardless of what a photo depicts, aim for photos in CFPB materials to have the following qualities: 
-
-
-  * Approachable 
-
-  * Actionable 
-
-  * Authoritative 
-
-  * Authentic 
-
-
-  These qualities come through in a photo’s visual details. Aim to achieve the following details when shooting photos or choosing stock images.  
-
-
   ### Platform and format 
 
 
@@ -97,6 +79,37 @@ guidelines: >-
   * Photos on consumerfinance.gov should be a PNG format, 72 dpi, RGB, and exported at 2x size to appear clearly on retina screens. A photo’s dimensions depend on the pattern in which the photo will appear, so reference the “design specs” tab on a pattern's page to export a photo at correct dimensions. 
 
   * Check a web page’s performance by using a tool such as [Lighthouse](https://developers.google.com/web/tools/lighthouse). To run Lighthouse in Chrome, click View > Developer and select “Developer Tools” from the drop-down menu. A panel will appear in your browser window. At the top of the panel, click the "Audits” tab. If you do not see an “Audits” tab, click the right-facing arrow and select “Lighthouse” from the drop-down menu. Select “Performance” and generate the Lighthouse report. Review and address any alerts relating to the images.
+
+
+  ### Tone 
+
+
+  A photo can instantly convey a feeling. Regardless of what a photo depicts, aim for photos in CFPB materials to have the following qualities: 
+
+
+  * Approachable 
+
+  * Actionable 
+
+  * Authoritative 
+
+  * Authentic 
+
+
+  These qualities come through in a photo’s visual details. Aim to achieve the following details when shooting photos or choosing stock images.
+
+
+  | Visual detail                                                                                                               | Example                                                                                                                               |
+
+  | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+
+  | **Natural interaction:** If the photo shows people, their body language and facial expressions feel natural and not staged. | XXX |                                                                                                                                   
+
+  | **Authentic atmosphere:** The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario. | XXX |
+
+  | **Inclusive:** When photographing or choosing images, consider skin color, age, gender identity, income level, and range of ability. Be inclusive and representative of the American public. Be mindful not to reinforce stereotypes.  | XXX |                                                                                                                                   
+
+  | **Feeling of being in control:** When showing a person accomplishing a task, the composition feels organized and actionable. | XXX |
 accessibility: >-
   ### Ensure text is legible  
 

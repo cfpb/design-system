@@ -12,9 +12,19 @@ variation_groups:
   - variation_group_name: Types
     variations:
       - variation_code_snippet: ""
-        variation_description: Editorial photos are used as a visual storytelling
-          device across CFPB materials. When deciding what a photo should
-          depict, consider the accompanying content and the intent of the photo.
+        variation_description: >-
+          Editorial photos are used as a visual storytelling device across CFPB
+          materials. When deciding what a photo should depict,
+          consider the accompanying content and the intent of the photo.
+
+
+          ![Editorial photo example](/design-system/images/uploads/student_loans_hero_small.original.jpg)
+
+
+          ![](/design-system/images/uploads/shutterstock_1329029651.jpg)
+
+
+          ![](/design-system/images/uploads/small_bank_hero.original.png)
         variation_name: Editorial
       - variation_name: Event photos
         variation_description: >-

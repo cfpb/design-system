@@ -106,8 +106,7 @@ variation_groups:
       users to navigate to specific pages by number.
 use_cases: ""
 guidelines: >-
-  * In general, show 20-25 results per page, depending on the nature of the
-  content being displayed. 
+  * In general, 20-25 results should be shown per page.
 
   * If content is sorted by date, label the navigation buttons "Older" and "Newer"; otherwise, label the buttons "Previous" and "Next". 
 

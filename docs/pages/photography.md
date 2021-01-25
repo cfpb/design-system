@@ -54,27 +54,25 @@ guidelines: >-
   to convey.   
 
 
-  ### Purpose 
+  ### Image type
 
 
   Before choosing or creating an image, articulate the image’s purpose. Is it being used to explain a financial concept? Is its intention to encourage consumers to take an action? Based on the image’s purpose, consider if an illustration, custom photo, or stock photo would best serve that purpose.  
 
 
-  #### Illustration 
+  #### Illustration vs. photography
 
 
   Illustration can help explain complex processes. Illustration also has the ability to be socially and politically neutral. Visit the [Illustration page](https://cfpb.github.io/design-system/foundation/illustration) for more guidance. 
 
 
-  #### Photography 
-
 
   Photography can show real-life scenarios and people. Photography has the ability to convey a serious tone, which may be better suited than illustrations for complicated, sensitive subject matter.  
 
 
-  * **Custom photography** allows you to determine several details such as a photo’s background, props, models, and color palette. Custom photos require planning and coordination, and it is difficult to capture a spontaneous environment, such as a natural disaster, in a custom photo.   
+  * Custom photography allows you to determine several details such as a photo’s background, props, models, and color palette. Custom photos require planning and coordination, and it is difficult to capture a spontaneous environment, such as a natural disaster, in a custom photo.   
 
-  * **Stock photography** offers a range of complex scenes and is instantly available so does not require photoshoot planning. A stock photo’s details cannot be controlled, so pay careful attention to its details to ensure it feels authentic.
+  * Stock photography offers a range of complex scenes and is instantly available so does not require photoshoot planning. A stock photo’s details cannot be controlled, so pay careful attention to its details to ensure it feels authentic.
 
 
   ### Platform and format 

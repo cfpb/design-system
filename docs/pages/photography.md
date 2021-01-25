@@ -45,7 +45,7 @@ guidelines: >-
   #### Illustration 
 
 
-  Illustration can help explain complex processes. Illustration also has the ability to be socially and politically neutral. Visit the Illustration page for more guidance. 
+  Illustration can help explain complex processes. Illustration also has the ability to be socially and politically neutral. Visit the [Illustration page](https://cfpb.github.io/design-system/foundation/illustration) for more guidance. 
 
 
   #### Photography 
@@ -65,7 +65,7 @@ guidelines: >-
   When determining an image, consider how and where it will be viewed. Will it appear in a social media post with the primary goal of attracting attention? Will it serve as an introductory, supplemental image on a web page? 
 
 
-  An image’s dimensions can also impact what’s possible. If the image appears in the hero pattern, text will sit on top of it and need to be readable across breakpoints. If the image accompanies body copy in an info unit group, it will have limited space.  
+  An image’s dimensions can also impact what’s possible. If the image appears in the [hero pattern](https://cfpb.github.io/design-system/patterns/heroes), text will sit on top of it and need to be readable across breakpoints. If the image accompanies body copy in an [info unit group](https://cfpb.github.io/design-system/patterns/info-unit-groups), it will have limited space.  
 
 
   ### Performance 
@@ -99,17 +99,17 @@ guidelines: >-
   These qualities come through in a photo’s visual details. Aim to achieve the following details when shooting photos or choosing stock images.
 
 
-  | Visual detail                                                                                                               | Example                                                                                                                               |
+  | Visual detail                                                                                                                                                                                                                         | Example |
 
-  | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 
-  | **Natural interaction:** If the photo shows people, their body language and facial expressions feel natural and not staged. | XXX |                                                                                                                                   
+  | **Natural interaction:** If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | XXX     |
 
-  | **Authentic atmosphere:** The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario. | XXX |
+  | **Authentic atmosphere:** The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario.                                                                                                               | XXX     |
 
-  | **Inclusive:** When photographing or choosing images, consider skin color, age, gender identity, income level, and range of ability. Be inclusive and representative of the American public. Be mindful not to reinforce stereotypes.  | XXX |                                                                                                                                   
+  | **Inclusive:** When photographing or choosing images, consider skin color, age, gender identity, income level, and range of ability. Be inclusive and representative of the American public. Be mindful not to reinforce stereotypes. | XXX     |
 
-  | **Feeling of being in control:** When showing a person accomplishing a task, the composition feels organized and actionable. | XXX |
+  | **Feeling of being in control:** When showing a person accomplishing a task, the composition feels organized and actionable.                                                                                                          | XXX     |
 accessibility: >-
   ### Ensure text is legible  
 

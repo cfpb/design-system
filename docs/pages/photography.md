@@ -113,7 +113,7 @@ guidelines: >-
 
   | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 
-  | **Natural interaction:** If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | XXX     |
+  | **Natural interaction:** If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | ![](/design-system/images/uploads/shutterstock_1329029651.jpg) |
 
   | **Authentic atmosphere:** The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario.                                                                                                               | XXX     |
 

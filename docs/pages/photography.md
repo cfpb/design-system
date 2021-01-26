@@ -18,13 +18,13 @@ variation_groups:
           consider the accompanying content and the intent of the photo.
 
 
-          ![Student planning her finances](/design-system/images/uploads/editorial_example_1.jpg)
+          ![Student planning her finances](/design-system/images/uploads/photography_editorial_example_1.jpg)
 
 
-          ![Consumer opening a bank account](/design-system/images/uploads/editorial_example_2.png)
+          ![Consumer opening a bank account](/design-system/images/uploads/photography_editorial_example_2.png)
 
 
-          ![Consumers discussing a financial decision](/design-system/images/uploads/editorial_example_3.png)
+          ![Consumers discussing a financial decision](/design-system/images/uploads/photography_editorial_example_3.png)
         variation_name: Editorial
       - variation_name: Event photos
         variation_description: >-
@@ -37,13 +37,13 @@ variation_groups:
           at [flickr.com/photos/cfpbphotos](http://flickr.com/photos/cfpbphotos). 
 
 
-          ![CFPB employee speaking at event](/design-system/images/uploads/36783245923_32cf14a788_c.jpg)
+          ![CFPB employee speaking at event](/design-system/images/uploads/photography_event_example_1.jpg)
 
 
-          ![Consumer speaking at event](/design-system/images/uploads/photography_1_550px_wide.jpg)
+          ![Consumer speaking at event](/design-system/images/uploads/photography_event_example_2.jpg)
 
 
-          ![CFPB employee speaking at event](/design-system/images/uploads/photography_3_550px_wide.jpg)
+          ![Consumer speaking at event](/design-system/images/uploads/photography_event_example_3.jpg)
 use_cases: ""
 guidelines: >-
   When producing a CFPB material, consider if a visual is needed and, if so,

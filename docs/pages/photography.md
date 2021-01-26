@@ -116,7 +116,7 @@ guidelines: >-
 
   | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 
-  | **Natural interaction** <br/>If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | ![Consumers discussing a financial decision](/design-system/images/uploads/editorial_example_3.png)                                                                          |
+  | **Natural interaction** <br/>If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | ![Consumers discussing a financial decision](/design-system/images/uploads/photography_editorial_example_3.png)                                                                          |
 
   | **Authentic atmosphere** <br/>The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario.                                                                                                               | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_2.png)                                                                                     |
 

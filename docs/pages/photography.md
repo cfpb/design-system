@@ -18,13 +18,13 @@ variation_groups:
           consider the accompanying content and the intent of the photo.
 
 
-          ![Student planning her finances](/design-system/images/uploads/editorial_example_1.jpg)
+          ![Student planning her finances](/design-system/images/uploads/photography_editorial_example_1.jpg)
 
 
-          ![Consumer opening a bank account](/design-system/images/uploads/editorial_example_2.png)
+          ![Consumer opening a bank account](/design-system/images/uploads/photography_editorial_example_2.png)
 
 
-          ![Consumers discussing a financial decision](/design-system/images/uploads/editorial_example_3.png)
+          ![Consumers discussing a financial decision](/design-system/images/uploads/photography_editorial_example_3.png)
         variation_name: Editorial
       - variation_name: Event photos
         variation_description: >-
@@ -37,13 +37,13 @@ variation_groups:
           at [flickr.com/photos/cfpbphotos](http://flickr.com/photos/cfpbphotos). 
 
 
-          ![CFPB employee speaking at event](/design-system/images/uploads/36783245923_32cf14a788_c.jpg)
+          ![CFPB employee speaking at event](/design-system/images/uploads/photography_event_example_1.jpg)
 
 
-          ![Consumer speaking at event](/design-system/images/uploads/photography_1_550px_wide.jpg)
+          ![Consumer speaking at event](/design-system/images/uploads/photography_event_example_2.jpg)
 
 
-          ![CFPB employee speaking at event](/design-system/images/uploads/photography_3_550px_wide.jpg)
+          ![Consumer speaking at event](/design-system/images/uploads/photography_event_example_3.jpg)
 use_cases: ""
 guidelines: >-
   When producing a CFPB material, consider if a visual is needed and, if so,
@@ -114,15 +114,15 @@ guidelines: >-
 
   | Visual detail                                                                                                                                                                                                                         | Example                                                                                                                                 |
 
-  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+  | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 
-  | **Natural interaction:** If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | ![Consumers discussing a financial decision](/design-system/images/uploads/editorial_example_3.png)                                                                          |
+  | **Natural interaction** <br/>If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | ![Consumers discussing a financial decision](/design-system/images/uploads/editorial_example_3.png)                                                                          |
 
-  | **Authentic atmosphere:** The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario.                                                                                                               | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_2.png)                                                                                     |
+  | **Authentic atmosphere** <br/>The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario.                                                                                                               | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_2.png)                                                                                     |
 
-  | **Inclusive:** When photographing or choosing images, consider skin color, age, gender identity, income level, and range of ability. Be inclusive and representative of the American public. Be mindful not to reinforce stereotypes. | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_3.jpg) ![Consumer taking a financial action](/design-system/images/uploads/tone_example_4.jpg) |
+  | **Inclusive** <br/>When photographing or choosing images, consider skin color, age, gender identity, income level, and range of ability. Be inclusive and representative of the American public. Be mindful not to reinforce stereotypes. | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_3.jpg) ![Consumer taking a financial action](/design-system/images/uploads/tone_example_4.jpg) |
 
-  | **Feeling of being in control:** When showing a person accomplishing a task, the composition feels organized and actionable.                                                                                                          | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_5.png)                                                                         |
+  | **Feeling of being in control** <br/>When showing a person accomplishing a task, the composition feels organized and actionable.                                                                                                          | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_5.png)                                                                         |
 accessibility: >-
   ### Ensure text is legible  
 

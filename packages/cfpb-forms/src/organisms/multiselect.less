@@ -1,8 +1,22 @@
 // Initial and no-js state.
 select.o-multiselect {
+    display: block;
     box-sizing: border-box;
     width: 100%;
     padding: unit( 7px / @base-font-size-px, em );
+
+    // Fixed height breaks the bottom border
+    // mid-character to indicate there's more content.
+    height: 5.5em;
+    padding-top: unit( 4px / @base-font-size-px, em );
+    padding-bottom: unit( 4px / @base-font-size-px, em );
+    border: 1px solid @select-border;
+
+    option {
+        padding:
+            unit( 2px / @base-font-size-px, em )
+            unit( 6px / @base-font-size-px, em );
+    }
 }
 
 .o-multiselect {

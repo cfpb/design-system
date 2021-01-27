@@ -1,5 +1,11 @@
 // Required modules.
-import { checkDom, setInitFlag } from '@cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js';
+import {
+  checkDom,
+  setInitFlag
+} from '@cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js';
+import {
+  isMobileUserAgent
+} from '@cfpb/cfpb-atomic-component/src/utilities/media-helpers.js';
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 import MultiselectModel from './MultiselectModel.js';
 import MultiselectUtils from './MultiselectUtils.js';
@@ -66,6 +72,10 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    */
   function init() {
     if ( !setInitFlag( _dom ) ) {
+      return this;
+    }
+
+    if ( isMobileUserAgent() ) {
       return this;
     }
 

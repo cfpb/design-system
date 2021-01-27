@@ -3714,18 +3714,6 @@ h6 + .a-legend,
     line-height: 1.125;
   }
 }
-.a-multiselect {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: 5.5em;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  border: 1px solid #919395;
-}
-.a-multiselect option {
-  padding: 0.125em 0.375em;
-}
 .a-select {
   position: relative;
   border: 1px solid #919395;
@@ -4182,9 +4170,17 @@ h6 + .a-legend,
   width: 100%;
 }
 select.o-multiselect {
+  display: block;
   box-sizing: border-box;
   width: 100%;
   padding: 0.4375em;
+  height: 5.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  border: 1px solid #919395;
+}
+select.o-multiselect option {
+  padding: 0.125em 0.375em;
 }
 .o-multiselect {
   position: relative;

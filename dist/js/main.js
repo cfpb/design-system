@@ -4547,6 +4547,43 @@ function _getMatchesMethod( elem ) {
 
 /***/ }),
 
+/***/ "./packages/cfpb-atomic-component/src/utilities/media-helpers.js":
+/*!***********************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/media-helpers.js ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isMobileUserAgent": function() { return /* binding */ isMobileUserAgent; }
+/* harmony export */ });
+/* ==========================================================================
+   Media Helpers.
+   Utilities for working with different screen sizes and operating systems.
+   ========================================================================= */
+
+/**
+ * Query the browser's user agent string to see if it's on a mobile OS.
+ * @returns {boolean} True if on a mobile user agent, false otherwise.
+ */
+function isMobileUserAgent() {
+  const regex = new RegExp(
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+  );
+  if ( regex.test( navigator.userAgent ) ) {
+    return true;
+  }
+  return false;
+
+}
+
+// Expose public methods.
+
+
+
+/***/ }),
+
 /***/ "./packages/cfpb-atomic-component/src/utilities/object-assign.js":
 /*!***********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/object-assign.js ***!
@@ -5875,12 +5912,14 @@ ExpandableTransition.CLASSES = CLASSES;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
-/* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
-/* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
-/* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_media_helpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/media-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/media-helpers.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
+/* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
+/* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
+/* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5__);
 // Required modules.
+
 
 
 
@@ -5951,13 +5990,17 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       return this;
     }
 
+    if ( (0,_cfpb_cfpb_atomic_component_src_utilities_media_helpers_js__WEBPACK_IMPORTED_MODULE_1__.isMobileUserAgent)() ) {
+      return this;
+    }
+
     _instance = this;
     _name = _dom.name || _dom.id;
     _placeholder = _dom.getAttribute( 'placeholder' );
     _options = _dom.options || [];
 
     if ( _options.length > 0 ) {
-      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_2__.default( _options, _name ).init();
+      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_3__.default( _options, _name ).init();
       _optionsData = _model.getOptions();
       const newDom = _populateMarkup();
 
@@ -6009,22 +6052,22 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    */
   function _populateMarkup() {
     // Add a container for our markup
-    _containerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'div', {
+    _containerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'div', {
       className: BASE_CLASS,
       around:    _dom
     } );
 
     // Create all our markup but wait to manipulate the DOM just once
-    _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'ul', {
+    _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'ul', {
       className: BASE_CLASS + '_choices',
       inside:    _containerDom
     } );
 
-    _headerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'header', {
+    _headerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'header', {
       className: BASE_CLASS + '_header'
     } );
 
-    _searchDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'input', {
+    _searchDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'input', {
       className:    BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
       type:         'text',
       placeholder:  _placeholder || 'Select up to five',
@@ -6033,23 +6076,23 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       autocomplete: 'off'
     } );
 
-    _fieldsetDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'fieldset', {
+    _fieldsetDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'fieldset', {
       'className':   BASE_CLASS + '_fieldset u-invisible',
       'aria-hidden': 'true'
     } );
 
-    _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'ul', {
+    _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'ul', {
       className: BASE_CLASS + '_options',
       inside:    _fieldsetDom
     } );
 
     _optionsData.forEach( function( option ) {
-      const _optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'li', {
+      const _optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'li', {
         'data-option': option.value,
         'class': 'm-form-field m-form-field__checkbox'
       } );
 
-      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'input', {
+      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'input', {
         'id':      option.id,
         // Type must come before value or IE fails
         'type':    'checkbox',
@@ -6060,7 +6103,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
         'checked': option.checked
       } );
 
-      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'label', {
+      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'label', {
         'for':         option.id,
         'textContent': option.text,
         'className':   BASE_CLASS + '_label a-label',
@@ -6087,14 +6130,14 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @param {HTMLNode} option - The OPTION item to extract content from.
    */
   function _createSelectedItem( selectionsDom, option ) {
-    const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'li', {
+    const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'li', {
       'data-option': option.value
     } );
 
-    const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.create( 'button', {
+    const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'button', {
       type: 'button',
       innerHTML: '<label for=' + option.id + '>' +
-                 option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_4___default()) + '</label>',
+                 option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5___default()) + '</label>',
       inside: selectionsItemDom
     } );
 
@@ -6142,7 +6185,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @param {string} value The value of the option the user has chosen.
    */
   function _updateSelections( value ) {
-    const optionIndex = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_3__.default.indexOfObject(
+    const optionIndex = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.indexOfObject(
       _optionsData,
       'value',
       value
@@ -6405,7 +6448,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   this.expand = expand;
   this.collapse = collapse;
 
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__.default();
   this.addEventListener = eventObserver.addEventListener;
   this.removeEventListener = eventObserver.removeEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;

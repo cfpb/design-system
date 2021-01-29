@@ -233,12 +233,4 @@ describe( 'MultiselectModel', () => {
     } );
   } );
 
-  describe( 'getOptions()', () => {
-    it( 'should return the full options list', () => {
-      expect( multiselectModel.getOptions().length ).toBe( 6 );
-      multiselectModel.filterIndices( 'asdf' );
-      expect( multiselectModel.getOptions().length ).toBe( 6 );
-    } );
-  } );
-
 } );

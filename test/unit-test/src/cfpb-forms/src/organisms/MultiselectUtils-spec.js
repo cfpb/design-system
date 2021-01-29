@@ -1,39 +1,6 @@
 import MultiselectUtils from '../../../../../../packages/cfpb-forms/src/organisms/MultiselectUtils.js';
-let array;
-let index;
 
 describe( 'MultiselectUtils', () => {
-
-  describe( 'indexOfObject()', () => {
-
-    it( 'should return -1 if the array is empty', () => {
-      array = [];
-      index = MultiselectUtils.indexOfObject( array, 'foo' );
-
-      expect( index ).toBe( -1 );
-    } );
-
-    it( 'should return -1 if there is no match', () => {
-      array = [
-        { value: 'bar' },
-        { value: 'baz' }
-      ];
-      index = MultiselectUtils.indexOfObject( array, 'value', 'foo' );
-
-      expect( index ).toBe( -1 );
-    } );
-
-    it( 'should return the matched index', () => {
-      array = [
-        { value: 'foo' },
-        { value: 'bar' },
-        { value: 'baz' }
-      ];
-      index = MultiselectUtils.indexOfObject( array, 'value', 'foo' );
-
-      expect( index ).toBe( 0 );
-    } );
-  } );
 
   describe( 'create()', () => {
     beforeAll( () => {

@@ -99,6 +99,12 @@ select.o-multiselect {
             margin: 0;
         }
 
+        li:first-child {
+            .a-label {
+                padding-top: unit( 10px / @base-font-size-px, em );
+            }
+        }
+
         &.u-filtered li:not(.u-filter-match) {
             display: none;
         }
@@ -124,7 +130,9 @@ select.o-multiselect {
 
         .a-label {
             box-sizing: border-box;
-            padding-top: unit( 10px / @base-font-size-px, em );
+            padding-top: unit( 5px / @base-font-size-px, em );
+            padding-right: 0;
+            padding-bottom: unit( 5px / @base-font-size-px, em );
             padding-left: unit( 10px / @base-font-size-px, em );
             width: 100%;
         }

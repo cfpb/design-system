@@ -243,7 +243,10 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @returns {string} A hopefully unique ID.
    */
   function _getOptionId( option ) {
-    return _name + '-' + option.value.trim().replace( /\s+/g, '-' ).toLowerCase();
+    /* Replace any character that is not a word character with a dash.
+       https://regex101.com/r/ShHmRw/1
+    */
+    return _name + '-' + option.value.trim().replace( /[^\w]/g, '-' ).toLowerCase();
   }
 
   /**

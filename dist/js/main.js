@@ -6086,7 +6086,9 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       inside:    _fieldsetDom
     } );
 
-    _optionsData.forEach( function( option ) {
+    let option;
+    for ( let i = 0, len = _optionsData.length; i < len; i++ ) {
+      option = _optionsData[i];
       const _optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'li', {
         'data-option': option.value,
         'class': 'm-form-field m-form-field__checkbox'
@@ -6100,7 +6102,8 @@ function Multiselect( element ) { // eslint-disable-line max-statements
         'name':    _name,
         'class':   CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
         'inside':  _optionsItemDom,
-        'checked': option.checked
+        'checked': option.checked,
+        'data-index': i
       } );
 
       _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'label', {
@@ -6116,7 +6119,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       if ( option.checked ) {
         _createSelectedItem( _selectionsDom, option );
       }
-    } );
+    }
 
     // Write our new markup to the DOM.
     _containerDom.appendChild( _headerDom );
@@ -6182,14 +6185,9 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
   /**
    * Tracks a user's selections and updates the list in the dom.
-   * @param {string} value The value of the option the user has chosen.
+   * @param {number} optionIndex - The index position of the chosen option.
    */
-  function _updateSelections( value ) {
-    const optionIndex = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.indexOfObject(
-      _optionsData,
-      'value',
-      value
-    );
+  function _updateSelections( optionIndex ) {
     const option = _optionsData[optionIndex] || _optionsData[_model.getIndex()];
 
     if ( option ) {
@@ -6439,7 +6437,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @param   {Event} event The checkbox change event.
    */
   function _changeHandler( event ) {
-    _updateSelections( event.target.value );
+    _updateSelections( Number( event.target.getAttribute( 'data-index' ) ) );
     _resetSearch();
   }
 
@@ -6720,29 +6718,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Searches an array for the first object with the matching key:value pair.
- * @param   {Array}  array - List to query through for the expected value.
- * @param   {string} key   - The key to check the value against.
- * @param   {string} val   - The value to match to the key.
- * @returns {number}       Returns the index of a match, otherwise -1.
- */
-function indexOfObject( array, key, val ) {
-  let match = -1;
-
-  if ( !array.length > 0 ) {
-    return match;
-  }
-
-  array.forEach( function( item, index ) {
-    if ( item[key] === val ) {
-      match = index;
-    }
-  } );
-
-  return match;
-}
-
-/**
  * Shortcut for creating new dom elements.
  * @param {string} tag - The html elem to create.
  * @param {Object} options - The options for building the elem.
@@ -6776,7 +6751,6 @@ function create( tag, options ) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  indexOfObject: indexOfObject,
   create: create
 });
 

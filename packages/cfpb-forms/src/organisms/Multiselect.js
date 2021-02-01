@@ -54,7 +54,6 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   let _placeholder;
   let _model;
   let _options;
-  let _optionsData;
 
   // Markup elems, conver this to templating engine in the future.
   let _containerDom;
@@ -85,9 +84,8 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     _options = _dom.options || [];
 
     if ( _options.length > 0 ) {
-      _model = new MultiselectModel( _options, _name ).init();
-      _optionsData = _model.getOptions();
       const newDom = _populateMarkup();
+      _model = new MultiselectModel( _options, _name ).init();
 
       /* Removes <select> element,
          and re-assign DOM reference. */
@@ -172,36 +170,38 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     } );
 
     let option;
-    for ( let i = 0, len = _optionsData.length; i < len; i++ ) {
-      option = _optionsData[i];
-      const _optionsItemDom = MultiselectUtils.create( 'li', {
+    let optionId;
+    for ( let i = 0, len = _options.length; i < len; i++ ) {
+      option = _options[i];
+      optionId = _getOptionId( option );
+      const optionsItemDom = MultiselectUtils.create( 'li', {
         'data-option': option.value,
         'class': 'm-form-field m-form-field__checkbox'
       } );
 
       MultiselectUtils.create( 'input', {
-        'id':      option.id,
+        'id':      optionId,
         // Type must come before value or IE fails
         'type':    'checkbox',
         'value':   option.value,
         'name':    _name,
         'class':   CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
-        'inside':  _optionsItemDom,
-        'checked': option.checked,
+        'inside':  optionsItemDom,
+        'checked': option.defaultSelected,
         'data-index': i
       } );
 
       MultiselectUtils.create( 'label', {
-        'for':         option.id,
+        'for':         optionId,
         'textContent': option.text,
         'className':   BASE_CLASS + '_label a-label',
-        'inside':      _optionsItemDom
+        'inside':      optionsItemDom
       } );
 
-      _optionItemDoms.push( _optionsItemDom );
-      _optionsDom.appendChild( _optionsItemDom );
+      _optionItemDoms.push( optionsItemDom );
+      _optionsDom.appendChild( optionsItemDom );
 
-      if ( option.checked ) {
+      if ( option.defaultSelected ) {
         _createSelectedItem( _selectionsDom, option );
       }
     }
@@ -218,13 +218,14 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @param {HTMLNode} option - The OPTION item to extract content from.
    */
   function _createSelectedItem( selectionsDom, option ) {
+    const optionId = _getOptionId( option );
     const selectionsItemDom = MultiselectUtils.create( 'li', {
       'data-option': option.value
     } );
 
     const selectionsItemLabelDom = MultiselectUtils.create( 'button', {
       type: 'button',
-      innerHTML: '<label for=' + option.id + '>' +
+      innerHTML: '<label for=' + optionId + '>' +
                  option.text + closeIcon + '</label>',
       inside: selectionsItemDom
     } );
@@ -234,6 +235,18 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
     selectionsItemLabelDom.addEventListener( 'click', _selectionClickHandler );
     selectionsItemLabelDom.addEventListener( 'keydown', _selectionKeyDownHandler );
+  }
+
+  /**
+   * Create a unique ID based on a select's option HTML element.
+   * @param {HTMLNode} option - A option HTML element.
+   * @returns {string} A hopefully unique ID.
+   */
+  function _getOptionId( option ) {
+    /* Replace any character that is not a word character with a dash.
+       https://regex101.com/r/ShHmRw/1
+    */
+    return _name + '-' + option.value.trim().replace( /[^\w]/g, '-' ).toLowerCase();
   }
 
   /**
@@ -273,7 +286,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @param {number} optionIndex - The index position of the chosen option.
    */
   function _updateSelections( optionIndex ) {
-    const option = _optionsData[optionIndex] || _optionsData[_model.getIndex()];
+    const option = _model.getOption( optionIndex ) || _model.getOption( _model.getIndex() );
 
     if ( option ) {
       if ( option.checked ) {

@@ -225,7 +225,6 @@ function MultiselectModel( options, name ) {
 
   // This is used to retrieve items from the collection.
   this.getOption = getOption;
-  this.getOptions = function() { return _optionsData; };
 
   return this;
 }

@@ -171,7 +171,9 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       inside:    _fieldsetDom
     } );
 
-    _optionsData.forEach( function( option ) {
+    let option;
+    for ( let i = 0, len = _optionsData.length; i < len; i++ ) {
+      option = _optionsData[i];
       const _optionsItemDom = MultiselectUtils.create( 'li', {
         'data-option': option.value,
         'class': 'm-form-field m-form-field__checkbox'
@@ -185,7 +187,8 @@ function Multiselect( element ) { // eslint-disable-line max-statements
         'name':    _name,
         'class':   CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
         'inside':  _optionsItemDom,
-        'checked': option.checked
+        'checked': option.checked,
+        'data-index': i
       } );
 
       MultiselectUtils.create( 'label', {
@@ -201,7 +204,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       if ( option.checked ) {
         _createSelectedItem( _selectionsDom, option );
       }
-    } );
+    }
 
     // Write our new markup to the DOM.
     _containerDom.appendChild( _headerDom );
@@ -267,14 +270,9 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
   /**
    * Tracks a user's selections and updates the list in the dom.
-   * @param {string} value The value of the option the user has chosen.
+   * @param {number} optionIndex - The index position of the chosen option.
    */
-  function _updateSelections( value ) {
-    const optionIndex = MultiselectUtils.indexOfObject(
-      _optionsData,
-      'value',
-      value
-    );
+  function _updateSelections( optionIndex ) {
     const option = _optionsData[optionIndex] || _optionsData[_model.getIndex()];
 
     if ( option ) {
@@ -524,7 +522,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    * @param   {Event} event The checkbox change event.
    */
   function _changeHandler( event ) {
-    _updateSelections( event.target.value );
+    _updateSelections( Number( event.target.getAttribute( 'data-index' ) ) );
     _resetSearch();
   }
 

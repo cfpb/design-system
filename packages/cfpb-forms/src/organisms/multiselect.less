@@ -93,12 +93,16 @@ select.o-multiselect {
 
     &_options {
         background-color: @white;
-        padding: unit( 10px / @base-font-size-px, em );
-        // Double padding on the right to accommodate the fieldset's forced y scrollbar above
-        padding-right: unit( 20px / @base-font-size-px, em );
+        padding: 0;
 
-        li:last-child {
-            margin-bottom: 0;
+        li {
+            margin: 0;
+        }
+
+        li:first-child {
+            .a-label {
+                padding-top: unit( 10px / @base-font-size-px, em );
+            }
         }
 
         &.u-filtered li:not(.u-filter-match) {
@@ -125,6 +129,11 @@ select.o-multiselect {
         }
 
         .a-label {
+            box-sizing: border-box;
+            padding-top: unit( 5px / @base-font-size-px, em );
+            padding-right: 0;
+            padding-bottom: unit( 5px / @base-font-size-px, em );
+            padding-left: unit( 10px / @base-font-size-px, em );
             width: 100%;
         }
     }

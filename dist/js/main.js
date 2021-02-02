@@ -6400,8 +6400,10 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       }
     } );
 
-    _fieldsetDom.addEventListener( 'mousedown', function() {
-      _isBlurSkipped = true;
+    _fieldsetDom.addEventListener( 'mousedown', function( event ) {
+      if ( event.target.tagName === 'LABEL' ) {
+        _isBlurSkipped = true;
+      }
     } );
 
     const inputs = _optionsDom.querySelectorAll( 'input' );

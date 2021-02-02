@@ -4235,11 +4235,13 @@ select.o-multiselect option {
 }
 .o-multiselect_options {
   background-color: #ffffff;
-  padding: 0.625em;
-  padding-right: 1.25em;
+  padding: 0;
 }
-.o-multiselect_options li:last-child {
-  margin-bottom: 0;
+.o-multiselect_options li {
+  margin: 0;
+}
+.o-multiselect_options li:first-child .a-label {
+  padding-top: 0.625em;
 }
 .o-multiselect_options.u-filtered li:not(.u-filter-match) {
   display: none;
@@ -4259,6 +4261,11 @@ select.o-multiselect option {
   content: 'Reached maximum of five selections';
 }
 .o-multiselect_options .a-label {
+  box-sizing: border-box;
+  padding-top: 0.3125em;
+  padding-right: 0;
+  padding-bottom: 0.3125em;
+  padding-left: 0.625em;
   width: 100%;
 }
 .o-multiselect_choices {

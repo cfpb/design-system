@@ -14,7 +14,7 @@
     }
 
     &__heading {
-        .heading-4();
+        .h4();
 
         display: block;
 
@@ -30,13 +30,5 @@
                 margin-top: unit( 10px / @base-font-size-px, em );
             }
         }
-
-        .respond-to-max( @bp-xs-max, {
-            @h4-font-size-on-xs: @base-font-size-px;
-
-            margin-bottom: unit( 10px / @h4-font-size-on-xs, em );
-            font-size: unit( @h4-font-size-on-xs / @base-font-size-px, em );
-            line-height: unit( 18px / @h4-font-size-on-xs );
-        } );
     }
 }

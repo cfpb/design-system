@@ -3668,6 +3668,33 @@ input.a-btn::-moz-focus-inner {
   display: block;
   margin-bottom: 0.55555556em;
 }
+p + .a-label__heading,
+ul + .a-label__heading,
+ol + .a-label__heading,
+dl + .a-label__heading,
+figure + .a-label__heading,
+img + .a-label__heading,
+table + .a-label__heading,
+blockquote + .a-label__heading,
+h1 + .a-label__heading,
+.h1 + .a-label__heading,
+h2 + .a-label__heading,
+.h2 + .a-label__heading,
+h3 + .a-label__heading,
+.h3 + .a-label__heading,
+h5 + .a-label__heading,
+.h5 + .a-label__heading,
+h6 + .a-label__heading,
+.h6 + .a-label__heading {
+  margin-top: 1.66666667em;
+}
+@media only all and (max-width: 37.5em) {
+  .a-label__heading {
+    margin-bottom: 0.625em;
+    font-size: 1em;
+    line-height: 1.125;
+  }
+}
 .a-label__heading .a-label_helper {
   font-size: 0.88888889em;
   font-weight: normal;

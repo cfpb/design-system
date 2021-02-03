@@ -124,7 +124,8 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     _fieldsetDom.classList.add( 'u-invisible' );
     _fieldsetDom.setAttribute( 'aria-hidden', true );
     _model.resetIndex();
-    _instance.dispatchEvent( 'collapseBegin', { target: _instance } );
+    // TODO: This should be collapseBegin, not expandEnd, but we have a dependency on this event in the filters in cf.gov.
+    _instance.dispatchEvent( 'expandEnd', { target: _instance } );
 
     return _instance;
   }

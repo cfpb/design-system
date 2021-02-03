@@ -31,7 +31,7 @@ function MaxHeightTransition( element ) {
   function init() {
     _baseTransition.init();
 
-    element.style.maxHeight = element.scrollHeight + 'px';
+    refresh();
 
     const _transitionCompleteBinded = _transitionComplete.bind( this );
     _baseTransition.addEventListener(
@@ -92,6 +92,13 @@ function MaxHeightTransition( element ) {
   }
 
   /**
+   * Refresh the max height set on the element.
+   */
+  function refresh() {
+    element.style.maxHeight = element.scrollHeight + 'px';
+  }
+
+  /**
    * Remove style attribute.
    * Remove all transition classes, if transition is initialized.
    * @returns {boolean}
@@ -113,6 +120,7 @@ function MaxHeightTransition( element ) {
   this.halt = _baseTransition.halt;
   this.isAnimated = _baseTransition.isAnimated;
   this.setElement = _baseTransition.setElement;
+  this.refresh = refresh;
   this.remove = remove;
 
   this.init = init;

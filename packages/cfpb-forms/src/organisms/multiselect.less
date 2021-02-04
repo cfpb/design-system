@@ -131,8 +131,12 @@ select.o-multiselect {
             content: 'No results found';
         }
 
-        &.u-max-selections:after {
-            content: 'Reached maximum of five selections';
+        &.u-max-selections {
+            padding: unit( 10px / @base-font-size-px, em );
+
+            &:after {
+                content: 'Reached maximum of five selections';
+            }
         }
 
         .a-label {

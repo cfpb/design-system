@@ -4287,6 +4287,10 @@ select.o-multiselect option {
 .o-multiselect_options.u-no-results:after {
   content: 'No results found';
 }
+.o-multiselect_options.u-max-selections {
+  padding: 0.625em;
+  pointer-events: none;
+}
 .o-multiselect_options.u-max-selections:after {
   content: 'Reached maximum of five selections';
 }

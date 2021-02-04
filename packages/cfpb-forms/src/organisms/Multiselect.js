@@ -124,6 +124,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     _fieldsetDom.classList.add( 'u-invisible' );
     _fieldsetDom.setAttribute( 'aria-hidden', true );
     _model.resetIndex();
+    // TODO: This should be collapseBegin, not expandEnd, but we have a dependency on this event in the filters in cf.gov.
     _instance.dispatchEvent( 'expandEnd', { target: _instance } );
 
     return _instance;
@@ -409,10 +410,24 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     _headerDom.addEventListener( 'mousemove', function( event ) {
       const target = event.target;
       // Check if we're over the down-arrow on the right side of the input.
-      if ( event.layerX > target.offsetWidth - 35 ) {
+      if ( event.offsetX > target.offsetWidth - 35 ) {
         target.style.cursor = 'pointer';
       } else {
         target.style.cursor = 'auto';
+      }
+    } );
+
+    _headerDom.addEventListener( 'mouseup', function( event ) {
+      const target = event.target;
+
+      /* Check if we're over the down-arrow on the right side of the input.
+         Also check if the fieldset is open.
+         35 = width of the arrow on the right of the search input.
+         140 = the max-height value set in multiselect.less for the fieldset.
+      */
+      if ( event.offsetX > target.offsetWidth - 35 &&
+           _fieldsetDom.offsetHeight === 140 ) {
+        _searchDom.blur();
       }
     } );
 

@@ -4232,6 +4232,9 @@ select.o-multiselect option {
   content: '';
   pointer-events: none;
 }
+.o-multiselect.u-active .o-multiselect_header:after {
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20988.7%201200%22%20fill=%22rgb(16,%2024,%2032)%22%3E%3Cpath%20d=%22M923.6%20967.6c-17.3%200-33.8-6.8-46-19L494.1%20565%20110.5%20948.5c-25.6%2025.1-66.8%2024.8-91.9-.8-24.8-25.3-24.8-65.8%200-91.1l429.5-429.5c25.4-25.4%2066.5-25.4%2091.9%200l429.6%20429.5c25.4%2025.4%2025.4%2066.5.1%2091.9-12.3%2012.3-28.8%2019.1-46.1%2019.1z%22/%3E%3C/svg%3E');
+}
 .o-multiselect_search[type="text"] {
   display: block;
   box-sizing: border-box;

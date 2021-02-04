@@ -1,6 +1,17 @@
 
 ## Unreleased (2021-02-04)
 
+#### Bug Fix
+* `cfpb-forms`
+  * [#1184](https://github.com/cfpb/design-system/pull/1184) Bugfix: multiselect missing padding on max selection ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
+## Unreleased (2021-02-04)
+
 #### Enhancement
 * `cfpb-atomic-component`
   * [#1181](https://github.com/cfpb/design-system/pull/1181) MaxHeightTransition: Add refresh method ([@anselmbradford](https://github.com/anselmbradford))

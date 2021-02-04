@@ -424,9 +424,11 @@ function Multiselect( element ) { // eslint-disable-line max-statements
          Also check if the fieldset is open.
          35 = width of the arrow on the right of the search input.
          140 = the max-height value set in multiselect.less for the fieldset.
+         44 = the minimum height when the max selection message is shown.
       */
       if ( event.offsetX > target.offsetWidth - 35 &&
-           _fieldsetDom.offsetHeight === 140 ) {
+           ( _fieldsetDom.offsetHeight === 140 ||
+             _fieldsetDom.offsetHeight >= 44 && _model.isAtMaxSelections() ) ) {
         _searchDom.blur();
       }
     } );

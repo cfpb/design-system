@@ -1,4 +1,32 @@
 
+## Unreleased (2021-02-04)
+
+#### Enhancement
+* `cfpb-atomic-component`
+  * [#1181](https://github.com/cfpb/design-system/pull/1181) MaxHeightTransition: Add refresh method ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-forms`
+  * [#1180](https://github.com/cfpb/design-system/pull/1180) Multiselect: Make arrow open/close drop-down ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-forms`
+  * [#1167](https://github.com/cfpb/design-system/pull/1167) Multiselect: Only initialize if we're not on a mobile OS ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-forms`
+  * [#1179](https://github.com/cfpb/design-system/pull/1179) Makes a-label__heading respond like an h4 on small screens ([@wpears](https://github.com/wpears))
+  * [#1178](https://github.com/cfpb/design-system/pull/1178) Expand multiselect option targets ([@contolini](https://github.com/contolini))
+  * [#1177](https://github.com/cfpb/design-system/pull/1177) Multiselect: Remove redundant _optionsData array ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1176](https://github.com/cfpb/design-system/pull/1176) Multiselect: Remove indexOfObject utility ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-buttons`, `cfpb-core`, `cfpb-expandables`, `cfpb-forms`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1175](https://github.com/cfpb/design-system/pull/1175) Move imports to top and changes to absolute imports ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 5
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Chris Contolini ([@contolini](https://github.com/contolini))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
+- [@huetingj](https://github.com/huetingj)
+
+
+
 ## Unreleased (2021-01-22)
 
 #### Enhancement

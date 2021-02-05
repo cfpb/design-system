@@ -19,8 +19,9 @@ export function init( container ) {
  * The original Gov UK tabs code modifies the URL's hash which breaks Netlify
  * so we replace their functionality with some simple tab switching below.
  *
- * @param {DOMNode} tab - Tab element that was clicked
- * @param {DOMNode} document - Defaults to window.document but overridable for ReactDOM
+ * @param {DOMNode} tab - Tab element that was clicked.
+ * @param {DOMNode} document -
+ *   Defaults to window.document but overridable for react DOM references.
  */
 export function changeTab( tab, document = window.document ) {
   const TABS_CONTAINER_CLASS = 'govuk-tabs';

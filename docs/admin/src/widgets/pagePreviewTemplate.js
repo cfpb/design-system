@@ -3,7 +3,6 @@ import { ReactLiquid, liquidEngine } from 'react-liquid';
 import { TOGGLE_ATTRIBUTE, toggleDetails } from '../../../assets/js/toggle-details.js';
 import { changeTab, init as initTabs } from '../../../assets/js/tabs.js';
 import { encode } from 'html-entities';
-import ReactDOM from 'react-dom';
 import marked from 'marked';
 import slugify from 'slugify';
 import template from '../../../_includes/variation-content.html';

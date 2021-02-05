@@ -7,8 +7,9 @@ let isShowingAllDetails = false;
 
 /**
  * Toggle details for a single variation.
- * @param {DOMNode} button - Button element that controls the toggling
- * @param {DOMNode} document - Defaults to window.document but overridable for ReactDOM
+ * @param {DOMNode} button - Button element that controls the toggling.
+ * @param {DOMNode} document -
+ *   Defaults to window.document but overridable for react DOM references.
  * @param {string} [state] -
  *   Optional param to specify whether to force showing or hiding of the details
  *   Value should be either 'show' or 'hide'.

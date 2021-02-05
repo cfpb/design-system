@@ -81,5 +81,10 @@
 }
 
 .u-max-height-summary {
-    max-height: unit( @base-line-height-px * 4 / @base-font-size-px, em ) !important;
+    /* The value set here should show 4 lines of text at our standard 16px
+       base font size. The calculation comes from the following:
+       88px = 16 * 5.5em.
+       5.5em = base-line-height (22px) * 4 / base-font-size (16px)
+    */
+    max-height: 88px !important;
 }

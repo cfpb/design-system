@@ -51,7 +51,8 @@ module.exports = {
     collect: {
       numberOfRuns: 1,
       settings: {
-        emulatedFormFactor: 'desktop',
+        formFactor: 'desktop',
+        screenEmulation: { mobile: false },
         onlyCategories: 'accessibility'
       },
       ...extraCollect

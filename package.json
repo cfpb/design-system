@@ -61,7 +61,7 @@
     "govuk-frontend": "3.10.2",
     "html-entities": "2.1.0",
     "lunr": "2.3.9",
-    "marked": "1.2.9",
+    "marked": "2.0.0",
     "netlify-cms": "2.10.88",
     "normalize-css": "^2.3.1",
     "normalize-legacy-addon": "^0.1.0",

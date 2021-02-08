@@ -5173,7 +5173,10 @@ function MaxHeightTransition( element ) {
   function init() {
     _baseTransition.init();
 
-    refresh();
+    /* The scrollHeight of an element may be incorrect if the page hasn't
+       fully loaded yet, so we listen for that to happen before calculating
+       the element max-height. */
+    window.addEventListener( 'load', _pageLoaded );
 
     const _transitionCompleteBinded = _transitionComplete.bind( this );
     _baseTransition.addEventListener(
@@ -5182,6 +5185,15 @@ function MaxHeightTransition( element ) {
     );
 
     return this;
+  }
+
+  /**
+   * The whole page has loaded,
+   * including all dependent resources such as stylesheets and images.
+   */
+  function _pageLoaded() {
+    window.removeEventListener( 'load', _pageLoaded );
+    refresh();
   }
 
   /**
@@ -5235,6 +5247,7 @@ function MaxHeightTransition( element ) {
 
   /**
    * Refresh the max height set on the element.
+   * This may be useful if resizing the window and the content height changes.
    */
   function refresh() {
     element.style.maxHeight = element.scrollHeight + 'px';

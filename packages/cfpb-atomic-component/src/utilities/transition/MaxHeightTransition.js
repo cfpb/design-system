@@ -31,7 +31,7 @@ function MaxHeightTransition( element ) {
   function init() {
     _baseTransition.init();
 
-    /* The scrollHeight of an element may incorrect if the page hasn't
+    /* The scrollHeight of an element may be incorrect if the page hasn't
        fully loaded yet, so we listen for that to happen before calculating
        the element max-height. */
     window.addEventListener( 'load', _pageLoaded );

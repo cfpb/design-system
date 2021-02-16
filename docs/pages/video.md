@@ -90,7 +90,7 @@ guidelines: >-
   Every video should have a script or creative treatment, even if there are no scenes or actors, to ensure everyone involved in creating the video knows the resources, concept, and overall plan being implemented. Scripts are usually written in a two column format, where audio appears in the left and visuals appear on the right.
 
 
-  ![Script Sample](/design-system/images/uploads/screen-shot-2021-02-16-at-3.43.02-pm.png)
+  ![Script Sample](/design-system/images/uploads/screen-shot-2021-02-16-at-4.45.23-pm.png)
 
 
   * Remember videos are a visual medium, so be sure to fill in enough visuals to appear on screen during the length of any narration.

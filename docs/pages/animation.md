@@ -1,5 +1,5 @@
 ---
-title: Animation
+title: Motion Graphics
 layout: variation
 section: foundation
 secondary_section: Brand guidelines

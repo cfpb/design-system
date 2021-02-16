@@ -21,8 +21,8 @@ first-level:
           - page: Photography
       - heading: Multimedia
         nav-items:
-          - page: Animation
           - page: Video
+          - page: Animation
   - heading: Components
     second-level:
       - heading: Alerts

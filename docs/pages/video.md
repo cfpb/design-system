@@ -364,6 +364,9 @@ guidelines: >-
   Our logo appears as a watermark in the upper left-hand corner of any social media videos we produce. 
 
 
+  ![Watermark Sample Image](/design-system/images/uploads/screen-shot-2021-02-16-at-5.05.58-pm.png "Watermark Sample Image")
+
+
   ### Motion Graphics
 
 

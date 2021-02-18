@@ -56,12 +56,12 @@
   },
   "dependencies": {
     "anchor-js": "4.3.0",
-    "core-js": "3.8.3",
+    "core-js": "3.9.0",
     "ftdomdelegate": "4.0.6",
-    "govuk-frontend": "^3.11.0",
+    "govuk-frontend": "3.11.0",
     "html-entities": "2.1.0",
     "lunr": "2.3.9",
-    "marked": "^2.0.0",
+    "marked": "2.0.0",
     "netlify-cms": "2.10.93",
     "normalize-css": "^2.3.1",
     "normalize-legacy-addon": "^0.1.0",
@@ -71,11 +71,11 @@
     "slugify": "1.4.6"
   },
   "devDependencies": {
-    "@babel/core": "7.12.16",
+    "@babel/core": "7.12.17",
     "@babel/plugin-proposal-class-properties": "7.12.13",
     "@babel/plugin-proposal-object-rest-spread": "7.12.13",
     "@babel/plugin-syntax-export-extensions": "^7.0.0-beta.32",
-    "@babel/preset-env": "7.12.16",
+    "@babel/preset-env": "7.12.17",
     "@babel/preset-react": "7.12.13",
     "@lhci/cli": "0.7.0",
     "@wdio/cli": "6.12.1",
@@ -109,7 +109,7 @@
     "less-loader": "8.0.0",
     "log-symbols": "4.0.0",
     "merge-stream": "2.0.0",
-    "mini-css-extract-plugin": "1.3.7",
+    "mini-css-extract-plugin": "1.3.8",
     "minimist": "1.2.5",
     "netlify-cms-proxy-server": "1.3.11",
     "postcss": "^8.2.6",
@@ -126,7 +126,7 @@
     "vinyl-named": "^1.1.0",
     "wcag": "^0.3.0",
     "wdio-chromedriver-service": "6.0.4",
-    "webpack": "5.22.0",
+    "webpack": "5.23.0",
     "webpack-cli": "4.5.0",
     "webpack-stream": "6.1.2"
   }

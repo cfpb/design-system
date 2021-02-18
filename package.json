@@ -33,7 +33,7 @@
     "design-system-link": "lerna exec -- yarn link",
     "design-system-unlink": "lerna exec -- yarn unlink",
     "install": "yarn run copy-icons && bundle install",
-    "process-icon-svgs": "svgo -f packages/cfpb-icons/src/icons --config=svgo.config.yml",
+    "process-icon-svgs": "svgo -f packages/cfpb-icons/src/icons --config=svgo.config.js",
     "release": "yarn run build && lerna publish",
     "start": "yarn run compile-dev && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn run compile-dev --watch\"",
     "serve-html": "http-server docs/_site",

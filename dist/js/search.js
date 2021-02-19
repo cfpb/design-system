@@ -3506,6 +3506,8 @@ lunr.QueryParser.parseBoost = function (parser) {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
 /*!**********************************!*\
   !*** ./docs/assets/js/search.js ***!

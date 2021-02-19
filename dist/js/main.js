@@ -364,106 +364,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ "./docs/assets/js/main.js":
-/*!********************************!*\
-  !*** ./docs/assets/js/main.js ***!
-  \********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _toggle_details_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle-details.js */ "./docs/assets/js/toggle-details.js");
-/* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! anchor-js */ "./node_modules/anchor-js/anchor.js");
-/* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(anchor_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Expandable */ "./packages/cfpb-expandables/src/Expandable.js");
-/* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
-/* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table */ "./packages/cfpb-tables/src/Table.js");
-/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! govuk-frontend */ "./node_modules/govuk-frontend/govuk/all.js");
-/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(govuk_frontend__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
-/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
-
-
-
-
-
-
-
-
-
-
-
-_redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__.default.init();
-_sidebar_js__WEBPACK_IMPORTED_MODULE_10__.default.init();
-var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())(); // Add anchors to all headings (except page title headings)
-
-anchors.add('h2:not(.title), h3, h4, h5'); // Ensure there are no anchors in inconvenient places
-
-anchors.remove("\n  .live-code-example h2,\n  .live-code-example h3,\n  .live-code-example h4,\n  .live-code-example h5,\n  .o-expandable_label,\n  #search-results h3\n");
-var multiselectDom = document.querySelector('.o-multiselect');
-
-if (multiselectDom) {
-  var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__.default(multiselectDom);
-  multiselect.init();
-}
-
-_cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__.default.init();
-_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__.default.init(); // Exporting these classes to the window so that the transition-patterns.md
-// page can use them in its code snippets.
-
-window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__.default;
-window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__.default;
-window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__.default;
-var main = document.querySelector('#main');
-var tabs = document.querySelectorAll('[data-module="tabs"]');
-
-if (tabs && tabs.length > 0) {
-  main.classList.add('js-enabled');
-
-  for (var i = 0; i < tabs.length; i++) {
-    var tab = tabs[i];
-    new govuk_frontend__WEBPACK_IMPORTED_MODULE_8__.Tabs(tab).init();
-  }
-}
-
-var toggleAllBtn = document.querySelector('#toggle-details');
-var toggleBtns = document.querySelectorAll('.a-toggle_code button');
-
-if (toggleAllBtn) {
-  toggleAllBtn.addEventListener('click', handleToggleAllClick, false);
-
-  if (window.localStorage.getItem('toggleState') === 'hide') {
-    (0,_toggle_details_js__WEBPACK_IMPORTED_MODULE_0__.toggleAllDetails)(toggleAllBtn);
-  }
-}
-
-for (var _i = 0, len = toggleBtns.length; _i < len; _i++) {
-  toggleBtns[_i].addEventListener('click', handleToggleClick, false);
-}
-/**
- * @param {MouseEvent} event - The mouse event object from the click.
- */
-
-
-function handleToggleAllClick(event) {
-  event.preventDefault();
-  (0,_toggle_details_js__WEBPACK_IMPORTED_MODULE_0__.toggleAllDetails)(toggleAllBtn);
-}
-/**
- * @param {MouseEvent} event - The mouse event object from the click.
- */
-
-
-function handleToggleClick(event) {
-  var target = event.target;
-  (0,_toggle_details_js__WEBPACK_IMPORTED_MODULE_0__.toggleDetails)(target);
-}
-
-/***/ }),
-
 /***/ "./docs/assets/js/redirect-banner.js":
 /*!*******************************************!*\
   !*** ./docs/assets/js/redirect-banner.js ***!
@@ -2188,7 +2088,7 @@ function CharacterCount ($module) {
   this.$module = $module;
   this.$textarea = $module.querySelector('.govuk-js-character-count');
   if (this.$textarea) {
-    this.$countMessage = $module.querySelector('[id=' + this.$textarea.id + '-info]');
+    this.$countMessage = $module.querySelector('[id="' + this.$textarea.id + '-info"]');
   }
 }
 
@@ -3246,19 +3146,6 @@ exports.Radios = Radios;
 exports.Tabs = Tabs;
 
 })));
-
-
-/***/ }),
-
-/***/ "./docs/assets/css/main.less":
-/*!***********************************!*\
-  !*** ./docs/assets/css/main.less ***!
-  \***********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
 
 
 /***/ }),
@@ -7207,11 +7094,115 @@ function onSortableClick( event ) {
 /******/ 	}();
 /******/ 	
 /************************************************************************/
-/******/ 	// startup
-/******/ 	// Load entry module
-/******/ 	__webpack_require__("./docs/assets/js/main.js");
-/******/ 	// This entry module used 'exports' so it can't be inlined
-/******/ 	__webpack_require__("./docs/assets/css/main.less");
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+!function() {
+"use strict";
+var __webpack_exports__ = {};
+/*!********************************!*\
+  !*** ./docs/assets/js/main.js ***!
+  \********************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _toggle_details_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle-details.js */ "./docs/assets/js/toggle-details.js");
+/* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! anchor-js */ "./node_modules/anchor-js/anchor.js");
+/* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(anchor_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Expandable */ "./packages/cfpb-expandables/src/Expandable.js");
+/* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
+/* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table */ "./packages/cfpb-tables/src/Table.js");
+/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! govuk-frontend */ "./node_modules/govuk-frontend/govuk/all.js");
+/* harmony import */ var govuk_frontend__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(govuk_frontend__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
+/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
+
+
+
+
+
+
+
+
+
+
+
+_redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__.default.init();
+_sidebar_js__WEBPACK_IMPORTED_MODULE_10__.default.init();
+var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())(); // Add anchors to all headings (except page title headings)
+
+anchors.add('h2:not(.title), h3, h4, h5'); // Ensure there are no anchors in inconvenient places
+
+anchors.remove("\n  .live-code-example h2,\n  .live-code-example h3,\n  .live-code-example h4,\n  .live-code-example h5,\n  .o-expandable_label,\n  #search-results h3\n");
+var multiselectDom = document.querySelector('.o-multiselect');
+
+if (multiselectDom) {
+  var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__.default(multiselectDom);
+  multiselect.init();
+}
+
+_cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__.default.init();
+_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__.default.init(); // Exporting these classes to the window so that the transition-patterns.md
+// page can use them in its code snippets.
+
+window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__.default;
+window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__.default;
+window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__.default;
+var main = document.querySelector('#main');
+var tabs = document.querySelectorAll('[data-module="tabs"]');
+
+if (tabs && tabs.length > 0) {
+  main.classList.add('js-enabled');
+
+  for (var i = 0; i < tabs.length; i++) {
+    var tab = tabs[i];
+    new govuk_frontend__WEBPACK_IMPORTED_MODULE_8__.Tabs(tab).init();
+  }
+}
+
+var toggleAllBtn = document.querySelector('#toggle-details');
+var toggleBtns = document.querySelectorAll('.a-toggle_code button');
+
+if (toggleAllBtn) {
+  toggleAllBtn.addEventListener('click', handleToggleAllClick, false);
+
+  if (window.localStorage.getItem('toggleState') === 'hide') {
+    (0,_toggle_details_js__WEBPACK_IMPORTED_MODULE_0__.toggleAllDetails)(toggleAllBtn);
+  }
+}
+
+for (var _i = 0, len = toggleBtns.length; _i < len; _i++) {
+  toggleBtns[_i].addEventListener('click', handleToggleClick, false);
+}
+/**
+ * @param {MouseEvent} event - The mouse event object from the click.
+ */
+
+
+function handleToggleAllClick(event) {
+  event.preventDefault();
+  (0,_toggle_details_js__WEBPACK_IMPORTED_MODULE_0__.toggleAllDetails)(toggleAllBtn);
+}
+/**
+ * @param {MouseEvent} event - The mouse event object from the click.
+ */
+
+
+function handleToggleClick(event) {
+  var target = event.target;
+  (0,_toggle_details_js__WEBPACK_IMPORTED_MODULE_0__.toggleDetails)(target);
+}
+}();
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+!function() {
+"use strict";
+/*!***********************************!*\
+  !*** ./docs/assets/css/main.less ***!
+  \***********************************/
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+}();
 /******/ })()
 ;
 //# sourceMappingURL=main.js.map

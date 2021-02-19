@@ -6093,7 +6093,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       type:         'text',
       placeholder:  _placeholder || 'Select up to five',
       inside:       _headerDom,
-      id:           _name,
+      id:           _dom.id,
       autocomplete: 'off'
     } );
 

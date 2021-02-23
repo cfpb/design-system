@@ -1,4 +1,27 @@
 
+## Unreleased (2021-02-23)
+
+#### Enhancement
+* `cfpb-icons`
+  * [#1198](https://github.com/cfpb/design-system/pull/1198) Update to SVGO v2 ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-forms`
+  * [#1196](https://github.com/cfpb/design-system/pull/1196) Multiselect: Change search input ID to DOM ID ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`
+  * [#1187](https://github.com/cfpb/design-system/pull/1187) MaxHeightTransition: Convert summary transition to px from ems ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1192](https://github.com/cfpb/design-system/pull/1192) Update outdated dependencies: netlify-cms, css-loader, html-loader, mini-css-extract-plugin, netlify-cms-proxy-server, postcss, govuk-frontend, stylelint, webpack, marked ([@anselmbradford](https://github.com/anselmbradford))
+* [#1190](https://github.com/cfpb/design-system/pull/1190) Fix lighthouse config ([@anselmbradford](https://github.com/anselmbradford))
+* [#1189](https://github.com/cfpb/design-system/pull/1189) ESLint: ignore sort-imports linter rule ([@anselmbradford](https://github.com/anselmbradford))
+* [#1188](https://github.com/cfpb/design-system/pull/1188) Update outdated dependencies: core-js, marked, netlify-cms, babel/core, babel/plugin-proposal-class-properties, babel/plugin-proposal-object-rest-spread, babel/preset-env, babel/preset-react, mini-css-extract-plugin, netlify-cms-proxy-server, postcss, webpack-stream, html-entities, wdio/cli, wdio/local-runner, wdio/sauce-service, autoprefixer, stylelint, terser-webpack-plugin, webpack, webpack-cli, chromedriver, less-loader, postcss-loader, lhci/cli ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## Unreleased (2021-02-04)
 
 #### Bug Fix

@@ -43,6 +43,9 @@ variation_groups:
 
 
           * [HomePage model](https://github.com/cfpb/consumerfinance.gov/blob/1afe8171c17365bb6bad889e3e034877c0bed5d3/cfgov/v1/models/home_page.py#L31-L120)
+
+
+          See [cf.gov PR#6290](https://github.com/cfpb/consumerfinance.gov/pull/6290/files) for a list of all carousel files.
 use_cases: |-
   ### When to use
 

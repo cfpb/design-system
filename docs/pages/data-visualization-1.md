@@ -278,4 +278,20 @@ accessibility: >-
   * How would someone using a screen reader interact with this visualization?
 
   * How would someone with low vision interact with this visualization?
+research: ""
+related_items: >-
+  * [Data visualization color
+  palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1)
+
+
+  * [Color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility)
+
+
+  * [Bar charts](https://cfpb.github.io/design-system/guidelines/bar-charts)
+
+
+  *  [Line charts](https://cfpb.github.io/design-system/guidelines/line-charts)
+
+
+  * [Pie charts](https://cfpb.github.io/design-system/guidelines/pie-charts)
 ---

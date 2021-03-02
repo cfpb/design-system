@@ -80,7 +80,7 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 // Links
 
 // .a-link__jump
-@jump-link_bg:              @gray-10;
+@jump-link_bg:              @gray-5;
 @jump-link_border:          @gray-40;
 ```
 

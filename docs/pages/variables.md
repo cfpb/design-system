@@ -358,7 +358,7 @@ variation_groups:
           @link-underline-active:  @navy;
 
           // .a-link__jump
-          @jump-link_bg:           @gray-10;
+          @jump-link_bg:           @gray-5;
           @jump-link_border:       @gray-40;
 
           // code

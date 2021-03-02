@@ -15,7 +15,7 @@ description: >-
 
   Carousels offer poor usability and are considered an [anti-pattern](https://thegood.com/insights/ecommerce-image-carousels/). Their use is discouraged.
 variation_groups:
-  - variation_group_name: ""
+  - variation_group_name: Types
     variations:
       - variation_description: >-
           The standard carousel organism is comprised of a set of blocks of

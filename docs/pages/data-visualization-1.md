@@ -10,7 +10,7 @@ description: "Data visualization can be an excellent way to increase
 variation_groups:
   - variation_group_name: Types
     variation_group_description: >-
-      Data visualization types commonly produced by the Bureau include the
+      Data visualization types commonly produced by the CFPB include the
       following. 
 
 
@@ -23,14 +23,13 @@ variation_groups:
       * Map
 
 
-      Data visualizations may appear as a static image, such as in a report or social media graphic, or as an interactive graphic, such as on a web page detailing [origination activity for auto loans](https://www.consumerfinance.gov/data-research/consumer-credit-trends/auto-loans/origination-activity/).
+      A data visualization may appear as a static image, such as in a report or social media graphic, or as an interactive graphic, such as on a web page detailing [origination activity for auto loans](https://www.consumerfinance.gov/data-research/consumer-credit-trends/auto-loans/origination-activity/).
     variations: []
 use_cases: >-
-  It is critical to choose the correct visualization for your data. When
-  planning to make a data visualization, make sure you understand the data and
-  the relationship of your data before you decide how to visualize it. As you
-  create your data visualization, it's important to ensure it communicates a
-  main point that users can easily recognize and walk away with.
+  It is critical to choose the correct visualization for your data. Make sure
+  you understand the data and the relationship of your data before you decide
+  how to visualize it. It's also important to ensure your data visualization
+  communicates a main point that users can easily recognize and walk away with.
 
 
   Occasionally, data visualization isn’t the best approach. A well-crafted sentence or table may work better to convey a specific point or precise numerical interpretation. Graphs are most useful when you want the user to walk away with a general sense of the data and to interpret patterns.
@@ -58,7 +57,7 @@ use_cases: >-
   #### Specific users
 
 
-  If your data visualization is designed with a specific audience in mind, take into consideration their familiarity with the data, visualization types, and the terminology used to label and describe data. More complex stories might necessitate more complex visuals, however, this does not mean it should lack emphasis.
+  If your data visualization is designed with a specific audience in mind, take into consideration their familiarity with the data, visualization types, and terminology used to label and describe data. More complex stories might necessitate more complex visuals, however, this does not mean it should lack emphasis.
 guidelines: >-
   Whether you’re using Excel, Tableau, D3.js, or any other program, follow these
   guidelines to create effective and consistent data visualizations.
@@ -81,7 +80,7 @@ guidelines: >-
   ### Color
 
 
-  When used properly, color can help clarify relationships between data, provide emphasis for certain data points, and maintain a consistent brand voice. When used poorly, color can overwhelm the user, make the data confusing, and break with brand standards to appear inconsistent.
+  When used properly, color can help clarify relationships between data, provide emphasis for certain data points, and maintain a consistent brand voice. When used poorly, color can overwhelm the user, make the data confusing, and break with brand standards.
 
 
   When using color, ensure the following.
@@ -91,7 +90,7 @@ guidelines: >-
 
   * You’re not relying solely on color to connote meaning. Use other visual qualities such as patterning to distinguish between data points. 
 
-  * You’ve accounted for color blindness. We use specific color combinations to create accessible, on-brand data visualizations. [View our data visualization color palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1). We also have a set of guidelines around the accessible use of color in both web and print. [View color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility).
+  * You’ve accounted for color blindness. We use specific color combinations to create accessible, on-brand data visualizations. [View our data visualization color palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1). We also have a set of guidelines detailing the accessible use of color in both web and print. [View color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility).
 
 
   ### Chart components
@@ -119,7 +118,7 @@ guidelines: >-
   #### Title
 
 
-  Titles should be as descriptive as possible to give users a sense of what the chart will be about and ensure someone who cannot see the chart can understand the general trends. This provides users a framework of what they are looking at. It also helps with 508 accessibility and decreases the amount of text necessary in alt tags.
+  Titles should be as descriptive as possible to give users a sense of what the chart will be about and ensure someone who cannot see the chart can understand the general trends. This provides users a framework of what they are viewing. It also helps with 508 accessibility and decreases the amount of text necessary in alt tags.
 
 
   * Write the title to provide an overview of what the graph is about.
@@ -145,7 +144,7 @@ guidelines: >-
   #### Notes
 
 
-  Include notes with your data visualization to describe any caveats or inconsistencies with the data. For instance, when using charts that show percentages, users expect things to add up to 100%. Not adding up to 100% undermines the integrity of the visuals by leaving the user with missing pieces. 
+  Include notes with your data visualization to describe any caveats or inconsistencies with the data. For instance, when using charts that show percentages, users expect numbers to add up to 100%. Not adding up to 100% undermines the integrity of the visuals by leaving the user with missing pieces. 
 
 
   To remedy this effect, add a note at the bottom to explain the missing data.
@@ -165,7 +164,7 @@ guidelines: >-
   #### Data source
 
 
-  It’s important to clearly state where data is from to promote trustworthiness and validity. If possible, provide a link to the URL of a spreadsheet or to the source of the data. This will enable people to dive deeper into the data, explore the nuances for themselves, and replicate the visualization themselves. 
+  It is important to clearly state where data is from to promote trustworthiness and validity. If possible, provide a link to the URL of a spreadsheet or to the source of the data. This will enable people to dive deeper into the data, explore the nuances for themselves, and replicate the visualization themselves. 
 
 
   #### Labels and key
@@ -203,10 +202,10 @@ guidelines: >-
   To help create emphasis, ensure your visualization has a strong visual hierarchy. This will allow the user to focus on the most important piece of content first and work their way into the graphic. 
 
 
-  #### Check hierarchy with a squint test 
+  #### Check hierarchy with a squint test
 
 
-  The title and subtitle should be biggest and the first things that the user reads when viewing the chart to give them context of what the chart is about. Take a step back from your data visualization, squint your eyes, and say what you see first, second, third, and so on. This will give you a sense what your users will likely identify first. 
+  The title and subtitle should be the biggest and first things the user reads when viewing the chart to give them context of what the chart is about. Take a step back from your data visualization, squint your eyes, and say what you see first, second, third, and so on. This will give you a sense what your users will likely identify first. 
 
 
   #### Use labels to call out information
@@ -230,7 +229,7 @@ guidelines: >-
   ### Ensuring accuracy
 
 
-  A chart is only as good as the validity of its data. It’s important to check both the data and chart several times with multiple people before publishing. One small error can invalidate the integrity of an entire visualization. Several errors in data accuracy can damage credibility. Include notes with your data visualization to describe any caveats or inconsistencies, and be sure to clearly state where data is from to promote trustworthiness and validity. 
+  A chart is only as good as the validity of its data. It is important to check both the data and chart several times with multiple people before publishing. One small error can invalidate the integrity of an entire visualization. Several errors in data accuracy can damage credibility. Include notes with your data visualization to describe any caveats or inconsistencies and be sure to clearly state where data is from to promote trustworthiness and validity. 
 
 
   To ensure accuracy, ask yourself the following. 
@@ -240,7 +239,7 @@ guidelines: >-
 
   * Did someone else look at the chart and data for feedback?
 
-  * If there are percentages, do they add up to 100? Why not?
+  * If there are percentages, do they add up to 100%? Why not?
 
   * What is the source of the data?
 accessibility: >-
@@ -253,7 +252,7 @@ accessibility: >-
 
   * Include descriptive titles. 
 
-  * Do not rely solely on color to connect data to its meaning, ensure adequate color contrast, and account for color blindness. 
+  * Be mindful of your use of color. Do not rely solely on color to connect data to its meaning, account for color blindness, and ensure adequate color contrast.
 
 
   ### Alt tags

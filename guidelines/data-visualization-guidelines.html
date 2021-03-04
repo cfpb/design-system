@@ -214,7 +214,15 @@
     <ul class="m-list m-list__horizontal m-list__horizontal-spaced">
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#introduction">Introduction</a>
+            <a class="m-list_link" href="#types">Types</a>
+        </li>
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#use-cases">Use cases</a>
+        </li>
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#guidelines">Guidelines</a>
         </li>
         
         <li class="m-list_item">
@@ -222,23 +230,7 @@
         </li>
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#accuracy">Accuracy</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#audience">Audience</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#chart-components">Chart components</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#color">Color</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#emphasis">Emphasis</a>
+            <a class="m-list_link" href="#related-items">Related items</a>
         </li>
         
     </ul>
@@ -246,857 +238,37 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Whether you’re using Excel, Tableau, D3.js, or any other program, follow these guidelines to create effective and consistent data visualizations.</p>
-
+        <p>Data visualization can be an excellent way to increase understanding of information and make comparisons of data. Using visuals to convey meaning and tell stories can engage the user and create a memorable experience.</p>
 
     </section>
     
 
     
     
-    <section class="o-variation_group" id="introduction">
+    <section class="o-variation_group" id="types">
 
         
         <h2 class="o-variation_group_title">
-            Introduction
+            Types
         </h2>
         
 
         
         <div class="o-variation_group_description">
-            <p>Data visualization can be an excellent way to increase understanding and make comparisons of data. Each graph should have a point that you want the user to walk away knowing.</p>
-
-<p>Using visuals to convey meaning and to tell stories engages the user and creates a memorable experience. Part of this is choosing the correct visualization for the data. Make sure you understand the data and the relationship of your data before you choose visuals to help explain it to others.</p>
-
-<p>Occasionally, data visualization isn’t the best approach. A well crafted sentence or table may be a better solution to convey specific points or a precise numerical interpretation. Graphs are most useful when you want the user to walk away with a general sense of the data and to interpret patterns.</p>
-
-        </div>
-        
-
-        
-    </section>
-    
-    <section class="o-variation_group" id="accessibility">
-
-        
-        <h2 class="o-variation_group_title">
-            Accessibility
-        </h2>
-        
-
-        
-        <div class="o-variation_group_description">
-            <p>Allowing all users to be able to comprehend charts and graphics is a key part of being a government agency that serves the entire American public. This is an interpretation of what it means for a chart to be 508 compliant and accessible, starting with descriptive titles (see the Data visualization chart components subsection on titles) and not only relying on color to connect data to its meaning (with details in the Data visualization color section).</p>
-
-<h3 id="key-questions">Key questions</h3>
+            <p>Data visualization types commonly produced by the Bureau include the following. </p>
 
 <ul>
-  <li>How would someone using a screen reader interact with this visualization?</li>
-  <li>How would someone with low vision interact with this visualization?</li>
+  <li><a href="https://cfpb.github.io/design-system/guidelines/bar-charts">Bar chart</a></li>
+  <li><a href="https://cfpb.github.io/design-system/guidelines/line-charts">Line chart</a></li>
+  <li><a href="https://cfpb.github.io/design-system/guidelines/pie-charts">Pie chart</a></li>
+  <li>Map</li>
 </ul>
 
-        </div>
-        
-
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Alt tags</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Alt tags are what a screen reader will say instead of the image. This is important for not only web materials, but charts that are in pdfs and charts that are placed as images into word documents.</p>
-
-<p>Screen readers read all of the text in an alt tag without allowing users to speed up, or skip. Make sure the information in the alt tag is descriptive but succinct.</p>
-
-<p>Alt tags should include:</p>
-
-<ul>
-  <li>
-    <p>One sentence of what the chart is, including the chart type for users with limited vision who can see part of it, but may not be able to have a full understanding of the graph. Example: “Bar chart showing complaints by type for New York metro area, New York state and the United States.”</p>
-  </li>
-  <li>
-    <p>A link to a CSV or other machine-readable data format with the data so people with impaired vision can tab through the data with a screen reader. The data should have descriptive column labels and provide a link.</p>
-  </li>
-</ul>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Color contrast and color blindness</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>See the color section of these data visualization guidelines.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-    </section>
-    
-    <section class="o-variation_group" id="accuracy">
-
-        
-        <h2 class="o-variation_group_title">
-            Accuracy
-        </h2>
-        
-
-        
-        <div class="o-variation_group_description">
-            <p>A chart is only as good as the validity of its data. It’s important to check both the data and chart several times with multiple people before publishing. One small error can invalidate the integrity of an entire visualization. Several errors in data accuracy can damage credibility.</p>
-
-<h3 id="key-questions">Key questions</h3>
-
-<ul>
-  <li>Is this an accurate way to represent this data?</li>
-  <li>Did someone else look at the chart and data for feedback?</li>
-  <li>If there are percentages, do they add up to 100? Why not?</li>
-  <li>What is the source of the data?</li>
-</ul>
+<p>Data visualizations may appear as a static image, such as in a report or social media graphic, or as an interactive graphic, such as on a web page detailing <a href="https://www.consumerfinance.gov/data-research/consumer-credit-trends/auto-loans/origination-activity/">origination activity for auto loans</a>.</p>
 
         </div>
         
 
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Notes section</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>When using charts that show percentages, users expect things to add up to 100%. If they don’t it undermines the integrity of the visuals by leaving the user with missing pieces.</p>
-
-<p>To remedy this effect add a note at the bottom to explain the missing data.</p>
-
-<blockquote>
-  <p><em>Example</em>: Percentages may not sum to 100% due to rounding.</p>
-</blockquote>
-
-<p>Use notes to add in other caveats around the data like if it was taken from a specific time period.</p>
-
-<blockquote>
-  <p><em>Example</em>: Percent change is based on a 3 month period (October-December) and compared to the previous year.</p>
-</blockquote>
-
-<blockquote>
-  <p><em>Example</em>: Company-level information should be considered in context of total complaints, company size and market share in a given geographic area.</p>
-</blockquote>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Sources section</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Including the source of the data in the visualization is a must. It adds credibility and transparency to the graph. The visualization could then be replicated using the mentioned sources which adds credibility.</p>
-
-<p>If you’re unable to link to the source, link to a spreadsheet of the data used
-to create the visualization.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-    </section>
-    
-    <section class="o-variation_group" id="audience">
-
-        
-        <h2 class="o-variation_group_title">
-            Audience
-        </h2>
-        
-
-        
-        <div class="o-variation_group_description">
-            <p>Consider your audience when you’re creating data visualization.</p>
-
-<h3 id="key-questions">Key questions</h3>
-
-<ul>
-  <li>Who is your audience?</li>
-  <li>What is their familiarity with data visualization?</li>
-  <li>How much information do they need?</li>
-</ul>
-
-        </div>
-        
-
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>General public</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>If your user group is general (i.e. the American public), stick with basic and most common chart types that people can easily understand. Adding emphasis and labels will help highlight the point of the visual and tell the story of the information. Consider using multiple simple charts to step the user through the data, rather than one big complex visualization.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Specific users</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>If your data visualizations are designed with a specific audience in mind, take into consideration their familiarity with the data, visualization types, and the terminology used to label and describe data. More complex stories might necessitate more complex visuals, however, this does not mean it should lack emphasis.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-    </section>
-    
-    <section class="o-variation_group" id="chart-components">
-
-        
-        <h2 class="o-variation_group_title">
-            Chart components
-        </h2>
-        
-
-        
-        <div class="o-variation_group_description">
-            <p>Using the appropriate font not only increases consistency with the core brand, but assures legibility and good visual hierarchy. Proper labeling and titles help users quickly understand the chart and increases comprehension as well as helping with accessibility.</p>
-
-<h3 id="key-questions">Key questions</h3>
-
-<ul>
-  <li>Does your chart have a descriptive title and subtitle so someone who cannot see the chart could understand the general trends?</li>
-  <li>Have you included notes and a data source?</li>
-  <li>Is it clear when the data is from?</li>
-</ul>
-
-        </div>
-        
-
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Font</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>All data, labels and titles for data visualizations should be in a sans-serif font. The preferred choices for fonts are: Avenir Next over Arial, and Arial over another sans serif font.</p>
-
-<p>While serif fonts are generally easier to read for long blocks of text, data visualizations rarely include long blocks. The lack of serifs, especially on numbers, helps cut down on the amount of lines and visual clutter. This lack also increases the legibility of small text by eliminating thin serifs.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Titles</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Titles should be as descriptive as possible to give users a sense of what the chart will be about. This not only provides users a framework of what they are looking at, but also helps with 508 accessibility and decreases the amount of text necessary in alt tags.</p>
-
-<p><img src="/design-system/images/uploads/parts-of-a-chart_titles.png" alt="Labeled display of the titles in a chart"></p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Labels and keys</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Wherever possible, charts should not include a key, and data should be directly labeled. This reduces the cognitive burden for the user so they are not hunting for labels and trying to connect colors to the data.</p>
-
-<p><img src="/design-system/images/uploads/parts-of-a-chart_012.png" alt="Labeled display of the data on a chart"></p>
-
-<p><img src="/design-system/images/uploads/parts-of-a-chart_013.png" alt="Labeled display of the data on a chart"></p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Standard visualizations</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>All variations use these base styles and guidelines unless otherwise noted.</p>
-
-<h4 id="title">Title</h4>
-
-<ul>
-  <li>Gives an overview of what the graph is about</li>
-  <li>Uses the <code class="language-plaintext highlighter-rouge">h3</code> heading style</li>
-  <li>2 lines of text maximum</li>
-</ul>
-
-<h4 id="subtitle">Subtitle</h4>
-
-<ul>
-  <li>Explains the general trends of the graph and what that means, including why it is important</li>
-  <li>Uses the <code class="language-plaintext highlighter-rouge">body text</code> paragraph style</li>
-  <li>3 lines of text maximum</li>
-</ul>
-
-<h4 id="notes">Notes</h4>
-
-<ul>
-  <li>Describes any caveats or inconsistencies with the data such as explaining why numbers do not add up to 100% or the specific dates that the data is pulled from</li>
-</ul>
-
-<h4 id="data-source-information">Data source information</h4>
-
-<ul>
-  <li>Provides a link to the URL of a spreadsheet or to the source of the data</li>
-  <li>Important to include for trustworthiness and validity</li>
-  <li>Allows people to dive deeper into the data and explore the nuances for themselves or to replicate the visualization</li>
-</ul>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Reports</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <h4 id="figure-number">Figure number</h4>
-
-<ul>
-  <li>Uses the <code class="language-plaintext highlighter-rouge">Figure number</code> style (all caps)</li>
-</ul>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Web pages</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Generally presented as interactive visualizations rather than static images.</p>
-
-<h4 id="figure-number">Figure number</h4>
-
-<ul>
-  <li>Uses the <code class="language-plaintext highlighter-rouge">H5</code> heading style</li>
-</ul>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Blog posts</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Uses standard styles, no figure number.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Social media</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <h4 id="cfpb-logo">CFPB logo</h4>
-
-<ul>
-  <li>Include the CFPB logo; helps with identification and determining origin if the graphic gets re-used</li>
-</ul>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-    </section>
-    
-    <section class="o-variation_group" id="color">
-
-        
-        <h2 class="o-variation_group_title">
-            Color
-        </h2>
-        
-
-        
-        <div class="o-variation_group_description">
-            <p>When used properly, color can help clarify relationships between data, provide emphasis for certain data points, and maintain a consistent brand voice. When used poorly, color can overwhelm the user, make the data confusing and break with brand standards to appear inconsistent.</p>
-
-<h3 id="key-questions">Key questions</h3>
-
-<ul>
-  <li>Does the use of color have a purpose?</li>
-  <li>Have you relied on more than just color to connote meaning?</li>
-  <li>Have you accounted for color blindness?</li>
-</ul>
-
-        </div>
-        
-
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Color palettes and accessibility</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>We use specific color combinations to create accessible, on-brand data visualizations. <a href="https://cfpb.github.io/design-system//foundation/color#data-visualization-palettes-1">View our data visualization color palettes</a>.</p>
-
-<p>We also have a set of guidelines around the accessible use of color in both web and print. 
-<a href="https://cfpb.github.io/design-system//foundation/color#accessibility">View color accessibility guidelines </a>.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-    </section>
-    
-    <section class="o-variation_group" id="emphasis">
-
-        
-        <h2 class="o-variation_group_title">
-            Emphasis
-        </h2>
-        
-
-        
-        <div class="o-variation_group_description">
-            <p>Highlighting parts of your chart will help users quickly understand the point of the graphic and accurately comprehend the information.</p>
-
-<h3 id="key-questions">Key questions</h3>
-
-<ul>
-  <li>What is the point of the chart?</li>
-  <li>Can someone who hasn’t seen the chart before figure out the point from a quick look and the title?</li>
-</ul>
-
-        </div>
-        
-
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Visual hierarchy</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Good visual hierarchy allows the user to focus on the most important piece of content first and work their way into the graphic. The title and subtitle should be the first thing that the user reads when viewing the chart to give them context of what the chart is about. Therefore, they should be the biggest thing on the chart (see the Data visualization chart components section).</p>
-
-<p>Use the squint test (take a step back from your graph, squint your eyes, and say what you see first, second, third…) to get a sense of what your users will automatically identify first.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Labels</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Goals, trends, and important outliers should be highlighted to help the user discern what is going on with the data. Labels will help the user understand the data and make sense of what it is showing.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>Projected values</h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>When dealing with projected or predicted data, the predicted data should be deemphasized. Use a color change to a lighter tint or dashed outline for bar charts, a dotted line for line charts, and a label explaining what part of the data is predicted or projected.</p>
-
-<p><img src="/design-system/images/uploads/projected-values-1.png" alt="Line chart that has a projected values label, as well as changes in color and pattern to indicate the projected data."></p>
-
-<p><img src="/design-system/images/uploads/projected-values-2.png" alt="Bar chart that has a projected values label, as well as changes in color to indicate the projected data."></p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
         
     </section>
     
@@ -1107,7 +279,174 @@ to create the visualization.</p>
         <section class="sticky-header u-mb45">
 
             
+                <h2 id="use-cases">Use cases</h2>
+                <div class="content_line content_line__wide u-mb20"></div>
+                <p>
+                </p>
+<p>It’s critical to choose the correct visualization for your data. When making a data visualization, make sure you:</p>
 
+<ul>
+  <li>Understand the data and the relationship of your data before you decide how to visualize it.</li>
+  <li>Ensure your visualization communicates a main point that users can easily recognize and walk away with.</li>
+</ul>
+
+<p>Occasionally, data visualization isn’t the best approach. A well-crafted sentence or table may work better to convey a specific point or precise numerical interpretation. Graphs are most useful when you want the user to walk away with a general sense of the data and to interpret patterns.</p>
+
+<h3 id="audience">Audience</h3>
+<p>Consider your audience when creating a visualization. Ask yourself:</p>
+<ul>
+  <li>Who is your audience?</li>
+  <li>What is their familiarity with data visualization?</li>
+  <li>How much information do they need?</li>
+</ul>
+
+<h4 id="general-public">General public</h4>
+<p>If your user group is general (i.e. the American public), stick with basic and most common chart types that people can easily understand. Adding emphasis and labels will help highlight the point of the visual and tell the story of the information. Consider using multiple simple charts to step the user through the data, rather than one big complex visualization.</p>
+
+<h4 id="specific-users">Specific users</h4>
+<p>If your data visualization is designed with a specific audience in mind, take into consideration their familiarity with the data, visualization types, and the terminology used to label and describe data. More complex stories might necessitate more complex visuals, however, this does not mean it should lack emphasis.</p>
+
+                
+            
+
+            
+                <h2 id="guidelines">Guidelines</h2>
+                <div class="content_line content_line__wide u-mb20"></div>
+                <p>
+                </p>
+<p>Whether you’re using Excel, Tableau, D3.js, or any other program, follow these guidelines to create effective and consistent data visualizations.</p>
+
+<h3 id="font">Font</h3>
+
+<p>All data, labels and titles for data visualizations should be in a sans-serif font. While serif fonts are generally easier to read for long blocks of text, data visualizations rarely include long blocks. The lack of serifs, especially on numbers, helps cut down on the amount of lines and visual clutter. This lack also increases the legibility of small text by eliminating thin serifs.</p>
+
+<ul>
+  <li>Use Avenir Next if it is available.</li>
+  <li>If Avenir Next is not available, use Arial.</li>
+</ul>
+
+<p>Using the appropriate font not only increases consistency with the core brand, it assures legibility and good visual hierarchy.</p>
+
+<h3 id="color">Color</h3>
+
+<p>When used properly, color can help clarify relationships between data, provide emphasis for certain data points, and maintain a consistent brand voice. When used poorly, color can overwhelm the user, make the data confusing and break with brand standards to appear inconsistent.
+When using color, ensure the following:</p>
+
+<ul>
+  <li>Your use of color has a purpose.</li>
+  <li>You’re not relying solely on color to connote meaning. Use other visual qualities such as patterning to distinguish between data points.</li>
+  <li>You’ve accounted for color blindness.
+We use specific color combinations to create accessible, on-brand data visualizations. <a href="https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1">View our data visualization color palettes</a>.
+We also have a set of guidelines around the accessible use of color in both web and print. <a href="https://cfpb.github.io/design-system/foundation/color#accessibility">View color accessibility guidelines</a>.</li>
+</ul>
+
+<h3 id="chart-components">Chart components</h3>
+
+<p>Elements such as clear titles and proper labeling help users quickly understand data visualizations, increase comprehension, and contribute to accessibility.</p>
+
+<p><img src="/design-system/images/uploads/parts-of-a-chart_titles.png" alt="Chart components"></p>
+
+<h4 id="figure-number">Figure number</h4>
+
+<p>The figure number style varies depending on where the data visualization is presented.</p>
+
+<ul>
+  <li>In a report, use the Figure number style (all caps).</li>
+  <li>On a web page, use the H5 heading style.</li>
+  <li>On a blog or social post, do not include a figure number.</li>
+</ul>
+
+<h4 id="title">Title</h4>
+
+<p>Titles should be as descriptive as possible to give users a sense of what the chart will be about and ensure someone who cannot see the chart can understand the general trends. This provides users a framework of what they are looking at. It also helps with 508 accessibility and decreases the amount of text necessary in alt tags.</p>
+
+<ul>
+  <li>Write the title to provide an overview of what the graph is about</li>
+  <li>Use the h3 heading style.</li>
+  <li>Include no more than two lines of text</li>
+</ul>
+
+<h4 id="subtitle">Subtitle</h4>
+
+<p>As with a title, ensure your data visualization has a descriptive subtitle.</p>
+
+<ul>
+  <li>Write the subtitle to explain the general trends of the graph and what that means, including why it is important.</li>
+  <li>Use the body text paragraph style</li>
+  <li>Include no more than three lines of text</li>
+</ul>
+
+<h4 id="notes">Notes</h4>
+
+<p>Include notes with your data visualization to describe any caveats or inconsistencies with the data. For instance, when using charts that show percentages, users expect things to add up to 100%. Not adding up to 100% undermines the integrity of the visuals by leaving the user with missing pieces. To remedy this effect, add a note at the bottom to explain the missing data.</p>
+
+<ul>
+  <li><em>Example: “Percentages may not sum to 100% due to rounding.”</em></li>
+</ul>
+
+<p>You can also use notes to add in other caveats, such as if the data was taken from a specific time period.</p>
+
+<ul>
+  <li><em>Example: “Percent change is based on a 3-month period (October-December) and compared to the previous year.”
+Example: “Company-level information should be considered in context of total complaints, company size, and market share in a given geographic area.</em></li>
+</ul>
+
+<h4 id="data-source">Data source</h4>
+
+<p>It’s important to clearly state where data is from to promote trustworthiness and validity. If possible, provide a link to the URL of a spreadsheet or to the source of the data. This will enable people to dive deeper into the data, explore the nuances for themselves, and replicate the visualization themselves.</p>
+
+<h4 id="labels-and-key">Labels and key</h4>
+
+<p>Whenever possible, place labels directly on the data visualization rather than putting labels in a key. Direct labeling reduces the cognitive burden for a user by preventing them from having to hunt for labels or try to connect color meaning to the data.</p>
+
+<p><img src="/design-system/images/uploads/parts-of-a-chart_012.png" alt="Labels and keys"></p>
+
+<p><img src="/design-system/images/uploads/parts-of-a-chart_013.png" alt="Labels and keys"></p>
+
+<h4 id="logo">Logo</h4>
+
+<p>If the data visualization appears on its own, such as in a social media post, include the CFPB logo. This will help with identification and determining the graphic’s origin if it gets reused.</p>
+
+<h3 id="creating-emphasis">Creating emphasis</h3>
+
+<p>Highlighting parts of your chart will help users quickly understand the point of the graphic and accurately comprehend the information.</p>
+
+<p>When considering how to create emphasis, ask yourself:</p>
+
+<ul>
+  <li>What is the point of the chart?</li>
+  <li>Can someone who hasn’t seen the chart before figure out the point from a quick look and the title?</li>
+</ul>
+
+<p>To help create emphasis, ensure your visualization has a strong visual hierarchy. This will allow the user to focus on the most important piece of content first and work their way into the graphic. Consider the following:</p>
+
+<ul>
+  <li>
+<strong>Check hierarchy with a squint test.</strong> The title and subtitle should be biggest and first things that the user reads when viewing the chart to give them context of what the chart is about. Take a step back from your data visualization, squint your eyes, and say what you see first, second, third, and so on. This will give you a sense what your users will likely identify first.</li>
+  <li>
+<strong>Use labels to call out information.</strong> Goals, trends, and important outliers should be highlighted with labels to help the user discern what is going on with the data.</li>
+  <li>
+<strong>Deemphasize projected values.</strong> When dealing with projected or predicted data, the predicted data should be deemphasized. Use a color change to a lighter tint or dashed outline for bar charts, a dotted line for line charts, and a label explaining what part of the data is predicted or projected.</li>
+</ul>
+
+<p><img src="/design-system/images/uploads/projected-values-1.png" alt="Projected values"></p>
+
+<p><img src="/design-system/images/uploads/projected-values-2.png" alt="Projected values"></p>
+
+<h3 id="ensuring-accuracy">Ensuring accuracy</h3>
+
+<p>A chart is only as good as the validity of its data. It’s important to check both the data and chart several times with multiple people before publishing. One small error can invalidate the integrity of an entire visualization. Several errors in data accuracy can damage credibility. Include notes with your data visualization to describe any caveats or inconsistencies, and be sure to clearly state where data is from to promote trustworthiness and validity.</p>
+
+<p>To ensure accuracy, ask yourself:</p>
+
+<ul>
+  <li>Is this an accurate way to represent this data?</li>
+  <li>Did someone else look at the chart and data for feedback?</li>
+  <li>If there are percentages, do they add up to 100? Why not?</li>
+  <li>What is the source of the data?</li>
+</ul>
+
+                
             
 
             
@@ -1117,10 +456,72 @@ to create the visualization.</p>
     
 
     
+        <section class="sticky-header u-mb45">
+            <h2 id="accessibility">Accessibility</h2>
+            <div class="content_line content_line__wide u-mb20"></div>
+            <p>
+                </p>
+<p>Allowing all users to be able to comprehend data visualizations is a key part of being a government agency that serves the entire American public. When building your data visualization, it’s important to ensure the following:</p>
+
+<ul>
+  <li>Include descriptive titles.</li>
+  <li>Do not rely solely on color to connect data to its meaning, ensure adequate color contrast, and account for color blindness.</li>
+</ul>
+
+<h3 id="alt-tags">Alt tags</h3>
+
+<p>Alt tags are what a screen reader will say instead of the image. This is important for not only web materials but also for charts that are in pdfs and charts that are placed as images into word documents.
+Screen readers read all of the text in an alt tag without allowing users to speed up or skip. Make sure the information in the alt tag is descriptive but succinct.</p>
+
+<p>Alt tags should include:</p>
+
+<ul>
+  <li>One sentence of what the chart is, including the chart type for users with limited vision who can see part of it, but may not be able to have a full understanding of the graph. <em>Example: “Bar chart showing complaints by type for New York metro area, New York state and the United States.”</em>
+</li>
+  <li>A link to a CSV or other machine-readable data format with the data so people with impaired vision can tab through the data with a screen reader. The data should have descriptive column labels and provide a link.</li>
+</ul>
+
+<p>When determining how to create an accessible data visualization, ask yourself:</p>
+
+<ul>
+  <li>How would someone using a screen reader interact with this visualization?</li>
+  <li>How would someone with low vision interact with this visualization?</li>
+</ul>
+
+            
+        </section>
+    
 
     
 
     <div class="content-l u-mb45">
+        
+        <div class="content-l_col content-l_col-1-2">
+            <div>
+                <section>
+                    <h2 id="related-items">Related Items</h2>
+                    <div class="content_line__wide content_line content_line u-mb20"></div>
+                    <ul>
+  <li>
+    <p><a href="https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1">Data visualization color palettes</a></p>
+  </li>
+  <li>
+    <p><a href="https://cfpb.github.io/design-system/foundation/color#accessibility">Color accessibility guidelines</a></p>
+  </li>
+  <li>
+    <p><a href="https://cfpb.github.io/design-system/guidelines/bar-charts">Bar charts</a></p>
+  </li>
+  <li>
+    <p><a href="https://cfpb.github.io/design-system/guidelines/line-charts">Line charts</a></p>
+  </li>
+  <li>
+    <p><a href="https://cfpb.github.io/design-system/guidelines/pie-charts">Pie charts</a></p>
+  </li>
+</ul>
+
+                </section>
+            </div>
+        </div>
         
     </div>
 <!-- .content-l -->
@@ -1177,8 +578,8 @@ to create the visualization.</p>
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/data-visualization-1.md">
-                    <time datetime="2021-01-12 13:40:30 -0500">
-                         1:40:30 PM Jan 12, 2021
+                    <time datetime="2021-03-04 13:56:41 -0500">
+                         1:56:41 PM Mar 04, 2021
                     </time>
                 </a>
             </small>

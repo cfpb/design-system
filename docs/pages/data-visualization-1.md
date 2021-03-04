@@ -203,11 +203,22 @@ guidelines: >-
   To help create emphasis, ensure your visualization has a strong visual hierarchy. This will allow the user to focus on the most important piece of content first and work their way into the graphic. 
 
 
-  * **Check hierarchy with a squint test.** The title and subtitle should be biggest and the first things that the user reads when viewing the chart to give them context of what the chart is about. Take a step back from your data visualization, squint your eyes, and say what you see first, second, third, and so on. This will give you a sense what your users will likely identify first. 
+  #### **Check hierarchy with a squint test** 
 
-  * **Use labels to call out information.** Goals, trends, and important outliers should be highlighted with labels to help the user discern what is going on with the data. 
 
-  * **Deemphasize projected values.** When dealing with projected or predicted data, the predicted data should be deemphasized. Use a color change to a lighter tint or dashed outline for bar charts, a dotted line for line charts, and a label explaining what part of the data is predicted or projected.
+  The title and subtitle should be biggest and the first things that the user reads when viewing the chart to give them context of what the chart is about. Take a step back from your data visualization, squint your eyes, and say what you see first, second, third, and so on. This will give you a sense what your users will likely identify first. 
+
+
+  #### Use labels to call out information
+
+
+  Goals, trends, and important outliers should be highlighted with labels to help the user discern what is going on with the data. 
+
+
+  #### Deemphasize projected values
+
+
+  When dealing with projected or predicted data, the predicted data should be deemphasized. Use a color change to a lighter tint or dashed outline for bar charts, a dotted line for line charts, and a label explaining what part of the data is predicted or projected.
 
 
   ![Projected values](/design-system/images/uploads/projected-values-1.png)

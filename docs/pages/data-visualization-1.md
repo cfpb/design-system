@@ -112,7 +112,7 @@ guidelines: >-
   Elements such as clear titles and proper labeling help users quickly understand data visualizations, increase comprehension, and contribute to accessibility.
 
 
-  \[Image]
+  ![Chart components](/design-system/images/uploads/parts-of-a-chart_titles.png)
 
 
   #### Figure number
@@ -181,9 +181,10 @@ guidelines: >-
   Whenever possible, place labels directly on the data visualization rather than putting labels in a key. Direct labeling reduces the cognitive burden for a user by preventing them from having to hunt for labels or try to connect color meaning to the data.  
 
 
-  \[Image]
+  ![Labels and keys](/design-system/images/uploads/parts-of-a-chart_012.png)
 
-  \[Image]
+
+  ![Labels and keys](/design-system/images/uploads/parts-of-a-chart_013.png)
 
 
   #### Logo
@@ -216,9 +217,10 @@ guidelines: >-
   * **Deemphasize projected values.** When dealing with projected or predicted data, the predicted data should be deemphasized. Use a color change to a lighter tint or dashed outline for bar charts, a dotted line for line charts, and a label explaining what part of the data is predicted or projected.
 
 
-  \[Image]
+  ![Projected values](/design-system/images/uploads/projected-values-1.png)
 
-  \[Image]
+
+  ![Projected values](/design-system/images/uploads/projected-values-2.png)
 
 
   ### Ensuring accuracy

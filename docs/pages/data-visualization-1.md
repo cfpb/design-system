@@ -9,30 +9,22 @@ description: "Data visualization can be an excellent way to increase
   experience. "
 variation_groups:
   - variation_group_name: Types
-    variation_group_description: "Data visualizations may appear as a static image,
-      such as in a report or social media graphic, or as an interactive graphic,
-      such as on a web page detailing [origination activity for auto
-      loans](https://www.consumerfinance.gov/data-research/consumer-credit-tren\
-      ds/auto-loans/origination-activity/).  "
-    variations:
-      - variation_name: Bar chart
-        variation_description: Visit the [Bar charts
-          page](https://cfpb.github.io/design-system/guidelines/bar-charts) for
-          information specific to bar charts.
-      - variation_name: Line chart
-        variation_description: Visit the [Line charts
-          page](https://cfpb.github.io/design-system/guidelines/line-charts) for
-          information specific to bar charts.
-      - variation_name: Pie chart
-        variation_description: Visit the [Pie charts
-          page](https://cfpb.github.io/design-system/guidelines/pie-charts) for
-          information specific to pie charts.
-      - variation_name: Map
-        variation_description: For examples of interactive maps, check out the [Consumer
-          Complaint
-          Database](https://www.consumerfinance.gov/data-research/consumer-complaints/)
-          and [Mortgage Performance
-          Trends](https://www.consumerfinance.gov/data-research/mortgage-performance-trends/mortgages-30-89-days-delinquent/)
+    variation_group_description: >-
+      Data visualization types commonly produced by the Bureau include the
+      following. 
+
+
+      * [Bar chart](https://cfpb.github.io/design-system/guidelines/bar-charts)
+
+      * [Line chart](https://cfpb.github.io/design-system/guidelines/line-charts)
+
+      * [Pie chart](https://cfpb.github.io/design-system/guidelines/pie-charts)
+
+      * Map
+
+
+      Data visualizations may appear as a static image, such as in a report or social media graphic, or as an interactive graphic, such as on a web page detailing [origination activity for auto loans](https://www.consumerfinance.gov/data-research/consumer-credit-trends/auto-loans/origination-activity/).
+    variations: []
 use_cases: "It’s critical to choose the correct visualization for your data.
   When making a data visualization, make sure you:
 

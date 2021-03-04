@@ -10,7 +10,7 @@ description: "Data visualization can be an excellent way to increase
 variation_groups:
   - variation_group_name: Types
     variation_group_description: >-
-      Data visualization types commonly produced by the Bureau include the
+      Data visualization types commonly produced by the CFPB include the
       following. 
 
 
@@ -23,14 +23,13 @@ variation_groups:
       * Map
 
 
-      Data visualizations may appear as a static image, such as in a report or social media graphic, or as an interactive graphic, such as on a web page detailing [origination activity for auto loans](https://www.consumerfinance.gov/data-research/consumer-credit-trends/auto-loans/origination-activity/).
+      A data visualization may appear as a static image, such as in a report or social media graphic, or as an interactive graphic, such as on a web page detailing [origination activity for auto loans](https://www.consumerfinance.gov/data-research/consumer-credit-trends/auto-loans/origination-activity/).
     variations: []
 use_cases: >-
-  It is critical to choose the correct visualization for your data. When
-  planning to make a data visualization, make sure you understand the data and
-  the relationship of your data before you decide how to visualize it. As you
-  create your data visualization, it's important to ensure it communicates a
-  main point that users can easily recognize and walk away with.
+  It is critical to choose the correct visualization for your data. Make sure
+  you understand the data and the relationship of your data before you decide
+  how to visualize it. It's also important to ensure your data visualization
+  communicates a main point that users can easily recognize and walk away with.
 
 
   Occasionally, data visualization isn’t the best approach. A well-crafted sentence or table may work better to convey a specific point or precise numerical interpretation. Graphs are most useful when you want the user to walk away with a general sense of the data and to interpret patterns.
@@ -58,7 +57,7 @@ use_cases: >-
   #### Specific users
 
 
-  If your data visualization is designed with a specific audience in mind, take into consideration their familiarity with the data, visualization types, and the terminology used to label and describe data. More complex stories might necessitate more complex visuals, however, this does not mean it should lack emphasis.
+  If your data visualization is designed with a specific audience in mind, take into consideration their familiarity with the data, visualization types, and terminology used to label and describe data. More complex stories might necessitate more complex visuals, however, this does not mean it should lack emphasis.
 guidelines: >-
   Whether you’re using Excel, Tableau, D3.js, or any other program, follow these
   guidelines to create effective and consistent data visualizations.

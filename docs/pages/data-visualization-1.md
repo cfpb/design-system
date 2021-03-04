@@ -203,7 +203,7 @@ guidelines: >-
   To help create emphasis, ensure your visualization has a strong visual hierarchy. This will allow the user to focus on the most important piece of content first and work their way into the graphic. 
 
 
-  #### **Check hierarchy with a squint test** 
+  #### Check hierarchy with a squint test 
 
 
   The title and subtitle should be biggest and the first things that the user reads when viewing the chart to give them context of what the chart is about. Take a step back from your data visualization, squint your eyes, and say what you see first, second, third, and so on. This will give you a sense what your users will likely identify first. 

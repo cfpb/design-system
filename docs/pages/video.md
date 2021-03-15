@@ -397,8 +397,6 @@ guidelines: >-
 
   * Use sound effects and “nat pops,” or natural sound pops, throughout a video to create a sense of realness, motion, and sometimes to draw the viewer’s attention to certain elements. These sound elements apply to motion graphics and animation as well as video footage.
 
-  * Mix audio by…\[need Bryce or Tenzin to fill in this section]
-
 
   ### Exporting Formats
 

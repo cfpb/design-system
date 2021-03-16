@@ -11,7 +11,7 @@ description: >-
   typography, timing, and more.
 
 
-  At the Bureau, we produce videos in a variety of different styles and formats depending on the objectives, target audiences, scope, resources, content, and messaging for each project. We always strive to keep videos at the CFPB consistent and unique.
+  At the Bureau, we produce videos in a variety of styles and formats depending on the objective(s), targeted audience(s), scope, resources, content, and messaging for each project. We always strive to keep videos at the CFPB consistent and unique.
 
 
   [Watch some of our public facing videos here](https://www.youtube.com/user/cfpbvideo/featured).
@@ -23,7 +23,7 @@ variation_groups:
           allow="accelerometer; autoplay; clipboard-write; encrypted-media;
           gyroscope; picture-in-picture" allowfullscreen></iframe>
         variation_description: A custom-designed video that incorporates design elements
-          unique for each solution. This type of video is usually consumer or
+          for specific solutions. This type of video is usually consumer or
           industry facing and is representative of the Bureau's priorities.
         variation_name: Branded Content
         variation_code_snippet_rendered: ""
@@ -38,7 +38,7 @@ variation_groups:
       - variation_name: iPhone
         variation_description: Mobile videos are sometimes used for quick turnaround
           messages that are urgent in nature and provide a transparent look and
-          feel that's relevant and responsive.
+          feel that's relevant.
         variation_code_snippet: <iframe width="560" height="315"
           src="https://www.youtube.com/embed/AcI3GDMVH5U" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -56,20 +56,15 @@ variation_groups:
           gyroscope; picture-in-picture" allowfullscreen></iframe>
         variation_description: The bureau livestreams field hearings, consumer advisory
           board meetings, town halls, and more. After these events are broadcast
-          live, we upload them to Youtube for documentation purposes.
+          live, we upload them to YouTube for documentation purposes.
         variation_name: Event
         variation_code_snippet_rendered: ""
-use_cases: >-
-  Video can be a unique, creative solution to address the bureau's needs.
+use_cases: |-
   Typically, we find video is best used to:
 
-
   * Connect with people in an emotional or human way
-
   * Make complicated concepts simpler
-
   * Share information or help provide education
-
   * Document live events
 guidelines: >-
   ### Preproduction
@@ -81,7 +76,7 @@ guidelines: >-
   ### Budgeting
 
 
-  Some projects require more budgeting than others. This takes place during preproduction and takes into account all expenses, personnel, and resources required to complete the project as planned.
+  Projects tend to vary in scope, and that will impact the budget. Budgeting takes place during preproduction and takes into account all expenses, personnel, and resources required to complete the project as planned.
 
 
   ### Scripting/Treatments

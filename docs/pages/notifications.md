@@ -17,7 +17,7 @@ variation_groups:
                       m-notification__visible">
               {% include icons/information-round.svg %}
               <div class="m-notification_content">
-                  <div class="h4 m-notification_message">A default notification</div>
+                  <div class="h4 m-notification_message">A notification</div>
               </div>
           </div>
 
@@ -29,7 +29,7 @@ variation_groups:
                       m-notification__visible">
               {% include icons/information-round.svg %}
               <div class="m-notification_content">
-                  <div class="h4 m-notification_message">A default notification</div>
+                  <div class="h4 m-notification_message">A notification</div>
                   <p class="m-notification_explanation">
                       You can also add an explanation to the notification.
                   </p>
@@ -44,7 +44,7 @@ variation_groups:
                       m-notification__visible">
               {% include icons/information-round.svg %}
               <div class="m-notification_content">
-                  <div class="h4 m-notification_message">A default notification</div>
+                  <div class="h4 m-notification_message">A notification</div>
                   <p class="m-notification_explanation">
                       This is the explanation of the notification.
                   </p>

@@ -4070,6 +4070,59 @@ Label heading
                 
 
                 
+                    'variation_name1': '',
+                    'variation_description1': "The information notification is the base notification type without any modifiers.\n\nIf your notification message requires further explanation, include that content in a paragraph following the main message.\n\nNotifications are hidden by default; you can toggle their visibility by adding or removing the m-notification__visible class to the base element.\n",
+                    'variation_code_snippet1': `&lt;div class=&quot;m-notification
+            m-notification__visible&quot;&gt;
+    {% include icons/information-round.svg %}
+    &lt;div class=&quot;m-notification_content&quot;&gt;
+        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A notification&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;div class=&quot;m-notification
+            m-notification__visible&quot;&gt;
+    {% include icons/information-round.svg %}
+    &lt;div class=&quot;m-notification_content&quot;&gt;
+        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A notification&lt;/div&gt;
+        &lt;p class=&quot;m-notification_explanation&quot;&gt;
+            You can also add an explanation to the notification.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;div class=&quot;m-notification
+            m-notification__visible&quot;&gt;
+    {% include icons/information-round.svg %}
+    &lt;div class=&quot;m-notification_content&quot;&gt;
+        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A notification&lt;/div&gt;
+        &lt;p class=&quot;m-notification_explanation&quot;&gt;
+            This is the explanation of the notification.
+        &lt;/p&gt;
+        &lt;ul class=&quot;m-list m-list__links&quot;&gt;
+            &lt;li class=&quot;m-list_item&quot;&gt;
+                &lt;a class=&quot;m-list_link&quot; href=&quot;/&quot;&gt;
+                    This is a link below the explanation
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;m-list_item&quot;&gt;
+                &lt;a class=&quot;m-list_link&quot; href=&quot;/&quot;&gt;
+                    This is an external link {% include icons/external-link.svg %}
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
                     'variation_name1': 'Success notification',
                     'variation_description1': "The success notification is for displaying when an operation has run as expected, such as returning the number of results in a search.\n",
                     'variation_code_snippet1': `&lt;div class=&quot;m-notification
@@ -4150,59 +4203,6 @@ Label heading
     {% include icons/updating.svg %}
     &lt;div class=&quot;m-notification_content&quot;&gt;
         &lt;div class=&quot;h4 m-notification_message&quot;&gt;The page is loading…&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': '',
-                    'variation_description1': "The default notification creates the base for the message that is often hidden and empty, but is modified by scripting in production to update the state and message based on user input.\n\nIf your notification requires further explanation, include it in a paragraph following the main message.\n\nNotifications are hidden by default; you can toggle their visibility by adding or removing the m-notification__visible class to the base element.\n",
-                    'variation_code_snippet1': `&lt;div class=&quot;m-notification
-            m-notification__visible&quot;&gt;
-    {% include icons/information-round.svg %}
-    &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A default notification&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br&gt;
-
-&lt;div class=&quot;m-notification
-            m-notification__visible&quot;&gt;
-    {% include icons/information-round.svg %}
-    &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A default notification&lt;/div&gt;
-        &lt;p class=&quot;m-notification_explanation&quot;&gt;
-            You can also add an explanation to the notification.
-        &lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br&gt;
-
-&lt;div class=&quot;m-notification
-            m-notification__visible&quot;&gt;
-    {% include icons/information-round.svg %}
-    &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;A default notification&lt;/div&gt;
-        &lt;p class=&quot;m-notification_explanation&quot;&gt;
-            This is the explanation of the notification.
-        &lt;/p&gt;
-        &lt;ul class=&quot;m-list m-list__links&quot;&gt;
-            &lt;li class=&quot;m-list_item&quot;&gt;
-                &lt;a class=&quot;m-list_link&quot; href=&quot;/&quot;&gt;
-                    This is a link below the explanation
-                &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;m-list_item&quot;&gt;
-                &lt;a class=&quot;m-list_link&quot; href=&quot;/&quot;&gt;
-                    This is an external link {% include icons/external-link.svg %}
-                &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,
                 

@@ -10,7 +10,81 @@ description: Notifications alert users to the state of a form or page. In forms,
   can call out important information about the content (including if the content
   is still loading).
 variation_groups:
-  - variation_group_name: Types
+  - variation_group_name: Information (base) notification
+    variations:
+      - variation_code_snippet: >-
+          <div class="m-notification
+                      m-notification__visible">
+              {% include icons/information-round.svg %}
+              <div class="m-notification_content">
+                  <div class="h4 m-notification_message">A default notification</div>
+              </div>
+          </div>
+
+
+          <br>
+
+
+          <div class="m-notification
+                      m-notification__visible">
+              {% include icons/information-round.svg %}
+              <div class="m-notification_content">
+                  <div class="h4 m-notification_message">A default notification</div>
+                  <p class="m-notification_explanation">
+                      You can also add an explanation to the notification.
+                  </p>
+              </div>
+          </div>
+
+
+          <br>
+
+
+          <div class="m-notification
+                      m-notification__visible">
+              {% include icons/information-round.svg %}
+              <div class="m-notification_content">
+                  <div class="h4 m-notification_message">A default notification</div>
+                  <p class="m-notification_explanation">
+                      This is the explanation of the notification.
+                  </p>
+                  <ul class="m-list m-list__links">
+                      <li class="m-list_item">
+                          <a class="m-list_link" href="/">
+                              This is a link below the explanation
+                          </a>
+                      </li>
+                      <li class="m-list_item">
+                          <a class="m-list_link" href="/">
+                              This is an external link {% include icons/external-link.svg %}
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+        variation_description: >-
+          The information notification is the base notification type without any
+          modifiers.
+
+
+          If your notification message requires further explanation, include that content in a paragraph following the main message.
+
+
+          Notifications are hidden by default; you can toggle their visibility by adding or removing the `m-notification__visible` class to the base element.
+        variation_implementation: >-
+          Notifications are hidden by default; you can toggle their visibility
+          by
+
+          adding or removing the `m-notification__visible` class to the base
+
+          element.
+
+
+          If your notification requires links, include them below the message or
+
+          explanation as a `m-list` unordered list.
+        variation_name: ""
+  - variation_group_name: Modifier types
     variations:
       - variation_code_snippet: |-
           <div class="m-notification
@@ -148,81 +222,6 @@ variation_groups:
           to reassure the user that an action is functioning as intended.
         variation_name: In-progress notification
     variation_group_description: Types of notifications include success, warning, error, and in-progress.
-  - variation_group_name: Default (base) notification
-    variations:
-      - variation_code_snippet: >-
-          <div class="m-notification
-                      m-notification__visible">
-              {% include icons/information-round.svg %}
-              <div class="m-notification_content">
-                  <div class="h4 m-notification_message">A default notification</div>
-              </div>
-          </div>
-
-
-          <br>
-
-
-          <div class="m-notification
-                      m-notification__visible">
-              {% include icons/information-round.svg %}
-              <div class="m-notification_content">
-                  <div class="h4 m-notification_message">A default notification</div>
-                  <p class="m-notification_explanation">
-                      You can also add an explanation to the notification.
-                  </p>
-              </div>
-          </div>
-
-
-          <br>
-
-
-          <div class="m-notification
-                      m-notification__visible">
-              {% include icons/information-round.svg %}
-              <div class="m-notification_content">
-                  <div class="h4 m-notification_message">A default notification</div>
-                  <p class="m-notification_explanation">
-                      This is the explanation of the notification.
-                  </p>
-                  <ul class="m-list m-list__links">
-                      <li class="m-list_item">
-                          <a class="m-list_link" href="/">
-                              This is a link below the explanation
-                          </a>
-                      </li>
-                      <li class="m-list_item">
-                          <a class="m-list_link" href="/">
-                              This is an external link {% include icons/external-link.svg %}
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-        variation_description: >-
-          The default notification creates the base for the message that is
-          often hidden and empty, but is modified by scripting in production to
-          update the state and message based on user input.
-
-
-          If your notification requires further explanation, include it in a paragraph following the main message.
-
-
-          Notifications are hidden by default; you can toggle their visibility by adding or removing the `m-notification__visible` class to the base element.
-        variation_implementation: >-
-          Notifications are hidden by default; you can toggle their visibility
-          by
-
-          adding or removing the `m-notification__visible` class to the base
-
-          element.
-
-
-          If your notification requires links, include them below the message or
-
-          explanation as a `m-list` unordered list.
-        variation_name: ""
 use_cases: ""
 guidelines: ""
 behavior: >-

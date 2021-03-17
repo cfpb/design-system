@@ -73,10 +73,16 @@ guidelines: >-
   Every video project, no matter the size, requires forethought and planning. Preproduction is often considered the most important part of producing a video. This is where it all starts. During preproduction, we analyze the objectives and goals of a project, determine the audience, create concepts, develop a plan, determine the scope, and build a schedule for production and postproduction. At this stage, we determine the best way to present information to the intended audience and a realistic plan to achieve it.
 
 
+  ### Tone
+
+
+  One of the most important aspects of preproduction is establishing the tone. We prefer a natural, authentic tone, making sure to use imagery that does not feel staged or unrealistic, but rather true to the lives and situations of consumers. The tone should be welcoming, knowledgable, and authoritative without being demanding or overly complex.
+
+
   ### Budgeting
 
 
-  Projects tend to vary in scope, and that will impact the budget. Budgeting takes place during preproduction and takes into account all expenses, personnel, and resources required to complete the project as planned.
+  Projects tend to vary in scope, and that will impact the budget. Budgeting takes place during preproduction and takes into account all expenses, personnel, and resources required to complete the project as planned. Therefore, it is essential stakeholders and decision-makers are transparent about their scope and needs so we can provide the best solution. 
 
 
   ### Scripting/Treatments
@@ -142,7 +148,6 @@ guidelines: >-
 
 
   Always look at the whole frame. Try to not to film a subject directly in the middle of a shot. Make sure to look at the top, bottom, left, right and each corner of the frame when composing an image. Your goals should be to never crop the image in post. It should be framed correctly in camera. A video with ***perfect*** framing would mean each frame, if frozen, would appear as a well-composed photograph.
-
 
 
   | Term                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Example                                                                                                                                                                                             |

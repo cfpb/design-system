@@ -128,6 +128,10 @@ variation_groups:
           use other patterns in place of them, or even swap them so that date is
           attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is
           attached to `.m-meta-header_right`.
+        variation_specs: >-
+          * Avenir Next Medium, 18px
+
+          * View a [list of icons](https://cfpb.github.io/design-system/foundation/iconography). Icon height is constrained to 19px.
       - variation_name: Eyebrow headings
         variation_description: >-
           The eyebrow heading is an additional label that can be used to support

@@ -62,20 +62,20 @@
     "html-entities": "2.1.1",
     "lunr": "2.3.9",
     "marked": "2.0.1",
-    "netlify-cms": "2.10.100",
+    "netlify-cms": "2.10.102",
     "normalize-css": "^2.3.1",
     "normalize-legacy-addon": "^0.1.0",
     "react": "17.0.1",
     "react-liquid": "2.0.1",
     "regenerator-runtime": "0.13.7",
-    "slugify": "1.4.7"
+    "slugify": "1.5.0"
   },
   "devDependencies": {
     "@babel/core": "7.13.10",
     "@babel/plugin-proposal-class-properties": "7.13.0",
     "@babel/plugin-proposal-object-rest-spread": "7.13.8",
     "@babel/plugin-syntax-export-extensions": "^7.0.0-beta.32",
-    "@babel/preset-env": "7.13.10",
+    "@babel/preset-env": "7.13.12",
     "@babel/preset-react": "7.12.13",
     "@lhci/cli": "0.7.0",
     "@wdio/cli": "6.12.1",
@@ -126,7 +126,7 @@
     "vinyl-named": "^1.1.0",
     "wcag": "^0.3.0",
     "wdio-chromedriver-service": "6.0.4",
-    "webpack": "5.26.3",
+    "webpack": "5.27.2",
     "webpack-cli": "4.5.0",
     "webpack-stream": "6.1.2"
   }

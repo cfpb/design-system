@@ -1,6 +1,6 @@
 // List yer JS modules
-const Expandable = require( '@cfpb/cfpb-expandables/src/Expandable' );
-const Table = require( '@cfpb/cfpb-tables/src/Table' );
+import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
+import Table from '@cfpb/cfpb-tables/src/Table';
 
 Expandable.init();
 Table.init();

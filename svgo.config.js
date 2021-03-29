@@ -1,4 +1,4 @@
-{
+const config = {
   plugins: [
     {
       addClassesToSVGElement: {
@@ -23,4 +23,4 @@
       removeStyleElement: true
     }
   ]
-}
+};

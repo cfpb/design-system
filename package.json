@@ -59,7 +59,7 @@
     "core-js": "3.9.1",
     "ftdomdelegate": "4.0.6",
     "govuk-frontend": "3.11.0",
-    "html-entities": "2.3.1",
+    "html-entities": "2.3.2",
     "lunr": "2.3.9",
     "marked": "2.0.1",
     "netlify-cms": "2.10.102",
@@ -71,7 +71,7 @@
     "slugify": "1.5.0"
   },
   "devDependencies": {
-    "@babel/core": "7.13.13",
+    "@babel/core": "7.13.14",
     "@babel/plugin-proposal-class-properties": "7.13.0",
     "@babel/plugin-proposal-object-rest-spread": "7.13.8",
     "@babel/plugin-syntax-export-extensions": "^7.0.0-beta.32",

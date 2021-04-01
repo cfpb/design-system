@@ -77,10 +77,10 @@ guidelines: >-
   Comfortable line length allows the user’s eyes to flow easily from the end of one line to the beginning of the next.
 
 
-  For a single column of text, line length should be an average of 66 characters per line, including spaces, but may range from 50 to 75 characters.
+  For a single column of text, line length should be an average of 66 characters per line, including spaces, though lengths may range from approx. 45 to 90 characters. To achieve a line length as close as possible to 66 characters, consider using a multi-column layout. Short line lengths and thoughtful column structures are especially important in print materials where, unlike in a web forma, a user does not have manual control over browser and line width. 
 
 
-  ![Line length](/design-system/images/uploads/type_line_length.png)
+  ![Line length](/design-system/images/uploads/type_line_length_040121.png)
 
 
   ### Spacing

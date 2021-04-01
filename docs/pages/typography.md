@@ -74,13 +74,13 @@ guidelines: >-
   ### Line length
 
 
-  Comfortable line length allows the user’s eyes to flow easily from the end of one line to the beginning of the next.
+  Comfortable line length allows the user’s eyes to flow easily from the end of one line to the beginning of the next. The ideal line length is 66 characters, including spaces, though lengths may range from 45 to 90 characters.
 
 
-  For a single column of text, line length should be an average of 66 characters per line, including spaces, though lengths may range from approx. 45 to 90 characters. To achieve a line length as close as possible to 66 characters, consider using a multi-column layout. Short line lengths and thoughtful column structures are especially important in print materials where, unlike in a web forma, a user does not have manual control over browser and line width. 
+  In digital materials, users are afforded some level of control over line length by narrowing their browser window or changing the type size display on their devices. In printed materials, users do not have this control. For this reason, special effort should be made to use a line length as close as possible to 66 characters in printed materials. This can be achieved by using a multi-column layout or larger margins.
 
 
-  ![Line length](/design-system/images/uploads/type_line_length_040121.png)
+  ![Line length](/design-system/images/uploads/line_length_040121.png)
 
 
   ### Spacing

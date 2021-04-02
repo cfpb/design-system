@@ -10,14 +10,13 @@ description: >-
 
   1. [Installing individual components with npm or Yarn](#installing-individual-components-with-yarn-or-npm)
 
-  1. [Downloading the compiled CSS](#downloading-the-compiled-css)
-
+  2. [Downloading the compiled CSS](#downloading-the-compiled-css)
 
 
   ## Installing individual components with Yarn or npm
 
 
-  Just want one or two CF components and not the entire framework?
+  Just want one or two Design System components and not the entire framework?
 
   Simply install and `@import` only the components you need.
 
@@ -30,7 +29,7 @@ description: >-
 
   ```
 
-  yarn add cf-buttons cf-icons
+  yarn add @cfpb/cfpb-buttons @cfpb/cfpb-icons
 
   ```
 
@@ -40,7 +39,7 @@ description: >-
 
   ```
 
-  npm install cf-buttons cf-icons
+  npm install @cfpb/cfpb-buttons @cfpb/cfpb-icons
 
   ```
 
@@ -59,7 +58,7 @@ description: >-
   ```
 
 
-  _Note:_ Be sure to run the Less files through
+  *Note:* Be sure to run the Less files through
 
   [Autoprefixer](https://github.com/postcss/autoprefixer),
 
@@ -81,7 +80,6 @@ description: >-
   Expandable.init( document.querySelector( '#container' ) );
 
   ```
-
 
 
   ## Downloading the compiled CSS and JavaScript

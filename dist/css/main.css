@@ -4819,6 +4819,11 @@ main {
 }
 .ds-content {
   padding-left: 30px;
+  width: 75%;
+}
+.ds-content li,
+.ds-content p {
+  max-width: 41.875rem;
 }
 @media only all and (max-width: 37.5em) {
   main {

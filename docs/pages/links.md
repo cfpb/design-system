@@ -95,6 +95,15 @@ variation_groups:
           unit
           groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
           among other places.
+        variation_jinja_code_snippet: ""
+      - variation_name: Destructive links
+        variation_code_snippet: |-
+          <a class="a-btn a-btn__link a-btn__warning" href="#">
+               Sample destructive link
+          </a>
+        variation_description: Destructive links provide a visual warning to users that
+          clicking them will perform a destructive action, such as clearing
+          entries in a form.
     variation_group_description: >+
       Links that appear in body text (`p`), link lists (`li`), or definitions
       (`dd`) are automatically underlined. To enable underlines elsewhere, e.g.

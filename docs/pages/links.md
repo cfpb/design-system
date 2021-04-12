@@ -208,6 +208,37 @@ variation_groups:
     variation_group_description: Jump links are standalone links that respond to
       small screens by converting to full block links that have a
       finger-friendly touch area. Reduce screen size to see these in action.
+  - variation_group_name: Printed links
+    variation_group_description: ""
+    variations:
+      - variation_name: ""
+        variation_description: When a page is printed from cfpb.gov, links should appear
+          in the following style and include both the original link text as well
+          as a shortened URL.
+        variation_specs: >-
+          \### Style
+
+
+          * Link text: medium weight, underlined 
+
+          * URL: Placed in parentheses following the link text, regular weight, and not underlined 
+
+
+          \### URL format 
+
+
+          To ensure users are easily able to type URLs by hand, follow these guidelines. 
+
+
+          * Don’t include http:// or www  
+
+          * Shorten "consumerfinance.gov” to “cfpb.gov”  
+
+          * For Ask CFPB pages, abbreviate to “askcfpb” and the page’s associated number
+        variation_code_snippet_rendered: >+
+          <a href="#">This is the link text</a><p
+          style="color:#0072ce">(cfpb.gov/askcfpb/111)</p>
+
 use_cases: ""
 guidelines: ""
 behavior: >-

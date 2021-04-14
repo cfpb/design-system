@@ -212,9 +212,9 @@ variation_groups:
     variation_group_description: ""
     variations:
       - variation_name: ""
-        variation_description: When a page is printed from cfpb.gov, links should appear
-          in the following style and include both the original link text as well
-          as a shortened URL.
+        variation_description: When a page is printed from consumerfinance.gov, links
+          should appear in the following style and include both the original
+          link text as well as a shortened URL.
         variation_specs: >-
           \### Style
 
@@ -242,6 +242,9 @@ variation_groups:
           (cfpb.gov/about-us/blog)</span></a> when printed.</p>
 
         variation_code_snippet: Here's the <a href="#">default link style</a> when printed.
+        variation_implementation: When a page is printed, cf.gov's [print
+          stylesheet](https://github.com/cfpb/consumerfinance.gov/blob/c9637160e14da5093b43c78fc2c87fa0ba190887/cfgov/unprocessed/css/print.less)
+          appends link URLs in parentheses next to their link text.
 use_cases: ""
 guidelines: ""
 behavior: >-

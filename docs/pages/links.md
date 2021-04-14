@@ -212,11 +212,12 @@ variation_groups:
     variation_group_description: ""
     variations:
       - variation_name: ""
-        variation_description: When a page is printed from consumerfinance.gov, links
-          should appear in the following style and include both the original
-          link text as well as a shortened URL.
+        variation_description: When a page is printed from
+          [consumerfinance.gov](https://www.consumerfinance.gov/), links should
+          appear in the following style and include both the original link text
+          as well as a shortened URL.
         variation_specs: >-
-          \### Style
+          ### Style
 
 
           * Link text: medium weight, underlined 
@@ -224,7 +225,7 @@ variation_groups:
           * URL: Placed in parentheses following the link text, regular weight, and not underlined 
 
 
-          \### URL format 
+          ### URL format 
 
 
           To ensure users are easily able to type URLs by hand, follow these guidelines. 

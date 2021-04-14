@@ -110,3 +110,5 @@ first-level:
           - page: Bar charts
           - page: Line charts
           - page: Pie charts
+    nav-items:
+      - page: Print styles

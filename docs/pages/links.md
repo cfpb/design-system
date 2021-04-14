@@ -236,9 +236,12 @@ variation_groups:
 
           * For Ask CFPB pages, abbreviate to “askcfpb” and the page’s associated number
         variation_code_snippet_rendered: >+
-          <a href="#">This is the link text</a><p
-          style="color:#0072ce">(cfpb.gov/askcfpb/111)</p>
+          <p>Here's the <a href="https://consumerfinance.gov/about-us/blog"
+          style="font-weight: 500;">default link style<span
+          style="border-bottom: 1px solid #ffffff; font-weight: 300;">
+          (cfpb.gov/about-us/blog)</span></a> when printed.</p>
 
+        variation_code_snippet: Here's the <a href="#">default link style</a> when printed.
 use_cases: ""
 guidelines: ""
 behavior: >-

@@ -189,6 +189,12 @@ variation_groups:
           of the primary button.
         variation_specs: "* Destructive action link: Avenir Next Medium, 16px, Mid dark
           red (#c3381c)"
+      - variation_name: Printed buttons
+        variation_description: When a [cfpb.gov](https://www.consumerfinance.gov/) page
+          is printed, buttons are presented as links. See the “Printed links”
+          section on
+          the [Links](https://cfpb.github.io/design-system/components/links) page
+          for specifications.
   - variation_group_name: Sizes
     variation_group_description: ""
     variations:

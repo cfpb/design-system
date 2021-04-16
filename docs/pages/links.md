@@ -104,6 +104,8 @@ variation_groups:
         variation_description: Destructive links provide a visual warning to users that
           clicking them will perform a destructive action, such as clearing
           entries in a form.
+        variation_specs: "* Destructive action link: Avenir Next Medium, 16px, Mid dark
+          red (#c3381c)"
     variation_group_description: >+
       Links that appear in body text (`p`), link lists (`li`), or definitions
       (`dd`) are automatically underlined. To enable underlines elsewhere, e.g.

@@ -34,6 +34,12 @@ description: >-
 
 
   A page’s sidebar drops to the bottom of the page when printed.
+
+
+  ## Present readable line lengths
+
+
+  For pages with single-column layouts, column width is reduced when printed to ensure readable line lengths on paper. Whereas as a reader may have control over aspects such as browser width and text size in a digital setting, they do not have this control when reading a printed piece, so it’s important that line lengths are as readable as possible. See the section "Line lengths" on the [Fonts](https://cfpb.github.io/design-system/foundation/fonts) page for more information.
 guidelines: ""
 behavior: ""
 ---

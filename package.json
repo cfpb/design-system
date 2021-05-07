@@ -29,7 +29,7 @@
     "changelog": "./scripts/generate-changelog.sh",
     "compile-prod": "webpack --config webpack.config.docs.js --mode=production",
     "compile-dev": "webpack --config webpack.config.docs.js --mode=development",
-    "copy-icons": "cp -r packages/cfpb-icons/src/icons docs/assets/",
+    "copy-icons": "cp -r packages/cfpb-icons/src/icons docs/_includes/",
     "design-system-link": "lerna exec -- yarn link",
     "design-system-unlink": "lerna exec -- yarn unlink",
     "install": "yarn run copy-icons && bundle install",

@@ -1,7 +1,6 @@
-The @cfpb/icon component provides
-Scalable Vector Graphics (SVG) icons for Design System.
+The cfpb-icons component provides Scalable Vector Graphic (SVG) icons.
 This component can be used by itself,
-but is designed to work with Design System.
+but is designed to work with the CFPB Design System.
 
 
 ## Table of contents
@@ -43,7 +42,7 @@ We subscribe to the guidance offered by Chris Coyier in his article,
 ["A Pretty Good SVG Icon System"](https://css-tricks.com/pretty-good-svg-icon-system/),
 in which he concludes, "Just include the icons inline."
 
-As a simple example, you could create one of our icon links like so:
+For example, you could create one of our icon links like so:
 
 <a class="a-link a-link__icon" href="#">
     <span class="a-link_text">Download the info sheet</span>
@@ -57,7 +56,7 @@ As a simple example, you could create one of our icon links like so:
 </a>
 ```
 
-The SVG code in this example was copied from `@cfpb/icons/src/icons/download.svg`.
+The SVG code in this example was copied from `@cfpb/cfpb-icons/src/icons/download.svg`.
 
 Because including raw SVG code is not necessarily pretty or user-friendly,
 we encourage using your templating system to include them by reference.
@@ -173,6 +172,8 @@ the canonical name or any of its aliases.
 | {% include icons/arrow-right.svg %} | {% include icons/arrow-right-round.svg %} | arrow-right |  |
 | {% include icons/arrow-down.svg %} | {% include icons/arrow-down-round.svg %} | arrow-down |  |
 | {% include icons/arrow-left.svg %} | {% include icons/arrow-left-round.svg %} | arrow-left |  |
+| {% include icons/left-right.svg %} | {% include icons/left-right-round.svg %} | left-right |  |
+| {% include icons/up-down.svg %} | {% include icons/up-down-round.svg %} | up-down |  |
 {: class="icon-table"}
 
 ### Status icons
@@ -184,6 +185,7 @@ the canonical name or any of its aliases.
 | {% include icons/warning.svg %} | {% include icons/warning-round.svg %} | warning | alert, exclamation-mark |
 | {% include icons/help.svg %} | {% include icons/help-round.svg %} | help | question, question-mark |
 | {% include icons/update.svg %} | {% include icons/update-round.svg %} | update | updating _(used for animated state)_ |
+| {% include icons/power.svg %} | {% include icons/power-round.svg %} | power |  |
 | {% include icons/dollar.svg %} | {% include icons/dollar-round.svg %} | dollar |  |
 | {% include icons/plus.svg %} | {% include icons/plus-round.svg %} | plus | add, addition, expand |
 | {% include icons/minus.svg %} | {% include icons/minus-round.svg %} | minus | subtract, subtraction, collapse |
@@ -213,7 +215,10 @@ the canonical name or any of its aliases.
 | {% include icons/fax.svg %} | {% include icons/fax-round.svg %} | fax | fax-machine |
 | {% include icons/mail.svg %} | {% include icons/mail-round.svg %} | mail | envelope-front |
 | {% include icons/phone.svg %} | {% include icons/phone-round.svg %} | phone | telephone, handset |
+| {% include icons/photo.svg %} | {% include icons/photo-round.svg %} | photo |  |
+| {% include icons/presentation.svg %} | {% include icons/presentation-round.svg %} | presentation |  |
 | {% include icons/technology.svg %} | {% include icons/technology-round.svg %} | technology | cellphone, tablet |
+| {% include icons/video.svg %} | {% include icons/video-round.svg %} | video |  |
 | {% include icons/web.svg %} | {% include icons/web-round.svg %} | web | globe, world |
 {: class="icon-table"}
 
@@ -222,12 +227,18 @@ the canonical name or any of its aliases.
 | icon | icon-round | canonical name | aliases |
 | ---- | ---------- | -------------- | ------- |
 | {% include icons/appendix.svg %} | {% include icons/appendix-round.svg %} | appendix |  |
-| {% include icons/paper-clip.svg %} | {% include icons/paper-clip-round.svg %} | paper-clip | attach, attachment |
+| {% include icons/book.svg %} | {% include icons/book-round.svg %} | book |  |
 | {% include icons/copy.svg %} | {% include icons/copy-round.svg %} | copy | duplicate |
 | {% include icons/document.svg %} | {% include icons/document-round.svg %} | document | doc, pdf |
 | {% include icons/download.svg %} | {% include icons/download-round.svg %} | download |  |
 | {% include icons/upload.svg %} | {% include icons/upload-round.svg %} | upload |  |
 | {% include icons/edit.svg %} | {% include icons/edit-round.svg %} | edit | pencil |
+| {% include icons/folder.svg %} | {% include icons/folder-round.svg %} | folder |  |
+| {% include icons/folder-add.svg %} | {% include icons/folder-add-round.svg %} | folder-add |  |
+| {% include icons/folder-delete.svg %} | {% include icons/folder-delete-round.svg %} | folder-delete |  |
+| {% include icons/folder-empty.svg %} | {% include icons/folder-empty-round.svg %} | folder-empty |  |
+| {% include icons/folder-save.svg %} | {% include icons/folder-save-round.svg %} | folder-save |  |
+| {% include icons/paper-clip.svg %} | {% include icons/paper-clip-round.svg %} | paper-clip | attach, attachment |
 | {% include icons/print.svg %} | {% include icons/print-round.svg %} | print | printer |
 | {% include icons/rss.svg %} | {% include icons/rss-round.svg %} | rss | feed |
 | {% include icons/save.svg %} | {% include icons/save-round.svg %} | save | disk |
@@ -238,34 +249,75 @@ the canonical name or any of its aliases.
 
 | icon | icon-round | canonical name | aliases |
 | ---- | ---------- | -------------- | ------- |
+| {% include icons/activity.svg %} | {% include icons/activity-round.svg %} | activity |  |
 | {% include icons/bank.svg %} | {% include icons/bank-round.svg %} | bank | bank-account |
 | {% include icons/building-credit.svg %} | {% include icons/building-credit-round.svg %} | building-credit | |
+| {% include icons/calculate.svg %} | {% include icons/calculate-round.svg %} | calculate |  |
 | {% include icons/car.svg %} | {% include icons/car-round.svg %} | car | car-loan, auto, auto-loan |
+| {% include icons/college.svg %} | {% include icons/college-round.svg %} | college | paying-for-college, grad-cap, mortarboard |
 | {% include icons/complaint.svg %} | {% include icons/complaint-round.svg %} | complaint | |
-| {% include icons/fountain-pen.svg %} | {% include icons/fountain-pen-round.svg %} | fountain-pen | contract |
 | {% include icons/credit-card.svg %} | {% include icons/credit-card-round.svg %} | credit-card | |
+| {% include icons/credit-payment.svg %} | {% include icons/credit-payment-round.svg %} | credit-payment |  |
+| {% include icons/credit-repair.svg %} | {% include icons/credit-repair-round.svg %} | credit-repair |  |
 | {% include icons/credit-report.svg %} | {% include icons/credit-report-round.svg %} | credit-report |  |
 | {% include icons/debt-collection.svg %} | {% include icons/debt-collection-round.svg %} | debt-collection |  |
 | {% include icons/debt.svg %} | {% include icons/debt-round.svg %} | debt |  |
+| {% include icons/foreclosure.svg %} | {% include icons/foreclosure-round.svg %} | foreclosure |  |
+| {% include icons/fountain-pen.svg %} | {% include icons/fountain-pen-round.svg %} | fountain-pen | contract |
 | {% include icons/getting-a-credit-card.svg %} | {% include icons/getting-a-credit-card-round.svg %} | getting-a-credit-card | credit-card-contract |
+| {% include icons/health-insurance.svg %} | {% include icons/health-insurance-round.svg %} | health-insurance |  |
+| {% include icons/house.svg %} | {% include icons/house-round.svg %} | house | buying-a-house, owning-a-home, home |
+| {% include icons/insurance.svg %} | {% include icons/insurance-round.svg %} | insurance |  |
 | {% include icons/loan.svg %} | {% include icons/loan-round.svg %} | loan |  |
 | {% include icons/money.svg %} | {% include icons/money-round.svg %} | money | dollar-bill |
 | {% include icons/money-transfer.svg %} | {% include icons/money-transfer-round.svg %} | money-transfer |  |
-| {% include icons/mortgage.svg %} | {% include icons/mortgage-round.svg %} | mortgage | sold |
-| {% include icons/house.svg %} | {% include icons/house-round.svg %} | house | buying-a-house, owning-a-home, home |
+| {% include icons/mortgage.svg %} | {% include icons/mortgage-round.svg %} | mortgage |  |
 | {% include icons/payday-loan.svg %} | {% include icons/payday-loan-round.svg %} | payday-loan |  |
-| {% include icons/college.svg %} | {% include icons/college-round.svg %} | college | paying-for-college, grad-cap, mortarboard |
 | {% include icons/prepaid-cards.svg %} | {% include icons/prepaid-cards-round.svg %} | prepaid-cards | prepaid |
 | {% include icons/quick-cash.svg %} | {% include icons/quick-cash-round.svg %} | quick-cash |  |
 | {% include icons/piggy-bank.svg %} | {% include icons/piggy-bank-round.svg %} | piggy-bank | retirement |
 | {% include icons/piggy-bank-check.svg %} | {% include icons/piggy-bank-check-round.svg %} | piggy-bank-check |  |
+| {% include icons/servicemember.svg %} | {% include icons/servicemember-round.svg %} | servicemember |  |
+| {% include icons/sold.svg %} | {% include icons/sold-round.svg %} | sold |  |
 | {% include icons/split.svg %} | {% include icons/split-round.svg %} | split |  |
+| {% include icons/toolbox.svg %} | {% include icons/toolbox-round.svg %} | toolbox |  |
+{: class="icon-table"}
+
+### Expense icons
+
+| icon | icon-round | canonical name | aliases |
+| ---- | ---------- | -------------- | ------- |
+| {% include icons/briefcase.svg %} | {% include icons/briefcase-round.svg %} | briefcase |  |
+| {% include icons/bus.svg %} | {% include icons/bus-round.svg %} | bus |  |
+| {% include icons/cart.svg %} | {% include icons/cart-round.svg %} | cart |  |
+| {% include icons/childcare.svg %} | {% include icons/childcare-round.svg %} | childcare |  |
+| {% include icons/clothes.svg %} | {% include icons/clothes-round.svg %} | clothes |  |
+| {% include icons/court.svg %} | {% include icons/court-round.svg %} | court |  |
+| {% include icons/dine-out.svg %} | {% include icons/dine-out-round.svg %} | dine-out |  |
+| {% include icons/disability.svg %} | {% include icons/disability-round.svg %} | disability |  |
+| {% include icons/entertainment.svg %} | {% include icons/entertainment-round.svg %} | entertainment |  |
+| {% include icons/equipment.svg %} | {% include icons/equipment-round.svg %} | equipment |  |
+| {% include icons/fall.svg %} | {% include icons/fall-round.svg %} | fall |  |
+| {% include icons/flower.svg %} | {% include icons/flower-round.svg %} | flower |  |
+| {% include icons/furniture.svg %} | {% include icons/furniture-round.svg %} | furniture |  |
+| {% include icons/gambling.svg %} | {% include icons/gambling-round.svg %} | gambling |  |
+| {% include icons/gift.svg %} | {% include icons/gift-round.svg %} | gift |  |
+| {% include icons/healthcare.svg %} | {% include icons/healthcare-round.svg %} | healthcare |  |
+| {% include icons/monitor.svg %} | {% include icons/monitor-round.svg %} | monitor |  |
+| {% include icons/pet.svg %} | {% include icons/pet-round.svg %} | pet |  |
+| {% include icons/pricetag.svg %} | {% include icons/pricetag-round.svg %} | pricetag |  |
+| {% include icons/spring.svg %} | {% include icons/spring-round.svg %} | spring |  |
+| {% include icons/summer.svg %} | {% include icons/summer-round.svg %} | summer |  |
+| {% include icons/taxes.svg %} | {% include icons/taxes-round.svg %} | taxes |  |
+| {% include icons/travel.svg %} | {% include icons/travel-round.svg %} | travel |  |
+| {% include icons/winter.svg %} | {% include icons/winter-round.svg %} | winter |  |
 {: class="icon-table"}
 
 ### Web application icons
 
 | icon | icon-round | canonical name | aliases |
 | ---- | ---------- | -------------- | ------- |
+| {% include icons/agreement.svg %} | {% include icons/agreement-round.svg %} | agreement |  |
 | {% include icons/audio-max.svg %} | {% include icons/audio-max-round.svg %} | audio-max | audio-high |
 | {% include icons/audio-medium.svg %} | {% include icons/audio-medium-round.svg %} | audio-medium |  |
 | {% include icons/audio-low.svg %} | {% include icons/audio-low-round.svg %} | audio-low |  |
@@ -276,29 +328,40 @@ the canonical name or any of its aliases.
 | {% include icons/bullhorn.svg %} | {% include icons/bullhorn-round.svg %} | bullhorn | megaphone |
 | {% include icons/chart.svg %} | {% include icons/chart-round.svg %} | chart | graph |
 | {% include icons/clock.svg %} | {% include icons/clock-round.svg %} | clock | time |
+| {% include icons/compass.svg %} | {% include icons/compass-round.svg %} | compass |  |
 | {% include icons/date.svg %} | {% include icons/date-round.svg %} | date | calendar |
 | {% include icons/dialogue.svg %} | {% include icons/dialogue-round.svg %} | dialogue | discussion |
 | {% include icons/disabled.svg %} | {% include icons/disabled-round.svg %} | disabled | no, disallowed |
 | {% include icons/external-link.svg %} | {% include icons/external-link-round.svg %} | external-link |  |
 | {% include icons/favorite.svg %} | {% include icons/favorite-round.svg %} | favorite | star, starred, fav, fave |
 | {% include icons/unfavorite.svg %} | {% include icons/unfavorite-round.svg %} | unfavorite | unstar, unstarred, unfav, unfave |
+| {% include icons/filter.svg %} | {% include icons/filter-round.svg %} | filter |  |
+| {% include icons/flag.svg %} | {% include icons/flag-round.svg %} | flag |  |
+| {% include icons/history.svg %} | {% include icons/history-round.svg %} | history |  |
 | {% include icons/information.svg %} | {% include icons/information-round.svg %} | information | info, i |
 | {% include icons/lightbulb.svg %} | {% include icons/lightbulb-round.svg %} | lightbulb | idea |
 | {% include icons/link.svg %} | {% include icons/link-round.svg %} | link |  |
 | {% include icons/list.svg %} | {% include icons/list-round.svg %} | list |  |
 | {% include icons/lock.svg %} | {% include icons/lock-round.svg %} | lock | locked |
 | {% include icons/unlock.svg %} | {% include icons/unlock-round.svg %} | unlock | unlocked |
+| {% include icons/map.svg %} | {% include icons/map-round.svg %} | map |  |
 | {% include icons/menu.svg %} | {% include icons/menu-round.svg %} | menu | hamburger |
 | {% include icons/microphone.svg %} | {% include icons/microphone-round.svg %} | microphone | mic |
 | {% include icons/newspaper.svg %} | {% include icons/newspaper-round.svg %} | newspaper | news |
-| {% include icons/parent.svg %} | {% include icons/parent-round.svg %} | parent | family |
-| {% include icons/play.svg %} | {% include icons/play-round.svg %} | play |  |
 | {% include icons/open-quote.svg %} | {% include icons/open-quote-round.svg %} | open-quote |  |
 | {% include icons/close-quote.svg %} | {% include icons/close-quote-round.svg %} | close-quote |  |
+| {% include icons/parent.svg %} | {% include icons/parent-round.svg %} | parent | family |
+| {% include icons/play.svg %} | {% include icons/play-round.svg %} | play |  |
+| {% include icons/policy.svg %} | {% include icons/policy-round.svg %} | policy |  |
+| {% include icons/pop-up.svg %} | {% include icons/pop-up-round.svg %} | pop-up |  |
+| {% include icons/regulation.svg %} | {% include icons/regulation-round.svg %} | regulation |  |
 | {% include icons/search.svg %} | {% include icons/search-round.svg %} | search | zoom, magnifying-glass |
+| {% include icons/serve.svg %} | {% include icons/serve-round.svg %} | serve |  |
 | {% include icons/settings.svg %} | {% include icons/settings-round.svg %} | settings | preferences, gear, cog |
 | {% include icons/share.svg %} | {% include icons/share-round.svg %} | share |  |
+| {% include icons/share-alt.svg %} | {% include icons/share-alt-round.svg %} | share-alt |  |
 | {% include icons/speech-bubble.svg %} | {% include icons/speech-bubble-round.svg %} | speech-bubble |  |
+| {% include icons/thought-bubble.svg %} | {% include icons/thought-bubble-round.svg %} | thought-bubble |  |
 | {% include icons/user.svg %} | {% include icons/user-round.svg %} | user | person |
 | {% include icons/wifi.svg %} | {% include icons/wifi-round.svg %} | wifi | wi-fi, wireless |
 {: class="icon-table"}

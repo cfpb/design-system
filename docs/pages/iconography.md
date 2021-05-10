@@ -351,7 +351,7 @@ variation_groups:
 
           | {% include icons/pet.svg %} | {% include icons/pet-round.svg %} | pet |  |
 
-          | {% include icons/pricetag.svg %} | {% include icons/pricetag-round.svg %} | pricetag |  |
+          | {% include icons/price-tag.svg %} | {% include icons/price-tag-round.svg %} | price-tag |  |
 
           | {% include icons/spring.svg %} | {% include icons/spring-round.svg %} | spring |  |
 

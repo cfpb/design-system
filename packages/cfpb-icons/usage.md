@@ -305,7 +305,7 @@ the canonical name or any of its aliases.
 | {% include icons/healthcare.svg %} | {% include icons/healthcare-round.svg %} | healthcare |  |
 | {% include icons/monitor.svg %} | {% include icons/monitor-round.svg %} | monitor |  |
 | {% include icons/pet.svg %} | {% include icons/pet-round.svg %} | pet |  |
-| {% include icons/pricetag.svg %} | {% include icons/pricetag-round.svg %} | pricetag |  |
+| {% include icons/price-tag.svg %} | {% include icons/price-tag-round.svg %} | price-tag |  |
 | {% include icons/spring.svg %} | {% include icons/spring-round.svg %} | spring |  |
 | {% include icons/summer.svg %} | {% include icons/summer-round.svg %} | summer |  |
 | {% include icons/taxes.svg %} | {% include icons/taxes-round.svg %} | taxes |  |

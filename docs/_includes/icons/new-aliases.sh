@@ -6,8 +6,8 @@ for ALIAS in {public-transit,}; do cp bus.svg $ALIAS.svg; done
 for ALIAS in {public-transit,}; do cp bus-round.svg $ALIAS-round.svg; done
 for ALIAS in {calculator,}; do cp calculate.svg $ALIAS.svg; done
 for ALIAS in {calculator,}; do cp calculate-round.svg $ALIAS-round.svg; done
-for ALIAS in {groceries,shopping,shopping-cart,}; do cp cart.svg $ALIAS.svg; done
 for ALIAS in {groceries,shopping,shopping-cart,}; do cp cart-round.svg $ALIAS-round.svg; done
+for ALIAS in {groceries,shopping,shopping-cart,}; do cp cart.svg $ALIAS.svg; done
 for ALIAS in {baby-bottle,}; do cp childcare.svg $ALIAS.svg; done
 for ALIAS in {baby-bottle,}; do cp childcare-round.svg $ALIAS-round.svg; done
 for ALIAS in {double-quote,}; do cp close-quote.svg $ALIAS.svg; done

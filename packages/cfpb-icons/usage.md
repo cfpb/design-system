@@ -278,7 +278,7 @@ the canonical name or any of its aliases.
 | {% include icons/quick-cash.svg %} | {% include icons/quick-cash-round.svg %} | quick-cash |  |
 | {% include icons/piggy-bank.svg %} | {% include icons/piggy-bank-round.svg %} | piggy-bank | retirement, saving, savings |
 | {% include icons/piggy-bank-check.svg %} | {% include icons/piggy-bank-check-round.svg %} | piggy-bank-check |  |
-| {% include icons/servicemember.svg %} | {% include icons/servicemember-round.svg %} | servicemember | dog-tags |
+| {% include icons/servicemembers.svg %} | {% include icons/servicemembers-round.svg %} | servicemembers | dog-tags |
 | {% include icons/sold.svg %} | {% include icons/sold-round.svg %} | sold |  |
 | {% include icons/split.svg %} | {% include icons/split-round.svg %} | split |  |
 | {% include icons/toolbox.svg %} | {% include icons/toolbox-round.svg %} | toolbox |  |

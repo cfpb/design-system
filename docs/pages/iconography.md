@@ -297,7 +297,7 @@ variation_groups:
 
           | {% include icons/piggy-bank-check.svg %} | {% include icons/piggy-bank-check-round.svg %} | piggy-bank-check |  |
 
-          | {% include icons/servicemember.svg %} | {% include icons/servicemember-round.svg %} | servicemember | dog-tags |
+          | {% include icons/servicemembers.svg %} | {% include icons/servicemembers-round.svg %} | servicemembers | dog-tags |
 
           | {% include icons/sold.svg %} | {% include icons/sold-round.svg %} | sold |  |
 

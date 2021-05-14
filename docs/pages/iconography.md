@@ -95,9 +95,9 @@ variation_groups:
 
           | {% include icons/arrow-left.svg %} | {% include icons/arrow-left-round.svg %} | arrow-left |  |
 
-          | {% include icons/left-right.svg %} | {% include icons/left-right-round.svg %} | left-right |  |
+          | {% include icons/left-right.svg %} | {% include icons/left-right-round.svg %} | left-right | horizontal |
 
-          | {% include icons/up-down.svg %} | {% include icons/up-down-round.svg %} | up-down |  |
+          | {% include icons/up-down.svg %} | {% include icons/up-down-round.svg %} | up-down | vertical |
 
           {: class="icon-table"}
 
@@ -113,19 +113,19 @@ variation_groups:
 
           | {% include icons/error.svg %} | {% include icons/error-round.svg %} | error | delete, close, remove, multiply, multiplication, x |
 
-          | {% include icons/warning.svg %} | {% include icons/warning-round.svg %} | warning | alert, exclamation-mark |
+          | {% include icons/warning.svg %} | {% include icons/warning-round.svg %} | warning | alert, exclamation, exclamation-mark |
 
           | {% include icons/help.svg %} | {% include icons/help-round.svg %} | help | question, question-mark |
 
-          | {% include icons/update.svg %} | {% include icons/update-round.svg %} | update | updating _(used for animated state)_ |
+          | {% include icons/update.svg %} | {% include icons/update-round.svg %} | update | spinner, updating _(used for animated state)_ |
 
-          | {% include icons/power.svg %} | {% include icons/power-round.svg %} | power |  |
+          | {% include icons/power.svg %} | {% include icons/power-round.svg %} | power | on-off |
 
-          | {% include icons/dollar.svg %} | {% include icons/dollar-round.svg %} | dollar |  |
+          | {% include icons/dollar.svg %} | {% include icons/dollar-round.svg %} | dollar | dollar-sign, cost |
 
-          | {% include icons/plus.svg %} | {% include icons/plus-round.svg %} | plus | add, addition, expand |
+          | {% include icons/plus.svg %} | {% include icons/plus-round.svg %} | plus | add, addition, expand, show |
 
-          | {% include icons/minus.svg %} | {% include icons/minus-round.svg %} | minus | subtract, subtraction, collapse |
+          | {% include icons/minus.svg %} | {% include icons/minus-round.svg %} | minus | subtract, subtraction, collapse, hide |
 
           | {% include icons/divide.svg %} | {% include icons/divide-round.svg %} | divide | division |
 
@@ -177,13 +177,13 @@ variation_groups:
 
           | {% include icons/phone.svg %} | {% include icons/phone-round.svg %} | phone | telephone, handset |
 
-          | {% include icons/photo.svg %} | {% include icons/photo-round.svg %} | photo |  |
+          | {% include icons/photo.svg %} | {% include icons/photo-round.svg %} | photo | photography, camera |
 
-          | {% include icons/presentation.svg %} | {% include icons/presentation-round.svg %} | presentation |  |
+          | {% include icons/presentation.svg %} | {% include icons/presentation-round.svg %} | presentation | screen |
 
           | {% include icons/technology.svg %} | {% include icons/technology-round.svg %} | technology | cellphone, tablet |
 
-          | {% include icons/video.svg %} | {% include icons/video-round.svg %} | video |  |
+          | {% include icons/video.svg %} | {% include icons/video-round.svg %} | video | movie, camcorder |
 
           | {% include icons/web.svg %} | {% include icons/web-round.svg %} | web | globe, world |
 
@@ -203,23 +203,23 @@ variation_groups:
 
           | {% include icons/copy.svg %} | {% include icons/copy-round.svg %} | copy | duplicate |
 
-          | {% include icons/document.svg %} | {% include icons/document-round.svg %} | document | doc, pdf |
+          | {% include icons/document.svg %} | {% include icons/document-round.svg %} | document | doc, pdf, page |
 
-          | {% include icons/download.svg %} | {% include icons/download-round.svg %} | download |  |
+          | {% include icons/download.svg %} | {% include icons/download-round.svg %} | download | document-down |
 
-          | {% include icons/upload.svg %} | {% include icons/upload-round.svg %} | upload |  |
+          | {% include icons/upload.svg %} | {% include icons/upload-round.svg %} | upload | document-up |
 
-          | {% include icons/edit.svg %} | {% include icons/edit-round.svg %} | edit | pencil |
+          | {% include icons/edit.svg %} | {% include icons/edit-round.svg %} | edit | pencil, write |
 
           | {% include icons/folder.svg %} | {% include icons/folder-round.svg %} | folder |  |
 
-          | {% include icons/folder-add.svg %} | {% include icons/folder-add-round.svg %} | folder-add |  |
+          | {% include icons/folder-add.svg %} | {% include icons/folder-add-round.svg %} | folder-add | folder-plus |
 
-          | {% include icons/folder-delete.svg %} | {% include icons/folder-delete-round.svg %} | folder-delete |  |
+          | {% include icons/folder-delete.svg %} | {% include icons/folder-delete-round.svg %} | folder-delete | folder-remove, folder-x |
 
           | {% include icons/folder-empty.svg %} | {% include icons/folder-empty-round.svg %} | folder-empty |  |
 
-          | {% include icons/folder-save.svg %} | {% include icons/folder-save-round.svg %} | folder-save |  |
+          | {% include icons/folder-save.svg %} | {% include icons/folder-save-round.svg %} | folder-save | folder-check |
 
           | {% include icons/paper-clip.svg %} | {% include icons/paper-clip-round.svg %} | paper-clip | attach, attachment |
 
@@ -227,9 +227,9 @@ variation_groups:
 
           | {% include icons/rss.svg %} | {% include icons/rss-round.svg %} | rss | feed |
 
-          | {% include icons/save.svg %} | {% include icons/save-round.svg %} | save | disk |
+          | {% include icons/save.svg %} | {% include icons/save-round.svg %} | save | disk, floppy-disk |
 
-          | {% include icons/supplement.svg %} | {% include icons/supplement-round.svg %} | supplement |  |
+          | {% include icons/supplement.svg %} | {% include icons/supplement-round.svg %} | supplement | add-document, add-page |
 
           {: class="icon-table"}
 
@@ -241,13 +241,13 @@ variation_groups:
 
           | ---- | ---------- | -------------- | ------- |
 
-          | {% include icons/activity.svg %} | {% include icons/activity-round.svg %} | activity |  |
+          | {% include icons/activity.svg %} | {% include icons/activity-round.svg %} | activity | clipboard |
 
           | {% include icons/bank.svg %} | {% include icons/bank-round.svg %} | bank | bank-account |
 
           | {% include icons/building-credit.svg %} | {% include icons/building-credit-round.svg %} | building-credit | |
 
-          | {% include icons/calculate.svg %} | {% include icons/calculate-round.svg %} | calculate |  |
+          | {% include icons/calculate.svg %} | {% include icons/calculate-round.svg %} | calculate | calculator |
 
           | {% include icons/car.svg %} | {% include icons/car-round.svg %} | car | car-loan, auto, auto-loan |
 
@@ -257,11 +257,11 @@ variation_groups:
 
           | {% include icons/credit-card.svg %} | {% include icons/credit-card-round.svg %} | credit-card | |
 
-          | {% include icons/credit-payment.svg %} | {% include icons/credit-payment-round.svg %} | credit-payment |  |
+          | {% include icons/credit-payment.svg %} | {% include icons/credit-payment-round.svg %} | credit-payment | credit-card-payment |
 
           | {% include icons/credit-repair.svg %} | {% include icons/credit-repair-round.svg %} | credit-repair |  |
 
-          | {% include icons/credit-report.svg %} | {% include icons/credit-report-round.svg %} | credit-report |  |
+          | {% include icons/credit-report.svg %} | {% include icons/credit-report-round.svg %} | credit-report | document-check |
 
           | {% include icons/debt-collection.svg %} | {% include icons/debt-collection-round.svg %} | debt-collection |  |
 
@@ -273,7 +273,7 @@ variation_groups:
 
           | {% include icons/getting-a-credit-card.svg %} | {% include icons/getting-a-credit-card-round.svg %} | getting-a-credit-card | credit-card-contract |
 
-          | {% include icons/health-insurance.svg %} | {% include icons/health-insurance-round.svg %} | health-insurance |  |
+          | {% include icons/health-insurance.svg %} | {% include icons/health-insurance-round.svg %} | health-insurance | medical |
 
           | {% include icons/house.svg %} | {% include icons/house-round.svg %} | house | buying-a-house, owning-a-home, home |
 
@@ -281,7 +281,7 @@ variation_groups:
 
           | {% include icons/loan.svg %} | {% include icons/loan-round.svg %} | loan |  |
 
-          | {% include icons/money.svg %} | {% include icons/money-round.svg %} | money | dollar-bill |
+          | {% include icons/money.svg %} | {% include icons/money-round.svg %} | money | dollar-bill, currency |
 
           | {% include icons/money-transfer.svg %} | {% include icons/money-transfer-round.svg %} | money-transfer |  |
 
@@ -289,15 +289,15 @@ variation_groups:
 
           | {% include icons/payday-loan.svg %} | {% include icons/payday-loan-round.svg %} | payday-loan |  |
 
-          | {% include icons/prepaid-cards.svg %} | {% include icons/prepaid-cards-round.svg %} | prepaid-cards | prepaid |
+          | {% include icons/prepaid-cards.svg %} | {% include icons/prepaid-cards-round.svg %} | prepaid-cards | prepaid-card, prepaid |
 
           | {% include icons/quick-cash.svg %} | {% include icons/quick-cash-round.svg %} | quick-cash |  |
 
-          | {% include icons/piggy-bank.svg %} | {% include icons/piggy-bank-round.svg %} | piggy-bank | retirement |
+          | {% include icons/piggy-bank.svg %} | {% include icons/piggy-bank-round.svg %} | piggy-bank | retirement, saving, savings |
 
           | {% include icons/piggy-bank-check.svg %} | {% include icons/piggy-bank-check-round.svg %} | piggy-bank-check |  |
 
-          | {% include icons/servicemember.svg %} | {% include icons/servicemember-round.svg %} | servicemember |  |
+          | {% include icons/servicemember.svg %} | {% include icons/servicemember-round.svg %} | servicemember | dog-tags |
 
           | {% include icons/sold.svg %} | {% include icons/sold-round.svg %} | sold |  |
 
@@ -317,51 +317,51 @@ variation_groups:
 
           | {% include icons/briefcase.svg %} | {% include icons/briefcase-round.svg %} | briefcase |  |
 
-          | {% include icons/bus.svg %} | {% include icons/bus-round.svg %} | bus |  |
+          | {% include icons/bus.svg %} | {% include icons/bus-round.svg %} | bus | public-transit |
 
-          | {% include icons/cart.svg %} | {% include icons/cart-round.svg %} | cart |  |
+          | {% include icons/cart.svg %} | {% include icons/cart-round.svg %} | cart | groceries, shopping, shopping-cart |
 
-          | {% include icons/childcare.svg %} | {% include icons/childcare-round.svg %} | childcare |  |
+          | {% include icons/childcare.svg %} | {% include icons/childcare-round.svg %} | childcare | baby-bottle |
 
-          | {% include icons/clothes.svg %} | {% include icons/clothes-round.svg %} | clothes |  |
+          | {% include icons/clothes.svg %} | {% include icons/clothes-round.svg %} | clothes | shirt |
 
-          | {% include icons/court.svg %} | {% include icons/court-round.svg %} | court |  |
+          | {% include icons/court.svg %} | {% include icons/court-round.svg %} | court | gavel |
 
-          | {% include icons/dine-out.svg %} | {% include icons/dine-out-round.svg %} | dine-out |  |
+          | {% include icons/dine-out.svg %} | {% include icons/dine-out-round.svg %} | dine-out | dining-out, pizza, pizza-slice, food |
 
-          | {% include icons/disability.svg %} | {% include icons/disability-round.svg %} | disability |  |
+          | {% include icons/disability.svg %} | {% include icons/disability-round.svg %} | disability | wheelchair |
 
-          | {% include icons/entertainment.svg %} | {% include icons/entertainment-round.svg %} | entertainment |  |
+          | {% include icons/entertainment.svg %} | {% include icons/entertainment-round.svg %} | entertainment | ticket |
 
-          | {% include icons/equipment.svg %} | {% include icons/equipment-round.svg %} | equipment |  |
+          | {% include icons/equipment.svg %} | {% include icons/equipment-round.svg %} | equipment | hammer, tools |
 
-          | {% include icons/fall.svg %} | {% include icons/fall-round.svg %} | fall |  |
+          | {% include icons/fall.svg %} | {% include icons/fall-round.svg %} | fall | autumn, leaf |
 
-          | {% include icons/flower.svg %} | {% include icons/flower-round.svg %} | flower |  |
+          | {% include icons/flower.svg %} | {% include icons/flower-round.svg %} | flower | garden |
 
-          | {% include icons/furniture.svg %} | {% include icons/furniture-round.svg %} | furniture |  |
+          | {% include icons/furniture.svg %} | {% include icons/furniture-round.svg %} | furniture | chair, sofa |
 
           | {% include icons/gambling.svg %} | {% include icons/gambling-round.svg %} | gambling |  |
 
-          | {% include icons/gift.svg %} | {% include icons/gift-round.svg %} | gift |  |
+          | {% include icons/gift.svg %} | {% include icons/gift-round.svg %} | gift | present, package |
 
-          | {% include icons/healthcare.svg %} | {% include icons/healthcare-round.svg %} | healthcare |  |
+          | {% include icons/healthcare.svg %} | {% include icons/healthcare-round.svg %} | healthcare | doctor |
 
           | {% include icons/monitor.svg %} | {% include icons/monitor-round.svg %} | monitor |  |
 
-          | {% include icons/pet.svg %} | {% include icons/pet-round.svg %} | pet |  |
+          | {% include icons/pet.svg %} | {% include icons/pet-round.svg %} | pet | pets |
 
           | {% include icons/price-tag.svg %} | {% include icons/price-tag-round.svg %} | price-tag |  |
 
           | {% include icons/spring.svg %} | {% include icons/spring-round.svg %} | spring |  |
 
-          | {% include icons/summer.svg %} | {% include icons/summer-round.svg %} | summer |  |
+          | {% include icons/summer.svg %} | {% include icons/summer-round.svg %} | summer | sun |
 
-          | {% include icons/taxes.svg %} | {% include icons/taxes-round.svg %} | taxes |  |
+          | {% include icons/taxes.svg %} | {% include icons/taxes-round.svg %} | taxes | government |
 
-          | {% include icons/travel.svg %} | {% include icons/travel-round.svg %} | travel |  |
+          | {% include icons/travel.svg %} | {% include icons/travel-round.svg %} | travel | airplane, flight |
 
-          | {% include icons/winter.svg %} | {% include icons/winter-round.svg %} | winter |  |
+          | {% include icons/winter.svg %} | {% include icons/winter-round.svg %} | winter | snow, snowflake |
 
           {: class="icon-table"}
 
@@ -373,7 +373,7 @@ variation_groups:
 
           | ---- | ---------- | -------------- | ------- |
 
-          | {% include icons/agreement.svg %} | {% include icons/agreement-round.svg %} | agreement |  |
+          | {% include icons/agreement.svg %} | {% include icons/agreement-round.svg %} | agreement | handshake |
 
           | {% include icons/audio-max.svg %} | {% include icons/audio-max-round.svg %} | audio-max | audio-high |
 
@@ -399,7 +399,7 @@ variation_groups:
 
           | {% include icons/date.svg %} | {% include icons/date-round.svg %} | date | calendar |
 
-          | {% include icons/dialogue.svg %} | {% include icons/dialogue-round.svg %} | dialogue | discussion |
+          | {% include icons/dialogue.svg %} | {% include icons/dialogue-round.svg %} | dialogue | dialog, chat, discussion |
 
           | {% include icons/disabled.svg %} | {% include icons/disabled-round.svg %} | disabled | no, disallowed |
 
@@ -409,7 +409,7 @@ variation_groups:
 
           | {% include icons/unfavorite.svg %} | {% include icons/unfavorite-round.svg %} | unfavorite | unstar, unstarred, unfav, unfave |
 
-          | {% include icons/filter.svg %} | {% include icons/filter-round.svg %} | filter |  |
+          | {% include icons/filter.svg %} | {% include icons/filter-round.svg %} | filter | sliders, controls |
 
           | {% include icons/flag.svg %} | {% include icons/flag-round.svg %} | flag |  |
 
@@ -417,17 +417,17 @@ variation_groups:
 
           | {% include icons/information.svg %} | {% include icons/information-round.svg %} | information | info, i |
 
-          | {% include icons/lightbulb.svg %} | {% include icons/lightbulb-round.svg %} | lightbulb | idea |
+          | {% include icons/light-bulb.svg %} | {% include icons/light-bulb-round.svg %} | light-bulb | idea |
 
           | {% include icons/link.svg %} | {% include icons/link-round.svg %} | link |  |
 
           | {% include icons/list.svg %} | {% include icons/list-round.svg %} | list |  |
 
-          | {% include icons/lock.svg %} | {% include icons/lock-round.svg %} | lock | locked |
+          | {% include icons/lock.svg %} | {% include icons/lock-round.svg %} | lock | locked, padlock |
 
           | {% include icons/unlock.svg %} | {% include icons/unlock-round.svg %} | unlock | unlocked |
 
-          | {% include icons/map.svg %} | {% include icons/map-round.svg %} | map |  |
+          | {% include icons/map.svg %} | {% include icons/map-round.svg %} | map | location |
 
           | {% include icons/menu.svg %} | {% include icons/menu-round.svg %} | menu | hamburger |
 
@@ -437,21 +437,21 @@ variation_groups:
 
           | {% include icons/open-quote.svg %} | {% include icons/open-quote-round.svg %} | open-quote |  |
 
-          | {% include icons/close-quote.svg %} | {% include icons/close-quote-round.svg %} | close-quote |  |
+          | {% include icons/close-quote.svg %} | {% include icons/close-quote-round.svg %} | close-quote | double-quote |
 
           | {% include icons/parent.svg %} | {% include icons/parent-round.svg %} | parent | family |
 
           | {% include icons/play.svg %} | {% include icons/play-round.svg %} | play |  |
 
-          | {% include icons/policy.svg %} | {% include icons/policy-round.svg %} | policy |  |
+          | {% include icons/policy.svg %} | {% include icons/policy-round.svg %} | policy | law |
 
-          | {% include icons/pop-up.svg %} | {% include icons/pop-up-round.svg %} | pop-up |  |
+          | {% include icons/pop-up.svg %} | {% include icons/pop-up-round.svg %} | pop-up | new-window |
 
-          | {% include icons/regulation.svg %} | {% include icons/regulation-round.svg %} | regulation |  |
+          | {% include icons/regulation.svg %} | {% include icons/regulation-round.svg %} | regulation | rule, justice |
 
           | {% include icons/search.svg %} | {% include icons/search-round.svg %} | search | zoom, magnifying-glass |
 
-          | {% include icons/serve.svg %} | {% include icons/serve-round.svg %} | serve |  |
+          | {% include icons/serve.svg %} | {% include icons/serve-round.svg %} | serve | hand, raise-hand |
 
           | {% include icons/settings.svg %} | {% include icons/settings-round.svg %} | settings | preferences, gear, cog |
 
@@ -459,13 +459,13 @@ variation_groups:
 
           | {% include icons/share-alt.svg %} | {% include icons/share-alt-round.svg %} | share-alt |  |
 
-          | {% include icons/speech-bubble.svg %} | {% include icons/speech-bubble-round.svg %} | speech-bubble |  |
+          | {% include icons/speech-bubble.svg %} | {% include icons/speech-bubble-round.svg %} | speech-bubble | chat-bubble |
 
-          | {% include icons/thought-bubble.svg %} | {% include icons/thought-bubble-round.svg %} | thought-bubble |  |
+          | {% include icons/thought-bubble.svg %} | {% include icons/thought-bubble-round.svg %} | thought-bubble | thinking, thoughts |
 
           | {% include icons/user.svg %} | {% include icons/user-round.svg %} | user | person |
 
-          | {% include icons/wifi.svg %} | {% include icons/wifi-round.svg %} | wifi | wi-fi, wireless |
+          | {% include icons/wifi.svg %} | {% include icons/wifi-round.svg %} | wifi | wi-fi, wireless, signal |
 
           {: class="icon-table"}
         variation_name: ""

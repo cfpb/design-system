@@ -236,7 +236,7 @@ Instructions for developers who've received a new or updated icon from a designe
    for ALIAS in {one,two,three,}; do cp canonical.svg $ALIAS.svg; done
    # Be sure to leave in the trailing comma if there is only one alias,
    # or it will not be treated as an iterable object and will include
-   # the curly braces int he filename.
+   # the curly braces in the filename.
    ```
 1. Return to the repo root and copy the icons into the docs site:
    ```shell

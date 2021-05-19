@@ -195,9 +195,9 @@ or warnings using the testing checklist in the pull request description.
 
 ### Follow our CSS naming conventions
 
-**We are using a customized BEM format**
+**We are using a customized BEM format:**
 
-```css
+```
 .block-name
 .block-name_element-name
 .block-name__block-modifier
@@ -217,3 +217,36 @@ In most cases styles should be declared mobile first,
 then enhanced with `min-width` media queries.
 By doing this we create a base experience that all devices can use
 and one that does not require media query support.
+
+
+## Adding and updating icons
+
+Instructions for developers who've received a new or updated icon from a designer:
+
+1. Place SVG file (named with its canonical name, i.e., `canonical.svg`)
+   in [`packages/cfpb-icons/src/icons`](tree/main/packages/cfpb-icons/src/icons/)
+1. Run `yarn process-icon-svgs` from the root of the repository
+   - This script compresses and standardizes the SVG code for all of our icons
+   - It should be a no-op for icons that have not changed
+1. If the icon has aliases, go into the icons folder and duplicate the canonical file to the aliases:
+   ```shell
+   cd packages/cfpb-icons/src/icons/
+
+   # Edit the command below for your actual canonical filename and aliases
+   for ALIAS in {one,two,three,}; do cp canonical.svg $ALIAS.svg; done
+   # Be sure to leave in the trailing comma if there is only one alias,
+   # or it will not be treated as an iterable object and will include
+   # the curly braces in the filename.
+   ```
+1. Return to the repo root and copy the icons into the docs site:
+   ```shell
+   cd ../../../../
+
+   yarn copy-icons
+   ```
+1. If adding a new icon or updating any names/aliases, update the tables on both
+   [`packages/cfpb-icons/usage.md`](tree/main/packages/cfpb-icons/usage.md)
+   and [`docs/pages/iconography.md`](tree/main/docs/pages/iconography.md)
+   accordingly
+1. If any icons or aliases were deleted, be sure to delete them from both
+   `packages/cfpb-icons/src/icons/` and `docs/_includes/icons/`

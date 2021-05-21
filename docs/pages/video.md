@@ -178,7 +178,7 @@ guidelines: >-
   ### Lighting
 
 
-  Our overall goal is to create natural-looking images with soft shadows, contrast, vibrant colors, and appropriately exposed subjects. Think of lighting as “painting the picture” with shadows, not just making things visible.
+  Our overall goal is to create natural-looking images with soft shadows, contrast, vibrant colors, and appropriately exposed subjects. Think of lighting as “painting the picture with shadows," not just making things visible.
 
 
   * **Three-Point Lighting** – Traditional three-point lighting includes the following: a key light, fill light, and back-light (opposite of the key light). We adjust our lighting setup according to the constraints of the location by adding lights to the background, balancing the exposure based on what we can’t control, using a wide range of modifiers, bouncing light or taking lights away.

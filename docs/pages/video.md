@@ -120,7 +120,7 @@ guidelines: >-
   ### Filming
 
 
-  We strive to capture footage that feels modern, high-quality and follows professional best practices. For example, we’re mindful of the rule of thirds, manual camera settings, properly exposing images, color balance, smooth camera movement and how sound relates to the image.
+  We strive to capture footage that feels modern, high-quality, and follows professional best practices. For example, we’re mindful of the rule of thirds, manual camera settings, properly exposing images, color balance, smooth camera movement and how sound relates to the image.
 
 
   * **Frame Rates** – We usually capture footage in 29.97fps or 23.97fps. If using slow motion, we will use a higher framerate, such as 60fps or 120fps (do NOT slow down footage in editing if it was not filmed that way, unless you’re trying to achieve a stylized look).

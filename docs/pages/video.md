@@ -135,9 +135,9 @@ guidelines: >-
 
   * **Zooming** - Avoid zooming during a shot. Zooms are artificial and do not mimic the natural way we see the world, and therefore often degrade the quality of a given shot.
 
-  * **B-roll Footage** – Capture a wide variety of shots at every opportunity, even of the same scene or action. For each scene, you should try to capture a variety of different focal lengths (close ups, medium, wide shots, etc.) and different camera angles. This makes your footage more interesting and provides options for your editor.
+  * **B-roll Footage** – Capture a wide variety of shots at every opportunity, even of the same scene or action. For each scene you should try to capture a variety of different focal lengths (close ups, medium, wide shots, etc.) and different camera angles. This makes your footage more interesting and provides options for your editor.
 
-  * **Establishing Shots** – When filming, always try to establish a scene or a sense of location by getting a wide shot of the environment, first. This could be a room, building, or other image that provides context. Typically, an establishing shot or wide shot will begin and end a sequences of shots when editing.
+  * **Establishing Shots** – When filming, always try to establish a scene or a sense of location by getting a wide shot of the environment first. This could be a room, building, or other image that provides context. Typically, an establishing shot or wide shot will begin and end a sequences of shots when editing.
 
   * **Handheld Footage** – This allows a director of photography to capture a variety of shots quickly and follow the action. This is also known as ‘run and gun.’ 
 
@@ -147,7 +147,7 @@ guidelines: >-
   ### Framing
 
 
-  Always look at the whole frame. Try to not to film a subject directly in the middle of a shot. Make sure to look at the top, bottom, left, right and each corner of the frame when composing an image. Your goals should be to never crop the image in post. It should be framed correctly in camera. A video with ***perfect*** framing would mean each frame, if frozen, would appear as a well-composed photograph.
+  Always look at the whole frame. Try not to film a subject directly in the middle of a shot. Make sure to look at the top, bottom, left, right, and each corner of the frame when composing an image. Your goal should be to never crop the image in post. It should be framed correctly in camera. A video with ***perfect*** framing would mean each frame, if frozen, would appear as a well-composed photograph.
 
 
   | Term                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Example                                                                                                                                                                                             |

@@ -120,12 +120,12 @@ guidelines: >-
   ### Filming
 
 
-  We strive to capture footage that feels modern, high-quality, and follows professional best practices. For example, we’re mindful of the rule of thirds, manual camera settings, properly exposing images, color balance, smooth camera movement and how sound relates to the image.
+  We strive to capture footage that feels modern, high-quality, and follows professional best practices. For example, we’re mindful of the rule of thirds, manual camera settings, properly exposing images, color balance, smooth camera movement, and how sound relates to the image.
 
 
   * **Frame Rates** – We usually capture footage in 29.97fps or 23.97fps. If using slow motion, we will use a higher framerate, such as 60fps or 120fps (do NOT slow down footage in editing if it was not filmed that way, unless you’re trying to achieve a stylized look).
 
-  * **Exposure** – All footage should be exposed properly, meaning the subject should stand out from the background, there are no over-exposed white or bright areas, or under-exposed black or dark areas (details can get lost in the shadows). Try to avoid the camera’s auto settings, as that will create exposure changes during the shot, and the footage will change colors and exposure throughout filming. This makes color correction, exposure compensation and other problems difficult for the editor to fix.
+  * **Exposure** – All footage should be exposed properly, meaning the subject should stand out from the background, there are no over-exposed white or bright areas, or under-exposed black or dark areas (details can get lost in the shadows). Try to avoid the camera’s auto settings, as that will create exposure changes during the shot, and the footage will change colors and exposure throughout filming. This makes color correction, exposure compensation, and other problems difficult for the editor to fix.
 
   * **White Balance** – This is also known as the color temperature. Ensure you set the correct white balance, so the image stays consistent and true to life. This is critical for skin tones to appear natural. 
 

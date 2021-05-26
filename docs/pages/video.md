@@ -455,7 +455,7 @@ accessibility: >-
 
   * For **closed caption** files, unfortunately you are unable to change the font, weight, size, color, etc. 
 
-  * For **closed captions** it is our best practice to upload an accurate version of the transcript instead of using auto-generated transcripts.
+  * For **closed caption** files, it is our best practice to upload an accurate version of the transcript instead of using auto-generated transcripts.
 
 
   #### Live content

@@ -186,11 +186,11 @@ guidelines: >-
     * **Interviews** - Three-Point Lighting is particularly useful for interview setups and testimonials.
   * **Catch Light** – When lighting a person’s face, be sure the eyes are not shaded and strive to have a bit of light reflecting in the eyes. This is called a catch light or eye light. This technique will draw the viewer's attention to the subject's eyes. The catch light will make your subject look more intelligent, more alive, and more engaging. If the eyes are in shadow or under a hat, this may make the person look sinister or untrustworthy, so be sure a person’s eyes are well lit.
 
-  * **Light Color / Temperature** – We ensure all lights are the appropriate color temperature and match the environmental color temperatures where needed. The most common color temperatures are measured by kelvin (or a ‘K’ value). Daylight (cool/blue) is usually 5600k and tungsten (warm/orange) is usually 3200k. If you don’t know the exact color temperature or don’t have access to a professional color meter, most cameras can capture a relatively accurate reading of the color temperature by using a white card. 
+  * **Light Color / Temperature** – We ensure all lights are the appropriate color temperature and match the environmental color temperatures where needed. The most common color temperatures are measured by Kelvin (or a ‘K’ value). Daylight (cool/blue) is usually 5600k and tungsten (warm/orange) is usually 3200k. If you don’t know the exact color temperature or don’t have access to a professional color meter, most cameras can capture a relatively accurate reading of the color temperature by using a white card. 
 
   * **Soft Lighting** – Strive to make the shadows soft, giving shape and definition to your subject without casting harsh shadows. To do this, diffuse light using soft boxes, silks, or bouncing the light off a large white surface like a ceiling or wall. 
 
-  * **Outdoor Lighting** – We apply the same visual standards to outdoor footage and lighting as we do indoors. When filming outdoors, avoid direct sunlight, harsh shadows, and sunny, over-exposed backgrounds. Try shooting in the shade. Also, remember to shoot into the shadows to create in an interesting shot. The sun can create an edge around the subject. This will add depth to an image. Choose angles, locations, time of day, and subject positions that provide enough light on both subject and background. Sometimes this can be tricky when working with time constraints. If shooting a person during a sunny day without shade, try using a silk or other diffusion to soften shadows and make the image look more appealing. If possible, try using lights outside that are bright enough to supplement the sun.
+  * **Outdoor Lighting** – We apply the same visual standards to outdoor footage and lighting as we do indoors. When filming outdoors, avoid direct sunlight, harsh shadows, and sunny, over-exposed backgrounds. Try shooting in the shade. Also, remember to shoot into the shadows to create an interesting shot. The sun can create an edge around the subject. This will add depth to an image. Choose angles, locations, time of day, and subject positions that provide enough light on both subject and background. Sometimes this can be tricky when working with time constraints. If shooting a person during a sunny day without shade, try using a silk or other diffusion to soften shadows and make the image look more appealing. If possible, try using lights outside that are bright enough to supplement the sun.
 
   * **Practical Lighting** – Very often, an environment will already feature practical lights such as interior lighting in office buildings or stores. If you cannot turn the practical lights off, you can use them to assist in lighting. Adding lamps, lanterns, or other lights to the background or environment of a shot can give it an extra sense of realness. We also use practical lights to “motivate” the lighting setup of production lights. When using practical lights, be aware of any flickering, rolling, or stuttering they may cause in the camera. This can sometimes be addressed by adjusting the shutter speed, and sometimes the only solution is to turn the lights off. Otherwise, rolling or flickering may ruin any footage captured. Always be aware of the color temperature of practical lights and ensure skin tones look natural. Avoid florescent lights that give the image a green or magenta color tone.
 
@@ -239,7 +239,7 @@ guidelines: >-
 
   * Encourage interviewees to speak in complete sentences, sometimes repeating parts of the question in their answer or providing context. Ask yourself— Will this response make sense if the viewer doesn’t hear the question?
 
-  * Avoid asking “yes or no” questions or questions with one-word answers. Delve deeper into topics and asking “how” and “why.”
+  * Avoid asking “yes or no” questions or questions with one-word answers. Delve deeper into topics by asking “how” and “why.”
 
   * Ask follow-up questions and feel free to go off script to keep the conversation flowing naturally.
 
@@ -278,9 +278,9 @@ guidelines: >-
 
   * Strive to find a background that visually represents the message and tone you’re trying to communicate.
 
-  * Have subjects smile and deliver information with an optimistic tone, sitting with proper posture, remembering to look at the camera lens, not their own image on the screen.
+  * Have subjects smile and deliver information with an optimistic tone, sit with proper posture, and remember to look at the camera lens, not their own image on the screen.
 
-  * Subjects should remember to leave “handles” by leaving 5 seconds of recording before they begin speaking and 5 seconds after they complete the take.
+  * Subjects should remember to provide “handles” by leaving 5 seconds of recording before they begin speaking and 5 seconds after they complete the take.
 
 
   ### Wardrobe
@@ -301,12 +301,12 @@ guidelines: >-
   ### Audio
 
 
-  High-quality audio is incredibly important. We always emphasize recording and delivering the clearest, most crisp audio possible. 
+  High-quality audio is incredibly important. We always emphasize recording and delivering the clearest, sharpest audio possible. 
 
 
   * When recording an interview or other on-camera talent, try to hide all microphones. This can mean hiding a lavalier mic out of frame, under a collar, within an open jacket, or even in a subject’s hair. But remember—clean audio is the most important thing. We will show a lavalier mic if it means better quality audio. Otherwise, we’ll just use the audio from a professional shotgun/boom that’s slightly out of frame, instead.
 
-  * If recording with a shotgun microphone, the best-sounding audio typically comes from aiming the microphone at the subject’s throat or right about the chest. Try angling the mic from above and slightly at an angle.
+  * If recording with a shotgun microphone, the best-sounding audio typically comes from aiming the microphone at the subject’s throat or right above the chest. Try angling the mic from above and slightly at an angle.
 
   * Audio should adhere to broadcast standards, averaging around -12dB with peaking not to rise above -6dB. 
 
@@ -342,7 +342,7 @@ guidelines: >-
 
   * All cuts should be relevant, motivated, or in time with music or narration. Whenever possible, cut on the action. Each edit or transition needs a reason.
 
-  * Choose a variety of focal lengths, angles, focal distances and framing. For example, do not use three medium shots in a row. This variation keeps the editing dynamic and visually interesting.
+  * Choose a variety of focal lengths, angles, focal distances, and framing. For example, do not use three medium shots in a row. This variation keeps the editing dynamic and visually interesting.
 
   * Avoid using shaky shots, improperly exposed footage, blurry or out-of-focus images, and jump cuts.
 
@@ -429,6 +429,28 @@ accessibility: >-
   * For video-only content, provide an audio track or transcript that describes the video.
 
   * Combined audio and video content should accommodate alternatives for both (e.g., closed captioning or sign interpretation for audio, and an audio track or a screenplay-like document that transcribes dialog and descriptions of sounds and action for video).
+
+
+  ### Creating open caption and closed caption files
+
+
+  For any content that has spoken audio, we provide captions for accessibility. The choice between open caption and close caption depends on the platform through which we will be showing the video and the particulars of the project.
+
+
+  * For **open caption** files, we strive to make the text easy to read, clear, and within our brand standards by using our fonts, weights, and colors.
+
+  * For **open captions** we can also use the on-screen text as a design element, and may use colors or background shapes to highlight important messages.
+
+  * For **open captions**, if the video will be too bright or otherwise make text difficult to read, we use a rounded rectangle at 50% opacity beneath the captions in order to make it most legible.
+
+
+  ![Open caption example 1](/design-system/images/uploads/unknown.png)
+
+
+  ![open caption example 2](/design-system/images/uploads/unknown-1.png)
+
+
+  ![open caption example 3](/design-system/images/uploads/unknown-4.png)
 
 
   #### Live content

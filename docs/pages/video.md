@@ -444,18 +444,18 @@ accessibility: >-
   * For **open captions**, if the video will be too bright or otherwise make text difficult to read, we use a rounded rectangle at 50% opacity beneath the captions in order to make it most legible.
 
 
-  ![open caption example 1](/design-system/images/uploads/unknown.png)
+  ![open caption example 1](/design-system/images/uploads/unknown.png "Open Captions with CFPB font, weight, and colors.")
 
 
-  ![open caption example 2](/design-system/images/uploads/unknown-1.png)
+  ![open caption example 2](/design-system/images/uploads/unknown-1.png "An example of using color within the open caption in order to accentuate the content.")
 
 
-  ![open caption example 3](/design-system/images/uploads/unknown-4.png)
+  ![open caption example 3](/design-system/images/uploads/unknown-4.png "An example of using a 50% transparency box beneath the open caption.")
 
 
   * For **closed caption** files, unfortunately you are unable to change the font, weight, size, color, etc. 
 
-  * For **closed captions** it is our best practice to upload an accurate version of the transcript instead of using auto-generated transcripts.
+  * For **closed caption** files, it is our best practice to upload an accurate version of the transcript instead of using auto-generated transcripts.
 
 
   #### Live content

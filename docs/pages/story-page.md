@@ -5,8 +5,9 @@ layout: variation
 section: pages
 status: Proposed
 description: Story pages are used for narrative content with an emotional or
-  visceral impact that would be enhanced with large images and headings. An
-  example of this is the racial equity page.
+  visceral impact that would be enhanced with large images and headings. They're
+  generally reserved for high-profile content. An example of a story page is the
+  [racial equity page](https://www.consumerfinance.gov/about-us/racial-equity).
 variation_groups:
   - variation_group_name: Standard story page
     variation_group_description: Stuff will go here.
@@ -14,29 +15,23 @@ use_cases: >-
   When to use
 
 
-  * You want to tell a story
+  * You want to tell a story or make a statement 
 
-  * You want to make a statement
+  * You want the story or statement to have emotional impact that will be enhanced with the use of full-bleed images and large headings
 
-  * You want the page to have emotional impact
-
-  * When the impact of content is enhanced with the use of full-bleed images and large headings
-
-  * The content is image-heavy 
-
-  * The page is fairly high-profile  
+  * The page is intended to be high-profile (e.g. a director's priority page)
 
 
   When not to use
 
 
-  * The desire is to introduce readers to a topic and direct them to specific content that will meet their needs; use the sublanding or browse pages instead. 
+  * You want a landing page that will direct readers to specific content that will meet their needs. Use the sublanding or browse pages instead. 
 
-  * The content is text-heavy, such as an article or blog post: use the article page instead.  
+  * The content is informational and text-heavy, such as an article or blog post. Use the learn page instead.  
 guidelines: >
   ### Content guidelines
 
-  H1:
+  The hero area should contain an H1, without any additional introductory subcopy.
 
   * 41 characters max (one-line heading)
 

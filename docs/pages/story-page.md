@@ -18,7 +18,7 @@ use_cases: >-
 
   * You want to make a statement
 
-  * You want the page to have an emotional impact
+  * You want the page to have emotional impact
 
   * When the impact of content is enhanced with the use of full-bleed images and large headings
 
@@ -30,11 +30,20 @@ use_cases: >-
   When not to use
 
 
-  * You want to create a landing page directing people to different content sources
+  * The desire is to introduce readers to a topic and direct them to specific content that will meet their needs; use the sublanding or browse pages instead. 
 
-  * The content is text-heavy, such as an article or blog post
+  * The content is text-heavy, such as an article or blog post: use the article page instead.  
+guidelines: >
+  ### Content guidelines
 
-  *
+  H1:
 
-  * Difference from ask or blog pages
+  * 41 characters max (one-line heading)
+
+  * 82 characters max (two-line heading)
+
+
+  H2:
+
+  * Headings should form the narrative backbone of the page - when read together, they should tell a story.
 ---

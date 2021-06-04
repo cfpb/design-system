@@ -4,10 +4,12 @@ collection_name: pages
 layout: variation
 section: pages
 status: Proposed
-description: Story pages are used for narrative content with an emotional or
-  visceral impact that would be enhanced with large images and headings. They're
-  generally reserved for high-profile content. An example of a story page is the
-  [racial equity page](https://www.consumerfinance.gov/about-us/racial-equity).
+description: Story pages are used sparingly for narrative content with an
+  emotional impact. Full-bleed imagery throughout the page, along with scaled-up
+  H2s, work in tandem to create a highly visual page that helps tell a story.
+  Story pages should generally be reserved for high-profile initiatives. An
+  example of a story page is the [racial equity
+  page](https://www.consumerfinance.gov/about-us/racial-equity).
 variation_groups:
   - variation_group_name: Standard story page
     variation_group_description: ""
@@ -26,17 +28,17 @@ use_cases: >-
   When to use
 
 
-  * You want to tell a story or make a statement 
+  * You want to tell a story or make a statement; and 
 
-  * You want the story or statement to have emotional impact that will be enhanced with the use of full-bleed images and large headings
+  * You want the story or statement to have emotional impact that will be enhanced with the use of full-bleed images and large headings; and
 
-  * The page is intended to be high-profile (e.g. a director's priority page)
+  * The page is intended to be fairly high-profile (e.g. a director's priority page)
 
 
   When not to use
 
 
-  * You want a landing page that will direct readers to specific content that will meet their needs. Use the sublanding or browse pages instead. 
+  * You want to quickly direct readers to specific content on a given topic. Use the sublanding or browse pages instead. 
 
   * The content is informational and text-heavy, such as an article or blog post. Use the learn page instead.  
 guidelines: >

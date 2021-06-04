@@ -10,7 +10,7 @@ description: Story pages are used for narrative content with an emotional or
   [racial equity page](https://www.consumerfinance.gov/about-us/racial-equity).
 variation_groups:
   - variation_group_name: Standard story page
-    variation_group_description: Stuff will go here.
+    variation_group_description: ""
     variations:
       - variation_description: "| Story page wireframe | Example |
 

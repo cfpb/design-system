@@ -53,5 +53,6 @@ guidelines: >
 
   H2:
 
-  * Headings should form the narrative backbone of the page - when read together, they should tell a story.
+  * Headings should form the narrative backbone of the page - when read together, they should tell a story. 
+behavior: Full-bleed images will shrink to fit as the viewport is resized.
 ---

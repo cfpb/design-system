@@ -11,6 +11,17 @@ description: Story pages are used for narrative content with an emotional or
 variation_groups:
   - variation_group_name: Standard story page
     variation_group_description: Stuff will go here.
+    variations:
+      - variation_description: "| Story page wireframe | Example |
+
+          | -- | -- |
+
+          | ![Story page
+          example](/design-system/images/uploads/story_page_example.jpg) |
+          Example: [Racial
+          equity](https://www.consumerfinance.gov/about-us/racial-equity/)|\ 
+
+          \ "
 use_cases: >-
   When to use
 

@@ -24,9 +24,11 @@ variation_groups:
           equity](https://www.consumerfinance.gov/about-us/racial-equity/)|\ 
 
           \ "
-        variation_specs: "On desktop, Heading 2 renders at 34 px (2.125 ems) rather than
-          the standard 26 px (1.625 em), bumping down below 601 px to 26 px.
-          Headings 3 and below render at standard sizes. "
+        variation_specs: On desktop, the H1 in the hero is rendered at [display heading
+          size](https://cfpb.github.io/design-system/foundation/headings#web-headings-1)
+          while all H2s are bumped up to H1 size (34px / 2.125 ems) from their
+          standard size (26px / 1.625 em). H3s and below render at standard
+          sizes.
 use_cases: >-
   When to use
 
@@ -41,9 +43,9 @@ use_cases: >-
   When not to use
 
 
-  * You want to quickly direct readers to specific content on a given topic. Use the sublanding or browse page instead. 
+  * You want to quickly direct readers to specific content on a given topic. Use the [sublanding](https://cfpb.github.io/design-system/pages/sublanding-pages) or [browse page](https://cfpb.github.io/design-system/pages/browse-pages) instead. 
 
-  * The content is informational and text-heavy, such as an article or blog post. Use the learn page instead.  
+  * The content is informational and text-heavy, such as an article or blog post. Use the [learn page](https://cfpb.github.io/design-system/pages/learn-pages) instead.
 guidelines: >
   ### Content guidelines
 

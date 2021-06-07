@@ -4,9 +4,10 @@ collection_name: pages
 layout: variation
 section: pages
 status: Proposed
-description: The story page template is highly visual, using full-bleed images
-  and scaled-up headings (H2s) to tell a story with emotional impact. Use of
-  this template should generally be reserved for high-profile initiatives. An
+description: Story pages are used sparingly for narrative content with an
+  emotional impact. Full-bleed imagery throughout the page, along with scaled-up
+  H2s, work in tandem to create a highly visual page that helps tell a story.
+  Story pages should generally be reserved for high-profile initiatives. An
   example of a story page is the [racial equity
   page](https://www.consumerfinance.gov/about-us/racial-equity).
 variation_groups:

@@ -1,5 +1,5 @@
 ---
-title: Story page
+title: Story pages
 collection_name: pages
 layout: variation
 section: pages

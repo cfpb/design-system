@@ -1,4 +1,32 @@
 
+## Unreleased (2021-06-08)
+
+#### Enhancement
+* `cfpb-icons`
+  * [#1234](https://github.com/cfpb/design-system/pull/1234) Update all icons to have default 19px height; add new icons; revise some existing icons; add docs for devs ([@Scotchester](https://github.com/Scotchester))
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#1215](https://github.com/cfpb/design-system/pull/1215) Bugfix: Add gulp build to release step ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-icons`
+  * [#1216](https://github.com/cfpb/design-system/pull/1216) SVGO config fixes ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1242](https://github.com/cfpb/design-system/pull/1242) Update core-js, marked, netlify-cms, babel/core, babel/plugin-proposal-object-rest-spread, babel/preset-env, lhci/cli, autoprefixer, chromedriver, concurrently, css-loader, cssnano, jest, jest-cli, netlify-cms-proxy-server, postcss, terser-webpack-plugin, webpack ([@anselmbradford](https://github.com/anselmbradford))
+* [#1240](https://github.com/cfpb/design-system/pull/1240) Expand DS documentation tables to full width ([@contolini](https://github.com/contolini))
+* [#1236](https://github.com/cfpb/design-system/pull/1236) Update outdated dependencies ([@anselmbradford](https://github.com/anselmbradford))
+* [#1220](https://github.com/cfpb/design-system/pull/1220) Constrain paragraph width ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 6
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Chris Contolini ([@contolini](https://github.com/contolini))
+- RichBailey ([@RichBailey](https://github.com/RichBailey))
+- Scott Cranfill ([@Scotchester](https://github.com/Scotchester))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+- [@huetingj](https://github.com/huetingj)
+
+
+
 ## Unreleased (2021-03-26)
 
 #### Bug Fix

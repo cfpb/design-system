@@ -86,6 +86,7 @@ first-level:
       - page: Learn pages
       - page: Filterable list pages
       - page: Document detail pages
+      - page: Story pages
   - heading: Development
     second-level:
       - heading: Atomic

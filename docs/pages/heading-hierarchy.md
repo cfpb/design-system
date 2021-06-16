@@ -82,15 +82,15 @@ variation_groups:
         variation_name: ""
         variation_description: ""
         variation_specs: |-
-          | Heading   | Specs                            |
-          | --------- | -------------------------------- |
-          | Display   | Avenir Next Medium, 60pt / 66pt  |
-          | Heading 1 | Avenir Next Regular, 38pt / 40pt |
-          | Heading 2 | Avenir Next Regular, 26pt / 28pt |
-          | Heading 3 | Avenir Next Regular, 16pt / 18pt |
-          | Heading 4 | Avenir Next Medium, 14pt / 16pt  |
+          | Heading   | Specs                                        |
+          | --------- | -------------------------------------------- |
+          | Display   | Avenir Next Medium, 60pt / 66pt              |
+          | Heading 1 | Avenir Next Regular, 38pt / 40pt             |
+          | Heading 2 | Avenir Next Regular, 26pt / 28pt             |
+          | Heading 3 | Avenir Next Demi Bold, 16pt / 18pt           |
+          | Heading 4 | Avenir Next Medium, 14pt / 16pt              |
           | Heading 5 | Avenir Next Demi Bold, 10pt / 12pt, All caps |
-          | Heading 6 | Avenir Next Medium, 12pt /14 pt |
+          | Heading 6 | Avenir Next Medium, 12pt /14 pt              |
     variation_group_description: >+
       This hierarchy should serve as a basis for 8.5 x 11” documents, but
       appropriate scaling should be explored for content of larger or smaller

@@ -4528,9 +4528,6 @@ select.o-multiselect option {
 .o-expandable_target__collapsed .o-expandable_cue-open {
   display: block;
 }
-.o-expandable_content {
-  overflow: hidden;
-}
 .o-expandable_content:after {
   content: '';
   display: table;
@@ -4544,6 +4541,9 @@ select.o-multiselect option {
 }
 .o-expandable_content__expanded {
   max-height: 1000px;
+}
+.o-expandable_content.u-is-animating {
+  overflow: hidden;
 }
 .o-expandable_label {
   margin-bottom: 0;

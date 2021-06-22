@@ -150,11 +150,48 @@ guidelines: >-
   Always look at the whole frame. Try not to film a subject directly in the middle of a shot. Make sure to look at the top, bottom, left, right, and each corner of the frame when composing an image. Your goal should be to never crop the image in post. It should be framed correctly in camera. A video with ***perfect*** framing would mean each frame, if frozen, would appear as a well-composed photograph.
 
 
+  <div class="content-33 content-first" markdown="1">
+
+
+  The horizontal lockup is the primary option and appears on our stationery and website.
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Horizontal lockup logo](/design-system/images/uploads/logo_horizontal_071720.png "Horizontal lockup logo")
+
+
+  </div>
+
+
   | Term                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Example                                                                                                                                                                                             |
 
   | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-  | **Symmetry** <br/>Symmetrical shots can be used to effectively draw attention to the center of the screen, create a dramatic visual statement, or express an aesthetically pleasing balance. Symmetry gives an image more thematic and visual weight than shots around it.                                                                                                                                                                                                                                                                                                                                                                                    | ![Symmetry](/design-system/images/uploads/symmetry_shutterstock_1519755446.jpg)                                                                                                                     |
+
+  <div class="content-33 content-first" markdown="1">
+
+
+  **Symmetry** <br/>Symmetrical shots can be used to effectively draw attention to the center of the screen, create a dramatic visual statement, or express an aesthetically pleasing balance. Symmetry gives an image more thematic and visual weight than shots around it.   
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Symmetry](/design-system/images/uploads/symmetry_shutterstock_1519755446.jpg)
+
+
+  </div>
+
+
+  **Symmetry** <br/>Symmetrical shots can be used to effectively draw attention to the center of the screen, create a dramatic visual statement, or express an aesthetically pleasing balance. Symmetry gives an image more thematic and visual weight than shots around it.                                                                                                                                                                                                                                                                                                                                                                                    | ![Symmetry](/design-system/images/uploads/symmetry_shutterstock_1519755446.jpg)                                                                                                                     |
 
   | **Rule of Thirds** <br/> If one were to divide the screen evenly into thirds using horizontal and vertical lines, the focal point of the image would fall along the intersection of two of those lines. Visual lines, such as horizons or architectural columns, should fall along one of those lines. For most situations, adhering to the Rule of Thirds will help ensure proper composition, regardless of the subject matter.                                                                                                                                                                                                                             | ![Rule of Thirds Grid](/design-system/images/uploads/ruleofthirds_shutterstock_1519755446.jpg)                                                                                                      |
 

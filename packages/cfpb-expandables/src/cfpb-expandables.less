@@ -73,8 +73,6 @@
         // collapse and extend past the bounds of the expandable.
         .u-clearfix();
 
-        overflow: hidden;
-
         &__transition {
             transition: max-height @expandable__transition-speed ease-in-out;
         }
@@ -85,6 +83,10 @@
 
         &__expanded {
             max-height: 1000px;
+        }
+
+        &.u-is-animating {
+            overflow: hidden;
         }
     }
 

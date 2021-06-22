@@ -411,11 +411,6 @@ guidelines: >-
 
   <br/>
 
-  <br/>
-
-  <br/>
-
-  <br/>
 
 
   ![Lead Room](/design-system/images/uploads/shutterstock_1363938809.jpg)

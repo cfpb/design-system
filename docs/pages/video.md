@@ -407,11 +407,6 @@ guidelines: >-
 
   <div class="content-50 content-last" markdown="1">
 
-  <br/>
-
-  <br/>
-
-
 
   ![Lead Room](/design-system/images/uploads/shutterstock_1363938809.jpg)
 

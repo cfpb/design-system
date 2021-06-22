@@ -1,5 +1,5 @@
 
-## Unreleased (2021-06-08)
+## v0.8.0 (2021-06-08)
 
 #### Enhancement
 * `cfpb-icons`
@@ -27,7 +27,7 @@
 
 
 
-## Unreleased (2021-03-26)
+## v0.7.10 (2021-03-26)
 
 #### Bug Fix
 * `cfpb-design-system`
@@ -45,7 +45,7 @@
 
 
 
-## Unreleased (2021-02-23)
+## v0.7.9 (2021-02-23)
 
 #### Enhancement
 * `cfpb-icons`
@@ -68,7 +68,7 @@
 
 
 
-## Unreleased (2021-02-04)
+## v0.7.8 (2021-02-04)
 
 #### Bug Fix
 * `cfpb-forms`
@@ -79,7 +79,7 @@
 
 
 
-## Unreleased (2021-02-04)
+## v0.7.6 (2021-02-04)
 
 #### Enhancement
 * `cfpb-atomic-component`
@@ -107,7 +107,7 @@
 
 
 
-## Unreleased (2021-01-22)
+## v0.7.6 (2021-01-22)
 
 #### Enhancement
 * `cfpb-atomic-component`
@@ -138,7 +138,7 @@
 
 
 
-## Unreleased (2021-01-08)
+## v0.7.5 (2021-01-08)
 
 #### Bug Fix
 * `cfpb-atomic-component`
@@ -150,7 +150,7 @@
 
 
 
-## Unreleased (2021-01-07)
+## v0.7.4 (2021-01-07)
 
 #### Bug Fix
 * `cfpb-atomic-component`, `cfpb-core`
@@ -161,7 +161,7 @@
 
 
 
-## Unreleased (2020-12-31)
+## v0.7.3 (2020-12-31)
 
 #### Breaking Change
 * `cfpb-atomic-component`, `cfpb-expandables`

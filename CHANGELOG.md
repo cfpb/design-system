@@ -1,4 +1,22 @@
 
+## v0.7.1 (2021-06-22)
+
+#### Bug Fix
+* `cfpb-expandables`
+  * [#1247](https://github.com/cfpb/design-system/pull/1247) Only hide expandable content during animation ([@contolini](https://github.com/contolini))
+* `cfpb-icons`
+  * [#1246](https://github.com/cfpb/design-system/pull/1246) cfpb-icons: remove unreferenced buying-car icon ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1244](https://github.com/cfpb/design-system/pull/1244) Update netlify-cms, babel/core, babel/plugin-proposal-class-properties, babel/plugin-proposal-object-rest-spread, babel/preset-env, babel/preset-react, chromedriver, postcss, postcss-loader, webpack ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Chris Contolini ([@contolini](https://github.com/contolini))
+- [@huetingj](https://github.com/huetingj)
+
+
+
 ## v0.8.0 (2021-06-08)
 
 #### Enhancement

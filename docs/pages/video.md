@@ -260,6 +260,9 @@ guidelines: >-
 
   <div class="content-50 content-first" markdown="1">
 
+  <br/>
+
+
 
   **Rule of Thirds** <br/> If one were to divide the screen evenly into thirds using horizontal and vertical lines, the focal point of the image would fall along the intersection of two of those lines. Visual lines, such as horizons or architectural columns, should fall along one of those lines. For most situations, adhering to the Rule of Thirds will help ensure proper composition, regardless of the subject matter. 
 

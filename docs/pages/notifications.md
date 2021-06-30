@@ -4,7 +4,7 @@ layout: variation
 section: components
 status: Released
 description: Notifications alert users to the state of a form or page. In forms,
-  notifications can appear at the top of the form or in line with form fields
+  notifications can appear at the top of the form or in-line with form fields
   and can highlight successful submissions, errors that need to be corrected, or
   details to know before submitting the form. When used on a page, notifications
   can call out important information about the content (including if the content

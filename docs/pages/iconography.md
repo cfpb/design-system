@@ -143,7 +143,7 @@ variation_groups:
 
           | ---- | ----------- | -------------- | ------- |
 
-          | {% include icons/email.svg %} | {% include icons/email-square.svg %} | email | envelope, envelope-back |
+          | {% include icons/email.svg %} | {% include icons/email-square.svg %} | email | envelope-back |
 
           | {% include icons/facebook.svg %} | {% include icons/facebook-square.svg %} | facebook |  |
 
@@ -171,7 +171,7 @@ variation_groups:
 
           | {% include icons/email.svg %} | {% include icons/email-round.svg %} | email | envelope-back |
 
-          | {% include icons/fax.svg %} | {% include icons/fax-round.svg %} | fax | fax-machine |
+          | {% include icons/fax.svg %} | {% include icons/fax-round.svg %} | fax |  |
 
           | {% include icons/mail.svg %} | {% include icons/mail-round.svg %} | mail | envelope-front |
 
@@ -249,9 +249,9 @@ variation_groups:
 
           | {% include icons/calculate.svg %} | {% include icons/calculate-round.svg %} | calculate | calculator |
 
-          | {% include icons/car.svg %} | {% include icons/car-round.svg %} | car | car-loan, auto, auto-loan |
+          | {% include icons/car.svg %} | {% include icons/car-round.svg %} | car |  |
 
-          | {% include icons/college.svg %} | {% include icons/college-round.svg %} | college | paying-for-college, grad-cap, mortarboard |
+          | {% include icons/college.svg %} | {% include icons/college-round.svg %} | college | grad-cap, mortarboard |
 
           | {% include icons/complaint.svg %} | {% include icons/complaint-round.svg %} | complaint | |
 
@@ -275,7 +275,7 @@ variation_groups:
 
           | {% include icons/health-insurance.svg %} | {% include icons/health-insurance-round.svg %} | health-insurance | medical |
 
-          | {% include icons/house.svg %} | {% include icons/house-round.svg %} | house | buying-a-house, owning-a-home, home |
+          | {% include icons/house.svg %} | {% include icons/house-round.svg %} | house |  |
 
           | {% include icons/insurance.svg %} | {% include icons/insurance-round.svg %} | insurance |  |
 
@@ -349,7 +349,7 @@ variation_groups:
 
           | {% include icons/monitor.svg %} | {% include icons/monitor-round.svg %} | monitor |  |
 
-          | {% include icons/pet.svg %} | {% include icons/pet-round.svg %} | pet | pets |
+          | {% include icons/pet.svg %} | {% include icons/pet-round.svg %} | pet |  |
 
           | {% include icons/price-tag.svg %} | {% include icons/price-tag-round.svg %} | price-tag |  |
 
@@ -415,7 +415,7 @@ variation_groups:
 
           | {% include icons/history.svg %} | {% include icons/history-round.svg %} | history |  |
 
-          | {% include icons/information.svg %} | {% include icons/information-round.svg %} | information | info, i |
+          | {% include icons/information.svg %} | {% include icons/information-round.svg %} | information |  |
 
           | {% include icons/light-bulb.svg %} | {% include icons/light-bulb-round.svg %} | light-bulb | idea |
 
@@ -465,7 +465,7 @@ variation_groups:
 
           | {% include icons/user.svg %} | {% include icons/user-round.svg %} | user | person |
 
-          | {% include icons/wifi.svg %} | {% include icons/wifi-round.svg %} | wifi | wi-fi, wireless, signal |
+          | {% include icons/wifi.svg %} | {% include icons/wifi-round.svg %} | wifi | signal |
 
           {: class="icon-table"}
         variation_name: ""

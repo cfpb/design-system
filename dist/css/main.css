@@ -4172,6 +4172,10 @@ h6 + .a-legend,
   box-sizing: border-box;
   width: 100%;
 }
+.o-form__input-w-btn_input-container .a-form-alert,
+.o-form__input-w-btn_input-container .a-error-message {
+  margin-top: 0.9375em;
+}
 .o-form__input-w-btn_btn-container {
   margin-bottom: 0.9375em;
 }

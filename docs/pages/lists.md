@@ -153,7 +153,7 @@ variation_groups:
         variation_name: Link list
         variation_specs: |-
           * Avenir Next Medium, 16px, Pacific
-          * Border bottom: 1 px, solid, Pacific
+          * Border bottom: 1 px, dotted, Pacific
           * Margin bottom (list item): 8px
           * Margin top (list): 10px
           * Margin bottom (list): 15px

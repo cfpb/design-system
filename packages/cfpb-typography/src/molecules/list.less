@@ -49,6 +49,10 @@
     .m-list_item {
         .respond-to-max( @bp-xs-max, {
             margin-bottom: 0;
+
+            &:nth-child( n+2 ) .m-list_link {
+                border-top-width: 0;
+            }
         } );
     }
 

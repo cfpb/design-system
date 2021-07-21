@@ -44,7 +44,7 @@ variation_groups:
 
           * Pacific Blue
 
-          * 1px solid bottom border
+          * 1px dotted bottom border
 
 
           #### Hover
@@ -58,9 +58,9 @@ variation_groups:
 
           * Pacific Blue
 
-          * 1px solid bottom border
+          * 1px dotted bottom border
 
-          * Thin solid outline
+          * Thin dotted outline
 
 
           #### Active

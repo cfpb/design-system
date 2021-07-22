@@ -1,4 +1,18 @@
 
+## v0.9.0 (2021-07-22)
+
+#### Bug Fix
+* `cfpb-forms`
+  * [#1257](https://github.com/cfpb/design-system/pull/1257) Maintain text input modifier colors on focus/hover ([@contolini](https://github.com/contolini))
+  * [#1258](https://github.com/cfpb/design-system/pull/1258) Fix field-level error message margins ([@niqjohnson](https://github.com/niqjohnson))
+
+#### Committers: 3
+- Chris Contolini ([@contolini](https://github.com/contolini))
+- Nicholas Johnson ([@niqjohnson](https://github.com/niqjohnson))
+- RichBailey ([@RichBailey](https://github.com/RichBailey))
+
+
+
 ## v0.9.0 (2021-06-22)
 
 #### Bug Fix

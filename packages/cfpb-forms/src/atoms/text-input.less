@@ -44,16 +44,34 @@
     &__error {
         border-color: @input-border__error;
         outline: 1px solid @input-border__error;
+        &:focus,
+        &.focus {
+            border-color: @input-border__error;
+            box-shadow: 0 0 0 1px @input-border__error;
+            outline: 1px dotted @input-border__error;
+        }
     }
 
     &__warning {
         border-color: @input-border__warning;
         outline: 1px solid @input-border__warning;
+        &:focus,
+        &.focus {
+            border-color: @input-border__warning;
+            box-shadow: 0 0 0 1px @input-border__warning;
+            outline: 1px dotted @input-border__warning;
+        }
     }
 
     &__success {
         border-color: @input-border__success;
         outline: 1px solid @input-border__success;
+        &:focus,
+        &.focus {
+            border-color: @input-border__success;
+            box-shadow: 0 0 0 1px @input-border__success;
+            outline: 1px dotted @input-border__success;
+        }
     }
 }
 

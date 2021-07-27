@@ -6371,9 +6371,6 @@ pre code {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.o-variation_group table {
-  width: 100%;
-}
 .m-variation {
   border-bottom: 1px solid #b4b5b6;
 }
@@ -6404,6 +6401,12 @@ pre code {
 }
 .m-list__horizontal-spaced > .m-list_item {
   margin-bottom: 0.9375em;
+}
+table {
+  width: 100%;
+}
+.a-live_code table {
+  width: inherit;
 }
 /* Color swatches for Identity/Color page
    ========================================================================== */

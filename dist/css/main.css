@@ -4900,6 +4900,9 @@ main {
   margin-bottom: 10px;
 }
 @media only all and (min-width: 37.5625em) {
+  .ds-nav ul:last-child {
+    margin-bottom: 30px;
+  }
   .ds-nav-container > summary {
     display: none;
   }

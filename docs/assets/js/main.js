@@ -9,7 +9,7 @@ import AlphaTransition from '@cfpb/cfpb-atomic-component/src/utilities/transitio
 import MoveTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
 import MaxHeightTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
 import Table from '@cfpb/cfpb-tables/src/Table';
-import { Tabs } from 'govuk-frontend';
+import Tabs from './tabs'
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';
 
@@ -47,13 +47,13 @@ window.MaxHeightTransition = MaxHeightTransition;
 const main = document.querySelector( '#main' );
 const tabs = document.querySelectorAll( '[data-module="tabs"]' );
 
-if ( tabs && tabs.length > 0 ) {
-  main.classList.add( 'js-enabled' );
-  for ( let i = 0; i < tabs.length; i++ ) {
-    const tab = tabs[i];
-    new Tabs( tab ).init();
-  }
-}
+// if ( tabs && tabs.length > 0 ) {
+//   main.classList.add( 'js-enabled' );
+//   for ( let i = 0; i < tabs.length; i++ ) {
+//     const tab = tabs[i];
+//     new Tabs( tab ).init();
+//   }
+// }
 
 const toggleAllBtn = document.querySelector( '#toggle-details' );
 const toggleBtns = document.querySelectorAll( '.a-toggle_code button' );

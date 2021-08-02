@@ -36,7 +36,7 @@ describe( 'The "show details" toggling feature', () => {
           await browser.refresh();
           showDetailsButton = await $( 'button=Show details' );
           hideDetailsButton = await $( 'button=Hide details' );
-          detailsTabs = [ ...await $$( '.govuk-tabs' ) ];
+          detailsTabs = [ ...await $$( '.m-tabs' ) ];
         } );
 
         it( 'should hide snippet tabs by default', async () => {

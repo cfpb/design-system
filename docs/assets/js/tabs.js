@@ -1,52 +1,259 @@
-import { Tabs } from 'govuk-frontend';
+const BASE_CLASS = 'm-tabs';
 
-/**
- * @param {DOMNode} container - Parent element containing Gov UK tab HTML
- */
-export function init( container ) {
-  const tabs = container.querySelectorAll( '[data-module="tabs"]' );
+function Tabs() {
+  const tablist = document.querySelectorAll('[role="m-tabs__list"]')[0];
+  let tabs;
+  let panels;
+  // const delay = determineDelay();
 
-  if ( tabs && tabs.length > 0 ) {
-    for ( let i = 0; i < tabs.length; i++ ) {
-      const tab = tabs[i];
-      new Tabs( tab ).init();
+  generateArrays();
+
+  function generateArrays () {
+    tabs = document.querySelectorAll('[role="m-tabs__tab"]');
+    panels = document.querySelectorAll('[role="m-tabs__panel"]');
+  };
+
+  // For easy reference
+  const keys = {
+    end: 35,
+    home: 36,
+    left: 37,
+    up: 38,
+    right: 39,
+    down: 40,
+    delete: 46
+  };
+
+  // Add or substract depending on key pressed
+  const direction = {
+    37: -1,
+    38: -1,
+    39: 1,
+    40: 1
+  };
+
+  // Bind listeners
+  for (let i = 0; i < tabs.length; ++i) {
+    addListeners(i);
+  };
+
+  function addListeners (index) {
+    tabs[index].addEventListener('click', clickEventListener);
+    tabs[index].addEventListener('keydown', keydownEventListener);
+    tabs[index].addEventListener('keyup', keyupEventListener);
+
+    // Build an array with all tabs (<button>s) in it
+    tabs[index].index = index;
+  };
+
+  // When a tab is clicked, activateTab is fired to activate it
+  function clickEventListener (event) {
+    const tab = event.target;
+    activateTab(tab, false);
+  };
+
+  // Handle keydown on tabs
+  function keydownEventListener (event) {
+    const key = event.keyCode;
+
+    switch (key) {
+      case keys.end:
+        event.preventDefault();
+        // Activate last tab
+        activateTab(tabs[tabs.length - 1]);
+        break;
+      case keys.home:
+        event.preventDefault();
+        // Activate first tab
+        activateTab(tabs[0]);
+        break;
+
+      // Up and down are in keydown
+      // because we need to prevent page scroll >:)
+      case keys.up:
+      case keys.down:
+        determineOrientation(event);
+        break;
+    };
+  };
+
+  // Handle keyup on tabs
+  function keyupEventListener (event) {
+    const key = event.keyCode;
+
+    switch (key) {
+      case keys.left:
+      case keys.right:
+        determineOrientation(event);
+        break;
+      case keys.delete:
+        determineDeletable(event);
+        break;
+    };
+  };
+
+  // When a m-tabs__listâ€™s aria-orientation is set to vertical,
+  // only up and down arrow should function.
+  // In all other cases only left and right arrow function.
+  function determineOrientation (event) {
+    const key = event.keyCode;
+    const vertical = tablist.getAttribute('aria-orientation') == 'vertical';
+    const proceed = false;
+
+    if (vertical) {
+      if (key === keys.up || key === keys.down) {
+        event.preventDefault();
+        proceed = true;
+      };
     }
-  }
+    else {
+      if (key === keys.left || key === keys.right) {
+        proceed = true;
+      };
+    };
+
+    if (proceed) {
+      switchTabOnArrowPress(event);
+    };
+  };
+
+  // Either focus the next, previous, first, or last tab
+  // depening on key pressed
+  function switchTabOnArrowPress (event) {
+    const pressed = event.keyCode;
+
+    for (x = 0; x < tabs.length; x++) {
+      tabs[x].addEventListener('focus', focusEventHandler);
+    };
+
+    if (direction[pressed]) {
+      const target = event.target;
+      if (target.index !== undefined) {
+        if (tabs[target.index + direction[pressed]]) {
+          tabs[target.index + direction[pressed]].focus();
+        }
+        else if (pressed === keys.left || pressed === keys.up) {
+          focusLastTab();
+        }
+        else if (pressed === keys.right || pressed == keys.down) {
+          focusFirstTab();
+        };
+      };
+    };
+  };
+
+  // Activates any given tab panel
+  function activateTab (tab, setFocus) {
+    setFocus = setFocus || true;
+    // Deactivate all other tabs
+    deactivateTabs();
+
+    // Remove tabindex attribute
+    tab.removeAttribute('tabindex');
+
+    // Set the tab as selected
+    tab.setAttribute('aria-selected', 'true');
+
+    // Get the value of aria-controls (which is an ID)
+    const controls = tab.getAttribute('aria-controls');
+
+    // Remove hidden attribute from tab panel to make it visible
+    document.getElementById(controls).removeAttribute('hidden');
+
+    // Set focus when required
+    if (setFocus) {
+      tab.focus();
+    };
+  };
+
+  // Deactivate all tabs and tab panels
+  function deactivateTabs () {
+    for (t = 0; t < tabs.length; t++) {
+      tabs[t].setAttribute('tabindex', '-1');
+      tabs[t].setAttribute('aria-selected', 'false');
+      tabs[t].removeEventListener('focus', focusEventHandler);
+    };
+
+    for (p = 0; p < panels.length; p++) {
+      panels[p].setAttribute('hidden', 'hidden');
+    };
+  };
+
+  // Make a guess
+  function focusFirstTab () {
+    tabs[0].focus();
+  };
+
+  // Make a guess
+  function focusLastTab () {
+    tabs[tabs.length - 1].focus();
+  };
+
+  // Detect if a tab is deletable
+  function determineDeletable (event) {
+    target = event.target;
+
+    if (target.getAttribute('data-deletable') !== null) {
+      // Delete target tab
+      deleteTab(event, target);
+
+      // Update arrays related to tabs widget
+      generateArrays();
+
+      // Activate the closest tab to the one that was just deleted
+      if (target.index - 1 < 0) {
+        activateTab(tabs[0]);
+      }
+      else {
+        activateTab(tabs[target.index - 1]);
+      };
+    };
+  };
+
+  // Deletes a tab and its panel
+  function deleteTab (event) {
+    const target = event.target;
+    const panel = document.getElementById(target.getAttribute('aria-controls'));
+
+    target.parentElement.removeChild(target);
+    panel.parentElement.removeChild(panel);
+  };
+
+  // Determine whether there should be a delay
+  // when user navigates with the arrow keys
+  // function determineDelay () {
+  //   const hasDelay = tablist.hasAttribute('data-delay');
+  //   const delay = 0;
+
+  //   if (hasDelay) {
+  //     const delayValue = tablist.getAttribute('data-delay');
+  //     if (delayValue) {
+  //       delay = delayValue;
+  //     }
+  //     else {
+  //       // If no value is specified, default to 300ms
+  //       delay = 300;
+  //     };
+  //   };
+
+  //   return delay;
+  // };
+
+  //
+  function focusEventHandler (event) {
+    const target = event.target;
+
+    setTimeout(checkTabFocus, delay, target);
+  };
+
+  // Only activate tab on focus if it still has focus after the delay
+  function checkTabFocus (target) {
+    focused = document.activeElement;
+
+    if (target === focused) {
+      activateTab(target, false);
+    };
+  };
 }
 
-/**
- * This is a helper function that is only used within Netlify CMS.
- * The original Gov UK tabs code modifies the URL's hash which breaks Netlify
- * so we replace their functionality with some simple tab switching below.
- *
- * @param {DOMNode} tab - Tab element that was clicked.
- * @param {DOMNode} document -
- *   Defaults to window.document but overridable for react DOM references.
- */
-export function changeTab( tab, document = window.document ) {
-  const TABS_CONTAINER_CLASS = 'govuk-tabs';
-  const TAB_CLASS = 'govuk-tabs__list-item';
-  const TAB_CLASS_SELECTED = 'govuk-tabs__list-item--selected';
-  const TAB_CONTENT_CLASS = 'govuk-tabs__panel';
-  const TAB_CONTENT_CLASS_HIDDEN = 'govuk-tabs__panel--hidden';
-
-  const selectedTabContent = document.querySelector( tab.getAttribute( 'href' ) );
-  const selectedTabListItem = tab.closest( `.${ TAB_CLASS }` );
-  const tabsContainer = tab.closest( `.${ TABS_CONTAINER_CLASS }` );
-
-  // Un-highlight all tabs
-  tabsContainer.querySelectorAll( `.${ TAB_CLASS }` ).forEach( tabListItem => {
-    tabListItem.classList.remove( TAB_CLASS_SELECTED );
-  } );
-
-  // Hide all tab content
-  tabsContainer.querySelectorAll( `.${ TAB_CONTENT_CLASS }` ).forEach( content => {
-    content.classList.add( TAB_CONTENT_CLASS_HIDDEN );
-  } );
-
-  // Highlight the selected tab
-  selectedTabListItem.classList.add( TAB_CLASS_SELECTED );
-
-  // Show the selected tab's content
-  selectedTabContent.classList.remove( TAB_CONTENT_CLASS_HIDDEN );
-}
+export default Tabs;

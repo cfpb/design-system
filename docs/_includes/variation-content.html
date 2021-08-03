@@ -137,31 +137,31 @@
             </div>
 
             <div class="m-tabs u-hidden" data-module="tabs" id="{{ variation_slug }}-{{ forloop.index }}">
-                <ul class="m-tabs__list">
+                <ul class="m-tabs_list">
                     {% if code_snippet != "" %}
-                    <li class="m-tabs__list-item m-tabs__list-item--selected">
-                        <a class="m-tabs__tab" href="#{{ variation_slug }}-html-code-snippet-{{ forloop.index }}">
+                    <li class="m-tabs_list-item m-tabs_list-item--selected">
+                        <a class="m-tabs_tab" href="#{{ variation_slug }}-html-code-snippet-{{ forloop.index }}">
                             HTML code snippet
                         </a>
                     </li>
                     {% endif %}
                     {% if jinja_snippet != "" %}
-                    <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#{{ variation_slug }}-jinja-code-snippet-{{ forloop.index }}">
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#{{ variation_slug }}-jinja-code-snippet-{{ forloop.index }}">
                             Jinja code snippet
                         </a>
                     </li>
                     {% endif %}
                     {% if implementation != "" %}
-                    <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#{{ variation_slug }}-implementation-{{ forloop.index }}">
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#{{ variation_slug }}-implementation-{{ forloop.index }}">
                             Implementation
                         </a>
                     </li>
                     {% endif %}
                     {% if specs != "" %}
-                    <li class="m-tabs__list-item">
-                        <a class="m-tabs__tab" href="#{{ variation_slug }}-specs-{{ forloop.index }}">
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#{{ variation_slug }}-specs-{{ forloop.index }}">
                             Specs
                         </a>
                     </li>

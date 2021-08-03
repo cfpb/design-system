@@ -9,7 +9,7 @@ import AlphaTransition from '@cfpb/cfpb-atomic-component/src/utilities/transitio
 import MoveTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
 import MaxHeightTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
 import Table from '@cfpb/cfpb-tables/src/Table';
-import Tabs from './tabs'
+import Tabs from './tabs.js'
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';
 

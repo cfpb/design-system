@@ -1,103 +1,100 @@
 .m-tabs {
     width: 20em;
-    font-family: "lucida grande", sans-serif;
   }
   
-  [role="m-tabs__list"] {
+  .m-tabs_list {
     margin: 0 0 -0.1em;
     overflow: visible;
   }
   
-  [role="m-tabs__tab"] {
+  .m-tabs_tab {
     position: relative;
     margin: 0;
     padding: 0.3em 0.5em 0.4em;
-    border: 1px solid hsl(219, 1%, 72%);
+    border: 1px solid @gray-20;
     border-radius: 0.2em 0.2em 0 0;
-    box-shadow: 0 0 0.2em hsl(219, 1%, 72%);
+    // box-shadow: 0 0 0.2em hsl(219, 1%, 72%);
     overflow: visible;
-    font-family: inherit;
-    font-size: inherit;
-    background: hsl(220, 20%, 94%);
+    background: @gray;
   }
   
-  [role="m-tabs__tab"]:hover::before,
-  [role="m-tabs__tab"]:focus::before,
-  [role="m-tabs__tab"][aria-selected="true"]::before {
+  .m-tabs_tab:hover::before,
+  .m-tabs_tab:focus::before,
+  .m-tabs_tab[aria-selected="true"]::before {
     position: absolute;
     bottom: 100%;
     right: -1px;
     left: -1px;
     border-radius: 0.2em 0.2em 0 0;
-    border-top: 3px solid hsl(20, 96%, 48%);
+    border-top: 3px solid @gray-20;
     content: '';
   }
   
-  [role="m-tabs__tab"][aria-selected="true"] {
+  .m-tabs_tab[aria-selected="true"] {
     border-radius: 0;
-    background: hsl(220, 43%, 99%);
+    background: @gray;
     outline: 0;
   }
   
-  [role="m-tabs__tab"][aria-selected="true"]:not(:focus):not(:hover)::before {
-    border-top: 5px solid hsl(218, 96%, 48%);
+  .m-tabs_tab[aria-selected="true"]:not(:focus):not(:hover)::before {
+    border-top: 5px solid @gray-20;
   }
   
-  [role="m-tabs__tab"][aria-selected="true"]::after {
+  .m-tabs_tab[aria-selected="true"]::after {
     position: absolute;
     z-index: 3;
     bottom: -1px;
     right: 0;
     left: 0;
     height: 0.3em;
-    background: hsl(220, 43%, 99%);
+    background: @gray;
     box-shadow: none;
     content: '';
   }
   
-  [role="m-tabs__tab"]:hover,
-  [role="m-tabs__tab"]:focus,
-  [role="m-tabs__tab"]:active {
+  .m-tabs_tab:hover,
+  .m-tabs_tab:focus,
+  .m-tabs_tab:active {
     outline: 0;
     border-radius: 0;
     color: inherit;
   }
   
-  [role="m-tabs__tab"]:hover::before,
-  [role="m-tabs__tab"]:focus::before {
-    border-color: hsl(20, 96%, 48%);
+  .m-tabs_tab:hover::before,
+  .m-tabs_tab:focus::before {
+    border-color: @gray-20;
   }
   
-  [role="m-tabs__panel"] {
+  .m-tabs__panel {
     position: relative;
     z-index: 2;
     padding: 0.5em 0.5em 0.7em;
-    border: 1px solid hsl(219, 1%, 72%);
+    border: 1px solid @gray-20;
     border-radius: 0 0.2em 0.2em 0.2em;
-    box-shadow: 0 0 0.2em hsl(219, 1%, 72%);
-    background: hsl(220, 43%, 99%);
+    // box-shadow: 0 0 0.2em hsl(219, 1%, 72%);
+    background: @gray;
   }
   
-  [role="m-tabs__panel"]:focus {
-    border-color: hsl(20, 96%, 48%);
-    box-shadow: 0 0 0.2em hsl(20, 96%, 48%);
+  .m-tabs__panel:focus {
+    border-color: @gray-20;
+    // box-shadow: 0 0 0.2em hsl(20, 96%, 48%);
     outline: 0;
   }
   
-  [role="m-tabs__panel"]:focus::after {
+  .m-tabs__panel:focus::after {
     position: absolute;
     bottom: 0;
     right: -1px;
     left: -1px;
-    border-bottom: 3px solid hsl(20, 96%, 48%);
+    border-bottom: 3px solid @gray-20;
     border-radius: 0 0 0.2em 0.2em;
     content: '';
   }
   
-  [role="m-tabs__panel"] p {
+  .m-tabs__panel p {
     margin: 0;
   }
   
-  [role="m-tabs__panel"] * + p {
+  .m-tabs__panel * + p {
     margin-top: 1em;
   }

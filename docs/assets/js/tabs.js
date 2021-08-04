@@ -1,41 +1,50 @@
 const BASE_CLASS = 'm-tabs';
 
 function Tabs() {
-  const tablist = document.querySelectorAll('[role="m-tabs__list"]')[0];
+  let tabsContainerDom;
+  let tabsListDom;
   let tabs;
   let panels;
+  
+  function init() {
+    const tabsContainerDom = document.querySelector( `.${ BASE_CLASS }` );
+    const tabsListDom = tabsContainerDom.querySelectorAll( `.${ BASE_CLASS }_list` );
+    generateArrays();
+  
+    function generateArrays () {
+      tabs = document.querySelectorAll('[role="m-tabs_tab"]');
+      panels = document.querySelectorAll('[role="m-tabs_panel"]');
+    };
+  
+    // For easy reference
+    const keys = {
+      end: 35,
+      home: 36,
+      left: 37,
+      up: 38,
+      right: 39,
+      down: 40,
+      delete: 46
+    };
+  
+    // Add or substract depending on key pressed
+    const direction = {
+      37: -1,
+      38: -1,
+      39: 1,
+      40: 1
+    };
+  
+    // Bind listeners
+    for (let i = 0; i < tabs.length; ++i) {
+      addListeners(i);
+    };
+    
+    return this;
+  }  
   // const delay = determineDelay();
 
-  generateArrays();
 
-  function generateArrays () {
-    tabs = document.querySelectorAll('[role="m-tabs__tab"]');
-    panels = document.querySelectorAll('[role="m-tabs__panel"]');
-  };
-
-  // For easy reference
-  const keys = {
-    end: 35,
-    home: 36,
-    left: 37,
-    up: 38,
-    right: 39,
-    down: 40,
-    delete: 46
-  };
-
-  // Add or substract depending on key pressed
-  const direction = {
-    37: -1,
-    38: -1,
-    39: 1,
-    40: 1
-  };
-
-  // Bind listeners
-  for (let i = 0; i < tabs.length; ++i) {
-    addListeners(i);
-  };
 
   function addListeners (index) {
     tabs[index].addEventListener('click', clickEventListener);

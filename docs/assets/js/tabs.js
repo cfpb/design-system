@@ -41,10 +41,7 @@ function Tabs() {
     };
     
     return this;
-  }  
-  // const delay = determineDelay();
-
-
+  }
 
   function addListeners (index) {
     tabs[index].addEventListener('click', clickEventListener);
@@ -175,19 +172,6 @@ function Tabs() {
     };
   };
 
-  // Deactivate all tabs and tab panels
-  function deactivateTabs () {
-    for (t = 0; t < tabs.length; t++) {
-      tabs[t].setAttribute('tabindex', '-1');
-      tabs[t].setAttribute('aria-selected', 'false');
-      tabs[t].removeEventListener('focus', focusEventHandler);
-    };
-
-    for (p = 0; p < panels.length; p++) {
-      panels[p].setAttribute('hidden', 'hidden');
-    };
-  };
-
   // Make a guess
   function focusFirstTab () {
     tabs[0].focus();
@@ -196,72 +180,6 @@ function Tabs() {
   // Make a guess
   function focusLastTab () {
     tabs[tabs.length - 1].focus();
-  };
-
-  // Detect if a tab is deletable
-  function determineDeletable (event) {
-    target = event.target;
-
-    if (target.getAttribute('data-deletable') !== null) {
-      // Delete target tab
-      deleteTab(event, target);
-
-      // Update arrays related to tabs widget
-      generateArrays();
-
-      // Activate the closest tab to the one that was just deleted
-      if (target.index - 1 < 0) {
-        activateTab(tabs[0]);
-      }
-      else {
-        activateTab(tabs[target.index - 1]);
-      };
-    };
-  };
-
-  // Deletes a tab and its panel
-  function deleteTab (event) {
-    const target = event.target;
-    const panel = document.getElementById(target.getAttribute('aria-controls'));
-
-    target.parentElement.removeChild(target);
-    panel.parentElement.removeChild(panel);
-  };
-
-  // Determine whether there should be a delay
-  // when user navigates with the arrow keys
-  // function determineDelay () {
-  //   const hasDelay = tablist.hasAttribute('data-delay');
-  //   const delay = 0;
-
-  //   if (hasDelay) {
-  //     const delayValue = tablist.getAttribute('data-delay');
-  //     if (delayValue) {
-  //       delay = delayValue;
-  //     }
-  //     else {
-  //       // If no value is specified, default to 300ms
-  //       delay = 300;
-  //     };
-  //   };
-
-  //   return delay;
-  // };
-
-  //
-  function focusEventHandler (event) {
-    const target = event.target;
-
-    setTimeout(checkTabFocus, delay, target);
-  };
-
-  // Only activate tab on focus if it still has focus after the delay
-  function checkTabFocus (target) {
-    focused = document.activeElement;
-
-    if (target === focused) {
-      activateTab(target, false);
-    };
   };
 }
 

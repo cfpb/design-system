@@ -9,16 +9,23 @@ variation_groups:
   - variation_group_name: Line charts
     variations:
       - variation_name: Simple line chart
-        variation_description: "Simple line charts may use any units for the x and y
-          axis, and do not include any time-related controls. They may also
-          display up to 5 lines of data in total. "
+        variation_description: >-
+          Simple line charts may use any units for the x and y axis, and do not
+          include any time-related controls. They may also display up to 5 lines
+          of data in total. 
+
+
+          ![Line chart showing cumulative CFPB enforcement actions by year from 2012 to the present. ](/design-system/images/uploads/interactive-charts_simple-line.png "Cumulative enforcement actions by year")
       - variation_name: Date/time chart
-        variation_description: "The most commonly used interactive chart is a date/time
-          chart, a line chart which graphs continuous data over a period of
-          time. The x axis is always based on time, and date/time charts have
-          special controls allowing users to adjust the time period displayed in
-          the chart. Date/time charts may display up to 5 lines of data in
-          total. "
+        variation_description: >-
+          The most commonly used interactive chart is a date/time chart, a line
+          chart which graphs continuous data over a period of time. The x axis
+          is always based on time, and date/time charts have special controls
+          allowing users to adjust the time period displayed in the chart.
+          Date/time charts may display up to 5 lines of data in total. 
+
+
+          ![Line graph with five lines over time, one for each credit score level: Deep subprime, Subprime, Near-prime, Prime, Super-prime](/design-system/images/uploads/interactive-charts_date-time.png "Consumer credit conditions by credit score")
   - variation_group_name: Bar charts
     variation_group_description: >-
       Bar charts show comparisons of different discrete items, factors, or
@@ -36,7 +43,7 @@ variation_groups:
       areas from going unnoticed. 
 
 
-      ![Map of the United States (including Alaska and Hawaii) showing average index value by state.](/design-system/images/uploads/interactive-charts_tile-grid-map.png "Consumer credit conditions by state")
+      ![Map of the United States (including Alaska and Hawaii) showing average index value by state for the selected quarter and year. ](/design-system/images/uploads/interactive-charts_tile-grid-map.png "Consumer credit conditions by state")
 guidelines: >-
   Interactive charts, in contrast to static data visualizations, are intended to
   let users explore a set of data, focus in on the details that interest them

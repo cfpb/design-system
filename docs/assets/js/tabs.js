@@ -9,9 +9,9 @@ function Tabs() {
   function init() {
     const tabsContainerDom = document.querySelector( `.${ BASE_CLASS }` );
     const tabsListDom = tabsContainerDom.querySelectorAll( `.${ BASE_CLASS }_list` );
-    generateArrays();
+    _generateArrays();
   
-    function generateArrays () {
+    function _generateArrays () {
       tabs = document.querySelectorAll('[role="m-tabs_tab"]');
       panels = document.querySelectorAll('[role="m-tabs_panel"]');
     };
@@ -23,8 +23,7 @@ function Tabs() {
       left: 37,
       up: 38,
       right: 39,
-      down: 40,
-      delete: 46
+      down: 40
     };
   
     // Add or substract depending on key pressed
@@ -43,65 +42,62 @@ function Tabs() {
     return this;
   }
 
-  function addListeners (index) {
-    tabs[index].addEventListener('click', clickEventListener);
-    tabs[index].addEventListener('keydown', keydownEventListener);
-    tabs[index].addEventListener('keyup', keyupEventListener);
+  function _addListeners (index) {
+    tabs[index].addEventListener('click', _clickEventListener);
+    tabs[index].addEventListener('keydown', _keydownEventListener);
+    tabs[index].addEventListener('keyup', _keyupEventListener);
 
     // Build an array with all tabs (<button>s) in it
     tabs[index].index = index;
   };
 
-  // When a tab is clicked, activateTab is fired to activate it
-  function clickEventListener (event) {
+  // When a tab is clicked, _activateTab is fired to activate it
+  function __clickEventListener (event) {
     const tab = event.target;
-    activateTab(tab, false);
+    _activateTab(tab, false);
   };
 
   // Handle keydown on tabs
-  function keydownEventListener (event) {
+  function __keydownEventListener (event) {
     const key = event.keyCode;
 
     switch (key) {
       case keys.end:
         event.preventDefault();
         // Activate last tab
-        activateTab(tabs[tabs.length - 1]);
+        _activateTab(tabs[tabs.length - 1]);
         break;
       case keys.home:
         event.preventDefault();
         // Activate first tab
-        activateTab(tabs[0]);
+        _activateTab(tabs[0]);
         break;
 
       // Up and down are in keydown
       // because we need to prevent page scroll >:)
       case keys.up:
       case keys.down:
-        determineOrientation(event);
+        _determineOrientation(event);
         break;
     };
   };
 
   // Handle keyup on tabs
-  function keyupEventListener (event) {
+  function __keyupEventListener (event) {
     const key = event.keyCode;
 
     switch (key) {
       case keys.left:
       case keys.right:
-        determineOrientation(event);
-        break;
-      case keys.delete:
-        determineDeletable(event);
+        _determineOrientation(event);
         break;
     };
   };
 
-  // When a m-tabs__listâ€™s aria-orientation is set to vertical,
+  // When a m-tabs_list aria-orientation is set to vertical,
   // only up and down arrow should function.
   // In all other cases only left and right arrow function.
-  function determineOrientation (event) {
+  function _determineOrientation (event) {
     const key = event.keyCode;
     const vertical = tablist.getAttribute('aria-orientation') == 'vertical';
     const proceed = false;
@@ -119,13 +115,13 @@ function Tabs() {
     };
 
     if (proceed) {
-      switchTabOnArrowPress(event);
+      _switchTabOnArrowPress(event);
     };
   };
 
   // Either focus the next, previous, first, or last tab
   // depening on key pressed
-  function switchTabOnArrowPress (event) {
+  function _switchTabOnArrowPress (event) {
     const pressed = event.keyCode;
 
     for (x = 0; x < tabs.length; x++) {
@@ -139,17 +135,17 @@ function Tabs() {
           tabs[target.index + direction[pressed]].focus();
         }
         else if (pressed === keys.left || pressed === keys.up) {
-          focusLastTab();
+          _focusLastTab();
         }
         else if (pressed === keys.right || pressed == keys.down) {
-          focusFirstTab();
+          _focusFirstTab();
         };
       };
     };
   };
 
   // Activates any given tab panel
-  function activateTab (tab, setFocus) {
+  function _activateTab (tab, setFocus) {
     setFocus = setFocus || true;
     // Deactivate all other tabs
     deactivateTabs();
@@ -173,14 +169,21 @@ function Tabs() {
   };
 
   // Make a guess
-  function focusFirstTab () {
+  function _focusFirstTab () {
     tabs[0].focus();
   };
 
   // Make a guess
-  function focusLastTab () {
+  function _focusLastTab () {
     tabs[tabs.length - 1].focus();
   };
+
+  // Attach public events.
+  this.init = init;
+
+  return this;
 }
+
+
 
 export default Tabs;

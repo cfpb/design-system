@@ -45,15 +45,8 @@ window.MoveTransition = MoveTransition;
 window.MaxHeightTransition = MaxHeightTransition;
 
 const main = document.querySelector( '#main' );
-const tabs = document.querySelectorAll( '[data-module="tabs"]' );
 
-// if ( tabs && tabs.length > 0 ) {
-//   main.classList.add( 'js-enabled' );
-//   for ( let i = 0; i < tabs.length; i++ ) {
-//     const tab = tabs[i];
-//     new Tabs( tab ).init();
-//   }
-// }
+new Tabs().init();
 
 const toggleAllBtn = document.querySelector( '#toggle-details' );
 const toggleBtns = document.querySelectorAll( '.a-toggle_code button' );

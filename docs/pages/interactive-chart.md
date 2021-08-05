@@ -20,16 +20,23 @@ variation_groups:
           the chart. Date/time charts may display up to 5 lines of data in
           total. "
   - variation_group_name: Bar charts
-    variation_group_description: "Bar charts show comparisons of different discrete
-      items, factors, or categories, and do not include any time-related
-      controls. Comparisons could include items that can be counted and
-      categorized. "
+    variation_group_description: >-
+      Bar charts show comparisons of different discrete items, factors, or
+      categories, and do not include any time-related controls. Comparisons
+      could include items that can be counted and categorized. 
+
+
+      ![Bar chart showing CFPB enforcement actions by year from 2012 to the present. ](/design-system/images/uploads/interactive-charts_bar.png "Enforcement actions by year")
   - variation_group_name: Tile grid maps
-    variation_group_description: "Tile grid maps can be used to show comparative
-      state data, where population figures or geographic size are not part of
-      the story. In tile grid maps, each state is the same size and shape. This
-      prevents regions with large areas from dominating a map and prevent
-      regions with small areas from going unnoticed. "
+    variation_group_description: >-
+      Tile grid maps can be used to show comparative state data, where
+      population figures or geographic size are not part of the story. In tile
+      grid maps, each state is the same size and shape. This prevents regions
+      with large areas from dominating a map and prevent regions with small
+      areas from going unnoticed. 
+
+
+      ![Map of the United States (including Alaska and Hawaii) showing average index value by state.](/design-system/images/uploads/interactive-charts_tile-grid-map.png "Consumer credit conditions by state")
 guidelines: >-
   Interactive charts, in contrast to static data visualizations, are intended to
   let users explore a set of data, focus in on the details that interest them

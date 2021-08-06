@@ -16,6 +16,7 @@ import sidebar from './sidebar.js';
 redirectBanner.init();
 sidebar.init();
 
+const BASE_CLASS = 'm-tabs';
 const anchors = new AnchorJS();
 // Add anchors to all headings (except page title headings)
 anchors.add( 'h2:not(.title), h3, h4, h5' );
@@ -45,8 +46,14 @@ window.MoveTransition = MoveTransition;
 window.MaxHeightTransition = MaxHeightTransition;
 
 const main = document.querySelector( '#main' );
+const tabsContainerDom = document.querySelector( `.${ BASE_CLASS }` );
 
-new Tabs().init();
+if ( tabsContainerDom && tabsContainerDom.length > 0 ) {
+  main.classList.add( 'js-enabled' );
+  for ( let i = 0; i < tabsContainerDom.length; i++ ) {
+    new Tabs().init();
+  }
+}
 
 const toggleAllBtn = document.querySelector( '#toggle-details' );
 const toggleBtns = document.querySelectorAll( '.a-toggle_code button' );

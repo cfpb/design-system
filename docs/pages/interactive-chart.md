@@ -107,7 +107,7 @@ guidelines: >-
   Reflects the date the data in the chart was last updated
 
 
-  * Format TBD
+  * Uses the chart footnote style
 
 
   #### Download
@@ -116,7 +116,7 @@ guidelines: >-
   Provide a link to CSV or other downloadable file with the data used to generate the chart. 
 
 
-  * Add note about the link text being accessible
+  * Link text should clearly describe the data being downloaded, particularly if there are multiple charts on a single page, in which case the link text should make it clear to a screen reader user which data each file contains.
 
     ![](/design-system/images/uploads/interactive-charts_date-time_content-guidelines.png)
 behavior: >-

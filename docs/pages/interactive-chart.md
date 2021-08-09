@@ -77,7 +77,7 @@ guidelines: >-
   The chart title provides users a framework for what they are viewing. It also helps with 508 accessibility and decreases the amount of text necessary in alt tags.
 
 
-  * Chart titles should be no longer than a single line of text (add character counts) 
+  * Chart titles should be no longer than a single line of text at desktop (approximately 95 characters including spaces)
 
   * Should be as descriptive as possible to give users a sense of what the chart will be about
 
@@ -90,7 +90,7 @@ guidelines: >-
   The subtitle should provide further context about what is important about the chart data and why a user might be interested in exploring the data. 
 
 
-  * Should include no more than three lines of text (add character counts) 
+  * Should include no more than three lines of text at desktop (approximately 250 characters including spaces)
 
   * Uses the body text paragraph style
 

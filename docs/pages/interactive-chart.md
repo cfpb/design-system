@@ -11,8 +11,8 @@ variation_groups:
       - variation_name: Simple line chart
         variation_description: >-
           Simple line charts may use any units for the x and y axis, and do not
-          include any time-related controls. They may also display up to 5 lines
-          of data in total. 
+          include any time-related controls. They may display up to 5 lines of
+          data in total. 
 
 
           ![Line chart showing cumulative CFPB enforcement actions by year from 2012 to the present. ](/design-system/images/uploads/interactive-charts_simple-line.png "Cumulative enforcement actions by year")
@@ -20,17 +20,17 @@ variation_groups:
         variation_description: >-
           The most commonly used interactive chart is a date/time chart, a line
           chart which graphs continuous data over a period of time. The x axis
-          is always based on time, and date/time charts have special controls
-          allowing users to adjust the time period displayed in the chart.
-          Date/time charts may display up to 5 lines of data in total. 
+          is always based on time and special controls allow users to adjust the
+          time period displayed in the chart. Date/time charts may display up to
+          5 lines of data in total. 
 
 
           ![Line graph with five lines over time, one for each credit score level: Deep subprime, Subprime, Near-prime, Prime, Super-prime](/design-system/images/uploads/interactive-charts_date-time.png "Consumer credit conditions by credit score")
   - variation_group_name: Bar charts
     variation_group_description: >-
       Bar charts show comparisons of different discrete items, factors, or
-      categories, and do not include any time-related controls. Comparisons
-      could include items that can be counted and categorized. 
+      categories, and do not include any time-related controls. Comparisons can
+      include items that can be counted and categorized. 
 
 
       ![Bar chart showing CFPB enforcement actions by year from 2012 to the present. ](/design-system/images/uploads/interactive-charts_bar.png "Enforcement actions by year")
@@ -107,17 +107,17 @@ guidelines: >-
 
   * Add note about the link text being accessible
 behavior: >-
-  All charts include a legend in the top right corner of the chart, labeling all
-  data series displayed in the chart. 
+  All interactive charts include a legend in the top right corner of the chart,
+  labeling all data series displayed in the chart. 
 
 
-  All charts include a hover state labeling the line, column or tile, the value of the chart at the location of the cursor, and the x-axis value in the case of line charts. On line charts, the line currently under the cursor becomes 3px thick and, in the case of multi-series line charts, the other lines shift to a lighter tint of the color used. 
+  All interactive charts include a hover state labeling the line, column or tile, the value of the chart at the location of the cursor, and the x-axis value in the case of line charts. On line charts, the line currently under the cursor becomes 3px thick and, in the case of multi-series line charts, the other lines shift to a lighter tint of the color used. 
 
 
-  Date/time charts include buttons to select time ranges of 1, 3 or 5 years. Selecting a button will display the most recent data for the selected length of time. The period of time can be controlled in more detail with the slider control. Clicking and dragging the handles of the slider changes the length of time displayed in the chart, while moving the slider within the bar changes the starting and ending dates in the chart. 
+  Date/time charts include buttons to select time ranges of 1, 3, or 5 years. Selecting a button will display the most recent data for the selected length of time. The period of time can be controlled in more detail with the slider control. Clicking and dragging the handles of the slider changes the length of time displayed in the chart, while moving the slider within the bar changes the starting and ending dates in the chart. 
 
 
-  ![](/design-system/images/uploads/interactive-charts_date-time_hover.png)
+  ![Line graph with five lines over time, one for each credit score level: Deep subprime, Subprime, Near-prime, Prime, Super-prime. Cursor is hovered over "Near-prime, 2014" and index value for that date is shown. ](/design-system/images/uploads/interactive-charts_date-time_hover.png "Consumer credit conditions by credit score")
 accessibility: >-
   Accessible text descriptions should be provided for every interactive chart.
   The description should help provide information that is easy to see by a

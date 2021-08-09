@@ -4,7 +4,11 @@ collection_name: pages
 layout: variation
 section: patterns
 status: Released
-description: Overall description TBD
+description: Interactive charts, in contrast to static data visualizations, are
+  intended to let users explore a set of data, focus in on the details that
+  interest them the most, and draw their own conclusions from that data. A
+  visualization intended to show a limited set of data to support a specific
+  point would be better served by a static chart.
 variation_groups:
   - variation_group_name: Line charts
     variations:

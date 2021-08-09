@@ -10,8 +10,8 @@ variation_groups:
     variations:
       - variation_name: Simple line chart
         variation_description: >-
-          Simple line charts may use any units for the x and y axis, and do not
-          include any time-related controls. They may display up to 5 lines of
+          A simple line chart may use any unit for the x and y axis, and does
+          not include any time-related controls. It may display up to 5 lines of
           data in total. 
 
 
@@ -21,16 +21,16 @@ variation_groups:
           The most commonly used interactive chart is a date/time chart, a line
           chart which graphs continuous data over a period of time. The x axis
           is always based on time and special controls allow users to adjust the
-          time period displayed in the chart. Date/time charts may display up to
-          5 lines of data in total. 
+          time period displayed in the chart. A date/time chart may display up
+          to 5 lines of data in total. 
 
 
           ![Line graph with five lines over time, one for each credit score level: Deep subprime, Subprime, Near-prime, Prime, Super-prime](/design-system/images/uploads/interactive-charts_date-time.png "Consumer credit conditions by credit score")
   - variation_group_name: Bar charts
     variation_group_description: >-
-      Bar charts show comparisons of different discrete items, factors, or
-      categories, and do not include any time-related controls. Comparisons can
-      include items that can be counted and categorized. 
+      A bar chart shows comparisons of different discrete items, factors, or
+      categories, and does not include any time-related controls. Comparisons
+      can include items that can be counted and categorized. 
 
 
       ![Bar chart showing CFPB enforcement actions by year from 2012 to the present. ](/design-system/images/uploads/interactive-charts_bar.png "Enforcement actions by year")

@@ -1,50 +1,64 @@
 const BASE_CLASS = 'm-tabs';
 
-export function Tabs() {
+function Tabs( dom ) {
+
+  // DOM references.
+  let _dom = dom;
+  let _tabsItemsDom;
+  let _tabsPanelsDom;
+
+  // Store the current selected tab index.
+  let _selectedTabIndex;
+
+  /**
+   * Initialize the Tabs instance.
+   * @return {Tabs} An instance.
+   */
   function init() {
-    const tabsContainerDom = document.querySelectorAll(`.${BASE_CLASS}`);
+    _tabsItemsDom = _dom.querySelectorAll( `.${ BASE_CLASS }_list-item` );
 
-    console.log(tabsContainerDom);
-    console.log(tabsContainerDom.length);
+    if ( _tabsItemsDom.length === 0) {
+      // Bail out because there are no tabs to initialize.
+      return this;
+    }
 
-    if (tabsContainerDom && tabsContainerDom.length > 0) {
-      console.log('tabs.js if');
-      for (let i = 0; i < tabsContainerDom.length; i++) {
-        console.log('tabs.js for');
-        new Tabs().init();
-        console.log('TABS INITIALIZED');
+    // Add events to tab items.
+    _tabsPanelsDom = _dom.querySelectorAll( `.${ BASE_CLASS }_panel` );
+    for ( let i = 0, len = _tabsItemsDom.length; i < len; i++ ) {
+      _tabsItemsDom[i].addEventListener( 'click', event => {
+        event.preventDefault();
+        changeTab( i );
+      } );
+
+      // Hide panels initially.
+      if ( i > 0 ) {
+        _tabsPanelsDom[i].classList.add( 'u-hidden' );
       }
     }
+
+    // Set the default selected tab to index zero.
+    _selectedTabIndex = 0;
+
+    return this;
   }
 
-  function changeTab(tab, document = window.document) {
-    const TABS_CONTAINER_CLASS = 'm-tabs';
-    const TAB_CLASS = 'm-tabs_list-item';
-    const TAB_CLASS_SELECTED = 'm-tabs_list-item-selected';
-    const TAB_CONTENT_CLASS = 'm-tabs_panel';
-    const TAB_CONTENT_CLASS_HIDDEN = 'm-tabs_panel-hidden';
+    /**
+   * Change the selected tab index.
+   * @return {number} An index position of the selected tab.
+   */
+  function changeTab( index ) {
+    // Remove classes from prior selected tab and panel.
+    _tabsItemsDom[_selectedTabIndex]
+      .classList.remove( `${ BASE_CLASS }_list-item-selected` );
+    _tabsPanelsDom[_selectedTabIndex].classList.add( 'u-hidden' );
 
-    const selectedTabContent = document.querySelector(tab.getAttribute('href'));
-    const selectedTabListItem = tab.closest(`.${TAB_CLASS}`);
-    const tabsContainer = tab.closest(`.${TABS_CONTAINER_CLASS}`);
+    // Store new selected index.
+    _selectedTabIndex = index;
 
-    // Un-highlight all tabs
-    tabsContainer.querySelectorAll(`.${TAB_CLASS}`).forEach((tabListItem) => {
-      tabListItem.classList.remove(TAB_CLASS_SELECTED);
-    });
-
-    // Hide all tab content
-    tabsContainer
-      .querySelectorAll(`.${TAB_CONTENT_CLASS}`)
-      .forEach((content) => {
-        content.classList.add(TAB_CONTENT_CLASS_HIDDEN);
-      });
-
-    // Highlight the selected tab
-    selectedTabListItem.classList.add(TAB_CLASS_SELECTED);
-
-    // Show the selected tab's content
-    selectedTabContent.classList.remove(TAB_CONTENT_CLASS_HIDDEN);
+    // Add classes for the new selected tab and panel.
+    _tabsItemsDom[_selectedTabIndex]
+      .classList.add( `${ BASE_CLASS }_list-item-selected` );
+    _tabsPanelsDom[_selectedTabIndex].classList.remove( 'u-hidden' );
   }
 
   // Attach public events.
@@ -54,8 +68,6 @@ export function Tabs() {
   return this;
 }
 
-// Create new tabs instance.
-const tabs = new Tabs();
+Tabs.BASE_CLASS = BASE_CLASS;
 
-// call method on instance.
-tabs.init();
+export default Tabs;

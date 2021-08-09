@@ -42,16 +42,13 @@ window.AlphaTransition = AlphaTransition;
 window.MoveTransition = MoveTransition;
 window.MaxHeightTransition = MaxHeightTransition;
 
-// const main = document.querySelector("#main");
-const tabsContainerDom = document.querySelectorAll(`.${BASE_CLASS}`);
-// const tabsContainerDom = document.querySelector('[data-module="tabs"]');
-
-if (tabsContainerDom && tabsContainerDom.length > 0) {
-  console.log('main.js if');
-  for (let i = 0; i < tabsContainerDom.length; i++) {
-    console.log('main.js for');
-    Tabs.init();
-    console.log('TABS INITIALIZED');
+// Tabs show under the show/hide details button on a pattern.
+const tabsContainerDom = document.querySelectorAll( `.${ Tabs.BASE_CLASS }` );
+if ( tabsContainerDom.length > 0 ) {
+  let tabsInst;
+  for ( let i = 0, len = tabsContainerDom.length; i < len; i++ ) {
+    tabsInst = new Tabs( tabsContainerDom[i] );
+    tabsInst.init();
   }
 }
 

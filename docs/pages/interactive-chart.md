@@ -1,5 +1,5 @@
 ---
-title: Interactive chart
+title: Interactive charts
 collection_name: pages
 layout: variation
 section: patterns

@@ -115,6 +115,9 @@ behavior: >-
 
 
   Datetime charts include buttons to select time ranges of 1, 3 or 5 years. Selecting a button will display the most recent data for the selected length of time. The period of time can be controlled in more detail with the slider control. Clicking and dragging the handles of the slider changes the length of time displayed in the chart, while moving the slider within the bar changes the starting and ending dates in the chart. 
+
+
+  ![](/design-system/images/uploads/interactive-charts_date-time_hover.png)
 accessibility: >-
   Accessible text descriptions should be provided for every interactive chart.
   The description should help provide information that is easy to see by a

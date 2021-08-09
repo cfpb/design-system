@@ -63,14 +63,16 @@ guidelines: >-
   ### Content guidelines
 
 
-  #### Figure number 
+  #### Figure number
+
 
   * Appears above the chart title 
 
   * Uses the H5 heading style  
 
 
-  #### Chart title 
+  #### Chart title
+
 
   The chart title provides users a framework for what they are viewing. It also helps with 508 accessibility and decreases the amount of text necessary in alt tags.
 
@@ -82,7 +84,8 @@ guidelines: >-
   * Uses the H2 heading style 
 
 
-  #### Subtitle 
+  #### Subtitle
+
 
   The subtitle should provide further context about what is important about the chart data and why a user might be interested in exploring the data. 
 
@@ -92,24 +95,30 @@ guidelines: >-
   * Uses the body text paragraph style
 
 
+  #### Source
 
-  #### Source 
 
   Clearly states where the data is from to promote trustworthiness and validity. 
 
 
-  #### Date published 
+  #### Date published
+
 
   Reflects the date the data in the chart was last updated
+
 
   * Format TBD
 
 
-  #### Download 
+  #### Download
+
 
   Provide a link to CSV or other downloadable file with the data used to generate the chart. 
 
+
   * Add note about the link text being accessible
+
+    ![](/design-system/images/uploads/interactive-charts_date-time_content-guidelines.png)
 behavior: >-
   All interactive charts include a legend in the top right corner of the chart,
   labeling all data series displayed in the chart. 

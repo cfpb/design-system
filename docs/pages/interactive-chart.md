@@ -114,7 +114,7 @@ behavior: >-
   All charts include a hover state labeling the line, column or tile, the value of the chart at the location of the cursor, and the x-axis value in the case of line charts. On line charts, the line currently under the cursor becomes 3px thick and, in the case of multi-series line charts, the other lines shift to a lighter tint of the color used. 
 
 
-  Datetime charts include buttons to select time ranges of 1, 3 or 5 years. Selecting a button will display the most recent data for the selected length of time. The period of time can be controlled in more detail with the slider control. Clicking and dragging the handles of the slider changes the length of time displayed in the chart, while moving the slider within the bar changes the starting and ending dates in the chart. 
+  Date/time charts include buttons to select time ranges of 1, 3 or 5 years. Selecting a button will display the most recent data for the selected length of time. The period of time can be controlled in more detail with the slider control. Clicking and dragging the handles of the slider changes the length of time displayed in the chart, while moving the slider within the bar changes the starting and ending dates in the chart. 
 
 
   ![](/design-system/images/uploads/interactive-charts_date-time_hover.png)

@@ -44,7 +44,8 @@ function Tabs( dom ) {
 
     /**
    * Change the selected tab index.
-   * @return {number} An index position of the selected tab.
+   * @param {number} index - An index position of the selected tab.
+   * @return {Tabs} An instance.
    */
   function changeTab( index ) {
     // Remove classes from prior selected tab and panel.
@@ -59,6 +60,8 @@ function Tabs( dom ) {
     _tabsItemsDom[_selectedTabIndex]
       .classList.add( `${ BASE_CLASS }_list-item-selected` );
     _tabsPanelsDom[_selectedTabIndex].classList.remove( 'u-hidden' );
+
+    return this;
   }
 
   // Attach public events.

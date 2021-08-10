@@ -13,7 +13,6 @@ import sidebar from './sidebar.js';
 redirectBanner.init();
 sidebar.init();
 
-const BASE_CLASS = 'm-tabs';
 const anchors = new AnchorJS();
 // Add anchors to all headings (except page title headings)
 anchors.add('h2:not(.title), h3, h4, h5');

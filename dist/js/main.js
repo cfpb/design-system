@@ -7131,7 +7131,7 @@ var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())(); // Add a
 
 anchors.add('h2:not(.title), h3, h4, h5'); // Ensure there are no anchors in inconvenient places
 
-anchors.remove("\n  .live-code-example h2,\n  .live-code-example h3,\n  .live-code-example h4,\n  .live-code-example h5,\n  .o-expandable_label,\n  #search-results h3\n");
+anchors.remove("\n  .a-live_code h2,\n  .a-live_code h3,\n  .a-live_code h4,\n  .a-live_code h5,\n  .o-expandable_label,\n  #search-results h3\n");
 var multiselectDom = document.querySelector('.o-multiselect');
 
 if (multiselectDom) {

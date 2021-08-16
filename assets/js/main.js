@@ -21,10 +21,10 @@ const anchors = new AnchorJS();
 anchors.add( 'h2:not(.title), h3, h4, h5' );
 // Ensure there are no anchors in inconvenient places
 anchors.remove( `
-  .live-code-example h2,
-  .live-code-example h3,
-  .live-code-example h4,
-  .live-code-example h5,
+  .a-live_code h2,
+  .a-live_code h3,
+  .a-live_code h4,
+  .a-live_code h5,
   .o-expandable_label,
   #search-results h3
 ` );

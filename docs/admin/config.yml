@@ -180,6 +180,11 @@ collections:
                 label: 'Variation name'
                 widget: 'string-trimmed'
                 required: false
+              - name: 'variation_is_deprecated'
+                label: 'Is this variation deprecated?'
+                widget: 'boolean'
+                required: true
+                default: false
               - name: 'variation_description'
                 label: 'Variation description'
                 widget: 'markdown'

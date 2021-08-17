@@ -6377,6 +6377,13 @@ pre code {
 .m-variation_name {
   margin-top: 2rem;
 }
+.m-variation_deprecated {
+  background: #e7e8e9;
+  font-size: 0.625em;
+  font-variant: small-caps;
+  border-radius: 5px;
+  padding: 5px;
+}
 .m-variation:first-child .m-variation_name {
   margin-top: 0;
 }

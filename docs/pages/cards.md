@@ -2,7 +2,6 @@
 title: Cards
 layout: variation
 section: patterns
-secondary_section: Layout options
 status: Released
 description: Cards are blocks of content that are surrounded by a border.
 variation_groups:
@@ -52,6 +51,8 @@ variation_groups:
         variation_description: |-
           A single featured card.
           The `.m-card__featured` modifier is added.
+          A featured card differs from the default card in that the whole
+          content area is wrapped in a link.
         variation_code_snippet: |-
           <article class="m-card m-card__featured">
               <a href="#">
@@ -65,6 +66,74 @@ variation_groups:
                   </p>
                   <div class="m-card_footer">
                       <span>Submit a complaint</span>
+                  </div>
+              </a>
+          </article>
+      - variation_name: Topic card
+        variation_description: |-
+          A single topic card.
+          The `.m-card__topic` modifier is added.
+        variation_code_snippet: |-
+          <article class="m-card m-card__topic">
+              <a href="#">
+                  <div class="m-card_icon">
+                    {% include icons/idea.svg %}
+                  </div>
+                  <div class="m-card_footer">
+                      <span>Credit reports</span>
+                  </div>
+              </a>
+          </article>
+      - variation_name: Topic action card
+        variation_description: |-
+          A topic card with a call to action for its card group.
+          The `.m-card__topic` and `.m-card__topic-action` modifiers are added.
+        variation_code_snippet: |-
+          <article class="m-card m-card__topic m-card__topic-action">
+              <a href="#">
+                  <div class="m-card_icon">
+                    {% include icons/arrow-right-round.svg %}
+                  </div>
+                  <div class="m-card_footer">
+                      <span>See all money topics</span>
+                  </div>
+              </a>
+          </article>
+      - variation_name: Highlight card
+        variation_description: |-
+          A single highlight card.
+          The `.m-card__highlight` modifier is added.
+        variation_code_snippet: |-
+          <article class="m-card m-card__highlight">
+              <a href="#">
+                  <h3>
+                      Protecting your finances during the coronavirus emergency
+                  </h3>
+                  <p>
+                      We are committed to providing up-to-date information and resources.
+                      Learn more about protecting and managing your finances during this difficult time.
+                  </p>
+                  <div class="m-card_footer">
+                      <span>Read more</span>
+                  </div>
+              </a>
+          </article>
+      - variation_name: Breakout card
+        variation_description: |-
+          A single breakout card.
+          The `.m-card__breakout` modifier is added.
+        variation_code_snippet: |-
+          <article class="m-card m-card__breakout">
+              <a href="#">
+                  <img class="m-card_img"
+                       src="https://dummyimage.com/210x120/"
+                       alt="">
+                  <div class="m-card_inner-wrapper">
+                      <div class="m-card_footer">
+                           <span>
+                                Buy a house
+                           </span>
+                      </div>
                   </div>
               </a>
           </article>
@@ -470,11 +539,66 @@ variation_groups:
                   </article>
               </div>
           </div>
+      - variation_name: Breakout card group
+        variation_description: >-
+          A group of breakout cards together.
+
+        variation_code_snippet: >-
+          <div class="o-card-group o-card-group__column-3">
+              <h2>Get help planning for future goals</h2>
+              <div class="o-card-group_cards">
+                  <article class="m-card m-card__breakout">
+                    <a href="#">
+                        <img class="m-card_img"
+                            src="https://dummyimage.com/210x120/"
+                            alt="">
+                        <div class="m-card_inner-wrapper">
+                            <div class="m-card_footer">
+                                <span>
+                                        Buy a house
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                  <article class="m-card m-card__breakout">
+                    <a href="#">
+                        <img class="m-card_img"
+                            src="https://dummyimage.com/210x120/"
+                            alt="">
+                        <div class="m-card_inner-wrapper">
+                            <div class="m-card_footer">
+                                <span>
+                                        Paying for college
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                  <article class="m-card m-card__breakout">
+                    <a href="#">
+                        <img class="m-card_img"
+                            src="https://dummyimage.com/210x120/"
+                            alt="">
+                        <div class="m-card_inner-wrapper">
+                            <div class="m-card_footer">
+                                <span>
+                                        Get an auto loan
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+              </div>
+          </div>
     variation_group_name: Groups
 use_cases: ""
 guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2019-10-21T20:38:39.851Z
+secondary_section: Layout options
 research: ""
 ---

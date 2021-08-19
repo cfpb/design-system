@@ -1,3 +1,4 @@
+// Grid-based "column" card group layouts.
 .o-card-group {
 
     &__column-2 &_cards {
@@ -8,7 +9,7 @@
         grid-template-columns: repeat( 3, minmax( 0, 1fr ) );
 
         // Convert to 2-column layout at small screen sizes;
-        .respond-to-max( @bp-med-min, {
+        .respond-to-max( @bp-lg-min, {
             grid-template-columns: 1fr 1fr;
         } );
     }
@@ -17,7 +18,6 @@
         display: grid;
         grid-column-gap: unit( 20px / @base-font-size-px, em );
         grid-row-gap: unit( 20px / @base-font-size-px, em );
-
 
         .respond-to-max( @bp-xs-max, {
             // Make sure cards are stacked at mobile size.
@@ -72,3 +72,71 @@ _:-ms-lang(x),.o-card-group:after {
     clear: both;
 }
 /* stylelint-enable selector-type-no-unknown */
+
+// Grid-based "count" card group layouts.
+.o-card-group {
+    // Name the card grid areas.
+    &__count-2,
+    &__count-3,
+    &__count-4 {
+
+        .m-card:nth-of-type(1) {
+            grid-area: card1;
+        }
+
+        .m-card:nth-of-type(2) {
+            grid-area: card2;
+        }
+
+        .m-card:nth-of-type(3) {
+            grid-area: card3;
+        }
+
+        .m-card:nth-of-type(4) {
+            grid-area: card4;
+        }
+    }
+
+    &__count-2 &_cards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2";
+    }
+
+    &__count-3 &_cards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card1 card3";
+
+        // We have to reach inside the m-card here unfortunately to
+        // center the content of the first card and increase the heading.
+        .m-card:nth-of-type(1) {
+            h3 {
+                .h2();
+            }
+
+            > a {
+                justify-content: center;
+            }
+        }
+    }
+
+    &__count-4 &_cards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4";
+    }
+}
+
+// Flexbox-based "flow" card group layout.
+.o-card-group {
+
+    &__flow {
+        .o-card-group_cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -539,6 +539,224 @@ variation_groups:
                   </article>
               </div>
           </div>
+      - variation_name: Card group - two count
+        variation_description: |-
+          A group of two cards.
+          The `.o-card-group__count-2` modifier is added.
+        variation_code_snippet: >-
+          <div class="o-card-group o-card-group__count-2">
+              <div class="o-card-group_cards">
+                  <article class="m-card m-card__highlight">
+                    <a href="#">
+                        <h3>
+                            Protecting your finances during the coronavirus emergency
+                        </h3>
+                        <p>
+                            We are committed to providing up-to-date information and resources.
+                            Learn more about protecting and managing your finances during this difficult time.
+                        </p>
+                        <div class="m-card_footer">
+                            <span>Read more</span>
+                        </div>
+                    </a>
+                </article>
+
+                 <article class="m-card m-card__highlight">
+                    <a href="#">
+                        <h3>
+                            Striving for equity
+                        </h3>
+                        <p>
+                            We’re working to build a stronger nation by advancing racial and economic equality for all.
+                        </p>
+                        <div class="m-card_footer">
+                            <span>Read more</span>
+                        </div>
+                    </a>
+                </article>
+              </div>
+          </div>
+      - variation_name: Card group - three count
+        variation_description: |-
+          A group of three cards.
+          The `.o-card-group__count-3` modifier is added.
+        variation_code_snippet: >-
+          <div class="o-card-group o-card-group__count-3">
+              <div class="o-card-group_cards">
+                  <article class="m-card m-card__highlight">
+                    <a href="#">
+                        <h3>
+                            Protecting your finances during the coronavirus emergency
+                        </h3>
+                        <p>
+                            We are committed to providing up-to-date information and resources.
+                            Learn more about protecting and managing your finances during this difficult time.
+                        </p>
+                        <div class="m-card_footer">
+                            <span>Read more</span>
+                        </div>
+                    </a>
+                </article>
+
+                 <article class="m-card m-card__highlight">
+                    <a href="#">
+                        <h3>
+                            Striving for equity
+                        </h3>
+                        <p>
+                            We’re working to build a stronger nation by advancing racial and economic equality for all.
+                        </p>
+                        <div class="m-card_footer">
+                            <span>Read more</span>
+                        </div>
+                    </a>
+                </article>
+
+                 <article class="m-card m-card__highlight">
+                    <a href="#">
+                        <h3>
+                            Rental assistance helps renters and landlords make ends meet
+                        </h3>
+                        <p>
+                            State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
+                        </p>
+                        <div class="m-card_footer">
+                            <span>Read more</span>
+                        </div>
+                    </a>
+                </article>
+              </div>
+          </div>
+      - variation_name: Card group - four count
+        variation_description: |-
+          A group of four cards.
+          The `.o-card-group__count-4` modifier is added.
+        variation_code_snippet: >-
+          <div class="o-card-group o-card-group__count-4">
+              <div class="o-card-group_cards">
+                <article class="m-card m-card__highlight">
+                    <a href="#">
+                        <h3>
+                            Protecting your finances during the coronavirus emergency
+                        </h3>
+                        <p>
+                            We are committed to providing up-to-date information and resources.
+                            Learn more about protecting and managing your finances during this difficult time.
+                        </p>
+                        <div class="m-card_footer">
+                            <span>Read more</span>
+                        </div>
+                    </a>
+                 </article>
+
+                 <article class="m-card m-card__highlight">
+                    <a href="#">
+                        <h3>
+                            Striving for equity
+                        </h3>
+                        <p>
+                            We’re working to build a stronger nation by advancing racial and economic equality for all.
+                        </p>
+                        <div class="m-card_footer">
+                            <span>Read more</span>
+                        </div>
+                    </a>
+                </article>
+
+                 <article class="m-card m-card__highlight">
+                    <a href="#">
+                        <h3>
+                            Rental assistance helps renters and landlords make ends meet
+                        </h3>
+                        <p>
+                            State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
+                        </p>
+                        <div class="m-card_footer">
+                            <span>Read more</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="m-card m-card__highlight">
+                    <a href="#">
+                        <h3>
+                            Protecting your finances during the coronavirus emergency
+                        </h3>
+                        <p>
+                            We are committed to providing up-to-date information and resources.
+                            Learn more about protecting and managing your finances during this difficult time.
+                        </p>
+                        <div class="m-card_footer">
+                            <span>Read more</span>
+                        </div>
+                    </a>
+                </article>
+              </div>
+          </div>
+      - variation_name: Topic card group
+        variation_description: >-
+          A group of topic cards together.
+
+        variation_code_snippet: >-
+          <div class="o-card-group o-card-group__flow">
+              <h2>Popular money topics</h2>
+              <div class="o-card-group_cards">
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/idea.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Credit reports</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/idea.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Debt collection</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/idea.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Mortgages</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/idea.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Credit cards</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic m-card__topic-action">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/arrow-right-round.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>See all money topics</span>
+                        </div>
+                    </a>
+                </article>
+              </div>
+          </div>
       - variation_name: Breakout card group
         variation_description: >-
           A group of breakout cards together.

@@ -37,7 +37,6 @@
 }
 
 .m-card {
-    width: 100%;
     position: relative;
 
     &:not( .m-card__breakout ) {
@@ -50,6 +49,10 @@
         background: @white;
         border: 1px solid @gray-20;
         border-bottom-width: 3px;
+    }
+
+    &:not( .m-card__featured ):not( .m-card__breakout ):not( .m-card__topic ):not( .m-card__highlight ) {
+        padding: unit( @grid_gutter-width / @base-font-size-px, em );
     }
 
     &:not( .m-card__featured ):not( .m-card__breakout ):not( .m-card__topic ):not( .m-card__highlight ),
@@ -66,8 +69,10 @@
         outline-offset: 2px;
     }
 
-    &_footer {
-        margin-top: auto;
+    &:not( .m-card__highlight ) {
+        &_footer {
+            margin-top: auto;
+        }
     }
 
     &_footer > a {
@@ -155,6 +160,7 @@
     // Topic cards.
     &__topic {
         text-align: center;
+        width: 170px;
 
         & > a {
             border: 1px solid @gray-20;

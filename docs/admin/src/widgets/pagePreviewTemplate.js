@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ReactLiquid, liquidEngine } from 'react-liquid';
 import { TOGGLE_ATTRIBUTE, toggleDetails } from '../../../assets/js/toggle-details.js';
-import { changeTab, init as initTabs } from '../../../assets/js/tabs.js';
+import Tabs from '../../../assets/js/tabs.js';
 import { encode } from 'html-entities';
 import marked from 'marked';
 import slugify from 'slugify';
@@ -43,11 +43,17 @@ export default class Preview extends Component {
     }
   }
 
-  componentDidMount() {
-    const container = this.containerRef.current;
-    // The Gov UK tab styles require a parent element to have .js-enabled, see tabs.less
-    container.classList.add( 'js-enabled' );
-    initTabs( container );
+  componentDidUpdate(props) {
+    // Tabs show under the show/hide details button on a pattern.
+    const tabsContainerDom = props.document.querySelectorAll( `.${ Tabs.BASE_CLASS }` );
+    console.log( 'tabsContainerDom', tabsContainerDom );
+    if ( tabsContainerDom.length > 0 ) {
+      let tabsInst;
+      for ( let i = 0, len = tabsContainerDom.length; i < len; i++ ) {
+        tabsInst = new Tabs( tabsContainerDom[i] );
+        tabsInst.init();
+      }
+    }
   }
 
   render() {

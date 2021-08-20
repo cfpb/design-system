@@ -37,10 +37,6 @@ export default class Preview extends Component {
       event.preventDefault();
       toggleDetails( target, this.containerRef.current );
     }
-    if ( target.matches( '.m-tabs_tab' ) ) {
-      event.preventDefault();
-      changeTab( target, this.containerRef.current );
-    }
   }
 
   componentDidUpdate(props) {

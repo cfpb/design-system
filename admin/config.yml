@@ -183,7 +183,7 @@ collections:
               - name: 'variation_is_deprecated'
                 label: 'Is this variation deprecated?'
                 widget: 'boolean'
-                required: true
+                required: false
                 default: false
               - name: 'variation_description'
                 label: 'Variation description'

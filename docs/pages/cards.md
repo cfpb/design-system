@@ -69,6 +69,7 @@ variation_groups:
                   </div>
               </a>
           </article>
+        variation_is_deprecated: true
       - variation_name: Topic card
         variation_description: |-
           A single topic card.
@@ -103,7 +104,7 @@ variation_groups:
         variation_description: |-
           A single highlight card.
           The `.m-card__highlight` modifier is added.
-        variation_code_snippet: |-
+        variation_code_snippet: >-
           <article class="m-card m-card__highlight">
               <a href="#">
                   <h3>
@@ -539,6 +540,7 @@ variation_groups:
                   </article>
               </div>
           </div>
+        variation_is_deprecated: true
       - variation_name: Card group - two count
         variation_description: |-
           A group of two cards.
@@ -694,10 +696,8 @@ variation_groups:
               </div>
           </div>
       - variation_name: Topic card group
-        variation_description: >-
-          A group of topic cards together.
-
-        variation_code_snippet: >-
+        variation_description: A group of topic cards together.
+        variation_code_snippet: |-
           <div class="o-card-group o-card-group__flow">
               <h2>Popular money topics</h2>
               <div class="o-card-group_cards">
@@ -758,10 +758,8 @@ variation_groups:
               </div>
           </div>
       - variation_name: Breakout card group
-        variation_description: >-
-          A group of breakout cards together.
-
-        variation_code_snippet: >-
+        variation_description: A group of breakout cards together.
+        variation_code_snippet: |-
           <div class="o-card-group o-card-group__column-3">
               <h2>Get help planning for future goals</h2>
               <div class="o-card-group_cards">

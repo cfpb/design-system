@@ -50,7 +50,7 @@ describe( 'Netlify CMS', () => {
       await browser.url( '/design-system/admin/#/collections/pages/entries/buttons' );
       // Make the browser a little wider than normal to prevent the "show details" tabs
       // from triggering their mobile media queries
-      browser.setWindowSize( 1600, 800 );
+      browser.setWindowSize( 1850, 800 );
       loginButton = await $( 'button=Login' );
       await loginButton.waitForDisplayed();
     } );

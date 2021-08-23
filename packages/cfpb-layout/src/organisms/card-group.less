@@ -140,3 +140,54 @@ _:-ms-lang(x),.o-card-group:after {
         }
     }
 }
+
+// Tablet size.
+.respond-to-range( @bp-sm-min, @bp-sm-max, {
+    .o-card-group {
+        &__count-3 &_cards {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "card1 card1"
+                "card2 card3";
+        }
+    }
+} );
+
+// Mobile size.
+.respond-to-max( @bp-xs-max, {
+    .o-card-group {
+        &__count-2 &_cards {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "card1"
+                "card2";
+        }
+        &__count-3 &_cards {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "card1"
+                "card2"
+                "card3";
+        }
+
+        &__count-4 &_cards {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "card1"
+                "card2"
+                "card3"
+                "card4";
+        }
+
+        &__flow {
+            .o-card-group_cards {
+                display: block;
+
+                .m-card {
+                    width: 100%;
+                    margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+                }
+            }
+        }
+    }
+} );

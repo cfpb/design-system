@@ -1,22 +1,23 @@
 /* eslint-disable max-nested-callbacks */
 /* eslint-disable no-undef */
 
-describe( 'The "show details" toggling feature', function() {
+describe( 'The "show details" toggling feature', () => {
 
   let showDetailsButton;
   let hideDetailsButton;
   let detailsTabs;
   let areDetailsTabsVisible;
   let componentPages;
+  let componentName;
 
-  before( function() {
-    browser.url( '/design-system/components/' );
-    browser.setWindowSize( 1600, 1200 );
-    const sideNav = $( '.ds-nav' );
-    sideNav.waitForDisplayed();
-    componentPages = $$( '.ds-nav-2 .m-list_link' ).map( el => ( {
-      name: el.getText(),
-      url: el.getAttribute( 'href' )
+  before( async () => {
+    await browser.url( '/design-system/components/' );
+    await browser.setWindowSize( 1600, 1200 );
+    const sideNav = await $( '.ds-nav' );
+    await sideNav.waitForDisplayed();
+    componentPages = await $$( '.ds-nav-2 .m-list_link' ).map( async ( el ) => ( {
+      name: await el.getText(),
+      url: await el.getAttribute( 'href' )
     } ) );
     // If tests are being run via Sauce Labs, only test ten random component pages.
     // Testing all of them takes 30+ minutes and Sauce Labs has a max test length of 30 min.
@@ -26,48 +27,51 @@ describe( 'The "show details" toggling feature', function() {
     }
   } );
 
-  it( 'should show/hide details across all component pages', function() {
+  it( 'should show/hide details across all component pages', async () => {
 
-    componentPages.forEach( componentPage => {
+    componentPages.forEach( ( componentPage ) => {
 
-      describe( `The ${ componentPage.name } component page`, function() {
+      describe( `The ${ componentPage.name } component page`, () => {
 
-        before( function() {
-          browser.url( componentPage.url );
-          browser.refresh();
-          showDetailsButton = $( 'button=Show details' );
-          hideDetailsButton = $( 'button=Hide details' );
-          detailsTabs = [ ...$$( '.govuk-tabs' ) ];
-          areDetailsTabsVisible = () => detailsTabs.some( snippet => snippet.isDisplayed() );
+        before( async () => {
+          await browser.url( await componentPage.url );
+          await browser.refresh();
+          showDetailsButton = await $( 'button=Show details' );
+          hideDetailsButton = await $( 'button=Hide details' );
+          detailsTabs = [ ...await $$( '.govuk-tabs' ) ];
         } );
 
-        it( 'should hide snippet tabs by default', function() {
-          if ( !showDetailsButton.isExisting() || !hideDetailsButton.isExisting() ) {
+        it( 'should hide snippet tabs by default', async () => {
+          if ( await !showDetailsButton.isExisting() || await !hideDetailsButton.isExisting() ) {
             this.skip();
           }
-          expect( showDetailsButton.isDisplayed() ).toBeTruthy();
-          expect( hideDetailsButton.isDisplayed() ).toBeFalsy();
-          expect( areDetailsTabsVisible() ).toBeFalsy();
+          expect( await showDetailsButton.isDisplayed() ).toBeTruthy();
+          expect( await hideDetailsButton.isDisplayed() ).toBeFalsy();
+          detailsTabs.some( async (snippet) => {
+              expect( await snippet.isDisplayed() ).toBeFalsy();
+          } );
         } );
 
-        it( 'should show code snippets when toggle button is clicked', function() {
-          if ( !showDetailsButton.isExisting() || !hideDetailsButton.isExisting() ) {
+        it( 'should show code snippets when toggle button is clicked', async () => {
+          if ( await !showDetailsButton.isExisting() || await !hideDetailsButton.isExisting() ) {
             this.skip();
           }
-          showDetailsButton.click();
-          expect( showDetailsButton.isDisplayed() ).toBeFalsy();
-          expect( hideDetailsButton.isDisplayed() ).toBeTruthy();
-          expect( areDetailsTabsVisible() ).toBeTruthy();
+          await showDetailsButton.click();
+          expect( await showDetailsButton.isDisplayed() ).toBeFalsy();
+          expect( await hideDetailsButton.isDisplayed() ).toBeTruthy();
+          detailsTabs.some( async (snippet) => {
+            expect( await snippet.isDisplayed() ).toBeTruthy();
+          } );
         } );
 
-        it( 'should re-hide code snippets when toggle button is clicked again', function() {
-          if ( !showDetailsButton.isExisting() || !hideDetailsButton.isExisting() ) {
-            this.skip();
-          }
-          hideDetailsButton.click();
-          expect( showDetailsButton.isDisplayed() ).toBeTruthy();
-          expect( hideDetailsButton.isDisplayed() ).toBeFalsy();
-          expect( areDetailsTabsVisible() ).toBeFalsy();
+        it( 'should re-hide code snippets when toggle button is clicked again', async () => {
+
+          await hideDetailsButton.click();
+          expect( await showDetailsButton.isDisplayed() ).toBeTruthy();
+          expect( await hideDetailsButton.isDisplayed() ).toBeFalsy();
+          detailsTabs.some( async (snippet) => {
+            expect( await snippet.isDisplayed() ).toBeFalsy();
+          } );
         } );
       } );
 

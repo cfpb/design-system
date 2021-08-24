@@ -1661,7 +1661,7 @@ accessibility: >-
   patterns is important.
 
 
-  You can use the [Color Palette Accessibility Checker](https://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&colors=1e9642,20aa3f,66c368,addc91,c7e5b3,e2efd8,005e5d,257675,579695,89b6b5,b4d2d1,d4e7e6,0050b4,0072ce,4497dc,7eb7e8,afd2f2,d6e8fa,002d72,254b87,5674a3,889cc0,b3c0d9,d3daeb,a01b68,b4267a,c55998,d486b2,e3b2cc,f0d8e2,b63014,d14124,dd735d,e79e8e,f0c3b8,f7e0d9,dc731c,ff9e1b,ffb858,ffce8d,ffe1b9,fff0dd,745745,8a6c57,a18573,baa496,d3c5bc,e7ddd7,101820,43484e,5a5d61,75787b,919395,b4b5b6,d2d3d5,e7e8e9,f7f8f9,ffffff&main=ffffff&level=AA) to check and confirm the accessibility of CFPB colors at different type sizes.
+  Please use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) or [CFPB Color Palette Accessibility Checker](https://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&colors=1e9642,20aa3f,66c368,addc91,c7e5b3,e2efd8,005e5d,257675,579695,89b6b5,b4d2d1,d4e7e6,0050b4,0072ce,4497dc,7eb7e8,afd2f2,d6e8fa,002d72,254b87,5674a3,889cc0,b3c0d9,d3daeb,a01b68,b4267a,c55998,d486b2,e3b2cc,f0d8e2,b63014,d14124,dd735d,e79e8e,f0c3b8,f7e0d9,dc731c,ff9e1b,ffb858,ffce8d,ffe1b9,fff0dd,745745,8a6c57,a18573,baa496,d3c5bc,e7ddd7,101820,43484e,5a5d61,75787b,919395,b4b5b6,d2d3d5,e7e8e9,f7f8f9,ffffff&main=ffffff&level=AA) to check and confirm the accessibility of colors at different type sizes.
 
 
   ### Color blindness
@@ -1691,8 +1691,6 @@ accessibility: >-
 
     * For large text, a contrast ratio of only 3 : 1 is necessary. Large regular text is at least 18pt/24px, while large bold text is 14pt/18px.
     * Text or images of text that are either pure decoration or not visible, or are part of a logo, picture that contains significant other visual content, or inactive UI components (like disabled form controls) do not have a color contrast requirement.
-
-  The [Colour Contrast Check](http://www.snook.ca/technical/colour_contrast/colour.html) is a nice tool for testing color contrast ratios.
 last_updated: 2019-08-30T18:31:00.000Z
 secondary_section: Brand guidelines
 ---

@@ -6,7 +6,6 @@ describe( 'The "show details" toggling feature', () => {
   let showDetailsButton;
   let hideDetailsButton;
   let detailsTabs;
-  let componentPagesDoms;
   let componentPages;
 
   before( async () => {
@@ -14,13 +13,8 @@ describe( 'The "show details" toggling feature', () => {
     await browser.setWindowSize( 1600, 1200 );
     const sideNav = await $( '.ds-nav' );
     await sideNav.waitForDisplayed();
-    componentPagesDoms = await $$( '.ds-nav-2 .m-list_link' );
-    componentPages = componentPagesDoms.map( async ( el ) => {
-      return {
-        name: await el.getText(),
-        url: await el.getAttribute( 'href' )
-      }
-    } );
+    componentPages = await $$( '.ds-nav-2 .m-list_link' );
+
     // If tests are being run via Sauce Labs, only test ten random component pages.
     // Testing all of them takes 30+ minutes and Sauce Labs has a max test length of 30 min.
     if ( global.SAUCE_LABS ) {
@@ -31,12 +25,14 @@ describe( 'The "show details" toggling feature', () => {
 
   it( 'should show/hide details across all component pages', async () => {
 
-    componentPages.forEach( ( componentPage ) => {
+    componentPages.forEach( async ( componentPage ) => {
 
-      describe( `The ${ componentPage.name } component page`, () => {
+      const componentName = await componentPage.getText();
+      const componentUrl = await componentPage.getAttribute( 'href' );
+      describe( `The ${ componentName } component page`, () => {
 
         before( async () => {
-          await browser.url( await componentPage.url );
+          await browser.url( componentUrl );
           await browser.refresh();
           showDetailsButton = await $( 'button=Show details' );
           hideDetailsButton = await $( 'button=Hide details' );

@@ -23,7 +23,7 @@ describe( 'Basic CFPB expandable', () => {
     expect( await expandableContent.isDisplayed() ).toBeTruthy();
   } );
 
-  it( 'should close expandable when header is clicked again', async ()=> {
+  it( 'should close expandable when header is clicked again', async () => {
     await expandableHeader.click();
     await expandableContent.waitForDisplayed( { reverse: true } );
     expect( await expandableContent.isDisplayed() ).toBeFalsy();

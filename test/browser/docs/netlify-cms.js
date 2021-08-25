@@ -13,14 +13,11 @@ describe( 'Netlify CMS', () => {
       loginButton = await $( 'button=Login' ),
       // Wait for page to load netlify configuration and show the login button.
       await loginButton.waitForDisplayed( { timeout: 10000 } );
+      expect( loginButton ).toExist();
     } );
 
     afterEach( async () => {
       await browser.reloadSession();
-    } );
-
-    it( 'should load the login page with a login button', async () => {
-      expect( loginButton ).toExist();
     } );
 
     it( 'should allow the user to log in', async () => {

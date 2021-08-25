@@ -13,7 +13,7 @@ describe( 'Basic CFPB expandable', () => {
     expandableContent = await $( '.a-live_code .o-expandable_content' );
   } );
 
-  it( 'should hide expandable content on page load', async ()=> {
+  it( 'should hide expandable content on page load', async () => {
     expect( await expandableContent.isDisplayed() ).toBeFalsy();
   } );
 

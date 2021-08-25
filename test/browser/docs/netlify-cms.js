@@ -9,15 +9,9 @@ describe( 'Netlify CMS', () => {
 
     beforeEach( async () => {
       await browser.url( '/design-system/admin/#/collections/special-pages/entries/home' );
-      await browser.waitUntil(
-        async () => loginButton = await $( 'button=Login' ),
-        {
-            timeout: 10000,
-            timeoutMsg: 'Expected login text to appear after 10s'
-        }
-      );
-
-      await loginButton.waitForDisplayed();
+      loginButton = await $( 'button=Login' ),
+      // Wait for page to load netlify configuration and show the login button.
+      await loginButton.waitForDisplayed( { timeout: 10000 } );
     } );
 
     afterEach( async () => {

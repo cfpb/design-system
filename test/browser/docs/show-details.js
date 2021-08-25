@@ -6,6 +6,7 @@ describe( 'The "show details" toggling feature', () => {
   let showDetailsButton;
   let hideDetailsButton;
   let detailsTabs;
+  let componentPagesDoms;
   let componentPages;
 
   before( async () => {
@@ -13,7 +14,8 @@ describe( 'The "show details" toggling feature', () => {
     await browser.setWindowSize( 1600, 1200 );
     const sideNav = await $( '.ds-nav' );
     await sideNav.waitForDisplayed();
-    componentPages = await $$( '.ds-nav-2 .m-list_link' ).map( async ( el ) => {
+    componentPagesDoms = await $$( '.ds-nav-2 .m-list_link' );
+    componentPages = componentPagesDoms.map( async ( el ) => {
       return {
         name: await el.getText(),
         url: await el.getAttribute( 'href' )

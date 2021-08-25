@@ -9,7 +9,6 @@ describe( 'Netlify CMS', () => {
 
     beforeEach( async () => {
       await browser.url( '/design-system/admin/#/collections/special-pages/entries/home' );
-      //loginButton = await browser.react$( 'LoginButton' );
       loginButton = await $( 'button=Login' );
       await loginButton.waitForDisplayed();
     } );

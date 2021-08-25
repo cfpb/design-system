@@ -16,6 +16,8 @@ describe( 'Netlify CMS', () => {
             timeoutMsg: 'Expected login text to appear after 10s'
         }
       );
+
+      await loginButton.waitForDisplayed();
     } );
 
     afterEach( async () => {

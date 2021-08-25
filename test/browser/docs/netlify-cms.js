@@ -10,7 +10,7 @@ describe( 'Netlify CMS', () => {
     beforeEach( async () => {
       await browser.url( '/design-system/admin/#/collections/special-pages/entries/home' );
       //loginButton = await browser.react$( 'LoginButton' );
-      loginButton = await browser.$( 'button=Login' );
+      loginButton = await $( 'button=Login' );
       await loginButton.waitForDisplayed();
     } );
 
@@ -24,7 +24,7 @@ describe( 'Netlify CMS', () => {
 
     it( 'should allow the user to log in', async () => {
       await loginButton.click();
-      const editorContainer = await browser.$( 'label=Page title' );
+      const editorContainer = await $( 'label=Page title' );
       await editorContainer.waitForDisplayed();
       expect( editorContainer ).toExist();
     } );
@@ -52,7 +52,7 @@ describe( 'Netlify CMS', () => {
       // Make the browser a little wider than normal to prevent the "show details" tabs
       // from triggering their mobile media queries
       await browser.setWindowSize( 1400, 800 );
-      loginButton = await browser.$( 'button=Login' );
+      loginButton = await $( 'button=Login' );
       await loginButton.waitForDisplayed();
     } );
 
@@ -72,7 +72,7 @@ describe( 'Netlify CMS', () => {
     it( 'should support switching between the various "show details" tabs', async () => {
       await loginButton.click();
       // Wait for the editor to load
-      const editorContainer = await browser.$( 'label=Page title' );
+      const editorContainer = await $( 'label=Page title' );
       await editorContainer.waitForDisplayed();
       // The preview pane is an iframe
       await  browser.switchToFrame( await $( 'iframe' ) );

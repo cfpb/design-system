@@ -6,19 +6,19 @@ describe( 'The "show details" toggling feature', () => {
   let showDetailsButton;
   let hideDetailsButton;
   let detailsTabs;
-  let areDetailsTabsVisible;
   let componentPages;
-  let componentName;
 
   before( async () => {
     await browser.url( '/design-system/components/' );
     await browser.setWindowSize( 1600, 1200 );
     const sideNav = await $( '.ds-nav' );
     await sideNav.waitForDisplayed();
-    componentPages = await $$( '.ds-nav-2 .m-list_link' ).map( async ( el ) => ( {
-      name: await el.getText(),
-      url: await el.getAttribute( 'href' )
-    } ) );
+    componentPages = await $$( '.ds-nav-2 .m-list_link' ).map( async ( el ) => {
+      return {
+        name: await el.getText(),
+        url: await el.getAttribute( 'href' )
+      }
+    } );
     // If tests are being run via Sauce Labs, only test ten random component pages.
     // Testing all of them takes 30+ minutes and Sauce Labs has a max test length of 30 min.
     if ( global.SAUCE_LABS ) {

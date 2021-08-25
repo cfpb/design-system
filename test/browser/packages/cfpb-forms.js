@@ -10,7 +10,8 @@ describe( 'Multiselect', () => {
 
     // Wait till page has loaded.
     await browser.waitUntil( async () => {
-      const state = await browser.execute( async () => {
+      // For IE compatibility we can't use an arrow function in the executed JS.
+      const state = await browser.execute( function() {
         return document.readyState;
       } );
 

@@ -17,7 +17,7 @@ describe( 'Basic CFPB expandable', () => {
     expect( await expandableContent.isDisplayed() ).toBeFalsy();
   } );
 
-  it( 'should open expandable when header is clicked', async ()=> {
+  it( 'should open expandable when header is clicked', async () => {
     await expandableHeader.click();
     await expandableContent.waitForDisplayed();
     expect( await expandableContent.isDisplayed() ).toBeTruthy();

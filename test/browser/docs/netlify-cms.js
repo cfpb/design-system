@@ -6,7 +6,7 @@ describe( 'Netlify CMS', () => {
   describe( 'Editing the homepage', () => {
 
     let loginButton;
-    const WAIT_FOR_DISPLAY_TIMEOUT: 30000;
+    const WAIT_FOR_DISPLAY_TIMEOUT = 30000;
 
     beforeEach( async () => {
       await browser.url( '/design-system/admin/#/collections/special-pages/entries/home' );

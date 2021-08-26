@@ -14,6 +14,7 @@ describe( 'Netlify CMS', () => {
       // Wait for page to load netlify configuration and show the login button.
       await loginButton.waitForDisplayed( { timeout: 10000 } );
       expect( loginButton ).toExist();
+      await loginButton.click();
     } );
 
     afterEach( async () => {
@@ -21,17 +22,16 @@ describe( 'Netlify CMS', () => {
     } );
 
     it( 'should allow the user to log in', async () => {
-      await loginButton.click();
       const editorContainer = await $( 'label=Page title' );
-      await editorContainer.waitForDisplayed();
+      // Wait for page to load netlify editor.
+      await editorContainer.waitForDisplayed( { timeout: 10000 } );
       expect( editorContainer ).toExist();
     } );
 
     it( 'should properly render a preview of a page', async () => {
-      await loginButton.click();
       // The homepage's body field
       const pageBodyField = await $( '#nc-root #description-field-2' );
-      await pageBodyField.waitForDisplayed();
+      await pageBodyField.waitForDisplayed( { timeout: 10000 } );
       await pageBodyField.clearValue();
       await pageBodyField.setValue( 'fun' );
       // The preview pane is an iframe
@@ -51,14 +51,16 @@ describe( 'Netlify CMS', () => {
       // from triggering their mobile media queries
       await browser.setWindowSize( 1850, 800 );
       loginButton = await $( 'button=Login' );
-      await loginButton.waitForDisplayed();
+      // Wait for page to load netlify configuration and show the login button.
+      await loginButton.waitForDisplayed( { timeout: 10000 } );
+      expect( loginButton ).toExist();
+      await loginButton.click();
     } );
 
     it( 'should properly render a preview of a component page', async () => {
-      await loginButton.click();
       // The button page's title field
       const pageTitleField = await $( '#nc-root #title-field-1' );
-      await pageTitleField.waitForDisplayed();
+      await pageTitleField.waitForDisplayed( { timeout: 10000 } );
       await pageTitleField.clearValue();
       await pageTitleField.setValue( 'best' );
       // The preview pane is an iframe
@@ -68,10 +70,9 @@ describe( 'Netlify CMS', () => {
     } );
 
     it( 'should support switching between the various "show details" tabs', async () => {
-      await loginButton.click();
       // Wait for the editor to load
       const editorContainer = await $( 'label=Page title' );
-      await editorContainer.waitForDisplayed();
+      await editorContainer.waitForDisplayed( { timeout: 10000 } );
       // The preview pane is an iframe
       await  browser.switchToFrame( await $( 'iframe' ) );
       const detailsButton = await $( 'button=Show details' );

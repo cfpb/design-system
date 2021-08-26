@@ -3,7 +3,7 @@
 
 describe( 'Netlify CMS', () => {
 
-  const WAIT_FOR_DISPLAY_TIMEOUT = 30000;
+  const WAIT_FOR_DISPLAY_TIMEOUT = 60000;
 
   describe( 'Editing the homepage', () => {
 

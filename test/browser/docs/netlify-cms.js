@@ -72,6 +72,7 @@ describe( 'Netlify CMS', () => {
     } );
 
     it( 'should support switching between the various "show details" tabs', async () => {
+      await browser.setWindowSize( 2000, 1200 );
       // Wait for the editor to load
       const editorContainer = await $( 'label=Page title' );
       await editorContainer.waitForDisplayed( { timeout: WAIT_FOR_DISPLAY_TIMEOUT } );

@@ -42,7 +42,6 @@ export default class Preview extends Component {
   componentDidUpdate(props) {
     // Tabs show under the show/hide details button on a pattern.
     const tabsContainerDom = props.document.querySelectorAll( `.${ Tabs.BASE_CLASS }` );
-    console.log( 'tabsContainerDom', tabsContainerDom );
     if ( tabsContainerDom.length > 0 ) {
       let tabsInst;
       for ( let i = 0, len = tabsContainerDom.length; i < len; i++ ) {

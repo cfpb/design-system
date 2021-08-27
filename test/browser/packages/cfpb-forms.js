@@ -10,10 +10,14 @@ describe( 'Multiselect', () => {
 
     // Wait till page has loaded.
     await browser.waitUntil( async () => {
-      // For IE compatibility we can't use an arrow function in the executed JS.
-      const state = await browser.execute( function() {
+
+      // Return when the document is ready.
+      function documentReady() {
         return document.readyState;
-      } );
+      }
+
+      // For IE compatibility we can't use an arrow function in the executed JS.
+      const state = await browser.execute( documentReady );
 
       multiselectInput = await $( '.a-live_code .o-multiselect_search' );
       await multiselectInput.scrollIntoView();

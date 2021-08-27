@@ -3,7 +3,7 @@ const BASE_CLASS = 'm-tabs';
 function Tabs( dom ) {
 
   // DOM references.
-  let _dom = dom;
+  const _dom = dom;
   let _tabsItemsDom;
   let _tabsPanelsDom;
 
@@ -12,12 +12,12 @@ function Tabs( dom ) {
 
   /**
    * Initialize the Tabs instance.
-   * @return {Tabs} An instance.
+   * @returns {Tabs} An instance.
    */
   function init() {
     _tabsItemsDom = _dom.querySelectorAll( `.${ BASE_CLASS }_list-item` );
 
-    if ( _tabsItemsDom.length === 0) {
+    if ( _tabsItemsDom.length === 0 ) {
       // Bail out because there are no tabs to initialize.
       return this;
     }
@@ -42,10 +42,10 @@ function Tabs( dom ) {
     return this;
   }
 
-    /**
+  /**
    * Change the selected tab index.
    * @param {number} index - An index position of the selected tab.
-   * @return {Tabs} An instance.
+   * @returns {Tabs} An instance.
    */
   function changeTab( index ) {
     // Remove classes from prior selected tab and panel.

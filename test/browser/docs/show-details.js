@@ -23,7 +23,7 @@ describe( 'The "show details" toggling feature', () => {
     }
   } );
 
-  it( 'should show/hide details across all component pages', async () => {
+  it( 'should show/hide details across all component pages', () => {
 
     componentPages.forEach( async componentPage => {
 

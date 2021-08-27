@@ -23,7 +23,7 @@ describe( 'Multiselect', () => {
     {
       timeout: 60000,
       timeoutMsg: 'Oops! Test timed out waiting for page to load!'
-    });
+    } );
 
   } );
 

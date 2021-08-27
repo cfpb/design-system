@@ -6,7 +6,7 @@ import AlphaTransition from '@cfpb/cfpb-atomic-component/src/utilities/transitio
 import MoveTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
 import MaxHeightTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
 import Table from '@cfpb/cfpb-tables/src/Table';
-import Tabs from './tabs.js';
+import Tabs from './Tabs.js';
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';
 
@@ -15,7 +15,7 @@ sidebar.init();
 
 const anchors = new AnchorJS();
 // Add anchors to all headings (except page title headings)
-anchors.add('h2:not(.title), h3, h4, h5');
+anchors.add( 'h2:not(.title), h3, h4, h5' );
 // Ensure there are no anchors in inconvenient places
 anchors.remove( `
   .a-live_code h2,
@@ -24,11 +24,11 @@ anchors.remove( `
   .a-live_code h5,
   .o-expandable_label,
   #search-results h3
-`);
+` );
 
-const multiselectDom = document.querySelector('.o-multiselect');
-if (multiselectDom) {
-  const multiselect = new Multiselect(multiselectDom);
+const multiselectDom = document.querySelector( '.o-multiselect' );
+if ( multiselectDom ) {
+  const multiselect = new Multiselect( multiselectDom );
   multiselect.init();
 }
 
@@ -51,33 +51,33 @@ if ( tabsContainerDom.length > 0 ) {
   }
 }
 
-const toggleAllBtn = document.querySelector('#toggle-details');
-const toggleBtns = document.querySelectorAll('.a-toggle_code button');
+const toggleAllBtn = document.querySelector( '#toggle-details' );
+const toggleBtns = document.querySelectorAll( '.a-toggle_code button' );
 
-if (toggleAllBtn) {
-  toggleAllBtn.addEventListener('click', handleToggleAllClick, false);
+if ( toggleAllBtn ) {
+  toggleAllBtn.addEventListener( 'click', handleToggleAllClick, false );
 
-  if (window.localStorage.getItem('toggleState') === 'hide') {
-    toggleAllDetails(toggleAllBtn);
+  if ( window.localStorage.getItem( 'toggleState' ) === 'hide' ) {
+    toggleAllDetails( toggleAllBtn );
   }
 }
 
-for (let i = 0, len = toggleBtns.length; i < len; i++) {
-  toggleBtns[i].addEventListener('click', handleToggleClick, false);
+for ( let i = 0, len = toggleBtns.length; i < len; i++ ) {
+  toggleBtns[i].addEventListener( 'click', handleToggleClick, false );
 }
 
 /**
  * @param {MouseEvent} event - The mouse event object from the click.
  */
-function handleToggleAllClick(event) {
+function handleToggleAllClick( event ) {
   event.preventDefault();
-  toggleAllDetails(toggleAllBtn);
+  toggleAllDetails( toggleAllBtn );
 }
 
 /**
  * @param {MouseEvent} event - The mouse event object from the click.
  */
-function handleToggleClick(event) {
+function handleToggleClick( event ) {
   const target = event.target;
-  toggleDetails(target);
+  toggleDetails( target );
 }

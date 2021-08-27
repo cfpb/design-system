@@ -77,7 +77,7 @@ describe( 'Netlify CMS', () => {
       const editorContainer = await $( 'label=Page title' );
       await editorContainer.waitForDisplayed( { timeout: WAIT_FOR_DISPLAY_TIMEOUT } );
       // The preview pane is an iframe
-      await  browser.switchToFrame( await $( 'iframe' ) );
+      await browser.switchToFrame( await $( 'iframe' ) );
       const detailsButton = await $( 'button=Show details' );
       await detailsButton.click();
       const implementationButton = await $( 'a=Implementation' );

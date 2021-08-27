@@ -25,7 +25,7 @@ describe( 'The "show details" toggling feature', () => {
 
   it( 'should show/hide details across all component pages', async () => {
 
-    componentPages.forEach( async ( componentPage ) => {
+    componentPages.forEach( async componentPage => {
 
       const componentName = await componentPage.getText();
       const componentUrl = await componentPage.getAttribute( 'href' );
@@ -45,8 +45,8 @@ describe( 'The "show details" toggling feature', () => {
           }
           expect( await showDetailsButton.isDisplayed() ).toBeTruthy();
           expect( await hideDetailsButton.isDisplayed() ).toBeFalsy();
-          detailsTabs.some( async (snippet) => {
-              expect( await snippet.isDisplayed() ).toBeFalsy();
+          detailsTabs.some( async snippet => {
+            expect( await snippet.isDisplayed() ).toBeFalsy();
           } );
         } );
 
@@ -57,7 +57,7 @@ describe( 'The "show details" toggling feature', () => {
           await showDetailsButton.click();
           expect( await showDetailsButton.isDisplayed() ).toBeFalsy();
           expect( await hideDetailsButton.isDisplayed() ).toBeTruthy();
-          detailsTabs.some( async (snippet) => {
+          detailsTabs.some( async snippet => {
             expect( await snippet.isDisplayed() ).toBeTruthy();
           } );
         } );
@@ -67,7 +67,7 @@ describe( 'The "show details" toggling feature', () => {
           await hideDetailsButton.click();
           expect( await showDetailsButton.isDisplayed() ).toBeTruthy();
           expect( await hideDetailsButton.isDisplayed() ).toBeFalsy();
-          detailsTabs.some( async (snippet) => {
+          detailsTabs.some( async snippet => {
             expect( await snippet.isDisplayed() ).toBeFalsy();
           } );
         } );

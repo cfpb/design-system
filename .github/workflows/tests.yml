@@ -12,9 +12,9 @@ jobs:
 
     steps:
     - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6
+        ruby-version: 2.7.1
 
     - name: Install Bundler
       run: gem install bundler
@@ -46,9 +46,9 @@ jobs:
         node-version: 14
 
     - name: Set up Ruby for Jekyll
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.6'
+        ruby-version: '2.7.1'
 
     - name: Install dependencies with Yarn
       run: yarn

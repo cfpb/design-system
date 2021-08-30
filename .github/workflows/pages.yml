@@ -12,9 +12,9 @@ jobs:
         - uses: actions/setup-node@v2
           with:
             node-version: 14
-        - uses: actions/setup-ruby@v2
+        - uses: ruby/setup-ruby@v1
           with:
-            ruby-version: '2.6'
+            ruby-version: '2.7.1'
         - uses: actions/checkout@v2
         - run: ./scripts/update-gh-pages.sh
           env:

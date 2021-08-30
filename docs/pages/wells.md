@@ -19,7 +19,7 @@ variation_groups:
               <p>
                   Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
                   instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
-                  cu.
+                  cu. <a href="#">Example link</a>.
               </p>
           </div>
         variation_description: ""

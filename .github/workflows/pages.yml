@@ -4,14 +4,14 @@ on:
     push:
         branches:
         - main
-    
+
 jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/setup-node@v1
           with:
-            node-version: 12
+            node-version: 14
         - uses: actions/setup-ruby@v1
           with:
             ruby-version: '2.6'

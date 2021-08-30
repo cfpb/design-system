@@ -1,6 +1,6 @@
 [build]
   publish = "docs/_site/"
-  command = "NODE_VERSION=14.17.5 ./scripts/build-netlify-pr-preview.sh"
+  command = "./scripts/build-netlify-pr-preview.sh"
 
 [[redirects]]
   from = "/"

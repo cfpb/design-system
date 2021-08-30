@@ -13,4 +13,14 @@
         padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
         padding-right: unit( @grid_gutter-width / @base-font-size-px, em );
     } );
+
+    &__inkwell {
+        background-color: @gray-dark;
+        color: @white;
+
+        a {
+            // default, `:visited`, `:hover`, `:focus`, and `:active` states in the first five arguments)
+            .u-link__colors( @pacific-40, @teal-40, @pacific-50, @pacific-40, @navy-40 );
+        }
+    }
 }

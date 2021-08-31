@@ -4,18 +4,18 @@ on:
     push:
         branches:
         - main
-    
+
 jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-        - uses: actions/setup-node@v1
+        - uses: actions/setup-node@v2
           with:
-            node-version: 12
-        - uses: actions/setup-ruby@v1
+            node-version: 14
+        - uses: ruby/setup-ruby@v1
           with:
-            ruby-version: '2.6'
-        - uses: actions/checkout@v1
+            ruby-version: '2.7.1'
+        - uses: actions/checkout@v2
         - run: ./scripts/update-gh-pages.sh
           env:
             GITHUB_TOKEN: ${{ secrets.github_token }}

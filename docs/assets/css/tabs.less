@@ -1,154 +1,77 @@
-/* ==========================================================================
-   tabs
-   ========================================================================== */
-// Based on gov.uk Tabs: https://design-system.service.gov.uk/components/tabs/
-// breakpoints:
-// 40.0525em
-// 40.0625em; 641px
-// if we change them in this CSS we also have to fork and release our own JS with updated breakpoints
 
+// All screen sizes.
+.m-tabs {
 
-@media (min-width: 40.0625em) {
-    .govuk-tabs {
-        margin: 0 -1rem;
-    }
-}
-
-.govuk-tabs__list {
-    border-top: 1px solid @gray;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: none;
-    .respond-to-min(641px, { display: flex; });
-}
-@media (max-width: 40.0525em) {
-    .govuk-tabs__list {
-        margin-bottom: 20px;
-    }
-}
-@media (max-width: 40.0525em) and (min-width: 40.0625em) {
-    .govuk-tabs__list {
-        margin-bottom: 30px;
-    }
-}
-
-.govuk-tabs__list-item {
-    .heading-5();
-    border-bottom: 0;
-    margin-bottom: 0;
-}
-
-.govuk-tabs__list-item::before {
-    content: "\2014 ";
-    margin-left: -25px;
-    padding-right: 5px;
-}
-
-.govuk-tabs__tab:focus {
-    outline: 1px dotted @pacific;
-    outline-offset: 3px;
-}
-
-.govuk-tabs__tab:hover {
-    background-color: @gray-5;
-}
-
-.govuk-tabs__tab:active {
-    color: @black;
-}
-
-.govuk-tabs__tab:focus {
-    color: @black;
-}
-
-.govuk-tabs__tab[aria-current="true"] {
-    color: @black;
-    text-decoration: none;
-}
-
-.govuk-tabs__panel {
-    background-color: @gray-5;
-    margin-bottom: 30px;
-}
-@media (min-width: 40.0625em) {
-    .govuk-tabs__panel {
+    &_list {
         border-top: 1px solid @gray;
-        border-bottom: 1px solid @gray-40;
-        margin: -3px 0 50px;
-    }
-}
-@media (min-width: 40.0625em) {
-    .js-enabled {
-
-        .govuk-tabs__list:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-
-        .govuk-tabs__list-item {
-            margin-left: 0;
-
-            &--selected {
-                a {
-                    color: @black;
-                    border-bottom: 5px solid @pacific;
-                    &:hover {
-                        border-bottom: 5px solid @pacific;
-                    }
-                }
-            }
-
-            &:first-child {
-                .govuk-tabs__tab {
-                    padding-left: 2rem;
-                }
-            }
-
-        }
-
-        .govuk-tabs__list-item::before {
-            content: none;
-        }
-
-        .govuk-tabs__title {
-            display: none;
-        }
-
-        .govuk-tabs__tab {
-            border: 0;
-            color: @gray;
-            display: block;
-            margin-right: 5px;
-            padding: 1rem 1rem calc( 1rem - 5px );
-            text-align: center;
-            &:hover {
-                border-bottom: 2px solid @gray-5;
-            }
-        }
-
-        .govuk-tabs__tab--selected:focus {
-            background-color: transparent;
-        }
-
-        .govuk-tabs__panel {
-            margin-bottom: 0;
-        }
-    }
-}
-@media (min-width: 40.0625em) and (min-width: 40.0625em) {
-    .js-enabled .govuk-tabs__panel {
-        margin-bottom: 0;
-    }
-}
-@media (min-width: 40.0625em) {
-    .js-enabled .govuk-tabs__panel--hidden {
+        margin: 0;
+        padding: 0;
+        list-style: none;
         display: none;
     }
 
-    .js-enabled .govuk-tabs__panel > :last-child {
+    &_list-item {
+        .heading-5();
+        border-bottom: 0;
         margin-bottom: 0;
+        margin-left: 0;
+
+        &:first-child {
+            .m-tabs_tab {
+                padding-left: 2rem;
+            }
+        }
+
+        &-selected {
+            a {
+                color: @black;
+                border-bottom: 5px solid @pacific;
+                &:hover {
+                    border-bottom: 5px solid @pacific;
+                }
+            }
+        }
+    }
+
+    &_tab {
+        border: 0;
+        color: @gray;
+        display: block;
+        margin-right: 5px;
+        padding: 1rem 1rem calc( 1rem - 5px );
+        text-align: center;
+
+        &:focus {
+            outline: 1px dotted @pacific;
+            outline-offset: 3px;
+        }
+
+        &:hover {
+            background-color: @gray-5;
+            border-bottom: 2px solid @gray-5;
+        }
+
+        &:active {
+            color: @black;
+        }
+
+        &:focus {
+            color: @black;
+        }
+
+        &[aria-current="true"] {
+            color: @black;
+            text-decoration: none;
+        }
+
+        &-selected:focus {
+            background-color: transparent;
+        }
+    }
+
+    &_panel {
+        background-color: @gray-5;
+        margin-bottom: 30px;
     }
 }
 
@@ -156,11 +79,38 @@
 .variation-jinja-code-snippet-title,
 .variation-implementation-title,
 .variation-specs-title {
-    .respond-to-min( 641px, {
-        .u-visually-hidden();
-    } );
     background-color: @white;
     border-bottom: 1px solid @gray;
     margin: 0;
     padding: 20px 40px 7px;
 }
+
+// Mobile view.
+.respond-to-max( @bp-sm-max, {
+    .m-tabs_panel {
+        &.u-hidden {
+            display: block !important;
+        }
+    }
+} );
+
+// Desktop view.
+.respond-to-min( @bp-med-min, {
+    .m-tabs_list {
+        display: flex;
+    }
+
+    .m-tabs_panel {
+        border-top: 1px solid @gray;
+        border-bottom: 1px solid @gray-40;
+        margin: -3px 0 50px;
+    }
+
+    .variation-code-snippet-title,
+    .variation-jinja-code-snippet-title,
+    .variation-implementation-title,
+    .variation-specs-title {
+        .u-visually-hidden();
+    }
+
+} );

@@ -8288,11 +8288,6 @@ gotrue-js@^0.9.24:
   dependencies:
     micro-api-client "^3.2.1"
 
-govuk-frontend@3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/govuk-frontend/-/govuk-frontend-3.12.0.tgz#55d7057ed8f480a3f83ffeae54b68e0fc81607a3"
-  integrity sha512-+mM8BqEUqsBVSV/ud0dEhE8OmMdhkK53eEUp5YyPN+y3mwcdRnwwP2A2B5qFdFi6E6j/2AYuCG8l5kXD+JXNxA==
-
 graceful-fs@^4.0.0, graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.2, graceful-fs@^4.2.3, graceful-fs@^4.2.4:
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"

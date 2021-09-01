@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set up Ruby 2.6
-      uses: ruby/setup-ruby@v1
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1.81.0
       with:
         ruby-version: 2.7.1
 
@@ -20,10 +20,10 @@ jobs:
       run: gem install bundler
 
     - name: Check out the repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.3.4
 
     - name: Set up Node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v2.4.0
       with:
         node-version: 14
 
@@ -38,15 +38,15 @@ jobs:
 
     steps:
     - name: Check out the repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.3.4
 
     - name: Set up Node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v2.4.0
       with:
         node-version: 14
 
     - name: Set up Ruby for Jekyll
-      uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@v1.81.0
       with:
         ruby-version: '2.7.1'
 

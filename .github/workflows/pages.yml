@@ -9,13 +9,13 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-        - uses: actions/setup-node@v2
+        - uses: actions/setup-node@v2.4.0
           with:
             node-version: 14
-        - uses: ruby/setup-ruby@v1
+        - uses: ruby/setup-ruby@v1.81.0
           with:
             ruby-version: '2.7.1'
-        - uses: actions/checkout@v1
+        - uses: actions/checkout@v2.3.4
         - run: ./scripts/update-gh-pages.sh
           env:
             GITHUB_TOKEN: ${{ secrets.github_token }}

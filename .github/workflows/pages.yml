@@ -15,7 +15,7 @@ jobs:
         - uses: ruby/setup-ruby@v1
           with:
             ruby-version: '2.7.1'
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v1
         - run: ./scripts/update-gh-pages.sh
           env:
             GITHUB_TOKEN: ${{ secrets.github_token }}

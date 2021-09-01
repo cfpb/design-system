@@ -1,7 +1,4 @@
-import {
-  toggleAllDetails,
-  toggleDetails
-} from './toggle-details.js';
+import { toggleAllDetails, toggleDetails } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
 import Multiselect from '@cfpb/cfpb-forms/src/organisms/Multiselect';
@@ -9,7 +6,7 @@ import AlphaTransition from '@cfpb/cfpb-atomic-component/src/utilities/transitio
 import MoveTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
 import MaxHeightTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
 import Table from '@cfpb/cfpb-tables/src/Table';
-import { Tabs } from 'govuk-frontend';
+import Tabs from './Tabs.js';
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';
 
@@ -44,14 +41,13 @@ window.AlphaTransition = AlphaTransition;
 window.MoveTransition = MoveTransition;
 window.MaxHeightTransition = MaxHeightTransition;
 
-const main = document.querySelector( '#main' );
-const tabs = document.querySelectorAll( '[data-module="tabs"]' );
-
-if ( tabs && tabs.length > 0 ) {
-  main.classList.add( 'js-enabled' );
-  for ( let i = 0; i < tabs.length; i++ ) {
-    const tab = tabs[i];
-    new Tabs( tab ).init();
+// Tabs show under the show/hide details button on a pattern.
+const tabsContainerDom = document.querySelectorAll( `.${ Tabs.BASE_CLASS }` );
+if ( tabsContainerDom.length > 0 ) {
+  let tabsInst;
+  for ( let i = 0, len = tabsContainerDom.length; i < len; i++ ) {
+    tabsInst = new Tabs( tabsContainerDom[i] );
+    tabsInst.init();
   }
 }
 

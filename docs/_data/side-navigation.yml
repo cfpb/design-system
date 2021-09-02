@@ -111,5 +111,10 @@ first-level:
           - page: Bar charts
           - page: Line charts
           - page: Pie charts
-    nav-items:
-      - page: Print styles
+      - heading: Print
+        nav-items:
+          - page: Print styles
+      - heading: Accessibility
+        nav-items:
+          - page: Accessibility
+    nav-items: []

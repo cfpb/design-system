@@ -737,7 +737,7 @@
 &lt;/article&gt;`,
                 
                     'variation_name2': 'Featured card',
-                    'variation_description2': "A single featured card.\nThe .m-card__featured modifier is added.\n",
+                    'variation_description2': "A single featured card.\nThe .m-card__featured modifier is added.\nA featured card differs from the default card in that the whole\ncontent area is wrapped in a link.\n",
                     'variation_code_snippet2': `&lt;article class=&quot;m-card m-card__featured&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;
         &lt;h2 class=&quot;m-card_heading&quot;&gt;
@@ -750,6 +750,66 @@
         &lt;/p&gt;
         &lt;div class=&quot;m-card_footer&quot;&gt;
             &lt;span&gt;Submit a complaint&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/article&gt;`,
+                
+                    'variation_name3': 'Topic card',
+                    'variation_description3': "A single topic card.\nThe .m-card__topic modifier is added.\n",
+                    'variation_code_snippet3': `&lt;article class=&quot;m-card m-card__topic&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;div class=&quot;m-card_icon&quot;&gt;
+          {% include icons/idea.svg %}
+        &lt;/div&gt;
+        &lt;div class=&quot;m-card_footer&quot;&gt;
+            &lt;span&gt;Credit reports&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/article&gt;`,
+                
+                    'variation_name4': 'Topic action card',
+                    'variation_description4': "A topic card with a call to action for its card group.\nThe .m-card__topic and .m-card__topic-action modifiers are added.\n",
+                    'variation_code_snippet4': `&lt;article class=&quot;m-card m-card__topic m-card__topic-action&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;div class=&quot;m-card_icon&quot;&gt;
+          {% include icons/arrow-right-round.svg %}
+        &lt;/div&gt;
+        &lt;div class=&quot;m-card_footer&quot;&gt;
+            &lt;span&gt;See all money topics&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/article&gt;`,
+                
+                    'variation_name5': 'Highlight card',
+                    'variation_description5': "A single highlight card.\nThe .m-card__highlight modifier is added.\n",
+                    'variation_code_snippet5': `&lt;article class=&quot;m-card m-card__highlight&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;h3&gt;
+            Protecting your finances during the coronavirus emergency
+        &lt;/h3&gt;
+        &lt;p&gt;
+            We are committed to providing up-to-date information and resources.
+            Learn more about protecting and managing your finances during this difficult time.
+        &lt;/p&gt;
+        &lt;div class=&quot;m-card_footer&quot;&gt;
+            &lt;span&gt;Read more&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/article&gt;`,
+                
+                    'variation_name6': 'Breakout card',
+                    'variation_description6': "A single breakout card.\nThe .m-card__breakout modifier is added.\n",
+                    'variation_code_snippet6': `&lt;article class=&quot;m-card m-card__breakout&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;img class=&quot;m-card_img&quot;
+             src=&quot;https://dummyimage.com/210x120/&quot;
+             alt=&quot;&quot;&gt;
+        &lt;div class=&quot;m-card_inner-wrapper&quot;&gt;
+            &lt;div class=&quot;m-card_footer&quot;&gt;
+                 &lt;span&gt;
+                      Buy a house
+                 &lt;/span&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
 &lt;/article&gt;`,
@@ -1146,6 +1206,268 @@
                 &lt;/div&gt;
             &lt;/a&gt;
         &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name5': 'Card group - two count',
+                    'variation_description5': "A group of two cards.\nThe .o-card-group__count-2 modifier is added.\n",
+                    'variation_code_snippet5': `&lt;div class=&quot;o-card-group o-card-group__count-2&quot;&gt;
+    &lt;div class=&quot;o-card-group_cards&quot;&gt;
+        &lt;article class=&quot;m-card m-card__highlight&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;h3&gt;
+                  Protecting your finances during the coronavirus emergency
+              &lt;/h3&gt;
+              &lt;p&gt;
+                  We are committed to providing up-to-date information and resources.
+                  Learn more about protecting and managing your finances during this difficult time.
+              &lt;/p&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Read more&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+
+       &lt;article class=&quot;m-card m-card__highlight&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;h3&gt;
+                  Striving for equity
+              &lt;/h3&gt;
+              &lt;p&gt;
+                  We’re working to build a stronger nation by advancing racial and economic equality for all.
+              &lt;/p&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Read more&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name6': 'Card group - three count',
+                    'variation_description6': "A group of three cards.\nThe .o-card-group__count-3 modifier is added.\n",
+                    'variation_code_snippet6': `&lt;div class=&quot;o-card-group o-card-group__count-3&quot;&gt;
+    &lt;div class=&quot;o-card-group_cards&quot;&gt;
+        &lt;article class=&quot;m-card m-card__highlight&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;h3&gt;
+                  Protecting your finances during the coronavirus emergency
+              &lt;/h3&gt;
+              &lt;p&gt;
+                  We are committed to providing up-to-date information and resources.
+                  Learn more about protecting and managing your finances during this difficult time.
+              &lt;/p&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Read more&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+
+       &lt;article class=&quot;m-card m-card__highlight&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;h3&gt;
+                  Striving for equity
+              &lt;/h3&gt;
+              &lt;p&gt;
+                  We’re working to build a stronger nation by advancing racial and economic equality for all.
+              &lt;/p&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Read more&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+
+       &lt;article class=&quot;m-card m-card__highlight&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;h3&gt;
+                  Rental assistance helps renters and landlords make ends meet
+              &lt;/h3&gt;
+              &lt;p&gt;
+                  State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
+              &lt;/p&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Read more&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name7': 'Card group - four count',
+                    'variation_description7': "A group of four cards.\nThe .o-card-group__count-4 modifier is added.\n",
+                    'variation_code_snippet7': `&lt;div class=&quot;o-card-group o-card-group__count-4&quot;&gt;
+    &lt;div class=&quot;o-card-group_cards&quot;&gt;
+      &lt;article class=&quot;m-card m-card__highlight&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;h3&gt;
+                  Protecting your finances during the coronavirus emergency
+              &lt;/h3&gt;
+              &lt;p&gt;
+                  We are committed to providing up-to-date information and resources.
+                  Learn more about protecting and managing your finances during this difficult time.
+              &lt;/p&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Read more&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+       &lt;/article&gt;
+
+       &lt;article class=&quot;m-card m-card__highlight&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;h3&gt;
+                  Striving for equity
+              &lt;/h3&gt;
+              &lt;p&gt;
+                  We’re working to build a stronger nation by advancing racial and economic equality for all.
+              &lt;/p&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Read more&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+
+       &lt;article class=&quot;m-card m-card__highlight&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;h3&gt;
+                  Rental assistance helps renters and landlords make ends meet
+              &lt;/h3&gt;
+              &lt;p&gt;
+                  State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
+              &lt;/p&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Read more&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+
+      &lt;article class=&quot;m-card m-card__highlight&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;h3&gt;
+                  Protecting your finances during the coronavirus emergency
+              &lt;/h3&gt;
+              &lt;p&gt;
+                  We are committed to providing up-to-date information and resources.
+                  Learn more about protecting and managing your finances during this difficult time.
+              &lt;/p&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Read more&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name8': 'Topic card group',
+                    'variation_description8': "A group of topic cards together.\n",
+                    'variation_code_snippet8': `&lt;div class=&quot;o-card-group o-card-group__flow&quot;&gt;
+    &lt;h2&gt;Popular money topics&lt;/h2&gt;
+    &lt;div class=&quot;o-card-group_cards&quot;&gt;
+        &lt;article class=&quot;m-card m-card__topic&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;div class=&quot;m-card_icon&quot;&gt;
+                  {% include icons/idea.svg %}
+              &lt;/div&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Credit reports&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;m-card m-card__topic&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;div class=&quot;m-card_icon&quot;&gt;
+                  {% include icons/idea.svg %}
+              &lt;/div&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Debt collection&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;m-card m-card__topic&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;div class=&quot;m-card_icon&quot;&gt;
+                  {% include icons/idea.svg %}
+              &lt;/div&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Mortgages&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;m-card m-card__topic&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;div class=&quot;m-card_icon&quot;&gt;
+                  {% include icons/idea.svg %}
+              &lt;/div&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;Credit cards&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;m-card m-card__topic m-card__topic-action&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;div class=&quot;m-card_icon&quot;&gt;
+                  {% include icons/arrow-right-round.svg %}
+              &lt;/div&gt;
+              &lt;div class=&quot;m-card_footer&quot;&gt;
+                  &lt;span&gt;See all money topics&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name9': 'Breakout card group',
+                    'variation_description9': "A group of breakout cards together.\n",
+                    'variation_code_snippet9': `&lt;div class=&quot;o-card-group o-card-group__column-3&quot;&gt;
+    &lt;h2&gt;Get help planning for future goals&lt;/h2&gt;
+    &lt;div class=&quot;o-card-group_cards&quot;&gt;
+        &lt;article class=&quot;m-card m-card__breakout&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;img class=&quot;m-card_img&quot;
+                  src=&quot;https://dummyimage.com/210x120/&quot;
+                  alt=&quot;&quot;&gt;
+              &lt;div class=&quot;m-card_inner-wrapper&quot;&gt;
+                  &lt;div class=&quot;m-card_footer&quot;&gt;
+                      &lt;span&gt;
+                              Buy a house
+                      &lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+
+        &lt;article class=&quot;m-card m-card__breakout&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;img class=&quot;m-card_img&quot;
+                  src=&quot;https://dummyimage.com/210x120/&quot;
+                  alt=&quot;&quot;&gt;
+              &lt;div class=&quot;m-card_inner-wrapper&quot;&gt;
+                  &lt;div class=&quot;m-card_footer&quot;&gt;
+                      &lt;span&gt;
+                              Paying for college
+                      &lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
+
+        &lt;article class=&quot;m-card m-card__breakout&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+              &lt;img class=&quot;m-card_img&quot;
+                  src=&quot;https://dummyimage.com/210x120/&quot;
+                  alt=&quot;&quot;&gt;
+              &lt;div class=&quot;m-card_inner-wrapper&quot;&gt;
+                  &lt;div class=&quot;m-card_footer&quot;&gt;
+                      &lt;span&gt;
+                              Get an auto loan
+                      &lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/a&gt;
+      &lt;/article&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,
                 

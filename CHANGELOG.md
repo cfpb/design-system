@@ -1,4 +1,31 @@
 
+## v0.9.1 (2021-09-02)
+
+#### Enhancement
+* `cfpb-layout`
+  * [#1277](https://github.com/cfpb/design-system/pull/1277) Add new card patterns ([@anselmbradford](https://github.com/anselmbradford))
+* Other
+  * [#1263](https://github.com/cfpb/design-system/pull/1263) Remove govuk tabs dependency and roll our own ([@brandon-rusk](https://github.com/brandon-rusk))
+  * [#1271](https://github.com/cfpb/design-system/pull/1271) Add deprecate toggle to variations ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* [#1267](https://github.com/cfpb/design-system/pull/1267) Remove unnecessary u-hidden ([@anselmbradford](https://github.com/anselmbradford))
+* [#1266](https://github.com/cfpb/design-system/pull/1266) Anchor linking: Fix live code example ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1283](https://github.com/cfpb/design-system/pull/1283) Update Dependencies: lhci/cli, chromedriver, mini-css-extract-plugin, terser-webpack-plugin, webpack-stream ([@anselmbradford](https://github.com/anselmbradford))
+* [#1281](https://github.com/cfpb/design-system/pull/1281) Update dependencies: core-js, marked, netlify-cms, wdio, css-loader, cssnano, gulp-postcss, http-server, lerna-changelog, mini-css-extract-plugin, style-loader, svgo, webpack, webpack-cli ([@anselmbradford](https://github.com/anselmbradford))
+* [#1280](https://github.com/cfpb/design-system/pull/1280) Update to webdriverio 7.x ([@anselmbradford](https://github.com/anselmbradford))
+* [#1262](https://github.com/cfpb/design-system/pull/1262) Update core-js, marked, netlify-cms, regenerator-runtime, slugify, babel/core, babel/plugin-proposal-object-rest-spread, babel/preset-env, autoprefixer, cssnano, netlify-cms-proxy-server, postcss, postcss-loader,svgo, terser-webpack-plugin, webpack ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 4
+- Andy Chosak ([@chosak](https://github.com/chosak))
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- [@brandon-rusk](https://github.com/brandon-rusk)
+- [@huetingj](https://github.com/huetingj)
+
+
+
 ## v0.9.1 (2021-07-22)
 
 #### Bug Fix

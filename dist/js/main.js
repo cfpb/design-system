@@ -1251,7 +1251,7 @@ function AtomicComponent( element, attributes ) {
 }
 
 // Public instance Methods and properties.
-(0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__.default(), {
+(0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"](), {
 
   /**
    * Run through and call the component's initializers.
@@ -1259,7 +1259,7 @@ function AtomicComponent( element, attributes ) {
    */
   init: function() {
     this.initializers.forEach( function( func ) {
-      if ( _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__.default.isFunction( func ) ) {
+      if ( _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__["default"].isFunction( func ) ) {
         func.apply( this, arguments );
       }
     }, this );
@@ -1421,7 +1421,7 @@ function AtomicComponent( element, attributes ) {
     for ( key in events ) {
       if ( {}.hasOwnProperty.call( events, key ) ) {
         method = events[key];
-        if ( _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__.default.isFunction( this[method] ) ) {
+        if ( _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__["default"].isFunction( this[method] ) ) {
           method = this[method];
         }
         if ( method ) {
@@ -1892,7 +1892,7 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {HTMLNode}             The elem
  */
 function queryOne( expr, con ) {
-  return _type_checkers_js__WEBPACK_IMPORTED_MODULE_0__.default.isString( expr ) ?
+  return _type_checkers_js__WEBPACK_IMPORTED_MODULE_0__["default"].isString( expr ) ?
     ( con || document ).querySelector( expr ) :
     expr || null;
 }
@@ -2177,7 +2177,7 @@ const CLASSES = {
  */
 function AlphaTransition( element ) {
 
-  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default( element, CLASSES );
+  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"]( element, CLASSES );
 
   /**
    * @returns {AlphaTransition} An instance.
@@ -2186,7 +2186,7 @@ function AlphaTransition( element ) {
     _baseTransition.init();
     const _transitionCompleteBinded = _transitionComplete.bind( this );
     _baseTransition.addEventListener(
-      _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT,
+      _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
       _transitionCompleteBinded
     );
     return this;
@@ -2196,7 +2196,7 @@ function AlphaTransition( element ) {
    * Handle the end of a transition.
    */
   function _transitionComplete() {
-    this.dispatchEvent( _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT, { target: this } );
+    this.dispatchEvent( _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this } );
   }
 
   /**
@@ -2220,7 +2220,7 @@ function AlphaTransition( element ) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -2510,7 +2510,7 @@ function BaseTransition( element, classes ) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__.default();
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -2572,7 +2572,7 @@ const CLASSES = {
  * @returns {MaxHeightTransition} An instance.
  */
 function MaxHeightTransition( element ) {
-  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default( element, CLASSES );
+  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"]( element, CLASSES );
   let previousHeight;
 
   /**
@@ -2588,7 +2588,7 @@ function MaxHeightTransition( element ) {
 
     const _transitionCompleteBinded = _transitionComplete.bind( this );
     _baseTransition.addEventListener(
-      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT,
+      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
       _transitionCompleteBinded
     );
 
@@ -2608,7 +2608,7 @@ function MaxHeightTransition( element ) {
    * Handle the end of a transition.
    */
   function _transitionComplete() {
-    this.dispatchEvent( _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT, { target: this } );
+    this.dispatchEvent( _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this } );
 
     if ( element.scrollHeight > previousHeight ) {
       element.style.maxHeight = element.scrollHeight + 'px';
@@ -2673,7 +2673,7 @@ function MaxHeightTransition( element ) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -2740,7 +2740,7 @@ const CLASSES = {
  */
 function MoveTransition( element ) {
 
-  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default( element, CLASSES );
+  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"]( element, CLASSES );
 
   /**
    * @returns {MoveTransition} An instance.
@@ -2749,7 +2749,7 @@ function MoveTransition( element ) {
     _baseTransition.init();
     const _transitionCompleteBinded = _transitionComplete.bind( this );
     _baseTransition.addEventListener(
-      _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT,
+      _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
       _transitionCompleteBinded
     );
     return this;
@@ -2759,7 +2759,7 @@ function MoveTransition( element ) {
    * Handle the end of a transition.
    */
   function _transitionComplete() {
-    this.dispatchEvent( _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT, { target: this } );
+    this.dispatchEvent( _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this } );
   }
 
   /**
@@ -2816,7 +2816,7 @@ function MoveTransition( element ) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -3054,9 +3054,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
+const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
 
-const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__.default.extend( {
+const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__["default"].extend( {
 
   ui: {
     base:    '.o-expandable',
@@ -3091,14 +3091,14 @@ const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js
  * Initialize a new expandable.
  */
 function initialize() {
-  const transition = new _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__.default(
+  const transition = new _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__["default"](
     this.ui.content
   );
   this.transition = transition.init();
   this.transition.addEventListener( 'expandBegin', expandBeginHandler.bind( this ) );
   this.transition.addEventListener( 'collapseEnd', collapseEndHandler.bind( this ) );
 
-  if ( this.ui.content.classList.contains( _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__.default.CLASSES.EXPANDED ) ) {
+  if ( this.ui.content.classList.contains( _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__["default"].CLASSES.EXPANDED ) ) {
     this.ui.target.classList.add( this.classes.targetExpanded );
   } else {
     this.ui.target.classList.add( this.classes.targetCollapsed );
@@ -3221,7 +3221,7 @@ const CLASSES = {
  * @returns {ExpandableTransition} An instance.
  */
 function ExpandableTransition( element ) {
-  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default( element, CLASSES );
+  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"]( element, CLASSES );
   let previousHeight;
 
   /**
@@ -3230,7 +3230,7 @@ function ExpandableTransition( element ) {
   function init() {
     _baseTransition.init();
     _baseTransition.addEventListener(
-      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__.default.END_EVENT,
+      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
       _transitionComplete.bind( this )
     );
 
@@ -3304,7 +3304,7 @@ function ExpandableTransition( element ) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.default();
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -3430,7 +3430,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
 
     if ( _options.length > 0 ) {
       const newDom = _populateMarkup();
-      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_3__.default( _options, _name ).init();
+      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_3__["default"]( _options, _name ).init();
 
       /* Removes <select> element,
          and re-assign DOM reference. */
@@ -3481,22 +3481,22 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    */
   function _populateMarkup() {
     // Add a container for our markup
-    _containerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'div', {
+    _containerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'div', {
       className: BASE_CLASS,
       around:    _dom
     } );
 
     // Create all our markup but wait to manipulate the DOM just once
-    _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'ul', {
+    _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'ul', {
       className: BASE_CLASS + '_choices',
       inside:    _containerDom
     } );
 
-    _headerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'header', {
+    _headerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'header', {
       className: BASE_CLASS + '_header'
     } );
 
-    _searchDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'input', {
+    _searchDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'input', {
       className:    BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
       type:         'text',
       placeholder:  _placeholder || 'Select up to five',
@@ -3505,12 +3505,12 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       autocomplete: 'off'
     } );
 
-    _fieldsetDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'fieldset', {
+    _fieldsetDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'fieldset', {
       'className':   BASE_CLASS + '_fieldset u-invisible',
       'aria-hidden': 'true'
     } );
 
-    _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'ul', {
+    _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'ul', {
       className: BASE_CLASS + '_options',
       inside:    _fieldsetDom
     } );
@@ -3520,12 +3520,12 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     for ( let i = 0, len = _options.length; i < len; i++ ) {
       option = _options[i];
       optionId = _getOptionId( option );
-      const optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'li', {
+      const optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'li', {
         'data-option': option.value,
         'class': 'm-form-field m-form-field__checkbox'
       } );
 
-      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'input', {
+      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'input', {
         'id':      optionId,
         // Type must come before value or IE fails
         'type':    'checkbox',
@@ -3537,7 +3537,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
         'data-index': i
       } );
 
-      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'label', {
+      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'label', {
         'for':         optionId,
         'textContent': option.text,
         'className':   BASE_CLASS + '_label a-label',
@@ -3565,11 +3565,11 @@ function Multiselect( element ) { // eslint-disable-line max-statements
    */
   function _createSelectedItem( selectionsDom, option ) {
     const optionId = _getOptionId( option );
-    const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'li', {
+    const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'li', {
       'data-option': option.value
     } );
 
-    const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.default.create( 'button', {
+    const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'button', {
       type: 'button',
       innerHTML: '<label for=' + optionId + '>' +
                  option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5___default()) + '</label>',
@@ -3906,7 +3906,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   this.expand = expand;
   this.collapse = collapse;
 
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__.default();
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
   this.addEventListener = eventObserver.addEventListener;
   this.removeEventListener = eventObserver.removeEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
@@ -4237,12 +4237,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Table = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__.default.extend( {
+const Table = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__["default"].extend( {
   ui: {
     base: '.o-table'
   },
 
-  modifiers: [ _TableSortable_js__WEBPACK_IMPORTED_MODULE_2__.default, _TableRowLinks_js__WEBPACK_IMPORTED_MODULE_1__.default ]
+  modifiers: [ _TableSortable_js__WEBPACK_IMPORTED_MODULE_2__["default"], _TableRowLinks_js__WEBPACK_IMPORTED_MODULE_1__["default"] ]
 } );
 
 Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_3__.DIRECTIONS;
@@ -4636,8 +4636,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__.default.init();
-_sidebar_js__WEBPACK_IMPORTED_MODULE_10__.default.init();
+_redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+_sidebar_js__WEBPACK_IMPORTED_MODULE_10__["default"].init();
 var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())(); // Add anchors to all headings (except page title headings)
 
 anchors.add('h2:not(.title), h3, h4, h5'); // Ensure there are no anchors in inconvenient places
@@ -4646,25 +4646,25 @@ anchors.remove("\n  .a-live_code h2,\n  .a-live_code h3,\n  .a-live_code h4,\n  
 var multiselectDom = document.querySelector('.o-multiselect');
 
 if (multiselectDom) {
-  var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__.default(multiselectDom);
+  var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__["default"](multiselectDom);
   multiselect.init();
 }
 
-_cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__.default.init();
-_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__.default.init(); // Exporting these classes to the window so that the transition-patterns.md
+_cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__["default"].init();
+_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__["default"].init(); // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.
 
-window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__.default;
-window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__.default;
-window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__.default; // Tabs show under the show/hide details button on a pattern.
+window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__["default"];
+window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__["default"];
+window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__["default"]; // Tabs show under the show/hide details button on a pattern.
 
-var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_8__.default.BASE_CLASS));
+var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_8__["default"].BASE_CLASS));
 
 if (tabsContainerDom.length > 0) {
   var tabsInst;
 
   for (var i = 0, len = tabsContainerDom.length; i < len; i++) {
-    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_8__.default(tabsContainerDom[i]);
+    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_8__["default"](tabsContainerDom[i]);
     tabsInst.init();
   }
 }

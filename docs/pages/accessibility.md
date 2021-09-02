@@ -1,7 +1,7 @@
 ---
 title: Accessibility
 layout: variation
-section: null
+section: guidelines
 description: >-
   The following four principles, as defined by the W3C®, lay the foundation for
   ensuring that web content is available for all users, including users with

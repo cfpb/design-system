@@ -12,8 +12,9 @@ target_dir="docs/_site/design-system/"
 
 cd "$GITHUB_WORKSPACE"
 
-git branch -d "$target_branch"
 git fetch "$remote_name" "$target_branch"
+git checkout "$target_branch"
+git checkout "$main_branch"
 
 # Mount the github pages branch as a subdirectory
 # See http://sangsoonam.github.io/2019/02/08/using-git-worktree-to-deploy-github-pages.html

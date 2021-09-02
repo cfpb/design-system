@@ -62,7 +62,7 @@
     <section class="o-variation-group" id="{{ variation_group.variation_group_name | slugify }}">
 
         {% if variation_group.variation_group_name and variation_group.variation_group_name != '' %}
-        <h2 class="o-variation-group-title">
+        <h2 class="o-variation-group_title">
             {{ variation_group.variation_group_name }}
         </h2>
         {% else %}
@@ -74,7 +74,7 @@
         {% endif %}
 
         {% if variation_group.variation_group_description %}
-        <div class="o-variation-group-description">
+        <div class="o-variation-group_description">
             {{ variation_group.variation_group_description | markdownify }}
         </div>
         {% endif %}

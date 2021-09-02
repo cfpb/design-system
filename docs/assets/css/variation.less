@@ -2,22 +2,7 @@
    Variation page template
    ========================================================================== */
 
-.t-variation {
-    .m-slug-header__warning {
-        .a-heading {
-            border-top: 5px solid @red;
-        }
-    }
-    .content_main {
-        .content_line__wide {
-            .respond-to-min( @bp-med-min, {
-                margin-left: -30px;
-            } );
-        }
-    }
-}
-
-.o-variation_group {
+.o-variation-group {
     border: 5px solid @gray-10;
     margin: 2rem 0;
 
@@ -60,16 +45,6 @@
     &:last-child {
         border-bottom: 0;
         padding-bottom: 1rem;
-    }
-}
-
-// Override the stripes that appear in responsive tables
-.variation-code-specs {
-    table {
-        border: none;
-    }
-    td {
-        background-color: @white;
     }
 }
 

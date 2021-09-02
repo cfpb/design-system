@@ -105,6 +105,9 @@ first-level:
           - page: Variables
   - heading: Guidelines
     second-level:
+      - heading: Accessibility
+        nav-items:
+          - page: Accessibility
       - heading: Data visualization
         nav-items:
           - page: Data visualization guidelines
@@ -114,7 +117,4 @@ first-level:
       - heading: Print
         nav-items:
           - page: Print styles
-      - heading: Accessibility
-        nav-items:
-          - page: Accessibility
     nav-items: []

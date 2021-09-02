@@ -16,8 +16,6 @@ jobs:
           with:
             ruby-version: '2.7.1'
         - uses: actions/checkout@v2.3.4
-          with:
-            ref: 'gh-pages'
         - run: ./scripts/update-gh-pages.sh
           env:
             GITHUB_TOKEN: ${{ secrets.github_token }}

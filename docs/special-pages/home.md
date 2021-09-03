@@ -25,7 +25,7 @@ description: >-
   ## Getting started
 
 
-  Our [general principles](https://cfpb.github.io/design-system/general-principles) form the strategic underpinnings for the CFPB’s design and development standards. Our [accessibility principles](https://cfpb.github.io/design-system/accessibility) lay the foundation for ensuring that our web content is available for all users. 
+  Our [general principles](https://cfpb.github.io/design-system/general-principles) form the strategic underpinnings for the CFPB’s design and development standards. Our [accessibility principles](https://cfpb.github.io/design-system/guidelines/accessibility) lay the foundation for ensuring that our web content is available for all users. 
 
 
   <br>

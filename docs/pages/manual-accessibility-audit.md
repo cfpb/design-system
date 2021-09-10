@@ -7,8 +7,14 @@ description: "Oh hai "
 variation_groups:
   - variations:
       - variation_is_deprecated: false
-        variation_name: Manual accessibility audit
-        variation_description: Here's the description
+        variation_name: ""
+        variation_description: ""
+    variation_group_name: CFPB manual accessibility audit
+    variation_group_description: "The manual audit picks up issues that the
+      automated audit will not. Prioritize using the manual audit for pages with
+      interactive elements, new patterns or components, custom code, or pages
+      that are not created with our CMS. "
+  - variation_group_name: Lighthouse automated audit
 use_cases: ""
 guidelines: >-
   
@@ -94,7 +100,7 @@ guidelines: >-
   ### What to do with this scale
 
 
-  - When entering the usability impact and page/functionality type into the [Web Accessibility Audit Log]( LINK? ), the severity rating will be calculated automatically for you.
+  - When entering the usability impact and page/functionality type into the [Web Accessibility Audit Log] ( LINK? ), the severity rating will be calculated automatically for you.
 
   - If reporting an accessibility bug outside of the context of an audit, you can manually determine what the severity should be from the explanation above.
 

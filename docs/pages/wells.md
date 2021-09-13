@@ -19,11 +19,11 @@ variation_groups:
               <p>
                   Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
                   instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
-                  cu.
+                  cu. <a href="#">Example link</a>.
               </p>
           </div>
         variation_description: ""
-        variation_name: ""
+        variation_name: "Standard well"
         variation_specs: >-
           * Padding at breakpoints 601+: 30 (top), 30 (right) 60 (bottom), 30
           (left)
@@ -37,7 +37,18 @@ variation_groups:
           * Single column content only.
 
             ![Schematic of well showing padding ](/design-system/images/uploads/wells_style_mockup.png)
-    variation_group_name: Standard well
+      - variation_code_snippet: >-
+          <div class="o-well o-well__inkwell">
+              <p class="h4">Inkwell modifier</p>
+              <p>
+                  Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
+                  instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
+                  cu. <a href="#">Example link</a>.
+              </p>
+          </div>
+        variation_description: ""
+        variation_name: "Inkwell"
+    variation_group_name: Wells
 use_cases: >-
   Grey wells should be used to feature content or specific calls to action.
   They  will help visually set apart the content within it, so use sparingly to

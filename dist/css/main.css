@@ -3640,6 +3640,34 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type(1) h3,
     padding-right: 1.875em;
   }
 }
+.o-well__inkwell {
+  background-color: #43484e;
+  color: #ffffff;
+}
+.o-well__inkwell a {
+  color: #afd2f2;
+  border-color: #afd2f2;
+}
+.o-well__inkwell a:visited,
+.o-well__inkwell a.visited {
+  border-color: #b4d2d1;
+  color: #b4d2d1;
+}
+.o-well__inkwell a:hover,
+.o-well__inkwell a.hover {
+  border-color: #96c4ed;
+  color: #96c4ed;
+}
+.o-well__inkwell a:focus,
+.o-well__inkwell a.focus {
+  border-color: #afd2f2;
+  color: #afd2f2;
+}
+.o-well__inkwell a:active,
+.o-well__inkwell a.active {
+  border-color: #b3c0d9;
+  color: #b3c0d9;
+}
 /* ==========================================================================
    Design System
    Button Styling

@@ -66,7 +66,7 @@ function MultiselectModel( options, name ) {
     let isChecked = false;
     for ( let i = 0, len = list.length; i < len; i++ ) {
       item = list[i];
-      isChecked = item.defaultSelected;
+      isChecked = isAtMaxSelections() ? false : item.defaultSelected;
       cleaned.push( {
         id:      _getOptionId( item ),
         value:   item.value,

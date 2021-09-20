@@ -126,12 +126,12 @@ variation_groups:
               </label>
               <select class="o-multiselect" id="test_select__multiple" multiple>
                   <option value="option1" selected>Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
+                  <option value="option2" selected>Option 2</option>
+                  <option value="option3" selected>Option 3</option>
                   <option value="option4">Option 4</option>
-                  <option value="option5">Option 5</option>
-                  <option value="option6">Option 6</option>
-                  <option value="option7">Option 7</option>
+                  <option value="option5" selected>Option 5</option>
+                  <option value="option6" selected>Option 6</option>
+                  <option value="option7" selected>Option 7</option>
                   <option value="option8">Multiselect options can also contain long words that will be wrapped like supercalifragilisticexpialidocious</option>
               </select>
           </div>

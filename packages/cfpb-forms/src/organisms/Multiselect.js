@@ -84,8 +84,8 @@ function Multiselect( element ) { // eslint-disable-line max-statements
     _options = _dom.options || [];
 
     if ( _options.length > 0 ) {
-      const newDom = _populateMarkup();
       _model = new MultiselectModel( _options, _name ).init();
+      const newDom = _populateMarkup();
 
       /* Removes <select> element,
          and re-assign DOM reference. */
@@ -165,16 +165,23 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       'aria-hidden': 'true'
     } );
 
+    let optionsClasses = BASE_CLASS + '_options';
+    if ( _model.isAtMaxSelections() ) {
+      optionsClasses += ' u-max-selections';
+    }
+
     _optionsDom = MultiselectUtils.create( 'ul', {
-      className: BASE_CLASS + '_options',
+      className: optionsClasses,
       inside:    _fieldsetDom
     } );
 
     let option;
     let optionId;
+    let isChecked;
     for ( let i = 0, len = _options.length; i < len; i++ ) {
       option = _options[i];
       optionId = _getOptionId( option );
+      isChecked = _model.getOption( i ).checked;
       const optionsItemDom = MultiselectUtils.create( 'li', {
         'data-option': option.value,
         'class': 'm-form-field m-form-field__checkbox'
@@ -188,7 +195,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
         'name':    _name,
         'class':   CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
         'inside':  optionsItemDom,
-        'checked': option.defaultSelected,
+        'checked': isChecked,
         'data-index': i
       } );
 
@@ -202,7 +209,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       _optionItemDoms.push( optionsItemDom );
       _optionsDom.appendChild( optionsItemDom );
 
-      if ( option.defaultSelected ) {
+      if ( isChecked ) {
         _createSelectedItem( _selectionsDom, option );
       }
     }

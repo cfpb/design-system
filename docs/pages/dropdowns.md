@@ -126,7 +126,7 @@ variation_groups:
               </label>
               <select class="o-multiselect" id="test_select__multiple" multiple>
                   <option value="option1" selected>Option 1</option>
-                  <option value="option2" selected>Option 2</option>
+                  <option value="option2">Option 2</option>
                   <option value="option3">Option 3</option>
                   <option value="option4" selected>Option 4</option>
                   <option value="option5">Option 5</option>

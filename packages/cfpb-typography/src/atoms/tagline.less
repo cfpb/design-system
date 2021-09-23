@@ -1,24 +1,52 @@
 .a-tagline {
-    padding-left: 32px; // 22px flag + 10px spacing.
-    background: url('/static/img/us-flag_22x13.png') no-repeat 0 0;
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    grid-column-gap: 10px;
 
-    // Breakpoint to wrap United States government.
-    .respond-to-max( 375px, {
-        max-width: 170px;
-    } );
+    // This'll target the USA flag.
+    & > *:first-child {
+        margin-top: 1px;
+    }
 
-    .respond-to-dpi( 2, {
-        background-image: url( '/static/img/us-flag_44x26.png' );
-        background-size: 22px;
-    } );
+    &_usa {
+        white-space: nowrap;
+    }
+
+    font-size: unit( 12px / @base-font-size-px, rem );
 
     &__large {
-      padding-left: 37px; // 22px flag + 15px spacing.
-      background: url( '/static/img/us-flag_22x13.png' ) no-repeat 0 4px;
 
-      // Breakpoint to wrap United States government.
-      .respond-to-max( 475px, {
-          max-width: 220px;
-      } );
+        // This'll target the USA flag.
+        & > *:first-child {
+            margin-top: 4px;
+        }
+
+        font-size: unit( 16px / @base-font-size-px, rem );
     }
+
+    &__xlarge {
+
+        // This'll target the USA flag.
+        & > *:first-child {
+            margin-top: 4px;
+        }
+
+        font-size: unit( 18px / @base-font-size-px, rem );
+    }
+
+    // Mobile size.
+    .respond-to-max( @bp-xs-max, {
+        grid-template-columns: initial;
+        grid-template-rows: 22px 1fr;
+        grid-row-gap: 5px;
+    } );
+}
+
+.u-usa-flag {
+    display: inline-block;
+    width: 22px;
+    height: 13px;
+    // 44px x 26px USA flag.
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAaCAMAAAD7eU6DAAAANlBMVEX///8wVIwALXIgR4RAYpVQb54QOnuPo8FgfKff5e2fsMq/y9yAlrlwibDP2OWvvdPv8vbRQSQsE6tbAAAAwUlEQVR4Xu2QOW4EMRADh2Qfumf3/5+1sXDgRDIc2NGWglZQQYEXQRqJYHz9+NxxlUpdYB0clbjEWvYymYPeqS5250jy2qJiXlAcA69rRXvZV8QD0YdmDzwilh8zkr6oKi5nJrmXlUIKE4YJJZSHDLSIDmVRSalHNOxl8m587SfWwnafMqyHdeh2eQt0i26H5gIMebHP5xrAaTqy5beMbORpZ6qCa3IuooqnnWXkDBoIY0zStJf/jucv+FH+/+Z38wfEmiRRi4t/+wAAAABJRU5ErkJggg==);
+    background-size: contain;
 }

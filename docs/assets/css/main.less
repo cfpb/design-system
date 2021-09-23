@@ -82,14 +82,11 @@ details[open] summary:after {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 30px;
-}
 
-// Adjust eyebrow width to account for USA flag in the background.
-.m-global-eyebrow {
-    padding-left: 30px;
-    & .a-tagline {
-        max-width: 1140px;
-    }
+    // Mobile size.
+    .respond-to-max( @bp-xs-max, {
+        padding: 0;
+    } );
 }
 
 main {

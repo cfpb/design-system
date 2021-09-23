@@ -1,25 +1,38 @@
-.u-card-link-text() {
+// @c = default state.
+// @v = `:visited` state.
+// @h = `:hover` state.
+// @f = `:focus` state.
+// @a = `:active` state.
+.u-link-card__colors( @c, @v, @h, @f, @a ) {
     .m-card_footer > span {
         display: inline;
         border-width: 0;
         border-bottom-width: 1px;
-        border-color: @pacific;
+        border-color: @c;
         border-style: dotted;
         font-weight: 500;
-        color: @pacific;
+        color: @c;
         text-decoration: none;
     }
 
     & > a:visited .m-card_footer > span {
-        color: @teal;
-        border-color: @teal !important;
+        color: @v;
+        border-color: @v !important;
     }
 
-    &:hover {
-        .m-card_footer > span {
-            border-style: solid;
-            color: @pacific-dark;
-        }
+    &:hover .m-card_footer > span {
+        border-style: solid;
+        color: @h;
+    }
+
+    & > a:focus .m-card_footer > span {
+        color: @f;
+        border-color: @f !important;
+    }
+
+    & > a:active .m-card_footer > span {
+        color: @a;
+        border-color: @a !important;
     }
 }
 
@@ -188,7 +201,9 @@
 
             .u-card-bottom-bar();
         }
-        .u-card-link-text();
+
+        // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+        .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific-dark, @pacific-dark );
     }
 
     &__topic-action {
@@ -245,7 +260,9 @@
 
             .u-card-bottom-bar();
         }
-        .u-card-link-text();
+
+        // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+        .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific-dark, @pacific-dark );
     }
 
     // Highlight cards.
@@ -272,6 +289,7 @@
             .u-card-bottom-bar();
         }
 
-        .u-card-link-text();
+        // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+        .u-link-card__colors( @pacific-mid-dark, @teal-mid-dark, @pacific-dark, @pacific-dark, @pacific-dark );
     }
 }

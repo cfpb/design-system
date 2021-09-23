@@ -237,7 +237,7 @@ variation_groups:
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
                       <p class="h1 m-hero_heading">
-                      50 chars max for a two-line heading
+                          50 chars max for a two-line heading
                       </p>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.

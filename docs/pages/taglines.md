@@ -12,8 +12,8 @@ variation_groups:
           <div class="a-tagline">
               <span class="u-usa-flag"></span>
               <div>
-                An official website of the
-                <span class="u-nowrap">United States government</span>
+                  An official website of the
+                  <span class="u-nowrap">United States government</span>
               </div>
           </div>
         variation_description: ""
@@ -27,8 +27,8 @@ variation_groups:
           <div class="a-tagline a-tagline__large">
               <span class="u-usa-flag"></span>
               <div>
-                An official website of the
-                <span class="u-nowrap">United States government</span>
+                  An official website of the
+                  <span class="u-nowrap">United States government</span>
               </div>
           </div>
         variation_description: ""

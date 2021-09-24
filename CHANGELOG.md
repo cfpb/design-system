@@ -1,5 +1,5 @@
 
-## v0.9.1 (2021-09-24)
+## v0.11.0 (2021-09-24)
 
 #### Enhancement
 * `cfpb-core`, `cfpb-layout`, `cfpb-typography`
@@ -25,7 +25,7 @@
 
 
 
-## v0.9.1 (2021-09-02)
+## v0.10.0 (2021-09-02)
 
 #### Enhancement
 * `cfpb-layout`

@@ -13,7 +13,7 @@ variation_groups:
               <span class="u-usa-flag"></span>
               <div>
                 An official website of the
-                <span class="a-tagline_usa">United States government</span>
+                <span class="u-nowrap">United States government</span>
               </div>
           </div>
         variation_description: ""
@@ -28,13 +28,14 @@ variation_groups:
               <span class="u-usa-flag"></span>
               <div>
                 An official website of the
-                <span class="a-tagline_usa">United States government</span>
+                <span class="u-nowrap">United States government</span>
               </div>
           </div>
         variation_description: ""
         variation_implementation: >-
-          The `a-tagline_usa` container prevents wrapping of the
-          "United States government" text.
+          The `u-nowrap` container prevents wrapping of the
+          "United States government" text. If the content of the tagline
+          contains markup it needs to go inside a generic `div` container.
       - variation_name: "Extra large tagline"
         variation_code_snippet: >-
           <div class="a-tagline a-tagline__xlarge">

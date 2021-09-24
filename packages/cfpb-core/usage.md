@@ -365,6 +365,14 @@ for more information._
 </div>
 ```
 
+#### No wrapping across line breaks
+
+Prevents a sentence from being broken across two lines.
+
+```
+<div class="u-nowrap"></div>
+```
+
 #### Margin utilities
 
 Force a `margin` top or bottom on an element in pixels.

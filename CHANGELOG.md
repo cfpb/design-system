@@ -1,6 +1,17 @@
 
 ## v0.11.0 (2021-09-24)
 
+#### Bug Fix
+* `cfpb-typography`
+  * [#1303](https://github.com/cfpb/design-system/pull/1303) Taglines: Fix quoting on data URI ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
+## v0.11.0 (2021-09-24)
+
 #### Enhancement
 * `cfpb-core`, `cfpb-layout`, `cfpb-typography`
   * [#1301](https://github.com/cfpb/design-system/pull/1301) Add taglines component ([@anselmbradford](https://github.com/anselmbradford))

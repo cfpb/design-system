@@ -1,25 +1,44 @@
-.u-card-link-text() {
+// @c = default state.
+// @v = `:visited` state.
+// @h = `:hover` state.
+// @f = `:focus` state.
+// @a = `:active` state.
+.u-link-card__colors( @c, @v, @h, @f, @a ) {
     .m-card_footer > span {
         display: inline;
         border-width: 0;
         border-bottom-width: 1px;
-        border-color: @pacific;
+        border-color: @c;
         border-style: dotted;
         font-weight: 500;
-        color: @pacific;
+        color: @c;
         text-decoration: none;
     }
 
     & > a:visited .m-card_footer > span {
-        color: @teal;
-        border-color: @teal !important;
+        border-color: @v;
+        color: @v;
     }
 
-    &:hover {
-        .m-card_footer > span {
-            border-style: solid;
-            color: @pacific-dark;
-        }
+    // Border changes on the regular cards happen on the top-level `article`
+    // element, so for consistency we trigger the hover styles on the parent
+    // instead of on the link. This differs from the visited, focus,
+    // and active states, which add styles onto the link.
+    &:hover .m-card_footer > span {
+        border-style: solid;
+        border-color: @h;
+        color: @h;
+    }
+
+    & > a:focus .m-card_footer > span {
+        border-color: @f;
+        color: @f;
+    }
+
+    & > a:active .m-card_footer > span {
+        border-color: @a;
+        border-style: solid;
+        color: @a;
     }
 }
 
@@ -189,7 +208,9 @@
 
             .u-card-bottom-bar();
         }
-        .u-card-link-text();
+
+        // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+        .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific-dark, @pacific-dark );
     }
 
     &__topic-action {
@@ -246,7 +267,9 @@
 
             .u-card-bottom-bar();
         }
-        .u-card-link-text();
+
+        // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+        .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific, @navy );
     }
 
     // Highlight cards.
@@ -273,6 +296,7 @@
             .u-card-bottom-bar();
         }
 
-        .u-card-link-text();
+        // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+        .u-link-card__colors( @pacific-mid-dark, @teal-mid-dark, @pacific-dark, @pacific-mid-dark, @navy );
     }
 }

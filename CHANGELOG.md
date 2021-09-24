@@ -1,4 +1,30 @@
 
+## v0.9.1 (2021-09-24)
+
+#### Enhancement
+* `cfpb-core`, `cfpb-layout`, `cfpb-typography`
+  * [#1301](https://github.com/cfpb/design-system/pull/1301) Add taglines component ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-layout`
+  * [#1282](https://github.com/cfpb/design-system/pull/1282) Add inkwell organism ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-layout`
+  * [#1302](https://github.com/cfpb/design-system/pull/1302) Cards: Make highlight card colors accessible ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1297](https://github.com/cfpb/design-system/pull/1297) Cards: Set a white background on topic cards ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-forms`
+  * [#1296](https://github.com/cfpb/design-system/pull/1296) Fix multiselect infinite selections bug ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1298](https://github.com/cfpb/design-system/pull/1298) Update core-js, marked, netlify-cms, babel/core, babel/plugin-proposal-object-rest-spread, babel/preset-env, wdio/cli, wdio/local-runner, wdio/mocha-framework, wdio/sauce-service, wdio/spec-reporter, autoprefixer, chromedriver, http-server, jest, jest-cli, mini-css-extract-plugin, svgo, terser-webpack-plugin, webpack, css-loader, style-loader ([@anselmbradford](https://github.com/anselmbradford))
+* [#1287](https://github.com/cfpb/design-system/pull/1287) Update dependencies: core-js, mini-css-extract-plugin, terser-webpack-plugin, webpack ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+- [@brandon-rusk](https://github.com/brandon-rusk)
+
+
+
 ## v0.9.1 (2021-09-02)
 
 #### Enhancement

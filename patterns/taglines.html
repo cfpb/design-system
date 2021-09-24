@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Carousel - CFPB Design System</title>
+  <title>Taglines - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -284,7 +284,7 @@
         <section>
 
     <h1 class="component-header u-mb30">
-        Carousel
+        Taglines
     </h1>
 
     
@@ -298,23 +298,7 @@
     <ul class="m-list m-list__horizontal m-list__horizontal-spaced">
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#types">Types</a>
-        </li>
-        
-        <li class="m-list_item">
             <a class="m-list_link" href="#use-cases">Use cases</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#guidelines">Guidelines</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#research">Research</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#related-items">Related items</a>
         </li>
         
     </ul>
@@ -322,21 +306,18 @@
 
     
     <section id="description" class="u-mb30">
-        <p>A carousel, otherwise known as a slideshow or image slider, allows multiple pieces of content to occupy high value real estate at the top of a landing page. From, <a href="https://web.archive.org/web/20191210233347/https://www.consumerfinance.gov/">December 2019</a> to <a href="https://web.archive.org/web/20210201004337/https://www.consumerfinance.gov/">February 2021</a>, CFPB’s homepage featured a carousel.</p>
-
-<p>Carousels offer poor usability and are considered an <a href="https://thegood.com/insights/ecommerce-image-carousels/">anti-pattern</a>. Their use is discouraged.</p>
+        <p>Taglines are short paragraphs of text with a USA flag to their left.</p>
 
     </section>
     
 
     
     
-    <section class="o-variation-group" id="types">
+    <section class="o-variation-group" id="">
 
         
-        <h2 class="o-variation-group_title">
-            Types
-        </h2>
+        
+        <div class="u-mb15"></div>
         
 
         
@@ -352,7 +333,7 @@
             
             <div class="m-variation_name">
                 <h3>
-                    Standard carousel
+                    Standard tagline
                     
                 </h3>
             </div>
@@ -360,16 +341,22 @@
 
             
             <div class="m-variation_description">
-                <p>The standard carousel organism is comprised of a set of blocks of content that can be navigated through sequentially. Each content item includes a title, description, link and image.</p>
-
-<p><img src="/design-system/images/uploads/carousel.gif" alt="CFPB carousel"></p>
-
-<p>Unlike other carousel patterns, CFPB’s carousel does not automatically progress through its items. A user must either click the previous/next arrow or select one of the thumbnail previews at the bottom of the component.</p>
+                
 
             </div>
             
 
             <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="a-tagline">
+    <span class="u-usa-flag"></span>
+    <div>
+        An official website of the
+        <span class="u-nowrap">United States government</span>
+    </div>
+</div>
+            </div>
             
 
             
@@ -380,17 +367,23 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-standard-carousel-the-standard-c-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-standard-carousel-the-standard-c-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-standard-tagline-div-class-a-tag-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-standard-tagline-div-class-a-tag-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-standard-carousel-the-standard-c-1">
+            <div class="m-tabs u-hidden" id="details-standard-tagline-div-class-a-tag-1">
                 <ul class="m-tabs_list">
+                    
+                    <li class="m-tabs_list-item m-tabs_list-item-selected">
+                        <a class="m-tabs_tab" href="#details-standard-tagline-div-class-a-tag-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
                     
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-standard-carousel-the-standard-c-implementation-1">
+                        <a class="m-tabs_tab" href="#details-standard-tagline-div-class-a-tag-implementation-1">
                             Implementation
                         </a>
                     </li>
@@ -400,31 +393,248 @@
 
                 <!-- HTML snippet -->
                 
+                <section class="m-tabs_panel" id="details-standard-tagline-div-class-a-tag-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="a-tagline"&gt;
+    &lt;span class="u-usa-flag"&gt;&lt;/span&gt;
+    &lt;div&gt;
+        An official website of the
+        &lt;span class="u-nowrap"&gt;United States government&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
 
                 <!-- Jinja snippet -->
                 
 
                 <!-- Implementation details -->
                 
-                <section class="m-tabs_panel" id="details-standard-carousel-the-standard-c-implementation-1">
+                <section class="m-tabs_panel" id="details-standard-tagline-div-class-a-tag-implementation-1">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
-                            <p>CFPB’s front-end carousel code consisted of the following elements:</p>
+                            <p>The flag itself is a stand-alone element of <code class="language-plaintext highlighter-rouge">&lt;span class="u-usa-flag"&gt;&lt;/span&gt;</code> that uses a utility class that embeds a double-resolution flag png via a data URI.</p>
 
-<ul>
-  <li><a href="https://github.com/cfpb/consumerfinance.gov/blob/1afe8171c17365bb6bad889e3e034877c0bed5d3/cfgov/jinja2/v1/_includes/organisms/carousel.html">Carousel organism HTML</a></li>
-  <li><a href="https://github.com/cfpb/consumerfinance.gov/blob/1afe8171c17365bb6bad889e3e034877c0bed5d3/cfgov/unprocessed/js/organisms/Carousel.js">Carousel JavaScript</a></li>
-  <li><a href="https://github.com/cfpb/consumerfinance.gov/blob/1afe8171c17365bb6bad889e3e034877c0bed5d3/cfgov/unprocessed/css/organisms/carousel.less">Carousel Less</a></li>
-</ul>
+                        </div>
+                    </div>
+                </section>
+                
 
-<p>On the back-end, the carousel items were managed via Wagtail:</p>
+                <!-- Specs -->
+                
 
-<ul>
-  <li><a href="https://github.com/cfpb/consumerfinance.gov/blob/1afe8171c17365bb6bad889e3e034877c0bed5d3/cfgov/v1/models/home_page.py#L31-L120">HomePage model</a></li>
-</ul>
+            </div>
+            
 
-<p>See <a href="https://github.com/cfpb/consumerfinance.gov/pull/6290/files">cf.gov PR#6290</a> for a list of all carousel files.</p>
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>
+                    Large tagline
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="a-tagline a-tagline__large">
+    <span class="u-usa-flag"></span>
+    <div>
+        An official website of the
+        <span class="u-nowrap">United States government</span>
+    </div>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-large-tagline-div-class-a-taglin-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-large-tagline-div-class-a-taglin-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-large-tagline-div-class-a-taglin-2">
+                <ul class="m-tabs_list">
+                    
+                    <li class="m-tabs_list-item m-tabs_list-item-selected">
+                        <a class="m-tabs_tab" href="#details-large-tagline-div-class-a-taglin-html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#details-large-tagline-div-class-a-taglin-implementation-2">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs_panel" id="details-large-tagline-div-class-a-taglin-html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="a-tagline a-tagline__large"&gt;
+    &lt;span class="u-usa-flag"&gt;&lt;/span&gt;
+    &lt;div&gt;
+        An official website of the
+        &lt;span class="u-nowrap"&gt;United States government&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs_panel" id="details-large-tagline-div-class-a-taglin-implementation-2">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>The <code class="language-plaintext highlighter-rouge">u-nowrap</code> container prevents wrapping of the “United States government” text. If the content of the tagline contains markup it needs to go inside a generic <code class="language-plaintext highlighter-rouge">div</code> container.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>
+                    Extra large tagline
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="a-tagline a-tagline__xlarge">
+    <span class="u-usa-flag"></span>
+    We're a government agency whose mission is to protect consumers
+    from financial harm.
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-extra-large-tagline-div-class-a--3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-extra-large-tagline-div-class-a--3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-extra-large-tagline-div-class-a--3">
+                <ul class="m-tabs_list">
+                    
+                    <li class="m-tabs_list-item m-tabs_list-item-selected">
+                        <a class="m-tabs_tab" href="#details-extra-large-tagline-div-class-a--html-code-snippet-3">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#details-extra-large-tagline-div-class-a--implementation-3">
+                            Implementation
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs_panel" id="details-extra-large-tagline-div-class-a--html-code-snippet-3">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="a-tagline a-tagline__xlarge"&gt;
+    &lt;span class="u-usa-flag"&gt;&lt;/span&gt;
+    We're a government agency whose mission is to protect consumers
+    from financial harm.
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+                <section class="m-tabs_panel" id="details-extra-large-tagline-div-class-a--implementation-3">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>A <code class="language-plaintext highlighter-rouge">div</code> container around the tagline is not needed if there is no markup inside the content.</p>
 
                         </div>
                     </div>
@@ -452,35 +662,11 @@
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<h3 id="when-to-use">When to use</h3>
-
-<ul>
-  <li>Never.</li>
-</ul>
-
-<h3 id="when-other-options-are-better">When other options are better</h3>
-
-<ul>
-  <li>Always.</li>
-</ul>
+<p>Taglines are used in the header and footer across consumerfinance.gov and within inkwells.</p>
 
                 
             
 
-            
-                <h2 id="guidelines">Guidelines</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<h3 id="content-guidelines">Content guidelines</h3>
-
-<ul>
-  <li>Carousel item titles should be as succinct as possible, 45 characters maximum (including spaces). Sentence case, unless proper noun.</li>
-  <li>Item descriptions should be 140 characters maximum (including spaces).</li>
-  <li>Item link text has a 30 character maximum limit (including spaces). Lead with a verb, and be specific.</li>
-</ul>
-
-                
             
 
             
@@ -491,40 +677,9 @@
 
     
 
-    
-        <section class="sticky-header u-mb45">
-            <h2 id="research">Research</h2>
-            <div class="content_line content_line__wide u-mb20"></div>
-            <p>
-                </p>
-<p>There is a plethora of research discouraging the use of carousels on websites:</p>
-
-<ul>
-  <li><a href="https://www.nngroup.com/articles/designing-effective-carousels/">Carousel Usability: Designing an Effective UI for Websites with Content Overload</a></li>
-  <li><a href="https://cxl.com/blog/dont-use-automatic-image-sliders-or-carousels/">Image Carousels and Sliders? Don’t Use Them.</a></li>
-  <li><a href="https://sitecare.com/blog/its-time-to-kill-the-website-image-carousel/">It’s Time to Kill the Website Image Carousel</a></li>
-</ul>
-
-
-            
-        </section>
     
 
     <div class="content-l u-mb45">
-        
-        <div class="content-l_col content-l_col-1-2">
-            <div>
-                <section>
-                    <h2 id="related-items">Related Items</h2>
-                    <div class="content_line__wide content_line content_line u-mb20"></div>
-                    <ul>
-  <li><a href="https://cfpb.github.io/design-system/patterns/heroes">Heroes</a></li>
-  <li><a href="https://cfpb.github.io/design-system/patterns/featured-content-module">Featured content module</a></li>
-</ul>
-
-                </section>
-            </div>
-        </div>
         
     </div>
 <!-- .content-l -->
@@ -545,7 +700,7 @@
         
 
         <div class="o-editor_link" id="edit-page">
-            <a class="a-btn" href="/design-system/updating-this-website?page=Carousel" title="Edit this page in Netlify CMS">
+            <a class="a-btn" href="/design-system/updating-this-website?page=Taglines" title="Edit this page in Netlify CMS">
                 <span class="a-btn_text">Edit page</span>
                 <span class="a-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 15 19" class="cf-icon-svg"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.111 1.111 0 0 1 0-1.567l1.8-1.8a1.112 1.112 0 0 1 1.568 0zm7.926 11.565a.456.456 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.294 1.294 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.278 1.278 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a1.962 1.962 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg></span>
             </a>
@@ -567,7 +722,7 @@
                 If you see something wrong or missing,
                 <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
                 If you can’t make those changes yourself,
-                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Carousel%3A+Add+issue+description">file an issue</a>.
+                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Taglines%3A+Add+issue+description">file an issue</a>.
                 If you have a substantial change to an existing page, or a new standard you want to add,
                 <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
             </small>
@@ -580,7 +735,7 @@
                 
                 
                 
-                <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/carousel.md">
+                <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/taglines.md">
                     <time datetime="2021-09-24 15:24:34 -0400">
                          3:24:34 PM Sep 24, 2021
                     </time>

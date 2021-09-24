@@ -28,7 +28,11 @@
 
   <div class="m-global-eyebrow">
     <div class="a-tagline">
-        An official website of the United States government
+        <span class="u-usa-flag"></span>
+        <div>
+            An official website of the
+            <span class="u-nowrap">United States government</span>
+        </div>
     </div>
 </div>
 
@@ -6064,6 +6068,61 @@ Note: While th elements normally only contain raw text, they may sometimes conta
         
         
 
+        'patterns-taglines': {
+
+            // Cycle through the variation fields of this page.
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Standard tagline',
+                    'variation_description1': "\n",
+                    'variation_code_snippet1': `&lt;div class=&quot;a-tagline&quot;&gt;
+    &lt;span class=&quot;u-usa-flag&quot;&gt;&lt;/span&gt;
+    &lt;div&gt;
+        An official website of the
+        &lt;span class=&quot;u-nowrap&quot;&gt;United States government&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name2': 'Large tagline',
+                    'variation_description2': "\n",
+                    'variation_code_snippet2': `&lt;div class=&quot;a-tagline a-tagline__large&quot;&gt;
+    &lt;span class=&quot;u-usa-flag&quot;&gt;&lt;/span&gt;
+    &lt;div&gt;
+        An official website of the
+        &lt;span class=&quot;u-nowrap&quot;&gt;United States government&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name3': 'Extra large tagline',
+                    'variation_description3': "\n",
+                    'variation_code_snippet3': `&lt;div class=&quot;a-tagline a-tagline__xlarge&quot;&gt;
+    &lt;span class=&quot;u-usa-flag&quot;&gt;&lt;/span&gt;
+    We&#39;re a government agency whose mission is to protect consumers
+    from financial harm.
+&lt;/div&gt;`,
+                
+            
+
+
+            'title': 'Taglines',
+            'description': "Taglines are short paragraphs of text with a USA flag to their left.\n",
+            'use_cases': "Taglines are used in the header and footer across consumerfinance.gov and within inkwells.\n",
+            'guidelines': "\n",
+            'behavior': "\n",
+            'accessibility': "\n",
+            'research': "\n",
+            'related_items': "\n",
+            'url': 'patterns/taglines'
+        }
+        ,
+        
+
+        
+        
+
         'templates-index': {
 
             // Cycle through the variation fields of this page.
@@ -6622,6 +6681,12 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
                     'variation_description2': "\n",
                     'variation_code_snippet2': `&lt;div class=&quot;o-well o-well__inkwell&quot;&gt;
     &lt;p class=&quot;h4&quot;&gt;Inkwell modifier&lt;/p&gt;
+
+    &lt;div class=&quot;a-tagline a-tagline__xlarge&quot;&gt;
+        &lt;span class=&quot;u-usa-flag&quot;&gt;&lt;/span&gt;
+        This is a tagline inside an inkwell.
+    &lt;/div&gt;
+
     &lt;p&gt;
         Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
         instructior ex pri. Cu pri inani constituto, cum aeque noster commodo

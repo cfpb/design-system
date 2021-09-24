@@ -20,6 +20,10 @@
         color: @v;
     }
 
+    // Border changes on the regular cards happen on the top-level `article`
+    // element, so for consistency we trigger the hover styles on the parent
+    // instead of on the link. This differs from the visited, focus,
+    // and active states, which add styles onto the link.
     &:hover .m-card_footer > span {
         border-style: solid;
         border-color: @h;

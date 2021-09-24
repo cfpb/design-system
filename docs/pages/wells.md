@@ -40,6 +40,12 @@ variation_groups:
       - variation_code_snippet: >-
           <div class="o-well o-well__inkwell">
               <p class="h4">Inkwell modifier</p>
+
+              <div class="a-tagline a-tagline__xlarge">
+                  <span class="u-usa-flag"></span>
+                  This is a tagline inside an inkwell.
+              </div>
+
               <p>
                   Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
                   instructior ex pri. Cu pri inani constituto, cum aeque noster commodo

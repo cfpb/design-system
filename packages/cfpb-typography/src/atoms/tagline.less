@@ -1,0 +1,45 @@
+.a-tagline {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    grid-column-gap: 10px;
+
+    & .u-usa-flag {
+        margin-top: 1px;
+    }
+
+    font-size: unit( 12px / @base-font-size-px, rem );
+
+    &__large {
+
+        & .u-usa-flag {
+            margin-top: 4px;
+        }
+
+        font-size: unit( 16px / @base-font-size-px, rem );
+    }
+
+    &__xlarge {
+
+        & .u-usa-flag {
+            margin-top: 4px;
+        }
+
+        font-size: unit( 18px / @base-font-size-px, rem );
+    }
+
+    // Mobile size.
+    .respond-to-max( @bp-xs-max, {
+        grid-template-columns: initial;
+        grid-template-rows: 22px 1fr;
+        grid-row-gap: 5px;
+    } );
+}
+
+.u-usa-flag {
+    display: inline-block;
+    width: 22px;
+    height: 13px;
+    // 44px x 26px USA flag.
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAaCAMAAAD7eU6DAAAANlBMVEX///8wVIwALXIgR4RAYpVQb54QOnuPo8FgfKff5e2fsMq/y9yAlrlwibDP2OWvvdPv8vbRQSQsE6tbAAAAwUlEQVR4Xu2QOW4EMRADh2Qfumf3/5+1sXDgRDIc2NGWglZQQYEXQRqJYHz9+NxxlUpdYB0clbjEWvYymYPeqS5250jy2qJiXlAcA69rRXvZV8QD0YdmDzwilh8zkr6oKi5nJrmXlUIKE4YJJZSHDLSIDmVRSalHNOxl8m587SfWwnafMqyHdeh2eQt0i26H5gIMebHP5xrAaTqy5beMbORpZ6qCa3IuooqnnWXkDBoIY0zStJf/jucv+FH+/+Z38wfEmiRRi4t/+wAAAABJRU5ErkJggg==);
+    background-size: contain;
+}

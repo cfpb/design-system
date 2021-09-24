@@ -75,6 +75,7 @@ first-level:
               - page: Cards
               - page: Featured content module
               - page: Wells
+              - page: Taglines
           - heading: Main content
             nav-items:
               - page: Info unit groups

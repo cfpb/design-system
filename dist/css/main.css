@@ -3050,6 +3050,7 @@ a.a-heading__icon.active {
 .m-card__topic {
   text-align: center;
   width: 170px;
+  background: #ffffff;
 }
 .m-card__topic > a {
   border: 1px solid #d2d3d5;

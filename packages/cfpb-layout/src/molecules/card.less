@@ -16,23 +16,25 @@
     }
 
     & > a:visited .m-card_footer > span {
+        border-color: @v;
         color: @v;
-        border-color: @v !important;
     }
 
     &:hover .m-card_footer > span {
         border-style: solid;
+        border-color: @h;
         color: @h;
     }
 
     & > a:focus .m-card_footer > span {
+        border-color: @f;
         color: @f;
-        border-color: @f !important;
     }
 
     & > a:active .m-card_footer > span {
+        border-color: @a;
+        border-style: solid;
         color: @a;
-        border-color: @a !important;
     }
 }
 
@@ -262,7 +264,7 @@
         }
 
         // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-        .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific-dark, @pacific-dark );
+        .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific, @navy );
     }
 
     // Highlight cards.
@@ -290,6 +292,6 @@
         }
 
         // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-        .u-link-card__colors( @pacific-mid-dark, @teal-mid-dark, @pacific-dark, @pacific-dark, @pacific-dark );
+        .u-link-card__colors( @pacific-mid-dark, @teal-mid-dark, @pacific-dark, @pacific-mid-dark, @navy );
     }
 }

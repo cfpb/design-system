@@ -15,29 +15,32 @@ variation_groups:
         variation_description: ""
     variation_group_name: CFPB manual web accessibility audit
     variation_group_description: >-
-      We've developed a manual web accessibility audit tool to test web pages
-      for our desired conformance to federal regulations around accessibility.
-      It's largely comprised of tests for \[WCAG 2.0 AA success
-      criteria](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0&levels=aaa),
-      in accordance with the Revised Section 508 standards of 2018, but also
-      includes some success criteria from WCAG \[2.1] and WCAG \[2.0] AAA. 
+      Developed for use by both designers and developers, our manual web
+      accessibility audit tool is largely comprised of tests for conformance to
+      [WCAG 2.0 AA success
+      criteria](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0&levels=aaa).
+      The audit includes coverage for automated testing, screen reader testing,
+      mobile testing, keyboard testing, and additional tests covering forms and
+      sensory sensitivity. 
 
 
-      This audit is built in Excel (.xlsx) and written for both designers and developers. 
+      **The tool is written for use on a MacBook installed with both Microsoft Excel and the Chrome browser, as well as an iPhone.** 
 
 
-      The audit includes coverage for automated testing, screen reader testing, mobile testing, keyboard testing, and additional tests covering forms and sensory-sensitivity. 
+      Try our  CFPB manual accessibility audit, it's so awesome! \[DOWNLOAD LINK]
 
 
-      **The tool is written to be run on a MacBook, using Chrome and Safari browsers, and an iPhone.** 
-
-
-      Download the CFPB manual accessibility audit \[DOWNLOAD LINK]
+      If you have any feedback on it, please let us know [by filing a issue](https://github.com/cfpb/design-system/issues).
   - variation_group_name: Lighthouse automated audit
-    variation_group_description: The manual audit picks up issues that the automated
-      audit will not. Prioritize using the manual audit for pages with
-      interactive elements, new patterns or components, custom code, or pages
-      that are not created with our CMS.
+    variation_group_description: >-
+      We also regularly check our pages for accessibility issues using an
+      instance of Lighthouse
+
+
+      [Fork our Lighthouse dashboard](https://github.com/cfpb/cfgov-lighthouse)  
+
+
+      The manual audit picks up issues that the automated audit will not. Prioritize using the manual audit for pages with interactive elements, new patterns or components, custom code, or pages that are not created with our CMS.
 use_cases: ""
 guidelines: >-
   

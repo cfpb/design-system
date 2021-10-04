@@ -1,31 +1,35 @@
 ---
-title: Manual accessibility audit
+title: Accessibility audit tools
 collection_name: pages
 layout: variation
 section: guidelines
 description: This page contains web accessibility testing tools developed by the
-  Design & Development team at the CFPB   to check for our desired conformance
-  to federal regulations around accessibility. The tools will help you check
-  both that we're meeting the law and that we’re providing an inclusive web
+  Design & Development team at the CFPB to check for our desired conformance to
+  federal regulations around accessibility. The tools will help you check both
+  that we're meeting the law and that we’re providing an inclusive web
   experience for all our users.
 variation_groups:
   - variations:
       - variation_is_deprecated: false
         variation_name: ""
         variation_description: ""
-    variation_group_name: CFPB manual accessibility audit
+    variation_group_name: CFPB manual web accessibility audit
     variation_group_description: >-
-      Download the CFPB manual accessibility web audit. This audit is built in
-      Excel (97-2004) and is intended to be run on the MacBook and iPhone. 
+      The Design & Development team at the Consumer Financial Protection Bureau
+      has developed a manual web accessibility audit tool to test for our
+      desired conformance to federal regulations around accessibility. 
 
 
-      [DOWNLOAD LINK] 
+      Specifically, the tool includes tests for WCAG 2.0 success criteria in accordance with the Revised Section 508 standards of 2018. It also includes some success criteria from WCAG \[2.1] and WCAG \[2.0] AAA.
 
 
-      This audit includes coverage for automated testing, screen reader testing, mobile testing, keyboard testing, and additional tests covering forms and sensory-sensitivity. 
+      This audit is built in Excel (.xlsx) and written for both designers and developers. **The tool is written to be run on a MacBook, using Chrome and Safari browsers, and an iPhone.** 
 
 
-      The manual audit picks up issues that the automated audit will not. Prioritize using the manual audit for pages with interactive elements, new patterns or components, custom code, or pages that are not created with our CMS. 
+      The audit includes coverage for automated testing, screen reader testing, mobile testing, keyboard testing, and additional tests covering forms and sensory-sensitivity. 
+
+
+      Download the CFPB manual accessibility audit \[DOWNLOAD LINK]
   - variation_group_name: Lighthouse automated audit
 use_cases: ""
 guidelines: >-

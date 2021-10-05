@@ -1782,7 +1782,7 @@ a.a-heading__icon.active {
   margin-top: 4px;
 }
 @media only all and (max-width: 37.5em) {
-  .a-tagline {
+  .a-tagline__xlarge {
     grid-template-columns: initial;
     grid-template-rows: 22px 1fr;
     grid-row-gap: 5px;

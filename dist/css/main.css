@@ -4791,6 +4791,7 @@ select.o-multiselect option {
 }
 .m-notification_explanation {
   margin-top: 0.3125em;
+  margin-bottom: 0.9375em;
 }
 .m-notification_message + .m-list {
   margin-top: 0.9375em;

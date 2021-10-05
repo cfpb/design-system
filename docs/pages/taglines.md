@@ -39,7 +39,7 @@ variation_groups:
               We're a government agency whose mission is to protect consumers
               from financial harm.
           </div>
-        variation_description: ""
+        variation_description: "An extra large tagline, which stacks on mobile."
         variation_implementation: A `div` container around the tagline is not needed if
           there is no markup inside the content.
     variation_group_name: Types

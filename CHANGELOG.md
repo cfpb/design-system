@@ -1,4 +1,18 @@
 
+## v0.11.1 (2021-10-05)
+
+#### Enhancement
+* `cfpb-notifications`
+  * [#1306](https://github.com/cfpb/design-system/pull/1306) cfpb-notifications: Add margin-bottom to notification explanation ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-typography`
+  * [#1305](https://github.com/cfpb/design-system/pull/1305) Taglines: Move stacking to only affect extra-large size ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Andy Chosak ([@chosak](https://github.com/chosak))
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.11.1 (2021-09-24)
 
 #### Bug Fix

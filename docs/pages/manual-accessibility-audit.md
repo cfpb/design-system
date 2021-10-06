@@ -27,20 +27,20 @@ variation_groups:
       **The tool is written for use on a MacBook installed with both Microsoft Excel and the Chrome browser, as well as an iPhone.** 
 
 
-      Try our  CFPB manual accessibility audit, it's so awesome!! \[DOWNLOAD LINK]
+      Download the CFPB manual accessibility audit \[DOWNLOAD LINK]
 
 
-      If you have any feedback on it, please let us know [by filing a issue](https://github.com/cfpb/design-system/issues).
+      If you have any feedback, please let us know [by filing a issue](https://github.com/cfpb/design-system/issues).
   - variation_group_name: Lighthouse automated audit
     variation_group_description: >-
       We also regularly check our pages for accessibility issues using an
-      instance of Lighthouse
+      instance of Lighthouse.
 
 
-      [Fork our Lighthouse dashboard](https://github.com/cfpb/cfgov-lighthouse)  
+      [View the CFPB Lighthouse reports dashboard](https://cfpb.github.io/cfgov-lighthouse/)
 
 
-      The manual audit picks up issues that the automated audit will not. Prioritize using the manual audit for pages with interactive elements, new patterns or components, custom code, or pages that are not created with our CMS.
+      The manual audit picks up issues that Lighthouse will not, so we prioritize using the manual audit for pages with interactive elements, new patterns or components, custom code, or pages that are not created with our CMS.
 use_cases: ""
 guidelines: >-
   

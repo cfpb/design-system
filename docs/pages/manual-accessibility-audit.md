@@ -27,7 +27,7 @@ variation_groups:
       **The tool is written for use on a MacBook installed with both Microsoft Excel and the Chrome browser, as well as an iPhone.** 
 
 
-      Try our  CFPB manual accessibility audit, it's so awesome! \[DOWNLOAD LINK]
+      Try our  CFPB manual accessibility audit, it's so awesome!! \[DOWNLOAD LINK]
 
 
       If you have any feedback on it, please let us know [by filing a issue](https://github.com/cfpb/design-system/issues).

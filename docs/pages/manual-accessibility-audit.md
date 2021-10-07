@@ -73,7 +73,7 @@ guidelines: >-
 
   | ---------- | --------------------------------------------------- | --------------------------------------------------------------- |
 
-  | A or AA    | 1: Cannot achieve primary purpose of page/component | Regular single page or one-off component                        |
+  | A or AA    | 1: Cannot achieve primary purpose of page/component | Pages that aren't in the top 20, or a one-off component         |
 
   | A or AA    | 2: Hurts comprehension of page/component purpose    | Global header/footer, Top 20 single page, CMS site-wide pattern |
 
@@ -88,7 +88,7 @@ guidelines: >-
 
   | ---------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
 
-  | A or AA    | 2: Hurts comprehension of page/component purpose, or 3: Unrelated to main page/component purpose | Regular single page or one-off component                 |
+  | A or AA    | 2: Hurts comprehension of page/component purpose, or 3: Unrelated to main page/component purpose | Pages that aren't in the top 20, or a one-off component  |
 
   | A or AA    | 3: Unrelated to main page/component purpose                                                      | Global header/footer, top 20 page, CMS site-wide pattern |
 
@@ -137,7 +137,7 @@ guidelines: >-
   **Other**
 
 
-  * **Regular single page:** Any page that does not fall into the Top 20 page category
+  * Any page that does not fall into the Top 20 page category
 
   * **One-off component:** Functionality that is not available as a standard component or pattern, or custom code
 

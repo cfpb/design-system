@@ -27,7 +27,7 @@ variation_groups:
       **The tool is written for use on a MacBook installed with both Microsoft Excel and the Chrome browser, as well as an iPhone.** 
 
 
-      [Download the CFPB manual accessibility audit](https://github.com/cfpb/design-system/blob/main/docs/assets/CFPB.manual.accessibility.audit.open.source.v1.0_09.30.21.xlsx) 
+      [Download the CFPB manual accessibility audit](/design-system/assets/CFPB.manual.accessibility.audit.open.source.v1.0_09.30.21.xlsx) 
 
 
       If you have any feedback, please let us know [by filing a issue](https://github.com/cfpb/design-system/issues).

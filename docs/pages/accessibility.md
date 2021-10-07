@@ -1,5 +1,5 @@
 ---
-title: Accessibility
+title: Accessibility principles
 layout: variation
 section: guidelines
 description: >-

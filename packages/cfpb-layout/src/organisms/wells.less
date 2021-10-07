@@ -1,13 +1,11 @@
 .o-well {
     box-sizing: border-box;
 
-    // 8 columns plus gutters
-    max-width: unit( @well-max / @base-font-size-px, em );
     padding:
         unit( @grid_gutter-width / @base-font-size-px, em )
         unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
-    border: 1px solid @well-border;
-    background-color: @well-bg;
+    border: 1px solid @gray-40;
+    background-color: @gray-5;
 
     .respond-to-min( @bp-sm-min, {
         padding-left: unit( @grid_gutter-width / @base-font-size-px, em );

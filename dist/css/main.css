@@ -3698,7 +3698,6 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type(1) h3,
 }
 .o-well {
   box-sizing: border-box;
-  max-width: 48.125em;
   padding: 1.875em 0.9375em;
   border: 1px solid #b4b5b6;
   background-color: #f7f8f9;

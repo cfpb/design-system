@@ -41,7 +41,7 @@ variation_groups:
       [View the CFPB Lighthouse reports dashboard](https://cfpb.github.io/cfgov-lighthouse/)
 
 
-      Lighthouse accessibility reporting results are less comprehensive than those from our manual web accessibility audit, but still valuable as a measurement of the health of the website, and to pinpoint specific issues.
+      Lighthouse accessibility reporting results are less comprehensive than those from our manual web accessibility audit, but still valuable as a measurement of the health of the website, and to pinpoint specific issues to fix.
 use_cases: ""
 guidelines: >-
   This section describes our scale for classifying the severity of an

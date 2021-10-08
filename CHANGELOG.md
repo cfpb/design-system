@@ -1,4 +1,19 @@
 
+## v0.11.2 (2021-10-08)
+
+#### Enhancement
+* `cfpb-layout`
+  * [#1308](https://github.com/cfpb/design-system/pull/1308) Wells: Remove max-width and remove well variables ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1307](https://github.com/cfpb/design-system/pull/1307) Update core-js, netlify-cms, slugify, lhci/cli, wdio, autoprefixer, chromedriver, concurrently, jest, jest-cli, postcss, webpack ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+
+
+
 ## v0.11.2 (2021-10-05)
 
 #### Enhancement

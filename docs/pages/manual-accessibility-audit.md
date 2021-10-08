@@ -4,10 +4,10 @@ collection_name: pages
 layout: variation
 section: guidelines
 description: This page contains web accessibility testing tools developed by the
-  Design & Development team at the CFPB to check for our desired conformance to
-  federal regulations around accessibility. The tools will help you check both
-  that we're meeting the law and that we’re providing an inclusive web
-  experience for all our users.
+  Design & Development team at the CFPB. They help us check for our desired
+  level of conformance to federal regulations around accessibility. More plainly
+  speaking, they help ensure we provide an inclusive web experience for all of
+  our users.
 variation_groups:
   - variations:
       - variation_is_deprecated: false
@@ -19,28 +19,29 @@ variation_groups:
       accessibility audit tool is largely comprised of tests for conformance to
       [WCAG 2.0 AA success
       criteria](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0&levels=aaa).
-      The audit includes coverage for automated testing, screen reader testing,
-      mobile testing, keyboard testing, and additional tests covering forms and
-      sensory sensitivity. 
+      The audit, which is written in Excel, includes coverage for automated
+      testing, screen reader testing, mobile testing, keyboard testing, plus
+      additional tests for sensory sensitivity and forms. 
 
 
-      **The tool is written for use on a MacBook installed with both Microsoft Excel and the Chrome browser, as well as an iPhone.** 
+      **The audit is written for use on a MacBook installed with both Microsoft Excel and the Chrome browser, as well as an iPhone.** 
 
 
-      [Download the CFPB manual accessibility audit](/design-system/assets/CFPB.manual.accessibility.audit.open.source.v1.0_09.30.21.xlsx) 
+      [Download the CFPB manual accessibility audit](/design-system/assets/CFPB.manual.accessibility.audit.open.source.v1.0_09.30.21.xlsx)  
 
 
       If you have any feedback, please let us know [by filing a issue](https://github.com/cfpb/design-system/issues).
   - variation_group_name: Lighthouse automated audit
     variation_group_description: >-
-      We also regularly check our pages for accessibility issues using an
-      instance of Lighthouse.
+      We also monitor our pages for accessibility issues by running Lighthouse,
+      a free, automated testing tool, on a nighty basis against a set of our web
+      pages.
 
 
       [View the CFPB Lighthouse reports dashboard](https://cfpb.github.io/cfgov-lighthouse/)
 
 
-      The manual audit picks up issues that Lighthouse will not, so we prioritize using the manual audit for pages with interactive elements, new patterns or components, custom code, or pages that are not created with our CMS.
+      While Lighthouse results are less comprehensive than those from our manual web accessibility audit, they are still valuable for our team. The manual audit is prioritized for testing web pages with interactive elements, new patterns or components, custom code, or pages that are not created with our content management system (CMS).
 use_cases: ""
 guidelines: >-
   This section describes our scale for classifying the severity of an

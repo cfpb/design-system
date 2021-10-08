@@ -41,7 +41,7 @@ variation_groups:
       [View the CFPB Lighthouse reports dashboard](https://cfpb.github.io/cfgov-lighthouse/)
 
 
-      While Lighthouse results are less comprehensive than those from our manual web accessibility audit, they are still valuable for our team. The manual audit is prioritized for testing web pages with interactive elements, new patterns or components, custom code, or pages that are not created with our content management system (CMS).
+      Lighthouse accessibility reporting results are less comprehensive than those from our manual web accessibility audit, but still valuable as a measurement of the health of the website, and to pinpoint specific issues.
 use_cases: ""
 guidelines: >-
   This section describes our scale for classifying the severity of an

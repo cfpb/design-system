@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Guidelines - CFPB Design System</title>
+  <title>Accessibility audit tools - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -236,7 +236,7 @@
         <section>
 
     <h1 class="component-header u-mb30">
-        Guidelines
+        Accessibility audit tools
     </h1>
 
     
@@ -249,16 +249,104 @@
     
     <ul class="m-list m-list__horizontal m-list__horizontal-spaced">
         
+        <li class="m-list_item">
+            <a class="m-list_link" href="#cfpb-manual-web-accessibility-audit">CFPB manual web accessibility audit</a>
+        </li>
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#lighthouse-automated-audit">Lighthouse automated audit</a>
+        </li>
+        
+        <li class="m-list_item">
+            <a class="m-list_link" href="#guidelines">Guidelines</a>
+        </li>
+        
     </ul>
     
 
     
     <section id="description" class="u-mb30">
-        <p class="lead-paragraph">This section includes guidelines for creating specific product experiences.</p>
+        <p>This page contains web accessibility testing tools developed by the Design &amp; Development team at the CFPB. They help us check for our desired level of conformance to federal regulations around accessibility. More plainly speaking, they help ensure we provide an inclusive web experience for all of our users.</p>
 
     </section>
     
 
+    
+    
+    <section class="o-variation-group" id="cfpb-manual-web-accessibility-audit">
+
+        
+        <h2 class="o-variation-group_title">
+            CFPB manual web accessibility audit
+        </h2>
+        
+
+        
+        <div class="o-variation-group_description">
+            <p>Developed for use by both designers and developers, our manual web accessibility audit tool is largely comprised of tests for conformance to <a href="https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&amp;versions=2.0&amp;levels=aaa">WCAG 2.0 AA success criteria</a>. The audit, which is written in Excel, includes coverage for automated testing, screen reader testing, mobile testing, keyboard testing, plus additional tests for sensory sensitivity and forms.</p>
+
+<p><strong>The audit is written for use on a MacBook installed with both Microsoft Excel and the Chrome browser, as well as an iPhone.</strong></p>
+
+<p><a href="/design-system/assets/CFPB.manual.accessibility.audit.open.source.v1.0_09.30.21.xlsx">Download the CFPB manual accessibility audit</a></p>
+
+<p>If you have any feedback, please let us know <a href="https://github.com/cfpb/design-system/issues">by filing a issue</a>.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+
+            
+            <div class="m-variation_description">
+                
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+    </section>
+    
+    <section class="o-variation-group" id="lighthouse-automated-audit">
+
+        
+        <h2 class="o-variation-group_title">
+            Lighthouse automated audit
+        </h2>
+        
+
+        
+        <div class="o-variation-group_description">
+            <p>We also monitor our pages for accessibility issues by running Lighthouse, a free, automated testing tool, on a nighty basis against a set of our web pages.</p>
+
+<p><a href="https://cfpb.github.io/cfgov-lighthouse/">View the CFPB Lighthouse reports dashboard</a></p>
+
+<p>Lighthouse accessibility reporting results are less comprehensive than those from our manual web accessibility audit, but are still valuable as a measurement of the health of the website, and to pinpoint specific issues to fix.</p>
+
+        </div>
+        
+
+        
+    </section>
+    
     
 
     
@@ -267,6 +355,134 @@
 
             
 
+            
+                <h2 id="guidelines">Guidelines</h2>
+                <div class="content_line content_line__wide u-mb20"></div>
+                <p>
+                </p>
+<p>This section describes our scale for classifying the severity of an accessibility bug.</p>
+
+<h3 id="the-scale">The scale</h3>
+
+<h4 id="critical">Critical</h4>
+
+<p>Violations that match the following criteria are considered <strong>Critical</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>WCAG Level</th>
+      <th>Usability impact</th>
+      <th>Page type or functionality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A or AA</td>
+      <td>1: Cannot achieve primary purpose of page/component</td>
+      <td>Global header/footer, Top 20 single page, CMS site-wide pattern</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="high-priority">High priority</h4>
+
+<p>Violations that match the following criteria are considered <strong>High priority</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>WCAG Level</th>
+      <th>Usability impact</th>
+      <th>Page type or functionality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A or AA</td>
+      <td>1: Cannot achieve primary purpose of page/component</td>
+      <td>Pages that aren’t in the top 20, or a one-off component</td>
+    </tr>
+    <tr>
+      <td>A or AA</td>
+      <td>2: Hurts comprehension of page/component purpose</td>
+      <td>Global header/footer, Top 20 single page, CMS site-wide pattern</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="medium-priority">Medium priority</h4>
+
+<p>Violations that match the following criteria are considered <strong>Medium priority</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>WCAG Level</th>
+      <th>Usability impact</th>
+      <th>Page type or functionality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A or AA</td>
+      <td>2: Hurts comprehension of page/component purpose, or 3: Unrelated to main page/component purpose</td>
+      <td>Pages that aren’t in the top 20, or a one-off component</td>
+    </tr>
+    <tr>
+      <td>A or AA</td>
+      <td>3: Unrelated to main page/component purpose</td>
+      <td>Global header/footer, top 20 page, CMS site-wide pattern</td>
+    </tr>
+    <tr>
+      <td>AAA</td>
+      <td>All other accessibility-related issues</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="definitions">Definitions</h3>
+
+<h4 id="usability-impact-levels">Usability impact levels</h4>
+
+<p><strong>1: Cannot achieve primary purpose of page/component</strong><br>
+Example: A focus loop prevents you from tabbing all the way to the end of a form and submitting it.</p>
+
+<p><strong>2: Hurts comprehension of page/component purpose</strong><br>
+Example: Repeated contextless “Read more” links in a table, if there is a relatively simple workaround for the user (e.g., user could cycle through all of the table cells to understand the context of links, rather than navigate through links only)</p>
+
+<p><strong>3: Unrelated to main page/component purpose</strong><br>
+Example: Landmarks contain the word “navigation” twice because of redundant labeling</p>
+
+<h4 id="page-type-or-functionality">Page type or functionality</h4>
+
+<p><strong>Global header/footer</strong><br>
+Issues that fall within the megamenu or footer and are therefore on every page</p>
+
+<p><strong>Top 20 page</strong><br>
+A single page that, based on analytics, falls within the top 20 most visited pages of your site</p>
+
+<p><strong>Site-wide pattern</strong><br>
+Any pattern that is available as a standard component or pattern (e.g. expandables, video player)</p>
+
+<p><strong>Other</strong></p>
+
+<ul>
+  <li>Any page that does not fall into the Top 20 page category</li>
+  <li>
+<strong>One-off component:</strong> Functionality that is not available as a standard component or pattern, or custom code</li>
+</ul>
+
+<h3 id="what-to-do-with-this-scale">What to do with this scale</h3>
+
+<ul>
+  <li>When entering the usability impact and page/functionality type into the manual accessibility audit, the severity rating will be calculated automatically for you.</li>
+  <li>If reporting an accessibility bug outside of the context of an audit, you can manually determine what the severity should be from the explanation above.</li>
+  <li>Use the severity to aid in determining when to fix accessibility bugs.</li>
+</ul>
+
+                
             
 
             
@@ -290,8 +506,17 @@
 
         
 
+        <div class="o-editor_link" id="toggle-details">
+            <a class="a-btn" href="#" title="Show all details">
+                <span class="a-btn_text">Show all details</span>
+                <span class="a-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 11 19" class="cf-icon-svg"><path d="M10.328 6.83a5.903 5.903 0 0 1-1.439 3.64 2.874 2.874 0 0 0-.584 1v1.037a.95.95 0 0 1-.95.95h-3.71a.95.95 0 0 1-.95-.95V11.47a2.876 2.876 0 0 0-.584-1A5.903 5.903 0 0 1 .67 6.83a4.83 4.83 0 0 1 9.28-1.878 4.796 4.796 0 0 1 .38 1.88zm-.95 0a3.878 3.878 0 0 0-7.756 0c0 2.363 2.023 3.409 2.023 4.64v1.037h3.71V11.47c0-1.231 2.023-2.277 2.023-4.64zM7.83 14.572a.475.475 0 0 1-.475.476h-3.71a.475.475 0 0 1 0-.95h3.71a.475.475 0 0 1 .475.474zm-.64 1.262a.238.238 0 0 1-.078.265 2.669 2.669 0 0 1-3.274 0 .237.237 0 0 1 .145-.425h2.983a.238.238 0 0 1 .225.16z"></path></svg></span>
+            </a>
+        </div>
+
+        
+
         <div class="o-editor_link" id="edit-page">
-            <a class="a-btn" href="/design-system/updating-this-website?page=Guidelines" title="Edit this page in Netlify CMS">
+            <a class="a-btn" href="/design-system/updating-this-website?page=Accessibility+audit+tools" title="Edit this page in Netlify CMS">
                 <span class="a-btn_text">Edit page</span>
                 <span class="a-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 15 19" class="cf-icon-svg"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.111 1.111 0 0 1 0-1.567l1.8-1.8a1.112 1.112 0 0 1 1.568 0zm7.926 11.565a.456.456 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.294 1.294 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.278 1.278 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a1.962 1.962 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg></span>
             </a>
@@ -313,7 +538,7 @@
                 If you see something wrong or missing,
                 <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
                 If you can’t make those changes yourself,
-                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Guidelines%3A+Add+issue+description">file an issue</a>.
+                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Accessibility%20audit%20tools%3A+Add+issue+description">file an issue</a>.
                 If you have a substantial change to an existing page, or a new standard you want to add,
                 <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
             </small>
@@ -326,7 +551,7 @@
                 
                 
                 
-                <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/guidelines.md">
+                <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/manual-accessibility-audit.md">
                     <time datetime="2021-10-08 10:42:52 -0400">
                         10:42:52 AM Oct 08, 2021
                     </time>

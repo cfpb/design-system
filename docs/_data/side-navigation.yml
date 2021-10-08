@@ -108,7 +108,8 @@ first-level:
     second-level:
       - heading: Accessibility
         nav-items:
-          - page: Accessibility
+          - page: Accessibility principles
+          - page: Accessibility audit tools
       - heading: Data visualization
         nav-items:
           - page: Data visualization guidelines

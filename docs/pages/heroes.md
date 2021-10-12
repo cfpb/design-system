@@ -299,14 +299,14 @@ variation_groups:
           this [example of a hero with knockout
           text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
       - variation_is_deprecated: false
-        variation_name: Jumbo hero
+        variation_name: 50/50 Jumbo Hero
         variation_description: Jumbo heroes, also known as 50/50 heroes, have supersized
           headings on large screens and standard-sized headings on smaller
           screens. The image takes up the full right half of the hero and bleeds
           to the edges on larger screens. White space may appear above and below
           the image in order to preserve its dimensions on smaller screens.
         variation_code_snippet: >-
-          <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
+          <section class="m-hero m-hero__jumbo m-hero__50-50" id="example-jumbo-hero">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
                       <p class="h1 m-hero_heading">
@@ -358,7 +358,7 @@ variation_groups:
               </style>
           </section>
         variation_code_snippet_rendered: >-
-          <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
+          <section class="m-hero m-hero__jumbo m-hero__50-50" id="example-jumbo-hero">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
                       <p class="h1 m-hero_heading">

@@ -254,17 +254,17 @@ variation_groups:
               <style>
                   #example-jumbo-hero .m-hero_image {
                       background-image:
-                          url('/design-system/images/uploads/jumbo-hero-image.png');
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
                       background-image: -webkit-image-set(
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                       );
                       background-image: image-set(
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                       );
                       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='/design-system/images/uploads/jumbo-hero-image.png',
+                          src='/design-system/images/uploads/jumbo_hero_image_wide.jpeg',
                           sizingMethod='scale');
                       padding-bottom: 41.6666667%;
                   }
@@ -272,17 +272,17 @@ variation_groups:
                   @media screen and (min-width: 37.5625em) {
                       #example-jumbo-hero .m-hero_wrapper {
                           background-image:
-                              url('/design-system/images/uploads/jumbo-hero-image.png');
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
                           background-image: -webkit-image-set(
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                           );
                           background-image: image-set(
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                           );
                           filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='/design-system/images/uploads/jumbo-hero-image.png',
+                              src='/design-system/images/uploads/jumbo_hero_image_wide.jpeg',
                               sizingMethod='scale');
                       }
                   }
@@ -306,17 +306,17 @@ variation_groups:
               <style>
                   #example-jumbo-hero .m-hero_image {
                       background-image:
-                          url('/design-system/images/uploads/jumbo-hero-image.png');
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
                       background-image: -webkit-image-set(
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                       );
                       background-image: image-set(
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                       );
                       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='/design-system/images/uploads/jumbo-hero-image.png',
+                          src='/design-system/images/uploads/jumbo_hero_image_wide.jpeg',
                           sizingMethod='scale');
                       padding-bottom: 41.6666667%;
                   }
@@ -324,17 +324,17 @@ variation_groups:
                   @media screen and (min-width: 37.5625em) {
                       #example-jumbo-hero .m-hero_wrapper {
                           background-image:
-                              url('/design-system/images/uploads/jumbo-hero-image.png');
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
                           background-image: -webkit-image-set(
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                           );
                           background-image: image-set(
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                           );
                           filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='/design-system/images/uploads/jumbo-hero-image.png',
+                              src='/design-system/images/uploads/jumbo_hero_image_wide.jpeg',
                               sizingMethod='scale');
                       }
                       /* We're overriding some desktop jumbo hero CSS rules because the DS website
@@ -447,7 +447,7 @@ variation_groups:
           above and below the image in order to preserve its dimensions.
         variation_code_snippet: >-
           <section class="m-hero m-hero__jumbo m-hero__50-50"
-          id="example-jumbo-hero">
+          id="example-jumbo-hero-50-50">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
                       <p class="h1 m-hero_heading">
@@ -462,7 +462,7 @@ variation_groups:
                   </div>
               </div>
               <style>
-                  #example-jumbo-hero .m-hero_image {
+                  #example-jumbo-hero-50-50 .m-hero_image {
                       background-image:
                           url('/design-system/images/uploads/jumbo-hero-image.png');
                       background-image: -webkit-image-set(
@@ -480,7 +480,7 @@ variation_groups:
                   }
 
                   @media screen and (min-width: 37.5625em) {
-                      #example-jumbo-hero .m-hero_wrapper {
+                      #example-jumbo-hero-50-50 .m-hero_wrapper {
                           background-image:
                               url('/design-system/images/uploads/jumbo-hero-image.png');
                           background-image: -webkit-image-set(
@@ -500,7 +500,7 @@ variation_groups:
           </section>
         variation_code_snippet_rendered: >-
           <section class="m-hero m-hero__jumbo m-hero__50-50"
-          id="example-jumbo-hero">
+          id="example-jumbo-hero-50-50">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
                       <p class="h1 m-hero_heading">
@@ -515,7 +515,7 @@ variation_groups:
                   </div>
               </div>
               <style>
-                  #example-jumbo-hero .m-hero_image {
+                  #example-jumbo-hero-50-50 .m-hero_image {
                       background-image:
                           url('/design-system/images/uploads/jumbo-hero-image.png');
                       background-image: -webkit-image-set(
@@ -533,7 +533,7 @@ variation_groups:
                   }
 
                   @media screen and (min-width: 37.5625em) {
-                      #example-jumbo-hero .m-hero_wrapper {
+                      #example-jumbo-hero-50-50 .m-hero_wrapper {
                           background-image:
                               url('/design-system/images/uploads/jumbo-hero-image.png');
                           background-image: -webkit-image-set(
@@ -551,14 +551,14 @@ variation_groups:
                       /* We're overriding some desktop jumbo hero CSS rules because the DS website
                           constrains the example jumbo hero into a narrow column, causing the
                           desktop CSS rules to be rendered against a narrow, non-desktop-sized hero. */
-                      #example-jumbo-hero .m-hero_wrapper {
+                      #example-jumbo-hero-50-50 .m-hero_wrapper {
                           border-top: 1px solid #b4b5b6;
                           min-height: 0;
                       }
-                      #example-jumbo-hero .m-hero_heading {
+                      #example-jumbo-hero-50-50 .m-hero_heading {
                           font-size: 2.125em;
                       }
-                      #example-jumbo-hero .m-hero_subheading {
+                      #example-jumbo-hero-50-50 .m-hero_subheading {
                           font-size: 1.375em;
                       }
                   }

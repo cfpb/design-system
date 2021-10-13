@@ -232,11 +232,10 @@ variation_groups:
           contrast with a non-white (or light gray) background. "
       - variation_is_deprecated: false
         variation_name: Jumbo hero
-        variation_description: Jumbo heroes, also known as 50/50 heroes, have supersized
-          headings on large screens and standard-sized headings on smaller
-          screens. The image takes up the full right half of the hero and bleeds
-          to the edges on larger screens. White space may appear above and below
-          the image in order to preserve its dimensions on smaller screens.
+        variation_description: Jumbo heroes have supersized headings on large screens
+          and standard-sized headings on smaller screens. The image visibly
+          fills the right-most third of the element while using a gradient to
+          seamlessly fade behind the text.
         variation_code_snippet: >-
           <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
               <div class="m-hero_wrapper wrapper">
@@ -440,11 +439,12 @@ variation_groups:
           text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
       - variation_is_deprecated: false
         variation_name: 50/50 Jumbo Hero
-        variation_description: Jumbo heroes, also known as 50/50 heroes, have supersized
-          headings on large screens and standard-sized headings on smaller
-          screens. The image takes up the full right half of the hero and bleeds
-          to the edges on larger screens. White space may appear above and below
-          the image in order to preserve its dimensions on smaller screens.
+        variation_description: For a more visually-driven layout, 50/50 jumbo heroes
+          dedicate half their space to the image by adding the \`__50-50\`
+          modifier to the hero element. The image takes up the full right half
+          of the hero and bleeds to the top and bottom edges on larger screens.
+          On smaller screens and constrained layouts, white space will appear
+          above and below the image in order to preserve its dimensions.
         variation_code_snippet: >-
           <section class="m-hero m-hero__jumbo m-hero__50-50"
           id="example-jumbo-hero">

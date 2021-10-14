@@ -191,14 +191,6 @@
                 background-size: cover;
             }
 
-            .m-hero_text {
-                .grid_column( 6, 12 );
-            }
-
-            .m-hero_image-wrapper {
-                .grid_column( 6, 12 );
-            }
-
             .m-hero_image {
                 display: none;
             }
@@ -224,12 +216,19 @@
     &__50-50 {
         .respond-to-min( @bp-sm-min, {
             .m-hero_wrapper {
-                // Position the hero image all the way to the right plus a little
-                // extra so that it flows into the gutter
-                background-position: calc( 100% + @grid_gutter-width ) center;
+                // Position the hero image all the way to the right
+                background-position: 100% center;
                 background-size: 50%;
                 border: 1px solid @gray-40;
                 border-top: none;
+            }
+
+            .m-hero_text {
+                .grid_column( 6, 12 );
+            }
+
+            .m-hero_image-wrapper {
+                .grid_column( 6, 12 );
             }
         } );
 

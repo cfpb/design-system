@@ -353,20 +353,14 @@ variation_groups:
                   }
               </style>
           </section>
-        variation_implementation: Jumbo heroes have a `@gray-40` border on the sides
-          because, unlike standard heroes, their background does not
-          horizontally bleed to the edges of the screen.
         variation_specs: >-
-          * Two images may be created, one for large and one for small screens,
-          or the same large image may be used on mobile if preferred.
-
-          * Large and small screen images should contain the same elements but can differ compositionally.
+          * Two images must be created, one for large and one for small screens.
 
           * Type contrast ratios cannot be mathematically determined for photos, so special care should be paid when selecting these images.
 
-          * Photo dimensions for large screens (exact): 755px x 575px
+          * Photo dimensions for large screens (exact): 1230px x 380px
 
-          * Photo dimensions for small screens: 755px (exact) x 575px (maximum)
+          * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
 
           * Export photos as PNG files.
     variation_group_name: Types

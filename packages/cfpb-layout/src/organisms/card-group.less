@@ -73,8 +73,10 @@ _:-ms-lang(x),.o-card-group:after {
 }
 /* stylelint-enable selector-type-no-unknown */
 
+/* stylelint-disable no-duplicate-selectors */
 // Grid-based "count" card group layouts.
 .o-card-group {
+    /* stylelint-enable no-duplicate-selectors */
     // Name the card grid areas.
     &__count-2,
     &__count-3,
@@ -99,8 +101,7 @@ _:-ms-lang(x),.o-card-group:after {
 
     &__count-2 &_cards {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "card1 card2";
+        grid-template-areas: "card1 card2";
     }
 
     &__count-3 &_cards {
@@ -128,11 +129,8 @@ _:-ms-lang(x),.o-card-group:after {
             "card1 card2"
             "card3 card4";
     }
-}
 
-// Flexbox-based "flow" card group layout.
-.o-card-group {
-
+    // Flexbox-based "flow" card group layout.
     &__flow {
         .o-card-group_cards {
             display: flex;
@@ -147,8 +145,8 @@ _:-ms-lang(x),.o-card-group:after {
         &__count-3 &_cards {
             grid-template-columns: 1fr 1fr;
             grid-template-areas:
-                "card1 card1"
-                "card2 card3";
+            "card1 card1"
+            "card2 card3";
         }
     }
 } );
@@ -159,24 +157,24 @@ _:-ms-lang(x),.o-card-group:after {
         &__count-2 &_cards {
             grid-template-columns: 1fr;
             grid-template-areas:
-                "card1"
-                "card2";
+            "card1"
+            "card2";
         }
         &__count-3 &_cards {
             grid-template-columns: 1fr;
             grid-template-areas:
-                "card1"
-                "card2"
-                "card3";
+            "card1"
+            "card2"
+            "card3";
         }
 
         &__count-4 &_cards {
             grid-template-columns: 1fr;
             grid-template-areas:
-                "card1"
-                "card2"
-                "card3"
-                "card4";
+            "card1"
+            "card2"
+            "card3"
+            "card4";
         }
 
         &__flow {

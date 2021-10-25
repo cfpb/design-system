@@ -202,6 +202,8 @@
 
         .respond-to-min( @bp-lg-min, {
             .m-hero_wrapper {
+                // 290px ensures a comfortable height for heroes with
+                // only one-line headings that would otherwise be too short
                 min-height: unit( 290px / @base-font-size-px, em );
             }
             .m-hero_heading {

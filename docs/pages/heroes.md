@@ -15,7 +15,7 @@ variation_groups:
           <section class="m-hero" id="hero1">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">41 chars max for a one-line heading</p>
+                      <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
@@ -42,9 +42,6 @@ variation_groups:
                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 2x
                       );
-                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png',
-                          sizingMethod='scale');
                       padding-bottom: 41.4893617%;
                   }
               </style>
@@ -153,7 +150,7 @@ variation_groups:
           <section class="m-hero m-hero__overlay" id="hero4">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">41 chars max for a one-line heading</p>
+                      <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
@@ -177,9 +174,6 @@ variation_groups:
                           url('https://dummyimage.com/600x250/addc91/101820') 1x,
                           url('https://dummyimage.com/1200x500/addc91/101820') 2x
                       );
-                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='https://dummyimage.com/600x250/addc91/101820',
-                          sizingMethod='scale');
                       padding-bottom: 41.6666667%;
                   }
 
@@ -195,9 +189,6 @@ variation_groups:
                               url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
                               url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
                           );
-                          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='http://files.consumerfinance.gov/f/images/PC_hero.original.jpg',
-                              sizingMethod='scale');
                       }
                   }
               </style>
@@ -240,9 +231,9 @@ variation_groups:
           <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">
+                      <h1 class=m-hero_heading">
                           50 chars max for a two-line heading
-                      </p>
+                      </h1>
                       <p class="m-hero_subhead">    
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
@@ -263,9 +254,6 @@ variation_groups:
                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                       );
-                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='/design-system/images/uploads/jumbo_hero_image_wide.jpeg',
-                          sizingMethod='scale');
                       padding-bottom: 41.6666667%;
                   }
 
@@ -281,9 +269,6 @@ variation_groups:
                               url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
                               url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                           );
-                          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='/design-system/images/uploads/jumbo_hero_image_wide.jpeg',
-                              sizingMethod='scale');
                       }
                   }
               </style>
@@ -292,9 +277,9 @@ variation_groups:
           <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">
-                      50 chars max for a two-line heading
-                      </p>
+                      <h1 class="m-hero_heading">
+                          50 chars max for a two-line heading
+                      </h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
@@ -315,9 +300,6 @@ variation_groups:
                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                       );
-                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='/design-system/images/uploads/jumbo_hero_image_wide.jpeg',
-                          sizingMethod='scale');
                       padding-bottom: 41.6666667%;
                   }
 
@@ -333,15 +315,11 @@ variation_groups:
                               url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
                               url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
                           );
-                          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='/design-system/images/uploads/jumbo_hero_image_wide.jpeg',
-                              sizingMethod='scale');
                       }
                       /* We're overriding some desktop jumbo hero CSS rules because the DS website
                           constrains the example jumbo hero into a narrow column, causing the
                           desktop CSS rules to be rendered against a narrow, non-desktop-sized hero. */
                       #example-jumbo-hero .m-hero_wrapper {
-                          border-top: 1px solid #b4b5b6;
                           min-height: 0;
                       }
                       #example-jumbo-hero .m-hero_heading {
@@ -361,8 +339,6 @@ variation_groups:
           * Photo dimensions for large screens (exact): 1230px x 380px
 
           * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
-
-          * Export photos as PNG files.
     variation_group_name: Types
     variation_group_description: Heroes combine a heading, a small amount of
       subheading text, and image. The content is vertically centered.
@@ -373,7 +349,7 @@ variation_groups:
           <section class="m-hero m-hero__knockout" id="hero2">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">Max of 41 chars for a one-line heading</p>
+                      <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
@@ -401,9 +377,6 @@ variation_groups:
                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
                       );
-                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png',
-                          sizingMethod='scale');
                       padding-bottom: 41.4893617%;
                   }
 
@@ -419,9 +392,6 @@ variation_groups:
                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
                           );
-                          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png',
-                              sizingMethod='scale');
                           padding-bottom: 41.4893617%;
                       }
                   }
@@ -444,9 +414,9 @@ variation_groups:
           id="example-jumbo-hero-50-50">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">
+                      <h1 class="m-hero_heading">
                           50 chars max for a two-line heading
-                      </p>
+                      </h1>
                       <p class="m-hero_subhead">    
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
@@ -467,9 +437,6 @@ variation_groups:
                           url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
                           url('/design-system/images/uploads/jumbo-hero-image.png') 2x
                       );
-                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='/design-system/images/uploads/jumbo-hero-image.png',
-                          sizingMethod='scale');
                       padding-bottom: 41.6666667%;
                   }
 
@@ -485,9 +452,6 @@ variation_groups:
                               url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
                               url('/design-system/images/uploads/jumbo-hero-image.png') 2x
                           );
-                          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='/design-system/images/uploads/jumbo-hero-image.png',
-                              sizingMethod='scale');
                       }
                   }
               </style>
@@ -497,9 +461,9 @@ variation_groups:
           id="example-jumbo-hero-50-50">
               <div class="m-hero_wrapper wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">
-                      50 chars max for a two-line heading
-                      </p>
+                      <h1 class="m-hero_heading">
+                          50 chars max for a two-line heading
+                      </h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
@@ -520,9 +484,6 @@ variation_groups:
                           url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
                           url('/design-system/images/uploads/jumbo-hero-image.png') 2x
                       );
-                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='/design-system/images/uploads/jumbo-hero-image.png',
-                          sizingMethod='scale');
                       padding-bottom: 41.6666667%;
                   }
 
@@ -538,9 +499,6 @@ variation_groups:
                               url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
                               url('/design-system/images/uploads/jumbo-hero-image.png') 2x
                           );
-                          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='/design-system/images/uploads/jumbo-hero-image.png',
-                              sizingMethod='scale');
                       }
                       /* We're overriding some desktop jumbo hero CSS rules because the DS website
                           constrains the example jumbo hero into a narrow column, causing the
@@ -572,8 +530,6 @@ variation_groups:
           * Photo dimensions for large screens (exact): 755px x 575px
 
           * Photo dimensions for small screens: 755px (exact) x 575px (maximum)
-
-          * Export photos as PNG files.
     variation_group_description: ""
 use_cases: >-
   ### When to use

@@ -36,7 +36,7 @@
 // Necessitated because of https://stackoverflow.com/questions/46743722/items-in-css-grid-in-ie-superimposed-on-each-other
 
 /* stylelint-disable selector-type-no-unknown */
-_:-ms-lang(x),.o-card-group_cards {
+_:-ms-lang( x ),.o-card-group_cards {
     display: block;
 
     .m-card {
@@ -46,7 +46,7 @@ _:-ms-lang(x),.o-card-group_cards {
     }
 }
 
-_:-ms-lang(x),.o-card-group__column-2 {
+_:-ms-lang( x ),.o-card-group__column-2 {
     .o-card-group_cards .m-card {
         width: 48%;
         margin-right: 2%;
@@ -56,7 +56,7 @@ _:-ms-lang(x),.o-card-group__column-2 {
     }
 }
 
-_:-ms-lang(x),.o-card-group__column-3 {
+_:-ms-lang( x ),.o-card-group__column-3 {
     .o-card-group_cards .m-card {
         width: 32%;
         margin-right: 1%;
@@ -66,41 +66,42 @@ _:-ms-lang(x),.o-card-group__column-3 {
     }
 }
 
-_:-ms-lang(x),.o-card-group:after {
+_:-ms-lang( x ),.o-card-group:after {
     content: '';
     display: table;
     clear: both;
 }
 /* stylelint-enable selector-type-no-unknown */
 
+/* stylelint-disable no-duplicate-selectors */
 // Grid-based "count" card group layouts.
 .o-card-group {
+    /* stylelint-enable no-duplicate-selectors */
     // Name the card grid areas.
     &__count-2,
     &__count-3,
     &__count-4 {
 
-        .m-card:nth-of-type(1) {
+        .m-card:nth-of-type( 1 ) {
             grid-area: card1;
         }
 
-        .m-card:nth-of-type(2) {
+        .m-card:nth-of-type( 2 ) {
             grid-area: card2;
         }
 
-        .m-card:nth-of-type(3) {
+        .m-card:nth-of-type( 3 ) {
             grid-area: card3;
         }
 
-        .m-card:nth-of-type(4) {
+        .m-card:nth-of-type( 4 ) {
             grid-area: card4;
         }
     }
 
     &__count-2 &_cards {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "card1 card2";
+        grid-template-areas: "card1 card2";
     }
 
     &__count-3 &_cards {
@@ -111,7 +112,7 @@ _:-ms-lang(x),.o-card-group:after {
 
         // We have to reach inside the m-card here unfortunately to
         // center the content of the first card and increase the heading.
-        .m-card:nth-of-type(1) {
+        .m-card:nth-of-type( 1 ) {
             h3 {
                 .h2();
             }
@@ -128,11 +129,8 @@ _:-ms-lang(x),.o-card-group:after {
             "card1 card2"
             "card3 card4";
     }
-}
 
-// Flexbox-based "flow" card group layout.
-.o-card-group {
-
+    // Flexbox-based "flow" card group layout.
     &__flow {
         .o-card-group_cards {
             display: flex;
@@ -147,8 +145,8 @@ _:-ms-lang(x),.o-card-group:after {
         &__count-3 &_cards {
             grid-template-columns: 1fr 1fr;
             grid-template-areas:
-                "card1 card1"
-                "card2 card3";
+            "card1 card1"
+            "card2 card3";
         }
     }
 } );
@@ -159,24 +157,24 @@ _:-ms-lang(x),.o-card-group:after {
         &__count-2 &_cards {
             grid-template-columns: 1fr;
             grid-template-areas:
-                "card1"
-                "card2";
+            "card1"
+            "card2";
         }
         &__count-3 &_cards {
             grid-template-columns: 1fr;
             grid-template-areas:
-                "card1"
-                "card2"
-                "card3";
+            "card1"
+            "card2"
+            "card3";
         }
 
         &__count-4 &_cards {
             grid-template-columns: 1fr;
             grid-template-areas:
-                "card1"
-                "card2"
-                "card3"
-                "card4";
+            "card1"
+            "card2"
+            "card3"
+            "card4";
         }
 
         &__flow {

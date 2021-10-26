@@ -1,5 +1,5 @@
 
-## v0.11.3 (2021-10-26)
+## v0.11.4 (2021-10-26)
 
 #### Bug Fix
 * `cfpb-layout`, `cfpb-typography`

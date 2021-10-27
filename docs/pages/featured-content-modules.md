@@ -23,7 +23,7 @@ variation_groups:
           ### Standard desktop style
 
 
-          * Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page.
+          * Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page, unless featured on the homepage.
 
           * Background color of module is Gray 5 with a 1px Gray 40 stroke.
 

@@ -658,6 +658,105 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
+        variation_code_snippet_rendered: >-
+          <table class="o-table o-table__sortable">
+              <thead>
+                  <tr>
+                      <th>
+                          Agency
+                      </th>
+                      <th>
+                        <button class="sortable">
+                          Languages
+                        </button>
+                      </th>
+                      <th>
+                        <button class="sortable sorted-up" data-sort_type="number">
+                          Distance
+                        </button>
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>
+                          Alpha
+                      </td>
+                      <td data-label="Languages">
+                          English
+                      </td>
+                      <td data-label="Distance">
+                          2.6 mi
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          Beta
+                      </td>
+                      <td data-label="Languages">
+                          English, Spanish
+                      </td>
+                      <td data-label="Distance">
+                          1.4 mi
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          Gamma
+                      </td>
+                      <td data-label="Languages">
+                          English, French, Spanish
+                      </td>
+                      <td data-label="Distance">
+                          1.4 mi
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          Delta
+                      </td>
+                      <td data-label="Languages">
+                          English, Spanish
+                      </td>
+                      <td data-label="Distance">
+                          3.2 mi
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          Epsilon
+                      </td>
+                      <td data-label="Languages">
+                          English
+                      </td>
+                      <td data-label="Distance">
+                          1.6 mi
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          Zeta
+                      </td>
+                      <td data-label="Languages">
+                          English, Spanish
+                      </td>
+                      <td data-label="Distance">
+                          1.2 mi
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          Eta
+                      </td>
+                      <td data-label="Languages">
+                          English
+                      </td>
+                      <td data-label="Distance">
+                          11.1 mi
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
       - variation_name: Pagination
         variation_description: >-
           Tables with over 20 rows can be paired with pagination.

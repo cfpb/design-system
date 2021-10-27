@@ -42,16 +42,6 @@ variation_groups:
           * Play button (for FCMs with a video): 60px diameter, Black background at 75% opacity that changes to Pacific on hover, White icon, 2px Gray 5 border, centered in the visual
 
 
-          ### Reversed desktop style
-
-
-          * No background color or border.
-
-          * Visual is left-aligned instead of right-aligned.
-
-          * Text is aligned to the left edge of the image. 
-
-
           ### Differences in style at mobile size
 
 
@@ -69,6 +59,15 @@ variation_groups:
 
           * For videos, a 60x60 px play button appears in the center of the image area (horizontally and vertically centered). Make sure the subject of the thumbnail image is not awkwardly obscured by the play button. In particular, make sure that no faces are covered by the play button. This may require a photo composed with the subject on the left or right side of the image.
   - variations:
+      - variation_is_deprecated: false
+        variation_description: In cases when the featured content module appears next to
+          another component with a background color, this variation can be
+          applied to reduce visual overload.
+        variation_name: Reversed image placement without background
+        variation_specs: |-
+          * No background or border
+          * Visual is left-aligned instead of right-aligned.
+          * Text is aligned to the left edge of the image.
       - variation_code_snippet: >-
           <section class="o-featured-content-module">
               <div class="o-featured-content-module_text">
@@ -158,13 +157,7 @@ variation_groups:
           For videos, note that a 60 x 60 px play button appears centered within the image area. Make sure the subject of the thumbnail photo is not awkwardly obscured by the play button.
         variation_name: Centered visual
     variation_group_name: Variations
-    variation_group_description: >-
-      The modifiers below describe how to change how the featured content module
-      visual is anchored. This affects what portion of the image or video is
-      visible at different desktop breakpoints.
-
-
-      The featured content module visual is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered.
+    variation_group_description: ""
 use_cases: >-
   Featured content modules (FCMs) highlight a specific piece of content. They
   are meant to call attention to a related piece of content that might be new or

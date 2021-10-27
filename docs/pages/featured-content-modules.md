@@ -63,7 +63,7 @@ variation_groups:
         variation_description: In cases when the featured content module appears next to
           another component with a background color, this variation can be
           applied to reduce visual overload.
-        variation_name: Reversed image placement without background
+        variation_name: Reversed layout without background
         variation_specs: |-
           * No background or border
           * Visual is left-aligned instead of right-aligned.

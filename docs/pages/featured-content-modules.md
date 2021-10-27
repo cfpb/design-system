@@ -15,7 +15,7 @@ variation_groups:
           piece of content being featured. They are a “mini story” and never
           simply a dominant visual.
 
-          FCMs appear below the page introduction and retain that position on all screen sizes, unless featured on the homepage where placement is can vary by priority. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. <br>
+          FCMs appear below the page introduction and retain that position on all screen sizes, unless appearing on the homepage where all content is featured and placement can vary by priority. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. <br>
 
 
           ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)

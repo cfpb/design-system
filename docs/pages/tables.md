@@ -757,6 +757,7 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
+        variation_description: This is a test description.
       - variation_name: Pagination
         variation_description: >-
           Tables with over 20 rows can be paired with pagination.

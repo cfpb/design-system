@@ -3,9 +3,9 @@ title: Featured content module
 layout: variation
 section: patterns
 status: Released
-description: "Featured content modules (FCMs) highlight one specific piece of
-  content at the top of a page. Content is featured temporarily and not a
-  permanent part of the page. Content can be a video, link, or download.\r"
+description: Featured content modules (FCMs) highlight one specific piece of
+  content. Content is featured temporarily and not a permanent part of the page.
+  Content can be a video, link, or download.
 variation_groups:
   - variation_group_name: Standard featured content module
     variations:
@@ -15,7 +15,7 @@ variation_groups:
           piece of content being featured. They are a “mini story” and never
           simply a dominant visual.
 
-          FCMs appear below the page introduction, and retain that position on all screen sizes. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. <br>
+          FCMs appear below the page introduction and retain that position on all screen sizes, unless featured on the homepage where placement is can vary by priority. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. <br>
 
 
           ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)

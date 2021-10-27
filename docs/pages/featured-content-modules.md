@@ -166,11 +166,10 @@ variation_groups:
 
       The featured content module visual is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered.
 use_cases: >-
-  Featured content modules (FCMs) highlight a specific piece of content at the
-  top of a page. They are meant to call attention to a related piece of content
-  that might be new or otherwise relevant to — but not directly a part of — the
-  main content on the page, the primary intended user action, or the user
-  journey.
+  Featured content modules (FCMs) highlight a specific piece of content. They
+  are meant to call attention to a related piece of content that might be new or
+  otherwise relevant to — but not directly a part of — the main content on the
+  page, the primary intended user action, or the user journey.
 
 
   The goal of an FCM is to have the user do one of three things: learn something (usually by navigating to other content), watch something, or download something (a printable tool or resource). FCMs can appear on any page type, though they are best suited for pages third level and below in the site map.

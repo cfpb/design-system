@@ -20,7 +20,7 @@ variation_groups:
 
           ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)
         variation_specs: >-
-          ### Desktop style
+          ### Standard desktop style
 
 
           * Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page.
@@ -42,6 +42,16 @@ variation_groups:
           * Play button (for FCMs with a video): 60px diameter, Black background at 75% opacity that changes to Pacific on hover, White icon, 2px Gray 5 border, centered in the visual
 
 
+          ### Reversed desktop style
+
+
+          * No background color or border.
+
+          * Visual is left-aligned instead of right-aligned.
+
+          * Text is aligned to the left edge of the image. 
+
+
           ### Differences in style at mobile size
 
 
@@ -54,7 +64,7 @@ variation_groups:
           * 15px of left, right, and bottom padding around all content in the FCM
 
 
-          ### Video thumbnails 
+          ### Video thumbnails
 
 
           * For videos, a 60x60 px play button appears in the center of the image area (horizontally and vertically centered). Make sure the subject of the thumbnail image is not awkwardly obscured by the play button. In particular, make sure that no faces are covered by the play button. This may require a photo composed with the subject on the left or right side of the image.

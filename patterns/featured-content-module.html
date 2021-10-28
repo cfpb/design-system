@@ -326,7 +326,7 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Featured content modules (FCMs) highlight one specific piece of content at the top of a page. Content is featured temporarily and not a permanent part of the page. Content can be a video, link, or download.</p>
+        <p>Featured content modules (FCMs) highlight one specific piece of content. Content can be a video, link, or download.</p>
 
     </section>
     
@@ -356,7 +356,7 @@
             
             <div class="m-variation_description">
                 <p>FCMs contain a headline, body copy text, a call to action (either a text link or a play button), and a graphical element related to the piece of content being featured. They are a “mini story” and never simply a dominant visual.
-FCMs appear below the page introduction, and retain that position on all screen sizes. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. <br></p>
+FCMs appear below the page introduction and retain that position on all screen sizes, unless appearing on the homepage where all content is featured and placement can vary by priority. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. <br></p>
 
 <p><img src="/design-system/images/uploads/fcm-desktop02.png" alt="Image of a featured content module"></p>
 
@@ -407,10 +407,10 @@ FCMs appear below the page introduction, and retain that position on all screen 
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
-                            <h3 id="desktop-style">Desktop style</h3>
+                            <h3 id="standard-desktop-style">Standard desktop style</h3>
 
 <ul>
-  <li>Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page.</li>
+  <li>Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page, unless featured on the homepage.</li>
   <li>Background color of module is Gray 5 with a 1px Gray 40 stroke.</li>
   <li>Visual is always 270px wide and 220px tall at maximum page width.</li>
   <li>Text spans 5 columns at maximum page width and is left and top aligned. There is 30px of padding around all sides of the text.</li>
@@ -458,13 +458,94 @@ FCMs appear below the page introduction, and retain that position on all screen 
 
         
         <div class="o-variation-group_description">
-            <p>The modifiers below describe how to change how the featured content module visual is anchored. This affects what portion of the image or video is visible at different desktop breakpoints.</p>
-
-<p>The featured content module visual is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered.</p>
+            
 
         </div>
         
 
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>
+                    Reversed layout without background
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>In cases when the featured content module appears next to another component with a background color, this variation can be applied to reduce visual overload.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-reversed-layout-without-backgrou-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-reversed-layout-without-backgrou-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-reversed-layout-without-backgrou-1">
+                <ul class="m-tabs_list">
+                    
+                    
+                    
+                    
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#details-reversed-layout-without-backgrou-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+                <section class="m-tabs_panel" id="details-reversed-layout-without-backgrou-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <ul>
+  <li>No background or border</li>
+  <li>Visual is left-aligned instead of right-aligned.</li>
+  <li>Text is aligned to the left edge of the image.</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+            
+
+        </div>
         
         <div class="m-variation">
 
@@ -521,15 +602,15 @@ FCMs appear below the page introduction, and retain that position on all screen 
             
 
             <div class="a-toggle_code">
-                <button href="#details-visual-anchored-on-the-left-defa-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-visual-anchored-on-the-left-defa-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-visual-anchored-on-the-left-defa-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-visual-anchored-on-the-left-defa-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-visual-anchored-on-the-left-defa-1">
+            <div class="m-tabs u-hidden" id="details-visual-anchored-on-the-left-defa-2">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-visual-anchored-on-the-left-defa-html-code-snippet-1">
+                        <a class="m-tabs_tab" href="#details-visual-anchored-on-the-left-defa-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -541,7 +622,7 @@ FCMs appear below the page introduction, and retain that position on all screen 
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-visual-anchored-on-the-left-defa-html-code-snippet-1">
+                <section class="m-tabs_panel" id="details-visual-anchored-on-the-left-defa-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -640,15 +721,15 @@ FCMs appear below the page introduction, and retain that position on all screen 
             
 
             <div class="a-toggle_code">
-                <button href="#details-visual-anchored-on-the-right-in--2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-visual-anchored-on-the-right-in--2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-visual-anchored-on-the-right-in--3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-visual-anchored-on-the-right-in--3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-visual-anchored-on-the-right-in--2">
+            <div class="m-tabs u-hidden" id="details-visual-anchored-on-the-right-in--3">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-visual-anchored-on-the-right-in--html-code-snippet-2">
+                        <a class="m-tabs_tab" href="#details-visual-anchored-on-the-right-in--html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -660,7 +741,7 @@ FCMs appear below the page introduction, and retain that position on all screen 
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-visual-anchored-on-the-right-in--html-code-snippet-2">
+                <section class="m-tabs_panel" id="details-visual-anchored-on-the-right-in--html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -762,15 +843,15 @@ FCMs appear below the page introduction, and retain that position on all screen 
             
 
             <div class="a-toggle_code">
-                <button href="#details-centered-visual-when-the-feature-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-centered-visual-when-the-feature-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-centered-visual-when-the-feature-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-centered-visual-when-the-feature-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-centered-visual-when-the-feature-3">
+            <div class="m-tabs u-hidden" id="details-centered-visual-when-the-feature-4">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-centered-visual-when-the-feature-html-code-snippet-3">
+                        <a class="m-tabs_tab" href="#details-centered-visual-when-the-feature-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
@@ -782,7 +863,7 @@ FCMs appear below the page introduction, and retain that position on all screen 
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-centered-visual-when-the-feature-html-code-snippet-3">
+                <section class="m-tabs_panel" id="details-centered-visual-when-the-feature-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -839,7 +920,7 @@ FCMs appear below the page introduction, and retain that position on all screen 
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<p>Featured content modules (FCMs) highlight a specific piece of content at the top of a page. They are meant to call attention to a related piece of content that might be new or otherwise relevant to — but not directly a part of — the main content on the page, the primary intended user action, or the user journey.</p>
+<p>Featured content modules (FCMs) highlight a specific piece of content. They are meant to call attention to a related piece of content that might be new or otherwise relevant to — but not directly a part of — the main content on the page, the primary intended user action, or the user journey.</p>
 
 <p>The goal of an FCM is to have the user do one of three things: learn something (usually by navigating to other content), watch something, or download something (a printable tool or resource). FCMs can appear on any page type, though they are best suited for pages third level and below in the site map.</p>
 
@@ -993,8 +1074,8 @@ FCMs appear below the page introduction, and retain that position on all screen 
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/featured-content-modules.md">
-                    <time datetime="2021-10-28 10:22:54 -0400">
-                        10:22:54 AM Oct 28, 2021
+                    <time datetime="2021-10-28 11:37:31 -0400">
+                        11:37:31 AM Oct 28, 2021
                     </time>
                 </a>
             </small>

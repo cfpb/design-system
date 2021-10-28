@@ -4,8 +4,7 @@ layout: variation
 section: patterns
 status: Released
 description: Featured content modules (FCMs) highlight one specific piece of
-  content. Content is featured temporarily and not a permanent part of the page.
-  Content can be a video, link, or download.
+  content. Content can be a video, link, or download.
 variation_groups:
   - variation_group_name: Standard featured content module
     variations:

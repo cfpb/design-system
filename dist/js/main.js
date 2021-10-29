@@ -1285,7 +1285,6 @@ function AtomicComponent( element, attributes ) {
       if ( this.element.classList.contains( modifierClass ) ) {
         if ( modifier.initialize ) {
           this.initializers.push( modifier.initialize );
-          delete modifier.initialize;
         }
         (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( this, modifier );
       }

@@ -8,16 +8,14 @@
     background-color: @gray-5;
 
     &_wrapper {
-        padding-top: unit( @grid_gutter-width / @base-font-size-px, em );
-        padding-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+        display: grid;
+        max-width: ( @grid_wrapper-width - @grid_gutter-width );
+        margin: 0 auto;
+        padding-top: @grid_gutter-width;
 
         .respond-to-min( @bp-sm-min, {
-            // IE specific fix.
-            display: table;
-
-            @supports( display: flex ) {
-                display: flex;
-            }
+            grid-template-columns: 7fr 5fr;
+            padding: @grid_gutter-width ( @grid_gutter-width / 2);
 
             min-height: @hero-desktop-height - ( @grid_gutter-width * 2 );
         } );
@@ -30,11 +28,10 @@
     }
 
     &_text {
-        .grid_column( 1, 1 );
+        padding-right: ( @grid_gutter-width / 2 );
+        padding-left: ( @grid_gutter-width / 2 );
 
         .respond-to-min( @bp-sm-min, {
-            .grid_column( 7, 12 );
-
             // IE specific fix
             display: table-cell;
             vertical-align: middle;
@@ -66,12 +63,12 @@
     }
 
     &_image-wrapper {
-        .grid_column( 1, 1 );
-
+        box-sizing: border-box;
         overflow: hidden;
 
         .respond-to-min( @bp-sm-min, {
-            .grid_column( 5, 12 );
+            padding-right: ( @grid_gutter-width / 2 );
+            padding-left: ( @grid_gutter-width / 2 );
 
             // IE specific fix.
             display: table-cell;
@@ -89,8 +86,6 @@
     }
 
     &_image {
-        .u-flexible-container-mixin( 16, 9 );
-
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -104,11 +99,8 @@
     &__bleeding {
         .respond-to-min( @bp-sm-min, {
 
-            .m-hero_wrapper {
-                position: relative;
-            }
-
             .m-hero_image-wrapper {
+                width: 100%;
                 margin-top: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
                 margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
 
@@ -127,7 +119,6 @@
                 padding-bottom: 0 !important;
                 height: 100%;
                 width: 100%;
-                position: absolute;
                 background-size: cover;
             }
         } );
@@ -220,6 +211,8 @@
 
         .respond-to-min( @bp-sm-min, {
             .m-hero_wrapper {
+                grid-template-columns: 1fr 1fr;
+
                 border: 1px solid @gray-40;
                 border-top: none;
                 // Position the hero image all the way to the right
@@ -230,12 +223,6 @@
 
             .m-hero_image {
                 display: none;
-            }
-
-            // Set the hero's text and image to 50%
-            .m-hero_text,
-            .m-hero_image-wrapper {
-                .grid_column( 6, 12 );
             }
         } );
 

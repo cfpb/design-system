@@ -1,4 +1,26 @@
 
+## v0.11.4 (2021-11-02)
+
+#### Enhancement
+* `cfpb-layout`
+  * [#1299](https://github.com/cfpb/design-system/pull/1299) Migrate jumbo hero pattern from cf.gov, add new 50/50 hero, update hero grids ([@contolini](https://github.com/contolini))
+  * [#1326](https://github.com/cfpb/design-system/pull/1326) Featured Content Module: add left-alignment variation and remove unused variations ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-atomic-component`
+  * [#1315](https://github.com/cfpb/design-system/pull/1315) Allow multiple instances of initializable components to be initialized ([@wpears](https://github.com/wpears))
+* `cfpb-icons`
+  * [#1317](https://github.com/cfpb/design-system/pull/1317) Updating icon ([@wpears](https://github.com/wpears))
+
+#### Committers: 5
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Candice Heberer ([@caheberer](https://github.com/caheberer))
+- Chris Contolini ([@contolini](https://github.com/contolini))
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
+- [@brandon-rusk](https://github.com/brandon-rusk)
+
+
+
 ## v0.11.4 (2021-10-26)
 
 #### Bug Fix

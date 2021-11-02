@@ -13,9 +13,9 @@ variation_groups:
   - variations:
       - variation_code_snippet: >-
           <section class="m-hero" id="hero1">
-              <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">41 chars max for a one-line heading</p>
+                      <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
@@ -42,9 +42,6 @@ variation_groups:
                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 2x
                       );
-                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png',
-                          sizingMethod='scale');
                       padding-bottom: 41.4893617%;
                   }
               </style>
@@ -151,9 +148,9 @@ variation_groups:
           details" link.
         variation_code_snippet: >-
           <section class="m-hero m-hero__overlay" id="hero4">
-              <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">41 chars max for a one-line heading</p>
+                      <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
@@ -177,9 +174,6 @@ variation_groups:
                           url('https://dummyimage.com/600x250/addc91/101820') 1x,
                           url('https://dummyimage.com/1200x500/addc91/101820') 2x
                       );
-                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='https://dummyimage.com/600x250/addc91/101820',
-                          sizingMethod='scale');
                       padding-bottom: 41.6666667%;
                   }
 
@@ -195,9 +189,6 @@ variation_groups:
                               url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
                               url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
                           );
-                          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='http://files.consumerfinance.gov/f/images/PC_hero.original.jpg',
-                              sizingMethod='scale');
                       }
                   }
               </style>
@@ -230,6 +221,251 @@ variation_groups:
         variation_implementation: "It’s best to avoid a non-button call to action in
           these, as it’s unlikely that the Pacific Blue will have accessible
           contrast with a non-white (or light gray) background. "
+      - variation_is_deprecated: false
+        variation_name: Jumbo hero
+        variation_description: Jumbo heroes have supersized headings on large screens
+          and standard-sized headings on smaller screens. The image visibly
+          fills the right-most third of the element while using a gradient to
+          seamlessly fade behind the text.
+        variation_code_snippet: >-
+          <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
+              <div class="m-hero_wrapper">
+                  <div class="m-hero_text">
+                      <h1 class=m-hero_heading">
+                          50 chars max for a two-line heading
+                      </h1>
+                      <p class="m-hero_subhead">    
+                          This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
+                      </p>
+                  </div>
+                  <div class="m-hero_image-wrapper">
+                      <div class="m-hero_image"></div>
+                  </div>
+              </div>
+              <style>
+                  #example-jumbo-hero .m-hero_image {
+                      background-image:
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
+                      background-image: -webkit-image-set(
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+                      );
+                      background-image: image-set(
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+                      );
+                      padding-bottom: 41.6666667%;
+                  }
+
+                  @media screen and (min-width: 37.5625em) {
+                      #example-jumbo-hero .m-hero_wrapper {
+                          background-image:
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
+                          background-image: -webkit-image-set(
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+                          );
+                          background-image: image-set(
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+                          );
+                      }
+                  }
+              </style>
+          </section>
+        variation_code_snippet_rendered: >-
+          <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
+              <div class="m-hero_wrapper">
+                  <div class="m-hero_text">
+                      <h1 class="m-hero_heading">
+                          50 chars max for a two-line heading
+                      </h1>
+                      <p class="m-hero_subhead">
+                          This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
+                      </p>
+                  </div>
+                  <div class="m-hero_image-wrapper">
+                      <div class="m-hero_image"></div>
+                  </div>
+              </div>
+              <style>
+                  #example-jumbo-hero .m-hero_image {
+                      background-image:
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
+                      background-image: -webkit-image-set(
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+                      );
+                      background-image: image-set(
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                          url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+                      );
+                      padding-bottom: 41.6666667%;
+                  }
+
+                  @media screen and (min-width: 37.5625em) {
+                      #example-jumbo-hero .m-hero_wrapper {
+                          background-image:
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
+                          background-image: -webkit-image-set(
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+                          );
+                          background-image: image-set(
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+                              url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+                          );
+                      }
+                      /* We're overriding some desktop jumbo hero CSS rules because the DS website
+                          constrains the example jumbo hero into a narrow column, causing the
+                          desktop CSS rules to be rendered against a narrow, non-desktop-sized hero. */
+                      #example-jumbo-hero .m-hero_wrapper {
+                          min-height: 0;
+                      }
+                      #example-jumbo-hero .m-hero_heading {
+                          font-size: 2.125em;
+                      }
+                      #example-jumbo-hero .m-hero_subheading {
+                          font-size: 1.375em;
+                      }
+                  }
+              </style>
+          </section>
+        variation_specs: >-
+          * Two images must be created, one for large and one for small screens.
+
+          * Type contrast ratios cannot be mathematically determined for photos, so special care should be paid when selecting these images.
+
+          * Photo dimensions for large screens (exact): 1230px x 380px
+
+          * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
+      - variation_is_deprecated: false
+        variation_description: For more visually-driven layouts, 50/50 heroes have
+          supersized headings while also dedicating half their space to the
+          image. The image takes up the full right half of the hero and bleeds
+          to the top and bottom edges on larger screens. On smaller screens and
+          constrained layouts, white space will appear above and below the image
+          in order to preserve its dimensions.
+        variation_code_snippet: >-
+          <section class="m-hero m-hero__50-50" id="example-hero-50-50">
+              <div class="m-hero_wrapper">
+                  <div class="m-hero_text">
+                      <h1 class="m-hero_heading">
+                          50 chars max for a two-line heading
+                      </h1>
+                      <p class="m-hero_subhead">    
+                          This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
+                      </p>
+                  </div>
+                  <div class="m-hero_image-wrapper">
+                      <div class="m-hero_image"></div>
+                  </div>
+              </div>
+              <style>
+                  #example-hero-50-50 .m-hero_image {
+                      background-image:
+                          url('/design-system/images/uploads/jumbo-hero-image.png');
+                      background-image: -webkit-image-set(
+                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                      );
+                      background-image: image-set(
+                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                      );
+                      padding-bottom: 41.6666667%;
+                  }
+
+                  @media screen and (min-width: 37.5625em) {
+                      #example-hero-50-50 .m-hero_wrapper {
+                          background-image:
+                              url('/design-system/images/uploads/jumbo-hero-image.png');
+                          background-image: -webkit-image-set(
+                              url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+                              url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          );
+                          background-image: image-set(
+                              url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+                              url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          );
+                      }
+                  }
+              </style>
+          </section>
+        variation_code_snippet_rendered: >-
+          <section class="m-hero m-hero__50-50" id="example-hero-50-50">
+              <div class="m-hero_wrapper">
+                  <div class="m-hero_text">
+                      <h1 class="m-hero_heading">
+                          50 chars max for a two-line heading
+                      </h1>
+                      <p class="m-hero_subhead">
+                          This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
+                      </p>
+                  </div>
+                  <div class="m-hero_image-wrapper">
+                      <div class="m-hero_image"></div>
+                  </div>
+              </div>
+              <style>
+                  #example-hero-50-50 .m-hero_image {
+                      background-image:
+                          url('/design-system/images/uploads/jumbo-hero-image.png');
+                      background-image: -webkit-image-set(
+                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                      );
+                      background-image: image-set(
+                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                      );
+                      padding-bottom: 41.6666667%;
+                  }
+
+                  @media screen and (min-width: 37.5625em) {
+                      #example-hero-50-50 .m-hero_wrapper {
+                          background-image:
+                              url('/design-system/images/uploads/jumbo-hero-image.png');
+                          background-image: -webkit-image-set(
+                              url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+                              url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          );
+                          background-image: image-set(
+                              url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+                              url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          );
+                      }
+                      /* We're overriding some desktop jumbo hero CSS rules because the DS website
+                          constrains the example jumbo hero into a narrow column, causing the
+                          desktop CSS rules to be rendered against a narrow, non-desktop-sized hero. */
+                      #example-hero-50-50 .m-hero_wrapper {
+                          border-top: 1px solid #b4b5b6;
+                          min-height: 0;
+                      }
+                      #example-hero-50-50 .m-hero_heading {
+                          font-size: 2.125em;
+                      }
+                      #example-hero-50-50 .m-hero_subheading {
+                          font-size: 1.375em;
+                      }
+                  }
+              </style>
+          </section>
+        variation_implementation: 50/50 heroes have a 1px `@gray-40` border on the sides
+          because, unlike standard heroes, their background does not
+          horizontally bleed to the edges of the screen.
+        variation_specs: >-
+          * Two images may be created, one for large and one for small screens,
+          or the same large image may be used on mobile if preferred.
+
+          * Large and small screen images should contain the same elements but can differ compositionally.
+
+          * Type contrast ratios cannot be mathematically determined for photos, so special care should be paid when selecting these images.
+
+          * Photo dimensions for large screens (exact): 755px x 575px
+
+          * Photo dimensions for small screens: 755px (exact) x 575px (maximum)
+        variation_name: 50/50 hero
     variation_group_name: Types
     variation_group_description: Heroes combine a heading, a small amount of
       subheading text, and image. The content is vertically centered.
@@ -238,9 +474,9 @@ variation_groups:
       - variation_name: Hero with knockout text
         variation_code_snippet: >-
           <section class="m-hero m-hero__knockout" id="hero2">
-              <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">Max of 41 chars for a one-line heading</p>
+                      <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
@@ -268,9 +504,6 @@ variation_groups:
                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
                       );
-                      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                          src='https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png',
-                          sizingMethod='scale');
                       padding-bottom: 41.4893617%;
                   }
 
@@ -286,9 +519,6 @@ variation_groups:
                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
                           );
-                          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                              src='https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png',
-                              sizingMethod='scale');
                           padding-bottom: 41.4893617%;
                       }
                   }

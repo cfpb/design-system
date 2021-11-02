@@ -13,7 +13,7 @@ variation_groups:
   - variations:
       - variation_code_snippet: >-
           <section class="m-hero" id="hero1">
-              <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_wrapper">
                   <div class="m-hero_text">
                       <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
                       <p class="m-hero_subhead">
@@ -148,7 +148,7 @@ variation_groups:
           details" link.
         variation_code_snippet: >-
           <section class="m-hero m-hero__overlay" id="hero4">
-              <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_wrapper">
                   <div class="m-hero_text">
                       <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
                       <p class="m-hero_subhead">
@@ -229,7 +229,7 @@ variation_groups:
           seamlessly fade behind the text.
         variation_code_snippet: >-
           <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
-              <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_wrapper">
                   <div class="m-hero_text">
                       <h1 class=m-hero_heading">
                           50 chars max for a two-line heading
@@ -275,7 +275,7 @@ variation_groups:
           </section>
         variation_code_snippet_rendered: >-
           <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
-              <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_wrapper">
                   <div class="m-hero_text">
                       <h1 class="m-hero_heading">
                           50 chars max for a two-line heading
@@ -348,7 +348,7 @@ variation_groups:
           in order to preserve its dimensions.
         variation_code_snippet: >-
           <section class="m-hero m-hero__50-50" id="example-hero-50-50">
-              <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_wrapper">
                   <div class="m-hero_text">
                       <h1 class="m-hero_heading">
                           50 chars max for a two-line heading
@@ -394,7 +394,7 @@ variation_groups:
           </section>
         variation_code_snippet_rendered: >-
           <section class="m-hero m-hero__50-50" id="example-hero-50-50">
-              <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_wrapper">
                   <div class="m-hero_text">
                       <h1 class="m-hero_heading">
                           50 chars max for a two-line heading
@@ -474,7 +474,7 @@ variation_groups:
       - variation_name: Hero with knockout text
         variation_code_snippet: >-
           <section class="m-hero m-hero__knockout" id="hero2">
-              <div class="m-hero_wrapper wrapper">
+              <div class="m-hero_wrapper">
                   <div class="m-hero_text">
                       <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
                       <p class="m-hero_subhead">

@@ -55,6 +55,7 @@ module.exports = {
     'media-feature-parentheses-space-inside': 'always',
     'no-descending-specificity': null,
     'selector-list-comma-newline-after': null,
+    'selector-pseudo-class-parentheses-space-inside': 'always',
     'selector-pseudo-element-colon-notation': 'single'
   }
 };

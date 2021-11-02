@@ -72,7 +72,6 @@ assign( AtomicComponent.prototype, new EventObserver(), {
       if ( this.element.classList.contains( modifierClass ) ) {
         if ( modifier.initialize ) {
           this.initializers.push( modifier.initialize );
-          delete modifier.initialize;
         }
         assign( this, modifier );
       }

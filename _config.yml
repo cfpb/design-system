@@ -1,6 +1,7 @@
 # Redirects
 plugins:
   - jekyll-last-modified-at
+  - jekyll-redirect-from
 
 # Base configuration
 permalink: /:title

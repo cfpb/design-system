@@ -1,4 +1,21 @@
 
+## v0.11.4 (2021-10-26)
+
+#### Bug Fix
+* `cfpb-layout`, `cfpb-typography`
+  * [#1314](https://github.com/cfpb/design-system/pull/1314) Tagline: Fix layout issues and flag ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-core`, `cfpb-forms`, `cfpb-layout`, `cfpb-tables`
+  * [#1313](https://github.com/cfpb/design-system/pull/1313) Fix stylelint issues ([@anselmbradford](https://github.com/anselmbradford))
+* Other
+  * [#1312](https://github.com/cfpb/design-system/pull/1312) Update dependencies: core-js, marked, netlify-cms, babel/core, babel/preset-env, css-loader, jest, jest-cli, lerna-changelog, mini-css-extract-plugin, postcss-loader, webpack, webpack-cli, wdio, babel-loader, chromedriver, http-server, netlify-cms-proxy-server, postcss, style-loader ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.11.3 (2021-10-08)
 
 #### Enhancement

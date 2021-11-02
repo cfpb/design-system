@@ -306,4 +306,7 @@ accessibility: >-
 last_updated: 2019-12-10T22:50:48.793Z
 behavior: ""
 secondary_section: null
+
+redirect_from:
+  - /guidelines/accessibility
 ---

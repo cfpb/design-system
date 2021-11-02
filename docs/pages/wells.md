@@ -43,7 +43,9 @@ variation_groups:
 
               <div class="a-tagline a-tagline__xlarge">
                   <span class="u-usa-flag"></span>
-                  This is a tagline inside an inkwell.
+                  <div class="a-tagline_text">
+                    This is a tagline inside an inkwell.
+                  </div>
               </div>
 
               <p>

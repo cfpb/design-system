@@ -3,9 +3,6 @@
 @fcm-min-height: 220px;
 
 .o-featured-content-module {
-    // TODO: investigate whether this clearfix is actually needed.
-    .u-clearfix();
-
     min-height: @fcm-min-height;
     position: relative;
     border: 1px solid @gray-40;
@@ -40,11 +37,7 @@
     } );
 
     .respond-to-min( @bp-sm-min, {
-        // TODO: investigate whether flexbox is actually needed.
-        display: flex;
-
         &_text {
-            flex: 1;
             padding-right: @fcm-visual-width + @grid_gutter-width;
             padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
         }

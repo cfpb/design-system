@@ -1,6 +1,6 @@
 // Hero variables
 
-@hero-desktop-height:           285px;
+@hero-desktop-height: 285px;
 
 // Hero molecule
 
@@ -39,14 +39,7 @@
         padding-left: ( @grid_gutter-width / 2 );
 
         .respond-to-min( @bp-sm-min, {
-            // IE specific fix
-            display: table-cell;
-            vertical-align: middle;
-
-            @supports ( display: flex ) {
-                display: block;
-                margin: auto;
-            }
+            margin: auto;
         } );
     }
 
@@ -77,14 +70,9 @@
             padding-right: ( @grid_gutter-width / 2 );
             padding-left: ( @grid_gutter-width / 2 );
 
-            // IE specific fix.
-            display: table-cell;
-            vertical-align: middle;
-
-            @supports ( display: flex ) {
-                display: block;
-                margin: auto;
-            }
+            // Vertically center hero images
+            display: flex;
+            align-items: center;
         } );
 
         .respond-to-max( @bp-xs-max, {
@@ -96,6 +84,17 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+
+        width: 100%;
+
+        // Progressive enhancement for legacy browsers.
+        // Instead of writing fallbacks for the behavior of each type of
+        // hero image, we hide the hero image in legacy browsers.
+        display: none;
+
+        @supports ( display: grid ) {
+            display: block;
+        }
     }
 
     &__knockout {
@@ -110,14 +109,6 @@
                 width: 100%;
                 margin-top: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
                 margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
-
-                // IE specific fix.
-                position: absolute;
-
-                @supports ( display: flex ) {
-                    position: relative;
-                    height: initial;
-                }
             }
 
             .m-hero_image {
@@ -145,7 +136,6 @@
         }
 
         .respond-to-max( @bp-xs-max, {
-
             .m-hero_wrapper {
                 // Overwrite the image that is set in the markup because
                 // we are showing the image container below instead.
@@ -174,6 +164,13 @@
 
             .m-hero_image {
                 display: none;
+            }
+        } );
+
+        .respond-to-max( @bp-xs-max, {
+            .m-hero_wrapper {
+                // Keep hero image flush with container on mobile
+                padding-bottom: 0;
             }
         } );
     }

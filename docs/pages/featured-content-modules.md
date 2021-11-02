@@ -25,7 +25,7 @@ variation_groups:
           * Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page, unless featured on the homepage.
 
           * When the visual is anchored to the right of the text, the
-          background color of module is Gray 5 with a 1px Gray 40 stroke.
+          background color of the module is Gray 5 with a 1px Gray 40 stroke.
 
           * Visual is always 270px wide and 220px tall at maximum page width.
 

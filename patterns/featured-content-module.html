@@ -326,7 +326,7 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Featured content modules (FCMs) highlight one specific piece of content. Content can be a video, link, or download.</p>
+        <p>Featured content modules (FCMs) highlight one specific piece of content at the top of a page. Content can be a video, link, or download.</p>
 
     </section>
     
@@ -411,7 +411,7 @@ FCMs appear below the page introduction and retain that position on all screen s
 
 <ul>
   <li>Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page, unless featured on the homepage.</li>
-  <li>Background color of module is Gray 5 with a 1px Gray 40 stroke.</li>
+  <li>When the visual is anchored to the right of the text, the background color of the module is Gray 5 with a 1px Gray 40 stroke.</li>
   <li>Visual is always 270px wide and 220px tall at maximum page width.</li>
   <li>Text spans 5 columns at maximum page width and is left and top aligned. There is 30px of padding around all sides of the text.</li>
   <li>The ratio of text and visual changes with screen size to keep the full height of the image visible. As available width dips below the maximum page width, the text area shrinks in width while the visual maintains a fixed width of 270px. That means that the height and aspect ratio of the visual will change as the screen shrinks, and the image will be cropped between 16% and 29% from each side.</li>
@@ -458,7 +458,7 @@ FCMs appear below the page introduction and retain that position on all screen s
 
         
         <div class="o-variation-group_description">
-            
+            <p>The modifiers below describe how to change where the featured content module visual is positioned relative to the text.</p>
 
         </div>
         
@@ -557,7 +557,7 @@ FCMs appear below the page introduction and retain that position on all screen s
             
             <div class="m-variation_name">
                 <h3>
-                    Visual anchored on the left (default)
+                    Visual anchored on the right (default)
                     
                 </h3>
             </div>
@@ -565,7 +565,8 @@ FCMs appear below the page introduction and retain that position on all screen s
 
             
             <div class="m-variation_description">
-                <p>By default, the featured content module visual is anchored on the left, so that the left side remains in view at all screen sizes.</p>
+                <p>When the featured content module visual is a video, or a static image composed with its subject in the middle. The center of the image is to the center of the available space so that the focal point of the visual remains in view at all screen sizes.
+For videos, note that a 60 x 60 px play button appears centered within the image area. Make sure the subject of the thumbnail photo is not awkwardly obscured by the play button.</p>
 
             </div>
             
@@ -602,15 +603,15 @@ FCMs appear below the page introduction and retain that position on all screen s
             
 
             <div class="a-toggle_code">
-                <button href="#details-visual-anchored-on-the-left-defa-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-visual-anchored-on-the-left-defa-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-visual-anchored-on-the-right-def-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-visual-anchored-on-the-right-def-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-visual-anchored-on-the-left-defa-2">
+            <div class="m-tabs u-hidden" id="details-visual-anchored-on-the-right-def-2">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-visual-anchored-on-the-left-defa-html-code-snippet-2">
+                        <a class="m-tabs_tab" href="#details-visual-anchored-on-the-right-def-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -622,7 +623,7 @@ FCMs appear below the page introduction and retain that position on all screen s
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-visual-anchored-on-the-left-defa-html-code-snippet-2">
+                <section class="m-tabs_panel" id="details-visual-anchored-on-the-right-def-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -675,7 +676,7 @@ FCMs appear below the page introduction and retain that position on all screen s
             
             <div class="m-variation_name">
                 <h3>
-                    Visual anchored on the right
+                    Left-anchored visual
                     
                 </h3>
             </div>
@@ -683,7 +684,7 @@ FCMs appear below the page introduction and retain that position on all screen s
 
             
             <div class="m-variation_description">
-                <p>In cases where the featured content module’s visual should be anchored to the right—for example, when displaying a map with a copyright watermark on the right—add the <code class="language-plaintext highlighter-rouge">o-featured-content-module__right</code> modifier class to the <code class="language-plaintext highlighter-rouge">o-featured-content-module</code> organism. This anchors the right side of the image to the right of the available space so that the right side remains in view at all screen sizes.</p>
+                <p>Adding the <code class="language-plaintext highlighter-rouge">o-featured-content-module__left</code> modifier places the visual to the left of the text and doesn’t include a background color or border.</p>
 
             </div>
             
@@ -692,9 +693,9 @@ FCMs appear below the page introduction and retain that position on all screen s
             
             <div class="a-live_code">
                 <section class="o-featured-content-module
-                o-featured-content-module__right">
+                o-featured-content-module__left">
     <div class="o-featured-content-module_text">
-        <h2>Featured map</h2>
+        <h2>Featured content</h2>
         <p>
             Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
             instructior ex pri. Cu pri inani constituto, cum aeque noster
@@ -721,15 +722,15 @@ FCMs appear below the page introduction and retain that position on all screen s
             
 
             <div class="a-toggle_code">
-                <button href="#details-visual-anchored-on-the-right-in--3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-visual-anchored-on-the-right-in--3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-left-anchored-visual-adding-the--3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-left-anchored-visual-adding-the--3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-visual-anchored-on-the-right-in--3">
+            <div class="m-tabs u-hidden" id="details-left-anchored-visual-adding-the--3">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-visual-anchored-on-the-right-in--html-code-snippet-3">
+                        <a class="m-tabs_tab" href="#details-left-anchored-visual-adding-the--html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -741,136 +742,14 @@ FCMs appear below the page introduction and retain that position on all screen s
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-visual-anchored-on-the-right-in--html-code-snippet-3">
+                <section class="m-tabs_panel" id="details-left-anchored-visual-adding-the--html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;section class="o-featured-content-module
-                o-featured-content-module__right"&gt;
+                o-featured-content-module__left"&gt;
     &lt;div class="o-featured-content-module_text"&gt;
-        &lt;h2&gt;Featured map&lt;/h2&gt;
-        &lt;p&gt;
-            Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-            instructior ex pri. Cu pri inani constituto, cum aeque noster
-            commodo cu.
-        &lt;/p&gt;
-        &lt;a class="a-link
-                  a-link__jump
-                  a-link__icon-after-text"&gt;
-            &lt;span class="a-link_text"&gt;Read more about the feature&lt;/span&gt;
-        &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class="o-featured-content-module_visual"&gt;
-        &lt;img class="o-featured-content-module_img"
-            src="https://dummyimage.com/1076x606/addc91/101820"
-            alt=""&gt;
-    &lt;/div&gt;
-&lt;/section&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>
-                    Centered visual
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>When the featured content module visual is a video, or a static image composed with its subject in the middle, add the <code class="language-plaintext highlighter-rouge">o-featured-content-module__center</code> modifier class to the <code class="language-plaintext highlighter-rouge">o-featured-content-module</code> organism. This anchors the center of the image to the center of the available space so that the focal point of the visual remains in view at all screen sizes.</p>
-
-<p>For videos, note that a 60 x 60 px play button appears centered within the image area. Make sure the subject of the thumbnail photo is not awkwardly obscured by the play button.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <section class="o-featured-content-module
-                o-featured-content-module__center">
-    <div class="o-featured-content-module_text">
-        <h2>Featured video</h2>
-        <p>
-            Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-            instructior ex pri. Cu pri inani constituto, cum aeque noster
-            commodo cu.
-        </p>
-        <a class="a-link
-                  a-link__jump
-                  a-link__icon-after-text">
-            <span class="a-link_text">Read more about the feature</span>
-        </a>
-    </div>
-    <div class="o-featured-content-module_visual">
-        <img class="o-featured-content-module_img" src="https://dummyimage.com/1076x606/addc91/101820" alt="">
-    </div>
-</section>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-centered-visual-when-the-feature-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-centered-visual-when-the-feature-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-centered-visual-when-the-feature-4">
-                <ul class="m-tabs_list">
-                    
-                    <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-centered-visual-when-the-feature-html-code-snippet-4">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs_panel" id="details-centered-visual-when-the-feature-html-code-snippet-4">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;section class="o-featured-content-module
-                o-featured-content-module__center"&gt;
-    &lt;div class="o-featured-content-module_text"&gt;
-        &lt;h2&gt;Featured video&lt;/h2&gt;
+        &lt;h2&gt;Featured content&lt;/h2&gt;
         &lt;p&gt;
             Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
             instructior ex pri. Cu pri inani constituto, cum aeque noster
@@ -1074,8 +953,8 @@ FCMs appear below the page introduction and retain that position on all screen s
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/featured-content-modules.md">
-                    <time datetime="2021-11-02 10:01:56 -0400">
-                        10:01:56 AM Nov 02, 2021
+                    <time datetime="2021-11-02 16:44:45 -0400">
+                         4:44:45 PM Nov 02, 2021
                     </time>
                 </a>
             </small>

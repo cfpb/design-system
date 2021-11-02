@@ -2629,45 +2629,37 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type( 1 ) h3,
 }
 .o-featured-content-module {
   min-height: 220px;
-  border: 1px solid #b4b5b6;
   position: relative;
+  border: 1px solid #b4b5b6;
   background-color: #f7f8f9;
-}
-.o-featured-content-module:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-@media only all and (min-width: 37.5625em) {
-  .o-featured-content-module {
-    display: flex;
-  }
 }
 .o-featured-content-module_text {
   padding-top: 1.875em;
   padding-bottom: 1.875em;
 }
+.o-featured-content-module_img {
+  display: block;
+}
 @media only all and (max-width: 37.5em) {
   .o-featured-content-module_text {
     padding-right: 0.9375em;
     padding-left: 0.9375em;
   }
-}
-@media only all and (min-width: 37.5625em) {
-  .o-featured-content-module_text {
-    flex: 1;
-    padding-right: 300px;
-    padding-left: 1.875em;
-  }
-}
-@media only all and (max-width: 37.5em) {
   .o-featured-content-module_visual {
     padding-right: 0.9375em;
     padding-bottom: 0.9375em;
     padding-left: 0.9375em;
   }
+  .o-featured-content-module_img {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 @media only all and (min-width: 37.5625em) {
+  .o-featured-content-module_text {
+    padding-right: 300px;
+    padding-left: 1.875em;
+  }
   .o-featured-content-module_visual {
     height: 100%;
     overflow: hidden;
@@ -2676,38 +2668,35 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type( 1 ) h3,
     right: 0;
     width: 270px;
   }
-}
-.o-featured-content-module_img {
-  display: block;
-}
-@media only all and (max-width: 56.25em) {
-  .o-featured-content-module_img {
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-@media only all and (min-width: 37.5625em) {
   .o-featured-content-module_img {
     max-width: none;
     height: 100%;
     position: absolute;
-  }
-}
-@media only all and (min-width: 37.5625em) {
-  .o-featured-content-module__right .o-featured-content-module_img {
-    right: 0;
-  }
-}
-@media only all and (min-width: 37.5625em) {
-  .o-featured-content-module__center .o-featured-content-module_img {
     left: 50%;
     transform: translateX(-50%);
   }
-  .lt-ie9 .o-featured-content-module__center .o-featured-content-module_img {
+  .lt-ie9 .o-featured-content-module_img {
     position: absolute;
     right: -100%;
     left: -100%;
     margin: auto;
+  }
+}
+.o-featured-content-module__left {
+  /* Left modifier doesn't have a border/background. If in the future we
+           have a left arranged FCM we'll want to make the border/background
+           its own modifer */
+  border: initial;
+  background-color: initial;
+}
+.o-featured-content-module__left .o-featured-content-module_visual {
+  left: 0;
+  right: initial;
+}
+@media only all and (min-width: 37.5625em) {
+  .o-featured-content-module__left .o-featured-content-module_text {
+    padding-left: 300px;
+    padding-right: 1.875em;
   }
 }
 .o-well {

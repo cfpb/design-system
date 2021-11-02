@@ -1,85 +1,93 @@
+// Featured Content Module variables
+@fcm-visual-width: 270px;
+@fcm-min-height: 220px;
+
 .o-featured-content-module {
-    .u-clearfix();
-
     min-height: @fcm-min-height;
-    border: 1px solid @fcm-border;
     position: relative;
-    background-color: @fcm-bg;
-
-    .respond-to-min( @bp-sm-min, {
-        display: flex;
-    } );
+    border: 1px solid @gray-40;
+    background-color: @gray-5;
 
     &_text {
         padding-top: unit( @grid_gutter-width / @base-font-size-px, em );
         padding-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
-
-        .respond-to-max( @bp-xs-max, {
-            padding-right: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
-            padding-left: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
-        } );
-
-        .respond-to-min( @bp-sm-min, {
-            flex: 1;
-            padding-right: @fcm-visual-width + @grid_gutter-width;
-            padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
-        } );
     }
 
-    &_visual {
-        .respond-to-max( @bp-xs-max, {
+    &_img {
+        display: block;
+    }
+
+    .respond-to-max( @bp-xs-max, {
+        &_text {
+            padding-right: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
+            padding-left: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
+        }
+
+        &_visual {
             padding-right: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
             padding-bottom: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
             padding-left: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
-        } );
+        }
 
-        .respond-to-min( @bp-sm-min, {
+        &_img {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+    } );
+
+    .respond-to-min( @bp-sm-min, {
+        &_text {
+            padding-right: @fcm-visual-width + @grid_gutter-width;
+            padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+        }
+
+        &_visual {
             height: 100%;
             overflow: hidden;
             position: absolute;
             top: 0;
             right: 0;
             width: @fcm-visual-width;
-        } );
-    }
+        }
 
-    &_img {
-        display: block;
-
-        .respond-to-max( @bp-sm-max, {
-            margin-right: auto;
-            margin-left: auto;
-        } );
-
-        .respond-to-min( @bp-sm-min, {
+        &_img {
             max-width: none;
             height: 100%;
             position: absolute;
-        } );
-    }
+
+            // Center alignment.
+            left: 50%;
+
+            transform: translateX( -50% );
+
+            .lt-ie9 & {
+                position: absolute;
+                right: -100%;
+                left: -100%;
+                margin: auto;
+            }
+        }
+
+    } );
 
     // Modifiers
-    &__right {
-        .o-featured-content-module_img {
-            .respond-to-min( @bp-sm-min, {
-                right: 0;
-            } );
+    &__left {
+        /* Left modifier doesn't have a border/background. If in the future we
+           have a left arranged FCM we'll want to make the border/background
+           its own modifer */
+        border: initial;
+        background-color: initial;
+
+        .o-featured-content-module_visual {
+            left: 0;
+            right: initial;
         }
-    }
 
-    &__center {
-        .o-featured-content-module_img {
+        .o-featured-content-module_text {
             .respond-to-min( @bp-sm-min, {
-                left: 50%;
-
-                transform: translateX( -50% );
-
-                .lt-ie9 & {
-                    position: absolute;
-                    right: -100%;
-                    left: -100%;
-                    margin: auto;
-                }
+                padding-left: @fcm-visual-width + @grid_gutter-width;
+                padding-right: unit( @grid_gutter-width / @base-font-size-px, em );
             } );
         }
     }

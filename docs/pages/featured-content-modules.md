@@ -3,9 +3,8 @@ title: Featured content module
 layout: variation
 section: patterns
 status: Released
-description: "Featured content modules (FCMs) highlight one specific piece of
-  content at the top of a page. Content is featured temporarily and not a
-  permanent part of the page. Content can be a video, link, or download.\r"
+description: Featured content modules (FCMs) highlight one specific piece of
+  content at the top of a page. Content can be a video, link, or download.
 variation_groups:
   - variation_group_name: Standard featured content module
     variations:
@@ -15,17 +14,18 @@ variation_groups:
           piece of content being featured. They are a “mini story” and never
           simply a dominant visual.
 
-          FCMs appear below the page introduction, and retain that position on all screen sizes. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. <br>
+          FCMs appear below the page introduction and retain that position on all screen sizes, unless appearing on the homepage where all content is featured and placement can vary by priority. They are designed to accommodate pages with either a left-hand navigation or right-hand sidebar. <br>
 
 
           ![Image of a featured content module](/design-system/images/uploads/fcm-desktop02.png)
         variation_specs: >-
-          ### Desktop style
+          ### Standard desktop style
 
 
-          * Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page.
+          * Module spans the full width of the page’s content area and is 220px tall at maximum page width. It appears 60px underneath the header/intro paragraph of the page, unless featured on the homepage.
 
-          * Background color of module is Gray 5 with a 1px Gray 40 stroke.
+          * When the visual is anchored to the right of the text, the
+          background color of the module is Gray 5 with a 1px Gray 40 stroke.
 
           * Visual is always 270px wide and 220px tall at maximum page width.
 
@@ -54,11 +54,20 @@ variation_groups:
           * 15px of left, right, and bottom padding around all content in the FCM
 
 
-          ### Video thumbnails 
+          ### Video thumbnails
 
 
           * For videos, a 60x60 px play button appears in the center of the image area (horizontally and vertically centered). Make sure the subject of the thumbnail image is not awkwardly obscured by the play button. In particular, make sure that no faces are covered by the play button. This may require a photo composed with the subject on the left or right side of the image.
   - variations:
+      - variation_is_deprecated: false
+        variation_description: In cases when the featured content module appears next to
+          another component with a background color, this variation can be
+          applied to reduce visual overload.
+        variation_name: Reversed layout without background
+        variation_specs: |-
+          * No background or border
+          * Visual is left-aligned instead of right-aligned.
+          * Text is aligned to the left edge of the image.
       - variation_code_snippet: >-
           <section class="o-featured-content-module">
               <div class="o-featured-content-module_text">
@@ -80,45 +89,20 @@ variation_groups:
                       alt="">
               </div>
           </section>
-        variation_description: By default, the featured content module visual is
-          anchored on the left, so that the left side remains in view at all
-          screen sizes.
-        variation_name: Visual anchored on the left (default)
+        variation_description: When the featured content module visual is a
+          video, or a static image composed with its subject in the middle.
+          The center of the image is to the center of the available space so
+          that the focal point of the visual remains in view at all screen sizes.
+
+          For videos, note that a 60 x 60 px play button appears centered within
+          the image area. Make sure the subject of the thumbnail photo is not
+          awkwardly obscured by the play button.
+        variation_name: Visual anchored on the right (default)
       - variation_code_snippet: >-
           <section class="o-featured-content-module
-                          o-featured-content-module__right">
+                          o-featured-content-module__left">
               <div class="o-featured-content-module_text">
-                  <h2>Featured map</h2>
-                  <p>
-                      Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-                      instructior ex pri. Cu pri inani constituto, cum aeque noster
-                      commodo cu.
-                  </p>
-                  <a class="a-link
-                            a-link__jump
-                            a-link__icon-after-text">
-                      <span class="a-link_text">Read more about the feature</span>
-                  </a>
-              </div>
-              <div class="o-featured-content-module_visual">
-                  <img class="o-featured-content-module_img"
-                      src="https://dummyimage.com/1076x606/addc91/101820"
-                      alt="">
-              </div>
-          </section>
-        variation_description: In cases where the featured content module’s visual
-          should be anchored to the right—for example, when displaying a map
-          with a copyright watermark on the right—add the
-          `o-featured-content-module__right` modifier class to the
-          `o-featured-content-module` organism. This anchors the right side of
-          the image to the right of the available space so that the right side
-          remains in view at all screen sizes.
-        variation_name: Visual anchored on the right
-      - variation_code_snippet: >-
-          <section class="o-featured-content-module
-                          o-featured-content-module__center">
-              <div class="o-featured-content-module_text">
-                  <h2>Featured video</h2>
+                  <h2>Featured content</h2>
                   <p>
                       Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
                       instructior ex pri. Cu pri inani constituto, cum aeque noster
@@ -137,30 +121,19 @@ variation_groups:
               </div>
           </section>
         variation_description: >-
-          When the featured content module visual is a video, or a static image
-          composed with its subject in the middle, add the
-          `o-featured-content-module__center` modifier class to the
-          `o-featured-content-module` organism. This anchors the center of the
-          image to the center of the available space so that the focal point of
-          the visual remains in view at all screen sizes. 
-
-
-          For videos, note that a 60 x 60 px play button appears centered within the image area. Make sure the subject of the thumbnail photo is not awkwardly obscured by the play button.
-        variation_name: Centered visual
+          Adding the `o-featured-content-module__left` modifier places the
+          visual to the left of the text and doesn't include a background
+          color or border.
+        variation_name: Left-anchored visual
     variation_group_name: Variations
     variation_group_description: >-
-      The modifiers below describe how to change how the featured content module
-      visual is anchored. This affects what portion of the image or video is
-      visible at different desktop breakpoints.
-
-
-      The featured content module visual is anchored left by default, but there are cases in which right or center anchoring is preferred. For example, video should typically be centered.
+      The modifiers below describe how to change where the featured content
+      module visual is positioned relative to the text.
 use_cases: >-
-  Featured content modules (FCMs) highlight a specific piece of content at the
-  top of a page. They are meant to call attention to a related piece of content
-  that might be new or otherwise relevant to — but not directly a part of — the
-  main content on the page, the primary intended user action, or the user
-  journey.
+  Featured content modules (FCMs) highlight a specific piece of content. They
+  are meant to call attention to a related piece of content that might be new or
+  otherwise relevant to — but not directly a part of — the main content on the
+  page, the primary intended user action, or the user journey.
 
 
   The goal of an FCM is to have the user do one of three things: learn something (usually by navigating to other content), watch something, or download something (a printable tool or resource). FCMs can appear on any page type, though they are best suited for pages third level and below in the site map.

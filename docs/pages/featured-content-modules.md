@@ -93,7 +93,7 @@ variation_groups:
           <section class="o-featured-content-module
                           o-featured-content-module__left">
               <div class="o-featured-content-module_text">
-                  <h2>Featured video</h2>
+                  <h2>Featured content</h2>
                   <p>
                       Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
                       instructior ex pri. Cu pri inani constituto, cum aeque noster

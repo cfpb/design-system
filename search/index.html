@@ -3391,9 +3391,9 @@ Label
                     'variation_name1': 'Hero with illustration',
                     'variation_description1': "The illustration may be inset, as shown here, or bleeding. See examples of a hero with inset illustration and hero with bleeding illustration. Click on the “show details” link below for implementation details and production specs.\n",
                     'variation_code_snippet1': `&lt;section class=&quot;m-hero&quot; id=&quot;hero1&quot;&gt;
-    &lt;div class=&quot;m-hero_wrapper wrapper&quot;&gt;
+    &lt;div class=&quot;m-hero_wrapper&quot;&gt;
         &lt;div class=&quot;m-hero_text&quot;&gt;
-            &lt;p class=&quot;h1 m-hero_heading&quot;&gt;41 chars max for a one-line heading&lt;/p&gt;
+            &lt;h1 class=&quot;m-hero_heading&quot;&gt;41 chars max for a one-line heading&lt;/h1&gt;
             &lt;p class=&quot;m-hero_subhead&quot;&gt;
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
@@ -3420,9 +3420,6 @@ Label
                 url(&#39;https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png&#39;) 1x,
                 url(&#39;https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png&#39;) 2x
             );
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                src=&#39;https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png&#39;,
-                sizingMethod=&#39;scale&#39;);
             padding-bottom: 41.4893617%;
         }
     &lt;/style&gt;
@@ -3431,9 +3428,9 @@ Label
                     'variation_name2': 'Hero with photograph',
                     'variation_description2': "Note hero text overlays the photograph at larger screen sizes. See an example of a hero with photograph. For implementation details and production specs, click on the “Show details” link.\n",
                     'variation_code_snippet2': `&lt;section class=&quot;m-hero m-hero__overlay&quot; id=&quot;hero4&quot;&gt;
-    &lt;div class=&quot;m-hero_wrapper wrapper&quot;&gt;
+    &lt;div class=&quot;m-hero_wrapper&quot;&gt;
         &lt;div class=&quot;m-hero_text&quot;&gt;
-            &lt;p class=&quot;h1 m-hero_heading&quot;&gt;41 chars max for a one-line heading&lt;/p&gt;
+            &lt;h1 class=&quot;m-hero_heading&quot;&gt;41 chars max for a one-line heading&lt;/h1&gt;
             &lt;p class=&quot;m-hero_subhead&quot;&gt;
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
@@ -3457,9 +3454,6 @@ Label
                 url(&#39;https://dummyimage.com/600x250/addc91/101820&#39;) 1x,
                 url(&#39;https://dummyimage.com/1200x500/addc91/101820&#39;) 2x
             );
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                src=&#39;https://dummyimage.com/600x250/addc91/101820&#39;,
-                sizingMethod=&#39;scale&#39;);
             padding-bottom: 41.6666667%;
         }
 
@@ -3475,9 +3469,102 @@ Label
                     url(&#39;http://files.consumerfinance.gov/f/images/PC_hero.original.jpg&#39;) 1x,
                     url(&#39;http://files.consumerfinance.gov/f/images/PC_hero.original.jpg&#39;) 2x
                 );
-                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                    src=&#39;http://files.consumerfinance.gov/f/images/PC_hero.original.jpg&#39;,
-                    sizingMethod=&#39;scale&#39;);
+            }
+        }
+    &lt;/style&gt;
+&lt;/section&gt;`,
+                
+                    'variation_name3': 'Jumbo hero',
+                    'variation_description3': "Jumbo heroes have supersized headings on large screens and standard-sized headings on smaller screens. The image visibly fills the right-most third of the element while using a gradient to seamlessly fade behind the text.\n",
+                    'variation_code_snippet3': `&lt;section class=&quot;m-hero m-hero__jumbo&quot; id=&quot;example-jumbo-hero&quot;&gt;
+    &lt;div class=&quot;m-hero_wrapper&quot;&gt;
+        &lt;div class=&quot;m-hero_text&quot;&gt;
+            &lt;h1 class=m-hero_heading&quot;&gt;
+                50 chars max for a two-line heading
+            &lt;/h1&gt;
+            &lt;p class=&quot;m-hero_subhead&quot;&gt;    
+                This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;m-hero_image-wrapper&quot;&gt;
+            &lt;div class=&quot;m-hero_image&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;style&gt;
+        #example-jumbo-hero .m-hero_image {
+            background-image:
+                url(&#39;/design-system/images/uploads/jumbo_hero_image_wide.jpeg&#39;);
+            background-image: -webkit-image-set(
+                url(&#39;/design-system/images/uploads/jumbo_hero_image_wide.jpeg&#39;) 1x,
+                url(&#39;/design-system/images/uploads/jumbo_hero_image_wide.jpeg&#39;) 2x
+            );
+            background-image: image-set(
+                url(&#39;/design-system/images/uploads/jumbo_hero_image_wide.jpeg&#39;) 1x,
+                url(&#39;/design-system/images/uploads/jumbo_hero_image_wide.jpeg&#39;) 2x
+            );
+            padding-bottom: 41.6666667%;
+        }
+
+        @media screen and (min-width: 37.5625em) {
+            #example-jumbo-hero .m-hero_wrapper {
+                background-image:
+                    url(&#39;/design-system/images/uploads/jumbo_hero_image_wide.jpeg&#39;);
+                background-image: -webkit-image-set(
+                    url(&#39;/design-system/images/uploads/jumbo_hero_image_wide.jpeg&#39;) 1x,
+                    url(&#39;/design-system/images/uploads/jumbo_hero_image_wide.jpeg&#39;) 2x
+                );
+                background-image: image-set(
+                    url(&#39;/design-system/images/uploads/jumbo_hero_image_wide.jpeg&#39;) 1x,
+                    url(&#39;/design-system/images/uploads/jumbo_hero_image_wide.jpeg&#39;) 2x
+                );
+            }
+        }
+    &lt;/style&gt;
+&lt;/section&gt;`,
+                
+                    'variation_name4': '50/50 hero',
+                    'variation_description4': "For more visually-driven layouts, 50/50 heroes have supersized headings while also dedicating half their space to the image. The image takes up the full right half of the hero and bleeds to the top and bottom edges on larger screens. On smaller screens and constrained layouts, white space will appear above and below the image in order to preserve its dimensions.\n",
+                    'variation_code_snippet4': `&lt;section class=&quot;m-hero m-hero__50-50&quot; id=&quot;example-hero-50-50&quot;&gt;
+    &lt;div class=&quot;m-hero_wrapper&quot;&gt;
+        &lt;div class=&quot;m-hero_text&quot;&gt;
+            &lt;h1 class=&quot;m-hero_heading&quot;&gt;
+                50 chars max for a two-line heading
+            &lt;/h1&gt;
+            &lt;p class=&quot;m-hero_subhead&quot;&gt;    
+                This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;m-hero_image-wrapper&quot;&gt;
+            &lt;div class=&quot;m-hero_image&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;style&gt;
+        #example-hero-50-50 .m-hero_image {
+            background-image:
+                url(&#39;/design-system/images/uploads/jumbo-hero-image.png&#39;);
+            background-image: -webkit-image-set(
+                url(&#39;/design-system/images/uploads/jumbo-hero-image.png&#39;) 1x,
+                url(&#39;/design-system/images/uploads/jumbo-hero-image.png&#39;) 2x
+            );
+            background-image: image-set(
+                url(&#39;/design-system/images/uploads/jumbo-hero-image.png&#39;) 1x,
+                url(&#39;/design-system/images/uploads/jumbo-hero-image.png&#39;) 2x
+            );
+            padding-bottom: 41.6666667%;
+        }
+
+        @media screen and (min-width: 37.5625em) {
+            #example-hero-50-50 .m-hero_wrapper {
+                background-image:
+                    url(&#39;/design-system/images/uploads/jumbo-hero-image.png&#39;);
+                background-image: -webkit-image-set(
+                    url(&#39;/design-system/images/uploads/jumbo-hero-image.png&#39;) 1x,
+                    url(&#39;/design-system/images/uploads/jumbo-hero-image.png&#39;) 2x
+                );
+                background-image: image-set(
+                    url(&#39;/design-system/images/uploads/jumbo-hero-image.png&#39;) 1x,
+                    url(&#39;/design-system/images/uploads/jumbo-hero-image.png&#39;) 2x
+                );
             }
         }
     &lt;/style&gt;
@@ -3491,9 +3578,9 @@ Label
                     'variation_name1': 'Hero with knockout text',
                     'variation_description1': "When using a dark background, add the __knockout modifier to the hero to switch the text to white. For reference, see this example of a hero with knockout text.\n",
                     'variation_code_snippet1': `&lt;section class=&quot;m-hero m-hero__knockout&quot; id=&quot;hero2&quot;&gt;
-    &lt;div class=&quot;m-hero_wrapper wrapper&quot;&gt;
+    &lt;div class=&quot;m-hero_wrapper&quot;&gt;
         &lt;div class=&quot;m-hero_text&quot;&gt;
-            &lt;p class=&quot;h1 m-hero_heading&quot;&gt;Max of 41 chars for a one-line heading&lt;/p&gt;
+            &lt;h1 class=&quot;m-hero_heading&quot;&gt;Max of 41 chars for a one-line heading&lt;/h1&gt;
             &lt;p class=&quot;m-hero_subhead&quot;&gt;
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
@@ -3521,9 +3608,6 @@ Label
                 url(&#39;https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png&#39;) 1x,
                 url(&#39;https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png&#39;) 2x
             );
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                src=&#39;https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png&#39;,
-                sizingMethod=&#39;scale&#39;);
             padding-bottom: 41.4893617%;
         }
 
@@ -3539,9 +3623,6 @@ Label
                     url(&#39;https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png&#39;) 1x,
                     url(&#39;https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png&#39;) 2x
                 );
-                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                    src=&#39;https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png&#39;,
-                    sizingMethod=&#39;scale&#39;);
                 padding-bottom: 41.4893617%;
             }
         }

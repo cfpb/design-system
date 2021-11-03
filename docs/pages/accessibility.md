@@ -308,5 +308,6 @@ behavior: ""
 secondary_section: null
 
 redirect_from:
+  - /accessibility
   - /guidelines/accessibility
 ---

@@ -1,0 +1,76 @@
+.o-email-signup {
+    .m-notification {
+        margin-bottom: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
+    }
+
+    .a-text-input {
+        // Keep inputs in a wider layout to a reasonable width.
+        // 370 = 4 columns at max grid width
+        max-width: unit( 370px / @base-font-size-px, rem );
+    }
+
+    .m-btn-group {
+        display: flex;
+        margin-top: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
+        align-items: flex-start;
+        flex-wrap: wrap-reverse;
+    }
+
+    button {
+        margin-right: unit( @grid_gutter-width / 3 / @base-font-size-px, em );
+    }
+
+    // Extra class in selector needed to override default .m-btn-group margin
+    .a-btn.a-btn__secondary {
+        // Magic number below is to align its baseline with the button
+        // label to its left when they are side-by-side.
+        margin-bottom: unit( 8px / @base-font-size-px, em );
+        margin-left: 0;
+        order: 1;
+    }
+
+    .respond-to-max( @bp-xs-max, {
+        .a-label__heading {
+            font-size: 1em;
+        }
+    } );
+}
+
+.m-inset {
+    width: 100%;
+    clear: right;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__email {
+        .respond-to-min(@bp-sm-min, {
+            box-sizing: border-box;
+            width: 50%;
+            padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+        });
+
+        .o-email-signup {
+            padding: unit( @grid_gutter-width / @base-font-size-px, em );
+            border: 1px solid @block__border-top;
+            margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+            background-color: @block__bg;
+
+            .respond-to-range(@bp-sm-min, @bp-sm-max, {
+                width: 100%;
+            });
+
+            .respond-to-max(320px, {
+                padding: unit( @grid_gutter-width / @base-font-size-px, em )
+                         unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
+            });
+        }
+    }
+}
+
+// in .content__1-3 pages, inset should be 4 of 9 columns
+// except in the 600-650px range, where it becomes unusably narrow
+.content__1-3 .m-inset__email {
+    .respond-to-min(650px, {
+        width: percentage( 4 / 9 );
+    });
+}

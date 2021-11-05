@@ -1,4 +1,18 @@
 
+## v0.12.0 (2021-11-05)
+
+#### Bug Fix
+* `cfpb-layout`, `cfpb-typography`
+  * [#1330](https://github.com/cfpb/design-system/pull/1330) Tagline: Adjust font-size, icon-text spacing, and max-width in inkwell ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-layout`
+  * [#1327](https://github.com/cfpb/design-system/pull/1327) Inkwell: Remove border ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- [@brandon-rusk](https://github.com/brandon-rusk)
+
+
+
 ## v0.12.0 (2021-11-02)
 
 #### Enhancement

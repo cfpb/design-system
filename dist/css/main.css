@@ -1779,7 +1779,8 @@ a.a-heading__icon.active {
   margin-top: 4px;
 }
 .a-tagline__xlarge {
-  font-size: 1.5rem;
+  font-size: 1.625rem;
+  grid-template-columns: 40px 1fr;
   grid-column-gap: 30px;
 }
 .a-tagline__xlarge .u-usa-flag {
@@ -2826,6 +2827,7 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type( 1 ) h3,
 }
 .o-well__inkwell .a-tagline {
   margin-bottom: 0.9375em;
+  max-width: 41.875rem;
 }
 /* ==========================================================================
    Design System

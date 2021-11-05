@@ -15,7 +15,7 @@ variation_groups:
           <section class="m-hero" id="hero1">
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">41 chars max for a one-line heading</p>
+                      <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
@@ -150,7 +150,7 @@ variation_groups:
           <section class="m-hero m-hero__overlay" id="hero4">
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">41 chars max for a one-line heading</p>
+                      <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
@@ -350,9 +350,9 @@ variation_groups:
           <section class="m-hero m-hero__50-50" id="example-hero-50-50">
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">
+                      <h1 class="m-hero_heading">
                           50 chars max for a two-line heading
-                      </p>
+                      </h1>
                       <p class="m-hero_subhead">    
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
@@ -476,7 +476,7 @@ variation_groups:
           <section class="m-hero m-hero__knockout" id="hero2">
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">Max of 41 chars for a one-line heading</p>
+                      <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading

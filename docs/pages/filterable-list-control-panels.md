@@ -9,22 +9,152 @@ description: The filter control panel allows users to whittle down number of
   parameters, housed in an expandable above the list.
 variation_groups:
   - variations:
-      - variation_code_snippet: ""
-        variation_description: >-
-          ### Collapsed
-
-
-          ![Filterable list collapsed](/design-system/images/uploads/filterable_list_control_panels_collapsed_071620.png)
-
-
-          ### Expanded
-
-
-          ![Filterable list expanded](/design-system/images/uploads/filterable_list_control_panels_expanded_071620.png)
+      - variation_code_snippet: >-
+          <div id="o-filterable-list-controls"
+          class="o-filterable-list-controls">
+              <div class="o-expandable
+                  o-expandable__padded
+                  o-expandable__background
+                  o-expandable__border">
+                  <button class="o-expandable_header o-expandable_target o-expandable_target__expanded" type="button">
+                      <span class="h4 o-expandable_header-left o-expandable_label">
+                      Filter posts
+                      </span>
+                      <span class="o-expandable_header-right o-expandable_link">
+                          <span class="o-expandable_cue o-expandable_cue-open">
+                              <span class="u-visually-hidden-on-mobile
+                                  ">
+                              Show
+                              filters
+                              </span>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 20.4" class="cf-icon-svg">
+                                  <path d="M16.416 10.283A7.917 7.917 0 1 1 8.5 2.366a7.916 7.916 0 0 1 7.916 7.917zm-2.958.01a.792.792 0 0 0-.792-.792H9.284V6.12a.792.792 0 1 0-1.583 0V9.5H4.32a.792.792 0 0 0 0 1.584H7.7v3.382a.792.792 0 0 0 1.583 0v-3.382h3.382a.792.792 0 0 0 .792-.791z"></path>
+                              </svg>
+                          </span>
+                          <span class="o-expandable_cue o-expandable_cue-close">
+                              <span class="u-visually-hidden-on-mobile
+                                  ">
+                              Hide
+                              filters
+                              </span>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 20.4" class="cf-icon-svg">
+                                  <path d="M16.416 10.283A7.917 7.917 0 1 1 8.5 2.366a7.916 7.916 0 0 1 7.916 7.917zm-2.958.01a.792.792 0 0 0-.792-.792H4.32a.792.792 0 0 0 0 1.583h8.346a.792.792 0 0 0 .792-.791z"></path>
+                              </svg>
+                          </span>
+                      </span>
+                  </button>
+                  <div class="o-expandable_content o-expandable_content__transition u-is-animating o-expandable_content__expanded" style="max-height: 398px;">
+                      <form method="get" action="#">
+                          <div class="content-l">
+                              <div class="content-l_col
+                                  content-l_col-1">
+                                  <div class="o-form_group">
+                                      <div class="m-form-field">
+                                          <label class="a-label a-label__heading" for="o-filterable-list-controls_title">
+                                          Search by keyword(s)
+                                          </label>
+                                          <input type="text" name="title" id="o-filterable-list-controls_title" class="a-text-input a-text-input__full" maxlength="250">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="content-l_col
+                                  content-l_col-1-3">
+                                  <div class="o-form_group">
+                                      <div class="m-form-field">
+                                          <label class="a-label a-label__heading" for="o-filterable-list-controls_categories">
+                                          Category
+                                          </label>
+                                          <div class="o-multiselect">
+                                              <ul class="o-multiselect_choices"></ul>
+                                              <header class="o-multiselect_header"><input class="o-multiselect_search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_categories" autocomplete="off" style="cursor: auto;"></header>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="content-l_col
+                                  content-l_col-1-3">
+                                  <div class="o-form_group">
+                                      <div class="m-form-field">
+                                          <label class="a-label a-label__heading" for="o-filterable-list-controls_topics">
+                                          Topics
+                                          </label>
+                                          <div class="o-multiselect">
+                                              <ul class="o-multiselect_choices"></ul>
+                                              <header class="o-multiselect_header"><input class="o-multiselect_search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_topics" autocomplete="off"></header>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="content-l_col
+                                  content-l_col-1-3">
+                                  <div class="o-form_group">
+                                      <div class="m-form-field">
+                                          <label class="a-label a-label__heading" for="o-filterable-list-controls_language">
+                                          Language
+                                          </label>
+                                          <div class="o-multiselect">
+                                              <ul class="o-multiselect_choices"></ul>
+                                              <header class="o-multiselect_header"><input class="o-multiselect_search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_language" autocomplete="off"></header>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="content-l_col
+                                  content-l_col-1">
+                                  <div class="content-l">
+                                      <div class="content-l_col
+                                          content-l_col-2-3">
+                                          <div class="o-form_group">
+                                              <fieldset class="o-form_fieldset">
+                                                  <legend class="a-legend">
+                                                      Date range
+                                                  </legend>
+                                                  <div class="content-l">
+                                                      <div class="content-l_col
+                                                          content-l_col-1-2">
+                                                          <div class="m-form-field">
+                                                              <label class="a-label a-label__heading" for="o-filterable-list-controls_from-date">
+                                                              From:
+                                                              </label>
+                                                              <input type="date" name="from_date" class="a-text-input a-text-input__full" placeholder="mm/dd/yyyy" data-type="date" id="o-filterable-list-controls_from-date">
+                                                          </div>
+                                                      </div>
+                                                      <div class="content-l_col
+                                                          content-l_col-1-2">
+                                                          <div class="m-form-field">
+                                                              <label class="a-label a-label__heading" for="o-filterable-list-controls_to-date">
+                                                              To:
+                                                              </label>
+                                                              <input type="date" name="to_date" class="a-text-input a-text-input__full" placeholder="mm/dd/yyyy" data-type="date" id="o-filterable-list-controls_to-date">
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </fieldset>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="content-l_col
+                                  content-l_col-1
+                                  m-btn-group">
+                                  <button class="a-btn" type="submit">
+                                  Apply filters
+                                  </button>
+                                  <a class="a-btn a-btn__link a-btn__warning" href="#">
+                                  Clear filters
+                                  </a>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        variation_description: ""
         variation_name: ""
         variation_specs: "![Filter panel
           style](/design-system/images/uploads/filterable_list_control_panels_0\
           72120.png)"
+        variation_code_snippet_rendered: ""
     variation_group_name: Standard filterable list
     variation_group_description: Use filters in conjunction with search to help
       users narrow down large amounts of data or content. Follow form patterns

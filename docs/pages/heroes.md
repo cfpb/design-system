@@ -46,6 +46,41 @@ variation_groups:
                   }
               </style>
           </section>
+        variation_code_snippet_rendered: >-
+          <section class="m-hero" id="hero1">
+              <div class="m-hero_wrapper">
+                  <div class="m-hero_text">
+                      <p class="h1 m-hero_heading">41 chars max for a one-line heading</p>
+                      <p class="m-hero_subhead">
+                          This text has a recommended count of 165-186 characters
+                          (three lines at 1230px) following a one-line heading
+                          and 108-124 characters (two lines at 1230px)
+                          following a two-line heading.
+                      </p>
+                  </div>
+                  <div class="m-hero_image-wrapper">
+                      <div class="m-hero_image"></div>
+                  </div>
+              </div>
+              <style>
+                   #hero1 .m-hero_wrapper {
+                     background-color: #d4e7e6;
+                   }
+                  #hero1 .m-hero_image {
+                      background-image:
+                          url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png');
+                      background-image: -webkit-image-set(
+                          url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
+                          url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 2x
+                      );
+                      background-image: image-set(
+                          url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
+                          url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 2x
+                      );
+                      padding-bottom: 41.4893617%;
+                  }
+              </style>
+          </section>
         variation_description: 'The illustration may be inset, as shown here, or
           bleeding. See examples of a [hero with inset
           illustration](https://www.consumerfinance.gov/owning-a-home/) and
@@ -193,6 +228,53 @@ variation_groups:
                   }
               </style>
           </section>
+        variation_code_snippet_rendered: >-
+          <section class="m-hero m-hero__overlay" id="hero4">
+              <div class="m-hero_wrapper">
+                  <div class="m-hero_text">
+                      <p class="h1 m-hero_heading">41 chars max for a one-line heading</p>
+                      <p class="m-hero_subhead">
+                          This text has a recommended count of 165-186 characters
+                          (three lines at 1230px) following a one-line heading
+                          and 108-124 characters (two lines at 1230px)
+                          following a two-line heading.
+                      </p>
+                  </div>
+                  <div class="m-hero_image-wrapper">
+                      <div class="m-hero_image"></div>
+                  </div>
+              </div>
+              <style>
+                  #hero4 .m-hero_image {
+                      background-image:
+                          url('https://dummyimage.com/600x250/addc91/101820');
+                      background-image: -webkit-image-set(
+                          url('https://dummyimage.com/600x250/addc91/101820') 1x,
+                          url('https://dummyimage.com/1200x500/addc91/101820') 2x
+                      );
+                      background-image: image-set(
+                          url('https://dummyimage.com/600x250/addc91/101820') 1x,
+                          url('https://dummyimage.com/1200x500/addc91/101820') 2x
+                      );
+                      padding-bottom: 41.6666667%;
+                  }
+
+                  @media screen and (min-width: 37.5625em) {
+                      #hero4 .m-hero_wrapper{
+                          background-image:
+                              url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
+                          background-image: -webkit-image-set(
+                              url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
+                              url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
+                          );
+                          background-image: image-set(
+                              url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 1x,
+                              url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg') 2x
+                          );
+                      }
+                  }
+              </style>
+          </section>
         variation_specs: >-
           #### Hero with photograph
 
@@ -231,9 +313,7 @@ variation_groups:
           <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <h1 class=m-hero_heading">
-                          50 chars max for a two-line heading
-                      </h1>
+                      <h1 class=m-hero_heading">50 chars max for a two-line heading</h1>
                       <p class="m-hero_subhead">    
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
@@ -277,9 +357,7 @@ variation_groups:
           <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <h1 class="m-hero_heading">
-                          50 chars max for a two-line heading
-                      </h1>
+                      <p class="h1 m-hero_heading">50 chars max for a two-line heading</p>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
@@ -350,9 +428,7 @@ variation_groups:
           <section class="m-hero m-hero__50-50" id="example-hero-50-50">
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <h1 class="m-hero_heading">
-                          50 chars max for a two-line heading
-                      </h1>
+                      <h1 class="m-hero_heading">50 chars max for a two-line heading</h1>
                       <p class="m-hero_subhead">    
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
@@ -396,9 +472,7 @@ variation_groups:
           <section class="m-hero m-hero__50-50" id="example-hero-50-50">
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
-                      <h1 class="m-hero_heading">
-                          50 chars max for a two-line heading
-                      </h1>
+                      <p class="h1 m-hero_heading">50 chars max for a two-line heading</p>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
@@ -477,6 +551,58 @@ variation_groups:
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
                       <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
+                      <p class="m-hero_subhead">
+                          This text has a recommended count of 165-186 characters
+                          (three lines at 1230px) following a one-line heading
+                          and 108-124 characters (two lines at 1230px)
+                          following a two-line heading.
+                      </p>
+                  </div>
+                  <div class="m-hero_image-wrapper">
+                      <div class="m-hero_image"></div>
+                  </div>
+              </div>
+              <style>
+                  #hero2 {
+                      background-color: #207676;
+                  }
+
+                  #hero2 .m-hero_image {
+                      background-image:
+                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
+                      background-image: -webkit-image-set(
+                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+                      );
+                      background-image: image-set(
+                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+                          url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+                      );
+                      padding-bottom: 41.4893617%;
+                  }
+
+                  @media screen and (min-width: 37.5625em) {
+                      #hero2 .m-hero_image {
+                          background-image:
+                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
+                          background-image: -webkit-image-set(
+                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+                          );
+                          background-image: image-set(
+                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+                              url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+                          );
+                          padding-bottom: 41.4893617%;
+                      }
+                  }
+              </style>
+          </section>
+        variation_code_snippet_rendered: >-
+          <section class="m-hero m-hero__knockout" id="hero2">
+              <div class="m-hero_wrapper">
+                  <div class="m-hero_text">
+                      <p class="h1 m-hero_heading">Max of 41 chars for a one-line heading</p>
                       <p class="m-hero_subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading

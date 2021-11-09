@@ -89,7 +89,7 @@ variation_groups:
           </div>
         variation_implementation: ""
       - variation_code_snippet: >-
-          <div class="m-inset__email">
+          <div class="o-email-signup__inset">
               <div class="o-email-signup">
                   <header class="">
                       <h2 class="h3 ">
@@ -152,7 +152,7 @@ variation_groups:
           * Heading: H3
           * Body copy: Avenir paragraph
         variation_code_snippet_rendered: >-
-          <div class="m-inset__email">
+          <div class="o-email-signup__inset" style="max-width: 370px">
               <div class="o-email-signup">
                   <header class="">
                       <h2 class="h3 ">

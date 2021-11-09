@@ -43,7 +43,7 @@ variation_groups:
                           </span>
                       </span>
                   </button>
-                  <div class="o-expandable_content o-expandable_content__transition u-is-animating o-expandable_content__expanded" style="max-height: 398px;">
+                  <div class="o-expandable_content o-expandable_content__onload-open" style="max-height: 398px;">
                       <form method="get" action="#">
                           <div class="content-l">
                               <div class="content-l_col

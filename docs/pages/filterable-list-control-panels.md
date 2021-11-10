@@ -64,7 +64,7 @@ variation_groups:
                                           </label>
                                           <div class="o-multiselect">
                                               <ul class="o-multiselect_choices"></ul>
-                                              <header class="o-multiselect_header"><input class="o-multiselect_search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_categories" autocomplete="off" style="cursor: auto;"></header>
+                                              <header class="o-multiselect_header"><input class="o-multiselect_search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_categories" autocomplete="off"></header>
                                           </div>
                                       </div>
                                   </div>

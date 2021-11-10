@@ -22,8 +22,7 @@ variation_groups:
                       </span>
                       <span class="o-expandable_header-right o-expandable_link">
                           <span class="o-expandable_cue o-expandable_cue-open">
-                              <span class="u-visually-hidden-on-mobile
-                                  ">
+                              <span class="u-visually-hidden-on-mobile">
                               Show
                               filters
                               </span>
@@ -32,8 +31,7 @@ variation_groups:
                               </svg>
                           </span>
                           <span class="o-expandable_cue o-expandable_cue-close">
-                              <span class="u-visually-hidden-on-mobile
-                                  ">
+                              <span class="u-visually-hidden-on-mobile">
                               Hide
                               filters
                               </span>
@@ -43,7 +41,7 @@ variation_groups:
                           </span>
                       </span>
                   </button>
-                  <div class="o-expandable_content o-expandable_content__onload-open" style="max-height: 398px;">
+                  <div class="o-expandable_content o-expandable_content__onload-open">
                       <form method="get" action="#">
                           <div class="content-l">
                               <div class="content-l_col

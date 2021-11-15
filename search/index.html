@@ -2578,8 +2578,143 @@ Basic legend
 
                 
                     'variation_name1': '',
-                    'variation_description1': "Collapsed\n\n\n\nExpanded\n\n\n",
-                    'variation_code_snippet1': ``,
+                    'variation_description1': "\n",
+                    'variation_code_snippet1': `&lt;div id=&quot;o-filterable-list-controls&quot; class=&quot;o-filterable-list-controls&quot;&gt;
+    &lt;div class=&quot;o-expandable
+        o-expandable__padded
+        o-expandable__background
+        o-expandable__border&quot;&gt;
+        &lt;button class=&quot;o-expandable_header o-expandable_target o-expandable_target__expanded&quot; type=&quot;button&quot;&gt;
+            &lt;span class=&quot;h4 o-expandable_header-left o-expandable_label&quot;&gt;
+            Filter posts
+            &lt;/span&gt;
+            &lt;span class=&quot;o-expandable_header-right o-expandable_link&quot;&gt;
+                &lt;span class=&quot;o-expandable_cue o-expandable_cue-open&quot;&gt;
+                    &lt;span class=&quot;u-visually-hidden-on-mobile&quot;&gt;
+                    Show
+                    filters
+                    &lt;/span&gt;
+                    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 17 20.4&quot; class=&quot;cf-icon-svg&quot;&gt;
+                        &lt;path d=&quot;M16.416 10.283A7.917 7.917 0 1 1 8.5 2.366a7.916 7.916 0 0 1 7.916 7.917zm-2.958.01a.792.792 0 0 0-.792-.792H9.284V6.12a.792.792 0 1 0-1.583 0V9.5H4.32a.792.792 0 0 0 0 1.584H7.7v3.382a.792.792 0 0 0 1.583 0v-3.382h3.382a.792.792 0 0 0 .792-.791z&quot;&gt;&lt;/path&gt;
+                    &lt;/svg&gt;
+                &lt;/span&gt;
+                &lt;span class=&quot;o-expandable_cue o-expandable_cue-close&quot;&gt;
+                    &lt;span class=&quot;u-visually-hidden-on-mobile&quot;&gt;
+                    Hide
+                    filters
+                    &lt;/span&gt;
+                    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 17 20.4&quot; class=&quot;cf-icon-svg&quot;&gt;
+                        &lt;path d=&quot;M16.416 10.283A7.917 7.917 0 1 1 8.5 2.366a7.916 7.916 0 0 1 7.916 7.917zm-2.958.01a.792.792 0 0 0-.792-.792H4.32a.792.792 0 0 0 0 1.583h8.346a.792.792 0 0 0 .792-.791z&quot;&gt;&lt;/path&gt;
+                    &lt;/svg&gt;
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;o-expandable_content o-expandable_content__onload-open&quot;&gt;
+            &lt;form method=&quot;get&quot; action=&quot;#&quot;&gt;
+                &lt;div class=&quot;content-l&quot;&gt;
+                    &lt;div class=&quot;content-l_col
+                        content-l_col-1&quot;&gt;
+                        &lt;div class=&quot;o-form_group&quot;&gt;
+                            &lt;div class=&quot;m-form-field&quot;&gt;
+                                &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;o-filterable-list-controls_title&quot;&gt;
+                                Search by keyword(s)
+                                &lt;/label&gt;
+                                &lt;input type=&quot;text&quot; name=&quot;title&quot; id=&quot;o-filterable-list-controls_title&quot; class=&quot;a-text-input a-text-input__full&quot; maxlength=&quot;250&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;content-l_col
+                        content-l_col-1-3&quot;&gt;
+                        &lt;div class=&quot;o-form_group&quot;&gt;
+                            &lt;div class=&quot;m-form-field&quot;&gt;
+                                &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;o-filterable-list-controls_categories&quot;&gt;
+                                Category
+                                &lt;/label&gt;
+                                &lt;div class=&quot;o-multiselect&quot;&gt;
+                                    &lt;ul class=&quot;o-multiselect_choices&quot;&gt;&lt;/ul&gt;
+                                    &lt;header class=&quot;o-multiselect_header&quot;&gt;&lt;input class=&quot;o-multiselect_search a-text-input&quot; type=&quot;text&quot; placeholder=&quot;Select up to five&quot; id=&quot;o-filterable-list-controls_categories&quot; autocomplete=&quot;off&quot;&gt;&lt;/header&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;content-l_col
+                        content-l_col-1-3&quot;&gt;
+                        &lt;div class=&quot;o-form_group&quot;&gt;
+                            &lt;div class=&quot;m-form-field&quot;&gt;
+                                &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;o-filterable-list-controls_topics&quot;&gt;
+                                Topics
+                                &lt;/label&gt;
+                                &lt;div class=&quot;o-multiselect&quot;&gt;
+                                    &lt;ul class=&quot;o-multiselect_choices&quot;&gt;&lt;/ul&gt;
+                                    &lt;header class=&quot;o-multiselect_header&quot;&gt;&lt;input class=&quot;o-multiselect_search a-text-input&quot; type=&quot;text&quot; placeholder=&quot;Select up to five&quot; id=&quot;o-filterable-list-controls_topics&quot; autocomplete=&quot;off&quot;&gt;&lt;/header&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;content-l_col
+                        content-l_col-1-3&quot;&gt;
+                        &lt;div class=&quot;o-form_group&quot;&gt;
+                            &lt;div class=&quot;m-form-field&quot;&gt;
+                                &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;o-filterable-list-controls_language&quot;&gt;
+                                Language
+                                &lt;/label&gt;
+                                &lt;div class=&quot;o-multiselect&quot;&gt;
+                                    &lt;ul class=&quot;o-multiselect_choices&quot;&gt;&lt;/ul&gt;
+                                    &lt;header class=&quot;o-multiselect_header&quot;&gt;&lt;input class=&quot;o-multiselect_search a-text-input&quot; type=&quot;text&quot; placeholder=&quot;Select up to five&quot; id=&quot;o-filterable-list-controls_language&quot; autocomplete=&quot;off&quot;&gt;&lt;/header&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;content-l_col
+                        content-l_col-1&quot;&gt;
+                        &lt;div class=&quot;content-l&quot;&gt;
+                            &lt;div class=&quot;content-l_col
+                                content-l_col-2-3&quot;&gt;
+                                &lt;div class=&quot;o-form_group&quot;&gt;
+                                    &lt;fieldset class=&quot;o-form_fieldset&quot;&gt;
+                                        &lt;legend class=&quot;a-legend&quot;&gt;
+                                            Date range
+                                        &lt;/legend&gt;
+                                        &lt;div class=&quot;content-l&quot;&gt;
+                                            &lt;div class=&quot;content-l_col
+                                                content-l_col-1-2&quot;&gt;
+                                                &lt;div class=&quot;m-form-field&quot;&gt;
+                                                    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;o-filterable-list-controls_from-date&quot;&gt;
+                                                    From:
+                                                    &lt;/label&gt;
+                                                    &lt;input type=&quot;date&quot; name=&quot;from_date&quot; class=&quot;a-text-input a-text-input__full&quot; placeholder=&quot;mm/dd/yyyy&quot; data-type=&quot;date&quot; id=&quot;o-filterable-list-controls_from-date&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;content-l_col
+                                                content-l_col-1-2&quot;&gt;
+                                                &lt;div class=&quot;m-form-field&quot;&gt;
+                                                    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;o-filterable-list-controls_to-date&quot;&gt;
+                                                    To:
+                                                    &lt;/label&gt;
+                                                    &lt;input type=&quot;date&quot; name=&quot;to_date&quot; class=&quot;a-text-input a-text-input__full&quot; placeholder=&quot;mm/dd/yyyy&quot; data-type=&quot;date&quot; id=&quot;o-filterable-list-controls_to-date&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/fieldset&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;content-l_col
+                        content-l_col-1
+                        m-btn-group&quot;&gt;
+                        &lt;button class=&quot;a-btn&quot; type=&quot;submit&quot;&gt;
+                        Apply filters
+                        &lt;/button&gt;
+                        &lt;a class=&quot;a-btn a-btn__link a-btn__warning&quot; href=&quot;#&quot;&gt;
+                        Clear filters
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
                 
             
 

@@ -1,4 +1,17 @@
 
+## v0.12.1 (2021-11-17)
+
+#### Enhancement
+* `cfpb-layout`
+  * [#1331](https://github.com/cfpb/design-system/pull/1331) Added Email Form Code Snippets ([@brandon-rusk](https://github.com/brandon-rusk))
+
+#### Committers: 3
+- Andy Chosak ([@chosak](https://github.com/chosak))
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- [@brandon-rusk](https://github.com/brandon-rusk)
+
+
+
 ## v0.12.1 (2021-11-05)
 
 #### Bug Fix

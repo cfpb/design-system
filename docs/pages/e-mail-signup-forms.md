@@ -98,6 +98,9 @@ variation_groups:
           purpose of the page than the sidebar or prefooter placement reflects.
 
 
+          ![Inset email signup](/design-system/images/uploads/2e07e378-4adf-11e8-96a7-67d2534eec85.png)
+
+
           #### When to use inset email signup
 
 
@@ -116,42 +119,7 @@ variation_groups:
         variation_specs: |-
           * Heading: H3
           * Body copy: Avenir paragraph
-        variation_code_snippet_rendered: >-
-          <div class="o-email-signup__inset" style="max-width: 370px">
-              <div class="o-email-signup">
-                  <header class="">
-                      <h2 class="h3 ">
-                          Buying a house?
-                      </h2>
-                  </header>
-                  <p>
-                      Put your sign-up text here for the users.
-                  </p>
-                  <form class="o-form o-form__email-signup" id="o-form__email-signup_1" method="POST" action="#" onclick="return false;">
-                      <div class="m-notification">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 19" class="cf-icon-svg">
-                              <path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM9.64 5.78a1.136 1.136 0 1 0-1.136 1.135A1.136 1.136 0 0 0 9.64 5.781zm-.344 2.884a.792.792 0 1 0-1.583 0v5.203a.792.792 0 0 0 1.583 0z"></path>
-                          </svg>
-                          <div class="m-notification_content">
-                              This is for notifications after the user submits e-mail address.
-                          </div>
-                      </div>
-                      <div class="m-form-field">
-                          <label class="a-label a-label__heading" for="email_1">
-                          Email address
-                          </label>
-                          <input class="a-text-input a-text-input__full" id="email_1" name="email" type="email" placeholder="mail@example.com" required="">
-                      </div>
-                      <div class="m-btn-group">
-                          <button class="a-btn">Sign up</button>
-                          <a class="a-btn a-btn__link a-btn__secondary" href="#" target="_blank" rel="noopener noreferrer">
-                          See Privacy Act statement
-                          </a>
-                      </div>
-                      <input type="hidden" name="code" value="USCFPB_127">
-                  </form>
-              </div>
-          </div>
+        variation_code_snippet_rendered: ""
     variation_group_name: Types
     variation_group_description: >-
       The email sign up form is comprised of a slug heading, custom description

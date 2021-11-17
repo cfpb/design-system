@@ -1994,8 +1994,39 @@
 
                 
                     'variation_name1': 'Sidebar email sign up',
-                    'variation_description1': "\n",
-                    'variation_code_snippet1': ``,
+                    'variation_description1': "When implemented into a side bar, the h2 includes CFPB standard top green border.\n",
+                    'variation_code_snippet1': `&lt;div class=&quot;o-email-signup&quot;&gt;
+    &lt;header class=&quot;m-slug-header&quot;&gt;
+        &lt;h2 class=&quot;a-heading &quot;&gt;
+            Buying a House?
+        &lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;p&gt;
+        Put your sign-up text here for the users.
+    &lt;/p&gt;
+    &lt;form class=&quot;o-form o-form__email-signup&quot; method=&quot;POST&quot; action=&quot;#&quot;&gt;
+        &lt;div class=&quot;m-notification&quot;&gt;
+            &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 17 19&quot; class=&quot;cf-icon-svg&quot;&gt;
+                &lt;path d=&quot;M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM9.64 5.78a1.136 1.136 0 1 0-1.136 1.135A1.136 1.136 0 0 0 9.64 5.781zm-.344 2.884a.792.792 0 1 0-1.583 0v5.203a.792.792 0 0 0 1.583 0z&quot;&gt;&lt;/path&gt;
+            &lt;/svg&gt;
+            &lt;div class=&quot;m-notification_content&quot;&gt;
+                This is for notifications after the user submits e-mail address.
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;m-form-field&quot;&gt;
+            &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;email_2&quot;&gt;
+            Email address
+            &lt;/label&gt;
+            &lt;input class=&quot;a-text-input a-text-input__full&quot; id=&quot;email_2&quot; name=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;mail@example.com&quot; required=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;m-btn-group&quot;&gt;
+            &lt;button class=&quot;a-btn&quot;&gt;Sign up&lt;/button&gt;
+            &lt;a class=&quot;a-btn a-btn__link a-btn__secondary&quot; href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+            See Privacy Act statement
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;`,
                 
                     'variation_name2': 'Inset email sign up',
                     'variation_description2': "The inset email signup module is a variation on the main email signup that can be used in the body content of Learn and Browse pages. It should be used when the email CTA is more important to the purpose of the page than the sidebar or prefooter placement reflects.\n\n\n\nWhen to use inset email signup\n\n\n  On Learn pages, only use the inset email module when signing up for the email list is a primary user goal for the page, for example job seekers signing up for job announcements.\n  On Browse pages, use the inset email module when feedback modules or other prefooter content competes with the prefooter email signup CTA, or when signing up for the email list is a primary user goal.\n\n\nWhen other options are better\n\n\n  On Learn pages when we want to encourage visitors to sign up for an email list but the list itself is not a primary user goal, use the standard sidebar email signup.\n  On Browse pages, when email signups are not a primary user goal, and the prefooter/end of page content has no other CTAs to compete with the email signup, use the standard prefooter email signup.\n\n",

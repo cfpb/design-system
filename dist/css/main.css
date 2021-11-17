@@ -2829,6 +2829,31 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type( 1 ) h3,
   margin-bottom: 0.9375em;
   max-width: 41.875rem;
 }
+.o-email-signup .m-notification {
+  margin-bottom: 0.9375em;
+}
+.o-email-signup .a-text-input {
+  max-width: 23.125rem;
+}
+.o-email-signup .m-btn-group {
+  display: flex;
+  margin-top: 0.9375em;
+  align-items: flex-start;
+  flex-wrap: wrap-reverse;
+}
+.o-email-signup button {
+  margin-right: 0.625em;
+}
+.o-email-signup .a-btn.a-btn__secondary {
+  margin-bottom: 0.5em;
+  margin-left: 0;
+  order: 1;
+}
+@media only all and (max-width: 37.5em) {
+  .o-email-signup .a-label__heading {
+    font-size: 1em;
+  }
+}
 /* ==========================================================================
    Design System
    Layout Helpers

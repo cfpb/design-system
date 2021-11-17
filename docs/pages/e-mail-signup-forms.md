@@ -19,7 +19,7 @@ variation_groups:
               <p>
                   Put your sign-up text here for the users.
               </p>
-              <form class="o-form o-form__email-signup" id="o-form__email-signup_2" method="POST" action="#">
+              <form class="o-form o-form__email-signup" method="POST" action="#">
                   <div class="m-notification">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 19" class="cf-icon-svg">
                           <path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM9.64 5.78a1.136 1.136 0 1 0-1.136 1.135A1.136 1.136 0 0 0 9.64 5.781zm-.344 2.884a.792.792 0 1 0-1.583 0v5.203a.792.792 0 0 0 1.583 0z"></path>
@@ -40,7 +40,6 @@ variation_groups:
                       See Privacy Act statement
                       </a>
                   </div>
-                  <input type="hidden" name="code" value="USCFPB_127">
               </form>
           </div>
         variation_description: When implemented into a side bar, the h2 includes CFPB
@@ -62,7 +61,7 @@ variation_groups:
                   <p>
                       Put your sign-up text here for the users.
                   </p>
-                  <form class="o-form o-form__email-signup" id="o-form__email-signup_2" method="POST" action="#" onclick="return false;">
+                  <form class="o-form o-form__email-signup" method="POST" action="#" onclick="return false;">
                       <div class="m-notification">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 19" class="cf-icon-svg">
                               <path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM9.64 5.78a1.136 1.136 0 1 0-1.136 1.135A1.136 1.136 0 0 0 9.64 5.781zm-.344 2.884a.792.792 0 1 0-1.583 0v5.203a.792.792 0 0 0 1.583 0z"></path>
@@ -83,7 +82,6 @@ variation_groups:
                           See Privacy Act statement
                           </a>
                       </div>
-                      <input type="hidden" name="code" value="USCFPB_127">
                   </form>
               </div>
           </div>

@@ -1225,7 +1225,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Delegate = __webpack_require__(/*! ftdomdelegate */ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js").Delegate;
+const Delegate = (__webpack_require__(/*! ftdomdelegate */ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js").Delegate);
 
 
 

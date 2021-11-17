@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ReactLiquid, liquidEngine } from 'react-liquid';
-import marked from 'marked';
+import { marked } from 'marked';
 import template from '../../../_includes/generic-content.html';
 
 export default class Preview extends Component {

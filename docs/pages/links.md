@@ -249,7 +249,13 @@ variation_groups:
           stylesheet](https://github.com/cfpb/consumerfinance.gov/blob/c9637160e14da5093b43c78fc2c87fa0ba190887/cfgov/unprocessed/css/print.less)
           appends link URLs in parentheses next to their link text.
 use_cases: ""
-guidelines: ""
+guidelines: >-
+  ### External links
+
+  External links from the consumerfinance.gov website must be clearly identified by appending an external link icon after the link text. See the [standard link with icon](#standard-link-with-icon) section on this page for how this looks. Additionally, when an external link is selected, an interstitial message must appear “clearly stat[ing] that the content of external links to non-federal agency websites is not endorsed by the federal government.”
+
+
+  The external link policy follows from [OMB’s Policies for Federal Agency Public Websites and Digital Services](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2017/m-17-06.pdf). The [U.S. Web Design System's guidance on external links](https://designsystem.digital.gov/components/link/) has more information relevant to this policy.
 behavior: >-
   ### Default links
 

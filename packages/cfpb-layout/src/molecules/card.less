@@ -269,6 +269,11 @@
 
         // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
         .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific, @navy );
+
+        // Breakout cards have larger links.
+        .m-card_footer > span {
+            .heading-3();
+        }
     }
 
     // Highlight cards.

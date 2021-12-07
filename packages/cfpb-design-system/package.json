@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-design-system",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "CFPB's UI framework",
   "main": "src/cfpb-design-system.js",
   "less": "src/cfpb-design-system.less",
@@ -28,11 +28,11 @@
     "@cfpb/cfpb-forms": "^0.13.0",
     "@cfpb/cfpb-grid": "^0.13.0",
     "@cfpb/cfpb-icons": "^0.13.0",
-    "@cfpb/cfpb-layout": "^0.13.0",
+    "@cfpb/cfpb-layout": "^0.13.1",
     "@cfpb/cfpb-notifications": "^0.13.0",
     "@cfpb/cfpb-pagination": "^0.13.0",
     "@cfpb/cfpb-tables": "^0.13.0",
-    "@cfpb/cfpb-typography": "^0.13.0"
+    "@cfpb/cfpb-typography": "^0.13.1"
   },
   "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e"
 }

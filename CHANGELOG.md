@@ -1,4 +1,20 @@
 
+## v0.13.0 (2021-12-07)
+
+#### Enhancement
+* `cfpb-layout`, `cfpb-typography`
+  * [#1339](https://github.com/cfpb/design-system/pull/1339) Card and tagline changes to accommodate new homepage ([@contolini](https://github.com/contolini))
+
+#### Internal
+* [#1338](https://github.com/cfpb/design-system/pull/1338) Update core-js, slugify, babel/preset-env, wdio, chromedriver, cssnano, jest, mini-css-extract-plugin, postcss, postcss-loader, and webpack ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Chris Contolini ([@contolini](https://github.com/contolini))
+- Lorelei Kelly ([@ielerol](https://github.com/ielerol))
+
+
+
 ## v0.30.0 (2021-11-17)
 
 #### Enhancement

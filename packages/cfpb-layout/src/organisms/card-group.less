@@ -1,6 +1,10 @@
 // Grid-based "column" card group layouts.
 .o-card-group {
 
+    > h2 {
+        margin-bottom: unit( 30px / @base-font-size-px, rem );
+    }
+
     &__column-2 &_cards {
         grid-template-columns: 1fr 1fr;
     }

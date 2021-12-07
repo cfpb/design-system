@@ -254,7 +254,8 @@
         }
 
         .m-card_footer {
-            margin-top: ( @card_img_height / 2 ) + @grid_gutter-width;
+            // Subtract 6px to accommodate heading-3 size.
+            margin-top: ( @card_img_height / 2 ) + @grid_gutter-width - 6px;
         }
 
         &:hover {
@@ -269,6 +270,11 @@
 
         // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
         .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific, @navy );
+
+        // Breakout cards have larger links.
+        .m-card_footer > span {
+            .heading-3();
+        }
     }
 
     // Highlight cards.

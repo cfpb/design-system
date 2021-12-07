@@ -1,5 +1,5 @@
 
-## v0.13.0 (2021-12-07)
+## v0.13.1 (2021-12-07)
 
 #### Enhancement
 * `cfpb-layout`, `cfpb-typography`
@@ -11,11 +11,10 @@
 #### Committers: 3
 - Ans ([@anselmbradford](https://github.com/anselmbradford))
 - Chris Contolini ([@contolini](https://github.com/contolini))
-- Lorelei Kelly ([@ielerol](https://github.com/ielerol))
 
 
 
-## v0.30.0 (2021-11-17)
+## v0.13.0 (2021-11-17)
 
 #### Enhancement
 * `cfpb-layout`

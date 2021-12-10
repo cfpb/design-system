@@ -154,13 +154,7 @@ accessibility: >-
   Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. A few colors allow for slightly darker saturations while still maintaining accessibility. If you're looking to use a combination not listed here, check [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)  to verify accessibility.
 
 
-  <div class="content-67 content-first" markdown="1">
-
-
   ![](/design-system/images/uploads/black_type.png)
-
-
-  </div>
 
 
   #### White type on colored backgrounds
@@ -169,19 +163,7 @@ accessibility: >-
   White type is accessible on all brand colors at 100% saturation and their darker shades when using at least 14pt type, with the exception of gold. 
 
 
-  <div class="content-67 content-first" markdown="1">
-
-
   ![](/design-system/images/uploads/white_type.png)
-
-
-  </div>
-
-
-  ![]()
-
-
-  </div>
 related_items: "* [Typography
   variables](https://cfpb.github.io/design-system/development/variables#typogra\
   phy)"

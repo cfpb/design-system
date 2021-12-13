@@ -125,61 +125,45 @@ guidelines: >-
   ![Body copy spacing](/design-system/images/uploads/type_body_copy.png)
 behavior: ""
 accessibility: >-
-  ### Text contrast
+  Web Content Accessibility (WCAG) standards ensure that content is accessible
+  by everyone, regardless of any disability or user device. To learn more, refer
+  to the [http://www.section508.gov](https://www.section508.gov/).
 
 
-  WCA (Web Content Accessibility) standards ensure that content is accessible by everyone, regardless of any disability or user device. To learn more, refer to the [http://www.section508.gov](https://www.section508.gov/).
+  ### Colored type is restricted
 
 
-  #### Checking contrast
+  Never use colored type, unless it’s a link.  This restriction includes all brand colors, including CFPB green.
 
 
-  Please use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) or [CFPB Color Palette Accessibility Checker](https://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&colors=1e9642,20aa3f,66c368,addc91,c7e5b3,e2efd8,005e5d,257675,579695,89b6b5,b4d2d1,d4e7e6,0050b4,0072ce,4497dc,7eb7e8,afd2f2,d6e8fa,002d72,254b87,5674a3,889cc0,b3c0d9,d3daeb,a01b68,b4267a,c55998,d486b2,e3b2cc,f0d8e2,b63014,d14124,dd735d,e79e8e,f0c3b8,f7e0d9,dc731c,ff9e1b,ffb858,ffce8d,ffe1b9,fff0dd,745745,8a6c57,a18573,baa496,d3c5bc,e7ddd7,101820,43484e,5a5d61,75787b,919395,b4b5b6,d2d3d5,e7e8e9,f7f8f9,ffffff&main=ffffff&level=AA) to check and confirm the accessibility of colors at different type sizes.
+  One exception to this rule falls within illustration or other graphics. In instances when a designer determines the best solution includes using colored type, color contrast needs to be checked. Please use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to check and confirm the accessibility of color combinations and type sizes.
 
 
-  #### Fully accessible combinations
+  Although accessible, the combinations of black type on green or green type on black should never be used.[](https://webaim.org/resources/contrastchecker/)
 
 
-  To ensure text remains compliant with [WCAG 2.0 standards](http://www.w3.org/TR/WCAG20/), use only these permitted text and background color combinations, which fall within the range of foreground/background color contrast permitted by the Section 508 guidelines. For specific color values, visit our [Color page](https://cfpb.github.io/design-system/foundation/color).
+  ### Accessible and brand compliant combinations
 
 
-  <div class="content-67 content-first" markdown="1">
+  To ensure text remains compliant with [WCAG 2.0 standards](http://www.w3.org/TR/WCAG20/), use only these permitted type and background color combinations, which fall within the range of foreground/background color contrast permitted by the Section 508 guidelines. For specific color values, visit our [Color page](https://cfpb.github.io/design-system/foundation/color).
 
 
-  ![](/design-system/images/uploads/accessible_combos.png)
+  #### Black type on colored backgrounds
 
 
-  </div>
+  Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. A few colors allow for slightly darker saturations while still maintaining accessibility. If you're looking to use a combination not listed here, check [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)  to verify accessibility.
 
 
-  #### Non-accessible combinations
+  ![](/design-system/images/uploads/black_type.png)
 
 
-  Never set CFPB Green type on a white background or white type on CFPB Green background as these combinations are not accessible. Never set type on a patterned background.
+  #### White type on colored backgrounds
 
 
-  <div class="content-67 content-first" markdown="1">
+  White type is accessible on all brand colors at 100% saturation and their darker shades when using at least 14pt type, with the exception of gold. 
 
 
-  ![](/design-system/images/uploads/non-accessible_combos.png)
-
-
-  </div>
-
-
-  #### Undesirable combinations
-
-
-  Although CFPB Green and black are accessible for large scale type, this color combination should never be used for web or print type.
-
-
-  <div class="content-67 content-first" markdown="1">
-
-
-  ![](/design-system/images/uploads/undesirable_combos.png)
-
-
-  </div>
+  ![](/design-system/images/uploads/white_type.png)
 related_items: "* [Typography
   variables](https://cfpb.github.io/design-system/development/variables#typogra\
   phy)"

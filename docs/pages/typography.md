@@ -139,7 +139,7 @@ accessibility: >-
   One exception to this rule falls within illustration or other graphics. In instances when a designer determines the best solution includes using colored type, color contrast needs to be checked. Please use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to check and confirm the accessibility of color combinations and type sizes.
 
 
-  Although accessible, the combinations of black type on green or green type on black should never be used.[](https://webaim.org/resources/contrastchecker/)
+  Although accessible, the combinations of black type on green or green type on black should never be used.
 
 
   ### Accessible and brand compliant combinations

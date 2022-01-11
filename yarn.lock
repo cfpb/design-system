@@ -12432,11 +12432,6 @@ normalize-css@^2.0.0, normalize-css@^2.3.1:
   dependencies:
     insert-css "0.0.0"
 
-normalize-legacy-addon@0.1.0, normalize-legacy-addon@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/normalize-legacy-addon/-/normalize-legacy-addon-0.1.0.tgz#8ca131e8503943a3a9e4d0d70cc0e80a27a40c9e"
-  integrity sha1-jKEx6FA5Q6Op5NDXDMDoCiekDJ4=
-
 normalize-package-data@^2.0.0, normalize-package-data@^2.3.2, normalize-package-data@^2.3.4, normalize-package-data@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/normalize-package-data/-/normalize-package-data-2.5.0.tgz#e66db1838b200c1dfc233225d12cb36520e234a8"

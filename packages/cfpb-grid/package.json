@@ -8,8 +8,7 @@
     "access": "public"
   },
   "dependencies": {
-    "normalize-css": "^2.0.0",
-    "normalize-legacy-addon": "0.1.0"
+    "normalize-css": "^2.0.0"
   },
   "keywords": [
     "grid"

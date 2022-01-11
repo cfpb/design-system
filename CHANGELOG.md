@@ -1,13 +1,11 @@
 
-## v0.13.1 (2022-01-11)
+## v0.14.0 (2022-01-11)
 
 #### Breaking Change
 * `cfpb-core`, `cfpb-grid`
   * [#1343](https://github.com/cfpb/design-system/pull/1343) Browser usage no longer justifies this dependency ([@wpears](https://github.com/wpears))
 
-#### Committers: 3
-- Andy Chosak ([@chosak](https://github.com/chosak))
-- Candice Heberer ([@caheberer](https://github.com/caheberer))
+#### Committers: 1
 - Wyatt Pearsall ([@wpears](https://github.com/wpears))
 
 

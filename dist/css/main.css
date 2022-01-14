@@ -1110,6 +1110,13 @@ ol li:nth-last-child( n+10 ) ~ li {
 ol ol li {
   margin-left: 0 !important;
 }
+nav ul,
+nav ol,
+nav ul ul,
+nav ol ol {
+  list-style: none;
+  list-style-image: none;
+}
 caption {
   margin-bottom: 0.625em;
   text-align: left;

@@ -1,4 +1,15 @@
 
+## v0.14.0 (2022-01-14)
+
+#### Enhancement
+* `cfpb-core`
+  * [#1344](https://github.com/cfpb/design-system/pull/1344) Make nav links unstyled by default ([@wpears](https://github.com/wpears))
+
+#### Committers: 1
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
+
+
+
 ## v0.14.0 (2022-01-11)
 
 #### Breaking Change

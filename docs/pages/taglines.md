@@ -11,8 +11,7 @@ variation_groups:
           <div class="a-tagline">
               <span class="u-usa-flag"></span>
               <div class="a-tagline_text">
-                  An official website of the
-                  <span class="u-nowrap">United States government</span>
+                  This is a United States government website
               </div>
           </div>
         variation_description: ""
@@ -24,14 +23,11 @@ variation_groups:
           <div class="a-tagline a-tagline__large">
               <span class="u-usa-flag"></span>
               <div class="a-tagline_text">
-                  An official website of the
-                  <span class="u-nowrap">United States government</span>
+                  This is a United States government website
               </div>
           </div>
         variation_description: ""
-        variation_implementation: The `u-nowrap` container prevents wrapping of the
-          "United States government" text. If the content of the tagline
-          contains markup it needs to go inside a generic `div` container.
+        variation_implementation: ""
       - variation_name: Extra large tagline
         variation_code_snippet: |-
           <div class="a-tagline a-tagline__xlarge">
@@ -41,7 +37,7 @@ variation_groups:
                 from financial harm.
               </div>
           </div>
-        variation_description: "An extra large tagline, which stacks on mobile."
+        variation_description: An extra large tagline, which stacks on mobile.
         variation_implementation: ""
     variation_group_name: Types
 use_cases: Taglines are used in the header and footer across consumerfinance.gov

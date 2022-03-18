@@ -25,13 +25,13 @@
 @plugin "icons-svg-inline";
 
 .u-svg-inline-bg( @name, @color: @black ) {
-    @red: red( @color );
-    @green: green( @color );
-    @blue: blue( @color );
-    @rgb-color: 'rgb(@{red}, @{green}, @{blue})';
-    @svg: icons-svg-inline( @name, @rgb-color );
+  @red: red( @color );
+  @green: green( @color );
+  @blue: blue( @color );
+  @rgb-color: 'rgb(@{red}, @{green}, @{blue})';
+  @svg: icons-svg-inline( @name, @rgb-color );
 
-    background-image: url( 'data:image/svg+xml;charset=UTF-8,@{svg}' );
+  background-image: url( 'data:image/svg+xml;charset=UTF-8,@{svg}' );
 }
 
 //
@@ -39,35 +39,35 @@
 //
 
 .cf-icon-svg {
-    height: @cf-icon-height;
-    vertical-align: text-top;
-    fill: currentColor;
+  height: @cf-icon-height;
+  vertical-align: text-top;
+  fill: currentColor;
 
-    // IE 10 & 11 require a max-width otherwise the SVG takes up 100%.
-    max-width: 1em;
+  // IE 10 & 11 require a max-width otherwise the SVG takes up 100%.
+  max-width: 1em;
 
-    .lt-ie10 & {
-        // IE 9 require a width otherwise the SVG takes up 100%.
-        width: 1em;
-    }
+  .lt-ie10 & {
+    // IE 9 require a width otherwise the SVG takes up 100%.
+    width: 1em;
+  }
 
-    .lt-ie9 & {
-        // IE 8 doesn't support currentColor;
-        // hide icons and let the paired text stand on its own.
-        display: none;
-    }
+  .lt-ie9 & {
+    // IE 8 doesn't support currentColor;
+    // hide icons and let the paired text stand on its own.
+    display: none;
+  }
 
-    &__updating {
-        animation: updating-animation 1.25s infinite linear;
-        transform-origin: 50% 50%;
-    }
+  &__updating {
+    animation: updating-animation 1.25s infinite linear;
+    transform-origin: 50% 50%;
+  }
 }
 
 @keyframes updating-animation {
-    0% {
-        transform: rotate( 0deg );
-    }
-    100% {
-        transform: rotate( 359deg );
-    }
+  0% {
+    transform: rotate( 0deg );
+  }
+  100% {
+    transform: rotate( 359deg );
+  }
 }

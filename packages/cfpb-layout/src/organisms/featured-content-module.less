@@ -3,22 +3,22 @@
 @fcm-min-height: 220px;
 
 .o-featured-content-module {
-    min-height: @fcm-min-height;
-    position: relative;
-    border: 1px solid @gray-40;
-    background-color: @gray-5;
+  min-height: @fcm-min-height;
+  position: relative;
+  border: 1px solid @gray-40;
+  background-color: @gray-5;
 
+  &_text {
+    padding-top: unit( @grid_gutter-width / @base-font-size-px, em );
+    padding-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+  }
+
+  &_img {
+    display: block;
+  }
+
+  .respond-to-max( @bp-xs-max, {
     &_text {
-        padding-top: unit( @grid_gutter-width / @base-font-size-px, em );
-        padding-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
-    }
-
-    &_img {
-        display: block;
-    }
-
-    .respond-to-max( @bp-xs-max, {
-        &_text {
             padding-right: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
             padding-left: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
         }
@@ -36,8 +36,8 @@
 
     } );
 
-    .respond-to-min( @bp-sm-min, {
-        &_text {
+  .respond-to-min( @bp-sm-min, {
+    &_text {
             padding-right: @fcm-visual-width + @grid_gutter-width;
             padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
         }
@@ -71,24 +71,24 @@
 
     } );
 
-    // Modifiers
-    &__left {
-        /* Left modifier doesn't have a border/background. If in the future we
+  // Modifiers
+  &__left {
+    /* Left modifier doesn't have a border/background. If in the future we
            have a left arranged FCM we'll want to make the border/background
            its own modifer */
-        border: initial;
-        background-color: initial;
+    border: initial;
+    background-color: initial;
 
-        .o-featured-content-module_visual {
-            left: 0;
-            right: initial;
-        }
+    .o-featured-content-module_visual {
+      left: 0;
+      right: initial;
+    }
 
-        .o-featured-content-module_text {
-            .respond-to-min( @bp-sm-min, {
-                padding-left: @fcm-visual-width + @grid_gutter-width;
+    .o-featured-content-module_text {
+      .respond-to-min( @bp-sm-min, {
+        padding-left: @fcm-visual-width + @grid_gutter-width;
                 padding-right: unit( @grid_gutter-width / @base-font-size-px, em );
             } );
-        }
     }
+  }
 }

@@ -74,10 +74,7 @@ function lintStyles() {
   // Pass all command line flags to Stylelint.
   const options = minimist( process.argv.slice( 2 ) );
   const willFix = options.fix || false;
-  return gulp.src( [
-    'packages/**/*.less',
-    '!packages/**/node_modules/**/*.less'
-  ] )
+  return gulp.src( [ 'packages/**/*.less' ] )
     .pipe( gulpStylelint( {
       failAfterError: true,
       fix: willFix,

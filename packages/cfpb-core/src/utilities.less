@@ -8,9 +8,9 @@
 //
 
 .u-js-only {
-    .no-js & {
-        display: none !important;
-    }
+  .no-js & {
+    display: none !important;
+  }
 }
 
 //
@@ -18,11 +18,11 @@
 //
 
 .u-clearfix {
-    &:after {
-        content: '';
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
 //
@@ -30,23 +30,23 @@
 //
 
 .u-visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    // `clip` is deprecated, but retained for safety in making sure that this
-    // utility works as expected for screenreaders. Comma-separated syntax is
-    // not used because space-separated is more backward-compatible,
-    // per https://developer.mozilla.org/en-US/docs/Web/CSS/clip
-    clip: rect( 0 0 0 0 );
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  // `clip` is deprecated, but retained for safety in making sure that this
+  // utility works as expected for screenreaders. Comma-separated syntax is
+  // not used because space-separated is more backward-compatible,
+  // per https://developer.mozilla.org/en-US/docs/Web/CSS/clip
+  clip: rect( 0 0 0 0 );
 }
 
 .u-visually-hidden-on-mobile {
-    .respond-to-max( @bp-xs-max, {
-        .u-visually-hidden();
+  .respond-to-max( @bp-xs-max, {
+    .u-visually-hidden();
     } );
 }
 
@@ -55,16 +55,16 @@
 //
 
 .u-hide-on-mobile {
-    .respond-to-max( @bp-xs-max, {
-        display: none;
+  .respond-to-max( @bp-xs-max, {
+    display: none;
     } );
 }
 
 .u-show-on-mobile {
-    display: none;
+  display: none;
 
-    .respond-to-max( @bp-xs-max, {
-        display: block;
+  .respond-to-max( @bp-xs-max, {
+    display: block;
     } );
 }
 
@@ -73,7 +73,7 @@
 //
 
 .u-hidden {
-    display: none !important;
+  display: none !important;
 }
 
 //
@@ -81,7 +81,7 @@
 //
 
 .u-invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 // TODO: Deprecated. Remove in CFv5.
@@ -90,7 +90,7 @@
 //
 
 .u-inline-block {
-    display: inline-block;
+  display: inline-block;
 }
 
 //
@@ -98,7 +98,7 @@
 //
 
 .u-right {
-    float: right;
+  float: right;
 }
 
 //
@@ -106,7 +106,7 @@
 //
 
 .u-break-word {
-    word-break: break-all;
+  word-break: break-all;
 }
 
 //
@@ -114,7 +114,7 @@
 //
 
 .u-nowrap {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 //
@@ -122,9 +122,9 @@
 //
 
 .u-align-with-btn( @font-size: @base-font-size-px ) {
-    display: inline-block;
-    line-height: normal;
-    vertical-align: middle;
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
 }
 
 //
@@ -132,27 +132,27 @@
 //
 
 .u-flexible-container-mixin( @width: 16, @height: 9 ) {
-    @ratio: ( @height / @width ) * 100;
+  @ratio: ( @height / @width ) * 100;
 
-    position: relative;
-    padding-bottom: ~'@{ratio}%';
-    height: 0;
+  position: relative;
+  padding-bottom: ~'@{ratio}%';
+  height: 0;
 }
 
 .u-flexible-container {
-    .u-flexible-container-mixin();
+  .u-flexible-container-mixin();
 
-    &_inner {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+  &_inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-    &__4-3 {
-        .u-flexible-container-mixin( 4, 3 );
-    }
+  &__4-3 {
+    .u-flexible-container-mixin( 4, 3 );
+  }
 }
 
 //
@@ -160,33 +160,33 @@
 //
 
 .u-link__colors() {
-    .u-link__colors-base();
+  .u-link__colors-base();
 }
 
 .u-link__colors( @c ) {
-    .u-link__colors-base(
-        @c, @c, @c, @c, @c,
+  .u-link__colors-base(
+    @c, @c, @c, @c, @c,
         @c, @c, @c, @c, @c
     );
 }
 
 .u-link__colors( @c, @h ) {
-    .u-link__colors-base(
-        @c, @c, @h, @h, @c,
+  .u-link__colors-base(
+    @c, @c, @h, @h, @c,
         @c, @c, @h, @h, @c
     );
 }
 
 .u-link__colors( @c, @v, @h, @f, @a ) {
-    .u-link__colors-base(
-        @c, @v, @h, @f, @a,
+  .u-link__colors-base(
+    @c, @v, @h, @f, @a,
         @c, @v, @h, @f, @a
     );
 }
 
 .u-link__colors( @c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba ) {
-    .u-link__colors-base(
-        @c, @v, @h, @f, @a,
+  .u-link__colors-base(
+    @c, @v, @h, @f, @a,
         @bc, @bv, @bh, @bf, @ba
     );
 }
@@ -202,51 +202,51 @@
 @bh: @link-underline-hover,
 @bf: @link-underline,
 @ba: @link-underline-active ) {
-    color: @c;
-    border-color: @bc;
+  color: @c;
+  border-color: @bc;
 
-    &:visited,
-    &.visited {
-        border-color: @bv;
-        color: @v;
-    }
+  &:visited,
+  &.visited {
+    border-color: @bv;
+    color: @v;
+  }
 
-    &:hover,
-    &.hover {
-        border-color: @bh;
-        color: @h;
-    }
+  &:hover,
+  &.hover {
+    border-color: @bh;
+    color: @h;
+  }
 
-    &:focus,
-    &.focus {
-        border-color: @bf;
-        color: @f;
-    }
+  &:focus,
+  &.focus {
+    border-color: @bf;
+    color: @f;
+  }
 
-    &:active,
-    &.active {
-        border-color: @ba;
-        color: @a;
-    }
+  &:active,
+  &.active {
+    border-color: @ba;
+    color: @a;
+  }
 }
 
 .u-link__border() {
-    border-bottom-width: 1px;
+  border-bottom-width: 1px;
 }
 
 .u-link__no-border() {
-    border-bottom-width: 0 !important;
+  border-bottom-width: 0 !important;
 }
 
 .u-link__hover-border() {
-    border-bottom-width: 0 !important;
+  border-bottom-width: 0 !important;
 
-    &:hover,
-    &.hover,
-    &:focus,
-    &.focus {
-        border-bottom-width: 1px !important;
-    }
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    border-bottom-width: 1px !important;
+  }
 }
 
 //
@@ -294,10 +294,10 @@
 //
 
 .u-small-text( @context: @base-font-size-px ) {
-    font-size: unit( 14px / @context, em );
+  font-size: unit( 14px / @context, em );
 }
 
 small,
 .u-small-text {
-    .u-small-text();
+  .u-small-text();
 }

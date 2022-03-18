@@ -27,35 +27,33 @@ selector-pseudo-element-colon-notation -
   Remove this rule after dropping IE8 CSS support.
 */
 module.exports = {
-  'extends': 'stylelint-config-standard',
-  'syntax': 'less',
-  'rules': {
-    'at-rule-no-unknown': [ true, { ignoreAtRules: 'plugin' } ],
+  extends: 'stylelint-config-standard',
+  ignoreFiles: ['packages/**/node_modules/**/*.less'],
+  syntax: 'less',
+  rules: {
+    'at-rule-no-unknown': [true, { ignoreAtRules: 'plugin' }],
     'declaration-colon-newline-after': null,
     'declaration-empty-line-before': null,
-    'function-name-case': [
-      'lower',
-      { ignoreFunctions: [ 'filter' ]}
-    ],
+    'function-name-case': ['lower', { ignoreFunctions: ['filter'] }],
     'function-parentheses-space-inside': 'always',
     'rule-empty-line-before': [
       'always-multi-line',
       {
         except: 'first-nested',
-        ignore: [ 'after-comment', 'inside-block' ]
-      }
+        ignore: ['after-comment', 'inside-block'],
+      },
     ],
-    'indentation': [
-      4,
+    indentation: [
+      2,
       {
-        ignore: 'value'
-      }
+        ignore: 'value',
+      },
     ],
     'max-empty-lines': 2,
     'media-feature-parentheses-space-inside': 'always',
     'no-descending-specificity': null,
     'selector-list-comma-newline-after': null,
     'selector-pseudo-class-parentheses-space-inside': 'always',
-    'selector-pseudo-element-colon-notation': 'single'
+    'selector-pseudo-element-colon-notation': 'single',
   }
 };

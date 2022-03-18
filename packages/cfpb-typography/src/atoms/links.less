@@ -5,16 +5,16 @@
 
 .a-link__icon,
 .a-link__jump {
-    border-bottom-width: 0;
+  border-bottom-width: 0;
 
-    .a-link_text {
-        border-bottom-width: 1px;
-        border-bottom-style: inherit;
-    }
+  .a-link_text {
+    border-bottom-width: 1px;
+    border-bottom-style: inherit;
+  }
 
-    &.a-link__no-wrap {
-        white-space: nowrap;
-    }
+  &.a-link__no-wrap {
+    white-space: nowrap;
+  }
 }
 
 //
@@ -22,14 +22,14 @@
 //
 
 .a-link__jump {
-    font-weight: 500;
+  font-weight: 500;
 
-    &.a-link__large {
-        font-size: unit( @size-iv / @base-font-size-px, em );
-    }
+  &.a-link__large {
+    font-size: unit( @size-iv / @base-font-size-px, em );
+  }
 
-    .respond-to-max( @bp-xs-max, {
-        .u-block-link();
+  .respond-to-max( @bp-xs-max, {
+    .u-block-link();
 
         position: relative;
 
@@ -92,17 +92,17 @@
  */
 
 .u-block-link {
-    box-sizing: border-box;
-    display: block;
-    padding-top: unit( 10px / @base-font-size-px, em );
-    padding-bottom: unit( 10px / @base-font-size-px, em );
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    // 100% width is needed when block or jump link are applied to a <button>
-    width: 100%;
-    text-align: left;
+  box-sizing: border-box;
+  display: block;
+  padding-top: unit( 10px / @base-font-size-px, em );
+  padding-bottom: unit( 10px / @base-font-size-px, em );
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  // 100% width is needed when block or jump link are applied to a <button>
+  width: 100%;
+  text-align: left;
 
-    .a-link_text {
-        border-bottom-width: 0;
-    }
+  .a-link_text {
+    border-bottom-width: 0;
+  }
 }

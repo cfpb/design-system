@@ -1,38 +1,38 @@
 // Grid-based "column" card group layouts.
 .o-card-group {
 
-    > h2 {
-        margin-bottom: unit( 30px / @base-font-size-px, rem );
-    }
+  > h2 {
+    margin-bottom: unit( 30px / @base-font-size-px, rem );
+  }
 
-    &__column-2 &_cards {
-        grid-template-columns: 1fr 1fr;
-    }
+  &__column-2 &_cards {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    &__column-3 &_cards {
-        grid-template-columns: repeat( 3, minmax( 0, 1fr ) );
+  &__column-3 &_cards {
+    grid-template-columns: repeat( 3, minmax( 0, 1fr ) );
 
-        // Convert to 2-column layout at small screen sizes;
-        .respond-to-max( @bp-lg-min, {
-            grid-template-columns: 1fr 1fr;
+    // Convert to 2-column layout at small screen sizes;
+    .respond-to-max( @bp-lg-min, {
+      grid-template-columns: 1fr 1fr;
         } );
-    }
+  }
 
-    &_cards {
-        display: grid;
-        grid-column-gap: unit( 20px / @base-font-size-px, em );
-        grid-row-gap: unit( 20px / @base-font-size-px, em );
+  &_cards {
+    display: grid;
+    grid-column-gap: unit( 20px / @base-font-size-px, em );
+    grid-row-gap: unit( 20px / @base-font-size-px, em );
 
-        .respond-to-max( @bp-xs-max, {
-            // Make sure cards are stacked at mobile size.
+    .respond-to-max( @bp-xs-max, {
+      // Make sure cards are stacked at mobile size.
             grid-template-columns: 100% !important;
         } );
-    }
+  }
 
-    &__bg-green {
-        padding: unit( 30px / @base-font-size-px, em );
-        background: @green-20;
-    }
+  &__bg-green {
+    padding: unit( 30px / @base-font-size-px, em );
+    background: @green-20;
+  }
 }
 
 // Hack for Edge/IE to convert grid to a floated block layout.
@@ -41,111 +41,111 @@
 
 /* stylelint-disable selector-type-no-unknown */
 _:-ms-lang( x ),.o-card-group_cards {
-    display: block;
+  display: block;
 
-    .m-card {
-        display: block;
-        float: left;
-        margin-bottom: 10px;
-    }
+  .m-card {
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+  }
 }
 
 _:-ms-lang( x ),.o-card-group__column-2 {
-    .o-card-group_cards .m-card {
-        width: 48%;
-        margin-right: 2%;
-    }
-    .o-card-group_cards .m-card:last-child {
-        margin-right: 0;
-    }
+  .o-card-group_cards .m-card {
+    width: 48%;
+    margin-right: 2%;
+  }
+  .o-card-group_cards .m-card:last-child {
+    margin-right: 0;
+  }
 }
 
 _:-ms-lang( x ),.o-card-group__column-3 {
-    .o-card-group_cards .m-card {
-        width: 32%;
-        margin-right: 1%;
-    }
-    .o-card-group_cards .m-card:last-child {
-        margin-right: 0;
-    }
+  .o-card-group_cards .m-card {
+    width: 32%;
+    margin-right: 1%;
+  }
+  .o-card-group_cards .m-card:last-child {
+    margin-right: 0;
+  }
 }
 
 _:-ms-lang( x ),.o-card-group:after {
-    content: '';
-    display: table;
-    clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
 /* stylelint-enable selector-type-no-unknown */
 
 /* stylelint-disable no-duplicate-selectors */
 // Grid-based "count" card group layouts.
 .o-card-group {
-    /* stylelint-enable no-duplicate-selectors */
-    // Name the card grid areas.
-    &__count-2,
-    &__count-3,
-    &__count-4 {
+  /* stylelint-enable no-duplicate-selectors */
+  // Name the card grid areas.
+  &__count-2,
+  &__count-3,
+  &__count-4 {
 
-        .m-card:nth-of-type( 1 ) {
-            grid-area: card1;
-        }
-
-        .m-card:nth-of-type( 2 ) {
-            grid-area: card2;
-        }
-
-        .m-card:nth-of-type( 3 ) {
-            grid-area: card3;
-        }
-
-        .m-card:nth-of-type( 4 ) {
-            grid-area: card4;
-        }
+    .m-card:nth-of-type( 1 ) {
+      grid-area: card1;
     }
 
-    &__count-2 &_cards {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "card1 card2";
+    .m-card:nth-of-type( 2 ) {
+      grid-area: card2;
     }
 
-    &__count-3 &_cards {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
+    .m-card:nth-of-type( 3 ) {
+      grid-area: card3;
+    }
+
+    .m-card:nth-of-type( 4 ) {
+      grid-area: card4;
+    }
+  }
+
+  &__count-2 &_cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "card1 card2";
+  }
+
+  &__count-3 &_cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
             "card1 card2"
             "card1 card3";
 
-        // We have to reach inside the m-card here unfortunately to
-        // center the content of the first card and increase the heading.
-        .m-card:nth-of-type( 1 ) {
-            h3 {
-                .h2();
-            }
+    // We have to reach inside the m-card here unfortunately to
+    // center the content of the first card and increase the heading.
+    .m-card:nth-of-type( 1 ) {
+      h3 {
+        .h2();
+      }
 
-            > a {
-                justify-content: center;
-            }
-        }
+      > a {
+        justify-content: center;
+      }
     }
+  }
 
-    &__count-4 &_cards {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
+  &__count-4 &_cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
             "card1 card2"
             "card3 card4";
-    }
+  }
 
-    // Flexbox-based "flow" card group layout.
-    &__flow {
-        .o-card-group_cards {
-            display: flex;
-            flex-wrap: wrap;
-        }
+  // Flexbox-based "flow" card group layout.
+  &__flow {
+    .o-card-group_cards {
+      display: flex;
+      flex-wrap: wrap;
     }
+  }
 }
 
 // Tablet size.
 .respond-to-range( @bp-sm-min, @bp-sm-max, {
-    .o-card-group {
+  .o-card-group {
         &__count-3 &_cards {
             grid-template-columns: 1fr 1fr;
             grid-template-areas:
@@ -157,7 +157,7 @@ _:-ms-lang( x ),.o-card-group:after {
 
 // Mobile size.
 .respond-to-max( @bp-xs-max, {
-    .o-card-group {
+  .o-card-group {
         &__count-2 &_cards {
             grid-template-columns: 1fr;
             grid-template-areas:

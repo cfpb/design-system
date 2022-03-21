@@ -45,10 +45,6 @@
                 position: relative;
                 top: 1px;
                 left: 1px;
-
-                .lt-ie9 & {
-                    display: none !important;
-                }
             }
 
             &:hover:before,
@@ -65,17 +61,6 @@
         .a-checkbox,
         .a-radio {
             .u-visually-hidden();
-
-            .lt-ie9 & {
-                height: unit( 20px / @base-font-size-px, em );
-                width: unit( 20px / @base-font-size-px, em );
-                width: auto;
-                border: 0;
-                float: left;
-                margin: 1em;
-                position: static;
-                clear: both;
-            }
 
             &:focus + .a-label,
             &.focus + .a-label {

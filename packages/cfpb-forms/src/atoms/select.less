@@ -81,15 +81,3 @@
     .u-svg-inline-bg( 'down', @gray );
   }
 }
-
-// TODO: Add modernizr to CF so this works.
-// IE10 and below doesn't support pointer events
-// causing nothing to happen when you click on the dropdown arrow.
-.no-csspointerevents .a-select {
-  &:after {
-    height: 0;
-    width: 0;
-    border: 0;
-    content: '';
-  }
-}

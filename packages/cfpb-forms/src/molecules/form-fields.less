@@ -62,48 +62,88 @@
       display: block;
     }
 
-    .a-checkbox,
-    .a-radio {
-      .u-visually-hidden();
+    &__checkbox,
+    &__radio {
+        .a-label {
+            // We need to turn off autoprefixing for the inline-grid because
+            // IE does not handle an inline-grid like other browsers,
+            // leading to an extremely narrow column of text for the label
+            // and the checkbox or radio widget covering the first part of it.
+            // The Autoprefixer control comment below ensures that the following
+            // property is only picked up by browsers with standard support.
+            // The exclamation mark is necessary for Less to preserve the
+            // comment so that Autoprefixer will see it.
 
-      .lt-ie9 & {
-        height: unit( 20px / @base-font-size-px, em );
-        width: unit( 20px / @base-font-size-px, em );
-        width: auto;
-        border: 0;
-        float: left;
-        margin: 1em;
-        position: static;
-        clear: both;
-      }
+            /*! autoprefixer: ignore next */
+            display: inline-grid;
+            // 30px is width of checkbox/radio button plus the needed padding.
+            grid-template-columns: unit( 30px / @base-font-size-px, em ) auto;
+            vertical-align: top;
+            cursor: pointer;
+            // Wrap long words in narrow form fields to prevent clipping
+            overflow-wrap: anywhere;
 
-      &:focus + .a-label,
-      &.focus + .a-label {
-        outline: 1px dotted @input-border__focused;
-        // The outline-offset property is not supported in IE.
-        outline-offset: 1px;
-      }
+            &:before {
+                display: inline-block;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                border: 1px solid @form-field-input-border;
+                height: unit( 18px / @base-font-size-px, em );
+                width: unit( 18px / @base-font-size-px, em );
+                margin-right: 10px;
+                background-color: @input-bg;
+                content: '';
+                vertical-align: top;
 
-      &:disabled {
+                // Offset so that the checkbox/radio fits within focused area.
+                position: relative;
+                top: 1px;
+                left: 1px;
+            }
 
-        &:checked + .a-label:before,
-        &:focus + .a-label:before,
-        &.focus + .a-label:before,
-        &:hover + .a-label:before,
-        &.hover + .a-label:before {
-          border-color: @input-border;
-          outline: none;
-          box-shadow: none; // Applies only to radio buttons.
+            &:hover:before,
+            &.hover:before {
+                border-color: @input-border__hover;
+            }
         }
 
         & + .a-label {
           cursor: not-allowed;
           color: @input-text__disabled;
 
-          &:before {
-            background: @input-bg__disabled;
-            border-color: @form-field-input-border__disabled;
-          }
+        .a-checkbox,
+        .a-radio {
+            .u-visually-hidden();
+
+            &:focus + .a-label,
+            &.focus + .a-label {
+                outline: 1px dotted @input-border__focused;
+                // The outline-offset property is not supported in IE.
+                outline-offset: 1px;
+            }
+
+            &:disabled {
+
+                &:checked + .a-label:before,
+                &:focus + .a-label:before,
+                &.focus + .a-label:before,
+                &:hover + .a-label:before,
+                &.hover + .a-label:before {
+                    border-color: @input-border;
+                    outline: none;
+                    box-shadow: none; // Applies only to radio buttons.
+                }
+
+                & + .a-label {
+                    cursor: not-allowed;
+                    color: @input-text__disabled;
+
+                    &:before {
+                        background: @input-bg__disabled;
+                        border-color: @form-field-input-border__disabled;
+                    }
+                }
+            }
         }
       }
     }

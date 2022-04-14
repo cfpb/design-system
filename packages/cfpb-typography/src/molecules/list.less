@@ -6,13 +6,13 @@
 .m-list__unstyled,
 .m-list__horizontal,
 .m-list__links {
-    padding-left: 0;
-    list-style-type: none;
+  padding-left: 0;
+  list-style-type: none;
 
-    // This is needed for dd elements.
-    .m-list_item {
-        margin-left: 0;
-    }
+  // This is needed for dd elements.
+  .m-list_item {
+    margin-left: 0;
+  }
 }
 
 //
@@ -20,10 +20,10 @@
 //
 
 .m-list__spaced {
-    .m-list__spaced,
-    .m-list_item + .m-list_item {
-        margin-top: unit( 24px / @base-font-size-px, em );
-    }
+  .m-list__spaced,
+  .m-list_item + .m-list_item {
+    margin-top: unit( 24px / @base-font-size-px, em );
+  }
 }
 
 //
@@ -31,14 +31,14 @@
 //
 
 .m-list__horizontal {
-    .m-list_item {
-        display: inline-block;
+  .m-list_item {
+    display: inline-block;
 
-        // Assuming a natural space of 4px between inline block items
-        // then the space between would be 8px (4px natural + 4px added).
-        margin-right: unit( 4px / @base-font-size-px, em );
-        margin-bottom: 0;
-    }
+    // Assuming a natural space of 4px between inline block items
+    // then the space between would be 8px (4px natural + 4px added).
+    margin-right: unit( 4px / @base-font-size-px, em );
+    margin-bottom: 0;
+  }
 }
 
 //
@@ -46,21 +46,21 @@
 //
 
 .m-list__links {
-    .m-list_item {
-        .respond-to-max( @bp-xs-max, {
-            margin-bottom: 0;
+  .m-list_item {
+    .respond-to-max( @bp-xs-max, {
+      margin-bottom: 0;
 
             &:nth-child( n+2 ) .m-list_link {
                 border-top-width: 0;
             }
         } );
-    }
+  }
 
-    .m-list_link {
-        font-weight: 500;
+  .m-list_link {
+    font-weight: 500;
 
-        .respond-to-max( @bp-xs-max, {
-            .u-block-link();
+    .respond-to-max( @bp-xs-max, {
+      .u-block-link();
         } );
-    }
+  }
 }

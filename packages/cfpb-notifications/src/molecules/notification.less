@@ -3,71 +3,71 @@
 //
 
 .m-notification {
-    display: none;
-    position: relative;
-    padding: @notification-padding__px;
-    background: @notification-bg;
-    border: 1px solid @notification-border;
+  display: none;
+  position: relative;
+  padding: @notification-padding__px;
+  background: @notification-bg;
+  border: 1px solid @notification-border;
 
-    & > .cf-icon-svg {
-        position: absolute;
-        fill: @notification-icon;
+  & > .cf-icon-svg {
+    position: absolute;
+    fill: @notification-icon;
+  }
+
+  &__success {
+    background: @notification-bg-success;
+    border-color: @notification-border-success;
+
+    .cf-icon-svg {
+      fill: @notification-icon-success;
     }
+  }
 
-    &__success {
-        background: @notification-bg-success;
-        border-color: @notification-border-success;
+  &__warning {
+    background: @notification-bg-warning;
+    border-color: @notification-border-warning;
 
-        .cf-icon-svg {
-            fill: @notification-icon-success;
-        }
+    .cf-icon-svg {
+      fill: @notification-icon-warning;
     }
+  }
 
-    &__warning {
-        background: @notification-bg-warning;
-        border-color: @notification-border-warning;
+  &__error {
+    background: @notification-bg-error;
+    border-color: @notification-border-error;
 
-        .cf-icon-svg {
-            fill: @notification-icon-warning;
-        }
+    .cf-icon-svg {
+      fill: @notification-icon-error;
     }
+  }
 
-    &__error {
-        background: @notification-bg-error;
-        border-color: @notification-border-error;
+  &__visible {
+    display: block;
+  }
 
-        .cf-icon-svg {
-            fill: @notification-icon-error;
-        }
-    }
+  // Only adding left padding if an icon is present.
+  .cf-icon-svg + &_content {
+    padding-left: unit( 25px / @base-font-size-px, em );
+  }
 
-    &__visible {
-        display: block;
-    }
+  &_message {
+    margin-bottom: 0;
+  }
 
-    // Only adding left padding if an icon is present.
-    .cf-icon-svg + &_content {
-        padding-left: unit( 25px / @base-font-size-px, em );
-    }
+  &_explanation {
+    margin-top: unit( 5px / @base-font-size-px, em );
+    margin-bottom: unit( 15px / @base-font-size-px, em );
+  }
 
-    &_message {
-        margin-bottom: 0;
-    }
+  // We need to provide a margin for links if an explanation is absent.
+  &_message + .m-list {
+    margin-top: unit( 15px / @base-font-size-px, em );
+  }
 
-    &_explanation {
-        margin-top: unit( 5px / @base-font-size-px, em );
-        margin-bottom: unit( 15px / @base-font-size-px, em );
-    }
+  // Make adjustments to the icon, explanation, and links if at non-mobile.
+  .respond-to-min( @bp-sm-min, {
 
-    // We need to provide a margin for links if an explanation is absent.
-    &_message + .m-list {
-        margin-top: unit( 15px / @base-font-size-px, em );
-    }
-
-    // Make adjustments to the icon, explanation, and links if at non-mobile.
-    .respond-to-min( @bp-sm-min, {
-
-        // Increase the icon size.
+    // Increase the icon size.
         .cf-icon-svg {
             font-size: unit( @size-iv / @base-font-size-px, em );
         }

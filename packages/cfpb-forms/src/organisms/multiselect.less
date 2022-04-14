@@ -1,211 +1,211 @@
 // Initial and no-js state.
 select.o-multiselect {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    padding: unit( 7px / @base-font-size-px, em );
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: unit( 7px / @base-font-size-px, em );
 
-    // Fixed height breaks the bottom border
-    // mid-character to indicate there's more content.
-    height: 5.5em;
-    padding-top: unit( 4px / @base-font-size-px, em );
-    padding-bottom: unit( 4px / @base-font-size-px, em );
-    border: 1px solid @select-border;
+  // Fixed height breaks the bottom border
+  // mid-character to indicate there's more content.
+  height: 5.5em;
+  padding-top: unit( 4px / @base-font-size-px, em );
+  padding-bottom: unit( 4px / @base-font-size-px, em );
+  border: 1px solid @select-border;
 
-    option {
-        padding:
+  option {
+    padding:
             unit( 2px / @base-font-size-px, em )
             unit( 6px / @base-font-size-px, em );
-    }
+  }
 }
 
 .o-multiselect {
+  position: relative;
+
+  &_header {
     position: relative;
 
-    &_header {
-        position: relative;
+    &:after {
+      // Arrow box width must be odd size to properly center the bg image
+      width: unit( @select-height / @base-font-size-px, em );
+      box-sizing: border-box;
+      border-left: 1px solid @select-border;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: @select-icon-bg;
+      .u-svg-inline-bg( 'down' );
+
+      background-size: auto @cf-icon-height;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: 1px solid @input-border;
+      content: '';
+      pointer-events: none;
+    }
+  }
+
+  // Reverse arrow when search drop-down is open.
+  &.u-active {
+    .o-multiselect_header:after {
+      .u-svg-inline-bg( 'up' );
+    }
+  }
+
+  &_search[type="text"] {
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &_fieldset {
+    // Resets
+    border-color: @input-border;
+    border-top: none;
+    margin: 0;
+    padding: 0;
+
+    // Styles
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 10;
+
+    max-height: 0;
+    margin-top: -1px;
+    width: 100%;
+
+    transition: max-height 0.25s ease-out;
+
+    // Chrome doesn't properly handle fieldset display properties
+    // See https://bugs.chromium.org/p/chromium/issues/detail?id=375693
+    // and https://codepen.io/contolini/pen/rNLXrvP
+    // and https://codepen.io/pembe180/pen/wCsIk
+    display: -webkit-box;
+  }
+
+  &.u-active {
+    .o-multiselect_fieldset {
+      margin-top: 0;
+      max-height: 140px;
+
+      border-color: @pacific;
+      border-width: 2px;
+      border-top: 0;
+    }
+  }
+
+  &_options {
+    background-color: @white;
+    padding: 0;
+
+    li {
+      margin: 0;
+    }
+
+    li:first-child {
+      .a-label {
+        padding-top: unit( 10px / @base-font-size-px, em );
+      }
+    }
+
+    &.u-filtered li:not( .u-filter-match ) {
+      display: none;
+    }
+
+    &.u-no-results,
+    &.u-max-selections {
+      li {
+        display: none;
+      }
+
+      &:after {
+        display: list-item;
+      }
+    }
+
+    &.u-no-results:after {
+      content: 'No results found';
+    }
+
+    &.u-max-selections {
+      padding: unit( 10px / @base-font-size-px, em );
+      pointer-events: none;
+
+      &:after {
+        content: 'Reached maximum of five selections';
+      }
+    }
+
+    .a-label {
+      box-sizing: border-box;
+      padding-top: unit( 5px / @base-font-size-px, em );
+      padding-right: 0;
+      padding-bottom: unit( 5px / @base-font-size-px, em );
+      padding-left: unit( 10px / @base-font-size-px, em );
+      width: 100%;
+    }
+  }
+
+  &_choices {
+    padding-left: 0;
+    // The following is required to make side-by-side LI
+    // have a space between them.
+    margin-right: unit( -10px / @base-font-size-px, em );
+    margin-bottom: 0;
+
+    li {
+      display: inline-block;
+
+      // The following is required to make side-by-side LI
+      // have a space between them.
+      margin-right: unit( 10px / @base-font-size-px, em );
+    }
+
+    li:last-child {
+      margin-bottom: unit( 10px / @base-font-size-px, em );
+    }
+
+    button {
+      border: none;
+      background: none;
+      padding: 0;
+
+      &:focus {
+        outline: 1px dotted @pacific;
+        outline-offset: 1px;
+      }
+    }
+
+    label {
+      display: inline-block;
+      padding: 2px 5px;
+      padding-right: unit( 25px / @size-v, em );
+
+      background-color: @navy-80;
+      border-radius: unit( 4px / @size-v, em );
+      color: @white;
+      cursor: pointer;
+      font-size: unit( 14px / @base-font-size-px, em );
+      position: relative;
+
+      &:hover {
+        background-color: @navy;
 
         &:after {
-            // Arrow box width must be odd size to properly center the bg image
-            width: unit( @select-height / @base-font-size-px, em );
-            box-sizing: border-box;
-            border-left: 1px solid @select-border;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            background-color: @select-icon-bg;
-            .u-svg-inline-bg( 'down' );
-
-            background-size: auto @cf-icon-height;
-            background-repeat: no-repeat;
-            background-position: center center;
-            border: 1px solid @input-border;
-            content: '';
-            pointer-events: none;
+          color: @white;
         }
-    }
+      }
 
-    // Reverse arrow when search drop-down is open.
-    &.u-active {
-        .o-multiselect_header:after {
-            .u-svg-inline-bg( 'up' );
-        }
-    }
-
-    &_search[type="text"] {
-        display: block;
-
-        box-sizing: border-box;
-        width: 100%;
-    }
-
-    &_fieldset {
-        // Resets
-        border-color: @input-border;
-        border-top: none;
-        margin: 0;
-        padding: 0;
-
-        // Styles
-        box-sizing: border-box;
-        overflow-x: hidden;
-        overflow-y: scroll;
+      .cf-icon-svg {
         position: absolute;
-        z-index: 10;
-
-        max-height: 0;
-        margin-top: -1px;
-        width: 100%;
-
-        transition: max-height 0.25s ease-out;
-
-        // Chrome doesn't properly handle fieldset display properties
-        // See https://bugs.chromium.org/p/chromium/issues/detail?id=375693
-        // and https://codepen.io/contolini/pen/rNLXrvP
-        // and https://codepen.io/pembe180/pen/wCsIk
-        display: -webkit-box;
+        top: 2px;
+        right: 5px;
+        fill: @navy-20;
+      }
     }
-
-    &.u-active {
-        .o-multiselect_fieldset {
-            margin-top: 0;
-            max-height: 140px;
-
-            border-color: @pacific;
-            border-width: 2px;
-            border-top: 0;
-        }
-    }
-
-    &_options {
-        background-color: @white;
-        padding: 0;
-
-        li {
-            margin: 0;
-        }
-
-        li:first-child {
-            .a-label {
-                padding-top: unit( 10px / @base-font-size-px, em );
-            }
-        }
-
-        &.u-filtered li:not( .u-filter-match ) {
-            display: none;
-        }
-
-        &.u-no-results,
-        &.u-max-selections {
-            li {
-                display: none;
-            }
-
-            &:after {
-                display: list-item;
-            }
-        }
-
-        &.u-no-results:after {
-            content: 'No results found';
-        }
-
-        &.u-max-selections {
-            padding: unit( 10px / @base-font-size-px, em );
-            pointer-events: none;
-
-            &:after {
-                content: 'Reached maximum of five selections';
-            }
-        }
-
-        .a-label {
-            box-sizing: border-box;
-            padding-top: unit( 5px / @base-font-size-px, em );
-            padding-right: 0;
-            padding-bottom: unit( 5px / @base-font-size-px, em );
-            padding-left: unit( 10px / @base-font-size-px, em );
-            width: 100%;
-        }
-    }
-
-    &_choices {
-        padding-left: 0;
-        // The following is required to make side-by-side LI
-        // have a space between them.
-        margin-right: unit( -10px / @base-font-size-px, em );
-        margin-bottom: 0;
-
-        li {
-            display: inline-block;
-
-            // The following is required to make side-by-side LI
-            // have a space between them.
-            margin-right: unit( 10px / @base-font-size-px, em );
-        }
-
-        li:last-child {
-            margin-bottom: unit( 10px / @base-font-size-px, em );
-        }
-
-        button {
-            border: none;
-            background: none;
-            padding: 0;
-
-            &:focus {
-                outline: 1px dotted @pacific;
-                outline-offset: 1px;
-            }
-        }
-
-        label {
-            display: inline-block;
-            padding: 2px 5px;
-            padding-right: unit( 25px / @size-v, em );
-
-            background-color: @navy-80;
-            border-radius: unit( 4px / @size-v, em );
-            color: @white;
-            cursor: pointer;
-            font-size: unit( 14px / @base-font-size-px, em );
-            position: relative;
-
-            &:hover {
-                background-color: @navy;
-
-                &:after {
-                    color: @white;
-                }
-            }
-
-            .cf-icon-svg {
-                position: absolute;
-                top: 2px;
-                right: 5px;
-                fill: @navy-20;
-            }
-        }
-    }
+  }
 }

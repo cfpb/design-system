@@ -425,6 +425,8 @@ table {
    Design System
    Media queries
    ========================================================================== */
+/* stylelint-disable less/color-no-invalid-hex */
+/* stylelint-enable less/color-no-invalid-hex */
 /* ==========================================================================
    Design System
    Utilities
@@ -2095,6 +2097,8 @@ a.a-heading__icon.active {
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
+  /* stylelint-disable less/no-duplicate-variables */
+  /* stylelint-enable less/no-duplicate-variables */
 }
 @media only all and (min-width: 37.5625em) {
   .m-hero_wrapper {
@@ -2181,6 +2185,10 @@ a.a-heading__icon.active {
   background-color: #5a5d61;
   color: #ffffff;
 }
+.m-hero__bleeding {
+  /* stylelint-disable less/no-duplicate-variables */
+  /* stylelint-enable less/no-duplicate-variables */
+}
 @media only all and (min-width: 37.5625em) {
   .m-hero__bleeding .m-hero_image-wrapper {
     width: 100%;
@@ -2217,6 +2225,8 @@ a.a-heading__icon.active {
 }
 .m-hero__jumbo {
   background-color: #ffffff;
+  /* stylelint-disable less/no-duplicate-variables */
+  /* stylelint-enable less/no-duplicate-variables */
 }
 .m-hero__jumbo .m-hero_subhead {
   margin-bottom: 0.68181818em;
@@ -2280,6 +2290,10 @@ a.a-heading__icon.active {
 }
 .m-hero__50-50 {
   background-color: #ffffff;
+  /* stylelint-disable less/no-duplicate-variables */
+  /* stylelint-enable less/no-duplicate-variables */
+  /* stylelint-disable less/no-duplicate-variables */
+  /* stylelint-enable less/no-duplicate-variables */
 }
 .m-hero__50-50 .m-hero_subhead {
   margin-bottom: 0.68181818em;
@@ -2580,8 +2594,8 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type( 1 ) h3,
 }
 .o-featured-content-module__left {
   /* Left modifier doesn't have a border/background. If in the future we
-           have a left arranged FCM we'll want to make the border/background
-           its own modifer */
+       have a left arranged FCM we'll want to make the border/background
+       its own modifer */
   border: initial;
   background-color: initial;
 }
@@ -2825,6 +2839,10 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type( 1 ) h3,
   .content-l__full .content-l_col + .content-l_col-3-4 {
     margin-top: 1.875em;
   }
+}
+.content-l__main {
+  /* stylelint-disable less/no-duplicate-variables */
+  /* stylelint-enable less/no-duplicate-variables */
 }
 @media only all and (min-width: 56.3125em) and (max-width: 63.75em) {
   .content-l__main .content-l_col.content-l_col-1-2 {
@@ -3319,6 +3337,8 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type( 1 ) h3,
     content: '';
   }
 }
+/* stylelint-disable less/no-duplicate-variables */
+/* stylelint-enable less/no-duplicate-variables */
 .content_line {
   height: 1px;
   background: #b4b5b6;
@@ -3347,6 +3367,7 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type( 1 ) h3,
 .content_main,
 .content_sidebar {
   padding: 1.875em 0.9375em;
+  /* stylelint-disable less/no-duplicate-variables */
 }
 @media only all and (min-width: 37.5625em) {
   .content_intro,
@@ -3444,6 +3465,7 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type( 1 ) h3,
     padding-right: 8.33333333%;
   }
 }
+/* stylelint-enable less/no-duplicate-variables */
 .content__flush-bottom {
   padding-bottom: 0;
 }
@@ -4420,6 +4442,8 @@ h6 + .a-legend,
 }
 .o-form__input-w-btn_input-container {
   margin-bottom: 0.9375em;
+  /* stylelint-disable less/no-duplicate-variables */
+  /* stylelint-enable less/no-duplicate-variables */
 }
 @media only all and (min-width: 30em) {
   .o-form__input-w-btn_input-container {
@@ -4455,6 +4479,8 @@ h6 + .a-legend,
 }
 .o-form__input-w-btn_btn-container {
   margin-bottom: 0.9375em;
+  /* stylelint-disable less/no-duplicate-variables */
+  /* stylelint-enable less/no-duplicate-variables */
 }
 @media only all and (min-width: 30em) {
   .o-form__input-w-btn_btn-container {
@@ -4896,6 +4922,9 @@ button.o-expandable_header {
     display: block;
     max-height: 99999px !important;
   }
+}
+.print .o-expandable {
+  /* stylelint-disable-next-line less/no-duplicate-variables */
 }
 .print .o-expandable_target__expanded .print .o-expandable_cue-close,
 .print .o-expandable_target__collapsed .print .o-expandable_cue-open {
@@ -5846,7 +5875,6 @@ pre[class*="language-"] {
   color: #009;
 }
 /* Generic.Prompt */
-/* Generic.Strong */
 .highlight .gu {
   color: #030;
 }
@@ -6376,11 +6404,6 @@ pre code {
 .o-editor_link .a-btn {
   border-radius: 8px;
   box-shadow: 1px 1px 3px #999;
-}
-.o-editor_link .a-btn_text {
-  display: none;
-}
-.o-editor_link .a-btn {
   display: inline-block;
 }
 .o-editor_link .a-btn_text {
@@ -6397,6 +6420,7 @@ pre code {
   }
 }
 .print .o-editor_link {
+  /* stylelint-disable-next-line less/no-duplicate-variables */
   display: none;
 }
 .frame-content #toggle-code {
@@ -6444,15 +6468,13 @@ pre code {
 .m-tabs_tab:focus {
   outline: 1px dotted #0072ce;
   outline-offset: 3px;
+  color: #101820;
 }
 .m-tabs_tab:hover {
   background-color: #f7f8f9;
   border-bottom: 2px solid #f7f8f9;
 }
 .m-tabs_tab:active {
-  color: #101820;
-}
-.m-tabs_tab:focus {
   color: #101820;
 }
 .m-tabs_tab[aria-current="true"] {

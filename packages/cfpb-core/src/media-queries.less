@@ -6,7 +6,8 @@
 //
 // Media query mixins
 //
-
+// TODO: Latest stylelint does not handle the @rules parameter. Refactor.
+/* stylelint-disable less/color-no-invalid-hex */
 .respond-to-min( @bp, @rules ) {
   @ems: unit( ( @bp / @base-font-size-px ), em );
 
@@ -48,6 +49,8 @@
     @rules();
   }
   .print & {
+    /* stylelint-disable-next-line less/no-duplicate-variables */
     @rules();
   }
 }
+/* stylelint-enable less/color-no-invalid-hex */

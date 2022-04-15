@@ -4,304 +4,304 @@
 // @f = `:focus` state.
 // @a = `:active` state.
 .u-link-card__colors( @c, @v, @h, @f, @a ) {
-    .m-card_footer > span {
-        display: inline;
-        border-width: 0;
-        border-bottom-width: 1px;
-        border-color: @c;
-        border-style: dotted;
-        font-weight: 500;
-        color: @c;
-        text-decoration: none;
-    }
+  .m-card_footer > span {
+    display: inline;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-color: @c;
+    border-style: dotted;
+    font-weight: 500;
+    color: @c;
+    text-decoration: none;
+  }
 
-    & > a:visited .m-card_footer > span {
-        border-color: @v;
-        color: @v;
-    }
+  & > a:visited .m-card_footer > span {
+    border-color: @v;
+    color: @v;
+  }
 
-    // Border changes on the regular cards happen on the top-level `article`
-    // element, so for consistency we trigger the hover styles on the parent
-    // instead of on the link. This differs from the visited, focus,
-    // and active states, which add styles onto the link.
-    &:hover .m-card_footer > span {
-        border-style: solid;
-        border-color: @h;
-        color: @h;
-    }
+  // Border changes on the regular cards happen on the top-level `article`
+  // element, so for consistency we trigger the hover styles on the parent
+  // instead of on the link. This differs from the visited, focus,
+  // and active states, which add styles onto the link.
+  &:hover .m-card_footer > span {
+    border-style: solid;
+    border-color: @h;
+    color: @h;
+  }
 
-    & > a:focus .m-card_footer > span {
-        border-color: @f;
-        color: @f;
-    }
+  & > a:focus .m-card_footer > span {
+    border-color: @f;
+    color: @f;
+  }
 
-    & > a:active .m-card_footer > span {
-        border-color: @a;
-        border-style: solid;
-        color: @a;
-    }
+  & > a:active .m-card_footer > span {
+    border-color: @a;
+    border-style: solid;
+    color: @a;
+  }
 }
 
 .u-card-bottom-bar() {
-    // Bottom green hover bar.
-    &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 1px;
-        height: 5px;
-        width: 100%;
-        background: @green;
-    }
+  // Bottom green hover bar.
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    height: 5px;
+    width: 100%;
+    background: @green;
+  }
 }
 
 .m-card {
-    position: relative;
+  position: relative;
 
-    &:not( .m-card__breakout ) {
-        & > a {
-            padding: unit( @grid_gutter-width / @base-font-size-px, em );
-        }
-    }
-
-    &:not( .m-card__breakout ):not( .m-card__highlight ):not( .m-card__topic ) {
-        background: @white;
-        border: 1px solid @gray-20;
-        border-bottom-width: 3px;
-    }
-
-    &:not( .m-card__featured ):not( .m-card__breakout ):not( .m-card__topic ):not( .m-card__highlight ) {
-        padding: unit( @grid_gutter-width / @base-font-size-px, em );
-    }
-
-    &:not( .m-card__featured ):not( .m-card__breakout ):not( .m-card__topic ):not( .m-card__highlight ),
+  &:not( .m-card__breakout ) {
     & > a {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        flex-basis: 0;
-        box-sizing: border-box;
-        height: 100%;
+      padding: unit( @grid_gutter-width / @base-font-size-px, em );
     }
+  }
 
-    & a:focus {
-        outline-offset: 2px;
+  &:not( .m-card__breakout ):not( .m-card__highlight ):not( .m-card__topic ) {
+    background: @white;
+    border: 1px solid @gray-20;
+    border-bottom-width: 3px;
+  }
+
+  &:not( .m-card__featured ):not( .m-card__breakout ):not( .m-card__topic ):not( .m-card__highlight ) {
+    padding: unit( @grid_gutter-width / @base-font-size-px, em );
+  }
+
+  &:not( .m-card__featured ):not( .m-card__breakout ):not( .m-card__topic ):not( .m-card__highlight ),
+  & > a {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  & a:focus {
+    outline-offset: 2px;
+  }
+
+  &:not( .m-card__highlight ) {
+    &_footer {
+      margin-top: auto;
     }
+  }
 
-    &:not( .m-card__highlight ) {
-        &_footer {
-            margin-top: auto;
-        }
-    }
+  &_footer > a {
+    font-weight: 500;
+    border-bottom-width: 1px;
+  }
 
-    &_footer > a {
-        font-weight: 500;
-        border-bottom-width: 1px;
-    }
-
-    // Shrink heading at smaller screen sizes.
-    &_heading {
-        .respond-to-max( @bp-med-min, {
-            .h3();
+  // Shrink heading at smaller screen sizes.
+  &_heading {
+    .respond-to-max( @bp-med-min, {
+      .h3();
         } );
+  }
+
+  // Regular cards.
+  &_heading > a {
+    color: @black;
+
+    &:hover {
+      color: @pacific;
     }
 
-    // Regular cards.
-    &_heading > a {
-        color: @black;
-
-        &:hover {
-            color: @pacific;
-        }
-
-        & .m-card_icon {
-            font-size: 1em;
-            margin-bottom: 0;
-            padding-right: unit( 7.5px / @base-font-size-px, em );
-        }
-
-        & .m-card_icon,
-        & span {
-            display: table-cell;
-        }
+    & .m-card_icon {
+      font-size: 1em;
+      margin-bottom: 0;
+      padding-right: unit( 7.5px / @base-font-size-px, em );
     }
 
-    & > .m-list {
-        margin-top: 10px;
-        margin-bottom: 30px;
+    & .m-card_icon,
+    & span {
+      display: table-cell;
+    }
+  }
+
+  & > .m-list {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  // Featured cards.
+  &__featured {
+
+    .m-card_heading {
+      margin: 0;
     }
 
-    // Featured cards.
-    &__featured {
+    .m-card_icon {
+      font-size: unit( 30px / @base-font-size-px, em );
+      margin-bottom: unit( 5px / @base-font-size-px, em );
+    }
 
-        .m-card_heading {
-            margin: 0;
-        }
+    .m-card_icon,
+    p {
+      color: @black;
+    }
 
-        .m-card_icon {
-            font-size: unit( 30px / @base-font-size-px, em );
-            margin-bottom: unit( 5px / @base-font-size-px, em );
-        }
-
-        .m-card_icon,
-        p {
-            color: @black;
-        }
-
-        &:hover {
-            box-shadow: 0 8px 0 0 inset @green,
+    &:hover {
+      box-shadow: 0 8px 0 0 inset @green,
                         2px 0 0 0 inset @gray-20,
                         -2px 0 0 0 inset @gray-20;
-        }
-
-        &:hover .m-card_footer > span {
-            border-style: solid;
-            color: @pacific-dark;
-        }
-
-        .m-card_footer > span {
-            display: inline;
-            border-width: 0;
-            border-bottom-width: 1px;
-            border-color: @pacific;
-            border-style: dotted;
-            font-weight: 500;
-            color: @pacific;
-            text-decoration: none;
-        }
-
-        & > a:visited .m-card_footer > span {
-            color: @teal;
-            border-color: @teal !important;
-        }
-
-        & > a:link,
-        & > a:visited {
-            border: 1px solid @gray-20;
-            border-bottom-width: 3px;
-        }
     }
 
-    // Topic cards.
-    &__topic {
-        text-align: center;
-        width: 170px;
-        background: @white;
+    &:hover .m-card_footer > span {
+      border-style: solid;
+      color: @pacific-dark;
+    }
 
-        & > a {
-            border: 1px solid @gray-20;
-            border-bottom-width: 3px;
-        }
+    .m-card_footer > span {
+      display: inline;
+      border-width: 0;
+      border-bottom-width: 1px;
+      border-color: @pacific;
+      border-style: dotted;
+      font-weight: 500;
+      color: @pacific;
+      text-decoration: none;
+    }
 
-        .m-card_icon {
-            font-size: unit( 30px / @base-font-size-px, em );
-            color: @green;
-            margin-bottom: unit( 5px / @base-font-size-px, em );
-        }
+    & > a:visited .m-card_footer > span {
+      color: @teal;
+      border-color: @teal !important;
+    }
 
-        &:hover {
-            > a {
-                box-shadow: 0 2px 0 0 inset @gray-20,
+    & > a:link,
+    & > a:visited {
+      border: 1px solid @gray-20;
+      border-bottom-width: 3px;
+    }
+  }
+
+  // Topic cards.
+  &__topic {
+    text-align: center;
+    width: 170px;
+    background: @white;
+
+    & > a {
+      border: 1px solid @gray-20;
+      border-bottom-width: 3px;
+    }
+
+    .m-card_icon {
+      font-size: unit( 30px / @base-font-size-px, em );
+      color: @green;
+      margin-bottom: unit( 5px / @base-font-size-px, em );
+    }
+
+    &:hover {
+      > a {
+        box-shadow: 0 2px 0 0 inset @gray-20,
                             2px 0 0 0 inset @gray-20,
                            -2px 0 0 0 inset @gray-20;
-            }
+      }
 
-            .u-card-bottom-bar();
-        }
-
-        // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-        .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific-dark, @pacific-dark );
+      .u-card-bottom-bar();
     }
 
-    &__topic-action {
-        .m-card_icon {
-            color: @pacific;
-        }
+    // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+    .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific-dark, @pacific-dark );
+  }
+
+  &__topic-action {
+    .m-card_icon {
+      color: @pacific;
+    }
+  }
+
+  // Breakout cards.
+  @card_img_width: 210px;
+  @card_img_height: 120px;
+  &__breakout {
+    min-width: 210px;
+    text-align: center;
+
+    // Provide padding offset set to half the image height.
+    > a {
+      padding-top: @card_img_height / 2;
     }
 
-    // Breakout cards.
-    @card_img_width: 210px;
-    @card_img_height: 120px;
-    &__breakout {
-        min-width: 210px;
-        text-align: center;
+    .m-card_inner-wrapper {
+      position: relative;
+      z-index: 0;
+      min-height: @card_img_height + ( @grid_gutter-width / 2 );
 
-        // Provide padding offset set to half the image height.
-        > a {
-            padding-top: @card_img_height / 2;
-        }
+      background: @gray-5;
+      border: 1px solid @gray-20;
+      border-bottom-width: 3px;
+    }
 
-        .m-card_inner-wrapper {
-            position: relative;
-            z-index: 0;
-            min-height: @card_img_height + ( @grid_gutter-width / 2 );
+    .m-card_img {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 50%;
+      width: @card_img_width;
+      height: @card_img_height;
 
-            background: @gray-5;
-            border: 1px solid @gray-20;
-            border-bottom-width: 3px;
-        }
+      // Match half of image width.
+      margin-left: -( @card_img_width / 2 );
+    }
 
-        .m-card_img {
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 50%;
-            width: @card_img_width;
-            height: @card_img_height;
+    .m-card_footer {
+      // Subtract 6px to accommodate heading-3 size.
+      margin-top: ( @card_img_height / 2 ) + @grid_gutter-width - 6px;
+    }
 
-            // Match half of image width.
-            margin-left: -( @card_img_width / 2 );
-        }
-
-        .m-card_footer {
-            // Subtract 6px to accommodate heading-3 size.
-            margin-top: ( @card_img_height / 2 ) + @grid_gutter-width - 6px;
-        }
-
-        &:hover {
-            .m-card_inner-wrapper {
-                box-shadow: 0 2px 0 0 inset @gray-20,
+    &:hover {
+      .m-card_inner-wrapper {
+        box-shadow: 0 2px 0 0 inset @gray-20,
                             2px 0 0 0 inset @gray-20,
                            -2px 0 0 0 inset @gray-20;
-            }
+      }
 
-            .u-card-bottom-bar();
-        }
-
-        // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-        .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific, @navy );
-
-        // Breakout cards have larger links.
-        .m-card_footer > span {
-            .heading-3();
-        }
+      .u-card-bottom-bar();
     }
 
-    // Highlight cards.
-    &__highlight {
-        background: @green-20;
+    // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+    .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific, @navy );
 
-        & > a {
-            border: 1px solid @green-40;
-            border-bottom-width: 3px;
-        }
+    // Breakout cards have larger links.
+    .m-card_footer > span {
+      .heading-3();
+    }
+  }
 
-        h3,
-        p {
-            color: @black;
-        }
+  // Highlight cards.
+  &__highlight {
+    background: @green-20;
 
-        &:hover {
-            > a {
-                box-shadow: 0 2px 0 0 inset @green-40,
+    & > a {
+      border: 1px solid @green-40;
+      border-bottom-width: 3px;
+    }
+
+    h3,
+    p {
+      color: @black;
+    }
+
+    &:hover {
+      > a {
+        box-shadow: 0 2px 0 0 inset @green-40,
                             2px 0 0 0 inset @green-40,
                            -2px 0 0 0 inset @green-40;
-            }
+      }
 
-            .u-card-bottom-bar();
-        }
-
-        // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-        .u-link-card__colors( @pacific-mid-dark, @teal-mid-dark, @pacific-dark, @pacific-mid-dark, @navy );
+      .u-card-bottom-bar();
     }
+
+    // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+    .u-link-card__colors( @pacific-mid-dark, @teal-mid-dark, @pacific-dark, @pacific-mid-dark, @navy );
+  }
 }

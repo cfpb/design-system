@@ -41,164 +41,164 @@
 //
 
 .o-expandable {
-    position: relative;
+  position: relative;
 
-    &_target {
-        padding: 0;
-        border: 0;
-        background-color: transparent;
-        cursor: pointer;
+  &_target {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
 
-        &:focus {
-            outline: 1px dotted @expandable-focus;
-            outline-offset: 1px;
-        }
-
-        .o-expandable_cue-close,
-        .o-expandable_cue-open {
-            display: none;
-        }
-
-        &__expanded .o-expandable_cue-close {
-            display: block;
-        }
-
-        &__collapsed .o-expandable_cue-open {
-            display: block;
-        }
+    &:focus {
+      outline: 1px dotted @expandable-focus;
+      outline-offset: 1px;
     }
 
-    &_content {
-        // A clearfix prevents twitchy animations from occurring when margins
-        // collapse and extend past the bounds of the expandable.
-        .u-clearfix();
-
-        &__transition {
-            transition: max-height @expandable__transition-speed ease-in-out;
-        }
-
-        &__collapsed {
-            max-height: 0;
-        }
-
-        &__expanded {
-            max-height: 1000px;
-        }
-
-        &.u-is-animating {
-            overflow: hidden;
-        }
+    .o-expandable_cue-close,
+    .o-expandable_cue-open {
+      display: none;
     }
 
-    //
-    // Expandable text elements
-    //
-
-    &_label {
-        // Remove default h4 margin style
-        margin-bottom: 0;
-        color: @expandable_label-text;
-        font-weight: 500;
+    &__expanded .o-expandable_cue-close {
+      display: block;
     }
 
-    &_link {
-        color: @expandable_link-text;
-        font-size: unit( @expandable_link-font-size / @base-font-size-px, em );
-        line-height: unit( @base-line-height-px / @expandable_link-font-size );
+    &__collapsed .o-expandable_cue-open {
+      display: block;
+    }
+  }
+
+  &_content {
+    // A clearfix prevents twitchy animations from occurring when margins
+    // collapse and extend past the bounds of the expandable.
+    .u-clearfix();
+
+    &__transition {
+      transition: max-height @expandable__transition-speed ease-in-out;
     }
 
-    //
-    // Header
-    //
-
-    &_header {
-        display: block;
-        .u-clearfix();
-
-        // Using the button element with .o-expandable_header requires setting
-        // an explicit width.
-        button& {
-            width: 100%;
-            text-align: left;
-        }
-
-        &__spaced {
-            padding-bottom: unit( 15px / @base-font-size-px, em );
-        }
-
-
-        // TODO: Convert float layout to flexbox
-        &-left {
-            float: left;
-            width: 85%;
-        }
-
-        &-right {
-            float: right;
-        }
+    &__collapsed {
+      max-height: 0;
     }
 
-    //
-    // Padded expandable modifier
-    //
+    &__expanded {
+      max-height: 1000px;
+    }
 
-    &__padded {
-        .o-expandable_header {
-            padding:
+    &.u-is-animating {
+      overflow: hidden;
+    }
+  }
+
+  //
+  // Expandable text elements
+  //
+
+  &_label {
+    // Remove default h4 margin style
+    margin-bottom: 0;
+    color: @expandable_label-text;
+    font-weight: 500;
+  }
+
+  &_link {
+    color: @expandable_link-text;
+    font-size: unit( @expandable_link-font-size / @base-font-size-px, em );
+    line-height: unit( @base-line-height-px / @expandable_link-font-size );
+  }
+
+  //
+  // Header
+  //
+
+  &_header {
+    display: block;
+    .u-clearfix();
+
+    // Using the button element with .o-expandable_header requires setting
+    // an explicit width.
+    button& {
+      width: 100%;
+      text-align: left;
+    }
+
+    &__spaced {
+      padding-bottom: unit( 15px / @base-font-size-px, em );
+    }
+
+
+    // TODO: Convert float layout to flexbox
+    &-left {
+      float: left;
+      width: 85%;
+    }
+
+    &-right {
+      float: right;
+    }
+  }
+
+  //
+  // Padded expandable modifier
+  //
+
+  &__padded {
+    .o-expandable_header {
+      padding:
                 unit( 10px / @base-font-size-px, em )
                 unit( 15px / @base-font-size-px, em );
-        }
-
-        .o-expandable_content {
-            padding: 0 unit( 15px / @base-font-size-px, em );
-
-            // The divider between _header and _content.
-            &:before {
-                content: '';
-                display: block;
-                border-top: 1px solid @expandable__border;
-                padding-top: unit( 15px / @base-font-size-px, em );
-            }
-
-            &:after {
-                padding-bottom: unit( 15px / @base-font-size-px, em );
-                width: 100%;
-            }
-        }
     }
 
-    //
-    // Expandable with a background color modifier
-    //
+    .o-expandable_content {
+      padding: 0 unit( 15px / @base-font-size-px, em );
 
-    &__background {
-        background: @expandable__background;
+      // The divider between _header and _content.
+      &:before {
+        content: '';
+        display: block;
+        border-top: 1px solid @expandable__border;
+        padding-top: unit( 15px / @base-font-size-px, em );
+      }
+
+      &:after {
+        padding-bottom: unit( 15px / @base-font-size-px, em );
+        width: 100%;
+      }
     }
+  }
 
-    //
-    // Expandable with a border modifier
-    //
+  //
+  // Expandable with a background color modifier
+  //
 
-    &__border {
-        border: 1px solid @expandable__border;
+  &__background {
+    background: @expandable__background;
+  }
+
+  //
+  // Expandable with a border modifier
+  //
+
+  &__border {
+    border: 1px solid @expandable__border;
+  }
+
+  //
+  // Expandable groups
+  //
+
+  &-group {
+    .o-expandable__padded {
+      border-bottom: 1px solid @expandable__border;
+
+      &:first-child {
+        border-top: 1px solid @expandable__border;
+      }
     }
+  }
 
-    //
-    // Expandable groups
-    //
-
-    &-group {
-        .o-expandable__padded {
-            border-bottom: 1px solid @expandable__border;
-
-            &:first-child {
-                border-top: 1px solid @expandable__border;
-            }
-        }
-    }
-
-    .respond-to-print( {
-        // Hide the interactive expandable cues when printing
+  .respond-to-print( {
+    // Hide the interactive expandable cues when printing
         &_target__expanded &_cue-close,
         &_target__collapsed &_cue-open {
             display: none;

@@ -1,31 +1,31 @@
 .o-well {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    padding:
+  padding:
         unit( @grid_gutter-width / @base-font-size-px, em )
         unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
-    border: 1px solid @gray-40;
-    background-color: @gray-5;
+  border: 1px solid @gray-40;
+  background-color: @gray-5;
 
-    .respond-to-min( @bp-sm-min, {
-        padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+  .respond-to-min( @bp-sm-min, {
+    padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
         padding-right: unit( @grid_gutter-width / @base-font-size-px, em );
     } );
 
-    &__inkwell {
-        background-color: @gray-dark;
-        color: @white;
-        border: none;
+  &__inkwell {
+    background-color: @gray-dark;
+    color: @white;
+    border: none;
 
-        a {
-            // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-            .u-link__colors( @pacific-40, @teal-40, @pacific-50, @pacific-40, @navy-40 );
-        }
-
-        // If an inkwell contains a tagline, properly lay it out.
-        .a-tagline {
-            margin-bottom: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
-            max-width: 41.875rem;
-        }
+    a {
+      // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
+      .u-link__colors( @pacific-40, @teal-40, @pacific-50, @pacific-40, @navy-40 );
     }
+
+    // If an inkwell contains a tagline, properly lay it out.
+    .a-tagline {
+      margin-bottom: unit( @grid_gutter-width / 2 / @base-font-size-px, em );
+      max-width: 41.875rem;
+    }
+  }
 }

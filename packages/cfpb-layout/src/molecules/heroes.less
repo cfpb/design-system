@@ -5,21 +5,21 @@
 // Hero molecule
 
 .m-hero {
-    background-color: @gray-5;
+  background-color: @gray-5;
 
-    &_wrapper {
-        // Manually enable CSS grid for IE. IE's grid implementation differs
-        // slightly from the spec so we manually enable it per component
-        // instead of using autoprefixer to enable it for the entire site.
-        display: -ms-grid;
-        display: grid;
-        max-width: ( @grid_wrapper-width - @grid_gutter-width );
-        margin: 0 auto;
-        padding-top: @grid_gutter-width;
-        padding-bottom: @grid_gutter-width;
+  &_wrapper {
+    // Manually enable CSS grid for IE. IE's grid implementation differs
+    // slightly from the spec so we manually enable it per component
+    // instead of using autoprefixer to enable it for the entire site.
+    display: -ms-grid;
+    display: grid;
+    max-width: ( @grid_wrapper-width - @grid_gutter-width );
+    margin: 0 auto;
+    padding-top: @grid_gutter-width;
+    padding-bottom: @grid_gutter-width;
 
-        .respond-to-min( @bp-sm-min, {
-            -ms-grid-columns: 7fr 5fr;
+    .respond-to-min( @bp-sm-min, {
+      -ms-grid-columns: 7fr 5fr;
             grid-template-columns: 7fr 5fr;
             padding-right: ( @grid_gutter-width / 2);
             padding-left: ( @grid_gutter-width / 2);
@@ -27,47 +27,47 @@
             min-height: @hero-desktop-height - ( @grid_gutter-width * 2 );
         } );
 
-        .respond-to-min( @bp-lg-min, {
-            padding-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
+    .respond-to-min( @bp-lg-min, {
+      padding-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
             padding-bottom: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
             min-height: @hero-desktop-height - ( ( @grid_gutter-width * 1.5 ) * 2 );
         } );
-    }
+  }
 
-    &_text {
-        padding-right: ( @grid_gutter-width / 2 );
-        padding-left: ( @grid_gutter-width / 2 );
+  &_text {
+    padding-right: ( @grid_gutter-width / 2 );
+    padding-left: ( @grid_gutter-width / 2 );
 
-        .respond-to-min( @bp-sm-min, {
-            margin: auto;
+    .respond-to-min( @bp-sm-min, {
+      margin: auto;
         } );
-    }
+  }
 
-    &_heading {
-        .heading-1();
+  &_heading {
+    .heading-1();
 
-        .respond-to-max( @bp-sm-max, {
-            .heading-2();
+    .respond-to-max( @bp-sm-max, {
+      .heading-2();
         } );
-    }
+  }
 
-    &_subhead {
-        // Not using the `.heading-3()` mixin here because we want the weight
-        // to remain Regular on smaller screens.
-        font-size: @size-iii;
-        line-height: 1.25;
+  &_subhead {
+    // Not using the `.heading-3()` mixin here because we want the weight
+    // to remain Regular on smaller screens.
+    font-size: @size-iii;
+    line-height: 1.25;
 
-        .respond-to-max( @bp-sm-max, {
-            font-size: @size-iv;
+    .respond-to-max( @bp-sm-max, {
+      font-size: @size-iv;
         } );
-    }
+  }
 
-    &_image-wrapper {
-        box-sizing: border-box;
-        overflow: hidden;
+  &_image-wrapper {
+    box-sizing: border-box;
+    overflow: hidden;
 
-        .respond-to-min( @bp-sm-min, {
-            padding-right: ( @grid_gutter-width / 2 );
+    .respond-to-min( @bp-sm-min, {
+      padding-right: ( @grid_gutter-width / 2 );
             padding-left: ( @grid_gutter-width / 2 );
 
             // Vertically center hero images
@@ -75,37 +75,37 @@
             align-items: center;
         } );
 
-        .respond-to-max( @bp-xs-max, {
-            margin-top: unit( @grid_gutter-width / @base-font-size-px, em );
+    .respond-to-max( @bp-xs-max, {
+      margin-top: unit( @grid_gutter-width / @base-font-size-px, em );
         } );
+  }
+
+  &_image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 100%;
+
+    // Progressive enhancement for legacy browsers.
+    // Instead of writing fallbacks for the behavior of each type of
+    // hero image, we hide the hero image in legacy browsers.
+    display: none;
+
+    @supports ( display: grid ) {
+      display: block;
     }
+  }
 
-    &_image {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
+  &__knockout {
+    background-color: @gray;
+    color: @white;
+  }
 
-        width: 100%;
+  &__bleeding {
+    .respond-to-min( @bp-sm-min, {
 
-        // Progressive enhancement for legacy browsers.
-        // Instead of writing fallbacks for the behavior of each type of
-        // hero image, we hide the hero image in legacy browsers.
-        display: none;
-
-        @supports ( display: grid ) {
-            display: block;
-        }
-    }
-
-    &__knockout {
-        background-color: @gray;
-        color: @white;
-    }
-
-    &__bleeding {
-        .respond-to-min( @bp-sm-min, {
-
-            .m-hero_image-wrapper {
+      .m-hero_image-wrapper {
                 width: 100%;
                 margin-top: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
                 margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
@@ -120,43 +120,43 @@
             }
         } );
 
-        .respond-to-min( @bp-lg-min, {
-            .m-hero_image-wrapper {
+    .respond-to-min( @bp-lg-min, {
+      .m-hero_image-wrapper {
                 margin-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em ) * -1;
                 margin-bottom: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em ) * -1;
             }
         } );
+  }
+
+  &__overlay {
+    .m-hero_wrapper {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
-    &__overlay {
-        .m-hero_wrapper {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .respond-to-max( @bp-xs-max, {
-            .m-hero_wrapper {
+    .respond-to-max( @bp-xs-max, {
+      .m-hero_wrapper {
                 // Overwrite the image that is set in the markup because
                 // we are showing the image container below instead.
                 background-image: none !important;
             }
         } );
 
-        .respond-to-min( @bp-sm-min, {
-            .m-hero_image {
+    .respond-to-min( @bp-sm-min, {
+      .m-hero_image {
                 display: none;
             }
         } );
-    }
+  }
 
-    &__jumbo {
-        background-color: @white;
+  &__jumbo {
+    background-color: @white;
 
-        .u-jumbo-text();
+    .u-jumbo-text();
 
-        .respond-to-min( @bp-sm-min, {
-            .m-hero_wrapper {
+    .respond-to-min( @bp-sm-min, {
+      .m-hero_wrapper {
                 background-position: 50%;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -167,21 +167,21 @@
             }
         } );
 
-        .respond-to-max( @bp-xs-max, {
-            .m-hero_wrapper {
+    .respond-to-max( @bp-xs-max, {
+      .m-hero_wrapper {
                 // Keep hero image flush with container on mobile
                 padding-bottom: 0;
             }
         } );
-    }
+  }
 
-    &__50-50 {
-        background-color: @white;
+  &__50-50 {
+    background-color: @white;
 
-        .u-jumbo-text();
+    .u-jumbo-text();
 
-        .respond-to-min( @bp-sm-min, {
-            .m-hero_wrapper {
+    .respond-to-min( @bp-sm-min, {
+      .m-hero_wrapper {
                 -ms-grid-columns: 1fr 1fr;
                 grid-template-columns: 1fr 1fr;
 
@@ -198,31 +198,30 @@
             }
         } );
 
-        .respond-to-min( @bp-lg-min, {
-            .m-hero_wrapper {
+    .respond-to-min( @bp-lg-min, {
+      .m-hero_wrapper {
                 // Enlarge the 50/50 height on large screens to maximize the image size
                 min-height: @hero-desktop-height + ( @grid_gutter-width * 2 );
             }
         } );
-    }
-
+  }
 }
 
 // Jumbo hero text mixin
 
 .u-jumbo-text() {
-    .m-hero_subhead {
-        .lead-paragraph();
-    }
+  .m-hero_subhead {
+    .lead-paragraph();
+  }
 
-    .respond-to-min( @bp-sm-min, {
-        .m-hero_subhead {
+  .respond-to-min( @bp-sm-min, {
+    .m-hero_subhead {
             .heading-3();
         }
     } );
 
-    .respond-to-min( @bp-lg-min, {
-        .m-hero_wrapper {
+  .respond-to-min( @bp-lg-min, {
+    .m-hero_wrapper {
             min-height: @hero-desktop-height;
         }
         .m-hero_heading {

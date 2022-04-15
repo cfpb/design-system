@@ -20,10 +20,10 @@ selector-pseudo-element-colon-notation -
   Remove this rule after dropping IE8 CSS support.
 */
 module.exports = {
-  extends: 'stylelint-config-recommended-less',
-  ignoreFiles: [ 'packages/**/node_modules/**/*.less' ],
-  customSyntax: 'postcss-less',
-  rules: {
+  'extends': 'stylelint-config-recommended-less',
+  'ignoreFiles': [ 'packages/**/node_modules/**/*.less' ],
+  'customSyntax': 'postcss-less',
+  'rules': {
     'at-rule-no-unknown': [ true, { ignoreAtRules: 'plugin' } ],
     'declaration-colon-newline-after': null,
     'declaration-empty-line-before': null,

@@ -122,58 +122,58 @@
   .o-table__striped tr:nth-child(even) {
     & > th,
     & > td {
-            background: @table-cell-bg;
-        }
+      background: @table-cell-bg;
+    }
+  }
+
+  .o-table__stack-on-small {
+    tr,
+    td {
+      display: block;
     }
 
-    .o-table__stack-on-small {
-      tr,
-      td {
-        display: block;
-      }
-
-      th,
-      td {
-        width: 100%;
-      }
-
-      & > thead {
-        display: none
-      }
-
-      td[data-label]:before {
-        .heading-5();
-        display: block;
-        margin-top: 0;
-        margin-bottom: 0.41666667em;
-        content: attr(data-label);
-        line-height: 1.83333333;
-      }
-
-      td:last-child {
-        margin-bottom: unit( 30px / @base-font-size-px, em );
-      }
+    th,
+    td {
+      width: 100%;
     }
 
-    .o-table__entry-header-on-small {
-      & > tbody td:first-child {
-        padding-bottom: 0.75em;
-        border-bottom: 1px solid @table-border;
-        margin-bottom: unit( 10px / @base-font-size-px, em);
-        margin-top: 0;
-        background-color: @table-head-bg;
-        font-size: 1.125em;
-        font-weight: 400;
-        line-height: 1.22222222;
-      }
-
-      & > tbody td:first-child:before {
-        display: none;
-      }
-
-      & > tbody > tr {
-        border-bottom: none;
-        margin-bottom: unit( 30px / @base-font-size-px, em );
-      }
+    & > thead {
+      display: none
     }
+
+    td[data-label]:before {
+      .heading-5();
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0.41666667em;
+      content: attr(data-label);
+      line-height: 1.83333333;
+    }
+
+    td:last-child {
+      margin-bottom: unit( 30px / @base-font-size-px, em );
+    }
+  }
+
+  .o-table__entry-header-on-small {
+    & > tbody td:first-child {
+      padding-bottom: 0.75em;
+      border-bottom: 1px solid @table-border;
+      margin-bottom: unit( 10px / @base-font-size-px, em);
+      margin-top: 0;
+      background-color: @table-head-bg;
+      font-size: 1.125em;
+      font-weight: 400;
+      line-height: 1.22222222;
+    }
+
+    & > tbody td:first-child:before {
+      display: none;
+    }
+
+    & > tbody > tr {
+      border-bottom: none;
+      margin-bottom: unit( 30px / @base-font-size-px, em );
+    }
+  }
 } );

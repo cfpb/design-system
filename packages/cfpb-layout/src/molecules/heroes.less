@@ -20,18 +20,20 @@
 
     .respond-to-min( @bp-sm-min, {
       -ms-grid-columns: 7fr 5fr;
-            grid-template-columns: 7fr 5fr;
-            padding-right: ( @grid_gutter-width / 2);
-            padding-left: ( @grid_gutter-width / 2);
+      grid-template-columns: 7fr 5fr;
+      padding-right: ( @grid_gutter-width / 2);
+      padding-left: ( @grid_gutter-width / 2);
 
-            min-height: @hero-desktop-height - ( @grid_gutter-width * 2 );
-        } );
+      min-height: @hero-desktop-height - ( @grid_gutter-width * 2 );
+    } );
 
+    /* stylelint-disable less/no-duplicate-variables */
     .respond-to-min( @bp-lg-min, {
       padding-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
-            padding-bottom: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
-            min-height: @hero-desktop-height - ( ( @grid_gutter-width * 1.5 ) * 2 );
-        } );
+      padding-bottom: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em );
+      min-height: @hero-desktop-height - ( ( @grid_gutter-width * 1.5 ) * 2 );
+    } );
+    /* stylelint-enable less/no-duplicate-variables */
   }
 
   &_text {
@@ -40,7 +42,7 @@
 
     .respond-to-min( @bp-sm-min, {
       margin: auto;
-        } );
+    } );
   }
 
   &_heading {
@@ -48,7 +50,7 @@
 
     .respond-to-max( @bp-sm-max, {
       .heading-2();
-        } );
+    } );
   }
 
   &_subhead {
@@ -59,7 +61,7 @@
 
     .respond-to-max( @bp-sm-max, {
       font-size: @size-iv;
-        } );
+    } );
   }
 
   &_image-wrapper {
@@ -68,16 +70,16 @@
 
     .respond-to-min( @bp-sm-min, {
       padding-right: ( @grid_gutter-width / 2 );
-            padding-left: ( @grid_gutter-width / 2 );
+      padding-left: ( @grid_gutter-width / 2 );
 
-            // Vertically center hero images
-            display: flex;
-            align-items: center;
-        } );
+      // Vertically center hero images
+      display: flex;
+      align-items: center;
+    } );
 
     .respond-to-max( @bp-xs-max, {
       margin-top: unit( @grid_gutter-width / @base-font-size-px, em );
-        } );
+    } );
   }
 
   &_image {
@@ -106,26 +108,28 @@
     .respond-to-min( @bp-sm-min, {
 
       .m-hero_image-wrapper {
-                width: 100%;
-                margin-top: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
-                margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
-            }
+        width: 100%;
+        margin-top: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
+        margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em ) * -1;
+      }
 
-            .m-hero_image {
-                // Remove the flexible container padding so that the image is a consistent width.
-                padding-bottom: 0 !important;
-                height: 100%;
-                width: 100%;
-                background-size: cover;
-            }
-        } );
+      .m-hero_image {
+        // Remove the flexible container padding so that the image is a consistent width.
+        padding-bottom: 0 !important;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+      }
+    } );
 
+    /* stylelint-disable less/no-duplicate-variables */
     .respond-to-min( @bp-lg-min, {
       .m-hero_image-wrapper {
-                margin-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em ) * -1;
-                margin-bottom: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em ) * -1;
-            }
-        } );
+        margin-top: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em ) * -1;
+        margin-bottom: unit( ( @grid_gutter-width * 1.5 ) / @base-font-size-px, em ) * -1;
+      }
+    } );
+    /* stylelint-enable less/no-duplicate-variables */
   }
 
   &__overlay {
@@ -137,17 +141,17 @@
 
     .respond-to-max( @bp-xs-max, {
       .m-hero_wrapper {
-                // Overwrite the image that is set in the markup because
-                // we are showing the image container below instead.
-                background-image: none !important;
-            }
-        } );
+        // Overwrite the image that is set in the markup because
+        // we are showing the image container below instead.
+        background-image: none !important;
+      }
+    } );
 
     .respond-to-min( @bp-sm-min, {
       .m-hero_image {
-                display: none;
-            }
-        } );
+        display: none;
+      }
+    } );
   }
 
   &__jumbo {
@@ -157,22 +161,22 @@
 
     .respond-to-min( @bp-sm-min, {
       .m-hero_wrapper {
-                background-position: 50%;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-            .m-hero_image {
-                display: none;
-            }
-        } );
+      .m-hero_image {
+        display: none;
+      }
+    } );
 
     .respond-to-max( @bp-xs-max, {
       .m-hero_wrapper {
-                // Keep hero image flush with container on mobile
-                padding-bottom: 0;
-            }
-        } );
+        // Keep hero image flush with container on mobile
+        padding-bottom: 0;
+      }
+    } );
   }
 
   &__50-50 {
@@ -182,28 +186,30 @@
 
     .respond-to-min( @bp-sm-min, {
       .m-hero_wrapper {
-                -ms-grid-columns: 1fr 1fr;
-                grid-template-columns: 1fr 1fr;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
 
-                border: 1px solid @gray-40;
-                border-top: none;
-                // Position the hero image all the way to the right
-                background-position: 100% center;
-                background-repeat: no-repeat;
-                background-size: 50%;
-            }
+        border: 1px solid @gray-40;
+        border-top: none;
+        // Position the hero image all the way to the right
+        background-position: 100% center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+      }
 
-            .m-hero_image {
-                display: none;
-            }
-        } );
+      .m-hero_image {
+        display: none;
+      }
+    } );
 
+    /* stylelint-disable less/no-duplicate-variables */
     .respond-to-min( @bp-lg-min, {
       .m-hero_wrapper {
-                // Enlarge the 50/50 height on large screens to maximize the image size
-                min-height: @hero-desktop-height + ( @grid_gutter-width * 2 );
-            }
-        } );
+        // Enlarge the 50/50 height on large screens to maximize the image size
+        min-height: @hero-desktop-height + ( @grid_gutter-width * 2 );
+      }
+    } );
+    /* stylelint-enable less/no-duplicate-variables */
   }
 }
 
@@ -214,21 +220,23 @@
     .lead-paragraph();
   }
 
+  /* stylelint-disable less/no-duplicate-variables */
   .respond-to-min( @bp-sm-min, {
     .m-hero_subhead {
-            .heading-3();
-        }
-    } );
+      .heading-3();
+    }
+  } );
 
   .respond-to-min( @bp-lg-min, {
     .m-hero_wrapper {
-            min-height: @hero-desktop-height;
-        }
-        .m-hero_heading {
-            .superheading();
-        }
-        .m-hero_subhead {
-            .heading-2();
-        }
-    } );
+      min-height: @hero-desktop-height;
+    }
+    .m-hero_heading {
+      .superheading();
+    }
+    .m-hero_subhead {
+      .heading-2();
+    }
+  } );
+  /* stylelint-enable less/no-duplicate-variables */
 }

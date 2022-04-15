@@ -30,137 +30,137 @@
 
 // Documentation specific stlyes
 html, body {
-    height: 100%;
+  height: 100%;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
 // Default details element styles
 details summary:focus {
-    border: none;
-    outline: 1px dotted @pacific;
-    outline-offset: 2px;
+  border: none;
+  outline: 1px dotted @pacific;
+  outline-offset: 2px;
 }
 
 details summary:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 // Hide default open/close arrow.
 details summary::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 
 details summary {
-    position: relative;
+  position: relative;
 }
 
 details summary:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 8px;
-    height: 10px;
-    display: block;
-    content: '';
-    .u-svg-inline-bg( 'down' );
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 10px;
+  display: block;
+  content: '';
+  .u-svg-inline-bg( 'down' );
 }
 
 details[open] summary:after {
-    .u-svg-inline-bg( 'up' );
+  .u-svg-inline-bg( 'up' );
 }
 
 // Set padding for main content blocks.
 .m-global-eyebrow .a-tagline,
 .site-header,
 .ds-footer {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 30px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
 
-    // Mobile size.
-    .respond-to-max( @bp-xs-max, {
-        padding: 0;
-    } );
+  // Mobile size.
+  .respond-to-max( @bp-xs-max, {
+    padding: 0;
+  } );
 }
 
 main {
-    max-width: 1170px;
-    margin: 30px auto;
-    padding: 0 30px;
+  max-width: 1170px;
+  margin: 30px auto;
+  padding: 0 30px;
 }
 
 .ds-sidebar,
 .ds-content {
-    display: table-cell;
-    vertical-align: top;
+  display: table-cell;
+  vertical-align: top;
 }
 
 .ds-sidebar {
-    width: 250px;
-    padding-right: 30px;
-    border-right: 1px solid @gray-40;
-    padding-bottom: 30px;
+  width: 250px;
+  padding-right: 30px;
+  border-right: 1px solid @gray-40;
+  padding-bottom: 30px;
 }
 
 .ds-content {
-    padding-left: 30px;
-    width: 75%;
+  padding-left: 30px;
+  width: 75%;
 
-    li,
-    p {
-        max-width: 41.875rem;
-    }
+  li,
+  p {
+    max-width: 41.875rem;
+  }
 }
 
 // Mobile size.
 .respond-to-max( @bp-xs-max, {
 
-    main {
-        padding: 0;
-        margin-top: 0;
-    }
+  main {
+    padding: 0;
+    margin-top: 0;
+  }
 
-    .ds-sidebar,
-    .ds-content {
-        display: block;
-    }
+  .ds-sidebar,
+  .ds-content {
+    display: block;
+  }
 
-    .ds-content {
-        padding-left: 15px;
-    }
+  .ds-content {
+    padding-left: 15px;
+  }
 
-    .ds-sidebar {
-        width: auto;
-        border-right: none;
-        padding-right: 0;
-    }
+  .ds-sidebar {
+    width: auto;
+    border-right: none;
+    padding-right: 0;
+  }
 
-    .m-global-eyebrow,
-    .ds-footer {
-        padding: 0 15px;
-    }
+  .m-global-eyebrow,
+  .ds-footer {
+    padding: 0 15px;
+  }
 } );
 
 // Example shapes - for transition examples.
 
 .example-box {
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    background-color: @red;
-    text-align: center;
-    color: @white;
-    cursor: pointer;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  background-color: @red;
+  text-align: center;
+  color: @white;
+  cursor: pointer;
 
-    &.u-is-animating {
-        outline: 5px solid @gray-40;
-    }
+  &.u-is-animating {
+    outline: 5px solid @gray-40;
+  }
 }
 
 

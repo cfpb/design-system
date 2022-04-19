@@ -47,7 +47,7 @@
 
   // Only adding left padding if an icon is present.
   .cf-icon-svg + &_content {
-    padding-left: unit( 25px / @base-font-size-px, em );
+    padding-left: unit( (25px / @base-font-size-px), em );
   }
 
   &_message {
@@ -55,13 +55,13 @@
   }
 
   &_explanation {
-    margin-top: unit( 5px / @base-font-size-px, em );
-    margin-bottom: unit( 15px / @base-font-size-px, em );
+    margin-top: unit( (5px / @base-font-size-px), em );
+    margin-bottom: unit( (15px / @base-font-size-px), em );
   }
 
   // We need to provide a margin for links if an explanation is absent.
   &_message + .m-list {
-    margin-top: unit( 15px / @base-font-size-px, em );
+    margin-top: unit( (15px / @base-font-size-px), em );
   }
 
   // Make adjustments to the icon, explanation, and links if at non-mobile.
@@ -69,7 +69,7 @@
 
     // Increase the icon size.
     .cf-icon-svg {
-      font-size: unit( @size-iv / @base-font-size-px, em );
+      font-size: unit( (@size-iv / @base-font-size-px), em );
     }
 
     // Remove default margin between explanation and list of links.
@@ -79,12 +79,12 @@
 
     // Decrease the margin between the links and the message/explanation.
     .m-list {
-      margin-top: unit( 5px / @base-font-size-px, em );
+      margin-top: unit( (5px / @base-font-size-px), em );
     }
 
     // Decrease the margin between link items.
     .m-list_item {
-      margin-bottom: unit( 5px / @base-font-size-px, em );
+      margin-bottom: unit( (5px / @base-font-size-px), em );
     }
   } );
 }

@@ -2,14 +2,14 @@
   box-sizing: border-box;
 
   padding:
-        unit( (@grid_gutter-width / @base-font-size-px), em )
-        unit( (@grid_gutter-width / 2 / @base-font-size-px), em );
+        unit( ( @grid_gutter-width / @base-font-size-px ), em )
+        unit( ( @grid_gutter-width / 2 / @base-font-size-px ), em );
   border: 1px solid @gray-40;
   background-color: @gray-5;
 
   .respond-to-min( @bp-sm-min, {
-    padding-left: unit( (@grid_gutter-width / @base-font-size-px), em );
-    padding-right: unit( (@grid_gutter-width / @base-font-size-px), em );
+    padding-left: unit( ( @grid_gutter-width / @base-font-size-px ), em );
+    padding-right: unit( ( @grid_gutter-width / @base-font-size-px ), em );
   } );
 
   &__inkwell {
@@ -24,7 +24,7 @@
 
     // If an inkwell contains a tagline, properly lay it out.
     .a-tagline {
-      margin-bottom: unit( (@grid_gutter-width / 2 / @base-font-size-px), em );
+      margin-bottom: unit( ( @grid_gutter-width / 2 / @base-font-size-px ), em );
       max-width: 41.875rem;
     }
   }

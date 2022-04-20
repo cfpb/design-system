@@ -29,8 +29,8 @@
 
     /* stylelint-disable less/no-duplicate-variables */
     .respond-to-min( @bp-lg-min, {
-      padding-top: unit( (( @grid_gutter-width * 1.5 ) / @base-font-size-px), em );
-      padding-bottom: unit( (( @grid_gutter-width * 1.5 ) / @base-font-size-px), em );
+      padding-top: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em );
+      padding-bottom: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em );
       min-height: @hero-desktop-height - ( ( @grid_gutter-width * 1.5 ) * 2 );
     } );
     /* stylelint-enable less/no-duplicate-variables */
@@ -78,7 +78,7 @@
     } );
 
     .respond-to-max( @bp-xs-max, {
-      margin-top: unit( (@grid_gutter-width / @base-font-size-px), em );
+      margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em );
     } );
   }
 
@@ -109,8 +109,8 @@
 
       .m-hero_image-wrapper {
         width: 100%;
-        margin-top: unit( (@grid_gutter-width / @base-font-size-px), em ) * -1;
-        margin-bottom: unit( (@grid_gutter-width / @base-font-size-px), em ) * -1;
+        margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em ) * -1;
+        margin-bottom: unit( ( @grid_gutter-width / @base-font-size-px ), em ) * -1;
       }
 
       .m-hero_image {
@@ -125,8 +125,8 @@
     /* stylelint-disable less/no-duplicate-variables */
     .respond-to-min( @bp-lg-min, {
       .m-hero_image-wrapper {
-        margin-top: unit( (( @grid_gutter-width * 1.5 ) / @base-font-size-px), em ) * -1;
-        margin-bottom: unit( (( @grid_gutter-width * 1.5 ) / @base-font-size-px), em ) * -1;
+        margin-top: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em ) * -1;
+        margin-bottom: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em ) * -1;
       }
     } );
     /* stylelint-enable less/no-duplicate-variables */

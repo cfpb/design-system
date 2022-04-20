@@ -96,7 +96,7 @@ Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.l
 ```
 @base-font-size-px:   16px;
 @base-line-height-px: 22px;
-@base-line-height:    unit( (@base-line-height-px / @base-font-size-px) );
+@base-line-height:    unit( ( @base-line-height-px / @base-font-size-px ) );
 
 @size-xl:             48px; // Super-size
 
@@ -694,7 +694,7 @@ Sets the element to `14px` (in `em`s) based on the text size passed as
 ```
 // Ex.
 .example {
-  font-size: unit(20px / @base-font-size-px, em);
+  font-size: unit( ( 20px / @base-font-size-px ), em);
 
   small {
     .u-small-text(20px);

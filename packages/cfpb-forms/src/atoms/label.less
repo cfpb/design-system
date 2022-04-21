@@ -3,13 +3,13 @@
 
   &_helper {
     color: @label-helper;
-    font-size: unit( @size-v / @base-font-size-px, em );
+    font-size: unit( ( @size-v / @base-font-size-px ), em );
 
     &__block {
       display: block;
 
       // Add a gap between the label helper and label.
-      margin-top: unit( 10px / @size-vi, em );
+      margin-top: unit( ( 10px / @size-vi ), em );
     }
   }
 
@@ -19,15 +19,15 @@
     display: block;
 
     // Overwrites heading-4 margin.
-    margin-bottom: unit( 10px / @font-size, em );
+    margin-bottom: unit( ( 10px / @font-size ), em );
 
     .a-label_helper {
-      font-size: unit( @base-font-size-px / @font-size, em );
+      font-size: unit( ( @base-font-size-px / @font-size ), em );
       font-weight: normal;
 
       &__block {
         // Add a gap between the label helper and label.
-        margin-top: unit( 10px / @base-font-size-px, em );
+        margin-top: unit( ( 10px / @base-font-size-px ), em );
       }
     }
   }

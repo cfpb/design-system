@@ -60,7 +60,7 @@
 
   &:not( .m-card__breakout ) {
     & > a {
-      padding: unit( @grid_gutter-width / @base-font-size-px, em );
+      padding: unit( ( @grid_gutter-width / @base-font-size-px ), em );
     }
   }
 
@@ -71,7 +71,7 @@
   }
 
   &:not( .m-card__featured ):not( .m-card__breakout ):not( .m-card__topic ):not( .m-card__highlight ) {
-    padding: unit( @grid_gutter-width / @base-font-size-px, em );
+    padding: unit( ( @grid_gutter-width / @base-font-size-px ), em );
   }
 
   &:not( .m-card__featured ):not( .m-card__breakout ):not( .m-card__topic ):not( .m-card__highlight ),
@@ -117,7 +117,7 @@
     & .m-card_icon {
       font-size: 1em;
       margin-bottom: 0;
-      padding-right: unit( 7.5px / @base-font-size-px, em );
+      padding-right: unit( ( 7.5px / @base-font-size-px ), em );
     }
 
     & .m-card_icon,
@@ -139,8 +139,8 @@
     }
 
     .m-card_icon {
-      font-size: unit( 30px / @base-font-size-px, em );
-      margin-bottom: unit( 5px / @base-font-size-px, em );
+      font-size: unit( ( 30px / @base-font-size-px ), em );
+      margin-bottom: unit( ( 5px / @base-font-size-px ), em );
     }
 
     .m-card_icon,
@@ -150,8 +150,8 @@
 
     &:hover {
       box-shadow: 0 8px 0 0 inset @green,
-                        2px 0 0 0 inset @gray-20,
-                        -2px 0 0 0 inset @gray-20;
+                  2px 0 0 0 inset @gray-20,
+                  -2px 0 0 0 inset @gray-20;
     }
 
     &:hover .m-card_footer > span {
@@ -194,16 +194,16 @@
     }
 
     .m-card_icon {
-      font-size: unit( 30px / @base-font-size-px, em );
+      font-size: unit( ( 30px / @base-font-size-px ), em );
       color: @green;
-      margin-bottom: unit( 5px / @base-font-size-px, em );
+      margin-bottom: unit( ( 5px / @base-font-size-px ), em );
     }
 
     &:hover {
       > a {
         box-shadow: 0 2px 0 0 inset @gray-20,
-                            2px 0 0 0 inset @gray-20,
-                           -2px 0 0 0 inset @gray-20;
+                    2px 0 0 0 inset @gray-20,
+                    -2px 0 0 0 inset @gray-20;
       }
 
       .u-card-bottom-bar();
@@ -261,8 +261,8 @@
     &:hover {
       .m-card_inner-wrapper {
         box-shadow: 0 2px 0 0 inset @gray-20,
-                            2px 0 0 0 inset @gray-20,
-                           -2px 0 0 0 inset @gray-20;
+                    2px 0 0 0 inset @gray-20,
+                    -2px 0 0 0 inset @gray-20;
       }
 
       .u-card-bottom-bar();
@@ -294,8 +294,8 @@
     &:hover {
       > a {
         box-shadow: 0 2px 0 0 inset @green-40,
-                            2px 0 0 0 inset @green-40,
-                           -2px 0 0 0 inset @green-40;
+                    2px 0 0 0 inset @green-40,
+                    -2px 0 0 0 inset @green-40;
       }
 
       .u-card-bottom-bar();

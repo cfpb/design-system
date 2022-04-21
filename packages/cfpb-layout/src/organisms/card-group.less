@@ -2,7 +2,7 @@
 .o-card-group {
 
   > h2 {
-    margin-bottom: unit( 30px / @base-font-size-px, rem );
+    margin-bottom: unit( ( 30px / @base-font-size-px), rem );
   }
 
   &__column-2 &_cards {
@@ -20,8 +20,8 @@
 
   &_cards {
     display: grid;
-    grid-column-gap: unit( 20px / @base-font-size-px, em );
-    grid-row-gap: unit( 20px / @base-font-size-px, em );
+    grid-column-gap: unit( ( 20px / @base-font-size-px ), em );
+    grid-row-gap: unit( ( 20px / @base-font-size-px ), em );
 
     .respond-to-max( @bp-xs-max, {
       // Make sure cards are stacked at mobile size.
@@ -30,7 +30,7 @@
   }
 
   &__bg-green {
-    padding: unit( 30px / @base-font-size-px, em );
+    padding: unit( ( 30px / @base-font-size-px ), em );
     background: @green-20;
   }
 }
@@ -187,7 +187,7 @@ _:-ms-lang( x ),.o-card-group:after {
 
         .m-card {
           width: 100%;
-          margin-bottom: unit( @grid_gutter-width / @base-font-size-px, em );
+          margin-bottom: unit( ( @grid_gutter-width / @base-font-size-px ), em );
         }
       }
     }

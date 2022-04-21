@@ -373,7 +373,7 @@ variation_groups:
 
           @base-line-height-px: 22px;
 
-          @base-line-height:    unit( @base-line-height-px / @base-font-size-px );
+          @base-line-height:    unit( ( @base-line-height-px / @base-font-size-px ) );
 
 
           @size-xl:             48px; // Super-size

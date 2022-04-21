@@ -7,13 +7,13 @@
   display: inline-block;
   box-sizing: border-box;
   padding:
-        unit( @btn-v-padding / @btn-font-size, em )
-        unit( @btn-h-padding / @btn-font-size, em );
+        unit( ( @btn-v-padding / @btn-font-size ), em )
+        unit( ( @btn-h-padding / @btn-font-size ), em );
   border: 0;
   margin: 0;
-  border-radius: unit( @btn-border-radius-size / @btn-font-size, em );
+  border-radius: unit( ( @btn-border-radius-size / @btn-font-size ), em );
   cursor: pointer;
-  font-size: unit( @btn-font-size / @base-font-size-px, em );
+  font-size: unit( ( @btn-font-size / @base-font-size-px ), em );
   font-weight: 500;
   line-height: normal;
   text-align: center;
@@ -147,9 +147,9 @@
 
   &__super {
     padding:
-            unit( 11px / @btn__super-font-size, em )
-            unit( 29px / @btn__super-font-size, em );
-    font-size: unit( @btn__super-font-size / @base-font-size-px, em );
+            unit( ( 11px / @btn__super-font-size ), em )
+            unit( ( 29px / @btn__super-font-size ), em );
+    font-size: unit( ( @btn__super-font-size / @base-font-size-px ), em );
   }
 
   //

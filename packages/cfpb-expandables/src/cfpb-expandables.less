@@ -102,8 +102,8 @@
 
   &_link {
     color: @expandable_link-text;
-    font-size: unit( @expandable_link-font-size / @base-font-size-px, em );
-    line-height: unit( @base-line-height-px / @expandable_link-font-size );
+    font-size: unit( ( @expandable_link-font-size / @base-font-size-px ), em );
+    line-height: unit( ( @base-line-height-px / @expandable_link-font-size ) );
   }
 
   //
@@ -122,7 +122,7 @@
     }
 
     &__spaced {
-      padding-bottom: unit( 15px / @base-font-size-px, em );
+      padding-bottom: unit( ( 15px / @base-font-size-px ), em );
     }
 
 
@@ -144,23 +144,23 @@
   &__padded {
     .o-expandable_header {
       padding:
-                unit( 10px / @base-font-size-px, em )
-                unit( 15px / @base-font-size-px, em );
+                unit( ( 10px / @base-font-size-px ), em )
+                unit( ( 15px / @base-font-size-px ), em );
     }
 
     .o-expandable_content {
-      padding: 0 unit( 15px / @base-font-size-px, em );
+      padding: 0 unit( ( 15px / @base-font-size-px ), em );
 
       // The divider between _header and _content.
       &:before {
         content: '';
         display: block;
         border-top: 1px solid @expandable__border;
-        padding-top: unit( 15px / @base-font-size-px, em );
+        padding-top: unit( ( 15px / @base-font-size-px ), em );
       }
 
       &:after {
-        padding-bottom: unit( 15px / @base-font-size-px, em );
+        padding-bottom: unit( ( 15px / @base-font-size-px ), em );
         width: 100%;
       }
     }

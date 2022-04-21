@@ -286,15 +286,15 @@
 .u-w10pct { width: 10%; }
 .u-w75pct { width: 75%; }
 .u-w25pct { width: 25%; }
-.u-w66pct { width: unit( ( 2 / 3 ) * 100, % ); }
-.u-w33pct { width: unit( ( 1 / 3 ) * 100, % ); }
+.u-w66pct { width: unit( ( ( 2 / 3 ) * 100 ), % ); }
+.u-w33pct { width: unit( ( ( 1 / 3 ) * 100 ), % ); }
 
 //
 // Small text utility
 //
 
 .u-small-text( @context: @base-font-size-px ) {
-  font-size: unit( 14px / @context, em );
+  font-size: unit( ( 14px / @context ), em );
 }
 
 small,

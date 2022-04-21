@@ -1,8 +1,9 @@
-Must provide GITHUB_AUTH
+## v0.15.1 (2022-01-14)
+* `cfpb-grid`
+  * [#1344](https://github.com/cfpb/design-system/pull/1362) Fix percentage parentheses for Less 4.x compatibility ([@anselmbradford](https://github.com/anselmbradford))
 
-
-Must provide GITHUB_AUTH
-
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
 
 
 ## v0.15.0 (2022-01-14)

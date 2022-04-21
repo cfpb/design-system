@@ -595,8 +595,8 @@ function init() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TOGGLE_ATTRIBUTE": function() { return /* binding */ TOGGLE_ATTRIBUTE; },
-/* harmony export */   "toggleDetails": function() { return /* binding */ toggleDetails; },
-/* harmony export */   "toggleAllDetails": function() { return /* binding */ toggleAllDetails; }
+/* harmony export */   "toggleAllDetails": function() { return /* binding */ toggleAllDetails; },
+/* harmony export */   "toggleDetails": function() { return /* binding */ toggleDetails; }
 /* harmony export */ });
 var HIDDEN_CLASS = 'u-hidden';
 var TOGGLE_ATTRIBUTE = 'data-toggle-details';
@@ -1878,8 +1878,8 @@ function contains( element, value ) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "queryOne": function() { return /* binding */ queryOne; },
-/* harmony export */   "closest": function() { return /* binding */ closest; }
+/* harmony export */   "closest": function() { return /* binding */ closest; },
+/* harmony export */   "queryOne": function() { return /* binding */ queryOne; }
 /* harmony export */ });
 /* harmony import */ var _type_checkers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
 
@@ -2068,10 +2068,10 @@ function assign( destination ) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "BEHAVIOR_PREFIX": function() { return /* binding */ BEHAVIOR_PREFIX; },
+/* harmony export */   "DIRECTIONS": function() { return /* binding */ DIRECTIONS; },
 /* harmony export */   "JS_HOOK": function() { return /* binding */ JS_HOOK; },
-/* harmony export */   "noopFunct": function() { return /* binding */ noopFunct; },
 /* harmony export */   "STATE_PREFIX": function() { return /* binding */ STATE_PREFIX; },
-/* harmony export */   "DIRECTIONS": function() { return /* binding */ DIRECTIONS; }
+/* harmony export */   "noopFunct": function() { return /* binding */ noopFunct; }
 /* harmony export */ });
 /**
  * @constant

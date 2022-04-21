@@ -44,7 +44,7 @@
   //  column width in % = -------------
   //                       total cols
 
-  @width: percentage( (@columns / @total) );
+  @width: percentage( ( @columns / @total ) );
 
   border: solid transparent;
   border-width: 0 ( @grid_gutter-width / 2 );
@@ -73,7 +73,7 @@
 
   // Run this when only prefix is specified
   .prefix( @prefix: 0; @suffix: 0 ) when ( @prefix > 0 ) and ( @suffix = 0 ) {
-    @offset: percentage( (@prefix / @total) );
+    @offset: percentage( ( @prefix / @total ) );
 
     width: @width + @offset;
     padding-left: @offset;
@@ -81,7 +81,7 @@
 
   // Run this when only suffix is specified
   .suffix( @suffix: 0; @prefix: 0 ) when ( @suffix > 0 ) and ( @prefix = 0 ) {
-    @offset: percentage( (@suffix / @total) );
+    @offset: percentage( ( @suffix / @total ) );
 
     width: @width + @offset;
     padding-right: @offset;
@@ -89,8 +89,8 @@
 
   // Run this when both prefix and suffix are specified
   .prefixSuffix( @prefix: 0; @suffix: 0 ) when ( @prefix > 0 ) and ( @suffix > 0 ) {
-    @left: percentage( (@prefix / @total) );
-    @right: percentage( (@suffix / @total) );
+    @left: percentage( ( @prefix / @total ) );
+    @right: percentage( ( @suffix / @total ) );
 
     width: @width + @left + @right;
     padding-right: @right;
@@ -130,14 +130,14 @@
 //
 
 .grid_push( @offset: 1, @grid_total-columns: @grid_total-columns ) {
-  @push: percentage( @offset / @grid_total-columns );
+  @push: percentage( ( @offset / @grid_total-columns ) );
 
   position: relative;
   left: @push;
 }
 
 .grid_pull( @offset: 1, @grid_total-columns: @grid_total-columns ) {
-  @pull: percentage( @offset / @grid_total-columns );
+  @pull: percentage( ( @offset / @grid_total-columns ) );
 
   position: relative;
   right: @pull;

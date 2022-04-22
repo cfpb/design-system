@@ -79,6 +79,7 @@ first-level:
           - heading: Main content
             nav-items:
               - page: Info unit groups
+              - page: Interactive charts
   - heading: Pages
     nav-items:
       - page: Landing pages

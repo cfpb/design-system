@@ -18,9 +18,7 @@ description: >-
 
   Animations should be at a minimum of 1920x1080 with a frame rate of 29.97 FPS unless otherwise specified.
 variation_groups:
-  - variations:
-      - variation_is_deprecated: false
-    variation_group_name: Animation Style
+  - variation_group_name: Animation Style
     variation_group_description: >-
       The CFPB uses a 2.5D style of animation. Illustrations are flat with an
       illusion of depth and can move on the X, Y, and Z axis. All animation is

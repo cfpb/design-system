@@ -112,8 +112,6 @@ variation_groups:
       :05
 
 
-
-
       **Green Screen** is used when footage needs to be incorporated into a new scene without its original background. The subject is keyed out, and the key should be as clean as possible.
 
 
@@ -136,6 +134,18 @@ variation_groups:
 
 
       ![Illustration of a cab driving past buildings on the left side. Illustration of a map of the United States with a car driving across it on the right side.](/design-system/images/uploads/split-screen-graphics.png)
+
+
+      *Video example of split screen:*
+
+
+      **Jumpstart Your Savings**
+
+
+      <https://www.youtube.com/watch?v=B3LhSpxEW-o>
+
+
+      :42-:43
   - variation_group_name: Sound Design
     variation_group_description: >-
       Sound is an important part of motion graphics. There are three key

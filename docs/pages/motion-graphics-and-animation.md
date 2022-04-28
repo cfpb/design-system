@@ -55,6 +55,9 @@ variation_groups:
       **Name ID** is a graphic that identifies the speaker onscreen. It should be simple and clean. Name ID should build on and off when possible, and it should remain onscreen for at least 3 seconds or for as long as it would reasonably take a person to read.
 
 
+      ![Footage of David Uejio with the text "David Uejio Acting Director, Consumer Financial Protection Bureau" on top of the footage](/design-system/images/uploads/screen-shot-2022-02-10-at-10.12.50-am.png)
+
+
       **Tracking** refers to connecting an element to a moving video and having the element move with the video. Tracking should be smooth and clean. Tracking should be done in After Effects and Mocha.
 
 

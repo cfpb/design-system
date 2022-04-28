@@ -30,6 +30,42 @@ variation_groups:
 
 
       Depth is created by layering elements, offsetting the animation of elements, depth of field, and shadow built into the illustration. Drop shadow should be used sparingly and should not be used on text.
+
+
+      **Video Examples of Animation Style** 
+
+
+      *Elements building on:*
+
+
+      **Payday Loans Explained**
+
+
+      <https://www.youtube.com/watch?v=XUqyyJSoM_s>
+
+
+      :01-:03
+
+
+      *3D movement using flat animation:*
+
+
+      **Reverse Mortgages**
+
+
+      <https://www.youtube.com/watch?v=L89d3faoFGw>
+
+
+      :01-:17
+
+
+      *Fluid motion, seamless transitions:*
+
+
+      **Prepaid Protections**
+
+
+      *<https://www.youtube.com/watch?v=Fa35o3W0nKA>*
   - variation_group_name: Terms
     variation_group_description: >-
       **Motion blur** is the blur effect that happens from movement. Motion blur
@@ -76,10 +112,30 @@ variation_groups:
       :05
 
 
+
+
       **Green Screen** is used when footage needs to be incorporated into a new scene without its original background. The subject is keyed out, and the key should be as clean as possible.
 
 
+      ![Footage of man with an illustrated background of wallpaper, a shelf, and a hanging picture](/design-system/images/uploads/greenscreen1.png)
+
+
+      *Video example of green screen:*
+
+
+      **5 Pasos Para Prepararse a Comprar una casa**
+
+
+      <https://www.youtube.com/watch?v=9ySDy3Hg4vE>
+
+
+      :09-:25
+
+
       **Split Screen** refers to when the screen is split into sections. This can include footage and graphics, just footage, or just graphics.
+
+
+      ![Illustration of a cab driving past buildings on the left side. Illustration of a map of the United States with a car driving across it on the right side.](/design-system/images/uploads/split-screen-graphics.png)
   - variation_group_name: Sound Design
     variation_group_description: >-
       Sound is an important part of motion graphics. There are three key
@@ -109,30 +165,5 @@ variation_groups:
 
       Voiceover provides narration. Sound effects bring scenes to life, while music helps set the tone and pacing.
 guidelines: ""
-related_items: |-
-  **Video Examples of Animation Style** 
-
-  *Elements building on:*
-
-  **Payday Loans Explained**
-
-  <https://www.youtube.com/watch?v=XUqyyJSoM_s>
-
-  :01-:03
-
-  *3D movement using flat animation:*
-
-  **Reverse Mortgages**
-
-  <https://www.youtube.com/watch?v=L89d3faoFGw>
-
-  :01-:17
-
-  *Fluid motion, seamless transitions:*
-
-  **Prepaid Protections**
-
-  *<https://www.youtube.com/watch?v=Fa35o3W0nKA>*
-
-  ![]()
+related_items: ""
 ---

@@ -76,6 +76,30 @@ variation_groups:
 
 
       ![Animated car with blur](/design-system/images/uploads/motionblur9.png)
+
+
+      **Character Animation** is used when an illustrated character needs to move within a video. The illustrated characters should be built and separated into clearly labeled layers in Illustrator. The Illustrator file is then imported into After Effects using Import->Import as Composition.
+
+
+      ![Animated mouse](/design-system/images/uploads/scene-2.png)
+
+
+      **Lower thirds** are graphics that live within one section of the screen, usually providing additional information about the footage underneath it.
+
+
+      ![Footage of computer with the text "Find your local rental assistance program" in the lower third of the screen on a green box](/design-system/images/uploads/lower-third.png)
+
+
+      **Name ID** is a graphic that identifies the speaker onscreen. It should be simple and clean. Name ID should build on and off when possible, and it should remain onscreen for at least 3 seconds or for as long as it would reasonably take a person to read.
+
+
+      **Tracking** refers to connecting an element to a moving video and having the element move with the video. Tracking should be smooth and clean. Tracking should be done in After Effects and Mocha.
+
+
+      **Green Screen** is used when footage needs to be incorporated into a new scene without its original background. The subject is keyed out, and the key should be as clean as possible.
+
+
+      **Split Screen** refers to when the screen is split into sections. This can include footage and graphics, just footage, or just graphics.
   - variation_group_name: Sound Design
     variation_group_description: >-
       Sound is an important part of motion graphics. There are three key

@@ -61,6 +61,21 @@ variation_groups:
       **Tracking** refers to connecting an element to a moving video and having the element move with the video. Tracking should be smooth and clean. Tracking should be done in After Effects and Mocha.
 
 
+      ![Woman holding up a phone with a graphic attached to the phone that says "urgent"](/design-system/images/uploads/tracking.png)
+
+
+      *Video example of tracking:*
+
+
+      **What Homebuyers Need to Know About Mortgage Scams:**
+
+
+      <https://www.youtube.com/watch?v=em6viyrSGCc>
+
+
+      :05
+
+
       **Green Screen** is used when footage needs to be incorporated into a new scene without its original background. The subject is keyed out, and the key should be as clean as possible.
 
 

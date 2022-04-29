@@ -30,42 +30,31 @@ variation_groups:
 
 
       Depth is created by layering elements, offsetting the animation of elements, depth of field, and shadow built into the illustration. Drop shadow should be used sparingly and should not be used on text.
+    variations:
+      - variation_is_deprecated: false
+        variation_name: Video Examples of Animation Style
+        variation_description: |-
+          *Elements building on:*
 
+          **Payday Loans Explained**
 
-      **Video Examples of Animation Style** 
+          <https://www.youtube.com/watch?v=XUqyyJSoM_s>
 
+          :01-:03
 
-      *Elements building on:*
+          *3D movement using flat animation:*
 
+          **Reverse Mortgages**
 
-      **Payday Loans Explained**
+          <https://www.youtube.com/watch?v=L89d3faoFGw>
 
+          :01-:17
 
-      <https://www.youtube.com/watch?v=XUqyyJSoM_s>
+          *Fluid motion, seamless transitions:*
 
+          **Prepaid Protections**
 
-      :01-:03
-
-
-      *3D movement using flat animation:*
-
-
-      **Reverse Mortgages**
-
-
-      <https://www.youtube.com/watch?v=L89d3faoFGw>
-
-
-      :01-:17
-
-
-      *Fluid motion, seamless transitions:*
-
-
-      **Prepaid Protections**
-
-
-      *<https://www.youtube.com/watch?v=Fa35o3W0nKA>*
+          *<https://www.youtube.com/watch?v=Fa35o3W0nKA>*
   - variation_group_name: Terms
     variation_group_description: >-
       **Motion blur** is the blur effect that happens from movement. Motion blur

@@ -2,7 +2,7 @@
 title: Motion Graphics and Animation
 collection_name: pages
 layout: variation
-section: null
+section: foundation
 description: >-
   Motion graphics are the combination of graphic design, animation, and visual
   effects. They can be used to tell an engaging story and communicate a message,

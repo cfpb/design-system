@@ -1,5 +1,5 @@
 ---
-title: Motion Graphics and Animation
+title: Motion
 collection_name: pages
 layout: variation
 section: foundation

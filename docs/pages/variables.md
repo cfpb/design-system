@@ -442,12 +442,4 @@ variation_groups:
 
           ```
 
-
-          If you want to load fonts from a Fonts.com Web Fonts project, set the following variable to true, otherwise set it to false to use the self-hosted font path:
-
-          ```
-
-          @use-font-cdn: true;
-
-          ```
 ---

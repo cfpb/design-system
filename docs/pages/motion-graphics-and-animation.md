@@ -34,28 +34,27 @@ variation_groups:
     variations:
       - variation_is_deprecated: false
         variation_name: Video Examples of Animation Style
-        variation_description: |-
-          *Elements building on:*
+        variation_description: >-
+          **Elements building on:**
 
-          **Payday Loans Explained**
 
-          <https://www.youtube.com/watch?v=XUqyyJSoM_s>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XUqyyJSoM_s?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-          :01-:03
 
-          *3D movement using flat animation:*
 
-          **Reverse Mortgages**
 
-          <https://www.youtube.com/watch?v=L89d3faoFGw>
+          **3D movement using flat animation:**
 
-          :01-:17
 
-          *Fluid motion, seamless transitions:*
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/L89d3faoFGw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-          **Prepaid Protections**
 
-          *<https://www.youtube.com/watch?v=Fa35o3W0nKA>*
+
+
+          **Fluid motion, seamless transitions:**
+
+
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Fa35o3W0nKA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   - variation_group_name: Terms
     variation_group_description: >-
       **Motion blur** is the blur effect that happens from movement. Motion blur
@@ -111,13 +110,7 @@ variation_groups:
       *Video example of green screen:*
 
 
-      **5 Pasos Para Prepararse a Comprar una casa**
-
-
-      <https://www.youtube.com/watch?v=9ySDy3Hg4vE>
-
-
-      :09-:25
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9ySDy3Hg4vE?controls=0&amp;start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
       **Split Screen** refers to when the screen is split into sections. This can include footage and graphics, just footage, or just graphics.
@@ -129,13 +122,7 @@ variation_groups:
       *Video example of split screen:*
 
 
-      **Jumpstart Your Savings**
-
-
-      <https://www.youtube.com/watch?v=B3LhSpxEW-o>
-
-
-      :42-:43
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/B3LhSpxEW-o?controls=0&amp;start=41" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   - variation_group_name: Sound Design
     variation_group_description: >-
       Sound is an important part of motion graphics. There are three key

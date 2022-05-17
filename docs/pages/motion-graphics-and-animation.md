@@ -122,13 +122,7 @@ variation_groups:
       *Video example of split screen:*
 
 
-      **Jumpstart Your Savings**
-
-
-      <https://www.youtube.com/watch?v=B3LhSpxEW-o>
-
-
-      :42-:43
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/B3LhSpxEW-o?controls=0&amp;start=41" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   - variation_group_name: Sound Design
     variation_group_description: >-
       Sound is an important part of motion graphics. There are three key

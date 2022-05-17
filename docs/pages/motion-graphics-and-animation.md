@@ -110,13 +110,7 @@ variation_groups:
       *Video example of green screen:*
 
 
-      **5 Pasos Para Prepararse a Comprar una casa**
-
-
-      <https://www.youtube.com/watch?v=9ySDy3Hg4vE>
-
-
-      :09-:25
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9ySDy3Hg4vE?controls=0&amp;start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
       **Split Screen** refers to when the screen is split into sections. This can include footage and graphics, just footage, or just graphics.

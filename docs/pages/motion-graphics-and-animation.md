@@ -34,26 +34,43 @@ variation_groups:
     variations:
       - variation_is_deprecated: false
         variation_name: Video Examples of Animation Style
-        variation_description: |-
+        variation_description: >-
           *Elements building on:*
+
 
           **Payday Loans Explained**
 
+
+          ```
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XUqyyJSoM_s?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          ```
+
+
           <https://www.youtube.com/watch?v=XUqyyJSoM_s>
+
 
           :01-:03
 
+
           *3D movement using flat animation:*
+
 
           **Reverse Mortgages**
 
+
           <https://www.youtube.com/watch?v=L89d3faoFGw>
+
 
           :01-:17
 
+
           *Fluid motion, seamless transitions:*
 
+
           **Prepaid Protections**
+
 
           *<https://www.youtube.com/watch?v=Fa35o3W0nKA>*
   - variation_group_name: Terms

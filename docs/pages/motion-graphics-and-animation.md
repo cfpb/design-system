@@ -35,7 +35,7 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: Video Examples of Animation Style
         variation_description: >-
-          *Elements building on:*
+          **Elements building on:**
 
 
           <iframe width="560" height="315" src="https://www.youtube.com/embed/XUqyyJSoM_s?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -43,28 +43,18 @@ variation_groups:
 
 
 
-          :01-:03
+          **3D movement using flat animation:**
 
 
-          *3D movement using flat animation:*
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/L89d3faoFGw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-          **Reverse Mortgages**
 
 
-          <https://www.youtube.com/watch?v=L89d3faoFGw>
+          **Fluid motion, seamless transitions:**
 
 
-          :01-:17
-
-
-          *Fluid motion, seamless transitions:*
-
-
-          **Prepaid Protections**
-
-
-          *<https://www.youtube.com/watch?v=Fa35o3W0nKA>*
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Fa35o3W0nKA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   - variation_group_name: Terms
     variation_group_description: >-
       **Motion blur** is the blur effect that happens from movement. Motion blur

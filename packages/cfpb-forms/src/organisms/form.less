@@ -32,12 +32,6 @@
         border-right-width: 0;
       } );
 
-      .respond-to-min( 960px, {
-        .grid_column( 10 );
-
-        border-right-width: 0;
-      } );
-
       .a-text-input {
         box-sizing: border-box;
         width: 100%;
@@ -55,18 +49,18 @@
     &_btn-container {
       margin-bottom: unit( ( 15px / @base-font-size-px ), em );
 
-      .respond-to-min( 480px, {
-        .grid_column( 3 );
-      } );
-
-      .respond-to-min( 960px, {
-        .grid_column( 2 );
-      } );
-
       .a-btn {
-        box-sizing: border-box;
         width: 100%;
       }
+
+      .respond-to-min( 480px, {
+        .grid_column( 3 );
+        border-left: 0;
+        .a-btn {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      } );
     }
   }
 }

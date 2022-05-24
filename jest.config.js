@@ -25,5 +25,7 @@ module.exports = {
   moduleNameMapper: {
     '\\.(svg)$': '<rootDir>/test/unit-test/mocks/fileMock.js'
   },
-  testURL: 'http://localhost'
+  testEnvironmentOptions: {
+    url: 'http://localhost'
+  }
 };

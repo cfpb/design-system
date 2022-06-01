@@ -155,9 +155,17 @@ features. For more information visit the [Babel documentation site]
 
 Ready to publish changes to npm?
 
-1. Ensure you're on `main` and `git pull` to confirm you're up-to-date.
+First, set some credentials:
+
 1. Export a personal access token called
    [`GITHUB_AUTH`](https://github.com/lerna/lerna-changelog#github-token).
+1. Create an npm account if you don't already have one and ensure you're
+   listed as a "collaborator" on all our npm packages (e.g.
+   [cfpb-buttons](https://www.npmjs.com/package/@cfpb/cfpb-buttons)).
+
+Then, do a release:
+
+1. Ensure you're on `main` and `git pull` to confirm you're up-to-date.
 1. Run `yarn run changelog` and open `CHANGELOG.md` to see a preview
    of new changelog entries.
    We use a [tool](https://github.com/lerna/lerna-changelog#usage) that scans our
@@ -167,8 +175,13 @@ Ready to publish changes to npm?
 1. If you're pleased with the changelog preview,
    `git checkout CHANGELOG.md` to reset it.
 1. Run `yarn run release` to start the release.
-1. If all packages are shown as having been published,
-   run `git push` to push changes to the remote `main` branch.
+1. It'll ask if you want to do a major, minor or patch release. Select whichever is
+   most appropriate. It'll tag and publish every package to npm.
+1. When it's done, open `CHANGELOG.md` and confirm the latest entry shows the newest
+   version number. There's a lerna-changelog bug that sometimes causes it to duplicate
+   the previous version number. If it's showing the wrong version number, correct it
+   and commit the correction.
+1. Run `git push` to push changes to the remote `main` branch.
 
 Lerna will update the changelog, ask for a new version number, create a git tag,
 push to GitHub and publish to npm.

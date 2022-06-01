@@ -3528,6 +3528,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       isChecked = _model.getOption( i ).checked;
       const optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'li', {
         'data-option': option.value,
+        'data-cy': 'multiselect-option',
         'class': 'm-form-field m-form-field__checkbox'
       } );
 

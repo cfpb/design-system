@@ -1,3 +1,29 @@
+
+## v0.15.1 (2022-06-01)
+
+#### Enhancement
+* `cfpb-forms`
+  * [#1374](https://github.com/cfpb/design-system/pull/1374) Centralize text input with a button pattern in the design system ([@wpears](https://github.com/wpears))
+* `cfpb-typography`
+  * [#1370](https://github.com/cfpb/design-system/pull/1370) Remove @use-font-cdn variable and logic ([@wpears](https://github.com/wpears))
+
+#### Internal
+* `cfpb-forms`
+  * [#1377](https://github.com/cfpb/design-system/pull/1377) add data-cy attribute to multiselect options ([@Colin-Seifer](https://github.com/Colin-Seifer))
+* Other
+  * [#1376](https://github.com/cfpb/design-system/pull/1376) Update outdated dependencies ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1375](https://github.com/cfpb/design-system/pull/1375) Add webrick for ruby 3.x ([@wpears](https://github.com/wpears))
+  * [#1372](https://github.com/cfpb/design-system/pull/1372) Bump node-fetch from 2.6.1 to 2.6.7 ([@dependabot[bot]](https://github.com/apps/dependabot))
+  * [#1371](https://github.com/cfpb/design-system/pull/1371) Bump ejs from 3.1.6 to 3.1.8 ([@dependabot[bot]](https://github.com/apps/dependabot))
+
+#### Committers: 5
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Colin Seifer ([@Colin-Seifer](https://github.com/Colin-Seifer))
+- Lorelei Kelly ([@ielerol](https://github.com/ielerol))
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
+- [@sbento21](https://github.com/sbento21)
+
+
 ## v0.15.1 (2022-01-14)
 * `cfpb-grid`
   * [#1344](https://github.com/cfpb/design-system/pull/1362) Fix percentage parentheses for Less 4.x compatibility ([@anselmbradford](https://github.com/anselmbradford))

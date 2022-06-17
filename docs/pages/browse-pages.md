@@ -4,11 +4,10 @@ layout: variation
 section: pages
 status: Released
 description: >-
-  **Live example:**
-  https://www.consumerfinance.gov/owning-a-home/process/prepare/
-
-
-  "Browse" page types provide detailed information related to a larger topic (consumer information, product overviews, etc). These pages typically contain medium-length content, include "how-to" action steps for specific tasks, and may provide links to specific documents or resources.
+  "Browse" page types provide detailed information related to a larger topic
+  (consumer information, product overviews, etc). These pages typically contain
+  medium-length content, include "how-to" action steps for specific tasks, and
+  may provide links to specific documents or resources.
 
 
   The "Browse" page template automatically includes **left-hand sub-navigation** for all children pages that share the parent page. (For example, note how all the navigation items in the **Live example** are housed under the parent [Buying a house](https://www.consumerfinance.gov/owning-a-home/) page.)
@@ -24,7 +23,7 @@ variation_groups:
 
           | -- | -- |
 
-          | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [TRID guidance page](https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/) |
+          | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [Buying a House](https://www.consumerfinance.gov/owning-a-home/process/prepare/) |
         variation_name: ""
 use_cases: >-
   ### When to use

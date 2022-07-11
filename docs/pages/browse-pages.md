@@ -23,7 +23,7 @@ variation_groups:
 
           | -- | -- |
 
-          | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [Buying a House](https://www.consumerfinance.gov/owning-a-home/process/prepare/) |
+          | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [Buying a House](https://www.consumerfinance.gov/owning-a-home/prepare/check-your-credit/) |
         variation_name: ""
 use_cases: >-
   ### When to use

@@ -85,7 +85,7 @@ behavior: >-
   page](http://www.consumerfinance.gov/policy-compliance/rulemaking/regulatory-agenda/).
 
 
-  Also below the 901 pixel breakpoint, if a browse page has child browse pages, the children appear in a special expandable navigation at the top of the page, as seen on the [TRID guidance page](https://www.consumerfinance.gov/policy-compliance/guidance/mortgage-resources/tila-respa-integrated-disclosures/).
+  Also below the 901 pixel breakpoint, if a browse page has child browse pages, the children appear in a special expandable navigation at the top of the page, as seen on the [TRID guidance page](https://www.consumerfinance.gov/compliance/compliance-resources/mortgage-resources/tila-respa-integrated-disclosures/).
 
 
   | Above 900 px | Below 901 px |

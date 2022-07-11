@@ -13,7 +13,7 @@ description: >-
   The "Browse" page template automatically includes **left-hand sub-navigation** for all children pages that share the parent page. (For example, note how all the navigation items in the **Live example** are housed under the parent [Buying a house](https://www.consumerfinance.gov/owning-a-home/) page.)
 
 
-  Browse pages can also have parent-child relationships to other browse pages; note the children pages from the **live example**, e.g. [Check your credit](https://www.consumerfinance.gov/owning-a-home/process/prepare/check-your-credit/).
+  Browse pages can also have parent-child relationships to other browse pages; note the children pages from the **live example**, e.g. [Check your credit](https://www.consumerfinance.gov/owning-a-home/prepare/check-your-credit/).
 variation_groups:
   - variation_group_name: Standard browse page
     variations:
@@ -23,7 +23,7 @@ variation_groups:
 
           | -- | -- |
 
-          | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [Buying a House](https://www.consumerfinance.gov/owning-a-home/process/prepare/) |
+          | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [Buying a House](https://www.consumerfinance.gov/owning-a-home/prepare/check-your-credit/) |
         variation_name: ""
 use_cases: >-
   ### When to use

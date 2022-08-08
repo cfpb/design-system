@@ -23,6 +23,25 @@
     }
   }
 
+  &__dark {
+    background: @teal-mid-dark;
+    border-color: @teal-mid-dark;
+    color: @white;
+
+    a {
+      border-color: @white;
+      color: @white;
+    }
+
+    .m-notification {
+      background: @teal-mid-dark;
+
+      .cf-icon-svg {
+        fill: @white;
+      }
+    }
+  }
+
   .respond-to-min( @bp-sm-min, {
     font-size: 1em;
   } );

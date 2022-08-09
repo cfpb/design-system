@@ -22,12 +22,12 @@ variation_groups:
                           </p>
                           <ul class="m-list m-list__links">
                               <li class="m-list_item">
-                                  <a class="m-list_link" href="/">
+                                  <a class="m-list_link" href="#">
                                       A link can be added
                                   </a>
                               </li>
                               <li class="m-list_item">
-                                  <a class="m-list_link" href="/">
+                                  <a class="m-list_link" href="#">
                                       Multiple links are supported
                                   </a>
                               </li>
@@ -53,6 +53,18 @@ variation_groups:
                           <p class="m-notification_explanation">
                               An optional paragraph of text can be added to explain the purpose of the banner.
                           </p>
+                          <ul class="m-list m-list__links">
+                              <li class="m-list_item">
+                                  <a class="m-list_link" href="#test-link">
+                                      Links can be added
+                                  </a>
+                              </li>
+                              <li class="m-list_item">
+                                  <a class="m-list_link" href="#">
+                                      Visited links appear gray instead of white
+                                  </a>
+                              </li>
+                          </ul>
                       </div>
                   </div>
               </div>

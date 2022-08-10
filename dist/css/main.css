@@ -4693,6 +4693,25 @@ select.o-multiselect option {
   left: 0;
   top: 0;
 }
+.o-banner__dark {
+  background: #126b69;
+  border-color: #126b69;
+  color: #ffffff;
+}
+.o-banner__dark a {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.o-banner__dark a:hover {
+  border-color: #dcdddf;
+  color: #dcdddf;
+}
+.o-banner__dark .m-notification {
+  background: #126b69;
+}
+.o-banner__dark .m-notification .cf-icon-svg {
+  fill: #ffffff;
+}
 @media only all and (min-width: 37.5625em) {
   .o-banner {
     font-size: 1em;

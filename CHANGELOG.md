@@ -1,5 +1,5 @@
 
-## v0.16.0 (2022-08-10)
+## v0.17.0 (2022-08-10)
 
 #### Enhancement
 * `cfpb-notifications`

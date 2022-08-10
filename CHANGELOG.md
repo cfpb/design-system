@@ -1,4 +1,20 @@
 
+## v0.16.0 (2022-08-10)
+
+#### Enhancement
+* `cfpb-notifications`
+  * [#1387](https://github.com/cfpb/design-system/pull/1387) Add new dark banner variation ([@contolini](https://github.com/contolini))
+
+#### Documentation
+* [#1380](https://github.com/cfpb/design-system/pull/1380) Update "sublanding-pages" page ([@sonnakim](https://github.com/sonnakim))
+* [#1379](https://github.com/cfpb/design-system/pull/1379) Update "browse-pages" page ([@sonnakim](https://github.com/sonnakim))
+
+#### Committers: 2
+- Chris Contolini ([@contolini](https://github.com/contolini))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+
+
+
 ## v0.16.0 (2022-06-01)
 
 #### Enhancement

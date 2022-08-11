@@ -70,6 +70,6 @@ variation_groups:
               </div>
           </div>
         variation_name: Dark banner
-    variation_group_name: ""
+    variation_group_name: Types
 last_updated: 2020-01-28T15:55:47.394Z
 ---

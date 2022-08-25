@@ -62,7 +62,7 @@ description: >-
   </br>
 
 
-  > #####  {% include icons/edit.svg %} Activity
+  > ##### {% include icons/edit.svg %} Activity
 
   >
 
@@ -82,7 +82,7 @@ description: >-
 
   >
 
-  > <div class="content-50 content-last" markdown="1">
+  > **<div class="content-50 content-last" markdown="1">**
 
   >
 
@@ -104,11 +104,11 @@ description: >-
 
   >
 
-  > </div>
+  > **</div>**
 
   >
 
-  > <div class="content-50 content-last" markdown="1">
+  > **<div class="content-50 content-last" markdown="1">**
 
   >
 
@@ -128,7 +128,9 @@ description: >-
 
   > * Your agency’s values    
 
-  >   </div>
+  >
+
+  > **</div>**
 
   >
 
@@ -167,7 +169,7 @@ description: >-
   ##### </br>
 
 
-  #####  {% include icons/book.svg %} Further reading
+  ##### {% include icons/book.svg %} Further reading
 
 
   * The [positionality wheel](https://design.ncsu.edu/blog/2022/01/07/from-a-to-z-lesley-ann-noel-and-decolonizing-design/) is another form of the Frames of Reference exercise. 
@@ -175,8 +177,6 @@ description: >-
   * The Decision Lab has [a list of the most relevant cognitive biases in behavioral economics](https://thedecisionlab.com/biases), which can be applied to our own biases as designers and researchers, but also participants.  
 
   * Nielsen Norman Group has several resources pertaining to bias in UX. Watch their video, [Decision Biases Affecting UX Practitioners](https://www.nngroup.com/videos/decision-biases-ux-practitioners/), to learn how to mitigate your own biases. 
-
-
 
 
   ### Use bias-free, person-centered language 

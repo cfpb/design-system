@@ -8,7 +8,7 @@ description: >-
   <div class="content-75 content-last" markdown="1">
 
 
-  <p class="lead-paragraph">This is intro text for the setting the foundation page. It is a very short paragraph. It is beautiful and awesome, and <strong>and it has a key point in bold text.</strong> </p>
+  <p class="lead-paragraph">Before we’re able to design equitable and inclusive products for the people and communities we serve, we must first <strong>turn our attention to the ways in which we work. </strong> </p>
 
 
   </div>

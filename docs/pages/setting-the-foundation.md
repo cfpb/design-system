@@ -108,32 +108,6 @@ description: >-
 
   >
 
-  > **<div class="content-50 content-last" markdown="1">**
-
-  >
-
-  > * Immigration status, or whether you’ve ever lived with an immigrant  
-
-  > * Languages spoken   
-
-  > * Familiarity with physical & mental disabilities   
-
-  > * Use of assistive technologies  
-
-  > * Marital and parental status  
-
-  > * Where you grew up  
-
-  > * Your values
-
-  > * Your agency’s values    
-
-  >
-
-  > **</div>**
-
-  >
-
   > **2. During the collaboration session, ask the team to spend a few minutes privately noting their own personal, lived experiences in response to each of these prompts.**  
 
   >

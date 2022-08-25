@@ -29,19 +29,19 @@ description: >-
   ## Working together
 
 
-  Link
+  [Identify lived experiences and biases ](https://consumerfinance.gov)
 
 
-  Link
+  [Investigate internalized oppression ](https://consumerfinance.gov)
 
 
-  Link
+  [Use bias-free, person-centered language ](https://consumerfinance.gov)
 
 
-  Link
+  [Establish team values ](https://consumerfinance.gov)
 
 
-  Link
+  [Assemble diverse teams ](https://consumerfinance.gov)
 
 
   ### Identify lived experiences and biases
@@ -50,7 +50,7 @@ description: >-
   Bias is the tendency to allow personal opinions and experiences to influence one’s judgment. It’s part of the human condition to rely on these cognitive shortcuts and to assume others think like us or have similar values, opinions, and beliefs. Bias can skew our research and design activities, whether in our choice of who participates, what information is collected, or how information is interpreted. Awareness of our biases is key to mitigating against them, and that’s where the frames of reference exercise can be particularly valuable.   
 
 
-  > **Ready to conduct research for your project?** Learn how to check your biases when moderating a research session. 
+  > {% include icons/favorite.svg %} **Ready to conduct research for your project?** Learn how to [check your biases when moderating a research session](https://consumerfinance.gov). 
 
 
   </br>
@@ -62,7 +62,7 @@ description: >-
   </br>
 
 
-  > ##### Activity
+  > #####  {% include icons/edit.svg %} Activity
 
   >
 
@@ -80,9 +80,11 @@ description: >-
 
   > **1. Ahead of the activity, add the following prompts to an online collaboration tool set to private mode.** Organize the prompts so all participants have enough room to add their responses. (More prompts can be found in [18F’s frames of reference form](https://docs.google.com/forms/d/e/1FAIpQLScI0iTQEstjECMzFVuyMt0Giku69YggEkAlybQPlH4y7Ik9Vg/viewform).)
 
+  >
 
-  <div class="content-50 content-last" markdown="1">
+  > <div class="content-50 content-last" markdown="1">
 
+  >
 
   > * Types of locations where you’ve lived (e.g. urban, rural)   
 
@@ -165,7 +167,7 @@ description: >-
   ##### </br>
 
 
-  ##### FURTHER READING 
+  #####  {% include icons/book.svg %} Further reading
 
 
   * The [positionality wheel](https://design.ncsu.edu/blog/2022/01/07/from-a-to-z-lesley-ann-noel-and-decolonizing-design/) is another form of the Frames of Reference exercise. 

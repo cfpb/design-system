@@ -68,9 +68,9 @@ variation_groups:
           <h1 style="font-size:60pt; font-weight:500; line-height:66pt">Display
           heading</h1>
 
-          <h1 style="font-size:38pt; font-weight:400; line-height:40pt">Heading level 1</h1>
+          <h1 style="font-size:38pt; font-weight:600; line-height:40pt">Heading level 1</h1>
 
-          <h2 style="font-size:26pt; font-weight:400; line-height:28pt">Heading level 2</h2>
+          <h2 style="font-size:26pt; font-weight:600; line-height:28pt">Heading level 2</h2>
 
           <h3 style="font-size: 16pt; font-weight:600; line-height: 18pt">Heading level 3</h3>
 

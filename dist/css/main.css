@@ -633,7 +633,7 @@ h1,
 .h1 {
   margin-bottom: 0.44117647em;
   font-size: 2.125em;
-  font-weight: normal;
+  font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
@@ -661,7 +661,7 @@ blockquote + .h1 {
   .h1 {
     margin-bottom: 0.57692308em;
     font-size: 1.625em;
-    font-weight: normal;
+    font-weight: 600;
     letter-spacing: inherit;
     line-height: 1.25;
     text-transform: inherit;
@@ -711,7 +711,7 @@ h2,
 .h2 {
   margin-bottom: 0.57692308em;
   font-size: 1.625em;
-  font-weight: normal;
+  font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
@@ -1711,7 +1711,7 @@ a.a-heading__icon.active {
 .m-pull-quote__large .m-pull-quote_body {
   margin-bottom: 0.57692308em;
   font-size: 1.625em;
-  font-weight: normal;
+  font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
@@ -2124,7 +2124,7 @@ a.a-heading__icon.active {
 .m-hero_heading {
   margin-bottom: 0.44117647em;
   font-size: 2.125em;
-  font-weight: normal;
+  font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
@@ -2133,7 +2133,7 @@ a.a-heading__icon.active {
   .m-hero_heading {
     margin-bottom: 0.57692308em;
     font-size: 1.625em;
-    font-weight: normal;
+    font-weight: 600;
     letter-spacing: inherit;
     line-height: 1.25;
     text-transform: inherit;
@@ -2257,10 +2257,11 @@ a.a-heading__icon.active {
   .m-hero__jumbo .m-hero_subhead {
     margin-bottom: 0.57692308em;
     font-size: 1.625em;
-    font-weight: normal;
+    font-weight: 600;
     letter-spacing: inherit;
     line-height: 1.25;
     text-transform: inherit;
+    font-weight: 400;
   }
 }
 @media only all and (min-width: 37.5625em) {
@@ -2320,10 +2321,11 @@ a.a-heading__icon.active {
   .m-hero__50-50 .m-hero_subhead {
     margin-bottom: 0.57692308em;
     font-size: 1.625em;
-    font-weight: normal;
+    font-weight: 600;
     letter-spacing: inherit;
     line-height: 1.25;
     text-transform: inherit;
+    font-weight: 400;
   }
 }
 @media only all and (min-width: 37.5625em) {
@@ -2444,7 +2446,7 @@ _:-ms-lang( x ),
 .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type( 1 ) h3 {
   margin-bottom: 0.57692308em;
   font-size: 1.625em;
-  font-weight: normal;
+  font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;

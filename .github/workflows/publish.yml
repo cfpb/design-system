@@ -25,7 +25,8 @@ jobs:
 
       - name: Add auth
         run: |
-          echo "//registry.npmjs.org/:_authToken=${TOKEN}" > .npmrc
+          yarn logout
+          echo "//https://npm.pkg.github.com/:_authToken=${TOKEN}" > .npmrc
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN}}
 

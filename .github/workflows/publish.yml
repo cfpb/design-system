@@ -27,6 +27,7 @@ jobs:
         run: |
           yarn logout
           echo "//https://npm.pkg.github.com/:_authToken=${TOKEN}" > .npmrc
+          echo "@cfpb:registry=https://npm.pkg.github.com" >> .npmrc
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN}}
 
@@ -34,4 +35,4 @@ jobs:
         run: |
           git config --global user.name "CFPBot"
           git config --global user.email "CFPBot@users.noreply.github.com"
-          yarn run lerna publish patch --yes --registry https://npm.pkg.github.com
+          yarn run lerna publish patch --yes

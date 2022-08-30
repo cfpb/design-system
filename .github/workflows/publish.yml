@@ -24,7 +24,7 @@ jobs:
         run: yarn run gulp build
 
       - name: Add auth
-      - run: |
+        run: |
           echo "//registry.npmjs.org/:_authToken=${TOKEN}" > .npmrc
           echo '@cfpb:registry=https://npm.pkg.github.com' > .npmrc
         env:

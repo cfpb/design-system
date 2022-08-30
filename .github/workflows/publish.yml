@@ -30,6 +30,6 @@ jobs:
 
       - name: Publish
         run: |
-          yarn run lerna publish patch --yes
+          yarn run lerna publish patch --yes --registry https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN}}

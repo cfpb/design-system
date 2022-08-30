@@ -18,7 +18,7 @@ jobs:
           node-version: '16.x'
 
       - name: Install dependencies
-        run: yarn
+        run: yarn install --ignore-scripts
 
       - name: Build
         run: yarn run gulp build

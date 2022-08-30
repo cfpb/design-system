@@ -1,4 +1,4 @@
-name: publish
+name: Publish to Github Package Registry
 
 on:
   push:

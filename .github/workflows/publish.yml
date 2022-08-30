@@ -21,7 +21,7 @@ jobs:
         run: yarn install --ignore-scripts
 
       - name: Build
-        run: yarn run gulp build
+        run: yarn run gulp build styles
 
       - name: Add auth
         run: |

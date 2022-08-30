@@ -26,7 +26,7 @@ jobs:
       - name: Add auth
         run: |
           echo "//registry.npmjs.org/:_authToken=${TOKEN}" > .npmrc
-          echo '@cfpb:registry=https://npm.pkg.github.com' > .npmrc
+          echo '@cfpb:registry=https://npm.pkg.github.com' >> .npmrc
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN}}
 

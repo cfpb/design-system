@@ -37,11 +37,11 @@ variation_groups:
           60px\x03                                | Drops to Heading
           1             |
 
-          | Heading 1 | Avenir Next Regular, 34px /
+          | Heading 1 | Avenir Next Demi Bold, 34px /
           42px\x03                                | Drops to Heading
           2             |
 
-          | Heading 2 | Avenir Next Regular, 26px /
+          | Heading 2 | Avenir Next Demi Bold, 26px /
           32px                                 | Drops to Heading
           3             |
 

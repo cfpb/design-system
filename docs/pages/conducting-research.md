@@ -5,12 +5,25 @@ layout: variation
 section: guidelines
 status: Proposed
 description: >-
-  ### **Build a greater understanding of who you’re working with and how they
-  experience the situation you’re addressing.** Research is vital to a
-  successfully project and a mutually-helpful collaboration.
+  <div class="content-50 content-last" markdown="1">
 
 
-  ## Consectetur adipiscing 
+  <p class="lead-paragraph">Build a greater understanding of who you're working with and how they experience the situation you're addressing. Research is vital to a successful project and mutually helpful collaboration.</p>
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Conduct research to understand who you're working with and how they experience the situation you're addressing.](/design-system/images/uploads/test.jpeg)
+
+
+  </div>
+
+
+  ## Consectetur adipiscing
 
 
   Aenean eget enim et ligula faucibus sodales sit amet a ante. Ut id scelerisque mi. Pellentesque dolor magna, auctor nec lacus et, porta porta elit. Nullam sagittis lectus nec nibh commodo, ut dignissim velit sagittis. Donec non rhoncus justo. Mauris at vestibulum augue. Suspendisse vitae lorem eget mi euismod convallis. Aliquam non odio leo. Phasellus finibus sagittis tempor. Quisque iaculis nisi arcu, vel sagittis sapien condimentum ut. Nunc nec condimentum urna.

@@ -37,11 +37,11 @@ variation_groups:
           60px\x03                                | Drops to Heading
           1             |
 
-          | Heading 1 | Avenir Next Regular, 34px /
+          | Heading 1 | Avenir Next Demi Bold, 34px /
           42px\x03                                | Drops to Heading
           2             |
 
-          | Heading 2 | Avenir Next Regular, 26px /
+          | Heading 2 | Avenir Next Demi Bold, 26px /
           32px                                 | Drops to Heading
           3             |
 
@@ -64,13 +64,13 @@ variation_groups:
       all screen widths.
   - variation_group_name: Print headings
     variations:
-      - variation_code_snippet: >
+      - variation_code_snippet: >-
           <h1 style="font-size:60pt; font-weight:500; line-height:66pt">Display
           heading</h1>
 
-          <h1 style="font-size:38pt; font-weight:600; line-height:40pt">Heading level 1</h1>
+          <h1 style="font-size:38pt; font-weight:400; line-height:40pt">Heading level 1</h1>
 
-          <h2 style="font-size:26pt; font-weight:600; line-height:28pt">Heading level 2</h2>
+          <h2 style="font-size:26pt; font-weight:400; line-height:28pt">Heading level 2</h2>
 
           <h3 style="font-size: 16pt; font-weight:600; line-height: 18pt">Heading level 3</h3>
 
@@ -86,10 +86,11 @@ variation_groups:
           | --------- | -------------------------------------------- |
           | Display   | Avenir Next Medium, 60pt / 66pt              |
           | Heading 1 | Avenir Next Regular, 38pt / 40pt             |
-          | Heading 2 | Avenir Next Regular, 26pt / 28pt             |
+          | Heading 2 | Avenir Next Regular, 26pt / 28pt            
+          |
           | Heading 3 | Avenir Next Demi Bold, 16pt / 18pt           |
           | Heading 4 | Avenir Next Medium, 14pt / 16pt              |
-          | Heading 5 | Avenir Next Demi Bold, 10pt / 12pt, All caps |
+          | Heading 5 | Avenir Next Demi Bold, 10pt / 12pt, all caps |
           | Heading 6 | Avenir Next Medium, 12pt /14 pt              |
     variation_group_description: >+
       This hierarchy should serve as a basis for 8.5 x 11” documents, but

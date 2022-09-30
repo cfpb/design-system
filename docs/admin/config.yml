@@ -139,6 +139,11 @@ collections:
             value: 'development'
           - label: 'Guidelines'
             value: 'guidelines'
+      - name: 'jumplinks'
+        label: 'Custom jump links'
+        widget: 'string'
+        hint: 'Enter jump links separated by commas'
+        required: false
       - name: 'status'
         label: 'Implementation status'
         widget: 'select'

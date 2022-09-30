@@ -2,6 +2,7 @@
 title: E-mail signup forms
 layout: variation
 section: patterns
+eyebrow: Forms
 status: Released
 description: Email sign-ups allow users to stay engaged on a specific topic or
   content type produced by the Bureau. They are used to add individual email

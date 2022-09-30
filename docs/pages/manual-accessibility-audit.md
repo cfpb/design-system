@@ -3,6 +3,7 @@ title: Accessibility audit tools
 collection_name: pages
 layout: variation
 section: guidelines
+eyebrow: Accessibility
 description: This page contains web accessibility testing tools developed by the
   Design & Development team at the CFPB. They help us check for our desired
   level of conformance to federal regulations around accessibility. More plainly

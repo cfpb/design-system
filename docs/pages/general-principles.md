@@ -2,7 +2,6 @@
 title: General principles
 layout: variation
 section: null
-secondary_section: null
 description: >-
   These are the strategic underpinnings for the CFPB’s design and development
   standards. They should serve as the backbone for the user experience, ensuring

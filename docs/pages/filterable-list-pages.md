@@ -107,5 +107,4 @@ related_items: >-
 
   * [Email sign-up form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
 last_updated: 2020-01-13T23:28:26.904Z
-secondary_section: Web templates
 ---

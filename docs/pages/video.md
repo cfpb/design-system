@@ -921,5 +921,5 @@ accessibility: >-
 
 
   * Nothing on the page should flash more than 3 times in 1 second.
-secondary_section: Brand guidelines
+eyebrow: Multimedia
 ---

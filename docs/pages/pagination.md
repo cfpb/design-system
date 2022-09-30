@@ -127,5 +127,5 @@ related_items: "* [Pagination
   variables](https://cfpb.github.io/design-system/development/variables#paginat\
   ion-1)"
 last_updated: 2020-01-28T15:55:47.394Z
-secondary_section: Navigation
+eyebrow: Navigation
 ---

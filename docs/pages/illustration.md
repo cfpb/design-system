@@ -131,5 +131,5 @@ accessibility: >-
   * Use the `<title>` and `<desc>` elements in SVG drawings.
 
   * Include descriptive text near images (for example, a pie chart legend with percentages of each item).
-secondary_section: Brand guidelines
+eyebrow: Graphics
 ---

@@ -321,5 +321,5 @@ behavior: ""
 restrictions: []
 related_items: ""
 last_updated: 2020-02-27T16:56:46.952Z
-secondary_section: Brand guidelines
+eyebrow: Brand symbols
 ---

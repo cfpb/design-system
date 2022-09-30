@@ -639,5 +639,5 @@ behavior: >-
 
   In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where `@name` is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black).
 related_items: ""
-secondary_section: Brand guidelines
+eyebrow: Graphics
 ---

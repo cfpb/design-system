@@ -216,5 +216,5 @@ related_items: >-
 
   * [Filterable list pages](https://cfpb.github.io/design-system/pages/filterable-list-pages)
 last_updated: 2020-01-28T15:55:47.394Z
-secondary_section: Layout options
+eyebrow: Navigation
 ---

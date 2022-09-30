@@ -178,5 +178,4 @@ behavior: >-
 restrictions:
   - restrictions_do: Words or photos
     restrictions_do_not: Words or photos
-secondary_section: Alerts
 ---

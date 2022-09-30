@@ -75,5 +75,5 @@ related_items: >-
   * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
 
   * [Text introductions](https://cfpb.github.io/design-system/patterns/text-introductions)
-secondary_section: Layout options
+eyebrow: Introductions
 ---

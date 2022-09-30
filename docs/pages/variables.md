@@ -2,7 +2,7 @@
 title: Variables
 layout: variation
 section: development
-secondary_section: Core development
+eyebrow: Utilities
 status: Proposed
 description: >
   Component variables are used to theme a component. They likely will be left as

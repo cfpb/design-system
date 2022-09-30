@@ -613,5 +613,5 @@ related_items: "* [Expandables
   variables](https://cfpb.github.io/design-system/development/variables#expanda\
   bles) "
 last_updated: 2019-12-16T18:43:19.784Z
-secondary_section: Layout options
+eyebrow: Behavior
 ---

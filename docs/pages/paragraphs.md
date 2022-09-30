@@ -115,5 +115,5 @@ related_items: "* [Typography
   variables](https://cfpb.github.io/design-system/development/variables#typogra\
   phy)"
 last_updated: 2020-01-06T20:28:04.952Z
-secondary_section: Text
+eyebrow: Typography
 ---

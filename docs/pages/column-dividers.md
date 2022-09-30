@@ -86,6 +86,6 @@ guidelines: ""
 behavior: ""
 accessibility: ""
 last_updated: 2019-09-13T19:34:43.025Z
-secondary_section: Core development
+eyebrow: Layout
 research: ""
 ---

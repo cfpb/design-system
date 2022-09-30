@@ -2,7 +2,7 @@
 title: Banners
 layout: variation
 section: components
-secondary_section: Alerts
+eyebrow: Alerts
 status: Beta
 description: This component provides banner boxes at the top of a page's
   content. This is similar to a notification, but is intended to be full width.

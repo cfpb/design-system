@@ -3,6 +3,7 @@ title: Interactive charts
 collection_name: pages
 layout: variation
 section: patterns
+eyebrow: Main content
 status: Released
 description: Interactive charts, in contrast to static data visualizations, are
   intended to let users explore a set of data, focus in on the details that

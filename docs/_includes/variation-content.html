@@ -18,7 +18,7 @@
         that are empty.
     {% endcomment %}
 
-    {% assign jump_links = '' | split: ',' %}
+    {% assign jump_links = page.jumplinks | split: ',' or '' %}
 
     {% for variation_group in page.variation_groups %}
         {% assign variation_name = variation_group.variation_group_name %}

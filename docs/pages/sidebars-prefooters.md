@@ -374,5 +374,5 @@ related_items: >-
 
   * [Grid](https://cfpb.github.io/design-system/foundation/grid)
 last_updated: 2020-01-28T15:55:47.394Z
-secondary_section: Core development
+eyebrow: Layout
 ---

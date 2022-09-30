@@ -2,7 +2,7 @@
 title: Logo
 layout: variation
 section: foundation
-secondary_section: Brand guidelines
+eyebrow: Brand symbols
 description: >-
   
   The CFPB logo was designed to symbolize vigilance, transparency, and a consumer focus. Consumers are the foundation and focus of our mission and our logo reflects that. A soft beam of light symbolizes our efforts to illuminate the financial landscape and foster transparency in the marketplace.

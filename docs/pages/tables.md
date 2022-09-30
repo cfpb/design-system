@@ -766,5 +766,5 @@ related_items: "* [Tables
   variables](https://cfpb.github.io/design-system/development/variables#tables-\
   1)"
 last_updated: 2019-08-30T15:18:28.960Z
-secondary_section: Layout options
+eyebrow: Lists and tables
 ---

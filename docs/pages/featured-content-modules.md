@@ -196,5 +196,5 @@ related_items: "* [Variables for featured content
   modules](https://cfpb.github.io/design-system/development/variables#heroes-an\
   d-featured-content-modules)"
 last_updated: 2019-10-17T14:52:11.082Z
-secondary_section: Layout options
+eyebrow: Featured content
 ---

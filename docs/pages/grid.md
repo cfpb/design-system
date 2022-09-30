@@ -476,5 +476,5 @@ research: ""
 related_items: "* [Grid
   variables](https://cfpb.github.io/design-system/development/variables#grid-1)"
 last_updated: 2019-09-10T15:02:08.752Z
-secondary_section: Core development
+eyebrow: Basics
 ---

@@ -3,6 +3,7 @@ title: Print styles
 collection_name: pages
 layout: variation
 section: guidelines
+eyebrow: Print
 status: Proposed
 description: >-
   As some [consumerfinance.gov](https://www.consumerfinance.gov/) users may want

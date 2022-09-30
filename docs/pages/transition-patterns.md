@@ -2,6 +2,7 @@
 title: Transition patterns
 layout: variation
 section: patterns
+eyebrow: Transitions
 status: Released
 description: Transition patterns are animations that happen when a user
   interacts with an element on the page. They are CSS transition styles that are

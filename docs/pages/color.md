@@ -1692,5 +1692,5 @@ accessibility: >-
     * For large text, a contrast ratio of only 3 : 1 is necessary. Large regular text is at least 18pt/24px, while large bold text is 14pt/18px.
     * Text or images of text that are either pure decoration or not visible, or are part of a logo, picture that contains significant other visual content, or inactive UI components (like disabled form controls) do not have a color contrast requirement.
 last_updated: 2019-08-30T18:31:00.000Z
-secondary_section: Brand guidelines
+eyebrow: Basics
 ---

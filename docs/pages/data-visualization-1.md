@@ -3,6 +3,7 @@ title: Data visualization guidelines
 collection_name: pages
 layout: variation
 section: guidelines
+eyebrow: Data visualization
 description: "Data visualization can be an excellent way to increase
   understanding of information and make comparisons of data. Using visuals to
   convey meaning and tell stories can engage the user and create a memorable

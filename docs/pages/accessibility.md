@@ -305,7 +305,7 @@ accessibility: >-
    - With VoiceOver enabled, optionally enable the "rotor" by pressing _control +option+U_.
 last_updated: 2019-12-10T22:50:48.793Z
 behavior: ""
-secondary_section: null
+eyebrow: Accessibility
 
 redirect_from:
   - /accessibility

@@ -167,5 +167,5 @@ accessibility: >-
 related_items: "* [Typography
   variables](https://cfpb.github.io/design-system/development/variables#typogra\
   phy)"
-secondary_section: Brand guidelines
+eyebrow: Typography
 ---

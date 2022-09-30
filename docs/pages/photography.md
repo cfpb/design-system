@@ -139,5 +139,5 @@ accessibility: >-
   * **Facebook:** Add a photo to your post. Before publishing, hover on the photo and an “Edit” button will appear in the upper left corner. Click the “Edit” button and editing options will appear on the left side of the photo. Click “Alternative Text.” Enter a description in the “Custom alt text” field and click the “Save” button.  
 
   * **Twitter:** Add a photo to your post. Before publishing, click “Add description.” Enter a description in the “Description” field and click the “Save” button.
-secondary_section: Brand guidelines
+eyebrow: Graphics
 ---

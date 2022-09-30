@@ -3,6 +3,7 @@ title: Motion
 collection_name: pages
 layout: variation
 section: foundation
+eyebrow: Multimedia
 status: Released
 description: >-
   Motion graphics are the combination of graphic design, animation, and visual

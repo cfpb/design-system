@@ -90,5 +90,5 @@ accessibility: ""
 research: ""
 related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"
 last_updated: 2019-10-21T20:38:39.851Z
-secondary_section: Layout options
+eyebrow: Featured content
 ---

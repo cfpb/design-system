@@ -80,5 +80,4 @@ related_items: >-
 
   * [Featured content module](https://cfpb.github.io/design-system/patterns/featured-content-module)
 last_updated: 2020-01-28T15:55:47.394Z
-secondary_section: Layout options
 ---

@@ -1,4 +1,9 @@
 <section>
+    {%- if page.eyebrow %}
+      <div class="h5">
+        {{ page.eyebrow }}
+      </div>
+    {% endif %}
 
     <h1 class="component-header u-mb30">
         {{ page.title }}

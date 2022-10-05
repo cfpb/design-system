@@ -58,22 +58,6 @@ description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus. Vestibulum molestie erat eu nisi iaculis, eu faucibus nunc vestibulum. Praesent lectus lectus, pretium id elit sit amet, viverra venenatis justo. Nunc non fringilla nibh.
 
 
-  <div class="o-well">
-
-
-  ##### {% include icons/edit.svg %} Activity
-
-
-  <h2>Activity name</h2>
-
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus. Vestibulum molestie erat eu nisi iaculis, eu faucibus nunc vestibulum. Praesent lectus lectus, pretium id elit sit amet, viverra venenatis justo. Nunc non fringilla nibh.
-
-
-  </div>
-
-
-
   ### Point A
 
 
@@ -101,7 +85,7 @@ description: >-
   <div class="o-well">
 
 
-  ##### {% include icons/edit.svg %} Activity
+  <h5>{% include icons/edit.svg %} Activity</h5>
 
 
   <h2>Activity name</h2>

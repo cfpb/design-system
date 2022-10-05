@@ -8,7 +8,7 @@ status: Proposed
 description: >-
   ### Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet
   nunc nisi, a viverra lectus euismod ut. **Pellentesque et neque eu tortor
-  fermentum consectetur nec ac tellus.** 
+  fermentum consectetur nec ac tellus.**
 
 
   ## First
@@ -50,8 +50,6 @@ description: >-
 
 
   Imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus. 
-
-
 
 
   ## Third
@@ -96,15 +94,13 @@ description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus. Vestibulum molestie erat eu nisi iaculis, eu faucibus nunc vestibulum. Praesent lectus lectus, pretium id elit sit amet, viverra venenatis justo. Nunc non fringilla nibh.
 
 
-  * Lorem ipsum 
+  * Lorem ipsum
 
   * Lorem ipsum
 
-  * Lorem ipsum 
+  * Lorem ipsum
 
-  * Lorem ipsum 
-
-  * Lorem ipsum 
+  * Lorem ipsum
 
 
   </div>

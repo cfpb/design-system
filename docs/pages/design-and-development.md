@@ -46,7 +46,7 @@ description: >-
   Imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus. 
 
 
-  ##### F﻿urther reading
+  ##### {% include icons/book.svg %} F﻿urther reading
 
 
   Imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus. 
@@ -85,7 +85,7 @@ description: >-
   <div class="o-well">
 
 
-  ##### A﻿ctivity
+  ##### {% include icons/edit.svg %} Activity
 
 
   ## Activity name
@@ -94,6 +94,13 @@ description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus. Vestibulum molestie erat eu nisi iaculis, eu faucibus nunc vestibulum. Praesent lectus lectus, pretium id elit sit amet, viverra venenatis justo. Nunc non fringilla nibh.
 
 
+  <div class="content-50 content-first" markdown="1">
+
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
   * Lorem ipsum
 
   * Lorem ipsum
@@ -101,6 +108,52 @@ description: >-
   * Lorem ipsum
 
   * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+  * Lorem ipsum
+
+
+  </div>
 
 
   </div>

@@ -6,9 +6,23 @@ section: guidelines
 jumplinks: First, Second, Third, Fourth
 status: Proposed
 description: >-
-  ### Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet
-  nunc nisi, a viverra lectus euismod ut. **Pellentesque et neque eu tortor
-  fermentum consectetur nec ac tellus.**
+  <div class="content-50 content-last" markdown="1">
+
+
+  <p class="lead-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus.</p>
+
+
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
+  ![Homepage image](/design-system/images/uploads/cfpb_ds_home.png) 
+
+
+  </div>
+
 
 
   ## First
@@ -85,10 +99,10 @@ description: >-
   <div class="o-well">
 
 
-  <h5>{% include icons/edit.svg %} Activity</h5>
+  ##### {% include icons/edit.svg %} Activity
 
 
-  <h2>Activity name</h2>
+  ## Activity name
 
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus. Vestibulum molestie erat eu nisi iaculis, eu faucibus nunc vestibulum. Praesent lectus lectus, pretium id elit sit amet, viverra venenatis justo. Nunc non fringilla nibh.

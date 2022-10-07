@@ -188,7 +188,5 @@ description: >-
 
 
   </div>
-variation_groups:
-  - variations:
-      - variation_is_deprecated: false
+variation_groups: []
 ---

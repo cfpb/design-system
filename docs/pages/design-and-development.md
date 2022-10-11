@@ -49,7 +49,7 @@ description: >-
   Imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus. 
 
 
-  #### {% include icons/book.svg %} F﻿urther reading
+  <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
 
 
   Imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu tortor fermentum consectetur nec ac tellus. 
@@ -105,7 +105,7 @@ description: >-
   <div class="o-well">
 
 
-  <h3>{% include icons/edit.svg %} Activity</h3>
+  <div class ="eyebrow">{% include icons/edit.svg %} Activity</div>
 
 
   <h2>Activity name</h2>

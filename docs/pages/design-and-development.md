@@ -73,7 +73,7 @@ description: "<div class=\"content-50 content-last\" markdown=\"1\">
   tortor fermentum consectetur nec ac tellus.\ 
 
 
-  ##### {% include icons/book.svg %} F﻿urther reading
+  #### {% include icons/book.svg %} F﻿urther reading
 
 
   Imperdiet nunc nisi, a viverra lectus euismod ut. Pellentesque et neque eu
@@ -93,7 +93,7 @@ description: "<div class=\"content-50 content-last\" markdown=\"1\">
   <div class=\"o-well\">
 
 
-  <h5>{% include icons/edit.svg %} Activity</h5>
+  <h3>{% include icons/edit.svg %} Activity</h3>
 
 
   <h2>Activity name</h2>
@@ -145,7 +145,7 @@ description: "<div class=\"content-50 content-last\" markdown=\"1\">
   <div class=\"o-well\">
 
 
-  <h5>{% include icons/edit.svg %} Activity</h5>
+  <h3>{% include icons/edit.svg %} Activity</h3>
 
 
   <h2>Activity name</h2>

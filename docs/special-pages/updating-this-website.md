@@ -25,7 +25,7 @@ description: >-
   ## Editing pages
 
 
-  We use a content management system called [Netlify CMS](https://www.netlifycms.org/). 
+  We use a content management system called [Netlify CMS](https://www.netlifycms.org/).
 
   It's powered by GitHub and will let you edit any page of this website.
 
@@ -34,10 +34,10 @@ description: >-
       <div class="o-expandable o-expandable__padded">
           <button class="o-expandable_header o-expandable_target"
                   title="Expand content">
-              <h3 class="h4 o-expandable_header-left o-expandable_label">
+              <h3 class="h4 o-expandable_label">
                   Step 1. Click a page's "Edit this page" pencil icon.
               </h3>
-              <span class="o-expandable_header-right o-expandable_link">
+              <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
                       <span class="u-visually-hidden-on-mobile">Show</span>
                       {% include icons/plus-round.svg %}
@@ -60,10 +60,10 @@ description: >-
       <div class="o-expandable o-expandable__padded">
           <button class="o-expandable_header o-expandable_target"
                   title="Expand content">
-              <h3 class="h4 o-expandable_header-left o-expandable_label">
+              <h3 class="h4 o-expandable_label">
                   Step 2. Log into the CMS
               </h3>
-              <span class="o-expandable_header-right o-expandable_link">
+              <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
                       <span class="u-visually-hidden-on-mobile">Show</span>
                       {% include icons/plus-round.svg %}
@@ -76,9 +76,9 @@ description: >-
           </button>
           <div class="o-expandable_content">
               <p>
-                  Log into the CMS by clicking the "Login with Github" button. 
-                  You'll need a github.com account and you'll need to be added to <a href="https://github.com/orgs/cfpb/people">CFPB's GitHub organization</a>. 
-                  If you're new to GitHub and need to be added to this organization, 
+                  Log into the CMS by clicking the "Login with Github" button.
+                  You'll need a github.com account and you'll need to be added to <a href="https://github.com/orgs/cfpb/people">CFPB's GitHub organization</a>.
+                  If you're new to GitHub and need to be added to this organization,
                   post a message in the <code>Design System</code> mattermost channel and someone will assist you.
               </p>
               <div class="o-well">
@@ -89,10 +89,10 @@ description: >-
       <div class="o-expandable o-expandable__padded">
           <button class="o-expandable_header o-expandable_target"
                   title="Expand content">
-              <h3 class="h4 o-expandable_header-left o-expandable_label">
+              <h3 class="h4 o-expandable_label">
                   Step 3. Edit a page's content
               </h3>
-              <span class="o-expandable_header-right o-expandable_link">
+              <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
                       <span class="u-visually-hidden-on-mobile">Show</span>
                       {% include icons/plus-round.svg %}
@@ -115,10 +115,10 @@ description: >-
       <div class="o-expandable o-expandable__padded">
           <button class="o-expandable_header o-expandable_target"
                   title="Expand content">
-              <h3 class="h4 o-expandable_header-left o-expandable_label">
+              <h3 class="h4 o-expandable_label">
                   Step 4. Save your changes
               </h3>
-              <span class="o-expandable_header-right o-expandable_link">
+              <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
                       <span class="u-visually-hidden-on-mobile">Show</span>
                       {% include icons/plus-round.svg %}
@@ -131,9 +131,9 @@ description: >-
           </button>
           <div class="o-expandable_content">
               <p>
-                  Click the blue 'Save' button in the top left to save your changes as a draft. 
-                  Don't worry, the live site won't be affected. 
-                  Netlify CMS will build a temporary version of the website with your changes so that you can preview them. 
+                  Click the blue 'Save' button in the top left to save your changes as a draft.
+                  Don't worry, the live site won't be affected.
+                  Netlify CMS will build a temporary version of the website with your changes so that you can preview them.
                   After you click the 'Save' button you can close the tab and come back to it later if you want, your temporary changes will persist.
               </p>
               <div class="o-well">
@@ -144,10 +144,10 @@ description: >-
       <div class="o-expandable o-expandable__padded">
           <button class="o-expandable_header o-expandable_target"
                   title="Expand content">
-              <h3 class="h4 o-expandable_header-left o-expandable_label">
+              <h3 class="h4 o-expandable_label">
                   Step 5. Preview your changes
               </h3>
-              <span class="o-expandable_header-right o-expandable_link">
+              <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
                       <span class="u-visually-hidden-on-mobile">Show</span>
                       {% include icons/plus-round.svg %}
@@ -160,9 +160,9 @@ description: >-
           </button>
           <div class="o-expandable_content">
               <p>
-                  After you save some changes, Netlify CMS will build a preview of the entire website with your new content. 
-                  This takes a few minutes. 
-                  When the preview is ready you’ll see a "View Preview" link at the top of the editing page. 
+                  After you save some changes, Netlify CMS will build a preview of the entire website with your new content.
+                  This takes a few minutes.
+                  When the preview is ready you’ll see a "View Preview" link at the top of the editing page.
                   Feel free to share this link with your peers if you’d like feedback on your new page.
               </p>
               <div class="o-well">
@@ -173,10 +173,10 @@ description: >-
       <div class="o-expandable o-expandable__padded">
           <button class="o-expandable_header o-expandable_target"
                   title="Expand content">
-              <h3 class="h4 o-expandable_header-left o-expandable_label">
+              <h3 class="h4 o-expandable_label">
                   Step 6. Publish your changes
               </h3>
-              <span class="o-expandable_header-right o-expandable_link">
+              <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
                       <span class="u-visually-hidden-on-mobile">Show</span>
                       {% include icons/plus-round.svg %}
@@ -189,11 +189,11 @@ description: >-
           </button>
           <div class="o-expandable_content">
               <p>
-                  When you are ready to publish your changes, set the page's status to "Ready". 
-                  Then click the “Publish” drop down menu and choose "Publish now." 
+                  When you are ready to publish your changes, set the page's status to "Ready".
+                  Then click the “Publish” drop down menu and choose "Publish now."
               </p>
               <p>
-                  Hooray! 
+                  Hooray!
                   After you publish, our servers will re-deploy the live website and you'll see your changes in a few minutes at https://cfpb.github.io/design-system.
               </p>
               <div class="o-well">

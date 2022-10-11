@@ -64,7 +64,7 @@ description: >-
   <div class="o-well">
 
 
-  <h3>{% include icons/edit.svg %} Activity</h3>
+  <div class ="eyebrow">{% include icons/edit.svg %} Activity</div>
 
 
   <h2>Activity name</h2>

@@ -111,8 +111,7 @@
   //
 
   &_header {
-    display: block;
-    .u-clearfix();
+    display: flex;
 
     // Using the button element with .o-expandable_header requires setting
     // an explicit width.
@@ -126,14 +125,9 @@
     }
 
 
-    // TODO: Convert float layout to flexbox
     &-left {
-      float: left;
-      width: 85%;
-    }
-
-    &-right {
-      float: right;
+      // Grow to available width.
+      flex-grow: 1;
     }
   }
 

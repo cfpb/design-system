@@ -3,6 +3,17 @@
 
 #### Enhancement
 * `cfpb-expandables`
+  * [#1414](https://github.com/cfpb/design-system/pull/1414) Update cfpb-expandables.less to include `justify-content: space-between;` ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
+## v0.17.0 (2022-10-12)
+
+#### Enhancement
+* `cfpb-expandables`
   * [#1412](https://github.com/cfpb/design-system/pull/1412) Convert expandable header to flexbox ([@anselmbradford](https://github.com/anselmbradford))
 
 #### Internal

@@ -4840,12 +4840,7 @@ select.o-multiselect option {
   line-height: 1.375;
 }
 .o-expandable_header {
-  display: block;
-}
-.o-expandable_header:after {
-  content: '';
-  display: table;
-  clear: both;
+  display: flex;
 }
 button.o-expandable_header {
   width: 100%;
@@ -4854,12 +4849,8 @@ button.o-expandable_header {
 .o-expandable_header__spaced {
   padding-bottom: 0.9375em;
 }
-.o-expandable_header-left {
-  float: left;
-  width: 85%;
-}
-.o-expandable_header-right {
-  float: right;
+.o-expandable_header .o-expandable_label {
+  flex-grow: 1;
 }
 .o-expandable__padded .o-expandable_header {
   padding: 0.625em 0.9375em;

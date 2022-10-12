@@ -11,7 +11,7 @@ const HTML_SNIPPET = `
             <span class="o-expandable_header-left o-expandable_label">
                 Expandable Header 1
             </span>
-            <span class="o-expandable_header-right o-expandable_link">
+            <span class="o-expandable_link">
                 <span class="o-expandable_cue o-expandable_cue-open">
                     Show
                 </span>
@@ -37,7 +37,7 @@ const HTML_SNIPPET = `
             <span class="o-expandable_header-left o-expandable_label">
                 Expandable Header 2
             </span>
-            <span class="o-expandable_header-right o-expandable_link">
+            <span class="o-expandable_link">
                 <span class="o-expandable_cue o-expandable_cue-open">
                     Show
                 </span>

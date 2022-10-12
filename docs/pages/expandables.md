@@ -19,10 +19,10 @@ variation_groups:
                       o-expandable__border">
               <button class="o-expandable_header o-expandable_target"
                       title="Expand content">
-                  <h3 class="h4 o-expandable_header-left o-expandable_label">
+                  <h3 class="h4 o-expandable_label">
                       Expandable Header
                   </h3>
-                  <span class="o-expandable_header-right o-expandable_link">
+                  <span class="o-expandable_link">
                       <span class="o-expandable_cue o-expandable_cue-open">
                           <span class="u-visually-hidden-on-mobile">Show</span>
                           {% include icons/plus-round.svg %}
@@ -124,10 +124,10 @@ variation_groups:
                       o-expandable__border">
               <button class="o-expandable_header o-expandable_target"
                       title="Expand content">
-                  <h3 class="h4 o-expandable_header-left o-expandable_label">
+                  <h3 class="h4 o-expandable_label">
                       Expandable Header
                   </h3>
-                  <span class="o-expandable_header-right o-expandable_link">
+                  <span class="o-expandable_link">
                       <span class="o-expandable_cue o-expandable_cue-open">
                           <span class="u-visually-hidden-on-mobile">Show</span>
                           {% include icons/plus-round.svg %}
@@ -164,10 +164,10 @@ variation_groups:
               <div class="o-expandable o-expandable__padded">
                   <button class="o-expandable_header o-expandable_target"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                      <h3 class="h4 o-expandable_label">
                           Expandable Header 1
                       </h3>
-                      <span class="o-expandable_header-right o-expandable_link">
+                      <span class="o-expandable_link">
                           <span class="o-expandable_cue o-expandable_cue-open">
                               <span class="u-visually-hidden-on-mobile">Show</span>
                               {% include icons/plus-round.svg %}
@@ -192,10 +192,10 @@ variation_groups:
               <div class="o-expandable o-expandable__padded">
                   <button class="o-expandable_header o-expandable_target"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                      <h3 class="h4 o-expandable_label">
                           Expandable Header 2
                       </h3>
-                      <span class="o-expandable_header-right o-expandable_link">
+                      <span class="o-expandable_link">
                           <span class="o-expandable_cue o-expandable_cue-open">
                               <span class="u-visually-hidden-on-mobile">Show</span>
                               {% include icons/plus-round.svg %}
@@ -220,10 +220,10 @@ variation_groups:
               <div class="o-expandable o-expandable__padded">
                   <button class="o-expandable_header o-expandable_target"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                      <h3 class="h4 o-expandable_label">
                           Expandable Header 3
                       </h3>
-                      <span class="o-expandable_header-right o-expandable_link">
+                      <span class="o-expandable_link">
                           <span class="o-expandable_cue o-expandable_cue-open">
                               <span class="u-visually-hidden-on-mobile">Show</span>
                               {% include icons/plus-round.svg %}
@@ -288,10 +288,10 @@ variation_groups:
               <div class="o-expandable o-expandable__padded">
                   <button class="o-expandable_header o-expandable_target"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                      <h3 class="h4 o-expandable_label">
                           Expandable Header 1
                       </h3>
-                      <span class="o-expandable_header-right o-expandable_link">
+                      <span class="o-expandable_link">
                           <span class="o-expandable_cue o-expandable_cue-open">
                               <span class="u-visually-hidden-on-mobile">Show</span>
                               {% include icons/plus-round.svg %}
@@ -316,10 +316,10 @@ variation_groups:
               <div class="o-expandable o-expandable__padded">
                   <button class="o-expandable_header o-expandable_target"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                      <h3 class="h4 o-expandable_label">
                           Expandable Header 2
                       </h3>
-                      <span class="o-expandable_header-right o-expandable_link">
+                      <span class="o-expandable_link">
                           <span class="o-expandable_cue o-expandable_cue-open">
                               <span class="u-visually-hidden-on-mobile">Show</span>
                               {% include icons/plus-round.svg %}
@@ -344,10 +344,10 @@ variation_groups:
               <div class="o-expandable o-expandable__padded">
                   <button class="o-expandable_header o-expandable_target"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_header-left o-expandable_label">
+                      <h3 class="h4 o-expandable_label">
                           Expandable Header 3
                       </h3>
-                      <span class="o-expandable_header-right o-expandable_link">
+                      <span class="o-expandable_link">
                           <span class="o-expandable_cue o-expandable_cue-open">
                               <span class="u-visually-hidden-on-mobile">Show</span>
                               {% include icons/plus-round.svg %}
@@ -495,7 +495,7 @@ variation_groups:
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
       - variation_name: Header elements
         variation_description: >
-          
+
           These additional elements are useful for more complicated expandables that need to convey more information than just ‘Show/Hide’ before the user expands it.
 
 

@@ -4841,6 +4841,7 @@ select.o-multiselect option {
 }
 .o-expandable_header {
   display: flex;
+  justify-content: space-between;
 }
 button.o-expandable_header {
   width: 100%;

@@ -1,3 +1,22 @@
+
+## v0.17.0 (2022-10-12)
+
+#### Enhancement
+* `cfpb-expandables`
+  * [#1412](https://github.com/cfpb/design-system/pull/1412) Convert expandable header to flexbox ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1397](https://github.com/cfpb/design-system/pull/1397) Add ability to add custom jumplinks in admin view ([@wpears](https://github.com/wpears))
+* [#1396](https://github.com/cfpb/design-system/pull/1396) Add a subsection eyebrow ([@wpears](https://github.com/wpears))
+
+#### Committers: 5
+- Andy Chosak ([@chosak](https://github.com/chosak))
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
+- [@jenn-franklin](https://github.com/jenn-franklin)
+
+
 ## v0.17.0 (2022-08-10)
 
 #### Enhancement

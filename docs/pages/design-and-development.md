@@ -23,7 +23,7 @@ description: >-
   ### Lorem ipsum dolor sit amet: 
 
 
-  * [](https://cfpb.github.io/design-system/guidelines/accessibility-principles)Lorem ipsum 
+  * Lorem ipsum 
 
   * Lorem ipsum
 

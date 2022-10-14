@@ -10,19 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
 
       # Install Node and configure its cache.
-      - uses: actions/setup-node@v2.4.0
+      - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
 
       # https://github.com/actions/cache/blob/master/examples.md#node---yarn
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - uses: actions/cache@v2.1.6
+      - uses: actions/cache@v3
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -37,7 +37,7 @@ jobs:
 
       # https://github.com/actions/cache/blob/master/examples.md#ruby---bundler
       - name: Set up Bundler cache
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v3
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**Gemfile.lock') }}
@@ -55,7 +55,7 @@ jobs:
 
       - name: Attach results as artifact to GitHub Actions run
         if: ${{ always() }}
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v3
         with:
           name: lighthouse-results
           path: .lighthouseci

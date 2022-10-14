@@ -1398,17 +1398,8 @@ pre code {
   max-width: 1em;
 }
 .cf-icon-svg__updating {
-  -webkit-animation: updating-animation 1.25s infinite linear;
-          animation: updating-animation 1.25s infinite linear;
+  animation: updating-animation 1.25s infinite linear;
   transform-origin: 50% 50%;
-}
-@-webkit-keyframes updating-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
 }
 @keyframes updating-animation {
   0% {

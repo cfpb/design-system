@@ -51,13 +51,13 @@ pre[class*="language-"] {
   overflow: auto;
 }
 
-:not(pre) > code[class*="language-"],
+:not( pre ) > code[class*="language-"],
 pre[class*="language-"] {
   background: #f5f2f0;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not( pre ) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em;
   white-space: normal;
@@ -103,7 +103,7 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
   color: #a67f59;
-  background: hsla(0, 0%, 100%, .5);
+  background: hsla( 0, 0%, 100%, .5 );
 }
 
 .token.atrule,
@@ -126,6 +126,7 @@ pre[class*="language-"] {
 .token.bold {
   font-weight: bold;
 }
+
 .token.italic {
   font-style: italic;
 }
@@ -203,12 +204,12 @@ pre[class*="language-"] {
 .css .nt + .nt { color: #999; }
 
 
-
 /* Custom Syntax styles */
 code,
 pre {
   font-family: "Input Mono", Consolas, Monaco, "Courier New", monospace;
 }
+
 code {
   padding: .25em .5em;
   font-size: 85%;

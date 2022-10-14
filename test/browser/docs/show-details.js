@@ -2,7 +2,6 @@
 /* eslint-disable no-undef */
 
 describe( 'The "show details" toggling feature', () => {
-
   let showDetailsButton;
   let hideDetailsButton;
   let detailsTabs;
@@ -24,13 +23,10 @@ describe( 'The "show details" toggling feature', () => {
   } );
 
   it( 'should show/hide details across all component pages', () => {
-
     componentPages.forEach( async componentPage => {
-
       const componentName = await componentPage.getText();
       const componentUrl = await componentPage.getAttribute( 'href' );
       describe( `The ${ componentName } component page`, () => {
-
         before( async () => {
           await browser.url( componentUrl );
           await browser.refresh();
@@ -40,7 +36,10 @@ describe( 'The "show details" toggling feature', () => {
         } );
 
         it( 'should hide snippet tabs by default', async () => {
-          if ( await !showDetailsButton.isExisting() || await !hideDetailsButton.isExisting() ) {
+          if (
+            await !showDetailsButton.isExisting() ||
+            await !hideDetailsButton.isExisting()
+          ) {
             this.skip();
           }
           expect( await showDetailsButton.isDisplayed() ).toBeTruthy();
@@ -51,7 +50,10 @@ describe( 'The "show details" toggling feature', () => {
         } );
 
         it( 'should show code snippets when toggle button is clicked', async () => {
-          if ( await !showDetailsButton.isExisting() || await !hideDetailsButton.isExisting() ) {
+          if (
+            await !showDetailsButton.isExisting() ||
+            await !hideDetailsButton.isExisting()
+          ) {
             this.skip();
           }
           await showDetailsButton.click();
@@ -63,7 +65,6 @@ describe( 'The "show details" toggling feature', () => {
         } );
 
         it( 'should re-hide code snippets when toggle button is clicked again', async () => {
-
           await hideDetailsButton.click();
           expect( await showDetailsButton.isDisplayed() ).toBeTruthy();
           expect( await hideDetailsButton.isDisplayed() ).toBeFalsy();
@@ -72,9 +73,6 @@ describe( 'The "show details" toggling feature', () => {
           } );
         } );
       } );
-
     } );
-
   } );
-
 } );

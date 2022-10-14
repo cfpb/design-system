@@ -1,2 +1,6 @@
 docs/_site
 docs/dist
+test/unit-test-coverage/
+.lighthouseci
+.github
+CHANGELOG.md

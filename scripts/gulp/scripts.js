@@ -14,7 +14,8 @@ const webpackStream = require( 'webpack-stream' );
  * @returns {Object} An output stream from gulp.
  */
 function scriptsComponents() {
-  return gulp.src( 'packages/cfpb-design-system/src/cfpb-design-system.js' )
+  return gulp
+    .src( 'packages/cfpb-design-system/src/cfpb-design-system.js' )
     .pipe( vinylNamed() )
     .pipe( webpackStream( webpackConfig.commonConf, webpack ) )
     .on( 'error', handleErrors.bind( this, { exitProcess: true } ) )
@@ -23,6 +24,4 @@ function scriptsComponents() {
 
 gulp.task( 'scripts:components', scriptsComponents );
 
-gulp.task( 'scripts', gulp.parallel(
-  'scripts:components'
-) );
+gulp.task( 'scripts', gulp.parallel( 'scripts:components' ) );

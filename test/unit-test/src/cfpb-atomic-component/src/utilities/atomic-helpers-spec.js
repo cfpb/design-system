@@ -25,9 +25,10 @@ describe( 'atomic-helpers', () => {
 
   describe( '.checkDom()', () => {
     it( 'should throw an error if element DOM not found', () => {
-      const errMsg = 'null is not valid. ' +
-                     'Check that element is a DOM node with ' +
-                     `class ".${ testClass }"`;
+      const errMsg =
+        'null is not valid. ' +
+        'Check that element is a DOM node with ' +
+        `class ".${ testClass }"`;
       function errFunc() {
         checkDom( null, testClass );
       }
@@ -42,19 +43,15 @@ describe( 'atomic-helpers', () => {
       expect( errFunc ).toThrow( Error, errMsg );
     } );
 
-    it( 'should return the correct HTMLElement when direct element is searched',
-      () => {
-        const dom = checkDom( componentDom, testClass );
-        expect( dom ).toStrictEqual( componentDom );
-      }
-    );
+    it( 'should return the correct HTMLElement when direct element is searched', () => {
+      const dom = checkDom( componentDom, testClass );
+      expect( dom ).toStrictEqual( componentDom );
+    } );
 
-    it( 'should return the correct HTMLElement when parent element is searched',
-      () => {
-        const dom = checkDom( containerDom, testClass );
-        expect( dom ).toStrictEqual( componentDom );
-      }
-    );
+    it( 'should return the correct HTMLElement when parent element is searched', () => {
+      const dom = checkDom( containerDom, testClass );
+      expect( dom ).toStrictEqual( componentDom );
+    } );
   } );
 
   describe( '.instantiateAll()', () => {
@@ -93,7 +90,6 @@ describe( 'atomic-helpers', () => {
   } );
 
   describe( '.destroyInitFlag()', () => {
-
     beforeEach( () => {
       setInitFlag( componentDom );
     } );

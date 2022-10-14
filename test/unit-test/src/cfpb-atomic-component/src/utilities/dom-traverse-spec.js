@@ -1,4 +1,7 @@
-import { closest, queryOne } from '../../../../../../packages/cfpb-atomic-component/src/utilities/dom-traverse.js';
+import {
+  closest,
+  queryOne
+} from '../../../../../../packages/cfpb-atomic-component/src/utilities/dom-traverse.js';
 
 let testBlockA;
 let testBlockB;
@@ -25,7 +28,6 @@ describe( 'Dom Traverse', () => {
     testBlockD = document.getElementById( 'test-block-d' );
   } );
   describe( 'queryOne()', () => {
-
     it( 'should return the first elem if the expr is a string', () => {
       const query = queryOne( 'div' );
 
@@ -48,16 +50,14 @@ describe( 'Dom Traverse', () => {
   } );
 
   describe( 'closest()', () => {
-    it( 'should find the current DOM node if the node matches the selector',
-      () => {
-        let element = closest( testBlockD, 'div' );
-        expect( element === testBlockD ).toBe( true );
-        element = closest( testBlockD, 'div div' );
-        expect( element === testBlockD ).toBe( true );
-      }
-    );
+    it( 'should find the current DOM node if the node matches the selector', () => {
+      let element = closest( testBlockD, 'div' );
+      expect( element === testBlockD ).toBe( true );
+      element = closest( testBlockD, 'div div' );
+      expect( element === testBlockD ).toBe( true );
+    } );
 
-    it( 'should return null if a node isn\'t found', () => {
+    it( "should return null if a node isn't found", () => {
       let element = closest( testBlockA, '.test-block' );
       expect( element === null ).toBe( true );
       element = closest( testBlockA, 'div.test' );

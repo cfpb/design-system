@@ -1,31 +1,30 @@
 import MultiselectUtils from '../../../../../../packages/cfpb-forms/src/organisms/MultiselectUtils.js';
 
 describe( 'MultiselectUtils', () => {
-
   describe( 'create()', () => {
     beforeAll( () => {
       const heading = MultiselectUtils.create( 'h1', {
         'textContent': 'Create Heading Text',
-        'id':          'create-heading-id',
-        'className':   'create-heading-class',
-        'data-name':   'create-heading-data'
+        'id': 'create-heading-id',
+        'className': 'create-heading-class',
+        'data-name': 'create-heading-data'
       } );
 
       MultiselectUtils.create( 'span', {
         'textContent': 'Heading Span',
-        'id':          'create-span-id',
-        'className':   'create-span-class',
-        'data-name':   'create-span-data',
-        'inside':      heading
+        'id': 'create-span-id',
+        'className': 'create-span-class',
+        'data-name': 'create-span-data',
+        'inside': heading
       } );
 
       document.body.appendChild( heading );
 
       MultiselectUtils.create( 'div', {
-        'id':        'create-div-id',
+        'id': 'create-div-id',
         'className': 'create-div-class',
         'data-name': 'create-div-data',
-        'around':    heading
+        'around': heading
       } );
     } );
 

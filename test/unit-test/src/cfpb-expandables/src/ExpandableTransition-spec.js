@@ -38,105 +38,93 @@ describe( 'Expandable', () => {
   } );
 
   describe( 'initialized state', () => {
-    it( 'should be collapsed when the OPEN_DEFAULT class is not present',
-      () => {
-        expect( expandableDom1.offsetHeight ).toBe( 0 );
-        expect( expandableDom1.style.maxHeight ).toBe( '0' );
-        expect( expandableDom1.classList.contains(
-          'o-expandable_content__expanded'
-        ) ).toBe( false );
-        expect( expandableDom1.classList.contains(
-          'o-expandable_content__collapsed'
-        ) ).toBe( true );
-      }
-    );
+    it( 'should be collapsed when the OPEN_DEFAULT class is not present', () => {
+      expect( expandableDom1.offsetHeight ).toBe( 0 );
+      expect( expandableDom1.style.maxHeight ).toBe( '0' );
+      expect(
+        expandableDom1.classList.contains( 'o-expandable_content__expanded' )
+      ).toBe( false );
+      expect(
+        expandableDom1.classList.contains( 'o-expandable_content__collapsed' )
+      ).toBe( true );
+    } );
 
-    it( 'should be open when the OPEN_DEFAULT class is present',
-      () => {
-        expect( expandableDom2.style.maxHeight ).not.toBe( '0' );
-        expect( expandableDom2.classList.contains(
-          'o-expandable_content__expanded'
-        ) ).toBe( true );
-        expect( expandableDom2.classList.contains(
-          'o-expandable_content__collapsed'
-        ) ).toBe( false );
-      }
-    );
+    it( 'should be open when the OPEN_DEFAULT class is present', () => {
+      expect( expandableDom2.style.maxHeight ).not.toBe( '0' );
+      expect(
+        expandableDom2.classList.contains( 'o-expandable_content__expanded' )
+      ).toBe( true );
+      expect(
+        expandableDom2.classList.contains( 'o-expandable_content__collapsed' )
+      ).toBe( false );
+    } );
   } );
 
   describe( 'expanded state', () => {
-    it( 'should be expanded when the expand method is called',
-      () => {
-        initialized1.expand();
+    it( 'should be expanded when the expand method is called', () => {
+      initialized1.expand();
 
-        expect( expandableDom1.style.maxHeight ).not.toBe( '0' );
-        expect( expandableDom1.classList.contains(
-          'o-expandable_content__expanded'
-        ) ).toBe( true );
-        expect( expandableDom1.classList.contains(
-          'o-expandable_content__collapsed'
-        ) ).toBe( false );
-      }
-    );
+      expect( expandableDom1.style.maxHeight ).not.toBe( '0' );
+      expect(
+        expandableDom1.classList.contains( 'o-expandable_content__expanded' )
+      ).toBe( true );
+      expect(
+        expandableDom1.classList.contains( 'o-expandable_content__collapsed' )
+      ).toBe( false );
+    } );
   } );
 
   describe( 'collapsed state', () => {
-    it( 'should be collpased when the collapse method is called',
-      () => {
-        initialized2.collapse();
+    it( 'should be collpased when the collapse method is called', () => {
+      initialized2.collapse();
 
-        expect( expandableDom2.style.maxHeight ).toBe( '0' );
-        expect( expandableDom2.classList.contains(
-          'o-expandable_content__expanded'
-        ) ).toBe( false );
-        expect( expandableDom2.classList.contains(
-          'o-expandable_content__collapsed'
-        ) ).toBe( true );
-      }
-    );
+      expect( expandableDom2.style.maxHeight ).toBe( '0' );
+      expect(
+        expandableDom2.classList.contains( 'o-expandable_content__expanded' )
+      ).toBe( false );
+      expect(
+        expandableDom2.classList.contains( 'o-expandable_content__collapsed' )
+      ).toBe( true );
+    } );
   } );
 
   describe( 'toggled state', () => {
-    it( 'should be expanded when the expandable starts out collapsed',
-      () => {
-        let expandBeginFired = false;
+    it( 'should be expanded when the expandable starts out collapsed', () => {
+      let expandBeginFired = false;
 
-        initialized1.addEventListener( 'expandBegin', () => {
-          expandBeginFired = true;
-        } );
+      initialized1.addEventListener( 'expandBegin', () => {
+        expandBeginFired = true;
+      } );
 
-        initialized1.toggleExpandable();
+      initialized1.toggleExpandable();
 
-        expect( expandBeginFired ).toBe( true );
-        expect( expandableDom1.style.maxHeight ).not.toBe( '0' );
-        expect( expandableDom1.classList.contains(
-          'o-expandable_content__expanded'
-        ) ).toBe( true );
-        expect( expandableDom1.classList.contains(
-          'o-expandable_content__collapsed'
-        ) ).toBe( false );
-      }
-    );
+      expect( expandBeginFired ).toBe( true );
+      expect( expandableDom1.style.maxHeight ).not.toBe( '0' );
+      expect(
+        expandableDom1.classList.contains( 'o-expandable_content__expanded' )
+      ).toBe( true );
+      expect(
+        expandableDom1.classList.contains( 'o-expandable_content__collapsed' )
+      ).toBe( false );
+    } );
 
-    it( 'should be collapsed when the expandable starts out expanded',
-      () => {
-        let collapseBeginFired = false;
+    it( 'should be collapsed when the expandable starts out expanded', () => {
+      let collapseBeginFired = false;
 
-        initialized2.addEventListener( 'collapseBegin', () => {
-          collapseBeginFired = true;
-        } );
+      initialized2.addEventListener( 'collapseBegin', () => {
+        collapseBeginFired = true;
+      } );
 
-        initialized2.toggleExpandable();
+      initialized2.toggleExpandable();
 
-        expect( collapseBeginFired ).toBe( true );
-        expect( expandableDom2.style.maxHeight ).toBe( '0' );
-        expect( expandableDom2.classList.contains(
-          'o-expandable_content__expanded'
-        ) ).toBe( false );
-        expect( expandableDom2.classList.contains(
-          'o-expandable_content__collapsed'
-        ) ).toBe( true );
-      }
-    );
+      expect( collapseBeginFired ).toBe( true );
+      expect( expandableDom2.style.maxHeight ).toBe( '0' );
+      expect(
+        expandableDom2.classList.contains( 'o-expandable_content__expanded' )
+      ).toBe( false );
+      expect(
+        expandableDom2.classList.contains( 'o-expandable_content__collapsed' )
+      ).toBe( true );
+    } );
   } );
 } );

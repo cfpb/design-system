@@ -6,22 +6,18 @@ let transition;
 let contentDom;
 let content2Dom;
 
-const HTML_SNIPPET = '<div class="content-1"></div>' +
-                     '<div class="content-2"></div>';
+const HTML_SNIPPET =
+  '<div class="content-1"></div>' + '<div class="content-2"></div>';
 
 describe( 'BaseTransition', () => {
   beforeEach( () => {
     document.body.innerHTML = HTML_SNIPPET;
     contentDom = document.querySelector( '.content-1' );
     content2Dom = document.querySelector( '.content-2' );
-    transition =
-      new BaseTransition(
-        contentDom,
-        {
-          CSS_PROPERTY: 'top',
-          BASE_CLASS: 'u-test-transition'
-        }
-      );
+    transition = new BaseTransition( contentDom, {
+      CSS_PROPERTY: 'top',
+      BASE_CLASS: 'u-test-transition'
+    } );
   } );
 
   describe( '.init()', () => {
@@ -57,7 +53,6 @@ describe( 'BaseTransition', () => {
 
   describe( '.halt()', () => {
     xit( 'should immediately fire transition end event', () => {
-
       /* TODO: To test halt() the transition needs to be started and
          then halt() needs to be called before the transition
          duration has completed. */

@@ -22,8 +22,8 @@ describe( 'MoveTransition', () => {
 
     it( 'should apply u-move-to-origin class', () => {
       transition.moveToOrigin();
-      const classes = 'content-1 u-move-transition ' +
-                      'u-is-animating u-move-to-origin';
+      const classes =
+        'content-1 u-move-transition ' + 'u-is-animating u-move-to-origin';
       expect( contentDom.className ).toStrictEqual( classes );
       transition.addEventListener( 'transitionend', () => {
         const classes = 'content-1 u-move-transition u-move-to-origin';
@@ -31,18 +31,17 @@ describe( 'MoveTransition', () => {
       } );
     } );
 
-    it( 'should remove u-is-animating class when transition duration is zero',
-      () => {
-        transition.animateOff();
-        transition.moveToOrigin();
-        const classes = 'content-1 u-move-transition ' +
-                      'u-no-animation u-move-to-origin';
+    it( 'should remove u-is-animating class when transition duration is zero', () => {
+      transition.animateOff();
+      transition.moveToOrigin();
+      const classes =
+        'content-1 u-move-transition ' + 'u-no-animation u-move-to-origin';
+      expect( contentDom.className ).toStrictEqual( classes );
+      transition.addEventListener( 'transitionend', () => {
+        const classes = 'content-1 u-move-transition u-move-to-origin';
         expect( contentDom.className ).toStrictEqual( classes );
-        transition.addEventListener( 'transitionend', () => {
-          const classes = 'content-1 u-move-transition u-move-to-origin';
-          expect( contentDom.className ).toStrictEqual( classes );
-        } );
       } );
+    } );
   } );
 
   describe( '.moveRight()', () => {
@@ -113,12 +112,12 @@ describe( 'MoveTransition', () => {
     } );
 
     it( 'should throw error when move left range is out-of-range', () => {
-
       function checkMoveLeftOutOfRange() {
         return transition.moveLeft( 4 );
       }
-      expect( checkMoveLeftOutOfRange )
-        .toThrow( 'MoveTransition: moveLeft count is out of range!' );
+      expect( checkMoveLeftOutOfRange ).toThrow(
+        'MoveTransition: moveLeft count is out of range!'
+      );
     } );
   } );
 } );

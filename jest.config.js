@@ -5,9 +5,7 @@ module.exports = {
     '^.+\\.jsx?$': 'babel-jest'
   },
   collectCoverage: true,
-  collectCoverageFrom: [
-    '<rootDir>/packages/**/*.js'
-  ],
+  collectCoverageFrom: [ '<rootDir>/packages/**/*.js' ],
   coveragePathIgnorePatterns: [
     '<rootDir>/gulpfile.js',
     '<rootDir>/.*.config.js',

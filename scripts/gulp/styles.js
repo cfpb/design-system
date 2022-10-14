@@ -11,30 +11,33 @@ const gulpRename = require( 'gulp-rename' );
  * @returns {PassThrough} A source stream.
  */
 function stylesComponents() {
-  return gulp.src( 'packages/*/src/*.less' )
-    .pipe( gulpIgnore.exclude( vf => {
-      /* Exclude Less files that don't share the same name as the directory
+  return gulp
+    .src( 'packages/*/src/*.less' )
+    .pipe(
+      gulpIgnore.exclude( vf => {
+        /* Exclude Less files that don't share the same name as the directory
          they're in. This filters out things like vars.less but still
          includes cfpb-core.less. */
-      const matches = vf.path.match( /\/([\w-]*)\/src\/([\w-]*)\.less/ );
-      // We also exclude grid. It needs its own special task. See below.
-      return matches[2] === 'cfpb-grid' || matches[1] !== matches[2];
-    } ) )
-    .pipe( gulpLess( {
-      paths: [ 'node_modules/cfpb-*/src/' ]
-    } ) )
-    .pipe( gulpPostcss( [
-      autoprefixer()
-    ] ) )
-    .pipe( gulpRename( path => {
-      path.dirname = path.dirname.replace( '/src', '' );
-      path.extname = '.css';
-    } ) )
+        const matches = vf.path.match( /\/([\w-]*)\/src\/([\w-]*)\.less/ );
+        // We also exclude grid. It needs its own special task. See below.
+        return matches[2] === 'cfpb-grid' || matches[1] !== matches[2];
+      } )
+    )
+    .pipe(
+      gulpLess( {
+        paths: [ 'node_modules/cfpb-*/src/' ]
+      } )
+    )
+    .pipe( gulpPostcss( [ autoprefixer() ] ) )
+    .pipe(
+      gulpRename( path => {
+        path.dirname = path.dirname.replace( '/src', '' );
+        path.extname = '.css';
+      } )
+    )
     .pipe( gulp.dest( 'packages' ) );
 }
 
 gulp.task( 'styles:components', stylesComponents );
 
-gulp.task( 'styles', gulp.parallel(
-  'styles:components'
-) );
+gulp.task( 'styles', gulp.parallel( 'styles:components' ) );

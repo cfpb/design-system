@@ -17,13 +17,7 @@ module.exports = {
     {
       name: 'removeAttrs',
       params: {
-        attrs: [
-          'fill',
-          'width',
-          'height',
-          'path:class',
-          'circle:class'
-        ]
+        attrs: [ 'fill', 'width', 'height', 'path:class', 'circle:class' ]
       }
     },
     {

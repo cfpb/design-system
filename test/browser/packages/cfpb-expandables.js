@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 
 describe( 'Basic CFPB expandable', () => {
-
   let expandableHeader;
   let expandableContent;
 
@@ -28,5 +27,4 @@ describe( 'Basic CFPB expandable', () => {
     await expandableContent.waitForDisplayed( { reverse: true } );
     expect( await expandableContent.isDisplayed() ).toBeFalsy();
   } );
-
 } );

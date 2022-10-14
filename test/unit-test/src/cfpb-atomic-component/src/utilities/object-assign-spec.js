@@ -8,21 +8,21 @@ let UNDEFINED;
 describe( 'object-assign', () => {
   beforeEach( () => {
     testObjectA = {
-      str:  'test',
+      str: 'test',
       func: () => 'testStr',
-      num:  1
+      num: 1
     };
 
     testObjectB = {
-      obj:   { test: 2 },
-      arr:   [ 3 ],
+      obj: { test: 2 },
+      arr: [ 3 ],
       _null: null
     };
 
     testObjectC = {
-      bool:  Boolean( false ),
+      bool: Boolean( false ),
       undef: UNDEFINED,
-      num:   4
+      num: 4
     };
   } );
 

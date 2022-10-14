@@ -69,7 +69,6 @@ let contentDom1;
 let contentDom2;
 
 describe( 'standard Expandable', () => {
-
   beforeEach( () => {
     document.body.innerHTML = HTML_SNIPPET;
     expandableDom1 = document.querySelector( '#test-subject-one' );
@@ -85,30 +84,32 @@ describe( 'standard Expandable', () => {
 
   describe( 'initialized state', () => {
     it( 'should be initialized', () => {
-      expect( expandableDom1.getAttribute( 'data-js-hook' ) ).toBe( 'state_atomic_init' );
-      expect( expandableDom2.getAttribute( 'data-js-hook' ) ).toBe( 'state_atomic_init' );
+      expect( expandableDom1.getAttribute( 'data-js-hook' ) ).toBe(
+        'state_atomic_init'
+      );
+      expect( expandableDom2.getAttribute( 'data-js-hook' ) ).toBe(
+        'state_atomic_init'
+      );
     } );
 
-    it( 'should be collapsed when the OPEN_DEFAULT class is not present',
-      () => {
-        expect( contentDom1.style.maxHeight ).toBe( '0' );
-        expect( targetDom1.classList.contains(
-          'o-expandable_target__expanded'
-        ) ).toBe( false );
-        expect( targetDom1.classList.contains(
-          'o-expandable_target__collapsed'
-        ) ).toBe( true );
-      }
-    );
+    it( 'should be collapsed when the OPEN_DEFAULT class is not present', () => {
+      expect( contentDom1.style.maxHeight ).toBe( '0' );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( false );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( true );
+    } );
 
     it( 'should be expanded when the OPEN_DEFAULT class is present', () => {
       expect( contentDom2.style.maxHeight ).not.toBe( '0' );
-      expect( targetDom2.classList.contains(
-        'o-expandable_target__expanded'
-      ) ).toBe( true );
-      expect( targetDom2.classList.contains(
-        'o-expandable_target__collapsed'
-      ) ).toBe( false );
+      expect(
+        targetDom2.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( true );
+      expect(
+        targetDom2.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( false );
     } );
 
     it( 'should return label text', () => {
@@ -121,12 +122,12 @@ describe( 'standard Expandable', () => {
       simulateEvent( 'click', targetDom1 );
 
       expect( contentDom1.style.maxHeight ).not.toBe( '0' );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__expanded'
-      ) ).toBe( true );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__collapsed'
-      ) ).toBe( false );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( true );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( false );
     } );
 
     it( 'should go back to initial state on second click', () => {
@@ -134,18 +135,17 @@ describe( 'standard Expandable', () => {
       simulateEvent( 'click', targetDom1 );
 
       expect( contentDom1.style.maxHeight ).toBe( '0' );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__expanded'
-      ) ).toBe( false );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__collapsed'
-      ) ).toBe( true );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( false );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( true );
     } );
   } );
 } );
 
 describe( 'accordion Expandables', () => {
-
   beforeEach( () => {
     document.body.innerHTML = HTML_SNIPPET;
     expandableGroup = document.querySelector( '.o-expandable-group' );
@@ -162,21 +162,23 @@ describe( 'accordion Expandables', () => {
 
   describe( 'initialized state', () => {
     it( 'should be initialized', () => {
-      expect( expandableDom1.getAttribute( 'data-js-hook' ) ).toBe( 'state_atomic_init' );
-      expect( expandableDom2.getAttribute( 'data-js-hook' ) ).toBe( 'state_atomic_init' );
+      expect( expandableDom1.getAttribute( 'data-js-hook' ) ).toBe(
+        'state_atomic_init'
+      );
+      expect( expandableDom2.getAttribute( 'data-js-hook' ) ).toBe(
+        'state_atomic_init'
+      );
     } );
 
-    it( 'should be collapsed when the OPEN_DEFAULT class is not present',
-      () => {
-        expect( contentDom1.style.maxHeight ).toBe( '0' );
-        expect( targetDom1.classList.contains(
-          'o-expandable_target__expanded'
-        ) ).toBe( false );
-        expect( targetDom1.classList.contains(
-          'o-expandable_target__collapsed'
-        ) ).toBe( true );
-      }
-    );
+    it( 'should be collapsed when the OPEN_DEFAULT class is not present', () => {
+      expect( contentDom1.style.maxHeight ).toBe( '0' );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( false );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( true );
+    } );
   } );
 
   describe( 'interactions', () => {
@@ -184,12 +186,12 @@ describe( 'accordion Expandables', () => {
       simulateEvent( 'click', targetDom1 );
 
       expect( contentDom1.style.maxHeight ).not.toBe( '0' );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__expanded'
-      ) ).toBe( true );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__collapsed'
-      ) ).toBe( false );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( true );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( false );
     } );
 
     it( 'should collapse on a second click', () => {
@@ -197,12 +199,12 @@ describe( 'accordion Expandables', () => {
       simulateEvent( 'click', targetDom1 );
 
       expect( contentDom1.style.maxHeight ).toBe( '0' );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__expanded'
-      ) ).toBe( false );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__collapsed'
-      ) ).toBe( true );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( false );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( true );
     } );
 
     it( 'should expand on a third click', () => {
@@ -211,12 +213,12 @@ describe( 'accordion Expandables', () => {
       simulateEvent( 'click', targetDom1 );
 
       expect( contentDom1.style.maxHeight ).not.toBe( '0' );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__expanded'
-      ) ).toBe( true );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__collapsed'
-      ) ).toBe( false );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( true );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( false );
     } );
 
     it( 'should swap the expanded expandable', () => {
@@ -225,18 +227,18 @@ describe( 'accordion Expandables', () => {
 
       expect( contentDom1.style.maxHeight ).toBe( '0' );
       expect( contentDom2.style.maxHeight ).not.toBe( '0' );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__expanded'
-      ) ).toBe( false );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__collapsed'
-      ) ).toBe( true );
-      expect( targetDom2.classList.contains(
-        'o-expandable_target__expanded'
-      ) ).toBe( true );
-      expect( targetDom2.classList.contains(
-        'o-expandable_target__collapsed'
-      ) ).toBe( false );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( false );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( true );
+      expect(
+        targetDom2.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( true );
+      expect(
+        targetDom2.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( false );
     } );
 
     it( 'should swap the expanded expandable when reactivated', () => {
@@ -246,18 +248,18 @@ describe( 'accordion Expandables', () => {
 
       expect( contentDom1.style.maxHeight ).not.toBe( '0' );
       expect( contentDom2.style.maxHeight ).toBe( '0' );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__expanded'
-      ) ).toBe( true );
-      expect( targetDom1.classList.contains(
-        'o-expandable_target__collapsed'
-      ) ).toBe( false );
-      expect( targetDom2.classList.contains(
-        'o-expandable_target__expanded'
-      ) ).toBe( false );
-      expect( targetDom2.classList.contains(
-        'o-expandable_target__collapsed'
-      ) ).toBe( true );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( true );
+      expect(
+        targetDom1.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( false );
+      expect(
+        targetDom2.classList.contains( 'o-expandable_target__expanded' )
+      ).toBe( false );
+      expect(
+        targetDom2.classList.contains( 'o-expandable_target__collapsed' )
+      ).toBe( true );
     } );
   } );
 } );

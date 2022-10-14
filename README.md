@@ -2,14 +2,13 @@
 
 The Consumer Financial Protection Bureau's user interface framework and documentation.
 
-| atomic-component | buttons | core | expandables | forms | grid
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-atomic-component.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-atomic-component) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-buttons.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-buttons)  | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-core.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-core)  | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-expandables.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-expandables)  | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-forms.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-forms)  | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-grid.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-grid)  |
+|                                                                  atomic-component                                                                   |                                                              buttons                                                              |                                                            core                                                             |                                                                expandables                                                                |                                                             forms                                                             |                                                            grid                                                             |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
+| [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-atomic-component.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-atomic-component) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-buttons.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-buttons) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-core.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-core) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-expandables.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-expandables) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-forms.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-forms) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-grid.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-grid) |
 
-| icons | layout | notifications | pagination | tables | typography |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-icons.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-icons)  | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-layout.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-layout)  | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-notifications.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-notifications)  | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-pagination.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-pagination)  | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-tables.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-tables)  | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-typography.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-typography)  |
-
+|                                                             icons                                                             |                                                             layout                                                              |                                                                 notifications                                                                 |                                                               pagination                                                                |                                                             tables                                                              |                                                               typography                                                                |
+| :---------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: |
+| [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-icons.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-icons) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-layout.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-layout) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-notifications.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-notifications) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-pagination.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-pagination) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-tables.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-tables) | [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-typography.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-typography) |
 
 ## Installation
 
@@ -28,7 +27,6 @@ yarn add @cfpb/cfpb-design-system
 # or
 npm install @cfpb/cfpb-design-system
 ```
-
 
 ## Usage
 
@@ -52,9 +50,8 @@ Expandable.init( document.querySelector( '#container' ) );
 ```
 
 > NOTE: Be sure to run the Less files through
-  [Autoprefixer](https://github.com/postcss/autoprefixer),
-  or your compiled CSS might not work perfectly in older browsers.
-
+> [Autoprefixer](https://github.com/postcss/autoprefixer),
+> or your compiled CSS might not work perfectly in older browsers.
 
 ## Documentation
 
@@ -90,8 +87,8 @@ yarn a11y
 
 Please view our [contribution guidelines.](CONTRIBUTING.md)
 
-
 ## Open source licensing info
+
 1. [TERMS](TERMS.md)
 2. [LICENSE](LICENSE)
 3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)

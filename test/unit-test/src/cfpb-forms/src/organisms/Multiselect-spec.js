@@ -50,9 +50,7 @@ describe( 'Multiselect', () => {
       multiselect.init();
       multiselect.expand();
       multiselectDom = document.querySelector( '.o-multiselect' );
-      const fieldset = multiselectDom.querySelector(
-        '.o-multiselect_fieldset'
-      );
+      const fieldset = multiselectDom.querySelector( '.o-multiselect_fieldset' );
 
       expect( multiselectDom.className ).toBe( 'o-multiselect u-active' );
       expect( fieldset.getAttribute( 'aria-hidden' ) ).toBe( 'false' );
@@ -63,9 +61,7 @@ describe( 'Multiselect', () => {
       multiselect.expand();
       multiselect.collapse();
       multiselectDom = document.querySelector( '.o-multiselect' );
-      const fieldset = multiselectDom.querySelector(
-        '.o-multiselect_fieldset'
-      );
+      const fieldset = multiselectDom.querySelector( '.o-multiselect_fieldset' );
 
       expect( multiselectDom.className ).toBe( 'o-multiselect' );
       expect( fieldset.getAttribute( 'aria-hidden' ) ).toBe( 'true' );
@@ -86,9 +82,7 @@ describe( 'Multiselect', () => {
     it( 'should open when the search input is focused', function() {
       multiselect.init();
       multiselectDom = document.querySelector( '.o-multiselect' );
-      const fieldset = multiselectDom.querySelector(
-        '.o-multiselect_fieldset'
-      );
+      const fieldset = multiselectDom.querySelector( '.o-multiselect_fieldset' );
       const search = document.querySelector( '#test-select' );
       search.focus();
 
@@ -101,9 +95,7 @@ describe( 'Multiselect', () => {
       multiselect.init();
       multiselect.expand();
       multiselectDom = document.querySelector( '.o-multiselect' );
-      const fieldset = multiselectDom.querySelector(
-        '.o-multiselect_fieldset'
-      );
+      const fieldset = multiselectDom.querySelector( '.o-multiselect_fieldset' );
       const search = document.querySelector( '#test-select' );
       search.focus();
       search.blur();

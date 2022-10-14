@@ -29,7 +29,6 @@ function testUnit( cb ) {
       fileSrcPath = fileSrcPath.replace( '-spec', '' );
       fileTestRegex += specs;
     } else {
-
       // Ensure there's a trailing slash.
       if ( specs.slice( -1 ) !== '/' ) {
         specs += '/';
@@ -49,7 +48,7 @@ function testUnit( cb ) {
     [
       '--config=jest.config.js',
       `--collectCoverageFrom=${ fileSrcPath }`,
-      '--collectCoverageFrom=\'!docs/**\'',
+      "--collectCoverageFrom='!docs/**'",
       `--testRegex=${ fileTestRegex }`,
       '--detectOpenHandles'
     ],
@@ -70,6 +69,4 @@ function testUnit( cb ) {
 
 gulp.task( 'test:unit', testUnit );
 
-gulp.task( 'test', gulp.parallel(
-  'test:unit'
-) );
+gulp.task( 'test', gulp.parallel( 'test:unit' ) );

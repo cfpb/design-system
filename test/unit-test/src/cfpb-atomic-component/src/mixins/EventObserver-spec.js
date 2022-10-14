@@ -7,7 +7,6 @@ let spy1;
 let spy2;
 
 describe( 'EventObserver', () => {
-
   beforeEach( () => {
     mockEvent = { events: {}};
     mockEvent = Object.assign( mockEvent, new EventObserver() );

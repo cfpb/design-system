@@ -209,8 +209,9 @@ describe( 'MultiselectModel', () => {
       multiselectModel.filterIndices( 'fin' );
       multiselectModel.setIndex( 0 );
       expect( multiselectModel.getIndex() ).toBe( 0 );
-      expect( multiselectModel.getFilterIndices()[multiselectModel.getIndex()] )
-        .toBe( 1 );
+      expect(
+        multiselectModel.getFilterIndices()[multiselectModel.getIndex()]
+      ).toBe( 1 );
       multiselectModel.setIndex( 1 );
       expect( multiselectModel.getIndex() ).toBe( 1 );
       multiselectModel.setIndex( 2 );
@@ -232,5 +233,4 @@ describe( 'MultiselectModel', () => {
       expect( multiselectModel.getOption( 1 ).checked ).toBe( true );
     } );
   } );
-
 } );

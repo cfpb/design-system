@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const TerserWebpackPlugin = require( 'terser-webpack-plugin' );
 
 module.exports = ( env, argv ) => {
-
   const config = {
     entry: {
       'interstitial': [ './docs/assets/js/interstitial.js' ],
@@ -18,11 +17,9 @@ module.exports = ( env, argv ) => {
       filename: 'js/[name].js'
     },
     plugins: [
-      new MiniCssExtractPlugin(
-        {
-          filename: 'css/[name].css'
-        }
-      )
+      new MiniCssExtractPlugin( {
+        filename: 'css/[name].css'
+      } )
     ],
     devtool: 'source-map',
     module: {
@@ -55,9 +52,7 @@ module.exports = ( env, argv ) => {
               options: {
                 sourceMap: true,
                 lessOptions: {
-                  paths: [
-                    path.resolve( __dirname, 'node_modules' )
-                  ]
+                  paths: [ path.resolve( __dirname, 'node_modules' ) ]
                 }
               }
             }
@@ -72,13 +67,18 @@ module.exports = ( env, argv ) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: [ [ '@babel/preset-env', {
+              presets: [
+                [
+                  '@babel/preset-env',
+                  {
 
-                /* Use useBuiltIns: 'usage' and set `debug: true` to see what
+                    /* Use useBuiltIns: 'usage' and set `debug: true` to see what
                    scripts require polyfilling. */
-                useBuiltIns: false,
-                debug: false
-              } ] ]
+                    useBuiltIns: false,
+                    debug: false
+                  }
+                ]
+              ]
             }
           }
         },
@@ -110,9 +110,11 @@ module.exports = ( env, argv ) => {
     plugins.push( autoprefixer );
 
     if ( argv.mode === 'production' ) {
-      plugins.push( cssnano( {
-        preset: 'default'
-      } ) );
+      plugins.push(
+        cssnano( {
+          preset: 'default'
+        } )
+      );
     }
 
     return plugins;

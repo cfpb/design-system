@@ -12,7 +12,7 @@ if ( !process.env.ACHECKER_ID ) {
 
 fs.readdir( path.join( __dirname, '..', '..', '/tmp' ), ( err, dirs ) => {
   if ( err ) {
-    throw new Error( 'Didn\'t read directory.' );
+    throw new Error( "Didn't read directory." );
   }
   dirs.forEach( function( component ) {
     if ( component.indexOf( 'cfpb-' ) !== 0 ) return;
@@ -59,13 +59,9 @@ function testComponent( component, server, port ) {
   wcag( options, ( error, data ) => {
     if ( error ) return console.error( error );
     if ( data.status === 'PASS' ) {
-      console.error(
-        logSymbols.success, ' ' + options.guide + ': ' + component
-      );
+      console.error( logSymbols.success, ' ' + options.guide + ': ' + component );
     } else {
-      console.error(
-        logSymbols.error, ' ' + options.guide + ': ' + component
-      );
+      console.error( logSymbols.error, ' ' + options.guide + ': ' + component );
       console.error( data.errors );
 
       /* TODO: Rather than immediately exiting we should collect the names of

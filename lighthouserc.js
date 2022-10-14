@@ -7,8 +7,7 @@ let extraCollect = {};
 // website locally and run Lighthouse against all pages. Determine the list of
 // URLs by finding all HTML files in the output documentation directory;
 // this requires that the docs have already been built before this code is run.
-const urlsSpecified = process.argv.some(
-  arg => arg.match( /^--(collect\.)?url=/ )
+const urlsSpecified = process.argv.some( arg => arg.match( /^--(collect\.)?url=/ )
 );
 
 if ( !urlsSpecified ) {
@@ -37,12 +36,13 @@ if ( !urlsSpecified ) {
     startServerReadyPattern: 'Hit CTRL-C to stop the server',
 
     // Run Lighthouse against every URL in the local site.
-    url: filenames.map(
-      filename => filename
+    url: filenames
+      .map( filename => filename
         .replace( /index.html$/, '' )
         .replace( /.html$/, '' )
         .replace( /^/, 'http://localhost:8080/design-system/' )
-    ).sort()
+      )
+      .sort()
   };
 }
 

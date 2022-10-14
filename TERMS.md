@@ -1,7 +1,7 @@
 As a work of the United States Government, this package (excluding any
 exceptions listed below) is in the public domain within the United States.
 Additionally, we waive copyright and related rights in the work worldwide
-through the [CC0 1.0 Universal public domain dedication][CC0].
+through the [CC0 1.0 Universal public domain dedication][cc0].
 
 Software source code previously released under an open source license and then
 modified by CFPB staff or its contractors is considered a "joint work"
@@ -14,10 +14,9 @@ rights for that work are waived through the CC0 1.0 Universal dedication.
 
 For further details, please see the CFPB [Source Code Policy][policy].
 
-
 ## CC0 1.0 Universal Summary
 
-This is a human-readable summary of the [Legal Code (read the full text)][CC0].
+This is a human-readable summary of the [Legal Code (read the full text)][cc0].
 
 ### No Copyright
 
@@ -26,7 +25,7 @@ the public domain by waiving all of his or her rights to the work worldwide
 under copyright law, including all related and neighboring rights, to the
 extent allowed by law.
 
-You can copy, modify, distribute and perform the work, even for commercial 
+You can copy, modify, distribute and perform the work, even for commercial
 purposes, all without asking permission. See Other Information below.
 
 ### Other Information
@@ -42,8 +41,7 @@ When using or citing the work, you should not imply endorsement by the
 author or the affirmer.
 
 [policy]: https://github.com/cfpb/source-code-policy/
-[CC0]: http://creativecommons.org/publicdomain/zero/1.0/legalcode
-
+[cc0]: http://creativecommons.org/publicdomain/zero/1.0/legalcode
 
 ## Exceptions
 

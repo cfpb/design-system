@@ -3,12 +3,12 @@ dedication. By submitting a pull request or filing a bug, issue, or
 feature request, you are agreeing to comply with this waiver of copyright interest.
 Details can be found in our [TERMS](https://github.com/cfpb/design-system/blob/main/TERMS.md) and [LICENSE](https://github.com/cfpb/design-system/blob/main/LICENSE).
 
---------------------------------------------------------------------------------
+---
 
 There are two primary ways to help:
- - Using the issue tracker, and
- - Changing the codebase.
 
+- Using the issue tracker, and
+- Changing the codebase.
 
 ## Using the issue tracker
 
@@ -19,7 +19,6 @@ as others who are interested in this solution.
 Use the issue tracker to find ways to contribute. Find a bug or a feature,
 mention in the issue that you will take on that effort,
 then follow the _Changing the codebase_ guidance below.
-
 
 ## Changing the codebase
 
@@ -61,7 +60,6 @@ the page.
 You'll need to be added as a contributor to this repository in order to
 authenticate with Netlify CMS.
 
-
 ### Testing components locally
 
 #### Automated tests
@@ -74,20 +72,20 @@ We configure [Autoprefixer](#autoprefixer)
 and [Babel](#babel) to support the following list of browsers.
 
 - Latest 2 releases of all browsers including:
-    - Chrome
-    - Firefox
-    - Safari
-    - Internet Explorer
-    - Edge
-    - Opera
-    - iOS Safari
-    - Opera Mini
-    - Android Browser
-    - BlackBerry Browser
-    - Opera Mobile
-    - Chrome for Android
-    - Firefox for Android
-    - Samsung Internet
+  - Chrome
+  - Firefox
+  - Safari
+  - Internet Explorer
+  - Edge
+  - Opera
+  - iOS Safari
+  - Opera Mini
+  - Android Browser
+  - BlackBerry Browser
+  - Opera Mobile
+  - Chrome for Android
+  - Firefox for Android
+  - Samsung Internet
 - Internet Explorer 9
 
 http://browserl.ist/?q=last+2+versions%2C+Explorer+%3E%3D+9
@@ -150,7 +148,6 @@ features. For more information visit the [Babel documentation site]
 - https://saucelabs.com/beta/dashboard/tests
 - http://developer.samsung.com/remotetestlab/rtlDeviceList.action#
 
-
 ## Release management
 
 Ready to publish changes to npm?
@@ -186,7 +183,6 @@ Then, do a release:
 Lerna will update the changelog, ask for a new version number, create a git tag,
 push to GitHub and publish to npm.
 
-
 ## Notes
 
 The CSS and JavaScript files that are generated during the build task are only
@@ -205,7 +201,6 @@ are there to promote consistency.
 When contributing code please publicly track that there are no linting errors
 or warnings using the testing checklist in the pull request description.
 
-
 ### Follow our CSS naming conventions
 
 **We are using a customized BEM format:**
@@ -223,14 +218,12 @@ Appending an element name to a modifier class can result in a confusing class
 name like `.list__space_item`.
 Avoid this in favor of using a descendant, like this: `.list__spaced .list_item`.
 
-
 ### Shoot for mobile first declarations
 
 In most cases styles should be declared mobile first,
 then enhanced with `min-width` media queries.
 By doing this we create a base experience that all devices can use
 and one that does not require media query support.
-
 
 ## Adding and updating icons
 
@@ -242,6 +235,7 @@ Instructions for developers who've received a new or updated icon from a designe
    - This script compresses and standardizes the SVG code for all of our icons
    - It should be a no-op for icons that have not changed
 1. If the icon has aliases, go into the icons folder and duplicate the canonical file to the aliases:
+
    ```shell
    cd packages/cfpb-icons/src/icons/
 
@@ -251,12 +245,15 @@ Instructions for developers who've received a new or updated icon from a designe
    # or it will not be treated as an iterable object and will include
    # the curly braces in the filename.
    ```
+
 1. Return to the repo root and copy the icons into the docs site:
+
    ```shell
    cd ../../../../
 
    yarn copy-icons
    ```
+
 1. If adding a new icon or updating any names/aliases, update the tables on both
    [`packages/cfpb-icons/usage.md`](tree/main/packages/cfpb-icons/usage.md)
    and [`docs/pages/iconography.md`](tree/main/docs/pages/iconography.md)

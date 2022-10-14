@@ -19,16 +19,6 @@ const gulp = require( 'gulp' );
 requireDir( './scripts/gulp/', { recurse: true } );
 
 // Define default build task sequence.
-gulp.task( 'build',
-  gulp.parallel(
-    'styles:components',
-    'scripts:components'
-  )
-);
+gulp.task( 'build', gulp.parallel( 'styles:components', 'scripts:components' ) );
 
-gulp.task( 'default',
-  gulp.series(
-    'build',
-    'test'
-  )
-);
+gulp.task( 'default', gulp.series( 'build', 'test' ) );

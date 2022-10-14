@@ -7,20 +7,27 @@ const TerserWebpackPlugin = require( 'terser-webpack-plugin' );
 /* Commmon webpack 'module' option used in each configuration.
    Runs code through Babel and uses global supported browser list. */
 const COMMON_MODULE_CONFIG = {
-  rules: [ {
-    use: {
-      loader: 'babel-loader?cacheDirectory=true',
-      options: {
-        presets: [ [ '@babel/preset-env', {
+  rules: [
+    {
+      use: {
+        loader: 'babel-loader?cacheDirectory=true',
+        options: {
+          presets: [
+            [
+              '@babel/preset-env',
+              {
 
-          /* Use useBuiltIns: 'usage' and set `debug: true` to see what
+                /* Use useBuiltIns: 'usage' and set `debug: true` to see what
              scripts require polyfilling. */
-          useBuiltIns: false,
-          debug: false
-        } ] ]
+                useBuiltIns: false,
+                debug: false
+              }
+            ]
+          ]
+        }
       }
     }
-  } ]
+  ]
 };
 
 /* Set warnings to true to show linter-style warnings.
@@ -46,9 +53,7 @@ const commonConf = {
   mode: 'production',
   optimization: {
     minimize: true,
-    minimizer: [
-      COMMON_MINIFICATION_CONFIG
-    ]
+    minimizer: [ COMMON_MINIFICATION_CONFIG ]
   }
 };
 

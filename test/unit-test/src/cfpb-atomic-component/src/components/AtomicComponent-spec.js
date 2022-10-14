@@ -14,7 +14,6 @@ const HTML_SNIPPET = `
 `;
 
 describe( 'AtomicComponent', () => {
-
   beforeEach( () => {
     document.body.innerHTML = HTML_SNIPPET;
   } );
@@ -24,7 +23,7 @@ describe( 'AtomicComponent', () => {
     const initialize = jest.fn();
     const options = {
       initialize: initialize,
-      events:     {
+      events: {
         keydown: 'keyAction'
       },
       keyAction: jest.fn()
@@ -45,9 +44,10 @@ describe( 'AtomicComponent', () => {
     const element = document.createElement( 'span' );
     atomicComponent = new AtomicComponent( element );
     expect( atomicComponent.element.tagName === 'SPAN' ).toBe( true );
-    atomicComponent = new AtomicComponent( '',
-      { id: 'test_id', className: 'test_class_name' }
-    );
+    atomicComponent = new AtomicComponent( '', {
+      id: 'test_id',
+      className: 'test_class_name'
+    } );
     expect( atomicComponent.element.id === 'test_id' ).toBe( true );
     expect( atomicComponent.element.className === 'test_class_name' ).toBe( true );
   } );

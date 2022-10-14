@@ -242,7 +242,8 @@ variation_groups:
           * Border: 1 px, Gray 60 (#919395)
           * Background: Gray 20 (#d2d3d5)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
-        variation_description: For better usability, consider using checkboxes with
+        variation_description:
+          For better usability, consider using checkboxes with
           large target areas. These are easier to interact with (especially on
           smaller screens) and harder to miss. They are especially desirable
           when the form will have heavy mobile usage. Given the amount of real

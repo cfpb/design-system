@@ -6,27 +6,27 @@ CFPB's Design System.
 components are all dependencies of this component.
 
 > NOTE: If you use `@cfpb/cfpb-buttons.less` directly,
-  be sure to run the file through
-  [Autoprefixer](https://github.com/postcss/autoprefixer),
-  or your compiled CSS will
-  not work perfectly in older browsers.
+> be sure to run the file through
+> [Autoprefixer](https://github.com/postcss/autoprefixer),
+> or your compiled CSS will
+> not work perfectly in older browsers.
 
 ## Table of contents
 
 - [Variables](#variables)
-    - [Color variables](#color-variables)
-    - [Sizing variables](#sizing-variables)
+  - [Color variables](#color-variables)
+  - [Sizing variables](#sizing-variables)
 - [Atoms](#atoms)
-    - [Default button](#default-button)
-    - [Secondary button](#secondary-button)
-    - [Destructive action button](#destructive-action-button)
-    - [Disabled button](#disabled-button)
-    - [Super button](#super-button)
-    - [Full-width buttons on x-small screens](#full-width-buttons-on-x-small-screens)
-    - [Button links](#button-links)
-    - [Icon buttons](#icon-buttons)
+  - [Default button](#default-button)
+  - [Secondary button](#secondary-button)
+  - [Destructive action button](#destructive-action-button)
+  - [Disabled button](#disabled-button)
+  - [Super button](#super-button)
+  - [Full-width buttons on x-small screens](#full-width-buttons-on-x-small-screens)
+  - [Button links](#button-links)
+  - [Icon buttons](#icon-buttons)
 - [Molecules](#molecules)
-    - [Button group](#button-group)
+  - [Button group](#button-group)
 
 ## Variables
 
@@ -155,7 +155,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 <a href="#" class="a-btn a-btn__secondary hover">Anchor Tag</a>
 <button class="a-btn a-btn__secondary hover" title="Test button">
-    Button Tag
+Button Tag
 </button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__secondary hover">
 
@@ -171,7 +171,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 <a href="#" class="a-btn a-btn__secondary focus">Anchor Tag</a>
 <button class="a-btn a-btn__secondary focus" title="Test button">
-    Button Tag
+Button Tag
 </button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__secondary focus">
 
@@ -187,7 +187,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 <a href="#" class="a-btn a-btn__secondary active">Anchor Tag</a>
 <button class="a-btn a-btn__secondary active" title="Test button">
-    Button Tag
+Button Tag
 </button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__secondary active">
 
@@ -205,7 +205,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 <a href="#" class="a-btn a-btn__warning">Anchor Tag</a>
 <button class="a-btn a-btn__warning" title="Test button">
-    Button Tag
+Button Tag
 </button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__warning">
 
@@ -221,7 +221,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 <a href="#" class="a-btn a-btn__warning hover">Anchor Tag</a>
 <button class="a-btn a-btn__warning hover" title="Test button">
-    Button Tag
+Button Tag
 </button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__warning hover">
 
@@ -237,7 +237,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 <a href="#" class="a-btn a-btn__warning focus">Anchor Tag</a>
 <button class="a-btn a-btn__warning focus" title="Test button">
-    Button Tag
+Button Tag
 </button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__warning focus">
 
@@ -253,7 +253,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 <a href="#" class="a-btn a-btn__warning active">Anchor Tag</a>
 <button class="a-btn a-btn__warning active" title="Test button">
-    Button Tag
+Button Tag
 </button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__warning active">
 
@@ -273,7 +273,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 <button class="a-btn a-btn__disabled" title="Test button">Button Tag</button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__disabled">
 <button class="a-btn" disabled title="Test button">
-    Button Tag w/ disabled attr
+Button Tag w/ disabled attr
 </button>
 
 ```
@@ -291,7 +291,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 <button class="a-btn a-btn__disabled focus" title="Test button">Button Tag</button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__disabled focus">
 <button class="a-btn focus" disabled title="Test button">
-    Button Tag w/ disabled attr
+Button Tag w/ disabled attr
 </button>
 
 ```
@@ -321,7 +321,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 <a href="#" class="a-btn a-btn__super hover">Anchor Tag</a>
 <button class="a-btn a-btn__super hover" title="Test button">
-    Button Tag
+Button Tag
 </button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__super hover">
 
@@ -337,7 +337,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 <a href="#" class="a-btn a-btn__super focus">Anchor Tag</a>
 <button class="a-btn a-btn__super focus" title="Test button">
-    Button Tag
+Button Tag
 </button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__super focus">
 
@@ -353,7 +353,7 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 <a href="#" class="a-btn a-btn__super active">Anchor Tag</a>
 <button class="a-btn a-btn__super active" title="Test button">
-    Button Tag
+Button Tag
 </button>
 <input type="submit" value="Input Tag" class="a-btn a-btn__super active">
 
@@ -391,10 +391,10 @@ _Reduce screen size to see these in action_
 
 <button href="#" class="a-btn a-btn__link">Button Link</button>
 <button href="#" class="a-btn a-btn__link a-btn__secondary">
-    Secondary Button Link
+Secondary Button Link
 </button>
 <button href="#" class="a-btn a-btn__link a-btn__warning">
-    Warning Button Link
+Warning Button Link
 </button>
 
 ```
@@ -411,10 +411,10 @@ _Reduce screen size to see these in action_
 
 <button href="#" class="a-btn a-btn__link hover">Button Link</button>
 <button href="#" class="a-btn a-btn__link a-btn__secondary hover">
-    Secondary Button Link
+Secondary Button Link
 </button>
 <button href="#" class="a-btn a-btn__link a-btn__warning hover">
-    Warning Button Link
+Warning Button Link
 </button>
 
 ```
@@ -431,10 +431,10 @@ _Reduce screen size to see these in action_
 
 <button href="#" class="a-btn a-btn__link focus">Button Link</button>
 <button href="#" class="a-btn a-btn__link a-btn__secondary focus">
-    Secondary Button Link
+Secondary Button Link
 </button>
 <button href="#" class="a-btn a-btn__link a-btn__warning focus">
-    Warning Button Link
+Warning Button Link
 </button>
 
 ```
@@ -451,10 +451,10 @@ _Reduce screen size to see these in action_
 
 <button href="#" class="a-btn a-btn__link active">Button Link</button>
 <button href="#" class="a-btn a-btn__link a-btn__secondary active">
-    Secondary Button Link
+Secondary Button Link
 </button>
 <button href="#" class="a-btn a-btn__link a-btn__warning active">
-    Warning Button Link
+Warning Button Link
 </button>
 
 ```
@@ -470,7 +470,7 @@ _Reduce screen size to see these in action_
 ### Icon buttons
 
 > **Note:** Due to inherent whitespace created between inline elements,
-whitespace must be removed between the icon and its wrapping span element.
+> whitespace must be removed between the icon and its wrapping span element.
 
 #### Button with icon on the left
 

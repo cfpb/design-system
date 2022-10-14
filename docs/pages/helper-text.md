@@ -16,7 +16,8 @@ variation_groups:
 
 
           <input class="a-text-input" type="text" id="helper-block-example">
-        variation_description: "Block helper text appears directly beneath a form label.
+        variation_description:
+          "Block helper text appears directly beneath a form label.
           Use it to explain why a piece of information is being requested,
           address security and privacy concerns, or to suggest ways of providing
           answers other than providing formatting examples. "
@@ -39,7 +40,8 @@ variation_groups:
           </label>
 
           <input class="a-text-input" type="text" id="helper-inline-example">
-        variation_description: Inline helper text appears directly after a form label.
+        variation_description:
+          Inline helper text appears directly after a form label.
           Use it to indicate whether a field is optional. See the [behavior
           section](#behavior) for more information.
         variation_name: Inline helper text
@@ -72,7 +74,8 @@ variation_groups:
                 type="text"
                 id="textinput-example-email-default"
                 placeholder="email@example.com">
-        variation_description: Placeholder text appears within a text input field, and
+        variation_description:
+          Placeholder text appears within a text input field, and
           disappears once a user begins typing in that field. Use it for
           formatting examples only.
         variation_name: Placeholder text
@@ -80,7 +83,8 @@ variation_groups:
           #### Placeholder text
           Avenir Next Regular, 16 px, Gray (#5a5d61)
     variation_group_name: Types
-    variation_group_description: "Types of helper text include block helper text,
+    variation_group_description:
+      "Types of helper text include block helper text,
       inline helper text, and placeholder text. "
 use_cases: ""
 guidelines: >-

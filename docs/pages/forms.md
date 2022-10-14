@@ -156,7 +156,7 @@ variation_groups:
           * Implementation and interface is more complex
       - variation_name: "Option 4: Hybrid"
         variation_description: >-
-          
+
 
           For more complicated forms, some combination of the other options might be your best bet. Done well, this can give you the benefits of both the single page and wizard approaches. It also allows you to create a sense of rhythm to the overall flow, which can help users understand when they have moved into a different part of the form, and break up the monotony of filling in forms.
 
@@ -285,7 +285,8 @@ variation_groups:
 
       Asking for information because ‘it might be useful’ or ‘it helps with our record keeping’ should be considered against all of these factors.
   - variation_group_name: Attribution
-    variation_group_description: This guide on effective forms has been adapted from
+    variation_group_description:
+      This guide on effective forms has been adapted from
       the guide [Designing
       transactions](https://www.gov.uk/service-manual/user-centred-design/designing-transactions.html)
       in the [GOV.UK Government Service Design

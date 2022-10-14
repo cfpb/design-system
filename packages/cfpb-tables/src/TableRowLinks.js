@@ -4,19 +4,18 @@
    Mixin for adding row link click functionality to Table organism.
    ========================================================================== */
 
-
-import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js';
+import { closest } from "@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js";
 
 const TableRowLinks = {
   ui: {
-    base: '.o-table__row-links'
+    base: ".o-table__row-links",
   },
 
   events: {
-    'click tbody tr': 'onRowLinkClick'
+    "click tbody tr": "onRowLinkClick",
   },
 
-  onRowLinkClick: onRowLinkClick
+  onRowLinkClick: onRowLinkClick,
 };
 
 /**
@@ -24,15 +23,15 @@ const TableRowLinks = {
  *
  * @param {MouseEvent} event - Mouse event for click on the table.
  */
-function onRowLinkClick( event ) {
+function onRowLinkClick(event) {
   let target = event.target;
-  if ( target && target.tagName === 'A' ) {
+  if (target && target.tagName === "A") {
     return;
   }
-  target = closest( event.target, 'tr' );
-  const link = target.querySelector( 'a' );
-  if ( link ) {
-    window.location = link.getAttribute( 'href' );
+  target = closest(event.target, "tr");
+  const link = target.querySelector("a");
+  if (link) {
+    window.location = link.getAttribute("href");
   }
 }
 

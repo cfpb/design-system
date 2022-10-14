@@ -57,7 +57,8 @@ variation_groups:
           </nav>
         variation_description: ""
         variation_name: Default pagination
-        variation_implementation: To enable the component to jump directly to the
+        variation_implementation:
+          To enable the component to jump directly to the
           paginated content, include an `id` on a wrapper of the paginated
           content (or an element directly above it), e.g.,
           `id="pagination_content"`.
@@ -95,13 +96,15 @@ variation_groups:
           <button class="a-btn a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit-first-last" type="submit">Go</button> </form>
 
           </nav>
-        variation_description: When on the first or last page of paginated content, be
+        variation_description:
+          When on the first or last page of paginated content, be
           sure to disable the appropriate buttons by adding the
           `a_btn__disabled` modifier and removing their `href` attribute.
         variation_jinja_code_snippet: ""
         variation_name: First and last pages
     variation_group_name: Standard pagination
-    variation_group_description: Pagination consists of buttons to navigate through
+    variation_group_description:
+      Pagination consists of buttons to navigate through
       content, along with an inline form (input field, submit button) to enable
       users to navigate to specific pages by number.
 use_cases: ""

@@ -98,7 +98,7 @@ variation_groups:
           * 16pt / 20pt
         variation_code_snippet: ""
         variation_description: >-
-          
+
 
           <p style="font-size: 16pt; font-weight: 400; line-height:20pt">Avenir Next Regular, 16pt / 20pt. Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 

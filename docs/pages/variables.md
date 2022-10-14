@@ -441,5 +441,4 @@ variation_groups:
           @cf-fonts-path: '/fonts'`
 
           ```
-
 ---

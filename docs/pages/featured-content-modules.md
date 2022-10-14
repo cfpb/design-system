@@ -60,7 +60,8 @@ variation_groups:
           * For videos, a 60x60 px play button appears in the center of the image area (horizontally and vertically centered). Make sure the subject of the thumbnail image is not awkwardly obscured by the play button. In particular, make sure that no faces are covered by the play button. This may require a photo composed with the subject on the left or right side of the image.
   - variations:
       - variation_is_deprecated: false
-        variation_description: In cases when the featured content module appears next to
+        variation_description:
+          In cases when the featured content module appears next to
           another component with a background color, this variation can be
           applied to reduce visual overload.
         variation_name: Reversed layout without background

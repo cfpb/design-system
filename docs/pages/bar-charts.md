@@ -10,7 +10,8 @@ description: Use bar or column charts to show comparisons of different discrete
 variation_groups:
   - variations:
       - variation_code_snippet: ""
-        variation_description: "![Horizontal bar chart showing breakdown of complaints
+        variation_description:
+          "![Horizontal bar chart showing breakdown of complaints
           in other financial services
           category.](/design-system/images/uploads/bar-chart-1.png)"
         variation_jinja_code_snippet: >-
@@ -22,17 +23,20 @@ variation_groups:
           * [_includes/organisms/mortgage-map.html](https://github.com/cfpb/consumerfinance.gov/blob/main/cfgov/jinja2/v1/_includes/organisms/mortgage-map.html)
         variation_name: Simple bar chart
       - variation_code_snippet: ""
-        variation_description: "![Bar charts showing complaints by type for New York
+        variation_description:
+          "![Bar charts showing complaints by type for New York
           metro area, New York state and the United
           States.](/design-system/images/uploads/bar-chart-2.png)"
         variation_name: Grouped bar chart
       - variation_code_snippet: ""
-        variation_description: "![Bar charts showing complaints by region (New York
+        variation_description:
+          "![Bar charts showing complaints by region (New York
           metro area, New York state and the United States) for different
           financial categories.](/design-system/images/uploads/bar-chart-4.png)"
         variation_name: Categories bar chart
       - variation_code_snippet: ""
-        variation_description: "![Stacked bar chart showing breakdown of complaints in
+        variation_description:
+          "![Stacked bar chart showing breakdown of complaints in
           other financial services
           category.](/design-system/images/uploads/bar-chart-3.png)"
         variation_name: Stacked bar chart

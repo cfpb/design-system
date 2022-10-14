@@ -11,7 +11,6 @@ a front end framework developed at the
 Detailed instructions can be found at the Design System
 [documentation site](https://cfpb.github.io/design-system/).
 
-
 ## Getting involved
 
 We welcome your feedback and contributions.
@@ -22,6 +21,7 @@ We welcome your feedback and contributions.
 ---
 
 ## Open source licensing info
+
 1. [TERMS](TERMS.md)
 2. [LICENSE](LICENSE)
 3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)

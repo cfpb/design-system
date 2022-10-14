@@ -16,7 +16,7 @@ variation_groups:
     variations:
       - variation_code_snippet: ""
         variation_description: >-
-          
+
 
           | With hero | With text introduction | With breakout sidebar |
 

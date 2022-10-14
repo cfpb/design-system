@@ -8,12 +8,14 @@ description: Use when you have one factor over time to show change. Start your
 variation_groups:
   - variations:
       - variation_code_snippet: ""
-        variation_description: "![Line chart showing complaints from Florida from July
+        variation_description:
+          "![Line chart showing complaints from Florida from July
           2011 to December
           2016.](/design-system/images/uploads/parts-of-a-chart_013.png)"
         variation_name: Line chart
       - variation_code_snippet: ""
-        variation_description: "![Line chart showing change in college credit card
+        variation_description:
+          "![Line chart showing change in college credit card
           agreement trends between 2009 and
           2015.](/design-system/images/uploads/line-chart-2.png)"
         variation_name: Line chart showing trends

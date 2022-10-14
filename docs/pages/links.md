@@ -101,10 +101,12 @@ variation_groups:
           <a class="a-btn a-btn__link a-btn__warning" href="#">
                Sample destructive link
           </a>
-        variation_description: Destructive links provide a visual warning to users that
+        variation_description:
+          Destructive links provide a visual warning to users that
           clicking them will perform a destructive action, such as clearing
           entries in a form.
-        variation_specs: "* Destructive action link: Avenir Next Medium, 16px, Mid dark
+        variation_specs:
+          "* Destructive action link: Avenir Next Medium, 16px, Mid dark
           red (#c3381c)"
     variation_group_description: >+
       Links that appear in body text (`p`), link lists (`li`), or definitions
@@ -141,14 +143,16 @@ variation_groups:
               </a> for further details.
           </p>
         variation_name: Standard link with icon
-        variation_description: To prevent the link’s underline from extending under the
+        variation_description:
+          To prevent the link’s underline from extending under the
           icon, wrap the link text with a `span.icon-link_text`. There can be no
           whitespace between the text and the opening and closing span tags.
           Include the icon either prior to or after the `a-link_text`. It is
           important the text and icon are siblings to correctly handle
           underlines.
       - variation_name: Non-wrapping icon links
-        variation_description: Icons added to inline links can sometimes break onto the
+        variation_description:
+          Icons added to inline links can sometimes break onto the
           next line. If you want to prevent this, you can add the `__no-wrap`
           modifier to `.a-link__icon`.
         variation_code_snippet: |-
@@ -174,7 +178,8 @@ variation_groups:
               {% include icons/right.svg %}
           </a>
       - variation_name: Large jump link
-        variation_description: The large jump link has an 18px `font-size`, compared to
+        variation_description:
+          The large jump link has an 18px `font-size`, compared to
           the default of 16px.
         variation_code_snippet: |-
           <a class="a-link

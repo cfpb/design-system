@@ -59,7 +59,8 @@ variation_groups:
           | Heading 6 | Avenir Next Demi Bold, 12px / 15px, All caps,
           1px letter spacing | No change                      |"
     variation_group_name: Web headings
-    variation_group_description: At screen widths of 600px and below, the Display
+    variation_group_description:
+      At screen widths of 600px and below, the Display
       heading and Headings 1-4 drop in size. Headings 5-6 remain consistent at
       all screen widths.
   - variation_group_name: Print headings
@@ -100,7 +101,8 @@ variation_groups:
   - variation_group_name: Variations
     variations:
       - variation_name: "Heading with icon "
-        variation_description: "The heading with icon is typically used for listing
+        variation_description:
+          "The heading with icon is typically used for listing
           categories in a meta header on pages like the [blog
           page](https://www.consumerfinance.gov/about-us/blog/). "
         variation_code_snippet: |-
@@ -168,7 +170,8 @@ variation_groups:
           * All caps
           * <601px wide: No change
       - variation_name: Slug heading
-        variation_description: Slug headings are used to call attention to and lead
+        variation_description:
+          Slug headings are used to call attention to and lead
           content on sidebars and prefooters, inset modules, and inset email
           modules.
         variation_code_snippet: |-

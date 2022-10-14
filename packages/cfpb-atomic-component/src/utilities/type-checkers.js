@@ -22,10 +22,9 @@ const _toString = Object.prototype.toString;
  * @param {*} value Reference to check.
  * @returns {boolean} True if `value` is undefined.
  */
-function isUndefined( value ) {
-  return typeof value === 'undefined';
+function isUndefined(value) {
+  return typeof value === "undefined";
 }
-
 
 /**
  * @name isDefined
@@ -37,10 +36,9 @@ function isUndefined( value ) {
  * @param {*} value Reference to check.
  * @returns {boolean} True if `value` is defined.
  */
-function isDefined( value ) {
-  return typeof value !== 'undefined';
+function isDefined(value) {
+  return typeof value !== "undefined";
 }
-
 
 /**
  * @name isObject
@@ -54,11 +52,10 @@ function isDefined( value ) {
  * @param {*} value Reference to check.
  * @returns {boolean} True if `value` is an `Object` but not `null`.
  */
-function isObject( value ) {
+function isObject(value) {
   // http://jsperf.com/isobject4
-  return value !== null && typeof value === 'object';
+  return value !== null && typeof value === "object";
 }
-
 
 /**
  * @name isString
@@ -70,10 +67,9 @@ function isObject( value ) {
  * @param {*} value Reference to check.
  * @returns {boolean} True if `value` is a `String`.
  */
-function isString( value ) {
-  return _toString.call( value ) === '[object String]';
+function isString(value) {
+  return _toString.call(value) === "[object String]";
 }
-
 
 /**
  * @name isNumber
@@ -92,10 +88,9 @@ function isString( value ) {
  * @param {*} value Reference to check.
  * @returns {boolean} True if `value` is a `Number`.
  */
-function isNumber( value ) {
-  return _toString.call( value ) === '[object Number]';
+function isNumber(value) {
+  return _toString.call(value) === "[object Number]";
 }
-
 
 /**
  * @name isDate
@@ -107,10 +102,9 @@ function isNumber( value ) {
  * @param {*} value Reference to check.
  * @returns {boolean} True if `value` is a `Date`.
  */
-function isDate( value ) {
-  return _toString.call( value ) === '[object Date]';
+function isDate(value) {
+  return _toString.call(value) === "[object Date]";
 }
-
 
 /**
  * @name isArray
@@ -122,10 +116,11 @@ function isDate( value ) {
  * @param {*} value Reference to check.
  * @returns {boolean} True if `value` is an `Array`.
  */
-const isArray = Array.isArray || function isArray( value ) {
-  return _toString.call( value ) === '[object Array]';
-};
-
+const isArray =
+  Array.isArray ||
+  function isArray(value) {
+    return _toString.call(value) === "[object Array]";
+  };
 
 /**
  * @name isFunction
@@ -137,8 +132,8 @@ const isArray = Array.isArray || function isArray( value ) {
  * @param {*} value Reference to check.
  * @returns {boolean} True if `value` is a `Function`.
  */
-function isFunction( value ) {
-  return _toString.call( value ) === '[object Function]';
+function isFunction(value) {
+  return _toString.call(value) === "[object Function]";
 }
 
 // TODO Fix complexity issue
@@ -153,12 +148,13 @@ function isFunction( value ) {
  * @param {*} value Reference to check.
  * @returns {boolean} True if `value` is empty.
  */
-function isEmpty( value ) {
-  return isUndefined( value ) ||
-         value === null ||
-         isString( value ) &&
-         value.length <= 0 ||
-         ( /^\s*$/ ).test( value );
+function isEmpty(value) {
+  return (
+    isUndefined(value) ||
+    value === null ||
+    (isString(value) && value.length <= 0) ||
+    /^\s*$/.test(value)
+  );
 }
 /* eslint-enable complexity, no-mixed-operators */
 
@@ -172,5 +168,5 @@ export default {
   isDate: isDate,
   isArray: isArray,
   isFunction: isFunction,
-  isEmpty: isEmpty
+  isEmpty: isEmpty,
 };

@@ -379,7 +379,8 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_description: The `.o-table_cell__row-links` class is added to a
+        variation_description:
+          The `.o-table_cell__row-links` class is added to a
           `table` to enable highlighting and hyperlinking rows which contain
           links.
         variation_name: Table with row links

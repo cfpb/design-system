@@ -22,7 +22,8 @@ variation_groups:
 
 
           <button class="a-btn active" title="Active state">Active state</button>
-        variation_description: Use primary buttons for actions that go to the next step.
+        variation_description:
+          Use primary buttons for actions that go to the next step.
           Avoid using multiple primary buttons on a single page; there can be
           multiple secondary buttons per page.
         variation_jinja_code_snippet: |-
@@ -187,7 +188,8 @@ variation_groups:
         variation_description: When paired with a primary action, indicate the
           destructive action using a destructive action button link to the right
           of the primary button.
-        variation_specs: "* Destructive action link: Avenir Next Medium, 16px, Mid dark
+        variation_specs:
+          "* Destructive action link: Avenir Next Medium, 16px, Mid dark
           red (#c3381c)"
       - variation_name: Printed buttons
         variation_description: When a
@@ -210,7 +212,8 @@ variation_groups:
 
 
           <button class="a-btn a-btn__super active" title="Active state">Active state</button>
-        variation_description: At the designer’s discretion, use the super button on
+        variation_description:
+          At the designer’s discretion, use the super button on
           consumer-facing products for an important call to action.
         variation_jinja_code_snippet: |-
           {% macro render(value) -%}

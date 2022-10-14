@@ -3,12 +3,12 @@
  * when the page is resized between mobile and desktop sizes.
  */
 function init() {
-  const secondaryNavCat = document.querySelector( '.ds-nav-container' );
+  const secondaryNavCat = document.querySelector(".ds-nav-container");
 
   // First collapse the navigation if in mobile.
   const windowWidth = window.innerWidth;
-  if ( windowWidth < 601 ) {
-    secondaryNavCat.removeAttribute( 'open' );
+  if (windowWidth < 601) {
+    secondaryNavCat.removeAttribute("open");
   }
 
   /**
@@ -19,14 +19,14 @@ function init() {
     // but only if we haven't already.
     // Otherwise, we're on desktop size, so open the navigation.
     const innerWidth = window.innerWidth;
-    if ( innerWidth === windowWidth ) {
+    if (innerWidth === windowWidth) {
       return;
     }
 
-    if ( innerWidth < 601 ) {
-      secondaryNavCat.removeAttribute( 'open' );
+    if (innerWidth < 601) {
+      secondaryNavCat.removeAttribute("open");
     } else {
-      secondaryNavCat.setAttribute( 'open', 'open' );
+      secondaryNavCat.setAttribute("open", "open");
     }
   }
 
@@ -34,11 +34,11 @@ function init() {
   handleViewportChange();
 
   // Add event listener for checking viewport state on window resize.
-  window.addEventListener( 'resize', () => {
+  window.addEventListener("resize", () => {
     handleViewportChange();
-  } );
+  });
 }
 
 export default {
-  init: init
+  init: init,
 };

@@ -149,11 +149,13 @@ variation_groups:
                   </p>
               </div>
           </div>
-        variation_description: Sometimes you may want the expandable to be open by
+        variation_description:
+          Sometimes you may want the expandable to be open by
           default. This is as easy as adding the
           `.o-expandable_content__onload-open` modifier to the
           `.o-expandable_content` block.
-        variation_implementation: A new array of Expandable instances can be created
+        variation_implementation:
+          A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
@@ -279,7 +281,8 @@ variation_groups:
           In the default mode, users are able to have multiple sections of an
           expandable group expanded at the same time, which allows users to
           easily compare information that is available in different sections.
-        variation_implementation: A new array of Expandable instances can be created
+        variation_implementation:
+          A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
@@ -370,11 +373,13 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: To show only one open expandable at a time, use an
+        variation_description:
+          To show only one open expandable at a time, use an
           accordion group. Add the `o-expandable-group__accordion` class to the
           expandable group to activate the accordion mode.
         variation_name: Accordion-style group
-        variation_implementation: A new array of Expandable instances can be created
+        variation_implementation:
+          A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
@@ -386,7 +391,8 @@ variation_groups:
       elements and modifiers described throughout.
     variations:
       - variation_name: Barebones expandable
-        variation_description: This is the barebones structure for expandables that can
+        variation_description:
+          This is the barebones structure for expandables that can
           be used (along with other expanable elements and modifiers) to create
           custom expandable patterns. In this barebones example there are no
           visual styles.
@@ -411,7 +417,8 @@ variation_groups:
                   </p>
               </div>
           </div>
-        variation_implementation: A new array of Expandable instances can be created
+        variation_implementation:
+          A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
@@ -428,7 +435,8 @@ variation_groups:
 
           ```
         variation_code_snippet: ""
-        variation_implementation: A new array of Expandable instances can be created
+        variation_implementation:
+          A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
@@ -446,7 +454,8 @@ variation_groups:
 
           ```
         variation_code_snippet: ""
-        variation_implementation: A new array of Expandable instances can be created
+        variation_implementation:
+          A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
@@ -462,7 +471,8 @@ variation_groups:
 
           ```
         variation_code_snippet: ""
-        variation_implementation: A new array of Expandable instances can be created
+        variation_implementation:
+          A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
@@ -489,7 +499,8 @@ variation_groups:
           </span>
           ```
         variation_code_snippet: ""
-        variation_implementation: A new array of Expandable instances can be created
+        variation_implementation:
+          A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
@@ -525,7 +536,8 @@ variation_groups:
           .o-expandable_header-right
 
           ```
-        variation_implementation: A new array of Expandable instances can be created
+        variation_implementation:
+          A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).

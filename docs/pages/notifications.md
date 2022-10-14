@@ -107,7 +107,7 @@ variation_groups:
           * Success icon and message should always appear below input field.
       - variation_name: Success notification (field-level)
         variation_code_snippet: >-
-          
+
           <div class="m-form-field m-form-field__success">
               <label class="a-label a-label__heading" for="form-input-success">Input label</label>
               <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
@@ -171,7 +171,8 @@ variation_groups:
                   <div class="h4 m-notification_message">Page not found.</div>
               </div>
           </div>
-        variation_description: The error notification displays when an operation has not
+        variation_description:
+          The error notification displays when an operation has not
           run as expected and encounters an error. Use after validating on the
           server side to call out input errors preventing form submission.
         variation_implementation: >-
@@ -215,7 +216,8 @@ variation_groups:
                   <div class="h4 m-notification_message">The page is loading…</div>
               </div>
           </div>
-        variation_description: The in-progress notification displays when something is
+        variation_description:
+          The in-progress notification displays when something is
           happening on the page, such as a page loading notification as search
           results are found. Use [animated
           minicons](https://cfpb.github.io/design-system/foundation/iconography)

@@ -94,7 +94,8 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
               <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
           </div>
-        variation_implementation: This is developer-focused stuff. Be sure to add the
+        variation_implementation:
+          This is developer-focused stuff. Be sure to add the
           `.o-blahblah` class to `blahblah` if you're doing this or that,
           otherwise this bad thing will happen.
         variation_specs: |-
@@ -165,7 +166,7 @@ guidelines: >-
 
   If applicable, include information on how the component is styled or used. This is not used often in component pages, mostly foundations pages.
 behavior: >-
-  
+
 
   Responsive guidelines.
 

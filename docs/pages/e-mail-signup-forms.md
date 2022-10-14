@@ -43,7 +43,8 @@ variation_groups:
                   </div>
               </form>
           </div>
-        variation_description: When implemented into a side bar, the h2 includes CFPB
+        variation_description:
+          When implemented into a side bar, the h2 includes CFPB
           standard top green border.
         variation_name: Sidebar email sign up
         variation_specs: |-

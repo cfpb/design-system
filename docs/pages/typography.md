@@ -42,7 +42,8 @@ variation_groups:
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789</h4>
         variation_name: ""
-    variation_group_description: Avenir Next is the primary brand typeface and can
+    variation_group_description:
+      Avenir Next is the primary brand typeface and can
       be used across all formats from print to digital. Its round and geometric
       letterforms are approachable and modern.
 use_cases: ""

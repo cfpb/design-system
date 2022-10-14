@@ -81,13 +81,15 @@ variation_groups:
           #### Disabled
           - Background: Gray 10 (#e7e8e9)
         variation_name: Single-line text inputs
-        variation_description: Use to input single lines of text, for example email
+        variation_description:
+          Use to input single lines of text, for example email
           addresses, names, or search queries. The length of the input field
           should be proportional to the expected user input, so that the user
           can see what they've typed without having to scroll to reveal hidden
           content. See the guidelines section below for more information.
       - variation_name: Multi-line textarea inputs
-        variation_description: Use for long-form answers that are more than a single
+        variation_description:
+          Use for long-form answers that are more than a single
           word or two. Make sure the input size is big enough that the user can
           see what they've typed without having to scroll to reveal hidden
           content, and small enough that the user doesn't have  to navigate the
@@ -161,10 +163,12 @@ variation_groups:
                   <span class="u-visually-hidden">Clear</span>
               </button>
           </div>
-        variation_description: These offer the user an action to take related to the
+        variation_description:
+          These offer the user an action to take related to the
           input, typically to clear the input.
       - variation_name: Button inside a text input with another button
-        variation_description: This example combines both of the previous patterns,
+        variation_description:
+          This example combines both of the previous patterns,
           creating a typical site search form.
         variation_code_snippet: >-
           <div class="o-form__input-w-btn">

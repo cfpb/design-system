@@ -32,7 +32,7 @@
     "copy-icons": "cp -r packages/cfpb-icons/src/icons docs/_includes/",
     "design-system-link": "lerna exec -- yarn link",
     "design-system-unlink": "lerna exec -- yarn unlink",
-    "lint": "yarn prettier \"{docs,packages}/**/*.{js,jsx,ts,tsx,json,md}\" --write && yarn eslint ./{docs,packages} --fix && yarn stylelint \"{docs,packages}/**/*.{css,less}\" --fix",
+    "lint": "scripts/lint.sh",
     "postinstall": "yarn run copy-icons && bundle install",
     "process-icon-svgs": "svgo -f packages/cfpb-icons/src/icons --config=svgo.config.js",
     "release": "yarn run build && gulp build && lerna publish --no-verify-access",

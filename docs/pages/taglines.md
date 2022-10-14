@@ -16,7 +16,8 @@ variation_groups:
               </div>
           </div>
         variation_description: ""
-        variation_implementation: The flag itself is a stand-alone element of `<span
+        variation_implementation:
+          The flag itself is a stand-alone element of `<span
           class="u-usa-flag"></span>` that uses a utility class that embeds a
           double-resolution flag png via a data URI.
       - variation_name: Large tagline
@@ -29,7 +30,8 @@ variation_groups:
               </div>
           </div>
         variation_description: ""
-        variation_implementation: The `u-nowrap` container prevents wrapping of the
+        variation_implementation:
+          The `u-nowrap` container prevents wrapping of the
           "United States government" text. If the content of the tagline
           contains markup it needs to go inside a generic `div` container.
       - variation_name: Extra large tagline

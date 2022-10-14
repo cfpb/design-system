@@ -28,7 +28,7 @@ variation_groups:
           for specific solutions. This type of video is usually consumer or
           industry facing and is representative of the Bureau's priorities.
         variation_name: Branded Content
-        variation_code_snippet_rendered: ""
+        variation_code_snippet_rendered: ''
       - variation_code_snippet: <iframe width="560" height="315"
           src="https://www.youtube.com/embed/YB_7cy1poGA" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media;
@@ -68,7 +68,7 @@ variation_groups:
           board meetings, town halls, and more. After these events are broadcast
           live, we upload them to YouTube for documentation purposes.
         variation_name: Event
-        variation_code_snippet_rendered: ""
+        variation_code_snippet_rendered: ''
 use_cases: |-
   Typically, we find video is best used to:
 
@@ -847,7 +847,7 @@ guidelines: >-
 
 
   If exporting finished video, the export format depends on where the video will be shown or hosted. For most uses, we export a ProRes HQ file and an H.264 mp4 file for social media use.
-behavior: ""
+behavior: ''
 restrictions: []
 accessibility: >-
   ### Include text alternatives for non-text content

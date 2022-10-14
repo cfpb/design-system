@@ -1,17 +1,17 @@
 // Required modules.
-import BaseTransition from "./BaseTransition.js";
-import EventObserver from "@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js";
+import BaseTransition from './BaseTransition.js';
+import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 
 // Exported constants.
 const CLASSES = {
-  CSS_PROPERTY: "transform",
-  BASE_CLASS: "u-move-transition",
-  MOVE_TO_ORIGIN: "u-move-to-origin",
-  MOVE_LEFT: "u-move-left",
-  MOVE_LEFT_2X: "u-move-left-2x",
-  MOVE_LEFT_3X: "u-move-left-3x",
-  MOVE_RIGHT: "u-move-right",
-  MOVE_UP: "u-move-up",
+  CSS_PROPERTY: 'transform',
+  BASE_CLASS: 'u-move-transition',
+  MOVE_TO_ORIGIN: 'u-move-to-origin',
+  MOVE_LEFT: 'u-move-left',
+  MOVE_LEFT_2X: 'u-move-left-2x',
+  MOVE_LEFT_3X: 'u-move-left-3x',
+  MOVE_RIGHT: 'u-move-right',
+  MOVE_UP: 'u-move-up'
 };
 
 /**
@@ -24,15 +24,15 @@ const CLASSES = {
  *   DOM element to apply move transition to.
  * @returns {MoveTransition} An instance.
  */
-function MoveTransition(element) {
-  const _baseTransition = new BaseTransition(element, CLASSES);
+function MoveTransition( element ) {
+  const _baseTransition = new BaseTransition( element, CLASSES );
 
   /**
    * @returns {MoveTransition} An instance.
    */
   function init() {
     _baseTransition.init();
-    const _transitionCompleteBinded = _transitionComplete.bind(this);
+    const _transitionCompleteBinded = _transitionComplete.bind( this );
     _baseTransition.addEventListener(
       BaseTransition.END_EVENT,
       _transitionCompleteBinded
@@ -44,7 +44,7 @@ function MoveTransition(element) {
    * Handle the end of a transition.
    */
   function _transitionComplete() {
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
+    this.dispatchEvent( BaseTransition.END_EVENT, { target: this } );
   }
 
   /**
@@ -52,7 +52,7 @@ function MoveTransition(element) {
    * @returns {MoveTransition} An instance.
    */
   function moveToOrigin() {
-    _baseTransition.applyClass(CLASSES.MOVE_TO_ORIGIN);
+    _baseTransition.applyClass( CLASSES.MOVE_TO_ORIGIN );
 
     return this;
   }
@@ -63,19 +63,19 @@ function MoveTransition(element) {
    *   How many times to move left as a multiplication of the element's width.
    * @returns {MoveTransition} An instance.
    */
-  function moveLeft(count) {
+  function moveLeft( count ) {
     count = count || 1;
     const moveClasses = [
       CLASSES.MOVE_LEFT,
       CLASSES.MOVE_LEFT_2X,
-      CLASSES.MOVE_LEFT_3X,
+      CLASSES.MOVE_LEFT_3X
     ];
 
-    if (count < 1 || count > moveClasses.length) {
-      throw new Error("MoveTransition: moveLeft count is out of range!");
+    if ( count < 1 || count > moveClasses.length ) {
+      throw new Error( 'MoveTransition: moveLeft count is out of range!' );
     }
 
-    _baseTransition.applyClass(moveClasses[count - 1]);
+    _baseTransition.applyClass( moveClasses[count - 1] );
 
     return this;
   }
@@ -85,7 +85,7 @@ function MoveTransition(element) {
    * @returns {MoveTransition} An instance.
    */
   function moveRight() {
-    _baseTransition.applyClass(CLASSES.MOVE_RIGHT);
+    _baseTransition.applyClass( CLASSES.MOVE_RIGHT );
 
     return this;
   }
@@ -95,7 +95,7 @@ function MoveTransition(element) {
    * @returns {MoveTransition} An instance.
    */
   function moveUp() {
-    _baseTransition.applyClass(CLASSES.MOVE_UP);
+    _baseTransition.applyClass( CLASSES.MOVE_UP );
 
     return this;
   }

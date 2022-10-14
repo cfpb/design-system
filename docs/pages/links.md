@@ -34,7 +34,7 @@ variation_groups:
           within a paragraph like this one).
 
         variation_name: Inline links
-        variation_implementation: ""
+        variation_implementation: ''
         variation_specs: >-
           [Color variables for
           links](https://cfpb.github.io/design-system/development/variables#typography-1)
@@ -95,7 +95,7 @@ variation_groups:
           unit
           groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
           among other places.
-        variation_jinja_code_snippet: ""
+        variation_jinja_code_snippet: ''
       - variation_name: Destructive links
         variation_code_snippet: |-
           <a class="a-btn a-btn__link a-btn__warning" href="#">
@@ -106,8 +106,8 @@ variation_groups:
           clicking them will perform a destructive action, such as clearing
           entries in a form.
         variation_specs:
-          "* Destructive action link: Avenir Next Medium, 16px, Mid dark
-          red (#c3381c)"
+          '* Destructive action link: Avenir Next Medium, 16px, Mid dark
+          red (#c3381c)'
     variation_group_description: >+
       Links that appear in body text (`p`), link lists (`li`), or definitions
       (`dd`) are automatically underlined. To enable underlines elsewhere, e.g.
@@ -124,7 +124,7 @@ variation_groups:
 
       * Icons should never be underlined.
     variations:
-      - variation_specs: ""
+      - variation_specs: ''
         variation_code_snippet: |-
           <p>
             The document icon should emphasize a link that contains a
@@ -216,9 +216,9 @@ variation_groups:
       small screens by converting to full block links that have a
       finger-friendly touch area. Reduce screen size to see these in action.
   - variation_group_name: Printed links
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
-      - variation_name: ""
+      - variation_name: ''
         variation_description: When a page is printed from
           [consumerfinance.gov](https://www.consumerfinance.gov/), links should
           appear in the following style and include both the original link text
@@ -253,8 +253,8 @@ variation_groups:
         variation_implementation: When a page is printed, cf.gov's [print
           stylesheet](https://github.com/cfpb/consumerfinance.gov/blob/c9637160e14da5093b43c78fc2c87fa0ba190887/cfgov/unprocessed/css/print.less)
           appends link URLs in parentheses next to their link text.
-use_cases: ""
-guidelines: ""
+use_cases: ''
+guidelines: ''
 behavior: >-
   ### Default links
 
@@ -279,7 +279,7 @@ accessibility: >-
 
 
   In situations where that's untenable, you can improve the situation for screen reader users by coding the link with the `aria-label` attribute and adding more descriptive link text, which will be read aloud by screen readers.
-research: ""
+research: ''
 related_items: >-
   *
   [Variables](https://cfpb.github.io/design-system/development/variables#typography-1)

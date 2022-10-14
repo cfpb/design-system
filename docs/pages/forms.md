@@ -75,8 +75,8 @@ variation_groups:
           * How do you save partial progress?
 
           * Can be harder to track analytics like drop-off rates
-        variation_name: "Option 1: Single page"
-      - variation_name: "Option 2: Wizard"
+        variation_name: 'Option 1: Single page'
+      - variation_name: 'Option 2: Wizard'
         variation_description: >-
           Each section goes on its own page.
 
@@ -112,7 +112,7 @@ variation_groups:
           * There’s no single place for users to go back and edit their data
 
           * Not a natural fit for non-linear processes like looping, adding and removing
-      - variation_name: "Option 3: Accordion"
+      - variation_name: 'Option 3: Accordion'
         variation_description: >-
           All sections on a single page, but each new section only appears once
           the previous section has been completed. Done well, option 3 is a
@@ -154,7 +154,7 @@ variation_groups:
 
 
           * Implementation and interface is more complex
-      - variation_name: "Option 4: Hybrid"
+      - variation_name: 'Option 4: Hybrid'
         variation_description: >-
 
 

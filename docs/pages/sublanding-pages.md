@@ -14,7 +14,7 @@ description: >-
 variation_groups:
   - variation_group_name: Types
     variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
 
 
@@ -25,7 +25,7 @@ variation_groups:
           | ![Sublanding page with hero](/design-system/images/uploads/sublanding_examplea.jpg) | ![Sublanding page with text introduction](/design-system/images/uploads/sublanding_examplec.jpg) | ![Sublanding page with breakout sidebar](/design-system/images/uploads/sublanding_exampleb.jpg) |
 
           | Example: [Payday loans](https://www.consumerfinance.gov/consumer-tools/payday-loans/) | Example: [Financial education for adults](https://www.consumerfinance.gov/consumer-tools/educator-tools/adult-financial-education/) | Example: [Rulemaking](https://www.consumerfinance.gov/policy-compliance/rulemaking/)
-        variation_name: ""
+        variation_name: ''
 use_cases: >-
   ### When to use
 

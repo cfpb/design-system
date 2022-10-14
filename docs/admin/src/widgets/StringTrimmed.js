@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class StringTrimmedControl extends React.Component {
   static propTypes = {
@@ -12,7 +12,7 @@ export default class StringTrimmedControl extends React.Component {
   };
 
   state = {
-    value: this.props.value || "",
+    value: this.props.value || '',
   };
 
   handleChange(event) {

@@ -5,7 +5,7 @@
  * Constant for the name of the data-* attribute set on
  * HTML DOM elements for access by JavaScript.
  */
-const JS_HOOK = "data-js-hook";
+const JS_HOOK = 'data-js-hook';
 
 /**
  * @constant
@@ -23,7 +23,7 @@ const JS_HOOK = "data-js-hook";
  * which defines that two scripts (FlyoutMenu) and (ClearableInput)
  * should access this DOM element and initialize its behaviors.
  */
-const BEHAVIOR_PREFIX = "behavior_";
+const BEHAVIOR_PREFIX = 'behavior_';
 
 /**
  * @constant
@@ -39,7 +39,7 @@ const BEHAVIOR_PREFIX = "behavior_";
  * has been called, such as
  * `var globalSearch = new GlobalSearch( 'm-global-search' ).init()`.
  */
-const STATE_PREFIX = "state_";
+const STATE_PREFIX = 'state_';
 
 /**
  * Empty function that will do nothing.
@@ -59,7 +59,7 @@ const DIRECTIONS = {
   UP: 0,
   RIGHT: 1,
   DOWN: -1,
-  LEFT: -2,
+  LEFT: -2
 };
 
 export { BEHAVIOR_PREFIX, JS_HOOK, noopFunct, STATE_PREFIX, DIRECTIONS };

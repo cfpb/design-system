@@ -59,7 +59,7 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
               <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Standard checkboxes
         variation_specs: >-
           #### Default checkbox
@@ -117,7 +117,7 @@ variation_groups:
 
           Text spacing should inform spacing of checkboxes, and a checkbox should be vertically centered with the first line of text in an option.
     variation_group_name: Types
-  - variation_group_description: ""
+  - variation_group_description: ''
     variations:
       - variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox
@@ -252,7 +252,7 @@ variation_groups:
           checkboxes.
         variation_name: Large target area checkboxes
     variation_group_name: Sizes
-use_cases: ""
+use_cases: ''
 guidelines: >-
   ### Content guidelines
 
@@ -274,5 +274,5 @@ accessibility: To optimize screen reader accessibility, lay out checkboxes
   vertically rather than horizontally.
 last_updated: 2019-09-17T14:30:15.293Z
 eyebrow: Form elements
-research: ""
+research: ''
 ---

@@ -147,12 +147,12 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: ""
-        variation_name: ""
+        variation_description: ''
+        variation_name: ''
         variation_specs: "![Filter panel
           style](/design-system/images/uploads/filterable_list_control_panels_0\
           72120.png)"
-        variation_code_snippet_rendered: ""
+        variation_code_snippet_rendered: ''
     variation_group_name: Standard filterable list
     variation_group_description: Use filters in conjunction with search to help
       users narrow down large amounts of data or content. Follow form patterns
@@ -208,8 +208,8 @@ behavior: >-
 
 
   When a user applies a filter setting, a notification automatically appears below the panel indicating number of results or errors.
-accessibility: ""
-research: ""
+accessibility: ''
+research: ''
 related_items: >-
   *
   [Notifications](https://cfpb.github.io/design-system/components/notifications)

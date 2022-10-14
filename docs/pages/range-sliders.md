@@ -9,14 +9,14 @@ description: Range sliders allow the user to select a value between a defined
   when the user is likely to have a specific number that they want to input.
 variation_groups:
   - variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: |-
           ### Default state
           ![](/design-system/images/uploads/slider-default.png)
 
           ### Focus state
           ![](/design-system/images/uploads/slider-focus.png)
-        variation_name: ""
+        variation_name: ''
         variation_specs: |-
           #### Default
 
@@ -50,10 +50,10 @@ use_cases: >-
 
 
   Also consider the balance between the length of the slider and the number of data points it covers (the range, as well as how discrete the points are). The more points to choose from, the harder it is for the user to target a specific number.
-guidelines: ""
-behavior: ""
+guidelines: ''
+behavior: ''
 accessibility: Make sure that sliders are accessible by keyboard using the arrow keys.
 last_updated: 2020-01-28T15:55:47.394Z
 eyebrow: Form elements
-research: ""
+research: ''
 ---

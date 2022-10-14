@@ -87,8 +87,8 @@ variation_groups:
                   </form>
               </div>
           </div>
-        variation_implementation: ""
-      - variation_code_snippet: ""
+        variation_implementation: ''
+      - variation_code_snippet: ''
         variation_description: >-
           The inset email signup module is a variation on the main email signup
           that can be used in the body content of
@@ -119,7 +119,7 @@ variation_groups:
         variation_specs: |-
           * Heading: H3
           * Body copy: Avenir paragraph
-        variation_code_snippet_rendered: ""
+        variation_code_snippet_rendered: ''
     variation_group_name: Types
     variation_group_description: >-
       The email sign up form is comprised of a slug heading, custom description
@@ -128,7 +128,7 @@ variation_groups:
 
 
       Different page types will be connected to the corresponding GovDelivery list based on the page topic (i.e. HMDA) or page type (i.e. blog).
-use_cases: ""
+use_cases: ''
 guidelines: >-
   ### Content guidelines
 
@@ -195,7 +195,7 @@ behavior: >-
   | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 
   | ![Inset email sign up 900 breakpoint](/design-system/images/uploads/email-sign-up_learn.png) | ![Inset breakpoint 601](/design-system/images/uploads/email-sign-up_learn_601.png) | ![Inset breakpoint 320](/design-system/images/uploads/email-sign-up_learn_320.png) |
-accessibility: ""
+accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

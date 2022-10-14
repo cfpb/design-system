@@ -169,7 +169,7 @@ variation_groups:
         variation_description: Spaced list adds extra padding to every element in a list.
         variation_name: Spaced list
     variation_group_name: Variations
-use_cases: ""
+use_cases: ''
 guidelines: >-
   ### Content guidelines
 
@@ -192,10 +192,10 @@ guidelines: >-
 
 
   If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.
-behavior: ""
-accessibility: ""
-research: ""
-related_items: ""
+behavior: ''
+accessibility: ''
+research: ''
+related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z
 eyebrow: Lists and tables
 ---

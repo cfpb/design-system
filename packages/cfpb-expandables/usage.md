@@ -711,7 +711,7 @@ Each instance has the following methods for public consumption:
 ### toggleTargetState( element )
 
 ```js
-const element = document.querySelector(".o-expandable_target");
+const element = document.querySelector('.o-expandable_target');
 expandables[0].toggleTargetState(element);
 ```
 

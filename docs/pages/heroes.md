@@ -325,9 +325,9 @@ variation_groups:
 
           ![Image of smaller photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_small.png "Image of smaller photographic hero graphic with dimensions")
         variation_implementation:
-          "It’s best to avoid a non-button call to action in
+          'It’s best to avoid a non-button call to action in
           these, as it’s unlikely that the Pacific Blue will have accessible
-          contrast with a non-white (or light gray) background. "
+          contrast with a non-white (or light gray) background. '
       - variation_is_deprecated: false
         variation_name: Jumbo hero
         variation_description:
@@ -719,7 +719,7 @@ variation_groups:
           modifier to the hero to switch the text to white. For reference, see
           this [example of a hero with knockout
           text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
-    variation_group_description: ""
+    variation_group_description: ''
 use_cases: >-
   ### When to use
 
@@ -794,8 +794,8 @@ behavior: >-
   | Text and hero image appear side-by-side  | Text and hero image stack vertically |
 
   | ![Mockup of hero graphic at desktop size](/design-system/images/uploads/hero_behavior_large.png "Mockup of hero graphic at desktop size") | ![Mockup of hero graphic at small size](/design-system/images/uploads/hero_behavior_small.png "Mockup of hero graphic at small size") |
-accessibility: ""
-research: ""
+accessibility: ''
+research: ''
 related_items: >-
   -
   [Variables](https://cfpb.github.io/design-system/development/variables#heroes-and-featured-content-modules)

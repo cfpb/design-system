@@ -4,25 +4,25 @@
    Mixin for sorting table organism.
    ========================================================================== */
 
-import { closest } from "@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js";
-import { DIRECTIONS } from "@cfpb/cfpb-atomic-component/src/utilities/standard-type.js";
+import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js';
+import { DIRECTIONS } from '@cfpb/cfpb-atomic-component/src/utilities/standard-type.js';
 
 let UNDEFINED;
 
 const TableSortable = {
   ui: {
-    base: ".o-table__sortable",
-    tableBody: "tbody",
-    sortButton: ".sorted-up, .sorted-down",
+    base: '.o-table__sortable',
+    tableBody: 'tbody',
+    sortButton: '.sorted-up, .sorted-down'
   },
 
   classes: {
-    sortDown: "sorted-down",
-    sortUp: "sorted-up",
+    sortDown: 'sorted-down',
+    sortUp: 'sorted-up'
   },
 
   events: {
-    "click .sortable": "onSortableClick",
+    'click .sortable': 'onSortableClick'
   },
 
   initialize: initialize,
@@ -32,7 +32,7 @@ const TableSortable = {
   updateTableData: updateTableData,
   updateTableDom: updateTableDom,
   tableDataSorter: tableDataSorter,
-  onSortableClick: onSortableClick,
+  onSortableClick: onSortableClick
 };
 
 /**
@@ -44,11 +44,11 @@ function initialize() {
   this.sortDirection = UNDEFINED;
   this.tableData = [];
   this.bindProperties();
-  if (this.ui.sortButton) {
+  if ( this.ui.sortButton ) {
     this.sortColumnIndex = this.getColumnIndex();
 
     this.sortDirection = DIRECTIONS.UP;
-    if (this.ui.sortButton.classList.contains(this.classes.sortDown)) {
+    if ( this.ui.sortButton.classList.contains( this.classes.sortDown ) ) {
       this.sortDirection = DIRECTIONS.DOWN;
     }
 
@@ -62,20 +62,20 @@ function initialize() {
 function bindProperties() {
   let sortDirection;
 
-  Object.defineProperty(this, "sortDirection", {
+  Object.defineProperty( this, 'sortDirection', {
     configurable: true,
-    get: function () {
+    get: function() {
       return sortDirection;
     },
-    set: function (value) {
-      if (value === DIRECTIONS.UP) {
+    set: function( value ) {
+      if ( value === DIRECTIONS.UP ) {
         this.sortClass = this.classes.sortUp;
-      } else if (value === DIRECTIONS.DOWN) {
+      } else if ( value === DIRECTIONS.DOWN ) {
         this.sortClass = this.classes.sortDown;
       }
       sortDirection = value;
-    },
-  });
+    }
+  } );
 }
 
 /**
@@ -84,8 +84,8 @@ function bindProperties() {
  * @param {HTMLNode} element - The element used as the sortable.
  * @returns {number} The column index of the active sort column.
  */
-function getColumnIndex(element) {
-  return closest(element || this.ui.sortButton, "td, th").cellIndex;
+function getColumnIndex( element ) {
+  return closest( element || this.ui.sortButton, 'td, th' ).cellIndex;
 }
 
 /**
@@ -103,22 +103,22 @@ function updateTable() {
  * @returns {Array} Multidimensional array of column's cell value
  * and corresponding row element.
  */
-function updateTableData(columnIndex) {
+function updateTableData( columnIndex ) {
   let cell;
-  const rows = this.ui.tableBody.querySelectorAll("tr");
+  const rows = this.ui.tableBody.querySelectorAll( 'tr' );
   this.tableData = [];
   columnIndex = columnIndex || this.sortColumnIndex;
 
-  for (let i = 0, len = rows.length; i < len; ++i) {
+  for ( let i = 0, len = rows.length; i < len; ++i ) {
     cell = rows[i].cells[columnIndex];
-    if (cell) {
+    if ( cell ) {
       cell = cell.textContent.trim();
     }
-    this.tableData.push([cell, rows[i]]);
+    this.tableData.push( [ cell, rows[i] ] );
   }
 
-  const sortType = this.ui.sortButton.getAttribute("data-sort_type");
-  this.tableData.sort(this.tableDataSorter(this.sortDirection, sortType));
+  const sortType = this.ui.sortButton.getAttribute( 'data-sort_type' );
+  this.tableData.sort( this.tableDataSorter( this.sortDirection, sortType ) );
 
   return this.tableData;
 }
@@ -133,17 +133,17 @@ function updateTableDom() {
   /* Empty the table body to prepare for sorting the rows
      TODO: It might make sense to use innerHTML
      from a performance and garbage collection standpoint. */
-  while (tableBody.lastChild) {
-    tableBody.removeChild(tableBody.lastChild);
+  while ( tableBody.lastChild ) {
+    tableBody.removeChild( tableBody.lastChild );
   }
 
   const documentFragment = document.createDocumentFragment();
-  for (let i = 0; i < this.tableData.length; i++) {
-    documentFragment.appendChild(this.tableData[i][1]);
+  for ( let i = 0; i < this.tableData.length; i++ ) {
+    documentFragment.appendChild( this.tableData[i][1] );
   }
 
-  tableBody.appendChild(documentFragment);
-  this.dispatchEvent("table:updated");
+  tableBody.appendChild( documentFragment );
+  this.dispatchEvent( 'table:updated' );
 
   return tableBody;
 }
@@ -162,8 +162,8 @@ function updateTableDom() {
  * @returns {Function} - A function to be used by the Array.sort method,
  * where the parameters 'a' and 'b' is each an Array (of Arrays) to be sorted.
  */
-function tableDataSorter(direction, sortType) {
-  return function (a, b) {
+function tableDataSorter( direction, sortType ) {
+  return function( a, b ) {
     const sign = direction === DIRECTIONS.DOWN ? -1 : 1;
     let order = 0;
     const regex = /[^\d.-]/g;
@@ -173,15 +173,15 @@ function tableDataSorter(direction, sortType) {
     b = b[0];
 
     // For number sort, convert a & b to numbers.
-    if (sortType === "number") {
-      a = Number(a.replace(regex, ""));
-      b = Number(b.replace(regex, ""));
+    if ( sortType === 'number' ) {
+      a = Number( a.replace( regex, '' ) );
+      b = Number( b.replace( regex, '' ) );
     }
 
     // Sort the values
-    if (a < b) {
+    if ( a < b ) {
       order = sign * -1;
-    } else if (a > b) {
+    } else if ( a > b ) {
       order = sign;
     }
 
@@ -196,11 +196,11 @@ function tableDataSorter(direction, sortType) {
  * @param {Event} event - DOM event.
  * @returns {Object} - TOOD: Add description.
  */
-function onSortableClick(event) {
-  if (this.ui.sortButton) {
-    this.ui.sortButton.classList.remove(this.sortClass);
+function onSortableClick( event ) {
+  if ( this.ui.sortButton ) {
+    this.ui.sortButton.classList.remove( this.sortClass );
   }
-  if (this.ui.sortButton === event.target) {
+  if ( this.ui.sortButton === event.target ) {
     this.sortDirection = ~this.sortDirection;
   } else {
     this.ui.sortButton = event.target;
@@ -208,7 +208,7 @@ function onSortableClick(event) {
     this.sortDirection = DIRECTIONS.UP;
   }
   // The active sort class is changing when the sort direction changes.
-  this.ui.sortButton.classList.add(this.sortClass);
+  this.ui.sortButton.classList.add( this.sortClass );
   this.updateTable();
 
   return this;

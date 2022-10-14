@@ -13,14 +13,14 @@ description: >-
 variation_groups:
   - variation_group_name: Standard learn page
     variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           | Learn page wireframe | Example |
 
           | -- | -- |
 
           | ![Learn page example](/design-system/images/uploads/learn_example.jpg) | Example: |
-        variation_name: ""
+        variation_name: ''
 use_cases: >-
   ### When to use
 

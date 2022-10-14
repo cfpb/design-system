@@ -3,8 +3,8 @@ title: Helper text
 layout: variation
 section: components
 status: Released
-description: "Helper text is used with form elements to give the user context
-  about their usage. "
+description: 'Helper text is used with form elements to give the user context
+  about their usage. '
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -17,10 +17,10 @@ variation_groups:
 
           <input class="a-text-input" type="text" id="helper-block-example">
         variation_description:
-          "Block helper text appears directly beneath a form label.
+          'Block helper text appears directly beneath a form label.
           Use it to explain why a piece of information is being requested,
           address security and privacy concerns, or to suggest ways of providing
-          answers other than providing formatting examples. "
+          answers other than providing formatting examples. '
         variation_name: Block helper text
         variation_specs: >-
           [Color variables for helper
@@ -84,9 +84,9 @@ variation_groups:
           Avenir Next Regular, 16 px, Gray (#5a5d61)
     variation_group_name: Types
     variation_group_description:
-      "Types of helper text include block helper text,
-      inline helper text, and placeholder text. "
-use_cases: ""
+      'Types of helper text include block helper text,
+      inline helper text, and placeholder text. '
+use_cases: ''
 guidelines: >-
   ### Required vs. optional fields
 
@@ -94,7 +94,7 @@ guidelines: >-
 
 
   Try not to design forms consisting mainly of optional fields. If you must do so, mark required field labels only with inline helper text.
-behavior: ""
+behavior: ''
 accessibility: For screen reader accessibility, consider using the
   `aria-describedby` attribute for helper text, which gives screen readers users
   the information if they need while allowing more flexibility with placement.

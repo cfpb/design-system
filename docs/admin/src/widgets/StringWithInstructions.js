@@ -1,16 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const instructionsContainerStyle = {
-  color: "#444a57",
-  padding: "20px 0 10px",
+  color: '#444a57',
+  padding: '20px 0 10px',
 };
 
 const instructionsLinkStyle = {
-  color: "#444a57",
-  "font-size": "16px",
-  "font-weight": "normal",
-  "text-decoration": "underline",
+  color: '#444a57',
+  'font-size': '16px',
+  'font-weight': 'normal',
+  'text-decoration': 'underline',
 };
 
 export default class StringTrimmedControl extends React.Component {
@@ -24,7 +24,7 @@ export default class StringTrimmedControl extends React.Component {
   };
 
   state = {
-    value: this.props.value || "",
+    value: this.props.value || '',
   };
 
   handleChange(event) {

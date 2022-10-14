@@ -9,7 +9,7 @@ description: Buttons signal actions. They should be used sparingly; each
   should lead users to another page or further information.
 variation_groups:
   - variation_group_name: Types
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_code_snippet: >-
           <button class="a-btn" title="Default state">Default state</button>
@@ -189,8 +189,8 @@ variation_groups:
           destructive action using a destructive action button link to the right
           of the primary button.
         variation_specs:
-          "* Destructive action link: Avenir Next Medium, 16px, Mid dark
-          red (#c3381c)"
+          '* Destructive action link: Avenir Next Medium, 16px, Mid dark
+          red (#c3381c)'
       - variation_name: Printed buttons
         variation_description: When a
           [consumerfinance.gov](https://www.consumerfinance.gov/) page is
@@ -198,7 +198,7 @@ variation_groups:
           links](https://cfpb.github.io/design-system/components/links#printed-links)
           on the Links page for specifications.
   - variation_group_name: Sizes
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_code_snippet: >-
           <button class="a-btn a-btn__super" title="Default state">Default
@@ -266,7 +266,7 @@ variation_groups:
   - variation_group_name: Buttons with icons
     variations:
       - variation_name: Static icon buttons
-        variation_description: ""
+        variation_description: ''
         variation_code_snippet: |-
           <button class="a-btn">
               <span class="a-btn_icon
@@ -317,7 +317,7 @@ guidelines: >-
   * Use clear, succinct, and informative language. 
 
   * Limit the copy length to 22 characters.
-behavior: ""
+behavior: ''
 restrictions:
   - restrictions_do: <button class="a-btn" title="Test button">Short label</button>
     restrictions_do_not: <button class="a-btn" title="Test button">This label is
@@ -338,8 +338,8 @@ restrictions:
               {% include icons/left.svg %}
           </span>
       </button>
-accessibility: ""
-research: ""
+accessibility: ''
+research: ''
 related_items: "* [Button
   variables](https://cfpb.github.io/design-system/development/variables#buttons\
   )"

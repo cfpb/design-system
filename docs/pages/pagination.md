@@ -55,7 +55,7 @@ variation_groups:
                           type="submit">Go</button>
               </form>
           </nav>
-        variation_description: ""
+        variation_description: ''
         variation_name: Default pagination
         variation_implementation:
           To enable the component to jump directly to the
@@ -100,14 +100,14 @@ variation_groups:
           When on the first or last page of paginated content, be
           sure to disable the appropriate buttons by adding the
           `a_btn__disabled` modifier and removing their `href` attribute.
-        variation_jinja_code_snippet: ""
+        variation_jinja_code_snippet: ''
         variation_name: First and last pages
     variation_group_name: Standard pagination
     variation_group_description:
       Pagination consists of buttons to navigate through
       content, along with an inline form (input field, submit button) to enable
       users to navigate to specific pages by number.
-use_cases: ""
+use_cases: ''
 guidelines: >-
   * Display 25 results per page. 
 
@@ -124,8 +124,8 @@ behavior: >-
   | ------------ | ------------ |
 
   | ![Pagination at breakpoints above 600 px](/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.03-pm.png) | ![Pagination at breakpoints below 601 px](/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.30-pm.png) |
-accessibility: ""
-research: ""
+accessibility: ''
+research: ''
 related_items: "* [Pagination
   variables](https://cfpb.github.io/design-system/development/variables#paginat\
   ion-1)"

@@ -53,7 +53,7 @@ description: >-
 variation_groups:
   - variation_group_name: Icon library
     variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           - [Navigation icons](#navigation-icons)
 
@@ -468,14 +468,14 @@ variation_groups:
           | {% include icons/wifi.svg %} | {% include icons/wifi-round.svg %} | wifi | wi-fi, wireless, signal |
 
           {: class="icon-table"}
-        variation_name: ""
+        variation_name: ''
         variation_implementation:
           Each icon has a circled variant shown in the second
           column (or square, in the case of the social media icons) that can be
           accessed by appending `-round` (or `-square`) to the canonical name or
           any of its aliases.
   - variation_group_name: Animated icon
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_code_snippet: >
 
@@ -542,7 +542,7 @@ variation_groups:
         variation_description: |-
           * **Web:** 40px size, paired with primary headings
           * **Print:** 48pt size, paired with primary headings
-use_cases: ""
+use_cases: ''
 guidelines: >-
   ### Color
 
@@ -641,6 +641,6 @@ behavior: >-
 
 
   In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where `@name` is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black).
-related_items: ""
+related_items: ''
 eyebrow: Graphics
 ---

@@ -16,11 +16,11 @@ function EventObserver() {
    * @param {Function} callback - The function called when the event has fired.
    * @returns {Object} The instance this EventObserver instance is decorating.
    */
-  function addEventListener(event, callback) {
-    if (_events.hasOwnProperty(event)) {
-      _events[event].push(callback);
+  function addEventListener( event, callback ) {
+    if ( _events.hasOwnProperty( event ) ) {
+      _events[event].push( callback );
     } else {
-      _events[event] = [callback];
+      _events[event] = [ callback ];
     }
 
     return this;
@@ -33,15 +33,15 @@ function EventObserver() {
    * @param {Function} callback - The function attached to the event.
    * @returns {Object} The instance this EventObserver instance is decorating.
    */
-  function removeEventListener(event, callback) {
-    if (!_events.hasOwnProperty(event)) {
+  function removeEventListener( event, callback ) {
+    if ( !_events.hasOwnProperty( event ) ) {
       return this;
     }
 
-    const index = _events[event].indexOf(callback);
+    const index = _events[event].indexOf( callback );
     // Check if there are any callbacks associated with a particular event.
-    if (index !== -1) {
-      _events[event].splice(index, 1);
+    if ( index !== -1 ) {
+      _events[event].splice( index, 1 );
     }
 
     return this;
@@ -53,16 +53,16 @@ function EventObserver() {
    * @param {Object} options - The event object to pass to the event handler.
    * @returns {Object} The instance this EventObserver instance is decorating.
    */
-  function dispatchEvent(event, options) {
-    if (!_events.hasOwnProperty(event)) {
+  function dispatchEvent( event, options ) {
+    if ( !_events.hasOwnProperty( event ) ) {
       return this;
     }
 
     options = options || {};
 
     const evts = _events[event];
-    for (let i = 0, len = evts.length; i < len; i++) {
-      evts[i].call(this, options);
+    for ( let i = 0, len = evts.length; i < len; i++ ) {
+      evts[i].call( this, options );
     }
 
     return this;

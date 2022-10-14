@@ -188,11 +188,11 @@ variation_groups:
 
           ```
     variation_group_name: Types
-    variation_group_description: ""
-use_cases: ""
-guidelines: ""
-behavior: ""
-accessibility: ""
+    variation_group_description: ''
+use_cases: ''
+guidelines: ''
+behavior: ''
+accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

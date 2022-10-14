@@ -8,7 +8,7 @@ It's made up of four child components `vars`, `media-queries`,
 > or your compiled Design System CSS will
 > not work perfectly in older browsers.
 
-[//]: # "NOTE: The markdown adds a `p` element inside the `blockquote`, we need to explore a style fix so this is more obviously a `blockquote`."
+[//]: # 'NOTE: The markdown adds a `p` element inside the `blockquote`, we need to explore a style fix so this is more obviously a `blockquote`.'
 
 ## Table of contents
 

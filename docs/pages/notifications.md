@@ -83,7 +83,7 @@ variation_groups:
           If your notification requires links, include them below the message or
 
           explanation as a `m-list` unordered list.
-        variation_name: ""
+        variation_name: ''
   - variation_group_name: Modifier types
     variations:
       - variation_code_snippet: |-
@@ -98,7 +98,7 @@ variation_groups:
         variation_description: >
           The success notification is for displaying when an operation has run
           as expected, such as returning the number of results in a search.
-        variation_implementation: ""
+        variation_implementation: ''
         variation_name: Success notification
         variation_specs: |-
           * Border: 2 px, CFPB Green (#20aa3f)
@@ -118,7 +118,7 @@ variation_groups:
                   </span>
               </div>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_specs: |-
           * Border: 2 px, CFPB Green (#20aa3f)
           * Minicon: 18 px, CFPB Green (#20aa3f)
@@ -139,7 +139,7 @@ variation_groups:
 
 
           This notification can also be used to display additional critical information to a user before they submit a form, such as how their data will be used and protected or a reminder that they can’t edit their responses after submitting.
-        variation_implementation: ""
+        variation_implementation: ''
         variation_name: Warning notification
         variation_specs: |-
           * Border: 2 px, Gold (#ff9e1b)
@@ -157,7 +157,7 @@ variation_groups:
                   </span>
               </div>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_specs: |-
           * Border: 2 px, Gold (#ff9e1b)
           * Minicon: 18 px, Gold (#ff9e1b)
@@ -224,8 +224,8 @@ variation_groups:
           to reassure the user that an action is functioning as intended.
         variation_name: In-progress notification
     variation_group_description: Types of notifications include success, warning, error, and in-progress.
-use_cases: ""
-guidelines: ""
+use_cases: ''
+guidelines: ''
 behavior: >-
   ### Placement
 
@@ -253,7 +253,7 @@ accessibility: >-
   * Place form-level alerts below the form title.
 
   * In general, use distinct icons, contrasting colors, prominent placement, and text to indicate errors. Don’t rely on just one method, as users can have many different accessibility needs (color blind users, visually impaired users, users with motor control issues, etc.).
-research: ""
+research: ''
 related_items: "* [Notifications
   variables](https://cfpb.github.io/design-system/development/variables#notific\
   ations)"

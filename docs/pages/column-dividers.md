@@ -48,7 +48,7 @@ variation_groups:
 
           Dividers use absolute positioning relative to the `.content-l` element and depend on `.content-l` using `position: relative;`. This allows vertical dividers to span the height of the tallest column. Just be aware that if you have more than one row of columns, and each row has columns of different widths, the borders will cause unwanted overlapping since they will span the height of the entire `.content-l` element.
         variation_name: Content layout column dividers
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           `cf-grid` columns use left and right `border` for fixed `margin` which
           means it’s not possible to set visual left and right borders directly
@@ -81,11 +81,11 @@ variation_groups:
           ```
         variation_name: Column divider modifiers
     variation_group_name: Types
-use_cases: ""
-guidelines: ""
-behavior: ""
-accessibility: ""
+use_cases: ''
+guidelines: ''
+behavior: ''
+accessibility: ''
 last_updated: 2019-09-13T19:34:43.025Z
 eyebrow: Layout
-research: ""
+research: ''
 ---

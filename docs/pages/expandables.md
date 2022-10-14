@@ -159,7 +159,7 @@ variation_groups:
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
-    variation_group_description: ""
+    variation_group_description: ''
   - variations:
       - variation_code_snippet: >-
           <div class="o-expandable-group">
@@ -384,7 +384,7 @@ variation_groups:
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
     variation_group_name: Groups
-    variation_group_description: ""
+    variation_group_description: ''
   - variation_group_name: Variations
     variation_group_description: Expandables can be built by combining the basic
       barebones structure described below with more specialized expandable
@@ -434,7 +434,7 @@ variation_groups:
           .o-expandable_content__onload-open
 
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
         variation_implementation:
           A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
@@ -453,7 +453,7 @@ variation_groups:
           .o-expandable__padded
 
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
         variation_implementation:
           A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
@@ -470,7 +470,7 @@ variation_groups:
           .o-expandable_header__spaced
 
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
         variation_implementation:
           A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
@@ -498,7 +498,7 @@ variation_groups:
               Lorem ipsum
           </span>
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
         variation_implementation:
           A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
@@ -541,8 +541,8 @@ variation_groups:
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
-use_cases: ""
-guidelines: ""
+use_cases: ''
+guidelines: ''
 behavior: >
   ### Collapsed
 

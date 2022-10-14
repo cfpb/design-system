@@ -152,6 +152,6 @@ variation_groups:
 
 
       Voiceover provides narration. Sound effects bring scenes to life, while music helps set the tone and pacing.
-guidelines: ""
-related_items: ""
+guidelines: ''
+related_items: ''
 ---

@@ -45,17 +45,17 @@ Molecules are prefixed with “m-” in CSS, JavaScript, and HTML files.
 **JavaScript**:
 
 ```js
-const CONSTANTS = { MESSAGE: "message", EXPLANATION: "explanation" };
+const CONSTANTS = { MESSAGE: 'message', EXPLANATION: 'explanation' };
 
 const NotificationMolecule = Molecule.extend({
   classes: {
-    isVisible: "m-notification__visible",
+    isVisible: 'm-notification__visible',
   },
 
   ui: {
-    base: ".m-notification",
-    explanation: ".m-notification_explanation",
-    message: ".m-notification_message",
+    base: '.m-notification',
+    explanation: '.m-notification_explanation',
+    message: '.m-notification_message',
   },
 
   initialize: function () {

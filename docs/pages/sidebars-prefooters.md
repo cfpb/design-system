@@ -359,11 +359,11 @@ variation_groups:
                   </div>
               </div>
           </div>
-use_cases: ""
-guidelines: ""
-behavior: ""
-accessibility: ""
-research: ""
+use_cases: ''
+guidelines: ''
+behavior: ''
+accessibility: ''
+research: ''
 related_items: >-
   * [Layout
   variables](https://cfpb.github.io/design-system/development/variables#color-4)

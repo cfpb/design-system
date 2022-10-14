@@ -3,8 +3,8 @@ title: Text inputs
 layout: variation
 section: components
 status: Released
-description: "Text fields give users the ability to enter text. They can be
-  single-line or multi-line (textarea inputs).  "
+description: 'Text fields give users the ability to enter text. They can be
+  single-line or multi-line (textarea inputs).  '
 variation_groups:
   - variation_group_name: Standard text inputs
     variations:
@@ -106,7 +106,7 @@ variation_groups:
         variation_specs: |-
           * Border: 1 px, Gray 60 (#919395)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
-    variation_group_description: ""
+    variation_group_description: ''
   - variation_group_name: Variations
     variations:
       - variation_name: Full-width text inputs
@@ -188,7 +188,7 @@ variation_groups:
                   <button class="a-btn">Search</button>
               </div>
           </div>
-use_cases: ""
+use_cases: ''
 guidelines: >-
   ### Stylistic guidelines
 
@@ -225,7 +225,7 @@ accessibility: >-
 
 
   Users of screen readers use the tab key to move focus from one form control to another. Make sure that tab focus order reflects the way you would like users to navigate through the form. Consider whether tabs should move a user down or across the page.
-research: ""
+research: ''
 related_items: "* [Text input
   variables](https://cfpb.github.io/design-system/development/variables#forms-1\
   )"

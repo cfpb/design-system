@@ -4,10 +4,10 @@ collection_name: pages
 layout: variation
 section: guidelines
 eyebrow: Data visualization
-description: "Data visualization can be an excellent way to increase
+description: 'Data visualization can be an excellent way to increase
   understanding of information and make comparisons of data. Using visuals to
   convey meaning and tell stories can engage the user and create a memorable
-  experience. "
+  experience. '
 variation_groups:
   - variation_group_name: Types
     variation_group_description: >-
@@ -273,7 +273,7 @@ accessibility: >-
   * How would someone using a screen reader interact with this visualization?
 
   * How would someone with low vision interact with this visualization?
-research: ""
+research: ''
 related_items: >-
   * [Data visualization color
   palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1)

@@ -3,8 +3,8 @@ title: Helper classes and mixins
 layout: variation
 section: development
 status: Released
-description: "Helper classes and mixins are utilities to help front-end web
-  development meet our design standards. "
+description: 'Helper classes and mixins are utilities to help front-end web
+  development meet our design standards. '
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -72,7 +72,7 @@ variation_groups:
 
           More information see: <http://css-tricks.com/snippets/css/clear-fix>
         variation_name: '"Clearfix" helper class'
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           Hide an element from view while keeping it accessible to screen
           readers.
@@ -99,7 +99,7 @@ variation_groups:
           it after checking for browser support, use JavaScript to remove this
           class from the element after verifying support.
         variation_name: '"Totally hidden" helper class'
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: |-
           _DEPRECATED._ Identical to `display: inline-block.`
 
@@ -107,7 +107,7 @@ variation_groups:
           <div class="u-inline-block"></div>
           ```
         variation_name: '"Inline block" helper class [DEPRECATED]'
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_name: '"Float right" helper class'
         variation_description: |-
           ```
@@ -246,7 +246,7 @@ variation_groups:
 
 
           `.u-align-with-btn(@font-size: @base-font-size-px);`
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: '"Flexible proportional containers" mixin'
         variation_description: >-
           Utilize intrinsic ratios to create a flexible container that retains
@@ -344,7 +344,7 @@ variation_groups:
 
 
           **A base mixin of `u-link__colors-base()` exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use `.u-link__colors(@c, @v, @h, @f, @a)`.**
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: '"Link border" mixin'
         variation_description: >-
           Force the default bottom `border` on the default and `:hover` states.
@@ -363,7 +363,7 @@ variation_groups:
 
 
           `.u-link__hover-border()`
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: '"Link children" mixin'
         variation_description: >-
           Calling this mixin without arguments will set the default color for
@@ -378,7 +378,7 @@ variation_groups:
 
 
           `.u-link__hover-child(@c)`
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: '"Small text utility" mixin'
         variation_description: >-
           #### **Class**
@@ -427,11 +427,11 @@ variation_groups:
           }
 
           ```
-use_cases: ""
-guidelines: ""
-behavior: ""
-accessibility: ""
+use_cases: ''
+guidelines: ''
+behavior: ''
+accessibility: ''
 last_updated: 2019-09-13T18:46:32.716Z
 eyebrow: Utilities
-research: ""
+research: ''
 ---

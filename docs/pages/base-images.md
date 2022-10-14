@@ -18,11 +18,11 @@ variation_groups:
           `0`, and removes bottom inline spacing from `img` elements within.
         variation_name: Figure
     variation_group_name: Types
-use_cases: ""
-guidelines: ""
-behavior: ""
-accessibility: ""
+use_cases: ''
+guidelines: ''
+behavior: ''
+accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
 eyebrow: Layout
-research: ""
+research: ''
 ---

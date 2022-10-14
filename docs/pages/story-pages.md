@@ -12,7 +12,7 @@ description: The story page uses full-bleed images and scaled-up headings to
   page](https://www.consumerfinance.gov/about-us/racial-equity).
 variation_groups:
   - variation_group_name: Standard story page
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: "| Story page wireframe | Example |
 

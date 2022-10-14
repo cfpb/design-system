@@ -24,8 +24,8 @@ variation_groups:
 
       * Mobile: 15px padding on each side
     variations:
-      - variation_name: ""
-        variation_description: ""
+      - variation_name: ''
+        variation_description: ''
         variation_code_snippet: |-
           <div class="cols-12">
               <section>
@@ -98,7 +98,7 @@ variation_groups:
 
       * `xl`: 1231px and up
   - variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: See [grid
           variables](https://cfpb.github.io/design-system/development/variables#grid-1).
         variation_name: Variables
@@ -311,7 +311,7 @@ variation_groups:
                   </div>
               </section>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Nesting
       - variation_code_snippet: >-
           <div>
@@ -378,9 +378,9 @@ variation_groups:
                   <div class="col col-1 prefix-11"><p>prefix 11, suffix 0</p></div>
               </section>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Prefixing/Suffixing
-      - variation_name: "Cf-grid helpers: Wrapper"
+      - variation_name: 'Cf-grid helpers: Wrapper'
         variation_description: >
           Turns an element into a cf-grid wrapper at 801px and above (e.g.,
           `<div class="wrapper">`). Includes some explicit declarations for
@@ -390,11 +390,11 @@ variation_groups:
           <div class="wrapper">
               Wrapper
           </div>
-      - variation_name: "Cf-grid helpers: Column divider modifiers"
+      - variation_name: 'Cf-grid helpers: Column divider modifiers'
         variation_description: See the [column dividers
           page](https://cfpb.github.io/design-system/components/column-dividers#column-divider-modifiers)
           for information.
-        variation_code_snippet: ""
+        variation_code_snippet: ''
     variation_group_name: Development
     variation_group_description: >-
 
@@ -468,13 +468,13 @@ variation_groups:
       >   or your compiled Capital Framework CSS will
 
       >   not work perfectly in older browsers.
-use_cases: ""
-guidelines: ""
-behavior: ""
-accessibility: ""
-research: ""
-related_items: "* [Grid
-  variables](https://cfpb.github.io/design-system/development/variables#grid-1)"
+use_cases: ''
+guidelines: ''
+behavior: ''
+accessibility: ''
+research: ''
+related_items: '* [Grid
+  variables](https://cfpb.github.io/design-system/development/variables#grid-1)'
 last_updated: 2019-09-10T15:02:08.752Z
 eyebrow: Basics
 ---

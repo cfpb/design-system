@@ -1,4 +1,4 @@
-import { queryOne } from "@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js";
+import { queryOne } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js';
 
 /**
  * Shortcut for creating new dom elements.
@@ -6,26 +6,26 @@ import { queryOne } from "@cfpb/cfpb-atomic-component/src/utilities/dom-traverse
  * @param {Object} options - The options for building the elem.
  * @returns {HTMLNode} The created elem.
  */
-function create(tag, options) {
-  const elem = document.createElement(tag);
+function create( tag, options ) {
+  const elem = document.createElement( tag );
 
   let i;
-  for (i in options) {
-    if (options.hasOwnProperty(i)) {
+  for ( i in options ) {
+    if ( options.hasOwnProperty( i ) ) {
       const val = options[i];
       let ref;
 
-      if (i === "inside") {
-        ref = queryOne(val);
-        ref.appendChild(elem);
-      } else if (i === "around") {
-        ref = queryOne(val);
-        ref.parentNode.insertBefore(elem, ref);
-        elem.appendChild(ref);
-      } else if (i in elem) {
+      if ( i === 'inside' ) {
+        ref = queryOne( val );
+        ref.appendChild( elem );
+      } else if ( i === 'around' ) {
+        ref = queryOne( val );
+        ref.parentNode.insertBefore( elem, ref );
+        elem.appendChild( ref );
+      } else if ( i in elem ) {
         elem[i] = val;
       } else {
-        elem.setAttribute(i, val);
+        elem.setAttribute( i, val );
       }
     }
   }
@@ -34,5 +34,5 @@ function create(tag, options) {
 }
 
 export default {
-  create: create,
+  create: create
 };

@@ -39,7 +39,7 @@ variation_groups:
           @btn__disabled-bg:          @gray-20;
           @btn__disabled-outline:     @gray-20;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Sizing
         variation_description: |-
           ```
@@ -78,13 +78,13 @@ variation_groups:
           @expandable-group-bg:          @white;
           @expandable-group-divider:     @gray-80;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Sizing
         variation_description: |
           ```
           @expandable_link-font-size: 14px;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Timing
         variation_description: |-
           ```
@@ -139,14 +139,14 @@ variation_groups:
           // .a-label_helper
           @label-helper:                            @gray;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Sizing
         variation_description: |-
           ```
           // .a-select
           @select-height: 30px;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
   - variation_group_name: Grid
     variation_group_description: >-
       ```
@@ -209,7 +209,7 @@ variation_groups:
 
           ```
   - variation_group_name: Layout
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: |-
           ```
@@ -277,12 +277,12 @@ variation_groups:
           @notification-icon-warning:   @gold;
           @notification-icon-error:     @red;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Sizing
-        variation_description: "`@notification-padding__px: 15px;`"
-        variation_code_snippet: ""
+        variation_description: '`@notification-padding__px: 15px;`'
+        variation_code_snippet: ''
   - variation_group_name: Pagination
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_name: Color
         variation_description: |-
@@ -290,7 +290,7 @@ variation_groups:
           @pagination-text: @gray;
           @pagination-bg:   @gray-10;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Sizing
         variation_description: |-
           ```
@@ -429,7 +429,7 @@ variation_groups:
           @webfont-demi:         Arial;
 
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Font source variables
         variation_description: >-
           Use this variable to specify where the fonts files used in the

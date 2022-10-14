@@ -85,8 +85,8 @@ variation_groups:
                   </select>
               </div>
           </div>
-        variation_description: ""
-        variation_name: ""
+        variation_description: ''
+        variation_name: ''
         variation_specs: |-
           <h3 class="h4">Default</h3>
 
@@ -135,9 +135,9 @@ variation_groups:
                   <option value="option8">Multiselect options can also contain long words that will be wrapped like supercalifragilisticexpialidocious</option>
               </select>
           </div>
-    variation_group_description: "Custom JavaScript may be required to make the
+    variation_group_description: 'Custom JavaScript may be required to make the
       default multiselect component accessible for the visually impaired. See
-      the [accessibility](#accessibility) section for more information. "
+      the [accessibility](#accessibility) section for more information. '
 use_cases: >-
   While dropdowns are easy to implement, they aren’t always the best choice from
   a usability perspective.
@@ -150,8 +150,8 @@ use_cases: >-
   * You need structured data for a long list. For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a dropdown facilitates this standardization.
 
   * The list options are familiar to the user. A dropdown is not a good place to introduce new or complicated terms or concepts. For instance, if the question is “What’s your favorite color of the rainbow,” a dropdown could be a good choice. The options are familiar and there are more than six. You don’t want the user to have to read and absorb a lot of new information in a dropdown.
-guidelines: ""
-behavior: ""
+guidelines: ''
+behavior: ''
 accessibility: >-
   ### Dropdowns
 
@@ -163,7 +163,7 @@ accessibility: >-
   ### Multiselects
 
   From an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multiselect component is desired, use custom JavaScript to make it accessible.
-research: ""
+research: ''
 related_items: "* [Forms
   variables](https://cfpb.github.io/design-system/development/variables#forms-1\
   )"

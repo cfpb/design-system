@@ -3,9 +3,9 @@ title: Sample component page
 layout: variation
 section: null
 status: Released
-description: "Intro: Describe this component in 1-3 sentences. Explain why the
+description: 'Intro: Describe this component in 1-3 sentences. Explain why the
   page exists and what users will get out of the content on this page. Be brief.
-  Limit to around 400 characters with spaces."
+  Limit to around 400 characters with spaces.'
 variation_groups:
   - variation_group_name: Standard [component name] or Types
     variation_group_description: >-
@@ -42,8 +42,8 @@ variation_groups:
 
       *4) If you have them, add implementation notes to the "Implementation details" tab. Add design, production, and style notes to the "Optional specs" tab.*
     variations:
-      - variation_name: ""
-        variation_description: ""
+      - variation_name: ''
+        variation_description: ''
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox">

@@ -29,7 +29,7 @@ variation_groups:
               Content block with top border.
           </div>
         variation_description: Adds top `border` to `.block`.
-        variation_jinja_code_snippet: ""
+        variation_jinja_code_snippet: ''
         variation_name: Border top modifier
       - variation_code_snippet: |-
           Main content...
@@ -213,11 +213,11 @@ variation_groups:
               </div>
           </div>
     variation_group_name: Types
-use_cases: ""
-guidelines: ""
-behavior: ""
-accessibility: ""
-research: ""
+use_cases: ''
+guidelines: ''
+behavior: ''
+accessibility: ''
+research: ''
 related_items: "* [Layout
   variables](https://cfpb.github.io/design-system/development/variables#color-4\
   )"

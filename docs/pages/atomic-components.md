@@ -82,10 +82,10 @@ use_cases: >-
   NotificationMolecule.init();
 
   ```
-guidelines: ""
-behavior: ""
-accessibility: ""
+guidelines: ''
+behavior: ''
+accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
 eyebrow: Atomic
-research: ""
+research: ''
 ---

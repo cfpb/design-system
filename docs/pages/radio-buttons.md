@@ -266,12 +266,12 @@ use_cases: >-
 
 
   Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the default style shown below, make sure the target area is at least 45 x 45 px and includes the option text.
-guidelines: ""
-behavior: ""
+guidelines: ''
+behavior: ''
 accessibility: There are some issues with Voiceover reading radio buttons. To
   get around this, consider using the aria-describedby attribute.
-research: ""
-related_items: ""
+research: ''
+related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z
 eyebrow: Form elements
 ---

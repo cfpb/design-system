@@ -22,9 +22,9 @@ variation_groups:
           Example of a non heading element:
           <p class="h1">A non-heading element</p>
           -->
-        variation_description: ""
-        variation_jinja_code_snippet: ""
-        variation_name: ""
+        variation_description: ''
+        variation_jinja_code_snippet: ''
+        variation_name: ''
         variation_specs: "| Heading   |
           Specs                                                            |
           Responsive behavior at < 601px |
@@ -80,8 +80,8 @@ variation_groups:
           <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading level 5</h5>
 
           <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading level 6</p>
-        variation_name: ""
-        variation_description: ""
+        variation_name: ''
+        variation_description: ''
         variation_specs: |-
           | Heading   | Specs                                        |
           | --------- | -------------------------------------------- |
@@ -100,11 +100,11 @@ variation_groups:
 
   - variation_group_name: Variations
     variations:
-      - variation_name: "Heading with icon "
+      - variation_name: 'Heading with icon '
         variation_description:
-          "The heading with icon is typically used for listing
+          'The heading with icon is typically used for listing
           categories in a meta header on pages like the [blog
-          page](https://www.consumerfinance.gov/about-us/blog/). "
+          page](https://www.consumerfinance.gov/about-us/blog/). '
         variation_code_snippet: |-
           <header class="m-meta-header">
               <div class="m-meta-header_right">
@@ -189,7 +189,7 @@ variation_groups:
 
           * 1px thick Gray 50 top border that spans the width of the module or column
     variation_group_description: The heading variations below have specific use cases.
-use_cases: ""
+use_cases: ''
 guidelines: >-
   ### Content
 
@@ -205,11 +205,11 @@ guidelines: >-
 
 
   Refer to the [Guidelines section of the Fonts page](<https://cfpb.github.io/design-system/foundation/fonts#guidelines>) for information about heading spacing.
-behavior: ""
+behavior: ''
 accessibility: Since categories can be repetitive, we suggest placing a label
   with `.u-visually-hidden` prior to the headings with icons to add more context
   for screen readers.
-research: ""
+research: ''
 related_items: "* [Typography
   variables](https://cfpb.github.io/design-system/development/variables#typogra\
   phy)"

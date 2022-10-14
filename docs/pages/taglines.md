@@ -15,7 +15,7 @@ variation_groups:
                   <span class="u-nowrap">United States government</span>
               </div>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_implementation:
           The flag itself is a stand-alone element of `<span
           class="u-usa-flag"></span>` that uses a utility class that embeds a
@@ -29,7 +29,7 @@ variation_groups:
                   <span class="u-nowrap">United States government</span>
               </div>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_implementation:
           The `u-nowrap` container prevents wrapping of the
           "United States government" text. If the content of the tagline
@@ -43,16 +43,16 @@ variation_groups:
                 from financial harm.
               </div>
           </div>
-        variation_description: "An extra large tagline, which stacks on mobile."
-        variation_implementation: ""
+        variation_description: 'An extra large tagline, which stacks on mobile.'
+        variation_implementation: ''
     variation_group_name: Types
 use_cases: Taglines are used in the header and footer across consumerfinance.gov
   and within inkwells.
-guidelines: ""
-behavior: ""
-accessibility: ""
-research: ""
-related_items: ""
+guidelines: ''
+behavior: ''
+accessibility: ''
+research: ''
+related_items: ''
 last_updated: 2019-10-21T20:38:39.851Z
 eyebrow: Featured content
 ---

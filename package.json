@@ -102,7 +102,7 @@
     "jest": "28.1.0",
     "jest-cli": "28.1.0",
     "jest-environment-jsdom": "28.1.0",
-    "lerna": "4.0.0",
+    "lerna": "6.0.0",
     "lerna-changelog": "2.2.0",
     "less-loader": "11.0.0",
     "log-symbols": "5.1.0",

@@ -9,18 +9,8 @@ import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.
  * @classdesc Initializes new BaseTransition behavior.
  *   This shouldn't be used directly, but instead should be
  *   the base class used through composition by a specific transition.
- * @param {HTMLNode} element- -
- * @param classes-
- * @param classes- 
- * @param classes- 
- * @param classes- 
- * @param classes- 
- * @param classes- 
- * @param classes
- *   DOM element to apply transition to.
- * @param element
- * @param {Object} classes-
- *   The classes to apply to this transition.
+ * @param {HTMLNode} element - DOM element to apply transition to.
+ * @param {object} classes - The classes to apply to this transition.
  * @returns {BaseTransition} An instance.
  */
 function BaseTransition(element, classes) {

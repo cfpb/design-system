@@ -7,12 +7,10 @@ module.exports = {
         extensions: ['.js', '.ts', '.d.ts', '.tsx'],
       },
     },
-    react: {
-      version: 'detect',
-    },
   },
   env: {
     browser: true,
+    node: true,
     es2021: true,
   },
   extends: [
@@ -22,12 +20,6 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'prettier',
   ],
-  parserOptions: {
-    babelOptions: {
-      presets: ['@babel/preset-react'],
-    },
-    sourceType: 'module',
-  },
   // Some plugins are automatically included.
   // Run `yarn eslint --print-config foo.js > bar.json` to see included plugins.
   // plugins: [],
@@ -46,14 +38,5 @@ module.exports = {
     'no-var': ['error'],
     'prefer-const': ['error'],
     radix: ['error'],
-    'react/no-multi-comp': ['error', { ignoreStateless: true }],
-    'react/no-unstable-nested-components': ['error'],
-    'react/self-closing-comp': ['error'],
-    'react/boolean-prop-naming': ['error', { validateNested: true }],
-    'react/default-props-match-prop-types': [
-      'error',
-      { allowRequiredDefaults: true },
-    ],
-    'react/jsx-curly-brace-presence': ['error'],
   },
 };

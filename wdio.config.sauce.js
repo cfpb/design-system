@@ -16,7 +16,7 @@ exports.config = {
   // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
   // directory is where your package.json resides, so `wdio` will be called from there.
   //
-  specs: [ './test/browser/**/*.js' ],
+  specs: ['./test/browser/**/*.js'],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -45,50 +45,50 @@ exports.config = {
   //
   capabilities: [
     {
-      'browserName': 'chrome',
-      'browserVersion': 'latest',
-      'platformName': 'Windows 10',
+      browserName: 'chrome',
+      browserVersion: 'latest',
+      platformName: 'Windows 10',
       // Increase the VM's resolution for Netlify CMS tests that require a wider viewport.
       'sauce:options': {
-        screenResolution: '1920x1200'
-      }
+        screenResolution: '1920x1200',
+      },
     },
     {
-      'browserName': 'MicrosoftEdge',
-      'browserVersion': 'latest',
-      'platformName': 'Windows 10',
+      browserName: 'MicrosoftEdge',
+      browserVersion: 'latest',
+      platformName: 'Windows 10',
       'sauce:options': {
-        screenResolution: '1920x1200'
+        screenResolution: '1920x1200',
       },
-      'exclude': [
+      exclude: [
         // Netlify CMS is only tested with Chrome
-        'test/browser/docs/netlify-cms.js'
-      ]
+        'test/browser/docs/netlify-cms.js',
+      ],
     },
     {
-      'browserName': 'internet explorer',
-      'browserVersion': '11.285',
-      'platformName': 'Windows 10',
+      browserName: 'internet explorer',
+      browserVersion: '11.285',
+      platformName: 'Windows 10',
       'sauce:options': {
-        screenResolution: '1920x1200'
+        screenResolution: '1920x1200',
       },
-      'exclude': [
+      exclude: [
         // Netlify CMS is only tested with Chrome
-        'test/browser/docs/netlify-cms.js'
-      ]
+        'test/browser/docs/netlify-cms.js',
+      ],
     },
     {
-      'browserName': 'firefox',
-      'browserVersion': 'latest',
-      'platformName': 'Windows 10',
+      browserName: 'firefox',
+      browserVersion: 'latest',
+      platformName: 'Windows 10',
       'sauce:options': {
-        screenResolution: '1920x1200'
+        screenResolution: '1920x1200',
       },
-      'exclude': [
+      exclude: [
         // Netlify CMS is only tested with Chrome
-        'test/browser/docs/netlify-cms.js'
-      ]
-    }
+        'test/browser/docs/netlify-cms.js',
+      ],
+    },
   ],
   //
   // ===================
@@ -143,9 +143,9 @@ exports.config = {
     [
       'sauce',
       {
-        sauceConnect: true
-      }
-    ]
+        sauceConnect: true,
+      },
+    ],
   ],
 
   // Framework you want to run your specs with.
@@ -165,14 +165,14 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter.html
-  reporters: [ 'spec' ],
+  reporters: ['spec'],
 
   //
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/
   mochaOpts: {
     ui: 'bdd',
-    timeout: 180000
+    timeout: 180000,
   },
   //
   // =====
@@ -184,52 +184,58 @@ exports.config = {
   // resolved to continue.
   /**
    * Gets executed once before all workers get launched.
-   * @param {Object} config wdio configuration object
-   * @param {Array.<Object>} capabilities list of capabilities details
+   *
+   * @param {object} config - wdio configuration object
+   * @param {Array.<object>} capabilities - list of capabilities details
    */
   // onPrepare: function (config, capabilities) {
   // },
   /**
    * Gets executed before a worker process is spawned and can be used to initialise specific service
    * for that worker as well as modify runtime environments in an async fashion.
-   * @param  {String} cid      capability id (e.g 0-0)
-   * @param  {[type]} caps     object containing capabilities for session that will be spawn in the worker
-   * @param  {[type]} specs    specs to be run in the worker process
-   * @param  {[type]} args     object that will be merged with the main configuration once worker is initialised
-   * @param  {[type]} execArgv list of string arguments passed to the worker process
+   *
+   * @param  {string} cid     -  capability id (e.g 0-0)
+   * @param  {[type]} caps    -  object containing capabilities for session that will be spawn in the worker
+   * @param  {[type]} specs   -  specs to be run in the worker process
+   * @param  {[type]} args    -  object that will be merged with the main configuration once worker is initialised
+   * @param  {[type]} execArgv- -  list of string arguments passed to the worker process
    */
   // onWorkerStart: function (cid, caps, specs, args, execArgv) {
   // },
   /**
    * Gets executed just before initialising the webdriver session and test framework. It allows you
    * to manipulate configurations depending on the capability or spec.
-   * @param {Object} config wdio configuration object
-   * @param {Array.<Object>} capabilities list of capabilities details
-   * @param {Array.<String>} specs List of spec file paths that are to be run
+   *
+   * @param {object} config - wdio configuration object
+   * @param {Array.<object>} capabilities - list of capabilities details
+   * @param {Array.<string>} specs - List of spec file paths that are to be run
    */
-  beforeSession: function( config, capabilities, specs ) {
+  beforeSession: function (config, capabilities, specs) {
     // Set a global variable indicating the tests are being run via Sauce Labs
     global.SAUCE_LABS = true;
-  }
+  },
 
   /**
    * Gets executed before test execution begins. At this point you can access to all global
    * variables like `browser`. It is the perfect place to define custom commands.
-   * @param {Array.<Object>} capabilities list of capabilities details
-   * @param {Array.<String>} specs List of spec file paths that are to be run
+   *
+   * @param {Array.<object>} capabilities - list of capabilities details
+   * @param {Array.<string>} specs - List of spec file paths that are to be run
    */
   // before: function (capabilities, specs) {
   // },
   /**
    * Runs before a WebdriverIO command gets executed.
-   * @param {String} commandName hook command name
-   * @param {Array} args arguments that command would receive
+   *
+   * @param {string} commandName - hook command name
+   * @param {Array} args - arguments that command would receive
    */
   // beforeCommand: function (commandName, args) {
   // },
   /**
    * Hook that gets executed before the suite starts
-   * @param {Object} suite suite details
+   *
+   * @param {object} suite - suite details
    */
   // beforeSuite: function (suite) {
   // },
@@ -258,50 +264,56 @@ exports.config = {
 
   /**
    * Hook that gets executed after the suite has ended
-   * @param {Object} suite suite details
+   *
+   * @param {object} suite - suite details
    */
   // afterSuite: function (suite) {
   // },
   /**
    * Runs after a WebdriverIO command gets executed
-   * @param {String} commandName hook command name
-   * @param {Array} args arguments that command would receive
-   * @param {Number} result 0 - command success, 1 - command error
-   * @param {Object} error error object if any
+   *
+   * @param {string} commandName - hook command name
+   * @param {Array} args - arguments that command would receive
+   * @param {number} result - 0 - command success, 1 - command error
+   * @param {object} error - error object if any
    */
   // afterCommand: function (commandName, args, result, error) {
   // },
   /**
    * Gets executed after all tests are done. You still have access to all global variables from
    * the test.
-   * @param {Number} result 0 - test pass, 1 - test fail
-   * @param {Array.<Object>} capabilities list of capabilities details
-   * @param {Array.<String>} specs List of spec file paths that ran
+   *
+   * @param {number} result - 0 - test pass, 1 - test fail
+   * @param {Array.<object>} capabilities - list of capabilities details
+   * @param {Array.<string>} specs - List of spec file paths that ran
    */
   // after: function (result, capabilities, specs) {
   // },
   /**
    * Gets executed right after terminating the webdriver session.
-   * @param {Object} config wdio configuration object
-   * @param {Array.<Object>} capabilities list of capabilities details
-   * @param {Array.<String>} specs List of spec file paths that ran
+   *
+   * @param {object} config - wdio configuration object
+   * @param {Array.<object>} capabilities - list of capabilities details
+   * @param {Array.<string>} specs - List of spec file paths that ran
    */
   // afterSession: function (config, capabilities, specs) {
   // },
   /**
    * Gets executed after all workers got shut down and the process is about to exit. An error
    * thrown in the onComplete hook will result in the test run failing.
-   * @param {Object} exitCode 0 - success, 1 - fail
-   * @param {Object} config wdio configuration object
-   * @param {Array.<Object>} capabilities list of capabilities details
-   * @param {<Object>} results object containing test results
+   *
+   * @param {object} exitCode - 0 - success, 1 - fail
+   * @param {object} config - wdio configuration object
+   * @param {Array.<object>} capabilities - list of capabilities details
+   * @param {<Object>} results - object containing test results
    */
   // onComplete: function(exitCode, config, capabilities, results) {
   // },
   /**
    * Gets executed when a refresh happens.
-   * @param {String} oldSessionId session ID of the old session
-   * @param {String} newSessionId session ID of the new session
+   *
+   * @param {string} oldSessionId - session ID of the old session
+   * @param {string} newSessionId - session ID of the new session
    */
   // onReload: function(oldSessionId, newSessionId) {
   // }

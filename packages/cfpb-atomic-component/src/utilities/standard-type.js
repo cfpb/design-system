@@ -15,7 +15,6 @@ const JS_HOOK = 'data-js-hook';
  * behaviors should be attached to a component.
  * This would be set in the markup and initialized when
  * the JavaScript loads.
- *
  * @example
  * A component may flag that it has certain JavaScript behaviors attached,
  * such as:
@@ -31,7 +30,6 @@ const BEHAVIOR_PREFIX = 'behavior_';
  * @description
  * Flag prefix for settings related to changes in a components
  * state set in the data-* JavaScript hook.
- *
  * @example
  * A component may flag that it has been initialized by setting
  * `data-js-hook="state_atomic_init"` after page load.
@@ -59,7 +57,7 @@ const DIRECTIONS = {
   UP: 0,
   RIGHT: 1,
   DOWN: -1,
-  LEFT: -2
+  LEFT: -2,
 };
 
 export { BEHAVIOR_PREFIX, JS_HOOK, noopFunct, STATE_PREFIX, DIRECTIONS };

@@ -12,13 +12,13 @@
   when you run `gulp`.
 */
 
-const requireDir = require( 'require-dir' );
-const gulp = require( 'gulp' );
+const requireDir = require('require-dir');
+const gulp = require('gulp');
 
 // Require all tasks in gulp/tasks, including subfolders
-requireDir( './scripts/gulp/', { recurse: true } );
+requireDir('./scripts/gulp/', { recurse: true });
 
 // Define default build task sequence.
-gulp.task( 'build', gulp.parallel( 'styles:components', 'scripts:components' ) );
+gulp.task('build', gulp.parallel('styles:components', 'scripts:components'));
 
-gulp.task( 'default', gulp.series( 'build', 'test' ) );
+gulp.task('default', gulp.series('build', 'test'));

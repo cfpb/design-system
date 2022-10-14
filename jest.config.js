@@ -2,10 +2,10 @@ module.exports = {
   testEnvironment: 'jsdom',
   verbose: true,
   transform: {
-    '^.+\\.jsx?$': 'babel-jest'
+    '^.+\\.jsx?$': 'babel-jest',
   },
   collectCoverage: true,
-  collectCoverageFrom: [ '<rootDir>/packages/**/*.js' ],
+  collectCoverageFrom: ['<rootDir>/packages/**/*.js'],
   coveragePathIgnorePatterns: [
     '<rootDir>/gulpfile.js',
     '<rootDir>/.*.config.js',
@@ -17,13 +17,13 @@ module.exports = {
     '<rootDir>/packages/.?/node_modules/',
     '<rootDir>/test/',
     '<rootDir>/tmp/',
-    '<rootDir>/scripts/'
+    '<rootDir>/scripts/',
   ],
   coverageDirectory: '<rootDir>/test/unit-test-coverage',
   moduleNameMapper: {
-    '\\.(svg)$': '<rootDir>/test/unit-test/mocks/fileMock.js'
+    '\\.(svg)$': '<rootDir>/test/unit-test/mocks/fileMock.js',
   },
   testEnvironmentOptions: {
-    url: 'http://localhost'
-  }
+    url: 'http://localhost',
+  },
 };

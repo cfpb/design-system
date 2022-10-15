@@ -1,5 +1,5 @@
 [build]
-  environment = { NODE_VERSION = "14.17.5" }
+  environment = { NODE_VERSION = "16.17.1" }
   publish = "docs/_site/"
   command = "./scripts/build-netlify-pr-preview.sh"
 

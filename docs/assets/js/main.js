@@ -51,21 +51,6 @@ if (tabsContainerDom.length > 0) {
   }
 }
 
-const toggleAllBtn = document.querySelector('#toggle-details');
-const toggleBtns = document.querySelectorAll('.a-toggle_code button');
-
-if (toggleAllBtn) {
-  toggleAllBtn.addEventListener('click', handleToggleAllClick, false);
-
-  if (window.localStorage.getItem('toggleState') === 'hide') {
-    toggleAllDetails(toggleAllBtn);
-  }
-}
-
-for (let i = 0, len = toggleBtns.length; i < len; i++) {
-  toggleBtns[i].addEventListener('click', handleToggleClick, false);
-}
-
 /**
  * @param {MouseEvent} event - The mouse event object from the click.
  */
@@ -80,4 +65,19 @@ function handleToggleAllClick(event) {
 function handleToggleClick(event) {
   const target = event.target;
   toggleDetails(target);
+}
+
+const toggleAllBtn = document.querySelector('#toggle-details');
+const toggleBtns = document.querySelectorAll('.a-toggle_code button');
+
+if (toggleAllBtn) {
+  toggleAllBtn.addEventListener('click', handleToggleAllClick, false);
+
+  if (window.localStorage.getItem('toggleState') === 'hide') {
+    toggleAllDetails(toggleAllBtn);
+  }
+}
+
+for (let i = 0, len = toggleBtns.length; i < len; i++) {
+  toggleBtns[i].addEventListener('click', handleToggleClick, false);
 }

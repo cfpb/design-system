@@ -14,6 +14,31 @@ function Tabs(dom) {
   let _selectedTabIndex;
 
   /**
+   * Change the selected tab index.
+   *
+   * @param {number} index - An index position of the selected tab.
+   * @returns {Tabs} An instance.
+   */
+  function changeTab(index) {
+    // Remove classes from prior selected tab and panel.
+    _tabsItemsDom[_selectedTabIndex].classList.remove(
+      `${BASE_CLASS}_list-item-selected`
+    );
+    _tabsPanelsDom[_selectedTabIndex].classList.add('u-hidden');
+
+    // Store new selected index.
+    _selectedTabIndex = index;
+
+    // Add classes for the new selected tab and panel.
+    _tabsItemsDom[_selectedTabIndex].classList.add(
+      `${BASE_CLASS}_list-item-selected`
+    );
+    _tabsPanelsDom[_selectedTabIndex].classList.remove('u-hidden');
+
+    return this;
+  }
+
+  /**
    * Initialize the Tabs instance.
    *
    * @returns {Tabs} An instance.
@@ -42,31 +67,6 @@ function Tabs(dom) {
 
     // Set the default selected tab to index zero.
     _selectedTabIndex = 0;
-
-    return this;
-  }
-
-  /**
-   * Change the selected tab index.
-   *
-   * @param {number} index - An index position of the selected tab.
-   * @returns {Tabs} An instance.
-   */
-  function changeTab(index) {
-    // Remove classes from prior selected tab and panel.
-    _tabsItemsDom[_selectedTabIndex].classList.remove(
-      `${BASE_CLASS}_list-item-selected`
-    );
-    _tabsPanelsDom[_selectedTabIndex].classList.add('u-hidden');
-
-    // Store new selected index.
-    _selectedTabIndex = index;
-
-    // Add classes for the new selected tab and panel.
-    _tabsItemsDom[_selectedTabIndex].classList.add(
-      `${BASE_CLASS}_list-item-selected`
-    );
-    _tabsPanelsDom[_selectedTabIndex].classList.remove('u-hidden');
 
     return this;
   }

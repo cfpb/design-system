@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ReactLiquid, liquidEngine } from 'react-liquid';
 import { marked } from 'marked';
@@ -21,3 +22,7 @@ export default class Preview extends Component {
     );
   }
 }
+
+Preview.propTypes = {
+  entry: PropTypes.object,
+};

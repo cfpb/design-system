@@ -24,6 +24,13 @@ function AlphaTransition(element) {
   const _baseTransition = new BaseTransition(element, CLASSES);
 
   /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
+  }
+
+  /**
    * @returns {AlphaTransition} An instance.
    */
   function init() {
@@ -34,13 +41,6 @@ function AlphaTransition(element) {
       _transitionCompleteBinded
     );
     return this;
-  }
-
-  /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
   }
 
   /**

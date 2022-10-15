@@ -120,6 +120,7 @@
     "postcss-less": "6.0.0",
     "postcss-loader": "7.0.0",
     "prettier": "^2.7.1",
+    "prop-types": "^15.8.1",
     "require-dir": "1.2.0",
     "serve-static": "1.15.0",
     "style-loader": "3.3.1",

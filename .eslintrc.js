@@ -7,6 +7,9 @@ module.exports = {
         extensions: ['.js', '.ts', '.d.ts', '.tsx'],
       },
     },
+    react: {
+      version: 'detect',
+    },
   },
   env: {
     browser: true,
@@ -18,6 +21,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:jsdoc/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:react/recommended',
     'prettier',
   ],
   // Some plugins are automatically included.

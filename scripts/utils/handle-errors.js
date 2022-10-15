@@ -1,4 +1,4 @@
-module.exports = () => {
+module.exports = function handleErrors() {
   const args = Array.prototype.slice.call(arguments);
   let exitProcessParam = false;
   let errorParam = args[0] || {};

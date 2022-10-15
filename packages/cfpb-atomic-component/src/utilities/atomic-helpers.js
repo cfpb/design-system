@@ -24,25 +24,6 @@ import { STATE_PREFIX } from './standard-type';
 const INIT_FLAG = STATE_PREFIX + 'atomic_init';
 
 /**
- * Check that a particular element passed into the constructor of
- * an atomic component exists and that the correct atomic class
- * is present on the element.
- *
- * @param {HTMLNode} element- -
- *   The DOM element within which to search for the atomic element class.
- * @param element
- * @param {string} baseClass - The CSS class name for the atomic element.
- * @returns {HTMLNode} The DOM element for the atomic element.
- * @throws {Error} If DOM element passed into the atomic element is not valid.
- */
-function checkDom(element, baseClass) {
-  _verifyElementExists(element, baseClass);
-  const dom = _verifyClassExists(element, baseClass);
-
-  return dom;
-}
-
-/**
  * @param {HTMLNode} element- -
  *   The DOM element within which to search for the atomic element class.
  * @param element
@@ -80,6 +61,25 @@ function _verifyClassExists(element, baseClass) {
     const msg = baseClass + ' not found on or in passed DOM node.';
     throw new Error(msg);
   }
+
+  return dom;
+}
+
+/**
+ * Check that a particular element passed into the constructor of
+ * an atomic component exists and that the correct atomic class
+ * is present on the element.
+ *
+ * @param {HTMLNode} element- -
+ *   The DOM element within which to search for the atomic element class.
+ * @param element
+ * @param {string} baseClass - The CSS class name for the atomic element.
+ * @returns {HTMLNode} The DOM element for the atomic element.
+ * @throws {Error} If DOM element passed into the atomic element is not valid.
+ */
+function checkDom(element, baseClass) {
+  _verifyElementExists(element, baseClass);
+  const dom = _verifyClassExists(element, baseClass);
 
   return dom;
 }

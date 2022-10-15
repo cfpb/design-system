@@ -133,7 +133,7 @@ assign(AtomicComponent.prototype, new EventObserver(), {
     let element;
 
     for (key in ui) {
-      if (ui.hasOwnProperty(key)) {
+      if (Object.prototype.hasOwnProperty(ui, key)) {
         element = this.element.querySelectorAll(ui[key]);
         if (element.length === 1) {
           ui[key] = element[0];
@@ -177,7 +177,7 @@ assign(AtomicComponent.prototype, new EventObserver(), {
     let property;
 
     for (property in attributes) {
-      if (attributes.hasOwnProperty(property)) {
+      if (Object.prototype.hasOwnProperty(attributes, property)) {
         this.element.setAttribute(property, attributes[property]);
       }
     }
@@ -286,7 +286,10 @@ function extend(attributes) {
   assign(child.prototype, attributes);
   assign(child, AtomicComponent);
 
-  if (attributes.hasOwnProperty('ui') && attributes.ui.hasOwnProperty('base')) {
+  if (
+    Object.prototype.hasOwnProperty(attributes, 'ui') &&
+    Object.prototype.hasOwnProperty(attributes.ui, 'base')
+  ) {
     child.selector = attributes.ui.base;
   }
 

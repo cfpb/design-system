@@ -36,91 +36,22 @@ function BaseTransition(element, classes) {
   }
 
   /**
-   * @returns {BaseTransition} An instance.
-   */
-  function init() {
-    _transitionCompleteBinded = _transitionComplete.bind(this);
-    _addEventListenerBinded = _addEventListener.bind(this);
-    setElement(element);
-
-    return this;
-  }
-
-  /**
-   * Set the HTML element target of this transition.
+   * Handle the end of a transition.
    *
-   * @param {HTMLNode} targetElement - The target of the transition.
+   * @param {TransitionEvent} evt - Transition event object.
+   * @returns {boolean} True if transition was cleaned up,
+   *   false if an outside transitioning property triggered this event handler.
    */
-  function setElement(targetElement) {
-    /*
-      If the element has already been set,
-      clear the transition classes from the old element.
-    */
-    if (_dom) {
-      remove();
-      animateOn();
-    }
-    _dom = targetElement;
-    _dom.classList.add(_classes.BASE_CLASS);
-    _transitionEndEvent = _getTransitionEndEvent(_dom);
-  }
-
-  /**
-   * Add a "transition-duration: 0s" utility CSS class.
-   *
-   * @returns {BaseTransition} An instance.
-   */
-  function animateOn() {
-    if (!_dom) {
-      return this;
-    }
-    _dom.classList.remove(BaseTransition.NO_ANIMATION_CLASS);
-
-    return this;
-  }
-
-  /**
-   * Remove a "transition-duration: 0s" utility CSS class.
-   *
-   * @returns {BaseTransition} An instance.
-   */
-  function animateOff() {
-    if (!_dom) {
-      return this;
-    }
-    _dom.classList.add(BaseTransition.NO_ANIMATION_CLASS);
-
-    return this;
-  }
-
-  /**
-   * @returns {boolean} Whether the transition has a duration or not.
-   *   Returns false if this transition has not been initialized.
-   */
-  function isAnimated() {
-    if (!_dom) {
+  function _transitionComplete(evt) {
+    if (evt && evt.propertyName !== _classes.CSS_PROPERTY) {
       return false;
     }
-    return !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
-  }
 
-  /**
-   * Halt an in-progress animation and call the complete event immediately.
-   */
-  function halt() {
-    if (!_isAnimating) {
-      return;
-    }
-    _dom.style.webkitTransitionDuration = '0';
-    _dom.style.mozTransitionDuration = '0';
-    _dom.style.oTransitionDuration = '0';
-    _dom.style.transitionDuration = '0';
-    _dom.removeEventListener(_transitionEndEvent, _transitionCompleteBinded);
-    _transitionCompleteBinded();
-    _dom.style.webkitTransitionDuration = '';
-    _dom.style.mozTransitionDuration = '';
-    _dom.style.oTransitionDuration = '';
-    _dom.style.transitionDuration = '';
+    _removeEventListener();
+    _dom.classList.remove(BaseTransition.ANIMATING_CLASS);
+    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
+    _isAnimating = false;
+    return true;
   }
 
   /**
@@ -156,25 +87,6 @@ function BaseTransition(element, classes) {
   }
 
   /**
-   * Handle the end of a transition.
-   *
-   * @param {TransitionEvent} evt - Transition event object.
-   * @returns {boolean} True if transition was cleaned up,
-   *   false if an outside transitioning property triggered this event handler.
-   */
-  function _transitionComplete(evt) {
-    if (evt && evt.propertyName !== _classes.CSS_PROPERTY) {
-      return false;
-    }
-
-    _removeEventListener();
-    _dom.classList.remove(BaseTransition.ANIMATING_CLASS);
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
-    _isAnimating = false;
-    return true;
-  }
-
-  /**
    * Search for and remove initial BaseTransition classes that have
    * already been applied to this BaseTransition's target element.
    */
@@ -206,6 +118,94 @@ function BaseTransition(element, classes) {
     }
 
     return false;
+  }
+
+  /**
+   * Add a "transition-duration: 0s" utility CSS class.
+   *
+   * @returns {BaseTransition} An instance.
+   */
+  function animateOn() {
+    if (!_dom) {
+      return this;
+    }
+    _dom.classList.remove(BaseTransition.NO_ANIMATION_CLASS);
+
+    return this;
+  }
+
+  /**
+   * Remove a "transition-duration: 0s" utility CSS class.
+   *
+   * @returns {BaseTransition} An instance.
+   */
+  function animateOff() {
+    if (!_dom) {
+      return this;
+    }
+    _dom.classList.add(BaseTransition.NO_ANIMATION_CLASS);
+
+    return this;
+  }
+
+  /**
+   * Set the HTML element target of this transition.
+   *
+   * @param {HTMLNode} targetElement - The target of the transition.
+   */
+  function setElement(targetElement) {
+    /*
+      If the element has already been set,
+      clear the transition classes from the old element.
+    */
+    if (_dom) {
+      remove();
+      animateOn();
+    }
+    _dom = targetElement;
+    _dom.classList.add(_classes.BASE_CLASS);
+    _transitionEndEvent = _getTransitionEndEvent(_dom);
+  }
+
+  /**
+   * @returns {BaseTransition} An instance.
+   */
+  function init() {
+    _transitionCompleteBinded = _transitionComplete.bind(this);
+    _addEventListenerBinded = _addEventListener.bind(this);
+    setElement(element);
+
+    return this;
+  }
+
+  /**
+   * @returns {boolean} Whether the transition has a duration or not.
+   *   Returns false if this transition has not been initialized.
+   */
+  function isAnimated() {
+    if (!_dom) {
+      return false;
+    }
+    return !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
+  }
+
+  /**
+   * Halt an in-progress animation and call the complete event immediately.
+   */
+  function halt() {
+    if (!_isAnimating) {
+      return;
+    }
+    _dom.style.webkitTransitionDuration = '0';
+    _dom.style.mozTransitionDuration = '0';
+    _dom.style.oTransitionDuration = '0';
+    _dom.style.transitionDuration = '0';
+    _dom.removeEventListener(_transitionEndEvent, _transitionCompleteBinded);
+    _transitionCompleteBinded();
+    _dom.style.webkitTransitionDuration = '';
+    _dom.style.mozTransitionDuration = '';
+    _dom.style.oTransitionDuration = '';
+    _dom.style.transitionDuration = '';
   }
 
   /**

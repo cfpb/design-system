@@ -6,18 +6,6 @@
 
 import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js';
 
-const TableRowLinks = {
-  ui: {
-    base: '.o-table__row-links',
-  },
-
-  events: {
-    'click tbody tr': 'onRowLinkClick',
-  },
-
-  onRowLinkClick: onRowLinkClick,
-};
-
 /**
  * Handle a click of the table.
  *
@@ -34,5 +22,17 @@ function onRowLinkClick(event) {
     window.location = link.getAttribute('href');
   }
 }
+
+const TableRowLinks = {
+  ui: {
+    base: '.o-table__row-links',
+  },
+
+  events: {
+    'click tbody tr': 'onRowLinkClick',
+  },
+
+  onRowLinkClick: onRowLinkClick,
+};
 
 export default TableRowLinks;

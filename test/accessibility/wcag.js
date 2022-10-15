@@ -10,16 +10,6 @@ if (!process.env.ACHECKER_ID) {
   throw new Error('Please export an ACHECKER_ID environment variable.');
 }
 
-fs.readdir(path.join(__dirname, '..', '..', '/tmp'), (err, dirs) => {
-  if (err) {
-    throw new Error("Didn't read directory.");
-  }
-  dirs.forEach(function (component) {
-    if (component.indexOf('cfpb-') !== 0) return;
-    startServer(component, testComponent);
-  });
-});
-
 /**
  * Start server to run tests.
  *
@@ -73,3 +63,13 @@ function testComponent(component, server, port) {
     return server.close();
   });
 }
+
+fs.readdir(path.join(__dirname, '..', '..', '/tmp'), (err, dirs) => {
+  if (err) {
+    throw new Error("Didn't read directory.");
+  }
+  dirs.forEach(function (component) {
+    if (component.indexOf('cfpb-') !== 0) return;
+    startServer(component, testComponent);
+  });
+});

@@ -9,32 +9,6 @@ import { DIRECTIONS } from '@cfpb/cfpb-atomic-component/src/utilities/standard-t
 
 let UNDEFINED;
 
-const TableSortable = {
-  ui: {
-    base: '.o-table__sortable',
-    tableBody: 'tbody',
-    sortButton: '.sorted-up, .sorted-down',
-  },
-
-  classes: {
-    sortDown: 'sorted-down',
-    sortUp: 'sorted-up',
-  },
-
-  events: {
-    'click .sortable': 'onSortableClick',
-  },
-
-  initialize: initialize,
-  bindProperties: bindProperties,
-  getColumnIndex: getColumnIndex,
-  updateTable: updateTable,
-  updateTableData: updateTableData,
-  updateTableDom: updateTableDom,
-  tableDataSorter: tableDataSorter,
-  onSortableClick: onSortableClick,
-};
-
 /**
  * Function used to create computed and triggered properties.
  */
@@ -215,5 +189,31 @@ function onSortableClick(event) {
 
   return this;
 }
+
+const TableSortable = {
+  ui: {
+    base: '.o-table__sortable',
+    tableBody: 'tbody',
+    sortButton: '.sorted-up, .sorted-down',
+  },
+
+  classes: {
+    sortDown: 'sorted-down',
+    sortUp: 'sorted-up',
+  },
+
+  events: {
+    'click .sortable': 'onSortableClick',
+  },
+
+  initialize: initialize,
+  bindProperties: bindProperties,
+  getColumnIndex: getColumnIndex,
+  updateTable: updateTable,
+  updateTableData: updateTableData,
+  updateTableDom: updateTableDom,
+  tableDataSorter: tableDataSorter,
+  onSortableClick: onSortableClick,
+};
 
 export default TableSortable;

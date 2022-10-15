@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ReactLiquid, liquidEngine } from 'react-liquid';
 import slugify from 'slugify';
@@ -30,3 +31,7 @@ export default class Preview extends Component {
     );
   }
 }
+
+Preview.propTypes = {
+  entry: PropTypes.object,
+};

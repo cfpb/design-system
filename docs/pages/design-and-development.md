@@ -11,7 +11,7 @@ description: >-
   neque eu tortor fermentum consectetur nec ac tellus.</p>
 
 
-  ![test](/design-system/images/uploads/test.png "Test image")
+  ![new](/design-system/images/uploads/new.png "new image")
 
 
   ## First

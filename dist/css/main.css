@@ -4826,6 +4826,8 @@ select.o-multiselect option {
   font-weight: 500;
 }
 .o-expandable_link {
+  min-width: 60px;
+  text-align: right;
   color: #0072ce;
   font-size: 1em;
   line-height: 1.375;

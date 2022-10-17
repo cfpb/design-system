@@ -196,7 +196,7 @@ the output and support are the same.
 
 ### Adhere to any linting errors or warnings
 
-The `gulp lint` linting tasks that are set up within the build processes
+The `yarn lint` linting tasks that are set up within the build processes
 are there to promote consistency.
 When contributing code please publicly track that there are no linting errors
 or warnings using the testing checklist in the pull request description.

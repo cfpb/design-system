@@ -48,12 +48,20 @@ function MultiselectModel(options, name) {
   let _index = -1;
 
   /**
-   * @returns {MultiselectModel} An instance.
+   * @param {HTMLNode} item - An option HTML node.
+   * @returns {string} A (hopefully) unique ID.
+   *   If it's not unique, we have a duplicate option value.
    */
-  function init() {
-    _optionsData = _formatOptions(_options);
+  function _getOptionId(item) {
+    return _name + '-' + item.value.trim().replace(/\s+/g, '-').toLowerCase();
+  }
 
-    return this;
+  /**
+   * @returns {boolean}
+   *   True if the maximum number of options are checked, false otherwise.
+   */
+  function isAtMaxSelections() {
+    return _selectedIndices.length === MAX_SELECTIONS;
   }
 
   /**
@@ -87,6 +95,15 @@ function MultiselectModel(options, name) {
   }
 
   /**
+   * @returns {MultiselectModel} An instance.
+   */
+  function init() {
+    _optionsData = _formatOptions(_options);
+
+    return this;
+  }
+
+  /**
    * Toggle checked value of an option.
    *
    * @param {number} index - The index position of the option in the list.
@@ -114,11 +131,19 @@ function MultiselectModel(options, name) {
   }
 
   /**
-   * @returns {boolean}
-   *   True if the maximum number of options are checked, false otherwise.
+   * Utility function for Array.reduce() used in searchIndices.
+   *
+   * @param {Array} aggregate - The reducer's accumulator.
+   * @param {object} item - Each item in the collection.
+   * @param {number} index - The index of item in the collection.
+   * @param {string} value - The value of item in the collection.
+   * @returns {Array} The reducer's accumulator.
    */
-  function isAtMaxSelections() {
-    return _selectedIndices.length === MAX_SELECTIONS;
+  function _searchAggregator(aggregate, item, index, value) {
+    if (stringMatch(item.text, value)) {
+      aggregate.push(index);
+    }
+    return aggregate;
   }
 
   /**
@@ -156,22 +181,6 @@ function MultiselectModel(options, name) {
   }
 
   /**
-   * Utility function for Array.reduce() used in searchIndices.
-   *
-   * @param {Array} aggregate - The reducer's accumulator.
-   * @param {object} item - Each item in the collection.
-   * @param {number} index - The index of item in the collection.
-   * @param {string} value - The value of item in the collection.
-   * @returns {Array} The reducer's accumulator.
-   */
-  function _searchAggregator(aggregate, item, index, value) {
-    if (stringMatch(item.text, value)) {
-      aggregate.push(index);
-    }
-    return aggregate;
-  }
-
-  /**
    * Set the index of the collection (represents the highlighted option).
    *
    * @param {number} value - The index to set.
@@ -193,15 +202,6 @@ function MultiselectModel(options, name) {
    */
   function getIndex() {
     return _index;
-  }
-
-  /**
-   * @param {HTMLNode} item - An option HTML node.
-   * @returns {string} A (hopefully) unique ID.
-   *   If it's not unique, we have a duplicate option value.
-   */
-  function _getOptionId(item) {
-    return _name + '-' + item.value.trim().replace(/\s+/g, '-').toLowerCase();
   }
 
   this.init = init;

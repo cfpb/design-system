@@ -50,6 +50,8 @@ if (tabsContainerDom.length > 0) {
     tabsInst.init();
   }
 }
+const toggleAllBtn = document.querySelector('#toggle-details');
+const toggleBtns = document.querySelectorAll('.a-toggle_code button');
 
 /**
  * @param {MouseEvent} event - The mouse event object from the click.
@@ -66,9 +68,6 @@ function handleToggleClick(event) {
   const target = event.target;
   toggleDetails(target);
 }
-
-const toggleAllBtn = document.querySelector('#toggle-details');
-const toggleBtns = document.querySelectorAll('.a-toggle_code button');
 
 if (toggleAllBtn) {
   toggleAllBtn.addEventListener('click', handleToggleAllClick, false);

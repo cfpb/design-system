@@ -18,7 +18,7 @@ function EventObserver() {
    * @returns {object} The instance this EventObserver instance is decorating.
    */
   function addEventListener(event, callback) {
-    if (Object.prototype.hasOwnProperty(_events, event)) {
+    if (Object.prototype.hasOwnProperty.call(_events, event)) {
       _events[event].push(callback);
     } else {
       _events[event] = [callback];
@@ -36,7 +36,7 @@ function EventObserver() {
    * @returns {object} The instance this EventObserver instance is decorating.
    */
   function removeEventListener(event, callback) {
-    if (!Object.prototype.hasOwnProperty(_events, event)) {
+    if (!Object.prototype.hasOwnProperty.call(_events, event)) {
       return this;
     }
 
@@ -57,7 +57,7 @@ function EventObserver() {
    * @returns {object} The instance this EventObserver instance is decorating.
    */
   function dispatchEvent(event, options) {
-    if (!Object.prototype.hasOwnProperty(_events, event)) {
+    if (!Object.prototype.hasOwnProperty.call(_events, event)) {
       return this;
     }
 

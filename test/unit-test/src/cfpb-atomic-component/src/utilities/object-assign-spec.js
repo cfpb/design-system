@@ -29,9 +29,11 @@ describe('object-assign', () => {
   it('should assign properties from source to destination', () => {
     assign(testObjectA, testObjectB);
 
-    expect(Object.prototype.hasOwnProperty(testObjectA, 'obj')).toBe(true);
-    expect(Object.prototype.hasOwnProperty(testObjectA, 'arr')).toBe(true);
-    expect(Object.prototype.hasOwnProperty(testObjectA, '_null')).toBe(true);
+    expect(Object.prototype.hasOwnProperty.call(testObjectA, 'obj')).toBe(true);
+    expect(Object.prototype.hasOwnProperty.call(testObjectA, 'arr')).toBe(true);
+    expect(Object.prototype.hasOwnProperty.call(testObjectA, '_null')).toBe(
+      true
+    );
   });
 
   it('should assign values from source to destination', () => {
@@ -45,9 +47,13 @@ describe('object-assign', () => {
   it('should assign multiple source properties to destination', () => {
     assign(testObjectA, testObjectB, testObjectC);
 
-    expect(Object.prototype.hasOwnProperty(testObjectA, 'bool')).toBe(true);
-    expect(Object.prototype.hasOwnProperty(testObjectA, 'undef')).toBe(true);
-    expect(Object.prototype.hasOwnProperty(testObjectA, 'num')).toBe(true);
+    expect(Object.prototype.hasOwnProperty.call(testObjectA, 'bool')).toBe(
+      true
+    );
+    expect(Object.prototype.hasOwnProperty.call(testObjectA, 'undef')).toBe(
+      true
+    );
+    expect(Object.prototype.hasOwnProperty.call(testObjectA, 'num')).toBe(true);
   });
 
   it('should assign multiple source values to destination', () => {

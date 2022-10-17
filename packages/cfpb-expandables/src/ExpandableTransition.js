@@ -25,6 +25,21 @@ function ExpandableTransition(element) {
   let previousHeight;
 
   /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    if (element.classList.contains(CLASSES.EXPANDED)) {
+      this.dispatchEvent('expandEnd', { target: this });
+
+      if (element.scrollHeight > previousHeight) {
+        element.style.maxHeight = element.scrollHeight + 'px';
+      }
+    } else if (element.classList.contains(CLASSES.COLLAPSED)) {
+      this.dispatchEvent('collapseEnd', { target: this });
+    }
+  }
+
+  /**
    * @returns {ExpandableTransition} An instance.
    */
   function init() {
@@ -41,21 +56,6 @@ function ExpandableTransition(element) {
     }
 
     return this;
-  }
-
-  /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    if (element.classList.contains(CLASSES.EXPANDED)) {
-      this.dispatchEvent('expandEnd', { target: this });
-
-      if (element.scrollHeight > previousHeight) {
-        element.style.maxHeight = element.scrollHeight + 'px';
-      }
-    } else if (element.classList.contains(CLASSES.COLLAPSED)) {
-      this.dispatchEvent('collapseEnd', { target: this });
-    }
   }
 
   /**

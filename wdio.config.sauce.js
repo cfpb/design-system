@@ -210,7 +210,7 @@ exports.config = {
    * @param {Array.<object>} capabilities - list of capabilities details
    * @param {Array.<string>} specs - List of spec file paths that are to be run
    */
-  beforeSession: function (config, capabilities, specs) {
+  beforeSession: function () {
     // Set a global variable indicating the tests are being run via Sauce Labs
     global.SAUCE_LABS = true;
   },

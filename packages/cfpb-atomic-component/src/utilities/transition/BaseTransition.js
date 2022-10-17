@@ -36,25 +36,6 @@ function BaseTransition(element, classes) {
   }
 
   /**
-   * Handle the end of a transition.
-   *
-   * @param {TransitionEvent} evt - Transition event object.
-   * @returns {boolean} True if transition was cleaned up,
-   *   false if an outside transitioning property triggered this event handler.
-   */
-  function _transitionComplete(evt) {
-    if (evt && evt.propertyName !== _classes.CSS_PROPERTY) {
-      return false;
-    }
-
-    _removeEventListener();
-    _dom.classList.remove(BaseTransition.ANIMATING_CLASS);
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
-    _isAnimating = false;
-    return true;
-  }
-
-  /**
    * Add an event listener to the transition, or call the transition
    * complete handler immediately if transition not supported.
    */
@@ -87,6 +68,25 @@ function BaseTransition(element, classes) {
   }
 
   /**
+   * Handle the end of a transition.
+   *
+   * @param {TransitionEvent} evt - Transition event object.
+   * @returns {boolean} True if transition was cleaned up,
+   *   false if an outside transitioning property triggered this event handler.
+   */
+  function _transitionComplete(evt) {
+    if (evt && evt.propertyName !== _classes.CSS_PROPERTY) {
+      return false;
+    }
+
+    _removeEventListener();
+    _dom.classList.remove(BaseTransition.ANIMATING_CLASS);
+    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
+    _isAnimating = false;
+    return true;
+  }
+
+  /**
    * Search for and remove initial BaseTransition classes that have
    * already been applied to this BaseTransition's target element.
    */
@@ -94,13 +94,32 @@ function BaseTransition(element, classes) {
     let prop;
     for (prop in _classes) {
       if (
-        _classes.hasOwnProperty(prop) &&
+        Object.prototype.hasOwnProperty.call(_classes, prop) &&
         _classes[prop] !== _classes.BASE_CLASS &&
         _dom.classList.contains(_classes[prop])
       ) {
         _dom.classList.remove(_classes[prop]);
       }
     }
+  }
+
+  /**
+   * Halt an in-progress animation and call the complete event immediately.
+   */
+  function halt() {
+    if (!_isAnimating) {
+      return;
+    }
+    _dom.style.webkitTransitionDuration = '0';
+    _dom.style.mozTransitionDuration = '0';
+    _dom.style.oTransitionDuration = '0';
+    _dom.style.transitionDuration = '0';
+    _dom.removeEventListener(_transitionEndEvent, _transitionCompleteBinded);
+    _transitionCompleteBinded();
+    _dom.style.webkitTransitionDuration = '';
+    _dom.style.mozTransitionDuration = '';
+    _dom.style.oTransitionDuration = '';
+    _dom.style.transitionDuration = '';
   }
 
   /**
@@ -149,6 +168,39 @@ function BaseTransition(element, classes) {
   }
 
   /**
+   * @param {HTMLNode} elem- -
+   *   The element to check for support of transition end event.
+   * @param elem
+   * @returns {string} The browser-prefixed transition end event.
+   */
+  function _getTransitionEndEvent(elem) {
+    if (!elem) {
+      const msg = 'Element does not have TransitionEnd event. It may be null!';
+      throw new Error(msg);
+    }
+
+    let transition;
+    const transitions = {
+      WebkitTransition: 'webkitTransitionEnd',
+      MozTransition: 'transitionend',
+      OTransition: 'oTransitionEnd otransitionend',
+      transition: 'transitionend',
+    };
+
+    let transitionEvent;
+    for (transitionEvent in transitions) {
+      if (
+        Object.prototype.hasOwnProperty.call(transitions, transitionEvent) &&
+        typeof elem.style[transitionEvent] !== 'undefined'
+      ) {
+        transition = transitions[transitionEvent];
+        break;
+      }
+    }
+    return transition;
+  }
+
+  /**
    * Set the HTML element target of this transition.
    *
    * @param {HTMLNode} targetElement - The target of the transition.
@@ -190,25 +242,6 @@ function BaseTransition(element, classes) {
   }
 
   /**
-   * Halt an in-progress animation and call the complete event immediately.
-   */
-  function halt() {
-    if (!_isAnimating) {
-      return;
-    }
-    _dom.style.webkitTransitionDuration = '0';
-    _dom.style.mozTransitionDuration = '0';
-    _dom.style.oTransitionDuration = '0';
-    _dom.style.transitionDuration = '0';
-    _dom.removeEventListener(_transitionEndEvent, _transitionCompleteBinded);
-    _transitionCompleteBinded();
-    _dom.style.webkitTransitionDuration = '';
-    _dom.style.mozTransitionDuration = '';
-    _dom.style.oTransitionDuration = '';
-    _dom.style.transitionDuration = '';
-  }
-
-  /**
    * @param {string} className - A CSS class.
    * @returns {boolean} False if the class is already applied
    *   or the transition is not initialized,
@@ -234,39 +267,6 @@ function BaseTransition(element, classes) {
     _dom.classList.add(_lastClass);
 
     return true;
-  }
-
-  /**
-   * @param {HTMLNode} elem- -
-   *   The element to check for support of transition end event.
-   * @param elem
-   * @returns {string} The browser-prefixed transition end event.
-   */
-  function _getTransitionEndEvent(elem) {
-    if (!elem) {
-      const msg = 'Element does not have TransitionEnd event. It may be null!';
-      throw new Error(msg);
-    }
-
-    let transition;
-    const transitions = {
-      WebkitTransition: 'webkitTransitionEnd',
-      MozTransition: 'transitionend',
-      OTransition: 'oTransitionEnd otransitionend',
-      transition: 'transitionend',
-    };
-
-    let transitionEvent;
-    for (transitionEvent in transitions) {
-      if (
-        transitions.hasOwnProperty(transitionEvent) &&
-        typeof elem.style[transitionEvent] !== 'undefined'
-      ) {
-        transition = transitions[transitionEvent];
-        break;
-      }
-    }
-    return transition;
   }
 
   // Attach public events.

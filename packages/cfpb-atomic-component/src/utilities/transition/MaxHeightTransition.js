@@ -26,6 +26,34 @@ function MaxHeightTransition(element) {
   let previousHeight;
 
   /**
+   * Refresh the max height set on the element.
+   * This may be useful if resizing the window and the content height changes.
+   */
+  function refresh() {
+    element.style.maxHeight = element.scrollHeight + 'px';
+  }
+
+  /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
+
+    if (element.scrollHeight > previousHeight) {
+      element.style.maxHeight = element.scrollHeight + 'px';
+    }
+  }
+
+  /**
+   * The whole page has loaded,
+   * including all dependent resources such as stylesheets and images.
+   */
+  function _pageLoaded() {
+    window.removeEventListener('load', _pageLoaded);
+    refresh();
+  }
+
+  /**
    * @returns {MaxHeightTransition} An instance.
    */
   function init() {
@@ -43,26 +71,6 @@ function MaxHeightTransition(element) {
     );
 
     return this;
-  }
-
-  /**
-   * The whole page has loaded,
-   * including all dependent resources such as stylesheets and images.
-   */
-  function _pageLoaded() {
-    window.removeEventListener('load', _pageLoaded);
-    refresh();
-  }
-
-  /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
-
-    if (element.scrollHeight > previousHeight) {
-      element.style.maxHeight = element.scrollHeight + 'px';
-    }
   }
 
   /**
@@ -104,14 +112,6 @@ function MaxHeightTransition(element) {
     previousHeight = element.scrollHeight;
 
     return this;
-  }
-
-  /**
-   * Refresh the max height set on the element.
-   * This may be useful if resizing the window and the content height changes.
-   */
-  function refresh() {
-    element.style.maxHeight = element.scrollHeight + 'px';
   }
 
   /**

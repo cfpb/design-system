@@ -5,6 +5,27 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 module.exports = (env, argv) => {
+  /**
+   * CSS plugins to add to PostCSS loader step.
+   * Minimizer (cssnano) is added only in production mode.
+   *
+   * @returns {Array} List of PostCSS plugins.
+   */
+  function _postCSSPlugins() {
+    const plugins = [];
+    plugins.push(autoprefixer);
+
+    if (argv.mode === 'production') {
+      plugins.push(
+        cssnano({
+          preset: 'default',
+        })
+      );
+    }
+
+    return plugins;
+  }
+
   const config = {
     entry: {
       interstitial: ['./docs/assets/js/interstitial.js'],
@@ -98,27 +119,6 @@ module.exports = (env, argv) => {
       ],
     },
   };
-
-  /**
-   * CSS plugins to add to PostCSS loader step.
-   * Minimizer (cssnano) is added only in production mode.
-   *
-   * @returns {Array} List of PostCSS plugins.
-   */
-  function _postCSSPlugins() {
-    const plugins = [];
-    plugins.push(autoprefixer);
-
-    if (argv.mode === 'production') {
-      plugins.push(
-        cssnano({
-          preset: 'default',
-        })
-      );
-    }
-
-    return plugins;
-  }
 
   // Development-specific settings can be added here.
   if (argv.mode === 'development') {

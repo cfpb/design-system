@@ -9,35 +9,30 @@ import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.
 
 const eventObserver = new EventObserver();
 
-const Expandable = AtomicComponent.extend({
-  ui: {
-    base: '.o-expandable',
-    target: '.o-expandable_target',
-    content: '.o-expandable_content',
-    header: '.o-expandable_header',
-    label: '.o-expandable_label',
-  },
+/**
+ * Event handler for when an expandable begins expanding.
+ */
+function expandBeginHandler() {
+  this.ui.content.classList.remove('u-hidden');
+}
 
-  classes: {
-    targetExpanded: 'o-expandable_target__expanded',
-    targetCollapsed: 'o-expandable_target__collapsed',
-    group: 'o-expandable-group',
-    groupAccordion: 'o-expandable-group__accordion',
-  },
+/**
+ * Event handler for when an expandable is finished collapsing.
+ */
+function collapseEndHandler() {
+  this.ui.content.classList.add('u-hidden');
+}
 
-  events: {
-    'click .o-expandable_target': 'expandableClickHandler',
-  },
-
-  transition: null,
-  isAccordionGroup: false,
-  activeAccordion: false,
-
-  initialize: initialize,
-  expandableClickHandler: expandableClickHandler,
-  toggleTargetState: toggleTargetState,
-  getLabelText: getLabelText,
-});
+/**
+ * Event handler for when an accordion is activated
+ */
+function _accordionActivatedHandler() {
+  if (this.activeAccordion) {
+    this.transition.toggleExpandable();
+    this.toggleTargetState(this.ui.target);
+    this.activeAccordion = false;
+  }
+}
 
 /**
  * Initialize a new expandable.
@@ -78,17 +73,6 @@ function initialize() {
 }
 
 /**
- * Event handler for when an accordion is activated
- */
-function _accordionActivatedHandler() {
-  if (this.activeAccordion) {
-    this.transition.toggleExpandable();
-    this.toggleTargetState(this.ui.target);
-    this.activeAccordion = false;
-  }
-}
-
-/**
  * Event handler for when an expandable is clicked.
  */
 function expandableClickHandler() {
@@ -103,20 +87,6 @@ function expandableClickHandler() {
       this.activeAccordion = true;
     }
   }
-}
-
-/**
- * Event handler for when an expandable begins expanding.
- */
-function expandBeginHandler() {
-  this.ui.content.classList.remove('u-hidden');
-}
-
-/**
- * Event handler for when an expandable is finished collapsing.
- */
-function collapseEndHandler() {
-  this.ui.content.classList.add('u-hidden');
 }
 
 /**
@@ -142,5 +112,35 @@ function toggleTargetState(element) {
 function getLabelText() {
   return this.ui.label.textContent.trim();
 }
+
+const Expandable = AtomicComponent.extend({
+  ui: {
+    base: '.o-expandable',
+    target: '.o-expandable_target',
+    content: '.o-expandable_content',
+    header: '.o-expandable_header',
+    label: '.o-expandable_label',
+  },
+
+  classes: {
+    targetExpanded: 'o-expandable_target__expanded',
+    targetCollapsed: 'o-expandable_target__collapsed',
+    group: 'o-expandable-group',
+    groupAccordion: 'o-expandable-group__accordion',
+  },
+
+  events: {
+    'click .o-expandable_target': 'expandableClickHandler',
+  },
+
+  transition: null,
+  isAccordionGroup: false,
+  activeAccordion: false,
+
+  initialize: initialize,
+  expandableClickHandler: expandableClickHandler,
+  toggleTargetState: toggleTargetState,
+  getLabelText: getLabelText,
+});
 
 export default Expandable;

@@ -67,6 +67,8 @@ export default class Preview extends Component {
       page: this.props.entry.toJS().data,
     };
     return (
+      // TODO: We're breaking some a11y here by making the whole page clickable.
+      // eslint-disable-next-line
       <div ref={this.containerRef} onClick={(event) => this.handleClick(event)}>
         <ReactLiquid template={templateWithIcons} data={data} html />
       </div>

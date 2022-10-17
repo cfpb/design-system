@@ -5,4 +5,4 @@ yarn prettier "./**/*.{js,jsx,ts,tsx,json,md}" --write
 yarn eslint ./{.,test,scripts,docs,packages} --fix
 
 ## Run CSS linting. See ignored path in .stylelintignore.
-yarn stylelint "{docs,packages}/**/*.{css,less}" --fix
+yarn stylelint "{docs,packages}/**/*.less" --fix

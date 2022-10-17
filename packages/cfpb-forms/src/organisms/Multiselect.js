@@ -65,41 +65,78 @@ function Multiselect(element) {
   let _instance;
 
   /**
-   * Set up and create the multiselect.
-   *
-   * @returns {Multiselect} An instance.
+   * Set the filtered matched state.
    */
-  function init() {
-    if (!setInitFlag(_dom)) {
-      return this;
+  function _filterMatches() {
+    _optionsDom.classList.remove('u-no-results');
+    _optionsDom.classList.add('u-filtered');
+
+    let filteredIndices = _model.getLastFilterIndices();
+    for (let i = 0, len = filteredIndices.length; i < len; i++) {
+      _optionItemDoms[filteredIndices[i]].classList.remove('u-filter-match');
     }
 
-    if (isMobileUserAgent()) {
-      return this;
+    filteredIndices = _model.getFilterIndices();
+    for (let j = 0, len = filteredIndices.length; j < len; j++) {
+      _optionItemDoms[filteredIndices[j]].classList.add('u-filter-match');
+    }
+  }
+
+  /**
+   * Resets the filtered option list.
+   */
+  function _resetFilter() {
+    _optionsDom.classList.remove('u-filtered', 'u-no-results');
+
+    for (let i = 0, len = _optionsDom.children.length; i < len; i++) {
+      _optionsDom.children[i].classList.remove('u-filter-match');
     }
 
-    _instance = this;
-    _name = _dom.name || _dom.id;
-    _placeholder = _dom.getAttribute('placeholder');
-    _options = _dom.options || [];
+    _model.clearFilter();
+  }
 
-    if (_options.length > 0) {
-      _model = new MultiselectModel(_options, _name).init();
-      const newDom = _populateMarkup();
+  /**
+   * Updates the list of options to show the user there
+   * are no matching results.
+   */
+  function _filterNoMatches() {
+    _optionsDom.classList.add('u-no-results');
+    _optionsDom.classList.remove('u-filtered');
+  }
 
-      /* Removes <select> element,
-         and re-assign DOM reference. */
-      _dom.parentNode.removeChild(_dom);
-      _dom = newDom;
-
-      /* We need to set init flag again since we've created a new <div>
-         to replace the <select> element. */
-      setInitFlag(_dom);
-
-      _bindEvents();
+  /**
+   * Filter the options list.
+   * Every time we filter we have two lists of indices:
+   * - The matching options (filterIndices).
+   * - The matching options of the last filter (_lastFilterIndices).
+   * We need to turn off the filter for any of the last filter matches
+   * that are not in the new set, and turn on the filter for the matches
+   * that are not in the last set.
+   *
+   * @param {Array} filterIndices - List of indices to filter from the options.
+   * @returns {boolean} True if options are filtered, false otherwise.
+   */
+  function _filterList(filterIndices) {
+    if (filterIndices.length > 0) {
+      _filterMatches();
+      return true;
     }
 
-    return this;
+    _filterNoMatches();
+    return false;
+  }
+
+  /**
+   * Evaluates the list of options based on the user's query in the
+   * search input.
+   *
+   * @param {string} value - Text the user has entered in the search query.
+   */
+  function _evaluate(value) {
+    _resetFilter();
+    _model.resetIndex();
+    const matchedIndices = _model.filterIndices(value);
+    _filterList(matchedIndices);
   }
 
   /**
@@ -133,141 +170,6 @@ function Multiselect(element) {
   }
 
   /**
-   * Populates and injects the markup for the custom multiselect.
-   *
-   * @returns {HTMLNode} Newly created <div> element to hold the multiselect.
-   */
-  function _populateMarkup() {
-    // Add a container for our markup
-    _containerDom = MultiselectUtils.create('div', {
-      className: BASE_CLASS,
-      around: _dom,
-    });
-
-    // Create all our markup but wait to manipulate the DOM just once
-    _selectionsDom = MultiselectUtils.create('ul', {
-      className: BASE_CLASS + '_choices',
-      inside: _containerDom,
-    });
-
-    _headerDom = MultiselectUtils.create('header', {
-      className: BASE_CLASS + '_header',
-    });
-
-    _searchDom = MultiselectUtils.create('input', {
-      className: BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
-      type: 'text',
-      placeholder: _placeholder || 'Select up to five',
-      inside: _headerDom,
-      id: _dom.id,
-      autocomplete: 'off',
-    });
-
-    _fieldsetDom = MultiselectUtils.create('fieldset', {
-      className: BASE_CLASS + '_fieldset u-invisible',
-      'aria-hidden': 'true',
-    });
-
-    let optionsClasses = BASE_CLASS + '_options';
-    if (_model.isAtMaxSelections()) {
-      optionsClasses += ' u-max-selections';
-    }
-
-    _optionsDom = MultiselectUtils.create('ul', {
-      className: optionsClasses,
-      inside: _fieldsetDom,
-    });
-
-    let option;
-    let optionId;
-    let isChecked;
-    for (let i = 0, len = _options.length; i < len; i++) {
-      option = _options[i];
-      optionId = _getOptionId(option);
-      isChecked = _model.getOption(i).checked;
-      const optionsItemDom = MultiselectUtils.create('li', {
-        'data-option': option.value,
-        'data-cy': 'multiselect-option',
-        class: 'm-form-field m-form-field__checkbox',
-      });
-
-      MultiselectUtils.create('input', {
-        id: optionId,
-        // Type must come before value or IE fails
-        type: 'checkbox',
-        value: option.value,
-        name: _name,
-        class: CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
-        inside: optionsItemDom,
-        checked: isChecked,
-        'data-index': i,
-      });
-
-      MultiselectUtils.create('label', {
-        for: optionId,
-        textContent: option.text,
-        className: BASE_CLASS + '_label a-label',
-        inside: optionsItemDom,
-      });
-
-      _optionItemDoms.push(optionsItemDom);
-      _optionsDom.appendChild(optionsItemDom);
-
-      if (isChecked) {
-        _createSelectedItem(_selectionsDom, option);
-      }
-    }
-
-    // Write our new markup to the DOM.
-    _containerDom.appendChild(_headerDom);
-    _containerDom.appendChild(_fieldsetDom);
-
-    return _containerDom;
-  }
-
-  /**
-   * @param {HTMLNode} selectionsDom - The UL item to inject list item into.
-   * @param {HTMLNode} option - The OPTION item to extract content from.
-   */
-  function _createSelectedItem(selectionsDom, option) {
-    const optionId = _getOptionId(option);
-    const selectionsItemDom = MultiselectUtils.create('li', {
-      'data-option': option.value,
-    });
-
-    const selectionsItemLabelDom = MultiselectUtils.create('button', {
-      type: 'button',
-      innerHTML:
-        '<label for=' + optionId + '>' + option.text + closeIcon + '</label>',
-      inside: selectionsItemDom,
-    });
-
-    selectionsDom.appendChild(selectionsItemDom);
-    selectionsItemDom.appendChild(selectionsItemLabelDom);
-
-    selectionsItemLabelDom.addEventListener('click', _selectionClickHandler);
-    selectionsItemLabelDom.addEventListener(
-      'keydown',
-      _selectionKeyDownHandler
-    );
-  }
-
-  /**
-   * Create a unique ID based on a select's option HTML element.
-   *
-   * @param {HTMLNode} option - A option HTML element.
-   * @returns {string} A hopefully unique ID.
-   */
-  function _getOptionId(option) {
-    /* Replace any character that is not a word character with a dash.
-       https://regex101.com/r/ShHmRw/1
-    */
-    return (
-      _name + '-' + option.value.trim().replace(/[^\w]/g, '-').toLowerCase()
-    );
-  }
-
-  /**
    * Highlights an option in the list.
    *
    * @param {string} direction - Direction to highlight compared to the
@@ -298,6 +200,86 @@ function Multiselect(element) {
       _isBlurSkipped = false;
       _searchDom.focus();
     }
+  }
+
+  /**
+   * Resets the search input and filtering.
+   */
+  function _resetSearch() {
+    _searchDom.value = '';
+    _resetFilter();
+  }
+
+  /**
+   * This passes the click of the selected item button down to the label it
+   * contains. This is only required for browsers (IE11) that prevent the
+   * click of a selected item from cascading from the button down to the label
+   * it contains.
+   *
+   * @param {MouseEvent} event - The mouse click event object.
+   */
+  function _selectionClickHandler(event) {
+    const target = event.target;
+    if (target.tagName === 'BUTTON') {
+      event.preventDefault();
+      target.removeEventListener('click', _selectionClickHandler);
+      target.querySelector('label').click();
+    }
+  }
+
+  /**
+   * @param {KeyEvent} event - The key down event object.
+   */
+  function _selectionKeyDownHandler(event) {
+    if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
+      const label = event.target.querySelector('label');
+      const checkbox = _optionsDom.querySelector(
+        '#' + label.getAttribute('for')
+      );
+      checkbox.click();
+    }
+  }
+
+  /**
+   * Create a unique ID based on a select's option HTML element.
+   *
+   * @param {HTMLNode} option - A option HTML element.
+   * @returns {string} A hopefully unique ID.
+   */
+  function _getOptionId(option) {
+    /* Replace any character that is not a word character with a dash.
+       https://regex101.com/r/ShHmRw/1
+    */
+    return (
+      _name + '-' + option.value.trim().replace(/[^\w]/g, '-').toLowerCase()
+    );
+  }
+
+  /**
+   * @param {HTMLNode} selectionsDom - The UL item to inject list item into.
+   * @param {HTMLNode} option - The OPTION item to extract content from.
+   */
+  function _createSelectedItem(selectionsDom, option) {
+    const optionId = _getOptionId(option);
+    const selectionsItemDom = MultiselectUtils.create('li', {
+      'data-option': option.value,
+    });
+
+    const selectionsItemLabelDom = MultiselectUtils.create('button', {
+      type: 'button',
+      innerHTML:
+        '<label for=' + optionId + '>' + option.text + closeIcon + '</label>',
+      inside: selectionsItemDom,
+    });
+
+    selectionsDom.appendChild(selectionsItemDom);
+    selectionsItemDom.appendChild(selectionsItemLabelDom);
+
+    selectionsItemLabelDom.addEventListener('click', _selectionClickHandler);
+    selectionsItemLabelDom.addEventListener(
+      'keydown',
+      _selectionKeyDownHandler
+    );
   }
 
   /**
@@ -342,86 +324,13 @@ function Multiselect(element) {
   }
 
   /**
-   * Evaluates the list of options based on the user's query in the
-   * search input.
+   * Handles the functions to trigger on the checkbox change.
    *
-   * @param {string} value - Text the user has entered in the search query.
+   * @param {Event} event - The checkbox change event.
    */
-  function _evaluate(value) {
-    _resetFilter();
-    _model.resetIndex();
-    const matchedIndices = _model.filterIndices(value);
-    _filterList(matchedIndices);
-  }
-
-  /**
-   * Resets the search input and filtering.
-   */
-  function _resetSearch() {
-    _searchDom.value = '';
-    _resetFilter();
-  }
-
-  /**
-   * Filter the options list.
-   * Every time we filter we have two lists of indices:
-   * - The matching options (filterIndices).
-   * - The matching options of the last filter (_lastFilterIndices).
-   * We need to turn off the filter for any of the last filter matches
-   * that are not in the new set, and turn on the filter for the matches
-   * that are not in the last set.
-   *
-   * @param {Array} filterIndices - List of indices to filter from the options.
-   * @returns {boolean} True if options are filtered, false otherwise.
-   */
-  function _filterList(filterIndices) {
-    if (filterIndices.length > 0) {
-      _filterMatches();
-      return true;
-    }
-
-    _filterNoMatches();
-    return false;
-  }
-
-  /**
-   * Resets the filtered option list.
-   */
-  function _resetFilter() {
-    _optionsDom.classList.remove('u-filtered', 'u-no-results');
-
-    for (let i = 0, len = _optionsDom.children.length; i < len; i++) {
-      _optionsDom.children[i].classList.remove('u-filter-match');
-    }
-
-    _model.clearFilter();
-  }
-
-  /**
-   * Set the filtered matched state.
-   */
-  function _filterMatches() {
-    _optionsDom.classList.remove('u-no-results');
-    _optionsDom.classList.add('u-filtered');
-
-    let filteredIndices = _model.getLastFilterIndices();
-    for (let i = 0, len = filteredIndices.length; i < len; i++) {
-      _optionItemDoms[filteredIndices[i]].classList.remove('u-filter-match');
-    }
-
-    filteredIndices = _model.getFilterIndices();
-    for (let j = 0, len = filteredIndices.length; j < len; j++) {
-      _optionItemDoms[filteredIndices[j]].classList.add('u-filter-match');
-    }
-  }
-
-  /**
-   * Updates the list of options to show the user there
-   * are no matching results.
-   */
-  function _filterNoMatches() {
-    _optionsDom.classList.add('u-no-results');
-    _optionsDom.classList.remove('u-filtered');
+  function _changeHandler(event) {
+    _updateSelections(Number(event.target.getAttribute('data-index')));
+    _resetSearch();
   }
 
   /**
@@ -549,43 +458,134 @@ function Multiselect(element) {
   }
 
   /**
-   * This passes the click of the selected item button down to the label it
-   * contains. This is only required for browsers (IE11) that prevent the
-   * click of a selected item from cascading from the button down to the label
-   * it contains.
+   * Populates and injects the markup for the custom multiselect.
    *
-   * @param {MouseEvent} event - The mouse click event object.
+   * @returns {HTMLNode} Newly created <div> element to hold the multiselect.
    */
-  function _selectionClickHandler(event) {
-    const target = event.target;
-    if (target.tagName === 'BUTTON') {
-      event.preventDefault();
-      target.removeEventListener('click', _selectionClickHandler);
-      target.querySelector('label').click();
+  function _populateMarkup() {
+    // Add a container for our markup
+    _containerDom = MultiselectUtils.create('div', {
+      className: BASE_CLASS,
+      around: _dom,
+    });
+
+    // Create all our markup but wait to manipulate the DOM just once
+    _selectionsDom = MultiselectUtils.create('ul', {
+      className: BASE_CLASS + '_choices',
+      inside: _containerDom,
+    });
+
+    _headerDom = MultiselectUtils.create('header', {
+      className: BASE_CLASS + '_header',
+    });
+
+    _searchDom = MultiselectUtils.create('input', {
+      className: BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
+      type: 'text',
+      placeholder: _placeholder || 'Select up to five',
+      inside: _headerDom,
+      id: _dom.id,
+      autocomplete: 'off',
+    });
+
+    _fieldsetDom = MultiselectUtils.create('fieldset', {
+      className: BASE_CLASS + '_fieldset u-invisible',
+      'aria-hidden': 'true',
+    });
+
+    let optionsClasses = BASE_CLASS + '_options';
+    if (_model.isAtMaxSelections()) {
+      optionsClasses += ' u-max-selections';
     }
+
+    _optionsDom = MultiselectUtils.create('ul', {
+      className: optionsClasses,
+      inside: _fieldsetDom,
+    });
+
+    let option;
+    let optionId;
+    let isChecked;
+    for (let i = 0, len = _options.length; i < len; i++) {
+      option = _options[i];
+      optionId = _getOptionId(option);
+      isChecked = _model.getOption(i).checked;
+      const optionsItemDom = MultiselectUtils.create('li', {
+        'data-option': option.value,
+        'data-cy': 'multiselect-option',
+        class: 'm-form-field m-form-field__checkbox',
+      });
+
+      MultiselectUtils.create('input', {
+        id: optionId,
+        // Type must come before value or IE fails
+        type: 'checkbox',
+        value: option.value,
+        name: _name,
+        class: CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
+        inside: optionsItemDom,
+        checked: isChecked,
+        'data-index': i,
+      });
+
+      MultiselectUtils.create('label', {
+        for: optionId,
+        textContent: option.text,
+        className: BASE_CLASS + '_label a-label',
+        inside: optionsItemDom,
+      });
+
+      _optionItemDoms.push(optionsItemDom);
+      _optionsDom.appendChild(optionsItemDom);
+
+      if (isChecked) {
+        _createSelectedItem(_selectionsDom, option);
+      }
+    }
+
+    // Write our new markup to the DOM.
+    _containerDom.appendChild(_headerDom);
+    _containerDom.appendChild(_fieldsetDom);
+
+    return _containerDom;
   }
 
   /**
-   * @param {KeyEvent} event - The key down event object.
-   */
-  function _selectionKeyDownHandler(event) {
-    if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
-      const label = event.target.querySelector('label');
-      const checkbox = _optionsDom.querySelector(
-        '#' + label.getAttribute('for')
-      );
-      checkbox.click();
-    }
-  }
-
-  /**
-   * Handles the functions to trigger on the checkbox change.
+   * Set up and create the multiselect.
    *
-   * @param {Event} event - The checkbox change event.
+   * @returns {Multiselect} An instance.
    */
-  function _changeHandler(event) {
-    _updateSelections(Number(event.target.getAttribute('data-index')));
-    _resetSearch();
+  function init() {
+    if (!setInitFlag(_dom)) {
+      return this;
+    }
+
+    if (isMobileUserAgent()) {
+      return this;
+    }
+
+    _instance = this;
+    _name = _dom.name || _dom.id;
+    _placeholder = _dom.getAttribute('placeholder');
+    _options = _dom.options || [];
+
+    if (_options.length > 0) {
+      _model = new MultiselectModel(_options, _name).init();
+      const newDom = _populateMarkup();
+
+      /* Removes <select> element,
+         and re-assign DOM reference. */
+      _dom.parentNode.removeChild(_dom);
+      _dom = newDom;
+
+      /* We need to set init flag again since we've created a new <div>
+         to replace the <select> element. */
+      setInitFlag(_dom);
+
+      _bindEvents();
+    }
+
+    return this;
   }
 
   // Attach public events.

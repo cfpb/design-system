@@ -28,6 +28,13 @@ function MoveTransition(element) {
   const _baseTransition = new BaseTransition(element, CLASSES);
 
   /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
+  }
+
+  /**
    * @returns {MoveTransition} An instance.
    */
   function init() {
@@ -38,13 +45,6 @@ function MoveTransition(element) {
       _transitionCompleteBinded
     );
     return this;
-  }
-
-  /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
   }
 
   /**

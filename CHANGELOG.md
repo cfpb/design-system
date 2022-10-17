@@ -1,4 +1,19 @@
 
+## v0.17.11 (2022-10-17)
+
+#### Bug Fix
+* `cfpb-expandables`
+  * [#1417](https://github.com/cfpb/design-system/pull/1417) Set a min-width for expandable toggles ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1415](https://github.com/cfpb/design-system/pull/1415) Update to lerna@6.x ([@anselmbradford](https://github.com/anselmbradford))
+* [#1404](https://github.com/cfpb/design-system/pull/1404) Update outdated dependencies | remove legacy babel plugins ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.17.11 (2022-10-12)
 
 #### Enhancement

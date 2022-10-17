@@ -7,8 +7,8 @@ jumplinks: Accessibility, Access, Inclusive imagery, Hazards and harms
 status: Proposed
 description: >-
   <p class="lead-paragraph">Designing and developing for more equitable access
-  starts with an <strong>awareness of the power imbalances between ourselves and
-  the people we serve.</strong></p>
+  starts with an awareness of the power imbalances between ourselves and the
+  people we serve.</p>
 
 
   ![new](/design-system/images/uploads/new.png "new image")
@@ -46,7 +46,7 @@ description: >-
   Designing to a limited screen size helps to force prioritization of the most important features needed to accomplish the goals of your product, and encourages the development of a leaner product. In contrast, designing desktop-first may lead to the development of multiple features without hierarchy or prioritization, which may not be usable at mobile scale. 
 
 
-  ### Optimize code for the best possible performance.  
+  ### Optimize code for the best possible performance. 
 
 
   Code should be as lightweight as possible. Evaluate your product for performance factors, such as first contentful paint, first meaningful paint, and speed index. Use one of the many free automated tools available to analyze speed, performance, and quality. 
@@ -112,123 +112,183 @@ description: >-
   <h2>Hazard mapping</h2>
 
 
-  *Adapted from [18F’s presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx)*
+  Adapted from [18F’s presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx)
 
 
-   As you create your designs, try this mapping activity to identify potential hazards and harms that could result from the work you and your team are planning to do. Plan for how you’ll mitigate them.  
+  As you create your designs, try this mapping activity to identify potential hazards and harms that could result from the work you and your team are planning to do. Plan for how you’ll mitigate them. 
 
 
-  * On a wireframe, map out any potential hazards and describe how the design will mitigate those hazards.  
+  <ul>
 
-  * When conducting interviews, ask how people might be harmed by this system or how someone might use the system to cause harm.
+  <li>On a wireframe, map out any potential hazards and describe how the design will mitigate those hazards.</li>  
 
-  * When creating a journey map, add a row for potential hazards associated with the moments or decisions in the journey. 
+
+  <li>When conducting interviews, ask how people might be harmed by this system or how someone might use the system to cause harm.</li>
+
+
+  <li>When creating a journey map, add a row for potential hazards associated with the moments or decisions in the journey.</li> 
+
+
+  </ul>
 
 
   Here is a starter list of potential hazards to consider:
 
 
-  * Data theft 
 
-  * Data misuse 
 
-  * Overcollection of data
+  <ul>
 
-  * Opaque algorithms 
+  <li>Data theft</li>  
 
-  * Privacy breach 
 
-  * Digital redlining 
+  <li>Data misuse</li>  
 
-  * Harassment 
 
-  * Targeted abuse 
+  <li>Opaque algorithms</li>  
 
-  * Attention hijacking 
 
-  * Inaccessibility 
+  <li>Privacy breach</li>  
 
-  * Widespread misinformation 
 
-  * System outage 
+  <li>Digital redlining</li>  
 
-  * Enshrined status quo or power structures 
 
-  * Power imbalance 
+  <li>Harassment</li>  
 
-  * Discrimination
 
-  * Deadnaming  
+  <li>Targeted abuse</li>  
 
-  * Dehumanization 
 
-  * Intimidation 
+  <li>Attention hijacking</li>  
 
-  * Entrapment 
 
-  * Abandonment 
+  <li>Inaccessibility</li>  
 
-  * Displacement 
 
-  * Systemic bias 
+  <li>Widespread misinformation</li>  
 
-  * Oppression 
 
-  * Racial profiling 
+  <li>System outage</li>  
 
-  * Co-optation 
 
-  * Exploitation 
+  <li>Enshrined status quo or power structures</li>  
 
-  * Deception 
 
-  * Triggering topics 
+  <li>Power imbalance</li>  
 
-  * Exclusion 
 
-  * Disregard
+  <li>Deadnaming</li>  
+
+
+  <li>Dehumanization</li>  
+
+
+  <li>Intimidation</li>  
+
+
+  <li>Entrapment</li>  
+
+
+  <li>Abandonment</li>  
+
+
+  <li>Displacement</li>  
+
+
+  <li>Systemic bias</li>  
+
+
+  <li>Oppression</li>  
+
+
+  <li>Racial profiling</li>  
+
+
+  <li>Co-optation</li>  
+
+
+  <li>Exploitation</li>  
+
+
+  <li>Deception</li>  
+
+
+  <li>Triggering topics</li>  
+
+
+  <li>Exclusion</li>  
+
+
+  <li>Disregard</li>  
+
+
+  </ul>
 
 
   Hazards can cause a wide range of harms. These harms can include:  
 
 
-  * Fear and anxiety 
+  <ul>
 
-  * Depression 
+  <li>Fear and anxiety</li>  
 
-  * Anger 
 
-  * Shame 
+  <li>Depression</li>  
 
-  * Diminished confidence 
 
-  * Re-traumatization 
+  <li>Anger</li>  
 
-  * Isolation 
 
-  * Exhaustion 
+  <li>Shame</li>  
 
-  * Misinformation
 
-  * Invisibility 
+  <li>Diminished confidence</li>  
 
-  * Reduced influence
 
-  * Misrepresentation 
+  <li>Re-traumatization</li>  
 
-  * Diminished freedom or autonomy
 
-  * Diminished access
+  <li>Isolation</li>  
 
-  * Damaged reputation 
 
-  * Legal or financial penalties 
+  <li>Exhaustion</li>  
 
-  * Loss of employment or housing
 
-  * Environmental damage 
+  <li>Misinformation</li>  
 
-  * Physical danger
+
+  <li>Invisibility</li>  
+
+
+  <li>Reduced influence</li>  
+
+
+  <li>Misrepresentation</li>  
+
+
+  <li>Diminished freedom or autonomy</li>  
+
+
+  <li>Diminished access</li>  
+
+
+  <li>Damaged reputation</li>  
+
+
+  <li>Legal or financial penalties</li>  
+
+
+  <li>Loss of employment or housing</li>  
+
+
+  <li>Environmental damage</li>  
+
+
+  <li>Physical danger</li>  
+
+
+  </ul>
 
 
   </div>

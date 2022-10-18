@@ -101,7 +101,8 @@ variation_groups:
           * Background: Gray 10 (#e7e8e9)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
       - variation_name: Radio button with helper text
-        variation_description: Checkboxes and radio button inputs can have labels that
+        variation_description:
+          Checkboxes and radio button inputs can have labels that
           span multiple lines and have helper text that appears below the main
           label text.
         variation_code_snippet: |-
@@ -234,7 +235,8 @@ variation_groups:
               <label class="a-label" for="test_radio_lg_disabled_selected">Disabled/selected</label>
           </div>
         variation_name: Large target area radio buttons
-        variation_description: For better usability, consider using radio buttons with
+        variation_description:
+          For better usability, consider using radio buttons with
           large target areas. These are easier to interact with (especially on
           smaller screens) and harder to miss. They are especially desirable
           when the form will have heavy mobile usage. Given the amount of real
@@ -264,12 +266,12 @@ use_cases: >-
 
 
   Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the default style shown below, make sure the target area is at least 45 x 45 px and includes the option text.
-guidelines: ""
-behavior: ""
+guidelines: ''
+behavior: ''
 accessibility: There are some issues with Voiceover reading radio buttons. To
   get around this, consider using the aria-describedby attribute.
-research: ""
-related_items: ""
+research: ''
+related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z
 eyebrow: Form elements
 ---

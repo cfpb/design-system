@@ -39,7 +39,6 @@ Read on for more details on the variables and mixins this component provides.
 - [Push and pull mixins for source ordering](#push-and-pull-mixins-for-source-ordering)
 - [Example grid layouts](#example-grid-layouts)
 
-
 ## Variables
 
 Component variables are used to theme a component.
@@ -74,7 +73,6 @@ This value can be overridden in the `grid_column()` mixin.
 
 Gives column blocks a background color if set to true.
 
-
 ## Wrappers
 
 Wrappers are centered containers with a max-width
@@ -108,7 +106,6 @@ by passing a pixel value into the mixin.
     This container is the same except it has a wider max-width.
 </div>
 ```
-
 
 ## Columns
 
@@ -156,7 +153,6 @@ add a wrapper just inside the column to be styled that way.
 **NOTE:** @cfpb/grid does not have a "row" concept.
 If you have a 12-column grid and place 24 columns inside a wrapper,
 @cfpb/grid columns will automatically stack into two rows of 12.
-
 
 ## Nested columns
 
@@ -211,7 +207,6 @@ without having to deal with the first and last columns of each row.
 </div>
 ```
 
-
 ## Push and pull mixins for source ordering
 
 **NOTE:** Using these is not advised, because the disadvantages for users
@@ -247,7 +242,6 @@ content first in the source order, but it's here if you absolutely need it.
     <div class="first">I am second in the markup but appear before .second.</div>
 </div>
 ```
-
 
 ## Example grid layouts
 
@@ -307,6 +301,7 @@ content first in the source order, but it's here if you absolutely need it.
     <section>
         <div class="col col-12"><p>twelve</p></div>
     </section>
+
 </div>
 
 ```
@@ -456,6 +451,7 @@ content first in the source order, but it's here if you absolutely need it.
             </section>
         </div>
     </section>
+
 </div>
 
 ```

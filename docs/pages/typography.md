@@ -23,7 +23,7 @@ variation_groups:
 
           0123456789</h4>
 
-        variation_name: ""
+        variation_name: ''
       - variation_code_snippet: |+
           <h3 style="font-weight: 500;">Avenir Next Medium</h3>
 
@@ -33,7 +33,7 @@ variation_groups:
           0123456789</h4>
 
 
-        variation_name: ""
+        variation_name: ''
       - variation_code_snippet: |-
           <h3>Avenir Next Regular</h3>
 
@@ -41,11 +41,12 @@ variation_groups:
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789</h4>
-        variation_name: ""
-    variation_group_description: Avenir Next is the primary brand typeface and can
+        variation_name: ''
+    variation_group_description:
+      Avenir Next is the primary brand typeface and can
       be used across all formats from print to digital. Its round and geometric
       letterforms are approachable and modern.
-use_cases: ""
+use_cases: ''
 guidelines: >-
   Readable text allows users to efficiently read and take in textual
   information. Text that is not readable turns off readers or makes it
@@ -123,7 +124,7 @@ guidelines: >-
 
 
   ![Body copy spacing](/design-system/images/uploads/type_body_copy.png)
-behavior: ""
+behavior: ''
 accessibility: >-
   Web Content Accessibility (WCAG) standards ensure that content is accessible
   by everyone, regardless of any disability or user device. To learn more, refer

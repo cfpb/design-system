@@ -11,7 +11,7 @@ description: The text introduction is the standard page introduction pattern
   goals of that section.
 variation_groups:
   - variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           Text introductions consist of a heading and lead paragraph. They
           should be used on every page, except in cases when a
@@ -24,8 +24,8 @@ variation_groups:
 
 
           ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/text_introduction.png)
-        variation_jinja_code_snippet: ""
-        variation_name: ""
+        variation_jinja_code_snippet: ''
+        variation_name: ''
         variation_specs: >-
           ![Image of text intro showing grid and design
           specs](/design-system/images/uploads/text_introduction_with_specs.png)
@@ -43,9 +43,9 @@ variation_groups:
 
           * At breakpoints below 600: Page title and lead paragraph drop down one type size to make reading on smaller devices easier.
     variation_group_name: Standard text introduction
-    variation_group_description: ""
+    variation_group_description: ''
   - variation_group_name: Variation
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_specs: >-
           ![Image of text intro with breakout sidebar showing grid and design
@@ -76,7 +76,7 @@ variation_groups:
 
 
           ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/breakout_sidebar.png)
-use_cases: ""
+use_cases: ''
 guidelines: >-
   ### Content guidelines
 
@@ -136,8 +136,8 @@ behavior: >-
   | Breakout sidebar on the right                                                         | Breakout sidebar stacked immediately after text intro                                          |
 
   | ![Mockup of 900+ pixel layout](/design-system/images/uploads/breakout_sidebar_breakpoint_large.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/breakout_sidebar_breakpoint_small.png) |
-accessibility: ""
-research: ""
+accessibility: ''
+research: ''
 related_items: >-
   * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
 

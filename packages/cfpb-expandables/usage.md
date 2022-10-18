@@ -9,24 +9,23 @@ components are dependencies of this component.
 ## Table of contents
 
 - [Variables](#variables)
-    - [Color variables](#color-variables)
-    - [Sizing variables](#sizing-variables)
-    - [Timing variables](#timing-variables)
+  - [Color variables](#color-variables)
+  - [Sizing variables](#sizing-variables)
+  - [Timing variables](#timing-variables)
 - [Modifiers](#modifiers)
-    - [Expanded](#expanded)
-    - [Padded](#padded)
-    - [Spaced header](#spaced-header)
+  - [Expanded](#expanded)
+  - [Padded](#padded)
+  - [Spaced header](#spaced-header)
 - [Elements](#elements)
-    - [Text elements](#text-elements)
-    - [Header elements](#header-elements)
+  - [Text elements](#text-elements)
+  - [Header elements](#header-elements)
 - [Recommended expandable pattern](#recommended-expandable-pattern)
-    - [Default state](#default-state)
-    - [Default state - open on load](#default-state-open-on-load)
-    - [Barebones example](#barebones-expandable)
+  - [Default state](#default-state)
+  - [Default state - open on load](#default-state-open-on-load)
+  - [Barebones example](#barebones-expandable)
 - [Expandable groups](#expandable-groups)
-    - [Accordion style group](#accordion-style-group)
+  - [Accordion style group](#accordion-style-group)
 - [JavaScript API](#javascript-api)
-
 
 ## Variables
 
@@ -39,7 +38,6 @@ where this component's less file is imported.
 ### Color variables
 
 Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.less).
-
 
 ```
 // .o-expandable
@@ -70,11 +68,11 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 ```
 
 ### Timing variables
+
 ```
 // Transition timing
 @expandable__transition-speed: 0.25s;
 ```
-
 
 ## Modifiers
 
@@ -166,7 +164,6 @@ Allows you to float information left and right.
 .o-expandable_header-left
 .o-expandable_header-right
 ```
-
 
 ## Recommended expandable pattern
 
@@ -356,7 +353,6 @@ In this barebones example there are no visual styles.
     </div>
 </div>
 ```
-
 
 ## Expandable groups
 
@@ -715,14 +711,15 @@ Each instance has the following methods for public consumption:
 ### toggleTargetState( element )
 
 ```js
-const element = document.querySelector( '.o-expandable_target' );
-expandables[0].toggleTargetState( element );
+const element = document.querySelector('.o-expandable_target');
+expandables[0].toggleTargetState(element);
 ```
 
 Toggle an expandable to open or closed.
 
 Parameters:
- - element {HTMLNode} The expandable target HTML DOM element.
+
+- element {HTMLNode} The expandable target HTML DOM element.
 
 ### getLabelText()
 
@@ -733,4 +730,5 @@ expandables[0].getLabelText();
 Retrieve the label text of the expandable header.
 
 Return:
- - {string} The text of the expandable's label.
+
+- {string} The text of the expandable's label.

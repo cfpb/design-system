@@ -11,7 +11,8 @@ variation_groups:
   - variation_group_name: Types
     variations:
       - variation_name: Bulleted list
-        variation_description: Use a bulleted list when grouping similar items or short
+        variation_description:
+          Use a bulleted list when grouping similar items or short
           thoughts into “bite-size” chunks. Generally, the order or count of the
           items in a bullet list isn’t important. An exception to this may be a
           list of states, which naturally fits into an alphabetical order.
@@ -50,7 +51,8 @@ variation_groups:
 
           * Bullets are open circles and flush left with the preceding line of text
       - variation_name: Numbered list
-        variation_description: When the order of information presented is important, use
+        variation_description:
+          When the order of information presented is important, use
           a numbered list. This could include chronological items, things
           presented in the order of importance, or a finite list of a counted
           number of items.
@@ -147,7 +149,8 @@ variation_groups:
                   <a class="m-list_link" href="#">List item 3</a>
               </li>
           </ul>
-        variation_description: The link list modifier is intended to be used for lists
+        variation_description:
+          The link list modifier is intended to be used for lists
           where each item is a link. It converts to a finger-friendly link with
           a large tap area on smaller screens.
         variation_name: Link list
@@ -166,7 +169,7 @@ variation_groups:
         variation_description: Spaced list adds extra padding to every element in a list.
         variation_name: Spaced list
     variation_group_name: Variations
-use_cases: ""
+use_cases: ''
 guidelines: >-
   ### Content guidelines
 
@@ -189,10 +192,10 @@ guidelines: >-
 
 
   If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.
-behavior: ""
-accessibility: ""
-research: ""
-related_items: ""
+behavior: ''
+accessibility: ''
+research: ''
+related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z
 eyebrow: Lists and tables
 ---

@@ -12,8 +12,8 @@ description: This page contains web accessibility testing tools developed by the
 variation_groups:
   - variations:
       - variation_is_deprecated: false
-        variation_name: ""
-        variation_description: ""
+        variation_name: ''
+        variation_description: ''
     variation_group_name: CFPB manual web accessibility audit
     variation_group_description: >-
       Developed for use by both designers and developers, our manual web
@@ -43,7 +43,7 @@ variation_groups:
 
 
       Lighthouse accessibility reporting results are less comprehensive than those from our manual web accessibility audit, but are still valuable as a measurement of the health of the website, and to pinpoint specific issues to fix.
-use_cases: ""
+use_cases: ''
 guidelines: >-
   This section describes our scale for classifying the severity of an
   accessibility bug.

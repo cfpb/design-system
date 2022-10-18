@@ -9,11 +9,10 @@ components are all dependencies of this component.
 ## Table of contents
 
 - [Variables](#variables)
-    - [Color variables](#color-variables)
-    - [Sizing variables](#sizing-variables)
+  - [Color variables](#color-variables)
+  - [Sizing variables](#sizing-variables)
 - [Default pagination](#default-pagination)
 - [Responsive behavior](#responsive-behavior)
-
 
 ## Variables
 
@@ -37,7 +36,6 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 ```
 @pagination-btn-min-width-px: 130px;
 ```
-
 
 ## Default pagination
 
@@ -230,7 +228,6 @@ For example:
     </form>
 </nav>
 ```
-
 
 ## Responsive behavior
 

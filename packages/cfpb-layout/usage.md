@@ -7,50 +7,49 @@ components are dependencies of this component.
 ## Table of contents
 
 - [Variables](#variables)
-    - [Color variables](#color-variables)
-    - [Sizing variables](#sizing-variables)
+  - [Color variables](#color-variables)
+  - [Sizing variables](#sizing-variables)
 - [Standard content formats](#standard-content-formats)
-    - [Content line](#content-line)
-    - [Main content and sidebar](#main-content-and-sidebar)
-    - [Left-hand navigation layout](#left-hand-navigation-layout)
-    - [Right-hand sidebar layout](#right-hand-sidebar-layout)
-        - [Bleedbar sidebar styling](#bleedbar-sidebar-styling)
-    - [Narrow content column option](#narrow-content-column-option)
-    - [Flush bottom modifier](#flush-bottom-modifier)
-    - [Flush top modifier (only on small screens)](#flush-top-modifier-only-on-small-screens)
-    - [Flush all modifier (only on small screens)](#flush-all-modifier-only-on-small-screens)
+  - [Content line](#content-line)
+  - [Main content and sidebar](#main-content-and-sidebar)
+  - [Left-hand navigation layout](#left-hand-navigation-layout)
+  - [Right-hand sidebar layout](#right-hand-sidebar-layout)
+    - [Bleedbar sidebar styling](#bleedbar-sidebar-styling)
+  - [Narrow content column option](#narrow-content-column-option)
+  - [Flush bottom modifier](#flush-bottom-modifier)
+  - [Flush top modifier (only on small screens)](#flush-top-modifier-only-on-small-screens)
+  - [Flush all modifier (only on small screens)](#flush-all-modifier-only-on-small-screens)
 - [Custom content layouts](#custom-content-layouts)
-    - [Large gutters modifier](#large-gutters-modifier)
-    - [Content layout column dividers](#content-layout-column-dividers)
+  - [Large gutters modifier](#large-gutters-modifier)
+  - [Content layout column dividers](#content-layout-column-dividers)
 - [Block](#block)
-    - [Standard block example](#standard-block-example)
-    - [Border-top modifier](#border-top-modifier)
-    - [Border-right modifier](#border-right-modifier)
-    - [Border-bottom modifier](#border-bottom-modifier)
-    - [Border-left modifier](#border-left-modifier)
-    - [Border modifier](#border-modifier)
-    - [Flush-top modifier](#flush-top-modifier)
-    - [Flush-bottom modifier](#flush-bottom-modifier-1)
-    - [Flush-sides modifier](#flush-sides-modifier)
-    - [Flush modifier](#flush-modifier)
-    - [Background modifier](#background-modifier)
-    - [Background and flush sides modifier combo example](#background-and-flush-sides-modifier-combo-example)
-    - [Padded-top modifier](#padded-top-modifier)
-    - [Padded-bottom modifier](#padded-bottom-modifier)
-    - [Sub blocks](#sub-blocks)
-    - [Mixing content blocks with content layouts](#mixing-content-blocks-with-content-layouts)
+  - [Standard block example](#standard-block-example)
+  - [Border-top modifier](#border-top-modifier)
+  - [Border-right modifier](#border-right-modifier)
+  - [Border-bottom modifier](#border-bottom-modifier)
+  - [Border-left modifier](#border-left-modifier)
+  - [Border modifier](#border-modifier)
+  - [Flush-top modifier](#flush-top-modifier)
+  - [Flush-bottom modifier](#flush-bottom-modifier-1)
+  - [Flush-sides modifier](#flush-sides-modifier)
+  - [Flush modifier](#flush-modifier)
+  - [Background modifier](#background-modifier)
+  - [Background and flush sides modifier combo example](#background-and-flush-sides-modifier-combo-example)
+  - [Padded-top modifier](#padded-top-modifier)
+  - [Padded-bottom modifier](#padded-bottom-modifier)
+  - [Sub blocks](#sub-blocks)
+  - [Mixing content blocks with content layouts](#mixing-content-blocks-with-content-layouts)
 - [@cfpb/grid helpers](#@cfpb/grid-helpers)
-    - [.wrapper (base)](#wrapper-base)
-    - [Column divider modifiers](#column-divider-modifiers)
+  - [.wrapper (base)](#wrapper-base)
+  - [Column divider modifiers](#column-divider-modifiers)
 - [Featured content module](#featured-content-module)
-    - [Anchoring the visual on the right](#anchoring-the-visual-on-the-right)
-    - [Centering the visual](#centering-the-visual)
+  - [Anchoring the visual on the right](#anchoring-the-visual-on-the-right)
+  - [Centering the visual](#centering-the-visual)
 - [Heroes](#heroes)
-    - [Standard hero with illustration](standard-hero-with-illustration)
-    - [Hero with bleeding illustration](#hero-with-bleeding-illustration)
-    - [Hero with photograph](#hero-with-photograph)
+  - [Standard hero with illustration](standard-hero-with-illustration)
+  - [Hero with bleeding illustration](#hero-with-bleeding-illustration)
+  - [Hero with photograph](#hero-with-photograph)
 - [Wells](#wells)
-
 
 ## Variables
 
@@ -105,9 +104,7 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 @hero-desktop-height: 285px;
 ```
 
-
 ## Standard content formats
-
 
 ### Content line
 
@@ -118,7 +115,6 @@ A 1 pixel edge to edge bar that can divide content.
 ```
 <div class="content_line"></div>
 ```
-
 
 ### Main content and sidebar
 
@@ -161,7 +157,6 @@ markup._
     </div>
 </main>
 ```
-
 
 ### Left-hand navigation layout
 
@@ -220,7 +215,6 @@ It is assumed that the content is wider than the sidebar.
     </div>
 </footer>
 ```
-
 
 ### Right-hand sidebar layout
 
@@ -283,7 +277,6 @@ markup._
 </footer>
 ```
 
-
 #### Bleedbar sidebar styling
 
 Simply add class `.content__bleedbar` to `main.content`. Only supports
@@ -323,7 +316,6 @@ it in your markup._
     </div>
 </main>
 ```
-
 
 ### Narrow content column option
 
@@ -380,7 +372,6 @@ markup._
     </div>
 </footer>
 ```
-
 
 ### Flush bottom modifier
 
@@ -439,7 +430,6 @@ Add a class of `.content__flush-bottom` to `.content_main` or
 </footer>
 ```
 
-
 ### Flush top modifier (only on small screens)
 
 Add a class of `.content__flush-top-on-small` to `.content_main` or
@@ -483,7 +473,6 @@ screens in this case refers to the breakpoint where `.content_main` and
 </footer>
 ```
 
-
 ### Flush all modifier (only on small screens)
 
 Add a class of `.content__flush-all-on-small` to `.content_main` or
@@ -526,7 +515,6 @@ screens only. 'Small' screens in this case refers to the breakpoint where
     </div>
 </footer>
 ```
-
 
 ## Custom content layouts
 
@@ -697,7 +685,6 @@ class can be used to lay content out in a grid.
 </div>
 ```
 
-
 ### Large gutters modifier
 
 <div class="content-l content-l__main  content-l__large-gutters">
@@ -759,7 +746,6 @@ class can be used to lay content out in a grid.
     </div>
 </div>
 ```
-
 
 ### Content layout column dividers
 
@@ -833,7 +819,6 @@ overlapping since they will span the height of the entire `.content-l` element.
 </div>
 ```
 
-
 ## Block
 
 `.block` is a base class with several modifiers that help you separate chunks
@@ -845,6 +830,7 @@ The standard `.block` class by itself simply adds a `margin` of twice the
 gutter width to the top and bottom.
 
 Main content...
+
 <div class="block">
     Content block
 </div>
@@ -873,6 +859,7 @@ Main content...
 Adds top `border` to `.block`.
 
 Main content...
+
 <div class="block block__border-top">
     Content block with top border.
 </div>
@@ -889,6 +876,7 @@ Main content...
 Adds right `border` to `.block`.
 
 Main content...
+
 <div class="block block__border-right">
     Content block with right border.
 </div>
@@ -905,6 +893,7 @@ Main content...
 Adds bottom `border` to `.block`.
 
 Main content...
+
 <div class="block block__border-bottom">
     Content block with bottom border.
 </div>
@@ -921,6 +910,7 @@ Main content...
 Adds left `border` to `.block`.
 
 Main content...
+
 <div class="block block__border-left">
     Content block with left border.
 </div>
@@ -937,6 +927,7 @@ Main content...
 Adds `border` on all sides to `.block`.
 
 Main content...
+
 <div class="block block__border">
     Content block with borders on all sides.
 </div>
@@ -953,6 +944,7 @@ Main content...
 Removes the top `margin` from `.block`.
 
 Main content...
+
 <div class="block block__flush-top">
     Content block with no top margin.
 </div>
@@ -975,6 +967,7 @@ Main content...
 Removes the bottom `margin` from `.block`.
 
 Main content...
+
 <div class="block block__flush-bottom">
     Content block with no bottom margin.
 </div>
@@ -1068,6 +1061,7 @@ Adds a `background` color and padding to `.block`.
 Setup for (ems-equivalent) `30px` `padding` on top and `60px` on bottom.
 
 Main content...
+
 <div class="block block__bg">
     Content block with a background
 </div>
@@ -1120,6 +1114,7 @@ Breaks top `margin` into `margin` and `padding`. Useful in combination with
 `block__border-top` to add `padding` between `.block` contents and `border`.
 
 Main content...
+
 <div class="block block__padded-top block__border-top">
     Content block with reduced top margin and added top padding
     and border.
@@ -1139,6 +1134,7 @@ Breaks bottom `margin` into `margin` and `padding`. Useful in combination with
 `block__border-bottom` to add `padding` between `.block` contents and `border`.
 
 Main content...
+
 <div class="block block__padded-bottom block__border-bottom">
     Content block with reduced bottom margin and added bottom padding
     and border.
@@ -1239,7 +1235,6 @@ and should not be used in production._
 </div>
 ```
 
-
 ## @cfpb/cfpb-grid helpers
 
 ### .wrapper (base)
@@ -1269,23 +1264,20 @@ height of the next parent using `position: relative;`. This means that the
 
 ```less
 .my-column-1-2 {
+  // Creates a column that spans 6 out of 12 columns.
+  .grid_column(6, 12);
 
-    // Creates a column that spans 6 out of 12 columns.
-    .grid_column(6, 12);
-
-    // Add a top divider only at screen 599px and smaller.
-    .respond-to-max(599px {
+  // Add a top divider only at screen 599px and smaller.
+  .respond-to-max(599px {
         .grid_column__top-divider();
     });
 
-    // Add a left divider only at screen 600px and larger.
-    .respond-to-min(600px, {
+  // Add a left divider only at screen 600px and larger.
+  .respond-to-min(600px, {
         .grid_column__left-divider();
     });
-
 }
 ```
-
 
 ## Featured content module
 
@@ -1469,7 +1461,6 @@ so that the focal point of the visual remains in view at all screen sizes.
 </section>
 ```
 
-
 ## Heroes
 
 A hero consists of a headline, a small amount of additional sub-heading text
@@ -1542,6 +1533,7 @@ height. The image should be `195px` in height to conform to this standard.
             }
         }
     </style>
+
 </section>
 
 ```
@@ -1661,6 +1653,7 @@ switch the text to white.
             }
         }
     </style>
+
 </section>
 
 ```
@@ -1780,6 +1773,7 @@ add the `__bleeding` modifier to the hero and add an additional
             }
         }
     </style>
+
 </section>
 
 ```
@@ -1895,6 +1889,7 @@ with a non-white (or light gray) background.
             }
         }
     </style>
+
 </section>
 
 ```
@@ -1951,7 +1946,6 @@ with a non-white (or light gray) background.
     </style>
 </section>
 ```
-
 
 ## Wells
 

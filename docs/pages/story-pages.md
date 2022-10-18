@@ -12,7 +12,7 @@ description: The story page uses full-bleed images and scaled-up headings to
   page](https://www.consumerfinance.gov/about-us/racial-equity).
 variation_groups:
   - variation_group_name: Standard story page
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: "| Story page wireframe | Example |
 
@@ -21,10 +21,11 @@ variation_groups:
           | ![Story page
           example](/design-system/images/uploads/story_page_example.jpg) |
           Example: [Racial
-          equity](https://www.consumerfinance.gov/about-us/racial-equity/)|\ 
+          equity](https://www.consumerfinance.gov/about-us/racial-equity/)|\
 
           \ "
-        variation_specs: On desktop, the H1 in the hero is rendered at [display heading
+        variation_specs:
+          On desktop, the H1 in the hero is rendered at [display heading
           size](https://cfpb.github.io/design-system/foundation/headings#web-headings-1)
           while all H2s are bumped up to H1 size (34px / 2.125 ems) from their
           standard size (26px / 1.625 em). H3s and below render at standard
@@ -58,6 +59,6 @@ guidelines: >
 
   H2:
 
-  * Headings should form the narrative backbone of the page - when read together, they should tell a story. 
+  * Headings should form the narrative backbone of the page - when read together, they should tell a story.
 behavior: Full-bleed images will shrink to fit as the viewport is resized.
 ---

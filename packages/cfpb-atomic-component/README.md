@@ -40,7 +40,7 @@ var testObjectA = {
 
 ### Type Checkers
 
- Utility functions for checking Javascript types and primitives.
+Utility functions for checking Javascript types and primitives.
 
 #### Example
 
@@ -78,6 +78,7 @@ We welcome your feedback and contributions.
 ---
 
 ## Open source licensing info
+
 1. [TERMS](TERMS.md)
 2. [LICENSE](LICENSE)
 3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)

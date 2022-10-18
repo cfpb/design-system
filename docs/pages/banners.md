@@ -36,7 +36,7 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Default banner
       - variation_is_deprecated: false
         variation_code_snippet: >-

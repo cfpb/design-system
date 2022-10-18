@@ -2,11 +2,9 @@ Atomic Component is a micro framework for building Atomic Design components
 that utilize JavaScript. It is a dependency of other packages and isn't used
 on its own.
 
-
 ## Table of contents
 
 - [Usage](#Usage)
-
 
 ## Usage
 
@@ -49,22 +47,22 @@ Molecules are prefixed with “m-” in CSS, JavaScript, and HTML files.
 ```js
 const CONSTANTS = { MESSAGE: 'message', EXPLANATION: 'explanation' };
 
-const NotificationMolecule = Molecule.extend( {
-      classes: {
-        isVisible:   'm-notification__visible'
-      },
+const NotificationMolecule = Molecule.extend({
+  classes: {
+    isVisible: 'm-notification__visible',
+  },
 
-      ui: {
-        base:        '.m-notification',
-        explanation: '.m-notification_explanation',
-        message:     '.m-notification_message'
-      },
+  ui: {
+    base: '.m-notification',
+    explanation: '.m-notification_explanation',
+    message: '.m-notification_message',
+  },
 
-      initialize: function() {
-        this.ui.message.textContent = CONSTANTS.MESSAGE;
-        this.ui.explanation.textContent = CONSTANTS.EXPLANATION;
-      }
-} );
+  initialize: function () {
+    this.ui.message.textContent = CONSTANTS.MESSAGE;
+    this.ui.explanation.textContent = CONSTANTS.EXPLANATION;
+  },
+});
 
 NotificationMolecule.constants = CONSTANTS;
 NotificationMolecule.init();

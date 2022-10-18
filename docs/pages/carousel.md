@@ -63,8 +63,8 @@ guidelines: >-
   * Item descriptions should be 140 characters maximum (including spaces).
 
   * Item link text has a 30 character maximum limit (including spaces). Lead with a verb, and be specific.
-behavior: ""
-accessibility: ""
+behavior: ''
+accessibility: ''
 research: >+
   There is a plethora of research discouraging the use of carousels on websites:
 

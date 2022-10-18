@@ -5,31 +5,37 @@ import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.
 // Exported constants.
 const CLASSES = {
   CSS_PROPERTY: 'opacity',
-  BASE_CLASS:   'u-alpha-transition',
-  ALPHA_100:    'u-alpha-100',
-  ALPHA_0:      'u-alpha-0'
+  BASE_CLASS: 'u-alpha-transition',
+  ALPHA_100: 'u-alpha-100',
+  ALPHA_0: 'u-alpha-0',
 };
 
 /**
  * AlphaTransition
+ *
  * @class
- *
  * @classdesc Initializes new AlphaTransition behavior.
- *
- * @param {HTMLNode} element
+ * @param element
+ * @param {HTMLNode} element- -
  *   DOM element to apply opacity transition to.
  * @returns {AlphaTransition} An instance.
  */
-function AlphaTransition( element ) {
+function AlphaTransition(element) {
+  const _baseTransition = new BaseTransition(element, CLASSES);
 
-  const _baseTransition = new BaseTransition( element, CLASSES );
+  /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
+  }
 
   /**
    * @returns {AlphaTransition} An instance.
    */
   function init() {
     _baseTransition.init();
-    const _transitionCompleteBinded = _transitionComplete.bind( this );
+    const _transitionCompleteBinded = _transitionComplete.bind(this);
     _baseTransition.addEventListener(
       BaseTransition.END_EVENT,
       _transitionCompleteBinded
@@ -38,28 +44,23 @@ function AlphaTransition( element ) {
   }
 
   /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent( BaseTransition.END_EVENT, { target: this } );
-  }
-
-  /**
    * Fade to 100% by applying a utility alpha class.
+   *
    * @returns {AlphaTransition} An instance.
    */
   function fadeIn() {
-    _baseTransition.applyClass( CLASSES.ALPHA_100 );
+    _baseTransition.applyClass(CLASSES.ALPHA_100);
 
     return this;
   }
 
   /**
    * Fade to nothing by applying a utility alpha class.
+   *
    * @returns {AlphaTransition} An instance.
    */
   function fadeOut() {
-    _baseTransition.applyClass( CLASSES.ALPHA_0 );
+    _baseTransition.applyClass(CLASSES.ALPHA_0);
 
     return this;
   }

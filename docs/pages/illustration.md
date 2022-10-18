@@ -12,7 +12,7 @@ description: Illustrations are an important tool for introducing the subject
 variation_groups:
   - variation_group_name: Types
     variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           These illustrations should feature flat elements and avoid showing
           things in three dimensions. Elements should not appear to be outlined.
@@ -20,7 +20,7 @@ variation_groups:
 
           ![Paying for College illustration](/design-system/images/uploads/illustration5_-2.png)
         variation_name: Front-facing
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           Top-facing illustrations are object-based. Illustrations should be
           arranged in a way that it appears the viewer is immersed in a real
@@ -33,7 +33,7 @@ variation_groups:
 
           ![Paying for College illustration](/design-system/images/uploads/illustration6_-2.png)
         variation_name: Top-facing
-use_cases: ""
+use_cases: ''
 guidelines: >-
   Illustrations are universally relatable and set a friendly tone when
   communicating complex topics.
@@ -118,7 +118,7 @@ guidelines: >-
 
 
   </div>
-behavior: ""
+behavior: ''
 accessibility: >-
   ### Include text alternatives for non-text content
 

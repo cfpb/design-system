@@ -1615,7 +1615,7 @@ variation_groups:
             </tr>
 
             </tbody></table>
-content_guidelines: ""
+content_guidelines: ''
 title: Color
 description: A minimal palette, clear hierarchy, and ample whitespace ensure a
   voice of authority and expertise in communication. The following sets of
@@ -1652,7 +1652,7 @@ use_cases: >-
 
 
   ![Sequential example](/design-system/images/uploads/sequential-color-1.png)
-behavior: ""
+behavior: ''
 accessibility: >-
   Color should never be solely relied on to convey meaning in a visualization
   because of accessibility standards for people who are blind and visually

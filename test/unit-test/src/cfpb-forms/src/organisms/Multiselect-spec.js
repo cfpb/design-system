@@ -14,102 +14,94 @@ const HTML_SNIPPET = `
 </select>
 `;
 
-describe( 'Multiselect', () => {
-  beforeEach( () => {
+describe('Multiselect', () => {
+  beforeEach(() => {
     document.body.innerHTML = HTML_SNIPPET;
 
-    selectDom = document.querySelector( 'select[multiple]' );
-    multiselect = new Multiselect( selectDom );
-  } );
+    selectDom = document.querySelector('select[multiple]');
+    multiselect = new Multiselect(selectDom);
+  });
 
-  describe( 'init()', () => {
-    it( 'should initialize the Multiselect', () => {
+  describe('init()', () => {
+    it('should initialize the Multiselect', () => {
       multiselect.init();
-      selectDom = document.querySelectorAll( 'select[multiple]' );
-      multiselectDom = document.querySelectorAll( '.o-multiselect' );
+      selectDom = document.querySelectorAll('select[multiple]');
+      multiselectDom = document.querySelectorAll('.o-multiselect');
 
-      expect( selectDom.length ).toBe( 0 );
-      expect( multiselectDom.length ).toBe( 1 );
+      expect(selectDom.length).toBe(0);
+      expect(multiselectDom.length).toBe(1);
 
-      expect( multiselect.init() ).toBeInstanceOf( Multiselect );
-    } );
+      expect(multiselect.init()).toBeInstanceOf(Multiselect);
+    });
 
-    it( 'should autocheck any selected options (form submitted pages)', () => {
-      const option = document.querySelector( 'option' );
+    it('should autocheck any selected options (form submitted pages)', () => {
+      const option = document.querySelector('option');
       option.defaultSelected = true;
       multiselect.init();
-      const choices = document.querySelectorAll( '.o-multiselect_choices li' );
+      const choices = document.querySelectorAll('.o-multiselect_choices li');
 
-      expect( choices.length ).toBe( 1 );
-      expect( choices[0].innerHTML ).toContain( 'Debt collection' );
-    } );
-  } );
+      expect(choices.length).toBe(1);
+      expect(choices[0].innerHTML).toContain('Debt collection');
+    });
+  });
 
-  describe( 'public methods', () => {
-    it( 'should open when the expand method is called', () => {
+  describe('public methods', () => {
+    it('should open when the expand method is called', () => {
       multiselect.init();
       multiselect.expand();
-      multiselectDom = document.querySelector( '.o-multiselect' );
-      const fieldset = multiselectDom.querySelector(
-        '.o-multiselect_fieldset'
-      );
+      multiselectDom = document.querySelector('.o-multiselect');
+      const fieldset = multiselectDom.querySelector('.o-multiselect_fieldset');
 
-      expect( multiselectDom.className ).toBe( 'o-multiselect u-active' );
-      expect( fieldset.getAttribute( 'aria-hidden' ) ).toBe( 'false' );
-    } );
+      expect(multiselectDom.className).toBe('o-multiselect u-active');
+      expect(fieldset.getAttribute('aria-hidden')).toBe('false');
+    });
 
-    it( 'should close when the collapse method is called', () => {
+    it('should close when the collapse method is called', () => {
       multiselect.init();
       multiselect.expand();
       multiselect.collapse();
-      multiselectDom = document.querySelector( '.o-multiselect' );
-      const fieldset = multiselectDom.querySelector(
-        '.o-multiselect_fieldset'
-      );
+      multiselectDom = document.querySelector('.o-multiselect');
+      const fieldset = multiselectDom.querySelector('.o-multiselect_fieldset');
 
-      expect( multiselectDom.className ).toBe( 'o-multiselect' );
-      expect( fieldset.getAttribute( 'aria-hidden' ) ).toBe( 'true' );
-    } );
-  } );
+      expect(multiselectDom.className).toBe('o-multiselect');
+      expect(fieldset.getAttribute('aria-hidden')).toBe('true');
+    });
+  });
 
-  describe( 'interactions', () => {
-    it( 'should highlight the first item when keying down', function() {
+  describe('interactions', () => {
+    it('should highlight the first item when keying down', function () {
       multiselect.init();
-      const search = document.querySelector( '#test-select' );
+      const search = document.querySelector('#test-select');
       search.click();
-      simulateEvent( 'keydown', search, { keyCode: 40 } );
+      simulateEvent('keydown', search, { keyCode: 40 });
 
-      expect( document.activeElement.id ).toBe( 'test-select-debt-collection' );
-      expect( document.activeElement.value ).toBe( 'Debt collection' );
-    } );
+      expect(document.activeElement.id).toBe('test-select-debt-collection');
+      expect(document.activeElement.value).toBe('Debt collection');
+    });
 
-    it( 'should open when the search input is focused', function() {
+    it('should open when the search input is focused', function () {
       multiselect.init();
-      multiselectDom = document.querySelector( '.o-multiselect' );
-      const fieldset = multiselectDom.querySelector(
-        '.o-multiselect_fieldset'
-      );
-      const search = document.querySelector( '#test-select' );
+      multiselectDom = document.querySelector('.o-multiselect');
+      const fieldset = multiselectDom.querySelector('.o-multiselect_fieldset');
+      const search = document.querySelector('#test-select');
       search.focus();
 
-      expect( document.activeElement.id ).toBe( 'test-select' );
-      expect( multiselectDom.className ).toBe( 'o-multiselect u-active' );
-      expect( fieldset.getAttribute( 'aria-hidden' ) ).toBe( 'false' );
-    } );
+      expect(document.activeElement.id).toBe('test-select');
+      expect(multiselectDom.className).toBe('o-multiselect u-active');
+      expect(fieldset.getAttribute('aria-hidden')).toBe('false');
+    });
 
-    it( 'should close when the search input is blurred', function() {
+    it('should close when the search input is blurred', function () {
       multiselect.init();
       multiselect.expand();
-      multiselectDom = document.querySelector( '.o-multiselect' );
-      const fieldset = multiselectDom.querySelector(
-        '.o-multiselect_fieldset'
-      );
-      const search = document.querySelector( '#test-select' );
+      multiselectDom = document.querySelector('.o-multiselect');
+      const fieldset = multiselectDom.querySelector('.o-multiselect_fieldset');
+      const search = document.querySelector('#test-select');
       search.focus();
       search.blur();
 
-      expect( multiselectDom.className ).toBe( 'o-multiselect' );
-      expect( fieldset.getAttribute( 'aria-hidden' ) ).toBe( 'true' );
-    } );
-  } );
-} );
+      expect(multiselectDom.className).toBe('o-multiselect');
+      expect(fieldset.getAttribute('aria-hidden')).toBe('true');
+    });
+  });
+});

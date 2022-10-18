@@ -17,14 +17,14 @@ description: >-
 variation_groups:
   - variation_group_name: Standard browse page
     variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           | Browse page wireframe | Example |
 
           | -- | -- |
 
           | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [Buying a House](https://www.consumerfinance.gov/owning-a-home/prepare/check-your-credit/) |
-        variation_name: ""
+        variation_name: ''
 use_cases: >-
   ### When to use
 

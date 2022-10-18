@@ -3,10 +3,10 @@ title: Tables
 layout: variation
 section: components
 status: Released
-description: "Tables allow for the presentation of many data points grouped
+description: 'Tables allow for the presentation of many data points grouped
   together in a visual way. They serve a unique purpose of allowing easy
   organization or comparison of more complex data than a chart or graph. They
-  can be read either vertically (by columns) or horizontally (by rows). "
+  can be read either vertically (by columns) or horizontally (by rows). '
 variation_groups:
   - variation_group_name: Standard table
     variation_group_description: This is the default style at the large screen
@@ -86,7 +86,7 @@ variation_groups:
           * Font-size: 16px
 
           * Padding: 10px
-        variation_implementation: ""
+        variation_implementation: ''
   - variation_group_name: Responsive tables
     variation_group_description: >-
       Responsive tables fall into two main types: stacked, which stacks
@@ -352,7 +352,7 @@ variation_groups:
 
           Left-align columns of numbers when they're nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).
         variation_name: Right-aligned table
-        variation_specs: "* Alternate row background: Grey-05 #F8F8F8"
+        variation_specs: '* Alternate row background: Grey-05 #F8F8F8'
       - variation_code_snippet: |-
           <table class="o-table o-table__row-links">
               <thead>
@@ -379,7 +379,8 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_description: The `.o-table_cell__row-links` class is added to a
+        variation_description:
+          The `.o-table_cell__row-links` class is added to a
           `table` to enable highlighting and hyperlinking rows which contain
           links.
         variation_name: Table with row links
@@ -761,7 +762,7 @@ behavior: >
   If sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked.
 accessibility: Remember to always use headers (that is, `<th>` elements) for all
   data tables to make tabular data accessible.
-research: ""
+research: ''
 related_items: "* [Tables
   variables](https://cfpb.github.io/design-system/development/variables#tables-\
   1)"

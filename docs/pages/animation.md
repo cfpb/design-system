@@ -10,7 +10,7 @@ description: Animation should be used to bring on-brand illustrations to life.
 variation_groups:
   - variation_group_name: Animation
     variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           ![Still from Student Loan
           Video](/design-system/images/uploads/video_11.jpg "Example of
@@ -18,7 +18,7 @@ variation_groups:
 
 
           ![Still from Student Loan Video](/design-system/images/uploads/video_12.jpg "Example of animation in Video")
-        variation_name: ""
+        variation_name: ''
 accessibility: >-
   ### Include text alternatives for non-text content
 

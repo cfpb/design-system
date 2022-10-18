@@ -8,19 +8,18 @@ components are dependencies of this component.
 ## Table of contents
 
 - [Variables](#variables)
-    - [Color variables](#color-variables)
-    - [Sizing variables](#sizing-variables)
+  - [Color variables](#color-variables)
+  - [Sizing variables](#sizing-variables)
 - [Recommended notification patterns](#recommended-notification-patterns)
-    - [Action notification](#action-notification)
-    - [Success notification](#success-notification)
-    - [Warning notification](#warning-notification)
-    - [Error notification](#error-notification)
+  - [Action notification](#action-notification)
+  - [Success notification](#success-notification)
+  - [Warning notification](#warning-notification)
+  - [Error notification](#error-notification)
 - [Optional elements](#optional-elements)
-    - [Explanation](#explanation)
-    - [Links](#links)
+  - [Explanation](#explanation)
+  - [Links](#links)
 - [Modifiers](#modifiers)
-    - [Visibility](#visibility)
-
+  - [Visibility](#visibility)
 
 ## Variables
 

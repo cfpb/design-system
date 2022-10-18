@@ -6,22 +6,21 @@ and [base table styling is defined there](../cfpb-core/#tables).
 ## Table of contents
 
 - [Variables](#variables)
-    - [Color variables](#color-variables)
+  - [Color variables](#color-variables)
 - [Standard tables](#standard-tables)
 - [Striped tables](#striped-tables)
 - [Right-aligned cells](#right-aligned-cells)
 - [Tables with row links](#tables-with-row-links)
 - [Sortable tables](#sortable-tables)
-    - [Making a table sortable](#making-a-table-sortable)
-    - [Sorting type](#sorting-type)
-    - [Sorting table on page load](#sorting-table-on-page-load)
-    - [Sample sortable table](#sample-sortable-table)
-    - [Important notes about sortable tables](#important-notes-about-sortable-tables)
+  - [Making a table sortable](#making-a-table-sortable)
+  - [Sorting type](#sorting-type)
+  - [Sorting table on page load](#sorting-table-on-page-load)
+  - [Sample sortable table](#sample-sortable-table)
+  - [Important notes about sortable tables](#important-notes-about-sortable-tables)
 - [Responsive tables](#responsive-tables)
-    - [Responsive stacked table](#responsive-stacked-table)
-    - [Responsive stacked table with header](#responsive-stacked-table-with-header)
-    - [Responsive table - horizontal scroll variation](#responsive-table---horizontal-scroll-variation)
-
+  - [Responsive stacked table](#responsive-stacked-table)
+  - [Responsive stacked table with header](#responsive-stacked-table-with-header)
+  - [Responsive table - horizontal scroll variation](#responsive-table---horizontal-scroll-variation)
 
 ## Variables
 
@@ -36,14 +35,13 @@ where this component's less file is imported.
 Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.less).
 
 ```less
-@table-cell-bg:              @white;
-@table-cell-bg_alt:          @gray-5;
-@table-row-link-bg-hover:    @pacific-80;
+@table-cell-bg: @white;
+@table-cell-bg_alt: @gray-5;
+@table-row-link-bg-hover: @pacific-80;
 @table-row-link-hover-color: @white;
-@table-scrolling-border:     @gray-40;
-@table-border:               @gray;
+@table-scrolling-border: @gray-40;
+@table-border: @gray;
 ```
-
 
 ## Standard tables
 
@@ -90,38 +88,37 @@ not visible on small screens.
 
 ```html
 <table class="o-table o-table__striped">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Column 1">Row A</td>
-            <td data-label="Column 2">Cell A2</td>
-            <td data-label="Column 3">Cell A3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row B</td>
-            <td data-label="Column 2">Cell B2</td>
-            <td data-label="Column 3">Cell B3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row C</td>
-            <td data-label="Column 2">Cell C2</td>
-            <td data-label="Column 3">Cell C3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row D</td>
-            <td data-label="Column 2">Cell D2</td>
-            <td data-label="Column 3">Cell D3</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Column 1">Row A</td>
+      <td data-label="Column 2">Cell A2</td>
+      <td data-label="Column 3">Cell A3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">Row B</td>
+      <td data-label="Column 2">Cell B2</td>
+      <td data-label="Column 3">Cell B3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">Row C</td>
+      <td data-label="Column 2">Cell C2</td>
+      <td data-label="Column 3">Cell C3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">Row D</td>
+      <td data-label="Column 2">Cell D2</td>
+      <td data-label="Column 3">Cell D3</td>
+    </tr>
+  </tbody>
 </table>
 ```
-
 
 ## Right-aligned cells
 
@@ -152,28 +149,27 @@ right - see the third column above.
 
 ```html
 <table class="o-table o-table__stack-on-small">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Column 1">Row A</td>
-            <td data-label="Column 2">Cell A2</td>
-            <td data-label="Column 3" class="table_cell__right-align">Cell A3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row B</td>
-            <td data-label="Column 2">Cell B2</td>
-            <td data-label="Column 3" class="table_cell__right-align">Cell B3</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Column 1">Row A</td>
+      <td data-label="Column 2">Cell A2</td>
+      <td data-label="Column 3" class="table_cell__right-align">Cell A3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">Row B</td>
+      <td data-label="Column 2">Cell B2</td>
+      <td data-label="Column 3" class="table_cell__right-align">Cell B3</td>
+    </tr>
+  </tbody>
 </table>
 ```
-
 
 ## Tables with row links
 
@@ -208,32 +204,31 @@ highlighting and hyperlinking rows which contain links.
 
 ```html
 <table class="o-table o-table__row-links">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Column 1">
-                <a href="https://example.com/">Example 1</a>
-            </td>
-            <td data-label="Column 2">Cell A2</td>
-            <td data-label="Column 3" >Cell A3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">
-                <a href="https://example.com/">Example 2</a>
-            </td>
-            <td data-label="Column 2">Cell B2</td>
-            <td data-label="Column 3">Cell B3</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Column 1">
+        <a href="https://example.com/">Example 1</a>
+      </td>
+      <td data-label="Column 2">Cell A2</td>
+      <td data-label="Column 3">Cell A3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">
+        <a href="https://example.com/">Example 2</a>
+      </td>
+      <td data-label="Column 2">Cell B2</td>
+      <td data-label="Column 3">Cell B3</td>
+    </tr>
+  </tbody>
 </table>
 ```
-
 
 ## Sortable tables
 
@@ -247,9 +242,7 @@ column like so:
 
 ```html
 …
-<button class="sortable">
-    Column Name
-</button>
+<button class="sortable">Column Name</button>
 …
 ```
 
@@ -269,11 +262,11 @@ to the sorting button:
 
 ```html
 <table class="o-table o-table__sortable">
-    …
-        <th>
-            <button class="sortable" data-sort_type="number">Column Name</button>
-        </th>
-    …
+  …
+  <th>
+    <button class="sortable" data-sort_type="number">Column Name</button>
+  </th>
+  …
 </table>
 ```
 
@@ -283,11 +276,11 @@ To sort the table on page load, use the `.sorted-up` and `.sorted-down` classes:
 
 ```html
 <table class="o-table o-table__sortable">
-    …
-        <th>
-            <button class="sortable sorted-up">Column Name</button>
-        </th>
-    …
+  …
+  <th>
+    <button class="sortable sorted-up">Column Name</button>
+  </th>
+  …
 </table>
 ```
 
@@ -400,102 +393,56 @@ To sort the table on page load, use the `.sorted-up` and `.sorted-down` classes:
 
 ```html
 <table class="o-table o-table__sortable">
-    <thead>
-        <tr>
-            <th>
-                Agency
-            </th>
-            <th>
-              <button class="sortable">
-                Languages
-              </button>
-            </th>
-            <th>
-              <button class="sortable sorted-up" data-sort_type="number">
-                Distance
-              </button>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                Alpha
-            </td>
-            <td data-label="Languages">
-                English
-            </td>
-            <td data-label="Distance">
-                2.6 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Beta
-            </td>
-            <td data-label="Languages">
-                English, Spanish
-            </td>
-            <td data-label="Distance">
-                1.4 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Gamma
-            </td>
-            <td data-label="Languages">
-                English, French, Spanish
-            </td>
-            <td data-label="Distance">
-                1.4 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Delta
-            </td>
-            <td data-label="Languages">
-                English, Spanish
-            </td>
-            <td data-label="Distance">
-                3.2 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Epsilon
-            </td>
-            <td data-label="Languages">
-                English
-            </td>
-            <td data-label="Distance">
-                1.6 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Zeta
-            </td>
-            <td data-label="Languages">
-                English, Spanish
-            </td>
-            <td data-label="Distance">
-                1.2 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Eta
-            </td>
-            <td data-label="Languages">
-                English
-            </td>
-            <td data-label="Distance">
-                11.1 mi
-            </td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Agency</th>
+      <th>
+        <button class="sortable">Languages</button>
+      </th>
+      <th>
+        <button class="sortable sorted-up" data-sort_type="number">
+          Distance
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alpha</td>
+      <td data-label="Languages">English</td>
+      <td data-label="Distance">2.6 mi</td>
+    </tr>
+    <tr>
+      <td>Beta</td>
+      <td data-label="Languages">English, Spanish</td>
+      <td data-label="Distance">1.4 mi</td>
+    </tr>
+    <tr>
+      <td>Gamma</td>
+      <td data-label="Languages">English, French, Spanish</td>
+      <td data-label="Distance">1.4 mi</td>
+    </tr>
+    <tr>
+      <td>Delta</td>
+      <td data-label="Languages">English, Spanish</td>
+      <td data-label="Distance">3.2 mi</td>
+    </tr>
+    <tr>
+      <td>Epsilon</td>
+      <td data-label="Languages">English</td>
+      <td data-label="Distance">1.6 mi</td>
+    </tr>
+    <tr>
+      <td>Zeta</td>
+      <td data-label="Languages">English, Spanish</td>
+      <td data-label="Distance">1.2 mi</td>
+    </tr>
+    <tr>
+      <td>Eta</td>
+      <td data-label="Languages">English</td>
+      <td data-label="Distance">11.1 mi</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -506,7 +453,6 @@ To sort the table on page load, use the `.sorted-up` and `.sorted-down` classes:
   (last to first). These classes are added to the `th` when sorting occurs.
 - Please note the importance of defining a `thead` and `tbody` to preserve
   the table's header through sorting operations.
-
 
 ## Responsive tables
 
@@ -556,35 +502,35 @@ Always include the `data-label` attribute for each cell._
 
 ```html
 <table class="o-table o-table__stack-on-small">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Column 1">Row A</td>
-            <td data-label="Column 2">Cell A2</td>
-            <td data-label="Column 3">Cell A3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row B</td>
-            <td data-label="Column 2">Cell B2</td>
-            <td data-label="Column 3">Cell B3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row C</td>
-            <td data-label="Column 2">Cell C2</td>
-            <td data-label="Column 3">Cell C3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row D</td>
-            <td data-label="Column 2">Cell D2</td>
-            <td data-label="Column 3">Cell D3</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Column 1">Row A</td>
+      <td data-label="Column 2">Cell A2</td>
+      <td data-label="Column 3">Cell A3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">Row B</td>
+      <td data-label="Column 2">Cell B2</td>
+      <td data-label="Column 3">Cell B3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">Row C</td>
+      <td data-label="Column 2">Cell C2</td>
+      <td data-label="Column 3">Cell C3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">Row D</td>
+      <td data-label="Column 2">Cell D2</td>
+      <td data-label="Column 3">Cell D3</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -635,38 +581,40 @@ Always include the `data-label` attribute for each cell._
 </table>
 
 ```html
-<table class="o-table
+<table
+  class="o-table
               o-table__stack-on-small
-              o-table__entry-header-on-small">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Column 1">Row A</td>
-            <td data-label="Column 2">Cell A2</td>
-            <td data-label="Column 3">Cell A3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row B</td>
-            <td data-label="Column 2">Cell B2</td>
-            <td data-label="Column 3">Cell B3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row C</td>
-            <td data-label="Column 2">Cell C2</td>
-            <td data-label="Column 3">Cell C3</td>
-        </tr>
-        <tr>
-            <td data-label="Column 1">Row D</td>
-            <td data-label="Column 2">Cell D2</td>
-            <td data-label="Column 3">Cell D3</td>
-        </tr>
-    </tbody>
+              o-table__entry-header-on-small"
+>
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Column 1">Row A</td>
+      <td data-label="Column 2">Cell A2</td>
+      <td data-label="Column 3">Cell A3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">Row B</td>
+      <td data-label="Column 2">Cell B2</td>
+      <td data-label="Column 3">Cell B3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">Row C</td>
+      <td data-label="Column 2">Cell C2</td>
+      <td data-label="Column 3">Cell C3</td>
+    </tr>
+    <tr>
+      <td data-label="Column 1">Row D</td>
+      <td data-label="Column 2">Cell D2</td>
+      <td data-label="Column 3">Cell D3</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -739,61 +687,61 @@ striped on small screens (unlike the `o-table__striped` class, below).
 
 ```html
 <div class="o-table o-table-wrapper__scrolling">
-    <table>
-        <thead>
-            <tr>
-                <th>Column 1</th>
-                <th>Column 2</th>
-                <th>Column 3</th>
-                <th>Column 4</th>
-                <th>Column 5</th>
-                <th>Column 6</th>
-                <th>Column 7</th>
-                <th>Column 8</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td data-label="Column 1">Row A</td>
-                <td data-label="Column 2">Cell A2</td>
-                <td data-label="Column 3">Cell A3</td>
-                <td data-label="Column 4">Cell A4</td>
-                <td data-label="Column 5">Cell A5</td>
-                <td data-label="Column 6">Cell A6</td>
-                <td data-label="Column 7">Cell A7</td>
-                <td data-label="Column 8">Cell A8</td>
-            </tr>
-            <tr>
-                <td data-label="Column 1">Row B</td>
-                <td data-label="Column 2">Cell B2</td>
-                <td data-label="Column 3">Cell B3</td>
-                <td data-label="Column 4">Cell B4</td>
-                <td data-label="Column 5">Cell B5</td>
-                <td data-label="Column 6">Cell B6</td>
-                <td data-label="Column 7">Cell B7</td>
-                <td data-label="Column 8">Cell B8</td>
-            </tr>
-            <tr>
-                <td data-label="Column 1">Row C</td>
-                <td data-label="Column 2">Cell C2</td>
-                <td data-label="Column 3">Cell C3</td>
-                <td data-label="Column 4">Cell C4</td>
-                <td data-label="Column 5">Cell C5</td>
-                <td data-label="Column 6">Cell C6</td>
-                <td data-label="Column 7">Cell C7</td>
-                <td data-label="Column 8">Cell C8</td>
-            </tr>
-            <tr>
-                <td data-label="Column 1">Row D</td>
-                <td data-label="Column 2">Cell D2</td>
-                <td data-label="Column 3">Cell D3</td>
-                <td data-label="Column 4">Cell D4</td>
-                <td data-label="Column 5">Cell D5</td>
-                <td data-label="Column 6">Cell D6</td>
-                <td data-label="Column 7">Cell D7</td>
-                <td data-label="Column 8">Cell D8</td>
-            </tr>
-        </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+        <th>Column 4</th>
+        <th>Column 5</th>
+        <th>Column 6</th>
+        <th>Column 7</th>
+        <th>Column 8</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Column 1">Row A</td>
+        <td data-label="Column 2">Cell A2</td>
+        <td data-label="Column 3">Cell A3</td>
+        <td data-label="Column 4">Cell A4</td>
+        <td data-label="Column 5">Cell A5</td>
+        <td data-label="Column 6">Cell A6</td>
+        <td data-label="Column 7">Cell A7</td>
+        <td data-label="Column 8">Cell A8</td>
+      </tr>
+      <tr>
+        <td data-label="Column 1">Row B</td>
+        <td data-label="Column 2">Cell B2</td>
+        <td data-label="Column 3">Cell B3</td>
+        <td data-label="Column 4">Cell B4</td>
+        <td data-label="Column 5">Cell B5</td>
+        <td data-label="Column 6">Cell B6</td>
+        <td data-label="Column 7">Cell B7</td>
+        <td data-label="Column 8">Cell B8</td>
+      </tr>
+      <tr>
+        <td data-label="Column 1">Row C</td>
+        <td data-label="Column 2">Cell C2</td>
+        <td data-label="Column 3">Cell C3</td>
+        <td data-label="Column 4">Cell C4</td>
+        <td data-label="Column 5">Cell C5</td>
+        <td data-label="Column 6">Cell C6</td>
+        <td data-label="Column 7">Cell C7</td>
+        <td data-label="Column 8">Cell C8</td>
+      </tr>
+      <tr>
+        <td data-label="Column 1">Row D</td>
+        <td data-label="Column 2">Cell D2</td>
+        <td data-label="Column 3">Cell D3</td>
+        <td data-label="Column 4">Cell D4</td>
+        <td data-label="Column 5">Cell D5</td>
+        <td data-label="Column 6">Cell D6</td>
+        <td data-label="Column 7">Cell D7</td>
+        <td data-label="Column 8">Cell D8</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 ```

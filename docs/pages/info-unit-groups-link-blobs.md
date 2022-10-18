@@ -3,7 +3,7 @@ title: Info unit groups
 layout: variation
 section: patterns
 status: Released
-description: "Info unit groups are generally used to provide brief context as
+description: 'Info unit groups are generally used to provide brief context as
   they lead users from a parent page ([landing
   pages](https://cfpb.github.io/design-system/templates/landing-pages),
   [sublanding
@@ -11,7 +11,7 @@ description: "Info unit groups are generally used to provide brief context as
   [browse pages](https://cfpb.github.io/design-system/templates/browse-pages))
   to additional content on a child or sibling page. Info units provide the
   ability to create content with multicolumn layouts. There are two types: image
-  and text, or text only."
+  and text, or text only.'
 variation_groups:
   - variation_group_name: Image and text
     variations:
@@ -134,12 +134,12 @@ variation_groups:
           * 150px wide for 901+ px breakpoint and 130 px wide for 900 px breakpoint and below
 
           * Headings: H2-4 can be used
-    variation_group_description: "Image and text components consist of an image,
+    variation_group_description: 'Image and text components consist of an image,
       plus a heading, short descriptive text, and call to action. There are
       three layouts that allow you to pair text with images: 25/75, 50/50, and
-      33/33/33 components."
+      33/33/33 components.'
   - variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           ![Info unit group: example of half width link
           blob](/design-system/images/uploads/halfwidthblob_intro_mockup.png
@@ -170,7 +170,7 @@ variation_groups:
             * H4: Use when you wish to give the heading text less prominence within the page hierarchy or when the component follows an H3 heading. When you select the H4 you have the option of including a minicon to the left of the heading.
 
           ![](/design-system/images/uploads/halfwidthblob_style_mockup.png)
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           ![Info unit group: example of third width link
           blob](/design-system/images/uploads/third_width_link_blob_intro.png
@@ -204,10 +204,10 @@ variation_groups:
 
           ![](/design-system/images/uploads/third_width_link_blob_style.png)
     variation_group_name: Text only
-    variation_group_description: "Text components consist of a heading, short
+    variation_group_description: 'Text components consist of a heading, short
       descriptive text, and call to action. There are two types: 50/50 and
-      33/33/33."
-use_cases: ""
+      33/33/33.'
+use_cases: ''
 guidelines: >-
   ### Content guidelines
 
@@ -304,7 +304,7 @@ behavior: >-
 
 
   ![Below 600 px the 25/75 image and text components collapse with the image above the header and description text](/design-system/images/uploads/25-75-behavior-600.png "Breakpoint diagram for how 25/75 image and text component works at smaller screen sizes")
-accessibility: ""
+accessibility: ''
 related_items: |-
   * [Links](https://cfpb.github.io/design-system/components/links)
   * [Typography](https://cfpb.github.io/design-system/foundation/typography)

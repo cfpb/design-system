@@ -7,11 +7,15 @@ import genericPreviewTemplate from './widgets/genericPreviewTemplate';
 import navigationPreviewTemplate from './widgets/navigationPreviewTemplate';
 import pagePreviewTemplate from './widgets/pagePreviewTemplate';
 
-CMS.registerWidget( 'string-trimmed', StringTrimmedControl, 'string' );
-CMS.registerWidget( 'string-with-instructions', StringWithInstructionsControl, 'string' );
+CMS.registerWidget('string-trimmed', StringTrimmedControl, 'string');
+CMS.registerWidget(
+  'string-with-instructions',
+  StringWithInstructionsControl,
+  'string'
+);
 
-CMS.registerPreviewTemplate( 'special-pages', genericPreviewTemplate );
-CMS.registerPreviewTemplate( 'pages', pagePreviewTemplate );
-CMS.registerPreviewTemplate( 'side-navigation', navigationPreviewTemplate );
+CMS.registerPreviewTemplate('special-pages', genericPreviewTemplate);
+CMS.registerPreviewTemplate('pages', pagePreviewTemplate);
+CMS.registerPreviewTemplate('side-navigation', navigationPreviewTemplate);
 
-CMS.registerPreviewStyle( '/design-system/dist/css/main.css' );
+CMS.registerPreviewStyle('/design-system/dist/css/main.css');

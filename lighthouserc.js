@@ -1,5 +1,5 @@
-const glob = require( 'glob' );
-const path = require( 'path' );
+const glob = require('glob');
+const path = require('path');
 
 let extraCollect = {};
 
@@ -7,25 +7,25 @@ let extraCollect = {};
 // website locally and run Lighthouse against all pages. Determine the list of
 // URLs by finding all HTML files in the output documentation directory;
 // this requires that the docs have already been built before this code is run.
-const urlsSpecified = process.argv.some(
-  arg => arg.match( /^--(collect\.)?url=/ )
+const urlsSpecified = process.argv.some((arg) =>
+  arg.match(/^--(collect\.)?url=/)
 );
 
-if ( !urlsSpecified ) {
-  const filenames = glob.sync( '**/*.html', {
-    cwd: path.join( __dirname, 'docs/_site/design-system' ),
+if (!urlsSpecified) {
+  const filenames = glob.sync('**/*.html', {
+    cwd: path.join(__dirname, 'docs/_site/design-system'),
     ignore: 'admin/**',
-    nonull: false
-  } );
+    nonull: false,
+  });
 
-  if ( !filenames.length ) {
+  if (!filenames.length) {
     // eslint-disable-next-line no-console
     console.error(
       "No HTML files found; build the docs first with 'yarn build-netlify'."
     );
 
     // eslint-disable-next-line no-process-exit
-    process.exit( 1 );
+    process.exit(1);
   }
 
   extraCollect = {
@@ -37,12 +37,14 @@ if ( !urlsSpecified ) {
     startServerReadyPattern: 'Hit CTRL-C to stop the server',
 
     // Run Lighthouse against every URL in the local site.
-    url: filenames.map(
-      filename => filename
-        .replace( /index.html$/, '' )
-        .replace( /.html$/, '' )
-        .replace( /^/, 'http://localhost:8080/design-system/' )
-    ).sort()
+    url: filenames
+      .map((filename) =>
+        filename
+          .replace(/index.html$/, '')
+          .replace(/.html$/, '')
+          .replace(/^/, 'http://localhost:8080/design-system/')
+      )
+      .sort(),
   };
 }
 
@@ -53,17 +55,17 @@ module.exports = {
       settings: {
         formFactor: 'desktop',
         screenEmulation: { mobile: false },
-        onlyCategories: 'accessibility'
+        onlyCategories: 'accessibility',
       },
-      ...extraCollect
+      ...extraCollect,
     },
     assert: {
       assertions: {
-        'categories:accessibility': [ 'error', { minScore: 1 } ]
-      }
+        'categories:accessibility': ['error', { minScore: 1 }],
+      },
     },
     upload: {
-      target: 'temporary-public-storage'
-    }
-  }
+      target: 'temporary-public-storage',
+    },
+  },
 };

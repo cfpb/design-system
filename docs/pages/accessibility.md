@@ -284,8 +284,8 @@ description: >-
 
 
   Note that this is specific to HTML and does not include CSS.
-use_cases: ""
-guidelines: ""
+use_cases: ''
+guidelines: ''
 accessibility: >-
   ## Testing accessibility issues
 
@@ -304,7 +304,7 @@ accessibility: >-
    - To enable VoiceOver, press _command + f5_.
    - With VoiceOver enabled, optionally enable the "rotor" by pressing _control +option+U_.
 last_updated: 2019-12-10T22:50:48.793Z
-behavior: ""
+behavior: ''
 eyebrow: Accessibility
 
 redirect_from:

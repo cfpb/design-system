@@ -22,8 +22,8 @@ variation_groups:
                   cu. <a href="#">Example link</a>.
               </p>
           </div>
-        variation_description: ""
-        variation_name: "Standard well"
+        variation_description: ''
+        variation_name: 'Standard well'
         variation_specs: >-
           * Padding at breakpoints 601+: 30 (top), 30 (right) 60 (bottom), 30
           (left)
@@ -54,8 +54,8 @@ variation_groups:
                   cu. <a href="#">Example link</a>.
               </p>
           </div>
-        variation_description: ""
-        variation_name: "Inkwell"
+        variation_description: ''
+        variation_name: 'Inkwell'
     variation_group_name: Wells
 use_cases: >-
   Grey wells should be used to feature content or specific calls to action.
@@ -86,9 +86,9 @@ behavior: >-
   | -- | -- | -- |
 
   | ![](/design-system/images/uploads/wells_behavior_mockup_1.png) | ![](/design-system/images/uploads/wells_behavior_mockup_2.png) | ![](/design-system/images/uploads/wells_behavior_mockup_3.png) |
-accessibility: ""
-research: ""
-related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"
+accessibility: ''
+research: ''
+related_items: '* [Featured content module](/design-system/patterns/featured-content-module)'
 last_updated: 2019-10-21T20:38:39.851Z
 eyebrow: Featured content
 ---

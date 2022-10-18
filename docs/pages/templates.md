@@ -12,4 +12,3 @@ description: >-
   reference by our designers, content strategists, and stakeholders, but they
   also serve as inspiration for anyone creating a system of components.</p>
 ---
-

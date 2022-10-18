@@ -5,37 +5,35 @@ The [`@cfpb/cfpb-core`](../cfpb-core)
 component is a dependency of this component
 and has more basic typography patterns.
 
-
 > NOTE: If you use `@cfpb/cfpb-typography.less` directly,
-  be sure to run the file through
-  [Autoprefixer](https://github.com/postcss/autoprefixer),
-  or your compiled Design System CSS will
-  not work perfectly in older browsers.
+> be sure to run the file through
+> [Autoprefixer](https://github.com/postcss/autoprefixer),
+> or your compiled Design System CSS will
+> not work perfectly in older browsers.
 
 ## Table of contents
 
 - [Variables](#variables)
-    - [Color variables](#color-variables)
-    - [Font variables](#font-variables)
-    - [Font source variables](#font-source-variables)
+  - [Color variables](#color-variables)
+  - [Font variables](#font-variables)
+  - [Font source variables](#font-source-variables)
 - [Headings](#headings)
-    - [Heading with icon](#heading-with-icon)
+  - [Heading with icon](#heading-with-icon)
 - [Headers](#headers)
-    - [Slug header](#slug-header)
-    - [Meta header](#meta-header)
+  - [Slug header](#slug-header)
+  - [Meta header](#meta-header)
 - [Link patterns](#link-patterns)
-    - [Links with icons](#links-with-icons)
-    - [Jump link](#jump-link)
+  - [Links with icons](#links-with-icons)
+  - [Jump link](#jump-link)
 - [Lists](#lists)
-    - [Unstyled list modifier](#unstyled-list-modifier)
-    - [Spaced list modifier](#spaced-list-modifier)
-    - [Horizontal list modifier](#horizontal-list-modifier)
-    - [Link list modifier](#link-list-modifier)
+  - [Unstyled list modifier](#unstyled-list-modifier)
+  - [Spaced list modifier](#spaced-list-modifier)
+  - [Horizontal list modifier](#horizontal-list-modifier)
+  - [Link list modifier](#link-list-modifier)
 - [Miscellaneous text](#miscellaneous-text)
-    - [Micro copy](#micro-copy)
-    - [Date](#date)
-    - [Pull quote](#pull-quote)
-
+  - [Micro copy](#micro-copy)
+  - [Date](#date)
+  - [Pull quote](#pull-quote)
 
 ## Variables
 
@@ -111,7 +109,6 @@ Can be either a relative or absolute path.
 @cf-fonts-path: '/fonts'
 ```
 
-
 ### Heading with icon
 
 The heading with icon is typically used for listing categories in a meta
@@ -130,7 +127,6 @@ readers (see Meta Header below).
     Consumer finance
 </a>
 ```
-
 
 ## Headers
 
@@ -202,7 +198,6 @@ attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is attached t
 </header>
 ```
 
-
 ## Link patterns
 
 ### Links with icons
@@ -239,7 +234,6 @@ attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is attached t
     </a> for further details.
 </p>
 
-
 ```
 <p>
    For more information, email
@@ -272,14 +266,13 @@ attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is attached t
   If you want to prevent this, you can add the `__no-wrap` modifier to
   `.a-link__icon`.
 
-
 For more information, email
 <a class="a-link
           a-link__icon
           a-link__no-wrap"
    href="#">
-    <span class="a-link_text">john.smith@cfpb.gov</span>
-    {% include icons/mail.svg %}
+<span class="a-link_text">john.smith@cfpb.gov</span>
+{% include icons/mail.svg %}
 </a>.
 
 ```
@@ -303,8 +296,8 @@ to full block links that have a finger-friendly touch area.
           a-link__jump
           a-link__icon-after-text"
    href="#">
-    <span class="a-link_text">Default jump link</span>
-    {% include icons/right.svg %}
+<span class="a-link_text">Default jump link</span>
+{% include icons/right.svg %}
 </a>
 
 ```
@@ -325,8 +318,8 @@ The large jump link has an `18px` `font-size`, compared to the default of `16px`
           a-link__icon-after-text
           a-link__large"
    href="#">
-    <span class="a-link_text">Large jump link</span>
-    {% include icons/right.svg %}
+<span class="a-link_text">Large jump link</span>
+{% include icons/right.svg %}
 </a>
 
 ```
@@ -348,8 +341,8 @@ Jump links can also have icons before the text, like icon links.
           a-link__jump
           a-link__icon-before-text"
    href="#">
-    {% include icons/left.svg %}
-    <span class="a-link_text">Jump link with icon on left</span>
+{% include icons/left.svg %}
+<span class="a-link_text">Jump link with icon on left</span>
 </a>
 
 ```
@@ -369,9 +362,9 @@ Jump links can also have icons before the text, like icon links.
           a-link__icon-after-text
           a-link__bg"
    href="#">
-    <span class="a-link_text">Jump link with grey background and
-        solid borders on small screens</span>
-    {% include icons/right.svg %}
+<span class="a-link_text">Jump link with grey background and
+solid borders on small screens</span>
+{% include icons/right.svg %}
 </a>
 
 ```
@@ -385,7 +378,6 @@ Jump links can also have icons before the text, like icon links.
     {% raw %}{% include icons/right.svg %}{% endraw %}
 </a>
 ```
-
 
 ## Lists
 
@@ -557,7 +549,6 @@ you should use the `aside` element.
         </cite>
     </footer>
 </aside>
-
 
 ```
 <aside class="m-pull-quote">

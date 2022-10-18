@@ -19,7 +19,8 @@ variation_groups:
           <div class="block">
               Content block
           </div>
-        variation_description: The standard `.block` class by itself simply adds a
+        variation_description:
+          The standard `.block` class by itself simply adds a
           `margin` of twice the gutter width to the top and bottom.
         variation_name: Standard block example
       - variation_code_snippet: |-
@@ -28,7 +29,7 @@ variation_groups:
               Content block with top border.
           </div>
         variation_description: Adds top `border` to `.block`.
-        variation_jinja_code_snippet: ""
+        variation_jinja_code_snippet: ''
         variation_name: Border top modifier
       - variation_code_snippet: |-
           Main content...
@@ -92,7 +93,8 @@ variation_groups:
                   </section>
               </div>
           </main>
-        variation_description: Removes the side `margin` from `.block`. Typically used
+        variation_description:
+          Removes the side `margin` from `.block`. Typically used
           in conjunction with `.block__bg` to create a ‘well’ whose `background`
           extends into the left and right gutters. (See below.)
         variation_name: Flush-sides modifier
@@ -117,7 +119,8 @@ variation_groups:
           <div class="block block__bg">
               Content block with a background
           </div>
-        variation_description: Adds a `background` color and padding to `.block`. Setup
+        variation_description:
+          Adds a `background` color and padding to `.block`. Setup
           for (ems-equivalent) `30px` `padding` on top and `60px` on bottom.
         variation_name: Background modifier
       - variation_code_snippet: |-
@@ -134,7 +137,8 @@ variation_groups:
                   </section>
               </div>
           </main>
-        variation_description: This is an example of combining modifiers to get a flush
+        variation_description:
+          This is an example of combining modifiers to get a flush
           `padding` and `background` with a `.block`.
         variation_name: Background and flush-sides modifier combo example
       - variation_code_snippet: |-
@@ -143,7 +147,8 @@ variation_groups:
               Content block with reduced top margin and added top padding
               and border.
           </div>
-        variation_description: Breaks top `margin` into `margin` and `padding`. Useful
+        variation_description:
+          Breaks top `margin` into `margin` and `padding`. Useful
           in combination with `block__border-top` to add `padding` between
           `.block` contents and `border`.
         variation_name: Padded-top modifier
@@ -153,7 +158,8 @@ variation_groups:
               Content block with reduced bottom margin and added bottom padding
               and border.
           </div>
-        variation_description: Breaks bottom `margin` into `margin` and `padding`.
+        variation_description:
+          Breaks bottom `margin` into `margin` and `padding`.
           Useful in combination with `block__border-bottom` to add `padding`
           between `.block` contents and `border`.
         variation_name: Padded-bottom modifier
@@ -207,11 +213,11 @@ variation_groups:
               </div>
           </div>
     variation_group_name: Types
-use_cases: ""
-guidelines: ""
-behavior: ""
-accessibility: ""
-research: ""
+use_cases: ''
+guidelines: ''
+behavior: ''
+accessibility: ''
+research: ''
 related_items: "* [Layout
   variables](https://cfpb.github.io/design-system/development/variables#color-4\
   )"

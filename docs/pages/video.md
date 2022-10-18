@@ -23,22 +23,25 @@ variation_groups:
           allow="accelerometer; autoplay; clipboard-write; encrypted-media;
           gyroscope; picture-in-picture" allowfullscreen
           title="Branded Content"></iframe>
-        variation_description: A custom-designed video that incorporates design elements
+        variation_description:
+          A custom-designed video that incorporates design elements
           for specific solutions. This type of video is usually consumer or
           industry facing and is representative of the Bureau's priorities.
         variation_name: Branded Content
-        variation_code_snippet_rendered: ""
+        variation_code_snippet_rendered: ''
       - variation_code_snippet: <iframe width="560" height="315"
           src="https://www.youtube.com/embed/YB_7cy1poGA" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media;
           gyroscope; picture-in-picture" allowfullscreen
           title="Documentary"></iframe>
-        variation_description: This style utilizes interview footage and b-roll of real
+        variation_description:
+          This style utilizes interview footage and b-roll of real
           people. It can be used to communicate a personal, trustworthy
           aesthetic to a given message.
         variation_name: Documentary
       - variation_name: iPhone
-        variation_description: Mobile videos are sometimes used for quick turnaround
+        variation_description:
+          Mobile videos are sometimes used for quick turnaround
           messages that are urgent in nature and provide a transparent look and
           feel that's relevant.
         variation_code_snippet: <iframe width="560" height="315"
@@ -51,7 +54,8 @@ variation_groups:
           allow="accelerometer; autoplay; clipboard-write; encrypted-media;
           gyroscope; picture-in-picture" allowfullscreen
           title="Educational"></iframe>
-        variation_description: Educational videos help answer questions or explain
+        variation_description:
+          Educational videos help answer questions or explain
           complex ideas about specific issues, tools, regulations, and more.
         variation_name: Educational
       - variation_code_snippet: <iframe width="560" height="315"
@@ -59,11 +63,12 @@ variation_groups:
           allow="accelerometer; autoplay; clipboard-write; encrypted-media;
           gyroscope; picture-in-picture" allowfullscreen
           title="Event"></iframe>
-        variation_description: The bureau livestreams field hearings, consumer advisory
+        variation_description:
+          The bureau livestreams field hearings, consumer advisory
           board meetings, town halls, and more. After these events are broadcast
           live, we upload them to YouTube for documentation purposes.
         variation_name: Event
-        variation_code_snippet_rendered: ""
+        variation_code_snippet_rendered: ''
 use_cases: |-
   Typically, we find video is best used to:
 
@@ -842,7 +847,7 @@ guidelines: >-
 
 
   If exporting finished video, the export format depends on where the video will be shown or hosted. For most uses, we export a ProRes HQ file and an H.264 mp4 file for social media use.
-behavior: ""
+behavior: ''
 restrictions: []
 accessibility: >-
   ### Include text alternatives for non-text content

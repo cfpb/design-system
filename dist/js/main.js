@@ -371,82 +371,78 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 __webpack_require__.r(__webpack_exports__);
 var BASE_CLASS = 'm-tabs';
 
+/**
+ *
+ * @param dom
+ */
 function Tabs(dom) {
   // DOM references.
   var _dom = dom;
-
   var _tabsItemsDom;
+  var _tabsPanelsDom;
 
-  var _tabsPanelsDom; // Store the current selected tab index.
-
-
+  // Store the current selected tab index.
   var _selectedTabIndex;
+
   /**
-   * Initialize the Tabs instance.
+   * Change the selected tab index.
+   *
+   * @param {number} index - An index position of the selected tab.
    * @returns {Tabs} An instance.
    */
+  function changeTab(index) {
+    // Remove classes from prior selected tab and panel.
+    _tabsItemsDom[_selectedTabIndex].classList.remove("".concat(BASE_CLASS, "_list-item-selected"));
+    _tabsPanelsDom[_selectedTabIndex].classList.add('u-hidden');
 
+    // Store new selected index.
+    _selectedTabIndex = index;
 
+    // Add classes for the new selected tab and panel.
+    _tabsItemsDom[_selectedTabIndex].classList.add("".concat(BASE_CLASS, "_list-item-selected"));
+    _tabsPanelsDom[_selectedTabIndex].classList.remove('u-hidden');
+    return this;
+  }
+
+  /**
+   * Initialize the Tabs instance.
+   *
+   * @returns {Tabs} An instance.
+   */
   function init() {
     _tabsItemsDom = _dom.querySelectorAll(".".concat(BASE_CLASS, "_list-item"));
-
     if (_tabsItemsDom.length === 0) {
       // Bail out because there are no tabs to initialize.
       return this;
-    } // Add events to tab items.
+    }
 
-
+    // Add events to tab items.
     _tabsPanelsDom = _dom.querySelectorAll(".".concat(BASE_CLASS, "_panel"));
-
     var _loop = function _loop(i, len) {
       _tabsItemsDom[i].addEventListener('click', function (event) {
         event.preventDefault();
         changeTab(i);
-      }); // Hide panels initially.
+      });
 
-
+      // Hide panels initially.
       if (i > 0) {
         _tabsPanelsDom[i].classList.add('u-hidden');
       }
     };
-
     for (var i = 0, len = _tabsItemsDom.length; i < len; i++) {
       _loop(i, len);
-    } // Set the default selected tab to index zero.
+    }
 
-
+    // Set the default selected tab to index zero.
     _selectedTabIndex = 0;
     return this;
   }
-  /**
-   * Change the selected tab index.
-   * @param {number} index - An index position of the selected tab.
-   * @returns {Tabs} An instance.
-   */
 
-
-  function changeTab(index) {
-    // Remove classes from prior selected tab and panel.
-    _tabsItemsDom[_selectedTabIndex].classList.remove("".concat(BASE_CLASS, "_list-item-selected"));
-
-    _tabsPanelsDom[_selectedTabIndex].classList.add('u-hidden'); // Store new selected index.
-
-
-    _selectedTabIndex = index; // Add classes for the new selected tab and panel.
-
-    _tabsItemsDom[_selectedTabIndex].classList.add("".concat(BASE_CLASS, "_list-item-selected"));
-
-    _tabsPanelsDom[_selectedTabIndex].classList.remove('u-hidden');
-
-    return this;
-  } // Attach public events.
-
-
+  // Attach public events.
   this.init = init;
   this.changeTab = changeTab;
   return this;
 }
-
 Tabs.BASE_CLASS = BASE_CLASS;
 /* harmony default export */ __webpack_exports__["default"] = (Tabs);
 
@@ -462,8 +458,9 @@ Tabs.BASE_CLASS = BASE_CLASS;
 __webpack_require__.r(__webpack_exports__);
 /**
  * Retrieve redirect source name and URL.
+ *
  * @param {Array} match - Matched URL UTM source.
- * @returns {Object} Hash of redirect source's name and URL.
+ * @returns {object} Hash of redirect source's name and URL.
  */
 function getSource(match) {
   var redirectSources = {
@@ -478,51 +475,43 @@ function getSource(match) {
   };
   return redirectSources[match[1]];
 }
+
 /**
  * Populate the redirection banner contents and display the banner.
+ *
  * @param {string} sourceName - The source's name.
  * @param {string} sourceUrl - The source's URL
  */
-
-
 function displayBanner(sourceName, sourceUrl) {
   var banner = document.querySelector('#redirect-banner');
   var sourceNames = banner.querySelectorAll('span[data-redirect=source-name]');
   var links = banner.querySelectorAll('a[data-redirect=archive-website]');
-
   for (var i = 0, len = sourceNames.length; i < len; i++) {
     sourceNames[i].textContent = sourceName;
   }
-
   for (var _i = 0, _len = links.length; _i < _len; _i++) {
     links[_i].textContent = sourceUrl;
     links[_i].href = sourceUrl;
   }
-
   banner.classList.remove('u-hidden');
 }
+
 /**
  * Show redirect banner if we're coming from the now-deprecated
  * Capital Framework or Design Manual websites.
  */
-
-
 function init() {
   var locationSearch = window.location.search;
-
   if (locationSearch.match(/[?&]utm_medium=redirect([&#]|$)/)) {
     var match = locationSearch.match(/[?&]utm_source=([^&#]*)/);
-
     if (match) {
       var source = getSource(match);
-
       if (source) {
         displayBanner(source.name, source.url);
       }
     }
   }
 }
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   init: init
 });
@@ -542,43 +531,40 @@ __webpack_require__.r(__webpack_exports__);
  * when the page is resized between mobile and desktop sizes.
  */
 function init() {
-  var secondaryNavCat = document.querySelector('.ds-nav-container'); // First collapse the navigation if in mobile.
+  var secondaryNavCat = document.querySelector('.ds-nav-container');
 
+  // First collapse the navigation if in mobile.
   var windowWidth = window.innerWidth;
-
   if (windowWidth < 601) {
     secondaryNavCat.removeAttribute('open');
   }
+
   /**
    * Test the viewport size and set whether the test passes on the instance.
    */
-
-
   function handleViewportChange() {
     // Collapse the navigation if we resize to mobile,
     // but only if we haven't already.
     // Otherwise, we're on desktop size, so open the navigation.
     var innerWidth = window.innerWidth;
-
     if (innerWidth === windowWidth) {
       return;
     }
-
     if (innerWidth < 601) {
       secondaryNavCat.removeAttribute('open');
     } else {
       secondaryNavCat.setAttribute('open', 'open');
     }
-  } // Check viewport state on page load.
+  }
 
+  // Check viewport state on page load.
+  handleViewportChange();
 
-  handleViewportChange(); // Add event listener for checking viewport state on window resize.
-
+  // Add event listener for checking viewport state on window resize.
   window.addEventListener('resize', function () {
     handleViewportChange();
   });
 }
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   init: init
 });
@@ -603,8 +589,10 @@ var TOGGLE_ATTRIBUTE = 'data-toggle-details';
 var STATE_SHOW = 'show';
 var STATE_HIDE = 'hide';
 var isShowingAllDetails = false;
+
 /**
  * Toggle details for a single variation.
+ *
  * @param {DOMNode} button - Button element that controls the toggling.
  * @param {DOMNode} document -
  *   Defaults to window.document but overridable for react DOM references.
@@ -612,7 +600,6 @@ var isShowingAllDetails = false;
  *   Optional param to specify whether to force showing or hiding of the details
  *   Value should be either 'show' or 'hide'.
  */
-
 function toggleDetails(button) {
   var document = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : window.document;
   var state = arguments.length > 2 ? arguments[2] : undefined;
@@ -620,7 +607,6 @@ function toggleDetails(button) {
   var codeEl = document.querySelector(button.getAttribute('href'));
   var hideCodeBtn = container.querySelector("[".concat(TOGGLE_ATTRIBUTE, "=\"hide\"]"));
   var showCodeBtn = container.querySelector("[".concat(TOGGLE_ATTRIBUTE, "=\"show\"]"));
-
   if (typeof state === 'undefined') {
     if (codeEl && codeEl.classList.contains(HIDDEN_CLASS)) {
       state = STATE_SHOW;
@@ -628,7 +614,6 @@ function toggleDetails(button) {
       state = STATE_HIDE;
     }
   }
-
   if (state === STATE_SHOW) {
     codeEl.classList.remove(HIDDEN_CLASS);
     hideCodeBtn.classList.remove(HIDDEN_CLASS);
@@ -639,12 +624,12 @@ function toggleDetails(button) {
     showCodeBtn.classList.remove(HIDDEN_CLASS);
   }
 }
+
 /**
  * Toggle all details for a page.
+ *
  * @param {HTMLNode} toggleBtn - The button that called this method.
  */
-
-
 function toggleAllDetails(toggleBtn) {
   if (isShowingAllDetails) {
     toggleBtn.querySelector('.a-btn_text').innerHTML = 'Show all details';
@@ -655,18 +640,14 @@ function toggleAllDetails(toggleBtn) {
     toggleBtn.setAttribute('title', 'Hide all details');
     window.localStorage.setItem('toggleState', 'hide');
   }
-
   var codeEls = document.querySelectorAll('.a-toggle_code');
   var buttonElm;
-
   for (var i = 0, len = codeEls.length; i < len; i++) {
     buttonElm = codeEls[i].querySelector('button:not(.u-hidden)');
     toggleDetails(buttonElm, window.document, isShowingAllDetails ? STATE_HIDE : STATE_SHOW);
   }
-
   isShowingAllDetails = !isShowingAllDetails;
 }
-
 
 
 /***/ }),
@@ -1237,33 +1218,33 @@ const TAG_NAME = 'div';
  * necessary methods to properly instantiatie component.
  *
  * @param {HTMLElement} element - The element to set as the base element.
- * @param {Object} attributes - Hash of attributes to set on base element.
+ * @param {object} attributes - Hash of attributes to set on base element.
  */
-function AtomicComponent( element, attributes ) {
+function AtomicComponent(element, attributes) {
   this.element = element;
   this.initializers = [];
-  this.uId = this.uniqueId( 'ac' );
-  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( this, attributes );
+  this.uId = this.uniqueId('ac');
+  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(this, attributes);
   this.processModifiers();
   this.ensureElement();
   this.setCachedElements();
-  this.initializers.push( this.initialize );
+  this.initializers.push(this.initialize);
 }
 
 // Public instance Methods and properties.
-(0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"](), {
-
+(0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"](), {
   /**
    * Run through and call the component's initializers.
+   *
    * @returns {AtomicComponent} An instance.
    */
-  init: function() {
-    this.initializers.forEach( function( func ) {
-      if ( _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__["default"].isFunction( func ) ) {
-        func.apply( this, arguments );
+  init: function () {
+    this.initializers.forEach(function (func) {
+      if (_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__["default"].isFunction(func)) {
+        func.apply(this, arguments);
       }
-    }, this );
-    this.dispatchEvent( 'component:initialized' );
+    }, this);
+    this.dispatchEvent('component:initialized');
 
     return this;
   },
@@ -1272,23 +1253,23 @@ function AtomicComponent( element, attributes ) {
    * Function used to process class modifiers. These should
    * correspond with BEM modifiers.
    *
-   * @param {Object} attributes - Hash of attributes to set on base element.
-   * @param {Object} atomicComponent - Base component.
+   * @param {object} attributes - Hash of attributes to set on base element.
+   * @param {object} atomicComponent - Base component.
    */
-  processModifiers: function() {
-    if ( !this.modifiers ) {
+  processModifiers: function () {
+    if (!this.modifiers) {
       return;
     }
 
-    this.modifiers.forEach( function( modifier ) {
-      const modifierClass = modifier.ui.base.substring( 1 );
-      if ( this.element.classList.contains( modifierClass ) ) {
-        if ( modifier.initialize ) {
-          this.initializers.push( modifier.initialize );
+    this.modifiers.forEach(function (modifier) {
+      const modifierClass = modifier.ui.base.substring(1);
+      if (this.element.classList.contains(modifierClass)) {
+        if (modifier.initialize) {
+          this.initializers.push(modifier.initialize);
         }
-        (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( this, modifier );
+        (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(this, modifier);
       }
-    }, this );
+    }, this);
   },
 
   /**
@@ -1296,24 +1277,25 @@ function AtomicComponent( element, attributes ) {
    *
    * @returns {AtomicComponent} An instance.
    */
-  render: function() {
+  render: function () {
     return this;
   },
 
   /**
    * Function used to ensure and set / create the base DOM element.
    */
-  ensureElement: function() {
-    if ( !this.element ) { // eslint-disable-line no-negated-condition
-      const attrs = (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( {}, this.attributes );
+  ensureElement: function () {
+    if (!this.element) {
+      // eslint-disable-line no-negated-condition
+      const attrs = (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)({}, this.attributes);
       attrs.id = this.id || this.u_id;
-      if ( this.className ) attrs.class = this.className;
-      this.setElement( document.createElement( TAG_NAME ) );
-      this.setElementAttributes( attrs );
+      if (this.className) attrs.class = this.className;
+      this.setElement(document.createElement(TAG_NAME));
+      this.setElementAttributes(attrs);
     } else {
-      this.setElement( this.element );
+      this.setElement(this.element);
     }
-    (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)( this.element );
+    (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(this.element);
   },
 
   /**
@@ -1322,8 +1304,8 @@ function AtomicComponent( element, attributes ) {
    * @param {HTMLElement} element - The element to set as the base element.
    * @returns {AtomicComponent} An instance.
    */
-  setElement: function( element ) {
-    if ( this.element ) {
+  setElement: function (element) {
+    if (this.element) {
       this.undelegateEvents();
     }
     this.element = element;
@@ -1337,19 +1319,19 @@ function AtomicComponent( element, attributes ) {
   /**
    * Function used to set the cached DOM elements.
    *
-   * @returns {Object} Hash of event names and cached elements.
+   * @returns {object} Hash of event names and cached elements.
    */
-  setCachedElements: function() {
-    const ui = (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( {}, this.ui );
+  setCachedElements: function () {
+    const ui = (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)({}, this.ui);
     let key;
     let element;
 
-    for ( key in ui ) {
-      if ( ui.hasOwnProperty( key ) ) {
-        element = this.element.querySelectorAll( ui[key] );
-        if ( element.length === 1 ) {
+    for (key in ui) {
+      if (Object.prototype.hasOwnProperty.call(ui, key)) {
+        element = this.element.querySelectorAll(ui[key]);
+        if (element.length === 1) {
           ui[key] = element[0];
-        } else if ( element.length > 1 ) {
+        } else if (element.length > 1) {
           ui[key] = element;
         } else {
           ui[key] = null;
@@ -1368,14 +1350,14 @@ function AtomicComponent( element, attributes ) {
    *
    * @returns {boolean} True if successful in tearing down component.
    */
-  destroy: function() {
-    if ( this.element ) {
-      this.element.parentNode.removeChild( this.element );
-      if ( this.element.view ) delete this.element.view;
+  destroy: function () {
+    if (this.element) {
+      this.element.parentNode.removeChild(this.element);
+      if (this.element.view) delete this.element.view;
       delete this.element;
     }
     this.undelegateEvents();
-    this.dispatchEvent( 'component:destroyed' );
+    this.dispatchEvent('component:destroyed');
 
     return true;
   },
@@ -1383,14 +1365,14 @@ function AtomicComponent( element, attributes ) {
   /**
    * Function used to set the attributes on an element.
    *
-   * @param {Object} attributes - Hash of attributes to set on base element.
+   * @param {object} attributes - Hash of attributes to set on base element.
    */
-  setElementAttributes: function( attributes ) {
+  setElementAttributes: function (attributes) {
     let property;
 
-    for ( property in attributes ) {
-      if ( attributes.hasOwnProperty( property ) ) {
-        this.element.setAttribute( property, attributes[property] );
+    for (property in attributes) {
+      if (Object.prototype.hasOwnProperty.call(attributes, property)) {
+        this.element.setAttribute(property, attributes[property]);
       }
     }
   },
@@ -1401,35 +1383,35 @@ function AtomicComponent( element, attributes ) {
    * Function used to up event delegation on the base element.
    * Using Dom-delegate library to enable this functionality.
    *
-   * @param {Object} events - Hash of events to bind to the dom element.
+   * @param {object} events - Hash of events to bind to the dom element.
    * @returns {AtomicComponent} An instance.
    */
-  delegateEvents: function( events ) {
+  delegateEvents: function (events) {
     const delegateEventSplitter = /^(\S+)\s*(.*)$/;
     let key;
     let method;
     let match;
 
-    events = events || ( events = this.events );
-    if ( !events ) {
+    events = events || (events = this.events);
+    if (!events) {
       return this;
     }
 
     this.undelegateEvents();
-    this._delegate = new Delegate( this.element );
-    for ( key in events ) {
-      if ( {}.hasOwnProperty.call( events, key ) ) {
+    this._delegate = new Delegate(this.element);
+    for (key in events) {
+      if ({}.hasOwnProperty.call(events, key)) {
         method = events[key];
-        if ( _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__["default"].isFunction( this[method] ) ) {
+        if (_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__["default"].isFunction(this[method])) {
           method = this[method];
         }
-        if ( method ) {
-          match = key.match( delegateEventSplitter );
-          this.delegate( match[1], match[2], method.bind( this ) );
+        if (method) {
+          match = key.match(delegateEventSplitter);
+          this.delegate(match[1], match[2], method.bind(this));
         }
       }
     }
-    this.dispatchEvent( 'component:bound' );
+    this.dispatchEvent('component:bound');
 
     return this;
   },
@@ -1443,8 +1425,8 @@ function AtomicComponent( element, attributes ) {
    * @param {Function} listener - Callback for event.
    * @returns {AtomicComponent} An instance.
    */
-  delegate: function( eventName, selector, listener ) {
-    this._delegate.on( eventName, selector, listener );
+  delegate: function (eventName, selector, listener) {
+    this._delegate.on(eventName, selector, listener);
 
     return this;
   },
@@ -1454,11 +1436,11 @@ function AtomicComponent( element, attributes ) {
    *
    * @returns {AtomicComponent} An instance.
    */
-  undelegateEvents: function() {
-    if ( this._delegate ) {
+  undelegateEvents: function () {
+    if (this._delegate) {
       this._delegate.destroy();
     }
-    this.element.removeAttribute( 'data-js-hook' );
+    this.element.removeAttribute('data-js-hook');
 
     return this;
   },
@@ -1469,11 +1451,10 @@ function AtomicComponent( element, attributes ) {
    * @param {string} prefix - String to use a prefix.
    * @returns {string} Prefixed unique id string.
    */
-  uniqueId: function( prefix ) {
-    return prefix + '_' + Math.random().toString( 36 ).substr( 2, 9 );
-  }
-
-} );
+  uniqueId: function (prefix) {
+    return prefix + '_' + Math.random().toString(36).substr(2, 9);
+  },
+});
 
 // Static Methods
 
@@ -1481,26 +1462,28 @@ function AtomicComponent( element, attributes ) {
  * Function used to set the attributes on an element.
  * and unbind events.
  *
- * @param {Object} attributes - Hash of attributes to set on base element.
+ * @param {object} attributes - Hash of attributes to set on base element.
  * @returns {Function} Extended child constructor function.
  */
-function extend( attributes ) {
-
+function extend(attributes) {
   /**
    * Function used as constructor in order to establish inheritance chain.
+   *
    * @returns {AtomicComponent} An instance.
    */
   function child() {
     this._super = AtomicComponent.prototype;
-    return AtomicComponent.apply( this, arguments );
+    return AtomicComponent.apply(this, arguments);
   }
 
-  child.prototype = Object.create( AtomicComponent.prototype );
-  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( child.prototype, attributes );
-  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)( child, AtomicComponent );
+  child.prototype = Object.create(AtomicComponent.prototype);
+  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(child.prototype, attributes);
+  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(child, AtomicComponent);
 
-  if ( attributes.hasOwnProperty( 'ui' ) &&
-       attributes.ui.hasOwnProperty( 'base' ) ) {
+  if (
+    Object.prototype.hasOwnProperty.call(attributes, 'ui') &&
+    Object.prototype.hasOwnProperty.call(attributes.ui, 'base')
+  ) {
     child.selector = attributes.ui.base;
   }
 
@@ -1516,8 +1499,8 @@ function extend( attributes ) {
  * @param {HTMLNode} scope - Where to search for components within.
  * @returns {Array} List of AtomicComponent instances.
  */
-function init( scope ) {
-  const components = (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)( this.selector, this, scope );
+function init(scope) {
+  const components = (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(this.selector, this, scope);
   return components;
 }
 
@@ -1540,28 +1523,28 @@ AtomicComponent.extend = extend;
 __webpack_require__.r(__webpack_exports__);
 /**
  * EventObserver
- * @class
  *
+ * @class
  * @classdesc Used for creating an object
  *   that can be used to dispatch and listen to custom events.
- * @returns {Object} An EventObserver instance.
+ * @returns {object} An EventObserver instance.
  */
 function EventObserver() {
-
   // The events registered on this instance.
   const _events = {};
 
   /**
    * Register an event listener.
+   *
    * @param {string} event - The event name to listen for.
    * @param {Function} callback - The function called when the event has fired.
-   * @returns {Object} The instance this EventObserver instance is decorating.
+   * @returns {object} The instance this EventObserver instance is decorating.
    */
-  function addEventListener( event, callback ) {
-    if ( _events.hasOwnProperty( event ) ) {
-      _events[event].push( callback );
+  function addEventListener(event, callback) {
+    if (Object.prototype.hasOwnProperty.call(_events, event)) {
+      _events[event].push(callback);
     } else {
-      _events[event] = [ callback ];
+      _events[event] = [callback];
     }
 
     return this;
@@ -1570,19 +1553,20 @@ function EventObserver() {
   /**
    * Remove an added event listener.
    * Must match a call made to addEventListener.
+   *
    * @param {string} event - The event name to remove.
    * @param {Function} callback - The function attached to the event.
-   * @returns {Object} The instance this EventObserver instance is decorating.
+   * @returns {object} The instance this EventObserver instance is decorating.
    */
-  function removeEventListener( event, callback ) {
-    if ( !_events.hasOwnProperty( event ) ) {
+  function removeEventListener(event, callback) {
+    if (!Object.prototype.hasOwnProperty.call(_events, event)) {
       return this;
     }
 
-    const index = _events[event].indexOf( callback );
+    const index = _events[event].indexOf(callback);
     // Check if there are any callbacks associated with a particular event.
-    if ( index !== -1 ) {
-      _events[event].splice( index, 1 );
+    if (index !== -1) {
+      _events[event].splice(index, 1);
     }
 
     return this;
@@ -1590,27 +1574,28 @@ function EventObserver() {
 
   /**
    * Broadcast an event.
+   *
    * @param {string} event - The type of event to broadcast.
-   * @param {Object} options - The event object to pass to the event handler.
-   * @returns {Object} The instance this EventObserver instance is decorating.
+   * @param {object} options - The event object to pass to the event handler.
+   * @returns {object} The instance this EventObserver instance is decorating.
    */
-  function dispatchEvent( event, options ) {
-    if ( !_events.hasOwnProperty( event ) ) {
+  function dispatchEvent(event, options) {
+    if (!Object.prototype.hasOwnProperty.call(_events, event)) {
       return this;
     }
 
     options = options || {};
 
     const evts = _events[event];
-    for ( let i = 0, len = evts.length; i < len; i++ ) {
-      evts[i].call( this, options );
+    for (let i = 0, len = evts.length; i < len; i++) {
+      evts[i].call(this, options);
     }
 
     return this;
   }
 
   /**
-   * @returns {Object} Map of registered events.
+   * @returns {object} Map of registered events.
    */
   function getRegisteredEvents() {
     return _events;
@@ -1671,54 +1656,62 @@ __webpack_require__.r(__webpack_exports__);
 const INIT_FLAG = _standard_type__WEBPACK_IMPORTED_MODULE_1__.STATE_PREFIX + 'atomic_init';
 
 /**
- * Check that a particular element passed into the constructor of
- * an atomic component exists and that the correct atomic class
- * is present on the element.
- * @param {HTMLNode} element
+ * @param {HTMLNode} element- -
  *   The DOM element within which to search for the atomic element class.
+ * @param element
  * @param {string} baseClass - The CSS class name for the atomic element.
  * @returns {HTMLNode} The DOM element for the atomic element.
  * @throws {Error} If DOM element passed into the atomic element is not valid.
  */
-function checkDom( element, baseClass ) {
-  _verifyElementExists( element, baseClass );
-  const dom = _verifyClassExists( element, baseClass );
-
-  return dom;
-}
-
-/**
- * @param {HTMLNode} element
- *   The DOM element within which to search for the atomic element class.
- * @param {string} baseClass - The CSS class name for the atomic element.
- * @returns {HTMLNode} The DOM element for the atomic element.
- * @throws {Error} If DOM element passed into the atomic element is not valid.
- */
-function _verifyElementExists( element, baseClass ) {
-  if ( !element || !element.classList ) {
-    const msg = element + ' is not valid. ' +
-              'Check that element is a DOM node with class "' +
-              baseClass + '"';
-    throw new Error( msg );
+function _verifyElementExists(element, baseClass) {
+  if (!element || !element.classList) {
+    const msg =
+      element +
+      ' is not valid. ' +
+      'Check that element is a DOM node with class "' +
+      baseClass +
+      '"';
+    throw new Error(msg);
   }
 
   return element;
 }
 
 /**
- * @param {HTMLNode} element
+ * @param {HTMLNode} element- -
  *   The DOM element within which to search for the atomic element class.
- * @param {string} baseClass The CSS class name for the atomic element.
+ * @param element
+ * @param {string} baseClass - The CSS class name for the atomic element.
  * @returns {HTMLNode} The DOM element for the atomic element.
  * @throws {Error} If baseClass was not found on the element.
  */
-function _verifyClassExists( element, baseClass ) {
-  const dom = element.classList.contains( baseClass ) ?
-    element : element.querySelector( '.' + baseClass );
-  if ( !dom ) {
+function _verifyClassExists(element, baseClass) {
+  const dom = element.classList.contains(baseClass)
+    ? element
+    : element.querySelector('.' + baseClass);
+  if (!dom) {
     const msg = baseClass + ' not found on or in passed DOM node.';
-    throw new Error( msg );
+    throw new Error(msg);
   }
+
+  return dom;
+}
+
+/**
+ * Check that a particular element passed into the constructor of
+ * an atomic component exists and that the correct atomic class
+ * is present on the element.
+ *
+ * @param {HTMLNode} element- -
+ *   The DOM element within which to search for the atomic element class.
+ * @param element
+ * @param {string} baseClass - The CSS class name for the atomic element.
+ * @returns {HTMLNode} The DOM element for the atomic element.
+ * @throws {Error} If DOM element passed into the atomic element is not valid.
+ */
+function checkDom(element, baseClass) {
+  _verifyElementExists(element, baseClass);
+  const dom = _verifyClassExists(element, baseClass);
 
   return dom;
 }
@@ -1727,17 +1720,18 @@ function _verifyClassExists( element, baseClass ) {
  * Set a flag on an atomic component when it is initialized.
  * Use the returned boolean to handle cases where an atomic component
  * is initializing when it has already been initialized elsewhere.
+ *
  * @param {HTMLNode} element - The DOM element for the atomic component.
  * @param {null} destroy - Pass in true to .
  * @returns {boolean} True if the init data-js-* hook attribute was set,
  *   false otherwise.
  */
-function setInitFlag( element ) {
-  if ( (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)( element, INIT_FLAG ) ) {
+function setInitFlag(element) {
+  if ((0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG)) {
     return false;
   }
 
-  (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.add)( element, INIT_FLAG );
+  (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.add)(element, INIT_FLAG);
 
   return true;
 }
@@ -1745,16 +1739,17 @@ function setInitFlag( element ) {
 /**
  * Remove the initialization flag on an atomic component.
  * This might be used if the DOM of an atomic element is cloned.
+ *
  * @param {HTMLNode} element - The DOM element for the atomic component.
  * @returns {boolean} True if the init data-js-* hook attribute was destroyed,
  *   otherwise false if it didn't exist.
  */
-function destroyInitFlag( element ) {
-  if ( !(0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)( element, INIT_FLAG ) ) {
+function destroyInitFlag(element) {
+  if (!(0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG)) {
     return false;
   }
 
-  (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.remove)( element, INIT_FLAG );
+  (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.remove)(element, INIT_FLAG);
 
   return true;
 }
@@ -1766,18 +1761,18 @@ function destroyInitFlag( element ) {
  *   If not supplied, it defaults to the `document`.
  * @returns {Array} List of instances that were instantiated.
  */
-function instantiateAll( selector, Constructor, scope ) {
+function instantiateAll(selector, Constructor, scope) {
   const base = scope || document;
-  const elements = base.querySelectorAll( selector );
+  const elements = base.querySelectorAll(selector);
   const insts = [];
   let inst;
   let element;
-  for ( let i = 0, len = elements.length; i < len; i++ ) {
+  for (let i = 0, len = elements.length; i < len; i++) {
     element = elements[i];
-    if ( (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)( element, INIT_FLAG ) === false ) {
-      inst = new Constructor( element );
+    if ((0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG) === false) {
+      inst = new Constructor(element);
       inst.init();
-      insts.push( inst );
+      insts.push(inst);
     }
   }
   return insts;
@@ -1808,40 +1803,42 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @param {HTMLNode} element - DOM element.
- * @param {string} value
+ * @param {string} value- -
  *   Value to add to the element's JS data-* hook.
+ * @param value
  * @returns {string} The value that was added.
  * @throws {Error} If supplied value contains a space,
  *   meaning it would be two values, which is likely a typo.
  */
-function add( element, value ) {
-  if ( value.indexOf( ' ' ) !== -1 ) {
+function add(element, value) {
+  if (value.indexOf(' ') !== -1) {
     const msg = _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK + ' values cannot contain spaces!';
-    throw new Error( msg );
+    throw new Error(msg);
   }
 
-  const values = element.getAttribute( _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK );
-  if ( values !== null ) {
+  const values = element.getAttribute(_standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
+  if (values !== null) {
     value = values + ' ' + value;
   }
-  element.setAttribute( _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, value );
+  element.setAttribute(_standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, value);
 
   return value;
 }
 
 /**
  * @param {HTMLNode} element - DOM element.
- * @param {string} value
+ * @param {string} value- -
  *   Value to remove from the JS data-* hook value.
+ * @param value
  * @returns {boolean} True if value was removed, false otherwise.
  */
-function remove( element, value ) {
-  const values = element.getAttribute( _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK );
-  const index = values.indexOf( value );
-  const valuesList = values.split( ' ' );
-  if ( index > -1 ) {
-    valuesList.splice( index, 1 );
-    element.setAttribute( _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, valuesList.join( ' ' ) );
+function remove(element, value) {
+  const values = element.getAttribute(_standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
+  const index = values.indexOf(value);
+  const valuesList = values.split(' ');
+  if (index > -1) {
+    valuesList.splice(index, 1);
+    element.setAttribute(_standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, valuesList.join(' '));
     return true;
   }
 
@@ -1850,18 +1847,23 @@ function remove( element, value ) {
 
 /**
  * @param {HTMLNode} element - DOM element.
- * @param {string} value
+ * @param {string} value- -
  *   Value to check as existing as a JS data-* hook value.
+ * @param value
  * @returns {boolean} True if the data-* hook value exists, false otherwise.
  */
-function contains( element, value ) {
-  if ( !element ) { return false; }
-  let values = element.getAttribute( _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK );
+function contains(element, value) {
+  if (!element) {
+    return false;
+  }
+  let values = element.getAttribute(_standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
   // If JS data-* hook is not set return immediately.
-  if ( !values ) { return false; }
-  values = values.split( ' ' );
+  if (!values) {
+    return false;
+  }
+  values = values.split(' ');
 
-  return values.indexOf( value ) > -1 ? true : false;
+  return values.indexOf(value) > -1 ? true : false;
 }
 
 
@@ -1886,14 +1888,34 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * Queries for the first match unless an HTMLNode is passed
- * @param   {(HTMLNode|string)} expr HTMLNode or string to query for
- * @param   {Object}          con  The document location to query
+ *
+ * @param   {(HTMLNode|string)} expr
+ * @param   {object}          con- -   The document location to query
+ * @param con
  * @returns {HTMLNode}             The elem
  */
-function queryOne( expr, con ) {
-  return _type_checkers_js__WEBPACK_IMPORTED_MODULE_0__["default"].isString( expr ) ?
-    ( con || document ).querySelector( expr ) :
-    expr || null;
+function queryOne(expr, con) {
+  return _type_checkers_js__WEBPACK_IMPORTED_MODULE_0__["default"].isString(expr)
+    ? (con || document).querySelector(expr)
+    : expr || null;
+}
+
+/**
+ * Search for support of the matches() method by looking at
+ * browser prefixes.
+ *
+ * @param {HTMLNode} elem- -
+ *   The element to check for support of matches() method.
+ * @param elem
+ * @returns {Function} The appropriate matches() method of elem.
+ */
+function _getMatchesMethod(elem) {
+  return (
+    elem.matches ||
+    elem.webkitMatchesSelector ||
+    elem.mozMatchesSelector ||
+    elem.msMatchesSelector
+  );
 }
 
 /**
@@ -1907,47 +1929,32 @@ function queryOne( expr, con ) {
  * @returns {HTMLNode} Element or nearest parent node that matches the selector.
  *   Or null, if nothing is found.
  */
-function closest( elem, selector ) {
-  if ( 'closest' in elem ) {
-    return elem.closest( selector );
+function closest(elem, selector) {
+  if ('closest' in elem) {
+    return elem.closest(selector);
   }
 
-  const matchesSelector = _getMatchesMethod( elem );
+  const matchesSelector = _getMatchesMethod(elem);
 
   try {
     let parent = elem;
     let match;
-    while ( parent ) {
-      if ( matchesSelector.bind( parent )( selector ) ) {
+    while (parent) {
+      if (matchesSelector.bind(parent)(selector)) {
         match = parent;
       } else {
         parent = parent.parentNode;
       }
 
-      if ( match ) {
+      if (match) {
         return parent;
       }
     }
-  } catch ( err ) {
+  } catch (err) {
     return null;
   }
 
   return null;
-}
-
-/**
- * Search for support of the matches() method by looking at
- * browser prefixes.
- * @param {HTMLNode} elem
- *   The element to check for support of matches() method.
- * @returns {Function} The appropriate matches() method of elem.
- */
-function _getMatchesMethod( elem ) {
-
-  return elem.matches ||
-         elem.webkitMatchesSelector ||
-         elem.mozMatchesSelector ||
-         elem.msMatchesSelector;
 }
 
 
@@ -1973,17 +1980,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * Query the browser's user agent string to see if it's on a mobile OS.
+ *
  * @returns {boolean} True if on a mobile user agent, false otherwise.
  */
 function isMobileUserAgent() {
   const regex = new RegExp(
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
   );
-  if ( regex.test( navigator.userAgent ) ) {
+  if (regex.test(navigator.userAgent)) {
     return true;
   }
   return false;
-
 }
 
 // Expose public methods.
@@ -2017,8 +2024,8 @@ __webpack_require__.r(__webpack_exports__);
  * @param {object} object - JavaScript object.
  * @returns {boolean} True if object is a plain JavaScript object.
  */
-function _isPlainObject( object ) {
-  return Object.prototype.toString.call( object ) === '[object Object]';
+function _isPlainObject(object) {
+  return Object.prototype.toString.call(object) === '[object Object]';
 }
 
 // TODO Fix complexity issue
@@ -2028,19 +2035,19 @@ function _isPlainObject( object ) {
  * existing properties. When assigning from multiple sources, fields of every
  * next source will override same named fields of previous sources.
  *
- * @param {Object} destination object.
- * @returns {Object} assigned destination object.
-*/
-function assign( destination ) {
+ * @param {object} destination - object.
+ * @returns {object} assigned destination object.
+ */
+function assign(destination) {
   destination = destination || {};
-  for ( let i = 1, len = arguments.length; i < len; i++ ) {
+  for (let i = 1, len = arguments.length; i < len; i++) {
     const source = arguments[i] || {};
     let key;
-    for ( key in source ) {
-      if ( Object.prototype.hasOwnProperty.call( source, key ) ) {
+    for (key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
         const value = source[key];
-        if ( _isPlainObject( value ) ) {
-          assign( destination[key] || ( destination[key] = {} ), value );
+        if (_isPlainObject(value)) {
+          assign(destination[key] || (destination[key] = {}), value);
         } else {
           destination[key] = value;
         }
@@ -2090,7 +2097,6 @@ const JS_HOOK = 'data-js-hook';
  * behaviors should be attached to a component.
  * This would be set in the markup and initialized when
  * the JavaScript loads.
- *
  * @example
  * A component may flag that it has certain JavaScript behaviors attached,
  * such as:
@@ -2106,7 +2112,6 @@ const BEHAVIOR_PREFIX = 'behavior_';
  * @description
  * Flag prefix for settings related to changes in a components
  * state set in the data-* JavaScript hook.
- *
  * @example
  * A component may flag that it has been initialized by setting
  * `data-js-hook="state_atomic_init"` after page load.
@@ -2131,10 +2136,10 @@ function noopFunct() {
 
 // Bit values intended to be used for bit inversion.
 const DIRECTIONS = {
-  UP:    0,
+  UP: 0,
   RIGHT: 1,
-  DOWN:  -1,
-  LEFT:  -2
+  DOWN: -1,
+  LEFT: -2,
 };
 
 
@@ -2159,31 +2164,37 @@ __webpack_require__.r(__webpack_exports__);
 // Exported constants.
 const CLASSES = {
   CSS_PROPERTY: 'opacity',
-  BASE_CLASS:   'u-alpha-transition',
-  ALPHA_100:    'u-alpha-100',
-  ALPHA_0:      'u-alpha-0'
+  BASE_CLASS: 'u-alpha-transition',
+  ALPHA_100: 'u-alpha-100',
+  ALPHA_0: 'u-alpha-0',
 };
 
 /**
  * AlphaTransition
+ *
  * @class
- *
  * @classdesc Initializes new AlphaTransition behavior.
- *
- * @param {HTMLNode} element
+ * @param element
+ * @param {HTMLNode} element- -
  *   DOM element to apply opacity transition to.
  * @returns {AlphaTransition} An instance.
  */
-function AlphaTransition( element ) {
+function AlphaTransition(element) {
+  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES);
 
-  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"]( element, CLASSES );
+  /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    this.dispatchEvent(_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this });
+  }
 
   /**
    * @returns {AlphaTransition} An instance.
    */
   function init() {
     _baseTransition.init();
-    const _transitionCompleteBinded = _transitionComplete.bind( this );
+    const _transitionCompleteBinded = _transitionComplete.bind(this);
     _baseTransition.addEventListener(
       _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
       _transitionCompleteBinded
@@ -2192,28 +2203,23 @@ function AlphaTransition( element ) {
   }
 
   /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent( _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this } );
-  }
-
-  /**
    * Fade to 100% by applying a utility alpha class.
+   *
    * @returns {AlphaTransition} An instance.
    */
   function fadeIn() {
-    _baseTransition.applyClass( CLASSES.ALPHA_100 );
+    _baseTransition.applyClass(CLASSES.ALPHA_100);
 
     return this;
   }
 
   /**
    * Fade to nothing by applying a utility alpha class.
+   *
    * @returns {AlphaTransition} An instance.
    */
   function fadeOut() {
-    _baseTransition.applyClass( CLASSES.ALPHA_0 );
+    _baseTransition.applyClass(CLASSES.ALPHA_0);
 
     return this;
   }
@@ -2261,19 +2267,16 @@ __webpack_require__.r(__webpack_exports__);
 // eslint-disable-next-line max-statements
 /**
  * BaseTransition
- * @class
  *
+ * @class
  * @classdesc Initializes new BaseTransition behavior.
  *   This shouldn't be used directly, but instead should be
  *   the base class used through composition by a specific transition.
- *
- * @param {HTMLNode} element
- *   DOM element to apply transition to.
- * @param {Object} classes
- *   The classes to apply to this transition.
+ * @param {HTMLNode} element - DOM element to apply transition to.
+ * @param {object} classes - The classes to apply to this transition.
  * @returns {BaseTransition} An instance.
  */
-function BaseTransition( element, classes ) {
+function BaseTransition(element, classes) {
   const _classes = classes;
   let _dom;
 
@@ -2285,92 +2288,14 @@ function BaseTransition( element, classes ) {
   let _isFlushed = false;
 
   // Make sure required attributes are passed in.
-  if ( typeof _classes.CSS_PROPERTY === 'undefined' ||
-       typeof _classes.BASE_CLASS === 'undefined' ) {
+  if (
+    typeof _classes.CSS_PROPERTY === 'undefined' ||
+    typeof _classes.BASE_CLASS === 'undefined'
+  ) {
     throw new Error(
       'Transitions require CSS_PROPERTY and BASE_CLASS ' +
-      'to be passed into BaseTransition.'
+        'to be passed into BaseTransition.'
     );
-  }
-
-  /**
-   * @returns {BaseTransition} An instance.
-   */
-  function init() {
-    _transitionCompleteBinded = _transitionComplete.bind( this );
-    _addEventListenerBinded = _addEventListener.bind( this );
-    setElement( element );
-
-    return this;
-  }
-
-  /**
-   * Set the HTML element target of this transition.
-   * @param {HTMLNode} targetElement - The target of the transition.
-   */
-  function setElement( targetElement ) {
-    /*
-      If the element has already been set,
-      clear the transition classes from the old element.
-    */
-    if ( _dom ) {
-      remove();
-      animateOn();
-    }
-    _dom = targetElement;
-    _dom.classList.add( _classes.BASE_CLASS );
-    _transitionEndEvent = _getTransitionEndEvent( _dom );
-  }
-
-  /**
-   * Add a "transition-duration: 0s" utility CSS class.
-   * @returns {BaseTransition} An instance.
-   */
-  function animateOn() {
-    if ( !_dom ) { return this; }
-    _dom.classList.remove( BaseTransition.NO_ANIMATION_CLASS );
-
-    return this;
-  }
-
-  /**
-   * Remove a "transition-duration: 0s" utility CSS class.
-   * @returns {BaseTransition} An instance.
-   */
-  function animateOff() {
-    if ( !_dom ) { return this; }
-    _dom.classList.add( BaseTransition.NO_ANIMATION_CLASS );
-
-    return this;
-  }
-
-  /**
-   * @returns {boolean} Whether the transition has a duration or not.
-   *   Returns false if this transition has not been initialized.
-   */
-  function isAnimated() {
-    if ( !_dom ) { return false; }
-    return !_dom.classList.contains( BaseTransition.NO_ANIMATION_CLASS );
-  }
-
-  /**
-   * Halt an in-progress animation and call the complete event immediately.
-   */
-  function halt() {
-    if ( !_isAnimating ) { return; }
-    _dom.style.webkitTransitionDuration = '0';
-    _dom.style.mozTransitionDuration = '0';
-    _dom.style.oTransitionDuration = '0';
-    _dom.style.transitionDuration = '0';
-    _dom.removeEventListener(
-      _transitionEndEvent,
-      _transitionCompleteBinded
-    );
-    _transitionCompleteBinded();
-    _dom.style.webkitTransitionDuration = '';
-    _dom.style.mozTransitionDuration = '';
-    _dom.style.oTransitionDuration = '';
-    _dom.style.transitionDuration = '';
   }
 
   /**
@@ -2378,7 +2303,7 @@ function BaseTransition( element, classes ) {
    * complete handler immediately if transition not supported.
    */
   function _addEventListener() {
-    _dom.classList.add( BaseTransition.ANIMATING_CLASS );
+    _dom.classList.add(BaseTransition.ANIMATING_CLASS);
     _isAnimating = true;
 
     /*
@@ -2386,12 +2311,14 @@ function BaseTransition( element, classes ) {
       Also, if "transition-duration: 0s" is set, transitionEnd event will not
       fire, so we need to call the handler straight away.
     */
-    if ( _transitionEndEvent &&
-         !_dom.classList.contains( BaseTransition.NO_ANIMATION_CLASS ) ) {
-      _dom.addEventListener( _transitionEndEvent, _transitionCompleteBinded );
-      this.dispatchEvent( BaseTransition.BEGIN_EVENT, { target: this } );
+    if (
+      _transitionEndEvent &&
+      !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS)
+    ) {
+      _dom.addEventListener(_transitionEndEvent, _transitionCompleteBinded);
+      this.dispatchEvent(BaseTransition.BEGIN_EVENT, { target: this });
     } else {
-      this.dispatchEvent( BaseTransition.BEGIN_EVENT, { target: this } );
+      this.dispatchEvent(BaseTransition.BEGIN_EVENT, { target: this });
       _transitionCompleteBinded();
     }
   }
@@ -2400,23 +2327,24 @@ function BaseTransition( element, classes ) {
    * Remove an event listener to the transition.
    */
   function _removeEventListener() {
-    _dom.removeEventListener( _transitionEndEvent, _transitionCompleteBinded );
+    _dom.removeEventListener(_transitionEndEvent, _transitionCompleteBinded);
   }
 
   /**
    * Handle the end of a transition.
+   *
    * @param {TransitionEvent} evt - Transition event object.
    * @returns {boolean} True if transition was cleaned up,
    *   false if an outside transitioning property triggered this event handler.
    */
-  function _transitionComplete( evt ) {
-    if ( evt && evt.propertyName !== _classes.CSS_PROPERTY ) {
+  function _transitionComplete(evt) {
+    if (evt && evt.propertyName !== _classes.CSS_PROPERTY) {
       return false;
     }
 
     _removeEventListener();
-    _dom.classList.remove( BaseTransition.ANIMATING_CLASS );
-    this.dispatchEvent( BaseTransition.END_EVENT, { target: this } );
+    _dom.classList.remove(BaseTransition.ANIMATING_CLASS);
+    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
     _isAnimating = false;
     return true;
   }
@@ -2427,24 +2355,46 @@ function BaseTransition( element, classes ) {
    */
   function _flush() {
     let prop;
-    for ( prop in _classes ) {
-      if ( _classes.hasOwnProperty( prop ) &&
-           _classes[prop] !== _classes.BASE_CLASS &&
-           _dom.classList.contains( _classes[prop] ) ) {
-        _dom.classList.remove( _classes[prop] );
+    for (prop in _classes) {
+      if (
+        Object.prototype.hasOwnProperty.call(_classes, prop) &&
+        _classes[prop] !== _classes.BASE_CLASS &&
+        _dom.classList.contains(_classes[prop])
+      ) {
+        _dom.classList.remove(_classes[prop]);
       }
     }
   }
 
   /**
+   * Halt an in-progress animation and call the complete event immediately.
+   */
+  function halt() {
+    if (!_isAnimating) {
+      return;
+    }
+    _dom.style.webkitTransitionDuration = '0';
+    _dom.style.mozTransitionDuration = '0';
+    _dom.style.oTransitionDuration = '0';
+    _dom.style.transitionDuration = '0';
+    _dom.removeEventListener(_transitionEndEvent, _transitionCompleteBinded);
+    _transitionCompleteBinded();
+    _dom.style.webkitTransitionDuration = '';
+    _dom.style.mozTransitionDuration = '';
+    _dom.style.oTransitionDuration = '';
+    _dom.style.transitionDuration = '';
+  }
+
+  /**
    * Remove all transition classes, if transition is initialized.
+   *
    * @returns {boolean}
    *   True, if the element's CSS classes were touched, false otherwise.
    */
   function remove() {
-    if ( _dom ) {
+    if (_dom) {
       halt();
-      _dom.classList.remove( _classes.BASE_CLASS );
+      _dom.classList.remove(_classes.BASE_CLASS);
       _flush();
       return true;
     }
@@ -2453,59 +2403,133 @@ function BaseTransition( element, classes ) {
   }
 
   /**
-   * @param {string} className - A CSS class.
-   * @returns {boolean} False if the class is already applied
-   *   or the transition is not initialized,
-   *   otherwise true if the class was applied.
+   * Add a "transition-duration: 0s" utility CSS class.
+   *
+   * @returns {BaseTransition} An instance.
    */
-  function applyClass( className ) {
-    if ( !_dom ) { return false; }
-    if ( !_isFlushed ) {
-      _flush();
-      _isFlushed = true;
+  function animateOn() {
+    if (!_dom) {
+      return this;
     }
+    _dom.classList.remove(BaseTransition.NO_ANIMATION_CLASS);
 
-    if ( _dom.classList.contains( className ) ) {
-      return false;
-    }
-
-    _removeEventListener();
-    _dom.classList.remove( _lastClass );
-    _lastClass = className;
-    _addEventListenerBinded();
-    _dom.classList.add( _lastClass );
-
-    return true;
+    return this;
   }
 
   /**
-   * @param {HTMLNode} elem
+   * Remove a "transition-duration: 0s" utility CSS class.
+   *
+   * @returns {BaseTransition} An instance.
+   */
+  function animateOff() {
+    if (!_dom) {
+      return this;
+    }
+    _dom.classList.add(BaseTransition.NO_ANIMATION_CLASS);
+
+    return this;
+  }
+
+  /**
+   * @param {HTMLNode} elem- -
    *   The element to check for support of transition end event.
+   * @param elem
    * @returns {string} The browser-prefixed transition end event.
    */
-  function _getTransitionEndEvent( elem ) {
-    if ( !elem ) {
+  function _getTransitionEndEvent(elem) {
+    if (!elem) {
       const msg = 'Element does not have TransitionEnd event. It may be null!';
-      throw new Error( msg );
+      throw new Error(msg);
     }
 
     let transition;
     const transitions = {
       WebkitTransition: 'webkitTransitionEnd',
-      MozTransition:    'transitionend',
-      OTransition:      'oTransitionEnd otransitionend',
-      transition:       'transitionend'
+      MozTransition: 'transitionend',
+      OTransition: 'oTransitionEnd otransitionend',
+      transition: 'transitionend',
     };
 
     let transitionEvent;
-    for ( transitionEvent in transitions ) {
-      if ( transitions.hasOwnProperty( transitionEvent ) &&
-           typeof elem.style[transitionEvent] !== 'undefined' ) {
+    for (transitionEvent in transitions) {
+      if (
+        Object.prototype.hasOwnProperty.call(transitions, transitionEvent) &&
+        typeof elem.style[transitionEvent] !== 'undefined'
+      ) {
         transition = transitions[transitionEvent];
         break;
       }
     }
     return transition;
+  }
+
+  /**
+   * Set the HTML element target of this transition.
+   *
+   * @param {HTMLNode} targetElement - The target of the transition.
+   */
+  function setElement(targetElement) {
+    /*
+      If the element has already been set,
+      clear the transition classes from the old element.
+    */
+    if (_dom) {
+      remove();
+      animateOn();
+    }
+    _dom = targetElement;
+    _dom.classList.add(_classes.BASE_CLASS);
+    _transitionEndEvent = _getTransitionEndEvent(_dom);
+  }
+
+  /**
+   * @returns {BaseTransition} An instance.
+   */
+  function init() {
+    _transitionCompleteBinded = _transitionComplete.bind(this);
+    _addEventListenerBinded = _addEventListener.bind(this);
+    setElement(element);
+
+    return this;
+  }
+
+  /**
+   * @returns {boolean} Whether the transition has a duration or not.
+   *   Returns false if this transition has not been initialized.
+   */
+  function isAnimated() {
+    if (!_dom) {
+      return false;
+    }
+    return !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
+  }
+
+  /**
+   * @param {string} className - A CSS class.
+   * @returns {boolean} False if the class is already applied
+   *   or the transition is not initialized,
+   *   otherwise true if the class was applied.
+   */
+  function applyClass(className) {
+    if (!_dom) {
+      return false;
+    }
+    if (!_isFlushed) {
+      _flush();
+      _isFlushed = true;
+    }
+
+    if (_dom.classList.contains(className)) {
+      return false;
+    }
+
+    _removeEventListener();
+    _dom.classList.remove(_lastClass);
+    _lastClass = className;
+    _addEventListenerBinded();
+    _dom.classList.add(_lastClass);
+
+    return true;
   }
 
   // Attach public events.
@@ -2554,103 +2578,25 @@ __webpack_require__.r(__webpack_exports__);
 // Exported constants.
 const CLASSES = {
   CSS_PROPERTY: 'max-height',
-  BASE_CLASS:   'u-max-height-transition',
-  MH_DEFAULT:   'u-max-height-default',
-  MH_SUMMARY:   'u-max-height-summary',
-  MH_ZERO:      'u-max-height-zero'
+  BASE_CLASS: 'u-max-height-transition',
+  MH_DEFAULT: 'u-max-height-default',
+  MH_SUMMARY: 'u-max-height-summary',
+  MH_ZERO: 'u-max-height-zero',
 };
 
 /**
  * MoveTransition
+ *
  * @class
- *
  * @classdesc Initializes new MoveTransition behavior.
- *
- * @param {HTMLNode} element
+ * @param element
+ * @param {HTMLNode} element- -
  *   DOM element to apply transition to.
  * @returns {MaxHeightTransition} An instance.
  */
-function MaxHeightTransition( element ) {
-  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"]( element, CLASSES );
+function MaxHeightTransition(element) {
+  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES);
   let previousHeight;
-
-  /**
-   * @returns {MaxHeightTransition} An instance.
-   */
-  function init() {
-    _baseTransition.init();
-
-    /* The scrollHeight of an element may be incorrect if the page hasn't
-       fully loaded yet, so we listen for that to happen before calculating
-       the element max-height. */
-    window.addEventListener( 'load', _pageLoaded );
-
-    const _transitionCompleteBinded = _transitionComplete.bind( this );
-    _baseTransition.addEventListener(
-      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
-      _transitionCompleteBinded
-    );
-
-    return this;
-  }
-
-  /**
-   * The whole page has loaded,
-   * including all dependent resources such as stylesheets and images.
-   */
-  function _pageLoaded() {
-    window.removeEventListener( 'load', _pageLoaded );
-    refresh();
-  }
-
-  /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent( _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this } );
-
-    if ( element.scrollHeight > previousHeight ) {
-      element.style.maxHeight = element.scrollHeight + 'px';
-    }
-  }
-
-  /**
-   * Reset the max-height to the default size.
-   * @returns {PostitionTransition} An instance.
-   */
-  function maxHeightDefault() {
-    _baseTransition.applyClass( CLASSES.MH_DEFAULT );
-
-    if ( !previousHeight || element.scrollHeight > previousHeight ) {
-      previousHeight = element.scrollHeight;
-    }
-
-    return this;
-  }
-
-  /**
-   * Collapses the max-height to just a summary height.
-   * @returns {PostitionTransition} An instance.
-   */
-  function maxHeightSummary() {
-    _baseTransition.applyClass( CLASSES.MH_SUMMARY );
-
-    previousHeight = element.scrollHeight;
-
-    return this;
-  }
-
-  /**
-   * Collapses thte max-height completely.
-   * @returns {PostitionTransition} An instance.
-   */
-  function maxHeightZero() {
-    _baseTransition.applyClass( CLASSES.MH_ZERO );
-
-    previousHeight = element.scrollHeight;
-
-    return this;
-  }
 
   /**
    * Refresh the max height set on the element.
@@ -2661,8 +2607,90 @@ function MaxHeightTransition( element ) {
   }
 
   /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    this.dispatchEvent(_cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this });
+
+    if (element.scrollHeight > previousHeight) {
+      element.style.maxHeight = element.scrollHeight + 'px';
+    }
+  }
+
+  /**
+   * The whole page has loaded,
+   * including all dependent resources such as stylesheets and images.
+   */
+  function _pageLoaded() {
+    window.removeEventListener('load', _pageLoaded);
+    refresh();
+  }
+
+  /**
+   * @returns {MaxHeightTransition} An instance.
+   */
+  function init() {
+    _baseTransition.init();
+
+    /* The scrollHeight of an element may be incorrect if the page hasn't
+       fully loaded yet, so we listen for that to happen before calculating
+       the element max-height. */
+    window.addEventListener('load', _pageLoaded);
+
+    const _transitionCompleteBinded = _transitionComplete.bind(this);
+    _baseTransition.addEventListener(
+      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
+      _transitionCompleteBinded
+    );
+
+    return this;
+  }
+
+  /**
+   * Reset the max-height to the default size.
+   *
+   * @returns {PostitionTransition} An instance.
+   */
+  function maxHeightDefault() {
+    _baseTransition.applyClass(CLASSES.MH_DEFAULT);
+
+    if (!previousHeight || element.scrollHeight > previousHeight) {
+      previousHeight = element.scrollHeight;
+    }
+
+    return this;
+  }
+
+  /**
+   * Collapses the max-height to just a summary height.
+   *
+   * @returns {PostitionTransition} An instance.
+   */
+  function maxHeightSummary() {
+    _baseTransition.applyClass(CLASSES.MH_SUMMARY);
+
+    previousHeight = element.scrollHeight;
+
+    return this;
+  }
+
+  /**
+   * Collapses thte max-height completely.
+   *
+   * @returns {PostitionTransition} An instance.
+   */
+  function maxHeightZero() {
+    _baseTransition.applyClass(CLASSES.MH_ZERO);
+
+    previousHeight = element.scrollHeight;
+
+    return this;
+  }
+
+  /**
    * Remove style attribute.
    * Remove all transition classes, if transition is initialized.
+   *
    * @returns {boolean}
    *   True, if the element's CSS classes were touched, false otherwise.
    */
@@ -2717,36 +2745,42 @@ __webpack_require__.r(__webpack_exports__);
 
 // Exported constants.
 const CLASSES = {
-  CSS_PROPERTY:   'transform',
-  BASE_CLASS:     'u-move-transition',
+  CSS_PROPERTY: 'transform',
+  BASE_CLASS: 'u-move-transition',
   MOVE_TO_ORIGIN: 'u-move-to-origin',
-  MOVE_LEFT:      'u-move-left',
-  MOVE_LEFT_2X:   'u-move-left-2x',
-  MOVE_LEFT_3X:   'u-move-left-3x',
-  MOVE_RIGHT:     'u-move-right',
-  MOVE_UP:        'u-move-up'
+  MOVE_LEFT: 'u-move-left',
+  MOVE_LEFT_2X: 'u-move-left-2x',
+  MOVE_LEFT_3X: 'u-move-left-3x',
+  MOVE_RIGHT: 'u-move-right',
+  MOVE_UP: 'u-move-up',
 };
 
 /**
  * MoveTransition
+ *
  * @class
- *
  * @classdesc Initializes new MoveTransition behavior.
- *
- * @param {HTMLNode} element
+ * @param element
+ * @param {HTMLNode} element- -
  *   DOM element to apply move transition to.
  * @returns {MoveTransition} An instance.
  */
-function MoveTransition( element ) {
+function MoveTransition(element) {
+  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES);
 
-  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"]( element, CLASSES );
+  /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    this.dispatchEvent(_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this });
+  }
 
   /**
    * @returns {MoveTransition} An instance.
    */
   function init() {
     _baseTransition.init();
-    const _transitionCompleteBinded = _transitionComplete.bind( this );
+    const _transitionCompleteBinded = _transitionComplete.bind(this);
     _baseTransition.addEventListener(
       _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
       _transitionCompleteBinded
@@ -2755,61 +2789,59 @@ function MoveTransition( element ) {
   }
 
   /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent( _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this } );
-  }
-
-  /**
    * Move to the element's original coordinates.
+   *
    * @returns {MoveTransition} An instance.
    */
   function moveToOrigin() {
-    _baseTransition.applyClass( CLASSES.MOVE_TO_ORIGIN );
+    _baseTransition.applyClass(CLASSES.MOVE_TO_ORIGIN);
 
     return this;
   }
 
   /**
    * Move to the left by applying a utility move class.
-   * @param {Number} count
+   *
+   * @param {number} count- -
    *   How many times to move left as a multiplication of the element's width.
+   * @param count
    * @returns {MoveTransition} An instance.
    */
-  function moveLeft( count ) {
+  function moveLeft(count) {
     count = count || 1;
     const moveClasses = [
       CLASSES.MOVE_LEFT,
       CLASSES.MOVE_LEFT_2X,
-      CLASSES.MOVE_LEFT_3X
+      CLASSES.MOVE_LEFT_3X,
     ];
 
-    if ( count < 1 || count > moveClasses.length ) {
-      throw new Error( 'MoveTransition: moveLeft count is out of range!' );
+    if (count < 1 || count > moveClasses.length) {
+      throw new Error('MoveTransition: moveLeft count is out of range!');
     }
 
-    _baseTransition.applyClass( moveClasses[count - 1] );
+    _baseTransition.applyClass(moveClasses[count - 1]);
 
     return this;
   }
 
   /**
    * Move to the right by applying a utility move class.
+   *
    * @returns {MoveTransition} An instance.
    */
   function moveRight() {
-    _baseTransition.applyClass( CLASSES.MOVE_RIGHT );
+    _baseTransition.applyClass(CLASSES.MOVE_RIGHT);
 
     return this;
   }
 
   /**
    * Move up by applying a utility move class.
+   *
    * @returns {MoveTransition} An instance.
    */
   function moveUp() {
-    _baseTransition.applyClass( CLASSES.MOVE_UP );
+    _baseTransition.applyClass(CLASSES.MOVE_UP);
 
     return this;
   }
@@ -2869,70 +2901,57 @@ const _toString = Object.prototype.toString;
 /**
  * @name isUndefined
  * @kind function
- *
  * @description
  * Determines if a reference is undefined.
- *
- * @param {*} value Reference to check.
+ * @param {*} value - Reference to check.
  * @returns {boolean} True if `value` is undefined.
  */
-function isUndefined( value ) {
+function isUndefined(value) {
   return typeof value === 'undefined';
 }
-
 
 /**
  * @name isDefined
  * @kind function
- *
  * @description
  * Determines if a reference is defined.
- *
- * @param {*} value Reference to check.
+ * @param {*} value - Reference to check.
  * @returns {boolean} True if `value` is defined.
  */
-function isDefined( value ) {
+function isDefined(value) {
   return typeof value !== 'undefined';
 }
-
 
 /**
  * @name isObject
  * @kind function
- *
  * @description
  * Determines if a reference is an `Object`.
  * Unlike `typeof` in JavaScript, `null`s are not
  * considered to be objects. Note that JavaScript arrays are objects.
- *
- * @param {*} value Reference to check.
+ * @param {*} value - Reference to check.
  * @returns {boolean} True if `value` is an `Object` but not `null`.
  */
-function isObject( value ) {
+function isObject(value) {
   // http://jsperf.com/isobject4
   return value !== null && typeof value === 'object';
 }
 
-
 /**
  * @name isString
  * @kind function
- *
  * @description
  * Determines if a reference is a `String`.
- *
- * @param {*} value Reference to check.
+ * @param {*} value - Reference to check.
  * @returns {boolean} True if `value` is a `String`.
  */
-function isString( value ) {
-  return _toString.call( value ) === '[object String]';
+function isString(value) {
+  return _toString.call(value) === '[object String]';
 }
-
 
 /**
  * @name isNumber
  * @kind function
- *
  * @description
  * Determines if a reference is a `Number`.
  *
@@ -2942,57 +2961,49 @@ function isString( value ) {
  * [`isFinite'](https://developer.mozilla.org/en-US/docs/Web/JavaScript/
  *                      Reference/Global_Objects/isFinite)
  * method.
- *
- * @param {*} value Reference to check.
+ * @param {*} value - Reference to check.
  * @returns {boolean} True if `value` is a `Number`.
  */
-function isNumber( value ) {
-  return _toString.call( value ) === '[object Number]';
+function isNumber(value) {
+  return _toString.call(value) === '[object Number]';
 }
-
 
 /**
  * @name isDate
  * @kind function
- *
  * @description
  * Determines if a value is a date.
- *
- * @param {*} value Reference to check.
+ * @param {*} value - Reference to check.
  * @returns {boolean} True if `value` is a `Date`.
  */
-function isDate( value ) {
-  return _toString.call( value ) === '[object Date]';
+function isDate(value) {
+  return _toString.call(value) === '[object Date]';
 }
-
 
 /**
  * @name isArray
  * @kind function
- *
  * @description
  * Determines if a reference is an `Array`.
- *
- * @param {*} value Reference to check.
+ * @param {*} value - Reference to check.
  * @returns {boolean} True if `value` is an `Array`.
  */
-const isArray = Array.isArray || function isArray( value ) {
-  return _toString.call( value ) === '[object Array]';
-};
-
+const isArray =
+  Array.isArray ||
+  function isArray(value) {
+    return _toString.call(value) === '[object Array]';
+  };
 
 /**
  * @name isFunction
  * @kind function
- *
  * @description
  * Determines if a reference is a `Function`.
- *
- * @param {*} value Reference to check.
+ * @param {*} value - Reference to check.
  * @returns {boolean} True if `value` is a `Function`.
  */
-function isFunction( value ) {
-  return _toString.call( value ) === '[object Function]';
+function isFunction(value) {
+  return _toString.call(value) === '[object Function]';
 }
 
 // TODO Fix complexity issue
@@ -3000,19 +3011,18 @@ function isFunction( value ) {
 /**
  * @name isEmpty
  * @kind function
- *
  * @description
  * Determines if a reference is empty.
- *
- * @param {*} value Reference to check.
+ * @param {*} value - Reference to check.
  * @returns {boolean} True if `value` is empty.
  */
-function isEmpty( value ) {
-  return isUndefined( value ) ||
-         value === null ||
-         isString( value ) &&
-         value.length <= 0 ||
-         ( /^\s*$/ ).test( value );
+function isEmpty(value) {
+  return (
+    isUndefined(value) ||
+    value === null ||
+    (isString(value) && value.length <= 0) ||
+    /^\s*$/.test(value)
+  );
 }
 /* eslint-enable complexity, no-mixed-operators */
 
@@ -3026,7 +3036,7 @@ function isEmpty( value ) {
   isDate: isDate,
   isArray: isArray,
   isFunction: isFunction,
-  isEmpty: isEmpty
+  isEmpty: isEmpty,
 });
 
 
@@ -3055,76 +3065,66 @@ __webpack_require__.r(__webpack_exports__);
 
 const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
 
-const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__["default"].extend( {
-
-  ui: {
-    base:    '.o-expandable',
-    target:  '.o-expandable_target',
-    content: '.o-expandable_content',
-    header:  '.o-expandable_header',
-    label:   '.o-expandable_label'
-  },
-
-  classes: {
-    targetExpanded:  'o-expandable_target__expanded',
-    targetCollapsed: 'o-expandable_target__collapsed',
-    group:           'o-expandable-group',
-    groupAccordion:  'o-expandable-group__accordion'
-  },
-
-  events: {
-    'click .o-expandable_target': 'expandableClickHandler'
-  },
-
-  transition:       null,
-  isAccordionGroup: false,
-  activeAccordion:  false,
-
-  initialize:             initialize,
-  expandableClickHandler: expandableClickHandler,
-  toggleTargetState:      toggleTargetState,
-  getLabelText:           getLabelText
-} );
+/**
+ * Event handler for when an expandable begins expanding.
+ */
+function expandBeginHandler() {
+  this.ui.content.classList.remove('u-hidden');
+}
 
 /**
- * Initialize a new expandable.
+ * Event handler for when an expandable is finished collapsing.
  */
-function initialize() {
-  const transition = new _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__["default"](
-    this.ui.content
-  );
-  this.transition = transition.init();
-  this.transition.addEventListener( 'expandBegin', expandBeginHandler.bind( this ) );
-  this.transition.addEventListener( 'collapseEnd', collapseEndHandler.bind( this ) );
-
-  if ( this.ui.content.classList.contains( _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__["default"].CLASSES.EXPANDED ) ) {
-    this.ui.target.classList.add( this.classes.targetExpanded );
-  } else {
-    this.ui.target.classList.add( this.classes.targetCollapsed );
-    this.ui.content.classList.add( 'u-hidden' );
-  }
-
-  const expandableGroup = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_3__.closest)( this.ui.target, '.' + this.classes.group );
-
-  this.isAccordionGroup = expandableGroup !== null &&
-    expandableGroup.classList.contains( this.classes.groupAccordion );
-
-  if ( this.isAccordionGroup ) {
-    eventObserver.addEventListener(
-      'accordionActivated',
-      _accordionActivatedHandler.bind( this )
-    );
-  }
+function collapseEndHandler() {
+  this.ui.content.classList.add('u-hidden');
 }
 
 /**
  * Event handler for when an accordion is activated
  */
 function _accordionActivatedHandler() {
-  if ( this.activeAccordion ) {
+  if (this.activeAccordion) {
     this.transition.toggleExpandable();
-    this.toggleTargetState( this.ui.target );
+    this.toggleTargetState(this.ui.target);
     this.activeAccordion = false;
+  }
+}
+
+/**
+ * Initialize a new expandable.
+ */
+function initialize() {
+  const transition = new _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__["default"](this.ui.content);
+  this.transition = transition.init();
+  this.transition.addEventListener(
+    'expandBegin',
+    expandBeginHandler.bind(this)
+  );
+  this.transition.addEventListener(
+    'collapseEnd',
+    collapseEndHandler.bind(this)
+  );
+
+  if (
+    this.ui.content.classList.contains(_ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__["default"].CLASSES.EXPANDED)
+  ) {
+    this.ui.target.classList.add(this.classes.targetExpanded);
+  } else {
+    this.ui.target.classList.add(this.classes.targetCollapsed);
+    this.ui.content.classList.add('u-hidden');
+  }
+
+  const expandableGroup = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_3__.closest)(this.ui.target, '.' + this.classes.group);
+
+  this.isAccordionGroup =
+    expandableGroup !== null &&
+    expandableGroup.classList.contains(this.classes.groupAccordion);
+
+  if (this.isAccordionGroup) {
+    eventObserver.addEventListener(
+      'accordionActivated',
+      _accordionActivatedHandler.bind(this)
+    );
   }
 }
 
@@ -3133,53 +3133,71 @@ function _accordionActivatedHandler() {
  */
 function expandableClickHandler() {
   this.transition.toggleExpandable();
-  this.toggleTargetState( this.ui.target );
+  this.toggleTargetState(this.ui.target);
 
-  if ( this.isAccordionGroup ) {
-    if ( this.activeAccordion ) {
+  if (this.isAccordionGroup) {
+    if (this.activeAccordion) {
       this.activeAccordion = false;
     } else {
-      eventObserver.dispatchEvent( 'accordionActivated', { target: this } );
+      eventObserver.dispatchEvent('accordionActivated', { target: this });
       this.activeAccordion = true;
     }
   }
 }
 
 /**
- * Event handler for when an expandable begins expanding.
- */
-function expandBeginHandler() {
-  this.ui.content.classList.remove( 'u-hidden' );
-}
-
-/**
- * Event handler for when an expandable is finished collapsing.
- */
-function collapseEndHandler() {
-  this.ui.content.classList.add( 'u-hidden' );
-}
-
-/**
  * Toggle an expandable to open or closed.
+ *
  * @param {HTMLNode} element - The expandable target HTML DOM element.
  */
-function toggleTargetState( element ) {
-  if ( element.classList.contains( this.classes.targetExpanded ) ) {
-    this.ui.target.classList.add( this.classes.targetCollapsed );
-    this.ui.target.classList.remove( this.classes.targetExpanded );
+function toggleTargetState(element) {
+  if (element.classList.contains(this.classes.targetExpanded)) {
+    this.ui.target.classList.add(this.classes.targetCollapsed);
+    this.ui.target.classList.remove(this.classes.targetExpanded);
   } else {
-    this.ui.target.classList.add( this.classes.targetExpanded );
-    this.ui.target.classList.remove( this.classes.targetCollapsed );
+    this.ui.target.classList.add(this.classes.targetExpanded);
+    this.ui.target.classList.remove(this.classes.targetCollapsed);
   }
 }
 
 /**
  * Retrieve the label text of the expandable header.
+ *
  * @returns {string} The text of the expandable's label.
  */
 function getLabelText() {
   return this.ui.label.textContent.trim();
 }
+
+const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__["default"].extend({
+  ui: {
+    base: '.o-expandable',
+    target: '.o-expandable_target',
+    content: '.o-expandable_content',
+    header: '.o-expandable_header',
+    label: '.o-expandable_label',
+  },
+
+  classes: {
+    targetExpanded: 'o-expandable_target__expanded',
+    targetCollapsed: 'o-expandable_target__collapsed',
+    group: 'o-expandable-group',
+    groupAccordion: 'o-expandable-group__accordion',
+  },
+
+  events: {
+    'click .o-expandable_target': 'expandableClickHandler',
+  },
+
+  transition: null,
+  isAccordionGroup: false,
+  activeAccordion: false,
+
+  initialize: initialize,
+  expandableClickHandler: expandableClickHandler,
+  toggleTargetState: toggleTargetState,
+  getLabelText: getLabelText,
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (Expandable);
 
@@ -3203,25 +3221,39 @@ __webpack_require__.r(__webpack_exports__);
 // Exported constants.
 const CLASSES = {
   CSS_PROPERTY: 'max-height',
-  BASE_CLASS:   'o-expandable_content__transition',
-  EXPANDED:     'o-expandable_content__expanded',
-  COLLAPSED:    'o-expandable_content__collapsed',
-  OPEN_DEFAULT: 'o-expandable_content__onload-open'
+  BASE_CLASS: 'o-expandable_content__transition',
+  EXPANDED: 'o-expandable_content__expanded',
+  COLLAPSED: 'o-expandable_content__collapsed',
+  OPEN_DEFAULT: 'o-expandable_content__onload-open',
 };
 
 /* eslint-disable max-lines-per-function */
 /**
  * ExpandableTransition
+ *
  * @class
- *
  * @classdesc Initializes new ExpandableTransition behavior.
- *
  * @param {HTMLNode} element - DOM element to apply move transition to.
  * @returns {ExpandableTransition} An instance.
  */
-function ExpandableTransition( element ) {
-  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"]( element, CLASSES );
+function ExpandableTransition(element) {
+  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES);
   let previousHeight;
+
+  /**
+   * Handle the end of a transition.
+   */
+  function _transitionComplete() {
+    if (element.classList.contains(CLASSES.EXPANDED)) {
+      this.dispatchEvent('expandEnd', { target: this });
+
+      if (element.scrollHeight > previousHeight) {
+        element.style.maxHeight = element.scrollHeight + 'px';
+      }
+    } else if (element.classList.contains(CLASSES.COLLAPSED)) {
+      this.dispatchEvent('collapseEnd', { target: this });
+    }
+  }
 
   /**
    * @returns {ExpandableTransition} An instance.
@@ -3230,10 +3262,10 @@ function ExpandableTransition( element ) {
     _baseTransition.init();
     _baseTransition.addEventListener(
       _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
-      _transitionComplete.bind( this )
+      _transitionComplete.bind(this)
     );
 
-    if ( element.classList.contains( CLASSES.OPEN_DEFAULT ) ) {
+    if (element.classList.contains(CLASSES.OPEN_DEFAULT)) {
       this.expand();
     } else {
       this.collapse();
@@ -3243,26 +3275,12 @@ function ExpandableTransition( element ) {
   }
 
   /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    if ( element.classList.contains( CLASSES.EXPANDED ) ) {
-      this.dispatchEvent( 'expandEnd', { target: this } );
-
-      if ( element.scrollHeight > previousHeight ) {
-        element.style.maxHeight = element.scrollHeight + 'px';
-      }
-    } else if ( element.classList.contains( CLASSES.COLLAPSED ) ) {
-      this.dispatchEvent( 'collapseEnd', { target: this } );
-    }
-  }
-
-  /**
    * Toggle the expandable
+   *
    * @returns {ExpandableTransition} An instance.
    */
   function toggleExpandable() {
-    if ( element.classList.contains( CLASSES.COLLAPSED ) ) {
+    if (element.classList.contains(CLASSES.COLLAPSED)) {
       this.expand();
     } else {
       this.collapse();
@@ -3273,31 +3291,33 @@ function ExpandableTransition( element ) {
 
   /**
    * Collapses the expandable content
+   *
    * @returns {ExpandableTransition} An instance.
    */
   function collapse() {
-    this.dispatchEvent( 'collapseBegin', { target: this } );
+    this.dispatchEvent('collapseBegin', { target: this });
 
     previousHeight = element.scrollHeight;
     element.style.maxHeight = '0';
-    _baseTransition.applyClass( CLASSES.COLLAPSED );
+    _baseTransition.applyClass(CLASSES.COLLAPSED);
 
     return this;
   }
 
   /**
    * Expands the expandable content
+   *
    * @returns {ExpandableTransition} An instance.
    */
   function expand() {
-    this.dispatchEvent( 'expandBegin', { target: this } );
+    this.dispatchEvent('expandBegin', { target: this });
 
-    if ( !previousHeight || element.scrollHeight > previousHeight ) {
+    if (!previousHeight || element.scrollHeight > previousHeight) {
       previousHeight = element.scrollHeight;
     }
 
     element.style.maxHeight = previousHeight + 'px';
-    _baseTransition.applyClass( CLASSES.EXPANDED );
+    _baseTransition.applyClass(CLASSES.EXPANDED);
 
     return this;
   }
@@ -3360,15 +3380,16 @@ const BASE_CLASS = 'o-multiselect';
 
 /**
  * Multiselect
+ *
  * @class
- *
  * @classdesc Initializes a new Multiselect molecule.
- *
- * @param {HTMLNode} element
+ * @param element
+ * @param {HTMLNode} element- -
  *   The DOM element within which to search for the molecule.
  * @returns {Multiselect} An instance.
  */
-function Multiselect( element ) { // eslint-disable-line max-statements
+function Multiselect(element) {
+  // eslint-disable-line max-statements
 
   const CHECKBOX_INPUT_CLASS = 'a-checkbox';
   const TEXT_INPUT_CLASS = 'a-text-input';
@@ -3377,7 +3398,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
      explore whether it should use an updated
      class name or data-* attribute in the
      markup so that it doesn't apply globally by default. */
-  element.classList.add( BASE_CLASS );
+  element.classList.add(BASE_CLASS);
 
   // Constants for direction.
   const DIR_PREV = 'prev';
@@ -3392,7 +3413,7 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   const KEY_TAB = 9;
 
   // Internal vars.
-  let _dom = (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.checkDom)( element, BASE_CLASS );
+  let _dom = (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
   let _isBlurSkipped = false;
   let _name;
   let _placeholder;
@@ -3410,221 +3431,134 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   let _instance;
 
   /**
-   * Set up and create the multiselect.
-   * @returns {Multiselect} An instance.
+   * Set the filtered matched state.
    */
-  function init() {
-    if ( !(0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)( _dom ) ) {
-      return this;
+  function _filterMatches() {
+    _optionsDom.classList.remove('u-no-results');
+    _optionsDom.classList.add('u-filtered');
+
+    let filteredIndices = _model.getLastFilterIndices();
+    for (let i = 0, len = filteredIndices.length; i < len; i++) {
+      _optionItemDoms[filteredIndices[i]].classList.remove('u-filter-match');
     }
 
-    if ( (0,_cfpb_cfpb_atomic_component_src_utilities_media_helpers_js__WEBPACK_IMPORTED_MODULE_1__.isMobileUserAgent)() ) {
-      return this;
+    filteredIndices = _model.getFilterIndices();
+    for (let j = 0, len = filteredIndices.length; j < len; j++) {
+      _optionItemDoms[filteredIndices[j]].classList.add('u-filter-match');
+    }
+  }
+
+  /**
+   * Resets the filtered option list.
+   */
+  function _resetFilter() {
+    _optionsDom.classList.remove('u-filtered', 'u-no-results');
+
+    for (let i = 0, len = _optionsDom.children.length; i < len; i++) {
+      _optionsDom.children[i].classList.remove('u-filter-match');
     }
 
-    _instance = this;
-    _name = _dom.name || _dom.id;
-    _placeholder = _dom.getAttribute( 'placeholder' );
-    _options = _dom.options || [];
+    _model.clearFilter();
+  }
 
-    if ( _options.length > 0 ) {
-      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_3__["default"]( _options, _name ).init();
-      const newDom = _populateMarkup();
+  /**
+   * Updates the list of options to show the user there
+   * are no matching results.
+   */
+  function _filterNoMatches() {
+    _optionsDom.classList.add('u-no-results');
+    _optionsDom.classList.remove('u-filtered');
+  }
 
-      /* Removes <select> element,
-         and re-assign DOM reference. */
-      _dom.parentNode.removeChild( _dom );
-      _dom = newDom;
-
-      /* We need to set init flag again since we've created a new <div>
-         to replace the <select> element. */
-      (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)( _dom );
-
-      _bindEvents();
+  /**
+   * Filter the options list.
+   * Every time we filter we have two lists of indices:
+   * - The matching options (filterIndices).
+   * - The matching options of the last filter (_lastFilterIndices).
+   * We need to turn off the filter for any of the last filter matches
+   * that are not in the new set, and turn on the filter for the matches
+   * that are not in the last set.
+   *
+   * @param {Array} filterIndices - List of indices to filter from the options.
+   * @returns {boolean} True if options are filtered, false otherwise.
+   */
+  function _filterList(filterIndices) {
+    if (filterIndices.length > 0) {
+      _filterMatches();
+      return true;
     }
 
-    return this;
+    _filterNoMatches();
+    return false;
+  }
+
+  /**
+   * Evaluates the list of options based on the user's query in the
+   * search input.
+   *
+   * @param {string} value - Text the user has entered in the search query.
+   */
+  function _evaluate(value) {
+    _resetFilter();
+    _model.resetIndex();
+    const matchedIndices = _model.filterIndices(value);
+    _filterList(matchedIndices);
   }
 
   /**
    * Expand the multiselect drop down.
+   *
    * @returns {Multiselect} An instance.
    */
   function expand() {
-    _containerDom.classList.add( 'u-active' );
-    _fieldsetDom.classList.remove( 'u-invisible' );
-    _fieldsetDom.setAttribute( 'aria-hidden', false );
-    _instance.dispatchEvent( 'expandBegin', { target: _instance } );
+    _containerDom.classList.add('u-active');
+    _fieldsetDom.classList.remove('u-invisible');
+    _fieldsetDom.setAttribute('aria-hidden', false);
+    _instance.dispatchEvent('expandBegin', { target: _instance });
 
     return _instance;
   }
 
   /**
    * Collapse the multiselect drop down.
+   *
    * @returns {Multiselect} An instance.
    */
   function collapse() {
-    _containerDom.classList.remove( 'u-active' );
-    _fieldsetDom.classList.add( 'u-invisible' );
-    _fieldsetDom.setAttribute( 'aria-hidden', true );
+    _containerDom.classList.remove('u-active');
+    _fieldsetDom.classList.add('u-invisible');
+    _fieldsetDom.setAttribute('aria-hidden', true);
     _model.resetIndex();
     // TODO: This should be collapseBegin, not expandEnd, but we have a dependency on this event in the filters in cf.gov.
-    _instance.dispatchEvent( 'expandEnd', { target: _instance } );
+    _instance.dispatchEvent('expandEnd', { target: _instance });
 
     return _instance;
   }
 
   /**
-   * Populates and injects the markup for the custom multiselect.
-   * @returns {HTMLNode} Newly created <div> element to hold the multiselect.
-   */
-  function _populateMarkup() {
-    // Add a container for our markup
-    _containerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'div', {
-      className: BASE_CLASS,
-      around:    _dom
-    } );
-
-    // Create all our markup but wait to manipulate the DOM just once
-    _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'ul', {
-      className: BASE_CLASS + '_choices',
-      inside:    _containerDom
-    } );
-
-    _headerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'header', {
-      className: BASE_CLASS + '_header'
-    } );
-
-    _searchDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'input', {
-      className:    BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
-      type:         'text',
-      placeholder:  _placeholder || 'Select up to five',
-      inside:       _headerDom,
-      id:           _dom.id,
-      autocomplete: 'off'
-    } );
-
-    _fieldsetDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'fieldset', {
-      'className':   BASE_CLASS + '_fieldset u-invisible',
-      'aria-hidden': 'true'
-    } );
-
-    let optionsClasses = BASE_CLASS + '_options';
-    if ( _model.isAtMaxSelections() ) {
-      optionsClasses += ' u-max-selections';
-    }
-
-    _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'ul', {
-      className: optionsClasses,
-      inside:    _fieldsetDom
-    } );
-
-    let option;
-    let optionId;
-    let isChecked;
-    for ( let i = 0, len = _options.length; i < len; i++ ) {
-      option = _options[i];
-      optionId = _getOptionId( option );
-      isChecked = _model.getOption( i ).checked;
-      const optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'li', {
-        'data-option': option.value,
-        'data-cy': 'multiselect-option',
-        'class': 'm-form-field m-form-field__checkbox'
-      } );
-
-      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'input', {
-        'id':      optionId,
-        // Type must come before value or IE fails
-        'type':    'checkbox',
-        'value':   option.value,
-        'name':    _name,
-        'class':   CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
-        'inside':  optionsItemDom,
-        'checked': isChecked,
-        'data-index': i
-      } );
-
-      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'label', {
-        'for':         optionId,
-        'textContent': option.text,
-        'className':   BASE_CLASS + '_label a-label',
-        'inside':      optionsItemDom
-      } );
-
-      _optionItemDoms.push( optionsItemDom );
-      _optionsDom.appendChild( optionsItemDom );
-
-      if ( isChecked ) {
-        _createSelectedItem( _selectionsDom, option );
-      }
-    }
-
-    // Write our new markup to the DOM.
-    _containerDom.appendChild( _headerDom );
-    _containerDom.appendChild( _fieldsetDom );
-
-    return _containerDom;
-  }
-
-  /**
-   * @param {HTMLNode} selectionsDom - The UL item to inject list item into.
-   * @param {HTMLNode} option - The OPTION item to extract content from.
-   */
-  function _createSelectedItem( selectionsDom, option ) {
-    const optionId = _getOptionId( option );
-    const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'li', {
-      'data-option': option.value
-    } );
-
-    const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create( 'button', {
-      type: 'button',
-      innerHTML: '<label for=' + optionId + '>' +
-                 option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5___default()) + '</label>',
-      inside: selectionsItemDom
-    } );
-
-    selectionsDom.appendChild( selectionsItemDom );
-    selectionsItemDom.appendChild( selectionsItemLabelDom );
-
-    selectionsItemLabelDom.addEventListener( 'click', _selectionClickHandler );
-    selectionsItemLabelDom.addEventListener( 'keydown', _selectionKeyDownHandler );
-  }
-
-  /**
-   * Create a unique ID based on a select's option HTML element.
-   * @param {HTMLNode} option - A option HTML element.
-   * @returns {string} A hopefully unique ID.
-   */
-  function _getOptionId( option ) {
-    /* Replace any character that is not a word character with a dash.
-       https://regex101.com/r/ShHmRw/1
-    */
-    return _name + '-' + option.value.trim().replace( /[^\w]/g, '-' ).toLowerCase();
-  }
-
-  /**
    * Highlights an option in the list.
-   * @param {string} direction Direction to highlight compared to the
+   *
+   * @param {string} direction - Direction to highlight compared to the
    *                           current focus.
    */
-  function _highlight( direction ) {
-    if ( direction === DIR_NEXT ) {
-      _model.setIndex( _model.getIndex() + 1 );
-    } else if ( direction === DIR_PREV ) {
-      _model.setIndex( _model.getIndex() - 1 );
+  function _highlight(direction) {
+    if (direction === DIR_NEXT) {
+      _model.setIndex(_model.getIndex() + 1);
+    } else if (direction === DIR_PREV) {
+      _model.setIndex(_model.getIndex() - 1);
     }
 
     const index = _model.getIndex();
-    if ( index > -1 ) {
+    if (index > -1) {
       let filteredIndex = index;
       const filterIndices = _model.getFilterIndices();
-      if ( filterIndices.length > 0 ) {
+      if (filterIndices.length > 0) {
         filteredIndex = filterIndices[index];
       }
-      const option = _model.getOption( filteredIndex );
+      const option = _model.getOption(filteredIndex);
       const value = option.value;
-      const item = _optionsDom.querySelector( '[data-option="' + value + '"]' );
-      const input = item.querySelector( 'input' );
+      const item = _optionsDom.querySelector('[data-option="' + value + '"]');
+      const input = item.querySelector('input');
 
       _isBlurSkipped = true;
       input.focus();
@@ -3632,57 +3566,6 @@ function Multiselect( element ) { // eslint-disable-line max-statements
       _isBlurSkipped = false;
       _searchDom.focus();
     }
-  }
-
-  /**
-   * Tracks a user's selections and updates the list in the dom.
-   * @param {number} optionIndex - The index position of the chosen option.
-   */
-  function _updateSelections( optionIndex ) {
-    const option = _model.getOption( optionIndex ) || _model.getOption( _model.getIndex() );
-
-    if ( option ) {
-      if ( option.checked ) {
-        if ( _optionsDom.classList.contains( 'u-max-selections' ) ) {
-          _optionsDom.classList.remove( 'u-max-selections' );
-        }
-
-        const dataOptionSel = '[data-option="' + option.value + '"]';
-        const _selectionsItemDom = _selectionsDom.querySelector( dataOptionSel );
-
-        if ( typeof _selectionsItemDom !== 'undefined' ) {
-          _selectionsDom.removeChild( _selectionsItemDom );
-        }
-      } else {
-        _createSelectedItem( _selectionsDom, option );
-      }
-      _model.toggleOption( optionIndex );
-
-      if ( _model.isAtMaxSelections() ) {
-        _optionsDom.classList.add( 'u-max-selections' );
-      }
-
-      _instance.dispatchEvent( 'selectionsUpdated', { target: _instance } );
-    }
-
-    _model.resetIndex();
-    _isBlurSkipped = false;
-
-    if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
-      _searchDom.focus();
-    }
-  }
-
-  /**
-   * Evaluates the list of options based on the user's query in the
-   * search input.
-   * @param {string} value Text the user has entered in the search query.
-   */
-  function _evaluate( value ) {
-    _resetFilter();
-    _model.resetIndex();
-    const matchedIndices = _model.filterIndices( value );
-    _filterList( matchedIndices );
   }
 
   /**
@@ -3694,82 +3577,143 @@ function Multiselect( element ) { // eslint-disable-line max-statements
   }
 
   /**
-   * Filter the options list.
-   * Every time we filter we have two lists of indices:
-   * - The matching options (filterIndices).
-   * - The matching options of the last filter (_lastFilterIndices).
-   * We need to turn off the filter for any of the last filter matches
-   * that are not in the new set, and turn on the filter for the matches
-   * that are not in the last set.
-   * @param {Array} filterIndices - List of indices to filter from the options.
-   * @returns {boolean} True if options are filtered, false otherwise.
+   * This passes the click of the selected item button down to the label it
+   * contains. This is only required for browsers (IE11) that prevent the
+   * click of a selected item from cascading from the button down to the label
+   * it contains.
+   *
+   * @param {MouseEvent} event - The mouse click event object.
    */
-  function _filterList( filterIndices ) {
-    if ( filterIndices.length > 0 ) {
-      _filterMatches();
-      return true;
-    }
-
-    _filterNoMatches();
-    return false;
-  }
-
-  /**
-   * Resets the filtered option list.
-   */
-  function _resetFilter() {
-    _optionsDom.classList.remove( 'u-filtered', 'u-no-results' );
-
-    for ( let i = 0, len = _optionsDom.children.length; i < len; i++ ) {
-      _optionsDom.children[i].classList.remove( 'u-filter-match' );
-    }
-
-    _model.clearFilter();
-  }
-
-  /**
-   * Set the filtered matched state.
-   */
-  function _filterMatches() {
-    _optionsDom.classList.remove( 'u-no-results' );
-    _optionsDom.classList.add( 'u-filtered' );
-
-    let filteredIndices = _model.getLastFilterIndices();
-    for ( let i = 0, len = filteredIndices.length; i < len; i++ ) {
-      _optionItemDoms[filteredIndices[i]].classList.remove( 'u-filter-match' );
-    }
-
-    filteredIndices = _model.getFilterIndices();
-    for ( let j = 0, len = filteredIndices.length; j < len; j++ ) {
-      _optionItemDoms[filteredIndices[j]].classList.add( 'u-filter-match' );
+  function _selectionClickHandler(event) {
+    const target = event.target;
+    if (target.tagName === 'BUTTON') {
+      event.preventDefault();
+      target.removeEventListener('click', _selectionClickHandler);
+      target.querySelector('label').click();
     }
   }
 
   /**
-   * Updates the list of options to show the user there
-   * are no matching results.
+   * @param {KeyEvent} event - The key down event object.
    */
-  function _filterNoMatches() {
-    _optionsDom.classList.add( 'u-no-results' );
-    _optionsDom.classList.remove( 'u-filtered' );
+  function _selectionKeyDownHandler(event) {
+    if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
+      const label = event.target.querySelector('label');
+      const checkbox = _optionsDom.querySelector(
+        '#' + label.getAttribute('for')
+      );
+      checkbox.click();
+    }
+  }
+
+  /**
+   * Create a unique ID based on a select's option HTML element.
+   *
+   * @param {HTMLNode} option - A option HTML element.
+   * @returns {string} A hopefully unique ID.
+   */
+  function _getOptionId(option) {
+    /* Replace any character that is not a word character with a dash.
+       https://regex101.com/r/ShHmRw/1
+    */
+    return (
+      _name + '-' + option.value.trim().replace(/[^\w]/g, '-').toLowerCase()
+    );
+  }
+
+  /**
+   * @param {HTMLNode} selectionsDom - The UL item to inject list item into.
+   * @param {HTMLNode} option - The OPTION item to extract content from.
+   */
+  function _createSelectedItem(selectionsDom, option) {
+    const optionId = _getOptionId(option);
+    const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('li', {
+      'data-option': option.value,
+    });
+
+    const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('button', {
+      type: 'button',
+      innerHTML:
+        '<label for=' + optionId + '>' + option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5___default()) + '</label>',
+      inside: selectionsItemDom,
+    });
+
+    selectionsDom.appendChild(selectionsItemDom);
+    selectionsItemDom.appendChild(selectionsItemLabelDom);
+
+    selectionsItemLabelDom.addEventListener('click', _selectionClickHandler);
+    selectionsItemLabelDom.addEventListener(
+      'keydown',
+      _selectionKeyDownHandler
+    );
+  }
+
+  /**
+   * Tracks a user's selections and updates the list in the dom.
+   *
+   * @param {number} optionIndex - The index position of the chosen option.
+   */
+  function _updateSelections(optionIndex) {
+    const option =
+      _model.getOption(optionIndex) || _model.getOption(_model.getIndex());
+
+    if (option) {
+      if (option.checked) {
+        if (_optionsDom.classList.contains('u-max-selections')) {
+          _optionsDom.classList.remove('u-max-selections');
+        }
+
+        const dataOptionSel = '[data-option="' + option.value + '"]';
+        const _selectionsItemDom = _selectionsDom.querySelector(dataOptionSel);
+
+        if (typeof _selectionsItemDom !== 'undefined') {
+          _selectionsDom.removeChild(_selectionsItemDom);
+        }
+      } else {
+        _createSelectedItem(_selectionsDom, option);
+      }
+      _model.toggleOption(optionIndex);
+
+      if (_model.isAtMaxSelections()) {
+        _optionsDom.classList.add('u-max-selections');
+      }
+
+      _instance.dispatchEvent('selectionsUpdated', { target: _instance });
+    }
+
+    _model.resetIndex();
+    _isBlurSkipped = false;
+
+    if (_fieldsetDom.getAttribute('aria-hidden') === 'false') {
+      _searchDom.focus();
+    }
+  }
+
+  /**
+   * Handles the functions to trigger on the checkbox change.
+   *
+   * @param {Event} event - The checkbox change event.
+   */
+  function _changeHandler(event) {
+    _updateSelections(Number(event.target.getAttribute('data-index')));
+    _resetSearch();
   }
 
   /**
    * Binds events to the search input, option list, and checkboxes.
    */
   function _bindEvents() {
-
-    _headerDom.addEventListener( 'mousemove', function( event ) {
+    _headerDom.addEventListener('mousemove', function (event) {
       const target = event.target;
       // Check if we're over the down-arrow on the right side of the input.
-      if ( event.offsetX > target.offsetWidth - 35 ) {
+      if (event.offsetX > target.offsetWidth - 35) {
         target.style.cursor = 'pointer';
       } else {
         target.style.cursor = 'auto';
       }
-    } );
+    });
 
-    _headerDom.addEventListener( 'mouseup', function( event ) {
+    _headerDom.addEventListener('mouseup', function (event) {
       const target = event.target;
 
       /* Check if we're over the down-arrow on the right side of the input.
@@ -3777,135 +3721,237 @@ function Multiselect( element ) { // eslint-disable-line max-statements
          35 = width of the arrow on the right of the search input.
          140 = the max-height value set in multiselect.less for the fieldset.
       */
-      if ( event.offsetX > target.offsetWidth - 35 &&
-           _fieldsetDom.offsetHeight === 140 ) {
+      if (
+        event.offsetX > target.offsetWidth - 35 &&
+        _fieldsetDom.offsetHeight === 140
+      ) {
         _searchDom.blur();
       }
-    } );
+    });
 
-    _searchDom.addEventListener( 'input', function() {
-      _evaluate( this.value );
-    } );
+    _searchDom.addEventListener('input', function () {
+      _evaluate(this.value);
+    });
 
-    _searchDom.addEventListener( 'focus', function() {
-      if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' ) {
+    _searchDom.addEventListener('focus', function () {
+      if (_fieldsetDom.getAttribute('aria-hidden') === 'true') {
         expand();
       }
-    } );
+    });
 
-    _searchDom.addEventListener( 'blur', function() {
-      if ( !_isBlurSkipped &&
-           _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
+    _searchDom.addEventListener('blur', function () {
+      if (
+        !_isBlurSkipped &&
+        _fieldsetDom.getAttribute('aria-hidden') === 'false'
+      ) {
         collapse();
       }
-    } );
+    });
 
-    _searchDom.addEventListener( 'keydown', function( event ) {
+    _searchDom.addEventListener('keydown', function (event) {
       const key = event.keyCode;
 
-      if ( _fieldsetDom.getAttribute( 'aria-hidden' ) === 'true' &&
-            key !== KEY_TAB ) {
+      if (
+        _fieldsetDom.getAttribute('aria-hidden') === 'true' &&
+        key !== KEY_TAB
+      ) {
         expand();
       }
 
-      if ( key === KEY_RETURN ) {
+      if (key === KEY_RETURN) {
         event.preventDefault();
-        _highlight( DIR_NEXT );
-      } else if ( key === KEY_ESCAPE ) {
+        _highlight(DIR_NEXT);
+      } else if (key === KEY_ESCAPE) {
         _resetSearch();
         collapse();
-      } else if ( key === KEY_DOWN ) {
-        _highlight( DIR_NEXT );
-      } else if ( key === KEY_TAB &&
-                  !event.shiftKey &&
-                  _fieldsetDom.getAttribute( 'aria-hidden' ) === 'false' ) {
+      } else if (key === KEY_DOWN) {
+        _highlight(DIR_NEXT);
+      } else if (
+        key === KEY_TAB &&
+        !event.shiftKey &&
+        _fieldsetDom.getAttribute('aria-hidden') === 'false'
+      ) {
         collapse();
       }
-    } );
+    });
 
-    _optionsDom.addEventListener( 'mousedown', function() {
+    _optionsDom.addEventListener('mousedown', function () {
       _isBlurSkipped = true;
-    } );
+    });
 
-    _optionsDom.addEventListener( 'keydown', function( event ) {
+    _optionsDom.addEventListener('keydown', function (event) {
       const key = event.keyCode;
       const target = event.target;
       const checked = target.checked;
 
-      if ( key === KEY_RETURN ) {
+      if (key === KEY_RETURN) {
         event.preventDefault();
 
         /* Programmatically checking a checkbox does not fire a change event
         so we need to manually create an event and dispatch it from the input.
         */
         target.checked = !checked;
-        const evt = document.createEvent( 'HTMLEvents' );
-        evt.initEvent( 'change', false, true );
-        target.dispatchEvent( evt );
-      } else if ( key === KEY_ESCAPE ) {
+        const evt = document.createEvent('HTMLEvents');
+        evt.initEvent('change', false, true);
+        target.dispatchEvent(evt);
+      } else if (key === KEY_ESCAPE) {
         _searchDom.focus();
         collapse();
-      } else if ( key === KEY_UP ) {
-        _highlight( DIR_PREV );
-      } else if ( key === KEY_DOWN ) {
-        _highlight( DIR_NEXT );
+      } else if (key === KEY_UP) {
+        _highlight(DIR_PREV);
+      } else if (key === KEY_DOWN) {
+        _highlight(DIR_NEXT);
       }
-    } );
+    });
 
-    _fieldsetDom.addEventListener( 'mousedown', function( event ) {
-      if ( event.target.tagName === 'LABEL' ) {
+    _fieldsetDom.addEventListener('mousedown', function (event) {
+      if (event.target.tagName === 'LABEL') {
         _isBlurSkipped = true;
       }
-    } );
+    });
 
-    const inputs = _optionsDom.querySelectorAll( 'input' );
-    for ( let i = 0, len = inputs.length; i < len; i++ ) {
-      inputs[i].addEventListener( 'change', _changeHandler );
+    const inputs = _optionsDom.querySelectorAll('input');
+    for (let i = 0, len = inputs.length; i < len; i++) {
+      inputs[i].addEventListener('change', _changeHandler);
     }
 
     // Add event listeners to any selections that are present at page load.
-    const labelButtons = _selectionsDom.querySelectorAll( 'button' );
-    for ( let j = 0, len = labelButtons.length; j < len; j++ ) {
-      labelButtons[j].addEventListener( 'click', _selectionClickHandler );
-      labelButtons[j].addEventListener( 'keydown', _selectionKeyDownHandler );
+    const labelButtons = _selectionsDom.querySelectorAll('button');
+    for (let j = 0, len = labelButtons.length; j < len; j++) {
+      labelButtons[j].addEventListener('click', _selectionClickHandler);
+      labelButtons[j].addEventListener('keydown', _selectionKeyDownHandler);
     }
   }
 
   /**
-   * This passes the click of the selected item button down to the label it
-   * contains. This is only required for browsers (IE11) that prevent the
-   * click of a selected item from cascading from the button down to the label
-   * it contains.
-   * @param {MouseEvent} event - The mouse click event object.
+   * Populates and injects the markup for the custom multiselect.
+   *
+   * @returns {HTMLNode} Newly created <div> element to hold the multiselect.
    */
-  function _selectionClickHandler( event ) {
-    const target = event.target;
-    if ( target.tagName === 'BUTTON' ) {
-      event.preventDefault();
-      target.removeEventListener( 'click', _selectionClickHandler );
-      target.querySelector( 'label' ).click();
+  function _populateMarkup() {
+    // Add a container for our markup
+    _containerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('div', {
+      className: BASE_CLASS,
+      around: _dom,
+    });
+
+    // Create all our markup but wait to manipulate the DOM just once
+    _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('ul', {
+      className: BASE_CLASS + '_choices',
+      inside: _containerDom,
+    });
+
+    _headerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('header', {
+      className: BASE_CLASS + '_header',
+    });
+
+    _searchDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('input', {
+      className: BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
+      type: 'text',
+      placeholder: _placeholder || 'Select up to five',
+      inside: _headerDom,
+      id: _dom.id,
+      autocomplete: 'off',
+    });
+
+    _fieldsetDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('fieldset', {
+      className: BASE_CLASS + '_fieldset u-invisible',
+      'aria-hidden': 'true',
+    });
+
+    let optionsClasses = BASE_CLASS + '_options';
+    if (_model.isAtMaxSelections()) {
+      optionsClasses += ' u-max-selections';
     }
+
+    _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('ul', {
+      className: optionsClasses,
+      inside: _fieldsetDom,
+    });
+
+    let option;
+    let optionId;
+    let isChecked;
+    for (let i = 0, len = _options.length; i < len; i++) {
+      option = _options[i];
+      optionId = _getOptionId(option);
+      isChecked = _model.getOption(i).checked;
+      const optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('li', {
+        'data-option': option.value,
+        'data-cy': 'multiselect-option',
+        class: 'm-form-field m-form-field__checkbox',
+      });
+
+      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('input', {
+        id: optionId,
+        // Type must come before value or IE fails
+        type: 'checkbox',
+        value: option.value,
+        name: _name,
+        class: CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
+        inside: optionsItemDom,
+        checked: isChecked,
+        'data-index': i,
+      });
+
+      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('label', {
+        for: optionId,
+        textContent: option.text,
+        className: BASE_CLASS + '_label a-label',
+        inside: optionsItemDom,
+      });
+
+      _optionItemDoms.push(optionsItemDom);
+      _optionsDom.appendChild(optionsItemDom);
+
+      if (isChecked) {
+        _createSelectedItem(_selectionsDom, option);
+      }
+    }
+
+    // Write our new markup to the DOM.
+    _containerDom.appendChild(_headerDom);
+    _containerDom.appendChild(_fieldsetDom);
+
+    return _containerDom;
   }
 
   /**
-   * @param {KeyEvent} event - The key down event object.
+   * Set up and create the multiselect.
+   *
+   * @returns {Multiselect} An instance.
    */
-  function _selectionKeyDownHandler( event ) {
-    if ( event.keyCode === KEY_SPACE ||
-         event.keyCode === KEY_RETURN ) {
-      const label = event.target.querySelector( 'label' );
-      const checkbox = _optionsDom.querySelector( '#' + label.getAttribute( 'for' ) );
-      checkbox.click();
+  function init() {
+    if (!(0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
+      return this;
     }
-  }
 
-  /**
-   * Handles the functions to trigger on the checkbox change.
-   * @param   {Event} event The checkbox change event.
-   */
-  function _changeHandler( event ) {
-    _updateSelections( Number( event.target.getAttribute( 'data-index' ) ) );
-    _resetSearch();
+    if ((0,_cfpb_cfpb_atomic_component_src_utilities_media_helpers_js__WEBPACK_IMPORTED_MODULE_1__.isMobileUserAgent)()) {
+      return this;
+    }
+
+    _instance = this;
+    _name = _dom.name || _dom.id;
+    _placeholder = _dom.getAttribute('placeholder');
+    _options = _dom.options || [];
+
+    if (_options.length > 0) {
+      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_3__["default"](_options, _name).init();
+      const newDom = _populateMarkup();
+
+      /* Removes <select> element,
+         and re-assign DOM reference. */
+      _dom.parentNode.removeChild(_dom);
+      _dom = newDom;
+
+      /* We need to set init flag again since we've created a new <div>
+         to replace the <select> element. */
+      (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom);
+
+      _bindEvents();
+    }
+
+    return this;
   }
 
   // Attach public events.
@@ -3944,21 +3990,23 @@ const MAX_SELECTIONS = 5;
 
 /**
  * Escapes a string.
- * @param {string} str The string to escape.
+ *
+ * @param {string} str - The string to escape.
  * @returns {string} The escaped string.
  */
-function stringEscape( str ) {
-  return str.replace( /[-\\^$*+?.()|[\]{}]/g, '\\$&' );
+function stringEscape(str) {
+  return str.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
 }
 
 /**
  * Tests whether a string matches another.
- * @param   {string}  x The control string.
- * @param   {string}  y The comparison string.
+ *
+ * @param   {string}  x - The control string.
+ * @param   {string}  y - The comparison string.
  * @returns {boolean}   True if `x` and `y` match, false otherwise.
  */
-function stringMatch( x, y ) {
-  return RegExp( stringEscape( y.trim() ), 'i' ).test( x );
+function stringMatch(x, y) {
+  return RegExp(stringEscape(y.trim()), 'i').test(x);
 }
 
 /**
@@ -3968,7 +4016,7 @@ function stringMatch( x, y ) {
  *   Set of options from a <select> element.
  * @param {string} name - a unique name for this multiselect.
  */
-function MultiselectModel( options, name ) {
+function MultiselectModel(options, name) {
   const _options = options;
   const _name = name;
   let _optionsData = [];
@@ -3984,67 +4032,12 @@ function MultiselectModel( options, name ) {
   let _index = -1;
 
   /**
-   * @returns {MultiselectModel} An instance.
+   * @param {HTMLNode} item - An option HTML node.
+   * @returns {string} A (hopefully) unique ID.
+   *   If it's not unique, we have a duplicate option value.
    */
-  function init() {
-    _optionsData = _formatOptions( _options );
-
-    return this;
-  }
-
-  /**
-   * Cleans up a list of options for saving to memory.
-   * @param {HTMLOptionsCollection} list - The options from a select element.
-   * @returns {Array} An array of option objects.
-   */
-  function _formatOptions( list ) {
-    let item;
-    const cleaned = [];
-
-    let isChecked = false;
-    for ( let i = 0, len = list.length; i < len; i++ ) {
-      item = list[i];
-      isChecked = isAtMaxSelections() ? false : item.defaultSelected;
-      cleaned.push( {
-        id:      _getOptionId( item ),
-        value:   item.value,
-        text:    item.text,
-        checked: isChecked
-      } );
-
-      // If an option is initially checked, we need to record it.
-      if ( isChecked ) {
-        _selectedIndices.push( i );
-      }
-    }
-
-    return cleaned;
-  }
-
-  /**
-   * Toggle checked value of an option.
-   * @param {number} index - The index position of the option in the list.
-   * @returns {boolean} A value of true is checked and false is unchecked.
-   */
-  function toggleOption( index ) {
-    _optionsData[index].checked = !_optionsData[index].checked;
-
-    if ( _selectedIndices.length < MAX_SELECTIONS &&
-         _optionsData[index].checked ) {
-      _selectedIndices.push( index );
-      _selectedIndices.sort();
-
-      return true;
-    }
-    // We're over the max selections, reverse the check of the option.
-    _optionsData[index].checked = false;
-    _selectedIndices = _selectedIndices.filter(
-      function( currIndex ) {
-        return currIndex !== index;
-      }
-    );
-
-    return false;
+  function _getOptionId(item) {
+    return _name + '-' + item.value.trim().replace(/\s+/g, '-').toLowerCase();
   }
 
   /**
@@ -4056,24 +4049,104 @@ function MultiselectModel( options, name ) {
   }
 
   /**
+   * Cleans up a list of options for saving to memory.
+   *
+   * @param {HTMLOptionsCollection} list - The options from a select element.
+   * @returns {Array} An array of option objects.
+   */
+  function _formatOptions(list) {
+    let item;
+    const cleaned = [];
+
+    let isChecked = false;
+    for (let i = 0, len = list.length; i < len; i++) {
+      item = list[i];
+      isChecked = isAtMaxSelections() ? false : item.defaultSelected;
+      cleaned.push({
+        id: _getOptionId(item),
+        value: item.value,
+        text: item.text,
+        checked: isChecked,
+      });
+
+      // If an option is initially checked, we need to record it.
+      if (isChecked) {
+        _selectedIndices.push(i);
+      }
+    }
+
+    return cleaned;
+  }
+
+  /**
+   * @returns {MultiselectModel} An instance.
+   */
+  function init() {
+    _optionsData = _formatOptions(_options);
+
+    return this;
+  }
+
+  /**
+   * Toggle checked value of an option.
+   *
+   * @param {number} index - The index position of the option in the list.
+   * @returns {boolean} A value of true is checked and false is unchecked.
+   */
+  function toggleOption(index) {
+    _optionsData[index].checked = !_optionsData[index].checked;
+
+    if (
+      _selectedIndices.length < MAX_SELECTIONS &&
+      _optionsData[index].checked
+    ) {
+      _selectedIndices.push(index);
+      _selectedIndices.sort();
+
+      return true;
+    }
+    // We're over the max selections, reverse the check of the option.
+    _optionsData[index].checked = false;
+    _selectedIndices = _selectedIndices.filter(function (currIndex) {
+      return currIndex !== index;
+    });
+
+    return false;
+  }
+
+  /**
+   * Utility function for Array.reduce() used in searchIndices.
+   *
+   * @param {Array} aggregate - The reducer's accumulator.
+   * @param {object} item - Each item in the collection.
+   * @param {number} index - The index of item in the collection.
+   * @param {string} value - The value of item in the collection.
+   * @returns {Array} The reducer's accumulator.
+   */
+  function _searchAggregator(aggregate, item, index, value) {
+    if (stringMatch(item.text, value)) {
+      aggregate.push(index);
+    }
+    return aggregate;
+  }
+
+  /**
    * Search for a query string in the options text and return the indices of
    * the matching positions in the options array.
+   *
    * @param {string} query - A query string.
    * @returns {Array} List of indices of the matching entries from the options.
    */
-  function filterIndices( query ) {
+  function filterIndices(query) {
     // Convert query to a string if its not.
-    if ( Object.prototype.toString.call( query ) !== '[object String]' ) {
+    if (Object.prototype.toString.call(query) !== '[object String]') {
       query = '';
     }
     _lastFilterIndices = _filterIndices;
-    if ( _optionsData.length > 0 ) {
-      _filterIndices = _optionsData.reduce(
-        function( acc, item, index ) {
-          return _searchAggregator( acc, item, index, query );
-        },
-        []
-      );
+    if (_optionsData.length > 0) {
+      _filterIndices = _optionsData.reduce(function (acc, item, index) {
+        return _searchAggregator(acc, item, index, query);
+      }, []);
     }
     // Reset index position.
     _index = -1;
@@ -4083,38 +4156,25 @@ function MultiselectModel( options, name ) {
 
   /**
    * Retrieve an option object from the options list.
+   *
    * @param {number} index - The index position in the options list.
-   * @returns {Object} The option object with text, value, and checked value.
+   * @returns {object} The option object with text, value, and checked value.
    */
-  function getOption( index ) {
+  function getOption(index) {
     return _optionsData[index];
   }
 
   /**
-   * Utility function for Array.reduce() used in searchIndices.
-   * @param {Array} aggregate - The reducer's accumulator.
-   * @param {Object} item - Each item in the collection.
-   * @param {number} index - The index of item in the collection.
-   * @param {string} value - The value of item in the collection.
-   * @returns {Array} The reducer's accumulator.
-   */
-  function _searchAggregator( aggregate, item, index, value ) {
-    if ( stringMatch( item.text, value ) ) {
-      aggregate.push( index );
-    }
-    return aggregate;
-  }
-
-  /**
    * Set the index of the collection (represents the highlighted option).
+   *
    * @param {number} value - The index to set.
    */
-  function setIndex( value ) {
+  function setIndex(value) {
     const filterCount = _filterIndices.length;
     const count = filterCount === 0 ? _optionsData.length : filterCount;
-    if ( value < 0 ) {
+    if (value < 0) {
       _index = -1;
-    } else if ( value >= count ) {
+    } else if (value >= count) {
       _index = count - 1;
     } else {
       _index = value;
@@ -4128,35 +4188,32 @@ function MultiselectModel( options, name ) {
     return _index;
   }
 
-  /**
-   * @param {HTMLNode} item - An option HTML node.
-   * @returns {string} A (hopefully) unique ID.
-   *   If it's not unique, we have a duplicate option value.
-   */
-  function _getOptionId( item ) {
-    return _name + '-' + item.value.trim().replace( /\s+/g, '-' ).toLowerCase();
-  }
-
   this.init = init;
 
   // This is used to check an item in the collection.
   this.toggleOption = toggleOption;
-  this.getSelectedIndices = function() { return _selectedIndices; };
+  this.getSelectedIndices = function () {
+    return _selectedIndices;
+  };
   this.isAtMaxSelections = isAtMaxSelections;
 
   // This is used to search the items in the collection.
   this.filterIndices = filterIndices;
-  this.clearFilter = function() {
+  this.clearFilter = function () {
     _filterIndices = _lastFilterIndices = [];
     return UNDEFINED;
   };
-  this.getFilterIndices = function() { return _filterIndices; };
-  this.getLastFilterIndices = function() { return _lastFilterIndices; };
+  this.getFilterIndices = function () {
+    return _filterIndices;
+  };
+  this.getLastFilterIndices = function () {
+    return _lastFilterIndices;
+  };
 
   // These are used to highlight items in the collection.
   this.getIndex = getIndex;
   this.setIndex = setIndex;
-  this.resetIndex = function() {
+  this.resetIndex = function () {
     _index = -1;
     return _index;
   };
@@ -4185,30 +4242,31 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * Shortcut for creating new dom elements.
+ *
  * @param {string} tag - The html elem to create.
- * @param {Object} options - The options for building the elem.
+ * @param {object} options - The options for building the elem.
  * @returns {HTMLNode} The created elem.
  */
-function create( tag, options ) {
-  const elem = document.createElement( tag );
+function create(tag, options) {
+  const elem = document.createElement(tag);
 
   let i;
-  for ( i in options ) {
-    if ( options.hasOwnProperty( i ) ) {
+  for (i in options) {
+    if (Object.prototype.hasOwnProperty.call(options, i)) {
       const val = options[i];
       let ref;
 
-      if ( i === 'inside' ) {
-        ref = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.queryOne)( val );
-        ref.appendChild( elem );
-      } else if ( i === 'around' ) {
-        ref = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.queryOne)( val );
-        ref.parentNode.insertBefore( elem, ref );
-        elem.appendChild( ref );
-      } else if ( i in elem ) {
+      if (i === 'inside') {
+        ref = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.queryOne)(val);
+        ref.appendChild(elem);
+      } else if (i === 'around') {
+        ref = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.queryOne)(val);
+        ref.parentNode.insertBefore(elem, ref);
+        elem.appendChild(ref);
+      } else if (i in elem) {
         elem[i] = val;
       } else {
-        elem.setAttribute( i, val );
+        elem.setAttribute(i, val);
       }
     }
   }
@@ -4217,7 +4275,7 @@ function create( tag, options ) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  create: create
+  create: create,
 });
 
 
@@ -4244,13 +4302,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Table = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__["default"].extend( {
+const Table = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__["default"].extend({
   ui: {
-    base: '.o-table'
+    base: '.o-table',
   },
 
-  modifiers: [ _TableSortable_js__WEBPACK_IMPORTED_MODULE_2__["default"], _TableRowLinks_js__WEBPACK_IMPORTED_MODULE_1__["default"] ]
-} );
+  modifiers: [_TableSortable_js__WEBPACK_IMPORTED_MODULE_2__["default"], _TableRowLinks_js__WEBPACK_IMPORTED_MODULE_1__["default"]],
+});
 
 Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_3__.DIRECTIONS;
 
@@ -4276,35 +4334,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const TableRowLinks = {
-  ui: {
-    base: '.o-table__row-links'
-  },
-
-  events: {
-    'click tbody tr': 'onRowLinkClick'
-  },
-
-  onRowLinkClick: onRowLinkClick
-};
-
 /**
  * Handle a click of the table.
  *
  * @param {MouseEvent} event - Mouse event for click on the table.
  */
-function onRowLinkClick( event ) {
+function onRowLinkClick(event) {
   let target = event.target;
-  if ( target && target.tagName === 'A' ) {
+  if (target && target.tagName === 'A') {
     return;
   }
-  target = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.closest)( event.target, 'tr' );
-  const link = target.querySelector( 'a' );
-  if ( link ) {
-    window.location = link.getAttribute( 'href' );
+  target = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.closest)(event.target, 'tr');
+  const link = target.querySelector('a');
+  if (link) {
+    window.location = link.getAttribute('href');
   }
 }
+
+const TableRowLinks = {
+  ui: {
+    base: '.o-table__row-links',
+  },
+
+  events: {
+    'click tbody tr': 'onRowLinkClick',
+  },
+
+  onRowLinkClick: onRowLinkClick,
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (TableRowLinks);
 
@@ -4330,34 +4387,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 let UNDEFINED;
-
-const TableSortable = {
-  ui: {
-    base:       '.o-table__sortable',
-    tableBody:  'tbody',
-    sortButton: '.sorted-up, .sorted-down'
-  },
-
-  classes: {
-    sortDown: 'sorted-down',
-    sortUp:   'sorted-up'
-  },
-
-  events: {
-    'click .sortable': 'onSortableClick'
-  },
-
-  initialize:      initialize,
-  bindProperties:  bindProperties,
-  getColumnIndex:  getColumnIndex,
-  updateTable:     updateTable,
-  updateTableData: updateTableData,
-  updateTableDom:  updateTableDom,
-  tableDataSorter: tableDataSorter,
-  onSortableClick: onSortableClick
-};
 
 /**
  * Function used to create computed and triggered properties.
@@ -4368,11 +4398,11 @@ function initialize() {
   this.sortDirection = UNDEFINED;
   this.tableData = [];
   this.bindProperties();
-  if ( this.ui.sortButton ) {
+  if (this.ui.sortButton) {
     this.sortColumnIndex = this.getColumnIndex();
 
     this.sortDirection = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.UP;
-    if ( this.ui.sortButton.classList.contains( this.classes.sortDown ) ) {
+    if (this.ui.sortButton.classList.contains(this.classes.sortDown)) {
       this.sortDirection = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.DOWN;
     }
 
@@ -4386,20 +4416,20 @@ function initialize() {
 function bindProperties() {
   let sortDirection;
 
-  Object.defineProperty( this, 'sortDirection', {
+  Object.defineProperty(this, 'sortDirection', {
     configurable: true,
-    get: function() {
+    get: function () {
       return sortDirection;
     },
-    set: function( value ) {
-      if ( value === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.UP ) {
+    set: function (value) {
+      if (value === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.UP) {
         this.sortClass = this.classes.sortUp;
-      } else if ( value === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.DOWN ) {
+      } else if (value === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.DOWN) {
         this.sortClass = this.classes.sortDown;
       }
       sortDirection = value;
-    }
-  } );
+    },
+  });
 }
 
 /**
@@ -4408,12 +4438,13 @@ function bindProperties() {
  * @param {HTMLNode} element - The element used as the sortable.
  * @returns {number} The column index of the active sort column.
  */
-function getColumnIndex( element ) {
-  return (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.closest)( element || this.ui.sortButton, 'td, th' ).cellIndex;
+function getColumnIndex(element) {
+  return (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.closest)(element || this.ui.sortButton, 'td, th').cellIndex;
 }
 
 /**
  * Function used to update the table data and dom.
+ *
  * @returns {boolean} TODO: Add description.
  */
 function updateTable() {
@@ -4427,28 +4458,29 @@ function updateTable() {
  * @returns {Array} Multidimensional array of column's cell value
  * and corresponding row element.
  */
-function updateTableData( columnIndex ) {
+function updateTableData(columnIndex) {
   let cell;
-  const rows = this.ui.tableBody.querySelectorAll( 'tr' );
+  const rows = this.ui.tableBody.querySelectorAll('tr');
   this.tableData = [];
   columnIndex = columnIndex || this.sortColumnIndex;
 
-  for ( let i = 0, len = rows.length; i < len; ++i ) {
+  for (let i = 0, len = rows.length; i < len; ++i) {
     cell = rows[i].cells[columnIndex];
-    if ( cell ) {
+    if (cell) {
       cell = cell.textContent.trim();
     }
-    this.tableData.push( [ cell, rows[i] ] );
+    this.tableData.push([cell, rows[i]]);
   }
 
-  const sortType = this.ui.sortButton.getAttribute( 'data-sort_type' );
-  this.tableData.sort( this.tableDataSorter( this.sortDirection, sortType ) );
+  const sortType = this.ui.sortButton.getAttribute('data-sort_type');
+  this.tableData.sort(this.tableDataSorter(this.sortDirection, sortType));
 
   return this.tableData;
 }
 
 /**
  * Function used to update the table DOM.
+ *
  * @returns {HTMLNode} The table's <tbody> element.
  */
 function updateTableDom() {
@@ -4457,17 +4489,17 @@ function updateTableDom() {
   /* Empty the table body to prepare for sorting the rows
      TODO: It might make sense to use innerHTML
      from a performance and garbage collection standpoint. */
-  while ( tableBody.lastChild ) {
-    tableBody.removeChild( tableBody.lastChild );
+  while (tableBody.lastChild) {
+    tableBody.removeChild(tableBody.lastChild);
   }
 
   const documentFragment = document.createDocumentFragment();
-  for ( let i = 0; i < this.tableData.length; i++ ) {
-    documentFragment.appendChild( this.tableData[i][1] );
+  for (let i = 0; i < this.tableData.length; i++) {
+    documentFragment.appendChild(this.tableData[i][1]);
   }
 
-  tableBody.appendChild( documentFragment );
-  this.dispatchEvent( 'table:updated' );
+  tableBody.appendChild(documentFragment);
+  this.dispatchEvent('table:updated');
 
   return tableBody;
 }
@@ -4486,8 +4518,8 @@ function updateTableDom() {
  * @returns {Function} - A function to be used by the Array.sort method,
  * where the parameters 'a' and 'b' is each an Array (of Arrays) to be sorted.
  */
-function tableDataSorter( direction, sortType ) {
-  return function( a, b ) {
+function tableDataSorter(direction, sortType) {
+  return function (a, b) {
     const sign = direction === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.DOWN ? -1 : 1;
     let order = 0;
     const regex = /[^\d.-]/g;
@@ -4497,15 +4529,15 @@ function tableDataSorter( direction, sortType ) {
     b = b[0];
 
     // For number sort, convert a & b to numbers.
-    if ( sortType === 'number' ) {
-      a = Number( a.replace( regex, '' ) );
-      b = Number( b.replace( regex, '' ) );
+    if (sortType === 'number') {
+      a = Number(a.replace(regex, ''));
+      b = Number(b.replace(regex, ''));
     }
 
     // Sort the values
-    if ( a < b ) {
+    if (a < b) {
       order = sign * -1;
-    } else if ( a > b ) {
+    } else if (a > b) {
       order = sign;
     }
 
@@ -4518,13 +4550,13 @@ function tableDataSorter( direction, sortType ) {
  * Function used as callback for the sortable click event.
  *
  * @param {Event} event - DOM event.
- * @returns {Object} - TOOD: Add description.
+ * @returns {object} - TOOD: Add description.
  */
-function onSortableClick( event ) {
-  if ( this.ui.sortButton ) {
-    this.ui.sortButton.classList.remove( this.sortClass );
+function onSortableClick(event) {
+  if (this.ui.sortButton) {
+    this.ui.sortButton.classList.remove(this.sortClass);
   }
-  if ( this.ui.sortButton === event.target ) {
+  if (this.ui.sortButton === event.target) {
     this.sortDirection = ~this.sortDirection;
   } else {
     this.ui.sortButton = event.target;
@@ -4532,11 +4564,37 @@ function onSortableClick( event ) {
     this.sortDirection = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.UP;
   }
   // The active sort class is changing when the sort direction changes.
-  this.ui.sortButton.classList.add( this.sortClass );
+  this.ui.sortButton.classList.add(this.sortClass);
   this.updateTable();
 
   return this;
 }
+
+const TableSortable = {
+  ui: {
+    base: '.o-table__sortable',
+    tableBody: 'tbody',
+    sortButton: '.sorted-up, .sorted-down',
+  },
+
+  classes: {
+    sortDown: 'sorted-down',
+    sortUp: 'sorted-up',
+  },
+
+  events: {
+    'click .sortable': 'onSortableClick',
+  },
+
+  initialize: initialize,
+  bindProperties: bindProperties,
+  getColumnIndex: getColumnIndex,
+  updateTable: updateTable,
+  updateTableData: updateTableData,
+  updateTableDom: updateTableDom,
+  tableDataSorter: tableDataSorter,
+  onSortableClick: onSortableClick,
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (TableSortable);
 
@@ -4645,68 +4703,60 @@ __webpack_require__.r(__webpack_exports__);
 
 _redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__["default"].init();
 _sidebar_js__WEBPACK_IMPORTED_MODULE_10__["default"].init();
-var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())(); // Add anchors to all headings (except page title headings)
-
-anchors.add('h2:not(.title), h3, h4, h5'); // Ensure there are no anchors in inconvenient places
-
+var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())();
+// Add anchors to all headings (except page title headings)
+anchors.add('h2:not(.title), h3, h4, h5');
+// Ensure there are no anchors in inconvenient places
 anchors.remove("\n  .a-live_code h2,\n  .a-live_code h3,\n  .a-live_code h4,\n  .a-live_code h5,\n  .o-expandable_label,\n  #search-results h3\n");
 var multiselectDom = document.querySelector('.o-multiselect');
-
 if (multiselectDom) {
   var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__["default"](multiselectDom);
   multiselect.init();
 }
-
 _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__["default"].init();
-_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__["default"].init(); // Exporting these classes to the window so that the transition-patterns.md
-// page can use them in its code snippets.
+_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__["default"].init();
 
+// Exporting these classes to the window so that the transition-patterns.md
+// page can use them in its code snippets.
 window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__["default"];
 window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__["default"];
-window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__["default"]; // Tabs show under the show/hide details button on a pattern.
+window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__["default"];
 
+// Tabs show under the show/hide details button on a pattern.
 var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_8__["default"].BASE_CLASS));
-
 if (tabsContainerDom.length > 0) {
   var tabsInst;
-
   for (var i = 0, len = tabsContainerDom.length; i < len; i++) {
     tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_8__["default"](tabsContainerDom[i]);
     tabsInst.init();
   }
 }
-
 var toggleAllBtn = document.querySelector('#toggle-details');
 var toggleBtns = document.querySelectorAll('.a-toggle_code button');
 
-if (toggleAllBtn) {
-  toggleAllBtn.addEventListener('click', handleToggleAllClick, false);
-
-  if (window.localStorage.getItem('toggleState') === 'hide') {
-    (0,_toggle_details_js__WEBPACK_IMPORTED_MODULE_0__.toggleAllDetails)(toggleAllBtn);
-  }
-}
-
-for (var _i = 0, _len = toggleBtns.length; _i < _len; _i++) {
-  toggleBtns[_i].addEventListener('click', handleToggleClick, false);
-}
 /**
  * @param {MouseEvent} event - The mouse event object from the click.
  */
-
-
 function handleToggleAllClick(event) {
   event.preventDefault();
   (0,_toggle_details_js__WEBPACK_IMPORTED_MODULE_0__.toggleAllDetails)(toggleAllBtn);
 }
+
 /**
  * @param {MouseEvent} event - The mouse event object from the click.
  */
-
-
 function handleToggleClick(event) {
   var target = event.target;
   (0,_toggle_details_js__WEBPACK_IMPORTED_MODULE_0__.toggleDetails)(target);
+}
+if (toggleAllBtn) {
+  toggleAllBtn.addEventListener('click', handleToggleAllClick, false);
+  if (window.localStorage.getItem('toggleState') === 'hide') {
+    (0,_toggle_details_js__WEBPACK_IMPORTED_MODULE_0__.toggleAllDetails)(toggleAllBtn);
+  }
+}
+for (var _i = 0, _len = toggleBtns.length; _i < _len; _i++) {
+  toggleBtns[_i].addEventListener('click', handleToggleClick, false);
 }
 }();
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.

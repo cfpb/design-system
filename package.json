@@ -27,34 +27,25 @@
     "build": "yarn run compile-dev && bundle exec jekyll build",
     "build-netlify": "NODE_VERSION=14.17.5 && yarn && yarn run compile-prod && bundle exec jekyll build",
     "changelog": "./scripts/generate-changelog.sh",
-    "compile-prod": "webpack --config webpack.config.docs.js --mode=production",
     "compile-dev": "webpack --config webpack.config.docs.js --mode=development",
+    "compile-prod": "webpack --config webpack.config.docs.js --mode=production",
     "copy-icons": "cp -r packages/cfpb-icons/src/icons docs/_includes/",
     "design-system-link": "lerna exec -- yarn link",
     "design-system-unlink": "lerna exec -- yarn unlink",
-    "lint": "scripts/lint.sh",
     "postinstall": "./scripts/fonts.sh && yarn run copy-icons && bundle install",
+    "lint": "scripts/lint.sh",
     "process-icon-svgs": "svgo -f packages/cfpb-icons/src/icons --config=svgo.config.js",
     "release": "yarn run build && gulp build && lerna publish --no-verify-access",
-    "start": "yarn run compile-dev && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn run compile-dev --watch\"",
     "serve-html": "http-server docs/_site",
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-netlify": "netlify-cms-proxy-server",
+    "start": "yarn run compile-dev && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn run compile-dev --watch\"",
     "test": "gulp test",
     "test:browser": "wdio run ./wdio.config.js",
     "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && wdio run ./wdio.config.sauce.js",
     "version": "yarn run changelog && git add CHANGELOG.md"
   },
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",
-  "changelog": {
-    "labels": {
-      "lerna-changelog/breaking": "Breaking Change",
-      "lerna-changelog/enhancement": "Enhancement",
-      "lerna-changelog/bug": "Bug Fix",
-      "lerna-changelog/documentation": "Documentation",
-      "lerna-changelog/internal": "Internal"
-    }
-  },
   "dependencies": {
     "anchor-js": "4.3.1",
     "core-js": "3.25.5",
@@ -89,7 +80,7 @@
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsdoc": "^39.3.6",
+    "eslint-plugin-jsdoc": "^39.3.13",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.10",
     "fancy-log": "2.0.0",
@@ -131,5 +122,14 @@
     "webpack": "5.74.0",
     "webpack-cli": "4.10.0",
     "webpack-stream": "7.0.0"
+  },
+  "changelog": {
+    "labels": {
+      "lerna-changelog/breaking": "Breaking Change",
+      "lerna-changelog/enhancement": "Enhancement",
+      "lerna-changelog/bug": "Bug Fix",
+      "lerna-changelog/documentation": "Documentation",
+      "lerna-changelog/internal": "Internal"
+    }
   }
 }

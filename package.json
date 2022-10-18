@@ -33,7 +33,7 @@
     "design-system-link": "lerna exec -- yarn link",
     "design-system-unlink": "lerna exec -- yarn unlink",
     "lint": "scripts/lint.sh",
-    "postinstall": "yarn run copy-icons && bundle install",
+    "postinstall": "./scripts/fonts.sh && yarn run copy-icons && bundle install",
     "process-icon-svgs": "svgo -f packages/cfpb-icons/src/icons --config=svgo.config.js",
     "release": "yarn run build && gulp build && lerna publish --no-verify-access",
     "start": "yarn run compile-dev && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn run compile-dev --watch\"",

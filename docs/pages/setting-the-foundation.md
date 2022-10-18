@@ -62,10 +62,23 @@ description: >-
   <b>1. Ahead of the activity, add the following prompts to an online collaboration tool set to private mode (or a setting that allows for anonymous contribution).</b> Organize the prompts so all participants have enough room to add their responses. (More prompts can be found in 18F’s frames of reference form.) 
 
 
-  a﻿sdf 
+  <div class="content-50 content-first" markdown="1">
 
-  a﻿sdf 
 
-  a﻿sdf
+  ﻿* test*
+
+  ﻿ test
+
+  *﻿ test 
+
+
+  </div>
+
+
+  <div class="content-50 content-first" markdown="1">*﻿ test2
+
+
+
+  </div>
 variation_groups: []
 ---

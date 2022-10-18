@@ -225,9 +225,12 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   respectful and accurate.</b><br>
 
   Some terms may not be accurate to describe a group, while other terms can
-  have negative connotations. For example, as 18F points out, the term “American
-  Indians and Alaskan Natives” is not an all-encompassing term for Indigenous
-  Americans, as it does not include members of non-federally-recognized tribes,
+  have negative connotations. For example, as [18F points out, the term
+  “American Indians and Alaskan Natives” is not an all-encompassing term for
+  Indigenous
+  Americans](https://github.com/18F/Equity-centered-design-with-American-Indian\
+  s-and-Alaska-Natives-10x/wiki/Intro-Why-Equity-Centered-Design#words-that-car\
+  ry-weight), as it does not include members of non-federally-recognized tribes,
   or Indigenous Americans who are not members of a tribe. \r
 
   \r
@@ -242,8 +245,10 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
   <b>Use people-first language.</b><br>\r
 
-  People-first language is a way to respectfully acknowledge the humanity of
-  an individual or group first, rather than the identity or condition they may
+  [People-first
+  language](https://apastyle.apa.org/style-grammar-guidelines/bias-free-languag\
+  e/disability) is a way to respectfully acknowledge the humanity of an
+  individual or group first, rather than the identity or condition they may
   experience. Examples of people-first language include “people with a mental
   disorder”, rather than calling someone “mentally ill”, or referring to someone
   as a “person without housing”, rather than as a “homeless person”. The

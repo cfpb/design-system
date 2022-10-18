@@ -3,7 +3,7 @@ const lunr = require('lunr');
 /**
  * Update page markup with search results.
  *
- * @param {HTMLNode} elm - The element to inject the search results into.
+ * @param {HTMLElement} elm - The element to inject the search results into.
  * @param {Array} results - A list of search result hits as objects.
  * @param {object} store - search index/meta data store in the window object.
  */
@@ -65,7 +65,7 @@ function displaySearchResults(elm, results, store) {
 /**
  * Display no search results in markup.
  *
- * @param {HTMLNode} elm - the HTML element to write to.
+ * @param {HTMLElement} elm - the HTML element to write to.
  * @param {string} term - the search term
  */
 function displayNoSearchResults(elm, term) {

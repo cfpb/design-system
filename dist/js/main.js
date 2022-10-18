@@ -372,8 +372,8 @@ __webpack_require__.r(__webpack_exports__);
 var BASE_CLASS = 'm-tabs';
 
 /**
- *
- * @param dom
+ * @param {HTMLElement} dom - The HTML DOM node.
+ * @returns {Tabs} An instance.
  */
 function Tabs(dom) {
   // DOM references.
@@ -593,8 +593,8 @@ var isShowingAllDetails = false;
 /**
  * Toggle details for a single variation.
  *
- * @param {DOMNode} button - Button element that controls the toggling.
- * @param {DOMNode} document -
+ * @param {HTMLElement} button - Button element that controls the toggling.
+ * @param {HTMLElement} document -
  *   Defaults to window.document but overridable for react DOM references.
  * @param {string} [state] -
  *   Optional param to specify whether to force showing or hiding of the details
@@ -628,7 +628,7 @@ function toggleDetails(button) {
 /**
  * Toggle all details for a page.
  *
- * @param {HTMLNode} toggleBtn - The button that called this method.
+ * @param {HTMLElement} toggleBtn - The button that called this method.
  */
 function toggleAllDetails(toggleBtn) {
   if (isShowingAllDetails) {
@@ -1252,9 +1252,6 @@ function AtomicComponent(element, attributes) {
   /**
    * Function used to process class modifiers. These should
    * correspond with BEM modifiers.
-   *
-   * @param {object} attributes - Hash of attributes to set on base element.
-   * @param {object} atomicComponent - Base component.
    */
   processModifiers: function () {
     if (!this.modifiers) {
@@ -1496,7 +1493,7 @@ function extend(attributes) {
  * Function used to instantiate all instances of the particular
  * atomic component on a page.
  *
- * @param {HTMLNode} scope - Where to search for components within.
+ * @param {HTMLElement} scope - Where to search for components within.
  * @returns {Array} List of AtomicComponent instances.
  */
 function init(scope) {
@@ -1656,11 +1653,10 @@ __webpack_require__.r(__webpack_exports__);
 const INIT_FLAG = _standard_type__WEBPACK_IMPORTED_MODULE_1__.STATE_PREFIX + 'atomic_init';
 
 /**
- * @param {HTMLNode} element- -
- *   The DOM element within which to search for the atomic element class.
- * @param element
+ * @param {HTMLElement} element - The DOM element within which to search for
+ *   the atomic element class.
  * @param {string} baseClass - The CSS class name for the atomic element.
- * @returns {HTMLNode} The DOM element for the atomic element.
+ * @returns {HTMLElement} The DOM element for the atomic element.
  * @throws {Error} If DOM element passed into the atomic element is not valid.
  */
 function _verifyElementExists(element, baseClass) {
@@ -1678,11 +1674,10 @@ function _verifyElementExists(element, baseClass) {
 }
 
 /**
- * @param {HTMLNode} element- -
- *   The DOM element within which to search for the atomic element class.
- * @param element
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the atomic element class.
  * @param {string} baseClass - The CSS class name for the atomic element.
- * @returns {HTMLNode} The DOM element for the atomic element.
+ * @returns {HTMLElement} The DOM element for the atomic element.
  * @throws {Error} If baseClass was not found on the element.
  */
 function _verifyClassExists(element, baseClass) {
@@ -1702,11 +1697,10 @@ function _verifyClassExists(element, baseClass) {
  * an atomic component exists and that the correct atomic class
  * is present on the element.
  *
- * @param {HTMLNode} element- -
- *   The DOM element within which to search for the atomic element class.
- * @param element
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the atomic element class.
  * @param {string} baseClass - The CSS class name for the atomic element.
- * @returns {HTMLNode} The DOM element for the atomic element.
+ * @returns {HTMLElement} The DOM element for the atomic element.
  * @throws {Error} If DOM element passed into the atomic element is not valid.
  */
 function checkDom(element, baseClass) {
@@ -1721,8 +1715,7 @@ function checkDom(element, baseClass) {
  * Use the returned boolean to handle cases where an atomic component
  * is initializing when it has already been initialized elsewhere.
  *
- * @param {HTMLNode} element - The DOM element for the atomic component.
- * @param {null} destroy - Pass in true to .
+ * @param {HTMLElement} element - The DOM element for the atomic component.
  * @returns {boolean} True if the init data-js-* hook attribute was set,
  *   false otherwise.
  */
@@ -1740,7 +1733,7 @@ function setInitFlag(element) {
  * Remove the initialization flag on an atomic component.
  * This might be used if the DOM of an atomic element is cloned.
  *
- * @param {HTMLNode} element - The DOM element for the atomic component.
+ * @param {HTMLElement} element - The DOM element for the atomic component.
  * @returns {boolean} True if the init data-js-* hook attribute was destroyed,
  *   otherwise false if it didn't exist.
  */
@@ -1757,7 +1750,7 @@ function destroyInitFlag(element) {
 /**
  * @param {string} selector - Selector to search for in the document.
  * @param {Function} Constructor - A constructor function.
- * @param {HTMLNode} [scope] - A dom node in which to query the selector.
+ * @param {HTMLElement} [scope] - A dom node in which to query the selector.
  *   If not supplied, it defaults to the `document`.
  * @returns {Array} List of instances that were instantiated.
  */
@@ -1802,10 +1795,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @param {HTMLNode} element - DOM element.
- * @param {string} value- -
- *   Value to add to the element's JS data-* hook.
- * @param value
+ * @param {HTMLElement} element - DOM element.
+ * @param {string} value - Value to add to the element's JS data-* hook.
  * @returns {string} The value that was added.
  * @throws {Error} If supplied value contains a space,
  *   meaning it would be two values, which is likely a typo.
@@ -1826,10 +1817,8 @@ function add(element, value) {
 }
 
 /**
- * @param {HTMLNode} element - DOM element.
- * @param {string} value- -
- *   Value to remove from the JS data-* hook value.
- * @param value
+ * @param {HTMLElement} element - DOM element.
+ * @param {string} value - Value to remove from the JS data-* hook value.
  * @returns {boolean} True if value was removed, false otherwise.
  */
 function remove(element, value) {
@@ -1846,10 +1835,8 @@ function remove(element, value) {
 }
 
 /**
- * @param {HTMLNode} element - DOM element.
- * @param {string} value- -
- *   Value to check as existing as a JS data-* hook value.
- * @param value
+ * @param {HTMLElement} element - DOM element.
+ * @param {string} value - Value to check as existing as a JS data-* hook value.
  * @returns {boolean} True if the data-* hook value exists, false otherwise.
  */
 function contains(element, value) {
@@ -1887,12 +1874,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Queries for the first match unless an HTMLNode is passed
+ * Queries for the first match unless an HTMLElement is passed
  *
- * @param   {(HTMLNode|string)} expr
- * @param   {object}          con- -   The document location to query
- * @param con
- * @returns {HTMLNode}             The elem
+ * @param {(HTMLElement|string)} expr - An element or selector query string.
+ * @param {object} con - The document location to query.
+ * @returns {HTMLElement} The element.
  */
 function queryOne(expr, con) {
   return _type_checkers_js__WEBPACK_IMPORTED_MODULE_0__["default"].isString(expr)
@@ -1904,9 +1890,8 @@ function queryOne(expr, con) {
  * Search for support of the matches() method by looking at
  * browser prefixes.
  *
- * @param {HTMLNode} elem- -
- *   The element to check for support of matches() method.
- * @param elem
+ * @param {HTMLElement} elem - The element to check
+ *   for support of matches() method.
  * @returns {Function} The appropriate matches() method of elem.
  */
 function _getMatchesMethod(elem) {
@@ -1924,9 +1909,9 @@ function _getMatchesMethod(elem) {
  * Will return itself or the matching ancestor.
  * If no such element exists, it returns null.
  *
- * @param {HTMLNode} elem - A DOM element.
+ * @param {HTMLElement} elem - A DOM element.
  * @param {string} selector - CSS selector.
- * @returns {HTMLNode} Element or nearest parent node that matches the selector.
+ * @returns {HTMLElement} Element or nearest parent node that matches the selector.
  *   Or null, if nothing is found.
  */
 function closest(elem, selector) {
@@ -2174,9 +2159,7 @@ const CLASSES = {
  *
  * @class
  * @classdesc Initializes new AlphaTransition behavior.
- * @param element
- * @param {HTMLNode} element- -
- *   DOM element to apply opacity transition to.
+ * @param {HTMLElement} element - DOM element to apply opacity transition to.
  * @returns {AlphaTransition} An instance.
  */
 function AlphaTransition(element) {
@@ -2272,7 +2255,7 @@ __webpack_require__.r(__webpack_exports__);
  * @classdesc Initializes new BaseTransition behavior.
  *   This shouldn't be used directly, but instead should be
  *   the base class used through composition by a specific transition.
- * @param {HTMLNode} element - DOM element to apply transition to.
+ * @param {HTMLElement} element - DOM element to apply transition to.
  * @param {object} classes - The classes to apply to this transition.
  * @returns {BaseTransition} An instance.
  */
@@ -2431,9 +2414,8 @@ function BaseTransition(element, classes) {
   }
 
   /**
-   * @param {HTMLNode} elem- -
-   *   The element to check for support of transition end event.
-   * @param elem
+   * @param {HTMLElement} elem - The element to check
+   *   for support of transition end event.
    * @returns {string} The browser-prefixed transition end event.
    */
   function _getTransitionEndEvent(elem) {
@@ -2466,7 +2448,7 @@ function BaseTransition(element, classes) {
   /**
    * Set the HTML element target of this transition.
    *
-   * @param {HTMLNode} targetElement - The target of the transition.
+   * @param {HTMLElement} targetElement - The target of the transition.
    */
   function setElement(targetElement) {
     /*
@@ -2589,9 +2571,7 @@ const CLASSES = {
  *
  * @class
  * @classdesc Initializes new MoveTransition behavior.
- * @param element
- * @param {HTMLNode} element- -
- *   DOM element to apply transition to.
+ * @param {HTMLElement} element - DOM element to apply transition to.
  * @returns {MaxHeightTransition} An instance.
  */
 function MaxHeightTransition(element) {
@@ -2649,7 +2629,7 @@ function MaxHeightTransition(element) {
   /**
    * Reset the max-height to the default size.
    *
-   * @returns {PostitionTransition} An instance.
+   * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightDefault() {
     _baseTransition.applyClass(CLASSES.MH_DEFAULT);
@@ -2664,7 +2644,7 @@ function MaxHeightTransition(element) {
   /**
    * Collapses the max-height to just a summary height.
    *
-   * @returns {PostitionTransition} An instance.
+   * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightSummary() {
     _baseTransition.applyClass(CLASSES.MH_SUMMARY);
@@ -2677,7 +2657,7 @@ function MaxHeightTransition(element) {
   /**
    * Collapses thte max-height completely.
    *
-   * @returns {PostitionTransition} An instance.
+   * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightZero() {
     _baseTransition.applyClass(CLASSES.MH_ZERO);
@@ -2760,9 +2740,7 @@ const CLASSES = {
  *
  * @class
  * @classdesc Initializes new MoveTransition behavior.
- * @param element
- * @param {HTMLNode} element- -
- *   DOM element to apply move transition to.
+ * @param {HTMLElement} element - DOM element to apply move transition to.
  * @returns {MoveTransition} An instance.
  */
 function MoveTransition(element) {
@@ -2802,9 +2780,8 @@ function MoveTransition(element) {
   /**
    * Move to the left by applying a utility move class.
    *
-   * @param {number} count- -
-   *   How many times to move left as a multiplication of the element's width.
-   * @param count
+   * @param {number} count - How many times to move left
+   *   as a multiplication of the element's width.
    * @returns {MoveTransition} An instance.
    */
   function moveLeft(count) {
@@ -3148,7 +3125,7 @@ function expandableClickHandler() {
 /**
  * Toggle an expandable to open or closed.
  *
- * @param {HTMLNode} element - The expandable target HTML DOM element.
+ * @param {HTMLElement} element - The expandable target HTML DOM element.
  */
 function toggleTargetState(element) {
   if (element.classList.contains(this.classes.targetExpanded)) {
@@ -3233,7 +3210,7 @@ const CLASSES = {
  *
  * @class
  * @classdesc Initializes new ExpandableTransition behavior.
- * @param {HTMLNode} element - DOM element to apply move transition to.
+ * @param {HTMLElement} element - DOM element to apply move transition to.
  * @returns {ExpandableTransition} An instance.
  */
 function ExpandableTransition(element) {
@@ -3383,9 +3360,8 @@ const BASE_CLASS = 'o-multiselect';
  *
  * @class
  * @classdesc Initializes a new Multiselect molecule.
- * @param element
- * @param {HTMLNode} element- -
- *   The DOM element within which to search for the molecule.
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the molecule.
  * @returns {Multiselect} An instance.
  */
 function Multiselect(element) {
@@ -3594,7 +3570,7 @@ function Multiselect(element) {
   }
 
   /**
-   * @param {KeyEvent} event - The key down event object.
+   * @param {KeyboardEvent} event - The key down event object.
    */
   function _selectionKeyDownHandler(event) {
     if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
@@ -3609,7 +3585,7 @@ function Multiselect(element) {
   /**
    * Create a unique ID based on a select's option HTML element.
    *
-   * @param {HTMLNode} option - A option HTML element.
+   * @param {HTMLElement} option - A option HTML element.
    * @returns {string} A hopefully unique ID.
    */
   function _getOptionId(option) {
@@ -3622,8 +3598,8 @@ function Multiselect(element) {
   }
 
   /**
-   * @param {HTMLNode} selectionsDom - The UL item to inject list item into.
-   * @param {HTMLNode} option - The OPTION item to extract content from.
+   * @param {HTMLElement} selectionsDom - The UL item to inject list item into.
+   * @param {HTMLElement} option - The OPTION item to extract content from.
    */
   function _createSelectedItem(selectionsDom, option) {
     const optionId = _getOptionId(option);
@@ -3826,7 +3802,7 @@ function Multiselect(element) {
   /**
    * Populates and injects the markup for the custom multiselect.
    *
-   * @returns {HTMLNode} Newly created <div> element to hold the multiselect.
+   * @returns {HTMLElement} Newly created <div> element to hold the multiselect.
    */
   function _populateMarkup() {
     // Add a container for our markup
@@ -4032,7 +4008,7 @@ function MultiselectModel(options, name) {
   let _index = -1;
 
   /**
-   * @param {HTMLNode} item - An option HTML node.
+   * @param {HTMLElement} item - An option HTML node.
    * @returns {string} A (hopefully) unique ID.
    *   If it's not unique, we have a duplicate option value.
    */
@@ -4245,7 +4221,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @param {string} tag - The html elem to create.
  * @param {object} options - The options for building the elem.
- * @returns {HTMLNode} The created elem.
+ * @returns {HTMLElement} The created elem.
  */
 function create(tag, options) {
   const elem = document.createElement(tag);
@@ -4435,7 +4411,7 @@ function bindProperties() {
 /**
  * Function used to get the column index of the active sort column.
  *
- * @param {HTMLNode} element - The element used as the sortable.
+ * @param {HTMLElement} element - The element used as the sortable.
  * @returns {number} The column index of the active sort column.
  */
 function getColumnIndex(element) {
@@ -4481,7 +4457,7 @@ function updateTableData(columnIndex) {
 /**
  * Function used to update the table DOM.
  *
- * @returns {HTMLNode} The table's <tbody> element.
+ * @returns {HTMLElement} The table's <tbody> element.
  */
 function updateTableDom() {
   const tableBody = this.ui.tableBody;

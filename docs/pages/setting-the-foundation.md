@@ -182,6 +182,17 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   d-decolonizing-design/) is another form of the Frames of Reference exercise.\ 
 
 
+  * The Decision Lab has a [list of the most relevant cognitive biases in
+  behavioral economics](https://thedecisionlab.com/biases), which can be applied
+  to our own biases as designers and researchers, but also participants.\ 
+
+
+  * Nielsen Norman Group has several resources pertaining to bias in UX. Watch
+  their video, [Decision Biases Affecting UX
+  Practitioners](]\r(https://www.nngroup.com/videos/decision-biases-ux-practiti\
+  oners/)), to learn how to mitigate your own biases. \ 
+
+
 
   a  sf
 

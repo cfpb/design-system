@@ -11,9 +11,6 @@ description: >-
   people we serve.</p>
 
 
-  ![new](/design-system/images/uploads/new.png "new image")
-
-
   ## A﻿ccessibility
 
 
@@ -133,8 +130,6 @@ description: >-
 
 
   Here is a starter list of potential hazards to consider:
-
-
 
 
   <ul>

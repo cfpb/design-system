@@ -107,30 +107,69 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
   <div class=\"content-50 content-last\" markdown=\"1\">\ 
 
-  \r
 
+  * Immigration status, or whether you’ve ever lived with an immigrant\ 
 
+  * Languages spoken \ 
 
-  \r
+  * Familiarity with physical & mental disabilities \ 
 
-  * Immigration status, or whether you’ve ever lived with an immigrant \r
+  * Use of assistive technologies\ 
 
-  * Languages spoken  \r
+  * Marital and parental status\ 
 
-  * Familiarity with physical & mental disabilities  \r
+  * Where you grew up\ 
 
-  * Use of assistive technologies \r
-
-  * Marital and parental status \r
-
-  * Where you grew up \r
-
-  * Your values \r
+  * Your values\ 
 
   * Your organization’s values  \ 
 
 
+  </div>
 
-  </div>"
+
+  <b>2. During the collaboration session, ask the team to spend a few minutes
+  privately noting their own personal, lived experiences in response to each of
+  these prompts.</b>
+
+
+  <b>3﻿. If the team wants to share their findings: </b>
+
+
+  * Ask participants to add their findings anonymously to the collaboration
+  tool. Emphasize that participants should choose how they wish to participate
+  in this activity.\r
+
+
+  * As a team, gather and organize the anonymized responses. Group them and
+  identify themes. Ask participants what they noticed as they were doing this
+  exercise. Was anything missing? Was anything surprising? For example, if
+  everyone on the team lives in an urban environment, this exercise can help
+  prompt awareness and discussion of the needs of people living in more rural
+  areas. \r
+
+
+  <b>I﻿f the team wants to keep their findings private:</b>
+
+
+  * … and this is a new team: Discuss the prompts at a higher level, perhaps
+  focusing on the agency mission and possible gaps in the team’s lived
+  experience. For example, the team could spend more time drawing attention to
+  gaps in internet speed and equipment, food and housing insecurity, and/or the
+  needs of people with disabilities.\ 
+
+
+  \r
+
+  * … and the team is doing this exercise when beginning a project: Use a
+  project-focused lens to run this exercise and discuss the prompts at a higher
+  level. \r
+
+
+  \  * What biases could come into play in this particular project?\r\ 
+
+
+  \  * Do any of us have any lived experience that would help us in planning
+  this project?\r\n"
 variation_groups: []
 ---

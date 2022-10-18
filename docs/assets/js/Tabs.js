@@ -1,8 +1,8 @@
 const BASE_CLASS = 'm-tabs';
 
 /**
- *
- * @param dom
+ * @param {HTMLElement} dom - The HTML DOM node.
+ * @returns {Tabs} An instance.
  */
 function Tabs(dom) {
   // DOM references.

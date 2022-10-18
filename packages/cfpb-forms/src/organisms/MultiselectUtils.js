@@ -5,7 +5,7 @@ import { queryOne } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse
  *
  * @param {string} tag - The html elem to create.
  * @param {object} options - The options for building the elem.
- * @returns {HTMLNode} The created elem.
+ * @returns {HTMLElement} The created elem.
  */
 function create(tag, options) {
   const elem = document.createElement(tag);

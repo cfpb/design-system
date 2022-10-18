@@ -113,7 +113,7 @@ describe('MoveTransition', () => {
 
     it('should throw error when move left range is out-of-range', () => {
       /**
-       *
+       * @returns {MoveTransition} An instance.
        */
       function checkMoveLeftOutOfRange() {
         return transition.moveLeft(4);

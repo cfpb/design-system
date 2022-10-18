@@ -17,9 +17,8 @@ const BASE_CLASS = 'o-multiselect';
  *
  * @class
  * @classdesc Initializes a new Multiselect molecule.
- * @param element
- * @param {HTMLNode} element- -
- *   The DOM element within which to search for the molecule.
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the molecule.
  * @returns {Multiselect} An instance.
  */
 function Multiselect(element) {
@@ -228,7 +227,7 @@ function Multiselect(element) {
   }
 
   /**
-   * @param {KeyEvent} event - The key down event object.
+   * @param {KeyboardEvent} event - The key down event object.
    */
   function _selectionKeyDownHandler(event) {
     if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
@@ -243,7 +242,7 @@ function Multiselect(element) {
   /**
    * Create a unique ID based on a select's option HTML element.
    *
-   * @param {HTMLNode} option - A option HTML element.
+   * @param {HTMLElement} option - A option HTML element.
    * @returns {string} A hopefully unique ID.
    */
   function _getOptionId(option) {
@@ -256,8 +255,8 @@ function Multiselect(element) {
   }
 
   /**
-   * @param {HTMLNode} selectionsDom - The UL item to inject list item into.
-   * @param {HTMLNode} option - The OPTION item to extract content from.
+   * @param {HTMLElement} selectionsDom - The UL item to inject list item into.
+   * @param {HTMLElement} option - The OPTION item to extract content from.
    */
   function _createSelectedItem(selectionsDom, option) {
     const optionId = _getOptionId(option);
@@ -460,7 +459,7 @@ function Multiselect(element) {
   /**
    * Populates and injects the markup for the custom multiselect.
    *
-   * @returns {HTMLNode} Newly created <div> element to hold the multiselect.
+   * @returns {HTMLElement} Newly created <div> element to hold the multiselect.
    */
   function _populateMarkup() {
     // Add a container for our markup

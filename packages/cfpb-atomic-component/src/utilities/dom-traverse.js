@@ -1,12 +1,11 @@
 import typeCheckers from './type-checkers.js';
 
 /**
- * Queries for the first match unless an HTMLNode is passed
+ * Queries for the first match unless an HTMLElement is passed
  *
- * @param   {(HTMLNode|string)} expr
- * @param   {object}          con- -   The document location to query
- * @param con
- * @returns {HTMLNode}             The elem
+ * @param {(HTMLElement|string)} expr - An element or selector query string.
+ * @param {object} con - The document location to query.
+ * @returns {HTMLElement} The element.
  */
 function queryOne(expr, con) {
   return typeCheckers.isString(expr)
@@ -18,9 +17,8 @@ function queryOne(expr, con) {
  * Search for support of the matches() method by looking at
  * browser prefixes.
  *
- * @param {HTMLNode} elem- -
- *   The element to check for support of matches() method.
- * @param elem
+ * @param {HTMLElement} elem - The element to check
+ *   for support of matches() method.
  * @returns {Function} The appropriate matches() method of elem.
  */
 function _getMatchesMethod(elem) {
@@ -38,9 +36,9 @@ function _getMatchesMethod(elem) {
  * Will return itself or the matching ancestor.
  * If no such element exists, it returns null.
  *
- * @param {HTMLNode} elem - A DOM element.
+ * @param {HTMLElement} elem - A DOM element.
  * @param {string} selector - CSS selector.
- * @returns {HTMLNode} Element or nearest parent node that matches the selector.
+ * @returns {HTMLElement} Element or nearest parent node that matches the selector.
  *   Or null, if nothing is found.
  */
 function closest(elem, selector) {

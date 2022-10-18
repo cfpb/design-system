@@ -8,8 +8,8 @@ let isShowingAllDetails = false;
 /**
  * Toggle details for a single variation.
  *
- * @param {DOMNode} button - Button element that controls the toggling.
- * @param {DOMNode} document -
+ * @param {HTMLElement} button - Button element that controls the toggling.
+ * @param {HTMLElement} document -
  *   Defaults to window.document but overridable for react DOM references.
  * @param {string} [state] -
  *   Optional param to specify whether to force showing or hiding of the details
@@ -43,7 +43,7 @@ function toggleDetails(button, document = window.document, state) {
 /**
  * Toggle all details for a page.
  *
- * @param {HTMLNode} toggleBtn - The button that called this method.
+ * @param {HTMLElement} toggleBtn - The button that called this method.
  */
 function toggleAllDetails(toggleBtn) {
   if (isShowingAllDetails) {

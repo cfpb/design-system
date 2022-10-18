@@ -58,9 +58,6 @@ assign(AtomicComponent.prototype, new EventObserver(), {
   /**
    * Function used to process class modifiers. These should
    * correspond with BEM modifiers.
-   *
-   * @param {object} attributes - Hash of attributes to set on base element.
-   * @param {object} atomicComponent - Base component.
    */
   processModifiers: function () {
     if (!this.modifiers) {
@@ -302,7 +299,7 @@ function extend(attributes) {
  * Function used to instantiate all instances of the particular
  * atomic component on a page.
  *
- * @param {HTMLNode} scope - Where to search for components within.
+ * @param {HTMLElement} scope - Where to search for components within.
  * @returns {Array} List of AtomicComponent instances.
  */
 function init(scope) {

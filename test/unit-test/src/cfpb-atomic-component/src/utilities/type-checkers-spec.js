@@ -6,7 +6,7 @@ const aNum = 42;
 const aDate = new Date(2011, 7, 21);
 
 /**
- *
+ * @returns {boolean} Always returns true.
  */
 function aFunction() {
   return true;

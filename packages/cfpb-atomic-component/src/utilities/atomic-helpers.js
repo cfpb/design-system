@@ -24,11 +24,10 @@ import { STATE_PREFIX } from './standard-type';
 const INIT_FLAG = STATE_PREFIX + 'atomic_init';
 
 /**
- * @param {HTMLNode} element- -
- *   The DOM element within which to search for the atomic element class.
- * @param element
+ * @param {HTMLElement} element - The DOM element within which to search for
+ *   the atomic element class.
  * @param {string} baseClass - The CSS class name for the atomic element.
- * @returns {HTMLNode} The DOM element for the atomic element.
+ * @returns {HTMLElement} The DOM element for the atomic element.
  * @throws {Error} If DOM element passed into the atomic element is not valid.
  */
 function _verifyElementExists(element, baseClass) {
@@ -46,11 +45,10 @@ function _verifyElementExists(element, baseClass) {
 }
 
 /**
- * @param {HTMLNode} element- -
- *   The DOM element within which to search for the atomic element class.
- * @param element
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the atomic element class.
  * @param {string} baseClass - The CSS class name for the atomic element.
- * @returns {HTMLNode} The DOM element for the atomic element.
+ * @returns {HTMLElement} The DOM element for the atomic element.
  * @throws {Error} If baseClass was not found on the element.
  */
 function _verifyClassExists(element, baseClass) {
@@ -70,11 +68,10 @@ function _verifyClassExists(element, baseClass) {
  * an atomic component exists and that the correct atomic class
  * is present on the element.
  *
- * @param {HTMLNode} element- -
- *   The DOM element within which to search for the atomic element class.
- * @param element
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the atomic element class.
  * @param {string} baseClass - The CSS class name for the atomic element.
- * @returns {HTMLNode} The DOM element for the atomic element.
+ * @returns {HTMLElement} The DOM element for the atomic element.
  * @throws {Error} If DOM element passed into the atomic element is not valid.
  */
 function checkDom(element, baseClass) {
@@ -89,8 +86,7 @@ function checkDom(element, baseClass) {
  * Use the returned boolean to handle cases where an atomic component
  * is initializing when it has already been initialized elsewhere.
  *
- * @param {HTMLNode} element - The DOM element for the atomic component.
- * @param {null} destroy - Pass in true to .
+ * @param {HTMLElement} element - The DOM element for the atomic component.
  * @returns {boolean} True if the init data-js-* hook attribute was set,
  *   false otherwise.
  */
@@ -108,7 +104,7 @@ function setInitFlag(element) {
  * Remove the initialization flag on an atomic component.
  * This might be used if the DOM of an atomic element is cloned.
  *
- * @param {HTMLNode} element - The DOM element for the atomic component.
+ * @param {HTMLElement} element - The DOM element for the atomic component.
  * @returns {boolean} True if the init data-js-* hook attribute was destroyed,
  *   otherwise false if it didn't exist.
  */
@@ -125,7 +121,7 @@ function destroyInitFlag(element) {
 /**
  * @param {string} selector - Selector to search for in the document.
  * @param {Function} Constructor - A constructor function.
- * @param {HTMLNode} [scope] - A dom node in which to query the selector.
+ * @param {HTMLElement} [scope] - A dom node in which to query the selector.
  *   If not supplied, it defaults to the `document`.
  * @returns {Array} List of instances that were instantiated.
  */

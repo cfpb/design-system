@@ -10,9 +10,11 @@ describe('Multiselect', () => {
     // Wait till page has loaded.
     await browser.waitUntil(
       async () => {
-        // Return when the document is ready.
         /**
+         * Return when the document is ready.
          *
+         * @returns {string} A readystate string.
+         *   Can be loading, interactive, or complete.
          */
         function documentReady() {
           return document.readyState;

@@ -17,7 +17,7 @@ const CLASSES = {
  *
  * @class
  * @classdesc Initializes new ExpandableTransition behavior.
- * @param {HTMLNode} element - DOM element to apply move transition to.
+ * @param {HTMLElement} element - DOM element to apply move transition to.
  * @returns {ExpandableTransition} An instance.
  */
 function ExpandableTransition(element) {

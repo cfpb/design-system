@@ -15,9 +15,7 @@ const CLASSES = {
  *
  * @class
  * @classdesc Initializes new AlphaTransition behavior.
- * @param element
- * @param {HTMLNode} element- -
- *   DOM element to apply opacity transition to.
+ * @param {HTMLElement} element - DOM element to apply opacity transition to.
  * @returns {AlphaTransition} An instance.
  */
 function AlphaTransition(element) {

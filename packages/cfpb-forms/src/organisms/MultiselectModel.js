@@ -48,7 +48,7 @@ function MultiselectModel(options, name) {
   let _index = -1;
 
   /**
-   * @param {HTMLNode} item - An option HTML node.
+   * @param {HTMLElement} item - An option HTML node.
    * @returns {string} A (hopefully) unique ID.
    *   If it's not unique, we have a duplicate option value.
    */

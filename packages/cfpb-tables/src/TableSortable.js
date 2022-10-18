@@ -55,7 +55,7 @@ function bindProperties() {
 /**
  * Function used to get the column index of the active sort column.
  *
- * @param {HTMLNode} element - The element used as the sortable.
+ * @param {HTMLElement} element - The element used as the sortable.
  * @returns {number} The column index of the active sort column.
  */
 function getColumnIndex(element) {
@@ -101,7 +101,7 @@ function updateTableData(columnIndex) {
 /**
  * Function used to update the table DOM.
  *
- * @returns {HTMLNode} The table's <tbody> element.
+ * @returns {HTMLElement} The table's <tbody> element.
  */
 function updateTableDom() {
   const tableBody = this.ui.tableBody;

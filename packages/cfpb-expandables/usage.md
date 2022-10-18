@@ -719,7 +719,7 @@ Toggle an expandable to open or closed.
 
 Parameters:
 
-- element {HTMLNode} The expandable target HTML DOM element.
+- element {HTMLElement} The expandable target HTML DOM element.
 
 ### getLabelText()
 

@@ -9,7 +9,7 @@ import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.
  * @classdesc Initializes new BaseTransition behavior.
  *   This shouldn't be used directly, but instead should be
  *   the base class used through composition by a specific transition.
- * @param {HTMLNode} element - DOM element to apply transition to.
+ * @param {HTMLElement} element - DOM element to apply transition to.
  * @param {object} classes - The classes to apply to this transition.
  * @returns {BaseTransition} An instance.
  */
@@ -168,9 +168,8 @@ function BaseTransition(element, classes) {
   }
 
   /**
-   * @param {HTMLNode} elem- -
-   *   The element to check for support of transition end event.
-   * @param elem
+   * @param {HTMLElement} elem - The element to check
+   *   for support of transition end event.
    * @returns {string} The browser-prefixed transition end event.
    */
   function _getTransitionEndEvent(elem) {
@@ -203,7 +202,7 @@ function BaseTransition(element, classes) {
   /**
    * Set the HTML element target of this transition.
    *
-   * @param {HTMLNode} targetElement - The target of the transition.
+   * @param {HTMLElement} targetElement - The target of the transition.
    */
   function setElement(targetElement) {
     /*

@@ -171,6 +171,30 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
 
   \  * Do any of us have any lived experience that would help us in planning
-  this project?\r\n"
+  this project?\r
+
+
+  <div class =\"eyebrow\">{% include icons/book.svg %} F﻿urther reading</div>
+
+
+  * The [positionality
+  wheel](https://design.ncsu.edu/blog/2022/01/07/from-a-to-z-lesley-ann-noel-an\
+  d-decolonizing-design/) is another form of the Frames of Reference exercise.\ 
+
+
+
+  a  sf
+
+
+  a﻿sdf
+
+
+  s﻿df
+
+  s﻿df
+
+  s﻿dfs
+
+  d﻿f"
 variation_groups: []
 ---

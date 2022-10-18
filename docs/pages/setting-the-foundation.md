@@ -13,7 +13,8 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   ## Working together
 
 
-  Identify lived experiences and biases
+  [Identify lived experiences and
+  biases](#identify-lived-experiences-and-biases)
 
 
   Investigate internalized oppression

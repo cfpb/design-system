@@ -5,10 +5,9 @@ layout: variation
 section: guidelines
 jumplinks: Working together, Beginning a project
 status: Proposed
-description: >-
-  <p class="lead-paragraph">Before we’re able to design equitable and inclusive
-  products for the people and communities we serve, we must first <b>turn our
-  attention to the ways in which we work.</b></p>
+description: "<p class=\"lead-paragraph\">Before we’re able to design equitable
+  and inclusive products for the people and communities we serve, we must first
+  <b>turn our attention to the ways in which we work.</b></p>
 
 
   ## Working together
@@ -32,53 +31,106 @@ description: >-
   ### Identify lived experiences and biases
 
 
-  Bias is the tendency to allow personal opinions and past experiences to influence one’s judgment. Many of these biases may be unconscious, but they are none the less damaging to others. They are often based on false stereotypes about a particular group. It’s part of the human condition to rely on these cognitive shortcuts and to assume others think like us or have similar values, opinions, and beliefs. 
+  Bias is the tendency to allow personal opinions and past experiences to
+  influence one’s judgment. Many of these biases may be unconscious, but they
+  are none the less damaging to others. They are often based on false
+  stereotypes about a particular group. It’s part of the human condition to rely
+  on these cognitive shortcuts and to assume others think like us or have
+  similar values, opinions, and beliefs.\ 
 
 
-  Bias can skew our research and design activities, whether in our choice of who participates, what information is collected, or how information is interpreted. Awareness of our biases is key to mitigating against them, and that’s where the frames of reference exercise can be particularly valuable.
+  Bias can skew our research and design activities, whether in our choice of
+  who participates, what information is collected, or how information is
+  interpreted. Awareness of our biases is key to mitigating against them, and
+  that’s where the frames of reference exercise can be particularly valuable.
 
 
-  {% include icons/star.svg %} <b>Ready to conduct research for your project?</b> Learn how to <span style="color:blue">check your biases when moderating a research session</span>. 
+  {% include icons/star.svg %} <b>Ready to conduct research for your
+  project?</b> Learn how to <span style=\"color:blue\">check your biases when
+  moderating a research session</span>.\ 
 
 
-  <div class="o-well">
+  <div class=\"o-well\">
 
 
-  <div class ="eyebrow">{% include icons/edit.svg %} Activity</div>
+  <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
 
 
   <h2>Frames of reference</h2>
 
 
-  *Adapted from 18F’s [presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx)*
+  *Adapted from 18F’s [presentation on equity-centered design and
+  research](https://digital.gov/files/equity-centered-design-revised.pptx)*
 
 
-  As a team, run through this activity to identify your individual and collective biases before beginning research or design activities. If possible, couple the exercise with a review of what you have learned about the audience.  
+  As a team, run through this activity to identify your individual and
+  collective biases before beginning research or design activities. If possible,
+  couple the exercise with a review of what you have learned about the audience.
+  \ 
 
 
-  Everyone should choose how they want to participate, but ideally this can be a group activity.
+  Everyone should choose how they want to participate, but ideally this can be
+  a group activity.
 
 
-  <b>1. Ahead of the activity, add the following prompts to an online collaboration tool set to private mode (or a setting that allows for anonymous contribution).</b> Organize the prompts so all participants have enough room to add their responses. (More prompts can be found in 18F’s frames of reference form.) 
+  <b>1. Ahead of the activity, add the following prompts to an online
+  collaboration tool set to private mode (or a setting that allows for anonymous
+  contribution).</b> Organize the prompts so all participants have enough room
+  to add their responses. (More prompts can be found in 18F’s [frames of
+  reference
+  form](https://docs.google.com/forms/d/e/1FAIpQLScI0iTQEstjECMzFVuyMt0Giku69Yg\
+  gEkAlybQPlH4y7Ik9Vg/viewform).)\ 
 
 
-  <div class="content-50 content-first" markdown="1">
+  <div class=\"content-50 content-first\" markdown=\"1\">
 
 
-  ﻿* test*
+  * Types of locations where you’ve lived (e.g. urban, rural)
 
-  ﻿ test
+  * Typical internet speed (high speed, cellular only)
 
-  *﻿ test 
+  * Typical equipment used to access the internet (desktop or laptop computer,
+  or mobile device only)\ 
 
+  * Race & ethnicity\ 
+
+  * Gender & sexual identity\ 
+
+  * Age\ 
+
+  * Food insecurity\ 
+
+  * Housing insecurity\ 
 
   </div>
 
 
-  <div class="content-50 content-first" markdown="1">*﻿ test2
+  <div class=\"content-50 content-last\" markdown=\"1\">\ 
+
+  \r
 
 
 
-  </div>
+  \r
+
+  * Immigration status, or whether you’ve ever lived with an immigrant \r
+
+  * Languages spoken  \r
+
+  * Familiarity with physical & mental disabilities  \r
+
+  * Use of assistive technologies \r
+
+  * Marital and parental status \r
+
+  * Where you grew up \r
+
+  * Your values \r
+
+  * Your organization’s values  \ 
+
+
+
+  </div>"
 variation_groups: []
 ---

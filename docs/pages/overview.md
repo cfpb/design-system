@@ -43,6 +43,14 @@ description: >-
 
 
   ## Acknowledgements
+
+
+  These guidelines are based upon the great work of others who are already working diligently in the justice and equity space. Acknowledgments are in order:
+
+
+  * Ben Peterson and Julie Strohman’s [presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx) is the primary source of information and inspiration for these guidelines. (The presentation is also available as a [recorded presentation](https://www.youtube.com/watch?v=j1ZJO8maV7s).)
+
+  * Other important sources of information include [Code for America’s Qualitative Research Practice Guide](https://info.codeforamerica.org/qualitative-research); [18F’s User Experience Design Guide](https://ux-guide.18f.gov/); and the [Substance Abuse and Mental Health Services Administration's Trauma-informed guidelines](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
 variation_groups:
   - variations:
       - variation_is_deprecated: false

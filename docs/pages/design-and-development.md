@@ -132,6 +132,9 @@ description: >-
   Here is a starter list of potential hazards to consider:
 
 
+  <div class="content-50 content-first" markdown="1">
+
+
   <ul>
 
   <li>Data theft</li>  
@@ -176,6 +179,12 @@ description: >-
   <li>Deadnaming</li>  
 
 
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
   <li>Dehumanization</li>  
 
 
@@ -218,6 +227,8 @@ description: >-
   <li>Disregard</li>  
 
 
+  </div>
+
   </ul>
 
 
@@ -225,6 +236,8 @@ description: >-
 
 
   <ul>
+
+  <div class="content-50 content-first" markdown="1">
 
   <li>Fear and anxiety</li>  
 
@@ -256,6 +269,12 @@ description: >-
   <li>Invisibility</li>  
 
 
+  </div>
+
+
+  <div class="content-50 content-last" markdown="1">
+
+
   <li>Reduced influence</li>  
 
 
@@ -282,6 +301,7 @@ description: >-
 
   <li>Physical danger</li>  
 
+  </div>
 
   </ul>
 

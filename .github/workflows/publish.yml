@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --ignore-scripts
 
-      - name: Postinstall
-        run: yarn run postinstall
-
       - name: Build styles
         run: yarn run gulp styles
 

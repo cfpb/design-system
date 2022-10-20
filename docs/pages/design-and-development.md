@@ -109,10 +109,10 @@ description: >-
   <h2>Hazard mapping</h2>
 
 
-  Adapted from [18F’s presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx)
+  <p>Adapted from \[18F’s presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx) </p>
 
 
-  As you create your designs, try this mapping activity to identify potential hazards and harms that could result from the work you and your team are planning to do. Plan for how you’ll mitigate them. 
+  <p>As you create your designs, try this mapping activity to identify potential hazards and harms that could result from the work you and your team are planning to do. Plan for how you’ll mitigate them.  </p>
 
 
   * On a wireframe, map out any potential hazards and describe how the design will mitigate those hazards.
@@ -124,8 +124,7 @@ description: >-
   * When creating a journey map, add a row for potential hazards associated with the moments or decisions in the journey.
 
 
-
-  Here is a starter list of potential hazards to consider:
+  <p>Here is a starter list of potential hazards to consider:</p>
 
 
   <div class="content-50 content-first" markdown="1">
@@ -133,44 +132,32 @@ description: >-
 
   * Data theft
 
-
   * Data misuse
-
 
   * Opaque algorithms
 
-
   * Privacy breach
-
 
   * Digital redlining
 
-
   * Harassment
-
 
   * Targeted abuse
 
-
   * Attention hijacking
-
 
   * Inaccessibility
 
-
   * Widespread misinformation
-
 
   * System outage
 
-
   * Enshrined status quo or power structures
-
 
   * Power imbalance
 
-
   * Deadnaming
+
 
   </div>
 
@@ -180,42 +167,29 @@ description: >-
 
   * Dehumanization
 
-
   * Intimidation
-
 
   * Entrapment 
 
-
   * Abandonment 
-
 
   * Displacement
 
-
   * Systemic bias
-
 
   * Oppression 
 
-
   * Racial profiling
-
 
   * Co-optation  
 
-
   * Exploitation  
-
 
   * Deception  
 
-
   * Triggering topics 
 
-
   * Exclusion   
-
 
   * Disregard 
 
@@ -223,8 +197,7 @@ description: >-
   </div>
 
 
-
-  Hazards can cause a wide range of harms. These harms can include:  
+  <p>Hazards can cause a wide range of harms. These harms can include:  </p>
 
 
   <ul>

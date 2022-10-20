@@ -175,9 +175,7 @@ description: >-
 
   <li>Power imbalance</li>  
 
-
   <li>Deadnaming</li>  
-
 
   </div>
 

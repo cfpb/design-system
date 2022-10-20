@@ -124,11 +124,11 @@ description: >-
   * When creating a journey map, add a row for potential hazards associated with the moments or decisions in the journey.
 
 
+
   Here is a starter list of potential hazards to consider:
 
 
   <div class="content-50 content-first" markdown="1">
-
 
 
   * Data theft

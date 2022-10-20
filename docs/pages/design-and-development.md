@@ -115,18 +115,13 @@ description: >-
   As you create your designs, try this mapping activity to identify potential hazards and harms that could result from the work you and your team are planning to do. Plan for how you’ll mitigate them. 
 
 
-  <ul>
-
-  <li>On a wireframe, map out any potential hazards and describe how the design will mitigate those hazards.</li>  
+  * On a wireframe, map out any potential hazards and describe how the design will mitigate those hazards.
 
 
-  <li>When conducting interviews, ask how people might be harmed by this system or how someone might use the system to cause harm.</li>
+  * When conducting interviews, ask how people might be harmed by this system or how someone might use the system to cause harm.
 
 
-  <li>When creating a journey map, add a row for potential hazards associated with the moments or decisions in the journey.</li> 
-
-
-  </ul>
+  * When creating a journey map, add a row for potential hazards associated with the moments or decisions in the journey.
 
 
   Here is a starter list of potential hazards to consider:
@@ -135,47 +130,47 @@ description: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  <ul>
 
-  <li>Data theft</li>  
-
-
-  <li>Data misuse</li>  
+  * Data theft
 
 
-  <li>Opaque algorithms</li>  
+  * Data misuse
 
 
-  <li>Privacy breach</li>  
+  * Opaque algorithms
 
 
-  <li>Digital redlining</li>  
+  * Privacy breach
 
 
-  <li>Harassment</li>  
+  * Digital redlining
 
 
-  <li>Targeted abuse</li>  
+  * Harassment
 
 
-  <li>Attention hijacking</li>  
+  * Targeted abuse
 
 
-  <li>Inaccessibility</li>  
+  * Attention hijacking
 
 
-  <li>Widespread misinformation</li>  
+  * Inaccessibility
 
 
-  <li>System outage</li>  
+  * Widespread misinformation
 
 
-  <li>Enshrined status quo or power structures</li>  
+  * System outage
 
 
-  <li>Power imbalance</li>  
+  * Enshrined status quo or power structures
 
-  <li>Deadnaming</li>  
+
+  * Power imbalance
+
+
+  * Deadnaming
 
   </div>
 
@@ -183,51 +178,50 @@ description: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  <li>Dehumanization</li>  
+  * Dehumanization
 
 
-  <li>Intimidation</li>  
+  * Intimidation
 
 
-  <li>Entrapment</li>  
+  * Entrapment 
 
 
-  <li>Abandonment</li>  
+  * Abandonment 
 
 
-  <li>Displacement</li>  
+  * Displacement
 
 
-  <li>Systemic bias</li>  
+  * Systemic bias
 
 
-  <li>Oppression</li>  
+  * Oppression 
 
 
-  <li>Racial profiling</li>  
+  * Racial profiling
 
 
-  <li>Co-optation</li>  
+  * Co-optation  
 
 
-  <li>Exploitation</li>  
+  * Exploitation  
 
 
-  <li>Deception</li>  
+  * Deception  
 
 
-  <li>Triggering topics</li>  
+  * Triggering topics 
 
 
-  <li>Exclusion</li>  
+  * Exclusion   
 
 
-  <li>Disregard</li>  
+  * Disregard 
 
 
   </div>
 
-  </ul>
 
 
   Hazards can cause a wide range of harms. These harms can include:  

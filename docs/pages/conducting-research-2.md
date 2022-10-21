@@ -258,51 +258,22 @@ description: >-
     * “You don’t need to feel ashamed for the decisions you made.”
   * Remove time pressure.  
 
-    *
-    * sGive the participant the emotional support they need. Connect with them and reinforce that their words are valuable. Be non-judgmental in your responses with the aim of always reducing shame.  
-    * Give the participant the emotional support they need. Connect with them and reinforce that their words are valuable. Be non-judgmental in your responses with the aim of always reducing shame.  
-
-      * “Thank you for sharing your experience with us. That must have been difficult.”   
-      * “Thank you for trusting me with your story.”  
-      * “It must have taken a lot of courage to share this story with me.”  
-      * “You don’t need to feel ashamed for the decisions you made.”
-
-  1. “You can step away for a moment at any time. It’s okay.”  
-
-  2. "Let’s take a pause. I’m going to do a breathing exercise – you are welcome to join me.”  
-
-
+    * "Take all the time you need” OR “We can reschedule the session”  
+    * “You can step away for a moment at any time. It’s okay.” 
+    * "Let’s take a pause. I’m going to do a breathing exercise – you are welcome to join me.”  
   * Check in when you think they're ready to continue   
 
   * Be prepared to stop if it’s too hard for the participant to continue.  
 
-
-  1. "I can tell this is hard for you / stirring up emotions. Would you like to take a break or stop?"  
-
-  2. "Would you like me to stop recording?"  
-
-  3. Dismiss other observers, stop the recording and opt to take handwritten notes if you notice the participant is struggling but wishes to continue.  
-
-
+    * "I can tell this is hard for you / stirring up emotions.
+    * "Would you like me to stop recording?"  
+    * Dismiss other observers, stop the recording and opt to take handwritten notes if you notice the participant is struggling but wishes to continue.  
   * Use non-verbal cues  
 
-
-  1. Breath slowly and deeply. (You can even ask the participant to join in)  
-
-  2. Avoid fidgeting or moving your hands around a lot  
-
-  3. Relax your shoulders and sit squarely in front of the camera for remote sessions  
-
-  4. Either sit across from the participant or next to them - ask what they are most comfortable with.  
-
-
-   
-
-
-  Resist re-traumatization 
-
-
-  If a topic area has shown to be traumatizing, revisit the way it’s integrated into your work and consider alternate methods of gathering information.
+    * Breath slowly and deeply. (You can even ask the participant to join in)  
+    * Avoid fidgeting or moving your hands around a lot  
+    * Relax your shoulders and sit squarely in front of the camera for remote sessions  
+    * Either sit across from the participant or next to them - ask what they are most comfortable with.
 variation_groups:
   - variations:
       - variation_is_deprecated: false

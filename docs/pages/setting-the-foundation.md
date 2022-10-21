@@ -275,6 +275,12 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   <div class =\"eyebrow\">{% include icons/book.svg %} F﻿urther reading</div>
 
 
+  * APA’s Bias Free Language Guide, in particular their Inclusive Language
+  Guidelines \r\ 
+
+  * Language, Please\r\ 
+
+
 
   s﻿df
 

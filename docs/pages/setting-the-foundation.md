@@ -17,16 +17,17 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   biases](#identify-lived-experiences-and-biases)
 
 
-  Investigate internalized oppression
+  [Investigate internalized oppression](#investigate-internalized-oppression)
 
 
-  Use bias-free, person-centered language
+  [Use bias-free, person-centered
+  language](#use-bias-free-person-centered-language)
 
 
-  Establish team values
+  [Establish team values](#establish-team-values)
 
 
-  Assemble diverse teams
+  [Assemble diverse teams](#assemble-diverse-teams)
 
 
   ### Identify lived experiences and biases
@@ -47,8 +48,9 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
 
   {% include icons/star.svg %} <b>Ready to conduct research for your
-  project?</b> Learn how to <span style=\"color:blue\">check your biases when
-  moderating a research session</span>.\ 
+  project?</b> Learn how to [check your biases when moderating a research
+  session](https://cfpb.github.io/design-system/guidelines/conducting-research#\
+  check-your-biases).
 
 
   <div class=\"o-well\" markdown=\"1\">
@@ -60,8 +62,8 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   <h4 class=\"h3\" id=\"frames-of-reference\">Frames of reference</h4>\ 
 
 
-  *Adapted from 18F’s [presentation on equity-centered design and
-  research](https://digital.gov/files/equity-centered-design-revised.pptx)*
+  Adapted from 18F’s [presentation on equity-centered design and
+  research](https://digital.gov/files/equity-centered-design-revised.pptx)
 
 
   As a team, run through this activity to identify your individual and
@@ -173,6 +175,8 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   </div>
 
 
+  <br>
+
 
   <div class =\"eyebrow\">{% include icons/book.svg %} F﻿urther reading</div>
 
@@ -186,9 +190,9 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   to our own biases as designers and researchers, but also participants.\ 
 
   * Nielsen Norman Group has several resources pertaining to bias in UX. Watch
-  their video, [Decision Biases Affecting UX Practitioners](]
-  \"https\\://www.nngroup.com/videos/decision-biases-ux-practitioners/\"), to
-  learn how to mitigate your own biases. \ 
+  their video, [Decision Biases Affecting UX
+  Practitioners](https\\://www.nngroup.com/videos/decision-biases-ux-practition\
+  ers/), to learn how to mitigate your own biases. \ 
 
 
   ### Investigate internalized oppression
@@ -200,7 +204,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   oppression.\ 
 
 
-  <div class =\"eyebrow\">{% include icons/book.svg %} F﻿urther reading</div>
+  <div class=\"eyebrow\">{% include icons/book.svg %} F﻿urther reading</div>
 
 
   For more information, Intentional Futures has a useful explanation of
@@ -269,7 +273,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   lived experiences. \ 
 
 
-  <div class =\"eyebrow\">{% include icons/book.svg %} F﻿urther reading</div>
+  <div class=\"eyebrow\">{% include icons/book.svg %} F﻿urther reading</div>
 
 
   * [APA’s Bias Free Language
@@ -284,7 +288,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   <div class=\"o-well\" markdown=\"1\">
 
 
-  <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
+  <div class=\"eyebrow\">{% include icons/edit.svg %} Activity</div>
 
 
   <h4 class=\"h3\">﻿Set intentional language</h4>
@@ -302,6 +306,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   </div>
 
 
+  <br>
 
 
   ### Establish team values\ 
@@ -320,7 +325,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   <div class=\"o-well\" markdown=\"1\">
 
 
-  <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
+  <div class=\"eyebrow\">{% include icons/edit.svg %} Activity</div>
 
 
   <h4 class=\"h3\">Create a set of equity-centered team values</h4>
@@ -345,6 +350,8 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
 
   </div>
+
+  <br>
 
 
   ### Assemble diverse teams
@@ -375,13 +382,21 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
   \r
 
-  * Understand the project’s value\r
+  [Understand the project’s value](#understand-the-projects-value)
 
-  * Learn how power structures can affect the people you serve \r
+  \r
 
-  * Examine your biases in the context of the project\r
+  [Learn how power structures can affect the people you
+  serve](#learn-how-power-structures-can-affect-the-people-you-serve)
 
-  * Apply trauma-informed principles\r
+  \r
+
+  [Examine your biases in the context of the
+  project](#examine-your-biases-in-the-context-of-the-project)
+
+  \r
+
+  [Apply trauma-informed principles](#apply-trauma-informed-principles)\r
 
 
   ### Understand the project’s value
@@ -401,7 +416,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   <div class=\"o-well\" markdown=\"1\">
 
 
-  <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
+  <div class=\"eyebrow\">{% include icons/edit.svg %} Activity</div>
 
 
   <h4 class=\"h3\">Write a problem statement</h4>
@@ -427,6 +442,9 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
 
   </div>\ 
+
+
+  <br>
 
 
   ### Learn how power structures can affect the people you serve
@@ -457,7 +475,6 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   representative of the Federal government when engaging with these
   communities.\ 
 
-  \\ 
 
   \r
 
@@ -512,6 +529,9 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
 
   </div>
+
+
+  <br>
 
 
   ### Examine your biases in the context of the project

@@ -48,16 +48,22 @@ description: >-
   * People who are formerly incarcerated   
 
 
-  ACTIVITY 
+  <div class="o-well" markdown="1">
 
 
-  ## Frames of reference 
+  <div class ="eyebrow">{% include icons/edit.svg %} Activity</div>
+
+
+  <h2>Frames of reference</h2>
 
 
   The frames of reference activity can help you and your team think more broadly about different identities and communities to include as part of your research. 
 
 
-  For long-term success, invest in relationships with communities and community organizations to establish a collaborative partnership, thereby shifting from transactional to relational recruitment.     
+  </div>
+
+
+  For long-term success, invest in relationships with communities and community organizations to establish a collaborative partnership, thereby shifting from transactional to relational recruitment.  
 
 
   ## Compensate fairly 
@@ -72,8 +78,10 @@ description: >-
   If you are working with or for a federal agency, depending on the structure of your research, compensation may have implications for the Paperwork Reduction Act (PRA). Be sure to consult your agency guidelines.   
 
 
-  * Consider other forms of compensation that have value to the people or community you are researching if you can’t pay them or they decline payment. Some examples of what you could offer:  \
-    Curated package of agency resources tailored to the participant’s needs  
+  Consider other forms of compensation that have value to the people or community you are researching if you can’t pay them or they decline payment. Some examples of what you could offer:
+
+  * Curated package of agency resources tailored to the participant’s needs  
+
   * Technical assistance in the form of trainings or webinars on topics relevant to the participants  
 
 
@@ -94,7 +102,7 @@ description: >-
   Informed consent is a person’s or community’s permission to participate in a study or design activity with their full knowledge of possible consequences—both good and bad. People must be able to grant permission free of coercion or undue influence and comprehend what they are agreeing to participate in. They should also be aware of what information will be collected as part of the activity and how their information may be used or shared downstream. 
 
 
-  * In practice, this means the participant should be provided the following information before they agree to participate:    
+  In practice, this means the participant should be provided the following information before they agree to participate:    
 
   * An overview of the nature of the research, the topics covered, and how the research will be conducted   
 
@@ -129,7 +137,7 @@ description: >-
   Anticipate sensitive questions or topics as best you can, and look for signs of trauma. Be prepared to ask your participant if they’d be willing to talk about a topic, and if they’re not, move on, or end the research activity as needed. Note that even if the participant chooses to end research sessions early, they should still be paid for their time.   
 
 
-  FURTHER READING 
+  <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
 
 
   [18F's guide to informed consent](https://ux-guide.18f.gov/research/do/#getting-informed-consent)  
@@ -157,7 +165,7 @@ description: >-
   * **Interview bias and confirmation bias**, where we seek or favor information confirming our own prior beliefs and assumptions. If you’re a sighted person, you may omit thinking about the needs of people with low vision when you conduct research. If you design a product and then go on to research it, you may consciously or subconsciously shape the results to support your initial design decisions.   
 
 
-  FURTHER READING 
+  <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
 
 
   18F has put together [a list of common biases in research](https://ux-guide.18f.gov/research/bias/). 
@@ -186,10 +194,7 @@ description: >-
   * Consult with your Privacy team before engaging in research to ensure compliance with your organizational and federal standards. 
 
 
-  ##  \
-
-
-  Recognize and respond to trauma in participants 
+  ## Recognize and respond to trauma in participants 
 
 
   Trauma is an event, a series of events, or a set of circumstances experienced by an individual or group as emotionally or physically harmful, and that has lasting effects on their sense of well-being. Research sessions may touch on difficult or sensitive topics. Familiarize yourself with the 4 R’s framework and apply it if needed to avoid re-traumatizing a person.  

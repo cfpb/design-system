@@ -200,10 +200,15 @@ description: >-
   Trauma is an event, a series of events, or a set of circumstances experienced by an individual or group as emotionally or physically harmful, and that has lasting effects on their sense of well-being. Research sessions may touch on difficult or sensitive topics. Familiarize yourself with the 4 R’s framework and apply it if needed to avoid re-traumatizing a person.  
 
 
-  ACTIVITY 
 
 
-  ## The Four R’s 
+  <div class="o-well" markdown="1">
+
+
+  <div class ="eyebrow">{% include icons/edit.svg %} Activity</div>
+
+
+  <h2>The Four R’s</h2>
 
 
   In this activity, you’ll apply the Four R’s framework, outlined in [the Substance Abuse and Mental Health Services Administration's Concept of Trauma and Guidance for a Trauma Informed Approach](http://www.nchv.org/images/uploads/Research_Brief_61_-_SAMHSA_Trauma_Care.pdf), to your research materials before conducting research. 
@@ -213,7 +218,6 @@ description: >-
 
 
   In applying the 4 R’s framework, you should be able to: 
-
 
   * Identify where there may be potential for participants to show signs of trauma  
 
@@ -281,6 +285,9 @@ description: >-
     * Relax your shoulders and sit squarely in front of the camera for remote sessions  
     * Either sit across from the participant or next to them - ask what they are most comfortable with.  
 
+  </div>
+
+
   ## Resist re-traumatization 
 
 
@@ -291,6 +298,35 @@ description: >-
 
 
   Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf).
+
+
+
+
+  <ul>
+
+
+
+  <li>Reduced influence</li>  
+
+  <li>Misrepresentation</li>  
+
+  <li>Diminished freedom or autonomy</li>  
+
+  <li>Diminished access</li>  
+
+  <li>Damaged reputation</li>  
+
+  <li>Legal or financial penalties</li>  
+
+  <li>Loss of employment or housing</li>  
+
+  <li>Environmental damage</li>  
+
+  <li>Physical danger</li>  
+
+  </div>
+
+  </ul>
 variation_groups:
   - variations:
       - variation_is_deprecated: false

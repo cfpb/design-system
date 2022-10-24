@@ -285,20 +285,18 @@ description: >-
     * Relax your shoulders and sit squarely in front of the camera for remote sessions  
     * Either sit across from the participant or next to them - ask what they are most comfortable with.  
 
-  </div>
+  ### Resist re-traumatization 
 
 
-  ## Resist re-traumatization 
+  If a topic area has shown to be traumatizing, revisit the way it’s integrated into your work and consider alternate methods of gathering information. 
 
 
-  If a topic area has shown to be traumatizing, revisit the way it’s integrated into your work and consider alternate methods of gathering information.  
+  </div> 
 
 
-  FURTHER READING 
+  <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
 
 
   Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf).
-variation_groups:
-  - variations:
-      - variation_is_deprecated: false
+variation_groups: []
 ---

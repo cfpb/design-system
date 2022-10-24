@@ -8,9 +8,10 @@ jumplinks: "Practice inclusive recruitment, Compensate fairly, Obtain informed
   respond to trauma in participants "
 status: Proposed
 description: >-
-  **Build a greater understanding of who you’re working with and how they
-  experience the situation you’re addressing.** Research is vital to a
-  successfully project and a mutually-helpful collaboration. 
+  <p class="lead-paragraph"><b>Build a greater understanding of who you’re
+  working with and how they experience the situation you’re addressing.</b>
+  Research is vital to a successfully project and a mutually-helpful
+  collaboration. </p>
 
 
   ## Practice inclusive recruitment 

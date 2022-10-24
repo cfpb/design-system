@@ -317,7 +317,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   \r
 
 
-  <div class=\"o-well\">
+  <div class=\"o-well\" markdown=\"1\">
 
 
   <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
@@ -368,9 +368,62 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   giving input to their leaders. \r
 
 
-  \\ 
+  ## Beginning a project
 
 
+  \r
+
+  \r
+
+  * Understand the project’s value\r
+
+  * Learn how power structures can affect the people you serve \r
+
+  * Examine your biases in the context of the project\r
+
+  * Apply trauma-informed principles\r
+
+
+  ### Understand the project’s value
+
+
+  \r
+
+  \r
+
+  Before a project begins, come to a shared understanding of its value—that
+  is, a clear sense of the intended outcomes and value that key decision-makers
+  envision creating. This is necessary to truly understand how the project might
+  impact the audience.\r
+
+
+
+  <div class=\"o-well\" markdown=\"1\">
+
+
+  <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
+
+
+  <h4 class=\"h3\">Write a problem statement</h4>
+
+
+  Before engaging in any work, stakeholders and the project team should work
+  together to create a problem statement identifying and framing the problem to
+  explore through research or solve through design. Nielsen Norman has more
+  about [how to form a problem
+  statement](https://www.nngroup.com/articles/problem-statements/). 18F also has
+  a [design hypothesis
+  exercise](https://methods.18f.gov/decide/design-hypothesis/) that considers
+  the value and impact of work on the intended audience.\ 
+
+
+  \r
+
+  \r
+
+  The team should also engage in [activities to validate the problem
+  statement](https://methods.18f.gov/discover/stakeholder-and-user-interviews/)
+  once it’s been formed.   \r
 
 
 

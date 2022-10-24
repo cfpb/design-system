@@ -57,7 +57,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
 
 
-  <h2>Frames of reference</h2>
+  <h4 class=\"h3\">Frames of reference</h4>
 
 
   *Adapted from 18F’s [presentation on equity-centered design and
@@ -287,7 +287,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
 
 
-  <h2>﻿Set intentional language</h2>
+  <h4 class=\"h3\">﻿Set intentional language</h4>
 
 
   Take time during your team formation and when beginning a new project to
@@ -304,7 +304,8 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
 
 
-  <h2>Establish team values</h2>\r
+  ### Establish team values\ 
+
 
   \r
 
@@ -315,11 +316,15 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
   \r
 
-   ACTIVITY\r
 
-  \r
+  <div class=\"o-well\">
 
-  Create a set of equity-centered team values\r
+
+  <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
+
+
+  <h4 class=\"h3\">Create a set of equity-centered team values</h4>
+
 
   \r
 
@@ -327,7 +332,10 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   of both the frames of reference and intentional language exercises above. An
   example of team values could include, embracing discomfort, vulnerability, the
   awareness that we do not know everything, and understanding that just because
-  we have not experienced something does not make it untrue.\r
+  we have not experienced something does not make it untrue.
+
+
+  \r
 
   \r
 
@@ -336,6 +344,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   planning ceremonies.\r
 
 
+  </div>
 
 
 

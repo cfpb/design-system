@@ -426,6 +426,58 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   once it’s been formed.   \r
 
 
+  </div>\ 
+
+
+  ### Learn how power structures can affect the people you serve
+
+
+  \r
+
+  \r
+
+  \r
+
+  <b>If your product is for an underserved or underrepresented community, do
+  some research.</b>
+
+  \r
+
+  * Research from a reliable source the community’s current and historical
+  relationship with the government, along with an awareness of their history. \r
+
+  * Investigate any injustices the community has faced at the hands of the
+  government and any historic mistrust that has resulted. \r
+
+  * Take time to learn about the regulations and/or policies currently in
+  place which might affect the people and communities for who you are designing.
+  Dig in to learn about how those policies evolved to be what they are today. \r
+
+  * Explore any tension that might impact how you are perceived as a
+  representative of the Federal government when engaging with these
+  communities.\ 
+
+  \\ 
+
+  \r
+
+  \r
+
+  As 18F points out in their [presentation on equity-centered design and
+  research](https://digital.gov/files/equity-centered-design-revised.pptx),
+  people often access government services in their most vulnerable moments.
+  Recognize the power imbalance between being a representative of the Federal
+  government and the people we serve. \ 
+
+
+  \r
+
+  \r
+
+  Engage with the broader community (other government agencies, nonprofits,
+  grassroots organizations, or other groups working on a community level) to
+  seek out knowledge and additional perspectives.  \r
+
 
   s﻿df
 

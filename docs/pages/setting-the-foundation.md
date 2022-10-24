@@ -57,7 +57,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
 
 
-  <h4 class=\"h3\">Frames of reference</h4>
+  <h4 class=\"h3\" id=\"frames-of-reference\">Frames of reference</h4>\ 
 
 
   *Adapted from 18F’s [presentation on equity-centered design and
@@ -347,8 +347,28 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   </div>
 
 
+  ### Assemble diverse teams
+
+  \r
+
+  \r
+
+  Organizational leaders and managers should prioritize assembling teams with
+  a diversity of lived experiences. Diversity is broad; it is the practice or
+  quality of including or involving people from a range of different social and
+  ethnic backgrounds.\ 
 
 
+  While this includes individuals of different races, genders, religions,
+  sexual orientations, etc., it also includes individuals of different economic,
+  geographic, or other backgrounds. In a diverse environment, every person has
+  different knowledge, perspectives, and points of view that help us make better
+  informed decisions. Assembling a diverse team can be informed by individual
+  teams running the [frames of reference](#frames-of-reference) activity and
+  giving input to their leaders. \r
+
+
+  \\ 
 
 
 

@@ -51,7 +51,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   moderating a research session</span>.\ 
 
 
-  <div class=\"o-well\">
+  <div class=\"o-well\" markdown=\"1\">
 
 
   <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
@@ -281,7 +281,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   * [Language, Please](https://languageplease.org/)
 
 
-  <div class=\"o-well\">
+  <div class=\"o-well\" markdown=\"1\">
 
 
   <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
@@ -479,15 +479,103 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   seek out knowledge and additional perspectives.  \r
 
 
-  s﻿df
+  {% include icons/star.svg %} <b>Outside of your project work,</b> make
+  efforts to educate yourself, your team, and your leadership. Start up a book
+  club and develop a reading list for people to read at their own pace.\ 
 
 
-  s﻿df
+  <div class=\"o-well\" markdown=\"1\">
+
+  <div class=\"eyebrow\">{% include icons/edit.svg %} Activity</div>
+
+  \r
+
+  \r
+
+  <h4 class=\"h3\">Conduct research as a team</h4>\ 
 
 
-  s﻿dfs
+  \r
+
+  \r
+
+  As a team, divide up avenues to learn about the power structures, systems,
+  and policymaking impacting the community for whom you’re designing. \r
+
+  \r
 
 
-  d﻿f"
+  Plan a time to discuss what you learned and which sources you found
+  valuable. \r
+
+  \r
+
+
+  </div>
+
+
+  ### Examine your biases in the context of the project
+
+
+  \r
+
+  \r
+
+  During team formation, you should have spent time uncovering your biases and
+  lived experiences. Take time to do the frames of reference activity again as a
+  team, taking into consideration the context of the project you’re beginning.
+  Couple the activity with a review of what you’ve learned about the audience
+  for whom you’ll be designing.\r
+
+  \r
+
+
+  ### Apply trauma-informed principles\r
+
+  \r
+
+  Trauma is an event, a series of events, or a set of circumstances
+  experienced by an individual or group as emotionally or physically harmful,
+  and that has lasting effects on their sense of well-being. The trauma-informed
+  approach aims to avoid re-traumatization of a person during the course of your
+  work. \r
+
+  \r
+
+  People are not defined by their demographics or behaviors alone. Consider
+  what events and circumstances may be impacting someone, especially when you
+  know you need to work with vulnerable individuals or communities. \r
+
+
+  {% include icons/star.svg %} <b>Ready to conduct research for your
+  project?</b> Learn how to recognize and respond to trauma during a research
+  session.\ 
+
+
+  #### Create a safe space for your team.\r
+
+  \r
+
+  It is possible that you and your team may experience second-hand trauma
+  during a project. Sometimes called vicarious trauma, it’s when people have
+  prolonged exposure to victims of trauma or sensitive topics related to
+  traumatic experiences. [Learn about the signs for vicarious
+  trauma](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#what-are-som\
+  e-common-negative-reactions-to-vicarious-trauma) and make space to talk about
+  how the work may be affecting the team. If you see someone on your team
+  exhibiting signs of vicarious trauma, [there are several steps you can
+  take](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#suggestions-fo\
+  r-coworkers). \r
+
+
+  <div class =\"eyebrow\">{% include icons/book.svg %} F﻿urther reading</div>
+
+
+  Much of this guidance regarding trauma is based off well-established
+  research and resources from experts. If you are interested in learning more
+  about trauma and trauma-informed/responsive practices, [read this
+  comprehensive report on trauma-informed approaches created by the Substance
+  Abuse and Mental Health Service Administration
+  (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)"
 variation_groups: []
 ---

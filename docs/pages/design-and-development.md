@@ -200,29 +200,29 @@ description: >-
   <p>Hazards can cause a wide range of harms. These harms can include:  </p>
 
 
-  <ul>
-
   <div class="content-50 content-first" markdown="1">
 
-  <li>Fear and anxiety</li>  
 
-  <li>Depression</li>  
+  * Fear and anxiety
 
-  <li>Anger</li>  
+  * Depression
 
-  <li>Shame</li>  
+  * Anger 
 
-  <li>Diminished confidence</li>  
+  * Shame
 
-  <li>Re-traumatization</li>  
+  * Diminished confidence
 
-  <li>Isolation</li>  
+  * Re-traumatization
 
-  <li>Exhaustion</li>  
+  * Isolation
 
-  <li>Misinformation</li>  
+  * Exhaustion
 
-  <li>Invisibility</li>  
+  * Misinformation
+
+  * Invisibility
+
 
   </div>
 
@@ -230,27 +230,27 @@ description: >-
   <div class="content-50 content-last" markdown="1">
 
 
-  <li>Reduced influence</li>  
+  * Reduced influence
 
-  <li>Misrepresentation</li>  
+  * Misrepresentation
 
-  <li>Diminished freedom or autonomy</li>  
+  * Diminished freedom or autonomy
 
-  <li>Diminished access</li>  
+  * Diminished access
 
-  <li>Damaged reputation</li>  
+  * Damaged reputation
 
-  <li>Legal or financial penalties</li>  
+  * Legal or financial penalties
 
-  <li>Loss of employment or housing</li>  
+  * Loss of employment or housing
 
-  <li>Environmental damage</li>  
+  * Environmental damage
 
-  <li>Physical danger</li>  
+  * Physical danger
+
 
   </div>
 
-  </ul>
 
 
   </div>

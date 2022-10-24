@@ -170,6 +170,10 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   this project?
 
 
+  </div>
+
+
+
   <div class =\"eyebrow\">{% include icons/book.svg %} F﻿urther reading</div>
 
 
@@ -209,17 +213,13 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   associations based on race.\ 
 
 
-  ### Use bias-free, person-centered language\r
+  ### Use bias-free, person-centered language
 
-  \r
 
   It’s important to use clear, respectful, inclusive language that’s free of
   stereotypes and generalizations. Our words matter, whether we’re addressing
-  the general public or a fellow team member. Follow the guidelines below: \r
+  the general public or a fellow team member. Follow the guidelines below:\ 
 
-  \r
-
-  \r
 
   <b>Ensure the terms and references you use to refer to a group are both
   respectful and accurate.</b><br>
@@ -231,19 +231,17 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   Americans](https://github.com/18F/Equity-centered-design-with-American-Indian\
   s-and-Alaska-Natives-10x/wiki/Intro-Why-Equity-Centered-Design#words-that-car\
   ry-weight), as it does not include members of non-federally-recognized tribes,
-  or Indigenous Americans who are not members of a tribe. \r
+  or Indigenous Americans who are not members of a tribe.\ 
 
-  \r
 
   Use the terminology that groups and individuals use for themselves. This
   includes the gender pronouns of any individuals you work with directly. Do
   your research, read the resources listed in the “Further Reading” section
-  below, and ask members of the group in question directly if you’re in
-  doubt.  \r
+  below, and ask members of the group in question directly if you’re in doubt.
+  \ 
 
-  \r
 
-  <b>Use people-first language.</b><br>\r
+  <b>Use people-first language.</b><br>
 
   [People-first
   language](https://apastyle.apa.org/style-grammar-guidelines/bias-free-languag\
@@ -256,12 +254,11 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   include people-first syntax; additionally, language is always changing. Refer
   to the resources in the “Further Reading” section below to better understand
   how to use people-first language, and always ask people directly how they wish
-  to define themselves.  \r
+  to define themselves. \ 
 
-  \r
 
   <b>Consider avoiding the word “user” when referring to the people we
-  serve.</b><br> \r
+  serve.</b><br>\ 
 
   In line with using people-first language, consider using the word “people”
   instead of “user” when referring to those we’re trying to help. “User” can
@@ -269,16 +266,82 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   one-dimensional data point. “People”, in contrast, acknowledges the many
   distinct individuals who are interacting with the services we create for them,
   and helps us think collectively about the multiplicity of their viewpoints and
-  lived experiences.  \r
+  lived experiences. \ 
 
 
   <div class =\"eyebrow\">{% include icons/book.svg %} F﻿urther reading</div>
 
 
-  * APA’s Bias Free Language Guide, in particular their Inclusive Language
-  Guidelines \r\ 
+  * [APA’s Bias Free Language
+  Guide](https://apastyle.apa.org/style-grammar-guidelines/bias-free-language),
+  in particular their [Inclusive Language
+  Guidelines](https://apastyle.apa.org/style-grammar-guidelines/bias-free-langu\
+  age/disability)\ 
 
-  * Language, Please\r\ 
+  * [Language, Please](https://languageplease.org/)
+
+
+  <div class=\"o-well\">
+
+
+  <div class =\"eyebrow\">{% include icons/edit.svg %} Activity</div>
+
+
+  <h2>﻿Set intentional language</h2>
+
+
+  Take time during your team formation and when beginning a new project to
+  review the guidelines and references above. [APA’s Bias Free Language
+  Guide](https://apastyle.apa.org/style-grammar-guidelines/bias-free-language)
+  and [Language, Please](https://languageplease.org/) are both excellent guides
+  to inclusive language, and contain robust lists of appropriate person- and
+  identity- first terms. Discuss this guidance as a team and come to a shared
+  understanding of language to use.  \ 
+
+
+  </div>
+
+
+
+
+  <h2>Establish team values</h2>\r
+
+  \r
+
+  Discussing and documenting your team values will enable your group to create
+  a shared understanding of how you want to work together and why you’re making
+  those choices. Revisit your team values throughout your work to stay grounded
+  in your intentions.  \r
+
+  \r
+
+   ACTIVITY\r
+
+  \r
+
+  Create a set of equity-centered team values\r
+
+  \r
+
+  For newly established teams, create team values that incorporate the results
+  of both the frames of reference and intentional language exercises above. An
+  example of team values could include, embracing discomfort, vulnerability, the
+  awareness that we do not know everything, and understanding that just because
+  we have not experienced something does not make it untrue.\r
+
+  \r
+
+  Once you’ve created your team values, find opportunities to regularly review
+  your values as a team. For example, read these values during your sprint
+  planning ceremonies.\r
+
+
+
+
+
+
+
+
 
 
 

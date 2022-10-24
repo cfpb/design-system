@@ -109,10 +109,10 @@ description: >-
   <h2>Hazard mapping</h2>
 
 
-  <p>Adapted from \[18F’s presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx) </p>
+  Adapted from [18F’s presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx).
 
 
-  <p>As you create your designs, try this mapping activity to identify potential hazards and harms that could result from the work you and your team are planning to do. Plan for how you’ll mitigate them.  </p>
+  As you create your designs, try this mapping activity to identify potential hazards and harms that could result from the work you and your team are planning to do. Plan for how you’ll mitigate them. 
 
 
   * On a wireframe, map out any potential hazards and describe how the design will mitigate those hazards.
@@ -124,7 +124,7 @@ description: >-
   * When creating a journey map, add a row for potential hazards associated with the moments or decisions in the journey.
 
 
-  <p>Here is a starter list of potential hazards to consider:</p>
+  Here is a starter list of potential hazards to consider:
 
 
   <div class="content-50 content-first" markdown="1">

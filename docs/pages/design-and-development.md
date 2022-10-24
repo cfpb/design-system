@@ -103,7 +103,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  <div class ="eyebrow">{% include icons/edit.svg %} Activity</div>
+  <div class="eyebrow">{% include icons/edit.svg %} Activity</div>
 
 
   <h2>Hazard mapping</h2>
@@ -197,11 +197,17 @@ description: >-
   </div>
 
 
-  <p>Hazards can cause a wide range of harms. These harms can include:  </p>
+  <br>
 
+  <br>
+
+
+
+  Hazards can cause a wide range of harms. These harms can include:
 
 
   <div class="content-50 content-first" markdown="1">
+
 
   * Fear and anxiety
 

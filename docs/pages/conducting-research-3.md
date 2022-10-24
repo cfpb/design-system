@@ -298,35 +298,6 @@ description: >-
 
 
   Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf).
-
-
-
-
-  <ul>
-
-
-
-  <li>Reduced influence</li>  
-
-  <li>Misrepresentation</li>  
-
-  <li>Diminished freedom or autonomy</li>  
-
-  <li>Diminished access</li>  
-
-  <li>Damaged reputation</li>  
-
-  <li>Legal or financial penalties</li>  
-
-  <li>Loss of employment or housing</li>  
-
-  <li>Environmental damage</li>  
-
-  <li>Physical danger</li>  
-
-  </div>
-
-  </ul>
 variation_groups:
   - variations:
       - variation_is_deprecated: false

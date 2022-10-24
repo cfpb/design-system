@@ -124,6 +124,9 @@ description: >-
   * When creating a journey map, add a row for potential hazards associated with the moments or decisions in the journey.
 
 
+  <br>
+
+
   Here is a starter list of potential hazards to consider:
 
 

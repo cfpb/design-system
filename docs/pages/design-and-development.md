@@ -100,7 +100,7 @@ description: >-
   Identifying hazards and harms in advance enables us to build in solutions at the outset to mitigate against their occurrence.
 
 
-  <div class="o-well">
+  <div class="o-well" markdown="1">
 
 
   <div class ="eyebrow">{% include icons/edit.svg %} Activity</div>
@@ -206,33 +206,23 @@ description: >-
 
   <li>Fear and anxiety</li>  
 
-
   <li>Depression</li>  
-
 
   <li>Anger</li>  
 
-
   <li>Shame</li>  
-
 
   <li>Diminished confidence</li>  
 
-
   <li>Re-traumatization</li>  
-
 
   <li>Isolation</li>  
 
-
   <li>Exhaustion</li>  
-
 
   <li>Misinformation</li>  
 
-
   <li>Invisibility</li>  
-
 
   </div>
 
@@ -242,27 +232,19 @@ description: >-
 
   <li>Reduced influence</li>  
 
-
   <li>Misrepresentation</li>  
-
 
   <li>Diminished freedom or autonomy</li>  
 
-
   <li>Diminished access</li>  
-
 
   <li>Damaged reputation</li>  
 
-
   <li>Legal or financial penalties</li>  
-
 
   <li>Loss of employment or housing</li>  
 
-
   <li>Environmental damage</li>  
-
 
   <li>Physical danger</li>  
 

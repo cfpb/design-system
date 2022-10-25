@@ -44,8 +44,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
-
+  {% include icons/edit.svg %} <span class="h5">ACTIVITY</span>
 
   <h4 class="h3" id="frames-of-reference">Frames of reference</h4> 
 
@@ -107,20 +106,15 @@ description: >-
 
   </div>
 
-
   <br>
 
   <br>
 
   <b>2. During the collaboration session, ask the team to spend a few minutes privately noting their own personal, lived experiences in response to each of these prompts.</b>
 
-
   <br>
 
   <br>
-
-  <br>
-
 
   <b>3﻿. If the team wants to share their findings: </b>
 

@@ -7,8 +7,8 @@ jumplinks: Accessibility, Access, Inclusive imagery, Hazards and harms
 status: Proposed
 description: >-
   <p class="lead-paragraph">Designing and developing for more equitable access
-  starts with an awareness of the power imbalances between ourselves and the
-  people we serve.</p>
+  starts with an <﻿b>awareness of the power imbalances between ourselves and the
+  people we serve.</b></p>
 
 
   ## A﻿ccessibility

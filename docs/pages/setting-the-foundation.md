@@ -35,10 +35,10 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
 
   Bias is the tendency to allow personal opinions and past experiences to
   influence one’s judgment. Many of these biases may be unconscious, but they
-  are none the less damaging to others. They are often based on false
-  stereotypes about a particular group. It’s part of the human condition to rely
-  on these cognitive shortcuts and to assume others think like us or have
-  similar values, opinions, and beliefs.\ 
+  are nonetheless damaging to others. They are often based on false stereotypes
+  about a particular group. It’s part of the human condition to rely on these
+  cognitive shortcuts and to assume others think like us or have similar values,
+  opinions, and beliefs.\ 
 
 
   Bias can skew our research and design activities, whether in our choice of
@@ -47,7 +47,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   that’s where the frames of reference exercise can be particularly valuable.
 
 
-  {% include icons/star.svg %} <b>Ready to conduct research for your
+  {% include icons/favorite.svg %} <b>Ready to conduct research for your
   project?</b> Learn how to [check your biases when moderating a research
   session](https://cfpb.github.io/design-system/guidelines/conducting-research#\
   check-your-biases).
@@ -62,8 +62,8 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   <h4 class=\"h3\" id=\"frames-of-reference\">Frames of reference</h4>\ 
 
 
-  Adapted from 18F’s [presentation on equity-centered design and
-  research](https://digital.gov/files/equity-centered-design-revised.pptx)
+  *Adapted from 18F’s [presentation on equity-centered design and
+  research](https://digital.gov/files/equity-centered-design-revised.pptx)*
 
 
   As a team, run through this activity to identify your individual and
@@ -132,9 +132,18 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   </div>
 
 
+  <br>
+
+  <br>
+
   <b>2. During the collaboration session, ask the team to spend a few minutes
   privately noting their own personal, lived experiences in response to each of
   these prompts.</b>
+
+
+  <br>
+
+  <br>
 
 
   <b>3﻿. If the team wants to share their findings: </b>
@@ -496,7 +505,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   seek out knowledge and additional perspectives.  \r
 
 
-  {% include icons/star.svg %} <b>Outside of your project work,</b> make
+  {% include icons/favorite.svg %} <b>Outside of your project work,</b> make
   efforts to educate yourself, your team, and your leadership. Start up a book
   club and develop a reading list for people to read at their own pace.\ 
 
@@ -567,7 +576,7 @@ description: "<p class=\"lead-paragraph\">Before we’re able to design equitabl
   know you need to work with vulnerable individuals or communities. \r
 
 
-  {% include icons/star.svg %} <b>Ready to conduct research for your
+  {% include icons/favorite.svg %} <b>Ready to conduct research for your
   project?</b> Learn how to recognize and respond to trauma during a research
   session.\ 
 

@@ -20,10 +20,10 @@ description: >-
   Once the goals and objectives of a research initiative are established, it’s important to carefully define the audience ([see 18F’s guide for more info](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting)) and then to take the time needed to recruit for that audience.   
 
 
-  To quote 18F, [you must do research with people who will actually use your services](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting). It’s counterproductive and potentially [harmful](bookmark://_Identify_hazards_and) to draw conclusions from research conducted with people who are not in the right demographic or target group, or who don’t share the experience or situation that the research aims to understand.  
+  To quote 18F, [you must do research with people who will actually use your services](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting). It’s counterproductive and potentially harmful to[](bookmark://_Identify_hazards_and)draw conclusions from research conducted with people who are not in the right demographic or target group, or who don’t share the experience or situation that the research aims to understand.
 
 
-  Consider the unintended consequences of your recruitment approach. For example, recruiting via personal networks can lead to hearing only from people who share similar characteristics, values, and beliefs as yourself. Ask yourself whether these people are authentic representatives of the people who will ultimately use your product. Similarly, recruiting via social media can omit people who don’t have internet access at all. These issues are known as [sampling bias](bookmark://_Be_aware_of).     
+  Consider the unintended consequences of your recruitment approach. For example, recruiting via personal networks can lead to hearing only from people who share similar characteristics, values, and beliefs as yourself. Ask yourself whether these people are authentic representatives of the people who will ultimately use your product. Similarly, recruiting via social media can omit people who don’t have internet access at all. These issues are known as [sampling bias](https://cfpb.github.io/design-system/guidelines/conducting-research#be-aware-of-how-bias-can-show-up-during-research).     
 
 
   Even when your study targets the “general population”, take steps to recruit for a diversity of participants, rather than recruiting for convenience (which could potentially introduce sampling bias), or trusting to randomized recruiting. This might include taking steps to recruit and screen for specific groups—here is an incomplete list:    
@@ -57,7 +57,7 @@ description: >-
   <h2>Frames of reference</h2>
 
 
-  The [frames of reference activity](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference) can help you and your team think more broadly about different identities and communities to include as part of your research. 
+  [The frames of reference activity](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference) can help you and your team think more broadly about different identities and communities to include as part of your research. 
 
 
   </div>
@@ -127,7 +127,7 @@ description: >-
   ### Collect only the bare minimum of information. 
 
 
-  Collect, record, and share only the bare minimum of information needed to accomplish the goals of your research, and carefully safeguard that information. See the section on data handling for more information.  
+  Collect, record, and share only the bare minimum of information needed to accomplish the goals of your research, and carefully safeguard that information. See the [section on data handling](https://cfpb.github.io/design-system/guidelines/conducting-research#handle-data-and-stories-with-care) for more information.  
 
 
   ### Consent is never binding. 
@@ -136,7 +136,7 @@ description: >-
   Once you’ve obtained a participant’s agreement at the beginning of a research session, continue to ask for consent as needed during the research itself. Participants may not have fully understood the implications of what topics might be covered, and specific questions or issues might hit a nerve.  
 
 
-  Anticipate sensitive questions or topics as best you can, and look for signs of trauma. Be prepared to ask your participant if they’d be willing to talk about a topic, and if they’re not, move on, or end the research activity as needed. Note that even if the participant chooses to end research sessions early, they should still be paid for their time.   
+  Anticipate sensitive questions or topics as best you can, and [look for signs of trauma](https://cfpb.github.io/design-system/guidelines/conducting-research#recognize-and-respond-to-trauma-in-participants). Be prepared to ask your participant if they’d be willing to talk about a topic, and if they’re not, move on, or end the research activity as needed. Note that even if the participant chooses to end research sessions early, they should still be paid for their time.   
 
 
   <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
@@ -148,7 +148,7 @@ description: >-
   ## Check your biases 
 
 
-  As part of beginning the project for which you’re conducting research, your team ideally spent time uncovering biases and walking through an exercise such as the frames of reference. If you have not taken those steps yet, considering doing them before entering into research work.  
+  As part of beginning the project for which you’re conducting research, your team ideally spent time [uncovering biases](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#identify-lived-experiences-and-biases) and walking through an activity such as [Frames of reference](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference). If you have not taken those steps yet, considering doing them before entering into research work.  activity
 
 
   ### Be aware of how bias can show up during research.  

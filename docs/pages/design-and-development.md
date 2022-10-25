@@ -70,7 +70,7 @@ description: >-
   ### Uncover your own assumptions and biases. 
 
 
-  If you haven’t already, take steps to uncover the assumptions and biases you hold, and to raise awareness of the needs of communities and groups that are different from yourself and your team, by running through the frames of reference exercise.   
+  If you haven’t already, take steps to uncover the assumptions and biases you hold, and to raise awareness of the needs of communities and groups that are different from yourself and your team, by running through the [frames of reference exercise](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference).   
 
 
   ### Understand the group you’re representing and trying to reach. 
@@ -117,9 +117,7 @@ description: >-
 
   * On a wireframe, map out any potential hazards and describe how the design will mitigate those hazards.
 
-
   * When conducting interviews, ask how people might be harmed by this system or how someone might use the system to cause harm.
-
 
   * When creating a journey map, add a row for potential hazards associated with the moments or decisions in the journey.
 
@@ -205,7 +203,6 @@ description: >-
   <br>
 
 
-
   Hazards can cause a wide range of harms. These harms can include:
 
 
@@ -232,8 +229,6 @@ description: >-
 
   * Invisibility
 
-  </div>
-
 
   <div class="content-50 content-last" markdown="1">
 
@@ -255,9 +250,6 @@ description: >-
   * Environmental damage
 
   * Physical danger  
-
-  </div>
-
 
 
   </div>

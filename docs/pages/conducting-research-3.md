@@ -57,7 +57,7 @@ description: >-
   <h2>Frames of reference</h2>
 
 
-  The frames of reference activity can help you and your team think more broadly about different identities and communities to include as part of your research. 
+  The [frames of reference activity](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference) can help you and your team think more broadly about different identities and communities to include as part of your research. 
 
 
   </div>
@@ -79,6 +79,7 @@ description: >-
 
 
   Consider other forms of compensation that have value to the people or community you are researching if you can’t pay them or they decline payment. Some examples of what you could offer:
+
 
   * Curated package of agency resources tailored to the participant’s needs  
 
@@ -103,6 +104,7 @@ description: >-
 
 
   In practice, this means the participant should be provided the following information before they agree to participate:    
+
 
   * An overview of the nature of the research, the topics covered, and how the research will be conducted   
 
@@ -200,8 +202,6 @@ description: >-
   Trauma is an event, a series of events, or a set of circumstances experienced by an individual or group as emotionally or physically harmful, and that has lasting effects on their sense of well-being. Research sessions may touch on difficult or sensitive topics. Familiarize yourself with the 4 R’s framework and apply it if needed to avoid re-traumatizing a person.  
 
 
-
-
   <div class="o-well" markdown="1">
 
 
@@ -218,6 +218,7 @@ description: >-
 
 
   In applying the 4 R’s framework, you should be able to: 
+
 
   * Identify where there may be potential for participants to show signs of trauma  
 

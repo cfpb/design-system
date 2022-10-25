@@ -148,7 +148,7 @@ description: >-
   ## Check your biases 
 
 
-  As part of beginning the project for which you’re conducting research, your team ideally spent time [uncovering biases](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#identify-lived-experiences-and-biases) and walking through an activity such as [Frames of reference](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference). If you have not taken those steps yet, considering doing them before entering into research work.  activity
+  As part of beginning the project for which you’re conducting research, your team ideally spent time [uncovering biases](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#identify-lived-experiences-and-biases) and walking through an exercise such as  [Frames of reference](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference). If you have not taken those steps yet, considering doing them before entering into research work.  activity
 
 
   ### Be aware of how bias can show up during research.  

@@ -230,7 +230,7 @@ description: >-
   ### Realize 
 
 
-  Realize the impact that trauma has had on individuals and their interactions with people and systems of power and oppression. Identify historical oppression and policies that have oppressed specific groups. (If you haven’t already taken the time to learn how power structures can affect the people you serve, now would be a good time to do so.)  
+  Realize the impact that trauma has had on individuals and their interactions with people and systems of power and oppression. Identify historical oppression and policies that have oppressed specific groups. (If you haven’t already taken the time to learn how [power structures can affect the people you serve](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#learn-how-power-structures-can-affect-the-people-you-serve), now would be a good time to do so.)  
 
 
   ### Recognize 

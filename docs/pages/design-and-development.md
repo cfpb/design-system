@@ -52,7 +52,7 @@ description: >-
   Working mobile-first and optimizing for performance and accessibility has SEO benefits as well. The most frequently-used search engines have moved to favoring mobile friendly sites and accessible features. 
 
 
-  <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
+  {% include icons/book.svg %} **FURTHER READING**
 
 
   Read the [Pew Research Center's fact sheet on internet and broadband usage (April 2021)](https://www.pewresearch.org/internet/fact-sheet/internet-broadband/)
@@ -79,7 +79,7 @@ description: >-
   If there is a specific group you’re trying to reach and that you plan to represent in your product, do your research so that you’re aware of any sensitivities. Investigate their historic and current relationship to the government and their relationship to the topic you’re representing. There may be negative connotations or associations that you’re not aware of when you represent a specific group in a specific situation.  
 
 
-   Make sure that any representations of people experiencing a difficult or undesirable situation do not reinforce existing negative stereotypes. 
+  Make sure that any representations of people experiencing a difficult or undesirable situation do not reinforce existing negative stereotypes. 
 
 
   ### Examine potential hazards and harms.  

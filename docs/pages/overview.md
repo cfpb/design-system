@@ -21,13 +21,7 @@ description: >-
   Without better input from the people impacted by our work, especially those in underserved or underrepresented communities, we risk making decisions and creating solutions that do not help them. The natural limits of our own experience may lead us to omit critical perspectives or possibly even create solutions that cause harm.   
 
 
-  **Equity-centered design and research aims to give power back to the community by purposefully making all of the people we design for collaborators in the design and research process.**
-
-
-  <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
-
-
-  Check out our blog post about equity-centered design to learn more.
+  **Equity-centered design and research aims to give power back to the community by purposefully making all the people we design for collaborators in the design and research process.**
 
 
   ## About these guidelines
@@ -50,6 +44,9 @@ description: >-
 
   * Ben Peterson and Julie Strohman’s [presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx) is the primary source of information and inspiration for these guidelines. (The presentation is also available as a [recorded presentation](https://www.youtube.com/watch?v=j1ZJO8maV7s).)
 
-  * Other important sources of information include [Code for America’s Qualitative Research Practice Guide](https://info.codeforamerica.org/qualitative-research); [18F’s User Experience Design Guide](https://ux-guide.18f.gov/); and the [Substance Abuse and Mental Health Services Administration's Trauma-informed guidelines](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
+  * Other important sources of information include: 
+    * [Code for America’s Qualitative Research Practice Guide](https://info.codeforamerica.org/qualitative-research)
+    * [18F’s User Experience Design Guide](https://ux-guide.18f.gov/) 
+    * [Substance Abuse and Mental Health Services Administration's Trauma-informed Guidelines](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
 variation_groups: []
 ---

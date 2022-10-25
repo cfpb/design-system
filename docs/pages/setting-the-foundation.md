@@ -342,7 +342,7 @@ description: >-
   ### Examine your biases in the context of the project
 
 
-  During team formation, you should have spent time uncovering your biases and lived experiences. Take time to do the frames of reference activity again as a team, taking into consideration the context of the project you’re beginning. Couple the activity with a review of what you’ve learned about the audience for whom you’ll be designing.
+  During team formation, you should have spent time uncovering your biases and lived experiences. Take time to do the [frames of reference activity](#frames-of-reference) again as a team, taking into consideration the context of the project you’re beginning. Couple the activity with a review of [what you’ve learned about the audience](#learn-how-power-structures-can-affect-the-people-you-serve) for whom you’ll be designing.
 
 
   ### Apply trauma-informed principles
@@ -363,7 +363,7 @@ description: >-
   It is possible that you and your team may experience second-hand trauma during a project. Sometimes called vicarious trauma, it’s when people have prolonged exposure to victims of trauma or sensitive topics related to traumatic experiences. [Learn about the signs for vicarious trauma](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#what-are-some-common-negative-reactions-to-vicarious-trauma) and make space to talk about how the work may be affecting the team. If you see someone on your team exhibiting signs of vicarious trauma, [there are several steps you can take](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#suggestions-for-coworkers). 
 
 
-  <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
+  {% include icons/book.svg %} **FURTHER READING**
 
 
   Much of this guidance regarding trauma is based off well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)

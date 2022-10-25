@@ -85,7 +85,7 @@ description: >-
   ### Examine potential hazards and harms.  
 
 
-  Run through the [hazards and harms](bookmark://_Identify_hazards_and_1) that could occur as a result of your deliverable. In particular, be on the lookout for any representations that might perpetuate such hazards as racial profiling, enshrined status quo and power structures, and systemic bias.  
+  Run through the [hazards and harms](https://cfpb.github.io/design-system/guidelines/design-and-development#hazard-mapping) that could occur as a result of your deliverable. In particular, be on the lookout for any representations that might perpetuate such hazards as racial profiling, enshrined status quo and power structures, and systemic bias.  
 
 
   ## Hazards and harms

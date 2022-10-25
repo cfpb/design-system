@@ -51,7 +51,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  <div class ="eyebrow">{% include icons/edit.svg %} Activity</div>
+  {% include icons/edit.svg %} **ACTIVITY**
 
 
   <h2>Frames of reference</h2>
@@ -139,7 +139,7 @@ description: >-
   Anticipate sensitive questions or topics as best you can, and [look for signs of trauma](https://cfpb.github.io/design-system/guidelines/conducting-research#recognize-and-respond-to-trauma-in-participants). Be prepared to ask your participant if they’d be willing to talk about a topic, and if they’re not, move on, or end the research activity as needed. Note that even if the participant chooses to end research sessions early, they should still be paid for their time.   
 
 
-  <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
+  {% include icons/book.svg %} **F﻿URTHER READING**
 
 
   [18F's guide to informed consent](https://ux-guide.18f.gov/research/do/#getting-informed-consent)  
@@ -167,7 +167,7 @@ description: >-
   * **Interview bias and confirmation bias**, where we seek or favor information confirming our own prior beliefs and assumptions. If you’re a sighted person, you may omit thinking about the needs of people with low vision when you conduct research. If you design a product and then go on to research it, you may consciously or subconsciously shape the results to support your initial design decisions.   
 
 
-  <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
+  {% include icons/book.svg %} F﻿URTHER READING
 
 
   18F has put together [a list of common biases in research](https://ux-guide.18f.gov/research/bias/). 
@@ -205,7 +205,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  <div class ="eyebrow">{% include icons/edit.svg %} Activity</div>
+  {% include icons/edit.svg %} **ACTIVITY**
 
 
   <h2>The Four R’s</h2>
@@ -295,7 +295,7 @@ description: >-
   </div> 
 
 
-  <div class ="eyebrow">{% include icons/book.svg %} F﻿urther reading</div>
+  {% include icons/book.svg %} **FURTHER READING**
 
 
   Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf).

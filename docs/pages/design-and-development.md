@@ -103,7 +103,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  <div class="eyebrow">{% include icons/edit.svg %} Activity</div>
+  {% include icons/edit.svg %} **ACTIVITY**
 
 
   <h2>Hazard mapping</h2>

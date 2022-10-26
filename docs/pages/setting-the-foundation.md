@@ -41,6 +41,8 @@ description: >-
   {% include icons/favorite.svg %} <b>Ready to conduct research for your project?</b> Learn how to [check your biases when moderating a research session](https://cfpb.github.io/design-system/guidelines/conducting-research#check-your-biases).
 
 
+  <br>
+
   <div class="o-well" markdown="1">
 
 
@@ -105,8 +107,6 @@ description: >-
 
 
   </div>
-
-  <br>
 
   <br>
 
@@ -194,6 +194,9 @@ description: >-
   * [Language, Please](https://languageplease.org/)
 
 
+  <br>
+
+
   <div class="o-well" markdown="1">
 
 
@@ -266,6 +269,9 @@ description: >-
   Before a project begins, come to a shared understanding of its value—that is, a clear sense of the intended outcomes and value that key decision-makers envision creating. This is necessary to truly understand how the project might impact the audience.
 
 
+  <br>
+
+
   <div class="o-well" markdown="1">
 
 
@@ -308,6 +314,9 @@ description: >-
 
 
   {% include icons/favorite.svg %} <b>Outside of your project work,</b> make efforts to educate yourself, your team, and your leadership. Start up a book club and develop a reading list for people to read at their own pace. 
+
+
+  <br>
 
 
   <div class="o-well" markdown="1">

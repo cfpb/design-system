@@ -54,7 +54,7 @@ description: >-
   <p class="h5">{% include icons/edit.svg %} A﻿CTIVITY</p>
 
 
-  <h2>Frames of reference</h2>
+  <h3>Frames of reference</h3>
 
 
   [The frames of reference activity](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference) can help you and your team think more broadly about different identities and communities to include as part of your research. 
@@ -211,7 +211,7 @@ description: >-
   <p class="h5">{% include icons/edit.svg %} A﻿CTIVITY</p>
 
 
-  <h2>The Four R’s</h2>
+  <h3>The Four R’s</h3>
 
 
   In this activity, you’ll apply the Four R’s framework, outlined in [the Substance Abuse and Mental Health Services Administration's Concept of Trauma and Guidance for a Trauma Informed Approach](http://www.nchv.org/images/uploads/Research_Brief_61_-_SAMHSA_Trauma_Care.pdf), to your research materials before conducting research. 
@@ -230,13 +230,13 @@ description: >-
   * Remove or revise content, script, or questions as needed 
 
 
-  ### Realize 
+  #### Realize 
 
 
   Realize the impact that trauma has had on individuals and their interactions with people and systems of power and oppression. Identify historical oppression and policies that have oppressed specific groups. (If you haven’t already taken the time to learn how [power structures can affect the people you serve](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#learn-how-power-structures-can-affect-the-people-you-serve), now would be a good time to do so.)  
 
 
-  ### Recognize 
+  #### Recognize 
 
 
   * Recognize the signs of trauma when they surface. Some examples include:  
@@ -256,7 +256,7 @@ description: >-
   * An abrupt change in attitude  
 
 
-  ### Respond 
+  #### Respond 
 
 
   Respond to trauma with an appropriate action. Here are examples specific to research activities:   
@@ -289,7 +289,7 @@ description: >-
     * Relax your shoulders and sit squarely in front of the camera for remote sessions  
     * Either sit across from the participant or next to them - ask what they are most comfortable with.  
 
-  ### Resist re-traumatization 
+  #### Resist re-traumatization 
 
 
   If a topic area has shown to be traumatizing, revisit the way it’s integrated into your work and consider alternate methods of gathering information. 

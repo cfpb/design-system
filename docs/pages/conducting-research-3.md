@@ -60,9 +60,10 @@ description: >-
   [The frames of reference activity](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference) can help you and your team think more broadly about different identities and communities to include as part of your research. 
 
 
-  </div>. 
+  </div>    
 
 
+  <br/>
 
 
   For long-term success, invest in relationships with communities and community organizations to establish a collaborative partnership, thereby shifting from transactional to relational recruitment.  
@@ -207,7 +208,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  <p﻿ class="h5>{% include icons/edit.svg %} A﻿CTIVITY<﻿/p>
+  <p﻿ class="h5">{% include icons/edit.svg %} A﻿CTIVITY<﻿/p>
 
 
   <h2>The Four R’s</h2>
@@ -297,7 +298,7 @@ description: >-
   </div> 
 
 
-  <﻿p class="h5">{% include icons/book.svg %}F﻿URTHER READING<﻿/p>
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf).

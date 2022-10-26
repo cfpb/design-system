@@ -11,8 +11,6 @@ description: >-
   people we serve.</b></p>
 
 
-
-
   ## A﻿ccessibility
 
 
@@ -54,7 +52,7 @@ description: >-
   Working mobile-first and optimizing for performance and accessibility has SEO benefits as well. The most frequently-used search engines have moved to favoring mobile friendly sites and accessible features. 
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <﻿p class="h5">{% include icons/book.svg %} F﻿URTHER READING<﻿/p>
 
 
   Read the [Pew Research Center's fact sheet on internet and broadband usage (April 2021)](https://www.pewresearch.org/internet/fact-sheet/internet-broadband/)
@@ -105,7 +103,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
+  <p﻿ class="h5">{% include icons/edit.svg %} A﻿CTIVITY<﻿/p>
 
 
   <h2>Hazard mapping</h2>

@@ -7,8 +7,10 @@ jumplinks: Accessibility, Access, Inclusive imagery, Hazards and harms
 status: Proposed
 description: >-
   <p class="lead-paragraph">Designing and developing for more equitable access
-  starts with an <﻿b>awareness of the power imbalances between ourselves and the
+  starts with an <b>awareness of the power imbalances between ourselves and the
   people we serve.</b></p>
+
+
 
 
   ## A﻿ccessibility
@@ -135,6 +137,8 @@ description: >-
 
   * Data misuse
 
+  * Overcollection of data 
+
   * Opaque algorithms
 
   * Privacy breach
@@ -157,7 +161,7 @@ description: >-
 
   * Power imbalance
 
-  * Deadnaming
+  * Discrimination  
 
 
   </div>
@@ -165,6 +169,8 @@ description: >-
 
   <div class="content-50 content-last" markdown="1">
 
+
+  * Deadnaming
 
   * Dehumanization
 
@@ -197,8 +203,6 @@ description: >-
 
   </div>
 
-
-  <br>
 
   <br>
 

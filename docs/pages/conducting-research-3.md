@@ -51,7 +51,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  <p class="h5">{% include icons/edit.svg %} Frames of reference</p>
+  <p class="h5">{% include icons/edit.svg %} A﻿CTIVITY</p>
 
 
   <h2>Frames of reference</h2>
@@ -60,10 +60,9 @@ description: >-
   [The frames of reference activity](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference) can help you and your team think more broadly about different identities and communities to include as part of your research. 
 
 
-  </div>
+  </div>. 
 
 
-  <﻿br>
 
 
   For long-term success, invest in relationships with communities and community organizations to establish a collaborative partnership, thereby shifting from transactional to relational recruitment.  
@@ -142,7 +141,7 @@ description: >-
   Anticipate sensitive questions or topics as best you can, and [look for signs of trauma](https://cfpb.github.io/design-system/guidelines/conducting-research#recognize-and-respond-to-trauma-in-participants). Be prepared to ask your participant if they’d be willing to talk about a topic, and if they’re not, move on, or end the research activity as needed. Note that even if the participant chooses to end research sessions early, they should still be paid for their time.   
 
 
-  {% include icons/book.svg %} **F﻿URTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   [18F's guide to informed consent](https://ux-guide.18f.gov/research/do/#getting-informed-consent)  
@@ -170,7 +169,7 @@ description: >-
   * **Interview bias and confirmation bias**, where we seek or favor information confirming our own prior beliefs and assumptions. If you’re a sighted person, you may omit thinking about the needs of people with low vision when you conduct research. If you design a product and then go on to research it, you may consciously or subconsciously shape the results to support your initial design decisions.   
 
 
-  {% include icons/book.svg %} F﻿URTHER READING
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   18F has put together [a list of common biases in research](https://ux-guide.18f.gov/research/bias/). 
@@ -208,7 +207,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
+  <p﻿ class="h5>{% include icons/edit.svg %} A﻿CTIVITY<﻿/p>
 
 
   <h2>The Four R’s</h2>
@@ -298,7 +297,7 @@ description: >-
   </div> 
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <﻿p class="h5">{% include icons/book.svg %}F﻿URTHER READING<﻿/p>
 
 
   Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf).

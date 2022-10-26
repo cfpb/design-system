@@ -1,39 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class StringTrimmedControl extends React.Component {
-  static propTypes = {
-    onChange: PropTypes.func.isRequired,
-    forID: PropTypes.string,
-    value: PropTypes.node,
-    classNameWrapper: PropTypes.string.isRequired,
-    setActiveStyle: PropTypes.func.isRequired,
-    setInactiveStyle: PropTypes.func.isRequired,
+export default function StringTrimmedControl({
+  onChange,
+  forID,
+  value,
+  classNameWrapper,
+  setActiveStyle,
+  setInactiveStyle,
+}) {
+  const [state, setState] = React.useState({ value: value || '' });
+
+  const handleChange = (event) => {
+    onChange(event.target.value.trim());
+    setState({ value: event.target.value });
   };
 
-  state = {
-    value: this.props.value || '',
-  };
-
-  handleChange(event) {
-    this.props.onChange(event.target.value.trim());
-    this.setState({ value: event.target.value });
-  }
-
-  render() {
-    const { forID, classNameWrapper, setActiveStyle, setInactiveStyle } =
-      this.props;
-
-    return (
-      <input
-        type="text"
-        id={forID}
-        className={classNameWrapper}
-        value={this.state.value}
-        onChange={(event) => this.handleChange(event)}
-        onFocus={setActiveStyle}
-        onBlur={setInactiveStyle}
-      />
-    );
-  }
+  return (
+    <input
+      type="text"
+      id={forID}
+      className={classNameWrapper}
+      value={state.value}
+      onChange={(event) => handleChange(event)}
+      onFocus={setActiveStyle}
+      onBlur={setInactiveStyle}
+    />
+  );
 }
+
+StringTrimmedControl.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  forID: PropTypes.string,
+  value: PropTypes.node,
+  classNameWrapper: PropTypes.string.isRequired,
+  setActiveStyle: PropTypes.func.isRequired,
+  setInactiveStyle: PropTypes.func.isRequired,
+};

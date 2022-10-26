@@ -51,7 +51,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
+  <p class="h5">{% include icons/edit.svg %} Frames of reference</p>
 
 
   <h2>Frames of reference</h2>
@@ -61,6 +61,9 @@ description: >-
 
 
   </div>
+
+
+  <﻿br>
 
 
   For long-term success, invest in relationships with communities and community organizations to establish a collaborative partnership, thereby shifting from transactional to relational recruitment.  

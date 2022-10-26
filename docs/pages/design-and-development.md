@@ -106,7 +106,7 @@ description: >-
   <p class="h5">{% include icons/edit.svg %} A﻿CTIVITY</p>
 
 
-  <h2>Hazard mapping</h2>
+  <h3>Hazard mapping</h3>
 
 
   Adapted from [18F’s presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx).

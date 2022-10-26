@@ -118,6 +118,12 @@ first-level:
           - page: Bar charts
           - page: Line charts
           - page: Pie charts
+      - heading: Equity-centered design
+        nav-items:
+          - page: Overview
+          - page: Setting the foundation
+          - page: Conducting research
+          - page: Design and development
       - heading: Print
         nav-items:
           - page: Print styles

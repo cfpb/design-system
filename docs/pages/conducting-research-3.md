@@ -208,7 +208,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  <p﻿ class="h5">{% include icons/edit.svg %} A﻿CTIVITY<﻿/p>
+  <p class="h5">{% include icons/edit.svg %} A﻿CTIVITY</p>
 
 
   <h2>The Four R’s</h2>

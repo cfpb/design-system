@@ -44,7 +44,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} <span class="h5">ACTIVITY</span>
+  <p class="h5">{% include icons/edit.svg %} ACTIVITY</p>
 
   <h4 class="h3" id="frames-of-reference">Frames of reference</h4> 
 
@@ -140,7 +140,7 @@ description: >-
   <br>
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   * The [positionality wheel](https://design.ncsu.edu/blog/2022/01/07/from-a-to-z-lesley-ann-noel-and-decolonizing-design/) is another form of the Frames of Reference exercise. 
@@ -156,7 +156,7 @@ description: >-
   We encourage everyone to read widely to examine their own identity and internalized oppression—the false narratives or stereotypes that they may have internalized about themselves, and how they might perpetuate systemic oppression. 
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   For more information, Intentional Futures has a useful explanation of systemic oppression and how it manifests in their [Introduction to Equity-Centered Design](https://www.intentionalfutures.com/public/ecd-booklet.pdf). Additionally, consider using the [implicit bias test put together by Harvard](https://implicit.harvard.edu/implicit/user/agg/blindspot/indexrk.htm), which is designed to identify unconscious positive and negative associations based on race. 
@@ -186,7 +186,7 @@ description: >-
   In line with using people-first language, consider using the word “people” instead of “user” when referring to those we’re trying to help. “User” can depersonalize our intended audience, potentially reducing them to a one-dimensional data point. “People”, in contrast, acknowledges the many distinct individuals who are interacting with the services we create for them, and helps us think collectively about the multiplicity of their viewpoints and lived experiences.  
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   * [APA’s Bias Free Language Guide](https://apastyle.apa.org/style-grammar-guidelines/bias-free-language), in particular their [Inclusive Language Guidelines](https://apastyle.apa.org/style-grammar-guidelines/bias-free-language/disability) 
@@ -197,8 +197,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
-
+  <p class="h5">{% include icons/edit.svg %} ACTIVITY</p> 
 
   <h4 class="h3">﻿Set intentional language</h4>
 
@@ -221,8 +220,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
-
+  <p class="h5">{% include icons/edit.svg %} ACTIVITY</p>
 
   <h4 class="h3">Create a set of equity-centered team values</h4>
 
@@ -271,8 +269,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
-
+  <p class="h5">{% include icons/edit.svg %} ACTIVITY</p>
 
   <h4 class="h3">Write a problem statement</h4>
 
@@ -316,7 +313,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
+  <p class="h5">{% include icons/edit.svg %} ACTIVITY</p>
 
   <h4 class="h3">Conduct research as a team</h4> 
 
@@ -357,7 +354,7 @@ description: >-
   It is possible that you and your team may experience second-hand trauma during a project. Sometimes called vicarious trauma, it’s when people have prolonged exposure to victims of trauma or sensitive topics related to traumatic experiences. [Learn about the signs for vicarious trauma](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#what-are-some-common-negative-reactions-to-vicarious-trauma) and make space to talk about how the work may be affecting the team. If you see someone on your team exhibiting signs of vicarious trauma, [there are several steps you can take](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#suggestions-for-coworkers). 
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   Much of this guidance regarding trauma is based off well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)

@@ -9,11 +9,11 @@ export default function StringTrimmedControl({
   setActiveStyle,
   setInactiveStyle,
 }) {
-  const [state, setState] = React.useState({ value: value || '' });
+  const [inputValue, setInputValue] = React.useState(value || '');
 
   const handleChange = (event) => {
     onChange(event.target.value.trim());
-    setState({ value: event.target.value });
+    setInputValue(event.target.value);
   };
 
   return (
@@ -21,8 +21,8 @@ export default function StringTrimmedControl({
       type="text"
       id={forID}
       className={classNameWrapper}
-      value={state.value}
-      onChange={(event) => handleChange(event)}
+      value={inputValue}
+      onChange={handleChange}
       onFocus={setActiveStyle}
       onBlur={setInactiveStyle}
     />
@@ -32,7 +32,7 @@ export default function StringTrimmedControl({
 StringTrimmedControl.propTypes = {
   onChange: PropTypes.func.isRequired,
   forID: PropTypes.string,
-  value: PropTypes.node,
+  value: PropTypes.string,
   classNameWrapper: PropTypes.string.isRequired,
   setActiveStyle: PropTypes.func.isRequired,
   setInactiveStyle: PropTypes.func.isRequired,

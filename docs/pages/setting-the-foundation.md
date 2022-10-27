@@ -11,6 +11,9 @@ description: >-
   attention to the ways in which we work.</b></p>
 
 
+  ![Illustration of people working together](/design-system/images/uploads/equity_design_setting_the_foundation.png)
+
+
   ## Working together
 
 

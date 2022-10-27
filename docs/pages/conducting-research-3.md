@@ -14,6 +14,9 @@ description: >-
   collaboration. </p>
 
 
+  ![Illustration of a person sharing their story with a researcher](/design-system/images/uploads/equity_design_conducting_research.png)
+
+
   ## Practice inclusive recruitment 
 
 

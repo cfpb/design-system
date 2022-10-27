@@ -11,6 +11,11 @@ description: >-
   people we serve.</b></p>
 
 
+
+
+  ![Illustration of person sitting and working at a desk](/design-system/images/uploads/equity_design_and_development.png)
+
+
   ## A﻿ccessibility
 
 

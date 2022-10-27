@@ -1,6 +1,7 @@
 ---
 title: Conducting research
 collection_name: pages
+eyebrow: Equity-centered design
 layout: variation
 section: guidelines
 jumplinks: "Practice inclusive recruitment, Compensate fairly, Obtain informed

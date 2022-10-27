@@ -1,6 +1,7 @@
 ---
 title: Setting the foundation
 collection_name: pages
+eyebrow: Equity-centered design
 layout: variation
 section: guidelines
 jumplinks: Working together, Beginning a project

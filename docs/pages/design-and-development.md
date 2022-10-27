@@ -1,6 +1,7 @@
 ---
 title: Design and development
 collection_name: pages
+eyebrow: Equity-centered design
 layout: variation
 section: guidelines
 jumplinks: Accessibility, Access, Inclusive imagery, Hazards and harms

@@ -1,31 +1,18 @@
-const { extendDefaultPlugins } = require('svgo');
-
 module.exports = {
-  plugins: extendDefaultPlugins([
+  plugins: [
     {
-      name: 'addClassesToSVGElement',
+      name: 'preset-default',
       params: {
-        className: 'cf-icon-svg',
+        overrides: {
+          cleanupIds: { force: 'true' },
+          addClassesToSVGElement: { className: 'cf-icon-svg' },
+          removeAttrs: {
+            attrs: ['fill', 'width', 'height', 'path:class', 'circle:class'],
+          },
+          removeStyleElement: {},
+          removeViewBox: false,
+        },
       },
     },
-    {
-      name: 'cleanupIDs',
-      params: {
-        force: 'true',
-      },
-    },
-    {
-      name: 'removeAttrs',
-      params: {
-        attrs: ['fill', 'width', 'height', 'path:class', 'circle:class'],
-      },
-    },
-    {
-      name: 'removeStyleElement',
-    },
-    {
-      name: 'removeViewBox',
-      active: false,
-    },
-  ]),
+  ],
 };

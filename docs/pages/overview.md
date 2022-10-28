@@ -1,6 +1,7 @@
 ---
 title: Overview
 collection_name: pages
+eyebrow: Equity-centered design
 layout: variation
 section: guidelines
 jumplinks: About equity-centered design,About these guidelines,Acknowledgements

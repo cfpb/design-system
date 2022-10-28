@@ -5,14 +5,22 @@ module.exports = {
       params: {
         overrides: {
           cleanupIds: { force: 'true' },
-          addClassesToSVGElement: { className: 'cf-icon-svg' },
-          removeAttrs: {
-            attrs: ['fill', 'width', 'height', 'path:class', 'circle:class'],
-          },
-          removeStyleElement: {},
           removeViewBox: false,
         },
       },
+    },
+    {
+      name: 'removeStyleElement',
+    },
+    {
+      name: 'removeAttrs',
+      params: {
+        attrs: ['fill', 'width', 'height', 'path:class', 'circle:class'],
+      },
+    },
+    {
+      name: 'addClassesToSVGElement',
+      params: { className: 'cf-icon-svg' },
     },
   ],
 };

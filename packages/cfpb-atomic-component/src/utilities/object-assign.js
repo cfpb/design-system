@@ -32,7 +32,7 @@ function assign(destination) {
     const source = arguments[i] || {};
     let key;
     for (key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
+      if ({}.hasOwnProperty.call(source, key)) {
         const value = source[key];
         if (_isPlainObject(value)) {
           assign(destination[key] || (destination[key] = {}), value);

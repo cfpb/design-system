@@ -272,7 +272,7 @@
         let n = arguments[e] || {},
           s = void 0;
         for (s in n) {
-          if (Object.prototype.hasOwnProperty.call(n, s)) {
+          if ({}.hasOwnProperty.call(n, s)) {
             const r = n[s];
             o(r) ? a(t[s] || (t[s] = {}), r) : (t[s] = r);
           }

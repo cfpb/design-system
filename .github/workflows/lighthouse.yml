@@ -15,7 +15,7 @@ jobs:
       # Install Node and configure its cache.
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       # https://github.com/actions/cache/blob/master/examples.md#node---yarn
       - name: Get yarn cache directory path

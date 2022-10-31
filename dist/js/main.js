@@ -1324,7 +1324,7 @@ function AtomicComponent(element, attributes) {
     let element;
 
     for (key in ui) {
-      if (Object.prototype.hasOwnProperty.call(ui, key)) {
+      if ({}.hasOwnProperty.call(ui, key)) {
         element = this.element.querySelectorAll(ui[key]);
         if (element.length === 1) {
           ui[key] = element[0];
@@ -1368,7 +1368,7 @@ function AtomicComponent(element, attributes) {
     let property;
 
     for (property in attributes) {
-      if (Object.prototype.hasOwnProperty.call(attributes, property)) {
+      if ({}.hasOwnProperty.call(attributes, property)) {
         this.element.setAttribute(property, attributes[property]);
       }
     }
@@ -1478,8 +1478,8 @@ function extend(attributes) {
   (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(child, AtomicComponent);
 
   if (
-    Object.prototype.hasOwnProperty.call(attributes, 'ui') &&
-    Object.prototype.hasOwnProperty.call(attributes.ui, 'base')
+    {}.hasOwnProperty.call(attributes, 'ui') &&
+    {}.hasOwnProperty.call(attributes.ui, 'base')
   ) {
     child.selector = attributes.ui.base;
   }
@@ -1538,7 +1538,7 @@ function EventObserver() {
    * @returns {object} The instance this EventObserver instance is decorating.
    */
   function addEventListener(event, callback) {
-    if (Object.prototype.hasOwnProperty.call(_events, event)) {
+    if ({}.hasOwnProperty.call(_events, event)) {
       _events[event].push(callback);
     } else {
       _events[event] = [callback];
@@ -1556,7 +1556,7 @@ function EventObserver() {
    * @returns {object} The instance this EventObserver instance is decorating.
    */
   function removeEventListener(event, callback) {
-    if (!Object.prototype.hasOwnProperty.call(_events, event)) {
+    if (!{}.hasOwnProperty.call(_events, event)) {
       return this;
     }
 
@@ -1577,7 +1577,7 @@ function EventObserver() {
    * @returns {object} The instance this EventObserver instance is decorating.
    */
   function dispatchEvent(event, options) {
-    if (!Object.prototype.hasOwnProperty.call(_events, event)) {
+    if (!{}.hasOwnProperty.call(_events, event)) {
       return this;
     }
 
@@ -2029,7 +2029,7 @@ function assign(destination) {
     const source = arguments[i] || {};
     let key;
     for (key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
+      if ({}.hasOwnProperty.call(source, key)) {
         const value = source[key];
         if (_isPlainObject(value)) {
           assign(destination[key] || (destination[key] = {}), value);
@@ -2340,7 +2340,7 @@ function BaseTransition(element, classes) {
     let prop;
     for (prop in _classes) {
       if (
-        Object.prototype.hasOwnProperty.call(_classes, prop) &&
+        {}.hasOwnProperty.call(_classes, prop) &&
         _classes[prop] !== _classes.BASE_CLASS &&
         _dom.classList.contains(_classes[prop])
       ) {
@@ -2435,7 +2435,7 @@ function BaseTransition(element, classes) {
     let transitionEvent;
     for (transitionEvent in transitions) {
       if (
-        Object.prototype.hasOwnProperty.call(transitions, transitionEvent) &&
+        {}.hasOwnProperty.call(transitions, transitionEvent) &&
         typeof elem.style[transitionEvent] !== 'undefined'
       ) {
         transition = transitions[transitionEvent];
@@ -4228,7 +4228,7 @@ function create(tag, options) {
 
   let i;
   for (i in options) {
-    if (Object.prototype.hasOwnProperty.call(options, i)) {
+    if ({}.hasOwnProperty.call(options, i)) {
       const val = options[i];
       let ref;
 

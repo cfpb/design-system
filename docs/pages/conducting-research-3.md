@@ -24,7 +24,7 @@ description: >-
   Once the goals and objectives of a research initiative are established, it’s important to carefully define the audience ([see 18F’s guide for more info](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting)) and then to take the time needed to recruit for that audience.   
 
 
-  To quote 18F, [you must do research with people who will actually use your services](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting). It’s counterproductive and potentially harmful to[](bookmark://_Identify_hazards_and)draw conclusions from research conducted with people who are not in the right demographic or target group, or who don’t share the experience or situation that the research aims to understand.
+  To quote 18F, [you must do research with people who will actually use your services](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting). It’s counterproductive and potentially harmful to draw conclusions from research conducted with people who are not in the right demographic or target group, or who don’t share the experience or situation that the research aims to understand.
 
 
   Consider the unintended consequences of your recruitment approach. For example, recruiting via personal networks can lead to hearing only from people who share similar characteristics, values, and beliefs as yourself. Ask yourself whether these people are authentic representatives of the people who will ultimately use your product. Similarly, recruiting via social media can omit people who don’t have internet access at all. These issues are known as [sampling bias](https://cfpb.github.io/design-system/guidelines/conducting-research#be-aware-of-how-bias-can-show-up-during-research).     

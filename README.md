@@ -64,7 +64,20 @@ click the edit button at the bottom right of the page.
 You'll need to be added as a contributor to this repository in order to
 authenticate with Netlify CMS.
 
-To run the documentation website locally:
+
+### Running the documentation website locally
+The project has a dependency on Ruby because it uses Jekyll. If you do not have Ruby installed, you will need to install it. We recommend using [RVM](https://rvm.io/rvm/install). If you don't have admin access to your machine, try these steps:
+
+```shell
+curl -sSL https://get.rvm.io | bash -s stable --ruby
+rvm install 2.7
+brew install openssl
+brew link openssl --force
+gem install eventmachine -- --with-openssl-dir=/usr/local/opt/openssl@1.1
+bundle install
+```
+
+And then to run the documentation website locally:
 
 ```shell
 git clone https://github.com/cfpb/design-system.git

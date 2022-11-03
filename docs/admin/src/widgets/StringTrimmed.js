@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function StringTrimmedControl({
+export const StringTrimmed = ({
   onChange,
   forID,
   value,
   classNameWrapper,
   setActiveStyle,
   setInactiveStyle,
-}) {
-  const [inputValue, setInputValue] = React.useState(value || '');
-
+}) => {
+  const inputValue = value;
   const handleChange = (event) => {
     onChange(event.target.value.trim());
-    setInputValue(event.target.value);
   };
 
   return (
@@ -21,7 +19,7 @@ export default function StringTrimmedControl({
       type="text"
       id={forID}
       className={classNameWrapper}
-      value={inputValue}
+      value={inputValue || ''}
       onChange={handleChange}
       onFocus={setActiveStyle}
       onBlur={setInactiveStyle}

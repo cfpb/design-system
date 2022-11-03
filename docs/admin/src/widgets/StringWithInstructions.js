@@ -13,19 +13,21 @@ const instructionsLinkStyle = {
   'text-decoration': 'underline',
 };
 
-export default function StringTrimmedControl({
+export const StringWithInstructionsControl = ({
   onChange,
   forID,
   value,
   classNameWrapper,
   setActiveStyle,
   setInactiveStyle,
-}) {
-  const [inputValue, setInputValue] = React.useState(value || '');
-
+}) => {
+  console.log('swi', value)
+  // const [inputValue, setInputValue] = useState('');
+const inputValue=value;
   const handleChange = (event) => {
     onChange(event.target.value.trim());
-    setInputValue(event.target.value);
+    console.log('SWI', event)
+    // setInputValue(event.target.value);
   };
 
   return (
@@ -55,7 +57,7 @@ export default function StringTrimmedControl({
   );
 }
 
-StringTrimmedControl.propTypes = {
+StringWithInstructionsControl.propTypes = {
   onChange: PropTypes.func.isRequired,
   forID: PropTypes.string,
   value: PropTypes.node,

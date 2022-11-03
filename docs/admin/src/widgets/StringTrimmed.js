@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const StringTrimmed = ({
+export const StringTrimmedControl = ({
   onChange,
   forID,
   value,

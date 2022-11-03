@@ -7,7 +7,7 @@ import genericPreviewTemplate from './widgets/genericPreviewTemplate';
 import navigationPreviewTemplate from './widgets/navigationPreviewTemplate';
 import pagePreviewTemplate from './widgets/pagePreviewTemplate';
 
-CMS.registerWidget('string-trimmed', StringTrimmed);
+CMS.registerWidget('string-trimmed', StringTrimmedControl);
 CMS.registerWidget('string-with-instructions', StringWithInstructionsControl);
 
 CMS.registerPreviewTemplate('special-pages', genericPreviewTemplate);

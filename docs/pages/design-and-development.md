@@ -1,10 +1,11 @@
 ---
 title: Design and development
 collection_name: pages
-eyebrow: Equity-centered design
 layout: variation
 section: guidelines
 jumplinks: Accessibility, Access, Inclusive imagery, Hazards and harms
+variation_groups: []
+eyebrow: Equity-centered design
 status: Proposed
 description: >-
   <p class="lead-paragraph">Designing and developing for more equitable access
@@ -264,5 +265,10 @@ description: >-
 
 
   </div>
-variation_groups: []
+related_items: >-
+  * [O﻿verview](https://cfpb.github.io/design-system/guidelines/overview)
+
+  * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
+
+  * [C﻿onducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
 ---

@@ -9,7 +9,6 @@ export const StringTrimmedControl = ({
   setActiveStyle,
   setInactiveStyle,
 }) => {
-  const inputValue = value;
   const handleChange = (event) => {
     onChange(event.target.value.trim());
   };
@@ -19,7 +18,7 @@ export const StringTrimmedControl = ({
       type="text"
       id={forID}
       className={classNameWrapper}
-      value={inputValue || ''}
+      value={value}
       onChange={handleChange}
       onFocus={setActiveStyle}
       onBlur={setInactiveStyle}

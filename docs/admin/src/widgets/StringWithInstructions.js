@@ -21,13 +21,8 @@ export const StringWithInstructionsControl = ({
   setActiveStyle,
   setInactiveStyle,
 }) => {
-  console.log('swi', value)
-  // const [inputValue, setInputValue] = useState('');
-const inputValue=value;
   const handleChange = (event) => {
     onChange(event.target.value.trim());
-    console.log('SWI', event)
-    // setInputValue(event.target.value);
   };
 
   return (
@@ -36,7 +31,7 @@ const inputValue=value;
         type="text"
         id={forID}
         className={classNameWrapper}
-        value={inputValue}
+        value={value}
         onChange={handleChange}
         onFocus={setActiveStyle}
         onBlur={setInactiveStyle}

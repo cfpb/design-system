@@ -1,10 +1,11 @@
 ---
 title: Setting the foundation
 collection_name: pages
-eyebrow: Equity-centered design
 layout: variation
 section: guidelines
 jumplinks: Working together, Beginning a project
+variation_groups: []
+eyebrow: Equity-centered design
 status: Proposed
 description: >-
   <p class="lead-paragraph">Before we’re able to design equitable and inclusive
@@ -371,5 +372,10 @@ description: >-
 
 
   Much of this guidance regarding trauma is based off well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
-variation_groups: []
+related_items: >-
+  * [O﻿verview](https://cfpb.github.io/design-system/guidelines/overview)
+
+  * [C﻿onducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
+
+  * [D﻿esign and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
 ---

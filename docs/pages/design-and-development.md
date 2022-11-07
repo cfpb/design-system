@@ -265,10 +265,14 @@ description: >-
 
 
   </div>
-related_items: >-
+
+
+  ## Related pages
+
   * [O﻿verview](https://cfpb.github.io/design-system/guidelines/overview)
 
   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
 
   * [C﻿onducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
+related_items: ""
 ---

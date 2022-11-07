@@ -13,8 +13,6 @@ description: >-
   people we serve.</b></p>
 
 
-
-
   ![Illustration of person sitting and working at a desk](/design-system/images/uploads/equity_design_and_development.png)
 
 
@@ -263,13 +261,17 @@ description: >-
 
   * Physical danger  
 
+
+  </div>
+
   </div>
 
 
-  </div>
+  <﻿br>
 
 
   ## Related pages
+
 
   * [O﻿verview](https://cfpb.github.io/design-system/guidelines/overview)
 

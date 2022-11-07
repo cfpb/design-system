@@ -51,11 +51,13 @@ description: >-
     * [Code for America’s Qualitative Research Practice Guide](https://info.codeforamerica.org/qualitative-research)
     * [18F’s User Experience Design Guide](https://ux-guide.18f.gov/) 
     * [Substance Abuse and Mental Health Services Administration's Trauma-informed Guidelines](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
-related_items: >-
-  * [Setting the
-  foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
+
+  ## Related pages
+
+  * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
 
   * [C﻿onducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
 
   * [D﻿esign and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
+related_items: ""
 ---

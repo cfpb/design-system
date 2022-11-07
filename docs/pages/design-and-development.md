@@ -269,9 +269,6 @@ description: >-
   </div>
 
 
-  </br>
-
-
   ## Related pages
 
   * [O﻿verview](https://cfpb.github.io/design-system/guidelines/overview)

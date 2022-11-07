@@ -267,8 +267,6 @@ description: >-
   </div>
 
 
-  <﻿br>
-
 
   ## Related pages
 

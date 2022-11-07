@@ -307,10 +307,14 @@ description: >-
 
 
   Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf).
-related_items: >-
+
+
+  ## Related pages
+
   * [O﻿verview](https://cfpb.github.io/design-system/guidelines/overview)
 
   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
 
   * [D﻿esign and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
+related_items: ""
 ---

@@ -2,7 +2,7 @@
    Settings for webpack JavaScript bundling system.
    ========================================================================== */
 
-const TerserWebpackPlugin = require('terser-webpack-plugin');
+import TerserWebpackPlugin from 'terser-webpack-plugin';
 
 /* Commmon webpack 'module' option used in each configuration.
    Runs code through Babel and uses global supported browser list. */
@@ -56,4 +56,4 @@ const commonConf = {
   },
 };
 
-module.exports = { commonConf };
+export default { commonConf };

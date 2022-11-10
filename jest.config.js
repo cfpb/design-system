@@ -1,9 +1,7 @@
-module.exports = {
+export default {
   testEnvironment: 'jsdom',
   verbose: true,
-  transform: {
-    '^.+\\.jsx?$': 'babel-jest',
-  },
+  transform: {},
   collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/packages/**/*.js'],
   coveragePathIgnorePatterns: [

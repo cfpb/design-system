@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals';
 import AtomicComponent from '../../../../../../packages/cfpb-atomic-component/src/components/AtomicComponent';
 
 const HTML_SNIPPET = `

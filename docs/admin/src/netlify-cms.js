@@ -1,18 +1,14 @@
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+import 'core-js/stable/index.js';
+import 'regenerator-runtime/runtime.js';
 import CMS from 'netlify-cms';
-import StringTrimmedControl from './widgets/StringTrimmed';
-import StringWithInstructionsControl from './widgets/StringWithInstructions';
-import genericPreviewTemplate from './widgets/genericPreviewTemplate';
-import navigationPreviewTemplate from './widgets/navigationPreviewTemplate';
-import pagePreviewTemplate from './widgets/pagePreviewTemplate';
+import { StringTrimmedControl } from './widgets/StringTrimmed.js';
+import { StringWithInstructionsControl } from './widgets/StringWithInstructions.js';
+import genericPreviewTemplate from './widgets/genericPreviewTemplate.js';
+import navigationPreviewTemplate from './widgets/navigationPreviewTemplate.js';
+import pagePreviewTemplate from './widgets/pagePreviewTemplate.js';
 
-CMS.registerWidget('string-trimmed', StringTrimmedControl, 'string');
-CMS.registerWidget(
-  'string-with-instructions',
-  StringWithInstructionsControl,
-  'string'
-);
+CMS.registerWidget('string-trimmed', StringTrimmedControl);
+CMS.registerWidget('string-with-instructions', StringWithInstructionsControl);
 
 CMS.registerPreviewTemplate('special-pages', genericPreviewTemplate);
 CMS.registerPreviewTemplate('pages', pagePreviewTemplate);

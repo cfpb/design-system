@@ -5,14 +5,12 @@ describe('Netlify CMS', () => {
   const WAIT_FOR_DISPLAY_TIMEOUT = 60000;
 
   describe('Editing the homepage', () => {
-    let loginButton;
-
     beforeEach(async () => {
       await browser.url(
         '/design-system/admin/#/collections/special-pages/entries/home'
       );
       await browser.pause(300);
-      loginButton = await $('button=Login');
+      const loginButton = await $('button=Login');
       // Wait for page to load netlify configuration and show the login button.
       await loginButton.waitForDisplayed({ timeout: WAIT_FOR_DISPLAY_TIMEOUT });
       expect(loginButton).toExist();
@@ -56,7 +54,7 @@ describe('Netlify CMS', () => {
       // Make the browser a little wider than normal to prevent the "show details" tabs
       // from triggering their mobile media queries
       await browser.setWindowSize(1850, 800);
-      loginButton = await $('button=Login');
+      const loginButton = await $('button=Login');
       // Wait for page to load netlify configuration and show the login button.
       await loginButton.waitForDisplayed({ timeout: WAIT_FOR_DISPLAY_TIMEOUT });
       expect(loginButton).toExist();

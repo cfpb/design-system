@@ -1,4 +1,4 @@
-module.exports = function handleErrors() {
+export default function handleErrors() {
   const args = Array.prototype.slice.call(arguments);
   let exitProcessParam = false;
   let errorParam = args[0] || {};
@@ -14,4 +14,4 @@ module.exports = function handleErrors() {
     // Keep gulp from hanging on this task.
     this.process.emit('end');
   }
-};
+}

@@ -131,5 +131,6 @@
       "lerna-changelog/documentation": "Documentation",
       "lerna-changelog/internal": "Internal"
     }
-  }
+  },
+  "type": "module"
 }

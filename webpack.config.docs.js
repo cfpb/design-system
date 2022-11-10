@@ -1,10 +1,14 @@
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserWebpackPlugin = require('terser-webpack-plugin');
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import path from 'path';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import TerserWebpackPlugin from 'terser-webpack-plugin';
+import { fileURLToPath } from 'url';
 
-module.exports = (env, argv) => {
+export default (env, argv) => {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+
   /**
    * CSS plugins to add to PostCSS loader step.
    * Minimizer (cssnano) is added only in production mode.

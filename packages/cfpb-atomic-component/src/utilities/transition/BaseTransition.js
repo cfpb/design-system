@@ -94,7 +94,7 @@ function BaseTransition(element, classes) {
     let prop;
     for (prop in _classes) {
       if (
-        Object.prototype.hasOwnProperty.call(_classes, prop) &&
+        {}.hasOwnProperty.call(_classes, prop) &&
         _classes[prop] !== _classes.BASE_CLASS &&
         _dom.classList.contains(_classes[prop])
       ) {
@@ -189,7 +189,7 @@ function BaseTransition(element, classes) {
     let transitionEvent;
     for (transitionEvent in transitions) {
       if (
-        Object.prototype.hasOwnProperty.call(transitions, transitionEvent) &&
+        {}.hasOwnProperty.call(transitions, transitionEvent) &&
         typeof elem.style[transitionEvent] !== 'undefined'
       ) {
         transition = transitions[transitionEvent];

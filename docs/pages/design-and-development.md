@@ -4,11 +4,16 @@ collection_name: pages
 layout: variation
 section: guidelines
 jumplinks: Accessibility, Access, Inclusive imagery, Hazards and harms
+variation_groups: []
+eyebrow: Equity-centered design
 status: Proposed
 description: >-
   <p class="lead-paragraph">Designing and developing for more equitable access
-  starts with an <﻿b>awareness of the power imbalances between ourselves and the
+  starts with an <b>awareness of the power imbalances between ourselves and the
   people we serve.</b></p>
+
+
+  ![Illustration of person sitting and working at a desk](/design-system/images/uploads/equity_design_and_development.png)
 
 
   ## A﻿ccessibility
@@ -52,7 +57,7 @@ description: >-
   Working mobile-first and optimizing for performance and accessibility has SEO benefits as well. The most frequently-used search engines have moved to favoring mobile friendly sites and accessible features. 
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   Read the [Pew Research Center's fact sheet on internet and broadband usage (April 2021)](https://www.pewresearch.org/internet/fact-sheet/internet-broadband/)
@@ -103,10 +108,10 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
+  <p class="h5">{% include icons/edit.svg %} A﻿CTIVITY</p>
 
 
-  <h2>Hazard mapping</h2>
+  <h3>Hazard mapping</h3>
 
 
   Adapted from [18F’s presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx).
@@ -135,6 +140,8 @@ description: >-
 
   * Data misuse
 
+  * Overcollection of data 
+
   * Opaque algorithms
 
   * Privacy breach
@@ -157,7 +164,7 @@ description: >-
 
   * Power imbalance
 
-  * Deadnaming
+  * Discrimination  
 
 
   </div>
@@ -165,6 +172,8 @@ description: >-
 
   <div class="content-50 content-last" markdown="1">
 
+
+  * Deadnaming
 
   * Dehumanization
 
@@ -200,8 +209,6 @@ description: >-
 
   <br>
 
-  <br>
-
 
   Hazards can cause a wide range of harms. These harms can include:
 
@@ -230,6 +237,9 @@ description: >-
   * Invisibility
 
 
+  </div>
+
+
   <div class="content-50 content-last" markdown="1">
 
 
@@ -253,5 +263,18 @@ description: >-
 
 
   </div>
-variation_groups: []
+
+  </div>
+
+
+
+  ## Related pages
+
+
+  * [O﻿verview](https://cfpb.github.io/design-system/guidelines/overview)
+
+  * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
+
+  * [C﻿onducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
+related_items: ""
 ---

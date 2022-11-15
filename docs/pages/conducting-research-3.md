@@ -6,6 +6,8 @@ section: guidelines
 jumplinks: "Practice inclusive recruitment, Compensate fairly, Obtain informed
   consent, Check your biases, Handle data and stories with care, Recognize and
   respond to trauma in participants "
+variation_groups: []
+eyebrow: Equity-centered design
 status: Proposed
 description: >-
   <p class="lead-paragraph"><b>Build a greater understanding of who you’re
@@ -14,13 +16,16 @@ description: >-
   collaboration. </p>
 
 
+  ![Illustration of a person sharing their story with a researcher](/design-system/images/uploads/equity_design_conducting_research.png)
+
+
   ## Practice inclusive recruitment 
 
 
   Once the goals and objectives of a research initiative are established, it’s important to carefully define the audience ([see 18F’s guide for more info](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting)) and then to take the time needed to recruit for that audience.   
 
 
-  To quote 18F, [you must do research with people who will actually use your services](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting). It’s counterproductive and potentially harmful to[](bookmark://_Identify_hazards_and)draw conclusions from research conducted with people who are not in the right demographic or target group, or who don’t share the experience or situation that the research aims to understand.
+  To quote 18F, [you must do research with people who will actually use your services](https://ux-guide.18f.gov/research/plan/#participants-and-recruiting). It’s counterproductive and potentially harmful to draw conclusions from research conducted with people who are not in the right demographic or target group, or who don’t share the experience or situation that the research aims to understand.
 
 
   Consider the unintended consequences of your recruitment approach. For example, recruiting via personal networks can lead to hearing only from people who share similar characteristics, values, and beliefs as yourself. Ask yourself whether these people are authentic representatives of the people who will ultimately use your product. Similarly, recruiting via social media can omit people who don’t have internet access at all. These issues are known as [sampling bias](https://cfpb.github.io/design-system/guidelines/conducting-research#be-aware-of-how-bias-can-show-up-during-research).     
@@ -51,16 +56,19 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
+  <p class="h5">{% include icons/edit.svg %} A﻿CTIVITY</p>
 
 
-  <h2>Frames of reference</h2>
+  <h3>Frames of reference</h3>
 
 
   [The frames of reference activity](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference) can help you and your team think more broadly about different identities and communities to include as part of your research. 
 
 
-  </div>
+  </div>    
+
+
+  <br/>
 
 
   For long-term success, invest in relationships with communities and community organizations to establish a collaborative partnership, thereby shifting from transactional to relational recruitment.  
@@ -139,7 +147,7 @@ description: >-
   Anticipate sensitive questions or topics as best you can, and [look for signs of trauma](https://cfpb.github.io/design-system/guidelines/conducting-research#recognize-and-respond-to-trauma-in-participants). Be prepared to ask your participant if they’d be willing to talk about a topic, and if they’re not, move on, or end the research activity as needed. Note that even if the participant chooses to end research sessions early, they should still be paid for their time.   
 
 
-  {% include icons/book.svg %} **F﻿URTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   [18F's guide to informed consent](https://ux-guide.18f.gov/research/do/#getting-informed-consent)  
@@ -167,7 +175,7 @@ description: >-
   * **Interview bias and confirmation bias**, where we seek or favor information confirming our own prior beliefs and assumptions. If you’re a sighted person, you may omit thinking about the needs of people with low vision when you conduct research. If you design a product and then go on to research it, you may consciously or subconsciously shape the results to support your initial design decisions.   
 
 
-  {% include icons/book.svg %} F﻿URTHER READING
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   18F has put together [a list of common biases in research](https://ux-guide.18f.gov/research/bias/). 
@@ -205,10 +213,10 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
+  <p class="h5">{% include icons/edit.svg %} A﻿CTIVITY</p>
 
 
-  <h2>The Four R’s</h2>
+  <h3>The Four R’s</h3>
 
 
   In this activity, you’ll apply the Four R’s framework, outlined in [the Substance Abuse and Mental Health Services Administration's Concept of Trauma and Guidance for a Trauma Informed Approach](http://www.nchv.org/images/uploads/Research_Brief_61_-_SAMHSA_Trauma_Care.pdf), to your research materials before conducting research. 
@@ -227,13 +235,13 @@ description: >-
   * Remove or revise content, script, or questions as needed 
 
 
-  ### Realize 
+  #### Realize 
 
 
   Realize the impact that trauma has had on individuals and their interactions with people and systems of power and oppression. Identify historical oppression and policies that have oppressed specific groups. (If you haven’t already taken the time to learn how [power structures can affect the people you serve](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#learn-how-power-structures-can-affect-the-people-you-serve), now would be a good time to do so.)  
 
 
-  ### Recognize 
+  #### Recognize 
 
 
   * Recognize the signs of trauma when they surface. Some examples include:  
@@ -253,7 +261,7 @@ description: >-
   * An abrupt change in attitude  
 
 
-  ### Respond 
+  #### Respond 
 
 
   Respond to trauma with an appropriate action. Here are examples specific to research activities:   
@@ -286,7 +294,7 @@ description: >-
     * Relax your shoulders and sit squarely in front of the camera for remote sessions  
     * Either sit across from the participant or next to them - ask what they are most comfortable with.  
 
-  ### Resist re-traumatization 
+  #### Resist re-traumatization 
 
 
   If a topic area has shown to be traumatizing, revisit the way it’s integrated into your work and consider alternate methods of gathering information. 
@@ -295,9 +303,18 @@ description: >-
   </div> 
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   Much of this guidance is based on well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf).
-variation_groups: []
+
+
+  ## Related pages
+
+  * [O﻿verview](https://cfpb.github.io/design-system/guidelines/overview)
+
+  * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
+
+  * [D﻿esign and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
+related_items: ""
 ---

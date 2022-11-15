@@ -4,11 +4,16 @@ collection_name: pages
 layout: variation
 section: guidelines
 jumplinks: Working together, Beginning a project
+variation_groups: []
+eyebrow: Equity-centered design
 status: Proposed
 description: >-
   <p class="lead-paragraph">Before we’re able to design equitable and inclusive
   products for the people and communities we serve, we must first <b>turn our
   attention to the ways in which we work.</b></p>
+
+
+  ![Illustration of people working together](/design-system/images/uploads/equity_design_setting_the_foundation.png)
 
 
   ## Working together
@@ -41,10 +46,12 @@ description: >-
   {% include icons/favorite.svg %} <b>Ready to conduct research for your project?</b> Learn how to [check your biases when moderating a research session](https://cfpb.github.io/design-system/guidelines/conducting-research#check-your-biases).
 
 
+  <br>
+
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} <span class="h5">ACTIVITY</span>
+  <p class="h5">{% include icons/edit.svg %} ACTIVITY</p>
 
   <h4 class="h3" id="frames-of-reference">Frames of reference</h4> 
 
@@ -108,8 +115,6 @@ description: >-
 
   <br>
 
-  <br>
-
   <b>2. During the collaboration session, ask the team to spend a few minutes privately noting their own personal, lived experiences in response to each of these prompts.</b>
 
   <br>
@@ -140,7 +145,7 @@ description: >-
   <br>
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   * The [positionality wheel](https://design.ncsu.edu/blog/2022/01/07/from-a-to-z-lesley-ann-noel-and-decolonizing-design/) is another form of the Frames of Reference exercise. 
@@ -156,7 +161,7 @@ description: >-
   We encourage everyone to read widely to examine their own identity and internalized oppression—the false narratives or stereotypes that they may have internalized about themselves, and how they might perpetuate systemic oppression. 
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   For more information, Intentional Futures has a useful explanation of systemic oppression and how it manifests in their [Introduction to Equity-Centered Design](https://www.intentionalfutures.com/public/ecd-booklet.pdf). Additionally, consider using the [implicit bias test put together by Harvard](https://implicit.harvard.edu/implicit/user/agg/blindspot/indexrk.htm), which is designed to identify unconscious positive and negative associations based on race. 
@@ -186,7 +191,7 @@ description: >-
   In line with using people-first language, consider using the word “people” instead of “user” when referring to those we’re trying to help. “User” can depersonalize our intended audience, potentially reducing them to a one-dimensional data point. “People”, in contrast, acknowledges the many distinct individuals who are interacting with the services we create for them, and helps us think collectively about the multiplicity of their viewpoints and lived experiences.  
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   * [APA’s Bias Free Language Guide](https://apastyle.apa.org/style-grammar-guidelines/bias-free-language), in particular their [Inclusive Language Guidelines](https://apastyle.apa.org/style-grammar-guidelines/bias-free-language/disability) 
@@ -194,11 +199,13 @@ description: >-
   * [Language, Please](https://languageplease.org/)
 
 
+  <br>
+
+
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
-
+  <p class="h5">{% include icons/edit.svg %} ACTIVITY</p> 
 
   <h4 class="h3">﻿Set intentional language</h4>
 
@@ -221,8 +228,7 @@ description: >-
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
-
+  <p class="h5">{% include icons/edit.svg %} ACTIVITY</p>
 
   <h4 class="h3">Create a set of equity-centered team values</h4>
 
@@ -268,11 +274,13 @@ description: >-
   Before a project begins, come to a shared understanding of its value—that is, a clear sense of the intended outcomes and value that key decision-makers envision creating. This is necessary to truly understand how the project might impact the audience.
 
 
+  <br>
+
+
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
-
+  <p class="h5">{% include icons/edit.svg %} ACTIVITY</p>
 
   <h4 class="h3">Write a problem statement</h4>
 
@@ -313,10 +321,13 @@ description: >-
   {% include icons/favorite.svg %} <b>Outside of your project work,</b> make efforts to educate yourself, your team, and your leadership. Start up a book club and develop a reading list for people to read at their own pace. 
 
 
+  <br>
+
+
   <div class="o-well" markdown="1">
 
 
-  {% include icons/edit.svg %} **ACTIVITY**
+  <p class="h5">{% include icons/edit.svg %} ACTIVITY</p>
 
   <h4 class="h3">Conduct research as a team</h4> 
 
@@ -357,9 +368,18 @@ description: >-
   It is possible that you and your team may experience second-hand trauma during a project. Sometimes called vicarious trauma, it’s when people have prolonged exposure to victims of trauma or sensitive topics related to traumatic experiences. [Learn about the signs for vicarious trauma](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#what-are-some-common-negative-reactions-to-vicarious-trauma) and make space to talk about how the work may be affecting the team. If you see someone on your team exhibiting signs of vicarious trauma, [there are several steps you can take](https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma#suggestions-for-coworkers). 
 
 
-  {% include icons/book.svg %} **FURTHER READING**
+  <p class="h5">{% include icons/book.svg %} FURTHER READING</p>
 
 
   Much of this guidance regarding trauma is based off well-established research and resources from experts. If you are interested in learning more about trauma and trauma-informed/responsive practices, [read this comprehensive report on trauma-informed approaches created by the Substance Abuse and Mental Health Service Administration (SAMHSA)](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
-variation_groups: []
+
+
+  ## Related pages
+
+  * [O﻿verview](https://cfpb.github.io/design-system/guidelines/overview)
+
+  * [C﻿onducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
+
+  * [D﻿esign and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
+related_items: ""
 ---

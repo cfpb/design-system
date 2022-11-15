@@ -4,6 +4,8 @@ collection_name: pages
 layout: variation
 section: guidelines
 jumplinks: About equity-centered design,About these guidelines,Acknowledgements
+variation_groups: []
+eyebrow: Equity-centered design
 status: Proposed
 description: >-
   <p class="lead-paragraph"> This guide contains initial steps for designers,
@@ -45,8 +47,17 @@ description: >-
   * Ben Peterson and Julie Strohman’s [presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx) is the primary source of information and inspiration for these guidelines. (The presentation is also available as a [recorded presentation](https://www.youtube.com/watch?v=j1ZJO8maV7s).)
 
   * Other important sources of information include: 
+
     * [Code for America’s Qualitative Research Practice Guide](https://info.codeforamerica.org/qualitative-research)
     * [18F’s User Experience Design Guide](https://ux-guide.18f.gov/) 
     * [Substance Abuse and Mental Health Services Administration's Trauma-informed Guidelines](https://ncsacw.acf.hhs.gov/userfiles/files/SAMHSA_Trauma.pdf)
-variation_groups: []
+
+  ## Related pages
+
+  * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
+
+  * [C﻿onducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
+
+  * [D﻿esign and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
+related_items: ""
 ---

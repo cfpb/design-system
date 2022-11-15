@@ -12,7 +12,7 @@ function create(tag, options) {
 
   let i;
   for (i in options) {
-    if (Object.prototype.hasOwnProperty.call(options, i)) {
+    if ({}.hasOwnProperty.call(options, i)) {
       const val = options[i];
       let ref;
 

@@ -13,53 +13,50 @@ const instructionsLinkStyle = {
   'text-decoration': 'underline',
 };
 
-export default class StringTrimmedControl extends React.Component {
-  static propTypes = {
-    onChange: PropTypes.func.isRequired,
-    forID: PropTypes.string,
-    value: PropTypes.node,
-    classNameWrapper: PropTypes.string.isRequired,
-    setActiveStyle: PropTypes.func.isRequired,
-    setInactiveStyle: PropTypes.func.isRequired,
+export const StringWithInstructionsControl = ({
+  onChange,
+  forID,
+  value,
+  classNameWrapper,
+  setActiveStyle,
+  setInactiveStyle,
+}) => {
+  const handleChange = (event) => {
+    onChange(event.target.value.trim());
   };
 
-  state = {
-    value: this.props.value || '',
-  };
-
-  handleChange(event) {
-    this.props.onChange(event.target.value.trim());
-    this.setState({ value: event.target.value });
-  }
-
-  render() {
-    const { forID, classNameWrapper, setActiveStyle, setInactiveStyle } =
-      this.props;
-
-    return (
-      <div>
-        <input
-          type="text"
-          id={forID}
-          className={classNameWrapper}
-          value={this.state.value}
-          onChange={(event) => this.handleChange(event)}
-          onFocus={setActiveStyle}
-          onBlur={setInactiveStyle}
-        />
-        <div style={instructionsContainerStyle}>
-          Need help? Check out our guide on&nbsp;
-          <a
-            href="/design-system/updating-this-website/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={instructionsLinkStyle}
-          >
-            how to use this CMS
-          </a>
-          .
-        </div>
+  return (
+    <div>
+      <input
+        type="text"
+        id={forID}
+        className={classNameWrapper}
+        value={value}
+        onChange={handleChange}
+        onFocus={setActiveStyle}
+        onBlur={setInactiveStyle}
+      />
+      <div style={instructionsContainerStyle}>
+        Need help? Check out our guide on&nbsp;
+        <a
+          href="/design-system/updating-this-website/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={instructionsLinkStyle}
+        >
+          how to use this CMS
+        </a>
+        .
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+StringWithInstructionsControl.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  forID: PropTypes.string,
+  value: PropTypes.node,
+  classNameWrapper: PropTypes.string.isRequired,
+  setActiveStyle: PropTypes.func.isRequired,
+  setInactiveStyle: PropTypes.func.isRequired,
+};

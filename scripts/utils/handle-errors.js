@@ -1,3 +1,6 @@
+/**
+ *
+ */
 export default function handleErrors() {
   const args = Array.prototype.slice.call(arguments);
   let exitProcessParam = false;

@@ -111,7 +111,7 @@
     "require-dir": "1.2.0",
     "serve-static": "1.15.0",
     "style-loader": "3.3.1",
-    "stylelint": "14.14.1",
+    "stylelint": "14.15.0",
     "stylelint-config-recommended-less": "1.0.4",
     "svg-inline-loader": "0.8.2",
     "svgo": "2.8.0",

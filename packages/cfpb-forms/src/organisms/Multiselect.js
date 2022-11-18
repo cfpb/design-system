@@ -8,7 +8,8 @@ import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.
 import MultiselectModel from './MultiselectModel.js';
 import MultiselectUtils from './MultiselectUtils.js';
 
-import closeIcon from '@cfpb/cfpb-icons/src/icons/close.svg';
+import * as closeIconSrc from '@cfpb/cfpb-icons/src/icons/close.svg';
+const closeIcon = closeIconSrc.default;
 
 const BASE_CLASS = 'o-multiselect';
 

@@ -4892,6 +4892,10 @@ button.o-expandable_header {
   display: block;
   max-height: 99999px !important;
 }
+div[dir="rtl"] .o-expandable_header {
+  width: 100%;
+  text-align: right;
+}
 /* ==========================================================================
    Design System
    Table Styling

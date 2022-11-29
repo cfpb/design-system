@@ -95,7 +95,7 @@ variation_groups:
       structure, even on a smaller screen.
 
 
-      Note that tables are **not** responsive unless you add one of the small screen classes detailed below. Also note that the `data-label` attribute must be used to label each cell in a `table` for small screen responsive views.
+      Note that tables are **not** responsive unless you add one of the small screen classes detailed below. Also note that the `data-label` attribute must be used to label each cell in a `table` for small screen responsive views. Responsive layouts are **not** applied to tables when pages are printed.
     variations:
       - variation_name: Responsive stacked table
         variation_description: >

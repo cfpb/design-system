@@ -170,19 +170,15 @@ Then, do a release:
    Pull Requests for specific labels so if you see a PR missing from the changelog,
    ensure it has been labeled `breaking`, `enhancement`, `bug`,
    `documentation` or `internal`.
-1. If you're pleased with the changelog preview,
-   `git checkout CHANGELOG.md` to reset it.
+1. **There's a lerna bug where the version number doesn't increment.**
+   Manually update to the latest version in `CHANGELOG.md` and in the root
+   `package.json` files.
 1. Run `yarn run release` to start the release.
 1. It'll ask if you want to do a major, minor or patch release. Select whichever is
    most appropriate. It'll tag and publish every package to npm.
-1. When it's done, open `CHANGELOG.md` and confirm the latest entry shows the newest
-   version number. There's a lerna-changelog bug that sometimes causes it to duplicate
-   the previous version number. If it's showing the wrong version number, correct it
-   and commit the correction.
-1. Run `git push` to push changes to the remote `main` branch.
 
-Lerna will update the changelog, ask for a new version number, create a git tag,
-push to GitHub and publish to npm.
+Lerna will ask for a new version number, create a git tag, push to GitHub
+and publish to npm.
 
 ## Notes
 

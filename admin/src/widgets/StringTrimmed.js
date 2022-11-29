@@ -24,7 +24,7 @@ export const StringTrimmedControl = ({
       onBlur={setInactiveStyle}
     />
   );
-}
+};
 
 StringTrimmedControl.propTypes = {
   onChange: PropTypes.func.isRequired,

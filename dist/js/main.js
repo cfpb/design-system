@@ -361,297 +361,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ "./docs/assets/js/Tabs.js":
-/*!********************************!*\
-  !*** ./docs/assets/js/Tabs.js ***!
-  \********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var BASE_CLASS = 'm-tabs';
-
-/**
- * @param {HTMLElement} dom - The HTML DOM node.
- * @returns {Tabs} An instance.
- */
-function Tabs(dom) {
-  // DOM references.
-  var _dom = dom;
-  var _tabsItemsDom;
-  var _tabsPanelsDom;
-
-  // Store the current selected tab index.
-  var _selectedTabIndex;
-
-  /**
-   * Change the selected tab index.
-   *
-   * @param {number} index - An index position of the selected tab.
-   * @returns {Tabs} An instance.
-   */
-  function changeTab(index) {
-    // Remove classes from prior selected tab and panel.
-    _tabsItemsDom[_selectedTabIndex].classList.remove("".concat(BASE_CLASS, "_list-item-selected"));
-    _tabsPanelsDom[_selectedTabIndex].classList.add('u-hidden');
-
-    // Store new selected index.
-    _selectedTabIndex = index;
-
-    // Add classes for the new selected tab and panel.
-    _tabsItemsDom[_selectedTabIndex].classList.add("".concat(BASE_CLASS, "_list-item-selected"));
-    _tabsPanelsDom[_selectedTabIndex].classList.remove('u-hidden');
-    return this;
-  }
-
-  /**
-   * Initialize the Tabs instance.
-   *
-   * @returns {Tabs} An instance.
-   */
-  function init() {
-    _tabsItemsDom = _dom.querySelectorAll(".".concat(BASE_CLASS, "_list-item"));
-    if (_tabsItemsDom.length === 0) {
-      // Bail out because there are no tabs to initialize.
-      return this;
-    }
-
-    // Add events to tab items.
-    _tabsPanelsDom = _dom.querySelectorAll(".".concat(BASE_CLASS, "_panel"));
-    var _loop = function _loop(i, len) {
-      _tabsItemsDom[i].addEventListener('click', function (event) {
-        event.preventDefault();
-        changeTab(i);
-      });
-
-      // Hide panels initially.
-      if (i > 0) {
-        _tabsPanelsDom[i].classList.add('u-hidden');
-      }
-    };
-    for (var i = 0, len = _tabsItemsDom.length; i < len; i++) {
-      _loop(i, len);
-    }
-
-    // Set the default selected tab to index zero.
-    _selectedTabIndex = 0;
-    return this;
-  }
-
-  // Attach public events.
-  this.init = init;
-  this.changeTab = changeTab;
-  return this;
-}
-Tabs.BASE_CLASS = BASE_CLASS;
-/* harmony default export */ __webpack_exports__["default"] = (Tabs);
-
-/***/ }),
-
-/***/ "./docs/assets/js/redirect-banner.js":
-/*!*******************************************!*\
-  !*** ./docs/assets/js/redirect-banner.js ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/**
- * Retrieve redirect source name and URL.
- *
- * @param {Array} match - Matched URL UTM source.
- * @returns {object} Hash of redirect source's name and URL.
- */
-function getSource(match) {
-  var redirectSources = {
-    capitalframework: {
-      name: 'Capital Framework',
-      url: 'https://cfpb.github.io/capital-framework-archive/'
-    },
-    designmanual: {
-      name: 'the CFPB Design Manual',
-      url: 'https://cfpb.github.io/design-manual-archive/'
-    }
-  };
-  return redirectSources[match[1]];
-}
-
-/**
- * Populate the redirection banner contents and display the banner.
- *
- * @param {string} sourceName - The source's name.
- * @param {string} sourceUrl - The source's URL
- */
-function displayBanner(sourceName, sourceUrl) {
-  var banner = document.querySelector('#redirect-banner');
-  var sourceNames = banner.querySelectorAll('span[data-redirect=source-name]');
-  var links = banner.querySelectorAll('a[data-redirect=archive-website]');
-  for (var i = 0, len = sourceNames.length; i < len; i++) {
-    sourceNames[i].textContent = sourceName;
-  }
-  for (var _i = 0, _len = links.length; _i < _len; _i++) {
-    links[_i].textContent = sourceUrl;
-    links[_i].href = sourceUrl;
-  }
-  banner.classList.remove('u-hidden');
-}
-
-/**
- * Show redirect banner if we're coming from the now-deprecated
- * Capital Framework or Design Manual websites.
- */
-function init() {
-  var locationSearch = window.location.search;
-  if (locationSearch.match(/[?&]utm_medium=redirect([&#]|$)/)) {
-    var match = locationSearch.match(/[?&]utm_source=([^&#]*)/);
-    if (match) {
-      var source = getSource(match);
-      if (source) {
-        displayBanner(source.name, source.url);
-      }
-    }
-  }
-}
-/* harmony default export */ __webpack_exports__["default"] = ({
-  init: init
-});
-
-/***/ }),
-
-/***/ "./docs/assets/js/sidebar.js":
-/*!***********************************!*\
-  !*** ./docs/assets/js/sidebar.js ***!
-  \***********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/**
- * Initialize the side navigation script to handle opening the sidebar
- * when the page is resized between mobile and desktop sizes.
- */
-function init() {
-  var secondaryNavCat = document.querySelector('.ds-nav-container');
-
-  // First collapse the navigation if in mobile.
-  var windowWidth = window.innerWidth;
-  if (windowWidth < 601) {
-    secondaryNavCat.removeAttribute('open');
-  }
-
-  /**
-   * Test the viewport size and set whether the test passes on the instance.
-   */
-  function handleViewportChange() {
-    // Collapse the navigation if we resize to mobile,
-    // but only if we haven't already.
-    // Otherwise, we're on desktop size, so open the navigation.
-    var innerWidth = window.innerWidth;
-    if (innerWidth === windowWidth) {
-      return;
-    }
-    if (innerWidth < 601) {
-      secondaryNavCat.removeAttribute('open');
-    } else {
-      secondaryNavCat.setAttribute('open', 'open');
-    }
-  }
-
-  // Check viewport state on page load.
-  handleViewportChange();
-
-  // Add event listener for checking viewport state on window resize.
-  window.addEventListener('resize', function () {
-    handleViewportChange();
-  });
-}
-/* harmony default export */ __webpack_exports__["default"] = ({
-  init: init
-});
-
-/***/ }),
-
-/***/ "./docs/assets/js/toggle-details.js":
-/*!******************************************!*\
-  !*** ./docs/assets/js/toggle-details.js ***!
-  \******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TOGGLE_ATTRIBUTE": function() { return /* binding */ TOGGLE_ATTRIBUTE; },
-/* harmony export */   "toggleAllDetails": function() { return /* binding */ toggleAllDetails; },
-/* harmony export */   "toggleDetails": function() { return /* binding */ toggleDetails; }
-/* harmony export */ });
-var HIDDEN_CLASS = 'u-hidden';
-var TOGGLE_ATTRIBUTE = 'data-toggle-details';
-var STATE_SHOW = 'show';
-var STATE_HIDE = 'hide';
-var isShowingAllDetails = false;
-
-/**
- * Toggle details for a single variation.
- *
- * @param {HTMLElement} button - Button element that controls the toggling.
- * @param {HTMLElement} document -
- *   Defaults to window.document but overridable for react DOM references.
- * @param {string} [state] -
- *   Optional param to specify whether to force showing or hiding of the details
- *   Value should be either 'show' or 'hide'.
- */
-function toggleDetails(button) {
-  var document = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : window.document;
-  var state = arguments.length > 2 ? arguments[2] : undefined;
-  var container = button.parentNode;
-  var codeEl = document.querySelector(button.getAttribute('href'));
-  var hideCodeBtn = container.querySelector("[".concat(TOGGLE_ATTRIBUTE, "=\"hide\"]"));
-  var showCodeBtn = container.querySelector("[".concat(TOGGLE_ATTRIBUTE, "=\"show\"]"));
-  if (typeof state === 'undefined') {
-    if (codeEl && codeEl.classList.contains(HIDDEN_CLASS)) {
-      state = STATE_SHOW;
-    } else {
-      state = STATE_HIDE;
-    }
-  }
-  if (state === STATE_SHOW) {
-    codeEl.classList.remove(HIDDEN_CLASS);
-    hideCodeBtn.classList.remove(HIDDEN_CLASS);
-    showCodeBtn.classList.add(HIDDEN_CLASS);
-  } else {
-    codeEl.classList.add(HIDDEN_CLASS);
-    hideCodeBtn.classList.add(HIDDEN_CLASS);
-    showCodeBtn.classList.remove(HIDDEN_CLASS);
-  }
-}
-
-/**
- * Toggle all details for a page.
- *
- * @param {HTMLElement} toggleBtn - The button that called this method.
- */
-function toggleAllDetails(toggleBtn) {
-  if (isShowingAllDetails) {
-    toggleBtn.querySelector('.a-btn_text').innerHTML = 'Show all details';
-    toggleBtn.setAttribute('title', 'Show all details');
-    window.localStorage.setItem('toggleState', 'show');
-  } else {
-    toggleBtn.querySelector('.a-btn_text').innerHTML = 'Hide all details';
-    toggleBtn.setAttribute('title', 'Hide all details');
-    window.localStorage.setItem('toggleState', 'hide');
-  }
-  var codeEls = document.querySelectorAll('.a-toggle_code');
-  var buttonElm;
-  for (var i = 0, len = codeEls.length; i < len; i++) {
-    buttonElm = codeEls[i].querySelector('button:not(.u-hidden)');
-    toggleDetails(buttonElm, window.document, isShowingAllDetails ? STATE_HIDE : STATE_SHOW);
-  }
-  isShowingAllDetails = !isShowingAllDetails;
-}
-
-
-/***/ }),
-
 /***/ "./packages/cfpb-icons/src/icons/close.svg":
 /*!*************************************************!*\
   !*** ./packages/cfpb-icons/src/icons/close.svg ***!
@@ -1180,18 +889,310 @@ module.exports.Delegate = Delegate;
 
 /***/ }),
 
+/***/ "./docs/assets/js/Tabs.js":
+/*!********************************!*\
+  !*** ./docs/assets/js/Tabs.js ***!
+  \********************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var BASE_CLASS = 'm-tabs';
+
+/**
+ * @param {HTMLElement} dom - The HTML DOM node.
+ * @returns {Tabs} An instance.
+ */
+function Tabs(dom) {
+  // DOM references.
+  var _dom = dom;
+  var _tabsItemsDom;
+  var _tabsPanelsDom;
+
+  // Store the current selected tab index.
+  var _selectedTabIndex;
+
+  /**
+   * Change the selected tab index.
+   *
+   * @param {number} index - An index position of the selected tab.
+   * @returns {Tabs} An instance.
+   */
+  function changeTab(index) {
+    // Remove classes from prior selected tab and panel.
+    _tabsItemsDom[_selectedTabIndex].classList.remove("".concat(BASE_CLASS, "_list-item-selected"));
+    _tabsPanelsDom[_selectedTabIndex].classList.add('u-hidden');
+
+    // Store new selected index.
+    _selectedTabIndex = index;
+
+    // Add classes for the new selected tab and panel.
+    _tabsItemsDom[_selectedTabIndex].classList.add("".concat(BASE_CLASS, "_list-item-selected"));
+    _tabsPanelsDom[_selectedTabIndex].classList.remove('u-hidden');
+    return this;
+  }
+
+  /**
+   * Initialize the Tabs instance.
+   *
+   * @returns {Tabs} An instance.
+   */
+  function init() {
+    _tabsItemsDom = _dom.querySelectorAll(".".concat(BASE_CLASS, "_list-item"));
+    if (_tabsItemsDom.length === 0) {
+      // Bail out because there are no tabs to initialize.
+      return this;
+    }
+
+    // Add events to tab items.
+    _tabsPanelsDom = _dom.querySelectorAll(".".concat(BASE_CLASS, "_panel"));
+    var _loop = function _loop(i, len) {
+      _tabsItemsDom[i].addEventListener('click', function (event) {
+        event.preventDefault();
+        changeTab(i);
+      });
+
+      // Hide panels initially.
+      if (i > 0) {
+        _tabsPanelsDom[i].classList.add('u-hidden');
+      }
+    };
+    for (var i = 0, len = _tabsItemsDom.length; i < len; i++) {
+      _loop(i, len);
+    }
+
+    // Set the default selected tab to index zero.
+    _selectedTabIndex = 0;
+    return this;
+  }
+
+  // Attach public events.
+  this.init = init;
+  this.changeTab = changeTab;
+  return this;
+}
+Tabs.BASE_CLASS = BASE_CLASS;
+/* harmony default export */ __webpack_exports__["default"] = (Tabs);
+
+/***/ }),
+
+/***/ "./docs/assets/js/redirect-banner.js":
+/*!*******************************************!*\
+  !*** ./docs/assets/js/redirect-banner.js ***!
+  \*******************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Retrieve redirect source name and URL.
+ *
+ * @param {Array} match - Matched URL UTM source.
+ * @returns {object} Hash of redirect source's name and URL.
+ */
+function getSource(match) {
+  var redirectSources = {
+    capitalframework: {
+      name: 'Capital Framework',
+      url: 'https://cfpb.github.io/capital-framework-archive/'
+    },
+    designmanual: {
+      name: 'the CFPB Design Manual',
+      url: 'https://cfpb.github.io/design-manual-archive/'
+    }
+  };
+  return redirectSources[match[1]];
+}
+
+/**
+ * Populate the redirection banner contents and display the banner.
+ *
+ * @param {string} sourceName - The source's name.
+ * @param {string} sourceUrl - The source's URL
+ */
+function displayBanner(sourceName, sourceUrl) {
+  var banner = document.querySelector('#redirect-banner');
+  var sourceNames = banner.querySelectorAll('span[data-redirect=source-name]');
+  var links = banner.querySelectorAll('a[data-redirect=archive-website]');
+  for (var i = 0, len = sourceNames.length; i < len; i++) {
+    sourceNames[i].textContent = sourceName;
+  }
+  for (var _i = 0, _len = links.length; _i < _len; _i++) {
+    links[_i].textContent = sourceUrl;
+    links[_i].href = sourceUrl;
+  }
+  banner.classList.remove('u-hidden');
+}
+
+/**
+ * Show redirect banner if we're coming from the now-deprecated
+ * Capital Framework or Design Manual websites.
+ */
+function init() {
+  var locationSearch = window.location.search;
+  if (locationSearch.match(/[?&]utm_medium=redirect([&#]|$)/)) {
+    var match = locationSearch.match(/[?&]utm_source=([^&#]*)/);
+    if (match) {
+      var source = getSource(match);
+      if (source) {
+        displayBanner(source.name, source.url);
+      }
+    }
+  }
+}
+/* harmony default export */ __webpack_exports__["default"] = ({
+  init: init
+});
+
+/***/ }),
+
+/***/ "./docs/assets/js/sidebar.js":
+/*!***********************************!*\
+  !*** ./docs/assets/js/sidebar.js ***!
+  \***********************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Initialize the side navigation script to handle opening the sidebar
+ * when the page is resized between mobile and desktop sizes.
+ */
+function init() {
+  var secondaryNavCat = document.querySelector('.ds-nav-container');
+
+  // First collapse the navigation if in mobile.
+  var windowWidth = window.innerWidth;
+  if (windowWidth < 601) {
+    secondaryNavCat.removeAttribute('open');
+  }
+
+  /**
+   * Test the viewport size and set whether the test passes on the instance.
+   */
+  function handleViewportChange() {
+    // Collapse the navigation if we resize to mobile,
+    // but only if we haven't already.
+    // Otherwise, we're on desktop size, so open the navigation.
+    var innerWidth = window.innerWidth;
+    if (innerWidth === windowWidth) {
+      return;
+    }
+    if (innerWidth < 601) {
+      secondaryNavCat.removeAttribute('open');
+    } else {
+      secondaryNavCat.setAttribute('open', 'open');
+    }
+  }
+
+  // Check viewport state on page load.
+  handleViewportChange();
+
+  // Add event listener for checking viewport state on window resize.
+  window.addEventListener('resize', function () {
+    handleViewportChange();
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = ({
+  init: init
+});
+
+/***/ }),
+
+/***/ "./docs/assets/js/toggle-details.js":
+/*!******************************************!*\
+  !*** ./docs/assets/js/toggle-details.js ***!
+  \******************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "TOGGLE_ATTRIBUTE": function() { return /* binding */ TOGGLE_ATTRIBUTE; },
+/* harmony export */   "toggleAllDetails": function() { return /* binding */ toggleAllDetails; },
+/* harmony export */   "toggleDetails": function() { return /* binding */ toggleDetails; }
+/* harmony export */ });
+var HIDDEN_CLASS = 'u-hidden';
+var TOGGLE_ATTRIBUTE = 'data-toggle-details';
+var STATE_SHOW = 'show';
+var STATE_HIDE = 'hide';
+var isShowingAllDetails = false;
+
+/**
+ * Toggle details for a single variation.
+ *
+ * @param {HTMLElement} button - Button element that controls the toggling.
+ * @param {HTMLElement} document -
+ *   Defaults to window.document but overridable for react DOM references.
+ * @param {string} [state] -
+ *   Optional param to specify whether to force showing or hiding of the details
+ *   Value should be either 'show' or 'hide'.
+ */
+function toggleDetails(button) {
+  var document = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : window.document;
+  var state = arguments.length > 2 ? arguments[2] : undefined;
+  var container = button.parentNode;
+  var codeEl = document.querySelector(button.getAttribute('href'));
+  var hideCodeBtn = container.querySelector("[".concat(TOGGLE_ATTRIBUTE, "=\"hide\"]"));
+  var showCodeBtn = container.querySelector("[".concat(TOGGLE_ATTRIBUTE, "=\"show\"]"));
+  if (typeof state === 'undefined') {
+    if (codeEl && codeEl.classList.contains(HIDDEN_CLASS)) {
+      state = STATE_SHOW;
+    } else {
+      state = STATE_HIDE;
+    }
+  }
+  if (state === STATE_SHOW) {
+    codeEl.classList.remove(HIDDEN_CLASS);
+    hideCodeBtn.classList.remove(HIDDEN_CLASS);
+    showCodeBtn.classList.add(HIDDEN_CLASS);
+  } else {
+    codeEl.classList.add(HIDDEN_CLASS);
+    hideCodeBtn.classList.add(HIDDEN_CLASS);
+    showCodeBtn.classList.remove(HIDDEN_CLASS);
+  }
+}
+
+/**
+ * Toggle all details for a page.
+ *
+ * @param {HTMLElement} toggleBtn - The button that called this method.
+ */
+function toggleAllDetails(toggleBtn) {
+  if (isShowingAllDetails) {
+    toggleBtn.querySelector('.a-btn_text').innerHTML = 'Show all details';
+    toggleBtn.setAttribute('title', 'Show all details');
+    window.localStorage.setItem('toggleState', 'show');
+  } else {
+    toggleBtn.querySelector('.a-btn_text').innerHTML = 'Hide all details';
+    toggleBtn.setAttribute('title', 'Hide all details');
+    window.localStorage.setItem('toggleState', 'hide');
+  }
+  var codeEls = document.querySelectorAll('.a-toggle_code');
+  var buttonElm;
+  for (var i = 0, len = codeEls.length; i < len; i++) {
+    buttonElm = codeEls[i].querySelector('button:not(.u-hidden)');
+    toggleDetails(buttonElm, window.document, isShowingAllDetails ? STATE_HIDE : STATE_SHOW);
+  }
+  isShowingAllDetails = !isShowingAllDetails;
+}
+
+
+/***/ }),
+
 /***/ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js":
 /*!**************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/components/AtomicComponent.js ***!
   \**************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
 /* harmony import */ var _utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/object-assign.js */ "./packages/cfpb-atomic-component/src/utilities/object-assign.js");
-/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utilities/type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
+/* harmony import */ var ftdomdelegate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ftdomdelegate */ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js");
+/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utilities/type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
 /* ==========================================================================
    AtomicComponent
 
@@ -1206,7 +1207,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Delegate = (__webpack_require__(/*! ftdomdelegate */ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js").Delegate);
+
 
 
 
@@ -1232,7 +1233,7 @@ function AtomicComponent(element, attributes) {
 }
 
 // Public instance Methods and properties.
-(0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"](), {
+(0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_3__["default"](), {
   /**
    * Run through and call the component's initializers.
    *
@@ -1240,7 +1241,7 @@ function AtomicComponent(element, attributes) {
    */
   init: function () {
     this.initializers.forEach(function (func) {
-      if (_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__["default"].isFunction(func)) {
+      if (_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__["default"].isFunction(func)) {
         func.apply(this, arguments);
       }
     }, this);
@@ -1395,11 +1396,11 @@ function AtomicComponent(element, attributes) {
     }
 
     this.undelegateEvents();
-    this._delegate = new Delegate(this.element);
+    this._delegate = new ftdomdelegate__WEBPACK_IMPORTED_MODULE_2__(this.element);
     for (key in events) {
       if ({}.hasOwnProperty.call(events, key)) {
         method = events[key];
-        if (_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__["default"].isFunction(this[method])) {
+        if (_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__["default"].isFunction(this[method])) {
           method = this[method];
         }
         if (method) {
@@ -1514,7 +1515,7 @@ AtomicComponent.extend = extend;
 /*!********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/mixins/EventObserver.js ***!
   \********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -1615,7 +1616,7 @@ function EventObserver() {
 /*!************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js ***!
   \************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -1625,8 +1626,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "instantiateAll": function() { return /* binding */ instantiateAll; },
 /* harmony export */   "setInitFlag": function() { return /* binding */ setInitFlag; }
 /* harmony export */ });
-/* harmony import */ var _data_hook__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-hook */ "./packages/cfpb-atomic-component/src/utilities/data-hook.js");
-/* harmony import */ var _standard_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./standard-type */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
+/* harmony import */ var _data_hook_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-hook.js */ "./packages/cfpb-atomic-component/src/utilities/data-hook.js");
+/* harmony import */ var _standard_type_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
 /* ==========================================================================
    Atomic Helpers.
    Utilities for helping validate atomic design element architecture.
@@ -1650,7 +1651,7 @@ __webpack_require__.r(__webpack_exports__);
  * component won't get initialized a second time after it
  * has already been initialized.
  */
-const INIT_FLAG = _standard_type__WEBPACK_IMPORTED_MODULE_1__.STATE_PREFIX + 'atomic_init';
+const INIT_FLAG = _standard_type_js__WEBPACK_IMPORTED_MODULE_1__.STATE_PREFIX + 'atomic_init';
 
 /**
  * @param {HTMLElement} element - The DOM element within which to search for
@@ -1720,11 +1721,11 @@ function checkDom(element, baseClass) {
  *   false otherwise.
  */
 function setInitFlag(element) {
-  if ((0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG)) {
+  if ((0,_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG)) {
     return false;
   }
 
-  (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.add)(element, INIT_FLAG);
+  (0,_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.add)(element, INIT_FLAG);
 
   return true;
 }
@@ -1738,11 +1739,11 @@ function setInitFlag(element) {
  *   otherwise false if it didn't exist.
  */
 function destroyInitFlag(element) {
-  if (!(0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG)) {
+  if (!(0,_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG)) {
     return false;
   }
 
-  (0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.remove)(element, INIT_FLAG);
+  (0,_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.remove)(element, INIT_FLAG);
 
   return true;
 }
@@ -1762,7 +1763,7 @@ function instantiateAll(selector, Constructor, scope) {
   let element;
   for (let i = 0, len = elements.length; i < len; i++) {
     element = elements[i];
-    if ((0,_data_hook__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG) === false) {
+    if ((0,_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG) === false) {
       inst = new Constructor(element);
       inst.init();
       insts.push(inst);
@@ -1781,7 +1782,7 @@ function instantiateAll(selector, Constructor, scope) {
 /*!*******************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/data-hook.js ***!
   \*******************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -1790,7 +1791,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "contains": function() { return /* binding */ contains; },
 /* harmony export */   "remove": function() { return /* binding */ remove; }
 /* harmony export */ });
-/* harmony import */ var _standard_type__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./standard-type */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
+/* harmony import */ var _standard_type_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
 // Required modules.
 
 
@@ -1803,15 +1804,15 @@ __webpack_require__.r(__webpack_exports__);
  */
 function add(element, value) {
   if (value.indexOf(' ') !== -1) {
-    const msg = _standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK + ' values cannot contain spaces!';
+    const msg = _standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK + ' values cannot contain spaces!';
     throw new Error(msg);
   }
 
-  const values = element.getAttribute(_standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
+  const values = element.getAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
   if (values !== null) {
     value = values + ' ' + value;
   }
-  element.setAttribute(_standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, value);
+  element.setAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, value);
 
   return value;
 }
@@ -1822,12 +1823,12 @@ function add(element, value) {
  * @returns {boolean} True if value was removed, false otherwise.
  */
 function remove(element, value) {
-  const values = element.getAttribute(_standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
+  const values = element.getAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
   const index = values.indexOf(value);
   const valuesList = values.split(' ');
   if (index > -1) {
     valuesList.splice(index, 1);
-    element.setAttribute(_standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, valuesList.join(' '));
+    element.setAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, valuesList.join(' '));
     return true;
   }
 
@@ -1843,7 +1844,7 @@ function contains(element, value) {
   if (!element) {
     return false;
   }
-  let values = element.getAttribute(_standard_type__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
+  let values = element.getAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
   // If JS data-* hook is not set return immediately.
   if (!values) {
     return false;
@@ -1862,7 +1863,7 @@ function contains(element, value) {
 /*!**********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/dom-traverse.js ***!
   \**********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -1951,7 +1952,7 @@ function closest(elem, selector) {
 /*!***********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/media-helpers.js ***!
   \***********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -1988,7 +1989,7 @@ function isMobileUserAgent() {
 /*!***********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/object-assign.js ***!
   \***********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -2054,7 +2055,7 @@ function assign(destination) {
 /*!***********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/standard-type.js ***!
   \***********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -2136,7 +2137,7 @@ const DIRECTIONS = {
 /*!************************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js ***!
   \************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -2239,7 +2240,7 @@ AlphaTransition.CLASSES = CLASSES;
 /*!***********************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js ***!
   \***********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -2547,7 +2548,7 @@ BaseTransition.ANIMATING_CLASS = 'u-is-animating';
 /*!****************************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js ***!
   \****************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -2713,7 +2714,7 @@ MaxHeightTransition.CLASSES = CLASSES;
 /*!***********************************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js ***!
   \***********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -2857,7 +2858,7 @@ MoveTransition.CLASSES = CLASSES;
 /*!***********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/type-checkers.js ***!
   \***********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -3023,7 +3024,7 @@ function isEmpty(value) {
 /*!*****************************************************!*\
   !*** ./packages/cfpb-expandables/src/Expandable.js ***!
   \*****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -3185,7 +3186,7 @@ const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js
 /*!***************************************************************!*\
   !*** ./packages/cfpb-expandables/src/ExpandableTransition.js ***!
   \***************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -3333,7 +3334,7 @@ ExpandableTransition.CLASSES = CLASSES;
 /*!**********************************************************!*\
   !*** ./packages/cfpb-forms/src/organisms/Multiselect.js ***!
   \**********************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -3343,7 +3344,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
 /* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
 /* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
-/* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5__);
 // Required modules.
 
 
@@ -3352,6 +3352,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const closeIcon = _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5__;
 
 const BASE_CLASS = 'o-multiselect';
 
@@ -3610,7 +3611,7 @@ function Multiselect(element) {
     const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('button', {
       type: 'button',
       innerHTML:
-        '<label for=' + optionId + '>' + option.text + (_cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5___default()) + '</label>',
+        '<label for=' + optionId + '>' + option.text + closeIcon + '</label>',
       inside: selectionsItemDom,
     });
 
@@ -3954,7 +3955,7 @@ Multiselect.BASE_CLASS = BASE_CLASS;
 /*!***************************************************************!*\
   !*** ./packages/cfpb-forms/src/organisms/MultiselectModel.js ***!
   \***************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -4209,7 +4210,7 @@ function MultiselectModel(options, name) {
 /*!***************************************************************!*\
   !*** ./packages/cfpb-forms/src/organisms/MultiselectUtils.js ***!
   \***************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -4261,7 +4262,7 @@ function create(tag, options) {
 /*!*******************************************!*\
   !*** ./packages/cfpb-tables/src/Table.js ***!
   \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -4297,7 +4298,7 @@ Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_standard_
 /*!***************************************************!*\
   !*** ./packages/cfpb-tables/src/TableRowLinks.js ***!
   \***************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -4348,7 +4349,7 @@ const TableRowLinks = {
 /*!***************************************************!*\
   !*** ./packages/cfpb-tables/src/TableSortable.js ***!
   \***************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -4604,18 +4605,6 @@ const TableSortable = {
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
@@ -4656,13 +4645,12 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _toggle_details_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle-details.js */ "./docs/assets/js/toggle-details.js");
 /* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! anchor-js */ "./node_modules/anchor-js/anchor.js");
-/* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(anchor_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Expandable */ "./packages/cfpb-expandables/src/Expandable.js");
-/* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
+/* harmony import */ var _cfpb_cfpb_expandables_src_Expandable_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Expandable.js */ "./packages/cfpb-expandables/src/Expandable.js");
+/* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect.js */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
-/* harmony import */ var _cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table */ "./packages/cfpb-tables/src/Table.js");
+/* harmony import */ var _cfpb_cfpb_tables_src_Table_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table.js */ "./packages/cfpb-tables/src/Table.js");
 /* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
 /* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
 /* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
@@ -4679,18 +4667,18 @@ __webpack_require__.r(__webpack_exports__);
 
 _redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__["default"].init();
 _sidebar_js__WEBPACK_IMPORTED_MODULE_10__["default"].init();
-var anchors = new (anchor_js__WEBPACK_IMPORTED_MODULE_1___default())();
+var anchors = new anchor_js__WEBPACK_IMPORTED_MODULE_1__();
 // Add anchors to all headings (except page title headings)
 anchors.add('h2:not(.title), h3, h4, h5');
 // Ensure there are no anchors in inconvenient places
 anchors.remove("\n  .a-live_code h2,\n  .a-live_code h3,\n  .a-live_code h4,\n  .a-live_code h5,\n  .o-expandable_label,\n  #search-results h3\n");
 var multiselectDom = document.querySelector('.o-multiselect');
 if (multiselectDom) {
-  var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect__WEBPACK_IMPORTED_MODULE_3__["default"](multiselectDom);
+  var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_3__["default"](multiselectDom);
   multiselect.init();
 }
-_cfpb_cfpb_expandables_src_Expandable__WEBPACK_IMPORTED_MODULE_2__["default"].init();
-_cfpb_cfpb_tables_src_Table__WEBPACK_IMPORTED_MODULE_7__["default"].init();
+_cfpb_cfpb_expandables_src_Expandable_js__WEBPACK_IMPORTED_MODULE_2__["default"].init();
+_cfpb_cfpb_tables_src_Table_js__WEBPACK_IMPORTED_MODULE_7__["default"].init();
 
 // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.

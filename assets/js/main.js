@@ -1,11 +1,11 @@
 import { toggleAllDetails, toggleDetails } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
-import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
-import Multiselect from '@cfpb/cfpb-forms/src/organisms/Multiselect';
+import Expandable from '@cfpb/cfpb-expandables/src/Expandable.js';
+import Multiselect from '@cfpb/cfpb-forms/src/organisms/Multiselect.js';
 import AlphaTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js';
 import MoveTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
 import MaxHeightTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
-import Table from '@cfpb/cfpb-tables/src/Table';
+import Table from '@cfpb/cfpb-tables/src/Table.js';
 import Tabs from './Tabs.js';
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';

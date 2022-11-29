@@ -15,7 +15,7 @@ import template from '../../../_includes/variation-content.html';
 // replace instances of {% include icons/XXXXX.svg %} with the inlined SVG
 const templateWithIcons = template.replace(
   /{%\s+include\s+\/?icons\/([\w-]+)\.svg\s+%}/g,
-  (match, icon) => require(`../../../_includes/icons/${icon}.svg`)
+  (match, icon) => import(`../../../_includes/icons/${icon}.svg`)
 );
 
 export default class Preview extends Component {

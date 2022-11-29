@@ -1,4 +1,15 @@
 
+## v0.17.14 (2022-11-29)
+
+#### Enhancement
+* `cfpb-tables`
+  * [#1497](https://github.com/cfpb/design-system/pull/1497) Consolidate cf.gov responsive table styles, ignore print media ([@contolini](https://github.com/contolini))
+
+#### Committers: 1
+- Chris Contolini ([@contolini](https://github.com/contolini))
+
+
+
 ## v0.17.15 (2022-11-29)
 
 #### Enhancement

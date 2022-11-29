@@ -159,6 +159,7 @@ First, set some credentials:
 1. Create an npm account if you don't already have one and ensure you're
    listed as a "collaborator" on all our npm packages (e.g.
    [cfpb-buttons](https://www.npmjs.com/package/@cfpb/cfpb-buttons)).
+1. Check that you are logged in with `npm whoami`. If you aren't shown your username, run `npm login`.
 
 Then, do a release:
 

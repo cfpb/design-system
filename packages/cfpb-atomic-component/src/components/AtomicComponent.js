@@ -12,7 +12,7 @@
 
 import { instantiateAll, setInitFlag } from '../utilities/atomic-helpers.js';
 import { assign } from '../utilities/object-assign.js';
-const Delegate = require('ftdomdelegate').Delegate;
+import Delegate from 'ftdomdelegate';
 import EventObserver from '../mixins/EventObserver.js';
 import typeCheckers from '../utilities/type-checkers.js';
 

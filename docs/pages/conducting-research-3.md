@@ -3,9 +3,9 @@ title: Conducting research
 collection_name: pages
 layout: variation
 section: guidelines
-jumplinks: "Practice inclusive recruitment, Compensate fairly, Obtain informed
+jumplinks: 'Practice inclusive recruitment, Compensate fairly, Obtain informed
   consent, Check your biases, Handle data and stories with care, Recognize and
-  respond to trauma in participants "
+  respond to trauma in participants '
 variation_groups: []
 eyebrow: Equity-centered design
 status: Proposed
@@ -316,5 +316,5 @@ description: >-
   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
 
   * [D﻿esign and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
-related_items: ""
+related_items: ''
 ---

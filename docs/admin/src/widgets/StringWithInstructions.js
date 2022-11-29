@@ -50,7 +50,7 @@ export const StringWithInstructionsControl = ({
       </div>
     </div>
   );
-}
+};
 
 StringWithInstructionsControl.propTypes = {
   onChange: PropTypes.func.isRequired,

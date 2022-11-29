@@ -34,5 +34,6 @@
     "@cfpb/cfpb-tables": "^0.17.15",
     "@cfpb/cfpb-typography": "^0.17.14"
   },
-  "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e"
+  "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e",
+  "type": "module"
 }

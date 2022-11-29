@@ -1,5 +1,5 @@
 // Required modules.
-import { JS_HOOK } from './standard-type';
+import { JS_HOOK } from './standard-type.js';
 
 /**
  * @param {HTMLElement} element - DOM element.

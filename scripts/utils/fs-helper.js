@@ -1,4 +1,5 @@
-const path = require('path');
+import path from 'path';
+import { createRequire } from 'module';
 
 /**
  * Retrieve a reference path to a binary.
@@ -11,6 +12,8 @@ const path = require('path');
  * @returns {string} Path to the binary to run.
  */
 function getBinary(packageName, binaryName, binaryDir) {
+  const require = createRequire(import.meta.url);
+
   binaryName = binaryName || packageName;
   binaryDir = binaryDir || 'bin';
   const pkgPath = require.resolve(packageName);
@@ -20,6 +23,6 @@ function getBinary(packageName, binaryName, binaryDir) {
   return binaryDir;
 }
 
-module.exports = {
+export default {
   getBinary: getBinary,
 };

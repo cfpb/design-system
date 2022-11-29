@@ -40,9 +40,9 @@
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-netlify": "netlify-cms-proxy-server",
     "start": "yarn run compile-dev && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn run compile-dev --watch\"",
-    "test": "gulp test",
+    "test": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "test:browser": "wdio run ./wdio.config.js",
-    "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && wdio run ./wdio.config.sauce.js",
+    "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && wdio run ./wdio.config.sauce.cjs",
     "version": "yarn run changelog && git add CHANGELOG.md"
   },
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",
@@ -66,11 +66,11 @@
     "@babel/preset-env": "7.20.2",
     "@babel/preset-react": "7.18.6",
     "@lhci/cli": "0.9.0",
-    "@wdio/cli": "7.25.2",
-    "@wdio/local-runner": "7.25.2",
-    "@wdio/mocha-framework": "7.25.2",
-    "@wdio/sauce-service": "7.25.2",
-    "@wdio/spec-reporter": "7.25.1",
+    "@wdio/cli": "7.26.0",
+    "@wdio/local-runner": "7.26.0",
+    "@wdio/mocha-framework": "7.26.0",
+    "@wdio/sauce-service": "7.26.0",
+    "@wdio/spec-reporter": "7.26.0",
     "autoprefixer": "10.4.13",
     "babel-loader": "9.1.0",
     "chromedriver": "107.0.3",
@@ -111,7 +111,7 @@
     "require-dir": "1.2.0",
     "serve-static": "1.15.0",
     "style-loader": "3.3.1",
-    "stylelint": "14.14.1",
+    "stylelint": "14.15.0",
     "stylelint-config-recommended-less": "1.0.4",
     "svg-inline-loader": "0.8.2",
     "svgo": "^3.0.0",
@@ -119,7 +119,7 @@
     "vinyl-named": "1.1.0",
     "wcag": "0.3.0",
     "wdio-chromedriver-service": "8.0.0",
-    "webpack": "5.74.0",
+    "webpack": "5.75.0",
     "webpack-cli": "4.10.0",
     "webpack-stream": "7.0.0"
   },
@@ -131,5 +131,6 @@
       "lerna-changelog/documentation": "Documentation",
       "lerna-changelog/internal": "Internal"
     }
-  }
+  },
+  "type": "module"
 }

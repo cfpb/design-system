@@ -4,3 +4,4 @@ test/unit-test-coverage/
 .lighthouseci
 .github
 CHANGELOG.md
+packages/cfpb-design-system/cfpb-design-system.js

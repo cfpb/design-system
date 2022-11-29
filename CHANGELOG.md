@@ -28,6 +28,35 @@
 
 
 
+## v0.17.11 (2022-11-29)
+
+#### Enhancement
+* `cfpb-expandables`
+  * [#1498](https://github.com/cfpb/design-system/pull/1498) Added right-to-left language support for Expandables component ([@brandon-rusk](https://github.com/brandon-rusk))
+* `cfpb-icons`
+  * [#1471](https://github.com/cfpb/design-system/pull/1471) Update to svgo@3.x ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-design-system`
+  * [#1499](https://github.com/cfpb/design-system/pull/1499) Adjust prettierignore file to ignore minified cfpb-design-system.js file ([@anselmbradford](https://github.com/anselmbradford))
+* Other
+  * [#1481](https://github.com/cfpb/design-system/pull/1481) Set same node version for netlify ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1493](https://github.com/cfpb/design-system/pull/1493) Convert string input controls from React class to functional components ([@flacoman91](https://github.com/flacoman91))
+  * [#1480](https://github.com/cfpb/design-system/pull/1480) Update outdated dependencies ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-buttons`, `cfpb-core`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-grid`, `cfpb-icons`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1416](https://github.com/cfpb/design-system/pull/1416) Add Prettier config and convert to `yarn lint` command to remove gulp lint command ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 7
+- Andy Chosak ([@chosak](https://github.com/chosak))
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Richard Dinh ([@flacoman91](https://github.com/flacoman91))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
+- [@brandon-rusk](https://github.com/brandon-rusk)
+- [@jenn-franklin](https://github.com/jenn-franklin)
+
+
+
 ## v0.17.11 (2022-10-17)
 
 #### Bug Fix

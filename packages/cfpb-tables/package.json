@@ -9,8 +9,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/cfpb-atomic-component": "^0.17.14",
-    "@cfpb/cfpb-core": "^0.17.14"
+    "@cfpb/cfpb-atomic-component": "^0.18.0",
+    "@cfpb/cfpb-core": "^0.18.0"
   },
   "keywords": [
     "tables"

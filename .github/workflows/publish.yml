@@ -22,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --ignore-scripts
 
-      - name: Build styles
-        run: yarn run gulp styles
+      - name: Build assets
+        run: yarn run gulp build
 
       - name: Publish
         run: |

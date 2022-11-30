@@ -163,22 +163,18 @@ First, set some credentials:
 
 Then, do a release:
 
-1. Ensure you're on `main` and `git pull` to confirm you're up-to-date.
-1. Run `yarn run changelog` and open `CHANGELOG.md` to see a preview
-   of new changelog entries.
-   We use a [tool](https://github.com/lerna/lerna-changelog#usage) that scans our
-   Pull Requests for specific labels so if you see a PR missing from the changelog,
-   ensure it has been labeled `breaking`, `enhancement`, `bug`,
-   `documentation` or `internal`.
-1. **There's a lerna bug where the version number doesn't increment.**
-   Manually update to the latest version in `CHANGELOG.md` and in the root
-   `package.json` files.
-1. Run `yarn run release` to start the release.
-1. It'll ask if you want to do a major, minor or patch release. Select whichever is
-   most appropriate. It'll tag and publish every package to npm.
-
-Lerna will ask for a new version number, create a git tag, push to GitHub
-and publish to npm.
+1. Ensure you're on `main` with `git checkout main`.
+1. [Check closed Pull Requests](https://github.com/cfpb/design-system/pulls?q=is%3Apr+is%3Aclosed) and ensure Pull Requests that change the `/packages/` have a label
+   that begins with a `lerna-changelog/…` label.
+1. Run `yarn pre-release`
+1. Decide what version (major, minor, or patch) you will be releasing and
+   manually update to that version in `CHANGELOG.md` and in the root
+   `package.json` files. This is the future version that will be tagged shortly.
+1. Commit the changes to `CHANGELOG.md` and `package.json`.
+1. Run `yarn release` to start the release.
+1. It'll ask if you want to do a major, minor or patch release.
+   Select whichever matches your edit in the changelog.
+   Lerna will tag and publish every package to npm.
 
 ## Notes
 

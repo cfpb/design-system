@@ -163,7 +163,8 @@ First, set some credentials:
 
 Then, do a release:
 
-1. Ensure you're on `main` with `git checkout main`.
+1. Ensure you're on the `main` branch with `git checkout main`
+   and pull latest with `git pull`.
 1. [Check closed Pull Requests](https://github.com/cfpb/design-system/pulls?q=is%3Apr+is%3Aclosed) and ensure Pull Requests that change the `/packages/` have a label
    that begins with a `lerna-changelog/…` label.
 1. Run `yarn pre-release`
@@ -175,6 +176,12 @@ Then, do a release:
 1. It'll ask if you want to do a major, minor or patch release.
    Select whichever matches your edit in the changelog.
    Lerna will tag and publish every package to npm.
+1. **There is a bug in lerna where the root package.json won't auto increment.**
+   ([See this issue](https://github.com/lerna/lerna/issues/2879)).
+   Manually increment the `version` in the root `package.json` file to match
+   the latest change log entry and commit that change.
+1. Push both the updated root `CHANGELOG.md` and `package.json` files
+   directly to the `main` branch.
 
 ## Notes
 

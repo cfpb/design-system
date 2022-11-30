@@ -5,7 +5,7 @@ set -e
 npx gulp build &
 
 # Make sure everything is current and built and generate changelog.
-git pull && yarn build
+yarn build
 
 # Update the changelog.
 yarn changelog

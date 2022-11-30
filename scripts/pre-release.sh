@@ -12,7 +12,7 @@ yarn changelog
 
 # Reminder to edit files before release.
 while true; do
-    read -p $'Have you manually updated the versions in \e[31mCHANGELOG.md\e[0m: and the root \e[31mpackage.json\e[0m:? [y/n]' yn
+    read -p $'Have you manually updated the versions in \e[31mCHANGELOG.md\e[0m:? [y/n]' yn
     case $yn in
         [Yy]* ) echo 'Great! Run \033[0;32mgit add . && git commit -m "Bump version" && yarn release\033[0m'; break;;
         [Nn]* ) echo '\033[0;31mEdit the versions and re-run `yarn pre-release`\033[0m'; exit;;

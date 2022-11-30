@@ -168,9 +168,9 @@ Then, do a release:
    that begins with a `lerna-changelog/…` label.
 1. Run `yarn pre-release`
 1. Decide what version (major, minor, or patch) you will be releasing and
-   manually update to that version in `CHANGELOG.md` and in the root
-   `package.json` files. This is the future version that will be tagged shortly.
-1. Commit the changes to `CHANGELOG.md` and `package.json`.
+   manually update to that version in `CHANGELOG.md`.
+   This is the future version that will be tagged shortly.
+1. Commit the changes to `CHANGELOG.md`.
 1. Run `yarn release` to start the release.
 1. It'll ask if you want to do a major, minor or patch release.
    Select whichever matches your edit in the changelog.

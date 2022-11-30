@@ -4,5 +4,6 @@
   "useWorkspaces": true,
   "changelog": {
     "cacheDir": ".changelog"
-  }
+  },
+  "packages": [".", "packages/*"]
 }

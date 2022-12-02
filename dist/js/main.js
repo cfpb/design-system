@@ -1241,7 +1241,7 @@ function AtomicComponent(element, attributes) {
    */
   init: function () {
     this.initializers.forEach(function (func) {
-      if (_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__["default"].isFunction(func)) {
+      if ((0,_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isFunction)(func)) {
         func.apply(this, arguments);
       }
     }, this);
@@ -1400,7 +1400,7 @@ function AtomicComponent(element, attributes) {
     for (key in events) {
       if ({}.hasOwnProperty.call(events, key)) {
         method = events[key];
-        if (_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__["default"].isFunction(this[method])) {
+        if ((0,_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isFunction)(this[method])) {
           method = this[method];
         }
         if (method) {
@@ -1882,9 +1882,7 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {HTMLElement} The element.
  */
 function queryOne(expr, con) {
-  return _type_checkers_js__WEBPACK_IMPORTED_MODULE_0__["default"].isString(expr)
-    ? (con || document).querySelector(expr)
-    : expr || null;
+  return (0,_type_checkers_js__WEBPACK_IMPORTED_MODULE_0__.isString)(expr) ? (con || document).querySelector(expr) : expr || null;
 }
 
 /**
@@ -2862,6 +2860,17 @@ MoveTransition.CLASSES = CLASSES;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isArray": function() { return /* binding */ isArray; },
+/* harmony export */   "isDate": function() { return /* binding */ isDate; },
+/* harmony export */   "isDefined": function() { return /* binding */ isDefined; },
+/* harmony export */   "isEmpty": function() { return /* binding */ isEmpty; },
+/* harmony export */   "isFunction": function() { return /* binding */ isFunction; },
+/* harmony export */   "isNumber": function() { return /* binding */ isNumber; },
+/* harmony export */   "isObject": function() { return /* binding */ isObject; },
+/* harmony export */   "isString": function() { return /* binding */ isString; },
+/* harmony export */   "isUndefined": function() { return /* binding */ isUndefined; }
+/* harmony export */ });
 /* ==========================================================================
    Javascript Type Checkers
 
@@ -3005,17 +3014,7 @@ function isEmpty(value) {
 /* eslint-enable complexity, no-mixed-operators */
 
 // Expose public methods.
-/* harmony default export */ __webpack_exports__["default"] = ({
-  isUndefined: isUndefined,
-  isDefined: isDefined,
-  isObject: isObject,
-  isString: isString,
-  isNumber: isNumber,
-  isDate: isDate,
-  isArray: isArray,
-  isFunction: isFunction,
-  isEmpty: isEmpty,
-});
+
 
 
 /***/ }),

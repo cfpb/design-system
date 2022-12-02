@@ -14,7 +14,7 @@ import { instantiateAll, setInitFlag } from '../utilities/atomic-helpers.js';
 import { assign } from '../utilities/object-assign.js';
 import Delegate from 'ftdomdelegate';
 import EventObserver from '../mixins/EventObserver.js';
-import typeCheckers from '../utilities/type-checkers.js';
+import { isFunction } from '../utilities/type-checkers.js';
 
 const TAG_NAME = 'div';
 
@@ -46,7 +46,7 @@ assign(AtomicComponent.prototype, new EventObserver(), {
    */
   init: function () {
     this.initializers.forEach(function (func) {
-      if (typeCheckers.isFunction(func)) {
+      if (isFunction(func)) {
         func.apply(this, arguments);
       }
     }, this);
@@ -205,7 +205,7 @@ assign(AtomicComponent.prototype, new EventObserver(), {
     for (key in events) {
       if ({}.hasOwnProperty.call(events, key)) {
         method = events[key];
-        if (typeCheckers.isFunction(this[method])) {
+        if (isFunction(this[method])) {
           method = this[method];
         }
         if (method) {

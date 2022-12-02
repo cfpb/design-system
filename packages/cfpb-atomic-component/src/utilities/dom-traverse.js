@@ -1,4 +1,4 @@
-import typeCheckers from './type-checkers.js';
+import { isString } from './type-checkers.js';
 
 /**
  * Queries for the first match unless an HTMLElement is passed
@@ -8,9 +8,7 @@ import typeCheckers from './type-checkers.js';
  * @returns {HTMLElement} The element.
  */
 function queryOne(expr, con) {
-  return typeCheckers.isString(expr)
-    ? (con || document).querySelector(expr)
-    : expr || null;
+  return isString(expr) ? (con || document).querySelector(expr) : expr || null;
 }
 
 /**

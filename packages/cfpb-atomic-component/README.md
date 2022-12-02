@@ -46,7 +46,12 @@ Utility functions for checking Javascript types and primitives.
 
 ```
 var assert = require( 'assert' );
-import typeCheckers from '../utilities/type-checkers.js';
+import {
+  isUndefined,
+  isObject,
+  isFunction,
+  isDate
+} from '../utilities/type-checkers.js';
 
 var UNDEFINED;
 

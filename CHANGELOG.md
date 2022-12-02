@@ -1,5 +1,5 @@
 
-## v0.18.0 (2022-12-02)
+## v0.18.1 (2022-12-02)
 
 #### Breaking Change
 * `cfpb-atomic-component`

@@ -39,7 +39,7 @@ description: >-
 
   ### Foundation
 
-  This section includes our visual identity standards, such as color, grid, and typography. It forms the foundation for the CFPB’s website and external-facing materials. 
+  This section includes our visual identity standards, such as color, grid, and typography. It forms the foundation for the CFPB’s website and external-facing materials! 
 
   <p><a href="https://cfpb.github.io/design-system/foundation/">Browse foundation</a></p></div>
 

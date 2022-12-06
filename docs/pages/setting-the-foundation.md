@@ -56,7 +56,7 @@ description: >-
   <h4 class="h3" id="frames-of-reference">Frames of reference</h4> 
 
 
-  *Adapted from 18F’s [presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx)*
+  *Adapted from 18F’s [presentation on equity-centered design and research](https://www.youtube.com/watch?v=j1ZJO8maV7s)*
 
 
   As a team, run through this activity to identify your individual and collective biases before beginning research or design activities. If possible, couple the exercise with a review of what you have learned about the audience.  
@@ -381,5 +381,5 @@ description: >-
   * [C﻿onducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
 
   * [D﻿esign and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
-related_items: ''
+related_items: ""
 ---

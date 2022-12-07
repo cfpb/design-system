@@ -12,7 +12,7 @@ jobs:
         - uses: actions/setup-node@v3
           with:
             node-version: 16
-        - uses: ruby/setup-ruby@v1.81.0
+        - uses: ruby/setup-ruby@v1
           with:
             ruby-version: '2.7.1'
         - uses: actions/checkout@v3

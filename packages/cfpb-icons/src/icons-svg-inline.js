@@ -10,7 +10,7 @@ const path = require('path');
  * See http://lesscss.org/features/#plugin-atrules-feature-writing-your-first-plugin
  */
 
-export default {
+module.exports = {
   install: function (less, pluginManager, functions) {
     /**
      * @param {string} svgName - The canonical name of the icon.

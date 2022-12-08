@@ -1,4 +1,4 @@
-import path from 'path';
+const path = require('path');
 
 /**
  * This file is a less plugin that gets included in a less file via the

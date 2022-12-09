@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Set up Ruby
-      uses: ruby/setup-ruby@v1.81.0
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7.1
 
@@ -46,7 +46,7 @@ jobs:
         node-version: 16
 
     - name: Set up Ruby for Jekyll
-      uses: ruby/setup-ruby@v1.81.0
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2.7.1'
 

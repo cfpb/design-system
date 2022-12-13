@@ -85,7 +85,7 @@ description: >-
 
   <ol>
     <li>
-      To begin, brainstorm as a team what frames of reference are most important for your team to reflect on. The template contains a number of common frames of reference. More exanples can be found in 18F’s <a href="https://docs.google.com/forms/d/e/1FAIpQLScI0iTQEstjECMzFVuyMt0Giku69YggEkAlybQPlH4y7Ik9Vg/viewform">frames of reference form</a>.
+      To begin, brainstorm as a team what frames of reference are most important for your team to reflect on. The template contains a number of common frames of reference. More examples can be found in 18F’s <a href="https://docs.google.com/forms/d/e/1FAIpQLScI0iTQEstjECMzFVuyMt0Giku69YggEkAlybQPlH4y7Ik9Vg/viewform">frames of reference form</a>.
     </li>
     <li>
       Next, add your experiences with each frame of reference. The template gives a number of options for doing that in a way that's safe and comfortable for everyone, including:

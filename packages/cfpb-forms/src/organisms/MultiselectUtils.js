@@ -1,39 +1,23 @@
-import { queryOne } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js';
-
 /**
  * Shortcut for creating new dom elements.
  *
  * @param {string} tag - The html elem to create.
+ * @param {HTMLElement} parentNode - The parent node to attach to
  * @param {object} options - The options for building the elem.
  * @returns {HTMLElement} The created elem.
  */
-function create(tag, options) {
+export function create(tag, parentNode, options) {
   const elem = document.createElement(tag);
 
-  let i;
-  for (i in options) {
-    if ({}.hasOwnProperty.call(options, i)) {
-      const val = options[i];
-      let ref;
-
-      if (i === 'inside') {
-        ref = queryOne(val);
-        ref.appendChild(elem);
-      } else if (i === 'around') {
-        ref = queryOne(val);
-        ref.parentNode.insertBefore(elem, ref);
-        elem.appendChild(ref);
-      } else if (i in elem) {
-        elem[i] = val;
-      } else {
-        elem.setAttribute(i, val);
-      }
+  Object.keys(options).forEach((key) => {
+    const val = options[key];
+    if (key in elem) {
+      elem[key] = val;
+    } else {
+      elem.setAttribute(key, val);
     }
-  }
+  });
 
+  if (parentNode) parentNode.appendChild(elem);
   return elem;
 }
-
-export default {
-  create: create,
-};

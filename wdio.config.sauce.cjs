@@ -1,4 +1,4 @@
-const config = {
+exports.config = {
   //
   // ====================
   // Runner Configuration
@@ -318,4 +318,3 @@ const config = {
   // onReload: function(oldSessionId, newSessionId) {
   // }
 };
-export { config }

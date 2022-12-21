@@ -1,5 +1,3 @@
-import 'core-js/stable/index.js';
-import 'regenerator-runtime/runtime.js';
 import CMS from 'netlify-cms';
 import { StringTrimmedControl } from './widgets/StringTrimmed.js';
 import { StringWithInstructionsControl } from './widgets/StringWithInstructions.js';

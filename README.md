@@ -64,8 +64,8 @@ click the edit button at the bottom right of the page.
 You'll need to be added as a contributor to this repository in order to
 authenticate with Netlify CMS.
 
-
 ### Running the documentation website locally
+
 The project has a dependency on Ruby because it uses Jekyll. If you do not have Ruby installed, you will need to install it. We recommend using [RVM](https://rvm.io/rvm/install). If you don't have admin access to your machine, try these steps:
 
 ```shell

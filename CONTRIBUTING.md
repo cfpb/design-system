@@ -69,7 +69,7 @@ Automated tests can be run with the command `yarn test`.
 ### Browser support
 
 We configure [Autoprefixer](#autoprefixer)
-and [Babel](#babel) to support the following list of browsers.
+to support the following list of browsers.
 
 - Latest 2 releases of all browsers including:
   - Chrome
@@ -126,13 +126,6 @@ Autoprefixer parses our CSS and adds vendor prefixes to rules where necessary
 using reported feature support by [Can I Use](https://caniuse.com/). For more
 information visit the [Autoprefixer documentation site]
 (https://autoprefixer.github.io/).
-
-#### Babel
-
-Babel compiles our [ES6](http://es6-features.org/) JavaScript where necessary
-for the browsers that either don't support or have limited support of ES6
-features. For more information visit the [Babel documentation site]
-(https://babeljs.io/).
 
 #### Known feature differences
 

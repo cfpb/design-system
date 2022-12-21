@@ -48,8 +48,6 @@
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",
   "dependencies": {
     "anchor-js": "4.3.1",
-    "core-js": "3.26.1",
-    "ftdomdelegate": "4.0.6",
     "html-entities": "2.3.3",
     "lunr": "2.3.9",
     "marked": "4.2.4",
@@ -57,12 +55,9 @@
     "normalize-css": "2.3.1",
     "react": "18.2.0",
     "react-liquid": "2.0.1",
-    "regenerator-runtime": "0.13.11",
     "slugify": "1.6.5"
   },
   "devDependencies": {
-    "@babel/core": "7.20.5",
-    "@babel/eslint-parser": "7.19.1",
     "@babel/preset-env": "7.20.2",
     "@babel/preset-react": "7.18.6",
     "@lhci/cli": "0.10.0",
@@ -75,9 +70,9 @@
     "babel-loader": "9.1.0",
     "chromedriver": "108.0.0",
     "concurrently": "7.6.0",
-    "css-loader": "6.7.2",
+    "css-loader": "6.7.3",
     "cssnano": "5.1.14",
-    "eslint": "8.29.0",
+    "eslint": "8.30.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsdoc": "39.6.4",

@@ -361,20 +361,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ "./packages/cfpb-icons/src/icons/close.svg":
-/*!*************************************************!*\
-  !*** ./packages/cfpb-icons/src/icons/close.svg ***!
-  \*************************************************/
-/***/ (function(module) {
-
-module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"cf-icon-svg\" viewBox=\"0 0 12 19\"><path d=\"M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z\"></path></svg>"
-
-/***/ }),
-
-/***/ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/delegate.js":
-/*!***********************************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/delegate.js ***!
-  \***********************************************************************************/
+/***/ "./node_modules/ftdomdelegate/lib/delegate.js":
+/*!****************************************************!*\
+  !*** ./node_modules/ftdomdelegate/lib/delegate.js ***!
+  \****************************************************/
 /***/ (function(module) {
 
 "use strict";
@@ -860,10 +850,10 @@ Delegate.prototype.destroy = function() {
 
 /***/ }),
 
-/***/ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js":
-/*!********************************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js ***!
-  \********************************************************************************/
+/***/ "./node_modules/ftdomdelegate/lib/index.js":
+/*!*************************************************!*\
+  !*** ./node_modules/ftdomdelegate/lib/index.js ***!
+  \*************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -878,7 +868,7 @@ Delegate.prototype.destroy = function() {
  * @copyright The Financial Times Limited [All Rights Reserved]
  * @license MIT License (see LICENSE.txt)
  */
-var Delegate = __webpack_require__(/*! ./delegate */ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/delegate.js");
+var Delegate = __webpack_require__(/*! ./delegate */ "./node_modules/ftdomdelegate/lib/delegate.js");
 
 module.exports = function(root) {
   return new Delegate(root);
@@ -886,6 +876,16 @@ module.exports = function(root) {
 
 module.exports.Delegate = Delegate;
 
+
+/***/ }),
+
+/***/ "./packages/cfpb-icons/src/icons/close.svg":
+/*!*************************************************!*\
+  !*** ./packages/cfpb-icons/src/icons/close.svg ***!
+  \*************************************************/
+/***/ (function(module) {
+
+module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"cf-icon-svg\" viewBox=\"0 0 12 19\"><path d=\"M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z\"></path></svg>"
 
 /***/ }),
 
@@ -1190,7 +1190,7 @@ function toggleAllDetails(toggleBtn) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
 /* harmony import */ var _utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/object-assign.js */ "./packages/cfpb-atomic-component/src/utilities/object-assign.js");
-/* harmony import */ var ftdomdelegate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ftdomdelegate */ "./packages/cfpb-atomic-component/node_modules/ftdomdelegate/lib/index.js");
+/* harmony import */ var ftdomdelegate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ftdomdelegate */ "./node_modules/ftdomdelegate/lib/index.js");
 /* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 /* harmony import */ var _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utilities/type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
 /* ==========================================================================

@@ -21,6 +21,13 @@ import webpackConfig from './webpack.config.packages.js';
 import handleErrors from './scripts/utils/handle-errors.js';
 import webpackStream from 'webpack-stream';
 
+// Styles tasks
+import autoprefixer from 'autoprefixer';
+import gulpPostcss from 'gulp-postcss';
+import gulpIgnore from 'gulp-ignore';
+import gulpLess from 'gulp-less';
+import gulpRename from 'gulp-rename';
+
 /* TODO: Add a production and dev flag via NODE_ENV to generate
    a minified and un-minified version of the assets. */
 
@@ -30,25 +37,15 @@ import webpackStream from 'webpack-stream';
  *
  * @returns {object} An output stream from gulp.
  */
-function scriptsComponents() {
-  return gulp
+function scriptsComponents(done) {
+  gulp
     .src('packages/cfpb-design-system/src/cfpb-design-system.js')
     .pipe(vinylNamed())
     .pipe(webpackStream(webpackConfig.commonConf, webpack))
     .on('error', handleErrors.bind(this, { exitProcess: true }))
     .pipe(gulp.dest('packages/cfpb-design-system/'));
+  done();
 }
-
-gulp.task('scripts:components', scriptsComponents);
-
-gulp.task('scripts', gulp.parallel('scripts:components'));
-
-// Styles tasks
-import autoprefixer from 'autoprefixer';
-import gulpPostcss from 'gulp-postcss';
-import gulpIgnore from 'gulp-ignore';
-import gulpLess from 'gulp-less';
-import gulpRename from 'gulp-rename';
 
 /**
  * Compile all the individual component files so that users can `npm install`
@@ -56,8 +53,8 @@ import gulpRename from 'gulp-rename';
  *
  * @returns {PassThrough} A source stream.
  */
-function stylesComponents() {
-  return gulp
+function stylesComponents(done) {
+  gulp
     .src('packages/*/src/*.less')
     .pipe(
       gulpIgnore.exclude((vf) => {
@@ -82,13 +79,8 @@ function stylesComponents() {
       })
     )
     .pipe(gulp.dest('packages'));
+  done();
 }
 
-gulp.task('styles:components', stylesComponents);
-
-gulp.task('styles', gulp.parallel('styles:components'));
-
 // Define default build task sequence.
-gulp.task('build', gulp.parallel('styles:components', 'scripts:components'));
-
-gulp.task('default', gulp.series('build', 'test'));
+gulp.task('build', gulp.parallel(stylesComponents, scriptsComponents));

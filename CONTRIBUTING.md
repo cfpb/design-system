@@ -156,26 +156,25 @@ First, set some credentials:
 
 Then, do a release:
 
-1. Ensure you're on `main` and `git pull` to confirm you're up-to-date.
-1. Run `yarn run changelog` and open `CHANGELOG.md` to see a preview
-   of new changelog entries.
-   We use a [tool](https://github.com/lerna/lerna-changelog#usage) that scans our
-   Pull Requests for specific labels so if you see a PR missing from the changelog,
-   ensure it has been labeled `breaking`, `enhancement`, `bug`,
-   `documentation` or `internal`.
-1. If you're pleased with the changelog preview,
-   `git checkout CHANGELOG.md` to reset it.
-1. Run `yarn run release` to start the release.
-1. It'll ask if you want to do a major, minor or patch release. Select whichever is
-   most appropriate. It'll tag and publish every package to npm.
-1. When it's done, open `CHANGELOG.md` and confirm the latest entry shows the newest
-   version number. There's a lerna-changelog bug that sometimes causes it to duplicate
-   the previous version number. If it's showing the wrong version number, correct it
-   and commit the correction.
-1. Run `git push` to push changes to the remote `main` branch.
-
-Lerna will update the changelog, ask for a new version number, create a git tag,
-push to GitHub and publish to npm.
+1. Ensure you're on the `main` branch with `git checkout main`
+   and pull latest with `git pull`.
+1. [Check closed Pull Requests](https://github.com/cfpb/design-system/pulls?q=is%3Apr+is%3Aclosed) and ensure Pull Requests that change the `/packages/` have a label
+   that begins with a `lerna-changelog/…` label.
+1. Run `yarn pre-release`
+1. Decide what version (major, minor, or patch) you will be releasing and
+   manually update to that version in `CHANGELOG.md`.
+   This is the future version that will be tagged shortly.
+1. Commit the changes to `CHANGELOG.md`.
+1. Run `yarn release` to start the release.
+1. It'll ask if you want to do a major, minor or patch release.
+   Select whichever matches your edit in the changelog.
+   Lerna will tag and publish every package to npm.
+1. **There is a bug in lerna where the root package.json won't auto increment.**
+   ([See this issue](https://github.com/lerna/lerna/issues/2879)).
+   Manually increment the `version` in the root `package.json` file to match
+   the latest change log entry and commit that change.
+1. Push both the updated root `CHANGELOG.md` and `package.json` files
+   directly to the `main` branch.
 
 ## Notes
 

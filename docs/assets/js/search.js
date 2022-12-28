@@ -1,4 +1,4 @@
-const lunr = require('lunr');
+import lunr from 'lunr';
 
 /**
  * Update page markup with search results.

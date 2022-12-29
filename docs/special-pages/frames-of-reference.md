@@ -13,5 +13,5 @@ description: >-
   this link</a>.
 
 
-  <img src="https://cfpb.github.io/design-system/images/uploads/frames-of-reference-template.png">
+  <img alt="Frames of reference Mural screenshot" src="https://cfpb.github.io/design-system/images/uploads/frames-of-reference-template.png">
 ---

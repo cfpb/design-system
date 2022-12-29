@@ -33,7 +33,7 @@ jobs:
       # Install Ruby and configure the Bundler cache.
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.1
+          ruby-version: 3.0.0
 
       # https://github.com/actions/cache/blob/master/examples.md#ruby---bundler
       - name: Set up Bundler cache
@@ -52,6 +52,8 @@ jobs:
       # Run Lighthouse CI
       - name: Run Lighthouse CI
         run: yarn run lhci autorun
+        env:
+          LHCI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Attach results as artifact to GitHub Actions run
         if: ${{ always() }}

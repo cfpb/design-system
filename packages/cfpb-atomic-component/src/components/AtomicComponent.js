@@ -11,7 +11,6 @@
    ========================================================================== */
 
 import { instantiateAll, setInitFlag } from '../utilities/atomic-helpers.js';
-import { assign } from '../utilities/object-assign.js';
 import Delegate from 'ftdomdelegate';
 import EventObserver from '../mixins/EventObserver.js';
 import { isFunction } from '../utilities/type-checkers.js';
@@ -30,7 +29,7 @@ function AtomicComponent(element, attributes) {
   this.element = element;
   this.initializers = [];
   this.uId = this.uniqueId('ac');
-  assign(this, attributes);
+  Object.assign(this, attributes);
   this.processModifiers();
   this.ensureElement();
   this.setCachedElements();
@@ -38,7 +37,7 @@ function AtomicComponent(element, attributes) {
 }
 
 // Public instance Methods and properties.
-assign(AtomicComponent.prototype, new EventObserver(), {
+Object.assign(AtomicComponent.prototype, new EventObserver(), {
   /**
    * Run through and call the component's initializers.
    *
@@ -70,7 +69,7 @@ assign(AtomicComponent.prototype, new EventObserver(), {
         if (modifier.initialize) {
           this.initializers.push(modifier.initialize);
         }
-        assign(this, modifier);
+        Object.assign(this, modifier);
       }
     }, this);
   },
@@ -90,7 +89,7 @@ assign(AtomicComponent.prototype, new EventObserver(), {
   ensureElement: function () {
     if (!this.element) {
       // eslint-disable-line no-negated-condition
-      const attrs = assign({}, this.attributes);
+      const attrs = {...this.attributes};
       attrs.id = this.id || this.u_id;
       if (this.className) attrs.class = this.className;
       this.setElement(document.createElement(TAG_NAME));
@@ -125,7 +124,7 @@ assign(AtomicComponent.prototype, new EventObserver(), {
    * @returns {object} Hash of event names and cached elements.
    */
   setCachedElements: function () {
-    const ui = assign({}, this.ui);
+    const ui = { ...this.ui };
     let key;
     let element;
 
@@ -280,8 +279,8 @@ function extend(attributes) {
   }
 
   child.prototype = Object.create(AtomicComponent.prototype);
-  assign(child.prototype, attributes);
-  assign(child, AtomicComponent);
+  Object.assign(child.prototype, attributes);
+  Object.assign(child, AtomicComponent);
 
   if (
     {}.hasOwnProperty.call(attributes, 'ui') &&

@@ -13,31 +13,6 @@ Detailed instructions can be found at the Design System
 
 ## Utility descriptions
 
-### object-assign
-
-Utility used to copy Javascript object properties from one or more source objects to a target object
-
-#### Example
-
-```
-var assert = require( 'assert' );
-import { assign } from '../utilities/object-assign.js';
-var testObjectA = {
-    str:  'test',
-    func: function() { return 'testStr'; },
-    num:  1
- };
- var testObjectB = {
-    obj:   { test: 2 },
-    arr:   [ 3 ],
-   	_null: null
- };
- assign( testObjectA, testObjectB );
- assert( testObjectA.hasOwnProperty( 'obj' ), true ) ;
- assert( testObjectA.hasOwnProperty( 'arr' ) );
- assert( testObjectA.hasOwnProperty( '_null' ), true );
-```
-
 ### Type Checkers
 
 Utility functions for checking Javascript types and primitives.

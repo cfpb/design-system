@@ -1,9 +1,9 @@
 name: Run Lighthouse against the docs
 
-on:
+on: push
   # Run every night at midnight UTC.
-  schedule:
-    - cron: '0 0 * * *'
+  #schedule:
+  #  - cron: '0 0 * * *'
 
 jobs:
   lighthouseci:

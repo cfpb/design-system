@@ -42,7 +42,7 @@
     "serve-netlify": "netlify-cms-proxy-server",
     "start": "yarn compile-dev && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn run compile-dev --watch\"",
     "test": "yarn node --experimental-vm-modules $(yarn bin jest)",
-    "test:browser": "wdio run ./wdio.config.js",
+    "test:browser": "wdio run ./wdio.config.cjs",
     "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && wdio run ./wdio.config.sauce.cjs"
   },
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",

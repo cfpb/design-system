@@ -1,4 +1,4 @@
-// Required modules.
+        // Required modules.
 import {
   checkDom,
   setInitFlag,
@@ -6,7 +6,7 @@ import {
 import { isMobileUserAgent } from '@cfpb/cfpb-atomic-component/src/utilities/media-helpers.js';
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 import MultiselectModel from './MultiselectModel.js';
-import MultiselectUtils from './MultiselectUtils.js';
+import { create } from './MultiselectUtils.js';
 
 import * as closeIconSrc from '@cfpb/cfpb-icons/src/icons/close.svg';
 const closeIcon = closeIconSrc.default;
@@ -261,19 +261,17 @@ function Multiselect(element) {
    */
   function _createSelectedItem(selectionsDom, option) {
     const optionId = _getOptionId(option);
-    const selectionsItemDom = MultiselectUtils.create('li', {
+    const selectionsItemDom = create('li', null, {
       'data-option': option.value,
     });
 
-    const selectionsItemLabelDom = MultiselectUtils.create('button', {
+    const selectionsItemLabelDom = create('button', selectionsItemDom, {
       type: 'button',
       innerHTML:
         '<label for=' + optionId + '>' + option.text + closeIcon + '</label>',
-      inside: selectionsItemDom,
     });
 
     selectionsDom.appendChild(selectionsItemDom);
-    selectionsItemDom.appendChild(selectionsItemLabelDom);
 
     selectionsItemLabelDom.addEventListener('click', _selectionClickHandler);
     selectionsItemLabelDom.addEventListener(
@@ -464,31 +462,28 @@ function Multiselect(element) {
    */
   function _populateMarkup() {
     // Add a container for our markup
-    _containerDom = MultiselectUtils.create('div', {
-      className: BASE_CLASS,
-      around: _dom,
-    });
+    _containerDom = document.createElement('div');
+    _containerDom.className = BASE_CLASS;
 
     // Create all our markup but wait to manipulate the DOM just once
-    _selectionsDom = MultiselectUtils.create('ul', {
+    _selectionsDom = create('ul', null, {
       className: BASE_CLASS + '_choices',
       inside: _containerDom,
     });
 
-    _headerDom = MultiselectUtils.create('header', {
+    _headerDom = create('header', _containerDom, {
       className: BASE_CLASS + '_header',
     });
 
-    _searchDom = MultiselectUtils.create('input', {
+    _searchDom = create('input', _headerDom, {
       className: BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
       type: 'text',
       placeholder: _placeholder || 'Select up to five',
-      inside: _headerDom,
       id: _dom.id,
       autocomplete: 'off',
     });
 
-    _fieldsetDom = MultiselectUtils.create('fieldset', {
+    _fieldsetDom = create('fieldset', _containerDom, {
       className: BASE_CLASS + '_fieldset u-invisible',
       'aria-hidden': 'true',
     });
@@ -498,9 +493,8 @@ function Multiselect(element) {
       optionsClasses += ' u-max-selections';
     }
 
-    _optionsDom = MultiselectUtils.create('ul', {
+    _optionsDom = create('ul', _fieldsetDom, {
       className: optionsClasses,
-      inside: _fieldsetDom,
     });
 
     let option;
@@ -510,33 +504,30 @@ function Multiselect(element) {
       option = _options[i];
       optionId = _getOptionId(option);
       isChecked = _model.getOption(i).checked;
-      const optionsItemDom = MultiselectUtils.create('li', {
+      const optionsItemDom = create('li', _optionsDom, {
         'data-option': option.value,
         'data-cy': 'multiselect-option',
         class: 'm-form-field m-form-field__checkbox',
       });
 
-      MultiselectUtils.create('input', {
+      create('input', optionsItemDom, {
         id: optionId,
         // Type must come before value or IE fails
         type: 'checkbox',
         value: option.value,
         name: _name,
         class: CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
-        inside: optionsItemDom,
         checked: isChecked,
         'data-index': i,
       });
 
-      MultiselectUtils.create('label', {
+      create('label', optionsItemDom, {
         for: optionId,
         textContent: option.text,
         className: BASE_CLASS + '_label a-label',
-        inside: optionsItemDom,
       });
 
       _optionItemDoms.push(optionsItemDom);
-      _optionsDom.appendChild(optionsItemDom);
 
       if (isChecked) {
         _createSelectedItem(_selectionsDom, option);
@@ -544,8 +535,9 @@ function Multiselect(element) {
     }
 
     // Write our new markup to the DOM.
-    _containerDom.appendChild(_headerDom);
-    _containerDom.appendChild(_fieldsetDom);
+    _containerDom.insertBefore(_selectionsDom, _headerDom);
+    _dom.parentNode.insertBefore(_containerDom, _dom);
+    _containerDom.appendChild(_dom);
 
     return _containerDom;
   }
@@ -603,4 +595,4 @@ function Multiselect(element) {
 
 Multiselect.BASE_CLASS = BASE_CLASS;
 
-export default Multiselect;
+export default Multiselect; 

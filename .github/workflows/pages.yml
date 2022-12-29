@@ -14,8 +14,8 @@ jobs:
             node-version: 16
         - uses: ruby/setup-ruby@v1
           with:
-            ruby-version: '2.7.1'
+            ruby-version: '3.0.0'
         - uses: actions/checkout@v3
         - run: ./scripts/update-gh-pages.sh
           env:
-            GITHUB_TOKEN: ${{ secrets.github_token }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

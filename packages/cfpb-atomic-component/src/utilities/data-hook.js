@@ -25,24 +25,6 @@ function add(element, value) {
 
 /**
  * @param {HTMLElement} element - DOM element.
- * @param {string} value - Value to remove from the JS data-* hook value.
- * @returns {boolean} True if value was removed, false otherwise.
- */
-function remove(element, value) {
-  const values = element.getAttribute(JS_HOOK);
-  const index = values.indexOf(value);
-  const valuesList = values.split(' ');
-  if (index > -1) {
-    valuesList.splice(index, 1);
-    element.setAttribute(JS_HOOK, valuesList.join(' '));
-    return true;
-  }
-
-  return false;
-}
-
-/**
- * @param {HTMLElement} element - DOM element.
  * @param {string} value - Value to check as existing as a JS data-* hook value.
  * @returns {boolean} True if the data-* hook value exists, false otherwise.
  */
@@ -60,4 +42,4 @@ function contains(element, value) {
   return values.indexOf(value) > -1 ? true : false;
 }
 
-export { add, contains, remove };
+export { add, contains };

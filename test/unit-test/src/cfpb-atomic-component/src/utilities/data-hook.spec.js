@@ -1,7 +1,6 @@
 import {
   add,
   contains,
-  remove,
 } from '../../../../../../packages/cfpb-atomic-component/src/utilities/data-hook.js';
 
 let testComponent;
@@ -30,13 +29,6 @@ describe('Data hook', () => {
     it('should contain a value in the data-* attribute of the element', () => {
       expect(contains(testComponent, 'test_state')).toBe(false);
       expect(contains(testComponent, 'test_behavior')).toBe(true);
-    });
-  });
-
-  describe('remove()', () => {
-    it('should remove a value to the data-* attribute of the element', () => {
-      remove(testComponent, 'test_behavior');
-      expect(testComponent.getAttribute('data-js-hook')).toBe('');
     });
   });
 });

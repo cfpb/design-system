@@ -4824,9 +4824,6 @@ button.o-expandable_header {
   width: 100%;
   text-align: left;
 }
-.o-expandable_header__spaced {
-  padding-bottom: 0.9375em;
-}
 .o-expandable_header .o-expandable_label {
   flex-grow: 1;
 }

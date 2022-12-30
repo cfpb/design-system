@@ -3873,22 +3873,6 @@ input.a-btn::-moz-focus-inner {
 .m-btn-group .a-btn__super + .a-btn__super {
   margin-left: 0.33333333em;
 }
-.m-btn-group__combined .a-btn {
-  border-radius: 0;
-  margin-right: 1px;
-}
-.m-btn-group__combined .a-btn + .a-btn,
-.m-btn-group__combined .a-btn__super + .a-btn__super {
-  margin-left: -4px;
-}
-.m-btn-group__combined .a-btn:first-child {
-  border-top-left-radius: 0.25em;
-  border-bottom-left-radius: 0.25em;
-}
-.m-btn-group__combined .a-btn:last-child {
-  border-top-right-radius: 0.25em;
-  border-bottom-right-radius: 0.25em;
-}
 /* ==========================================================================
    Design System
    Form Element Styling

@@ -15,7 +15,6 @@ components are dependencies of this component.
 - [Modifiers](#modifiers)
   - [Expanded](#expanded)
   - [Padded](#padded)
-  - [Spaced header](#spaced-header)
 - [Elements](#elements)
   - [Text elements](#text-elements)
   - [Header elements](#header-elements)
@@ -96,14 +95,6 @@ sure you are using `.o-expandable_header`.
 
 ```
 .o-expandable__padded
-```
-
-### Spaced header
-
-Allows you to add space between `.o-expandable_header` and `.o-expandable_content`.
-
-```
-.o-expandable_header__spaced
 ```
 
 ## Elements

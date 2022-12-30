@@ -445,22 +445,6 @@ variation_groups:
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
-      - variation_name: Spaced header modifier
-        variation_description: >-
-          Allows you to add space between `.o-expandable_header` and
-          `.o-expandable_content`.
-
-
-          ```
-
-          .o-expandable_header__spaced
-
-          ```
-        variation_code_snippet: ""
-        variation_implementation: A new array of Expandable instances can be created
-          using a JavaScript API. For information, [open the "Implementation"
-          tab under Standard
-          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
       - variation_name: Text elements
         variation_description: |
           #### Label

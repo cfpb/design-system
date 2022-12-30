@@ -4255,326 +4255,6 @@ function create(tag, options) {
 });
 
 
-/***/ }),
-
-/***/ "./packages/cfpb-tables/src/Table.js":
-/*!*******************************************!*\
-  !*** ./packages/cfpb-tables/src/Table.js ***!
-  \*******************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
-/* harmony import */ var _TableRowLinks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TableRowLinks.js */ "./packages/cfpb-tables/src/TableRowLinks.js");
-/* harmony import */ var _TableSortable_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TableSortable.js */ "./packages/cfpb-tables/src/TableSortable.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
-/* ==========================================================================
-   Table Organism
-   ========================================================================== */
-
-
-
-
-
-
-const Table = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__["default"].extend({
-  ui: {
-    base: '.o-table',
-  },
-
-  modifiers: [_TableSortable_js__WEBPACK_IMPORTED_MODULE_2__["default"], _TableRowLinks_js__WEBPACK_IMPORTED_MODULE_1__["default"]],
-});
-
-Table.constants.DIRECTIONS = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_3__.DIRECTIONS;
-
-/* harmony default export */ __webpack_exports__["default"] = (Table);
-
-
-/***/ }),
-
-/***/ "./packages/cfpb-tables/src/TableRowLinks.js":
-/*!***************************************************!*\
-  !*** ./packages/cfpb-tables/src/TableRowLinks.js ***!
-  \***************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse.js");
-/* ==========================================================================
-   Table Row Links
-
-   Mixin for adding row link click functionality to Table organism.
-   ========================================================================== */
-
-
-
-/**
- * Handle a click of the table.
- *
- * @param {MouseEvent} event - Mouse event for click on the table.
- */
-function onRowLinkClick(event) {
-  let target = event.target;
-  if (target && target.tagName === 'A') {
-    return;
-  }
-  target = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.closest)(event.target, 'tr');
-  const link = target.querySelector('a');
-  if (link) {
-    window.location = link.getAttribute('href');
-  }
-}
-
-const TableRowLinks = {
-  ui: {
-    base: '.o-table__row-links',
-  },
-
-  events: {
-    'click tbody tr': 'onRowLinkClick',
-  },
-
-  onRowLinkClick: onRowLinkClick,
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (TableRowLinks);
-
-
-/***/ }),
-
-/***/ "./packages/cfpb-tables/src/TableSortable.js":
-/*!***************************************************!*\
-  !*** ./packages/cfpb-tables/src/TableSortable.js ***!
-  \***************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
-/* ==========================================================================
-   Table Sortablle
-
-   Mixin for sorting table organism.
-   ========================================================================== */
-
-
-
-
-let UNDEFINED;
-
-/**
- * Function used to create computed and triggered properties.
- */
-function initialize() {
-  this.sortClass = UNDEFINED;
-  this.sortColumnIndex = UNDEFINED;
-  this.sortDirection = UNDEFINED;
-  this.tableData = [];
-  this.bindProperties();
-  if (this.ui.sortButton) {
-    this.sortColumnIndex = this.getColumnIndex();
-
-    this.sortDirection = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.UP;
-    if (this.ui.sortButton.classList.contains(this.classes.sortDown)) {
-      this.sortDirection = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.DOWN;
-    }
-
-    this.updateTable();
-  }
-}
-
-/**
- * Function used to create computed and trigger properties.
- */
-function bindProperties() {
-  let sortDirection;
-
-  Object.defineProperty(this, 'sortDirection', {
-    configurable: true,
-    get: function () {
-      return sortDirection;
-    },
-    set: function (value) {
-      if (value === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.UP) {
-        this.sortClass = this.classes.sortUp;
-      } else if (value === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.DOWN) {
-        this.sortClass = this.classes.sortDown;
-      }
-      sortDirection = value;
-    },
-  });
-}
-
-/**
- * Function used to get the column index of the active sort column.
- *
- * @param {HTMLElement} element - The element used as the sortable.
- * @returns {number} The column index of the active sort column.
- */
-function getColumnIndex(element) {
-  return (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.closest)(element || this.ui.sortButton, 'td, th').cellIndex;
-}
-
-/**
- * Function used to update the table data and dom.
- *
- * @returns {boolean} TODO: Add description.
- */
-function updateTable() {
-  return this.updateTableData() && this.updateTableDom();
-}
-
-/**
- * Function used to get, sort, and update the table data array.
- *
- * @param {number} columnIndex - The index of the column used for sorting.
- * @returns {Array} Multidimensional array of column's cell value
- * and corresponding row element.
- */
-function updateTableData(columnIndex) {
-  let cell;
-  const rows = this.ui.tableBody.querySelectorAll('tr');
-  this.tableData = [];
-  columnIndex = columnIndex || this.sortColumnIndex;
-
-  for (let i = 0, len = rows.length; i < len; ++i) {
-    cell = rows[i].cells[columnIndex];
-    if (cell) {
-      cell = cell.textContent.trim();
-    }
-    this.tableData.push([cell, rows[i]]);
-  }
-
-  const sortType = this.ui.sortButton.getAttribute('data-sort_type');
-  this.tableData.sort(this.tableDataSorter(this.sortDirection, sortType));
-
-  return this.tableData;
-}
-
-/**
- * Function used to update the table DOM.
- *
- * @returns {HTMLElement} The table's <tbody> element.
- */
-function updateTableDom() {
-  const tableBody = this.ui.tableBody;
-
-  /* Empty the table body to prepare for sorting the rows
-     TODO: It might make sense to use innerHTML
-     from a performance and garbage collection standpoint. */
-  while (tableBody.lastChild) {
-    tableBody.removeChild(tableBody.lastChild);
-  }
-
-  const documentFragment = document.createDocumentFragment();
-  for (let i = 0; i < this.tableData.length; i++) {
-    documentFragment.appendChild(this.tableData[i][1]);
-  }
-
-  tableBody.appendChild(documentFragment);
-  this.dispatchEvent('table:updated');
-
-  return tableBody;
-}
-
-// TODO Fix complexity issue
-/* eslint-disable complexity */
-/**
- * Function used to create a function for sorting table data.
- * Passed to Array.sort method.
- *
- * @param {number} direction - A number where a negative number indicates a
- * reverse sort.
- * @param {string} sortType - A string used for sort types. By default,
- * the values are sorted by their native type. If this value is set to
- * 'number', then the cells' numeric values are used.
- * @returns {Function} - A function to be used by the Array.sort method,
- * where the parameters 'a' and 'b' is each an Array (of Arrays) to be sorted.
- */
-function tableDataSorter(direction, sortType) {
-  return function (a, b) {
-    const sign = direction === _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.DOWN ? -1 : 1;
-    let order = 0;
-    const regex = /[^\d.-]/g;
-
-    // Set a and b to the first Array in each Array-of-Arrays
-    a = a[0];
-    b = b[0];
-
-    // For number sort, convert a & b to numbers.
-    if (sortType === 'number') {
-      a = Number(a.replace(regex, ''));
-      b = Number(b.replace(regex, ''));
-    }
-
-    // Sort the values
-    if (a < b) {
-      order = sign * -1;
-    } else if (a > b) {
-      order = sign;
-    }
-
-    return order;
-  };
-}
-/* eslint-enable complexity */
-
-/**
- * Function used as callback for the sortable click event.
- *
- * @param {Event} event - DOM event.
- * @returns {object} - TOOD: Add description.
- */
-function onSortableClick(event) {
-  if (this.ui.sortButton) {
-    this.ui.sortButton.classList.remove(this.sortClass);
-  }
-  if (this.ui.sortButton === event.target) {
-    this.sortDirection = ~this.sortDirection;
-  } else {
-    this.ui.sortButton = event.target;
-    this.sortColumnIndex = this.getColumnIndex();
-    this.sortDirection = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.DIRECTIONS.UP;
-  }
-  // The active sort class is changing when the sort direction changes.
-  this.ui.sortButton.classList.add(this.sortClass);
-  this.updateTable();
-
-  return this;
-}
-
-const TableSortable = {
-  ui: {
-    base: '.o-table__sortable',
-    tableBody: 'tbody',
-    sortButton: '.sorted-up, .sorted-down',
-  },
-
-  classes: {
-    sortDown: 'sorted-down',
-    sortUp: 'sorted-up',
-  },
-
-  events: {
-    'click .sortable': 'onSortableClick',
-  },
-
-  initialize: initialize,
-  bindProperties: bindProperties,
-  getColumnIndex: getColumnIndex,
-  updateTable: updateTable,
-  updateTableData: updateTableData,
-  updateTableDom: updateTableDom,
-  tableDataSorter: tableDataSorter,
-  onSortableClick: onSortableClick,
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (TableSortable);
-
-
 /***/ })
 
 /******/ 	});
@@ -4649,10 +4329,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
-/* harmony import */ var _cfpb_cfpb_tables_src_Table_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cfpb/cfpb-tables/src/Table.js */ "./packages/cfpb-tables/src/Table.js");
-/* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
-/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
-/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
+/* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
+/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
+/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
 
 
 
@@ -4663,9 +4342,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-_redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__["default"].init();
-_sidebar_js__WEBPACK_IMPORTED_MODULE_10__["default"].init();
+_redirect_banner_js__WEBPACK_IMPORTED_MODULE_8__["default"].init();
+_sidebar_js__WEBPACK_IMPORTED_MODULE_9__["default"].init();
 var anchors = new anchor_js__WEBPACK_IMPORTED_MODULE_1__();
 // Add anchors to all headings (except page title headings)
 anchors.add('h2:not(.title), h3, h4, h5');
@@ -4677,7 +4355,6 @@ if (multiselectDom) {
   multiselect.init();
 }
 _cfpb_cfpb_expandables_src_Expandable_js__WEBPACK_IMPORTED_MODULE_2__["default"].init();
-_cfpb_cfpb_tables_src_Table_js__WEBPACK_IMPORTED_MODULE_7__["default"].init();
 
 // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.
@@ -4686,11 +4363,11 @@ window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_Mov
 window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__["default"];
 
 // Tabs show under the show/hide details button on a pattern.
-var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_8__["default"].BASE_CLASS));
+var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_7__["default"].BASE_CLASS));
 if (tabsContainerDom.length > 0) {
   var tabsInst;
   for (var i = 0, len = tabsContainerDom.length; i < len; i++) {
-    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_8__["default"](tabsContainerDom[i]);
+    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_7__["default"](tabsContainerDom[i]);
     tabsInst.init();
   }
 }

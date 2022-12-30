@@ -4903,16 +4903,6 @@ div[dir="rtl"] .o-expandable_header {
 .o-table_cell__right-align {
   text-align: right;
 }
-@media only all and (min-width: 56.3125em) {
-  .o-table__row-links tr:hover td {
-    background: #4497dc;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  .o-table__row-links tr:hover a {
-    color: #ffffff;
-  }
-}
 .o-table-wrapper__scrolling {
   box-sizing: border-box;
   overflow-y: hidden;
@@ -4923,48 +4913,6 @@ div[dir="rtl"] .o-expandable_header {
 .o-table-wrapper__scrolling table > tbody > tr:nth-child( even ) > th,
 .o-table-wrapper__scrolling table > tbody > tr:nth-child( even ) > td {
   background: #f7f8f9;
-}
-.o-table__sortable button.sortable {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: none;
-  font-family: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  outline: none;
-  text-align: left;
-  text-transform: inherit;
-}
-.o-table__sortable button.sortable:after {
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20fill=%22rgb(16,%2024,%2032)%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
-  display: inline-block;
-  position: relative;
-  vertical-align: bottom;
-  content: '';
-  visibility: hidden;
-  background-size: auto 1.1875em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 1.1875em;
-  width: 1em;
-}
-.o-table__sortable .sortable:hover:after,
-.o-table__sortable .sortable.sorted-up:after,
-.o-table__sortable .sortable.sorted-down:after {
-  visibility: visible;
-}
-.o-table__sortable .sortable.sorted-down:after,
-.o-table__sortable .sortable.sorted-up:hover:after {
-  top: 1px;
-  transform: rotate(180deg);
-}
-.o-table__sortable .sortable.sorted-up:after,
-.o-table__sortable .sortable.sorted-down:hover:after {
-  top: -1px;
-  transform: rotate(0deg);
 }
 @media only all and (min-width: 37.5625em) {
   .o-table__striped > tbody > tr:nth-child( even ) > th,

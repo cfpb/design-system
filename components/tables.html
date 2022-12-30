@@ -316,10 +316,6 @@
         </li>
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#behavior">Behavior</a>
-        </li>
-        
-        <li class="m-list_item">
             <a class="m-list_link" href="#accessibility">Accessibility</a>
         </li>
         
@@ -1429,17 +1425,10 @@ At the small screen breakpoint, the first column (in the example shown below, em
             
 
             
-            <div class="m-variation_name">
-                <h3>
-                    Table with row links
-                    
-                </h3>
-            </div>
-            
 
             
             <div class="m-variation_description">
-                <p>The <code class="language-plaintext highlighter-rouge">.o-table_cell__row-links</code> class is added to a <code class="language-plaintext highlighter-rouge">table</code> to enable highlighting and hyperlinking rows which contain links.</p>
+                
 
             </div>
             
@@ -1447,7 +1436,7 @@ At the small screen breakpoint, the first column (in the example shown below, em
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <table class="o-table o-table__row-links">
+                <table class="o-table">
     <thead>
         <tr>
             <th>Column 1</th>
@@ -1483,15 +1472,15 @@ At the small screen breakpoint, the first column (in the example shown below, em
             
 
             <div class="a-toggle_code">
-                <button href="#details-table-with-row-links-the-o-table-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-table-with-row-links-the-o-table-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-table-class-o-table-thead-tr-th--3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-table-class-o-table-thead-tr-th--3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-table-with-row-links-the-o-table-3">
+            <div class="m-tabs u-hidden" id="details-table-class-o-table-thead-tr-th--3">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-table-with-row-links-the-o-table-html-code-snippet-3">
+                        <a class="m-tabs_tab" href="#details-table-class-o-table-thead-tr-th--html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -1503,11 +1492,11 @@ At the small screen breakpoint, the first column (in the example shown below, em
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-table-with-row-links-the-o-table-html-code-snippet-3">
+                <section class="m-tabs_panel" id="details-table-class-o-table-thead-tr-th--html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;table class="o-table o-table__row-links"&gt;
+                            <pre><code class="language-html">&lt;table class="o-table"&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;Column 1&lt;/th&gt;
@@ -1541,344 +1530,6 @@ At the small screen breakpoint, the first column (in the example shown below, em
                 
 
                 <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>
-                    Sortable table
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>Sorting allows users to reorder the contents of a table by a sortable column of their choice. See the <a href="#behavior">Behavior</a> section for more information.</p>
-
-<p>Add the <code class="language-plaintext highlighter-rouge">.o-table__sortable</code> class to a table to make it sortable. To sort by a specific column, add a <code class="language-plaintext highlighter-rouge">button</code> to the <code class="language-plaintext highlighter-rouge">th</code> of the column. The use of a <code class="language-plaintext highlighter-rouge">button</code> helps address accessibility concerns.</p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <table class="o-table o-table__sortable">
-    <thead>
-        <tr>
-            <th>
-                Agency
-            </th>
-            <th>
-              <button class="sortable">
-                Languages
-              </button>
-            </th>
-            <th>
-              <button class="sortable sorted-up" data-sort_type="number">
-                Distance
-              </button>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                Alpha
-            </td>
-            <td data-label="Languages">
-                English
-            </td>
-            <td data-label="Distance">
-                2.6 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Beta
-            </td>
-            <td data-label="Languages">
-                English, Spanish
-            </td>
-            <td data-label="Distance">
-                1.4 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Gamma
-            </td>
-            <td data-label="Languages">
-                English, French, Spanish
-            </td>
-            <td data-label="Distance">
-                1.4 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Delta
-            </td>
-            <td data-label="Languages">
-                English, Spanish
-            </td>
-            <td data-label="Distance">
-                3.2 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Epsilon
-            </td>
-            <td data-label="Languages">
-                English
-            </td>
-            <td data-label="Distance">
-                1.6 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Zeta
-            </td>
-            <td data-label="Languages">
-                English, Spanish
-            </td>
-            <td data-label="Distance">
-                1.2 mi
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Eta
-            </td>
-            <td data-label="Languages">
-                English
-            </td>
-            <td data-label="Distance">
-                11.1 mi
-            </td>
-        </tr>
-    </tbody>
-</table>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-sortable-table-sorting-allows-us-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-sortable-table-sorting-allows-us-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-sortable-table-sorting-allows-us-4">
-                <ul class="m-tabs_list">
-                    
-                    <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-sortable-table-sorting-allows-us-html-code-snippet-4">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-sortable-table-sorting-allows-us-implementation-4">
-                            Implementation
-                        </a>
-                    </li>
-                    
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs_panel" id="details-sortable-table-sorting-allows-us-html-code-snippet-4">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;table class="o-table o-table__sortable"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;
-                Agency
-            &lt;/th&gt;
-            &lt;th&gt;
-              &lt;button class="sortable"&gt;
-                Languages
-              &lt;/button&gt;
-            &lt;/th&gt;
-            &lt;th&gt;
-              &lt;button class="sortable sorted-up" data-sort_type="number"&gt;
-                Distance
-              &lt;/button&gt;
-            &lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                Alpha
-            &lt;/td&gt;
-            &lt;td data-label="Languages"&gt;
-                English
-            &lt;/td&gt;
-            &lt;td data-label="Distance"&gt;
-                2.6 mi
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                Beta
-            &lt;/td&gt;
-            &lt;td data-label="Languages"&gt;
-                English, Spanish
-            &lt;/td&gt;
-            &lt;td data-label="Distance"&gt;
-                1.4 mi
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                Gamma
-            &lt;/td&gt;
-            &lt;td data-label="Languages"&gt;
-                English, French, Spanish
-            &lt;/td&gt;
-            &lt;td data-label="Distance"&gt;
-                1.4 mi
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                Delta
-            &lt;/td&gt;
-            &lt;td data-label="Languages"&gt;
-                English, Spanish
-            &lt;/td&gt;
-            &lt;td data-label="Distance"&gt;
-                3.2 mi
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                Epsilon
-            &lt;/td&gt;
-            &lt;td data-label="Languages"&gt;
-                English
-            &lt;/td&gt;
-            &lt;td data-label="Distance"&gt;
-                1.6 mi
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                Zeta
-            &lt;/td&gt;
-            &lt;td data-label="Languages"&gt;
-                English, Spanish
-            &lt;/td&gt;
-            &lt;td data-label="Distance"&gt;
-                1.2 mi
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                Eta
-            &lt;/td&gt;
-            &lt;td data-label="Languages"&gt;
-                English
-            &lt;/td&gt;
-            &lt;td data-label="Distance"&gt;
-                11.1 mi
-            &lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-                <section class="m-tabs_panel" id="details-sortable-table-sorting-allows-us-implementation-4">
-                    <div>
-                        <h4 class="variation-implementation-title">Implementation details</h4>
-                        <div style="padding:40px">
-                            <h4 id="making-a-table-sortable">Making a table sortable</h4>
-
-<p>By adding the <code class="language-plaintext highlighter-rouge">.o-table__sortable</code> class to a <code class="language-plaintext highlighter-rouge">table</code>, the table becomes sortable. To allow the table to be sorted by a column, add a button to the <code class="language-plaintext highlighter-rouge">th</code> of the column like so:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>…
-&lt;button class="sortable"&gt;
-    Column Name
-&lt;/button&gt;
-…
-</code></pre></div></div>
-
-<p>The use of a <code class="language-plaintext highlighter-rouge">button</code> helps address certain accessibility concerns.</p>
-
-<h4 id="sorting-type">Sorting type</h4>
-
-<p>To sort properly, the type of the <code class="language-plaintext highlighter-rouge">data</code> can be specified. By default, the column’s values will be sorted as <code class="language-plaintext highlighter-rouge">string</code> values. However, the column can be specifically sorted by <code class="language-plaintext highlighter-rouge">number</code> values (in which case, the cell’s contents are stripped of non-numeric characters, then sorted by the resulting number). To see an example, the sample table later in this document sorts the “Distance” column by <code class="language-plaintext highlighter-rouge">number</code> value.</p>
-
-<p>To sort by <code class="language-plaintext highlighter-rouge">number</code> value, add the <code class="language-plaintext highlighter-rouge">data-sort_type="number"</code> attribute to the sorting button:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
-    …
-        &lt;th&gt;
-            &lt;button class="sortable" data-sort_type="number"&gt;Column Name&lt;/button&gt;
-        &lt;/th&gt;
-    …
-&lt;/table&gt;
-</code></pre></div></div>
-
-<h4 id="sorting-table-on-page-load">Sorting table on page load</h4>
-
-<p>To sort the table on page load, use the <code class="language-plaintext highlighter-rouge">.sorted-up</code> and <code class="language-plaintext highlighter-rouge">.sorted-down</code> classes:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="o-table o-table__sortable"&gt;
-    …
-        &lt;th&gt;
-            &lt;button class="sortable sorted-up"&gt;Column Name&lt;/button&gt;
-        &lt;/th&gt;
-    …
-&lt;/table&gt;
-</code></pre></div></div>
-
-<ul>
-  <li>The class <code class="language-plaintext highlighter-rouge">.sorted-up</code> refers to a sort from smallest to greatest (first to last), and <code class="language-plaintext highlighter-rouge">.sorted-down</code> refers to a sort from greatest to smallest (last to first). These classes are added to the <code class="language-plaintext highlighter-rouge">th</code> when sorting occurs.</li>
-  <li>Please note the importance of defining a <code class="language-plaintext highlighter-rouge">thead</code> and <code class="language-plaintext highlighter-rouge">tbody</code> to preserve the table’s header through sorting operations.</li>
-</ul>
-
-                        </div>
-                    </div>
-                </section>
                 
 
                 <!-- Specs -->
@@ -2013,15 +1664,15 @@ At the small screen breakpoint, the first column (in the example shown below, em
             
 
             <div class="a-toggle_code">
-                <button href="#details-pagination-tables-with-over-20-r-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-pagination-tables-with-over-20-r-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-pagination-tables-with-over-20-r-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-pagination-tables-with-over-20-r-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-pagination-tables-with-over-20-r-5">
+            <div class="m-tabs u-hidden" id="details-pagination-tables-with-over-20-r-4">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-pagination-tables-with-over-20-r-html-code-snippet-5">
+                        <a class="m-tabs_tab" href="#details-pagination-tables-with-over-20-r-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
@@ -2033,7 +1684,7 @@ At the small screen breakpoint, the first column (in the example shown below, em
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-pagination-tables-with-over-20-r-html-code-snippet-5">
+                <section class="m-tabs_panel" id="details-pagination-tables-with-over-20-r-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2219,15 +1870,15 @@ At the small screen breakpoint, the first column (in the example shown below, em
             
 
             <div class="a-toggle_code">
-                <button href="#details-fixed-width-column-tables-column-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-fixed-width-column-tables-column-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-fixed-width-column-tables-column-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-fixed-width-column-tables-column-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-fixed-width-column-tables-column-6">
+            <div class="m-tabs u-hidden" id="details-fixed-width-column-tables-column-5">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-fixed-width-column-tables-column-html-code-snippet-6">
+                        <a class="m-tabs_tab" href="#details-fixed-width-column-tables-column-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
@@ -2239,7 +1890,7 @@ At the small screen breakpoint, the first column (in the example shown below, em
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-fixed-width-column-tables-column-html-code-snippet-6">
+                <section class="m-tabs_panel" id="details-fixed-width-column-tables-column-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -2351,24 +2002,6 @@ At the small screen breakpoint, the first column (in the example shown below, em
             
 
             
-                <h2 id="behavior">Behavior</h2>
-                <div class="content_line content_line__wide u-mb20"></div>
-                <p>
-                </p>
-<h3 id="sortable-tables">Sortable tables</h3>
-<p>At large screen sizes,</p>
-
-<ul>
-  <li>The currently sorted column is marked with an up or down triangle for ascending and descending sorts, respectively</li>
-  <li>On hover, the currently sorted column shows the opposite triangle</li>
-  <li>Columns that can sort show an up triangle on hover</li>
-  <li>Columns that cannot sort show nothing on hover</li>
-</ul>
-
-<p>If sorting is needed for smaller screens, use a filter-like expandable with a sorting control (or add a sorting control to the existing filter if the table has one) that only appears when the table switches from tabular to stacked.</p>
-
-                
-            
 
             
         </section>
@@ -2458,8 +2091,8 @@ At the small screen breakpoint, the first column (in the example shown below, em
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/tables.md">
-                    <time datetime="2022-12-30 10:52:38 -0500">
-                        10:52:38 AM Dec 30, 2022
+                    <time datetime="2022-12-30 15:30:52 -0500">
+                         3:30:52 PM Dec 30, 2022
                     </time>
                 </a>
             </small>

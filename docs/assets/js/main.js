@@ -5,7 +5,6 @@ import Multiselect from '@cfpb/cfpb-forms/src/organisms/Multiselect.js';
 import AlphaTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js';
 import MoveTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
 import MaxHeightTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
-import Table from '@cfpb/cfpb-tables/src/Table.js';
 import Tabs from './Tabs.js';
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';
@@ -33,7 +32,6 @@ if (multiselectDom) {
 }
 
 Expandable.init();
-Table.init();
 
 // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.

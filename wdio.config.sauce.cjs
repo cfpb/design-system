@@ -66,18 +66,6 @@ exports.config = {
       ],
     },
     {
-      browserName: 'internet explorer',
-      browserVersion: '11.285',
-      platformName: 'Windows 10',
-      'sauce:options': {
-        screenResolution: '1920x1200',
-      },
-      exclude: [
-        // Netlify CMS is only tested with Chrome
-        'test/browser/docs/netlify-cms.js',
-      ],
-    },
-    {
       browserName: 'firefox',
       browserVersion: 'latest',
       platformName: 'Windows 10',

@@ -1,4 +1,4 @@
-        // Required modules.
+// Required modules.
 import {
   checkDom,
   setInitFlag,

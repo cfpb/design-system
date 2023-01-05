@@ -20,13 +20,13 @@ jobs:
           git config --global user.email "CFPBot@users.noreply.github.com"
 
       - name: Install dependencies
-        run: yarn install --ignore-scripts
+        run: yarn install
 
       - name: Build assets
-        run: yarn run gulp build
+        run: yarn gulp build
 
       - name: Publish
         run: |
-          yarn run lerna publish patch --yes --registry https://npm.pkg.github.com
+          yarn lerna publish patch --yes --registry https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN}}

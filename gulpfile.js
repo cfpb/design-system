@@ -35,7 +35,7 @@ import gulpRename from 'gulp-rename';
  * Compile all the individual component files so that users can `npm install`
  * a single component if they desire.
  *
- * @returns {object} An output stream from gulp.
+ * @param {Function} done - the callback function for the end of the Promise.
  */
 function scriptsComponents(done) {
   gulp
@@ -51,7 +51,7 @@ function scriptsComponents(done) {
  * Compile all the individual component files so that users can `npm install`
  * a single component if they desire.
  *
- * @returns {PassThrough} A source stream.
+ * @param {Function} done - the callback function for the end of the Promise.
  */
 function stylesComponents(done) {
   gulp

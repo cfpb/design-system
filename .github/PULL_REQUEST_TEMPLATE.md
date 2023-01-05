@@ -49,7 +49,6 @@
 - [ ] Firefox
 - [ ] Safari on macOS
 - [ ] Edge
-- [ ] Internet Explorer 9, 10, and 11
 - [ ] Safari on iOS
 - [ ] Chrome on Android
 

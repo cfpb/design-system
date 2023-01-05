@@ -1,21 +1,21 @@
 name: GitHub Pages
 
 on:
-    push:
-        branches:
-        - main
+  push:
+    branches:
+      - main
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: actions/setup-node@v3
-          with:
-            node-version: 16
-        - uses: ruby/setup-ruby@v1
-          with:
-            ruby-version: 3.0.0
-        - uses: actions/checkout@v3
-        - run: ./scripts/update-gh-pages.sh
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.0
+      - uses: actions/checkout@v3
+      - run: ./scripts/update-gh-pages.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

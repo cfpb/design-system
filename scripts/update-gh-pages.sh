@@ -21,7 +21,7 @@ git checkout "$main_branch"
 git worktree add "$target_dir" "$target_branch"
 
 # Install dependencies
-yarn Install
+yarn install
 yarn after-install
 
 # Build the design system website

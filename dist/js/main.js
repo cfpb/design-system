@@ -1189,10 +1189,9 @@ function toggleAllDetails(toggleBtn) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
-/* harmony import */ var _utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/object-assign.js */ "./packages/cfpb-atomic-component/src/utilities/object-assign.js");
-/* harmony import */ var ftdomdelegate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ftdomdelegate */ "./node_modules/ftdomdelegate/lib/index.js");
-/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utilities/type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
+/* harmony import */ var ftdomdelegate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ftdomdelegate */ "./node_modules/ftdomdelegate/lib/index.js");
+/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utilities/type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
 /* ==========================================================================
    AtomicComponent
 
@@ -1204,7 +1203,6 @@ __webpack_require__.r(__webpack_exports__);
    - Marionette ( http://marionettejs.com ).
 
    ========================================================================== */
-
 
 
 
@@ -1225,7 +1223,7 @@ function AtomicComponent(element, attributes) {
   this.element = element;
   this.initializers = [];
   this.uId = this.uniqueId('ac');
-  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(this, attributes);
+  Object.assign(this, attributes);
   this.processModifiers();
   this.ensureElement();
   this.setCachedElements();
@@ -1233,7 +1231,7 @@ function AtomicComponent(element, attributes) {
 }
 
 // Public instance Methods and properties.
-(0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_3__["default"](), {
+Object.assign(AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"](), {
   /**
    * Run through and call the component's initializers.
    *
@@ -1241,7 +1239,7 @@ function AtomicComponent(element, attributes) {
    */
   init: function () {
     this.initializers.forEach(function (func) {
-      if ((0,_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isFunction)(func)) {
+      if ((0,_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__.isFunction)(func)) {
         func.apply(this, arguments);
       }
     }, this);
@@ -1265,7 +1263,7 @@ function AtomicComponent(element, attributes) {
         if (modifier.initialize) {
           this.initializers.push(modifier.initialize);
         }
-        (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(this, modifier);
+        Object.assign(this, modifier);
       }
     }, this);
   },
@@ -1285,7 +1283,7 @@ function AtomicComponent(element, attributes) {
   ensureElement: function () {
     if (!this.element) {
       // eslint-disable-line no-negated-condition
-      const attrs = (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)({}, this.attributes);
+      const attrs = {...this.attributes};
       attrs.id = this.id || this.u_id;
       if (this.className) attrs.class = this.className;
       this.setElement(document.createElement(TAG_NAME));
@@ -1320,7 +1318,7 @@ function AtomicComponent(element, attributes) {
    * @returns {object} Hash of event names and cached elements.
    */
   setCachedElements: function () {
-    const ui = (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)({}, this.ui);
+    const ui = { ...this.ui };
     let key;
     let element;
 
@@ -1396,11 +1394,11 @@ function AtomicComponent(element, attributes) {
     }
 
     this.undelegateEvents();
-    this._delegate = new ftdomdelegate__WEBPACK_IMPORTED_MODULE_2__(this.element);
+    this._delegate = new ftdomdelegate__WEBPACK_IMPORTED_MODULE_1__(this.element);
     for (key in events) {
       if ({}.hasOwnProperty.call(events, key)) {
         method = events[key];
-        if ((0,_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isFunction)(this[method])) {
+        if ((0,_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__.isFunction)(this[method])) {
           method = this[method];
         }
         if (method) {
@@ -1475,8 +1473,8 @@ function extend(attributes) {
   }
 
   child.prototype = Object.create(AtomicComponent.prototype);
-  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(child.prototype, attributes);
-  (0,_utilities_object_assign_js__WEBPACK_IMPORTED_MODULE_1__.assign)(child, AtomicComponent);
+  Object.assign(child.prototype, attributes);
+  Object.assign(child, AtomicComponent);
 
   if (
     {}.hasOwnProperty.call(attributes, 'ui') &&
@@ -1976,72 +1974,6 @@ function isMobileUserAgent() {
   }
   return false;
 }
-
-// Expose public methods.
-
-
-
-/***/ }),
-
-/***/ "./packages/cfpb-atomic-component/src/utilities/object-assign.js":
-/*!***********************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/src/utilities/object-assign.js ***!
-  \***********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "assign": function() { return /* binding */ assign; }
-/* harmony export */ });
-/* ==========================================================================
-   Assign
-
-   Contains code copied from the following with major modifications :
-
-   - https://github.com/maslennikov/shallow-extend
-     Copyright (c) 2014 Alexey Maslennikov
-
-   ========================================================================== */
-
-/**
- * @param {object} object - JavaScript object.
- * @returns {boolean} True if object is a plain JavaScript object.
- */
-function _isPlainObject(object) {
-  return Object.prototype.toString.call(object) === '[object Object]';
-}
-
-// TODO Fix complexity issue
-/* eslint-disable complexity */
-/**
- * Copies properties of all sources to the destination object overriding its own
- * existing properties. When assigning from multiple sources, fields of every
- * next source will override same named fields of previous sources.
- *
- * @param {object} destination - object.
- * @returns {object} assigned destination object.
- */
-function assign(destination) {
-  destination = destination || {};
-  for (let i = 1, len = arguments.length; i < len; i++) {
-    const source = arguments[i] || {};
-    let key;
-    for (key in source) {
-      if ({}.hasOwnProperty.call(source, key)) {
-        const value = source[key];
-        if (_isPlainObject(value)) {
-          assign(destination[key] || (destination[key] = {}), value);
-        } else {
-          destination[key] = value;
-        }
-      }
-    }
-  }
-
-  return destination;
-}
-/* eslint-enable complexity */
 
 // Expose public methods.
 

@@ -13,7 +13,7 @@ describe('create', () => {
       textContent: 'Heading Span',
       id: 'create-span-id',
       className: 'create-span-class',
-      'data-name': 'create-span-data'
+      'data-name': 'create-span-data',
     });
 
     document.body.appendChild(heading);

@@ -595,4 +595,4 @@ function Multiselect(element) {
 
 Multiselect.BASE_CLASS = BASE_CLASS;
 
-export default Multiselect; 
+export default Multiselect;

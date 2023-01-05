@@ -24,7 +24,7 @@ git worktree add "$target_dir" "$target_branch"
 yarn
 
 # Build the design system website
-yarn run build
+yarn build
 
 # Remove the built Jekyll website from .gitignore
 sed -i '/_site/d' ./.gitignore

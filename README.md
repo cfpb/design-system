@@ -82,7 +82,8 @@ And then to run the documentation website locally:
 ```shell
 git clone https://github.com/cfpb/design-system.git
 cd design-system
-yarn
+yarn install
+yarn after-install
 yarn start
 ```
 

@@ -1,4 +1,4 @@
-name: Tests
+name: Sauce CI
 
 on:
   push:
@@ -7,32 +7,6 @@ on:
     branches: [ main ]
 
 jobs:
-  unit-tests:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7.1
-
-    - name: Install Bundler
-      run: gem install bundler
-
-    - name: Check out the repo
-      uses: actions/checkout@v3
-
-    - name: Set up Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
-
-    - name: Install dependencies with Yarn
-      run: yarn
-
-    - name: Run unit tests
-      run: yarn test
-
   browser-tests:
     runs-on: ubuntu-latest
 
@@ -51,7 +25,9 @@ jobs:
         ruby-version: '2.7.1'
 
     - name: Install dependencies with Yarn
-      run: yarn
+      run: |
+        yarn install
+        yarn after-install
 
     - name: Start local Design System website server
       run: |

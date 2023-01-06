@@ -25,7 +25,7 @@
   "scripts": {
     "a11y": "lhci autorun",
     "build": "yarn compile-dev && bundle exec jekyll build",
-    "build-netlify": "yarn && yarn compile-prod && bundle exec jekyll build",
+    "build-netlify": "yarn install && yarn after-install && yarn compile-prod && bundle exec jekyll build",
     "changelog": "./scripts/generate-changelog.sh",
     "compile-dev": "webpack --config webpack.config.docs.js --mode=development",
     "compile-prod": "webpack --config webpack.config.docs.js --mode=production",

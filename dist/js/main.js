@@ -946,7 +946,7 @@ function Tabs(dom) {
 
     // Add events to tab items.
     _tabsPanelsDom = _dom.querySelectorAll(".".concat(BASE_CLASS, "_panel"));
-    var _loop = function _loop(i, len) {
+    var _loop = function _loop(i) {
       _tabsItemsDom[i].addEventListener('click', function (event) {
         event.preventDefault();
         changeTab(i);
@@ -958,7 +958,7 @@ function Tabs(dom) {
       }
     };
     for (var i = 0, len = _tabsItemsDom.length; i < len; i++) {
-      _loop(i, len);
+      _loop(i);
     }
 
     // Set the default selected tab to index zero.

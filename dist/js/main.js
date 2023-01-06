@@ -1283,7 +1283,7 @@ Object.assign(AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_I
   ensureElement: function () {
     if (!this.element) {
       // eslint-disable-line no-negated-condition
-      const attrs = {...this.attributes};
+      const attrs = { ...this.attributes };
       attrs.id = this.id || this.u_id;
       if (this.className) attrs.class = this.className;
       this.setElement(document.createElement(TAG_NAME));

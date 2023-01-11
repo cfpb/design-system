@@ -1,7 +1,7 @@
 ---
 layout: variation
 section: components
-status: Released
+status: null
 variation_groups:
   - variation_group_name: Standard table
     variation_group_description: This is the default style at the large screen

@@ -48,16 +48,37 @@ export default (env, argv) => {
   const config = {
     entry: entryFileObj,
     output: {
-      path: path.resolve(__dirname, 'packages', 'cfpb-design-system'),
+      path: path.resolve(__dirname, 'packages'),
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'cfpb-[name]/[name].css',
+        filename: '[name]/[name].css',
       }),
       new FileManagerPlugin({
         events: {
           onEnd: {
-            delete: ['./packages/cfpb-design-system/cfpb-!(design-system).js'],
+            copy: [
+              {
+                source: './packages/cfpb-design-system.js',
+                destination:
+                  './packages/cfpb-design-system/cfpb-design-system.js',
+                options: {
+                  overwrite: true,
+                },
+              },
+              {
+                source: './packages/cfpb-design-system.js.LICENSE.txt',
+                destination:
+                  './packages/cfpb-design-system/cfpb-design-system.js.LICENSE.txt',
+                options: {
+                  overwrite: true,
+                },
+              },
+            ],
+            delete: [
+              './packages/cfpb-**.js',
+              './packages/cfpb-design-system.js.LICENSE.txt',
+            ],
           },
         },
       }),

@@ -2,7 +2,7 @@
 set -e
 
 # Build package assets in the background.
-npx gulp build &
+yarn build-packages &
 
 # Make sure everything is current and built and generate changelog.
 yarn build

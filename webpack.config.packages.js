@@ -2,6 +2,7 @@
    Settings for webpack JavaScript bundling system.
    ========================================================================== */
 
+import { resolve } from 'path';
 import TerserWebpackPlugin from 'terser-webpack-plugin';
 
 /* Set warnings to true to show linter-style warnings.
@@ -28,6 +29,15 @@ const commonConf = {
     minimize: true,
     minimizer: [COMMON_MINIFICATION_CONFIG],
   },
+  entry: {
+    main: './packages/cfpb-design-system/src/cfpb-design-system.js',
+  },
+  output: {
+    path: resolve('packages/cfpb-design-system/'),
+    filename: 'cfpb-design-system.js',
+  },
 };
 
-export default { commonConf };
+export default (env, argv) => {
+  return commonConf;
+};

@@ -70,7 +70,7 @@ description: >-
 
   ```js
 
-  import Expandable from '@cfpb/cfpb-expandables/src/Expandable';
+  import Expandable from '@cfpb/cfpb-expandables/src/Expandable.js';
 
 
   // initialize all expandables with class .o-expandable

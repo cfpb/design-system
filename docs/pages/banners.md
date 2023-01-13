@@ -12,9 +12,9 @@ variation_groups:
                               m-notification__warning">
                       {% include icons/information-round.svg %}
                       <div class="m-notification_content">
-                          <div class="h4 m-notification_message">A default banner with a notification</div>
+                          <div class="h4 m-notification_message">Warning banner with a notification</div>
                           <p class="m-notification_explanation">
-                              An optional paragraph of text can be added to explain the purpose of the banner.
+                              An optional paragraph of text can be added to explain the purpose of the warning banner.
                           </p>
                           <ul class="m-list m-list__links">
                               <li class="m-list_item">
@@ -46,10 +46,10 @@ variation_groups:
                       {% include icons/information-round.svg %}
                       <div class="m-notification_content">
                           <div class="h4 m-notification_message">
-                              A dark-themed banner with a notification
+                              Archived content banner with notification
                           </div>
                           <p class="m-notification_explanation">
-                              An optional paragraph of text can be added to explain the purpose of the banner.
+                              An optional paragraph of text can be added to explain the purpose of the archived content banner.
                           </p>
                           <ul class="m-list m-list__links">
                               <li class="m-list_item">
@@ -78,21 +78,14 @@ title: Banner notification
 description: Banner notifications highlight high-priority information that is
   not specific to an immediate task. Banner notifications appear at the top of
   the page content below the header bar and span the full width of the page.
-use_cases: >-
-  Banner notifications highlight high-priority system or product level
-  information. 
-
-
-  #### When to use
-
-
-  * Use the banner notification when highlighting high-priority system or product level information that is not related to a specific task
-
-
-  #### When other options are better
-
-
-  * Use the in-page (or inline) notification when calling out important page content or when alerting users as to information that is relevant to the task at hand
+  When used on a webpage, banner notifications highlight important information
+  about the state or status of page content.
+use_cases: Use the banner notification when highlighting high-priority system or
+  product level information that is not related to a specific task. Use banner
+  notifications to communicate important information about the state or status
+  of page content. Use the in-page (or inline) notification instead when
+  highlighting specific page content or when alerting users as to information
+  that is relevant to the immediate task.
 behavior: >-
   ### Placement
 

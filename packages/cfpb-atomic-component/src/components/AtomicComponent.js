@@ -11,7 +11,7 @@
    ========================================================================== */
 
 import { instantiateAll, setInitFlag } from '../utilities/atomic-helpers.js';
-import Delegate from 'ftdomdelegate';
+import Delegate from 'ftdomdelegate/main.js';
 import EventObserver from '../mixins/EventObserver.js';
 import { isFunction } from '../utilities/type-checkers.js';
 

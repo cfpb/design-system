@@ -1,11 +1,11 @@
 ---
-title: Banners
 layout: variation
 section: components
-eyebrow: Alerts
-status: Beta
-description: This component provides banner boxes at the top of a page's
-  content. This is similar to a notification, but is intended to be full width.
+description: Banner notifications alert users as to the state of content on a
+  page. Banner notifications appear at the top of the page content just under
+  the header bar and span the full width of the page. When used on a webpage,
+  banner notifications highlight high priority information about the status of
+  the content on the page.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -36,8 +36,9 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: ''
-        variation_name: Default banner
+        variation_description: The warning banner is used to display system or product
+          level notifications that are not specific to a task.
+        variation_name: Warning banner
       - variation_is_deprecated: false
         variation_code_snippet: >-
           <div class="o-banner o-banner__dark">
@@ -69,7 +70,32 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_name: Dark banner
+        variation_name: Archived content banner
+        variation_description: The archived content banner is used to identify website
+          pages that are outdated and should no longer be referenced for
+          guidance. These pages may have historical value or significance to
+          researchers, historians, and the public.
     variation_group_name: Types
+eyebrow: Alerts
+use_cases: >-
+  Banner notifications alert users as to the state of content on a page. Banner
+  notifications appear at the top of the page content just under the header bar
+  and span the full width of the page. When used on a webpage, banner
+  notifications highlight important information about the status of the content
+  on the page. 
+
+
+  ### When to use
+
+
+  Use the banner notification for instances where communicating the status of webpage content is of primary importance
+
+
+  ### When other options are better
+
+
+  Use the in-page (or inline) notification when calling out important page content or alerting users to information that is relevant to the task at hand
 last_updated: 2020-01-28T15:55:47.394Z
+title: Banner
+status: Proposed
 ---

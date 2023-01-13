@@ -1,11 +1,7 @@
 ---
 layout: variation
 section: components
-description: Banner notifications alert users as to the state of content on a
-  page. Banner notifications appear at the top of the page content just under
-  the header bar and span the full width of the page. When used on a webpage,
-  banner notifications highlight high priority information about the status of
-  the content on the page.
+status: Proposed
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -77,6 +73,12 @@ variation_groups:
           researchers, historians, and the public.
     variation_group_name: Types
 eyebrow: Alerts
+title: Banner
+description: Banner notifications alert users as to the state of content on a
+  page. Banner notifications appear at the top of the page content just under
+  the header bar and span the full width of the page. When used on a webpage,
+  banner notifications highlight high priority information about the status of
+  the content on the page.
 use_cases: >-
   Banner notifications alert users as to the state of content on a page. Banner
   notifications appear at the top of the page content just under the header bar
@@ -85,17 +87,22 @@ use_cases: >-
   on the page. 
 
 
-  ### When to use
+  #### When to use
 
 
-  Use the banner notification for instances where communicating the status of webpage content is of primary importance
+  * Use the banner notification for instances where communicating the status of webpage content is of primary importance
 
 
   ### When other options are better
 
 
-  Use the in-page (or inline) notification when calling out important page content or alerting users to information that is relevant to the task at hand
+  * Use the in-page (or inline) notification when calling out important page content or alerting users to information that is relevant to the task at hand
+behavior: >-
+  ### Placement
+
+
+  * Banner notifications appear below the header bar and span the full width of the page.
+related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
+  s/notifications)"
 last_updated: 2020-01-28T15:55:47.394Z
-title: Banner
-status: Proposed
 ---

@@ -23,4 +23,4 @@ jobs:
       run: yarn install
 
     - name: Run unit tests
-      run: yarn test
+      run: yarn jest

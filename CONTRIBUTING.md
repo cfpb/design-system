@@ -65,7 +65,7 @@ authenticate with Netlify CMS.
 
 #### Automated tests
 
-Automated tests can be run with the command `yarn test`.
+Automated tests can be run with the command `yarn test:browser`.
 
 ### Browser support
 

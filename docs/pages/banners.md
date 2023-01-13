@@ -32,8 +32,9 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: The warning banner is used to display system or product
-          level notifications that are not specific to a task.
+        variation_description: The warning banner is used to display high-priority
+          system or product level notifications that are not specific to an
+          immediate task.
         variation_name: Warning banner
       - variation_is_deprecated: false
         variation_code_snippet: >-
@@ -73,32 +74,30 @@ variation_groups:
           researchers, historians, and the public.
     variation_group_name: Types
 eyebrow: Alerts
-title: Banner
-description: Banner notifications alert users as to the state of content on a
-  page. Banner notifications appear at the top of the page content just under
-  the header bar and span the full width of the page. Banner notifications
-  highlight high priority information about the status of the content on the
-  page.
+title: Banner notification
+description: Banner notifications highlight high-priority information that is
+  not specific to an immediate task. Banner notifications appear at the top of
+  the page content below the header bar and span the full width of the page.
 use_cases: >-
-  Banner notifications highlight important information about the status of the
-  content on the page. 
+  Banner notifications highlight high-priority system or product level
+  information. 
 
 
   #### When to use
 
 
-  * Use the banner notification for instances where communicating the status of webpage content is of primary importance
+  * Use the banner notification when highlighting high-priority system or product level information that is not related to a specific task
 
 
   #### When other options are better
 
 
-  * Use the in-page (or inline) notification when calling out important page content or alerting users to information that is relevant to the task at hand
+  * Use the in-page (or inline) notification when calling out important page content or when alerting users as to information that is relevant to the task at hand
 behavior: >-
   ### Placement
 
 
-  * Banner notifications appear below the header bar and span the full width of the page.
+  * Banner notifications appear below the header bar and span the full width of the page
 related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
   s/notifications)"
 last_updated: 2020-01-28T15:55:47.394Z

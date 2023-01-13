@@ -75,12 +75,11 @@ variation_groups:
     variation_group_name: Types
 eyebrow: Alerts
 title: Banner notification
-description: Banner notifications highlight high-priority information that is
-  not specific to an immediate task. Banner notifications are visually
-  prominent, appearing at the top of the page content below the header bar and
-  spanning the full width of the page. When used on a webpage, banner
-  notifications communicate important information about the state or status of
-  page content.
+description: Banner notifications communicate high-priority information about
+  the state or status of page content.  Banner notifications are positioned at
+  the top of the page and span the full width. When used on a webpage, banner
+  notifications inform users of important information that is not specific to an
+  immediate task.
 use_cases: Use the banner notification to highlight high-priority system or
   product level information that is not related to a specific task. Use the
   banner notification to communicate important information about the state or

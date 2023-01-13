@@ -76,15 +76,12 @@ eyebrow: Alerts
 title: Banner
 description: Banner notifications alert users as to the state of content on a
   page. Banner notifications appear at the top of the page content just under
-  the header bar and span the full width of the page. When used on a webpage,
-  banner notifications highlight high priority information about the status of
-  the content on the page.
+  the header bar and span the full width of the page. Banner notifications
+  highlight high priority information about the status of the content on the
+  page.
 use_cases: >-
-  Banner notifications alert users as to the state of content on a page. Banner
-  notifications appear at the top of the page content just under the header bar
-  and span the full width of the page. When used on a webpage, banner
-  notifications highlight important information about the status of the content
-  on the page. 
+  Banner notifications highlight important information about the status of the
+  content on the page. 
 
 
   #### When to use

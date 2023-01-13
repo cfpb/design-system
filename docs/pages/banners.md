@@ -93,7 +93,7 @@ use_cases: >-
   * Use the banner notification for instances where communicating the status of webpage content is of primary importance
 
 
-  ### When other options are better
+  #### When other options are better
 
 
   * Use the in-page (or inline) notification when calling out important page content or alerting users to information that is relevant to the task at hand

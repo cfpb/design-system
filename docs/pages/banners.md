@@ -10,7 +10,7 @@ variation_groups:
                   <div class="m-notification
                               m-notification__visible
                               m-notification__warning">
-                      {% include icons/information-round.svg %}
+                      {% include icons/warning-round.svg %}
                       <div class="m-notification_content">
                           <div class="h4 m-notification_message">Warning banner with a notification</div>
                           <p class="m-notification_explanation">

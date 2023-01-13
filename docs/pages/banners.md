@@ -81,17 +81,13 @@ description: Banner notifications highlight high-priority information that is
   spanning the full width of the page. When used on a webpage, banner
   notifications communicate important information about the state or status of
   page content.
-use_cases: Use the banner notification when highlighting high-priority system or
-  product level information that is not related to a specific task. Use banner
-  notifications to communicate important information about the state or status
-  of page content. Use the in-page (or inline) notification instead when
-  highlighting specific page content or when alerting users as to information
-  that is relevant to the immediate task.
-behavior: >-
-  ### Placement
-
-
-  * Banner notifications appear below the header bar and span the full width of the page
+use_cases: Use the banner notification to highlight high-priority system or
+  product level information that is not related to a specific task. Use the
+  banner notification to communicate important information about the state or
+  status of page content. Use the inline notification instead when highlighting
+  specific page content or when alerting users as to information that is
+  relevant to the immediate task.
+behavior: ""
 related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
   s/notifications)"
 last_updated: 2020-01-28T15:55:47.394Z

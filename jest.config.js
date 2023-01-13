@@ -6,7 +6,6 @@ export default {
   collectCoverageFrom: ['<rootDir>/packages/**/*.js'],
   coveragePathIgnorePatterns: [
     '<rootDir>/.*.config.js',
-    '<rootDir>/.*.min.js',
     '<rootDir>/node_modules/',
     '<rootDir>/config/',
     '<rootDir>/dist/',

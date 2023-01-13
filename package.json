@@ -42,7 +42,7 @@
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-netlify": "netlify-cms-proxy-server",
     "start": "yarn compile-dev && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn compile-dev --watch\"",
-    "test": "yarn node --experimental-vm-modules $(yarn bin jest)",
+    "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "test:browser": "wdio run ./wdio.config.cjs",
     "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && wdio run ./wdio.config.sauce.cjs"
   },

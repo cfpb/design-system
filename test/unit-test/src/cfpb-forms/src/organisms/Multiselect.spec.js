@@ -1,5 +1,5 @@
-import Multiselect from '../../../../../../packages/cfpb-forms/src/organisms/Multiselect';
-import simulateEvent from '../../../../../util/simulate-event';
+import Multiselect from '../../../../../../packages/cfpb-forms/src/organisms/Multiselect.js';
+import simulateEvent from '../../../../../util/simulate-event.js';
 
 let multiselect;
 let selectDom;

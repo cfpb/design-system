@@ -1,4 +1,57 @@
 
+## v0.19.0 (2023-01-17)
+
+#### Breaking Change
+* `cfpb-atomic-component`, `cfpb-expandables`, `cfpb-forms`
+  * [#1524](https://github.com/cfpb/design-system/pull/1524) Remove dom-traverse and update multiselect ([@wpears](https://github.com/wpears))
+* `cfpb-atomic-component`
+  * [#1526](https://github.com/cfpb/design-system/pull/1526) Remove object.assign polyfill ([@wpears](https://github.com/wpears))
+* `cfpb-design-system`
+  * [#1530](https://github.com/cfpb/design-system/pull/1530) Remove non-existent Table references ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-expandables`
+  * [#1528](https://github.com/cfpb/design-system/pull/1528) Removes .o-expandable_header__spaced, which is unused ([@wpears](https://github.com/wpears))
+* `cfpb-buttons`
+  * [#1525](https://github.com/cfpb/design-system/pull/1525) Remove combined button-groups ([@wpears](https://github.com/wpears))
+* `cfpb-tables`
+  * [#1523](https://github.com/cfpb/design-system/pull/1523) Remove sortable tables and table row links ([@wpears](https://github.com/wpears))
+
+#### Bug Fix
+* `cfpb-forms`
+  * [#1550](https://github.com/cfpb/design-system/pull/1550) Hide bullet on multiselect dropdown ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-icons`
+  * [#1510](https://github.com/cfpb/design-system/pull/1510) Downgrade to commonjs syntax in less plugin ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* Other
+  * [#1549](https://github.com/cfpb/design-system/pull/1549) Editorconfig: Change all indenting to 2 space ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1548](https://github.com/cfpb/design-system/pull/1548) Update dependencies: eslint, eslint-plugin-import, eslint-plugin-jsx-a11y, eslint-plugin-react, lerna, marked, prettier ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1547](https://github.com/cfpb/design-system/pull/1547) Move command from `yarn test` to `yarn jest` ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1544](https://github.com/cfpb/design-system/pull/1544) Update dependencies: eslint-plugin-import, eslint-plugin-jsx-a11y, lerna ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1542](https://github.com/cfpb/design-system/pull/1542) Update dependencies: chromedriver, eslint-plugin-react ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1539](https://github.com/cfpb/design-system/pull/1539) Update dependencies: eslint-plugin-jsx-a11y lerna postcss prettier ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1537](https://github.com/cfpb/design-system/pull/1537) Add after-install command to build-netlify yarn command ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1534](https://github.com/cfpb/design-system/pull/1534) Remove IE sauce test and callout to IE in PR template ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1532](https://github.com/cfpb/design-system/pull/1532) Adjust yarn commands ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1531](https://github.com/cfpb/design-system/pull/1531) Update outdated packages: marked, babel/core, babel-loader, eslint, eslint-config-prettier, lerna, stylelint ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1500](https://github.com/cfpb/design-system/pull/1500) Update contribution release steps ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1512](https://github.com/cfpb/design-system/pull/1512) Revert wdio upgrade ([@wpears](https://github.com/wpears))
+  * [#1507](https://github.com/cfpb/design-system/pull/1507) Update dependencies ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1509](https://github.com/cfpb/design-system/pull/1509) Update setup-ruby ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1506](https://github.com/cfpb/design-system/pull/1506) Remove unused dependencies ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-buttons`, `cfpb-core`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-grid`, `cfpb-icons`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1543](https://github.com/cfpb/design-system/pull/1543) Remove gulp ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`
+  * [#1538](https://github.com/cfpb/design-system/pull/1538) Upgrade lerna and lint codebase ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1513](https://github.com/cfpb/design-system/pull/1513) Remove unneeded dependencies | perform minor dependency updates ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 4
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Nicholas Johnson ([@niqjohnson](https://github.com/niqjohnson))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
+
+
+
 ## v0.18.1 (2022-12-02)
 
 #### Breaking Change

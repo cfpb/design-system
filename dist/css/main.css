@@ -4508,6 +4508,7 @@ select.o-multiselect option {
   border-top: 0;
 }
 .o-multiselect_options {
+  list-style-type: none;
   background-color: #ffffff;
   padding: 0;
 }

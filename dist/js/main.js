@@ -1857,93 +1857,6 @@ function contains(element, value) {
 
 /***/ }),
 
-/***/ "./packages/cfpb-atomic-component/src/utilities/dom-traverse.js":
-/*!**********************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/src/utilities/dom-traverse.js ***!
-  \**********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "closest": function() { return /* binding */ closest; },
-/* harmony export */   "queryOne": function() { return /* binding */ queryOne; }
-/* harmony export */ });
-/* harmony import */ var _type_checkers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
-
-
-/**
- * Queries for the first match unless an HTMLElement is passed
- *
- * @param {(HTMLElement|string)} expr - An element or selector query string.
- * @param {object} con - The document location to query.
- * @returns {HTMLElement} The element.
- */
-function queryOne(expr, con) {
-  return (0,_type_checkers_js__WEBPACK_IMPORTED_MODULE_0__.isString)(expr) ? (con || document).querySelector(expr) : expr || null;
-}
-
-/**
- * Search for support of the matches() method by looking at
- * browser prefixes.
- *
- * @param {HTMLElement} elem - The element to check
- *   for support of matches() method.
- * @returns {Function} The appropriate matches() method of elem.
- */
-function _getMatchesMethod(elem) {
-  return (
-    elem.matches ||
-    elem.webkitMatchesSelector ||
-    elem.mozMatchesSelector ||
-    elem.msMatchesSelector
-  );
-}
-
-/**
- * Traverse the element and its parents (heading toward the document root)
- * until a node is found that matches the provided selector string.
- * Will return itself or the matching ancestor.
- * If no such element exists, it returns null.
- *
- * @param {HTMLElement} elem - A DOM element.
- * @param {string} selector - CSS selector.
- * @returns {HTMLElement} Element or nearest parent node that matches the selector.
- *   Or null, if nothing is found.
- */
-function closest(elem, selector) {
-  if ('closest' in elem) {
-    return elem.closest(selector);
-  }
-
-  const matchesSelector = _getMatchesMethod(elem);
-
-  try {
-    let parent = elem;
-    let match;
-    while (parent) {
-      if (matchesSelector.bind(parent)(selector)) {
-        match = parent;
-      } else {
-        parent = parent.parentNode;
-      }
-
-      if (match) {
-        return parent;
-      }
-    }
-  } catch (err) {
-    return null;
-  }
-
-  return null;
-}
-
-
-
-
-/***/ }),
-
 /***/ "./packages/cfpb-atomic-component/src/utilities/media-helpers.js":
 /*!***********************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/media-helpers.js ***!
@@ -2962,11 +2875,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 /* harmony import */ var _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExpandableTransition.js */ "./packages/cfpb-expandables/src/ExpandableTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse.js");
 /* ==========================================================================
    Expandable Organism
    ========================================================================== */
-
 
 
 
@@ -3023,7 +2934,7 @@ function initialize() {
     this.ui.content.classList.add('u-hidden');
   }
 
-  const expandableGroup = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_3__.closest)(this.ui.target, '.' + this.classes.group);
+  const expandableGroup = this.ui.target.closest('.' + this.classes.group);
 
   this.isAccordionGroup =
     expandableGroup !== null &&
@@ -3535,19 +3446,17 @@ function Multiselect(element) {
    */
   function _createSelectedItem(selectionsDom, option) {
     const optionId = _getOptionId(option);
-    const selectionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('li', {
+    const selectionsItemDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('li', null, {
       'data-option': option.value,
     });
 
-    const selectionsItemLabelDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('button', {
+    const selectionsItemLabelDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('button', selectionsItemDom, {
       type: 'button',
       innerHTML:
         '<label for=' + optionId + '>' + option.text + closeIcon + '</label>',
-      inside: selectionsItemDom,
     });
 
     selectionsDom.appendChild(selectionsItemDom);
-    selectionsItemDom.appendChild(selectionsItemLabelDom);
 
     selectionsItemLabelDom.addEventListener('click', _selectionClickHandler);
     selectionsItemLabelDom.addEventListener(
@@ -3738,31 +3647,28 @@ function Multiselect(element) {
    */
   function _populateMarkup() {
     // Add a container for our markup
-    _containerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('div', {
-      className: BASE_CLASS,
-      around: _dom,
-    });
+    _containerDom = document.createElement('div');
+    _containerDom.className = BASE_CLASS;
 
     // Create all our markup but wait to manipulate the DOM just once
-    _selectionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('ul', {
+    _selectionsDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('ul', null, {
       className: BASE_CLASS + '_choices',
       inside: _containerDom,
     });
 
-    _headerDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('header', {
+    _headerDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('header', _containerDom, {
       className: BASE_CLASS + '_header',
     });
 
-    _searchDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('input', {
+    _searchDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('input', _headerDom, {
       className: BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
       type: 'text',
       placeholder: _placeholder || 'Select up to five',
-      inside: _headerDom,
       id: _dom.id,
       autocomplete: 'off',
     });
 
-    _fieldsetDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('fieldset', {
+    _fieldsetDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('fieldset', _containerDom, {
       className: BASE_CLASS + '_fieldset u-invisible',
       'aria-hidden': 'true',
     });
@@ -3772,9 +3678,8 @@ function Multiselect(element) {
       optionsClasses += ' u-max-selections';
     }
 
-    _optionsDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('ul', {
+    _optionsDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('ul', _fieldsetDom, {
       className: optionsClasses,
-      inside: _fieldsetDom,
     });
 
     let option;
@@ -3784,33 +3689,30 @@ function Multiselect(element) {
       option = _options[i];
       optionId = _getOptionId(option);
       isChecked = _model.getOption(i).checked;
-      const optionsItemDom = _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('li', {
+      const optionsItemDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('li', _optionsDom, {
         'data-option': option.value,
         'data-cy': 'multiselect-option',
         class: 'm-form-field m-form-field__checkbox',
       });
 
-      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('input', {
+      (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('input', optionsItemDom, {
         id: optionId,
         // Type must come before value or IE fails
         type: 'checkbox',
         value: option.value,
         name: _name,
         class: CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
-        inside: optionsItemDom,
         checked: isChecked,
         'data-index': i,
       });
 
-      _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__["default"].create('label', {
+      (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('label', optionsItemDom, {
         for: optionId,
         textContent: option.text,
         className: BASE_CLASS + '_label a-label',
-        inside: optionsItemDom,
       });
 
       _optionItemDoms.push(optionsItemDom);
-      _optionsDom.appendChild(optionsItemDom);
 
       if (isChecked) {
         _createSelectedItem(_selectionsDom, option);
@@ -3818,8 +3720,9 @@ function Multiselect(element) {
     }
 
     // Write our new markup to the DOM.
-    _containerDom.appendChild(_headerDom);
-    _containerDom.appendChild(_fieldsetDom);
+    _containerDom.insertBefore(_selectionsDom, _headerDom);
+    _dom.parentNode.insertBefore(_containerDom, _dom);
+    _containerDom.appendChild(_dom);
 
     return _containerDom;
   }
@@ -4145,46 +4048,32 @@ function MultiselectModel(options, name) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js */ "./packages/cfpb-atomic-component/src/utilities/dom-traverse.js");
-
-
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "create": function() { return /* binding */ create; }
+/* harmony export */ });
 /**
  * Shortcut for creating new dom elements.
  *
  * @param {string} tag - The html elem to create.
+ * @param {HTMLElement} parentNode - The parent node to attach to.
  * @param {object} options - The options for building the elem.
  * @returns {HTMLElement} The created elem.
  */
-function create(tag, options) {
+function create(tag, parentNode, options) {
   const elem = document.createElement(tag);
 
-  let i;
-  for (i in options) {
-    if ({}.hasOwnProperty.call(options, i)) {
-      const val = options[i];
-      let ref;
-
-      if (i === 'inside') {
-        ref = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.queryOne)(val);
-        ref.appendChild(elem);
-      } else if (i === 'around') {
-        ref = (0,_cfpb_cfpb_atomic_component_src_utilities_dom_traverse_js__WEBPACK_IMPORTED_MODULE_0__.queryOne)(val);
-        ref.parentNode.insertBefore(elem, ref);
-        elem.appendChild(ref);
-      } else if (i in elem) {
-        elem[i] = val;
-      } else {
-        elem.setAttribute(i, val);
-      }
+  Object.keys(options).forEach((key) => {
+    const val = options[key];
+    if (key in elem) {
+      elem[key] = val;
+    } else {
+      elem.setAttribute(key, val);
     }
-  }
+  });
 
+  if (parentNode) parentNode.appendChild(elem);
   return elem;
 }
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  create: create,
-});
 
 
 /***/ })

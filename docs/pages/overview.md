@@ -44,7 +44,7 @@ description: >-
   These guidelines are based upon the great work of others who are already working diligently in the justice and equity space. Acknowledgments are in order:
 
 
-  * Ben Peterson and Julie Strohman’s [presentation on equity-centered design and research](https://digital.gov/files/equity-centered-design-revised.pptx) is the primary source of information and inspiration for these guidelines. (The presentation is also available as a [recorded presentation](https://www.youtube.com/watch?v=j1ZJO8maV7s).)
+  * Ben Peterson and Julie Strothman’s [presentation on equity-centered design and research](https://s3.amazonaws.com/digitalgov/static/equity-centered-design-revised.pptx) is the primary source of information and inspiration for these guidelines. (The presentation is also available as a [recorded presentation](https://www.youtube.com/watch?v=j1ZJO8maV7s).)
 
   * Other important sources of information include: 
 

@@ -5,13 +5,10 @@ export default {
   collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/packages/**/*.js'],
   coveragePathIgnorePatterns: [
-    '<rootDir>/gulpfile.js',
     '<rootDir>/.*.config.js',
-    '<rootDir>/.*.min.js',
     '<rootDir>/node_modules/',
     '<rootDir>/config/',
     '<rootDir>/dist/',
-    '<rootDir>/scripts/gulp/',
     '<rootDir>/packages/.?/node_modules/',
     '<rootDir>/test/',
     '<rootDir>/tmp/',

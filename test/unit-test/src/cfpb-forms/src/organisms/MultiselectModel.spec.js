@@ -1,4 +1,4 @@
-import MultiselectModel from '../../../../../../packages/cfpb-forms/src/organisms/MultiselectModel';
+import MultiselectModel from '../../../../../../packages/cfpb-forms/src/organisms/MultiselectModel.js';
 
 const HTML_SNIPPET = `
 <select class="o-multiselect" multiple>

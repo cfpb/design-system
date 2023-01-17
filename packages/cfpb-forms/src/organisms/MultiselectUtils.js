@@ -2,7 +2,7 @@
  * Shortcut for creating new dom elements.
  *
  * @param {string} tag - The html elem to create.
- * @param {HTMLElement} parentNode - The parent node to attach to
+ * @param {HTMLElement} parentNode - The parent node to attach to.
  * @param {object} options - The options for building the elem.
  * @returns {HTMLElement} The created elem.
  */

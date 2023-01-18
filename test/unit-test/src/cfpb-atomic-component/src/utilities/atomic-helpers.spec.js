@@ -1,6 +1,5 @@
 import {
   checkDom,
-  destroyInitFlag,
   instantiateAll,
   setInitFlag,
 } from '../../../../../../packages/cfpb-atomic-component/src/utilities/atomic-helpers.js';
@@ -92,21 +91,6 @@ describe('atomic-helpers', () => {
     it('should return false when init flag is already set', () => {
       setInitFlag(componentDom);
       expect(setInitFlag(componentDom)).toBe(false);
-    });
-  });
-
-  describe('.destroyInitFlag()', () => {
-    beforeEach(() => {
-      setInitFlag(componentDom);
-    });
-
-    it('should return true when init flag is removed', () => {
-      expect(destroyInitFlag(componentDom)).toBe(true);
-    });
-
-    it('should return false when init flag has already been removed', () => {
-      destroyInitFlag(componentDom);
-      expect(destroyInitFlag(componentDom)).toBe(false);
     });
   });
 });

@@ -101,24 +101,6 @@ function setInitFlag(element) {
 }
 
 /**
- * Remove the initialization flag on an atomic component.
- * This might be used if the DOM of an atomic element is cloned.
- *
- * @param {HTMLElement} element - The DOM element for the atomic component.
- * @returns {boolean} True if the init data-js-* hook attribute was destroyed,
- *   otherwise false if it didn't exist.
- */
-function destroyInitFlag(element) {
-  if (!contains(element, INIT_FLAG)) {
-    return false;
-  }
-
-  remove(element, INIT_FLAG);
-
-  return true;
-}
-
-/**
  * @param {string} selector - Selector to search for in the document.
  * @param {Function} Constructor - A constructor function.
  * @param {HTMLElement} [scope] - A dom node in which to query the selector.
@@ -143,4 +125,4 @@ function instantiateAll(selector, Constructor, scope) {
 }
 
 // Expose public methods.
-export { checkDom, destroyInitFlag, instantiateAll, setInitFlag };
+export { checkDom, instantiateAll, setInitFlag };

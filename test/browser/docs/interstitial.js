@@ -8,7 +8,7 @@ describe('CMS interstitial page with editing instructions', () => {
 
   describe('Editing a component page', () => {
     beforeEach(async () => {
-      await browser.url('/design-system/components/banners');
+      await browser.url('/design-system/components/banner-notification');
       const editButton = await $('#edit-page');
       await editButton.waitForDisplayed();
       await editButton.click();

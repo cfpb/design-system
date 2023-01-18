@@ -28,7 +28,7 @@ first-level:
     second-level:
       - heading: Alerts
         nav-items:
-          - page: Banners
+          - page: Banner notification
           - page: Notifications
       - heading: Behavior
         nav-items:

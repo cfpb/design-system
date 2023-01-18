@@ -5,7 +5,6 @@
 import AtomicComponent from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 import ExpandableTransition from './ExpandableTransition.js';
-import { closest } from '@cfpb/cfpb-atomic-component/src/utilities/dom-traverse.js';
 
 const eventObserver = new EventObserver();
 
@@ -58,7 +57,7 @@ function initialize() {
     this.ui.content.classList.add('u-hidden');
   }
 
-  const expandableGroup = closest(this.ui.target, '.' + this.classes.group);
+  const expandableGroup = this.ui.target.closest('.' + this.classes.group);
 
   this.isAccordionGroup =
     expandableGroup !== null &&

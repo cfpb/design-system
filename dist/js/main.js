@@ -1620,7 +1620,6 @@ function EventObserver() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "checkDom": function() { return /* binding */ checkDom; },
-/* harmony export */   "destroyInitFlag": function() { return /* binding */ destroyInitFlag; },
 /* harmony export */   "instantiateAll": function() { return /* binding */ instantiateAll; },
 /* harmony export */   "setInitFlag": function() { return /* binding */ setInitFlag; }
 /* harmony export */ });
@@ -1724,24 +1723,6 @@ function setInitFlag(element) {
   }
 
   (0,_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.add)(element, INIT_FLAG);
-
-  return true;
-}
-
-/**
- * Remove the initialization flag on an atomic component.
- * This might be used if the DOM of an atomic element is cloned.
- *
- * @param {HTMLElement} element - The DOM element for the atomic component.
- * @returns {boolean} True if the init data-js-* hook attribute was destroyed,
- *   otherwise false if it didn't exist.
- */
-function destroyInitFlag(element) {
-  if (!(0,_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG)) {
-    return false;
-  }
-
-  (0,_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.remove)(element, INIT_FLAG);
 
   return true;
 }

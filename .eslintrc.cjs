@@ -24,7 +24,7 @@ module.exports = {
     'plugin:jsdoc/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
-    'prettier',
+    'eslint-config-prettier',
   ],
   // Some plugins are automatically included.
   // Run `yarn eslint --print-config foo.js > bar.json` to see included plugins.

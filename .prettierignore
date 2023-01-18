@@ -5,3 +5,4 @@ test/unit-test-coverage/
 .github
 CHANGELOG.md
 packages/cfpb-design-system/cfpb-design-system.js
+packages/cfpb-*/cfpb-*.css

@@ -170,7 +170,7 @@
         
         
 
-        'components-banners': {
+        'components-banner-notification': {
 
             // Cycle through the variation fields of this page.
             
@@ -178,18 +178,18 @@
                 
 
                 
-                    'variation_name1': 'Default banner',
-                    'variation_description1': "\n",
+                    'variation_name1': 'Warning banner',
+                    'variation_description1': "The warning banner is used to display high-priority system or product level notifications that are not specific to an immediate task.\n",
                     'variation_code_snippet1': `&lt;div class=&quot;o-banner&quot;&gt;
     &lt;div class=&quot;wrapper wrapper__match-content&quot;&gt;
         &lt;div class=&quot;m-notification
                     m-notification__visible
                     m-notification__warning&quot;&gt;
-            {% include icons/information-round.svg %}
+            {% include icons/warning-round.svg %}
             &lt;div class=&quot;m-notification_content&quot;&gt;
-                &lt;div class=&quot;h4 m-notification_message&quot;&gt;A default banner with a notification&lt;/div&gt;
+                &lt;div class=&quot;h4 m-notification_message&quot;&gt;Warning banner with a notification&lt;/div&gt;
                 &lt;p class=&quot;m-notification_explanation&quot;&gt;
-                    An optional paragraph of text can be added to explain the purpose of the banner.
+                    An optional paragraph of text can be added to explain the purpose of the warning banner.
                 &lt;/p&gt;
                 &lt;ul class=&quot;m-list m-list__links&quot;&gt;
                     &lt;li class=&quot;m-list_item&quot;&gt;
@@ -208,8 +208,8 @@
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name2': 'Dark banner',
-                    'variation_description2': "\n",
+                    'variation_name2': 'Archived content banner',
+                    'variation_description2': "The archived content banner is used to identify website pages that are outdated and should no longer be referenced for guidance. These pages may have historical value or significance to researchers, historians, and the public.\n",
                     'variation_code_snippet2': `&lt;div class=&quot;o-banner o-banner__dark&quot;&gt;
     &lt;div class=&quot;wrapper wrapper__match-content&quot;&gt;
         &lt;div class=&quot;m-notification
@@ -218,10 +218,10 @@
             {% include icons/information-round.svg %}
             &lt;div class=&quot;m-notification_content&quot;&gt;
                 &lt;div class=&quot;h4 m-notification_message&quot;&gt;
-                    A dark-themed banner with a notification
+                    Archived content banner with notification
                 &lt;/div&gt;
                 &lt;p class=&quot;m-notification_explanation&quot;&gt;
-                    An optional paragraph of text can be added to explain the purpose of the banner.
+                    An optional paragraph of text can be added to explain the purpose of the archived content banner.
                 &lt;/p&gt;
                 &lt;ul class=&quot;m-list m-list__links&quot;&gt;
                     &lt;li class=&quot;m-list_item&quot;&gt;
@@ -243,15 +243,15 @@
             
 
 
-            'title': 'Banners',
-            'description': "This component provides banner boxes at the top of a page’s content. This is similar to a notification, but is intended to be full width.\n",
-            'use_cases': "\n",
+            'title': 'Banner notification',
+            'description': "Banner notifications communicate high-priority information about the state or status of page content.  Banner notifications are positioned at the top of the page and span the full width. When used on a webpage, banner notifications inform users of important information that is not specific to an immediate task.\n",
+            'use_cases': "Use the banner notification to communicate important information about the state or status of page content. Use the banner notification to highlight high-priority system or product level information that is not related to a specific task. Use the inline notification instead when calling out specific page content or when alerting users as to information that is relevant to the immediate task.\n",
             'guidelines': "\n",
             'behavior': "\n",
             'accessibility': "\n",
             'research': "\n",
-            'related_items': "\n",
-            'url': 'components/banners'
+            'related_items': "N﻿otifications\n",
+            'url': 'components/banner-notification'
         }
         ,
         

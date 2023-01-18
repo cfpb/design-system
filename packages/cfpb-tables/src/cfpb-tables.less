@@ -20,25 +20,25 @@
 
 // Mixins
 .striped-table() {
-    & > tbody > tr:nth-child(even) {
-        & > th,
-        & > td {
-            background: @table-cell-bg_alt;
-        }
+  & > tbody > tr:nth-child(even) {
+    & > th,
+    & > td {
+      background: @table-cell-bg_alt;
     }
+  }
 }
 
 .o-table_cell__right-align {
-    text-align: right;
+  text-align: right;
 }
 
 .o-table-wrapper__scrolling {
-    box-sizing: border-box;
-    overflow-y: hidden;
-    table {
-        border: 1px solid @table-scrolling-border;
-        .striped-table();
-    }
+  box-sizing: border-box;
+  overflow-y: hidden;
+  table {
+    border: 1px solid @table-scrolling-border;
+    .striped-table();
+  }
 }
 
 .respond-to-min( @bp-sm-min, {
@@ -50,74 +50,74 @@
 // We don't want responsive table styles applied to the `print` media type
 // so we're not using .respond-to-max( @bp-xs-max ) here.
 @media only screen and (max-width: @bp-xs-max) {
-    .o-table {
-        width: 100%;
+  .o-table {
+    width: 100%;
+  }
+
+  .o-table__striped tr:nth-child(even) {
+    & > th,
+    & > td {
+      background: @table-cell-bg;
+    }
+  }
+
+  .o-table__stack-on-small {
+    border-top: 1px solid @gray-40;
+
+    tr,
+    td,
+    [data-display-table='row'],
+    [data-display-table='cell'] {
+      display: block;
     }
 
-    .o-table__striped tr:nth-child(even) {
-        & > th,
-        & > td {
-            background: @table-cell-bg;
-        }
+    th,
+    td,
+    [data-display-table='cell'] {
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
     }
 
-    .o-table__stack-on-small {
-        border-top: 1px solid @gray-40;
-
-        tr,
-        td,
-        [data-display-table='row'],
-        [data-display-table='cell'] {
-            display: block;
-        }
-
-        th,
-        td,
-        [data-display-table='cell'] {
-            padding-right: 0;
-            padding-left: 0;
-            width: 100%;
-        }
-
-        & > thead,
-        [data-display-table='thead'] {
-            display: none;
-        }
-
-        td[data-label]:before {
-            .heading-5();
-            display: block;
-            margin-top: 0;
-            margin-bottom: unit((5px / @base-font-size-px), em);
-            content: attr(data-label);
-            line-height: 1.83333333;
-        }
-
-        td:last-child,
-        [data-display-table='cell']:last-child {
-            margin-bottom: unit((30px / @base-font-size-px), em);
-        }
+    & > thead,
+    [data-display-table='thead'] {
+      display: none;
     }
 
-    .o-table__entry-header-on-small {
-        & > tbody td:first-child {
-            padding-bottom: 0.75em;
-            border-bottom: 1px solid @table-border;
-            margin-bottom: unit((10px / @base-font-size-px), em);
-            margin-top: 0;
-            background-color: @table-head-bg;
-            font-size: 1.125em;
-            font-weight: 400;
-            line-height: 1.22222222;
-        }
-
-        & > tbody td:first-child:before {
-            display: none;
-        }
-
-        & > tbody > tr {
-            border-bottom: none;
-            margin-bottom: unit((30px / @base-font-size-px), em);
-        }
+    td[data-label]:before {
+      .heading-5();
+      display: block;
+      margin-top: 0;
+      margin-bottom: unit((5px / @base-font-size-px), em);
+      content: attr(data-label);
+      line-height: 1.83333333;
     }
+
+    td:last-child,
+    [data-display-table='cell']:last-child {
+      margin-bottom: unit((30px / @base-font-size-px), em);
+    }
+  }
+
+  .o-table__entry-header-on-small {
+    & > tbody td:first-child {
+      padding-bottom: 0.75em;
+      border-bottom: 1px solid @table-border;
+      margin-bottom: unit((10px / @base-font-size-px), em);
+      margin-top: 0;
+      background-color: @table-head-bg;
+      font-size: 1.125em;
+      font-weight: 400;
+      line-height: 1.22222222;
+    }
+
+    & > tbody td:first-child:before {
+      display: none;
+    }
+
+    & > tbody > tr {
+      border-bottom: none;
+      margin-bottom: unit((30px / @base-font-size-px), em);
+    }
+  }
 }

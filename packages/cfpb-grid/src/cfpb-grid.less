@@ -21,9 +21,9 @@
 //
 
 .grid_wrapper( @grid_wrapper-width: @grid_wrapper-width ) {
-  max-width: ( @grid_wrapper-width - @grid_gutter-width );
-  padding-right: ( @grid_gutter-width / 2 );
-  padding-left: ( @grid_gutter-width / 2 );
+  max-width: (@grid_wrapper-width - @grid_gutter-width);
+  padding-right: (@grid_gutter-width / 2);
+  padding-left: (@grid_gutter-width / 2);
   margin: 0 auto;
   clear: both;
 }
@@ -44,10 +44,10 @@
   //  column width in % = -------------
   //                       total cols
 
-  @width: percentage( ( @columns / @total ) );
+  @width: percentage((@columns / @total));
 
   border: solid transparent;
-  border-width: 0 ( @grid_gutter-width / 2 );
+  border-width: 0 (@grid_gutter-width / 2);
 
   // Remove whitespace caused by setting display to inline-block
   margin-right: -0.25em;
@@ -67,13 +67,14 @@
   // Child mixins
 
   // Run this when neither prefix nor suffix are specified
+  // prettier-ignore
   .nonPrefixSuffix( @prefix: 0; @suffix: 0 ) when ( @prefix = 0 ) and ( @suffix = 0 ) {
     width: @width;
   }
 
   // Run this when only prefix is specified
   .prefix( @prefix: 0; @suffix: 0 ) when ( @prefix > 0 ) and ( @suffix = 0 ) {
-    @offset: percentage( ( @prefix / @total ) );
+    @offset: percentage((@prefix / @total));
 
     width: @width + @offset;
     padding-left: @offset;
@@ -81,13 +82,14 @@
 
   // Run this when only suffix is specified
   .suffix( @suffix: 0; @prefix: 0 ) when ( @suffix > 0 ) and ( @prefix = 0 ) {
-    @offset: percentage( ( @suffix / @total ) );
+    @offset: percentage((@suffix / @total));
 
     width: @width + @offset;
     padding-right: @offset;
   }
 
   // Run this when both prefix and suffix are specified
+  // prettier-ignore
   .prefixSuffix( @prefix: 0; @suffix: 0 ) when ( @prefix > 0 ) and ( @suffix > 0 ) {
     @left: percentage( ( @prefix / @total ) );
     @right: percentage( ( @suffix / @total ) );
@@ -98,6 +100,7 @@
   }
 }
 
+// prettier-ignore
 .grid_column( @columns; @total: @grid_total-columns; @prefix: 0; @suffix: 0; ) when ( @grid_debug ) {
   border-left-color: #ffb149;
   border-left-color: fade( #ff9e1b, 25% );
@@ -130,14 +133,14 @@
 //
 
 .grid_push( @offset: 1, @grid_total-columns: @grid_total-columns ) {
-  @push: percentage( ( @offset / @grid_total-columns ) );
+  @push: percentage((@offset / @grid_total-columns));
 
   position: relative;
   left: @push;
 }
 
 .grid_pull( @offset: 1, @grid_total-columns: @grid_total-columns ) {
-  @pull: percentage( ( @offset / @grid_total-columns ) );
+  @pull: percentage((@offset / @grid_total-columns));
 
   position: relative;
   right: @pull;
@@ -150,6 +153,6 @@
 .grid_nested-col-group() {
   display: block;
   position: relative;
-  margin-left: ( @grid_gutter-width / 2 ) * -1;
-  margin-right: ( @grid_gutter-width / 2 ) * -1;
+  margin-left: (@grid_gutter-width / 2) * -1;
+  margin-right: (@grid_gutter-width / 2) * -1;
 }

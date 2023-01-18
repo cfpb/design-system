@@ -1,17 +1,15 @@
 /* Color swatches for Identity/Color page
    ========================================================================== */
 
-.swatches-container__primary{
-  .grid_nested-col-group()
+.swatches-container__primary {
+  .grid_nested-col-group();
 }
 
 .swatches__primary {
-  .grid_column( 9.40 )
+  .grid_column( 9.4 );
 }
 
-
 .swatch {
-
   margin-left: 0;
 
   &_field {
@@ -50,20 +48,19 @@
 /* Make swatch tables multi column at appropriate widths */
 
 /* Small tablet (600px) */
-@media only screen and ( min-width: 37.5em ) {
-
+@media only screen and (min-width: 37.5em) {
   th {
-    width: unit( ( 70px / @base-font-size-px ), em );
+    width: unit((70px / @base-font-size-px), em);
   }
   .swatches {
     .grid_nested-col-group();
   }
   .swatch {
-    .grid_column( 6 )
+    .grid_column( 6 );
   }
 }
 /* Landscape tablet/netbook/laptop (1024px) */
-@media only screen and ( min-width: 64em ) {
+@media only screen and (min-width: 64em) {
   .swatch__secondary {
     .grid_column( 3 );
   }
@@ -73,6 +70,7 @@
   }
 }
 
+// prettier-ignore
 @colors: 'beige',
          'beige-30',
          'beige-60',
@@ -193,9 +191,11 @@
 // Set up looping mixin
 .color-swatch-loop( @index ) when ( @index > 0 ) {
   // Retrieve the next variable name from the @colors array
-  @name: e( extract( @colors, @index ) );
+  @name: e(extract(@colors, @index));
   // Output the `.swatch_field__color` rule
-  .swatch_field__@{name} { background: @@name; }
+  .swatch_field__@{name} {
+    background: @@name;
+  }
   // Call the next iteration of the loop
   .color-swatch-loop( @index - 1 );
 }
@@ -205,14 +205,14 @@
 
 .color-table {
   width: 100%;
-  margin-bottom: unit( ( 45px / @base-font-size-px ), em );
+  margin-bottom: unit((45px / @base-font-size-px), em);
 
   .swatch_field {
     width: 30%;
     height: 2.5em;
   }
 
-  td:not( :first-of-type ) {
+  td:not(:first-of-type) {
     white-space: nowrap;
   }
 }

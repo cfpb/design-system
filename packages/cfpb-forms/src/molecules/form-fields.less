@@ -5,7 +5,7 @@
   }
 
   .a-label + .a-text-input {
-    margin-top: unit( ( 5px / @base-font-size-px ), em );
+    margin-top: unit((5px / @base-font-size-px), em);
   }
 
   &__checkbox,
@@ -23,7 +23,7 @@
       /*! autoprefixer: ignore next */
       display: inline-grid;
       // 30px is width of checkbox/radio button plus the needed padding.
-      grid-template-columns: unit( ( 30px / @base-font-size-px ), em ) auto;
+      grid-template-columns: unit((30px / @base-font-size-px), em) auto;
       vertical-align: top;
       cursor: pointer;
       // Wrap long words in narrow form fields to prevent clipping
@@ -34,8 +34,8 @@
         grid-row-start: 1;
         grid-row-end: 3;
         border: 1px solid @form-field-input-border;
-        height: unit( ( 18px / @base-font-size-px ), em );
-        width: unit( ( 18px / @base-font-size-px ), em );
+        height: unit((18px / @base-font-size-px), em);
+        width: unit((18px / @base-font-size-px), em);
         margin-right: 10px;
         background-color: @input-bg;
         content: '';
@@ -70,7 +70,6 @@
       }
 
       &:disabled {
-
         &:checked + .a-label:before,
         &:focus + .a-label:before,
         &.focus + .a-label:before,
@@ -130,7 +129,7 @@
 
         /* The rotate is needed to fix a bug in Firefox where radio
                    button was not centered. */
-        transform: rotate( 0deg );
+        transform: rotate(0deg);
       }
     }
 
@@ -163,14 +162,14 @@
       &.focus:checked + .a-label:before {
         border-color: @input-border__focused;
         box-shadow: 0 0 0 1px @input-border__focused,
-                            inset 0 0 0 2px @form-field-inset;
+          inset 0 0 0 2px @form-field-inset;
       }
 
       &:hover:checked + .a-label:before,
       &.hover:checked + .a-label:before {
         border-color: @input-border__hover;
         box-shadow: 0 0 0 1px @input-border__hover,
-                            inset 0 0 0 2px @form-field-inset;
+          inset 0 0 0 2px @form-field-inset;
       }
     }
   }
@@ -187,7 +186,6 @@
 
     .a-checkbox,
     .a-radio {
-
       &:checked + .a-label {
         background-color: @form-field-input-lg-target-bg__selected;
         box-shadow: inset 0 0 0 1px @form-field-input-lg-target-border;
@@ -216,7 +214,8 @@
       }
 
       &:checked:disabled + .a-label {
-        &, &:before {
+        &,
+        &:before {
           border: 1px solid @form-field-input-border__disabled;
         }
       }
@@ -228,6 +227,6 @@
   // these to be less repetitive.
   .a-form-alert,
   .a-error-message {
-    margin-top: unit( ( @grid_gutter-width / 2 / @base-font-size-px ), em );
+    margin-top: unit((@grid_gutter-width / 2 / @base-font-size-px), em);
   }
 }

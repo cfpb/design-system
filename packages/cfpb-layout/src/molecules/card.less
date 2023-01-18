@@ -58,23 +58,27 @@
 .m-card {
   position: relative;
 
-  &:not( .m-card__breakout ) {
+  &:not(.m-card__breakout) {
     & > a {
-      padding: unit( ( @grid_gutter-width / @base-font-size-px ), em );
+      padding: unit((@grid_gutter-width / @base-font-size-px), em);
     }
   }
 
-  &:not( .m-card__breakout ):not( .m-card__highlight ):not( .m-card__topic ) {
+  &:not(.m-card__breakout):not(.m-card__highlight):not(.m-card__topic) {
     background: @white;
     border: 1px solid @gray-20;
     border-bottom-width: 3px;
   }
 
-  &:not( .m-card__featured ):not( .m-card__breakout ):not( .m-card__topic ):not( .m-card__highlight ) {
-    padding: unit( ( @grid_gutter-width / @base-font-size-px ), em );
+  &:not(.m-card__featured):not(.m-card__breakout):not(.m-card__topic):not(
+      .m-card__highlight
+    ) {
+    padding: unit((@grid_gutter-width / @base-font-size-px), em);
   }
 
-  &:not( .m-card__featured ):not( .m-card__breakout ):not( .m-card__topic ):not( .m-card__highlight ),
+  &:not(.m-card__featured):not(.m-card__breakout):not(.m-card__topic):not(
+      .m-card__highlight
+    ),
   & > a {
     display: flex;
     flex-direction: column;
@@ -88,7 +92,7 @@
     outline-offset: 2px;
   }
 
-  &:not( .m-card__highlight ) {
+  &:not(.m-card__highlight) {
     &_footer {
       margin-top: auto;
     }
@@ -117,7 +121,7 @@
     & .m-card_icon {
       font-size: 1em;
       margin-bottom: 0;
-      padding-right: unit( ( 7.5px / @base-font-size-px ), em );
+      padding-right: unit((7.5px / @base-font-size-px), em);
     }
 
     & .m-card_icon,
@@ -133,14 +137,13 @@
 
   // Featured cards.
   &__featured {
-
     .m-card_heading {
       margin: 0;
     }
 
     .m-card_icon {
-      font-size: unit( ( 30px / @base-font-size-px ), em );
-      margin-bottom: unit( ( 5px / @base-font-size-px ), em );
+      font-size: unit((30px / @base-font-size-px), em);
+      margin-bottom: unit((5px / @base-font-size-px), em);
     }
 
     .m-card_icon,
@@ -149,9 +152,8 @@
     }
 
     &:hover {
-      box-shadow: 0 8px 0 0 inset @green,
-                  2px 0 0 0 inset @gray-20,
-                  -2px 0 0 0 inset @gray-20;
+      box-shadow: 0 8px 0 0 inset @green, 2px 0 0 0 inset @gray-20,
+        -2px 0 0 0 inset @gray-20;
     }
 
     &:hover .m-card_footer > span {
@@ -194,16 +196,15 @@
     }
 
     .m-card_icon {
-      font-size: unit( ( 30px / @base-font-size-px ), em );
+      font-size: unit((30px / @base-font-size-px), em);
       color: @green;
-      margin-bottom: unit( ( 5px / @base-font-size-px ), em );
+      margin-bottom: unit((5px / @base-font-size-px), em);
     }
 
     &:hover {
       > a {
-        box-shadow: 0 2px 0 0 inset @gray-20,
-                    2px 0 0 0 inset @gray-20,
-                    -2px 0 0 0 inset @gray-20;
+        box-shadow: 0 2px 0 0 inset @gray-20, 2px 0 0 0 inset @gray-20,
+          -2px 0 0 0 inset @gray-20;
       }
 
       .u-card-bottom-bar();
@@ -234,7 +235,7 @@
     .m-card_inner-wrapper {
       position: relative;
       z-index: 0;
-      min-height: @card_img_height + ( @grid_gutter-width / 2 );
+      min-height: @card_img_height + (@grid_gutter-width / 2);
 
       background: @gray-5;
       border: 1px solid @gray-20;
@@ -250,19 +251,18 @@
       height: @card_img_height;
 
       // Match half of image width.
-      margin-left: -( @card_img_width / 2 );
+      margin-left: -(@card_img_width / 2);
     }
 
     .m-card_footer {
       // Subtract 6px to accommodate heading-3 size.
-      margin-top: ( @card_img_height / 2 ) + @grid_gutter-width - 6px;
+      margin-top: (@card_img_height / 2) + @grid_gutter-width - 6px;
     }
 
     &:hover {
       .m-card_inner-wrapper {
-        box-shadow: 0 2px 0 0 inset @gray-20,
-                    2px 0 0 0 inset @gray-20,
-                    -2px 0 0 0 inset @gray-20;
+        box-shadow: 0 2px 0 0 inset @gray-20, 2px 0 0 0 inset @gray-20,
+          -2px 0 0 0 inset @gray-20;
       }
 
       .u-card-bottom-bar();
@@ -293,9 +293,8 @@
 
     &:hover {
       > a {
-        box-shadow: 0 2px 0 0 inset @green-40,
-                    2px 0 0 0 inset @green-40,
-                    -2px 0 0 0 inset @green-40;
+        box-shadow: 0 2px 0 0 inset @green-40, 2px 0 0 0 inset @green-40,
+          -2px 0 0 0 inset @green-40;
       }
 
       .u-card-bottom-bar();

@@ -1,8 +1,7 @@
 // Grid-based "column" card group layouts.
 .o-card-group {
-
   > h2 {
-    margin-bottom: unit( ( 30px / @base-font-size-px), rem );
+    margin-bottom: unit((30px / @base-font-size-px), rem);
   }
 
   &__column-2 &_cards {
@@ -10,7 +9,7 @@
   }
 
   &__column-3 &_cards {
-    grid-template-columns: repeat( 3, minmax( 0, 1fr ) );
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     // Convert to 2-column layout at small screen sizes;
     .respond-to-max( @bp-lg-min, {
@@ -20,8 +19,8 @@
 
   &_cards {
     display: grid;
-    grid-column-gap: unit( ( 20px / @base-font-size-px ), em );
-    grid-row-gap: unit( ( 20px / @base-font-size-px ), em );
+    grid-column-gap: unit((20px / @base-font-size-px), em);
+    grid-row-gap: unit((20px / @base-font-size-px), em);
 
     .respond-to-max( @bp-xs-max, {
       // Make sure cards are stacked at mobile size.
@@ -30,7 +29,7 @@
   }
 
   &__bg-green {
-    padding: unit( ( 30px / @base-font-size-px ), em );
+    padding: unit((30px / @base-font-size-px), em);
     background: @green-20;
   }
 }
@@ -40,7 +39,8 @@
 // Necessitated because of https://stackoverflow.com/questions/46743722/items-in-css-grid-in-ie-superimposed-on-each-other
 
 /* stylelint-disable selector-type-no-unknown */
-_:-ms-lang( x ),.o-card-group_cards {
+_:-ms-lang(x),
+.o-card-group_cards {
   display: block;
 
   .m-card {
@@ -50,7 +50,8 @@ _:-ms-lang( x ),.o-card-group_cards {
   }
 }
 
-_:-ms-lang( x ),.o-card-group__column-2 {
+_:-ms-lang(x),
+.o-card-group__column-2 {
   .o-card-group_cards .m-card {
     width: 48%;
     margin-right: 2%;
@@ -60,7 +61,8 @@ _:-ms-lang( x ),.o-card-group__column-2 {
   }
 }
 
-_:-ms-lang( x ),.o-card-group__column-3 {
+_:-ms-lang(x),
+.o-card-group__column-3 {
   .o-card-group_cards .m-card {
     width: 32%;
     margin-right: 1%;
@@ -70,7 +72,8 @@ _:-ms-lang( x ),.o-card-group__column-3 {
   }
 }
 
-_:-ms-lang( x ),.o-card-group:after {
+_:-ms-lang(x),
+.o-card-group:after {
   content: '';
   display: table;
   clear: both;
@@ -85,38 +88,37 @@ _:-ms-lang( x ),.o-card-group:after {
   &__count-2,
   &__count-3,
   &__count-4 {
-
-    .m-card:nth-of-type( 1 ) {
+    .m-card:nth-of-type(1) {
       grid-area: card1;
     }
 
-    .m-card:nth-of-type( 2 ) {
+    .m-card:nth-of-type(2) {
       grid-area: card2;
     }
 
-    .m-card:nth-of-type( 3 ) {
+    .m-card:nth-of-type(3) {
       grid-area: card3;
     }
 
-    .m-card:nth-of-type( 4 ) {
+    .m-card:nth-of-type(4) {
       grid-area: card4;
     }
   }
 
   &__count-2 &_cards {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "card1 card2";
+    grid-template-areas: 'card1 card2';
   }
 
   &__count-3 &_cards {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "card1 card2"
-      "card1 card3";
+      'card1 card2'
+      'card1 card3';
 
     // We have to reach inside the m-card here unfortunately to
     // center the content of the first card and increase the heading.
-    .m-card:nth-of-type( 1 ) {
+    .m-card:nth-of-type(1) {
       h3 {
         .h2();
       }
@@ -130,8 +132,8 @@ _:-ms-lang( x ),.o-card-group:after {
   &__count-4 &_cards {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "card1 card2"
-      "card3 card4";
+      'card1 card2'
+      'card3 card4';
   }
 
   // Flexbox-based "flow" card group layout.
@@ -149,8 +151,8 @@ _:-ms-lang( x ),.o-card-group:after {
     &__count-3 &_cards {
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
-      "card1 card1"
-      "card2 card3";
+      'card1 card1'
+      'card2 card3';
     }
   }
 } );
@@ -161,24 +163,24 @@ _:-ms-lang( x ),.o-card-group:after {
     &__count-2 &_cards {
       grid-template-columns: 1fr;
       grid-template-areas:
-      "card1"
-      "card2";
+      'card1'
+      'card2';
     }
     &__count-3 &_cards {
       grid-template-columns: 1fr;
       grid-template-areas:
-      "card1"
-      "card2"
-      "card3";
+      'card1'
+      'card2'
+      'card3';
     }
 
     &__count-4 &_cards {
       grid-template-columns: 1fr;
       grid-template-areas:
-      "card1"
-      "card2"
-      "card3"
-      "card4";
+      'card1'
+      'card2'
+      'card3'
+      'card4';
     }
 
     &__flow {

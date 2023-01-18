@@ -13,27 +13,27 @@
 //
 
 // .o-expandable
-@expandable-focus:              @black;
+@expandable-focus: @black;
 
 // .o-expandable_label
-@expandable_label-text:         @black;
+@expandable_label-text: @black;
 
 // .o-expandable_link
-@expandable_link-text:          @pacific;
+@expandable_link-text: @pacific;
 
 // .o-expandable modifiers
-@expandable__background:        @gray-5;
-@expandable__border:            @gray-40;
+@expandable__background: @gray-5;
+@expandable__border: @gray-40;
 
 // Sizing variables
 
 // .o-expandable_link
-@expandable_link-font-size:     @btn-font-size;
+@expandable_link-font-size: @btn-font-size;
 
 // Timing variables
 
 // .o-expandable_content__transition
-@expandable__transition-speed:  0.25s;
+@expandable__transition-speed: 0.25s;
 
 //
 // Recommended expandable pattern
@@ -104,8 +104,8 @@
     min-width: 60px;
     text-align: right;
     color: @expandable_link-text;
-    font-size: unit( ( @expandable_link-font-size / @base-font-size-px ), em );
-    line-height: unit( ( @base-line-height-px / @expandable_link-font-size ) );
+    font-size: unit((@expandable_link-font-size / @base-font-size-px), em);
+    line-height: unit((@base-line-height-px / @expandable_link-font-size));
   }
 
   //
@@ -135,24 +135,23 @@
 
   &__padded {
     .o-expandable_header {
-      padding:
-                unit( ( 10px / @base-font-size-px ), em )
-                unit( ( 15px / @base-font-size-px ), em );
+      padding: unit((10px / @base-font-size-px), em)
+        unit((15px / @base-font-size-px), em);
     }
 
     .o-expandable_content {
-      padding: 0 unit( ( 15px / @base-font-size-px ), em );
+      padding: 0 unit((15px / @base-font-size-px), em);
 
       // The divider between _header and _content.
       &:before {
         content: '';
         display: block;
         border-top: 1px solid @expandable__border;
-        padding-top: unit( ( 15px / @base-font-size-px ), em );
+        padding-top: unit((15px / @base-font-size-px), em);
       }
 
       &:after {
-        padding-bottom: unit( ( 15px / @base-font-size-px ), em );
+        padding-bottom: unit((15px / @base-font-size-px), em);
         width: 100%;
       }
     }
@@ -205,8 +204,8 @@
   } );
 }
 
-// Used when the set language reads right-to-left 
-div[dir="rtl"] .o-expandable_header {
+// Used when the set language reads right-to-left
+div[dir='rtl'] .o-expandable_header {
   width: 100%;
   text-align: right;
 }

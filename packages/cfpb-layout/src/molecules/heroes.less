@@ -13,7 +13,7 @@
     // instead of using autoprefixer to enable it for the entire site.
     display: -ms-grid;
     display: grid;
-    max-width: ( @grid_wrapper-width - @grid_gutter-width );
+    max-width: (@grid_wrapper-width - @grid_gutter-width);
     margin: 0 auto;
     padding-top: @grid_gutter-width;
     padding-bottom: @grid_gutter-width;
@@ -35,8 +35,8 @@
   }
 
   &_text {
-    padding-right: ( @grid_gutter-width / 2 );
-    padding-left: ( @grid_gutter-width / 2 );
+    padding-right: (@grid_gutter-width / 2);
+    padding-left: (@grid_gutter-width / 2);
 
     .respond-to-min( @bp-sm-min, {
       margin: auto;
@@ -92,7 +92,7 @@
     // hero image, we hide the hero image in legacy browsers.
     display: none;
 
-    @supports ( display: grid ) {
+    @supports (display: grid) {
       display: block;
     }
   }

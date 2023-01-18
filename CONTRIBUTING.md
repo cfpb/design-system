@@ -245,7 +245,7 @@ Instructions for developers who've received a new or updated icon from a designe
    ```shell
    cd ../../../../
 
-   yarn copy-icons
+   yarn copy-assets
    ```
 
 1. If adding a new icon or updating any names/aliases, update the tables on both

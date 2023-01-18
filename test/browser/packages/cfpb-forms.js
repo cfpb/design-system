@@ -42,7 +42,7 @@ describe('Multiselect', () => {
     const firstMultiSelectOption = await $(
       '.a-live_code .o-multiselect_options li:first-child'
     );
-    await expect(await firstMultiSelectOption.isDisplayedInViewport()).toBeTruthy();
+    await expect(firstMultiSelectOption).toBeDisplayedInViewport();
   });
 
   it('should not show the last multiselect option until the user scrolls to it', async () => {
@@ -80,15 +80,15 @@ describe('Multiselect', () => {
 
     // Find option #4
     await multiselectInput.setValue('ion 4');
-    await expect(await firstMultiSelectOption.isDisplayed()).toBeFalsy();
-    await expect(await fourthMultiSelectOption.isDisplayed()).toBeTruthy();
-    await expect(await longMultiSelectOption.isDisplayed()).toBeFalsy();
+    await expect(firstMultiSelectOption).not.toBeDisplayed();
+    await expect(fourthMultiSelectOption).toBeDisplayed();
+    await expect(longMultiSelectOption).not.toBeDisplayed();
 
     // Find the last really long option
     await multiselectInput.setValue('superca');
-    await expect(await firstMultiSelectOption.isDisplayed()).toBeFalsy();
-    await expect(await fourthMultiSelectOption.isDisplayed()).toBeFalsy();
-    await expect(await longMultiSelectOption.isDisplayed()).toBeTruthy();
+    await expect(firstMultiSelectOption).not.toBeDisplayed();
+    await expect(fourthMultiSelectOption).not.toBeDisplayed();
+    await expect(longMultiSelectOption).toBeDisplayed();
   });
 
   it('should let the user remove a choice', async () => {
@@ -96,11 +96,11 @@ describe('Multiselect', () => {
     const multiSelectChoice = await $(
       '.o-multiselect_choices label[for=test_select__multiple-option1]'
     );
-    await expect(await multiSelectChoice.isDisplayed()).toBeTruthy();
+    await expect(multiSelectChoice).toBeDisplayed();
 
     // Verify option1 can be removed
     await multiSelectChoice.click();
-    await expect(await multiSelectChoice.isExisting()).toBeFalsy();
+    await expect(multiSelectChoice).not.toExist();
   });
 
   it('should let the user add a choice', async () => {
@@ -116,6 +116,6 @@ describe('Multiselect', () => {
     const secondMultiSelectChoice = await $(
       '.a-live_code .o-multiselect_choices label[for=test_select__multiple-option2]'
     );
-    await expect(await secondMultiSelectChoice.isDisplayed()).toBeTruthy();
+    await expect(secondMultiSelectChoice).toBeDisplayed();
   });
 });

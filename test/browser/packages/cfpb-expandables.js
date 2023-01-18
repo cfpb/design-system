@@ -13,18 +13,18 @@ describe('Basic CFPB expandable', () => {
   });
 
   it('should hide expandable content on page load', async () => {
-    await expect(await expandableContent.isDisplayed()).toBeFalsy();
+    await expect(expandableContent).not.toBeDisplayed();
   });
 
   it('should open expandable when header is clicked', async () => {
     await expandableHeader.click();
     await expandableContent.waitForDisplayed();
-    await expect(await expandableContent.isDisplayed()).toBeTruthy();
+    await expect(expandableContent).toBeDisplayed();
   });
 
   it('should close expandable when header is clicked again', async () => {
     await expandableHeader.click();
     await expandableContent.waitForDisplayed({ reverse: true });
-    await expect(await expandableContent.isDisplayed()).toBeFalsy();
+    await expect(expandableContent).not.toBeDisplayed();
   });
 });

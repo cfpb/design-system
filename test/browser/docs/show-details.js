@@ -22,8 +22,8 @@ describe('The "show details" toggling feature', () => {
     }
   });
 
-  it('should show/hide details across all component pages', () => {
-    componentPages.forEach(async (componentPage) => {
+  it('should show/hide details across all component pages', async () => {
+    for (const componentPage of componentPages) {
       const componentName = await componentPage.getText();
       const componentUrl = await componentPage.getAttribute('href');
       describe(`The ${componentName} component page`, () => {
@@ -37,42 +37,42 @@ describe('The "show details" toggling feature', () => {
 
         it('should hide snippet tabs by default', async () => {
           if (
-            (await !showDetailsButton.isExisting()) ||
-            (await !hideDetailsButton.isExisting())
+            (await !(await showDetailsButton.isExisting())) ||
+            (await !(await hideDetailsButton.isExisting()))
           ) {
-            this.skip();
+            await this.skip();
           }
-          expect(await showDetailsButton.isDisplayed()).toBeTruthy();
-          expect(await hideDetailsButton.isDisplayed()).toBeFalsy();
+          await expect(await showDetailsButton.isDisplayed()).toBeTruthy();
+          await expect(await hideDetailsButton.isDisplayed()).toBeFalsy();
           detailsTabs.some(async (snippet) => {
-            expect(await snippet.isDisplayed()).toBeFalsy();
+            await expect(await snippet.isDisplayed()).toBeFalsy();
           });
         });
 
         it('should show code snippets when toggle button is clicked', async () => {
           if (
-            (await !showDetailsButton.isExisting()) ||
-            (await !hideDetailsButton.isExisting())
+            (await !(await showDetailsButton.isExisting())) ||
+            (await !(await hideDetailsButton.isExisting()))
           ) {
-            this.skip();
+            await this.skip();
           }
           await showDetailsButton.click();
-          expect(await showDetailsButton.isDisplayed()).toBeFalsy();
-          expect(await hideDetailsButton.isDisplayed()).toBeTruthy();
+          await expect(await showDetailsButton.isDisplayed()).toBeFalsy();
+          await expect(await hideDetailsButton.isDisplayed()).toBeTruthy();
           detailsTabs.some(async (snippet) => {
-            expect(await snippet.isDisplayed()).toBeTruthy();
+            await expect(await snippet.isDisplayed()).toBeTruthy();
           });
         });
 
         it('should re-hide code snippets when toggle button is clicked again', async () => {
           await hideDetailsButton.click();
-          expect(await showDetailsButton.isDisplayed()).toBeTruthy();
-          expect(await hideDetailsButton.isDisplayed()).toBeFalsy();
+          await expect(await showDetailsButton.isDisplayed()).toBeTruthy();
+          await expect(await hideDetailsButton.isDisplayed()).toBeFalsy();
           detailsTabs.some(async (snippet) => {
-            expect(await snippet.isDisplayed()).toBeFalsy();
+            await expect(await snippet.isDisplayed()).toBeFalsy();
           });
         });
       });
-    });
+    };
   });
 });

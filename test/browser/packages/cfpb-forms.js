@@ -16,7 +16,7 @@ describe('Multiselect', () => {
          * @returns {string} A readystate string.
          *   Can be loading, interactive, or complete.
          */
-        function documentReady() {
+        async function documentReady() {
           return document.readyState;
         }
 
@@ -42,7 +42,7 @@ describe('Multiselect', () => {
     const firstMultiSelectOption = await $(
       '.a-live_code .o-multiselect_options li:first-child'
     );
-    expect(await firstMultiSelectOption.isDisplayedInViewport()).toBeTruthy();
+    await expect(await firstMultiSelectOption.isDisplayedInViewport()).toBeTruthy();
   });
 
   it('should not show the last multiselect option until the user scrolls to it', async () => {
@@ -60,7 +60,7 @@ describe('Multiselect', () => {
     // If the scrollTop of the fieldset is zero, it means no scrolling was necessary to reach
     // the last multiselect option which indicates the options aren't contained within the
     // scrollable area and are spilling over due to a browser or CSS bug.
-    expect(multiselectFieldsetScrollTop).toBeGreaterThan(0);
+    await expect(multiselectFieldsetScrollTop).toBeGreaterThan(0);
   });
 
   it('should correctly filter the multiselect options', async () => {
@@ -80,15 +80,15 @@ describe('Multiselect', () => {
 
     // Find option #4
     await multiselectInput.setValue('ion 4');
-    expect(await firstMultiSelectOption.isDisplayed()).toBeFalsy();
-    expect(await fourthMultiSelectOption.isDisplayed()).toBeTruthy();
-    expect(await longMultiSelectOption.isDisplayed()).toBeFalsy();
+    await expect(await firstMultiSelectOption.isDisplayed()).toBeFalsy();
+    await expect(await fourthMultiSelectOption.isDisplayed()).toBeTruthy();
+    await expect(await longMultiSelectOption.isDisplayed()).toBeFalsy();
 
     // Find the last really long option
     await multiselectInput.setValue('superca');
-    expect(await firstMultiSelectOption.isDisplayed()).toBeFalsy();
-    expect(await fourthMultiSelectOption.isDisplayed()).toBeFalsy();
-    expect(await longMultiSelectOption.isDisplayed()).toBeTruthy();
+    await expect(await firstMultiSelectOption.isDisplayed()).toBeFalsy();
+    await expect(await fourthMultiSelectOption.isDisplayed()).toBeFalsy();
+    await expect(await longMultiSelectOption.isDisplayed()).toBeTruthy();
   });
 
   it('should let the user remove a choice', async () => {
@@ -96,11 +96,11 @@ describe('Multiselect', () => {
     const multiSelectChoice = await $(
       '.o-multiselect_choices label[for=test_select__multiple-option1]'
     );
-    expect(await multiSelectChoice.isDisplayed()).toBeTruthy();
+    await expect(await multiSelectChoice.isDisplayed()).toBeTruthy();
 
     // Verify option1 can be removed
     await multiSelectChoice.click();
-    expect(await multiSelectChoice.isExisting()).toBeFalsy();
+    await expect(await multiSelectChoice.isExisting()).toBeFalsy();
   });
 
   it('should let the user add a choice', async () => {
@@ -116,6 +116,6 @@ describe('Multiselect', () => {
     const secondMultiSelectChoice = await $(
       '.a-live_code .o-multiselect_choices label[for=test_select__multiple-option2]'
     );
-    expect(await secondMultiSelectChoice.isDisplayed()).toBeTruthy();
+    await expect(await secondMultiSelectChoice.isDisplayed()).toBeTruthy();
   });
 });

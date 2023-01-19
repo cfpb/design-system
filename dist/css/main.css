@@ -49,7 +49,8 @@
 }
 .u-max-height-transition {
   max-height: 1000px;
-  transition: max-height 0.25s ease-out;
+  overflow: hidden;
+  transition: max-height 0.15s ease-out;
 }
 .u-max-height-default {
   max-height: 1000px;
@@ -5076,6 +5077,13 @@ main {
 }
 .example-box.u-is-animating {
   outline: 5px solid #b4b5b6;
+}
+.example-flyout-content {
+  width: 100px;
+  background-color: #d14124;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
 }
 /* stylelint-disable no-invalid-position-at-import-rule */
 .ds-nav a {

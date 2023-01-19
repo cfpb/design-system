@@ -1757,6 +1757,702 @@ function instantiateAll(selector, Constructor, scope) {
 
 /***/ }),
 
+/***/ "./packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js":
+/*!*****************************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js ***!
+  \*****************************************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _behavior_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./behavior.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/behavior.js");
+
+
+
+
+
+const BASE_CLASS = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.BEHAVIOR_PREFIX + 'flyout-menu';
+const SEL_PREFIX = '[' + _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK + '=' + BASE_CLASS;
+
+/**
+ * FlyoutMenu
+ *
+ * @class
+ * @classdesc Initializes new FlyoutMenu behavior.
+ * Behaviors are functionality that can be shared between different pieces
+ * of markup. They are not strictly atomic, though they likely are used
+ * on atomic components.
+ * As added JS behavior, this is added through HTML data-js-hook attributes.
+ *
+ * Structure is:
+ * behavior_flyout-menu
+ *   behavior_flyout-menu_trigger
+ *   behavior_flyout-menu_content
+ *     behavior_flyout-menu_trigger (optional)
+ *
+ * The second trigger is optional and may be used for a button in the content
+ * area, which may obscure the first trigger.
+ * The flyout can be triggered through a click of either trigger.
+ * @param {HTMLElement} element - The DOM element to attach FlyoutMenu behavior.
+ * @returns {FlyoutMenu} An instance.
+ */
+function FlyoutMenu(element) {
+  // eslint-disable-line max-statements, no-inline-comments, max-len
+  // Verify that the expected dom attributes are present.
+  const _dom = (0,_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom)(element, BASE_CLASS);
+  const _triggerDoms = _findTriggers(element);
+  const _contentDom = (0,_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom)(element, BASE_CLASS + '_content');
+
+  let _isExpanded = false;
+  let _isAnimating = false;
+
+  let _expandTransition;
+  let _expandTransitionMethod;
+  let _expandTransitionMethodArgs = [];
+
+  let _collapseTransition;
+  let _collapseTransitionMethod;
+  let _collapseTransitionMethodArgs = [];
+
+  // Binded events.
+  const _collapseBinded = collapse.bind(this);
+  // Needed to add and remove events to transitions.
+  const _collapseEndBinded = _collapseEnd.bind(this);
+  const _expandEndBinded = _expandEnd.bind(this);
+
+  /* If this menu appears in a data source,
+     this can be used to store the source.
+     Examples include the index in an Array,
+     a key in an Hash, or a node in a Tree. */
+  let _data;
+
+  /* Set this function to a queued collapse function,
+     which is called if collapse is called while
+     expand is animating. */
+  let _deferFunct = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.noopFunct;
+
+  // Whether this instance's behaviors are suspended or not.
+  let _suspended = true;
+
+  /* Event immediately preceeding mouseover is touchstart,
+     if that event's present we'll want to ignore mouseover
+     to avoid a mouseover and click immediately after each other. */
+  let _touchTriggered = false;
+
+  /**
+   * Iterate over dom tree and find FlyoutMenu triggers.
+   * We need to exclude the ones that are nested FlyoutMenus, since those
+   * will be managed by their own instance of this class.
+   *
+   * @param {HTMLElement} element - The DOM element to search for triggers within.
+   * @returns {Array} List of trigger DOM references within this FlyoutMenu.
+   */
+  function _findTriggers(element) {
+    const triggersList = [];
+    const triggers = element.querySelectorAll(`${SEL_PREFIX}_trigger]`);
+
+    let trigger;
+    let triggerParent;
+    let isSubTrigger;
+    // Iterate backwards ensuring that length is an UInt32.
+    for (let i = triggers.length >>> 0; i--; ) {
+      isSubTrigger = false;
+      trigger = triggers[i];
+      triggerParent = trigger.parentElement;
+      while (triggerParent !== element) {
+        if (
+          triggerParent.getAttribute(_cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK) &&
+          triggerParent.getAttribute(_cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK).split(' ').indexOf(BASE_CLASS) !==
+            -1
+        ) {
+          isSubTrigger = true;
+          triggerParent = element;
+        } else {
+          triggerParent = triggerParent.parentElement;
+        }
+      }
+
+      if (!isSubTrigger) {
+        triggersList.unshift(triggers[i]);
+      }
+    }
+
+    return triggersList;
+  }
+
+  /**
+   * @returns {FlyoutMenu} An instance.
+   * @param {boolean} isExpanded - Whether the flyout menu is expanded at
+   *   initialization-time or collapsed.
+   */
+  function init(isExpanded = false) {
+    const handleTriggerClickedBinded = _handleTriggerClicked.bind(this);
+    const handleTriggerOverBinded = _handleTriggerOver.bind(this);
+    const handleTriggerOutBinded = _handleTriggerOut.bind(this);
+
+    let triggerDom;
+    for (let i = 0, len = _triggerDoms.length; i < len; i++) {
+      triggerDom = _triggerDoms[i];
+
+      // Set initial aria attributes to false.
+      _isExpanded = isExpanded;
+      if (isExpanded) {
+        _setAriaAttr('expanded', triggerDom, 'true');
+        _setAriaAttr('expanded', _contentDom, 'true');
+      } else {
+        _setAriaAttr('expanded', triggerDom, 'false');
+        _setAriaAttr('expanded', _contentDom, 'false');
+      }
+
+      triggerDom.addEventListener('click', handleTriggerClickedBinded);
+      triggerDom.addEventListener('touchstart', _handleTouchStart, {
+        passive: true,
+      });
+      triggerDom.addEventListener('mouseover', handleTriggerOverBinded);
+      triggerDom.addEventListener('mouseout', handleTriggerOutBinded);
+    }
+
+    resume();
+
+    return this;
+  }
+
+  /**
+   * Set an aria attribute on an HTML element.
+   *
+   * @param {string} type - The aria attribute to set
+   *   (without the aria- prefix).
+   * @param {HTMLElement} elem - The element to set.
+   * @param {boolean} value - The value to set on `aria-expanded`,
+   *   casts to a string.
+   * @returns {string} The cast value.
+   */
+  function _setAriaAttr(type, elem, value) {
+    const strValue = String(value);
+    elem.setAttribute('aria-' + type, strValue);
+    return strValue;
+  }
+
+  /**
+   * Event handler for when the search input trigger is touched.
+   */
+  function _handleTouchStart() {
+    _touchTriggered = true;
+  }
+
+  /**
+   * Event handler for when the trigger is hovered over.
+   *
+   * @param {MouseEvent} event - The clicked flyout trigger event object.
+   */
+  function _handleTriggerOver(event) {
+    if (!_touchTriggered && !_suspended) {
+      this.dispatchEvent('triggerOver', {
+        target: this,
+        trigger: event.target,
+        type: 'triggerOver',
+      });
+    }
+    _touchTriggered = false;
+  }
+
+  /**
+   * Event handler for when the trigger is hovered out.
+   *
+   * @param {MouseEvent} event - The clicked flyout trigger event object.
+   */
+  function _handleTriggerOut(event) {
+    if (!_suspended) {
+      this.dispatchEvent('triggerOut', {
+        target: this,
+        trigger: event.target,
+        type: 'triggerOut',
+      });
+    }
+  }
+
+  /**
+   * Event handler for when the search input trigger is clicked,
+   * which opens/closes the search input.
+   *
+   * @param {MouseEvent} event - The clicked flyout trigger event object.
+   */
+  function _handleTriggerClicked(event) {
+    if (!_suspended) {
+      this.dispatchEvent('triggerClick', {
+        target: this,
+        trigger: event.target,
+        type: 'triggerClick',
+      });
+      event.preventDefault();
+      if (_isExpanded) {
+        this.collapse();
+      } else {
+        this.expand();
+      }
+    }
+  }
+
+  /**
+   * Open the search box.
+   *
+   * @returns {FlyoutMenu} An instance.
+   */
+  function expand() {
+    if (!_isExpanded && !_isAnimating) {
+      _isAnimating = true;
+      _deferFunct = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.noopFunct;
+      this.dispatchEvent('expandBegin', { target: this, type: 'expandBegin' });
+
+      if (_expandTransitionMethod) {
+        const hasTransition =
+          _expandTransition && _expandTransition.isAnimated();
+        if (hasTransition) {
+          _expandTransition.addEventListener(
+            _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
+            _expandEndBinded
+          );
+        }
+        _expandTransitionMethod.apply(
+          _expandTransition,
+          _expandTransitionMethodArgs
+        );
+        if (!hasTransition) {
+          _expandEndBinded();
+        }
+      } else {
+        _expandEndBinded();
+      }
+    }
+
+    return this;
+  }
+
+  /**
+   * Close the search box.
+   * If collapse is called when expand animation is underway,
+   * save a deferred call to collapse, which is called when
+   * expand completes.
+   *
+   * @returns {FlyoutMenu} An instance.
+   */
+  function collapse() {
+    if (_isExpanded && !_isAnimating) {
+      _deferFunct = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.noopFunct;
+      _isAnimating = true;
+      _isExpanded = false;
+      this.dispatchEvent('collapseBegin', {
+        target: this,
+        type: 'collapseBegin',
+      });
+      if (_collapseTransitionMethod) {
+        const hasTransition =
+          _collapseTransition && _collapseTransition.isAnimated();
+        if (hasTransition) {
+          _collapseTransition.addEventListener(
+            _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
+            _collapseEndBinded
+          );
+        }
+        _collapseTransitionMethod.apply(
+          _collapseTransition,
+          _collapseTransitionMethodArgs
+        );
+        if (!hasTransition) {
+          _collapseEndBinded();
+        }
+      } else {
+        _collapseEndBinded();
+      }
+
+      for (let i = 0, len = _triggerDoms.length; i < len; i++) {
+        _setAriaAttr('expanded', _triggerDoms[i], false);
+      }
+
+      _setAriaAttr('expanded', _contentDom, false);
+    } else {
+      _deferFunct = _collapseBinded;
+    }
+
+    return this;
+  }
+
+  /**
+   * Expand animation has completed.
+   * Call deferred collapse function,
+   * if set (otherwise it will call a noop function).
+   */
+  function _expandEnd() {
+    _isAnimating = false;
+    _isExpanded = true;
+    if (_expandTransition) {
+      _expandTransition.removeEventListener(
+        _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
+        _expandEndBinded
+      );
+    }
+    this.dispatchEvent('expandEnd', { target: this, type: 'expandEnd' });
+
+    for (let i = 0, len = _triggerDoms.length; i < len; i++) {
+      _setAriaAttr('expanded', _triggerDoms[i], true);
+    }
+
+    _setAriaAttr('expanded', _contentDom, true);
+    // Call collapse, if it was called while expand was animating.
+    _deferFunct();
+  }
+
+  /**
+   * Collapse animation has completed.
+   */
+  function _collapseEnd() {
+    _isAnimating = false;
+    if (_collapseTransition) {
+      _collapseTransition.removeEventListener(
+        _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
+        _collapseEndBinded
+      );
+    }
+    this.dispatchEvent('collapseEnd', { target: this, type: 'collapseEnd' });
+  }
+
+  /**
+   * @param {MoveTransition|AlphaTransition} transition - A transition instance
+   *   to watch for events on.
+   * @param {Function} method - The transition method to call on expand.
+   * @param {Array} [args] - List of arguments to apply to expand method.
+   */
+  function setExpandTransition(transition, method, args) {
+    _expandTransition = transition;
+    _expandTransitionMethod = method;
+    _expandTransitionMethodArgs = args;
+  }
+
+  /**
+   * @param {MoveTransition|AlphaTransition} transition - A transition instance
+   *   to watch for events on.
+   * @param {Function} method - The transition method to call on collapse.
+   * @param {Array} [args] - List of arguments to apply to collapse method.
+   */
+  function setCollapseTransition(transition, method, args) {
+    _collapseTransition = transition;
+    _collapseTransitionMethod = method;
+    _collapseTransitionMethodArgs = args;
+
+    if (!_isExpanded) {
+      _collapseTransition.animateOff();
+      _collapseTransitionMethod();
+      _collapseTransition.animateOn();
+    }
+  }
+
+  /**
+   * Clear the transitions attached to this FlyoutMenu instance.
+   */
+  function clearTransitions() {
+    let transition = getTransition(FlyoutMenu.EXPAND_TYPE);
+    if (transition) {
+      transition.remove();
+    }
+    transition = getTransition(FlyoutMenu.COLLAPSE_TYPE);
+    if (transition) {
+      transition.remove();
+    }
+
+    let UNDEFINED;
+
+    _expandTransition = UNDEFINED;
+    _expandTransitionMethod = UNDEFINED;
+    _expandTransitionMethodArgs = [];
+
+    _collapseTransition = UNDEFINED;
+    _collapseTransitionMethod = UNDEFINED;
+    _collapseTransitionMethodArgs = [];
+  }
+
+  /**
+   * @param {string} [type] - The type of transition to return.
+   *   Accepts 'expand' or 'collapse'.
+   *   `FlyoutMenu.EXPAND_TYPE` and `FlyoutMenu.COLLAPSE_TYPE` can be used
+   *   as type-safe constants passed into this method.
+   *   If neither or something else is supplied, expand type is returned.
+   * @returns {MoveTransition|AlphaTransition|undefined} A transition instance
+   *   set on this instance, or undefined if none is set.
+   */
+  function getTransition(type) {
+    if (type === FlyoutMenu.COLLAPSE_TYPE) {
+      return _collapseTransition;
+    }
+
+    return _expandTransition;
+  }
+
+  /**
+   * @returns {object}
+   *   Hash of container, content DOM references, and a list of trigger DOMs.
+   */
+  function getDom() {
+    return {
+      container: _dom,
+      content: _contentDom,
+      trigger: _triggerDoms,
+    };
+  }
+
+  /**
+   * Enable broadcasting of trigger events.
+   *
+   * @returns {boolean} True if resumed, false otherwise.
+   */
+  function resume() {
+    if (_suspended) {
+      _suspended = false;
+    }
+
+    return !_suspended;
+  }
+
+  /**
+   * Suspend broadcasting of trigger events.
+   *
+   * @returns {boolean} True if suspended, false otherwise.
+   */
+  function suspend() {
+    if (!_suspended) {
+      _suspended = true;
+    }
+
+    return _suspended;
+  }
+
+  /**
+   * @returns {number | string | object} A data identifier
+   *   such as an Array index, Hash key, or Tree node.
+   */
+  function getData() {
+    return _data;
+  }
+
+  /**
+   * @param {number | string | object} data - A data identifier
+   *   such as an Array index, Hash key, or Tree node.
+   * @returns {FlyoutMenu} An instance.
+   */
+  function setData(data) {
+    _data = data;
+
+    return this;
+  }
+
+  /**
+   * @returns {boolean} True if menu is animating, false otherwise.
+   */
+  function isAnimating() {
+    return _isAnimating;
+  }
+
+  /**
+   * @returns {boolean} True if menu is expanded, false otherwise.
+   */
+  function isExpanded() {
+    return _isExpanded;
+  }
+
+  // Attach public events.
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  this.addEventListener = eventObserver.addEventListener;
+  this.removeEventListener = eventObserver.removeEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+
+  this.init = init;
+  this.expand = expand;
+  this.collapse = collapse;
+  this.setExpandTransition = setExpandTransition;
+  this.setCollapseTransition = setCollapseTransition;
+  this.clearTransitions = clearTransitions;
+  this.getData = getData;
+  this.getTransition = getTransition;
+  this.getDom = getDom;
+  this.isAnimating = isAnimating;
+  this.isExpanded = isExpanded;
+  this.resume = resume;
+  this.setData = setData;
+  this.suspend = suspend;
+
+  // Public static properties.
+  FlyoutMenu.EXPAND_TYPE = 'expand';
+  FlyoutMenu.COLLAPSE_TYPE = 'collapse';
+  FlyoutMenu.BASE_CLASS = BASE_CLASS;
+
+  return this;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (FlyoutMenu);
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-atomic-component/src/utilities/behavior/behavior.js":
+/*!***************************************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/utilities/behavior/behavior.js ***!
+  \***************************************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "attach": function() { return /* binding */ attach; },
+/* harmony export */   "checkBehaviorDom": function() { return /* binding */ checkBehaviorDom; },
+/* harmony export */   "find": function() { return /* binding */ find; },
+/* harmony export */   "remove": function() { return /* binding */ remove; }
+/* harmony export */ });
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/data-hook.js */ "./packages/cfpb-atomic-component/src/utilities/data-hook.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
+/* ==========================================================================
+   Dom Behaviors
+   Behaviors are functionality that can be shared between different pieces
+   of markup. They are not strictly atomic, though they likely are used
+   on atomic components. An example of shared behavior may be a menu that
+   expands and collapses and sets the aria-expanded attribute on the HTML.
+   Or an input field that can be cleared by clicking an (x) button in the
+   input. These are both behaviors that may appear in different parts of
+   the codebase, but could share the same functionality.
+   Behaviors are added through the `data-js-hook` attribute on the HTML
+   and have a prefix of `behavior_`
+   (both those designators are set in modules/util/standard-type.js).
+   For example, `behaviors/FlyoutMenu.js` defines the behavior of
+   expanding and collapsing an expandable menu. At a minimum, three things
+   need to be defined: (A) The containing scope of the menu, (B) the trigger
+   to activate the menu, and (C) the content to show/hide when the trigger
+   is clicked. So the markup looks something like:
+   <div data-js-hook="behavior_flyout-menu">
+   <button data-js-hook="behavior_flyout-menu_trigger">
+   <div data-js-hook="behavior_flyout-menu_content">
+   ========================================================================== */
+
+
+
+
+/**
+ * @param {string} behaviorSelector - Behavior type used to find the element
+ *   within the dom.
+ * @param {HTMLElement} baseElement - Containing element for the behavior element.
+ * @returns {Array|NodeList} behaviorElements if it exists in the dom,
+ *   null otherwise.
+ */
+function _findElements(behaviorSelector, baseElement) {
+  baseElement = baseElement || document;
+  let behaviorElements = [];
+
+  try {
+    behaviorElements = baseElement.querySelectorAll(behaviorSelector);
+  } catch (error) {
+    const msg = `${behaviorSelector} not found in DOM! ${error}`;
+    throw new Error(msg);
+  }
+
+  if (
+    behaviorElements.length === 0 &&
+    behaviorSelector.indexOf(_cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.BEHAVIOR_PREFIX) === -1
+  ) {
+    behaviorElements = find(behaviorSelector, baseElement);
+  }
+
+  return behaviorElements;
+}
+
+/**
+ * @param {( string|HTMLElement|Array|NodeList )} behaviorElement - Used to
+ *   query dom for elements.
+ * @param {string} event - Event type to add to element.
+ * @param {Function} eventHandler - Callback for event.
+ * @param {HTMLElement} baseElement - Containing element
+ *   for the behavior element.
+ * @returns {Array|NodeList} if it exists in the dom, null otherwise.
+ */
+function attach(behaviorElement, event, eventHandler, baseElement) {
+  let behaviorElements = [];
+
+  if (behaviorElement instanceof NodeList === true) {
+    behaviorElements = behaviorElement;
+  } else if (behaviorElement instanceof Node === true) {
+    behaviorElements = [behaviorElement];
+  } else if (typeof behaviorElement === 'string') {
+    behaviorElements = _findElements(behaviorElement, baseElement);
+  }
+
+  for (let i = 0, len = behaviorElements.length; i < len; i++) {
+    behaviorElements[i].addEventListener(event, eventHandler, false);
+  }
+
+  return behaviorElements;
+}
+
+/**
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the behavior in the data-js-hook attribute.
+ * @param {string} behaviorDataAttr - The value in the data-js-hook.
+ *   This is the name of the behavior.
+ *   E.g. `behavior_flyout-menu`, `behavior_flyout-menu_content`.
+ * @returns {HTMLElement} The DOM element that has an attached behavior.
+ * @throws {Error} If data-js-hook attribute value was not found on DOM element.
+ */
+function checkBehaviorDom(element, behaviorDataAttr) {
+  // Check that the behavior is found on the passed DOM node.
+  let dom;
+
+  if ((0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.contains)(element, behaviorDataAttr)) {
+    dom = element;
+    return dom;
+  }
+
+  /* If the passed DOM node isn't null,
+     query the node to see if it's in the children. */
+  if (element) {
+    const selector = '[' + _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.JS_HOOK + '=' + behaviorDataAttr + ']';
+    dom = element.querySelector(selector);
+  }
+
+  if (!dom) {
+    const msg = behaviorDataAttr + ' behavior not found on passed DOM node!';
+    throw new Error(msg);
+  }
+
+  return dom;
+}
+
+/**
+ * @param {string} behaviorSelector - Behavior type used to find
+ *   the element within the dom.
+ * @param {HTMLElement} baseElement - Containing element
+ *   for the behavior element.
+ * @returns {NodeList} if it exists in the dom, null otherwise.
+ */
+function find(behaviorSelector, baseElement) {
+  behaviorSelector = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.JS_HOOK + '*=' + _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.BEHAVIOR_PREFIX + behaviorSelector;
+  behaviorSelector = '[' + behaviorSelector + ']';
+
+  return _findElements(behaviorSelector, baseElement);
+}
+
+/**
+ * @param {HTMLElement} behaviorElement - Element in which to remove the event.
+ * @param {string} event - Event type to remove from the element.
+ * @param {Function} eventHandler - Callback for event.
+ */
+function remove(behaviorElement, event, eventHandler) {
+  behaviorElement.removeEventListener(event, eventHandler);
+}
+
+// Expose public methods.
+
+
+
+/***/ }),
+
 /***/ "./packages/cfpb-atomic-component/src/utilities/data-hook.js":
 /*!*******************************************************************!*\
   !*** ./packages/cfpb-atomic-component/src/utilities/data-hook.js ***!
@@ -4124,9 +4820,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
-/* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
-/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
-/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js");
+/* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
+/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
+/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
 
 
 
@@ -4137,8 +4834,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_redirect_banner_js__WEBPACK_IMPORTED_MODULE_8__["default"].init();
-_sidebar_js__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+
+_redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+_sidebar_js__WEBPACK_IMPORTED_MODULE_10__["default"].init();
 var anchors = new anchor_js__WEBPACK_IMPORTED_MODULE_1__();
 // Add anchors to all headings (except page title headings)
 anchors.add('h2:not(.title), h3, h4, h5');
@@ -4156,13 +4854,14 @@ _cfpb_cfpb_expandables_src_Expandable_js__WEBPACK_IMPORTED_MODULE_2__["default"]
 window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__["default"];
 window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__["default"];
 window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__["default"];
+window.FlyoutMenu = _cfpb_cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_7__["default"];
 
 // Tabs show under the show/hide details button on a pattern.
-var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_7__["default"].BASE_CLASS));
+var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_8__["default"].BASE_CLASS));
 if (tabsContainerDom.length > 0) {
   var tabsInst;
   for (var i = 0, len = tabsContainerDom.length; i < len; i++) {
-    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_7__["default"](tabsContainerDom[i]);
+    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_8__["default"](tabsContainerDom[i]);
     tabsInst.init();
   }
 }

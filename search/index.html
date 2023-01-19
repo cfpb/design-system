@@ -6792,6 +6792,35 @@ Disabled
 &lt;/script&gt;`,
                 
             
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Flyout behavior',
+                    'variation_description1': "A “flyout behavior” can be attached to a arbitrary container that contains one or more triggers and a content area. The flyout handles aria-expanded attribute toggling and dispatches the following events: triggerOver, triggerOut, triggerClick, expandBegin, expandEnd, collapseBegin, collapseEnd. This handles the markup semantics of toggling a content area, which can then be combined with a transition from above to create an animated container that shows and hides content.\n",
+                    'variation_code_snippet1': `&lt;div class=&quot;example-flyout&quot; data-js-hook=&quot;behavior_flyout-menu&quot;&gt;
+  &lt;button class=&quot;example-btn&quot; data-js-hook=&quot;behavior_flyout-menu_trigger&quot;&gt;
+    Click me! v
+  &lt;/button&gt;
+  &lt;div class=&quot;example-flyout-content&quot; data-js-hook=&quot;behavior_flyout-menu_content&quot;&gt;
+    Show this content
+    &lt;button class=&quot;example-btn&quot; data-js-hook=&quot;behavior_flyout-menu_trigger&quot;&gt;
+      Click me! ^
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt; &lt;script&gt;
+  const flyoutExample = document.querySelector( &#39;.example-flyout&#39; );
+  const flyoutExampleContent = document.querySelector(
+    &#39;.example-flyout-content&#39;
+  );
+  const transition = new MaxHeightTransition(flyoutExampleContent).init();
+  const flyout = new FlyoutMenu(flyoutExample);
+  flyout.setExpandTransition(transition, transition.maxHeightDefault);
+  flyout.setCollapseTransition(transition, transition.maxHeightZero);
+  flyout.init();
+&lt;/script&gt;`,
+                
+            
 
 
             'title': 'Transition patterns',

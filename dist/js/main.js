@@ -11,7 +11,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* globals module:false */
 
 // https://github.com/umdjs/umd/blob/master/templates/returnExports.js
-(function (root, factory) {
+(function(root, factory) {
   'use strict';
 
   if (true) {
@@ -21,7 +21,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
   } else {}
-}(this, function () {
+}(globalThis, function() {
   'use strict';
 
   function AnchorJS(options) {
@@ -34,7 +34,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
      */
     function _applyRemainingDefaultOptions(opts) {
       opts.icon = Object.prototype.hasOwnProperty.call(opts, 'icon') ? opts.icon : '\uE9CB'; // Accepts characters (and also URLs?), like  '#', '¶', '❡', or '§'.
-      opts.visible = Object.prototype.hasOwnProperty.call(opts, 'visible') ? opts.visible : 'hover'; // Also accepts 'always' & 'touch'
+      opts.visible = Object.prototype.hasOwnProperty.call(opts, 'visible') ? opts.visible : 'hover'; // Also accepts 'always'
       opts.placement = Object.prototype.hasOwnProperty.call(opts, 'placement') ? opts.placement : 'right'; // Also accepts 'left'
       opts.ariaLabel = Object.prototype.hasOwnProperty.call(opts, 'ariaLabel') ? opts.ariaLabel : 'Anchor'; // Accepts any text.
       opts.class = Object.prototype.hasOwnProperty.call(opts, 'class') ? opts.class : ''; // Accepts any class name.
@@ -45,15 +45,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }
 
     _applyRemainingDefaultOptions(this.options);
-
-    /**
-     * Checks to see if this device supports touch. Uses criteria pulled from Modernizr:
-     * https://github.com/Modernizr/Modernizr/blob/da22eb27631fc4957f67607fe6042e85c0a84656/feature-detects/touchevents.js#L40
-     * @return {Boolean} - true if the current device supports touch.
-     */
-    this.isTouchDevice = function() {
-      return Boolean('ontouchstart' in window || window.TouchEvent || window.DocumentTouch && document instanceof DocumentTouch);
-    };
 
     /**
      * Add anchor links to page elements.
@@ -72,7 +63,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           tidyText,
           newTidyText,
           anchor,
-          visibleOptionToUse,
           hrefBase,
           indexesToDrop = [];
 
@@ -81,11 +71,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       //
       // anchors.options = { visible: 'always'; }
       _applyRemainingDefaultOptions(this.options);
-
-      visibleOptionToUse = this.options.visible;
-      if (visibleOptionToUse === 'touch') {
-        visibleOptionToUse = this.isTouchDevice() ? 'always' : 'hover';
-      }
 
       // Provide a sensible default selector, if none is given.
       if (!selector) {
@@ -159,7 +144,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         hrefBase = this.options.base || hrefBase;
         anchor.href = hrefBase + '#' + elementID;
 
-        if (visibleOptionToUse === 'always') {
+        if (this.options.visible === 'always') {
           anchor.style.opacity = '1';
         }
 
@@ -177,11 +162,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
         if (this.options.placement === 'left') {
           anchor.style.position = 'absolute';
-          anchor.style.marginLeft = '-1em';
-          anchor.style.paddingRight = '.5em';
+          anchor.style.marginLeft = '-1.25em';
+          anchor.style.paddingRight = '.25em';
+          anchor.style.paddingLeft = '.25em';
           elements[i].insertBefore(anchor, elements[i].firstChild);
         } else { // if the option provided is `right` (or anything else).
-          anchor.style.paddingLeft = '.375em';
+          anchor.style.marginLeft = '.1875em';
+          anchor.style.paddingRight = '.1875em';
+          anchor.style.paddingLeft = '.1875em';
           elements[i].appendChild(anchor);
         }
       }
@@ -291,7 +279,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       if (typeof input === 'string' || input instanceof String) {
         // See https://davidwalsh.name/nodelist-array for the technique transforming nodeList -> Array.
         elements = [].slice.call(document.querySelectorAll(input));
-      // I checked the 'input instanceof NodeList' test in IE9 and modern browsers and it worked for me.
       } else if (Array.isArray(input) || input instanceof NodeList) {
         elements = [].slice.call(input);
       } else {
@@ -1769,6 +1756,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 /* harmony import */ var _behavior_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./behavior.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/behavior.js");
+/* eslint-disable no-use-before-define */
 
 
 
@@ -1800,7 +1788,6 @@ const SEL_PREFIX = '[' + _cfpb_cfpb_atomic_component_src_utilities_standard_type
  * @returns {FlyoutMenu} An instance.
  */
 function FlyoutMenu(element) {
-  // eslint-disable-line max-statements, no-inline-comments, max-len
   // Verify that the expected dom attributes are present.
   const _dom = (0,_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom)(element, BASE_CLASS);
   const _triggerDoms = _findTriggers(element);
@@ -2120,7 +2107,7 @@ function FlyoutMenu(element) {
   }
 
   /**
-   * @param {MoveTransition|AlphaTransition} transition - A transition instance
+   * @param {BaseTransition} transition - A transition instance
    *   to watch for events on.
    * @param {Function} method - The transition method to call on expand.
    * @param {Array} [args] - List of arguments to apply to expand method.
@@ -2132,7 +2119,7 @@ function FlyoutMenu(element) {
   }
 
   /**
-   * @param {MoveTransition|AlphaTransition} transition - A transition instance
+   * @param {BaseTransition} transition - A transition instance
    *   to watch for events on.
    * @param {Function} method - The transition method to call on collapse.
    * @param {Array} [args] - List of arguments to apply to collapse method.
@@ -2179,7 +2166,7 @@ function FlyoutMenu(element) {
    *   `FlyoutMenu.EXPAND_TYPE` and `FlyoutMenu.COLLAPSE_TYPE` can be used
    *   as type-safe constants passed into this method.
    *   If neither or something else is supplied, expand type is returned.
-   * @returns {MoveTransition|AlphaTransition|undefined} A transition instance
+   * @returns {BaseTransition|undefined} A transition instance
    *   set on this instance, or undefined if none is set.
    */
   function getTransition(type) {
@@ -2358,6 +2345,7 @@ function _findElements(behaviorSelector, baseElement) {
     behaviorElements.length === 0 &&
     behaviorSelector.indexOf(_cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.BEHAVIOR_PREFIX) === -1
   ) {
+    // eslint-disable-next-line no-use-before-define
     behaviorElements = find(behaviorSelector, baseElement);
   }
 
@@ -3878,8 +3866,6 @@ const BASE_CLASS = 'o-multiselect';
  * @returns {Multiselect} An instance.
  */
 function Multiselect(element) {
-  // eslint-disable-line max-statements
-
   const CHECKBOX_INPUT_CLASS = 'a-checkbox';
   const TEXT_INPUT_CLASS = 'a-text-input';
 
@@ -4768,7 +4754,7 @@ function create(tag, parentNode, options) {
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;

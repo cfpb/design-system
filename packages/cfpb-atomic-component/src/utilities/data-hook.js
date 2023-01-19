@@ -1,4 +1,3 @@
-// Required modules.
 import { JS_HOOK } from './standard-type.js';
 
 /**

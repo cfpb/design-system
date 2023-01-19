@@ -32,7 +32,8 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: The warning banner is used to display high-priority
+        variation_description:
+          The warning banner is used to display high-priority
           system or product level notifications that are not specific to an
           immediate task.
         variation_name: Warning banner
@@ -68,7 +69,8 @@ variation_groups:
               </div>
           </div>
         variation_name: Archived content banner
-        variation_description: The archived content banner is used to identify website
+        variation_description:
+          The archived content banner is used to identify website
           pages that are outdated and should no longer be referenced for
           guidance. These pages may have historical value or significance to
           researchers, historians, and the public.
@@ -86,7 +88,7 @@ use_cases: Use the banner notification to communicate important information
   related to a specific task. Use the inline notification instead when calling
   out specific page content or when alerting users as to information that is
   relevant to the immediate task.
-behavior: ""
+behavior: ''
 related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
   s/notifications)"
 last_updated: 2020-01-28T15:55:47.394Z

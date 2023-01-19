@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import {
   BEHAVIOR_PREFIX,
   JS_HOOK,
@@ -33,7 +34,6 @@ const SEL_PREFIX = '[' + JS_HOOK + '=' + BASE_CLASS;
  * @returns {FlyoutMenu} An instance.
  */
 function FlyoutMenu(element) {
-  // eslint-disable-line max-statements, no-inline-comments, max-len
   // Verify that the expected dom attributes are present.
   const _dom = checkBehaviorDom(element, BASE_CLASS);
   const _triggerDoms = _findTriggers(element);
@@ -353,7 +353,7 @@ function FlyoutMenu(element) {
   }
 
   /**
-   * @param {MoveTransition|AlphaTransition} transition - A transition instance
+   * @param {BaseTransition} transition - A transition instance
    *   to watch for events on.
    * @param {Function} method - The transition method to call on expand.
    * @param {Array} [args] - List of arguments to apply to expand method.
@@ -365,7 +365,7 @@ function FlyoutMenu(element) {
   }
 
   /**
-   * @param {MoveTransition|AlphaTransition} transition - A transition instance
+   * @param {BaseTransition} transition - A transition instance
    *   to watch for events on.
    * @param {Function} method - The transition method to call on collapse.
    * @param {Array} [args] - List of arguments to apply to collapse method.
@@ -412,7 +412,7 @@ function FlyoutMenu(element) {
    *   `FlyoutMenu.EXPAND_TYPE` and `FlyoutMenu.COLLAPSE_TYPE` can be used
    *   as type-safe constants passed into this method.
    *   If neither or something else is supplied, expand type is returned.
-   * @returns {MoveTransition|AlphaTransition|undefined} A transition instance
+   * @returns {BaseTransition|undefined} A transition instance
    *   set on this instance, or undefined if none is set.
    */
   function getTransition(type) {

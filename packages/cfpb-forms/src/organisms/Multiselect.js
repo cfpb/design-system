@@ -22,8 +22,6 @@ const BASE_CLASS = 'o-multiselect';
  * @returns {Multiselect} An instance.
  */
 function Multiselect(element) {
-  // eslint-disable-line max-statements
-
   const CHECKBOX_INPUT_CLASS = 'a-checkbox';
   const TEXT_INPUT_CLASS = 'a-text-input';
 

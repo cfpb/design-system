@@ -48,6 +48,7 @@ function _findElements(behaviorSelector, baseElement) {
     behaviorElements.length === 0 &&
     behaviorSelector.indexOf(BEHAVIOR_PREFIX) === -1
   ) {
+    // eslint-disable-next-line no-use-before-define
     behaviorElements = find(behaviorSelector, baseElement);
   }
 

@@ -1771,7 +1771,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "remove": function() { return /* binding */ remove; }
 /* harmony export */ });
 /* harmony import */ var _standard_type_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
-// Required modules.
 
 
 /**
@@ -1967,7 +1966,6 @@ const DIRECTIONS = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-// Required modules.
 
 
 
@@ -2069,7 +2067,6 @@ AlphaTransition.CLASSES = CLASSES;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-// Required modules.
 
 
 // eslint-disable-next-line max-statements
@@ -2378,7 +2375,6 @@ BaseTransition.ANIMATING_CLASS = 'u-is-animating';
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-// Required modules.
 
 
 
@@ -2544,7 +2540,6 @@ MaxHeightTransition.CLASSES = CLASSES;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-// Required modules.
 
 
 
@@ -3015,7 +3010,6 @@ const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-// Required modules.
 
 
 
@@ -3167,7 +3161,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
 /* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
 /* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
-// Required modules.
 
 
 

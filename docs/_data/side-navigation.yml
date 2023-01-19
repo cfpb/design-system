@@ -33,6 +33,7 @@ first-level:
       - heading: Behavior
         nav-items:
           - page: Expandables
+          - page: Summaries
       - heading: Form elements
         nav-items:
           - page: Buttons

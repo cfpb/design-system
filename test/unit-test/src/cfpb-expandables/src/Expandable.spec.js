@@ -1,3 +1,4 @@
+import ExpandableGroup from '@cfpb/cfpb-expandables/src/ExpandableGroup.js';
 import Expandable from '../../../../../packages/cfpb-expandables/src/Expandable.js';
 import simulateEvent from '../../../../util/simulate-event.js';
 
@@ -57,6 +58,32 @@ const HTML_SNIPPET = `
         </div>
     </div>
 </div>
+
+<div class="o-expandable o-expandable__padded" id="test-subject-two">
+    <button class="o-expandable_header o-expandable_target"
+            title="Expand content">
+        <span class="o-expandable_header-left o-expandable_label">
+            Expandable Header 3
+        </span>
+        <span class="o-expandable_link">
+            <span class="o-expandable_cue o-expandable_cue-open">
+                Show
+            </span>
+            <span class="o-expandable_cue o-expandable_cue-close">
+                Hide
+            </span>
+        </span>
+    </button>
+    <div class="o-expandable_content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
+    </div>
+</div>
 `;
 
 let expandable;
@@ -79,41 +106,30 @@ describe('standard Expandable', () => {
     contentDom2 = expandableDom2.querySelector('.o-expandable_content');
     contentDom2.classList.add('o-expandable_content__onload-open');
 
+    ExpandableGroup.init();
     expandable = Expandable.init()[0];
   });
 
   describe('initialized state', () => {
     it('should be initialized', () => {
       expect(expandableDom1.getAttribute('data-js-hook')).toBe(
-        'state_atomic_init'
+        'state_atomic_init behavior_flyout-menu'
       );
       expect(expandableDom2.getAttribute('data-js-hook')).toBe(
-        'state_atomic_init'
+        'state_atomic_init behavior_flyout-menu'
       );
     });
 
     it('should be collapsed when the OPEN_DEFAULT class is not present', () => {
-      expect(contentDom1.style.maxHeight).toBe('0');
-      expect(
-        targetDom1.classList.contains('o-expandable_target__expanded')
-      ).toBe(false);
-      expect(
-        targetDom1.classList.contains('o-expandable_target__collapsed')
-      ).toBe(true);
+      expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
     });
 
     it('should be expanded when the OPEN_DEFAULT class is present', () => {
-      expect(contentDom2.style.maxHeight).not.toBe('0');
-      expect(
-        targetDom2.classList.contains('o-expandable_target__expanded')
-      ).toBe(true);
-      expect(
-        targetDom2.classList.contains('o-expandable_target__collapsed')
-      ).toBe(false);
+      expect(targetDom2.getAttribute('aria-expanded')).toBe('true');
     });
 
     it('should return label text', () => {
-      expect(expandable.getLabelText() === 'Expandable Header 1');
+      expect(expandable.getLabelText() === 'Expandable Header 3');
     });
   });
 
@@ -121,26 +137,30 @@ describe('standard Expandable', () => {
     it('should expand on click', () => {
       simulateEvent('click', targetDom1);
 
-      expect(contentDom1.style.maxHeight).not.toBe('0');
-      expect(
-        targetDom1.classList.contains('o-expandable_target__expanded')
-      ).toBe(true);
-      expect(
-        targetDom1.classList.contains('o-expandable_target__collapsed')
-      ).toBe(false);
+      /* The transitionend event should fire on its own,
+         but for some reason the transitionend event is not firing within JSDom.
+         In a future JSDom update this should be revisited.
+         See https://github.com/jsdom/jsdom/issues/1781
+      */
+      const event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
+
+      expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
     });
 
     it('should go back to initial state on second click', () => {
       simulateEvent('click', targetDom1);
-      simulateEvent('click', targetDom1);
+      let event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
 
-      expect(contentDom1.style.maxHeight).toBe('0');
-      expect(
-        targetDom1.classList.contains('o-expandable_target__expanded')
-      ).toBe(false);
-      expect(
-        targetDom1.classList.contains('o-expandable_target__collapsed')
-      ).toBe(true);
+      simulateEvent('click', targetDom1);
+      event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
+
+      expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
     });
   });
 });
@@ -157,27 +177,22 @@ describe('accordion Expandables', () => {
     targetDom1 = expandableDom1.querySelector('.o-expandable_target');
     targetDom2 = expandableDom2.querySelector('.o-expandable_target');
 
+    ExpandableGroup.init();
     expandable = Expandable.init()[1];
   });
 
   describe('initialized state', () => {
     it('should be initialized', () => {
       expect(expandableDom1.getAttribute('data-js-hook')).toBe(
-        'state_atomic_init'
+        'state_atomic_init behavior_flyout-menu'
       );
       expect(expandableDom2.getAttribute('data-js-hook')).toBe(
-        'state_atomic_init'
+        'state_atomic_init behavior_flyout-menu'
       );
     });
 
     it('should be collapsed when the OPEN_DEFAULT class is not present', () => {
-      expect(contentDom1.style.maxHeight).toBe('0');
-      expect(
-        targetDom1.classList.contains('o-expandable_target__expanded')
-      ).toBe(false);
-      expect(
-        targetDom1.classList.contains('o-expandable_target__collapsed')
-      ).toBe(true);
+      expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
     });
   });
 
@@ -185,81 +200,85 @@ describe('accordion Expandables', () => {
     it('should expand on a click', () => {
       simulateEvent('click', targetDom1);
 
-      expect(contentDom1.style.maxHeight).not.toBe('0');
-      expect(
-        targetDom1.classList.contains('o-expandable_target__expanded')
-      ).toBe(true);
-      expect(
-        targetDom1.classList.contains('o-expandable_target__collapsed')
-      ).toBe(false);
+      const event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
+
+      expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
     });
 
     it('should collapse on a second click', () => {
       simulateEvent('click', targetDom1);
-      simulateEvent('click', targetDom1);
+      let event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
 
-      expect(contentDom1.style.maxHeight).toBe('0');
-      expect(
-        targetDom1.classList.contains('o-expandable_target__expanded')
-      ).toBe(false);
-      expect(
-        targetDom1.classList.contains('o-expandable_target__collapsed')
-      ).toBe(true);
+      simulateEvent('click', targetDom1);
+      event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
+
+      expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
     });
 
     it('should expand on a third click', () => {
       simulateEvent('click', targetDom1);
-      simulateEvent('click', targetDom1);
-      simulateEvent('click', targetDom1);
+      let event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
 
-      expect(contentDom1.style.maxHeight).not.toBe('0');
-      expect(
-        targetDom1.classList.contains('o-expandable_target__expanded')
-      ).toBe(true);
-      expect(
-        targetDom1.classList.contains('o-expandable_target__collapsed')
-      ).toBe(false);
+      simulateEvent('click', targetDom1);
+      event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
+
+      simulateEvent('click', targetDom1);
+      event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
+
+      expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
     });
 
     it('should swap the expanded expandable', () => {
       simulateEvent('click', targetDom1);
-      simulateEvent('click', targetDom2);
+      let event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
 
-      expect(contentDom1.style.maxHeight).toBe('0');
-      expect(contentDom2.style.maxHeight).not.toBe('0');
-      expect(
-        targetDom1.classList.contains('o-expandable_target__expanded')
-      ).toBe(false);
-      expect(
-        targetDom1.classList.contains('o-expandable_target__collapsed')
-      ).toBe(true);
-      expect(
-        targetDom2.classList.contains('o-expandable_target__expanded')
-      ).toBe(true);
-      expect(
-        targetDom2.classList.contains('o-expandable_target__collapsed')
-      ).toBe(false);
+      simulateEvent('click', targetDom2);
+      event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom2.dispatchEvent(event);
+
+      expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
+      expect(targetDom2.getAttribute('aria-expanded')).toBe('true');
     });
 
     it('should swap the expanded expandable when reactivated', () => {
       simulateEvent('click', targetDom1);
-      simulateEvent('click', targetDom2);
-      simulateEvent('click', targetDom1);
+      let event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
 
-      expect(contentDom1.style.maxHeight).not.toBe('0');
-      expect(contentDom2.style.maxHeight).toBe('0');
-      expect(
-        targetDom1.classList.contains('o-expandable_target__expanded')
-      ).toBe(true);
-      expect(
-        targetDom1.classList.contains('o-expandable_target__collapsed')
-      ).toBe(false);
-      expect(
-        targetDom2.classList.contains('o-expandable_target__expanded')
-      ).toBe(false);
-      expect(
-        targetDom2.classList.contains('o-expandable_target__collapsed')
-      ).toBe(true);
+      simulateEvent('click', targetDom2);
+      event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
+      event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom2.dispatchEvent(event);
+
+      simulateEvent('click', targetDom1);
+      event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom1.dispatchEvent(event);
+      event = new Event('transitionend');
+      event.propertyName = 'max-height';
+      contentDom2.dispatchEvent(event);
+
+      expect(targetDom1.getAttribute('aria-expanded')).toBe('true');
+      expect(targetDom2.getAttribute('aria-expanded')).toBe('false');
     });
   });
 });

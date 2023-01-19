@@ -3,12 +3,37 @@ import {
   instantiateAll,
   setInitFlag,
 } from '../../../../../../packages/cfpb-atomic-component/src/utilities/atomic-helpers.js';
-import AtomicComponent from '../../../../../../packages/cfpb-atomic-component/src/components/AtomicComponent.js';
+import Expandable from '../../../../../../packages/cfpb-expandables/src/Expandable.js';
 
 let containerDom;
 let componentDom;
 const testClass = 'o-footer';
 const HTML_SNIPPET = `
+  <div class="o-expandable o-expandable__padded" id="test-subject-two">
+      <button class="o-expandable_header o-expandable_target"
+              title="Expand content">
+          <span class="o-expandable_header-left o-expandable_label">
+              Expandable Header 3
+          </span>
+          <span class="o-expandable_link">
+              <span class="o-expandable_cue o-expandable_cue-open">
+                  Show
+              </span>
+              <span class="o-expandable_cue o-expandable_cue-close">
+                  Hide
+              </span>
+          </span>
+      </button>
+      <div class="o-expandable_content">
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+              temporibus magnam debitis quidem. Ducimus ratione
+              corporis nesciunt earum vel est quaerat blanditiis
+              dolore ipsa?
+          </p>
+      </div>
+  </div>
   <div class="container">
     <div class="o-footer"></div>
     <div class="o-footer"></div>
@@ -61,23 +86,23 @@ describe('atomic-helpers', () => {
 
   describe('.instantiateAll()', () => {
     it('should return an array of instances', () => {
-      const instArr = instantiateAll(`.${testClass}`, AtomicComponent);
+      const instArr = instantiateAll('.o-expandable', Expandable);
       expect(instArr).toBeInstanceOf(Array);
-      expect(instArr.length).toBe(2);
-      const instArr2 = instantiateAll(`.${testClass}`, AtomicComponent);
+      expect(instArr.length).toBe(1);
+      const instArr2 = instantiateAll('.o-expandable', Expandable);
       expect(instArr2).toBeInstanceOf(Array);
       expect(instArr2.length).toBe(0);
     });
 
     it('should return an empty array if no instances found', () => {
-      const instArr = instantiateAll('.missing-class', AtomicComponent);
+      const instArr = instantiateAll('.missing-class', Expandable);
       expect(instArr).toBeInstanceOf(Array);
       expect(instArr.length).toBe(0);
     });
 
     it('should not return instances that have already been initialized', () => {
       componentDom.setAttribute('data-js-hook', 'state_atomic_init');
-      const instArr = instantiateAll(`.${testClass}`, AtomicComponent);
+      const instArr = instantiateAll('.o-expandable', Expandable);
       expect(instArr).toBeInstanceOf(Array);
       expect(instArr.length).toBe(1);
     });

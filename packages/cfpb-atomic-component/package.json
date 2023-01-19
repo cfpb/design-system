@@ -7,9 +7,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "ftdomdelegate": "3.1.0"
-  },
   "keywords": [
     "atomic-component"
   ],

@@ -1,5 +1,6 @@
 import { toggleAllDetails, toggleDetails } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
+import ExpandableGroup from '@cfpb/cfpb-expandables/src/ExpandableGroup.js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable.js';
 import Multiselect from '@cfpb/cfpb-forms/src/organisms/Multiselect.js';
 import AlphaTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js';
@@ -32,6 +33,7 @@ if (multiselectDom) {
   multiselect.init();
 }
 
+ExpandableGroup.init();
 Expandable.init();
 
 // Exporting these classes to the window so that the transition-patterns.md

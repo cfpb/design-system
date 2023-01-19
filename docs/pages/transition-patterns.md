@@ -183,7 +183,8 @@ variation_groups:
   - variation_group_name: Behavior
     variations:
       - variation_name: Flyout behavior
-        variation_description: 'A "flyout behavior" can be attached to a arbitrary
+        variation_description:
+          'A "flyout behavior" can be attached to a arbitrary
           container that contains one or more triggers and a content area. The
           flyout handles `aria-expanded` attribute toggling and dispatches the
           following events: `triggerOver`, `triggerOut`, `triggerClick`,
@@ -202,7 +203,8 @@ variation_groups:
                 Click me! ^
               </button>
             </div>
-          </div> <script>
+          </div>
+          <script>
             const flyoutExample = document.querySelector( '.example-flyout' );
             const flyoutExampleContent = document.querySelector(
               '.example-flyout-content'
@@ -224,7 +226,8 @@ variation_groups:
                 Click me! ^
               </button>
             </div>
-          </div> <script>
+          </div>
+          <script>
             document.addEventListener( 'DOMContentLoaded', function() {
               const flyoutExample = document.querySelector( '.example-flyout' );
               const flyoutExampleContent = document.querySelector(
@@ -306,15 +309,15 @@ variation_groups:
           flyout.init();
 
           ```
-guidelines: ""
+guidelines: ''
 eyebrow: Transitions
 status: Released
 description: Transition patterns are animations that happen when a user
   interacts with an element on the page. They are CSS transition styles that are
   controlled via JavaScript.
-use_cases: ""
-behavior: ""
-accessibility: ""
+use_cases: ''
+behavior: ''
+accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

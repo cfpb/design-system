@@ -48,7 +48,7 @@
   },
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",
   "dependencies": {
-    "anchor-js": "4.3.1",
+    "anchor-js": "5.0.0",
     "html-entities": "2.3.3",
     "lunr": "2.3.9",
     "marked": "4.2.12",
@@ -77,7 +77,7 @@
     "eslint": "8.32.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-jsdoc": "39.6.4",
+    "eslint-plugin-jsdoc": "39.6.6",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.1",
     "filemanager-webpack-plugin": "8.0.0",

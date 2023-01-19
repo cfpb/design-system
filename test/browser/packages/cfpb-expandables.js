@@ -12,19 +12,19 @@ describe('Basic CFPB expandable', () => {
     expandableContent = await $('.a-live_code .o-expandable_content');
   });
 
-  it('should hide expandable content on page load', async () => {
-    await expect(expandableContent).not.toBeDisplayed();
+  it('should hide expandable content on page load', () => {
+    expect(expandableContent).not.toBeDisplayed();
   });
 
   it('should open expandable when header is clicked', async () => {
     await expandableHeader.click();
     await expandableContent.waitForDisplayed();
-    await expect(expandableContent).toBeDisplayed();
+    expect(expandableContent).toBeDisplayed();
   });
 
   it('should close expandable when header is clicked again', async () => {
     await expandableHeader.click();
     await expandableContent.waitForDisplayed({ reverse: true });
-    await expect(expandableContent).not.toBeDisplayed();
+    expect(expandableContent).not.toBeDisplayed();
   });
 });

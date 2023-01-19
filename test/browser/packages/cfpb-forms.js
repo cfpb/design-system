@@ -60,7 +60,7 @@ describe('Multiselect', () => {
     // If the scrollTop of the fieldset is zero, it means no scrolling was necessary to reach
     // the last multiselect option which indicates the options aren't contained within the
     // scrollable area and are spilling over due to a browser or CSS bug.
-    expect(multiselectFieldsetScrollTop).toBeGreaterThan(0);
+    await expect(multiselectFieldsetScrollTop).toBeGreaterThan(0);
   });
 
   it('should correctly filter the multiselect options', async () => {
@@ -80,14 +80,14 @@ describe('Multiselect', () => {
 
     // Find option #4
     await multiselectInput.setValue('ion 4');
-    expect(firstMultiSelectOption).not.toBeDisplayed();
+    await expect(firstMultiSelectOption).not.toBeDisplayed();
     await expect(fourthMultiSelectOption).toBeDisplayed();
-    expect(longMultiSelectOption).not.toBeDisplayed();
+    await expect(longMultiSelectOption).not.toBeDisplayed();
 
     // Find the last really long option
     await multiselectInput.setValue('superca');
-    expect(firstMultiSelectOption).not.toBeDisplayed();
-    expect(fourthMultiSelectOption).not.toBeDisplayed();
+    await expect(firstMultiSelectOption).not.toBeDisplayed();
+    await expect(fourthMultiSelectOption).not.toBeDisplayed();
     await expect(longMultiSelectOption).toBeDisplayed();
   });
 
@@ -100,7 +100,7 @@ describe('Multiselect', () => {
 
     // Verify option1 can be removed
     await multiSelectChoice.click();
-    expect(multiSelectChoice).not.toExist();
+    await expect(multiSelectChoice).not.toExist();
   });
 
   it('should let the user add a choice', async () => {
@@ -116,6 +116,6 @@ describe('Multiselect', () => {
     const secondMultiSelectChoice = await $(
       '.a-live_code .o-multiselect_choices label[for=test_select__multiple-option2]'
     );
-    expect(secondMultiSelectChoice).toBeDisplayed();
+    await expect(secondMultiSelectChoice).toBeDisplayed();
   });
 });

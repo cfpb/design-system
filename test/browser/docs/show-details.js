@@ -40,13 +40,13 @@ describe('The "show details" toggling feature', () => {
             !(await showDetailsButton.isExisting()) ||
             !(await hideDetailsButton.isExisting())
           ) {
-            this.skip();
+            await this.skip();
           }
-          expect(showDetailsButton).toBeDisplayed();
-          expect(hideDetailsButton).not.toBeDisplayed();
+          await expect(showDetailsButton).toBeDisplayed();
+          await expect(hideDetailsButton).not.toBeDisplayed();
 
-          detailsTabs.some((snippet) => {
-            expect(snippet).not.toBeDisplayed();
+          detailsTabs.some(async (snippet) => {
+            await expect(snippet).not.toBeDisplayed();
           });
         });
 
@@ -55,11 +55,11 @@ describe('The "show details" toggling feature', () => {
             (await !showDetailsButton.isExisting()) ||
             (await !hideDetailsButton.isExisting())
           ) {
-            this.skip();
+            await this.skip();
           }
           await showDetailsButton.click();
-          expect(showDetailsButton).not.toBeDisplayed();
-          expect(hideDetailsButton).toBeDisplayed();
+          await expect(showDetailsButton).not.toBeDisplayed();
+          await expect(hideDetailsButton).toBeDisplayed();
           detailsTabs.some(async (snippet) => {
             await expect(snippet).toBeDisplayed();
           });
@@ -67,10 +67,10 @@ describe('The "show details" toggling feature', () => {
 
         it('should re-hide code snippets when toggle button is clicked again', async () => {
           await hideDetailsButton.click();
-          expect(showDetailsButton).toBeDisplayed();
-          expect(hideDetailsButton).not.toBeDisplayed();
-          detailsTabs.some((snippet) => {
-            expect(snippet).not.toBeDisplayed();
+          await expect(showDetailsButton).toBeDisplayed();
+          await expect(hideDetailsButton).not.toBeDisplayed();
+          detailsTabs.some(async (snippet) => {
+            await expect(snippet).not.toBeDisplayed();
           });
         });
       });

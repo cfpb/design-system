@@ -274,7 +274,8 @@ function BaseTransition(element, classes) {
 
   /**
    * Passes events fired on BaseTransition to the passed event target.
-   * @param {Object} eventTarget - A child transition to proxy events to.
+   *
+   * @param {object} eventTarget - A child transition to proxy events to.
    * @param {Function} transitionComplete - what to call when transition ends.
    * @returns {BaseTransition} An instance.
    */

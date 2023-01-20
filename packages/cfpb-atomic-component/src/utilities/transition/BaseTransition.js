@@ -1,6 +1,5 @@
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 
-// eslint-disable-next-line max-statements
 /**
  * BaseTransition
  *
@@ -52,9 +51,13 @@ function BaseTransition(element, classes) {
       !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS)
     ) {
       _dom.addEventListener(_transitionEndEvent, _transitionCompleteBinded);
-      this.dispatchEvent(BaseTransition.BEGIN_EVENT, { target: this });
+      this.dispatchEvent(BaseTransition.BEGIN_EVENT, {
+        target: this,
+      });
     } else {
-      this.dispatchEvent(BaseTransition.BEGIN_EVENT, { target: this });
+      this.dispatchEvent(BaseTransition.BEGIN_EVENT, {
+        target: this,
+      });
       _transitionCompleteBinded();
     }
   }
@@ -80,7 +83,9 @@ function BaseTransition(element, classes) {
 
     _removeEventListener();
     _dom.classList.remove(BaseTransition.ANIMATING_CLASS);
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
+    this.dispatchEvent(BaseTransition.END_EVENT, {
+      target: this,
+    });
     _isAnimating = false;
     return true;
   }
@@ -267,6 +272,24 @@ function BaseTransition(element, classes) {
     return true;
   }
 
+  /**
+   * Passes events fired on BaseTransition to the passed event target.
+   *
+   * @param {object} eventTarget - A child transition to proxy events to.
+   * @param {Function} transitionComplete - what to call when transition ends.
+   * @returns {BaseTransition} An instance.
+   */
+  function proxyEvents(eventTarget, transitionComplete) {
+    this.addEventListener(BaseTransition.BEGIN_EVENT, () => {
+      eventTarget.dispatchEvent(BaseTransition.BEGIN_EVENT, {
+        target: eventTarget,
+      });
+    });
+    this.addEventListener(BaseTransition.END_EVENT, transitionComplete);
+
+    return this;
+  }
+
   // Attach public events.
   const eventObserver = new EventObserver();
   this.addEventListener = eventObserver.addEventListener;
@@ -281,6 +304,7 @@ function BaseTransition(element, classes) {
   this.isAnimated = isAnimated;
   this.remove = remove;
   this.setElement = setElement;
+  this.proxyEvents = proxyEvents;
 
   return this;
 }

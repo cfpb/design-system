@@ -1994,7 +1994,8 @@ function FlyoutMenu(element) {
       _deferFunct = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.noopFunct;
       this.dispatchEvent('expandBegin', { target: this, type: 'expandBegin' });
 
-      if (_expandTransitionMethod) {
+      // Only use transitions if both expand and collapse are set.
+      if (_expandTransitionMethod && _collapseTransitionMethod) {
         const hasTransition =
           _expandTransition && _expandTransition.isAnimated();
         if (hasTransition) {
@@ -2035,7 +2036,9 @@ function FlyoutMenu(element) {
         target: this,
         type: 'collapseBegin',
       });
-      if (_collapseTransitionMethod) {
+
+      // Only use transitions if both expand and collapse are set.
+      if (_collapseTransitionMethod && _expandTransitionMethod) {
         const hasTransition =
           _collapseTransition && _collapseTransition.isAnimated();
         if (hasTransition) {
@@ -2116,6 +2119,8 @@ function FlyoutMenu(element) {
     _expandTransition = transition;
     _expandTransitionMethod = method;
     _expandTransitionMethodArgs = args;
+
+    _initTransitions();
   }
 
   /**
@@ -2129,7 +2134,19 @@ function FlyoutMenu(element) {
     _collapseTransitionMethod = method;
     _collapseTransitionMethodArgs = args;
 
-    if (!_isExpanded) {
+    _initTransitions();
+  }
+
+  /**
+   * Make initial call to transition expand or collapse methods.
+   * Called after the transitions are set on the FlyoutMenu.
+   */
+  function _initTransitions() {
+    if (_isExpanded && _expandTransition) {
+      _expandTransition.animateOff();
+      _expandTransitionMethod();
+      _expandTransition.animateOn();
+    } else if (_collapseTransition) {
       _collapseTransition.animateOff();
       _collapseTransitionMethod();
       _collapseTransition.animateOn();
@@ -2684,11 +2701,8 @@ function AlphaTransition(element) {
    */
   function init() {
     _baseTransition.init();
-    const _transitionCompleteBinded = _transitionComplete.bind(this);
-    _baseTransition.addEventListener(
-      _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
-      _transitionCompleteBinded
-    );
+    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
+
     return this;
   }
 
@@ -2753,7 +2767,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
 
 
-// eslint-disable-next-line max-statements
 /**
  * BaseTransition
  *
@@ -2805,9 +2818,13 @@ function BaseTransition(element, classes) {
       !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS)
     ) {
       _dom.addEventListener(_transitionEndEvent, _transitionCompleteBinded);
-      this.dispatchEvent(BaseTransition.BEGIN_EVENT, { target: this });
+      this.dispatchEvent(BaseTransition.BEGIN_EVENT, {
+        target: this,
+      });
     } else {
-      this.dispatchEvent(BaseTransition.BEGIN_EVENT, { target: this });
+      this.dispatchEvent(BaseTransition.BEGIN_EVENT, {
+        target: this,
+      });
       _transitionCompleteBinded();
     }
   }
@@ -2833,7 +2850,9 @@ function BaseTransition(element, classes) {
 
     _removeEventListener();
     _dom.classList.remove(BaseTransition.ANIMATING_CLASS);
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
+    this.dispatchEvent(BaseTransition.END_EVENT, {
+      target: this,
+    });
     _isAnimating = false;
     return true;
   }
@@ -3020,6 +3039,24 @@ function BaseTransition(element, classes) {
     return true;
   }
 
+  /**
+   * Passes events fired on BaseTransition to the passed event target.
+   *
+   * @param {object} eventTarget - A child transition to proxy events to.
+   * @param {Function} transitionComplete - what to call when transition ends.
+   * @returns {BaseTransition} An instance.
+   */
+  function proxyEvents(eventTarget, transitionComplete) {
+    this.addEventListener(BaseTransition.BEGIN_EVENT, () => {
+      eventTarget.dispatchEvent(BaseTransition.BEGIN_EVENT, {
+        target: eventTarget,
+      });
+    });
+    this.addEventListener(BaseTransition.END_EVENT, transitionComplete);
+
+    return this;
+  }
+
   // Attach public events.
   const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
   this.addEventListener = eventObserver.addEventListener;
@@ -3034,6 +3071,7 @@ function BaseTransition(element, classes) {
   this.isAnimated = isAnimated;
   this.remove = remove;
   this.setElement = setElement;
+  this.proxyEvents = proxyEvents;
 
   return this;
 }
@@ -3122,11 +3160,7 @@ function MaxHeightTransition(element) {
        the element max-height. */
     window.addEventListener('load', _pageLoaded);
 
-    const _transitionCompleteBinded = _transitionComplete.bind(this);
-    _baseTransition.addEventListener(
-      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
-      _transitionCompleteBinded
-    );
+    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
 
     return this;
   }
@@ -3262,11 +3296,8 @@ function MoveTransition(element) {
    */
   function init() {
     _baseTransition.init();
-    const _transitionCompleteBinded = _transitionComplete.bind(this);
-    _baseTransition.addEventListener(
-      _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
-      _transitionCompleteBinded
-    );
+    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
+
     return this;
   }
 

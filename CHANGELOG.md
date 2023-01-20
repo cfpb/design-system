@@ -1,4 +1,38 @@
 
+## v0.20.0 (2023-01-20)
+
+#### Breaking Change
+* `cfpb-atomic-component`
+  * [#1515](https://github.com/cfpb/design-system/pull/1515) Remove destroyInitFlag ([@wpears](https://github.com/wpears))
+
+#### Enhancement
+* `cfpb-atomic-component`
+  * [#1556](https://github.com/cfpb/design-system/pull/1556) Add FlyoutMenu behavior to DS ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-buttons`, `cfpb-expandables`, `cfpb-forms`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-typography`
+  * [#1559](https://github.com/cfpb/design-system/pull/1559) Remove unneeded less imports ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* Other
+  * [#1553](https://github.com/cfpb/design-system/pull/1553) Change task copy-icons to copy-assets ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1557](https://github.com/cfpb/design-system/pull/1557) Update anchor-js and eslint-plugin-jsdoc ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1555](https://github.com/cfpb/design-system/pull/1555) Bugfix: Update banner URL in test ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-forms`
+  * [#1562](https://github.com/cfpb/design-system/pull/1562) Ignore some linting rules ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-expandables`, `cfpb-forms`
+  * [#1558](https://github.com/cfpb/design-system/pull/1558) Fix minor linter issues and remove extraneous comments ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-buttons`, `cfpb-core`, `cfpb-expandables`, `cfpb-forms`, `cfpb-grid`, `cfpb-icons`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1552](https://github.com/cfpb/design-system/pull/1552) Add stylelint-config-prettier ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 4
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Lorelei Kelly ([@ielerol](https://github.com/ielerol))
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
+- [@nataliafitzgerald2](https://github.com/nataliafitzgerald2)
+
+
+
 ## v0.19.0 (2023-01-17)
 
 #### Breaking Change

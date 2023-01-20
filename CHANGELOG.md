@@ -1,4 +1,15 @@
 
+## v0.20.1 (2023-01-20)
+
+#### Breaking Change
+* `cfpb-atomic-component`
+  * [#1564](https://github.com/cfpb/design-system/pull/1564) Transitions: Enforce having both expand and collapse transitions ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.20.0 (2023-01-20)
 
 #### Breaking Change

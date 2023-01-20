@@ -50,7 +50,7 @@ function ExpandableGroup(element) {
   }
 
   /**
-   * @param {Object} evt - The event object.
+   * @param {object} evt - The event object.
    */
   function _handleExpandBegin(evt) {
     const target = evt.target;

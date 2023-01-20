@@ -32,11 +32,8 @@ function AlphaTransition(element) {
    */
   function init() {
     _baseTransition.init();
-    const _transitionCompleteBinded = _transitionComplete.bind(this);
-    _baseTransition.addEventListener(
-      BaseTransition.END_EVENT,
-      _transitionCompleteBinded
-    );
+    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
+
     return this;
   }
 

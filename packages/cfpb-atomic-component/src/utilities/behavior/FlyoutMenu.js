@@ -240,7 +240,8 @@ function FlyoutMenu(element) {
       _deferFunct = noopFunct;
       this.dispatchEvent('expandBegin', { target: this, type: 'expandBegin' });
 
-      if (_expandTransitionMethod) {
+      // Only use transitions if both expand and collapse are set.
+      if (_expandTransitionMethod && _collapseTransitionMethod) {
         const hasTransition =
           _expandTransition && _expandTransition.isAnimated();
         if (hasTransition) {
@@ -281,7 +282,9 @@ function FlyoutMenu(element) {
         target: this,
         type: 'collapseBegin',
       });
-      if (_collapseTransitionMethod) {
+
+      // Only use transitions if both expand and collapse are set.
+      if (_collapseTransitionMethod && _expandTransitionMethod) {
         const hasTransition =
           _collapseTransition && _collapseTransition.isAnimated();
         if (hasTransition) {
@@ -362,6 +365,8 @@ function FlyoutMenu(element) {
     _expandTransition = transition;
     _expandTransitionMethod = method;
     _expandTransitionMethodArgs = args;
+
+    _initTransitions();
   }
 
   /**
@@ -375,7 +380,19 @@ function FlyoutMenu(element) {
     _collapseTransitionMethod = method;
     _collapseTransitionMethodArgs = args;
 
-    if (!_isExpanded) {
+    _initTransitions();
+  }
+
+  /**
+   * Make initial call to transition expand or collapse methods.
+   * Called after the transitions are set on the FlyoutMenu.
+   */
+  function _initTransitions() {
+    if (_isExpanded && _expandTransition) {
+      _expandTransition.animateOff();
+      _expandTransitionMethod();
+      _expandTransition.animateOn();
+    } else if (_collapseTransition) {
       _collapseTransition.animateOff();
       _collapseTransitionMethod();
       _collapseTransition.animateOn();

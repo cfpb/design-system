@@ -61,11 +61,7 @@ function MaxHeightTransition(element) {
        the element max-height. */
     window.addEventListener('load', _pageLoaded);
 
-    const _transitionCompleteBinded = _transitionComplete.bind(this);
-    _baseTransition.addEventListener(
-      BaseTransition.END_EVENT,
-      _transitionCompleteBinded
-    );
+    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
 
     return this;
   }

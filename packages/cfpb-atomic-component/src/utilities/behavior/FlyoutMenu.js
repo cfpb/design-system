@@ -2,11 +2,10 @@
 import {
   BEHAVIOR_PREFIX,
   JS_HOOK,
-  noopFunct,
 } from '@cfpb/cfpb-atomic-component/src/utilities/standard-type.js';
 import BaseTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js';
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
-import { checkBehaviorDom } from './behavior.js';
+import { checkBehaviorDom } from '@cfpb/cfpb-atomic-component/src/utilities/behavior/behavior.js';
 
 const BASE_CLASS = BEHAVIOR_PREFIX + 'flyout-menu';
 const SEL_PREFIX = '[' + JS_HOOK + '=' + BASE_CLASS;
@@ -39,8 +38,12 @@ function FlyoutMenu(element) {
   const _triggerDoms = _findTriggers(element);
   const _contentDom = checkBehaviorDom(element, BASE_CLASS + '_content');
 
-  let _isExpanded = false;
-  let _isAnimating = false;
+  // Flyouts appear in one of four states.
+  let _state = 0;
+  const COLLAPSED = 0;
+  const COLLAPSING = 1;
+  const EXPANDING = 2;
+  const EXPANDED = 3;
 
   let _expandTransition;
   let _expandTransitionMethod;
@@ -51,7 +54,6 @@ function FlyoutMenu(element) {
   let _collapseTransitionMethodArgs = [];
 
   // Binded events.
-  const _collapseBinded = collapse.bind(this);
   // Needed to add and remove events to transitions.
   const _collapseEndBinded = _collapseEnd.bind(this);
   const _expandEndBinded = _expandEnd.bind(this);
@@ -61,11 +63,6 @@ function FlyoutMenu(element) {
      Examples include the index in an Array,
      a key in an Hash, or a node in a Tree. */
   let _data;
-
-  /* Set this function to a queued collapse function,
-     which is called if collapse is called while
-     expand is animating. */
-  let _deferFunct = noopFunct;
 
   // Whether this instance's behaviors are suspended or not.
   let _suspended = true;
@@ -122,31 +119,18 @@ function FlyoutMenu(element) {
    *   initialization-time or collapsed.
    */
   function init(isExpanded = false) {
-    const handleTriggerClickedBinded = _handleTriggerClicked.bind(this);
-    const handleTriggerOverBinded = _handleTriggerOver.bind(this);
-    const handleTriggerOutBinded = _handleTriggerOut.bind(this);
+    _state = isExpanded ? EXPANDED : COLLAPSED;
+    _triggerDoms.forEach((triggerDom) => {
+      _setAriaAttr('expanded', triggerDom, isExpanded);
 
-    let triggerDom;
-    for (let i = 0, len = _triggerDoms.length; i < len; i++) {
-      triggerDom = _triggerDoms[i];
-
-      // Set initial aria attributes to false.
-      _isExpanded = isExpanded;
-      if (isExpanded) {
-        _setAriaAttr('expanded', triggerDom, 'true');
-        _setAriaAttr('expanded', _contentDom, 'true');
-      } else {
-        _setAriaAttr('expanded', triggerDom, 'false');
-        _setAriaAttr('expanded', _contentDom, 'false');
-      }
-
-      triggerDom.addEventListener('click', handleTriggerClickedBinded);
+      triggerDom.addEventListener('click', _handleTriggerClicked.bind(this));
       triggerDom.addEventListener('touchstart', _handleTouchStart, {
         passive: true,
       });
-      triggerDom.addEventListener('mouseover', handleTriggerOverBinded);
-      triggerDom.addEventListener('mouseout', handleTriggerOutBinded);
-    }
+      triggerDom.addEventListener('mouseover', _handleTriggerOver.bind(this));
+      triggerDom.addEventListener('mouseout', _handleTriggerOut.bind(this));
+    });
+    _setAriaAttr('expanded', _contentDom, isExpanded);
 
     resume();
 
@@ -182,13 +166,16 @@ function FlyoutMenu(element) {
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerOver(event) {
-    if (!_touchTriggered && !_suspended) {
+    if (_suspended) return;
+
+    if (!_touchTriggered) {
       this.dispatchEvent('triggerOver', {
         target: this,
         trigger: event.target,
         type: 'triggerOver',
       });
     }
+
     _touchTriggered = false;
   }
 
@@ -198,13 +185,13 @@ function FlyoutMenu(element) {
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerOut(event) {
-    if (!_suspended) {
-      this.dispatchEvent('triggerOut', {
-        target: this,
-        trigger: event.target,
-        type: 'triggerOut',
-      });
-    }
+    if (_suspended) return;
+
+    this.dispatchEvent('triggerOut', {
+      target: this,
+      trigger: event.target,
+      type: 'triggerOut',
+    });
   }
 
   /**
@@ -214,18 +201,25 @@ function FlyoutMenu(element) {
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerClicked(event) {
-    if (!_suspended) {
-      this.dispatchEvent('triggerClick', {
-        target: this,
-        trigger: event.target,
-        type: 'triggerClick',
-      });
-      event.preventDefault();
-      if (_isExpanded) {
-        this.collapse();
-      } else {
+    if (_suspended) return;
+
+    this.dispatchEvent('triggerClick', {
+      target: this,
+      trigger: event.target,
+      type: 'triggerClick',
+    });
+
+    event.preventDefault();
+
+    switch (_state) {
+      case COLLAPSED:
+      case COLLAPSING:
         this.expand();
-      }
+        break;
+      case EXPANDING:
+      case EXPANDED:
+        this.collapse();
+        break;
     }
   }
 
@@ -235,31 +229,41 @@ function FlyoutMenu(element) {
    * @returns {FlyoutMenu} An instance.
    */
   function expand() {
-    if (!_isExpanded && !_isAnimating) {
-      _isAnimating = true;
-      _deferFunct = noopFunct;
-      this.dispatchEvent('expandBegin', { target: this, type: 'expandBegin' });
+    switch (_state) {
+      case COLLAPSED:
+      case COLLAPSING:
+        _collapseTransition?.halt();
+        break;
+      case EXPANDING:
+      case EXPANDED:
+        _expandTransition?.halt();
+        return this;
+    }
 
-      // Only use transitions if both expand and collapse are set.
-      if (_expandTransitionMethod && _collapseTransitionMethod) {
-        const hasTransition =
-          _expandTransition && _expandTransition.isAnimated();
-        if (hasTransition) {
-          _expandTransition.addEventListener(
-            BaseTransition.END_EVENT,
-            _expandEndBinded
-          );
-        }
-        _expandTransitionMethod.apply(
-          _expandTransition,
-          _expandTransitionMethodArgs
-        );
-        if (!hasTransition) {
-          _expandEndBinded();
-        }
-      } else {
-        _expandEndBinded();
-      }
+    _state = EXPANDING;
+    this.dispatchEvent('expandBegin', { target: this, type: 'expandBegin' });
+
+    // Only use transitions if both expand and collapse are set.
+    if (!_expandTransitionMethod || !_collapseTransitionMethod) {
+      _expandEndBinded();
+      return this;
+    }
+
+    const hasTransition = _expandTransition?.isAnimated();
+    if (hasTransition) {
+      _expandTransition.addEventListener(
+        BaseTransition.END_EVENT,
+        _expandEndBinded
+      );
+    }
+
+    _expandTransitionMethod.apply(
+      _expandTransition,
+      _expandTransitionMethodArgs
+    );
+
+    if (!hasTransition) {
+      _expandEndBinded();
     }
 
     return this;
@@ -274,43 +278,50 @@ function FlyoutMenu(element) {
    * @returns {FlyoutMenu} An instance.
    */
   function collapse() {
-    if (_isExpanded && !_isAnimating) {
-      _deferFunct = noopFunct;
-      _isAnimating = true;
-      _isExpanded = false;
-      this.dispatchEvent('collapseBegin', {
-        target: this,
-        type: 'collapseBegin',
-      });
+    switch (_state) {
+      case COLLAPSED:
+      case COLLAPSING:
+        _collapseTransition?.halt();
+        return this;
+      case EXPANDING:
+      case EXPANDED:
+        _expandTransition?.halt();
+        break;
+    }
 
-      // Only use transitions if both expand and collapse are set.
-      if (_collapseTransitionMethod && _expandTransitionMethod) {
-        const hasTransition =
-          _collapseTransition && _collapseTransition.isAnimated();
-        if (hasTransition) {
-          _collapseTransition.addEventListener(
-            BaseTransition.END_EVENT,
-            _collapseEndBinded
-          );
-        }
-        _collapseTransitionMethod.apply(
-          _collapseTransition,
-          _collapseTransitionMethodArgs
-        );
-        if (!hasTransition) {
-          _collapseEndBinded();
-        }
-      } else {
-        _collapseEndBinded();
-      }
+    for (let i = 0, len = _triggerDoms.length; i < len; i++) {
+      _setAriaAttr('expanded', _triggerDoms[i], false);
+    }
 
-      for (let i = 0, len = _triggerDoms.length; i < len; i++) {
-        _setAriaAttr('expanded', _triggerDoms[i], false);
-      }
+    _setAriaAttr('expanded', _contentDom, false);
 
-      _setAriaAttr('expanded', _contentDom, false);
-    } else {
-      _deferFunct = _collapseBinded;
+    _state = COLLAPSING;
+    this.dispatchEvent('collapseBegin', {
+      target: this,
+      type: 'collapseBegin',
+    });
+
+    // Only use transitions if both expand and collapse are set.
+    if (!_collapseTransitionMethod || !_expandTransitionMethod) {
+      _collapseEndBinded();
+      return this;
+    }
+
+    const hasTransition = _collapseTransition?.isAnimated();
+    if (hasTransition) {
+      _collapseTransition.addEventListener(
+        BaseTransition.END_EVENT,
+        _collapseEndBinded
+      );
+    }
+
+    _collapseTransitionMethod.apply(
+      _collapseTransition,
+      _collapseTransitionMethodArgs
+    );
+
+    if (!hasTransition) {
+      _collapseEndBinded();
     }
 
     return this;
@@ -322,8 +333,7 @@ function FlyoutMenu(element) {
    * if set (otherwise it will call a noop function).
    */
   function _expandEnd() {
-    _isAnimating = false;
-    _isExpanded = true;
+    _state = EXPANDED;
     if (_expandTransition) {
       _expandTransition.removeEventListener(
         BaseTransition.END_EVENT,
@@ -337,21 +347,20 @@ function FlyoutMenu(element) {
     }
 
     _setAriaAttr('expanded', _contentDom, true);
-    // Call collapse, if it was called while expand was animating.
-    _deferFunct();
   }
 
   /**
    * Collapse animation has completed.
    */
   function _collapseEnd() {
-    _isAnimating = false;
+    _state = COLLAPSED;
     if (_collapseTransition) {
       _collapseTransition.removeEventListener(
         BaseTransition.END_EVENT,
         _collapseEndBinded
       );
     }
+
     this.dispatchEvent('collapseEnd', { target: this, type: 'collapseEnd' });
   }
 
@@ -388,7 +397,7 @@ function FlyoutMenu(element) {
    * Called after the transitions are set on the FlyoutMenu.
    */
   function _initTransitions() {
-    if (_isExpanded && _expandTransition) {
+    if (_state === EXPANDED && _expandTransition) {
       _expandTransition.animateOff();
       _expandTransitionMethod();
       _expandTransition.animateOn();
@@ -458,9 +467,7 @@ function FlyoutMenu(element) {
    * @returns {boolean} True if resumed, false otherwise.
    */
   function resume() {
-    if (_suspended) {
-      _suspended = false;
-    }
+    if (_suspended) _suspended = false;
 
     return !_suspended;
   }
@@ -471,19 +478,9 @@ function FlyoutMenu(element) {
    * @returns {boolean} True if suspended, false otherwise.
    */
   function suspend() {
-    if (!_suspended) {
-      _suspended = true;
-    }
+    if (!_suspended) _suspended = true;
 
     return _suspended;
-  }
-
-  /**
-   * @returns {number | string | object} A data identifier
-   *   such as an Array index, Hash key, or Tree node.
-   */
-  function getData() {
-    return _data;
   }
 
   /**
@@ -495,20 +492,6 @@ function FlyoutMenu(element) {
     _data = data;
 
     return this;
-  }
-
-  /**
-   * @returns {boolean} True if menu is animating, false otherwise.
-   */
-  function isAnimating() {
-    return _isAnimating;
-  }
-
-  /**
-   * @returns {boolean} True if menu is expanded, false otherwise.
-   */
-  function isExpanded() {
-    return _isExpanded;
   }
 
   // Attach public events.
@@ -523,11 +506,11 @@ function FlyoutMenu(element) {
   this.setExpandTransition = setExpandTransition;
   this.setCollapseTransition = setCollapseTransition;
   this.clearTransitions = clearTransitions;
-  this.getData = getData;
+  this.getData = () => _data;
   this.getTransition = getTransition;
   this.getDom = getDom;
-  this.isAnimating = isAnimating;
-  this.isExpanded = isExpanded;
+  this.isAnimating = () => _state === EXPANDING || _state === COLLAPSING;
+  this.isExpanded = () => _state === EXPANDED;
   this.resume = resume;
   this.setData = setData;
   this.suspend = suspend;

@@ -28,6 +28,17 @@ function ExpandableGroup(element) {
   let _lastExpanded;
 
   /**
+   * @param {object} evt - The event object.
+   */
+  function _handleExpandBegin(evt) {
+    const target = evt.target;
+    if (_lastExpanded && _lastExpanded !== target) {
+      _lastExpanded.collapse();
+    }
+    _lastExpanded = target;
+  }
+
+  /**
    * Set up and create the multiselect.
    *
    * @param {Array} expandables - List of expandables inside this group.
@@ -47,17 +58,6 @@ function ExpandableGroup(element) {
     }
 
     return this;
-  }
-
-  /**
-   * @param {object} evt - The event object.
-   */
-  function _handleExpandBegin(evt) {
-    const target = evt.target;
-    if (_lastExpanded && _lastExpanded !== target) {
-      _lastExpanded.collapse();
-    }
-    _lastExpanded = target;
   }
 
   // Attach public events.

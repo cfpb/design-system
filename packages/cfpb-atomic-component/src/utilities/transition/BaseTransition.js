@@ -149,10 +149,7 @@ function BaseTransition(element, classes) {
    * @returns {BaseTransition} An instance.
    */
   function animateOn() {
-    if (!_dom) {
-      return this;
-    }
-    _dom.classList.remove(BaseTransition.NO_ANIMATION_CLASS);
+    if (_dom) _dom.classList.remove(BaseTransition.NO_ANIMATION_CLASS);
 
     return this;
   }
@@ -163,10 +160,7 @@ function BaseTransition(element, classes) {
    * @returns {BaseTransition} An instance.
    */
   function animateOff() {
-    if (!_dom) {
-      return this;
-    }
-    _dom.classList.add(BaseTransition.NO_ANIMATION_CLASS);
+    if (_dom) _dom.classList.add(BaseTransition.NO_ANIMATION_CLASS);
 
     return this;
   }
@@ -238,10 +232,10 @@ function BaseTransition(element, classes) {
    *   Returns false if this transition has not been initialized.
    */
   function isAnimated() {
-    if (!_dom) {
-      return false;
+    if (_dom) {
+      return !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
     }
-    return !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
+    return false;
   }
 
   /**

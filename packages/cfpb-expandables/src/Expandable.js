@@ -24,8 +24,6 @@ const BASE_CLASS = 'o-expandable';
  * @returns {Expandable} An instance.
  */
 function Expandable(element) {
-  // eslint-disable-line max-statements
-
   let _instance;
 
   // Internal vars.
@@ -37,9 +35,6 @@ function Expandable(element) {
   // Animation vars.
   let _transition;
   let _flyout;
-
-  // Whether the menu has been expanded or not.
-  let _isExpanded = true;
 
   /**
    * Set up and create the multiselect.
@@ -57,7 +52,7 @@ function Expandable(element) {
     _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
     _labelDom = _dom.querySelector(`.${BASE_CLASS}_label`);
 
-    _isExpanded = _contentDom.classList.contains(
+    const isExpanded = _contentDom.classList.contains(
       `${BASE_CLASS}_content__onload-open`
     );
 
@@ -68,61 +63,17 @@ function Expandable(element) {
 
     // Create root menu.
     _transition = new MaxHeightTransition(_contentDom).init();
-    _flyout = new FlyoutMenu(_dom).init(_isExpanded);
+    _flyout = new FlyoutMenu(_dom).init(isExpanded);
 
     _flyout.setExpandTransition(_transition, _transition.maxHeightDefault);
     _flyout.setCollapseTransition(_transition, _transition.maxHeightZero);
 
-    /* When we click inside the content area we may be changing the size,
-    such as when a video player expands on being clicked.
-    So, let's refresh the transition to recalculate the max-height,
-    just in case. */
-    _addEvents(_flyout);
+    // Add events.
+    _flyout.addEventListener('expandBegin', () => {
+      _instance.dispatchEvent('expandBegin', { target: _instance });
+    });
 
     return this;
-  }
-
-  /**
-   * @param {FlyoutMenu} flyout - a menu on which to attach events.
-   */
-  function _addEvents(flyout) {
-    flyout.addEventListener('triggerClick', _handleClick);
-    flyout.addEventListener('expandBegin', _handleExpandBegin);
-    flyout.addEventListener('expandEnd', _handleExpandEnd);
-    flyout.addEventListener('collapseEnd', _handleCollapseEnd);
-  }
-
-  /**
-   * Handler for when the content area is clicked.
-   * Refresh the transition to recalculate the max-height.
-   */
-  function _handleClick() {
-    if (_isExpanded) {
-      _flyout.collapse();
-    } else {
-      _flyout.expand();
-    }
-  }
-
-  /**
-   * Event handler for when the expandable expansion begins.
-   */
-  function _handleExpandBegin() {
-    _instance.dispatchEvent('expandBegin', { target: _instance });
-  }
-
-  /**
-   * Event handler for when the expandable expansion ends.
-   */
-  function _handleExpandEnd() {
-    _isExpanded = true;
-  }
-
-  /**
-   * Event handler for when the expandable is collapsed.
-   */
-  function _handleCollapseEnd() {
-    _isExpanded = false;
   }
 
   /**
@@ -134,12 +85,9 @@ function Expandable(element) {
 
   // Attach public events.
   this.init = init;
-  this.expand = () => {
-    _flyout.expand();
-  };
-  this.collapse = () => {
-    _flyout.collapse();
-  };
+  this.expand = () => _flyout.expand();
+  this.collapse = () => _flyout.collapse();
+  this.isExpanded = () => _flyout.isExpanded();
   this.getLabelText = getLabelText;
 
   const eventObserver = new EventObserver();

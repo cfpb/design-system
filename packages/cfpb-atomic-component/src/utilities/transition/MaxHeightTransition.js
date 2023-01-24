@@ -27,7 +27,11 @@ function MaxHeightTransition(element) {
    * This may be useful if resizing the window and the content height changes.
    */
   function refresh() {
-    element.style.maxHeight = element.scrollHeight + 'px';
+    const elmHeight = element.scrollHeight;
+    const newHeight = elmHeight + 'px';
+    const newDuration = elmHeight / 1000 + 's';
+    element.style.transitionDuration = newDuration;
+    element.style.maxHeight = newHeight;
   }
 
   /**
@@ -37,7 +41,7 @@ function MaxHeightTransition(element) {
     this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
 
     if (element.scrollHeight > previousHeight) {
-      element.style.maxHeight = element.scrollHeight + 'px';
+      refresh();
     }
   }
 
@@ -51,15 +55,29 @@ function MaxHeightTransition(element) {
   }
 
   /**
+   * If the page is resized we need to refresh the max-height.
+   */
+  function _pageResized() {
+    refresh();
+  }
+
+  /**
    * @returns {MaxHeightTransition} An instance.
    */
   function init() {
     _baseTransition.init();
 
-    /* The scrollHeight of an element may be incorrect if the page hasn't
-       fully loaded yet, so we listen for that to happen before calculating
-       the element max-height. */
+    /*
+    The scrollHeight of an element may be incorrect if the page hasn't
+    fully loaded yet, so we listen for that to happen before calculating
+    the element max-height.
+    */
     window.addEventListener('load', _pageLoaded);
+
+    /*
+    The scrollHeight of an element may change on page load.
+    */
+    window.addEventListener('resize', _pageResized);
 
     _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
 
@@ -72,6 +90,7 @@ function MaxHeightTransition(element) {
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightDefault() {
+    refresh();
     _baseTransition.applyClass(CLASSES.MH_DEFAULT);
 
     if (!previousHeight || element.scrollHeight > previousHeight) {

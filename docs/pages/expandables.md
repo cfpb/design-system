@@ -336,6 +336,42 @@ variation_groups:
                           corporis nesciunt earum vel est quaerat blanditiis
                           dolore ipsa?
                           <a href="#">Lorem link</a>.
+
+                           Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+
+                           Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+
+                           Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+
+                           Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+
+                           Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
+
+                           Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                          temporibus magnam debitis quidem. Ducimus ratione
+                          corporis nesciunt earum vel est quaerat blanditiis
+                          dolore ipsa?
                       </p>
                   </div>
               </div>

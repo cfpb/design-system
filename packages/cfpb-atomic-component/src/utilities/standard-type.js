@@ -52,12 +52,4 @@ function noopFunct() {
   // Placeholder function meant to be overridden.
 }
 
-// Bit values intended to be used for bit inversion.
-const DIRECTIONS = {
-  UP: 0,
-  RIGHT: 1,
-  DOWN: -1,
-  LEFT: -2,
-};
-
-export { BEHAVIOR_PREFIX, JS_HOOK, noopFunct, STATE_PREFIX, DIRECTIONS };
+export { BEHAVIOR_PREFIX, JS_HOOK, noopFunct, STATE_PREFIX };

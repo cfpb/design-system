@@ -145,7 +145,7 @@ function Multiselect(element) {
     _containerDom.classList.add('u-active');
     _fieldsetDom.classList.remove('u-invisible');
     _fieldsetDom.setAttribute('aria-hidden', false);
-    _instance.dispatchEvent('expandBegin', { target: _instance });
+    _instance.dispatchEvent('expandbegin', { target: _instance });
 
     return _instance;
   }
@@ -160,8 +160,8 @@ function Multiselect(element) {
     _fieldsetDom.classList.add('u-invisible');
     _fieldsetDom.setAttribute('aria-hidden', true);
     _model.resetIndex();
-    // TODO: This should be collapseBegin, not expandEnd, but we have a dependency on this event in the filters in cf.gov.
-    _instance.dispatchEvent('expandEnd', { target: _instance });
+    // TODO: This should be collapsebegin, not expandend, but we have a dependency on this event in the filters in cf.gov.
+    _instance.dispatchEvent('expandend', { target: _instance });
 
     return _instance;
   }

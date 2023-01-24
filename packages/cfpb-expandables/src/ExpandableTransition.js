@@ -20,7 +20,7 @@ const CLASSES = {
  * @returns {ExpandableTransition} An instance.
  */
 function ExpandableTransition(element) {
-  const _baseTransition = new BaseTransition(element, CLASSES);
+  const _baseTransition = new BaseTransition(element, CLASSES, this);
   let previousHeight;
 
   /**
@@ -28,13 +28,13 @@ function ExpandableTransition(element) {
    */
   function _transitionComplete() {
     if (element.classList.contains(CLASSES.EXPANDED)) {
-      this.dispatchEvent('expandEnd', { target: this });
+      this.dispatchEvent('expandend', { target: this });
 
       if (element.scrollHeight > previousHeight) {
         element.style.maxHeight = element.scrollHeight + 'px';
       }
     } else if (element.classList.contains(CLASSES.COLLAPSED)) {
-      this.dispatchEvent('collapseEnd', { target: this });
+      this.dispatchEvent('collapseend', { target: this });
     }
   }
 
@@ -42,13 +42,15 @@ function ExpandableTransition(element) {
    * @returns {ExpandableTransition} An instance.
    */
   function init() {
-    _baseTransition.init();
-    _baseTransition.addEventListener(
+    const openOnLoad = element.classList.contains(CLASSES.OPEN_DEFAULT);
+    const initialClass = openOnLoad ? CLASSES.EXPANDED : CLASSES.COLLAPSED;
+    _baseTransition.init(initialClass);
+    this.addEventListener(
       BaseTransition.END_EVENT,
       _transitionComplete.bind(this)
     );
 
-    if (element.classList.contains(CLASSES.OPEN_DEFAULT)) {
+    if (openOnLoad) {
       this.expand();
     } else {
       this.collapse();
@@ -78,7 +80,7 @@ function ExpandableTransition(element) {
    * @returns {ExpandableTransition} An instance.
    */
   function collapse() {
-    this.dispatchEvent('collapseBegin', { target: this });
+    this.dispatchEvent('collapsebegin', { target: this });
 
     previousHeight = element.scrollHeight;
     element.style.maxHeight = '0';
@@ -93,7 +95,7 @@ function ExpandableTransition(element) {
    * @returns {ExpandableTransition} An instance.
    */
   function expand() {
-    this.dispatchEvent('expandBegin', { target: this });
+    this.dispatchEvent('expandbegin', { target: this });
 
     if (!previousHeight || element.scrollHeight > previousHeight) {
       previousHeight = element.scrollHeight;

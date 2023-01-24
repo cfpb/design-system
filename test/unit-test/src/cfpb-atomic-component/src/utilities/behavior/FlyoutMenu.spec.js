@@ -47,8 +47,6 @@ describe('FlyoutMenu', () => {
 
   describe('.init()', () => {
     it('should have public static methods', () => {
-      expect(FlyoutMenu.EXPAND_TYPE).toBe('expand');
-      expect(FlyoutMenu.COLLAPSE_TYPE).toBe('collapse');
       expect(FlyoutMenu.BASE_CLASS).toBe('behavior_flyout-menu');
     });
 
@@ -83,8 +81,8 @@ describe('FlyoutMenu', () => {
       triggerClickSpy = jest.fn();
 
       flyoutMenu.init();
-      flyoutMenu.addEventListener('triggerOver', triggerOverSpy);
-      flyoutMenu.addEventListener('triggerClick', triggerClickSpy);
+      flyoutMenu.addEventListener('triggerover', triggerOverSpy);
+      flyoutMenu.addEventListener('triggerclick', triggerClickSpy);
     });
 
     it('should dispatch events when called by trigger click', () => {
@@ -101,7 +99,7 @@ describe('FlyoutMenu', () => {
       expect(triggerOverSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
         trigger: triggerDom,
-        type: 'triggerOver',
+        type: 'triggerover',
       });
     });
 
@@ -116,7 +114,7 @@ describe('FlyoutMenu', () => {
       expect(triggerClickSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
         trigger: altTriggerDom,
-        type: 'triggerClick',
+        type: 'triggerclick',
       });
     });
   });
@@ -128,8 +126,8 @@ describe('FlyoutMenu', () => {
       expandEndSpy = jest.fn();
 
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandBegin', expandBeginSpy);
-      flyoutMenu.addEventListener('expandEnd', expandEndSpy);
+      flyoutMenu.addEventListener('expandbegin', expandBeginSpy);
+      flyoutMenu.addEventListener('expandend', expandEndSpy);
     });
 
     afterEach(() => {
@@ -137,13 +135,13 @@ describe('FlyoutMenu', () => {
       expect(expandBeginSpy).toHaveBeenCalledTimes(1);
       expect(expandBeginSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
-        type: 'expandBegin',
+        type: 'expandbegin',
       });
 
       expect(expandEndSpy).toHaveBeenCalledTimes(1);
       expect(expandEndSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
-        type: 'expandEnd',
+        type: 'expandend',
       });
 
       // Check expected aria attributes state.
@@ -184,8 +182,8 @@ describe('FlyoutMenu', () => {
       collapseEndSpy = jest.fn();
 
       flyoutMenu.init();
-      flyoutMenu.addEventListener('collapseBegin', collapseBeginSpy);
-      flyoutMenu.addEventListener('collapseEnd', collapseEndSpy);
+      flyoutMenu.addEventListener('collapsebegin', collapseBeginSpy);
+      flyoutMenu.addEventListener('collapseend', collapseEndSpy);
       triggerDom.click();
     });
 
@@ -194,13 +192,13 @@ describe('FlyoutMenu', () => {
       expect(collapseBeginSpy).toHaveBeenCalledTimes(1);
       expect(collapseBeginSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
-        type: 'collapseBegin',
+        type: 'collapsebegin',
       });
 
       expect(collapseEndSpy).toHaveBeenCalledTimes(1);
       expect(collapseEndSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
-        type: 'collapseEnd',
+        type: 'collapseend',
       });
 
       // Check expected aria attribute states.
@@ -234,84 +232,53 @@ describe('FlyoutMenu', () => {
     );
   });
 
-  describe('.setExpandTransition()', () => {
-    it('should set a transition', (done) => {
+  describe('.setTransition()', () => {
+    it('should set a transition', async () => {
       flyoutMenu.init();
-      const transition = new MoveTransition(contentDom).init();
-      flyoutMenu.setExpandTransition(transition, transition.moveLeft);
-      flyoutMenu.addEventListener('expandEnd', () => {
-        try {
-          const hasClass = contentDom.classList.contains('u-move-transition');
-          expect(hasClass).toBe(true);
-          done();
-        } catch (err) {
-          done(err);
-        }
-      });
-      triggerDom.click();
-
-      /* The transitionend event should fire on its own,
-         but for some reason the transitionend event is not firing within JSDom.
-         In a future JSDom update this should be revisited.
-         See https://github.com/jsdom/jsdom/issues/1781
-      */
-      const event = new Event('transitionend');
-      event.propertyName = 'transform';
-      contentDom.dispatchEvent(event);
-    });
-  });
-
-  describe('.setCollapseTransition()', () => {
-    it('should set a transition', (done) => {
-      flyoutMenu.init();
-      const transition = new MoveTransition(contentDom).init();
-      triggerDom.click();
-      flyoutMenu.setCollapseTransition(transition, transition.moveLeft);
-      flyoutMenu.addEventListener('collapseEnd', () => {
-        try {
-          const hasClass = contentDom.classList.contains('u-move-transition');
-          expect(hasClass).toBe(true);
-          done();
-        } catch (err) {
-          done(err);
-        }
-      });
-      triggerDom.click();
-
-      /* The transitionend event should fire on its own,
-         but for some reason the transitionend event is not firing within JSDom.
-         In a future JSDom update this should be revisited.
-         See https://github.com/jsdom/jsdom/issues/1781
-      */
-      const event = new Event('transitionend');
-      event.propertyName = 'transform';
-      contentDom.dispatchEvent(event);
-    });
-  });
-
-  describe('.getTransition()', () => {
-    it('should return a transition instance', () => {
-      flyoutMenu.init();
-      expect(flyoutMenu.getTransition()).toBeUndefined();
-      const transition = new MoveTransition(contentDom).init();
-      flyoutMenu.setExpandTransition(transition, transition.moveLeft);
-      flyoutMenu.setCollapseTransition(transition, transition.moveToOrigin);
-      expect(flyoutMenu.getTransition()).toStrictEqual(transition);
-      expect(flyoutMenu.getTransition(FlyoutMenu.COLLAPSE_TYPE)).toStrictEqual(
-        transition
+      const transition = new MoveTransition(contentDom).init(
+        MoveTransition.CLASSES.MOVE_LEFT
       );
+      flyoutMenu.setTransition(
+        transition,
+        transition.moveLeft,
+        transition.moveLeft2
+      );
+      flyoutMenu.addEventListener('expandend', () => {
+        const hasClass = contentDom.classList.contains('u-move-transition');
+        expect(hasClass).toBe(true);
+      });
+      await triggerDom.click();
+      flyoutMenu.addEventListener('collapseend', () => {
+        const hasClass = contentDom.classList.contains('u-move-transition');
+        expect(hasClass).toBe(true);
+      });
+      await triggerDom.click();
+
+      /* The transitionend event should fire on its own,
+         but for some reason the transitionend event is not firing within JSDom.
+         In a future JSDom update this should be revisited.
+         See https://github.com/jsdom/jsdom/issues/1781
+      */
+      const event = new Event('transitionend');
+      event.propertyName = 'transform';
+      contentDom.dispatchEvent(event);
     });
   });
 
-  describe('.clearTransitions()', () => {
+  describe('.clearTransition()', () => {
     it('should remove all transitions', () => {
       flyoutMenu.init();
-      const transition = new MoveTransition(contentDom).init();
-      flyoutMenu.setExpandTransition(transition, transition.moveLeft);
-      flyoutMenu.setCollapseTransition(transition, transition.moveToOrigin);
+      const transition = new MoveTransition(contentDom).init(
+        MoveTransition.CLASSES.MOVE_TO_ORIGIN
+      );
+      flyoutMenu.setTransition(
+        transition,
+        transition.moveToOrigin,
+        transition.moveLeft
+      );
       let hasClass = contentDom.classList.contains('u-move-transition');
       expect(hasClass).toBe(true);
-      flyoutMenu.clearTransitions();
+      flyoutMenu.clearTransition();
       expect(flyoutMenu.getTransition()).toBeUndefined();
       hasClass = contentDom.classList.contains('u-move-transition');
       expect(hasClass).toBe(false);
@@ -337,10 +304,10 @@ describe('FlyoutMenu', () => {
       collapseBeginSpy = jest.fn();
       collapseEndSpy = jest.fn();
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandBegin', expandBeginSpy);
-      flyoutMenu.addEventListener('expandEnd', expandEndSpy);
-      flyoutMenu.addEventListener('collapseBegin', collapseBeginSpy);
-      flyoutMenu.addEventListener('collapseEnd', collapseEndSpy);
+      flyoutMenu.addEventListener('expandbegin', expandBeginSpy);
+      flyoutMenu.addEventListener('expandend', expandEndSpy);
+      flyoutMenu.addEventListener('collapsebegin', collapseBeginSpy);
+      flyoutMenu.addEventListener('collapseend', collapseEndSpy);
     });
 
     describe('.suspend()', () => {
@@ -391,7 +358,7 @@ describe('FlyoutMenu', () => {
   describe('.isAnimating()', () => {
     it('should return true when expanding', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandBegin', () => {
+      flyoutMenu.addEventListener('expandbegin', () => {
         try {
           expect(flyoutMenu.isAnimating()).toBe(true);
           done();
@@ -404,7 +371,7 @@ describe('FlyoutMenu', () => {
 
     it('should return false after expanding', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandEnd', () => {
+      flyoutMenu.addEventListener('expandend', () => {
         try {
           expect(flyoutMenu.isAnimating()).toBe(false);
           done();
@@ -417,7 +384,7 @@ describe('FlyoutMenu', () => {
 
     it('should return true while collapsing', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('collapseBegin', () => {
+      flyoutMenu.addEventListener('collapsebegin', () => {
         try {
           expect(flyoutMenu.isAnimating()).toBe(true);
           done();
@@ -431,7 +398,7 @@ describe('FlyoutMenu', () => {
 
     it('should return false after collapsing', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('collapseEnd', () => {
+      flyoutMenu.addEventListener('collapseend', () => {
         try {
           expect(flyoutMenu.isAnimating()).toBe(false);
           done();
@@ -447,7 +414,7 @@ describe('FlyoutMenu', () => {
   describe('.isExpanded()', () => {
     it('should return false before expanding', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandBegin', () => {
+      flyoutMenu.addEventListener('expandbegin', () => {
         try {
           expect(flyoutMenu.isExpanded()).toBe(false);
           done();
@@ -460,7 +427,7 @@ describe('FlyoutMenu', () => {
 
     it('should return true after expanding', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandEnd', () => {
+      flyoutMenu.addEventListener('expandend', () => {
         try {
           expect(flyoutMenu.isExpanded()).toBe(true);
           done();
@@ -474,7 +441,7 @@ describe('FlyoutMenu', () => {
     it('should return true before collapsing', (done) => {
       flyoutMenu.init();
       triggerDom.click();
-      flyoutMenu.addEventListener('triggerClick', () => {
+      flyoutMenu.addEventListener('triggerclick', () => {
         try {
           expect(flyoutMenu.isExpanded()).toBe(true);
           done();
@@ -487,7 +454,7 @@ describe('FlyoutMenu', () => {
 
     it('should return false after collapsing', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('collapseEnd', () => {
+      flyoutMenu.addEventListener('collapseend', () => {
         try {
           expect(flyoutMenu.isExpanded()).toBe(false);
           done();

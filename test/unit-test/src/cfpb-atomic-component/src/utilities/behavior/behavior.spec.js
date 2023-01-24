@@ -4,7 +4,7 @@ import {
   checkBehaviorDom,
   find,
   remove,
-} from '../../../../../../../packages/cfpb-atomic-component/src/utilities/behavior/behavior.js';
+} from '../../../../../../../packages/cfpb-atomic-component';
 
 let containerDom;
 let behaviorElmDom;

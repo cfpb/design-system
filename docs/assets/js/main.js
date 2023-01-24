@@ -3,10 +3,12 @@ import AnchorJS from 'anchor-js';
 import Expandable from '@cfpb/cfpb-expandables/src/Expandable.js';
 import Summary from '@cfpb/cfpb-expandables/src/Summary.js';
 import Multiselect from '@cfpb/cfpb-forms/src/organisms/Multiselect.js';
-import AlphaTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js';
-import MoveTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
-import MaxHeightTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
-import FlyoutMenu from '@cfpb/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js';
+import {
+  FlyoutMenu,
+  AlphaTransition,
+  MaxHeightTransition,
+  MoveTransition,
+} from '@cfpb/cfpb-atomic-component';
 import Tabs from './Tabs.js';
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';

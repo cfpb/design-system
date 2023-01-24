@@ -3,7 +3,7 @@
    ========================================================================== */
 
 import AtomicComponent from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
-import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
+import { EventObserver } from '@cfpb/cfpb-atomic-component';
 import ExpandableTransition from './ExpandableTransition.js';
 
 const eventObserver = new EventObserver();

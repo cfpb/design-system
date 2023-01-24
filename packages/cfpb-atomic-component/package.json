@@ -4,6 +4,7 @@
   "description": "Design System atomic component utilities",
   "less": "src/cfpb-atomic-component.less",
   "style": "cfpb-atomic-component.css",
+  "main": "src/index.js",
   "publishConfig": {
     "access": "public"
   },

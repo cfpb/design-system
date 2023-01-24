@@ -1,4 +1,4 @@
-import MaxHeightTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
+import { MaxHeightTransition } from '../../../../../../../packages/cfpb-atomic-component';
 
 let transition;
 

@@ -2585,7 +2585,6 @@ function isMobileUserAgent() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "BEHAVIOR_PREFIX": function() { return /* binding */ BEHAVIOR_PREFIX; },
-/* harmony export */   "DIRECTIONS": function() { return /* binding */ DIRECTIONS; },
 /* harmony export */   "JS_HOOK": function() { return /* binding */ JS_HOOK; },
 /* harmony export */   "STATE_PREFIX": function() { return /* binding */ STATE_PREFIX; },
 /* harmony export */   "noopFunct": function() { return /* binding */ noopFunct; }
@@ -2643,14 +2642,6 @@ const STATE_PREFIX = 'state_';
 function noopFunct() {
   // Placeholder function meant to be overridden.
 }
-
-// Bit values intended to be used for bit inversion.
-const DIRECTIONS = {
-  UP: 0,
-  RIGHT: 1,
-  DOWN: -1,
-  LEFT: -2,
-};
 
 
 

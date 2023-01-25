@@ -40,7 +40,7 @@ describe('The "show details" toggling feature', () => {
             !(await showDetailsButton.isExisting()) ||
             !(await hideDetailsButton.isExisting())
           ) {
-            await this.skip();
+            this.runnable().skip();
           }
           await expect(showDetailsButton).toBeDisplayed();
           await expect(hideDetailsButton).not.toBeDisplayed();
@@ -55,7 +55,7 @@ describe('The "show details" toggling feature', () => {
             (await !showDetailsButton.isExisting()) ||
             (await !hideDetailsButton.isExisting())
           ) {
-            await this.skip();
+            this.runnable().skip();
           }
           await showDetailsButton.click();
           await expect(showDetailsButton).not.toBeDisplayed();

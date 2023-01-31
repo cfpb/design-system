@@ -66,19 +66,8 @@ export default (env, argv) => {
                   overwrite: true,
                 },
               },
-              {
-                source: './packages/cfpb-design-system.js.LICENSE.txt',
-                destination:
-                  './packages/cfpb-design-system/cfpb-design-system.js.LICENSE.txt',
-                options: {
-                  overwrite: true,
-                },
-              },
             ],
-            delete: [
-              './packages/cfpb-**.js',
-              './packages/cfpb-design-system.js.LICENSE.txt',
-            ],
+            delete: ['./packages/cfpb-**.js'],
           },
         },
       }),

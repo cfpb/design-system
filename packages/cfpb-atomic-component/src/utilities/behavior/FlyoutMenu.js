@@ -350,6 +350,14 @@ function FlyoutMenu(element) {
       _expandTransitionMethod = expandMethod;
       expandUpdated = true;
     }
+
+    /*
+    console.log(_state, expandUpdated, collapseUpdated);
+    _transition.animateOff();
+    if (_state === EXPANDED && expandUpdated) _expandTransitionMethod();
+    else if (collapseUpdated) _collapseTransitionMethod();
+    _transition.animateOn();
+    */
   }
 
   /**

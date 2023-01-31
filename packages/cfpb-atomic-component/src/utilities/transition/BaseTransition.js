@@ -35,7 +35,7 @@ function BaseTransition(element, classes, child = null) {
 
   /**
    * Add an event listener to the transition, or call the transition
-   * complete handler immediately if transition not supported.
+   * complete handler immediately if the transition is not supported.
    */
   function _addEventListener() {
     /*

@@ -58,16 +58,18 @@
       display: none;
     }
 
-    &__expanded .o-expandable_cue-close {
+    &[aria-expanded='false'] .o-expandable_cue-open {
       display: block;
     }
 
-    &__collapsed .o-expandable_cue-open {
+    &[aria-expanded='true'] .o-expandable_cue-close {
       display: block;
     }
   }
 
   &_content {
+    overflow: hidden;
+
     // A clearfix prevents twitchy animations from occurring when margins
     // collapse and extend past the bounds of the expandable.
     .u-clearfix();
@@ -76,16 +78,12 @@
       transition: max-height @expandable__transition-speed ease-in-out;
     }
 
-    &__collapsed {
+    [aria-expanded='false'] {
       max-height: 0;
     }
 
-    &__expanded {
+    [aria-expanded='true'] {
       max-height: 1000px;
-    }
-
-    &.u-is-animating {
-      overflow: hidden;
     }
   }
 
@@ -189,15 +187,15 @@
 
   .respond-to-print( {
     // Hide the interactive expandable cues when printing
-    &_target__expanded &_cue-close,
-    &_target__collapsed &_cue-open {
+    &_target[aria-expanded='true'] &_cue-close,
+    &_target[aria-expanded='false'] &_cue-open {
       display: none;
     }
 
     // Ensure all expandables are expanded when printing.
     // To accommodate print stylesheets that display the raw URL after links,
     // set an enormous max height to accommodate expandables that have a lot of links.
-    &_content__collapsed {
+    &_content[aria-expanded='false'] {
       display: block;
       max-height: 99999px !important;
     }

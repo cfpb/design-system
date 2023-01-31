@@ -356,8 +356,7 @@ variation_groups:
 
           // Set the expand/collapse transitions.
 
-          flyout.setExpandTransition(transition, transition.maxHeightDefault); flyout.setCollapseTransition(transition, transition.maxHeightZero);
-
+          flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
 
           // Initialize the flyout.
 

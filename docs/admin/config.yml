@@ -21,12 +21,12 @@ public_folder: /design-system/images/uploads
 pull_request_url: https://github.com/cfpb/design-system/pulls
 
 collections:
-  - label: "Navigation"
-    name: "navigation"
+  - label: 'Navigation'
+    name: 'navigation'
     files:
-      - label: "Side navigation"
-        name: "side-navigation"
-        file: "docs/_data/side-navigation.yml"
+      - label: 'Side navigation'
+        name: 'side-navigation'
+        file: 'docs/_data/side-navigation.yml'
         fields:
           - label: 'First-level nav headings'
             name: first-level
@@ -64,11 +64,11 @@ collections:
                       - label: 'Design System page'
                         name: 'page'
                         widget: 'relation'
-                        optionsLength: 999
-                        collection: "pages"
-                        searchFields: ["title"]
-                        valueField: 'title'
-                        displayFields: ["title"]
+                        options_length: 999
+                        collection: 'pages'
+                        search_fields: ['title']
+                        value_field: 'title'
+                        display_fields: ['title']
                   - label: 'Third-level nav headings'
                     name: third-level
                     widget: list
@@ -84,11 +84,11 @@ collections:
                           - label: 'Design System page'
                             name: 'page'
                             widget: 'relation'
-                            optionsLength: 999
-                            collection: "pages"
-                            searchFields: ["title"]
-                            valueField: 'title'
-                            displayFields: ["title"]
+                            options_length: 999
+                            collection: 'pages'
+                            search_fields: ['title']
+                            value_field: 'title'
+                            display_fields: ['title']
               - label: 'First-level nav items'
                 name: nav-items
                 widget: list
@@ -96,15 +96,15 @@ collections:
                   - label: 'Design System page'
                     name: 'page'
                     widget: 'relation'
-                    optionsLength: 999
-                    collection: "pages"
-                    searchFields: ["title"]
-                    valueField: 'title'
-                    displayFields: ["title"]
+                    options_length: 999
+                    collection: 'pages'
+                    search_fields: ['title']
+                    value_field: 'title'
+                    display_fields: ['title']
   - label: 'Design System pages'
     name: 'pages'
     identifier_field: 'title'
-    preview_path: "{{section}}/{{title}}"
+    preview_path: '{{section}}/{{title}}'
     label_singular: 'Design System page'
     folder: 'docs/pages/'
     create: true
@@ -265,8 +265,8 @@ collections:
         widget: 'markdown'
         minimal: true
         required: false
-  - label: "Special pages"
-    name: "special-pages"
+  - label: 'Special pages'
+    name: 'special-pages'
     folder: 'docs/special-pages/'
     identifier_field: 'title'
     fields:

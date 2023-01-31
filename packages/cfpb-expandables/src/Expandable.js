@@ -2,144 +2,106 @@
    Expandable Organism
    ========================================================================== */
 
-import AtomicComponent from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
+import {
+  checkDom,
+  setInitFlag,
+} from '@cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js';
+import { add as addDataHook } from '@cfpb/cfpb-atomic-component/src/utilities/data-hook.js';
+import MaxHeightTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
-import ExpandableTransition from './ExpandableTransition.js';
+import FlyoutMenu from '@cfpb/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js';
+import { instantiateAll } from '@cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js';
 
-const eventObserver = new EventObserver();
-
-/**
- * Event handler for when an expandable begins expanding.
- */
-function expandBeginHandler() {
-  this.ui.content.classList.remove('u-hidden');
-}
+const BASE_CLASS = 'o-expandable';
 
 /**
- * Event handler for when an expandable is finished collapsing.
+ * Expandable
+ *
+ * @class
+ * @classdesc Initializes a new Expandable molecule.
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the molecule.
+ * @returns {Expandable} An instance.
  */
-function collapseEndHandler() {
-  this.ui.content.classList.add('u-hidden');
-}
+function Expandable(element) {
+  let _instance;
 
-/**
- * Event handler for when an accordion is activated
- */
-function _accordionActivatedHandler() {
-  if (this.activeAccordion) {
-    this.transition.toggleExpandable();
-    this.toggleTargetState(this.ui.target);
-    this.activeAccordion = false;
-  }
-}
+  // Internal vars.
+  const _dom = checkDom(element, BASE_CLASS);
+  let _targetDom;
+  let _contentDom;
+  let _labelDom;
 
-/**
- * Initialize a new expandable.
- */
-function initialize() {
-  const transition = new ExpandableTransition(this.ui.content);
-  this.transition = transition.init();
-  this.transition.addEventListener(
-    'expandbegin',
-    expandBeginHandler.bind(this)
-  );
-  this.transition.addEventListener(
-    'collapseend',
-    collapseEndHandler.bind(this)
-  );
+  // Animation vars.
+  let _transition;
+  let _flyout;
 
-  if (
-    this.ui.content.classList.contains(ExpandableTransition.CLASSES.EXPANDED)
-  ) {
-    this.ui.target.classList.add(this.classes.targetExpanded);
-  } else {
-    this.ui.target.classList.add(this.classes.targetCollapsed);
-    this.ui.content.classList.add('u-hidden');
-  }
-
-  const expandableGroup = this.ui.target.closest('.' + this.classes.group);
-
-  this.isAccordionGroup =
-    expandableGroup !== null &&
-    expandableGroup.classList.contains(this.classes.groupAccordion);
-
-  if (this.isAccordionGroup) {
-    eventObserver.addEventListener(
-      'accordionActivated',
-      _accordionActivatedHandler.bind(this)
-    );
-  }
-}
-
-/**
- * Event handler for when an expandable is clicked.
- */
-function expandableClickHandler() {
-  this.transition.toggleExpandable();
-  this.toggleTargetState(this.ui.target);
-
-  if (this.isAccordionGroup) {
-    if (this.activeAccordion) {
-      this.activeAccordion = false;
-    } else {
-      eventObserver.dispatchEvent('accordionActivated', { target: this });
-      this.activeAccordion = true;
+  /**
+   * Set up and create the multiselect.
+   *
+   * @returns {Expandable} An instance.
+   */
+  function init() {
+    if (!setInitFlag(_dom)) {
+      return this;
     }
+
+    _instance = this;
+
+    _targetDom = _dom.querySelector(`.${BASE_CLASS}_target`);
+    _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
+    _labelDom = _dom.querySelector(`.${BASE_CLASS}_label`);
+
+    const isExpanded = _contentDom.classList.contains(
+      `${BASE_CLASS}_content__onload-open`
+    );
+
+    // Add behavior hooks.
+    addDataHook(_dom, 'behavior_flyout-menu');
+    addDataHook(_targetDom, 'behavior_flyout-menu_trigger');
+    addDataHook(_contentDom, 'behavior_flyout-menu_content');
+
+    // Create root menu.
+    _transition = new MaxHeightTransition(_contentDom).init();
+    _flyout = new FlyoutMenu(_dom).init(isExpanded);
+
+    _flyout.setTransition(
+      _transition,
+      _transition.maxHeightZero,
+      _transition.maxHeightDefault
+    );
+
+    // Add events.
+    _flyout.addEventListener('expandBegin', () => {
+      _instance.dispatchEvent('expandBegin', { target: _instance });
+    });
+
+    return this;
   }
-}
 
-/**
- * Toggle an expandable to open or closed.
- *
- * @param {HTMLElement} element - The expandable target HTML DOM element.
- */
-function toggleTargetState(element) {
-  if (element.classList.contains(this.classes.targetExpanded)) {
-    this.ui.target.classList.add(this.classes.targetCollapsed);
-    this.ui.target.classList.remove(this.classes.targetExpanded);
-  } else {
-    this.ui.target.classList.add(this.classes.targetExpanded);
-    this.ui.target.classList.remove(this.classes.targetCollapsed);
+  /**
+   * @returns {string} The expandable label text.
+   */
+  function getLabelText() {
+    return _labelDom.textContent.trim();
   }
+
+  // Attach public events.
+  this.init = init;
+  this.expand = () => _flyout.expand();
+  this.collapse = () => _flyout.collapse();
+  this.isExpanded = () => _flyout.isExpanded();
+  this.getLabelText = getLabelText;
+
+  const eventObserver = new EventObserver();
+  this.addEventListener = eventObserver.addEventListener;
+  this.removeEventListener = eventObserver.removeEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+
+  return this;
 }
 
-/**
- * Retrieve the label text of the expandable header.
- *
- * @returns {string} The text of the expandable's label.
- */
-function getLabelText() {
-  return this.ui.label.textContent.trim();
-}
-
-const Expandable = AtomicComponent.extend({
-  ui: {
-    base: '.o-expandable',
-    target: '.o-expandable_target',
-    content: '.o-expandable_content',
-    header: '.o-expandable_header',
-    label: '.o-expandable_label',
-  },
-
-  classes: {
-    targetExpanded: 'o-expandable_target__expanded',
-    targetCollapsed: 'o-expandable_target__collapsed',
-    group: 'o-expandable-group',
-    groupAccordion: 'o-expandable-group__accordion',
-  },
-
-  events: {
-    'click .o-expandable_target': 'expandableClickHandler',
-  },
-
-  transition: null,
-  isAccordionGroup: false,
-  activeAccordion: false,
-
-  initialize: initialize,
-  expandableClickHandler: expandableClickHandler,
-  toggleTargetState: toggleTargetState,
-  getLabelText: getLabelText,
-});
+Expandable.BASE_CLASS = BASE_CLASS;
+Expandable.init = () => instantiateAll(`.${Expandable.BASE_CLASS}`, Expandable);
 
 export default Expandable;

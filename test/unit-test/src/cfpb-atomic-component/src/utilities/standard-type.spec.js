@@ -1,6 +1,5 @@
 import {
   BEHAVIOR_PREFIX,
-  DIRECTIONS,
   JS_HOOK,
   STATE_PREFIX,
   noopFunct,
@@ -12,6 +11,5 @@ describe('standard-type', () => {
     expect(JS_HOOK).toBe('data-js-hook');
     expect(noopFunct()).toBeUndefined();
     expect(STATE_PREFIX).toBe('state_');
-    expect(DIRECTIONS).toBeInstanceOf(Object);
   });
 });

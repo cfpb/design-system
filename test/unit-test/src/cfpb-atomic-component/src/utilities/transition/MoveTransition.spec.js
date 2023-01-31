@@ -155,7 +155,7 @@ describe('MoveTransition', () => {
       };
       transition.addEventListener('transitionend', handler2);
 
-      transition.moveLeft(2);
+      transition.moveLeft2();
     });
 
     it('should apply u-move-left-3x class', () => {
@@ -174,19 +174,7 @@ describe('MoveTransition', () => {
       };
       transition.addEventListener('transitionend', handler2);
 
-      transition.moveLeft(3);
-    });
-
-    it('should throw error when move left range is out-of-range', () => {
-      /**
-       * @returns {MoveTransition} An instance.
-       */
-      function checkMoveLeftOutOfRange() {
-        return transition.moveLeft(4);
-      }
-      expect(checkMoveLeftOutOfRange).toThrow(
-        'MoveTransition: moveLeft count is out of range!'
-      );
+      transition.moveLeft3();
     });
   });
 });

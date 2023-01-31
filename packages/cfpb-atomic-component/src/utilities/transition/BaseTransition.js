@@ -19,6 +19,8 @@ function BaseTransition(element, classes) {
   let _transitionEndEvent;
   let _transitionCompleteBinded;
   let _addEventListenerBinded;
+
+  let _isAnimated = true;
   let _isAnimating = false;
   let _isFlushed = false;
 
@@ -35,14 +37,14 @@ function BaseTransition(element, classes) {
 
   /**
    * Add an event listener to the transition, or call the transition
-   * complete handler immediately if transition not supported.
+   * complete handler immediately if the transition is not supported.
    */
   function _addEventListener() {
     _dom.classList.add(BaseTransition.ANIMATING_CLASS);
     _isAnimating = true;
 
     /*
-      If transition is not supported, call handler directly (IE9/OperaMini).
+      If the transition is not supported, call handler directly (IE9/OperaMini).
       Also, if "transition-duration: 0s" is set, transitionEnd event will not
       fire, so we need to call the handler straight away.
     */
@@ -149,6 +151,7 @@ function BaseTransition(element, classes) {
    * @returns {BaseTransition} An instance.
    */
   function animateOn() {
+    _isAnimated = true;
     if (_dom) _dom.classList.remove(BaseTransition.NO_ANIMATION_CLASS);
 
     return this;
@@ -160,6 +163,7 @@ function BaseTransition(element, classes) {
    * @returns {BaseTransition} An instance.
    */
   function animateOff() {
+    _isAnimated = false;
     if (_dom) _dom.classList.add(BaseTransition.NO_ANIMATION_CLASS);
 
     return this;
@@ -220,6 +224,7 @@ function BaseTransition(element, classes) {
    * @returns {BaseTransition} An instance.
    */
   function init() {
+    _isAnimated = _dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
     _transitionCompleteBinded = _transitionComplete.bind(this);
     _addEventListenerBinded = _addEventListener.bind(this);
     setElement(element);

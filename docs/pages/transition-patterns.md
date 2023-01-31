@@ -211,8 +211,7 @@ variation_groups:
             );
             const transition = new MaxHeightTransition(flyoutExampleContent).init();
             const flyout = new FlyoutMenu(flyoutExample);
-            flyout.setExpandTransition(transition, transition.maxHeightDefault);
-            flyout.setCollapseTransition(transition, transition.maxHeightZero);
+            flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
             flyout.init();
           </script>
         variation_code_snippet_rendered: >-
@@ -235,8 +234,7 @@ variation_groups:
               );
               const transition = new MaxHeightTransition(flyoutExampleContent).init();
               const flyout = new FlyoutMenu(flyoutExample);
-              flyout.setExpandTransition(transition, transition.maxHeightDefault);
-              flyout.setCollapseTransition(transition, transition.maxHeightZero);
+              flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
               flyout.init();
             } );
           </script>
@@ -301,8 +299,7 @@ variation_groups:
 
           // Set the expand/collapse transitions.
 
-          flyout.setExpandTransition(transition, transition.maxHeightDefault); flyout.setCollapseTransition(transition, transition.maxHeightZero);
-
+          flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
 
           // Initialize the flyout.
 

@@ -65,8 +65,11 @@ function Expandable(element) {
     _transition = new MaxHeightTransition(_contentDom).init();
     _flyout = new FlyoutMenu(_dom).init(isExpanded);
 
-    _flyout.setExpandTransition(_transition, _transition.maxHeightDefault);
-    _flyout.setCollapseTransition(_transition, _transition.maxHeightZero);
+    _flyout.setTransition(
+      _transition,
+      _transition.maxHeightZero,
+      _transition.maxHeightDefault
+    );
 
     // Add events.
     _flyout.addEventListener('expandBegin', () => {

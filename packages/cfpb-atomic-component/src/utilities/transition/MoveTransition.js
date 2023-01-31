@@ -59,17 +59,13 @@ function MoveTransition(element) {
    *   as a multiplication of the element's width.
    * @returns {MoveTransition} An instance.
    */
-  function moveLeft(count) {
+  function _moveLeft(count) {
     count = count || 1;
     const moveClasses = [
       CLASSES.MOVE_LEFT,
       CLASSES.MOVE_LEFT_2X,
       CLASSES.MOVE_LEFT_3X,
     ];
-
-    if (count < 1 || count > moveClasses.length) {
-      throw new Error('MoveTransition: moveLeft count is out of range!');
-    }
 
     _baseTransition.applyClass(moveClasses[count - 1]);
 
@@ -112,7 +108,9 @@ function MoveTransition(element) {
   this.remove = _baseTransition.remove;
 
   this.init = init;
-  this.moveLeft = moveLeft;
+  this.moveLeft = () => _moveLeft(1);
+  this.moveLeft2 = () => _moveLeft(2);
+  this.moveLeft3 = () => _moveLeft(3);
   this.moveRight = moveRight;
   this.moveToOrigin = moveToOrigin;
   this.moveUp = moveUp;

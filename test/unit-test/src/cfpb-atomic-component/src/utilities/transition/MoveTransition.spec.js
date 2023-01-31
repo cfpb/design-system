@@ -92,7 +92,7 @@ describe('MoveTransition', () => {
     });
 
     it('should apply u-move-left-2x class', () => {
-      transition.moveLeft(2);
+      transition.moveLeft2();
       let classes = 'content-1 u-move-transition u-is-animating u-move-left-2x';
       expect(contentDom.className).toStrictEqual(classes);
       transition.addEventListener('transitionend', () => {
@@ -102,25 +102,13 @@ describe('MoveTransition', () => {
     });
 
     it('should apply u-move-left-3x class', () => {
-      transition.moveLeft(3);
+      transition.moveLeft3();
       let classes = 'content-1 u-move-transition u-is-animating u-move-left-3x';
       expect(contentDom.className).toStrictEqual(classes);
       transition.addEventListener('transitionend', () => {
         classes = 'content-1 u-move-transition u-move-left-3x';
         expect(contentDom.className).toStrictEqual(classes);
       });
-    });
-
-    it('should throw error when move left range is out-of-range', () => {
-      /**
-       * @returns {MoveTransition} An instance.
-       */
-      function checkMoveLeftOutOfRange() {
-        return transition.moveLeft(4);
-      }
-      expect(checkMoveLeftOutOfRange).toThrow(
-        'MoveTransition: moveLeft count is out of range!'
-      );
     });
   });
 });

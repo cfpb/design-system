@@ -1,6 +1,8 @@
 import BaseTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js';
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 
+const eventObserver = new EventObserver();
+
 // Exported constants.
 const CLASSES = {
   CSS_PROPERTY: 'max-height',
@@ -19,8 +21,8 @@ const CLASSES = {
  * @returns {MaxHeightTransition} An instance.
  */
 function MaxHeightTransition(element) {
-  const _baseTransition = new BaseTransition(element, CLASSES);
-  let previousHeight;
+  const _baseTransition = new BaseTransition(element, CLASSES, this);
+  let _previousHeight;
 
   /**
    * Refresh the max height set on the element.
@@ -32,17 +34,6 @@ function MaxHeightTransition(element) {
     const newDuration = elmHeight / 1000 + 's';
     element.style.transitionDuration = newDuration;
     element.style.maxHeight = newHeight;
-  }
-
-  /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
-
-    if (element.scrollHeight > previousHeight) {
-      refresh();
-    }
   }
 
   /**
@@ -62,24 +53,32 @@ function MaxHeightTransition(element) {
   }
 
   /**
+   * @param {number} initialHeight - The initial height to set the max height.
    * @returns {MaxHeightTransition} An instance.
    */
-  function init() {
+  function init(initialHeight) {
     _baseTransition.init();
+
+    initialHeight = initialHeight | 0;
+    element.style.maxHeight = initialHeight + 'px';
 
     /*
     The scrollHeight of an element may be incorrect if the page hasn't
     fully loaded yet, so we listen for that to happen before calculating
     the element max-height.
     */
-    window.addEventListener('load', _pageLoaded);
+    //window.addEventListener('load', _pageLoaded);
 
     /*
     The scrollHeight of an element may change on page load.
     */
     window.addEventListener('resize', _pageResized);
 
-    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
+    this.addEventListener('transitionend', () => {
+      if (element.scrollHeight > _previousHeight) {
+        refresh();
+      }
+    });
 
     return this;
   }
@@ -93,8 +92,8 @@ function MaxHeightTransition(element) {
     refresh();
     _baseTransition.applyClass(CLASSES.MH_DEFAULT);
 
-    if (!previousHeight || element.scrollHeight > previousHeight) {
-      previousHeight = element.scrollHeight;
+    if (!_previousHeight || element.scrollHeight > _previousHeight) {
+      _previousHeight = element.scrollHeight;
     }
 
     return this;
@@ -108,7 +107,7 @@ function MaxHeightTransition(element) {
   function maxHeightSummary() {
     _baseTransition.applyClass(CLASSES.MH_SUMMARY);
 
-    previousHeight = element.scrollHeight;
+    _previousHeight = element.scrollHeight;
 
     return this;
   }
@@ -121,7 +120,7 @@ function MaxHeightTransition(element) {
   function maxHeightZero() {
     _baseTransition.applyClass(CLASSES.MH_ZERO);
 
-    previousHeight = element.scrollHeight;
+    _previousHeight = element.scrollHeight;
 
     return this;
   }
@@ -139,7 +138,6 @@ function MaxHeightTransition(element) {
   }
 
   // Attach public events.
-  const eventObserver = new EventObserver();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;

@@ -21,8 +21,15 @@ variation_groups:
             } );
           </script>
         variation_code_snippet_rendered: >-
-          <div class="u-move-transition example-box">Click me!</div> <script>
+          <div class="u-move-transition example-box">Click me!</div>
+          <br><br>
+          <p>
+          Events dispatched:<br>
+          <textarea class="example-output-move" placeholder="Click square!"></textarea>
+          </p>
+          <script>
             document.addEventListener( 'DOMContentLoaded', function() {
+              const output = document.querySelector('.example-output-move');
               const moveTransitionExample = document.querySelector( '.example-box.u-move-transition' );
               const moveTransition = new MoveTransition( moveTransitionExample ).init();
               moveTransitionExample.addEventListener( 'click', function() {
@@ -31,6 +38,12 @@ variation_groups:
                   moveTransition.moveToOrigin();
                 }, 1000 );
               } );
+              moveTransition.addEventListener('transitionbegin', function(evt) {
+                output.value += evt.type + '\n';
+              });
+              moveTransition.addEventListener('transitionend', function(evt) {
+                output.value += evt.type + '\n';
+              });
             } );
           </script>
         variation_implementation: >-
@@ -76,9 +89,16 @@ variation_groups:
             } );
           </script>
         variation_code_snippet_rendered: >-
-          <div class="u-alpha-transition example-box">Click me!</div> <script>
+          <div class="u-alpha-transition example-box">Click me!</div>
+          <br><br>
+          <p>
+          Events dispatched:<br>
+          <textarea class="example-output-alpha" placeholder="Click square!"></textarea>
+          </p>
+          <script>
             document.addEventListener( 'DOMContentLoaded', function() {
               const alphaTransitionExample = document.querySelector( '.example-box.u-alpha-transition' );
+              const output = document.querySelector('.example-output-alpha');
               const alphaTransition = new AlphaTransition( alphaTransitionExample ).init();
               alphaTransitionExample.addEventListener( 'click', function() {
                 alphaTransition.fadeOut();
@@ -86,6 +106,12 @@ variation_groups:
                   alphaTransition.fadeIn();
                 }, 1000 );
               } );
+              alphaTransition.addEventListener('transitionbegin', function(evt) {
+                output.value += evt.type + '\n';
+              });
+              alphaTransition.addEventListener('transitionend', function(evt) {
+                output.value += evt.type + '\n';
+              });
             } );
           </script>
         variation_implementation: >-
@@ -127,7 +153,7 @@ variation_groups:
 
           <script>
             const maxHeightTransitionExample = document.querySelector( '.example-box.u-max-height-summary' );
-            const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init();
+            const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init(88);
             maxHeightTransitionExample.addEventListener( 'click', () => {
               maxHeightTransition.maxHeightDefault();
               setTimeout( () => {
@@ -141,16 +167,29 @@ variation_groups:
 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </div> <script>
+          </div>
+          <br><br>
+          <p>
+          Events dispatched:<br>
+          <textarea class="example-output-maxheight" placeholder="Click square!"></textarea>
+          </p>
+          <script>
             document.addEventListener( 'DOMContentLoaded', function() {
+              const output = document.querySelector('.example-output-maxheight');
               const maxHeightTransitionExample = document.querySelector( '.example-box.u-max-height-summary' );
-              const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init();
+              const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init(88);
               maxHeightTransitionExample.addEventListener( 'click', function() {
                 maxHeightTransition.maxHeightDefault();
                 setTimeout( function() {
                   maxHeightTransition.maxHeightSummary();
                 }, 1000 );
               } );
+              maxHeightTransition.addEventListener('transitionbegin', function(evt) {
+                output.value += evt.type + '\n';
+              });
+              maxHeightTransition.addEventListener('transitionend', function(evt) {
+                output.value += evt.type + '\n';
+              });
             } );
           </script>
         variation_implementation: >-
@@ -188,7 +227,7 @@ variation_groups:
           container that contains one or more triggers and a content area. The
           flyout handles `aria-expanded` attribute toggling and dispatches the
           following events: `triggerOver`, `triggerOut`, `triggerClick`,
-          `expandBegin`, `expandEnd`, `collapseBegin`, `collapseEnd`. This
+          `expandbegin`, `expandend`, `collapsebegin`, `collapseend`. This
           handles the markup semantics of toggling a content area, which can
           then be combined with a transition from above to create an animated
           container that shows and hides content.'
@@ -211,8 +250,7 @@ variation_groups:
             );
             const transition = new MaxHeightTransition(flyoutExampleContent).init();
             const flyout = new FlyoutMenu(flyoutExample);
-            flyout.setExpandTransition(transition, transition.maxHeightDefault);
-            flyout.setCollapseTransition(transition, transition.maxHeightZero);
+            flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
             flyout.init();
           </script>
         variation_code_snippet_rendered: >-
@@ -227,17 +265,34 @@ variation_groups:
               </button>
             </div>
           </div>
+          <br><br>
+          <p>
+          Events dispatched:<br>
+          <textarea class="example-output-flyout" placeholder="Click square!"></textarea>
+          </p>
           <script>
             document.addEventListener( 'DOMContentLoaded', function() {
-              const flyoutExample = document.querySelector( '.example-flyout' );
+              const output = document.querySelector('.example-output-flyout');
+              const flyoutExample = document.querySelector('.example-flyout');
               const flyoutExampleContent = document.querySelector(
                 '.example-flyout-content'
               );
               const transition = new MaxHeightTransition(flyoutExampleContent).init();
               const flyout = new FlyoutMenu(flyoutExample);
-              flyout.setExpandTransition(transition, transition.maxHeightDefault);
-              flyout.setCollapseTransition(transition, transition.maxHeightZero);
+              flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
               flyout.init();
+              flyout.addEventListener('expandbegin', function(evt) {
+                output.value += evt.type + '\n';
+              });
+              flyout.addEventListener('expandend', function(evt) {
+                output.value += evt.type + '\n';
+              });
+              flyout.addEventListener('collapsebegin', function(evt) {
+                output.value += evt.type + '\n';
+              });
+              flyout.addEventListener('collapseend', function(evt) {
+                output.value += evt.type + '\n';
+              });
             } );
           </script>
         variation_implementation: >-

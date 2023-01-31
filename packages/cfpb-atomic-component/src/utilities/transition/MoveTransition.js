@@ -1,6 +1,8 @@
 import BaseTransition from './BaseTransition.js';
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 
+const eventObserver = new EventObserver();
+
 // Exported constants.
 const CLASSES = {
   CSS_PROPERTY: 'transform',
@@ -22,21 +24,13 @@ const CLASSES = {
  * @returns {MoveTransition} An instance.
  */
 function MoveTransition(element) {
-  const _baseTransition = new BaseTransition(element, CLASSES);
-
-  /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
-  }
+  const _baseTransition = new BaseTransition(element, CLASSES, this);
 
   /**
    * @returns {MoveTransition} An instance.
    */
   function init() {
     _baseTransition.init();
-    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
 
     return this;
   }
@@ -99,7 +93,6 @@ function MoveTransition(element) {
   }
 
   // Attach public events.
-  const eventObserver = new EventObserver();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;

@@ -95,10 +95,6 @@ describe('BaseTransition', () => {
       transition.init();
     });
 
-    it('should return an instance', () => {
-      expect(transition.animateOff() instanceof BaseTransition).toBe(true);
-    });
-
     it('should set u-no-animation class when called', () => {
       expect(contentDom.classList.contains('u-no-animation')).toBe(false);
       transition.animateOff();
@@ -109,10 +105,6 @@ describe('BaseTransition', () => {
   describe('.animateOn()', () => {
     beforeEach(() => {
       transition.init();
-    });
-
-    it('should return an instance', () => {
-      expect(transition.animateOn() instanceof BaseTransition).toBe(true);
     });
 
     it('should remove u-no-animation class, if set', () => {

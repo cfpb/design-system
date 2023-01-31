@@ -92,7 +92,7 @@ describe('Expandable', () => {
     it('should be expanded when the expandable starts out collapsed', () => {
       let expandBeginFired = false;
 
-      initialized1.addEventListener('expandBegin', () => {
+      initialized1.addEventListener('expandbegin', () => {
         expandBeginFired = true;
       });
 
@@ -111,7 +111,7 @@ describe('Expandable', () => {
     it('should be collapsed when the expandable starts out expanded', () => {
       let collapseBeginFired = false;
 
-      initialized2.addEventListener('collapseBegin', () => {
+      initialized2.addEventListener('collapsebegin', () => {
         collapseBeginFired = true;
       });
 

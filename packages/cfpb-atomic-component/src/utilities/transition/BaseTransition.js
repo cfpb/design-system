@@ -18,7 +18,7 @@ function BaseTransition(element, classes, child = null) {
   let _transitionEndEvent;
   let _transitionCompleteBinded;
 
-  let _isAnimated = true;
+  let _isAnimated = false;
   let _isAnimating = false;
   let _isFlushed = false;
 
@@ -204,18 +204,16 @@ function BaseTransition(element, classes, child = null) {
    * @returns {BaseTransition} An instance.
    */
   function init() {
+    _isAnimated = !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
     _transitionCompleteBinded = _transitionComplete.bind(this);
     setElement(_dom);
-
-    _isAnimated = !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
 
     return this;
   }
 
   /**
    * @param {string} className - A CSS class.
-   * @returns {boolean} False if the class is already applied
-   *   or the transition is not initialized,
+   * @returns {boolean} False if the class is already applied,
    *   otherwise true if the class was applied.
    */
   function applyClass(className) {

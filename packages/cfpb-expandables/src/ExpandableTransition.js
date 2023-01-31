@@ -20,7 +20,7 @@ const CLASSES = {
  * @returns {ExpandableTransition} An instance.
  */
 function ExpandableTransition(element) {
-  const _baseTransition = new BaseTransition(element, CLASSES);
+  const _baseTransition = new BaseTransition(element, CLASSES, this);
   let previousHeight;
 
   /**
@@ -42,13 +42,14 @@ function ExpandableTransition(element) {
    * @returns {ExpandableTransition} An instance.
    */
   function init() {
+    const openOnLoad = element.classList.contains(CLASSES.OPEN_DEFAULT);
     _baseTransition.init();
-    _baseTransition.addEventListener(
+    this.addEventListener(
       BaseTransition.END_EVENT,
       _transitionComplete.bind(this)
     );
 
-    if (element.classList.contains(CLASSES.OPEN_DEFAULT)) {
+    if (openOnLoad) {
       this.expand();
     } else {
       this.collapse();

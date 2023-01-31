@@ -1,5 +1,12 @@
 import BaseTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js';
+import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 
+let eventObserver = new EventObserver();
+function MockChildTransition() {
+  this.dispatchEvent = eventObserver.dispatchEvent;
+  return this;
+}
+let mockChildTransition;
 let transition;
 
 // DOM-related settings.
@@ -14,24 +21,27 @@ describe('BaseTransition', () => {
     document.body.innerHTML = HTML_SNIPPET;
     contentDom = document.querySelector('.content-1');
     content2Dom = document.querySelector('.content-2');
-    transition = new BaseTransition(contentDom, {
-      CSS_PROPERTY: 'top',
-      BASE_CLASS: 'u-test-transition',
-    });
+
+    mockChildTransition = new MockChildTransition();
+    transition = new BaseTransition(
+      contentDom,
+      {
+        CSS_PROPERTY: 'top',
+        BASE_CLASS: 'u-test-transition',
+      },
+      mockChildTransition
+    );
   });
 
   describe('.init()', () => {
     it('should have public static methods', () => {
-      expect(BaseTransition.BEGIN_EVENT).toStrictEqual('transitionBegin');
-      expect(BaseTransition.END_EVENT).toStrictEqual('transitionEnd');
+      expect(BaseTransition.BEGIN_EVENT).toStrictEqual('transitionbegin');
+      expect(BaseTransition.END_EVENT).toStrictEqual('transitionend');
       expect(BaseTransition.NO_ANIMATION_CLASS).toStrictEqual('u-no-animation');
     });
 
     it('should have correct state before initializing', () => {
       expect(transition.isAnimated()).toBe(false);
-      expect(transition.remove()).toBe(false);
-      expect(transition.animateOn() instanceof BaseTransition).toBe(true);
-      expect(transition.animateOff() instanceof BaseTransition).toBe(true);
     });
 
     it('should have correct state after initializing', () => {
@@ -64,7 +74,7 @@ describe('BaseTransition', () => {
       transition.init();
       let hasClass = contentDom.classList.contains('u-test-transition');
       expect(hasClass).toBe(true);
-      expect(transition.remove()).toBe(true);
+      transition.remove();
       hasClass = contentDom.classList.contains('u-test-transition');
       expect(hasClass).toBe(false);
     });
@@ -97,7 +107,9 @@ describe('BaseTransition', () => {
 
     it('should set u-no-animation class when called', () => {
       expect(contentDom.classList.contains('u-no-animation')).toBe(false);
+      expect(transition.isAnimated()).toBe(true);
       transition.animateOff();
+      expect(transition.isAnimated()).toBe(false);
       expect(contentDom.classList.contains('u-no-animation')).toBe(true);
     });
   });
@@ -108,15 +120,17 @@ describe('BaseTransition', () => {
     });
 
     it('should remove u-no-animation class, if set', () => {
+      expect(transition.isAnimated()).toBe(true);
       transition.animateOff();
+      expect(transition.isAnimated()).toBe(false);
       transition.animateOn();
+      expect(transition.isAnimated()).toBe(true);
       expect(contentDom.classList.contains('u-no-animation')).toBe(false);
     });
   });
 
   describe('.applyClass()', () => {
     it('should apply a class', () => {
-      expect(transition.applyClass('u-test-transition')).toBe(false);
       transition.init();
       contentDom.classList.remove('u-test-transition');
       expect(transition.applyClass('u-test-transition')).toBe(true);

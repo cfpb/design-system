@@ -4766,6 +4766,88 @@ select.o-multiselect option {
     border-bottom-left-radius: 0;
   }
 }
+/* topdoc
+  name: Summary
+  family: cf-organisms
+  notes:
+    - "Styles a one-way Expandable-like organism that previews content."
+  patterns:
+  - name: Summary Mobile organism
+    markup: |
+      <div class="o-summary o-summary__mobile"
+           data-js-hook="behavior_flyout-menu">
+          <div class="o-summary_content"
+               data-js-hook="behavior_flyout-menu_content">
+               Content
+          </div>
+          <button class="o-summary_btn u-hidden"
+                  data-js-hook="behavior_flyout-menu_trigger">
+            Read full description
+          </button>
+      </div>
+    codenotes:
+      - |
+        Pattern structure
+        -----------------
+        .o-summary
+          .o-summary_content
+          .o-summary_btn.u-hidden
+
+    notes:
+      - "One-way expandable. Displays an approximately 4-line
+         preview of content on mobile screen sizes only
+         when __mobile modifier is used."
+  tags:
+  - cf-organisms
+*/
+.o-summary_content {
+  overflow: hidden;
+  position: relative;
+}
+.o-summary_content[aria-expanded='false']:after {
+  display: block;
+  height: 2.75em;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  content: '';
+}
+@media print {
+  .o-summary_content[aria-expanded='false']:after {
+    background: none;
+  }
+}
+.print .o-summary_content[aria-expanded='false']:after {
+  background: none;
+}
+.o-summary_btn {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: dotted #0072ce;
+  border-width: 1px 0;
+  text-align: center;
+  color: #0072ce;
+  background: #fff;
+}
+.o-summary_btn:focus {
+  outline: 1px dotted #0072ce;
+  outline-offset: 2px;
+}
+@media only screen and (min-width: 601px) {
+  .o-summary__mobile .o-summary_content[aria-expanded='false']:after {
+    display: none;
+  }
+  .o-summary__mobile .o-summary_btn {
+    display: none;
+  }
+}
 /* ==========================================================================
    Design System
    Expandable Styling

@@ -3546,6 +3546,165 @@ function isEmpty(value) {
 
 /***/ }),
 
+/***/ "./packages/cfpb-core/src/breakpoint-state.js":
+/*!****************************************************!*\
+  !*** ./packages/cfpb-core/src/breakpoint-state.js ***!
+  \****************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DESKTOP": function() { return /* binding */ DESKTOP; },
+/* harmony export */   "MOBILE": function() { return /* binding */ MOBILE; },
+/* harmony export */   "TABLET": function() { return /* binding */ TABLET; },
+/* harmony export */   "getBreakpointState": function() { return /* binding */ getBreakpointState; },
+/* harmony export */   "viewportIsIn": function() { return /* binding */ viewportIsIn; }
+/* harmony export */ });
+/* harmony import */ var _cfpb_cfpb_core_src_vars_breakpoints_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-core/src/vars-breakpoints.js */ "./packages/cfpb-core/src/vars-breakpoints.js");
+/* ==========================================================================
+   Get Breakpoint State
+   ========================================================================== */
+
+
+
+/**
+ * @returns {number} The base font size set on the body element.
+ */
+function _getBodyBaseFontSize() {
+  let fontSize = getComputedStyle(document.body).fontSize;
+  fontSize = fontSize === '' ? -1 : fontSize;
+  return parseFloat(fontSize);
+}
+
+/**
+ * @param {object} breakpointRange - Object containing breakpoint constants.
+ *   For example, for `bpXS` the value `{ min: 0, max: 600 }` would be passed.
+ * @param {number} width - Current window width.
+ * @returns {boolean} Whether the passed width is within a breakpoint range.
+ */
+function _inBreakpointRange(breakpointRange, width) {
+  let breakpointRangeMin = breakpointRange.min;
+  let breakpointRangeMax = breakpointRange.max;
+
+  // Whether the user has set a custom size for the font in their browser.
+  const useEmsConversation =
+    _getBodyBaseFontSize() > 0 && _getBodyBaseFontSize() !== 16;
+  if (useEmsConversation) {
+    /* 16 = base font size without adjustments.
+       The CSS converts breakpoints to ems, which then change the width of the
+       pixel width of the breakpoint. In JavaScript, the breakpoints are defined
+       in pixels, so we first convert them to ems using the 16px base font size
+       and then multiply them by any adjustments set by customizations of the
+       font size in the user's browser. */
+    breakpointRangeMin = (breakpointRangeMin / 16) * _getBodyBaseFontSize();
+    breakpointRangeMax = (breakpointRangeMax / 16) * _getBodyBaseFontSize();
+  }
+
+  const min = breakpointRangeMin || 0;
+  const max = breakpointRangeMax || Number.POSITIVE_INFINITY;
+
+  return min <= width && width <= max;
+}
+
+/**
+ * @param {number} width - Current window width.
+ * @returns {object} An object literal with boolean
+ *   bpXS, bpSM, bpMED, bpLG, bpXL properties.
+ */
+function getBreakpointState(width) {
+  const breakpointState = {};
+  width = width || window.innerWidth;
+
+  let rangeKey;
+  // eslint-disable-next-line guard-for-in
+  for (rangeKey in _cfpb_cfpb_core_src_vars_breakpoints_js__WEBPACK_IMPORTED_MODULE_0__["default"]) {
+    breakpointState[rangeKey] = _inBreakpointRange(
+      _cfpb_cfpb_core_src_vars_breakpoints_js__WEBPACK_IMPORTED_MODULE_0__["default"][rangeKey],
+      width
+    );
+  }
+
+  return breakpointState;
+}
+
+// Constants for breakpoint groupings.
+const MOBILE = 'mobile';
+const TABLET = 'tablet';
+const DESKTOP = 'desktop';
+
+/**
+ * Checks whether the current breakpoint is in a particular breakpoint group.
+ *
+ * @param {string} breakpointGroup - Breakpoint group names.
+ * @returns {boolean} True if in the breakpoint group, otherwise false.
+ */
+function viewportIsIn(breakpointGroup) {
+  let response = false;
+  const currentBreakpoint = getBreakpointState();
+
+  if (
+    (breakpointGroup === MOBILE && currentBreakpoint.bpXS) ||
+    (breakpointGroup === TABLET && currentBreakpoint.bpSM) ||
+    (breakpointGroup === DESKTOP &&
+      (currentBreakpoint.bpMED ||
+        currentBreakpoint.bpLG ||
+        currentBreakpoint.bpXL))
+  ) {
+    response = true;
+  }
+
+  return response;
+}
+
+// Expose public methods.
+
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-core/src/vars-breakpoints.js":
+/*!****************************************************!*\
+  !*** ./packages/cfpb-core/src/vars-breakpoints.js ***!
+  \****************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* ==========================================================================
+   Design System
+   Breakpoint JavaScript variables.
+   All values are pixel based.
+
+   NOTE: If any of the values in this file are adjusted,
+         they need to be adjusted in vars-breakpoints.less as well.
+   ========================================================================== */
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  bpXS: {
+    min: 0,
+    max: 600,
+  },
+  bpSM: {
+    min: 601,
+    max: 900,
+  },
+  bpMED: {
+    min: 901,
+    max: 1020,
+  },
+  bpLG: {
+    min: 1021,
+    max: 1200,
+  },
+  bpXL: {
+    min: 1201,
+  },
+});
+
+
+/***/ }),
+
 /***/ "./packages/cfpb-expandables/src/Expandable.js":
 /*!*****************************************************!*\
   !*** ./packages/cfpb-expandables/src/Expandable.js ***!
@@ -3849,6 +4008,201 @@ function ExpandableTransition(element) {
 ExpandableTransition.CLASSES = CLASSES;
 
 /* harmony default export */ __webpack_exports__["default"] = (ExpandableTransition);
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-expandables/src/Summary.js":
+/*!**************************************************!*\
+  !*** ./packages/cfpb-expandables/src/Summary.js ***!
+  \**************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/data-hook.js */ "./packages/cfpb-atomic-component/src/utilities/data-hook.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
+/* harmony import */ var _cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js");
+/* harmony import */ var _cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../cfpb-core/src/breakpoint-state.js */ "./packages/cfpb-core/src/breakpoint-state.js");
+
+
+
+
+
+
+
+const BASE_CLASS = 'o-summary';
+
+/**
+ * Summary
+ *
+ * @class
+ * @classdesc Initializes a new Summary organism.
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the organism.
+ * @returns {Summary} An instance.
+ */
+function Summary(element) {
+  const _dom = (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
+  const _hasMobileModifier = _dom.classList.contains(`${BASE_CLASS}__mobile`);
+  const _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
+  const _btnDom = _dom.querySelector(`.${BASE_CLASS}_btn`);
+  let _transition;
+  let _flyout;
+
+  // Whether the menu has been expanded or not.
+  let _isExpanded = false;
+
+  // Whether this instance's behaviors are suspended or not.
+  let _suspended = true;
+
+  /**
+   * @returns {Summary} An instance.
+   */
+  function init() {
+    if (!(0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
+      return this;
+    }
+
+    /* Bail out of initializatiion if the height of the summary's content
+       is less then our summary height of 5.5ems (16 * 5.5 = 88)
+       See https://github.com/cfpb/design-system/blob/72623270013f2ad08dbe92b5b709ed2b434ee41e/packages/cfpb-atomic-component/src/utilities/transition/transition.less#L84 */
+    if (_contentDom.offsetHeight <= 88) {
+      _hideButton();
+      return this;
+    }
+
+    // Add FlyoutMenu behavior data-js-hooks.
+    (0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__.add)(_dom, 'behavior_flyout-menu');
+    (0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__.add)(_contentDom, 'behavior_flyout-menu_content');
+    (0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__.add)(_btnDom, 'behavior_flyout-menu_trigger');
+
+    _transition = new _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__["default"](_contentDom).init();
+    _flyout = new _cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_4__["default"](_dom).init();
+
+    _resizeHandler();
+
+    window.addEventListener('resize', _resizeHandler);
+    // Pipe window resize handler into orientation change on supported devices.
+    if ('onorientationchange' in window) {
+      window.addEventListener('orientationchange', _resizeHandler);
+    }
+
+    /* When we click inside the content area we may be changing the size,
+       such as when a video player expands on being clicked.
+       So, let's refresh the transition to recalculate the max-height,
+       just in case. */
+    _contentDom.addEventListener('click', _contentClicked);
+
+    return this;
+  }
+
+  /**
+   * Handler for when the content area is clicked.
+   * Refresh the transition to recalculate the max-height.
+   *
+   * @param {MouseEvent} evt - the mouse event object.
+   */
+  function _contentClicked(evt) {
+    /* We don't need to refresh if a link was clicked as we'll be navigating
+       to another page. */
+    if (evt.target.tagName !== 'A') {
+      _transition.refresh();
+    }
+  }
+
+  /**
+   * Handle resizing of the window,
+   * suspends or resumes the mobile or desktop menu behaviors.
+   */
+  function _resizeHandler() {
+    if ((_hasMobileModifier && (0,_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.viewportIsIn)(_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.DESKTOP)) || (0,_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.viewportIsIn)(_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.TABLET)) {
+      _suspend();
+    } else {
+      _resume();
+    }
+  }
+
+  /**
+   * After the summary opens, remove the "read more" button.
+   */
+  function _expandEndHandler() {
+    _hideButton();
+    _isExpanded = true;
+  }
+
+  /**
+   *
+   */
+  function _showButton() {
+    _btnDom.classList.remove('u-hidden');
+  }
+
+  /**
+   *
+   */
+  function _hideButton() {
+    _btnDom.classList.add('u-hidden');
+  }
+
+  /**
+   * Add events necessary for the desktop menu behaviors.
+   *
+   * @returns {boolean} Whether it has successfully been resumed or not.
+   */
+  function _resume() {
+    // Re-initialize the transition on every resize to set the max-height.
+    _transition.refresh();
+
+    if (_suspended && _isExpanded === false) {
+      _flyout.addEventListener('expandEnd', _expandEndHandler);
+      // Set resume state.
+      _transition.setElement(_contentDom);
+      _flyout.setExpandTransition(_transition, _transition.maxHeightDefault);
+      _flyout.setCollapseTransition(_transition, _transition.maxHeightSummary);
+      _transition.animateOff();
+      _transition.maxHeightSummary();
+      _transition.animateOn();
+      _showButton();
+
+      _suspended = false;
+    }
+
+    return !_suspended;
+  }
+
+  /**
+   * Remove events necessary for the desktop menu behaviors.
+   *
+   * @returns {boolean} Whether it has successfully been suspended or not.
+   */
+  function _suspend() {
+    if (!_suspended) {
+      _suspended = true;
+      _flyout.removeEventListener('expandEnd', _expandEndHandler);
+      _flyout.clearTransitions();
+    }
+
+    return _suspended;
+  }
+
+  // Attach public events.
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  this.addEventListener = eventObserver.addEventListener;
+  this.removeEventListener = eventObserver.removeEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+
+  this.init = init;
+
+  return this;
+}
+
+Summary.BASE_CLASS = BASE_CLASS;
+Summary.init = () => (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${BASE_CLASS}`, Summary);
+
+/* harmony default export */ __webpack_exports__["default"] = (Summary);
 
 
 /***/ }),
@@ -4824,14 +5178,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _toggle_details_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle-details.js */ "./docs/assets/js/toggle-details.js");
 /* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! anchor-js */ "./node_modules/anchor-js/anchor.js");
 /* harmony import */ var _cfpb_cfpb_expandables_src_Expandable_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Expandable.js */ "./packages/cfpb-expandables/src/Expandable.js");
-/* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect.js */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js");
-/* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
-/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
-/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
+/* harmony import */ var _cfpb_cfpb_expandables_src_Summary_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Summary.js */ "./packages/cfpb-expandables/src/Summary.js");
+/* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect.js */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js");
+/* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
+/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
+/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
 
 
 
@@ -4843,8 +5198,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_redirect_banner_js__WEBPACK_IMPORTED_MODULE_9__["default"].init();
-_sidebar_js__WEBPACK_IMPORTED_MODULE_10__["default"].init();
+
+_redirect_banner_js__WEBPACK_IMPORTED_MODULE_10__["default"].init();
+_sidebar_js__WEBPACK_IMPORTED_MODULE_11__["default"].init();
 var anchors = new anchor_js__WEBPACK_IMPORTED_MODULE_1__();
 // Add anchors to all headings (except page title headings)
 anchors.add('h2:not(.title), h3, h4, h5');
@@ -4852,24 +5208,25 @@ anchors.add('h2:not(.title), h3, h4, h5');
 anchors.remove("\n  .a-live_code h2,\n  .a-live_code h3,\n  .a-live_code h4,\n  .a-live_code h5,\n  .o-expandable_label,\n  #search-results h3\n");
 var multiselectDom = document.querySelector('.o-multiselect');
 if (multiselectDom) {
-  var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_3__["default"](multiselectDom);
+  var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_4__["default"](multiselectDom);
   multiselect.init();
 }
+_cfpb_cfpb_expandables_src_Summary_js__WEBPACK_IMPORTED_MODULE_3__["default"].init();
 _cfpb_cfpb_expandables_src_Expandable_js__WEBPACK_IMPORTED_MODULE_2__["default"].init();
 
 // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.
-window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_4__["default"];
-window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_5__["default"];
-window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_6__["default"];
-window.FlyoutMenu = _cfpb_cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_7__["default"];
+window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_5__["default"];
+window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_6__["default"];
+window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_7__["default"];
+window.FlyoutMenu = _cfpb_cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_8__["default"];
 
 // Tabs show under the show/hide details button on a pattern.
-var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_8__["default"].BASE_CLASS));
+var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_9__["default"].BASE_CLASS));
 if (tabsContainerDom.length > 0) {
   var tabsInst;
   for (var i = 0, len = tabsContainerDom.length; i < len; i++) {
-    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_8__["default"](tabsContainerDom[i]);
+    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_9__["default"](tabsContainerDom[i]);
     tabsInst.init();
   }
 }

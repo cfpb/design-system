@@ -465,7 +465,6 @@ function Multiselect(element) {
     // Create all our markup but wait to manipulate the DOM just once
     _selectionsDom = create('ul', null, {
       className: BASE_CLASS + '_choices',
-      inside: _containerDom,
     });
 
     _headerDom = create('header', _containerDom, {

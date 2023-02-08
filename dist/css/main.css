@@ -4662,6 +4662,13 @@ select.o-multiselect option {
     margin-bottom: 0.3125em;
   }
 }
+html[lang='ar'] .m-notification .cf-icon-svg + .m-notification_content {
+  padding-left: initial;
+  padding-right: 1.5625em;
+}
+html[lang='ar'] .m-notification .m-list {
+  padding-right: 0;
+}
 .o-banner {
   padding: 0.9375em 0;
   background: #fff6ec;

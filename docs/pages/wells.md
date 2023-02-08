@@ -13,7 +13,7 @@ variation_groups:
                   cu. <a href="#">Example link</a>.
               </p>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Standard well
         variation_specs: >-
           * Padding at breakpoints 601+: 30 (top), 30 (right) 60 (bottom), 30
@@ -45,7 +45,8 @@ variation_groups:
                   cu. <a href="#">Example link</a>.
               </p>
           </div>
-        variation_description: T﻿he inkwell was originally developed for use on the
+        variation_description:
+          T﻿he inkwell was originally developed for use on the
           cf.gov home page, but was not implemented.
         variation_name: Inkwell
         variation_is_deprecated: true
@@ -89,8 +90,8 @@ behavior: >-
   | -- | -- | -- |
 
   | ![](/design-system/images/uploads/wells_behavior_mockup_1.png) | ![](/design-system/images/uploads/wells_behavior_mockup_2.png) | ![](/design-system/images/uploads/wells_behavior_mockup_3.png) |
-accessibility: ""
-related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"
+accessibility: ''
+related_items: '* [Featured content module](/design-system/patterns/featured-content-module)'
 last_updated: 2019-10-21T20:38:39.851Z
-research: ""
+research: ''
 ---

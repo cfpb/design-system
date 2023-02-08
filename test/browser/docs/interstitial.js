@@ -15,7 +15,9 @@ describe('CMS interstitial page with editing instructions', () => {
     });
 
     it("should show the interstitial if the user hasn't seen it before", async () => {
-      await expect(browser).toHaveTitle('Updating this website - CFPB Design System');
+      await expect(browser).toHaveTitle(
+        'Updating this website - CFPB Design System'
+      );
     });
 
     it('should not show the interstitial if the user has already seen it', async () => {

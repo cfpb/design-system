@@ -1,5 +1,5 @@
 import Multiselect from '../../../../../../packages/cfpb-forms/src/organisms/Multiselect.js';
-import simulateEvent from '../../../../../util/simulate-event.js';
+import { simulateEvent } from '../../../../../util/simulate-event.js';
 
 let multiselect;
 let selectDom;
@@ -73,7 +73,7 @@ describe('Multiselect', () => {
       multiselect.init();
       const search = document.querySelector('#test-select');
       search.click();
-      simulateEvent('keydown', search, { keyCode: 40 });
+      simulateEvent('keydown', search, { key: 'ArrowDown' });
 
       expect(document.activeElement.id).toBe('test-select-debt-collection');
       expect(document.activeElement.value).toBe('Debt collection');

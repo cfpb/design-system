@@ -15,7 +15,7 @@ describe('MaxHeightTransition', () => {
 
   beforeEach(() => {
     transition = new MaxHeightTransition(contentDom);
-    transition.init();
+    transition.init(MaxHeightTransition.CLASSES.MH_ZERO);
   });
 
   describe('.maxHeightDefault()', () => {
@@ -26,7 +26,7 @@ describe('MaxHeightTransition', () => {
     it('should apply u-max-height-default class', () => {
       transition.maxHeightSummary();
       let classes =
-        'content-1 u-max-height-transition u-is-animating u-max-height-summary';
+        'content-1 u-is-animating u-max-height-transition u-max-height-summary';
       expect(contentDom.className).toStrictEqual(classes);
       transition.maxHeightDefault();
       transition.addEventListener('transitionend', () => {
@@ -44,7 +44,7 @@ describe('MaxHeightTransition', () => {
     it('should apply u-max-height-summary class', () => {
       transition.maxHeightDefault();
       let classes =
-        'content-1 u-max-height-transition u-is-animating u-max-height-default';
+        'content-1 u-is-animating u-max-height-transition u-max-height-default';
       expect(contentDom.className).toStrictEqual(classes);
       transition.maxHeightSummary();
       transition.addEventListener('transitionend', () => {
@@ -62,7 +62,7 @@ describe('MaxHeightTransition', () => {
     it('should apply u-max-height-zero class', () => {
       transition.maxHeightDefault();
       let classes =
-        'content-1 u-max-height-transition u-is-animating u-max-height-default';
+        'content-1 u-is-animating u-max-height-transition u-max-height-default';
       expect(contentDom.className).toStrictEqual(classes);
       transition.maxHeightZero();
       transition.addEventListener('transitionend', () => {

@@ -18,21 +18,15 @@ const CLASSES = {
  * @returns {AlphaTransition} An instance.
  */
 function AlphaTransition(element) {
-  const _baseTransition = new BaseTransition(element, CLASSES);
+  const eventObserver = new EventObserver();
+  const _baseTransition = new BaseTransition(element, CLASSES, this);
 
   /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
-  }
-
-  /**
+   * @param {Function} initialClass - The initial state for this transition.
    * @returns {AlphaTransition} An instance.
    */
-  function init() {
-    _baseTransition.init();
-    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
+  function init(initialClass) {
+    _baseTransition.init(initialClass);
 
     return this;
   }
@@ -60,7 +54,6 @@ function AlphaTransition(element) {
   }
 
   // Attach public events.
-  const eventObserver = new EventObserver();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;

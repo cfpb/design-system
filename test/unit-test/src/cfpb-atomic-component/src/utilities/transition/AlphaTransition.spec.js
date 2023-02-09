@@ -15,7 +15,7 @@ describe('AlphaTransition', () => {
 
   beforeEach(() => {
     transition = new AlphaTransition(contentDom);
-    transition.init();
+    transition.init(AlphaTransition.CLASSES.ALPHA_100);
   });
 
   describe('.fadeIn()', () => {
@@ -25,7 +25,7 @@ describe('AlphaTransition', () => {
 
     it('should apply u-alpha-100 class', () => {
       transition.fadeIn();
-      let classes = 'content-1 u-alpha-transition u-is-animating u-alpha-100';
+      let classes = 'content-1 u-is-animating u-alpha-transition u-alpha-100';
       expect(contentDom.className).toStrictEqual(classes);
       transition.addEventListener('transitionend', () => {
         classes = 'content-1 u-alpha-transition u-alpha-100';
@@ -41,7 +41,7 @@ describe('AlphaTransition', () => {
 
     it('should apply u-alpha-0 class', () => {
       transition.fadeOut();
-      let classes = 'content-1 u-alpha-transition u-is-animating u-alpha-0';
+      let classes = 'content-1 u-is-animating u-alpha-transition u-alpha-0';
       expect(contentDom.className).toStrictEqual(classes);
       transition.addEventListener('transitionend', () => {
         classes = 'content-1 u-alpha-transition u-alpha-0';

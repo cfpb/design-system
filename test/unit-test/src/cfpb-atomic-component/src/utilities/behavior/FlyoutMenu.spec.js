@@ -47,8 +47,6 @@ describe('FlyoutMenu', () => {
 
   describe('.init()', () => {
     it('should have public static methods', () => {
-      expect(FlyoutMenu.EXPAND_TYPE).toBe('expand');
-      expect(FlyoutMenu.COLLAPSE_TYPE).toBe('collapse');
       expect(FlyoutMenu.BASE_CLASS).toBe('behavior_flyout-menu');
     });
 
@@ -234,84 +232,53 @@ describe('FlyoutMenu', () => {
     );
   });
 
-  describe('.setExpandTransition()', () => {
-    it('should set a transition', (done) => {
+  describe('.setTransition()', () => {
+    it('should set a transition', async () => {
       flyoutMenu.init();
-      const transition = new MoveTransition(contentDom).init();
-      flyoutMenu.setExpandTransition(transition, transition.moveLeft);
-      flyoutMenu.addEventListener('expandend', () => {
-        try {
-          const hasClass = contentDom.classList.contains('u-move-transition');
-          expect(hasClass).toBe(true);
-          done();
-        } catch (err) {
-          done(err);
-        }
-      });
-      triggerDom.click();
-
-      /* The transitionend event should fire on its own,
-         but for some reason the transitionend event is not firing within JSDom.
-         In a future JSDom update this should be revisited.
-         See https://github.com/jsdom/jsdom/issues/1781
-      */
-      const event = new Event('transitionend');
-      event.propertyName = 'transform';
-      contentDom.dispatchEvent(event);
-    });
-  });
-
-  describe('.setCollapseTransition()', () => {
-    it('should set a transition', (done) => {
-      flyoutMenu.init();
-      const transition = new MoveTransition(contentDom).init();
-      triggerDom.click();
-      flyoutMenu.setCollapseTransition(transition, transition.moveLeft);
-      flyoutMenu.addEventListener('collapseend', () => {
-        try {
-          const hasClass = contentDom.classList.contains('u-move-transition');
-          expect(hasClass).toBe(true);
-          done();
-        } catch (err) {
-          done(err);
-        }
-      });
-      triggerDom.click();
-
-      /* The transitionend event should fire on its own,
-         but for some reason the transitionend event is not firing within JSDom.
-         In a future JSDom update this should be revisited.
-         See https://github.com/jsdom/jsdom/issues/1781
-      */
-      const event = new Event('transitionend');
-      event.propertyName = 'transform';
-      contentDom.dispatchEvent(event);
-    });
-  });
-
-  describe('.getTransition()', () => {
-    it('should return a transition instance', () => {
-      flyoutMenu.init();
-      expect(flyoutMenu.getTransition()).toBeUndefined();
-      const transition = new MoveTransition(contentDom).init();
-      flyoutMenu.setExpandTransition(transition, transition.moveLeft);
-      flyoutMenu.setCollapseTransition(transition, transition.moveToOrigin);
-      expect(flyoutMenu.getTransition()).toStrictEqual(transition);
-      expect(flyoutMenu.getTransition(FlyoutMenu.COLLAPSE_TYPE)).toStrictEqual(
-        transition
+      const transition = new MoveTransition(contentDom).init(
+        MoveTransition.CLASSES.MOVE_LEFT
       );
+      flyoutMenu.setTransition(
+        transition,
+        transition.moveLeft,
+        transition.moveLeft2
+      );
+      flyoutMenu.addEventListener('expandend', () => {
+        const hasClass = contentDom.classList.contains('u-move-transition');
+        expect(hasClass).toBe(true);
+      });
+      await triggerDom.click();
+      flyoutMenu.addEventListener('collapseend', () => {
+        const hasClass = contentDom.classList.contains('u-move-transition');
+        expect(hasClass).toBe(true);
+      });
+      await triggerDom.click();
+
+      /* The transitionend event should fire on its own,
+         but for some reason the transitionend event is not firing within JSDom.
+         In a future JSDom update this should be revisited.
+         See https://github.com/jsdom/jsdom/issues/1781
+      */
+      const event = new Event('transitionend');
+      event.propertyName = 'transform';
+      contentDom.dispatchEvent(event);
     });
   });
 
-  describe('.clearTransitions()', () => {
+  describe('.clearTransition()', () => {
     it('should remove all transitions', () => {
       flyoutMenu.init();
-      const transition = new MoveTransition(contentDom).init();
-      flyoutMenu.setExpandTransition(transition, transition.moveLeft);
-      flyoutMenu.setCollapseTransition(transition, transition.moveToOrigin);
+      const transition = new MoveTransition(contentDom).init(
+        MoveTransition.CLASSES.MOVE_TO_ORIGIN
+      );
+      flyoutMenu.setTransition(
+        transition,
+        transition.moveToOrigin,
+        transition.moveLeft
+      );
       let hasClass = contentDom.classList.contains('u-move-transition');
       expect(hasClass).toBe(true);
-      flyoutMenu.clearTransitions();
+      flyoutMenu.clearTransition();
       expect(flyoutMenu.getTransition()).toBeUndefined();
       hasClass = contentDom.classList.contains('u-move-transition');
       expect(hasClass).toBe(false);

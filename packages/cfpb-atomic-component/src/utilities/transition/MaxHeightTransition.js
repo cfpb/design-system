@@ -19,26 +19,18 @@ const CLASSES = {
  * @returns {MaxHeightTransition} An instance.
  */
 function MaxHeightTransition(element) {
-  const _baseTransition = new BaseTransition(element, CLASSES);
-  let previousHeight;
+  const eventObserver = new EventObserver();
+  const _baseTransition = new BaseTransition(element, CLASSES, this);
+  let _previousHeight = 0;
 
   /**
    * Refresh the max height set on the element.
    * This may be useful if resizing the window and the content height changes.
    */
   function refresh() {
-    element.style.maxHeight = element.scrollHeight + 'px';
-  }
-
-  /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
-
-    if (element.scrollHeight > previousHeight) {
-      element.style.maxHeight = element.scrollHeight + 'px';
-    }
+    const elmHeight = element.scrollHeight;
+    const newHeight = elmHeight + 'px';
+    element.style.maxHeight = newHeight;
   }
 
   /**
@@ -51,17 +43,25 @@ function MaxHeightTransition(element) {
   }
 
   /**
+   * @param {Function} initialClass - The initial state for this transition.
    * @returns {MaxHeightTransition} An instance.
    */
-  function init() {
-    _baseTransition.init();
+  function init(initialClass) {
+    _baseTransition.init(initialClass);
 
-    /* The scrollHeight of an element may be incorrect if the page hasn't
-       fully loaded yet, so we listen for that to happen before calculating
-       the element max-height. */
+    /*
+    The scrollHeight of an element may be incorrect if the page hasn't
+    fully loaded yet, so we listen for that to happen before calculating
+    the element max-height.
+    */
     window.addEventListener('load', _pageLoaded);
 
-    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
+    /*
+    The scrollHeight of an element may change on page load.
+    */
+    window.addEventListener('resize', () => {
+      refresh();
+    });
 
     return this;
   }
@@ -72,10 +72,11 @@ function MaxHeightTransition(element) {
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightDefault() {
+    refresh();
     _baseTransition.applyClass(CLASSES.MH_DEFAULT);
 
-    if (!previousHeight || element.scrollHeight > previousHeight) {
-      previousHeight = element.scrollHeight;
+    if (!_previousHeight || element.scrollHeight > _previousHeight) {
+      _previousHeight = element.scrollHeight;
     }
 
     return this;
@@ -89,7 +90,7 @@ function MaxHeightTransition(element) {
   function maxHeightSummary() {
     _baseTransition.applyClass(CLASSES.MH_SUMMARY);
 
-    previousHeight = element.scrollHeight;
+    _previousHeight = element.scrollHeight;
 
     return this;
   }
@@ -102,7 +103,7 @@ function MaxHeightTransition(element) {
   function maxHeightZero() {
     _baseTransition.applyClass(CLASSES.MH_ZERO);
 
-    previousHeight = element.scrollHeight;
+    _previousHeight = element.scrollHeight;
 
     return this;
   }
@@ -120,7 +121,6 @@ function MaxHeightTransition(element) {
   }
 
   // Attach public events.
-  const eventObserver = new EventObserver();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;

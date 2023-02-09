@@ -183,10 +183,10 @@ function FlyoutMenu(element) {
    */
   function _handleTriggerOver(event) {
     if (!_touchTriggered && !_suspended) {
-      this.dispatchEvent('triggerOver', {
+      this.dispatchEvent('triggerover', {
         target: this,
         trigger: event.target,
-        type: 'triggerOver',
+        type: 'triggerover',
       });
     }
     _touchTriggered = false;
@@ -199,10 +199,10 @@ function FlyoutMenu(element) {
    */
   function _handleTriggerOut(event) {
     if (!_suspended) {
-      this.dispatchEvent('triggerOut', {
+      this.dispatchEvent('triggerout', {
         target: this,
         trigger: event.target,
-        type: 'triggerOut',
+        type: 'triggerout',
       });
     }
   }
@@ -215,10 +215,10 @@ function FlyoutMenu(element) {
    */
   function _handleTriggerClicked(event) {
     if (!_suspended) {
-      this.dispatchEvent('triggerClick', {
+      this.dispatchEvent('triggerclick', {
         target: this,
         trigger: event.target,
-        type: 'triggerClick',
+        type: 'triggerclick',
       });
       event.preventDefault();
       if (_isExpanded) {
@@ -238,7 +238,7 @@ function FlyoutMenu(element) {
     if (!_isExpanded && !_isAnimating) {
       _isAnimating = true;
       _deferFunct = noopFunct;
-      this.dispatchEvent('expandBegin', { target: this, type: 'expandBegin' });
+      this.dispatchEvent('expandbegin', { target: this, type: 'expandbegin' });
 
       // Only use transitions if both expand and collapse are set.
       if (_expandTransitionMethod && _collapseTransitionMethod) {
@@ -278,9 +278,9 @@ function FlyoutMenu(element) {
       _deferFunct = noopFunct;
       _isAnimating = true;
       _isExpanded = false;
-      this.dispatchEvent('collapseBegin', {
+      this.dispatchEvent('collapsebegin', {
         target: this,
-        type: 'collapseBegin',
+        type: 'collapsebegin',
       });
 
       // Only use transitions if both expand and collapse are set.
@@ -330,7 +330,7 @@ function FlyoutMenu(element) {
         _expandEndBinded
       );
     }
-    this.dispatchEvent('expandEnd', { target: this, type: 'expandEnd' });
+    this.dispatchEvent('expandend', { target: this, type: 'expandend' });
 
     for (let i = 0, len = _triggerDoms.length; i < len; i++) {
       _setAriaAttr('expanded', _triggerDoms[i], true);
@@ -352,7 +352,7 @@ function FlyoutMenu(element) {
         _collapseEndBinded
       );
     }
-    this.dispatchEvent('collapseEnd', { target: this, type: 'collapseEnd' });
+    this.dispatchEvent('collapseend', { target: this, type: 'collapseend' });
   }
 
   /**

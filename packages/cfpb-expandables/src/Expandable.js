@@ -40,11 +40,11 @@ function initialize() {
   const transition = new ExpandableTransition(this.ui.content);
   this.transition = transition.init();
   this.transition.addEventListener(
-    'expandBegin',
+    'expandbegin',
     expandBeginHandler.bind(this)
   );
   this.transition.addEventListener(
-    'collapseEnd',
+    'collapseend',
     collapseEndHandler.bind(this)
   );
 

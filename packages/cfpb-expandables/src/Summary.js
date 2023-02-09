@@ -137,7 +137,7 @@ function Summary(element) {
     _transition.refresh();
 
     if (_suspended && _isExpanded === false) {
-      _flyout.addEventListener('expandEnd', _expandEndHandler);
+      _flyout.addEventListener('expandend', _expandEndHandler);
       // Set resume state.
       _transition.setElement(_contentDom);
       _flyout.setExpandTransition(_transition, _transition.maxHeightDefault);
@@ -161,7 +161,7 @@ function Summary(element) {
   function _suspend() {
     if (!_suspended) {
       _suspended = true;
-      _flyout.removeEventListener('expandEnd', _expandEndHandler);
+      _flyout.removeEventListener('expandend', _expandEndHandler);
       _flyout.clearTransitions();
     }
 

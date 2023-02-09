@@ -468,7 +468,7 @@
 
 .content__bleedbar {
   // Overrides the border between main and sidebar, because bleedbar makes its own.
-  .content_main:after {
+  .content_main::after {
     content: none;
   }
 
@@ -551,7 +551,7 @@
   margin-top: unit(((@grid_gutter-width * 2) / @base-font-size-px), em);
   border-left-width: @grid_gutter-width / 2;
 
-  &:before {
+  &::before {
     display: block;
     height: 1px;
     width: 100%;
@@ -566,7 +566,7 @@
 .grid_column__left-divider {
   border-left-width: @grid_gutter-width;
 
-  &:before {
+  &::before {
     display: block;
     width: 1px;
     margin-left: -@grid_gutter-width;

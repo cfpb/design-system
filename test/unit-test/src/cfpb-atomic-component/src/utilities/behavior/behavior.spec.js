@@ -30,7 +30,6 @@ const HTML_SNIPPET = `
 /**
  * @param {HTMLElement} target - The target element of the event.
  * @param {string} eventType - The event type description.
- * @param {string} eventOption - A key, if the event is a keyup event.
  */
 function triggerEvent(target, eventType) {
   const event = new MouseEvent(eventType, {

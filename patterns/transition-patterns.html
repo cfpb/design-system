@@ -362,16 +362,23 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <div class="u-move-transition example-box">Click me!</div> <script>
+                <div class="u-move-transition example-box">Click me!</div> <br><br> <p> Events dispatched:<br> <textarea class="example-output-move" placeholder="Click square!"></textarea> </p> <script>
   document.addEventListener( 'DOMContentLoaded', function() {
+    const output = document.querySelector('.example-output-move');
     const moveTransitionExample = document.querySelector( '.example-box.u-move-transition' );
-    const moveTransition = new MoveTransition( moveTransitionExample ).init();
+    const moveTransition = new MoveTransition( moveTransitionExample ).init(MoveTransition.CLASSES.MOVE_TO_ORIGIN);
     moveTransitionExample.addEventListener( 'click', function() {
       moveTransition.moveRight();
       setTimeout( function() {
         moveTransition.moveToOrigin();
       }, 1000 );
     } );
+    moveTransition.addEventListener('transitionbegin', function(evt) {
+      output.value += evt.type + '\n';
+    });
+    moveTransition.addEventListener('transitionend', function(evt) {
+      output.value += evt.type + '\n';
+    });
   } );
 </script>
             </div>
@@ -418,7 +425,7 @@
                             <pre><code class="language-html">&lt;div class="u-move-transition example-box"&gt;Click me!&lt;/div&gt;
 &lt;script&gt;
   const moveTransitionExample = document.querySelector( '.example-box.u-move-transition' );
-  const moveTransition = new MoveTransition( moveTransitionExample ).init();
+  const moveTransition = new MoveTransition( moveTransitionExample ).init(MoveTransition.CLASSES.MOVE_TO_ORIGIN);
   moveTransitionExample.addEventListener( 'click', () =&gt; {
       moveTransition.moveRight();
       setTimeout( () =&gt; {
@@ -494,16 +501,23 @@ transition.moveRight();
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <div class="u-alpha-transition example-box">Click me!</div> <script>
+                <div class="u-alpha-transition example-box">Click me!</div> <br><br> <p> Events dispatched:<br> <textarea class="example-output-alpha" placeholder="Click square!"></textarea> </p> <script>
   document.addEventListener( 'DOMContentLoaded', function() {
     const alphaTransitionExample = document.querySelector( '.example-box.u-alpha-transition' );
-    const alphaTransition = new AlphaTransition( alphaTransitionExample ).init();
+    const output = document.querySelector('.example-output-alpha');
+    const alphaTransition = new AlphaTransition( alphaTransitionExample ).init(AlphaTransition.CLASSES.ALPHA_100);
     alphaTransitionExample.addEventListener( 'click', function() {
       alphaTransition.fadeOut();
       setTimeout( function() {
         alphaTransition.fadeIn();
       }, 1000 );
     } );
+    alphaTransition.addEventListener('transitionbegin', function(evt) {
+      output.value += evt.type + '\n';
+    });
+    alphaTransition.addEventListener('transitionend', function(evt) {
+      output.value += evt.type + '\n';
+    });
   } );
 </script>
             </div>
@@ -550,7 +564,7 @@ transition.moveRight();
                             <pre><code class="language-html">&lt;div class="u-alpha-transition example-box"&gt;Click me!&lt;/div&gt;
 &lt;script&gt;
   const alphaTransitionExample = document.querySelector( '.example-box.u-alpha-transition' );
-  const alphaTransition = new AlphaTransition( alphaTransitionExample ).init();
+  const alphaTransition = new AlphaTransition( alphaTransitionExample ).init(AlphaTransition.CLASSES.ALPHA_100);
   alphaTransitionExample.addEventListener( 'click', () =&gt; {
     alphaTransition.fadeOut();
     setTimeout( () =&gt; {
@@ -631,16 +645,23 @@ transition.fadeOut();
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
   in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</div> <script>
+</div> <br><br> <p> Events dispatched:<br> <textarea class="example-output-maxheight" placeholder="Click square!"></textarea> </p> <script>
   document.addEventListener( 'DOMContentLoaded', function() {
+    const output = document.querySelector('.example-output-maxheight');
     const maxHeightTransitionExample = document.querySelector( '.example-box.u-max-height-summary' );
-    const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init();
+    const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init(MaxHeightTransition.CLASSES.MH_SUMMARY);
     maxHeightTransitionExample.addEventListener( 'click', function() {
       maxHeightTransition.maxHeightDefault();
       setTimeout( function() {
         maxHeightTransition.maxHeightSummary();
       }, 1000 );
     } );
+    maxHeightTransition.addEventListener('transitionbegin', function(evt) {
+      output.value += evt.type + '\n';
+    });
+    maxHeightTransition.addEventListener('transitionend', function(evt) {
+      output.value += evt.type + '\n';
+    });
   } );
 </script>
             </div>
@@ -692,7 +713,7 @@ transition.fadeOut();
 &lt;/div&gt;
 &lt;script&gt;
   const maxHeightTransitionExample = document.querySelector( '.example-box.u-max-height-summary' );
-  const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init();
+  const maxHeightTransition = new MaxHeightTransition( maxHeightTransitionExample ).init(MaxHeightTransition.CLASSES.MH_DEFAULT);
   maxHeightTransitionExample.addEventListener( 'click', () =&gt; {
     maxHeightTransition.maxHeightDefault();
     setTimeout( () =&gt; {
@@ -773,7 +794,7 @@ transition.maxHeightSummary();
 
             
             <div class="m-variation_description">
-                <p>A “flyout behavior” can be attached to a arbitrary container that contains one or more triggers and a content area. The flyout handles <code class="language-plaintext highlighter-rouge">aria-expanded</code> attribute toggling and dispatches the following events: <code class="language-plaintext highlighter-rouge">triggerOver</code>, <code class="language-plaintext highlighter-rouge">triggerOut</code>, <code class="language-plaintext highlighter-rouge">triggerClick</code>, <code class="language-plaintext highlighter-rouge">expandBegin</code>, <code class="language-plaintext highlighter-rouge">expandEnd</code>, <code class="language-plaintext highlighter-rouge">collapseBegin</code>, <code class="language-plaintext highlighter-rouge">collapseEnd</code>. This handles the markup semantics of toggling a content area, which can then be combined with a transition from above to create an animated container that shows and hides content.</p>
+                <p>A “flyout behavior” can be attached to a arbitrary container that contains one or more triggers and a content area. The flyout handles <code class="language-plaintext highlighter-rouge">aria-expanded</code> attribute toggling and dispatches the following events: <code class="language-plaintext highlighter-rouge">triggerover</code>, <code class="language-plaintext highlighter-rouge">triggerout</code>, <code class="language-plaintext highlighter-rouge">triggerclick</code>, <code class="language-plaintext highlighter-rouge">expandbegin</code>, <code class="language-plaintext highlighter-rouge">expandend</code>, <code class="language-plaintext highlighter-rouge">collapsebegin</code>, <code class="language-plaintext highlighter-rouge">collapseend</code>. This handles the markup semantics of toggling a content area, which can then be combined with a transition from above to create an animated container that shows and hides content.</p>
 
             </div>
             
@@ -791,17 +812,29 @@ transition.maxHeightSummary();
       Click me! ^
     </button>
   </div>
-</div> <script>
+</div> <br><br> <p> Events dispatched:<br> <textarea class="example-output-flyout" placeholder="Click a button!"></textarea> </p> <script>
   document.addEventListener( 'DOMContentLoaded', function() {
-    const flyoutExample = document.querySelector( '.example-flyout' );
+    const output = document.querySelector('.example-output-flyout');
+    const flyoutExample = document.querySelector('.example-flyout');
     const flyoutExampleContent = document.querySelector(
       '.example-flyout-content'
     );
-    const transition = new MaxHeightTransition(flyoutExampleContent).init();
+    const transition = new MaxHeightTransition(flyoutExampleContent).init(MaxHeightTransition.CLASSES.MH_ZERO);
     const flyout = new FlyoutMenu(flyoutExample);
-    flyout.setExpandTransition(transition, transition.maxHeightDefault);
-    flyout.setCollapseTransition(transition, transition.maxHeightZero);
+    flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
     flyout.init();
+    flyout.addEventListener('expandbegin', function(evt) {
+      output.value += evt.type + '\n';
+    });
+    flyout.addEventListener('expandend', function(evt) {
+      output.value += evt.type + '\n';
+    });
+    flyout.addEventListener('collapsebegin', function(evt) {
+      output.value += evt.type + '\n';
+    });
+    flyout.addEventListener('collapseend', function(evt) {
+      output.value += evt.type + '\n';
+    });
   } );
 </script>
             </div>
@@ -860,10 +893,9 @@ transition.maxHeightSummary();
   const flyoutExampleContent = document.querySelector(
     '.example-flyout-content'
   );
-  const transition = new MaxHeightTransition(flyoutExampleContent).init();
+  const transition = new MaxHeightTransition(flyoutExampleContent).init(MaxHeightTransition.CLASSES.MH_ZERO);
   const flyout = new FlyoutMenu(flyoutExample);
-  flyout.setExpandTransition(transition, transition.maxHeightDefault);
-  flyout.setCollapseTransition(transition, transition.maxHeightZero);
+  flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
   flyout.init();
 &lt;/script&gt;</code></pre>
                         </div>
@@ -917,8 +949,7 @@ transition.init();
 const flyout = new FlyoutMenu(elementDom);
 
 // Set the expand/collapse transitions.
-flyout.setExpandTransition(transition, transition.maxHeightDefault); flyout.setCollapseTransition(transition, transition.maxHeightZero);
-
+flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
 // Initialize the flyout.
 flyout.init();
 </code></pre>
@@ -1004,8 +1035,8 @@ flyout.init();
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/transition-patterns.md">
-                    <time datetime="2023-02-09 12:22:34 -0500">
-                        12:22:34 PM Feb 09, 2023
+                    <time datetime="2023-02-09 13:40:00 -0500">
+                         1:40:00 PM Feb 09, 2023
                     </time>
                 </a>
             </small>

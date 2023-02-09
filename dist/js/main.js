@@ -1755,7 +1755,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _behavior_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./behavior.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/behavior.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/behavior/behavior.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/behavior.js");
 /* eslint-disable no-use-before-define */
 
 
@@ -1789,23 +1789,22 @@ const SEL_PREFIX = '[' + _cfpb_cfpb_atomic_component_src_utilities_standard_type
  */
 function FlyoutMenu(element) {
   // Verify that the expected dom attributes are present.
-  const _dom = (0,_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom)(element, BASE_CLASS);
+  const _dom = (0,_cfpb_cfpb_atomic_component_src_utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom)(element, BASE_CLASS);
   const _triggerDoms = _findTriggers(element);
-  const _contentDom = (0,_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom)(element, BASE_CLASS + '_content');
+  const _contentDom = (0,_cfpb_cfpb_atomic_component_src_utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom)(element, BASE_CLASS + '_content');
 
-  let _isExpanded = false;
-  let _isAnimating = false;
+  // Flyouts appear in one of four states.
+  let _state = 0;
+  const COLLAPSED = 0;
+  const COLLAPSING = 1;
+  const EXPANDING = 2;
+  const EXPANDED = 3;
 
-  let _expandTransition;
+  let _transition;
   let _expandTransitionMethod;
-  let _expandTransitionMethodArgs = [];
-
-  let _collapseTransition;
   let _collapseTransitionMethod;
-  let _collapseTransitionMethodArgs = [];
 
   // Binded events.
-  const _collapseBinded = collapse.bind(this);
   // Needed to add and remove events to transitions.
   const _collapseEndBinded = _collapseEnd.bind(this);
   const _expandEndBinded = _expandEnd.bind(this);
@@ -1815,11 +1814,6 @@ function FlyoutMenu(element) {
      Examples include the index in an Array,
      a key in an Hash, or a node in a Tree. */
   let _data;
-
-  /* Set this function to a queued collapse function,
-     which is called if collapse is called while
-     expand is animating. */
-  let _deferFunct = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.noopFunct;
 
   // Whether this instance's behaviors are suspended or not.
   let _suspended = true;
@@ -1876,31 +1870,18 @@ function FlyoutMenu(element) {
    *   initialization-time or collapsed.
    */
   function init(isExpanded = false) {
-    const handleTriggerClickedBinded = _handleTriggerClicked.bind(this);
-    const handleTriggerOverBinded = _handleTriggerOver.bind(this);
-    const handleTriggerOutBinded = _handleTriggerOut.bind(this);
+    _state = isExpanded ? EXPANDED : COLLAPSED;
+    _triggerDoms.forEach((triggerDom) => {
+      _setAriaAttr('expanded', triggerDom, isExpanded);
 
-    let triggerDom;
-    for (let i = 0, len = _triggerDoms.length; i < len; i++) {
-      triggerDom = _triggerDoms[i];
-
-      // Set initial aria attributes to false.
-      _isExpanded = isExpanded;
-      if (isExpanded) {
-        _setAriaAttr('expanded', triggerDom, 'true');
-        _setAriaAttr('expanded', _contentDom, 'true');
-      } else {
-        _setAriaAttr('expanded', triggerDom, 'false');
-        _setAriaAttr('expanded', _contentDom, 'false');
-      }
-
-      triggerDom.addEventListener('click', handleTriggerClickedBinded);
+      triggerDom.addEventListener('click', _handleTriggerClicked.bind(this));
       triggerDom.addEventListener('touchstart', _handleTouchStart, {
         passive: true,
       });
-      triggerDom.addEventListener('mouseover', handleTriggerOverBinded);
-      triggerDom.addEventListener('mouseout', handleTriggerOutBinded);
-    }
+      triggerDom.addEventListener('mouseover', _handleTriggerOver.bind(this));
+      triggerDom.addEventListener('mouseout', _handleTriggerOut.bind(this));
+    });
+    _setAriaAttr('expanded', _contentDom, isExpanded);
 
     resume();
 
@@ -1936,13 +1917,16 @@ function FlyoutMenu(element) {
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerOver(event) {
-    if (!_touchTriggered && !_suspended) {
-      this.dispatchEvent('triggerOver', {
+    if (_suspended) return;
+
+    if (!_touchTriggered) {
+      this.dispatchEvent('triggerover', {
         target: this,
         trigger: event.target,
-        type: 'triggerOver',
+        type: 'triggerover',
       });
     }
+
     _touchTriggered = false;
   }
 
@@ -1952,13 +1936,13 @@ function FlyoutMenu(element) {
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerOut(event) {
-    if (!_suspended) {
-      this.dispatchEvent('triggerOut', {
-        target: this,
-        trigger: event.target,
-        type: 'triggerOut',
-      });
-    }
+    if (_suspended) return;
+
+    this.dispatchEvent('triggerout', {
+      target: this,
+      trigger: event.target,
+      type: 'triggerout',
+    });
   }
 
   /**
@@ -1968,18 +1952,25 @@ function FlyoutMenu(element) {
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerClicked(event) {
-    if (!_suspended) {
-      this.dispatchEvent('triggerClick', {
-        target: this,
-        trigger: event.target,
-        type: 'triggerClick',
-      });
-      event.preventDefault();
-      if (_isExpanded) {
-        this.collapse();
-      } else {
+    if (_suspended) return;
+
+    this.dispatchEvent('triggerclick', {
+      target: this,
+      trigger: event.target,
+      type: 'triggerclick',
+    });
+
+    event.preventDefault();
+
+    switch (_state) {
+      case COLLAPSED:
+      case COLLAPSING:
         this.expand();
-      }
+        break;
+      case EXPANDING:
+      case EXPANDED:
+        this.collapse();
+        break;
     }
   }
 
@@ -1989,31 +1980,27 @@ function FlyoutMenu(element) {
    * @returns {FlyoutMenu} An instance.
    */
   function expand() {
-    if (!_isExpanded && !_isAnimating) {
-      _isAnimating = true;
-      _deferFunct = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.noopFunct;
-      this.dispatchEvent('expandBegin', { target: this, type: 'expandBegin' });
+    _transition?.halt();
+    if (_state === EXPANDING || _state === EXPANDED) return this;
 
-      // Only use transitions if both expand and collapse are set.
-      if (_expandTransitionMethod && _collapseTransitionMethod) {
-        const hasTransition =
-          _expandTransition && _expandTransition.isAnimated();
-        if (hasTransition) {
-          _expandTransition.addEventListener(
-            _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
-            _expandEndBinded
-          );
-        }
-        _expandTransitionMethod.apply(
-          _expandTransition,
-          _expandTransitionMethodArgs
-        );
-        if (!hasTransition) {
-          _expandEndBinded();
-        }
-      } else {
-        _expandEndBinded();
-      }
+    _state = EXPANDING;
+    this.dispatchEvent('expandbegin', { target: this, type: 'expandbegin' });
+
+    // Only use transitions if both expand and collapse are set.
+    if (!_expandTransitionMethod || !_collapseTransitionMethod) {
+      _expandEndBinded();
+      return this;
+    }
+
+    const hasTransition = _transition?.isAnimated();
+    if (hasTransition) {
+      _transition.addEventListener(_cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT, _expandEndBinded);
+    }
+
+    _expandTransitionMethod();
+
+    if (!hasTransition) {
+      _expandEndBinded();
     }
 
     return this;
@@ -2028,43 +2015,39 @@ function FlyoutMenu(element) {
    * @returns {FlyoutMenu} An instance.
    */
   function collapse() {
-    if (_isExpanded && !_isAnimating) {
-      _deferFunct = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.noopFunct;
-      _isAnimating = true;
-      _isExpanded = false;
-      this.dispatchEvent('collapseBegin', {
-        target: this,
-        type: 'collapseBegin',
-      });
+    _transition?.halt();
+    if (_state === COLLAPSING || _state === COLLAPSED) return this;
 
-      // Only use transitions if both expand and collapse are set.
-      if (_collapseTransitionMethod && _expandTransitionMethod) {
-        const hasTransition =
-          _collapseTransition && _collapseTransition.isAnimated();
-        if (hasTransition) {
-          _collapseTransition.addEventListener(
-            _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
-            _collapseEndBinded
-          );
-        }
-        _collapseTransitionMethod.apply(
-          _collapseTransition,
-          _collapseTransitionMethodArgs
-        );
-        if (!hasTransition) {
-          _collapseEndBinded();
-        }
-      } else {
-        _collapseEndBinded();
-      }
+    for (let i = 0, len = _triggerDoms.length; i < len; i++) {
+      _setAriaAttr('expanded', _triggerDoms[i], false);
+    }
 
-      for (let i = 0, len = _triggerDoms.length; i < len; i++) {
-        _setAriaAttr('expanded', _triggerDoms[i], false);
-      }
+    _setAriaAttr('expanded', _contentDom, false);
 
-      _setAriaAttr('expanded', _contentDom, false);
-    } else {
-      _deferFunct = _collapseBinded;
+    _state = COLLAPSING;
+    this.dispatchEvent('collapsebegin', {
+      target: this,
+      type: 'collapsebegin',
+    });
+
+    // Only use transitions if both expand and collapse are set.
+    if (!_collapseTransitionMethod || !_expandTransitionMethod) {
+      _collapseEndBinded();
+      return this;
+    }
+
+    const hasTransition = _transition?.isAnimated();
+    if (hasTransition) {
+      _transition.addEventListener(
+        _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
+        _collapseEndBinded
+      );
+    }
+
+    _collapseTransitionMethod();
+
+    if (!hasTransition) {
+      _collapseEndBinded();
     }
 
     return this;
@@ -2076,122 +2059,63 @@ function FlyoutMenu(element) {
    * if set (otherwise it will call a noop function).
    */
   function _expandEnd() {
-    _isAnimating = false;
-    _isExpanded = true;
-    if (_expandTransition) {
-      _expandTransition.removeEventListener(
+    _state = EXPANDED;
+    if (_transition) {
+      _transition.removeEventListener(
         _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
         _expandEndBinded
       );
     }
-    this.dispatchEvent('expandEnd', { target: this, type: 'expandEnd' });
+    this.dispatchEvent('expandend', { target: this, type: 'expandend' });
 
     for (let i = 0, len = _triggerDoms.length; i < len; i++) {
       _setAriaAttr('expanded', _triggerDoms[i], true);
     }
 
     _setAriaAttr('expanded', _contentDom, true);
-    // Call collapse, if it was called while expand was animating.
-    _deferFunct();
   }
 
   /**
    * Collapse animation has completed.
    */
   function _collapseEnd() {
-    _isAnimating = false;
-    if (_collapseTransition) {
-      _collapseTransition.removeEventListener(
+    _state = COLLAPSED;
+    if (_transition) {
+      _transition.removeEventListener(
         _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
         _collapseEndBinded
       );
     }
-    this.dispatchEvent('collapseEnd', { target: this, type: 'collapseEnd' });
+
+    this.dispatchEvent('collapseend', { target: this, type: 'collapseend' });
   }
 
-  /**
-   * @param {BaseTransition} transition - A transition instance
-   *   to watch for events on.
-   * @param {Function} method - The transition method to call on expand.
-   * @param {Array} [args] - List of arguments to apply to expand method.
-   */
-  function setExpandTransition(transition, method, args) {
-    _expandTransition = transition;
-    _expandTransitionMethod = method;
-    _expandTransitionMethodArgs = args;
+  function setTransition(transition, collapseMethod, expandMethod) {
+    _transition = transition;
 
-    _initTransitions();
-  }
+    if (collapseMethod && collapseMethod !== _collapseTransitionMethod) {
+      _collapseTransitionMethod = collapseMethod;
+    }
 
-  /**
-   * @param {BaseTransition} transition - A transition instance
-   *   to watch for events on.
-   * @param {Function} method - The transition method to call on collapse.
-   * @param {Array} [args] - List of arguments to apply to collapse method.
-   */
-  function setCollapseTransition(transition, method, args) {
-    _collapseTransition = transition;
-    _collapseTransitionMethod = method;
-    _collapseTransitionMethodArgs = args;
-
-    _initTransitions();
-  }
-
-  /**
-   * Make initial call to transition expand or collapse methods.
-   * Called after the transitions are set on the FlyoutMenu.
-   */
-  function _initTransitions() {
-    if (_isExpanded && _expandTransition) {
-      _expandTransition.animateOff();
-      _expandTransitionMethod();
-      _expandTransition.animateOn();
-    } else if (_collapseTransition) {
-      _collapseTransition.animateOff();
-      _collapseTransitionMethod();
-      _collapseTransition.animateOn();
+    if (expandMethod && expandMethod !== _expandTransitionMethod) {
+      _expandTransitionMethod = expandMethod;
     }
   }
 
   /**
    * Clear the transitions attached to this FlyoutMenu instance.
    */
-  function clearTransitions() {
-    let transition = getTransition(FlyoutMenu.EXPAND_TYPE);
-    if (transition) {
-      transition.remove();
-    }
-    transition = getTransition(FlyoutMenu.COLLAPSE_TYPE);
-    if (transition) {
-      transition.remove();
+  function clearTransition() {
+    if (_transition) {
+      _transition.remove();
     }
 
     let UNDEFINED;
 
-    _expandTransition = UNDEFINED;
+    _transition = UNDEFINED;
+
     _expandTransitionMethod = UNDEFINED;
-    _expandTransitionMethodArgs = [];
-
-    _collapseTransition = UNDEFINED;
     _collapseTransitionMethod = UNDEFINED;
-    _collapseTransitionMethodArgs = [];
-  }
-
-  /**
-   * @param {string} [type] - The type of transition to return.
-   *   Accepts 'expand' or 'collapse'.
-   *   `FlyoutMenu.EXPAND_TYPE` and `FlyoutMenu.COLLAPSE_TYPE` can be used
-   *   as type-safe constants passed into this method.
-   *   If neither or something else is supplied, expand type is returned.
-   * @returns {BaseTransition|undefined} A transition instance
-   *   set on this instance, or undefined if none is set.
-   */
-  function getTransition(type) {
-    if (type === FlyoutMenu.COLLAPSE_TYPE) {
-      return _collapseTransition;
-    }
-
-    return _expandTransition;
   }
 
   /**
@@ -2212,9 +2136,7 @@ function FlyoutMenu(element) {
    * @returns {boolean} True if resumed, false otherwise.
    */
   function resume() {
-    if (_suspended) {
-      _suspended = false;
-    }
+    if (_suspended) _suspended = false;
 
     return !_suspended;
   }
@@ -2225,19 +2147,9 @@ function FlyoutMenu(element) {
    * @returns {boolean} True if suspended, false otherwise.
    */
   function suspend() {
-    if (!_suspended) {
-      _suspended = true;
-    }
+    if (!_suspended) _suspended = true;
 
     return _suspended;
-  }
-
-  /**
-   * @returns {number | string | object} A data identifier
-   *   such as an Array index, Hash key, or Tree node.
-   */
-  function getData() {
-    return _data;
   }
 
   /**
@@ -2251,20 +2163,6 @@ function FlyoutMenu(element) {
     return this;
   }
 
-  /**
-   * @returns {boolean} True if menu is animating, false otherwise.
-   */
-  function isAnimating() {
-    return _isAnimating;
-  }
-
-  /**
-   * @returns {boolean} True if menu is expanded, false otherwise.
-   */
-  function isExpanded() {
-    return _isExpanded;
-  }
-
   // Attach public events.
   const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
   this.addEventListener = eventObserver.addEventListener;
@@ -2274,21 +2172,18 @@ function FlyoutMenu(element) {
   this.init = init;
   this.expand = expand;
   this.collapse = collapse;
-  this.setExpandTransition = setExpandTransition;
-  this.setCollapseTransition = setCollapseTransition;
-  this.clearTransitions = clearTransitions;
-  this.getData = getData;
-  this.getTransition = getTransition;
+  this.setTransition = setTransition;
+  this.clearTransition = clearTransition;
+  this.getData = () => _data;
+  this.getTransition = () => _transition;
   this.getDom = getDom;
-  this.isAnimating = isAnimating;
-  this.isExpanded = isExpanded;
+  this.isAnimating = () => _state === EXPANDING || _state === COLLAPSING;
+  this.isExpanded = () => _state === EXPANDED;
   this.resume = resume;
   this.setData = setData;
   this.suspend = suspend;
 
   // Public static properties.
-  FlyoutMenu.EXPAND_TYPE = 'expand';
-  FlyoutMenu.COLLAPSE_TYPE = 'collapse';
   FlyoutMenu.BASE_CLASS = BASE_CLASS;
 
   return this;
@@ -2678,21 +2573,15 @@ const CLASSES = {
  * @returns {AlphaTransition} An instance.
  */
 function AlphaTransition(element) {
-  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES);
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
+  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES, this);
 
   /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this });
-  }
-
-  /**
+   * @param {Function} initialClass - The initial state for this transition.
    * @returns {AlphaTransition} An instance.
    */
-  function init() {
-    _baseTransition.init();
-    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
+  function init(initialClass) {
+    _baseTransition.init(initialClass);
 
     return this;
   }
@@ -2720,7 +2609,6 @@ function AlphaTransition(element) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -2755,9 +2643,6 @@ AlphaTransition.CLASSES = CLASSES;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-
-
 /**
  * BaseTransition
  *
@@ -2767,16 +2652,20 @@ __webpack_require__.r(__webpack_exports__);
  *   the base class used through composition by a specific transition.
  * @param {HTMLElement} element - DOM element to apply transition to.
  * @param {object} classes - The classes to apply to this transition.
+ * @param {Object} child - The child transition using this as a base.
  * @returns {BaseTransition} An instance.
  */
-function BaseTransition(element, classes) {
+function BaseTransition(element, classes, child) {
   const _classes = classes;
-  let _dom;
+  let _dom = element;
+  if (!child) throw new Error('Child transition argument must be defined!');
+  let _child = child;
 
   let _lastClass;
   let _transitionEndEvent;
   let _transitionCompleteBinded;
-  let _addEventListenerBinded;
+
+  let _isAnimated = false;
   let _isAnimating = false;
   let _isFlushed = false;
 
@@ -2793,31 +2682,32 @@ function BaseTransition(element, classes) {
 
   /**
    * Add an event listener to the transition, or call the transition
-   * complete handler immediately if transition not supported.
+   * complete handler immediately if the transition is not supported.
    */
   function _addEventListener() {
-    _dom.classList.add(BaseTransition.ANIMATING_CLASS);
-    _isAnimating = true;
-
     /*
-      If transition is not supported, call handler directly (IE9/OperaMini).
-      Also, if "transition-duration: 0s" is set, transitionEnd event will not
+      If transition is supported and the animation is animated,
+      listen for transition end event, otherwise call the handler directly.
+      Some browsers (e.g. IE9/OperaMini) do not support transitionend event.
+      If "transition-duration: 0s" is set, transitionEnd event will not
       fire, so we need to call the handler straight away.
     */
-    if (
-      _transitionEndEvent &&
-      !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS)
-    ) {
+    if (_transitionEndEvent && _isAnimated) {
       _dom.addEventListener(_transitionEndEvent, _transitionCompleteBinded);
-      this.dispatchEvent(BaseTransition.BEGIN_EVENT, {
-        target: this,
+      _child.dispatchEvent(BaseTransition.BEGIN_EVENT, {
+        target: _child,
+        type: BaseTransition.BEGIN_EVENT,
       });
     } else {
-      this.dispatchEvent(BaseTransition.BEGIN_EVENT, {
-        target: this,
+      _child.dispatchEvent(BaseTransition.BEGIN_EVENT, {
+        target: _child,
+        type: BaseTransition.BEGIN_EVENT,
       });
       _transitionCompleteBinded();
     }
+
+    _dom.classList.add(BaseTransition.ANIMATING_CLASS);
+    _isAnimating = true;
   }
 
   /**
@@ -2841,8 +2731,9 @@ function BaseTransition(element, classes) {
 
     _removeEventListener();
     _dom.classList.remove(BaseTransition.ANIMATING_CLASS);
-    this.dispatchEvent(BaseTransition.END_EVENT, {
-      target: this,
+    _child.dispatchEvent(BaseTransition.END_EVENT, {
+      target: _child,
+      type: BaseTransition.END_EVENT,
     });
     _isAnimating = false;
     return true;
@@ -2886,47 +2777,27 @@ function BaseTransition(element, classes) {
 
   /**
    * Remove all transition classes, if transition is initialized.
-   *
-   * @returns {boolean}
-   *   True, if the element's CSS classes were touched, false otherwise.
    */
   function remove() {
-    if (_dom) {
-      halt();
-      _dom.classList.remove(_classes.BASE_CLASS);
-      _flush();
-      return true;
-    }
-
-    return false;
+    halt();
+    _flush();
+    _dom.classList.remove(_classes.BASE_CLASS);
   }
 
   /**
    * Add a "transition-duration: 0s" utility CSS class.
-   *
-   * @returns {BaseTransition} An instance.
    */
   function animateOn() {
-    if (!_dom) {
-      return this;
-    }
     _dom.classList.remove(BaseTransition.NO_ANIMATION_CLASS);
-
-    return this;
+    _isAnimated = true;
   }
 
   /**
    * Remove a "transition-duration: 0s" utility CSS class.
-   *
-   * @returns {BaseTransition} An instance.
    */
   function animateOff() {
-    if (!_dom) {
-      return this;
-    }
     _dom.classList.add(BaseTransition.NO_ANIMATION_CLASS);
-
-    return this;
+    _isAnimated = false;
   }
 
   /**
@@ -2967,51 +2838,39 @@ function BaseTransition(element, classes) {
    * @param {HTMLElement} targetElement - The target of the transition.
    */
   function setElement(targetElement) {
-    /*
-      If the element has already been set,
-      clear the transition classes from the old element.
-    */
-    if (_dom) {
-      remove();
-      animateOn();
-    }
+    // Clear the transition classes from the old element.
+    remove();
+    animateOn();
+
     _dom = targetElement;
     _dom.classList.add(_classes.BASE_CLASS);
     _transitionEndEvent = _getTransitionEndEvent(_dom);
   }
 
   /**
+   * @param {Function} initialClass - The initial state for this transition.
    * @returns {BaseTransition} An instance.
    */
-  function init() {
+  function init(initialClass) {
+    _isAnimated = !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
     _transitionCompleteBinded = _transitionComplete.bind(this);
-    _addEventListenerBinded = _addEventListener.bind(this);
-    setElement(element);
+    setElement(_dom);
+    if (!initialClass) {
+      throw new Error(
+        'Transition needs to be passed an initial CSS class on initialization!'
+      );
+    }
+    _dom.classList.add(initialClass);
 
     return this;
   }
 
   /**
-   * @returns {boolean} Whether the transition has a duration or not.
-   *   Returns false if this transition has not been initialized.
-   */
-  function isAnimated() {
-    if (!_dom) {
-      return false;
-    }
-    return !_dom.classList.contains(BaseTransition.NO_ANIMATION_CLASS);
-  }
-
-  /**
    * @param {string} className - A CSS class.
-   * @returns {boolean} False if the class is already applied
-   *   or the transition is not initialized,
+   * @returns {boolean} False if the class is already applied,
    *   otherwise true if the class was applied.
    */
   function applyClass(className) {
-    if (!_dom) {
-      return false;
-    }
     if (!_isFlushed) {
       _flush();
       _isFlushed = true;
@@ -3024,52 +2883,28 @@ function BaseTransition(element, classes) {
     _removeEventListener();
     _dom.classList.remove(_lastClass);
     _lastClass = className;
-    _addEventListenerBinded();
+    _addEventListener();
     _dom.classList.add(_lastClass);
 
     return true;
   }
 
-  /**
-   * Passes events fired on BaseTransition to the passed event target.
-   *
-   * @param {object} eventTarget - A child transition to proxy events to.
-   * @param {Function} transitionComplete - what to call when transition ends.
-   * @returns {BaseTransition} An instance.
-   */
-  function proxyEvents(eventTarget, transitionComplete) {
-    this.addEventListener(BaseTransition.BEGIN_EVENT, () => {
-      eventTarget.dispatchEvent(BaseTransition.BEGIN_EVENT, {
-        target: eventTarget,
-      });
-    });
-    this.addEventListener(BaseTransition.END_EVENT, transitionComplete);
-
-    return this;
-  }
-
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  this.addEventListener = eventObserver.addEventListener;
-  this.dispatchEvent = eventObserver.dispatchEvent;
-  this.removeEventListener = eventObserver.removeEventListener;
-
   this.animateOff = animateOff;
   this.animateOn = animateOn;
   this.applyClass = applyClass;
   this.halt = halt;
   this.init = init;
-  this.isAnimated = isAnimated;
+  this.isAnimated = () => _isAnimated;
   this.remove = remove;
   this.setElement = setElement;
-  this.proxyEvents = proxyEvents;
 
   return this;
 }
 
 // Public static constants.
-BaseTransition.BEGIN_EVENT = 'transitionBegin';
-BaseTransition.END_EVENT = 'transitionEnd';
+BaseTransition.BEGIN_EVENT = 'transitionbegin';
+BaseTransition.END_EVENT = 'transitionend';
 BaseTransition.NO_ANIMATION_CLASS = 'u-no-animation';
 BaseTransition.ANIMATING_CLASS = 'u-is-animating';
 
@@ -3109,26 +2944,18 @@ const CLASSES = {
  * @returns {MaxHeightTransition} An instance.
  */
 function MaxHeightTransition(element) {
-  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES);
-  let previousHeight;
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
+  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES, this);
+  let _previousHeight = 0;
 
   /**
    * Refresh the max height set on the element.
    * This may be useful if resizing the window and the content height changes.
    */
   function refresh() {
-    element.style.maxHeight = element.scrollHeight + 'px';
-  }
-
-  /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(_cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this });
-
-    if (element.scrollHeight > previousHeight) {
-      element.style.maxHeight = element.scrollHeight + 'px';
-    }
+    const elmHeight = element.scrollHeight;
+    const newHeight = elmHeight + 'px';
+    element.style.maxHeight = newHeight;
   }
 
   /**
@@ -3141,17 +2968,25 @@ function MaxHeightTransition(element) {
   }
 
   /**
+   * @param {Function} initialClass - The initial state for this transition.
    * @returns {MaxHeightTransition} An instance.
    */
-  function init() {
-    _baseTransition.init();
+  function init(initialClass) {
+    _baseTransition.init(initialClass);
 
-    /* The scrollHeight of an element may be incorrect if the page hasn't
-       fully loaded yet, so we listen for that to happen before calculating
-       the element max-height. */
+    /*
+    The scrollHeight of an element may be incorrect if the page hasn't
+    fully loaded yet, so we listen for that to happen before calculating
+    the element max-height.
+    */
     window.addEventListener('load', _pageLoaded);
 
-    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
+    /*
+    The scrollHeight of an element may change on page load.
+    */
+    window.addEventListener('resize', () => {
+      refresh();
+    });
 
     return this;
   }
@@ -3162,10 +2997,11 @@ function MaxHeightTransition(element) {
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightDefault() {
+    refresh();
     _baseTransition.applyClass(CLASSES.MH_DEFAULT);
 
-    if (!previousHeight || element.scrollHeight > previousHeight) {
-      previousHeight = element.scrollHeight;
+    if (!_previousHeight || element.scrollHeight > _previousHeight) {
+      _previousHeight = element.scrollHeight;
     }
 
     return this;
@@ -3179,7 +3015,7 @@ function MaxHeightTransition(element) {
   function maxHeightSummary() {
     _baseTransition.applyClass(CLASSES.MH_SUMMARY);
 
-    previousHeight = element.scrollHeight;
+    _previousHeight = element.scrollHeight;
 
     return this;
   }
@@ -3192,7 +3028,7 @@ function MaxHeightTransition(element) {
   function maxHeightZero() {
     _baseTransition.applyClass(CLASSES.MH_ZERO);
 
-    previousHeight = element.scrollHeight;
+    _previousHeight = element.scrollHeight;
 
     return this;
   }
@@ -3210,7 +3046,6 @@ function MaxHeightTransition(element) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -3273,21 +3108,15 @@ const CLASSES = {
  * @returns {MoveTransition} An instance.
  */
 function MoveTransition(element) {
-  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES);
+  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
+  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES, this);
 
   /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT, { target: this });
-  }
-
-  /**
+   * @param {Function} initialClass - The initial state for this transition.
    * @returns {MoveTransition} An instance.
    */
-  function init() {
-    _baseTransition.init();
-    _baseTransition.proxyEvents(this, _transitionComplete.bind(this));
+  function init(initialClass) {
+    _baseTransition.init(initialClass);
 
     return this;
   }
@@ -3310,17 +3139,13 @@ function MoveTransition(element) {
    *   as a multiplication of the element's width.
    * @returns {MoveTransition} An instance.
    */
-  function moveLeft(count) {
+  function _moveLeft(count) {
     count = count || 1;
     const moveClasses = [
       CLASSES.MOVE_LEFT,
       CLASSES.MOVE_LEFT_2X,
       CLASSES.MOVE_LEFT_3X,
     ];
-
-    if (count < 1 || count > moveClasses.length) {
-      throw new Error('MoveTransition: moveLeft count is out of range!');
-    }
 
     _baseTransition.applyClass(moveClasses[count - 1]);
 
@@ -3350,7 +3175,6 @@ function MoveTransition(element) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -3363,7 +3187,9 @@ function MoveTransition(element) {
   this.remove = _baseTransition.remove;
 
   this.init = init;
-  this.moveLeft = moveLeft;
+  this.moveLeft = () => _moveLeft(1);
+  this.moveLeft2 = () => _moveLeft(2);
+  this.moveLeft3 = () => _moveLeft(3);
   this.moveRight = moveRight;
   this.moveToOrigin = moveToOrigin;
   this.moveUp = moveUp;
@@ -3758,11 +3584,11 @@ function initialize() {
   const transition = new _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__["default"](this.ui.content);
   this.transition = transition.init();
   this.transition.addEventListener(
-    'expandBegin',
+    'expandbegin',
     expandBeginHandler.bind(this)
   );
   this.transition.addEventListener(
-    'collapseEnd',
+    'collapseend',
     collapseEndHandler.bind(this)
   );
 
@@ -3897,7 +3723,7 @@ const CLASSES = {
  * @returns {ExpandableTransition} An instance.
  */
 function ExpandableTransition(element) {
-  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES);
+  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES, this);
   let previousHeight;
 
   /**
@@ -3905,13 +3731,13 @@ function ExpandableTransition(element) {
    */
   function _transitionComplete() {
     if (element.classList.contains(CLASSES.EXPANDED)) {
-      this.dispatchEvent('expandEnd', { target: this });
+      this.dispatchEvent('expandend', { target: this });
 
       if (element.scrollHeight > previousHeight) {
         element.style.maxHeight = element.scrollHeight + 'px';
       }
     } else if (element.classList.contains(CLASSES.COLLAPSED)) {
-      this.dispatchEvent('collapseEnd', { target: this });
+      this.dispatchEvent('collapseend', { target: this });
     }
   }
 
@@ -3919,13 +3745,15 @@ function ExpandableTransition(element) {
    * @returns {ExpandableTransition} An instance.
    */
   function init() {
-    _baseTransition.init();
-    _baseTransition.addEventListener(
+    const openOnLoad = element.classList.contains(CLASSES.OPEN_DEFAULT);
+    const initialClass = openOnLoad ? CLASSES.EXPANDED : CLASSES.COLLAPSED;
+    _baseTransition.init(initialClass);
+    this.addEventListener(
       _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
       _transitionComplete.bind(this)
     );
 
-    if (element.classList.contains(CLASSES.OPEN_DEFAULT)) {
+    if (openOnLoad) {
       this.expand();
     } else {
       this.collapse();
@@ -3955,7 +3783,7 @@ function ExpandableTransition(element) {
    * @returns {ExpandableTransition} An instance.
    */
   function collapse() {
-    this.dispatchEvent('collapseBegin', { target: this });
+    this.dispatchEvent('collapsebegin', { target: this });
 
     previousHeight = element.scrollHeight;
     element.style.maxHeight = '0';
@@ -3970,7 +3798,7 @@ function ExpandableTransition(element) {
    * @returns {ExpandableTransition} An instance.
    */
   function expand() {
-    this.dispatchEvent('expandBegin', { target: this });
+    this.dispatchEvent('expandbegin', { target: this });
 
     if (!previousHeight || element.scrollHeight > previousHeight) {
       previousHeight = element.scrollHeight;
@@ -4026,6 +3854,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
 /* harmony import */ var _cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js");
 /* harmony import */ var _cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../cfpb-core/src/breakpoint-state.js */ "./packages/cfpb-core/src/breakpoint-state.js");
+/* eslint-disable no-use-before-define */
 
 
 
@@ -4052,11 +3881,8 @@ function Summary(element) {
   let _transition;
   let _flyout;
 
-  // Whether the menu has been expanded or not.
-  let _isExpanded = false;
-
   // Whether this instance's behaviors are suspended or not.
-  let _suspended = true;
+  let _suspended;
 
   /**
    * @returns {Summary} An instance.
@@ -4066,21 +3892,27 @@ function Summary(element) {
       return this;
     }
 
-    /* Bail out of initializatiion if the height of the summary's content
-       is less then our summary height of 5.5ems (16 * 5.5 = 88)
-       See https://github.com/cfpb/design-system/blob/72623270013f2ad08dbe92b5b709ed2b434ee41e/packages/cfpb-atomic-component/src/utilities/transition/transition.less#L84 */
-    if (_contentDom.offsetHeight <= 88) {
-      _hideButton();
-      return this;
-    }
+    _suspended = !_shouldSuspend();
 
     // Add FlyoutMenu behavior data-js-hooks.
     (0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__.add)(_dom, 'behavior_flyout-menu');
     (0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__.add)(_contentDom, 'behavior_flyout-menu_content');
     (0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__.add)(_btnDom, 'behavior_flyout-menu_trigger');
 
-    _transition = new _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__["default"](_contentDom).init();
-    _flyout = new _cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_4__["default"](_dom).init();
+    _flyout = new _cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_4__["default"](_dom);
+    _transition = new _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__["default"](_contentDom);
+    _transition.init(
+      _suspended
+        ? _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__["default"].CLASSES.MH_SUMMARY
+        : _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__["default"].CLASSES.MH_DEFAULT
+    );
+    _flyout.setTransition(
+      _transition,
+      _transition.maxHeightSummary,
+      _transition.maxHeightDefault
+    );
+    _flyout.addEventListener('triggerclick', _triggerClickHandler);
+    _flyout.init();
 
     _resizeHandler();
 
@@ -4089,6 +3921,8 @@ function Summary(element) {
     if ('onorientationchange' in window) {
       window.addEventListener('orientationchange', _resizeHandler);
     }
+
+    _dom.addEventListener('focusin', _keyDownHandler);
 
     /* When we click inside the content area we may be changing the size,
        such as when a video player expands on being clicked.
@@ -4100,6 +3934,16 @@ function Summary(element) {
   }
 
   /**
+   *
+   * @param {KeyboardEvent} evt - The key down event.
+   */
+  function _keyDownHandler(evt) {
+    if ((evt.key =  true && evt.target !== _btnDom)) {
+      _btnDom.click();
+    }
+  }
+
+  /**
    * Handler for when the content area is clicked.
    * Refresh the transition to recalculate the max-height.
    *
@@ -4108,17 +3952,21 @@ function Summary(element) {
   function _contentClicked(evt) {
     /* We don't need to refresh if a link was clicked as we'll be navigating
        to another page. */
-    if (evt.target.tagName !== 'A') {
+    if (evt.target.tagName !== 'A' && _flyout.isExpanded()) {
       _transition.refresh();
     }
   }
 
   /**
    * Handle resizing of the window,
-   * suspends or resumes the mobile or desktop menu behaviors.
+   * suspends or resumes the mobile or desktop behaviors.
    */
   function _resizeHandler() {
-    if ((_hasMobileModifier && (0,_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.viewportIsIn)(_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.DESKTOP)) || (0,_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.viewportIsIn)(_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.TABLET)) {
+    /* Bail out of initializatiion if the height of the summary's content
+       is less then our summary height of 5.5ems (16 * 5.5 = 88)
+       See https://github.com/cfpb/design-system/blob/72623270013f2ad08dbe92b5b709ed2b434ee41e/packages/cfpb-atomic-component/src/utilities/transition/transition.less#L84
+    */
+    if (_shouldSuspend()) {
       _suspend();
     } else {
       _resume();
@@ -4126,11 +3974,32 @@ function Summary(element) {
   }
 
   /**
+   * @returns {boolean} True if this should be suspended, false otherwise.
+   */
+  function _shouldSuspend() {
+    return (
+      (_hasMobileModifier && !(0,_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.viewportIsIn)(_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.MOBILE)) ||
+      _contentDom.scrollHeight <= 88
+    );
+  }
+
+  /**
+   * Handle click of flyout.
+   */
+  function _triggerClickHandler() {
+    _flyout.addEventListener('expandend', _expandEndHandler);
+  }
+
+  /**
    * After the summary opens, remove the "read more" button.
    */
   function _expandEndHandler() {
     _hideButton();
-    _isExpanded = true;
+    window.removeEventListener('resize', _resizeHandler);
+    window.removeEventListener('orientationchange', _resizeHandler);
+    _flyout.removeEventListener('expandend', _expandEndHandler);
+    _flyout.suspend();
+    _transition.remove();
   }
 
   /**
@@ -4153,17 +4022,8 @@ function Summary(element) {
    * @returns {boolean} Whether it has successfully been resumed or not.
    */
   function _resume() {
-    // Re-initialize the transition on every resize to set the max-height.
-    _transition.refresh();
-
-    if (_suspended && _isExpanded === false) {
-      _flyout.addEventListener('expandEnd', _expandEndHandler);
-      // Set resume state.
-      _transition.setElement(_contentDom);
-      _flyout.setExpandTransition(_transition, _transition.maxHeightDefault);
-      _flyout.setCollapseTransition(_transition, _transition.maxHeightSummary);
-      _transition.animateOff();
-      _transition.maxHeightSummary();
+    if (_suspended) {
+      _flyout.collapse();
       _transition.animateOn();
       _showButton();
 
@@ -4180,9 +4040,11 @@ function Summary(element) {
    */
   function _suspend() {
     if (!_suspended) {
+      _transition.animateOff();
+      _flyout.expand();
+      _hideButton();
+
       _suspended = true;
-      _flyout.removeEventListener('expandEnd', _expandEndHandler);
-      _flyout.clearTransitions();
     }
 
     return _suspended;
@@ -4364,7 +4226,7 @@ function Multiselect(element) {
     _containerDom.classList.add('u-active');
     _fieldsetDom.classList.remove('u-invisible');
     _fieldsetDom.setAttribute('aria-hidden', false);
-    _instance.dispatchEvent('expandBegin', { target: _instance });
+    _instance.dispatchEvent('expandbegin', { target: _instance });
 
     return _instance;
   }
@@ -4379,8 +4241,8 @@ function Multiselect(element) {
     _fieldsetDom.classList.add('u-invisible');
     _fieldsetDom.setAttribute('aria-hidden', true);
     _model.resetIndex();
-    // TODO: This should be collapseBegin, not expandEnd, but we have a dependency on this event in the filters in cf.gov.
-    _instance.dispatchEvent('expandEnd', { target: _instance });
+    // TODO: This should be collapsebegin, not expandend, but we have a dependency on this event in the filters in cf.gov.
+    _instance.dispatchEvent('expandend', { target: _instance });
 
     return _instance;
   }
@@ -4684,7 +4546,6 @@ function Multiselect(element) {
     // Create all our markup but wait to manipulate the DOM just once
     _selectionsDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('ul', null, {
       className: BASE_CLASS + '_choices',
-      inside: _containerDom,
     });
 
     _headerDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('header', _containerDom, {

@@ -144,14 +144,14 @@
       padding: 0 unit((15px / @base-font-size-px), em);
 
       // The divider between _header and _content.
-      &:before {
+      &::before {
         content: '';
         display: block;
         border-top: 1px solid @expandable__border;
         padding-top: unit((15px / @base-font-size-px), em);
       }
 
-      &:after {
+      &::after {
         padding-bottom: unit((15px / @base-font-size-px), em);
         width: 100%;
       }

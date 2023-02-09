@@ -1,6 +1,6 @@
 import { jest } from '@jest/globals';
 import Summary from '../../../../../packages/cfpb-expandables/src/Summary.js';
-import { simulateEvent } from '../../../util/simulate-event.js';
+import { simulateEvent } from '../../../../util/simulate-event.js';
 
 const HTML_SNIPPET = `
 <div class="o-summary o-summary__mobile"

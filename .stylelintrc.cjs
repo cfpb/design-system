@@ -2,8 +2,6 @@
 at-rule-no-unknown -
   This rule enforces only @ rules that appear in the CSS spec,
   however, @plugin appears in Less, so should be ignored.
-declaration-colon-newline-after -
-  Turned off because it messes with our format for multi-line declarations.
 rule-empty-line-before -
   Custom setting that differs from stylelint-config-standard.
 no-descending-specificity -
@@ -15,12 +13,11 @@ less/no-duplicate-variables
   https://github.com/ssivanatarajan/stylelint-less/issues/6 is addressed.
 */
 module.exports = {
-  extends: ['stylelint-config-recommended-less', 'stylelint-config-prettier'],
+  extends: ['stylelint-config-recommended-less', 'stylelint-config-standard'],
   ignoreFiles: ['packages/**/node_modules/**/*.less'],
   customSyntax: 'postcss-less',
   rules: {
     'at-rule-no-unknown': [true, { ignoreAtRules: 'plugin' }],
-    'declaration-colon-newline-after': null,
     'declaration-empty-line-before': null,
     'function-name-case': ['lower', { ignoreFunctions: ['filter'] }],
     'rule-empty-line-before': [

@@ -4808,7 +4808,10 @@ html[lang='ar'] .m-notification .m-list {
   - cf-organisms
 */
 .o-summary_content {
-  overflow: hidden;
+  overflow-y: hidden;
+  padding: 2px;
+  left: -2px;
+  top: -2px;
   position: relative;
 }
 .o-summary_content[aria-expanded='false']::after {

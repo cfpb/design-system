@@ -1,5 +1,5 @@
 import Expandable from '../../../../../packages/cfpb-expandables/src/Expandable.js';
-import simulateEvent from '../../../../util/simulate-event.js';
+import { simulateEvent } from '../../../../util/simulate-event.js';
 
 const HTML_SNIPPET = `
 <div class="o-expandable-group"

@@ -7,11 +7,7 @@ import { add as addDataHook } from '@cfpb/cfpb-atomic-component/src/utilities/da
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 import MaxHeightTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
 import FlyoutMenu from '../../cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js';
-import {
-  DESKTOP,
-  TABLET,
-  viewportIsIn,
-} from '../../cfpb-core/src/breakpoint-state.js';
+import { MOBILE, viewportIsIn } from '../../cfpb-core/src/breakpoint-state.js';
 
 const BASE_CLASS = 'o-summary';
 
@@ -32,11 +28,8 @@ function Summary(element) {
   let _transition;
   let _flyout;
 
-  // Whether the menu has been expanded or not.
-  let _isExpanded = false;
-
   // Whether this instance's behaviors are suspended or not.
-  let _suspended = true;
+  let _suspended;
 
   /**
    * @returns {Summary} An instance.
@@ -46,21 +39,27 @@ function Summary(element) {
       return this;
     }
 
-    /* Bail out of initializatiion if the height of the summary's content
-       is less then our summary height of 5.5ems (16 * 5.5 = 88)
-       See https://github.com/cfpb/design-system/blob/72623270013f2ad08dbe92b5b709ed2b434ee41e/packages/cfpb-atomic-component/src/utilities/transition/transition.less#L84 */
-    if (_contentDom.offsetHeight <= 88) {
-      _hideButton();
-      return this;
-    }
+    _suspended = !_shouldSuspend();
 
     // Add FlyoutMenu behavior data-js-hooks.
     addDataHook(_dom, 'behavior_flyout-menu');
     addDataHook(_contentDom, 'behavior_flyout-menu_content');
     addDataHook(_btnDom, 'behavior_flyout-menu_trigger');
 
-    _transition = new MaxHeightTransition(_contentDom).init();
-    _flyout = new FlyoutMenu(_dom).init();
+    _flyout = new FlyoutMenu(_dom);
+    _transition = new MaxHeightTransition(_contentDom);
+    _transition.init(
+      _suspended
+        ? MaxHeightTransition.CLASSES.MH_SUMMARY
+        : MaxHeightTransition.CLASSES.MH_DEFAULT
+    );
+    _flyout.setTransition(
+      _transition,
+      _transition.maxHeightSummary,
+      _transition.maxHeightDefault
+    );
+    _flyout.addEventListener('triggerclick', _triggerClickHandler);
+    _flyout.init();
 
     _resizeHandler();
 
@@ -69,6 +68,8 @@ function Summary(element) {
     if ('onorientationchange' in window) {
       window.addEventListener('orientationchange', _resizeHandler);
     }
+
+    _dom.addEventListener('focusin', _keyDownHandler);
 
     /* When we click inside the content area we may be changing the size,
        such as when a video player expands on being clicked.
@@ -80,6 +81,16 @@ function Summary(element) {
   }
 
   /**
+   *
+   * @param {KeyboardEvent} evt - The key down event.
+   */
+  function _keyDownHandler(evt) {
+    if ((evt.key = 'Tab' && evt.target !== _btnDom)) {
+      _btnDom.click();
+    }
+  }
+
+  /**
    * Handler for when the content area is clicked.
    * Refresh the transition to recalculate the max-height.
    *
@@ -88,17 +99,21 @@ function Summary(element) {
   function _contentClicked(evt) {
     /* We don't need to refresh if a link was clicked as we'll be navigating
        to another page. */
-    if (evt.target.tagName !== 'A') {
+    if (evt.target.tagName !== 'A' && _flyout.isExpanded()) {
       _transition.refresh();
     }
   }
 
   /**
    * Handle resizing of the window,
-   * suspends or resumes the mobile or desktop menu behaviors.
+   * suspends or resumes the mobile or desktop behaviors.
    */
   function _resizeHandler() {
-    if ((_hasMobileModifier && viewportIsIn(DESKTOP)) || viewportIsIn(TABLET)) {
+    /* Bail out of initializatiion if the height of the summary's content
+       is less then our summary height of 5.5ems (16 * 5.5 = 88)
+       See https://github.com/cfpb/design-system/blob/72623270013f2ad08dbe92b5b709ed2b434ee41e/packages/cfpb-atomic-component/src/utilities/transition/transition.less#L84
+    */
+    if (_shouldSuspend()) {
       _suspend();
     } else {
       _resume();
@@ -106,11 +121,32 @@ function Summary(element) {
   }
 
   /**
+   * @returns {boolean} True if this should be suspended, false otherwise.
+   */
+  function _shouldSuspend() {
+    return (
+      (_hasMobileModifier && !viewportIsIn(MOBILE)) ||
+      _contentDom.scrollHeight <= 88
+    );
+  }
+
+  /**
+   * Handle click of flyout.
+   */
+  function _triggerClickHandler() {
+    _flyout.addEventListener('expandend', _expandEndHandler);
+  }
+
+  /**
    * After the summary opens, remove the "read more" button.
    */
   function _expandEndHandler() {
     _hideButton();
-    _isExpanded = true;
+    window.removeEventListener('resize', _resizeHandler);
+    window.removeEventListener('orientationchange', _resizeHandler);
+    _flyout.removeEventListener('expandend', _expandEndHandler);
+    _flyout.suspend();
+    _transition.remove();
   }
 
   /**
@@ -133,17 +169,8 @@ function Summary(element) {
    * @returns {boolean} Whether it has successfully been resumed or not.
    */
   function _resume() {
-    // Re-initialize the transition on every resize to set the max-height.
-    _transition.refresh();
-
-    if (_suspended && _isExpanded === false) {
-      _flyout.addEventListener('expandend', _expandEndHandler);
-      // Set resume state.
-      _transition.setElement(_contentDom);
-      _flyout.setExpandTransition(_transition, _transition.maxHeightDefault);
-      _flyout.setCollapseTransition(_transition, _transition.maxHeightSummary);
-      _transition.animateOff();
-      _transition.maxHeightSummary();
+    if (_suspended) {
+      _flyout.collapse();
       _transition.animateOn();
       _showButton();
 
@@ -160,9 +187,11 @@ function Summary(element) {
    */
   function _suspend() {
     if (!_suspended) {
+      _transition.animateOff();
+      _flyout.expand();
+      _hideButton();
+
       _suspended = true;
-      _flyout.removeEventListener('expandend', _expandEndHandler);
-      _flyout.clearTransitions();
     }
 
     return _suspended;

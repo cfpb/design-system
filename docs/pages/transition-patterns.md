@@ -187,8 +187,8 @@ variation_groups:
           'A "flyout behavior" can be attached to a arbitrary
           container that contains one or more triggers and a content area. The
           flyout handles `aria-expanded` attribute toggling and dispatches the
-          following events: `triggerOver`, `triggerOut`, `triggerClick`,
-          `expandBegin`, `expandEnd`, `collapseBegin`, `collapseEnd`. This
+          following events: `triggerover`, `triggerout`, `triggerclick`,
+          `expandbegin`, `expandend`, `collapsebegin`, `collapseend`. This
           handles the markup semantics of toggling a content area, which can
           then be combined with a transition from above to create an animated
           container that shows and hides content.'

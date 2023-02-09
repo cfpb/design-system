@@ -83,8 +83,8 @@ describe('FlyoutMenu', () => {
       triggerClickSpy = jest.fn();
 
       flyoutMenu.init();
-      flyoutMenu.addEventListener('triggerOver', triggerOverSpy);
-      flyoutMenu.addEventListener('triggerClick', triggerClickSpy);
+      flyoutMenu.addEventListener('triggerover', triggerOverSpy);
+      flyoutMenu.addEventListener('triggerclick', triggerClickSpy);
     });
 
     it('should dispatch events when called by trigger click', () => {
@@ -101,7 +101,7 @@ describe('FlyoutMenu', () => {
       expect(triggerOverSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
         trigger: triggerDom,
-        type: 'triggerOver',
+        type: 'triggerover',
       });
     });
 
@@ -116,7 +116,7 @@ describe('FlyoutMenu', () => {
       expect(triggerClickSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
         trigger: altTriggerDom,
-        type: 'triggerClick',
+        type: 'triggerclick',
       });
     });
   });
@@ -128,8 +128,8 @@ describe('FlyoutMenu', () => {
       expandEndSpy = jest.fn();
 
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandBegin', expandBeginSpy);
-      flyoutMenu.addEventListener('expandEnd', expandEndSpy);
+      flyoutMenu.addEventListener('expandbegin', expandBeginSpy);
+      flyoutMenu.addEventListener('expandend', expandEndSpy);
     });
 
     afterEach(() => {
@@ -137,13 +137,13 @@ describe('FlyoutMenu', () => {
       expect(expandBeginSpy).toHaveBeenCalledTimes(1);
       expect(expandBeginSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
-        type: 'expandBegin',
+        type: 'expandbegin',
       });
 
       expect(expandEndSpy).toHaveBeenCalledTimes(1);
       expect(expandEndSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
-        type: 'expandEnd',
+        type: 'expandend',
       });
 
       // Check expected aria attributes state.
@@ -184,8 +184,8 @@ describe('FlyoutMenu', () => {
       collapseEndSpy = jest.fn();
 
       flyoutMenu.init();
-      flyoutMenu.addEventListener('collapseBegin', collapseBeginSpy);
-      flyoutMenu.addEventListener('collapseEnd', collapseEndSpy);
+      flyoutMenu.addEventListener('collapsebegin', collapseBeginSpy);
+      flyoutMenu.addEventListener('collapseend', collapseEndSpy);
       triggerDom.click();
     });
 
@@ -194,13 +194,13 @@ describe('FlyoutMenu', () => {
       expect(collapseBeginSpy).toHaveBeenCalledTimes(1);
       expect(collapseBeginSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
-        type: 'collapseBegin',
+        type: 'collapsebegin',
       });
 
       expect(collapseEndSpy).toHaveBeenCalledTimes(1);
       expect(collapseEndSpy).toHaveBeenCalledWith({
         target: flyoutMenu,
-        type: 'collapseEnd',
+        type: 'collapseend',
       });
 
       // Check expected aria attribute states.
@@ -239,7 +239,7 @@ describe('FlyoutMenu', () => {
       flyoutMenu.init();
       const transition = new MoveTransition(contentDom).init();
       flyoutMenu.setExpandTransition(transition, transition.moveLeft);
-      flyoutMenu.addEventListener('expandEnd', () => {
+      flyoutMenu.addEventListener('expandend', () => {
         try {
           const hasClass = contentDom.classList.contains('u-move-transition');
           expect(hasClass).toBe(true);
@@ -267,7 +267,7 @@ describe('FlyoutMenu', () => {
       const transition = new MoveTransition(contentDom).init();
       triggerDom.click();
       flyoutMenu.setCollapseTransition(transition, transition.moveLeft);
-      flyoutMenu.addEventListener('collapseEnd', () => {
+      flyoutMenu.addEventListener('collapseend', () => {
         try {
           const hasClass = contentDom.classList.contains('u-move-transition');
           expect(hasClass).toBe(true);
@@ -337,10 +337,10 @@ describe('FlyoutMenu', () => {
       collapseBeginSpy = jest.fn();
       collapseEndSpy = jest.fn();
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandBegin', expandBeginSpy);
-      flyoutMenu.addEventListener('expandEnd', expandEndSpy);
-      flyoutMenu.addEventListener('collapseBegin', collapseBeginSpy);
-      flyoutMenu.addEventListener('collapseEnd', collapseEndSpy);
+      flyoutMenu.addEventListener('expandbegin', expandBeginSpy);
+      flyoutMenu.addEventListener('expandend', expandEndSpy);
+      flyoutMenu.addEventListener('collapsebegin', collapseBeginSpy);
+      flyoutMenu.addEventListener('collapseend', collapseEndSpy);
     });
 
     describe('.suspend()', () => {
@@ -391,7 +391,7 @@ describe('FlyoutMenu', () => {
   describe('.isAnimating()', () => {
     it('should return true when expanding', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandBegin', () => {
+      flyoutMenu.addEventListener('expandbegin', () => {
         try {
           expect(flyoutMenu.isAnimating()).toBe(true);
           done();
@@ -404,7 +404,7 @@ describe('FlyoutMenu', () => {
 
     it('should return false after expanding', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandEnd', () => {
+      flyoutMenu.addEventListener('expandend', () => {
         try {
           expect(flyoutMenu.isAnimating()).toBe(false);
           done();
@@ -417,7 +417,7 @@ describe('FlyoutMenu', () => {
 
     it('should return true while collapsing', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('collapseBegin', () => {
+      flyoutMenu.addEventListener('collapsebegin', () => {
         try {
           expect(flyoutMenu.isAnimating()).toBe(true);
           done();
@@ -431,7 +431,7 @@ describe('FlyoutMenu', () => {
 
     it('should return false after collapsing', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('collapseEnd', () => {
+      flyoutMenu.addEventListener('collapseend', () => {
         try {
           expect(flyoutMenu.isAnimating()).toBe(false);
           done();
@@ -447,7 +447,7 @@ describe('FlyoutMenu', () => {
   describe('.isExpanded()', () => {
     it('should return false before expanding', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandBegin', () => {
+      flyoutMenu.addEventListener('expandbegin', () => {
         try {
           expect(flyoutMenu.isExpanded()).toBe(false);
           done();
@@ -460,7 +460,7 @@ describe('FlyoutMenu', () => {
 
     it('should return true after expanding', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('expandEnd', () => {
+      flyoutMenu.addEventListener('expandend', () => {
         try {
           expect(flyoutMenu.isExpanded()).toBe(true);
           done();
@@ -474,7 +474,7 @@ describe('FlyoutMenu', () => {
     it('should return true before collapsing', (done) => {
       flyoutMenu.init();
       triggerDom.click();
-      flyoutMenu.addEventListener('triggerClick', () => {
+      flyoutMenu.addEventListener('triggerclick', () => {
         try {
           expect(flyoutMenu.isExpanded()).toBe(true);
           done();
@@ -487,7 +487,7 @@ describe('FlyoutMenu', () => {
 
     it('should return false after collapsing', (done) => {
       flyoutMenu.init();
-      flyoutMenu.addEventListener('collapseEnd', () => {
+      flyoutMenu.addEventListener('collapseend', () => {
         try {
           expect(flyoutMenu.isExpanded()).toBe(false);
           done();

@@ -37,7 +37,13 @@
 
 .o-summary {
   &_content {
-    overflow: hidden;
+    overflow-y: hidden;
+
+    // Move the bounding box one pixel to avoid clipping link focus boxes.
+    padding: 2px;
+    left: -2px;
+    top: -2px;
+
     position: relative;
 
     &[aria-expanded='false']::after {

@@ -13,7 +13,7 @@ describe('Netlify CMS', () => {
       const loginButton = await $('button=Login');
       // Wait for page to load netlify configuration and show the login button.
       await loginButton.waitForDisplayed({ timeout: WAIT_FOR_DISPLAY_TIMEOUT });
-      expect(loginButton).toExist();
+      await expect(loginButton).toExist();
       await loginButton.click();
     });
 
@@ -27,7 +27,7 @@ describe('Netlify CMS', () => {
       await editorContainer.waitForDisplayed({
         timeout: WAIT_FOR_DISPLAY_TIMEOUT,
       });
-      expect(editorContainer).toExist();
+      await expect(editorContainer).toExist();
     });
 
     it('should properly render a preview of a page', async () => {
@@ -41,7 +41,7 @@ describe('Netlify CMS', () => {
       // The preview pane is an iframe
       await browser.switchToFrame(await $('iframe'));
       const previewPane = await $('body');
-      expect(previewPane).toHaveTextContaining('fun');
+      await expect(previewPane).toHaveTextContaining('fun');
     });
   });
 
@@ -57,7 +57,7 @@ describe('Netlify CMS', () => {
       const loginButton = await $('button=Login');
       // Wait for page to load netlify configuration and show the login button.
       await loginButton.waitForDisplayed({ timeout: WAIT_FOR_DISPLAY_TIMEOUT });
-      expect(loginButton).toExist();
+      await expect(loginButton).toExist();
       await loginButton.click();
     });
 
@@ -72,7 +72,7 @@ describe('Netlify CMS', () => {
       // The preview pane is an iframe
       await browser.switchToFrame(await $('iframe'));
       const previewPane = await $('body');
-      expect(previewPane).toHaveTextContaining('best');
+      await expect(previewPane).toHaveTextContaining('best');
     });
 
     it('should support switching between the various "show details" tabs', async () => {
@@ -87,11 +87,11 @@ describe('Netlify CMS', () => {
       const detailsButton = await $('button=Show details');
       await detailsButton.click();
       const implementationButton = await $('a=Implementation');
-      expect(implementationButton).toBeDisplayed();
+      await expect(implementationButton).toBeDisplayed();
       await implementationButton.click();
       // Move one level up the DOM tree
       const implementationButtonParent = await implementationButton.$('..');
-      expect(implementationButtonParent).toHaveElementClassContaining(
+      await expect(implementationButtonParent).toHaveElementClassContaining(
         'selected'
       );
     });

@@ -88,3 +88,15 @@
     }
   } );
 }
+
+// Handle right-to-left (RTL) adjustments.
+html[lang='ar'] .m-notification {
+  .cf-icon-svg + .m-notification_content {
+    padding-left: initial;
+    padding-right: unit((25px / @base-font-size-px), em);
+  }
+
+  .m-list {
+    padding-right: 0;
+  }
+}

@@ -1,9 +1,7 @@
 ---
-title: Taglines
 layout: variation
 section: patterns
 status: Released
-description: Taglines are short paragraphs of text with a USA flag to their left.
 variation_groups:
   - variations:
       - variation_name: Standard tagline
@@ -43,16 +41,19 @@ variation_groups:
                 from financial harm.
               </div>
           </div>
-        variation_description: 'An extra large tagline, which stacks on mobile.'
+        variation_description: An extra large tagline, which stacks on mobile.
         variation_implementation: ''
+        variation_is_deprecated: true
     variation_group_name: Types
+guidelines: ''
+eyebrow: Featured content
+title: Taglines
+description: Taglines are short paragraphs of text with a USA flag to their left.
 use_cases: Taglines are used in the header and footer across consumerfinance.gov
   and within inkwells.
-guidelines: ''
 behavior: ''
 accessibility: ''
-research: ''
 related_items: ''
 last_updated: 2019-10-21T20:38:39.851Z
-eyebrow: Featured content
+research: ''
 ---

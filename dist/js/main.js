@@ -4231,6 +4231,20 @@ __webpack_require__.r(__webpack_exports__);
 const closeIcon = _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5__;
 
 const BASE_CLASS = 'o-multiselect';
+const CHECKBOX_INPUT_CLASS = 'a-checkbox';
+const TEXT_INPUT_CLASS = 'a-text-input';
+
+// Constants for direction.
+const DIR_PREV = 'prev';
+const DIR_NEXT = 'next';
+
+// Constants for key binding.
+const KEY_RETURN = 'Enter';
+const KEY_SPACE = ' ';
+const KEY_ESCAPE = 'Escape';
+const KEY_UP = 'ArrowUp';
+const KEY_DOWN = 'ArrowDown';
+const KEY_TAB = 'Tab';
 
 /**
  * Multiselect
@@ -4242,26 +4256,11 @@ const BASE_CLASS = 'o-multiselect';
  * @returns {Multiselect} An instance.
  */
 function Multiselect(element) {
-  const CHECKBOX_INPUT_CLASS = 'a-checkbox';
-  const TEXT_INPUT_CLASS = 'a-text-input';
-
   /* TODO: As the multiselect is developed further
      explore whether it should use an updated
      class name or data-* attribute in the
      markup so that it doesn't apply globally by default. */
   element.classList.add(BASE_CLASS);
-
-  // Constants for direction.
-  const DIR_PREV = 'prev';
-  const DIR_NEXT = 'next';
-
-  // Constants for key binding.
-  const KEY_RETURN = 13;
-  const KEY_SPACE = 32;
-  const KEY_ESCAPE = 27;
-  const KEY_UP = 38;
-  const KEY_DOWN = 40;
-  const KEY_TAB = 9;
 
   // Internal vars.
   let _dom = (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
@@ -4448,7 +4447,7 @@ function Multiselect(element) {
    * @param {KeyboardEvent} event - The key down event object.
    */
   function _selectionKeyDownHandler(event) {
-    if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
+    if (event.key === KEY_SPACE || event.key === KEY_RETURN) {
       const label = event.target.querySelector('label');
       const checkbox = _optionsDom.querySelector(
         '#' + label.getAttribute('for')
@@ -4598,7 +4597,7 @@ function Multiselect(element) {
     });
 
     _searchDom.addEventListener('keydown', function (event) {
-      const key = event.keyCode;
+      const key = event.key;
 
       if (
         _fieldsetDom.getAttribute('aria-hidden') === 'true' &&
@@ -4629,7 +4628,7 @@ function Multiselect(element) {
     });
 
     _optionsDom.addEventListener('keydown', function (event) {
-      const key = event.keyCode;
+      const key = event.key;
       const target = event.target;
       const checked = target.checked;
 

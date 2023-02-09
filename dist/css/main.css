@@ -1652,6 +1652,9 @@ a.a-heading__icon.active {
     border-bottom-width: 0;
   }
 }
+html[lang='ar'] .m-list {
+  padding-right: 0;
+}
 .m-meta-header {
   padding-bottom: 0.625em;
   border-bottom: 1px solid #b4b5b6;

@@ -8,6 +8,8 @@ import { JS_HOOK } from './standard-type.js';
  *   meaning it would be two values, which is likely a typo.
  */
 function add(element, value) {
+  if (contains(element, value)) return value;
+
   if (value.indexOf(' ') !== -1) {
     const msg = JS_HOOK + ' values cannot contain spaces!';
     throw new Error(msg);

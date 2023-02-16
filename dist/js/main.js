@@ -2370,6 +2370,8 @@ __webpack_require__.r(__webpack_exports__);
  *   meaning it would be two values, which is likely a typo.
  */
 function add(element, value) {
+  if (contains(element, value)) return value;
+
   if (value.indexOf(' ') !== -1) {
     const msg = _standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK + ' values cannot contain spaces!';
     throw new Error(msg);

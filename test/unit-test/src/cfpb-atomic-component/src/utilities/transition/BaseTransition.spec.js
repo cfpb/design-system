@@ -1,7 +1,11 @@
 import BaseTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js';
 import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
 
-let eventObserver = new EventObserver();
+const eventObserver = new EventObserver();
+
+/**
+ * Mock the default transition for a BaseTransition constructor.
+ */
 function MockChildTransition() {
   this.dispatchEvent = eventObserver.dispatchEvent;
   return this;

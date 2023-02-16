@@ -70,11 +70,21 @@
     border-bottom-width: 3px;
   }
 
-  &:not(.m-card__featured, .m-card__breakout, .m-card__topic, .m-card__highlight) {
+  &:not(
+      .m-card__featured,
+      .m-card__breakout,
+      .m-card__topic,
+      .m-card__highlight
+    ) {
     padding: unit((@grid_gutter-width / @base-font-size-px), em);
   }
 
-  &:not(.m-card__featured, .m-card__breakout, .m-card__topic, .m-card__highlight),
+  &:not(
+      .m-card__featured,
+      .m-card__breakout,
+      .m-card__topic,
+      .m-card__highlight
+    ),
   & > a {
     display: flex;
     flex-direction: column;

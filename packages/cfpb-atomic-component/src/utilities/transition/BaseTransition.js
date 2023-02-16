@@ -7,14 +7,14 @@
  *   the base class used through composition by a specific transition.
  * @param {HTMLElement} element - DOM element to apply transition to.
  * @param {object} classes - The classes to apply to this transition.
- * @param {Object} child - The child transition using this as a base.
+ * @param {object} child - The child transition using this as a base.
  * @returns {BaseTransition} An instance.
  */
 function BaseTransition(element, classes, child) {
   const _classes = classes;
   let _dom = element;
   if (!child) throw new Error('Child transition argument must be defined!');
-  let _child = child;
+  const _child = child;
 
   let _lastClass;
   let _transitionEndEvent;

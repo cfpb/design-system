@@ -335,6 +335,13 @@ function FlyoutMenu(element) {
     this.dispatchEvent('collapseend', { target: this, type: 'collapseend' });
   }
 
+  /**
+   * Set the transition that runs when this flyout is expanded/collapsed.
+   *
+   * @param {BaseTransition} transition - A transition object.
+   * @param {Function} collapseMethod - The collapse method to call on the transition.
+   * @param {Function} expandMethod - The expand method to call on the transition.
+   */
   function setTransition(transition, collapseMethod, expandMethod) {
     _transition = transition;
 

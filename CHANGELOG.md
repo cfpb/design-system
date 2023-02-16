@@ -1,4 +1,21 @@
 
+## v0.21.1 (2023-02-16)
+
+#### Enhancement
+* Other
+  * [#1587](https://github.com/cfpb/design-system/pull/1587) Update cssnano, eslint, eslint-plugin-jsdoc, jest, jest-cli, jest-environment-jsdom, lerna, stylelint, stylelint-config-prettier, wdio-chromedriver-service ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`
+  * [#1585](https://github.com/cfpb/design-system/pull/1585) cfpb-atomic-component: Check if data-hook already contains a value before adding it again ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-atomic-component`, `cfpb-expandables`, `cfpb-layout`
+  * [#1586](https://github.com/cfpb/design-system/pull/1586) Fix stylelint config ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.0 (2023-02-09)
 
 #### Breaking Change

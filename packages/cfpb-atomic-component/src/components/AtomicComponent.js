@@ -15,7 +15,7 @@ import {
   isFunction,
   instantiateAll,
   setInitFlag,
-} from '../index.js';
+} from '@cfpb/cfpb-atomic-component';
 import Delegate from 'ftdomdelegate';
 
 const TAG_NAME = 'div';
@@ -313,4 +313,4 @@ function init(scope) {
 AtomicComponent.init = init;
 AtomicComponent.extend = extend;
 
-export default AtomicComponent;
+export { AtomicComponent };

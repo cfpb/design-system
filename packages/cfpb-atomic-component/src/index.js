@@ -3,6 +3,12 @@
    Atomic component utilities
    ========================================================================== */
 
+export {
+  BEHAVIOR_PREFIX,
+  JS_HOOK,
+  STATE_PREFIX,
+} from './utilities/standard-type.js';
+
 export { EventObserver } from './mixins/EventObserver.js';
 
 export {
@@ -18,23 +24,6 @@ export {
   remove,
 } from './utilities/behavior/behavior.js';
 
-export { FlyoutMenu } from './utilities/behavior/FlyoutMenu.js';
-
-export { add, contains } from './utilities/data-hook.js';
-
-export { isMobileUserAgent } from './utilities/media-helpers.js';
-
-export {
-  BEHAVIOR_PREFIX,
-  JS_HOOK,
-  STATE_PREFIX,
-} from './utilities/standard-type.js';
-
-export { AlphaTransition } from './utilities/transition/AlphaTransition.js';
-export { BaseTransition } from './utilities/transition/BaseTransition.js';
-export { MaxHeightTransition } from './utilities/transition/MaxHeightTransition.js';
-export { MoveTransition } from './utilities/transition/MoveTransition.js';
-
 export {
   isUndefined,
   isDefined,
@@ -46,3 +35,14 @@ export {
   isFunction,
   isEmpty,
 } from './utilities/type-checkers.js';
+
+export { add, contains } from './utilities/data-hook.js';
+
+export { isMobileUserAgent } from './utilities/media-helpers.js';
+
+export { FlyoutMenu } from './utilities/behavior/FlyoutMenu.js';
+
+export { AlphaTransition } from './utilities/transition/AlphaTransition.js';
+export { BaseTransition } from './utilities/transition/BaseTransition.js';
+export { MaxHeightTransition } from './utilities/transition/MaxHeightTransition.js';
+export { MoveTransition } from './utilities/transition/MoveTransition.js';

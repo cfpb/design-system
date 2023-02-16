@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import AtomicComponent from '../../../../../../packages/cfpb-atomic-component/src/components/AtomicComponent.js';
+import { AtomicComponent } from '../../../../../../packages/cfpb-atomic-component/src/components/AtomicComponent.js';
 
 const HTML_SNIPPET = `
 <div id="test-block-a" class="test-class">

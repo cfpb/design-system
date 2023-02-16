@@ -2,7 +2,7 @@
    Expandable Organism
    ========================================================================== */
 
-import AtomicComponent from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
+import { AtomicComponent } from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
 import { EventObserver } from '@cfpb/cfpb-atomic-component';
 import ExpandableTransition from './ExpandableTransition.js';
 

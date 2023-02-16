@@ -10,10 +10,13 @@
 
    ========================================================================== */
 
-import { instantiateAll, setInitFlag } from '../utilities/atomic-helpers.js';
+import {
+  EventObserver,
+  isFunction,
+  instantiateAll,
+  setInitFlag,
+} from '../index.js';
 import Delegate from 'ftdomdelegate';
-import EventObserver from '../mixins/EventObserver.js';
-import { isFunction } from '../utilities/type-checkers.js';
 
 const TAG_NAME = 'div';
 

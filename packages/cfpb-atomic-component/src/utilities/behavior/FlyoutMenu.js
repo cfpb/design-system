@@ -441,4 +441,4 @@ function FlyoutMenu(element) {
   return this;
 }
 
-export default FlyoutMenu;
+export { FlyoutMenu };

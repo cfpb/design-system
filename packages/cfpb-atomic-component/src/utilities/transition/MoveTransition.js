@@ -113,4 +113,4 @@ function MoveTransition(element) {
 // Public static properties.
 MoveTransition.CLASSES = CLASSES;
 
-export default MoveTransition;
+export { MoveTransition };

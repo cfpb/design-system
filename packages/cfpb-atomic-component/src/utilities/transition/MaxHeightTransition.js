@@ -143,4 +143,4 @@ function MaxHeightTransition(element) {
 // Public static properties.
 MaxHeightTransition.CLASSES = CLASSES;
 
-export default MaxHeightTransition;
+export { MaxHeightTransition };

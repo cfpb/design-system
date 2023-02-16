@@ -263,4 +263,4 @@ BaseTransition.END_EVENT = 'transitionend';
 BaseTransition.NO_ANIMATION_CLASS = 'u-no-animation';
 BaseTransition.ANIMATING_CLASS = 'u-is-animating';
 
-export default BaseTransition;
+export { BaseTransition };

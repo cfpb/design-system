@@ -79,4 +79,4 @@ function EventObserver() {
   return this;
 }
 
-export default EventObserver;
+export { EventObserver };

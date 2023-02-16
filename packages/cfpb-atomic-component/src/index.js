@@ -3,39 +3,39 @@
    Atomic component utilities
    ========================================================================== */
 
-import EventObserver from './mixins/EventObserver.js';
+export { EventObserver } from './mixins/EventObserver.js';
 
-import {
+export {
   checkDom,
   instantiateAll,
   setInitFlag,
 } from './utilities/atomic-helpers.js';
 
-import {
+export {
   attach,
   checkBehaviorDom,
   find,
   remove,
 } from './utilities/behavior/behavior.js';
 
-import FlyoutMenu from './utilities/behavior/FlyoutMenu.js';
+export { FlyoutMenu } from './utilities/behavior/FlyoutMenu.js';
 
-import { add, contains } from './utilities/data-hook.js';
+export { add, contains } from './utilities/data-hook.js';
 
-import { isMobileUserAgent } from './utilities/media-helpers.js';
+export { isMobileUserAgent } from './utilities/media-helpers.js';
 
-import {
+export {
   BEHAVIOR_PREFIX,
   JS_HOOK,
   STATE_PREFIX,
 } from './utilities/standard-type.js';
 
-import AlphaTransition from './utilities/transition/AlphaTransition.js';
-import BaseTransition from './utilities/transition/BaseTransition.js';
-import MaxHeightTransition from './utilities/transition/MaxHeightTransition.js';
-import MoveTransition from './utilities/transition/MoveTransition.js';
+export { AlphaTransition } from './utilities/transition/AlphaTransition.js';
+export { BaseTransition } from './utilities/transition/BaseTransition.js';
+export { MaxHeightTransition } from './utilities/transition/MaxHeightTransition.js';
+export { MoveTransition } from './utilities/transition/MoveTransition.js';
 
-import {
+export {
   isUndefined,
   isDefined,
   isObject,
@@ -46,34 +46,3 @@ import {
   isFunction,
   isEmpty,
 } from './utilities/type-checkers.js';
-
-export {
-  EventObserver,
-  checkDom,
-  instantiateAll,
-  setInitFlag,
-  attach,
-  checkBehaviorDom,
-  find,
-  remove,
-  FlyoutMenu,
-  add,
-  contains,
-  isMobileUserAgent,
-  BEHAVIOR_PREFIX,
-  JS_HOOK,
-  STATE_PREFIX,
-  AlphaTransition,
-  BaseTransition,
-  MaxHeightTransition,
-  MoveTransition,
-  isUndefined,
-  isDefined,
-  isObject,
-  isString,
-  isNumber,
-  isDate,
-  isArray,
-  isFunction,
-  isEmpty,
-};

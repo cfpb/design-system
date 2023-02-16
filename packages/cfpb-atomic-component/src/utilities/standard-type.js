@@ -39,4 +39,4 @@ const BEHAVIOR_PREFIX = 'behavior_';
  */
 const STATE_PREFIX = 'state_';
 
-export { BEHAVIOR_PREFIX, JS_HOOK, STATE_PREFIX };
+export { JS_HOOK, BEHAVIOR_PREFIX, STATE_PREFIX };

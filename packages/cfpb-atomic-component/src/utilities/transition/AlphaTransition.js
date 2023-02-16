@@ -74,4 +74,4 @@ function AlphaTransition(element) {
 // Public static properties.
 AlphaTransition.CLASSES = CLASSES;
 
-export default AlphaTransition;
+export { AlphaTransition };

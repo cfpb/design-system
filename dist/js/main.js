@@ -2083,6 +2083,13 @@ function FlyoutMenu(element) {
     this.dispatchEvent('collapseend', { target: this, type: 'collapseend' });
   }
 
+  /**
+   * Set the transition that runs when this flyout is expanded/collapsed.
+   *
+   * @param {BaseTransition} transition - A transition object.
+   * @param {Function} collapseMethod - The collapse method to call on the transition.
+   * @param {Function} expandMethod - The expand method to call on the transition.
+   */
   function setTransition(transition, collapseMethod, expandMethod) {
     _transition = transition;
 
@@ -2647,14 +2654,14 @@ __webpack_require__.r(__webpack_exports__);
  *   the base class used through composition by a specific transition.
  * @param {HTMLElement} element - DOM element to apply transition to.
  * @param {object} classes - The classes to apply to this transition.
- * @param {Object} child - The child transition using this as a base.
+ * @param {object} child - The child transition using this as a base.
  * @returns {BaseTransition} An instance.
  */
 function BaseTransition(element, classes, child) {
   const _classes = classes;
   let _dom = element;
   if (!child) throw new Error('Child transition argument must be defined!');
-  let _child = child;
+  const _child = child;
 
   let _lastClass;
   let _transitionEndEvent;

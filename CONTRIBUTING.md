@@ -169,7 +169,7 @@ Then, do a release:
    ([See this issue](https://github.com/lerna/lerna/issues/2879)).
    Manually increment the `version` in the root `package.json` file to match
    the latest change log entry and save the file.
-1. Run `yarn release` to start the release.
+1. Run `git add . && git commit -m "Bump version" && yarn release` to start the release.
 1. It'll ask if you want to do a major, minor or patch release.
    Select whichever matches the latest changelog version.
    Lerna will tag and publish every package to npm.

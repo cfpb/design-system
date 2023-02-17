@@ -1,4 +1,15 @@
 
+## v0.21.2 (2023-02-17)
+
+#### Breaking Change
+* `cfpb-forms`
+  * [#1588](https://github.com/cfpb/design-system/pull/1588) cfpb-forms: downcase event and fix event dispatch ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.1 (2023-02-16)
 
 #### Enhancement

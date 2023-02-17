@@ -1,4 +1,15 @@
 
+## v0.21.3 (2023-02-17)
+
+#### Bug Fix
+* `cfpb-atomic-component`
+  * [#1589](https://github.com/cfpb/design-system/pull/1589) cfpb-atomic-component: Don't set u-is-animating if transitionComplete handler is called right away ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.2 (2023-02-17)
 
 #### Breaking Change

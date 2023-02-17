@@ -4243,8 +4243,7 @@ function Multiselect(element) {
     _fieldsetDom.classList.add('u-invisible');
     _fieldsetDom.setAttribute('aria-hidden', true);
     _model.resetIndex();
-    // TODO: This should be collapsebegin, not expandend, but we have a dependency on this event in the filters in cf.gov.
-    _instance.dispatchEvent('expandend', { target: _instance });
+    _instance.dispatchEvent('collapsebegin', { target: _instance });
 
     return _instance;
   }
@@ -4390,7 +4389,7 @@ function Multiselect(element) {
         _optionsDom.classList.add('u-max-selections');
       }
 
-      _instance.dispatchEvent('selectionsUpdated', { target: _instance });
+      _instance.dispatchEvent('selectionsupdated', { target: _instance });
     }
 
     _model.resetIndex();

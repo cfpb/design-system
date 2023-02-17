@@ -2700,6 +2700,9 @@ function BaseTransition(element, classes, child) {
         target: _child,
         type: BaseTransition.BEGIN_EVENT,
       });
+
+      _dom.classList.add(BaseTransition.ANIMATING_CLASS);
+      _isAnimating = true;
     } else {
       _child.dispatchEvent(BaseTransition.BEGIN_EVENT, {
         target: _child,
@@ -2707,9 +2710,6 @@ function BaseTransition(element, classes, child) {
       });
       _transitionCompleteBinded();
     }
-
-    _dom.classList.add(BaseTransition.ANIMATING_CLASS);
-    _isAnimating = true;
   }
 
   /**

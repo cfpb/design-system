@@ -2,18 +2,12 @@
 title: E-mail signup forms
 layout: variation
 section: patterns
-eyebrow: Forms
-status: Released
-description: Email sign-ups allow users to stay engaged on a specific topic or
-  content type produced by the Bureau. They are used to add individual email
-  addresses to a specific mailing list that is relevant to the content on the
-  page or the section it is contained within.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
           <div class="o-email-signup">
               <header class="m-slug-header">
-                  <h2 class="a-heading ">
+                  <h2 class="a-heading">
                       Buying a House?
                   </h2>
               </header>
@@ -43,8 +37,7 @@ variation_groups:
                   </div>
               </form>
           </div>
-        variation_description:
-          When implemented into a side bar, the h2 includes CFPB
+        variation_description: When implemented into a side bar, the h2 includes CFPB
           standard top green border.
         variation_name: Sidebar email sign up
         variation_specs: |-
@@ -56,7 +49,7 @@ variation_groups:
           <div class="o-well" style="max-width: 370px">
               <div class="o-email-signup">
                   <header class="m-slug-header">
-                      <h2 class="a-heading ">
+                      <h2 class="a-heading">
                           Buying a House?
                       </h2>
                   </header>
@@ -87,8 +80,8 @@ variation_groups:
                   </form>
               </div>
           </div>
-        variation_implementation: ''
-      - variation_code_snippet: ''
+        variation_implementation: ""
+      - variation_code_snippet: ""
         variation_description: >-
           The inset email signup module is a variation on the main email signup
           that can be used in the body content of
@@ -119,7 +112,7 @@ variation_groups:
         variation_specs: |-
           * Heading: H3
           * Body copy: Avenir paragraph
-        variation_code_snippet_rendered: ''
+        variation_code_snippet_rendered: ""
     variation_group_name: Types
     variation_group_description: >-
       The email sign up form is comprised of a slug heading, custom description
@@ -128,7 +121,6 @@ variation_groups:
 
 
       Different page types will be connected to the corresponding GovDelivery list based on the page topic (i.e. HMDA) or page type (i.e. blog).
-use_cases: ''
 guidelines: >-
   ### Content guidelines
 
@@ -153,6 +145,13 @@ guidelines: >-
   * The additional body text can further clarify what kind of information will be in the emails, with a focus on the value users will receive from the emails.
 
   * The placement of the email signup on the page should not interfere with the primary page goal. Users respond better to follow-on requests that happen after their primary goal has been met.
+eyebrow: Forms
+status: Released
+description: Email sign-ups allow users to stay engaged on a specific topic or
+  content type produced by the Bureau. They are used to add individual email
+  addresses to a specific mailing list that is relevant to the content on the
+  page or the section it is contained within.
+use_cases: ""
 behavior: >-
   The mockups below show simultaneously how this pattern works within either a
   sidebar or a prefooter area.
@@ -195,7 +194,7 @@ behavior: >-
   | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 
   | ![Inset email sign up 900 breakpoint](/design-system/images/uploads/email-sign-up_learn.png) | ![Inset breakpoint 601](/design-system/images/uploads/email-sign-up_learn_601.png) | ![Inset breakpoint 320](/design-system/images/uploads/email-sign-up_learn_320.png) |
-accessibility: ''
+accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
-research: ''
+research: ""
 ---

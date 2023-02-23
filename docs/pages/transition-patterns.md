@@ -21,13 +21,9 @@ variation_groups:
             } );
           </script>
         variation_code_snippet_rendered: >-
-          <div class="u-move-transition example-box">Click me!</div>
-          <br><br>
-          <p>
-          Events dispatched:<br>
-          <textarea class="example-output-move" placeholder="Click square!"></textarea>
-          </p>
-          <script>
+          <div class="u-move-transition example-box">Click me!</div> <br><br>
+          <p> Events dispatched:<br> <textarea class="example-output-move"
+          placeholder="Click square!"></textarea> </p> <script>
             document.addEventListener( 'DOMContentLoaded', function() {
               const output = document.querySelector('.example-output-move');
               const moveTransitionExample = document.querySelector( '.example-box.u-move-transition' );
@@ -89,13 +85,9 @@ variation_groups:
             } );
           </script>
         variation_code_snippet_rendered: >-
-          <div class="u-alpha-transition example-box">Click me!</div>
-          <br><br>
-          <p>
-          Events dispatched:<br>
-          <textarea class="example-output-alpha" placeholder="Click square!"></textarea>
-          </p>
-          <script>
+          <div class="u-alpha-transition example-box">Click me!</div> <br><br>
+          <p> Events dispatched:<br> <textarea class="example-output-alpha"
+          placeholder="Click square!"></textarea> </p> <script>
             document.addEventListener( 'DOMContentLoaded', function() {
               const alphaTransitionExample = document.querySelector( '.example-box.u-alpha-transition' );
               const output = document.querySelector('.example-output-alpha');
@@ -167,13 +159,7 @@ variation_groups:
 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </div>
-          <br><br>
-          <p>
-          Events dispatched:<br>
-          <textarea class="example-output-maxheight" placeholder="Click square!"></textarea>
-          </p>
-          <script>
+          </div> <br><br> <p> Events dispatched:<br> <textarea class="example-output-maxheight" placeholder="Click square!"></textarea> </p> <script>
             document.addEventListener( 'DOMContentLoaded', function() {
               const output = document.querySelector('.example-output-maxheight');
               const maxHeightTransitionExample = document.querySelector( '.example-box.u-max-height-summary' );
@@ -222,8 +208,7 @@ variation_groups:
   - variation_group_name: Behavior
     variations:
       - variation_name: Flyout behavior
-        variation_description:
-          'A "flyout behavior" can be attached to a arbitrary
+        variation_description: 'A "flyout behavior" can be attached to a arbitrary
           container that contains one or more triggers and a content area. The
           flyout handles `aria-expanded` attribute toggling and dispatches the
           following events: `triggerover`, `triggerout`, `triggerclick`,
@@ -242,8 +227,7 @@ variation_groups:
                 Click me! ^
               </button>
             </div>
-          </div>
-          <script>
+          </div> <script>
             const flyoutExample = document.querySelector( '.example-flyout' );
             const flyoutExampleContent = document.querySelector(
               '.example-flyout-content'
@@ -264,13 +248,7 @@ variation_groups:
                 Click me! ^
               </button>
             </div>
-          </div>
-          <br><br>
-          <p>
-          Events dispatched:<br>
-          <textarea class="example-output-flyout" placeholder="Click a button!"></textarea>
-          </p>
-          <script>
+          </div> <br><br> <p> Events dispatched:<br> <textarea class="example-output-flyout" placeholder="Click a button!"></textarea> </p> <script>
             document.addEventListener( 'DOMContentLoaded', function() {
               const output = document.querySelector('.example-output-flyout');
               const flyoutExample = document.querySelector('.example-flyout');
@@ -281,6 +259,15 @@ variation_groups:
               const flyout = new FlyoutMenu(flyoutExample);
               flyout.setTransition(transition, transition.maxHeightZero, transition.maxHeightDefault);
               flyout.init();
+              flyout.addEventListener('triggerover', function(evt) {
+                output.value += evt.type + '\n';
+              });
+              flyout.addEventListener('triggerout', function(evt) {
+                output.value += evt.type + '\n';
+              });
+              flyout.addEventListener('triggerclick', function(evt) {
+                output.value += evt.type + '\n';
+              });
               flyout.addEventListener('expandbegin', function(evt) {
                 output.value += evt.type + '\n';
               });
@@ -363,15 +350,15 @@ variation_groups:
           flyout.init();
 
           ```
-guidelines: ''
+guidelines: ""
 eyebrow: Transitions
 status: Released
 description: Transition patterns are animations that happen when a user
   interacts with an element on the page. They are CSS transition styles that are
   controlled via JavaScript.
-use_cases: ''
-behavior: ''
-accessibility: ''
+use_cases: ""
+behavior: ""
+accessibility: ""
 last_updated: 2020-01-28T15:55:47.394Z
-research: ''
+research: ""
 ---

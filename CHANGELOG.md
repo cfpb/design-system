@@ -1,4 +1,19 @@
 
+## v0.21.4 (2023-02-24)
+
+#### Breaking Change
+* `cfpb-atomic-component`, `cfpb-expandables`, `cfpb-forms`
+  * [#1567](https://github.com/cfpb/design-system/pull/1567) Create atomic utilities index.js file ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1591](https://github.com/cfpb/design-system/pull/1591) Update to lighthouse-ci 0.11.0 ([@anselmbradford](https://github.com/anselmbradford))
+* [#1590](https://github.com/cfpb/design-system/pull/1590) Update dependencies: babel/core, stylelint ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.3 (2023-02-17)
 
 #### Bug Fix

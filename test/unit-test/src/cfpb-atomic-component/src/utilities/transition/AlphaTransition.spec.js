@@ -1,4 +1,4 @@
-import AlphaTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js';
+import { AlphaTransition } from '../../../../../../../packages/cfpb-atomic-component';
 
 let transition;
 

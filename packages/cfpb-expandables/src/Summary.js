@@ -1,13 +1,13 @@
 /* eslint-disable no-use-before-define */
 import {
+  add as addDataHook,
   checkDom,
   instantiateAll,
   setInitFlag,
-} from '@cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js';
-import { add as addDataHook } from '@cfpb/cfpb-atomic-component/src/utilities/data-hook.js';
-import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
-import MaxHeightTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js';
-import FlyoutMenu from '../../cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js';
+  FlyoutMenu,
+  MaxHeightTransition,
+  EventObserver,
+} from '@cfpb/cfpb-atomic-component';
 import { MOBILE, viewportIsIn } from '../../cfpb-core/src/breakpoint-state.js';
 
 const BASE_CLASS = 'o-summary';

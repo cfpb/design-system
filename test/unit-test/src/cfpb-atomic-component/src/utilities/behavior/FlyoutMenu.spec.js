@@ -1,6 +1,8 @@
 import { jest } from '@jest/globals';
-import FlyoutMenu from '../../../../../../../packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js';
-import MoveTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
+import {
+  FlyoutMenu,
+  MoveTransition,
+} from '../../../../../../../packages/cfpb-atomic-component';
 
 const HTML_SNIPPET = `
 <div data-js-hook="behavior_flyout-menu">

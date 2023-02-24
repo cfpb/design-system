@@ -1,9 +1,9 @@
 import {
+  EventObserver,
   checkDom,
   setInitFlag,
-} from '@cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js';
-import { isMobileUserAgent } from '@cfpb/cfpb-atomic-component/src/utilities/media-helpers.js';
-import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
+  isMobileUserAgent,
+} from '@cfpb/cfpb-atomic-component';
 import MultiselectModel from './MultiselectModel.js';
 import { create } from './MultiselectUtils.js';
 

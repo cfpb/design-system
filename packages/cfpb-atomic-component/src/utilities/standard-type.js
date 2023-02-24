@@ -39,17 +39,4 @@ const BEHAVIOR_PREFIX = 'behavior_';
  */
 const STATE_PREFIX = 'state_';
 
-/**
- * Empty function that will do nothing.
- * A usecase is when an object has empty functions used for callbacks,
- * which are meant to be overridden with functionality, but if not,
- * noopFunct will fire and do nothing instead.
- *
- * @example
- * callback.onComplete = standardType.noopFunct;
- */
-function noopFunct() {
-  // Placeholder function meant to be overridden.
-}
-
-export { BEHAVIOR_PREFIX, JS_HOOK, noopFunct, STATE_PREFIX };
+export { JS_HOOK, BEHAVIOR_PREFIX, STATE_PREFIX };

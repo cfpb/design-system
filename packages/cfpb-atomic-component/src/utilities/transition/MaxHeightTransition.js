@@ -1,5 +1,4 @@
-import BaseTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js';
-import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
+import { BaseTransition, EventObserver } from '@cfpb/cfpb-atomic-component';
 
 // Exported constants.
 const CLASSES = {
@@ -144,4 +143,4 @@ function MaxHeightTransition(element) {
 // Public static properties.
 MaxHeightTransition.CLASSES = CLASSES;
 
-export default MaxHeightTransition;
+export { MaxHeightTransition };

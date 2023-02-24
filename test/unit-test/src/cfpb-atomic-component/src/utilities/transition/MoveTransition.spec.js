@@ -1,4 +1,4 @@
-import MoveTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
+import { MoveTransition } from '../../../../../../../packages/cfpb-atomic-component';
 
 let transition;
 

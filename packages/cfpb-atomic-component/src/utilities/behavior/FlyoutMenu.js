@@ -2,10 +2,10 @@
 import {
   BEHAVIOR_PREFIX,
   JS_HOOK,
-} from '@cfpb/cfpb-atomic-component/src/utilities/standard-type.js';
-import BaseTransition from '@cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js';
-import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
-import { checkBehaviorDom } from '@cfpb/cfpb-atomic-component/src/utilities/behavior/behavior.js';
+  BaseTransition,
+  EventObserver,
+  checkBehaviorDom,
+} from '@cfpb/cfpb-atomic-component';
 
 const BASE_CLASS = BEHAVIOR_PREFIX + 'flyout-menu';
 const SEL_PREFIX = '[' + JS_HOOK + '=' + BASE_CLASS;
@@ -441,4 +441,4 @@ function FlyoutMenu(element) {
   return this;
 }
 
-export default FlyoutMenu;
+export { FlyoutMenu };

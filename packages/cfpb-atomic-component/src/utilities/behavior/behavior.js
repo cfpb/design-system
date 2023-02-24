@@ -20,11 +20,11 @@
    <div data-js-hook="behavior_flyout-menu_content">
    ========================================================================== */
 
-import { contains } from '@cfpb/cfpb-atomic-component/src/utilities/data-hook.js';
 import {
   BEHAVIOR_PREFIX,
   JS_HOOK,
-} from '@cfpb/cfpb-atomic-component/src/utilities/standard-type.js';
+  contains,
+} from '@cfpb/cfpb-atomic-component';
 
 /**
  * @param {string} behaviorSelector - Behavior type used to find the element

@@ -1,4 +1,15 @@
 
+## v0.21.5 (2023-02-24)
+
+#### Enhancement
+* `cfpb-layout`
+  * [#1594](https://github.com/cfpb/design-system/pull/1594) Refactor email signup to simplify margins and handle different layouts ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.4 (2023-02-24)
 
 #### Breaking Change

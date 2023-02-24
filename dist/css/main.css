@@ -2657,19 +2657,12 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type(1) h3,
 .o-email-signup .a-text-input {
   max-width: 23.125rem;
 }
-.o-email-signup .m-btn-group {
+.o-email-signup_buttons {
   display: flex;
   margin-top: 0.9375em;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap-reverse;
-}
-.o-email-signup button {
-  margin-right: 0.625em;
-}
-.o-email-signup .a-btn.a-btn__secondary {
-  margin-bottom: 0.5em;
-  margin-left: 0;
-  order: 1;
+  gap: 0.9375em;
 }
 @media only all and (max-width: 37.5em) {
   .o-email-signup .a-label__heading {

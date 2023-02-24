@@ -29,7 +29,7 @@ variation_groups:
                       </label>
                       <input class="a-text-input a-text-input__full" id="email_2" name="email" type="email" placeholder="mail@example.com" required="">
                   </div>
-                  <div class="m-btn-group">
+                  <div class="o-email-signup_buttons">
                       <button class="a-btn">Sign up</button>
                       <a class="a-btn a-btn__link a-btn__secondary" href="#" target="_blank" rel="noopener noreferrer">
                       See Privacy Act statement
@@ -37,7 +37,8 @@ variation_groups:
                   </div>
               </form>
           </div>
-        variation_description: When implemented into a side bar, the h2 includes CFPB
+        variation_description:
+          When implemented into a side bar, the h2 includes CFPB
           standard top green border.
         variation_name: Sidebar email sign up
         variation_specs: |-
@@ -71,7 +72,7 @@ variation_groups:
                           </label>
                           <input class="a-text-input a-text-input__full" id="email_2" name="email" type="email" placeholder="mail@example.com" required="">
                       </div>
-                      <div class="m-btn-group">
+                      <div class="o-email-signup_buttons">
                           <button class="a-btn">Sign up</button>
                           <a class="a-btn a-btn__link a-btn__secondary" href="#" target="_blank" rel="noopener noreferrer">
                           See Privacy Act statement
@@ -80,8 +81,8 @@ variation_groups:
                   </form>
               </div>
           </div>
-        variation_implementation: ""
-      - variation_code_snippet: ""
+        variation_implementation: ''
+      - variation_code_snippet: ''
         variation_description: >-
           The inset email signup module is a variation on the main email signup
           that can be used in the body content of
@@ -112,7 +113,7 @@ variation_groups:
         variation_specs: |-
           * Heading: H3
           * Body copy: Avenir paragraph
-        variation_code_snippet_rendered: ""
+        variation_code_snippet_rendered: ''
     variation_group_name: Types
     variation_group_description: >-
       The email sign up form is comprised of a slug heading, custom description
@@ -151,7 +152,7 @@ description: Email sign-ups allow users to stay engaged on a specific topic or
   content type produced by the Bureau. They are used to add individual email
   addresses to a specific mailing list that is relevant to the content on the
   page or the section it is contained within.
-use_cases: ""
+use_cases: ''
 behavior: >-
   The mockups below show simultaneously how this pattern works within either a
   sidebar or a prefooter area.
@@ -194,7 +195,7 @@ behavior: >-
   | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 
   | ![Inset email sign up 900 breakpoint](/design-system/images/uploads/email-sign-up_learn.png) | ![Inset breakpoint 601](/design-system/images/uploads/email-sign-up_learn_601.png) | ![Inset breakpoint 320](/design-system/images/uploads/email-sign-up_learn_320.png) |
-accessibility: ""
+accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

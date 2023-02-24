@@ -1175,10 +1175,11 @@ function toggleAllDetails(toggleBtn) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AtomicComponent": function() { return /* binding */ AtomicComponent; }
+/* harmony export */ });
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* harmony import */ var ftdomdelegate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ftdomdelegate */ "./node_modules/ftdomdelegate/lib/index.js");
-/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utilities/type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
 /* ==========================================================================
    AtomicComponent
 
@@ -1190,8 +1191,6 @@ __webpack_require__.r(__webpack_exports__);
    - Marionette ( http://marionettejs.com ).
 
    ========================================================================== */
-
-
 
 
 
@@ -1218,7 +1217,7 @@ function AtomicComponent(element, attributes) {
 }
 
 // Public instance Methods and properties.
-Object.assign(AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"](), {
+Object.assign(AtomicComponent.prototype, new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver(), {
   /**
    * Run through and call the component's initializers.
    *
@@ -1226,7 +1225,7 @@ Object.assign(AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_I
    */
   init: function () {
     this.initializers.forEach(function (func) {
-      if ((0,_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__.isFunction)(func)) {
+      if ((0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.isFunction)(func)) {
         func.apply(this, arguments);
       }
     }, this);
@@ -1278,7 +1277,7 @@ Object.assign(AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_I
     } else {
       this.setElement(this.element);
     }
-    (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(this.element);
+    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(this.element);
   },
 
   /**
@@ -1385,7 +1384,7 @@ Object.assign(AtomicComponent.prototype, new _mixins_EventObserver_js__WEBPACK_I
     for (key in events) {
       if ({}.hasOwnProperty.call(events, key)) {
         method = events[key];
-        if ((0,_utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_3__.isFunction)(this[method])) {
+        if ((0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.isFunction)(this[method])) {
           method = this[method];
         }
         if (method) {
@@ -1483,7 +1482,7 @@ function extend(attributes) {
  * @returns {Array} List of AtomicComponent instances.
  */
 function init(scope) {
-  const components = (0,_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(this.selector, this, scope);
+  const components = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(this.selector, this, scope);
   return components;
 }
 
@@ -1491,7 +1490,86 @@ function init(scope) {
 AtomicComponent.init = init;
 AtomicComponent.extend = extend;
 
-/* harmony default export */ __webpack_exports__["default"] = (AtomicComponent);
+
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-atomic-component/src/index.js":
+/*!*****************************************************!*\
+  !*** ./packages/cfpb-atomic-component/src/index.js ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AlphaTransition": function() { return /* reexport safe */ _utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_8__.AlphaTransition; },
+/* harmony export */   "BEHAVIOR_PREFIX": function() { return /* reexport safe */ _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.BEHAVIOR_PREFIX; },
+/* harmony export */   "BaseTransition": function() { return /* reexport safe */ _utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_9__.BaseTransition; },
+/* harmony export */   "EventObserver": function() { return /* reexport safe */ _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.EventObserver; },
+/* harmony export */   "FlyoutMenu": function() { return /* reexport safe */ _utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_7__.FlyoutMenu; },
+/* harmony export */   "JS_HOOK": function() { return /* reexport safe */ _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK; },
+/* harmony export */   "MaxHeightTransition": function() { return /* reexport safe */ _utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_10__.MaxHeightTransition; },
+/* harmony export */   "MoveTransition": function() { return /* reexport safe */ _utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_11__.MoveTransition; },
+/* harmony export */   "STATE_PREFIX": function() { return /* reexport safe */ _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.STATE_PREFIX; },
+/* harmony export */   "add": function() { return /* reexport safe */ _utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_5__.add; },
+/* harmony export */   "attach": function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.attach; },
+/* harmony export */   "checkBehaviorDom": function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom; },
+/* harmony export */   "checkDom": function() { return /* reexport safe */ _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.checkDom; },
+/* harmony export */   "contains": function() { return /* reexport safe */ _utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_5__.contains; },
+/* harmony export */   "find": function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.find; },
+/* harmony export */   "instantiateAll": function() { return /* reexport safe */ _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.instantiateAll; },
+/* harmony export */   "isArray": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isArray; },
+/* harmony export */   "isDate": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isDate; },
+/* harmony export */   "isDefined": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isDefined; },
+/* harmony export */   "isEmpty": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isEmpty; },
+/* harmony export */   "isFunction": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isFunction; },
+/* harmony export */   "isMobileUserAgent": function() { return /* reexport safe */ _utilities_media_helpers_js__WEBPACK_IMPORTED_MODULE_6__.isMobileUserAgent; },
+/* harmony export */   "isNumber": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isNumber; },
+/* harmony export */   "isObject": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isObject; },
+/* harmony export */   "isString": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isString; },
+/* harmony export */   "isUndefined": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isUndefined; },
+/* harmony export */   "remove": function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.remove; },
+/* harmony export */   "setInitFlag": function() { return /* reexport safe */ _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.setInitFlag; }
+/* harmony export */ });
+/* harmony import */ var _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
+/* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
+/* harmony import */ var _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utilities/behavior/behavior.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/behavior.js");
+/* harmony import */ var _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utilities/type-checkers.js */ "./packages/cfpb-atomic-component/src/utilities/type-checkers.js");
+/* harmony import */ var _utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utilities/data-hook.js */ "./packages/cfpb-atomic-component/src/utilities/data-hook.js");
+/* harmony import */ var _utilities_media_helpers_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utilities/media-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/media-helpers.js");
+/* harmony import */ var _utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utilities/behavior/FlyoutMenu.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js");
+/* harmony import */ var _utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
+/* harmony import */ var _utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
+/* harmony import */ var _utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
+/* harmony import */ var _utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
+/* ==========================================================================
+   Design System
+   Atomic component utilities
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /***/ }),
@@ -1504,6 +1582,9 @@ AtomicComponent.extend = extend;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "EventObserver": function() { return /* binding */ EventObserver; }
+/* harmony export */ });
 /**
  * EventObserver
  *
@@ -1585,7 +1666,7 @@ function EventObserver() {
   return this;
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (EventObserver);
+
 
 
 /***/ }),
@@ -1745,18 +1826,15 @@ function instantiateAll(selector, Constructor, scope) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/behavior/behavior.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/behavior.js");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "FlyoutMenu": function() { return /* binding */ FlyoutMenu; }
+/* harmony export */ });
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* eslint-disable no-use-before-define */
 
 
-
-
-
-const BASE_CLASS = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.BEHAVIOR_PREFIX + 'flyout-menu';
-const SEL_PREFIX = '[' + _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK + '=' + BASE_CLASS;
+const BASE_CLASS = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BEHAVIOR_PREFIX + 'flyout-menu';
+const SEL_PREFIX = '[' + _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK + '=' + BASE_CLASS;
 
 /**
  * FlyoutMenu
@@ -1782,9 +1860,9 @@ const SEL_PREFIX = '[' + _cfpb_cfpb_atomic_component_src_utilities_standard_type
  */
 function FlyoutMenu(element) {
   // Verify that the expected dom attributes are present.
-  const _dom = (0,_cfpb_cfpb_atomic_component_src_utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom)(element, BASE_CLASS);
+  const _dom = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.checkBehaviorDom)(element, BASE_CLASS);
   const _triggerDoms = _findTriggers(element);
-  const _contentDom = (0,_cfpb_cfpb_atomic_component_src_utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom)(element, BASE_CLASS + '_content');
+  const _contentDom = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.checkBehaviorDom)(element, BASE_CLASS + '_content');
 
   // Flyouts appear in one of four states.
   let _state = 0;
@@ -1838,8 +1916,8 @@ function FlyoutMenu(element) {
       triggerParent = trigger.parentElement;
       while (triggerParent !== element) {
         if (
-          triggerParent.getAttribute(_cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK) &&
-          triggerParent.getAttribute(_cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK).split(' ').indexOf(BASE_CLASS) !==
+          triggerParent.getAttribute(_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK) &&
+          triggerParent.getAttribute(_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK).split(' ').indexOf(BASE_CLASS) !==
             -1
         ) {
           isSubTrigger = true;
@@ -1987,7 +2065,7 @@ function FlyoutMenu(element) {
 
     const hasTransition = _transition?.isAnimated();
     if (hasTransition) {
-      _transition.addEventListener(_cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT, _expandEndBinded);
+      _transition.addEventListener(_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT, _expandEndBinded);
     }
 
     _expandTransitionMethod();
@@ -2032,7 +2110,7 @@ function FlyoutMenu(element) {
     const hasTransition = _transition?.isAnimated();
     if (hasTransition) {
       _transition.addEventListener(
-        _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
+        _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT,
         _collapseEndBinded
       );
     }
@@ -2055,7 +2133,7 @@ function FlyoutMenu(element) {
     _state = EXPANDED;
     if (_transition) {
       _transition.removeEventListener(
-        _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
+        _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT,
         _expandEndBinded
       );
     }
@@ -2075,7 +2153,7 @@ function FlyoutMenu(element) {
     _state = COLLAPSED;
     if (_transition) {
       _transition.removeEventListener(
-        _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_1__["default"].END_EVENT,
+        _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT,
         _collapseEndBinded
       );
     }
@@ -2164,7 +2242,7 @@ function FlyoutMenu(element) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver();
   this.addEventListener = eventObserver.addEventListener;
   this.removeEventListener = eventObserver.removeEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
@@ -2189,7 +2267,7 @@ function FlyoutMenu(element) {
   return this;
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (FlyoutMenu);
+
 
 
 /***/ }),
@@ -2208,8 +2286,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "find": function() { return /* binding */ find; },
 /* harmony export */   "remove": function() { return /* binding */ remove; }
 /* harmony export */ });
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/data-hook.js */ "./packages/cfpb-atomic-component/src/utilities/data-hook.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* ==========================================================================
    Dom Behaviors
    Behaviors are functionality that can be shared between different pieces
@@ -2234,7 +2311,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 /**
  * @param {string} behaviorSelector - Behavior type used to find the element
  *   within the dom.
@@ -2255,7 +2331,7 @@ function _findElements(behaviorSelector, baseElement) {
 
   if (
     behaviorElements.length === 0 &&
-    behaviorSelector.indexOf(_cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.BEHAVIOR_PREFIX) === -1
+    behaviorSelector.indexOf(_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BEHAVIOR_PREFIX) === -1
   ) {
     // eslint-disable-next-line no-use-before-define
     behaviorElements = find(behaviorSelector, baseElement);
@@ -2304,7 +2380,7 @@ function checkBehaviorDom(element, behaviorDataAttr) {
   // Check that the behavior is found on the passed DOM node.
   let dom;
 
-  if ((0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.contains)(element, behaviorDataAttr)) {
+  if ((0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.contains)(element, behaviorDataAttr)) {
     dom = element;
     return dom;
   }
@@ -2312,7 +2388,7 @@ function checkBehaviorDom(element, behaviorDataAttr) {
   /* If the passed DOM node isn't null,
      query the node to see if it's in the children. */
   if (element) {
-    const selector = '[' + _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.JS_HOOK + '=' + behaviorDataAttr + ']';
+    const selector = '[' + _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK + '=' + behaviorDataAttr + ']';
     dom = element.querySelector(selector);
   }
 
@@ -2332,7 +2408,7 @@ function checkBehaviorDom(element, behaviorDataAttr) {
  * @returns {NodeList} if it exists in the dom, null otherwise.
  */
 function find(behaviorSelector, baseElement) {
-  behaviorSelector = _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.JS_HOOK + '*=' + _cfpb_cfpb_atomic_component_src_utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_1__.BEHAVIOR_PREFIX + behaviorSelector;
+  behaviorSelector = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK + '*=' + _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BEHAVIOR_PREFIX + behaviorSelector;
   behaviorSelector = '[' + behaviorSelector + ']';
 
   return _findElements(behaviorSelector, baseElement);
@@ -2483,8 +2559,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "BEHAVIOR_PREFIX": function() { return /* binding */ BEHAVIOR_PREFIX; },
 /* harmony export */   "JS_HOOK": function() { return /* binding */ JS_HOOK; },
-/* harmony export */   "STATE_PREFIX": function() { return /* binding */ STATE_PREFIX; },
-/* harmony export */   "noopFunct": function() { return /* binding */ noopFunct; }
+/* harmony export */   "STATE_PREFIX": function() { return /* binding */ STATE_PREFIX; }
 /* harmony export */ });
 /**
  * @constant
@@ -2527,19 +2602,6 @@ const BEHAVIOR_PREFIX = 'behavior_';
  */
 const STATE_PREFIX = 'state_';
 
-/**
- * Empty function that will do nothing.
- * A usecase is when an object has empty functions used for callbacks,
- * which are meant to be overridden with functionality, but if not,
- * noopFunct will fire and do nothing instead.
- *
- * @example
- * callback.onComplete = standardType.noopFunct;
- */
-function noopFunct() {
-  // Placeholder function meant to be overridden.
-}
-
 
 
 
@@ -2553,9 +2615,10 @@ function noopFunct() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AlphaTransition": function() { return /* binding */ AlphaTransition; }
+/* harmony export */ });
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 
 
 // Exported constants.
@@ -2575,8 +2638,8 @@ const CLASSES = {
  * @returns {AlphaTransition} An instance.
  */
 function AlphaTransition(element) {
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
-  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES, this);
+  const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver();
+  const _baseTransition = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition(element, CLASSES, this);
 
   /**
    * @param {Function} initialClass - The initial state for this transition.
@@ -2632,7 +2695,7 @@ function AlphaTransition(element) {
 // Public static properties.
 AlphaTransition.CLASSES = CLASSES;
 
-/* harmony default export */ __webpack_exports__["default"] = (AlphaTransition);
+
 
 
 /***/ }),
@@ -2645,6 +2708,9 @@ AlphaTransition.CLASSES = CLASSES;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BaseTransition": function() { return /* binding */ BaseTransition; }
+/* harmony export */ });
 /**
  * BaseTransition
  *
@@ -2910,7 +2976,7 @@ BaseTransition.END_EVENT = 'transitionend';
 BaseTransition.NO_ANIMATION_CLASS = 'u-no-animation';
 BaseTransition.ANIMATING_CLASS = 'u-is-animating';
 
-/* harmony default export */ __webpack_exports__["default"] = (BaseTransition);
+
 
 
 /***/ }),
@@ -2923,9 +2989,10 @@ BaseTransition.ANIMATING_CLASS = 'u-is-animating';
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MaxHeightTransition": function() { return /* binding */ MaxHeightTransition; }
+/* harmony export */ });
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 
 
 // Exported constants.
@@ -2946,8 +3013,8 @@ const CLASSES = {
  * @returns {MaxHeightTransition} An instance.
  */
 function MaxHeightTransition(element) {
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
-  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES, this);
+  const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver();
+  const _baseTransition = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition(element, CLASSES, this);
   let _previousHeight = 0;
 
   /**
@@ -3071,7 +3138,7 @@ function MaxHeightTransition(element) {
 // Public static properties.
 MaxHeightTransition.CLASSES = CLASSES;
 
-/* harmony default export */ __webpack_exports__["default"] = (MaxHeightTransition);
+
 
 
 /***/ }),
@@ -3084,9 +3151,10 @@ MaxHeightTransition.CLASSES = CLASSES;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MoveTransition": function() { return /* binding */ MoveTransition; }
+/* harmony export */ });
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 
 
 // Exported constants.
@@ -3110,8 +3178,8 @@ const CLASSES = {
  * @returns {MoveTransition} An instance.
  */
 function MoveTransition(element) {
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
-  const _baseTransition = new _BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES, this);
+  const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver();
+  const _baseTransition = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition(element, CLASSES, this);
 
   /**
    * @param {Function} initialClass - The initial state for this transition.
@@ -3202,7 +3270,7 @@ function MoveTransition(element) {
 // Public static properties.
 MoveTransition.CLASSES = CLASSES;
 
-/* harmony default export */ __webpack_exports__["default"] = (MoveTransition);
+
 
 
 /***/ }),
@@ -3542,7 +3610,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* harmony import */ var _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExpandableTransition.js */ "./packages/cfpb-expandables/src/ExpandableTransition.js");
 /* ==========================================================================
    Expandable Organism
@@ -3552,7 +3620,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_1__.EventObserver();
 
 /**
  * Event handler for when an expandable begins expanding.
@@ -3658,7 +3726,7 @@ function getLabelText() {
   return this.ui.label.textContent.trim();
 }
 
-const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__["default"].extend({
+const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__.AtomicComponent.extend({
   ui: {
     base: '.o-expandable',
     target: '.o-expandable_target',
@@ -3701,9 +3769,7 @@ const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/BaseTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/BaseTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 
 
 // Exported constants.
@@ -3725,7 +3791,7 @@ const CLASSES = {
  * @returns {ExpandableTransition} An instance.
  */
 function ExpandableTransition(element) {
-  const _baseTransition = new _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"](element, CLASSES, this);
+  const _baseTransition = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition(element, CLASSES, this);
   let previousHeight;
 
   /**
@@ -3751,7 +3817,7 @@ function ExpandableTransition(element) {
     const initialClass = openOnLoad ? CLASSES.EXPANDED : CLASSES.COLLAPSED;
     _baseTransition.init(initialClass);
     this.addEventListener(
-      _cfpb_cfpb_atomic_component_src_utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_0__["default"].END_EVENT,
+      _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT,
       _transitionComplete.bind(this)
     );
 
@@ -3813,7 +3879,7 @@ function ExpandableTransition(element) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
+  const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -3850,17 +3916,9 @@ ExpandableTransition.CLASSES = CLASSES;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/data-hook.js */ "./packages/cfpb-atomic-component/src/utilities/data-hook.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
-/* harmony import */ var _cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js");
-/* harmony import */ var _cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../cfpb-core/src/breakpoint-state.js */ "./packages/cfpb-core/src/breakpoint-state.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
+/* harmony import */ var _cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../cfpb-core/src/breakpoint-state.js */ "./packages/cfpb-core/src/breakpoint-state.js");
 /* eslint-disable no-use-before-define */
-
-
-
-
 
 
 
@@ -3876,7 +3934,7 @@ const BASE_CLASS = 'o-summary';
  * @returns {Summary} An instance.
  */
 function Summary(element) {
-  const _dom = (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
+  const _dom = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
   const _hasMobileModifier = _dom.classList.contains(`${BASE_CLASS}__mobile`);
   const _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
   const _btnDom = _dom.querySelector(`.${BASE_CLASS}_btn`);
@@ -3890,23 +3948,23 @@ function Summary(element) {
    * @returns {Summary} An instance.
    */
   function init() {
-    if (!(0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
+    if (!(0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
       return this;
     }
 
     _suspended = !_shouldSuspend();
 
     // Add FlyoutMenu behavior data-js-hooks.
-    (0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__.add)(_dom, 'behavior_flyout-menu');
-    (0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__.add)(_contentDom, 'behavior_flyout-menu_content');
-    (0,_cfpb_cfpb_atomic_component_src_utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_1__.add)(_btnDom, 'behavior_flyout-menu_trigger');
+    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_dom, 'behavior_flyout-menu');
+    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_contentDom, 'behavior_flyout-menu_content');
+    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_btnDom, 'behavior_flyout-menu_trigger');
 
-    _flyout = new _cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_4__["default"](_dom);
-    _transition = new _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__["default"](_contentDom);
+    _flyout = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.FlyoutMenu(_dom);
+    _transition = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition(_contentDom);
     _transition.init(
       _suspended
-        ? _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__["default"].CLASSES.MH_SUMMARY
-        : _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_3__["default"].CLASSES.MH_DEFAULT
+        ? _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition.CLASSES.MH_SUMMARY
+        : _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition.CLASSES.MH_DEFAULT
     );
     _flyout.setTransition(
       _transition,
@@ -3980,7 +4038,7 @@ function Summary(element) {
    */
   function _shouldSuspend() {
     return (
-      (_hasMobileModifier && !(0,_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.viewportIsIn)(_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_5__.MOBILE)) ||
+      (_hasMobileModifier && !(0,_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_1__.viewportIsIn)(_cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_1__.MOBILE)) ||
       _contentDom.scrollHeight <= 88
     );
   }
@@ -4053,7 +4111,7 @@ function Summary(element) {
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver();
   this.addEventListener = eventObserver.addEventListener;
   this.removeEventListener = eventObserver.removeEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
@@ -4064,7 +4122,7 @@ function Summary(element) {
 }
 
 Summary.BASE_CLASS = BASE_CLASS;
-Summary.init = () => (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${BASE_CLASS}`, Summary);
+Summary.init = () => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${BASE_CLASS}`, Summary);
 
 /* harmony default export */ __webpack_exports__["default"] = (Summary);
 
@@ -4079,20 +4137,16 @@ Summary.init = () => (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/atomic-helpers.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_media_helpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/media-helpers.js */ "./packages/cfpb-atomic-component/src/utilities/media-helpers.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
-/* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
-/* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
-/* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
+/* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
+/* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
+/* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
 
 
 
 
 
-
-
-const closeIcon = _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_5__;
+const closeIcon = _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3__;
 
 const BASE_CLASS = 'o-multiselect';
 const CHECKBOX_INPUT_CLASS = 'a-checkbox';
@@ -4127,7 +4181,7 @@ function Multiselect(element) {
   element.classList.add(BASE_CLASS);
 
   // Internal vars.
-  let _dom = (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
+  let _dom = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
   let _isBlurSkipped = false;
   let _name;
   let _placeholder;
@@ -4340,11 +4394,11 @@ function Multiselect(element) {
    */
   function _createSelectedItem(selectionsDom, option) {
     const optionId = _getOptionId(option);
-    const selectionsItemDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('li', null, {
+    const selectionsItemDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.create)('li', null, {
       'data-option': option.value,
     });
 
-    const selectionsItemLabelDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('button', selectionsItemDom, {
+    const selectionsItemLabelDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.create)('button', selectionsItemDom, {
       type: 'button',
       innerHTML:
         '<label for=' + optionId + '>' + option.text + closeIcon + '</label>',
@@ -4545,15 +4599,15 @@ function Multiselect(element) {
     _containerDom.className = BASE_CLASS;
 
     // Create all our markup but wait to manipulate the DOM just once
-    _selectionsDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('ul', null, {
+    _selectionsDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.create)('ul', null, {
       className: BASE_CLASS + '_choices',
     });
 
-    _headerDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('header', _containerDom, {
+    _headerDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.create)('header', _containerDom, {
       className: BASE_CLASS + '_header',
     });
 
-    _searchDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('input', _headerDom, {
+    _searchDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.create)('input', _headerDom, {
       className: BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
       type: 'text',
       placeholder: _placeholder || 'Select up to five',
@@ -4561,7 +4615,7 @@ function Multiselect(element) {
       autocomplete: 'off',
     });
 
-    _fieldsetDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('fieldset', _containerDom, {
+    _fieldsetDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.create)('fieldset', _containerDom, {
       className: BASE_CLASS + '_fieldset u-invisible',
       'aria-hidden': 'true',
     });
@@ -4571,7 +4625,7 @@ function Multiselect(element) {
       optionsClasses += ' u-max-selections';
     }
 
-    _optionsDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('ul', _fieldsetDom, {
+    _optionsDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.create)('ul', _fieldsetDom, {
       className: optionsClasses,
     });
 
@@ -4582,13 +4636,13 @@ function Multiselect(element) {
       option = _options[i];
       optionId = _getOptionId(option);
       isChecked = _model.getOption(i).checked;
-      const optionsItemDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('li', _optionsDom, {
+      const optionsItemDom = (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.create)('li', _optionsDom, {
         'data-option': option.value,
         'data-cy': 'multiselect-option',
         class: 'm-form-field m-form-field__checkbox',
       });
 
-      (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('input', optionsItemDom, {
+      (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.create)('input', optionsItemDom, {
         id: optionId,
         // Type must come before value or IE fails
         type: 'checkbox',
@@ -4599,7 +4653,7 @@ function Multiselect(element) {
         'data-index': i,
       });
 
-      (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_4__.create)('label', optionsItemDom, {
+      (0,_MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__.create)('label', optionsItemDom, {
         for: optionId,
         textContent: option.text,
         className: BASE_CLASS + '_label a-label',
@@ -4626,11 +4680,11 @@ function Multiselect(element) {
    * @returns {Multiselect} An instance.
    */
   function init() {
-    if (!(0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
+    if (!(0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
       return this;
     }
 
-    if ((0,_cfpb_cfpb_atomic_component_src_utilities_media_helpers_js__WEBPACK_IMPORTED_MODULE_1__.isMobileUserAgent)()) {
+    if ((0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.isMobileUserAgent)()) {
       return this;
     }
 
@@ -4640,7 +4694,7 @@ function Multiselect(element) {
     _options = _dom.options || [];
 
     if (_options.length > 0) {
-      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_3__["default"](_options, _name).init();
+      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__["default"](_options, _name).init();
       const newDom = _populateMarkup();
 
       /* Removes <select> element,
@@ -4650,7 +4704,7 @@ function Multiselect(element) {
 
       /* We need to set init flag again since we've created a new <div>
          to replace the <select> element. */
-      (0,_cfpb_cfpb_atomic_component_src_utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom);
+      (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom);
 
       _bindEvents();
     }
@@ -4663,7 +4717,7 @@ function Multiselect(element) {
   this.expand = expand;
   this.collapse = collapse;
 
-  const eventObserver = new _cfpb_cfpb_atomic_component_src_mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver();
   this.addEventListener = eventObserver.addEventListener;
   this.removeEventListener = eventObserver.removeEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
@@ -5041,13 +5095,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_expandables_src_Expandable_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Expandable.js */ "./packages/cfpb-expandables/src/Expandable.js");
 /* harmony import */ var _cfpb_cfpb_expandables_src_Summary_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Summary.js */ "./packages/cfpb-expandables/src/Summary.js");
 /* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect.js */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/AlphaTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MoveTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js */ "./packages/cfpb-atomic-component/src/utilities/transition/MaxHeightTransition.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js */ "./packages/cfpb-atomic-component/src/utilities/behavior/FlyoutMenu.js");
-/* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
-/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
-/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
+/* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
+/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
+/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
 
 
 
@@ -5057,11 +5108,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-_redirect_banner_js__WEBPACK_IMPORTED_MODULE_10__["default"].init();
-_sidebar_js__WEBPACK_IMPORTED_MODULE_11__["default"].init();
+_redirect_banner_js__WEBPACK_IMPORTED_MODULE_7__["default"].init();
+_sidebar_js__WEBPACK_IMPORTED_MODULE_8__["default"].init();
 var anchors = new anchor_js__WEBPACK_IMPORTED_MODULE_1__();
 // Add anchors to all headings (except page title headings)
 anchors.add('h2:not(.title), h3, h4, h5');
@@ -5077,17 +5125,17 @@ _cfpb_cfpb_expandables_src_Expandable_js__WEBPACK_IMPORTED_MODULE_2__["default"]
 
 // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.
-window.AlphaTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_5__["default"];
-window.MoveTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_6__["default"];
-window.MaxHeightTransition = _cfpb_cfpb_atomic_component_src_utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_7__["default"];
-window.FlyoutMenu = _cfpb_cfpb_atomic_component_src_utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_8__["default"];
+window.AlphaTransition = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_5__.AlphaTransition;
+window.MoveTransition = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_5__.MoveTransition;
+window.MaxHeightTransition = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_5__.MaxHeightTransition;
+window.FlyoutMenu = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_5__.FlyoutMenu;
 
 // Tabs show under the show/hide details button on a pattern.
-var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_9__["default"].BASE_CLASS));
+var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_6__["default"].BASE_CLASS));
 if (tabsContainerDom.length > 0) {
   var tabsInst;
   for (var i = 0, len = tabsContainerDom.length; i < len; i++) {
-    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_9__["default"](tabsContainerDom[i]);
+    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_6__["default"](tabsContainerDom[i]);
     tabsInst.init();
   }
 }

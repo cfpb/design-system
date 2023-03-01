@@ -36,6 +36,13 @@
 */
 
 .o-summary {
+  &__loading {
+    // Base summary height of 5.5ems + 4px padding
+    // 16 * 5.5 = 88 + 4 = 92.
+    height: 92px;
+    overflow: hidden;
+  }
+
   &_content {
     overflow-y: hidden;
 
@@ -48,6 +55,11 @@
   }
 
   &_btn {
+    // Hide button in no-js state.
+    .no-js & {
+      display: none;
+    }
+
     position: relative;
     z-index: 2;
     display: block;
@@ -65,7 +77,7 @@
       outline-offset: 2px;
     }
 
-    &[aria-expanded='false']::after {
+    &[aria-expanded='false']::before {
       // Fades content out over approximately 2 lines.
       display: block;
       pointer-events: none;

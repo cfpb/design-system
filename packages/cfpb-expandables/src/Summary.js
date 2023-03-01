@@ -47,8 +47,6 @@ function Summary(element) {
     addDataHook(_contentDom, 'behavior_flyout-menu_content');
     addDataHook(_btnDom, 'behavior_flyout-menu_trigger');
 
-    _dom.classList.add(`${BASE_CLASS}__loading`);
-
     // Don't initialize the Summary till the page has loaded, so we can have
     // an accurate idea of its height.
     window.addEventListener('load', _pageLoadHandler);
@@ -85,24 +83,23 @@ function Summary(element) {
       window.addEventListener('orientationchange', _resizeHandler);
     }
 
-    _dom.addEventListener('focusin', _keyDownHandler);
+    _dom.addEventListener('focusin', _focusInHandler);
 
     /* When we click inside the content area we may be changing the size,
        such as when a video player expands on being clicked.
        So, let's refresh the transition to recalculate the max-height,
        just in case. */
     _contentDom.addEventListener('click', _contentClicked);
-
-    _dom.classList.remove(`${BASE_CLASS}__loading`);
   }
 
   /**
    *
-   * @param {KeyboardEvent} evt - The key down event.
+   * @param {Event} evt - The focus event.
    */
-  function _keyDownHandler(evt) {
-    if ((evt.key = 'Tab' && evt.target !== _btnDom)) {
+  function _focusInHandler(evt) {
+    if (!_suspended && evt.target !== _btnDom) {
       _btnDom.click();
+      _dom.removeEventListener('focusin', _focusInHandler);
     }
   }
 
@@ -137,13 +134,13 @@ function Summary(element) {
    */
   function _shouldSuspend() {
     /* Bail out of initializatiion if the height of the summary's content
-       is less than our summary height of 5.5ems + 4px padding
-       16 * 5.5 = 88 + 4 = 92
+       is less than our summary height of 5.5ems
+       16 * 5.5 = 88
        See https://github.com/cfpb/design-system/blob/72623270013f2ad08dbe92b5b709ed2b434ee41e/packages/cfpb-atomic-component/src/utilities/transition/transition.less#L84
     */
     return (
       (_hasMobileModifier && !viewportIsIn(MOBILE)) ||
-      _contentDom.scrollHeight <= 92
+      _contentDom.scrollHeight <= 88
     );
   }
 

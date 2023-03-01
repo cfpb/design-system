@@ -1,4 +1,15 @@
 
+## v0.21.6 (2023-03-01)
+
+#### Bug Fix
+* `cfpb-atomic-component`, `cfpb-expandables`
+  * [#1595](https://github.com/cfpb/design-system/pull/1595) Remove aria-expanded from content area ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.5 (2023-02-24)
 
 #### Enhancement

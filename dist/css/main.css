@@ -4813,10 +4813,6 @@ html[lang='ar'] .m-notification .m-list {
   tags:
   - cf-organisms
 */
-.o-summary__loading {
-  height: 92px;
-  overflow: hidden;
-}
 .o-summary_content {
   overflow-y: hidden;
   padding: 2px;

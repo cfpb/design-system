@@ -126,7 +126,6 @@ function FlyoutMenu(element) {
       triggerDom.addEventListener('mouseover', _handleTriggerOver.bind(this));
       triggerDom.addEventListener('mouseout', _handleTriggerOut.bind(this));
     });
-    _setAriaAttr('expanded', _contentDom, isExpanded);
 
     resume();
 
@@ -267,8 +266,6 @@ function FlyoutMenu(element) {
       _setAriaAttr('expanded', _triggerDoms[i], false);
     }
 
-    _setAriaAttr('expanded', _contentDom, false);
-
     _state = COLLAPSING;
     this.dispatchEvent('collapsebegin', {
       target: this,
@@ -316,8 +313,6 @@ function FlyoutMenu(element) {
     for (let i = 0, len = _triggerDoms.length; i < len; i++) {
       _setAriaAttr('expanded', _triggerDoms[i], true);
     }
-
-    _setAriaAttr('expanded', _contentDom, true);
   }
 
   /**

@@ -47,6 +47,21 @@ function Summary(element) {
     addDataHook(_contentDom, 'behavior_flyout-menu_content');
     addDataHook(_btnDom, 'behavior_flyout-menu_trigger');
 
+    _dom.classList.add(`${BASE_CLASS}__loading`);
+
+    // Don't initialize the Summary till the page has loaded, so we can have
+    // an accurate idea of its height.
+    window.addEventListener('load', _pageLoadHandler);
+
+    return this;
+  }
+
+  /**
+   * The page (content + CSS) has loaded.
+   */
+  function _pageLoadHandler() {
+    window.removeEventListener('load', _pageLoadHandler);
+
     _flyout = new FlyoutMenu(_dom);
     _transition = new MaxHeightTransition(_contentDom);
     _transition.init(
@@ -78,7 +93,7 @@ function Summary(element) {
        just in case. */
     _contentDom.addEventListener('click', _contentClicked);
 
-    return this;
+    _dom.classList.remove(`${BASE_CLASS}__loading`);
   }
 
   /**
@@ -110,10 +125,6 @@ function Summary(element) {
    * suspends or resumes the mobile or desktop behaviors.
    */
   function _resizeHandler() {
-    /* Bail out of initializatiion if the height of the summary's content
-       is less then our summary height of 5.5ems (16 * 5.5 = 88)
-       See https://github.com/cfpb/design-system/blob/72623270013f2ad08dbe92b5b709ed2b434ee41e/packages/cfpb-atomic-component/src/utilities/transition/transition.less#L84
-    */
     if (_shouldSuspend()) {
       _suspend();
     } else {
@@ -125,9 +136,14 @@ function Summary(element) {
    * @returns {boolean} True if this should be suspended, false otherwise.
    */
   function _shouldSuspend() {
+    /* Bail out of initializatiion if the height of the summary's content
+       is less than our summary height of 5.5ems + 4px padding
+       16 * 5.5 = 88 + 4 = 92
+       See https://github.com/cfpb/design-system/blob/72623270013f2ad08dbe92b5b709ed2b434ee41e/packages/cfpb-atomic-component/src/utilities/transition/transition.less#L84
+    */
     return (
       (_hasMobileModifier && !viewportIsIn(MOBILE)) ||
-      _contentDom.scrollHeight <= 88
+      _contentDom.scrollHeight <= 92
     );
   }
 

@@ -78,7 +78,6 @@ describe('Summary', () => {
         .mockImplementation(() => 50);
       summary.init();
       windowResizeTo(300);
-      expect(contentDom.getAttribute('aria-expanded')).toBe(null);
       expect(targetDom.classList.contains('u-hidden')).toBe(true);
     });
 
@@ -88,7 +87,6 @@ describe('Summary', () => {
         .mockImplementation(() => 200);
       summary.init();
       windowResizeTo(300);
-      expect(contentDom.getAttribute('aria-expanded')).toBe('false');
       expect(targetDom.getAttribute('aria-expanded')).toBe('false');
       simulateEvent('click', targetDom);
 
@@ -102,7 +100,6 @@ describe('Summary', () => {
       contentDom.dispatchEvent(event);
 
       expect(contentDom.style.maxHeight).not.toBe('0');
-      expect(contentDom.getAttribute('aria-expanded')).toBe('true');
       expect(targetDom.getAttribute('aria-expanded')).toBe('true');
 
       expect(targetDom.classList.contains('u-hidden')).toBe(true);

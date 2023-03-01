@@ -7,9 +7,8 @@ import {
 const HTML_SNIPPET = `
 <div data-js-hook="behavior_flyout-menu">
     <button data-js-hook="behavior_flyout-menu_trigger"
-            aria-haspopup="menu"
             aria-expanded="false"></button>
-    <div data-js-hook="behavior_flyout-menu_content" aria-expanded="false">
+    <div data-js-hook="behavior_flyout-menu_content">
       <button data-js-hook="behavior_flyout-menu_trigger"
               aria-expanded="false"></button>
     </div>
@@ -54,7 +53,6 @@ describe('FlyoutMenu', () => {
 
     it('should have correct state before initializing', () => {
       expect(triggerDom.getAttribute('aria-expanded')).toBe('false');
-      expect(contentDom.getAttribute('aria-expanded')).toBe('false');
       expect(altTriggerDom.getAttribute('aria-expanded')).toBe('false');
 
       expect(flyoutMenu.isAnimating()).toBe(false);
@@ -66,13 +64,11 @@ describe('FlyoutMenu', () => {
     it('should have correct state after initializing as collapsed', () => {
       expect(flyoutMenu.init()).toBeInstanceOf(FlyoutMenu);
       expect(triggerDom.getAttribute('aria-expanded')).toBe('false');
-      expect(contentDom.getAttribute('aria-expanded')).toBe('false');
     });
 
     it('should have correct state after initializing as expanded', () => {
       expect(flyoutMenu.init(true)).toBeInstanceOf(FlyoutMenu);
       expect(triggerDom.getAttribute('aria-expanded')).toBe('true');
-      expect(contentDom.getAttribute('aria-expanded')).toBe('true');
     });
   });
 
@@ -148,7 +144,6 @@ describe('FlyoutMenu', () => {
 
       // Check expected aria attributes state.
       expect(triggerDom.getAttribute('aria-expanded')).toBe('true');
-      expect(contentDom.getAttribute('aria-expanded')).toBe('true');
       expect(altTriggerDom.getAttribute('aria-expanded')).toBe('true');
     });
 
@@ -205,7 +200,6 @@ describe('FlyoutMenu', () => {
 
       // Check expected aria attribute states.
       expect(triggerDom.getAttribute('aria-expanded')).toBe('false');
-      expect(contentDom.getAttribute('aria-expanded')).toBe('false');
       expect(altTriggerDom.getAttribute('aria-expanded')).toBe('false');
     });
 

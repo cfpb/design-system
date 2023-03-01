@@ -36,6 +36,13 @@
 */
 
 .o-summary {
+  &__loading {
+    // Base summary height of 5.5ems + 4px padding
+    // 16 * 5.5 = 88 + 4 = 92.
+    height: 92px;
+    overflow: hidden;
+  }
+
   &_content {
     overflow-y: hidden;
 
@@ -45,30 +52,14 @@
     top: -2px;
 
     position: relative;
-
-    &[aria-expanded='false']::after {
-      // Fades content out over approximately 2 lines.
-      display: block;
-      height: unit(((@base-line-height-px * 2) / @base-font-size-px), em);
-      margin: 0;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 1) 100%
-      );
-      content: '';
-
-      .respond-to-print({
-        background: none;
-      });
-    }
   }
 
   &_btn {
+    // Hide button in no-js state.
+    .no-js & {
+      display: none;
+    }
+
     position: relative;
     z-index: 2;
     display: block;
@@ -85,18 +76,35 @@
       outline: 1px dotted @pacific;
       outline-offset: 2px;
     }
+
+    &[aria-expanded='false']::before {
+      // Fades content out over approximately 2 lines.
+      display: block;
+      pointer-events: none;
+      height: unit(((@base-line-height-px * 2) / @base-font-size-px), em);
+      margin: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      content: '';
+
+      .respond-to-print({
+        background: none;
+      });
+    }
   }
 
   // If we're mobile-only…
   &__mobile {
     @media only screen and (min-width: @bp-sm-min) {
-      .o-summary_content[aria-expanded='false']::after {
-        // Don't fade content if on desktop.
-        display: none;
-      }
-
       .o-summary_btn {
-        // Hide the "read more" button on desktop.
+        // Hide the "read more" button and fading on desktop.
         display: none;
       }
     }

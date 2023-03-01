@@ -1,4 +1,15 @@
 
+## v0.21.7 (2023-03-01)
+
+#### Bug Fix
+* `cfpb-expandables`
+  * [#1598](https://github.com/cfpb/design-system/pull/1598) Bugfix for summary ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.6 (2023-03-01)
 
 #### Bug Fix

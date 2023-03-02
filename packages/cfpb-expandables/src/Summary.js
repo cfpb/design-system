@@ -93,7 +93,9 @@ function Summary(element) {
   }
 
   /**
-   *
+   * Handling tabbing into the content area that is hidden.
+   * If the focus goes onto a focusable element within the content area,
+   * we'll act like the summary expansion button was clicked.
    * @param {Event} evt - The focus event.
    */
   function _focusInHandler(evt) {

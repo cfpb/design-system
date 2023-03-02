@@ -4848,7 +4848,7 @@ html[lang='ar'] .m-notification .m-list {
   position: absolute;
   left: 0;
   right: 0;
-  top: -100%;
+  top: calc(-100% + 4px);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
   content: '';
 }

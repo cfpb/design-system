@@ -39,7 +39,7 @@
   &_content {
     overflow-y: hidden;
 
-    // Move the bounding box one pixel to avoid clipping link focus boxes.
+    // Move the bounding box 2 pixels to avoid clipping link focus boxes.
     padding: 2px;
     left: -2px;
     top: -2px;
@@ -79,7 +79,8 @@
       position: absolute;
       left: 0;
       right: 0;
-      top: -100%;
+      // 4px is needed because the 2px movement of the content's bounding box.
+      top: calc(-100% + 4px);
       background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0) 0%,

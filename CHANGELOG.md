@@ -1,4 +1,15 @@
 
+## v0.21.8 (2023-03-02)
+
+#### Bug Fix
+* `cfpb-expandables`
+  * [#1599](https://github.com/cfpb/design-system/pull/1599) Summary: Adjustments to content overlay gradient ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.7 (2023-03-01)
 
 #### Bug Fix

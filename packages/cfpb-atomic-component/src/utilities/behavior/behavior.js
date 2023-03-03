@@ -16,8 +16,9 @@
    to activate the menu, and (C) the content to show/hide when the trigger
    is clicked. So the markup looks something like:
    <div data-js-hook="behavior_flyout-menu">
-   <button data-js-hook="behavior_flyout-menu_trigger">
-   <div data-js-hook="behavior_flyout-menu_content">
+     <button data-js-hook="behavior_flyout-menu_trigger">
+     <div data-js-hook="behavior_flyout-menu_content">…</div>
+   </div>
    ========================================================================== */
 
 import {

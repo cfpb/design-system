@@ -30,9 +30,11 @@ const SEL_PREFIX = '[' + JS_HOOK + '=' + BASE_CLASS;
  * area, which may obscure the first trigger.
  * The flyout can be triggered through a click of either trigger.
  * @param {HTMLElement} element - The DOM element to attach FlyoutMenu behavior.
+ * @param {boolean} autoHideContent - Whether to add `hidden` attribute to
+ *   content when it is collapsed.
  * @returns {FlyoutMenu} An instance.
  */
-function FlyoutMenu(element) {
+function FlyoutMenu(element, autoHideContent = true) {
   // Verify that the expected dom attributes are present.
   const _dom = checkBehaviorDom(element, BASE_CLASS);
   const _triggerDoms = _findTriggers(element);
@@ -126,6 +128,9 @@ function FlyoutMenu(element) {
       triggerDom.addEventListener('mouseover', _handleTriggerOver.bind(this));
       triggerDom.addEventListener('mouseout', _handleTriggerOut.bind(this));
     });
+
+    _contentDom.setAttribute('data-open', isExpanded ? 'true' : 'false');
+    if (autoHideContent) _contentDom.setAttribute('hidden', '');
 
     resume();
 
@@ -228,6 +233,7 @@ function FlyoutMenu(element) {
     if (_state === EXPANDING || _state === EXPANDED) return this;
 
     _state = EXPANDING;
+    if (autoHideContent) _contentDom.removeAttribute('hidden');
     this.dispatchEvent('expandbegin', { target: this, type: 'expandbegin' });
 
     // Only use transitions if both expand and collapse are set.
@@ -302,6 +308,7 @@ function FlyoutMenu(element) {
    */
   function _expandEnd() {
     _state = EXPANDED;
+    _contentDom.setAttribute('data-open', 'true');
     if (_transition) {
       _transition.removeEventListener(
         BaseTransition.END_EVENT,
@@ -320,6 +327,9 @@ function FlyoutMenu(element) {
    */
   function _collapseEnd() {
     _state = COLLAPSED;
+    _contentDom.setAttribute('data-open', 'false');
+    if (autoHideContent) _contentDom.setAttribute('hidden', '');
+
     if (_transition) {
       _transition.removeEventListener(
         BaseTransition.END_EVENT,

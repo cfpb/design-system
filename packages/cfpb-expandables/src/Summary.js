@@ -60,7 +60,7 @@ function Summary(element) {
   function _pageLoadHandler() {
     window.removeEventListener('load', _pageLoadHandler);
 
-    _flyout = new FlyoutMenu(_dom);
+    _flyout = new FlyoutMenu(_dom, false);
     _transition = new MaxHeightTransition(_contentDom);
     _transition.init(
       _suspended

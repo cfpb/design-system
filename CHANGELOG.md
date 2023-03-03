@@ -1,4 +1,20 @@
 
+## v0.21.9 (2023-03-03)
+
+#### Enhancement
+* `cfpb-atomic-component`, `cfpb-expandables`
+  * [#1600](https://github.com/cfpb/design-system/pull/1600) Add attributes to flyout content to specify if it's open and/or hidden ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-atomic-component`
+  * [#1602](https://github.com/cfpb/design-system/pull/1602) Bugfix: fix order at which data-open closes ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1601](https://github.com/cfpb/design-system/pull/1601) FlyoutMenu: Add missing hidden condition ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.8 (2023-03-02)
 
 #### Bug Fix

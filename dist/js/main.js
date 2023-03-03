@@ -1856,9 +1856,11 @@ const SEL_PREFIX = '[' + _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0_
  * area, which may obscure the first trigger.
  * The flyout can be triggered through a click of either trigger.
  * @param {HTMLElement} element - The DOM element to attach FlyoutMenu behavior.
+ * @param {boolean} autoHideContent - Whether to add `hidden` attribute to
+ *   content when it is collapsed.
  * @returns {FlyoutMenu} An instance.
  */
-function FlyoutMenu(element) {
+function FlyoutMenu(element, autoHideContent = true) {
   // Verify that the expected dom attributes are present.
   const _dom = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.checkBehaviorDom)(element, BASE_CLASS);
   const _triggerDoms = _findTriggers(element);
@@ -1952,6 +1954,9 @@ function FlyoutMenu(element) {
       triggerDom.addEventListener('mouseover', _handleTriggerOver.bind(this));
       triggerDom.addEventListener('mouseout', _handleTriggerOut.bind(this));
     });
+
+    _contentDom.setAttribute('data-open', isExpanded ? 'true' : 'false');
+    if (autoHideContent) _contentDom.setAttribute('hidden', '');
 
     resume();
 
@@ -2054,6 +2059,7 @@ function FlyoutMenu(element) {
     if (_state === EXPANDING || _state === EXPANDED) return this;
 
     _state = EXPANDING;
+    if (autoHideContent) _contentDom.removeAttribute('hidden');
     this.dispatchEvent('expandbegin', { target: this, type: 'expandbegin' });
 
     // Only use transitions if both expand and collapse are set.
@@ -2128,6 +2134,7 @@ function FlyoutMenu(element) {
    */
   function _expandEnd() {
     _state = EXPANDED;
+    _contentDom.setAttribute('data-open', 'true');
     if (_transition) {
       _transition.removeEventListener(
         _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT,
@@ -2146,6 +2153,9 @@ function FlyoutMenu(element) {
    */
   function _collapseEnd() {
     _state = COLLAPSED;
+    _contentDom.setAttribute('data-open', 'false');
+    if (autoHideContent) _contentDom.setAttribute('hidden', '');
+
     if (_transition) {
       _transition.removeEventListener(
         _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT,
@@ -2300,8 +2310,9 @@ __webpack_require__.r(__webpack_exports__);
    to activate the menu, and (C) the content to show/hide when the trigger
    is clicked. So the markup looks something like:
    <div data-js-hook="behavior_flyout-menu">
-   <button data-js-hook="behavior_flyout-menu_trigger">
-   <div data-js-hook="behavior_flyout-menu_content">
+     <button data-js-hook="behavior_flyout-menu_trigger">
+     <div data-js-hook="behavior_flyout-menu_content">…</div>
+   </div>
    ========================================================================== */
 
 
@@ -3967,7 +3978,7 @@ function Summary(element) {
   function _pageLoadHandler() {
     window.removeEventListener('load', _pageLoadHandler);
 
-    _flyout = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.FlyoutMenu(_dom);
+    _flyout = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.FlyoutMenu(_dom, false);
     _transition = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition(_contentDom);
     _transition.init(
       _suspended

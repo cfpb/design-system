@@ -2098,6 +2098,8 @@ function FlyoutMenu(element, autoHideContent = true) {
       _setAriaAttr('expanded', _triggerDoms[i], false);
     }
 
+    _contentDom.setAttribute('data-open', 'false');
+
     _state = COLLAPSING;
     this.dispatchEvent('collapsebegin', {
       target: this,
@@ -2153,7 +2155,7 @@ function FlyoutMenu(element, autoHideContent = true) {
    */
   function _collapseEnd() {
     _state = COLLAPSED;
-    _contentDom.setAttribute('data-open', 'false');
+
     if (autoHideContent) _contentDom.setAttribute('hidden', '');
 
     if (_transition) {

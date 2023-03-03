@@ -130,7 +130,7 @@ function FlyoutMenu(element, autoHideContent = true) {
     });
 
     _contentDom.setAttribute('data-open', isExpanded ? 'true' : 'false');
-    if (autoHideContent) _contentDom.setAttribute('hidden', '');
+    if (autoHideContent && !isExpanded) _contentDom.setAttribute('hidden', '');
 
     resume();
 

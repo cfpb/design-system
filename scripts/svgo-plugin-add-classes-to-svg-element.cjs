@@ -59,6 +59,9 @@ plugins: [
  *   }
  * ]
  *
+ * Use the suffixPattern parameter to add an arbitrary suffix to
+ * the class names.
+ *
  * plugins: [
  *   {
  *     name: "addClassesToSVGElement",
@@ -69,7 +72,21 @@ plugins: [
  *   }
  * ]
  *
- * @author April Arcus
+ * Use the boolean doesPreserveClasses parameter to preserve any
+ * existing classes on the SVG element, otherwise any existing
+ * classes will be removed.
+ *
+ * plugins: [
+ *   {
+ *     name: "addClassesToSVGElement",
+ *     params: {
+ *       classNames: ["mySvg"],
+ *       doesPreserveClasses: true
+ *     }
+ *   }
+ * ]
+ *
+ * @author April Arcus, Anselm Bradford
  *
  * @type {import('./plugins-types').Plugin<'addClassesToSVGElement'>}
  */

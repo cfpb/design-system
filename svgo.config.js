@@ -1,3 +1,5 @@
+import addClassesToSVGElement from './scripts/svgo-plugin-add-classes-to-svg-element.cjs';
+
 export default {
   plugins: [
     {
@@ -20,7 +22,8 @@ export default {
     },
     {
       name: 'addClassesToSVGElement',
-      params: { className: 'cf-icon-svg' },
+      params: { className: 'cf-icon-svg', suffixPattern: '__$FILENAME' },
+      fn: addClassesToSVGElement.fn,
     },
   ],
 };

@@ -106,6 +106,7 @@ exports.fn = (root, params, info) => {
     element: {
       enter: (node, parentNode) => {
         if (node.name === 'svg' && parentNode.type === 'root') {
+          params.doesPreserveClasses ? null : (node.attributes.class = null);
           const classList = new Set(
             node.attributes.class == null
               ? null

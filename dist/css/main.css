@@ -4069,7 +4069,7 @@ h6 + .a-legend,
   right: 0;
   bottom: 0;
   background-color: #e7e8e9;
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20fill=%22rgb(16,%2024,%2032)%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
   background-size: auto 1.1875em;
   background-repeat: no-repeat;
   background-position: center center;
@@ -4077,7 +4077,7 @@ h6 + .a-legend,
   pointer-events: none;
 }
 .a-select__disabled::after {
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20fill=%22rgb(90,%2093,%2097)%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
 }
 .a-text-input {
   -webkit-appearance: none;
@@ -4291,13 +4291,13 @@ h6 + .a-legend,
   box-shadow: 0 0 0 1px #0072ce;
 }
 .m-form-field__checkbox .a-checkbox:checked + .a-label::before {
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20fill=%22rgb(16,%2024,%2032)%22%20viewBox=%220%200%2012%2019%22%3E%3Cpath%20d=%22M4.63%2015.638a1.028%201.028%200%200%201-.79-.37L.36%2011.09a1.03%201.03%200%201%201%201.58-1.316l2.535%203.043L9.958%203.32a1.029%201.029%200%200%201%201.783%201.03L5.52%2015.122a1.03%201.03%200%200%201-.803.511.89.89%200%200%201-.088.004z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__approved%22%20viewBox=%220%200%2012%2019%22%3E%3Cpath%20d=%22M4.63%2015.638a1.028%201.028%200%200%201-.79-.37L.36%2011.09a1.03%201.03%200%201%201%201.58-1.316l2.535%203.043L9.958%203.32a1.029%201.029%200%200%201%201.783%201.03L5.52%2015.122a1.03%201.03%200%200%201-.803.511.89.89%200%200%201-.088.004z%22/%3E%3C/svg%3E');
   background-size: auto 1.1875em;
   background-repeat: no-repeat;
   background-position: center 0;
 }
 .m-form-field__checkbox .a-checkbox:disabled:checked + .a-label::before {
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20fill=%22rgb(90,%2093,%2097)%22%20viewBox=%220%200%2012%2019%22%3E%3Cpath%20d=%22M4.63%2015.638a1.028%201.028%200%200%201-.79-.37L.36%2011.09a1.03%201.03%200%201%201%201.58-1.316l2.535%203.043L9.958%203.32a1.029%201.029%200%200%201%201.783%201.03L5.52%2015.122a1.03%201.03%200%200%201-.803.511.89.89%200%200%201-.088.004z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__approved%22%20viewBox=%220%200%2012%2019%22%3E%3Cpath%20d=%22M4.63%2015.638a1.028%201.028%200%200%201-.79-.37L.36%2011.09a1.03%201.03%200%201%201%201.58-1.316l2.535%203.043L9.958%203.32a1.029%201.029%200%200%201%201.783%201.03L5.52%2015.122a1.03%201.03%200%200%201-.803.511.89.89%200%200%201-.088.004z%22/%3E%3C/svg%3E');
 }
 .m-form-field__radio .a-label::before {
   border-radius: 50%;
@@ -4479,7 +4479,7 @@ select.o-multiselect option {
   right: 0;
   bottom: 0;
   background-color: #e7e8e9;
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20fill=%22rgb(16,%2024,%2032)%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
   background-size: auto 1.1875em;
   background-repeat: no-repeat;
   background-position: center center;
@@ -4488,7 +4488,7 @@ select.o-multiselect option {
   pointer-events: none;
 }
 .o-multiselect.u-active .o-multiselect_header::after {
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20fill=%22rgb(16,%2024,%2032)%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M15.3%2015.32a1.026%201.026%200%200%201-.727-.302L8.5%208.946l-6.073%206.072a1.03%201.03%200%200%201-1.456-1.455l6.801-6.8a1.03%201.03%200%200%201%201.456%200l6.8%206.8a1.03%201.03%200%200%201-.727%201.757z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__up%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M15.3%2015.32a1.026%201.026%200%200%201-.727-.302L8.5%208.946l-6.073%206.072a1.03%201.03%200%200%201-1.456-1.455l6.801-6.8a1.03%201.03%200%200%201%201.456%200l6.8%206.8a1.03%201.03%200%200%201-.727%201.757z%22/%3E%3C/svg%3E');
 }
 .o-multiselect_search[type='text'] {
   display: block;
@@ -5100,10 +5100,10 @@ details summary::after {
   height: 10px;
   display: block;
   content: '';
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20fill=%22rgb(16,%2024,%2032)%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
 }
 details[open] summary::after {
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20fill=%22rgb(16,%2024,%2032)%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M15.3%2015.32a1.026%201.026%200%200%201-.727-.302L8.5%208.946l-6.073%206.072a1.03%201.03%200%200%201-1.456-1.455l6.801-6.8a1.03%201.03%200%200%201%201.456%200l6.8%206.8a1.03%201.03%200%200%201-.727%201.757z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__up%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M15.3%2015.32a1.026%201.026%200%200%201-.727-.302L8.5%208.946l-6.073%206.072a1.03%201.03%200%200%201-1.456-1.455l6.801-6.8a1.03%201.03%200%200%201%201.456%200l6.8%206.8a1.03%201.03%200%200%201-.727%201.757z%22/%3E%3C/svg%3E');
 }
 .m-global-eyebrow .a-tagline,
 .site-header,

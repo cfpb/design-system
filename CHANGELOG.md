@@ -1,4 +1,15 @@
 
+## v0.21.10 (2023-03-07)
+
+#### Enhancement
+* `cfpb-icons`
+  * [#1603](https://github.com/cfpb/design-system/pull/1603) cfpb-icons: Add specific classname to each SVG icon ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.9 (2023-03-03)
 
 #### Enhancement

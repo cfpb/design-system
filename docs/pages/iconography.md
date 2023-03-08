@@ -417,7 +417,7 @@ variation_groups:
 
           | {% include icons/information.svg %} | {% include icons/information-round.svg %} | information | info, i |
 
-          | {% include icons/light-bulb.svg %} | {% include icons/light-bulb-round.svg %} | light-bulb | idea |
+          | {% include icons/lightbulb.svg %} | {% include icons/lightbulb-round.svg %} | lightbulb | idea |
 
           | {% include icons/link.svg %} | {% include icons/link-round.svg %} | link |  |
 

@@ -2664,6 +2664,9 @@ h6 + .o-card-group__count-3 .o-card-group_cards .m-card:nth-of-type(1) h3,
   flex-wrap: wrap-reverse;
   gap: 0.9375em;
 }
+.o-email-signup .a-btn {
+  text-align: inherit;
+}
 @media only all and (max-width: 37.5em) {
   .o-email-signup .a-label__heading {
     font-size: 1em;

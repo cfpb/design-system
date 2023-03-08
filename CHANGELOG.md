@@ -1,4 +1,15 @@
 
+## v0.21.12 (2023-03-08)
+
+#### Bug Fix
+* `cfpb-layout`
+  * [#1607](https://github.com/cfpb/design-system/pull/1607) Bugfix: Add text alignment to email signup buttons ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.11 (2023-03-08)
 
 #### Breaking Change

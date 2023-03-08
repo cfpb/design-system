@@ -344,7 +344,7 @@ the canonical name or any of its aliases.
 | {% include icons/flag.svg %}           | {% include icons/flag-round.svg %}           | flag           |                                  |
 | {% include icons/history.svg %}        | {% include icons/history-round.svg %}        | history        |                                  |
 | {% include icons/information.svg %}    | {% include icons/information-round.svg %}    | information    | info, i                          |
-| {% include icons/light-bulb.svg %}     | {% include icons/light-bulb-round.svg %}     | light-bulb     | idea                             |
+| {% include icons/lightbulb.svg %}      | {% include icons/lightbulb-round.svg %}      | lightbulb      | idea                             |
 | {% include icons/link.svg %}           | {% include icons/link-round.svg %}           | link           |                                  |
 | {% include icons/list.svg %}           | {% include icons/list-round.svg %}           | list           |                                  |
 | {% include icons/lock.svg %}           | {% include icons/lock-round.svg %}           | lock           | locked, padlock                  |

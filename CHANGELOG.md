@@ -1,4 +1,22 @@
 
+## v0.21.11 (2023-03-08)
+
+#### Breaking Change
+* `cfpb-buttons`
+  * [#1605](https://github.com/cfpb/design-system/pull/1605) cfpb-buttons: Replace bottom border with text underline in a-btn__link ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-icons`
+  * [#1606](https://github.com/cfpb/design-system/pull/1606) cfpb-icons: Remove light-bulb in favor of lightbulb ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1604](https://github.com/cfpb/design-system/pull/1604) Update dependencies: eslint, eslint-config-prettier, eslint-plugin-jsdoc, jest, jest-cli, jest-environment-jsdom, mini-css-extract-plugin ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.21.10 (2023-03-07)
 
 #### Enhancement

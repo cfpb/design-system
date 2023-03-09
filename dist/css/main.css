@@ -1493,7 +1493,6 @@ a.a-heading__icon.active {
     border-top-width: 1px;
     border-bottom-width: 1px;
     width: 100%;
-    text-align: left;
     position: relative;
   }
   .a-link__jump .a-link_text {
@@ -1552,7 +1551,6 @@ a.a-heading__icon.active {
   border-top-width: 1px;
   border-bottom-width: 1px;
   width: 100%;
-  text-align: left;
 }
 .u-block-link .a-link_text {
   border-bottom-width: 0;
@@ -1646,7 +1644,6 @@ a.a-heading__icon.active {
     border-top-width: 1px;
     border-bottom-width: 1px;
     width: 100%;
-    text-align: left;
   }
   .m-list__links .m-list_link .a-link_text {
     border-bottom-width: 0;

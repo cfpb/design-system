@@ -226,6 +226,6 @@ function Summary(element) {
 }
 
 Summary.BASE_CLASS = BASE_CLASS;
-Summary.init = () => instantiateAll(`.${BASE_CLASS}`, Summary);
+Summary.init = (scope) => instantiateAll(`.${BASE_CLASS}`, Summary, scope);
 
 export default Summary;

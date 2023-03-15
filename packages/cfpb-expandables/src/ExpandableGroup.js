@@ -67,8 +67,9 @@ function ExpandableGroup(element) {
 }
 
 ExpandableGroup.BASE_CLASS = BASE_CLASS;
-ExpandableGroup.init = () => {
-  const expandableGroupsDom = document.querySelectorAll(`.${BASE_CLASS}`);
+ExpandableGroup.init = (scope) => {
+  const base = scope || document;
+  const expandableGroupsDom = base.querySelectorAll(`.${BASE_CLASS}`);
   expandableGroupsDom.forEach((expandableGroupDom) => {
     const expandables = instantiateAll(
       `.${Expandable.BASE_CLASS}`,

@@ -99,6 +99,7 @@ function Expandable(element) {
   this.expand = () => _flyout.expand();
   this.collapse = () => _flyout.collapse();
   this.isExpanded = () => _flyout.isExpanded();
+  this.refresh = () => _flyout.getTransition().refresh();
   this.getLabelText = getLabelText;
 
   const eventObserver = new EventObserver();
@@ -110,6 +111,7 @@ function Expandable(element) {
 }
 
 Expandable.BASE_CLASS = BASE_CLASS;
-Expandable.init = () => instantiateAll(`.${Expandable.BASE_CLASS}`, Expandable);
+Expandable.init = (scope) =>
+  instantiateAll(`.${Expandable.BASE_CLASS}`, Expandable, scope);
 
 export default Expandable;

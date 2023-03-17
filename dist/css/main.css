@@ -1402,7 +1402,8 @@ pre code {
   fill: currentcolor;
   max-width: 1em;
 }
-.cf-icon-svg__updating {
+.cf-icon-svg__updating,
+.cf-icon-svg__updating-round {
   animation: updating-animation 1.25s infinite linear;
   transform-origin: 50% 50%;
 }

@@ -117,7 +117,9 @@ variation_groups:
 
           | {% include icons/help.svg %} | {% include icons/help-round.svg %} | help | question, question-mark |
 
-          | {% include icons/update.svg %} | {% include icons/update-round.svg %} | update | spinner, updating _(used for animated state)_ |
+          | {% include icons/update.svg %} | {% include icons/update-round.svg %} | update | spinner |
+
+          | {% include icons/updating.svg %} | {% include icons/updating-round.svg %} | updating |
 
           | {% include icons/power.svg %} | {% include icons/power-round.svg %} | power | on-off |
 

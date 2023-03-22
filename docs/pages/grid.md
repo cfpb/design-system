@@ -390,11 +390,6 @@ variation_groups:
           <div class="wrapper">
               Wrapper
           </div>
-      - variation_name: 'Cf-grid helpers: Column divider modifiers'
-        variation_description: See the [column dividers
-          page](https://cfpb.github.io/design-system/components/column-dividers#column-divider-modifiers)
-          for information.
-        variation_code_snippet: ''
     variation_group_name: Development
     variation_group_description: >-
 

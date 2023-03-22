@@ -85,7 +85,7 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 // .grid_column__top-divider
 @grid_column__top-divider:  @gray-40;
 
-// .grid_column__top-divider
+// .grid_column__left-divider
 @grid_column__left-divider: @gray-40;
 
 // Hero variables

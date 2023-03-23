@@ -155,7 +155,13 @@ to be made aware that the website is working on responding to their actions.
 Each icon has a circled variant shown in the second column
 (or square, in the case of the social media icons)
 that can be accessed by appending `-round` (or `-square`) to
-the canonical name or any of its aliases.
+the canonical name.
+
+## Aliases
+
+Use the canonical icon name when referencing the icons in code,
+however, "aliases" are provided in the table below to help you
+search this page for a particular icon.
 
 ### Navigation icons
 

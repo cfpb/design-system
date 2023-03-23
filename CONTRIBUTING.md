@@ -224,32 +224,15 @@ Instructions for developers who've received a new or updated icon from a designe
 
 1. Place SVG file (named with its canonical name, i.e., `canonical.svg`)
    in [`packages/cfpb-icons/src/icons`](tree/main/packages/cfpb-icons/src/icons/)
+1. If it has a `-round` or `-square` version, ensure those are in place as well
 1. Run `yarn process-icon-svgs` from the root of the repository
    - This script compresses and standardizes the SVG code for all of our icons
    - It should be a no-op for icons that have not changed
-1. If the icon has aliases, go into the icons folder and duplicate the canonical file to the aliases:
+1. From the repo root, copy the icons into the docs site with `yarn copy-assets'
 
-   ```shell
-   cd packages/cfpb-icons/src/icons/
-
-   # Edit the command below for your actual canonical filename and aliases
-   for ALIAS in {one,two,three,}; do cp canonical.svg $ALIAS.svg; done
-   # Be sure to leave in the trailing comma if there is only one alias,
-   # or it will not be treated as an iterable object and will include
-   # the curly braces in the filename.
-   ```
-
-1. Return to the repo root and copy the icons into the docs site:
-
-   ```shell
-   cd ../../../../
-
-   yarn copy-assets
-   ```
-
-1. If adding a new icon or updating any names/aliases, update the tables on both
+1. If adding a new icon or updating any names, update the tables on both
    [`packages/cfpb-icons/usage.md`](tree/main/packages/cfpb-icons/usage.md)
    and [`docs/pages/iconography.md`](tree/main/docs/pages/iconography.md)
    accordingly
-1. If any icons or aliases were deleted, be sure to delete them from both
+1. If any icons were deleted, be sure to delete them from both
    `packages/cfpb-icons/src/icons/` and `docs/_includes/icons/`

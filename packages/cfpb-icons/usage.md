@@ -182,7 +182,8 @@ the canonical name or any of its aliases.
 | {% include icons/error.svg %}      | {% include icons/error-round.svg %}      | error          | delete, close, remove, multiply, multiplication, x |
 | {% include icons/warning.svg %}    | {% include icons/warning-round.svg %}    | warning        | alert, exclamation, exclamation-mark               |
 | {% include icons/help.svg %}       | {% include icons/help-round.svg %}       | help           | question, question-mark                            |
-| {% include icons/update.svg %}     | {% include icons/update-round.svg %}     | update         | spinner, updating _(used for animated state)_      |
+| {% include icons/update.svg %}     | {% include icons/update-round.svg %}     | update         |                                                    |
+| {% include icons/updating.svg %}   | {% include icons/updating-round.svg %}   | updating       | spinner                                            |
 | {% include icons/power.svg %}      | {% include icons/power-round.svg %}      | power          | on-off                                             |
 | {% include icons/dollar.svg %}     | {% include icons/dollar-round.svg %}     | dollar         | dollar-sign, cost                                  |
 | {% include icons/plus.svg %}       | {% include icons/plus-round.svg %}       | plus           | add, addition, expand, show                        |

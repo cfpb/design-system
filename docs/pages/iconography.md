@@ -55,6 +55,10 @@ variation_groups:
     variations:
       - variation_code_snippet: ''
         variation_description: >-
+          Use the canonical icon name when referencing the icons in code,
+          however, "aliases" are provided in the table below to help you
+          search this page for a particular icon.
+
           - [Navigation icons](#navigation-icons)
 
           - [Status icons](#status-icons)
@@ -117,9 +121,9 @@ variation_groups:
 
           | {% include icons/help.svg %} | {% include icons/help-round.svg %} | help | question, question-mark |
 
-          | {% include icons/update.svg %} | {% include icons/update-round.svg %} | update | spinner |
+          | {% include icons/update.svg %} | {% include icons/update-round.svg %} | update |
 
-          | {% include icons/updating.svg %} | {% include icons/updating-round.svg %} | updating |
+          | {% include icons/updating.svg %} | {% include icons/updating-round.svg %} | updating | spinner |
 
           | {% include icons/power.svg %} | {% include icons/power-round.svg %} | power | on-off |
 
@@ -474,8 +478,7 @@ variation_groups:
         variation_implementation:
           Each icon has a circled variant shown in the second
           column (or square, in the case of the social media icons) that can be
-          accessed by appending `-round` (or `-square`) to the canonical name or
-          any of its aliases.
+          accessed by appending `-round` (or `-square`) to the canonical name.
   - variation_group_name: Animated icon
     variation_group_description: ''
     variations:

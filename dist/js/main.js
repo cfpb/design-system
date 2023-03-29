@@ -866,13 +866,13 @@ module.exports.Delegate = Delegate;
 
 /***/ }),
 
-/***/ "./packages/cfpb-icons/src/icons/close.svg":
+/***/ "./packages/cfpb-icons/src/icons/error.svg":
 /*!*************************************************!*\
-  !*** ./packages/cfpb-icons/src/icons/close.svg ***!
+  !*** ./packages/cfpb-icons/src/icons/error.svg ***!
   \*************************************************/
 /***/ (function(module) {
 
-module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"cf-icon-svg cf-icon-svg__close\" viewBox=\"0 0 12 19\"><path d=\"M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z\"></path></svg>"
+module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"cf-icon-svg cf-icon-svg__error\" viewBox=\"0 0 12 19\"><path d=\"M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z\"></path></svg>"
 
 /***/ }),
 
@@ -4164,13 +4164,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
 /* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
-/* harmony import */ var _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-icons/src/icons/close.svg */ "./packages/cfpb-icons/src/icons/close.svg");
+/* harmony import */ var _cfpb_cfpb_icons_src_icons_error_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-icons/src/icons/error.svg */ "./packages/cfpb-icons/src/icons/error.svg");
 
 
 
 
 
-const closeIcon = _cfpb_cfpb_icons_src_icons_close_svg__WEBPACK_IMPORTED_MODULE_3__;
+const closeIcon = _cfpb_cfpb_icons_src_icons_error_svg__WEBPACK_IMPORTED_MODULE_3__;
 
 const BASE_CLASS = 'o-multiselect';
 const CHECKBOX_INPUT_CLASS = 'a-checkbox';

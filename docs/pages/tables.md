@@ -402,7 +402,7 @@ variation_groups:
               <tbody>
                   <tr>
                       <td data-label="Type">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
+                          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> Blog
                       </td>
                       <td data-label="Title">
                           Three things to do before closing
@@ -413,7 +413,7 @@ variation_groups:
                   </tr>
                   <tr>
                       <td data-label="Type">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975.1 1200" class="cf-icon-svg"><path d="M907.2 277L151 466.7H30c-16.5 0-30 13.5-30 30v197.5c0 16.5 13.5 30 30 30h121l93 23.3-20.6 82.4c-8 32.1 11.5 64.7 43.7 72.8l194.8 48.7c32.1 8 64.7-11.5 72.8-43.7l20.5-82.1 352.1 88.3c37.3 9.4 67.9-14.5 67.9-53v-531c-.1-38.4-30.7-62.3-68-52.9zM476.4 893l-194.7-48.6s0-.1-.1-.1l20.6-82.3 194.7 49-20.5 82z"></path></svg> News
+                          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> News
                       </td>
                       <td data-label="Title">
                           Electronic Mortgage Closings Can Benefit Consumers
@@ -429,7 +429,7 @@ variation_groups:
                   </tr>
                   <tr>
                       <td data-label="Type">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.1 1200" class="cf-icon-svg"><path d="M795.1 263.9H30c-16.5 0-30 13.5-30 30v539.5c0 16.5 13.5 30 30 30h95.3v144.5c0 17.7 8.5 31.8 22.7 37.7 4.2 1.8 8.7 2.7 13.3 2.7 10.3 0 20.6-4.6 29.4-13.3l171.5-171.6h432.9c16.5 0 30-13.5 30-30V293.9c-.1-16.6-13.5-30-30-30zm-90 409H120v-60h585.1v60zm0-158.6H120v-60h585.1v60z"></path></svg> Blog
+                          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> Blog
                       </td>
                       <td data-label="Title">
                           National Day of Civic Hacking 2015
@@ -446,14 +446,14 @@ variation_groups:
               <a class="a-btn
                         a-btn__disabled
                         m-pagination_btn-prev">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"><path d="M494.5 1090.7c-17.3 0-33.8-6.8-46-19L19 642.1c-25.4-25.4-25.4-66.5 0-91.9l429.5-429.5c25.6-25.1 66.8-24.8 91.9.8 24.8 25.3 24.8 65.8 0 91.1L156.9 596.2l383.6 383.6c25.4 25.4 25.4 66.5.1 91.9-12.3 12.2-28.8 19-46.1 19z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.026 1.026 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
                   Newer
               </a>
 
               <a class="a-btn
                         m-pagination_btn-next" href="#">
                   Older
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.6 1200" class="cf-icon-svg"><path d="M65.1 1090.2c-35.9 0-65-29-65.1-64.9 0-17.3 6.8-33.9 19.1-46.1l383.6-383.5L19.1 212.2c-25.1-25.6-24.8-66.8.9-92 25.3-24.8 65.8-24.8 91.1 0l429.5 429.5c25.4 25.4 25.4 66.5 0 91.9L111 1071.2c-12.1 12.2-28.7 19.1-45.9 19z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.025 1.025 0 0 1-.727.302z"/></svg>
               </a>
               <form class="m-pagination_form" action="#">
                   <label class="m-pagination_label" for="m-pagination_current-page">

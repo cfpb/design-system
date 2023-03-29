@@ -1199,7 +1199,7 @@ form validation or feedback to a user's input.
         <div id="field-validation__success-message-demo"
              class="a-form-alert a-form-alert__success"
              role="alert">
-            {% include icons/check-round.svg %}
+            {% include icons/approved-round.svg %}
             <span class="a-form-alert_text">
                 This is an inline alert with a success state.
             </span>
@@ -1291,7 +1291,7 @@ form validation or feedback to a user's input.
       class="a-form-alert a-form-alert__success"
       role="alert"
     >
-      {% include icons/check-round.svg %}
+      {% include icons/approved-round.svg %}
       <span class="a-form-alert_text">
         This is an inline alert with a success state.
       </span>

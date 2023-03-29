@@ -7,7 +7,7 @@ import {
 import MultiselectModel from './MultiselectModel.js';
 import { create } from './MultiselectUtils.js';
 
-import * as closeIconSrc from '@cfpb/cfpb-icons/src/icons/close.svg';
+import * as closeIconSrc from '@cfpb/cfpb-icons/src/icons/error.svg';
 const closeIcon = closeIconSrc.default;
 
 const BASE_CLASS = 'o-multiselect';

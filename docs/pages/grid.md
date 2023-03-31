@@ -20,8 +20,8 @@ variation_groups:
 
       * Mobile: 15px padding on each side
     variations:
-      - variation_name: ""
-        variation_description: ""
+      - variation_name: ''
+        variation_description: ''
         variation_code_snippet: |-
           <div class="cols-12">
               <section>
@@ -94,7 +94,7 @@ variation_groups:
 
       * `xl`: 1231px and up
   - variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: See [grid
           variables](https://cfpb.github.io/design-system/development/variables#grid-1).
         variation_name: Variables
@@ -307,7 +307,7 @@ variation_groups:
                   </div>
               </section>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Nesting
       - variation_code_snippet: >-
           <div>
@@ -374,9 +374,9 @@ variation_groups:
                   <div class="col col-1 prefix-11"><p>prefix 11, suffix 0</p></div>
               </section>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Prefixing/Suffixing
-      - variation_name: "Cf-grid helpers: Wrapper"
+      - variation_name: 'Cf-grid helpers: Wrapper'
         variation_description: >
           Turns an element into a cf-grid wrapper at 801px and above (e.g.,
           `<div class="wrapper">`). Includes some explicit declarations for
@@ -386,14 +386,14 @@ variation_groups:
           <div class="wrapper">
               Wrapper
           </div>
-      - variation_name: "Cf-grid helpers: Column divider modifiers"
+      - variation_name: 'Cf-grid helpers: Column divider modifiers'
         variation_description: See the [column
           dividers](https://cfpb.github.io/design-system/development/column-dividers)
           page for information.
-        variation_code_snippet: ""
+        variation_code_snippet: ''
     variation_group_name: Development
     variation_group_description: >-
-      
+
       **Warning:** _This document is written for people who might want to create a grid system using our Less mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write._
 
 
@@ -464,17 +464,17 @@ variation_groups:
       >   or your compiled Capital Framework CSS will
 
       >   not work perfectly in older browsers.
-guidelines: ""
+guidelines: ''
 eyebrow: Basics
 title: Grid
 description: >
   The grid provides structure for website content. The flexible design adjusts
   for different devices.
-use_cases: ""
-behavior: ""
-accessibility: ""
-related_items: "* [Grid
-  variables](https://cfpb.github.io/design-system/development/variables#grid-1)"
+use_cases: ''
+behavior: ''
+accessibility: ''
+related_items: '* [Grid
+  variables](https://cfpb.github.io/design-system/development/variables#grid-1)'
 last_updated: 2019-09-10T15:02:08.752Z
-research: ""
+research: ''
 ---

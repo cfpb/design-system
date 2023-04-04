@@ -9,19 +9,18 @@ export const StringTrimmedControl = ({
   setActiveStyle,
   setInactiveStyle,
 }) => {
-  const handleChange = (event) => {
-    onChange(event.target.value.trim());
-  };
-
   return (
     <input
       type="text"
       id={forID}
       className={classNameWrapper}
       value={value}
-      onChange={handleChange}
+      onChange={(e) => onChange(e.target.value)}
       onFocus={setActiveStyle}
-      onBlur={setInactiveStyle}
+      onBlur={(e) => {
+        e.target.value.trim();
+        setInactiveStyle();
+      }}
     />
   );
 };

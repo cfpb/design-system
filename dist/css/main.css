@@ -5620,6 +5620,8 @@ input.skip-nav_link:focus::-moz-focus-inner {
 }
 .icon-table td:nth-child(4) {
   width: 46%;
+  -webkit-text-decoration: #d14124 solid line-through;
+          text-decoration: #d14124 solid line-through;
 }
 /* Mobile first means all content boxes are full width */
 .content-25,

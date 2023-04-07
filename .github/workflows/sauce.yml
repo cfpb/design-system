@@ -20,11 +20,11 @@ jobs:
         run: gem install bundler
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
 
       - name: Install Dependencies
         run: yarn install
@@ -40,4 +40,10 @@ jobs:
         # doesn't seem currently possible:
         # https://github.com/actions/runner/issues/520
         if: ${{ github.repository_owner == 'cfpb' }}
+        env:
+          # These credentials are from @contolini's CFPB Sauce Labs account
+          # They're defined on the repo's settings page:
+          # https://github.com/cfpb/design-system/settings/secrets
+          SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+          SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
         run: yarn test:browser:cloud

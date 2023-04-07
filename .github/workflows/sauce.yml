@@ -28,10 +28,12 @@ jobs:
       run: |
         yarn install
         yarn after-install
+
     - name: Start local Design System website server
       run: |
         yarn start &
         sleep 5
+
     - name: Run browser tests
       # Don't run these tests on forks. It would be nice to instead check
       # to see if the Sauce Labs environment variables are defined, but that

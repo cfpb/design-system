@@ -142,4 +142,4 @@ const Expandable = AtomicComponent.extend({
   getLabelText: getLabelText,
 });
 
-export default Expandable;
+export { Expandable };

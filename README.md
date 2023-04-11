@@ -44,9 +44,9 @@ Import individual Less stylesheets or the entire design system into your project
 Components with JavaScript can also be imported:
 
 ```js
-import Expandable from '@cfpb/cfpb-expandables/src/Expandable.js'';
+import { Expandable } from '@cfpb/cfpb-expandables';
 
-Expandable.init( document.querySelector( '#container' ) );
+Expandable.init(document.querySelector('#container'));
 ```
 
 > NOTE: Be sure to run the Less files through

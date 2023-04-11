@@ -1,7 +1,7 @@
 import {
   add,
   contains
-} from '../../../../../../packages/cfpb-atomic-component/src/utilities/data-hook.js';
+} from '../../../../../../packages/cfpb-atomic-component';
 
 
 let testComponent;

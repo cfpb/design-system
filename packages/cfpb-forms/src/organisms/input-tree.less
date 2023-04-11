@@ -1,0 +1,61 @@
+.o-input-tree {
+  // Default details element styles
+  summary:focus {
+    border: none;
+    outline: 1px dotted @pacific;
+    outline-offset: 2px;
+  }
+
+  summary:hover {
+    cursor: pointer;
+  }
+
+  // Hide default open/close arrow.
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary label {
+    position: relative;
+    pointer-events: none;
+
+    &::before {
+      pointer-events: all;
+    }
+  }
+
+  summary:hover {
+    color: @pacific;
+  }
+
+  &[open] summary &_cue-open {
+    display: none;
+  }
+
+  &:not([open]) summary &_cue-close {
+    display: none;
+  }
+
+  &_children {
+    list-style: none;
+    padding-top: unit((10px / @base-font-size-px), em);
+    padding-left: unit((20px / @base-font-size-px), em);
+  }
+
+  .respond-to-max( @bp-xs-max, {
+    summary {
+      width: fit-content;
+      pointer-events: none;
+
+      label {
+        pointer-events: all;
+      }
+    }
+
+    &_children,
+    &_cue-open,
+    &_cue-close {
+      display: none;
+    }
+  });
+}

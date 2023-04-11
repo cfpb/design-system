@@ -18,6 +18,39 @@ description: >-
 variation_groups:
   - variations:
       - variation_code_snippet: >-
+          <details class="o-input-tree">
+                <summary>
+                    <div class="m-form-field m-form-field__checkbox">
+                        <input class="a-checkbox" type="checkbox" id="test_it_1" name="test_checkbox">
+                        <label class="a-label" for="test_it_1">
+                            <div>Inline label
+                            <span class="o-input-tree_cue-open">
+                                {% include icons/down.svg %}
+                            </span>
+                            <span class="o-input-tree_cue-close">
+                                {% include icons/up.svg %}
+                            </span></div>
+                        </label>
+                    </div>
+                </summary>
+                    <ul class="o-input-tree_children">
+                        <li>
+                            <div class="m-form-field m-form-field__checkbox">
+                                <input class="a-checkbox" type="checkbox" id="test_it_2" name="test_checkbox">
+                                <label class="a-label" for="test_it_2">Inline label</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="m-form-field m-form-field__checkbox">
+                                <input class="a-checkbox" type="checkbox" id="test_it_3" name="test_checkbox">
+                                <label class="a-label" for="test_it_3">Inline label</label>
+                            </div>
+                        </li>
+                    </ul>
+            </details>
+        variation_description: ''
+        variation_name: Input tree
+      - variation_code_snippet: >-
           <form class="o-form">
 
           <legend class="a-legend">

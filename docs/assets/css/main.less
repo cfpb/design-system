@@ -38,41 +38,6 @@ nav ul {
   padding: 0;
 }
 
-// Default details element styles
-details summary:focus {
-  border: none;
-  outline: 1px dotted @pacific;
-  outline-offset: 2px;
-}
-
-details summary:hover {
-  cursor: pointer;
-}
-
-// Hide default open/close arrow.
-details summary::-webkit-details-marker {
-  display: none;
-}
-
-details summary {
-  position: relative;
-}
-
-details summary::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 8px;
-  height: 10px;
-  display: block;
-  content: '';
-  .u-svg-inline-bg( 'down' );
-}
-
-details[open] summary::after {
-  .u-svg-inline-bg( 'up' );
-}
-
 // Set padding for main content blocks.
 .m-global-eyebrow .a-tagline,
 .site-header,
@@ -104,6 +69,41 @@ main {
   padding-right: 30px;
   border-right: 1px solid @gray-40;
   padding-bottom: 30px;
+
+  // Default details element styles
+  details summary:focus {
+    border: none;
+    outline: 1px dotted @pacific;
+    outline-offset: 2px;
+  }
+
+  details summary:hover {
+    cursor: pointer;
+  }
+
+  // Hide default open/close arrow.
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details summary {
+    position: relative;
+  }
+
+  details summary::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 10px;
+    display: block;
+    content: '';
+    .u-svg-inline-bg( 'down' );
+  }
+
+  details[open] summary::after {
+    .u-svg-inline-bg( 'up' );
+  }
 }
 
 .ds-content {

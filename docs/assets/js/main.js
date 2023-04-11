@@ -3,10 +3,11 @@ import AnchorJS from 'anchor-js';
 import {
   Expandable,
   ExpandableGroup,
+  ExpandableFacet,
   Summary,
   SummaryMinimal,
 } from '@cfpb/cfpb-expandables';
-import { Multiselect } from '@cfpb/cfpb-forms';
+import { Multiselect, InputTree } from '@cfpb/cfpb-forms';
 import {
   FlyoutMenu,
   AlphaTransition,
@@ -37,6 +38,8 @@ Summary.init();
 SummaryMinimal.init();
 ExpandableGroup.init();
 Expandable.init();
+ExpandableFacet.init();
+InputTree.init();
 Multiselect.init();
 
 // Exporting these classes to the window so that the transition-patterns.md

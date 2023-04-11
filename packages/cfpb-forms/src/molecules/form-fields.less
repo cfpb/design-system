@@ -119,6 +119,12 @@
         // For some reason SVG isn't accepting hex values for the fill.
         .u-svg-inline-bg( 'approved', @gray );
       }
+
+      &:indeterminate + .a-label::before {
+        background: @gray-40;
+        outline: 3px solid #fff;
+        outline-offset: -4px;
+      }
     }
   }
 

@@ -71,19 +71,12 @@ function EventObserver() {
     return this;
   }
 
-  /**
-   * @returns {object} Map of registered events.
-   */
-  function getRegisteredEvents() {
-    return _events;
-  }
-
   this.addEventListener = addEventListener;
   this.removeEventListener = removeEventListener;
   this.dispatchEvent = dispatchEvent;
-  this.getRegisteredEvents = getRegisteredEvents;
+  this.getRegisteredEvents = () => _events;
 
   return this;
 }
 
-export default EventObserver;
+export { EventObserver };

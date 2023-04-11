@@ -44,13 +44,13 @@ For example, you could create one of our icon links like so:
 
 <a class="a-link a-link__icon" href="#">
     <span class="a-link_text">Download the info sheet</span>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 651.7 1200" class="cf-icon-svg"><path d="M507.1 692.8c-15.6-15.6-40.9-15.6-56.6 0l-85.1 85.1V466.6c0-22.1-17.9-40-40-40s-40 17.9-40 40V778l-85.1-85.1c-15.6-15.6-40.9-15.6-56.6 0-15.6 15.6-15.6 40.9 0 56.6L297 902.9c7.5 7.5 17.7 11.7 28.3 11.7s20.8-4.2 28.3-11.7l153.3-153.4c15.8-15.7 15.8-41 .2-56.7z"/><path d="M30 161c-16.5 0-30 13.5-30 30v827.8c0 16.5 13.5 30 30 30h591.7c16.5 0 30-13.5 30-30V343.7L469 161H30zm389.6 60v134.8c0 19.9 16.3 36.2 36.2 36.2h135.9V988.8H60V221h359.6z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
 </a>
 
 ```
 <a class="a-link a-link__icon" href="#">
     <span class="a-link_text">Download the info sheet</span>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 651.7 1200" class="cf-icon-svg"><path d="M507.1 692.8c-15.6-15.6-40.9-15.6-56.6 0l-85.1 85.1V466.6c0-22.1-17.9-40-40-40s-40 17.9-40 40V778l-85.1-85.1c-15.6-15.6-40.9-15.6-56.6 0-15.6 15.6-15.6 40.9 0 56.6L297 902.9c7.5 7.5 17.7 11.7 28.3 11.7s20.8-4.2 28.3-11.7l153.3-153.4c15.8-15.7 15.8-41 .2-56.7z"/><path d="M30 161c-16.5 0-30 13.5-30 30v827.8c0 16.5 13.5 30 30 30h591.7c16.5 0 30-13.5 30-30V343.7L469 161H30zm389.6 60v134.8c0 19.9 16.3 36.2 36.2 36.2h135.9V988.8H60V221h359.6z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
 </a>
 ```
 
@@ -155,34 +155,41 @@ to be made aware that the website is working on responding to their actions.
 Each icon has a circled variant shown in the second column
 (or square, in the case of the social media icons)
 that can be accessed by appending `-round` (or `-square`) to
-the canonical name or any of its aliases.
+the canonical name.
+
+## Aliases
+
+Use the canonical icon name when referencing the icons in code,
+however, "aliases" are provided in the table below to help you
+search this page for a particular icon.
 
 ### Navigation icons
 
-| icon                                | icon-round                                | canonical name | aliases       |
-| ----------------------------------- | ----------------------------------------- | -------------- | ------------- |
-| {% include icons/up.svg %}          | {% include icons/up-round.svg %}          | up             | chevron-up    |
-| {% include icons/right.svg %}       | {% include icons/right-round.svg %}       | right          | chevron-right |
-| {% include icons/down.svg %}        | {% include icons/down-round.svg %}        | down           | chevron-down  |
-| {% include icons/left.svg %}        | {% include icons/left-round.svg %}        | left           | chevron-left  |
-| {% include icons/arrow-up.svg %}    | {% include icons/arrow-up-round.svg %}    | arrow-up       |               |
-| {% include icons/arrow-right.svg %} | {% include icons/arrow-right-round.svg %} | arrow-right    |               |
-| {% include icons/arrow-down.svg %}  | {% include icons/arrow-down-round.svg %}  | arrow-down     |               |
-| {% include icons/arrow-left.svg %}  | {% include icons/arrow-left-round.svg %}  | arrow-left     |               |
-| {% include icons/left-right.svg %}  | {% include icons/left-right-round.svg %}  | left-right     | horizontal    |
-| {% include icons/up-down.svg %}     | {% include icons/up-down-round.svg %}     | up-down        | vertical      |
+| icon                                | icon-round                                | canonical name | aliases (for searchability only) |
+| ----------------------------------- | ----------------------------------------- | -------------- | -------------------------------- |
+| {% include icons/up.svg %}          | {% include icons/up-round.svg %}          | up             | chevron-up                       |
+| {% include icons/right.svg %}       | {% include icons/right-round.svg %}       | right          | chevron-right                    |
+| {% include icons/down.svg %}        | {% include icons/down-round.svg %}        | down           | chevron-down                     |
+| {% include icons/left.svg %}        | {% include icons/left-round.svg %}        | left           | chevron-left                     |
+| {% include icons/arrow-up.svg %}    | {% include icons/arrow-up-round.svg %}    | arrow-up       |                                  |
+| {% include icons/arrow-right.svg %} | {% include icons/arrow-right-round.svg %} | arrow-right    |                                  |
+| {% include icons/arrow-down.svg %}  | {% include icons/arrow-down-round.svg %}  | arrow-down     |                                  |
+| {% include icons/arrow-left.svg %}  | {% include icons/arrow-left-round.svg %}  | arrow-left     |                                  |
+| {% include icons/left-right.svg %}  | {% include icons/left-right-round.svg %}  | left-right     | horizontal                       |
+| {% include icons/up-down.svg %}     | {% include icons/up-down-round.svg %}     | up-down        | vertical                         |
 
 {: class="icon-table"}
 
 ### Status icons
 
-| icon                               | icon-round                               | canonical name | aliases                                            |
+| icon                               | icon-round                               | canonical name | aliases (for searchability only)                   |
 | ---------------------------------- | ---------------------------------------- | -------------- | -------------------------------------------------- |
 | {% include icons/approved.svg %}   | {% include icons/approved-round.svg %}   | approved       | check, checkmark, success                          |
 | {% include icons/error.svg %}      | {% include icons/error-round.svg %}      | error          | delete, close, remove, multiply, multiplication, x |
 | {% include icons/warning.svg %}    | {% include icons/warning-round.svg %}    | warning        | alert, exclamation, exclamation-mark               |
 | {% include icons/help.svg %}       | {% include icons/help-round.svg %}       | help           | question, question-mark                            |
-| {% include icons/update.svg %}     | {% include icons/update-round.svg %}     | update         | spinner, updating _(used for animated state)_      |
+| {% include icons/update.svg %}     | {% include icons/update-round.svg %}     | update         |                                                    |
+| {% include icons/updating.svg %}   | {% include icons/updating-round.svg %}   | updating       | spinner                                            |
 | {% include icons/power.svg %}      | {% include icons/power-round.svg %}      | power          | on-off                                             |
 | {% include icons/dollar.svg %}     | {% include icons/dollar-round.svg %}     | dollar         | dollar-sign, cost                                  |
 | {% include icons/plus.svg %}       | {% include icons/plus-round.svg %}       | plus           | add, addition, expand, show                        |
@@ -195,62 +202,62 @@ the canonical name or any of its aliases.
 
 ### Social/sharing icons
 
-| icon                              | icon-square                              | canonical name | aliases                 |
-| --------------------------------- | ---------------------------------------- | -------------- | ----------------------- |
-| {% include icons/email.svg %}     | {% include icons/email-square.svg %}     | email          | envelope, envelope-back |
-| {% include icons/facebook.svg %}  | {% include icons/facebook-square.svg %}  | facebook       |                         |
-| {% include icons/flickr.svg %}    | {% include icons/flickr-square.svg %}    | flickr         |                         |
-| {% include icons/github.svg %}    | {% include icons/github-square.svg %}    | github         |                         |
-| {% include icons/linkedin.svg %}  | {% include icons/linkedin-square.svg %}  | linkedin       |                         |
-| {% include icons/pinterest.svg %} | {% include icons/pinterest-square.svg %} | pinterest      |                         |
-| {% include icons/twitter.svg %}   | {% include icons/twitter-square.svg %}   | twitter        |                         |
-| {% include icons/youtube.svg %}   | {% include icons/youtube-square.svg %}   | youtube        |                         |
+| icon                              | icon-square                              | canonical name | aliases (for searchability only) |
+| --------------------------------- | ---------------------------------------- | -------------- | -------------------------------- |
+| {% include icons/email.svg %}     | {% include icons/email-square.svg %}     | email          | envelope, envelope-back          |
+| {% include icons/facebook.svg %}  | {% include icons/facebook-square.svg %}  | facebook       |                                  |
+| {% include icons/flickr.svg %}    | {% include icons/flickr-square.svg %}    | flickr         |                                  |
+| {% include icons/github.svg %}    | {% include icons/github-square.svg %}    | github         |                                  |
+| {% include icons/linkedin.svg %}  | {% include icons/linkedin-square.svg %}  | linkedin       |                                  |
+| {% include icons/pinterest.svg %} | {% include icons/pinterest-square.svg %} | pinterest      |                                  |
+| {% include icons/twitter.svg %}   | {% include icons/twitter-square.svg %}   | twitter        |                                  |
+| {% include icons/youtube.svg %}   | {% include icons/youtube-square.svg %}   | youtube        |                                  |
 
 {: class="icon-table"}
 
 ### Communications icons
 
-| icon                                 | icon-round                                 | canonical name | aliases             |
-| ------------------------------------ | ------------------------------------------ | -------------- | ------------------- |
-| {% include icons/email.svg %}        | {% include icons/email-round.svg %}        | email          | envelope-back       |
-| {% include icons/fax.svg %}          | {% include icons/fax-round.svg %}          | fax            | fax-machine         |
-| {% include icons/mail.svg %}         | {% include icons/mail-round.svg %}         | mail           | envelope-front      |
-| {% include icons/phone.svg %}        | {% include icons/phone-round.svg %}        | phone          | telephone, handset  |
-| {% include icons/photo.svg %}        | {% include icons/photo-round.svg %}        | photo          | photography, camera |
-| {% include icons/presentation.svg %} | {% include icons/presentation-round.svg %} | presentation   | screen              |
-| {% include icons/technology.svg %}   | {% include icons/technology-round.svg %}   | technology     | cellphone, tablet   |
-| {% include icons/video.svg %}        | {% include icons/video-round.svg %}        | video          | movie, camcorder    |
-| {% include icons/web.svg %}          | {% include icons/web-round.svg %}          | web            | globe, world        |
+| icon                                 | icon-round                                 | canonical name | aliases (for searchability only) |
+| ------------------------------------ | ------------------------------------------ | -------------- | -------------------------------- |
+| {% include icons/email.svg %}        | {% include icons/email-round.svg %}        | email          | envelope-back                    |
+| {% include icons/fax.svg %}          | {% include icons/fax-round.svg %}          | fax            | fax-machine                      |
+| {% include icons/mail.svg %}         | {% include icons/mail-round.svg %}         | mail           | envelope-front                   |
+| {% include icons/phone.svg %}        | {% include icons/phone-round.svg %}        | phone          | telephone, handset               |
+| {% include icons/photo.svg %}        | {% include icons/photo-round.svg %}        | photo          | photography, camera              |
+| {% include icons/presentation.svg %} | {% include icons/presentation-round.svg %} | presentation   | screen                           |
+| {% include icons/technology.svg %}   | {% include icons/technology-round.svg %}   | technology     | cellphone, tablet                |
+| {% include icons/video.svg %}        | {% include icons/video-round.svg %}        | video          | movie, camcorder                 |
+| {% include icons/web.svg %}          | {% include icons/web-round.svg %}          | web            | globe, world                     |
 
 {: class="icon-table"}
 
 ### Document icons
 
-| icon                                  | icon-round                                  | canonical name | aliases                 |
-| ------------------------------------- | ------------------------------------------- | -------------- | ----------------------- |
-| {% include icons/appendix.svg %}      | {% include icons/appendix-round.svg %}      | appendix       |                         |
-| {% include icons/book.svg %}          | {% include icons/book-round.svg %}          | book           |                         |
-| {% include icons/copy.svg %}          | {% include icons/copy-round.svg %}          | copy           | duplicate               |
-| {% include icons/document.svg %}      | {% include icons/document-round.svg %}      | document       | doc, pdf, page          |
-| {% include icons/download.svg %}      | {% include icons/download-round.svg %}      | download       | document-down           |
-| {% include icons/upload.svg %}        | {% include icons/upload-round.svg %}        | upload         | document-up             |
-| {% include icons/edit.svg %}          | {% include icons/edit-round.svg %}          | edit           | pencil, write           |
-| {% include icons/folder.svg %}        | {% include icons/folder-round.svg %}        | folder         |                         |
-| {% include icons/folder-add.svg %}    | {% include icons/folder-add-round.svg %}    | folder-add     | folder-plus             |
-| {% include icons/folder-delete.svg %} | {% include icons/folder-delete-round.svg %} | folder-delete  | folder-remove, folder-x |
-| {% include icons/folder-empty.svg %}  | {% include icons/folder-empty-round.svg %}  | folder-empty   |                         |
-| {% include icons/folder-save.svg %}   | {% include icons/folder-save-round.svg %}   | folder-save    | folder-check            |
-| {% include icons/paper-clip.svg %}    | {% include icons/paper-clip-round.svg %}    | paper-clip     | attach, attachment      |
-| {% include icons/print.svg %}         | {% include icons/print-round.svg %}         | print          | printer                 |
-| {% include icons/rss.svg %}           | {% include icons/rss-round.svg %}           | rss            | feed                    |
-| {% include icons/save.svg %}          | {% include icons/save-round.svg %}          | save           | disk, floppy-disk       |
-| {% include icons/supplement.svg %}    | {% include icons/supplement-round.svg %}    | supplement     | add-document, add-page  |
+| icon                                  | icon-round                                  | canonical name | aliases (for searchability only) |
+| ------------------------------------- | ------------------------------------------- | -------------- | -------------------------------- |
+| {% include icons/appendix.svg %}      | {% include icons/appendix-round.svg %}      | appendix       |                                  |
+| {% include icons/book.svg %}          | {% include icons/book-round.svg %}          | book           |                                  |
+| {% include icons/copy.svg %}          | {% include icons/copy-round.svg %}          | copy           | duplicate                        |
+| {% include icons/document.svg %}      | {% include icons/document-round.svg %}      | document       | doc, pdf, page                   |
+| {% include icons/download.svg %}      | {% include icons/download-round.svg %}      | download       | document-down                    |
+| {% include icons/upload.svg %}        | {% include icons/upload-round.svg %}        | upload         | document-up                      |
+| {% include icons/edit.svg %}          | {% include icons/edit-round.svg %}          | edit           | pencil, write                    |
+| {% include icons/folder.svg %}        | {% include icons/folder-round.svg %}        | folder         |                                  |
+| {% include icons/folder-add.svg %}    | {% include icons/folder-add-round.svg %}    | folder-add     | folder-plus                      |
+| {% include icons/folder-delete.svg %} | {% include icons/folder-delete-round.svg %} | folder-delete  | folder-remove, folder-x          |
+| {% include icons/folder-empty.svg %}  | {% include icons/folder-empty-round.svg %}  | folder-empty   |                                  |
+| {% include icons/folder-save.svg %}   | {% include icons/folder-save-round.svg %}   | folder-save    | folder-check                     |
+| {% include icons/paper-clip.svg %}    | {% include icons/paper-clip-round.svg %}    | paper-clip     | attach, attachment               |
+| {% include icons/print.svg %}         | {% include icons/print-round.svg %}         | print          | printer                          |
+| {% include icons/rss.svg %}           | {% include icons/rss-round.svg %}           | rss            | feed                             |
+| {% include icons/save.svg %}          | {% include icons/save-round.svg %}          | save           | disk, floppy-disk                |
+| {% include icons/supplement.svg %}    | {% include icons/supplement-round.svg %}    | supplement     | add-document, add-page           |
 
 {: class="icon-table"}
 
 ### Financial products, services, and concepts
 
-| icon                                          | icon-round                                          | canonical name        | aliases                                   |
+| icon                                          | icon-round                                          | canonical name        | aliases (for searchability only)          |
 | --------------------------------------------- | --------------------------------------------------- | --------------------- | ----------------------------------------- |
 | {% include icons/activity.svg %}              | {% include icons/activity-round.svg %}              | activity              | clipboard                                 |
 | {% include icons/bank.svg %}                  | {% include icons/bank-round.svg %}                  | bank                  | bank-account                              |
@@ -289,7 +296,7 @@ the canonical name or any of its aliases.
 
 ### Expense icons
 
-| icon                                  | icon-round                                  | canonical name | aliases                              |
+| icon                                  | icon-round                                  | canonical name | aliases (for searchability only)     |
 | ------------------------------------- | ------------------------------------------- | -------------- | ------------------------------------ |
 | {% include icons/briefcase.svg %}     | {% include icons/briefcase-round.svg %}     | briefcase      |                                      |
 | {% include icons/bus.svg %}           | {% include icons/bus-round.svg %}           | bus            | public-transit                       |
@@ -320,7 +327,7 @@ the canonical name or any of its aliases.
 
 ### Web application icons
 
-| icon                                   | icon-round                                   | canonical name | aliases                          |
+| icon                                   | icon-round                                   | canonical name | aliases (for searchability only) |
 | -------------------------------------- | -------------------------------------------- | -------------- | -------------------------------- |
 | {% include icons/agreement.svg %}      | {% include icons/agreement-round.svg %}      | agreement      | handshake                        |
 | {% include icons/audio-max.svg %}      | {% include icons/audio-max-round.svg %}      | audio-max      | audio-high                       |
@@ -344,7 +351,7 @@ the canonical name or any of its aliases.
 | {% include icons/flag.svg %}           | {% include icons/flag-round.svg %}           | flag           |                                  |
 | {% include icons/history.svg %}        | {% include icons/history-round.svg %}        | history        |                                  |
 | {% include icons/information.svg %}    | {% include icons/information-round.svg %}    | information    | info, i                          |
-| {% include icons/light-bulb.svg %}     | {% include icons/light-bulb-round.svg %}     | light-bulb     | idea                             |
+| {% include icons/lightbulb.svg %}      | {% include icons/lightbulb-round.svg %}      | lightbulb      | idea                             |
 | {% include icons/link.svg %}           | {% include icons/link-round.svg %}           | link           |                                  |
 | {% include icons/list.svg %}           | {% include icons/list-round.svg %}           | list           |                                  |
 | {% include icons/lock.svg %}           | {% include icons/lock-round.svg %}           | lock           | locked, padlock                  |

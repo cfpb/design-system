@@ -1,5 +1,6 @@
 docs/_site
 docs/dist
+docs/_includes/*.html
 test/unit-test-coverage/
 .lighthouseci
 .github

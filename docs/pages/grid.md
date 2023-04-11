@@ -1,11 +1,7 @@
 ---
-title: Grid
 layout: variation
 section: foundation
 status: Released
-description: >
-  The grid provides structure for website content. The flexible design adjusts
-  for different devices.
 variation_groups:
   - variation_group_name: Standard grid
     variation_group_description: >-
@@ -391,9 +387,9 @@ variation_groups:
               Wrapper
           </div>
       - variation_name: 'Cf-grid helpers: Column divider modifiers'
-        variation_description: See the [column dividers
-          page](https://cfpb.github.io/design-system/components/column-dividers#column-divider-modifiers)
-          for information.
+        variation_description: See the [column
+          dividers](https://cfpb.github.io/design-system/development/column-dividers)
+          page for information.
         variation_code_snippet: ''
     variation_group_name: Development
     variation_group_description: >-
@@ -468,13 +464,17 @@ variation_groups:
       >   or your compiled Capital Framework CSS will
 
       >   not work perfectly in older browsers.
-use_cases: ''
 guidelines: ''
+eyebrow: Basics
+title: Grid
+description: >
+  The grid provides structure for website content. The flexible design adjusts
+  for different devices.
+use_cases: ''
 behavior: ''
 accessibility: ''
-research: ''
 related_items: '* [Grid
   variables](https://cfpb.github.io/design-system/development/variables#grid-1)'
 last_updated: 2019-09-10T15:02:08.752Z
-eyebrow: Basics
+research: ''
 ---

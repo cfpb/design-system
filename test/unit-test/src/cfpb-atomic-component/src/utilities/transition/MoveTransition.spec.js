@@ -1,4 +1,4 @@
-import MoveTransition from '../../../../../../../packages/cfpb-atomic-component/src/utilities/transition/MoveTransition.js';
+import { MoveTransition } from '../../../../../../../packages/cfpb-atomic-component';
 
 let transition;
 
@@ -12,7 +12,11 @@ describe('MoveTransition', () => {
     document.body.innerHTML = HTML_SNIPPET;
     contentDom = document.querySelector('.content-1');
     transition = new MoveTransition(contentDom);
-    transition.init();
+    transition.init(MoveTransition.CLASSES.MOVE_TO_ORIGIN);
+  });
+
+  afterEach(() => {
+    transition.remove();
   });
 
   describe('.moveToOrigin()', () => {
@@ -21,26 +25,43 @@ describe('MoveTransition', () => {
     });
 
     it('should apply u-move-to-origin class', () => {
-      transition.moveToOrigin();
-      const classes =
-        'content-1 u-move-transition ' + 'u-is-animating u-move-to-origin';
-      expect(contentDom.className).toStrictEqual(classes);
-      transition.addEventListener('transitionend', () => {
-        const classes = 'content-1 u-move-transition u-move-to-origin';
+      let classes;
+      const handler = () => {
+        classes = 'content-1 u-move-transition';
         expect(contentDom.className).toStrictEqual(classes);
-      });
+        transition.removeEventListener('transitionbegin', handler);
+      };
+      transition.addEventListener('transitionbegin', handler);
+
+      const handler2 = () => {
+        classes = 'content-1 u-move-transition u-move-to-origin';
+        expect(contentDom.className).toStrictEqual(classes);
+        transition.removeEventListener('transitionend', handler2);
+      };
+      transition.addEventListener('transitionend', handler2);
+
+      transition.moveToOrigin();
     });
 
     it('should remove u-is-animating class when transition duration is zero', () => {
       transition.animateOff();
-      transition.moveToOrigin();
-      const classes =
-        'content-1 u-move-transition ' + 'u-no-animation u-move-to-origin';
-      expect(contentDom.className).toStrictEqual(classes);
-      transition.addEventListener('transitionend', () => {
-        const classes = 'content-1 u-move-transition u-move-to-origin';
+
+      let classes;
+      const handler = () => {
+        classes = 'content-1 u-move-transition u-no-animation';
         expect(contentDom.className).toStrictEqual(classes);
-      });
+        transition.removeEventListener('transitionbegin', handler);
+      };
+      transition.addEventListener('transitionbegin', handler);
+
+      const handler2 = () => {
+        classes = 'content-1 u-move-transition u-no-animation';
+        expect(contentDom.className).toStrictEqual(classes);
+        transition.removeEventListener('transitionend', handler2);
+      };
+      transition.addEventListener('transitionend', handler2);
+
+      transition.moveToOrigin();
     });
   });
 
@@ -50,13 +71,22 @@ describe('MoveTransition', () => {
     });
 
     it('should apply u-move-to-origin class', () => {
-      transition.moveRight();
-      let classes = 'content-1 u-move-transition u-is-animating u-move-right';
-      expect(contentDom.className).toStrictEqual(classes);
-      transition.addEventListener('transitionend', () => {
+      let classes;
+      const handler = () => {
+        classes = 'content-1 u-move-transition';
+        expect(contentDom.className).toStrictEqual(classes);
+        transition.removeEventListener('transitionbegin', handler);
+      };
+      transition.addEventListener('transitionbegin', handler);
+
+      const handler2 = () => {
         classes = 'content-1 u-move-transition u-move-right';
         expect(contentDom.className).toStrictEqual(classes);
-      });
+        transition.removeEventListener('transitionend', handler2);
+      };
+      transition.addEventListener('transitionend', handler2);
+
+      transition.moveRight();
     });
   });
 
@@ -66,13 +96,22 @@ describe('MoveTransition', () => {
     });
 
     it('should apply u-move-to-origin class', () => {
-      transition.moveUp();
-      let classes = 'content-1 u-move-transition u-is-animating u-move-up';
-      expect(contentDom.className).toStrictEqual(classes);
-      transition.addEventListener('transitionend', () => {
+      let classes;
+      const handler = () => {
+        classes = 'content-1 u-move-transition';
+        expect(contentDom.className).toStrictEqual(classes);
+        transition.removeEventListener('transitionbegin', handler);
+      };
+      transition.addEventListener('transitionbegin', handler);
+
+      const handler2 = () => {
         classes = 'content-1 u-move-transition u-move-up';
         expect(contentDom.className).toStrictEqual(classes);
-      });
+        transition.removeEventListener('transitionend', handler2);
+      };
+      transition.addEventListener('transitionend', handler2);
+
+      transition.moveUp();
     });
   });
 
@@ -82,45 +121,60 @@ describe('MoveTransition', () => {
     });
 
     it('should apply u-move-left class', () => {
-      transition.moveLeft();
-      let classes = 'content-1 u-move-transition u-is-animating u-move-left';
-      expect(contentDom.className).toStrictEqual(classes);
-      transition.addEventListener('transitionend', () => {
+      let classes;
+      const handler = () => {
+        classes = 'content-1 u-move-transition';
+        expect(contentDom.className).toStrictEqual(classes);
+        transition.removeEventListener('transitionbegin', handler);
+      };
+      transition.addEventListener('transitionbegin', handler);
+
+      const handler2 = () => {
         classes = 'content-1 u-move-transition u-move-left';
         expect(contentDom.className).toStrictEqual(classes);
-      });
+        transition.removeEventListener('transitionend', handler2);
+      };
+      transition.addEventListener('transitionend', handler2);
+
+      transition.moveLeft();
     });
 
     it('should apply u-move-left-2x class', () => {
-      transition.moveLeft(2);
-      let classes = 'content-1 u-move-transition u-is-animating u-move-left-2x';
-      expect(contentDom.className).toStrictEqual(classes);
-      transition.addEventListener('transitionend', () => {
+      let classes;
+      const handler = () => {
+        classes = 'content-1 u-move-transition';
+        expect(contentDom.className).toStrictEqual(classes);
+        transition.removeEventListener('transitionbegin', handler);
+      };
+      transition.addEventListener('transitionbegin', handler);
+
+      const handler2 = () => {
         classes = 'content-1 u-move-transition u-move-left-2x';
         expect(contentDom.className).toStrictEqual(classes);
-      });
+        transition.removeEventListener('transitionend', handler2);
+      };
+      transition.addEventListener('transitionend', handler2);
+
+      transition.moveLeft2();
     });
 
     it('should apply u-move-left-3x class', () => {
-      transition.moveLeft(3);
-      let classes = 'content-1 u-move-transition u-is-animating u-move-left-3x';
-      expect(contentDom.className).toStrictEqual(classes);
-      transition.addEventListener('transitionend', () => {
+      let classes;
+      const handler = () => {
+        classes = 'content-1 u-move-transition';
+        expect(contentDom.className).toStrictEqual(classes);
+        transition.removeEventListener('transitionbegin', handler);
+      };
+      transition.addEventListener('transitionbegin', handler);
+
+      const handler2 = () => {
         classes = 'content-1 u-move-transition u-move-left-3x';
         expect(contentDom.className).toStrictEqual(classes);
-      });
-    });
+        transition.removeEventListener('transitionend', handler2);
+      };
+      transition.addEventListener('transitionend', handler2);
 
-    it('should throw error when move left range is out-of-range', () => {
-      /**
-       * @returns {MoveTransition} An instance.
-       */
-      function checkMoveLeftOutOfRange() {
-        return transition.moveLeft(4);
-      }
-      expect(checkMoveLeftOutOfRange).toThrow(
-        'MoveTransition: moveLeft count is out of range!'
-      );
+      transition.moveLeft3();
     });
   });
 });

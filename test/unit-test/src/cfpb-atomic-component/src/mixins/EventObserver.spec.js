@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import EventObserver from '../../../../../../packages/cfpb-atomic-component/src/mixins/EventObserver.js';
+import { EventObserver } from '../../../../../../packages/cfpb-atomic-component';
 
 const HTML_SNIPPET = '<!DOCTYPE html>';
 

@@ -41,12 +41,13 @@
 .cf-icon-svg {
   height: @cf-icon-height;
   vertical-align: text-top;
-  fill: currentColor;
+  fill: currentcolor;
 
   // IE 10 & 11 require a max-width otherwise the SVG takes up 100%.
   max-width: 1em;
 
-  &__updating {
+  &__updating,
+  &__updating-round {
     animation: updating-animation 1.25s infinite linear;
     transform-origin: 50% 50%;
   }

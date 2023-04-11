@@ -1,6 +1,4 @@
-// Required modules.
-import BaseTransition from './BaseTransition.js';
-import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
+import { BaseTransition, EventObserver } from '@cfpb/cfpb-atomic-component';
 
 // Exported constants.
 const CLASSES = {
@@ -19,25 +17,16 @@ const CLASSES = {
  * @returns {AlphaTransition} An instance.
  */
 function AlphaTransition(element) {
-  const _baseTransition = new BaseTransition(element, CLASSES);
+  const eventObserver = new EventObserver();
+  const _baseTransition = new BaseTransition(element, CLASSES, this);
 
   /**
-   * Handle the end of a transition.
-   */
-  function _transitionComplete() {
-    this.dispatchEvent(BaseTransition.END_EVENT, { target: this });
-  }
-
-  /**
+   * @param {Function} initialClass - The initial state for this transition.
    * @returns {AlphaTransition} An instance.
    */
-  function init() {
-    _baseTransition.init();
-    const _transitionCompleteBinded = _transitionComplete.bind(this);
-    _baseTransition.addEventListener(
-      BaseTransition.END_EVENT,
-      _transitionCompleteBinded
-    );
+  function init(initialClass) {
+    _baseTransition.init(initialClass);
+
     return this;
   }
 
@@ -64,7 +53,6 @@ function AlphaTransition(element) {
   }
 
   // Attach public events.
-  const eventObserver = new EventObserver();
   this.addEventListener = eventObserver.addEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
   this.removeEventListener = eventObserver.removeEventListener;
@@ -86,4 +74,4 @@ function AlphaTransition(element) {
 // Public static properties.
 AlphaTransition.CLASSES = CLASSES;
 
-export default AlphaTransition;
+export { AlphaTransition };

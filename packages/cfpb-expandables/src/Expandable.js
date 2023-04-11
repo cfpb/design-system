@@ -2,8 +2,8 @@
    Expandable Organism
    ========================================================================== */
 
-import AtomicComponent from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
-import EventObserver from '@cfpb/cfpb-atomic-component/src/mixins/EventObserver.js';
+import { AtomicComponent } from '@cfpb/cfpb-atomic-component/src/components/AtomicComponent.js';
+import { EventObserver } from '@cfpb/cfpb-atomic-component';
 import ExpandableTransition from './ExpandableTransition.js';
 
 const eventObserver = new EventObserver();
@@ -40,11 +40,11 @@ function initialize() {
   const transition = new ExpandableTransition(this.ui.content);
   this.transition = transition.init();
   this.transition.addEventListener(
-    'expandBegin',
+    'expandbegin',
     expandBeginHandler.bind(this)
   );
   this.transition.addEventListener(
-    'collapseEnd',
+    'collapseend',
     collapseEndHandler.bind(this)
   );
 

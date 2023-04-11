@@ -1,7 +1,8 @@
 import {
   add,
-  contains,
+  contains
 } from '../../../../../../packages/cfpb-atomic-component/src/utilities/data-hook.js';
+
 
 let testComponent;
 

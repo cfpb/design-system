@@ -2,8 +2,8 @@ import {
   checkDom,
   instantiateAll,
   setInitFlag,
-} from '../../../../../../packages/cfpb-atomic-component/src/utilities/atomic-helpers.js';
-import AtomicComponent from '../../../../../../packages/cfpb-atomic-component/src/components/AtomicComponent.js';
+} from '../../../../../../packages/cfpb-atomic-component';
+import { AtomicComponent } from '../../../../../../packages/cfpb-atomic-component/src/components/AtomicComponent.js';
 
 let containerDom;
 let componentDom;

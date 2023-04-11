@@ -234,7 +234,7 @@ variation_groups:
           // .grid_column__top-divider
           @grid_column__top-divider:  @gray-40;
 
-          // .grid_column__top-divider
+          // .grid_column__left-divider
           @grid_column__left-divider: @gray-40;
 
           ```

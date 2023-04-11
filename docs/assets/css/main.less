@@ -58,7 +58,7 @@ details summary {
   position: relative;
 }
 
-details summary:after {
+details summary::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -69,7 +69,7 @@ details summary:after {
   .u-svg-inline-bg( 'down' );
 }
 
-details[open] summary:after {
+details[open] summary::after {
   .u-svg-inline-bg( 'up' );
 }
 
@@ -159,6 +159,14 @@ main {
   &.u-is-animating {
     outline: 5px solid @gray-40;
   }
+}
+
+.example-flyout-content {
+  width: 100px;
+  background-color: @red;
+  text-align: center;
+  color: @white;
+  cursor: pointer;
 }
 
 // TODO: See if these imports can be moved to the file top.

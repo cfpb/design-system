@@ -109,8 +109,8 @@
   background-color: #f6d9d3;
   background-color: fade( #d12124, 20% );
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     display: block;
     width: 100%;
@@ -119,11 +119,11 @@
     background-color: fade( #da6750, 75% );
   }
 
-  &:before {
+  &::before {
     margin-bottom: @grid_gutter-width * 0.25;
   }
 
-  &:after {
+  &::after {
     margin-top: @grid_gutter-width * 0.25;
   }
 }

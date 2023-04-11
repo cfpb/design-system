@@ -44,7 +44,7 @@
 
 .u-card-bottom-bar() {
   // Bottom green hover bar.
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     left: 0;
@@ -64,19 +64,25 @@
     }
   }
 
-  &:not(.m-card__breakout):not(.m-card__highlight):not(.m-card__topic) {
+  &:not(.m-card__breakout, .m-card__highlight, .m-card__topic) {
     background: @white;
     border: 1px solid @gray-20;
     border-bottom-width: 3px;
   }
 
-  &:not(.m-card__featured):not(.m-card__breakout):not(.m-card__topic):not(
+  &:not(
+      .m-card__featured,
+      .m-card__breakout,
+      .m-card__topic,
       .m-card__highlight
     ) {
     padding: unit((@grid_gutter-width / @base-font-size-px), em);
   }
 
-  &:not(.m-card__featured):not(.m-card__breakout):not(.m-card__topic):not(
+  &:not(
+      .m-card__featured,
+      .m-card__breakout,
+      .m-card__topic,
       .m-card__highlight
     ),
   & > a {

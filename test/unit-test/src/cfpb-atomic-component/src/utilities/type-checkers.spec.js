@@ -8,7 +8,7 @@ import {
   isArray,
   isFunction,
   isEmpty,
-} from '../../../../../../packages/cfpb-atomic-component/src/utilities/type-checkers.js';
+} from '../../../../../../packages/cfpb-atomic-component';
 
 const blankVar = '';
 const aString = 'bar';

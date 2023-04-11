@@ -29,7 +29,7 @@
       // Wrap long words in narrow form fields to prevent clipping
       overflow-wrap: anywhere;
 
-      &:before {
+      &::before {
         display: inline-block;
         grid-row-start: 1;
         grid-row-end: 3;
@@ -47,8 +47,8 @@
         left: 1px;
       }
 
-      &:hover:before,
-      &.hover:before {
+      &:hover::before,
+      &.hover::before {
         border-color: @input-border__hover;
       }
     }
@@ -70,11 +70,11 @@
       }
 
       &:disabled {
-        &:checked + .a-label:before,
-        &:focus + .a-label:before,
-        &.focus + .a-label:before,
-        &:hover + .a-label:before,
-        &.hover + .a-label:before {
+        &:checked + .a-label::before,
+        &:focus + .a-label::before,
+        &.focus + .a-label::before,
+        &:hover + .a-label::before,
+        &.hover + .a-label::before {
           border-color: @input-border;
           outline: none;
           box-shadow: none; // Applies only to radio buttons.
@@ -84,7 +84,7 @@
           cursor: not-allowed;
           color: @input-text__disabled;
 
-          &:before {
+          &::before {
             background: @input-bg__disabled;
             border-color: @form-field-input-border__disabled;
           }
@@ -95,26 +95,26 @@
 
   &__checkbox {
     .a-checkbox {
-      &:focus + .a-label:before,
-      &.focus + .a-label:before {
+      &:focus + .a-label::before,
+      &.focus + .a-label::before {
         border-color: @input-border__focused;
         box-shadow: 0 0 0 1px @input-border__focused;
       }
 
-      &:hover + .a-label:before,
-      &.hover + .a-label:before {
+      &:hover + .a-label::before,
+      &.hover + .a-label::before {
         border-color: @input-border__hover;
         box-shadow: 0 0 0 1px @input-border__hover;
       }
 
-      &:checked + .a-label:before {
+      &:checked + .a-label::before {
         .u-svg-inline-bg( 'approved' );
 
         background-size: auto @cf-icon-height;
         background-repeat: no-repeat;
         background-position: center 0;
       }
-      &:disabled:checked + .a-label:before {
+      &:disabled:checked + .a-label::before {
         // rgb values are CFPB gray-40.
         // For some reason SVG isn't accepting hex values for the fill.
         .u-svg-inline-bg( 'approved', @gray );
@@ -124,7 +124,7 @@
 
   &__radio {
     .a-label {
-      &:before {
+      &::before {
         border-radius: 50%;
 
         /* The rotate is needed to fix a bug in Firefox where radio
@@ -134,39 +134,39 @@
     }
 
     .a-radio {
-      &:focus + .a-label:before,
-      &.focus + .a-label:before {
+      &:focus + .a-label::before,
+      &.focus + .a-label::before {
         outline: none;
         border-color: @input-border__focused;
         box-shadow: 0 0 0 1px @input-border__focused;
       }
 
-      &:hover + .a-label:before,
-      &.hover + .a-label:before {
+      &:hover + .a-label::before,
+      &.hover + .a-label::before {
         outline: none;
         border-color: @input-border__hover;
         box-shadow: 0 0 0 1px @input-border__hover;
       }
 
-      &:checked + .a-label:before {
+      &:checked + .a-label::before {
         background-color: @input-bg__selected;
         box-shadow: inset 0 0 0 2px @form-field-inset;
       }
 
-      &:checked:disabled + .a-label:before {
+      &:checked:disabled + .a-label::before {
         background-color: @input-bg__disabled-selected;
         box-shadow: inset 0 0 0 2px @input-bg__disabled;
       }
 
-      &:focus:checked + .a-label:before,
-      &.focus:checked + .a-label:before {
+      &:focus:checked + .a-label::before,
+      &.focus:checked + .a-label::before {
         border-color: @input-border__focused;
         box-shadow: 0 0 0 1px @input-border__focused,
           inset 0 0 0 2px @form-field-inset;
       }
 
-      &:hover:checked + .a-label:before,
-      &.hover:checked + .a-label:before {
+      &:hover:checked + .a-label::before,
+      &.hover:checked + .a-label::before {
         border-color: @input-border__hover;
         box-shadow: 0 0 0 1px @input-border__hover,
           inset 0 0 0 2px @form-field-inset;
@@ -215,7 +215,7 @@
 
       &:checked:disabled + .a-label {
         &,
-        &:before {
+        &::before {
           border: 1px solid @form-field-input-border__disabled;
         }
       }

@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-buttons",
-  "version": "0.19.0",
+  "version": "0.22.0",
   "description": "Design System buttons",
   "less": "src/cfpb-buttons.less",
   "style": "cfpb-buttons.css",
@@ -8,8 +8,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/cfpb-core": "^0.19.0",
-    "@cfpb/cfpb-icons": "^0.19.0"
+    "@cfpb/cfpb-core": "^0.22.0",
+    "@cfpb/cfpb-icons": "^0.22.0"
   },
   "keywords": [
     "buttons"

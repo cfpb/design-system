@@ -14,7 +14,7 @@ variation_groups:
           <article class="m-card">
               <h2 class="m-card_heading">
                   <a href="#">
-                      <div class="m-card_icon">{% include icons/idea.svg %}</div>
+                      <div class="m-card_icon">{% include icons/lightbulb.svg %}</div>
                       <span>Bank accounts</span>
                   </a>
               </h2>
@@ -58,7 +58,7 @@ variation_groups:
               <a href="#">
                   <h2 class="m-card_heading">
                       <div class="m-card_icon">
-                          {% include icons/idea.svg %}
+                          {% include icons/lightbulb.svg %}
                       </div>
                   </h2>
                   <p>
@@ -78,7 +78,7 @@ variation_groups:
           <article class="m-card m-card__topic">
               <a href="#">
                   <div class="m-card_icon">
-                    {% include icons/idea.svg %}
+                    {% include icons/lightbulb.svg %}
                   </div>
                   <div class="m-card_footer">
                       <span>Credit reports</span>
@@ -147,7 +147,7 @@ variation_groups:
                   <article class="m-card">
                       <h2 class="m-card_heading">
                           <a href="#">
-                              <div class="m-card_icon">{% include icons/idea.svg %}</div>
+                              <div class="m-card_icon">{% include icons/lightbulb.svg %}</div>
                               <span>Bank accounts</span>
                           </a>
                       </h2>
@@ -260,7 +260,7 @@ variation_groups:
                   <article class="m-card">
                       <h2 class="m-card_heading">
                           <a href="#">
-                              <div class="m-card_icon">{% include icons/idea.svg %}</div>
+                              <div class="m-card_icon">{% include icons/lightbulb.svg %}</div>
                               <span>Bank accounts</span>
                           </a>
                       </h2>
@@ -373,7 +373,7 @@ variation_groups:
                   <article class="m-card">
                       <h2 class="m-card_heading">
                           <a href="#">
-                              <div class="m-card_icon">{% include icons/idea.svg %}</div>
+                              <div class="m-card_icon">{% include icons/lightbulb.svg %}</div>
                               <span>Bank accounts</span>
                           </a>
                       </h2>
@@ -509,7 +509,7 @@ variation_groups:
                       <a href="#">
                           <h2 class="m-card_heading">
                               <div class="m-card_icon">
-                                  {% include icons/idea.svg %}
+                                  {% include icons/lightbulb.svg %}
                               </div>
                           </h2>
                           <p>
@@ -704,7 +704,7 @@ variation_groups:
                   <article class="m-card m-card__topic">
                     <a href="#">
                         <div class="m-card_icon">
-                            {% include icons/idea.svg %}
+                            {% include icons/lightbulb.svg %}
                         </div>
                         <div class="m-card_footer">
                             <span>Credit reports</span>
@@ -715,7 +715,7 @@ variation_groups:
                   <article class="m-card m-card__topic">
                     <a href="#">
                         <div class="m-card_icon">
-                            {% include icons/idea.svg %}
+                            {% include icons/lightbulb.svg %}
                         </div>
                         <div class="m-card_footer">
                             <span>Debt collection</span>
@@ -726,7 +726,7 @@ variation_groups:
                   <article class="m-card m-card__topic">
                     <a href="#">
                         <div class="m-card_icon">
-                            {% include icons/idea.svg %}
+                            {% include icons/lightbulb.svg %}
                         </div>
                         <div class="m-card_footer">
                             <span>Mortgages</span>
@@ -737,7 +737,7 @@ variation_groups:
                   <article class="m-card m-card__topic">
                     <a href="#">
                         <div class="m-card_icon">
-                            {% include icons/idea.svg %}
+                            {% include icons/lightbulb.svg %}
                         </div>
                         <div class="m-card_footer">
                             <span>Credit cards</span>

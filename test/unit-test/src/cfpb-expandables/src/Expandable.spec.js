@@ -1,5 +1,5 @@
 import Expandable from '../../../../../packages/cfpb-expandables/src/Expandable.js';
-import simulateEvent from '../../../../util/simulate-event.js';
+import { simulateEvent } from '../../../../util/simulate-event.js';
 
 const HTML_SNIPPET = `
 <div class="o-expandable-group"
@@ -8,7 +8,7 @@ const HTML_SNIPPET = `
     <div class="o-expandable o-expandable__padded" id="test-subject-one">
         <button class="o-expandable_header o-expandable_target"
                 title="Expand content">
-            <span class="o-expandable_header-left o-expandable_label">
+            <span class="o-expandable_label">
                 Expandable Header 1
             </span>
             <span class="o-expandable_link">
@@ -34,7 +34,7 @@ const HTML_SNIPPET = `
     <div class="o-expandable o-expandable__padded" id="test-subject-two">
         <button class="o-expandable_header o-expandable_target"
                 title="Expand content">
-            <span class="o-expandable_header-left o-expandable_label">
+            <span class="o-expandable_label">
                 Expandable Header 2
             </span>
             <span class="o-expandable_link">

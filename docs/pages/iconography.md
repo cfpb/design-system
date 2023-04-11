@@ -1,60 +1,15 @@
 ---
-title: Iconography
 layout: variation
 section: foundation
-status: Released
-description: >-
-  Icons visually reinforce an interface action, file type, status, or category.
-  They are visually simple, quickly recognizable, and easy to understand.
-  They are almost always used in context with descriptive text
-  and function to reinforce the message of that text.
-
-
-  <div class="content-50 content-first" markdown="1">
-
-
-  <h2 class="h3">Download the icon font</h2>
-
-
-  Our full icon set is available for desktop use as an icon font in OpenType format.
-  It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel.
-  _This should not be used for placing icons on a website._
-
-
-  <a class="a-link__icon"
-     href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
-      <span class="a-link_text">Download font</span>
-      {% include icons/download.svg %}
-  </a>
-
-
-  </div>
-
-
-  <div class="content-50 content-first" markdown="1">
-
-
-  <h2 class="h3">Download vector files</h2>
-
-
-  Each of our icons is available for download in SVG form on The Noun Project,
-  a platform that collects and catalogs icons that are
-  created and uploaded by graphic designers from around the world.
-
-
-  <a class="a-link__icon"
-     href="http://thenounproject.com/cfpb_minicons/">
-      <span class="a-link_text">View on Noun Project</span>
-      {% include icons/external-link.svg %}
-  </a>
-
-
-  </div>
 variation_groups:
   - variation_group_name: Icon library
     variations:
       - variation_code_snippet: ''
         variation_description: >-
+          Use the canonical icon name when referencing the icons in code,
+          however, "aliases" are provided in the table below to help you search
+          this page for a particular icon.
+
           - [Navigation icons](#navigation-icons)
 
           - [Status icons](#status-icons)
@@ -75,7 +30,7 @@ variation_groups:
           ### Navigation icons
 
 
-          | icon | icon-round | canonical name | aliases |
+          | icon | icon-round | canonical name | aliases (for searchability only)  |
 
           | ---- | ---------- | -------------- | ------- |
 
@@ -105,7 +60,7 @@ variation_groups:
           ### Status icons
 
 
-          | icon | icon-round | canonical name | aliases |
+          | icon | icon-round | canonical name | aliases (for searchability only)  |
 
           | ---- | ---------- | -------------- | ------- |
 
@@ -117,7 +72,9 @@ variation_groups:
 
           | {% include icons/help.svg %} | {% include icons/help-round.svg %} | help | question, question-mark |
 
-          | {% include icons/update.svg %} | {% include icons/update-round.svg %} | update | spinner, updating _(used for animated state)_ |
+          | {% include icons/update.svg %} | {% include icons/update-round.svg %} | update |
+
+          | {% include icons/updating.svg %} | {% include icons/updating-round.svg %} | updating | spinner |
 
           | {% include icons/power.svg %} | {% include icons/power-round.svg %} | power | on-off |
 
@@ -139,7 +96,7 @@ variation_groups:
           ### Social/sharing icons
 
 
-          | icon | icon-square | canonical name | aliases |
+          | icon | icon-square | canonical name | aliases (for searchability only) |
 
           | ---- | ----------- | -------------- | ------- |
 
@@ -165,7 +122,7 @@ variation_groups:
           ### Communications icons
 
 
-          | icon | icon-round | canonical name | aliases |
+          | icon | icon-round | canonical name | aliases (for searchability only)  |
 
           | ---- | ---------- | -------------- | ------- |
 
@@ -193,7 +150,7 @@ variation_groups:
           ### Document icons
 
 
-          | icon | icon-round | canonical name | aliases |
+          | icon | icon-round | canonical name | aliases (for searchability only)  |
 
           | ---- | ---------- | -------------- | ------- |
 
@@ -237,7 +194,7 @@ variation_groups:
           ### Financial products, services, and concepts
 
 
-          | icon | icon-round | canonical name | aliases |
+          | icon | icon-round | canonical name | aliases (for searchability only)  |
 
           | ---- | ---------- | -------------- | ------- |
 
@@ -311,7 +268,7 @@ variation_groups:
           ### Expense icons
 
 
-          | icon | icon-round | canonical name | aliases |
+          | icon | icon-round | canonical name | aliases (for searchability only)  |
 
           | ---- | ---------- | -------------- | ------- |
 
@@ -369,7 +326,7 @@ variation_groups:
           ### Web application icons
 
 
-          | icon | icon-round | canonical name | aliases |
+          | icon | icon-round | canonical name | aliases (for searchability only)  |
 
           | ---- | ---------- | -------------- | ------- |
 
@@ -417,7 +374,7 @@ variation_groups:
 
           | {% include icons/information.svg %} | {% include icons/information-round.svg %} | information | info, i |
 
-          | {% include icons/light-bulb.svg %} | {% include icons/light-bulb-round.svg %} | light-bulb | idea |
+          | {% include icons/lightbulb.svg %} | {% include icons/lightbulb-round.svg %} | lightbulb | idea |
 
           | {% include icons/link.svg %} | {% include icons/link-round.svg %} | link |  |
 
@@ -472,8 +429,7 @@ variation_groups:
         variation_implementation:
           Each icon has a circled variant shown in the second
           column (or square, in the case of the social media icons) that can be
-          accessed by appending `-round` (or `-square`) to the canonical name or
-          any of its aliases.
+          accessed by appending `-round` (or `-square`) to the canonical name.
   - variation_group_name: Animated icon
     variation_group_description: ''
     variations:
@@ -487,9 +443,9 @@ variation_groups:
         variation_implementation:
           Our previous font icon system provided modifiers to
           rotate any icon. We found in reality this wasn’t practical and only
-          one icon is ever animated, `update`. We’ve provided an
-          alias–`updating`–to be used within the UI when a user needs to be made
-          aware that the website is working on responding to their actions.
+          one icon is ever animated, `update`. We’ve provided `updating` to be
+          used within the UI when a user needs to be made aware that the website
+          is working on responding to their actions.
         variation_specs: Depending on the context, the animated icon follows the
           standards of the component that contains it, for example, the icon
           follows the size and padding standards for
@@ -513,7 +469,7 @@ variation_groups:
 
           <a class="a-link a-link__icon" href="#">
               <span class="a-link_text">Example with icon</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 651.7 1200" class="cf-icon-svg"><path d="M507.1 692.8c-15.6-15.6-40.9-15.6-56.6 0l-85.1 85.1V466.6c0-22.1-17.9-40-40-40s-40 17.9-40 40V778l-85.1-85.1c-15.6-15.6-40.9-15.6-56.6 0-15.6 15.6-15.6 40.9 0 56.6L297 902.9c7.5 7.5 17.7 11.7 28.3 11.7s20.8-4.2 28.3-11.7l153.3-153.4c15.8-15.7 15.8-41 .2-56.7z"/><path d="M30 161c-16.5 0-30 13.5-30 30v827.8c0 16.5 13.5 30 30 30h591.7c16.5 0 30-13.5 30-30V343.7L469 161H30zm389.6 60v134.8c0 19.9 16.3 36.2 36.2 36.2h135.9V988.8H60V221h359.6z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
           </a>
 
           -->
@@ -542,7 +498,6 @@ variation_groups:
         variation_description: |-
           * **Web:** 40px size, paired with primary headings
           * **Print:** 48pt size, paired with primary headings
-use_cases: ''
 guidelines: >-
   ### Color
 
@@ -579,6 +534,53 @@ guidelines: >-
 
 
   Please reference the [Links](https://cfpb.github.io/design-system/components/links#links-with-icons) page for guidance regarding icons paired with links.
+eyebrow: Graphics
+title: Iconography
+status: Released
+description: >-
+  Icons visually reinforce an interface action, file type, status, or category.
+  They are visually simple, quickly recognizable, and easy to understand. They
+  are almost always used in context with descriptive text and function to
+  reinforce the message of that text.
+
+
+  <div class="content-50 content-first" markdown="1">
+
+
+  <h2 class="h3">Download the icon font</h2>
+
+
+  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. _This should not be used for placing icons on a website._
+
+
+  <a class="a-link__icon"
+     href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
+      <span class="a-link_text">Download font</span>
+      {% include icons/download.svg %}
+  </a>
+
+
+  </div>
+
+
+  <div class="content-50 content-first" markdown="1">
+
+
+  <h2 class="h3">Download vector files</h2>
+
+
+  Each of our icons is available for download in SVG form on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world.
+
+
+  <a class="a-link__icon"
+     href="http://thenounproject.com/cfpb_minicons/">
+      <span class="a-link_text">View on Noun Project</span>
+      {% include icons/external-link.svg %}
+  </a>
+
+
+  </div>
+use_cases: ''
 behavior: >-
   ### SVG icon basics
 
@@ -595,10 +597,7 @@ behavior: >-
   > **Note:** Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.
 
 
-  The filenames of the SVGs included with cfpb-icons match the names in the icon library section. There are duplicate SVG files for each alias, as well.
-
-
-  > **Note to contributors:** If any icon is ever updated, you must be sure to also update each of the alias SVGs.
+  The filenames of the SVGs included with cfpb-icons match the names in the icon library section.
 
 
   #### What the Less is doing
@@ -642,5 +641,4 @@ behavior: >-
 
   In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where `@name` is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black).
 related_items: ''
-eyebrow: Graphics
 ---

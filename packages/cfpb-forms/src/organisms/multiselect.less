@@ -24,7 +24,7 @@ select.o-multiselect {
   &_header {
     position: relative;
 
-    &:after {
+    &::after {
       // Arrow box width must be odd size to properly center the bg image
       width: unit((@select-height / @base-font-size-px), em);
       box-sizing: border-box;
@@ -47,7 +47,7 @@ select.o-multiselect {
 
   // Reverse arrow when search drop-down is open.
   &.u-active {
-    .o-multiselect_header:after {
+    .o-multiselect_header::after {
       .u-svg-inline-bg( 'up' );
     }
   }
@@ -122,12 +122,12 @@ select.o-multiselect {
         display: none;
       }
 
-      &:after {
+      &::after {
         display: list-item;
       }
     }
 
-    &.u-no-results:after {
+    &.u-no-results::after {
       content: 'No results found';
     }
 
@@ -135,7 +135,7 @@ select.o-multiselect {
       padding: unit((10px / @base-font-size-px), em);
       pointer-events: none;
 
-      &:after {
+      &::after {
         content: 'Reached maximum of five selections';
       }
     }
@@ -195,7 +195,7 @@ select.o-multiselect {
       &:hover {
         background-color: @navy;
 
-        &:after {
+        &::after {
           color: @white;
         }
       }

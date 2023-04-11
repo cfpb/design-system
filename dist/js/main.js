@@ -2447,30 +2447,10 @@ function remove(behaviorElement, event, eventHandler) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "add": function() { return /* binding */ add; },
-/* harmony export */   "contains": function() { return /* binding */ contains; },
-/* harmony export */   "remove": function() { return /* binding */ remove; }
+/* harmony export */   "contains": function() { return /* binding */ contains; }
 /* harmony export */ });
 /* harmony import */ var _standard_type_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
 
-
-/**
- * @param {HTMLElement} element - DOM element.
- * @param {string} value - Value to check as existing as a JS data-* hook value.
- * @returns {boolean} True if the data-* hook value exists, false otherwise.
- */
-function contains(element, value) {
-  if (!element) {
-    return false;
-  }
-  let values = element.getAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
-  // If JS data-* hook is not set return immediately.
-  if (!values) {
-    return false;
-  }
-  values = values.split(' ');
-
-  return values.indexOf(value) > -1 ? true : false;
-}
 
 /**
  * @param {HTMLElement} element - DOM element.
@@ -2498,22 +2478,22 @@ function add(element, value) {
 
 /**
  * @param {HTMLElement} element - DOM element.
- * @param {string} value - Value to remove from the JS data-* hook value.
- * @returns {boolean} True if value was removed, false otherwise.
+ * @param {string} value - Value to check as existing as a JS data-* hook value.
+ * @returns {boolean} True if the data-* hook value exists, false otherwise.
  */
-function remove(element, value) {
-  const values = element.getAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
-  const index = values.indexOf(value);
-  const valuesList = values.split(' ');
-  if (index > -1) {
-    valuesList.splice(index, 1);
-    element.setAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK, valuesList.join(' '));
-    return true;
+function contains(element, value) {
+  if (!element) {
+    return false;
   }
+  let values = element.getAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
+  // If JS data-* hook is not set return immediately.
+  if (!values) {
+    return false;
+  }
+  values = values.split(' ');
 
-  return false;
+  return values.indexOf(value) > -1 ? true : false;
 }
-
 
 
 

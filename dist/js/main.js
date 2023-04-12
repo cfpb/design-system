@@ -3597,6 +3597,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Expandable": function() { return /* binding */ Expandable; }
+/* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* harmony import */ var _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExpandableTransition.js */ "./packages/cfpb-expandables/src/ExpandableTransition.js");
@@ -3744,7 +3747,7 @@ const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js
   getLabelText: getLabelText,
 });
 
-/* harmony default export */ __webpack_exports__["default"] = (Expandable);
+
 
 
 /***/ }),
@@ -3904,6 +3907,9 @@ ExpandableTransition.CLASSES = CLASSES;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Summary": function() { return /* binding */ Summary; }
+/* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* harmony import */ var _cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../cfpb-core/src/breakpoint-state.js */ "./packages/cfpb-core/src/breakpoint-state.js");
 /* eslint-disable no-use-before-define */
@@ -4128,7 +4134,54 @@ function Summary(element) {
 Summary.BASE_CLASS = BASE_CLASS;
 Summary.init = () => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${BASE_CLASS}`, Summary);
 
-/* harmony default export */ __webpack_exports__["default"] = (Summary);
+
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-expandables/src/index.js":
+/*!************************************************!*\
+  !*** ./packages/cfpb-expandables/src/index.js ***!
+  \************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Expandable": function() { return /* reexport safe */ _Expandable_js__WEBPACK_IMPORTED_MODULE_0__.Expandable; },
+/* harmony export */   "Summary": function() { return /* reexport safe */ _Summary_js__WEBPACK_IMPORTED_MODULE_1__.Summary; }
+/* harmony export */ });
+/* harmony import */ var _Expandable_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Expandable.js */ "./packages/cfpb-expandables/src/Expandable.js");
+/* harmony import */ var _Summary_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Summary.js */ "./packages/cfpb-expandables/src/Summary.js");
+/* ==========================================================================
+   Design System
+   Expandables
+   ========================================================================== */
+
+
+
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-forms/src/index.js":
+/*!******************************************!*\
+  !*** ./packages/cfpb-forms/src/index.js ***!
+  \******************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Multiselect": function() { return /* reexport safe */ _organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_0__.Multiselect; }
+/* harmony export */ });
+/* harmony import */ var _organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./organisms/Multiselect.js */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
+/* ==========================================================================
+   Design System
+   Forms
+   ========================================================================== */
+
+
 
 
 /***/ }),
@@ -4141,6 +4194,9 @@ Summary.init = () => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Multiselect": function() { return /* binding */ Multiselect; }
+/* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
 /* harmony import */ var _MultiselectUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MultiselectUtils.js */ "./packages/cfpb-forms/src/organisms/MultiselectUtils.js");
@@ -4731,7 +4787,7 @@ function Multiselect(element) {
 
 Multiselect.BASE_CLASS = BASE_CLASS;
 
-/* harmony default export */ __webpack_exports__["default"] = (Multiselect);
+
 
 
 /***/ }),
@@ -5096,13 +5152,12 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _toggle_details_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle-details.js */ "./docs/assets/js/toggle-details.js");
 /* harmony import */ var anchor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! anchor-js */ "./node_modules/anchor-js/anchor.js");
-/* harmony import */ var _cfpb_cfpb_expandables_src_Expandable_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Expandable.js */ "./packages/cfpb-expandables/src/Expandable.js");
-/* harmony import */ var _cfpb_cfpb_expandables_src_Summary_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-expandables/src/Summary.js */ "./packages/cfpb-expandables/src/Summary.js");
-/* harmony import */ var _cfpb_cfpb_forms_src_organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-forms/src/organisms/Multiselect.js */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
-/* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
-/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
-/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
+/* harmony import */ var _cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @cfpb/cfpb-expandables */ "./packages/cfpb-expandables/src/index.js");
+/* harmony import */ var _cfpb_cfpb_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cfpb/cfpb-forms */ "./packages/cfpb-forms/src/index.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
+/* harmony import */ var _Tabs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Tabs.js */ "./docs/assets/js/Tabs.js");
+/* harmony import */ var _redirect_banner_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./redirect-banner.js */ "./docs/assets/js/redirect-banner.js");
+/* harmony import */ var _sidebar_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sidebar.js */ "./docs/assets/js/sidebar.js");
 
 
 
@@ -5111,9 +5166,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-_redirect_banner_js__WEBPACK_IMPORTED_MODULE_7__["default"].init();
-_sidebar_js__WEBPACK_IMPORTED_MODULE_8__["default"].init();
+_redirect_banner_js__WEBPACK_IMPORTED_MODULE_6__["default"].init();
+_sidebar_js__WEBPACK_IMPORTED_MODULE_7__["default"].init();
 var anchors = new anchor_js__WEBPACK_IMPORTED_MODULE_1__();
 // Add anchors to all headings (except page title headings)
 anchors.add('h2:not(.title), h3, h4, h5');
@@ -5121,25 +5175,25 @@ anchors.add('h2:not(.title), h3, h4, h5');
 anchors.remove("\n  .a-live_code h2,\n  .a-live_code h3,\n  .a-live_code h4,\n  .a-live_code h5,\n  .o-expandable_label,\n  #search-results h3\n");
 var multiselectDom = document.querySelector('.o-multiselect');
 if (multiselectDom) {
-  var multiselect = new _cfpb_cfpb_forms_src_organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_4__["default"](multiselectDom);
+  var multiselect = new _cfpb_cfpb_forms__WEBPACK_IMPORTED_MODULE_3__.Multiselect(multiselectDom);
   multiselect.init();
 }
-_cfpb_cfpb_expandables_src_Summary_js__WEBPACK_IMPORTED_MODULE_3__["default"].init();
-_cfpb_cfpb_expandables_src_Expandable_js__WEBPACK_IMPORTED_MODULE_2__["default"].init();
+_cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_2__.Summary.init();
+_cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_2__.Expandable.init();
 
 // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.
-window.AlphaTransition = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_5__.AlphaTransition;
-window.MoveTransition = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_5__.MoveTransition;
-window.MaxHeightTransition = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_5__.MaxHeightTransition;
-window.FlyoutMenu = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_5__.FlyoutMenu;
+window.AlphaTransition = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_4__.AlphaTransition;
+window.MoveTransition = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_4__.MoveTransition;
+window.MaxHeightTransition = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_4__.MaxHeightTransition;
+window.FlyoutMenu = _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_4__.FlyoutMenu;
 
 // Tabs show under the show/hide details button on a pattern.
-var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_6__["default"].BASE_CLASS));
+var tabsContainerDom = document.querySelectorAll(".".concat(_Tabs_js__WEBPACK_IMPORTED_MODULE_5__["default"].BASE_CLASS));
 if (tabsContainerDom.length > 0) {
   var tabsInst;
   for (var i = 0, len = tabsContainerDom.length; i < len; i++) {
-    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_6__["default"](tabsContainerDom[i]);
+    tabsInst = new _Tabs_js__WEBPACK_IMPORTED_MODULE_5__["default"](tabsContainerDom[i]);
     tabsInst.init();
   }
 }

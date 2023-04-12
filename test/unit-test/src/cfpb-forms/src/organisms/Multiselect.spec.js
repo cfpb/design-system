@@ -1,4 +1,4 @@
-import Multiselect from '../../../../../../packages/cfpb-forms/src/organisms/Multiselect.js';
+import { Multiselect } from '../../../../../../packages/cfpb-forms';
 import { simulateEvent } from '../../../../../util/simulate-event.js';
 
 let multiselect;

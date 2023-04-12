@@ -228,4 +228,4 @@ function Summary(element) {
 Summary.BASE_CLASS = BASE_CLASS;
 Summary.init = () => instantiateAll(`.${BASE_CLASS}`, Summary);
 
-export default Summary;
+export { Summary };

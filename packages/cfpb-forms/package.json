@@ -4,6 +4,7 @@
   "description": "Design System form fields",
   "less": "src/cfpb-forms.less",
   "style": "cfpb-forms.css",
+  "main": "src/index.js",
   "publishConfig": {
     "access": "public"
   },

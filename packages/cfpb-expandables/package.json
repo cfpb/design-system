@@ -5,6 +5,7 @@
   "main": "src/cfpb-expandables.js",
   "less": "src/cfpb-expandables.less",
   "style": "cfpb-expandables.css",
+  "main": "src/index.js",
   "publishConfig": {
     "access": "public"
   },

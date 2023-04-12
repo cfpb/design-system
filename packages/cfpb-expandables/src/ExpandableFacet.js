@@ -12,6 +12,7 @@ import {
   FlyoutMenu,
 } from '@cfpb/cfpb-atomic-component';
 import { InputTree } from '@cfpb/cfpb-forms';
+import beforeExpandableTransitionInit from './expandable-facet-utils.js';
 
 const BASE_CLASS = 'o-expandable-facet';
 
@@ -61,9 +62,11 @@ function ExpandableFacet(element) {
     _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
     _labelDom = _dom.querySelector(`.${BASE_CLASS}_label`);
 
-    const isExpanded = _contentDom.classList.contains(
-      `${BASE_CLASS}_content__onload-open`
-    );
+    const isExpanded = _dom.classList.contains(`${BASE_CLASS}__onload-open`);
+    beforeExpandableTransitionInit();
+    /*const isCollapsedOnMobile = _dom.classList.contains(
+      `${BASE_CLASS}__mobile-collapsed`
+    );*/
 
     // Add behavior hooks.
     addDataHook(_dom, 'behavior_flyout-menu');

@@ -5,10 +5,10 @@
   "main": "src/index.js",
   "less": "src/cfpb-expandables.less",
   "style": "cfpb-expandables.css",
+  "main": "src/index.js",
   "publishConfig": {
     "access": "public"
   },
-  "main": "src/index.js",
   "dependencies": {
     "@cfpb/cfpb-atomic-component": "^0.25.0",
     "@cfpb/cfpb-core": "^0.25.0",

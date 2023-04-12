@@ -1,45 +1,20 @@
 
-## v0.22.0 (2023-03-29)
+## v0.22.1 (2023-04-12)
 
 #### Breaking Change
-* `cfpb-forms`, `cfpb-icons`
-  * [#1614](https://github.com/cfpb/design-system/pull/1614) cfpb-icons: Remove icon aliases ([@anselmbradford](https://github.com/anselmbradford))
-* Other
-  * [#1610](https://github.com/cfpb/design-system/pull/1610) Break `update` and `updating` icons into two canonical icons ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`
+  * [#1527](https://github.com/cfpb/design-system/pull/1527) Remove `remove` data-hook ([@wpears](https://github.com/wpears))
 
 #### Enhancement
-* `cfpb-icons`
-  * [#1611](https://github.com/cfpb/design-system/pull/1611) Add `.cf-icon-svg__updating-round` ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`
+  * [#1627](https://github.com/cfpb/design-system/pull/1627) Add package index.js to cfpb-expandables and cfpb-forms ([@anselmbradford](https://github.com/anselmbradford))
 
 #### Internal
-* [#1612](https://github.com/cfpb/design-system/pull/1612) Update dependencies: eslint-config-prettier, eslint-plugin-jsdoc, mini-css-extract-plugin, postcss-loader, prettier, stylelint, webpack ([@anselmbradford](https://github.com/anselmbradford))
-* [#1609](https://github.com/cfpb/design-system/pull/1609) Update dependencies: @babel/core, autoprefixer, chromedriver, eslint, eslint-plugin-jsdoc, webpack ([@anselmbradford](https://github.com/anselmbradford))
+* [#1616](https://github.com/cfpb/design-system/pull/1616) Update dependencies: slugify, babel/core, babel/preset-env, cssnano, eslint, lerna, webpack ([@anselmbradford](https://github.com/anselmbradford))
 
-#### Committers: 1
+#### Committers: 2
 - Ans ([@anselmbradford](https://github.com/anselmbradford))
-
-
-
-## v0.22.0 (2023-03-29)
-
-#### Breaking Change
-* `cfpb-forms`, `cfpb-icons`
-  * [#1614](https://github.com/cfpb/design-system/pull/1614) cfpb-icons: Remove icon aliases ([@anselmbradford](https://github.com/anselmbradford))
-* Other
-  * [#1610](https://github.com/cfpb/design-system/pull/1610) Break `update` and `updating` icons into two canonical icons ([@anselmbradford](https://github.com/anselmbradford))
-
-#### Enhancement
-* `cfpb-icons`
-  * [#1611](https://github.com/cfpb/design-system/pull/1611) Add `.cf-icon-svg__updating-round` ([@anselmbradford](https://github.com/anselmbradford))
-
-#### Internal
-* [#1612](https://github.com/cfpb/design-system/pull/1612) Update dependencies: eslint-config-prettier, eslint-plugin-jsdoc, mini-css-extract-plugin, postcss-loader, prettier, stylelint, webpack ([@anselmbradford](https://github.com/anselmbradford))
-* [#1609](https://github.com/cfpb/design-system/pull/1609) Update dependencies: @babel/core, autoprefixer, chromedriver, eslint, eslint-plugin-jsdoc, webpack ([@anselmbradford](https://github.com/anselmbradford))
-
-#### Committers: 1
-- Ans ([@anselmbradford](https://github.com/anselmbradford))
-
-
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
 
 ## v0.22.0 (2023-03-29)
 

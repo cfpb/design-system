@@ -5,9 +5,9 @@
 import {
   checkDom,
   setInitFlag,
-} from '@cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js';
-import { instantiateAll } from '@cfpb/cfpb-atomic-component/src/utilities/atomic-helpers.js';
-import Expandable from '@cfpb/cfpb-expandables/src/Expandable.js';
+  instantiateAll,
+} from '@cfpb/cfpb-atomic-component';
+import { Expandable } from '@cfpb/cfpb-expandables';
 
 const BASE_CLASS = 'o-expandable-group';
 
@@ -81,4 +81,4 @@ ExpandableGroup.init = (scope) => {
   });
 };
 
-export default ExpandableGroup;
+export { ExpandableGroup };

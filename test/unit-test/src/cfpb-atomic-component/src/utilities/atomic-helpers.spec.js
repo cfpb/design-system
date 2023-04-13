@@ -2,8 +2,8 @@ import {
   checkDom,
   instantiateAll,
   setInitFlag,
-} from '../../../../../../packages/cfpb-atomic-component/src/utilities/atomic-helpers.js';
-import Expandable from '../../../../../../packages/cfpb-expandables/src/Expandable.js';
+} from '../../../../../../packages/cfpb-atomic-component';
+import { Expandable } from '../../../../../../packages/cfpb-expandables';
 
 let containerDom;
 let componentDom;

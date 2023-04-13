@@ -1,5 +1,4 @@
-import ExpandableGroup from '@cfpb/cfpb-expandables/src/ExpandableGroup.js';
-import Expandable from '../../../../../packages/cfpb-expandables/src/Expandable.js';
+import { Expandable, ExpandableGroup } from '../../../../../packages/cfpb-expandables';
 import { simulateEvent } from '../../../../util/simulate-event.js';
 
 const HTML_SNIPPET = `

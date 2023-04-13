@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import Summary from '../../../../../packages/cfpb-expandables/src/Summary.js';
+import { Summary } from '../../../../../packages/cfpb-expandables';
 import { simulateEvent } from '../../../../util/simulate-event.js';
 
 const HTML_SNIPPET = `

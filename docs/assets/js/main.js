@@ -1,9 +1,7 @@
 import { toggleAllDetails, toggleDetails } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
-import ExpandableGroup from '@cfpb/cfpb-expandables/src/ExpandableGroup.js';
-import Expandable from '@cfpb/cfpb-expandables/src/Expandable.js';
-import Summary from '@cfpb/cfpb-expandables/src/Summary.js';
-import Multiselect from '@cfpb/cfpb-forms/src/organisms/Multiselect.js';
+import { Expandable, ExpandableGroup, Summary } from '@cfpb/cfpb-expandables';
+import { Multiselect } from '@cfpb/cfpb-forms';
 import {
   FlyoutMenu,
   AlphaTransition,

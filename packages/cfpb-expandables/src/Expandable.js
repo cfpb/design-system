@@ -114,4 +114,4 @@ Expandable.BASE_CLASS = BASE_CLASS;
 Expandable.init = (scope) =>
   instantiateAll(`.${Expandable.BASE_CLASS}`, Expandable, scope);
 
-export default Expandable;
+export { Expandable };

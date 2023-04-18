@@ -3,6 +3,7 @@ import {
   checkDom,
   setInitFlag,
   isMobileUserAgent,
+  instantiateAll,
 } from '@cfpb/cfpb-atomic-component';
 import MultiselectModel from './MultiselectModel.js';
 import { create } from './MultiselectUtils.js';
@@ -588,5 +589,6 @@ function Multiselect(element) {
 }
 
 Multiselect.BASE_CLASS = BASE_CLASS;
+Multiselect.init = () => instantiateAll(`.${BASE_CLASS}`, Multiselect);
 
 export { Multiselect };

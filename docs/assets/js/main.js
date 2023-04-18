@@ -28,14 +28,9 @@ anchors.remove(`
   #search-results h3
 `);
 
-const multiselectDom = document.querySelector('.o-multiselect');
-if (multiselectDom) {
-  const multiselect = new Multiselect(multiselectDom);
-  multiselect.init();
-}
-
 Summary.init();
 Expandable.init();
+Multiselect.init();
 
 // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.

@@ -39,11 +39,11 @@ description: >-
               </h3>
               <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
-                      <span class="u-visually-hidden-on-mobile">Show</span>
+                      <span class="u-visually-hidden">Show</span>
                       {% include icons/plus-round.svg %}
                   </span>
                   <span class="o-expandable_cue o-expandable_cue-close">
-                      <span class="u-visually-hidden-on-mobile">Hide</span>
+                      <span class="u-visually-hidden">Hide</span>
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -65,11 +65,11 @@ description: >-
               </h3>
               <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
-                      <span class="u-visually-hidden-on-mobile">Show</span>
+                      <span class="u-visually-hidden">Show</span>
                       {% include icons/plus-round.svg %}
                   </span>
                   <span class="o-expandable_cue o-expandable_cue-close">
-                      <span class="u-visually-hidden-on-mobile">Hide</span>
+                      <span class="u-visually-hidden">Hide</span>
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -94,11 +94,11 @@ description: >-
               </h3>
               <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
-                      <span class="u-visually-hidden-on-mobile">Show</span>
+                      <span class="u-visually-hidden">Show</span>
                       {% include icons/plus-round.svg %}
                   </span>
                   <span class="o-expandable_cue o-expandable_cue-close">
-                      <span class="u-visually-hidden-on-mobile">Hide</span>
+                      <span class="u-visually-hidden">Hide</span>
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -120,11 +120,11 @@ description: >-
               </h3>
               <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
-                      <span class="u-visually-hidden-on-mobile">Show</span>
+                      <span class="u-visually-hidden">Show</span>
                       {% include icons/plus-round.svg %}
                   </span>
                   <span class="o-expandable_cue o-expandable_cue-close">
-                      <span class="u-visually-hidden-on-mobile">Hide</span>
+                      <span class="u-visually-hidden">Hide</span>
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -149,11 +149,11 @@ description: >-
               </h3>
               <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
-                      <span class="u-visually-hidden-on-mobile">Show</span>
+                      <span class="u-visually-hidden">Show</span>
                       {% include icons/plus-round.svg %}
                   </span>
                   <span class="o-expandable_cue o-expandable_cue-close">
-                      <span class="u-visually-hidden-on-mobile">Hide</span>
+                      <span class="u-visually-hidden">Hide</span>
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -178,11 +178,11 @@ description: >-
               </h3>
               <span class="o-expandable_link">
                   <span class="o-expandable_cue o-expandable_cue-open">
-                      <span class="u-visually-hidden-on-mobile">Show</span>
+                      <span class="u-visually-hidden">Show</span>
                       {% include icons/plus-round.svg %}
                   </span>
                   <span class="o-expandable_cue o-expandable_cue-close">
-                      <span class="u-visually-hidden-on-mobile">Hide</span>
+                      <span class="u-visually-hidden">Hide</span>
                       {% include icons/minus-round.svg %}
                   </span>
               </span>

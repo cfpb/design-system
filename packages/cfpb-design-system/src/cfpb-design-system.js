@@ -1,4 +1,5 @@
 // List yer JS modules
-import { Expandable } from '@cfpb/cfpb-expandables';
+import { Expandable, ExpandableGroup } from '@cfpb/cfpb-expandables';
 
+ExpandableGroup.init();
 Expandable.init();

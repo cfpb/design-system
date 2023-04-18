@@ -116,7 +116,8 @@ variation_groups:
           <div class="o-expandable
                       o-expandable__padded
                       o-expandable__background
-                      o-expandable__border">
+                      o-expandable__border
+                      o-expandable__onload-open">
               <button class="o-expandable_header o-expandable_target"
                       title="Expand content">
                   <h3 class="h4 o-expandable_label">
@@ -133,7 +134,7 @@ variation_groups:
                       </span>
                   </span>
               </button>
-              <div class="o-expandable_content o-expandable_content__onload-open">
+              <div class="o-expandable_content">
                   <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing
                       elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -147,8 +148,8 @@ variation_groups:
         variation_description:
           Sometimes you may want the expandable to be open by
           default. This is as easy as adding the
-          `.o-expandable_content__onload-open` modifier to the
-          `.o-expandable_content` block.
+          `.o-expandable__onload-open` modifier to the
+          `.o-expandable` block.
         variation_implementation:
           A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"

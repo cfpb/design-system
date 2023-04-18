@@ -1,4 +1,7 @@
-import { Expandable, ExpandableGroup } from '../../../../../packages/cfpb-expandables';
+import {
+  Expandable,
+  ExpandableGroup,
+} from '../../../../../packages/cfpb-expandables';
 import { simulateEvent } from '../../../../util/simulate-event.js';
 
 const HTML_SNIPPET = `
@@ -103,7 +106,7 @@ describe('standard Expandable', () => {
     targetDom2 = expandableDom2.querySelector('.o-expandable_target');
     contentDom1 = expandableDom1.querySelector('.o-expandable_content');
     contentDom2 = expandableDom2.querySelector('.o-expandable_content');
-    contentDom2.classList.add('o-expandable_content__onload-open');
+    expandableDom2.classList.add('o-expandable__onload-open');
 
     ExpandableGroup.init();
     expandable = Expandable.init()[0];
@@ -121,10 +124,12 @@ describe('standard Expandable', () => {
 
     it('should be collapsed when the OPEN_DEFAULT class is not present', () => {
       expect(targetDom1.getAttribute('aria-expanded')).toBe('false');
+      expect(contentDom1.getAttribute('data-open')).toBe('false');
     });
 
     it('should be expanded when the OPEN_DEFAULT class is present', () => {
       expect(targetDom2.getAttribute('aria-expanded')).toBe('true');
+      expect(contentDom2.getAttribute('data-open')).toBe('true');
     });
 
     it('should return label text', () => {

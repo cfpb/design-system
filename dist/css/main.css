@@ -4801,23 +4801,6 @@ html[lang='ar'] .m-notification .m-list {
 .o-expandable_target[aria-expanded='true'] .o-expandable_cue-close {
   display: block;
 }
-.o-expandable_content {
-  overflow: hidden;
-}
-.o-expandable_content::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.o-expandable_content__transition {
-  transition: max-height 0.25s ease-in-out;
-}
-.o-expandable_content [aria-expanded='false'] {
-  max-height: 0;
-}
-.o-expandable_content [aria-expanded='true'] {
-  max-height: 1000px;
-}
 .o-expandable_label {
   margin-bottom: 0;
   color: #101820;
@@ -4845,7 +4828,8 @@ button.o-expandable_header {
   padding: 0.625em 0.9375em;
 }
 .o-expandable__padded .o-expandable_content {
-  padding: 0 0.9375em;
+  padding: 0.9375em;
+  padding-top: 0;
 }
 .o-expandable__padded .o-expandable_content::before {
   content: '';

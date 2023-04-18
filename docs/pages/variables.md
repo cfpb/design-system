@@ -53,44 +53,6 @@ variation_groups:
           // .btn__super
           @btn__super-font-size:      18px;
           ```
-  - variation_group_name: Expandables
-    variations:
-      - variation_name: Color
-        variation_description: |-
-          ```
-          // .o-expandable
-          @expandable-focus:             @black;
-
-          // .o-expandable_label
-          @expandable_label-text:        @black;
-
-          // .o-expandable_link
-          @expandable_link-text:         @pacific;
-
-          // .o-expandable__padded
-          @expandable__padded-bg:        @gray-10;
-          @expandable__padded-bg-hover:  @gray-20;
-          @expandable__padded-divider:   @gray-40;
-
-          // .o-expandable-group
-          @expandable-group_header-text: @gray;
-          @expandable-group_header-bg:   @gray-10;
-          @expandable-group-bg:          @white;
-          @expandable-group-divider:     @gray-80;
-          ```
-        variation_code_snippet: ''
-      - variation_name: Sizing
-        variation_description: |
-          ```
-          @expandable_link-font-size: 14px;
-          ```
-        variation_code_snippet: ''
-      - variation_name: Timing
-        variation_description: |-
-          ```
-          // Transition timing
-          @expandable__transition-speed: 0.25s;
-          ```
   - variation_group_name: Forms
     variations:
       - variation_name: Color

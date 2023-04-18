@@ -8,32 +8,8 @@
    Expandable Styling
    ========================================================================== */
 
-//
-// Theme variables
-//
-
-// .o-expandable
-@expandable-focus: @black;
-
-// .o-expandable_label
-@expandable_label-text: @black;
-
-// .o-expandable_link
-@expandable_link-text: @pacific;
-
 // .o-expandable modifiers
-@expandable__background: @gray-5;
 @expandable__border: @gray-40;
-
-// Sizing variables
-
-// .o-expandable_link
-@expandable_link-font-size: @btn-font-size;
-
-// Timing variables
-
-// .o-expandable_content__transition
-@expandable__transition-speed: 0.25s;
 
 //
 // Recommended expandable pattern
@@ -49,7 +25,7 @@
     cursor: pointer;
 
     &:focus {
-      outline: 1px dotted @expandable-focus;
+      outline: 1px dotted @black;
       outline-offset: 1px;
     }
 
@@ -67,26 +43,6 @@
     }
   }
 
-  &_content {
-    overflow: hidden;
-
-    // A clearfix prevents twitchy animations from occurring when margins
-    // collapse and extend past the bounds of the expandable.
-    .u-clearfix();
-
-    &__transition {
-      transition: max-height @expandable__transition-speed ease-in-out;
-    }
-
-    [aria-expanded='false'] {
-      max-height: 0;
-    }
-
-    [aria-expanded='true'] {
-      max-height: 1000px;
-    }
-  }
-
   //
   // Expandable text elements
   //
@@ -94,16 +50,16 @@
   &_label {
     // Remove default h4 margin style
     margin-bottom: 0;
-    color: @expandable_label-text;
+    color: @black;
     font-weight: 500;
   }
 
   &_link {
     min-width: 60px;
     text-align: right;
-    color: @expandable_link-text;
-    font-size: unit((@expandable_link-font-size / @base-font-size-px), em);
-    line-height: unit((@base-line-height-px / @expandable_link-font-size));
+    color: @pacific;
+    font-size: unit((@btn-font-size / @base-font-size-px), em);
+    line-height: unit((@base-line-height-px / @btn-font-size));
   }
 
   //
@@ -131,6 +87,7 @@
   // Padded expandable modifier
   //
 
+  // TODO: it's unlikely we need a padded modifier. This should probably be folded into the default.
   &__padded {
     .o-expandable_header {
       padding: unit((10px / @base-font-size-px), em)
@@ -138,7 +95,8 @@
     }
 
     .o-expandable_content {
-      padding: 0 unit((15px / @base-font-size-px), em);
+      padding: unit((15px / @base-font-size-px), em);
+      padding-top: 0;
 
       // The divider between _header and _content.
       &::before {
@@ -160,7 +118,7 @@
   //
 
   &__background {
-    background: @expandable__background;
+    background: @gray-5;
   }
 
   //

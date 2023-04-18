@@ -348,524 +348,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ "./node_modules/ftdomdelegate/lib/delegate.js":
-/*!****************************************************!*\
-  !*** ./node_modules/ftdomdelegate/lib/delegate.js ***!
-  \****************************************************/
-/***/ (function(module) {
-
-"use strict";
-/*jshint browser:true, node:true*/
-/* global HTMLDocument */
-
-
-
-module.exports = Delegate;
-
-/**
- * DOM event delegator
- *
- * The delegator will listen
- * for events that bubble up
- * to the root node.
- *
- * @constructor
- * @param {Node|string} [root] The root node or a selector string matching the root node
- */
-function Delegate(root) {
-
-  /**
-   * Maintain a map of listener
-   * lists, keyed by event name.
-   *
-   * @type Object
-   */
-  this.listenerMap = [{}, {}];
-  if (root) {
-    this.root(root);
-  }
-
-  /** @type function() */
-  this.handle = Delegate.prototype.handle.bind(this);
-
-  // Cache of event listeners removed during an event cycle
-  this._removedListeners = [];
-}
-
-/**
- * Start listening for events
- * on the provided DOM element
- *
- * @param  {Node|string} [root] The root node or a selector string matching the root node
- * @returns {Delegate} This method is chainable
- */
-Delegate.prototype.root = function(root) {
-  var listenerMap = this.listenerMap;
-  var eventType;
-
-  // Remove master event listeners
-  if (this.rootElement) {
-    for (eventType in listenerMap[1]) {
-      if (listenerMap[1].hasOwnProperty(eventType)) {
-        this.rootElement.removeEventListener(eventType, this.handle, true);
-      }
-    }
-    for (eventType in listenerMap[0]) {
-      if (listenerMap[0].hasOwnProperty(eventType)) {
-        this.rootElement.removeEventListener(eventType, this.handle, false);
-      }
-    }
-  }
-
-  // If no root or root is not
-  // a dom node, then remove internal
-  // root reference and exit here
-  if (!root || !root.addEventListener) {
-    if (this.rootElement) {
-      delete this.rootElement;
-    }
-    return this;
-  }
-
-  /**
-   * The root node at which
-   * listeners are attached.
-   *
-   * @type Node
-   */
-  this.rootElement = root;
-
-  // Set up master event listeners
-  for (eventType in listenerMap[1]) {
-    if (listenerMap[1].hasOwnProperty(eventType)) {
-      this.rootElement.addEventListener(eventType, this.handle, true);
-    }
-  }
-  for (eventType in listenerMap[0]) {
-    if (listenerMap[0].hasOwnProperty(eventType)) {
-      this.rootElement.addEventListener(eventType, this.handle, false);
-    }
-  }
-
-  return this;
-};
-
-/**
- * @param {string} eventType
- * @returns boolean
- */
-Delegate.prototype.captureForType = function(eventType) {
-  return ['blur', 'error', 'focus', 'load', 'resize', 'scroll'].indexOf(eventType) !== -1;
-};
-
-/**
- * Attach a handler to one
- * event for all elements
- * that match the selector,
- * now or in the future
- *
- * The handler function receives
- * three arguments: the DOM event
- * object, the node that matched
- * the selector while the event
- * was bubbling and a reference
- * to itself. Within the handler,
- * 'this' is equal to the second
- * argument.
- *
- * The node that actually received
- * the event can be accessed via
- * 'event.target'.
- *
- * @param {string} eventType Listen for these events
- * @param {string|undefined} selector Only handle events on elements matching this selector, if undefined match root element
- * @param {function()} handler Handler function - event data passed here will be in event.data
- * @param {boolean} [useCapture] see 'useCapture' in <https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener>
- * @returns {Delegate} This method is chainable
- */
-Delegate.prototype.on = function(eventType, selector, handler, useCapture) {
-  var root, listenerMap, matcher, matcherParam;
-
-  if (!eventType) {
-    throw new TypeError('Invalid event type: ' + eventType);
-  }
-
-  // handler can be passed as
-  // the second or third argument
-  if (typeof selector === 'function') {
-    useCapture = handler;
-    handler = selector;
-    selector = null;
-  }
-
-  // Fallback to sensible defaults
-  // if useCapture not set
-  if (useCapture === undefined) {
-    useCapture = this.captureForType(eventType);
-  }
-
-  if (typeof handler !== 'function') {
-    throw new TypeError('Handler must be a type of Function');
-  }
-
-  root = this.rootElement;
-  listenerMap = this.listenerMap[useCapture ? 1 : 0];
-
-  // Add master handler for type if not created yet
-  if (!listenerMap[eventType]) {
-    if (root) {
-      root.addEventListener(eventType, this.handle, useCapture);
-    }
-    listenerMap[eventType] = [];
-  }
-
-  if (!selector) {
-    matcherParam = null;
-
-    // COMPLEX - matchesRoot needs to have access to
-    // this.rootElement, so bind the function to this.
-    matcher = matchesRoot.bind(this);
-
-  // Compile a matcher for the given selector
-  } else if (/^[a-z]+$/i.test(selector)) {
-    matcherParam = selector;
-    matcher = matchesTag;
-  } else if (/^#[a-z0-9\-_]+$/i.test(selector)) {
-    matcherParam = selector.slice(1);
-    matcher = matchesId;
-  } else {
-    matcherParam = selector;
-    matcher = matches;
-  }
-
-  // Add to the list of listeners
-  listenerMap[eventType].push({
-    selector: selector,
-    handler: handler,
-    matcher: matcher,
-    matcherParam: matcherParam
-  });
-
-  return this;
-};
-
-/**
- * Remove an event handler
- * for elements that match
- * the selector, forever
- *
- * @param {string} [eventType] Remove handlers for events matching this type, considering the other parameters
- * @param {string} [selector] If this parameter is omitted, only handlers which match the other two will be removed
- * @param {function()} [handler] If this parameter is omitted, only handlers which match the previous two will be removed
- * @returns {Delegate} This method is chainable
- */
-Delegate.prototype.off = function(eventType, selector, handler, useCapture) {
-  var i, listener, listenerMap, listenerList, singleEventType;
-
-  // Handler can be passed as
-  // the second or third argument
-  if (typeof selector === 'function') {
-    useCapture = handler;
-    handler = selector;
-    selector = null;
-  }
-
-  // If useCapture not set, remove
-  // all event listeners
-  if (useCapture === undefined) {
-    this.off(eventType, selector, handler, true);
-    this.off(eventType, selector, handler, false);
-    return this;
-  }
-
-  listenerMap = this.listenerMap[useCapture ? 1 : 0];
-  if (!eventType) {
-    for (singleEventType in listenerMap) {
-      if (listenerMap.hasOwnProperty(singleEventType)) {
-        this.off(singleEventType, selector, handler);
-      }
-    }
-
-    return this;
-  }
-
-  listenerList = listenerMap[eventType];
-  if (!listenerList || !listenerList.length) {
-    return this;
-  }
-
-  // Remove only parameter matches
-  // if specified
-  for (i = listenerList.length - 1; i >= 0; i--) {
-    listener = listenerList[i];
-
-    if ((!selector || selector === listener.selector) && (!handler || handler === listener.handler)) {
-      this._removedListeners.push(listener);
-      listenerList.splice(i, 1);
-    }
-  }
-
-  // All listeners removed
-  if (!listenerList.length) {
-    delete listenerMap[eventType];
-
-    // Remove the main handler
-    if (this.rootElement) {
-      this.rootElement.removeEventListener(eventType, this.handle, useCapture);
-    }
-  }
-
-  return this;
-};
-
-
-/**
- * Handle an arbitrary event.
- *
- * @param {Event} event
- */
-Delegate.prototype.handle = function(event) {
-  var i, l, type = event.type, root, phase, listener, returned, listenerList = [], target, /** @const */ EVENTIGNORE = 'ftLabsDelegateIgnore';
-
-  if (event[EVENTIGNORE] === true) {
-    return;
-  }
-
-  target = event.target;
-
-  // Hardcode value of Node.TEXT_NODE
-  // as not defined in IE8
-  if (target.nodeType === 3) {
-    target = target.parentNode;
-  }
-
-  // Handle SVG <use> elements in IE
-  if (target.correspondingUseElement) {
-    target = target.correspondingUseElement;
-  }
-
-  root = this.rootElement;
-
-  phase = event.eventPhase || ( event.target !== event.currentTarget ? 3 : 2 );
-  
-  switch (phase) {
-    case 1: //Event.CAPTURING_PHASE:
-      listenerList = this.listenerMap[1][type];
-    break;
-    case 2: //Event.AT_TARGET:
-      if (this.listenerMap[0] && this.listenerMap[0][type]) listenerList = listenerList.concat(this.listenerMap[0][type]);
-      if (this.listenerMap[1] && this.listenerMap[1][type]) listenerList = listenerList.concat(this.listenerMap[1][type]);
-    break;
-    case 3: //Event.BUBBLING_PHASE:
-      listenerList = this.listenerMap[0][type];
-    break;
-  }
-
-  var toFire = [];
-
-  // Need to continuously check
-  // that the specific list is
-  // still populated in case one
-  // of the callbacks actually
-  // causes the list to be destroyed.
-  l = listenerList.length;
-  while (target && l) {
-    for (i = 0; i < l; i++) {
-      listener = listenerList[i];
-
-      // Bail from this loop if
-      // the length changed and
-      // no more listeners are
-      // defined between i and l.
-      if (!listener) {
-        break;
-      }
-
-      if(
-        target.tagName &&
-        ["button", "input", "select", "textarea"].indexOf(target.tagName.toLowerCase()) > -1 &&
-        target.hasAttribute("disabled")
-      ) {
-        // Remove things that have previously fired
-        toFire = [];
-      }
-      // Check for match and fire
-      // the event if there's one
-      //
-      // TODO:MCG:20120117: Need a way
-      // to check if event#stopImmediatePropagation
-      // was called. If so, break both loops.
-      else if (listener.matcher.call(target, listener.matcherParam, target)) {
-        toFire.push([event, target, listener]);
-      }
-    }
-
-    // TODO:MCG:20120117: Need a way to
-    // check if event#stopPropagation
-    // was called. If so, break looping
-    // through the DOM. Stop if the
-    // delegation root has been reached
-    if (target === root) {
-      break;
-    }
-
-    l = listenerList.length;
-
-    // Fall back to parentNode since SVG children have no parentElement in IE
-    target = target.parentElement || target.parentNode;
-
-    // Do not traverse up to document root when using parentNode, though
-    if (target instanceof HTMLDocument) {
-      break;
-    }
-  }
-
-  var ret;
-
-  for(i=0; i<toFire.length; i++) {
-    // Has it been removed during while the event function was fired
-    if(this._removedListeners.indexOf(toFire[i][2]) > -1) {
-      continue;
-    }
-    returned = this.fire.apply(this, toFire[i]);
-
-    // Stop propagation to subsequent
-    // callbacks if the callback returned
-    // false
-    if (returned === false) {
-      toFire[i][0][EVENTIGNORE] = true;
-      toFire[i][0].preventDefault();
-      ret = false;
-      break;
-    }
-  }
-
-  return ret;
-};
-
-/**
- * Fire a listener on a target.
- *
- * @param {Event} event
- * @param {Node} target
- * @param {Object} listener
- * @returns {boolean}
- */
-Delegate.prototype.fire = function(event, target, listener) {
-  return listener.handler.call(target, event, target);
-};
-
-/**
- * Check whether an element
- * matches a generic selector.
- *
- * @type function()
- * @param {string} selector A CSS selector
- */
-var matches = (function(el) {
-  if (!el) return;
-  var p = el.prototype;
-  return (p.matches || p.matchesSelector || p.webkitMatchesSelector || p.mozMatchesSelector || p.msMatchesSelector || p.oMatchesSelector);
-}(Element));
-
-/**
- * Check whether an element
- * matches a tag selector.
- *
- * Tags are NOT case-sensitive,
- * except in XML (and XML-based
- * languages such as XHTML).
- *
- * @param {string} tagName The tag name to test against
- * @param {Element} element The element to test with
- * @returns boolean
- */
-function matchesTag(tagName, element) {
-  return tagName.toLowerCase() === element.tagName.toLowerCase();
-}
-
-/**
- * Check whether an element
- * matches the root.
- *
- * @param {?String} selector In this case this is always passed through as null and not used
- * @param {Element} element The element to test with
- * @returns boolean
- */
-function matchesRoot(selector, element) {
-  /*jshint validthis:true*/
-  if (this.rootElement === window) {
-    return (
-      // Match the outer document (dispatched from document)
-      element === document ||
-      // The <html> element (dispatched from document.body or document.documentElement)
-      element === document.documentElement ||
-      // Or the window itself (dispatched from window)
-      element === window
-    );
-  }
-  return this.rootElement === element;
-}
-
-/**
- * Check whether the ID of
- * the element in 'this'
- * matches the given ID.
- *
- * IDs are case-sensitive.
- *
- * @param {string} id The ID to test against
- * @param {Element} element The element to test with
- * @returns boolean
- */
-function matchesId(id, element) {
-  return id === element.id;
-}
-
-/**
- * Short hand for off()
- * and root(), ie both
- * with no parameters
- *
- * @return void
- */
-Delegate.prototype.destroy = function() {
-  this.off();
-  this.root();
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/ftdomdelegate/lib/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/ftdomdelegate/lib/index.js ***!
-  \*************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-"use strict";
-/*jshint browser:true, node:true*/
-
-
-
-/**
- * @preserve Create and manage a DOM event delegator.
- *
- * @codingstandard ftlabs-jsv2
- * @copyright The Financial Times Limited [All Rights Reserved]
- * @license MIT License (see LICENSE.txt)
- */
-var Delegate = __webpack_require__(/*! ./delegate */ "./node_modules/ftdomdelegate/lib/delegate.js");
-
-module.exports = function(root) {
-  return new Delegate(root);
-};
-
-module.exports.Delegate = Delegate;
-
-
-/***/ }),
-
 /***/ "./packages/cfpb-icons/src/icons/error.svg":
 /*!*************************************************!*\
   !*** ./packages/cfpb-icons/src/icons/error.svg ***!
@@ -1163,334 +645,6 @@ function toggleAllDetails(toggleBtn) {
   }
   isShowingAllDetails = !isShowingAllDetails;
 }
-
-
-/***/ }),
-
-/***/ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js":
-/*!**************************************************************************!*\
-  !*** ./packages/cfpb-atomic-component/src/components/AtomicComponent.js ***!
-  \**************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AtomicComponent": function() { return /* binding */ AtomicComponent; }
-/* harmony export */ });
-/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
-/* harmony import */ var ftdomdelegate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ftdomdelegate */ "./node_modules/ftdomdelegate/lib/index.js");
-/* ==========================================================================
-   AtomicComponent
-
-   Base Atomic Component
-
-   Contains code copied from the following with major modifications :
-
-   - Backbone.js ( http://backbonejs.org/docs/backbone.html ).
-   - Marionette ( http://marionettejs.com ).
-
-   ========================================================================== */
-
-
-
-
-const TAG_NAME = 'div';
-
-/**
- * Function as the constrcutor for the AtomicComponent.
- * Sets up initial instance properties and calls
- * necessary methods to properly instantiatie component.
- *
- * @param {HTMLElement} element - The element to set as the base element.
- * @param {object} attributes - Hash of attributes to set on base element.
- */
-function AtomicComponent(element, attributes) {
-  this.element = element;
-  this.initializers = [];
-  this.uId = this.uniqueId('ac');
-  Object.assign(this, attributes);
-  this.processModifiers();
-  this.ensureElement();
-  this.setCachedElements();
-  this.initializers.push(this.initialize);
-}
-
-// Public instance Methods and properties.
-Object.assign(AtomicComponent.prototype, new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver(), {
-  /**
-   * Run through and call the component's initializers.
-   *
-   * @returns {AtomicComponent} An instance.
-   */
-  init: function () {
-    this.initializers.forEach(function (func) {
-      if ((0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.isFunction)(func)) {
-        func.apply(this, arguments);
-      }
-    }, this);
-    this.dispatchEvent('component:initialized');
-
-    return this;
-  },
-
-  /**
-   * Function used to process class modifiers. These should
-   * correspond with BEM modifiers.
-   */
-  processModifiers: function () {
-    if (!this.modifiers) {
-      return;
-    }
-
-    this.modifiers.forEach(function (modifier) {
-      const modifierClass = modifier.ui.base.substring(1);
-      if (this.element.classList.contains(modifierClass)) {
-        if (modifier.initialize) {
-          this.initializers.push(modifier.initialize);
-        }
-        Object.assign(this, modifier);
-      }
-    }, this);
-  },
-
-  /**
-   * Function used to render a template in Single Page Applications.
-   *
-   * @returns {AtomicComponent} An instance.
-   */
-  render: function () {
-    return this;
-  },
-
-  /**
-   * Function used to ensure and set / create the base DOM element.
-   */
-  ensureElement: function () {
-    if (!this.element) {
-      // eslint-disable-line no-negated-condition
-      const attrs = { ...this.attributes };
-      attrs.id = this.id || this.u_id;
-      if (this.className) attrs.class = this.className;
-      this.setElement(document.createElement(TAG_NAME));
-      this.setElementAttributes(attrs);
-    } else {
-      this.setElement(this.element);
-    }
-    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(this.element);
-  },
-
-  /**
-   * Function used to set the base DOM element.
-   *
-   * @param {HTMLElement} element - The element to set as the base element.
-   * @returns {AtomicComponent} An instance.
-   */
-  setElement: function (element) {
-    if (this.element) {
-      this.undelegateEvents();
-    }
-    this.element = element;
-    this.delegateEvents();
-
-    return this;
-  },
-
-  // TODO Fix complexity issue
-  /* eslint-disable complexity */
-  /**
-   * Function used to set the cached DOM elements.
-   *
-   * @returns {object} Hash of event names and cached elements.
-   */
-  setCachedElements: function () {
-    const ui = { ...this.ui };
-    let key;
-    let element;
-
-    for (key in ui) {
-      if ({}.hasOwnProperty.call(ui, key)) {
-        element = this.element.querySelectorAll(ui[key]);
-        if (element.length === 1) {
-          ui[key] = element[0];
-        } else if (element.length > 1) {
-          ui[key] = element;
-        } else {
-          ui[key] = null;
-        }
-      }
-    }
-    this.ui = ui;
-
-    return ui;
-  },
-  /* eslint-enable complexity */
-
-  /**
-   * Function used to remove the base element from the DOM
-   * and unbind events.
-   *
-   * @returns {boolean} True if successful in tearing down component.
-   */
-  destroy: function () {
-    if (this.element) {
-      this.element.parentNode.removeChild(this.element);
-      if (this.element.view) delete this.element.view;
-      delete this.element;
-    }
-    this.undelegateEvents();
-    this.dispatchEvent('component:destroyed');
-
-    return true;
-  },
-
-  /**
-   * Function used to set the attributes on an element.
-   *
-   * @param {object} attributes - Hash of attributes to set on base element.
-   */
-  setElementAttributes: function (attributes) {
-    let property;
-
-    for (property in attributes) {
-      if ({}.hasOwnProperty.call(attributes, property)) {
-        this.element.setAttribute(property, attributes[property]);
-      }
-    }
-  },
-
-  // TODO Fix complexity issue
-  /* eslint-disable complexity */
-  /**
-   * Function used to up event delegation on the base element.
-   * Using Dom-delegate library to enable this functionality.
-   *
-   * @param {object} events - Hash of events to bind to the dom element.
-   * @returns {AtomicComponent} An instance.
-   */
-  delegateEvents: function (events) {
-    const delegateEventSplitter = /^(\S+)\s*(.*)$/;
-    let key;
-    let method;
-    let match;
-
-    events = events || (events = this.events);
-    if (!events) {
-      return this;
-    }
-
-    this.undelegateEvents();
-    this._delegate = new ftdomdelegate__WEBPACK_IMPORTED_MODULE_1__(this.element);
-    for (key in events) {
-      if ({}.hasOwnProperty.call(events, key)) {
-        method = events[key];
-        if ((0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.isFunction)(this[method])) {
-          method = this[method];
-        }
-        if (method) {
-          match = key.match(delegateEventSplitter);
-          this.delegate(match[1], match[2], method.bind(this));
-        }
-      }
-    }
-    this.dispatchEvent('component:bound');
-
-    return this;
-  },
-  /* eslint-enable complexity */
-
-  /**
-   * Function used to set the attributes on an element.
-   *
-   * @param {string} eventName - Event in which to listen for.
-   * @param {string} selector - CSS selector.
-   * @param {Function} listener - Callback for event.
-   * @returns {AtomicComponent} An instance.
-   */
-  delegate: function (eventName, selector, listener) {
-    this._delegate.on(eventName, selector, listener);
-
-    return this;
-  },
-
-  /**
-   * Function used to remove events from the base element.
-   *
-   * @returns {AtomicComponent} An instance.
-   */
-  undelegateEvents: function () {
-    if (this._delegate) {
-      this._delegate.destroy();
-    }
-    this.element.removeAttribute('data-js-hook');
-
-    return this;
-  },
-
-  /**
-   * Function used to set the attributes on an element.
-   *
-   * @param {string} prefix - String to use a prefix.
-   * @returns {string} Prefixed unique id string.
-   */
-  uniqueId: function (prefix) {
-    return prefix + '_' + Math.random().toString(36).substr(2, 9);
-  },
-});
-
-// Static Methods
-
-/**
- * Function used to set the attributes on an element.
- * and unbind events.
- *
- * @param {object} attributes - Hash of attributes to set on base element.
- * @returns {Function} Extended child constructor function.
- */
-function extend(attributes) {
-  /**
-   * Function used as constructor in order to establish inheritance chain.
-   *
-   * @returns {AtomicComponent} An instance.
-   */
-  function child() {
-    this._super = AtomicComponent.prototype;
-    return AtomicComponent.apply(this, arguments);
-  }
-
-  child.prototype = Object.create(AtomicComponent.prototype);
-  Object.assign(child.prototype, attributes);
-  Object.assign(child, AtomicComponent);
-
-  if (
-    {}.hasOwnProperty.call(attributes, 'ui') &&
-    {}.hasOwnProperty.call(attributes.ui, 'base')
-  ) {
-    child.selector = attributes.ui.base;
-  }
-
-  child.constants = {};
-
-  return child;
-}
-
-/**
- * Function used to instantiate all instances of the particular
- * atomic component on a page.
- *
- * @param {HTMLElement} scope - Where to search for components within.
- * @returns {Array} List of AtomicComponent instances.
- */
-function init(scope) {
-  const components = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(this.selector, this, scope);
-  return components;
-}
-
-// Set public static methods.
-AtomicComponent.init = init;
-AtomicComponent.extend = extend;
-
-
 
 
 /***/ }),
@@ -3600,9 +2754,133 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Expandable": function() { return /* binding */ Expandable; }
 /* harmony export */ });
-/* harmony import */ var _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component/src/components/AtomicComponent.js */ "./packages/cfpb-atomic-component/src/components/AtomicComponent.js");
-/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
-/* harmony import */ var _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExpandableTransition.js */ "./packages/cfpb-expandables/src/ExpandableTransition.js");
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
+/* ==========================================================================
+   Expandable Organism
+   ========================================================================== */
+
+
+
+const BASE_CLASS = 'o-expandable';
+
+/**
+ * Expandable
+ *
+ * @class
+ * @classdesc Initializes a new Expandable molecule.
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the molecule.
+ * @returns {Expandable} An instance.
+ */
+function Expandable(element) {
+  // Internal vars.
+  const _dom = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
+  let _targetDom;
+  let _contentDom;
+  let _labelDom;
+
+  // Animation vars.
+  let _transition;
+  let _flyout;
+
+  /**
+   * Set up and create the multiselect.
+   *
+   * @returns {Expandable} An instance.
+   */
+  function init() {
+    if (!(0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
+      return this;
+    }
+
+    _targetDom = _dom.querySelector(`.${BASE_CLASS}_target`);
+    _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
+    _labelDom = _dom.querySelector(`.${BASE_CLASS}_label`);
+
+    const isExpanded = _contentDom.classList.contains(
+      `${BASE_CLASS}_content__onload-open`
+    );
+
+    // Add behavior hooks.
+    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_dom, 'behavior_flyout-menu');
+    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_targetDom, 'behavior_flyout-menu_trigger');
+    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_contentDom, 'behavior_flyout-menu_content');
+
+    // If it's expanded we don't set an initial height,
+    // as it will be calculated internally.
+    const initialClass = isExpanded
+      ? _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition.CLASSES.MH_DEFAULT
+      : _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition.CLASSES.MH_ZERO;
+    _transition = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition(_contentDom).init(initialClass);
+
+    // Create root menu.
+    _flyout = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.FlyoutMenu(_dom);
+
+    _flyout.setTransition(
+      _transition,
+      _transition.maxHeightZero,
+      _transition.maxHeightDefault
+    );
+
+    _flyout.init(isExpanded);
+
+    // Add events.
+    _flyout.addEventListener('expandbegin', () => {
+      _contentDom.classList.remove('u-hidden');
+      this.dispatchEvent('expandbegin', { target: this });
+    });
+    _flyout.addEventListener('collapseend', () => {
+      _contentDom.classList.add('u-hidden');
+    });
+
+    return this;
+  }
+
+  /**
+   * @returns {string} The expandable label text.
+   */
+  function getLabelText() {
+    return _labelDom.textContent.trim();
+  }
+
+  // Attach public events.
+  this.init = init;
+  this.expand = () => _flyout.expand();
+  this.collapse = () => _flyout.collapse();
+  this.isExpanded = () => _flyout.isExpanded();
+  this.refresh = () => _flyout.getTransition().refresh();
+  this.getLabelText = getLabelText;
+
+  const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver();
+  this.addEventListener = eventObserver.addEventListener;
+  this.removeEventListener = eventObserver.removeEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+
+  return this;
+}
+
+Expandable.BASE_CLASS = BASE_CLASS;
+Expandable.init = (scope) =>
+  (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${Expandable.BASE_CLASS}`, Expandable, scope);
+
+
+
+
+/***/ }),
+
+/***/ "./packages/cfpb-expandables/src/ExpandableGroup.js":
+/*!**********************************************************!*\
+  !*** ./packages/cfpb-expandables/src/ExpandableGroup.js ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ExpandableGroup": function() { return /* binding */ ExpandableGroup; }
+/* harmony export */ });
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
+/* harmony import */ var _cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-expandables */ "./packages/cfpb-expandables/src/index.js");
 /* ==========================================================================
    Expandable Organism
    ========================================================================== */
@@ -3610,291 +2888,79 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_1__.EventObserver();
-
-/**
- * Event handler for when an expandable begins expanding.
- */
-function expandBeginHandler() {
-  this.ui.content.classList.remove('u-hidden');
-}
+const BASE_CLASS = 'o-expandable-group';
 
 /**
- * Event handler for when an expandable is finished collapsing.
- */
-function collapseEndHandler() {
-  this.ui.content.classList.add('u-hidden');
-}
-
-/**
- * Event handler for when an accordion is activated
- */
-function _accordionActivatedHandler() {
-  if (this.activeAccordion) {
-    this.transition.toggleExpandable();
-    this.toggleTargetState(this.ui.target);
-    this.activeAccordion = false;
-  }
-}
-
-/**
- * Initialize a new expandable.
- */
-function initialize() {
-  const transition = new _ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__["default"](this.ui.content);
-  this.transition = transition.init();
-  this.transition.addEventListener(
-    'expandbegin',
-    expandBeginHandler.bind(this)
-  );
-  this.transition.addEventListener(
-    'collapseend',
-    collapseEndHandler.bind(this)
-  );
-
-  if (
-    this.ui.content.classList.contains(_ExpandableTransition_js__WEBPACK_IMPORTED_MODULE_2__["default"].CLASSES.EXPANDED)
-  ) {
-    this.ui.target.classList.add(this.classes.targetExpanded);
-  } else {
-    this.ui.target.classList.add(this.classes.targetCollapsed);
-    this.ui.content.classList.add('u-hidden');
-  }
-
-  const expandableGroup = this.ui.target.closest('.' + this.classes.group);
-
-  this.isAccordionGroup =
-    expandableGroup !== null &&
-    expandableGroup.classList.contains(this.classes.groupAccordion);
-
-  if (this.isAccordionGroup) {
-    eventObserver.addEventListener(
-      'accordionActivated',
-      _accordionActivatedHandler.bind(this)
-    );
-  }
-}
-
-/**
- * Event handler for when an expandable is clicked.
- */
-function expandableClickHandler() {
-  this.transition.toggleExpandable();
-  this.toggleTargetState(this.ui.target);
-
-  if (this.isAccordionGroup) {
-    if (this.activeAccordion) {
-      this.activeAccordion = false;
-    } else {
-      eventObserver.dispatchEvent('accordionActivated', { target: this });
-      this.activeAccordion = true;
-    }
-  }
-}
-
-/**
- * Toggle an expandable to open or closed.
- *
- * @param {HTMLElement} element - The expandable target HTML DOM element.
- */
-function toggleTargetState(element) {
-  if (element.classList.contains(this.classes.targetExpanded)) {
-    this.ui.target.classList.add(this.classes.targetCollapsed);
-    this.ui.target.classList.remove(this.classes.targetExpanded);
-  } else {
-    this.ui.target.classList.add(this.classes.targetExpanded);
-    this.ui.target.classList.remove(this.classes.targetCollapsed);
-  }
-}
-
-/**
- * Retrieve the label text of the expandable header.
- *
- * @returns {string} The text of the expandable's label.
- */
-function getLabelText() {
-  return this.ui.label.textContent.trim();
-}
-
-const Expandable = _cfpb_cfpb_atomic_component_src_components_AtomicComponent_js__WEBPACK_IMPORTED_MODULE_0__.AtomicComponent.extend({
-  ui: {
-    base: '.o-expandable',
-    target: '.o-expandable_target',
-    content: '.o-expandable_content',
-    header: '.o-expandable_header',
-    label: '.o-expandable_label',
-  },
-
-  classes: {
-    targetExpanded: 'o-expandable_target__expanded',
-    targetCollapsed: 'o-expandable_target__collapsed',
-    group: 'o-expandable-group',
-    groupAccordion: 'o-expandable-group__accordion',
-  },
-
-  events: {
-    'click .o-expandable_target': 'expandableClickHandler',
-  },
-
-  transition: null,
-  isAccordionGroup: false,
-  activeAccordion: false,
-
-  initialize: initialize,
-  expandableClickHandler: expandableClickHandler,
-  toggleTargetState: toggleTargetState,
-  getLabelText: getLabelText,
-});
-
-
-
-
-/***/ }),
-
-/***/ "./packages/cfpb-expandables/src/ExpandableTransition.js":
-/*!***************************************************************!*\
-  !*** ./packages/cfpb-expandables/src/ExpandableTransition.js ***!
-  \***************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
-
-
-// Exported constants.
-const CLASSES = {
-  CSS_PROPERTY: 'max-height',
-  BASE_CLASS: 'o-expandable_content__transition',
-  EXPANDED: 'o-expandable_content__expanded',
-  COLLAPSED: 'o-expandable_content__collapsed',
-  OPEN_DEFAULT: 'o-expandable_content__onload-open',
-};
-
-/* eslint-disable max-lines-per-function */
-/**
- * ExpandableTransition
+ * ExpandableGroup
  *
  * @class
- * @classdesc Initializes new ExpandableTransition behavior.
- * @param {HTMLElement} element - DOM element to apply move transition to.
- * @returns {ExpandableTransition} An instance.
+ * @classdesc Initializes a new Expandable molecule.
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the molecule.
+ * @returns {ExpandableGroup} An instance.
  */
-function ExpandableTransition(element) {
-  const _baseTransition = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition(element, CLASSES, this);
-  let previousHeight;
+function ExpandableGroup(element) {
+  // Internal vars.
+  const _dom = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
+  const _isAccordion = _dom.classList.contains(`${BASE_CLASS}__accordion`);
+  let _expandables;
+  let _lastExpanded;
 
   /**
-   * Handle the end of a transition.
+   * @param {object} evt - The event object.
    */
-  function _transitionComplete() {
-    if (element.classList.contains(CLASSES.EXPANDED)) {
-      this.dispatchEvent('expandend', { target: this });
-
-      if (element.scrollHeight > previousHeight) {
-        element.style.maxHeight = element.scrollHeight + 'px';
-      }
-    } else if (element.classList.contains(CLASSES.COLLAPSED)) {
-      this.dispatchEvent('collapseend', { target: this });
+  function _handleExpandBegin(evt) {
+    const target = evt.target;
+    if (_lastExpanded && _lastExpanded !== target) {
+      _lastExpanded.collapse();
     }
+    _lastExpanded = target;
   }
 
   /**
-   * @returns {ExpandableTransition} An instance.
-   */
-  function init() {
-    const openOnLoad = element.classList.contains(CLASSES.OPEN_DEFAULT);
-    const initialClass = openOnLoad ? CLASSES.EXPANDED : CLASSES.COLLAPSED;
-    _baseTransition.init(initialClass);
-    this.addEventListener(
-      _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT,
-      _transitionComplete.bind(this)
-    );
-
-    if (openOnLoad) {
-      this.expand();
-    } else {
-      this.collapse();
-    }
-
-    return this;
-  }
-
-  /**
-   * Toggle the expandable
+   * Set up and create the multiselect.
    *
-   * @returns {ExpandableTransition} An instance.
+   * @param {Array} expandables - List of expandables inside this group.
+   * @returns {ExpandableGroup} An instance.
    */
-  function toggleExpandable() {
-    if (element.classList.contains(CLASSES.COLLAPSED)) {
-      this.expand();
-    } else {
-      this.collapse();
+  function init(expandables) {
+    if (!(0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
+      return this;
     }
 
-    return this;
-  }
+    if (_isAccordion) {
+      _expandables = expandables;
 
-  /**
-   * Collapses the expandable content
-   *
-   * @returns {ExpandableTransition} An instance.
-   */
-  function collapse() {
-    this.dispatchEvent('collapsebegin', { target: this });
-
-    previousHeight = element.scrollHeight;
-    element.style.maxHeight = '0';
-    _baseTransition.applyClass(CLASSES.COLLAPSED);
-
-    return this;
-  }
-
-  /**
-   * Expands the expandable content
-   *
-   * @returns {ExpandableTransition} An instance.
-   */
-  function expand() {
-    this.dispatchEvent('expandbegin', { target: this });
-
-    if (!previousHeight || element.scrollHeight > previousHeight) {
-      previousHeight = element.scrollHeight;
+      _expandables.forEach((expandable) => {
+        expandable.addEventListener('expandbegin', _handleExpandBegin);
+      });
     }
-
-    element.style.maxHeight = previousHeight + 'px';
-    _baseTransition.applyClass(CLASSES.EXPANDED);
 
     return this;
   }
 
   // Attach public events.
-  const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver();
-  this.addEventListener = eventObserver.addEventListener;
-  this.dispatchEvent = eventObserver.dispatchEvent;
-  this.removeEventListener = eventObserver.removeEventListener;
-
-  this.animateOff = _baseTransition.animateOff;
-  this.animateOn = _baseTransition.animateOn;
-  this.halt = _baseTransition.halt;
-  this.isAnimated = _baseTransition.isAnimated;
-  this.setElement = _baseTransition.setElement;
-  this.remove = _baseTransition.remove;
-
   this.init = init;
-  this.toggleExpandable = toggleExpandable;
-  this.collapse = collapse;
-  this.expand = expand;
 
   return this;
 }
-/* eslint-enable max-lines-per-function */
 
-// Public static properties.
-ExpandableTransition.CLASSES = CLASSES;
+ExpandableGroup.BASE_CLASS = BASE_CLASS;
+ExpandableGroup.init = (scope) => {
+  const base = scope || document;
+  const expandableGroupsDom = base.querySelectorAll(`.${BASE_CLASS}`);
+  expandableGroupsDom.forEach((expandableGroupDom) => {
+    const expandables = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(
+      `.${_cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_1__.Expandable.BASE_CLASS}`,
+      _cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_1__.Expandable,
+      expandableGroupDom
+    );
+    const expandableGroup = new ExpandableGroup(expandableGroupDom);
+    expandableGroup.init(expandables);
+  });
+};
 
-/* harmony default export */ __webpack_exports__["default"] = (ExpandableTransition);
+
 
 
 /***/ }),
@@ -4132,7 +3198,7 @@ function Summary(element) {
 }
 
 Summary.BASE_CLASS = BASE_CLASS;
-Summary.init = () => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${BASE_CLASS}`, Summary);
+Summary.init = (scope) => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${BASE_CLASS}`, Summary, scope);
 
 
 
@@ -4149,14 +3215,17 @@ Summary.init = () => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Expandable": function() { return /* reexport safe */ _Expandable_js__WEBPACK_IMPORTED_MODULE_0__.Expandable; },
-/* harmony export */   "Summary": function() { return /* reexport safe */ _Summary_js__WEBPACK_IMPORTED_MODULE_1__.Summary; }
+/* harmony export */   "ExpandableGroup": function() { return /* reexport safe */ _ExpandableGroup_js__WEBPACK_IMPORTED_MODULE_1__.ExpandableGroup; },
+/* harmony export */   "Summary": function() { return /* reexport safe */ _Summary_js__WEBPACK_IMPORTED_MODULE_2__.Summary; }
 /* harmony export */ });
 /* harmony import */ var _Expandable_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Expandable.js */ "./packages/cfpb-expandables/src/Expandable.js");
-/* harmony import */ var _Summary_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Summary.js */ "./packages/cfpb-expandables/src/Summary.js");
+/* harmony import */ var _ExpandableGroup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExpandableGroup.js */ "./packages/cfpb-expandables/src/ExpandableGroup.js");
+/* harmony import */ var _Summary_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Summary.js */ "./packages/cfpb-expandables/src/Summary.js");
 /* ==========================================================================
    Design System
    Expandables
    ========================================================================== */
+
 
 
 
@@ -4786,6 +3855,7 @@ function Multiselect(element) {
 }
 
 Multiselect.BASE_CLASS = BASE_CLASS;
+Multiselect.init = () => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${BASE_CLASS}`, Multiselect);
 
 
 
@@ -5173,13 +4243,10 @@ var anchors = new anchor_js__WEBPACK_IMPORTED_MODULE_1__();
 anchors.add('h2:not(.title), h3, h4, h5');
 // Ensure there are no anchors in inconvenient places
 anchors.remove("\n  .a-live_code h2,\n  .a-live_code h3,\n  .a-live_code h4,\n  .a-live_code h5,\n  .o-expandable_label,\n  #search-results h3\n");
-var multiselectDom = document.querySelector('.o-multiselect');
-if (multiselectDom) {
-  var multiselect = new _cfpb_cfpb_forms__WEBPACK_IMPORTED_MODULE_3__.Multiselect(multiselectDom);
-  multiselect.init();
-}
 _cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_2__.Summary.init();
+_cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_2__.ExpandableGroup.init();
 _cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_2__.Expandable.init();
+_cfpb_cfpb_forms__WEBPACK_IMPORTED_MODULE_3__.Multiselect.init();
 
 // Exporting these classes to the window so that the transition-patterns.md
 // page can use them in its code snippets.

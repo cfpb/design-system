@@ -453,18 +453,6 @@ table {
   clip: rect(0 0 0 0);
 }
 @media only all and (max-width: 37.5em) {
-  .u-visually-hidden-on-mobile {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-  }
-}
-@media only all and (max-width: 37.5em) {
   .u-hide-on-mobile {
     display: none;
   }

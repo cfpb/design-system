@@ -464,9 +464,7 @@ research: >-
 
   var closestElem = closest(elem, '.o-expandable_target');
 
-  var textElem = closestElem.querySelector('.o-expandable_label') || closestElem.querySelector('.o-expandable_cue')
-
-  ;
+  var textElem = closestElem.querySelector('.o-expandable_label');
 
   var text = textElem.textContent.trim();
 

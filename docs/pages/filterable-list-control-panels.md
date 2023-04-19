@@ -15,7 +15,8 @@ variation_groups:
               <div class="o-expandable
                   o-expandable__padded
                   o-expandable__background
-                  o-expandable__border">
+                  o-expandable__border
+                  o-expandable__onload-open">
                   <button class="o-expandable_header o-expandable_target o-expandable_target__expanded" type="button">
                       <span class="h4 o-expandable_label">
                       Filter posts
@@ -37,7 +38,7 @@ variation_groups:
                           </span>
                       </span>
                   </button>
-                  <div class="o-expandable_content o-expandable_content__onload-open">
+                  <div class="o-expandable_content">
                       <form method="get" action="#">
                           <div class="content-l">
                               <div class="content-l_col

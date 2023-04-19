@@ -27,11 +27,11 @@ components are dependencies of this component.
 ### Expanded
 
 Sometimes you may want the expandable to be open by default.
-This is as easy as adding the `.o-expandable_content__onload-open` modifier
-to the `.o-expandable_content` block.
+This is as easy as adding the `.o-expandable__onload-open` modifier
+to the `.o-expandable` block.
 
 ```
-.o-expandable_content__onload-open
+.o-expandable__onload-open
 ```
 
 ### Padded
@@ -184,7 +184,8 @@ The following combination is our recommended go-to expandable pattern.
 <div class="o-expandable
             o-expandable__padded
             o-expandable__background
-            o-expandable__border">
+            o-expandable__border
+            o-expandable__onload-open">
     <button class="o-expandable_header o-expandable_target"
             title="Expand content">
         <h3 class="h4 o-expandable_label">
@@ -201,7 +202,7 @@ The following combination is our recommended go-to expandable pattern.
             </span>
         </span>
     </button>
-    <div class="o-expandable_content o-expandable_content__onload-open">
+    <div class="o-expandable_content">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -216,7 +217,8 @@ The following combination is our recommended go-to expandable pattern.
 <div class="o-expandable
             o-expandable__padded
             o-expandable__background
-            o-expandable__border">
+            o-expandable__border
+            o-expandable__onload-open">
     <button class="o-expandable_header o-expandable_target"
             title="Expand content">
         <h3 class="h4 o-expandable_label">
@@ -233,7 +235,7 @@ The following combination is our recommended go-to expandable pattern.
             </span>
         </span>
     </button>
-    <div class="o-expandable_content o-expandable_content__onload-open">
+    <div class="o-expandable_content">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Neque ipsa voluptatibus soluta nobis unde quisquam

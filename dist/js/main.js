@@ -2797,9 +2797,7 @@ function Expandable(element) {
     _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
     _labelDom = _dom.querySelector(`.${BASE_CLASS}_label`);
 
-    const isExpanded = _contentDom.classList.contains(
-      `${BASE_CLASS}_content__onload-open`
-    );
+    const isExpanded = _dom.classList.contains(`${BASE_CLASS}__onload-open`);
 
     // Add behavior hooks.
     (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_dom, 'behavior_flyout-menu');

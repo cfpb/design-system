@@ -2179,11 +2179,12 @@
 &lt;/div&gt;`,
                 
                     'variation_name2': 'Standard expandable (open on load)',
-                    'variation_description2': "Sometimes you may want the expandable to be open by default. This is as easy as adding the .o-expandable_content__onload-open modifier to the .o-expandable_content block.\n",
+                    'variation_description2': "Sometimes you may want the expandable to be open by default. This is as easy as adding the .o-expandable__onload-open modifier to the .o-expandable block.\n",
                     'variation_code_snippet2': `&lt;div class=&quot;o-expandable
             o-expandable__padded
             o-expandable__background
-            o-expandable__border&quot;&gt;
+            o-expandable__border
+            o-expandable__onload-open&quot;&gt;
     &lt;button class=&quot;o-expandable_header o-expandable_target&quot;
             title=&quot;Expand content&quot;&gt;
         &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
@@ -2200,7 +2201,7 @@
             &lt;/span&gt;
         &lt;/span&gt;
     &lt;/button&gt;
-    &lt;div class=&quot;o-expandable_content o-expandable_content__onload-open&quot;&gt;
+    &lt;div class=&quot;o-expandable_content&quot;&gt;
         &lt;p&gt;
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -2692,7 +2693,8 @@ Basic legend
     &lt;div class=&quot;o-expandable
         o-expandable__padded
         o-expandable__background
-        o-expandable__border&quot;&gt;
+        o-expandable__border
+        o-expandable__onload-open&quot;&gt;
         &lt;button class=&quot;o-expandable_header o-expandable_target o-expandable_target__expanded&quot; type=&quot;button&quot;&gt;
             &lt;span class=&quot;h4 o-expandable_label&quot;&gt;
             Filter posts
@@ -2714,7 +2716,7 @@ Basic legend
                 &lt;/span&gt;
             &lt;/span&gt;
         &lt;/button&gt;
-        &lt;div class=&quot;o-expandable_content o-expandable_content__onload-open&quot;&gt;
+        &lt;div class=&quot;o-expandable_content&quot;&gt;
             &lt;form method=&quot;get&quot; action=&quot;#&quot;&gt;
                 &lt;div class=&quot;content-l&quot;&gt;
                     &lt;div class=&quot;content-l_col

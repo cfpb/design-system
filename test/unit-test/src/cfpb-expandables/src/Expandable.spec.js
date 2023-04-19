@@ -15,10 +15,10 @@ const HTML_SNIPPET = `
                 Expandable Header 1
             </span>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue o-expandable_cue-open">
+                <span class="o-expandable_cue-open">
                     Show
                 </span>
-                <span class="o-expandable_cue o-expandable_cue-close">
+                <span class="o-expandable_cue-close">
                     Hide
                 </span>
             </span>
@@ -41,10 +41,10 @@ const HTML_SNIPPET = `
                 Expandable Header 2
             </span>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue o-expandable_cue-open">
+                <span class="o-expandable_cue-open">
                     Show
                 </span>
-                <span class="o-expandable_cue o-expandable_cue-close">
+                <span class="o-expandable_cue-close">
                     Hide
                 </span>
             </span>
@@ -68,10 +68,10 @@ const HTML_SNIPPET = `
             Expandable Header 3
         </span>
         <span class="o-expandable_link">
-            <span class="o-expandable_cue o-expandable_cue-open">
+            <span class="o-expandable_cue-open">
                 Show
             </span>
-            <span class="o-expandable_cue o-expandable_cue-close">
+            <span class="o-expandable_cue-close">
                 Hide
             </span>
         </span>

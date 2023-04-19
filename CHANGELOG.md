@@ -1,4 +1,21 @@
 
+## v0.24.0 (2023-04-19)
+
+#### Breaking Change
+* `cfpb-expandables`
+  * [#1632](https://github.com/cfpb/design-system/pull/1632) Move `__onload-open` modifier to the parent component class ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-core`
+  * [#1630](https://github.com/cfpb/design-system/pull/1630) Remove expandable labels and `.u-visually-hidden-on-mobile` class ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-core`, `cfpb-expandables`
+  * [#1631](https://github.com/cfpb/design-system/pull/1631) Remove expandable cruft ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.23.0 (2023-04-18)
 
 #### Breaking Change

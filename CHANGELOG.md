@@ -1,4 +1,16 @@
 
+## v0.24.1 (2023-04-21)
+
+#### Enhancement
+* `cfpb-expandables`
+  * [#1634](https://github.com/cfpb/design-system/pull/1634) Add Summary Minimal component ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1633](https://github.com/cfpb/design-system/pull/1633) Convert visually hidden expandable labels to aria-labels ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.24.0 (2023-04-19)
 
 #### Breaking Change

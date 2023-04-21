@@ -1,0 +1,88 @@
+@import (reference) '@cfpb/cfpb-core/src/cfpb-core.less';
+
+/* topdoc
+  name: Summary Minimal
+  family: cf-organisms
+  notes:
+    - "Styles a two-way Expandable-like organism that previews content."
+  patterns:
+  - name: Summary Minimal organism
+    markup: |
+      <div class="o-summary-minimal">
+          <div class="o-summary_content">
+               Content
+          </div>
+          <button class="o-summary_btn">
+            <span class="o-summary-minimal_cue-open">
+                Show
+                {% include icons/plus-round.svg %}
+            </span>
+            <span class="o-summary-minimal_cue-close">
+                Hide
+                {% include icons/minus-round.svg %}
+            </span>
+          </button>
+      </div>
+    codenotes:
+      - |
+        Pattern structure
+        -----------------
+        .o-summary-minimal
+          .o-summary-minimal_content
+          .o-summary-minimal_btn
+            .o-summary-minimal_cue-open
+            .o-summary-minimal_cue-close
+
+    notes:
+      - "Two-way expandable. Displays an approximately 4-line
+         preview of content."
+  tags:
+  - cf-organisms
+*/
+
+.o-summary-minimal {
+  &_content {
+    overflow-y: hidden;
+
+    // Move the bounding box 2 pixels to avoid clipping link focus boxes.
+    padding: 2px;
+    left: -2px;
+    top: -2px;
+
+    position: relative;
+  }
+
+  &_btn {
+    // Hide button in no-js state.
+    .no-js & {
+      display: none;
+    }
+
+    margin-top: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    border: none;
+    background: none;
+    text-align: left;
+    color: @pacific;
+
+    &:focus {
+      outline: 1px dotted @pacific;
+      outline-offset: 2px;
+    }
+
+    .o-summary-minimal_cue-close,
+    .o-summary-minimal_cue-open {
+      display: none;
+    }
+
+    &[aria-expanded='false'] .o-summary-minimal_cue-open {
+      display: block;
+    }
+
+    &[aria-expanded='true'] .o-summary-minimal_cue-close {
+      display: block;
+    }
+  }
+}

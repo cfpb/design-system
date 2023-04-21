@@ -1,6 +1,11 @@
 import { toggleAllDetails, toggleDetails } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
-import { Expandable, ExpandableGroup, Summary } from '@cfpb/cfpb-expandables';
+import {
+  Expandable,
+  ExpandableGroup,
+  Summary,
+  SummaryMinimal,
+} from '@cfpb/cfpb-expandables';
 import { Multiselect } from '@cfpb/cfpb-forms';
 import {
   FlyoutMenu,
@@ -29,6 +34,7 @@ anchors.remove(`
 `);
 
 Summary.init();
+SummaryMinimal.init();
 ExpandableGroup.init();
 Expandable.init();
 Multiselect.init();

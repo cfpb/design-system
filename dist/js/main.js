@@ -3203,6 +3203,135 @@ Summary.init = (scope) => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODUL
 
 /***/ }),
 
+/***/ "./packages/cfpb-expandables/src/SummaryMinimal.js":
+/*!*********************************************************!*\
+  !*** ./packages/cfpb-expandables/src/SummaryMinimal.js ***!
+  \*********************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "SummaryMinimal": function() { return /* binding */ SummaryMinimal; }
+/* harmony export */ });
+/* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
+/* eslint-disable no-use-before-define */
+
+
+const BASE_CLASS = 'o-summary-minimal';
+
+/**
+ * SummaryMinimal
+ *
+ * @class
+ * @classdesc Initializes a new Summary organism.
+ * @param {HTMLElement} element - The DOM element within which to search
+ *   for the organism.
+ * @returns {Summary} An instance.
+ */
+function SummaryMinimal(element) {
+  const _dom = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
+  const _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
+  const _btnDom = _dom.querySelector(`.${BASE_CLASS}_btn`);
+  let _transition;
+  let _flyout;
+
+  /**
+   * @returns {Summary} An instance.
+   */
+  function init() {
+    if (!(0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
+      return this;
+    }
+
+    // Add FlyoutMenu behavior data-js-hooks.
+    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_dom, 'behavior_flyout-menu');
+    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_contentDom, 'behavior_flyout-menu_content');
+    (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_btnDom, 'behavior_flyout-menu_trigger');
+
+    // Don't initialize the Summary till the page has loaded, so we can have
+    // an accurate idea of its height.
+    window.addEventListener('load', _pageLoadHandler);
+
+    return this;
+  }
+
+  /**
+   * The page (content + CSS) has loaded.
+   */
+  function _pageLoadHandler() {
+    window.removeEventListener('load', _pageLoadHandler);
+
+    _flyout = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.FlyoutMenu(_dom, false);
+    _transition = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition(_contentDom);
+    _transition.init(_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition.CLASSES.MH_SUMMARY);
+    _flyout.setTransition(
+      _transition,
+      _transition.maxHeightSummary,
+      _transition.maxHeightDefault
+    );
+    _flyout.init();
+
+    _dom.addEventListener('focusin', _focusInHandler);
+
+    /* When we click inside the content area we may be changing the size,
+       such as when a video player expands on being clicked.
+       So, let's refresh the transition to recalculate the max-height,
+       just in case. */
+    _contentDom.addEventListener('click', _contentClicked);
+
+    _flyout.collapse();
+    _transition.animateOn();
+  }
+
+  /**
+   * Handling tabbing into the content area that is hidden.
+   * If the focus goes onto a focusable element within the content area,
+   * we'll act like the summary expansion button was clicked.
+   *
+   * @param {Event} evt - The focus event.
+   */
+  function _focusInHandler(evt) {
+    if (evt.target !== _btnDom) {
+      _btnDom.click();
+      _dom.removeEventListener('focusin', _focusInHandler);
+    }
+  }
+
+  /**
+   * Handler for when the content area is clicked.
+   * Refresh the transition to recalculate the max-height.
+   *
+   * @param {MouseEvent} evt - the mouse event object.
+   */
+  function _contentClicked(evt) {
+    /* We don't need to refresh if a link was clicked as we'll be navigating
+       to another page. */
+    if (evt.target.tagName !== 'A' && _flyout.isExpanded()) {
+      _transition.refresh();
+    }
+  }
+
+  // Attach public events.
+  const eventObserver = new _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.EventObserver();
+  this.addEventListener = eventObserver.addEventListener;
+  this.removeEventListener = eventObserver.removeEventListener;
+  this.dispatchEvent = eventObserver.dispatchEvent;
+
+  this.init = init;
+
+  return this;
+}
+
+SummaryMinimal.BASE_CLASS = BASE_CLASS;
+SummaryMinimal.init = (scope) =>
+  (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${BASE_CLASS}`, SummaryMinimal, scope);
+
+
+
+
+/***/ }),
+
 /***/ "./packages/cfpb-expandables/src/index.js":
 /*!************************************************!*\
   !*** ./packages/cfpb-expandables/src/index.js ***!
@@ -3214,15 +3343,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Expandable": function() { return /* reexport safe */ _Expandable_js__WEBPACK_IMPORTED_MODULE_0__.Expandable; },
 /* harmony export */   "ExpandableGroup": function() { return /* reexport safe */ _ExpandableGroup_js__WEBPACK_IMPORTED_MODULE_1__.ExpandableGroup; },
-/* harmony export */   "Summary": function() { return /* reexport safe */ _Summary_js__WEBPACK_IMPORTED_MODULE_2__.Summary; }
+/* harmony export */   "Summary": function() { return /* reexport safe */ _Summary_js__WEBPACK_IMPORTED_MODULE_2__.Summary; },
+/* harmony export */   "SummaryMinimal": function() { return /* reexport safe */ _SummaryMinimal_js__WEBPACK_IMPORTED_MODULE_3__.SummaryMinimal; }
 /* harmony export */ });
 /* harmony import */ var _Expandable_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Expandable.js */ "./packages/cfpb-expandables/src/Expandable.js");
 /* harmony import */ var _ExpandableGroup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExpandableGroup.js */ "./packages/cfpb-expandables/src/ExpandableGroup.js");
 /* harmony import */ var _Summary_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Summary.js */ "./packages/cfpb-expandables/src/Summary.js");
+/* harmony import */ var _SummaryMinimal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SummaryMinimal.js */ "./packages/cfpb-expandables/src/SummaryMinimal.js");
 /* ==========================================================================
    Design System
    Expandables
    ========================================================================== */
+
 
 
 
@@ -4242,6 +4374,7 @@ anchors.add('h2:not(.title), h3, h4, h5');
 // Ensure there are no anchors in inconvenient places
 anchors.remove("\n  .a-live_code h2,\n  .a-live_code h3,\n  .a-live_code h4,\n  .a-live_code h5,\n  .o-expandable_label,\n  #search-results h3\n");
 _cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_2__.Summary.init();
+_cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_2__.SummaryMinimal.init();
 _cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_2__.ExpandableGroup.init();
 _cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_2__.Expandable.init();
 _cfpb_cfpb_forms__WEBPACK_IMPORTED_MODULE_3__.Multiselect.init();

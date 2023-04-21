@@ -4883,14 +4883,11 @@ div[dir='rtl'] .o-expandable_header {
   patterns:
   - name: Summary Mobile organism
     markup: |
-      <div class="o-summary o-summary__mobile"
-           data-js-hook="behavior_flyout-menu">
-          <div class="o-summary_content"
-               data-js-hook="behavior_flyout-menu_content">
+      <div class="o-summary o-summary__mobile">
+          <div class="o-summary_content">
                Content
           </div>
-          <button class="o-summary_btn u-hidden"
-                  data-js-hook="behavior_flyout-menu_trigger">
+          <button class="o-summary_btn u-hidden">
             Read full description
           </button>
       </div>
@@ -4960,6 +4957,79 @@ div[dir='rtl'] .o-expandable_header {
   .o-summary__mobile .o-summary_btn {
     display: none;
   }
+}
+/* topdoc
+  name: Summary Minimal
+  family: cf-organisms
+  notes:
+    - "Styles a two-way Expandable-like organism that previews content."
+  patterns:
+  - name: Summary Minimal organism
+    markup: |
+      <div class="o-summary-minimal">
+          <div class="o-summary_content">
+               Content
+          </div>
+          <button class="o-summary_btn">
+            <span class="o-summary-minimal_cue-open">
+                Show
+                {% include icons/plus-round.svg %}
+            </span>
+            <span class="o-summary-minimal_cue-close">
+                Hide
+                {% include icons/minus-round.svg %}
+            </span>
+          </button>
+      </div>
+    codenotes:
+      - |
+        Pattern structure
+        -----------------
+        .o-summary-minimal
+          .o-summary-minimal_content
+          .o-summary-minimal_btn
+            .o-summary-minimal_cue-open
+            .o-summary-minimal_cue-close
+
+    notes:
+      - "Two-way expandable. Displays an approximately 4-line
+         preview of content."
+  tags:
+  - cf-organisms
+*/
+.o-summary-minimal_content {
+  overflow-y: hidden;
+  padding: 2px;
+  left: -2px;
+  top: -2px;
+  position: relative;
+}
+.o-summary-minimal_btn {
+  margin-top: 5px;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+  border: none;
+  background: none;
+  text-align: left;
+  color: #0072ce;
+}
+.no-js .o-summary-minimal_btn {
+  display: none;
+}
+.o-summary-minimal_btn:focus {
+  outline: 1px dotted #0072ce;
+  outline-offset: 2px;
+}
+.o-summary-minimal_btn .o-summary-minimal_cue-close,
+.o-summary-minimal_btn .o-summary-minimal_cue-open {
+  display: none;
+}
+.o-summary-minimal_btn[aria-expanded='false'] .o-summary-minimal_cue-open {
+  display: block;
+}
+.o-summary-minimal_btn[aria-expanded='true'] .o-summary-minimal_cue-close {
+  display: block;
 }
 /* ==========================================================================
    Design System

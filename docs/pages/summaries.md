@@ -66,11 +66,11 @@ variation_groups:
 
             <button class="o-summary-minimal_btn">
                 <span class="o-summary-minimal_cue-open">
-                    Show full list of relevant parties
+                    Show
                     {% include icons/plus-round.svg %}
                 </span>
                 <span class="o-summary-minimal_cue-close">
-                    Hide full list of relevant parties
+                    Hide
                     {% include icons/minus-round.svg %}
                 </span>
             </button>

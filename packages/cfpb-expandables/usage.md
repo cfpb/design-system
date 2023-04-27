@@ -80,31 +80,6 @@ _Note: only use this in the expandable header_
 </span>
 ```
 
-### Header elements
-
-These additional elements are useful for more complicated expandables that need
-to convey more information than just 'Show/Hide' before the user expands it.
-
-#### Header
-
-Creates a full-width container to house information that is always visible.
-
-Combine `.o-expandable_header` with `.o-expandable_target` for a full-width
-trigger.
-
-```
-.o-expandable_header
-```
-
-#### Header left/right
-
-Allows you to float information left and right.
-
-```
-.o-expandable_header-left
-.o-expandable_header-right
-```
-
 ## Recommended expandable pattern
 
 Expandables can be built by combining the basic barebones structure described
@@ -119,7 +94,7 @@ The following combination is our recommended go-to expandable pattern.
             o-expandable__padded
             o-expandable__background
             o-expandable__border">
-    <button class="o-expandable_header o-expandable_target"
+    <button class="o-expandable_header"
             title="Expand content">
         <h3 class="h4 o-expandable_label">
             Expandable Header
@@ -149,7 +124,7 @@ The following combination is our recommended go-to expandable pattern.
             o-expandable__padded
             o-expandable__background
             o-expandable__border">
-    <button class="o-expandable_header o-expandable_target"
+    <button class="o-expandable_header"
             title="Expand content">
         <h3 class="h4 o-expandable_label">
             Expandable Header
@@ -182,7 +157,7 @@ The following combination is our recommended go-to expandable pattern.
             o-expandable__background
             o-expandable__border
             o-expandable__onload-open">
-    <button class="o-expandable_header o-expandable_target"
+    <button class="o-expandable_header"
             title="Expand content">
         <h3 class="h4 o-expandable_label">
             Expandable Header
@@ -213,7 +188,7 @@ The following combination is our recommended go-to expandable pattern.
             o-expandable__background
             o-expandable__border
             o-expandable__onload-open">
-    <button class="o-expandable_header o-expandable_target"
+    <button class="o-expandable_header"
             title="Expand content">
         <h3 class="h4 o-expandable_label">
             Expandable Header
@@ -247,7 +222,7 @@ Should you need an expandable thing that is not covered by the expandables above
 
 <div class="o-expandable-group">
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 1
@@ -272,7 +247,7 @@ Should you need an expandable thing that is not covered by the expandables above
         </div>
     </div>
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 2
@@ -297,7 +272,7 @@ Should you need an expandable thing that is not covered by the expandables above
         </div>
     </div>
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 3
@@ -326,7 +301,7 @@ Should you need an expandable thing that is not covered by the expandables above
 ```
 <div class="o-expandable-group">
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 1
@@ -351,7 +326,7 @@ Should you need an expandable thing that is not covered by the expandables above
         </div>
     </div>
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 2
@@ -376,7 +351,7 @@ Should you need an expandable thing that is not covered by the expandables above
         </div>
     </div>
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 3
@@ -411,7 +386,7 @@ to activate the accordion mode.
 
 <div class="o-expandable-group o-expandable-group__accordion">
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 1
@@ -436,7 +411,7 @@ to activate the accordion mode.
         </div>
     </div>
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 2
@@ -461,7 +436,7 @@ to activate the accordion mode.
         </div>
     </div>
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 3
@@ -490,7 +465,7 @@ to activate the accordion mode.
 ```
 <div class="o-expandable-group o-expandable-group__accordion">
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 1
@@ -515,7 +490,7 @@ to activate the accordion mode.
         </div>
     </div>
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 2
@@ -540,7 +515,7 @@ to activate the accordion mode.
         </div>
     </div>
     <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
                 Expandable Header 3
@@ -573,18 +548,37 @@ A new array of Expandable instances can be created with
 `const expandables = Expandable.init();`.
 Each instance has the following methods for public consumption:
 
-### toggleTargetState( element )
+### expand()
 
 ```js
-const element = document.querySelector('.o-expandable_target');
-expandables[0].toggleTargetState(element);
+expandables[0].expand();
 ```
 
-Toggle an expandable to open or closed.
+Expand the expandable open.
 
-Parameters:
+### collapse()
 
-- element {HTMLElement} The expandable target HTML DOM element.
+```js
+expandables[0].collapse();
+```
+
+Collapse the expandable closed.
+
+### isExpanded()
+
+```js
+expandables[0].isExpanded();
+```
+
+Whether the expandable is open or closed.
+
+### refresh()
+
+```js
+expandables[0].refresh();
+```
+
+Refresh the height of the expandable when the internal content height changes.
 
 ### getLabelText()
 

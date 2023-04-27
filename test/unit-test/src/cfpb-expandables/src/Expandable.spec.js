@@ -9,7 +9,7 @@ const HTML_SNIPPET = `
      id="test-group-one">
 
     <div class="o-expandable o-expandable__padded" id="test-subject-one">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <span class="o-expandable_label">
                 Expandable Header 1
@@ -35,7 +35,7 @@ const HTML_SNIPPET = `
     </div>
 
     <div class="o-expandable o-expandable__padded" id="test-subject-two">
-        <button class="o-expandable_header o-expandable_target"
+        <button class="o-expandable_header"
                 title="Expand content">
             <span class="o-expandable_label">
                 Expandable Header 2
@@ -62,9 +62,9 @@ const HTML_SNIPPET = `
 </div>
 
 <div class="o-expandable o-expandable__padded" id="test-subject-two">
-    <button class="o-expandable_header o-expandable_target"
+    <button class="o-expandable_header"
             title="Expand content">
-        <span class="o-expandable_header-left o-expandable_label">
+        <span class="o-expandable_label">
             Expandable Header 3
         </span>
         <span class="o-expandable_link">
@@ -102,8 +102,8 @@ describe('standard Expandable', () => {
     document.body.innerHTML = HTML_SNIPPET;
     expandableDom1 = document.querySelector('#test-subject-one');
     expandableDom2 = document.querySelector('#test-subject-two');
-    targetDom1 = expandableDom1.querySelector('.o-expandable_target');
-    targetDom2 = expandableDom2.querySelector('.o-expandable_target');
+    targetDom1 = expandableDom1.querySelector('.o-expandable_header');
+    targetDom2 = expandableDom2.querySelector('.o-expandable_header');
     contentDom1 = expandableDom1.querySelector('.o-expandable_content');
     contentDom2 = expandableDom2.querySelector('.o-expandable_content');
     expandableDom2.classList.add('o-expandable__onload-open');
@@ -178,8 +178,8 @@ describe('accordion Expandables', () => {
     expandableDom2 = document.querySelector('#test-subject-two');
     contentDom1 = expandableDom1.querySelector('.o-expandable_content');
     contentDom2 = expandableDom2.querySelector('.o-expandable_content');
-    targetDom1 = expandableDom1.querySelector('.o-expandable_target');
-    targetDom2 = expandableDom2.querySelector('.o-expandable_target');
+    targetDom1 = expandableDom1.querySelector('.o-expandable_header');
+    targetDom2 = expandableDom2.querySelector('.o-expandable_header');
 
     ExpandableGroup.init();
     expandable = Expandable.init()[1];

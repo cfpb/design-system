@@ -12,7 +12,7 @@ variation_groups:
                       o-expandable__padded
                       o-expandable__background
                       o-expandable__border">
-              <button class="o-expandable_header o-expandable_target"
+              <button class="o-expandable_header"
                       title="Expand content">
                   <h3 class="h4 o-expandable_label">
                       Expandable Header
@@ -79,7 +79,7 @@ variation_groups:
 
           ```
 
-          const element = document.querySelector( '.o-expandable_target' );
+          const element = document.querySelector( '.o-expandable_header' );
 
           expandables[0].toggleTargetState( element );
 
@@ -117,7 +117,7 @@ variation_groups:
                       o-expandable__background
                       o-expandable__border
                       o-expandable__onload-open">
-              <button class="o-expandable_header o-expandable_target"
+              <button class="o-expandable_header"
                       title="Expand content">
                   <h3 class="h4 o-expandable_label">
                       Expandable Header
@@ -157,7 +157,7 @@ variation_groups:
       - variation_code_snippet: >-
           <div class="o-expandable-group">
               <div class="o-expandable o-expandable__padded">
-                  <button class="o-expandable_header o-expandable_target"
+                  <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
                           Expandable Header 1
@@ -183,7 +183,7 @@ variation_groups:
                   </div>
               </div>
               <div class="o-expandable o-expandable__padded">
-                  <button class="o-expandable_header o-expandable_target"
+                  <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
                           Expandable Header 2
@@ -209,7 +209,7 @@ variation_groups:
                   </div>
               </div>
               <div class="o-expandable o-expandable__padded">
-                  <button class="o-expandable_header o-expandable_target"
+                  <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
                           Expandable Header 3
@@ -276,7 +276,7 @@ variation_groups:
       - variation_code_snippet: >-
           <div class="o-expandable-group o-expandable-group__accordion">
               <div class="o-expandable o-expandable__padded">
-                  <button class="o-expandable_header o-expandable_target"
+                  <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
                           Expandable Header 1
@@ -302,7 +302,7 @@ variation_groups:
                   </div>
               </div>
               <div class="o-expandable o-expandable__padded">
-                  <button class="o-expandable_header o-expandable_target"
+                  <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
                           Expandable Header 2
@@ -364,7 +364,7 @@ variation_groups:
                   </div>
               </div>
               <div class="o-expandable o-expandable__padded">
-                  <button class="o-expandable_header o-expandable_target"
+                  <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
                           Expandable Header 3
@@ -462,7 +462,7 @@ research: >-
   var elem = {{element}};
 
 
-  var closestElem = closest(elem, '.o-expandable_target');
+  var closestElem = closest(elem, '.o-expandable_header');
 
   var textElem = closestElem.querySelector('.o-expandable_label');
 
@@ -480,7 +480,7 @@ research: >-
 
   var elem = {{element}};
 
-  var closestElem = closest(elem, '.expandable_target');
+  var closestElem = closest(elem, '.expandable_header');
 
   var text = closestElem.querySelector('.expandable_label').textContent.trim();
 

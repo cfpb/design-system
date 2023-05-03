@@ -14,7 +14,6 @@ const CLASSES = {
 
 /**
  * MoveTransition
- *
  * @class
  * @classdesc Initializes new MoveTransition behavior.
  * @param {HTMLElement} element - DOM element to apply move transition to.
@@ -36,7 +35,6 @@ function MoveTransition(element) {
 
   /**
    * Move to the element's original coordinates.
-   *
    * @returns {MoveTransition} An instance.
    */
   function moveToOrigin() {
@@ -47,7 +45,6 @@ function MoveTransition(element) {
 
   /**
    * Move to the left by applying a utility move class.
-   *
    * @param {number} count - How many times to move left
    *   as a multiplication of the element's width.
    * @returns {MoveTransition} An instance.
@@ -67,7 +64,6 @@ function MoveTransition(element) {
 
   /**
    * Move to the right by applying a utility move class.
-   *
    * @returns {MoveTransition} An instance.
    */
   function moveRight() {
@@ -78,7 +74,6 @@ function MoveTransition(element) {
 
   /**
    * Move up by applying a utility move class.
-   *
    * @returns {MoveTransition} An instance.
    */
   function moveUp() {

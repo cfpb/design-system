@@ -67,7 +67,6 @@ function _verifyClassExists(element, baseClass) {
  * Check that a particular element passed into the constructor of
  * an atomic component exists and that the correct atomic class
  * is present on the element.
- *
  * @param {HTMLElement} element - The DOM element within which to search
  *   for the atomic element class.
  * @param {string} baseClass - The CSS class name for the atomic element.
@@ -85,7 +84,6 @@ function checkDom(element, baseClass) {
  * Set a flag on an atomic component when it is initialized.
  * Use the returned boolean to handle cases where an atomic component
  * is initializing when it has already been initialized elsewhere.
- *
  * @param {HTMLElement} element - The DOM element for the atomic component.
  * @returns {boolean} True if the init data-js-* hook attribute was set,
  *   false otherwise.

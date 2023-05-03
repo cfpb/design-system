@@ -7,7 +7,6 @@ let isShowingAllDetails = false;
 
 /**
  * Toggle details for a single variation.
- *
  * @param {HTMLElement} button - Button element that controls the toggling.
  * @param {HTMLElement} document -
  *   Defaults to window.document but overridable for react DOM references.
@@ -42,7 +41,6 @@ function toggleDetails(button, document = window.document, state) {
 
 /**
  * Toggle all details for a page.
- *
  * @param {HTMLElement} toggleBtn - The button that called this method.
  */
 function toggleAllDetails(toggleBtn) {

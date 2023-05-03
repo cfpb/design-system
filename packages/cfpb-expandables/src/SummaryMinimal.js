@@ -13,12 +13,11 @@ const BASE_CLASS = 'o-summary-minimal';
 
 /**
  * SummaryMinimal
- *
  * @class
- * @classdesc Initializes a new Summary organism.
+ * @classdesc Initializes a new SummaryMinimal organism.
  * @param {HTMLElement} element - The DOM element within which to search
  *   for the organism.
- * @returns {Summary} An instance.
+ * @returns {SummaryMinimal} An instance.
  */
 function SummaryMinimal(element) {
   const _dom = checkDom(element, BASE_CLASS);
@@ -28,7 +27,7 @@ function SummaryMinimal(element) {
   let _flyout;
 
   /**
-   * @returns {Summary} An instance.
+   * @returns {SummaryMinimal} An instance.
    */
   function init() {
     if (!setInitFlag(_dom)) {
@@ -40,8 +39,8 @@ function SummaryMinimal(element) {
     addDataHook(_contentDom, 'behavior_flyout-menu_content');
     addDataHook(_btnDom, 'behavior_flyout-menu_trigger');
 
-    // Don't initialize the Summary till the page has loaded, so we can have
-    // an accurate idea of its height.
+    // Don't initialize the SummaryMinimal till the page has loaded,
+    // so we can have an accurate idea of its height.
     window.addEventListener('load', _pageLoadHandler);
 
     return this;
@@ -79,7 +78,6 @@ function SummaryMinimal(element) {
    * Handling tabbing into the content area that is hidden.
    * If the focus goes onto a focusable element within the content area,
    * we'll act like the summary expansion button was clicked.
-   *
    * @param {Event} evt - The focus event.
    */
   function _focusInHandler(evt) {
@@ -92,7 +90,6 @@ function SummaryMinimal(element) {
   /**
    * Handler for when the content area is clicked.
    * Refresh the transition to recalculate the max-height.
-   *
    * @param {MouseEvent} evt - the mouse event object.
    */
   function _contentClicked(evt) {

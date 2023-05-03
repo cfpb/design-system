@@ -18,7 +18,6 @@ export default (env, argv) => {
   /**
    * CSS plugins to add to PostCSS loader step.
    * Minimizer (cssnano) is added only in production mode.
-   *
    * @returns {Array} List of PostCSS plugins.
    */
   function _postCSSPlugins() {

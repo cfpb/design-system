@@ -10,7 +10,6 @@ const CLASSES = {
 
 /**
  * AlphaTransition
- *
  * @class
  * @classdesc Initializes new AlphaTransition behavior.
  * @param {HTMLElement} element - DOM element to apply opacity transition to.
@@ -32,7 +31,6 @@ function AlphaTransition(element) {
 
   /**
    * Fade to 100% by applying a utility alpha class.
-   *
    * @returns {AlphaTransition} An instance.
    */
   function fadeIn() {
@@ -43,7 +41,6 @@ function AlphaTransition(element) {
 
   /**
    * Fade to nothing by applying a utility alpha class.
-   *
    * @returns {AlphaTransition} An instance.
    */
   function fadeOut() {

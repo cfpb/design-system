@@ -13,7 +13,6 @@ const BASE_CLASS = 'o-expandable-group';
 
 /**
  * ExpandableGroup
- *
  * @class
  * @classdesc Initializes a new Expandable molecule.
  * @param {HTMLElement} element - The DOM element within which to search
@@ -40,7 +39,6 @@ function ExpandableGroup(element) {
 
   /**
    * Set up and create the multiselect.
-   *
    * @param {Array} expandables - List of expandables inside this group.
    * @returns {ExpandableGroup} An instance.
    */

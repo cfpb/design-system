@@ -1,8 +1,7 @@
 import {
   add,
-  contains
+  contains,
 } from '../../../../../../packages/cfpb-atomic-component';
-
 
 let testComponent;
 

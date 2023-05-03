@@ -5,7 +5,6 @@
 
 /**
  * Query the browser's user agent string to see if it's on a mobile OS.
- *
  * @returns {boolean} True if on a mobile user agent, false otherwise.
  */
 function isMobileUserAgent() {

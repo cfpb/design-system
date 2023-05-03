@@ -16,7 +16,6 @@ const BASE_CLASS = 'o-expandable';
 
 /**
  * Expandable
- *
  * @class
  * @classdesc Initializes a new Expandable molecule.
  * @param {HTMLElement} element - The DOM element within which to search
@@ -36,7 +35,6 @@ function Expandable(element) {
 
   /**
    * Set up and create the multiselect.
-   *
    * @returns {Expandable} An instance.
    */
   function init() {

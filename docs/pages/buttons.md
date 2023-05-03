@@ -26,16 +26,6 @@ variation_groups:
           Use primary buttons for actions that go to the next step.
           Avoid using multiple primary buttons on a single page; there can be
           multiple secondary buttons per page.
-        variation_jinja_code_snippet: |-
-          {% macro render(value) -%}
-
-          <div class="o-form-actions">
-              <input class="a-btn form-actions_item"
-                    type="submit"
-                    value="{{ value.button_text }}">
-          </div>
-
-          {%- endmacro %}
         variation_implementation: >-
           For accessibility reasons, use the semantic `<button>` instead of a
           link
@@ -80,16 +70,6 @@ variation_groups:
 
           <button class="a-btn a-btn__secondary active" title="Active state">Active state</button>
         variation_description: Use secondary buttons for actions that happen on the current page.
-        variation_jinja_code_snippet: |-
-          {% macro render(value) -%}
-
-          <div class="o-form-actions">
-              <input class="a-btn a-btn__secondary form-actions_item"
-                    type="submit"
-                    value="{{ value.button_text }}">
-          </div>
-
-          {%- endmacro %}
         variation_name: Secondary buttons
         variation_specs: |-
           #### Default
@@ -118,17 +98,6 @@ variation_groups:
 
 
           <button class="a-btn a-btn__disabled focus" title="Focused state" disabled>Focused state</button>
-        variation_jinja_code_snippet: |-
-          {% macro render(value) -%}
-
-          <div class="o-form-actions">
-              <input class="a-btn a-btn__disabled form-actions_item"
-                    type="submit"
-                    disabled
-                    value="{{ value.button_text }}">
-          </div>
-
-          {%- endmacro %}
         variation_name: Disabled buttons
         variation_specs: |-
           #### Default/Hover/Active
@@ -150,16 +119,6 @@ variation_groups:
 
 
           <button class="a-btn a-btn__warning focus" title="Focused state">Focused state</button>
-        variation_jinja_code_snippet: |-
-          {% macro render(value) -%}
-
-          <div class="o-form-actions">
-              <input class="a-btn a-btn__warning form-actions_item"
-                    type="submit"
-                    value="{{ value.button_text }}">
-          </div>
-
-          {%- endmacro %}
         variation_name: Destructive buttons
         variation_specs: |-
           #### Default
@@ -215,16 +174,6 @@ variation_groups:
         variation_description:
           At the designer’s discretion, use the super button on
           consumer-facing products for an important call to action.
-        variation_jinja_code_snippet: |-
-          {% macro render(value) -%}
-
-          <div class="o-form-actions">
-              <input class="a-btn a-btn__super form-actions_item"
-                    type="submit"
-                    value="{{ value.button_text }}">
-          </div>
-
-          {%- endmacro %}
         variation_name: Super buttons
         variation_specs: |-
           - Avenir Next Medium, 18px, White (#ffffff)
@@ -243,16 +192,6 @@ variation_groups:
 
           <button class="a-btn a-btn__full-on-xs active" title="Active state">Active state</button>
         variation_description: Reduce screen size to see these in action.
-        variation_jinja_code_snippet: |-
-          {% macro render(value) -%}
-
-          <div class="o-form-actions">
-              <input class="a-btn a-btn__full-on-xs form-actions_item"
-                    type="submit"
-                    value="{{ value.button_text }}">
-          </div>
-
-          {%- endmacro %}
         variation_name: Full-width buttons on x-small screens
   - variation_group_name: Groups
     variations:
@@ -297,7 +236,7 @@ variation_groups:
     variation_group_description: >-
       * An icon should appear after the text it represents. The only exception
       is the back button, in which the icon should appear before the button’s
-      text. 
+      text.
 
       * Each icon should be used exclusively and consistently for one action.
 
@@ -314,7 +253,7 @@ guidelines: >-
 
   * Use verbs and an active voice.
 
-  * Use clear, succinct, and informative language. 
+  * Use clear, succinct, and informative language.
 
   * Limit the copy length to 22 characters.
 behavior: ''

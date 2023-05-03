@@ -383,7 +383,6 @@ function Tabs(dom) {
 
   /**
    * Change the selected tab index.
-   *
    * @param {number} index - An index position of the selected tab.
    * @returns {Tabs} An instance.
    */
@@ -403,7 +402,6 @@ function Tabs(dom) {
 
   /**
    * Initialize the Tabs instance.
-   *
    * @returns {Tabs} An instance.
    */
   function init() {
@@ -455,7 +453,6 @@ Tabs.BASE_CLASS = BASE_CLASS;
 __webpack_require__.r(__webpack_exports__);
 /**
  * Retrieve redirect source name and URL.
- *
  * @param {Array} match - Matched URL UTM source.
  * @returns {object} Hash of redirect source's name and URL.
  */
@@ -475,7 +472,6 @@ function getSource(match) {
 
 /**
  * Populate the redirection banner contents and display the banner.
- *
  * @param {string} sourceName - The source's name.
  * @param {string} sourceUrl - The source's URL
  */
@@ -589,7 +585,6 @@ var isShowingAllDetails = false;
 
 /**
  * Toggle details for a single variation.
- *
  * @param {HTMLElement} button - Button element that controls the toggling.
  * @param {HTMLElement} document -
  *   Defaults to window.document but overridable for react DOM references.
@@ -624,7 +619,6 @@ function toggleDetails(button) {
 
 /**
  * Toggle all details for a page.
- *
  * @param {HTMLElement} toggleBtn - The button that called this method.
  */
 function toggleAllDetails(toggleBtn) {
@@ -741,7 +735,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /**
  * EventObserver
- *
  * @class
  * @classdesc Used for creating an object
  *   that can be used to dispatch and listen to custom events.
@@ -753,7 +746,6 @@ function EventObserver() {
 
   /**
    * Register an event listener.
-   *
    * @param {string} event - The event name to listen for.
    * @param {Function} callback - The function called when the event has fired.
    * @returns {object} The instance this EventObserver instance is decorating.
@@ -771,7 +763,6 @@ function EventObserver() {
   /**
    * Remove an added event listener.
    * Must match a call made to addEventListener.
-   *
    * @param {string} event - The event name to remove.
    * @param {Function} callback - The function attached to the event.
    * @returns {object} The instance this EventObserver instance is decorating.
@@ -792,7 +783,6 @@ function EventObserver() {
 
   /**
    * Broadcast an event.
-   *
    * @param {string} event - The type of event to broadcast.
    * @param {object} options - The event object to pass to the event handler.
    * @returns {object} The instance this EventObserver instance is decorating.
@@ -909,7 +899,6 @@ function _verifyClassExists(element, baseClass) {
  * Check that a particular element passed into the constructor of
  * an atomic component exists and that the correct atomic class
  * is present on the element.
- *
  * @param {HTMLElement} element - The DOM element within which to search
  *   for the atomic element class.
  * @param {string} baseClass - The CSS class name for the atomic element.
@@ -927,7 +916,6 @@ function checkDom(element, baseClass) {
  * Set a flag on an atomic component when it is initialized.
  * Use the returned boolean to handle cases where an atomic component
  * is initializing when it has already been initialized elsewhere.
- *
  * @param {HTMLElement} element - The DOM element for the atomic component.
  * @returns {boolean} True if the init data-js-* hook attribute was set,
  *   false otherwise.
@@ -992,7 +980,6 @@ const SEL_PREFIX = '[' + _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0_
 
 /**
  * FlyoutMenu
- *
  * @class
  * @classdesc Initializes new FlyoutMenu behavior.
  * Behaviors are functionality that can be shared between different pieces
@@ -1054,7 +1041,6 @@ function FlyoutMenu(element, autoHideContent = true) {
    * Iterate over dom tree and find FlyoutMenu triggers.
    * We need to exclude the ones that are nested FlyoutMenus, since those
    * will be managed by their own instance of this class.
-   *
    * @param {HTMLElement} element - The DOM element to search for triggers within.
    * @returns {Array} List of trigger DOM references within this FlyoutMenu.
    */
@@ -1119,7 +1105,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Set an aria attribute on an HTML element.
-   *
    * @param {string} type - The aria attribute to set
    *   (without the aria- prefix).
    * @param {HTMLElement} elem - The element to set.
@@ -1142,7 +1127,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Event handler for when the trigger is hovered over.
-   *
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerOver(event) {
@@ -1161,7 +1145,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Event handler for when the trigger is hovered out.
-   *
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerOut(event) {
@@ -1177,7 +1160,6 @@ function FlyoutMenu(element, autoHideContent = true) {
   /**
    * Event handler for when the search input trigger is clicked,
    * which opens/closes the search input.
-   *
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerClicked(event) {
@@ -1205,7 +1187,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Open the search box.
-   *
    * @returns {FlyoutMenu} An instance.
    */
   function expand() {
@@ -1241,7 +1222,6 @@ function FlyoutMenu(element, autoHideContent = true) {
    * If collapse is called when expand animation is underway,
    * save a deferred call to collapse, which is called when
    * expand completes.
-   *
    * @returns {FlyoutMenu} An instance.
    */
   function collapse() {
@@ -1324,7 +1304,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Set the transition that runs when this flyout is expanded/collapsed.
-   *
    * @param {BaseTransition} transition - A transition object.
    * @param {Function} collapseMethod - The collapse method to call on the transition.
    * @param {Function} expandMethod - The expand method to call on the transition.
@@ -1371,7 +1350,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Enable broadcasting of trigger events.
-   *
    * @returns {boolean} True if resumed, false otherwise.
    */
   function resume() {
@@ -1382,7 +1360,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Suspend broadcasting of trigger events.
-   *
    * @returns {boolean} True if suspended, false otherwise.
    */
   function suspend() {
@@ -1608,6 +1585,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @param {HTMLElement} element - DOM element.
+ * @param {string} value - Value to check as existing as a JS data-* hook value.
+ * @returns {boolean} True if the data-* hook value exists, false otherwise.
+ */
+function contains(element, value) {
+  if (!element) {
+    return false;
+  }
+  let values = element.getAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
+  // If JS data-* hook is not set return immediately.
+  if (!values) {
+    return false;
+  }
+  values = values.split(' ');
+
+  return values.indexOf(value) > -1 ? true : false;
+}
+
+/**
+ * @param {HTMLElement} element - DOM element.
  * @param {string} value - Value to add to the element's JS data-* hook.
  * @returns {string} The value that was added.
  * @throws {Error} If supplied value contains a space,
@@ -1630,24 +1626,6 @@ function add(element, value) {
   return value;
 }
 
-/**
- * @param {HTMLElement} element - DOM element.
- * @param {string} value - Value to check as existing as a JS data-* hook value.
- * @returns {boolean} True if the data-* hook value exists, false otherwise.
- */
-function contains(element, value) {
-  if (!element) {
-    return false;
-  }
-  let values = element.getAttribute(_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK);
-  // If JS data-* hook is not set return immediately.
-  if (!values) {
-    return false;
-  }
-  values = values.split(' ');
-
-  return values.indexOf(value) > -1 ? true : false;
-}
 
 
 
@@ -1671,7 +1649,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * Query the browser's user agent string to see if it's on a mobile OS.
- *
  * @returns {boolean} True if on a mobile user agent, false otherwise.
  */
 function isMobileUserAgent() {
@@ -1773,7 +1750,6 @@ const CLASSES = {
 
 /**
  * AlphaTransition
- *
  * @class
  * @classdesc Initializes new AlphaTransition behavior.
  * @param {HTMLElement} element - DOM element to apply opacity transition to.
@@ -1795,7 +1771,6 @@ function AlphaTransition(element) {
 
   /**
    * Fade to 100% by applying a utility alpha class.
-   *
    * @returns {AlphaTransition} An instance.
    */
   function fadeIn() {
@@ -1806,7 +1781,6 @@ function AlphaTransition(element) {
 
   /**
    * Fade to nothing by applying a utility alpha class.
-   *
    * @returns {AlphaTransition} An instance.
    */
   function fadeOut() {
@@ -1855,7 +1829,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /**
  * BaseTransition
- *
  * @class
  * @classdesc Initializes new BaseTransition behavior.
  *   This shouldn't be used directly, but instead should be
@@ -1929,7 +1902,6 @@ function BaseTransition(element, classes, child) {
 
   /**
    * Handle the end of a transition.
-   *
    * @param {TransitionEvent} evt - Transition event object.
    * @returns {boolean} True if transition was cleaned up,
    *   false if an outside transitioning property triggered this event handler.
@@ -2044,7 +2016,6 @@ function BaseTransition(element, classes, child) {
 
   /**
    * Set the HTML element target of this transition.
-   *
    * @param {HTMLElement} targetElement - The target of the transition.
    */
   function setElement(targetElement) {
@@ -2148,7 +2119,6 @@ const CLASSES = {
 
 /**
  * MoveTransition
- *
  * @class
  * @classdesc Initializes new MoveTransition behavior.
  * @param {HTMLElement} element - DOM element to apply transition to.
@@ -2204,7 +2174,6 @@ function MaxHeightTransition(element) {
 
   /**
    * Reset the max-height to the default size.
-   *
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightDefault() {
@@ -2220,7 +2189,6 @@ function MaxHeightTransition(element) {
 
   /**
    * Collapses the max-height to just a summary height.
-   *
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightSummary() {
@@ -2233,7 +2201,6 @@ function MaxHeightTransition(element) {
 
   /**
    * Collapses thte max-height completely.
-   *
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightZero() {
@@ -2247,7 +2214,6 @@ function MaxHeightTransition(element) {
   /**
    * Remove style attribute.
    * Remove all transition classes, if transition is initialized.
-   *
    * @returns {boolean}
    *   True, if the element's CSS classes were touched, false otherwise.
    */
@@ -2313,7 +2279,6 @@ const CLASSES = {
 
 /**
  * MoveTransition
- *
  * @class
  * @classdesc Initializes new MoveTransition behavior.
  * @param {HTMLElement} element - DOM element to apply move transition to.
@@ -2335,7 +2300,6 @@ function MoveTransition(element) {
 
   /**
    * Move to the element's original coordinates.
-   *
    * @returns {MoveTransition} An instance.
    */
   function moveToOrigin() {
@@ -2346,7 +2310,6 @@ function MoveTransition(element) {
 
   /**
    * Move to the left by applying a utility move class.
-   *
    * @param {number} count - How many times to move left
    *   as a multiplication of the element's width.
    * @returns {MoveTransition} An instance.
@@ -2366,7 +2329,6 @@ function MoveTransition(element) {
 
   /**
    * Move to the right by applying a utility move class.
-   *
    * @returns {MoveTransition} An instance.
    */
   function moveRight() {
@@ -2377,7 +2339,6 @@ function MoveTransition(element) {
 
   /**
    * Move up by applying a utility move class.
-   *
    * @returns {MoveTransition} An instance.
    */
   function moveUp() {
@@ -2673,7 +2634,6 @@ const DESKTOP = 'desktop';
 
 /**
  * Checks whether the current breakpoint is in a particular breakpoint group.
- *
  * @param {string} breakpointGroup - Breakpoint group names.
  * @returns {boolean} True if in the breakpoint group, otherwise false.
  */
@@ -2765,7 +2725,6 @@ const BASE_CLASS = 'o-expandable';
 
 /**
  * Expandable
- *
  * @class
  * @classdesc Initializes a new Expandable molecule.
  * @param {HTMLElement} element - The DOM element within which to search
@@ -2785,7 +2744,6 @@ function Expandable(element) {
 
   /**
    * Set up and create the multiselect.
-   *
    * @returns {Expandable} An instance.
    */
   function init() {
@@ -2890,7 +2848,6 @@ const BASE_CLASS = 'o-expandable-group';
 
 /**
  * ExpandableGroup
- *
  * @class
  * @classdesc Initializes a new Expandable molecule.
  * @param {HTMLElement} element - The DOM element within which to search
@@ -2917,7 +2874,6 @@ function ExpandableGroup(element) {
 
   /**
    * Set up and create the multiselect.
-   *
    * @param {Array} expandables - List of expandables inside this group.
    * @returns {ExpandableGroup} An instance.
    */
@@ -2984,7 +2940,6 @@ const BASE_CLASS = 'o-summary';
 
 /**
  * Summary
- *
  * @class
  * @classdesc Initializes a new Summary organism.
  * @param {HTMLElement} element - The DOM element within which to search
@@ -3066,7 +3021,6 @@ function Summary(element) {
    * Handling tabbing into the content area that is hidden.
    * If the focus goes onto a focusable element within the content area,
    * we'll act like the summary expansion button was clicked.
-   *
    * @param {Event} evt - The focus event.
    */
   function _focusInHandler(evt) {
@@ -3079,7 +3033,6 @@ function Summary(element) {
   /**
    * Handler for when the content area is clicked.
    * Refresh the transition to recalculate the max-height.
-   *
    * @param {MouseEvent} evt - the mouse event object.
    */
   function _contentClicked(evt) {
@@ -3152,7 +3105,6 @@ function Summary(element) {
 
   /**
    * Add events necessary for the desktop menu behaviors.
-   *
    * @returns {boolean} Whether it has successfully been resumed or not.
    */
   function _resume() {
@@ -3169,7 +3121,6 @@ function Summary(element) {
 
   /**
    * Remove events necessary for the desktop menu behaviors.
-   *
    * @returns {boolean} Whether it has successfully been suspended or not.
    */
   function _suspend() {
@@ -3222,12 +3173,11 @@ const BASE_CLASS = 'o-summary-minimal';
 
 /**
  * SummaryMinimal
- *
  * @class
- * @classdesc Initializes a new Summary organism.
+ * @classdesc Initializes a new SummaryMinimal organism.
  * @param {HTMLElement} element - The DOM element within which to search
  *   for the organism.
- * @returns {Summary} An instance.
+ * @returns {SummaryMinimal} An instance.
  */
 function SummaryMinimal(element) {
   const _dom = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.checkDom)(element, BASE_CLASS);
@@ -3237,7 +3187,7 @@ function SummaryMinimal(element) {
   let _flyout;
 
   /**
-   * @returns {Summary} An instance.
+   * @returns {SummaryMinimal} An instance.
    */
   function init() {
     if (!(0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
@@ -3249,8 +3199,8 @@ function SummaryMinimal(element) {
     (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_contentDom, 'behavior_flyout-menu_content');
     (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.add)(_btnDom, 'behavior_flyout-menu_trigger');
 
-    // Don't initialize the Summary till the page has loaded, so we can have
-    // an accurate idea of its height.
+    // Don't initialize the SummaryMinimal till the page has loaded,
+    // so we can have an accurate idea of its height.
     window.addEventListener('load', _pageLoadHandler);
 
     return this;
@@ -3288,7 +3238,6 @@ function SummaryMinimal(element) {
    * Handling tabbing into the content area that is hidden.
    * If the focus goes onto a focusable element within the content area,
    * we'll act like the summary expansion button was clicked.
-   *
    * @param {Event} evt - The focus event.
    */
   function _focusInHandler(evt) {
@@ -3301,7 +3250,6 @@ function SummaryMinimal(element) {
   /**
    * Handler for when the content area is clicked.
    * Refresh the transition to recalculate the max-height.
-   *
    * @param {MouseEvent} evt - the mouse event object.
    */
   function _contentClicked(evt) {
@@ -3425,7 +3373,6 @@ const KEY_TAB = 'Tab';
 
 /**
  * Multiselect
- *
  * @class
  * @classdesc Initializes a new Multiselect molecule.
  * @param {HTMLElement} element - The DOM element within which to search
@@ -3505,7 +3452,6 @@ function Multiselect(element) {
    * We need to turn off the filter for any of the last filter matches
    * that are not in the new set, and turn on the filter for the matches
    * that are not in the last set.
-   *
    * @param {Array} filterIndices - List of indices to filter from the options.
    * @returns {boolean} True if options are filtered, false otherwise.
    */
@@ -3522,7 +3468,6 @@ function Multiselect(element) {
   /**
    * Evaluates the list of options based on the user's query in the
    * search input.
-   *
    * @param {string} value - Text the user has entered in the search query.
    */
   function _evaluate(value) {
@@ -3534,7 +3479,6 @@ function Multiselect(element) {
 
   /**
    * Expand the multiselect drop down.
-   *
    * @returns {Multiselect} An instance.
    */
   function expand() {
@@ -3548,7 +3492,6 @@ function Multiselect(element) {
 
   /**
    * Collapse the multiselect drop down.
-   *
    * @returns {Multiselect} An instance.
    */
   function collapse() {
@@ -3563,7 +3506,6 @@ function Multiselect(element) {
 
   /**
    * Highlights an option in the list.
-   *
    * @param {string} direction - Direction to highlight compared to the
    *                           current focus.
    */
@@ -3607,7 +3549,6 @@ function Multiselect(element) {
    * contains. This is only required for browsers (IE11) that prevent the
    * click of a selected item from cascading from the button down to the label
    * it contains.
-   *
    * @param {MouseEvent} event - The mouse click event object.
    */
   function _selectionClickHandler(event) {
@@ -3634,7 +3575,6 @@ function Multiselect(element) {
 
   /**
    * Create a unique ID based on a select's option HTML element.
-   *
    * @param {HTMLElement} option - A option HTML element.
    * @returns {string} A hopefully unique ID.
    */
@@ -3674,7 +3614,6 @@ function Multiselect(element) {
 
   /**
    * Tracks a user's selections and updates the list in the dom.
-   *
    * @param {number} optionIndex - The index position of the chosen option.
    */
   function _updateSelections(optionIndex) {
@@ -3715,7 +3654,6 @@ function Multiselect(element) {
 
   /**
    * Handles the functions to trigger on the checkbox change.
-   *
    * @param {Event} event - The checkbox change event.
    */
   function _changeHandler(event) {
@@ -3849,7 +3787,6 @@ function Multiselect(element) {
 
   /**
    * Populates and injects the markup for the custom multiselect.
-   *
    * @returns {HTMLElement} Newly created <div> element to hold the multiselect.
    */
   function _populateMarkup() {
@@ -3935,7 +3872,6 @@ function Multiselect(element) {
 
   /**
    * Set up and create the multiselect.
-   *
    * @returns {Multiselect} An instance.
    */
   function init() {
@@ -4008,7 +3944,6 @@ const MAX_SELECTIONS = 5;
 
 /**
  * Escapes a string.
- *
  * @param {string} str - The string to escape.
  * @returns {string} The escaped string.
  */
@@ -4018,7 +3953,6 @@ function stringEscape(str) {
 
 /**
  * Tests whether a string matches another.
- *
  * @param   {string}  x - The control string.
  * @param   {string}  y - The comparison string.
  * @returns {boolean}   True if `x` and `y` match, false otherwise.
@@ -4068,7 +4002,6 @@ function MultiselectModel(options, name) {
 
   /**
    * Cleans up a list of options for saving to memory.
-   *
    * @param {HTMLOptionsCollection} list - The options from a select element.
    * @returns {Array} An array of option objects.
    */
@@ -4107,7 +4040,6 @@ function MultiselectModel(options, name) {
 
   /**
    * Toggle checked value of an option.
-   *
    * @param {number} index - The index position of the option in the list.
    * @returns {boolean} A value of true is checked and false is unchecked.
    */
@@ -4134,7 +4066,6 @@ function MultiselectModel(options, name) {
 
   /**
    * Utility function for Array.reduce() used in searchIndices.
-   *
    * @param {Array} aggregate - The reducer's accumulator.
    * @param {object} item - Each item in the collection.
    * @param {number} index - The index of item in the collection.
@@ -4151,7 +4082,6 @@ function MultiselectModel(options, name) {
   /**
    * Search for a query string in the options text and return the indices of
    * the matching positions in the options array.
-   *
    * @param {string} query - A query string.
    * @returns {Array} List of indices of the matching entries from the options.
    */
@@ -4174,7 +4104,6 @@ function MultiselectModel(options, name) {
 
   /**
    * Retrieve an option object from the options list.
-   *
    * @param {number} index - The index position in the options list.
    * @returns {object} The option object with text, value, and checked value.
    */
@@ -4184,7 +4113,6 @@ function MultiselectModel(options, name) {
 
   /**
    * Set the index of the collection (represents the highlighted option).
-   *
    * @param {number} value - The index to set.
    */
   function setIndex(value) {
@@ -4260,7 +4188,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /**
  * Shortcut for creating new dom elements.
- *
  * @param {string} tag - The html elem to create.
  * @param {HTMLElement} parentNode - The parent node to attach to.
  * @param {object} options - The options for building the elem.

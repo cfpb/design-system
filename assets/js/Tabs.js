@@ -15,7 +15,6 @@ function Tabs(dom) {
 
   /**
    * Change the selected tab index.
-   *
    * @param {number} index - An index position of the selected tab.
    * @returns {Tabs} An instance.
    */
@@ -40,7 +39,6 @@ function Tabs(dom) {
 
   /**
    * Initialize the Tabs instance.
-   *
    * @returns {Tabs} An instance.
    */
   function init() {

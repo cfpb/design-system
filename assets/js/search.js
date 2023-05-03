@@ -2,7 +2,6 @@ import lunr from 'lunr';
 
 /**
  * Update page markup with search results.
- *
  * @param {HTMLElement} elm - The element to inject the search results into.
  * @param {Array} results - A list of search result hits as objects.
  * @param {object} store - search index/meta data store in the window object.
@@ -64,7 +63,6 @@ function displaySearchResults(elm, results, store) {
 
 /**
  * Display no search results in markup.
- *
  * @param {HTMLElement} elm - the HTML element to write to.
  * @param {string} term - the search term
  */

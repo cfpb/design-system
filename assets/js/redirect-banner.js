@@ -1,6 +1,5 @@
 /**
  * Retrieve redirect source name and URL.
- *
  * @param {Array} match - Matched URL UTM source.
  * @returns {object} Hash of redirect source's name and URL.
  */
@@ -21,7 +20,6 @@ function getSource(match) {
 
 /**
  * Populate the redirection banner contents and display the banner.
- *
  * @param {string} sourceName - The source's name.
  * @param {string} sourceUrl - The source's URL
  */

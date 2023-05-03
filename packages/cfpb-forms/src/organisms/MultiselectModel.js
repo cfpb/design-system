@@ -6,7 +6,6 @@ const MAX_SELECTIONS = 5;
 
 /**
  * Escapes a string.
- *
  * @param {string} str - The string to escape.
  * @returns {string} The escaped string.
  */
@@ -16,7 +15,6 @@ function stringEscape(str) {
 
 /**
  * Tests whether a string matches another.
- *
  * @param   {string}  x - The control string.
  * @param   {string}  y - The comparison string.
  * @returns {boolean}   True if `x` and `y` match, false otherwise.
@@ -66,7 +64,6 @@ function MultiselectModel(options, name) {
 
   /**
    * Cleans up a list of options for saving to memory.
-   *
    * @param {HTMLOptionsCollection} list - The options from a select element.
    * @returns {Array} An array of option objects.
    */
@@ -105,7 +102,6 @@ function MultiselectModel(options, name) {
 
   /**
    * Toggle checked value of an option.
-   *
    * @param {number} index - The index position of the option in the list.
    * @returns {boolean} A value of true is checked and false is unchecked.
    */
@@ -132,7 +128,6 @@ function MultiselectModel(options, name) {
 
   /**
    * Utility function for Array.reduce() used in searchIndices.
-   *
    * @param {Array} aggregate - The reducer's accumulator.
    * @param {object} item - Each item in the collection.
    * @param {number} index - The index of item in the collection.
@@ -149,7 +144,6 @@ function MultiselectModel(options, name) {
   /**
    * Search for a query string in the options text and return the indices of
    * the matching positions in the options array.
-   *
    * @param {string} query - A query string.
    * @returns {Array} List of indices of the matching entries from the options.
    */
@@ -172,7 +166,6 @@ function MultiselectModel(options, name) {
 
   /**
    * Retrieve an option object from the options list.
-   *
    * @param {number} index - The index position in the options list.
    * @returns {object} The option object with text, value, and checked value.
    */
@@ -182,7 +175,6 @@ function MultiselectModel(options, name) {
 
   /**
    * Set the index of the collection (represents the highlighted option).
-   *
    * @param {number} value - The index to set.
    */
   function setIndex(value) {

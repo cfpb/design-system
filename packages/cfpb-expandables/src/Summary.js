@@ -14,7 +14,6 @@ const BASE_CLASS = 'o-summary';
 
 /**
  * Summary
- *
  * @class
  * @classdesc Initializes a new Summary organism.
  * @param {HTMLElement} element - The DOM element within which to search
@@ -96,7 +95,6 @@ function Summary(element) {
    * Handling tabbing into the content area that is hidden.
    * If the focus goes onto a focusable element within the content area,
    * we'll act like the summary expansion button was clicked.
-   *
    * @param {Event} evt - The focus event.
    */
   function _focusInHandler(evt) {
@@ -109,7 +107,6 @@ function Summary(element) {
   /**
    * Handler for when the content area is clicked.
    * Refresh the transition to recalculate the max-height.
-   *
    * @param {MouseEvent} evt - the mouse event object.
    */
   function _contentClicked(evt) {
@@ -182,7 +179,6 @@ function Summary(element) {
 
   /**
    * Add events necessary for the desktop menu behaviors.
-   *
    * @returns {boolean} Whether it has successfully been resumed or not.
    */
   function _resume() {
@@ -199,7 +195,6 @@ function Summary(element) {
 
   /**
    * Remove events necessary for the desktop menu behaviors.
-   *
    * @returns {boolean} Whether it has successfully been suspended or not.
    */
   function _suspend() {

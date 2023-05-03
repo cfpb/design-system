@@ -29,7 +29,6 @@ const KEY_TAB = 'Tab';
 
 /**
  * Multiselect
- *
  * @class
  * @classdesc Initializes a new Multiselect molecule.
  * @param {HTMLElement} element - The DOM element within which to search
@@ -109,7 +108,6 @@ function Multiselect(element) {
    * We need to turn off the filter for any of the last filter matches
    * that are not in the new set, and turn on the filter for the matches
    * that are not in the last set.
-   *
    * @param {Array} filterIndices - List of indices to filter from the options.
    * @returns {boolean} True if options are filtered, false otherwise.
    */
@@ -126,7 +124,6 @@ function Multiselect(element) {
   /**
    * Evaluates the list of options based on the user's query in the
    * search input.
-   *
    * @param {string} value - Text the user has entered in the search query.
    */
   function _evaluate(value) {
@@ -138,7 +135,6 @@ function Multiselect(element) {
 
   /**
    * Expand the multiselect drop down.
-   *
    * @returns {Multiselect} An instance.
    */
   function expand() {
@@ -152,7 +148,6 @@ function Multiselect(element) {
 
   /**
    * Collapse the multiselect drop down.
-   *
    * @returns {Multiselect} An instance.
    */
   function collapse() {
@@ -167,7 +162,6 @@ function Multiselect(element) {
 
   /**
    * Highlights an option in the list.
-   *
    * @param {string} direction - Direction to highlight compared to the
    *                           current focus.
    */
@@ -211,7 +205,6 @@ function Multiselect(element) {
    * contains. This is only required for browsers (IE11) that prevent the
    * click of a selected item from cascading from the button down to the label
    * it contains.
-   *
    * @param {MouseEvent} event - The mouse click event object.
    */
   function _selectionClickHandler(event) {
@@ -238,7 +231,6 @@ function Multiselect(element) {
 
   /**
    * Create a unique ID based on a select's option HTML element.
-   *
    * @param {HTMLElement} option - A option HTML element.
    * @returns {string} A hopefully unique ID.
    */
@@ -278,7 +270,6 @@ function Multiselect(element) {
 
   /**
    * Tracks a user's selections and updates the list in the dom.
-   *
    * @param {number} optionIndex - The index position of the chosen option.
    */
   function _updateSelections(optionIndex) {
@@ -319,7 +310,6 @@ function Multiselect(element) {
 
   /**
    * Handles the functions to trigger on the checkbox change.
-   *
    * @param {Event} event - The checkbox change event.
    */
   function _changeHandler(event) {
@@ -453,7 +443,6 @@ function Multiselect(element) {
 
   /**
    * Populates and injects the markup for the custom multiselect.
-   *
    * @returns {HTMLElement} Newly created <div> element to hold the multiselect.
    */
   function _populateMarkup() {
@@ -539,7 +528,6 @@ function Multiselect(element) {
 
   /**
    * Set up and create the multiselect.
-   *
    * @returns {Multiselect} An instance.
    */
   function init() {

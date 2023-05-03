@@ -12,7 +12,6 @@ describe('Multiselect', () => {
       async () => {
         /**
          * Return when the document is ready.
-         *
          * @returns {string} A readystate string.
          *   Can be loading, interactive, or complete.
          */

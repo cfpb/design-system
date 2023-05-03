@@ -1,6 +1,5 @@
 /**
  * EventObserver
- *
  * @class
  * @classdesc Used for creating an object
  *   that can be used to dispatch and listen to custom events.
@@ -12,7 +11,6 @@ function EventObserver() {
 
   /**
    * Register an event listener.
-   *
    * @param {string} event - The event name to listen for.
    * @param {Function} callback - The function called when the event has fired.
    * @returns {object} The instance this EventObserver instance is decorating.
@@ -30,7 +28,6 @@ function EventObserver() {
   /**
    * Remove an added event listener.
    * Must match a call made to addEventListener.
-   *
    * @param {string} event - The event name to remove.
    * @param {Function} callback - The function attached to the event.
    * @returns {object} The instance this EventObserver instance is decorating.
@@ -51,7 +48,6 @@ function EventObserver() {
 
   /**
    * Broadcast an event.
-   *
    * @param {string} event - The type of event to broadcast.
    * @param {object} options - The event object to pass to the event handler.
    * @returns {object} The instance this EventObserver instance is decorating.

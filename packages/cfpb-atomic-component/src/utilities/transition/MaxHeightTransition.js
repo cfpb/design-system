@@ -11,7 +11,6 @@ const CLASSES = {
 
 /**
  * MoveTransition
- *
  * @class
  * @classdesc Initializes new MoveTransition behavior.
  * @param {HTMLElement} element - DOM element to apply transition to.
@@ -67,7 +66,6 @@ function MaxHeightTransition(element) {
 
   /**
    * Reset the max-height to the default size.
-   *
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightDefault() {
@@ -83,7 +81,6 @@ function MaxHeightTransition(element) {
 
   /**
    * Collapses the max-height to just a summary height.
-   *
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightSummary() {
@@ -96,7 +93,6 @@ function MaxHeightTransition(element) {
 
   /**
    * Collapses thte max-height completely.
-   *
    * @returns {MaxHeightTransition} An instance.
    */
   function maxHeightZero() {
@@ -110,7 +106,6 @@ function MaxHeightTransition(element) {
   /**
    * Remove style attribute.
    * Remove all transition classes, if transition is initialized.
-   *
    * @returns {boolean}
    *   True, if the element's CSS classes were touched, false otherwise.
    */

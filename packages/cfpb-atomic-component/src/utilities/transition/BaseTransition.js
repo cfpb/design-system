@@ -1,6 +1,5 @@
 /**
  * BaseTransition
- *
  * @class
  * @classdesc Initializes new BaseTransition behavior.
  *   This shouldn't be used directly, but instead should be
@@ -74,7 +73,6 @@ function BaseTransition(element, classes, child) {
 
   /**
    * Handle the end of a transition.
-   *
    * @param {TransitionEvent} evt - Transition event object.
    * @returns {boolean} True if transition was cleaned up,
    *   false if an outside transitioning property triggered this event handler.
@@ -189,7 +187,6 @@ function BaseTransition(element, classes, child) {
 
   /**
    * Set the HTML element target of this transition.
-   *
    * @param {HTMLElement} targetElement - The target of the transition.
    */
   function setElement(targetElement) {

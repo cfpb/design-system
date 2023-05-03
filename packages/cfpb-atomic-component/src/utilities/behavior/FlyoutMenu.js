@@ -12,7 +12,6 @@ const SEL_PREFIX = '[' + JS_HOOK + '=' + BASE_CLASS;
 
 /**
  * FlyoutMenu
- *
  * @class
  * @classdesc Initializes new FlyoutMenu behavior.
  * Behaviors are functionality that can be shared between different pieces
@@ -74,7 +73,6 @@ function FlyoutMenu(element, autoHideContent = true) {
    * Iterate over dom tree and find FlyoutMenu triggers.
    * We need to exclude the ones that are nested FlyoutMenus, since those
    * will be managed by their own instance of this class.
-   *
    * @param {HTMLElement} element - The DOM element to search for triggers within.
    * @returns {Array} List of trigger DOM references within this FlyoutMenu.
    */
@@ -139,7 +137,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Set an aria attribute on an HTML element.
-   *
    * @param {string} type - The aria attribute to set
    *   (without the aria- prefix).
    * @param {HTMLElement} elem - The element to set.
@@ -162,7 +159,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Event handler for when the trigger is hovered over.
-   *
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerOver(event) {
@@ -181,7 +177,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Event handler for when the trigger is hovered out.
-   *
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerOut(event) {
@@ -197,7 +192,6 @@ function FlyoutMenu(element, autoHideContent = true) {
   /**
    * Event handler for when the search input trigger is clicked,
    * which opens/closes the search input.
-   *
    * @param {MouseEvent} event - The clicked flyout trigger event object.
    */
   function _handleTriggerClicked(event) {
@@ -225,7 +219,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Open the search box.
-   *
    * @returns {FlyoutMenu} An instance.
    */
   function expand() {
@@ -261,7 +254,6 @@ function FlyoutMenu(element, autoHideContent = true) {
    * If collapse is called when expand animation is underway,
    * save a deferred call to collapse, which is called when
    * expand completes.
-   *
    * @returns {FlyoutMenu} An instance.
    */
   function collapse() {
@@ -344,7 +336,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Set the transition that runs when this flyout is expanded/collapsed.
-   *
    * @param {BaseTransition} transition - A transition object.
    * @param {Function} collapseMethod - The collapse method to call on the transition.
    * @param {Function} expandMethod - The expand method to call on the transition.
@@ -391,7 +382,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Enable broadcasting of trigger events.
-   *
    * @returns {boolean} True if resumed, false otherwise.
    */
   function resume() {
@@ -402,7 +392,6 @@ function FlyoutMenu(element, autoHideContent = true) {
 
   /**
    * Suspend broadcasting of trigger events.
-   *
    * @returns {boolean} True if suspended, false otherwise.
    */
   function suspend() {

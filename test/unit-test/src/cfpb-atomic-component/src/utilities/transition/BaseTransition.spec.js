@@ -4,7 +4,6 @@ const eventObserver = new EventObserver();
 
 /**
  * Mock the default transition for a BaseTransition constructor.
- *
  * @returns {Function} A mock instance.
  */
 function MockChildTransition() {

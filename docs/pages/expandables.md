@@ -18,10 +18,10 @@ variation_groups:
                       Expandable Header
                   </h3>
                   <span class="o-expandable_link">
-                      <span class="o-expandable_cue-open" aria-label="Show">
+                      <span class="o-expandable_cue-open" role="img" aria-label="Show">
                           {% include icons/plus-round.svg %}
                       </span>
-                      <span class="o-expandable_cue-close" aria-label="Hide">
+                      <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                           <span class="u-visually-hidden">Hide</span>
                           {% include icons/minus-round.svg %}
                       </span>
@@ -123,10 +123,10 @@ variation_groups:
                       Expandable Header
                   </h3>
                   <span class="o-expandable_link">
-                      <span class="o-expandable_cue-open" aria-label="Show">
+                      <span class="o-expandable_cue-open" role="img" aria-label="Show">
                           {% include icons/plus-round.svg %}
                       </span>
-                      <span class="o-expandable_cue-close" aria-label="Hide">
+                      <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                           {% include icons/minus-round.svg %}
                       </span>
                   </span>
@@ -163,10 +163,10 @@ variation_groups:
                           Expandable Header 1
                       </h3>
                       <span class="o-expandable_link">
-                          <span class="o-expandable_cue-open" aria-label="Show">
+                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" aria-label="Hide">
+                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
@@ -189,10 +189,10 @@ variation_groups:
                           Expandable Header 2
                       </h3>
                       <span class="o-expandable_link">
-                          <span class="o-expandable_cue-open" aria-label="Show">
+                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" aria-label="Hide">
+                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
@@ -215,10 +215,10 @@ variation_groups:
                           Expandable Header 3
                       </h3>
                       <span class="o-expandable_link">
-                          <span class="o-expandable_cue-open" aria-label="Show">
+                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" aria-label="Hide">
+                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
@@ -282,10 +282,10 @@ variation_groups:
                           Expandable Header 1
                       </h3>
                       <span class="o-expandable_link">
-                          <span class="o-expandable_cue-open" aria-label="Show">
+                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" aria-label="Hide">
+                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
@@ -308,10 +308,10 @@ variation_groups:
                           Expandable Header 2
                       </h3>
                       <span class="o-expandable_link">
-                          <span class="o-expandable_cue-open" aria-label="Show">
+                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" aria-label="Hide">
+                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
@@ -370,10 +370,10 @@ variation_groups:
                           Expandable Header 3
                       </h3>
                       <span class="o-expandable_link">
-                          <span class="o-expandable_cue-open" aria-label="Show">
+                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" aria-label="Hide">
+                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>

@@ -10,9 +10,9 @@ let componentDom;
 const testClass = 'o-footer';
 const HTML_SNIPPET = `
   <div class="o-expandable o-expandable__padded" id="test-subject-two">
-      <button class="o-expandable_header o-expandable_target"
+      <button class="o-expandable_header"
               title="Expand content">
-          <span class="o-expandable_header-left o-expandable_label">
+          <span class="o-expandable_label">
               Expandable Header 3
           </span>
           <span class="o-expandable_link">

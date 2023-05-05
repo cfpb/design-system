@@ -32,7 +32,7 @@ description: >-
 
   <div class="o-expandable-group o-expandable-group__accordion">
       <div class="o-expandable o-expandable__padded">
-          <button class="o-expandable_header o-expandable_target"
+          <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
                   Step 1. Click a page's "Edit this page" pencil icon.
@@ -56,7 +56,7 @@ description: >-
           </div>
       </div>
       <div class="o-expandable o-expandable__padded">
-          <button class="o-expandable_header o-expandable_target"
+          <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
                   Step 2. Log into the CMS
@@ -83,7 +83,7 @@ description: >-
           </div>
       </div>
       <div class="o-expandable o-expandable__padded">
-          <button class="o-expandable_header o-expandable_target"
+          <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
                   Step 3. Edit a page's content
@@ -107,7 +107,7 @@ description: >-
           </div>
       </div>
       <div class="o-expandable o-expandable__padded">
-          <button class="o-expandable_header o-expandable_target"
+          <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
                   Step 4. Save your changes
@@ -136,7 +136,7 @@ description: >-
           </div>
       </div>
       <div class="o-expandable o-expandable__padded">
-          <button class="o-expandable_header o-expandable_target"
+          <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
                   Step 5. Preview your changes
@@ -163,7 +163,7 @@ description: >-
           </div>
       </div>
       <div class="o-expandable o-expandable__padded">
-          <button class="o-expandable_header o-expandable_target"
+          <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
                   Step 6. Publish your changes

@@ -18,7 +18,7 @@
 .o-expandable {
   position: relative;
 
-  &_target {
+  &_header {
     padding: 0;
     border: 0;
     background-color: transparent;
@@ -145,8 +145,8 @@
 
   .respond-to-print( {
     // Hide the interactive expandable cues when printing
-    &_target[aria-expanded='true'] &_cue-close,
-    &_target[aria-expanded='false'] &_cue-open {
+    &_header[aria-expanded='true'] &_cue-close,
+    &_header[aria-expanded='false'] &_cue-open {
       display: none;
     }
 

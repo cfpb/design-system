@@ -1,4 +1,25 @@
 
+## v0.25.0 (2023-05-05)
+
+#### Breaking Change
+* `cfpb-expandables`
+  * [#1635](https://github.com/cfpb/design-system/pull/1635) Remove o-expandable_target, o-expandable_header-left, o-expandable_header-right CSS classes ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-expandables`
+  * [#1637](https://github.com/cfpb/design-system/pull/1637) Fix aria role on expandable icons ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* Other
+  * [#1638](https://github.com/cfpb/design-system/pull/1638) Refresh node cache ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-core`, `cfpb-expandables`, `cfpb-forms`
+  * [#1636](https://github.com/cfpb/design-system/pull/1636) Update deps: babel/core, babel/preset-env, lhci/cli, cssnano, eslint, postcss, postcss-loader, prettier, web pack, webpack-cli, eslint-plugin-jsdoc ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.24.1 (2023-04-21)
 
 #### Enhancement

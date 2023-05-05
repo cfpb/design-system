@@ -318,10 +318,6 @@
         </li>
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#research">Research</a>
-        </li>
-        
-        <li class="m-list_item">
             <a class="m-list_link" href="#related-items">Related items</a>
         </li>
         
@@ -1411,48 +1407,6 @@ Return:</p>
     
 
     
-        <section class="sticky-header u-mb45">
-            <h2 id="research">Research</h2>
-            <div class="content_line content_line__wide u-mb20"></div>
-            <p>
-                </p>
-<h3 id="google-tag-manager">Google Tag Manager</h3>
-
-<p>Below is a list of items that Digital Analytics references in the tag that captures expandables.</p>
-
-<h4 id="tag-items">Tag items</h4>
-
-<p><strong>Category:</strong> Page Interaction (hardcoded)</p>
-
-<p><strong>Action:</strong> Dropdown (hardcoded)</p>
-
-<p><strong>Label:</strong> where {{element}} = element clicked</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var elem = {{element}};
-
-var closestElem = closest(elem, '.o-expandable_header');
-var textElem = closestElem.querySelector('.o-expandable_label');
-var text = textElem.textContent.trim();
-return text;
-</code></pre></div></div>
-
-<p>OR</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var elem = {{element}};
-var closestElem = closest(elem, '.expandable_header');
-var text = closestElem.querySelector('.expandable_label').textContent.trim();
-return text;
-</code></pre></div></div>
-
-<h4 id="trigger-items">Trigger items</h4>
-
-<p>Element has a parentNode with className matching RegEx <code class="language-plaintext highlighter-rouge">expandable_header|expandable__padded</code>.</p>
-
-<p>Element has parentNode with a className that does not contain <code class="language-plaintext highlighter-rouge">nav-secondary</code>, since the secondary navigation at mobile uses an expandable as well.</p>
-
-            
-        </section>
-    
 
     <div class="content-l u-mb45">
         
@@ -1523,8 +1477,8 @@ return text;
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/expandables.md">
-                    <time datetime="2023-05-05 12:45:59 -0400">
-                        12:45:59 PM May 05, 2023
+                    <time datetime="2023-05-05 18:06:55 -0400">
+                         6:06:55 PM May 05, 2023
                     </time>
                 </a>
             </small>

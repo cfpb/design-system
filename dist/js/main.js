@@ -2751,7 +2751,7 @@ function Expandable(element) {
       return this;
     }
 
-    _targetDom = _dom.querySelector(`.${BASE_CLASS}_target`);
+    _targetDom = _dom.querySelector(`.${BASE_CLASS}_header`);
     _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
     _labelDom = _dom.querySelector(`.${BASE_CLASS}_label`);
 

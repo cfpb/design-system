@@ -125,10 +125,10 @@ The following combination is our recommended go-to expandable pattern.
             Expandable Header
         </h3>
         <span class="o-expandable_link">
-            <span class="o-expandable_cue-open" aria-label="Show">
+            <span class="o-expandable_cue-open" role="img" aria-label="Show">
                 {% include icons/plus-round.svg %}
             </span>
-            <span class="o-expandable_cue-close" aria-label="Hide">
+            <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                 {% include icons/minus-round.svg %}
             </span>
         </span>
@@ -155,10 +155,10 @@ The following combination is our recommended go-to expandable pattern.
             Expandable Header
         </h3>
         <span class="o-expandable_link">
-            <span class="o-expandable_cue-open" aria-label="Show">
+            <span class="o-expandable_cue-open" role="img" aria-label="Show">
                 {% raw %}{% include icons/plus-round.svg %}{% endraw %}
             </span>
-            <span class="o-expandable_cue-close" aria-label="Hide">
+            <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                 {% raw %}{% include icons/minus-round.svg %}{% endraw %}
             </span>
         </span>
@@ -188,10 +188,10 @@ The following combination is our recommended go-to expandable pattern.
             Expandable Header
         </h3>
         <span class="o-expandable_link">
-            <span class="o-expandable_cue-open" aria-label="Show">
+            <span class="o-expandable_cue-open" role="img" aria-label="Show">
                 {% include icons/plus-round.svg %}
             </span>
-            <span class="o-expandable_cue-close" aria-label="Hide">
+            <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                 {% include icons/minus-round.svg %}
             </span>
         </span>
@@ -219,10 +219,10 @@ The following combination is our recommended go-to expandable pattern.
             Expandable Header
         </h3>
         <span class="o-expandable_link">
-            <span class="o-expandable_cue-open" aria-label="Show">
+            <span class="o-expandable_cue-open" role="img" aria-label="Show">
                 {% raw %}{% include icons/plus-round.svg %}{% endraw %}
             </span>
-            <span class="o-expandable_cue-close" aria-label="Hide">
+            <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                 {% raw %}{% include icons/minus-round.svg %}{% endraw %}
             </span>
         </span>
@@ -253,10 +253,10 @@ Should you need an expandable thing that is not covered by the expandables above
                 Expandable Header 1
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
@@ -278,10 +278,10 @@ Should you need an expandable thing that is not covered by the expandables above
                 Expandable Header 2
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
@@ -303,10 +303,10 @@ Should you need an expandable thing that is not covered by the expandables above
                 Expandable Header 3
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
@@ -332,10 +332,10 @@ Should you need an expandable thing that is not covered by the expandables above
                 Expandable Header 1
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
@@ -357,10 +357,10 @@ Should you need an expandable thing that is not covered by the expandables above
                 Expandable Header 2
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
@@ -382,10 +382,10 @@ Should you need an expandable thing that is not covered by the expandables above
                 Expandable Header 3
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
@@ -417,10 +417,10 @@ to activate the accordion mode.
                 Expandable Header 1
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
@@ -442,10 +442,10 @@ to activate the accordion mode.
                 Expandable Header 2
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
@@ -467,10 +467,10 @@ to activate the accordion mode.
                 Expandable Header 3
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
@@ -496,10 +496,10 @@ to activate the accordion mode.
                 Expandable Header 1
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
@@ -521,10 +521,10 @@ to activate the accordion mode.
                 Expandable Header 2
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
@@ -546,10 +546,10 @@ to activate the accordion mode.
                 Expandable Header 3
             </h3>
             <span class="o-expandable_link">
-                <span class="o-expandable_cue-open" aria-label="Show">
+                <span class="o-expandable_cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" aria-label="Hide">
+                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>

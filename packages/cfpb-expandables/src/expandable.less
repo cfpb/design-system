@@ -18,7 +18,13 @@
 .o-expandable {
   position: relative;
 
+  //
+  // Header
+  //
+
   &_header {
+    display: flex;
+    justify-content: space-between;
     padding: 0;
     border: 0;
     background-color: transparent;
@@ -41,6 +47,18 @@
     &[aria-expanded='true'] .o-expandable_cue-close {
       display: block;
     }
+
+    // Using the button element with .o-expandable_header requires setting
+    // an explicit width.
+    button& {
+      width: 100%;
+      text-align: left;
+    }
+
+    .o-expandable_label {
+      // Grow to available width.
+      flex-grow: 1;
+    }
   }
 
   //
@@ -60,27 +78,6 @@
     color: @pacific;
     font-size: unit((@btn-font-size / @base-font-size-px), em);
     line-height: unit((@base-line-height-px / @btn-font-size));
-  }
-
-  //
-  // Header
-  //
-
-  &_header {
-    display: flex;
-    justify-content: space-between;
-
-    // Using the button element with .o-expandable_header requires setting
-    // an explicit width.
-    button& {
-      width: 100%;
-      text-align: left;
-    }
-
-    .o-expandable_label {
-      // Grow to available width.
-      flex-grow: 1;
-    }
   }
 
   //

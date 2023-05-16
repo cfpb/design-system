@@ -78,7 +78,7 @@
     "eslint": "8.40.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-jsdoc": "44.0.2",
+    "eslint-plugin-jsdoc": "44.2.4",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
     "filemanager-webpack-plugin": "8.0.0",
@@ -105,7 +105,7 @@
     "svgo": "3.0.2",
     "terser-webpack-plugin": "5.3.8",
     "wdio-chromedriver-service": "8.1.1",
-    "webpack": "5.82.0",
+    "webpack": "5.82.1",
     "webpack-cli": "5.1.1"
   },
   "changelog": {

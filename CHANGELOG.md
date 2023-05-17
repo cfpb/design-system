@@ -1,4 +1,25 @@
 
+## v0.26.0 (2023-05-17)
+
+#### Breaking Change
+* `cfpb-expandables`, `cfpb-layout`
+  * [#1643](https://github.com/cfpb/design-system/pull/1643) cfpb-layout: Remove `content-l__large-gutters` ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-expandables`
+  * [#1642](https://github.com/cfpb/design-system/pull/1642) cfpb-expandables: Consolidate `o-expandable_header` rules ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1646](https://github.com/cfpb/design-system/pull/1646) Update jekyll@4.1.1 ([@anselmbradford](https://github.com/anselmbradford))
+* [#1645](https://github.com/cfpb/design-system/pull/1645) Upgrade stylelint@15.6.2 ([@anselmbradford](https://github.com/anselmbradford))
+* [#1644](https://github.com/cfpb/design-system/pull/1644) Update eslint-plugin-jsdoc@44.2.4, webpack@2.82.1 ([@anselmbradford](https://github.com/anselmbradford))
+* [#1641](https://github.com/cfpb/design-system/pull/1641) eslint@8.40.0, lerna@6.6.2, terser-webpack-plugin@5.3.8, webpack@5.82.0, webpack-cli@5.1.1, eslint-plugin-jsdoc@44.0.2 ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.25.0 (2023-05-05)
 
 #### Breaking Change

@@ -1754,43 +1754,13 @@
                 
 
                 
-                    'variation_name1': 'Content line',
-                    'variation_description1': "A 1 pixel edge to edge bar that can divide content.\n",
+                    'variation_name1': 'Content layout column dividers',
+                    'variation_description1': "Adds dividers between specified .content-l_col-X-X classes.\n\nLayout dividers work in conjunction with .content-l_col-X-X elements and have specific needs depending on which column element variant they are attached to. For example, .content-l_col-1-2 has different divider needs than .content-l_col-1-3 because they may break to single columns at different breakpoints.\n\nDividers use absolute positioning relative to the .content-l element and depend on .content-l using position: relative;. This allows vertical dividers to span the height of the tallest column. Just be aware that if you have more than one row of columns, and each row has columns of different widths, the borders will cause unwanted overlapping since they will span the height of the entire .content-l element.\n",
                     'variation_code_snippet1': `&lt;div class=&quot;content_line&quot;&gt;&lt;/div&gt;`,
                 
-                    'variation_name2': 'Content layout column dividers',
-                    'variation_description2': "Adds dividers between specified .content-l_col-X-X classes.\n\nLayout dividers work in conjunction with .content-l_col-X-X elements and have specific needs depending on which column element variant they are attached to. For example, .content-l_col-1-2 has different divider needs than .content-l_col-1-3 because they may break to single columns at different breakpoints.\n\nDividers use absolute positioning relative to the .content-l element and depend on .content-l using position: relative;. This allows vertical dividers to span the height of the tallest column. Just be aware that if you have more than one row of columns, and each row has columns of different widths, the borders will cause unwanted overlapping since they will span the height of the entire .content-l element.\n",
-                    'variation_code_snippet2': `&lt;div class=&quot;content-l content-l__large-gutters&quot;&gt;
-    &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
-        &lt;img src=&quot;https://dummyimage.com/600x320/addc91/101820&quot; alt=&quot;Placeholder image&quot;&gt;
-        &lt;br&gt;
-        Half-width column (spans 6/12 columns)
-    &lt;/div&gt;
-    &lt;div class=&quot;content-l_col content-l_col-1-2 content-l_col__before-divider&quot;&gt;
-        &lt;img src=&quot;https://dummyimage.com/600x320/addc91/101820&quot; alt=&quot;Placeholder image&quot;&gt;
-        &lt;br&gt;
-        Half-width column (spans 6/12 columns)
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;!-- Starting a new .content-l so that the dividers from
-    .content-l_col.content-l_col-1-2.content-l_col__before-divider
-    won&#39;t overlap the .content-l_col-1-3 columns. --&gt;
-&lt;div class=&quot;content-l content-l__large-gutters&quot;&gt;
-    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
-        Third-width column (spans 4/12 columns)
-    &lt;/div&gt;
-    &lt;div class=&quot;content-l_col content-l_col-1-3 content-l_col__before-divider&quot;&gt;
-        Third-width column (spans 4/12 columns)
-    &lt;/div&gt;
-    &lt;div class=&quot;content-l_col content-l_col-1-3 content-l_col__before-divider&quot;&gt;
-        Third-width column (spans 4/12 columns)
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name3': 'Column divider modifiers',
-                    'variation_description3': "cf-grid columns use left and right border for fixed margin which means it’s not possible to set visual left and right borders directly on them. Instead we can use the :before pseudo element and position it absolutely. The added benefit of doing it this way is that the border spans the entire height of the next parent using position: relative;. This means that the border will always match the height of the tallest column in the row.\n\n.my-column-1-2 {\n\n    // Creates a column that spans 6 out of 12 columns.\n    .grid_column(6, 12);\n\n    // Add a top divider only at screen 599px and smaller.\n    .respond-to-max(599px {\n        .grid_column__top-divider();\n    });\n\n    // Add a left divider only at screen 600px and larger.\n    .respond-to-min(600px, {\n        .grid_column__left-divider();\n    });\n\n}\n\n",
-                    'variation_code_snippet3': ``,
+                    'variation_name2': 'Column divider modifiers',
+                    'variation_description2': "cf-grid columns use left and right border for fixed margin which means it’s not possible to set visual left and right borders directly on them. Instead we can use the :before pseudo element and position it absolutely. The added benefit of doing it this way is that the border spans the entire height of the next parent using position: relative;. This means that the border will always match the height of the tallest column in the row.\n\n.my-column-1-2 {\n\n    // Creates a column that spans 6 out of 12 columns.\n    .grid_column(6, 12);\n\n    // Add a top divider only at screen 599px and smaller.\n    .respond-to-max(599px {\n        .grid_column__top-divider();\n    });\n\n    // Add a left divider only at screen 600px and larger.\n    .respond-to-min(600px, {\n        .grid_column__left-divider();\n    });\n\n}\n\n",
+                    'variation_code_snippet2': ``,
                 
             
 
@@ -5936,37 +5906,6 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
                     text-align: center;
                     padding: 8px;&quot;&gt;
             Three-quarter width column (spans 9/12 columns)
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name2': 'Large gutters modifier',
-                    'variation_description2': "\n",
-                    'variation_code_snippet2': `&lt;div class=&quot;content-l content-l__main  content-l__large-gutters&quot;&gt;
-    &lt;div class=&quot;content-l_col content-l_col-1&quot;&gt;
-        &lt;div style=&quot;background: #F1F2F2;
-                    text-align: center;
-                    padding: 8px;
-                    margin-bottom: 4px;&quot;&gt;
-            Full-width column (spans 12 columns)
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content-l content-l__main  content-l__large-gutters&quot;&gt;
-    &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
-        &lt;div style=&quot;background: #F1F2F2;
-                    text-align: center;
-                    padding: 8px;
-                    margin-bottom: 4px;&quot;&gt;
-            Half-width column (spans 6/12 columns)
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
-        &lt;div style=&quot;background: #F1F2F2;
-                    text-align: center;
-                    padding: 8px;
-                    margin-bottom: 4px;&quot;&gt;
-            Half-width column (spans 6/12 columns)
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,

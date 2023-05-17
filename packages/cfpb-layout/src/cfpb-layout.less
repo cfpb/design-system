@@ -92,18 +92,6 @@
       .stack-col( content-l_col-1-2 );
     } );
   }
-
-  &__large-gutters {
-    .respond-to-min( @bp-sm-min, {
-      margin-left: -@grid_gutter-width;
-      margin-right: -@grid_gutter-width;
-
-      > .content-l_col {
-        border-left-width: @grid_gutter-width;
-        border-right-width: @grid_gutter-width;
-      }
-    } );
-  }
 }
 
 .content-l_col {
@@ -179,12 +167,6 @@
 
     &.content-l_col__before-divider {
       .grid_column__top-divider();
-    }
-  }
-
-  &.content-l__large-gutters {
-    .content-l_col.@{col}.content-l_col__before-divider {
-      border-left-width: @grid_gutter-width;
     }
   }
 

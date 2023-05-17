@@ -685,68 +685,6 @@ class can be used to lay content out in a grid.
 </div>
 ```
 
-### Large gutters modifier
-
-<div class="content-l content-l__main  content-l__large-gutters">
-    <div class="content-l_col content-l_col-1">
-        <div style="background: #F1F2F2;
-                    text-align: center;
-                    padding: 8px;
-                    margin-bottom: 4px;">
-            Full-width column (spans 12 columns)
-        </div>
-    </div>
-</div>
-<div class="content-l content-l__main  content-l__large-gutters">
-    <div class="content-l_col content-l_col-1-2">
-        <div style="background: #F1F2F2;
-                    text-align: center;
-                    padding: 8px;
-                    margin-bottom: 4px;">
-            Half-width column (spans 6/12 columns)
-        </div>
-    </div>
-    <div class="content-l_col content-l_col-1-2">
-        <div style="background: #F1F2F2;
-                    text-align: center;
-                    padding: 8px;
-                    margin-bottom: 4px;">
-            Half-width column (spans 6/12 columns)
-        </div>
-    </div>
-</div>
-
-```
-<div class="content-l content-l__main  content-l__large-gutters">
-    <div class="content-l_col content-l_col-1">
-        <div style="background: #F1F2F2;
-                    text-align: center;
-                    padding: 8px;
-                    margin-bottom: 4px;">
-            Full-width column (spans 12 columns)
-        </div>
-    </div>
-</div>
-<div class="content-l content-l__main  content-l__large-gutters">
-    <div class="content-l_col content-l_col-1-2">
-        <div style="background: #F1F2F2;
-                    text-align: center;
-                    padding: 8px;
-                    margin-bottom: 4px;">
-            Half-width column (spans 6/12 columns)
-        </div>
-    </div>
-    <div class="content-l_col content-l_col-1-2">
-        <div style="background: #F1F2F2;
-                    text-align: center;
-                    padding: 8px;
-                    margin-bottom: 4px;">
-            Half-width column (spans 6/12 columns)
-        </div>
-    </div>
-</div>
-```
-
 ### Content layout column dividers
 
 Adds dividers between specified `.content-l_col-X-X` classes.
@@ -764,7 +702,7 @@ Just be aware that if you have more than one row of columns,
 and each row has columns of different widths, the borders will cause unwanted
 overlapping since they will span the height of the entire `.content-l` element.
 
-<div class="content-l content-l__large-gutters">
+<div class="content-l">
     <div class="content-l_col content-l_col-1-2">
         <img src="https://dummyimage.com/600x320/addc91/101820" alt="Placeholder image">
         <br>
@@ -777,7 +715,7 @@ overlapping since they will span the height of the entire `.content-l` element.
     </div>
 </div>
 <br>
-<div class="content-l content-l__large-gutters">
+<div class="content-l">
     <div class="content-l_col content-l_col-1-3">
         Third-width column (spans 4/12 columns)
     </div>
@@ -790,7 +728,7 @@ overlapping since they will span the height of the entire `.content-l` element.
 </div>
 
 ```
-<div class="content-l content-l__large-gutters">
+<div class="content-l">
     <div class="content-l_col content-l_col-1-2">
         <img src="https://dummyimage.com/600x320/addc91/101820" alt="Placeholder image">
         <br>
@@ -806,7 +744,7 @@ overlapping since they will span the height of the entire `.content-l` element.
 <!-- Starting a new .content-l so that the dividers from
      .content-l_col.content-l_col-1-2.content-l_col__before-divider
      won't overlap the .content-l_col-1-3 columns. -->
-<div class="content-l content-l__large-gutters">
+<div class="content-l">
     <div class="content-l_col content-l_col-1-3">
         Third-width column (spans 4/12 columns)
     </div>

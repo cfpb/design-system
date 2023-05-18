@@ -38,10 +38,10 @@ description: >-
                   Step 1. Click a page's "Edit this page" pencil icon.
               </h3>
               <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -62,10 +62,10 @@ description: >-
                   Step 2. Log into the CMS
               </h3>
               <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -89,10 +89,10 @@ description: >-
                   Step 3. Edit a page's content
               </h3>
               <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -113,12 +113,10 @@ description: >-
                   Step 4. Save your changes
               </h3>
               <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
-                      <span class="u-visually-hidden">Show</span>
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
-                      <span class="u-visually-hidden">Hide</span>
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -142,10 +140,10 @@ description: >-
                   Step 5. Preview your changes
               </h3>
               <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -169,10 +167,10 @@ description: >-
                   Step 6. Publish your changes
               </h3>
               <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>

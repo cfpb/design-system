@@ -67,6 +67,7 @@ select.o-multiselect {
     padding: 0;
 
     // Styles
+    position: relative;
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -89,6 +90,8 @@ select.o-multiselect {
   &.u-active {
     .o-multiselect_fieldset {
       margin-top: 0;
+      // This needs to match the value set in _bindEvents in Multiselect.js.
+      // See https://github.com/cfpb/design-system/blob/4d26d5af04317bcc00b4677aa866fe8d526e82e0/packages/cfpb-forms/src/organisms/Multiselect.js#L340
       max-height: 140px;
 
       border-color: @pacific;

@@ -3753,8 +3753,7 @@ function Multiselect(element) {
         so we need to manually create an event and dispatch it from the input.
         */
         target.checked = !checked;
-        const evt = document.createEvent('HTMLEvents');
-        evt.initEvent('change', false, true);
+        const evt = new Event('change', { bubbles: false, cancelable: true });
         target.dispatchEvent(evt);
       } else if (key === KEY_ESCAPE) {
         _searchDom.focus();

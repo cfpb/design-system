@@ -1,4 +1,20 @@
 
+## v0.26.1 (2023-05-23)
+
+#### Enhancement
+* `cfpb-core`
+  * [#1648](https://github.com/cfpb/design-system/pull/1648) cfpb-core: Pulls in js-is-hidden utility from cf.gov ([@wpears](https://github.com/wpears))
+
+#### Bug Fix
+* `cfpb-forms`
+  * [#1649](https://github.com/cfpb/design-system/pull/1649) cfpb-forms: Add relative position to fieldset | fix/add some comments ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Wyatt Pearsall ([@wpears](https://github.com/wpears))
+
+
+
 ## v0.26.0 (2023-05-17)
 
 #### Breaking Change

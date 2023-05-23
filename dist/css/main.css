@@ -437,6 +437,12 @@ table {
 .no-js .u-js-only {
   display: none !important;
 }
+.u-hide-if-js {
+  display: none !important;
+}
+.no-js .u-hide-if-js {
+  display: block !important;
+}
 .u-clearfix::after {
   content: '';
   display: table;

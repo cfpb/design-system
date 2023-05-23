@@ -84,11 +84,10 @@ describe('FlyoutMenu', () => {
     });
 
     it('should dispatch events when called by trigger click', () => {
-      /* TODO: Ideally this would use `new MouseEvent`,
-         but how do we import MouseEvent (or Event) into Jest.
-         Please investigate. */
-      const mouseEvent = document.createEvent('MouseEvents');
-      mouseEvent.initEvent('mouseover', true, true);
+      const mouseEvent = new MouseEvent('mouseover', {
+        bubbles: true,
+        cancelable: true,
+      });
       triggerDom.dispatchEvent(mouseEvent);
       triggerDom.click();
 
@@ -102,8 +101,10 @@ describe('FlyoutMenu', () => {
     });
 
     it('should dispatch events when called by alt trigger click', () => {
-      const mouseEvent = document.createEvent('MouseEvents');
-      mouseEvent.initEvent('mouseover', true, true);
+      const mouseEvent = new MouseEvent('mouseover', {
+        bubbles: true,
+        cancelable: true,
+      });
       altTriggerDom.dispatchEvent(mouseEvent);
       altTriggerDom.click();
 

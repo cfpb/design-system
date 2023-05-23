@@ -3394,7 +3394,7 @@ function Multiselect(element) {
   let _model;
   let _options;
 
-  // Markup elems, conver this to templating engine in the future.
+  // Markup elems, convert this to templating engine in the future.
   let _containerDom;
   let _selectionsDom;
   let _headerDom;
@@ -3506,8 +3506,8 @@ function Multiselect(element) {
 
   /**
    * Highlights an option in the list.
-   * @param {string} direction - Direction to highlight compared to the
-   *                           current focus.
+   * @param {string} direction
+   *   Direction to highlight compared to the current focus.
    */
   function _highlight(direction) {
     if (direction === DIR_NEXT) {

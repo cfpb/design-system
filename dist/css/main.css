@@ -4431,6 +4431,7 @@ select.o-multiselect option {
   border-top: none;
   margin: 0;
   padding: 0;
+  position: relative;
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll;

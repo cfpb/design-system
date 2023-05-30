@@ -573,9 +573,9 @@ function init() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TOGGLE_ATTRIBUTE": function() { return /* binding */ TOGGLE_ATTRIBUTE; },
-/* harmony export */   "toggleAllDetails": function() { return /* binding */ toggleAllDetails; },
-/* harmony export */   "toggleDetails": function() { return /* binding */ toggleDetails; }
+/* harmony export */   TOGGLE_ATTRIBUTE: function() { return /* binding */ TOGGLE_ATTRIBUTE; },
+/* harmony export */   toggleAllDetails: function() { return /* binding */ toggleAllDetails; },
+/* harmony export */   toggleDetails: function() { return /* binding */ toggleDetails; }
 /* harmony export */ });
 var HIDDEN_CLASS = 'u-hidden';
 var TOGGLE_ATTRIBUTE = 'data-toggle-details';
@@ -652,34 +652,34 @@ function toggleAllDetails(toggleBtn) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AlphaTransition": function() { return /* reexport safe */ _utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_8__.AlphaTransition; },
-/* harmony export */   "BEHAVIOR_PREFIX": function() { return /* reexport safe */ _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.BEHAVIOR_PREFIX; },
-/* harmony export */   "BaseTransition": function() { return /* reexport safe */ _utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_9__.BaseTransition; },
-/* harmony export */   "EventObserver": function() { return /* reexport safe */ _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.EventObserver; },
-/* harmony export */   "FlyoutMenu": function() { return /* reexport safe */ _utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_7__.FlyoutMenu; },
-/* harmony export */   "JS_HOOK": function() { return /* reexport safe */ _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK; },
-/* harmony export */   "MaxHeightTransition": function() { return /* reexport safe */ _utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_10__.MaxHeightTransition; },
-/* harmony export */   "MoveTransition": function() { return /* reexport safe */ _utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_11__.MoveTransition; },
-/* harmony export */   "STATE_PREFIX": function() { return /* reexport safe */ _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.STATE_PREFIX; },
-/* harmony export */   "add": function() { return /* reexport safe */ _utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_5__.add; },
-/* harmony export */   "attach": function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.attach; },
-/* harmony export */   "checkBehaviorDom": function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom; },
-/* harmony export */   "checkDom": function() { return /* reexport safe */ _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.checkDom; },
-/* harmony export */   "contains": function() { return /* reexport safe */ _utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_5__.contains; },
-/* harmony export */   "find": function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.find; },
-/* harmony export */   "instantiateAll": function() { return /* reexport safe */ _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.instantiateAll; },
-/* harmony export */   "isArray": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isArray; },
-/* harmony export */   "isDate": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isDate; },
-/* harmony export */   "isDefined": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isDefined; },
-/* harmony export */   "isEmpty": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isEmpty; },
-/* harmony export */   "isFunction": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isFunction; },
-/* harmony export */   "isMobileUserAgent": function() { return /* reexport safe */ _utilities_media_helpers_js__WEBPACK_IMPORTED_MODULE_6__.isMobileUserAgent; },
-/* harmony export */   "isNumber": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isNumber; },
-/* harmony export */   "isObject": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isObject; },
-/* harmony export */   "isString": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isString; },
-/* harmony export */   "isUndefined": function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isUndefined; },
-/* harmony export */   "remove": function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.remove; },
-/* harmony export */   "setInitFlag": function() { return /* reexport safe */ _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.setInitFlag; }
+/* harmony export */   AlphaTransition: function() { return /* reexport safe */ _utilities_transition_AlphaTransition_js__WEBPACK_IMPORTED_MODULE_8__.AlphaTransition; },
+/* harmony export */   BEHAVIOR_PREFIX: function() { return /* reexport safe */ _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.BEHAVIOR_PREFIX; },
+/* harmony export */   BaseTransition: function() { return /* reexport safe */ _utilities_transition_BaseTransition_js__WEBPACK_IMPORTED_MODULE_9__.BaseTransition; },
+/* harmony export */   EventObserver: function() { return /* reexport safe */ _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__.EventObserver; },
+/* harmony export */   FlyoutMenu: function() { return /* reexport safe */ _utilities_behavior_FlyoutMenu_js__WEBPACK_IMPORTED_MODULE_7__.FlyoutMenu; },
+/* harmony export */   JS_HOOK: function() { return /* reexport safe */ _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.JS_HOOK; },
+/* harmony export */   MaxHeightTransition: function() { return /* reexport safe */ _utilities_transition_MaxHeightTransition_js__WEBPACK_IMPORTED_MODULE_10__.MaxHeightTransition; },
+/* harmony export */   MoveTransition: function() { return /* reexport safe */ _utilities_transition_MoveTransition_js__WEBPACK_IMPORTED_MODULE_11__.MoveTransition; },
+/* harmony export */   STATE_PREFIX: function() { return /* reexport safe */ _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__.STATE_PREFIX; },
+/* harmony export */   add: function() { return /* reexport safe */ _utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_5__.add; },
+/* harmony export */   attach: function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.attach; },
+/* harmony export */   checkBehaviorDom: function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.checkBehaviorDom; },
+/* harmony export */   checkDom: function() { return /* reexport safe */ _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.checkDom; },
+/* harmony export */   contains: function() { return /* reexport safe */ _utilities_data_hook_js__WEBPACK_IMPORTED_MODULE_5__.contains; },
+/* harmony export */   find: function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.find; },
+/* harmony export */   instantiateAll: function() { return /* reexport safe */ _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.instantiateAll; },
+/* harmony export */   isArray: function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isArray; },
+/* harmony export */   isDate: function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isDate; },
+/* harmony export */   isDefined: function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isDefined; },
+/* harmony export */   isEmpty: function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isEmpty; },
+/* harmony export */   isFunction: function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isFunction; },
+/* harmony export */   isMobileUserAgent: function() { return /* reexport safe */ _utilities_media_helpers_js__WEBPACK_IMPORTED_MODULE_6__.isMobileUserAgent; },
+/* harmony export */   isNumber: function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isNumber; },
+/* harmony export */   isObject: function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isObject; },
+/* harmony export */   isString: function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isString; },
+/* harmony export */   isUndefined: function() { return /* reexport safe */ _utilities_type_checkers_js__WEBPACK_IMPORTED_MODULE_4__.isUndefined; },
+/* harmony export */   remove: function() { return /* reexport safe */ _utilities_behavior_behavior_js__WEBPACK_IMPORTED_MODULE_3__.remove; },
+/* harmony export */   setInitFlag: function() { return /* reexport safe */ _utilities_atomic_helpers_js__WEBPACK_IMPORTED_MODULE_2__.setInitFlag; }
 /* harmony export */ });
 /* harmony import */ var _utilities_standard_type_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utilities/standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
 /* harmony import */ var _mixins_EventObserver_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mixins/EventObserver.js */ "./packages/cfpb-atomic-component/src/mixins/EventObserver.js");
@@ -731,7 +731,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "EventObserver": function() { return /* binding */ EventObserver; }
+/* harmony export */   EventObserver: function() { return /* binding */ EventObserver; }
 /* harmony export */ });
 /**
  * EventObserver
@@ -824,9 +824,9 @@ function EventObserver() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "checkDom": function() { return /* binding */ checkDom; },
-/* harmony export */   "instantiateAll": function() { return /* binding */ instantiateAll; },
-/* harmony export */   "setInitFlag": function() { return /* binding */ setInitFlag; }
+/* harmony export */   checkDom: function() { return /* binding */ checkDom; },
+/* harmony export */   instantiateAll: function() { return /* binding */ instantiateAll; },
+/* harmony export */   setInitFlag: function() { return /* binding */ setInitFlag; }
 /* harmony export */ });
 /* harmony import */ var _data_hook_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-hook.js */ "./packages/cfpb-atomic-component/src/utilities/data-hook.js");
 /* harmony import */ var _standard_type_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
@@ -969,7 +969,7 @@ function instantiateAll(selector, Constructor, scope) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FlyoutMenu": function() { return /* binding */ FlyoutMenu; }
+/* harmony export */   FlyoutMenu: function() { return /* binding */ FlyoutMenu; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* eslint-disable no-use-before-define */
@@ -1419,10 +1419,10 @@ function FlyoutMenu(element, autoHideContent = true) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "attach": function() { return /* binding */ attach; },
-/* harmony export */   "checkBehaviorDom": function() { return /* binding */ checkBehaviorDom; },
-/* harmony export */   "find": function() { return /* binding */ find; },
-/* harmony export */   "remove": function() { return /* binding */ remove; }
+/* harmony export */   attach: function() { return /* binding */ attach; },
+/* harmony export */   checkBehaviorDom: function() { return /* binding */ checkBehaviorDom; },
+/* harmony export */   find: function() { return /* binding */ find; },
+/* harmony export */   remove: function() { return /* binding */ remove; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* ==========================================================================
@@ -1577,8 +1577,8 @@ function remove(behaviorElement, event, eventHandler) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "add": function() { return /* binding */ add; },
-/* harmony export */   "contains": function() { return /* binding */ contains; }
+/* harmony export */   add: function() { return /* binding */ add; },
+/* harmony export */   contains: function() { return /* binding */ contains; }
 /* harmony export */ });
 /* harmony import */ var _standard_type_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./standard-type.js */ "./packages/cfpb-atomic-component/src/utilities/standard-type.js");
 
@@ -1640,7 +1640,7 @@ function add(element, value) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "isMobileUserAgent": function() { return /* binding */ isMobileUserAgent; }
+/* harmony export */   isMobileUserAgent: function() { return /* binding */ isMobileUserAgent; }
 /* harmony export */ });
 /* ==========================================================================
    Media Helpers.
@@ -1676,9 +1676,9 @@ function isMobileUserAgent() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BEHAVIOR_PREFIX": function() { return /* binding */ BEHAVIOR_PREFIX; },
-/* harmony export */   "JS_HOOK": function() { return /* binding */ JS_HOOK; },
-/* harmony export */   "STATE_PREFIX": function() { return /* binding */ STATE_PREFIX; }
+/* harmony export */   BEHAVIOR_PREFIX: function() { return /* binding */ BEHAVIOR_PREFIX; },
+/* harmony export */   JS_HOOK: function() { return /* binding */ JS_HOOK; },
+/* harmony export */   STATE_PREFIX: function() { return /* binding */ STATE_PREFIX; }
 /* harmony export */ });
 /**
  * @constant
@@ -1735,7 +1735,7 @@ const STATE_PREFIX = 'state_';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AlphaTransition": function() { return /* binding */ AlphaTransition; }
+/* harmony export */   AlphaTransition: function() { return /* binding */ AlphaTransition; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 
@@ -1825,7 +1825,7 @@ AlphaTransition.CLASSES = CLASSES;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BaseTransition": function() { return /* binding */ BaseTransition; }
+/* harmony export */   BaseTransition: function() { return /* binding */ BaseTransition; }
 /* harmony export */ });
 /**
  * BaseTransition
@@ -2103,7 +2103,7 @@ BaseTransition.ANIMATING_CLASS = 'u-is-animating';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MaxHeightTransition": function() { return /* binding */ MaxHeightTransition; }
+/* harmony export */   MaxHeightTransition: function() { return /* binding */ MaxHeightTransition; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 
@@ -2260,7 +2260,7 @@ MaxHeightTransition.CLASSES = CLASSES;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MoveTransition": function() { return /* binding */ MoveTransition; }
+/* harmony export */   MoveTransition: function() { return /* binding */ MoveTransition; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 
@@ -2387,15 +2387,15 @@ MoveTransition.CLASSES = CLASSES;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "isArray": function() { return /* binding */ isArray; },
-/* harmony export */   "isDate": function() { return /* binding */ isDate; },
-/* harmony export */   "isDefined": function() { return /* binding */ isDefined; },
-/* harmony export */   "isEmpty": function() { return /* binding */ isEmpty; },
-/* harmony export */   "isFunction": function() { return /* binding */ isFunction; },
-/* harmony export */   "isNumber": function() { return /* binding */ isNumber; },
-/* harmony export */   "isObject": function() { return /* binding */ isObject; },
-/* harmony export */   "isString": function() { return /* binding */ isString; },
-/* harmony export */   "isUndefined": function() { return /* binding */ isUndefined; }
+/* harmony export */   isArray: function() { return /* binding */ isArray; },
+/* harmony export */   isDate: function() { return /* binding */ isDate; },
+/* harmony export */   isDefined: function() { return /* binding */ isDefined; },
+/* harmony export */   isEmpty: function() { return /* binding */ isEmpty; },
+/* harmony export */   isFunction: function() { return /* binding */ isFunction; },
+/* harmony export */   isNumber: function() { return /* binding */ isNumber; },
+/* harmony export */   isObject: function() { return /* binding */ isObject; },
+/* harmony export */   isString: function() { return /* binding */ isString; },
+/* harmony export */   isUndefined: function() { return /* binding */ isUndefined; }
 /* harmony export */ });
 /* ==========================================================================
    Javascript Type Checkers
@@ -2554,11 +2554,11 @@ function isEmpty(value) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "DESKTOP": function() { return /* binding */ DESKTOP; },
-/* harmony export */   "MOBILE": function() { return /* binding */ MOBILE; },
-/* harmony export */   "TABLET": function() { return /* binding */ TABLET; },
-/* harmony export */   "getBreakpointState": function() { return /* binding */ getBreakpointState; },
-/* harmony export */   "viewportIsIn": function() { return /* binding */ viewportIsIn; }
+/* harmony export */   DESKTOP: function() { return /* binding */ DESKTOP; },
+/* harmony export */   MOBILE: function() { return /* binding */ MOBILE; },
+/* harmony export */   TABLET: function() { return /* binding */ TABLET; },
+/* harmony export */   getBreakpointState: function() { return /* binding */ getBreakpointState; },
+/* harmony export */   viewportIsIn: function() { return /* binding */ viewportIsIn; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_core_src_vars_breakpoints_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-core/src/vars-breakpoints.js */ "./packages/cfpb-core/src/vars-breakpoints.js");
 /* ==========================================================================
@@ -2712,7 +2712,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Expandable": function() { return /* binding */ Expandable; }
+/* harmony export */   Expandable: function() { return /* binding */ Expandable; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* ==========================================================================
@@ -2833,7 +2833,7 @@ Expandable.init = (scope) =>
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ExpandableGroup": function() { return /* binding */ ExpandableGroup; }
+/* harmony export */   ExpandableGroup: function() { return /* binding */ ExpandableGroup; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* harmony import */ var _cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @cfpb/cfpb-expandables */ "./packages/cfpb-expandables/src/index.js");
@@ -2928,7 +2928,7 @@ ExpandableGroup.init = (scope) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Summary": function() { return /* binding */ Summary; }
+/* harmony export */   Summary: function() { return /* binding */ Summary; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* harmony import */ var _cfpb_core_src_breakpoint_state_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../cfpb-core/src/breakpoint-state.js */ "./packages/cfpb-core/src/breakpoint-state.js");
@@ -3163,7 +3163,7 @@ Summary.init = (scope) => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODUL
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SummaryMinimal": function() { return /* binding */ SummaryMinimal; }
+/* harmony export */   SummaryMinimal: function() { return /* binding */ SummaryMinimal; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* eslint-disable no-use-before-define */
@@ -3289,10 +3289,10 @@ SummaryMinimal.init = (scope) =>
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Expandable": function() { return /* reexport safe */ _Expandable_js__WEBPACK_IMPORTED_MODULE_0__.Expandable; },
-/* harmony export */   "ExpandableGroup": function() { return /* reexport safe */ _ExpandableGroup_js__WEBPACK_IMPORTED_MODULE_1__.ExpandableGroup; },
-/* harmony export */   "Summary": function() { return /* reexport safe */ _Summary_js__WEBPACK_IMPORTED_MODULE_2__.Summary; },
-/* harmony export */   "SummaryMinimal": function() { return /* reexport safe */ _SummaryMinimal_js__WEBPACK_IMPORTED_MODULE_3__.SummaryMinimal; }
+/* harmony export */   Expandable: function() { return /* reexport safe */ _Expandable_js__WEBPACK_IMPORTED_MODULE_0__.Expandable; },
+/* harmony export */   ExpandableGroup: function() { return /* reexport safe */ _ExpandableGroup_js__WEBPACK_IMPORTED_MODULE_1__.ExpandableGroup; },
+/* harmony export */   Summary: function() { return /* reexport safe */ _Summary_js__WEBPACK_IMPORTED_MODULE_2__.Summary; },
+/* harmony export */   SummaryMinimal: function() { return /* reexport safe */ _SummaryMinimal_js__WEBPACK_IMPORTED_MODULE_3__.SummaryMinimal; }
 /* harmony export */ });
 /* harmony import */ var _Expandable_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Expandable.js */ "./packages/cfpb-expandables/src/Expandable.js");
 /* harmony import */ var _ExpandableGroup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExpandableGroup.js */ "./packages/cfpb-expandables/src/ExpandableGroup.js");
@@ -3320,7 +3320,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Multiselect": function() { return /* reexport safe */ _organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_0__.Multiselect; }
+/* harmony export */   Multiselect: function() { return /* reexport safe */ _organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_0__.Multiselect; }
 /* harmony export */ });
 /* harmony import */ var _organisms_Multiselect_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./organisms/Multiselect.js */ "./packages/cfpb-forms/src/organisms/Multiselect.js");
 /* ==========================================================================
@@ -3342,7 +3342,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Multiselect": function() { return /* binding */ Multiselect; }
+/* harmony export */   Multiselect: function() { return /* binding */ Multiselect; }
 /* harmony export */ });
 /* harmony import */ var _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @cfpb/cfpb-atomic-component */ "./packages/cfpb-atomic-component/src/index.js");
 /* harmony import */ var _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MultiselectModel.js */ "./packages/cfpb-forms/src/organisms/MultiselectModel.js");
@@ -3506,7 +3506,7 @@ function Multiselect(element) {
 
   /**
    * Highlights an option in the list.
-   * @param {string} direction
+   * @param {string} direction -
    *   Direction to highlight compared to the current focus.
    */
   function _highlight(direction) {
@@ -4183,7 +4183,7 @@ function MultiselectModel(options, name) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "create": function() { return /* binding */ create; }
+/* harmony export */   create: function() { return /* binding */ create; }
 /* harmony export */ });
 /**
  * Shortcut for creating new dom elements.

@@ -61,3 +61,43 @@
     transform: rotate(359deg);
   }
 }
+
+// Right-to-left (RTL) certain icons on arabic pages.
+html[lang='ar'] {
+  .cf-icon-svg {
+    &__right,
+    &__right-round,
+    &__left,
+    &__left-round,
+    &__arrow-right,
+    &__arrow-right-round,
+    &__arrow-left,
+    &__arrow-left-round,
+    &__help,
+    &__help-round,
+    &__book,
+    &__book-round,
+    &__document,
+    &__document-round,
+    &__edit,
+    &__edit-round,
+    &__paper-clip,
+    &__paper-clip-round,
+    &__cart,
+    &__cart-round,
+    &__disability,
+    &__disability-round,
+    &__travel,
+    &__travel-round,
+    &__bullhorn,
+    &__bullhorn-round,
+    &__chart,
+    &__chart-round,
+    &__list,
+    &__list-round,
+    &__external-link,
+    &__external-link-round {
+      transform: scaleX(-1);
+    }
+  }
+}

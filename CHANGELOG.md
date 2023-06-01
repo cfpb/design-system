@@ -1,4 +1,21 @@
 
+## v0.26.2 (2023-06-01)
+
+#### Enhancement
+* `cfpb-icons`
+  * [#1655](https://github.com/cfpb/design-system/pull/1655) cfpb-icons: RTL certain icons ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-forms`
+  * [#1650](https://github.com/cfpb/design-system/pull/1650) Update deprecated Event.init to actual Event creation ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-forms`
+  * [#1656](https://github.com/cfpb/design-system/pull/1656) Update dependencies: babel/core, babel/preset-env, babel/preset-react, chromedriver, css-loader, eslint, eslint-plugin-jsdoc, less-loader, mini-css-extract-plugin, postcss, postcss-loader, terser-webpack-plugin, webpack ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.26.1 (2023-05-23)
 
 #### Enhancement

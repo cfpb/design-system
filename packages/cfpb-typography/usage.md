@@ -309,30 +309,6 @@ to full block links that have a finger-friendly touch area.
 </a>
 ```
 
-#### Jump link with large link modifier
-
-The large jump link has an `18px` `font-size`, compared to the default of `16px`.
-
-<a class="a-link
-          a-link__jump
-          a-link__icon-after-text
-          a-link__large"
-   href="#">
-<span class="a-link_text">Large jump link</span>
-{% include icons/right.svg %}
-</a>
-
-```
-<a class="a-link
-          a-link__jump
-          a-link__icon-after-text
-          a-link__large"
-   href="#">
-    <span class="a-link_text">Large jump link</span>
-    {% raw %}{% include icons/right.svg %}{% endraw %}
-</a>
-```
-
 #### Jump link with icon on the left
 
 Jump links can also have icons before the text, like icon links.

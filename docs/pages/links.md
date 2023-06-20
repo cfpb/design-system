@@ -116,11 +116,11 @@ variation_groups:
 
   - variation_group_name: Links with icons
     variation_group_description: >-
-      * An icon should appear after the text it represents.  
+      * An icon should appear after the text it represents.
 
       * Each icon should be used exclusively and consistently for one action.
 
-      * The color and font-size of an icon should be the same as the text it represents, including state changes. 
+      * The color and font-size of an icon should be the same as the text it represents, including state changes.
 
       * Icons should never be underlined.
     variations:
@@ -175,19 +175,6 @@ variation_groups:
                     a-link__icon-after-text"
             href="#">
           <span class="a-link_text">Default jump link</span>
-              {% include icons/right.svg %}
-          </a>
-      - variation_name: Large jump link
-        variation_description:
-          The large jump link has an 18px `font-size`, compared to
-          the default of 16px.
-        variation_code_snippet: |-
-          <a class="a-link
-                    a-link__jump
-                    a-link__icon-after-text
-                    a-link__large"
-            href="#">
-              <span class="a-link_text">Large jump link</span>
               {% include icons/right.svg %}
           </a>
       - variation_name: Jump link with icon on left

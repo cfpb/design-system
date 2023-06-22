@@ -4785,7 +4785,7 @@ button.o-expandable_header {
   color: #101820;
   font-weight: 500;
 }
-.o-expandable_link {
+.o-expandable_cues {
   min-width: 60px;
   text-align: right;
   color: #0072ce;
@@ -4839,9 +4839,11 @@ button.o-expandable_header {
   display: block;
   max-height: 99999px !important;
 }
-div[dir='rtl'] .o-expandable_header {
-  width: 100%;
+html[lang='ar'] .o-expandable_header {
   text-align: right;
+}
+html[lang='ar'] .o-expandable_header_cues {
+  text-align: left;
 }
 /* topdoc
   name: Summary

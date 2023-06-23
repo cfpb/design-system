@@ -355,30 +355,6 @@ Jump links can also have icons before the text, like icon links.
 </a>
 ```
 
-#### Jump link with background modifier (only visible on small screens)
-
-<a class="a-link
-          a-link__jump
-          a-link__icon-after-text
-          a-link__bg"
-   href="#">
-<span class="a-link_text">Jump link with grey background and
-solid borders on small screens</span>
-{% include icons/right.svg %}
-</a>
-
-```
-<a class="a-link
-          a-link__jump
-          a-link__icon-after-text
-          a-link__bg"
-   href="#">
-    <span class="a-link_text">Jump link with grey background and
-        solid borders on small screens</span>
-    {% raw %}{% include icons/right.svg %}{% endraw %}
-</a>
-```
-
 ## Lists
 
 ### Unstyled list modifier

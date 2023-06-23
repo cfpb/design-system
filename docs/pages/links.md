@@ -116,11 +116,11 @@ variation_groups:
 
   - variation_group_name: Links with icons
     variation_group_description: >-
-      * An icon should appear after the text it represents.  
+      * An icon should appear after the text it represents.
 
       * Each icon should be used exclusively and consistently for one action.
 
-      * The color and font-size of an icon should be the same as the text it represents, including state changes. 
+      * The color and font-size of an icon should be the same as the text it represents, including state changes.
 
       * Icons should never be underlined.
     variations:
@@ -200,18 +200,6 @@ variation_groups:
               {% include icons/left.svg %}
               <span class="a-link_text">Jump link with icon on left</span>
           </a>
-      - variation_name: Jump link with background modifier
-        variation_code_snippet: |-
-          <a class="a-link
-                    a-link__jump
-                    a-link__icon-after-text
-                    a-link__bg"
-            href="#">
-              <span class="a-link_text">Jump link with grey background and
-                  solid borders on small screens</span>
-              {% include icons/right.svg %}
-          </a>
-        variation_description: A grey background is added on small screens.
     variation_group_description: Jump links are standalone links that respond to
       small screens by converting to full block links that have a
       finger-friendly touch area. Reduce screen size to see these in action.

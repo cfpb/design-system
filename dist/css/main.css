@@ -1812,7 +1812,7 @@ html[lang='ar'] .m-list {
 .m-card a:focus {
   outline-offset: 2px;
 }
-.m-card:not(.m-card__highlight)_footer {
+.m-card:not(.m-card__highlight) .m-card_footer {
   margin-top: auto;
 }
 .m-card_footer > a {

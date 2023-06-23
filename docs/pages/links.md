@@ -177,19 +177,6 @@ variation_groups:
           <span class="a-link_text">Default jump link</span>
               {% include icons/right.svg %}
           </a>
-      - variation_name: Large jump link
-        variation_description:
-          The large jump link has an 18px `font-size`, compared to
-          the default of 16px.
-        variation_code_snippet: |-
-          <a class="a-link
-                    a-link__jump
-                    a-link__icon-after-text
-                    a-link__large"
-            href="#">
-              <span class="a-link_text">Large jump link</span>
-              {% include icons/right.svg %}
-          </a>
       - variation_name: Jump link with icon on left
         variation_description: Jump links can also have icons before the text, like icon links.
         variation_code_snippet: |-

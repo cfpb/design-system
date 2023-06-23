@@ -1,4 +1,15 @@
 
+## v0.27.1 (2023-06-23)
+
+#### Bug Fix
+* `cfpb-layout`
+  * [#1663](https://github.com/cfpb/design-system/pull/1663) CSS build bugfix for not selector ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.27.0 (2023-06-23)
 
 #### Breaking Change

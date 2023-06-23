@@ -1,4 +1,19 @@
 
+## v0.26.3 (2023-06-22)
+
+#### Enhancement
+* `cfpb-expandables`
+  * [#1659](https://github.com/cfpb/design-system/pull/1659) Update `o-expandable_link` to `o-expandable_cues` | RTL fixes ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1658](https://github.com/cfpb/design-system/pull/1658) Update deps: html-entities, babel/core, babel/preset-env, babel/preset-react, concurrently, eslint, eslint-plugin-jsdoc, postcss-loader, stylelint, webpack, webpack-cli, lerna, less-loader ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+
+
+
 ## v0.26.2 (2023-06-01)
 
 #### Enhancement

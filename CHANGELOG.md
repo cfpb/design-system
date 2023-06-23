@@ -1,4 +1,21 @@
 
+## v0.27.0 (2023-06-23)
+
+#### Breaking Change
+* `cfpb-layout`, `cfpb-typography`
+  * [#1662](https://github.com/cfpb/design-system/pull/1662) Remove `a-link__large` Jump link with large link modifier ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-typography`
+  * [#1661](https://github.com/cfpb/design-system/pull/1661) Remove `a-link__bg` modifier ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-layout`
+  * [#1660](https://github.com/cfpb/design-system/pull/1660) Add `justify-content: center` to cards ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.26.3 (2023-06-22)
 
 #### Enhancement

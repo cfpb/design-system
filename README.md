@@ -1,4 +1,4 @@
-# CFPB Design System [![Travis](https://img.shields.io/travis/cfpb/design-system.svg?style=flat-square)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-design-system.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-design-system) [![.github/workflows/lighthouse.yml](https://github.com/cfpb/design-system/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/cfpb/design-system/actions/workflows/lighthouse.yml)
+# CFPB Design System [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-design-system.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-design-system) [![.github/workflows/lighthouse.yml](https://github.com/cfpb/design-system/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/cfpb/design-system/actions/workflows/lighthouse.yml)
 
 The Consumer Financial Protection Bureau's user interface framework and documentation.
 

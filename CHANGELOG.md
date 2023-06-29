@@ -1,4 +1,15 @@
 
+## v0.27.2 (2023-06-29)
+
+#### Enhancement
+* `cfpb-core`
+  * [#1665](https://github.com/cfpb/design-system/pull/1665) cfpb-core: Add font-smoothing CSS rule to base.less file ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.27.1 (2023-06-23)
 
 #### Bug Fix

@@ -7,8 +7,8 @@ description: A clear typographic hierarchy is critical to the effective
   communication of our brand. Type should be light and well-spaced to reinforce
   that we are transparent, open, and approachable. This system uses weight,
   scale, and capitalization to convey the relative importance of each heading
-  within a document. Readability and accessibility allow all users to
-  efficiently read and absorb textual information.
+  within a document. Readability, accessibility, and font smoothing to allow
+  all users to efficiently read and absorb textual information.
 variation_groups:
   - variation_group_name: Typefaces
     variations:
@@ -161,7 +161,7 @@ accessibility: >-
   #### White type on colored backgrounds
 
 
-  White type is accessible on all brand colors at 100% saturation and their darker shades when using at least 14pt type, with the exception of gold. 
+  White type is accessible on all brand colors at 100% saturation and their darker shades when using at least 14pt type, with the exception of gold.
 
 
   ![](/design-system/images/uploads/white_type.png)

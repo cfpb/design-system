@@ -609,6 +609,7 @@ body {
   font-family: 'Avenir Next', Arial, sans-serif;
   font-size: 100%;
   line-height: 1.375;
+  -webkit-font-smoothing: antialiased;
 }
 button,
 input,

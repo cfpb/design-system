@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-typography",
-  "version": "0.27.2",
+  "version": "0.27.3",
   "description": "Design System typography",
   "less": "src/typography.less",
   "style": "typography.css",
@@ -8,8 +8,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/cfpb-core": "^0.27.2",
-    "@cfpb/cfpb-icons": "^0.27.2"
+    "@cfpb/cfpb-core": "^0.27.3",
+    "@cfpb/cfpb-icons": "^0.27.3"
   },
   "keywords": [
     "typography"

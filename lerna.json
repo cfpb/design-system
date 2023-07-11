@@ -1,12 +1,9 @@
 {
   "npmClient": "yarn",
-  "version": "0.27.2",
+  "version": "0.27.3",
   "changelog": {
     "cacheDir": ".changelog"
   },
-  "packages": [
-    ".",
-    "packages/*"
-  ],
+  "packages": [".", "packages/*"],
   "$schema": "node_modules/lerna/schemas/lerna-schema.json"
 }

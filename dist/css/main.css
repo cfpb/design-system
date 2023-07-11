@@ -1813,7 +1813,7 @@ html[lang='ar'] .m-list {
 .m-card a:focus {
   outline-offset: 2px;
 }
-.m-card:not(.m-card__highlight) .m-card_footer {
+.m-card:not(.m-card__highlight):not(.m-card__breakout) .m-card_footer {
   margin-top: auto;
 }
 .m-card_footer > a {
@@ -1978,7 +1978,7 @@ html[lang='ar'] .m-list {
   text-align: center;
 }
 .m-card__breakout > a {
-  padding-top: 120px / 2;
+  padding-top: 60px;
 }
 .m-card__breakout .m-card_inner-wrapper {
   position: relative;

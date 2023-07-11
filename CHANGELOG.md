@@ -1,4 +1,19 @@
 
+## v0.27.3 (2023-07-11)
+
+#### Bug Fix
+* `cfpb-layout`
+  * [#1668](https://github.com/cfpb/design-system/pull/1668) cfpb-layout: Fix breakout card margin ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-atomic-component`, `cfpb-core`, `cfpb-expandables`, `cfpb-forms`, `cfpb-icons`, `cfpb-layout`, `cfpb-typography`
+  * [#1669](https://github.com/cfpb/design-system/pull/1669) Update dependencies: html-entities, babel/core, babel/preset-env, babel-loader, eslint, eslint-plugin-jsdoc, jest, jest-cli, jest-environment-jsdom, lerna, postcss, prettier, webpack ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.27.2 (2023-06-29)
 
 #### Enhancement

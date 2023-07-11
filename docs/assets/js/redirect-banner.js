@@ -26,7 +26,7 @@ function getSource(match) {
 function displayBanner(sourceName, sourceUrl) {
   const banner = document.querySelector('#redirect-banner');
   const sourceNames = banner.querySelectorAll(
-    'span[data-redirect=source-name]'
+    'span[data-redirect=source-name]',
   );
   const links = banner.querySelectorAll('a[data-redirect=archive-website]');
 

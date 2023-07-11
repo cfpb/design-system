@@ -282,7 +282,7 @@ function FlyoutMenu(element, autoHideContent = true) {
     if (hasTransition) {
       _transition.addEventListener(
         BaseTransition.END_EVENT,
-        _collapseEndBinded
+        _collapseEndBinded,
       );
     }
 
@@ -306,7 +306,7 @@ function FlyoutMenu(element, autoHideContent = true) {
     if (_transition) {
       _transition.removeEventListener(
         BaseTransition.END_EVENT,
-        _expandEndBinded
+        _expandEndBinded,
       );
     }
     this.dispatchEvent('expandend', { target: this, type: 'expandend' });
@@ -327,7 +327,7 @@ function FlyoutMenu(element, autoHideContent = true) {
     if (_transition) {
       _transition.removeEventListener(
         BaseTransition.END_EVENT,
-        _collapseEndBinded
+        _collapseEndBinded,
       );
     }
 

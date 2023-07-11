@@ -16,7 +16,7 @@ describe('CMS interstitial page with editing instructions', () => {
 
     it("should show the interstitial if the user hasn't seen it before", async () => {
       await expect(browser).toHaveTitle(
-        'Updating this website - CFPB Design System'
+        'Updating this website - CFPB Design System',
       );
     });
 

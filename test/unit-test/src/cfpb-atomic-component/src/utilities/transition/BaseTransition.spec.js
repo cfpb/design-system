@@ -33,7 +33,7 @@ describe('BaseTransition', () => {
         CSS_PROPERTY: 'top',
         BASE_CLASS: 'u-test-transition',
       },
-      mockChildTransition
+      mockChildTransition,
     );
   });
 
@@ -50,7 +50,7 @@ describe('BaseTransition', () => {
 
     it('should have correct state after initializing', () => {
       expect(transition.init('test-class') instanceof BaseTransition).toBe(
-        true
+        true,
       );
     });
   });

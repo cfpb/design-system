@@ -13,7 +13,7 @@ variation_groups:
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 
           aliquip ex ea commodo consequat.</p>
-        variation_description: ""
+        variation_description: ''
         variation_name: Body text
         variation_implementation: >-
           #### Vertical spacing
@@ -53,7 +53,7 @@ variation_groups:
           quis nostrud exercitation
 
           ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        variation_description: ""
+        variation_description: ''
         variation_name: Lead paragraph
         variation_specs: >-
           * Also referred to as a subheading
@@ -66,7 +66,7 @@ variation_groups:
               Lorem ipsum dolor sit amet
           </p>
         variation_name: Microcopy
-        variation_implementation: ""
+        variation_implementation: ''
         variation_specs: |-
           * Good for highlighting small pieces of text, typically legal copy.
           * Avenir Next Regular
@@ -79,7 +79,7 @@ variation_groups:
         variation_specs: |-
           * Avenir Next Regular
           * 11pt / 16pt
-        variation_code_snippet: ""
+        variation_code_snippet: ''
         variation_description: >-
           <p style="font-size: 11pt; font-weight: 400; line-height:16pt">Avenir
           Next Regular, 11pt / 16pt. Lorem ipsum dolor sit amet, ut labore et
@@ -93,9 +93,9 @@ variation_groups:
         variation_specs: |-
           * Avenir Next Regular
           * 16pt / 20pt
-        variation_code_snippet: ""
+        variation_code_snippet: ''
         variation_description: >-
-          
+
 
           <p style="font-size: 16pt; font-weight: 400; line-height:20pt">Avenir Next Regular, 16pt / 20pt. Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
@@ -109,12 +109,12 @@ title: Paragraphs
 description: Paragraph text should provide an efficient and pleasant experience
   on every viewport size. Readable text makes good use of alignment, spacing,
   line length and height, and contrast.
-use_cases: ""
-behavior: ""
-accessibility: ""
+use_cases: ''
+behavior: ''
+accessibility: ''
 related_items: "* [Typography
   variables](https://cfpb.github.io/design-system/development/variables#typogra\
   phy)"
 last_updated: 2020-01-06T20:28:04.952Z
-research: ""
+research: ''
 ---

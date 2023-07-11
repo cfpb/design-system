@@ -30,7 +30,7 @@ function displaySearchResults(elm, results, store) {
     // Show some preview text under each search results item.
     let previewText = '';
     const searchMatchWordFragment = Object.keys(
-      results[i].matchData.metadata
+      results[i].matchData.metadata,
     )[0];
     const searchMatchFields =
       results[i].matchData.metadata[searchMatchWordFragment];

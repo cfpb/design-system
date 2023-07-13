@@ -6136,10 +6136,11 @@ pre code {
 .col {
   background-color: #f7f8f9;
 }
-.col p {
+.col > div {
   background-color: #e7e8e9;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 0.9375em;
 }
 @media (min-width: 720px) {
   .col-1,

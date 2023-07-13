@@ -113,7 +113,7 @@ variation_groups:
     variation_group_description: >-
       ```
 
-      @grid_wrapper-width: 1200px;
+      @grid_wrapper-width: 1230px;
 
       ```
 

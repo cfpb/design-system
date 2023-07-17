@@ -83,7 +83,8 @@ first-level:
               - page: Info unit groups
               - page: Interactive charts
   - heading: Pages
-    nav-items:
+    second-level:
+      nav-items:
       - page: Landing pages
       - page: Sublanding pages
       - page: Browse pages

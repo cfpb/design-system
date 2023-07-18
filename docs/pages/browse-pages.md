@@ -2,7 +2,6 @@
 title: Browse pages
 layout: variation
 section: pages
-eyebrow: 
 status: Released
 description: >-
   "Browse" page types provide detailed information related to a larger topic

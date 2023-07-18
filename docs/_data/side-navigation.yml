@@ -84,14 +84,15 @@ first-level:
               - page: Interactive charts
   - heading: Pages
     second-level:
-      nav-items:
-      - page: Landing pages
-      - page: Sublanding pages
-      - page: Browse pages
-      - page: Learn pages
-      - page: Filterable list pages
-      - page: Document detail pages
-      - page: Story pages
+      - heading:
+        nav-items:
+        - page: Landing pages
+        - page: Sublanding pages
+        - page: Browse pages
+        - page: Learn pages
+        - page: Filterable list pages
+        - page: Document detail pages
+        - page: Story pages
   - heading: Development
     second-level:
       - heading: Atomic

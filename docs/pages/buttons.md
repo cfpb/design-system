@@ -274,7 +274,7 @@ restrictions:
           Back
           <span class="a-btn_icon
                        a-btn_icon__on-right">
-              {% include icons/left.svg %}
+              {% include ../_includes/icons/left.svg %}
           </span>
       </button>
 accessibility: ''

@@ -378,3 +378,51 @@ search this page for a particular icon.
 | {% include icons/wifi.svg %}           | {% include icons/wifi-round.svg %}           | wifi           | wi-fi, wireless, signal          |
 
 {: class="icon-table"}
+
+### Numerical icons
+
+| icon | icon-round | canonical name | aliases (for searchability only) | RTL? |
+
+| ---- | ---------- | -------------- | ------- | ------ |
+
+| {% include icons/zero-closed.svg %} | | zero-closed | | |
+
+| {% include icons/one-closed.svg %} | | one-closed | | |
+
+| {% include icons/two-closed.svg %} | | two-closed | | |
+
+| {% include icons/three-closed.svg %} | | three-closed | | |
+
+| {% include icons/four-closed.svg %} | | four-closed | | |
+
+| {% include icons/five-closed.svg %} | | five-closed | | |
+
+| {% include icons/six-closed.svg %} | | six-closed | | |
+
+| {% include icons/seven-closed.svg %} | | seven-closed | | |
+
+| {% include icons/eight-closed.svg %} | | eight-closed | | |
+
+| {% include icons/nine-closed.svg %} | | nine-closed | | |
+
+| {% include icons/zero-open.svg %} | | zero-open | | |
+
+| {% include icons/one-open.svg %} | | one-open | | |
+
+| {% include icons/two-open.svg %} | | two-open | | |
+
+| {% include icons/three-open.svg %} | | three-open | | |
+
+| {% include icons/four-open.svg %} | | four-open | | |
+
+| {% include icons/five-open.svg %} | | five-open | | |
+
+| {% include icons/six-open.svg %} | | six-open | | |
+
+| {% include icons/seven-open.svg %} | | seven-open | | |
+
+| {% include icons/eight-open.svg %} | | eight-open | | |
+
+| {% include icons/nine-open.svg %} | | nine-open | | |
+
+{: class="icon-table"}

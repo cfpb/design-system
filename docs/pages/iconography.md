@@ -4,7 +4,7 @@ section: foundation
 variation_groups:
   - variation_group_name: Icon library
     variations:
-      - variation_code_snippet: ''
+      - variation_code_snippet: ""
         variation_description: >-
           Use the canonical icon name when referencing the icons in code,
           however, "aliases" are provided in the table below to help you search
@@ -26,12 +26,8 @@ variation_groups:
 
           - [Web application icons](#web-application-icons)
 
-          - [Numerical icons](#numerical-icons)
 
-
-          The RTL (right-to-left) column designates whether an icon will flip
-          on pages where the HTML element has its language set to an RTL-reading
-          language, such as arabic.
+          The RTL (right-to-left) column designates whether an icon will flip on pages where the HTML element has its language set to an RTL-reading language, such as arabic.
 
           ### Navigation icons
 
@@ -431,72 +427,20 @@ variation_groups:
           | {% include icons/wifi.svg %} | {% include icons/wifi-round.svg %} | wifi | wi-fi, wireless, signal | |
 
           {: class="icon-table"}
-
-          ### Numerical icons
-
-
-          | icon | icon-round | canonical name | aliases (for searchability only) | RTL? |
-
-          | ---- | ---------- | -------------- | ------- | ------ |
-
-          | {% include icons/zero-closed.svg %} | | zero-closed | | |
-
-          | {% include icons/one-closed.svg %} | | one-closed | | |
-
-          | {% include icons/two-closed.svg %} | | two-closed | | |
-
-          | {% include icons/three-closed.svg %} | | three-closed | | |
-
-          | {% include icons/four-closed.svg %} | | four-closed | | |
-
-          | {% include icons/five-closed.svg %} | | five-closed | | |
-
-          | {% include icons/six-closed.svg %} | | six-closed | | |
-
-          | {% include icons/seven-closed.svg %} | | seven-closed | | |
-
-          | {% include icons/eight-closed.svg %} | | eight-closed | | |
-
-          | {% include icons/nine-closed.svg %} | | nine-closed | | |
-
-          | {% include icons/zero-open.svg %} | | zero-open | | |
-
-          | {% include icons/one-open.svg %} | | one-open | | |
-
-          | {% include icons/two-open.svg %} | | two-open | | |
-
-          | {% include icons/three-open.svg %} | | three-open | | |
-
-          | {% include icons/four-open.svg %} | | four-open | | |
-
-          | {% include icons/five-open.svg %} | | five-open | | |
-
-          | {% include icons/six-open.svg %} | | six-open | | |
-
-          | {% include icons/seven-open.svg %} | | seven-open | | |
-
-          | {% include icons/eight-open.svg %} | | eight-open | | |
-
-          | {% include icons/nine-open.svg %} | | nine-open | | |
-
-          {: class="icon-table"}
-        variation_name: ''
-        variation_implementation:
-          Each icon has a circled variant shown in the second
+        variation_name: ""
+        variation_implementation: Each icon has a circled variant shown in the second
           column (or square, in the case of the social media icons) that can be
           accessed by appending `-round` (or `-square`) to the canonical name.
   - variation_group_name: Animated icon
-    variation_group_description: ''
+    variation_group_description: ""
     variations:
       - variation_code_snippet: >
-
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 19" class="cf-icon-svg cf-icon-svg__updating"><path d="M5.857 3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.401 5.401 0 0 0-1.032 2.27 1.03 1.03 0 1 1-2.02-.395A7.462 7.462 0 0 1 2.235 4.91h-.748a1.03 1.03 0 1 1 0-2.058h3.34a1.03 1.03 0 0 1 1.03 1.03zm-3.25 9.237a1.028 1.028 0 0 1-1.358-.523 7.497 7.497 0 0 1-.37-1.036 1.03 1.03 0 1 1 1.983-.55 5.474 5.474 0 0 0 .269.751 1.029 1.029 0 0 1-.524 1.358zm2.905 2.439a1.028 1.028 0 0 1-1.42.322 7.522 7.522 0 0 1-.885-.652 1.03 1.03 0 0 1 1.34-1.563 5.435 5.435 0 0 0 .643.473 1.03 1.03 0 0 1 .322 1.42zm3.68.438a1.03 1.03 0 0 1-1.014 1.044h-.106a7.488 7.488 0 0 1-.811-.044 1.03 1.03 0 0 1 .224-2.046 5.41 5.41 0 0 0 .664.031h.014a1.03 1.03 0 0 1 1.03 1.015zm.034-12.847a1.03 1.03 0 0 1-1.029 1.01h-.033a1.03 1.03 0 0 1 .017-2.06h.017l.019.001A1.03 1.03 0 0 1 9.226 3.15zm3.236 11.25a1.029 1.029 0 0 1-.3 1.425 7.477 7.477 0 0 1-.797.453 1.03 1.03 0 1 1-.905-1.849 5.479 5.479 0 0 0 .578-.328 1.03 1.03 0 0 1 1.424.3zM10.475 3.504a1.029 1.029 0 0 1 1.41-.359l.018.011a1.03 1.03 0 1 1-1.06 1.764l-.01-.006a1.029 1.029 0 0 1-.358-1.41zm4.26 9.445c-.096.19-.203.379-.315.56a1.03 1.03 0 1 1-1.749-1.086c.082-.13.158-.267.228-.405a1.03 1.03 0 1 1 1.836.93zm-1.959-6.052a1.03 1.03 0 0 1 1.79-1.016l.008.013a1.03 1.03 0 1 1-1.79 1.017zm2.764 2.487a9.327 9.327 0 0 1 0 .366 1.03 1.03 0 0 1-1.029 1.005h-.025A1.03 1.03 0 0 1 13.482 9.7a4.625 4.625 0 0 0 0-.266 1.03 1.03 0 0 1 1.003-1.055h.026a1.03 1.03 0 0 1 1.029 1.004z"/></svg>
-        variation_description:
-          In certain instances, icons can be animated to aid
+        variation_description: In certain instances, icons can be animated to aid
           communication or to reassure the user that an action is functioning as
           intended. Examples include saving or loading content.
-        variation_implementation:
-          Our previous font icon system provided modifiers to
+        variation_implementation: Our previous font icon system provided modifiers to
           rotate any icon. We found in reality this wasn’t practical and only
           one icon is ever animated, `update`. We’ve provided `updating` to be
           used within the UI when a user needs to be made aware that the website
@@ -553,6 +497,7 @@ variation_groups:
         variation_description: |-
           * **Web:** 40px size, paired with primary headings
           * **Print:** 48pt size, paired with primary headings
+        variation_code_snippet: <h1>{% include icons/download.svg %} Example with icon</h1>
 guidelines: >-
   ### Color
 
@@ -635,7 +580,7 @@ description: >-
 
 
   </div>
-use_cases: ''
+use_cases: ""
 behavior: >-
   ### SVG icon basics
 
@@ -695,5 +640,5 @@ behavior: >-
 
 
   In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where `@name` is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black).
-related_items: ''
+related_items: ""
 ---

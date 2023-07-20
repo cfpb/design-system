@@ -515,7 +515,7 @@ variation_groups:
                 <h5>{% include icons/five-closed.svg %} Heading 5</h5>
               </div>
               <div class='block block__flush-top'>
-                <h5>{% include icons/approved.svg %} Heading 2</h5>
+                <h2>{% include icons/approved.svg %} Heading 2</h2>
               </div>
               <div class='block block__flush-top'>
                 <div class="m-notification

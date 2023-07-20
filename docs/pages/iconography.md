@@ -497,7 +497,37 @@ variation_groups:
         variation_description: |-
           * **Web:** 40px size, paired with primary headings
           * **Print:** 48pt size, paired with primary headings
-        variation_code_snippet: <h1>{% include icons/download.svg %} Example with icon</h1>
+        variation_code_snippet: ""
+      - variation_is_deprecated: false
+        variation_name: Icon sizing exploration
+        variation_code_snippet: >-2
+            <section>
+              <div class='block block__flush-top'>
+                <h2>{% include icons/two-closed.svg %} Heading 2</h2>
+              </div>
+              <div class='block block__flush-top'>
+                <h3>{% include icons/three-closed.svg %} Heading 3</h3>
+              </div>
+              <div class='block block__flush-top'>
+                <h4>{% include icons/four-closed.svg %} Heading 4</h4>
+              </div>
+              <div class='block block__flush-top'>
+                <h5>{% include icons/five-closed.svg %} Heading 5</h5>
+              </div>
+              <div class='block block__flush-top'>
+                <h5>{% include icons/approved.svg %} Heading 2</h5>
+              </div>
+              <div class='block block__flush-top'>
+                <div class="m-notification
+                          m-notification__visible
+                          m-notification__warning">
+                  {% include icons/warning-round.svg %}
+                    <div class="m-notification_content">
+                        <div class="h4 m-notification_message">This is a sizing test</div>
+                    </div>
+                </div>  
+              </div>
+            </section>
 guidelines: >-
   ### Color
 

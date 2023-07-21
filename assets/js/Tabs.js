@@ -21,7 +21,7 @@ function Tabs(dom) {
   function changeTab(index) {
     // Remove classes from prior selected tab and panel.
     _tabsItemsDom[_selectedTabIndex].classList.remove(
-      `${BASE_CLASS}_list-item-selected`,
+      `${BASE_CLASS}_list-item-selected`
     );
     _tabsPanelsDom[_selectedTabIndex].classList.add('u-hidden');
 
@@ -30,7 +30,7 @@ function Tabs(dom) {
 
     // Add classes for the new selected tab and panel.
     _tabsItemsDom[_selectedTabIndex].classList.add(
-      `${BASE_CLASS}_list-item-selected`,
+      `${BASE_CLASS}_list-item-selected`
     );
     _tabsPanelsDom[_selectedTabIndex].classList.remove('u-hidden');
 

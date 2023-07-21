@@ -223,7 +223,7 @@ function Multiselect(element) {
     if (event.key === KEY_SPACE || event.key === KEY_RETURN) {
       const label = event.target.querySelector('label');
       const checkbox = _optionsDom.querySelector(
-        '#' + label.getAttribute('for'),
+        '#' + label.getAttribute('for')
       );
       checkbox.click();
     }
@@ -264,7 +264,7 @@ function Multiselect(element) {
     selectionsItemLabelDom.addEventListener('click', _selectionClickHandler);
     selectionsItemLabelDom.addEventListener(
       'keydown',
-      _selectionKeyDownHandler,
+      _selectionKeyDownHandler
     );
   }
 

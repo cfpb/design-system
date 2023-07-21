@@ -58,7 +58,7 @@ function SummaryMinimal(element) {
     _flyout.setTransition(
       _transition,
       _transition.maxHeightSummary,
-      _transition.maxHeightDefault,
+      _transition.maxHeightDefault
     );
     _flyout.init();
 

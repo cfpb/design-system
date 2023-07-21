@@ -15,7 +15,7 @@ import template from '../../../_includes/variation-content.html';
 // replace instances of {% include icons/XXXXX.svg %} with the inlined SVG
 const templateWithIcons = template.replace(
   /{%\s+include\s+\/?icons\/([\w-]+)\.svg\s+%}/g,
-  (match, icon) => import(`../../../_includes/icons/${icon}.svg`),
+  (match, icon) => import(`../../../_includes/icons/${icon}.svg`)
 );
 
 export default class Preview extends Component {
@@ -23,15 +23,15 @@ export default class Preview extends Component {
     super(props);
 
     liquidEngine.registerFilter('slugify', (initial) =>
-      slugify(initial || '', { lower: true }),
+      slugify(initial || '', { lower: true })
     );
     liquidEngine.registerFilter('xml_escape', (initial) => encode(initial));
     liquidEngine.registerFilter('markdownify', (initial) =>
-      marked(initial || ''),
+      marked(initial || '')
     );
     liquidEngine.registerFilter(
       'strip',
-      (initial) => initial && initial.trim(),
+      (initial) => initial && initial.trim()
     );
 
     this.containerRef = React.createRef();
@@ -51,7 +51,7 @@ export default class Preview extends Component {
   componentDidUpdate(props) {
     // Tabs show under the show/hide details button on a pattern.
     const tabsContainerDom = props.document.querySelectorAll(
-      `.${Tabs.BASE_CLASS}`,
+      `.${Tabs.BASE_CLASS}`
     );
     if (tabsContainerDom.length > 0) {
       let tabsInst;

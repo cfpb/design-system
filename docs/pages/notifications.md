@@ -76,7 +76,7 @@ variation_groups:
           If your notification requires links, include them below the message or
 
           explanation as a `m-list` unordered list.
-        variation_name: ""
+        variation_name: ''
   - variation_group_name: Modifier types
     variations:
       - variation_code_snippet: |-
@@ -91,7 +91,7 @@ variation_groups:
         variation_description: >
           The success notification is for displaying when an operation has run
           as expected, such as returning the number of results in a search.
-        variation_implementation: ""
+        variation_implementation: ''
         variation_name: Success notification
         variation_specs: |-
           * Border: 1 px, CFPB Green (#20aa3f)
@@ -100,7 +100,7 @@ variation_groups:
           * Success icon and message should always appear below input field.
       - variation_name: Success notification (field-level)
         variation_code_snippet: >-
-          
+
           <div class="m-form-field m-form-field__success">
               <label class="a-label a-label__heading" for="form-input-success">Input label</label>
               <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
@@ -111,7 +111,7 @@ variation_groups:
                   </span>
               </div>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_specs: |-
           * Border: 2 px, CFPB Green (#20aa3f)
           * Minicon: 18 px, CFPB Green (#20aa3f)
@@ -132,7 +132,7 @@ variation_groups:
 
 
           This notification can also be used to display additional critical information to a user before they submit a form, such as how their data will be used and protected or a reminder that they can’t edit their responses after submitting.
-        variation_implementation: ""
+        variation_implementation: ''
         variation_name: Warning notification
         variation_specs: |-
           * Border: 1 px, Gold (#ff9e1b)
@@ -150,7 +150,7 @@ variation_groups:
                   </span>
               </div>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_specs: |-
           * Border: 2 px, Gold (#ff9e1b)
           * Minicon: 18 px, Gold (#ff9e1b)
@@ -164,7 +164,8 @@ variation_groups:
                   <div class="h4 m-notification_message">Page not found.</div>
               </div>
           </div>
-        variation_description: The error notification displays when an operation has not
+        variation_description:
+          The error notification displays when an operation has not
           run as expected and encounters an error. Use after validating on the
           server side to call out input errors preventing form submission.
         variation_implementation: >-
@@ -208,14 +209,15 @@ variation_groups:
                   <div class="h4 m-notification_message">The page is loading…</div>
               </div>
           </div>
-        variation_description: The in-progress notification displays when something is
+        variation_description:
+          The in-progress notification displays when something is
           happening on the page, such as a page loading notification as search
           results are found. Use [animated
           minicons](https://cfpb.github.io/design-system/foundation/iconography)
           to reassure the user that an action is functioning as intended.
         variation_name: In-progress notification
     variation_group_description: Types of notifications include success, warning, error, and in-progress.
-guidelines: ""
+guidelines: ''
 eyebrow: Alerts
 title: Notifications
 description: Notifications alert users to the state of a form or page. In forms,
@@ -224,7 +226,7 @@ description: Notifications alert users to the state of a form or page. In forms,
   details to know before submitting the form. When used on a page, notifications
   can call out important information about the content (including if the content
   is still loading).
-use_cases: ""
+use_cases: ''
 behavior: >-
   ### Placement
 
@@ -256,5 +258,5 @@ related_items: "* [Notifications
   variables](https://cfpb.github.io/design-system/development/variables#notific\
   ations)"
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

@@ -28,7 +28,7 @@ describe('EventObserver', () => {
     mockEvent.addEventListener('click', spy2);
     expect(mockEvent.getRegisteredEvents()['click'][1] === spy2).toBe(true);
     expect(
-      {}.hasOwnProperty.call(mockEvent.getRegisteredEvents(), 'click'),
+      {}.hasOwnProperty.call(mockEvent.getRegisteredEvents(), 'click')
     ).toBe(true);
   });
 
@@ -48,7 +48,7 @@ describe('EventObserver', () => {
     mockEvent.removeEventListener('click', spy1);
     mockEvent.removeEventListener('click', spy2);
     expect(
-      {}.hasOwnProperty.call(mockEvent.getRegisteredEvents(), 'click'),
+      {}.hasOwnProperty.call(mockEvent.getRegisteredEvents(), 'click')
     ).toBe(true);
     expect(mockEvent.getRegisteredEvents()['click'].length).toBe(0);
     mockEvent.dispatchEvent('click');

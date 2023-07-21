@@ -30,7 +30,7 @@ function BaseTransition(element, classes, child) {
   ) {
     throw new Error(
       'Transitions require CSS_PROPERTY and BASE_CLASS ' +
-        'to be passed into BaseTransition.',
+        'to be passed into BaseTransition.'
     );
   }
 
@@ -209,7 +209,7 @@ function BaseTransition(element, classes, child) {
     setElement(_dom);
     if (!initialClass) {
       throw new Error(
-        'Transition needs to be passed an initial CSS class on initialization!',
+        'Transition needs to be passed an initial CSS class on initialization!'
       );
     }
     _dom.classList.add(initialClass);

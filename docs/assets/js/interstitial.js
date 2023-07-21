@@ -18,7 +18,7 @@ if (page && window.PAGES_ALLOWED[page]) {
   if (localStorage.getItem('cms-directions-last-seen')) {
     const now = new Date();
     const lastSeen = Date.parse(
-      localStorage.getItem('cms-directions-last-seen'),
+      localStorage.getItem('cms-directions-last-seen')
     );
     const daysSinceDirectionsSeen = (now - lastSeen) / 1000 / 60 / 60 / 24;
     if (daysSinceDirectionsSeen <= 14) {

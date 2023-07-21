@@ -44,7 +44,7 @@ module.exports = {
       // eslint-disable-next-line no-sync
       let svg = less.fs.readFileSync(
         path.join(__dirname, `./icons/${svgName.value}.svg`),
-        'utf8',
+        'utf8'
       );
 
       /* Replace the cf-icon-svg class (used only in the embedded markup)

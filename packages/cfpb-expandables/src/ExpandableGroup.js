@@ -72,7 +72,7 @@ ExpandableGroup.init = (scope) => {
     const expandables = instantiateAll(
       `.${Expandable.BASE_CLASS}`,
       Expandable,
-      expandableGroupDom,
+      expandableGroupDom
     );
     const expandableGroup = new ExpandableGroup(expandableGroupDom);
     expandableGroup.init(expandables);

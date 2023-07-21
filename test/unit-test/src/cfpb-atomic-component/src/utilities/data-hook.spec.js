@@ -20,7 +20,7 @@ describe('Data hook', () => {
     it('should add a value to the data-* attribute of the element', () => {
       add(testComponent, 'test_state');
       expect(testComponent.getAttribute('data-js-hook')).toBe(
-        'test_behavior test_state',
+        'test_behavior test_state'
       );
     });
   });

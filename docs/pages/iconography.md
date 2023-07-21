@@ -500,7 +500,7 @@ variation_groups:
         variation_code_snippet: ""
       - variation_is_deprecated: false
         variation_name: Icon sizing exploration
-        variation_code_snippet: >-2
+        variation_code_snippet: >2
             <section>
               <div class='block block__flush-top'>
                 <h2>{% include icons/two-closed.svg %} Heading 2</h2>
@@ -528,6 +528,15 @@ variation_groups:
                 </div>  
               </div>
             </section>
+
+          ### Sizing of icons with text
+
+
+          | Heading and icon | Heading size | SVG dimensions | Path dimensions |
+
+          | ---- | ---------- | -------------- | ------- | ------ |
+
+          | {% include icons/two-closed.svg %} | 26px | 26 x 30.88 |  24.22 |
 guidelines: >-
   ### Color
 

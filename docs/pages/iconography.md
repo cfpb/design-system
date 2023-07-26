@@ -431,76 +431,53 @@ variation_groups:
         variation_implementation: Each icon has a circled variant shown in the second
           column (or square, in the case of the social media icons) that can be
           accessed by appending `-round` (or `-square`) to the canonical name.
-  - variation_group_name: Animated icon
-    variation_group_description: ""
+  - variation_group_name: Icons with text
     variations:
-      - variation_code_snippet: >
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 19" class="cf-icon-svg cf-icon-svg__updating"><path d="M5.857 3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.401 5.401 0 0 0-1.032 2.27 1.03 1.03 0 1 1-2.02-.395A7.462 7.462 0 0 1 2.235 4.91h-.748a1.03 1.03 0 1 1 0-2.058h3.34a1.03 1.03 0 0 1 1.03 1.03zm-3.25 9.237a1.028 1.028 0 0 1-1.358-.523 7.497 7.497 0 0 1-.37-1.036 1.03 1.03 0 1 1 1.983-.55 5.474 5.474 0 0 0 .269.751 1.029 1.029 0 0 1-.524 1.358zm2.905 2.439a1.028 1.028 0 0 1-1.42.322 7.522 7.522 0 0 1-.885-.652 1.03 1.03 0 0 1 1.34-1.563 5.435 5.435 0 0 0 .643.473 1.03 1.03 0 0 1 .322 1.42zm3.68.438a1.03 1.03 0 0 1-1.014 1.044h-.106a7.488 7.488 0 0 1-.811-.044 1.03 1.03 0 0 1 .224-2.046 5.41 5.41 0 0 0 .664.031h.014a1.03 1.03 0 0 1 1.03 1.015zm.034-12.847a1.03 1.03 0 0 1-1.029 1.01h-.033a1.03 1.03 0 0 1 .017-2.06h.017l.019.001A1.03 1.03 0 0 1 9.226 3.15zm3.236 11.25a1.029 1.029 0 0 1-.3 1.425 7.477 7.477 0 0 1-.797.453 1.03 1.03 0 1 1-.905-1.849 5.479 5.479 0 0 0 .578-.328 1.03 1.03 0 0 1 1.424.3zM10.475 3.504a1.029 1.029 0 0 1 1.41-.359l.018.011a1.03 1.03 0 1 1-1.06 1.764l-.01-.006a1.029 1.029 0 0 1-.358-1.41zm4.26 9.445c-.096.19-.203.379-.315.56a1.03 1.03 0 1 1-1.749-1.086c.082-.13.158-.267.228-.405a1.03 1.03 0 1 1 1.836.93zm-1.959-6.052a1.03 1.03 0 0 1 1.79-1.016l.008.013a1.03 1.03 0 1 1-1.79 1.017zm2.764 2.487a9.327 9.327 0 0 1 0 .366 1.03 1.03 0 0 1-1.029 1.005h-.025A1.03 1.03 0 0 1 13.482 9.7a4.625 4.625 0 0 0 0-.266 1.03 1.03 0 0 1 1.003-1.055h.026a1.03 1.03 0 0 1 1.029 1.004z"/></svg>
-        variation_description: In certain instances, icons can be animated to aid
-          communication or to reassure the user that an action is functioning as
-          intended. Examples include saving or loading content.
-        variation_implementation: Our previous font icon system provided modifiers to
-          rotate any icon. We found in reality this wasn’t practical and only
-          one icon is ever animated, `update`. We’ve provided `updating` to be
-          used within the UI when a user needs to be made aware that the website
-          is working on responding to their actions.
-        variation_specs: Depending on the context, the animated icon follows the
-          standards of the component that contains it, for example, the icon
-          follows the size and padding standards for
-          [buttons](https://cfpb.github.io/design-system/components/buttons)
-          when placed inside a button to indicate loading or follows standards
-          of a form-level alert within a
-          [notification](https://cfpb.github.io/design-system/components/notifications).
-  - variation_group_name: Icon with text
-    variations:
-      - variation_name: Extra small
-        variation_code_snippet: >-
-          <a class="a-link a-link__icon" href="#">
-              <span class="a-link_text">Example with icon</span>
-              {% include icons/download.svg %}
-          </a>
-
-
-
-          <!-- Raw SVG
-
-
-          <a class="a-link a-link__icon" href="#">
-              <span class="a-link_text">Example with icon</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
-          </a>
-
-          -->
+      - variation_name: Heading 2
         variation_description: |-
-          * **Web:** 16px size, used inline with text
-          * **Print:** 14pt size, used inline with text
+          * 26px
+          * paired with Heading 2 
+        variation_code_snippet: |-2
+            <section>
+              <div class='block block__flush-top'>
+                <h2>{% include icons/two-closed.svg %} Heading 2</h2>
+              </div>
+            </section>
+      - variation_name: Heading 3
+        variation_description: 22px size, used in headings
+        variation_code_snippet: |-2
+            <section>
+              <div class='block block__flush-top'>
+                <h3>{% include icons/three-closed.svg %} Heading 3</h3>
+              </div>
+            </section>
+      - variation_name: Heading 4
+        variation_description: 18px, used in headings
+      - variation_name: Heading 5
+        variation_description: 14px size, used on labels
+        variation_code_snippet: |-2
+            <section>
+          <div class='block block__flush-top'>
+                <h5>{% include icons/five-closed.svg %} Heading 5</h5>
+              </div>
+            </section>
+      - variation_name: Paragraph
+        variation_code_snippet: |-2
+            <section>
+              <div class='block block__flush-top'>
+                <p>{% include icons/two-closed.svg %} Paragraph</p>
+              </div>
+            </section>
+        variation_description: 16px size, used inline with text
         variation_implementation: >-
           The standard icon height in ems matches the 19px rendered canvas of
           text set in Avenir Next sized at 16px (19/16 = 1.1875).
 
 
           `@cf-icon-height: 1.1875em;`
-      - variation_name: Small
-        variation_description: |-
-          * **Web:** 20px size, used on buttons
-          * **Print:** 21pt size, used for numbers and contact icons
-      - variation_name: Medium
-        variation_description: |-
-          * **Web:** 25px size, used in social media sharing sets
-          * **Print:** 28pt size, used for numbers and contact icons
-      - variation_name: Large
-        variation_description: |-
-          * **Web:** 30px size, used inline with large text links
-          * **Print:** 36pt size, used for numbers and contact icons
-      - variation_name: Extra large
-        variation_description: |-
-          * **Web:** 40px size, paired with primary headings
-          * **Print:** 48pt size, paired with primary headings
-        variation_code_snippet: ""
       - variation_is_deprecated: false
         variation_name: Icon sizing exploration
-        variation_code_snippet: >2
+        variation_code_snippet: >-2
             <section>
               <div class='block block__flush-top'>
                 <h2>{% include icons/two-closed.svg %} Heading 2</h2>
@@ -528,15 +505,39 @@ variation_groups:
                 </div>  
               </div>
             </section>
-
-          ### Sizing of icons with text
-
-
-          | Heading and icon | Heading size | SVG dimensions | Path dimensions |
-
-          | ---- | ---------- | -------------- | ------- | ------ |
-
-          | {% include icons/two-closed.svg %} | 26px | 26 x 30.88 |  24.22 |
+      - variation_is_deprecated: false
+        variation_name: Print sizing
+        variation_description: |-
+          * 14pt size, used inline with text
+          * 21pt size, used for numbers and contact icons
+          * 28pt size, used for numbers and contact icons
+          * 36pt size, used for numbers and contact icons 
+          * 48pt size, paired with primary headings
+    variation_group_description: "Icons are typically used in conjunction with text.
+      They typically match the color of the corresponding text. The size and
+      positioning of the icon is set to align with the text it sits inline with.
+      "
+  - variation_group_name: Animated icon
+    variation_group_description: ""
+    variations:
+      - variation_code_snippet: >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 19" class="cf-icon-svg cf-icon-svg__updating"><path d="M5.857 3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.401 5.401 0 0 0-1.032 2.27 1.03 1.03 0 1 1-2.02-.395A7.462 7.462 0 0 1 2.235 4.91h-.748a1.03 1.03 0 1 1 0-2.058h3.34a1.03 1.03 0 0 1 1.03 1.03zm-3.25 9.237a1.028 1.028 0 0 1-1.358-.523 7.497 7.497 0 0 1-.37-1.036 1.03 1.03 0 1 1 1.983-.55 5.474 5.474 0 0 0 .269.751 1.029 1.029 0 0 1-.524 1.358zm2.905 2.439a1.028 1.028 0 0 1-1.42.322 7.522 7.522 0 0 1-.885-.652 1.03 1.03 0 0 1 1.34-1.563 5.435 5.435 0 0 0 .643.473 1.03 1.03 0 0 1 .322 1.42zm3.68.438a1.03 1.03 0 0 1-1.014 1.044h-.106a7.488 7.488 0 0 1-.811-.044 1.03 1.03 0 0 1 .224-2.046 5.41 5.41 0 0 0 .664.031h.014a1.03 1.03 0 0 1 1.03 1.015zm.034-12.847a1.03 1.03 0 0 1-1.029 1.01h-.033a1.03 1.03 0 0 1 .017-2.06h.017l.019.001A1.03 1.03 0 0 1 9.226 3.15zm3.236 11.25a1.029 1.029 0 0 1-.3 1.425 7.477 7.477 0 0 1-.797.453 1.03 1.03 0 1 1-.905-1.849 5.479 5.479 0 0 0 .578-.328 1.03 1.03 0 0 1 1.424.3zM10.475 3.504a1.029 1.029 0 0 1 1.41-.359l.018.011a1.03 1.03 0 1 1-1.06 1.764l-.01-.006a1.029 1.029 0 0 1-.358-1.41zm4.26 9.445c-.096.19-.203.379-.315.56a1.03 1.03 0 1 1-1.749-1.086c.082-.13.158-.267.228-.405a1.03 1.03 0 1 1 1.836.93zm-1.959-6.052a1.03 1.03 0 0 1 1.79-1.016l.008.013a1.03 1.03 0 1 1-1.79 1.017zm2.764 2.487a9.327 9.327 0 0 1 0 .366 1.03 1.03 0 0 1-1.029 1.005h-.025A1.03 1.03 0 0 1 13.482 9.7a4.625 4.625 0 0 0 0-.266 1.03 1.03 0 0 1 1.003-1.055h.026a1.03 1.03 0 0 1 1.029 1.004z"/></svg>
+        variation_description: In certain instances, icons can be animated to aid
+          communication or to reassure the user that an action is functioning as
+          intended. Examples include saving or loading content.
+        variation_implementation: Our previous font icon system provided modifiers to
+          rotate any icon. We found in reality this wasn’t practical and only
+          one icon is ever animated, `update`. We’ve provided `updating` to be
+          used within the UI when a user needs to be made aware that the website
+          is working on responding to their actions.
+        variation_specs: Depending on the context, the animated icon follows the
+          standards of the component that contains it, for example, the icon
+          follows the size and padding standards for
+          [buttons](https://cfpb.github.io/design-system/components/buttons)
+          when placed inside a button to indicate loading or follows standards
+          of a form-level alert within a
+          [notification](https://cfpb.github.io/design-system/components/notifications).
 guidelines: >-
   ### Color
 
@@ -557,16 +558,6 @@ guidelines: >-
 
 
   ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png)
-
-
-  ### Content guidelines
-
-
-  * Icons are typically used in conjunction with text.
-
-  * They typically match the color of the corresponding text.
-
-  * The size of the icon should match the size of the text it corresponds to.
 
 
   ### Interaction details

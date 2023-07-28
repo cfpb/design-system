@@ -433,92 +433,6 @@ variation_groups:
         variation_implementation: Each icon has a circled variant shown in the second
           column (or square, in the case of the social media icons) that can be
           accessed by appending `-round` (or `-square`) to the canonical name.
-  - variation_group_name: Icons with text
-    variations:
-      - variation_name: Heading 2
-        variation_description: |-
-          * 26px
-          * paired with Heading 2 
-        variation_code_snippet: |-2
-            <section>
-              <div class='block block__flush-top'>
-                <h2>{% include icons/two-closed.svg %} Heading 2</h2>
-              </div>
-            </section>
-      - variation_name: Heading 3
-        variation_description: 22px size, used in headings
-        variation_code_snippet: |-2
-            <section>
-              <div class='block block__flush-top'>
-                <h3>{% include icons/three-closed.svg %} Heading 3</h3>
-              </div>
-            </section>
-      - variation_name: Heading 4
-        variation_description: 18px, used in headings
-      - variation_name: Heading 5
-        variation_description: 14px size, used on labels
-        variation_code_snippet: |-2
-            <section>
-          <div class='block block__flush-top'>
-                <h5>{% include icons/five-closed.svg %} Heading 5</h5>
-              </div>
-            </section>
-      - variation_name: Paragraph
-        variation_code_snippet: |-2
-            <section>
-              <div class='block block__flush-top'>
-                <p>{% include icons/two-closed.svg %} Paragraph</p>
-              </div>
-            </section>
-        variation_description: 16px size, used inline with text
-        variation_implementation: >-
-          The standard icon height in ems matches the 19px rendered canvas of
-          text set in Avenir Next sized at 16px (19/16 = 1.1875).
-
-
-          `@cf-icon-height: 1.1875em;`
-      - variation_is_deprecated: false
-        variation_name: Icon sizing exploration
-        variation_code_snippet: >-2
-            <section>
-              <div class='block block__flush-top'>
-                <h2>{% include icons/two-closed.svg %} Heading 2</h2>
-              </div>
-              <div class='block block__flush-top'>
-                <h3>{% include icons/three-closed.svg %} Heading 3</h3>
-              </div>
-              <div class='block block__flush-top'>
-                <h4>{% include icons/four-closed.svg %} Heading 4</h4>
-              </div>
-              <div class='block block__flush-top'>
-                <h5>{% include icons/five-closed.svg %} Heading 5</h5>
-              </div>
-              <div class='block block__flush-top'>
-                <h2>{% include icons/approved.svg %} Heading 2</h2>
-              </div>
-              <div class='block block__flush-top'>
-                <div class="m-notification
-                          m-notification__visible
-                          m-notification__warning">
-                  {% include icons/warning-round.svg %}
-                    <div class="m-notification_content">
-                        <div class="h4 m-notification_message">This is a sizing test</div>
-                    </div>
-                </div>  
-              </div>
-            </section>
-      - variation_is_deprecated: false
-        variation_name: Print sizing
-        variation_description: |-
-          * 14pt size, used inline with text
-          * 21pt size, used for numbers and contact icons
-          * 28pt size, used for numbers and contact icons
-          * 36pt size, used for numbers and contact icons 
-          * 48pt size, paired with primary headings
-    variation_group_description: "Icons are typically used in conjunction with text.
-      They typically match the color of the corresponding text. The size and
-      positioning of the icon is set to align with the text it sits inline with.
-      "
   - variation_group_name: Animated icon
     variation_group_description: ""
     variations:
@@ -544,22 +458,13 @@ guidelines: >-
   ### Color
 
 
-  Icons should always be one color. If used over a color field, negative space should be knocked out.
+  The color of an icon should match the color of the text that it sits next to. This setting is built into our code and happens automatically.
 
 
-  Although color usage is flexible, icons should always be used in high contrast tones relative to the background to maximize legibility.
+  ### Scale
 
 
-  ![One color icon example and negative space knocked out icon example](/design-system/images/uploads/minicons3a_-2.png)
-
-
-  ### Spacing
-
-
-  Padding varies around icons of various primary shapes. Square, vertically and horizontally rectangular, diagonal, and most complex icons can fit within the relative padding bounding box. Circular and some complex icons should be slightly larger to offset the visual weight of surrounding negative space.
-
-
-  ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png)
+  Icons should typically appear with text. The scaling of icons is relative to the size of the text. This relative sizing is built into our code and happens automatically. 
 
 
   ### Interaction details
@@ -582,7 +487,7 @@ description: >-
   <h2 class="h3">Download the icon font</h2>
 
 
-  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. _This should not be used for placing icons on a website._
+  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. *This should not be used for placing icons on a website.*
 
 
   <a class="a-link__icon"
@@ -612,7 +517,64 @@ description: >-
 
 
   </div>
-use_cases: ""
+use_cases: "Icons are styled in relation to the the color, size, and position of
+  the corresponding text.\ 
+
+
+  <section>\r
+
+  \    <div class='block block__flush-top'>\r
+
+  \      <h2>{% include icons/two-closed.svg %} Heading 2</h2>\r
+
+  \    </div>\r
+
+  \    <div class='block block__flush-top'>\r
+
+  \      <h3>{% include icons/three-closed.svg %} Heading 3</h3>\r
+
+  \    </div>\r
+
+  \    <div class='block block__flush-top'>\r
+
+  \      <h4>{% include icons/four-closed.svg %} Heading 4</h4>\r
+
+  \    </div>\r
+
+  \    <div class='block block__flush-top'>\r
+
+  \      <h5>{% include icons/five-closed.svg %} Heading 5</h5>\r
+
+  \    </div>\r
+
+  \    <div class='block block__flush-top'>\r
+
+  \      <p>{% include icons/approved.svg %} paragraph</p>\r
+
+  \    </div>\r
+
+  \    <div class='block block__flush-top'>\r
+
+  \      <div class=\"m-notification\r
+
+  \                m-notification__visible\r
+
+  \                m-notification__warning\">\r
+
+  \        {% include icons/warning-round.svg %}\r
+
+  \          <div class=\"m-notification_content\">\r
+
+  \              <div class=\"h4 m-notification_message\">This is a sizing
+  test</div>\r
+
+  \          </div>\r
+
+  \      </div>  \r
+
+  \    </div>\r
+
+  \  </section>\r"
 behavior: >-
   ### SVG icon basics
 

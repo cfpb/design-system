@@ -454,10 +454,7 @@ variation_groups:
           when placed inside a button to indicate loading or follows standards
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
-guidelines: >-
-  ![]()
-
-
+guidelines: >
   ### Color
 
 
@@ -467,7 +464,7 @@ guidelines: >-
   ### Scale
 
 
-  Icons should typically appear with text. The scaling of icons is relative to the size of the text. This relative sizing is built into our code and happens automatically. 
+  Icons typically appear with text and icons are scaled in relation to the text size. This relative sizing is built into our code and happens automatically.  
 
 
   ## Style
@@ -492,12 +489,6 @@ guidelines: >-
 
 
   ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](docs/images/uploads/icons_relative_sizing.png)
-
-
-  ### Interaction details
-
-
-  Please reference the [Links](https://cfpb.github.io/design-system/components/links#links-with-icons) page for guidance regarding icons paired with links.
 eyebrow: Graphics
 title: Iconography
 status: Released
@@ -661,5 +652,11 @@ behavior: >-
 
 
   In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where `@name` is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black).
+
+
+  ### Interaction details
+
+
+  Please reference the [Links](https://cfpb.github.io/design-system/components/links#links-with-icons) page for guidance regarding icons paired with links.
 related_items: ""
 ---

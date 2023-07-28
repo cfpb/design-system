@@ -455,6 +455,9 @@ variation_groups:
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
 guidelines: >-
+  ![]()
+
+
   ### Color
 
 
@@ -476,7 +479,7 @@ guidelines: >-
   Our icons were drawn based the footprint of Avenir Next (which includes full height of the font plus white space).  
 
 
-  ![Diagram of Illustrator artboard showing the height of Avenir Next (1200px in height)](/design-system/images/uploads/icon_artboard.png "Illustrator artboard for icon sizing")
+  ![Diagram of illustrator artboard icon grid](docs/images/uploads/icon_artboard.png)
 
 
   ### Relative sizing
@@ -486,6 +489,9 @@ guidelines: >-
 
 
   We created two sizing grids, a smaller one that fits within the standard circle, and a larger grid for icons outside of the circle. That allows the same icon inside and outside the circle to have a similar visual prominence.
+
+
+  ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](docs/images/uploads/icons_relative_sizing.png)
 
 
   ### Interaction details

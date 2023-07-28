@@ -455,7 +455,12 @@ variation_groups:
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
 guidelines: >-
-  ### Color
+  ![Diagram of Illustrator artboard showing the height of Avenir Next (1200px in
+  height)](/design-system/images/uploads/icon_artboard.png "Illustrator artboard
+  for icon sizing")
+
+
+  #### Color
 
 
   The color of an icon should match the color of the text that it sits next to. This setting is built into our code and happens automatically.

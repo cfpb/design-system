@@ -455,12 +455,7 @@ variation_groups:
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
 guidelines: >-
-  ![Diagram of Illustrator artboard showing the height of Avenir Next (1200px in
-  height)](/design-system/images/uploads/icon_artboard.png "Illustrator artboard
-  for icon sizing")
-
-
-  #### Color
+  ### Color
 
 
   The color of an icon should match the color of the text that it sits next to. This setting is built into our code and happens automatically.
@@ -470,6 +465,27 @@ guidelines: >-
 
 
   Icons should typically appear with text. The scaling of icons is relative to the size of the text. This relative sizing is built into our code and happens automatically. 
+
+
+  ## Style
+
+
+  #### The Artboard
+
+
+  Our icons were drawn based the footprint of Avenir Next (which includes full height of the font plus white space).  
+
+
+  ![Diagram of Illustrator artboard showing the height of Avenir Next (1200px in height)](/design-system/images/uploads/icon_artboard.png "Illustrator artboard for icon sizing")
+
+
+  ### Relative sizing
+
+
+  Although icons have a variety of heights and widths, it's important that they appear relative in size to each other. This includes the overall size of circled icons, and icons outside of circles. 
+
+
+  We created two sizing grids, a smaller one that fits within the standard circle, and a larger grid for icons outside of the circle. That allows the same icon inside and outside the circle to have a similar visual prominence.
 
 
   ### Interaction details

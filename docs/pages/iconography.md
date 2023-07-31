@@ -454,86 +454,40 @@ variation_groups:
           when placed inside a button to indicate loading or follows standards
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
-guidelines: >-
-  #### The Artboard
+guidelines: "#### The Artboard
 
 
-  Our icons were drawn based the footprint of Avenir Next (which includes full height of the font plus white space).  
+  Our icons were drawn based the footprint of Avenir Next (which includes full
+  height of the font plus white space). \ 
 
 
-  ![Diagram of illustrator artboard icon grid](docs/images/uploads/icon_artboard.png)
+  ![Diagram of illustrator artboard icon
+  grid](docs/images/uploads/icon_artboard.png)
 
 
   ### Relative sizing
 
 
-  Although icons have a variety of heights and widths, it's important that they appear relative in size to each other. This includes the overall size of circled icons, and icons outside of circles. 
+  Although icons have a variety of heights and widths, it's important that
+  they appear relative in size to each other. This includes the overall size of
+  circled icons, and icons outside of circles.\ 
 
 
-  We created two sizing grids, a smaller one that fits within the standard circle, and a larger grid for icons outside of the circle. That allows the same icon inside and outside the circle to have a similar visual prominence.
+  We created two sizing grids, a smaller one that fits within the standard
+  circle, and a larger grid for icons outside of the circle. That allows the
+  same icon inside and outside the circle to have a similar visual prominence.
 
 
-  ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](docs/images/uploads/icons_relative_sizing.png)
+  ![Diagram of illustrator artboard icon grid showing a circle icon and open
+  icon](docs/images/uploads/icons_relative_sizing.png)
 
 
   ### Scale
 
 
-  Icons typically appear with text and icons are scaled in relation to the text size. This relative sizing is built into our code and happens automatically.  
-
-
-  ### Color
-
-
-  The color of an icon should match the color of the text that it sits next to. This setting is built into our code and happens automatically.
-eyebrow: Graphics
-title: Iconography
-status: Released
-description: >-
-  Icons visually reinforce an interface action, file type, status, or category.
-  They are visually simple, quickly recognizable, and easy to understand. They
-  are almost always used in context with descriptive text and function to
-  reinforce the message of that text.
-
-
-  <div class="content-50 content-first" markdown="1">
-
-
-  <h2 class="h3">Download the icon font</h2>
-
-
-  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. *This should not be used for placing icons on a website.*
-
-
-  <a class="a-link__icon"
-     href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
-      <span class="a-link_text">Download font</span>
-      {% include icons/download.svg %}
-  </a>
-
-
-  </div>
-
-
-  <div class="content-50 content-first" markdown="1">
-
-
-  <h2 class="h3">Download vector files</h2>
-
-
-  Each of our icons is available for download in SVG form on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world.
-
-
-  <a class="a-link__icon"
-     href="http://thenounproject.com/cfpb_minicons/">
-      <span class="a-link_text">View on Noun Project</span>
-      {% include icons/external-link.svg %}
-  </a>
-
-
-  </div>
-use_cases: "Icons are styled relative to the the color, size, and position of
-  the corresponding text.\ 
+  Icons typically appear with text and icons are scaled in relation to the
+  text size. This relative sizing is built into our code and happens
+  automatically. \ 
 
 
   <section>\r
@@ -589,7 +543,61 @@ use_cases: "Icons are styled relative to the the color, size, and position of
 
   \    </div>\r
 
-  \  </section>\r"
+  \  </section>
+
+
+  ### Color
+
+
+  The color of an icon should match the color of the text that it sits next
+  to. This setting is built into our code and happens automatically."
+eyebrow: Graphics
+title: Iconography
+status: Released
+description: >-
+  Icons visually reinforce an interface action, file type, status, or category.
+  They are visually simple, quickly recognizable, and easy to understand. They
+  are almost always used in context with descriptive text and function to
+  reinforce the message of that text.
+
+
+  <div class="content-50 content-first" markdown="1">
+
+
+  <h2 class="h3">Download the icon font</h2>
+
+
+  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. *This should not be used for placing icons on a website.*
+
+
+  <a class="a-link__icon"
+     href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
+      <span class="a-link_text">Download font</span>
+      {% include icons/download.svg %}
+  </a>
+
+
+  </div>
+
+
+  <div class="content-50 content-first" markdown="1">
+
+
+  <h2 class="h3">Download vector files</h2>
+
+
+  Each of our icons is available for download in SVG form on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world.
+
+
+  <a class="a-link__icon"
+     href="http://thenounproject.com/cfpb_minicons/">
+      <span class="a-link_text">View on Noun Project</span>
+      {% include icons/external-link.svg %}
+  </a>
+
+
+  </div>
+use_cases: ""
 behavior: >-
   ### SVG icon basics
 

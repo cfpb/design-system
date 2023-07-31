@@ -454,7 +454,7 @@ variation_groups:
           when placed inside a button to indicate loading or follows standards
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
-guidelines: "### The Artboard
+guidelines: "### The artboard
 
 
   Our icons were drawn based the footprint of Avenir Next (which includes full

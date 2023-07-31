@@ -454,22 +454,7 @@ variation_groups:
           when placed inside a button to indicate loading or follows standards
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
-guidelines: >
-  ### Color
-
-
-  The color of an icon should match the color of the text that it sits next to. This setting is built into our code and happens automatically.
-
-
-  ### Scale
-
-
-  Icons typically appear with text and icons are scaled in relation to the text size. This relative sizing is built into our code and happens automatically.  
-
-
-  ## Style
-
-
+guidelines: >-
   #### The Artboard
 
 
@@ -489,6 +474,18 @@ guidelines: >
 
 
   ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](docs/images/uploads/icons_relative_sizing.png)
+
+
+  ### Scale
+
+
+  Icons typically appear with text and icons are scaled in relation to the text size. This relative sizing is built into our code and happens automatically.  
+
+
+  ### Color
+
+
+  The color of an icon should match the color of the text that it sits next to. This setting is built into our code and happens automatically.
 eyebrow: Graphics
 title: Iconography
 status: Released

@@ -609,7 +609,7 @@ behavior: >-
   > **Note:** Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.
 
 
-  The filenames of the SVGs included with cfpb-icons match the names in the icon library section.
+  The filenames of the SVGs included with cfpb-icons match the names in the [Icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section.
 
 
   #### What the Less is doing

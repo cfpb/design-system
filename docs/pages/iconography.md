@@ -4,7 +4,7 @@ section: foundation
 variation_groups:
   - variation_group_name: Icon library
     variations:
-      - variation_code_snippet: ''
+      - variation_code_snippet: ""
         variation_description: >-
           Use the canonical icon name when referencing the icons in code,
           however, "aliases" are provided in the table below to help you search
@@ -26,12 +26,9 @@ variation_groups:
 
           - [Web application icons](#web-application-icons)
 
-          - [Numerical icons](#numerical-icons)
 
+          The RTL (right-to-left) column designates whether an icon will flip on pages where the HTML element has its language set to an RTL-reading language, such as Arabic.
 
-          The RTL (right-to-left) column designates whether an icon will flip
-          on pages where the HTML element has its language set to an RTL-reading
-          language, such as arabic.
 
           ### Navigation icons
 
@@ -431,76 +428,20 @@ variation_groups:
           | {% include icons/wifi.svg %} | {% include icons/wifi-round.svg %} | wifi | wi-fi, wireless, signal | |
 
           {: class="icon-table"}
-
-          ### Numerical icons
-
-
-          | icon | icon-round | canonical name | aliases (for searchability only) | RTL? |
-
-          | ---- | ---------- | -------------- | ------- | ------ |
-
-          | {% include icons/zero-closed.svg %} | | zero-closed | | |
-
-          | {% include icons/one-closed.svg %} | | one-closed | | |
-
-          | {% include icons/two-closed.svg %} | | two-closed | | |
-
-          | {% include icons/three-closed.svg %} | | three-closed | | |
-
-          | {% include icons/four-closed.svg %} | | four-closed | | |
-
-          | {% include icons/five-closed.svg %} | | five-closed | | |
-
-          | {% include icons/six-closed.svg %} | | six-closed | | |
-
-          | {% include icons/seven-closed.svg %} | | seven-closed | | |
-
-          | {% include icons/eight-closed.svg %} | | eight-closed | | |
-
-          | {% include icons/nine-closed.svg %} | | nine-closed | | |
-
-          | {% include icons/zero-open.svg %} | | zero-open | | |
-
-          | {% include icons/one-open.svg %} | | one-open | | |
-
-          | {% include icons/two-open.svg %} | | two-open | | |
-
-          | {% include icons/three-open.svg %} | | three-open | | |
-
-          | {% include icons/four-open.svg %} | | four-open | | |
-
-          | {% include icons/five-open.svg %} | | five-open | | |
-
-          | {% include icons/six-open.svg %} | | six-open | | |
-
-          | {% include icons/seven-open.svg %} | | seven-open | | |
-
-          | {% include icons/eight-open.svg %} | | eight-open | | |
-
-          | {% include icons/nine-open.svg %} | | nine-open | | |
-
-          {: class="icon-table"}
-        variation_name: ''
-        variation_implementation:
-          Each icon has a circled variant shown in the second
+        variation_name: ""
+        variation_implementation: Each icon has a circled variant shown in the second
           column (or square, in the case of the social media icons) that can be
           accessed by appending `-round` (or `-square`) to the canonical name.
   - variation_group_name: Animated icon
-    variation_group_description: ''
+    variation_group_description: ""
     variations:
       - variation_code_snippet: >
-
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 19" class="cf-icon-svg cf-icon-svg__updating"><path d="M5.857 3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.401 5.401 0 0 0-1.032 2.27 1.03 1.03 0 1 1-2.02-.395A7.462 7.462 0 0 1 2.235 4.91h-.748a1.03 1.03 0 1 1 0-2.058h3.34a1.03 1.03 0 0 1 1.03 1.03zm-3.25 9.237a1.028 1.028 0 0 1-1.358-.523 7.497 7.497 0 0 1-.37-1.036 1.03 1.03 0 1 1 1.983-.55 5.474 5.474 0 0 0 .269.751 1.029 1.029 0 0 1-.524 1.358zm2.905 2.439a1.028 1.028 0 0 1-1.42.322 7.522 7.522 0 0 1-.885-.652 1.03 1.03 0 0 1 1.34-1.563 5.435 5.435 0 0 0 .643.473 1.03 1.03 0 0 1 .322 1.42zm3.68.438a1.03 1.03 0 0 1-1.014 1.044h-.106a7.488 7.488 0 0 1-.811-.044 1.03 1.03 0 0 1 .224-2.046 5.41 5.41 0 0 0 .664.031h.014a1.03 1.03 0 0 1 1.03 1.015zm.034-12.847a1.03 1.03 0 0 1-1.029 1.01h-.033a1.03 1.03 0 0 1 .017-2.06h.017l.019.001A1.03 1.03 0 0 1 9.226 3.15zm3.236 11.25a1.029 1.029 0 0 1-.3 1.425 7.477 7.477 0 0 1-.797.453 1.03 1.03 0 1 1-.905-1.849 5.479 5.479 0 0 0 .578-.328 1.03 1.03 0 0 1 1.424.3zM10.475 3.504a1.029 1.029 0 0 1 1.41-.359l.018.011a1.03 1.03 0 1 1-1.06 1.764l-.01-.006a1.029 1.029 0 0 1-.358-1.41zm4.26 9.445c-.096.19-.203.379-.315.56a1.03 1.03 0 1 1-1.749-1.086c.082-.13.158-.267.228-.405a1.03 1.03 0 1 1 1.836.93zm-1.959-6.052a1.03 1.03 0 0 1 1.79-1.016l.008.013a1.03 1.03 0 1 1-1.79 1.017zm2.764 2.487a9.327 9.327 0 0 1 0 .366 1.03 1.03 0 0 1-1.029 1.005h-.025A1.03 1.03 0 0 1 13.482 9.7a4.625 4.625 0 0 0 0-.266 1.03 1.03 0 0 1 1.003-1.055h.026a1.03 1.03 0 0 1 1.029 1.004z"/></svg>
-        variation_description:
-          In certain instances, icons can be animated to aid
+        variation_description: In certain instances, icons can be animated to aid
           communication or to reassure the user that an action is functioning as
           intended. Examples include saving or loading content.
-        variation_implementation:
-          Our previous font icon system provided modifiers to
-          rotate any icon. We found in reality this wasn’t practical and only
-          one icon is ever animated, `update`. We’ve provided `updating` to be
-          used within the UI when a user needs to be made aware that the website
-          is working on responding to their actions.
+        variation_implementation: ""
         variation_specs: Depending on the context, the animated icon follows the
           standards of the component that contains it, for example, the icon
           follows the size and padding standards for
@@ -508,87 +449,99 @@ variation_groups:
           when placed inside a button to indicate loading or follows standards
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
-  - variation_group_name: Icon with text
-    variations:
-      - variation_name: Extra small
-        variation_code_snippet: >-
-          <a class="a-link a-link__icon" href="#">
-              <span class="a-link_text">Example with icon</span>
-              {% include icons/download.svg %}
-          </a>
+guidelines: "### The artboard
 
 
-
-          <!-- Raw SVG
-
-
-          <a class="a-link a-link__icon" href="#">
-              <span class="a-link_text">Example with icon</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
-          </a>
-
-          -->
-        variation_description: |-
-          * **Web:** 16px size, used inline with text
-          * **Print:** 14pt size, used inline with text
-        variation_implementation: >-
-          The standard icon height in ems matches the 19px rendered canvas of
-          text set in Avenir Next sized at 16px (19/16 = 1.1875).
+  Our icons were drawn based the footprint of Avenir Next (which includes full
+  height of the font plus white space). The standard icon height in ems matches
+  the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 =
+  1.1875em).  In the code this appears as @cf-icon-height: 1.1875em.\ 
 
 
-          `@cf-icon-height: 1.1875em;`
-      - variation_name: Small
-        variation_description: |-
-          * **Web:** 20px size, used on buttons
-          * **Print:** 21pt size, used for numbers and contact icons
-      - variation_name: Medium
-        variation_description: |-
-          * **Web:** 25px size, used in social media sharing sets
-          * **Print:** 28pt size, used for numbers and contact icons
-      - variation_name: Large
-        variation_description: |-
-          * **Web:** 30px size, used inline with large text links
-          * **Print:** 36pt size, used for numbers and contact icons
-      - variation_name: Extra large
-        variation_description: |-
-          * **Web:** 40px size, paired with primary headings
-          * **Print:** 48pt size, paired with primary headings
-guidelines: >-
+  ![Diagram of illustrator artboard icon
+  grid](docs/images/uploads/icon_artboard.png)
+
+
+  ### Relative sizing
+
+
+  Although icons have a variety of heights and widths, it's important that
+  they appear relative in size to each other. This includes the overall size of
+  circular icons, and icons outside of circles. \r
+
+
+  We created two sizing grids, a smaller one that fits within the standard
+  circle, and a larger grid for icons outside of the circle. That allows the
+  same icon inside and outside the circle to have a similar visual prominence.\r
+
+
+  ![Diagram of illustrator artboard icon grid showing a circle icon and open
+  icon](docs/images/uploads/icons_relative_sizing.png)
+
+
   ### Color
 
 
-  Icons should always be one color. If used over a color field, negative space should be knocked out.
+  The color of an icon should match the color of neighboring text. This
+  setting is built into our code and happens automatically, provided that the
+  icon is within the same parent element as the text. If the icon sits outside
+  of the text’s parent element the color must be applied manually but should
+  still match the color of the text.
 
 
-  Although color usage is flexible, icons should always be used in high contrast tones relative to the background to maximize legibility.
+  Code example:\ 
 
 
-  ![One color icon example and negative space knocked out icon example](/design-system/images/uploads/minicons3a_-2.png)
+  * Heading color automatically applied to the icon: ```<h2>{icon} Heading
+  Text</h2>```
+
+  * Heading color must be manually applied to the icon:
+  ```<div>{icon}<h2>Heading text</h2></div>```
 
 
-  ### Spacing
+  ### Scale
 
 
-  Padding varies around icons of various primary shapes. Square, vertically and horizontally rectangular, diagonal, and most complex icons can fit within the relative padding bounding box. Circular and some complex icons should be slightly larger to offset the visual weight of surrounding negative space.
+  Icons should be scaled relative to the size of neighboring text. This
+  setting is built into our code and happens automatically, provided that the
+  icon is within the same parent element as the text. If the icon sits outside
+  of the text’s parent element the scaling must be applied manually but the icon
+  should still be scaled relative to the size of the text.
 
 
-  ![Icon spacing diagram](/design-system/images/uploads/minicons4_-2.png)
+  Code example:\ 
 
 
-  ### Content guidelines
+  * Icon is automatically scaled relative to the heading size: ```<h2>{icon}
+  Heading Text</h2>```
+
+  * Icon must be manually scaled relative to the heading size:
+  ```<div>{icon}<h2>Heading text</h2></div>```
 
 
-  * Icons are typically used in conjunction with text.
-
-  * They typically match the color of the corresponding text.
-
-  * The size of the icon should match the size of the text it corresponds to.
+  #### Icons with text
 
 
-  ### Interaction details
+  | Number | Object |\ 
 
+  | -------- | ---------- |\ 
 
-  Please reference the [Links](https://cfpb.github.io/design-system/components/links#links-with-icons) page for guidance regarding icons paired with links.
+  | <h2>{% include icons/two-closed.svg %} Heading 2</h2> | <h2>{% include
+  icons/car.svg %} Heading 2 </h2> |
+
+  | <h3>{% include icons/three-closed.svg %} Heading 3 </h3>| <h3>{% include
+  icons/bank.svg %} Heading 3 </h3>|
+
+  | <h4>{% include icons/four-closed.svg %} Heading 4</h4> | <h4>{% include
+  icons/credit-card.svg %} Heading 4</h4>|
+
+  | <h5>{% include icons/five-closed.svg %} Heading 5</h5> | <h5>{% include
+  icons/mortgage.svg %} Heading 5</h5> |\ 
+
+  | <p>{% include icons/six-closed.svg %} Paragraph </p> |<p>{% include
+  icons/mortgage.svg %} Paragraph</p> |
+
+  {: class=\"icon-table\"}"
 eyebrow: Graphics
 title: Iconography
 status: Released
@@ -602,15 +555,15 @@ description: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  <h2 class="h3">Download the icon font</h2>
+  <h2 class="h3">Download web icons</h2>
 
 
-  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. _This should not be used for placing icons on a website._
+  The cfpb-icons component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
 
 
   <a class="a-link__icon"
-     href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
-      <span class="a-link_text">Download font</span>
+     href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons">
+      <span class="a-link_text">View on GitHub</span>
       {% include icons/download.svg %}
   </a>
 
@@ -621,79 +574,49 @@ description: >-
   <div class="content-50 content-first" markdown="1">
 
 
-  <h2 class="h3">Download vector files</h2>
+  <h2 class="h3">Download the icon font</h2>
 
 
-  Each of our icons is available for download in SVG form on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world.
+  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. The icon font should not be used for placing icons on a website.
 
 
   <a class="a-link__icon"
-     href="http://thenounproject.com/cfpb_minicons/">
-      <span class="a-link_text">View on Noun Project</span>
-      {% include icons/external-link.svg %}
+     href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
+      <span class="a-link_text">Download font</span>
+      {% include icons/download.svg %}
   </a>
 
 
   </div>
-use_cases: ''
+use_cases: ""
 behavior: >-
   ### SVG icon basics
 
 
-  The cfpb-icons component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
+  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the [icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section. We encourage using your templating system to inject the SVG icons files, as opposed to copying and pasting the raw SVG.
 
 
-  We subscribe to the guidance offered by Chris Coyier in his article, “[A Pretty Good SVG Icon System](https://css-tricks.com/pretty-good-svg-icon-system/)”, in which he concludes, “Just include the icons inline.”
-
-
-  Because including raw SVG code is not necessarily pretty or user-friendly, we encourage using your templating system to include them by reference.
-
-
-  > **Note:** Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.
-
-
-  The filenames of the SVGs included with cfpb-icons match the names in the icon library section.
+  Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: {% include 'icons/download.svg' %}.
 
 
   #### What the Less is doing
 
 
-  If you look in `cfpb-icons.less`, below the aforementioned sizing variable, you’ll see this simple rule:
-
-
-  ```
-
-  .cf-icon-svg {
-      height: @cf-icon-height;
-      vertical-align: text-top;
-      fill: currentColor;
-      …
-  }
-
-  ```
-
-
-  Referring back to the example above, you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.
+  If you look in [cfpb-icons.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.less)  you can see that we have encoded class="cf-icon-svg" in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element. 
 
 
   We start by limiting the size of the SVG to a proportion of the text height, using the `@cf-icon-height` variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set `vertical-align: text-top;`. Finally, setting `fill: currentColor;` tells the SVG to set its path’s fill `color` to match the color value of its parent element.
 
 
-  #### Caveats
-
-
-  There are two modifications based on restrictions in Internet Explorer 8 and 9 (IE8/IE9).
-
-
-  First, IE8 does not support `fill: currentColor`. Typically the fallback would be to use a PNG image, but due to the inability to know what the background or text color of its surroundings are, we found it better to fall back to the paired text with no icon.
-
-
-  Second, IE9 displays SVGs as full width by default (not the paths, just the SVG container). To eliminate this issue we’ve set the width of the SVGs to match the height. The whitespace to the left or right may not be quite accurate, but we determined this is an acceptable difference for a legacy browser like IE9.
-
-
   #### Inline SVG background
 
 
-  In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where `@name` is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black).
-related_items: ''
+  In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS background-image property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where @name is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black). 
+
+
+  ### Interaction details
+
+
+  Please reference the [Links](https://cfpb.github.io/design-system/components/links#links-with-icons) page for guidance regarding icons paired with links.
+related_items: ""
 ---

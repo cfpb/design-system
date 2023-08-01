@@ -500,9 +500,7 @@ guidelines: "### The artboard
   #### Icons with text
 
 
-  \r
-
-  | Heading level | Number |Object |\ 
+  \r| Heading level | Number |Object |\ 
 
   | -------- | ---------- | ---------- |
 
@@ -517,6 +515,9 @@ guidelines: "### The artboard
 
   Heading 5 | {% include icons/five-closed.svg %} | {% include
   icons/mortgage.svg %} |
+
+  Paragraph | {% include icons/one-closed.svg %} | {% include
+  icons/document.svg %} |
 
 
   {: class=\"icon-table\"}

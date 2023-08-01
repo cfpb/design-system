@@ -454,7 +454,7 @@ variation_groups:
           when placed inside a button to indicate loading or follows standards
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
-guidelines: >-
+guidelines: >
   ### The artboard
 
 
@@ -485,9 +485,9 @@ guidelines: >-
   Code example: 
 
 
-  * Heading color automatically applied to the icon: <h2>{icon} Heading Text</h2>
+  * Heading color automatically applied to the icon: ```<h2>{icon} Heading text</h2>```
 
-  * Heading color must be manually applied to the icon: <div>{icon}<h2>{icon} Heading Text</h2></div>
+  * Heading color must be manually applied to the icon: ```<div>{icon}<h2>{icon} Heading text</h2></div>```
 
 
   ### Scale
@@ -499,9 +499,9 @@ guidelines: >-
   Code example: 
 
 
-  * Icon is automatically scaled relative to the heading size: <h2>{icon} Heading Text</h2
+  * Icon is automatically scaled relative to the heading size: ```<h2>{icon} Heading text</h2```
 
-  * Icon must be manually scaled relative to the heading size: <div>{icon}<h2>{icon} Heading Text</h2></div>
+  * Icon must be manually scaled relative to the heading size: ```<div>{icon}<h2>{icon} Heading text</h2></div>```
 
 
   #### Icons with text
@@ -511,64 +511,17 @@ guidelines: >-
 
   | -------- | ---------- | ---------- |
 
-  | Heading 2 | <div class='block block__flush-top'><h2>{% include icons/two-closed.svg %} Heading 2</h2></div> | <div class='block block__flush-top'><h2>{% include icons/car.svg %} Heading 2</h2></div> |
-
-  | Heading 3 | <div class='block block__flush-top'><h2>{% include icons/three-closed.svg %} Heading 3</h3></div> | <div class='block block__flush-top'><h3>{% include icons/bank.svg %} Heading 3</h3></div> |
-
-  | Heading 4 | <div class='block block__flush-top'><h4>{% include icons/four-closed.svg %} Heading 4</h4></div> | <div class='block block__flush-top'><h4>{% include icons/credit-card.svg %} Heading 4</h4></div> |
-
-  | Heading 5 | <div class='block block__flush-top'><h2>{% include icons/two-closed.svg %} Heading 5</h5></div> | <div class='block block__flush-top'><h5>{% include icons/mortgage.svg %} Heading 5</h5></div> |
-
-  | Paragraph | <div class='block block__flush-top'><p>{% include icons/six-closed.svg %} Paragraph</p></div> | <div class='block block__flush-top'><p>{% include icons/mortgage.svg %} Paragraph</p></div> |
-
-
-  {: class="icon-table"}
-
-
-  | Heading level | Number | Object | 
-
-  | -------- | ---------- | ---------- |
-
   | Heading 2 | <h2>{% include icons/two-closed.svg %} Heading 2</h2> | <h2>{% include icons/car.svg %} Heading 2</h2> |
 
-  | Heading 3 | <h3>{% include icons/three-closed.svg %} Heading 3</h3>| <h3>{% include icons/bank.svg %} Heading 3</h3>|
+  | Heading 3 | <h3>{% include icons/three-closed.svg %} Heading 3</h3></div> | <h3>{% include icons/bank.svg %} Heading 3</h3></div> |
 
-  | Heading 4 | <h4>{% include icons/four-closed.svg %} Heading 4</h4> | <h4>{% include icons/credit-card.svg %} Heading 4</h4>|
+  | Heading 4 | <h4>{% include icons/four-closed.svg %} Heading 4</h4> | <h4>{% include icons/credit-card.svg %} Heading 4</h4></div> |
 
-  | Heading 5 | <h5>{% include icons/five-closed.svg %} Heading 5</h5> | <h5>{% include icons/mortgage.svg %} Heading 5</h5> |
+  | Heading 5 | <h5>{% include icons/two-closed.svg %} Heading 5</h5> | <h5>{% include icons/mortgage.svg %} Heading 5</h5> |
 
-  | Paragraph | <p>{% include icons/six-closed.svg %} Paragraph</p> | <p>{% include icons/mortgage.svg %} Paragraph</p> |
+  | Paragraph | <p>{% include icons/six-closed.svg %} Paragraph</p> | <p>{% include icons/mortgage.svg %} Paragraph</p></div> |
 
-
-  <br></br>
-
-
-  <div class='block block__flush-top'>
-        <h2>{% include icons/two-closed.svg %} Heading 2</h2>
-      </div>
-      <div class='block block__flush-top'>
-        <h3>{% include icons/three-closed.svg %} Heading 3</h3>
-      </div>
-      <div class='block block__flush-top'>
-        <h4>{% include icons/four-closed.svg %} Heading 4</h4>
-      </div>
-      <div class='block block__flush-top'>
-        <h5>{% include icons/five-closed.svg %} Heading 5</h5>
-      </div>
-      <div class='block block__flush-top'>
-        <p>{% include icons/approved.svg %} paragraph</p>
-      </div>
-      <div class='block block__flush-top'>
-        <div class="m-notification
-                  m-notification__visible
-                  m-notification__warning">
-          {% include icons/warning-round.svg %}
-            <div class="m-notification_content">
-                <div class="h4 m-notification_message">This is a sizing test</div>
-            </div>
-        </div>  
-      </div>
-    </section>
+  {: class="icon-table"}
 eyebrow: Graphics
 title: Iconography
 status: Released
@@ -620,7 +573,7 @@ behavior: >-
   ### SVG icon basics
 
 
-  The cfpb-icons component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
+  The [cfpb-icons component](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
 
 
   We subscribe to the guidance offered by Chris Coyier in his article, “[A Pretty Good SVG Icon System](https://css-tricks.com/pretty-good-svg-icon-system/)”, in which he concludes, “Just include the icons inline.”
@@ -644,7 +597,7 @@ behavior: >-
   ```
 
   .cf-icon-svg {
-      height: @cf-icon-height;
+      height: @cf-icon-height;  
       vertical-align: text-top;
       fill: currentColor;
       …

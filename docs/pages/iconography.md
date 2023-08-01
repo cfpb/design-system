@@ -573,7 +573,7 @@ behavior: >-
   ### SVG icon basics
 
 
-  The [cfpb-icons component](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
+  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
 
 
   We subscribe to the guidance offered by Chris Coyier in his article, “[A Pretty Good SVG Icon System](https://css-tricks.com/pretty-good-svg-icon-system/)”, in which he concludes, “Just include the icons inline.”

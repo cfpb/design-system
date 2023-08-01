@@ -500,7 +500,7 @@ guidelines: "### The artboard
   #### Icons with text
 
 
-  | Icon | Number (closed) | Number (open) |
+  | Icon  | Number (closed) | Number (open) |
 
   | -------- | ---------- | ---------- |
 

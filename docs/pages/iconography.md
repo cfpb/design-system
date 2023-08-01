@@ -505,8 +505,8 @@ guidelines: "### The artboard
   Icons should be scaled relative to the size of neighboring text. This
   setting is built into our code and happens automatically, provided that the
   icon is within the same parent element as the text. If the icon sits outside
-  of the text’s parent element scaling must be applied manually but the icon
-  should still be scaled relative to the size of the text.\ 
+  of the text’s parent element the scaling must be applied manually but the icon
+  should still be scaled relative to the size of the text.
 
 
   Code example:\ 
@@ -593,80 +593,25 @@ behavior: >-
   ### SVG icon basics
 
 
-  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
+  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons)provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the Icon library section. We encourage using your templating system to inject the SVG icons files, as opposed to copying and pasting the raw SVG.
 
 
-  We subscribe to the guidance offered by Chris Coyier in his article, “[A Pretty Good SVG Icon System](https://css-tricks.com/pretty-good-svg-icon-system/)”, in which he concludes, “Just include the icons inline.”
-
-
-  Because including raw SVG code is not necessarily pretty or user-friendly, we encourage using your templating system to include them by reference.
-
-
-  > **Note:** Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.
-
-
-  The filenames of the SVGs included with cfpb-icons match the names in the [Icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section.
+  Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: {% include 'icons/download.svg' %}.
 
 
   #### What the Less is doing
 
 
-  If you look in cfpb-icons.less you’ll see the following styles, intended to match the size and color of the icon to its parent element.
-
-
-  ```
-
-  // Icons' SVG viewbox are a consistent 19px (h) x variable (w).
-
-  // The height matches the 19px rendered canvas of text set in Avenir Next
-
-  // sized at 16px (19/16 = 1.1875).
-
-
-  @cf-icon-height: 1.1875em;
-
-
-  .cf-icon-svg {
-    height: @cf-icon-height;
-    vertical-align: text-top;
-    fill: currentcolor;
-   
-   // IE 10 & 11 require a max-width otherwise the SVG takes up 100%.
-    max-width: 1em;
-   
-    &__updating,
-    &__updating-round {
-      animation: updating-animation 1.25s infinite linear;
-      transform-origin: 50% 50%;
-    }
-  }
-
-
-  ```
-
-
-  Referring back to the example above, you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.
+  If you look in [cfpb-icons.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.less)  you can see that we have encoded class="cf-icon-svg" in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element. 
 
 
   We start by limiting the size of the SVG to a proportion of the text height, using the `@cf-icon-height` variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set `vertical-align: text-top;`. Finally, setting `fill: currentColor;` tells the SVG to set its path’s fill `color` to match the color value of its parent element.
 
 
-  #### Caveats
-
-
-  There are two modifications based on restrictions in Internet Explorer 8 and 9 (IE8/IE9).
-
-
-  First, IE8 does not support `fill: currentColor`. Typically the fallback would be to use a PNG image, but due to the inability to know what the background or text color of its surroundings are, we found it better to fall back to the paired text with no icon.
-
-
-  Second, IE9 displays SVGs as full width by default (not the paths, just the SVG container). To eliminate this issue we’ve set the width of the SVGs to match the height. The whitespace to the left or right may not be quite accurate, but we determined this is an acceptable difference for a legacy browser like IE9.
-
-
   #### Inline SVG background
 
 
-  In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS `background-image` property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where `@name` is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black).
+  In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS background-image property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where @name is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black). 
 
 
   ### Interaction details

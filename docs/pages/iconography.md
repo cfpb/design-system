@@ -26,8 +26,6 @@ variation_groups:
 
           - [Web application icons](#web-application-icons)
 
-          - [Animated icons](https://cfpb.github.io/design-system/foundation/iconography#animated-icon-1)
-
 
           The RTL (right-to-left) column designates whether an icon will flip on pages where the HTML element has its language set to an RTL-reading language, such as Arabic.
 

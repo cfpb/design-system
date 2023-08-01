@@ -500,21 +500,27 @@ guidelines: "### The artboard
   #### Icons with text
 
 
-  | Icon  | Number (closed) | Number (open) |
+  \r
+
+  | Heading level | Number |Object |\ 
 
   | -------- | ---------- | ---------- |
 
-  | {% include icons/car.svg %}| {% include icons/two-closed.svg %} | {%
-  include icons/two-open.svg %}\r|{% include icons/bank.svg %}|{% include
-  icons/three-closed.svg %} | {% include icons/three-open.svg %}\r|{% include
-  icons/credit-card.svg %}|{% include icons/three-closed.svg %} | {% include
-  icons/three-open.svg %}\r|{% include icons/mortgage.svg %}|{% include
-  icons/five-closed.svg %} | {% include icons/five-open.svg %}| |
+  | Heading 2 | {% include icons/two-closed.svg %} | {% include icons/car.svg
+  %} |
+
+  | Heading 3 | {% include icons/three-closed.svg %} | {% include
+  icons/bank.svg %} |
+
+  | Heading 4 | {% include icons/four-closed.svg %} | {% include
+  icons/credit-card.svg %} |
+
+  Heading 5 | {% include icons/five-closed.svg %} | {% include
+  icons/mortgage.svg %} |
 
 
-  {: class=\"icon-table\"}<section>\r
+  {: class=\"icon-table\"}
 
-  \  \ 
 
   <br></br>
 

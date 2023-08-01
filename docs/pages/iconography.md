@@ -525,19 +525,19 @@ guidelines: >-
   {: class="icon-table"}
 
 
-  | Heading level | Number |Object | 
+  | Heading level | Number | Object | 
 
   | -------- | ---------- | ---------- |
 
   | Heading 2 | <h2>{% include icons/two-closed.svg %} Heading 2</h2> | <h2>{% include icons/car.svg %} Heading 2</h2> |
 
-  | Heading 3 | <h3>{% include icons/three-closed.svg %} Heading 3</h3></div> | <h3>{% include icons/bank.svg %} Heading 3</h3></div> |
+  | Heading 3 | <h3>{% include icons/three-closed.svg %} Heading 3</h3>| <h3>{% include icons/bank.svg %} Heading 3</h3>|
 
-  | Heading 4 | <h4>{% include icons/four-closed.svg %} Heading 4</h4> | <h4>{% include icons/credit-card.svg %} Heading 4</h4></div> |
+  | Heading 4 | <h4>{% include icons/four-closed.svg %} Heading 4</h4> | <h4>{% include icons/credit-card.svg %} Heading 4</h4>|
 
-  | Heading 5 | <h5>{% include icons/two-closed.svg %} Heading 5</h5> | <h5>{% include icons/mortgage.svg %} Heading 5</h5> |
+  | Heading 5 | <h5>{% include icons/five-closed.svg %} Heading 5</h5> | <h5>{% include icons/mortgage.svg %} Heading 5</h5> |
 
-  | Paragraph | <p>{% include icons/six-closed.svg %} Paragraph</p> | <p>{% include icons/mortgage.svg %} Paragraph</p></div> |
+  | Paragraph | <p>{% include icons/six-closed.svg %} Paragraph</p> | <p>{% include icons/mortgage.svg %} Paragraph</p> |
 
 
   <br></br>

@@ -507,19 +507,19 @@ guidelines: >-
   #### Icons with text
 
 
-  | Heading level | Number                               | Object                              |
+  | Heading level | Number |Object | 
 
-  | ------------- | ------------------------------------ | ----------------------------------- |
+  | -------- | ---------- | ---------- |
 
-  | Heading 2     | {% include icons/two-closed.svg %}   | {% include icons/car.svg %}         |
+  | Heading 2 | <div class='block block__flush-top'><h2>{% include icons/two-closed.svg %} Heading 2</h2></div> | <div class='block block__flush-top'><h2>{% include icons/car.svg %} Heading 2</h2></div> |
 
-  | Heading 3     | {% include icons/three-closed.svg %} | {% include icons/bank.svg %}        |
+  | Heading 3 | <div class='block block__flush-top'><h2>{% include icons/three-closed.svg %} Heading 3</h3></div> | <div class='block block__flush-top'><h3>{% include icons/bank.svg %} Heading 3</h3></div> |
 
-  | Heading 4     | {% include icons/four-closed.svg %}  | {% include icons/credit-card.svg %} |
+  | Heading 4 | <div class='block block__flush-top'><h4>{% include icons/four-closed.svg %} Heading 4</h4></div> | <div class='block block__flush-top'><h4>{% include icons/credit-card.svg %} Heading 4</h4></div> |
 
-  | Heading 5     | {% include icons/five-closed.svg %}  | {% include icons/mortgage.svg %}    |
+  | Heading 5 | <div class='block block__flush-top'><h2>{% include icons/two-closed.svg %} Heading 5</h5></div> | <div class='block block__flush-top'><h5>{% include icons/mortgage.svg %} Heading 5</h5></div> |
 
-  | Paragraph     | {% include icons/one-closed.svg %}   | {% include icons/document.svg %}    |
+  | Paragraph | <div class='block block__flush-top'><p>{% include icons/six-closed.svg %} Paragraph</p></div> | <div class='block block__flush-top'><p>{% include icons/mortgage.svg %} Paragraph</p></div> |
 
 
   {: class="icon-table"}

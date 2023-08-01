@@ -29,6 +29,7 @@ variation_groups:
 
           The RTL (right-to-left) column designates whether an icon will flip on pages where the HTML element has its language set to an RTL-reading language, such as Arabic.
 
+
           ### Navigation icons
 
 

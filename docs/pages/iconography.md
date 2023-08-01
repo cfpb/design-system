@@ -535,6 +535,22 @@ description: >-
   <div class="content-50 content-first" markdown="1">
 
 
+  <h2 class="h3">Download web icons</h2>
+
+
+  The cfpb-icons  component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
+
+
+  <a class="a-link__icon"
+     href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons">
+      <span class="a-link_text">View on GitHub</span>
+      {% include icons/download.svg %}
+  </a>
+
+
+  <div class="content-50 content-first" markdown="1">
+
+
   <h2 class="h3">Download the icon font</h2>
 
 
@@ -546,28 +562,6 @@ description: >-
       <span class="a-link_text">Download font</span>
       {% include icons/download.svg %}
   </a>
-
-
-  </div>
-
-
-  <div class="content-50 content-first" markdown="1">
-
-
-  <h2 class="h3">Download vector files</h2>
-
-
-  Each of our icons is available for download in SVG form on The Noun Project, a platform that collects and catalogs icons that are created and uploaded by graphic designers from around the world.
-
-
-  <a class="a-link__icon"
-     href="http://thenounproject.com/cfpb_minicons/">
-      <span class="a-link_text">View on Noun Project</span>
-      {% include icons/external-link.svg %}
-  </a>
-
-
-  </div>
 use_cases: ""
 behavior: >-
   ### SVG icon basics

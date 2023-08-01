@@ -482,6 +482,13 @@ guidelines: "### The artboard
   icon](docs/images/uploads/icons_relative_sizing.png)
 
 
+  ### Color
+
+
+  The color of an icon should match the color of the text that it sits next
+  to. This setting is built into our code and happens automatically.
+
+
   ### Scale
 
 
@@ -490,9 +497,29 @@ guidelines: "### The artboard
   automatically. \ 
 
 
-  <section>\r
+  #### Icons with text
 
-  \    <div class='block block__flush-top'>\r
+
+  | Icon | Number (closed) | Number (open) |
+
+  | -------- | ---------- | ---------- |
+
+  | {% include icons/car.svg %}| {% include icons/two-closed.svg %} | {%
+  include icons/two-open.svg %}\r|{% include icons/bank.svg %}|{% include
+  icons/three-closed.svg %} | {% include icons/three-open.svg %}\r|{% include
+  icons/credit-card.svg %}|{% include icons/three-closed.svg %} | {% include
+  icons/three-open.svg %}\r|{% include icons/mortgage.svg %}|{% include
+  icons/five-closed.svg %} | {% include icons/five-open.svg %}| |
+
+
+  {: class=\"icon-table\"}<section>\r
+
+  \  \ 
+
+  <br></br>
+
+
+  <div class='block block__flush-top'>\r
 
   \      <h2>{% include icons/two-closed.svg %} Heading 2</h2>\r
 
@@ -545,12 +572,7 @@ guidelines: "### The artboard
 
   \  </section>
 
-
-  ### Color
-
-
-  The color of an icon should match the color of the text that it sits next
-  to. This setting is built into our code and happens automatically."
+  \n"
 eyebrow: Graphics
 title: Iconography
 status: Released

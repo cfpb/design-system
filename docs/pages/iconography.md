@@ -548,6 +548,9 @@ description: >-
   </a>
 
 
+  </div>
+
+
   <div class="content-50 content-first" markdown="1">
 
 
@@ -562,6 +565,9 @@ description: >-
       <span class="a-link_text">Download font</span>
       {% include icons/download.svg %}
   </a>
+
+
+  </div>
 use_cases: ""
 behavior: >-
   ### SVG icon basics

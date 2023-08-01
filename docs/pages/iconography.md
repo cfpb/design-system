@@ -454,132 +454,106 @@ variation_groups:
           when placed inside a button to indicate loading or follows standards
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
-guidelines: "### The artboard
+guidelines: >-
+  ### The artboard
 
 
-  Our icons were drawn based the footprint of Avenir Next (which includes full
-  height of the font plus white space). \ 
+  Our icons were drawn based the footprint of Avenir Next (which includes full height of the font plus white space). The standard icon height in ems matches the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 = 1.1875em).
 
 
-  ![Diagram of illustrator artboard icon
-  grid](docs/images/uploads/icon_artboard.png)
+  ![Diagram of illustrator artboard icon grid](docs/images/uploads/icon_artboard.png)
 
 
   ### Relative sizing
 
 
-  Although icons have a variety of heights and widths, it's important that
-  they appear relative in size to each other. This includes the overall size of
-  circled icons, and icons outside of circles.\ 
+  Although icons have a variety of heights and widths, it's important that they appear relative in size to each other. This includes the overall size of circled icons, and icons outside of circles. 
 
 
-  We created two sizing grids, a smaller one that fits within the standard
-  circle, and a larger grid for icons outside of the circle. That allows the
-  same icon inside and outside the circle to have a similar visual prominence.
+  We created two sizing grids, a smaller one that fits within the standard circle, and a larger grid for icons outside of the circle. That allows the same icon inside and outside the circle to have a similar visual prominence.
 
 
-  ![Diagram of illustrator artboard icon grid showing a circle icon and open
-  icon](docs/images/uploads/icons_relative_sizing.png)
+  ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](docs/images/uploads/icons_relative_sizing.png)
 
 
   ### Color
 
 
-  The color of an icon should match the color of the text that it sits next
-  to. This setting is built into our code and happens automatically.
+  The color of an icon should match the color of neighboring text. This setting is built into our code and happens automatically, provided that the icon is within the same parent element as the text. If the icon sits outside of the text’s parent element the color must be applied manually but should still match the color of the text. 
+
+
+  Code example: 
+
+
+  * Heading color automatically applied to the icon: <h2>{icon} Heading Text</h2>
+
+  * Heading color must be manually applied to the icon: <div>{icon}<h2>{icon} Heading Text</h2></div>
 
 
   ### Scale
 
 
-  Icons typically appear with text and icons are scaled in relation to the
-  text size. This relative sizing is built into our code and happens
-  automatically. \ 
+  Icons should be scaled relative to the size of neighboring text. Icons will be automatically sized to match adjacent text when they sit within the same HTML element as that text. Otherwise the icon must be manually scaled relative to the size of adjacent text.
+
+
+  Code example: 
+
+
+  * Icon is automatically scaled relative to the heading size: <h2>{icon} Heading Text</h2
+
+  * Icon must be manually scaled relative to the heading size: <div>{icon}<h2>{icon} Heading Text</h2></div>
 
 
   #### Icons with text
 
 
-  \r| Heading level | Number |Object |\ 
+  | Heading level | Number                               | Object                              |
 
-  | -------- | ---------- | ---------- |
+  | ------------- | ------------------------------------ | ----------------------------------- |
 
-  | Heading 2 | {% include icons/two-closed.svg %} | {% include icons/car.svg
-  %} |
+  | Heading 2     | {% include icons/two-closed.svg %}   | {% include icons/car.svg %}         |
 
-  | Heading 3 | {% include icons/three-closed.svg %} | {% include
-  icons/bank.svg %} |
+  | Heading 3     | {% include icons/three-closed.svg %} | {% include icons/bank.svg %}        |
 
-  | Heading 4 | {% include icons/four-closed.svg %} | {% include
-  icons/credit-card.svg %} |
+  | Heading 4     | {% include icons/four-closed.svg %}  | {% include icons/credit-card.svg %} |
 
-  Heading 5 | {% include icons/five-closed.svg %} | {% include
-  icons/mortgage.svg %} |
+  | Heading 5     | {% include icons/five-closed.svg %}  | {% include icons/mortgage.svg %}    |
 
-  Paragraph | {% include icons/one-closed.svg %} | {% include
-  icons/document.svg %} |
+  | Paragraph     | {% include icons/one-closed.svg %}   | {% include icons/document.svg %}    |
 
 
-  {: class=\"icon-table\"}
+  {: class="icon-table"}
 
 
   <br></br>
 
 
-  <div class='block block__flush-top'>\r
-
-  \      <h2>{% include icons/two-closed.svg %} Heading 2</h2>\r
-
-  \    </div>\r
-
-  \    <div class='block block__flush-top'>\r
-
-  \      <h3>{% include icons/three-closed.svg %} Heading 3</h3>\r
-
-  \    </div>\r
-
-  \    <div class='block block__flush-top'>\r
-
-  \      <h4>{% include icons/four-closed.svg %} Heading 4</h4>\r
-
-  \    </div>\r
-
-  \    <div class='block block__flush-top'>\r
-
-  \      <h5>{% include icons/five-closed.svg %} Heading 5</h5>\r
-
-  \    </div>\r
-
-  \    <div class='block block__flush-top'>\r
-
-  \      <p>{% include icons/approved.svg %} paragraph</p>\r
-
-  \    </div>\r
-
-  \    <div class='block block__flush-top'>\r
-
-  \      <div class=\"m-notification\r
-
-  \                m-notification__visible\r
-
-  \                m-notification__warning\">\r
-
-  \        {% include icons/warning-round.svg %}\r
-
-  \          <div class=\"m-notification_content\">\r
-
-  \              <div class=\"h4 m-notification_message\">This is a sizing
-  test</div>\r
-
-  \          </div>\r
-
-  \      </div>  \r
-
-  \    </div>\r
-
-  \  </section>
-
-  \n"
+  <div class='block block__flush-top'>
+        <h2>{% include icons/two-closed.svg %} Heading 2</h2>
+      </div>
+      <div class='block block__flush-top'>
+        <h3>{% include icons/three-closed.svg %} Heading 3</h3>
+      </div>
+      <div class='block block__flush-top'>
+        <h4>{% include icons/four-closed.svg %} Heading 4</h4>
+      </div>
+      <div class='block block__flush-top'>
+        <h5>{% include icons/five-closed.svg %} Heading 5</h5>
+      </div>
+      <div class='block block__flush-top'>
+        <p>{% include icons/approved.svg %} paragraph</p>
+      </div>
+      <div class='block block__flush-top'>
+        <div class="m-notification
+                  m-notification__visible
+                  m-notification__warning">
+          {% include icons/warning-round.svg %}
+            <div class="m-notification_content">
+                <div class="h4 m-notification_message">This is a sizing test</div>
+            </div>
+        </div>  
+      </div>
+    </section>
 eyebrow: Graphics
 title: Iconography
 status: Released

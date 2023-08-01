@@ -449,74 +449,99 @@ variation_groups:
           when placed inside a button to indicate loading or follows standards
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
-guidelines: >-
-  ### The artboard
+guidelines: "### The artboard
 
 
-  Our icons were drawn based the footprint of Avenir Next (which includes full height of the font plus white space). The standard icon height in ems matches the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 = 1.1875em).
+  Our icons were drawn based the footprint of Avenir Next (which includes full
+  height of the font plus white space). The standard icon height in ems matches
+  the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 =
+  1.1875em).  In the code this appears as @cf-icon-height: 1.1875em.\ 
 
 
-  ![Diagram of illustrator artboard icon grid](docs/images/uploads/icon_artboard.png)
+  ![Diagram of illustrator artboard icon
+  grid](docs/images/uploads/icon_artboard.png)
 
 
   ### Relative sizing
 
 
-  Although icons have a variety of heights and widths, it's important that they appear relative in size to each other. This includes the overall size of circular icons, and icons outside of circles. 
+  Although icons have a variety of heights and widths, it's important that
+  they appear relative in size to each other. This includes the overall size of
+  circular icons, and icons outside of circles. \r
 
 
-  We created two sizing grids, a smaller one that fits within the standard circle, and a larger grid for icons outside of the circle. That allows the same icon inside and outside the circle to have a similar visual prominence.
+  We created two sizing grids, a smaller one that fits within the standard
+  circle, and a larger grid for icons outside of the circle. That allows the
+  same icon inside and outside the circle to have a similar visual prominence.\r
 
 
-  ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](docs/images/uploads/icons_relative_sizing.png)
+  ![Diagram of illustrator artboard icon grid showing a circle icon and open
+  icon](docs/images/uploads/icons_relative_sizing.png)
 
 
   ### Color
 
 
-  The color of an icon should match the color of neighboring text. This setting is built into our code and happens automatically, provided that the icon is within the same parent element as the text. If the icon sits outside of the text’s parent element the color must be applied manually but should still match the color of the text. 
+  The color of an icon should match the color of neighboring text. This
+  setting is built into our code and happens automatically, provided that the
+  icon is within the same parent element as the text. If the icon sits outside
+  of the text’s parent element the color must be applied manually but should
+  still match the color of the text.
 
 
-  Code example: 
+  Code example:\ 
 
 
-  * Heading color automatically applied to the icon: ```<h2>{icon} Heading Text</h2>```
+  * Heading color automatically applied to the icon: ```<h2>{icon} Heading
+  Text</h2>```
 
-  * Heading color must be manually applied to the icon: ```<div>{icon}<h2>Heading text</h2></div>```
+  * Heading color must be manually applied to the icon:
+  ```<div>{icon}<h2>Heading text</h2></div>```
 
 
   ### Scale
 
 
-  Icons should be scaled relative to the size of neighboring text. This setting is built into our code and happens automatically, provided that the icon is within the same parent element as the text. If the icon sits outside of the text’s parent element scaling must be applied manually but the icon should still be scaled relative to the size of the text. 
+  Icons should be scaled relative to the size of neighboring text. This
+  setting is built into our code and happens automatically, provided that the
+  icon is within the same parent element as the text. If the icon sits outside
+  of the text’s parent element scaling must be applied manually but the icon
+  should still be scaled relative to the size of the text.\ 
 
 
-  Code example: 
+  Code example:\ 
 
 
-  * Icon is automatically scaled relative to the heading size: ```<h2>{icon} Heading Text</h2>```
+  * Icon is automatically scaled relative to the heading size: ```<h2>{icon}
+  Heading Text</h2>```
 
-  * Icon must be manually scaled relative to the heading size: ```<div>{icon}<h2>Heading text</h2></div>```
+  * Icon must be manually scaled relative to the heading size:
+  ```<div>{icon}<h2>Heading text</h2></div>```
 
 
   #### Icons with text
 
 
-  | Number | Object | 
+  | Number | Object |\ 
 
-  | -------- | ---------- | 
+  | -------- | ---------- |\ 
 
-  | <h2>{% include icons/two-closed.svg %} Heading 2</h2> | <h2>{% include icons/car.svg %} Heading 2 </h2> |
+  | <h2>{% include icons/two-closed.svg %} Heading 2</h2> | <h2>{% include
+  icons/car.svg %} Heading 2 </h2> |
 
-  | <h3>{% include icons/three-closed.svg %} Heading 3 </h3>| <h3>{% include icons/bank.svg %} Heading 3 </h3>|
+  | <h3>{% include icons/three-closed.svg %} Heading 3 </h3>| <h3>{% include
+  icons/bank.svg %} Heading 3 </h3>|
 
-  | <h4>{% include icons/four-closed.svg %} Heading 4</h4> | <h4>{% include icons/credit-card.svg %} Heading 4</h4>|
+  | <h4>{% include icons/four-closed.svg %} Heading 4</h4> | <h4>{% include
+  icons/credit-card.svg %} Heading 4</h4>|
 
-  | <h5>{% include icons/five-closed.svg %} Heading 5</h5> | <h5>{% include icons/mortgage.svg %} Heading 5</h5> | 
+  | <h5>{% include icons/five-closed.svg %} Heading 5</h5> | <h5>{% include
+  icons/mortgage.svg %} Heading 5</h5> |\ 
 
-  | <p>{% include icons/six-closed.svg %} Paragraph </p> |<p>{% include icons/mortgage.svg %} Paragraph</p> |
+  | <p>{% include icons/six-closed.svg %} Paragraph </p> |<p>{% include
+  icons/mortgage.svg %} Paragraph</p> |
 
-  {: class="icon-table"}
+  {: class=\"icon-table\"}"
 eyebrow: Graphics
 title: Iconography
 status: Released
@@ -533,7 +558,7 @@ description: >-
   <h2 class="h3">Download web icons</h2>
 
 
-  The cfpb-icons  component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
+  The cfpb-icons component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
 
 
   <a class="a-link__icon"

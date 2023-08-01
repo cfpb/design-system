@@ -621,12 +621,31 @@ behavior: >-
 
   ```
 
+  // Icons' SVG viewbox are a consistent 19px (h) x variable (w).
+
+  // The height matches the 19px rendered canvas of text set in Avenir Next
+
+  // sized at 16px (19/16 = 1.1875).
+
+
+  @cf-icon-height: 1.1875em;
+
+
   .cf-icon-svg {
-      height: @cf-icon-height;  
-      vertical-align: text-top;
-      fill: currentColor;
-      …
+    height: @cf-icon-height;
+    vertical-align: text-top;
+    fill: currentcolor;
+   
+   // IE 10 & 11 require a max-width otherwise the SVG takes up 100%.
+    max-width: 1em;
+   
+    &__updating,
+    &__updating-round {
+      animation: updating-animation 1.25s infinite linear;
+      transform-origin: 50% 50%;
+    }
   }
+
 
   ```
 

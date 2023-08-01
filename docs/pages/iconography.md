@@ -459,7 +459,7 @@ guidelines: "### The artboard
 
 
   ![Diagram of illustrator artboard icon
-  grid](design-system/images/uploads/icon_artboard.png)
+  grid](/design-system/images/uploads/icon_artboard.png)
 
 
   ### Relative sizing
@@ -476,7 +476,7 @@ guidelines: "### The artboard
 
 
   ![Diagram of illustrator artboard icon grid showing a circle icon and open
-  icon](design-system/images/uploads/icons_relative_sizing.png)
+  icon](/design-system/images/uploads/icons_relative_sizing.png)
 
 
   ### Color

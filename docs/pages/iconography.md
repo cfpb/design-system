@@ -506,10 +506,11 @@ guidelines: "### The artboard
   ### Scale
 
 
-  Icons should be scaled relative to the size of neighboring text. Icons will
-  be automatically sized to match neighboring text when they sit within the same
-  HTML element as that text. Otherwise, the icon must be manually scaled
-  relative to the size of neighboring text.
+  Icons should be scaled relative to the size of neighboring text. This
+  setting is built into our code and happens automatically, provided that the
+  icon is within the same parent element as the text. If the icon sits outside
+  of the text’s parent element scaling must be applied manually but the icon
+  should still be scaled relative to the size of the text.\ 
 
 
   Code example:\ 

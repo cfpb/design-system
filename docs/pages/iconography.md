@@ -497,10 +497,10 @@ guidelines: "### The artboard
 
 
   * Heading color automatically applied to the icon: ```<h2>{icon} Heading
-  text</h2>```
+  Text</h2>```
 
   * Heading color must be manually applied to the icon:
-  ```<div>{icon}<h2>{icon} Heading text</h2></div>```
+  ```<div>{icon}<h2>Heading text</h2></div>```
 
 
   ### Scale
@@ -517,10 +517,10 @@ guidelines: "### The artboard
 
 
   * Icon is automatically scaled relative to the heading size: ```<h2>{icon}
-  Heading text</h2```
+  Heading Text</h2>```
 
   * Icon must be manually scaled relative to the heading size:
-  ```<div>{icon}<h2>{icon} Heading text</h2></div>```
+  ```<div>{icon}<h2>Heading text</h2></div>```
 
 
   #### Icons with text
@@ -583,7 +583,7 @@ description: >-
   <h2 class="h3">Download the icon font</h2>
 
 
-  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. *This should not be used for placing icons on a website.*
+  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. The icon font should not be used for placing icons on a website.
 
 
   <a class="a-link__icon"
@@ -617,7 +617,7 @@ behavior: >-
   #### What the Less is doing
 
 
-  If you look in `cfpb-icons.less`, below the aforementioned sizing variable, you’ll see this simple rule:
+  If you look in cfpb-icons.less you’ll see the following styles, intended to match the size and color of the icon to its parent element.
 
 
   ```

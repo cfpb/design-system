@@ -511,6 +511,12 @@ guidelines: >-
   ![Diagram of illustrator artboard icon grid](/design-system/images/uploads/icon_artboard.png)
 
 
+  ### Relative sizing
+
+
+  When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. In developing the icons, we created two sizing grids, a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.
+
+
   ### Alignment
 
 
@@ -518,12 +524,6 @@ guidelines: >-
 
 
   The alignment of non-circle icons depends on the icon height in relation to the footprint of Avenir Next. For more horizontal icons, vertically centering the icon on the cap height of Avenir Next often leaves it floating. To solve this, we start the grid on the baseline for more horizontal icons. For more vertical icons that exceed the cap height of Avenir Next, we center the icon on the cap height. 
-
-
-  ### Relative sizing
-
-
-  When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. In developing the icons, we created two sizing grids, a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.
 
 
   ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](/design-system/images/uploads/icons_relative_sizing.png)

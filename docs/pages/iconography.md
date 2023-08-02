@@ -560,7 +560,7 @@ guidelines: >-
   #### Icons with text (web implementation)
 
 
-  <table class="icon-table">
+  <table class="o-table o-table__stack-on-small">
     <thead>
       <tr>
         <th>Circle icon</th>

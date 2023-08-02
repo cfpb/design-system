@@ -559,6 +559,8 @@ guidelines: >-
 
   #### Icons with text (web implementation)
 
+
+  <table class="icon-table">
     <thead>
       <tr>
         <th>Circle icon</th>

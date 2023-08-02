@@ -26,7 +26,7 @@ variation_groups:
 
           - [Web application icons](#web-application-icons)
 
-          - [Numerical icons](#web-application-icons)
+          - [Numerical icons](#numerical-icons)
 
 
           The RTL (right-to-left) column designates whether an icon will flip on pages where the HTML element has its language set to an RTL-reading language, such as Arabic.
@@ -559,8 +559,6 @@ guidelines: >-
 
   #### Icons with text (web implementation)
 
-
-  <table class="icon-table">
     <thead>
       <tr>
         <th>Circle icon</th>

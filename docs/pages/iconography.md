@@ -556,10 +556,10 @@ guidelines: >-
 
   * Icon must be manually scaled relative to the heading size: `<div>{icon}<h2>Heading text</h2></div>`
 
+      #### Icons with text (web implementation)
 
-  #### Icons with text (web implementation)
 
-
+      
   <table class="o-table o-table__stack-on-small">
     <thead>
       <tr>
@@ -570,35 +570,35 @@ guidelines: >-
     <tbody>
       <tr>
         <td>
-          <h2>{% include icons/car-round.svg %} Heading 2</h2>
+          <h2>{% include 'icons/car-round.svg' %} Heading 2</h2>
         </td>
         <td>
-          <h2>{% include icons/car.svg %} Heading 2</h2>
+          <h2>{% include 'icons/car.svg' %} Heading 2</h2>
         </td>
       </tr>
       <tr>
         <td>
-          <h3>{% include icons/bank-round.svg %} Heading 3</h3>
+          <h3>{% include 'icons/bank-round.svg' %} Heading 3</h3>
         </td>
-        <td><h3>{% include icons/bank.svg %} Heading 3</h3></td>
+        <td><h3>{% include 'icons/bank.svg' %} Heading 3</h3></td>
       </tr>
       <tr>
         <td>
-          <h4>{% include icons/credit-card-round.svg %} Heading 4</h4>
+          <h4>{% include icons/'credit-card-round.svg' %} Heading 4</h4>
         </td>
-        <td><h4>{% include icons/credit-card.svg %} Heading 4</h4></td>
+        <td><h4>{% include 'icons/credit-card.svg' %} Heading 4</h4></td>
       </tr>
       <tr>
         <td>
-          <h5>{% include icons/complaint-round.svg %} Heading 5</h5>
+          <h5>{% include 'icons/complaint-round.svg' %} Heading 5</h5>
         </td>
-        <td><h5>{% include icons/complaint.svg %} Heading 5</h5></td>
+        <td><h5>{% include 'icons/complaint.svg' %} Heading 5</h5></td>
       </tr>
       <tr>
         <td>
-          <p>{% include icons/edit-round.svg %} Paragraph</p>
+          <p>{% include 'icons/edit-round.svg' %} Paragraph</p>
         </td>
-        <td><p>{% include icons/edit.svg %} Paragraph</p></td>
+        <td><p>{% include 'icons/edit.svg' %} Paragraph</p></td>
       </tr>
     </tbody>
   </table>
@@ -653,7 +653,7 @@ behavior: >-
   ### SVG icon basics
 
 
-  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the [icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section. We encourage using your templating system to inject the SVG icons files, as opposed to copying and pasting the raw SVG.
+  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the [icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section. We encourage using your templating system to inject the SVG icon files, as opposed to copying and pasting the raw SVG.
 
 
   Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.

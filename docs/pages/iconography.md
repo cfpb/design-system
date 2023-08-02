@@ -653,16 +653,16 @@ behavior: >-
   ### SVG icon basics
 
 
-  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the [icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section. We encourage using your templating system to inject the SVG icons files, as opposed to copying and pasting the raw SVG.
+  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the [icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section. We encourage using your templating system to inject the SVG icons files, as opposed to copying and pasting the raw SVG.
 
 
-  Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: {% include 'icons/download.svg' %}.
+  Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.
 
 
   #### What the Less is doing
 
 
-  If you look in [cfpb-icons.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.less)  you can see that we have encoded class="cf-icon-svg" in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element. 
+  If you look in [cfpb-icons.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.less)  you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element. 
 
 
   We start by limiting the size of the SVG to a proportion of the text height, using the `@cf-icon-height` variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set `vertical-align: text-top;`. Finally, setting `fill: currentColor;` tells the SVG to set its path’s fill `color` to match the color value of its parent element.

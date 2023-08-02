@@ -1977,19 +1977,19 @@
                 </p>
 <h3 id="icon-artboard">Icon artboard</h3>
 
-<p>Icons were drawn based the footprint of Avenir Next (which includes the full height of the text plus white space). The standard icon height in ems matches the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 = 1.1875em). In the code this appears as @cf-icon-height: 1.1875em.</p>
+<p>Icons were drawn based the footprint of Avenir Next (which includes the full height of the text plus white space). The standard icon height in ems matches the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 = 1.1875em). In the code this appears as <code class="language-plaintext highlighter-rouge">@cf-icon-height: 1.1875em</code>.</p>
 
 <p><img src="/design-system/images/uploads/icon_artboard.png" alt="Diagram of illustrator artboard icon grid"></p>
+
+<h3 id="relative-sizing">Relative sizing</h3>
+
+<p>When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. In developing the icons, we created two sizing grids, a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.</p>
 
 <h3 id="alignment">Alignment</h3>
 
 <p>The overall position of a circle icon is centered on the cap height of Avenir Next. Within the circle, the icon is centered optically.</p>
 
 <p>The alignment of non-circle icons depends on the icon height in relation to the footprint of Avenir Next. For more horizontal icons, vertically centering the icon on the cap height of Avenir Next often leaves it floating. To solve this, we start the grid on the baseline for more horizontal icons. For more vertical icons that exceed the cap height of Avenir Next, we center the icon on the cap height.</p>
-
-<h3 id="relative-sizing">Relative sizing</h3>
-
-<p>When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. In developing the icons, we created two sizing grids, a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.</p>
 
 <p><img src="/design-system/images/uploads/icons_relative_sizing.png" alt="Diagram of illustrator artboard icon grid showing a circle icon and open icon"></p>
 
@@ -2021,7 +2021,7 @@
 
 <h4 id="icons-with-text-web-implementation">Icons with text (web implementation)</h4>
 
-<table class="icon-table">
+<table class="o-table o-table__stack-on-small">
   <thead>
     <tr>
       <th>Circle icon</th>
@@ -2031,43 +2031,35 @@
   <tbody>
     <tr>
       <td>
-        <h2>
-<svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__car-round" viewbox="0 0 17 19"><path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-3.948-1.455-.758-1.955a.816.816 0 0 0-.726-.498H6.054a.816.816 0 0 0-.727.498L4.57 8.128a1.43 1.43 0 0 0-1.052 1.375v2.046a.318.318 0 0 0 .317.317h.496v1.147a.238.238 0 0 0 .238.237h.892a.238.238 0 0 0 .237-.237v-1.147h5.644v1.147a.238.238 0 0 0 .237.237h.892a.238.238 0 0 0 .238-.237v-1.147h.496a.318.318 0 0 0 .317-.317V9.503a1.43 1.43 0 0 0-1.052-1.375zm-7.445.582a.792.792 0 1 0 .792.792.792.792 0 0 0-.792-.792zm5.96-2.402a.192.192 0 0 1 .137.094l.65 1.676H5.267l.65-1.676a.192.192 0 0 1 .136-.094h4.93zm1.04 2.402a.792.792 0 1 0 .792.792.792.792 0 0 0-.791-.792z"></path></svg> Heading 2</h2>
+        <h2>{% include icons/car-round.svg %} Heading 2</h2>
       </td>
       <td>
-        <h2>
-<svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__car" viewbox="0 0 16 19"><path d="M.947 9.928a2.027 2.027 0 0 1 1.347-1.891l1.094-2.824a1.307 1.307 0 0 1 1.164-.797h6.896a1.307 1.307 0 0 1 1.164.797l1.095 2.824a2.027 2.027 0 0 1 1.346 1.891v2.85a.476.476 0 0 1-.475.475h-.671v1.477a.476.476 0 0 1-.475.475h-.978a.476.476 0 0 1-.475-.475v-1.477H4.021v1.477a.476.476 0 0 1-.475.475h-.978a.476.476 0 0 1-.475-.475v-1.477h-.671a.476.476 0 0 1-.475-.475zm3.14.006a1.03 1.03 0 1 0-1.03 1.03 1.03 1.03 0 0 0 1.03-1.03zM3.53 7.911h8.938l-.89-2.297a.228.228 0 0 0-.132-.09H4.552a.228.228 0 0 0-.13.09zm10.441 2.023a1.03 1.03 0 1 0-1.029 1.03 1.03 1.03 0 0 0 1.03-1.03z"></path></svg> Heading 2</h2>
+        <h2>{% include icons/car.svg %} Heading 2</h2>
       </td>
     </tr>
     <tr>
       <td>
-        <h3>
-<svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__bank-round" viewbox="0 0 17 19"><path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-2.526 3.104a.318.318 0 0 0-.317-.316h-.372v-.384a.318.318 0 0 0-.316-.316h-.55V7.214h.866a.396.396 0 0 0 .158-.76L8.658 4.416a.396.396 0 0 0-.315 0L3.64 6.454a.396.396 0 0 0 .158.76h.865v4.457h-.549a.318.318 0 0 0-.316.316v.384h-.372a.318.318 0 0 0-.317.316v.383h10.782zM5.455 7.954h1.502v3.717H5.455zm5.839-1.532H5.706L8.5 5.212zM7.749 7.954h1.502v3.717H7.75zm2.294 0h1.502v3.717h-1.502z"></path></svg> Heading 3</h3>
+        <h3>{% include icons/bank-round.svg %} Heading 3</h3>
       </td>
-      <td><h3>
-<svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__bank" viewbox="0 0 16 19"><path d="M15.442 14.75v.491H.558v-.49a.476.476 0 0 1 .475-.476h.478a.487.487 0 0 1-.003-.048v-.443a.476.476 0 0 1 .475-.475h.713V7.164H1.508a.554.554 0 0 1-.22-1.063L7.78 3.288a.554.554 0 0 1 .44 0L14.712 6.1a.554.554 0 0 1-.22 1.063h-1.188v6.145h.713a.476.476 0 0 1 .475.475v.443a.443.443 0 0 1-.003.048h.478a.476.476 0 0 1 .475.475zM3.804 13.31h2.058V8.264H3.804zm.377-7.254h7.639L8 4.4zm2.79 2.21v5.043h2.058V8.265zm5.225 5.043V8.265h-2.059v5.044z"></path></svg> Heading 3</h3></td>
+      <td><h3>{% include icons/bank.svg %} Heading 3</h3></td>
     </tr>
     <tr>
       <td>
-        <h4>
-<svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__credit-card-round" viewbox="0 0 17 19"><path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM3.243 7.019v.72h10.572v-.72a.794.794 0 0 0-.791-.792H4.035a.794.794 0 0 0-.792.792zm10.572 5.127V8.53H3.243v3.615a.794.794 0 0 0 .792.791h8.989a.794.794 0 0 0 .791-.791zm-5.52-1.525H4.843v.792h3.452z"></path></svg> Heading 4</h4>
+        <h4>{% include icons/credit-card-round.svg %} Heading 4</h4>
       </td>
-      <td><h4>
-<svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__credit-card" viewbox="0 0 17 19"><path d="M15.982 7.895H1.076V6.867A1.112 1.112 0 0 1 2.184 5.76h12.69a1.112 1.112 0 0 1 1.108 1.108zM1.076 9.003h14.906v5.109a1.112 1.112 0 0 1-1.108 1.108H2.184a1.112 1.112 0 0 1-1.108-1.108zm2.24 4.064h4.868v-1.109H3.316z"></path></svg> Heading 4</h4></td>
+      <td><h4>{% include icons/credit-card.svg %} Heading 4</h4></td>
     </tr>
     <tr>
       <td>
-        <h5>
-<svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__complaint-round" viewbox="0 0 17 19"><path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM13.18 6.811a.794.794 0 0 0-.791-.792H4.654a.794.794 0 0 0-.791.792v5.187a.794.794 0 0 0 .791.791h2.93L8.338 14a.182.182 0 0 0 .335 0l.755-1.21h2.96a.794.794 0 0 0 .791-.792zM9.025 11.1a.503.503 0 1 1-.503-.503.503.503 0 0 1 .503.503zm-.9-1.278V7.515a.396.396 0 0 1 .793 0v2.307a.396.396 0 1 1-.792 0z"></path></svg> Heading 5</h5>
+        <h5>{% include icons/complaint-round.svg %} Heading 5</h5>
       </td>
-      <td><h5>
-<svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__complaint" viewbox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108H8.75l-1.02 1.635a.273.273 0 0 1-.503 0l-1.02-1.635h-4.13a1.112 1.112 0 0 1-1.109-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zM8.206 11.34a.706.706 0 1 0-.706.705.706.706 0 0 0 .706-.705zm-1.26-1.83a.554.554 0 1 0 1.108 0V6.275a.554.554 0 1 0-1.108 0z"></path></svg> Heading 5</h5></td>
+      <td><h5>{% include icons/complaint.svg %} Heading 5</h5></td>
     </tr>
     <tr>
       <td>
-        <p><svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__edit-round" viewbox="0 0 17 19"><path d="M16.417 9.579A7.917 7.917 0 1 1 8.5 1.662a7.917 7.917 0 0 1 7.917 7.917zM4.63 8.182l2.45-2.449-.966-.966a.794.794 0 0 0-1.12 0l-1.329 1.33a.794.794 0 0 0 0 1.12zm8.23 5.961c.13 0 .206-.1.173-.247l-.573-2.542a1.289 1.289 0 0 0-.292-.532l-4.53-4.53-.634.636 4.529 4.529.252-.252a.793.793 0 0 1 .147.268l.253 1.124-.69.69-1.125-.252a.799.799 0 0 1-.268-.148l.871-.87-4.53-4.53L5.19 8.742l4.53 4.528a1.294 1.294 0 0 0 .533.293l2.542.573a.3.3 0 0 0 .066.008z"></path></svg> Paragraph</p>
+        <p>{% include icons/edit-round.svg %} Paragraph</p>
       </td>
-      <td><p><svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__edit" viewbox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.111 1.111 0 0 1 0-1.567l1.8-1.8a1.112 1.112 0 0 1 1.568 0zm7.926 11.565a.456.456 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.294 1.294 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.278 1.278 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a1.962 1.962 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg> Paragraph</p></td>
+      <td><p>{% include icons/edit.svg %} Paragraph</p></td>
     </tr>
   </tbody>
 </table>
@@ -2082,13 +2074,13 @@
                 </p>
 <h3 id="svg-icon-basics">SVG icon basics</h3>
 
-<p>The <a href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons">cfpb-icons</a> provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the <a href="https://cfpb.github.io/design-system/foundation/iconography#icon-library-1">icon library</a> section. We encourage using your templating system to inject the SVG icons files, as opposed to copying and pasting the raw SVG.</p>
+<p>The <a href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons">cfpb-icons</a> component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the <a href="https://cfpb.github.io/design-system/foundation/iconography#icon-library-1">icon library</a> section. We encourage using your templating system to inject the SVG icons files, as opposed to copying and pasting the raw SVG.</p>
 
-<p>Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: {% include ‘icons/download.svg’ %}.</p>
+<p>Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: <code class="language-plaintext highlighter-rouge">{% include 'icons/download.svg' %}</code>.</p>
 
 <h4 id="what-the-less-is-doing">What the Less is doing</h4>
 
-<p>If you look in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.less">cfpb-icons.less</a>  you can see that we have encoded class=”cf-icon-svg” in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.</p>
+<p>If you look in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.less">cfpb-icons.less</a>  you can see that we have encoded <code class="language-plaintext highlighter-rouge">class="cf-icon-svg"</code> in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.</p>
 
 <p>We start by limiting the size of the SVG to a proportion of the text height, using the <code class="language-plaintext highlighter-rouge">@cf-icon-height</code> variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set <code class="language-plaintext highlighter-rouge">vertical-align: text-top;</code>. Finally, setting <code class="language-plaintext highlighter-rouge">fill: currentColor;</code> tells the SVG to set its path’s fill <code class="language-plaintext highlighter-rouge">color</code> to match the color value of its parent element.</p>
 
@@ -2167,8 +2159,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/iconography.md">
-                    <time datetime="2023-08-02 10:23:46 -0400">
-                        10:23:46 AM Aug 02, 2023
+                    <time datetime="2023-08-02 10:58:53 -0400">
+                        10:58:53 AM Aug 02, 2023
                     </time>
                 </a>
             </small>

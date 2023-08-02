@@ -558,6 +558,7 @@ guidelines: >-
 
       #### Icons with text (web implementation)
 
+
       
   <table class="o-table o-table__stack-on-small">
     <thead>
@@ -652,7 +653,7 @@ behavior: >-
   ### SVG icon basics
 
 
-  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the [icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section. We encourage using your templating system to inject the SVG icons files, as opposed to copying and pasting the raw SVG.
+  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the [icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section. We encourage using your templating system to inject the SVG icon files, as opposed to copying and pasting the raw SVG.
 
 
   Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.

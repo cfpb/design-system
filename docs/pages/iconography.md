@@ -556,10 +556,9 @@ guidelines: >-
 
   * Icon must be manually scaled relative to the heading size: `<div>{icon}<h2>Heading text</h2></div>`
 
+      #### Icons with text (web implementation)
 
-  #### Icons with text (web implementation)
-
-
+      
   <table class="o-table o-table__stack-on-small">
     <thead>
       <tr>
@@ -570,35 +569,35 @@ guidelines: >-
     <tbody>
       <tr>
         <td>
-          <h2>{% include icons/car-round.svg %} Heading 2</h2>
+          <h2>{% include 'icons/car-round.svg' %} Heading 2</h2>
         </td>
         <td>
-          <h2>{% include icons/car.svg %} Heading 2</h2>
+          <h2>{% include 'icons/car.svg' %} Heading 2</h2>
         </td>
       </tr>
       <tr>
         <td>
-          <h3>{% include icons/bank-round.svg %} Heading 3</h3>
+          <h3>{% include 'icons/bank-round.svg' %} Heading 3</h3>
         </td>
-        <td><h3>{% include icons/bank.svg %} Heading 3</h3></td>
+        <td><h3>{% include 'icons/bank.svg' %} Heading 3</h3></td>
       </tr>
       <tr>
         <td>
-          <h4>{% include icons/credit-card-round.svg %} Heading 4</h4>
+          <h4>{% include icons/'credit-card-round.svg' %} Heading 4</h4>
         </td>
-        <td><h4>{% include icons/credit-card.svg %} Heading 4</h4></td>
+        <td><h4>{% include 'icons/credit-card.svg' %} Heading 4</h4></td>
       </tr>
       <tr>
         <td>
-          <h5>{% include icons/complaint-round.svg %} Heading 5</h5>
+          <h5>{% include 'icons/complaint-round.svg' %} Heading 5</h5>
         </td>
-        <td><h5>{% include icons/complaint.svg %} Heading 5</h5></td>
+        <td><h5>{% include 'icons/complaint.svg' %} Heading 5</h5></td>
       </tr>
       <tr>
         <td>
-          <p>{% include icons/edit-round.svg %} Paragraph</p>
+          <p>{% include 'icons/edit-round.svg' %} Paragraph</p>
         </td>
-        <td><p>{% include icons/edit.svg %} Paragraph</p></td>
+        <td><p>{% include 'icons/edit.svg' %} Paragraph</p></td>
       </tr>
     </tbody>
   </table>

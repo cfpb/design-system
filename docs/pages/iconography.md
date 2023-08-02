@@ -505,7 +505,7 @@ guidelines: >-
   ### Icon artboard
 
 
-  Icons were drawn based the footprint of Avenir Next (which includes the full height of the text plus white space). The standard icon height in ems matches the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 = 1.1875em). In the code this appears as @cf-icon-height: 1.1875em.
+  Icons were drawn based the footprint of Avenir Next (which includes the full height of the text plus white space). The standard icon height in ems matches the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 = 1.1875em). In the code this appears as `@cf-icon-height: 1.1875em`.
 
 
   ![Diagram of illustrator artboard icon grid](/design-system/images/uploads/icon_artboard.png)

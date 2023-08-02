@@ -26,6 +26,8 @@ variation_groups:
 
           - [Web application icons](#web-application-icons)
 
+          - [Numerical icons](#web-application-icons)
+
 
           The RTL (right-to-left) column designates whether an icon will flip on pages where the HTML element has its language set to an RTL-reading language, such as Arabic.
 
@@ -428,6 +430,36 @@ variation_groups:
           | {% include icons/wifi.svg %} | {% include icons/wifi-round.svg %} | wifi | wi-fi, wireless, signal | |
 
           {: class="icon-table"}
+
+
+          ### Numerical icons
+
+
+          | icon | icon-round | canonical name | aliases (for searchability only) | RTL? |
+
+          | ---- | ---------- | -------------- | ------- | ------ |
+
+          | {% include icons/zero-open.svg %} |  | zero-open |  |  |
+
+          | {% include icons/one-open %} |  | one-open |  |  |
+
+          | {% include icons/two-open %} |  | two-open |  |  |
+
+          | {% include icons/three-open %} |  | three-open |  |  |
+
+          | {% include icons/four-open %} |  | four-open |  |  |
+
+          | {% include icons/five-open %} |  | five-open |  |  |
+
+          | {% include icons/six-open %} |  | six-open |  |  |
+
+          | {% include icons/seven-open %} |  | seven-open |  |  |
+
+          | {% include icons/eight-open %} |  | eight-open |  |  |
+
+          | {% include icons/nine-open %} |  | nine-open |  |  |
+
+          {: class="icon-table"}
         variation_name: ""
         variation_implementation: Each icon has a circled variant shown in the second
           column (or square, in the case of the social media icons) that can be
@@ -452,31 +484,56 @@ variation_groups:
 guidelines: "### The artboard
 
 
-  Our icons were drawn based the footprint of Avenir Next (which includes full
-  height of the font plus white space). The standard icon height in ems matches
-  the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 =
-  1.1875em).  In the code this appears as @cf-icon-height: 1.1875em.\ 
+  Icons were drawn based the footprint of Avenir Next (which includes
+  the  full height of the text plus white space). The standard icon height in
+  ems matches the 19px rendered canvas of text set in Avenir Next sized at 16px
+  (19/16 = 1.1875em).  In the code this appears as @cf-icon-height: 1.1875em.
 
 
   ![Diagram of illustrator artboard icon
-  grid](/design-system/images/uploads/icon_artboard.png)
+  grid](docs/images/uploads/icon_artboard.png)
+
+
+  ### Alignment\r
+
+  The overall position of a circle icon is centered on the cap height of
+  Avenir Next. Within the circle, the icon is centered optically.\r
+
+
+  The alignment of non-circle icons depends on the icon height in relation to
+  Avenir Next. For more horizontal icons, vertically centering the icon on the
+  cap height of Avenir Next often leaves it floating. To solve this, we start
+  the grid on the baseline for more horizontal icons. For more vertical icons
+  that exceed the cap height of Avenir Next, we center the icon on the cap
+  height. \r
+
+  \r
+
+  \r
 
 
   ### Relative sizing
 
 
-  Although icons have a variety of heights and widths, it's important that
-  they appear relative in size to each other. This includes the overall size of
-  circular icons, and icons outside of circles. \r
+  When typing or placing an icon next to Avenir Next in print or web, all
+  icons should have a similar size. In developing the icons we created two
+  sizing grids, a smaller one that fits within the standard circle, and a larger
+  one for non-circle icons. This allows icons to have a similar visual
+  prominence, whether inside or outside of the circle.\r
 
+  \r\r
 
-  We created two sizing grids, a smaller one that fits within the standard
-  circle, and a larger grid for icons outside of the circle. That allows the
-  same icon inside and outside the circle to have a similar visual prominence.\r
+  \r
+
+  \r\r
+
+  \r
+
+  \r\r
 
 
   ![Diagram of illustrator artboard icon grid showing a circle icon and open
-  icon](/design-system/images/uploads/icons_relative_sizing.png)
+  icon](docs/images/uploads/icons_relative_sizing.png)
 
 
   ### Color
@@ -492,11 +549,11 @@ guidelines: "### The artboard
   Code example:\ 
 
 
-  * Heading color automatically applied to the icon: ```<h2>{icon} Heading
-  Text</h2>```
+  * Heading color automatically applied to the icon: `<h2>{icon} Heading
+  text</h2>`
 
   * Heading color must be manually applied to the icon:
-  ```<div>{icon}<h2>Heading text</h2></div>```
+  `<div>{icon}<h2>Heading text</h2></div>`
 
 
   ### Scale
@@ -512,34 +569,37 @@ guidelines: "### The artboard
   Code example:\ 
 
 
-  * Icon is automatically scaled relative to the heading size: ```<h2>{icon}
-  Heading Text</h2>```
+  * Icon is automatically scaled relative to the heading size: `<h2>{icon}
+  Heading text</h2>`
 
   * Icon must be manually scaled relative to the heading size:
-  ```<div>{icon}<h2>Heading text</h2></div>```
+  `<div>{icon}<h2>Heading text</h2></div>`
 
 
   #### Icons with text
 
 
-  | Number | Object |\ 
+  | Number                                                   |
+  Object                                                 |
 
-  | -------- | ---------- |\ 
+  | -------------------------------------------------------- |
+  ------------------------------------------------------ |
 
-  | <h2>{% include icons/two-closed.svg %} Heading 2</h2> | <h2>{% include
-  icons/car.svg %} Heading 2 </h2> |
+  | <h2>{% include icons/two-closed.svg %} Heading 2</h2>    | <h2>{% include
+  icons/car.svg %} Heading 2 </h2>        |
 
-  | <h3>{% include icons/three-closed.svg %} Heading 3 </h3>| <h3>{% include
-  icons/bank.svg %} Heading 3 </h3>|
+  | <h3>{% include icons/three-closed.svg %} Heading 3 </h3> | <h3>{% include
+  icons/bank.svg %} Heading 3 </h3>       |
 
-  | <h4>{% include icons/four-closed.svg %} Heading 4</h4> | <h4>{% include
-  icons/credit-card.svg %} Heading 4</h4>|
+  | <h4>{% include icons/four-closed.svg %} Heading 4</h4>   | <h4>{% include
+  icons/credit-card.svg %} Heading 4</h4> |
 
-  | <h5>{% include icons/five-closed.svg %} Heading 5</h5> | <h5>{% include
-  icons/mortgage.svg %} Heading 5</h5> |\ 
+  | <h5>{% include icons/five-closed.svg %} Heading 5</h5>   | <h5>{% include
+  icons/mortgage.svg %} Heading 5</h5>    |
 
-  | <p>{% include icons/six-closed.svg %} Paragraph </p> |<p>{% include
-  icons/mortgage.svg %} Paragraph</p> |
+  | <p>{% include icons/six-closed.svg %} Paragraph </p>     | <p>{% include
+  icons/mortgage.svg %} Paragraph</p>      |
+
 
   {: class=\"icon-table\"}"
 eyebrow: Graphics

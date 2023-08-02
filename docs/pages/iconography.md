@@ -497,13 +497,17 @@ guidelines: "### The artboard
   ### Alignment\r
 
   The overall position of a circle icon is centered on the cap height of
-  Avenir Next. Inside of the circle, icons are centered optically.\r
+  Avenir Next. Within the circle, the icon is centered optically.\r
 
 
-  Outside of the circle, centering the icon often leaves it floating next to
-  Avenir. To solve that, we started the grid on the baseline for more horizontal
-  icons. Once an icon becomes taller than the cap height of Avenir, then it
-  becomes centered on the cap height.\r
+  The alignment of icons outside of circles depends on the icon height in
+  relation to Avenir Next. For more horizontal icons, vertically centering the
+  icon on the cap height of Avenir Next often leaves it floating next to Avenir
+  Next. To solve this, we start the grid on the baseline for more horizontal
+  icons. For more vertical icons that exceed the cap height of Avenir Next, we
+  center the icon on the cap height. \r
+
+  \r
 
   \r
 
@@ -511,11 +515,15 @@ guidelines: "### The artboard
   ### Relative sizing
 
 
-  When typing or placing an icon next to Avenir in print or web, all icons
-  should have a similar size. We created two sizing grids, a smaller one that
-  fits within the standard circle, and a larger one for icons outside of the
-  circle. This allows icons to have a similar visual prominence, whether inside
-  or outside of the circle.\r
+  When typing or placing an icon next to Avenir Next in print or web, all
+  icons should have a similar size. In developing the icons we created two
+  sizing grids, a smaller one that fits within the standard circle, and a larger
+  one for icons outside of the circle. This allows icons to have a similar
+  visual prominence, whether inside or outside of the circle.\r
+
+  \r\r
+
+  \r
 
   \r\r
 

@@ -481,127 +481,81 @@ variation_groups:
           when placed inside a button to indicate loading or follows standards
           of a form-level alert within a
           [notification](https://cfpb.github.io/design-system/components/notifications).
-guidelines: "### The artboard
+guidelines: >-
+  ### The artboard
 
 
-  Icons were drawn based the footprint of Avenir Next (which includes
-  the  full height of the text plus white space). The standard icon height in
-  ems matches the 19px rendered canvas of text set in Avenir Next sized at 16px
-  (19/16 = 1.1875em).  In the code this appears as @cf-icon-height: 1.1875em.
+  Icons were drawn based the footprint of Avenir Next (which includes the  full height of the text plus white space). The standard icon height in ems matches the 19px rendered canvas of text set in Avenir Next sized at 16px (19/16 = 1.1875em).  In the code this appears as @cf-icon-height: 1.1875em.
 
 
-  ![Diagram of illustrator artboard icon
-  grid](docs/images/uploads/icon_artboard.png)
+  ![Diagram of illustrator artboard icon grid](/design-system/images/uploads/icon_artboard.png)
 
 
-  ### Alignment\r
-
-  The overall position of a circle icon is centered on the cap height of
-  Avenir Next. Within the circle, the icon is centered optically.\r
+  ### Alignment
 
 
-  The alignment of non-circle icons depends on the icon height in relation to
-  Avenir Next. For more horizontal icons, vertically centering the icon on the
-  cap height of Avenir Next often leaves it floating. To solve this, we start
-  the grid on the baseline for more horizontal icons. For more vertical icons
-  that exceed the cap height of Avenir Next, we center the icon on the cap
-  height. \r
+  The overall position of a circle icon is centered on the cap height of Avenir Next. Within the circle, the icon is centered optically.
 
-  \r
 
-  \r
+  The alignment of non-circle icons depends on the icon height in relation to Avenir Next. For more horizontal icons, vertically centering the icon on the cap height of Avenir Next often leaves it floating. To solve this, we start the grid on the baseline for more horizontal icons. For more vertical icons that exceed the cap height of Avenir Next, we center the icon on the cap height. 
 
 
   ### Relative sizing
 
 
-  When typing or placing an icon next to Avenir Next in print or web, all
-  icons should have a similar size. In developing the icons we created two
-  sizing grids, a smaller one that fits within the standard circle, and a larger
-  one for non-circle icons. This allows icons to have a similar visual
-  prominence, whether inside or outside of the circle.\r
-
-  \r\r
-
-  \r
-
-  \r\r
-
-  \r
-
-  \r\r
+  When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. In developing the icons we created two sizing grids, a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.
 
 
-  ![Diagram of illustrator artboard icon grid showing a circle icon and open
-  icon](docs/images/uploads/icons_relative_sizing.png)
+  ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](/design-system/images/uploads/icons_relative_sizing.png)
 
 
   ### Color
 
 
-  The color of an icon should match the color of neighboring text. This
-  setting is built into our code and happens automatically, provided that the
-  icon is within the same parent element as the text. If the icon sits outside
-  of the text’s parent element the color must be applied manually but should
-  still match the color of the text.
+  The color of an icon should match the color of neighboring text. This setting is built into our code and happens automatically, provided that the icon is within the same parent element as the text. If the icon sits outside of the text’s parent element the color must be applied manually but should still match the color of the text.
 
 
-  Code example:\ 
+  Code example: 
 
 
-  * Heading color automatically applied to the icon: `<h2>{icon} Heading
-  text</h2>`
+  * Heading color automatically applied to the icon: `<h2>{icon} Heading text</h2>`
 
-  * Heading color must be manually applied to the icon:
-  `<div>{icon}<h2>Heading text</h2></div>`
+  * Heading color must be manually applied to the icon: `<div>{icon}<h2>Heading text</h2></div>`
 
 
   ### Scale
 
 
-  Icons should be scaled relative to the size of neighboring text. This
-  setting is built into our code and happens automatically, provided that the
-  icon is within the same parent element as the text. If the icon sits outside
-  of the text’s parent element the scaling must be applied manually but the icon
-  should still be scaled relative to the size of the text.
+  Icons should be scaled relative to the size of neighboring text. This setting is built into our code and happens automatically, provided that the icon is within the same parent element as the text. If the icon sits outside of the text’s parent element the scaling must be applied manually but the icon should still be scaled relative to the size of the text.
 
 
-  Code example:\ 
+  Code example: 
 
 
-  * Icon is automatically scaled relative to the heading size: `<h2>{icon}
-  Heading text</h2>`
+  * Icon is automatically scaled relative to the heading size: `<h2>{icon} Heading text</h2>`
 
-  * Icon must be manually scaled relative to the heading size:
-  `<div>{icon}<h2>Heading text</h2></div>`
+  * Icon must be manually scaled relative to the heading size: `<div>{icon}<h2>Heading text</h2></div>`
 
 
   #### Icons with text
 
 
-  | Number                                                   |
-  Object                                                 |
+  | Number                                                   | Object                                                 |
 
-  | -------------------------------------------------------- |
-  ------------------------------------------------------ |
+  | -------------------------------------------------------- | ------------------------------------------------------ |
 
-  | <h2>{% include icons/two-closed.svg %} Heading 2</h2>    | <h2>{% include
-  icons/car.svg %} Heading 2 </h2>        |
+  | <h2>{% include icons/two-closed.svg %} Heading 2</h2>    | <h2>{% include icons/car.svg %} Heading 2 </h2>        |
 
-  | <h3>{% include icons/three-closed.svg %} Heading 3 </h3> | <h3>{% include
-  icons/bank.svg %} Heading 3 </h3>       |
+  | <h3>{% include icons/three-closed.svg %} Heading 3 </h3> | <h3>{% include icons/bank.svg %} Heading 3 </h3>       |
 
-  | <h4>{% include icons/four-closed.svg %} Heading 4</h4>   | <h4>{% include
-  icons/credit-card.svg %} Heading 4</h4> |
+  | <h4>{% include icons/four-closed.svg %} Heading 4</h4>   | <h4>{% include icons/credit-card.svg %} Heading 4</h4> |
 
-  | <h5>{% include icons/five-closed.svg %} Heading 5</h5>   | <h5>{% include
-  icons/mortgage.svg %} Heading 5</h5>    |
+  | <h5>{% include icons/five-closed.svg %} Heading 5</h5>   | <h5>{% include icons/mortgage.svg %} Heading 5</h5>    |
 
-  | <p>{% include icons/six-closed.svg %} Paragraph </p>     | <p>{% include
-  icons/mortgage.svg %} Paragraph</p>      |
+  | <p>{% include icons/six-closed.svg %} Paragraph </p>     | <p>{% include icons/mortgage.svg %} Paragraph</p>      |
 
 
-  {: class=\"icon-table\"}"
+  {: class="icon-table"}
 eyebrow: Graphics
 title: Iconography
 status: Released

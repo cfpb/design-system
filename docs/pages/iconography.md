@@ -524,26 +524,40 @@ variation_groups:
     variations:
       - variation_is_deprecated: false
         variation_code_snippet: ""
-        variation_description: |-
-          <div class="content-50 content-first" markdown="1">
+        variation_description: "<div class=\"content-50 content-first\"
+          markdown=\"1\">\r
 
-          <h2>{% include icons/car-round.svg %} Heading 2</h2>
-          <h3>{% include icons/bank-round.svg %} Heading 3</h3>
-          <h4>{% include icons/credit-card-round.svg %} Heading 4</h4>
-          <h5>{% include icons/complaint-round.svg %} Heading 5</h5>
-          <p>{% include icons/edit-round.svg %} Paragraph</p>
+          <h2>{% include icons/car-round.svg %} Auto loans</h2>\r
 
-          </div>
+          <h3>{% include icons/bank-round.svg %} Bank accounts</h3>\r
 
-          <div class="content-50 content-first" markdown="1">
+          <h4>{% include icons/credit-card-round.svg %} Credit
+          cards</h4>\r
 
-          <h2>{% include icons/car.svg %} Heading 2</h2>
-          <h3>{% include icons/bank.svg %} Heading 3</h3>
-          <h4>{% include icons/credit-card.svg %} Heading 4</h4>
-          <h5>{% include icons/complaint.svg %} Heading 5</h5>
-          <p>{% include icons/edit.svg %} Paragraph</p>
+          <h5>{% include icons/complaint-round.svg %} Submit a
+          complaint</h5>\r
 
-          </div>
+          <p>{% include icons/college-round.svg %} Student loans</p>\r
+
+          </div>\r
+
+          <div class=\"content-50 content-first\" markdown=\"1\">\r
+
+          <h2>{% include icons/car.svg %} Auto loans </h2>\r
+
+          <h3>{% include icons/bank.svg %} Bank accounts </h3>\r
+
+          <h4>{% include icons/credit-card.svg %} Credit cards </h4>\r
+
+          <h5>{% include icons/complaint.svg %} Submit a complaint
+          </h5>\r
+
+          <p>{% include icons/college.svg %} Student loans </p>\r
+
+          </div>\r\n"
+    variation_group_description: To help overcome the ambiguity that almost all
+      icons face, a text label must be present alongside an icon to clarify its
+      contextual meaning.
 guidelines: >-
   ### Icon artboard
 
@@ -598,53 +612,10 @@ guidelines: >-
   * Icon is automatically scaled relative to the heading size: `<h2>{icon} Heading text</h2>`
 
   * Icon must be manually scaled relative to the heading size: `<div>{icon}<h2>Heading text</h2></div>`
-
-
-  #### Icons with text (web implementation)
-
-
-  <div class="content-50 content-first" markdown="1">
-
-
-  <h4>Circle icon</h4>
-
-
-  <h2>{% include icons/car-round.svg %} Heading 2</h2>
-
-  <h3>{% include icons/bank-round.svg %} Heading 3</h3>
-
-  <h4>{% include icons/credit-card-round.svg %} Heading 4</h4>
-
-  <h5>{% include icons/complaint-round.svg %} Heading 5</h5>
-
-  <p>{% include icons/edit-round.svg %} Paragraph</p>
-
-
-  </div>
-
-
-  <div class="content-50 content-first" markdown="1">
-
-
-  <h4>Icon outside of a circle</h4>
-
-
-  <h2>{% include icons/car.svg %} Heading 2</h2>
-
-  <h3>{% include icons/bank.svg %} Heading 3</h3>
-
-  <h4>{% include icons/credit-card.svg %} Heading 4</h4>
-
-  <h5>{% include icons/complaint.svg %} Heading 5</h5>
-
-  <p>{% include icons/edit.svg %} Paragraph</p>
-
-
-  </div>
 eyebrow: Graphics
 title: Iconography
 status: Released
-description: >+
+description: >-
   Icons visually reinforce an interface action, file type, status, or category.
   They are visually simple, quickly recognizable, and easy to understand. They
   are almost always used in context with descriptive text and function to
@@ -687,7 +658,6 @@ description: >+
 
 
   </div>
-
 use_cases: ""
 behavior: >-
   ### SVG icon basics

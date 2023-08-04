@@ -588,7 +588,6 @@ guidelines: >-
 
   ![Vertical alignment of icon with Avenir Next text](/design-system/images/uploads/icon_artboard_alignment.png)
 
-   
 
   ### Color
 

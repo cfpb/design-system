@@ -562,7 +562,7 @@ guidelines: >-
   ### Icon artboard
 
 
-  Icons were designed to align with the vertical footprint of Avenir Next. Avenir Next text that is set to a font size of 16px has a rendered height of 19px (this includes descenders, ascenders, and white space). To account for this additional white space, we set the icon artboards (in Illustrator) to 19px (h). 
+  Because our icons typically appear beside text we designed our icon artboards (in Illustrator) to match the vertical footprint of Avenir Next. Avenir Next text set to a font size of 16px has a rendered height of 19px. To account for the additional white space, we set the icon artboards to 19px (h). 
 
 
   ![Diagram of illustrator artboard icon grid](/design-system/images/uploads/icon_artboard.png)
@@ -574,17 +574,21 @@ guidelines: >-
   When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. In developing the icons, we created two sizing grids, a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.
 
 
+  ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](/design-system/images/uploads/icons_relative_sizing.png)
+
+
   ### Alignment
 
 
   The overall position of a circle icon is centered on the cap height of Avenir Next. Within the circle, the icon is centered optically.
 
 
-  The alignment of non-circle icons depends on the icon height in relation to the footprint of Avenir Next. For more horizontal icons, vertically centering the icon on the cap height of Avenir Next often leaves it floating. To solve this, we start the grid on the baseline for more horizontal icons. For more vertical icons that exceed the cap height of Avenir Next, we center the icon on the cap height. 
+  The alignment of non-circle icons depends on the icon height in relation to the footprint of Avenir Next. For more horizontal icons, vertically centering the icon on the cap height of Avenir Next often leaves it floating. To solve this, we start the grid on the baseline for more horizontal icons. For more vertical icons that exceed the cap height of Avenir Next, we center the icon on the cap height.
 
 
-  ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](/design-system/images/uploads/icons_relative_sizing.png)
+  ![Vertical alignment of icon with Avenir Next text](/design-system/images/uploads/icon_artboard_alignment.png)
 
+   
 
   ### Color
 

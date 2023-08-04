@@ -562,9 +562,7 @@ guidelines: >-
   ### Icon artboard
 
 
-  Icons were designed to align with the vertical footprint of Avenir Next. Avenir Next text that is set to a font size of 16px has an actual rendered height of 19px (this includes descenders, ascenders, and white space). To account for this additional white space, we set the icon artboards (in Illustrator)  to match the actual rendered height of 19px (h).
-
-  In code the SVG height is scaled to match the rendered text height, calculated by dividing the rendered height by the assigned font size (19/16 = 1.1875em). This appears in the code as @cf-icon-height: 1.1875em. 
+  Icons were designed to align with the vertical footprint of Avenir Next. Avenir Next text that is set to a font size of 16px has a rendered height of 19px (this includes descenders, ascenders, and white space). To account for this additional white space, we set the icon artboards (in Illustrator) to 19px (h). 
 
 
   ![Diagram of illustrator artboard icon grid](/design-system/images/uploads/icon_artboard.png)
@@ -606,6 +604,9 @@ guidelines: >-
 
 
   Icons should be scaled relative to the size of neighboring text. This setting is built into our code and happens automatically, provided that the icon is within the same parent element as the text. If the icon sits outside of the text’s parent element the scaling must be applied manually but the icon should still be scaled relative to the size of the text.
+
+
+  In code, the SVG height is scaled to match the rendered text height, calculated by dividing the rendered height by the assigned font size (19/16 = 1.1875em). This appears in the code as @cf-icon-height: 1.1875em. 
 
 
   Code examples: 

@@ -85,11 +85,17 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 ### Font variables
 
 ```
-@webfont-regular: 'AvenirNextLTW01-Regular';
-@webfont-italic: @webfont-regular;
-@webfont-medium: 'AvenirNextLTW01-Medium';
-@webfont-demi: @webfont-medium;
+@font-stack: "Avenir Next", Arial, sans-serif;
 ```
+
+#### Webfont variables
+
+```
+@font-face-path: 'licensed-fonts.less';
+```
+
+Use this variable to point to the file containing your `@font-face` rules.
+To use none, set it to an empty string.
 
 **Note:** We don't serve the font file for Avenir Next Italic
 because we found Avenir Next Regular with browser-created faux italics
@@ -99,15 +105,14 @@ Similarly, we're trying out Avenir Next Medium with faux bolding
 in place of Avenir Next Demi, though the results of that experiment
 have been less predictable, so we may yet revert that decision.
 
-### Font source variables
+```
+@cf-fonts-path: '/static/fonts';
+```
 
-Use this variable to specify where the fonts files used in the `@webfont-*`
-variables are located when self-hosting fonts.
+Use this variable to specify where
+the fonts declared in `licensed-fonts.less`
+are located when self-hosting the font files.
 Can be either a relative or absolute path.
-
-```
-@cf-fonts-path: '/fonts'
-```
 
 ### Heading with icon
 

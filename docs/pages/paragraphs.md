@@ -31,16 +31,10 @@ variation_groups:
           #### Italicizing
 
 
-          `@webfont-italic: @webfont-regular;`
-
-
           We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.
 
 
           #### Bolding
-
-
-          `@webfont-demi: @webfont-medium;`
 
 
           We’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.

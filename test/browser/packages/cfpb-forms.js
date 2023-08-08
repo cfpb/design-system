@@ -30,7 +30,7 @@ describe('Multiselect', () => {
       {
         timeout: 60000,
         timeoutMsg: 'Oops! Test timed out waiting for page to load!',
-      }
+      },
     );
   });
 
@@ -39,7 +39,7 @@ describe('Multiselect', () => {
     // Ensure multiselect has fully expanded
     await browser.pause(300);
     const firstMultiSelectOption = await $(
-      '.a-live_code .o-multiselect_options li:first-child'
+      '.a-live_code .o-multiselect_options li:first-child',
     );
     await expect(firstMultiSelectOption).toBeDisplayedInViewport();
   });
@@ -48,11 +48,11 @@ describe('Multiselect', () => {
     await multiselectInput.click();
     const multiselectFieldset = await $('.a-live_code .o-multiselect_fieldset');
     const lastMultiSelectOption = await $(
-      '.a-live_code .o-multiselect_options li:last-child'
+      '.a-live_code .o-multiselect_options li:last-child',
     );
     await lastMultiSelectOption.scrollIntoView();
     const multiselectFieldsetScrollTop = await multiselectFieldset.getProperty(
-      'scrollTop'
+      'scrollTop',
     );
     // Ensure multiselect has fully expanded
     await browser.pause(300);
@@ -68,13 +68,13 @@ describe('Multiselect', () => {
     await browser.pause(300);
 
     const firstMultiSelectOption = await $(
-      '.a-live_code .o-multiselect_options li[data-option=option1]'
+      '.a-live_code .o-multiselect_options li[data-option=option1]',
     );
     const fourthMultiSelectOption = await $(
-      '.a-live_code .o-multiselect_options li[data-option=option4]'
+      '.a-live_code .o-multiselect_options li[data-option=option4]',
     );
     const longMultiSelectOption = await $(
-      '.a-live_code .o-multiselect_options li[data-option=option8]'
+      '.a-live_code .o-multiselect_options li[data-option=option8]',
     );
 
     // Find option #4
@@ -93,7 +93,7 @@ describe('Multiselect', () => {
   it('should let the user remove a choice', async () => {
     // Verify option1 is selected by default
     const multiSelectChoice = await $(
-      '.o-multiselect_choices label[for=test_select__multiple-option1]'
+      '.o-multiselect_choices label[for=test_select__multiple-option1]',
     );
     await expect(multiSelectChoice).toBeDisplayed();
 
@@ -108,12 +108,12 @@ describe('Multiselect', () => {
     await browser.pause(300);
 
     const secondMultiSelectOption = await $(
-      '.a-live_code .o-multiselect_options li[data-option=option2] label'
+      '.a-live_code .o-multiselect_options li[data-option=option2] label',
     );
     await secondMultiSelectOption.click();
 
     const secondMultiSelectChoice = await $(
-      '.a-live_code .o-multiselect_choices label[for=test_select__multiple-option2]'
+      '.a-live_code .o-multiselect_choices label[for=test_select__multiple-option2]',
     );
     await expect(secondMultiSelectChoice).toBeDisplayed();
   });

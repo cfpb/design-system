@@ -9,10 +9,10 @@ export default class Preview extends Component {
     liquidEngine.registerFilter('size', (initial) => initial.length || 1);
     liquidEngine.registerFilter(
       'relative_url',
-      (initial) => `/design-system/${initial}`
+      (initial) => `/design-system/${initial}`,
     );
     liquidEngine.registerFilter('slugify', (initial) =>
-      slugify(initial || '', { lower: true })
+      slugify(initial || '', { lower: true }),
     );
   }
 

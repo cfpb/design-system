@@ -7,7 +7,7 @@ describe('Netlify CMS', () => {
   describe('Editing the homepage', () => {
     beforeEach(async () => {
       await browser.url(
-        '/design-system/admin/#/collections/special-pages/entries/home'
+        '/design-system/admin/#/collections/special-pages/entries/home',
       );
       await browser.pause(300);
       const loginButton = await $('button=Login');
@@ -49,7 +49,7 @@ describe('Netlify CMS', () => {
     beforeEach(async () => {
       await browser.reloadSession();
       await browser.url(
-        '/design-system/admin/#/collections/pages/entries/buttons'
+        '/design-system/admin/#/collections/pages/entries/buttons',
       );
       // Make the browser a little wider than normal to prevent the "show details" tabs
       // from triggering their mobile media queries
@@ -92,7 +92,7 @@ describe('Netlify CMS', () => {
       // Move one level up the DOM tree
       const implementationButtonParent = await implementationButton.$('..');
       await expect(implementationButtonParent).toHaveElementClassContaining(
-        'selected'
+        'selected',
       );
     });
   });

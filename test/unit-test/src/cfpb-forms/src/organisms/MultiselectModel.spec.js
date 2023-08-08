@@ -210,7 +210,7 @@ describe('MultiselectModel', () => {
       multiselectModel.setIndex(0);
       expect(multiselectModel.getIndex()).toBe(0);
       expect(
-        multiselectModel.getFilterIndices()[multiselectModel.getIndex()]
+        multiselectModel.getFilterIndices()[multiselectModel.getIndex()],
       ).toBe(1);
       multiselectModel.setIndex(1);
       expect(multiselectModel.getIndex()).toBe(1);

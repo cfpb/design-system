@@ -61,11 +61,11 @@ describe('Summary', () => {
   describe('initialized state', () => {
     it('should be initialized', () => {
       expect(summaryDom.getAttribute('data-js-hook')).toBe(
-        'behavior_flyout-menu'
+        'behavior_flyout-menu',
       );
       summary.init();
       expect(summaryDom.getAttribute('data-js-hook')).toBe(
-        'behavior_flyout-menu state_atomic_init'
+        'behavior_flyout-menu state_atomic_init',
       );
     });
   });

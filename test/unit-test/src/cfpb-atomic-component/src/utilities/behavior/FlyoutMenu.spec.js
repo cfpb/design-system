@@ -153,7 +153,7 @@ describe('FlyoutMenu', () => {
         'when called by trigger click',
       () => {
         triggerDom.click();
-      }
+      },
     );
 
     it(
@@ -161,7 +161,7 @@ describe('FlyoutMenu', () => {
         'when called by alt trigger click',
       () => {
         altTriggerDom.click();
-      }
+      },
     );
 
     it(
@@ -169,7 +169,7 @@ describe('FlyoutMenu', () => {
         'when called directly',
       () => {
         flyoutMenu.expand();
-      }
+      },
     );
   });
 
@@ -209,7 +209,7 @@ describe('FlyoutMenu', () => {
         'when called by trigger click',
       () => {
         triggerDom.click();
-      }
+      },
     );
 
     it(
@@ -217,7 +217,7 @@ describe('FlyoutMenu', () => {
         'when called by alt trigger click',
       () => {
         altTriggerDom.click();
-      }
+      },
     );
 
     it(
@@ -225,7 +225,7 @@ describe('FlyoutMenu', () => {
         'when called directly',
       () => {
         flyoutMenu.collapse();
-      }
+      },
     );
   });
 
@@ -233,12 +233,12 @@ describe('FlyoutMenu', () => {
     it('should set a transition', async () => {
       flyoutMenu.init();
       const transition = new MoveTransition(contentDom).init(
-        MoveTransition.CLASSES.MOVE_LEFT
+        MoveTransition.CLASSES.MOVE_LEFT,
       );
       flyoutMenu.setTransition(
         transition,
         transition.moveLeft,
-        transition.moveLeft2
+        transition.moveLeft2,
       );
       flyoutMenu.addEventListener('expandend', () => {
         const hasClass = contentDom.classList.contains('u-move-transition');
@@ -266,12 +266,12 @@ describe('FlyoutMenu', () => {
     it('should remove all transitions', () => {
       flyoutMenu.init();
       const transition = new MoveTransition(contentDom).init(
-        MoveTransition.CLASSES.MOVE_TO_ORIGIN
+        MoveTransition.CLASSES.MOVE_TO_ORIGIN,
       );
       flyoutMenu.setTransition(
         transition,
         transition.moveToOrigin,
-        transition.moveLeft
+        transition.moveLeft,
       );
       let hasClass = contentDom.classList.contains('u-move-transition');
       expect(hasClass).toBe(true);

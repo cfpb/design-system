@@ -1,4 +1,33 @@
 
+## v0.28.0 (2023-08-08)
+
+#### Breaking Change
+* `cfpb-atomic-component`, `cfpb-core`, `cfpb-expandables`, `cfpb-forms`, `cfpb-icons`, `cfpb-layout`, `cfpb-typography`
+  * [#1696](https://github.com/cfpb/design-system/pull/1696) Stylelint and Prettier: Update configuration. ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-icons`
+  * [#1677](https://github.com/cfpb/design-system/pull/1677) cfpb-icons: Add numerical icons ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* Other
+  * [#1697](https://github.com/cfpb/design-system/pull/1697) Update babel/core, babel/preset-env, eslint-plugin-jsdoc ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1686](https://github.com/cfpb/design-system/pull/1686) Update eslint and eslint-plugin-react ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-core`, `cfpb-expandables`, `cfpb-forms`, `cfpb-icons`, `cfpb-layout`, `cfpb-typography`
+  * [#1678](https://github.com/cfpb/design-system/pull/1678) Update babel/core, babel/preset-env, eslint, eslint-plugin-jsdoc, eslint-plugin-react, lerna, postcss, webpack ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 4
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Joshua Allen ([@BrewCityBoy](https://github.com/BrewCityBoy))
+- Meis ([@meissadia](https://github.com/meissadia))
+- Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
+
+
+Fetch error: Unauthorized.
+{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+
+
+
 ## v0.27.3 (2023-07-11)
 
 #### Bug Fix

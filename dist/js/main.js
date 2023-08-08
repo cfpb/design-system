@@ -1250,7 +1250,7 @@ function FlyoutMenu(element, autoHideContent = true) {
     if (hasTransition) {
       _transition.addEventListener(
         _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT,
-        _collapseEndBinded
+        _collapseEndBinded,
       );
     }
 
@@ -1274,7 +1274,7 @@ function FlyoutMenu(element, autoHideContent = true) {
     if (_transition) {
       _transition.removeEventListener(
         _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT,
-        _expandEndBinded
+        _expandEndBinded,
       );
     }
     this.dispatchEvent('expandend', { target: this, type: 'expandend' });
@@ -1295,7 +1295,7 @@ function FlyoutMenu(element, autoHideContent = true) {
     if (_transition) {
       _transition.removeEventListener(
         _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.BaseTransition.END_EVENT,
-        _collapseEndBinded
+        _collapseEndBinded,
       );
     }
 
@@ -1653,7 +1653,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 function isMobileUserAgent() {
   const regex = new RegExp(
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i,
   );
   if (regex.test(navigator.userAgent)) {
     return true;
@@ -1859,7 +1859,7 @@ function BaseTransition(element, classes, child) {
   ) {
     throw new Error(
       'Transitions require CSS_PROPERTY and BASE_CLASS ' +
-        'to be passed into BaseTransition.'
+        'to be passed into BaseTransition.',
     );
   }
 
@@ -2038,7 +2038,7 @@ function BaseTransition(element, classes, child) {
     setElement(_dom);
     if (!initialClass) {
       throw new Error(
-        'Transition needs to be passed an initial CSS class on initialization!'
+        'Transition needs to be passed an initial CSS class on initialization!',
       );
     }
     _dom.classList.add(initialClass);
@@ -2620,7 +2620,7 @@ function getBreakpointState(width) {
   for (rangeKey in _cfpb_cfpb_core_src_vars_breakpoints_js__WEBPACK_IMPORTED_MODULE_0__["default"]) {
     breakpointState[rangeKey] = _inBreakpointRange(
       _cfpb_cfpb_core_src_vars_breakpoints_js__WEBPACK_IMPORTED_MODULE_0__["default"][rangeKey],
-      width
+      width,
     );
   }
 
@@ -2775,7 +2775,7 @@ function Expandable(element) {
     _flyout.setTransition(
       _transition,
       _transition.maxHeightZero,
-      _transition.maxHeightDefault
+      _transition.maxHeightDefault,
     );
 
     _flyout.init(isExpanded);
@@ -2907,7 +2907,7 @@ ExpandableGroup.init = (scope) => {
     const expandables = (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(
       `.${_cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_1__.Expandable.BASE_CLASS}`,
       _cfpb_cfpb_expandables__WEBPACK_IMPORTED_MODULE_1__.Expandable,
-      expandableGroupDom
+      expandableGroupDom,
     );
     const expandableGroup = new ExpandableGroup(expandableGroupDom);
     expandableGroup.init(expandables);
@@ -2990,12 +2990,12 @@ function Summary(element) {
     _transition.init(
       _suspended
         ? _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition.CLASSES.MH_SUMMARY
-        : _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition.CLASSES.MH_DEFAULT
+        : _cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.MaxHeightTransition.CLASSES.MH_DEFAULT,
     );
     _flyout.setTransition(
       _transition,
       _transition.maxHeightSummary,
-      _transition.maxHeightDefault
+      _transition.maxHeightDefault,
     );
     _flyout.addEventListener('triggerclick', _triggerClickHandler);
     _flyout.init();
@@ -3218,7 +3218,7 @@ function SummaryMinimal(element) {
     _flyout.setTransition(
       _transition,
       _transition.maxHeightSummary,
-      _transition.maxHeightDefault
+      _transition.maxHeightDefault,
     );
     _flyout.init();
 
@@ -3567,7 +3567,7 @@ function Multiselect(element) {
     if (event.key === KEY_SPACE || event.key === KEY_RETURN) {
       const label = event.target.querySelector('label');
       const checkbox = _optionsDom.querySelector(
-        '#' + label.getAttribute('for')
+        '#' + label.getAttribute('for'),
       );
       checkbox.click();
     }
@@ -3608,7 +3608,7 @@ function Multiselect(element) {
     selectionsItemLabelDom.addEventListener('click', _selectionClickHandler);
     selectionsItemLabelDom.addEventListener(
       'keydown',
-      _selectionKeyDownHandler
+      _selectionKeyDownHandler,
     );
   }
 

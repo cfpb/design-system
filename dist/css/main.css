@@ -1813,7 +1813,7 @@ html[lang='ar'] .m-list {
 .m-card a:focus {
   outline-offset: 2px;
 }
-.m-card:not(.m-card__highlight):not(.m-card__breakout) .m-card_footer {
+.m-card:not(.m-card__highlight, .m-card__breakout) .m-card_footer {
   margin-top: auto;
 }
 .m-card_footer > a {
@@ -2103,7 +2103,6 @@ html[lang='ar'] .m-list {
   background-color: #f7f8f9;
 }
 .m-hero_wrapper {
-  display: -ms-grid;
   display: grid;
   max-width: 1200px;
   margin: 0 auto;
@@ -2112,7 +2111,6 @@ html[lang='ar'] .m-list {
 }
 @media only all and (min-width: 37.5625em) {
   .m-hero_wrapper {
-    -ms-grid-columns: 7fr 5fr;
     grid-template-columns: 7fr 5fr;
     padding-right: 15px;
     padding-left: 15px;
@@ -2344,7 +2342,6 @@ html[lang='ar'] .m-list {
 }
 @media only all and (min-width: 37.5625em) {
   .m-hero__50-50 .m-hero_wrapper {
-    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     border: 1px solid #b4b5b6;
     border-top: none;

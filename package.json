@@ -118,5 +118,8 @@
       "lerna-changelog/internal": "Internal"
     }
   },
+  "prettier": {
+    "singleQuote": true
+  },
   "type": "module"
 }

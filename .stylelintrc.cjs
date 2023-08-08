@@ -14,6 +14,8 @@ function-no-unknown -
   Ignore the 'unit' helper function that comes from Less.
 media-feature-range-notation -
   Prefer prefixed values, since Less doesn't support ranges.
+media-query-no-invalid -
+  Turned off because of https://github.com/ssivanatarajan/stylelint-less/issues/6
 no-descending-specificity -
   Turned off, but probably shouldn't be.
   TODO: Turn on this rule and see if issues can be fixed.
@@ -42,8 +44,12 @@ module.exports = {
     'declaration-block-no-redundant-longhand-properties': null,
     'declaration-empty-line-before': null,
     'declaration-property-value-no-unknown': null,
-    'function-no-unknown': [true, { ignoreFunctions: ['unit'] }],
+    'function-no-unknown': [
+      true,
+      { ignoreFunctions: ['extend', 'fade', 'mix', 'unit'] },
+    ],
     'media-feature-range-notation': ['prefix'],
+    'media-query-no-invalid': null,
     'no-descending-specificity': null,
     'number-max-precision': 10,
     'rule-empty-line-before': [

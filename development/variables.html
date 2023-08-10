@@ -1191,7 +1191,7 @@
             
             <div class="m-variation_name">
                 <h3>
-                    Fonts
+                    Font stack
                     
                 </h3>
             </div>
@@ -1199,22 +1199,8 @@
 
             
             <div class="m-variation_description">
-                <h4 id="avenir">Avenir</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@webfont-regular:     'AvenirNextLTW01-Regular';
-@webfont-italic:      @webfont-regular;
-@webfont-medium:      'AvenirNextLTW01-Medium';
-@webfont-demi:        @webfont-medium;
-</code></pre></div></div>
-<p><em>Note: We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.</em></p>
-
-<p><em>Similarly, we’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.</em></p>
-
-<h4 id="arial">Arial</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@webfont-regular:      Arial;
-@webfont-italic:       Arial;
-@webfont-medium:       Arial;
-@webfont-demi:         Arial;
-</code></pre></div></div>
+                <p>Override this variable in order to specify a font stack other than the CFPB’s default brand font and fallback.
+<code class="language-plaintext highlighter-rouge">@font-stack: 'Avenir Next', Arial, sans-serif;</code></p>
 
             </div>
             
@@ -1241,7 +1227,7 @@
             
             <div class="m-variation_name">
                 <h3>
-                    Font source variables
+                    @font-face file path
                     
                 </h3>
             </div>
@@ -1249,8 +1235,44 @@
 
             
             <div class="m-variation_description">
-                <p>Use this variable to specify where the fonts files used in the @webfont-* variables are located when self-hosting fonts. Can be either a relative or absolute path.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@cf-fonts-path: '/fonts'`
+                <p>Use this variable to point to the file containing your <code class="language-plaintext highlighter-rouge">@font-face</code> rules. To use none, set it to an empty string.
+<code class="language-plaintext highlighter-rouge">@font-face-path: 'licensed-fonts.less';</code></p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+
+            
+            
+            
+            
+
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>
+                    Font source
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                <p>Use this variable to specify where the fonts declared in <code class="language-plaintext highlighter-rouge">licensed-fonts.less</code> are located when self-hosting the font files. Can be either a relative or absolute path.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@cf-fonts-path: '/static/fonts'`;
 </code></pre></div></div>
 
             </div>
@@ -1346,8 +1368,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/variables.md">
-                    <time datetime="2023-08-09 13:26:42 -0400">
-                         1:26:42 PM Aug 09, 2023
+                    <time datetime="2023-08-10 08:48:57 -0400">
+                         8:48:57 AM Aug 10, 2023
                     </time>
                 </a>
             </small>

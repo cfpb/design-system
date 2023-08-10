@@ -6973,13 +6973,17 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
                     'variation_description2': "@base-font-size-px:   16px;\n@base-line-height-px: 22px;\n@base-line-height:    unit( ( @base-line-height-px / @base-font-size-px ) );\n\n@size-xl:             48px; // Super-size\n\n@size-i:              34px; // h1-size\n@size-ii:             26px; // h2-size\n@size-iii:            22px; // h3-size\n@size-iv:             18px; // h4-size\n@size-v:              14px; // h5-site\n@size-vi:             12px; // h6-size\n@size-code:           13px; // Custom size only for Mono code blocks\n\n",
                     'variation_code_snippet2': ``,
                 
-                    'variation_name3': 'Fonts',
-                    'variation_description3': "Avenir\n@webfont-regular:     'AvenirNextLTW01-Regular';\n@webfont-italic:      @webfont-regular;\n@webfont-medium:      'AvenirNextLTW01-Medium';\n@webfont-demi:        @webfont-medium;\n\nNote: We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.\n\nSimilarly, we’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.\n\nArial\n@webfont-regular:      Arial;\n@webfont-italic:       Arial;\n@webfont-medium:       Arial;\n@webfont-demi:         Arial;\n\n",
+                    'variation_name3': 'Font stack',
+                    'variation_description3': "Override this variable in order to specify a font stack other than the CFPB’s default brand font and fallback.\n@font-stack: 'Avenir Next', Arial, sans-serif;\n",
                     'variation_code_snippet3': ``,
                 
-                    'variation_name4': 'Font source variables',
-                    'variation_description4': "Use this variable to specify where the fonts files used in the @webfont-* variables are located when self-hosting fonts. Can be either a relative or absolute path.\n@cf-fonts-path: '/fonts'`\n\n",
+                    'variation_name4': '@font-face file path',
+                    'variation_description4': "Use this variable to point to the file containing your @font-face rules. To use none, set it to an empty string.\n@font-face-path: 'licensed-fonts.less';\n",
                     'variation_code_snippet4': ``,
+                
+                    'variation_name5': 'Font source',
+                    'variation_description5': "Use this variable to specify where the fonts declared in licensed-fonts.less are located when self-hosting the font files. Can be either a relative or absolute path.\n@cf-fonts-path: '/static/fonts'`;\n\n",
+                    'variation_code_snippet5': ``,
                 
             
 

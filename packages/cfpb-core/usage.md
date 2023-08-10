@@ -108,13 +108,10 @@ Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.l
 @size-code:           13px; // Custom size only for Mono code blocks
 ```
 
-### Webfont variables
+### Font variables
 
 ```
-@webfont-regular: Arial;
-@webfont-italic:  Arial;
-@webfont-medium:  Arial;
-@webfont-demi:    Arial;
+@font-stack: system-ui, sans-serif;
 ```
 
 ## Media queries

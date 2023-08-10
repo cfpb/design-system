@@ -9,7 +9,7 @@
 
 body {
   color: @text;
-  font-family: 'Avenir Next', Arial, sans-serif;
+  font-family: @font-stack;
   font-size: unit((@base-font-size-px / 16 * 100), %);
   line-height: @base-line-height;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +21,7 @@ select,
 textarea {
   // Must set these explicitly to override Normalize.css's provided default
   // of `font-family: sans-serif;`
-  font-family: 'Avenir Next', Arial, sans-serif;
+  font-family: @font-stack;
 }
 
 strong,

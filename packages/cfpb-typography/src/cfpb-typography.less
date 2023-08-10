@@ -12,12 +12,11 @@
 //
 
 // Font variables
-@webfont-regular: 'AvenirNextLTW01-Regular';
-@webfont-italic: @webfont-regular;
-@webfont-medium: 'AvenirNextLTW01-Medium';
-@webfont-demi: @webfont-medium;
+@font-stack: 'Avenir Next', Arial, sans-serif;
 
 // Webfont variables
+// This is the path to your stylesheet containing @font-face rules.
+@font-face-path: 'licensed-fonts.less';
 // This is the path for self-hosted fonts.
 @cf-fonts-path: '/static/fonts';
 
@@ -78,4 +77,5 @@
 //
 // Import web fonts
 //
-@import (less) 'licensed-fonts.less';
+// To not load any fonts, set @font-face-path to an empty string in your project.
+@import (less, optional) '@{font-face-path}';

@@ -364,7 +364,7 @@ variation_groups:
           ```
           @font-stack: 'Avenir Next', Arial, sans-serif;
           ```
-      - variation_name: @font-face file path
+      - variation_name: '@font-face file path'
         variation_description: >-
           Use this variable to point to the file containing your `@font-face` rules.
           To use none, set it to an empty string.

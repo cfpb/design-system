@@ -1,4 +1,20 @@
 
+## v0.29.0 (2023-08-10)
+
+#### Breaking Change
+* `cfpb-core`, `cfpb-typography`
+  * [#1681](https://github.com/cfpb/design-system/pull/1681) Make licensed font loading optional, clean up obsolete `@webfont-` variables ([@Scotchester](https://github.com/Scotchester))
+
+#### Bug Fix
+* `cfpb-icons`
+  * [#1699](https://github.com/cfpb/design-system/pull/1699) Remove problematic icon max-width property ([@contolini](https://github.com/contolini))
+
+#### Committers: 2
+- Chris Contolini ([@contolini](https://github.com/contolini))
+- Scott Cranfill ([@Scotchester](https://github.com/Scotchester))
+
+
+
 ## v0.28.0 (2023-08-08)
 
 #### Breaking Change

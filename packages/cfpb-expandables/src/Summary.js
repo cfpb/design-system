@@ -64,12 +64,12 @@ function Summary(element) {
     _transition.init(
       _suspended
         ? MaxHeightTransition.CLASSES.MH_SUMMARY
-        : MaxHeightTransition.CLASSES.MH_DEFAULT
+        : MaxHeightTransition.CLASSES.MH_DEFAULT,
     );
     _flyout.setTransition(
       _transition,
       _transition.maxHeightSummary,
-      _transition.maxHeightDefault
+      _transition.maxHeightDefault,
     );
     _flyout.addEventListener('triggerclick', _triggerClickHandler);
     _flyout.init();

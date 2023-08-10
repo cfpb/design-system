@@ -22,7 +22,7 @@ export default (env, argv) => {
       plugins.push(
         cssnano({
           preset: 'default',
-        })
+        }),
       );
     }
 

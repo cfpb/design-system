@@ -66,7 +66,7 @@ function Expandable(element) {
     _flyout.setTransition(
       _transition,
       _transition.maxHeightZero,
-      _transition.maxHeightDefault
+      _transition.maxHeightDefault,
     );
 
     _flyout.init(isExpanded);

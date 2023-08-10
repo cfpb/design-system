@@ -61,7 +61,7 @@ function toggleAllDetails(toggleBtn) {
     toggleDetails(
       buttonElm,
       window.document,
-      isShowingAllDetails ? STATE_HIDE : STATE_SHOW
+      isShowingAllDetails ? STATE_HIDE : STATE_SHOW,
     );
   }
 

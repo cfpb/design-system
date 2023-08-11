@@ -116,7 +116,7 @@ variation_groups:
                     id="full-textinput-example"
                     value="Placeholder text">
           </div>
-      - variation_name: Full-width textarea inputs
+      - variation_name: Full-width text area inputs
         variation_code_snippet: >-
           <div class="m-form-field">
               <label class="a-label a-label__heading" for="full-textarea-example">
@@ -125,7 +125,7 @@ variation_groups:
               <textarea class="a-text-input a-text-input__full"
                         id="full-textarea-example">Placeholder text</textarea>
           </div>
-      - variation_name: Datepicker inputs
+      - variation_name: Date picker inputs
         variation_code_snippet: |-
           <div class="m-form-field">
               <label class="a-label a-label__heading" for="datepicker-example">

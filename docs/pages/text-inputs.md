@@ -17,8 +17,8 @@ variation_groups:
           <input class="a-text-input"
                 type="text"
                 id="textinput-example-default"
-                placeholder="Enter text…"
-                value="Placeholder text">
+                placeholder="Optional placeholder text"
+                value="Input text">
           <br><br>
 
           <label class="a-label a-label__heading" for="textinput-example-hover">
@@ -30,8 +30,8 @@ variation_groups:
           <input class="a-text-input hover"
                  type="text"
                  id="textinput-example-hover"
-                 placeholder="Enter text…"
-                 value="Placeholder text">
+                 placeholder="Optional placeholder text"
+                 value="Input text">
           <br><br>
 
           <label class="a-label a-label__heading" for="textinput-example-focus">
@@ -43,8 +43,8 @@ variation_groups:
           <input class="a-text-input focus"
                  type="text"
                  id="textinput-example-focus"
-                 placeholder="Enter text…"
-                 value="Lorem ipsum">
+                 placeholder="Optional placeholder text"
+                 value="Input text">
           <br><br>
 
           <label class="a-label a-label__heading" for="textinput-example-disabled">
@@ -56,8 +56,8 @@ variation_groups:
           <input class="a-text-input"
                  type="text"
                  id="textinput-example-disabled"
-                 placeholder="Enter text…"
-                 value="Lorem ipsum"
+                 placeholder="Optional placeholder text"
+                 value="Input text"
                  disabled>
         variation_specs: |-
           #### Default
@@ -98,7 +98,7 @@ variation_groups:
 
           <textarea class="a-text-input"
                     id="textarea-example-default"
-                    placeholder="Enter text…">Placeholder text</textarea>
+                    placeholder="Optional placeholder text">Input text</textarea>
         variation_specs: |-
           * Border: 1 px, Gray 60 (#919395)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
@@ -114,7 +114,7 @@ variation_groups:
               <input class="a-text-input a-text-input__full"
                     type="text"
                     id="full-textinput-example"
-                    value="Placeholder text">
+                    value="Input text">
           </div>
       - variation_name: Full-width text area inputs
         variation_code_snippet: >-
@@ -123,7 +123,7 @@ variation_groups:
                   Label
               </label>
               <textarea class="a-text-input a-text-input__full"
-                        id="full-textarea-example">Placeholder text</textarea>
+                        id="full-textarea-example">Input text</textarea>
           </div>
       - variation_name: Date picker inputs
         variation_code_snippet: |-

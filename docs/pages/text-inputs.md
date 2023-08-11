@@ -1,10 +1,7 @@
 ---
-title: Text inputs
 layout: variation
 section: components
 status: Released
-description: 'Text fields give users the ability to enter text. They can be
-  single-line or multi-line (textarea inputs).  '
 variation_groups:
   - variation_group_name: Standard text inputs
     variations:
@@ -67,7 +64,8 @@ variation_groups:
           - Border: 1 px, Gray 60 (#919395)
           - Height: 35 px
           - Padding: 7px
-          - Avenir Next Regular, 16px, Gray (#5a5d61)
+          - Placeholder text: Avenir Next Regular, 16px, Gray (#5a5d61) 
+          - Input text: Avenir Next Regular, 16px, Black (#101820)
           - Text should be in sentence case
 
           #### Hover
@@ -81,15 +79,13 @@ variation_groups:
           #### Disabled
           - Background: Gray 10 (#e7e8e9)
         variation_name: Single-line text inputs
-        variation_description:
-          Use to input single lines of text, for example email
+        variation_description: Use to input single lines of text, for example email
           addresses, names, or search queries. The length of the input field
           should be proportional to the expected user input, so that the user
           can see what they've typed without having to scroll to reveal hidden
           content. See the guidelines section below for more information.
-      - variation_name: Multi-line textarea inputs
-        variation_description:
-          Use for long-form answers that are more than a single
+      - variation_name: Multi-line text area inputs
+        variation_description: Use for long-form answers that are more than a single
           word or two. Make sure the input size is big enough that the user can
           see what they've typed without having to scroll to reveal hidden
           content, and small enough that the user doesn't have  to navigate the
@@ -106,7 +102,7 @@ variation_groups:
         variation_specs: |-
           * Border: 1 px, Gray 60 (#919395)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
-    variation_group_description: ''
+    variation_group_description: ""
   - variation_group_name: Variations
     variations:
       - variation_name: Full-width text inputs
@@ -163,12 +159,10 @@ variation_groups:
                   <span class="u-visually-hidden">Clear</span>
               </button>
           </div>
-        variation_description:
-          These offer the user an action to take related to the
+        variation_description: These offer the user an action to take related to the
           input, typically to clear the input.
       - variation_name: Button inside a text input with another button
-        variation_description:
-          This example combines both of the previous patterns,
+        variation_description: This example combines both of the previous patterns,
           creating a typical site search form.
         variation_code_snippet: >-
           <div class="o-form__input-w-btn">
@@ -188,7 +182,6 @@ variation_groups:
                   <button class="a-btn">Search</button>
               </div>
           </div>
-use_cases: ''
 guidelines: >-
   ### Stylistic guidelines
 
@@ -216,6 +209,11 @@ guidelines: >-
 
 
   Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
+eyebrow: Form elements
+title: Text inputs
+description: "Text fields give users the ability to enter text. They can be
+  single-line or multi-line (textarea inputs).  "
+use_cases: ""
 behavior: As the screen size gets smaller, break multi-column inputs into a
   single, stacked column. Fields that are next to each other on a large screen,
   should stack at smaller screen sizes. When possible, fields should span the
@@ -225,10 +223,9 @@ accessibility: >-
 
 
   Users of screen readers use the tab key to move focus from one form control to another. Make sure that tab focus order reflects the way you would like users to navigate through the form. Consider whether tabs should move a user down or across the page.
-research: ''
 related_items: "* [Text input
   variables](https://cfpb.github.io/design-system/development/variables#forms-1\
   )"
 last_updated: 2020-01-28T15:55:47.394Z
-eyebrow: Form elements
+research: ""
 ---

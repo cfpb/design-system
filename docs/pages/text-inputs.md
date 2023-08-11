@@ -17,7 +17,7 @@ variation_groups:
           <input class="a-text-input"
                 type="text"
                 id="textinput-example-default"
-                placeholder="Optional placeholder text"
+                placeholder="Placeholder text"
                 value="Input text">
           <br><br>
 
@@ -30,7 +30,7 @@ variation_groups:
           <input class="a-text-input hover"
                  type="text"
                  id="textinput-example-hover"
-                 placeholder="Optional placeholder text"
+                 placeholder="Placeholder text"
                  value="Input text">
           <br><br>
 
@@ -43,7 +43,7 @@ variation_groups:
           <input class="a-text-input focus"
                  type="text"
                  id="textinput-example-focus"
-                 placeholder="Optional placeholder text"
+                 placeholder="Placeholder text"
                  value="Input text">
           <br><br>
 
@@ -56,7 +56,7 @@ variation_groups:
           <input class="a-text-input"
                  type="text"
                  id="textinput-example-disabled"
-                 placeholder="Optional placeholder text"
+                 placeholder="Placeholder text"
                  value="Input text"
                  disabled>
         variation_specs: |-
@@ -98,7 +98,7 @@ variation_groups:
 
           <textarea class="a-text-input"
                     id="textarea-example-default"
-                    placeholder="Optional placeholder text">Input text</textarea>
+                    placeholder="Placeholder text">Input text</textarea>
         variation_specs: |-
           * Border: 1 px, Gray 60 (#919395)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)

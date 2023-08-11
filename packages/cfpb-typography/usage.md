@@ -31,7 +31,6 @@ and has more basic typography patterns.
   - [Horizontal list modifier](#horizontal-list-modifier)
   - [Link list modifier](#link-list-modifier)
 - [Miscellaneous text](#miscellaneous-text)
-  - [Micro copy](#micro-copy)
   - [Date](#date)
   - [Pull quote](#pull-quote)
 
@@ -49,9 +48,6 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ```
 // Running text elements
-
-// .a-micro-copy
-@micro-copy:                @black;
 
 // .a-date
 @date:                      @gray;
@@ -457,21 +453,6 @@ screens.
 ```
 
 ## Miscellaneous Text
-
-### Micro copy
-
-The `.a-micro-copy` class is good for highlighting small pieces of text,
-typically legal copy.
-
-<p class="a-micro-copy">
-    Lorem ipsum dolor sit amet
-</p>
-
-```
-<p class="a-micro-copy">
-    Lorem ipsum dolor sit amet
-</p>
-```
 
 ### Date
 

@@ -55,17 +55,6 @@ variation_groups:
           * Avenir Next Regular
 
           * Text is responsive. Displays as a Heading 3 (22px / 28px) on large screens (>601px wide). Displays at Heading 4 (18px / 22px but still Regular weight) on small screens (<601px wide).
-      - variation_code_snippet: |-
-          <p class="a-micro-copy">
-              Lorem ipsum dolor sit amet
-          </p>
-        variation_name: Microcopy
-        variation_implementation: ''
-        variation_specs: |-
-          * Good for highlighting small pieces of text, typically legal copy.
-          * Avenir Next Regular
-          * 14px at all browser widths
-        variation_is_deprecated: true
     variation_group_name: Web paragraphs
   - variation_group_name: Print paragraphs
     variations:

@@ -97,6 +97,8 @@ variation_groups:
         variation_specs: >-
           * Avenir Next Medium, 16px
 
+          * Border bottom: 1 px, dotted, Pacific 
+
           * Call-to-action links are Medium weight but match [inline links](https://cfpb.github.io/design-system/components/links#inline-links) in all other styling
 
 

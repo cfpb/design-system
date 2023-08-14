@@ -41,7 +41,7 @@ variation_groups:
 
           * Pacific Blue (#0072ce)
 
-          * 1px dotted bottom border
+          * Border bottom: 1 px, dotted
 
 
 
@@ -49,30 +49,30 @@ variation_groups:
 
           * Dark Pacific Blue (#0050b4)
 
-          * 1px solid bottom border
+          * Border bottom: 1px, solid 
 
 
           #### Focus
 
           * Pacific Blue (#0072ce)
 
-          * 1px dotted bottom border
+          * Border bottom: 1 px, dotted
 
-          * Thin dotted outline
+          * Outline: Thin dotted
 
 
           #### Active
 
           * Navy Blue (#254b87)
 
-          * 1px solid bottom border
+          * Border bottom: 1px, solid
 
 
           #### Visited
 
           * Teal (#257675)
 
-          * 1px solid bottom border
+          * Border bottom: 1px, solid 
       - variation_name: Call-to-action links
         variation_code_snippet: >-
           <ul class="m-list m-list__links">
@@ -117,7 +117,9 @@ variation_groups:
         variation_description: Destructive links provide a visual warning to users that
           clicking them will perform a destructive action, such as clearing
           entries in a form.
-        variation_specs: "* Mid Dark Red (#c3381c)"
+        variation_specs: |-
+          * Avenir Next Medium, 16px
+          * Mid Dark Red (#c3381c) 
     variation_group_description: >+
       Links that appear in body text (`p`), link lists (`li`), or definitions
       (`dd`) are automatically underlined. To enable underlines elsewhere, e.g.

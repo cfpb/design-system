@@ -95,11 +95,9 @@ variation_groups:
           among other places.
         variation_jinja_code_snippet: ""
         variation_specs: >-
-          
-
           * Avenir Next Medium, 16px
 
-          * Call-to-action links are Medium weight but match inline links in all other styling
+          * Call-to-action links are Medium weight but match [inline links](https://cfpb.github.io/design-system/components/links#inline-links) in all other styling
 
 
           #### Additional list styling

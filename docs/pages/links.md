@@ -97,8 +97,6 @@ variation_groups:
         variation_specs: >-
           * Avenir Next Medium, 16px
 
-          * View additional styling details at [inline links](https://cfpb.github.io/design-system/components/links#standard-links-1)
-
 
           ##### W﻿hen used in a list:
 
@@ -107,6 +105,9 @@ variation_groups:
           * Margin top (list): 10px
 
           * Margin bottom (list): 15px
+
+
+          View additional styling details at [inline links](https://cfpb.github.io/design-system/components/links#standard-links-1)
       - variation_name: Destructive links
         variation_code_snippet: |-
           <a class="a-btn a-btn__link a-btn__warning" href="#">

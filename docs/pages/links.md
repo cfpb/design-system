@@ -98,7 +98,8 @@ variation_groups:
           * Avenir Next Medium, 16px, Pacific 
           * Border bottom: 1 px, dotted, Pacific 
 
-          W﻿hen used in a list: 
+          ##### W﻿hen used in a list: 
+
           * Margin bottom (list item): 8px
           * Margin top (list): 10px
           * Margin bottom (list): 15px

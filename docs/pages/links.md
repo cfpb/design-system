@@ -94,22 +94,22 @@ variation_groups:
           groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
           among other places.
         variation_jinja_code_snippet: ""
-        variation_specs: >+
-          Call-to-action links are Medium weight but match inline links in all
-          other styling. 
-
+        variation_specs: >-
+          
 
           * Avenir Next Medium, 16px
 
+          * Call-to-action links are Medium weight but match inline links in all other styling. 
+
 
           When used in a list additional styling is added: 
+
 
           * Margin bottom (list item): 8px
 
           * Margin top (list): 10px
 
           * Margin bottom (list): 15px
-
       - variation_name: Destructive links
         variation_code_snippet: |-
           <a class="a-btn a-btn__link a-btn__warning" href="#">

@@ -100,7 +100,7 @@ variation_groups:
           * Call-to-action links are Medium weight but match [inline links](https://cfpb.github.io/design-system/components/links#inline-links) in all other styling
 
 
-          #### Additional list styling
+          #### When links appear as part of a list
 
 
           * Margin bottom (list item): 8px

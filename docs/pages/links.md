@@ -95,17 +95,9 @@ variation_groups:
           among other places.
         variation_jinja_code_snippet: ""
         variation_specs: >-
-          #### Default
-
-
           * Avenir Next Medium, 16px
 
-          * Pacific Blue (#0072ce)
-
-          * 1px dotted bottom border
-
-
-          P﻿ull color styling for additional states from [Standard links](https://cfpb.github.io/design-system/components/links#standard-links-1)
+          * P﻿ull color and border styling for states from [inline links](https://cfpb.github.io/design-system/components/links#standard-links-1)
 
 
           ##### W﻿hen used in a list:
@@ -123,9 +115,7 @@ variation_groups:
         variation_description: Destructive links provide a visual warning to users that
           clicking them will perform a destructive action, such as clearing
           entries in a form.
-        variation_specs: |
-          * Avenir Next Medium, 16 px
-          * Mid Dark Red (#c3381c)
+        variation_specs: "* Mid Dark Red (#c3381c)"
     variation_group_description: >+
       Links that appear in body text (`p`), link lists (`li`), or definitions
       (`dd`) are automatically underlined. To enable underlines elsewhere, e.g.

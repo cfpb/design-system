@@ -1,12 +1,7 @@
 ---
-title: Links
 layout: variation
 section: components
 status: Released
-description: Links lead users to a different page or further information. In
-  contrast, [buttons](/design-system/components/buttons) are used to signal
-  actions. Users should be able to identify links without relying on color or
-  styling alone.
 variation_groups:
   - variation_group_name: Standard links
     variations:
@@ -34,7 +29,7 @@ variation_groups:
           within a paragraph like this one).
 
         variation_name: Inline links
-        variation_implementation: ''
+        variation_implementation: ""
         variation_specs: >-
           [Color variables for
           links](https://cfpb.github.io/design-system/development/variables#typography-1)
@@ -42,21 +37,24 @@ variation_groups:
 
           #### Default
 
-          * Pacific Blue
+          * Avenir Next Regular, 16 px
+
+          * Pacific Blue (#0072ce)
 
           * 1px dotted bottom border
 
 
+
           #### Hover
 
-          * Dark Pacific Blue
+          * Dark Pacific Blue (#0050b4)
 
           * 1px solid bottom border
 
 
           #### Focus
 
-          * Pacific Blue
+          * Pacific Blue (#0072ce)
 
           * 1px dotted bottom border
 
@@ -65,14 +63,14 @@ variation_groups:
 
           #### Active
 
-          * Navy Blue
+          * Navy Blue (#254b87)
 
           * 1px solid bottom border
 
 
           #### Visited
 
-          * Teal
+          * Teal (#257675)
 
           * 1px solid bottom border
       - variation_name: Call-to-action links
@@ -95,19 +93,40 @@ variation_groups:
           unit
           groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
           among other places.
-        variation_jinja_code_snippet: ''
+        variation_jinja_code_snippet: ""
+        variation_specs: |-
+          #### Default
+          * Avenir Next Medium, 16 px
+          * Pacific Blue (#0072ce)
+          * 1px dotted bottom border
+
+          #### Hover
+          * Dark Pacific Blue (#0050b4)
+          * 1px solid bottom border
+
+          #### Focus
+          * Pacific Blue (#0072c)
+          * 1px dotted bottom border
+          * Thin dotted outline
+
+          #### Active 
+          * Navy Blue (#254b87)
+          * 1px solid bottom border
+
+          #### Visited
+          * Teal (#257675)
+          * 1px solid bottom border
       - variation_name: Destructive links
         variation_code_snippet: |-
           <a class="a-btn a-btn__link a-btn__warning" href="#">
                Sample destructive link
           </a>
-        variation_description:
-          Destructive links provide a visual warning to users that
+        variation_description: Destructive links provide a visual warning to users that
           clicking them will perform a destructive action, such as clearing
           entries in a form.
-        variation_specs:
-          '* Destructive action link: Avenir Next Medium, 16px, Mid dark
-          red (#c3381c)'
+        variation_specs: |
+          * Avenir Next Medium, 16 px
+          * Mid Dark Red (#c3381c)
     variation_group_description: >+
       Links that appear in body text (`p`), link lists (`li`), or definitions
       (`dd`) are automatically underlined. To enable underlines elsewhere, e.g.
@@ -124,7 +143,7 @@ variation_groups:
 
       * Icons should never be underlined.
     variations:
-      - variation_specs: ''
+      - variation_specs: ""
         variation_code_snippet: |-
           <p>
             The document icon should emphasize a link that contains a
@@ -143,16 +162,14 @@ variation_groups:
               </a> for further details.
           </p>
         variation_name: Standard link with icon
-        variation_description:
-          To prevent the link’s underline from extending under the
+        variation_description: To prevent the link’s underline from extending under the
           icon, wrap the link text with a `span.icon-link_text`. There can be no
           whitespace between the text and the opening and closing span tags.
           Include the icon either prior to or after the `a-link_text`. It is
           important the text and icon are siblings to correctly handle
           underlines.
       - variation_name: Non-wrapping icon links
-        variation_description:
-          Icons added to inline links can sometimes break onto the
+        variation_description: Icons added to inline links can sometimes break onto the
           next line. If you want to prevent this, you can add the `__no-wrap`
           modifier to `.a-link__icon`.
         variation_code_snippet: |-
@@ -191,9 +208,9 @@ variation_groups:
       small screens by converting to full block links that have a
       finger-friendly touch area. Reduce screen size to see these in action.
   - variation_group_name: Printed links
-    variation_group_description: ''
+    variation_group_description: ""
     variations:
-      - variation_name: ''
+      - variation_name: ""
         variation_description: When a page is printed from
           [consumerfinance.gov](https://www.consumerfinance.gov/), links should
           appear in the following style and include both the original link text
@@ -228,8 +245,14 @@ variation_groups:
         variation_implementation: When a page is printed, cf.gov's [print
           stylesheet](https://github.com/cfpb/consumerfinance.gov/blob/c9637160e14da5093b43c78fc2c87fa0ba190887/cfgov/unprocessed/css/print.less)
           appends link URLs in parentheses next to their link text.
-use_cases: ''
-guidelines: ''
+guidelines: ""
+eyebrow: Form elements
+title: Links
+description: Links lead users to a different page or further information. In
+  contrast, [buttons](/design-system/components/buttons) are used to signal
+  actions. Users should be able to identify links without relying on color or
+  styling alone.
+use_cases: ""
 behavior: >-
   ### Default links
 
@@ -254,7 +277,6 @@ accessibility: >-
 
 
   In situations where that's untenable, you can improve the situation for screen reader users by coding the link with the `aria-label` attribute and adding more descriptive link text, which will be read aloud by screen readers.
-research: ''
 related_items: >-
   *
   [Variables](https://cfpb.github.io/design-system/development/variables#typography-1)
@@ -265,5 +287,5 @@ related_items: >-
 
   * [Iconography](https://cfpb.github.io/design-system/foundation/iconography)
 last_updated: 2019-09-17T14:52:22.684Z
-eyebrow: Form elements
+research: ""
 ---

@@ -95,27 +95,13 @@ variation_groups:
           among other places.
         variation_jinja_code_snippet: ""
         variation_specs: |-
-          #### Default
-          * Avenir Next Medium, 16 px
-          * Pacific Blue (#0072ce)
-          * 1px dotted bottom border
+          * Avenir Next Medium, 16px, Pacific 
+          * Border bottom: 1 px, dotted, Pacific 
 
-          #### Hover
-          * Dark Pacific Blue (#0050b4)
-          * 1px solid bottom border
-
-          #### Focus
-          * Pacific Blue (#0072c)
-          * 1px dotted bottom border
-          * Thin dotted outline
-
-          #### Active 
-          * Navy Blue (#254b87)
-          * 1px solid bottom border
-
-          #### Visited
-          * Teal (#257675)
-          * 1px solid bottom border
+          W﻿hen used in a list: 
+          * Margin bottom (list item): 8px
+          * Margin top (list): 10px
+          * Margin bottom (list): 15px
       - variation_name: Destructive links
         variation_code_snippet: |-
           <a class="a-btn a-btn__link a-btn__warning" href="#">

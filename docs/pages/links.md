@@ -94,14 +94,26 @@ variation_groups:
           groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
           among other places.
         variation_jinja_code_snippet: ""
-        variation_specs: |-
-          * Avenir Next Medium, 16px, Pacific 
-          * Border bottom: 1 px, dotted, Pacific 
+        variation_specs: >-
+          #### Default
 
-          ##### W﻿hen used in a list: 
+
+          * Avenir Next Medium, 16px
+
+          * Pacific Blue (#0072ce)
+
+          * 1px dotted bottom border
+
+
+          P﻿ull color styling for additional states from [Standard links](https://cfpb.github.io/design-system/components/links#standard-links-1)
+
+
+          ##### W﻿hen used in a list:
 
           * Margin bottom (list item): 8px
+
           * Margin top (list): 10px
+
           * Margin bottom (list): 15px
       - variation_name: Destructive links
         variation_code_snippet: |-

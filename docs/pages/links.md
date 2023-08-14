@@ -97,7 +97,7 @@ variation_groups:
         variation_specs: >-
           * Avenir Next Medium, 16px
 
-          * P﻿ull color and border styling for states from [inline links](https://cfpb.github.io/design-system/components/links#standard-links-1)
+          * View color and border styling at[inline links](https://cfpb.github.io/design-system/components/links#standard-links-1)
 
 
           ##### W﻿hen used in a list:

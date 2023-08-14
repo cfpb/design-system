@@ -101,13 +101,17 @@ variation_groups:
           * For states styling view [inline links](https://cfpb.github.io/design-system/components/links#inline-links)
 
 
-          #### When links appear as part of a list: 
+          #### When links appear as part of a list:
+
 
           * Margin bottom (list item): 8px
 
           * Margin top (list): 10px
 
           * Margin bottom (list): 15px
+
+
+          ![Call-to-action link spacing](/design-system/images/uploads/260559647-fb36ca00-bef2-4240-b140-d15c970bd44a.png "Call-to-action link spacing")
       - variation_name: Destructive links
         variation_code_snippet: |-
           <a class="a-btn a-btn__link a-btn__warning" href="#">

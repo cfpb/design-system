@@ -102,7 +102,7 @@ variation_groups:
           * Call-to-action links are Medium weight but match inline links in all other styling. 
 
 
-          When used in a list additional styling is added:
+          #### Additional list styling
 
 
           * Margin bottom (list item): 8px

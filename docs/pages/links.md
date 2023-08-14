@@ -99,7 +99,7 @@ variation_groups:
 
           * Border bottom: 1 px, dotted
 
-          * For states styling view [inline links](https://cfpb.github.io/design-system/components/links#inline-links) in their states styling. 
+          * For states styling view [inline links](https://cfpb.github.io/design-system/components/links#inline-links)
 
 
           #### When links appear as part of a list: 

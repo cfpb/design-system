@@ -99,7 +99,7 @@ variation_groups:
 
           * Avenir Next Medium, 16px
 
-          * Call-to-action links are Medium weight but match inline links in all other styling. 
+          * Call-to-action links are Medium weight but match inline links in all other styling
 
 
           #### Additional list styling

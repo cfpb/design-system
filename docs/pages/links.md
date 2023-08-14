@@ -44,7 +44,6 @@ variation_groups:
           * Border bottom: 1 px, dotted
 
 
-
           #### Hover
 
           * Dark Pacific Blue (#0050b4)

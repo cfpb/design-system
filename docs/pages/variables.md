@@ -280,9 +280,6 @@ variation_groups:
           ```
           // Running text elements
 
-          // .a-micro-copy
-          @micro-copy:                @black;
-
           // .a-date
           @date:                      @gray;
 

@@ -51,23 +51,9 @@ variation_groups:
           Appears inline with label headings, and should be lowercase and placed in parenthesis after the label.
       - variation_code_snippet: >
           <label class="a-label a-label__heading"
-          for="textinput-example-default">
-
-          Label
-
-          </label>
-
-
-          <input class="a-text-input"
-                type="text"
-                id="textinput-example-default"
-                placeholder="Placeholder text">
-          <br><br>
-
-          <label class="a-label a-label__heading" for="textinput-example-email-default">
+          for="textinput-example-email-default">
               Email address
           </label>
-
 
           <input class="a-text-input"
                 type="text"

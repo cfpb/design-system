@@ -51,9 +51,8 @@ describe('Multiselect', () => {
       '.a-live_code .o-multiselect_options li:last-child',
     );
     await lastMultiSelectOption.scrollIntoView();
-    const multiselectFieldsetScrollTop = await multiselectFieldset.getProperty(
-      'scrollTop',
-    );
+    const multiselectFieldsetScrollTop =
+      await multiselectFieldset.getProperty('scrollTop');
     // Ensure multiselect has fully expanded
     await browser.pause(300);
     // If the scrollTop of the fieldset is zero, it means no scrolling was necessary to reach

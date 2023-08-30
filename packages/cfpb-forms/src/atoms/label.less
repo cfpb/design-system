@@ -3,7 +3,12 @@
 
   &_helper {
     color: @label-helper;
-    font-size: unit((@size-v / @base-font-size-px), em);
+    font-size: unit((16px / @base-font-size-px), rem);
+    font-weight: normal;
+
+    .respond-to-max( @bp-xs-max, {
+      font-size: unit((14px / @base-font-size-px), rem);
+    });
 
     &__block {
       display: block;
@@ -20,15 +25,5 @@
 
     // Overwrites heading-4 margin.
     margin-bottom: unit((10px / @font-size), em);
-
-    .a-label_helper {
-      font-size: unit((@base-font-size-px / @font-size), em);
-      font-weight: normal;
-
-      &__block {
-        // Add a gap between the label helper and label.
-        margin-top: unit((10px / @base-font-size-px), em);
-      }
-    }
   }
 }

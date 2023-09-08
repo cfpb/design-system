@@ -4078,6 +4078,12 @@ h6 + .a-legend,
 ::placeholder {
   color: #5a5d61;
 }
+::-webkit-input-placeholder {
+  color: #5a5d61;
+}
+input[type='date']::-webkit-datetime-edit {
+  color: #5a5d61;
+}
 .m-btn-inside-input {
   position: relative;
 }

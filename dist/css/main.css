@@ -3850,7 +3850,8 @@ input.a-btn::-moz-focus-inner {
 }
 .a-label_helper {
   color: #5a5d61;
-  font-size: 0.875em;
+  font-size: 1rem;
+  font-weight: normal;
 }
 .a-label_helper__block {
   display: block;
@@ -3893,12 +3894,8 @@ h6 + .a-label__heading,
     line-height: 1.125;
   }
 }
-.a-label__heading .a-label_helper {
-  font-size: 0.88888889em;
-  font-weight: normal;
-}
 .a-label__heading .a-label_helper__block {
-  margin-top: 0.625em;
+  margin-top: 0.625rem;
 }
 .a-legend {
   margin-bottom: 0.83333333em;

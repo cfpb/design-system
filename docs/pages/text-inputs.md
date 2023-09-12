@@ -57,7 +57,6 @@ variation_groups:
                  type="text"
                  id="textinput-example-disabled"
                  placeholder="Placeholder text"
-                 value="Input text"
                  disabled>
         variation_specs: |-
           #### Default

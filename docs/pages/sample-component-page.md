@@ -124,7 +124,7 @@ variation_groups:
           #### Disabled
           - Border: 1 px, Gray 60 (#919395)
           - Background: Gray 10 (#e7e8e9)
-          - Avenir Next Regular, 16 px, Gray (#5a5d61)
+          - Avenir Next Regular, 16 px, Dark Gray (#43484e)
   - variation_group_name: Variations
     variation_group_description: >
       Optional descriptive text. 1-3 sentences, 200-350 characters.

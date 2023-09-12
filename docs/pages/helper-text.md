@@ -26,7 +26,7 @@ variation_groups:
 
           #### Block helper text
 
-          - Avenir Next Regular, 16 px, Gray (#5a5d61)
+          - Avenir Next Regular, 16 px, Dark Gray (#43484e)
 
           - Margin top: 10 px
 
@@ -45,7 +45,7 @@ variation_groups:
         variation_specs: >-
           #### Inline helper text
 
-          * Avenir Next Regular, 16 px, Gray (#5a5d61)
+          * Avenir Next Regular, 16 px, Dark Gray (#43484e)
 
           * Margin bottom: 10 px
 
@@ -68,7 +68,7 @@ variation_groups:
         variation_name: Placeholder text
         variation_specs: |-
           #### Placeholder text
-          Avenir Next Regular, 16 px, Gray (#5a5d61)
+          Avenir Next Regular, 16 px, Dark Gray (#43484e)
     variation_group_name: Types
     variation_group_description:
       'Types of helper text include block helper text,

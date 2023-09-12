@@ -172,7 +172,7 @@ variation_groups:
 
           * Border: 1 px, Gray 60 (#919395)
           * Background: Gray 20 (#d2d3d5)
-          * Avenir Next Regular, 16 px, Gray (#5a5d61)
+          * Avenir Next Regular, 16 px, Dark Gray (#43484e)
   - variations:
       - variation_code_snippet: >-
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">

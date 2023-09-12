@@ -102,7 +102,7 @@ variation_groups:
         variation_specs: |-
           #### Default/Hover/Active
 
-          * Avenir Next Medium, 16px, Gray (#5a5d61)
+          * Avenir Next Medium, 16px, Dark Gray (#43484e)
           * Background: Gray 20 (#d2d3d5)
           * Cursor set to `not-allowed`
 

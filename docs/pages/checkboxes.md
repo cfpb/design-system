@@ -54,7 +54,7 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
               <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Standard checkboxes
         variation_specs: >-
           #### Default checkbox
@@ -104,7 +104,7 @@ variation_groups:
 
           * Background: Gray 10 (#e7e8e9)
 
-          * Avenir Next Regular, 16 px, Gray (#5a5d61)
+          * Avenir Next Regular, 16 px, Dark Gray (#43484e)
 
 
           #### Spacing
@@ -112,7 +112,7 @@ variation_groups:
 
           Text spacing should inform spacing of checkboxes, and a checkbox should be vertically centered with the first line of text in an option.
     variation_group_name: Types
-  - variation_group_description: ""
+  - variation_group_description: ''
     variations:
       - variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox
@@ -236,8 +236,9 @@ variation_groups:
 
           * Border: 1 px, Gray 60 (#919395)
           * Background: Gray 20 (#d2d3d5)
-          * Avenir Next Regular, 16 px, Gray (#5a5d61)
-        variation_description: For better usability, consider using checkboxes with
+          * Avenir Next Regular, 16 px, Dark Gray (#43484e)
+        variation_description:
+          For better usability, consider using checkboxes with
           large target areas. These are easier to interact with (especially on
           smaller screens) and harder to miss. They are especially desirable
           when the form will have heavy mobile usage. Given the amount of real
@@ -263,7 +264,7 @@ description: Use checkboxes when the user can select more than one option from a
   list. Make clear with helper text that this is the case. Use [radio
   buttons](/design-system/components/radio-buttons) when the user can choose
   only one option from a list.
-use_cases: ""
+use_cases: ''
 behavior: >-
   Selecting the checkbox or touching the label text next to it should toggle the
   state of the checkbox on and off.
@@ -273,5 +274,5 @@ behavior: >-
 accessibility: To optimize screen reader accessibility, lay out checkboxes
   vertically rather than horizontally.
 last_updated: 2019-09-17T14:30:15.293Z
-research: ""
+research: ''
 ---

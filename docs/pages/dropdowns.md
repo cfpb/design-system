@@ -115,7 +115,7 @@ variation_groups:
           <h3 class="h4">Disabled</h3>
 
           * Background: Gray 10 (#e7e8e9)
-          * Avenir Next Regular, 16 px, Gray (#5a5d61)
+          * Avenir Next Regular, 16 px, Dark Gray (#43484e)
     variation_group_name: Dropdowns
   - variation_group_name: Multiselects
     variations:

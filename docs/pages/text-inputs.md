@@ -64,7 +64,7 @@ variation_groups:
           - Border: 1 px, Gray 60 (#919395)
           - Height: 35 px
           - Padding: 7px
-          - Placeholder text: Avenir Next Regular, 16px, Gray (#5a5d61) 
+          - Placeholder text: Avenir Next Regular, 16px, Dark Gray (#43484e) 
           - Input text: Avenir Next Regular, 16px, Black (#101820)
           - Text should be in sentence case
 
@@ -103,7 +103,7 @@ variation_groups:
                     placeholder="Placeholder text">Input text</textarea>
         variation_specs: |-
           * Border: 1 px, Gray 60 (#919395)
-          * Avenir Next Regular, 16 px, Gray (#5a5d61)
+          * Avenir Next Regular, 16 px, Dark Gray (#434484e)
     variation_group_description: ''
   - variation_group_name: Variations
     variations:

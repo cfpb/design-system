@@ -17,8 +17,7 @@ variation_groups:
           <input class="a-text-input"
                 type="text"
                 id="textinput-example-default"
-                placeholder="Placeholder text"
-                value="Input text">
+                placeholder="Placeholder text" >
           <br><br>
 
           <label class="a-label a-label__heading" for="textinput-example-hover">
@@ -57,7 +56,6 @@ variation_groups:
                  type="text"
                  id="textinput-example-disabled"
                  placeholder="Placeholder text"
-                 value="Input text"
                  disabled>
         variation_specs: |-
           #### Default

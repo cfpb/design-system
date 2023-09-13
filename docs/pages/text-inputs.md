@@ -17,8 +17,7 @@ variation_groups:
           <input class="a-text-input"
                 type="text"
                 id="textinput-example-default"
-                placeholder="Placeholder text"
-                value="Input text">
+                placeholder="Placeholder text" >
           <br><br>
 
           <label class="a-label a-label__heading" for="textinput-example-hover">

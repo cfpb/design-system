@@ -97,9 +97,7 @@ variation_groups:
           <textarea class="a-text-input"
                     id="textarea-example-default"
                     placeholder="Placeholder text">Input text</textarea>
-        variation_specs: |-
-          * Border: 1 px, Gray 60 (#919395)
-          * Avenir Next Regular, 16 px, Dark Gray (#434484e)
+        variation_specs: ""
     variation_group_description: ""
   - variation_group_name: Variations
     variations:

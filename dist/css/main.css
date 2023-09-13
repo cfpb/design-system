@@ -3683,7 +3683,7 @@ input.a-btn::-moz-focus-inner {
 .a-btn__disabled.active,
 .a-btn[disabled].active {
   background-color: #d2d3d5;
-  color: #5a5d61;
+  color: #43484e;
   cursor: default;
   cursor: not-allowed;
 }
@@ -3799,7 +3799,7 @@ input.a-btn::-moz-focus-inner {
 }
 .a-btn__disabled .a-btn_icon,
 .a-btn[disabled] .a-btn_icon {
-  border-color: #96989b;
+  border-color: #8b8e92;
 }
 .m-btn-group .a-btn + .a-btn {
   margin-left: 0.375em;
@@ -3849,7 +3849,7 @@ input.a-btn::-moz-focus-inner {
   display: inline-block;
 }
 .a-label_helper {
-  color: #5a5d61;
+  color: #43484e;
   font-size: 1rem;
   font-weight: normal;
 }
@@ -3965,7 +3965,7 @@ h6 + .a-legend,
   outline-offset: 3px;
 }
 .a-select select[disabled] {
-  color: #5a5d61;
+  color: #43484e;
   background-color: #e7e8e9;
   cursor: not-allowed;
 }
@@ -3978,7 +3978,7 @@ h6 + .a-legend,
 .a-select select[disabled] option,
 .a-select select[disabled] option:disabled,
 .a-select select option:disabled {
-  color: #5a5d61;
+  color: #43484e;
 }
 .a-select::after {
   width: 2.1875em;
@@ -4026,7 +4026,7 @@ h6 + .a-legend,
 .a-text-input:disabled.hover,
 .a-text-input:disabled:focus,
 .a-text-input:disabled.focus {
-  color: #5a5d61;
+  color: #43484e;
   background-color: #e7e8e9;
   cursor: not-allowed;
   border-color: #919395;
@@ -4067,19 +4067,19 @@ h6 + .a-legend,
           appearance: none;
 }
 ::-moz-placeholder {
-  color: #5a5d61;
+  color: #43484e;
 }
 :-ms-input-placeholder {
-  color: #5a5d61;
+  color: #43484e;
 }
 ::placeholder {
-  color: #5a5d61;
+  color: #43484e;
 }
 ::-webkit-input-placeholder {
-  color: #5a5d61;
+  color: #43484e;
 }
 input[type='date']::-webkit-datetime-edit {
-  color: #5a5d61;
+  color: #43484e;
 }
 .m-btn-inside-input {
   position: relative;
@@ -4197,7 +4197,7 @@ input[type='date']::-webkit-datetime-edit {
 .m-form-field__checkbox .a-radio:disabled + .a-label,
 .m-form-field__radio .a-radio:disabled + .a-label {
   cursor: not-allowed;
-  color: #5a5d61;
+  color: #43484e;
 }
 .m-form-field__checkbox .a-checkbox:disabled + .a-label::before,
 .m-form-field__radio .a-checkbox:disabled + .a-label::before,
@@ -4299,7 +4299,7 @@ input[type='date']::-webkit-datetime-edit {
 .m-form-field__lg-target .a-radio:checked:disabled + .a-label,
 .m-form-field__lg-target .a-checkbox:hover:disabled + .a-label,
 .m-form-field__lg-target .a-radio:hover:disabled + .a-label {
-  color: #5a5d61;
+  color: #43484e;
   box-shadow: none;
   background-color: #d2d3d5;
 }
@@ -5382,7 +5382,7 @@ input.skip-nav_link:focus::-moz-focus-inner {
 .skip-nav_link:focus__disabled.active,
 .skip-nav_link:focus[disabled].active {
   background-color: #d2d3d5;
-  color: #5a5d61;
+  color: #43484e;
   cursor: default;
   cursor: not-allowed;
 }

@@ -4075,9 +4075,6 @@ h6 + .a-legend,
 ::placeholder {
   color: #43484e;
 }
-::-webkit-input-placeholder {
-  color: #43484e;
-}
 input[type='date']::-webkit-datetime-edit {
   color: #43484e;
 }

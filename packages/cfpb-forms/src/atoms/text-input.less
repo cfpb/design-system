@@ -80,14 +80,12 @@
   appearance: none;
 }
 
-//Change place holder text to gray (#5a5d61)
+// Change place holder text to dark gray (#43484e).
 ::placeholder {
   color: @input-text__placeholder;
 }
-::-webkit-input-placeholder {
-  color: @input-text__placeholder;
-}
-//Force placeholder text color change for "date" fieldtype
+
+// Force placeholder text color change for "date" field type.
 input[type='date']::-webkit-datetime-edit {
   color: @input-text__placeholder;
 }

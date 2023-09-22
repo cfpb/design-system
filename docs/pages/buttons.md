@@ -160,26 +160,6 @@ variation_groups:
     variation_group_description: ''
     variations:
       - variation_code_snippet: >-
-          <button class="a-btn a-btn__super" title="Default state">Default
-          state</button>
-
-
-          <button class="a-btn a-btn__super hover" title="Hovered state">Hovered state</button>
-
-
-          <button class="a-btn a-btn__super focus" title="Focused state">Focused state</button>
-
-
-          <button class="a-btn a-btn__super active" title="Active state">Active state</button>
-        variation_description:
-          At the designer’s discretion, use the super button on
-          consumer-facing products for an important call to action.
-        variation_name: Super buttons
-        variation_specs: |-
-          - Avenir Next Medium, 18px, White (#ffffff)
-          - Top and bottom padding: 15px
-          - Left and right padding: 30px
-      - variation_code_snippet: >-
           <button class="a-btn a-btn__full-on-xs" title="Default state">Default
           state</button>
 

@@ -21,7 +21,6 @@ components are all dependencies of this component.
   - [Secondary button](#secondary-button)
   - [Destructive action button](#destructive-action-button)
   - [Disabled button](#disabled-button)
-  - [Super button](#super-button)
   - [Full-width buttons on x-small screens](#full-width-buttons-on-x-small-screens)
   - [Button links](#button-links)
   - [Icon buttons](#icon-buttons)
@@ -74,9 +73,6 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 @btn-v-padding:             8px;
 @btn-h-padding:             14px;
 @btn-v-padding-modifier-ie: 0.8;
-
-// .btn__super
-@btn__super-font-size:      18px;
 ```
 
 ## Atoms
@@ -307,62 +303,62 @@ Button Tag w/ disabled attr
 
 #### Default state
 
-<a href="#" class="a-btn a-btn__super">Anchor Tag</a>
-<button class="a-btn a-btn__super" title="Test button">Button Tag</button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__super">
+<a href="#" class="a-btn">Anchor Tag</a>
+<button class="a-btn" title="Test button">Button Tag</button>
+<input type="submit" value="Input Tag" class="a-btn">
 
 ```
-<a href="#" class="a-btn a-btn__super">Anchor Tag</a>
-<button class="a-btn a-btn__super" title="Test button">Button Tag</button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__super">
+<a href="#" class="a-btn">Anchor Tag</a>
+<button class="a-btn" title="Test button">Button Tag</button>
+<input type="submit" value="Input Tag" class="a-btn">
 ```
 
 #### Hovered state
 
-<a href="#" class="a-btn a-btn__super hover">Anchor Tag</a>
-<button class="a-btn a-btn__super hover" title="Test button">
+<a href="#" class="a-btn hover">Anchor Tag</a>
+<button class="a-btn hover" title="Test button">
 Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__super hover">
+<input type="submit" value="Input Tag" class="a-btn hover">
 
 ```
-<a href="#" class="a-btn a-btn__super hover">Anchor Tag</a>
-<button class="a-btn a-btn__super hover" title="Test button">
+<a href="#" class="a-btn hover">Anchor Tag</a>
+<button class="a-btn hover" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__super hover">
+<input type="submit" value="Input Tag" class="a-btn hover">
 ```
 
 #### Focused state
 
-<a href="#" class="a-btn a-btn__super focus">Anchor Tag</a>
-<button class="a-btn a-btn__super focus" title="Test button">
+<a href="#" class="a-btn focus">Anchor Tag</a>
+<button class="a-btn focus" title="Test button">
 Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__super focus">
+<input type="submit" value="Input Tag" class="a-btn focus">
 
 ```
-<a href="#" class="a-btn a-btn__super focus">Anchor Tag</a>
-<button class="a-btn a-btn__super focus" title="Test button">
+<a href="#" class="a-btn focus">Anchor Tag</a>
+<button class="a-btn focus" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__super focus">
+<input type="submit" value="Input Tag" class="a-btn focus">
 ```
 
 #### Active state
 
-<a href="#" class="a-btn a-btn__super active">Anchor Tag</a>
-<button class="a-btn a-btn__super active" title="Test button">
+<a href="#" class="a-btn active">Anchor Tag</a>
+<button class="a-btn active" title="Test button">
 Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__super active">
+<input type="submit" value="Input Tag" class="a-btn active">
 
 ```
-<a href="#" class="a-btn a-btn__super active">Anchor Tag</a>
-<button class="a-btn a-btn__super active" title="Test button">
+<a href="#" class="a-btn active">Anchor Tag</a>
+<button class="a-btn active" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__super active">
+<input type="submit" value="Input Tag" class="a-btn active">
 ```
 
 ### Full-width buttons on x-small screens
@@ -609,21 +605,5 @@ Warning Button Link
     <button class="a-btn">Yes</button>
     <button class="a-btn">No</button>
     <button class="a-btn">Maybe So</button>
-</div>
-```
-
-#### With super buttons
-
-<div class="m-btn-group">
-    <button class="a-btn a-btn__super">Yes</button>
-    <button class="a-btn a-btn__super">No</button>
-    <button class="a-btn a-btn__super">Maybe So</button>
-</div>
-
-```
-<div class="m-btn-group">
-    <button class="a-btn a-btn__super">Yes</button>
-    <button class="a-btn a-btn__super">No</button>
-    <button class="a-btn a-btn__super">Maybe So</button>
 </div>
 ```

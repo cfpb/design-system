@@ -1,4 +1,36 @@
 
+## v0.30.0 (2023-09-26)
+
+#### Breaking Change
+* `cfpb-buttons`, `cfpb-forms`
+  * [#1727](https://github.com/cfpb/design-system/pull/1727) Remove super button ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-typography`
+  * [#1704](https://github.com/cfpb/design-system/pull/1704) Remove a-micro-copy atom ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-buttons`, `cfpb-forms`
+  * [#1722](https://github.com/cfpb/design-system/pull/1722) Increase Contrast of Helper Text ([@BrewCityBoy](https://github.com/BrewCityBoy))
+
+#### Bug Fix
+* `cfpb-forms`
+  * [#1724](https://github.com/cfpb/design-system/pull/1724) Update babel/core, babel/preset-env, babel/preset-react, eslint, eslint-plugin-jsdoc, lerna, jest, jest-cli, jest-environment-jsdom, postcss, stylelint-less ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1717](https://github.com/cfpb/design-system/pull/1717) Update a-label_helper CSS ([@BrewCityBoy](https://github.com/BrewCityBoy))
+  * [#1719](https://github.com/cfpb/design-system/pull/1719) update date field placeholder text ([@BrewCityBoy](https://github.com/BrewCityBoy))
+
+#### Internal
+* Other
+  * [#1729](https://github.com/cfpb/design-system/pull/1729) Update babel/core, babel/preset-env, autoprefixer, eslint, eslint-plugin-jsdoc, postcss ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1716](https://github.com/cfpb/design-system/pull/1716) Update dependencies: babel/core, concurrently, eslint, eslint-plugin-import, eslint-plugin-jsdoc, jest, jest-cli, jest-environment-jsdom, lerna ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-expandables`
+  * [#1715](https://github.com/cfpb/design-system/pull/1715) Update dependencies: autoprefixer, eslint, eslint-plugin-react, lerna, postcss, prettier, stylelint ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Joshua Allen ([@BrewCityBoy](https://github.com/BrewCityBoy))
+- Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
+
+
+
 ## v0.29.0 (2023-08-10)
 
 #### Breaking Change

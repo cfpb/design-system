@@ -3693,10 +3693,6 @@ input.a-btn::-moz-focus-inner {
 .a-btn[disabled].focus {
   outline-color: #d2d3d5;
 }
-.a-btn__super {
-  padding: 0.61111111em 1.61111111em;
-  font-size: 1.125em;
-}
 @media only all and (max-width: 37.5em) {
   .a-btn__full-on-xs {
     display: block;
@@ -3803,9 +3799,6 @@ input.a-btn::-moz-focus-inner {
 }
 .m-btn-group .a-btn + .a-btn {
   margin-left: 0.375em;
-}
-.m-btn-group .a-btn__super + .a-btn__super {
-  margin-left: 0.33333333em;
 }
 /* ==========================================================================
    Design System
@@ -5388,10 +5381,6 @@ input.skip-nav_link:focus::-moz-focus-inner {
 .skip-nav_link:focus__disabled.focus,
 .skip-nav_link:focus[disabled].focus {
   outline-color: #d2d3d5;
-}
-.skip-nav_link:focus__super {
-  padding: 0.61111111em 1.61111111em;
-  font-size: 1.125em;
 }
 @media only all and (max-width: 37.5em) {
   .skip-nav_link:focus__full-on-xs {

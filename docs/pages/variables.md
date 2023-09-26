@@ -49,9 +49,6 @@ variation_groups:
           @btn-v-padding:             8px;
           @btn-h-padding:             14px;
           @btn-v-padding-modifier-ie: 0.8;
-
-          // .btn__super
-          @btn__super-font-size:      18px;
           ```
   - variation_group_name: Forms
     variations:

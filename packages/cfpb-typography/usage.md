@@ -17,8 +17,6 @@ and has more basic typography patterns.
   - [Color variables](#color-variables)
   - [Font variables](#font-variables)
   - [Font source variables](#font-source-variables)
-- [Headings](#headings)
-  - [Heading with icon](#heading-with-icon)
 - [Headers](#headers)
   - [Slug header](#slug-header)
   - [Meta header](#meta-header)
@@ -68,9 +66,6 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 @slug-header_border__thin:  @gray-10;
 @slug-header_border__thick: @green;
 
-// .m-meta-header
-@meta-header_border:        @gray-40;
-
 // Links
 
 // .a-link__jump
@@ -110,25 +105,6 @@ the fonts declared in `licensed-fonts.less`
 are located when self-hosting the font files.
 Can be either a relative or absolute path.
 
-### Heading with icon
-
-The heading with icon is typically used for listing categories in a meta
-header. Since categories can be repetitive, we suggest placing a label with
-`.u-visually-hidden` prior to the headings to add more context for screen
-readers (see Meta Header below).
-
-<a href="#" class="a-heading a-heading__icon">
-    {% include icons/dialogue.svg %}
-    Consumer finance
-</a>
-
-```
-<a href="#" class="a-heading a-heading__icon">
-    {% raw %}{% include icons/dialogue.svg %}{% endraw %}
-    Consumer finance
-</a>
-```
-
 ## Headers
 
 ### Slug header
@@ -149,52 +125,38 @@ readers (see Meta Header below).
 
 ### Meta header
 
-Note that the example shows `.m-meta-header_left` using the `.a-heading__icon`
-pattern and `.m-meta-header_right` using the `.a-date` pattern but you could use
-other patterns in place of them. Or you can even swap them so that date is
-attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is attached to
-`.m-meta-header_right`.
-
 #### Default meta header
 
 <header class="m-meta-header">
+    <div class="m-meta-header_left">
+        {% include icons/credit-card.svg %}
+        Consumer finance
+        <span class="m-meta-header_separator">|</span>
+        {% include icons/bullhorn.svg %}
+        At the CFPB
+        <span class="m-meta-header_separator">|</span>
+    </div>
     <div class="m-meta-header_right">
         <span class="a-date">
             Nov 4, 2013
         </span>
-    </div>
-    <div class="m-meta-header_left">
-        <span class="u-visually-hidden">Categories: </span>
-        <a href="#" class="a-heading a-heading__icon">
-            {% include icons/credit-card.svg %}
-            Consumer finance
-        </a>
-        |
-        <a href="#" class="a-heading a-heading__icon">
-            {% include icons/bullhorn.svg %}
-            At the CFPB
-        </a>
     </div>
 </header>
 
 ```
 <header class="m-meta-header">
+    <div class="m-meta-header_left">
+        {% include icons/credit-card.svg %}
+        Consumer finance
+        <span class="m-meta-header_separator">|</span>
+        {% include icons/bullhorn.svg %}
+        At the CFPB
+        <span class="m-meta-header_separator">|</span>
+    </div>
     <div class="m-meta-header_right">
         <span class="a-date">
             Nov 4, 2013
         </span>
-    </div>
-    <div class="m-meta-header_left">
-        <span class="u-visually-hidden">Categories: </span>
-        <a href="#" class="a-heading a-heading__icon">
-            {% raw %}{% include icons/credit-card.svg %}{% endraw %}
-            Consumer finance
-        </a>
-        |
-        <a href="#" class="a-heading a-heading__icon">
-            {% raw %}{% include icons/bullhorn.svg %}{% endraw %}
-            At the CFPB
-        </a>
     </div>
 </header>
 ```

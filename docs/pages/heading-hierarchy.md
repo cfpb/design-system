@@ -87,7 +87,7 @@ variation_groups:
           | --------- | -------------------------------------------- |
           | Display   | Avenir Next Medium, 60pt / 66pt              |
           | Heading 1 | Avenir Next Regular, 38pt / 40pt             |
-          | Heading 2 | Avenir Next Regular, 26pt / 28pt            
+          | Heading 2 | Avenir Next Regular, 26pt / 28pt
           |
           | Heading 3 | Avenir Next Demi Bold, 16pt / 18pt           |
           | Heading 4 | Avenir Next Medium, 14pt / 16pt              |
@@ -100,37 +100,27 @@ variation_groups:
 
   - variation_group_name: Variations
     variations:
-      - variation_name: 'Heading with icon '
-        variation_description:
-          'The heading with icon is typically used for listing
-          categories in a meta header on pages like the [blog
+      - variation_name: 'Meta header'
+        variation_description: 'The meta header is typically used for listing
+          categories in on pages like the [blog
           page](https://www.consumerfinance.gov/about-us/blog/). '
         variation_code_snippet: |-
           <header class="m-meta-header">
+              <div class="m-meta-header_left">
+                  {% include icons/credit-card.svg %}
+                  Consumer finance
+                  <span class="m-meta-header_separator">|</span>
+                  {% include icons/bullhorn.svg %}
+                  At the CFPB
+                  <span class="m-meta-header_separator">|</span>
+              </div>
               <div class="m-meta-header_right">
                   <span class="a-date">
                       Nov 4, 2013
                   </span>
               </div>
-              <div class="m-meta-header_left">
-                  <span class="u-visually-hidden">Categories: </span>
-                  <a href="#" class="a-heading a-heading__icon">
-                      {% include icons/credit-card.svg %}
-                      Consumer finance
-                  </a>
-                  |
-                  <a href="#" class="a-heading a-heading__icon">
-                      {% include icons/bullhorn.svg %}
-                      At the CFPB
-                  </a>
-              </div>
           </header>
-        variation_implementation: This example of a heading with icon shows
-          `.m-meta-header_left` using the `.a-heading__icon` pattern and
-          `.m-meta-header_right` using the `.a-date` pattern. However, you could
-          use other patterns in place of them, or even swap them so that date is
-          attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is
-          attached to `.m-meta-header_right`.
+        variation_implementation:
         variation_specs: >-
           * Avenir Next Medium, 18px
 
@@ -149,20 +139,7 @@ variation_groups:
 
           An example of the eyebrow heading can be found on the [Buying a House journey pages](https://www.consumerfinance.gov/owning-a-home/process/prepare/).
         variation_code_snippet: >
-          <!--The code snippet below is only used for display purposes. The
-          eyebrow heading should be built using div tags:
-
-
-          <div class ="eyebrow">
-
-
-          The text will be styled the same as H5 heading text.
-
-          -->
-
-
           <div class="h5">eyebrow heading</div>
-
           <div class="h1">Heading 1</div>
         variation_specs: |-
           * Avenir Next Demi Bold

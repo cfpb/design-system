@@ -87,7 +87,7 @@ variation_groups:
           | --------- | -------------------------------------------- |
           | Display   | Avenir Next Medium, 60pt / 66pt              |
           | Heading 1 | Avenir Next Regular, 38pt / 40pt             |
-          | Heading 2 | Avenir Next Regular, 26pt / 28pt            
+          | Heading 2 | Avenir Next Regular, 26pt / 28pt
           |
           | Heading 3 | Avenir Next Demi Bold, 16pt / 18pt           |
           | Heading 4 | Avenir Next Medium, 14pt / 16pt              |
@@ -176,7 +176,7 @@ variation_groups:
           modules.
         variation_code_snippet: |-
           <header class="m-slug-header">
-              <h2 class="a-heading">
+              <h2 class="m-slug-header_heading">
                   Slug heading
               </h2>
           </header>

@@ -7,7 +7,7 @@ variation_groups:
       - variation_code_snippet: >-
           <div class="o-email-signup">
               <header class="m-slug-header">
-                  <h2 class="a-heading">
+                  <h2 class="m-slug-header_heading">
                       Buying a House?
                   </h2>
               </header>
@@ -48,7 +48,7 @@ variation_groups:
           <div class="o-well" style="max-width: 370px">
               <div class="o-email-signup">
                   <header class="m-slug-header">
-                      <h2 class="a-heading">
+                      <h2 class="m-slug-header_heading">
                           Buying a House?
                       </h2>
                   </header>

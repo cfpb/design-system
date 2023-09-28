@@ -134,14 +134,14 @@ readers (see Meta Header below).
 ### Slug header
 
 <header class="m-slug-header">
-    <h2 class="a-heading">
+    <h2 class="m-slug-header_heading">
         Blog summary
     </h2>
 </header>
 
 ```
 <header class="m-slug-header">
-    <h2 class="a-heading">
+    <h2 class="m-slug-header_heading">
         Blog summary
     </h2>
 </header>

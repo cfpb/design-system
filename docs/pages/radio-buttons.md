@@ -1,15 +1,9 @@
 ---
-title: Radio buttons
 layout: variation
 section: components
 status: Released
-description: >
-  Use radio buttons when the user can choose only one option out of a list. Use
-  these for a small number of discrete elements—avoid long lists of radio
-  buttons (usually no more than 6-8 options). When there are more than two
-  options, stack radio buttons vertically.
 variation_groups:
-  - variation_group_name: Standard radio buttons
+  - variation_group_name: Standard radio button
     variations:
       - variation_code_snippet: >
           <div class="m-form-field m-form-field__radio">
@@ -44,7 +38,7 @@ variation_groups:
 
           <div class="m-form-field m-form-field__radio">
               <input class="a-radio" type="radio" id="test_radio_basic_checked" checked>
-              <label class="a-label" for="test_radio_basic_checked">Label</label>
+              <label class="a-label" for="test_radio_basic_checked">Selected</label>
           </div>
 
           <br>
@@ -68,7 +62,7 @@ variation_groups:
                      id="test_radio_basic_disabled_selected"
                      disabled
                      checked>
-              <label class="a-label" for="test_radio_basic_disabled_selected">Label</label>
+              <label class="a-label" for="test_radio_basic_disabled_selected">Disabled/selected</label>
           </div>
         variation_specs: |-
           <h3 class="h4">Default</h3>
@@ -101,8 +95,7 @@ variation_groups:
           * Background: Gray 10 (#e7e8e9)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
       - variation_name: Radio button with helper text
-        variation_description:
-          Checkboxes and radio button inputs can have labels that
+        variation_description: Checkboxes and radio button inputs can have labels that
           span multiple lines and have helper text that appears below the main
           label text.
         variation_code_snippet: |-
@@ -234,9 +227,8 @@ variation_groups:
                      checked>
               <label class="a-label" for="test_radio_lg_disabled_selected">Disabled/selected</label>
           </div>
-        variation_name: Large target area radio buttons
-        variation_description:
-          For better usability, consider using radio buttons with
+        variation_name: Large target area radio button
+        variation_description: For better usability, consider using radio buttons with
           large target areas. These are easier to interact with (especially on
           smaller screens) and harder to miss. They are especially desirable
           when the form will have heavy mobile usage. Given the amount of real
@@ -254,8 +246,16 @@ variation_groups:
                   </small>
                 </label>
           </div>
-        variation_name: Large target radio button with helper text
+        variation_name: Large target area radio button with helper text
     variation_group_name: Sizes
+guidelines: ""
+eyebrow: Form elements
+title: Radio buttons
+description: >
+  Use radio buttons when the user can choose only one option out of a list. Use
+  these for a small number of discrete elements—avoid long lists of radio
+  buttons (usually no more than 6-8 options). When there are more than two
+  options, stack radio buttons vertically.
 use_cases: >-
   Leave radio buttons unselected as the default. It’s easy for users to miss
   that a radio button has been preselected and to submit a form with an
@@ -266,12 +266,10 @@ use_cases: >-
 
 
   Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the default style shown below, make sure the target area is at least 45 x 45 px and includes the option text.
-guidelines: ''
-behavior: ''
+behavior: ""
 accessibility: There are some issues with Voiceover reading radio buttons. To
   get around this, consider using the aria-describedby attribute.
-research: ''
-related_items: ''
+related_items: ""
 last_updated: 2020-01-28T15:55:47.394Z
-eyebrow: Form elements
+research: ""
 ---

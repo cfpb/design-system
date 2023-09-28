@@ -114,7 +114,7 @@ variation_groups:
                   </span>
               </div>
           </header>
-        variation_implementation:
+        variation_implementation: null
         variation_specs: >-
           * Avenir Next Medium, 18px
 
@@ -132,9 +132,8 @@ variation_groups:
 
 
           An example of the eyebrow heading can be found on the [Buying a House journey pages](https://www.consumerfinance.gov/owning-a-home/process/prepare/).
-        variation_code_snippet: >
-          <div class="h5">eyebrow heading</div>
-          <div class="h1">Heading 1</div>
+        variation_code_snippet: |
+          <div class="h5">eyebrow heading</div> <div class="h1">Heading 1</div>
         variation_specs: |-
           * Avenir Next Demi Bold
           * 14px / 18px, 1px letter spacing
@@ -173,7 +172,7 @@ guidelines: >-
   ### Spacing
 
 
-  Refer to the [Guidelines section of the Fonts page](<https://cfpb.github.io/design-system/foundation/fonts#guidelines>) for information about heading spacing.
+  Refer to the [Guidelines section of the Fonts page](https://cfpb.github.io/design-system/foundation/fonts#guidelines) for information about heading spacing.
 eyebrow: Typography
 title: Headings
 description: A successful type hierarchy establishes the order of importance of

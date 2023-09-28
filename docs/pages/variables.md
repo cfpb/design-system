@@ -39,7 +39,7 @@ variation_groups:
           @btn__disabled-bg:          @gray-20;
           @btn__disabled-outline:     @gray-20;
           ```
-        variation_code_snippet: ''
+        variation_code_snippet: ""
       - variation_name: Sizing
         variation_description: |-
           ```
@@ -98,14 +98,14 @@ variation_groups:
           // .a-label_helper
           @label-helper:                            @gray;
           ```
-        variation_code_snippet: ''
+        variation_code_snippet: ""
       - variation_name: Sizing
         variation_description: |-
           ```
           // .a-select
           @select-height: 30px;
           ```
-        variation_code_snippet: ''
+        variation_code_snippet: ""
   - variation_group_name: Grid
     variation_group_description: >-
       ```
@@ -168,7 +168,7 @@ variation_groups:
 
           ```
   - variation_group_name: Layout
-    variation_group_description: ''
+    variation_group_description: ""
     variations:
       - variation_description: |-
           ```
@@ -236,12 +236,12 @@ variation_groups:
           @notification-icon-warning:   @gold;
           @notification-icon-error:     @red;
           ```
-        variation_code_snippet: ''
+        variation_code_snippet: ""
       - variation_name: Sizing
-        variation_description: '`@notification-padding__px: 15px;`'
-        variation_code_snippet: ''
+        variation_description: "`@notification-padding__px: 15px;`"
+        variation_code_snippet: ""
   - variation_group_name: Pagination
-    variation_group_description: ''
+    variation_group_description: ""
     variations:
       - variation_name: Color
         variation_description: |-
@@ -249,7 +249,7 @@ variation_groups:
           @pagination-text: @gray;
           @pagination-bg:   @gray-10;
           ```
-        variation_code_snippet: ''
+        variation_code_snippet: ""
       - variation_name: Sizing
         variation_description: |-
           ```
@@ -352,25 +352,20 @@ variation_groups:
           ```
       - variation_name: Font stack
         variation_description: >-
-          Override this variable in order to specify a font stack
-          other than the CFPB's default brand font and fallback.
+          Override this variable in order to specify a font stack other than the
+          CFPB's default brand font and fallback.
 
-          ```
-          @font-stack: 'Avenir Next', Arial, sans-serif;
-          ```
-      - variation_name: '@font-face file path'
+          ``` @font-stack: 'Avenir Next', Arial, sans-serif; ```
+      - variation_name: "@font-face file path"
         variation_description: >-
-          Use this variable to point to the file containing your `@font-face` rules.
-          To use none, set it to an empty string.
+          Use this variable to point to the file containing your `@font-face`
+          rules. To use none, set it to an empty string.
 
-          ```
-          @font-face-path: 'licensed-fonts.less';
-          ```
+          `@font-face-path: 'licensed-fonts.less';`
       - variation_name: Font source
         variation_description: >-
-          Use this variable to specify
-          where the fonts declared in `licensed-fonts.less`
-          are located when self-hosting the font files.
+          Use this variable to specify where the fonts declared in
+          `licensed-fonts.less` are located when self-hosting the font files.
           Can be either a relative or absolute path.
 
           ```

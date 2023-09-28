@@ -3,7 +3,7 @@ layout: variation
 section: components
 status: Released
 variation_groups:
-  - variation_group_name: Standard radio button
+  - variation_group_name: Types
     variations:
       - variation_code_snippet: >
           <div class="m-form-field m-form-field__radio">
@@ -94,6 +94,7 @@ variation_groups:
           * Border: 1 px, Gray 60 (#919395)
           * Background: Gray 10 (#e7e8e9)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
+        variation_name: Standard radio button
       - variation_name: Radio button with helper text
         variation_description: Checkboxes and radio button inputs can have labels that
           span multiple lines and have helper text that appears below the main
@@ -102,8 +103,7 @@ variation_groups:
           <div class="m-form-field m-form-field__radio">
               <input class="a-radio" type="radio" id="test_radio_basic_helper">
               <label class="a-label" for="test_radio_basic_helper">
-                  This is a very long label that wraps to a second line.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Radio button label
                   <small class="a-label_helper">
                       (This is helper text)
                   </small>
@@ -239,8 +239,7 @@ variation_groups:
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_helper">
               <label class="a-label" for="test_radio_lg_helper">
-                  This is a very long label that wraps to a second line.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Radio button label
                   <small class="a-label_helper">
                       (This is helper text)
                   </small>

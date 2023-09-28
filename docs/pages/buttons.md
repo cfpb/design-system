@@ -179,10 +179,10 @@ variation_groups:
               <button class="a-btn">No</button>
               <button class="a-btn">Maybe</button>
           </div>
-        variation_name: Default button group
-  - variation_group_name: Button with icon
+        variation_name: Button group
+  - variation_group_name: Buttons with icons
     variations:
-      - variation_name: Static icon button
+      - variation_name: Button with static icon
         variation_description: ""
         variation_code_snippet: |-
           <button class="a-btn">
@@ -200,7 +200,7 @@ variation_groups:
                   {% include icons/right.svg %}
               </span>
           </button>
-      - variation_name: Animated icon button
+      - variation_name: Button with animated icon
         variation_description: >+
           Use an animated icon in a button to reassure the user that the action
           they are attempting to perform is functioning as intended.

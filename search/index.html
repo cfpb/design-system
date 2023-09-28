@@ -3273,36 +3273,24 @@ Example of a non heading element:
                     'variation_name1': 'Meta header',
                     'variation_description1': "The meta header is typically used for listing categories on pages like the blog page.\n",
                     'variation_code_snippet1': `&lt;header class=&quot;m-meta-header&quot;&gt;
+    &lt;div class=&quot;m-meta-header_left&quot;&gt;
+        {% include icons/credit-card.svg %}
+        Consumer finance
+        &lt;span class=&quot;m-meta-header_separator&quot;&gt;|&lt;/span&gt;
+        {% include icons/bullhorn.svg %}
+        At the CFPB
+        &lt;span class=&quot;m-meta-header_separator&quot;&gt;|&lt;/span&gt;
+    &lt;/div&gt;
     &lt;div class=&quot;m-meta-header_right&quot;&gt;
         &lt;span class=&quot;a-date&quot;&gt;
             Nov 4, 2013
         &lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;m-meta-header_left&quot;&gt;
-        &lt;span class=&quot;u-visually-hidden&quot;&gt;Categories: &lt;/span&gt;
-        &lt;a href=&quot;#&quot; class=&quot;a-heading a-heading__icon&quot;&gt;
-            {% include icons/credit-card.svg %}
-            Consumer finance
-        &lt;/a&gt;
-        |
-        &lt;a href=&quot;#&quot; class=&quot;a-heading a-heading__icon&quot;&gt;
-            {% include icons/bullhorn.svg %}
-            At the CFPB
-        &lt;/a&gt;
-    &lt;/div&gt;
 &lt;/header&gt;`,
                 
                     'variation_name2': 'Eyebrow heading',
                     'variation_description2': "The eyebrow heading is an additional label that can be used to support the main H1 heading on a page, provide additional context, or orientation when necessary. Use the eyebrow heading to label page headings that are part of a larger group of related pages, or when additional context can help orient the user to the page’s purpose.\n\nThe eyebrow heading is secondary to and serves to support the main page heading. So it should be concise and shorter than the main page heading.\n\nAn example of the eyebrow heading can be found on the Buying a House journey pages.\n",
-                    'variation_code_snippet2': `&lt;!--The code snippet below is only used for display purposes. The eyebrow heading should be built using div tags:
-
-&lt;div class =&quot;eyebrow&quot;&gt;
-
-The text will be styled the same as H5 heading text.
---&gt;
-
-&lt;div class=&quot;h5&quot;&gt;eyebrow heading&lt;/div&gt;
-&lt;div class=&quot;h1&quot;&gt;Heading 1&lt;/div&gt;
+                    'variation_code_snippet2': `&lt;div class=&quot;h5&quot;&gt;eyebrow heading&lt;/div&gt; &lt;div class=&quot;h1&quot;&gt;Heading 1&lt;/div&gt;
 `,
                 
                     'variation_name3': 'Slug heading',

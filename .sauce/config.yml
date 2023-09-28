@@ -1,0 +1,45 @@
+apiVersion: v1alpha
+kind: playwright
+sauce:
+  region: us-west-1
+  concurrency: 3 # Controls how many suites are executed at the same time.
+  metadata:
+    tags:
+      - design-system-playwright
+docker:
+  # Affects how test files are transferred to the docker container when using the docker mode.
+  fileTransfer: copy # Choose between mount|copy.
+playwright:
+  version: package.json # See https://docs.saucelabs.com/dev/cli/saucectl/#supported-frameworks-and-browsers for a list of supported versions.
+  configFile: playwright.config.ts # See https://docs.saucelabs.com/dev/testrunner-toolkit/configuration/playwright#configuration-examples for a list of supported configuration files.
+# Controls what files are available in the context of a test run (unless explicitly excluded by .sauceignore).
+rootDir: ./
+suites:
+  - name: 'Firefox Win'
+    platformName: 'Windows 11'
+    screenResolution: '1440x900'
+    testMatch: ['.*.js']
+    params:
+      browserName: 'firefox'
+      project: 'firefox' # Runs the project that's defined in `playwright.config.js`
+  - name: 'Chromium Mac'
+    platformName: 'macOS 12'
+    screenResolution: '1440x900'
+    testMatch: ['.*.js']
+    params:
+      browserName: 'chromium'
+      project: 'chromium'
+  - name: 'Webkit Win'
+    platformName: 'Windows 11'
+    screenResolution: '1440x900'
+    testMatch: ['.*.js']
+    params:
+      browserName: 'webkit'
+      project: 'webkit'
+# Controls what artifacts to fetch when the suite on Sauce Cloud has finished.
+# artifacts:
+#   download:
+#     when: always
+#     match:
+#       - console.log
+#     directory: ./artifacts/

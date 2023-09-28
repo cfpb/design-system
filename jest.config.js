@@ -18,6 +18,7 @@ export default {
   moduleNameMapper: {
     '\\.(svg)$': '<rootDir>/test/unit-test/mocks/fileMock.js',
   },
+  modulePathIgnorePatterns: ['<rootDir>/test/browser'],
   testEnvironmentOptions: {
     url: 'http://localhost',
   },

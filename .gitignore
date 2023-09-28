@@ -60,6 +60,7 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
+playwright-report/
 
 # Front-End #
 #############

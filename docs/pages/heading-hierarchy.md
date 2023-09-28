@@ -111,7 +111,7 @@ variation_groups:
               <div class="m-meta-header_right">
                   <span class="a-date">
                       Published
-                      <span class="datetime"><time class="datetime_date" datetime="2023-09-05T00:00:00">SEP 05, 2023</time>
+                      <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
           </span>
                   </span>
               </div>

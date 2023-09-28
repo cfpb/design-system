@@ -99,7 +99,7 @@ variation_groups:
           on pages like the [blog
           page](https://www.consumerfinance.gov/about-us/blog/).
         variation_code_snippet: |-
-          <header class="m-meta-header">
+          <div class="m-meta-header">
               <div class="m-meta-header_left">
                   {% include icons/credit-card.svg %}
                   Consumer finance
@@ -113,7 +113,7 @@ variation_groups:
                       Nov 4, 2013
                   </span>
               </div>
-          </header>
+          </div>
         variation_implementation: null
         variation_specs: >-
           * Avenir Next Medium, 18px

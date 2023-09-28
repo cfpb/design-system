@@ -98,7 +98,7 @@ variation_groups:
         variation_description: The meta header is typically used for listing categories
           on pages like the [blog
           page](https://www.consumerfinance.gov/about-us/blog/).
-        variation_code_snippet: |-
+        variation_code_snippet: >-
           <div class="m-meta-header">
               <div class="m-meta-header_left">
                   {% include icons/credit-card.svg %}
@@ -110,7 +110,9 @@ variation_groups:
               </div>
               <div class="m-meta-header_right">
                   <span class="a-date">
-                      Nov 4, 2013
+                      Published
+                      <span class="datetime"><time class="datetime_date" datetime="2023-09-05T00:00:00">SEP 05, 2023</time>
+          </span>
                   </span>
               </div>
           </div>

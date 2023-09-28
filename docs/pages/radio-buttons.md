@@ -95,7 +95,7 @@ variation_groups:
           * Background: Gray 10 (#e7e8e9)
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
         variation_name: Standard radio button
-      - variation_name: Radio button with helper text
+      - variation_name: Standard radio button with helper text
         variation_description: Checkboxes and radio button inputs can have labels that
           span multiple lines and have helper text that appears below the main
           label text.
@@ -166,8 +166,14 @@ variation_groups:
           * Border: 1 px, Gray 60 (#919395)
           * Background: Gray 20 (#d2d3d5)
           * Avenir Next Regular, 16 px, Dark Gray (#43484e)
-  - variations:
-      - variation_code_snippet: >-
+      - variation_is_deprecated: false
+        variation_name: Large target area radio button
+        variation_description: For better usability, consider using radio buttons with
+          large target areas. These are easier to interact with (especially on
+          smaller screens) and harder to miss. They are especially desirable
+          when the form will have heavy mobile usage. Given the amount of real
+          estate they occupy, they’re probably not suited for all use cases.
+        variation_code_snippet: >-
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_default">
               <label class="a-label" for="test_radio_lg_default">Default</label>
@@ -227,15 +233,11 @@ variation_groups:
                      checked>
               <label class="a-label" for="test_radio_lg_disabled_selected">Disabled/selected</label>
           </div>
-        variation_name: Large target area radio button
-        variation_description: For better usability, consider using radio buttons with
-          large target areas. These are easier to interact with (especially on
-          smaller screens) and harder to miss. They are especially desirable
-          when the form will have heavy mobile usage. Given the amount of real
-          estate they occupy, they’re probably not suited for all use cases.
         variation_specs: These are covered in [specs for large target area
           checkboxes](https://cfpb.github.io/design-system/components/checkboxes#large-target-area-checkboxes).
-      - variation_code_snippet: |-
+      - variation_is_deprecated: false
+        variation_name: Large target area radio button with helper text
+        variation_code_snippet: |-
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_helper">
               <label class="a-label" for="test_radio_lg_helper">
@@ -245,8 +247,6 @@ variation_groups:
                   </small>
                 </label>
           </div>
-        variation_name: Large target area radio button with helper text
-    variation_group_name: Sizes
 guidelines: ""
 eyebrow: Form elements
 title: Radio buttons

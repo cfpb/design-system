@@ -111,6 +111,18 @@ variation_groups:
 
 
           Text spacing should inform spacing of checkboxes, and a checkbox should be vertically centered with the first line of text in an option.
+      - variation_is_deprecated: false
+        variation_name: Standard checkbox with helper text
+        variation_code_snippet: >-
+          <div class="m-form-field m-form-field__checkbox">
+              <input class="a-radio" type="checkbox" id="test_checkbox_basic_helper">
+              <label class="a-label" for="test_checkbox_basic_helper">
+          Checkbox label
+                  <small class="a-label_helper">
+                      (This is helper text)
+                  </small>
+              </label>
+          </div>
     variation_group_name: Types
   - variation_group_description: ""
     variations:
@@ -245,6 +257,19 @@ variation_groups:
           example, they may not work well for terms of service agreement
           checkboxes.
         variation_name: Large target area checkbox
+      - variation_is_deprecated: false
+        variation_name: Large target area checkbox with helper text
+        variation_code_snippet: >-
+          <div class="m-form-field m-form-field__checkbox
+          m-form-field__lg-target">
+              <input class="a-checkbox" type="radio" id="test_radio_lg_helper">
+              <label class="a-label" for="test_checkbox_lg_helper">
+                 Checkbox label
+                  <small class="a-label_helper">
+                      (This is helper text)
+                  </small>
+                </label>
+          </div>
     variation_group_name: Sizes
 guidelines: >-
   ### Content guidelines

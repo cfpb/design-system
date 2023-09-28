@@ -1,4 +1,17 @@
 
+## v0.31.0 (2023-09-28)
+
+#### Breaking Change
+* `cfpb-typography`
+  * [#1731](https://github.com/cfpb/design-system/pull/1731) Update `m-meta-header` to latest spec ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1732](https://github.com/cfpb/design-system/pull/1732) Convert `a-heading` inside `m-slug-header` to `m-slug-header_heading` ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
+
+
+
 ## v0.30.0 (2023-09-26)
 
 #### Breaking Change

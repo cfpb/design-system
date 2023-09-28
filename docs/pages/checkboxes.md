@@ -123,10 +123,16 @@ variation_groups:
                   </small>
               </label>
           </div>
-    variation_group_name: Types
-  - variation_group_description: ""
-    variations:
-      - variation_code_snippet: >-
+      - variation_is_deprecated: false
+        variation_name: Large target area checkbox
+        variation_description: For better usability, consider using the checkboxes with
+          large target areas. These are easier to interact with (especially on
+          smaller screens) and harder to miss. They are especially desirable
+          when the form will have heavy mobile usage. Given the amount of real
+          estate they occupy, they’re probably not suited for all use cases; for
+          example, they may not work well for terms of service agreement
+          checkboxes.
+        variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox
           m-form-field__lg-target">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default">
@@ -249,14 +255,6 @@ variation_groups:
           * Border: 1 px, Gray 60 (#919395)
           * Background: Gray 20 (#d2d3d5)
           * Avenir Next Regular, 16 px, Dark Gray (#43484e)
-        variation_description: For better usability, consider using the checkboxes with
-          large target areas. These are easier to interact with (especially on
-          smaller screens) and harder to miss. They are especially desirable
-          when the form will have heavy mobile usage. Given the amount of real
-          estate they occupy, they’re probably not suited for all use cases; for
-          example, they may not work well for terms of service agreement
-          checkboxes.
-        variation_name: Large target area checkbox
       - variation_is_deprecated: false
         variation_name: Large target area checkbox with helper text
         variation_code_snippet: >-
@@ -270,7 +268,7 @@ variation_groups:
                   </small>
                 </label>
           </div>
-    variation_group_name: Sizes
+    variation_group_name: Types
 guidelines: >-
   ### Content guidelines
 

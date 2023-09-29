@@ -206,7 +206,7 @@ variation_groups:
           * Background: Gray 10 (#e7e8e9)
           * Padding: 15 px
 
-          ##### Radio button (or checkbox) and text
+          ##### Checkbox and text
 
           * Border: 1 px, Gray 60 (#919395)
           * Background: 20 px x 20 px, White (#ffffff)

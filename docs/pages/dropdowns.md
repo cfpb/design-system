@@ -1,11 +1,7 @@
 ---
-title: Dropdowns and multiselects
 layout: variation
 section: components
 status: Released
-description: Dropdowns allow the user to choose from a finite list of options.
-  They are not always the best choice from a usability perspective; see the use
-  cases section below for more details.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -85,8 +81,9 @@ variation_groups:
                   </select>
               </div>
           </div>
-        variation_description: ''
-        variation_name: ''
+        variation_description: Allows the user to select a single item from a dropdown
+          list of options.
+        variation_name: Single select
         variation_specs: |-
           <h3 class="h4">Default</h3>
 
@@ -116,10 +113,11 @@ variation_groups:
 
           * Background: Gray 10 (#e7e8e9)
           * Avenir Next Regular, 16 px, Dark Gray (#43484e)
-    variation_group_name: Dropdowns
-  - variation_group_name: Multiselects
-    variations:
-      - variation_code_snippet: >-
+      - variation_is_deprecated: false
+        variation_name: Multiselect
+        variation_description: Allows the user to select multiple items from a dropdown
+          list of options.
+        variation_code_snippet: >-
           <div class="m-form-field m-form-field__select">
               <label class="a-label a-label__heading" for="test_select__multiple">
                   Label
@@ -135,9 +133,17 @@ variation_groups:
                   <option value="option8">Multiselect options can also contain long words that will be wrapped like supercalifragilisticexpialidocious</option>
               </select>
           </div>
-    variation_group_description: 'Custom JavaScript may be required to make the
-      default multiselect component accessible for the visually impaired. See
-      the [accessibility](#accessibility) section for more information. '
+        variation_implementation: "Custom JavaScript may be required to make the default
+          multiselect component accessible for the visually impaired. See the
+          [accessibility](#accessibility) section for more information. "
+    variation_group_name: Types
+guidelines: ""
+eyebrow: Form elements
+title: Selects
+description: Selects allow users to make a single selection or multiple
+  selections from a finite list of options. They are not always the best choice
+  from a usability perspective; see the use cases section below for more
+  details.
 use_cases: >-
   While dropdowns are easy to implement, they aren’t always the best choice from
   a usability perspective.
@@ -150,8 +156,7 @@ use_cases: >-
   * You need structured data for a long list. For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a dropdown facilitates this standardization.
 
   * The list options are familiar to the user. A dropdown is not a good place to introduce new or complicated terms or concepts. For instance, if the question is “What’s your favorite color of the rainbow,” a dropdown could be a good choice. The options are familiar and there are more than six. You don’t want the user to have to read and absorb a lot of new information in a dropdown.
-guidelines: ''
-behavior: ''
+behavior: ""
 accessibility: >-
   ### Dropdowns
 
@@ -163,10 +168,9 @@ accessibility: >-
   ### Multiselects
 
   From an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multiselect component is desired, use custom JavaScript to make it accessible.
-research: ''
 related_items: "* [Forms
   variables](https://cfpb.github.io/design-system/development/variables#forms-1\
   )"
 last_updated: 2020-01-06T20:31:06.632Z
-eyebrow: Form elements
+research: ""
 ---

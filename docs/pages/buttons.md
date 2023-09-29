@@ -154,10 +154,10 @@ variation_groups:
           printed, buttons are presented as links. See [Printed
           links](https://cfpb.github.io/design-system/components/links#printed-links)
           on the Links page for specifications.
-  - variation_group_name: Sizes
-    variation_group_description: ""
-    variations:
-      - variation_code_snippet: >-
+      - variation_is_deprecated: false
+        variation_name: Full-width button (on x-small screens)
+        variation_description: Reduce screen size to see this button in action.
+        variation_code_snippet: >-
           <button class="a-btn a-btn__full-on-xs" title="Default state">Default
           state</button>
 
@@ -169,21 +169,24 @@ variation_groups:
 
 
           <button class="a-btn a-btn__full-on-xs active" title="Active state">Active state</button>
-        variation_description: Reduce screen size to see this button in action.
-        variation_name: Full-width button (on x-small screens)
-  - variation_group_name: Groups
-    variations:
-      - variation_code_snippet: |-
+      - variation_is_deprecated: false
+        variation_name: Button group
+        variation_code_snippet: |-
           <div class="m-btn-group">
               <button class="a-btn">Yes</button>
               <button class="a-btn">No</button>
               <button class="a-btn">Maybe</button>
           </div>
-        variation_name: Button group
-  - variation_group_name: Buttons with icons
-    variations:
-      - variation_name: Button with static icon
-        variation_description: ""
+      - variation_is_deprecated: false
+        variation_name: Button with icon
+        variation_description: >-
+          * An icon should appear after the text it represents. The only
+          exception is the back button, in which the icon should appear before
+          the button’s text.
+
+          * Each icon should be used exclusively and consistently for one action.
+
+          * Icons should never be underlined.
         variation_code_snippet: |-
           <button class="a-btn">
               <span class="a-btn_icon
@@ -200,17 +203,19 @@ variation_groups:
                   {% include icons/right.svg %}
               </span>
           </button>
-      - variation_name: Button with animated icon
-        variation_description: >+
-          Use an animated icon in a button to reassure the user that the action
-          they are attempting to perform is functioning as intended.
-
+      - variation_is_deprecated: false
+        variation_name: Button with animated icon
         variation_code_snippet: >-
           <button class="a-btn">
               Submit your complaint
               <span class="a-btn_icon
                            a-btn_icon__on-right">{% include icons/updating.svg %}</span>
           </button>
+        variation_description: >
+          Use an animated icon in a button to reassure the user that the action
+          they are attempting to perform is functioning as intended.
+  - variation_group_name: Buttons with icons
+    variations: []
     variation_group_description: >-
       * An icon should appear after the text it represents. The only exception
       is the back button, in which the icon should appear before the button’s

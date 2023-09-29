@@ -11,7 +11,6 @@ variation_groups:
           <h3>Heading 3</h3>
           <h4>Heading 4</h4>
           <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
 
           <!--
           Example of a non heading element:
@@ -33,12 +32,11 @@ variation_groups:
           1             |
 
           | Heading 1 | Avenir Next Demi Bold, 34px /
-          42px\x03                                | Drops to Heading
+          42px\x03                              | Drops to Heading
           2             |
 
           | Heading 2 | Avenir Next Demi Bold, 26px /
-          32px                                 | Drops to Heading
-          3             |
+          32px                               | Drops to Heading 3             |
 
           | Heading 3 | Avenir Next Regular, 22px /
           28px                                 | Drops to Heading
@@ -49,14 +47,11 @@ variation_groups:
           18px           |
 
           | Heading 5 | Avenir Next Demi Bold, 14px / 18px, All caps,
-          1px letter spacing | No change                      |
-
-          | Heading 6 | Avenir Next Demi Bold, 12px / 15px, All caps,
           1px letter spacing | No change                      |"
     variation_group_name: Web headings
     variation_group_description: At screen widths of 600px and below, the Display
-      heading and Headings 1-4 drop in size. Headings 5-6 remain consistent at
-      all screen widths.
+      heading and Headings 1-4 drop in size. Heading 5 remains consistent at all
+      screen widths.
   - variation_group_name: Print headings
     variations:
       - variation_code_snippet: >-

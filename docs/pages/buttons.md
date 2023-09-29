@@ -211,16 +211,6 @@ variation_groups:
           printed, buttons are presented as links. See [Printed
           links](https://cfpb.github.io/design-system/components/links#printed-links)
           on the Links page for specifications.
-  - variation_group_name: Buttons with icons
-    variations: []
-    variation_group_description: >-
-      * An icon should appear after the text it represents. The only exception
-      is the back button, in which the icon should appear before the button’s
-      text.
-
-      * Each icon should be used exclusively and consistently for one action.
-
-      * Icons should never be underlined.
 use_cases: Buttons signal actions. They should be used sparingly; each
   additional button on a page reduces the visual prominence of a call to action.
   In contrast, [links](https://cfpb.github.io/design-system/components/links)

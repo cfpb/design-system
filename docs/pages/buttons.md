@@ -148,12 +148,6 @@ variation_groups:
           of the primary button.
         variation_specs: "* Destructive action link: Avenir Next Medium, 16px, Mid dark
           red (#c3381c)"
-      - variation_name: Printed button
-        variation_description: When a
-          [consumerfinance.gov](https://www.consumerfinance.gov/) page is
-          printed, buttons are presented as links. See [Printed
-          links](https://cfpb.github.io/design-system/components/links#printed-links)
-          on the Links page for specifications.
       - variation_is_deprecated: false
         variation_name: Full-width button (on x-small screens)
         variation_description: Reduce screen size to see this button in action.
@@ -179,14 +173,10 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Button with icon
-        variation_description: >-
-          * An icon should appear after the text it represents. The only
-          exception is the back button, in which the icon should appear before
-          the button’s text.
-
-          * Each icon should be used exclusively and consistently for one action.
-
-          * Icons should never be underlined.
+        variation_description: An icon should appear after the text it represents. The
+          only exception is the back button, in which the icon should appear
+          before the button’s text. Each icon should be used exclusively and
+          consistently for one action. Icons should never be underlined.
         variation_code_snippet: |-
           <button class="a-btn">
               <span class="a-btn_icon
@@ -214,6 +204,13 @@ variation_groups:
         variation_description: >
           Use an animated icon in a button to reassure the user that the action
           they are attempting to perform is functioning as intended.
+      - variation_is_deprecated: false
+        variation_name: Printed button
+        variation_description: When a
+          [consumerfinance.gov](https://www.consumerfinance.gov/) page is
+          printed, buttons are presented as links. See [Printed
+          links](https://cfpb.github.io/design-system/components/links#printed-links)
+          on the Links page for specifications.
   - variation_group_name: Buttons with icons
     variations: []
     variation_group_description: >-

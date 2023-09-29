@@ -38,7 +38,7 @@ variation_groups:
                   </fieldset>
               </div>
           </form>
-        variation_description: ''
+        variation_description: ""
         variation_name: Fieldset with checkboxes
       - variation_code_snippet: >-
           <form class="o-form">
@@ -61,10 +61,10 @@ variation_groups:
                   </fieldset>
               </div>
           </form>
-        variation_description: ''
+        variation_description: ""
         variation_name: Fieldset with radio buttons
     variation_group_name: Types
-    variation_group_description: ''
+    variation_group_description: ""
   - variation_group_name: Sizes
     variations:
       - variation_name: Large target fieldset with checkboxes
@@ -88,7 +88,7 @@ variation_groups:
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3">
-                          <label class="a-label" for="test_checkbox_lg_default_3">This is a very long label that wraps to a second line. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<small class=“a-label_helper’>(This is helper text)</small></label>
+                          <label class="a-label" for="test_checkbox_lg_default_3">Inline label</label>
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4">
@@ -131,11 +131,11 @@ variation_groups:
                                   </label>
                           </div>
               </fieldset>
-use_cases: ''
-guidelines: ''
-behavior: ''
-accessibility: ''
-last_updated: 2020-01-28T15:55:47.394Z
+use_cases: ""
+guidelines: ""
 eyebrow: Form elements
-research: ''
+behavior: ""
+accessibility: ""
+last_updated: 2020-01-28T15:55:47.394Z
+research: ""
 ---

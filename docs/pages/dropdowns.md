@@ -145,24 +145,29 @@ description: Selects allow users to make a single selection or multiple
   from a usability perspective; see the use cases section below for more
   details.
 use_cases: >-
-  While dropdowns are easy to implement, they aren’t always the best choice from
-  a usability perspective.
+  While selects are easy to implement, they aren’t always the best choice from a
+  usability perspective.
 
 
-  Use dropdowns when:
+  Use selects when:
 
-  * You have a long list of finite options. If the list is shorter than around six items, radio buttons might work better. If the options include something open ended, a text input field is better.
 
-  * You need structured data for a long list. For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a dropdown facilitates this standardization.
+  * You have a long list of finite options. 
 
-  * The list options are familiar to the user. A dropdown is not a good place to introduce new or complicated terms or concepts. For instance, if the question is “What’s your favorite color of the rainbow,” a dropdown could be a good choice. The options are familiar and there are more than six. You don’t want the user to have to read and absorb a lot of new information in a dropdown.
+    * If the list is shorter than around six items, [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons) or [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) might work better. 
+    * If the options include something open ended, a [text input](https://cfpb.github.io/design-system/components/text-inputs) field is better.
+  * You need structured data for a long list. 
+
+    * For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a select facilitates this standardization.
+  * The list options are familiar to the user. 
+
+    * A select is not a good place to introduce new or complicated terms or concepts. 
+    * For instance, if the question is “What’s your favorite color of the rainbow,” a select could be a good choice. The options are familiar and there are more than six.
 behavior: ""
 accessibility: >-
-  ### Dropdowns
+  ### Selects
 
-  * Keep in mind that dropdowns behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions.
-
-  * Mobile also doesn’t allow for the use of typeahead to navigate quickly to an item in a list, so navigating long lists can be especially cumbersome.
+  Keep in mind that selects behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions. Mobile also doesn’t allow for the use of typeahead to navigate quickly to an item in a list, so navigating long lists can be especially cumbersome.
 
 
   ### Multiselects

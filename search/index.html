@@ -5264,7 +5264,7 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
 `,
                 
                     'variation_name2': 'Standard radio button with helper text',
-                    'variation_description2': "Checkboxes and radio button inputs can have labels that span multiple lines and have helper text that appears below the main label text.\n",
+                    'variation_description2': "Radio button inputs can have labels that span multiple lines and can include optional helper text that appears below the main label text.\n",
                     'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__radio&quot;&gt;
     &lt;input class=&quot;a-radio&quot; type=&quot;radio&quot; id=&quot;test_radio_basic_helper&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_radio_basic_helper&quot;&gt;
@@ -5338,8 +5338,8 @@ Radio button label
 
 
             'title': 'Radio buttons',
-            'description': "Use radio buttons when the user can choose only one option out of a list. Use these for a small number of discrete elements—avoid long lists of radio buttons (usually no more than 6-8 options). When there are more than two options, stack radio buttons vertically.\n",
-            'use_cases': "Leave radio buttons unselected as the default. It’s easy for users to miss that a radio button has been preselected and to submit a form with an erroneous answer.\n\nNever use radio buttons for optional questions. Once a radio button is selected from a list, it or another choice must remain selected and there is no undoing the selection unless you reload the form.\n\nConsider using radio buttons with large target areas. If these won’t fit into your design and you need to use the default style shown below, make sure the target area is at least 45 x 45 px and includes the option text.\n",
+            'description': "Use radio buttons when the user can select exactly one choice from a group. Avoid long lists of radio buttons (usually no more than 6-8 options). When there are more than two options, stack radio buttons vertically.\n",
+            'use_cases': "Leave radio buttons unselected as the default. It’s easy for users to miss that a radio button has been preselected and to submit a form with an erroneous answer.\n\nNever use radio buttons for optional questions. Once a radio button is selected from a list, it or another choice must remain selected and there is no undoing the selection unless you reload the form.\n\nConsider using radio buttons with large target areas. If these won’t fit into your design and you need to use the standard radio button make sure the target area is at least 45 x 45 px and includes the label text.\n",
             'guidelines': "\n",
             'behavior': "\n",
             'accessibility': "There are some issues with Voiceover reading radio buttons. To get around this, consider using the aria-describedby attribute.\n",

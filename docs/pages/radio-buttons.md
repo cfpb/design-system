@@ -1,7 +1,6 @@
 ---
 layout: variation
 section: components
-status: Released
 variation_groups:
   - variation_group_name: Types
     variations:
@@ -105,7 +104,7 @@ variation_groups:
               <label class="a-label" for="test_radio_basic_helper">
                   Radio button label
                   <small class="a-label_helper">
-                      (This is helper text)
+                      (This is optional helper text)
                   </small>
               </label>
           </div>
@@ -243,18 +242,10 @@ variation_groups:
               <label class="a-label" for="test_radio_lg_helper">
           Radio button label
                   <small class="a-label_helper">
-                      (This is helper text)
+                      (This is optional helper text)
                   </small>
                 </label>
           </div>
-guidelines: ""
-eyebrow: Form elements
-title: Radio buttons
-description: >
-  Use radio buttons when the user can choose only one option out of a list. Use
-  these for a small number of discrete elements—avoid long lists of radio
-  buttons (usually no more than 6-8 options). When there are more than two
-  options, stack radio buttons vertically.
 use_cases: >-
   Leave radio buttons unselected as the default. It’s easy for users to miss
   that a radio button has been preselected and to submit a form with an
@@ -265,10 +256,19 @@ use_cases: >-
 
 
   Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the default style shown below, make sure the target area is at least 45 x 45 px and includes the option text.
-behavior: ""
+guidelines: ""
+eyebrow: Form elements
 accessibility: There are some issues with Voiceover reading radio buttons. To
   get around this, consider using the aria-describedby attribute.
 related_items: ""
 last_updated: 2020-01-28T15:55:47.394Z
+title: Radio buttons
+status: Released
+description: >
+  Use radio buttons when the user can choose only one option out of a list. Use
+  these for a small number of discrete elements—avoid long lists of radio
+  buttons (usually no more than 6-8 options). When there are more than two
+  options, stack radio buttons vertically.
+behavior: ""
 research: ""
 ---

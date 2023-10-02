@@ -2,11 +2,6 @@
 title: Checkboxes
 layout: variation
 section: components
-status: Released
-description: Use checkboxes when the user can select more than one option from a
-  list. Make clear with helper text that this is the case. Use [radio
-  buttons](/design-system/components/radio-buttons) when the user can choose
-  only one option from a list.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -274,7 +269,6 @@ variation_groups:
                 </label>
           </div>
     variation_group_name: Types
-use_cases: ""
 guidelines: >-
   ### Content guidelines
 
@@ -287,6 +281,12 @@ guidelines: >-
 
   * Text spacing should inform spacing of checkboxes and checkbox should be vertically centered with the first line of text in an option.
 eyebrow: Form elements
+status: Released
+description: Use checkboxes when the user can select more than one option from a
+  group. Make clear with helper text that this is the case. Use [radio
+  buttons](/design-system/components/radio-buttons) when the user can select
+  only one choice from a group.
+use_cases: ""
 behavior: >-
   Selecting the checkbox or touching the label text next to it should toggle the
   state of the checkbox on and off.

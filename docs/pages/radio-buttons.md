@@ -252,7 +252,9 @@ eyebrow: Form elements
 title: Radio buttons
 description: Use radio buttons when the user can select exactly one choice from
   a group. Avoid long lists of radio buttons (usually no more than 6-8 options).
-  When there are more than two options, stack radio buttons vertically.
+  When there are more than two options, stack radio buttons vertically. Use
+  [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) when
+  the user can select more than one option from a group.
 use_cases: >-
   Leave radio buttons unselected as the default. It’s easy for users to miss
   that a radio button has been preselected and to submit a form with an

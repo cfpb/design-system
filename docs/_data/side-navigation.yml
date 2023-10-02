@@ -38,13 +38,13 @@ first-level:
         nav-items:
           - page: Buttons
           - page: Checkboxes
-          - page: Dropdowns and multiselects
           - page: Fieldsets
           - page: Helper text
           - page: Labels and legends
           - page: Links
           - page: Radio buttons
           - page: Range sliders
+          - page: Selects
           - page: Text inputs
       - heading: Lists and tables
         nav-items:
@@ -84,15 +84,15 @@ first-level:
               - page: Interactive charts
   - heading: Pages
     second-level:
-      - heading:
+      - heading: Page templates
         nav-items:
-        - page: Landing pages
-        - page: Sublanding pages
-        - page: Browse pages
-        - page: Learn pages
-        - page: Filterable list pages
-        - page: Document detail pages
-        - page: Story pages
+          - page: Landing pages
+          - page: Sublanding pages
+          - page: Browse pages
+          - page: Learn pages
+          - page: Filterable list pages
+          - page: Document detail pages
+          - page: Story pages
   - heading: Development
     second-level:
       - heading: Atomic

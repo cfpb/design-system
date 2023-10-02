@@ -1917,7 +1917,7 @@ Checkbox label
         
         
 
-        'components-dropdowns-and-multiselects': {
+        'components-selects': {
 
             // Cycle through the variation fields of this page.
             
@@ -1925,8 +1925,8 @@ Checkbox label
                 
 
                 
-                    'variation_name1': '',
-                    'variation_description1': "\n",
+                    'variation_name1': 'Single select',
+                    'variation_description1': "Allows the user to select a single item from a dropdown list of options.\n",
                     'variation_code_snippet1': `&lt;!--Default state--&gt;
 
 &lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
@@ -1994,14 +1994,9 @@ Checkbox label
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': '',
-                    'variation_description1': "\n",
-                    'variation_code_snippet1': `&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+                    'variation_name2': 'Multiselect',
+                    'variation_description2': "Allows the user to select multiple items from a dropdown list of options.\n",
+                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
     &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__multiple&quot;&gt;
         Label
     &lt;/label&gt;
@@ -2020,15 +2015,15 @@ Checkbox label
             
 
 
-            'title': 'Dropdowns and multiselects',
-            'description': "Dropdowns allow the user to choose from a finite list of options. They are not always the best choice from a usability perspective; see the use cases section below for more details.\n",
-            'use_cases': "While dropdowns are easy to implement, they aren’t always the best choice from a usability perspective.\n\nUse dropdowns when:\n\n  You have a long list of finite options. If the list is shorter than around six items, radio buttons might work better. If the options include something open ended, a text input field is better.\n  You need structured data for a long list. For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a dropdown facilitates this standardization.\n  The list options are familiar to the user. A dropdown is not a good place to introduce new or complicated terms or concepts. For instance, if the question is “What’s your favorite color of the rainbow,” a dropdown could be a good choice. The options are familiar and there are more than six. You don’t want the user to have to read and absorb a lot of new information in a dropdown.\n\n",
+            'title': 'Selects',
+            'description': "Selects allow users to make a single selection or multiple selections from a finite list of options. They are not always the best choice from a usability perspective; see the use cases section below for more details.\n",
+            'use_cases': "While selects are easy to implement, they aren’t always the best choice from a usability perspective.\n\nUse selects when:\n\n\n  \n    You have a long list of finite options.\n\n    \n      If the list is shorter than around six items, radio buttons or checkboxes might work better.\n      If the options include something open ended, a text input field is better.\n    \n  \n  \n    You need structured data for a long list.\n\n    \n      For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a select facilitates this standardization.\n    \n  \n  \n    The list options are familiar to the user.\n\n    \n      A select is not a good place to introduce new or complicated terms or concepts.\n      For instance, if the question is “What’s your favorite color of the rainbow,” a select could be a good choice. The options are familiar and there are more than six.\n    \n  \n\n",
             'guidelines': "\n",
             'behavior': "\n",
-            'accessibility': "Dropdowns\n\n  Keep in mind that dropdowns behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions.\n  Mobile also doesn’t allow for the use of typeahead to navigate quickly to an item in a list, so navigating long lists can be especially cumbersome.\n\n\nMultiselects\nFrom an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multiselect component is desired, use custom JavaScript to make it accessible.\n",
+            'accessibility': "Selects\nKeep in mind that selects behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions. Mobile also doesn’t allow for the use of typeahead to navigate quickly to an item in a list, so navigating long lists can be especially cumbersome.\n\nMultiselects\nFrom an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multiselect component is desired, use custom JavaScript to make it accessible.\n",
             'research': "\n",
             'related_items': "\n  Forms variables\n\n",
-            'url': 'components/dropdowns-and-multiselects'
+            'url': 'components/selects'
         }
         ,
         
@@ -5275,7 +5270,7 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
     &lt;label class=&quot;a-label&quot; for=&quot;test_radio_basic_helper&quot;&gt;
         Radio button label
         &lt;small class=&quot;a-label_helper&quot;&gt;
-            (This is helper text)
+            (This is optional helper text)
         &lt;/small&gt;
     &lt;/label&gt;
 &lt;/div&gt;`,
@@ -5334,7 +5329,7 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
     &lt;label class=&quot;a-label&quot; for=&quot;test_radio_lg_helper&quot;&gt;
 Radio button label
         &lt;small class=&quot;a-label_helper&quot;&gt;
-            (This is helper text)
+            (This is optional helper text)
         &lt;/small&gt;
       &lt;/label&gt;
 &lt;/div&gt;`,

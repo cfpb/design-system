@@ -2,6 +2,11 @@
 title: Checkboxes
 layout: variation
 section: components
+status: Released
+description: Use checkboxes when the user can select more than one option from a
+  list. Make clear with helper text that this is the case. Use [radio
+  buttons](/design-system/components/radio-buttons) when the user can choose
+  only one option from a list.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -119,7 +124,7 @@ variation_groups:
               <label class="a-label" for="test_checkbox_basic_helper">
           Checkbox label
                   <small class="a-label_helper">
-                      (This is helper text)
+                      (This is optional helper text)
                   </small>
               </label>
           </div>
@@ -206,7 +211,7 @@ variation_groups:
           * Background: Gray 10 (#e7e8e9)
           * Padding: 15 px
 
-          ##### Radio button (or checkbox) and text
+          ##### Checkbox and text
 
           * Border: 1 px, Gray 60 (#919395)
           * Background: 20 px x 20 px, White (#ffffff)
@@ -264,11 +269,12 @@ variation_groups:
               <label class="a-label" for="test_checkbox_lg_helper">
                  Checkbox label
                   <small class="a-label_helper">
-                      (This is helper text)
+                      (This is optional helper text)
                   </small>
                 </label>
           </div>
     variation_group_name: Types
+use_cases: ""
 guidelines: >-
   ### Content guidelines
 
@@ -281,12 +287,6 @@ guidelines: >-
 
   * Text spacing should inform spacing of checkboxes and checkbox should be vertically centered with the first line of text in an option.
 eyebrow: Form elements
-status: Released
-description: Use checkboxes when the user can select more than one option from a
-  list. Make clear with helper text that this is the case. Use [radio
-  buttons](/design-system/components/radio-buttons) when the user can choose
-  only one option from a list.
-use_cases: ""
 behavior: >-
   Selecting the checkbox or touching the label text next to it should toggle the
   state of the checkbox on and off.

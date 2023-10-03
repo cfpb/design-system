@@ -72,7 +72,6 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 @btn-border-radius-size:    4px;
 @btn-v-padding:             8px;
 @btn-h-padding:             14px;
-@btn-v-padding-modifier-ie: 0.8;
 ```
 
 ## Atoms

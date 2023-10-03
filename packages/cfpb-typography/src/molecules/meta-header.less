@@ -17,7 +17,7 @@
     // Use grid to indent the text from the icon when it wraps.
     display: grid;
     grid-template-columns: 0 auto 1fr;
-    gap: 2px;
+    gap: 5px;
 
     .h4();
     text-wrap: balance;
@@ -34,12 +34,13 @@
     &::before {
       content: '|';
       margin-right: 6px;
-      margin-left: -10px;
+      margin-left: -8px;
     }
 
     // Adjustments to default date position.
     .a-date {
-      margin-top: 2px;
+      font-size: unit((14px / @base-font-size-px), rem);
+      line-height: unit((24px / 14px));
       margin-bottom: 0;
     }
   }

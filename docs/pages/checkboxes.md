@@ -119,7 +119,7 @@ variation_groups:
               <label class="a-label" for="test_checkbox_basic_helper">
           Checkbox label
                   <small class="a-label_helper">
-                      (This is helper text)
+                      (This is optional helper text)
                   </small>
               </label>
           </div>
@@ -206,7 +206,7 @@ variation_groups:
           * Background: Gray 10 (#e7e8e9)
           * Padding: 15 px
 
-          ##### Radio button (or checkbox) and text
+          ##### Checkbox and text
 
           * Border: 1 px, Gray 60 (#919395)
           * Background: 20 px x 20 px, White (#ffffff)
@@ -264,7 +264,7 @@ variation_groups:
               <label class="a-label" for="test_checkbox_lg_helper">
                  Checkbox label
                   <small class="a-label_helper">
-                      (This is helper text)
+                      (This is optional helper text)
                   </small>
                 </label>
           </div>
@@ -283,9 +283,9 @@ guidelines: >-
 eyebrow: Form elements
 status: Released
 description: Use checkboxes when the user can select more than one option from a
-  list. Make clear with helper text that this is the case. Use [radio
-  buttons](/design-system/components/radio-buttons) when the user can choose
-  only one option from a list.
+  group. Make clear with helper text that this is the case. Use [radio
+  buttons](/design-system/components/radio-buttons) when the user can select
+  only one choice from a group.
 use_cases: ""
 behavior: >-
   Selecting the checkbox or touching the label text next to it should toggle the

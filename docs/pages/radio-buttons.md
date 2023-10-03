@@ -96,8 +96,8 @@ variation_groups:
           * Avenir Next Regular, 16 px, Gray (#5a5d61)
         variation_name: Standard radio button
       - variation_name: Standard radio button with helper text
-        variation_description: Checkboxes and radio button inputs can have labels that
-          span multiple lines and have helper text that appears below the main
+        variation_description: Radio button inputs can have labels that span multiple
+          lines and can include optional helper text that appears below the main
           label text.
         variation_code_snippet: |-
           <div class="m-form-field m-form-field__radio">
@@ -105,7 +105,7 @@ variation_groups:
               <label class="a-label" for="test_radio_basic_helper">
                   Radio button label
                   <small class="a-label_helper">
-                      (This is helper text)
+                      (This is optional helper text)
                   </small>
               </label>
           </div>
@@ -243,18 +243,18 @@ variation_groups:
               <label class="a-label" for="test_radio_lg_helper">
           Radio button label
                   <small class="a-label_helper">
-                      (This is helper text)
+                      (This is optional helper text)
                   </small>
                 </label>
           </div>
 guidelines: ""
 eyebrow: Form elements
 title: Radio buttons
-description: >
-  Use radio buttons when the user can choose only one option out of a list. Use
-  these for a small number of discrete elements—avoid long lists of radio
-  buttons (usually no more than 6-8 options). When there are more than two
-  options, stack radio buttons vertically.
+description: Use radio buttons when the user can select exactly one option from
+  a group. Avoid long lists of radio buttons (usually no more than 6-8 options).
+  When there are more than two options, stack radio buttons vertically. Use
+  [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) when
+  the user can select more than one option from a group.
 use_cases: >-
   Leave radio buttons unselected as the default. It’s easy for users to miss
   that a radio button has been preselected and to submit a form with an
@@ -264,7 +264,7 @@ use_cases: >-
   Never use radio buttons for optional questions. Once a radio button is selected from a list, it or another choice must remain selected and there is no undoing the selection unless you reload the form.
 
 
-  Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the default style shown below, make sure the target area is at least 45 x 45 px and includes the option text.
+  Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the standard radio button make sure the target area is at least 45 x 45 px and includes the label text.
 behavior: ""
 accessibility: There are some issues with Voiceover reading radio buttons. To
   get around this, consider using the aria-describedby attribute.

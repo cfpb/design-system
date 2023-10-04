@@ -22,6 +22,11 @@
     gap: @meta-header-gap;
 
     .h4();
+    // Override h4 bottom margin at mobile size.
+    .respond-to-max( @bp-xs-max, {
+      margin-bottom: unit( ( 5px / @base-font-size-px ), rem );
+    });
+
     text-wrap: balance;
     margin-bottom: 0;
     margin-right: 18px;

@@ -1,8 +1,10 @@
+@meta-header-gap: 5px;
+
 .m-meta-header {
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap-reverse;
-  gap: 5px;
+  gap: @meta-header-gap;
   width: fit-content;
   padding-bottom: unit((10px / @base-font-size-px), rem);
   // Dividers are to the left of content, so this crops the unneeded 1st one.
@@ -17,14 +19,14 @@
     // Use grid to indent the text from the icon when it wraps.
     display: grid;
     grid-template-columns: 0 auto 1fr;
-    gap: 5px;
+    gap: @meta-header-gap;
 
     .h4();
     text-wrap: balance;
     margin-bottom: 0;
     margin-right: 18px;
     // Negate first gap.
-    margin-left: -2px;
+    margin-left: -@meta-header-gap;
 
     &:last-child {
       margin-right: 15px;

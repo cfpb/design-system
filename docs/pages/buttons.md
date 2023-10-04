@@ -38,7 +38,7 @@ variation_groups:
 
           * Avenir Next Medium, 16px, (#ffffff)
           * Background: Pacific (#0072ce)
-          * Top and bottom padding: 10px
+          * Top and bottom padding: 8px
           * Left and right padding: 15px
           * Border radius: 4px
 

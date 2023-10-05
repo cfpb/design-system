@@ -1,10 +1,11 @@
-@meta-header-gap: 5px;
+@meta-header-item-gap: 21px;
+@meta-header-icon-gap: 5px;
 
 .m-meta-header {
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap-reverse;
-  gap: @meta-header-gap;
+  gap: unit((@meta-header-item-gap / @base-font-size-px), rem);
   width: fit-content;
   padding-bottom: unit((10px / @base-font-size-px), rem);
   // Dividers are to the left of content, so this crops the unneeded 1st one.
@@ -13,13 +14,14 @@
   &_item-group {
     display: flex;
     flex-wrap: wrap;
+    gap: unit((@meta-header-item-gap / @base-font-size-px), rem);
   }
 
   &_item {
     // Use grid to indent the text from the icon when it wraps.
     display: grid;
     grid-template-columns: 0 auto 1fr;
-    gap: @meta-header-gap;
+    gap: unit((@meta-header-icon-gap / @base-font-size-px), rem);
 
     .h4();
     // Override h4 bottom margin at mobile size.
@@ -29,13 +31,9 @@
 
     text-wrap: balance;
     margin-bottom: 0;
-    margin-right: unit((18px / @base-font-size-px), rem);
+    //margin-right: unit((21px / @base-font-size-px), rem);
     // Negate first gap.
-    margin-left: -@meta-header-gap;
-
-    &:last-child {
-      margin-right: unit((15px / @base-font-size-px), rem);
-    }
+    margin-left: unit((-@meta-header-icon-gap / @base-font-size-px), rem);
 
     // Create the divider.
     &::before {

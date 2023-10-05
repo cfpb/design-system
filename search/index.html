@@ -3252,19 +3252,21 @@ Example of a non heading element:
                     'variation_name1': 'Meta header',
                     'variation_description1': "The meta header is typically used for listing categories on pages like the blog page.\n",
                     'variation_code_snippet1': `&lt;div class=&quot;m-meta-header&quot;&gt;
-    &lt;div class=&quot;m-meta-header_left&quot;&gt;
-        {% include icons/credit-card.svg %}
-        Consumer finance
-        &lt;span class=&quot;m-meta-header_separator&quot;&gt;|&lt;/span&gt;
-        {% include icons/bullhorn.svg %}
-        At the CFPB
-        &lt;span class=&quot;m-meta-header_separator&quot;&gt;|&lt;/span&gt;
+    &lt;div class=&quot;m-meta-header_item-group&quot;&gt;
+      &lt;div class=&quot;m-meta-header_item&quot;&gt;
+          {% include icons/chart.svg %}
+          Office of Research Publication
+      &lt;/div&gt;
+      &lt;div class=&quot;m-meta-header_item&quot;&gt;
+          {% include icons/bullhorn.svg %}
+          At the CFPB
+      &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;m-meta-header_right&quot;&gt;
+    &lt;div class=&quot;m-meta-header_item&quot;&gt;
         &lt;span class=&quot;a-date&quot;&gt;
             Published
             &lt;span class=&quot;datetime&quot;&gt;&lt;time class=&quot;datetime_date&quot; datetime=&quot;2024-09-28T00:00:00&quot;&gt;SEP 28, 2024&lt;/time&gt;
-&lt;/span&gt;
+            &lt;/span&gt;
         &lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,

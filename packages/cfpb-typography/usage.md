@@ -127,38 +127,46 @@ Can be either a relative or absolute path.
 
 #### Default meta header
 
-<header class="m-meta-header">
-    <div class="m-meta-header_left">
-        {% include icons/credit-card.svg %}
-        Consumer finance
-        <span class="m-meta-header_separator">|</span>
-        {% include icons/bullhorn.svg %}
-        At the CFPB
-        <span class="m-meta-header_separator">|</span>
+<div class="m-meta-header">
+    <div class="m-meta-header_item-group">
+    <div class="m-meta-header_item">
+        {% include icons/chart.svg %}
+        Office of Research Publication
     </div>
-    <div class="m-meta-header_right">
+    <div class="m-meta-header_item">
+        {% include icons/bank.svg %}
+        Policy and compliance
+    </div>
+    </div>
+    <div class="m-meta-header_item">
         <span class="a-date">
-            Nov 4, 2013
+            Published
+            <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
+            </span>
         </span>
     </div>
-</header>
+</div>
 
 ```
-<header class="m-meta-header">
-    <div class="m-meta-header_left">
-        {% include icons/credit-card.svg %}
-        Consumer finance
-        <span class="m-meta-header_separator">|</span>
-        {% include icons/bullhorn.svg %}
-        At the CFPB
-        <span class="m-meta-header_separator">|</span>
+<div class="m-meta-header">
+    <div class="m-meta-header_item-group">
+    <div class="m-meta-header_item">
+        {% include icons/chart.svg %}
+        Office of Research Publication
     </div>
-    <div class="m-meta-header_right">
+    <div class="m-meta-header_item">
+        {% include icons/bank.svg %}
+        Policy and compliance
+    </div>
+    </div>
+    <div class="m-meta-header_item">
         <span class="a-date">
-            Nov 4, 2013
+            Published
+            <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
+            </span>
         </span>
     </div>
-</header>
+</div>
 ```
 
 ## Link patterns

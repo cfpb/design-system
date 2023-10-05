@@ -103,8 +103,8 @@ variation_groups:
                     Office of Research Publication
                 </div>
                 <div class="m-meta-header_item">
-                    {% include icons/bullhorn.svg %}
-                    At the CFPB
+                    {% include icons/bank.svg %}
+                    Policy and compliance
                 </div>
               </div>
               <div class="m-meta-header_item">

@@ -29,19 +29,18 @@
 
     text-wrap: balance;
     margin-bottom: 0;
-    margin-right: 18px;
+    margin-right: unit((18px / @base-font-size-px), rem);
     // Negate first gap.
     margin-left: -@meta-header-gap;
 
     &:last-child {
-      margin-right: 15px;
+      margin-right: unit((15px / @base-font-size-px), rem);
     }
 
     // Create the divider.
     &::before {
       content: '|';
-      margin-right: 6px;
-      margin-left: -8px;
+      margin-left: unit((-7px / @base-font-size-px), rem);
     }
 
     // Adjustments to default date position.

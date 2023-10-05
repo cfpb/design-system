@@ -1,11 +1,11 @@
 @meta-header-item-gap: 21px;
-@meta-header-icon-gap: 5px;
 
 .m-meta-header {
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap-reverse;
-  gap: unit((@meta-header-item-gap / @base-font-size-px), rem);
+  row-gap: unit((10px / @base-font-size-px), rem);
+  column-gap: unit((@meta-header-item-gap / @base-font-size-px), rem);
   width: fit-content;
   padding-bottom: unit((10px / @base-font-size-px), rem);
   // Dividers are to the left of content, so this crops the unneeded 1st one.
@@ -14,14 +14,14 @@
   &_item-group {
     display: flex;
     flex-wrap: wrap;
-    gap: unit((@meta-header-item-gap / @base-font-size-px), rem);
+    column-gap: unit((@meta-header-item-gap / @base-font-size-px), rem);
   }
 
   &_item {
     // Use grid to indent the text from the icon when it wraps.
     display: grid;
     grid-template-columns: 0 auto 1fr;
-    gap: unit((@meta-header-icon-gap / @base-font-size-px), rem);
+    row-gap: unit((5px / @base-font-size-px), rem);
 
     .h4();
     // Override h4 bottom margin at mobile size.
@@ -31,14 +31,15 @@
 
     text-wrap: balance;
     margin-bottom: 0;
-    //margin-right: unit((21px / @base-font-size-px), rem);
-    // Negate first gap.
-    margin-left: unit((-@meta-header-icon-gap / @base-font-size-px), rem);
+
+    .cf-icon-svg {
+      margin-right: unit((5px / @base-font-size-px), rem);
+    }
 
     // Create the divider.
     &::before {
       content: '|';
-      margin-left: unit((-7px / @base-font-size-px), rem);
+      margin-left: unit((-13px / @base-font-size-px), rem);
     }
 
     // Adjustments to default date position.

@@ -1,4 +1,15 @@
 
+## v0.31.2 (2023-10-05)
+
+#### Bug Fix
+* `cfpb-typography`
+  * [#1769](https://github.com/cfpb/design-system/pull/1769) Meta header: Adjust margin values ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.31.1 (2023-10-05)
 
 #### Enhancement

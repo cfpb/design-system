@@ -1,4 +1,17 @@
 
+## v0.31.1 (2023-10-05)
+
+#### Enhancement
+* `cfpb-typography`
+  * [#1757](https://github.com/cfpb/design-system/pull/1757) Refactor m-meta-header ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
+- [@jenn-franklin](https://github.com/jenn-franklin)
+
+
+
 ## v0.31.0 (2023-09-28)
 
 #### Breaking Change

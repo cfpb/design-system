@@ -1659,7 +1659,9 @@ html[lang='ar'] .m-list {
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap-reverse;
-  gap: 5px;
+  row-gap: 0.625rem;
+  -moz-column-gap: 1.3125rem;
+       column-gap: 1.3125rem;
   width: -moz-fit-content;
   width: fit-content;
   padding-bottom: 0.625rem;
@@ -1668,11 +1670,13 @@ html[lang='ar'] .m-list {
 .m-meta-header_item-group {
   display: flex;
   flex-wrap: wrap;
+  -moz-column-gap: 1.3125rem;
+       column-gap: 1.3125rem;
 }
 .m-meta-header_item {
   display: grid;
   grid-template-columns: 0 auto 1fr;
-  gap: 5px;
+  row-gap: 0.3125rem;
   margin-bottom: 0.83333333em;
   font-size: 1.125em;
   font-weight: 500;
@@ -1681,8 +1685,6 @@ html[lang='ar'] .m-list {
   text-transform: inherit;
   text-wrap: balance;
   margin-bottom: 0;
-  margin-right: 18px;
-  margin-left: -5px;
 }
 p + .m-meta-header_item,
 ul + .m-meta-header_item,
@@ -1716,13 +1718,12 @@ h6 + .m-meta-header_item,
     margin-bottom: 0.3125rem;
   }
 }
-.m-meta-header_item:last-child {
-  margin-right: 15px;
+.m-meta-header_item .cf-icon-svg {
+  margin-right: 0.3125rem;
 }
 .m-meta-header_item::before {
   content: '|';
-  margin-right: 6px;
-  margin-left: -8px;
+  margin-left: -0.8125rem;
 }
 .m-meta-header_item .a-date {
   font-size: 0.875rem;

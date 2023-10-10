@@ -260,7 +260,7 @@ variation_groups:
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox
           m-form-field__lg-target">
-              <input class="a-checkbox" type="radio" id="test_radio_lg_helper">
+              <input class="a-checkbox" type="radio" id="test_checkbox_lg_helper">
               <label class="a-label" for="test_checkbox_lg_helper">
                  Checkbox label
                   <small class="a-label_helper">

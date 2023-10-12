@@ -181,9 +181,13 @@ select.o-multiselect {
         outline: 1px dotted @teal;
         outline-offset: 1px;
 
-        & label {
-          background-color: @teal-40;
+        label {
+          background-color: @teal-20;
         }
+      }
+
+      &:hover label {
+        background-color: @teal-40;
       }
 
       &:active label {

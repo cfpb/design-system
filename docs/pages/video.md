@@ -63,6 +63,7 @@ variation_groups:
           live, we upload them to YouTube for documentation purposes.
         variation_name: Event
         variation_code_snippet_rendered: ""
+    variation_group_description: ""
 use_cases: |-
   Typically, we find video is best used to:
 

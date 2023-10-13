@@ -4,7 +4,7 @@ describe('Multiselect', () => {
   let multiselectInput;
 
   beforeEach(async () => {
-    await browser.url('/design-system/components/dropdowns-and-multiselects');
+    await browser.url('/design-system/components/selects');
     await browser.setWindowSize(1024, 768);
 
     // Wait till page has loaded.

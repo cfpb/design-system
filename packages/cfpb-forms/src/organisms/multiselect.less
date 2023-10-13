@@ -177,25 +177,38 @@ select.o-multiselect {
       padding: 0;
 
       &:focus {
-        outline: 1px dotted @pacific;
+        border-radius: unit((3px / @size-v), em);
+        outline: 1px dotted @teal;
         outline-offset: 1px;
+
+        label {
+          background-color: @teal-20;
+        }
+      }
+
+      &:hover label {
+        background-color: @teal-40;
+      }
+
+      &:active label {
+        background-color: @teal-60;
       }
     }
 
     label {
       display: inline-block;
-      padding: 2px 5px;
-      padding-right: unit((25px / @size-v), em);
+      padding: 4px 10px;
 
-      background-color: @navy-80;
-      border-radius: unit((4px / @size-v), em);
-      color: @white;
+      background-color: @teal-20;
+      border-radius: unit((3px / @size-v), em);
+      border: 1px solid @teal;
+      color: @black;
       cursor: pointer;
-      font-size: unit((14px / @base-font-size-px), em);
+      font-size: unit((16px / @base-font-size-px), em);
       position: relative;
 
       &:hover {
-        background-color: @navy;
+        background-color: @teal-40;
 
         &::after {
           color: @white;
@@ -203,10 +216,8 @@ select.o-multiselect {
       }
 
       .cf-icon-svg {
-        position: absolute;
-        top: 2px;
-        right: 5px;
-        fill: @navy-20;
+        margin-left: 10px;
+        fill: @black;
       }
     }
   }

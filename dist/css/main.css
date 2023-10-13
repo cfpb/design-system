@@ -4551,31 +4551,39 @@ select.o-multiselect option {
   padding: 0;
 }
 .o-multiselect_choices button:focus {
-  outline: 1px dotted #0072ce;
+  border-radius: 0.21428571em;
+  outline: 1px dotted #257675;
   outline-offset: 1px;
+}
+.o-multiselect_choices button:focus label {
+  background-color: #d4e7e6;
+}
+.o-multiselect_choices button:hover label {
+  background-color: #b4d2d1;
+}
+.o-multiselect_choices button:active label {
+  background-color: #89b6b5;
 }
 .o-multiselect_choices label {
   display: inline-block;
-  padding: 2px 5px;
-  padding-right: 1.78571429em;
-  background-color: #5674a3;
-  border-radius: 0.28571429em;
-  color: #ffffff;
+  padding: 4px 10px;
+  background-color: #d4e7e6;
+  border-radius: 0.21428571em;
+  border: 1px solid #257675;
+  color: #101820;
   cursor: pointer;
-  font-size: 0.875em;
+  font-size: 1em;
   position: relative;
 }
 .o-multiselect_choices label:hover {
-  background-color: #254b87;
+  background-color: #b4d2d1;
 }
 .o-multiselect_choices label:hover::after {
   color: #ffffff;
 }
 .o-multiselect_choices label .cf-icon-svg {
-  position: absolute;
-  top: 2px;
-  right: 5px;
-  fill: #d3daeb;
+  margin-left: 10px;
+  fill: #101820;
 }
 /* ==========================================================================
    Design System

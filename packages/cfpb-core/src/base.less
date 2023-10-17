@@ -312,12 +312,12 @@ h6,
 .lead-paragraph {
   .heading-3();
 
-  margin-top: unit((30px / @font-size), em);
-  margin-bottom: unit((15px / 18px), em);
+  margin-top: 0;
+  margin-bottom: 15px;
 
   .respond-to-max(@bp-xs-max, {
     // Use the same regular weight but reduce the sizes to h4 size
-    margin-top: unit( ( 30px / 18px ), em );
+    margin-top: 0;
     font-size: unit( ( 18px / @base-font-size-px ), em );
   } );
 }

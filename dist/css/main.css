@@ -999,12 +999,12 @@ h5 + .h6,
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
-  margin-top: 1.36363636em;
-  margin-bottom: 0.83333333em;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 @media only all and (max-width: 37.5em) {
   .lead-paragraph {
-    margin-top: 1.66666667em;
+    margin-top: 0;
     font-size: 1.125em;
   }
 }
@@ -2277,12 +2277,12 @@ h6 + .m-meta-header_item,
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
-  margin-top: 1.36363636em;
-  margin-bottom: 0.83333333em;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 @media only all and (max-width: 37.5em) {
   .m-hero__jumbo .m-hero_subhead {
-    margin-top: 1.66666667em;
+    margin-top: 0;
     font-size: 1.125em;
   }
 }
@@ -2341,12 +2341,12 @@ h6 + .m-meta-header_item,
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
-  margin-top: 1.36363636em;
-  margin-bottom: 0.83333333em;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 @media only all and (max-width: 37.5em) {
   .m-hero__50-50 .m-hero_subhead {
-    margin-top: 1.66666667em;
+    margin-top: 0;
     font-size: 1.125em;
   }
 }

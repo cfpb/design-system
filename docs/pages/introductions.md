@@ -102,8 +102,6 @@ guidelines: >-
 
   * For emphasis, a call-to-action last sentence can be entered as its own paragraph underneath this lead paragraph, either linked to a url or not
 
-  *
-
 
   #### Call-to-action link (optional)
 

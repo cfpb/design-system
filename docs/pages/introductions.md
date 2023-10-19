@@ -3,7 +3,28 @@ layout: variation
 section: patterns
 variation_groups:
   - variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: >-
+          <div class="o-text-introduction">
+            <h1>Text introduction</h1>
+            <p class="lead-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore.
+            </p>
+            <ul class="m-list m-list__links">
+              <li class="m-list_item">
+                <a class="m-list_link" href="#"> Call-to-action link </a>
+              </li>
+            </ul>
+          </div>
         variation_description: >-
           Text introductions consist of a heading, lead paragraph, and optional
           descriptive paragraph, and link text. They should be used on every
@@ -11,20 +32,11 @@ variation_groups:
           [hero](https://cfpb.github.io/design-system/patterns/heroes) or [item
           introduction](https://cfpb.github.io/design-system/patterns/item-introductions)
           is used.
-
-
-          Layout as seen with a standard right sidebar:
-
-
-          ![Image of a text introduction component with a standard right sidebar](/design-system/images/uploads/text_introduction.png)
         variation_jinja_code_snippet: ""
         variation_name: Text introduction
         variation_specs: >-
+          ![Image of text intro showing desktop and mobile design specs](/design-system/images/uploads/text_introduction-spacing.png)
           
-
-          ![Image of text intro showing grid and design specs](/design-system/images/uploads/text_introduction_with_specs.png)
-
-
           * Spacing: 45px margin above, 60 px margin below.
 
           * Page title: Heading 1

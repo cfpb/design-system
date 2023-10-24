@@ -1004,7 +1004,6 @@ h5 + .h6,
 }
 @media only all and (max-width: 37.5em) {
   .lead-paragraph {
-    margin-top: 0;
     font-size: 1.125em;
   }
 }
@@ -2282,7 +2281,6 @@ h6 + .m-meta-header_item,
 }
 @media only all and (max-width: 37.5em) {
   .m-hero__jumbo .m-hero_subhead {
-    margin-top: 0;
     font-size: 1.125em;
   }
 }
@@ -2346,7 +2344,6 @@ h6 + .m-meta-header_item,
 }
 @media only all and (max-width: 37.5em) {
   .m-hero__50-50 .m-hero_subhead {
-    margin-top: 0;
     font-size: 1.125em;
   }
 }

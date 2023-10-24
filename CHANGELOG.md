@@ -15,7 +15,7 @@
 * `cfpb-forms`
   * [#1777](https://github.com/cfpb/design-system/pull/1777) [Tag] Update styles per approved redesign ([@meissadia](https://github.com/meissadia))
 
-#### Committers: 1
+#### Committers: 2
 - Ans ([@anselmbradford](https://github.com/anselmbradford))
 - Meis ([@meissadia](https://github.com/meissadia))
 

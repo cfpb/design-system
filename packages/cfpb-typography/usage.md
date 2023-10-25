@@ -472,33 +472,3 @@ you should use the `aside` element.
     </footer>
 </aside>
 ```
-
-#### Large pull quote
-
-<aside class="m-pull-quote m-pull-quote__large">
-    <div class="m-pull-quote_body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Cum corrupti tempora nam nihil qui mollitia consectetur
-        corporis nemo culpa dolorum!
-    </div>
-    <footer>
-        <cite class="m-pull-quote_citation">
-            Author Name
-        </cite>
-    </footer>
-</aside>
-
-```
-<aside class="m-pull-quote m-pull-quote__large">
-    <div class="m-pull-quote_body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Cum corrupti tempora nam nihil qui mollitia consectetur
-        corporis nemo culpa dolorum!
-    </div>
-    <footer>
-        <cite class="m-pull-quote_citation">
-            Author Name
-        </cite>
-    </footer>
-</aside>
-```

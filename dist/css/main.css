@@ -1765,24 +1765,6 @@ h6 + .m-meta-header_item,
 .m-pull-quote_citation::before {
   content: '\2014 ';
 }
-.m-pull-quote__large .m-pull-quote_body {
-  margin-bottom: 0.57692308em;
-  font-size: 1.625em;
-  font-weight: 600;
-  letter-spacing: inherit;
-  line-height: 1.25;
-  text-transform: inherit;
-}
-@media only all and (max-width: 37.5em) {
-  .m-pull-quote__large .m-pull-quote_body {
-    margin-bottom: 0.68181818em;
-    font-size: 1.375em;
-    font-weight: normal;
-    letter-spacing: inherit;
-    line-height: 1.25;
-    text-transform: inherit;
-  }
-}
 .m-slug-header {
   border-top: 1px solid #b4b5b6;
 }

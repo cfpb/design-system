@@ -39,7 +39,7 @@ variation_groups:
           @btn__disabled-bg:          @gray-20;
           @btn__disabled-outline:     @gray-20;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Sizing
         variation_description: |-
           ```
@@ -48,7 +48,6 @@ variation_groups:
           @btn-border-radius-size:    4px;
           @btn-v-padding:             8px;
           @btn-h-padding:             14px;
-          @btn-v-padding-modifier-ie: 0.8;
           ```
   - variation_group_name: Forms
     variations:
@@ -98,14 +97,14 @@ variation_groups:
           // .a-label_helper
           @label-helper:                            @gray;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Sizing
         variation_description: |-
           ```
           // .a-select
           @select-height: 30px;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
   - variation_group_name: Grid
     variation_group_description: >-
       ```
@@ -168,7 +167,7 @@ variation_groups:
 
           ```
   - variation_group_name: Layout
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_description: |-
           ```
@@ -236,12 +235,12 @@ variation_groups:
           @notification-icon-warning:   @gold;
           @notification-icon-error:     @red;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Sizing
-        variation_description: "`@notification-padding__px: 15px;`"
-        variation_code_snippet: ""
+        variation_description: '`@notification-padding__px: 15px;`'
+        variation_code_snippet: ''
   - variation_group_name: Pagination
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_name: Color
         variation_description: |-
@@ -249,7 +248,7 @@ variation_groups:
           @pagination-text: @gray;
           @pagination-bg:   @gray-10;
           ```
-        variation_code_snippet: ""
+        variation_code_snippet: ''
       - variation_name: Sizing
         variation_description: |-
           ```
@@ -356,7 +355,7 @@ variation_groups:
           CFPB's default brand font and fallback.
 
           `@font-stack: 'Avenir Next', Arial, sans-serif;`
-      - variation_name: "@font-face file path"
+      - variation_name: '@font-face file path'
         variation_description: >-
           Use this variable to point to the file containing your `@font-face`
           rules. To use none, set it to an empty string.

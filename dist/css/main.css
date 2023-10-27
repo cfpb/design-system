@@ -4471,7 +4471,6 @@ select.o-multiselect option {
   margin-top: -1px;
   width: 100%;
   transition: max-height 0.25s ease-out;
-  display: -webkit-box;
 }
 .o-multiselect.u-active .o-multiselect_fieldset {
   margin-top: 0;

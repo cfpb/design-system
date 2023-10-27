@@ -1,6 +1,7 @@
 ---
 layout: variation
 section: patterns
+status: Released
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -21,18 +22,18 @@ variation_groups:
         variation_description: ""
         variation_name: Well
         variation_specs: >-
-          * Padding at breakpoints 601+: 30 (top), 30 (right) 60 (bottom), 30
+          * Padding at breakpoints 601+: 30 (top), 30 (right) 30 (bottom), 30
           (left)
 
-          * Padding at breakpoints 600 and below: 30 (top), 15 (right), 60 (bottom), 15 (left)
+          * Padding at breakpoints 600 and below: 30 (top), 15 (right), 30 (bottom), 15 (left)
 
-          * Background color: 5% grey (#F7F7F7)
+          * Background color: Gray 5 (#F7F7F7)
 
-          * Border: 1px 50% grey (#BABBBD)
+          * Border: 1px Gray 40 (#B4B5B6)
 
           * Single column content only.
 
-            ![Schematic of well showing padding ](/design-system/images/uploads/wells_style_mockup.png)
+            ![Schematic of well showing padding ]()
       - variation_code_snippet: >-
           <div class="o-well o-well__inkwell">
               <p class="h4">Inkwell modifier</p>
@@ -55,13 +56,6 @@ variation_groups:
         variation_name: Inkwell
         variation_is_deprecated: true
     variation_group_name: Types
-use_cases: >-
-  Grey wells should be used to feature content or specific calls to action.
-  They  will help visually set apart the content within it, so use sparingly to
-  draw attention to that content.
-
-
-  Ideally, content within a well should not take up more than a third of page content.
 guidelines: >-
   Wells should generally be text-based. If content must include imagery or
   videos, use the [featured content
@@ -77,11 +71,7 @@ guidelines: >-
 
   * Links
 eyebrow: Featured content
-accessibility: ""
-related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"
-last_updated: 2019-10-21T20:38:39.851Z
 title: Wells
-status: Released
 description: Wells are used to highlight specific information within a
   designated section of a page. This breaks up the flow of content on the page
   and helps to emphasize and set apart the content that is included. They are
@@ -90,6 +80,13 @@ description: Wells are used to highlight specific information within a
   [learn](https://cfpb.github.io/design-system/pages/learn-pages), and [document
   detail
   pages](https://cfpb.github.io/design-system/pages/document-detail-pages).
+use_cases: >-
+  Grey wells should be used to feature content or specific calls to action.
+  They  will help visually set apart the content within it, so use sparingly to
+  draw attention to that content.
+
+
+  Ideally, content within a well should not take up more than a third of page content.
 behavior: >-
   Wells are full width. Note that at breakpoints 600 and under there are slight
   padding adjustments to maximize real estate on smaller displays.
@@ -100,5 +97,8 @@ behavior: >-
   | -- | -- | -- |
 
   | ![](/design-system/images/uploads/wells_behavior_mockup_1.png) | ![](/design-system/images/uploads/wells_behavior_mockup_2.png) | ![](/design-system/images/uploads/wells_behavior_mockup_3.png) |
+accessibility: ""
+related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"
+last_updated: 2019-10-21T20:38:39.851Z
 research: ""
 ---

@@ -6,10 +6,9 @@ variation_groups:
   - variations:
       - variation_code_snippet: >-
           <div class="o-well">
-              <p class="h4">Heading</p>
+              <p class="h3">Heading</p>
               <p>
-                  Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-                  instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
+          Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur instructior ex pri. Cu pri inani constituto, cum aeque noster commodo.
               </p>
 
           <ul class="m-list m-list__links">
@@ -22,18 +21,17 @@ variation_groups:
         variation_description: ""
         variation_name: Well
         variation_specs: >-
-          * Padding at breakpoints 601+: 30 (top), 30 (right) 30 (bottom), 30
-          (left)
+          * Border: 1px, Gray 40 (#b4b5b6)
+
+          * Background color: Gray 5 (#f7f7f7)
+
+          * Padding at breakpoints 601+: 30 (top), 30 (right) 30 (bottom), 30 (left)
 
           * Padding at breakpoints 600 and below: 30 (top), 15 (right), 30 (bottom), 15 (left)
 
-          * Background color: Gray 5 (#F7F7F7)
-
-          * Border: 1px Gray 40 (#B4B5B6)
-
           * Single column content only.
 
-            ![Schematic of well showing padding ]()
+            ![]()
       - variation_code_snippet: >-
           <div class="o-well o-well__inkwell">
               <p class="h4">Inkwell modifier</p>
@@ -87,16 +85,8 @@ use_cases: >-
 
 
   Ideally, content within a well should not take up more than a third of page content.
-behavior: >-
-  Wells are full width. Note that at breakpoints 600 and under there are slight
+behavior: Wells are full width. At breakpoints 600px and under there are slight
   padding adjustments to maximize real estate on smaller displays.
-
-
-  | Above 900 px, with right sidebar | Above 900 px, with left nav | Below 901 px, both page types |
-
-  | -- | -- | -- |
-
-  | ![](/design-system/images/uploads/wells_behavior_mockup_1.png) | ![](/design-system/images/uploads/wells_behavior_mockup_2.png) | ![](/design-system/images/uploads/wells_behavior_mockup_3.png) |
 accessibility: ""
 related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"
 last_updated: 2019-10-21T20:38:39.851Z

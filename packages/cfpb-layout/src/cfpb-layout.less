@@ -15,6 +15,7 @@
 @import (less) 'organisms/featured-content-module.less';
 @import (less) 'organisms/wells.less';
 @import (less) 'organisms/email-signup.less';
+@import (less) 'organisms/text-introduction.less';
 
 /* ==========================================================================
    Design System
@@ -59,6 +60,7 @@
   // Used to position __divider modifiers
   position: relative;
 
+  // Desktop and tablet size.
   .respond-to-min( @bp-sm-min, {
     .grid_nested-col-group();
   } );
@@ -95,6 +97,7 @@
 }
 
 .content-l_col {
+  // Mobile size.
   .respond-to-max( @bp-xs-max, {
     & + & {
       margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em );
@@ -102,6 +105,7 @@
   } );
 }
 
+// Desktop and tablet size.
 .respond-to-min( @bp-sm-min, {
   .content-l_col-1 {
     .grid_column( 12 );
@@ -141,20 +145,24 @@
 //
 
 .content-l_col__before-divider.content-l_col-1-2 {
+  // Mobile size.
   .respond-to-max( @bp-xs-max, {
     .grid_column__top-divider();
   } );
 
+  // Desktop and tablet size.
   .respond-to-min( @bp-sm-min, {
     .grid_column__left-divider();
   } );
 }
 
 .content-l_col__before-divider.content-l_col-1-3 {
+  // Mobile size.
   .respond-to-max( @bp-xs-max, {
     .grid_column__top-divider();
   } );
 
+  // Desktop and tablet size.
   .respond-to-min( @bp-sm-min, {
     .grid_column__left-divider();
   } );
@@ -228,6 +236,7 @@
   padding: unit((@grid_gutter-width / @base-font-size-px), em)
     unit((@grid_gutter-width / 2 / @base-font-size-px), em);
 
+  // Desktop and tablet size.
   .respond-to-min( @bp-sm-min, {
     .grid_column( 12 );
 
@@ -365,6 +374,7 @@
     margin-right: -(@grid_gutter-width / 2);
     margin-left: -(@grid_gutter-width / 2);
 
+    // Mobile size.
     .respond-to-max( @bp-xs-max, {
       &.block__border,
       &.block__border-right,
@@ -374,6 +384,7 @@
       }
     } );
 
+    // Desktop and tablet size.
     .respond-to-min( @bp-sm-min, {
       margin-right: -@grid_gutter-width;
       margin-left: -@grid_gutter-width;
@@ -393,6 +404,7 @@
       border-bottom: none;
     }
 
+    // Mobile size.
     .respond-to-max( @bp-xs-max, {
       &.block__border,
       &.block__border-right,
@@ -402,6 +414,7 @@
       }
     } );
 
+    // Desktop and tablet size.
     .respond-to-min( @bp-sm-min, {
       margin-right: -@grid_gutter-width;
       margin-left: -@grid_gutter-width;
@@ -414,6 +427,7 @@
     padding-bottom: unit(((@grid_gutter-width * 2) / @base-font-size-px), em);
     background: @block__bg;
 
+    // Desktop and tablet size.
     .respond-to-min( @bp-sm-min, {
       padding: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em )
       unit( ( @grid_gutter-width / @base-font-size-px ), em );
@@ -438,6 +452,7 @@
   // Overrides for when .block is also a column
   .content-l_col&,
   .content-l_col&__sub {
+    // Desktop and tablet size.
     .respond-to-min( @bp-sm-min, {
       margin-top: 0;
     } );
@@ -521,7 +536,7 @@
     padding-left: @grid_gutter-width / 2;
     padding-right: @grid_gutter-width / 2;
 
-    // Tablet and above.
+    // Desktop and tablet size.
     .respond-to-min( @bp-sm-min, {
       padding-left: @grid_gutter-width;
       padding-right: @grid_gutter-width;

@@ -355,18 +355,12 @@ variation_groups:
           CFPB's default brand font and fallback.
 
           `@font-stack: 'Avenir Next', Arial, sans-serif;`
-
-
-          ``
       - variation_name: '@font-face file path'
         variation_description: >-
           Use this variable to point to the file containing your `@font-face`
           rules. To use none, set it to an empty string.
 
           `@font-face-path: 'licensed-fonts.less';`
-
-
-          ``
       - variation_name: Font source
         variation_description: >-
           Use this variable to specify where the fonts declared in

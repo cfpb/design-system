@@ -1,4 +1,49 @@
 
+## v0.32.0 (2023-10-24)
+
+#### Breaking
+* `cfpb-core`
+  * [#1785](https://github.com/cfpb/design-system/pull/1785) fix: [Lead paragraph] Adjust margins ([@meissadia](https://github.com/meissadia))
+
+#### Bug Fix
+* `cfpb-buttons`, `cfpb-core`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1789](https://github.com/cfpb/design-system/pull/1789) Remove redundant margin | add responsive style code comments ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-layout`
+  * [#1781](https://github.com/cfpb/design-system/pull/1781) New component: `o-text-introduction` ([@meissadia](https://github.com/meissadia))
+* `cfpb-forms`
+  * [#1777](https://github.com/cfpb/design-system/pull/1777) [Tag] Update styles per approved redesign ([@meissadia](https://github.com/meissadia))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Meis ([@meissadia](https://github.com/meissadia))
+
+
+## v0.31.2 (2023-10-05)
+
+#### Bug Fix
+* `cfpb-typography`
+  * [#1769](https://github.com/cfpb/design-system/pull/1769) Meta header: Adjust margin values ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
+## v0.31.1 (2023-10-05)
+
+#### Enhancement
+* `cfpb-typography`
+  * [#1757](https://github.com/cfpb/design-system/pull/1757) Refactor m-meta-header ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
+- [@jenn-franklin](https://github.com/jenn-franklin)
+
+
+
 ## v0.31.0 (2023-09-28)
 
 #### Breaking Change
@@ -82,10 +127,6 @@
 - Joshua Allen ([@BrewCityBoy](https://github.com/BrewCityBoy))
 - Meis ([@meissadia](https://github.com/meissadia))
 - Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
-
-
-Fetch error: Unauthorized.
-{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
 
 
 

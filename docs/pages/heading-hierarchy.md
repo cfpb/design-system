@@ -16,9 +16,9 @@ variation_groups:
           Example of a non heading element:
           <p class="h1">A non-heading element</p>
           -->
-        variation_description: ""
-        variation_jinja_code_snippet: ""
-        variation_name: ""
+        variation_description: ''
+        variation_jinja_code_snippet: ''
+        variation_name: ''
         variation_specs: "| Heading   |
           Specs                                                            |
           Responsive behavior at < 601px |
@@ -49,7 +49,8 @@ variation_groups:
           | Heading 5 | Avenir Next Demi Bold, 14px / 18px, All caps,
           1px letter spacing | No change                      |"
     variation_group_name: Web headings
-    variation_group_description: At screen widths of 600px and below, the Display
+    variation_group_description:
+      At screen widths of 600px and below, the Display
       heading and Headings 1-4 drop in size. Heading 5 remains consistent at all
       screen widths.
   - variation_group_name: Print headings
@@ -69,8 +70,8 @@ variation_groups:
           <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading 5</h5>
 
           <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading 6</p>
-        variation_name: ""
-        variation_description: ""
+        variation_name: ''
+        variation_description: ''
         variation_specs: |-
           | Heading   | Specs                                        |
           | --------- | -------------------------------------------- |
@@ -90,24 +91,27 @@ variation_groups:
   - variation_group_name: Variations
     variations:
       - variation_name: Meta header
-        variation_description: The meta header is typically used for listing categories
+        variation_description:
+          The meta header is typically used for listing categories
           on pages like the [blog
           page](https://www.consumerfinance.gov/about-us/blog/).
         variation_code_snippet: >-
           <div class="m-meta-header">
-              <div class="m-meta-header_left">
-                  {% include icons/credit-card.svg %}
-                  Consumer finance
-                  <span class="m-meta-header_separator">|</span>
-                  {% include icons/bullhorn.svg %}
-                  At the CFPB
-                  <span class="m-meta-header_separator">|</span>
+              <div class="m-meta-header_item-group">
+                <div class="m-meta-header_item">
+                    {% include icons/chart.svg %}
+                    Office of Research Publication
+                </div>
+                <div class="m-meta-header_item">
+                    {% include icons/bank.svg %}
+                    Policy and compliance
+                </div>
               </div>
-              <div class="m-meta-header_right">
+              <div class="m-meta-header_item">
                   <span class="a-date">
                       Published
                       <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
-          </span>
+                      </span>
                   </span>
               </div>
           </div>
@@ -137,7 +141,8 @@ variation_groups:
           * All caps
           * <601px wide: No change
       - variation_name: Slug heading
-        variation_description: Slug headings are used to call attention to and lead
+        variation_description:
+          Slug headings are used to call attention to and lead
           content on sidebars and prefooters, inset modules, and inset email
           modules.
         variation_code_snippet: |-
@@ -176,8 +181,8 @@ description: A successful type hierarchy establishes the order of importance of
   elements on a page. Consistent scaling, weights, and capitalization are used
   to create distinction between heading levels and provide users with  familiar
   focus points when scanning text.
-use_cases: ""
-behavior: ""
+use_cases: ''
+behavior: ''
 accessibility: Since categories can be repetitive, we suggest placing a label
   with `.u-visually-hidden` prior to the headings with icons to add more context
   for screen readers.
@@ -185,5 +190,5 @@ related_items: "* [Typography
   variables](https://cfpb.github.io/design-system/development/variables#typogra\
   phy)"
 last_updated: 2019-10-21T21:54:52.744Z
-research: ""
+research: ''
 ---

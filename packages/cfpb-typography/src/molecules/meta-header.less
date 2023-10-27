@@ -1,60 +1,58 @@
+@meta-header-item-gap: 21px;
+
 .m-meta-header {
-  padding-bottom: unit((10px / @base-font-size-px), em);
-  grid-area: header;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+  row-gap: unit((10px / @base-font-size-px), rem);
+  column-gap: unit((@meta-header-item-gap / @base-font-size-px), rem);
+  width: fit-content;
+  padding-bottom: unit((10px / @base-font-size-px), rem);
+  // Dividers are to the left of content, so this crops the unneeded 1st one.
+  overflow: hidden;
 
-  // Mobile size.
-  .respond-to-max( @bp-xs-max, {
+  &_item-group {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: unit((@meta-header-item-gap / @base-font-size-px), rem);
+  }
+
+  &_item {
+    // Use grid to indent the text from the icon when it wraps.
     display: grid;
+    grid-template-columns: 0 auto 1fr;
+    row-gap: unit((5px / @base-font-size-px), rem);
 
-    grid-template-areas:
-    'date'
-    'category';
+    .h4();
+    // Mobile size.
+    .respond-to-max( @bp-xs-max, {
+      // Override h4 bottom margin at mobile size.
+      margin-bottom: unit( ( 5px / @base-font-size-px ), rem );
+    });
 
-    .m-meta-header_left {
-      display: block;
+    text-wrap: balance;
+    margin-bottom: 0;
 
-      margin-bottom: unit( (5px / @base-font-size-px), em );
-      grid-area: category;
-
-      .m-meta-header_separator {
-        display: none;
-      }
+    .cf-icon-svg {
+      margin-right: unit((5px / @base-font-size-px), rem);
     }
 
-    .m-meta-header_right {
-      display: block;
-      grid-area: date;
+    // Create the divider.
+    &::before {
+      content: '|';
+      margin-left: unit((-13px / @base-font-size-px), rem);
     }
-  } );
+
+    // Adjustments to default date position.
+    .a-date {
+      font-size: unit((14px / @base-font-size-px), rem);
+      line-height: unit((24px / 14px));
+      margin-bottom: 0;
+    }
+  }
 
   // Desktop and tablet size.
   .respond-to-min( @bp-sm-min, {
-    .a-date {
-      line-height: 1.35;
-      vertical-align: bottom;
-    }
+    flex-direction: row;
   } );
-
-  &_left,
-  &_right {
-    display: inline-block;
-  }
-
-  &_left {
-    .heading-4();
-    line-height: unit((24px / 18px));
-
-    .m-meta-header_separator {
-      padding-left: 0.25em;
-      padding-right: 0.25em;
-    }
-  }
-
-  &_right {
-    line-height: 1.5;
-
-    .a-date {
-      line-height: unit((24px / 14px));
-    }
-  }
 }

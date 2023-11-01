@@ -124,16 +124,11 @@ variation_groups:
           * Mid Dark Red (#c3381c)
       - variation_is_deprecated: false
         variation_name: Link with icon
-        variation_description: >-
-          
-
-          * An icon should appear after the text it represents.
-
-          * Each icon should be used exclusively and consistently for one action.
-
-          * The color and font-size of an icon should be the same as the text it represents, including state changes.
-
-          * Icons should never be underlined.
+        variation_description: When used, an icon should appear after the text it
+          represents. Each icon should be used exclusively and consistently for
+          one action. The color and font-size of an icon should be the same as
+          the text it represents, including state changes. Icons should never be
+          underlined.
         variation_implementation: >-
           
 

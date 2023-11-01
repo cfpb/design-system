@@ -46,8 +46,8 @@ variation_groups:
 guidelines: ""
 eyebrow: Featured content
 title: Taglines
-description: Taglines are short paragraphs of text with a USA flag to their left
-  that are used in the header and footer across consumerfinance.gov.
+description: Taglines are short paragraphs of text with the USA flag to their
+  left that are used in the header and footer across consumerfinance.gov.
 use_cases: ""
 behavior: ""
 accessibility: ""

@@ -28,7 +28,10 @@ variation_groups:
           text flow. They are regular weight and are used within paragraph of
           text.
         variation_name: Inline link
-        variation_implementation: ""
+        variation_implementation: "Links that appear in body text (`p`), link lists
+          (`li`), or definitions (`dd`) are automatically underlined. To enable
+          underlines elsewhere, e.g. to underline links in a `nav` element,
+          simply add a `border-bottom-width: 1px;` to the link."
         variation_specs: >-
           [Color variables for
           links](https://cfpb.github.io/design-system/development/variables#typography-1)
@@ -199,11 +202,11 @@ variation_groups:
           [consumerfinance.gov](https://www.consumerfinance.gov/), links should
           appear in the following style and include both the original link text
           as well as a shortened URL.
-        variation_code_snippet: Here's the <a href="#">default link style</a> when printed.
+        variation_code_snippet: Here's the <a href="#">link style</a> when printed.
         variation_code_snippet_rendered: "<p>Here's the <a
           href=\"https://consumerfinance.gov/about-us/blog\"
-          style=\"font-weight: 500;\">default link style<span
-          style=\"border-bottom: 1px solid #ffffff; font-weight: 300;\">
+          style=\"font-weight: 500;\">link style<span style=\"border-bottom: 1px
+          solid #ffffff; font-weight: 300;\">
           (cfpb.gov/about-us/blog)</span></a> when printed.</p>"
         variation_implementation: When a page is printed, cf.gov's [print
           stylesheet](https://github.com/cfpb/consumerfinance.gov/blob/c9637160e14da5093b43c78fc2c87fa0ba190887/cfgov/unprocessed/css/print.less)
@@ -230,25 +233,20 @@ variation_groups:
           * Shorten "consumerfinance.gov” to “cfpb.gov”  
 
           * For Ask CFPB pages, abbreviate to “askcfpb” and the page’s associated number
-    variation_group_description: >+
-      Links that appear in body text (`p`), link lists (`li`), or definitions
-      (`dd`) are automatically underlined. To enable underlines elsewhere, e.g.
-      to underline links in a `nav` element, simply add a `border-bottom-width:
-      1px;` to the link.
-
+    variation_group_description: ""
 guidelines: ""
 eyebrow: Form elements
 title: Links
-description: Links are navigational elements that lead users to other locations,
-  either on the same page to a different page or site. In contrast,
-  [buttons](/design-system/components/buttons) are used to signal actions. Users
-  should be able to identify links without relying on color or styling alone.
+description: Links are navigational elements that connect users to other
+  locations, either on the same page or to a different page or site. In
+  contrast, [buttons](/design-system/components/buttons) are used to signal
+  actions.
 use_cases: ""
 behavior: >-
-  ### Default link behavior
+  ### Opening a link in the current tab (default)
 
 
-  In general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.
+  In general, links should default to opening in the current page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.
 
 
   ### Opening a link in a new tab
@@ -265,11 +263,11 @@ accessibility: >-
   Link text should clearly describe where it will take the user if activated. If
   a screen reader user is cycling through the links on a page, link text such as
   "Read more" or "Click here" is not helpful for knowing where that link will
-  take them. Write the link with language clearly describing the link's
-  destination.
+  take them. \
 
+  \
 
-  In situations where that's untenable, you can improve the situation for screen reader users by coding the link with the `aria-label` attribute and adding more descriptive link text, which will be read aloud by screen readers.
+  Write the link with language clearly describing the link's destination. In situations where that's untenable, you can improve the situation for screen reader users by coding the link with the `aria-label` attribute and adding more descriptive link text, which will be read aloud by screen readers.
 related_items: >-
   *
   [Variables](https://cfpb.github.io/design-system/development/variables#typography-1)

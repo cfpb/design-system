@@ -24,10 +24,9 @@ variation_groups:
 
 
           <p>Here's the <a href="#">default link style</a>. For reference, here's the <a href="#" class="hover">hover link style</a>. Train your eyes on the <a href="#" class="focus">focused link style</a>. Jump to the <a href="#" class="active">active link style</a>. We’ve all been to the <a href="#" class="visited">visited link style</a>.</p>
-        variation_description: >+
-          Inline links should be regular weight if inline with other text (e.g.,
-          within a paragraph like this one).
-
+        variation_description: Inline links are regular weight and appear within the
+          text flow. They are regular weight and are used within paragraph of
+          text.
         variation_name: Inline link
         variation_implementation: ""
         variation_specs: >-
@@ -72,7 +71,7 @@ variation_groups:
           * Teal (#257675)
 
           * Border bottom: 1px, solid
-      - variation_name: List links
+      - variation_name: List link
         variation_code_snippet: |-
           <ul class="m-list m-list__links">
               <li class="m-list_item">
@@ -83,8 +82,8 @@ variation_groups:
               </li>
           </ul>
         variation_description: List links (or call-to-action links) are standalone links
-          underneath paragraphs that highlight a users' next steps. They are
-          medium weight and often used in unordered lists.
+          that highlight a users' next steps. They are medium weight and often
+          used in unordered lists.
         variation_implementation: Call-to-action links are used in
           [cards](https://cfpb.github.io/design-system/patterns/cards) and [info
           unit
@@ -240,10 +239,10 @@ variation_groups:
 guidelines: ""
 eyebrow: Form elements
 title: Links
-description: Links lead users to a different page or further information. In
-  contrast, [buttons](/design-system/components/buttons) are used to signal
-  actions. Users should be able to identify links without relying on color or
-  styling alone.
+description: Links are navigational elements that lead users to other locations,
+  either on the same page to a different page or site. In contrast,
+  [buttons](/design-system/components/buttons) are used to signal actions. Users
+  should be able to identify links without relying on color or styling alone.
 use_cases: ""
 behavior: >-
   ### Default link behavior

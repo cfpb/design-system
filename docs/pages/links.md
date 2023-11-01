@@ -1,6 +1,7 @@
 ---
 layout: variation
 section: components
+status: Released
 variation_groups:
   - variation_group_name: Types
     variations:
@@ -24,7 +25,7 @@ variation_groups:
 
           <p>Here's the <a href="#">default link style</a>. For reference, here's the <a href="#" class="hover">hover link style</a>. Train your eyes on the <a href="#" class="focus">focused link style</a>. Jump to the <a href="#" class="active">active link style</a>. We’ve all been to the <a href="#" class="visited">visited link style</a>.</p>
         variation_description: Inline links are regular weight and appear within the
-          text flow. They are regular weight and are used within paragraphs of
+          text flow. They are regular weight and are used within paragraph of
           text.
         variation_name: Inline link
         variation_implementation: "Links that appear in body text (`p`), link lists
@@ -77,10 +78,10 @@ variation_groups:
         variation_code_snippet: |-
           <ul class="m-list m-list__links">
               <li class="m-list_item">
-                  <a class="m-list_link" href="#">List link</a>
+                  <a class="m-list_link" href="#">List link 1</a>
               </li>
               <li class="m-list_item">
-                  <a class="m-list_link" href="#">List link</a>
+                  <a class="m-list_link" href="#">List link 2</a>
               </li>
           </ul>
         variation_description: List links (or call-to-action links) are standalone links
@@ -124,11 +125,16 @@ variation_groups:
           * Mid Dark Red (#c3381c)
       - variation_is_deprecated: false
         variation_name: Link with icon
-        variation_description: When used, an icon should appear after the text it
-          represents. Each icon should be used exclusively and consistently for
-          one action. The color and font-size of an icon should be the same as
-          the text it represents, including state changes. Icons should never be
-          underlined.
+        variation_description: >-
+          
+
+          * An icon should appear after the text it represents.
+
+          * Each icon should be used exclusively and consistently for one action.
+
+          * The color and font-size of an icon should be the same as the text it represents, including state changes.
+
+          * Icons should never be underlined.
         variation_implementation: >-
           
 
@@ -228,9 +234,31 @@ variation_groups:
 
           * For Ask CFPB pages, abbreviate to “askcfpb” and the page’s associated number
     variation_group_description: ""
-use_cases: ""
 guidelines: ""
 eyebrow: Form elements
+title: Links
+description: Links are navigational elements that connect users to other
+  locations, either on the current page or to a different page or site. In
+  contrast, [buttons](/design-system/components/buttons) are used to signal
+  important actions.
+use_cases: ""
+behavior: >-
+  ### Opening a link in the current tab (default)
+
+
+  In general, links should default to opening in the current page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.
+
+
+  ### Opening a link in a new tab
+
+
+  Links should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.
+
+
+  Add `target="_blank" rel="noopener noreferrer"` to direct these links to securely open in a new tab.
+
+
+  Add an `aria-label` that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be `aria-label="Learn why some county data are unavailable. (Link opens in new tab.)"` This meets [WCAG guideline 3.2 that webpages should work in a predictable way](https://www.w3.org/TR/WCAG20-TECHS/G201.html).
 accessibility: >-
   Link text should clearly describe where it will take the user if activated. If
   a screen reader user is cycling through the links on a page, link text such as
@@ -250,28 +278,5 @@ related_items: >-
 
   * [Iconography](https://cfpb.github.io/design-system/foundation/iconography)
 last_updated: 2019-09-17T14:52:22.684Z
-title: Links
-status: Released
-description: Links are navigational elements that connect users to other
-  locations, either on the current page or to a different page or site. In
-  contrast, [buttons](/design-system/components/buttons) are used to signal
-  important actions.
-behavior: >-
-  ### Opening a link in the current tab (default)
-
-
-  In general, links should default to opening in the current page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.
-
-
-  ### Opening a link in a new tab
-
-
-  Links should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.
-
-
-  Add `target="_blank" rel="noopener noreferrer"` to direct these links to securely open in a new tab.
-
-
-  Add an `aria-label` that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be `aria-label="Learn why some county data are unavailable. (Link opens in new tab.)"` This meets [WCAG guideline 3.2 that webpages should work in a predictable way](https://www.w3.org/TR/WCAG20-TECHS/G201.html).
 research: ""
 ---

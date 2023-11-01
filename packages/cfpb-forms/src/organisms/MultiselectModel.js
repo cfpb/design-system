@@ -29,8 +29,9 @@ function stringMatch(x, y) {
  * @param {HTMLOptionsCollection} options -
  *   Set of options from a <select> element.
  * @param {string} name - a unique name for this multiselect.
+ * @param {Object} config - Customization of Multiselect behavior
  */
-function MultiselectModel(options, name) {
+function MultiselectModel(options, name, config) {
   const _options = options;
   const _name = name;
   let _optionsData = [];
@@ -59,7 +60,8 @@ function MultiselectModel(options, name) {
    *   True if the maximum number of options are checked, false otherwise.
    */
   function isAtMaxSelections() {
-    return _selectedIndices.length === MAX_SELECTIONS;
+    const _max = config?.maxSelections || MAX_SELECTIONS;
+    return _selectedIndices.length >= _max;
   }
 
   /**

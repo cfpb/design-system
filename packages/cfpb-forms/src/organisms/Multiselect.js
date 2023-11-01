@@ -49,6 +49,7 @@ function Multiselect(element) {
   let _placeholder;
   let _model;
   let _options;
+  let _config; // Configuration object
 
   // Markup elems, convert this to templating engine in the future.
   let _containerDom;
@@ -285,10 +286,13 @@ function Multiselect(element) {
         const dataOptionSel = '[data-option="' + option.value + '"]';
         const _selectionsItemDom = _selectionsDom.querySelector(dataOptionSel);
 
-        if (typeof _selectionsItemDom !== 'undefined') {
-          _selectionsDom.removeChild(_selectionsItemDom);
+        // If the <Tag> exists
+        if (typeof _selectionsItemDom !== 'undefined' && _selectionsItemDom) {
+          _selectionsDom?.removeChild(_selectionsItemDom);
         }
-      } else {
+      }
+      // Else, if we are configured to display <Tag>s then render them
+      else if (_config?.renderTags && _selectionsDom) {
         _createSelectedItem(_selectionsDom, option);
       }
       _model.toggleOption(optionIndex);
@@ -512,7 +516,8 @@ function Multiselect(element) {
 
       _optionItemDoms.push(optionsItemDom);
 
-      if (isChecked) {
+      // Create <Tag> if enabled
+      if (isChecked && _config?.renderTags) {
         _createSelectedItem(_selectionsDom, option);
       }
     }
@@ -527,9 +532,10 @@ function Multiselect(element) {
 
   /**
    * Set up and create the multiselect.
+   * @param _modelConfig Multiselect configuration options
    * @returns {Multiselect} An instance.
    */
-  function init() {
+  function init(_modelConfig) {
     if (!setInitFlag(_dom)) {
       return this;
     }
@@ -544,7 +550,9 @@ function Multiselect(element) {
     _options = _dom.options || [];
 
     if (_options.length > 0) {
-      _model = new MultiselectModel(_options, _name).init();
+      // Store underlying model so we can expose it externally
+      _model = new MultiselectModel(_options, _name, _modelConfig).init();
+      _config = _modelConfig;
       const newDom = _populateMarkup();
 
       /* Removes <select> element,
@@ -562,6 +570,14 @@ function Multiselect(element) {
     return this;
   }
 
+  /**
+   * Allow external access to the underlying model for integration/customization when used in other applications.
+   * @returns {object} Model
+   */
+  function getModel() {
+    return _model;
+  }
+
   // Attach public events.
   this.init = init;
   this.expand = expand;
@@ -571,11 +587,16 @@ function Multiselect(element) {
   this.addEventListener = eventObserver.addEventListener;
   this.removeEventListener = eventObserver.removeEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
+  this.getModel = getModel;
+  this.updateSelections = _updateSelections;
+  this.selectionClickHandler = _selectionClickHandler;
+  this.selectionKeyDownHandler = _selectionKeyDownHandler;
 
   return this;
 }
 
 Multiselect.BASE_CLASS = BASE_CLASS;
-Multiselect.init = () => instantiateAll(`.${BASE_CLASS}`, Multiselect);
+Multiselect.init = (config) =>
+  instantiateAll(`.${BASE_CLASS}`, Multiselect, undefined, config);
 
 export { Multiselect };

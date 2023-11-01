@@ -298,19 +298,7 @@
     <ul class="m-list m-list__horizontal m-list__horizontal-spaced">
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#standard-links">Standard links</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#links-with-icons">Links with icons</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#jump-links">Jump links</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#printed-links">Printed links</a>
+            <a class="m-list_link" href="#types">Types</a>
         </li>
         
         <li class="m-list_item">
@@ -330,25 +318,24 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Links lead users to a different page or further information. In contrast, <a href="/design-system/components/buttons">buttons</a> are used to signal actions. Users should be able to identify links without relying on color or styling alone.</p>
+        <p>Links are navigational elements that connect users to other locations, either on the current page or to a different page or site. In contrast, <a href="/design-system/components/buttons">buttons</a> are used to signal important actions.</p>
 
     </section>
     
 
     
     
-    <section class="o-variation-group" id="standard-links">
+    <section class="o-variation-group" id="types">
 
         
         <h2 class="o-variation-group_title">
-            Standard links
+            Types
         </h2>
         
 
         
         <div class="o-variation-group_description">
-            <p>Links that appear in body text (<code class="language-plaintext highlighter-rouge">p</code>), link lists (<code class="language-plaintext highlighter-rouge">li</code>), or definitions (<code class="language-plaintext highlighter-rouge">dd</code>) are automatically underlined. To enable underlines elsewhere, e.g. to underline links in a <code class="language-plaintext highlighter-rouge">nav</code> element, simply add a <code class="language-plaintext highlighter-rouge">border-bottom-width: 1px;</code> to the link.</p>
-
+            
 
         </div>
         
@@ -364,7 +351,7 @@
             
             <div class="m-variation_name">
                 <h3>
-                    Inline links
+                    Inline link
                     
                 </h3>
             </div>
@@ -372,7 +359,7 @@
 
             
             <div class="m-variation_description">
-                <p>Inline links should be regular weight if inline with other text (e.g., within a paragraph like this one).</p>
+                <p>Inline links are regular weight and appear within the text flow. They are regular weight and are used within paragraph of text.</p>
 
             </div>
             
@@ -404,24 +391,30 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-inline-links-inline-links-should-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-inline-links-inline-links-should-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-inline-link-inline-links-are-reg-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-inline-link-inline-links-are-reg-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-inline-links-inline-links-should-1">
+            <div class="m-tabs u-hidden" id="details-inline-link-inline-links-are-reg-1">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-inline-links-inline-links-should-html-code-snippet-1">
+                        <a class="m-tabs_tab" href="#details-inline-link-inline-links-are-reg-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
                     
                     
                     
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#details-inline-link-inline-links-are-reg-implementation-1">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-inline-links-inline-links-should-specs-1">
+                        <a class="m-tabs_tab" href="#details-inline-link-inline-links-are-reg-specs-1">
                             Specs
                         </a>
                     </li>
@@ -430,7 +423,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-inline-links-inline-links-should-html-code-snippet-1">
+                <section class="m-tabs_panel" id="details-inline-link-inline-links-are-reg-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -457,10 +450,20 @@
 
                 <!-- Implementation details -->
                 
+                <section class="m-tabs_panel" id="details-inline-link-inline-links-are-reg-implementation-1">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <p>Links that appear in body text (<code class="language-plaintext highlighter-rouge">p</code>), link lists (<code class="language-plaintext highlighter-rouge">li</code>), or definitions (<code class="language-plaintext highlighter-rouge">dd</code>) are automatically underlined. To enable underlines elsewhere, e.g. to underline links in a <code class="language-plaintext highlighter-rouge">nav</code> element, simply add a <code class="language-plaintext highlighter-rouge">border-bottom-width: 1px;</code> to the link.</p>
+
+                        </div>
+                    </div>
+                </section>
+                
 
                 <!-- Specs -->
                 
-                <section class="m-tabs_panel" id="details-inline-links-inline-links-should-specs-1">
+                <section class="m-tabs_panel" id="details-inline-link-inline-links-are-reg-specs-1">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
@@ -518,7 +521,7 @@
             
             <div class="m-variation_name">
                 <h3>
-                    Call-to-action links
+                    List link
                     
                 </h3>
             </div>
@@ -526,7 +529,7 @@
 
             
             <div class="m-variation_description">
-                <p>Call-to-action links are standalone links underneath paragraphs that highlight users’ next steps. They are medium weight and often used in unordered lists.</p>
+                <p>List links (or call-to-action links) are standalone links that highlight a users’ next steps. They are medium weight and often used in unordered lists.</p>
 
             </div>
             
@@ -536,10 +539,10 @@
             <div class="a-live_code">
                 <ul class="m-list m-list__links">
     <li class="m-list_item">
-        <a class="m-list_link" href="#">Sample call-to-action link</a>
+        <a class="m-list_link" href="#">List link 1</a>
     </li>
     <li class="m-list_item">
-        <a class="m-list_link" href="#">Another sample call-to-action link</a>
+        <a class="m-list_link" href="#">List link 2</a>
     </li>
 </ul>
             </div>
@@ -553,15 +556,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-call-to-action-links-call-to-act-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-call-to-action-links-call-to-act-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-list-link-list-links-or-call-to--2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-list-link-list-links-or-call-to--2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-call-to-action-links-call-to-act-2">
+            <div class="m-tabs u-hidden" id="details-list-link-list-links-or-call-to--2">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-call-to-action-links-call-to-act-html-code-snippet-2">
+                        <a class="m-tabs_tab" href="#details-list-link-list-links-or-call-to--html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -569,14 +572,14 @@
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-call-to-action-links-call-to-act-implementation-2">
+                        <a class="m-tabs_tab" href="#details-list-link-list-links-or-call-to--implementation-2">
                             Implementation
                         </a>
                     </li>
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-call-to-action-links-call-to-act-specs-2">
+                        <a class="m-tabs_tab" href="#details-list-link-list-links-or-call-to--specs-2">
                             Specs
                         </a>
                     </li>
@@ -585,16 +588,16 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-call-to-action-links-call-to-act-html-code-snippet-2">
+                <section class="m-tabs_panel" id="details-list-link-list-links-or-call-to--html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;ul class="m-list m-list__links"&gt;
     &lt;li class="m-list_item"&gt;
-        &lt;a class="m-list_link" href="#"&gt;Sample call-to-action link&lt;/a&gt;
+        &lt;a class="m-list_link" href="#"&gt;List link 1&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class="m-list_item"&gt;
-        &lt;a class="m-list_link" href="#"&gt;Another sample call-to-action link&lt;/a&gt;
+        &lt;a class="m-list_link" href="#"&gt;List link 2&lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
                         </div>
@@ -607,7 +610,7 @@
 
                 <!-- Implementation details -->
                 
-                <section class="m-tabs_panel" id="details-call-to-action-links-call-to-act-implementation-2">
+                <section class="m-tabs_panel" id="details-list-link-list-links-or-call-to--implementation-2">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
@@ -620,7 +623,7 @@
 
                 <!-- Specs -->
                 
-                <section class="m-tabs_panel" id="details-call-to-action-links-call-to-act-specs-2">
+                <section class="m-tabs_panel" id="details-list-link-list-links-or-call-to--specs-2">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
@@ -661,7 +664,7 @@
             
             <div class="m-variation_name">
                 <h3>
-                    Destructive links
+                    Destructive link
                     
                 </h3>
             </div>
@@ -678,7 +681,7 @@
             
             <div class="a-live_code">
                 <a class="a-btn a-btn__link a-btn__warning" href="#">
-     Sample destructive link
+     Destructive link
 </a>
             </div>
             
@@ -691,15 +694,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-destructive-links-destructive-li-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-destructive-links-destructive-li-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-destructive-link-destructive-lin-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-destructive-link-destructive-lin-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-destructive-links-destructive-li-3">
+            <div class="m-tabs u-hidden" id="details-destructive-link-destructive-lin-3">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-destructive-links-destructive-li-html-code-snippet-3">
+                        <a class="m-tabs_tab" href="#details-destructive-link-destructive-lin-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -708,7 +711,7 @@
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-destructive-links-destructive-li-specs-3">
+                        <a class="m-tabs_tab" href="#details-destructive-link-destructive-lin-specs-3">
                             Specs
                         </a>
                     </li>
@@ -717,12 +720,12 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-destructive-links-destructive-li-html-code-snippet-3">
+                <section class="m-tabs_panel" id="details-destructive-link-destructive-lin-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;a class="a-btn a-btn__link a-btn__warning" href="#"&gt;
-     Sample destructive link
+     Destructive link
 &lt;/a&gt;</code></pre>
                         </div>
                     </div>
@@ -737,7 +740,7 @@
 
                 <!-- Specs -->
                 
-                <section class="m-tabs_panel" id="details-destructive-links-destructive-li-specs-3">
+                <section class="m-tabs_panel" id="details-destructive-link-destructive-lin-specs-3">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
@@ -756,29 +759,6 @@
 
         </div>
         
-    </section>
-    
-    <section class="o-variation-group" id="links-with-icons">
-
-        
-        <h2 class="o-variation-group_title">
-            Links with icons
-        </h2>
-        
-
-        
-        <div class="o-variation-group_description">
-            <ul>
-  <li>An icon should appear after the text it represents.</li>
-  <li>Each icon should be used exclusively and consistently for one action.</li>
-  <li>The color and font-size of an icon should be the same as the text it represents, including state changes.</li>
-  <li>Icons should never be underlined.</li>
-</ul>
-
-        </div>
-        
-
-        
         <div class="m-variation">
 
             
@@ -789,7 +769,7 @@
             
             <div class="m-variation_name">
                 <h3>
-                    Standard link with icon
+                    Link with icon
                     
                 </h3>
             </div>
@@ -797,7 +777,12 @@
 
             
             <div class="m-variation_description">
-                <p>To prevent the link’s underline from extending under the icon, wrap the link text with a <code class="language-plaintext highlighter-rouge">span.icon-link_text</code>. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the <code class="language-plaintext highlighter-rouge">a-link_text</code>. It is important the text and icon are siblings to correctly handle underlines.</p>
+                <ul>
+  <li>An icon should appear after the text it represents.</li>
+  <li>Each icon should be used exclusively and consistently for one action.</li>
+  <li>The color and font-size of an icon should be the same as the text it represents, including state changes.</li>
+  <li>Icons should never be underlined.</li>
+</ul>
 
             </div>
             
@@ -830,27 +815,33 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-standard-link-with-icon-to-preve-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-standard-link-with-icon-to-preve-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-link-with-icon-an-icon-should-ap-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-link-with-icon-an-icon-should-ap-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-standard-link-with-icon-to-preve-1">
+            <div class="m-tabs u-hidden" id="details-link-with-icon-an-icon-should-ap-4">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-standard-link-with-icon-to-preve-html-code-snippet-1">
+                        <a class="m-tabs_tab" href="#details-link-with-icon-an-icon-should-ap-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
                     
                     
                     
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#details-link-with-icon-an-icon-should-ap-implementation-4">
+                            Implementation
+                        </a>
+                    </li>
+                    
                     
                 </ul>
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-standard-link-with-icon-to-preve-html-code-snippet-1">
+                <section class="m-tabs_panel" id="details-link-with-icon-an-icon-should-ap-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -880,6 +871,18 @@
 
                 <!-- Implementation details -->
                 
+                <section class="m-tabs_panel" id="details-link-with-icon-an-icon-should-ap-implementation-4">
+                    <div>
+                        <h4 class="variation-implementation-title">Implementation details</h4>
+                        <div style="padding:40px">
+                            <ul>
+  <li>To prevent the link’s underline from extending under the icon, wrap the link text with a <code class="language-plaintext highlighter-rouge">span.icon-link_text</code>. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the <code class="language-plaintext highlighter-rouge">a-link_text</code>. It is important the text and icon are siblings to correctly handle underlines.</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
 
                 <!-- Specs -->
                 
@@ -899,7 +902,7 @@
             
             <div class="m-variation_name">
                 <h3>
-                    Non-wrapping icon links
+                    Non-wrapping link with icon
                     
                 </h3>
             </div>
@@ -935,15 +938,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-non-wrapping-icon-links-icons-ad-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-non-wrapping-icon-links-icons-ad-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-non-wrapping-link-with-icon-icon-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-non-wrapping-link-with-icon-icon-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-non-wrapping-icon-links-icons-ad-2">
+            <div class="m-tabs u-hidden" id="details-non-wrapping-link-with-icon-icon-5">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-non-wrapping-icon-links-icons-ad-html-code-snippet-2">
+                        <a class="m-tabs_tab" href="#details-non-wrapping-link-with-icon-icon-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
@@ -955,7 +958,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-non-wrapping-icon-links-icons-ad-html-code-snippet-2">
+                <section class="m-tabs_panel" id="details-non-wrapping-link-with-icon-icon-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -988,24 +991,6 @@
 
         </div>
         
-    </section>
-    
-    <section class="o-variation-group" id="jump-links">
-
-        
-        <h2 class="o-variation-group_title">
-            Jump links
-        </h2>
-        
-
-        
-        <div class="o-variation-group_description">
-            <p>Jump links are standalone links that respond to small screens by converting to full block links that have a finger-friendly touch area. Reduce screen size to see these in action.</p>
-
-        </div>
-        
-
-        
         <div class="m-variation">
 
             
@@ -1024,7 +1009,7 @@
 
             
             <div class="m-variation_description">
-                
+                <p>Jump links are standalone links that respond to small screens by converting to full block links that have a finger-friendly touch area. Reduce screen size to see these in action.</p>
 
             </div>
             
@@ -1049,15 +1034,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-jump-link-a-class-a-link-a-link--1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-jump-link-a-class-a-link-a-link--1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-jump-link-jump-links-are-standal-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-jump-link-jump-links-are-standal-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-jump-link-a-class-a-link-a-link--1">
+            <div class="m-tabs u-hidden" id="details-jump-link-jump-links-are-standal-6">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-jump-link-a-class-a-link-a-link--html-code-snippet-1">
+                        <a class="m-tabs_tab" href="#details-jump-link-jump-links-are-standal-html-code-snippet-6">
                             HTML code snippet
                         </a>
                     </li>
@@ -1069,7 +1054,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-jump-link-a-class-a-link-a-link--html-code-snippet-1">
+                <section class="m-tabs_panel" id="details-jump-link-jump-links-are-standal-html-code-snippet-6">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1142,15 +1127,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-jump-link-with-icon-on-left-jump-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-jump-link-with-icon-on-left-jump-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-jump-link-with-icon-on-left-jump-7" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-jump-link-with-icon-on-left-jump-7" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-jump-link-with-icon-on-left-jump-2">
+            <div class="m-tabs u-hidden" id="details-jump-link-with-icon-on-left-jump-7">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-jump-link-with-icon-on-left-jump-html-code-snippet-2">
+                        <a class="m-tabs_tab" href="#details-jump-link-with-icon-on-left-jump-html-code-snippet-7">
                             HTML code snippet
                         </a>
                     </li>
@@ -1162,7 +1147,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-jump-link-with-icon-on-left-jump-html-code-snippet-2">
+                <section class="m-tabs_panel" id="details-jump-link-with-icon-on-left-jump-html-code-snippet-7">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1192,24 +1177,6 @@
 
         </div>
         
-    </section>
-    
-    <section class="o-variation-group" id="printed-links">
-
-        
-        <h2 class="o-variation-group_title">
-            Printed links
-        </h2>
-        
-
-        
-        <div class="o-variation-group_description">
-            
-
-        </div>
-        
-
-        
         <div class="m-variation">
 
             
@@ -1217,6 +1184,13 @@
             
             
 
+            
+            <div class="m-variation_name">
+                <h3>
+                    Printed links
+                    
+                </h3>
+            </div>
             
 
             
@@ -1229,9 +1203,7 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <p>Here's the <a href="https://consumerfinance.gov/about-us/blog" style="font-weight: 500;">default link style<span style="border-bottom: 1px solid #ffffff; font-weight: 300;"> (cfpb.gov/about-us/blog)</span></a> when printed.</p>
-
-
+                <p>Here's the <a href="https://consumerfinance.gov/about-us/blog" style="font-weight: 500;">link style<span style="border-bottom: 1px solid #ffffff; font-weight: 300;"> (cfpb.gov/about-us/blog)</span></a> when printed.</p>
             </div>
             
 
@@ -1243,15 +1215,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-when-a-page-is-printed-from-cons-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-when-a-page-is-printed-from-cons-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-printed-links-when-a-page-is-pri-8" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-printed-links-when-a-page-is-pri-8" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-when-a-page-is-printed-from-cons-1">
+            <div class="m-tabs u-hidden" id="details-printed-links-when-a-page-is-pri-8">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-when-a-page-is-printed-from-cons-html-code-snippet-1">
+                        <a class="m-tabs_tab" href="#details-printed-links-when-a-page-is-pri-html-code-snippet-8">
                             HTML code snippet
                         </a>
                     </li>
@@ -1259,14 +1231,14 @@
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-when-a-page-is-printed-from-cons-implementation-1">
+                        <a class="m-tabs_tab" href="#details-printed-links-when-a-page-is-pri-implementation-8">
                             Implementation
                         </a>
                     </li>
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-when-a-page-is-printed-from-cons-specs-1">
+                        <a class="m-tabs_tab" href="#details-printed-links-when-a-page-is-pri-specs-8">
                             Specs
                         </a>
                     </li>
@@ -1275,11 +1247,11 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-when-a-page-is-printed-from-cons-html-code-snippet-1">
+                <section class="m-tabs_panel" id="details-printed-links-when-a-page-is-pri-html-code-snippet-8">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">Here's the &lt;a href="#"&gt;default link style&lt;/a&gt; when printed.</code></pre>
+                            <pre><code class="language-html">Here's the &lt;a href="#"&gt;link style&lt;/a&gt; when printed.</code></pre>
                         </div>
                     </div>
                 </section>
@@ -1290,7 +1262,7 @@
 
                 <!-- Implementation details -->
                 
-                <section class="m-tabs_panel" id="details-when-a-page-is-printed-from-cons-implementation-1">
+                <section class="m-tabs_panel" id="details-printed-links-when-a-page-is-pri-implementation-8">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
@@ -1303,7 +1275,7 @@
 
                 <!-- Specs -->
                 
-                <section class="m-tabs_panel" id="details-when-a-page-is-printed-from-cons-specs-1">
+                <section class="m-tabs_panel" id="details-printed-links-when-a-page-is-pri-specs-8">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
@@ -1351,10 +1323,12 @@
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<h3 id="default-links">Default links</h3>
-<p>In general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.</p>
+<h3 id="opening-a-link-in-the-current-tab-default">Opening a link in the current tab (default)</h3>
+
+<p>In general, links should default to opening in the current page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.</p>
 
 <h3 id="opening-a-link-in-a-new-tab">Opening a link in a new tab</h3>
+
 <p>Links should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.</p>
 
 <p>Add <code class="language-plaintext highlighter-rouge">target="_blank" rel="noopener noreferrer"</code> to direct these links to securely open in a new tab.</p>
@@ -1374,9 +1348,9 @@
             <div class="content_line content_line__wide u-mb20"></div>
             <p>
                 </p>
-<p>Link text should clearly describe where it will take the user if activated. If a screen reader user is cycling through the links on a page, link text such as “Read more” or “Click here” is not helpful for knowing where that link will take them. Write the link with language clearly describing the link’s destination.</p>
-
-<p>In situations where that’s untenable, you can improve the situation for screen reader users by coding the link with the <code class="language-plaintext highlighter-rouge">aria-label</code> attribute and adding more descriptive link text, which will be read aloud by screen readers.</p>
+<p>Link text should clearly describe where it will take the user if activated. If a screen reader user is cycling through the links on a page, link text such as “Read more” or “Click here” is not helpful for knowing where that link will take them. <br>
+<br>
+Write the link with language clearly describing the link’s destination. In situations where that’s untenable, you can improve the situation for screen reader users by coding the link with the <code class="language-plaintext highlighter-rouge">aria-label</code> attribute and adding more descriptive link text, which will be read aloud by screen readers.</p>
 
             
         </section>
@@ -1456,8 +1430,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/links.md">
-                    <time datetime="2023-10-27 17:35:03 -0400">
-                         5:35:03 PM Oct 27, 2023
+                    <time datetime="2023-11-01 11:18:27 -0400">
+                        11:18:27 AM Nov 01, 2023
                     </time>
                 </a>
             </small>

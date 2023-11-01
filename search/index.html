@@ -4330,8 +4330,8 @@ Label heading
                 
 
                 
-                    'variation_name1': 'Inline links',
-                    'variation_description1': "Inline links should be regular weight if inline with other text (e.g., within a paragraph like this one).\n\n",
+                    'variation_name1': 'Inline link',
+                    'variation_description1': "Inline links are regular weight and appear within the text flow. They are regular weight and are used within paragraph of text.\n",
                     'variation_code_snippet1': `&lt;!--Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.--&gt;
 
 &lt;!--
@@ -4346,31 +4346,26 @@ Label heading
 
 &lt;p&gt;Here&#39;s the &lt;a href=&quot;#&quot;&gt;default link style&lt;/a&gt;. For reference, here&#39;s the &lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;hover link style&lt;/a&gt;. Train your eyes on the &lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;focused link style&lt;/a&gt;. Jump to the &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;active link style&lt;/a&gt;. We’ve all been to the &lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;visited link style&lt;/a&gt;.&lt;/p&gt;`,
                 
-                    'variation_name2': 'Call-to-action links',
-                    'variation_description2': "Call-to-action links are standalone links underneath paragraphs that highlight users’ next steps. They are medium weight and often used in unordered lists.\n\n",
+                    'variation_name2': 'List link',
+                    'variation_description2': "List links (or call-to-action links) are standalone links that highlight a users’ next steps. They are medium weight and often used in unordered lists.\n",
                     'variation_code_snippet2': `&lt;ul class=&quot;m-list m-list__links&quot;&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;
-        &lt;a class=&quot;m-list_link&quot; href=&quot;#&quot;&gt;Sample call-to-action link&lt;/a&gt;
+        &lt;a class=&quot;m-list_link&quot; href=&quot;#&quot;&gt;List link 1&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class=&quot;m-list_item&quot;&gt;
-        &lt;a class=&quot;m-list_link&quot; href=&quot;#&quot;&gt;Another sample call-to-action link&lt;/a&gt;
+        &lt;a class=&quot;m-list_link&quot; href=&quot;#&quot;&gt;List link 2&lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;`,
                 
-                    'variation_name3': 'Destructive links',
+                    'variation_name3': 'Destructive link',
                     'variation_description3': "Destructive links provide a visual warning to users that clicking them will perform a destructive action, such as clearing entries in a form.\n",
                     'variation_code_snippet3': `&lt;a class=&quot;a-btn a-btn__link a-btn__warning&quot; href=&quot;#&quot;&gt;
-     Sample destructive link
+     Destructive link
 &lt;/a&gt;`,
                 
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Standard link with icon',
-                    'variation_description1': "To prevent the link’s underline from extending under the icon, wrap the link text with a span.icon-link_text. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the a-link_text. It is important the text and icon are siblings to correctly handle underlines.\n",
-                    'variation_code_snippet1': `&lt;p&gt;
+                    'variation_name4': 'Link with icon',
+                    'variation_description4': "\n\n  An icon should appear after the text it represents.\n  Each icon should be used exclusively and consistently for one action.\n  The color and font-size of an icon should be the same as the text it represents, including state changes.\n  Icons should never be underlined.\n\n",
+                    'variation_code_snippet4': `&lt;p&gt;
   The document icon should emphasize a link that contains a
     &lt;a class=&quot;a-link
               a-link__icon&quot;
@@ -4387,9 +4382,9 @@ Label heading
     &lt;/a&gt; for further details.
 &lt;/p&gt;`,
                 
-                    'variation_name2': 'Non-wrapping icon links',
-                    'variation_description2': "Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the __no-wrap modifier to .a-link__icon.\n",
-                    'variation_code_snippet2': `&lt;p&gt;
+                    'variation_name5': 'Non-wrapping link with icon',
+                    'variation_description5': "Icons added to inline links can sometimes break onto the next line. If you want to prevent this, you can add the __no-wrap modifier to .a-link__icon.\n",
+                    'variation_code_snippet5': `&lt;p&gt;
     The document icon should emphasize a link that contains a
     &lt;a class=&quot;a-link
           a-link__icon
@@ -4400,14 +4395,9 @@ Label heading
     &lt;/a&gt;.
 &lt;/p&gt;`,
                 
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Jump link',
-                    'variation_description1': "\n",
-                    'variation_code_snippet1': `&lt;a class=&quot;a-link
+                    'variation_name6': 'Jump link',
+                    'variation_description6': "Jump links are standalone links that respond to small screens by converting to full block links that have a finger-friendly touch area. Reduce screen size to see these in action.\n",
+                    'variation_code_snippet6': `&lt;a class=&quot;a-link
           a-link__jump
           a-link__icon-after-text&quot;
   href=&quot;#&quot;&gt;
@@ -4415,9 +4405,9 @@ Label heading
     {% include icons/right.svg %}
 &lt;/a&gt;`,
                 
-                    'variation_name2': 'Jump link with icon on left',
-                    'variation_description2': "Jump links can also have icons before the text, like icon links.\n",
-                    'variation_code_snippet2': `&lt;a class=&quot;a-link
+                    'variation_name7': 'Jump link with icon on left',
+                    'variation_description7': "Jump links can also have icons before the text, like icon links.\n",
+                    'variation_code_snippet7': `&lt;a class=&quot;a-link
           a-link__jump
           a-link__icon-before-text&quot;
   href=&quot;#&quot;&gt;
@@ -4425,24 +4415,19 @@ Label heading
     &lt;span class=&quot;a-link_text&quot;&gt;Jump link with icon on left&lt;/span&gt;
 &lt;/a&gt;`,
                 
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': '',
-                    'variation_description1': "When a page is printed from consumerfinance.gov, links should appear in the following style and include both the original link text as well as a shortened URL.\n",
-                    'variation_code_snippet1': `Here&#39;s the &lt;a href=&quot;#&quot;&gt;default link style&lt;/a&gt; when printed.`,
+                    'variation_name8': 'Printed links',
+                    'variation_description8': "When a page is printed from consumerfinance.gov, links should appear in the following style and include both the original link text as well as a shortened URL.\n",
+                    'variation_code_snippet8': `Here&#39;s the &lt;a href=&quot;#&quot;&gt;link style&lt;/a&gt; when printed.`,
                 
             
 
 
             'title': 'Links',
-            'description': "Links lead users to a different page or further information. In contrast, buttons are used to signal actions. Users should be able to identify links without relying on color or styling alone.\n",
+            'description': "Links are navigational elements that connect users to other locations, either on the current page or to a different page or site. In contrast, buttons are used to signal important actions.\n",
             'use_cases': "\n",
             'guidelines': "\n",
-            'behavior': "Default links\nIn general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.\n\nOpening a link in a new tab\nLinks should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.\n\nAdd target=\"_blank\" rel=\"noopener noreferrer\" to direct these links to securely open in a new tab.\n\nAdd an aria-label that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be aria-label=\"Learn why some county data are unavailable. (Link opens in new tab.)\" This meets WCAG guideline 3.2 that webpages should work in a predictable way.\n",
-            'accessibility': "Link text should clearly describe where it will take the user if activated. If a screen reader user is cycling through the links on a page, link text such as “Read more” or “Click here” is not helpful for knowing where that link will take them. Write the link with language clearly describing the link’s destination.\n\nIn situations where that’s untenable, you can improve the situation for screen reader users by coding the link with the aria-label attribute and adding more descriptive link text, which will be read aloud by screen readers.\n",
+            'behavior': "Opening a link in the current tab (default)\n\nIn general, links should default to opening in the current page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.\n\nOpening a link in a new tab\n\nLinks should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.\n\nAdd target=\"_blank\" rel=\"noopener noreferrer\" to direct these links to securely open in a new tab.\n\nAdd an aria-label that includes the link text and informs users with visual impairments that the link will open in a new tab. An example would be aria-label=\"Learn why some county data are unavailable. (Link opens in new tab.)\" This meets WCAG guideline 3.2 that webpages should work in a predictable way.\n",
+            'accessibility': "Link text should clearly describe where it will take the user if activated. If a screen reader user is cycling through the links on a page, link text such as “Read more” or “Click here” is not helpful for knowing where that link will take them. \n\nWrite the link with language clearly describing the link’s destination. In situations where that’s untenable, you can improve the situation for screen reader users by coding the link with the aria-label attribute and adding more descriptive link text, which will be read aloud by screen readers.\n",
             'research': "\n",
             'related_items': "\n  Variables\n  Buttons\n  Typography\n  Iconography\n\n",
             'url': 'components/links'

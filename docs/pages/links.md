@@ -125,16 +125,11 @@ variation_groups:
           * Mid Dark Red (#c3381c)
       - variation_is_deprecated: false
         variation_name: Link with icon
-        variation_description: >-
-          
-
-          * An icon should appear after the text it represents.
-
-          * Each icon should be used exclusively and consistently for one action.
-
-          * The color and font-size of an icon should be the same as the text it represents, including state changes.
-
-          * Icons should never be underlined.
+        variation_description: When used, an icon should appear after the text it
+          represents. Each icon should be used exclusively and consistently for
+          one action. The color and font-size of an icon should be the same as
+          the text it represents, including state changes. Icons should never be
+          underlined.
         variation_implementation: >-
           
 
@@ -182,7 +177,7 @@ variation_groups:
                     a-link__jump
                     a-link__icon-after-text"
             href="#">
-          <span class="a-link_text">Default jump link</span>
+          <span class="a-link_text">Jump link</span>
               {% include icons/right.svg %}
           </a>
       - variation_is_deprecated: false

@@ -72,21 +72,19 @@ variation_groups:
           * Teal (#257675)
 
           * Border bottom: 1px, solid
-      - variation_name: Call-to-action link
-        variation_code_snippet: >-
+      - variation_name: List links
+        variation_code_snippet: |-
           <ul class="m-list m-list__links">
               <li class="m-list_item">
-                  <a class="m-list_link" href="#">Sample call-to-action link</a>
+                  <a class="m-list_link" href="#">List link</a>
               </li>
               <li class="m-list_item">
-                  <a class="m-list_link" href="#">Another sample call-to-action link</a>
+                  <a class="m-list_link" href="#">List link</a>
               </li>
           </ul>
-        variation_description: >+
-          Call-to-action links are standalone links underneath paragraphs that
-          highlight users' next steps. They are medium weight and often used in
-          unordered lists.
-
+        variation_description: List links (or call-to-action links) are standalone links
+          underneath paragraphs that highlight a users' next steps. They are
+          medium weight and often used in unordered lists.
         variation_implementation: Call-to-action links are used in
           [cards](https://cfpb.github.io/design-system/patterns/cards) and [info
           unit
@@ -115,7 +113,7 @@ variation_groups:
       - variation_name: Destructive link
         variation_code_snippet: |-
           <a class="a-btn a-btn__link a-btn__warning" href="#">
-               Sample destructive link
+               Destructive link
           </a>
         variation_description: Destructive links provide a visual warning to users that
           clicking them will perform a destructive action, such as clearing
@@ -157,7 +155,7 @@ variation_groups:
               </a> for further details.
           </p>
       - variation_is_deprecated: false
-        variation_name: Non-wrapping icon link
+        variation_name: Non-wrapping link with icon
         variation_description: Icons added to inline links can sometimes break onto the
           next line. If you want to prevent this, you can add the `__no-wrap`
           modifier to `.a-link__icon`.
@@ -248,12 +246,14 @@ description: Links lead users to a different page or further information. In
   styling alone.
 use_cases: ""
 behavior: >-
-  ### Default links
+  ### Default link behavior
+
 
   In general, links should default to opening in the same page or browser tab. This allows the user to choose whether they want to open an additional window in order to view the content. This applies to document and external links.
 
 
   ### Opening a link in a new tab
+
 
   Links should open in a new tab in situations where users enter data or make selections that would be lost if they left the page. This includes interactive tools, search filters, and forms where the user has to enter and submit information.
 

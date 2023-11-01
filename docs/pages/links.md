@@ -238,9 +238,9 @@ guidelines: ""
 eyebrow: Form elements
 title: Links
 description: Links are navigational elements that connect users to other
-  locations, either on the same page or to a different page or site. In
+  locations, either on the current page or to a different page or site. In
   contrast, [buttons](/design-system/components/buttons) are used to signal
-  actions.
+  important actions.
 use_cases: ""
 behavior: >-
   ### Opening a link in the current tab (default)

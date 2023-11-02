@@ -30,6 +30,7 @@ first-level:
         nav-items:
           - page: Banner notification
           - page: Notifications
+          - page: Taglines
       - heading: Behavior
         nav-items:
           - page: Expandables
@@ -77,7 +78,6 @@ first-level:
               - page: Cards
               - page: Featured content module
               - page: Wells
-              - page: Taglines
           - heading: Main content
             nav-items:
               - page: Info unit groups

@@ -555,10 +555,12 @@ function Multiselect(element) {
     _placeholder = _dom.getAttribute('placeholder');
     _options = _dom.options || [];
 
+    // Allow devs to pass the config settings they want and not worry about the rest
+    _config = { ...DEFAULT_CONFIG, ...multiselectConfig };
+
     if (_options.length > 0) {
       // Store underlying model so we can expose it externally
-      _model = new MultiselectModel(_options, _name, multiselectConfig).init();
-      _config = multiselectConfig;
+      _model = new MultiselectModel(_options, _name, _config).init();
       const newDom = _populateMarkup();
 
       /* Removes <select> element,

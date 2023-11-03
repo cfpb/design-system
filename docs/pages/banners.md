@@ -94,9 +94,10 @@ description: Banners appear at the top of the page and span the full width. They
   can communicate high-priority information about the state or status of page
   content or identify that a website is official and secure.
 use_cases: Use the banner to communicate important information that is not
-  related to a specific task. Use the inline notification instead when calling
-  out specific page content or when alerting users as to information that is
-  relevant to the immediate task.
+  related to a specific task. Use the
+  [notification](https://cfpb.github.io/design-system/components/notifications#information-base-notification-1)
+  instead when calling out specific page content or when alerting users as to
+  information that is relevant to the immediate task.
 behavior: ""
 related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
   s/notifications)"

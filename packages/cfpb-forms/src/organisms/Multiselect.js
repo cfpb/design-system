@@ -5,7 +5,7 @@ import {
   isMobileUserAgent,
   instantiateAll,
 } from '@cfpb/cfpb-atomic-component';
-import MultiselectModel from './MultiselectModel.js';
+import MultiselectModel, { MAX_SELECTIONS } from './MultiselectModel.js';
 import { create } from './MultiselectUtils.js';
 
 import * as closeIconSrc from '@cfpb/cfpb-icons/src/icons/error.svg';
@@ -26,6 +26,12 @@ const KEY_ESCAPE = 'Escape';
 const KEY_UP = 'ArrowUp';
 const KEY_DOWN = 'ArrowDown';
 const KEY_TAB = 'Tab';
+
+// Configuration default
+const DEFAULT_CONFIG = {
+  renderTags: true, // Allow the Multiselect to generate the Tag elements in the DOM
+  maxSelections: MAX_SELECTIONS, // Maximum number of options a user can select
+};
 
 /**
  * Multiselect
@@ -49,7 +55,7 @@ function Multiselect(element) {
   let _placeholder;
   let _model;
   let _options;
-  let _config; // Configuration object
+  let _config; // Multiselect configuration object
 
   // Markup elems, convert this to templating engine in the future.
   let _containerDom;
@@ -532,10 +538,10 @@ function Multiselect(element) {
 
   /**
    * Set up and create the multiselect.
-   * @param _modelConfig Multiselect configuration options
+   * @param multiselectConfig Multiselect configuration options
    * @returns {Multiselect} An instance.
    */
-  function init(_modelConfig) {
+  function init(multiselectConfig = DEFAULT_CONFIG) {
     if (!setInitFlag(_dom)) {
       return this;
     }
@@ -551,8 +557,8 @@ function Multiselect(element) {
 
     if (_options.length > 0) {
       // Store underlying model so we can expose it externally
-      _model = new MultiselectModel(_options, _name, _modelConfig).init();
-      _config = _modelConfig;
+      _model = new MultiselectModel(_options, _name, multiselectConfig).init();
+      _config = multiselectConfig;
       const newDom = _populateMarkup();
 
       /* Removes <select> element,

@@ -2,7 +2,7 @@
 let UNDEFINED;
 
 // How many options may be checked.
-const MAX_SELECTIONS = 5;
+export const MAX_SELECTIONS = 5;
 
 /**
  * Escapes a string.

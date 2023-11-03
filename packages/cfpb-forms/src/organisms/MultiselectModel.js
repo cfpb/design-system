@@ -34,6 +34,8 @@ function stringMatch(x, y) {
 function MultiselectModel(options, name, config) {
   const _options = options;
   const _name = name;
+  const _max = config?.maxSelections || MAX_SELECTIONS;
+
   let _optionsData = [];
 
   let _selectedIndices = [];
@@ -60,7 +62,6 @@ function MultiselectModel(options, name, config) {
    *   True if the maximum number of options are checked, false otherwise.
    */
   function isAtMaxSelections() {
-    const _max = config?.maxSelections || MAX_SELECTIONS;
     return _selectedIndices.length >= _max;
   }
 
@@ -110,10 +111,7 @@ function MultiselectModel(options, name, config) {
   function toggleOption(index) {
     _optionsData[index].checked = !_optionsData[index].checked;
 
-    if (
-      _selectedIndices.length < MAX_SELECTIONS &&
-      _optionsData[index].checked
-    ) {
+    if (_selectedIndices.length < _max && _optionsData[index].checked) {
       _selectedIndices.push(index);
       _selectedIndices.sort();
 

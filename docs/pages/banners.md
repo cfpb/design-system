@@ -43,7 +43,7 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: US gov banner
         variation_description: The US gov banner identifies official websites of
-          government organizations in the United States It helps visitors
+          government organizations in the United States. It helps visitors
           understand whether a website is official and secure.
         variation_code_snippet: |-
           <div class="m-global-eyebrow">
@@ -93,9 +93,7 @@ title: Banners
 description: Banners appear at the top of the page and span the full width. They
   can communicate high-priority information about the state or status of page
   content or identify that a website is official and secure.
-use_cases: Use the banner notification to communicate important information
-  about the state or status of page content. Use the banner notification to
-  highlight high-priority system or product level information that is not
+use_cases: Use the banner to communicate important information that is not
   related to a specific task. Use the inline notification instead when calling
   out specific page content or when alerting users as to information that is
   relevant to the immediate task.

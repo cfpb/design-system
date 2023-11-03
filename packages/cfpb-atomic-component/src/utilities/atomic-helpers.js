@@ -100,9 +100,9 @@ function setInitFlag(element) {
 
 /**
  * @param {string} selector - Selector to search for in the document.
- * @param {Object} config - Configuration will be provided to the Constructor's init()
  * @param {Function} Constructor - A constructor function.
  * @param {HTMLElement} [scope] - A dom node in which to query the selector.
+ * @param {object} config - Configuration will be provided to the Constructor's init()
  *   If not supplied, it defaults to the `document`.
  * @returns {Array} List of instances that were instantiated.
  */

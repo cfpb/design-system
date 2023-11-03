@@ -538,7 +538,7 @@ function Multiselect(element) {
 
   /**
    * Set up and create the multiselect.
-   * @param multiselectConfig Multiselect configuration options
+   * @param {object} multiselectConfig - Multiselect configuration options
    * @returns {Multiselect} An instance.
    */
   function init(multiselectConfig = DEFAULT_CONFIG) {

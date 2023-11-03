@@ -29,7 +29,7 @@ function stringMatch(x, y) {
  * @param {HTMLOptionsCollection} options -
  *   Set of options from a <select> element.
  * @param {string} name - a unique name for this multiselect.
- * @param {Object} config - Customization of Multiselect behavior
+ * @param {object} config - Customization of Multiselect behavior
  */
 function MultiselectModel(options, name, config) {
   const _options = options;

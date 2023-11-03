@@ -40,6 +40,21 @@ variation_groups:
           pages that are outdated and should no longer be referenced for
           guidance. These pages may have historical value or significance to
           researchers, historians, and the public.
+      - variation_is_deprecated: false
+        variation_name: US gov banner
+        variation_description: The US gov banner identifies official websites of
+          government organizations in the United States It helps visitors
+          understand whether a website is official and secure.
+        variation_code_snippet: |-
+          <div class="m-global-eyebrow">
+              <div class="a-tagline">
+                  <span class="u-usa-flag"></span>
+                  <div>
+                      An official website of the
+                      <span class="u-nowrap">United States government</span>
+                  </div>
+              </div>
+          </div>
       - variation_code_snippet: >-
           <div class="o-banner">
               <div class="wrapper wrapper__match-content">
@@ -72,20 +87,12 @@ variation_groups:
           system or product level notifications that are not specific to an
           immediate task.
         variation_name: Warning banner
-      - variation_is_deprecated: false
-        variation_name: US gov banner
-        variation_description: The US gov banner identifies official websites of
-          government organizations in the United States It helps visitors
-          understand whether a website is official and secure.
     variation_group_name: Types
 eyebrow: Alerts
 title: Banners
-description: >-
-  Banners appear at the top of the page and span the full width. \
-
-  \
-
-  Banners can communicate high-priority information about the state or status of page content.
+description: Banners appear at the top of the page and span the full width. They
+  can communicate high-priority information about the state or status of page
+  content or identify that a website is official and secure.
 use_cases: Use the banner notification to communicate important information
   about the state or status of page content. Use the banner notification to
   highlight high-priority system or product level information that is not

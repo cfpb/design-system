@@ -4,38 +4,6 @@ section: components
 status: Proposed
 variation_groups:
   - variations:
-      - variation_code_snippet: >-
-          <div class="o-banner">
-              <div class="wrapper wrapper__match-content">
-                  <div class="m-notification
-                              m-notification__visible
-                              m-notification__warning">
-                      {% include icons/warning-round.svg %}
-                      <div class="m-notification_content">
-                          <div class="h4 m-notification_message">Warning banner with a notification</div>
-                          <p class="m-notification_explanation">
-                              An optional paragraph of text can be added to explain the purpose of the warning banner.
-                          </p>
-                          <ul class="m-list m-list__links">
-                              <li class="m-list_item">
-                                  <a class="m-list_link" href="#">
-                                      A link can be added
-                                  </a>
-                              </li>
-                              <li class="m-list_item">
-                                  <a class="m-list_link" href="#">
-                                      Multiple links are supported
-                                  </a>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        variation_description: The warning banner is used to display high-priority
-          system or product level notifications that are not specific to an
-          immediate task.
-        variation_name: Warning banner
       - variation_is_deprecated: false
         variation_code_snippet: >-
           <div class="o-banner o-banner__dark">
@@ -72,10 +40,42 @@ variation_groups:
           pages that are outdated and should no longer be referenced for
           guidance. These pages may have historical value or significance to
           researchers, historians, and the public.
+      - variation_code_snippet: >-
+          <div class="o-banner">
+              <div class="wrapper wrapper__match-content">
+                  <div class="m-notification
+                              m-notification__visible
+                              m-notification__warning">
+                      {% include icons/warning-round.svg %}
+                      <div class="m-notification_content">
+                          <div class="h4 m-notification_message">Warning banner with a notification</div>
+                          <p class="m-notification_explanation">
+                              An optional paragraph of text can be added to explain the purpose of the warning banner.
+                          </p>
+                          <ul class="m-list m-list__links">
+                              <li class="m-list_item">
+                                  <a class="m-list_link" href="#">
+                                      A link can be added
+                                  </a>
+                              </li>
+                              <li class="m-list_item">
+                                  <a class="m-list_link" href="#">
+                                      Multiple links are supported
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        variation_description: The warning banner is used to display high-priority
+          system or product level notifications that are not specific to an
+          immediate task.
+        variation_name: Warning banner
       - variation_is_deprecated: false
         variation_name: US gov banner
         variation_description: The US gov banner identifies official websites of
-          government organizations in the United States and helps visitors
+          government organizations in the United States It helps visitors
           understand whether a website is official and secure.
     variation_group_name: Types
 eyebrow: Alerts

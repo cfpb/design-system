@@ -10,7 +10,19 @@ description: The US gov banner identifies official websites of government
 variation_groups:
   - variations:
       - variation_is_deprecated: false
-        variation_name: Banner (US gov)
+        variation_name: US gov banner
+        variation_code_snippet: |-
+          <div class="m-global-eyebrow">
+              <div class="a-tagline">
+                  <span class="u-usa-flag"></span>
+                  <div>
+                      An official website of the
+                      <span class="u-nowrap">United States government</span>
+                  </div>
+              </div>
+          </div>
+      - variation_is_deprecated: false
+        variation_name: US gov banner (with links)
         variation_code_snippet: |-
           <div class="m-global-eyebrow">
               <div class="a-tagline">

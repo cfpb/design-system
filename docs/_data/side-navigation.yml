@@ -28,6 +28,11 @@ first-level:
     second-level: []
     nav-items:
       - page: Banner notification
+      - page: Notifications
+      - page: Taglines
+      - page: Expandables
+      - page: Summaries
+      - page: Buttons
   - heading: Patterns
     second-level:
       - heading: Interaction patterns

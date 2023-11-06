@@ -4535,6 +4535,7 @@ select.o-multiselect option {
   border: none;
   background: none;
   padding: 0;
+  text-align: left;
 }
 .o-multiselect_choices button:focus {
   border-radius: 0.21428571em;
@@ -4553,6 +4554,7 @@ select.o-multiselect option {
 .o-multiselect_choices label {
   display: inline-block;
   padding: 4px 10px;
+  padding-right: 25px;
   background-color: #d4e7e6;
   border-radius: 0.21428571em;
   border: 1px solid #257675;
@@ -4568,6 +4570,9 @@ select.o-multiselect option {
   color: #ffffff;
 }
 .o-multiselect_choices label .cf-icon-svg {
+  position: absolute;
+  top: 4px;
+  right: 5px;
   margin-left: 10px;
   fill: #101820;
 }

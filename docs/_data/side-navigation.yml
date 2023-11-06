@@ -25,32 +25,9 @@ first-level:
           - page: Animation
           - page: Motion
   - heading: Components
-    second-level:
-      - heading: Alerts
-        nav-items:
-          - page: Banner notification
-          - page: Notifications
-          - page: Taglines
-      - heading: Behavior
-        nav-items:
-          - page: Expandables
-          - page: Summaries
-      - heading: Form elements
-        nav-items:
-          - page: Buttons
-          - page: Checkboxes
-          - page: Fieldsets
-          - page: Helper text
-          - page: Labels and legends
-          - page: Links
-          - page: Radio buttons
-          - page: Range sliders
-          - page: Selects
-          - page: Text inputs
-      - heading: Lists and tables
-        nav-items:
-          - page: Lists
-          - page: Tables
+    second-level: []
+    nav-items:
+      - page: Banner notification
   - heading: Patterns
     second-level:
       - heading: Interaction patterns

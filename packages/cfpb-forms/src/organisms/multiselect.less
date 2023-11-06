@@ -169,6 +169,7 @@ select.o-multiselect {
       border: none;
       background: none;
       padding: 0;
+      text-align: left;
 
       &:focus {
         border-radius: unit((3px / @size-v), em);
@@ -192,6 +193,7 @@ select.o-multiselect {
     label {
       display: inline-block;
       padding: 4px 10px;
+      padding-right: 25px;
 
       background-color: @teal-20;
       border-radius: unit((3px / @size-v), em);
@@ -210,6 +212,9 @@ select.o-multiselect {
       }
 
       .cf-icon-svg {
+        position: absolute;
+        top: 4px;
+        right: 5px;
         margin-left: 10px;
         fill: @black;
       }

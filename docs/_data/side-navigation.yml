@@ -28,7 +28,7 @@ first-level:
     second-level:
       - heading: Components
         nav-items:
-          - page: Banner notification
+          - page: Banner (notification)
           - page: Buttons
           - page: Checkboxes
           - page: Expandables

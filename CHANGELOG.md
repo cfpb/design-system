@@ -1,4 +1,26 @@
 
+## v0.33.0 (2023-11-07)
+
+#### Breaking Change
+* `cfpb-typography`
+  * [#1791](https://github.com/cfpb/design-system/pull/1791) Remove large pull quote ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-buttons`
+  * [#1766](https://github.com/cfpb/design-system/pull/1766) Remove `@btn-v-padding-modifier-ie` ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-forms`
+  * [#1803](https://github.com/cfpb/design-system/pull/1803) fix: Multiselect - Deselect icon stays positioned in upper right corner even with multiline text ([@meissadia](https://github.com/meissadia))
+  * [#1792](https://github.com/cfpb/design-system/pull/1792) Multiselect: Remove `display: -webkit-box` property ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Meis ([@meissadia](https://github.com/meissadia))
+- Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
+
+
+
 ## v0.32.0 (2023-10-24)
 
 #### Breaking

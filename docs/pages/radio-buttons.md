@@ -248,7 +248,7 @@ variation_groups:
                 </label>
           </div>
 guidelines: ""
-eyebrow: Form elements
+eyebrow: Components
 title: Radio buttons
 description: Use radio buttons when the user can select exactly one option from
   a group. Avoid long lists of radio buttons (usually no more than 6-8 options).

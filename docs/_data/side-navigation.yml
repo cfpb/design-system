@@ -26,7 +26,7 @@ first-level:
           - page: Motion
   - heading: Components
     second-level:
-      - heading: Components by type
+      - heading: Components
         nav-items:
           - page: Banner notification
           - page: Buttons

@@ -81,11 +81,10 @@ description: Banner notifications communicate high-priority information about
   notifications inform users of important information that is not specific to an
   immediate task.
 use_cases: Use the banner notification to communicate important information
-  about the state or status of page content. Use the banner notification to
-  highlight high-priority system or product level information that is not
-  related to a specific task. Use the inline notification instead when calling
-  out specific page content or when alerting users as to information that is
-  relevant to the immediate task.
+  about the state or status of page content or to highlight high-priority system
+  or product level information that is not related to a specific task. Use the
+  inline notification instead when calling out specific page content or when
+  alerting users as to information that is relevant to the immediate task.
 behavior: ""
 related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
   s/notifications)"

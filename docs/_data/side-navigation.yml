@@ -25,7 +25,27 @@ first-level:
           - page: Animation
           - page: Motion
   - heading: Components
-    second-level: []
+    second-level:
+      - heading: components by type
+        nav-items:
+          - page: Banner notification
+          - page: Buttons
+          - page: Checkboxes
+          - page: Expandables
+          - page: Fieldsets
+          - page: Helper text
+          - page: Labels and legends
+          - page: Links
+          - page: Lists
+          - page: Notifications
+          - page: Radio buttons
+          - page: Range sliders
+          - page: Selects
+          - page: Summaries
+          - page: Tables
+          - page: Taglines
+          - page: Text inputs
+        third-level: []
     nav-items:
       - page: Banner notification
       - page: Buttons

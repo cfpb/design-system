@@ -1,7 +1,7 @@
 ---
 layout: variation
 section: components
-status: Proposed
+status: Released
 variation_groups:
   - variations:
       - variation_code_snippet: >-

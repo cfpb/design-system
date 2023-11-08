@@ -78,7 +78,7 @@ variation_groups:
         variation_description:
           This component provides a more inconspicous button, which stays
           at the bottom of the summary when expanded.
-eyebrow: Behavior
+eyebrow: Components
 title: Summaries
 description: Summary components hides content over a certain height. When the
   hidden content is shown it can't be reverted to the summary until the page is

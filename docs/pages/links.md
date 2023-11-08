@@ -230,7 +230,7 @@ variation_groups:
           * For Ask CFPB pages, abbreviate to “askcfpb” and the page’s associated number
     variation_group_description: ""
 guidelines: ""
-eyebrow: Form elements
+eyebrow: Components
 title: Links
 description: Links are navigational elements that connect users to other
   locations, either on the current page or to a different page or site. In

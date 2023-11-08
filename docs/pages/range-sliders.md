@@ -54,6 +54,6 @@ guidelines: ''
 behavior: ''
 accessibility: Make sure that sliders are accessible by keyboard using the arrow keys.
 last_updated: 2020-01-28T15:55:47.394Z
-eyebrow: Form elements
+eyebrow: Components
 research: ''
 ---

@@ -178,4 +178,7 @@ related_items: "* [Forms
   )"
 last_updated: 2020-01-06T20:31:06.632Z
 research: ""
+
+redirect_from:
+  - /components/dropdowns-and-multiselects
 ---

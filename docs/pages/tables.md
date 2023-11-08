@@ -545,7 +545,7 @@ guidelines: >-
 
 
   If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.
-eyebrow: Lists and tables
+eyebrow: Components
 title: Tables
 description: 'Tables allow for the presentation of many data points grouped
   together in a visual way. They serve a unique purpose of allowing easy

@@ -247,7 +247,7 @@ restrictions:
               {% include icons/left.svg %}
           </span>
       </button>
-eyebrow: Form elements
+eyebrow: Components
 accessibility: ""
 related_items: "* [Button
   variables](https://cfpb.github.io/design-system/development/variables#buttons\

@@ -138,7 +138,7 @@ variation_groups:
           [accessibility](#accessibility) section for more information. "
     variation_group_name: Types
 guidelines: ""
-eyebrow: Form elements
+eyebrow: Components
 title: Selects
 description: Selects allow users to make a single selection or multiple
   selections from a finite list of options. They are not always the best choice

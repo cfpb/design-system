@@ -44,7 +44,7 @@ variation_groups:
     variation_group_name: Types
 use_cases: ""
 guidelines: ""
-eyebrow: Featured content
+eyebrow: Components
 accessibility: ""
 related_items: ""
 last_updated: 2019-10-21T20:38:39.851Z

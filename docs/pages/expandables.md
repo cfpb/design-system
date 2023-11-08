@@ -408,7 +408,7 @@ variation_groups:
       for making a component with expandable-like behavior.
     variations: []
 guidelines: ''
-eyebrow: Behavior
+eyebrow: Components
 title: Expandables
 description: Expandables are components that have additional content that can be
   opened (expanded) and closed (collapsed). They can appear on their own or in

@@ -6,8 +6,7 @@ section: components
 status: Released
 description: The US gov banner identifies official websites of government
   organizations in the United States. It helps visitors understand whether a
-  website is official and secure. It is positioned at the top of the page above
-  the header and spans the full width.
+  website is official and secure.
 variation_groups:
   - variations:
       - variation_is_deprecated: false
@@ -23,4 +22,6 @@ variation_groups:
               </div>
           </div>
     variation_group_name: Types
+guidelines: The US gov banner is positioned at the top of the page above the
+  header and spans the full width.
 ---

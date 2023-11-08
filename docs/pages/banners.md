@@ -84,7 +84,7 @@ use_cases: Use the banner notification to communicate important information
   specific to an immediate task.
 guidelines: Banner notifications are positioned at the top of the page content
   area and span the full width.
-eyebrow: Alerts
+eyebrow: Components
 behavior: ""
 related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
   s/notifications)"

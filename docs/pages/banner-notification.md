@@ -89,4 +89,8 @@ behavior: ""
 related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
   s/notifications)"
 last_updated: 2020-01-28T15:55:47.394Z
+
+redirect_from:
+  - /components/banners
+  - /banners
 ---

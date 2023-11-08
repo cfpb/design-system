@@ -75,7 +75,7 @@ guidelines: >-
 
 
   Try not to design forms consisting mainly of optional fields. If you must do so, mark required field labels only with inline helper text.
-eyebrow: Form elements
+eyebrow: Components
 title: Helper text
 description: Helper text is used with form elements to give the user context
   about their usage. Types of helper text include block helper text, inline

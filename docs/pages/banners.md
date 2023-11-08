@@ -77,9 +77,9 @@ eyebrow: Alerts
 title: Banner (notification)
 description: Banner notifications communicate high-priority information about
   the state or status of page content.  Banner notifications are positioned at
-  the top of the page and span the full width. When used on a webpage, banner
-  notifications inform users of important information that is not specific to an
-  immediate task.
+  the top of the page content area and span the full width. When used on a
+  webpage, banner notifications inform users of important information that is
+  not specific to an immediate task.
 use_cases: Use the banner notification to communicate important information
   about the state or status of page content or to highlight high-priority system
   or product level information that is not related to a specific task. Use the

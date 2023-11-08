@@ -218,7 +218,7 @@ variation_groups:
         variation_name: In-progress notification
     variation_group_description: Types of notifications include success, warning, error, and in-progress.
 guidelines: ''
-eyebrow: Alerts
+eyebrow: Components
 title: Notifications
 description: Notifications alert users to the state of a form or page. In forms,
   notifications can appear at the top of the form or in line with form fields

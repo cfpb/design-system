@@ -209,7 +209,7 @@ guidelines: >-
 
 
   Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
-eyebrow: Form elements
+eyebrow: Components
 title: Text inputs
 description: 'Text fields give users the ability to enter text. They can be
   single-line or multi-line (textarea inputs).  '

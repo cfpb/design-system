@@ -4,6 +4,7 @@ collection_name: pages
 layout: variation
 section: components
 status: Released
+eyebrow: Components
 description: The US gov banner identifies official websites of government
   organizations in the United States. It helps visitors understand whether a
   website is official and secure.

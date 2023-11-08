@@ -1,7 +1,10 @@
 ---
-layout: variation
+title: Banner (notification)
 section: components
 status: Released
+description: Banner notifications communicate high-priority information about
+  the state or status of page content. Banner notifications inform users of
+  important information that is not specific to an immediate task.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -74,19 +77,14 @@ variation_groups:
           researchers, historians, and the public.
     variation_group_name: Types
 eyebrow: Alerts
-title: Banner (notification)
-description: Banner notifications communicate high-priority information about
-  the state or status of page content.  Banner notifications are positioned at
-  the top of the page content area and span the full width. When used on a
-  webpage, banner notifications inform users of important information that is
-  not specific to an immediate task.
+layout: variation
 use_cases: Use the banner notification to communicate important information
   about the state or status of page content or to highlight high-priority system
-  or product level information that is not related to a specific task. Use the
-  inline notification instead when calling out specific page content or when
-  alerting users as to information that is relevant to the immediate task.
-behavior: ""
+  or product level information. Use the inline notification instead when calling
+  out specific page content or when alerting users to information that is
+  specific to an immediate task.
 related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
   s/notifications)"
 last_updated: 2020-01-28T15:55:47.394Z
+behavior: ""
 ---

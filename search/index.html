@@ -168,45 +168,6 @@
         
         
 
-        'components-banner-us-gov': {
-
-            // Cycle through the variation fields of this page.
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'US gov banner',
-                    'variation_description1': "\n",
-                    'variation_code_snippet1': `&lt;div class=&quot;m-global-eyebrow&quot;&gt;
-    &lt;div class=&quot;a-tagline&quot;&gt;
-        &lt;span class=&quot;u-usa-flag&quot;&gt;&lt;/span&gt;
-        &lt;div&gt;
-            An official website of the
-            &lt;span class=&quot;u-nowrap&quot;&gt;United States government&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-            
-
-
-            'title': 'Banner (US gov)',
-            'description': "The US gov banner identifies official websites of government organizations in the United States. It helps visitors understand whether a website is official and secure.\n",
-            'use_cases': "\n",
-            'guidelines': "The US gov banner is positioned at the top of the page above the header and spans the full width.\n",
-            'behavior': "\n",
-            'accessibility': "\n",
-            'research': "\n",
-            'related_items': "Taglines\n",
-            'url': 'components/banner-us-gov'
-        }
-        ,
-        
-
-        
-        
-
         'components-banner-notification': {
 
             // Cycle through the variation fields of this page.
@@ -289,6 +250,45 @@
             'research': "\n",
             'related_items': "N﻿otifications\n",
             'url': 'components/banner-notification'
+        }
+        ,
+        
+
+        
+        
+
+        'components-banner-us-gov': {
+
+            // Cycle through the variation fields of this page.
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'US gov banner',
+                    'variation_description1': "\n",
+                    'variation_code_snippet1': `&lt;div class=&quot;m-global-eyebrow&quot;&gt;
+    &lt;div class=&quot;a-tagline&quot;&gt;
+        &lt;span class=&quot;u-usa-flag&quot;&gt;&lt;/span&gt;
+        &lt;div&gt;
+            An official website of the
+            &lt;span class=&quot;u-nowrap&quot;&gt;United States government&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+            
+
+
+            'title': 'Banner (US gov)',
+            'description': "The US gov banner identifies official websites of government organizations in the United States. It helps visitors understand whether a website is official and secure.\n",
+            'use_cases': "\n",
+            'guidelines': "The US gov banner is positioned at the top of the page above the header and spans the full width.\n",
+            'behavior': "\n",
+            'accessibility': "\n",
+            'research': "\n",
+            'related_items': "Taglines\n",
+            'url': 'components/banner-us-gov'
         }
         ,
         
@@ -1949,120 +1949,6 @@ Checkbox label
             'research': "\n",
             'related_items': "Pages\n\n\n  Learn page\n  Filterable list page\n\n\nPage introductions\n\n\n  Item introduction\n\n\nContent\n\n\n  Tables\n  Expandables\n  Metadata / Related posts / Related links\n  Email sign-up form\n\n",
             'url': 'pages/document-detail-pages'
-        }
-        ,
-        
-
-        
-        
-
-        'components-selects': {
-
-            // Cycle through the variation fields of this page.
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Single select',
-                    'variation_description1': "Allows the user to select a single item from a dropdown list of options.\n",
-                    'variation_code_snippet1': `&lt;!--Default state--&gt;
-
-&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
-    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select_default&quot;&gt;
-        Default
-    &lt;/label&gt;
-    &lt;div class=&quot;a-select&quot;&gt;
-        &lt;select id=&quot;test_select_default&quot;&gt;
-            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
-            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
-            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
-            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
-        &lt;/select&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br&gt;
-
-&lt;!--Hover state--&gt;
-&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
-    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__hover&quot;&gt;
-       Hover
-    &lt;/label&gt;
-    &lt;div class=&quot;a-select&quot;&gt;
-        &lt;select id=&quot;test_select__hover&quot; class=&quot;hover&quot;&gt;
-            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
-            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
-            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
-            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
-        &lt;/select&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br&gt;
-
-&lt;!--Focus state--&gt;
-
-&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
-    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__focus&quot;&gt;
-        Focus
-    &lt;/label&gt;
-    &lt;div class=&quot;a-select&quot;&gt;
-        &lt;select id=&quot;test_select__focus&quot; class=&quot;focus&quot;&gt;
-            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
-            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
-            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
-            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
-        &lt;/select&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br&gt;
-
-&lt;!--Disabled state--&gt;
-
-&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
-    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__disabled&quot;&gt;Disabled&lt;/label&gt;
-    &lt;div class=&quot;a-select a-select__disabled&quot;&gt;
-        &lt;select id=&quot;test_select__disabled&quot; disabled&gt;
-            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
-            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
-            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
-            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
-        &lt;/select&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name2': 'Multiselect',
-                    'variation_description2': "Allows the user to select multiple items from a dropdown list of options.\n",
-                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
-    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__multiple&quot;&gt;
-        Label
-    &lt;/label&gt;
-    &lt;select class=&quot;o-multiselect&quot; id=&quot;test_select__multiple&quot; multiple&gt;
-        &lt;option value=&quot;option1&quot; selected&gt;Option 1&lt;/option&gt;
-        &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
-        &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
-        &lt;option value=&quot;option4&quot; selected&gt;Option 4&lt;/option&gt;
-        &lt;option value=&quot;option5&quot;&gt;Option 5&lt;/option&gt;
-        &lt;option value=&quot;option6&quot;&gt;Option 6&lt;/option&gt;
-        &lt;option value=&quot;option7&quot;&gt;Option 7&lt;/option&gt;
-        &lt;option value=&quot;option8&quot;&gt;Multiselect options can also contain long words that will be wrapped like supercalifragilisticexpialidocious&lt;/option&gt;
-    &lt;/select&gt;
-&lt;/div&gt;`,
-                
-            
-
-
-            'title': 'Selects',
-            'description': "Selects allow users to make a single selection or multiple selections from a finite list of options. They are not always the best choice from a usability perspective; see the use cases section below for more details.\n",
-            'use_cases': "While selects are easy to implement, they aren’t always the best choice from a usability perspective.\n\nUse selects when:\n\n\n  \n    You have a long list of finite options.\n\n    \n      If the list is shorter than around six items, radio buttons or checkboxes might work better.\n      If the options include something open ended, a text input field is better.\n    \n  \n  \n    You need structured data for a long list.\n\n    \n      For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a select facilitates this standardization.\n    \n  \n  \n    The list options are familiar to the user.\n\n    \n      A select is not a good place to introduce new or complicated terms or concepts.\n      For instance, if the question is “What’s your favorite color of the rainbow,” a select could be a good choice. The options are familiar and there are more than six.\n    \n  \n\n",
-            'guidelines': "\n",
-            'behavior': "\n",
-            'accessibility': "Selects\nKeep in mind that selects behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions. Mobile also doesn’t allow for the use of typeahead to navigate quickly to an item in a list, so navigating long lists can be especially cumbersome.\n\nMultiselects\nFrom an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multiselect component is desired, use custom JavaScript to make it accessible.\n",
-            'research': "\n",
-            'related_items': "\n  Forms variables\n\n",
-            'url': 'components/selects'
         }
         ,
         
@@ -5550,6 +5436,120 @@ Radio button label
 
         
          
+
+        
+        
+
+        'components-selects': {
+
+            // Cycle through the variation fields of this page.
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Single select',
+                    'variation_description1': "Allows the user to select a single item from a dropdown list of options.\n",
+                    'variation_code_snippet1': `&lt;!--Default state--&gt;
+
+&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select_default&quot;&gt;
+        Default
+    &lt;/label&gt;
+    &lt;div class=&quot;a-select&quot;&gt;
+        &lt;select id=&quot;test_select_default&quot;&gt;
+            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;!--Hover state--&gt;
+&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__hover&quot;&gt;
+       Hover
+    &lt;/label&gt;
+    &lt;div class=&quot;a-select&quot;&gt;
+        &lt;select id=&quot;test_select__hover&quot; class=&quot;hover&quot;&gt;
+            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;!--Focus state--&gt;
+
+&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__focus&quot;&gt;
+        Focus
+    &lt;/label&gt;
+    &lt;div class=&quot;a-select&quot;&gt;
+        &lt;select id=&quot;test_select__focus&quot; class=&quot;focus&quot;&gt;
+            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+&lt;!--Disabled state--&gt;
+
+&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__disabled&quot;&gt;Disabled&lt;/label&gt;
+    &lt;div class=&quot;a-select a-select__disabled&quot;&gt;
+        &lt;select id=&quot;test_select__disabled&quot; disabled&gt;
+            &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+            &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+            &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+            &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name2': 'Multiselect',
+                    'variation_description2': "Allows the user to select multiple items from a dropdown list of options.\n",
+                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;test_select__multiple&quot;&gt;
+        Label
+    &lt;/label&gt;
+    &lt;select class=&quot;o-multiselect&quot; id=&quot;test_select__multiple&quot; multiple&gt;
+        &lt;option value=&quot;option1&quot; selected&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+        &lt;option value=&quot;option4&quot; selected&gt;Option 4&lt;/option&gt;
+        &lt;option value=&quot;option5&quot;&gt;Option 5&lt;/option&gt;
+        &lt;option value=&quot;option6&quot;&gt;Option 6&lt;/option&gt;
+        &lt;option value=&quot;option7&quot;&gt;Option 7&lt;/option&gt;
+        &lt;option value=&quot;option8&quot;&gt;Multiselect options can also contain long words that will be wrapped like supercalifragilisticexpialidocious&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;`,
+                
+            
+
+
+            'title': 'Selects',
+            'description': "Selects allow users to make a single selection or multiple selections from a finite list of options. They are not always the best choice from a usability perspective; see the use cases section below for more details.\n",
+            'use_cases': "While selects are easy to implement, they aren’t always the best choice from a usability perspective.\n\nUse selects when:\n\n\n  \n    You have a long list of finite options.\n\n    \n      If the list is shorter than around six items, radio buttons or checkboxes might work better.\n      If the options include something open ended, a text input field is better.\n    \n  \n  \n    You need structured data for a long list.\n\n    \n      For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a select facilitates this standardization.\n    \n  \n  \n    The list options are familiar to the user.\n\n    \n      A select is not a good place to introduce new or complicated terms or concepts.\n      For instance, if the question is “What’s your favorite color of the rainbow,” a select could be a good choice. The options are familiar and there are more than six.\n    \n  \n\n",
+            'guidelines': "\n",
+            'behavior': "\n",
+            'accessibility': "Selects\nKeep in mind that selects behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions. Mobile also doesn’t allow for the use of typeahead to navigate quickly to an item in a list, so navigating long lists can be especially cumbersome.\n\nMultiselects\nFrom an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multiselect component is desired, use custom JavaScript to make it accessible.\n",
+            'research': "\n",
+            'related_items': "\n  Forms variables\n\n",
+            'url': 'components/selects'
+        }
+        ,
+        
 
         
         

@@ -280,7 +280,7 @@ guidelines: >-
 
 
   * Text spacing should inform spacing of checkboxes and checkbox should be vertically centered with the first line of text in an option.
-eyebrow: Form elements
+eyebrow: Components
 status: Released
 description: Use checkboxes when the user can select more than one option from a
   group. Make clear with helper text that this is the case. Use [radio

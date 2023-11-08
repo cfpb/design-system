@@ -29,6 +29,7 @@ first-level:
       - heading: Components
         nav-items:
           - page: Banner (notification)
+          - page: Banner (US gov)
           - page: Buttons
           - page: Checkboxes
           - page: Expandables

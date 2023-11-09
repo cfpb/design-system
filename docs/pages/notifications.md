@@ -18,7 +18,7 @@ variation_groups:
           The success notification is for displaying when an operation has run
           as expected, such as returning the number of results in a search.
         variation_implementation: ""
-        variation_name: Success alert
+        variation_name: Success
         variation_specs: |-
           * Border: 1 px, CFPB Green (#20aa3f)
           * Icon: 18 px, CFPB Green (#20aa3f)
@@ -40,7 +40,7 @@ variation_groups:
           form, such as how their data will be used and protected or a reminder
           that they can’t edit their responses after submitting.
         variation_implementation: ""
-        variation_name: Warning alert
+        variation_name: Warning
         variation_specs: |-
           * Border: 1 px, Gold (#ff9e1b)
           * Background: Gold 10 (#fff6ec)
@@ -70,7 +70,7 @@ variation_groups:
           * For field level notifications, the error minicon and message should
 
           always appear below the input field.
-        variation_name: Error alert
+        variation_name: Error
         variation_specs: |-
           * Border: 1 px, Red (#d14124)
           * Background: Red 10 (#fbefec)
@@ -88,12 +88,12 @@ variation_groups:
           results are found. Use [animated
           minicons](https://cfpb.github.io/design-system/foundation/iconography)
           to reassure the user that an action is functioning as intended.
-        variation_name: In-progress alert
+        variation_name: In-progress
     variation_group_description: ""
   - variation_group_name: Field-level alerts
     variations:
       - variation_is_deprecated: false
-        variation_name: Success
+        variation_name: Succes
         variation_code_snippet: >-
           <div class="a-form-alert a-form-alert__success"
           id="form-input-success_message" role="alert">

@@ -83,7 +83,7 @@ variation_groups:
           should be proportional to the expected user input, so that the user
           can see what they've typed without having to scroll to reveal hidden
           content. See the guidelines section below for more information.
-      - variation_name: Multi-line text area input
+      - variation_name: Multi-line textarea input
         variation_description: Use for long-form answers that are more than a single
           word or two. Make sure the input size is big enough that the user can
           see what they've typed without having to scroll to reveal hidden
@@ -112,7 +112,7 @@ variation_groups:
                     value="Input text">
           </div>
       - variation_is_deprecated: false
-        variation_name: Full-width text area input
+        variation_name: Full-width textarea input
         variation_code_snippet: >-
           <div class="m-form-field">
               <label class="a-label a-label__heading" for="full-textarea-example">
@@ -212,8 +212,8 @@ guidelines: >-
   Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
 eyebrow: Components
 title: Text inputs
-description: "Text fields give users the ability to enter text. They can be
-  single-line or multi-line (textarea inputs).  "
+description: A text input allows users to enter any combination of letters,
+  numbers, or symbols. Text input boxes can span single or multiple lines.
 use_cases: ""
 behavior: As the screen size gets smaller, break multi-column inputs into a
   single, stacked column. Fields that are next to each other on a large screen,

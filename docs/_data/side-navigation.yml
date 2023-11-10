@@ -60,7 +60,6 @@ first-level:
           - heading: Navigation
             nav-items:
               - page: Filterable list control panels
-              - page: Pagination
           - heading: Transitions
             nav-items:
               - page: Transition patterns

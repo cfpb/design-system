@@ -142,7 +142,7 @@ variation_groups:
           * Minicon: 18 px, Red (#d14124)
 guidelines: ""
 eyebrow: Components
-title: Notifications
+title: Alerts
 description: Alerts notify users to the state of a form or page. In forms,
   alerts can appear at the top of the form or in line with form fields and can
   highlight successful submissions, errors that need to be corrected, or details

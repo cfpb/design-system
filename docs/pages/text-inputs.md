@@ -82,7 +82,7 @@ variation_groups:
           addresses, names, or search queries. The length of the input field
           should be proportional to the expected user input, so that the user
           can see what they've typed without having to scroll to reveal hidden
-          content. See the guidelines section below for more information.
+          content.
       - variation_name: Multi-line textarea input
         variation_description: Use for long-form answers that are more than a single
           word or two. Make sure the input size is big enough that the user can

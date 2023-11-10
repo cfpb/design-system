@@ -206,10 +206,7 @@ guidelines: >-
   ### Content guidelines
 
 
-  Text should be in sentence case.
-
-
-  Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
+  Text should be in sentence case. Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
 eyebrow: Components
 title: Text inputs
 description: A text input allows users to enter any combination of letters,

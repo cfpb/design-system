@@ -3,8 +3,66 @@ layout: variation
 section: components
 status: Released
 variation_groups:
-  - variation_group_name: Form-level alerts
+  - variation_group_name: Page level alerts
     variations:
+      - variation_is_deprecated: false
+        variation_name: Information alert
+        variation_description: The information notification is the base notification
+          type without any modifiers. If your notification message requires
+          further explanation, include that content in a paragraph following the
+          main message. Notifications are hidden by default; you can toggle
+          their visibility by adding or removing
+          the `m-notification__visible` class to the base element.
+        variation_code_snippet: >-
+          <div class="m-notification
+                      m-notification__visible">
+              {% include icons/information-round.svg %}
+              <div class="m-notification_content">
+                  <div class="h4 m-notification_message">A notification</div>
+              </div>
+          </div>
+
+
+          <br>
+
+
+          <div class="m-notification
+                      m-notification__visible">
+              {% include icons/information-round.svg %}
+              <div class="m-notification_content">
+                  <div class="h4 m-notification_message">A notification</div>
+                  <p class="m-notification_explanation">
+                      You can also add an explanation to the notification.
+                  </p>
+              </div>
+          </div>
+
+
+          <br>
+
+
+          <div class="m-notification
+                      m-notification__visible">
+              {% include icons/information-round.svg %}
+              <div class="m-notification_content">
+                  <div class="h4 m-notification_message">A notification</div>
+                  <p class="m-notification_explanation">
+                      This is the explanation of the notification.
+                  </p>
+                  <ul class="m-list m-list__links">
+                      <li class="m-list_item">
+                          <a class="m-list_link" href="/">
+                              This is a link below the explanation
+                          </a>
+                      </li>
+                      <li class="m-list_item">
+                          <a class="m-list_link" href="/">
+                              This is an external link {% include icons/external-link.svg %}
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
       - variation_code_snippet: |-
           <div class="m-notification
                       m-notification__visible
@@ -90,7 +148,7 @@ variation_groups:
           to reassure the user that an action is functioning as intended.
         variation_name: In-progress
     variation_group_description: ""
-  - variation_group_name: Field-level alerts
+  - variation_group_name: Inline alerts
     variations:
       - variation_is_deprecated: false
         variation_name: Succes

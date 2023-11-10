@@ -109,8 +109,8 @@ guidelines: >-
   * Tables with over 20 rows can be paired with pagination.
 eyebrow: Navigation
 title: Pagination
-description: Pagination is used to help split up long sets of data or content
-  into shorter pieces, so as to make it easier for users to consume information.
+description: Pagination is used for splitting up content or data into several
+  pages, so as to make it easier for users to consume information.
 use_cases: ""
 behavior: >-
   On small screens, the buttons display next to each other, stacked on top of

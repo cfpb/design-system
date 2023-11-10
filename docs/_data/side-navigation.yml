@@ -39,6 +39,7 @@ first-level:
           - page: Links
           - page: Lists
           - page: Notifications
+          - page: Pagination
           - page: Radio buttons
           - page: Range sliders
           - page: Selects

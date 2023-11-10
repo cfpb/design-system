@@ -107,7 +107,7 @@ guidelines: >-
   * If content is sorted by date, label the navigation buttons "Older" and "Newer"; otherwise, label the buttons "Previous" and "Next". 
 
   * Tables with over 20 rows can be paired with pagination.
-eyebrow: Navigation
+eyebrow: Components
 title: Pagination
 description: Pagination is used for splitting up content or data into several
   pages, so as to make it easier for users to consume information.

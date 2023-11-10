@@ -3,10 +3,10 @@ layout: variation
 section: components
 status: Released
 variation_groups:
-  - variation_group_name: Page level alerts
+  - variation_group_name: Alerts
     variations:
       - variation_is_deprecated: false
-        variation_name: Information alert
+        variation_name: Information
         variation_description: The information notification is the base notification
           type without any modifiers. If your notification message requires
           further explanation, include that content in a paragraph following the
@@ -148,7 +148,7 @@ variation_groups:
           to reassure the user that an action is functioning as intended.
         variation_name: In-progress
     variation_group_description: ""
-  - variation_group_name: Inline alerts
+  - variation_group_name: Validations
     variations:
       - variation_is_deprecated: false
         variation_name: Succes
@@ -200,7 +200,7 @@ variation_groups:
           * Minicon: 18 px, Red (#d14124)
 guidelines: ""
 eyebrow: Components
-title: Alerts
+title: Alerts and validations
 description: Alerts notify users to the state of a form or page. In forms,
   alerts can appear at the top of the form or in line with form fields and can
   highlight successful submissions, errors that need to be corrected, or details

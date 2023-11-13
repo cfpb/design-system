@@ -35,6 +35,7 @@ first-level:
           - page: Expandables
           - page: Fieldsets
           - page: Helper text
+          - page: Heroes
           - page: Labels and legends
           - page: Links
           - page: Lists
@@ -47,6 +48,7 @@ first-level:
           - page: Tables
           - page: Taglines
           - page: Text inputs
+          - page: Text introductions
         third-level: []
     nav-items: []
   - heading: Patterns
@@ -67,8 +69,6 @@ first-level:
         third-level:
           - heading: Introductions
             nav-items:
-              - page: Heroes
-              - page: Text introductions
               - page: Item introductions
           - heading: Featured content
             nav-items:

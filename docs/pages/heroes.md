@@ -1,6 +1,6 @@
 ---
 layout: variation
-section: patterns
+section: components
 status: Released
 variation_groups:
   - variations:

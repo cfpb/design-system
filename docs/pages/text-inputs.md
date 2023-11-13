@@ -63,14 +63,14 @@ variation_groups:
 
           #### Disabled
           - Background: Gray 10 (#e7e8e9)
-        variation_name: Single line text input
+        variation_name: Text input
         variation_description: Use to input single lines of text, for example email
           addresses, names, or search queries. The length of the input field
           should be proportional to the expected user input, so that the user
           can see what they've typed without having to scroll to reveal hidden
           content.
       - variation_is_deprecated: false
-        variation_name: Single line text input (full width)
+        variation_name: Text input (full width)
         variation_code_snippet: >-
           <div class="m-form-field">
               <label class="a-label a-label__heading" for="full-textinput-example">
@@ -80,32 +80,6 @@ variation_groups:
                     type="text"
                     id="full-textinput-example"
                     value="Input text">
-          </div>
-      - variation_name: Textarea input
-        variation_description: Use for long-form answers that are more than a single
-          word or two. Make sure the input size is big enough that the user can
-          see what they've typed without having to scroll to reveal hidden
-          content, and small enough that the user doesn't have  to navigate the
-          viewport in order to see the entire field at once.
-        variation_code_snippet: >-
-          <label class="a-label a-label__heading"
-          for="textarea-example-default">
-              Label
-          </label>
-
-          <textarea class="a-text-input"
-                    id="textarea-example-default"
-                    placeholder="Placeholder text">Input text</textarea>
-        variation_specs: ""
-      - variation_is_deprecated: false
-        variation_name: Textarea input (full width)
-        variation_code_snippet: >-
-          <div class="m-form-field">
-              <label class="a-label a-label__heading" for="full-textarea-example">
-                  Label
-              </label>
-              <textarea class="a-text-input a-text-input__full"
-                        id="full-textarea-example">Input text</textarea>
           </div>
       - variation_is_deprecated: false
         variation_name: Text input with button
@@ -155,6 +129,32 @@ variation_groups:
               <div class="o-form__input-w-btn_btn-container">
                   <button class="a-btn">Search</button>
               </div>
+          </div>
+      - variation_name: Textarea input
+        variation_description: Use for long-form answers that are more than a single
+          word or two. Make sure the input size is big enough that the user can
+          see what they've typed without having to scroll to reveal hidden
+          content, and small enough that the user doesn't have  to navigate the
+          viewport in order to see the entire field at once.
+        variation_code_snippet: >-
+          <label class="a-label a-label__heading"
+          for="textarea-example-default">
+              Label
+          </label>
+
+          <textarea class="a-text-input"
+                    id="textarea-example-default"
+                    placeholder="Placeholder text">Input text</textarea>
+        variation_specs: ""
+      - variation_is_deprecated: false
+        variation_name: Textarea input (full width)
+        variation_code_snippet: >-
+          <div class="m-form-field">
+              <label class="a-label a-label__heading" for="full-textarea-example">
+                  Label
+              </label>
+              <textarea class="a-text-input a-text-input__full"
+                        id="full-textarea-example">Input text</textarea>
           </div>
       - variation_is_deprecated: false
         variation_name: Date picker input

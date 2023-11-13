@@ -8,6 +8,7 @@ variation_groups:
       - variation_code_snippet: >
           <!--States are shown for demonstration purposes only-->
 
+
           <label class="a-label a-label__heading" for="textinput-example-default">
 
           Default
@@ -20,7 +21,9 @@ variation_groups:
                 placeholder="Placeholder text"
           value="Input text">
 
+
           <br><br>
+
 
           <label class="a-label a-label__heading" for="textinput-example-hover">
 
@@ -33,7 +36,9 @@ variation_groups:
                  id="textinput-example-hover"
                  placeholder="Placeholder text"
                  value="Input text">
+
           <br><br>
+
 
           <label class="a-label a-label__heading" for="textinput-example-focus">
 
@@ -46,7 +51,9 @@ variation_groups:
                  id="textinput-example-focus"
                  placeholder="Placeholder text"
                  value="Input text">
+
           <br><br>
+
 
           <label class="a-label a-label__heading" for="textinput-example-disabled">
 
@@ -58,6 +65,29 @@ variation_groups:
                  type="text"
                  id="textinput-example-disabled"
                  disabled>
+
+          <br><br>
+
+
+          <div class="m-form-field m-form-field__success">
+              <label class="a-label a-label__heading" for="form-input-success">Success</label>
+              <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
+
+          <br><br>
+
+          <div class="m-form-field m-form-field__warning">
+              <label class="a-label a-label__heading" for="form-input-warning">Warning</label>
+                  <input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message">
+
+          <br><br>
+
+
+          <div class="m-form-field m-form-field__error">
+              <label class="a-label a-label__heading" for="form-input-error">Warning</label>
+                  <input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message">
+          </div>
+
+          </div>
         variation_specs: |-
           #### Default
           - Border: 1 px, Gray 60 (#919395)

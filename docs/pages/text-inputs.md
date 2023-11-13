@@ -8,86 +8,42 @@ variation_groups:
       - variation_code_snippet: >
           <!--States are shown for demonstration purposes only-->
 
-
-          <label class="a-label a-label__heading" for="textinput-example-default">
-
-          Default
-
-          </label>
-
           <input class="a-text-input"
                 type="text"
                 id="textinput-example-default"
                 placeholder="Placeholder text"
-          value="Input text">
-
+          value="Default">
 
           <br><br>
-
-
-          <label class="a-label a-label__heading" for="textinput-example-hover">
-
-          Hover
-
-          </label>
 
           <input class="a-text-input hover"
                  type="text"
                  id="textinput-example-hover"
                  placeholder="Placeholder text"
-                 value="Input text">
-
+                 value="Hover">
           <br><br>
-
-
-          <label class="a-label a-label__heading" for="textinput-example-focus">
-
-          Focus
-
-          </label>
 
           <input class="a-text-input focus"
                  type="text"
                  id="textinput-example-focus"
                  placeholder="Placeholder text"
-                 value="Input text">
-
+                 value="Focus">
           <br><br>
-
-
-          <label class="a-label a-label__heading" for="textinput-example-disabled">
-
-          Disabled
-
-          </label>
 
           <input class="a-text-input"
                  type="text"
                  id="textinput-example-disabled"
+                 placeholder="Disabled"
                  disabled>
-
           <br><br>
 
-
-          <div class="m-form-field m-form-field__success">
-              <label class="a-label a-label__heading" for="form-input-success">Success</label>
-              <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
+          <input class="a-text-input a-text-input__success" type="text" placeholder="Success" id="form-input-success" aria-describedby="form-input-success_message">
 
           <br><br>
-
-          <div class="m-form-field m-form-field__warning">
-              <label class="a-label a-label__heading" for="form-input-warning">Warning</label>
-                  <input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message">
-
+           <input class="a-text-input a-text-input__warning" type="text" placeholder="Warning" id="form-input-warning" aria-describedby="form-input-warning_message">
           <br><br>
 
-
-          <div class="m-form-field m-form-field__error">
-              <label class="a-label a-label__heading" for="form-input-error">Warning</label>
-                  <input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message">
-          </div>
-
-          </div>
+          <input class="a-text-input a-text-input__error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
         variation_specs: |-
           #### Default
           - Border: 1 px, Gray 60 (#919395)

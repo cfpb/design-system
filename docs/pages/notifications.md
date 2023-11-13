@@ -6,8 +6,8 @@ variation_groups:
   - variation_group_name: Alerts
     variations:
       - variation_is_deprecated: false
-        variation_name: Informational
-        variation_description: The informational notification is the base notification
+        variation_name: Information
+        variation_description: The information notification is the base notification
           type without any modifiers. If your notification message requires
           further explanation, include that content in a paragraph following the
           main message. Notifications are hidden by default; you can toggle

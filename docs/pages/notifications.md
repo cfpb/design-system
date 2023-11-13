@@ -151,7 +151,7 @@ variation_groups:
   - variation_group_name: Validations
     variations:
       - variation_is_deprecated: false
-        variation_name: Succes
+        variation_name: Success
         variation_code_snippet: >-
           <div class="a-form-alert a-form-alert__success"
           id="form-input-success_message" role="alert">

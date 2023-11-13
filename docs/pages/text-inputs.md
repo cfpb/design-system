@@ -63,13 +63,25 @@ variation_groups:
 
           #### Disabled
           - Background: Gray 10 (#e7e8e9)
-        variation_name: Single-line text input
+        variation_name: Single line text input
         variation_description: Use to input single lines of text, for example email
           addresses, names, or search queries. The length of the input field
           should be proportional to the expected user input, so that the user
           can see what they've typed without having to scroll to reveal hidden
           content.
-      - variation_name: Multi-line textarea input
+      - variation_is_deprecated: false
+        variation_name: Single line text input (full width)
+        variation_code_snippet: >-
+          <div class="m-form-field">
+              <label class="a-label a-label__heading" for="full-textinput-example">
+                  Label
+              </label>
+              <input class="a-text-input a-text-input__full"
+                    type="text"
+                    id="full-textinput-example"
+                    value="Input text">
+          </div>
+      - variation_name: Textarea input
         variation_description: Use for long-form answers that are more than a single
           word or two. Make sure the input size is big enough that the user can
           see what they've typed without having to scroll to reveal hidden
@@ -86,19 +98,7 @@ variation_groups:
                     placeholder="Placeholder text">Input text</textarea>
         variation_specs: ""
       - variation_is_deprecated: false
-        variation_name: Full-width text input
-        variation_code_snippet: >-
-          <div class="m-form-field">
-              <label class="a-label a-label__heading" for="full-textinput-example">
-                  Label
-              </label>
-              <input class="a-text-input a-text-input__full"
-                    type="text"
-                    id="full-textinput-example"
-                    value="Input text">
-          </div>
-      - variation_is_deprecated: false
-        variation_name: Full-width textarea input
+        variation_name: Textarea input (full width)
         variation_code_snippet: >-
           <div class="m-form-field">
               <label class="a-label a-label__heading" for="full-textarea-example">
@@ -108,19 +108,7 @@ variation_groups:
                         id="full-textarea-example">Input text</textarea>
           </div>
       - variation_is_deprecated: false
-        variation_name: Date picker input
-        variation_code_snippet: |-
-          <div class="m-form-field">
-              <label class="a-label a-label__heading" for="datepicker-example">
-                  Label
-              </label>
-              <input class="a-text-input"
-                    type="date"
-                    id="datepicker-example"
-                    placeholder="mm/dd/yyyy">
-          </div>
-      - variation_is_deprecated: false
-        variation_name: Text input with a button
+        variation_name: Text input with button
         variation_description: These are used for simple forms where a full filter isn’t necessary.
         variation_code_snippet: |-
           <div class="o-form__input-w-btn">
@@ -132,7 +120,7 @@ variation_groups:
               </div>
           </div>
       - variation_is_deprecated: false
-        variation_name: Button inside a text input
+        variation_name: Button inside text input
         variation_description: These offer the user an action to take related to the
           input, typically to clear the input.
         variation_code_snippet: >-
@@ -147,7 +135,7 @@ variation_groups:
               </button>
           </div>
       - variation_is_deprecated: false
-        variation_name: Button inside a text input with another button
+        variation_name: Button inside text input with another button
         variation_description: This example combines both of the previous patterns,
           creating a typical site search form.
         variation_code_snippet: >-
@@ -167,6 +155,18 @@ variation_groups:
               <div class="o-form__input-w-btn_btn-container">
                   <button class="a-btn">Search</button>
               </div>
+          </div>
+      - variation_is_deprecated: false
+        variation_name: Date picker input
+        variation_code_snippet: |-
+          <div class="m-form-field">
+              <label class="a-label a-label__heading" for="datepicker-example">
+                  Label
+              </label>
+              <input class="a-text-input"
+                    type="date"
+                    id="datepicker-example"
+                    placeholder="mm/dd/yyyy">
           </div>
     variation_group_description: ""
 guidelines: >-

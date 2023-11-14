@@ -32,6 +32,7 @@ first-level:
           - page: Banner (US gov)
           - page: Buttons
           - page: Checkboxes
+          - page: Date picker
           - page: Expandables
           - page: Fieldsets
           - page: Helper text

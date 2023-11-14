@@ -46,23 +46,39 @@ variation_groups:
           <input class="a-text-input a-text-input__error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
         variation_specs: |-
           #### Default
-          - Border: 1 px, Gray 60 (#919395)
-          - Height: 35 px
-          - Padding: 7px
-          - Placeholder text: Avenir Next Regular, 16px, Dark Gray (#43484e) 
-          - Input text: Avenir Next Regular, 16px, Black (#101820)
-          - Text should be in sentence case
+
+          * Border: 1 px, Gray 60 (#919395)
+          * Height: 35 px
+          * Padding: 7px
+          * Placeholder text: Avenir Next Regular, 16px, Dark Gray (#43484e) 
+          * Input text: Avenir Next Regular, 16px, Black (#101820)
+          * Text should be in sentence case
 
           #### Hover
-          - Border: 2 px, Pacific (#0072ce)
+
+          * Border: 2 px, Pacific (#0072ce)
 
           #### Focus
-          - Border: 2 px, Pacific (#0072ce)
-          - Outline: Dotted 1px, Pacific (#0072ce)
-          - Outline offset: 1px
+
+          * Border: 2 px, Pacific (#0072ce)
+          * Outline: Dotted 1px, Pacific (#0072ce)
+          * Outline offset: 1px
 
           #### Disabled
-          - Background: Gray 10 (#e7e8e9)
+
+          * Background: Gray 10 (#e7e8e9)
+
+          #### Success
+
+          * Border: 2 px, CFPB Green (#20aa3f)
+
+          #### Warning
+
+          * Border: 2 px, Gold (#ff9e1b)
+
+          #### Error
+
+          * Border: 2 px, Red (#d14124)
         variation_name: Text inputs
         variation_description: Use when the expected user input is a single line of
           text, for example email addresses, names, or search queries. The

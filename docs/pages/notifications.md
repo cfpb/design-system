@@ -192,23 +192,23 @@ variation_groups:
           * Border: 2 px, Red (#d14124)
           * Icon: 18 px, Red (#d14124)
     variation_group_description: Validations messages include success, warning, and
-      error. Field-level validations (icon and message) should always appear
-      below the input field.
+      error. Validations (icon and message) should always appear below the input
+      field.
 guidelines: ""
 eyebrow: Components
 title: Alerts and validations
-description: Alerts notify users to the state of a form or page. In forms,
-  alerts can appear at the top of the form or in line with form fields and can
+description: Alerts reflect a user or system action and notify users to the
+  state of a form or page. Validations appear inline with form fields and can
   highlight successful submissions, errors that need to be corrected, or details
-  to know before submitting the form.
+  to know before submittin a form.
 use_cases: ""
 behavior: >-
   ### Placement
 
 
-  * Form-level alerts should appear below the form title.
+  * Alerts should appear below the form title.
 
-  * Field-level validations (icon and message) should always appear below the input field.
+  * Validations (icon and message) should always appear below the input field.
 
 
   ### Validation

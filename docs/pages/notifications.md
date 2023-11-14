@@ -197,9 +197,9 @@ variation_groups:
 guidelines: ""
 eyebrow: Components
 title: Alerts and validations
-description: Alerts and validations notify users to a change in the state of a
-  form or page. Alerts reflect a user or system action and notify users to the
-  state of a form or page. Validations appear inline with input fields and can
+description: Alerts and validations draw a user's attention to a change in the
+  status of a form or page. Alerts reflect a user or system action and appear
+  below the form title. Validations appear inline with input fields and can
   highlight successful submissions, errors that need to be corrected, or details
   to know before submitting a form.
 use_cases: ""

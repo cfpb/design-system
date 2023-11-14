@@ -8,11 +8,11 @@ variation_groups:
       - variation_code_snippet: >
           <!--States are shown for demonstration purposes only-->
 
-          <label class="a-label a-label__heading" for="textinput-example-default">
+          <h4>
 
           States
 
-          </label>
+          </h4>
 
           <input class="a-text-input"
                 type="text"
@@ -43,11 +43,11 @@ variation_groups:
                  disabled>
           <br><br>
 
-          <label class="a-label a-label__heading" for="textinput-example-default">
+          <h4>
 
           Status
 
-          </label>
+          </h4>
 
           <input class="a-text-input a-text-input__success" type="text" placeholder="Success" id="form-input-success" aria-describedby="form-input-success_message">
 

@@ -187,13 +187,13 @@ variation_groups:
                   <span class="a-form-alert_text">
                       This is an inline validation with a error status.
                   </span>
-              </div>
+          </div>
         variation_specs: |-
           * Border: 2 px, Red (#d14124)
           * Icon: 18 px, Red (#d14124)
-    variation_group_description: Validation messages include success, warning, and
-      error. Validations (icon and message) should always appear below the input
-      field.
+    variation_group_description: Validation status messages include success,
+      warning, and error. Validations (icon and message) should always appear
+      below the input field.
 guidelines: ""
 eyebrow: Components
 title: Alerts and validations

@@ -1,7 +1,12 @@
 ---
+title: Selects
 layout: variation
 section: components
 status: Released
+description: Selects allow users to make a single selection or multiple
+  selections from a finite list of options. They are not always the best choice
+  from a usability perspective; see the use cases section below for more
+  details.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -114,7 +119,7 @@ variation_groups:
           * Background: Gray 10 (#e7e8e9)
           * Avenir Next Regular, 16 px, Dark Gray (#43484e)
       - variation_is_deprecated: false
-        variation_name: Multiselect
+        variation_name: Multiple select
         variation_description: Allows the user to select multiple items from a dropdown
           list of options.
         variation_code_snippet: >-
@@ -139,11 +144,6 @@ variation_groups:
     variation_group_name: Types
 guidelines: ""
 eyebrow: Components
-title: Selects
-description: Selects allow users to make a single selection or multiple
-  selections from a finite list of options. They are not always the best choice
-  from a usability perspective; see the use cases section below for more
-  details.
 use_cases: >-
   While selects are easy to implement, they aren’t always the best choice from a
   usability perspective.
@@ -163,22 +163,23 @@ use_cases: >-
 
     * A select is not a good place to introduce new or complicated terms or concepts. 
     * For instance, if the question is “What’s your favorite color of the rainbow,” a select could be a good choice. The options are familiar and there are more than six.
-behavior: ""
 accessibility: >-
   ### Selects
+
 
   Keep in mind that selects behave differently on various mobile devices, taking up different amounts of real estate and requiring different interactions. Mobile also doesn’t allow for the use of typeahead to navigate quickly to an item in a list, so navigating long lists can be especially cumbersome.
 
 
-  ### Multiselects
+  ### Multiple selects
+
 
   From an accessibility standpoint, browser defaults for multiple select components require the use of a mouse (e.g. holding down the control key and clicking several items). The default components are a poor choice for the visually impaired. If a multiselect component is desired, use custom JavaScript to make it accessible.
 related_items: "* [Forms
   variables](https://cfpb.github.io/design-system/development/variables#forms-1\
   )"
-last_updated: 2020-01-06T20:31:06.632Z
-research: ""
-
 redirect_from:
   - /components/dropdowns-and-multiselects
+last_updated: 2020-01-06T20:31:06.632Z
+behavior: ""
+research: ""
 ---

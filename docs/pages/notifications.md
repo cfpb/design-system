@@ -29,7 +29,7 @@ variation_groups:
               <div class="m-notification_content">
                   <div class="h4 m-notification_message">Information alert</div>
                   <p class="m-notification_explanation">
-                      You can also add an explanation to the notification.
+                      You can also add an explanation to the alert.
                   </p>
               </div>
           </div>
@@ -44,7 +44,7 @@ variation_groups:
               <div class="m-notification_content">
                   <div class="h4 m-notification_message">Information alert</div>
                   <p class="m-notification_explanation">
-                      This is the explanation of the notification.
+                      This is the explanation of the alert.
                   </p>
                   <ul class="m-list m-list__links">
                       <li class="m-list_item">

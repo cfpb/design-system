@@ -7,12 +7,9 @@ variation_groups:
     variations:
       - variation_is_deprecated: false
         variation_name: Information
-        variation_description: The information notification is the base notification
-          type without any modifiers. If your notification message requires
-          further explanation, include that content in a paragraph following the
-          main message. Notifications are hidden by default; you can toggle
-          their visibility by adding or removing
-          the `m-notification__visible` class to the base element.
+        variation_description: The information alert is the base alert type without any
+          modifiers. If your alert message requires further explanation, include
+          that content in a paragraph following the main message.
         variation_code_snippet: >-
           <div class="m-notification
                       m-notification__visible">
@@ -63,6 +60,9 @@ variation_groups:
                   </ul>
               </div>
           </div>
+        variation_implementation: Alerts are hidden by default; you can toggle their
+          visibility by adding or removing the `m-notification__visible` class
+          to the base element.
       - variation_code_snippet: |-
           <div class="m-notification
                       m-notification__visible
@@ -72,9 +72,8 @@ variation_groups:
                   <div class="h4 m-notification_message">11 results</div>
               </div>
           </div>
-        variation_description: >
-          The success notification is for displaying when an operation has run
-          as expected, such as returning the number of results in a search.
+        variation_description: The success alert displays when an operation has run as
+          expected, such as returning the number of results in a search.
         variation_implementation: ""
         variation_name: Success
         variation_specs: |-
@@ -91,18 +90,18 @@ variation_groups:
                   <div class="h4 m-notification_message">No results found.</div>
               </div>
           </div>
-        variation_description: The warning notification displays when an operation has
-          run as expected, but doesn’t have the expected results, such as a
-          search that returned no result. This notification can also be used to
-          display additional critical information to a user before they submit a
-          form, such as how their data will be used and protected or a reminder
-          that they can’t edit their responses after submitting.
+        variation_description: The warning alert displays when an operation has run as
+          expected, but doesn’t have the expected results, such as a search that
+          returned no result. This alert can also be used to display additional
+          critical information to a user before they submit a form, such as how
+          their data will be used and protected or a reminder that they can’t
+          edit their responses after submitting.
         variation_implementation: ""
         variation_name: Warning
         variation_specs: |-
           * Border: 1 px, Gold (#ff9e1b)
           * Background: Gold 10 (#fff6ec)
-          * Minicon: 18px, Gold (#ff9e1b)
+          * Icon: 18px, Gold (#ff9e1b)
       - variation_code_snippet: |-
           <div class="m-notification
                       m-notification__visible
@@ -112,27 +111,22 @@ variation_groups:
                   <div class="h4 m-notification_message">Page not found.</div>
               </div>
           </div>
-        variation_description: The error notification displays when an operation has not
-          run as expected and encounters an error. Use after validating on the
-          server side to call out input errors preventing form submission.
+        variation_description: The error alert displays when an operation has not run as
+          expected and encounters an error. Use after validating on the server
+          side to call out input errors preventing form submission.
         variation_implementation: >-
           * For screen reader accessibility, include anchor links to the fields
           that
-
-          need correction.
-
-
+            need correction.
           * Place form-level alerts below the form title.
 
-
-          * For field level notifications, the error minicon and message should
-
-          always appear below the input field.
+          * For field level alerts, the error icon and message should
+            always appear below the input field.
         variation_name: Error
         variation_specs: |-
           * Border: 1 px, Red (#d14124)
           * Background: Red 10 (#fbefec)
-          * Minicon: 18px, Red (#d14124)
+          * Icon: 18px, Red (#d14124)
       - variation_code_snippet: >-
           <div class="m-notification
                       m-notification__visible">
@@ -141,11 +135,11 @@ variation_groups:
                   <div class="h4 m-notification_message">The page is loading…</div>
               </div>
           </div>
-        variation_description: The in-progress notification displays when something is
-          happening on the page, such as a page loading notification as search
-          results are found. Use [animated
-          minicons](https://cfpb.github.io/design-system/foundation/iconography)
-          to reassure the user that an action is functioning as intended.
+        variation_description: The in-progress alert displays when something is
+          happening on the page, such as a page loading as search results are
+          found. Use [animated
+          icons](https://cfpb.github.io/design-system/foundation/iconography) to
+          reassure the user that an action is functioning as intended.
         variation_name: In-progress
     variation_group_description: ""
   - variation_group_name: Validations
@@ -162,11 +156,9 @@ variation_groups:
               </div>
         variation_code_snippet_rendered: ""
         variation_specs: |-
-          
-
           * Border: 2 px, CFPB Green (#20aa3f)
-          * Minicon: 18 px, CFPB Green (#20aa3f)
-          * Success minicon and message should always appear below input field
+          * Icons: 18 px, CFPB Green (#20aa3f)
+          * Success icons and message should always appear below input field
       - variation_is_deprecated: false
         variation_name: Warning
         variation_code_snippet: >-
@@ -178,11 +170,9 @@ variation_groups:
                   </span>
               </div>
         variation_specs: |-
-          
-
           * Border: 2 px, Gold (#ff9e1b)
-          * Minicon: 18 px, Gold (#ff9e1b)
-          * Warning minicon and message should always appear below input field
+          * Icons: 18 px, Gold (#ff9e1b)
+          * Warning icon and message should always appear below input field
       - variation_is_deprecated: false
         variation_name: Error
         variation_code_snippet: >-
@@ -194,10 +184,8 @@ variation_groups:
                   </span>
               </div>
         variation_specs: |-
-          
-
           * Border: 2 px, Red (#d14124)
-          * Minicon: 18 px, Red (#d14124)
+          * Icon: 18 px, Red (#d14124)
 guidelines: ""
 eyebrow: Components
 title: Alerts and validations

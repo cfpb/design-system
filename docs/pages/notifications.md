@@ -151,7 +151,7 @@ variation_groups:
           id="form-input-success_message" role="alert">
                   {% include icons/approved-round.svg %}
                   <span class="a-form-alert_text">
-                      This is an inline alert with a success state.
+                      This is an inline validation with a success state.
                   </span>
               </div>
         variation_code_snippet_rendered: ""
@@ -166,7 +166,7 @@ variation_groups:
           id="form-input-warning_message" role="alert">
                   {% include icons/warning-round.svg %}
                   <span class="a-form-alert_text">
-                      This is an inline alert with a warning state.
+                      This is an inline validation with a warning state.
                   </span>
               </div>
         variation_specs: |-
@@ -180,7 +180,7 @@ variation_groups:
           id="form-input-error_message" role="alert">
                   {% include icons/error-round.svg %}
                   <span class="a-form-alert_text">
-                      This is an inline alert with an error state.
+                      This is an inline validation with an error state.
                   </span>
               </div>
         variation_specs: |-
@@ -200,8 +200,7 @@ behavior: >-
 
   * Form-level alerts should appear below the form title.
 
-
-  * Field-level alerts (minicon and message) should always appear below the input field.
+  * Field-level validations (icon and message) should always appear below the input field.
 
 
   ### Validation

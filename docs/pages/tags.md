@@ -29,5 +29,13 @@ variation_groups:
           1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6
           8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455
           9.716z"></path></svg></label></button></li></ul>
+      - variation_is_deprecated: false
+        variation_name: Toggle tag
+        variation_description: >-
+          Toggle tags...
+
+
+          ![](/design-system/images/uploads/screenshot-2023-11-13-at-10.26.21-pm.png)
+        variation_code_snippet: ""
     variation_group_name: Types
 ---

@@ -10,13 +10,10 @@ variation_groups:
         variation_name: Date picker
         variation_code_snippet: |-
           <div class="m-form-field">
-              <label class="a-label a-label__heading" for="datepicker-example">
-                  Label
-              </label>
               <input class="a-text-input"
                     type="date"
                     id="datepicker-example"
-                    placeholder="mm/dd/yyyy">
+                   placeholder="mm/dd/yyyy">
           </div>
     variation_group_name: Types
 accessibility: >-

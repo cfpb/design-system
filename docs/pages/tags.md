@@ -5,13 +5,15 @@ layout: variation
 section: components
 status: Released
 description: Tags are used to label, organize, or categorize content. Tags can
-  be used as a method of filtering data, to show items within a particular
+  be used as a method of filtering data or to show items within a particular
   category.
 variation_groups:
   - variations:
       - variation_is_deprecated: false
         variation_name: Filter tag
-        variation_description: Fiilter tags...
+        variation_description: Display tags are used to display quick and useful
+          category labels to the user. They are often used to display categories
+          or active filters.
         variation_code_snippet: <ul class="o-multiselect_choices"><li
           data-option="option1"><button type="button"><label
           for="test_select__multiple-option1">Option 1<svg
@@ -29,13 +31,5 @@ variation_groups:
           1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6
           8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455
           9.716z"></path></svg></label></button></li></ul>
-      - variation_is_deprecated: false
-        variation_name: Toggle tag
-        variation_description: >-
-          Toggle tags...
-
-
-          ![Toggle tag](/design-system/images/uploads/screenshot-2023-11-13-at-10.26.21-pm.png "Toggle tag")
-        variation_code_snippet: ""
     variation_group_name: Types
 ---

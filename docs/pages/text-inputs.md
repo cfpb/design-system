@@ -64,11 +64,11 @@ variation_groups:
           #### Disabled
           - Background: Gray 10 (#e7e8e9)
         variation_name: Text inputs
-        variation_description: Use to input single lines of text, for example email
-          addresses, names, or search queries. The length of the input field
-          should be proportional to the expected user input, so that the user
-          can see what they've typed without having to scroll to reveal hidden
-          content.
+        variation_description: Use when the expected user input is a single line of
+          text, for example email addresses, names, or search queries. The
+          length of the input field should be proportional to the expected user
+          input, so that the user can see what they've typed without having to
+          scroll to reveal hidden content.
       - variation_is_deprecated: false
         variation_name: Text input (full width)
         variation_code_snippet: |-
@@ -80,7 +80,7 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Text input (with button)
-        variation_description: These are used for simple forms where a full filter isn’t necessary.
+        variation_description: Use for simple forms where a full filter isn’t necessary.
         variation_code_snippet: |-
           <div class="o-form__input-w-btn">
               <div class="o-form__input-w-btn_input-container">
@@ -92,7 +92,7 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Button inside text input
-        variation_description: These offer the user an action to take related to the
+        variation_description: Use to offer the user an action to take related to the
           input, typically to clear the input.
         variation_code_snippet: >-
           <div class="m-btn-inside-input">
@@ -128,21 +128,21 @@ variation_groups:
               </div>
           </div>
     variation_group_description: ""
-  - variation_group_name: Textarea inputs
+  - variation_group_name: Text area inputs
     variations:
       - variation_is_deprecated: false
-        variation_name: Textarea input
-        variation_description: Use for long-form answers that are more than a single
-          word or two. Make sure the input size is big enough that the user can
-          see what they've typed without having to scroll to reveal hidden
-          content, and small enough that the user doesn't have  to navigate the
-          viewport in order to see the entire field at once.
+        variation_name: Text area input
+        variation_description: Use when the expected user input is more than a few words
+          and could span multiple lines. Make sure the input size is big enough
+          that the user can see what they've typed without having to scroll to
+          reveal hidden content, and small enough that the user doesn't have  to
+          navigate the viewport in order to see the entire field at once.
         variation_code_snippet: |-
           <textarea class="a-text-input"
                     id="textarea-example-default"
                     placeholder="Placeholder text">Input text</textarea>
       - variation_is_deprecated: false
-        variation_name: Textarea input (full width)
+        variation_name: Text area input (full width)
         variation_description: |-
           <div class="m-form-field">
               <textarea class="a-text-input a-text-input__full"
@@ -174,8 +174,8 @@ guidelines: >-
   Text should be in sentence case. Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
 eyebrow: Components
 title: Text inputs
-description: A text input allows users to enter any combination of letters,
-  numbers, or symbols. Text input boxes can span single or multiple lines.
+description: Text inputs allow the user to enter any combination of letters,
+  numbers, or symbols. Text input fields can span single or multiple lines.
 use_cases: ""
 behavior: As the screen size gets smaller, break multi-column inputs into a
   single, stacked column. Fields that are next to each other on a large screen,

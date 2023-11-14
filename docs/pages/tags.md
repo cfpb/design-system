@@ -35,7 +35,7 @@ variation_groups:
           Toggle tags...
 
 
-          ![](/design-system/images/uploads/screenshot-2023-11-13-at-10.26.21-pm.png)
+          ![Toggle tag](/design-system/images/uploads/screenshot-2023-11-13-at-10.26.21-pm.png "Toggle tag")
         variation_code_snippet: ""
     variation_group_name: Types
 ---

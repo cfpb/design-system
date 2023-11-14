@@ -80,7 +80,6 @@ variation_groups:
           * Border: 1 px, CFPB Green (#20aa3f)
           * Icon: 18 px, CFPB Green (#20aa3f)
           * Background color: Green 10 (#f0f8eb)
-          * Success icon and message should always appear below input field.
       - variation_code_snippet: |-
           <div class="m-notification
                       m-notification__visible

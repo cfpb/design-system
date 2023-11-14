@@ -186,9 +186,9 @@ variation_groups:
         variation_specs: |-
           * Border: 2 px, Red (#d14124)
           * Icon: 18 px, Red (#d14124)
-    variation_group_description: Validations types include success, warning, error,
-      and in-progress. Field-level validations (icon and message) should always
-      appear below the input field.
+    variation_group_description: Validations messages include success, warning, and
+      error. Field-level validations (icon and message) should always appear
+      below the input field.
 guidelines: ""
 eyebrow: Components
 title: Alerts and validations

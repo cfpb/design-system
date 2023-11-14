@@ -8,6 +8,12 @@ variation_groups:
       - variation_code_snippet: >
           <!--States are shown for demonstration purposes only-->
 
+          <label class="a-label a-label__heading" for="textinput-example-default">
+
+          States
+
+          </label>
+
           <input class="a-text-input"
                 type="text"
                 id="textinput-example-default"
@@ -36,6 +42,12 @@ variation_groups:
                  placeholder="Disabled"
                  disabled>
           <br><br>
+
+          <label class="a-label a-label__heading" for="textinput-example-default">
+
+          Status
+
+          </label>
 
           <input class="a-text-input a-text-input__success" type="text" placeholder="Success" id="form-input-success" aria-describedby="form-input-success_message">
 

@@ -149,12 +149,13 @@ variation_groups:
         variation_code_snippet: >
           <div class="m-form-field m-form-field__success">
               <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
-          <div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert">
+              <div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert">
                   {% include icons/approved-round.svg %}
                   <span class="a-form-alert_text">
                       This is an inline validation with a success status.
                   </span>
               </div>
+          </div>
         variation_code_snippet_rendered: ""
         variation_specs: |-
           * Border: 2 px, CFPB Green (#20aa3f)
@@ -164,12 +165,15 @@ variation_groups:
         variation_name: Warning
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__warning">
-              <input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message"><div class="a-form-alert a-form-alert__warning" id="form-input-warning_message" role="alert">
+
+              <input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message">
+              <div class="a-form-alert a-form-alert__warning" id="form-input-warning_message" role="alert">
                   {% include icons/warning-round.svg %}
                   <span class="a-form-alert_text">
                       This is an inline validation with a warning status.
                   </span>
               </div>
+          </div>
         variation_specs: |-
           * Border: 2 px, Gold (#ff9e1b)
           * Icons: 18 px, Gold (#ff9e1b)
@@ -181,7 +185,7 @@ variation_groups:
               <input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message"><div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert">
                   {% include icons/error-round.svg %}
                   <span class="a-form-alert_text">
-                      This is an inline validation with a warning status.
+                      This is an inline validation with a error status.
                   </span>
               </div>
         variation_specs: |-

@@ -200,7 +200,7 @@ title: Alerts and validations
 description: Alerts reflect a user or system action and notify users to the
   state of a form or page. Validations appear inline with form fields and can
   highlight successful submissions, errors that need to be corrected, or details
-  to know before submittin a form.
+  to know before submitting a form.
 use_cases: ""
 behavior: >-
   ### Placement

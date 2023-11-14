@@ -11,9 +11,9 @@ variation_groups:
   - variations:
       - variation_is_deprecated: false
         variation_name: Filter tag
-        variation_description: Display tags are used to display quick and useful
-          category labels to the user. They are often used to display categories
-          or active filters.
+        variation_description: Filter tags are used to display quick and useful category
+          labels to the user. They are often used to display categories or
+          active filters.
         variation_code_snippet: <ul class="o-multiselect_choices"><li
           data-option="option1"><button type="button"><label
           for="test_select__multiple-option1">Option 1<svg

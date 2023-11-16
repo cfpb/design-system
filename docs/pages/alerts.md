@@ -236,6 +236,6 @@ research: ""
 ---
 
 redirect from:
-  - /notifications
-  - /alerts
+  - /components/components/notifications
+  - components/components/alerts
 ---

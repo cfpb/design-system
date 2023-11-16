@@ -53,7 +53,7 @@ variation_groups:
 
           * Avenir Next Bold, 16 px, Black (#101820)
 
-          * Background: Gray 5 (#f7f7f7)
+          * Background: Gray 5 (#f7f8f9)
 
           * Border-bottom: 1px, Gray (#5a5d61)
 

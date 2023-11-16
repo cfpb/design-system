@@ -29,6 +29,7 @@ first-level:
       - heading: Components
         nav-items:
           - page: Alerts
+          - page: Banner (notification)
           - page: Banner (US gov)
           - page: Buttons
           - page: Checkboxes
@@ -39,7 +40,6 @@ first-level:
           - page: Labels and legends
           - page: Links
           - page: Lists
-          - page: Notifications
           - page: Pagination
           - page: Radio buttons
           - page: Range sliders

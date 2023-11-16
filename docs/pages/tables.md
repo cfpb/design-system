@@ -262,7 +262,7 @@ variation_groups:
               </table>
           </div>
         variation_specs: |-
-          * Border (around the scrolling table): 1px, Gray 50 (#a2a3a4) 
+          * Border (around the scrolling table): 1px, Gray 40 (#b4b5b6)
           * Background (alternate row): Gray 5 (#f7f8f9)
   - variations:
       - variation_code_snippet: |-

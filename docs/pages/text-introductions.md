@@ -158,4 +158,8 @@ related_items: >-
   * [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
 last_updated: 2020-01-28T15:55:47.394Z
 research: ""
+
+redirect_from:
+  - /patterns/introductions
+  - /patterns/text-introductions
 ---

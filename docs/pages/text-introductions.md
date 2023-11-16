@@ -160,6 +160,6 @@ last_updated: 2020-01-28T15:55:47.394Z
 research: ""
 
 redirect_from:
-  - /patterns/introductions
-  - /patterns/text-introductions
+  - /patterns/introductions/introductions
+  - /patterns/introductions/text-introductions
 ---

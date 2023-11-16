@@ -28,7 +28,7 @@ first-level:
     second-level:
       - heading: Components
         nav-items:
-          - page: Banner (notification)
+          - page: Alerts
           - page: Banner (US gov)
           - page: Buttons
           - page: Checkboxes
@@ -47,6 +47,7 @@ first-level:
           - page: Summaries
           - page: Tables
           - page: Taglines
+          - page: Text inputs
           - page: Text inputs
         third-level: []
     nav-items: []

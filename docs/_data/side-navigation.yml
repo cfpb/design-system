@@ -48,7 +48,6 @@ first-level:
           - page: Tables
           - page: Taglines
           - page: Text inputs
-          - page: Text inputs
         third-level: []
     nav-items: []
   - heading: Patterns

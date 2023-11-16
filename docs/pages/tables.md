@@ -262,8 +262,8 @@ variation_groups:
               </table>
           </div>
         variation_specs: |-
-          * Border: 1px, Gray-50 #a2a3a4 (around the scrolling table)
-          * Background (alternate row): Gray 5 (#f7f7f7)
+          * Border (around the scrolling table): 1px, Gray 50 (#a2a3a4) 
+          * Background (alternate row): Gray 5 (#f7f8f9)
   - variations:
       - variation_code_snippet: |-
           <table class="o-table o-table__striped">

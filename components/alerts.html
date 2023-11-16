@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Google Tag Manager code -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
-  <title>Notifications - CFPB Design System</title>
+  <title>Alerts - CFPB Design System</title>
   <meta name="description" content="CFPB's design system">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -270,7 +270,7 @@
     
 
     <h1 class="component-header u-mb30">
-        Notifications
+        Alerts
     </h1>
 
     
@@ -284,11 +284,11 @@
     <ul class="m-list m-list__horizontal m-list__horizontal-spaced">
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#information-base-notification">Information (base) notification</a>
+            <a class="m-list_link" href="#form-level-alerts">Form-level alerts</a>
         </li>
         
         <li class="m-list_item">
-            <a class="m-list_link" href="#modifier-types">Modifier types</a>
+            <a class="m-list_link" href="#field-level-alerts">Field-level alerts</a>
         </li>
         
         <li class="m-list_item">
@@ -308,21 +308,26 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Notifications alert users to the state of a form or page. In forms, notifications can appear at the top of the form or in line with form fields and can highlight successful submissions, errors that need to be corrected, or details to know before submitting the form. When used on a page, notifications can call out important information about the content (including if the content is still loading).</p>
+        <p>Alerts draw a user’s attention to a change in the status of a form or page. Form-level alerts reflect a user or system action and appear below the form title. Field-level alerts appear inline with input fields and can highlight successful submissions, errors that need to be corrected, or details to know before submitting a form.</p>
 
     </section>
     
 
     
     
-    <section class="o-variation-group" id="information-base-notification">
+    <section class="o-variation-group" id="form-level-alerts">
 
         
         <h2 class="o-variation-group_title">
-            Information (base) notification
+            Form-level alerts
         </h2>
         
 
+        
+        <div class="o-variation-group_description">
+            
+
+        </div>
         
 
         
@@ -334,14 +339,17 @@
             
 
             
+            <div class="m-variation_name">
+                <h3>
+                    Information
+                    
+                </h3>
+            </div>
+            
 
             
             <div class="m-variation_description">
-                <p>The information notification is the base notification type without any modifiers.</p>
-
-<p>If your notification message requires further explanation, include that content in a paragraph following the main message.</p>
-
-<p>Notifications are hidden by default; you can toggle their visibility by adding or removing the <code class="language-plaintext highlighter-rouge">m-notification__visible</code> class to the base element.</p>
+                <p>The information alert is the base alert type without any modifiers. If your alert message requires further explanation, include that content in a paragraph following the main message.</p>
 
             </div>
             
@@ -353,7 +361,7 @@
             m-notification__visible">
     <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__information-round" viewbox="0 0 17 19"><path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM9.64 5.78a1.136 1.136 0 1 0-1.136 1.135A1.136 1.136 0 0 0 9.64 5.781zm-.344 2.884a.792.792 0 1 0-1.583 0v5.203a.792.792 0 0 0 1.583 0z"></path></svg>
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A notification</div>
+        <div class="h4 m-notification_message">Information alert</div>
     </div>
 </div>
 
@@ -363,9 +371,9 @@
             m-notification__visible">
     <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__information-round" viewbox="0 0 17 19"><path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM9.64 5.78a1.136 1.136 0 1 0-1.136 1.135A1.136 1.136 0 0 0 9.64 5.781zm-.344 2.884a.792.792 0 1 0-1.583 0v5.203a.792.792 0 0 0 1.583 0z"></path></svg>
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A notification</div>
+        <div class="h4 m-notification_message">Information alert</div>
         <p class="m-notification_explanation">
-            You can also add an explanation to the notification.
+            You can also add an explanation to the alert.
         </p>
     </div>
 </div>
@@ -376,9 +384,9 @@
             m-notification__visible">
     <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__information-round" viewbox="0 0 17 19"><path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM9.64 5.78a1.136 1.136 0 1 0-1.136 1.135A1.136 1.136 0 0 0 9.64 5.781zm-.344 2.884a.792.792 0 1 0-1.583 0v5.203a.792.792 0 0 0 1.583 0z"></path></svg>
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A notification</div>
+        <div class="h4 m-notification_message">Information alert</div>
         <p class="m-notification_explanation">
-            This is the explanation of the notification.
+            This is the explanation of the alert.
         </p>
         <ul class="m-list m-list__links">
             <li class="m-list_item">
@@ -405,15 +413,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-the-information-notification-is--1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-the-information-notification-is--1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-information-the-information-aler-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-information-the-information-aler-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-the-information-notification-is--1">
+            <div class="m-tabs u-hidden" id="details-information-the-information-aler-1">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-the-information-notification-is--html-code-snippet-1">
+                        <a class="m-tabs_tab" href="#details-information-the-information-aler-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -421,7 +429,7 @@
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-the-information-notification-is--implementation-1">
+                        <a class="m-tabs_tab" href="#details-information-the-information-aler-implementation-1">
                             Implementation
                         </a>
                     </li>
@@ -431,7 +439,7 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-the-information-notification-is--html-code-snippet-1">
+                <section class="m-tabs_panel" id="details-information-the-information-aler-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -439,7 +447,7 @@
             m-notification__visible"&gt;
     {% include icons/information-round.svg %}
     &lt;div class="m-notification_content"&gt;
-        &lt;div class="h4 m-notification_message"&gt;A notification&lt;/div&gt;
+        &lt;div class="h4 m-notification_message"&gt;Information alert&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
@@ -449,9 +457,9 @@
             m-notification__visible"&gt;
     {% include icons/information-round.svg %}
     &lt;div class="m-notification_content"&gt;
-        &lt;div class="h4 m-notification_message"&gt;A notification&lt;/div&gt;
+        &lt;div class="h4 m-notification_message"&gt;Information alert&lt;/div&gt;
         &lt;p class="m-notification_explanation"&gt;
-            You can also add an explanation to the notification.
+            You can also add an explanation to the alert.
         &lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -462,9 +470,9 @@
             m-notification__visible"&gt;
     {% include icons/information-round.svg %}
     &lt;div class="m-notification_content"&gt;
-        &lt;div class="h4 m-notification_message"&gt;A notification&lt;/div&gt;
+        &lt;div class="h4 m-notification_message"&gt;Information alert&lt;/div&gt;
         &lt;p class="m-notification_explanation"&gt;
-            This is the explanation of the notification.
+            This is the explanation of the alert.
         &lt;/p&gt;
         &lt;ul class="m-list m-list__links"&gt;
             &lt;li class="m-list_item"&gt;
@@ -490,16 +498,11 @@
 
                 <!-- Implementation details -->
                 
-                <section class="m-tabs_panel" id="details-the-information-notification-is--implementation-1">
+                <section class="m-tabs_panel" id="details-information-the-information-aler-implementation-1">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
-                            <p>Notifications are hidden by default; you can toggle their visibility by
-adding or removing the <code class="language-plaintext highlighter-rouge">m-notification__visible</code> class to the base
-element.</p>
-
-<p>If your notification requires links, include them below the message or
-explanation as a <code class="language-plaintext highlighter-rouge">m-list</code> unordered list.</p>
+                            <p>Alerts are hidden by default; you can toggle their visibility by adding or removing the <code class="language-plaintext highlighter-rouge">m-notification__visible</code> class to the base element.</p>
 
                         </div>
                     </div>
@@ -514,24 +517,6 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
 
         </div>
         
-    </section>
-    
-    <section class="o-variation-group" id="modifier-types">
-
-        
-        <h2 class="o-variation-group_title">
-            Modifier types
-        </h2>
-        
-
-        
-        <div class="o-variation-group_description">
-            <p>Types of notifications include success, warning, error, and in-progress.</p>
-
-        </div>
-        
-
-        
         <div class="m-variation">
 
             
@@ -542,7 +527,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
             
             <div class="m-variation_name">
                 <h3>
-                    Success notification
+                    Success
                     
                 </h3>
             </div>
@@ -550,7 +535,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
 
             
             <div class="m-variation_description">
-                <p>The success notification is for displaying when an operation has run as expected, such as returning the number of results in a search.</p>
+                <p>The success alert displays when an operation has run as expected, such as returning the number of results in a search.</p>
 
             </div>
             
@@ -577,15 +562,15 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
             
 
             <div class="a-toggle_code">
-                <button href="#details-success-notification-the-success-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-success-notification-the-success-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-success-the-success-alert-displa-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-success-the-success-alert-displa-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-success-notification-the-success-1">
+            <div class="m-tabs u-hidden" id="details-success-the-success-alert-displa-2">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-success-notification-the-success-html-code-snippet-1">
+                        <a class="m-tabs_tab" href="#details-success-the-success-alert-displa-html-code-snippet-2">
                             HTML code snippet
                         </a>
                     </li>
@@ -594,7 +579,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-success-notification-the-success-specs-1">
+                        <a class="m-tabs_tab" href="#details-success-the-success-alert-displa-specs-2">
                             Specs
                         </a>
                     </li>
@@ -603,7 +588,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-success-notification-the-success-html-code-snippet-1">
+                <section class="m-tabs_panel" id="details-success-the-success-alert-displa-html-code-snippet-2">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -628,7 +613,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
 
                 <!-- Specs -->
                 
-                <section class="m-tabs_panel" id="details-success-notification-the-success-specs-1">
+                <section class="m-tabs_panel" id="details-success-the-success-alert-displa-specs-2">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
@@ -636,7 +621,6 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
   <li>Border: 1 px, CFPB Green (#20aa3f)</li>
   <li>Icon: 18 px, CFPB Green (#20aa3f)</li>
   <li>Background color: Green 10 (#f0f8eb)</li>
-  <li>Success icon and message should always appear below input field.</li>
 </ul>
 
                         </div>
@@ -659,7 +643,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
             
             <div class="m-variation_name">
                 <h3>
-                    Success notification (field-level)
+                    Warning
                     
                 </h3>
             </div>
@@ -667,130 +651,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
 
             
             <div class="m-variation_description">
-                
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                
-<div class="m-form-field m-form-field__success">
-    <label class="a-label a-label__heading" for="form-input-success">Input label</label>
-    <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
-    <div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 19" class="cf-icon-svg cf-icon-svg__approved-round"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0Zm-4.105-4.498a.791.791 0 0 0-1.082.29l-3.828 6.63-1.733-2.08a.792.792 0 1 0-1.216 1.014l2.459 2.952a.792.792 0 0 0 1.294-.111L12.6 6.166a.791.791 0 0 0-.29-1.081Z"></path></svg>
-        <span class="a-form-alert_text">
-            This is an inline alert with a success state.
-        </span>
-    </div>
-</div>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-success-notification-field-level-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-success-notification-field-level-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-success-notification-field-level-2">
-                <ul class="m-tabs_list">
-                    
-                    <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-success-notification-field-level-html-code-snippet-2">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-success-notification-field-level-specs-2">
-                            Specs
-                        </a>
-                    </li>
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs_panel" id="details-success-notification-field-level-html-code-snippet-2">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-form-field m-form-field__success"&gt;
-    &lt;label class="a-label a-label__heading" for="form-input-success"&gt;Input label&lt;/label&gt;
-    &lt;input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message"&gt;
-    &lt;div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert"&gt;
-        {% include icons/approved-round.svg %}
-        &lt;span class="a-form-alert_text"&gt;
-            This is an inline alert with a success state.
-        &lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-                <section class="m-tabs_panel" id="details-success-notification-field-level-specs-2">
-                    <div>
-                        <h4 class="variation-specs-title">Specs</h4>
-                        <div style="padding:40px">
-                            <ul>
-  <li>Border: 2 px, CFPB Green (#20aa3f)</li>
-  <li>Minicon: 18 px, CFPB Green (#20aa3f)</li>
-  <li>Success minicon and message should always appear below input field</li>
-</ul>
-
-                        </div>
-                    </div>
-                </section>
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>
-                    Warning notification
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>The warning notification displays when an operation has run as expected, but doesn’t have the expected results, such as a search that returned no results.</p>
-
-<p>This notification can also be used to display additional critical information to a user before they submit a form, such as how their data will be used and protected or a reminder that they can’t edit their responses after submitting.</p>
+                <p>The warning alert displays when an operation has run as expected, but doesn’t have the expected results, such as a search that returned no result. This alert can also be used to display additional critical information to a user before they submit a form, such as how their data will be used and protected or a reminder that they can’t edit their responses after submitting.</p>
 
             </div>
             
@@ -817,15 +678,15 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
             
 
             <div class="a-toggle_code">
-                <button href="#details-warning-notification-the-warning-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-warning-notification-the-warning-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-warning-the-warning-alert-displa-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-warning-the-warning-alert-displa-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-warning-notification-the-warning-3">
+            <div class="m-tabs u-hidden" id="details-warning-the-warning-alert-displa-3">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-warning-notification-the-warning-html-code-snippet-3">
+                        <a class="m-tabs_tab" href="#details-warning-the-warning-alert-displa-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -834,7 +695,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-warning-notification-the-warning-specs-3">
+                        <a class="m-tabs_tab" href="#details-warning-the-warning-alert-displa-specs-3">
                             Specs
                         </a>
                     </li>
@@ -843,7 +704,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-warning-notification-the-warning-html-code-snippet-3">
+                <section class="m-tabs_panel" id="details-warning-the-warning-alert-displa-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -868,14 +729,14 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
 
                 <!-- Specs -->
                 
-                <section class="m-tabs_panel" id="details-warning-notification-the-warning-specs-3">
+                <section class="m-tabs_panel" id="details-warning-the-warning-alert-displa-specs-3">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
                             <ul>
   <li>Border: 1 px, Gold (#ff9e1b)</li>
   <li>Background: Gold 10 (#fff6ec)</li>
-  <li>Minicon: 18px, Gold (#ff9e1b)</li>
+  <li>Icon: 18px, Gold (#ff9e1b)</li>
 </ul>
 
                         </div>
@@ -898,7 +759,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
             
             <div class="m-variation_name">
                 <h3>
-                    Warning notification (field-level)
+                    Error
                     
                 </h3>
             </div>
@@ -906,127 +767,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
 
             
             <div class="m-variation_description">
-                
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <div class="m-form-field m-form-field__warning">
-    <label class="a-label a-label__heading" for="form-input-warning">Input label</label>
-    <input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message">
-    <div class="a-form-alert a-form-alert__warning" id="form-input-warning_message" role="alert">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 19" class="cf-icon-svg cf-icon-svg__warning-round"><path d="M16.406 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0ZM9.48 13.667a1.003 1.003 0 1 0-2.007 0 1.003 1.003 0 0 0 2.007 0ZM7.697 10.83a.792.792 0 0 0 1.583 0V4.562a.792.792 0 0 0-1.583 0v6.268Z"></path></svg>
-        <span class="a-form-alert_text">
-            This is an inline alert with a warning state.
-        </span>
-    </div>
-</div>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-warning-notification-field-level-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-warning-notification-field-level-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-warning-notification-field-level-4">
-                <ul class="m-tabs_list">
-                    
-                    <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-warning-notification-field-level-html-code-snippet-4">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-warning-notification-field-level-specs-4">
-                            Specs
-                        </a>
-                    </li>
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs_panel" id="details-warning-notification-field-level-html-code-snippet-4">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-form-field m-form-field__warning"&gt;
-    &lt;label class="a-label a-label__heading" for="form-input-warning"&gt;Input label&lt;/label&gt;
-    &lt;input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message"&gt;
-    &lt;div class="a-form-alert a-form-alert__warning" id="form-input-warning_message" role="alert"&gt;
-        {% include icons/warning-round.svg %}
-        &lt;span class="a-form-alert_text"&gt;
-            This is an inline alert with a warning state.
-        &lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-                <section class="m-tabs_panel" id="details-warning-notification-field-level-specs-4">
-                    <div>
-                        <h4 class="variation-specs-title">Specs</h4>
-                        <div style="padding:40px">
-                            <ul>
-  <li>Border: 2 px, Gold (#ff9e1b)</li>
-  <li>Minicon: 18 px, Gold (#ff9e1b)</li>
-  <li>Warning minicon and message should always appear below input field</li>
-</ul>
-
-                        </div>
-                    </div>
-                </section>
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>
-                    Error notification
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>The error notification displays when an operation has not run as expected and encounters an error. Use after validating on the server side to call out input errors preventing form submission.</p>
+                <p>The error alert displays when an operation has not run as expected and encounters an error. Use after validating on the server side to call out input errors preventing form submission.</p>
 
             </div>
             
@@ -1053,15 +794,15 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
             
 
             <div class="a-toggle_code">
-                <button href="#details-error-notification-the-error-not-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-error-notification-the-error-not-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-error-the-error-alert-displays-w-4" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-error-the-error-alert-displays-w-4" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-error-notification-the-error-not-5">
+            <div class="m-tabs u-hidden" id="details-error-the-error-alert-displays-w-4">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-error-notification-the-error-not-html-code-snippet-5">
+                        <a class="m-tabs_tab" href="#details-error-the-error-alert-displays-w-html-code-snippet-4">
                             HTML code snippet
                         </a>
                     </li>
@@ -1069,14 +810,14 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-error-notification-the-error-not-implementation-5">
+                        <a class="m-tabs_tab" href="#details-error-the-error-alert-displays-w-implementation-4">
                             Implementation
                         </a>
                     </li>
                     
                     
                     <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-error-notification-the-error-not-specs-5">
+                        <a class="m-tabs_tab" href="#details-error-the-error-alert-displays-w-specs-4">
                             Specs
                         </a>
                     </li>
@@ -1085,7 +826,7 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-error-notification-the-error-not-html-code-snippet-5">
+                <section class="m-tabs_panel" id="details-error-the-error-alert-displays-w-html-code-snippet-4">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1107,22 +848,16 @@ explanation as a <code class="language-plaintext highlighter-rouge">m-list</code
 
                 <!-- Implementation details -->
                 
-                <section class="m-tabs_panel" id="details-error-notification-the-error-not-implementation-5">
+                <section class="m-tabs_panel" id="details-error-the-error-alert-displays-w-implementation-4">
                     <div>
                         <h4 class="variation-implementation-title">Implementation details</h4>
                         <div style="padding:40px">
                             <ul>
-  <li>
-    <p>For screen reader accessibility, include anchor links to the fields that
-need correction.</p>
-  </li>
-  <li>
-    <p>Place form-level alerts below the form title.</p>
-  </li>
-  <li>
-    <p>For field level notifications, the error minicon and message should
-always appear below the input field.</p>
-  </li>
+  <li>For screen reader accessibility, include anchor links to the fields that
+need correction.</li>
+  <li>Place form-level alerts below the form title.</li>
+  <li>For field level alerts, the error icon and message should
+always appear below the input field.</li>
 </ul>
 
                         </div>
@@ -1132,14 +867,14 @@ always appear below the input field.</p>
 
                 <!-- Specs -->
                 
-                <section class="m-tabs_panel" id="details-error-notification-the-error-not-specs-5">
+                <section class="m-tabs_panel" id="details-error-the-error-alert-displays-w-specs-4">
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
                             <ul>
   <li>Border: 1 px, Red (#d14124)</li>
   <li>Background: Red 10 (#fbefec)</li>
-  <li>Minicon: 18px, Red (#d14124)</li>
+  <li>Icon: 18px, Red (#d14124)</li>
 </ul>
 
                         </div>
@@ -1162,7 +897,7 @@ always appear below the input field.</p>
             
             <div class="m-variation_name">
                 <h3>
-                    Error notification (field-level)
+                    In-progress
                     
                 </h3>
             </div>
@@ -1170,126 +905,7 @@ always appear below the input field.</p>
 
             
             <div class="m-variation_description">
-                
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-            <div class="a-live_code">
-                <div class="m-form-field m-form-field__error">
-    <label class="a-label a-label__heading" for="form-input-error">Input label</label>
-    <input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message">
-    <div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 19" class="cf-icon-svg cf-icon-svg__error-round"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0Zm-6.804.01 3.032-3.033a.792.792 0 1 0-1.12-1.12L8.494 8.473 5.46 5.44a.792.792 0 0 0-1.12 1.12l3.033 3.033-3.032 3.033a.791.791 0 1 0 1.12 1.119l3.032-3.033 3.033 3.033a.79.79 0 0 0 1.12 0c.309-.31.309-.81 0-1.12L9.612 9.594Z"></path></svg>
-        <span class="a-form-alert_text">
-            This is an inline alert with an error state.
-        </span>
-    </div>
-</div>
-            </div>
-            
-
-            
-            
-            
-            
-
-            
-
-            <div class="a-toggle_code">
-                <button href="#details-error-notification-field-level-d-6" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-error-notification-field-level-d-6" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
-            </div>
-
-            <div class="m-tabs u-hidden" id="details-error-notification-field-level-d-6">
-                <ul class="m-tabs_list">
-                    
-                    <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-error-notification-field-level-d-html-code-snippet-6">
-                            HTML code snippet
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="m-tabs_list-item">
-                        <a class="m-tabs_tab" href="#details-error-notification-field-level-d-specs-6">
-                            Specs
-                        </a>
-                    </li>
-                    
-                </ul>
-
-                <!-- HTML snippet -->
-                
-                <section class="m-tabs_panel" id="details-error-notification-field-level-d-html-code-snippet-6">
-                    <div class="variation-code-snippet">
-                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
-                        <div class="source-code">
-                            <pre><code class="language-html">&lt;div class="m-form-field m-form-field__error"&gt;
-    &lt;label class="a-label a-label__heading" for="form-input-error"&gt;Input label&lt;/label&gt;
-    &lt;input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message"&gt;
-    &lt;div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert"&gt;
-        {% include icons/error-round.svg %}
-        &lt;span class="a-form-alert_text"&gt;
-            This is an inline alert with an error state.
-        &lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                
-
-                <!-- Jinja snippet -->
-                
-
-                <!-- Implementation details -->
-                
-
-                <!-- Specs -->
-                
-                <section class="m-tabs_panel" id="details-error-notification-field-level-d-specs-6">
-                    <div>
-                        <h4 class="variation-specs-title">Specs</h4>
-                        <div style="padding:40px">
-                            <ul>
-  <li>Border: 2 px, Red (#d14124)</li>
-  <li>Minicon: 18 px, Red (#d14124)</li>
-</ul>
-
-                        </div>
-                    </div>
-                </section>
-                
-
-            </div>
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation_name">
-                <h3>
-                    In-progress notification
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation_description">
-                <p>The in-progress notification displays when something is happening on the page, such as a page loading notification as search results are found. Use <a href="https://cfpb.github.io/design-system/foundation/iconography">animated minicons</a> to reassure the user that an action is functioning as intended.</p>
+                <p>The in-progress alert displays when something is happening on the page, such as a page loading as search results are found. Use <a href="https://cfpb.github.io/design-system/foundation/iconography">animated icons</a> to reassure the user that an action is functioning as intended.</p>
 
             </div>
             
@@ -1315,15 +931,15 @@ always appear below the input field.</p>
             
 
             <div class="a-toggle_code">
-                <button href="#details-in-progress-notification-the-in--7" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-in-progress-notification-the-in--7" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-in-progress-the-in-progress-aler-5" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-in-progress-the-in-progress-aler-5" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-in-progress-notification-the-in--7">
+            <div class="m-tabs u-hidden" id="details-in-progress-the-in-progress-aler-5">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-in-progress-notification-the-in--html-code-snippet-7">
+                        <a class="m-tabs_tab" href="#details-in-progress-the-in-progress-aler-html-code-snippet-5">
                             HTML code snippet
                         </a>
                     </li>
@@ -1335,7 +951,7 @@ always appear below the input field.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-in-progress-notification-the-in--html-code-snippet-7">
+                <section class="m-tabs_panel" id="details-in-progress-the-in-progress-aler-html-code-snippet-5">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -1367,6 +983,376 @@ always appear below the input field.</p>
         
     </section>
     
+    <section class="o-variation-group" id="field-level-alerts">
+
+        
+        <h2 class="o-variation-group_title">
+            Field-level alerts
+        </h2>
+        
+
+        
+        <div class="o-variation-group_description">
+            <p>Field-level alerts reflect validation status and include success, warning, and error. Field-level alerts (icon and message) should always appear below the input field.</p>
+
+        </div>
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>
+                    Success
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="m-form-field m-form-field__success">
+    <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
+    <div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 19" class="cf-icon-svg cf-icon-svg__approved-round"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0Zm-4.105-4.498a.791.791 0 0 0-1.082.29l-3.828 6.63-1.733-2.08a.792.792 0 1 0-1.216 1.014l2.459 2.952a.792.792 0 0 0 1.294-.111L12.6 6.166a.791.791 0 0 0-.29-1.081Z"></path></svg>
+        <span class="a-form-alert_text">
+            This is an inline validation with a success status.
+        </span>
+    </div>
+</div>
+
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-success-div-class-m-form-field-m-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-success-div-class-m-form-field-m-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-success-div-class-m-form-field-m-1">
+                <ul class="m-tabs_list">
+                    
+                    <li class="m-tabs_list-item m-tabs_list-item-selected">
+                        <a class="m-tabs_tab" href="#details-success-div-class-m-form-field-m-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#details-success-div-class-m-form-field-m-specs-1">
+                            Specs
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs_panel" id="details-success-div-class-m-form-field-m-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="m-form-field m-form-field__success"&gt;
+    &lt;input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message"&gt;
+    &lt;div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert"&gt;
+        {% include icons/approved-round.svg %}
+        &lt;span class="a-form-alert_text"&gt;
+            This is an inline validation with a success status.
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+                <section class="m-tabs_panel" id="details-success-div-class-m-form-field-m-specs-1">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <ul>
+  <li>Border: 2 px, CFPB Green (#20aa3f)</li>
+  <li>Icons: 18 px, CFPB Green (#20aa3f)</li>
+  <li>Success icons and message should always appear below input field</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>
+                    Warning
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="m-form-field m-form-field__warning">
+
+    <input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message">
+    <div class="a-form-alert a-form-alert__warning" id="form-input-warning_message" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 19" class="cf-icon-svg cf-icon-svg__warning-round"><path d="M16.406 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0ZM9.48 13.667a1.003 1.003 0 1 0-2.007 0 1.003 1.003 0 0 0 2.007 0ZM7.697 10.83a.792.792 0 0 0 1.583 0V4.562a.792.792 0 0 0-1.583 0v6.268Z"></path></svg>
+        <span class="a-form-alert_text">
+            This is an inline validation with a warning status.
+        </span>
+    </div>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-warning-div-class-m-form-field-m-2" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-warning-div-class-m-form-field-m-2" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-warning-div-class-m-form-field-m-2">
+                <ul class="m-tabs_list">
+                    
+                    <li class="m-tabs_list-item m-tabs_list-item-selected">
+                        <a class="m-tabs_tab" href="#details-warning-div-class-m-form-field-m-html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#details-warning-div-class-m-form-field-m-specs-2">
+                            Specs
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs_panel" id="details-warning-div-class-m-form-field-m-html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="m-form-field m-form-field__warning"&gt;
+
+    &lt;input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message"&gt;
+    &lt;div class="a-form-alert a-form-alert__warning" id="form-input-warning_message" role="alert"&gt;
+        {% include icons/warning-round.svg %}
+        &lt;span class="a-form-alert_text"&gt;
+            This is an inline validation with a warning status.
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+                <section class="m-tabs_panel" id="details-warning-div-class-m-form-field-m-specs-2">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <ul>
+  <li>Border: 2 px, Gold (#ff9e1b)</li>
+  <li>Icons: 18 px, Gold (#ff9e1b)</li>
+  <li>Warning icon and message should always appear below input field</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation_name">
+                <h3>
+                    Error
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation_description">
+                
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live_code">
+                <div class="m-form-field m-form-field__error">
+    <input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message"><div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 19" class="cf-icon-svg cf-icon-svg__error-round"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0Zm-6.804.01 3.032-3.033a.792.792 0 1 0-1.12-1.12L8.494 8.473 5.46 5.44a.792.792 0 0 0-1.12 1.12l3.033 3.033-3.032 3.033a.791.791 0 1 0 1.12 1.119l3.032-3.033 3.033 3.033a.79.79 0 0 0 1.12 0c.309-.31.309-.81 0-1.12L9.612 9.594Z"></path></svg>
+        <span class="a-form-alert_text">
+            This is an inline validation with a error status.
+        </span>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-error-div-class-m-form-field-m-f-3" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-error-div-class-m-form-field-m-f-3" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-error-div-class-m-form-field-m-f-3">
+                <ul class="m-tabs_list">
+                    
+                    <li class="m-tabs_list-item m-tabs_list-item-selected">
+                        <a class="m-tabs_tab" href="#details-error-div-class-m-form-field-m-f-html-code-snippet-3">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="m-tabs_list-item">
+                        <a class="m-tabs_tab" href="#details-error-div-class-m-form-field-m-f-specs-3">
+                            Specs
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs_panel" id="details-error-div-class-m-form-field-m-f-html-code-snippet-3">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;div class="m-form-field m-form-field__error"&gt;
+    &lt;input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message"&gt;&lt;div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert"&gt;
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 19" class="cf-icon-svg cf-icon-svg__error-round"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0Zm-6.804.01 3.032-3.033a.792.792 0 1 0-1.12-1.12L8.494 8.473 5.46 5.44a.792.792 0 0 0-1.12 1.12l3.033 3.033-3.032 3.033a.791.791 0 1 0 1.12 1.119l3.032-3.033 3.033 3.033a.79.79 0 0 0 1.12 0c.309-.31.309-.81 0-1.12L9.612 9.594Z"></path></svg>
+        &lt;span class="a-form-alert_text"&gt;
+            This is an inline validation with a error status.
+        &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+                <section class="m-tabs_panel" id="details-error-div-class-m-form-field-m-f-specs-3">
+                    <div>
+                        <h4 class="variation-specs-title">Specs</h4>
+                        <div style="padding:40px">
+                            <ul>
+  <li>Border: 2 px, Red (#d14124)</li>
+  <li>Icon: 18 px, Red (#d14124)</li>
+</ul>
+
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+            
+
+        </div>
+        
+    
+    
     
 
     
@@ -1385,12 +1371,8 @@ always appear below the input field.</p>
 <h3 id="placement">Placement</h3>
 
 <ul>
-  <li>
-    <p>Form-level alerts should appear below the form title.</p>
-  </li>
-  <li>
-    <p>Field-level alerts (minicon and message) should always appear below the input field.</p>
-  </li>
+  <li>Form-level alerts should appear below the form title.</li>
+  <li>Field-level alerts (icon and validation status message) should always appear below the input field.</li>
 </ul>
 
 <h3 id="validation">Validation</h3>
@@ -1444,7 +1426,7 @@ always appear below the input field.</p>
     </div>
 <!-- .content-l -->
 
-</section><!-- .content_main -->
+<!-- .content_main -->
 
 
         
@@ -1459,14 +1441,14 @@ always appear below the input field.</p>
         
 
         <div class="o-editor_link" id="edit-page">
-            <a class="a-btn" href="/design-system/updating-this-website?page=Notifications" title="Edit this page in Netlify CMS">
+            <a class="a-btn" href="/design-system/updating-this-website?page=Alerts" title="Edit this page in Netlify CMS">
                 <span class="a-btn_text">Edit page</span>
                 <span class="a-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__edit" viewbox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.111 1.111 0 0 1 0-1.567l1.8-1.8a1.112 1.112 0 0 1 1.568 0zm7.926 11.565a.456.456 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.294 1.294 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.278 1.278 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a1.962 1.962 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg></span>
             </a>
         </div>
 
     </div>
-</main>
+
 
 
   
@@ -1481,7 +1463,7 @@ always appear below the input field.</p>
                 If you see something wrong or missing,
                 <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
                 If you can’t make those changes yourself,
-                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Notifications%3A+Add+issue+description">file an issue</a>.
+                <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Alerts%3A+Add+issue+description">file an issue</a>.
                 If you have a substantial change to an existing page, or a new standard you want to add,
                 <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
             </small>
@@ -1495,8 +1477,8 @@ always appear below the input field.</p>
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/notifications.md">
-                    <time datetime="2023-11-16 13:52:10 -0500">
-                         1:52:10 PM Nov 16, 2023
+                    <time datetime="2023-11-16 15:35:54 -0500">
+                         3:35:54 PM Nov 16, 2023
                     </time>
                 </a>
             </small>
@@ -1510,5 +1492,7 @@ always appear below the input field.</p>
 
   
 
+</section></section>
+</div></main>
 </body>
 </html>

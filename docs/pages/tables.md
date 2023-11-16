@@ -138,7 +138,7 @@ variation_groups:
           * Padding, label / content: 15px
           * Padding, content / next label: 30px
           * Padding, rule line / first label: 15px
-      - variation_name: Responsive stacked table with header (directory tables)
+      - variation_name: Responsive stacked table with header (directory table)
         variation_description: >-
           The directory table is a variation of the stacked table. At the small
           screen breakpoint, the directory table pattern uses first column data

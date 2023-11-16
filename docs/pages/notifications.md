@@ -3,7 +3,7 @@ layout: variation
 section: components
 status: Released
 variation_groups:
-  - variation_group_name: Alerts
+  - variation_group_name: Form-level alerts
     variations:
       - variation_is_deprecated: false
         variation_name: Information
@@ -141,7 +141,7 @@ variation_groups:
           reassure the user that an action is functioning as intended.
         variation_name: In-progress
     variation_group_description: ""
-  - variation_group_name: Validations
+  - variation_group_name: Field-level alerts
     variations:
       - variation_is_deprecated: false
         variation_name: Success
@@ -190,12 +190,12 @@ variation_groups:
         variation_specs: |-
           * Border: 2 px, Red (#d14124)
           * Icon: 18 px, Red (#d14124)
-    variation_group_description: Validation status messages include success,
-      warning, and error. Validations (icon and message) should always appear
-      below the input field.
+    variation_group_description: Field-level alerts reflect validation status and
+      include success, warning, and error. Field-level alerts (icon and message)
+      should always appear below the input field.
 guidelines: ""
 eyebrow: Components
-title: Alerts and validations
+title: Alerts
 description: Alerts and validations draw a user's attention to a change in the
   status of a form or page. Alerts reflect a user or system action and appear
   below the form title. Validations appear inline with input fields and can
@@ -206,9 +206,9 @@ behavior: >-
   ### Placement
 
 
-  * Alerts should appear below the form title.
+  * Form-level alerts should appear below the form title.
 
-  * Validations (icon and message) should always appear below the input field.
+  * Field-level alerts (icon and validation status message) should always appear below the input field.
 
 
   ### Validation

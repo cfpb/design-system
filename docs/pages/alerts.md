@@ -235,7 +235,6 @@ last_updated: 2020-01-28T15:55:47.394Z
 research: ""
 ---
 
-redirect from:
+redirect_from:
   - /components/notifications
-  - /components/alerts
 ---

@@ -1,7 +1,6 @@
 ---
 layout: variation
 section: components
-status: Released
 variation_groups:
   - variation_group_name: Standard table
     variation_group_description: This is the default style at the large screen
@@ -54,12 +53,6 @@ variation_groups:
           * Avenir Next Bold, 16 px, Black (#101820)
 
           * Background: Gray 5 (#f7f8f9)
-
-          * Border-bottom: 1px, Gray (#5a5d61)
-
-
-          #### Border
-
 
           * Border-bottom: 1px, Gray (#5a5d61)
 
@@ -119,25 +112,7 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_specs: |-
-          ### Default table (small screens)
-
-          #### Border
-
-          * Bottom: 1px, Gray-50 #a2a3a4
-
-          #### Cells
-
-          * Font: 16px Avenir Next Regular Black
-          * Font-color: Black #101820
-          * Labels font: 14px Avenir Next Regular, all caps
-          * Labels font-color: Black #101820
-
-          #### Padding
-
-          * Padding, label / content: 15px
-          * Padding, content / next label: 30px
-          * Padding, rule line / first label: 15px
+        variation_specs: ""
       - variation_name: Responsive stacked table with header (directory table)
         variation_description: >-
           The directory table is a variation of the stacked table. At the small
@@ -181,18 +156,7 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_specs: |-
-          ### Style for directory tables (small screens)
-
-          * Bottom border: 1px, Gray-50 #a2a3a4 on each row
-          * Font: 16px Avenir Next Regular Black
-          * Font-color: Black #101820
-          * Header background color: Gray-05 #f7f8f9
-          * Labels font: 14px Avenir Next Regular, all caps
-          * Labels font-color: Black #101820
-          * Padding, column label/bottom border: 15px
-          * Padding, bottom border/content: 15px
-          * Padding, content / next label: 30px
+        variation_specs: ""
       - variation_name: Responsive table with horizontal scroll
         variation_description: >-
           Use a table with horizontal scroll when the data you’re presenting has
@@ -509,6 +473,21 @@ variation_groups:
               </tbody>
           </table>
     variation_group_name: Variations
+use_cases: >-
+  Tables allow easy organization or comparison of more complex data than a chart
+  or graph. They can be read either vertically (by columns) or horizontally (by
+  rows).
+
+
+  Tables work best when:
+
+  * Presenting sequential data
+
+  * Data being presented requires specific or precise values
+
+  * Individual values are being presented or compared
+
+  * Values across columns or rows require different units of measurement
 guidelines: >-
   As a rule, design tables so that they are easy to read. Label columns
   precisely and include units of measurement where necessary. Organize the data
@@ -538,32 +517,18 @@ guidelines: >-
 
   If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.
 eyebrow: Components
-title: Tables
-description: "Tables allow for the presentation of many data points grouped
-  together in a visual way. They serve a unique purpose of allowing easy
-  organization or comparison of more complex data than a chart or graph. They
-  can be read either vertically (by columns) or horizontally (by rows). "
-use_cases: >-
-  Tables allow easy organization or comparison of more complex data than a chart
-  or graph. They can be read either vertically (by columns) or horizontally (by
-  rows).
-
-
-  Tables work best when:
-
-  * Presenting sequential data
-
-  * Data being presented requires specific or precise values
-
-  * Individual values are being presented or compared
-
-  * Values across columns or rows require different units of measurement
-behavior: ""
 accessibility: Remember to always use headers (that is, `<th>` elements) for all
   data tables to make tabular data accessible.
 related_items: "* [Tables
   variables](https://cfpb.github.io/design-system/development/variables#tables-\
   1)"
 last_updated: 2019-08-30T15:18:28.960Z
+title: Tables
+status: Released
+description: "Tables allow for the presentation of many data points grouped
+  together in a visual way. They serve a unique purpose of allowing easy
+  organization or comparison of more complex data than a chart or graph. They
+  can be read either vertically (by columns) or horizontally (by rows). "
+behavior: ""
 research: ""
 ---

@@ -119,7 +119,7 @@ variation_groups:
           * Background: Gray 10 (#e7e8e9)
           * Avenir Next Regular, 16 px, Dark Gray (#43484e)
       - variation_is_deprecated: false
-        variation_name: Multiple select
+        variation_name: Multiselect
         variation_description: Allows the user to select multiple items from a dropdown
           list of options.
         variation_code_snippet: >-

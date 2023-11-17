@@ -1,6 +1,7 @@
 ---
 layout: variation
 section: components
+status: Released
 variation_groups:
   - variation_group_name: Form-level alerts
     variations:
@@ -146,7 +147,7 @@ variation_groups:
         variation_name: Success
         variation_code_snippet: >
           <div class="m-form-field m-form-field__success">
-              <input class="a-text-input a-text-input__success" type="text" placeholder="Placeholder text" id="form-input-success" aria-describedby="form-input-success_message">
+              <input class="a-text-input a-text-input__success" type="text" placeholder="Input text" id="form-input-success" aria-describedby="form-input-success_message">
               <div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert">
                   {% include icons/approved-round.svg %}
                   <span class="a-form-alert_text">
@@ -164,7 +165,7 @@ variation_groups:
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__warning">
 
-              <input class="a-text-input a-text-input__warning" type="text" placeholder="Placeholder text" id="form-input-warning" aria-describedby="form-input-warning_message">
+              <input class="a-text-input a-text-input__warning" type="text" placeholder="Input text" id="form-input-warning" aria-describedby="form-input-warning_message">
               <div class="a-form-alert a-form-alert__warning" id="form-input-warning_message" role="alert">
                   {% include icons/warning-round.svg %}
                   <span class="a-form-alert_text">
@@ -180,7 +181,7 @@ variation_groups:
         variation_name: Error
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__error">
-              <input class="a-text-input a-text-input__error" type="text" placeholder="Placeholder text" id="form-input-error" aria-describedby="form-input-error_message"><div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert">
+              <input class="a-text-input a-text-input__error" type="text" placeholder="Input text" id="form-input-error" aria-describedby="form-input-error_message"><div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert">
                   {% include icons/error-round.svg %}
                   <span class="a-form-alert_text">
                       This is a field-level alert with an error status.
@@ -192,27 +193,15 @@ variation_groups:
     variation_group_description: Field-level alerts reflect validation status and
       include success, warning, and error. Field-level alerts (icon and message)
       should always appear below the input field.
-use_cases: ""
 guidelines: ""
 eyebrow: Components
-accessibility: >-
-  * For screen reader accessibility, form-level errors should include anchor
-  links to the problem field in question.
-
-  * Place form-level alerts below the form title.
-
-  * In general, use distinct icons, contrasting colors, prominent placement, and text to indicate errors. Don’t rely on just one method, as users can have many different accessibility needs (color blind users, visually impaired users, users with motor control issues, etc.).
-related_items: "* [Notifications
-  variables](https://cfpb.github.io/design-system/development/variables#notific\
-  ations)"
-last_updated: 2020-01-28T15:55:47.394Z
 title: Alerts
-status: Released
 description: Alerts draw a user's attention to a change in the status of a form
   or page. Form-level alerts reflect a user or system action and appear below
   the form title. Field-level alerts appear inline with input fields and can
   highlight successful submissions, errors that need to be corrected, or details
   to know before submitting a form.
+use_cases: ""
 behavior: >-
   ### Placement
 
@@ -232,6 +221,17 @@ behavior: >-
 
 
   In general, the best practice for server-side validation is to mark errors with both form-level and field-level errors.
+accessibility: >-
+  * For screen reader accessibility, form-level errors should include anchor
+  links to the problem field in question.
+
+  * Place form-level alerts below the form title.
+
+  * In general, use distinct icons, contrasting colors, prominent placement, and text to indicate errors. Don’t rely on just one method, as users can have many different accessibility needs (color blind users, visually impaired users, users with motor control issues, etc.).
+related_items: "* [Notifications
+  variables](https://cfpb.github.io/design-system/development/variables#notific\
+  ations)"
+last_updated: 2020-01-28T15:55:47.394Z
 research: ""
 ---
 

@@ -32,4 +32,13 @@ variation_groups:
           8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455
           9.716z"></path></svg></label></button></li></ul>
     variation_group_name: Types
+behavior: |-
+  
+
+  * To clear a selection, click the “x” icon inside of the filter tag.
+related_items: >-
+  *
+  [Multiselect](https://cfpb.github.io/design-system/components/selects#multiselect)[](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels)
+
+  * [Filterable list control panels](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels)
 ---

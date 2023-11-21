@@ -6501,96 +6501,58 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                 
 
                 
-                    'variation_name1': 'Single-line text inputs',
-                    'variation_description1': "Use to input single lines of text, for example email addresses, names, or search queries. The length of the input field should be proportional to the expected user input, so that the user can see what they’ve typed without having to scroll to reveal hidden content. See the guidelines section below for more information.\n",
+                    'variation_name1': 'Text inputs',
+                    'variation_description1': "Use when the expected user input is a single line of text, for example email addresses, names, or search queries. The length of the input field should be proportional to the expected user input, so that the user can see what they’ve typed without having to scroll to reveal hidden content.\n",
                     'variation_code_snippet1': `&lt;!--States are shown for demonstration purposes only--&gt;
-&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-default&quot;&gt;
-Default
-&lt;/label&gt;
+&lt;h4&gt;
+States
+&lt;/h4&gt;
 &lt;input class=&quot;a-text-input&quot;
       type=&quot;text&quot;
       id=&quot;textinput-example-default&quot;
-      placeholder=&quot;Placeholder text&quot;&gt;
+      placeholder=&quot;Placeholder text&quot;
+value=&quot;Default&quot;&gt;
 &lt;br&gt;&lt;br&gt;
-&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-hover&quot;&gt;
-Hover
-&lt;/label&gt;
 &lt;input class=&quot;a-text-input hover&quot;
        type=&quot;text&quot;
        id=&quot;textinput-example-hover&quot;
        placeholder=&quot;Placeholder text&quot;
-       value=&quot;Input text&quot;&gt;
+       value=&quot;Hover&quot;&gt;
 &lt;br&gt;&lt;br&gt;
-&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-focus&quot;&gt;
-Focus
-&lt;/label&gt;
 &lt;input class=&quot;a-text-input focus&quot;
        type=&quot;text&quot;
        id=&quot;textinput-example-focus&quot;
        placeholder=&quot;Placeholder text&quot;
-       value=&quot;Input text&quot;&gt;
+       value=&quot;Focus&quot;&gt;
 &lt;br&gt;&lt;br&gt;
-&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textinput-example-disabled&quot;&gt;
-Disabled
-&lt;/label&gt;
 &lt;input class=&quot;a-text-input&quot;
        type=&quot;text&quot;
        id=&quot;textinput-example-disabled&quot;
-       placeholder=&quot;Placeholder text&quot;
+       placeholder=&quot;Disabled&quot;
        disabled&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;h4&gt;
+Status
+&lt;/h4&gt;
+&lt;input class=&quot;a-text-input a-text-input__success&quot; type=&quot;text&quot; placeholder=&quot;Success&quot; id=&quot;form-input-success&quot; aria-describedby=&quot;form-input-success_message&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+ &lt;input class=&quot;a-text-input a-text-input__warning&quot; type=&quot;text&quot; placeholder=&quot;Warning&quot; id=&quot;form-input-warning&quot; aria-describedby=&quot;form-input-warning_message&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;input class=&quot;a-text-input a-text-input__error&quot; type=&quot;text&quot; placeholder=&quot;Error&quot; id=&quot;form-input-error&quot; aria-describedby=&quot;form-input-error_message&quot;&gt;
 `,
                 
-                    'variation_name2': 'Multi-line text area inputs',
-                    'variation_description2': "Use for long-form answers that are more than a single word or two. Make sure the input size is big enough that the user can see what they’ve typed without having to scroll to reveal hidden content, and small enough that the user doesn’t have  to navigate the viewport in order to see the entire field at once.\n",
-                    'variation_code_snippet2': `&lt;label class=&quot;a-label a-label__heading&quot; for=&quot;textarea-example-default&quot;&gt;
-    Label
-&lt;/label&gt;
-&lt;textarea class=&quot;a-text-input&quot;
-          id=&quot;textarea-example-default&quot;
-          placeholder=&quot;Placeholder text&quot;&gt;Input text&lt;/textarea&gt;`,
-                
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Full-width text inputs',
-                    'variation_description1': "\n",
-                    'variation_code_snippet1': `&lt;div class=&quot;m-form-field&quot;&gt;
-    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;full-textinput-example&quot;&gt;
-        Label
-    &lt;/label&gt;
+                    'variation_name2': 'Text input (full width)',
+                    'variation_description2': "\n",
+                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;input class=&quot;a-text-input a-text-input__full&quot;
           type=&quot;text&quot;
           id=&quot;full-textinput-example&quot;
           value=&quot;Input text&quot;&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name2': 'Full-width text area inputs',
-                    'variation_description2': "\n",
-                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field&quot;&gt;
-    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;full-textarea-example&quot;&gt;
-        Label
-    &lt;/label&gt;
-    &lt;textarea class=&quot;a-text-input a-text-input__full&quot;
-              id=&quot;full-textarea-example&quot;&gt;Input text&lt;/textarea&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name3': 'Date picker inputs',
-                    'variation_description3': "\n",
-                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field&quot;&gt;
-    &lt;label class=&quot;a-label a-label__heading&quot; for=&quot;datepicker-example&quot;&gt;
-        Label
-    &lt;/label&gt;
-    &lt;input class=&quot;a-text-input&quot;
-          type=&quot;date&quot;
-          id=&quot;datepicker-example&quot;
-          placeholder=&quot;mm/dd/yyyy&quot;&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name4': 'Text input with a button',
-                    'variation_description4': "These are used for simple forms where a full filter isn’t necessary.\n",
-                    'variation_code_snippet4': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
+                    'variation_name3': 'Text input (with button)',
+                    'variation_description3': "Use for simple forms where a full filter isn’t necessary.\n",
+                    'variation_code_snippet3': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
     &lt;div class=&quot;o-form__input-w-btn_input-container&quot;&gt;
         &lt;input class=&quot;a-text-input&quot; type=&quot;text&quot; title=&quot;Test input&quot;&gt;
     &lt;/div&gt;
@@ -6599,9 +6561,9 @@ Disabled
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name5': 'Button inside a text input',
-                    'variation_description5': "These offer the user an action to take related to the input, typically to clear the input.\n",
-                    'variation_code_snippet5': `&lt;div class=&quot;m-btn-inside-input&quot;&gt;
+                    'variation_name4': 'Button inside text input',
+                    'variation_description4': "Use to offer the user an action to take related to the input, typically to clear the input.\n",
+                    'variation_code_snippet4': `&lt;div class=&quot;m-btn-inside-input&quot;&gt;
     &lt;input type=&quot;text&quot;
         value=&quot;This is some really long text to make sure that the button doesn&#39;t overlap the content in such a way that this input becomes unusable.&quot;
         title=&quot;Test input&quot;
@@ -6612,9 +6574,9 @@ Disabled
     &lt;/button&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name6': 'Button inside a text input with another button',
-                    'variation_description6': "This example combines both of the previous patterns, creating a typical site search form.\n",
-                    'variation_code_snippet6': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
+                    'variation_name5': 'Button inside text input with another button',
+                    'variation_description5': "This example combines both of the previous patterns, creating a typical site search form.\n",
+                    'variation_code_snippet5': `&lt;div class=&quot;o-form__input-w-btn&quot;&gt;
     &lt;div class=&quot;o-form__input-w-btn_input-container&quot;&gt;
         &lt;div class=&quot;m-btn-inside-input&quot;&gt;
             &lt;input type=&quot;text&quot;
@@ -6633,12 +6595,27 @@ Disabled
 &lt;/div&gt;`,
                 
             
+                // Determine the maximum number of variations present overall.
+                
+
+                
+                    'variation_name1': 'Text area input',
+                    'variation_description1': "Use when the expected user input is more than a few words and could span multiple lines. Make sure the input size is big enough that the user can see what they’ve typed without having to scroll to reveal hidden content, and small enough that the user doesn’t have  to navigate the viewport in order to see the entire field at once.\n",
+                    'variation_code_snippet1': `&lt;textarea class=&quot;a-text-input&quot;
+          id=&quot;textarea-example-default&quot;
+          placeholder=&quot;Placeholder text&quot;&gt;Input text&lt;/textarea&gt;`,
+                
+                    'variation_name2': 'Text area input (full width)',
+                    'variation_description2': "\n    Input text\n\n",
+                    'variation_code_snippet2': ``,
+                
+            
 
 
             'title': 'Text inputs',
-            'description': "Text fields give users the ability to enter text. They can be single-line or multi-line (textarea inputs).\n",
+            'description': "Text inputs allow the user to enter any combination of letters, numbers, or symbols. Text input fields can span single or multiple lines.\n",
             'use_cases': "\n",
-            'guidelines': "Stylistic guidelines\n\nChoose the appropriate width for text input fields so they match the kind of information requested. This makes it easier for users to quickly grasp what’s being asked.\n\nFor example, it’s hard to understand at a glance that a single 1,000 px-wide text field is asking for your phone number or birth date. When possible, be even more explicit with the width by dividing it into known character counts. For instance, social security number should be three characters, then two, then four. Be mindful of not getting too restrictive, however. This approach could work for phone numbers, but only if international numbers are not permitted.\n\nThese types of inputs should always be smaller widths:\n\n\n  Middle initial\n  Date, month, or year\n  State abbreviation\n\n\nContent guidelines\n\nText should be in sentence case.\n\nUse placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see Design System guidance on placeholder text.\n",
+            'guidelines': "Stylistic guidelines\n\nChoose the appropriate width for text input fields so they match the kind of information requested. This makes it easier for users to quickly grasp what’s being asked.\n\nFor example, it’s hard to understand at a glance that a single 1,000 px-wide text field is asking for your phone number or birth date. When possible, be even more explicit with the width by dividing it into known character counts. For instance, social security number should be three characters, then two, then four. Be mindful of not getting too restrictive, however. This approach could work for phone numbers, but only if international numbers are not permitted.\n\nThese types of inputs should always be smaller widths:\n\n\n  Middle initial\n  Date, month, or year\n  State abbreviation\n\n\nContent guidelines\n\nText should be in sentence case. Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see Design System guidance on placeholder text.\n",
             'behavior': "As the screen size gets smaller, break multi-column inputs into a single, stacked column. Fields that are next to each other on a large screen, should stack at smaller screen sizes. When possible, fields should span the entire width of the screen at the smallest screen sizes.\n",
             'accessibility': "Inputs should always be paired with a label for accessibility reasons.\n\nUsers of screen readers use the tab key to move focus from one form control to another. Make sure that tab focus order reflects the way you would like users to navigate through the form. Consider whether tabs should move a user down or across the page.\n",
             'research': "\n",

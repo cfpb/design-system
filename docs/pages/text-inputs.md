@@ -1,9 +1,8 @@
 ---
 layout: variation
 section: components
-status: Released
 variation_groups:
-  - variation_group_name: Text input
+  - variation_group_name: Text inputs
     variations:
       - variation_code_snippet: >
           <!--States are shown for demonstration purposes only-->
@@ -91,7 +90,7 @@ variation_groups:
           #### Error
 
           * Border: 2 px, Red (#d14124)
-        variation_name: Text inputs
+        variation_name: Text input
         variation_description: Use when the expected user input is a single line of
           text, for example email addresses, names, or search queries. The
           length of the input field should be proportional to the expected user
@@ -176,6 +175,7 @@ variation_groups:
               <textarea class="a-text-input a-text-input__full"
                         id="full-textarea-example">Input text</textarea>
           </div>
+use_cases: ""
 guidelines: >-
   ### Stylistic guidelines
 
@@ -201,14 +201,6 @@ guidelines: >-
 
   Text should be in sentence case. Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
 eyebrow: Components
-title: Text inputs
-description: Text inputs allow the user to enter any combination of letters,
-  numbers, or symbols. Text input fields can span single or multiple lines.
-use_cases: ""
-behavior: As the screen size gets smaller, break multi-column inputs into a
-  single, stacked column. Fields that are next to each other on a large screen,
-  should stack at smaller screen sizes. When possible, fields should span the
-  entire width of the screen at the smallest screen sizes.
 accessibility: >-
   Inputs should always be paired with a `label` for accessibility reasons.
 
@@ -218,5 +210,13 @@ related_items: "* [Text input
   variables](https://cfpb.github.io/design-system/development/variables#forms-1\
   )"
 last_updated: 2020-01-28T15:55:47.394Z
+title: Text inputs
+status: Released
+description: Text inputs allow the user to enter any combination of letters,
+  numbers, or symbols. Text input fields can span single or multiple lines.
+behavior: As the screen size gets smaller, break multi-column inputs into a
+  single, stacked column. Fields that are next to each other on a large screen,
+  should stack at smaller screen sizes. When possible, fields should span the
+  entire width of the screen at the smallest screen sizes.
 research: ""
 ---

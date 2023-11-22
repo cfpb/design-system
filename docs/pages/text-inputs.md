@@ -103,6 +103,7 @@ variation_groups:
               <input class="a-text-input a-text-input__full"
                     type="text"
                     id="full-textinput-example"
+                    placeholder="Placeholder text"
                     value="Input text">
           </div>
       - variation_is_deprecated: false
@@ -173,7 +174,8 @@ variation_groups:
         variation_description: |-
           <div class="m-form-field">
               <textarea class="a-text-input a-text-input__full"
-                        id="full-textarea-example">Input text</textarea>
+                        id="full-textarea-example"
+                        placeholder="Placeholder text">Input text</textarea>
           </div>
 use_cases: ""
 guidelines: >-

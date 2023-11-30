@@ -38,7 +38,7 @@ variation_groups:
                   </fieldset>
               </div>
           </form>
-        variation_description: ""
+        variation_description: ''
         variation_name: Fieldset with checkboxes
       - variation_code_snippet: >-
           <form class="o-form">
@@ -61,10 +61,10 @@ variation_groups:
                   </fieldset>
               </div>
           </form>
-        variation_description: ""
+        variation_description: ''
         variation_name: Fieldset with radio buttons
     variation_group_name: Types
-    variation_group_description: ""
+    variation_group_description: ''
   - variation_group_name: Sizes
     variations:
       - variation_name: Large target fieldset with checkboxes
@@ -131,11 +131,11 @@ variation_groups:
                                   </label>
                           </div>
               </fieldset>
-use_cases: ""
-guidelines: ""
+use_cases: ''
+guidelines: ''
 eyebrow: Components
-behavior: ""
-accessibility: ""
+behavior: ''
+accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

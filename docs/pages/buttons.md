@@ -9,7 +9,7 @@ description: Buttons signal actions. They should be used sparingly; each
   should lead users to another page or further information.
 variation_groups:
   - variation_group_name: Types
-    variation_group_description: ""
+    variation_group_description: ''
     variations:
       - variation_code_snippet: >-
           <button class="a-btn" title="Default state">Default state</button>
@@ -22,7 +22,8 @@ variation_groups:
 
 
           <button class="a-btn active" title="Active state">Active state</button>
-        variation_description: Use a primary button for an action that goes to the next
+        variation_description:
+          Use a primary button for an action that goes to the next
           step. Avoid using multiple primary buttons on a single page; there can
           be multiple secondary buttons per page.
         variation_implementation: >-
@@ -146,8 +147,9 @@ variation_groups:
         variation_description: When paired with a primary action, indicate the
           destructive action using a destructive action button link to the right
           of the primary button.
-        variation_specs: "* Destructive action link: Avenir Next Medium, 16px, Mid dark
-          red (#c3381c)"
+        variation_specs:
+          '* Destructive action link: Avenir Next Medium, 16px, Mid dark
+          red (#c3381c)'
       - variation_is_deprecated: false
         variation_name: Full-width button (on x-small screens)
         variation_description: Reduce screen size to see this button in action.
@@ -173,7 +175,8 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Button with icon
-        variation_description: An icon should appear after the text it represents. The
+        variation_description:
+          An icon should appear after the text it represents. The
           only exception is the back button, in which the icon should appear
           before the button’s text. Each icon should be used exclusively and
           consistently for one action. Icons should never be underlined.
@@ -226,7 +229,7 @@ guidelines: >-
   * Use clear, succinct, and informative language.
 
   * Limit the copy length to 22 characters.
-behavior: ""
+behavior: ''
 restrictions:
   - restrictions_do: <button class="a-btn" title="Test button">Short label</button>
     restrictions_do_not: <button class="a-btn" title="Test button">This label is
@@ -248,10 +251,10 @@ restrictions:
           </span>
       </button>
 eyebrow: Components
-accessibility: ""
+accessibility: ''
 related_items: "* [Button
   variables](https://cfpb.github.io/design-system/development/variables#buttons\
   )"
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

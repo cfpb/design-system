@@ -45,13 +45,6 @@ select.o-multiselect {
     }
   }
 
-  // Reverse arrow when search drop-down is open.
-  &.u-active {
-    .o-multiselect_header::after {
-      .u-svg-inline-bg( 'up' );
-    }
-  }
-
   &_search[type='text'] {
     display: block;
 
@@ -90,6 +83,11 @@ select.o-multiselect {
       border-color: @pacific;
       border-width: 2px;
       border-top: 0;
+    }
+
+    // Reverse arrow when search drop-down is open.
+    .o-multiselect_header::after {
+      .u-svg-inline-bg( 'up' );
     }
   }
 

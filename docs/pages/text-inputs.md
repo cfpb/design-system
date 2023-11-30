@@ -91,7 +91,8 @@ variation_groups:
 
           * Border: 2 px, Red (#d14124)
         variation_name: Text input
-        variation_description: Use when the expected user input is a single line of
+        variation_description:
+          Use when the expected user input is a single line of
           text, for example email addresses, names, or search queries. The
           length of the input field should be proportional to the expected user
           input, so that the user can see what they've typed without having to
@@ -120,7 +121,8 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Button inside text input
-        variation_description: Use to offer the user an action to take related to the
+        variation_description:
+          Use to offer the user an action to take related to the
           input, typically to clear the input.
         variation_code_snippet: >-
           <div class="m-btn-inside-input">
@@ -135,7 +137,8 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Button inside text input with another button
-        variation_description: This example combines both of the previous patterns,
+        variation_description:
+          This example combines both of the previous patterns,
           creating a typical site search form.
         variation_code_snippet: >-
           <div class="o-form__input-w-btn">
@@ -155,12 +158,13 @@ variation_groups:
                   <button class="a-btn">Search</button>
               </div>
           </div>
-    variation_group_description: ""
+    variation_group_description: ''
   - variation_group_name: Text area inputs
     variations:
       - variation_is_deprecated: false
         variation_name: Text area input
-        variation_description: Use when the expected user input is more than a few words
+        variation_description:
+          Use when the expected user input is more than a few words
           and could span multiple lines. Make sure the input size is big enough
           that the user can see what they've typed without having to scroll to
           reveal hidden content, and small enough that the user doesn't have  to
@@ -177,7 +181,7 @@ variation_groups:
                         id="full-textarea-example"
                         placeholder="Placeholder text">Input text</textarea>
           </div>
-use_cases: ""
+use_cases: ''
 guidelines: >-
   ### Stylistic guidelines
 
@@ -220,5 +224,5 @@ behavior: As the screen size gets smaller, break multi-column inputs into a
   single, stacked column. Fields that are next to each other on a large screen,
   should stack at smaller screen sizes. When possible, fields should span the
   entire width of the screen at the smallest screen sizes.
-research: ""
+research: ''
 ---

@@ -74,6 +74,11 @@ select.o-multiselect {
   }
 
   &.u-active {
+    // Reverse arrow when search drop-down is open.
+    .o-multiselect_header::after {
+      .u-svg-inline-bg( 'up' );
+    }
+
     .o-multiselect_fieldset {
       margin-top: 0;
       // This needs to match the value set in _bindEvents in Multiselect.js.

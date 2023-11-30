@@ -29,6 +29,7 @@ const KEY_TAB = 'Tab';
 
 // Configuration default
 const DEFAULT_CONFIG = {
+  // TODO: renderTags was added as a workaround for DS icons not rendering correctly when integrating with a React implementation.
   renderTags: true, // Allow the Multiselect to generate the Tag elements in the DOM
   maxSelections: MAX_SELECTIONS, // Maximum number of options a user can select
 };

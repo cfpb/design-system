@@ -103,9 +103,10 @@ function setInitFlag(element) {
  * @param {Function} Constructor - A constructor function.
  * @param {HTMLElement} [scope] - A dom node in which to query the selector.
  *   If not supplied, it defaults to the `document`.
+ * @param {object} config - Configuration will be provided to the Constructor's init()
  * @returns {Array} List of instances that were instantiated.
  */
-function instantiateAll(selector, Constructor, scope) {
+function instantiateAll(selector, Constructor, scope, config = {}) {
   const base = scope || document;
   const elements = base.querySelectorAll(selector);
   const insts = [];
@@ -115,7 +116,7 @@ function instantiateAll(selector, Constructor, scope) {
     element = elements[i];
     if (contains(element, INIT_FLAG) === false) {
       inst = new Constructor(element);
-      inst.init();
+      inst.init(config);
       insts.push(inst);
     }
   }

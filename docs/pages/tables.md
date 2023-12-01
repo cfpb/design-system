@@ -65,7 +65,7 @@ variation_groups:
           * Border-bottom: 1px, Gray (#5a5d61)
 
           * Padding: 10px
-        variation_implementation: ""
+        variation_implementation: ''
   - variation_group_name: Responsive tables
     variation_group_description: >-
       Responsive tables fall into two main types: stacked, which stacks
@@ -112,7 +112,7 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Responsive stacked table with header (directory table)
         variation_description: >-
           The directory table is a variation of the stacked table. At the small
@@ -156,7 +156,7 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Responsive table with horizontal scroll
         variation_description: >-
           Use a table with horizontal scroll when the data you’re presenting has
@@ -300,7 +300,7 @@ variation_groups:
 
           Left-align columns of numbers when they're nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).
         variation_name: Right-aligned table
-        variation_specs: "* Alternate row background: Grey-05 #F8F8F8"
+        variation_specs: '* Alternate row background: Grey-05 #F8F8F8'
       - variation_code_snippet: |-
           <table class="o-table">
               <thead>
@@ -525,10 +525,10 @@ related_items: "* [Tables
 last_updated: 2019-08-30T15:18:28.960Z
 title: Tables
 status: Released
-description: "Tables allow for the presentation of many data points grouped
+description: 'Tables allow for the presentation of many data points grouped
   together in a visual way. They serve a unique purpose of allowing easy
   organization or comparison of more complex data than a chart or graph. They
-  can be read either vertically (by columns) or horizontally (by rows). "
-behavior: ""
-research: ""
+  can be read either vertically (by columns) or horizontally (by rows). '
+behavior: ''
+research: ''
 ---

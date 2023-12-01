@@ -5,7 +5,7 @@ import {
   isMobileUserAgent,
   instantiateAll,
 } from '@cfpb/cfpb-atomic-component';
-import MultiselectModel from './MultiselectModel.js';
+import MultiselectModel, { MAX_SELECTIONS } from './MultiselectModel.js';
 import { create } from './MultiselectUtils.js';
 
 import * as closeIconSrc from '@cfpb/cfpb-icons/src/icons/error.svg';
@@ -26,6 +26,13 @@ const KEY_ESCAPE = 'Escape';
 const KEY_UP = 'ArrowUp';
 const KEY_DOWN = 'ArrowDown';
 const KEY_TAB = 'Tab';
+
+// Configuration default
+const DEFAULT_CONFIG = {
+  // TODO: renderTags was added as a workaround for DS icons not rendering correctly when integrating with a React implementation.
+  renderTags: true, // Allow the Multiselect to generate the Tag elements in the DOM
+  maxSelections: MAX_SELECTIONS, // Maximum number of options a user can select
+};
 
 /**
  * Multiselect
@@ -49,6 +56,7 @@ function Multiselect(element) {
   let _placeholder;
   let _model;
   let _options;
+  let _config; // Multiselect configuration object
 
   // Markup elems, convert this to templating engine in the future.
   let _containerDom;
@@ -285,10 +293,13 @@ function Multiselect(element) {
         const dataOptionSel = '[data-option="' + option.value + '"]';
         const _selectionsItemDom = _selectionsDom.querySelector(dataOptionSel);
 
-        if (typeof _selectionsItemDom !== 'undefined') {
-          _selectionsDom.removeChild(_selectionsItemDom);
+        // If the <Tag> exists
+        if (typeof _selectionsItemDom !== 'undefined' && _selectionsItemDom) {
+          _selectionsDom?.removeChild(_selectionsItemDom);
         }
-      } else {
+      }
+      // Else, if we are configured to display <Tag>s then render them
+      else if (_config?.renderTags && _selectionsDom) {
         _createSelectedItem(_selectionsDom, option);
       }
       _model.toggleOption(optionIndex);
@@ -512,7 +523,8 @@ function Multiselect(element) {
 
       _optionItemDoms.push(optionsItemDom);
 
-      if (isChecked) {
+      // Create <Tag> if enabled
+      if (isChecked && _config?.renderTags) {
         _createSelectedItem(_selectionsDom, option);
       }
     }
@@ -527,9 +539,10 @@ function Multiselect(element) {
 
   /**
    * Set up and create the multiselect.
+   * @param {object} multiselectConfig - Multiselect configuration options
    * @returns {Multiselect} An instance.
    */
-  function init() {
+  function init(multiselectConfig = DEFAULT_CONFIG) {
     if (!setInitFlag(_dom)) {
       return this;
     }
@@ -543,8 +556,12 @@ function Multiselect(element) {
     _placeholder = _dom.getAttribute('placeholder');
     _options = _dom.options || [];
 
+    // Allow devs to pass the config settings they want and not worry about the rest
+    _config = { ...DEFAULT_CONFIG, ...multiselectConfig };
+
     if (_options.length > 0) {
-      _model = new MultiselectModel(_options, _name).init();
+      // Store underlying model so we can expose it externally
+      _model = new MultiselectModel(_options, _name, _config).init();
       const newDom = _populateMarkup();
 
       /* Removes <select> element,
@@ -562,6 +579,14 @@ function Multiselect(element) {
     return this;
   }
 
+  /**
+   * Allow external access to the underlying model for integration/customization when used in other applications.
+   * @returns {object} Model
+   */
+  function getModel() {
+    return _model;
+  }
+
   // Attach public events.
   this.init = init;
   this.expand = expand;
@@ -571,11 +596,16 @@ function Multiselect(element) {
   this.addEventListener = eventObserver.addEventListener;
   this.removeEventListener = eventObserver.removeEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
+  this.getModel = getModel;
+  this.updateSelections = _updateSelections;
+  this.selectionClickHandler = _selectionClickHandler;
+  this.selectionKeyDownHandler = _selectionKeyDownHandler;
 
   return this;
 }
 
 Multiselect.BASE_CLASS = BASE_CLASS;
-Multiselect.init = () => instantiateAll(`.${BASE_CLASS}`, Multiselect);
+Multiselect.init = (config) =>
+  instantiateAll(`.${BASE_CLASS}`, Multiselect, undefined, config);
 
 export { Multiselect };

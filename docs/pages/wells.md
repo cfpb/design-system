@@ -18,7 +18,7 @@ variation_groups:
           </ul>
 
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Well
         variation_specs: >-
           * Border: 1px, Gray 40 (#b4b5b6)
@@ -49,7 +49,8 @@ variation_groups:
                   cu. <a href="#">Example link</a>.
               </p>
           </div>
-        variation_description: T﻿he inkwell was originally developed for use on the
+        variation_description:
+          T﻿he inkwell was originally developed for use on the
           cf.gov home page, but was not implemented.
         variation_name: Inkwell
         variation_is_deprecated: true
@@ -87,8 +88,8 @@ use_cases: >-
   Ideally, content within a well should not take up more than a third of page content.
 behavior: Wells are full width. At breakpoints 600px and under there are slight
   padding adjustments to maximize real estate on smaller displays.
-accessibility: ""
-related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"
+accessibility: ''
+related_items: '* [Featured content module](/design-system/patterns/featured-content-module)'
 last_updated: 2019-10-21T20:38:39.851Z
-research: ""
+research: ''
 ---

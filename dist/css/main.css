@@ -4449,9 +4449,6 @@ select.o-multiselect option {
   content: '';
   pointer-events: none;
 }
-.o-multiselect.u-active .o-multiselect_header::after {
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__up%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M15.3%2015.32a1.026%201.026%200%200%201-.727-.302L8.5%208.946l-6.073%206.072a1.03%201.03%200%200%201-1.456-1.455l6.801-6.8a1.03%201.03%200%200%201%201.456%200l6.8%206.8a1.03%201.03%200%200%201-.727%201.757z%22/%3E%3C/svg%3E');
-}
 .o-multiselect_search[type='text'] {
   display: block;
   box-sizing: border-box;
@@ -4478,6 +4475,9 @@ select.o-multiselect option {
   border-color: #0072ce;
   border-width: 2px;
   border-top: 0;
+}
+.o-multiselect.u-active .o-multiselect_header::after {
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__up%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M15.3%2015.32a1.026%201.026%200%200%201-.727-.302L8.5%208.946l-6.073%206.072a1.03%201.03%200%200%201-1.456-1.455l6.801-6.8a1.03%201.03%200%200%201%201.456%200l6.8%206.8a1.03%201.03%200%200%201-.727%201.757z%22/%3E%3C/svg%3E');
 }
 .o-multiselect_options {
   list-style-type: none;
@@ -4509,7 +4509,7 @@ select.o-multiselect option {
   pointer-events: none;
 }
 .o-multiselect_options.u-max-selections::after {
-  content: 'Reached maximum of five selections';
+  content: 'Reached maximum number of selections';
 }
 .o-multiselect_options .a-label {
   box-sizing: border-box;

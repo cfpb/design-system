@@ -935,9 +935,10 @@ function setInitFlag(element) {
  * @param {Function} Constructor - A constructor function.
  * @param {HTMLElement} [scope] - A dom node in which to query the selector.
  *   If not supplied, it defaults to the `document`.
+ * @param {object} config - Configuration will be provided to the Constructor's init()
  * @returns {Array} List of instances that were instantiated.
  */
-function instantiateAll(selector, Constructor, scope) {
+function instantiateAll(selector, Constructor, scope, config = {}) {
   const base = scope || document;
   const elements = base.querySelectorAll(selector);
   const insts = [];
@@ -947,7 +948,7 @@ function instantiateAll(selector, Constructor, scope) {
     element = elements[i];
     if ((0,_data_hook_js__WEBPACK_IMPORTED_MODULE_0__.contains)(element, INIT_FLAG) === false) {
       inst = new Constructor(element);
-      inst.init();
+      inst.init(config);
       insts.push(inst);
     }
   }
@@ -3371,6 +3372,13 @@ const KEY_UP = 'ArrowUp';
 const KEY_DOWN = 'ArrowDown';
 const KEY_TAB = 'Tab';
 
+// Configuration default
+const DEFAULT_CONFIG = {
+  // TODO: renderTags was added as a workaround for DS icons not rendering correctly when integrating with a React implementation.
+  renderTags: true, // Allow the Multiselect to generate the Tag elements in the DOM
+  maxSelections: _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__.MAX_SELECTIONS, // Maximum number of options a user can select
+};
+
 /**
  * Multiselect
  * @class
@@ -3393,6 +3401,7 @@ function Multiselect(element) {
   let _placeholder;
   let _model;
   let _options;
+  let _config; // Multiselect configuration object
 
   // Markup elems, convert this to templating engine in the future.
   let _containerDom;
@@ -3629,10 +3638,13 @@ function Multiselect(element) {
         const dataOptionSel = '[data-option="' + option.value + '"]';
         const _selectionsItemDom = _selectionsDom.querySelector(dataOptionSel);
 
-        if (typeof _selectionsItemDom !== 'undefined') {
-          _selectionsDom.removeChild(_selectionsItemDom);
+        // If the <Tag> exists
+        if (typeof _selectionsItemDom !== 'undefined' && _selectionsItemDom) {
+          _selectionsDom?.removeChild(_selectionsItemDom);
         }
-      } else {
+      }
+      // Else, if we are configured to display <Tag>s then render them
+      else if (_config?.renderTags && _selectionsDom) {
         _createSelectedItem(_selectionsDom, option);
       }
       _model.toggleOption(optionIndex);
@@ -3856,7 +3868,8 @@ function Multiselect(element) {
 
       _optionItemDoms.push(optionsItemDom);
 
-      if (isChecked) {
+      // Create <Tag> if enabled
+      if (isChecked && _config?.renderTags) {
         _createSelectedItem(_selectionsDom, option);
       }
     }
@@ -3871,9 +3884,10 @@ function Multiselect(element) {
 
   /**
    * Set up and create the multiselect.
+   * @param {object} multiselectConfig - Multiselect configuration options
    * @returns {Multiselect} An instance.
    */
-  function init() {
+  function init(multiselectConfig = DEFAULT_CONFIG) {
     if (!(0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.setInitFlag)(_dom)) {
       return this;
     }
@@ -3887,8 +3901,12 @@ function Multiselect(element) {
     _placeholder = _dom.getAttribute('placeholder');
     _options = _dom.options || [];
 
+    // Allow devs to pass the config settings they want and not worry about the rest
+    _config = { ...DEFAULT_CONFIG, ...multiselectConfig };
+
     if (_options.length > 0) {
-      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__["default"](_options, _name).init();
+      // Store underlying model so we can expose it externally
+      _model = new _MultiselectModel_js__WEBPACK_IMPORTED_MODULE_1__["default"](_options, _name, _config).init();
       const newDom = _populateMarkup();
 
       /* Removes <select> element,
@@ -3906,6 +3924,14 @@ function Multiselect(element) {
     return this;
   }
 
+  /**
+   * Allow external access to the underlying model for integration/customization when used in other applications.
+   * @returns {object} Model
+   */
+  function getModel() {
+    return _model;
+  }
+
   // Attach public events.
   this.init = init;
   this.expand = expand;
@@ -3915,12 +3941,17 @@ function Multiselect(element) {
   this.addEventListener = eventObserver.addEventListener;
   this.removeEventListener = eventObserver.removeEventListener;
   this.dispatchEvent = eventObserver.dispatchEvent;
+  this.getModel = getModel;
+  this.updateSelections = _updateSelections;
+  this.selectionClickHandler = _selectionClickHandler;
+  this.selectionKeyDownHandler = _selectionKeyDownHandler;
 
   return this;
 }
 
 Multiselect.BASE_CLASS = BASE_CLASS;
-Multiselect.init = () => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${BASE_CLASS}`, Multiselect);
+Multiselect.init = (config) =>
+  (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE_0__.instantiateAll)(`.${BASE_CLASS}`, Multiselect, undefined, config);
 
 
 
@@ -3935,6 +3966,9 @@ Multiselect.init = () => (0,_cfpb_cfpb_atomic_component__WEBPACK_IMPORTED_MODULE
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MAX_SELECTIONS: function() { return /* binding */ MAX_SELECTIONS; }
+/* harmony export */ });
 // Undefined return value for void methods.
 let UNDEFINED;
 
@@ -3966,10 +4000,13 @@ function stringMatch(x, y) {
  * @param {HTMLOptionsCollection} options -
  *   Set of options from a <select> element.
  * @param {string} name - a unique name for this multiselect.
+ * @param {object} config - Customization of Multiselect behavior
  */
-function MultiselectModel(options, name) {
+function MultiselectModel(options, name, config) {
   const _options = options;
   const _name = name;
+  const _max = config?.maxSelections || MAX_SELECTIONS;
+
   let _optionsData = [];
 
   let _selectedIndices = [];
@@ -3996,7 +4033,7 @@ function MultiselectModel(options, name) {
    *   True if the maximum number of options are checked, false otherwise.
    */
   function isAtMaxSelections() {
-    return _selectedIndices.length === MAX_SELECTIONS;
+    return _selectedIndices.length >= _max;
   }
 
   /**
@@ -4045,10 +4082,7 @@ function MultiselectModel(options, name) {
   function toggleOption(index) {
     _optionsData[index].checked = !_optionsData[index].checked;
 
-    if (
-      _selectedIndices.length < MAX_SELECTIONS &&
-      _optionsData[index].checked
-    ) {
+    if (_selectedIndices.length < _max && _optionsData[index].checked) {
       _selectedIndices.push(index);
       _selectedIndices.sort();
 

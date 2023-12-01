@@ -49,14 +49,15 @@
 
 /* Small tablet (600px) */
 @media only screen and (min-width: 37.5em) {
-  th {
-    width: unit((70px / @base-font-size-px), em);
-  }
   .swatches {
     .grid_nested-col-group();
   }
   .swatch {
     .grid_column( 6 );
+
+    th {
+      width: unit((70px / @base-font-size-px), em);
+    }
   }
 }
 

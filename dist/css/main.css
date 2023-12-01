@@ -4028,7 +4028,7 @@ h6 + .a-legend,
   right: 0;
   bottom: 0;
   background-color: #e7e8e9;
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302%22/%3E%3C/svg%3E');
   background-size: auto 1.1875em;
   background-repeat: no-repeat;
   background-position: center center;
@@ -4036,7 +4036,7 @@ h6 + .a-legend,
   pointer-events: none;
 }
 .a-select__disabled::after {
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302%22/%3E%3C/svg%3E');
 }
 .a-text-input {
   -webkit-appearance: none;
@@ -4441,7 +4441,7 @@ select.o-multiselect option {
   right: 0;
   bottom: 0;
   background-color: #e7e8e9;
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302%22/%3E%3C/svg%3E');
   background-size: auto 1.1875em;
   background-repeat: no-repeat;
   background-position: center center;
@@ -5128,7 +5128,7 @@ details summary::after {
   height: 10px;
   display: block;
   content: '';
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302z%22/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__down%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M8.5%2015.313a1.026%201.026%200%200%201-.728-.302l-6.8-6.8a1.03%201.03%200%200%201%201.455-1.456L8.5%2012.828l6.073-6.073a1.03%201.03%200%200%201%201.455%201.456l-6.8%206.8a1.026%201.026%200%200%201-.728.302%22/%3E%3C/svg%3E');
 }
 details[open] summary::after {
   background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__up%22%20viewBox=%220%200%2017%2019%22%3E%3Cpath%20d=%22M15.3%2015.32a1.026%201.026%200%200%201-.727-.302L8.5%208.946l-6.073%206.072a1.03%201.03%200%200%201-1.456-1.455l6.801-6.8a1.03%201.03%200%200%201%201.456%200l6.8%206.8a1.03%201.03%200%200%201-.727%201.757z%22/%3E%3C/svg%3E');

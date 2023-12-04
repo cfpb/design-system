@@ -6699,9 +6699,6 @@ table {
 /* Make swatch tables multi column at appropriate widths */
 /* Small tablet (600px) */
 @media only screen and (min-width: 37.5em) {
-  th {
-    width: 4.375em;
-  }
   .swatches {
     display: block;
     position: relative;
@@ -6716,6 +6713,9 @@ table {
     margin-right: -0.25em;
     vertical-align: top;
     width: 50%;
+  }
+  .swatch th {
+    width: 4.375em;
   }
 }
 /* Landscape tablet/netbook/laptop (1024px) */

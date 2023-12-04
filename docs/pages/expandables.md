@@ -204,34 +204,7 @@ variation_groups:
               </div>
           </div>
         variation_name: Expandable group
-        variation_specs: >-
-          When expandable sections are used in a group, they are stacked
-          vertically, with each row sharing its top or bottom stroke with the
-          adjacent row. In this use case, expandables have no background color
-          of their own, but match whatever color they are used on (this would
-          typically be a white page or 5% gray well). Title text should be
-          consistent across a group of expandables.
-
-
-          #### Specifications
-
-
-          * 60% gray 1px strokes. All sides on individual, or top and bottom for grouping.
-
-          * Optional 5% gray or white background for individual expandable.
-
-          * 10px top and bottom padding.
-
-          * 15px left and right padding.
-
-          * 15px padding between title and minicon with label.
-
-          * Avenir paragraph (medium) or H4 title text.
-
-          * Pacific blue minicon and label.
-
-
-          ![Image showing vertical and horizontal padding within expandable elements](/design-system/images/uploads/expandables-spec.png)
+        variation_specs: ""
         variation_description: >
           In the default mode, users are able to have multiple sections of an
           expandable group expanded at the same time, which allows users to

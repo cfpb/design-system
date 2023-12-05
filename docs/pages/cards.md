@@ -441,33 +441,33 @@ variation_groups:
         variation_code_snippet: >-
           <div class="o-card-group o-card-group__count-2">
               <div class="o-card-group_cards">
-                  <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                  <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Protecting your finances during the coronavirus emergency
-                        </h3>
-                        <p>
-                            We are committed to providing up-to-date information and resources.
-                            Learn more about protecting and managing your finances during this difficult time.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We are committed to providing up-to-date information and resources.
+                        Learn more about protecting and managing your finances during this difficult time.
+                    </p>
+                    <div class="m-card_footer">
+                        <span>Read more</span>
+                    </div>
                 </article>
 
-                 <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                 <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Striving for equity
-                        </h3>
-                        <p>
-                            We’re working to build a stronger nation by advancing racial and economic equality for all.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We’re working to build a stronger nation by advancing racial and economic equality for all.
+                    </p>
+                    <div class="m-card_footer">
+                        <span>Read more</span>
+                    </div>
                 </article>
               </div>
           </div>
@@ -478,47 +478,47 @@ variation_groups:
         variation_code_snippet: >-
           <div class="o-card-group o-card-group__count-3">
               <div class="o-card-group_cards">
-                  <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                  <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Protecting your finances during the coronavirus emergency
-                        </h3>
-                        <p>
-                            We are committed to providing up-to-date information and resources.
-                            Learn more about protecting and managing your finances during this difficult time.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We are committed to providing up-to-date information and resources.
+                        Learn more about protecting and managing your finances during this difficult time.
+                    </p>
+                    <div class="m-card_footer">
+                        <span>Read more</span>
+                    </div>
                 </article>
 
-                 <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                 <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Striving for equity
-                        </h3>
-                        <p>
-                            We’re working to build a stronger nation by advancing racial and economic equality for all.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We’re working to build a stronger nation by advancing racial and economic equality for all.
+                    </p>
+                    <div class="m-card_footer">
+                        <span>Read more</span>
+                    </div>
                 </article>
 
-                 <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                 <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Rental assistance helps renters and landlords make ends meet
-                        </h3>
-                        <p>
-                            State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
+                    </p>
+                    <div class="m-card_footer">
+                        <span>Read more</span>
+                    </div>
                 </article>
               </div>
           </div>
@@ -529,62 +529,62 @@ variation_groups:
         variation_code_snippet: >-
           <div class="o-card-group o-card-group__count-4">
               <div class="o-card-group_cards">
-                <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Protecting your finances during the coronavirus emergency
-                        </h3>
-                        <p>
-                            We are committed to providing up-to-date information and resources.
-                            Learn more about protecting and managing your finances during this difficult time.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We are committed to providing up-to-date information and resources.
+                        Learn more about protecting and managing your finances during this difficult time.
+                    </p>
+                    <div class="m-card_footer">
+                        <span>Read more</span>
+                    </div>
                  </article>
 
-                 <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                 <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Striving for equity
-                        </h3>
-                        <p>
-                            We’re working to build a stronger nation by advancing racial and economic equality for all.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We’re working to build a stronger nation by advancing racial and economic equality for all.
+                    </p>
+                    <div class="m-card_footer">
+                        <span>Read more</span>
+                    </div>
                 </article>
 
-                 <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
-                            Rental assistance helps renters and landlords make ends meet
-                        </h3>
-                        <p>
-                            State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                 <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
+                           Rental assistance helps renters and landlords make ends meet
+                        </a>
+                    </h3>
+                    <p>
+                        State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
+                    </p>
+                    <div class="m-card_footer">
+                        <span>Read more</span>
+                    </div>
                 </article>
 
-                <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Protecting your finances during the coronavirus emergency
-                        </h3>
-                        <p>
-                            We are committed to providing up-to-date information and resources.
-                            Learn more about protecting and managing your finances during this difficult time.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We are committed to providing up-to-date information and resources.
+                        Learn more about protecting and managing your finances during this difficult time.
+                    </p>
+                    <div class="m-card_footer">
+                        <span>Read more</span>
+                    </div>
                 </article>
               </div>
           </div>

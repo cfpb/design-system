@@ -1,4 +1,27 @@
 
+## v0.34.0 (2023-12-05)
+
+#### Breaking Change
+* `cfpb-layout`
+  * [#1850](https://github.com/cfpb/design-system/pull/1850) Removed highlight and featured cards ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`, `cfpb-forms`
+  * [#1801](https://github.com/cfpb/design-system/pull/1801) Multiselect: Enable configuration at instantiation ([@meissadia](https://github.com/meissadia))
+
+#### Enhancement
+* Other
+  * [#1856](https://github.com/cfpb/design-system/pull/1856) Update eslint, eslint-config-prettier, postcss ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-icons`
+  * [#1847](https://github.com/cfpb/design-system/pull/1847) Update dependencies: babel/core, babel/preset-env, babel/preset-react, concurrently, eslint, eslint-plugin-import, eslint-plugin-jsdoc, eslint-plugin-jsx-a11y, prettier, stylelint, svgo, webpack ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 5
+- Andy Chosak ([@chosak](https://github.com/chosak))
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Meis ([@meissadia](https://github.com/meissadia))
+- Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
+- [@jenn-franklin](https://github.com/jenn-franklin)
+
+
+
 ## v0.33.0 (2023-11-07)
 
 #### Breaking Change

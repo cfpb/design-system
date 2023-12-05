@@ -452,7 +452,9 @@ variation_groups:
                         Learn more about protecting and managing your finances during this difficult time.
                     </p>
                     <div class="m-card_footer">
-                        <span>Read more</span>
+                        <a href="#">
+                            Read more
+                        </a>
                     </div>
                 </article>
 
@@ -466,7 +468,9 @@ variation_groups:
                         We’re working to build a stronger nation by advancing racial and economic equality for all.
                     </p>
                     <div class="m-card_footer">
-                        <span>Read more</span>
+                        <a href="#">
+                            Read more
+                        </a>
                     </div>
                 </article>
               </div>
@@ -489,7 +493,9 @@ variation_groups:
                         Learn more about protecting and managing your finances during this difficult time.
                     </p>
                     <div class="m-card_footer">
-                        <span>Read more</span>
+                        <a href="#">
+                            Read more
+                        </a>
                     </div>
                 </article>
 
@@ -503,7 +509,9 @@ variation_groups:
                         We’re working to build a stronger nation by advancing racial and economic equality for all.
                     </p>
                     <div class="m-card_footer">
-                        <span>Read more</span>
+                        <a href="#">
+                            Read more
+                        </a>
                     </div>
                 </article>
 
@@ -517,7 +525,9 @@ variation_groups:
                         State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
                     </p>
                     <div class="m-card_footer">
-                        <span>Read more</span>
+                        <a href="#">
+                            Read more
+                        </a>
                     </div>
                 </article>
               </div>
@@ -540,7 +550,9 @@ variation_groups:
                         Learn more about protecting and managing your finances during this difficult time.
                     </p>
                     <div class="m-card_footer">
-                        <span>Read more</span>
+                        <a href="#">
+                            Read more
+                        </a>
                     </div>
                  </article>
 
@@ -554,7 +566,9 @@ variation_groups:
                         We’re working to build a stronger nation by advancing racial and economic equality for all.
                     </p>
                     <div class="m-card_footer">
-                        <span>Read more</span>
+                        <a href="#">
+                            Read more
+                        </a>
                     </div>
                 </article>
 
@@ -568,7 +582,9 @@ variation_groups:
                         State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
                     </p>
                     <div class="m-card_footer">
-                        <span>Read more</span>
+                        <a href="#">
+                            Read more
+                        </a>
                     </div>
                 </article>
 
@@ -583,7 +599,9 @@ variation_groups:
                         Learn more about protecting and managing your finances during this difficult time.
                     </p>
                     <div class="m-card_footer">
-                        <span>Read more</span>
+                        <a href="#">
+                            Read more
+                        </a>
                     </div>
                 </article>
               </div>

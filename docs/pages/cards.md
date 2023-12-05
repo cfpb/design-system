@@ -97,6 +97,120 @@ variation_groups:
               </a>
           </article>
   - variations:
+      - variation_name: Topic card group
+        variation_description: A group of topic cards together.
+        variation_code_snippet: |-
+          <div class="o-card-group o-card-group__flow">
+              <h2>Popular money topics</h2>
+              <div class="o-card-group_cards">
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/lightbulb.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Credit reports</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/lightbulb.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Debt collection</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/lightbulb.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Mortgages</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/lightbulb.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Credit cards</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic m-card__topic-action">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/arrow-right-round.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>See all money topics</span>
+                        </div>
+                    </a>
+                </article>
+              </div>
+          </div>
+      - variation_name: Breakout card group
+        variation_description: A group of breakout cards together.
+        variation_code_snippet: |-
+          <div class="o-card-group o-card-group__column-3">
+              <h2>Get help planning for future goals</h2>
+              <div class="o-card-group_cards">
+                  <article class="m-card m-card__breakout">
+                    <a href="#">
+                        <img class="m-card_img"
+                            src="https://dummyimage.com/210x120/"
+                            alt="">
+                        <div class="m-card_inner-wrapper">
+                            <div class="m-card_footer">
+                                <span>
+                                        Buy a house
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                  <article class="m-card m-card__breakout">
+                    <a href="#">
+                        <img class="m-card_img"
+                            src="https://dummyimage.com/210x120/"
+                            alt="">
+                        <div class="m-card_inner-wrapper">
+                            <div class="m-card_footer">
+                                <span>
+                                        Paying for college
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                  <article class="m-card m-card__breakout">
+                    <a href="#">
+                        <img class="m-card_img"
+                            src="https://dummyimage.com/210x120/"
+                            alt="">
+                        <div class="m-card_inner-wrapper">
+                            <div class="m-card_footer">
+                                <span>
+                                        Get an auto loan
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+              </div>
+          </div>
       - variation_name: Card group
         variation_description: A default group of cards together is stacked vertically.
         variation_code_snippet: >-
@@ -603,120 +717,6 @@ variation_groups:
                             Read more
                         </a>
                     </div>
-                </article>
-              </div>
-          </div>
-      - variation_name: Topic card group
-        variation_description: A group of topic cards together.
-        variation_code_snippet: |-
-          <div class="o-card-group o-card-group__flow">
-              <h2>Popular money topics</h2>
-              <div class="o-card-group_cards">
-                  <article class="m-card m-card__topic">
-                    <a href="#">
-                        <div class="m-card_icon">
-                            {% include icons/lightbulb.svg %}
-                        </div>
-                        <div class="m-card_footer">
-                            <span>Credit reports</span>
-                        </div>
-                    </a>
-                  </article>
-
-                  <article class="m-card m-card__topic">
-                    <a href="#">
-                        <div class="m-card_icon">
-                            {% include icons/lightbulb.svg %}
-                        </div>
-                        <div class="m-card_footer">
-                            <span>Debt collection</span>
-                        </div>
-                    </a>
-                  </article>
-
-                  <article class="m-card m-card__topic">
-                    <a href="#">
-                        <div class="m-card_icon">
-                            {% include icons/lightbulb.svg %}
-                        </div>
-                        <div class="m-card_footer">
-                            <span>Mortgages</span>
-                        </div>
-                    </a>
-                  </article>
-
-                  <article class="m-card m-card__topic">
-                    <a href="#">
-                        <div class="m-card_icon">
-                            {% include icons/lightbulb.svg %}
-                        </div>
-                        <div class="m-card_footer">
-                            <span>Credit cards</span>
-                        </div>
-                    </a>
-                  </article>
-
-                  <article class="m-card m-card__topic m-card__topic-action">
-                    <a href="#">
-                        <div class="m-card_icon">
-                            {% include icons/arrow-right-round.svg %}
-                        </div>
-                        <div class="m-card_footer">
-                            <span>See all money topics</span>
-                        </div>
-                    </a>
-                </article>
-              </div>
-          </div>
-      - variation_name: Breakout card group
-        variation_description: A group of breakout cards together.
-        variation_code_snippet: |-
-          <div class="o-card-group o-card-group__column-3">
-              <h2>Get help planning for future goals</h2>
-              <div class="o-card-group_cards">
-                  <article class="m-card m-card__breakout">
-                    <a href="#">
-                        <img class="m-card_img"
-                            src="https://dummyimage.com/210x120/"
-                            alt="">
-                        <div class="m-card_inner-wrapper">
-                            <div class="m-card_footer">
-                                <span>
-                                        Buy a house
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                  <article class="m-card m-card__breakout">
-                    <a href="#">
-                        <img class="m-card_img"
-                            src="https://dummyimage.com/210x120/"
-                            alt="">
-                        <div class="m-card_inner-wrapper">
-                            <div class="m-card_footer">
-                                <span>
-                                        Paying for college
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                  <article class="m-card m-card__breakout">
-                    <a href="#">
-                        <img class="m-card_img"
-                            src="https://dummyimage.com/210x120/"
-                            alt="">
-                        <div class="m-card_inner-wrapper">
-                            <div class="m-card_footer">
-                                <span>
-                                        Get an auto loan
-                                </span>
-                            </div>
-                        </div>
-                    </a>
                 </article>
               </div>
           </div>

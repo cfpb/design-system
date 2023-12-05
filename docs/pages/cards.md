@@ -47,29 +47,6 @@ variation_groups:
               </p>
           </article>
         variation_name: Single card
-      - variation_name: Featured card
-        variation_description: |-
-          A single featured card.
-          The `.m-card__featured` modifier is added.
-          A featured card differs from the default card in that the whole
-          content area is wrapped in a link.
-        variation_code_snippet: |-
-          <article class="m-card m-card__featured">
-              <a href="#">
-                  <h2 class="m-card_heading">
-                      <div class="m-card_icon">
-                          {% include icons/lightbulb.svg %}
-                      </div>
-                  </h2>
-                  <p>
-                      Have a problem with a financial product or service?
-                  </p>
-                  <div class="m-card_footer">
-                      <span>Submit a complaint</span>
-                  </div>
-              </a>
-          </article>
-        variation_is_deprecated: true
       - variation_name: Topic card
         variation_description: |-
           A single topic card.
@@ -100,25 +77,6 @@ variation_groups:
                   </div>
               </a>
           </article>
-      - variation_name: Highlight card
-        variation_description: |-
-          A single highlight card.
-          The `.m-card__highlight` modifier is added.
-        variation_code_snippet: >-
-          <article class="m-card m-card__highlight">
-              <a href="#">
-                  <h3>
-                      Protecting your finances during the coronavirus emergency
-                  </h3>
-                  <p>
-                      We are committed to providing up-to-date information and resources.
-                      Learn more about protecting and managing your finances during this difficult time.
-                  </p>
-                  <div class="m-card_footer">
-                      <span>Read more</span>
-                  </div>
-              </a>
-          </article>
       - variation_name: Breakout card
         variation_description: |-
           A single breakout card.
@@ -139,6 +97,120 @@ variation_groups:
               </a>
           </article>
   - variations:
+      - variation_name: Topic card group
+        variation_description: A group of topic cards together.
+        variation_code_snippet: |-
+          <div class="o-card-group o-card-group__flow">
+              <h2>Popular money topics</h2>
+              <div class="o-card-group_cards">
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/lightbulb.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Credit reports</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/lightbulb.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Debt collection</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/lightbulb.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Mortgages</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/lightbulb.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>Credit cards</span>
+                        </div>
+                    </a>
+                  </article>
+
+                  <article class="m-card m-card__topic m-card__topic-action">
+                    <a href="#">
+                        <div class="m-card_icon">
+                            {% include icons/arrow-right-round.svg %}
+                        </div>
+                        <div class="m-card_footer">
+                            <span>See all money topics</span>
+                        </div>
+                    </a>
+                </article>
+              </div>
+          </div>
+      - variation_name: Breakout card group
+        variation_description: A group of breakout cards together.
+        variation_code_snippet: |-
+          <div class="o-card-group o-card-group__column-3">
+              <h2>Get help planning for future goals</h2>
+              <div class="o-card-group_cards">
+                  <article class="m-card m-card__breakout">
+                    <a href="#">
+                        <img class="m-card_img"
+                            src="https://dummyimage.com/210x120/"
+                            alt="">
+                        <div class="m-card_inner-wrapper">
+                            <div class="m-card_footer">
+                                <span>
+                                        Buy a house
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                  <article class="m-card m-card__breakout">
+                    <a href="#">
+                        <img class="m-card_img"
+                            src="https://dummyimage.com/210x120/"
+                            alt="">
+                        <div class="m-card_inner-wrapper">
+                            <div class="m-card_footer">
+                                <span>
+                                        Paying for college
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                  <article class="m-card m-card__breakout">
+                    <a href="#">
+                        <img class="m-card_img"
+                            src="https://dummyimage.com/210x120/"
+                            alt="">
+                        <div class="m-card_inner-wrapper">
+                            <div class="m-card_footer">
+                                <span>
+                                        Get an auto loan
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+              </div>
+          </div>
       - variation_name: Card group
         variation_description: A default group of cards together is stacked vertically.
         variation_code_snippet: >-
@@ -476,71 +548,6 @@ variation_groups:
                   </article>
               </div>
           </div>
-      - variation_name: Featured card group
-        variation_description: >-
-          A group of featured cards together with a heading and green
-          background.
-
-          The `.o-card-group__bg-green` modifier is added to the group and
-
-          the `.m-card__featured` modifier is added to the cards.
-        variation_code_snippet: >-
-          <div class="o-card-group o-card-group__column-3
-          o-card-group__bg-green">
-              <h2>We want to hear from you</h2>
-              <div class="o-card-group_cards">
-                  <article class="m-card m-card__featured">
-                      <a href="#">
-                          <h2 class="m-card_heading">
-                              <div class="m-card_icon">
-                                  {% include icons/complaint.svg %}
-                              </div>
-                          </h2>
-                          <p>
-                              Have a problem with a financial product or service?
-                          </p>
-                          <div class="m-card_footer">
-                              <span>Submit a complaint</span>
-                          </div>
-                      </a>
-                  </article>
-
-                  <article class="m-card m-card__featured">
-                      <a href="#">
-                          <h2 class="m-card_heading">
-                              <div class="m-card_icon">
-                                  {% include icons/lightbulb.svg %}
-                              </div>
-                          </h2>
-                          <p>
-                              Have a question on a financial topic?
-                              Browse answers to hundreds of financial questions.
-                          </p>
-                          <div class="m-card_footer">
-                              <span>Browse Ask CFPB</span>
-                          </div>
-                      </a>
-                  </article>
-
-                  <article class="m-card m-card__featured">
-                      <a href="#">
-                          <h2 class="m-card_heading">
-                              <div class="m-card_icon">
-                                  {% include icons/open-quote.svg %}
-                              </div>
-                          </h2>
-                          <p>
-                              Tell us your experiences with money
-                              and financial services. The CFPB is listening.
-                          </p>
-                          <div class="m-card_footer">
-                              <span>Tell your story</span>
-                          </div>
-                      </a>
-                  </article>
-              </div>
-          </div>
-        variation_is_deprecated: true
       - variation_name: Card group - two count
         variation_description: |-
           A group of two cards.
@@ -548,33 +555,37 @@ variation_groups:
         variation_code_snippet: >-
           <div class="o-card-group o-card-group__count-2">
               <div class="o-card-group_cards">
-                  <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                  <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Protecting your finances during the coronavirus emergency
-                        </h3>
-                        <p>
-                            We are committed to providing up-to-date information and resources.
-                            Learn more about protecting and managing your finances during this difficult time.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We are committed to providing up-to-date information and resources.
+                        Learn more about protecting and managing your finances during this difficult time.
+                    </p>
+                    <div class="m-card_footer">
+                        <a href="#">
+                            Read more
+                        </a>
+                    </div>
                 </article>
 
-                 <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                 <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Striving for equity
-                        </h3>
-                        <p>
-                            We’re working to build a stronger nation by advancing racial and economic equality for all.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We’re working to build a stronger nation by advancing racial and economic equality for all.
+                    </p>
+                    <div class="m-card_footer">
+                        <a href="#">
+                            Read more
+                        </a>
+                    </div>
                 </article>
               </div>
           </div>
@@ -585,47 +596,53 @@ variation_groups:
         variation_code_snippet: >-
           <div class="o-card-group o-card-group__count-3">
               <div class="o-card-group_cards">
-                  <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                  <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Protecting your finances during the coronavirus emergency
-                        </h3>
-                        <p>
-                            We are committed to providing up-to-date information and resources.
-                            Learn more about protecting and managing your finances during this difficult time.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We are committed to providing up-to-date information and resources.
+                        Learn more about protecting and managing your finances during this difficult time.
+                    </p>
+                    <div class="m-card_footer">
+                        <a href="#">
+                            Read more
+                        </a>
+                    </div>
                 </article>
 
-                 <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                 <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Striving for equity
-                        </h3>
-                        <p>
-                            We’re working to build a stronger nation by advancing racial and economic equality for all.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We’re working to build a stronger nation by advancing racial and economic equality for all.
+                    </p>
+                    <div class="m-card_footer">
+                        <a href="#">
+                            Read more
+                        </a>
+                    </div>
                 </article>
 
-                 <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                 <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Rental assistance helps renters and landlords make ends meet
-                        </h3>
-                        <p>
-                            State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
+                    </p>
+                    <div class="m-card_footer">
+                        <a href="#">
+                            Read more
+                        </a>
+                    </div>
                 </article>
               </div>
           </div>
@@ -636,176 +653,70 @@ variation_groups:
         variation_code_snippet: >-
           <div class="o-card-group o-card-group__count-4">
               <div class="o-card-group_cards">
-                <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Protecting your finances during the coronavirus emergency
-                        </h3>
-                        <p>
-                            We are committed to providing up-to-date information and resources.
-                            Learn more about protecting and managing your finances during this difficult time.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We are committed to providing up-to-date information and resources.
+                        Learn more about protecting and managing your finances during this difficult time.
+                    </p>
+                    <div class="m-card_footer">
+                        <a href="#">
+                            Read more
+                        </a>
+                    </div>
                  </article>
 
-                 <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                 <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Striving for equity
-                        </h3>
-                        <p>
-                            We’re working to build a stronger nation by advancing racial and economic equality for all.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We’re working to build a stronger nation by advancing racial and economic equality for all.
+                    </p>
+                    <div class="m-card_footer">
+                        <a href="#">
+                            Read more
+                        </a>
+                    </div>
                 </article>
 
-                 <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
-                            Rental assistance helps renters and landlords make ends meet
-                        </h3>
-                        <p>
-                            State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
+                 <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
+                           Rental assistance helps renters and landlords make ends meet
+                        </a>
+                    </h3>
+                    <p>
+                        State and local programs are distributing billions of dollars in rental assistance to help renters stay housed during the pandemic.
+                    </p>
+                    <div class="m-card_footer">
+                        <a href="#">
+                            Read more
+                        </a>
+                    </div>
                 </article>
 
-                <article class="m-card m-card__highlight">
-                    <a href="#">
-                        <h3>
+                <article class="m-card">
+                    <h3 class="m-card_heading">
+                        <a href="#">
                             Protecting your finances during the coronavirus emergency
-                        </h3>
-                        <p>
-                            We are committed to providing up-to-date information and resources.
-                            Learn more about protecting and managing your finances during this difficult time.
-                        </p>
-                        <div class="m-card_footer">
-                            <span>Read more</span>
-                        </div>
-                    </a>
-                </article>
-              </div>
-          </div>
-      - variation_name: Topic card group
-        variation_description: A group of topic cards together.
-        variation_code_snippet: |-
-          <div class="o-card-group o-card-group__flow">
-              <h2>Popular money topics</h2>
-              <div class="o-card-group_cards">
-                  <article class="m-card m-card__topic">
-                    <a href="#">
-                        <div class="m-card_icon">
-                            {% include icons/lightbulb.svg %}
-                        </div>
-                        <div class="m-card_footer">
-                            <span>Credit reports</span>
-                        </div>
-                    </a>
-                  </article>
-
-                  <article class="m-card m-card__topic">
-                    <a href="#">
-                        <div class="m-card_icon">
-                            {% include icons/lightbulb.svg %}
-                        </div>
-                        <div class="m-card_footer">
-                            <span>Debt collection</span>
-                        </div>
-                    </a>
-                  </article>
-
-                  <article class="m-card m-card__topic">
-                    <a href="#">
-                        <div class="m-card_icon">
-                            {% include icons/lightbulb.svg %}
-                        </div>
-                        <div class="m-card_footer">
-                            <span>Mortgages</span>
-                        </div>
-                    </a>
-                  </article>
-
-                  <article class="m-card m-card__topic">
-                    <a href="#">
-                        <div class="m-card_icon">
-                            {% include icons/lightbulb.svg %}
-                        </div>
-                        <div class="m-card_footer">
-                            <span>Credit cards</span>
-                        </div>
-                    </a>
-                  </article>
-
-                  <article class="m-card m-card__topic m-card__topic-action">
-                    <a href="#">
-                        <div class="m-card_icon">
-                            {% include icons/arrow-right-round.svg %}
-                        </div>
-                        <div class="m-card_footer">
-                            <span>See all money topics</span>
-                        </div>
-                    </a>
-                </article>
-              </div>
-          </div>
-      - variation_name: Breakout card group
-        variation_description: A group of breakout cards together.
-        variation_code_snippet: |-
-          <div class="o-card-group o-card-group__column-3">
-              <h2>Get help planning for future goals</h2>
-              <div class="o-card-group_cards">
-                  <article class="m-card m-card__breakout">
-                    <a href="#">
-                        <img class="m-card_img"
-                            src="https://dummyimage.com/210x120/"
-                            alt="">
-                        <div class="m-card_inner-wrapper">
-                            <div class="m-card_footer">
-                                <span>
-                                        Buy a house
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                  <article class="m-card m-card__breakout">
-                    <a href="#">
-                        <img class="m-card_img"
-                            src="https://dummyimage.com/210x120/"
-                            alt="">
-                        <div class="m-card_inner-wrapper">
-                            <div class="m-card_footer">
-                                <span>
-                                        Paying for college
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                  <article class="m-card m-card__breakout">
-                    <a href="#">
-                        <img class="m-card_img"
-                            src="https://dummyimage.com/210x120/"
-                            alt="">
-                        <div class="m-card_inner-wrapper">
-                            <div class="m-card_footer">
-                                <span>
-                                        Get an auto loan
-                                </span>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </h3>
+                    <p>
+                        We are committed to providing up-to-date information and resources.
+                        Learn more about protecting and managing your finances during this difficult time.
+                    </p>
+                    <div class="m-card_footer">
+                        <a href="#">
+                            Read more
+                        </a>
+                    </div>
                 </article>
               </div>
           </div>

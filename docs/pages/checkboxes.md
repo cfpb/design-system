@@ -54,63 +54,9 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
               <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
           </div>
-        variation_description: ''
+        variation_description: ""
         variation_name: Standard checkbox
-        variation_specs: >-
-          #### Default checkbox
-
-
-          * Height: 20 px
-
-          * Width: 20 px
-
-          * Margin right: 10 px
-
-          * Border: 1 px, Gray 60 (#919395)
-
-          * Background: White (#ffffff)
-
-          * Avenir Next Regular, 16 px, Black (#101820)
-
-
-          <h3 class="h4">Hover</h3>
-
-
-          * Border: 2 px, Pacific (#0072ce)
-
-
-          #### Focus
-
-
-          * Border: 2 px, Pacific (#0072ce)
-
-          * Outline: Dotted 1px, Pacific (#0072ce)
-
-          * Outline offset: 1px
-
-
-          #### Selected
-
-
-          * Border: 1 px, Gray 60 (#919395)
-
-          * Minicon: 18 px, Black (#101820)
-
-
-          #### Disabled
-
-
-          * Border: 1 px, Gray 60 (#919395)
-
-          * Background: Gray 10 (#e7e8e9)
-
-          * Avenir Next Regular, 16 px, Dark Gray (#43484e)
-
-
-          #### Spacing
-
-
-          Text spacing should inform spacing of checkboxes, and a checkbox should be vertically centered with the first line of text in an option.
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Standard checkbox with helper text
         variation_code_snippet: >-
@@ -125,8 +71,7 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Large target area checkbox
-        variation_description:
-          For better usability, consider using the checkboxes with
+        variation_description: For better usability, consider using the checkboxes with
           large target areas. These are easier to interact with (especially on
           smaller screens) and harder to miss. They are especially desirable
           when the form will have heavy mobile usage. Given the amount of real
@@ -198,64 +143,7 @@ variation_groups:
           </div>
 
           -->
-        variation_specs: |-
-          #### Default
-
-          ##### Target area
-
-          * Minimum height: 50px
-          * Background: Gray 10 (#e7e8e9)
-          * Padding: 15 px
-
-          ##### Checkbox and text
-
-          * Border: 1 px, Gray 60 (#919395)
-          * Background: 20 px x 20 px, White (#ffffff)
-          * Avenir Next Regular, 16 px, Black (#101820)
-
-          #### Hover
-
-          ##### Target area
-
-          * Border: 2 px, Pacific (#0072ce)
-          * Background: Gray 10 (#e7e8e9)
-          * Radio button (or checkbox)
-
-          ##### Checkbox
-
-          * Border: 2 px, Pacific (#0072ce)
-
-          #### Focus
-
-          ##### Target area
-
-          * Border: 2 px, Pacific (#0072ce)
-          * Background: Gray 10 (#e7e8e9)
-          * Outline: Dotted 1px, Pacific (#0072ce)
-
-          ##### Checkbox
-
-          * Border: 2 px, Pacific (#0072ce)
-
-          #### Selected
-
-          ##### Target area
-
-          * Border: 1 px, Pacific (#0072ce)
-          * Background: Pacific 20 (#d6e8fa)
-
-          ##### Checkbox
-
-          * Border: 1 px, Gray 60 (#919395)
-          * Background: 14 x 14 px, Pacific (#0072ce)
-
-          #### Disabled
-
-          ##### Checkbox
-
-          * Border: 1 px, Gray 60 (#919395)
-          * Background: Gray 20 (#d2d3d5)
-          * Avenir Next Regular, 16 px, Dark Gray (#43484e)
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Large target area checkbox with helper text
         variation_code_snippet: >-
@@ -287,7 +175,7 @@ description: Use checkboxes when the user can select more than one option from a
   group. Make clear with helper text that this is the case. Use [radio
   buttons](/design-system/components/radio-buttons) when the user can select
   only one choice from a group.
-use_cases: ''
+use_cases: ""
 behavior: >-
   Selecting the checkbox or touching the label text next to it should toggle the
   state of the checkbox on and off.
@@ -297,5 +185,5 @@ behavior: >-
 accessibility: To optimize screen reader accessibility, lay out checkboxes
   vertically rather than horizontally.
 last_updated: 2019-09-17T14:30:15.293Z
-research: ''
+research: ""
 ---

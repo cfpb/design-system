@@ -145,28 +145,7 @@ variation_groups:
         variation_implementation: When a page is printed, cf.gov's [print
           stylesheet](https://github.com/cfpb/consumerfinance.gov/blob/c9637160e14da5093b43c78fc2c87fa0ba190887/cfgov/unprocessed/css/print.less)
           appends link URLs in parentheses next to their link text.
-        variation_specs: >-
-          
-
-          ### Style
-
-
-          * Link text: medium weight, underlined 
-
-          * URL: Placed in parentheses following the link text, regular weight, and not underlined 
-
-
-          ### URL format 
-
-
-          To ensure users are easily able to type URLs by hand, follow these guidelines. 
-
-
-          * Don’t include http:// or www  
-
-          * Shorten "consumerfinance.gov” to “cfpb.gov”  
-
-          * For Ask CFPB pages, abbreviate to “askcfpb” and the page’s associated number
+        variation_specs: ""
     variation_group_description: ""
 guidelines: ""
 eyebrow: Components

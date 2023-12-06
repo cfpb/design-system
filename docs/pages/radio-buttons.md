@@ -64,40 +64,10 @@ variation_groups:
                      checked>
               <label class="a-label" for="test_radio_basic_disabled_selected">Disabled/selected</label>
           </div>
-        variation_specs: |-
-          <h3 class="h4">Default</h3>
-
-          * Height: 20 px
-          * Width: 20 px
-          * Border: 1 px, Gray 60 (#919395)
-          * Background: White (#ffffff)
-          * Margin right: 10 px
-          * Avenir Next Regular, 16 px, Black (#101820)
-
-          <h3 class="h4">Hover</h3>
-
-          * Border: 2 px, Pacific (#0072ce)
-
-          <h3 class="h4">Focus</h3>
-
-          * Border: 2 px, Pacific (#0072ce)
-          * Outline: Dotted 1px, Pacific (#0072ce)
-          * Outline offset: 1px
-
-          <h3 class="h4">Selected</h3>
-
-          * Border: 1 px, Gray 60 (#919395)
-          * Background: 14 px x 14 px, Pacific (#0072ce)
-
-          <h3 class="h4">Disabled</h3>
-
-          * Border: 1 px, Gray 60 (#919395)
-          * Background: Gray 10 (#e7e8e9)
-          * Avenir Next Regular, 16 px, Gray (#5a5d61)
+        variation_specs: ""
         variation_name: Standard radio button
       - variation_name: Standard radio button with helper text
-        variation_description:
-          Radio button inputs can have labels that span multiple
+        variation_description: Radio button inputs can have labels that span multiple
           lines and can include optional helper text that appears below the main
           label text.
         variation_code_snippet: |-
@@ -110,67 +80,10 @@ variation_groups:
                   </small>
               </label>
           </div>
-        variation_specs: |-
-          #### Default
-
-          ##### Target area
-
-          * Minimum height: 50px
-          * Background: Gray 10 (#e7e8e9)
-          * Padding: 15 px
-
-          ##### Radio button (or checkbox) and text
-
-          * Border: 1 px, Gray 60 (#919395)
-          * Background: 20 px x 20 px, White (#ffffff)
-          * Avenir Next Regular, 16 px, Black (#101820)
-
-          #### Hover
-
-          ##### Target area
-
-          * Border: 2 px, Pacific (#0072ce)
-          * Background: Gray 10 (#e7e8e9)
-
-          ##### Radio button (or checkbox)
-
-          * Border: 2 px, Pacific (#0072ce)
-
-          #### Focus
-
-          ##### Target area
-
-          * Border: 2 px, Pacific (#0072ce)
-          * Background: Gray 10 (#e7e8e9)
-          * Outline: Dotted 1px, Pacific (#0072ce)
-
-          ##### Radio button (or checkbox)
-
-          * Border: 2 px, Pacific (#0072ce)
-
-          #### Selected
-
-          ##### Target area
-
-          * Border: 1 px, Pacific (#0072ce)
-          * Background: Pacific 20 (#d6e8fa)
-
-          ##### Radio button (or checkbox)
-
-          * Border: 1 px, Gray 60 (#919395)
-          * Background: 14 x 14 px, Pacific (#0072ce)
-
-          #### Disabled
-
-          ##### Radio button (or checkbox)
-
-          * Border: 1 px, Gray 60 (#919395)
-          * Background: Gray 20 (#d2d3d5)
-          * Avenir Next Regular, 16 px, Dark Gray (#43484e)
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Large target area radio button
-        variation_description:
-          For better usability, consider using radio buttons with
+        variation_description: For better usability, consider using radio buttons with
           large target areas. These are easier to interact with (especially on
           smaller screens) and harder to miss. They are especially desirable
           when the form will have heavy mobile usage. Given the amount of real
@@ -235,8 +148,7 @@ variation_groups:
                      checked>
               <label class="a-label" for="test_radio_lg_disabled_selected">Disabled/selected</label>
           </div>
-        variation_specs: These are covered in [specs for large target area
-          checkboxes](https://cfpb.github.io/design-system/components/checkboxes#large-target-area-checkboxes).
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Large target area radio button with helper text
         variation_code_snippet: |-
@@ -249,7 +161,7 @@ variation_groups:
                   </small>
                 </label>
           </div>
-guidelines: ''
+guidelines: ""
 eyebrow: Components
 title: Radio buttons
 description: Use radio buttons when the user can select exactly one option from
@@ -267,10 +179,10 @@ use_cases: >-
 
 
   Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the standard radio button make sure the target area is at least 45 x 45 px and includes the label text.
-behavior: ''
+behavior: ""
 accessibility: There are some issues with Voiceover reading radio buttons. To
   get around this, consider using the aria-describedby attribute.
-related_items: ''
+related_items: ""
 last_updated: 2020-01-28T15:55:47.394Z
-research: ''
+research: ""
 ---

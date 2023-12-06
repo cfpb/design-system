@@ -2,40 +2,25 @@
 title: Range sliders
 layout: variation
 section: components
-status: Released
-description: Range sliders allow the user to select a value between a defined
-  minimum and maximum range. They can work well for discovery and education, but
-  because they’re imprecise and difficult to manipulate, are not the best choice
-  when the user is likely to have a specific number that they want to input.
 variation_groups:
   - variations:
-      - variation_code_snippet: ''
+      - variation_code_snippet: ""
         variation_description: |-
           ### Default state
           ![](/design-system/images/uploads/slider-default.png)
 
           ### Focus state
           ![](/design-system/images/uploads/slider-focus.png)
-        variation_name: ''
-        variation_specs: |-
-          #### Default
-
-          ##### Track
-
-          * Height: 9 px
-          * Border: 1 px, Gray 40 (#b4b5b6)
-          * Background: Gray 80 (#75787b)
-
-          ##### Handle
-
-          * Border: 1 px, Gray 40 (#b4b5b6)
-          * Background: 45 px x 45 px, Gray 10 (#e7e8e9)
-
-          #### Focus
-
-          * Border: 2 px, Pacific (#0072ce)
-          * Background: Pacific 20 (#d6e8fa)
+        variation_name: ""
+        variation_specs: ""
     variation_group_name: Standard range slider
+guidelines: ""
+eyebrow: Components
+status: Released
+description: Range sliders allow the user to select a value between a defined
+  minimum and maximum range. They can work well for discovery and education, but
+  because they’re imprecise and difficult to manipulate, are not the best choice
+  when the user is likely to have a specific number that they want to input.
 use_cases: >-
   Range sliders can work well for discovery and education, where the inputs are
   [a relative quantity and not a specific numeric
@@ -50,10 +35,8 @@ use_cases: >-
 
 
   Also consider the balance between the length of the slider and the number of data points it covers (the range, as well as how discrete the points are). The more points to choose from, the harder it is for the user to target a specific number.
-guidelines: ''
-behavior: ''
+behavior: ""
 accessibility: Make sure that sliders are accessible by keyboard using the arrow keys.
 last_updated: 2020-01-28T15:55:47.394Z
-eyebrow: Components
-research: ''
+research: ""
 ---

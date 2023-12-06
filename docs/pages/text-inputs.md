@@ -1,6 +1,7 @@
 ---
 layout: variation
 section: components
+status: Released
 variation_groups:
   - variation_group_name: Text inputs
     variations:
@@ -55,44 +56,9 @@ variation_groups:
           <br><br>
 
           <input class="a-text-input a-text-input__error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
-        variation_specs: |-
-          #### Default
-
-          * Border: 1 px, Gray 60 (#919395)
-          * Height: 35 px
-          * Padding: 7px
-          * Placeholder text: Avenir Next Regular, 16px, Dark Gray (#43484e) 
-          * Input text: Avenir Next Regular, 16px, Black (#101820)
-          * Text should be in sentence case
-
-          #### Hover
-
-          * Border: 2 px, Pacific (#0072ce)
-
-          #### Focus
-
-          * Border: 2 px, Pacific (#0072ce)
-          * Outline: Dotted 1px, Pacific (#0072ce)
-          * Outline offset: 1px
-
-          #### Disabled
-
-          * Background: Gray 10 (#e7e8e9)
-
-          #### Success
-
-          * Border: 2 px, CFPB Green (#20aa3f)
-
-          #### Warning
-
-          * Border: 2 px, Gold (#ff9e1b)
-
-          #### Error
-
-          * Border: 2 px, Red (#d14124)
+        variation_specs: ""
         variation_name: Text input
-        variation_description:
-          Use when the expected user input is a single line of
+        variation_description: Use when the expected user input is a single line of
           text, for example email addresses, names, or search queries. The
           length of the input field should be proportional to the expected user
           input, so that the user can see what they've typed without having to
@@ -121,8 +87,7 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Button inside text input
-        variation_description:
-          Use to offer the user an action to take related to the
+        variation_description: Use to offer the user an action to take related to the
           input, typically to clear the input.
         variation_code_snippet: >-
           <div class="m-btn-inside-input">
@@ -137,8 +102,7 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Button inside text input with another button
-        variation_description:
-          This example combines both of the previous patterns,
+        variation_description: This example combines both of the previous patterns,
           creating a typical site search form.
         variation_code_snippet: >-
           <div class="o-form__input-w-btn">
@@ -158,13 +122,12 @@ variation_groups:
                   <button class="a-btn">Search</button>
               </div>
           </div>
-    variation_group_description: ''
+    variation_group_description: ""
   - variation_group_name: Text area inputs
     variations:
       - variation_is_deprecated: false
         variation_name: Text area input
-        variation_description:
-          Use when the expected user input is more than a few words
+        variation_description: Use when the expected user input is more than a few words
           and could span multiple lines. Make sure the input size is big enough
           that the user can see what they've typed without having to scroll to
           reveal hidden content, and small enough that the user doesn't have  to
@@ -181,7 +144,6 @@ variation_groups:
                         id="full-textarea-example"
                         placeholder="Placeholder text">Input text</textarea>
           </div>
-use_cases: ''
 guidelines: >-
   ### Stylistic guidelines
 
@@ -207,6 +169,14 @@ guidelines: >-
 
   Text should be in sentence case. Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
 eyebrow: Components
+title: Text inputs
+description: Text inputs allow the user to enter any combination of letters,
+  numbers, or symbols. Text input fields can span single or multiple lines.
+use_cases: ""
+behavior: As the screen size gets smaller, break multi-column inputs into a
+  single, stacked column. Fields that are next to each other on a large screen,
+  should stack at smaller screen sizes. When possible, fields should span the
+  entire width of the screen at the smallest screen sizes.
 accessibility: >-
   Inputs should always be paired with a `label` for accessibility reasons.
 
@@ -216,13 +186,5 @@ related_items: "* [Text input
   variables](https://cfpb.github.io/design-system/development/variables#forms-1\
   )"
 last_updated: 2020-01-28T15:55:47.394Z
-title: Text inputs
-status: Released
-description: Text inputs allow the user to enter any combination of letters,
-  numbers, or symbols. Text input fields can span single or multiple lines.
-behavior: As the screen size gets smaller, break multi-column inputs into a
-  single, stacked column. Fields that are next to each other on a large screen,
-  should stack at smaller screen sizes. When possible, fields should span the
-  entire width of the screen at the smallest screen sizes.
-research: ''
+research: ""
 ---

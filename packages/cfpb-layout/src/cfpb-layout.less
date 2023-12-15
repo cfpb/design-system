@@ -306,6 +306,7 @@
   }
 }); // END min-width 801 block
 
+// Large desktop and above.
 .respond-to-min(@bp-lg-min, {
   .content__2-1 .content_main__narrow {
     .grid_column( 7, @grid_total-columns, 0, 1 );
@@ -317,12 +318,14 @@
 }
 
 .content__flush-top-on-small {
+  // Tablet and below.
   .respond-to-max(@bp-sm-max, {
     padding-top: 0;
   });
 }
 
 .content__flush-all-on-small {
+  // Tablet and below.
   .respond-to-max(@bp-sm-max, {
     padding: 0;
     border: none;

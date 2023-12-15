@@ -120,7 +120,7 @@ h1,
     margin-top: unit((60px / @font-size), em);
   }
 
-  // Mobile size.
+  // Mobile only.
   .respond-to-max( @bp-xs-max, {
     .heading-2();
 
@@ -178,7 +178,7 @@ h2,
     margin-top: unit((30px / @font-size), em);
   }
 
-  // Mobile size.
+  // Mobile only.
   .respond-to-max( @bp-xs-max, {
     .heading-3();
 
@@ -220,7 +220,7 @@ h3,
     margin-top: unit((30px / @font-size), em);
   }
 
-  // Mobile size.
+  // Mobile only.
   .respond-to-max( @bp-xs-max, {
     .heading-4();
   } );
@@ -251,7 +251,7 @@ h4,
     margin-top: unit((30px / @font-size), em);
   }
 
-  // Mobile size.
+  // Mobile only.
   .respond-to-max( @bp-xs-max, {
     @h4-font-size-on-xs: @base-font-size-px;
 
@@ -319,7 +319,7 @@ h6,
   margin-top: 0;
   margin-bottom: 15px;
 
-  // Mobile size.
+  // Mobile only.
   .respond-to-max( @bp-xs-max, {
     // Use the same regular weight but reduce the sizes to h4 size
     font-size: unit( ( 18px / @base-font-size-px ), em );
@@ -548,7 +548,7 @@ blockquote {
   margin-right: unit((15px / @base-font-size-px), em);
   margin-left: unit((15px / @base-font-size-px), em);
 
-  // Desktop and tablet size.
+  // Tablet and above.
   .respond-to-min( @bp-sm-min, {
     margin-right: unit( ( 30px / @base-font-size-px ), em );
     margin-left: unit( ( 30px / @base-font-size-px ), em );

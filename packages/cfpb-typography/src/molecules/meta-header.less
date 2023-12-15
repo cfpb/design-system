@@ -24,7 +24,7 @@
     row-gap: unit((5px / @base-font-size-px), rem);
 
     .h4();
-    // Mobile size.
+    // Mobile only.
     .respond-to-max( @bp-xs-max, {
       // Override h4 bottom margin at mobile size.
       margin-bottom: unit( ( 5px / @base-font-size-px ), rem );
@@ -51,7 +51,7 @@
     }
   }
 
-  // Desktop and tablet size.
+  // Tablet and above.
   .respond-to-min( @bp-sm-min, {
     flex-direction: row;
   } );

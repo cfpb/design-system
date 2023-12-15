@@ -22,7 +22,7 @@
     grid-column-gap: unit((20px / @base-font-size-px), em);
     grid-row-gap: unit((20px / @base-font-size-px), em);
 
-    // Mobile size.
+    // Mobile only.
     .respond-to-max( @bp-xs-max, {
       // Make sure cards are stacked at mobile size.
       grid-template-columns: 100% !important;
@@ -147,7 +147,7 @@ _:-ms-lang(x),
   }
 }
 
-// Tablet size.
+// Tablet only.
 .respond-to-range( @bp-sm-min, @bp-sm-max, {
   .o-card-group {
     &__count-3 &_cards {
@@ -159,7 +159,7 @@ _:-ms-lang(x),
   }
 } );
 
-// Mobile size.
+// Mobile only.
 .respond-to-max( @bp-xs-max, {
   .o-card-group {
     &__count-2 &_cards {

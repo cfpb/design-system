@@ -14,7 +14,7 @@ variation_groups:
 
       ```
 
-      .respond-to-min(@bp, @rules);
+      .respond-to-min( @bp, @rules);
 
 
       .respond-to-max(@bp, @rules);
@@ -25,6 +25,7 @@ variation_groups:
 
       ```
 
+      // Tablet and above.
       .respond-to-min( @bp-sm-min, {
           .title {
               font-size: 2em;
@@ -56,7 +57,7 @@ variation_groups:
       Ex.
 
       ```
-
+      // Tablet only.
       .respond-to-range( @bp-sm-min, @bp-sm-max, {
           .title {
               font-size: 2em;

@@ -14,7 +14,7 @@
     padding-top: @grid_gutter-width;
     padding-bottom: @grid_gutter-width;
 
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       grid-template-columns: 7fr 5fr;
       padding-right: ( @grid_gutter-width / 2);
@@ -34,7 +34,7 @@
     padding-right: (@grid_gutter-width / 2);
     padding-left: (@grid_gutter-width / 2);
 
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       margin: auto;
     } );
@@ -63,7 +63,7 @@
     box-sizing: border-box;
     overflow: hidden;
 
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       padding-right: ( @grid_gutter-width / 2 );
       padding-left: ( @grid_gutter-width / 2 );
@@ -73,7 +73,7 @@
       align-items: center;
     } );
 
-    // Mobile size.
+    // Mobile only.
     .respond-to-max( @bp-xs-max, {
       margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em );
     } );
@@ -102,7 +102,7 @@
   }
 
   &__bleeding {
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
 
       .m-hero_image-wrapper {
@@ -135,7 +135,7 @@
       background-size: cover;
     }
 
-    // Mobile size.
+    // Mobile only.
     .respond-to-max( @bp-xs-max, {
       .m-hero_wrapper {
         // Overwrite the image that is set in the markup because
@@ -144,7 +144,7 @@
       }
     } );
 
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       .m-hero_image {
         display: none;
@@ -157,7 +157,7 @@
 
     .u-jumbo-text();
 
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       .m-hero_wrapper {
         background-position: 50%;
@@ -170,7 +170,7 @@
       }
     } );
 
-    // Mobile size.
+    // Mobile only.
     .respond-to-max( @bp-xs-max, {
       .m-hero_wrapper {
         // Keep hero image flush with container on mobile
@@ -184,7 +184,7 @@
 
     .u-jumbo-text();
 
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       .m-hero_wrapper {
         grid-template-columns: 1fr 1fr;
@@ -218,7 +218,7 @@
     .lead-paragraph();
   }
 
-  // Desktop and tablet size.
+  // Tablet and above.
   .respond-to-min( @bp-sm-min, {
     .m-hero_subhead {
       .heading-3();

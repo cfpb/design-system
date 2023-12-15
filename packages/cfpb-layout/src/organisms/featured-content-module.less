@@ -17,7 +17,7 @@
     display: block;
   }
 
-  // Mobile size.
+  // Mobile only.
   .respond-to-max( @bp-xs-max, {
     &_text {
       padding-right: unit( ( @grid_gutter-width / 2 / @base-font-size-px ), em );
@@ -36,7 +36,7 @@
     }
   } );
 
-  // Desktop and tablet size.
+  // Tablet and above.
   .respond-to-min( @bp-sm-min, {
     &_text {
       padding-right: @fcm-visual-width + @grid_gutter-width;
@@ -79,7 +79,7 @@
     }
 
     .o-featured-content-module_text {
-      // Desktop and tablet size.
+      // Tablet and above.
       .respond-to-min( @bp-sm-min, {
         padding-left: @fcm-visual-width + @grid_gutter-width;
         padding-right: unit( ( @grid_gutter-width / @base-font-size-px ), em );

@@ -125,7 +125,7 @@ These mixins take a `px` value breakpoint and set of style rules and converts
 them to the corresponding min or max width media query.
 
 ```
-.respond-to-min(@bp, @rules);
+.respond-to-min( @bp, @rules);
 
 .respond-to-max(@bp, @rules);
 ```
@@ -133,6 +133,7 @@ them to the corresponding min or max width media query.
 Ex.
 
 ```
+// Tablet and above.
 .respond-to-min( @bp-sm-min, {
     .title {
         font-size: 2em;
@@ -160,6 +161,7 @@ converts them to the corresponding min and max media query.
 Ex.
 
 ```
+// Tablet only.
 .respond-to-range( @bp-sm-min, @bp-sm-max, {
     .title {
         font-size: 2em;

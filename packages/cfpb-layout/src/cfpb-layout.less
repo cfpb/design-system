@@ -60,7 +60,7 @@
   // Used to position __divider modifiers
   position: relative;
 
-  // Desktop and tablet size.
+  // Tablet and above.
   .respond-to-min( @bp-sm-min, {
     .grid_nested-col-group();
   } );
@@ -78,6 +78,7 @@
       .stack-col( content-l_col-1-2 );
     } );
 
+    // Tablet only.
     .respond-to-range( @bp-sm-min, @bp-sm-max, {
       .stack-col-thirds();
       .stack-col-eighths();
@@ -90,6 +91,7 @@
     .stack-col-eighths();
     .stack-col-quarters();
 
+    // Desktop and above.
     .respond-to-min( @bp-med-min, {
       .stack-col( content-l_col-1-2 );
     } );
@@ -97,7 +99,7 @@
 }
 
 .content-l_col {
-  // Mobile size.
+  // Mobile only.
   .respond-to-max( @bp-xs-max, {
     & + & {
       margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em );
@@ -105,7 +107,7 @@
   } );
 }
 
-// Desktop and tablet size.
+// Tablet and above.
 .respond-to-min( @bp-sm-min, {
   .content-l_col-1 {
     .grid_column( 12 );
@@ -145,24 +147,24 @@
 //
 
 .content-l_col__before-divider.content-l_col-1-2 {
-  // Mobile size.
+  // Mobile only.
   .respond-to-max( @bp-xs-max, {
     .grid_column__top-divider();
   } );
 
-  // Desktop and tablet size.
+  // Tablet and above.
   .respond-to-min( @bp-sm-min, {
     .grid_column__left-divider();
   } );
 }
 
 .content-l_col__before-divider.content-l_col-1-3 {
-  // Mobile size.
+  // Mobile only.
   .respond-to-max( @bp-xs-max, {
     .grid_column__top-divider();
   } );
 
-  // Desktop and tablet size.
+  // Tablet and above.
   .respond-to-min( @bp-sm-min, {
     .grid_column__left-divider();
   } );
@@ -236,7 +238,7 @@
   padding: unit((@grid_gutter-width / @base-font-size-px), em)
     unit((@grid_gutter-width / 2 / @base-font-size-px), em);
 
-  // Desktop and tablet size.
+  // Tablet and above.
   .respond-to-min( @bp-sm-min, {
     .grid_column( 12 );
 
@@ -245,6 +247,7 @@
     unit( ( ( @grid_gutter-width / 2 ) / @base-font-size-px ), em );
   } );
 
+  // Desktop and above.
   .respond-to-min( @bp-med-min, {
     padding:
     unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em )
@@ -252,13 +255,15 @@
   } );
 }
 
+// Desktop and above.
 .respond-to-min( @bp-med-min, {
   .content_intro {
     .grid_column( 12 );
   }
 } );
 
-// Set up standard multi-column content area layouts
+// Set up standard multi-column content area layouts.
+// Desktop and above.
 .respond-to-min( @bp-med-min, {
   .content {
     &__1-3 {
@@ -374,7 +379,7 @@
     margin-right: -(@grid_gutter-width / 2);
     margin-left: -(@grid_gutter-width / 2);
 
-    // Mobile size.
+    // Mobile only.
     .respond-to-max( @bp-xs-max, {
       &.block__border,
       &.block__border-right,
@@ -384,7 +389,7 @@
       }
     } );
 
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       margin-right: -@grid_gutter-width;
       margin-left: -@grid_gutter-width;
@@ -404,7 +409,7 @@
       border-bottom: none;
     }
 
-    // Mobile size.
+    // Mobile only.
     .respond-to-max( @bp-xs-max, {
       &.block__border,
       &.block__border-right,
@@ -414,7 +419,7 @@
       }
     } );
 
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       margin-right: -@grid_gutter-width;
       margin-left: -@grid_gutter-width;
@@ -427,7 +432,7 @@
     padding-bottom: unit(((@grid_gutter-width * 2) / @base-font-size-px), em);
     background: @block__bg;
 
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       padding: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em )
       unit( ( @grid_gutter-width / @base-font-size-px ), em );
@@ -452,7 +457,7 @@
   // Overrides for when .block is also a column
   .content-l_col&,
   .content-l_col&__sub {
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       margin-top: 0;
     } );
@@ -475,6 +480,7 @@
     background: @content_sidebar-bg;
   }
 
+  // Desktop and above.
   .respond-to-min( @bp-med-min, {
     // Prevent pseudo element background from creating horizontal scrollbar.
     overflow: hidden;
@@ -528,6 +534,7 @@
 //
 
 .wrapper {
+  // Desktop and above.
   .respond-to-min( @bp-med-min, {
     .grid_wrapper();
   } );
@@ -536,7 +543,7 @@
     padding-left: @grid_gutter-width / 2;
     padding-right: @grid_gutter-width / 2;
 
-    // Desktop and tablet size.
+    // Tablet and above.
     .respond-to-min( @bp-sm-min, {
       padding-left: @grid_gutter-width;
       padding-right: @grid_gutter-width;

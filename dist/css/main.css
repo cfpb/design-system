@@ -1804,12 +1804,13 @@ h6 + .m-meta-header_item,
 .m-card:not(.m-card__breakout) > a {
   padding: 1.875em;
 }
+.m-card:not(.m-card__breakout) .m-card_footer {
+  margin-top: auto;
+}
 .m-card:not(.m-card__breakout, .m-card__topic) {
   background: #ffffff;
   border: 1px solid #d2d3d5;
   border-bottom-width: 3px;
-}
-.m-card:not(.m-card__breakout, .m-card__topic) {
   padding: 1.875em;
 }
 .m-card:not(.m-card__breakout, .m-card__topic),
@@ -1823,9 +1824,6 @@ h6 + .m-meta-header_item,
 }
 .m-card a:focus {
   outline-offset: 2px;
-}
-.m-card:not(.m-card__breakout) .m-card_footer {
-  margin-top: auto;
 }
 .m-card_footer > a {
   font-weight: 500;

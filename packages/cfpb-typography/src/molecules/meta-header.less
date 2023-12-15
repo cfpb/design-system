@@ -25,7 +25,7 @@
 
     .h4();
     // Mobile only.
-    .respond-to-max( @bp-xs-max, {
+    .respond-to-max(@bp-xs-max, {
       // Override h4 bottom margin at mobile size.
       margin-bottom: unit( ( 5px / @base-font-size-px ), rem );
     });
@@ -52,7 +52,7 @@
   }
 
   // Tablet and above.
-  .respond-to-min( @bp-sm-min, {
+  .respond-to-min(@bp-sm-min, {
     flex-direction: row;
-  } );
+  });
 }

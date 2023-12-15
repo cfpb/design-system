@@ -48,22 +48,22 @@
 .m-list__links {
   .m-list_item {
     // Mobile only.
-    .respond-to-max( @bp-xs-max, {
+    .respond-to-max(@bp-xs-max, {
       margin-bottom: 0;
 
       &:nth-child( n+2 ) .m-list_link {
         border-top-width: 0;
       }
-    } );
+    });
   }
 
   .m-list_link {
     font-weight: 500;
 
     // Mobile only.
-    .respond-to-max( @bp-xs-max, {
+    .respond-to-max(@bp-xs-max, {
       .u-block-link();
-    } );
+    });
   }
 }
 

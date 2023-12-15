@@ -61,29 +61,29 @@
   position: relative;
 
   // Tablet and above.
-  .respond-to-min( @bp-sm-min, {
+  .respond-to-min(@bp-sm-min, {
     .grid_nested-col-group();
-  } );
+  });
 
   &__full {
-    .respond-to-range( @bp-sm-min, 767px, {
+    .respond-to-range(@bp-sm-min, 767px, {
       .stack-col-thirds();
       .stack-col-eighths();
       .stack-col-quarters();
-    } );
+    });
   }
 
   &__main {
-    .respond-to-range( @bp-med-min, @bp-med-max, {
+    .respond-to-range(@bp-med-min, @bp-med-max, {
       .stack-col( content-l_col-1-2 );
-    } );
+    });
 
     // Tablet only.
-    .respond-to-range( @bp-sm-min, @bp-sm-max, {
+    .respond-to-range(@bp-sm-min, @bp-sm-max, {
       .stack-col-thirds();
       .stack-col-eighths();
       .stack-col-quarters();
-    } );
+    });
   }
 
   &__sidebar {
@@ -92,23 +92,23 @@
     .stack-col-quarters();
 
     // Desktop and above.
-    .respond-to-min( @bp-med-min, {
+    .respond-to-min(@bp-med-min, {
       .stack-col( content-l_col-1-2 );
-    } );
+    });
   }
 }
 
 .content-l_col {
   // Mobile only.
-  .respond-to-max( @bp-xs-max, {
+  .respond-to-max(@bp-xs-max, {
     & + & {
       margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em );
     }
-  } );
+  });
 }
 
 // Tablet and above.
-.respond-to-min( @bp-sm-min, {
+.respond-to-min(@bp-sm-min, {
   .content-l_col-1 {
     .grid_column( 12 );
   }
@@ -140,7 +140,7 @@
   .content-l_col-3-4 {
     .grid_column( 9 );
   }
-} );
+});
 
 //
 // Content layout column dividers
@@ -148,26 +148,26 @@
 
 .content-l_col__before-divider.content-l_col-1-2 {
   // Mobile only.
-  .respond-to-max( @bp-xs-max, {
+  .respond-to-max(@bp-xs-max, {
     .grid_column__top-divider();
-  } );
+  });
 
   // Tablet and above.
-  .respond-to-min( @bp-sm-min, {
+  .respond-to-min(@bp-sm-min, {
     .grid_column__left-divider();
-  } );
+  });
 }
 
 .content-l_col__before-divider.content-l_col-1-3 {
   // Mobile only.
-  .respond-to-max( @bp-xs-max, {
+  .respond-to-max(@bp-xs-max, {
     .grid_column__top-divider();
-  } );
+  });
 
   // Tablet and above.
-  .respond-to-min( @bp-sm-min, {
+  .respond-to-min(@bp-sm-min, {
     .grid_column__left-divider();
-  } );
+  });
 }
 
 .stack-col( @col ) {
@@ -239,32 +239,32 @@
     unit((@grid_gutter-width / 2 / @base-font-size-px), em);
 
   // Tablet and above.
-  .respond-to-min( @bp-sm-min, {
+  .respond-to-min(@bp-sm-min, {
     .grid_column( 12 );
 
     padding:
     unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em )
     unit( ( ( @grid_gutter-width / 2 ) / @base-font-size-px ), em );
-  } );
+  });
 
   // Desktop and above.
-  .respond-to-min( @bp-med-min, {
+  .respond-to-min(@bp-med-min, {
     padding:
     unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em )
     0;
-  } );
+  });
 }
 
 // Desktop and above.
-.respond-to-min( @bp-med-min, {
+.respond-to-min(@bp-med-min, {
   .content_intro {
     .grid_column( 12 );
   }
-} );
+});
 
 // Set up standard multi-column content area layouts.
 // Desktop and above.
-.respond-to-min( @bp-med-min, {
+.respond-to-min(@bp-med-min, {
   .content {
     &__1-3 {
       .content_sidebar {
@@ -304,29 +304,29 @@
       }
     }
   }
-} ); // END min-width 801 block
+}); // END min-width 801 block
 
-.respond-to-min( @bp-lg-min, {
+.respond-to-min(@bp-lg-min, {
   .content__2-1 .content_main__narrow {
     .grid_column( 7, @grid_total-columns, 0, 1 );
   }
-} );
+});
 
 .content__flush-bottom {
   padding-bottom: 0;
 }
 
 .content__flush-top-on-small {
-  .respond-to-max( @bp-sm-max, {
+  .respond-to-max(@bp-sm-max, {
     padding-top: 0;
-  } );
+  });
 }
 
 .content__flush-all-on-small {
-  .respond-to-max( @bp-sm-max, {
+  .respond-to-max(@bp-sm-max, {
     padding: 0;
     border: none;
-  } );
+  });
 }
 
 //
@@ -380,20 +380,20 @@
     margin-left: -(@grid_gutter-width / 2);
 
     // Mobile only.
-    .respond-to-max( @bp-xs-max, {
+    .respond-to-max(@bp-xs-max, {
       &.block__border,
       &.block__border-right,
       &.block__border-left {
         border-right: none;
         border-left: none;
       }
-    } );
+    });
 
     // Tablet and above.
-    .respond-to-min( @bp-sm-min, {
+    .respond-to-min(@bp-sm-min, {
       margin-right: -@grid_gutter-width;
       margin-left: -@grid_gutter-width;
-    } );
+    });
   }
 
   &__flush {
@@ -410,20 +410,20 @@
     }
 
     // Mobile only.
-    .respond-to-max( @bp-xs-max, {
+    .respond-to-max(@bp-xs-max, {
       &.block__border,
       &.block__border-right,
       &.block__border-left {
         border-right: none;
         border-left: none;
       }
-    } );
+    });
 
     // Tablet and above.
-    .respond-to-min( @bp-sm-min, {
+    .respond-to-min(@bp-sm-min, {
       margin-right: -@grid_gutter-width;
       margin-left: -@grid_gutter-width;
-    } );
+    });
   }
 
   &__bg {
@@ -433,10 +433,10 @@
     background: @block__bg;
 
     // Tablet and above.
-    .respond-to-min( @bp-sm-min, {
+    .respond-to-min(@bp-sm-min, {
       padding: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em )
       unit( ( @grid_gutter-width / @base-font-size-px ), em );
-    } );
+    });
   }
 
   &__padded-top {
@@ -458,9 +458,9 @@
   .content-l_col&,
   .content-l_col&__sub {
     // Tablet and above.
-    .respond-to-min( @bp-sm-min, {
+    .respond-to-min(@bp-sm-min, {
       margin-top: 0;
-    } );
+    });
   }
 }
 
@@ -481,7 +481,7 @@
   }
 
   // Desktop and above.
-  .respond-to-min( @bp-med-min, {
+  .respond-to-min(@bp-med-min, {
     // Prevent pseudo element background from creating horizontal scrollbar.
     overflow: hidden;
 
@@ -526,7 +526,7 @@
     &.content__3-1 .content_wrapper:after {
       left: 75%;
     }
-  } );
+  });
 }
 
 //
@@ -535,20 +535,20 @@
 
 .wrapper {
   // Desktop and above.
-  .respond-to-min( @bp-med-min, {
+  .respond-to-min(@bp-med-min, {
     .grid_wrapper();
-  } );
+  });
 
   &__match-content {
     padding-left: @grid_gutter-width / 2;
     padding-right: @grid_gutter-width / 2;
 
     // Tablet and above.
-    .respond-to-min( @bp-sm-min, {
+    .respond-to-min(@bp-sm-min, {
       padding-left: @grid_gutter-width;
       padding-right: @grid_gutter-width;
       max-width: @grid_wrapper-width - @grid_gutter-width;
-    } );
+    });
   }
 }
 

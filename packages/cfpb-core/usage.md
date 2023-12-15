@@ -155,7 +155,7 @@ This mixin takes both min and max `px` values and a set of style rules and
 converts them to the corresponding min and max media query.
 
 ```
-.respond-to-range(@bp1, @bp2, @rules);
+.respond-to-range( @bp1, @bp2, @rules );
 ```
 
 Ex.

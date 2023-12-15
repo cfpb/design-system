@@ -50,7 +50,7 @@ variation_groups:
 
       ```
 
-      .respond-to-range(@bp1, @bp2, @rules);
+      .respond-to-range( @bp1, @bp2, @rules );
 
       ```
 

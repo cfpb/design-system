@@ -43,8 +43,8 @@ variation_groups:
           Note: While th elements normally only contain raw text, they may sometimes contain heading elements when that would be beneficial to navigating a page’s content with a screenreader.
 
           -->
-        variation_specs: ""
-        variation_implementation: ""
+        variation_specs: ''
+        variation_implementation: ''
   - variation_group_name: Responsive tables
     variation_group_description: >-
       Responsive tables fall into two main types: stacked, which stacks
@@ -91,7 +91,7 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Responsive stacked table with header (directory table)
         variation_description: >-
           The directory table is a variation of the stacked table. At the small
@@ -135,7 +135,7 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Responsive table with horizontal scroll
         variation_description: >-
           Use a table with horizontal scroll when the data you’re presenting has
@@ -204,7 +204,7 @@ variation_groups:
                   </tbody>
               </table>
           </div>
-        variation_specs: ""
+        variation_specs: ''
   - variations:
       - variation_code_snippet: |-
           <table class="o-table o-table__striped">
@@ -277,7 +277,7 @@ variation_groups:
 
           Left-align columns of numbers when they're nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).
         variation_name: Right-aligned table
-        variation_specs: ""
+        variation_specs: ''
       - variation_code_snippet: |-
           <table class="o-table">
               <thead>
@@ -480,10 +480,10 @@ guidelines: >-
   If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.
 eyebrow: Components
 title: Tables
-description: "Tables allow for the presentation of many data points grouped
+description: 'Tables allow for the presentation of many data points grouped
   together in a visual way. They serve a unique purpose of allowing easy
   organization or comparison of more complex data than a chart or graph. They
-  can be read either vertically (by columns) or horizontally (by rows). "
+  can be read either vertically (by columns) or horizontally (by rows). '
 use_cases: >-
   Tables allow easy organization or comparison of more complex data than a chart
   or graph. They can be read either vertically (by columns) or horizontally (by
@@ -499,12 +499,12 @@ use_cases: >-
   * Individual values are being presented or compared
 
   * Values across columns or rows require different units of measurement
-behavior: ""
+behavior: ''
 accessibility: Remember to always use headers (that is, `<th>` elements) for all
   data tables to make tabular data accessible.
 related_items: "* [Tables
   variables](https://cfpb.github.io/design-system/development/variables#tables-\
   1)"
 last_updated: 2019-08-30T15:18:28.960Z
-research: ""
+research: ''
 ---

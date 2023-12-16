@@ -62,15 +62,16 @@
     & > a {
       padding: unit((@grid_gutter-width / @base-font-size-px), em);
     }
+
+    .m-card_footer {
+      margin-top: auto;
+    }
   }
 
   &:not(.m-card__breakout, .m-card__topic) {
     background: @white;
     border: 1px solid @gray-20;
     border-bottom-width: 3px;
-  }
-
-  &:not(.m-card__breakout, .m-card__topic) {
     padding: unit((@grid_gutter-width / @base-font-size-px), em);
   }
 
@@ -86,12 +87,6 @@
 
   & a:focus {
     outline-offset: 2px;
-  }
-
-  &:not(.m-card__breakout) {
-    .m-card_footer {
-      margin-top: auto;
-    }
   }
 
   &_footer > a {

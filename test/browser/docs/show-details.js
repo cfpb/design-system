@@ -37,8 +37,8 @@ describe('The "show details" toggling feature', () => {
 
         it('should hide snippet tabs by default', async () => {
           if (
-            !(await showDetailsButton.isExisting()) ||
-            !(await hideDetailsButton.isExisting())
+            (await !showDetailsButton.isExisting()) ||
+            (await !hideDetailsButton.isExisting())
           ) {
             this.skip();
           }

@@ -54,9 +54,9 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
               <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Standard checkbox
-        variation_specs: ""
+        variation_specs: ''
       - variation_is_deprecated: false
         variation_name: Standard checkbox with helper text
         variation_code_snippet: >-
@@ -71,7 +71,8 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Large target area checkbox
-        variation_description: For better usability, consider using the checkboxes with
+        variation_description:
+          For better usability, consider using the checkboxes with
           large target areas. These are easier to interact with (especially on
           smaller screens) and harder to miss. They are especially desirable
           when the form will have heavy mobile usage. Given the amount of real
@@ -143,7 +144,7 @@ variation_groups:
           </div>
 
           -->
-        variation_specs: ""
+        variation_specs: ''
       - variation_is_deprecated: false
         variation_name: Large target area checkbox with helper text
         variation_code_snippet: >-
@@ -175,7 +176,7 @@ description: Use checkboxes when the user can select more than one option from a
   group. Make clear with helper text that this is the case. Use [radio
   buttons](/design-system/components/radio-buttons) when the user can select
   only one choice from a group.
-use_cases: ""
+use_cases: ''
 behavior: >-
   Selecting the checkbox or touching the label text next to it should toggle the
   state of the checkbox on and off.
@@ -185,5 +186,5 @@ behavior: >-
 accessibility: To optimize screen reader accessibility, lay out checkboxes
   vertically rather than horizontally.
 last_updated: 2019-09-17T14:30:15.293Z
-research: ""
+research: ''
 ---

@@ -58,16 +58,16 @@
     right: 0;
   }
 
-  // Mobile size.
-  .respond-to-max( @bp-xs-max, {
+  // Mobile only.
+  .respond-to-max(@bp-xs-max, {
     &_btn-prev,
     &_btn-next {
       margin-bottom: unit( ( 15px / @base-font-size-px ), em );
     }
-  } );
+  });
 
-  // Desktop and tablet size.
-  .respond-to-min( @bp-sm-min, {
+  // Tablet and above.
+  .respond-to-min(@bp-sm-min, {
     &_btn-prev,
     &_btn-next {
       height: 100%;
@@ -83,5 +83,5 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
-  } );
+  });
 }

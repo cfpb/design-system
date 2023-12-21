@@ -6,7 +6,7 @@
 //
 // Media query mixins
 //
-.respond-to-min( @bp, @rules ) {
+.respond-to-min(@bp, @rules ) {
   @ems: unit((@bp / @base-font-size-px), em);
 
   @media only all and (min-width: @ems) {
@@ -14,7 +14,7 @@
   }
 }
 
-.respond-to-max( @bp, @rules ) {
+.respond-to-max(@bp, @rules ) {
   @ems: unit((@bp / @base-font-size-px), em);
 
   @media only all and (max-width: @ems) {
@@ -22,7 +22,7 @@
   }
 }
 
-.respond-to-range( @bp1, @bp2, @rules ) {
+.respond-to-range(@bp1, @bp2, @rules ) {
   @ems1: unit((@bp1 / @base-font-size-px), em);
   @ems2: unit((@bp2 / @base-font-size-px), em);
 

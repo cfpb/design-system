@@ -6,7 +6,8 @@ variation_groups:
   - variation_group_name: Types
     variations:
       - variation_name: Bulleted list
-        variation_description: Use a bulleted list when grouping similar items or short
+        variation_description:
+          Use a bulleted list when grouping similar items or short
           thoughts into “bite-size” chunks. Generally, the order or count of the
           items in a bullet list isn’t important. An exception to this may be a
           list of states, which naturally fits into an alphabetical order.
@@ -23,9 +24,10 @@ variation_groups:
               </li>
               <li class="m-list_item">List item 3</li>
           </ul>
-        variation_specs: ""
+        variation_specs: ''
       - variation_name: Numbered list
-        variation_description: When the order of information presented is important, use
+        variation_description:
+          When the order of information presented is important, use
           a numbered list. This could include chronological items, things
           presented in the order of importance, or a finite list of a counted
           number of items.
@@ -74,7 +76,7 @@ variation_groups:
               <li>List item 9</li>
               <li>List item 10</li>
           </ol>
-        variation_specs: ""
+        variation_specs: ''
   - variations:
       - variation_code_snippet: |-
           <ul class="m-list m-list__unstyled">
@@ -104,11 +106,12 @@ variation_groups:
                   <a class="m-list_link" href="#">List item 3</a>
               </li>
           </ul>
-        variation_description: The link list modifier is intended to be used for lists
+        variation_description:
+          The link list modifier is intended to be used for lists
           where each item is a link. It converts to a finger-friendly link with
           a large tap area on smaller screens.
         variation_name: Link list
-        variation_specs: ""
+        variation_specs: ''
       - variation_code_snippet: |-
           <ul class="m-list m-list__spaced">
               <li class="m-list_item">List item 1</li>
@@ -146,10 +149,10 @@ description: Lists are an effective way to visually highlight important
   information so that it can be more easily scanned and read. Before writing a
   list, it’s important to identify the best style needed for the information
   being presented.
-use_cases: ""
-behavior: ""
-accessibility: ""
-related_items: ""
+use_cases: ''
+behavior: ''
+accessibility: ''
+related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

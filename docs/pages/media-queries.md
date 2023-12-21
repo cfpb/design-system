@@ -25,11 +25,12 @@ variation_groups:
 
       ```
 
-      .respond-to-min( @bp-sm-min, {
+      // Tablet and above.
+      .respond-to-min(@bp-sm-min, {
           .title {
               font-size: 2em;
           }
-      } );
+      });
 
 
       // Compiles to
@@ -49,19 +50,19 @@ variation_groups:
 
       ```
 
-      .respond-to-range(@bp1, @bp2, @rules);
+      .respond-to-range(@bp1, @bp2, @rules );
 
       ```
 
       Ex.
 
       ```
-
-      .respond-to-range( @bp-sm-min, @bp-sm-max, {
+      // Tablet only.
+      .respond-to-range(@bp-sm-min, @bp-sm-max, {
           .title {
               font-size: 2em;
           }
-      } );
+      });
 
 
       // Compiles to

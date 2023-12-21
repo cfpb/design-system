@@ -4,7 +4,7 @@ layout: variation
 section: components
 variation_groups:
   - variations:
-      - variation_code_snippet: ""
+      - variation_code_snippet: ''
         variation_description: >-
           ### Default state
 
@@ -19,10 +19,10 @@ variation_groups:
 
 
           View this component in use on [Planning your Social Security claiming age](https://www.consumerfinance.gov/consumer-tools/retirement/before-you-claim/). After entering your date of birth and highest annual work income and then pressing the "Get your estimates" button, you will see an interactive chart with a range slider.
-        variation_name: ""
-        variation_specs: ""
+        variation_name: ''
+        variation_specs: ''
     variation_group_name: Standard range slider
-guidelines: ""
+guidelines: ''
 eyebrow: Components
 status: Released
 description: Range sliders allow the user to select a value between a defined
@@ -43,8 +43,8 @@ use_cases: >-
 
 
   Also consider the balance between the length of the slider and the number of data points it covers (the range, as well as how discrete the points are). The more points to choose from, the harder it is for the user to target a specific number.
-behavior: ""
+behavior: ''
 accessibility: Make sure that sliders are accessible by keyboard using the arrow keys.
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

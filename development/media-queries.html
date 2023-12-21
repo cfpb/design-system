@@ -300,11 +300,11 @@
 .respond-to-max(@bp, @rules);
 </code></pre></div></div>
 <p>Ex.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-min( @bp-sm-min, {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Tablet and above. .respond-to-min(@bp-sm-min, {
     .title {
         font-size: 2em;
     }
-} );
+});
 
 // Compiles to
 
@@ -332,23 +332,23 @@
         
         <div class="o-variation-group_description">
             <p>This mixin takes both min and max px values and a set of style rules and converts them to the corresponding min and max media query.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-range(@bp1, @bp2, @rules);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-range(@bp1, @bp2, @rules );
 </code></pre></div></div>
-<p>Ex.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-range( @bp-sm-min, @bp-sm-max, {
+<p>Ex.
+``` // Tablet only. .respond-to-range(@bp-sm-min, @bp-sm-max, {
     .title {
         font-size: 2em;
     }
-} );
+});</p>
 
-// Compiles to
+<p>// Compiles to</p>
 
-@media only all and (min-width: 37.5625em) and (max-width: 56.25em) {
+<p>@media only all and (min-width: 37.5625em) and (max-width: 56.25em) {
     .title {
         font-size: 2em;
     }
 }
-</code></pre></div></div>
+```</p>
 
         </div>
         
@@ -497,8 +497,8 @@
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/media-queries.md">
-                    <time datetime="2023-12-21 14:29:09 -0500">
-                         2:29:09 PM Dec 21, 2023
+                    <time datetime="2023-12-21 14:49:10 -0500">
+                         2:49:10 PM Dec 21, 2023
                     </time>
                 </a>
             </small>

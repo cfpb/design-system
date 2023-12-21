@@ -32,33 +32,11 @@ variation_groups:
           * Single column content only.
 
             ![]()
-      - variation_code_snippet: >-
-          <div class="o-well o-well__inkwell">
-              <p class="h4">Inkwell modifier</p>
-
-              <div class="a-tagline a-tagline__xlarge">
-                  <span class="u-usa-flag"></span>
-                  <div class="a-tagline_text">
-                    This is a tagline inside an inkwell.
-                  </div>
-              </div>
-
-              <p>
-                  Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-                  instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
-                  cu. <a href="#">Example link</a>.
-              </p>
-          </div>
-        variation_description:
-          T﻿he inkwell was originally developed for use on the
-          cf.gov home page, but was not implemented.
-        variation_name: Inkwell
-        variation_is_deprecated: true
     variation_group_name: Types
 guidelines: >-
   Wells should generally be text-based. If content must include imagery or
   videos, use the [featured content
-  module](/design-system/patterns/featured-content-module) instead. 
+  module](/design-system/patterns/featured-content-module) instead.
 
 
   Examples of types of content to include:

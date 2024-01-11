@@ -168,7 +168,10 @@ accessibility: >-
 
 
   ![](/design-system/images/uploads/white_type.png)
-related_items: "* [Typography
-  variables](https://cfpb.github.io/design-system/development/variables#typogra\
-  phy)"
+related_items: >-
+  * [Headings](https://cfpb.github.io/design-system/foundation/headings)
+
+  * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
+
+  * [Typography variables](https://cfpb.github.io/design-system/development/variables#typography)
 ---

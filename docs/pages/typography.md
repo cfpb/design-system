@@ -134,15 +134,13 @@ accessibility: >-
   ### Don't use type in illustrations or graphics
 
 
-  Type should not be used within an illustration or other graphic, as assistive technology such as screen readers can't make sense of the words.  
+  Type should generally not be used within an illustration or other graphic, as assistive technology such as screen readers can't make sense of the words.  
 
 
   ### Colored type is restricted
 
 
   Never use colored type, unless it’s a link.  This restriction includes all brand colors, including CFPB green.
-
-
 
 
   Although accessible, the combinations of black type on green or green type on black should never be used.

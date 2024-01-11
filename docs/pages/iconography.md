@@ -571,7 +571,10 @@ guidelines: >-
   ### Relative sizing
 
 
-  When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. In developing the icons, we created two sizing grids, a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.
+  When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. Refer to our guidelines on [how type should scale relative to neighboring text](https://cfpb.github.io/design-system/foundation/iconography#scale). 
+
+
+  When designing these icons, we used two sizing grids: a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.
 
 
   ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](/design-system/images/uploads/icons_relative_sizing.png)

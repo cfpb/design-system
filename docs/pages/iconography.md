@@ -35,7 +35,7 @@ variation_groups:
           ### Navigation icons
 
 
-          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left? |
+          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left |
 
           | ---- | ---------- | -------------- | ------- | ------ |
 
@@ -65,7 +65,7 @@ variation_groups:
           ### Status icons
 
 
-          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left? |
+          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left |
 
           | ---- | ---------- | -------------- | ------- | ------ |
 
@@ -101,7 +101,7 @@ variation_groups:
           ### Social/sharing icons
 
 
-          | icon | icon-square | canonical name | aliases (for searchability only) | Right-to-left? |
+          | icon | icon-square | canonical name | aliases (for searchability only) | Right-to-left |
 
           | ---- | ----------- | -------------- | ------- | ------ |
 
@@ -127,7 +127,7 @@ variation_groups:
           ### Communications icons
 
 
-          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left? |
+          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left |
 
           | ---- | ---------- | -------------- | ------- | ------ |
 
@@ -155,7 +155,7 @@ variation_groups:
           ### Document icons
 
 
-          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left? |
+          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left |
 
           | ---- | ---------- | -------------- | ------- | ------- |
 
@@ -199,7 +199,7 @@ variation_groups:
           ### Financial products, services, and concepts
 
 
-          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left? |
+          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left |
 
           | ---- | ---------- | -------------- | ------- | ------ |
 
@@ -273,7 +273,7 @@ variation_groups:
           ### Expense icons
 
 
-          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left? |
+          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left |
 
           | ---- | ---------- | -------------- | ------- | ------- |
 
@@ -331,7 +331,7 @@ variation_groups:
           ### Web application icons
 
 
-          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left? |
+          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left |
 
           | ---- | ---------- | -------------- | ------- | ------ |
 
@@ -435,7 +435,7 @@ variation_groups:
           ### Numerical icons
 
 
-          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left? |
+          | icon | icon-round | canonical name | aliases (for searchability only) | Right-to-left |
 
           | ---- | ---------- | -------------- | ------- | ------ |
 

@@ -16,7 +16,7 @@ variation_groups:
 
           0123456789</h4>
 
-        variation_name: ''
+        variation_name: ""
       - variation_code_snippet: |+
           <h3 style="font-weight: 500;">Avenir Next Medium</h3>
 
@@ -26,7 +26,7 @@ variation_groups:
           0123456789</h4>
 
 
-        variation_name: ''
+        variation_name: ""
       - variation_code_snippet: |-
           <h3>Avenir Next Regular</h3>
 
@@ -34,9 +34,8 @@ variation_groups:
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789</h4>
-        variation_name: ''
-    variation_group_description:
-      Avenir Next is the primary brand typeface and can
+        variation_name: ""
+    variation_group_description: Avenir Next is the primary brand typeface and can
       be used across all formats from print to digital. Its round and geometric
       letterforms are approachable and modern.
 guidelines: >-
@@ -124,21 +123,24 @@ description: A clear typographic hierarchy is critical to the effective
   scale, and capitalization to convey the relative importance of each heading
   within a document. Readability, accessibility, and font smoothing to allow all
   users to efficiently read and absorb textual information.
-use_cases: ''
-behavior: ''
+use_cases: ""
+behavior: ""
 accessibility: >-
   Web Content Accessibility (WCAG) standards ensure that content is accessible
   by everyone, regardless of any disability or user device. To learn more, refer
   to the [http://www.section508.gov](https://www.section508.gov/).
 
 
+  ### Don't use type in illustrations or graphics
+
+
+  Type should generally not be used within an illustration or other graphic, as assistive technology such as screen readers can't make sense of the words.  
+
+
   ### Colored type is restricted
 
 
   Never use colored type, unless it’s a link.  This restriction includes all brand colors, including CFPB green.
-
-
-  One exception to this rule falls within illustration or other graphics. In instances when a designer determines the best solution includes using colored type, color contrast needs to be checked. Please use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to check and confirm the accessibility of color combinations and type sizes.
 
 
   Although accessible, the combinations of black type on green or green type on black should never be used.

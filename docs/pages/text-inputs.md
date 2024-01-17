@@ -67,7 +67,7 @@ variation_groups:
 
           </h4>
 
-          <input class="a-text-input a-text-input__error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
+          <input class="a-text-input a-text-input__error" type="text" placeholder="Default" id="form-input-error" aria-describedby="form-input-error_message">
 
           <br><br>
 

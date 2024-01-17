@@ -5,14 +5,8 @@ status: Released
 variation_groups:
   - variation_group_name: Types
     variations:
-      - variation_code_snippet: >
+      - variation_code_snippet: >-
           <!--States are shown for demonstration purposes only-->
-
-          <h4>
-
-          Standard states
-
-          </h4>
 
           <input class="a-text-input"
                 type="text"

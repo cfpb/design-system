@@ -49,8 +49,22 @@ variation_groups:
 
           </h4>
 
-          <input class="a-text-input a-text-input__success" type="text" placeholder="Success" id="form-input-success" aria-describedby="form-input-success_message">
+          <input class="a-text-input a-text-input__success" type="text" placeholder="Default" id="form-input-success" aria-describedby="form-input-success_message">
 
+          <br><br>
+
+          <input class="a-text-input hover"
+                 type="text"
+                 id="textinput-example-hover"
+                 placeholder="Placeholder text"
+                 value="Hover">
+          <br><br>
+
+          <input class="a-text-input focus a-text-input__success"
+                 type="text"
+                       id="textinput-example-success"
+                 placeholder="Placeholder text"
+                 value="Focus">
           <br><br>
 
           <h4>
@@ -58,7 +72,22 @@ variation_groups:
           Warning states
 
           </h4>
-           <input class="a-text-input a-text-input__warning" type="text" placeholder="Warning" id="form-input-warning" aria-describedby="form-input-warning_message">
+           <input class="a-text-input a-text-input__warning" type="text" placeholder="Default" id="form-input-warning" aria-describedby="form-input-warning_message">
+          <br><br>
+
+
+          <input class="a-text-input hover"
+                 type="text"
+                 id="textinput-example-hover"
+                 placeholder="Placeholder text"
+                 value="Hover">
+          <br><br>
+
+          <input class="a-text-input focus a-text-input__warning"
+                 type="text"
+                       id="textinput-example-warning"
+                 placeholder="Placeholder text"
+                 value="Focus">
           <br><br>
 
           <h4>
@@ -78,18 +107,11 @@ variation_groups:
                  value="Hover">
           <br><br>
 
-          <input class="a-text-input focus"
+          <input class="a-text-input focus a-text-input__error"
                  type="text"
-                 id="textinput-example-focus"
+                       id="textinput-example-focus"
                  placeholder="Placeholder text"
                  value="Focus">
-          <br><br>
-
-          <input class="a-text-input"
-                 type="text"
-                 id="textinput-example-disabled"
-                 placeholder="Disabled"
-                 disabled>
           <br><br>
         variation_specs: ""
         variation_name: Text input

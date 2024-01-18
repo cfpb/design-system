@@ -3,7 +3,7 @@ layout: variation
 section: components
 status: Released
 variation_groups:
-  - variation_group_name: Standard expandables
+  - variation_group_name: Types
     variations:
       - variation_name: Standard expandable
         variation_description: The following combination is our recommended go-to expandable pattern.
@@ -38,7 +38,7 @@ variation_groups:
                   </p>
               </div>
           </div>
-        variation_specs: ''
+        variation_specs: ""
         variation_implementation: >-
           A new array of Expandable instances can be created with `const
           expandables = Expandable.init();`. Each instance has the following
@@ -113,18 +113,20 @@ variation_groups:
                   </p>
               </div>
           </div>
-        variation_description:
-          Sometimes you may want the expandable to be open by
+        variation_description: Sometimes you may want the expandable to be open by
           default. This is as easy as adding the `.o-expandable__onload-open`
           modifier to the `.o-expandable` block.
-        variation_implementation:
-          A new array of Expandable instances can be created
+        variation_implementation: A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
-    variation_group_description: ''
-  - variations:
-      - variation_code_snippet: >-
+      - variation_is_deprecated: false
+        variation_name: Expandable group
+        variation_description: In the default mode, users are able to have multiple
+          sections of an expandable group expanded at the same time, which
+          allows users to easily compare information that is available in
+          different sections.
+        variation_code_snippet: >-
           <div class="o-expandable-group">
               <div class="o-expandable o-expandable__padded">
                   <button class="o-expandable_header"
@@ -205,18 +207,16 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_name: Expandable group
-        variation_specs: ''
-        variation_description: >
-          In the default mode, users are able to have multiple sections of an
-          expandable group expanded at the same time, which allows users to
-          easily compare information that is available in different sections.
-        variation_implementation:
-          A new array of Expandable instances can be created
+      - variation_is_deprecated: false
+        variation_name: Accordion-style group
+        variation_implementation: A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
-      - variation_code_snippet: >-
+        variation_description: To show only one open expandable at a time, use an
+          accordion group. Add the `o-expandable-group__accordion` class to the
+          expandable group to activate the accordion mode.
+        variation_code_snippet: >-
           <div class="o-expandable-group o-expandable-group__accordion">
               <div class="o-expandable o-expandable__padded">
                   <button class="o-expandable_header"
@@ -333,32 +333,21 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description:
-          To show only one open expandable at a time, use an
-          accordion group. Add the `o-expandable-group__accordion` class to the
-          expandable group to activate the accordion mode.
-        variation_name: Accordion-style group
-        variation_implementation:
-          A new array of Expandable instances can be created
-          using a JavaScript API. For information, [open the "Implementation"
-          tab under Standard
-          expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
-    variation_group_name: Groups
-    variation_group_description: ''
-  - variation_group_name: Variations
-    variation_group_description: Should you need an expandable thing that is not
-      covered by the expandables above, see the [Transition
-      Patterns](https://cfpb.github.io/design-system/patterns/transition-patterns)
-      for making a component with expandable-like behavior.
-    variations: []
-guidelines: ''
+      - variation_is_deprecated: false
+        variation_name: Variations
+        variation_description: Should you need an expandable thing that is not covered
+          by the expandables above, see the [Transition
+          Patterns](https://cfpb.github.io/design-system/patterns/transition-patterns)
+          for making a component with expandable-like behavior.
+    variation_group_description: ""
+guidelines: ""
 eyebrow: Components
 title: Expandables
 description: Expandables are components that have additional content that can be
   opened (expanded) and closed (collapsed). They can appear on their own or in
   groups. They may be helpful for FAQ sections, schedules, and for conserving
   vertical space by collapsing secondary information on mobile devices.
-use_cases: ''
+use_cases: ""
 behavior: >
   ### Collapsed
 
@@ -381,5 +370,5 @@ related_items: "* [Expandables
   variables](https://cfpb.github.io/design-system/development/variables#expanda\
   bles) "
 last_updated: 2019-12-16T18:43:19.784Z
-research: ''
+research: ""
 ---

@@ -15,7 +15,7 @@ variation_groups:
               <button class="o-expandable_header"
                       title="Expand content">
                   <h3 class="h4 o-expandable_label">
-                      Expandable Header
+                      Expandable header
                   </h3>
                   <span class="o-expandable_cues">
                       <span class="o-expandable_cue-open" role="img" aria-label="Show">
@@ -91,7 +91,7 @@ variation_groups:
               <button class="o-expandable_header"
                       title="Expand content">
                   <h3 class="h4 o-expandable_label">
-                      Expandable Header
+                      Expandable header
                   </h3>
                   <span class="o-expandable_cues">
                       <span class="o-expandable_cue-open" role="img" aria-label="Show">
@@ -132,7 +132,7 @@ variation_groups:
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
-                          Expandable Header 1
+                          Expandable header
                       </h3>
                       <span class="o-expandable_cues">
                           <span class="o-expandable_cue-open" role="img" aria-label="Show">
@@ -158,7 +158,7 @@ variation_groups:
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
-                          Expandable Header 2
+                          Expandable header
                       </h3>
                       <span class="o-expandable_cues">
                           <span class="o-expandable_cue-open" role="img" aria-label="Show">
@@ -184,7 +184,7 @@ variation_groups:
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
-                          Expandable Header 3
+                          Expandable header
                       </h3>
                       <span class="o-expandable_cues">
                           <span class="o-expandable_cue-open" role="img" aria-label="Show">
@@ -222,7 +222,7 @@ variation_groups:
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
-                          Expandable Header 1
+                          Expandable header
                       </h3>
                       <span class="o-expandable_cues">
                           <span class="o-expandable_cue-open" role="img" aria-label="Show">
@@ -248,7 +248,7 @@ variation_groups:
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
-                          Expandable Header 2
+                          Expandable header
                       </h3>
                       <span class="o-expandable_cues">
                           <span class="o-expandable_cue-open" role="img" aria-label="Show">
@@ -310,7 +310,7 @@ variation_groups:
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
-                          Expandable Header 3
+                          Expandable header
                       </h3>
                       <span class="o-expandable_cues">
                           <span class="o-expandable_cue-open" role="img" aria-label="Show">

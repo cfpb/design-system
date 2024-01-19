@@ -11,7 +11,7 @@ variation_groups:
 
           <h4>
 
-          Default states
+          States
 
           </h4>
 
@@ -46,13 +46,12 @@ variation_groups:
 
           <br>
 
-          <br><br>
+          <br>
 
-          <h3> Validation status
 
           <h4>
 
-          Success states
+          Validation status
 
           </h4>
 

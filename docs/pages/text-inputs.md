@@ -5,51 +5,57 @@ status: Released
 variation_groups:
   - variation_group_name: Single line text inputs
     variations:
-      - variation_code_snippet: |-
+      - variation_code_snippet: >-
           <!--States are shown for demonstration purposes only-->
+
           <h4>
+
           States
+
           </h4>
+
           <input class="a-text-input"
                 type="text"
                 id="textinput-example-default"
                 placeholder="Placeholder text"
-          value="Default">
+          value="Enabled">
+
           <br><br>
+
           <input class="a-text-input hover"
                  type="text"
                  id="textinput-example-hover"
                  placeholder="Placeholder text"
                  value="Hover">
           <br><br>
+
           <input class="a-text-input focus"
                  type="text"
                  id="textinput-example-focus"
                  placeholder="Placeholder text"
                  value="Focus">
           <br><br>
+
           <input class="a-text-input"
                  type="text"
                  id="textinput-example-disabled"
                  placeholder="Disabled"
                  disabled>
-        variation_specs: ""
-        variation_name: Text input
-        variation_description: Use when the expected user input is a single line of
-          text, for example email addresses, names, or search queries. The
-          length of the input field should be proportional to the expected user
-          input, so that the user can see what they've typed without having to
-          scroll to reveal hidden content.
-      - variation_is_deprecated: false
-        variation_name: Success status
-        variation_code_snippet: >-
-          <!--States are shown for demonstration purposes only--><h4>
+          <br>
 
-          States
+          <br>
+
+          <br><br>
+
+          <h3> Verification status
+
+          <h4>
+
+          Success
 
           </h4>
 
-          <input class="a-text-input a-text-input__success" type="text" placeholder="Default" id="form-input-success" aria-describedby="form-input-success_message">
+          <input class="a-text-input a-text-input__success" type="text" placeholder="Enabled" id="form-input-success" aria-describedby="form-input-success_message">
 
           <br><br>
 
@@ -65,6 +71,59 @@ variation_groups:
                        id="textinput-example-success"
                  placeholder="Placeholder text"
                  value="Focus">
+          <br><br><br>
+
+          <h4>
+
+          Warning
+
+          </h4>
+           <input class="a-text-input a-text-input__warning" type="text" placeholder="Enabled" id="form-input-warning" aria-describedby="form-input-warning_message">
+          <br><br>
+
+          <input class="a-text-input hover"
+                 type="text"
+                 id="textinput-example-hover"
+               placeholder="Placeholder text"
+                 value="Hover">
+          <br><br>
+
+          <input class="a-text-input focus a-text-input__warning"
+                 type="text"
+                       id="textinput-example-warning"
+                 placeholder="Placeholder text"
+                 value="Focus">
+          <br><br><br>
+
+          <h4>
+
+          Error
+
+          </h4>
+
+          <input class="a-text-input a-text-input__error" type="text" placeholder="Enabled" id="form-input-error" aria-describedby="form-input-error_message">
+
+          <br><br>
+
+          <input class="a-text-input hover"
+                 type="text"
+                 id="textinput-example-hover"
+                 placeholder="Placeholder text"
+                 value="Hover">
+          <br><br>
+
+          <input class="a-text-input focus a-text-input__error"
+                 type="text"
+                       id="textinput-example-focus"
+                 placeholder="Placeholder text"
+                 value="Focus">
+        variation_specs: ""
+        variation_name: Text input
+        variation_description: Use when the expected user input is a single line of
+          text, for example email addresses, names, or search queries. The
+          length of the input field should be proportional to the expected user
+          input, so that the user can see what they've typed without having to
+          scroll to reveal hidden content.
       - variation_is_deprecated: false
         variation_name: Warning status
         variation_code_snippet: >-
@@ -89,6 +148,8 @@ variation_groups:
                        id="textinput-example-warning"
                  placeholder="Placeholder text"
                  value="Focus">
+
+          <br><br>
       - variation_is_deprecated: false
         variation_name: Error status
         variation_code_snippet: >-

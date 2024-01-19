@@ -133,32 +133,6 @@ variation_groups:
           input, so that the user can see what they've typed without having to
           scroll to reveal hidden content.
       - variation_is_deprecated: false
-        variation_name: Warning status
-        variation_code_snippet: >-
-          <!--States are shown for demonstration purposes only--><h4>
-
-          States
-
-          </h4>
-           <input class="a-text-input a-text-input__warning" type="text" placeholder="Default" id="form-input-warning" aria-describedby="form-input-warning_message">
-          <br><br>
-
-
-          <input class="a-text-input hover"
-                 type="text"
-                 id="textinput-example-hover"
-                 placeholder="Placeholder text"
-                 value="Hover">
-          <br><br>
-
-          <input class="a-text-input focus a-text-input__warning"
-                 type="text"
-                       id="textinput-example-warning"
-                 placeholder="Placeholder text"
-                 value="Focus">
-
-          <br><br>
-      - variation_is_deprecated: false
         variation_name: Error status
         variation_code_snippet: >-
           <!--States are shown for demonstration purposes only--><h4>

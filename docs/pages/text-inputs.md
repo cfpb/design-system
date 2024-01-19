@@ -3,7 +3,7 @@ layout: variation
 section: components
 status: Released
 variation_groups:
-  - variation_group_name: Types
+  - variation_group_name: Single line text inputs
     variations:
       - variation_code_snippet: |-
           <!--States are shown for demonstration purposes only-->
@@ -175,7 +175,7 @@ variation_groups:
               </div>
           </div>
     variation_group_description: ""
-  - variation_group_name: Text area inputs
+  - variation_group_name: Multiple line text inputs
     variations:
       - variation_is_deprecated: false
         variation_name: Text area input

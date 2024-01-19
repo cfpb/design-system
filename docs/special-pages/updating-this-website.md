@@ -24,12 +24,8 @@ description: >-
 
   ## Editing pages
 
-  ### Getting changes approved
-
   <strong>Before making a change to a pattern or its documentation, visit Hubcap to read our Design System governance policy.</strong> It contains guidance and acceptance criteria for making minor and major changes to the Design System. 
 
-
-  ### Editing in Netlify
 
   We use a content management system called [Netlify CMS](https://www.netlifycms.org/).
 

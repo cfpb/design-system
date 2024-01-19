@@ -8,9 +8,17 @@ variation_groups:
       - variation_code_snippet: >-
           <!--States are shown for demonstration purposes only-->
 
+          <input class="a-text-input"
+                type="text"
+                id="textinput-example-default"
+                placeholder="Placeholder text"
+          value="Input text">
+
+          <br><br><br>
+
           <h4>
 
-          States
+          Default states
 
           </h4>
 
@@ -47,11 +55,11 @@ variation_groups:
 
           <br><br>
 
-          <h3> Verification status
+          <h3> Validation status
 
           <h4>
 
-          Success
+          Success states
 
           </h4>
 
@@ -75,7 +83,7 @@ variation_groups:
 
           <h4>
 
-          Warning
+          Warning states
 
           </h4>
            <input class="a-text-input a-text-input__warning" type="text" placeholder="Enabled" id="form-input-warning" aria-describedby="form-input-warning_message">
@@ -97,7 +105,7 @@ variation_groups:
 
           <h4>
 
-          Error
+          Error states
 
           </h4>
 

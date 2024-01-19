@@ -8,13 +8,6 @@ variation_groups:
       - variation_code_snippet: >-
           <!--States are shown for demonstration purposes only-->
 
-          <input class="a-text-input"
-                type="text"
-                id="textinput-example-default"
-                placeholder="Placeholder text"
-          value="Input text">
-
-          <br><br><br>
 
           <h4>
 
@@ -63,68 +56,15 @@ variation_groups:
 
           </h4>
 
-          <input class="a-text-input a-text-input__success" type="text" placeholder="Enabled" id="form-input-success" aria-describedby="form-input-success_message">
+          <input class="a-text-input a-text-input__success" type="text" placeholder="Success" id="form-input-success" aria-describedby="form-input-success_message">
 
           <br><br>
 
-          <input class="a-text-input hover"
-                 type="text"
-                 id="textinput-example-hover"
-                 placeholder="Placeholder text"
-                 value="Hover">
-          <br><br>
-
-          <input class="a-text-input focus a-text-input__success"
-                 type="text"
-                       id="textinput-example-success"
-                 placeholder="Placeholder text"
-                 value="Focus">
-          <br><br><br>
-
-          <h4>
-
-          Warning states
-
-          </h4>
-           <input class="a-text-input a-text-input__warning" type="text" placeholder="Enabled" id="form-input-warning" aria-describedby="form-input-warning_message">
-          <br><br>
-
-          <input class="a-text-input hover"
-                 type="text"
-                 id="textinput-example-hover"
-               placeholder="Placeholder text"
-                 value="Hover">
-          <br><br>
-
-          <input class="a-text-input focus a-text-input__warning"
-                 type="text"
-                       id="textinput-example-warning"
-                 placeholder="Placeholder text"
-                 value="Focus">
-          <br><br><br>
-
-          <h4>
-
-          Error states
-
-          </h4>
-
-          <input class="a-text-input a-text-input__error" type="text" placeholder="Enabled" id="form-input-error" aria-describedby="form-input-error_message">
+          <input class="a-text-input a-text-input__warning" type="text" placeholder="Warning" id="form-input-success" aria-describedby="form-input-warning_message">
 
           <br><br>
 
-          <input class="a-text-input hover"
-                 type="text"
-                 id="textinput-example-hover"
-                 placeholder="Placeholder text"
-                 value="Hover">
-          <br><br>
-
-          <input class="a-text-input focus a-text-input__error"
-                 type="text"
-                       id="textinput-example-focus"
-                 placeholder="Placeholder text"
-                 value="Focus">
+          <input class="a-text-input a-text-input__error" type="text" placeholder="Error" id="form-input-success" aria-describedby="form-input-warning_message">
         variation_specs: ""
         variation_name: Text input
         variation_description: Use when the expected user input is a single line of
@@ -132,32 +72,6 @@ variation_groups:
           length of the input field should be proportional to the expected user
           input, so that the user can see what they've typed without having to
           scroll to reveal hidden content.
-      - variation_is_deprecated: false
-        variation_name: Error status
-        variation_code_snippet: >-
-          <!--States are shown for demonstration purposes only--><h4>
-
-          States
-
-          </h4>
-
-          <input class="a-text-input a-text-input__error" type="text" placeholder="Default" id="form-input-error" aria-describedby="form-input-error_message">
-
-          <br><br>
-
-          <input class="a-text-input hover"
-                 type="text"
-                 id="textinput-example-hover"
-                 placeholder="Placeholder text"
-                 value="Hover">
-          <br><br>
-
-          <input class="a-text-input focus a-text-input__error"
-                 type="text"
-                       id="textinput-example-focus"
-                 placeholder="Placeholder text"
-                 value="Focus">
-          <br><br>
       - variation_is_deprecated: false
         variation_name: Text input (full width)
         variation_code_snippet: |-

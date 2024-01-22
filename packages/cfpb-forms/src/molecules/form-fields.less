@@ -127,11 +127,23 @@
           border-color: @input-border__error;
           outline: 1px solid @input-border__error;
         }
+
+        &:hover::before,
+        &.hover::before {
+          border-color: @input-border__hover;
+          outline-color: @input-border__hover;
+        }
       }
 
       .a-checkbox {
-        &:focus + .a-label::before,
-        &.focus + .a-label::before {
+        &:hover + .a-label::before,
+        &.hover + .a-label::before {
+          border-color: @input-border__hover;
+          outline-color: @input-border__hover;
+        }
+
+        &:focus:not(:hover, .hover) + .a-label::before,
+        &.focus:not(:hover, .hover) + .a-label::before {
           border-color: @input-border__error;
           box-shadow: 0 0 0 1px @input-border__error;
         }
@@ -150,11 +162,23 @@
           border-color: @input-border__warning;
           outline: 1px solid @input-border__warning;
         }
+
+        &:hover::before,
+        &.hover::before {
+          border-color: @input-border__hover;
+          outline-color: @input-border__hover;
+        }
       }
 
       .a-checkbox {
-        &:focus + .a-label::before,
-        &.focus + .a-label::before {
+        &:hover + .a-label::before,
+        &.hover + .a-label::before {
+          border-color: @input-border__hover;
+          outline-color: @input-border__hover;
+        }
+
+        &:focus:not(:hover, .hover) + .a-label::before,
+        &.focus:not(:hover, .hover) + .a-label::before {
           border-color: @input-border__warning;
           box-shadow: 0 0 0 1px @input-border__warning;
         }
@@ -173,11 +197,23 @@
           border-color: @input-border__success;
           outline: 1px solid @input-border__success;
         }
+
+        &:hover::before,
+        &.hover::before {
+          border-color: @input-border__hover;
+          outline-color: @input-border__hover;
+        }
       }
 
       .a-checkbox {
-        &:focus + .a-label::before,
-        &.focus + .a-label::before {
+        &:hover + .a-label::before,
+        &.hover + .a-label::before {
+          border-color: @input-border__hover;
+          outline-color: @input-border__hover;
+        }
+
+        &:focus:not(:hover, .hover) + .a-label::before,
+        &.focus:not(:hover, .hover) + .a-label::before {
           border-color: @input-border__success;
           box-shadow: 0 0 0 1px @input-border__success;
         }

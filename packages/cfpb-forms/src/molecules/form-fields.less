@@ -142,10 +142,11 @@
           outline-color: @input-border__hover;
         }
 
-        &:focus:not(:hover, .hover) + .a-label::before,
-        &.focus:not(:hover, .hover) + .a-label::before {
+        &:focus + .a-label::before,
+        &.focus + .a-label::before {
           border-color: @input-border__error;
           box-shadow: 0 0 0 1px @input-border__error;
+          outline-color: @input-border__error;
         }
 
         &:focus + .a-label,
@@ -177,10 +178,11 @@
           outline-color: @input-border__hover;
         }
 
-        &:focus:not(:hover, .hover) + .a-label::before,
-        &.focus:not(:hover, .hover) + .a-label::before {
+        &:focus + .a-label::before,
+        &.focus + .a-label::before {
           border-color: @input-border__warning;
           box-shadow: 0 0 0 1px @input-border__warning;
+          outline-color: @input-border__warning;
         }
 
         &:focus + .a-label,
@@ -212,10 +214,11 @@
           outline-color: @input-border__hover;
         }
 
-        &:focus:not(:hover, .hover) + .a-label::before,
-        &.focus:not(:hover, .hover) + .a-label::before {
+        &:focus + .a-label::before,
+        &.focus + .a-label::before {
           border-color: @input-border__success;
           box-shadow: 0 0 0 1px @input-border__success;
+          outline-color: @input-border__success;
         }
 
         &:focus + .a-label,

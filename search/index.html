@@ -6430,6 +6430,7 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                     'variation_name1': 'Text input',
                     'variation_description1': "Use when the expected user input is a single line of text, for example email addresses, names, or search queries. The length of the input field should be proportional to the expected user input, so that the user can see what they’ve typed without having to scroll to reveal hidden content.\n",
                     'variation_code_snippet1': `&lt;!--States are shown for demonstration purposes only--&gt;
+
 &lt;h4&gt;
 States
 &lt;/h4&gt;
@@ -6437,7 +6438,7 @@ States
       type=&quot;text&quot;
       id=&quot;textinput-example-default&quot;
       placeholder=&quot;Placeholder text&quot;
-value=&quot;Default&quot;&gt;
+value=&quot;Enabled&quot;&gt;
 &lt;br&gt;&lt;br&gt;
 &lt;input class=&quot;a-text-input hover&quot;
        type=&quot;text&quot;
@@ -6456,16 +6457,18 @@ value=&quot;Default&quot;&gt;
        id=&quot;textinput-example-disabled&quot;
        placeholder=&quot;Disabled&quot;
        disabled&gt;
-&lt;br&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
 &lt;h4&gt;
-Status
+Validation status
 &lt;/h4&gt;
 &lt;input class=&quot;a-text-input a-text-input__success&quot; type=&quot;text&quot; placeholder=&quot;Success&quot; id=&quot;form-input-success&quot; aria-describedby=&quot;form-input-success_message&quot;&gt;
 &lt;br&gt;&lt;br&gt;
- &lt;input class=&quot;a-text-input a-text-input__warning&quot; type=&quot;text&quot; placeholder=&quot;Warning&quot; id=&quot;form-input-warning&quot; aria-describedby=&quot;form-input-warning_message&quot;&gt;
+&lt;input class=&quot;a-text-input a-text-input__warning&quot; type=&quot;text&quot; placeholder=&quot;Warning&quot; id=&quot;form-input-success&quot; aria-describedby=&quot;form-input-warning_message&quot;&gt;
 &lt;br&gt;&lt;br&gt;
-&lt;input class=&quot;a-text-input a-text-input__error&quot; type=&quot;text&quot; placeholder=&quot;Error&quot; id=&quot;form-input-error&quot; aria-describedby=&quot;form-input-error_message&quot;&gt;
-`,
+&lt;input class=&quot;a-text-input a-text-input__error&quot; type=&quot;text&quot; placeholder=&quot;Error&quot; id=&quot;form-input-success&quot; aria-describedby=&quot;form-input-warning_message&quot;&gt;`,
                 
                     'variation_name2': 'Text input (full width)',
                     'variation_description2': "\n",

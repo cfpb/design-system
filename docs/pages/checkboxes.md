@@ -104,7 +104,11 @@ variation_groups:
           <div class="m-form-field m-form-field__checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_helper">
               <label class="a-label" for="test_checkbox_basic_helper">
-                Success
+                  Checkbox label
+                  <small class="a-label_helper">
+                      (This is optional helper text)
+                  </small>
+              </label>
               </label>
           </div>
       - variation_is_deprecated: false

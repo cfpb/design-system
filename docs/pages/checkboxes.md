@@ -58,7 +58,7 @@ variation_groups:
         variation_name: Standard checkbox
         variation_specs: ''
       - variation_is_deprecated: false
-        variation_name: Variation status
+        variation_name: Validation status
         variation_code_snippet: >-
           <!--Success-->
 

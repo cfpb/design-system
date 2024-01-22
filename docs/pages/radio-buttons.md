@@ -64,11 +64,10 @@ variation_groups:
                      checked>
               <label class="a-label" for="test_radio_basic_disabled_selected">Disabled/selected</label>
           </div>
-        variation_specs: ''
-        variation_name: Standard radio button
-      - variation_name: Standard radio button with helper text
-        variation_description:
-          Radio button inputs can have labels that span multiple
+        variation_specs: ""
+        variation_name: Radio button
+      - variation_name: Radio button (with helper text)
+        variation_description: Radio button inputs can have labels that span multiple
           lines and can include optional helper text that appears below the main
           label text.
         variation_code_snippet: |-
@@ -81,11 +80,10 @@ variation_groups:
                   </small>
               </label>
           </div>
-        variation_specs: ''
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Large target area radio button
-        variation_description:
-          For better usability, consider using radio buttons with
+        variation_description: For better usability, consider using radio buttons with
           large target areas. These are easier to interact with (especially on
           smaller screens) and harder to miss. They are especially desirable
           when the form will have heavy mobile usage. Given the amount of real
@@ -150,9 +148,9 @@ variation_groups:
                      checked>
               <label class="a-label" for="test_radio_lg_disabled_selected">Disabled/selected</label>
           </div>
-        variation_specs: ''
+        variation_specs: ""
       - variation_is_deprecated: false
-        variation_name: Large target area radio button with helper text
+        variation_name: Large target area radio button (with helper text)
         variation_code_snippet: |-
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_helper">
@@ -163,7 +161,7 @@ variation_groups:
                   </small>
                 </label>
           </div>
-guidelines: ''
+guidelines: ""
 eyebrow: Components
 title: Radio buttons
 description: Use radio buttons when the user can select exactly one option from
@@ -181,10 +179,10 @@ use_cases: >-
 
 
   Consider using radio buttons with large target areas. If these won’t fit into your design and you need to use the standard radio button make sure the target area is at least 45 x 45 px and includes the label text.
-behavior: ''
+behavior: ""
 accessibility: There are some issues with Voiceover reading radio buttons. To
   get around this, consider using the aria-describedby attribute.
-related_items: ''
+related_items: ""
 last_updated: 2020-01-28T15:55:47.394Z
-research: ''
+research: ""
 ---

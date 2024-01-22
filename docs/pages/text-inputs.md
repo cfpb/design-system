@@ -45,7 +45,7 @@ variation_groups:
 
           <h4>
 
-          Statuses
+          Validation status
 
           </h4>
 
@@ -56,38 +56,6 @@ variation_groups:
           <br><br>
 
           <input class="a-text-input a-text-input__error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
-
-          <br><br>
-
-          <h4>
-
-          Statuses (Hover)
-
-          </h4>
-
-          <input class="a-text-input a-text-input__success hover" type="text" placeholder="Success w/ hover" id="form-input-success" aria-describedby="form-input-success_message">
-
-          <br><br>
-           <input class="a-text-input a-text-input__warning hover" type="text" placeholder="Warning w/ hover" id="form-input-warning" aria-describedby="form-input-warning_message">
-          <br><br>
-
-          <input class="a-text-input a-text-input__error hover" type="text" placeholder="Error w/ hover" id="form-input-error" aria-describedby="form-input-error_message">
-
-          <br><br>
-
-          <h4>
-
-          Statuses (Hover & Focus)
-
-          </h4>
-
-          <input class="a-text-input a-text-input__success hover focus" type="text" placeholder="Success w/ hover & focus" id="form-input-success" aria-describedby="form-input-success_message">
-
-          <br><br>
-           <input class="a-text-input a-text-input__warning hover focus" type="text" placeholder="Warning w/ hover & focus" id="form-input-warning" aria-describedby="form-input-warning_message">
-          <br><br>
-
-          <input class="a-text-input a-text-input__error hover focus" type="text" placeholder="Error w/ hover & focus" id="form-input-error" aria-describedby="form-input-error_message">
         variation_specs: ''
         variation_name: Text input
         variation_description:

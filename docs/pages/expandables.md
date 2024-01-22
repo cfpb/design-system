@@ -5,7 +5,7 @@ status: Released
 variation_groups:
   - variation_group_name: Types
     variations:
-      - variation_name: Standard expandable
+      - variation_name: Expandable
         variation_description: The following combination is our recommended go-to expandable pattern.
         variation_code_snippet: >-
           <div class="o-expandable
@@ -81,7 +81,7 @@ variation_groups:
 
 
           * {string} The text of the expandable’s label.
-      - variation_name: Standard expandable (open on load)
+      - variation_name: Expandable (open on load)
         variation_code_snippet: >-
           <div class="o-expandable
                       o-expandable__padded
@@ -121,7 +121,7 @@ variation_groups:
           tab under Standard
           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
       - variation_is_deprecated: false
-        variation_name: Expandable group
+        variation_name: Expandable group (default)
         variation_description: In the default mode, users are able to have multiple
           sections of an expandable group expanded at the same time, which
           allows users to easily compare information that is available in
@@ -208,7 +208,7 @@ variation_groups:
               </div>
           </div>
       - variation_is_deprecated: false
-        variation_name: Accordion-style group
+        variation_name: Expandable group (accordion)
         variation_implementation: A new array of Expandable instances can be created
           using a JavaScript API. For information, [open the "Implementation"
           tab under Standard

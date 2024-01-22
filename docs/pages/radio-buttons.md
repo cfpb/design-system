@@ -74,7 +74,7 @@ variation_groups:
           <div class="m-form-field m-form-field__radio">
               <input class="a-radio" type="radio" id="test_radio_basic_helper">
               <label class="a-label" for="test_radio_basic_helper">
-                  Radio button label
+                  Label
                   <small class="a-label_helper">
                       (This is optional helper text)
                   </small>
@@ -155,7 +155,7 @@ variation_groups:
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_helper">
               <label class="a-label" for="test_radio_lg_helper">
-          Radio button label
+          Label
                   <small class="a-label_helper">
                       (This is optional helper text)
                   </small>

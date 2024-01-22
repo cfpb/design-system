@@ -348,11 +348,11 @@ description: Expandables are components that have additional content that can be
   groups. They may be helpful for FAQ sections, schedules, and for conserving
   vertical space by collapsing secondary information on mobile devices.
 use_cases: ""
-behavior: >
+behavior: >-
   ### Collapsed
 
 
-  The default collapsed state should include the expand/collapse minicon within a circle and a label (if space allows). The Show/Hide label can be hidden at narrower screen widths to prevent titles prematurely breaking onto multiple lines and to reduced visual clutter.
+  The default collapsed state should include a heading and the expand/collapse minicon within a circle.
 
 
   ### Expanded

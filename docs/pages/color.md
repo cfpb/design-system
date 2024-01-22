@@ -1,7 +1,5 @@
 ---
-layout: variation
 section: foundation
-status: Released
 variation_groups:
   - variation_group_name: Palettes
     variations:
@@ -1615,11 +1613,14 @@ variation_groups:
             </tr>
 
             </tbody></table>
-content_guidelines: ''
+content_guidelines: ""
+eyebrow: Basics
 title: Color
+layout: variation
+status: Released
 description: A minimal palette, clear hierarchy, and ample whitespace ensure a
   voice of authority and expertise in communication. The following sets of
-  colors maintain CFPB brand cohesion and create accessible graphics.
+  colors maintain CFPB brand cohesion and create accessible graphics. text
 use_cases: >-
   When used properly, color can help clarify relationships between data, provide
   emphasis for certain data points, and maintain a consistent brand voice. When
@@ -1652,7 +1653,7 @@ use_cases: >-
 
 
   ![Sequential example](/design-system/images/uploads/sequential-color-1.png)
-behavior: ''
+behavior: ""
 accessibility: >-
   Color should never be solely relied on to convey meaning in a visualization
   because of accessibility standards for people who are blind and visually
@@ -1692,5 +1693,4 @@ accessibility: >-
     * For large text, a contrast ratio of only 3 : 1 is necessary. Large regular text is at least 18pt/24px, while large bold text is 14pt/18px.
     * Text or images of text that are either pure decoration or not visible, or are part of a logo, picture that contains significant other visual content, or inactive UI components (like disabled form controls) do not have a color contrast requirement.
 last_updated: 2019-08-30T18:31:00.000Z
-eyebrow: Basics
 ---

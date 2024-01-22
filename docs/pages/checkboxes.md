@@ -5,6 +5,14 @@ section: components
 variation_groups:
   - variations:
       - variation_code_snippet: >-
+          <!--States are shown for demonstration purposes only-->
+
+          <h4>
+
+          States
+
+          </h4>
+
           <div class="m-form-field m-form-field__checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox">
               <label class="a-label" for="test_checkbox">Default</label>
@@ -54,26 +62,20 @@ variation_groups:
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
               <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
           </div>
-        variation_description: ''
-        variation_name: Standard checkbox
-        variation_specs: ''
-      - variation_is_deprecated: false
-        variation_name: Validation status
-        variation_code_snippet: >-
+
+          <br><br>
+
+          <h4>
+
+          Validation status
+
+          </h4>
+
           <!--Success-->
 
           <div class="m-form-field m-form-field__checkbox m-form-field__checkbox__success">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_success">
               <label class="a-label" for="test_checkbox_success">Success</label>
-          </div>
-
-          <br>
-
-          <!--Success-(Focus)-->
-
-          <div class="m-form-field m-form-field__checkbox m-form-field__checkbox__success">
-              <input class="a-checkbox focus" type="checkbox" id="test_checkbox_success_focus">
-              <label class="a-label" for="test_checkbox_success_focus">Success (Focus)</label>
           </div>
 
           <br>
@@ -87,30 +89,15 @@ variation_groups:
 
           <br>
 
-          <!--Warning-(Focus)-->
-
-          <div class="m-form-field m-form-field__checkbox m-form-field__checkbox__warning">
-              <input class="a-checkbox focus" type="checkbox" id="test_checkbox_warning_focus">
-              <label class="a-label" for="test_checkbox_warning_focus">Warning (Focus)</label>
-          </div>
-
-          <br>
-
           <!--Error-->
 
           <div class="m-form-field m-form-field__checkbox m-form-field__checkbox__error">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_error">
               <label class="a-label" for="test_checkbox_error">Error</label>
           </div>
-
-          <br>
-
-          <!--Error-(Focus)-->
-
-          <div class="m-form-field m-form-field__checkbox m-form-field__checkbox__error">
-              <input class="a-checkbox focus" type="checkbox" id="test_checkbox_error_focus">
-              <label class="a-label" for="test_checkbox_error_focus">Error (Focus)</label>
-          </div>
+        variation_description: ''
+        variation_name: Standard checkbox
+        variation_specs: ''
       - variation_is_deprecated: false
         variation_name: Standard checkbox with helper text
         variation_code_snippet: >-

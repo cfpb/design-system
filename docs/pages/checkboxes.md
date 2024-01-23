@@ -96,10 +96,10 @@ variation_groups:
               <label class="a-label" for="test_checkbox_error">Error</label>
           </div>
         variation_description: ''
-        variation_name: Standard checkbox
+        variation_name: Checkbox
         variation_specs: ''
       - variation_is_deprecated: false
-        variation_name: Standard checkbox with helper text
+        variation_name: Checkbox (with helper text)
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_helper">
@@ -188,7 +188,7 @@ variation_groups:
           -->
         variation_specs: ''
       - variation_is_deprecated: false
-        variation_name: Large target area checkbox with helper text
+        variation_name: Large target area checkbox (with helper text)
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__checkbox
           m-form-field__lg-target">

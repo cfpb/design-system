@@ -24,6 +24,8 @@ description: >-
 
   ## Editing pages
 
+  <strong>Before making a change to a pattern or its documentation, visit Hubcap to read our Design System governance policy.</strong> It contains guidance and acceptance criteria for making minor and major changes to the Design System. 
+
 
   We use a content management system called [Netlify CMS](https://www.netlifycms.org/).
 
@@ -210,7 +212,8 @@ description: >-
   ## Creating new pages
 
 
-  If you're adding a new standard to the Design System, make sure it's been discussed and approved first in Hubcap, our internal repository.
+  <strong>Before adding a pattern to the Design System, visit Hubcap to read our Design System governance policy.</strong> It contains guidance and acceptance criteria for creating new patterns. 
+
 
   1. To create a new page from scratch, click the "Create new page" button below.
 

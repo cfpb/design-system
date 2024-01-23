@@ -52,15 +52,14 @@ variation_groups:
                           type="submit">Go</button>
               </form>
           </nav>
-        variation_description: ""
+        variation_description: ''
         variation_name: Default pagination
-        variation_implementation: To enable the component to jump directly to the
+        variation_implementation:
+          To enable the component to jump directly to the
           paginated content, include an `id` on a wrapper of the paginated
           content (or an element directly above it), e.g.,
           `id="pagination_content"`.
-        variation_specs: "[Color and sizing
-          variables](https://cfpb.github.io/design-system/components/variables#\
-          pagination)"
+        variation_specs: ''
       - variation_code_snippet: >-
           <nav class="m-pagination" role="navigation" aria-label="Pagination">
 
@@ -92,13 +91,15 @@ variation_groups:
           <button class="a-btn a-btn__link m-pagination_btn-submit" id="m-pagination_btn-submit-first-last" type="submit">Go</button> </form>
 
           </nav>
-        variation_description: When on the first or last page of paginated content, be
+        variation_description:
+          When on the first or last page of paginated content, be
           sure to disable the appropriate buttons by adding the
           `a_btn__disabled` modifier and removing their `href` attribute.
-        variation_jinja_code_snippet: ""
+        variation_jinja_code_snippet: ''
         variation_name: First and last pages
     variation_group_name: Standard pagination
-    variation_group_description: Pagination consists of buttons to navigate through
+    variation_group_description:
+      Pagination consists of buttons to navigate through
       content, along with an inline form (input field, submit button) to enable
       users to navigate to specific pages by number.
 guidelines: >-
@@ -111,7 +112,7 @@ eyebrow: Components
 title: Pagination
 description: Pagination is used for splitting up content or data into several
   pages, so as to make it easier for users to consume information.
-use_cases: ""
+use_cases: ''
 behavior: >-
   On small screens, the buttons display next to each other, stacked on top of
   the form (`@bp-xs-max`).
@@ -122,10 +123,10 @@ behavior: >-
   | ------------ | ------------ |
 
   | ![Pagination at breakpoints above 600 px](/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.03-pm.png) | ![Pagination at breakpoints below 601 px](/design-system/images/uploads/screen-shot-2021-01-22-at-5.02.30-pm.png) |
-accessibility: ""
+accessibility: ''
 related_items: "* [Pagination
   variables](https://cfpb.github.io/design-system/development/variables#paginat\
   ion-1)"
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

@@ -61,19 +61,19 @@
 //
 
 .u-hide-on-mobile {
-  // Mobile size.
-  .respond-to-max( @bp-xs-max, {
+  // Mobile only.
+  .respond-to-max(@bp-xs-max, {
     display: none;
-  } );
+  });
 }
 
 .u-show-on-mobile {
   display: none;
 
-  // Mobile size.
-  .respond-to-max( @bp-xs-max, {
+  // Mobile only.
+  .respond-to-max(@bp-xs-max, {
     display: block;
-  } );
+  });
 }
 
 //

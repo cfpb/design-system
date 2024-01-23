@@ -131,13 +131,16 @@ accessibility: >-
   to the [http://www.section508.gov](https://www.section508.gov/).
 
 
+  ### Don't use type in illustrations or graphics
+
+
+  Type should generally not be used within an illustration or other graphic, as assistive technology such as screen readers can't make sense of the words.  
+
+
   ### Colored type is restricted
 
 
   Never use colored type, unless it’s a link.  This restriction includes all brand colors, including CFPB green.
-
-
-  One exception to this rule falls within illustration or other graphics. In instances when a designer determines the best solution includes using colored type, color contrast needs to be checked. Please use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to check and confirm the accessibility of color combinations and type sizes.
 
 
   Although accessible, the combinations of black type on green or green type on black should never be used.
@@ -165,7 +168,10 @@ accessibility: >-
 
 
   ![](/design-system/images/uploads/white_type.png)
-related_items: "* [Typography
-  variables](https://cfpb.github.io/design-system/development/variables#typogra\
-  phy)"
+related_items: >-
+  * [Headings](https://cfpb.github.io/design-system/foundation/headings)
+
+  * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
+
+  * [Typography variables](https://cfpb.github.io/design-system/development/variables#typography)
 ---

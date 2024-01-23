@@ -41,15 +41,15 @@
   }
 }
 
-// Desktop and tablet size.
-.respond-to-min( @bp-sm-min, {
+// Tablet and above.
+.respond-to-min(@bp-sm-min, {
   .o-table__striped {
     .striped-table();
   }
-} );
+});
 
 // We don't want responsive table styles applied to the `print` media type
-// so we're not using .respond-to-max( @bp-xs-max ) here.
+// so we're not using .respond-to-max(@bp-xs-max ) here.
 @media only screen and (max-width: @bp-xs-max) {
   .o-table {
     width: 100%;

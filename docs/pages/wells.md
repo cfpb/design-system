@@ -18,7 +18,7 @@ variation_groups:
           </ul>
 
           </div>
-        variation_description: ""
+        variation_description: ''
         variation_name: Well
         variation_specs: >-
           * Border: 1px, Gray 40 (#b4b5b6)
@@ -32,32 +32,11 @@ variation_groups:
           * Single column content only.
 
             ![]()
-      - variation_code_snippet: >-
-          <div class="o-well o-well__inkwell">
-              <p class="h4">Inkwell modifier</p>
-
-              <div class="a-tagline a-tagline__xlarge">
-                  <span class="u-usa-flag"></span>
-                  <div class="a-tagline_text">
-                    This is a tagline inside an inkwell.
-                  </div>
-              </div>
-
-              <p>
-                  Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
-                  instructior ex pri. Cu pri inani constituto, cum aeque noster commodo
-                  cu. <a href="#">Example link</a>.
-              </p>
-          </div>
-        variation_description: T﻿he inkwell was originally developed for use on the
-          cf.gov home page, but was not implemented.
-        variation_name: Inkwell
-        variation_is_deprecated: true
     variation_group_name: Types
 guidelines: >-
   Wells should generally be text-based. If content must include imagery or
   videos, use the [featured content
-  module](/design-system/patterns/featured-content-module) instead. 
+  module](/design-system/patterns/featured-content-module) instead.
 
 
   Examples of types of content to include:
@@ -87,8 +66,8 @@ use_cases: >-
   Ideally, content within a well should not take up more than a third of page content.
 behavior: Wells are full width. At breakpoints 600px and under there are slight
   padding adjustments to maximize real estate on smaller displays.
-accessibility: ""
-related_items: "* [Featured content module](/design-system/patterns/featured-content-module)"
+accessibility: ''
+related_items: '* [Featured content module](/design-system/patterns/featured-content-module)'
 last_updated: 2019-10-21T20:38:39.851Z
-research: ""
+research: ''
 ---

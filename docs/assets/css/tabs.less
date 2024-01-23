@@ -80,17 +80,17 @@
   padding: 20px 40px 7px;
 }
 
-// Mobile view.
-.respond-to-max( @bp-sm-max, {
+// Tablet and below.
+.respond-to-max(@bp-sm-max, {
   .m-tabs_panel {
     &.u-hidden {
       display: block !important;
     }
   }
-} );
+});
 
-// Desktop view.
-.respond-to-min( @bp-med-min, {
+// Desktop and above.
+.respond-to-min(@bp-med-min, {
   .m-tabs_list {
     display: flex;
   }
@@ -108,4 +108,4 @@
     .u-visually-hidden();
   }
 
-} );
+});

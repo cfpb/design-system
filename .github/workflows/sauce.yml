@@ -34,7 +34,17 @@ jobs:
         yarn start &
         sleep 5
 
-    - name: Run browser tests
+    - name: Set up Sauce Connect
+      uses: saucelabs/sauce-connect-action@v2
+      with:
+        # These credentials are from @contolini's CFPB Sauce Labs account
+        # They're defined on the repo's settings page:
+        # https://github.com/cfpb/design-system/settings/secrets
+        username: ${{ secrets.SAUCE_USERNAME }}
+        accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+        configFile: ${{ github.workspace }}/.sauce/config.yml
+
+    - name: Run e2e browser tests
       # Don't run these tests on forks. It would be nice to instead check
       # to see if the Sauce Labs environment variables are defined, but that
       # doesn't seem currently possible:

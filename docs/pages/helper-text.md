@@ -13,42 +13,25 @@ variation_groups:
 
 
           <input class="a-text-input" type="text" id="helper-block-example">
-        variation_description: "Block helper text appears directly beneath a form label.
+        variation_description:
+          'Block helper text appears directly beneath a form label.
           Use it to explain why a piece of information is being requested,
           address security and privacy concerns, or to suggest ways of providing
-          answers other than providing formatting examples. "
+          answers other than providing formatting examples. '
         variation_name: Block helper text
-        variation_specs: >-
-          [Color variables for helper
-          text](https://cfpb.github.io/design-system/development/variables#forms)
-
-
-          #### Block helper text
-
-          - Avenir Next Regular, 16 px, Dark Gray (#43484e)
-
-          - Margin top: 10 px
-
-          - Margin bottom: 10 px
+        variation_specs: ''
       - variation_code_snippet: |-
           <label class="a-label a-label__heading" for="helper-inline-example">
            Label <small class="a-label_helper">(optional)</small>
           </label>
 
           <input class="a-text-input" type="text" id="helper-inline-example">
-        variation_description: Inline helper text appears directly after a form label.
+        variation_description:
+          Inline helper text appears directly after a form label.
           Use it to indicate whether a field is optional. See the [behavior
           section](#behavior) for more information.
         variation_name: Inline helper text
-        variation_specs: >-
-          #### Inline helper text
-
-          * Avenir Next Regular, 16 px, Dark Gray (#43484e)
-
-          * Margin bottom: 10 px
-
-
-          Appears inline with label headings, and should be lowercase and placed in parenthesis after the label.
+        variation_specs: ''
       - variation_code_snippet: >
           <label class="a-label a-label__heading"
           for="textinput-example-email-default">
@@ -59,15 +42,14 @@ variation_groups:
                 type="text"
                 id="textinput-example-email-default"
                 placeholder="email@example.com">
-        variation_description: Placeholder text appears within a text input field, and
+        variation_description:
+          Placeholder text appears within a text input field, and
           disappears once a user begins typing in that field. Use it for
           formatting examples only.
         variation_name: Placeholder text
-        variation_specs: |-
-          #### Placeholder text
-          Avenir Next Regular, 16 px, Dark Gray (#43484e)
+        variation_specs: ''
     variation_group_name: Types
-    variation_group_description: ""
+    variation_group_description: ''
 guidelines: >-
   ### Required vs. optional fields
 
@@ -80,8 +62,8 @@ title: Helper text
 description: Helper text is used with form elements to give the user context
   about their usage. Types of helper text include block helper text, inline
   helper text, and placeholder text.
-use_cases: ""
-behavior: ""
+use_cases: ''
+behavior: ''
 accessibility: For screen reader accessibility, consider using the
   `aria-describedby` attribute for helper text, which gives screen readers users
   the information if they need while allowing more flexibility with placement.

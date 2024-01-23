@@ -24,8 +24,8 @@
 .a-link__jump {
   font-weight: 500;
 
-  // Mobile size.
-  .respond-to-max( @bp-xs-max, {
+  // Mobile only.
+  .respond-to-max(@bp-xs-max, {
     .u-block-link();
 
     position: relative;
@@ -51,7 +51,7 @@
     &.a-link__icon-before-text .cf-icon-svg {
       left: 0;
     }
-  } );
+  });
 }
 
 /**

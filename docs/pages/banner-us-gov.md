@@ -25,5 +25,5 @@ variation_groups:
     variation_group_name: Types
 guidelines: The US gov banner is positioned at the top of the page above the
   header and spans the full width.
-related_items: "[Taglines](https://cfpb.github.io/design-system/components/taglines)"
+related_items: '[Taglines](https://cfpb.github.io/design-system/components/taglines)'
 ---

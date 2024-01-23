@@ -62,29 +62,20 @@
     & > a {
       padding: unit((@grid_gutter-width / @base-font-size-px), em);
     }
+
+    .m-card_footer {
+      margin-top: auto;
+    }
   }
 
-  &:not(.m-card__breakout, .m-card__highlight, .m-card__topic) {
+  &:not(.m-card__breakout, .m-card__topic) {
     background: @white;
     border: 1px solid @gray-20;
     border-bottom-width: 3px;
-  }
-
-  &:not(
-      .m-card__featured,
-      .m-card__breakout,
-      .m-card__topic,
-      .m-card__highlight
-    ) {
     padding: unit((@grid_gutter-width / @base-font-size-px), em);
   }
 
-  &:not(
-      .m-card__featured,
-      .m-card__breakout,
-      .m-card__topic,
-      .m-card__highlight
-    ),
+  &:not(.m-card__breakout, .m-card__topic),
   & > a {
     display: flex;
     flex-direction: column;
@@ -98,12 +89,6 @@
     outline-offset: 2px;
   }
 
-  &:not(.m-card__highlight, .m-card__breakout) {
-    .m-card_footer {
-      margin-top: auto;
-    }
-  }
-
   &_footer > a {
     font-weight: 500;
     border-bottom-width: 1px;
@@ -111,9 +96,9 @@
 
   // Shrink heading at smaller screen sizes.
   &_heading {
-    .respond-to-max( @bp-med-min, {
+    .respond-to-max(@bp-med-min, {
       .h3();
-    } );
+    });
   }
 
   // Regular cards.
@@ -139,57 +124,6 @@
   & > .m-list {
     margin-top: 10px;
     margin-bottom: 30px;
-  }
-
-  // Featured cards.
-  &__featured {
-    .m-card_heading {
-      margin: 0;
-    }
-
-    .m-card_icon {
-      font-size: unit((30px / @base-font-size-px), em);
-      margin-bottom: unit((5px / @base-font-size-px), em);
-    }
-
-    .m-card_icon,
-    p {
-      color: @black;
-    }
-
-    &:hover {
-      box-shadow:
-        0 8px 0 0 inset @green,
-        2px 0 0 0 inset @gray-20,
-        -2px 0 0 0 inset @gray-20;
-    }
-
-    &:hover .m-card_footer > span {
-      border-style: solid;
-      color: @pacific-dark;
-    }
-
-    .m-card_footer > span {
-      display: inline;
-      border-width: 0;
-      border-bottom-width: 1px;
-      border-color: @pacific;
-      border-style: dotted;
-      font-weight: 500;
-      color: @pacific;
-      text-decoration: none;
-    }
-
-    & > a:visited .m-card_footer > span {
-      color: @teal;
-      border-color: @teal !important;
-    }
-
-    & > a:link,
-    & > a:visited {
-      border: 1px solid @gray-20;
-      border-bottom-width: 3px;
-    }
   }
 
   // Topic cards.
@@ -287,34 +221,5 @@
     .m-card_footer > span {
       .heading-3();
     }
-  }
-
-  // Highlight cards.
-  &__highlight {
-    background: @green-20;
-
-    & > a {
-      border: 1px solid @green-40;
-      border-bottom-width: 3px;
-    }
-
-    h3,
-    p {
-      color: @black;
-    }
-
-    &:hover {
-      > a {
-        box-shadow:
-          0 2px 0 0 inset @green-40,
-          2px 0 0 0 inset @green-40,
-          -2px 0 0 0 inset @green-40;
-      }
-
-      .u-card-bottom-bar();
-    }
-
-    // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-    .u-link-card__colors( @pacific-mid-dark, @teal-mid-dark, @pacific-dark, @pacific-mid-dark, @navy );
   }
 }

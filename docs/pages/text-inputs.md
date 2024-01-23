@@ -59,11 +59,11 @@ variation_groups:
 
           <br><br>
 
-          <input class="a-text-input a-text-input__warning" type="text" placeholder="Warning" id="form-input-success" aria-describedby="form-input-warning_message">
+          <input class="a-text-input a-text-input__warning" type="text" placeholder="Warning" id="form-input-warning" aria-describedby="form-input-warning_message">
 
           <br><br>
 
-          <input class="a-text-input a-text-input__error" type="text" placeholder="Error" id="form-input-success" aria-describedby="form-input-warning_message">
+          <input class="a-text-input a-text-input__error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
         variation_specs: ""
         variation_name: Text input
         variation_description: Use when the expected user input is a single line of

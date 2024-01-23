@@ -25,7 +25,7 @@ suites:
       screenResolution: '1920x1200'
   - name: cypress - Windows 11 - edge
     browser: 'microsoftedge'
-    browserVersion: 'latest'
+    browserVersion: '119'
     platformName: 'Windows 11'
     config:
       testingType: e2e

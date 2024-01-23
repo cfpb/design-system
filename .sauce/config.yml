@@ -23,10 +23,10 @@ suites:
         - 'test/cypress/e2e/**/*.cy.js'
       # Increase the VM's resolution for Netlify CMS tests that require a wider viewport.
       screenResolution: '1920x1200'
-  - name: cypress - Windows 10 - edge
+  - name: cypress - Windows 11 - edge
     browser: 'microsoftedge'
     browserVersion: 'latest'
-    platformName: 'Windows 10'
+    platformName: 'Windows 11'
     config:
       testingType: e2e
       specPattern:

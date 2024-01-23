@@ -4065,6 +4065,81 @@ input[type='date']::-webkit-datetime-edit {
 .m-form-field__checkbox .a-checkbox:disabled:checked + .a-label::before {
   background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20class=%22cf-icon-svg%20cf-icon-svg__approved%22%20viewBox=%220%200%2012%2019%22%3E%3Cpath%20d=%22M4.63%2015.638a1.028%201.028%200%200%201-.79-.37L.36%2011.09a1.03%201.03%200%201%201%201.58-1.316l2.535%203.043L9.958%203.32a1.029%201.029%200%200%201%201.783%201.03L5.52%2015.122a1.03%201.03%200%200%201-.803.511.89.89%200%200%201-.088.004z%22/%3E%3C/svg%3E');
 }
+.m-form-field__checkbox__error .a-label::before {
+  border-color: #d14124;
+  outline: 1px solid #d14124;
+}
+.m-form-field__checkbox__error .a-label:hover::before,
+.m-form-field__checkbox__error .a-label.hover::before {
+  border-color: #0072ce;
+  outline-color: #0072ce;
+}
+.m-form-field__checkbox__error .a-checkbox:hover + .a-label::before,
+.m-form-field__checkbox__error .a-checkbox.hover + .a-label::before {
+  border-color: #0072ce;
+  outline-color: #0072ce;
+}
+.m-form-field__checkbox__error .a-checkbox:focus + .a-label::before,
+.m-form-field__checkbox__error .a-checkbox.focus + .a-label::before {
+  border-color: #d14124;
+  box-shadow: 0 0 0 1px #d14124;
+  outline-color: #d14124;
+}
+.m-form-field__checkbox__error .a-checkbox:focus + .a-label,
+.m-form-field__checkbox__error .a-checkbox.focus + .a-label {
+  outline: 1px dotted #d14124;
+  outline-offset: 1px;
+}
+.m-form-field__checkbox__warning .a-label::before {
+  border-color: #ff9e1b;
+  outline: 1px solid #ff9e1b;
+}
+.m-form-field__checkbox__warning .a-label:hover::before,
+.m-form-field__checkbox__warning .a-label.hover::before {
+  border-color: #0072ce;
+  outline-color: #0072ce;
+}
+.m-form-field__checkbox__warning .a-checkbox:hover + .a-label::before,
+.m-form-field__checkbox__warning .a-checkbox.hover + .a-label::before {
+  border-color: #0072ce;
+  outline-color: #0072ce;
+}
+.m-form-field__checkbox__warning .a-checkbox:focus + .a-label::before,
+.m-form-field__checkbox__warning .a-checkbox.focus + .a-label::before {
+  border-color: #ff9e1b;
+  box-shadow: 0 0 0 1px #ff9e1b;
+  outline-color: #ff9e1b;
+}
+.m-form-field__checkbox__warning .a-checkbox:focus + .a-label,
+.m-form-field__checkbox__warning .a-checkbox.focus + .a-label {
+  outline: 1px dotted #ff9e1b;
+  outline-offset: 1px;
+}
+.m-form-field__checkbox__success .a-label::before {
+  border-color: #20aa3f;
+  outline: 1px solid #20aa3f;
+}
+.m-form-field__checkbox__success .a-label:hover::before,
+.m-form-field__checkbox__success .a-label.hover::before {
+  border-color: #0072ce;
+  outline-color: #0072ce;
+}
+.m-form-field__checkbox__success .a-checkbox:hover + .a-label::before,
+.m-form-field__checkbox__success .a-checkbox.hover + .a-label::before {
+  border-color: #0072ce;
+  outline-color: #0072ce;
+}
+.m-form-field__checkbox__success .a-checkbox:focus + .a-label::before,
+.m-form-field__checkbox__success .a-checkbox.focus + .a-label::before {
+  border-color: #20aa3f;
+  box-shadow: 0 0 0 1px #20aa3f;
+  outline-color: #20aa3f;
+}
+.m-form-field__checkbox__success .a-checkbox:focus + .a-label,
+.m-form-field__checkbox__success .a-checkbox.focus + .a-label {
+  outline: 1px dotted #20aa3f;
+  outline-offset: 1px;
+}
 .m-form-field__radio .a-label::before {
   border-radius: 50%;
   /* The rotate is needed to fix a bug in Firefox where radio

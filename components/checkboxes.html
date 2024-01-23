@@ -348,7 +348,10 @@
             <!-- Live code example -->
             
             <div class="a-live_code">
-                <h4> States</h4>
+                <!--States are shown for demonstration purposes only-->
+<h4>
+States
+</h4>
 <div class="m-form-field m-form-field__checkbox">
     <input class="a-checkbox" type="checkbox" id="test_checkbox">
     <label class="a-label" for="test_checkbox">Default</label>
@@ -383,8 +386,27 @@
     <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
     <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
 </div>
-
-
+<br><br>
+<h4>
+Validation status
+</h4>
+<!--Success-->
+<div class="m-form-field m-form-field__checkbox m-form-field__checkbox__success">
+    <input class="a-checkbox" type="checkbox" id="test_checkbox_success">
+    <label class="a-label" for="test_checkbox_success">Success</label>
+</div>
+<br>
+<!--Warning-->
+<div class="m-form-field m-form-field__checkbox m-form-field__checkbox__warning">
+    <input class="a-checkbox" type="checkbox" id="test_checkbox_warning">
+    <label class="a-label" for="test_checkbox_warning">Warning</label>
+</div>
+<br>
+<!--Error-->
+<div class="m-form-field m-form-field__checkbox m-form-field__checkbox__error">
+    <input class="a-checkbox" type="checkbox" id="test_checkbox_error">
+    <label class="a-label" for="test_checkbox_error">Error</label>
+</div>
             </div>
             
 
@@ -396,15 +418,15 @@
             
 
             <div class="a-toggle_code">
-                <button href="#details-checkbox-h4-states-h4-div-class--1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
-                <button href="#details-checkbox-h4-states-h4-div-class--1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-checkbox-states-are-shown-for-de-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-checkbox-states-are-shown-for-de-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-checkbox-h4-states-h4-div-class--1">
+            <div class="m-tabs u-hidden" id="details-checkbox-states-are-shown-for-de-1">
                 <ul class="m-tabs_list">
                     
                     <li class="m-tabs_list-item m-tabs_list-item-selected">
-                        <a class="m-tabs_tab" href="#details-checkbox-h4-states-h4-div-class--html-code-snippet-1">
+                        <a class="m-tabs_tab" href="#details-checkbox-states-are-shown-for-de-html-code-snippet-1">
                             HTML code snippet
                         </a>
                     </li>
@@ -416,11 +438,15 @@
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs_panel" id="details-checkbox-h4-states-h4-div-class--html-code-snippet-1">
+                <section class="m-tabs_panel" id="details-checkbox-states-are-shown-for-de-html-code-snippet-1">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
-                            <pre><code class="language-html">&lt;h4&gt; States&lt;/h4&gt;&lt;div class="m-form-field m-form-field__checkbox"&gt;
+                            <pre><code class="language-html">&lt;!--States are shown for demonstration purposes only--&gt;
+&lt;h4&gt;
+States
+&lt;/h4&gt;
+&lt;div class="m-form-field m-form-field__checkbox"&gt;
     &lt;input class="a-checkbox" type="checkbox" id="test_checkbox"&gt;
     &lt;label class="a-label" for="test_checkbox"&gt;Default&lt;/label&gt;
 &lt;/div&gt;
@@ -453,6 +479,27 @@
 &lt;div class="m-form-field m-form-field__checkbox"&gt;
     &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked&gt;
     &lt;label class="a-label" for="test_checkbox_basic_disabled_selected"&gt;Disabled/selected&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;h4&gt;
+Validation status
+&lt;/h4&gt;
+&lt;!--Success--&gt;
+&lt;div class="m-form-field m-form-field__checkbox m-form-field__checkbox__success"&gt;
+    &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_success"&gt;
+    &lt;label class="a-label" for="test_checkbox_success"&gt;Success&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;!--Warning--&gt;
+&lt;div class="m-form-field m-form-field__checkbox m-form-field__checkbox__warning"&gt;
+    &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_warning"&gt;
+    &lt;label class="a-label" for="test_checkbox_warning"&gt;Warning&lt;/label&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;!--Error--&gt;
+&lt;div class="m-form-field m-form-field__checkbox m-form-field__checkbox__error"&gt;
+    &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_error"&gt;
+    &lt;label class="a-label" for="test_checkbox_error"&gt;Error&lt;/label&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                     </div>
@@ -500,13 +547,14 @@
             
             <div class="a-live_code">
                 <div class="m-form-field m-form-field__checkbox">
-    <input class="a-radio" type="checkbox" id="test_checkbox_basic_helper">
+    <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_helper">
     <label class="a-label" for="test_checkbox_basic_helper">
-Checkbox label
+        Checkbox label
         <small class="a-label_helper">
             (This is optional helper text)
         </small>
     </label>
+    
 </div>
             </div>
             
@@ -544,12 +592,13 @@ Checkbox label
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
                             <pre><code class="language-html">&lt;div class="m-form-field m-form-field__checkbox"&gt;
-    &lt;input class="a-radio" type="checkbox" id="test_checkbox_basic_helper"&gt;
+    &lt;input class="a-checkbox" type="checkbox" id="test_checkbox_basic_helper"&gt;
     &lt;label class="a-label" for="test_checkbox_basic_helper"&gt;
-Checkbox label
+        Checkbox label
         &lt;small class="a-label_helper"&gt;
             (This is optional helper text)
         &lt;/small&gt;
+    &lt;/label&gt;
     &lt;/label&gt;
 &lt;/div&gt;</code></pre>
                         </div>
@@ -957,8 +1006,8 @@ Checkbox label
                 
                 
                 <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/checkboxes.md">
-                    <time datetime="2024-01-22 16:15:55 -0500">
-                         4:15:55 PM Jan 22, 2024
+                    <time datetime="2024-01-23 13:03:04 -0500">
+                         1:03:04 PM Jan 23, 2024
                     </time>
                 </a>
             </small>

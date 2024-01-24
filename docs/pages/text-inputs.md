@@ -77,9 +77,7 @@ variation_groups:
           <div class="m-form-field">
               <input class="a-text-input a-text-input__full"
                     type="text"
-                    id="full-textinput-example"
-                    placeholder="Placeholder text"
-                    value="Input text">
+                    id="full-textinput-example">
           </div>
       - variation_is_deprecated: false
         variation_name: Text input (with button)

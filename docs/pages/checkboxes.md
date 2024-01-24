@@ -7,7 +7,7 @@ variation_groups:
       - variation_code_snippet: >+
           <h4> States</h4><div class="m-form-field m-form-field__checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox">
-              <label class="a-label" for="test_checkbox">Default</label>
+              <label class="a-label" for="test_checkbox">Enabled</label>
           </div>
 
           <br>
@@ -83,7 +83,7 @@ variation_groups:
           <div class="m-form-field m-form-field__checkbox
           m-form-field__lg-target">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default">
-              <label class="a-label" for="test_checkbox_lg_default">Default</label>
+              <label class="a-label" for="test_checkbox_lg_default">Enabled</label>
           </div>
 
           <br>

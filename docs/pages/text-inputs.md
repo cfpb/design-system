@@ -148,7 +148,7 @@ variation_groups:
           <div class="m-form-field">
               <textarea class="a-text-input a-text-input__full"
                         id="full-textarea-example"
-                        placeholder="Placeholder text">Input text</textarea>
+                     placeholder="Placeholder text">Input text</textarea>
           </div>
 guidelines: >-
   ### Stylistic guidelines

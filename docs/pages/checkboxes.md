@@ -4,8 +4,16 @@ layout: variation
 section: components
 variation_groups:
   - variations:
-      - variation_code_snippet: >+
-          <h4> States</h4><div class="m-form-field m-form-field__checkbox">
+      - variation_code_snippet: >-
+          <!--States are shown for demonstration purposes only-->
+
+          <h4>
+
+          States
+
+          </h4>
+
+          <div class="m-form-field m-form-field__checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox">
               <label class="a-label" for="test_checkbox">Enabled</label>
           </div>
@@ -55,6 +63,38 @@ variation_groups:
               <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
           </div>
 
+          <br><br>
+
+          <h4>
+
+          Validation status
+
+          </h4>
+
+          <!--Success-->
+
+          <div class="m-form-field m-form-field__checkbox m-form-field__checkbox__success">
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_success">
+              <label class="a-label" for="test_checkbox_success">Success</label>
+          </div>
+
+          <br>
+
+          <!--Warning-->
+
+          <div class="m-form-field m-form-field__checkbox m-form-field__checkbox__warning">
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_warning">
+              <label class="a-label" for="test_checkbox_warning">Warning</label>
+          </div>
+
+          <br>
+
+          <!--Error-->
+
+          <div class="m-form-field m-form-field__checkbox m-form-field__checkbox__error">
+              <input class="a-checkbox" type="checkbox" id="test_checkbox_error">
+              <label class="a-label" for="test_checkbox_error">Error</label>
+          </div>
         variation_description: ""
         variation_name: Checkbox
         variation_specs: ""

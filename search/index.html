@@ -2175,7 +2175,7 @@ Validation status
                 
 
                 
-                    'variation_name1': 'Standard expandable',
+                    'variation_name1': 'Expandable',
                     'variation_description1': "The following combination is our recommended go-to expandable pattern.\n",
                     'variation_code_snippet1': `&lt;div class=&quot;o-expandable
             o-expandable__padded
@@ -2184,7 +2184,7 @@ Validation status
     &lt;button class=&quot;o-expandable_header&quot;
             title=&quot;Expand content&quot;&gt;
         &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-            Expandable Header
+            Expandable header
         &lt;/h3&gt;
         &lt;span class=&quot;o-expandable_cues&quot;&gt;
             &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
@@ -2208,7 +2208,7 @@ Validation status
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name2': 'Standard expandable (open on load)',
+                    'variation_name2': 'Expandable (open on load)',
                     'variation_description2': "Sometimes you may want the expandable to be open by default. This is as easy as adding the .o-expandable__onload-open modifier to the .o-expandable block.\n",
                     'variation_code_snippet2': `&lt;div class=&quot;o-expandable
             o-expandable__padded
@@ -2218,7 +2218,7 @@ Validation status
     &lt;button class=&quot;o-expandable_header&quot;
             title=&quot;Expand content&quot;&gt;
         &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-            Expandable Header
+            Expandable header
         &lt;/h3&gt;
         &lt;span class=&quot;o-expandable_cues&quot;&gt;
             &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
@@ -2241,19 +2241,14 @@ Validation status
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Expandable group',
-                    'variation_description1': "In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.\n",
-                    'variation_code_snippet1': `&lt;div class=&quot;o-expandable-group&quot;&gt;
+                    'variation_name3': 'Expandable group (default)',
+                    'variation_description3': "In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.\n",
+                    'variation_code_snippet3': `&lt;div class=&quot;o-expandable-group&quot;&gt;
     &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
         &lt;button class=&quot;o-expandable_header&quot;
                 title=&quot;Expand content&quot;&gt;
             &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-                Expandable Header 1
+                Expandable header
             &lt;/h3&gt;
             &lt;span class=&quot;o-expandable_cues&quot;&gt;
                 &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
@@ -2279,7 +2274,7 @@ Validation status
         &lt;button class=&quot;o-expandable_header&quot;
                 title=&quot;Expand content&quot;&gt;
             &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-                Expandable Header 2
+                Expandable header
             &lt;/h3&gt;
             &lt;span class=&quot;o-expandable_cues&quot;&gt;
                 &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
@@ -2305,126 +2300,7 @@ Validation status
         &lt;button class=&quot;o-expandable_header&quot;
                 title=&quot;Expand content&quot;&gt;
             &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-                Expandable Header 3
-            &lt;/h3&gt;
-            &lt;span class=&quot;o-expandable_cues&quot;&gt;
-                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
-                    {% include icons/plus-round.svg %}
-                &lt;/span&gt;
-                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
-                    {% include icons/minus-round.svg %}
-                &lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class=&quot;o-expandable_content&quot;&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name2': 'Accordion-style group',
-                    'variation_description2': "To show only one open expandable at a time, use an accordion group. Add the o-expandable-group__accordion class to the expandable group to activate the accordion mode.\n",
-                    'variation_code_snippet2': `&lt;div class=&quot;o-expandable-group o-expandable-group__accordion&quot;&gt;
-    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
-        &lt;button class=&quot;o-expandable_header&quot;
-                title=&quot;Expand content&quot;&gt;
-            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-                Expandable Header 1
-            &lt;/h3&gt;
-            &lt;span class=&quot;o-expandable_cues&quot;&gt;
-                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
-                    {% include icons/plus-round.svg %}
-                &lt;/span&gt;
-                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
-                    {% include icons/minus-round.svg %}
-                &lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class=&quot;o-expandable_content&quot;&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
-        &lt;button class=&quot;o-expandable_header&quot;
-                title=&quot;Expand content&quot;&gt;
-            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-                Expandable Header 2
-            &lt;/h3&gt;
-            &lt;span class=&quot;o-expandable_cues&quot;&gt;
-                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
-                    {% include icons/plus-round.svg %}
-                &lt;/span&gt;
-                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
-                    {% include icons/minus-round.svg %}
-                &lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class=&quot;o-expandable_content&quot;&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
-        &lt;button class=&quot;o-expandable_header&quot;
-                title=&quot;Expand content&quot;&gt;
-            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-                Expandable Header 3
+                Expandable header
             &lt;/h3&gt;
             &lt;span class=&quot;o-expandable_cues&quot;&gt;
                 &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
@@ -2448,10 +2324,128 @@ Validation status
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-            
-                // Determine the maximum number of variations present overall.
-                
+                    'variation_name4': 'Expandable group (accordion)',
+                    'variation_description4': "To show only one open expandable at a time, use an accordion group. Add the o-expandable-group__accordion class to the expandable group to activate the accordion mode.\n",
+                    'variation_code_snippet4': `&lt;div class=&quot;o-expandable-group o-expandable-group__accordion&quot;&gt;
+    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
+        &lt;button class=&quot;o-expandable_header&quot;
+                title=&quot;Expand content&quot;&gt;
+            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
+                Expandable header
+            &lt;/h3&gt;
+            &lt;span class=&quot;o-expandable_cues&quot;&gt;
+                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
+                    {% include icons/plus-round.svg %}
+                &lt;/span&gt;
+                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
+                    {% include icons/minus-round.svg %}
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;o-expandable_content&quot;&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
+        &lt;button class=&quot;o-expandable_header&quot;
+                title=&quot;Expand content&quot;&gt;
+            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
+                Expandable header
+            &lt;/h3&gt;
+            &lt;span class=&quot;o-expandable_cues&quot;&gt;
+                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
+                    {% include icons/plus-round.svg %}
+                &lt;/span&gt;
+                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
+                    {% include icons/minus-round.svg %}
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;o-expandable_content&quot;&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
 
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
+        &lt;button class=&quot;o-expandable_header&quot;
+                title=&quot;Expand content&quot;&gt;
+            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
+                Expandable header
+            &lt;/h3&gt;
+            &lt;span class=&quot;o-expandable_cues&quot;&gt;
+                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
+                    {% include icons/plus-round.svg %}
+                &lt;/span&gt;
+                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
+                    {% include icons/minus-round.svg %}
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;o-expandable_content&quot;&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name5': 'Variations',
+                    'variation_description5': "Should you need an expandable thing that is not covered by the expandables above, see the Transition Patterns for making a component with expandable-like behavior.\n",
+                    'variation_code_snippet5': ``,
                 
             
 
@@ -2460,7 +2454,7 @@ Validation status
             'description': "Expandables are components that have additional content that can be opened (expanded) and closed (collapsed). They can appear on their own or in groups. They may be helpful for FAQ sections, schedules, and for conserving vertical space by collapsing secondary information on mobile devices.\n",
             'use_cases': "\n",
             'guidelines': "\n",
-            'behavior': "Collapsed\n\nThe default collapsed state should include the expand/collapse minicon within a circle and a label (if space allows). The Show/Hide label can be hidden at narrower screen widths to prevent titles prematurely breaking onto multiple lines and to reduced visual clutter.\n\nExpanded\n\nThe content of an expandable can contain normal paragraphs, headings, lists, wells, and images.\n\nExpandables can make use of an optional stroke under the title when expanded. The title stroke can help to define the title from the expanded content for longer sections of text. It should be indented left and right to match the text within the expandable section.\n",
+            'behavior': "Collapsed\n\nThe default collapsed state should include a heading and the expand/collapse minicon within a circle.\n\nExpanded\n\nThe content of an expandable can contain normal paragraphs, headings, lists, wells, and images.\n\nExpandables can make use of an optional stroke under the title when expanded. The title stroke can help to define the title from the expanded content for longer sections of text. It should be indented left and right to match the text within the expandable section.\n",
             'accessibility': "The find function will not discover information hidden by a collapsed expandable, so use good judgement in deciding which information to hide. Non-javaScript users should default to the expanded state. Otherwise, the default state (expanded or collapsed) will depend on the circumstance.\n",
             'research': "\n",
             'related_items': "\n  Expandables variables\n\n",

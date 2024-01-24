@@ -3,7 +3,7 @@ layout: variation
 section: components
 status: Released
 variation_groups:
-  - variation_group_name: Single line text inputs
+  - variation_group_name: Types
     variations:
       - variation_code_snippet: >-
           <!--States are shown for demonstration purposes only-->
@@ -77,9 +77,7 @@ variation_groups:
           <div class="m-form-field">
               <input class="a-text-input a-text-input__full"
                     type="text"
-                    id="full-textinput-example"
-                    placeholder="Placeholder text"
-                    value="Input text">
+                    id="full-textinput-example">
           </div>
       - variation_is_deprecated: false
         variation_name: Text input (with button)
@@ -109,7 +107,7 @@ variation_groups:
               </button>
           </div>
       - variation_is_deprecated: false
-        variation_name: Button inside text input with another button
+        variation_name: Button inside text input (with button)
         variation_description: This example combines both of the previous patterns,
           creating a typical site search form.
         variation_code_snippet: >-
@@ -131,7 +129,7 @@ variation_groups:
               </div>
           </div>
     variation_group_description: ""
-  - variation_group_name: Multiple line text inputs
+  - variation_group_name: Text area input
     variations:
       - variation_is_deprecated: false
         variation_name: Text area input
@@ -150,7 +148,7 @@ variation_groups:
           <div class="m-form-field">
               <textarea class="a-text-input a-text-input__full"
                         id="full-textarea-example"
-                        placeholder="Placeholder text">Input text</textarea>
+                     placeholder="Placeholder text">Input text</textarea>
           </div>
 guidelines: >-
   ### Stylistic guidelines

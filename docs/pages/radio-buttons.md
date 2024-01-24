@@ -8,7 +8,7 @@ variation_groups:
       - variation_code_snippet: >
           <div class="m-form-field m-form-field__radio">
               <input class="a-radio" type="radio" id="test_radio_basic_default">
-              <label class="a-label" for="test_radio_basic_default">Default</label>
+              <label class="a-label" for="test_radio_basic_default">Enabled</label>
           </div>
 
 
@@ -74,7 +74,7 @@ variation_groups:
           <div class="m-form-field m-form-field__radio">
               <input class="a-radio" type="radio" id="test_radio_basic_helper">
               <label class="a-label" for="test_radio_basic_helper">
-                  Radio button label
+                  Label
                   <small class="a-label_helper">
                       (This is optional helper text)
                   </small>
@@ -91,7 +91,7 @@ variation_groups:
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_default">
-              <label class="a-label" for="test_radio_lg_default">Default</label>
+              <label class="a-label" for="test_radio_lg_default">Enabled</label>
           </div>
 
           <br>
@@ -155,7 +155,7 @@ variation_groups:
           <div class="m-form-field m-form-field__radio m-form-field__lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_helper">
               <label class="a-label" for="test_radio_lg_helper">
-          Radio button label
+          Label
                   <small class="a-label_helper">
                       (This is optional helper text)
                   </small>

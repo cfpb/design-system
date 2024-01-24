@@ -109,7 +109,7 @@ variation_groups:
               </button>
           </div>
       - variation_is_deprecated: false
-        variation_name: Button inside text input with another button
+        variation_name: Button inside text input (with button)
         variation_description: This example combines both of the previous patterns,
           creating a typical site search form.
         variation_code_snippet: >-

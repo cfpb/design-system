@@ -84,13 +84,13 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: Text input (with button)
         variation_description: Use for simple forms where a full filter isn’t necessary.
-        variation_code_snippet: >-
+        variation_code_snippet: |-
           <div class="o-form__input-w-btn">
-              <div class="o-form__input-w-btn_input-container">    <input class="a-text-input a-text-input__full"
+              <div class="o-form__input-w-btn_input-container">    
+          <input class="a-text-input a-text-input__full"
                     type="text"
-                    id="full-textinput-example"
+                    id="full-textinput-w-btn-example"
           placeholder="Placeholder text"
-
           value="Input text">
                   
               </div>

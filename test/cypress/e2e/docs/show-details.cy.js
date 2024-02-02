@@ -1,5 +1,5 @@
 describe('The "show details" toggling feature', () => {
-  let components = [
+  const components = [
     'alerts',
     'banner-notification',
     'banner-us-gov',

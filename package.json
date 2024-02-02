@@ -23,7 +23,8 @@
   ],
   "scripts": {
     "a11y": "lhci autorun",
-    "build": "yarn compile-dev && bundle exec jekyll build",
+    "build": "node ./esbuild/build.js",
+    //"build": "yarn compile-dev && bundle exec jekyll build",
     "build-netlify": "yarn install && yarn after-install && yarn compile-prod && bundle exec jekyll build",
     "build-packages": "webpack --config webpack.config.packages.js --mode=production",
     "changelog": "./scripts/generate-changelog.sh",
@@ -69,6 +70,7 @@
     "css-loader": "6.10.0",
     "cssnano": "6.0.3",
     "cypress": "13.6.4",
+    "esbuild": "0.20.0",
     "eslint": "8.56.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-cypress": "2.15.1",

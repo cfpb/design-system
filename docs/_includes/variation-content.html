@@ -325,43 +325,54 @@
         </section>
     {% endif %}
 
-    <div class="content-l u-mb45">
-        {% if page.related_items and page.related_items != '' %}
-        <div class="content-l_col content-l_col-1-2">
-            <div>
-                <section>
-                    <h2 id="related-items">Related Items</h2>
-                    <div class="content_line__wide content_line u-mb20"></div>
-                    {{ page.related_items | markdownify }}
-                </section>
+    {% if page.related_items and page.related_items != '' %}
+        <section class="content-l u-mb45">
+            <div class="content-l_col content-l_col-1">
+                <div>
+                    <section>
+                        <h2 id="related-items">Related Items</h2>
+                        <div class="content_line__wide content_line u-mb20"></div>
+                        {{ page.related_items | markdownify }}
+                    </section>
+                </div>
             </div>
-        </div>
-        {% endif %}
-    </div><!-- .content-l -->
+        </section>
+    {% endif %}
 
-    <div class="content-l u-mb45">
-        <div class="content-l_col content-l_col-1-2">
-            <div>
-                <section>
-                    <h2 id="latest-updates">Latest Updates</h2>
-                    <div class="content_line__wide content_line u-mb20"></div>
-                    <strong>Page last edited:</strong>
-                    {% assign file_url_path = page.path | split: '/' | last %}
-                    {% assign page_collection_name = 'pages' %}
-                    {% if page.collection_name %}
-                        {% assign page_collection_name = page.collection_name %}
-                    {% endif %}
-                    {% assign file_url_path = page_collection_name | append: '/' | append: file_url_path %}
-                    <a href="https://github.com/{{ site.repository }}/commits/main/docs/{{ file_url_path }}">
-                        <time datetime="{{ page.last_modified_at }}">
-                            {{ page.last_modified_at | date: "%l:%M:%S %p %b %d, %Y" }}
-                        </time>
-                    </a>
-                </section>
+    {%
+        if page.url != '/index'
+        and page.url != 'search/index'
+        and page.url != 'foundation/index'
+        and page.url != 'components/index'
+        and page.url != 'patterns/index'
+        and page.url != 'pages/index'
+        and page.url != 'development/index'
+        and page.url != 'guidelines/index'
+    %}
+        <section class="content-l u-mb45">
+            <div class="content-l_col content-l_col-1">
+                <div>
+                    <section>
+                        <h2 id="latest-updates">Latest Updates</h2>
+                        <div class="content_line__wide content_line u-mb20"></div>
+                        <strong>Page last edited:</strong>
+                        {% assign file_url_path = page.path | split: '/' | last %}
+                        {% assign page_collection_name = 'pages' %}
+                        {% if page.collection_name %}
+                            {% assign page_collection_name = page.collection_name %}
+                        {% endif %}
+                        {% assign file_url_path = page_collection_name | append: '/' | append: file_url_path %}
+                        <a href="https://github.com/{{ site.repository }}/commits/main/docs/{{ file_url_path }}">
+                            <time datetime="{{ page.last_modified_at }}">
+                                {{ page.last_modified_at | date: "%l:%M:%S %p %b %d, %Y" }}
+                            </time>
+                        </a>
+                    </section>
+                </div>
             </div>
-        </div>
+        </section>
+    {% endif %}
 
-
-    </div><!-- .content-l -->
+    </div>
 
 </section><!-- .content_main -->

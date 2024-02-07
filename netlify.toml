@@ -1,5 +1,5 @@
 [build]
-  environment = { NODE_VERSION = "16.18.0", RUBY_VERSION = "3.0.0" }
+  environment = { NODE_VERSION = "20", RUBY_VERSION = "3.0.0" }
   publish = "docs/_site/"
   command = "./scripts/build-netlify-pr-preview.sh"
 

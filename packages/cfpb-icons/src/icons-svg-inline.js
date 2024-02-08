@@ -1,4 +1,4 @@
-const path = require('path');
+import { path } from 'path';
 
 /**
  * This file is a less plugin that gets included in a less file via the
@@ -10,7 +10,7 @@ const path = require('path');
  * See http://lesscss.org/features/#plugin-atrules-feature-writing-your-first-plugin
  */
 
-module.exports = {
+registerPlugin({
   install: function (less, pluginManager, functions) {
     /**
      * @param {string} svgName - The canonical name of the icon.
@@ -54,4 +54,4 @@ module.exports = {
       return encodeURI(svg);
     });
   },
-};
+});

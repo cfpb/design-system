@@ -4,18 +4,18 @@ import { ReactLiquid, liquidEngine } from 'react-liquid';
 import {
   TOGGLE_ATTRIBUTE,
   toggleDetails,
-} from '../../../assets/js/toggle-details.js';
-import Tabs from '../../../assets/js/Tabs.js';
+} from '../../../../assets/js/toggle-details.js';
+import Tabs from '../../../../assets/js/Tabs.js';
 import { encode } from 'html-entities';
 import { marked } from 'marked';
 import slugify from 'slugify';
-import template from '../../../_includes/variation-content.html';
+import template from '../../../../_includes/variation-content.html';
 
 // react-liquid (https://github.com/aquibm/react-liquid/) isn't able to `include` other files so we
 // replace instances of {% include icons/XXXXX.svg %} with the inlined SVG
 const templateWithIcons = template.replace(
   /{%\s+include\s+\/?icons\/([\w-]+)\.svg\s+%}/g,
-  (match, icon) => import(`../../../_includes/icons/${icon}.svg`),
+  (match, icon) => import(`../../../../_includes/icons/${icon}.svg`),
 );
 
 export default class Preview extends Component {

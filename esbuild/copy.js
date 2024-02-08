@@ -2,7 +2,7 @@ import * as fs from 'fs';
 const { mkdir, copyFile } = fs.promises;
 import { dirname, resolve } from 'path';
 import { getFiles, copyAll } from './utils.js';
-import environment from '../config/environment.js';
+import environment from './environment.js';
 const { unprocessed, modules } = environment.paths;
 
 /**

@@ -1,10 +1,8 @@
-import { getAll } from './utils.js';
-
-const routes = `../packages/`;
-
 const jsPaths = [
-  // packages
-  ...getAll(`${routes}/cfpb-**.js`)
+  './docs/assets/js/interstitial.js',
+  './docs/assets/js/main.js',
+  './docs/assets/js/admin/netlify-cms.js',
+  './docs/assets/js/search.js',
 ];
 
 /**

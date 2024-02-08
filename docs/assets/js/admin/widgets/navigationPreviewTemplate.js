@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ReactLiquid, liquidEngine } from 'react-liquid';
 import slugify from 'slugify';
-import template from '../../../_includes/sidebar.html';
+import template from '../../../../_includes/sidebar.html';
 
 export default class Preview extends Component {
   componentDidMount() {

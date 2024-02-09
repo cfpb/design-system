@@ -27,7 +27,7 @@ export default class Preview extends Component {
     );
     liquidEngine.registerFilter('xml_escape', (initial) => encode(initial));
     liquidEngine.registerFilter('markdownify', (initial) =>
-      marked(initial || ''),
+      marked.parse(initial || ''),
     );
     liquidEngine.registerFilter(
       'strip',

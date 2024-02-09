@@ -7,7 +7,7 @@ import template from '../../../_includes/generic-content.html';
 export default class Preview extends Component {
   componentDidMount() {
     liquidEngine.registerFilter('markdownify', (initial) =>
-      marked(initial || ''),
+      marked.parse(initial || ''),
     );
   }
 

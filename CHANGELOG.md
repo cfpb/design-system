@@ -1,3 +1,19 @@
+
+## v0.35.1 (2024-02-09)
+
+#### Bug Fix
+* `cfpb-expandables`
+  * [#1907](https://github.com/cfpb/design-system/pull/1907) cfpb-expandables: Fix incorrect selector target ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1902](https://github.com/cfpb/design-system/pull/1902) Update node to v20 ([@anselmbradford](https://github.com/anselmbradford))
+* [#1871](https://github.com/cfpb/design-system/pull/1871) Switch to Cypress ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
+
+
 ## v0.35.0 (2024-01-23)
 
 #### Breaking Change

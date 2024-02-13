@@ -2,7 +2,7 @@
  * EventObserver
  * @class
  * @classdesc Used for creating an object
- *   that can be used to dispatch and listen to custom events.
+ *   that can dispatch and listen to custom events.
  * @returns {object} An EventObserver instance.
  */
 function EventObserver() {

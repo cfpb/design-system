@@ -38,7 +38,7 @@
     "serve-html": "http-server docs/_site",
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-netlify": "netlify-cms-proxy-server",
-    "start": "yarn build && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn build --watch\"",
+    "start": "yarn build && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn build watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "test:browser": "yarn cypress run",
     "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && node_modules/saucectl/bin/saucectl run"

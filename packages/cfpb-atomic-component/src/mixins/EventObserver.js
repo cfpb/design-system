@@ -1,7 +1,7 @@
 /**
  * EventObserver
  * @class
- * @classdesc Used for creating an object
+ * @classdesc Used to create an object
  *   that can dispatch and listen to custom events.
  * @returns {object} An EventObserver instance.
  */

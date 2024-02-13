@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import fs from 'fs';
 const { mkdir, rename } = fs.promises;
 import { dirname, resolve } from 'path';
 import { getFiles } from './utils.js';

@@ -26,15 +26,9 @@ const arg = process.argv.slice(2)[0];
   const mergedConfig = { ...scriptsConfig, ...stylesConfig };
   mergedConfig.entryPoints = jsPaths.concat(cssPaths);
 
-  if (arg === 'watch') {
-    const ctx = await esbuild.context(mergedConfig);
-    await ctx.watch();
-    // Not disposing context here as the user will ctrl+c to end watching.
-  } else {
-    const ctx = await esbuild.context(mergedConfig);
-    await ctx.rebuild();
-    await ctx.dispose();
-  }
+  const ctx = await esbuild.context(mergedConfig);
 
+  await ctx.rebuild();
+  await ctx.dispose();
   await copy();
 })();

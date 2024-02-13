@@ -1,7 +1,7 @@
 import { readdirSync } from 'fs';
 import { postCSSPlugin } from '../plugins/postcss.js';
 import autoprefixer from 'autoprefixer';
-import glob from 'glob';
+import { glob } from 'glob';
 
 const cssPaths = [];
 

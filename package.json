@@ -23,9 +23,9 @@
   ],
   "scripts": {
     "a11y": "lhci autorun",
-    "build": "node ./esbuild/build.js",
+    "build": "node ./esbuild/docs/build.js",
     "build-netlify": "yarn install && yarn after-install && yarn compile-prod && bundle exec jekyll build",
-    "build-packages": "webpack --config webpack.config.packages.js --mode=production",
+    "build-packages": "node ./esbuild/packages/build.js",
     "changelog": "./scripts/generate-changelog.sh",
     "compile-dev": "webpack --config webpack.config.docs.js --mode=development",
     "compile-prod": "webpack --config webpack.config.docs.js --mode=production",
@@ -40,7 +40,7 @@
     "serve-html": "http-server docs/_site",
     "serve-jekyll": "bundle exec jekyll serve --watch --profile --host=localhost --port=4000",
     "serve-netlify": "netlify-cms-proxy-server",
-    "start": "yarn compile-dev && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn compile-dev --watch\"",
+    "start": "yarn build && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn compile-dev --watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "test:browser": "yarn cypress run",
     "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && node_modules/saucectl/bin/saucectl run"
@@ -62,7 +62,6 @@
     "@babel/core": "7.23.9",
     "@babel/preset-env": "7.23.9",
     "@babel/preset-react": "7.23.3",
-    "@chialab/esbuild-plugin-html": "0.18.0",
     "@lhci/cli": "0.13.0",
     "autoprefixer": "10.4.17",
     "babel-loader": "9.1.3",

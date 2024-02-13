@@ -27,4 +27,4 @@ const postCSSPlugin = ({ plugins = [], lessOptions = {} }) => ({
   },
 });
 
-export default postCSSPlugin;
+export { postCSSPlugin };

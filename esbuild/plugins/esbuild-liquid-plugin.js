@@ -19,7 +19,7 @@ const esbuildLiquidPlugin = {
 
       if (build.initialOptions && build.initialOptions.minify) {
         contents = contents
-          .replace(/\>[\r\n ]+\</g, '><')
+          .replace(/>[\r\n ]+</g, '><')
           .replace(/(<.*?>)|\s+/g, (m, $1) => ($1 ? $1 : ' '))
           .replace(/(-%} \{%-)/, '-%}{%-')
           .trim();

@@ -7,9 +7,10 @@ import {
 } from '../../../../assets/js/toggle-details.js';
 import Tabs from '../../../../assets/js/Tabs.js';
 import { encode } from 'html-entities';
-import { marked } from 'marked';
 import slugify from 'slugify';
 import template from '../../../../_includes/variation-content.html';
+// eslint-disable-next-line import/namespace
+import { marked } from '../../../../../node_modules/marked/lib/marked.esm.js';
 
 // react-liquid (https://github.com/aquibm/react-liquid/) isn't able to `include` other files so we
 // replace instances of {% include icons/XXXXX.svg %} with the inlined SVG

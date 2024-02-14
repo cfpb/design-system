@@ -1,38 +1,12 @@
 describe('Multiselect', () => {
-  // let multiselectInput;
-
   beforeEach(() => {
     cy.visit('/components/selects');
     cy.viewport(1024, 768);
     cy.get('.a-live_code').should('be.visible');
-
-    // Wait till page has loaded.
-    /*await browser.waitUntil(
-      async () => {
-
-        async function documentReady() {
-          return document.readyState;
-        }
-
-        // For IE compatibility we can't use an arrow function in the executed JS.
-        const state = await browser.execute(documentReady);
-
-        multiselectInput = await $('.a-live_code .o-multiselect_search');
-        await multiselectInput.scrollIntoView();
-
-        return state === 'complete';
-      },
-      {
-        timeout: 60000,
-        timeoutMsg: 'Oops! Test timed out waiting for page to load!',
-      },
-    );*/
   });
 
   it('should show the first multiselect option when opened', () => {
     cy.get('.a-live_code .o-multiselect_search').click();
-    // Ensure multiselect has fully expanded
-    cy.wait(300);
     cy.get('.a-live_code .o-multiselect_options li:first-child').should(
       'be.visible',
     );
@@ -54,8 +28,6 @@ describe('Multiselect', () => {
 
   it('should correctly filter the multiselect options', () => {
     cy.get('.a-live_code .o-multiselect_search').click();
-    // Ensure multiselect has fully expanded
-    cy.wait(300);
 
     // Find option #4.
     cy.get('.a-live_code .o-multiselect_search').type('ion 4');
@@ -112,8 +84,6 @@ describe('Multiselect', () => {
 
   it('should let the user add a choice', () => {
     cy.get('.a-live_code .o-multiselect_search').click();
-    // Ensure multiselect has fully expanded
-    cy.wait(300);
 
     cy.get(
       '.a-live_code .o-multiselect_options li[data-option=option2] label',

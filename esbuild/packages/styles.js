@@ -25,7 +25,7 @@ function styles(baseConfig) {
           math: 'always',
           paths: [
             ...readdirSync('./node_modules/@cfpb').map(
-              (v) => './node_modules/@cfpb/${v}/src',
+              (v) => `./node_modules/@cfpb/${v}/src`,
             ),
             './node_modules/',
           ],

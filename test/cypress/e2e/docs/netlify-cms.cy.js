@@ -87,18 +87,16 @@ describe('Netlify CMS', () => {
       getIframeBody()
         .find('.m-variation')
         .first()
-        .find('a')
-        .contains('Implementation')
-        .click();
-      getIframeBody()
-        .find('.m-variation .source-code')
+        .find('a.m-tabs_tab')
         .last()
-        .should('be.visible');
+        .should('have.text', ' Implementation ')
+        .click();
       getIframeBody()
         .find('.m-variation')
         .first()
-        .find('a')
-        .contains('Implementation')
+        .find('a.m-tabs_tab')
+        .last()
+        .should('have.text', ' Implementation ')
         .parent()
         .should('have.class', 'm-tabs_list-item-selected');
     });

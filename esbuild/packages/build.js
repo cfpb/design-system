@@ -18,8 +18,6 @@ const baseConfig = {
   plugins: [],
 };
 
-const arg = process.argv.slice(2)[0];
-
 (async function () {
   const scriptsConfig = scripts(baseConfig);
   const stylesConfig = styles(baseConfig);

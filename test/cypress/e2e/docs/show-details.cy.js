@@ -63,10 +63,8 @@ describe('The "show details" toggling feature', () => {
 
       cy.log('should show code snippets when toggle button is clicked');
       // Show details button.
-      cy.get('button')
-        .contains('Show details')
-        .click()
-        .should('not.be.visible');
+      cy.get('button').contains('Show details').click();
+      cy.get('button').contains('Show details').should('not.be.visible');
 
       // Hide details button.
       cy.get('button').contains('Hide details').should('be.visible');
@@ -78,10 +76,8 @@ describe('The "show details" toggling feature', () => {
         'should re-hide code snippets when toggle button is clicked again',
       );
       // Hide details button.
-      cy.get('button')
-        .contains('Hide details')
-        .click()
-        .should('not.be.visible');
+      cy.get('button').contains('Hide details').click();
+      cy.get('button').contains('Hide details').should('not.be.visible');
 
       // Detail tabs.
       cy.get('.m-tabs').should('not.be.visible');

@@ -3,6 +3,9 @@ const { mkdir, rename } = fs.promises;
 import { dirname, resolve } from 'path';
 import { getFiles } from './utils.js';
 
+/**
+ *
+ */
 async function copy() {
   const resolvedBase = resolve('tmp');
   const tmpFiles = await getFiles(resolvedBase);
@@ -17,7 +20,7 @@ async function copy() {
   });
 
   for (let i = 0, len = tmpFiles.length; i < len; i++) {
-    let newFile = newFiles[i];
+    const newFile = newFiles[i];
     await mkdir(dirname(newFile), { recursive: true });
     await rename(tmpFiles[i], newFile);
   }

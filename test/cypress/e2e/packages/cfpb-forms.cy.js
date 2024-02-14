@@ -1,9 +1,10 @@
 describe('Multiselect', () => {
-  let multiselectInput;
+  // let multiselectInput;
 
   beforeEach(() => {
     cy.visit('/components/selects');
     cy.viewport(1024, 768);
+    cy.get('.a-live_code').should('be.visible');
 
     // Wait till page has loaded.
     /*await browser.waitUntil(
@@ -37,23 +38,21 @@ describe('Multiselect', () => {
     );
   });
 
-  it('should not show the last multiselect option until the user scrolls to it', async () => {
-    cy.get('.a-live_code .o-multiselect_search')
-      .click()
-      .then(() => {
-        cy.get(
-          '.a-live_code .o-multiselect_options li:last-child',
-        ).scrollIntoView();
-        // Ensure multiselect has fully expanded
-        cy.wait(300);
-        cy.get('.a-live_code .o-multiselect_fieldset')
-          .invoke('css', 'scrollTop')
-          .then(parseFloat)
-          .should('be.gt', 0);
-      });
+  it('should not show the last multiselect option until the user scrolls to it', () => {
+    cy.get('.a-live_code .o-multiselect_search').click();
+    cy.get('.a-live_code .o-multiselect_options li:last-child').should(
+      'not.be.visible',
+    );
+    cy.get(
+      '.a-live_code .o-multiselect_options li:last-child',
+    ).scrollIntoView();
+    // Ensure multiselect has fully expanded
+    cy.get('.a-live_code .o-multiselect_options li:last-child').should(
+      'be.visible',
+    );
   });
 
-  it('should correctly filter the multiselect options', async () => {
+  it('should correctly filter the multiselect options', () => {
     cy.get('.a-live_code .o-multiselect_search').click();
     // Ensure multiselect has fully expanded
     cy.wait(300);
@@ -77,6 +76,7 @@ describe('Multiselect', () => {
     ).should('not.be.visible');
 
     // Find the last really long option.
+    cy.get('.a-live_code .o-multiselect_search').clear();
     cy.get('.a-live_code .o-multiselect_search').type('superca');
 
     // First multiselect option.
@@ -95,30 +95,31 @@ describe('Multiselect', () => {
     ).should('be.visible');
   });
 
-  it('should let the user remove a choice', async () => {
+  it('should let the user remove a choice', () => {
     // Verify option1 is selected by default.
     cy.get(
       '.o-multiselect_choices label[for=test_select__multiple-option1]',
     ).should('be.visible');
 
     // Verify option1 can be removed.
-    cy.get('.o-multiselect_choices label[for=test_select__multiple-option1]')
-      .click()
-      .should('not.be.visible');
+    cy.get(
+      '.o-multiselect_choices label[for=test_select__multiple-option1]',
+    ).click();
+    cy.get(
+      '.o-multiselect_choices label[for=test_select__multiple-option1]',
+    ).should('not.exist');
   });
 
-  it('should let the user add a choice', async () => {
+  it('should let the user add a choice', () => {
     cy.get('.a-live_code .o-multiselect_search').click();
     // Ensure multiselect has fully expanded
     cy.wait(300);
 
-    const secondMultiSelectOption = cy
-      .get('.a-live_code .o-multiselect_options li[data-option=option2] label')
-      .click()
-      .then(() => {
-        cy.get(
-          '.a-live_code .o-multiselect_choices label[for=test_select__multiple-option2]',
-        ).should('be.visible');
-      });
+    cy.get(
+      '.a-live_code .o-multiselect_options li[data-option=option2] label',
+    ).click();
+    cy.get(
+      '.a-live_code .o-multiselect_choices label[for=test_select__multiple-option2]',
+    ).should('be.visible');
   });
 });

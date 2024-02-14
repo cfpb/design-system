@@ -2,10 +2,8 @@ describe('CMS interstitial page with editing instructions', () => {
   describe('Editing a component page', () => {
     beforeEach(() => {
       cy.visit('/components/banner-notification');
-      const editButton = cy.get('#edit-page').then(() => {
-        editButton.should('be.visible');
-        editButton.click();
-      });
+      cy.get('#edit-page').should('be.visible');
+      cy.get('#edit-page').click();
     });
 
     it("should show the interstitial if the user hasn't seen it before", () => {
@@ -14,11 +12,9 @@ describe('CMS interstitial page with editing instructions', () => {
 
     it('should not show the interstitial if the user has already seen it', () => {
       cy.visit('/components/banner-notification');
-      const editButton = cy.get('#edit-page').then(() => {
-        editButton.should('be.visible');
-        editButton.click();
-        cy.title().should('eq', 'Content Manager');
-      });
+      cy.get('#edit-page').should('be.visible');
+      cy.get('#edit-page').click();
+      cy.title().should('eq', 'Content Manager');
     });
   });
 });

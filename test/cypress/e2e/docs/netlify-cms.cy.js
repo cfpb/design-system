@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 
 const getIframeBody = () => {
-  // get the iframe > document > body
+  // Get the iframe > document > body
   // and retry until the body element is not empty
   return (
     cy
@@ -78,9 +78,25 @@ describe('Netlify CMS', () => {
         .contains('Show details')
         .should('be.visible');
       getIframeBody().find('button').contains('Show details').click();
-      getIframeBody().find('a').contains('Implementation').should('be.visible');
-      getIframeBody().find('a').contains('Implementation').click();
       getIframeBody()
+        .find('.m-variation')
+        .first()
+        .find('a')
+        .contains('Implementation')
+        .should('be.visible');
+      getIframeBody()
+        .find('.m-variation')
+        .first()
+        .find('a')
+        .contains('Implementation')
+        .click();
+      getIframeBody()
+        .find('.m-variation .source-code')
+        .last()
+        .should('be.visible');
+      getIframeBody()
+        .find('.m-variation')
+        .first()
         .find('a')
         .contains('Implementation')
         .parent()

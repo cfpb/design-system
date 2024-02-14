@@ -77,26 +77,14 @@ describe('Netlify CMS', () => {
         .find('button')
         .contains('Show details')
         .should('be.visible');
+      getIframeBody().find('.m-tabs').should('have.css', 'display', 'none');
       getIframeBody().find('button').contains('Show details').click();
+      getIframeBody().find('a').contains('Implementation').should('be.visible');
+      getIframeBody().find('a').contains('Implementation').click();
+      getIframeBody().find('.m-tabs').should('not.have.css', 'display', 'none');
       getIframeBody()
-        .find('.m-variation')
-        .first()
         .find('a')
         .contains('Implementation')
-        .should('be.visible');
-      getIframeBody()
-        .find('.m-variation')
-        .first()
-        .find('a.m-tabs_tab')
-        .last()
-        .should('have.text', ' Implementation ')
-        .click();
-      getIframeBody()
-        .find('.m-variation')
-        .first()
-        .find('a.m-tabs_tab')
-        .last()
-        .should('have.text', ' Implementation ')
         .parent()
         .should('have.class', 'm-tabs_list-item-selected');
     });

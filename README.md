@@ -70,10 +70,10 @@ The project has a dependency on Ruby because it uses Jekyll. If you do not have 
 
 ```shell
 curl -sSL https://get.rvm.io | bash -s stable --ruby
-rvm install 2.7
 brew install openssl
 brew link openssl --force
-gem install eventmachine -- --with-openssl-dir=/usr/local/opt/openssl@1.1
+rvm install ruby-2.7.8 --with-openssl-dir=$(brew --prefix openssl@1.1)
+gem install eventmachine -- --with-openssl-dir=$(brew --prefix openssl@1.1)
 bundle install
 ```
 

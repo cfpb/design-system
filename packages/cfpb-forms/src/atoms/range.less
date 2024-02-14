@@ -1,0 +1,56 @@
+.rangeTrackStyles() {
+  height: unit((11px / @base-font-size-px), em);
+  width: 100%;
+  background-color: @range-bg-track;
+  border: 1px solid @range-border;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.rangeThumbStyles() {
+  height: unit((45px / @base-font-size-px), em);
+  width: unit((45px / @base-font-size-px), em);
+  margin-top: unit((-18px / @base-font-size-px), em);
+  appearance: none;
+  border: 1px solid @range-border;
+  border-radius: 50%;
+  background-color: @range-bg;
+  cursor: pointer;
+}
+
+.rangeThumbFocusStyles() {
+  background-color: @range-bg__focused;
+  border: 2px solid @range-border__focused;
+}
+
+.a-range {
+  // Reset the browser's default styling.
+  appearance: none;
+
+  width: 100%;
+
+  &::-webkit-slider-runnable-track {
+    .rangeTrackStyles();
+  }
+  &::-moz-range-track {
+    .rangeTrackStyles();
+  }
+  &::-webkit-slider-thumb {
+    .rangeThumbStyles();
+  }
+  &::-moz-range-thumb {
+    .rangeThumbStyles();
+  }
+  &:focus,
+  &.focus {
+    box-shadow: none;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      .rangeThumbFocusStyles();
+    }
+    &::-moz-range-thumb {
+      .rangeThumbFocusStyles();
+    }
+  }
+}

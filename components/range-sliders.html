@@ -316,6 +316,11 @@
         
 
         
+        <div class="o-variation-group_description">
+            <p>Range sliders can have optional <code class="language-plaintext highlighter-rouge">min</code>, <code class="language-plaintext highlighter-rouge">max</code> and <code class="language-plaintext highlighter-rouge">step</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#additional_attributes">attributes</a> to restrict the user’s selection.</p>
+
+        </div>
+        
 
         
         <div class="m-variation">
@@ -329,27 +334,72 @@
 
             
             <div class="m-variation_description">
-                <h3 id="default-state">Default state</h3>
-
-<p><img src="/design-system/images/uploads/slider-default.png" alt=""></p>
-
-<h3 id="focus-state">Focus state</h3>
-
-<p><img src="/design-system/images/uploads/slider-focus.png" alt=""></p>
-
-<p>View this component in use on <a href="https://www.consumerfinance.gov/consumer-tools/retirement/before-you-claim/">Planning your Social Security claiming age</a>. After entering your date of birth and highest annual work income and then pressing the “Get your estimates” button, you will see an interactive chart with a range slider.</p>
+                
 
             </div>
             
 
             <!-- Live code example -->
             
+            <div class="a-live_code">
+                <!-- If the slider's label is visually hidden, as it is in the below example, make sure to visually describe the purpose of the slider elsewhere -->
+
+<label for="example-range-slider" class="u-visually-hidden">Example range slider</label>
+<input type="range" min="0" max="100" step="5" class="a-range" id="example-range-slider">
+            </div>
+            
 
             
             
             
             
 
+            
+
+            <div class="a-toggle_code">
+                <button href="#details-if-the-slider-s-label-is-visuall-1" class="a-btn a-btn__link" data-toggle-details="show">Show details</button>
+                <button href="#details-if-the-slider-s-label-is-visuall-1" class="a-btn a-btn__link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-if-the-slider-s-label-is-visuall-1">
+                <ul class="m-tabs_list">
+                    
+                    <li class="m-tabs_list-item m-tabs_list-item-selected">
+                        <a class="m-tabs_tab" href="#details-if-the-slider-s-label-is-visuall-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs_panel" id="details-if-the-slider-s-label-is-visuall-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;!-- If the slider's label is visually hidden, as it is in the below example, make sure to visually describe the purpose of the slider elsewhere --&gt;
+
+&lt;label for="example-range-slider" class="u-visually-hidden"&gt;Example range slider&lt;/label&gt;
+&lt;input type="range" min="0" max="100" step="5" class="a-range" id="example-range-slider"&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
             
 
         </div>
@@ -367,7 +417,9 @@
                 <div class="content_line content_line__wide u-mb20"></div>
                 <p>
                 </p>
-<p>Range sliders can work well for discovery and education, where the inputs are <a href="https://medium.com/@paulvddool/sliders-are-bad-practice-b56c3b7a6e19">a relative quantity and not a specific numeric input</a>. As an example, users can narrow a list of flight options on kayak.com with sliders that show a range of takeoff times. Sliders are an elegant and intuitive way to allow the user to discover which takeoff times will yield the lowest fares.</p>
+<p>Range sliders can work well for discovery and education, where the inputs are <a href="https://medium.com/@paulvddool/sliders-are-bad-practice-b56c3b7a6e19">a relative quantity and not a specific numeric input</a>. View this component in use on our <a href="https://www.consumerfinance.gov/consumer-tools/retirement/before-you-claim/">Planning your Social Security</a> page. After entering your date of birth and highest annual work income and then pressing the “Get your estimates” button, you will see an interactive chart with a range slider.</p>
+
+<p>As another example, users can narrow a list of flight options on kayak.com with sliders that show a range of takeoff times. Sliders are an elegant and intuitive way to allow the user to discover which takeoff times will yield the lowest fares.</p>
 
 <p>Because they’re imprecise and difficult to manipulate, range sliders are not a good choice when the user is likely to have a specific number that they want to input. If you choose to implement a slider in this latter case, consider adding steppers or an input box as an alternative means of entering the same data.</p>
 
@@ -390,7 +442,7 @@
             <div class="content_line content_line__wide u-mb20"></div>
             <p>
                 </p>
-<p>Make sure that sliders are accessible by keyboard using the arrow keys.</p>
+<p>Make sure that sliders are accessible by keyboard using the arrow keys. A visual caption must be present that describes the range slider’s purpose.</p>
 
             
         </section>
@@ -413,8 +465,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/range-sliders.md">
-                            <time datetime="2024-02-13 19:55:37 -0500">
-                                 7:55:37 PM Feb 13, 2024
+                            <time datetime="2024-02-15 13:02:31 -0500">
+                                 1:02:31 PM Feb 15, 2024
                             </time>
                         </a>
                     </section>

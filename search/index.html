@@ -5211,18 +5211,21 @@ Label
 
                 
                     'variation_name1': '',
-                    'variation_description1': "Default state\n\n\n\nFocus state\n\n\n\nView this component in use on Planning your Social Security claiming age. After entering your date of birth and highest annual work income and then pressing the “Get your estimates” button, you will see an interactive chart with a range slider.\n",
-                    'variation_code_snippet1': ``,
+                    'variation_description1': "\n",
+                    'variation_code_snippet1': `&lt;!-- If the slider&#39;s label is visually hidden, as it is in the below example, make sure to visually describe the purpose of the slider elsewhere --&gt;
+
+&lt;label for=&quot;example-range-slider&quot; class=&quot;u-visually-hidden&quot;&gt;Example range slider&lt;/label&gt;
+&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;5&quot; class=&quot;a-range&quot; id=&quot;example-range-slider&quot;&gt;`,
                 
             
 
 
             'title': 'Range sliders',
             'description': "Range sliders allow the user to select a value between a defined minimum and maximum range. They can work well for discovery and education, but because they’re imprecise and difficult to manipulate, are not the best choice when the user is likely to have a specific number that they want to input.\n",
-            'use_cases': "Range sliders can work well for discovery and education, where the inputs are a relative quantity and not a specific numeric input. As an example, users can narrow a list of flight options on kayak.com with sliders that show a range of takeoff times. Sliders are an elegant and intuitive way to allow the user to discover which takeoff times will yield the lowest fares.\n\nBecause they’re imprecise and difficult to manipulate, range sliders are not a good choice when the user is likely to have a specific number that they want to input. If you choose to implement a slider in this latter case, consider adding steppers or an input box as an alternative means of entering the same data.\n\nAlso consider the balance between the length of the slider and the number of data points it covers (the range, as well as how discrete the points are). The more points to choose from, the harder it is for the user to target a specific number.\n",
+            'use_cases': "Range sliders can work well for discovery and education, where the inputs are a relative quantity and not a specific numeric input. View this component in use on our Planning your Social Security page. After entering your date of birth and highest annual work income and then pressing the “Get your estimates” button, you will see an interactive chart with a range slider.\n\nAs another example, users can narrow a list of flight options on kayak.com with sliders that show a range of takeoff times. Sliders are an elegant and intuitive way to allow the user to discover which takeoff times will yield the lowest fares.\n\nBecause they’re imprecise and difficult to manipulate, range sliders are not a good choice when the user is likely to have a specific number that they want to input. If you choose to implement a slider in this latter case, consider adding steppers or an input box as an alternative means of entering the same data.\n\nAlso consider the balance between the length of the slider and the number of data points it covers (the range, as well as how discrete the points are). The more points to choose from, the harder it is for the user to target a specific number.\n",
             'guidelines': "\n",
             'behavior': "\n",
-            'accessibility': "Make sure that sliders are accessible by keyboard using the arrow keys.\n",
+            'accessibility': "Make sure that sliders are accessible by keyboard using the arrow keys. A visual caption must be present that describes the range slider’s purpose.\n",
             'research': "\n",
             'related_items': "\n",
             'url': 'components/range-sliders'

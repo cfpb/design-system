@@ -1,4 +1,13 @@
 
+## v0.36.0 (2024-02-15)
+
+#### Enhancement
+* `cfpb-forms`
+  * [#1911](https://github.com/cfpb/design-system/pull/1911) Add range slider component ([@contolini](https://github.com/contolini))
+
+#### Committers: 1
+- Chris Contolini ([@contolini](https://github.com/contolini))
+
 ## v0.35.1 (2024-02-09)
 
 #### Bug Fix
@@ -12,7 +21,6 @@
 #### Committers: 2
 - Ans ([@anselmbradford](https://github.com/anselmbradford))
 - Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
-
 
 ## v0.35.0 (2024-01-23)
 

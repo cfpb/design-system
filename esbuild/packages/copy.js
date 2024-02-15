@@ -4,7 +4,7 @@ import { dirname, resolve } from 'path';
 import { getFiles } from './utils.js';
 
 /**
- *
+ * Copy dist files from temporary directory to packages directories.
  */
 async function copy() {
   const resolvedBase = resolve('tmp');

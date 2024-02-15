@@ -2,7 +2,7 @@ import { readdirSync } from 'fs';
 import { postCSSPlugin } from '../plugins/postcss.js';
 import autoprefixer from 'autoprefixer';
 
-const cssPaths = [`./docs/assets/css/main.less`];
+const cssPaths = ['./docs/assets/css/main.less'];
 
 /**
  * @param {object} baseConfig - The base esbuild configuration.

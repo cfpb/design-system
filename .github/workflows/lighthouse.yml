@@ -33,7 +33,7 @@ jobs:
       # Install Ruby and configure the Bundler cache.
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0.0
+          ruby-version: 3.2.3
 
       # https://github.com/actions/cache/blob/master/examples.md#ruby---bundler
       - name: Set up Bundler cache

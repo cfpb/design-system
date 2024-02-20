@@ -22,7 +22,7 @@ jobs:
     - name: Set up Ruby for Jekyll
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.0.0
+        ruby-version: 3.2.3
 
     - name: Install dependencies with Yarn
       run: |

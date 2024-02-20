@@ -86,13 +86,15 @@ variation_groups:
                   </select>
               </div>
           </div>
-        variation_description: Allows the user to select a single item from a dropdown
+        variation_description:
+          Allows the user to select a single item from a dropdown
           list of options.
         variation_name: Single select
-        variation_specs: ""
+        variation_specs: ''
       - variation_is_deprecated: false
         variation_name: Multiselect
-        variation_description: Allows the user to select multiple items from a dropdown
+        variation_description:
+          Allows the user to select multiple items from a dropdown
           list of options.
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__select">
@@ -110,11 +112,12 @@ variation_groups:
                   <option value="option8">Multiselect options can also contain long words that will be wrapped like supercalifragilisticexpialidocious</option>
               </select>
           </div>
-        variation_implementation: "Custom JavaScript may be required to make the default
+        variation_implementation:
+          'Custom JavaScript may be required to make the default
           multiselect component accessible for the visually impaired. See the
-          [accessibility](#accessibility) section for more information. "
+          [accessibility](#accessibility) section for more information. '
     variation_group_name: Types
-guidelines: ""
+guidelines: ''
 eyebrow: Components
 use_cases: >-
   While selects are easy to implement, they aren’t always the best choice from a
@@ -152,6 +155,6 @@ related_items: "* [Forms
 redirect_from:
   - /components/dropdowns-and-multiselects
 last_updated: 2020-01-06T20:31:06.632Z
-behavior: ""
-research: ""
+behavior: ''
+research: ''
 ---

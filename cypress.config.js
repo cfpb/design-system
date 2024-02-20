@@ -7,7 +7,7 @@ export default defineConfig({
     specPattern: 'test/cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: 'test/cypress/support/e2e.js',
     excludeSpecPattern: 'test/cypress/e2e/**/*-helpers.cy.js',
-    setupNodeEvents(on, config) {
+    setupNodeEvents(/*on, config*/) {
       // implement node event listeners here
     },
   },

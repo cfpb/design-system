@@ -1,4 +1,15 @@
 
+## v0.37.0 (2024-02-20)
+
+#### Internal
+* `cfpb-atomic-component`, `cfpb-buttons`, `cfpb-core`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-grid`, `cfpb-icons`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1909](https://github.com/cfpb/design-system/pull/1909) Streamline and update build ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.36.0 (2024-02-15)
 
 #### Enhancement

@@ -41,7 +41,7 @@
     "start": "yarn build && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn build watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "test:browser": "yarn cypress run",
-    "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && node_modules/saucectl/bin/saucectl run"
+    "test:browser:cloud": "scripts/sauce.sh"
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
@@ -101,5 +101,6 @@
     "singleQuote": true
   },
   "type": "module",
-  "version": "1.1.2"
+  "version": "1.1.2",
+  "packageManager": "yarn@4.2.1"
 }

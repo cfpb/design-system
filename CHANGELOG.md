@@ -1,4 +1,15 @@
 
+## v0.37.1 (2024-02-21)
+
+#### Bug Fix
+* `cfpb-design-system`, `cfpb-forms`
+  * [#1914](https://github.com/cfpb/design-system/pull/1914) cfpb-forms: Add min-height to range slider ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.37.0 (2024-02-20)
 
 #### Internal

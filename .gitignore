@@ -68,6 +68,12 @@ node_modules/
 .changelog/
 yarn-error.log
 test/unit-test-coverage/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # Documentation #
 #################

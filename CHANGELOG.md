@@ -1,4 +1,15 @@
 
+## v0.37.2 (2024-02-22)
+
+#### Breaking Change
+* `cfpb-typography`
+  * [#1915](https://github.com/cfpb/design-system/pull/1915) cfpb-typography: Remove older WOFF files ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.37.1 (2024-02-21)
 
 #### Bug Fix

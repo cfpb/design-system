@@ -41,7 +41,7 @@
     "start": "yarn build && concurrently --kill-others \"yarn serve-netlify\" \"yarn serve-jekyll\" \"yarn build watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "test:browser": "yarn cypress run",
-    "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && node_modules/saucectl/bin/saucectl run"
+    "test:browser:cloud": "scripts/sauce.sh"
   },
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",
   "dependencies": {

@@ -13,15 +13,16 @@ variation_groups:
           <label for="example-range-slider" class="u-visually-hidden">Example range slider</label>
 
           <input type="range" min="0" max="100" step="5" class="a-range" id="example-range-slider">
-        variation_description: ""
-        variation_name: ""
-        variation_specs: ""
+        variation_description: ''
+        variation_name: ''
+        variation_specs: ''
     variation_group_name: Standard range slider
-    variation_group_description: Range sliders can have optional `min`, `max` and
+    variation_group_description:
+      Range sliders can have optional `min`, `max` and
       `step`
       [attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#additional_attributes)
       to restrict the user's selection.
-guidelines: ""
+guidelines: ''
 eyebrow: Components
 status: Released
 description: Range sliders allow the user to select a value between a defined
@@ -46,10 +47,10 @@ use_cases: >-
 
 
   Also consider the balance between the length of the slider and the number of data points it covers (the range, as well as how discrete the points are). The more points to choose from, the harder it is for the user to target a specific number.
-behavior: ""
+behavior: ''
 accessibility: Make sure that sliders are accessible by keyboard using the arrow
   keys. A visual caption must be present that describes the range slider's
   purpose.
 last_updated: 2020-01-28T15:55:47.394Z
-research: ""
+research: ''
 ---

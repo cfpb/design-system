@@ -92,6 +92,65 @@ variation_groups:
               </tbody>
           </table>
         variation_specs: ''
+      - variation_name: Hybrid responsive stacked table
+        variation_description:
+          'To stack table information on smaller screens while
+          preserving *some* columns,  use the
+          `.o-table__hybrid-stack-on-small-hybrid` class. Add a `data-column`
+          attribute to every `<th>` and `<td>` that should remain a column on
+          smaller screens. Finally, add a `style` attribute to the table with
+          the number of columns to be preserved, e.g. `style="--columns: 3"`.'
+        variation_code_snippet: >-
+          <table class="o-table o-table__stack-on-small-hybrid"
+          style="--columns: 3">
+              <thead>
+                  <tr>
+                      <th data-column>Column 1</th>
+                      <th data-column>Column 2</th>
+                      <th data-column>Column 3</th>
+                      <th>Column 4</th>
+                      <th>Column 5</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td data-label="Column 1" data-column>Row A</td>
+                      <td data-label="Column 2" data-column>Cell A2</td>
+                      <td data-label="Column 3" data-column>Cell A3</td>
+                      <td data-label="Column 4">Cell A4</td>
+                      <td data-label="Column 5">Cell A5</td>
+                  </tr>
+                  <tr>
+                      <td data-label="Column 1" data-column>Row B</td>
+                      <td data-label="Column 2" data-column>Cell B2</td>
+                      <td data-label="Column 3" data-column>Cell B3</td>
+                      <td data-label="Column 4">Cell B4</td>
+                      <td data-label="Column 5">Cell B5</td>
+                  </tr>
+                  <tr>
+                      <td data-label="Column 1" data-column>Row C</td>
+                      <td data-label="Column 2" data-column>Cell C2</td>
+                      <td data-label="Column 3" data-column>Cell C3</td>
+                      <td data-label="Column 4">Cell C4</td>
+                      <td data-label="Column 5">Cell C5</td>
+                  </tr>
+                  <tr>
+                      <td data-label="Column 1" data-column>Row D</td>
+                      <td data-label="Column 2" data-column>Cell D2</td>
+                      <td data-label="Column 3" data-column>Cell D3</td>
+                      <td data-label="Column 4">Cell D4</td>
+                      <td data-label="Column 5">Cell D5</td>
+                  </tr>
+                  <tr>
+                      <td data-label="Column 1" data-column>Row E</td>
+                      <td data-label="Column 2" data-column>Cell E2</td>
+                      <td data-label="Column 3" data-column>Cell E3</td>
+                      <td data-label="Column 4">Cell E4</td>
+                      <td data-label="Column 5">Cell E5</td>
+                  </tr>
+              </tbody>
+          </table>
+        variation_specs: ''
       - variation_name: Responsive stacked table with header (directory table)
         variation_description: >-
           The directory table is a variation of the stacked table. At the small

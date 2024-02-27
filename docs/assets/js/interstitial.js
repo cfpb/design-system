@@ -31,7 +31,7 @@ if (page && window.PAGES_ALLOWED[page]) {
   }
   document
     .querySelector('[data-interstitial-notification]')
-    .classList.add('m-notification__visible');
+    .classList.add('m-notification--visible');
   document
     .querySelector('[data-interstitial-next-step]')
     .classList.remove('u-hidden');

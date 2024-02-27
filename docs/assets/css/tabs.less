@@ -1,6 +1,6 @@
 // All screen sizes.
 .m-tabs {
-  &_list {
+  &__list {
     border-top: 1px solid var(--gray);
     margin: 0;
     padding: 0;
@@ -8,14 +8,14 @@
     display: none;
   }
 
-  &_list-item {
+  &__list-item {
     .heading-5();
     border-bottom: 0;
     margin-bottom: 0;
     margin-left: 0;
 
     &:first-child {
-      .m-tabs_tab {
+      .m-tabs__tab {
         padding-left: 2rem;
       }
     }
@@ -31,7 +31,7 @@
     }
   }
 
-  &_tab {
+  &__tab {
     border: 0;
     color: var(--gray);
     display: block;
@@ -64,7 +64,7 @@
     }
   }
 
-  &_panel {
+  &__panel {
     background-color: var(--gray-5);
     margin-bottom: 30px;
   }
@@ -82,7 +82,7 @@
 
 // Tablet and below.
 .respond-to-max(@bp-sm-max, {
-  .m-tabs_panel {
+  .m-tabs__panel {
     &.u-hidden {
       display: block !important;
     }
@@ -91,11 +91,11 @@
 
 // Desktop and above.
 .respond-to-min(@bp-med-min, {
-  .m-tabs_list {
+  .m-tabs__list {
     display: flex;
   }
 
-  .m-tabs_panel {
+  .m-tabs__panel {
     border-top: 1px solid var(--gray);
     border-bottom: 1px solid var(--gray-40);
     margin: -3px 0 50px;

@@ -150,7 +150,7 @@
 .u-flexible-container {
   .u-flexible-container-mixin();
 
-  &_inner {
+  &__inner {
     position: absolute;
     top: 0;
     left: 0;
@@ -158,7 +158,7 @@
     height: 100%;
   }
 
-  &__4-3 {
+  &--4-3 {
     .u-flexible-container-mixin( 4, 3 );
   }
 }
@@ -167,39 +167,39 @@
 // Link mixins
 //
 
-.u-link__colors() {
-  .u-link__colors-base();
+.u-link--colors() {
+  .u-link--colors-base();
 }
 
-.u-link__colors( @c ) {
-  .u-link__colors-base(
+.u-link--colors( @c ) {
+  .u-link--colors-base(
     @c, @c, @c, @c, @c,
     @c, @c, @c, @c, @c
   );
 }
 
-.u-link__colors( @c, @h ) {
-  .u-link__colors-base(
+.u-link--colors( @c, @h ) {
+  .u-link--colors-base(
     @c, @c, @h, @h, @c,
     @c, @c, @h, @h, @c
   );
 }
 
-.u-link__colors( @c, @v, @h, @f, @a ) {
-  .u-link__colors-base(
+.u-link--colors( @c, @v, @h, @f, @a ) {
+  .u-link--colors-base(
     @c, @v, @h, @f, @a,
     @c, @v, @h, @f, @a
   );
 }
 
-.u-link__colors( @c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba ) {
-  .u-link__colors-base(
+.u-link--colors( @c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba ) {
+  .u-link--colors-base(
     @c, @v, @h, @f, @a,
     @bc, @bv, @bh, @bf, @ba
   );
 }
 
-.u-link__colors-base(
+.u-link--colors-base(
 @c:  @link-text,
 @v:  @link-text-visited,
 @h:  @link-text-hover,
@@ -238,15 +238,15 @@
   }
 }
 
-.u-link__border() {
+.u-link--border() {
   border-bottom-width: 1px;
 }
 
-.u-link__no-border() {
+.u-link--no-border() {
   border-bottom-width: 0 !important;
 }
 
-.u-link__hover-border() {
+.u-link--hover-border() {
   border-bottom-width: 0 !important;
 
   &:hover,

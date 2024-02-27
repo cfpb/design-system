@@ -37,12 +37,12 @@ variation_groups:
         variation_specs: ''
       - variation_name: List link
         variation_code_snippet: |-
-          <ul class="m-list m-list__links">
-              <li class="m-list_item">
-                  <a class="m-list_link" href="#">List link 1</a>
+          <ul class="m-list m-list--links">
+              <li class="m-list__item">
+                  <a class="m-list__link" href="#">List link 1</a>
               </li>
-              <li class="m-list_item">
-                  <a class="m-list_link" href="#">List link 2</a>
+              <li class="m-list__item">
+                  <a class="m-list__link" href="#">List link 2</a>
               </li>
           </ul>
         variation_description:
@@ -58,7 +58,7 @@ variation_groups:
         variation_specs: ''
       - variation_name: Destructive link
         variation_code_snippet: |-
-          <a class="a-btn a-btn__link a-btn__warning" href="#">
+          <a class="a-btn a-btn--link a-btn--warning" href="#">
                Destructive link
           </a>
         variation_description:
@@ -77,21 +77,21 @@ variation_groups:
         variation_implementation: >-
 
 
-          * To prevent the link’s underline from extending under the icon, wrap the link text with a `span.icon-link_text`. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the `a-link_text`. It is important the text and icon are siblings to correctly handle underlines.
+          * To prevent the link’s underline from extending under the icon, wrap the link text with a `span.icon-link_text`. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the `a-link__text`. It is important the text and icon are siblings to correctly handle underlines.
         variation_code_snippet: |-
           <p>
             The document icon should emphasize a link that contains a
               <a class="a-link
-                        a-link__icon"
+                        a-link--icon"
                 href="#">
-                  <span class="a-link_text">file or document</span>
+                  <span class="a-link__text">file or document</span>
                   {% include icons/download.svg %}
               </a>.
               Use the external link icon to emphasize
               <a class="a-link
-                        a-link__icon"
+                        a-link--icon"
                 href="#">
-                  <span class="a-link_text">a non-CFPB webpage</span>
+                  <span class="a-link__text">a non-CFPB webpage</span>
                   {% include icons/external-link.svg %}
               </a> for further details.
           </p>
@@ -100,15 +100,15 @@ variation_groups:
         variation_description:
           Icons added to inline links can sometimes break onto the
           next line. If you want to prevent this, you can add the `__no-wrap`
-          modifier to `.a-link__icon`.
+          modifier to `.a-link--icon`.
         variation_code_snippet: |-
           <p>
               The document icon should emphasize a link that contains a
               <a class="a-link
-                    a-link__icon
-                    a-link__no-wrap"
+                    a-link--icon
+                    a-link--no-wrap"
             href="#">
-                  <span class="a-link_text">file or document</span>
+                  <span class="a-link__text">file or document</span>
                   {% include icons/download.svg %}
               </a>.
           </p>
@@ -120,10 +120,10 @@ variation_groups:
           touch area. Reduce screen size to see these in action.
         variation_code_snippet: |-
           <a class="a-link
-                    a-link__jump
-                    a-link__icon-after-text"
+                    a-link--jump
+                    a-link--icon-after-text"
             href="#">
-          <span class="a-link_text">Jump link</span>
+          <span class="a-link__text">Jump link</span>
               {% include icons/right.svg %}
           </a>
       - variation_is_deprecated: false
@@ -131,11 +131,11 @@ variation_groups:
         variation_description: Jump links can also have icons before the text, like icon links.
         variation_code_snippet: |-
           <a class="a-link
-                    a-link__jump
-                    a-link__icon-before-text"
+                    a-link--jump
+                    a-link--icon-before-text"
             href="#">
               {% include icons/left.svg %}
-              <span class="a-link_text">Jump link with icon on left</span>
+              <span class="a-link__text">Jump link with icon on left</span>
           </a>
       - variation_is_deprecated: false
         variation_name: Printed links

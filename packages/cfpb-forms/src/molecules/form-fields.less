@@ -1,5 +1,5 @@
 .m-form-field {
-  .a-text-input__full {
+  .a-text-input--full {
     box-sizing: border-box;
     width: 100%;
   }
@@ -8,8 +8,8 @@
     margin-top: unit((5px / @base-font-size-px), em);
   }
 
-  &__checkbox,
-  &__radio {
+  &--checkbox,
+  &--radio {
     .a-label {
       // We need to turn off autoprefixing for the inline-grid because
       // IE does not handle an inline-grid like other browsers,
@@ -54,7 +54,7 @@
     }
 
     // Ensure the helper text appears on its own line below the label.
-    .a-label_helper {
+    .a-label__helper {
       display: block;
     }
 
@@ -93,7 +93,7 @@
     }
   }
 
-  &__checkbox {
+  &--checkbox {
     .a-checkbox {
       &:focus + .a-label::before,
       &.focus + .a-label::before {
@@ -121,7 +121,7 @@
       }
     }
 
-    &__error {
+    &--error {
       .a-label {
         &::before {
           border-color: @input-border__error;
@@ -157,7 +157,7 @@
       }
     }
 
-    &__warning {
+    &--warning {
       .a-label {
         &::before {
           border-color: @input-border__warning;
@@ -193,7 +193,7 @@
       }
     }
 
-    &__success {
+    &--success {
       .a-label {
         &::before {
           border-color: @input-border__success;
@@ -230,7 +230,7 @@
     }
   }
 
-  &__radio {
+  &--radio {
     .a-label {
       &::before {
         border-radius: 50%;
@@ -284,7 +284,7 @@
     }
   }
 
-  &__lg-target {
+  &--lg-target {
     display: block;
 
     .a-label {

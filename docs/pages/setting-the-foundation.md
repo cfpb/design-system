@@ -68,13 +68,13 @@ description: >-
   We've created a template that teams can use to run the activity, available in several formats, including as a template for teams that use Mural as a digital collaboration tool:
 
   <ul class="m-list">
-    <li class="m-list_item">
+    <li class="m-list__item">
         <a href="/design-system/images/uploads/frames-of-reference-template.pdf" aria-label="Download the frames of reference template as a PDF">PDF</a>
     </li>
-    <li class="m-list_item">
+    <li class="m-list__item">
         <a href="/design-system/images/uploads/frames-of-reference-template.png" aria-label="Download the frames of reference template as a PNG">PNG</a>
     </li>
-    <li class="m-list_item">
+    <li class="m-list__item">
         <a href="/design-system//guidelines/frames-of-reference-mural-template" aria-label="Use the frames of reference template in Mural">Mural</a>
     </li>
   </ul>
@@ -90,13 +90,13 @@ description: >-
     <li>
       Next, add your experiences with each frame of reference. The template gives a number of options for doing that in a way that's safe and comfortable for everyone, including:
         <ul class="m-list">
-          <li class="m-list_item">
+          <li class="m-list__item">
             Asking participants to add their findings anonymously to the team's collaboration tool, emphasizing that everyone should choose how they wish to participate in this activity
           </li>
-          <li class="m-list_item">
+          <li class="m-list__item">
             Gathering and organizing anonymized responses as a team
           </li>
-          <li class="m-list_item">
+          <li class="m-list__item">
             Reflecting on your own lived experiences individually
           </li>
         </ul>

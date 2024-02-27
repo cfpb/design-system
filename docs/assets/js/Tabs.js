@@ -21,7 +21,7 @@ function Tabs(dom) {
   function changeTab(index) {
     // Remove classes from prior selected tab and panel.
     _tabsItemsDom[_selectedTabIndex].classList.remove(
-      `${BASE_CLASS}_list-item-selected`,
+      `${BASE_CLASS}__list-item-selected`,
     );
     _tabsPanelsDom[_selectedTabIndex].classList.add('u-hidden');
 
@@ -30,7 +30,7 @@ function Tabs(dom) {
 
     // Add classes for the new selected tab and panel.
     _tabsItemsDom[_selectedTabIndex].classList.add(
-      `${BASE_CLASS}_list-item-selected`,
+      `${BASE_CLASS}__list-item-selected`,
     );
     _tabsPanelsDom[_selectedTabIndex].classList.remove('u-hidden');
 
@@ -42,7 +42,7 @@ function Tabs(dom) {
    * @returns {Tabs} An instance.
    */
   function init() {
-    _tabsItemsDom = _dom.querySelectorAll(`.${BASE_CLASS}_list-item`);
+    _tabsItemsDom = _dom.querySelectorAll(`.${BASE_CLASS}__list-item`);
 
     if (_tabsItemsDom.length === 0) {
       // Bail out because there are no tabs to initialize.
@@ -50,7 +50,7 @@ function Tabs(dom) {
     }
 
     // Add events to tab items.
-    _tabsPanelsDom = _dom.querySelectorAll(`.${BASE_CLASS}_panel`);
+    _tabsPanelsDom = _dom.querySelectorAll(`.${BASE_CLASS}__panel`);
     for (let i = 0, len = _tabsItemsDom.length; i < len; i++) {
       _tabsItemsDom[i].addEventListener('click', (event) => {
         event.preventDefault();

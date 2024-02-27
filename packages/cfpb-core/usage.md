@@ -521,11 +521,11 @@ _Original mixin credit: <https://gist.github.com/craigmdennis/6655047>_
 **NOTE: Inline style properties for demonstration only**
 
 To create a 16:9 flexible video player, wrap the video element in an element
-with `u-flexible-container` and add the `u-flexible-container_inner` to the
+with `u-flexible-container` and add the `u-flexible-container__inner` to the
 video element.
 
 <div class="u-flexible-container">
-    <video class="u-flexible-container_inner"
+    <video class="u-flexible-container__inner"
            style="background:#75787B;"
            controls>
     </video>
@@ -533,7 +533,7 @@ video element.
 
 ```
 <div class="u-flexible-container">
-    <video class="u-flexible-container_inner"
+    <video class="u-flexible-container__inner"
            style="background:#75787B;"
            controls>
     </video>
@@ -557,16 +557,16 @@ element), ommit the inner container.
 
 To create a 4:3 flexible video player, add the `__4_3` modifier to the container
 
-<div class="u-flexible-container u-flexible-container__4-3">
-    <video class="u-flexible-container_inner"
+<div class="u-flexible-container u-flexible-container--4-3">
+    <video class="u-flexible-container__inner"
            style="background:#75787B;"
            controls>
     </video>
 </div>
 
 ```
-<div class="u-flexible-container u-flexible-container__4-3">
-    <video class="u-flexible-container_inner"
+<div class="u-flexible-container u-flexible-container--4-3">
+    <video class="u-flexible-container__inner"
            style="background:#75787B;"
            controls>
     </video>

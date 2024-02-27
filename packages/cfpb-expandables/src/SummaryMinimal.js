@@ -21,8 +21,8 @@ const BASE_CLASS = 'o-summary-minimal';
  */
 function SummaryMinimal(element) {
   const _dom = checkDom(element, BASE_CLASS);
-  const _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
-  const _btnDom = _dom.querySelector(`.${BASE_CLASS}_btn`);
+  const _contentDom = _dom.querySelector(`.${BASE_CLASS}__content`);
+  const _btnDom = _dom.querySelector(`.${BASE_CLASS}__btn`);
   let _transition;
   let _flyout;
 

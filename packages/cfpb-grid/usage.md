@@ -24,7 +24,7 @@ and apply the mixins to those semantic classes, like this:
 ```
 .description,
 .illustration {
-    .grid_column(1, 2);
+    .grid__column(1, 2);
 }
 ```
 
@@ -65,7 +65,7 @@ The fixed width between columns.
 ```
 
 The total number of columns used in calculating column widths.
-This value can be overridden in the `grid_column()` mixin.
+This value can be overridden in the `grid__column()` mixin.
 
 ```
 @grid_debug: false;
@@ -112,7 +112,7 @@ by passing a pixel value into the mixin.
 ### Less mixin
 
 ```
-.grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
+.grid__column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
 ```
 
 Create a grid column that is `@columns` wide given `@total` total grid columns.
@@ -131,7 +131,7 @@ add a wrapper just inside the column to be styled that way.
     .grid_wrapper();
 }
 .half {
-    .grid_column(1, 2);
+    .grid__column(1, 2);
 }
 .styled {
     border: 1px solid #999;
@@ -162,7 +162,7 @@ Normally this is removed with complex selectors
 or by adding classes to the first and last column per 'row'.
 
 In @cfpb/grid, the way to get around this is by wrapping your columns
-in a container that utilizes the `.grid_nested-col-group()` mixin.
+in a container that utilizes the `.grid__nested-col-group()` mixin.
 This mixin uses negative left and right margins to
 pull the columns back into alignment with parent columns.
 
@@ -173,7 +173,7 @@ without having to deal with the first and last columns of each row.
 ### Less mixin
 
 ```
-.grid_nested-col-group()
+.grid__nested-col-group()
 ```
 
 ### Usage
@@ -183,10 +183,10 @@ without having to deal with the first and last columns of each row.
     .grid_wrapper();
 }
 .nested {
-    .grid_nested-col-group();
+    .grid__nested-col-group();
 }
 .half {
-    .grid_column(1, 2);
+    .grid__column(1, 2);
 }
 ```
 
@@ -227,11 +227,11 @@ content first in the source order, but it's here if you absolutely need it.
 
 ```
 .first {
-    .grid_column(1, 2);
+    .grid__column(1, 2);
     .grid_pull(1);
 }
 .second {
-    .grid_column(1, 2);
+    .grid__column(1, 2);
     .grid_push(1);
 }
 ```

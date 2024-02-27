@@ -65,28 +65,28 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ```
 // .block
-@block__bg:                 var(--gray-5);
-@block__border:             var(--gray-40);
-@block__border-top:         var(--gray-40);
-@block__border-right:       var(--gray-40);
-@block__border-bottom:      var(--gray-40);
-@block__border-left:        var(--gray-40);
+@block--bg:                 var(--gray-5);
+@block--border:             var(--gray-40);
+@block--border-top:         var(--gray-40);
+@block--border-right:       var(--gray-40);
+@block--border-bottom:      var(--gray-40);
+@block--border-left:        var(--gray-40);
 
-// .content_main
-@content_main-border:       var(--gray-40);
+// .content__main
+@content__main-border:       var(--gray-40);
 
-// .content_sidebar
-@content_sidebar-bg:        var(--gray-5);
-@content_sidebar-border:    var(--gray-40);
+// .content__sidebar
+@content__sidebar-bg:        var(--gray-5);
+@content__sidebar-border:    var(--gray-40);
 
-// .content_line
-@content_line:              var(--gray-40);
+// .content__line
+@content__line:              var(--gray-40);
 
-// .grid_column__top-divider
-@grid_column__top-divider:  var(--gray-40);
+// .grid__column__top-divider
+@grid__column__top-divider:  var(--gray-40);
 
-// .grid_column__left-divider
-@grid_column__left-divider: var(--gray-40);
+// .grid__column__left-divider
+@grid__column__left-divider: var(--gray-40);
 
 // Hero variables
 @hero-bg:                   var(--gray-5);
@@ -94,7 +94,7 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 @hero-knockout-text:        var(--white);
 
 // Featured Content Module variables
-@fcm-bg:                    @block__bg;
+@fcm-bg:                    @block--bg;
 ```
 
 ### Sizing variables
@@ -110,17 +110,17 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 A 1 pixel edge to edge bar that can divide content.
 
-<div class="content_line"></div>
+<div class="content__line"></div>
 
 ```
-<div class="content_line"></div>
+<div class="content__line"></div>
 ```
 
 ### Main content and sidebar
 
 Standard layout for the main content area and sidebar.
 
-By default `.content_main` and `.content_sidebar` stack vertically.
+By default `.content__main` and `.content__sidebar` stack vertically.
 When using the modifiers described below to create columns,
 the columns will remain stacked for smaller screens and then convert to to
 columns at `801px`.
@@ -132,11 +132,11 @@ markup._
     <section class="content_hero" style="background: #E3E4E5">
         Content hero
     </section>
-    <div class="content_wrapper">
-        <section class="content_main">
+    <div class="content__wrapper">
+        <section class="content__main">
             Main content area
         </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
+        <aside class="content__sidebar" style="background: #F1F2F2">
             Sidebar
         </aside>
     </div>
@@ -147,11 +147,11 @@ markup._
     <section class="content_hero" style="background: #E3E4E5">
         Content hero
     </section>
-    <div class="content_wrapper">
-        <section class="content_main">
+    <div class="content__wrapper">
+        <section class="content__main">
             Main content area
         </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
+        <aside class="content__sidebar" style="background: #F1F2F2">
             Sidebar
         </aside>
     </div>
@@ -161,20 +161,20 @@ markup._
 ### Left-hand navigation layout
 
 Add a class of `.content__L-R` to `main.content` to determine the width ratio
-of `.content_main` and `.content_sidebar`, where 'L' is the left-hand item and
+of `.content__main` and `.content__sidebar`, where 'L' is the left-hand item and
 'R' is the right-hand item. The two common configurations are `1-3` (sidebar on
 the left, content on the right, in a ratio of 1:3) and `2-1` (content on the
 left, sidebar on the right, in a ratio of 2:1).
 
 It is assumed that the content is wider than the sidebar.
 
-<main class="content content__1-3" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <aside class="content_sidebar">
+<main class="content content--1-3" role="main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <aside class="content__sidebar">
             Section navigation
         </aside>
-        <section class="content_main">
+        <section class="content__main">
             <h2>Main content area</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -192,13 +192,13 @@ It is assumed that the content is wider than the sidebar.
 </footer>
 
 ```
-<main class="content content__1-3" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <aside class="content_sidebar">
+<main class="content content--1-3" role="main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <aside class="content__sidebar">
             Section navigation
         </aside>
-        <section class="content_main">
+        <section class="content__main">
             <h2>Main content area</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -219,7 +219,7 @@ It is assumed that the content is wider than the sidebar.
 ### Right-hand sidebar layout
 
 Add a class of `.content__L-R` to `main.content` to determine the width ratio
-of `.content_main` and `.content_sidebar`, where 'L' is the left-hand item and
+of `.content__main` and `.content__sidebar`, where 'L' is the left-hand item and
 'R' is the right-hand item. The two common configurations are `1-3` (sidebar
 on the left, content on the right, in a ratio of 1:3) and `2-1` (content on the
 left, sidebar on the right, in a ratio of 2:1).
@@ -229,10 +229,10 @@ It is assumed that the content is wider than the sidebar.
 _Inline styling is for demonstration purposes only; do not include it in your
 markup._
 
-<main class="content content__2-1" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main">
+<main class="content content--2-1" role="main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <section class="content__main">
             <h2>Main content area</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -241,7 +241,7 @@ markup._
                 consequatur itaque officiis debitis quisquam! Provident!
             </p>
         </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
+        <aside class="content__sidebar" style="background: #F1F2F2">
             Sidebar
         </aside>
     </div>
@@ -253,10 +253,10 @@ markup._
 </footer>
 
 ```
-<main class="content content__2-1" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main">
+<main class="content content--2-1" role="main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <section class="content__main">
             <h2>Main content area</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -265,7 +265,7 @@ markup._
                 consequatur itaque officiis debitis quisquam! Provident!
             </p>
         </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
+        <aside class="content__sidebar" style="background: #F1F2F2">
             Sidebar
         </aside>
     </div>
@@ -285,32 +285,32 @@ sidebars on the right, for now.
 _Note that inline styling is for demonstration purposes only; do not include
 it in your markup._
 
-<main class="content content__2-1 content__bleedbar" role="main">
+<main class="content content--2-1 content__bleedbar" role="main">
     <section class="content_hero" style="background: #E3E4E5">
         Content hero
     </section>
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <section class="content__main">
             Main content area
         </section>
-        <aside class="content_sidebar">
+        <aside class="content__sidebar">
             Bleeding sidebar
         </aside>
     </div>
 </main>
 
 ```
-<main class="content content__2-1 content__bleedbar" role="main">
+<main class="content content--2-1 content__bleedbar" role="main">
     <section class="content_hero" style="background: #E3E4E5">
         Content hero
     </section>
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <section class="content__main">
             Main content area
         </section>
-        <aside class="content_sidebar">
+        <aside class="content__sidebar">
             Bleeding sidebar
         </aside>
     </div>
@@ -319,23 +319,23 @@ it in your markup._
 
 ### Flush bottom modifier
 
-Add a class of `.content__flush-bottom` to `.content_main` or
-`.content_sidebar` to remove bottom padding.
+Add a class of `.content__flush-bottom` to `.content__main` or
+`.content__sidebar` to remove bottom padding.
 
-<main class="content content__1-3" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <aside class="content_sidebar content__flush-bottom">
+<main class="content content--1-3" role="main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <aside class="content__sidebar content__flush-bottom">
             Side with no bottom padding...
         </aside>
-        <section class="content_main content__flush-bottom">
+        <section class="content__main content__flush-bottom">
             Main content with no bottom padding...
             <div class="block
-                        block__flush-bottom
-                        block__flush-sides
-                        block__bg">
+                        block--flush-bottom
+                        block--flush-sides
+                        block--bg">
                 .content__flush-bottom is very useful when you have a
-                content block inside of .content_main with a background
+                content block inside of .content__main with a background
                 and flush sides.
             </div>
         </section>
@@ -348,20 +348,20 @@ Add a class of `.content__flush-bottom` to `.content_main` or
 </footer>
 
 ```
-<main class="content content__1-3" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <aside class="content_sidebar content__flush-bottom">
+<main class="content content--1-3" role="main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <aside class="content__sidebar content__flush-bottom">
             Side with no bottom padding...
         </aside>
-        <section class="content_main content__flush-bottom">
+        <section class="content__main content__flush-bottom">
             Main content with no bottom padding...
             <div class="block
-                        block__flush-bottom
-                        block__flush-sides
-                        block__bg">
+                        block--flush-bottom
+                        block--flush-sides
+                        block--bg">
                 .content__flush-bottom is very useful when you have a
-                content block inside of .content_main with a background
+                content block inside of .content__main with a background
                 and flush sides.
             </div>
         </section>
@@ -376,18 +376,18 @@ Add a class of `.content__flush-bottom` to `.content_main` or
 
 ### Flush top modifier (only on small screens)
 
-Add a class of `.content__flush-top-on-small` to `.content_main` or
-`.content_sidebar` to remove top `padding` on small screens only. 'Small'
-screens in this case refers to the breakpoint where `.content_main` and
-`.content_sidebar` single column layout.
+Add a class of `.content__flush-top-on-small` to `.content__main` or
+`.content__sidebar` to remove top `padding` on small screens only. 'Small'
+screens in this case refers to the breakpoint where `.content__main` and
+`.content__sidebar` single column layout.
 
-<main class="content content__1-3" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <aside class="content_sidebar content__flush-top-on-small">
+<main class="content content--1-3" role="main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <aside class="content__sidebar content__flush-top-on-small">
             Side with no top padding on small screens...
         </aside>
-        <section class="content_main">
+        <section class="content__main">
             Main content
         </section>
     </div>
@@ -399,13 +399,13 @@ screens in this case refers to the breakpoint where `.content_main` and
 </footer>
 
 ```
-<main class="content content__1-3" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <aside class="content_sidebar content__flush-top-on-small">
+<main class="content content--1-3" role="main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <aside class="content__sidebar content__flush-top-on-small">
             Side with no top padding on small screens...
         </aside>
-        <section class="content_main">
+        <section class="content__main">
             Main content
         </section>
     </div>
@@ -419,18 +419,18 @@ screens in this case refers to the breakpoint where `.content_main` and
 
 ### Flush all modifier (only on small screens)
 
-Add a class of `.content__flush-all-on-small` to `.content_main` or
-`.content_sidebar` to remove all `padding` and border-based gutters on small
+Add a class of `.content__flush-all-on-small` to `.content__main` or
+`.content__sidebar` to remove all `padding` and border-based gutters on small
 screens only. 'Small' screens in this case refers to the breakpoint where
-`.content_main` and `.content_sidebar` single column layout.
+`.content__main` and `.content__sidebar` single column layout.
 
-<main class="content content__1-3" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <aside class="content_sidebar content__flush-all-on-small">
+<main class="content content--1-3" role="main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <aside class="content__sidebar content__flush-all-on-small">
             Side with no padding or border-based gutters on small screens...
         </aside>
-        <section class="content_main">
+        <section class="content__main">
             Main content
         </section>
     </div>
@@ -442,13 +442,13 @@ screens only. 'Small' screens in this case refers to the breakpoint where
 </footer>
 
 ```
-<main class="content content__1-3" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <aside class="content_sidebar content__flush-all-on-small">
+<main class="content content--1-3" role="main">
+    <div class="content__line"></div>
+    <div class="content__wrapper">
+        <aside class="content__sidebar content__flush-all-on-small">
             Side with no padding or border-based gutters on small screens...
         </aside>
-        <section class="content_main">
+        <section class="content__main">
             Main content
         </section>
     </div>
@@ -466,7 +466,7 @@ The `content-l` ("content layout")
 class can be used to lay content out in a grid.
 
 <div class="content-l">
-    <div class="content-l_col content-l_col-1">
+    <div class="content-l__col content-l__col-1">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -474,7 +474,7 @@ class can be used to lay content out in a grid.
             Full-width column (spans 12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-2">
+    <div class="content-l__col content-l__col-1-2">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -482,7 +482,7 @@ class can be used to lay content out in a grid.
             Half-width column (spans 6/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-2">
+    <div class="content-l__col content-l__col-1-2">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -490,7 +490,7 @@ class can be used to lay content out in a grid.
             Half-width column (spans 6/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-3">
+    <div class="content-l__col content-l__col-1-3">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -498,7 +498,7 @@ class can be used to lay content out in a grid.
             Third-width column (spans 4/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-3">
+    <div class="content-l__col content-l__col-1-3">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -506,7 +506,7 @@ class can be used to lay content out in a grid.
             Third-width column (spans 4/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-3">
+    <div class="content-l__col content-l__col-1-3">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -514,7 +514,7 @@ class can be used to lay content out in a grid.
             Third-width column (spans 4/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-2-3">
+    <div class="content-l__col content-l__col-2-3">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -522,7 +522,7 @@ class can be used to lay content out in a grid.
             Two thirds-width column (spans 8/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-3">
+    <div class="content-l__col content-l__col-1-3">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -530,14 +530,14 @@ class can be used to lay content out in a grid.
             Third-width column (spans 4/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-4">
+    <div class="content-l__col content-l__col-1-4">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;">
             Quarter width column (spans 3/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-3-4">
+    <div class="content-l__col content-l__col-3-4">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;">
@@ -548,7 +548,7 @@ class can be used to lay content out in a grid.
 
 ```
 <div class="content-l">
-    <div class="content-l_col content-l_col-1">
+    <div class="content-l__col content-l__col-1">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -556,7 +556,7 @@ class can be used to lay content out in a grid.
             Full-width column (spans 12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-2">
+    <div class="content-l__col content-l__col-1-2">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -564,7 +564,7 @@ class can be used to lay content out in a grid.
             Half-width column (spans 6/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-2">
+    <div class="content-l__col content-l__col-1-2">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -572,7 +572,7 @@ class can be used to lay content out in a grid.
             Half-width column (spans 6/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-3">
+    <div class="content-l__col content-l__col-1-3">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -580,7 +580,7 @@ class can be used to lay content out in a grid.
             Third-width column (spans 4/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-3">
+    <div class="content-l__col content-l__col-1-3">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -588,7 +588,7 @@ class can be used to lay content out in a grid.
             Third-width column (spans 4/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-3">
+    <div class="content-l__col content-l__col-1-3">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -596,7 +596,7 @@ class can be used to lay content out in a grid.
             Third-width column (spans 4/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-2-3">
+    <div class="content-l__col content-l__col-2-3">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -604,7 +604,7 @@ class can be used to lay content out in a grid.
             Two thirds-width column (spans 8/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-3">
+    <div class="content-l__col content-l__col-1-3">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;
@@ -612,14 +612,14 @@ class can be used to lay content out in a grid.
             Third-width column (spans 4/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-1-4">
+    <div class="content-l__col content-l__col-1-4">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;">
             Quarter width column (spans 3/12 columns)
         </div>
     </div>
-    <div class="content-l_col content-l_col-3-4">
+    <div class="content-l__col content-l__col-3-4">
         <div style="background: #F1F2F2;
                     text-align: center;
                     padding: 8px;">
@@ -631,12 +631,12 @@ class can be used to lay content out in a grid.
 
 ### Content layout column dividers
 
-Adds dividers between specified `.content-l_col-X-X` classes.
+Adds dividers between specified `.content-l__col-X-X` classes.
 
-Layout dividers work in conjunction with `.content-l_col-X-X` elements and have
+Layout dividers work in conjunction with `.content-l__col-X-X` elements and have
 specific needs depending on which column element variant they are attached to.
-For example `.content-l_col-1-2` has different divider needs than
-`.content-l_col-1-3` because they may break to single columns at different
+For example `.content-l__col-1-2` has different divider needs than
+`.content-l__col-1-3` because they may break to single columns at different
 breakpoints.
 
 Dividers use absolute positioning relative to the `.content-l` element
@@ -647,12 +647,12 @@ and each row has columns of different widths, the borders will cause unwanted
 overlapping since they will span the height of the entire `.content-l` element.
 
 <div class="content-l">
-    <div class="content-l_col content-l_col-1-2">
+    <div class="content-l__col content-l__col-1-2">
         <img src="https://dummyimage.com/600x320/addc91/101820" alt="Placeholder image">
         <br>
         Half-width column (spans 6/12 columns)
     </div>
-    <div class="content-l_col content-l_col-1-2 content-l_col__before-divider">
+    <div class="content-l__col content-l__col-1-2 content-l__col__before-divider">
         <img src="https://dummyimage.com/600x320/addc91/101820" alt="Placeholder image">
         <br>
         Half-width column (spans 6/12 columns)
@@ -660,25 +660,25 @@ overlapping since they will span the height of the entire `.content-l` element.
 </div>
 <br>
 <div class="content-l">
-    <div class="content-l_col content-l_col-1-3">
+    <div class="content-l__col content-l__col-1-3">
         Third-width column (spans 4/12 columns)
     </div>
-    <div class="content-l_col content-l_col-1-3 content-l_col__before-divider">
+    <div class="content-l__col content-l__col-1-3 content-l__col__before-divider">
         Third-width column (spans 4/12 columns)
     </div>
-    <div class="content-l_col content-l_col-1-3 content-l_col__before-divider">
+    <div class="content-l__col content-l__col-1-3 content-l__col__before-divider">
         Third-width column (spans 4/12 columns)
     </div>
 </div>
 
 ```
 <div class="content-l">
-    <div class="content-l_col content-l_col-1-2">
+    <div class="content-l__col content-l__col-1-2">
         <img src="https://dummyimage.com/600x320/addc91/101820" alt="Placeholder image">
         <br>
         Half-width column (spans 6/12 columns)
     </div>
-    <div class="content-l_col content-l_col-1-2 content-l_col__before-divider">
+    <div class="content-l__col content-l__col-1-2 content-l__col__before-divider">
         <img src="https://dummyimage.com/600x320/addc91/101820" alt="Placeholder image">
         <br>
         Half-width column (spans 6/12 columns)
@@ -686,16 +686,16 @@ overlapping since they will span the height of the entire `.content-l` element.
 </div>
 <br>
 <!-- Starting a new .content-l so that the dividers from
-     .content-l_col.content-l_col-1-2.content-l_col__before-divider
-     won't overlap the .content-l_col-1-3 columns. -->
+     .content-l__col.content-l__col-1-2.content-l__col__before-divider
+     won't overlap the .content-l__col-1-3 columns. -->
 <div class="content-l">
-    <div class="content-l_col content-l_col-1-3">
+    <div class="content-l__col content-l__col-1-3">
         Third-width column (spans 4/12 columns)
     </div>
-    <div class="content-l_col content-l_col-1-3 content-l_col__before-divider">
+    <div class="content-l__col content-l__col-1-3 content-l__col__before-divider">
         Third-width column (spans 4/12 columns)
     </div>
-    <div class="content-l_col content-l_col-1-3 content-l_col__before-divider">
+    <div class="content-l__col content-l__col-1-3 content-l__col__before-divider">
         Third-width column (spans 4/12 columns)
     </div>
 </div>
@@ -742,13 +742,13 @@ Adds top `border` to `.block`.
 
 Main content...
 
-<div class="block block__border-top">
+<div class="block block--border-top">
     Content block with top border.
 </div>
 
 ```
 Main content...
-<div class="block block__border-top">
+<div class="block block--border-top">
     Content block with top border.
 </div>
 ```
@@ -759,13 +759,13 @@ Adds right `border` to `.block`.
 
 Main content...
 
-<div class="block block__border-right">
+<div class="block block--border-right">
     Content block with right border.
 </div>
 
 ```
 Main content...
-<div class="block block__border-right">
+<div class="block block--border-right">
     Content block with right border.
 </div>
 ```
@@ -776,13 +776,13 @@ Adds bottom `border` to `.block`.
 
 Main content...
 
-<div class="block block__border-bottom">
+<div class="block block--border-bottom">
     Content block with bottom border.
 </div>
 
 ```
 Main content...
-<div class="block block__border-bottom">
+<div class="block block--border-bottom">
     Content block with bottom border.
 </div>
 ```
@@ -793,13 +793,13 @@ Adds left `border` to `.block`.
 
 Main content...
 
-<div class="block block__border-left">
+<div class="block block--border-left">
     Content block with left border.
 </div>
 
 ```
 Main content...
-<div class="block block__border-left">
+<div class="block block--border-left">
     Content block with left border.
 </div>
 ```
@@ -810,13 +810,13 @@ Adds `border` on all sides to `.block`.
 
 Main content...
 
-<div class="block block__border">
+<div class="block block--border">
     Content block with borders on all sides.
 </div>
 
 ```
 Main content...
-<div class="block block__border">
+<div class="block block--border">
     Content block with borders on all sides.
 </div>
 ```
@@ -827,7 +827,7 @@ Removes the top `margin` from `.block`.
 
 Main content...
 
-<div class="block block__flush-top">
+<div class="block block--flush-top">
     Content block with no top margin.
 </div>
 <div class="block">
@@ -836,7 +836,7 @@ Main content...
 
 ```
 Main content...
-<div class="block block__flush-top">
+<div class="block block--flush-top">
     Content block with no top margin.
 </div>
 <div class="block">
@@ -850,7 +850,7 @@ Removes the bottom `margin` from `.block`.
 
 Main content...
 
-<div class="block block__flush-bottom">
+<div class="block block--flush-bottom">
     Content block with no bottom margin.
 </div>
 <div class="block">
@@ -859,7 +859,7 @@ Main content...
 
 ```
 Main content...
-<div class="block block__flush-bottom">
+<div class="block block--flush-bottom">
     Content block with no bottom margin.
 </div>
 <div class="block">
@@ -870,17 +870,17 @@ Main content...
 ### Flush-sides modifier
 
 Removes the side `margin` from `.block`.
-Typically used in conjunction with `.block__bg` to create a 'well' whose
+Typically used in conjunction with `.block--bg` to create a 'well' whose
 `background` extends into the left and right gutters. (See below.)
 
-<main class="content content__1-3" role="main">
-    <div class="content_wrapper">
-        <aside class="content_sidebar">
+<main class="content content--1-3" role="main">
+    <div class="content__wrapper">
+        <aside class="content__sidebar">
             Section navigation
         </aside>
-        <section class="content_main">
+        <section class="content__main">
             Main content...
-            <aside class="block block__flush-sides">
+            <aside class="block block--flush-sides">
                 Content block with no side margins.
             </aside>
         </section>
@@ -888,14 +888,14 @@ Typically used in conjunction with `.block__bg` to create a 'well' whose
 </main>
 
 ```
-<main class="content content__1-3" role="main">
-    <div class="content_wrapper">
-        <aside class="content_sidebar">
+<main class="content content--1-3" role="main">
+    <div class="content__wrapper">
+        <aside class="content__sidebar">
             Section navigation
         </aside>
-        <section class="content_main">
+        <section class="content__main">
             Main content...
-            <aside class="block block__flush-sides">
+            <aside class="block block--flush-sides">
                 Content block with no side margins.
             </aside>
         </section>
@@ -907,14 +907,14 @@ Typically used in conjunction with `.block__bg` to create a 'well' whose
 
 Removes the side, top, and bottom `margin` from `.block`.
 
-<main class="content content__1-3" role="main">
-    <div class="content_wrapper">
-        <aside class="content_sidebar">
+<main class="content content--1-3" role="main">
+    <div class="content__wrapper">
+        <aside class="content__sidebar">
             Section navigation
         </aside>
-        <section class="content_main">
+        <section class="content__main">
             Main content...
-            <aside class="block block__flush">
+            <aside class="block block--flush">
                 Content block with no margins.
             </aside>
         </section>
@@ -922,14 +922,14 @@ Removes the side, top, and bottom `margin` from `.block`.
 </main>
 
 ```
-<main class="content content__1-3" role="main">
-    <div class="content_wrapper">
-        <aside class="content_sidebar">
+<main class="content content--1-3" role="main">
+    <div class="content__wrapper">
+        <aside class="content__sidebar">
             Section navigation
         </aside>
-        <section class="content_main">
+        <section class="content__main">
             Main content...
-            <aside class="block block__flush">
+            <aside class="block block--flush">
                 Content block with no margins.
             </aside>
         </section>
@@ -944,13 +944,13 @@ Setup for (ems-equivalent) `30px` `padding` on top and `60px` on bottom.
 
 Main content...
 
-<div class="block block__bg">
+<div class="block block--bg">
     Content block with a background
 </div>
 
 ```
 Main content...
-<div class="block block__bg">
+<div class="block block--bg">
     Content block with a background
 </div>
 ```
@@ -960,14 +960,14 @@ Main content...
 This is an example of combining modifiers to get a flush `padding` and
 `background` with a `.block`.
 
-<main class="content content__1-3" role="main">
-    <div class="content_wrapper">
-        <aside class="content_sidebar">
+<main class="content content--1-3" role="main">
+    <div class="content__wrapper">
+        <aside class="content__sidebar">
             Section navigation
         </aside>
-        <section class="content_main content__flush-bottom">
+        <section class="content__main content__flush-bottom">
             Main content...
-            <div class="block block__flush-sides block__bg">
+            <div class="block block--flush-sides block--bg">
                 Content block with a background and flush sides
             </div>
         </section>
@@ -975,14 +975,14 @@ This is an example of combining modifiers to get a flush `padding` and
 </main>
 
 ```
-<main class="content content__1-3" role="main">
-    <div class="content_wrapper">
-        <aside class="content_sidebar">
+<main class="content content--1-3" role="main">
+    <div class="content__wrapper">
+        <aside class="content__sidebar">
             Section navigation
         </aside>
-        <section class="content_main content__flush-bottom">
+        <section class="content__main content__flush-bottom">
             Main content...
-            <div class="block block__flush-sides block__bg">
+            <div class="block block--flush-sides block--bg">
                 Content block with a background and flush sides
             </div>
         </section>
@@ -993,18 +993,18 @@ This is an example of combining modifiers to get a flush `padding` and
 ### Padded-top modifier
 
 Breaks top `margin` into `margin` and `padding`. Useful in combination with
-`block__border-top` to add `padding` between `.block` contents and `border`.
+`block--border-top` to add `padding` between `.block` contents and `border`.
 
 Main content...
 
-<div class="block block__padded-top block__border-top">
+<div class="block block--padded-top block--border-top">
     Content block with reduced top margin and added top padding
     and border.
 </div>
 
 ```
 Main content...
-<div class="block block__padded-top block__border-top">
+<div class="block block--padded-top block--border-top">
     Content block with reduced top margin and added top padding
     and border.
 </div>
@@ -1013,18 +1013,18 @@ Main content...
 ### Padded-bottom modifier
 
 Breaks bottom `margin` into `margin` and `padding`. Useful in combination with
-`block__border-bottom` to add `padding` between `.block` contents and `border`.
+`block--border-bottom` to add `padding` between `.block` contents and `border`.
 
 Main content...
 
-<div class="block block__padded-bottom block__border-bottom">
+<div class="block block--padded-bottom block--border-bottom">
     Content block with reduced bottom margin and added bottom padding
     and border.
 </div>
 
 ```
 Main content...
-<div class="block block__padded-bottom block__border-bottom">
+<div class="block block--padded-bottom block--border-bottom">
     Content block with reduced bottom margin and added bottom padding
     and border.
 </div>
@@ -1038,34 +1038,34 @@ nested within other `.blocks`.
 _Note that the `div`s with inline styles are for demonstration purposes only
 and should not be used in production._
 
-<div class="block block__sub">
+<div class="block block--sub">
     <div style="background: #F1F2F2; padding: 8px;">
         Sub content block
     </div>
 </div>
-<div class="block block__sub">
+<div class="block block--sub">
     <div style="background: #F1F2F2; padding: 8px;">
         Sub content block
     </div>
 </div>
-<div class="block block__sub">
+<div class="block block--sub">
     <div style="background: #F1F2F2; padding: 8px;">
         Sub content block
     </div>
 </div>
 
 ```
-<div class="block block__sub">
+<div class="block block--sub">
     <div style="background: #F1F2F2; padding: 8px;">
         Sub content block
     </div>
 </div>
-<div class="block block__sub">
+<div class="block block--sub">
     <div style="background: #F1F2F2; padding: 8px;">
         Sub content block
     </div>
 </div>
-<div class="block block__sub">
+<div class="block block--sub">
     <div style="background: #F1F2F2; padding: 8px;">
         Sub content block
     </div>
@@ -1074,7 +1074,7 @@ and should not be used in production._
 
 ### Mixing content blocks with content layouts
 
-You can safely combine `.block` with `.content-l_col` to achieve a column-based
+You can safely combine `.block` with `.content-l__col` to achieve a column-based
 layout at larger screens with no top `margin` and a vertical layout at smaller
 screens that do have `margins`.
 
@@ -1082,14 +1082,14 @@ _Note that the `div`s with inline styles are for demonstration purposes only
 and should not be used in production._
 
 <div class="content-l">
-    <div class="block content-l_col content-l_col-1-2">
+    <div class="block content-l__col content-l__col-1-2">
         <div style="background: #F1F2F2; padding: 8px;">
             Content block that is also a content column.
             Notice how my top margins only exist on smaller screens when
             I need to stack vertically.
         </div>
     </div>
-    <div class="block content-l_col content-l_col-1-2">
+    <div class="block content-l__col content-l__col-1-2">
         <div style="background: #F1F2F2; padding: 8px;">
             Content block that is also a content column.
             Notice how my top margins only exist on smaller screens when
@@ -1100,14 +1100,14 @@ and should not be used in production._
 
 ```
 <div class="content-l">
-    <div class="block content-l_col content-l_col-1-2">
+    <div class="block content-l__col content-l__col-1-2">
         <div style="background: #F1F2F2; padding: 8px;">
             Content block that is also a content column.
             Notice how my top margins only exist on smaller screens when
             I need to stack vertically.
         </div>
     </div>
-    <div class="block content-l_col content-l_col-1-2">
+    <div class="block content-l__col content-l__col-1-2">
         <div style="background: #F1F2F2; padding: 8px;">
             Content block that is also a content column.
             Notice how my top margins only exist on smaller screens when
@@ -1147,16 +1147,16 @@ height of the next parent using `position: relative;`. This means that the
 ```less
 .my-column-1-2 {
   // Creates a column that spans 6 out of 12 columns.
-  .grid_column(6, 12);
+  .grid__column(6, 12);
 
   // Add a top divider only at screen 599px and smaller.
   .respond-to-max(599px {
-        .grid_column__top-divider();
+        .grid__column--top-divider();
     });
 
   // Add a left divider only at screen 600px and larger.
   .respond-to-min(600px, {
-        .grid_column__left-divider();
+        .grid__column--left-divider();
     });
 }
 ```
@@ -1184,7 +1184,7 @@ the top and bottom are never cropped.
 See below for modifiers that change the image's horizontal anchoring.
 
 <section class="o-featured-content-module">
-    <div class="o-featured-content-module_text">
+    <div class="o-featured-content-module__text">
         <h2>Featured content</h2>
         <p>
             Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
@@ -1192,14 +1192,14 @@ See below for modifiers that change the image's horizontal anchoring.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link__jump
-                  a-link__icon-after-text">
-            <span class="a-link_text">Read more about the feature</span>
+                  a-link--jump
+                  a-link--icon-after-text">
+            <span class="a-link__text">Read more about the feature</span>
             {% include icons/right.svg %}
         </a>
     </div>
-    <div class="o-featured-content-module_visual">
-        <img class="o-featured-content-module_img"
+    <div class="o-featured-content-module__visual">
+        <img class="o-featured-content-module__img"
              src="https://dummyimage.com/1076x606/addc91/101820"
              alt="">
     </div>
@@ -1207,7 +1207,7 @@ See below for modifiers that change the image's horizontal anchoring.
 
 ```
 <section class="o-featured-content-module">
-    <div class="o-featured-content-module_text">
+    <div class="o-featured-content-module__text">
         <h2>Featured content</h2>
         <p>
             Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
@@ -1215,14 +1215,14 @@ See below for modifiers that change the image's horizontal anchoring.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link__jump
-                  a-link__icon-after-text">
-            <span class="a-link_text">Read more about the feature</span>
+                  a-link--jump
+                  a-link--icon-after-text">
+            <span class="a-link__text">Read more about the feature</span>
             {% raw %}{% include icons/right.svg %}{% endraw %}
         </a>
     </div>
-    <div class="o-featured-content-module_visual">
-        <img class="o-featured-content-module_img"
+    <div class="o-featured-content-module__visual">
+        <img class="o-featured-content-module__img"
              src="https://dummyimage.com/1076x606/addc91/101820"
              alt="">
     </div>
@@ -1240,7 +1240,7 @@ so that the right side remains in view at all screen sizes.
 
 <section class="o-featured-content-module
                 o-featured-content-module__right">
-    <div class="o-featured-content-module_text">
+    <div class="o-featured-content-module__text">
         <h2>Featured map</h2>
         <p>
             Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
@@ -1248,14 +1248,14 @@ so that the right side remains in view at all screen sizes.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link__jump
-                  a-link__icon-after-text">
-            <span class="a-link_text">Read more about the feature</span>
+                  a-link--jump
+                  a-link--icon-after-text">
+            <span class="a-link__text">Read more about the feature</span>
             {% include icons/right.svg %}
         </a>
     </div>
-    <div class="o-featured-content-module_visual">
-        <img class="o-featured-content-module_img"
+    <div class="o-featured-content-module__visual">
+        <img class="o-featured-content-module__img"
              src="https://dummyimage.com/1076x606/addc91/101820"
              alt="">
     </div>
@@ -1264,7 +1264,7 @@ so that the right side remains in view at all screen sizes.
 ```
 <section class="o-featured-content-module
                 o-featured-content-module__right">
-    <div class="o-featured-content-module_text">
+    <div class="o-featured-content-module__text">
         <h2>Featured map</h2>
         <p>
             Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
@@ -1272,14 +1272,14 @@ so that the right side remains in view at all screen sizes.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link__jump
-                  a-link__icon-after-text">
-            <span class="a-link_text">Read more about the feature</span>
+                  a-link--jump
+                  a-link--icon-after-text">
+            <span class="a-link__text">Read more about the feature</span>
             {% raw %}{% include icons/right.svg %}{% endraw %}
         </a>
     </div>
-    <div class="o-featured-content-module_visual">
-        <img class="o-featured-content-module_img"
+    <div class="o-featured-content-module__visual">
+        <img class="o-featured-content-module__img"
              src="https://dummyimage.com/1076x606/addc91/101820"
              alt="">
     </div>
@@ -1297,7 +1297,7 @@ so that the focal point of the visual remains in view at all screen sizes.
 
 <section class="o-featured-content-module
                 o-featured-content-module__center">
-    <div class="o-featured-content-module_text">
+    <div class="o-featured-content-module__text">
         <h2>Featured video</h2>
         <p>
             Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
@@ -1305,14 +1305,14 @@ so that the focal point of the visual remains in view at all screen sizes.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link__jump
-                  a-link__icon-after-text">
-            <span class="a-link_text">Read more about the feature</span>
+                  a-link--jump
+                  a-link--icon-after-text">
+            <span class="a-link__text">Read more about the feature</span>
             {% include icons/right.svg %}
         </a>
     </div>
-    <div class="o-featured-content-module_visual">
-        <img class="o-featured-content-module_img"
+    <div class="o-featured-content-module__visual">
+        <img class="o-featured-content-module__img"
              src="https://dummyimage.com/1076x606/addc91/101820"
              alt="">
     </div>
@@ -1321,7 +1321,7 @@ so that the focal point of the visual remains in view at all screen sizes.
 ```
 <section class="o-featured-content-module
                 o-featured-content-module__center">
-    <div class="o-featured-content-module_text">
+    <div class="o-featured-content-module__text">
         <h2>Featured video</h2>
         <p>
             Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
@@ -1329,14 +1329,14 @@ so that the focal point of the visual remains in view at all screen sizes.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link__jump
-                  a-link__icon-after-text">
-            <span class="a-link_text">Read more about the feature</span>
+                  a-link--jump
+                  a-link--icon-after-text">
+            <span class="a-link__text">Read more about the feature</span>
             {% raw %}{% include icons/right.svg %}{% endraw %}
         </a>
     </div>
-    <div class="o-featured-content-module_visual">
-        <img class="o-featured-content-module_img"
+    <div class="o-featured-content-module__visual">
+        <img class="o-featured-content-module__img"
              src="https://dummyimage.com/1076x606/addc91/101820"
              alt="">
     </div>
@@ -1350,10 +1350,10 @@ and an image. Its background color or image is flush with the sides of the
 screen, and the content is vertically centered.
 
 The illustration can be customized by setting the `background-image` property
-on the `.m-hero_image` element.
+on the `.m-hero__image` element.
 
 On small screens (or where media queries are not supported), the text spans the
-full width of the `.m-hero_wrapper` and the illustration is displayed underneath.
+full width of the `.m-hero__wrapper` and the illustration is displayed underneath.
 
 For larger screen sizes, media queries are used to position the illustration to
 the right of the text.
@@ -1364,22 +1364,22 @@ height. The image should be `195px` in height to conform to this standard.
 ### Standard hero with illustration
 
 <section class="m-hero" id="hero1">
-    <div class="m-hero_wrapper wrapper">
-        <div class="m-hero_text">
-            <h1 class="m-hero_heading">Standard hero with illustration</h1>
-            <p class="m-hero_subhead">
+    <div class="m-hero__wrapper wrapper">
+        <div class="m-hero__text">
+            <h1 class="m-hero__heading">Standard hero with illustration</h1>
+            <p class="m-hero__subhead">
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
                 and 108-124 characters (two lines at 1230px)
                 following a two-line heading.
             </p>
         </div>
-        <div class="m-hero_image-wrapper">
-            <div class="m-hero_image"></div>
+        <div class="m-hero__image-wrapper">
+            <div class="m-hero__image"></div>
         </div>
     </div>
     <style>
-        #hero1 .m-hero_image {
+        #hero1 .m-hero__image {
             background-image:
                 url('https://dummyimage.com/570x236/addc91/101820');
             background-image: -webkit-image-set(
@@ -1397,7 +1397,7 @@ height. The image should be `195px` in height to conform to this standard.
         }
 
         @media screen and (min-width: 37.5625em) {
-            #hero1 .m-hero_image {
+            #hero1 .m-hero__image {
                 background-image:
                     url('https://dummyimage.com/470x195/addc91/101820');
                 background-image: -webkit-image-set(
@@ -1420,22 +1420,22 @@ height. The image should be `195px` in height to conform to this standard.
 
 ```
 <section class="m-hero" id="hero1">
-    <div class="m-hero_wrapper wrapper">
-        <div class="m-hero_text">
-            <h1 class="m-hero_heading">Standard hero with illustration</h1>
-            <p class="m-hero_subhead">
+    <div class="m-hero__wrapper wrapper">
+        <div class="m-hero__text">
+            <h1 class="m-hero__heading">Standard hero with illustration</h1>
+            <p class="m-hero__subhead">
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
                 and 108-124 characters (two lines at 1230px)
                 following a two-line heading.
             </p>
         </div>
-        <div class="m-hero_image-wrapper">
-            <div class="m-hero_image"></div>
+        <div class="m-hero__image-wrapper">
+            <div class="m-hero__image"></div>
         </div>
     </div>
     <style>
-        #hero1 .m-hero_image {
+        #hero1 .m-hero__image {
             background-image:
                 url('https://dummyimage.com/570x236/addc91/101820');
             background-image: -webkit-image-set(
@@ -1453,7 +1453,7 @@ height. The image should be `195px` in height to conform to this standard.
         }
 
         @media screen and (min-width: 37.5625em) {
-            #hero1 .m-hero_image {
+            #hero1 .m-hero__image {
                 background-image:
                     url('https://dummyimage.com/470x195/addc91/101820');
                 background-image: -webkit-image-set(
@@ -1479,19 +1479,19 @@ height. The image should be `195px` in height to conform to this standard.
 When using a dark background add the `__knockout` modifier to the hero to
 switch the text to white.
 
-<section class="m-hero m-hero__knockout" id="hero2">
-    <div class="m-hero_wrapper wrapper">
-        <div class="m-hero_text">
-            <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
-            <p class="m-hero_subhead">
+<section class="m-hero m-hero--knockout" id="hero2">
+    <div class="m-hero__wrapper wrapper">
+        <div class="m-hero__text">
+            <h1 class="m-hero__heading">Max of 41 chars for a one-line heading</h1>
+            <p class="m-hero__subhead">
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
                 and 108-124 characters (two lines at 1230px)
                 following a two-line heading.
             </p>
         </div>
-        <div class="m-hero_image-wrapper">
-            <div class="m-hero_image"></div>
+        <div class="m-hero__image-wrapper">
+            <div class="m-hero__image"></div>
         </div>
     </div>
     <style>
@@ -1499,7 +1499,7 @@ switch the text to white.
             background-color: #207676;
         }
 
-        #hero2 .m-hero_image {
+        #hero2 .m-hero__image {
             background-image:
                 url('https://dummyimage.com/570x236/addc91/101820');
             background-image: -webkit-image-set(
@@ -1517,7 +1517,7 @@ switch the text to white.
         }
 
         @media screen and (min-width: 37.5625em) {
-            #hero2 .m-hero_image {
+            #hero2 .m-hero__image {
                 background-image:
                     url('https://dummyimage.com/470x195/addc91/101820');
                 background-image: -webkit-image-set(
@@ -1539,19 +1539,19 @@ switch the text to white.
 </section>
 
 ```
-<section class="m-hero m-hero__knockout" id="hero2">
-    <div class="m-hero_wrapper wrapper">
-        <div class="m-hero_text">
-            <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
-            <p class="m-hero_subhead">
+<section class="m-hero m-hero--knockout" id="hero2">
+    <div class="m-hero__wrapper wrapper">
+        <div class="m-hero__text">
+            <h1 class="m-hero__heading">Max of 41 chars for a one-line heading</h1>
+            <p class="m-hero__subhead">
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
                 and 108-124 characters (two lines at 1230px)
                 following a two-line heading.
             </p>
         </div>
-        <div class="m-hero_image-wrapper">
-            <div class="m-hero_image"></div>
+        <div class="m-hero__image-wrapper">
+            <div class="m-hero__image"></div>
         </div>
     </div>
     <style>
@@ -1559,7 +1559,7 @@ switch the text to white.
             background-color: #207676;
         }
 
-        #hero2 .m-hero_image {
+        #hero2 .m-hero__image {
             background-image:
                 url('https://dummyimage.com/570x236/addc91/101820');
             background-image: -webkit-image-set(
@@ -1577,7 +1577,7 @@ switch the text to white.
         }
 
         @media screen and (min-width: 37.5625em) {
-            #hero2 .m-hero_image {
+            #hero2 .m-hero__image {
                 background-image:
                     url('https://dummyimage.com/470x195/addc91/101820');
                 background-image: -webkit-image-set(
@@ -1602,25 +1602,25 @@ switch the text to white.
 
 When using an illustration that bleeds top to bottom at larger screen sizes,
 add the `__bleeding` modifier to the hero and add an additional
-`m-hero_bleeding-image` as a sibling to `m-hero_image`
+`m-hero_bleeding-image` as a sibling to `m-hero__image`
 
-<section class="m-hero m-hero__bleeding" id="hero3">
-    <div class="m-hero_wrapper wrapper">
-        <div class="m-hero_text">
-            <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
-            <p class="m-hero_subhead">
+<section class="m-hero m-hero--bleeding" id="hero3">
+    <div class="m-hero__wrapper wrapper">
+        <div class="m-hero__text">
+            <h1 class="m-hero__heading">Max of 41 chars for a one-line heading</h1>
+            <p class="m-hero__subhead">
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
                 and 108-124 characters (two lines at 1230px)
                 following a two-line heading.
             </p>
         </div>
-        <div class="m-hero_image-wrapper">
-            <div class="m-hero_image"></div>
+        <div class="m-hero__image-wrapper">
+            <div class="m-hero__image"></div>
         </div>
     </div>
     <style>
-        #hero3 .m-hero_image {
+        #hero3 .m-hero__image {
             background-image:
                 url('https://dummyimage.com/570x140/addc91/101820');
             background-image: -webkit-image-set(
@@ -1638,7 +1638,7 @@ add the `__bleeding` modifier to the hero and add an additional
         }
 
         @media screen and (min-width: 37.5625em) {
-            #hero3 .m-hero_image {
+            #hero3 .m-hero__image {
                 background-image:
                     url('https://dummyimage.com/470x640/addc91/101820');
                 background-image: -webkit-image-set(
@@ -1659,23 +1659,23 @@ add the `__bleeding` modifier to the hero and add an additional
 </section>
 
 ```
-<section class="m-hero m-hero__bleeding" id="hero3">
-    <div class="m-hero_wrapper wrapper">
-        <div class="m-hero_text">
-            <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
-            <p class="m-hero_subhead">
+<section class="m-hero m-hero--bleeding" id="hero3">
+    <div class="m-hero__wrapper wrapper">
+        <div class="m-hero__text">
+            <h1 class="m-hero__heading">Max of 41 chars for a one-line heading</h1>
+            <p class="m-hero__subhead">
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
                 and 108-124 characters (two lines at 1230px)
                 following a two-line heading.
             </p>
         </div>
-        <div class="m-hero_image-wrapper">
-            <div class="m-hero_image"></div>
+        <div class="m-hero__image-wrapper">
+            <div class="m-hero__image"></div>
         </div>
     </div>
     <style>
-        #hero3 .m-hero_image {
+        #hero3 .m-hero__image {
             background-image:
                 url('https://dummyimage.com/570x140/addc91/101820');
             background-image: -webkit-image-set(
@@ -1693,7 +1693,7 @@ add the `__bleeding` modifier to the hero and add an additional
         }
 
         @media screen and (min-width: 37.5625em) {
-            #hero3 .m-hero_image {
+            #hero3 .m-hero__image {
                 background-image:
                     url('https://dummyimage.com/470x640/addc91/101820');
                 background-image: -webkit-image-set(
@@ -1720,23 +1720,23 @@ It's best to avoid a non-button call to action in these,
 as it's unlikely that the Pacific Blue will have accessible contrast
 with a non-white (or light gray) background.
 
-<section class="m-hero m-hero__overlay" id="hero4">
-    <div class="m-hero_wrapper wrapper">
-        <div class="m-hero_text">
-            <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
-            <p class="m-hero_subhead">
+<section class="m-hero m-hero--overlay" id="hero4">
+    <div class="m-hero__wrapper wrapper">
+        <div class="m-hero__text">
+            <h1 class="m-hero__heading">Max of 41 chars for a one-line heading</h1>
+            <p class="m-hero__subhead">
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
                 and 108-124 characters (two lines at 1230px)
                 following a two-line heading.
             </p>
         </div>
-        <div class="m-hero_image-wrapper">
-            <div class="m-hero_image"></div>
+        <div class="m-hero__image-wrapper">
+            <div class="m-hero__image"></div>
         </div>
     </div>
     <style>
-        #hero4 .m-hero_image {
+        #hero4 .m-hero__image {
             background-image:
                 url('https://dummyimage.com/600x250/addc91/101820');
             background-image: -webkit-image-set(
@@ -1754,7 +1754,7 @@ with a non-white (or light gray) background.
         }
 
         @media screen and (min-width: 37.5625em) {
-            #hero4 .m-hero_wrapper{
+            #hero4 .m-hero__wrapper{
                 background-image:
                     url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
                 background-image: -webkit-image-set(
@@ -1775,23 +1775,23 @@ with a non-white (or light gray) background.
 </section>
 
 ```
-<section class="m-hero m-hero__overlay" id="hero4">
-    <div class="m-hero_wrapper wrapper">
-        <div class="m-hero_text">
-            <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
-            <p class="m-hero_subhead">
+<section class="m-hero m-hero--overlay" id="hero4">
+    <div class="m-hero__wrapper wrapper">
+        <div class="m-hero__text">
+            <h1 class="m-hero__heading">Max of 41 chars for a one-line heading</h1>
+            <p class="m-hero__subhead">
                 This text has a recommended count of 165-186 characters
                 (three lines at 1230px) following a one-line heading
                 and 108-124 characters (two lines at 1230px)
                 following a two-line heading.
             </p>
         </div>
-        <div class="m-hero_image-wrapper">
-            <div class="m-hero_image"></div>
+        <div class="m-hero__image-wrapper">
+            <div class="m-hero__image"></div>
         </div>
     </div>
     <style>
-        #hero4 .m-hero_image {
+        #hero4 .m-hero__image {
             background-image:
                 url('https://dummyimage.com/600x250/addc91/101820');
             background-image: -webkit-image-set(
@@ -1809,7 +1809,7 @@ with a non-white (or light gray) background.
         }
 
         @media screen and (min-width: 37.5625em) {
-            #hero4 .m-hero_wrapper{
+            #hero4 .m-hero__wrapper{
                 background-image:
                     url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
                 background-image: -webkit-image-set(

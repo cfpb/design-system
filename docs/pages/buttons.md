@@ -37,47 +37,47 @@ variation_groups:
         variation_specs: ''
         variation_name: Primary button
       - variation_code_snippet: >-
-          <button class="a-btn a-btn__secondary" title="Default state">Default
+          <button class="a-btn a-btn--secondary" title="Default state">Default
           state</button>
 
 
-          <button class="a-btn a-btn__secondary hover" title="Hovered state">Hovered state</button>
+          <button class="a-btn a-btn--secondary hover" title="Hovered state">Hovered state</button>
 
 
-          <button class="a-btn a-btn__secondary focus" title="Focused state">Focused state</button>
+          <button class="a-btn a-btn--secondary focus" title="Focused state">Focused state</button>
 
 
-          <button class="a-btn a-btn__secondary active" title="Active state">Active state</button>
+          <button class="a-btn a-btn--secondary active" title="Active state">Active state</button>
         variation_description: Use a secondary button for actions that happen on the current page.
         variation_name: Secondary button
         variation_specs: ''
       - variation_code_snippet: >-
-          <button class="a-btn a-btn__disabled" title="Default state"
+          <button class="a-btn a-btn--disabled" title="Default state"
           disabled>Default state</button>
 
 
-          <button class="a-btn a-btn__disabled hover" title="Hovered state" disabled>Hovered state</button>
+          <button class="a-btn a-btn--disabled hover" title="Hovered state" disabled>Hovered state</button>
 
 
-          <button class="a-btn a-btn__disabled focus" title="Focused state" disabled>Focused state</button>
+          <button class="a-btn a-btn--disabled focus" title="Focused state" disabled>Focused state</button>
         variation_name: Disabled button
         variation_specs: ''
       - variation_code_snippet: >-
-          <button class="a-btn a-btn__warning" title="Default state">Default
+          <button class="a-btn a-btn--warning" title="Default state">Default
           state</button>
 
 
-          <button class="a-btn a-btn__warning hover" title="Hovered state">Hovered state</button>
+          <button class="a-btn a-btn--warning hover" title="Hovered state">Hovered state</button>
 
 
-          <button class="a-btn a-btn__warning focus" title="Focused state">Focused state</button>
+          <button class="a-btn a-btn--warning focus" title="Focused state">Focused state</button>
         variation_name: Destructive button
         variation_specs: ''
       - variation_name: Destructive action
         variation_code_snippet: >-
           <div class="m-btn-group">
               <button class="a-btn">Action</button>
-              <button class="a-btn a-btn__link a-btn__warning">Destructive action</button>
+              <button class="a-btn a-btn--link a-btn--warning">Destructive action</button>
           </div>
         variation_description: When paired with a primary action, indicate the
           destructive action using a destructive action button link to the right
@@ -87,17 +87,17 @@ variation_groups:
         variation_name: Full-width button (on x-small screens)
         variation_description: Reduce screen size to see this button in action.
         variation_code_snippet: >-
-          <button class="a-btn a-btn__full-on-xs" title="Default state">Default
+          <button class="a-btn a-btn--full-on-xs" title="Default state">Default
           state</button>
 
 
-          <button class="a-btn a-btn__full-on-xs hover" title="Hovered state">Hovered state</button>
+          <button class="a-btn a-btn--full-on-xs hover" title="Hovered state">Hovered state</button>
 
 
-          <button class="a-btn a-btn__full-on-xs focus" title="Focused state">Focused state</button>
+          <button class="a-btn a-btn--full-on-xs focus" title="Focused state">Focused state</button>
 
 
-          <button class="a-btn a-btn__full-on-xs active" title="Active state">Active state</button>
+          <button class="a-btn a-btn--full-on-xs active" title="Active state">Active state</button>
       - variation_is_deprecated: false
         variation_name: Button group
         variation_code_snippet: |-
@@ -115,8 +115,8 @@ variation_groups:
           consistently for one action. Icons should never be underlined.
         variation_code_snippet: |-
           <button class="a-btn">
-              <span class="a-btn_icon
-                           a-btn_icon__on-left">
+              <span class="a-btn__icon
+                           a-btn__icon--on-left">
                  {% include icons/left.svg %}
               </span>
               Back
@@ -124,8 +124,8 @@ variation_groups:
 
           <button class="a-btn">
               Next
-              <span class="a-btn_icon
-                           a-btn_icon__on-right">
+              <span class="a-btn__icon
+                           a-btn__icon--on-right">
                   {% include icons/right.svg %}
               </span>
           </button>
@@ -134,8 +134,8 @@ variation_groups:
         variation_code_snippet: >-
           <button class="a-btn">
               Submit your complaint
-              <span class="a-btn_icon
-                           a-btn_icon__on-right">{% include icons/updating.svg %}</span>
+              <span class="a-btn__icon
+                           a-btn__icon--on-right">{% include icons/updating.svg %}</span>
           </button>
         variation_description: >
           Use an animated icon in a button to reassure the user that the action
@@ -169,8 +169,8 @@ restrictions:
       much, much too long</button>
   - restrictions_do: |-
       <button class="a-btn">
-          <span class="a-btn_icon
-                       a-btn_icon__on-left">
+          <span class="a-btn__icon
+                       a-btn__icon--on-left">
              {% include icons/left.svg %}
           </span>
           Back
@@ -178,8 +178,8 @@ restrictions:
     restrictions_do_not: |-
       <button class="a-btn">
           Back
-          <span class="a-btn_icon
-                       a-btn_icon__on-right">
+          <span class="a-btn__icon
+                       a-btn__icon--on-right">
               {% include icons/left.svg %}
           </span>
       </button>

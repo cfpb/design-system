@@ -41,27 +41,27 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ```
 // .btn
-@btn-text:                  @white;
-@btn-bg:                    @pacific;
-@btn-bg-hover:              @pacific-dark;
-@btn-bg-active:             @navy;
+@btn-text:                  var(--white);
+@btn-bg:                    var(--pacific);
+@btn-bg-hover:              var(--pacific-dark);
+@btn-bg-active:             var(--navy);
 
 // .btn__secondary
-@btn__secondary-text:       @white;
-@btn__secondary-bg:         @gray;
-@btn__secondary-bg-hover:   @gray-dark;
-@btn__secondary-bg-active:  @black;
+@btn__secondary-text:       var(--white);
+@btn__secondary-bg:         var(--gray);
+@btn__secondary-bg-hover:   var(--gray-dark);
+@btn__secondary-bg-active:  var(--black);
 
 // .btn__warning
-@btn__warning-text:         @white;
-@btn__warning-bg:           @red-mid-dark;
-@btn__warning-bg-hover:     @red-dark;
-@btn__warning-bg-active:    @gray-dark;
+@btn__warning-text:         var(--white);
+@btn__warning-bg:           var(--red-mid-dark);
+@btn__warning-bg-hover:     var(--red-dark);
+@btn__warning-bg-active:    var(--gray-dark);
 
 // .btn__disabled
-@btn__disabled-text:        @gray;
-@btn__disabled-bg:          @gray-20;
-@btn__disabled-outline:     @gray-20;
+@btn__disabled-text:        var(--gray);
+@btn__disabled-bg:          var(--gray-20);
+@btn__disabled-outline:     var(--gray-20);
 ```
 
 ### Sizing variables

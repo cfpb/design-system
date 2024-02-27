@@ -48,47 +48,47 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ```less
 // .a-text-input borders
-@input-border: @gray-60;
-@input-border__hover: @pacific;
-@input-border__focused: @pacific;
-@input-border__active: @pacific;
-@input-border__error: @red;
-@input-border__warning: @gold;
-@input-border__success: @green;
-@input-border__selected: @pacific;
+@input-border: var(--gray-60);
+@input-border__hover: var(--pacific);
+@input-border__focused: var(--pacific);
+@input-border__active: var(--pacific);
+@input-border__error: var(--red);
+@input-border__warning: var(--gold);
+@input-border__success: var(--green);
+@input-border__selected: var(--pacific);
 
 // .a-text-input backgrounds
-@input-bg: @white;
-@input-bg__selected: @pacific;
-@input-bg__disabled: @gray-10;
-@input-bg__disabled-selected: @gray-40;
+@input-bg: var(--white);
+@input-bg__selected: var(--pacific);
+@input-bg__disabled: var(--gray-10);
+@input-bg__disabled-selected: var(--gray-40);
 
 // .a-text-input text
-@input-text: @black;
-@input-text__disabled: @gray;
-@input-text__placeholder: @gray;
+@input-text: var(--black);
+@input-text__disabled: var(--gray);
+@input-text__placeholder: var(--gray);
 
 // .a-text-input icons
-@input-icon__error: @red;
+@input-icon__error: var(--red);
 
 // .a-select
 @select-border: @input-border;
-@select-icon-bg: @gray-10;
+@select-icon-bg: var(--gray-10);
 @select-text__disabled: @input-text__disabled;
 
 // .m-form-field
 @form-field-input-border: @input-border;
 @form-field-input-border__focused: @input-border;
-@form-field-input-border__disabled: @gray-60;
+@form-field-input-border__disabled: var(--gray-60);
 
 // .m-form-field__lg-target
-@form-field-input-lg-target-bg: @gray-10;
-@form-field-input-lg-target-bg__selected: @pacific-20;
-@form-field-input-lg-target-bg__disabled: @gray-20;
-@form-field-input-lg-target-border: @pacific;
+@form-field-input-lg-target-bg: var(--gray-10);
+@form-field-input-lg-target-bg__selected: var(--pacific-20);
+@form-field-input-lg-target-bg__disabled: var(--gray-20);
+@form-field-input-lg-target-border: var(--pacific);
 
 // .a-label_helper
-@label-helper: @gray;
+@label-helper: var(--gray);
 ```
 
 ### Sizing variables

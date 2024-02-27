@@ -28,10 +28,10 @@ where this component's less file is imported.
 Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.less).
 
 ```less
-@table-cell-bg: @white;
-@table-cell-bg_alt: @gray-5;
-@table-scrolling-border: @gray-40;
-@table-border: @gray;
+@table-cell-bg: var(--white);
+@table-cell-bg_alt: var(--gray-5);
+@table-scrolling-border: var(--gray-40);
+@table-border: var(--gray);
 ```
 
 ## Standard tables

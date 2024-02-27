@@ -23,7 +23,7 @@ variation_groups:
           </section>
 
 
-          <!-- 
+          <!--
 
           Use CSS rules to modify the hero's background color, image and padding.
 
@@ -98,7 +98,7 @@ variation_groups:
 
           * Use a transparent background.
 
-          * Export illustrations as PNG files. 
+          * Export illustrations as PNG files.
 
 
           #### Standard hero with illustration
@@ -205,7 +205,7 @@ variation_groups:
           </section>
 
 
-          <!-- 
+          <!--
 
           Use CSS rules to modify the hero's background color, image and padding.
 
@@ -310,7 +310,7 @@ variation_groups:
 
           * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
 
-          * Export photos as PNG files. 
+          * Export photos as PNG files.
 
 
           ![Image of larger photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_large.png "Image of larger photographic hero graphic with dimensions")
@@ -333,7 +333,7 @@ variation_groups:
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
                       <h1 class=m-hero_heading">50 chars max for a two-line heading</h1>
-                      <p class="m-hero_subhead">    
+                      <p class="m-hero_subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
                   </div>
@@ -344,7 +344,7 @@ variation_groups:
           </section>
 
 
-          <!-- 
+          <!--
 
           Use CSS rules to modify the hero's background color, image and padding.
 
@@ -461,7 +461,7 @@ variation_groups:
               <div class="m-hero_wrapper">
                   <div class="m-hero_text">
                       <h1 class="m-hero_heading">50 chars max for a two-line heading</h1>
-                      <p class="m-hero_subhead">    
+                      <p class="m-hero_subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
                   </div>
@@ -472,7 +472,7 @@ variation_groups:
           </section>
 
 
-          <!-- 
+          <!--
 
           Use CSS rules to modify the hero's background color, image and padding.
 
@@ -570,7 +570,7 @@ variation_groups:
               </style>
           </section>
         variation_implementation:
-          50/50 heroes have a 1px `@gray-40` border on the sides
+          50/50 heroes have a 1px `var(--gray-40)` border on the sides
           because, unlike standard heroes, their background does not
           horizontally bleed to the edges of the screen.
         variation_specs: >-
@@ -611,7 +611,7 @@ variation_groups:
           </section>
 
 
-          <!-- 
+          <!--
 
           Use CSS rules to modify the hero's background color, image and padding.
 

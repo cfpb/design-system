@@ -65,33 +65,33 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ```
 // .block
-@block__bg:                 @gray-5;
-@block__border:             @gray-40;
-@block__border-top:         @gray-40;
-@block__border-right:       @gray-40;
-@block__border-bottom:      @gray-40;
-@block__border-left:        @gray-40;
+@block__bg:                 var(--gray-5);
+@block__border:             var(--gray-40);
+@block__border-top:         var(--gray-40);
+@block__border-right:       var(--gray-40);
+@block__border-bottom:      var(--gray-40);
+@block__border-left:        var(--gray-40);
 
 // .content_main
-@content_main-border:       @gray-40;
+@content_main-border:       var(--gray-40);
 
 // .content_sidebar
-@content_sidebar-bg:        @gray-5;
-@content_sidebar-border:    @gray-40;
+@content_sidebar-bg:        var(--gray-5);
+@content_sidebar-border:    var(--gray-40);
 
 // .content_line
-@content_line:              @gray-40;
+@content_line:              var(--gray-40);
 
 // .grid_column__top-divider
-@grid_column__top-divider:  @gray-40;
+@grid_column__top-divider:  var(--gray-40);
 
 // .grid_column__left-divider
-@grid_column__left-divider: @gray-40;
+@grid_column__left-divider: var(--gray-40);
 
 // Hero variables
-@hero-bg:                   @gray-5;
-@hero-knockout-bg:          @gray;
-@hero-knockout-text:        @white;
+@hero-bg:                   var(--gray-5);
+@hero-knockout-bg:          var(--gray);
+@hero-knockout-text:        var(--white);
 
 // Featured Content Module variables
 @fcm-bg:                    @block__bg;

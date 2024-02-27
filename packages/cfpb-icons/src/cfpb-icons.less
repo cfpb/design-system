@@ -24,7 +24,7 @@
 // into a background-image property.
 @plugin "icons-svg-inline.cjs";
 
-.u-svg-inline-bg( @name, @color: @black ) {
+.u-svg-inline-bg( @name, @color: var(--black) ) {
   @red: red(@color);
   @green: green(@color);
   @blue: blue(@color);

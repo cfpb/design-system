@@ -116,9 +116,9 @@ variation_groups:
       // The following LESS...
 
       .example {
-          color: @gray;
+          color: var(--gray);
           .respond-to-print({
-              color: @black;
+              color: var(--black);
           });
       }
 

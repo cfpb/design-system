@@ -5,7 +5,7 @@
 // Hero molecule
 
 .m-hero {
-  background-color: @gray-5;
+  background-color: var(--gray-5);
 
   &_wrapper {
     display: grid;
@@ -54,8 +54,8 @@
   }
 
   &__knockout {
-    background-color: @gray;
-    color: @white;
+    background-color: var(--gray);
+    color: var(--white);
   }
 
   &__overlay {
@@ -68,7 +68,7 @@
 
   &__jumbo,
   &__50-50 {
-    background-color: @white;
+    background-color: var(--white);
 
     .u-jumbo-text();
   }
@@ -173,7 +173,7 @@
       .m-hero_wrapper {
         grid-template-columns: 1fr 1fr;
 
-        border: 1px solid @gray-40;
+        border: 1px solid var(--gray-40);
         border-top: none;
         // Position the hero image all the way to the right
         background-position: 100% center;

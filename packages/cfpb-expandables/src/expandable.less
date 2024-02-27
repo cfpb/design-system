@@ -9,7 +9,7 @@
    ========================================================================== */
 
 // .o-expandable modifiers
-@expandable__border: @gray-40;
+@expandable__border: var(--gray-40);
 
 //
 // Recommended expandable pattern
@@ -31,7 +31,7 @@
     cursor: pointer;
 
     &:focus {
-      outline: 1px dotted @black;
+      outline: 1px dotted var(--black);
       outline-offset: 1px;
     }
 
@@ -68,14 +68,14 @@
   &_label {
     // Remove default h4 margin style
     margin-bottom: 0;
-    color: @black;
+    color: var(--black);
     font-weight: 500;
   }
 
   &_cues {
     min-width: 60px;
     text-align: right;
-    color: @pacific;
+    color: var(--pacific);
     font-size: unit((@btn-font-size / @base-font-size-px), em);
     line-height: unit((@base-line-height-px / @btn-font-size));
   }
@@ -115,7 +115,7 @@
   //
 
   &__background {
-    background: @gray-5;
+    background: var(--gray-5);
   }
 
   //

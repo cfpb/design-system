@@ -48,29 +48,29 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 // Running text elements
 
 // .a-date
-@date:                      @gray;
+@date:                      var(--gray);
 
 // .m-pull-quote
-@pull-quote_body:           @black;
-@pull-quote_citation:       @gray;
+@pull-quote_body:           var(--black);
+@pull-quote_citation:       var(--gray);
 
 // Headings
 
 // .a-heading__icon
-@heading__icon:             @black;
+@heading__icon:             var(--black);
 @heading__icon__hover:      @link-text-hover;
 
 // Headers
 
 // .m-slug-header
-@slug-header_border__thin:  @gray-10;
-@slug-header_border__thick: @green;
+@slug-header_border__thin:  var(--gray-10);
+@slug-header_border__thick: var(--green);
 
 // Links
 
 // .a-link__jump
-@jump-link_bg:              @gray-5;
-@jump-link_border:          @gray-40;
+@jump-link_bg:              var(--gray-5);
+@jump-link_border:          var(--gray-40);
 ```
 
 ### Font variables

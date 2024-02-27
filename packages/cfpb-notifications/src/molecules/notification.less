@@ -14,7 +14,7 @@
     fill: @notification-icon;
   }
 
-  &__success {
+  &--success {
     background: @notification-bg-success;
     border-color: @notification-border-success;
 
@@ -23,7 +23,7 @@
     }
   }
 
-  &__warning {
+  &--warning {
     background: @notification-bg-warning;
     border-color: @notification-border-warning;
 
@@ -32,7 +32,7 @@
     }
   }
 
-  &__error {
+  &--error {
     background: @notification-bg-error;
     border-color: @notification-border-error;
 
@@ -47,20 +47,20 @@
   &__error {
     & a {
       // Colors for :link, :visited, :hover, :focus, :active.
-      .u-link__colors( var(--pacific-mid-dark), var(--teal), var(--pacific-dark), var(--pacific-mid-dark), var(--navy-dark) );
+      .u-link--colors( var(--pacific-mid-dark), var(--teal), var(--pacific-dark), var(--pacific-mid-dark), var(--navy-dark) );
     }
   }
 
-  &__visible {
+  &--visible {
     display: block;
   }
 
   // Only adding left padding if an icon is present.
-  .cf-icon-svg + &_content {
+  .cf-icon-svg + &__content {
     padding-left: unit((25px / @base-font-size-px), rem);
   }
 
-  &_message {
+  &__message {
     font-size: unit((16px / @base-font-size-px), rem);
     line-height: 1.25;
     font-weight: 500;
@@ -72,13 +72,13 @@
     });
   }
 
-  &_explanation {
+  &__explanation {
     margin-top: unit((5px / @base-font-size-px), rem);
     margin-bottom: unit((15px / @base-font-size-px), rem);
   }
 
   // We need to provide a margin for links if an explanation is absent.
-  &_message + .m-list {
+  &__message + .m-list {
     margin-top: unit((15px / @base-font-size-px), rem);
   }
 
@@ -92,7 +92,7 @@
     }
 
     // Remove default margin between explanation and list of links.
-    &_explanation {
+    &__explanation {
       margin-bottom: 0;
     }
 
@@ -102,7 +102,7 @@
     }
 
     // Decrease the margin between link items.
-    .m-list_item {
+    .m-list__item {
       margin-bottom: unit( ( 5px / @base-font-size-px ), rem );
     }
   });
@@ -110,7 +110,7 @@
 
 // Handle right-to-left (RTL) adjustments.
 html[lang='ar'] .m-notification {
-  .cf-icon-svg + .m-notification_content {
+  .cf-icon-svg + .m-notification__content {
     padding-left: initial;
     padding-right: unit((25px / @base-font-size-px), rem);
   }

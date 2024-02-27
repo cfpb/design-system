@@ -11,9 +11,9 @@ variation_groups:
           Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur instructior ex pri. Cu pri inani constituto, cum aeque noster commodo.
               </p>
 
-          <ul class="m-list m-list__links">
-              <li class="m-list_item">
-                  <a class="m-list_link" href="#">Call-to-action link</a>
+          <ul class="m-list m-list--links">
+              <li class="m-list__item">
+                  <a class="m-list__link" href="#">Call-to-action link</a>
               </li>
           </ul>
 

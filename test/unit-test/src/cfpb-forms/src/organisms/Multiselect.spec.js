@@ -38,7 +38,7 @@ describe('Multiselect', () => {
       const option = document.querySelector('option');
       option.defaultSelected = true;
       multiselect.init();
-      const choices = document.querySelectorAll('.o-multiselect_choices li');
+      const choices = document.querySelectorAll('.o-multiselect__choices li');
 
       expect(choices.length).toBe(1);
       expect(choices[0].innerHTML).toContain('Debt collection');
@@ -53,7 +53,7 @@ describe('Multiselect', () => {
       expect(multiselect.getModel().isAtMaxSelections()).toBe(true);
 
       // renderTags
-      const choices = document.querySelectorAll('.o-multiselect_choices li');
+      const choices = document.querySelectorAll('.o-multiselect__choices li');
       expect(choices.length).toBe(0);
     });
   });
@@ -63,7 +63,7 @@ describe('Multiselect', () => {
       multiselect.init();
       multiselect.expand();
       multiselectDom = document.querySelector('.o-multiselect');
-      const fieldset = multiselectDom.querySelector('.o-multiselect_fieldset');
+      const fieldset = multiselectDom.querySelector('.o-multiselect__fieldset');
 
       expect(multiselectDom.className).toBe('o-multiselect u-active');
       expect(fieldset.getAttribute('aria-hidden')).toBe('false');
@@ -74,7 +74,7 @@ describe('Multiselect', () => {
       multiselect.expand();
       multiselect.collapse();
       multiselectDom = document.querySelector('.o-multiselect');
-      const fieldset = multiselectDom.querySelector('.o-multiselect_fieldset');
+      const fieldset = multiselectDom.querySelector('.o-multiselect__fieldset');
 
       expect(multiselectDom.className).toBe('o-multiselect');
       expect(fieldset.getAttribute('aria-hidden')).toBe('true');
@@ -95,7 +95,7 @@ describe('Multiselect', () => {
     it('should open when the search input is focused', function () {
       multiselect.init();
       multiselectDom = document.querySelector('.o-multiselect');
-      const fieldset = multiselectDom.querySelector('.o-multiselect_fieldset');
+      const fieldset = multiselectDom.querySelector('.o-multiselect__fieldset');
       const search = document.querySelector('#test-select');
       search.focus();
 
@@ -108,7 +108,7 @@ describe('Multiselect', () => {
       multiselect.init();
       multiselect.expand();
       multiselectDom = document.querySelector('.o-multiselect');
-      const fieldset = multiselectDom.querySelector('.o-multiselect_fieldset');
+      const fieldset = multiselectDom.querySelector('.o-multiselect__fieldset');
       const search = document.querySelector('#test-select');
       search.focus();
       search.blur();

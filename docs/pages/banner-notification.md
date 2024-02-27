@@ -10,24 +10,24 @@ variation_groups:
   - variations:
       - variation_code_snippet: >-
           <div class="o-banner">
-              <div class="wrapper wrapper__match-content">
+              <div class="wrapper wrapper--match-content">
                   <div class="m-notification
-                              m-notification__visible
-                              m-notification__warning">
+                              m-notification--visible
+                              m-notification--warning">
                       {% include icons/warning-round.svg %}
-                      <div class="m-notification_content">
-                          <div class="m-notification_message">Warning banner with a notification</div>
-                          <p class="m-notification_explanation">
+                      <div class="m-notification__content">
+                          <div class="m-notification__message">Warning banner with a notification</div>
+                          <p class="m-notification__explanation">
                               An optional paragraph of text can be added to explain the purpose of the warning banner.
                           </p>
-                          <ul class="m-list m-list__links">
-                              <li class="m-list_item">
-                                  <a class="m-list_link" href="#">
+                          <ul class="m-list m-list--links">
+                              <li class="m-list__item">
+                                  <a class="m-list__link" href="#">
                                       A link can be added
                                   </a>
                               </li>
-                              <li class="m-list_item">
-                                  <a class="m-list_link" href="#">
+                              <li class="m-list__item">
+                                  <a class="m-list__link" href="#">
                                       Multiple links are supported
                                   </a>
                               </li>
@@ -43,27 +43,27 @@ variation_groups:
         variation_name: Warning banner
       - variation_is_deprecated: false
         variation_code_snippet: >-
-          <div class="o-banner o-banner__dark">
-              <div class="wrapper wrapper__match-content">
+          <div class="o-banner o-banner--dark">
+              <div class="wrapper wrapper--match-content">
                   <div class="m-notification
-                              m-notification__warning
-                              m-notification__visible">
+                              m-notification--warning
+                              m-notification--visible">
                       {% include icons/information-round.svg %}
-                      <div class="m-notification_content">
-                          <div class="m-notification_message">
+                      <div class="m-notification__content">
+                          <div class="m-notification__message">
                               Archived content banner with notification
                           </div>
-                          <p class="m-notification_explanation">
+                          <p class="m-notification__explanation">
                               An optional paragraph of text can be added to explain the purpose of the archived content banner.
                           </p>
-                          <ul class="m-list m-list__links">
-                              <li class="m-list_item">
-                                  <a class="m-list_link" href="#test-link">
+                          <ul class="m-list m-list--links">
+                              <li class="m-list__item">
+                                  <a class="m-list__link" href="#test-link">
                                       Links can be added
                                   </a>
                               </li>
-                              <li class="m-list_item">
-                                  <a class="m-list_link" href="#">
+                              <li class="m-list__item">
+                                  <a class="m-list__link" href="#">
                                       Visited links appear gray instead of white
                                   </a>
                               </li>

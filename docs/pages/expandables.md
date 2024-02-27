@@ -9,24 +9,24 @@ variation_groups:
         variation_description: The following combination is our recommended go-to expandable pattern.
         variation_code_snippet: >-
           <div class="o-expandable
-                      o-expandable__background
-                      o-expandable__border">
-              <button class="o-expandable_header"
+                      o-expandable--background
+                      o-expandable--border">
+              <button class="o-expandable__header"
                       title="Expand content">
-                  <h3 class="o-expandable_label">
+                  <h3 class="o-expandable__label">
                       Expandable header
                   </h3>
-                  <span class="o-expandable_cues">
-                      <span class="o-expandable_cue-open" role="img" aria-label="Show">
+                  <span class="o-expandable__cues">
+                      <span class="o-expandable__cue-open" role="img" aria-label="Show">
                           {% include icons/plus-round.svg %}
                       </span>
-                      <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                      <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                           <span class="u-visually-hidden">Hide</span>
                           {% include icons/minus-round.svg %}
                       </span>
                   </span>
               </button>
-              <div class="o-expandable_content">
+              <div class="o-expandable__content">
                   <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing
                       elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -49,7 +49,7 @@ variation_groups:
 
           ```
 
-          const element = document.querySelector( '.o-expandable_header' );
+          const element = document.querySelector( '.o-expandable__header' );
 
           expandables[0].toggleTargetState( element );
 
@@ -81,31 +81,31 @@ variation_groups:
 
           * {string} The text of the expandable’s label.
       - variation_name: Padded expandable
-        variation_description: A variation with a padded label and larger text. This also shows what an icon in the header text looks like, which should be wrapped in a `o-expandable_icon` class.
+        variation_description: A variation with a padded label and larger text. This also shows what an icon in the header text looks like, which should be wrapped in a `o-expandable__icon` class.
         variation_code_snippet: >-
           <div class="o-expandable
-                      o-expandable__padded
-                      o-expandable__background
-                      o-expandable__border">
-              <button class="o-expandable_header"
+                      o-expandable--padded
+                      o-expandable--background
+                      o-expandable--border">
+              <button class="o-expandable__header"
                       title="Expand content">
-                  <span class="o-expandable_icon">
+                  <span class="o-expandable__icon">
                       {% include icons/bank.svg %}
                   </span>
-                  <h3 class="o-expandable_label">
+                  <h3 class="o-expandable__label">
                       Expandable header
                   </h3>
-                  <span class="o-expandable_cues">
-                      <span class="o-expandable_cue-open" role="img" aria-label="Show">
+                  <span class="o-expandable__cues">
+                      <span class="o-expandable__cue-open" role="img" aria-label="Show">
                           {% include icons/plus-round.svg %}
                       </span>
-                      <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                      <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                           <span class="u-visually-hidden">Hide</span>
                           {% include icons/minus-round.svg %}
                       </span>
                   </span>
               </button>
-              <div class="o-expandable_content">
+              <div class="o-expandable__content">
                   <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing
                       elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -121,24 +121,24 @@ variation_groups:
       - variation_name: Expandable (open on load)
         variation_code_snippet: >-
           <div class="o-expandable
-                      o-expandable__background
-                      o-expandable__border
-                      o-expandable__onload-open">
-              <button class="o-expandable_header"
+                      o-expandable--background
+                      o-expandable--border
+                      o-expandable--onload-open">
+              <button class="o-expandable__header"
                       title="Expand content">
-                  <h3 class="o-expandable_label">
+                  <h3 class="o-expandable__label">
                       Expandable header
                   </h3>
-                  <span class="o-expandable_cues">
-                      <span class="o-expandable_cue-open" role="img" aria-label="Show">
+                  <span class="o-expandable__cues">
+                      <span class="o-expandable__cue-open" role="img" aria-label="Show">
                           {% include icons/plus-round.svg %}
                       </span>
-                      <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                      <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                           {% include icons/minus-round.svg %}
                       </span>
                   </span>
               </button>
-              <div class="o-expandable_content">
+              <div class="o-expandable__content">
                   <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing
                       elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -151,7 +151,7 @@ variation_groups:
           </div>
         variation_description:
           Sometimes you may want the expandable to be open by
-          default. This is as easy as adding the `.o-expandable__onload-open`
+          default. This is as easy as adding the `.o-expandable--onload-open`
           modifier to the `.o-expandable` block.
         variation_implementation:
           A new array of Expandable instances can be created
@@ -168,21 +168,21 @@ variation_groups:
         variation_code_snippet: >-
           <div class="o-expandable-group">
               <div class="o-expandable">
-                  <button class="o-expandable_header"
+                  <button class="o-expandable__header"
                           title="Expand content">
-                      <h3 class="o-expandable_label">
+                      <h3 class="o-expandable__label">
                           Expandable header
                       </h3>
-                      <span class="o-expandable_cues">
-                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
+                      <span class="o-expandable__cues">
+                          <span class="o-expandable__cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                          <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
                   </button>
-                  <div class="o-expandable_content">
+                  <div class="o-expandable__content">
                       <p>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -194,21 +194,21 @@ variation_groups:
                   </div>
               </div>
               <div class="o-expandable">
-                  <button class="o-expandable_header"
+                  <button class="o-expandable__header"
                           title="Expand content">
-                      <h3 class="o-expandable_label">
+                      <h3 class="o-expandable__label">
                           Expandable header
                       </h3>
-                      <span class="o-expandable_cues">
-                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
+                      <span class="o-expandable__cues">
+                          <span class="o-expandable__cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                          <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
                   </button>
-                  <div class="o-expandable_content">
+                  <div class="o-expandable__content">
                       <p>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -220,21 +220,21 @@ variation_groups:
                   </div>
               </div>
               <div class="o-expandable">
-                  <button class="o-expandable_header"
+                  <button class="o-expandable__header"
                           title="Expand content">
-                      <h3 class="o-expandable_label">
+                      <h3 class="o-expandable__label">
                           Expandable header
                       </h3>
-                      <span class="o-expandable_cues">
-                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
+                      <span class="o-expandable__cues">
+                          <span class="o-expandable__cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                          <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
                   </button>
-                  <div class="o-expandable_content">
+                  <div class="o-expandable__content">
                       <p>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -260,21 +260,21 @@ variation_groups:
         variation_code_snippet: >-
           <div class="o-expandable-group o-expandable-group__accordion">
               <div class="o-expandable">
-                  <button class="o-expandable_header"
+                  <button class="o-expandable__header"
                           title="Expand content">
-                      <h3 class="o-expandable_label">
+                      <h3 class="o-expandable__label">
                           Expandable header
                       </h3>
-                      <span class="o-expandable_cues">
-                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
+                      <span class="o-expandable__cues">
+                          <span class="o-expandable__cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                          <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
                   </button>
-                  <div class="o-expandable_content">
+                  <div class="o-expandable__content">
                       <p>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -286,21 +286,21 @@ variation_groups:
                   </div>
               </div>
               <div class="o-expandable">
-                  <button class="o-expandable_header"
+                  <button class="o-expandable__header"
                           title="Expand content">
-                      <h3 class="o-expandable_label">
+                      <h3 class="o-expandable__label">
                           Expandable header
                       </h3>
-                      <span class="o-expandable_cues">
-                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
+                      <span class="o-expandable__cues">
+                          <span class="o-expandable__cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                          <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
                   </button>
-                  <div class="o-expandable_content">
+                  <div class="o-expandable__content">
                       <p>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -348,21 +348,21 @@ variation_groups:
                   </div>
               </div>
               <div class="o-expandable">
-                  <button class="o-expandable_header"
+                  <button class="o-expandable__header"
                           title="Expand content">
-                      <h3 class="o-expandable_label">
+                      <h3 class="o-expandable__label">
                           Expandable header
                       </h3>
-                      <span class="o-expandable_cues">
-                          <span class="o-expandable_cue-open" role="img" aria-label="Show">
+                      <span class="o-expandable__cues">
+                          <span class="o-expandable__cue-open" role="img" aria-label="Show">
                               {% include icons/plus-round.svg %}
                           </span>
-                          <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                          <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                               {% include icons/minus-round.svg %}
                           </span>
                       </span>
                   </button>
-                  <div class="o-expandable_content">
+                  <div class="o-expandable__content">
                       <p>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Neque ipsa voluptatibus soluta nobis unde quisquam

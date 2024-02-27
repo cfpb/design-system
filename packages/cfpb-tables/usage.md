@@ -42,10 +42,10 @@ a classless `<table>` element in `@cfpb/cfpb-core`,
 
 ## Striped tables
 
-The `.o-table__striped` class adds stripes to the `table` rows. This striping is
+The `.o-table--striped` class adds stripes to the `table` rows. This striping is
 not visible on small screens.
 
-<table class="o-table o-table__striped">
+<table class="o-table o-table--striped">
     <thead>
         <tr>
             <th>Column 1</th>
@@ -78,7 +78,7 @@ not visible on small screens.
 </table>
 
 ```html
-<table class="o-table o-table__striped">
+<table class="o-table o-table--striped">
   <thead>
     <tr>
       <th>Column 1</th>
@@ -113,10 +113,10 @@ not visible on small screens.
 
 ## Right-aligned cells
 
-The use of the `.o-table_cell__right-align` class on a `td` aligns the text
+The use of the `.o-table__cell--right-align` class on a `td` aligns the text
 right - see the third column above.
 
-<table class="o-table o-table__stack-on-small">
+<table class="o-table o-table--stack-on-small">
     <thead>
         <tr>
             <th>Column 1</th>
@@ -139,7 +139,7 @@ right - see the third column above.
 </table>
 
 ```html
-<table class="o-table o-table__stack-on-small">
+<table class="o-table o-table--stack-on-small">
   <thead>
     <tr>
       <th>Column 1</th>
@@ -166,7 +166,7 @@ right - see the third column above.
 
 ### Responsive stacked table
 
-The `.o-table__stack-on-small` class adds the "stacked" `table` style for small
+The `.o-table--stack-on-small` class adds the "stacked" `table` style for small
 screens.
 
 _Please note that tables are not responsive without adding one of the small
@@ -176,7 +176,7 @@ _Also note that the `data-label` attribute is used to label each entry in a
 `table` for small screen responsive views.
 Always include the `data-label` attribute for each cell._
 
-<table class="o-table o-table__stack-on-small">
+<table class="o-table o-table--stack-on-small">
     <thead>
         <tr>
             <th>Column 1</th>
@@ -209,7 +209,7 @@ Always include the `data-label` attribute for each cell._
 </table>
 
 ```html
-<table class="o-table o-table__stack-on-small">
+<table class="o-table o-table--stack-on-small">
   <thead>
     <tr>
       <th>Column 1</th>
@@ -244,8 +244,8 @@ Always include the `data-label` attribute for each cell._
 
 ### Responsive stacked table with header
 
-The `.o-table__entry-header-on-small` class in addition to
-`.o-table__stack-on-small` class changes the first column to be styled as an
+The `.o-table--entry-header-on-small` class in addition to
+`.o-table--stack-on-small` class changes the first column to be styled as an
 entry header. This style requires both classes be added.
 
 _Note that tables are not responsive without adding one of the small screen
@@ -255,8 +255,8 @@ _Also note that the `data-label` attribute is used to label each entry.
 Always include the `data-label` attribute for each cell._
 
 <table class="o-table
-              o-table__stack-on-small
-              o-table__entry-header-on-small">
+              o-table--stack-on-small
+              o-table--entry-header-on-small">
     <thead>
         <tr>
             <th>Column 1</th>
@@ -291,8 +291,8 @@ Always include the `data-label` attribute for each cell._
 ```html
 <table
   class="o-table
-              o-table__stack-on-small
-              o-table__entry-header-on-small"
+              o-table--stack-on-small
+              o-table--entry-header-on-small"
 >
   <thead>
     <tr>
@@ -328,13 +328,13 @@ Always include the `data-label` attribute for each cell._
 
 ### Responsive table - horizontal scroll variation
 
-The `.o-table-wrapper__scrolling` class must be added to the parent element of
+The `.o-table-wrapper--scrolling` class must be added to the parent element of
 the `table` (by adding a wrapping `div`, in most cases). The `table` element
 does not need additional markup in this case. The "Comparative with horizontal
 scroll" style also adds striped rows to the table contained within, and remains
-striped on small screens (unlike the `o-table__striped` class, below).
+striped on small screens (unlike the `o-table--striped` class, below).
 
-<div class="o-table o-table-wrapper__scrolling">
+<div class="o-table o-table-wrapper--scrolling">
     <table>
         <thead>
             <tr>
@@ -394,7 +394,7 @@ striped on small screens (unlike the `o-table__striped` class, below).
 </div>
 
 ```html
-<div class="o-table o-table-wrapper__scrolling">
+<div class="o-table o-table-wrapper--scrolling">
   <table>
     <thead>
       <tr>

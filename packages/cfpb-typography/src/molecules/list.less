@@ -3,14 +3,14 @@
 // Required for horizontal, icon, and link list modifiers
 //
 
-.m-list__unstyled,
-.m-list__horizontal,
-.m-list__links {
+.m-list--unstyled,
+.m-list--horizontal,
+.m-list--links {
   padding-left: 0;
   list-style-type: none;
 
   // This is needed for dd elements.
-  .m-list_item {
+  .m-list__item {
     margin-left: 0;
   }
 }
@@ -19,9 +19,9 @@
 // Spaced list modifier
 //
 
-.m-list__spaced {
-  .m-list__spaced,
-  .m-list_item + .m-list_item {
+.m-list--spaced {
+  .m-list--spaced,
+  .m-list__item + .m-list__item {
     margin-top: unit((24px / @base-font-size-px), em);
   }
 }
@@ -30,8 +30,8 @@
 // Horizontal list modifier
 //
 
-.m-list__horizontal {
-  .m-list_item {
+.m-list--horizontal {
+  .m-list__item {
     display: inline-block;
 
     // Assuming a natural space of 4px between inline block items
@@ -45,19 +45,19 @@
 // Link list modifier
 //
 
-.m-list__links {
-  .m-list_item {
+.m-list--links {
+  .m-list__item {
     // Mobile only.
     .respond-to-max(@bp-xs-max, {
       margin-bottom: 0;
 
-      &:nth-child( n+2 ) .m-list_link {
+      &:nth-child( n+2 ) .m-list__link {
         border-top-width: 0;
       }
     });
   }
 
-  .m-list_link {
+  .m-list__link {
     font-weight: 500;
 
     // Mobile only.

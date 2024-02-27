@@ -3,9 +3,9 @@ import { Summary } from '../../../../../packages/cfpb-expandables';
 import { simulateEvent } from '../../../../util/simulate-event.js';
 
 const HTML_SNIPPET = `
-<div class="o-summary o-summary__mobile"
+<div class="o-summary o-summary--mobile"
      data-js-hook="behavior_flyout-menu">
-    <div class="o-summary_content"
+    <div class="o-summary__content"
          data-js-hook="behavior_flyout-menu_content">
         <a href="#">Content</a>
         <details>
@@ -18,7 +18,7 @@ const HTML_SNIPPET = `
             A keyboard.
         </details>
     </div>
-    <button class="o-summary_btn u-hidden"
+    <button class="o-summary__btn u-hidden"
             data-js-hook="behavior_flyout-menu_trigger">
         Read full description
     </button>
@@ -49,9 +49,9 @@ function windowResizeTo(width, height) {
 describe('Summary', () => {
   beforeEach(() => {
     document.body.innerHTML = HTML_SNIPPET;
-    summaryDom = document.querySelector('.o-summary__mobile');
-    targetDom = summaryDom.querySelector('.o-summary_btn');
-    contentDom = summaryDom.querySelector('.o-summary_content');
+    summaryDom = document.querySelector('.o-summary--mobile');
+    targetDom = summaryDom.querySelector('.o-summary__btn');
+    contentDom = summaryDom.querySelector('.o-summary__content');
     contentLinkDom = summaryDom.querySelector('a');
     expandableContentDom = summaryDom.querySelector('details');
 

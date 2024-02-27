@@ -9,21 +9,21 @@ const HTML_SNIPPET = `
      id="test-group-one">
 
     <div class="o-expandable" id="test-subject-one">
-        <button class="o-expandable_header"
+        <button class="o-expandable__header"
                 title="Expand content">
-            <span class="o-expandable_label">
+            <span class="o-expandable__label">
                 Expandable Header 1
             </span>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open">
                     Show
                 </span>
-                <span class="o-expandable_cue-close">
+                <span class="o-expandable__cue-close">
                     Hide
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -35,21 +35,21 @@ const HTML_SNIPPET = `
     </div>
 
     <div class="o-expandable" id="test-subject-two">
-        <button class="o-expandable_header"
+        <button class="o-expandable__header"
                 title="Expand content">
-            <span class="o-expandable_label">
+            <span class="o-expandable__label">
                 Expandable Header 2
             </span>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open">
                     Show
                 </span>
-                <span class="o-expandable_cue-close">
+                <span class="o-expandable__cue-close">
                     Hide
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -62,21 +62,21 @@ const HTML_SNIPPET = `
 </div>
 
 <div class="o-expandable" id="test-subject-two">
-    <button class="o-expandable_header"
+    <button class="o-expandable__header"
             title="Expand content">
-        <span class="o-expandable_label">
+        <span class="o-expandable__label">
             Expandable Header 3
         </span>
-        <span class="o-expandable_cues">
-            <span class="o-expandable_cue-open">
+        <span class="o-expandable__cues">
+            <span class="o-expandable__cue-open">
                 Show
             </span>
-            <span class="o-expandable_cue-close">
+            <span class="o-expandable__cue-close">
                 Hide
             </span>
         </span>
     </button>
-    <div class="o-expandable_content">
+    <div class="o-expandable__content">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -102,11 +102,11 @@ describe('standard Expandable', () => {
     document.body.innerHTML = HTML_SNIPPET;
     expandableDom1 = document.querySelector('#test-subject-one');
     expandableDom2 = document.querySelector('#test-subject-two');
-    targetDom1 = expandableDom1.querySelector('.o-expandable_header');
-    targetDom2 = expandableDom2.querySelector('.o-expandable_header');
-    contentDom1 = expandableDom1.querySelector('.o-expandable_content');
-    contentDom2 = expandableDom2.querySelector('.o-expandable_content');
-    expandableDom2.classList.add('o-expandable__onload-open');
+    targetDom1 = expandableDom1.querySelector('.o-expandable__header');
+    targetDom2 = expandableDom2.querySelector('.o-expandable__header');
+    contentDom1 = expandableDom1.querySelector('.o-expandable__content');
+    contentDom2 = expandableDom2.querySelector('.o-expandable__content');
+    expandableDom2.classList.add('o-expandable--onload-open');
 
     ExpandableGroup.init();
     expandable = Expandable.init()[0];
@@ -176,10 +176,10 @@ describe('accordion Expandables', () => {
     expandableGroup.classList.add('o-expandable-group__accordion');
     expandableDom1 = document.querySelector('#test-subject-one');
     expandableDom2 = document.querySelector('#test-subject-two');
-    contentDom1 = expandableDom1.querySelector('.o-expandable_content');
-    contentDom2 = expandableDom2.querySelector('.o-expandable_content');
-    targetDom1 = expandableDom1.querySelector('.o-expandable_header');
-    targetDom2 = expandableDom2.querySelector('.o-expandable_header');
+    contentDom1 = expandableDom1.querySelector('.o-expandable__content');
+    contentDom2 = expandableDom2.querySelector('.o-expandable__content');
+    targetDom1 = expandableDom1.querySelector('.o-expandable__header');
+    targetDom2 = expandableDom2.querySelector('.o-expandable__header');
 
     ExpandableGroup.init();
     expandable = Expandable.init()[1];

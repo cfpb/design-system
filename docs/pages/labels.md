@@ -5,7 +5,7 @@ status: Released
 variation_groups:
   - variations:
       - variation_code_snippet: |-
-          <label class="a-label a-label__heading" for="label-heading-example">
+          <label class="a-label a-label--heading" for="label-heading-example">
           Label heading
           </label>
 
@@ -15,23 +15,23 @@ variation_groups:
         variation_specs: ''
       - variation_name: Inline label
         variation_code_snippet: |-
-          <div class="m-form-field m-form-field__checkbox">
+          <div class="m-form-field m-form-field--checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox">
               <label class="a-label" for="test_checkbox">Inline label</label>
           </div>
         variation_specs: ''
       - variation_code_snippet: >-
-          <fieldset class="o-form_fieldset">
+          <fieldset class="o-form__fieldset">
                           <legend class="a-legend">Basic legend
                           </legend>
 
-                          <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+                          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
                               <input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1">
                                   <label class="a-label" for="is_helpful_1">Inline label
                                   </label>
                           </div>
 
-                          <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+                          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
                               <input class="a-radio" id="is_helpful_2" type="radio" name="is_helpful" value="0">
                                   <label class="a-label" for="is_helpful_2">Inline label
                                   </label>

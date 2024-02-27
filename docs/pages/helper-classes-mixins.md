@@ -274,10 +274,10 @@ variation_groups:
 
           <h4>16:9 flexible video player</h4>
 
-          <p>To create a 16:9 flexible video player, wrap the video element in an element with <code>u-flexible-container</code> and add the <code>u-flexible-container_inner</code> to the video element.</p>
+          <p>To create a 16:9 flexible video player, wrap the video element in an element with <code>u-flexible-container</code> and add the <code>u-flexible-container__inner</code> to the video element.</p>
 
           <div class="u-flexible-container">
-              <video class="u-flexible-container_inner"
+              <video class="u-flexible-container__inner"
                     style="background:#75787B;"
                     controls>
               </video>
@@ -303,8 +303,8 @@ variation_groups:
 
           <p>To create a 4:3 flexible video player, add the <code>__4_3 modifier</code> to the container.</p>
 
-          <div class="u-flexible-container u-flexible-container__4-3">
-              <video class="u-flexible-container_inner"
+          <div class="u-flexible-container u-flexible-container--4-3">
+              <video class="u-flexible-container__inner"
                     style="background:#75787B;"
                     controls>
               </video>
@@ -316,34 +316,34 @@ variation_groups:
           `:visited` - `#4c2c92`, `:active` - `#046b99`.
 
 
-          `u-link__colors()`
+          `u-link--colors()`
 
 
           Passing a single argument into the mixin will set the color for the default, `:visited`, `:hover`, `:focus`, and `:active` states.
 
 
-          `u-link__colors(@c)`
+          `u-link--colors(@c)`
 
 
           Passing two arguments into the mixin will set the color for the default, `:visited`, and `:active` states as the first argument, and `:hover` and `:focus` as the second argument.
 
 
-          `u-link__colors(@c, @h)`
+          `u-link--colors(@c, @h)`
 
 
           Passing five arguments will set the color for the default, `:visited`, `:hover`, `:focus`, and `:active` states respectively.
 
 
-          `u-link__colors(@c, @v, @h, @f, @a)`
+          `u-link--colors(@c, @v, @h, @f, @a)`
 
 
           Passing ten arguments will set the text (default, `:visited`, `:hover`, `:focus`, and `:active` states in the first five arguments) and border colors (default, `:visited`, `:hover`, `:focus`, and `:active` states in the following five arguments) separately.
 
 
-          `u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)`
+          `u-link--colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)`
 
 
-          **A base mixin of `u-link__colors-base()` exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use `.u-link__colors(@c, @v, @h, @f, @a)`.**
+          **A base mixin of `u-link--colors-base()` exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use `.u-link--colors(@c, @v, @h, @f, @a)`.**
         variation_code_snippet: ''
       - variation_name: '"Link border" mixin'
         variation_description: >-

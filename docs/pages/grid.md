@@ -111,7 +111,7 @@ variation_groups:
           #### Less mixin
 
           ```
-          .grid_wrapper( @grid_wrapper-width: @grid_wrapper-width )
+          .grid__wrapper( @grid_wrapper-width: @grid_wrapper-width )
           ```
 
           You can create a wrapper with max-width other than the default
@@ -121,10 +121,10 @@ variation_groups:
 
           ```
           .main-wrapper {
-              .grid_wrapper();
+              .grid__wrapper();
           }
           .wide-wrapper {
-              .grid_wrapper( 1900px );
+              .grid__wrapper( 1900px );
           }
           ```
         variation_name: Wrappers
@@ -141,7 +141,7 @@ variation_groups:
 
           ```
 
-          .grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
+          .grid__column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
 
           ```
 
@@ -165,11 +165,11 @@ variation_groups:
           ```
 
           .main-wrapper {
-              .grid_wrapper();
+              .grid__wrapper();
           }
 
           .half {
-              .grid_column(1, 2);
+              .grid__column(1, 2);
           }
 
           .styled {
@@ -213,7 +213,7 @@ variation_groups:
 
           In cf-grid, the way to get around this is by wrapping your columns
 
-          in a container that utilizes the `.grid_nested-col-group()` mixin.
+          in a container that utilizes the `.grid__nested-col-group()` mixin.
 
           This mixin uses negative left and right margins to
 
@@ -232,7 +232,7 @@ variation_groups:
 
           ```
 
-          .grid_nested-col-group()
+          .grid__nested-col-group()
 
           ```
 
@@ -243,15 +243,15 @@ variation_groups:
           ```
 
           .main-wrapper {
-              .grid_wrapper();
+              .grid__wrapper();
           }
 
           .nested {
-              .grid_nested-col-group();
+              .grid__nested-col-group();
           }
 
           .half {
-              .grid_column(1, 2);
+              .grid__column(1, 2);
           }
 
           ```
@@ -346,13 +346,13 @@ variation_groups:
           ```
 
           .first {
-              .grid_column(1, 2);
-              .grid_pull(1);
+              .grid__column(1, 2);
+              .grid__pull(1);
           }
 
           .second {
-              .grid_column(1, 2);
-              .grid_push(1);
+              .grid__column(1, 2);
+              .grid__push(1);
           }
 
           ```
@@ -446,7 +446,7 @@ variation_groups:
       .description,
 
       .illustration {
-          .grid_column(1, 2);
+          .grid__column(1, 2);
       }
 
       ```

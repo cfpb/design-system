@@ -9,7 +9,7 @@
    ========================================================================== */
 
 // .o-expandable modifiers
-@expandable__border: var(--gray-40);
+@expandable--border: var(--gray-40);
 
 //
 // Recommended expandable pattern
@@ -22,7 +22,7 @@
   // Header
   //
 
-  &_header {
+  &__header {
     display: flex;
     justify-content: space-between;
     gap: 10px;
@@ -37,20 +37,20 @@
       outline-offset: 1px;
     }
 
-    .o-expandable_cue-close,
-    .o-expandable_cue-open {
+    .o-expandable__cue-close,
+    .o-expandable__cue-open {
       display: none;
     }
 
-    &[aria-expanded='false'] .o-expandable_cue-open {
+    &[aria-expanded='false'] .o-expandable__cue-open {
       display: block;
     }
 
-    &[aria-expanded='true'] .o-expandable_cue-close {
+    &[aria-expanded='true'] .o-expandable__cue-close {
       display: block;
     }
 
-    // Using the button element with .o-expandable_header requires setting
+    // Using the button element with .o-expandable__header requires setting
     // an explicit width.
     button& {
       width: 100%;
@@ -62,7 +62,7 @@
   // Expandable text elements
   //
 
-  &_label {
+  &__label {
     // Grow to available width.
     flex-grow: 1;
 
@@ -72,8 +72,8 @@
     font-weight: 500;
   }
 
-  &_icon,
-  &_label {
+  &__icon,
+  &__label {
     // h4 size.
     font-size: unit(18px / @base-font-size-px, em);
 
@@ -83,22 +83,22 @@
     });
   }
 
-  &_cues {
+  &__cues {
     align-self: center;
     color: var(--pacific);
     font-size: unit((@btn-font-size / @base-font-size-px), em);
     line-height: unit((@base-line-height-px / @btn-font-size));
   }
 
-  &_content {
+  &__content {
     padding: unit((15px / @base-font-size-px), em);
     padding-top: 0;
 
-    // The divider between _header and _content.
+    // The divider between __header and __content.
     &::before {
       content: '';
       display: block;
-      border-top: 1px solid @expandable__border;
+      border-top: 1px solid @expandable--border;
       padding-top: unit((15px / @base-font-size-px), em);
     }
 
@@ -112,15 +112,15 @@
   // Padded expandable modifier
   //
 
-  &__padded {
+  &--padded {
     .o-expandable {
-      &_header {
+      &__header {
         padding: unit((25px / @base-font-size-px), em)
           unit((15px / @base-font-size-px), em);
       }
 
-      &_icon,
-      &_label {
+      &__icon,
+      &__label {
         // h2 size.
         font-size: unit(26px / @base-font-size-px, em);
 
@@ -136,7 +136,7 @@
   // Expandable with a background color modifier
   //
 
-  &__background {
+  &--background {
     background: var(--gray-5);
   }
 
@@ -144,8 +144,8 @@
   // Expandable with a border modifier
   //
 
-  &__border {
-    border: 1px solid @expandable__border;
+  &--border {
+    border: 1px solid @expandable--border;
   }
 
   //
@@ -154,25 +154,25 @@
 
   &-group {
     .o-expandable {
-      border-bottom: 1px solid @expandable__border;
+      border-bottom: 1px solid @expandable--border;
 
       &:first-child {
-        border-top: 1px solid @expandable__border;
+        border-top: 1px solid @expandable--border;
       }
     }
   }
 
   .respond-to-print( {
     // Hide the interactive expandable cues when printing
-    &_header[aria-expanded='true'] &_cue-close,
-    &_header[aria-expanded='false'] &_cue-open {
+    &__header[aria-expanded='true'] &__cue-close,
+    &__header[aria-expanded='false'] &__cue-open {
       display: none;
     }
 
     // Ensure all expandables are expanded when printing.
     // To accommodate print stylesheets that display the raw URL after links,
     // set an enormous max height to accommodate expandables that have a lot of links.
-    &_content[aria-expanded='false'] {
+    &__content[aria-expanded='false'] {
       display: block;
       max-height: 99999px !important;
     }
@@ -182,11 +182,11 @@
 // Used when the set language reads right-to-left
 html[lang='ar'] {
   .o-expandable {
-    &_header {
+    &__header {
       text-align: right;
     }
 
-    &_cues {
+    &__cues {
       text-align: left;
     }
   }

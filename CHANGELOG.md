@@ -628,7 +628,7 @@
 #### Enhancement
 
 * `cfpb-icons`
-  * [#1611](https://github.com/cfpb/design-system/pull/1611) Add `.cf-icon-svg__updating-round` ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1611](https://github.com/cfpb/design-system/pull/1611) Add `.cf-icon-svg--updating-round` ([@anselmbradford](https://github.com/anselmbradford))
 
 #### Internal
 

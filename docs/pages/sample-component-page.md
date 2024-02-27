@@ -45,7 +45,7 @@ variation_groups:
       - variation_name: ''
         variation_description: ''
         variation_code_snippet: >-
-          <div class="m-form-field m-form-field__checkbox">
+          <div class="m-form-field m-form-field--checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox">
               <label class="a-label" for="test_checkbox">Default</label>
           </div>
@@ -54,7 +54,7 @@ variation_groups:
 
           <!--Hover-->
 
-          <div class="m-form-field m-form-field__checkbox">
+          <div class="m-form-field m-form-field--checkbox">
               <input class="a-checkbox hover" type="checkbox" id="test_checkbox_basic_hover">
               <label class="a-label" for="test_checkbox_basic_hover">Hover</label>
           </div>
@@ -63,7 +63,7 @@ variation_groups:
 
           <!--Focus-->
 
-          <div class="m-form-field m-form-field__checkbox">
+          <div class="m-form-field m-form-field--checkbox">
               <input class="a-checkbox focus" type="checkbox" id="test_checkbox_basic_focus">
               <label class="a-label" for="test_checkbox_basic_focus">Focus</label>
           </div>
@@ -72,7 +72,7 @@ variation_groups:
 
           <!--Selected-->
 
-          <div class="m-form-field m-form-field__checkbox">
+          <div class="m-form-field m-form-field--checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_checked" checked>
               <label class="a-label" for="test_checkbox_basic_checked">Selected</label>
           </div>
@@ -81,7 +81,7 @@ variation_groups:
 
           <!--Disabled-->
 
-          <div class="m-form-field m-form-field__checkbox">
+          <div class="m-form-field m-form-field--checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled>
               <label class="a-label" for="test_checkbox_basic_disabled">Disabled</label>
           </div>
@@ -90,7 +90,7 @@ variation_groups:
 
           <!--Disabled/selected-->
 
-          <div class="m-form-field m-form-field__checkbox">
+          <div class="m-form-field m-form-field--checkbox">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled_selected" disabled checked>
               <label class="a-label" for="test_checkbox_basic_disabled_selected">Disabled/selected</label>
           </div>

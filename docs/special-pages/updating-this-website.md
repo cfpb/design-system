@@ -7,12 +7,12 @@ is_interstitial: true
 description: >-
   <div id="notification"
        class="m-notification
-              m-notification__warning"
+              m-notification--warning"
        data-interstitial-notification>
       {% include icons/information-round.svg %}
-      <div class="m-notification_content">
-          <div class="m-notification_message">Before you edit <span data-interstitial-page-name>a page</span>, familiarize yourself with the process.</div>
-          <p class="m-notification_explanation">
+      <div class="m-notification__content">
+          <div class="m-notification__message">Before you edit <span data-interstitial-page-name>a page</span>, familiarize yourself with the process.</div>
+          <p class="m-notification__explanation">
               When you're ready to start editing, continue to Netlify CMS.
           </p>
       </div>
@@ -34,21 +34,21 @@ description: >-
 
   <div class="o-expandable-group o-expandable-group__accordion">
       <div class="o-expandable">
-          <button class="o-expandable_header"
+          <button class="o-expandable__header"
                   title="Expand content">
-              <h3 class="o-expandable_label">
+              <h3 class="o-expandable__label">
                   Step 1. Click a page's "Edit this page" pencil icon.
               </h3>
-              <span class="o-expandable_cues">
-                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
+              <span class="o-expandable__cues">
+                  <span class="o-expandable__cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                  <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
           </button>
-          <div class="o-expandable_content">
+          <div class="o-expandable__content">
               <p>
                   Go to the page you want to edit and click its "Edit this page" pencil icon.
               </p>
@@ -58,21 +58,21 @@ description: >-
           </div>
       </div>
       <div class="o-expandable">
-          <button class="o-expandable_header"
+          <button class="o-expandable__header"
                   title="Expand content">
-              <h3 class="o-expandable_label">
+              <h3 class="o-expandable__label">
                   Step 2. Log into the CMS
               </h3>
-              <span class="o-expandable_cues">
-                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
+              <span class="o-expandable__cues">
+                  <span class="o-expandable__cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                  <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
           </button>
-          <div class="o-expandable_content">
+          <div class="o-expandable__content">
               <p>
                   Log into the CMS by clicking the "Login with Github" button.
                   You'll need a github.com account and you'll need to be added to <a href="https://github.com/orgs/cfpb/people">CFPB's GitHub organization</a>.
@@ -85,21 +85,21 @@ description: >-
           </div>
       </div>
       <div class="o-expandable">
-          <button class="o-expandable_header"
+          <button class="o-expandable__header"
                   title="Expand content">
-              <h3 class="o-expandable_label">
+              <h3 class="o-expandable__label">
                   Step 3. Edit a page's content
               </h3>
-              <span class="o-expandable_cues">
-                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
+              <span class="o-expandable__cues">
+                  <span class="o-expandable__cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                  <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
           </button>
-          <div class="o-expandable_content">
+          <div class="o-expandable__content">
               <p>
                   Edit content in the left hand pane of the CMS. Preview your changes in the right hand pane. Check out our <a href="/design-system/sample-component-page">sample component page</a> for tips on how to structure a typical page.
               </p>
@@ -109,21 +109,21 @@ description: >-
           </div>
       </div>
       <div class="o-expandable">
-          <button class="o-expandable_header"
+          <button class="o-expandable__header"
                   title="Expand content">
-              <h3 class="o-expandable_label">
+              <h3 class="o-expandable__label">
                   Step 4. Save your changes
               </h3>
-              <span class="o-expandable_cues">
-                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
+              <span class="o-expandable__cues">
+                  <span class="o-expandable__cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                  <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
           </button>
-          <div class="o-expandable_content">
+          <div class="o-expandable__content">
               <p>
                   Click the blue 'Save' button in the top left to save your changes as a draft.
                   Don't worry, the live site won't be affected.
@@ -136,21 +136,21 @@ description: >-
           </div>
       </div>
       <div class="o-expandable">
-          <button class="o-expandable_header"
+          <button class="o-expandable__header"
                   title="Expand content">
-              <h3 class="o-expandable_label">
+              <h3 class="o-expandable__label">
                   Step 5. Preview your changes
               </h3>
-              <span class="o-expandable_cues">
-                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
+              <span class="o-expandable__cues">
+                  <span class="o-expandable__cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                  <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
           </button>
-          <div class="o-expandable_content">
+          <div class="o-expandable__content">
               <p>
                   After you save some changes, Netlify CMS will build a preview of the entire website with your new content.
                   This takes a few minutes.
@@ -163,21 +163,21 @@ description: >-
           </div>
       </div>
       <div class="o-expandable">
-          <button class="o-expandable_header"
+          <button class="o-expandable__header"
                   title="Expand content">
-              <h3 class="o-expandable_label">
+              <h3 class="o-expandable__label">
                   Step 6. Publish your changes
               </h3>
-              <span class="o-expandable_cues">
-                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
+              <span class="o-expandable__cues">
+                  <span class="o-expandable__cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                  <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
           </button>
-          <div class="o-expandable_content">
+          <div class="o-expandable__content">
               <p>
                   When you are ready to publish your changes, set the page's status to "Ready".
                   Then click the “Publish” drop down menu and choose "Publish now."

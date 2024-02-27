@@ -92,13 +92,13 @@ variation_groups:
           @form-field-input-border__focused:        @input-border;
           @form-field-input-border__disabled:       var(--gray-60);
 
-          // .m-form-field__lg-target
+          // .m-form-field--lg-target
           @form-field-input-lg-target-bg:           var(--gray-10);
           @form-field-input-lg-target-bg__selected: var(--pacific-20);
           @form-field-input-lg-target-bg__disabled: var(--gray-20);
           @form-field-input-lg-target-border:       var(--pacific);
 
-          // .a-label_helper
+          // .a-label__helper
           @label-helper:                            var(--gray);
           ```
         variation_code_snippet: ''
@@ -117,7 +117,7 @@ variation_groups:
 
       ```
 
-      The grid’s maximum width in px. This value can be overridden in the `grid_wrapper()` mixin.
+      The grid’s maximum width in px. This value can be overridden in the `grid__wrapper()` mixin.
 
 
       ```
@@ -135,7 +135,7 @@ variation_groups:
 
       ```
 
-      The total number of columns used in calculating column widths. This value can be overridden in the `grid_column()` mixin.
+      The total number of columns used in calculating column widths. This value can be overridden in the `grid__column()` mixin.
 
 
       ```
@@ -176,28 +176,28 @@ variation_groups:
       - variation_description: |-
           ```
           // .block
-          @block__bg:                 var(--gray-5);
-          @block__border:             var(--gray-40);
-          @block__border-top:         var(--gray-40);
-          @block__border-right:       var(--gray-40);
-          @block__border-bottom:      var(--gray-40);
-          @block__border-left:        var(--gray-40);
+          @block--bg:                 var(--gray-5);
+          @block--border:             var(--gray-40);
+          @block--border-top:         var(--gray-40);
+          @block--border-right:       var(--gray-40);
+          @block--border-bottom:      var(--gray-40);
+          @block--border-left:        var(--gray-40);
 
-          // .content_main
-          @content_main-border:       var(--gray-40);
+          // .content__main
+          @content__main-border:       var(--gray-40);
 
-          // .content_sidebar
-          @content_sidebar-bg:        var(--gray-5);
-          @content_sidebar-border:    var(--gray-40);
+          // .content__sidebar
+          @content__sidebar-bg:        var(--gray-5);
+          @content__sidebar-border:    var(--gray-40);
 
-          // .content_line
-          @content_line:              var(--gray-40);
+          // .content__line
+          @content__line:              var(--gray-40);
 
-          // .grid_column__top-divider
-          @grid_column__top-divider:  var(--gray-40);
+          // .grid__column__top-divider
+          @grid__column__top-divider:  var(--gray-40);
 
-          // .grid_column__left-divider
-          @grid_column__left-divider: var(--gray-40);
+          // .grid__column__left-divider
+          @grid__column__left-divider: var(--gray-40);
 
           ```
         variation_name: Color
@@ -211,7 +211,7 @@ variation_groups:
           @hero-knockout-text:        var(--white);
 
           // Featured Content Module variables
-          @fcm-bg:                    @block__bg;
+          @fcm-bg:                    @block--bg;
           ```
 
           #### Sizing
@@ -316,7 +316,7 @@ variation_groups:
           @link-text-active:       var(--navy);
           @link-underline-active:  var(--navy);
 
-          // .a-link__jump
+          // .a-link--jump
           @jump-link_bg:           var(--gray-5);
           @jump-link_border:       var(--gray-40);
 

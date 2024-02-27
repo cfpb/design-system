@@ -19,10 +19,10 @@ variation_groups:
           that content in a paragraph following the main message.
         variation_code_snippet: >-
           <div class="m-notification
-                      m-notification__visible">
+                      m-notification--visible">
               {% include icons/information-round.svg %}
-              <div class="m-notification_content">
-                  <div class="m-notification_message">Information alert</div>
+              <div class="m-notification__content">
+                  <div class="m-notification__message">Information alert</div>
               </div>
           </div>
 
@@ -31,11 +31,11 @@ variation_groups:
 
 
           <div class="m-notification
-                      m-notification__visible">
+                      m-notification--visible">
               {% include icons/information-round.svg %}
-              <div class="m-notification_content">
-                  <div class="m-notification_message">Information alert</div>
-                  <p class="m-notification_explanation">
+              <div class="m-notification__content">
+                  <div class="m-notification__message">Information alert</div>
+                  <p class="m-notification__explanation">
                       You can also add an explanation to the alert.
                   </p>
               </div>
@@ -46,21 +46,21 @@ variation_groups:
 
 
           <div class="m-notification
-                      m-notification__visible">
+                      m-notification--visible">
               {% include icons/information-round.svg %}
-              <div class="m-notification_content">
-                  <div class="m-notification_message">Information alert</div>
-                  <p class="m-notification_explanation">
+              <div class="m-notification__content">
+                  <div class="m-notification__message">Information alert</div>
+                  <p class="m-notification__explanation">
                       This is the explanation of the alert.
                   </p>
-                  <ul class="m-list m-list__links">
-                      <li class="m-list_item">
-                          <a class="m-list_link" href="/">
+                  <ul class="m-list m-list--links">
+                      <li class="m-list__item">
+                          <a class="m-list__link" href="/">
                               This is a link below the explanation
                           </a>
                       </li>
-                      <li class="m-list_item">
-                          <a class="m-list_link" href="/">
+                      <li class="m-list__item">
+                          <a class="m-list__link" href="/">
                               This is an external link {% include icons/external-link.svg %}
                           </a>
                       </li>
@@ -69,21 +69,21 @@ variation_groups:
           </div>
         variation_implementation:
           Alerts are hidden by default; you can toggle their
-          visibility by adding or removing the `m-notification__visible` class
+          visibility by adding or removing the `m-notification--visible` class
           to the base element.
       - variation_code_snippet: |-
           <div class="m-notification
-                      m-notification__visible
-                      m-notification__success">
+                      m-notification--visible
+                      m-notification--success">
               {% include icons/approved-round.svg %}
-              <div class="m-notification_content">
-                  <div class="m-notification_message">11 results</div>
-                  <p class="m-notification_explanation">
+              <div class="m-notification__content">
+                  <div class="m-notification__message">11 results</div>
+                  <p class="m-notification__explanation">
                       This is an optional explanation of the success message.
                   </p>
-                  <ul class="m-list m-list__links">
-                      <li class="m-list_item">
-                          <a class="m-list_link" href="/">
+                  <ul class="m-list m-list--links">
+                      <li class="m-list__item">
+                          <a class="m-list__link" href="/">
                               This is an external link {% include icons/external-link.svg %}
                           </a>
                       </li>
@@ -98,17 +98,17 @@ variation_groups:
         variation_specs: ''
       - variation_code_snippet: |-
           <div class="m-notification
-                      m-notification__visible
-                      m-notification__warning">
+                      m-notification--visible
+                      m-notification--warning">
               {% include icons/warning-round.svg %}
-              <div class="m-notification_content">
-                  <div class="m-notification_message">No results found.</div>
-                  <p class="m-notification_explanation">
+              <div class="m-notification__content">
+                  <div class="m-notification__message">No results found.</div>
+                  <p class="m-notification__explanation">
                       This is an optional explanation of the warning.
                   </p>
-                  <ul class="m-list m-list__links">
-                      <li class="m-list_item">
-                          <a class="m-list_link" href="/">
+                  <ul class="m-list m-list--links">
+                      <li class="m-list__item">
+                          <a class="m-list__link" href="/">
                               This is an external link {% include icons/external-link.svg %}
                           </a>
                       </li>
@@ -127,17 +127,17 @@ variation_groups:
         variation_specs: ''
       - variation_code_snippet: |-
           <div class="m-notification
-                      m-notification__visible
-                      m-notification__error">
+                      m-notification--visible
+                      m-notification--error">
               {% include icons/error-round.svg %}
-              <div class="m-notification_content">
-                  <div class="m-notification_message">Page not found.</div>
-                  <p class="m-notification_explanation">
+              <div class="m-notification__content">
+                  <div class="m-notification__message">Page not found.</div>
+                  <p class="m-notification__explanation">
                       This is an optional explanation of the error.
                   </p>
-                  <ul class="m-list m-list__links">
-                      <li class="m-list_item">
-                          <a class="m-list_link" href="/">
+                  <ul class="m-list m-list--links">
+                      <li class="m-list__item">
+                          <a class="m-list__link" href="/">
                               This is an external link {% include icons/external-link.svg %}
                           </a>
                       </li>
@@ -160,10 +160,10 @@ variation_groups:
         variation_specs: ''
       - variation_code_snippet: >-
           <div class="m-notification
-                      m-notification__visible">
+                      m-notification--visible">
               {% include icons/updating.svg %}
-              <div class="m-notification_content">
-                  <div class="m-notification_message">The page is loading…</div>
+              <div class="m-notification__content">
+                  <div class="m-notification__message">The page is loading…</div>
               </div>
           </div>
         variation_description: The in-progress alert displays when something is
@@ -179,10 +179,10 @@ variation_groups:
         variation_name: Success
         variation_code_snippet: >
           <div class="m-form-field m-form-field__success">
-              <input class="a-text-input a-text-input__success" type="text" placeholder="Input text" id="form-input-success" aria-describedby="form-input-success_message">
-              <div class="a-form-alert a-form-alert__success" id="form-input-success_message" role="alert">
+              <input class="a-text-input a-text-input--success" type="text" placeholder="Input text" id="form-input-success" aria-describedby="form-input-success_message">
+              <div class="a-form-alert a-form-alert--success" id="form-input-success_message" role="alert">
                   {% include icons/approved-round.svg %}
-                  <span class="a-form-alert_text">
+                  <span class="a-form-alert__text">
                       This is a field-level alert with a success status.
                   </span>
               </div>
@@ -194,10 +194,10 @@ variation_groups:
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__warning">
 
-              <input class="a-text-input a-text-input__warning" type="text" placeholder="Input text" id="form-input-warning" aria-describedby="form-input-warning_message">
-              <div class="a-form-alert a-form-alert__warning" id="form-input-warning_message" role="alert">
+              <input class="a-text-input a-text-input--warning" type="text" placeholder="Input text" id="form-input-warning" aria-describedby="form-input-warning_message">
+              <div class="a-form-alert a-form-alert--warning" id="form-input-warning_message" role="alert">
                   {% include icons/warning-round.svg %}
-                  <span class="a-form-alert_text">
+                  <span class="a-form-alert__text">
                       This is a field-level alert with a warning status.
                   </span>
               </div>
@@ -207,9 +207,9 @@ variation_groups:
         variation_name: Error
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__error">
-              <input class="a-text-input a-text-input__error" type="text" placeholder="Input text" id="form-input-error" aria-describedby="form-input-error_message"><div class="a-form-alert a-form-alert__error" id="form-input-error_message" role="alert">
+              <input class="a-text-input a-text-input--error" type="text" placeholder="Input text" id="form-input-error" aria-describedby="form-input-error_message"><div class="a-form-alert a-form-alert--error" id="form-input-error_message" role="alert">
                   {% include icons/error-round.svg %}
-                  <span class="a-form-alert_text">
+                  <span class="a-form-alert__text">
                       This is a field-level alert with an error status.
                   </span>
           </div>

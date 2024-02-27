@@ -462,15 +462,15 @@ function Multiselect(element) {
 
     // Create all our markup but wait to manipulate the DOM just once
     _selectionsDom = create('ul', null, {
-      className: BASE_CLASS + '_choices',
+      className: BASE_CLASS + '__choices',
     });
 
     _headerDom = create('header', _containerDom, {
-      className: BASE_CLASS + '_header',
+      className: BASE_CLASS + '__header',
     });
 
     _searchDom = create('input', _headerDom, {
-      className: BASE_CLASS + '_search ' + TEXT_INPUT_CLASS,
+      className: BASE_CLASS + '__search ' + TEXT_INPUT_CLASS,
       type: 'text',
       placeholder: _placeholder || 'Select up to five',
       id: _dom.id,
@@ -478,11 +478,11 @@ function Multiselect(element) {
     });
 
     _fieldsetDom = create('fieldset', _containerDom, {
-      className: BASE_CLASS + '_fieldset u-invisible',
+      className: BASE_CLASS + '__fieldset u-invisible',
       'aria-hidden': 'true',
     });
 
-    let optionsClasses = BASE_CLASS + '_options';
+    let optionsClasses = BASE_CLASS + '__options';
     if (_model.isAtMaxSelections()) {
       optionsClasses += ' u-max-selections';
     }
@@ -501,7 +501,7 @@ function Multiselect(element) {
       const optionsItemDom = create('li', _optionsDom, {
         'data-option': option.value,
         'data-cy': 'multiselect-option',
-        class: 'm-form-field m-form-field__checkbox',
+        class: 'm-form-field m-form-field--checkbox',
       });
 
       create('input', optionsItemDom, {
@@ -510,7 +510,7 @@ function Multiselect(element) {
         type: 'checkbox',
         value: option.value,
         name: _name,
-        class: CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '_checkbox',
+        class: CHECKBOX_INPUT_CLASS + ' ' + BASE_CLASS + '__checkbox',
         checked: isChecked,
         'data-index': i,
       });
@@ -518,7 +518,7 @@ function Multiselect(element) {
       create('label', optionsItemDom, {
         for: optionId,
         textContent: option.text,
-        className: BASE_CLASS + '_label a-label',
+        className: BASE_CLASS + '__label a-label',
       });
 
       _optionItemDoms.push(optionsItemDom);

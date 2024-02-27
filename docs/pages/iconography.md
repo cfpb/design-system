@@ -493,7 +493,7 @@ variation_groups:
           intended. Examples include saving or loading content.
         variation_code_snippet:
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16
-          19" class="cf-icon-svg cf-icon-svg__updating"><path d="M5.857
+          19" class="cf-icon-svg cf-icon-svg--updating"><path d="M5.857
           3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.401 5.401 0 0 0-1.032 2.27
           1.03 1.03 0 1 1-2.02-.395A7.462 7.462 0 0 1 2.235 4.91h-.748a1.03 1.03
           0 1 1 0-2.058h3.34a1.03 1.03 0 0 1 1.03 1.03zm-3.25 9.237a1.028 1.028
@@ -643,9 +643,9 @@ description: >-
   The cfpb-icons component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
 
 
-  <a class="a-link__icon"
+  <a class="a-link--icon"
      href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons">
-      <span class="a-link_text">View on GitHub</span>
+      <span class="a-link__text">View on GitHub</span>
       {% include icons/download.svg %}
   </a>
 
@@ -662,9 +662,9 @@ description: >-
   Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. The icon font should not be used for placing icons on a website.
 
 
-  <a class="a-link__icon"
+  <a class="a-link--icon"
      href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
-      <span class="a-link_text">Download font</span>
+      <span class="a-link__text">Download font</span>
       {% include icons/download.svg %}
   </a>
 

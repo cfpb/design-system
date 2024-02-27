@@ -8,11 +8,11 @@ variation_groups:
       - variation_name: Summary (on desktop)
         variation_code_snippet: >-
           <div class="o-summary">
-              <div class="o-summary_content">
+              <div class="o-summary__content">
                   Resize me smaller if the read more button is absent. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#">Duis</a>.
               </div>
 
-              <button class="o-summary_btn">
+              <button class="o-summary__btn">
                   Read full answer
                   {% include icons/plus-round.svg %}
               </button>
@@ -20,7 +20,7 @@ variation_groups:
       - variation_name: Summary (long amounts of mixed content)
         variation_code_snippet: >-
           <div class="o-summary">
-              <div class="o-summary_content">
+              <div class="o-summary__content">
                   <p>
                   Resize me smaller if the read more button is absent. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#">Duis</a> aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                   </p>
@@ -37,39 +37,39 @@ variation_groups:
                   </p>
               </div>
 
-              <button class="o-summary_btn">
+              <button class="o-summary__btn">
                   Read full answer
                   {% include icons/plus-round.svg %}
               </button>
           </div>
       - variation_name: Summary on Mobile
         variation_code_snippet: >-
-          <div class="o-summary o-summary__mobile">
-            <div class="o-summary_content">
+          <div class="o-summary o-summary--mobile">
+            <div class="o-summary__content">
               Resize me to mobile if the read more button is absent. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
 
-            <button class="o-summary_btn">
+            <button class="o-summary__btn">
                 Read full answer
                 {% include icons/plus-round.svg %}
             </button>
           </div>
         variation_description:
-          Adding the `o-summary__mobile` modifier makes the summary
+          Adding the `o-summary--mobile` modifier makes the summary
           behavior only show up on a mobile (narrow) page width.
       - variation_name: Summary Minimal
         variation_code_snippet: >-
           <div class="o-summary-minimal">
-            <div class="o-summary-minimal_content">
+            <div class="o-summary-minimal__content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
 
-            <button class="o-summary-minimal_btn">
-                <span class="o-summary-minimal_cue-open">
+            <button class="o-summary-minimal__btn">
+                <span class="o-summary-minimal__cue-open">
                     Show
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-summary-minimal_cue-close">
+                <span class="o-summary-minimal__cue-close">
                     Hide
                     {% include icons/minus-round.svg %}
                 </span>

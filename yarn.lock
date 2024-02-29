@@ -462,7 +462,7 @@ __metadata:
     "@cfpb/cfpb-notifications": "npm:^0.37.0"
     "@cfpb/cfpb-pagination": "npm:^0.37.0"
     "@cfpb/cfpb-tables": "npm:^0.37.0"
-    "@cfpb/cfpb-typography": "npm:^0.37.0"
+    "@cfpb/cfpb-typography": "npm:^0.37.2"
   languageName: unknown
   linkType: soft
 
@@ -538,7 +538,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cfpb/cfpb-typography@npm:^0.37.0, @cfpb/cfpb-typography@workspace:packages/cfpb-typography":
+"@cfpb/cfpb-typography@npm:^0.37.2, @cfpb/cfpb-typography@workspace:packages/cfpb-typography":
   version: 0.0.0-use.local
   resolution: "@cfpb/cfpb-typography@workspace:packages/cfpb-typography"
   dependencies:

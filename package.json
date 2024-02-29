@@ -101,6 +101,6 @@
     "singleQuote": true
   },
   "type": "module",
-  "version": "0.37.1",
+  "version": "0.37.2",
   "packageManager": "yarn@4.1.0"
 }

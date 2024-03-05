@@ -1,12 +1,7 @@
 ---
-title: Lists
 layout: variation
 section: components
 status: Released
-description: Lists are an effective way to visually highlight important
-  information so that it can be more easily scanned and read. Before writing a
-  list, it’s important to identify the best style needed for the information
-  being presented.
 variation_groups:
   - variation_group_name: Types
     variations:
@@ -29,27 +24,7 @@ variation_groups:
               </li>
               <li class="m-list_item">List item 3</li>
           </ul>
-        variation_specs: >-
-          #### Default
-
-
-          * Avenir Next Regular, 16px
-
-          * Margin bottom (list item): 8px
-
-          * Margin top (list): 10px
-
-          * Margin bottom (list): 15px
-
-          * Bullets are solid squares
-
-          * Bullets are aligned flush with the left margin of the column of text they’re in
-
-
-          #### Nested
-
-
-          * Bullets are open circles and flush left with the preceding line of text
+        variation_specs: ''
       - variation_name: Numbered list
         variation_description:
           When the order of information presented is important, use
@@ -101,25 +76,7 @@ variation_groups:
               <li>List item 9</li>
               <li>List item 10</li>
           </ol>
-        variation_specs: >-
-          #### Default
-
-
-          * Avenir Next Regular, 16px
-
-          * Margin bottom (list item): 8px
-
-          * Margin top (list): 10px
-
-          * Margin bottom (list): 15px
-
-          * Numbers are right aligned to their associated period; all single-digit numbers fit inside the left margin
-
-
-          #### Nested
-
-
-          * Depending on the content and use case, nested items may either appear as bullets — solid squares — that are flush left with the preceding line of text, or lower-cased letters, as shown in the example.
+        variation_specs: ''
   - variations:
       - variation_code_snippet: |-
           <ul class="m-list m-list__unstyled">
@@ -154,12 +111,7 @@ variation_groups:
           where each item is a link. It converts to a finger-friendly link with
           a large tap area on smaller screens.
         variation_name: Link list
-        variation_specs: |-
-          * Avenir Next Medium, 16px, Pacific
-          * Border bottom: 1 px, dotted, Pacific
-          * Margin bottom (list item): 8px
-          * Margin top (list): 10px
-          * Margin bottom (list): 15px
+        variation_specs: ''
       - variation_code_snippet: |-
           <ul class="m-list m-list__spaced">
               <li class="m-list_item">List item 1</li>
@@ -169,7 +121,6 @@ variation_groups:
         variation_description: Spaced list adds extra padding to every element in a list.
         variation_name: Spaced list
     variation_group_name: Variations
-use_cases: ''
 guidelines: >-
   ### Content guidelines
 
@@ -192,10 +143,16 @@ guidelines: >-
 
 
   If the list items are a group of short fragments that each work to complete an introductory clause, the introductory clause should also be a short fragment, followed by a colon. These list items should end with no punctuation.
+eyebrow: Components
+title: Lists
+description: Lists are an effective way to visually highlight important
+  information so that it can be more easily scanned and read. Before writing a
+  list, it’s important to identify the best style needed for the information
+  being presented.
+use_cases: ''
 behavior: ''
 accessibility: ''
-research: ''
 related_items: ''
 last_updated: 2020-01-28T15:55:47.394Z
-eyebrow: Lists and tables
+research: ''
 ---

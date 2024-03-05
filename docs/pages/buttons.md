@@ -23,9 +23,9 @@ variation_groups:
 
           <button class="a-btn active" title="Active state">Active state</button>
         variation_description:
-          Use primary buttons for actions that go to the next step.
-          Avoid using multiple primary buttons on a single page; there can be
-          multiple secondary buttons per page.
+          Use a primary button for an action that goes to the next
+          step. Avoid using multiple primary buttons on a single page; there can
+          be multiple secondary buttons per page.
         variation_implementation: >-
           For accessibility reasons, use the semantic `<button>` instead of a
           link
@@ -34,29 +34,8 @@ variation_groups:
 
 
           Apply the `a-btn` class to a link, button and submit input field to receive the atomic button styles. For more information, see [cf.gov refresh documentation on atomic styles](https://cfpb.github.io/cfgov-refresh/atomic-structure/).
-        variation_specs: |-
-          #### Default
-
-          * Avenir Next Medium, 16px, (#ffffff)
-          * Background: Pacific (#0072ce)
-          * Top and bottom padding: 10px
-          * Left and right padding: 15px
-          * Border radius: 4px
-
-          #### Hover
-
-          * Background: Dark Pacific (#0050b4)
-
-          #### Focused
-
-          * Background: Dark Pacific (#0050b4)
-          * Outline: Dotted 1px, Pacific (#0072ce)
-          * Outline offset: 1px
-
-          #### Active
-
-          * Background: Navy (#254b87)
-        variation_name: Primary buttons
+        variation_specs: ''
+        variation_name: Primary button
       - variation_code_snippet: >-
           <button class="a-btn a-btn__secondary" title="Default state">Default
           state</button>
@@ -69,26 +48,9 @@ variation_groups:
 
 
           <button class="a-btn a-btn__secondary active" title="Active state">Active state</button>
-        variation_description: Use secondary buttons for actions that happen on the current page.
-        variation_name: Secondary buttons
-        variation_specs: |-
-          #### Default
-
-          * Background: Gray (#5a5d61)
-
-          #### Hover
-
-          * Background: Dark Gray (#43484e)
-
-          #### Focused
-
-          * Background: Dark Gray (#43484e)
-          * Outline: Dotted 1px, Gray (#5a5d61)
-          * Outline offset: 1px
-
-          #### Active
-
-          * Background: CFPB Black (#101820)
+        variation_description: Use a secondary button for actions that happen on the current page.
+        variation_name: Secondary button
+        variation_specs: ''
       - variation_code_snippet: >-
           <button class="a-btn a-btn__disabled" title="Default state"
           disabled>Default state</button>
@@ -98,18 +60,8 @@ variation_groups:
 
 
           <button class="a-btn a-btn__disabled focus" title="Focused state" disabled>Focused state</button>
-        variation_name: Disabled buttons
-        variation_specs: |-
-          #### Default/Hover/Active
-
-          * Avenir Next Medium, 16px, Gray (#5a5d61)
-          * Background: Gray 20 (#d2d3d5)
-          * Cursor set to `not-allowed`
-
-          #### Focused
-
-          * Outline: Dotted 1px, Gray 20 (#d2d3d5)
-          * Outline offset: 1px
+        variation_name: Disabled button
+        variation_specs: ''
       - variation_code_snippet: >-
           <button class="a-btn a-btn__warning" title="Default state">Default
           state</button>
@@ -119,26 +71,9 @@ variation_groups:
 
 
           <button class="a-btn a-btn__warning focus" title="Focused state">Focused state</button>
-        variation_name: Destructive buttons
-        variation_specs: |-
-          #### Default
-
-          * Background: Red (#d14124)
-
-          #### Hover
-
-          * Background: Dark Red (#b63014)
-
-          #### Focused
-
-          * Background: Dark Red (#b63014)
-          * Outline: Dotted 1px, Red (#d14124)
-          * Outline offset: 1px
-
-          #### Active
-
-          * Background: Dark Gray (#43484e)
-      - variation_name: Destructive actions
+        variation_name: Destructive button
+        variation_specs: ''
+      - variation_name: Destructive action
         variation_code_snippet: >-
           <div class="m-btn-group">
               <button class="a-btn">Action</button>
@@ -147,39 +82,11 @@ variation_groups:
         variation_description: When paired with a primary action, indicate the
           destructive action using a destructive action button link to the right
           of the primary button.
-        variation_specs:
-          '* Destructive action link: Avenir Next Medium, 16px, Mid dark
-          red (#c3381c)'
-      - variation_name: Printed buttons
-        variation_description: When a
-          [consumerfinance.gov](https://www.consumerfinance.gov/) page is
-          printed, buttons are presented as links. See [Printed
-          links](https://cfpb.github.io/design-system/components/links#printed-links)
-          on the Links page for specifications.
-  - variation_group_name: Sizes
-    variation_group_description: ''
-    variations:
-      - variation_code_snippet: >-
-          <button class="a-btn a-btn__super" title="Default state">Default
-          state</button>
-
-
-          <button class="a-btn a-btn__super hover" title="Hovered state">Hovered state</button>
-
-
-          <button class="a-btn a-btn__super focus" title="Focused state">Focused state</button>
-
-
-          <button class="a-btn a-btn__super active" title="Active state">Active state</button>
-        variation_description:
-          At the designer’s discretion, use the super button on
-          consumer-facing products for an important call to action.
-        variation_name: Super buttons
-        variation_specs: |-
-          - Avenir Next Medium, 18px, White (#ffffff)
-          - Top and bottom padding: 15px
-          - Left and right padding: 30px
-      - variation_code_snippet: >-
+        variation_specs: ''
+      - variation_is_deprecated: false
+        variation_name: Full-width button (on x-small screens)
+        variation_description: Reduce screen size to see this button in action.
+        variation_code_snippet: >-
           <button class="a-btn a-btn__full-on-xs" title="Default state">Default
           state</button>
 
@@ -191,21 +98,21 @@ variation_groups:
 
 
           <button class="a-btn a-btn__full-on-xs active" title="Active state">Active state</button>
-        variation_description: Reduce screen size to see these in action.
-        variation_name: Full-width buttons on x-small screens
-  - variation_group_name: Groups
-    variations:
-      - variation_code_snippet: |-
+      - variation_is_deprecated: false
+        variation_name: Button group
+        variation_code_snippet: |-
           <div class="m-btn-group">
               <button class="a-btn">Yes</button>
               <button class="a-btn">No</button>
-              <button class="a-btn">Maybe So</button>
+              <button class="a-btn">Maybe</button>
           </div>
-        variation_name: Default button group
-  - variation_group_name: Buttons with icons
-    variations:
-      - variation_name: Static icon buttons
-        variation_description: ''
+      - variation_is_deprecated: false
+        variation_name: Button with icon
+        variation_description:
+          An icon should appear after the text it represents. The
+          only exception is the back button, in which the icon should appear
+          before the button’s text. Each icon should be used exclusively and
+          consistently for one action. Icons should never be underlined.
         variation_code_snippet: |-
           <button class="a-btn">
               <span class="a-btn_icon
@@ -222,25 +129,24 @@ variation_groups:
                   {% include icons/right.svg %}
               </span>
           </button>
-      - variation_name: Animated icon buttons
-        variation_description: >+
-          Use an animated icon in a button to reassure the user that the action
-          they are attempting to perform is functioning as intended.
-
+      - variation_is_deprecated: false
+        variation_name: Button with animated icon
         variation_code_snippet: >-
           <button class="a-btn">
               Submit your complaint
               <span class="a-btn_icon
                            a-btn_icon__on-right">{% include icons/updating.svg %}</span>
           </button>
-    variation_group_description: >-
-      * An icon should appear after the text it represents. The only exception
-      is the back button, in which the icon should appear before the button’s
-      text.
-
-      * Each icon should be used exclusively and consistently for one action.
-
-      * Icons should never be underlined.
+        variation_description: >
+          Use an animated icon in a button to reassure the user that the action
+          they are attempting to perform is functioning as intended.
+      - variation_is_deprecated: false
+        variation_name: Printed button
+        variation_description: When a
+          [consumerfinance.gov](https://www.consumerfinance.gov/) page is
+          printed, buttons are presented as links. See [Printed
+          links](https://cfpb.github.io/design-system/components/links#printed-links)
+          on the Links page for specifications.
 use_cases: Buttons signal actions. They should be used sparingly; each
   additional button on a page reduces the visual prominence of a call to action.
   In contrast, [links](https://cfpb.github.io/design-system/components/links)
@@ -277,11 +183,11 @@ restrictions:
               {% include icons/left.svg %}
           </span>
       </button>
+eyebrow: Components
 accessibility: ''
-research: ''
 related_items: "* [Button
   variables](https://cfpb.github.io/design-system/development/variables#buttons\
   )"
 last_updated: 2020-01-28T15:55:47.394Z
-eyebrow: Form elements
+research: ''
 ---

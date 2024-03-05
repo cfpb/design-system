@@ -141,22 +141,13 @@
   }
 
   //
-  // Super button
-  //
-
-  &__super {
-    padding: unit((11px / @btn__super-font-size), em)
-      unit((29px / @btn__super-font-size), em);
-    font-size: unit((@btn__super-font-size / @base-font-size-px), em);
-  }
-
-  //
   // Full width button on x-small screens
   //
   &__full-on-xs {
-    .respond-to-max( @bp-xs-max, {
+    // Mobile only.
+    .respond-to-max(@bp-xs-max, {
       display: block;
       width: 100%;
-    } );
+    });
   }
 }

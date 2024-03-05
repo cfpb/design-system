@@ -1,11 +1,7 @@
 ---
-title: Paragraphs
 layout: variation
 section: foundation
 status: Released
-description: Paragraph text should provide an efficient and pleasant experience
-  on every viewport size. Readable text makes good use of alignment, spacing,
-  line length and height, and contrast.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -35,16 +31,10 @@ variation_groups:
           #### Italicizing
 
 
-          `@webfont-italic: @webfont-regular;`
-
-
           We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.
 
 
           #### Bolding
-
-
-          `@webfont-demi: @webfont-medium;`
 
 
           We’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.
@@ -65,16 +55,6 @@ variation_groups:
           * Avenir Next Regular
 
           * Text is responsive. Displays as a Heading 3 (22px / 28px) on large screens (>601px wide). Displays at Heading 4 (18px / 22px but still Regular weight) on small screens (<601px wide).
-      - variation_code_snippet: |-
-          <p class="a-micro-copy">
-              Lorem ipsum dolor sit amet
-          </p>
-        variation_name: Microcopy
-        variation_implementation: ''
-        variation_specs: |-
-          * Good for highlighting small pieces of text, typically legal copy.
-          * Avenir Next Regular
-          * 14px at all browser widths
     variation_group_name: Web paragraphs
   - variation_group_name: Print paragraphs
     variations:
@@ -104,16 +84,23 @@ variation_groups:
 
 
           <br>
-use_cases: ''
 guidelines: Refer to the [Guidelines section of the Fonts
   page](https://cfpb.github.io/design-system/foundation/fonts#guidelines) for
   information about alignment, line height, line length, and spacing.
+eyebrow: Typography
+title: Paragraphs
+description: Paragraph text should provide an efficient and pleasant experience
+  on every viewport size. Readable text makes good use of alignment, spacing,
+  line length and height, and contrast.
+use_cases: ''
 behavior: ''
 accessibility: ''
-research: ''
-related_items: "* [Typography
-  variables](https://cfpb.github.io/design-system/development/variables#typogra\
-  phy)"
+related_items: >-
+  * [Headings](https://cfpb.github.io/design-system/foundation/headings)
+
+  * [Fonts](https://cfpb.github.io/design-system/foundation/fonts)
+
+  * [Typography variables](https://cfpb.github.io/design-system/development/variables#typography)
 last_updated: 2020-01-06T20:28:04.952Z
-eyebrow: Typography
+research: ''
 ---

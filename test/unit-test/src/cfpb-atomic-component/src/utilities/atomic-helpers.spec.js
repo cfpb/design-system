@@ -4,6 +4,7 @@ import {
   setInitFlag,
 } from '../../../../../../packages/cfpb-atomic-component';
 import { Expandable } from '../../../../../../packages/cfpb-expandables';
+import { Multiselect } from '../../../../../../packages/cfpb-forms/src';
 
 let containerDom;
 let componentDom;
@@ -15,7 +16,7 @@ const HTML_SNIPPET = `
           <span class="o-expandable_label">
               Expandable Header 3
           </span>
-          <span class="o-expandable_link">
+          <span class="o-expandable_cues">
               <span class="o-expandable_cue-open">
                   Show
               </span>
@@ -34,6 +35,12 @@ const HTML_SNIPPET = `
           </p>
       </div>
   </div>
+  <select name="test-select" id="test-select" class='o-multiselect' multiple>
+    <option value="Debt collection">Debt collection</option>
+    <option value="consumers-responses">Consumer&#39;s Responses</option>
+    <option value="Mortgage disclosure">Mortgage disclosure</option>
+    <optgroup label="All other topics">
+  </select>
   <div class="container">
     <div class="o-footer"></div>
     <div class="o-footer"></div>
@@ -105,6 +112,24 @@ describe('atomic-helpers', () => {
       const instArr = instantiateAll('.o-expandable', Expandable);
       expect(instArr).toBeInstanceOf(Array);
       expect(instArr.length).toBe(1);
+    });
+
+    it('should pass configuration to the Constructor init() method', () => {
+      componentDom.setAttribute('data-js-hook', 'state_atomic_init');
+      const option = document.querySelector('option');
+      option.defaultSelected = true;
+      const configuration = {
+        maxSelections: 1,
+      };
+      const instArr = instantiateAll(
+        '.o-multiselect',
+        Multiselect,
+        null,
+        configuration,
+      );
+      expect(instArr).toBeInstanceOf(Array);
+      expect(instArr.length).toBe(1);
+      expect(instArr[0].getModel().isAtMaxSelections()).toBe(true);
     });
   });
 

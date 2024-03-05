@@ -24,6 +24,8 @@ description: >-
 
   ## Editing pages
 
+  <strong>Before making a change to a pattern or its documentation, visit Hubcap to read our Design System governance policy.</strong> It contains guidance and acceptance criteria for making minor and major changes to the Design System. 
+
 
   We use a content management system called [Netlify CMS](https://www.netlifycms.org/).
 
@@ -37,11 +39,11 @@ description: >-
               <h3 class="h4 o-expandable_label">
                   Step 1. Click a page's "Edit this page" pencil icon.
               </h3>
-              <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
+              <span class="o-expandable_cues">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -61,11 +63,11 @@ description: >-
               <h3 class="h4 o-expandable_label">
                   Step 2. Log into the CMS
               </h3>
-              <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
+              <span class="o-expandable_cues">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -88,11 +90,11 @@ description: >-
               <h3 class="h4 o-expandable_label">
                   Step 3. Edit a page's content
               </h3>
-              <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
+              <span class="o-expandable_cues">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -112,13 +114,11 @@ description: >-
               <h3 class="h4 o-expandable_label">
                   Step 4. Save your changes
               </h3>
-              <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
-                      <span class="u-visually-hidden">Show</span>
+              <span class="o-expandable_cues">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
-                      <span class="u-visually-hidden">Hide</span>
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -141,11 +141,11 @@ description: >-
               <h3 class="h4 o-expandable_label">
                   Step 5. Preview your changes
               </h3>
-              <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
+              <span class="o-expandable_cues">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -168,11 +168,11 @@ description: >-
               <h3 class="h4 o-expandable_label">
                   Step 6. Publish your changes
               </h3>
-              <span class="o-expandable_link">
-                  <span class="o-expandable_cue-open" aria-label="Show">
+              <span class="o-expandable_cues">
+                  <span class="o-expandable_cue-open" role="img" aria-label="Show">
                       {% include icons/plus-round.svg %}
                   </span>
-                  <span class="o-expandable_cue-close" aria-label="Hide">
+                  <span class="o-expandable_cue-close" role="img" aria-label="Hide">
                       {% include icons/minus-round.svg %}
                   </span>
               </span>
@@ -212,7 +212,8 @@ description: >-
   ## Creating new pages
 
 
-  If you're adding a new standard to the Design System, make sure it's been discussed and approved first in Hubcap, our internal repository.
+  <strong>Before adding a pattern to the Design System, visit Hubcap to read our Design System governance policy.</strong> It contains guidance and acceptance criteria for creating new patterns. 
+
 
   1. To create a new page from scratch, click the "Create new page" button below.
 

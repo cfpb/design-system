@@ -329,36 +329,6 @@ variation_groups:
                   </div>
               </div>
           </div>
-      - variation_name: Large gutters modifier
-        variation_code_snippet: |-
-          <div class="content-l content-l__main  content-l__large-gutters">
-              <div class="content-l_col content-l_col-1">
-                  <div style="background: #F1F2F2;
-                              text-align: center;
-                              padding: 8px;
-                              margin-bottom: 4px;">
-                      Full-width column (spans 12 columns)
-                  </div>
-              </div>
-          </div>
-          <div class="content-l content-l__main  content-l__large-gutters">
-              <div class="content-l_col content-l_col-1-2">
-                  <div style="background: #F1F2F2;
-                              text-align: center;
-                              padding: 8px;
-                              margin-bottom: 4px;">
-                      Half-width column (spans 6/12 columns)
-                  </div>
-              </div>
-              <div class="content-l_col content-l_col-1-2">
-                  <div style="background: #F1F2F2;
-                              text-align: center;
-                              padding: 8px;
-                              margin-bottom: 4px;">
-                      Half-width column (spans 6/12 columns)
-                  </div>
-              </div>
-          </div>
 use_cases: ''
 guidelines: ''
 behavior: ''

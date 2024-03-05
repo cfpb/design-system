@@ -45,13 +45,6 @@ select.o-multiselect {
     }
   }
 
-  // Reverse arrow when search drop-down is open.
-  &.u-active {
-    .o-multiselect_header::after {
-      .u-svg-inline-bg( 'up' );
-    }
-  }
-
   &_search[type='text'] {
     display: block;
 
@@ -78,22 +71,23 @@ select.o-multiselect {
     width: 100%;
 
     transition: max-height 0.25s ease-out;
-
-    // Chrome doesn't properly handle fieldset display properties
-    // See https://bugs.chromium.org/p/chromium/issues/detail?id=375693
-    // and https://codepen.io/contolini/pen/rNLXrvP
-    // and https://codepen.io/pembe180/pen/wCsIk
-    display: -webkit-box;
   }
 
   &.u-active {
     .o-multiselect_fieldset {
       margin-top: 0;
+      // This needs to match the value set in _bindEvents in Multiselect.js.
+      // See https://github.com/cfpb/design-system/blob/4d26d5af04317bcc00b4677aa866fe8d526e82e0/packages/cfpb-forms/src/organisms/Multiselect.js#L340
       max-height: 140px;
 
       border-color: @pacific;
       border-width: 2px;
       border-top: 0;
+    }
+
+    // Reverse arrow when search drop-down is open.
+    .o-multiselect_header::after {
+      .u-svg-inline-bg( 'up' );
     }
   }
 
@@ -136,7 +130,7 @@ select.o-multiselect {
       pointer-events: none;
 
       &::after {
-        content: 'Reached maximum of five selections';
+        content: 'Reached maximum number of selections';
       }
     }
 
@@ -173,27 +167,42 @@ select.o-multiselect {
       border: none;
       background: none;
       padding: 0;
+      text-align: left;
 
       &:focus {
-        outline: 1px dotted @pacific;
+        border-radius: unit((3px / @size-v), em);
+        outline: 1px dotted @teal;
         outline-offset: 1px;
+
+        label {
+          background-color: @teal-20;
+        }
+      }
+
+      &:hover label {
+        background-color: @teal-40;
+      }
+
+      &:active label {
+        background-color: @teal-60;
       }
     }
 
     label {
       display: inline-block;
-      padding: 2px 5px;
-      padding-right: unit((25px / @size-v), em);
+      padding: 4px 10px;
+      padding-right: 25px;
 
-      background-color: @navy-80;
-      border-radius: unit((4px / @size-v), em);
-      color: @white;
+      background-color: @teal-20;
+      border-radius: unit((3px / @size-v), em);
+      border: 1px solid @teal;
+      color: @black;
       cursor: pointer;
-      font-size: unit((14px / @base-font-size-px), em);
+      font-size: unit((16px / @base-font-size-px), em);
       position: relative;
 
       &:hover {
-        background-color: @navy;
+        background-color: @teal-40;
 
         &::after {
           color: @white;
@@ -202,9 +211,10 @@ select.o-multiselect {
 
       .cf-icon-svg {
         position: absolute;
-        top: 2px;
+        top: 4px;
         right: 5px;
-        fill: @navy-20;
+        margin-left: 10px;
+        fill: @black;
       }
     }
   }

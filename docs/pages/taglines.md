@@ -1,7 +1,6 @@
 ---
 layout: variation
-section: patterns
-status: Released
+section: components
 variation_groups:
   - variations:
       - variation_name: Standard tagline
@@ -45,15 +44,16 @@ variation_groups:
         variation_implementation: ''
         variation_is_deprecated: true
     variation_group_name: Types
+use_cases: ''
 guidelines: ''
-eyebrow: Featured content
-title: Taglines
-description: Taglines are short paragraphs of text with a USA flag to their left.
-use_cases: Taglines are used in the header and footer across consumerfinance.gov
-  and within inkwells.
-behavior: ''
+eyebrow: Components
 accessibility: ''
 related_items: ''
 last_updated: 2019-10-21T20:38:39.851Z
+title: Taglines
+status: Released
+description: Taglines are short paragraphs of text with the USA flag to their
+  left that are used in the header and footer across consumerfinance.gov.
+behavior: ''
 research: ''
 ---

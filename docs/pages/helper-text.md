@@ -1,10 +1,7 @@
 ---
-title: Helper text
 layout: variation
 section: components
 status: Released
-description: 'Helper text is used with form elements to give the user context
-  about their usage. '
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -22,18 +19,7 @@ variation_groups:
           address security and privacy concerns, or to suggest ways of providing
           answers other than providing formatting examples. '
         variation_name: Block helper text
-        variation_specs: >-
-          [Color variables for helper
-          text](https://cfpb.github.io/design-system/development/variables#forms)
-
-
-          #### Block helper text
-
-          - Avenir Next Regular, 16 px, Gray (#5a5d61)
-
-          - Margin top: 10 px
-
-          - Margin bottom: 10 px
+        variation_specs: ''
       - variation_code_snippet: |-
           <label class="a-label a-label__heading" for="helper-inline-example">
            Label <small class="a-label_helper">(optional)</small>
@@ -45,28 +31,10 @@ variation_groups:
           Use it to indicate whether a field is optional. See the [behavior
           section](#behavior) for more information.
         variation_name: Inline helper text
-        variation_specs: >-
-          #### Inline helper text
-
-          * Avenir Next Regular, 16 px, Gray (#5a5d61)
-
-          * Margin bottom: 10 px
-
-
-          Appears inline with label headings, and should be lowercase and placed in parenthesis after the label.
+        variation_specs: ''
       - variation_code_snippet: >
           <label class="a-label a-label__heading"
-          for="textinput-example-birthdate-default">
-              Birth date
-          </label>
-
-          <input class="a-text-input"
-                type="text"
-                id="textinput-example-birthdate-default"
-                placeholder="mm/dd/yyyy">
-          <br><br>
-
-          <label class="a-label a-label__heading" for="textinput-example-email-default">
+          for="textinput-example-email-default">
               Email address
           </label>
 
@@ -79,14 +47,9 @@ variation_groups:
           disappears once a user begins typing in that field. Use it for
           formatting examples only.
         variation_name: Placeholder text
-        variation_specs: |-
-          #### Placeholder text
-          Avenir Next Regular, 16 px, Gray (#5a5d61)
+        variation_specs: ''
     variation_group_name: Types
-    variation_group_description:
-      'Types of helper text include block helper text,
-      inline helper text, and placeholder text. '
-use_cases: ''
+    variation_group_description: ''
 guidelines: >-
   ### Required vs. optional fields
 
@@ -94,6 +57,12 @@ guidelines: >-
 
 
   Try not to design forms consisting mainly of optional fields. If you must do so, mark required field labels only with inline helper text.
+eyebrow: Components
+title: Helper text
+description: Helper text is used with form elements to give the user context
+  about their usage. Types of helper text include block helper text, inline
+  helper text, and placeholder text.
+use_cases: ''
 behavior: ''
 accessibility: For screen reader accessibility, consider using the
   `aria-describedby` attribute for helper text, which gives screen readers users
@@ -106,5 +75,4 @@ related_items: >-
 
   * [Designing forms](https://cfpb.github.io/design-system/patterns/designing-forms)
 last_updated: 2020-01-28T15:55:47.394Z
-eyebrow: Form elements
 ---

@@ -24,11 +24,8 @@
 .a-link__jump {
   font-weight: 500;
 
-  &.a-link__large {
-    font-size: unit((@size-iv / @base-font-size-px), em);
-  }
-
-  .respond-to-max( @bp-xs-max, {
+  // Mobile only.
+  .respond-to-max(@bp-xs-max, {
     .u-block-link();
 
     position: relative;
@@ -54,32 +51,7 @@
     &.a-link__icon-before-text .cf-icon-svg {
       left: 0;
     }
-
-    &.a-link__bg {
-      border: solid @jump-link_border;
-      border-width: 1px 0;
-
-      background: @jump-link_bg;
-
-      &.a-link__icon-after-text .cf-icon-svg {
-        right: 1em;
-      }
-
-      &.a-link__icon-before-text .cf-icon-svg {
-        left: 1em;
-      }
-
-      &.a-link__icon-after-text {
-        padding-left: 1em;
-        padding-right: 2.25em;
-      }
-
-      &.a-link__icon-before-text {
-        padding-left: 2.25em;
-        padding-right: 1em;
-      }
-    }
-  } );
+  });
 }
 
 /**

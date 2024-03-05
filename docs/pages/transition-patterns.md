@@ -18,7 +18,7 @@ variation_groups:
                 setTimeout( () => {
                   moveTransition.moveToOrigin();
                 }, 1000 );
-            } );
+            });
           </script>
         variation_code_snippet_rendered: >-
           <div class="u-move-transition example-box">Click me!</div> <br><br>
@@ -33,14 +33,14 @@ variation_groups:
                 setTimeout( function() {
                   moveTransition.moveToOrigin();
                 }, 1000 );
-              } );
+              });
               moveTransition.addEventListener('transitionbegin', function(evt) {
                 output.value += evt.type + '\n';
               });
               moveTransition.addEventListener('transitionend', function(evt) {
                 output.value += evt.type + '\n';
               });
-            } );
+            });
           </script>
         variation_implementation: >-
           The move transition is added to an element by creating a new
@@ -82,7 +82,7 @@ variation_groups:
               setTimeout( () => {
                 alphaTransition.fadeIn();
               }, 1000 );
-            } );
+            });
           </script>
         variation_code_snippet_rendered: >-
           <div class="u-alpha-transition example-box">Click me!</div> <br><br>
@@ -97,14 +97,14 @@ variation_groups:
                 setTimeout( function() {
                   alphaTransition.fadeIn();
                 }, 1000 );
-              } );
+              });
               alphaTransition.addEventListener('transitionbegin', function(evt) {
                 output.value += evt.type + '\n';
               });
               alphaTransition.addEventListener('transitionend', function(evt) {
                 output.value += evt.type + '\n';
               });
-            } );
+            });
           </script>
         variation_implementation: >-
           The alpha (opacity) transition is added to an element by creating a
@@ -151,7 +151,7 @@ variation_groups:
               setTimeout( () => {
                 maxHeightTransition.maxHeightSummary();
               }, 1000 );
-            } );
+            });
           </script>
         variation_code_snippet_rendered: >-
           <div class="u-max-height-summary example-box" style="height: auto;">
@@ -169,14 +169,14 @@ variation_groups:
                 setTimeout( function() {
                   maxHeightTransition.maxHeightSummary();
                 }, 1000 );
-              } );
+              });
               maxHeightTransition.addEventListener('transitionbegin', function(evt) {
                 output.value += evt.type + '\n';
               });
               maxHeightTransition.addEventListener('transitionend', function(evt) {
                 output.value += evt.type + '\n';
               });
-            } );
+            });
           </script>
         variation_implementation: >-
           The max-height transition is added to an element by creating a new
@@ -281,7 +281,7 @@ variation_groups:
               flyout.addEventListener('collapseend', function(evt) {
                 output.value += evt.type + '\n';
               });
-            } );
+            });
           </script>
         variation_implementation: >-
           Behaviors are functionality that can be shared between different

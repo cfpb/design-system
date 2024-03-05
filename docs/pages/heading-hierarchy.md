@@ -1,22 +1,16 @@
 ---
-title: Headings
 layout: variation
 section: foundation
 status: Released
-description: A successful type hierarchy establishes the order of importance of
-  elements on a page. Consistent scaling, weights, and capitalization are used
-  to create distinction between heading levels and provide users with  familiar
-  focus points when scanning text.
 variation_groups:
   - variations:
       - variation_code_snippet: |-
-          <h1 class="superheading">Display heading</h1>
-          <h1>Heading level 1</h1>
-          <h2>Heading level 2</h2>
-          <h3>Heading level 3</h3>
-          <h4>Heading level 4</h4>
-          <h5>Heading level 5</h5>
-          <h6>Heading level 6</h6>
+          <h1 class="superheading">Display</h1>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
 
           <!--
           Example of a non heading element:
@@ -38,12 +32,11 @@ variation_groups:
           1             |
 
           | Heading 1 | Avenir Next Demi Bold, 34px /
-          42px\x03                                | Drops to Heading
+          42px\x03                              | Drops to Heading
           2             |
 
           | Heading 2 | Avenir Next Demi Bold, 26px /
-          32px                                 | Drops to Heading
-          3             |
+          32px                               | Drops to Heading 3             |
 
           | Heading 3 | Avenir Next Regular, 22px /
           28px                                 | Drops to Heading
@@ -54,32 +47,29 @@ variation_groups:
           18px           |
 
           | Heading 5 | Avenir Next Demi Bold, 14px / 18px, All caps,
-          1px letter spacing | No change                      |
-
-          | Heading 6 | Avenir Next Demi Bold, 12px / 15px, All caps,
           1px letter spacing | No change                      |"
     variation_group_name: Web headings
     variation_group_description:
       At screen widths of 600px and below, the Display
-      heading and Headings 1-4 drop in size. Headings 5-6 remain consistent at
-      all screen widths.
+      heading and Headings 1-4 drop in size. Heading 5 remains consistent at all
+      screen widths.
   - variation_group_name: Print headings
     variations:
       - variation_code_snippet: >-
-          <h1 style="font-size:60pt; font-weight:500; line-height:66pt">Display
-          heading</h1>
+          <h1 style="font-size:60pt; font-weight:500;
+          line-height:66pt">Display</h1>
 
-          <h1 style="font-size:38pt; font-weight:400; line-height:40pt">Heading level 1</h1>
+          <h1 style="font-size:38pt; font-weight:400; line-height:40pt">Heading 1</h1>
 
-          <h2 style="font-size:26pt; font-weight:400; line-height:28pt">Heading level 2</h2>
+          <h2 style="font-size:26pt; font-weight:400; line-height:28pt">Heading 2</h2>
 
-          <h3 style="font-size: 16pt; font-weight:600; line-height: 18pt">Heading level 3</h3>
+          <h3 style="font-size: 16pt; font-weight:600; line-height: 18pt">Heading 3</h3>
 
-          <h4 style=font-size:14pt; font-weight:500; line-height:16pt">Heading level 4</h4>
+          <h4 style=font-size:14pt; font-weight:500; line-height:16pt">Heading 4</h4>
 
-          <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading level 5</h5>
+          <h5 style="font-size:10pt; font-weight:600;line-height:12pt">Heading 5</h5>
 
-          <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading level 6</p>
+          <p style="font-size: 12pt; font-weight: 500; line-height:14pt">Heading 6</p>
         variation_name: ''
         variation_description: ''
         variation_specs: |-
@@ -87,7 +77,7 @@ variation_groups:
           | --------- | -------------------------------------------- |
           | Display   | Avenir Next Medium, 60pt / 66pt              |
           | Heading 1 | Avenir Next Regular, 38pt / 40pt             |
-          | Heading 2 | Avenir Next Regular, 26pt / 28pt            
+          | Heading 2 | Avenir Next Regular, 26pt / 28pt
           |
           | Heading 3 | Avenir Next Demi Bold, 16pt / 18pt           |
           | Heading 4 | Avenir Next Medium, 14pt / 16pt              |
@@ -100,42 +90,37 @@ variation_groups:
 
   - variation_group_name: Variations
     variations:
-      - variation_name: 'Heading with icon '
+      - variation_name: Meta header
         variation_description:
-          'The heading with icon is typically used for listing
-          categories in a meta header on pages like the [blog
-          page](https://www.consumerfinance.gov/about-us/blog/). '
-        variation_code_snippet: |-
-          <header class="m-meta-header">
-              <div class="m-meta-header_right">
+          The meta header is typically used for listing categories
+          on pages like the [blog
+          page](https://www.consumerfinance.gov/about-us/blog/).
+        variation_code_snippet: >-
+          <div class="m-meta-header">
+              <div class="m-meta-header_item-group">
+                <div class="m-meta-header_item">
+                    {% include icons/chart.svg %}
+                    Office of Research Publication
+                </div>
+                <div class="m-meta-header_item">
+                    {% include icons/bank.svg %}
+                    Policy and compliance
+                </div>
+              </div>
+              <div class="m-meta-header_item">
                   <span class="a-date">
-                      Nov 4, 2013
+                      Published
+                      <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
+                      </span>
                   </span>
               </div>
-              <div class="m-meta-header_left">
-                  <span class="u-visually-hidden">Categories: </span>
-                  <a href="#" class="a-heading a-heading__icon">
-                      {% include icons/credit-card.svg %}
-                      Consumer finance
-                  </a>
-                  |
-                  <a href="#" class="a-heading a-heading__icon">
-                      {% include icons/bullhorn.svg %}
-                      At the CFPB
-                  </a>
-              </div>
-          </header>
-        variation_implementation: This example of a heading with icon shows
-          `.m-meta-header_left` using the `.a-heading__icon` pattern and
-          `.m-meta-header_right` using the `.a-date` pattern. However, you could
-          use other patterns in place of them, or even swap them so that date is
-          attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is
-          attached to `.m-meta-header_right`.
+          </div>
+        variation_implementation: null
         variation_specs: >-
           * Avenir Next Medium, 18px
 
           * View a [list of icons](https://cfpb.github.io/design-system/foundation/iconography). Icon height is constrained to 19px.
-      - variation_name: Eyebrow headings
+      - variation_name: Eyebrow heading
         variation_description: >-
           The eyebrow heading is an additional label that can be used to support
           the main H1 heading on a page, provide additional context, or
@@ -148,22 +133,8 @@ variation_groups:
 
 
           An example of the eyebrow heading can be found on the [Buying a House journey pages](https://www.consumerfinance.gov/owning-a-home/process/prepare/).
-        variation_code_snippet: >
-          <!--The code snippet below is only used for display purposes. The
-          eyebrow heading should be built using div tags:
-
-
-          <div class ="eyebrow">
-
-
-          The text will be styled the same as H5 heading text.
-
-          -->
-
-
-          <div class="h5">eyebrow heading</div>
-
-          <div class="h1">Heading 1</div>
+        variation_code_snippet: |
+          <div class="h5">eyebrow heading</div> <div class="h1">Heading 1</div>
         variation_specs: |-
           * Avenir Next Demi Bold
           * 14px / 18px, 1px letter spacing
@@ -176,7 +147,7 @@ variation_groups:
           modules.
         variation_code_snippet: |-
           <header class="m-slug-header">
-              <h2 class="a-heading">
+              <h2 class="m-slug-header_heading">
                   Slug heading
               </h2>
           </header>
@@ -189,7 +160,6 @@ variation_groups:
 
           * 1px thick Gray 50 top border that spans the width of the module or column
     variation_group_description: The heading variations below have specific use cases.
-use_cases: ''
 guidelines: >-
   ### Content
 
@@ -204,15 +174,24 @@ guidelines: >-
   ### Spacing
 
 
-  Refer to the [Guidelines section of the Fonts page](<https://cfpb.github.io/design-system/foundation/fonts#guidelines>) for information about heading spacing.
+  Refer to the [Guidelines section of the Fonts page](https://cfpb.github.io/design-system/foundation/fonts#guidelines) for information about heading spacing.
+eyebrow: Typography
+title: Headings
+description: A successful type hierarchy establishes the order of importance of
+  elements on a page. Consistent scaling, weights, and capitalization are used
+  to create distinction between heading levels and provide users with  familiar
+  focus points when scanning text.
+use_cases: ''
 behavior: ''
 accessibility: Since categories can be repetitive, we suggest placing a label
   with `.u-visually-hidden` prior to the headings with icons to add more context
   for screen readers.
-research: ''
-related_items: "* [Typography
-  variables](https://cfpb.github.io/design-system/development/variables#typogra\
-  phy)"
+related_items: >-
+  * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
+
+  * [Fonts](https://cfpb.github.io/design-system/foundation/fonts)
+
+  * [Typography variables](https://cfpb.github.io/design-system/development/variables#typography)
 last_updated: 2019-10-21T21:54:52.744Z
-eyebrow: Typography
+research: ''
 ---

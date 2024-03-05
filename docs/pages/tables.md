@@ -43,44 +43,7 @@ variation_groups:
           Note: While th elements normally only contain raw text, they may sometimes contain heading elements when that would be beneficial to navigating a page’s content with a screenreader.
 
           -->
-        variation_specs: >-
-          [Color variables for
-          tables](https://cfpb.github.io/design-system/development/variables#tables-1)
-
-
-          ### Specs for default and directory table (large screens)
-
-
-          #### Header
-
-
-          * Background: Gray-05 #f7f8f9
-
-          * Font: Avenir Next Demi-bold, all caps
-
-          * Font-color: Black #101820
-
-          * Font-size: 14px
-
-
-          #### Border
-
-
-          * Bottom: 1px, Gray-50 #a2a3a4 on each row, including header
-
-
-          #### Cells
-
-
-          * Background: Gray-05 #f7f8f9
-
-          * Font: Avenir Next Regular Black
-
-          * Font-color: Black #101820
-
-          * Font-size: 16px
-
-          * Padding: 10px
+        variation_specs: ''
         variation_implementation: ''
   - variation_group_name: Responsive tables
     variation_group_description: >-
@@ -128,26 +91,8 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_specs: |-
-          ### Default table (small screens)
-
-          #### Border
-
-          * Bottom: 1px, Gray-50 #a2a3a4
-
-          #### Cells
-
-          * Font: 16px Avenir Next Regular Black
-          * Font-color: Black #101820
-          * Labels font: 14px Avenir Next Regular, all caps
-          * Labels font-color: Black #101820
-
-          #### Padding
-
-          * Padding, label / content: 15px
-          * Padding, content / next label: 30px
-          * Padding, rule line / first label: 15px
-      - variation_name: Responsive stacked table with header (directory tables)
+        variation_specs: ''
+      - variation_name: Responsive stacked table with header (directory table)
         variation_description: >-
           The directory table is a variation of the stacked table. At the small
           screen breakpoint, the directory table pattern uses first column data
@@ -190,18 +135,7 @@ variation_groups:
                   </tr>
               </tbody>
           </table>
-        variation_specs: |-
-          ### Style for directory tables (small screens)
-
-          * Bottom border: 1px, Gray-50 #a2a3a4 on each row
-          * Font: 16px Avenir Next Regular Black
-          * Font-color: Black #101820
-          * Header background color: Gray-05 #f7f8f9
-          * Labels font: 14px Avenir Next Regular, all caps
-          * Labels font-color: Black #101820
-          * Padding, column label/bottom border: 15px
-          * Padding, bottom border/content: 15px
-          * Padding, content / next label: 30px
+        variation_specs: ''
       - variation_name: Responsive table with horizontal scroll
         variation_description: >-
           Use a table with horizontal scroll when the data you’re presenting has
@@ -270,11 +204,7 @@ variation_groups:
                   </tbody>
               </table>
           </div>
-        variation_specs: |-
-          ### Styles for scrolling tables
-
-          * Border: 1px, Gray-50 #a2a3a4 around the scrolling table
-          * Alternate row striping: Grey-05 #f7f8f9
+        variation_specs: ''
   - variations:
       - variation_code_snippet: |-
           <table class="o-table o-table__striped">
@@ -347,7 +277,7 @@ variation_groups:
 
           Left-align columns of numbers when they're nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).
         variation_name: Right-aligned table
-        variation_specs: '* Alternate row background: Grey-05 #F8F8F8'
+        variation_specs: ''
       - variation_code_snippet: |-
           <table class="o-table">
               <thead>
@@ -526,17 +456,20 @@ guidelines: >-
   so that the underlying meaning is quickly apparent.
 
 
-  ### Labels and Titles
+  ### Labels and titles
+
 
   Give tables a meaningful title that succinctly describes the content presented so that users can understand their purpose at a glance. If presenting more than one table within a page, consider adding labels (e.g. “Table 1,” “Table 2,” etc.) in addition to titles. Labels should precede titles (e.g. “Table 1: The title given to this table”).
 
 
   ### Long column labels
 
+
   Consider using fixed columns or truncation for column labels that are significantly longer than the expected width of the data.
 
 
   ### Unit of measurement
+
 
   Make sure to indicate the unit of measurement. In terms of placement, if the units are the same across columns, indicate the unit of measurement in the title or someplace noticeable above the table.
 
@@ -545,7 +478,7 @@ guidelines: >-
 
 
   If units differ from column to column, the standard is to list the unit of measure in parentheses following the column label. Make sure to use common abbreviations when indicating units of measure. Spell out any ambiguous or obscure abbreviations.
-eyebrow: Lists and tables
+eyebrow: Components
 title: Tables
 description: 'Tables allow for the presentation of many data points grouped
   together in a visual way. They serve a unique purpose of allowing easy

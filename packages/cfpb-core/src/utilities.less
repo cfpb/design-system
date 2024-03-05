@@ -14,6 +14,18 @@
 }
 
 //
+// To hide an element when JS is on
+// And show it when JS is off
+//
+
+.u-hide-if-js {
+  display: none !important;
+  .no-js & {
+    display: block !important;
+  }
+}
+
+//
 // Clearfix
 //
 
@@ -49,17 +61,19 @@
 //
 
 .u-hide-on-mobile {
-  .respond-to-max( @bp-xs-max, {
+  // Mobile only.
+  .respond-to-max(@bp-xs-max, {
     display: none;
-  } );
+  });
 }
 
 .u-show-on-mobile {
   display: none;
 
-  .respond-to-max( @bp-xs-max, {
+  // Mobile only.
+  .respond-to-max(@bp-xs-max, {
     display: block;
-  } );
+  });
 }
 
 //

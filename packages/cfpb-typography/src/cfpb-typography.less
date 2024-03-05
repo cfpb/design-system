@@ -12,21 +12,17 @@
 //
 
 // Font variables
-@webfont-regular: 'AvenirNextLTW01-Regular';
-@webfont-italic: @webfont-regular;
-@webfont-medium: 'AvenirNextLTW01-Medium';
-@webfont-demi: @webfont-medium;
+@font-stack: 'Avenir Next', Arial, sans-serif;
 
 // Webfont variables
+// This is the path to your stylesheet containing @font-face rules.
+@font-face-path: 'licensed-fonts.less';
 // This is the path for self-hosted fonts.
 @cf-fonts-path: '/static/fonts';
 
 // Color variables
 
 // Running text elements
-
-// .a-micro-copy
-@micro-copy: @black;
 
 // .a-date
 @date: @gray;
@@ -47,9 +43,6 @@
 @slug-header_border__thin: @gray-40;
 @slug-header_border__thick: @green;
 
-// .m-meta-header
-@meta-header_border: @gray-40;
-
 // Links
 
 // .a-link__jump
@@ -63,7 +56,6 @@
 @import (less) 'atoms/date.less';
 @import (less) 'atoms/headings.less';
 @import (less) 'atoms/links.less';
-@import (less) 'atoms/micro-copy.less';
 @import (less) 'atoms/tagline.less';
 
 //
@@ -78,4 +70,5 @@
 //
 // Import web fonts
 //
-@import (less) 'licensed-fonts.less';
+// To not load any fonts, set @font-face-path to an empty string in your project.
+@import (less, optional) '@{font-face-path}';

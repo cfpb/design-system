@@ -108,13 +108,10 @@ Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.l
 @size-code:           13px; // Custom size only for Mono code blocks
 ```
 
-### Webfont variables
+### Font variables
 
 ```
-@webfont-regular: Arial;
-@webfont-italic:  Arial;
-@webfont-medium:  Arial;
-@webfont-demi:    Arial;
+@font-stack: system-ui, sans-serif;
 ```
 
 ## Media queries
@@ -136,11 +133,12 @@ them to the corresponding min or max width media query.
 Ex.
 
 ```
-.respond-to-min( @bp-sm-min, {
+// Tablet and above.
+.respond-to-min(@bp-sm-min, {
     .title {
         font-size: 2em;
     }
-} );
+});
 
 // Compiles to
 
@@ -157,17 +155,18 @@ This mixin takes both min and max `px` values and a set of style rules and
 converts them to the corresponding min and max media query.
 
 ```
-.respond-to-range(@bp1, @bp2, @rules);
+.respond-to-range(@bp1, @bp2, @rules );
 ```
 
 Ex.
 
 ```
-.respond-to-range( @bp-sm-min, @bp-sm-max, {
+// Tablet only.
+.respond-to-range(@bp-sm-min, @bp-sm-max, {
     .title {
         font-size: 2em;
     }
-} );
+});
 
 // Compiles to
 

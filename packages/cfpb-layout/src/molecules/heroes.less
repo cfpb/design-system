@@ -8,47 +8,20 @@
   background-color: @gray-5;
 
   &_wrapper {
-    // Manually enable CSS grid for IE. IE's grid implementation differs
-    // slightly from the spec so we manually enable it per component
-    // instead of using autoprefixer to enable it for the entire site.
-    display: -ms-grid;
     display: grid;
     max-width: (@grid_wrapper-width - @grid_gutter-width);
     margin: 0 auto;
     padding-top: @grid_gutter-width;
     padding-bottom: @grid_gutter-width;
-
-    .respond-to-min( @bp-sm-min, {
-      -ms-grid-columns: 7fr 5fr;
-      grid-template-columns: 7fr 5fr;
-      padding-right: ( @grid_gutter-width / 2);
-      padding-left: ( @grid_gutter-width / 2);
-
-      min-height: @hero-desktop-height - ( @grid_gutter-width * 2 );
-    } );
-
-    .respond-to-min( @bp-lg-min, {
-      padding-top: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em );
-      padding-bottom: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em );
-      min-height: @hero-desktop-height - ( ( @grid_gutter-width * 1.5 ) * 2 );
-    } );
   }
 
   &_text {
     padding-right: (@grid_gutter-width / 2);
     padding-left: (@grid_gutter-width / 2);
-
-    .respond-to-min( @bp-sm-min, {
-      margin: auto;
-    } );
   }
 
   &_heading {
     .heading-1();
-
-    .respond-to-max( @bp-sm-max, {
-      .heading-2();
-    } );
   }
 
   &_subhead {
@@ -56,28 +29,11 @@
     // to remain Regular on smaller screens.
     font-size: @size-iii;
     line-height: 1.25;
-
-    .respond-to-max( @bp-sm-max, {
-      font-size: @size-iv;
-    } );
   }
 
   &_image-wrapper {
     box-sizing: border-box;
     overflow: hidden;
-
-    .respond-to-min( @bp-sm-min, {
-      padding-right: ( @grid_gutter-width / 2 );
-      padding-left: ( @grid_gutter-width / 2 );
-
-      // Vertically center hero images
-      display: flex;
-      align-items: center;
-    } );
-
-    .respond-to-max( @bp-xs-max, {
-      margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em );
-    } );
   }
 
   &_image {
@@ -102,9 +58,84 @@
     color: @white;
   }
 
-  &__bleeding {
-    .respond-to-min( @bp-sm-min, {
+  &__overlay {
+    .m-hero_wrapper {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 
+  &__jumbo,
+  &__50-50 {
+    background-color: @white;
+
+    .u-jumbo-text();
+  }
+}
+
+// Mobile only.
+.respond-to-max( @bp-xs-max, {
+  .m-hero {
+    &_image-wrapper {
+      margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em );
+    }
+
+    &__overlay {
+      .m-hero_wrapper {
+        // Overwrite the image that is set in the markup because
+        // we are showing the image container below instead.
+        background-image: none !important;
+      }
+    }
+
+    &__jumbo {
+      .m-hero_wrapper {
+        // Keep hero image flush with container on mobile
+        padding-bottom: 0;
+      }
+    }
+  }
+} );
+
+// Tablet and below.
+.respond-to-max( @bp-sm-max, {
+  .m-hero {
+    &_heading {
+      .heading-2();
+    }
+
+    &_subhead {
+      font-size: @size-iv;
+    }
+  }
+} );
+
+// Tablet and above.
+.respond-to-min( @bp-sm-min, {
+  .m-hero {
+    &_wrapper {
+      grid-template-columns: 7fr 5fr;
+      padding-right: ( @grid_gutter-width / 2);
+      padding-left: ( @grid_gutter-width / 2);
+
+      min-height: @hero-desktop-height - ( @grid_gutter-width * 2 );
+    }
+
+    &_text {
+      margin: auto;
+    }
+
+    &_image-wrapper {
+      padding-right: ( @grid_gutter-width / 2 );
+      padding-left: ( @grid_gutter-width / 2 );
+
+      // Vertically center hero images
+      display: flex;
+      align-items: center;
+    }
+
+    &__bleeding {
       .m-hero_image-wrapper {
         width: 100%;
         margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em ) * -1;
@@ -118,44 +149,15 @@
         width: 100%;
         background-size: cover;
       }
-    } );
-
-    .respond-to-min( @bp-lg-min, {
-      .m-hero_image-wrapper {
-        margin-top: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em ) * -1;
-        margin-bottom: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em ) * -1;
-      }
-    } );
-  }
-
-  &__overlay {
-    .m-hero_wrapper {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
     }
 
-    .respond-to-max( @bp-xs-max, {
-      .m-hero_wrapper {
-        // Overwrite the image that is set in the markup because
-        // we are showing the image container below instead.
-        background-image: none !important;
-      }
-    } );
-
-    .respond-to-min( @bp-sm-min, {
+    &__overlay {
       .m-hero_image {
         display: none;
       }
-    } );
-  }
+    }
 
-  &__jumbo {
-    background-color: @white;
-
-    .u-jumbo-text();
-
-    .respond-to-min( @bp-sm-min, {
+    &__jumbo {
       .m-hero_wrapper {
         background-position: 50%;
         background-repeat: no-repeat;
@@ -165,24 +167,10 @@
       .m-hero_image {
         display: none;
       }
-    } );
+    }
 
-    .respond-to-max( @bp-xs-max, {
+    &__50-50 {
       .m-hero_wrapper {
-        // Keep hero image flush with container on mobile
-        padding-bottom: 0;
-      }
-    } );
-  }
-
-  &__50-50 {
-    background-color: @white;
-
-    .u-jumbo-text();
-
-    .respond-to-min( @bp-sm-min, {
-      .m-hero_wrapper {
-        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
 
         border: 1px solid @gray-40;
@@ -196,30 +184,49 @@
       .m-hero_image {
         display: none;
       }
-    } );
+    }
+  }
+});
 
-    .respond-to-min( @bp-lg-min, {
+// Large desktop.
+.respond-to-min( @bp-lg-min, {
+  .m-hero {
+    &_wrapper {
+      padding-top: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em );
+      padding-bottom: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em );
+      min-height: @hero-desktop-height - ( ( @grid_gutter-width * 1.5 ) * 2 );
+    }
+
+    &__bleeding {
+      .m-hero_image-wrapper {
+        margin-top: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em ) * -1;
+        margin-bottom: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em ) * -1;
+      }
+    }
+
+    &__50-50 {
       .m-hero_wrapper {
         // Enlarge the 50/50 height on large screens to maximize the image size
         min-height: @hero-desktop-height + ( @grid_gutter-width * 2 );
       }
-    } );
+    }
   }
-}
+} );
 
-// Jumbo hero text mixin
-
+// Jumbo hero text mixin.
 .u-jumbo-text() {
   .m-hero_subhead {
     .lead-paragraph();
   }
 
+  // Tablet and above.
   .respond-to-min( @bp-sm-min, {
     .m-hero_subhead {
       .heading-3();
     }
   } );
 
+  // Large desktop.
   .respond-to-min( @bp-lg-min, {
     .m-hero_wrapper {
       min-height: @hero-desktop-height;

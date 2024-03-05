@@ -1,4 +1,4 @@
-# CFPB Design System [![Travis](https://img.shields.io/travis/cfpb/design-system.svg?style=flat-square)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-design-system.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-design-system) [![.github/workflows/lighthouse.yml](https://github.com/cfpb/design-system/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/cfpb/design-system/actions/workflows/lighthouse.yml)
+# CFPB Design System [![npm](https://img.shields.io/npm/v/@cfpb/cfpb-design-system.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/cfpb-design-system) [![.github/workflows/lighthouse.yml](https://github.com/cfpb/design-system/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/cfpb/design-system/actions/workflows/lighthouse.yml)
 
 The Consumer Financial Protection Bureau's user interface framework and documentation.
 
@@ -70,10 +70,11 @@ The project has a dependency on Ruby because it uses Jekyll. If you do not have 
 
 ```shell
 curl -sSL https://get.rvm.io | bash -s stable --ruby
-rvm install 2.7
 brew install openssl
 brew link openssl --force
-gem install eventmachine -- --with-openssl-dir=/usr/local/opt/openssl@1.1
+rvm install ruby-3.2.3 -C --with-openssl-dir=$(brew --prefix openssl@3)
+rvm --default use 3.2.3
+gem install eventmachine -- --with-openssl-dir=$(brew --prefix openssl@3)
 bundle install
 ```
 

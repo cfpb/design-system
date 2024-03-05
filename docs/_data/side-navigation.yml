@@ -26,31 +26,30 @@ first-level:
           - page: Motion
   - heading: Components
     second-level:
-      - heading: Alerts
+      - heading: Components
         nav-items:
-          - page: Banner notification
-          - page: Notifications
-      - heading: Behavior
-        nav-items:
-          - page: Expandables
-          - page: Expandable facets
-          - page: Summaries
-      - heading: Form elements
-        nav-items:
+          - page: Alerts
+          - page: Banner (notification)
+          - page: Banner (US gov)
           - page: Buttons
           - page: Checkboxes
-          - page: Dropdowns and multiselects
+          - page: Date picker
+          - page: Expandables
           - page: Fieldsets
           - page: Helper text
           - page: Labels and legends
           - page: Links
+          - page: Lists
+          - page: Pagination
           - page: Radio buttons
           - page: Range sliders
-          - page: Text inputs
-      - heading: Lists and tables
-        nav-items:
-          - page: Lists
+          - page: Selects
+          - page: Summaries
           - page: Tables
+          - page: Taglines
+          - page: Text inputs
+        third-level: []
+    nav-items: []
   - heading: Patterns
     second-level:
       - heading: Interaction patterns
@@ -62,7 +61,6 @@ first-level:
           - heading: Navigation
             nav-items:
               - page: Filterable list control panels
-              - page: Pagination
           - heading: Transitions
             nav-items:
               - page: Transition patterns
@@ -78,20 +76,21 @@ first-level:
               - page: Cards
               - page: Featured content module
               - page: Wells
-              - page: Taglines
           - heading: Main content
             nav-items:
               - page: Info unit groups
               - page: Interactive charts
   - heading: Pages
-    nav-items:
-      - page: Landing pages
-      - page: Sublanding pages
-      - page: Browse pages
-      - page: Learn pages
-      - page: Filterable list pages
-      - page: Document detail pages
-      - page: Story pages
+    second-level:
+      - heading: Page templates
+        nav-items:
+          - page: Landing pages
+          - page: Sublanding pages
+          - page: Browse pages
+          - page: Learn pages
+          - page: Filterable list pages
+          - page: Document detail pages
+          - page: Story pages
   - heading: Development
     second-level:
       - heading: Atomic
@@ -130,3 +129,4 @@ first-level:
         nav-items:
           - page: Print styles
     nav-items: []
+    

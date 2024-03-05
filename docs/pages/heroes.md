@@ -1,14 +1,7 @@
 ---
-title: Heroes
 layout: variation
 section: patterns
 status: Released
-description: Heroes are a primary focal point on landing and sublanding pages.
-  They introduce a collection of pages by combining a brief description of the
-  goals of that section along with a visually impactful graphic. To introduce
-  lower-level pages, use the [text
-  introduction](https://cfpb.github.io/design-system/patterns/text-introductions)
-  instead.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -592,12 +585,13 @@ variation_groups:
 
           * Photo dimensions for small screens: 755px (exact) x 575px (maximum)
         variation_name: 50/50 hero
-    variation_group_name: Types
-    variation_group_description: Heroes combine a heading, a small amount of
-      subheading text, and image. The content is vertically centered.
-  - variation_group_name: Variations
-    variations:
-      - variation_name: Hero with knockout text
+      - variation_is_deprecated: false
+        variation_name: Hero with knockout text
+        variation_description:
+          When using a dark background, add the `__knockout`
+          modifier to the hero to switch the text to white. For reference, see
+          this [example of a hero with knockout
+          text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
         variation_code_snippet: >-
           <section class="m-hero m-hero__knockout">
               <div class="m-hero_wrapper">
@@ -714,25 +708,9 @@ variation_groups:
                   }
               </style>
           </section>
-        variation_description:
-          When using a dark background, add the `__knockout`
-          modifier to the hero to switch the text to white. For reference, see
-          this [example of a hero with knockout
-          text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
-    variation_group_description: ''
-use_cases: >-
-  ### When to use
-
-
-  * When orienting a user to a new section or topic (using the [landing](https://cfpb.github.io/design-system/pages/landing-pages) or [sublanding page template](https://cfpb.github.io/design-system/pages/sublanding-pages))
-
-  * When the page serves as a navigational tool with general information about a subject and links to lower-level pages that contain more specific information
-
-
-  ### When other options are better
-
-
-  * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
+    variation_group_name: Types
+    variation_group_description: Heroes combine a heading, a small amount of
+      subheading text, and image. The content is vertically centered.
 guidelines: >-
   ### Content guidelines
 
@@ -782,6 +760,27 @@ guidelines: >-
   * After one-line heading: Between 165 and 186 characters (three lines at largest breakpoint)
 
   * After two-line heading: Between 108 and 124 characters (two lines at largest breakpoint)
+eyebrow: Introductions
+title: Heroes
+description: Heroes are a primary focal point on landing and sublanding pages.
+  They introduce a collection of pages by combining a brief description of the
+  goals of that section along with a visually impactful graphic. To introduce
+  lower-level pages, use the [text
+  introduction](https://cfpb.github.io/design-system/patterns/text-introductions)
+  instead.
+use_cases: >-
+  ### When to use
+
+
+  * When orienting a user to a new section or topic (using the [landing](https://cfpb.github.io/design-system/pages/landing-pages) or [sublanding page template](https://cfpb.github.io/design-system/pages/sublanding-pages))
+
+  * When the page serves as a navigational tool with general information about a subject and links to lower-level pages that contain more specific information
+
+
+  ### When other options are better
+
+
+  * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
 behavior: >-
   For style at different breakpoints, see [specs for standard
   heroes](#standard-heroes).
@@ -795,7 +794,6 @@ behavior: >-
 
   | ![Mockup of hero graphic at desktop size](/design-system/images/uploads/hero_behavior_large.png "Mockup of hero graphic at desktop size") | ![Mockup of hero graphic at small size](/design-system/images/uploads/hero_behavior_small.png "Mockup of hero graphic at small size") |
 accessibility: ''
-research: ''
 related_items: >-
   -
   [Variables](https://cfpb.github.io/design-system/development/variables#heroes-and-featured-content-modules)
@@ -808,5 +806,5 @@ related_items: >-
 
   - [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
 last_updated: 2020-01-28T15:55:47.394Z
-eyebrow: Introductions
+research: ''
 ---

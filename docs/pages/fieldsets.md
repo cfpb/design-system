@@ -121,7 +121,7 @@ variation_groups:
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3">
-                          <label class="a-label" for="test_checkbox_lg_default_3">This is a very long label that wraps to a second line. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<small class=“a-label_helper’>(This is helper text)</small></label>
+                          <label class="a-label" for="test_checkbox_lg_default_3">Inline label</label>
                       </div>
                       <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4">
@@ -166,9 +166,9 @@ variation_groups:
               </fieldset>
 use_cases: ''
 guidelines: ''
+eyebrow: Components
 behavior: ''
 accessibility: ''
 last_updated: 2020-01-28T15:55:47.394Z
-eyebrow: Form elements
 research: ''
 ---

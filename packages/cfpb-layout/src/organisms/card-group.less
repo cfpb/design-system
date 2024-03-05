@@ -12,9 +12,9 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
     // Convert to 2-column layout at small screen sizes;
-    .respond-to-max( @bp-lg-min, {
+    .respond-to-max(@bp-lg-min, {
       grid-template-columns: 1fr 1fr;
-    } );
+    });
   }
 
   &_cards {
@@ -22,10 +22,11 @@
     grid-column-gap: unit((20px / @base-font-size-px), em);
     grid-row-gap: unit((20px / @base-font-size-px), em);
 
-    .respond-to-max( @bp-xs-max, {
+    // Mobile only.
+    .respond-to-max(@bp-xs-max, {
       // Make sure cards are stacked at mobile size.
       grid-template-columns: 100% !important;
-    } );
+    });
   }
 
   &__bg-green {
@@ -141,12 +142,13 @@ _:-ms-lang(x),
     .o-card-group_cards {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
 
-// Tablet size.
-.respond-to-range( @bp-sm-min, @bp-sm-max, {
+// Tablet only.
+.respond-to-range(@bp-sm-min, @bp-sm-max, {
   .o-card-group {
     &__count-3 &_cards {
       grid-template-columns: 1fr 1fr;
@@ -155,10 +157,10 @@ _:-ms-lang(x),
       'card2 card3';
     }
   }
-} );
+});
 
-// Mobile size.
-.respond-to-max( @bp-xs-max, {
+// Mobile only.
+.respond-to-max(@bp-xs-max, {
   .o-card-group {
     &__count-2 &_cards {
       grid-template-columns: 1fr;
@@ -194,4 +196,4 @@ _:-ms-lang(x),
       }
     }
   }
-} );
+});

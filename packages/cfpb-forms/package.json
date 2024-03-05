@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-forms",
-  "version": "0.25.0",
+  "version": "0.37.1",
   "description": "Design System form fields",
   "less": "src/cfpb-forms.less",
   "style": "cfpb-forms.css",
@@ -10,10 +10,10 @@
   },
   "main": "src/index.js",
   "dependencies": {
-    "@cfpb/cfpb-buttons": "^0.25.0",
-    "@cfpb/cfpb-core": "^0.25.0",
-    "@cfpb/cfpb-grid": "^0.25.0",
-    "@cfpb/cfpb-icons": "^0.25.0"
+    "@cfpb/cfpb-buttons": "^0.37.0",
+    "@cfpb/cfpb-core": "^0.37.0",
+    "@cfpb/cfpb-grid": "^0.37.0",
+    "@cfpb/cfpb-icons": "^0.37.0"
   },
   "keywords": [
     "forms"

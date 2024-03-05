@@ -84,11 +84,10 @@ describe('FlyoutMenu', () => {
     });
 
     it('should dispatch events when called by trigger click', () => {
-      /* TODO: Ideally this would use `new MouseEvent`,
-         but how do we import MouseEvent (or Event) into Jest.
-         Please investigate. */
-      const mouseEvent = document.createEvent('MouseEvents');
-      mouseEvent.initEvent('mouseover', true, true);
+      const mouseEvent = new MouseEvent('mouseover', {
+        bubbles: true,
+        cancelable: true,
+      });
       triggerDom.dispatchEvent(mouseEvent);
       triggerDom.click();
 
@@ -102,8 +101,10 @@ describe('FlyoutMenu', () => {
     });
 
     it('should dispatch events when called by alt trigger click', () => {
-      const mouseEvent = document.createEvent('MouseEvents');
-      mouseEvent.initEvent('mouseover', true, true);
+      const mouseEvent = new MouseEvent('mouseover', {
+        bubbles: true,
+        cancelable: true,
+      });
       altTriggerDom.dispatchEvent(mouseEvent);
       altTriggerDom.click();
 
@@ -152,7 +153,7 @@ describe('FlyoutMenu', () => {
         'when called by trigger click',
       () => {
         triggerDom.click();
-      }
+      },
     );
 
     it(
@@ -160,7 +161,7 @@ describe('FlyoutMenu', () => {
         'when called by alt trigger click',
       () => {
         altTriggerDom.click();
-      }
+      },
     );
 
     it(
@@ -168,7 +169,7 @@ describe('FlyoutMenu', () => {
         'when called directly',
       () => {
         flyoutMenu.expand();
-      }
+      },
     );
   });
 
@@ -208,7 +209,7 @@ describe('FlyoutMenu', () => {
         'when called by trigger click',
       () => {
         triggerDom.click();
-      }
+      },
     );
 
     it(
@@ -216,7 +217,7 @@ describe('FlyoutMenu', () => {
         'when called by alt trigger click',
       () => {
         altTriggerDom.click();
-      }
+      },
     );
 
     it(
@@ -224,7 +225,7 @@ describe('FlyoutMenu', () => {
         'when called directly',
       () => {
         flyoutMenu.collapse();
-      }
+      },
     );
   });
 
@@ -232,12 +233,12 @@ describe('FlyoutMenu', () => {
     it('should set a transition', async () => {
       flyoutMenu.init();
       const transition = new MoveTransition(contentDom).init(
-        MoveTransition.CLASSES.MOVE_LEFT
+        MoveTransition.CLASSES.MOVE_LEFT,
       );
       flyoutMenu.setTransition(
         transition,
         transition.moveLeft,
-        transition.moveLeft2
+        transition.moveLeft2,
       );
       flyoutMenu.addEventListener('expandend', () => {
         const hasClass = contentDom.classList.contains('u-move-transition');
@@ -265,12 +266,12 @@ describe('FlyoutMenu', () => {
     it('should remove all transitions', () => {
       flyoutMenu.init();
       const transition = new MoveTransition(contentDom).init(
-        MoveTransition.CLASSES.MOVE_TO_ORIGIN
+        MoveTransition.CLASSES.MOVE_TO_ORIGIN,
       );
       flyoutMenu.setTransition(
         transition,
         transition.moveToOrigin,
-        transition.moveLeft
+        transition.moveLeft,
       );
       let hasClass = contentDom.classList.contains('u-move-transition');
       expect(hasClass).toBe(true);

@@ -21,9 +21,10 @@
     text-align: inherit;
   }
 
-  .respond-to-max( @bp-xs-max, {
+  // Mobile only.
+  .respond-to-max(@bp-xs-max, {
     .a-label__heading {
       font-size: 1em;
     }
-  } );
+  });
 }

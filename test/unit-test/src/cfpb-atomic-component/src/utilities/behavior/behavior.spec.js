@@ -111,7 +111,7 @@ describe('behavior', () => {
       () => {
         const dom = checkBehaviorDom(containerDom, 'behavior_flyout-menu');
         expect(dom).toStrictEqual(containerDom);
-      }
+      },
     );
 
     it(
@@ -120,10 +120,10 @@ describe('behavior', () => {
       () => {
         const dom = checkBehaviorDom(
           behaviorElmDom,
-          'behavior_flyout-menu_content'
+          'behavior_flyout-menu_content',
         );
         expect(dom).toStrictEqual(behaviorElmDom);
-      }
+      },
     );
   });
 

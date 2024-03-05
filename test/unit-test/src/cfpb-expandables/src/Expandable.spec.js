@@ -14,7 +14,7 @@ const HTML_SNIPPET = `
             <span class="o-expandable_label">
                 Expandable Header 1
             </span>
-            <span class="o-expandable_link">
+            <span class="o-expandable_cues">
                 <span class="o-expandable_cue-open">
                     Show
                 </span>
@@ -40,7 +40,7 @@ const HTML_SNIPPET = `
             <span class="o-expandable_label">
                 Expandable Header 2
             </span>
-            <span class="o-expandable_link">
+            <span class="o-expandable_cues">
                 <span class="o-expandable_cue-open">
                     Show
                 </span>
@@ -67,7 +67,7 @@ const HTML_SNIPPET = `
         <span class="o-expandable_label">
             Expandable Header 3
         </span>
-        <span class="o-expandable_link">
+        <span class="o-expandable_cues">
             <span class="o-expandable_cue-open">
                 Show
             </span>
@@ -115,10 +115,10 @@ describe('standard Expandable', () => {
   describe('initialized state', () => {
     it('should be initialized', () => {
       expect(expandableDom1.getAttribute('data-js-hook')).toBe(
-        'state_atomic_init behavior_flyout-menu'
+        'state_atomic_init behavior_flyout-menu',
       );
       expect(expandableDom2.getAttribute('data-js-hook')).toBe(
-        'state_atomic_init behavior_flyout-menu'
+        'state_atomic_init behavior_flyout-menu',
       );
     });
 
@@ -188,10 +188,10 @@ describe('accordion Expandables', () => {
   describe('initialized state', () => {
     it('should be initialized', () => {
       expect(expandableDom1.getAttribute('data-js-hook')).toBe(
-        'state_atomic_init behavior_flyout-menu'
+        'state_atomic_init behavior_flyout-menu',
       );
       expect(expandableDom2.getAttribute('data-js-hook')).toBe(
-        'state_atomic_init behavior_flyout-menu'
+        'state_atomic_init behavior_flyout-menu',
       );
     });
 

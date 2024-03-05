@@ -48,10 +48,6 @@ variation_groups:
           @btn-border-radius-size:    4px;
           @btn-v-padding:             8px;
           @btn-h-padding:             14px;
-          @btn-v-padding-modifier-ie: 0.8;
-
-          // .btn__super
-          @btn__super-font-size:      18px;
           ```
   - variation_group_name: Forms
     variations:
@@ -113,7 +109,7 @@ variation_groups:
     variation_group_description: >-
       ```
 
-      @grid_wrapper-width: 1200px;
+      @grid_wrapper-width: 1230px;
 
       ```
 
@@ -280,9 +276,6 @@ variation_groups:
           ```
           // Running text elements
 
-          // .a-micro-copy
-          @micro-copy:                @black;
-
           // .a-date
           @date:                      @gray;
 
@@ -356,51 +349,27 @@ variation_groups:
           @size-code:           13px; // Custom size only for Mono code blocks
 
           ```
-      - variation_name: Fonts
+      - variation_name: Font stack
         variation_description: >-
-          #### Avenir
+          Override this variable in order to specify a font stack other than the
+          CFPB's default brand font and fallback.
 
-          ```
-
-          @webfont-regular:     'AvenirNextLTW01-Regular';
-
-          @webfont-italic:      @webfont-regular;
-
-          @webfont-medium:      'AvenirNextLTW01-Medium';
-
-          @webfont-demi:        @webfont-medium;
-
-          ```
-
-          *Note: We don’t serve the font file for Avenir Next Italic because we found Avenir Next Regular with browser-created faux italics was an acceptable substitute, and it saves a lot of bytes not to serve it.*
-
-
-          *Similarly, we’re trying out Avenir Next Medium with faux bolding in place of Avenir Next Demi, though the results of that experiment have been less predictable, so we may yet revert that decision.*
-
-
-          #### Arial
-
-          ```
-
-          @webfont-regular:      Arial;
-
-          @webfont-italic:       Arial;
-
-          @webfont-medium:       Arial;
-
-          @webfont-demi:         Arial;
-
-          ```
-        variation_code_snippet: ''
-      - variation_name: Font source variables
+          `@font-stack: 'Avenir Next', Arial, sans-serif;`
+      - variation_name: '@font-face file path'
         variation_description: >-
-          Use this variable to specify where the fonts files used in the
-          @webfont-* variables are located when self-hosting fonts. Can be
-          either a relative or absolute path.
+          Use this variable to point to the file containing your `@font-face`
+          rules. To use none, set it to an empty string.
+
+          `@font-face-path: 'licensed-fonts.less';`
+      - variation_name: Font source
+        variation_description: >-
+          Use this variable to specify where the fonts declared in
+          `licensed-fonts.less` are located when self-hosting the font files.
+          Can be either a relative or absolute path.
 
           ```
 
-          @cf-fonts-path: '/fonts'`
+          @cf-fonts-path: '/static/fonts'`;
 
           ```
 ---

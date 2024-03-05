@@ -17,8 +17,6 @@ and has more basic typography patterns.
   - [Color variables](#color-variables)
   - [Font variables](#font-variables)
   - [Font source variables](#font-source-variables)
-- [Headings](#headings)
-  - [Heading with icon](#heading-with-icon)
 - [Headers](#headers)
   - [Slug header](#slug-header)
   - [Meta header](#meta-header)
@@ -31,7 +29,6 @@ and has more basic typography patterns.
   - [Horizontal list modifier](#horizontal-list-modifier)
   - [Link list modifier](#link-list-modifier)
 - [Miscellaneous text](#miscellaneous-text)
-  - [Micro copy](#micro-copy)
   - [Date](#date)
   - [Pull quote](#pull-quote)
 
@@ -49,9 +46,6 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ```
 // Running text elements
-
-// .a-micro-copy
-@micro-copy:                @black;
 
 // .a-date
 @date:                      @gray;
@@ -72,9 +66,6 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 @slug-header_border__thin:  @gray-10;
 @slug-header_border__thick: @green;
 
-// .m-meta-header
-@meta-header_border:        @gray-40;
-
 // Links
 
 // .a-link__jump
@@ -85,11 +76,17 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 ### Font variables
 
 ```
-@webfont-regular: 'AvenirNextLTW01-Regular';
-@webfont-italic: @webfont-regular;
-@webfont-medium: 'AvenirNextLTW01-Medium';
-@webfont-demi: @webfont-medium;
+@font-stack: "Avenir Next", Arial, sans-serif;
 ```
+
+#### Webfont variables
+
+```
+@font-face-path: 'licensed-fonts.less';
+```
+
+Use this variable to point to the file containing your `@font-face` rules.
+To use none, set it to an empty string.
 
 **Note:** We don't serve the font file for Avenir Next Italic
 because we found Avenir Next Regular with browser-created faux italics
@@ -99,48 +96,28 @@ Similarly, we're trying out Avenir Next Medium with faux bolding
 in place of Avenir Next Demi, though the results of that experiment
 have been less predictable, so we may yet revert that decision.
 
-### Font source variables
+```
+@cf-fonts-path: '/static/fonts';
+```
 
-Use this variable to specify where the fonts files used in the `@webfont-*`
-variables are located when self-hosting fonts.
+Use this variable to specify where
+the fonts declared in `licensed-fonts.less`
+are located when self-hosting the font files.
 Can be either a relative or absolute path.
-
-```
-@cf-fonts-path: '/fonts'
-```
-
-### Heading with icon
-
-The heading with icon is typically used for listing categories in a meta
-header. Since categories can be repetitive, we suggest placing a label with
-`.u-visually-hidden` prior to the headings to add more context for screen
-readers (see Meta Header below).
-
-<a href="#" class="a-heading a-heading__icon">
-    {% include icons/dialogue.svg %}
-    Consumer finance
-</a>
-
-```
-<a href="#" class="a-heading a-heading__icon">
-    {% raw %}{% include icons/dialogue.svg %}{% endraw %}
-    Consumer finance
-</a>
-```
 
 ## Headers
 
 ### Slug header
 
 <header class="m-slug-header">
-    <h2 class="a-heading">
+    <h2 class="m-slug-header_heading">
         Blog summary
     </h2>
 </header>
 
 ```
 <header class="m-slug-header">
-    <h2 class="a-heading">
+    <h2 class="m-slug-header_heading">
         Blog summary
     </h2>
 </header>
@@ -148,54 +125,48 @@ readers (see Meta Header below).
 
 ### Meta header
 
-Note that the example shows `.m-meta-header_left` using the `.a-heading__icon`
-pattern and `.m-meta-header_right` using the `.a-date` pattern but you could use
-other patterns in place of them. Or you can even swap them so that date is
-attached to `.m-meta-header_left` and `.a-heading.a-heading__icon` is attached to
-`.m-meta-header_right`.
-
 #### Default meta header
 
-<header class="m-meta-header">
-    <div class="m-meta-header_right">
+<div class="m-meta-header">
+    <div class="m-meta-header_item-group">
+    <div class="m-meta-header_item">
+        {% include icons/chart.svg %}
+        Office of Research Publication
+    </div>
+    <div class="m-meta-header_item">
+        {% include icons/bank.svg %}
+        Policy and compliance
+    </div>
+    </div>
+    <div class="m-meta-header_item">
         <span class="a-date">
-            Nov 4, 2013
+            Published
+            <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
+            </span>
         </span>
     </div>
-    <div class="m-meta-header_left">
-        <span class="u-visually-hidden">Categories: </span>
-        <a href="#" class="a-heading a-heading__icon">
-            {% include icons/credit-card.svg %}
-            Consumer finance
-        </a>
-        |
-        <a href="#" class="a-heading a-heading__icon">
-            {% include icons/bullhorn.svg %}
-            At the CFPB
-        </a>
-    </div>
-</header>
+</div>
 
 ```
-<header class="m-meta-header">
-    <div class="m-meta-header_right">
+<div class="m-meta-header">
+    <div class="m-meta-header_item-group">
+    <div class="m-meta-header_item">
+        {% include icons/chart.svg %}
+        Office of Research Publication
+    </div>
+    <div class="m-meta-header_item">
+        {% include icons/bank.svg %}
+        Policy and compliance
+    </div>
+    </div>
+    <div class="m-meta-header_item">
         <span class="a-date">
-            Nov 4, 2013
+            Published
+            <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
+            </span>
         </span>
     </div>
-    <div class="m-meta-header_left">
-        <span class="u-visually-hidden">Categories: </span>
-        <a href="#" class="a-heading a-heading__icon">
-            {% raw %}{% include icons/credit-card.svg %}{% endraw %}
-            Consumer finance
-        </a>
-        |
-        <a href="#" class="a-heading a-heading__icon">
-            {% raw %}{% include icons/bullhorn.svg %}{% endraw %}
-            At the CFPB
-        </a>
-    </div>
-</header>
+</div>
 ```
 
 ## Link patterns
@@ -309,30 +280,6 @@ to full block links that have a finger-friendly touch area.
 </a>
 ```
 
-#### Jump link with large link modifier
-
-The large jump link has an `18px` `font-size`, compared to the default of `16px`.
-
-<a class="a-link
-          a-link__jump
-          a-link__icon-after-text
-          a-link__large"
-   href="#">
-<span class="a-link_text">Large jump link</span>
-{% include icons/right.svg %}
-</a>
-
-```
-<a class="a-link
-          a-link__jump
-          a-link__icon-after-text
-          a-link__large"
-   href="#">
-    <span class="a-link_text">Large jump link</span>
-    {% raw %}{% include icons/right.svg %}{% endraw %}
-</a>
-```
-
 #### Jump link with icon on the left
 
 Jump links can also have icons before the text, like icon links.
@@ -352,30 +299,6 @@ Jump links can also have icons before the text, like icon links.
    href="#">
     {% raw %}{% include icons/left.svg %}{% endraw %}
     <span class="a-link_text">Jump link with icon on left</span>
-</a>
-```
-
-#### Jump link with background modifier (only visible on small screens)
-
-<a class="a-link
-          a-link__jump
-          a-link__icon-after-text
-          a-link__bg"
-   href="#">
-<span class="a-link_text">Jump link with grey background and
-solid borders on small screens</span>
-{% include icons/right.svg %}
-</a>
-
-```
-<a class="a-link
-          a-link__jump
-          a-link__icon-after-text
-          a-link__bg"
-   href="#">
-    <span class="a-link_text">Jump link with grey background and
-        solid borders on small screens</span>
-    {% raw %}{% include icons/right.svg %}{% endraw %}
 </a>
 ```
 
@@ -501,21 +424,6 @@ screens.
 
 ## Miscellaneous Text
 
-### Micro copy
-
-The `.a-micro-copy` class is good for highlighting small pieces of text,
-typically legal copy.
-
-<p class="a-micro-copy">
-    Lorem ipsum dolor sit amet
-</p>
-
-```
-<p class="a-micro-copy">
-    Lorem ipsum dolor sit amet
-</p>
-```
-
 ### Date
 
 <span class="a-date">
@@ -557,36 +465,6 @@ you should use the `aside` element.
         Cum corrupti tempora nam nihil qui mollitia consectetur
         corporis nemo culpa dolorum!
     </p>
-    <footer>
-        <cite class="m-pull-quote_citation">
-            Author Name
-        </cite>
-    </footer>
-</aside>
-```
-
-#### Large pull quote
-
-<aside class="m-pull-quote m-pull-quote__large">
-    <div class="m-pull-quote_body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Cum corrupti tempora nam nihil qui mollitia consectetur
-        corporis nemo culpa dolorum!
-    </div>
-    <footer>
-        <cite class="m-pull-quote_citation">
-            Author Name
-        </cite>
-    </footer>
-</aside>
-
-```
-<aside class="m-pull-quote m-pull-quote__large">
-    <div class="m-pull-quote_body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Cum corrupti tempora nam nihil qui mollitia consectetur
-        corporis nemo culpa dolorum!
-    </div>
     <footer>
         <cite class="m-pull-quote_citation">
             Author Name

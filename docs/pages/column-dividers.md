@@ -9,36 +9,6 @@ variation_groups:
       - variation_code_snippet: <div class="content_line"></div>
         variation_description: A 1 pixel edge to edge bar that can divide content.
         variation_name: Content line
-      - variation_code_snippet: >-
-          <div class="content-l content-l__large-gutters">
-              <div class="content-l_col content-l_col-1-2">
-                  <img src="https://dummyimage.com/600x320/addc91/101820" alt="Placeholder image">
-                  <br>
-                  Half-width column (spans 6/12 columns)
-              </div>
-              <div class="content-l_col content-l_col-1-2 content-l_col__before-divider">
-                  <img src="https://dummyimage.com/600x320/addc91/101820" alt="Placeholder image">
-                  <br>
-                  Half-width column (spans 6/12 columns)
-              </div>
-          </div>
-
-          <br>
-
-          <!-- Starting a new .content-l so that the dividers from
-              .content-l_col.content-l_col-1-2.content-l_col__before-divider
-              won't overlap the .content-l_col-1-3 columns. -->
-          <div class="content-l content-l__large-gutters">
-              <div class="content-l_col content-l_col-1-3">
-                  Third-width column (spans 4/12 columns)
-              </div>
-              <div class="content-l_col content-l_col-1-3 content-l_col__before-divider">
-                  Third-width column (spans 4/12 columns)
-              </div>
-              <div class="content-l_col content-l_col-1-3 content-l_col__before-divider">
-                  Third-width column (spans 4/12 columns)
-              </div>
-          </div>
         variation_description: >-
           Adds dividers between specified `.content-l_col-X-X` classes.
 

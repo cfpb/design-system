@@ -46,10 +46,10 @@ nav ul {
   margin: 0 auto;
   padding: 0 30px;
 
-  // Mobile size.
-  .respond-to-max( @bp-xs-max, {
+  // Mobile only.
+  .respond-to-max(@bp-xs-max, {
     padding: 0;
-  } );
+  });
 }
 
 main {
@@ -116,8 +116,8 @@ main {
   }
 }
 
-// Mobile size.
-.respond-to-max( @bp-xs-max, {
+// Mobile only.
+.respond-to-max(@bp-xs-max, {
 
   main {
     padding: 0;
@@ -143,7 +143,7 @@ main {
   .ds-footer {
     padding: 0 15px;
   }
-} );
+});
 
 // Example shapes - for transition examples.
 

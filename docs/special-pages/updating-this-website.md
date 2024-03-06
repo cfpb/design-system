@@ -24,7 +24,7 @@ description: >-
 
   ## Editing pages
 
-  <strong>Before making a change to a pattern or its documentation, visit Hubcap to read our Design System governance policy.</strong> It contains guidance and acceptance criteria for making minor and major changes to the Design System. 
+  <strong>Before making a change to a pattern or its documentation, visit Hubcap to read our Design System governance policy.</strong> It contains guidance and acceptance criteria for making minor and major changes to the Design System.
 
 
   We use a content management system called [Netlify CMS](https://www.netlifycms.org/).
@@ -33,7 +33,7 @@ description: >-
 
 
   <div class="o-expandable-group o-expandable-group__accordion">
-      <div class="o-expandable o-expandable__padded">
+      <div class="o-expandable">
           <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
@@ -57,7 +57,7 @@ description: >-
               </div>
           </div>
       </div>
-      <div class="o-expandable o-expandable__padded">
+      <div class="o-expandable">
           <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
@@ -84,7 +84,7 @@ description: >-
               </div>
           </div>
       </div>
-      <div class="o-expandable o-expandable__padded">
+      <div class="o-expandable">
           <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
@@ -108,7 +108,7 @@ description: >-
               </div>
           </div>
       </div>
-      <div class="o-expandable o-expandable__padded">
+      <div class="o-expandable">
           <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
@@ -135,7 +135,7 @@ description: >-
               </div>
           </div>
       </div>
-      <div class="o-expandable o-expandable__padded">
+      <div class="o-expandable">
           <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
@@ -162,7 +162,7 @@ description: >-
               </div>
           </div>
       </div>
-      <div class="o-expandable o-expandable__padded">
+      <div class="o-expandable">
           <button class="o-expandable_header"
                   title="Expand content">
               <h3 class="h4 o-expandable_label">
@@ -212,7 +212,7 @@ description: >-
   ## Creating new pages
 
 
-  <strong>Before adding a pattern to the Design System, visit Hubcap to read our Design System governance policy.</strong> It contains guidance and acceptance criteria for creating new patterns. 
+  <strong>Before adding a pattern to the Design System, visit Hubcap to read our Design System governance policy.</strong> It contains guidance and acceptance criteria for creating new patterns.
 
 
   1. To create a new page from scratch, click the "Create new page" button below.

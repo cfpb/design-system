@@ -25,7 +25,8 @@
   &_header {
     display: flex;
     justify-content: space-between;
-    padding: 0;
+    padding: unit((10px / @base-font-size-px), em)
+      unit((15px / @base-font-size-px), em);
     border: 0;
     background-color: transparent;
     cursor: pointer;
@@ -80,33 +81,31 @@
     line-height: unit((@base-line-height-px / @btn-font-size));
   }
 
+  &_content {
+    padding: unit((15px / @base-font-size-px), em);
+    padding-top: 0;
+
+    // The divider between _header and _content.
+    &::before {
+      content: '';
+      display: block;
+      border-top: 1px solid @expandable__border;
+      padding-top: unit((15px / @base-font-size-px), em);
+    }
+
+    &::after {
+      padding-bottom: unit((15px / @base-font-size-px), em);
+      width: 100%;
+    }
+  }
+
   //
   // Padded expandable modifier
   //
 
-  // TODO: it's unlikely we need a padded modifier. This should probably be folded into the default.
   &__padded {
-    .o-expandable_header {
-      padding: unit((10px / @base-font-size-px), em)
-        unit((15px / @base-font-size-px), em);
-    }
-
-    .o-expandable_content {
+    .o-expandable_label {
       padding: unit((15px / @base-font-size-px), em);
-      padding-top: 0;
-
-      // The divider between _header and _content.
-      &::before {
-        content: '';
-        display: block;
-        border-top: 1px solid @expandable__border;
-        padding-top: unit((15px / @base-font-size-px), em);
-      }
-
-      &::after {
-        padding-bottom: unit((15px / @base-font-size-px), em);
-        width: 100%;
-      }
     }
   }
 
@@ -131,7 +130,7 @@
   //
 
   &-group {
-    .o-expandable__padded {
+    .o-expandable {
       border-bottom: 1px solid @expandable__border;
 
       &:first-child {

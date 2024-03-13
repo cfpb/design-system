@@ -197,7 +197,7 @@
   // Output the `.swatch_field__color` rule
   .swatch_field__@{name} {
     /* prettier-ignore */
-    background: var(--@name);
+    background: ~"var(--@{name})";
   }
   // Call the next iteration of the loop
   .color-swatch-loop( @index - 1 );

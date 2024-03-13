@@ -45,23 +45,27 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 @btn-bg:                    @pacific;
 @btn-bg-hover:              @pacific-dark;
 @btn-bg-active:             @navy;
+@btn-divider:               @pacific-60;
 
 // .btn__secondary
 @btn__secondary-text:       @white;
 @btn__secondary-bg:         @gray;
 @btn__secondary-bg-hover:   @gray-dark;
 @btn__secondary-bg-active:  @black;
+@btn__secondary-divider:    @gray-40;
 
 // .btn__warning
 @btn__warning-text:         @white;
 @btn__warning-bg:           @red-mid-dark;
 @btn__warning-bg-hover:     @red-dark;
 @btn__warning-bg-active:    @gray-dark;
+@btn__warning-divider:      @red-60;
 
 // .btn__disabled
 @btn__disabled-text:        @gray;
 @btn__disabled-bg:          @gray-20;
 @btn__disabled-outline:     @gray-20;
+@btn__disabled-divider:     @gray-60;
 ```
 
 ### Sizing variables

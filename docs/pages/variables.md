@@ -21,23 +21,27 @@ variation_groups:
           @btn-bg:                    var(--pacific);
           @btn-bg-hover:              var(--pacific-dark);
           @btn-bg-active:             var(--navy);
+          @btn-divider:               var(--pacific-60);
 
           // .btn__secondary
           @btn__secondary-text:       var(--white);
           @btn__secondary-bg:         var(--gray);
           @btn__secondary-bg-hover:   var(--gray-dark);
           @btn__secondary-bg-active:  var(--black);
+          @btn__secondary-divider:    var(--gray-40);
 
           // .btn__warning
           @btn__warning-text:         var(--white);
           @btn__warning-bg:           var(--red-mid-dark);
           @btn__warning-bg-hover:     var(--red-dark);
           @btn__warning-bg-active:    var(--gray-dark);
+          @btn__warning-divider:      var(--red-60);
 
           // .btn__disabled
           @btn__disabled-text:        var(--gray);
           @btn__disabled-bg:          var(--gray-20);
           @btn__disabled-outline:     var(--gray-20);
+          @btn__disabled-divider:     var(--gray-60);
           ```
         variation_code_snippet: ''
       - variation_name: Sizing

@@ -1,14 +1,11 @@
 {
   "name": "@cfpb/cfpb-core",
-  "version": "0.37.0",
+  "version": "0.38.0",
   "description": "Design System core styles",
   "less": "src/cfpb-core.less",
   "style": "cfpb-core.css",
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "normalize-css": "^2.0.0"
   },
   "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e",
   "type": "module"

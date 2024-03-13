@@ -68,6 +68,7 @@ node_modules/
 .changelog/
 yarn-error.log
 test/unit-test-coverage/
+test/cypress/screenshots
 
 # Documentation #
 #################

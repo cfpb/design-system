@@ -50,7 +50,6 @@
     "lunr": "2.3.9",
     "marked": "12.0.0",
     "netlify-cms": "2.10.192",
-    "normalize-css": "2.3.1",
     "react": "18.2.0",
     "react-is": "18.2.0",
     "react-liquid": "2.0.1",
@@ -101,5 +100,5 @@
     "singleQuote": true
   },
   "type": "module",
-  "version": "0.37.2"
+  "version": "0.38.0"
 }

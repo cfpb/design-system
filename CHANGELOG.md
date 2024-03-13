@@ -1,4 +1,22 @@
 
+## v0.38.0 (2024-03-06)
+
+#### Breaking Change
+* `cfpb-forms`, `cfpb-icons`
+  * [#1923](https://github.com/cfpb/design-system/pull/1923) cfpb-icons: Change inline SVG fill color argument to grayscale boolean flag ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-expandables`
+  * [#1924](https://github.com/cfpb/design-system/pull/1924) Merge o-expandable__padded into default and create new o-expandable__padded variant ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1922](https://github.com/cfpb/design-system/pull/1922) Update html-entities, autoprefixer, cypress, eslint, eslint-plugin-jsdoc, eslint-plugin-react ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.37.2 (2024-02-22)
 
 #### Breaking Change

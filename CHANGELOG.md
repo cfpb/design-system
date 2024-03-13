@@ -1,4 +1,25 @@
 
+## v0.39.0 (2024-03-13)
+
+#### Breaking Change
+* `cfpb-design-system`, `cfpb-forms`
+  * [#1926](https://github.com/cfpb/design-system/pull/1926) Remove deprecated `.a-error-message` ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-buttons`
+  * [#1921](https://github.com/cfpb/design-system/pull/1921) Remove mix(…) utility and replace with hardcoded palette values ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-core`, `cfpb-grid`
+  * [#1920](https://github.com/cfpb/design-system/pull/1920) Merge normalize-css into repo ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Documentation
+* `cfpb-expandables`
+  * [#1925](https://github.com/cfpb/design-system/pull/1925) Remove `o-expandable__padded` from docs ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.38.0 (2024-03-06)
 
 #### Breaking Change

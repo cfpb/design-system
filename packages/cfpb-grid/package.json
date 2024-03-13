@@ -7,9 +7,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "normalize-css": "^2.0.0"
-  },
   "keywords": [
     "grid"
   ],

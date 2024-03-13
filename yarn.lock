@@ -6120,11 +6120,6 @@ inquirer@^8.2.4:
     through "^2.3.6"
     wrap-ansi "^6.0.1"
 
-insert-css@0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/insert-css/-/insert-css-0.0.0.tgz#2304bfa6f893abecb8ff9ca8d9c7605d94cf2911"
-  integrity sha512-PwixL1rVtKkM1gz43tEHwZ2sUOYmWB5zk/9YiEmOxERqjfIkkMY4jwrl3v3e9NLzblEdkBuMLiTLm/0sHMx4qA==
-
 internal-slot@^1.0.5, internal-slot@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/internal-slot/-/internal-slot-1.0.7.tgz#c06dcca3ed874249881007b0a5523b172a190802"
@@ -8871,13 +8866,6 @@ nopt@^7.0.0:
   integrity sha512-CVDtwCdhYIvnAzFoJ6NJ6dX3oga9/HyciQDnG1vQDjSLMeKLJ4A93ZqYKDrgYSr1FBY5/hMYC+2VCi24pgpkGA==
   dependencies:
     abbrev "^2.0.0"
-
-normalize-css@2.3.1, normalize-css@^2.0.0:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/normalize-css/-/normalize-css-2.3.1.tgz#fc03e3b91e3a51aa7a1836bae7b2b6ac6d51e156"
-  integrity sha512-70Lnkke3P+8ehu56S0M0yoUTgTve/rCrEncjdgPmKER/TLZMRa30rFLW7Yv3iGZldmGV4bGevGW47VOfZJbGyw==
-  dependencies:
-    insert-css "0.0.0"
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.5.0:
   version "2.5.0"

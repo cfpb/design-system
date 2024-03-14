@@ -13,7 +13,7 @@ variation_groups:
                       o-expandable__border">
               <button class="o-expandable_header"
                       title="Expand content">
-                  <h3 class="h4 o-expandable_label">
+                  <h3 class="o-expandable_label">
                       Expandable header
                   </h3>
                   <span class="o-expandable_cues">
@@ -81,7 +81,7 @@ variation_groups:
 
           * {string} The text of the expandable’s label.
       - variation_name: Padded expandable
-        variation_description: A variation with a padded label. This also shows what an icon in the header text looks like.
+        variation_description: A variation with a padded label and larger text. This also shows what an icon in the header text looks like, which should be wrapped in a `o-expandable_icon` class.
         variation_code_snippet: >-
           <div class="o-expandable
                       o-expandable__padded
@@ -89,8 +89,10 @@ variation_groups:
                       o-expandable__border">
               <button class="o-expandable_header"
                       title="Expand content">
-                  {% include icons/bank.svg %}
-                  <h3 class="h4 o-expandable_label">
+                  <span class="o-expandable_icon">
+                      {% include icons/bank.svg %}
+                  </span>
+                  <h3 class="o-expandable_label">
                       Expandable header
                   </h3>
                   <span class="o-expandable_cues">
@@ -124,7 +126,7 @@ variation_groups:
                       o-expandable__onload-open">
               <button class="o-expandable_header"
                       title="Expand content">
-                  <h3 class="h4 o-expandable_label">
+                  <h3 class="o-expandable_label">
                       Expandable header
                   </h3>
                   <span class="o-expandable_cues">
@@ -168,7 +170,7 @@ variation_groups:
               <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_label">
+                      <h3 class="o-expandable_label">
                           Expandable header
                       </h3>
                       <span class="o-expandable_cues">
@@ -194,7 +196,7 @@ variation_groups:
               <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_label">
+                      <h3 class="o-expandable_label">
                           Expandable header
                       </h3>
                       <span class="o-expandable_cues">
@@ -220,7 +222,7 @@ variation_groups:
               <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_label">
+                      <h3 class="o-expandable_label">
                           Expandable header
                       </h3>
                       <span class="o-expandable_cues">
@@ -260,7 +262,7 @@ variation_groups:
               <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_label">
+                      <h3 class="o-expandable_label">
                           Expandable header
                       </h3>
                       <span class="o-expandable_cues">
@@ -286,7 +288,7 @@ variation_groups:
               <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_label">
+                      <h3 class="o-expandable_label">
                           Expandable header
                       </h3>
                       <span class="o-expandable_cues">
@@ -348,7 +350,7 @@ variation_groups:
               <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
-                      <h3 class="h4 o-expandable_label">
+                      <h3 class="o-expandable_label">
                           Expandable header
                       </h3>
                       <span class="o-expandable_cues">

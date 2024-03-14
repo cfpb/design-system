@@ -56,11 +56,6 @@
       width: 100%;
       text-align: left;
     }
-
-    .o-expandable_label {
-      // Grow to available width.
-      flex-grow: 1;
-    }
   }
 
   //
@@ -68,10 +63,24 @@
   //
 
   &_label {
+    // Grow to available width.
+    flex-grow: 1;
+
     // Remove default h4 margin style
     margin-bottom: 0;
     color: @black;
     font-weight: 500;
+  }
+
+  &_icon,
+  &_label {
+    // h4 size.
+    font-size: unit(18px / @base-font-size-px, em);
+
+    // Mobile only.
+    .respond-to-max(@bp-xs-max, {
+      font-size: unit(16px / @base-font-size-px, em);
+    });
   }
 
   &_cues {
@@ -104,8 +113,22 @@
   //
 
   &__padded {
-    .o-expandable_label {
-      padding: unit((15px / @base-font-size-px), em) 0;
+    .o-expandable {
+      &_header {
+        padding: unit((25px / @base-font-size-px), em)
+          unit((15px / @base-font-size-px), em);
+      }
+
+      &_icon,
+      &_label {
+        // h2 size.
+        font-size: unit(26px / @base-font-size-px, em);
+
+        // Mobile only.
+        .respond-to-max(@bp-xs-max, {
+          font-size: unit(22px / @base-font-size-px, em);
+        });
+      }
     }
   }
 

@@ -66,8 +66,9 @@ coverage.xml
 node_modules/
 .npmrc
 .changelog/
-yarn-error.log
 test/unit-test-coverage/
+test/cypress/screenshots
+yarn-error.log
 .yarn/*
 !.yarn/patches
 !.yarn/plugins

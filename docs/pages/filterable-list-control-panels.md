@@ -13,7 +13,6 @@ variation_groups:
           <div id="o-filterable-list-controls"
           class="o-filterable-list-controls">
               <div class="o-expandable
-                  o-expandable__padded
                   o-expandable__background
                   o-expandable__border
                   o-expandable__onload-open">

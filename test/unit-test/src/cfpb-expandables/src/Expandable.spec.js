@@ -8,7 +8,7 @@ const HTML_SNIPPET = `
 <div class="o-expandable-group"
      id="test-group-one">
 
-    <div class="o-expandable o-expandable__padded" id="test-subject-one">
+    <div class="o-expandable" id="test-subject-one">
         <button class="o-expandable_header"
                 title="Expand content">
             <span class="o-expandable_label">
@@ -34,7 +34,7 @@ const HTML_SNIPPET = `
         </div>
     </div>
 
-    <div class="o-expandable o-expandable__padded" id="test-subject-two">
+    <div class="o-expandable" id="test-subject-two">
         <button class="o-expandable_header"
                 title="Expand content">
             <span class="o-expandable_label">
@@ -61,7 +61,7 @@ const HTML_SNIPPET = `
     </div>
 </div>
 
-<div class="o-expandable o-expandable__padded" id="test-subject-two">
+<div class="o-expandable" id="test-subject-two">
     <button class="o-expandable_header"
             title="Expand content">
         <span class="o-expandable_label">

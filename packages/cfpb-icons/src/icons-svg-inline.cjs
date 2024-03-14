@@ -14,10 +14,10 @@ module.exports = {
   install: function (less, pluginManager, functions) {
     /**
      * @param {string} svgName - The canonical name of the icon.
-     * @param {string} svgFillColor - The fill color of the icon (defaults to CFPB Black).
+     * @param {boolean} isGrayscale - Whether the icon is gray or black.
      * @returns {string} SVG icon markup.
      */
-    functions.add('icons-svg-inline', (svgName, svgFillColor) => {
+    functions.add('icons-svg-inline', (svgName, isGrayscale) => {
       // Retrieve this plugin script's path so we can fake __dirname.
       let filenamePathPieces;
       let thisScriptPath;
@@ -47,9 +47,12 @@ module.exports = {
         'utf8',
       );
 
+      const fillColor =
+        isGrayscale.value === 'true' ? 'rgb(90,93,97)' : 'rgb(0,0,0)';
+
       /* Replace the cf-icon-svg class (used only in the embedded markup)
          with a fill color. */
-      svg = svg.replace('class="cf-icon-svg"', `fill="${svgFillColor.value}"`);
+      svg = svg.replace(/class="cf-icon-svg .+" /, `fill="${fillColor}" `);
 
       return encodeURI(svg);
     });

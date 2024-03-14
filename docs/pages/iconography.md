@@ -565,7 +565,7 @@ guidelines: >-
   ### Icon artboard
 
 
-  Because our icons typically appear beside text we designed our icon artboards (in Illustrator) to match the vertical footprint of Avenir Next. Avenir Next text set to a font size of 16px has a rendered height of 19px. To account for the additional white space, we set the icon artboards to 19px (h). 
+  Because our icons typically appear beside text we designed our icon artboards (in Illustrator) to match the vertical footprint of Avenir Next. Avenir Next text set to a font size of 16px has a rendered height of 19px. To account for the additional white space, we set the icon artboards to 19px (h).
 
 
   ![Diagram of illustrator artboard icon grid](/design-system/images/uploads/icon_artboard.png)
@@ -574,7 +574,7 @@ guidelines: >-
   ### Relative sizing
 
 
-  When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. Refer to our guidelines on [how type should scale relative to neighboring text](https://cfpb.github.io/design-system/foundation/iconography#scale). 
+  When typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. Refer to our guidelines on [how type should scale relative to neighboring text](https://cfpb.github.io/design-system/foundation/iconography#scale).
 
 
   When designing these icons, we used two sizing grids: a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.
@@ -601,7 +601,7 @@ guidelines: >-
   The color of an icon should match the color of neighboring text. This setting is built into our code and happens automatically, provided that the icon is within the same parent element as the text. If the icon sits outside of the text’s parent element the color must be applied manually but should still match the color of the text.
 
 
-  Code examples: 
+  Code examples:
 
 
   * Heading color automatically applied to the icon: `<h2>{icon} Heading text</h2>`
@@ -615,10 +615,10 @@ guidelines: >-
   Icons should be scaled relative to the size of neighboring text. This setting is built into our code and happens automatically, provided that the icon is within the same parent element as the text. If the icon sits outside of the text’s parent element the scaling must be applied manually but the icon should still be scaled relative to the size of the text.
 
 
-  In code, the SVG height is scaled to match the rendered text height, calculated by dividing the rendered height by the assigned font size (19/16 = 1.1875em). This appears in the code as @cf-icon-height: 1.1875em. 
+  In code, the SVG height is scaled to match the rendered text height, calculated by dividing the rendered height by the assigned font size (19/16 = 1.1875em). This appears in the code as @cf-icon-height: 1.1875em.
 
 
-  Code examples: 
+  Code examples:
 
 
   * Icon is automatically scaled relative to the heading size: `<h2>{icon} Heading text</h2>`
@@ -684,7 +684,7 @@ behavior: >-
   #### What the Less is doing
 
 
-  If you look in [cfpb-icons.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.less)  you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element. 
+  If you look in [cfpb-icons.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.less)  you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.
 
 
   We start by limiting the size of the SVG to a proportion of the text height, using the `@cf-icon-height` variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set `vertical-align: text-top;`. Finally, setting `fill: currentColor;` tells the SVG to set its path’s fill `color` to match the color value of its parent element.
@@ -693,7 +693,7 @@ behavior: >-
   #### Inline SVG background
 
 
-  In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS background-image property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @color: @black )`, where @name is the SVG icon canonical name and `@color` is the SVG fill color (which defaults to black). 
+  In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS background-image property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @is-grayscale )`, where @name is the SVG icon canonical name and `@is-grayscale` is whether the SVG fill color is gray (true) or black (false).
 
 
   ### Interaction details

@@ -24,12 +24,8 @@
 // into a background-image property.
 @plugin "icons-svg-inline.cjs";
 
-.u-svg-inline-bg( @name, @color: @black ) {
-  @red: red(@color);
-  @green: green(@color);
-  @blue: blue(@color);
-  @rgb-color: 'rgb(@{red}, @{green}, @{blue})';
-  @svg: icons-svg-inline(@name, @rgb-color);
+.u-svg-inline-bg( @name, @is-grayscale: false ) {
+  @svg: icons-svg-inline(@name, @is-grayscale);
 
   background-image: url('data:image/svg+xml;charset=UTF-8,@{svg}');
 }

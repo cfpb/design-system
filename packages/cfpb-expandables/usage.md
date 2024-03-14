@@ -36,11 +36,7 @@ to the `.o-expandable` block.
 
 ### Padded
 
-Adds `padding` and a `background` color to `.o-expandable_header` and
-`.o-expandable_content`.
-
-In addition to using the `.o-expandable__padded` modifier you also need to make
-sure you are using `.o-expandable_header`.
+Adds `padding` to the `.o-expandable_label`.
 
 ```
 .o-expandable__padded
@@ -91,7 +87,6 @@ and modifiers described throughout.
 The following combination is our recommended go-to expandable pattern.
 
 <div class="o-expandable
-            o-expandable__padded
             o-expandable__background
             o-expandable__border">
     <button class="o-expandable_header"
@@ -121,7 +116,6 @@ The following combination is our recommended go-to expandable pattern.
 
 ```
 <div class="o-expandable
-            o-expandable__padded
             o-expandable__background
             o-expandable__border">
     <button class="o-expandable_header"
@@ -153,7 +147,6 @@ The following combination is our recommended go-to expandable pattern.
 ### Default state (open on load)
 
 <div class="o-expandable
-            o-expandable__padded
             o-expandable__background
             o-expandable__border
             o-expandable__onload-open">
@@ -184,7 +177,6 @@ The following combination is our recommended go-to expandable pattern.
 
 ```
 <div class="o-expandable
-            o-expandable__padded
             o-expandable__background
             o-expandable__border
             o-expandable__onload-open">
@@ -221,7 +213,7 @@ Should you need an expandable thing that is not covered by the expandables above
 ## Expandable groups
 
 <div class="o-expandable-group">
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -246,7 +238,7 @@ Should you need an expandable thing that is not covered by the expandables above
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -271,7 +263,7 @@ Should you need an expandable thing that is not covered by the expandables above
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -300,7 +292,7 @@ Should you need an expandable thing that is not covered by the expandables above
 
 ```
 <div class="o-expandable-group">
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -325,7 +317,7 @@ Should you need an expandable thing that is not covered by the expandables above
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -350,7 +342,7 @@ Should you need an expandable thing that is not covered by the expandables above
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -385,7 +377,7 @@ Add the `o-expandable-group__accordion` class to the expandable group
 to activate the accordion mode.
 
 <div class="o-expandable-group o-expandable-group__accordion">
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -410,7 +402,7 @@ to activate the accordion mode.
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -435,7 +427,7 @@ to activate the accordion mode.
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -464,7 +456,7 @@ to activate the accordion mode.
 
 ```
 <div class="o-expandable-group o-expandable-group__accordion">
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -489,7 +481,7 @@ to activate the accordion mode.
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">
@@ -514,7 +506,7 @@ to activate the accordion mode.
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
+    <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
             <h3 class="h4 o-expandable_label">

@@ -1,4 +1,43 @@
 
+## v0.39.0 (2024-03-13)
+
+#### Breaking Change
+* `cfpb-design-system`, `cfpb-forms`
+  * [#1926](https://github.com/cfpb/design-system/pull/1926) Remove deprecated `.a-error-message` ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-buttons`
+  * [#1921](https://github.com/cfpb/design-system/pull/1921) Remove mix(…) utility and replace with hardcoded palette values ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-core`, `cfpb-grid`
+  * [#1920](https://github.com/cfpb/design-system/pull/1920) Merge normalize-css into repo ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Documentation
+* `cfpb-expandables`
+  * [#1925](https://github.com/cfpb/design-system/pull/1925) Remove `o-expandable__padded` from docs ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
+## v0.38.0 (2024-03-06)
+
+#### Breaking Change
+* `cfpb-forms`, `cfpb-icons`
+  * [#1923](https://github.com/cfpb/design-system/pull/1923) cfpb-icons: Change inline SVG fill color argument to grayscale boolean flag ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-expandables`
+  * [#1924](https://github.com/cfpb/design-system/pull/1924) Merge o-expandable__padded into default and create new o-expandable__padded variant ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1922](https://github.com/cfpb/design-system/pull/1922) Update html-entities, autoprefixer, cypress, eslint, eslint-plugin-jsdoc, eslint-plugin-react ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.37.2 (2024-02-22)
 
 #### Breaking Change

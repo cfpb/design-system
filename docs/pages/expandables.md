@@ -9,7 +9,6 @@ variation_groups:
         variation_description: The following combination is our recommended go-to expandable pattern.
         variation_code_snippet: >-
           <div class="o-expandable
-                      o-expandable__padded
                       o-expandable__background
                       o-expandable__border">
               <button class="o-expandable_header"
@@ -81,10 +80,45 @@ variation_groups:
 
 
           * {string} The text of the expandable’s label.
-      - variation_name: Expandable (open on load)
+      - variation_name: Padded expandable
+        variation_description: A variation with a padded label. This also shows what an icon in the header text looks like.
         variation_code_snippet: >-
           <div class="o-expandable
                       o-expandable__padded
+                      o-expandable__background
+                      o-expandable__border">
+              <button class="o-expandable_header"
+                      title="Expand content">
+                  <h3 class="h4 o-expandable_label">
+                      {% include icons/bank.svg %}
+                      Expandable header
+                  </h3>
+                  <span class="o-expandable_cues">
+                      <span class="o-expandable_cue-open" role="img" aria-label="Show">
+                          {% include icons/plus-round.svg %}
+                      </span>
+                      <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                          <span class="u-visually-hidden">Hide</span>
+                          {% include icons/minus-round.svg %}
+                      </span>
+                  </span>
+              </button>
+              <div class="o-expandable_content">
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                      temporibus magnam debitis quidem. Ducimus ratione
+                      corporis nesciunt earum vel est quaerat blanditiis
+                      dolore ipsa?
+                      <a href="#">Lorem link</a>.
+                  </p>
+              </div>
+          </div>
+        variation_specs: ''
+        variation_implementation: ''
+      - variation_name: Expandable (open on load)
+        variation_code_snippet: >-
+          <div class="o-expandable
                       o-expandable__background
                       o-expandable__border
                       o-expandable__onload-open">
@@ -131,7 +165,7 @@ variation_groups:
           different sections.
         variation_code_snippet: >-
           <div class="o-expandable-group">
-              <div class="o-expandable o-expandable__padded">
+              <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
@@ -157,7 +191,7 @@ variation_groups:
                       </p>
                   </div>
               </div>
-              <div class="o-expandable o-expandable__padded">
+              <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
@@ -183,7 +217,7 @@ variation_groups:
                       </p>
                   </div>
               </div>
-              <div class="o-expandable o-expandable__padded">
+              <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
@@ -223,7 +257,7 @@ variation_groups:
           expandable group to activate the accordion mode.
         variation_code_snippet: >-
           <div class="o-expandable-group o-expandable-group__accordion">
-              <div class="o-expandable o-expandable__padded">
+              <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
@@ -249,7 +283,7 @@ variation_groups:
                       </p>
                   </div>
               </div>
-              <div class="o-expandable o-expandable__padded">
+              <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">
@@ -311,7 +345,7 @@ variation_groups:
                       </p>
                   </div>
               </div>
-              <div class="o-expandable o-expandable__padded">
+              <div class="o-expandable">
                   <button class="o-expandable_header"
                           title="Expand content">
                       <h3 class="h4 o-expandable_label">

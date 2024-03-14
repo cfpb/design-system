@@ -65,14 +65,6 @@
     .grid_nested-col-group();
   });
 
-  &__full {
-    .respond-to-range(@bp-sm-min, 767px, {
-      .stack-col-thirds();
-      .stack-col-eighths();
-      .stack-col-quarters();
-    });
-  }
-
   &__main {
     .respond-to-range(@bp-med-min, @bp-med-max, {
       .stack-col( content-l_col-1-2 );

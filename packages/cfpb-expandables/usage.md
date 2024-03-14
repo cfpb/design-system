@@ -36,7 +36,7 @@ to the `.o-expandable` block.
 
 ### Padded
 
-Adds `padding` to the `.o-expandable_label`.
+Adds `padding` to the `.o-expandable_header` and makes the label larger.
 
 ```
 .o-expandable__padded
@@ -91,7 +91,7 @@ The following combination is our recommended go-to expandable pattern.
             o-expandable__border">
     <button class="o-expandable_header"
             title="Expand content">
-        <h3 class="h4 o-expandable_label">
+        <h3 class="o-expandable_label">
             Expandable Header
         </h3>
         <span class="o-expandable_cues">
@@ -120,7 +120,7 @@ The following combination is our recommended go-to expandable pattern.
             o-expandable__border">
     <button class="o-expandable_header"
             title="Expand content">
-        <h3 class="h4 o-expandable_label">
+        <h3 class="o-expandable_label">
             Expandable Header
         </h3>
         <span class="o-expandable_cues">
@@ -152,7 +152,7 @@ The following combination is our recommended go-to expandable pattern.
             o-expandable__onload-open">
     <button class="o-expandable_header"
             title="Expand content">
-        <h3 class="h4 o-expandable_label">
+        <h3 class="o-expandable_label">
             Expandable Header
         </h3>
         <span class="o-expandable_cues">
@@ -182,7 +182,7 @@ The following combination is our recommended go-to expandable pattern.
             o-expandable__onload-open">
     <button class="o-expandable_header"
             title="Expand content">
-        <h3 class="h4 o-expandable_label">
+        <h3 class="o-expandable_label">
             Expandable Header
         </h3>
         <span class="o-expandable_cues">
@@ -216,7 +216,7 @@ Should you need an expandable thing that is not covered by the expandables above
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 1
             </h3>
             <span class="o-expandable_cues">
@@ -241,7 +241,7 @@ Should you need an expandable thing that is not covered by the expandables above
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 2
             </h3>
             <span class="o-expandable_cues">
@@ -266,7 +266,7 @@ Should you need an expandable thing that is not covered by the expandables above
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 3
             </h3>
             <span class="o-expandable_cues">
@@ -295,7 +295,7 @@ Should you need an expandable thing that is not covered by the expandables above
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 1
             </h3>
             <span class="o-expandable_cues">
@@ -320,7 +320,7 @@ Should you need an expandable thing that is not covered by the expandables above
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 2
             </h3>
             <span class="o-expandable_cues">
@@ -345,7 +345,7 @@ Should you need an expandable thing that is not covered by the expandables above
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 3
             </h3>
             <span class="o-expandable_cues">
@@ -380,7 +380,7 @@ to activate the accordion mode.
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 1
             </h3>
             <span class="o-expandable_cues">
@@ -405,7 +405,7 @@ to activate the accordion mode.
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 2
             </h3>
             <span class="o-expandable_cues">
@@ -430,7 +430,7 @@ to activate the accordion mode.
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 3
             </h3>
             <span class="o-expandable_cues">
@@ -459,7 +459,7 @@ to activate the accordion mode.
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 1
             </h3>
             <span class="o-expandable_cues">
@@ -484,7 +484,7 @@ to activate the accordion mode.
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 2
             </h3>
             <span class="o-expandable_cues">
@@ -509,7 +509,7 @@ to activate the accordion mode.
     <div class="o-expandable">
         <button class="o-expandable_header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable_label">
                 Expandable Header 3
             </h3>
             <span class="o-expandable_cues">

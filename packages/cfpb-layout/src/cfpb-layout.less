@@ -64,30 +64,6 @@
   .respond-to-min(@bp-sm-min, {
     .grid_nested-col-group();
   });
-
-  &__main {
-    .respond-to-range(@bp-med-min, @bp-med-max, {
-      .stack-col( content-l_col-1-2 );
-    });
-
-    // Tablet only.
-    .respond-to-range(@bp-sm-min, @bp-sm-max, {
-      .stack-col-thirds();
-      .stack-col-eighths();
-      .stack-col-quarters();
-    });
-  }
-
-  &__sidebar {
-    .stack-col-thirds();
-    .stack-col-eighths();
-    .stack-col-quarters();
-
-    // Desktop and above.
-    .respond-to-min(@bp-med-min, {
-      .stack-col( content-l_col-1-2 );
-    });
-  }
 }
 
 .content-l_col {
@@ -175,21 +151,6 @@
   .content-l_col + .@{col} {
     margin-top: unit((@grid_gutter-width / @base-font-size-px), em);
   }
-}
-
-.stack-col-thirds() {
-  .stack-col( content-l_col-1-3 );
-  .stack-col( content-l_col-2-3 );
-}
-
-.stack-col-eighths() {
-  .stack-col( content-l_col-3-8 );
-  .stack-col( content-l_col-5-8 );
-}
-
-.stack-col-quarters() {
-  .stack-col( content-l_col-1-4 );
-  .stack-col( content-l_col-3-4 );
 }
 
 //

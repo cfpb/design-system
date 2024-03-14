@@ -89,8 +89,8 @@ variation_groups:
                       o-expandable__border">
               <button class="o-expandable_header"
                       title="Expand content">
+                  {% include icons/bank.svg %}
                   <h3 class="h4 o-expandable_label">
-                      {% include icons/bank.svg %}
                       Expandable header
                   </h3>
                   <span class="o-expandable_cues">

@@ -317,62 +317,6 @@ it in your markup._
 </main>
 ```
 
-### Narrow content column option
-
-Add a class of `.content_main__narrow` to `.content_main` to get a one-column
-(in a 12-column grid) gutter on the right side.
-
-_Inline styling is for demonstration purposes only; do not include it in your
-markup._
-
-<main class="content content__2-1" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main content_main__narrow">
-            <h2>Main content area</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            </p>
-        </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
-            Sidebar
-        </aside>
-    </div>
-</main>
-<footer class="footer" role="contentinfo">
-    <div class="wrapper">
-        Footer
-    </div>
-</footer>
-
-```
-<main class="content content__2-1" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main content_main__narrow">
-            <h2>Main content area</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            </p>
-        </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
-            Sidebar
-        </aside>
-    </div>
-</main>
-<footer class="footer" role="contentinfo">
-    <div class="wrapper">
-        Footer
-    </div>
-</footer>
-```
-
 ### Flush bottom modifier
 
 Add a class of `.content__flush-bottom` to `.content_main` or

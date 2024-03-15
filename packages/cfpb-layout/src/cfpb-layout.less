@@ -138,21 +138,6 @@
   });
 }
 
-.stack-col( @col ) {
-  .content-l_col.@{col} {
-    display: block;
-    width: 100%;
-
-    &.content-l_col__before-divider {
-      .grid_column__top-divider();
-    }
-  }
-
-  .content-l_col + .@{col} {
-    margin-top: unit((@grid_gutter-width / @base-font-size-px), em);
-  }
-}
-
 //
 // Content line
 //

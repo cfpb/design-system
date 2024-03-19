@@ -378,8 +378,8 @@ Lorem Ipsum</textarea
 
 These are used for simple forms where a full filter isn't necessary.
 
-<div class="o-form__input-w-btn">
-    <div class="o-form__input-w-btn_input-container">
+<div class="o-input-w-btn">
+    <div class="o-input-w-btn_input-container">
         <label for="button-input-test-demo"
                class="u-visually-hidden">
             Test input
@@ -388,20 +388,20 @@ These are used for simple forms where a full filter isn't necessary.
                class="a-text-input"
                type="text">
     </div>
-    <div class="o-form__input-w-btn_btn-container">
+    <div class="o-input-w-btn_btn-container">
         <button class="a-btn">Search</button>
     </div>
 </div>
 
 ```html
-<div class="o-form__input-w-btn">
-  <div class="o-form__input-w-btn_input-container">
+<div class="o-input-w-btn">
+  <div class="o-input-w-btn_input-container">
     <label for="button-input-test" class="u-visually-hidden">
       Test input
     </label>
     <input id="button-input-test" class="a-text-input" type="text" />
   </div>
-  <div class="o-form__input-w-btn_btn-container">
+  <div class="o-input-w-btn_btn-container">
     <button class="a-btn">Search</button>
   </div>
 </div>
@@ -450,8 +450,8 @@ typically to clear the input.
 This example combines both of the previous patterns,
 creating a typical site search form.
 
-<div class="o-form__input-w-btn">
-    <div class="o-form__input-w-btn_input-container">
+<div class="o-input-w-btn">
+    <div class="o-input-w-btn_input-container">
         <div class="m-btn-inside-input">
             <label for="button-inside-input-test-demo"
                    class="u-visually-hidden">
@@ -467,14 +467,14 @@ creating a typical site search form.
             </button>
         </div>
     </div>
-    <div class="o-form__input-w-btn_btn-container">
+    <div class="o-input-w-btn_btn-container">
         <button class="a-btn">Search</button>
     </div>
 </div>
 
 ```html
-<div class="o-form__input-w-btn">
-  <div class="o-form__input-w-btn_input-container">
+<div class="o-input-w-btn">
+  <div class="o-input-w-btn_input-container">
     <div class="m-btn-inside-input">
       <label for="button-inside-input-test" class="u-visually-hidden">
         Test input
@@ -491,7 +491,7 @@ creating a typical site search form.
       </button>
     </div>
   </div>
-  <div class="o-form__input-w-btn_btn-container">
+  <div class="o-input-w-btn_btn-container">
     <button class="a-btn">Search</button>
   </div>
 </div>

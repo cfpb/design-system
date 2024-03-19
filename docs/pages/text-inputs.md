@@ -86,16 +86,16 @@ variation_groups:
         variation_name: Text input (with button)
         variation_description: Use for simple forms where a full filter isn’t necessary.
         variation_code_snippet: |-
-          <div class="o-form__input-w-btn">
-              <div class="o-form__input-w-btn_input-container">    
+          <div class="o-input-w-btn">
+              <div class="o-input-w-btn_input-container">
           <input class="a-text-input a-text-input__full"
                     type="text"
                     id="full-textinput-w-btn-example"
           placeholder="Placeholder text"
           value="Input text">
-                  
+
               </div>
-              <div class="o-form__input-w-btn_btn-container">
+              <div class="o-input-w-btn_btn-container">
                   <button class="a-btn">Search</button>
               </div>
           </div>
@@ -121,8 +121,8 @@ variation_groups:
           This example combines both of the previous patterns,
           creating a typical site search form.
         variation_code_snippet: >-
-          <div class="o-form__input-w-btn">
-              <div class="o-form__input-w-btn_input-container">
+          <div class="o-input-w-btn">
+              <div class="o-input-w-btn_input-container">
                   <div class="m-btn-inside-input">
                       <input type="text"
                           value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
@@ -134,7 +134,7 @@ variation_groups:
                       </button>
                   </div>
               </div>
-              <div class="o-form__input-w-btn_btn-container">
+              <div class="o-input-w-btn_btn-container">
                   <button class="a-btn">Search</button>
               </div>
           </div>

@@ -1,4 +1,16 @@
 
+## v0.40.0 (2024-03-21)
+
+#### Breaking Change
+* `cfpb-design-system`, `cfpb-layout`
+  * [#1928](https://github.com/cfpb/design-system/pull/1928) cfpb-layout: Remove `content_main__narrow` class ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1929](https://github.com/cfpb/design-system/pull/1929) cfpb-layout: Remove legacy layout classes and docs ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.39.0 (2024-03-13)
 
 #### Breaking Change

@@ -340,8 +340,6 @@ related_items: >-
 
   * [Blocks](https://cfpb.github.io/design-system/development/blocks)
 
-  * [Column dividers](https://cfpb.github.io/design-system/development/column-dividers)
-
   * [Grid](https://cfpb.github.io/design-system/foundation/grid)
 last_updated: 2020-01-28T15:55:47.394Z
 eyebrow: Layout

@@ -212,6 +212,9 @@ variation_groups:
                   </div>
               </div>
           </div>
+      - variation_name: Content dividers
+        variation_description: A 1 pixel edge to edge bar that can divide content.
+        variation_code_snippet: <div class="content_line"></div>
     variation_group_name: Types
 use_cases: ''
 guidelines: ''

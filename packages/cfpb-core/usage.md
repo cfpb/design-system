@@ -63,30 +63,30 @@ Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.l
 
 ```
 // body
-@text:                   @black;
+@text:                   var(--black);
 
 // a
-@link-text:              @pacific;
-@link-underline:         @pacific;
-@link-text-visited:      @teal;
-@link-underline-visited: @teal;
-@link-text-hover:        @pacific-dark;
-@link-underline-hover:   @pacific-dark;
-@link-text-active:       @navy;
-@link-underline-active:  @navy;
+@link-text:              var(--pacific);
+@link-underline:         var(--pacific);
+@link-text-visited:      var(--teal);
+@link-underline-visited: var(--teal);
+@link-text-hover:        var(--pacific-dark);
+@link-underline-hover:   var(--pacific-dark);
+@link-text-active:       var(--navy);
+@link-underline-active:  var(--navy);
 
 // table
 
 @table-head-text:        @text;
-@table-head-bg:          @gray-5;
-@table-cell-bg:          @white;
-@table-cell-bg_alt:      @gray-5;
-@table-scrolling-border: @gray-40;
-@table-border:           @gray;
+@table-head-bg:          var(--gray-5);
+@table-cell-bg:          var(--white);
+@table-cell-bg_alt:      var(--gray-5);
+@table-scrolling-border: var(--gray-40);
+@table-border:           var(--gray);
 
 // code
 @code-text:              @text;
-@code-bg:                @gray-5;
+@code-bg:                var(--gray-5);
 ```
 
 ### Sizing variables
@@ -184,9 +184,9 @@ This mixin allows us to easily write styles that target both
 ```less
 // The following LESS...
 .example {
-  color: @gray;
+  color: var(--gray);
   .respond-to-print({
-        color: @black;
+        color: var(--black);
     });
 }
 

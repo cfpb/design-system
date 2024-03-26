@@ -1,7 +1,7 @@
 // All screen sizes.
 .m-tabs {
   &_list {
-    border-top: 1px solid @gray;
+    border-top: 1px solid var(--gray);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -22,10 +22,10 @@
 
     &-selected {
       a {
-        color: @black;
-        border-bottom: 5px solid @pacific;
+        color: var(--black);
+        border-bottom: 5px solid var(--pacific);
         &:hover {
-          border-bottom: 5px solid @pacific;
+          border-bottom: 5px solid var(--pacific);
         }
       }
     }
@@ -33,29 +33,29 @@
 
   &_tab {
     border: 0;
-    color: @gray;
+    color: var(--gray);
     display: block;
     margin-right: 5px;
     padding: 1rem 1rem calc(1rem - 5px);
     text-align: center;
 
     &:focus {
-      outline: 1px dotted @pacific;
+      outline: 1px dotted var(--pacific);
       outline-offset: 3px;
-      color: @black;
+      color: var(--black);
     }
 
     &:hover {
-      background-color: @gray-5;
-      border-bottom: 2px solid @gray-5;
+      background-color: var(--gray-5);
+      border-bottom: 2px solid var(--gray-5);
     }
 
     &:active {
-      color: @black;
+      color: var(--black);
     }
 
     &[aria-current='true'] {
-      color: @black;
+      color: var(--black);
       text-decoration: none;
     }
 
@@ -65,7 +65,7 @@
   }
 
   &_panel {
-    background-color: @gray-5;
+    background-color: var(--gray-5);
     margin-bottom: 30px;
   }
 }
@@ -74,8 +74,8 @@
 .variation-jinja-code-snippet-title,
 .variation-implementation-title,
 .variation-specs-title {
-  background-color: @white;
-  border-bottom: 1px solid @gray;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray);
   margin: 0;
   padding: 20px 40px 7px;
 }
@@ -96,8 +96,8 @@
   }
 
   .m-tabs_panel {
-    border-top: 1px solid @gray;
-    border-bottom: 1px solid @gray-40;
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray-40);
     margin: -3px 0 50px;
   }
 

@@ -8,8 +8,8 @@
 
 .o-banner {
   padding: unit((@grid_gutter-width / 2 / @base-font-size-px), em) 0;
-  background: @gold-10;
-  border-bottom: 1px solid @gray-40;
+  background: var(--gold-10);
+  border-bottom: 1px solid var(--gray-40);
   font-size: 0.875em;
 
   // Override notification box styling to align notification in header.
@@ -24,25 +24,25 @@
   }
 
   &__dark {
-    background: @teal-mid-dark;
-    border-color: @teal-mid-dark;
-    color: @white;
+    background: var(--teal-mid-dark);
+    border-color: var(--teal-mid-dark);
+    color: var(--white);
 
     a {
-      border-color: @white;
-      color: @white;
+      border-color: var(--white);
+      color: var(--white);
 
       &:hover {
-        border-color: @gray-15;
-        color: @gray-15;
+        border-color: var(--gray-15);
+        color: var(--gray-15);
       }
     }
 
     .m-notification {
-      background: @teal-mid-dark;
+      background: var(--teal-mid-dark);
 
       .cf-icon-svg {
-        fill: @white;
+        fill: var(--white);
       }
     }
   }

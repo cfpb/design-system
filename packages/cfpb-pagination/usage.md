@@ -27,8 +27,8 @@ where this component's less file is imported.
 Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.less).
 
 ```
-@pagination-text: @gray;
-@pagination-bg:   @gray-10;
+@pagination-text: var(--gray);
+@pagination-bg:   var(--gray-10);
 ```
 
 ### Sizing variables

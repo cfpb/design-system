@@ -20,7 +20,6 @@ It's made up of four child components `vars`, `media-queries`,
 - [Media queries](#media-queries)
   - [Respond to min and max mixins](#respond-to-min-and-max-width-mixins)
   - [Respond to range mixin](#respond-to-range-mixin)
-  - [Respond to dpi mixin](#respond-to-dpi-mixin)
   - [Respond to print mixin](#respond-to-print-mixin)
 - [Utilities](#utilities)
   - [Helper classes](#helper-classes)
@@ -174,32 +173,6 @@ Ex.
     .title {
         font-size: 2em;
     }
-}
-```
-
-### Respond to dpi mixin
-
-This mixin allows us to easily write styles
-that target high-resolution screens,
-such as Apple retina screens
-
-```less
-// The following LESS...
-.example {
-  background: url(regular-resolution-image.png);
-  .respond-to-dpi(2, {
-        background-image: url(retina-image.png);
-    });
-}
-
-// ...Exports to
-.example {
-  background: url(regular-resolution-image.png);
-}
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .example {
-    background-image: url(retina-image.png);
-  }
 }
 ```
 

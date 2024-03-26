@@ -1,4 +1,15 @@
 
+## v0.42.0 (2024-03-26)
+
+#### Breaking Change
+* `cfpb-buttons`, `cfpb-core`, `cfpb-expandables`, `cfpb-forms`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1918](https://github.com/cfpb/design-system/pull/1918) Migrate Less color variables to CSS custom properties (variables) ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.41.0 (2024-03-26)
 
 #### Breaking Change

@@ -37,7 +37,7 @@ suites:
         - 'test/cypress/e2e/docs/netlify-cms.cy.js'
   - name: cypress - Windows 10 - firefox
     browser: 'firefox'
-    browserVersion: 'latest'
+    browserVersion: '123'
     platformName: 'Windows 10'
     config:
       testingType: e2e

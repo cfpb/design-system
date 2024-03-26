@@ -1,4 +1,18 @@
 
+## v0.41.0 (2024-03-26)
+
+#### Breaking Change
+* `cfpb-core`
+  * [#1935](https://github.com/cfpb/design-system/pull/1935) cfpb-core: Remove `.respond-to-dpi(…)` utility ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1934](https://github.com/cfpb/design-system/pull/1934) Update autoprefixer, cypress, postcss ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.40.0 (2024-03-21)
 
 #### Breaking Change

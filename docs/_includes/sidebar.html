@@ -4,22 +4,22 @@
 
     <summary class="h4">Navigation</summary>
 
-    <ul class="m-list m-list__links">
+    <ul class="m-list m-list--links">
     {% for first in site.data.side-navigation.first-level %}
         {% assign first_level_slug = first.heading | slugify %}
-        <li class="m-list_item">
+        <li class="m-list__item">
 
             <div class="ds-nav ds-nav-1">
                 <div class="h4">
-                    <a class="m-list_link" href="{{ first_level_slug | relative_url }}">{{ first.heading }}</a>
+                    <a class="m-list__link" href="{{ first_level_slug | relative_url }}">{{ first.heading }}</a>
                 </div>
 
             {% if page.section == first_level_slug or page == blank %}
                 {% if first.nav-items.size > 0 %}
-                <ul class="m-list m-list__links">
+                <ul class="m-list m-list--links">
                 {% for link in first.nav-items %}
-                    <li class="m-list_item">
-                        <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
                     </li>
                 {% endfor %}
                 </ul>
@@ -28,10 +28,10 @@
                     <div class="ds-nav ds-nav-2">
                         <div class="h5">{{ second.heading }}</div>
                         {% if second.nav-items.size > 0 %}
-                        <ul class="m-list m-list__links">
+                        <ul class="m-list m-list--links">
                         {% for link in second.nav-items %}
-                            <li class="m-list_item">
-                                <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
+                            <li class="m-list__item">
+                                <a class="m-list__link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
                             </li>
                         {% endfor %}
                         </ul>
@@ -39,10 +39,10 @@
                     {% for third in second.third-level %}
                     <div class="ds-nav ds-nav-3">
                         <div class="h6">{{ third.heading }}</div>
-                        <ul class="m-list m-list__links">
+                        <ul class="m-list m-list--links">
                         {% for link in third.nav-items %}
-                            <li class="m-list_item">
-                                <a class="m-list_link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
+                            <li class="m-list__item">
+                                <a class="m-list__link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
                             </li>
                         {% endfor %}
                         </ul>

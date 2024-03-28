@@ -25,11 +25,11 @@ const anchors = new AnchorJS();
 anchors.add('h2:not(.title), h3, h4, h5');
 // Ensure there are no anchors in inconvenient places
 anchors.remove(`
-  .a-live_code h2,
-  .a-live_code h3,
-  .a-live_code h4,
-  .a-live_code h5,
-  .o-expandable_label,
+  .a-live__code h2,
+  .a-live__code h3,
+  .a-live__code h4,
+  .a-live__code h5,
+  .o-expandable__label,
   #search-results h3
 `);
 
@@ -56,7 +56,7 @@ if (tabsContainerDom.length > 0) {
   }
 }
 const toggleAllBtn = document.querySelector('#toggle-details');
-const toggleBtns = document.querySelectorAll('.a-toggle_code button');
+const toggleBtns = document.querySelectorAll('.a-toggle__code button');
 
 /**
  * @param {MouseEvent} event - The mouse event object from the click.

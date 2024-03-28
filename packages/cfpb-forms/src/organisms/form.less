@@ -1,9 +1,9 @@
 .o-form {
-  &_group {
+  &__group {
     margin-bottom: unit((30px / @base-font-size-px), em);
   }
 
-  &_fieldset {
+  &__fieldset {
     // Overwrite Normalize.
     border: none;
     margin: 0;
@@ -18,16 +18,16 @@
   // Input with button
   //
 
-  &__input-w-btn {
+  &--input-w-btn {
     .respond-to-min( 480px, {
-      .grid_nested-col-group();
+      .grid__nested-col-group();
     });
 
-    &_input-container {
+    &__input-container {
       margin-bottom: unit((15px / @base-font-size-px), em);
 
       .respond-to-min( 480px, {
-        .grid_column( 9 );
+        .grid__column( 9 );
 
         border-right-width: 0;
       });
@@ -45,7 +45,7 @@
       }
     }
 
-    &_btn-container {
+    &__btn-container {
       margin-bottom: unit((15px / @base-font-size-px), em);
 
       .a-btn {
@@ -53,7 +53,7 @@
       }
 
       .respond-to-min( 480px, {
-        .grid_column( 3 );
+        .grid__column( 3 );
         border-left: 0;
         .a-btn {
           border-top-left-radius: 0;

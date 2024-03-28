@@ -13,16 +13,16 @@ variation_groups:
           list of states, which naturally fits into an alphabetical order.
         variation_code_snippet: |-
           <ul class="m-list">
-              <li class="m-list_item">List item 1</li>
-              <li class="m-list_item">
+              <li class="m-list__item">List item 1</li>
+              <li class="m-list__item">
                   List item 2
                   <ul class="m-list">
-                      <li class="m-list_item">List item 2a</li>
-                      <li class="m-list_item">List item 2b</li>
-                      <li class="m-list_item">List item 2c</li>
+                      <li class="m-list__item">List item 2a</li>
+                      <li class="m-list__item">List item 2b</li>
+                      <li class="m-list__item">List item 2c</li>
                   </ul>
               </li>
-              <li class="m-list_item">List item 3</li>
+              <li class="m-list__item">List item 3</li>
           </ul>
         variation_specs: ''
       - variation_name: Numbered list
@@ -79,31 +79,31 @@ variation_groups:
         variation_specs: ''
   - variations:
       - variation_code_snippet: |-
-          <ul class="m-list m-list__unstyled">
-              <li class="m-list_item">List item 1</li>
-              <li class="m-list_item">List item 2</li>
-              <li class="m-list_item">List item 3</li>
+          <ul class="m-list m-list--unstyled">
+              <li class="m-list__item">List item 1</li>
+              <li class="m-list__item">List item 2</li>
+              <li class="m-list__item">List item 3</li>
           </ul>
         variation_description: Unstyled list removes bullets and other styling from a list.
         variation_name: Unstyled list
       - variation_code_snippet: |-
-          <ul class="m-list m-list__horizontal">
-              <li class="m-list_item">List item 1</li>
-              <li class="m-list_item">List item 2</li>
-              <li class="m-list_item">List item 3</li>
+          <ul class="m-list m-list--horizontal">
+              <li class="m-list__item">List item 1</li>
+              <li class="m-list__item">List item 2</li>
+              <li class="m-list__item">List item 3</li>
           </ul>
         variation_description: A modifier for the list to make it show items horizontally.
         variation_name: Horizontal list
       - variation_code_snippet: |-
-          <ul class="m-list m-list__links">
-              <li class="m-list_item">
-                  <a class="m-list_link" href="#">List item 1</a>
+          <ul class="m-list m-list--links">
+              <li class="m-list__item">
+                  <a class="m-list__link" href="#">List item 1</a>
               </li>
-              <li class="m-list_item">
-                  <a class="m-list_link" href="#">List item 2</a>
+              <li class="m-list__item">
+                  <a class="m-list__link" href="#">List item 2</a>
               </li>
-              <li class="m-list_item">
-                  <a class="m-list_link" href="#">List item 3</a>
+              <li class="m-list__item">
+                  <a class="m-list__link" href="#">List item 3</a>
               </li>
           </ul>
         variation_description:
@@ -113,10 +113,10 @@ variation_groups:
         variation_name: Link list
         variation_specs: ''
       - variation_code_snippet: |-
-          <ul class="m-list m-list__spaced">
-              <li class="m-list_item">List item 1</li>
-              <li class="m-list_item">List item 2</li>
-              <li class="m-list_item">List item 3</li>
+          <ul class="m-list m-list--spaced">
+              <li class="m-list__item">List item 1</li>
+              <li class="m-list__item">List item 2</li>
+              <li class="m-list__item">List item 3</li>
           </ul>
         variation_description: Spaced list adds extra padding to every element in a list.
         variation_name: Spaced list

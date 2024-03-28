@@ -274,10 +274,10 @@ variation_groups:
 
           <h4>16:9 flexible video player</h4>
 
-          <p>To create a 16:9 flexible video player, wrap the video element in an element with <code>u-flexible-container</code> and add the <code>u-flexible-container_inner</code> to the video element.</p>
+          <p>To create a 16:9 flexible video player, wrap the video element in an element with <code>u-flexible-container</code> and add the <code>u-flexible-container__inner</code> to the video element.</p>
 
           <div class="u-flexible-container">
-              <video class="u-flexible-container_inner"
+              <video class="u-flexible-container__inner"
                     style="background:#75787B;"
                     controls>
               </video>
@@ -303,8 +303,8 @@ variation_groups:
 
           <p>To create a 4:3 flexible video player, add the <code>__4_3 modifier</code> to the container.</p>
 
-          <div class="u-flexible-container u-flexible-container__4-3">
-              <video class="u-flexible-container_inner"
+          <div class="u-flexible-container u-flexible-container--4-3">
+              <video class="u-flexible-container__inner"
                     style="background:#75787B;"
                     controls>
               </video>

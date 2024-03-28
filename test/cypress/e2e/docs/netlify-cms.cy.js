@@ -86,7 +86,7 @@ describe('Netlify CMS', () => {
         .find('a')
         .contains('Implementation')
         .parent()
-        .should('have.class', 'm-tabs_list-item-selected');
+        .should('have.class', 'm-tabs__list-item-selected');
     });
   });
 });

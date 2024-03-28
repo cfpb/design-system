@@ -68,7 +68,7 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 // Links
 
-// .a-link__jump
+// .a-link--jump
 @jump-link_bg:              var(--gray-5);
 @jump-link_border:          var(--gray-40);
 ```
@@ -110,14 +110,14 @@ Can be either a relative or absolute path.
 ### Slug header
 
 <header class="m-slug-header">
-    <h2 class="m-slug-header_heading">
+    <h2 class="m-slug-header__heading">
         Blog summary
     </h2>
 </header>
 
 ```
 <header class="m-slug-header">
-    <h2 class="m-slug-header_heading">
+    <h2 class="m-slug-header__heading">
         Blog summary
     </h2>
 </header>
@@ -128,17 +128,17 @@ Can be either a relative or absolute path.
 #### Default meta header
 
 <div class="m-meta-header">
-    <div class="m-meta-header_item-group">
-    <div class="m-meta-header_item">
+    <div class="m-meta-header__item-group">
+    <div class="m-meta-header__item">
         {% include icons/chart.svg %}
         Office of Research Publication
     </div>
-    <div class="m-meta-header_item">
+    <div class="m-meta-header__item">
         {% include icons/bank.svg %}
         Policy and compliance
     </div>
     </div>
-    <div class="m-meta-header_item">
+    <div class="m-meta-header__item">
         <span class="a-date">
             Published
             <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
@@ -149,17 +149,17 @@ Can be either a relative or absolute path.
 
 ```
 <div class="m-meta-header">
-    <div class="m-meta-header_item-group">
-    <div class="m-meta-header_item">
+    <div class="m-meta-header__item-group">
+    <div class="m-meta-header__item">
         {% include icons/chart.svg %}
         Office of Research Publication
     </div>
-    <div class="m-meta-header_item">
+    <div class="m-meta-header__item">
         {% include icons/bank.svg %}
         Policy and compliance
     </div>
     </div>
-    <div class="m-meta-header_item">
+    <div class="m-meta-header__item">
         <span class="a-date">
             Published
             <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
@@ -178,29 +178,29 @@ Can be either a relative or absolute path.
 - For the underlined icon prevention to work, you must wrap the link text with
   a `span.icon-link_text`. There can be no whitespace between the text and the
   opening and closing `span` tags.
-- Include the icon either prior to or after the `a-link_text`. It is important the
+- Include the icon either prior to or after the `a-link__text`. It is important the
   text and icon are siblings to correctly handle underlines.
 
 <p>
     For more information, email
     <a class="a-link
-              a-link__icon"
+              a-link--icon"
        href="#">
         {% include icons/mail.svg %}
-        <span class="a-link_text">john.smith@cfpb.gov</span>
+        <span class="a-link__text">john.smith@cfpb.gov</span>
     </a>.
     Alternatively, you can
     <a class="a-link
-              a-link__icon"
+              a-link--icon"
        href="#">
-        <span class="a-link_text">download the info sheet</span>
+        <span class="a-link__text">download the info sheet</span>
         {% include icons/download.svg %}
     </a>.
     Oh, you might also want to visit this
     <a class="a-link
-              a-link__icon"
+              a-link--icon"
        href="#">
-        <span class="a-link_text">other organization's website</span>
+        <span class="a-link__text">other organization's website</span>
         {% include icons/external-link.svg %}
     </a> for further details.
 </p>
@@ -209,23 +209,23 @@ Can be either a relative or absolute path.
 <p>
    For more information, email
     <a class="a-link
-              a-link__icon"
+              a-link--icon"
        href="#">
         {% raw %}{% include icons/mail.svg %}{% endraw %}
-        <span class="a-link_text">john.smith@cfpb.gov</span>
+        <span class="a-link__text">john.smith@cfpb.gov</span>
     </a>.
     Alternatively, you can
     <a class="a-link
-              a-link__icon"
+              a-link--icon"
        href="#">
-        <span class="a-link_text">download the info sheet</span>
+        <span class="a-link__text">download the info sheet</span>
         {% raw %}{% include icons/download.svg %}{% endraw %}
     </a>.
     Oh, you might also want to visit this
     <a class="a-link
-              a-link__icon"
+              a-link--icon"
        href="#">
-        <span class="a-link_text">other organization's website</span>
+        <span class="a-link__text">other organization's website</span>
         {% raw %}{% include icons/external-link.svg %}{% endraw %}
     </a> for further details.
 </p>
@@ -235,14 +235,14 @@ Can be either a relative or absolute path.
 
 - Warning: Icons added to inline links can sometimes break onto the next line.
   If you want to prevent this, you can add the `__no-wrap` modifier to
-  `.a-link__icon`.
+  `.a-link--icon`.
 
 For more information, email
 <a class="a-link
-          a-link__icon
-          a-link__no-wrap"
+          a-link--icon
+          a-link--no-wrap"
    href="#">
-<span class="a-link_text">john.smith@cfpb.gov</span>
+<span class="a-link__text">john.smith@cfpb.gov</span>
 {% include icons/mail.svg %}
 </a>.
 
@@ -250,10 +250,10 @@ For more information, email
 
 For more information, email
 <a class="a-link
-          a-link__icon
-          a-link__no-wrap"
+          a-link--icon
+          a-link--no-wrap"
    href="#">
-    <span class="a-link_text">john.smith@cfpb.gov</span>
+    <span class="a-link__text">john.smith@cfpb.gov</span>
     {% raw %}{% include icons/mail.svg %}{% endraw %}
 </a>.
 ```
@@ -264,17 +264,17 @@ For more information, email
 to full block links that have a finger-friendly touch area.
 
 <a class="a-link
-          a-link__jump
-          a-link__icon-after-text"
+          a-link--jump
+          a-link--icon-after-text"
    href="#">
-<span class="a-link_text">Default jump link</span>
+<span class="a-link__text">Default jump link</span>
 {% include icons/right.svg %}
 </a>
 
 ```
 <a class="a-link
-          a-link__jump
-          a-link__icon-after-text"
+          a-link--jump
+          a-link--icon-after-text"
    href="#">
     {% raw %}{% include icons/right.svg %}{% endraw %}
 </a>
@@ -285,20 +285,20 @@ to full block links that have a finger-friendly touch area.
 Jump links can also have icons before the text, like icon links.
 
 <a class="a-link
-          a-link__jump
-          a-link__icon-before-text"
+          a-link--jump
+          a-link--icon-before-text"
    href="#">
 {% include icons/left.svg %}
-<span class="a-link_text">Jump link with icon on left</span>
+<span class="a-link__text">Jump link with icon on left</span>
 </a>
 
 ```
 <a class="a-link
-          a-link__jump
-          a-link__icon-before-text"
+          a-link--jump
+          a-link--icon-before-text"
    href="#">
     {% raw %}{% include icons/left.svg %}{% endraw %}
-    <span class="a-link_text">Jump link with icon on left</span>
+    <span class="a-link__text">Jump link with icon on left</span>
 </a>
 ```
 
@@ -308,17 +308,17 @@ Jump links can also have icons before the text, like icon links.
 
 Unstyled list removes bullets and other styling from a list.
 
-<ul class="m-list m-list__unstyled">
-    <li class="m-list_item">List item 1</li>
-    <li class="m-list_item">List item 2</li>
-    <li class="m-list_item">List item 3</li>
+<ul class="m-list m-list--unstyled">
+    <li class="m-list__item">List item 1</li>
+    <li class="m-list__item">List item 2</li>
+    <li class="m-list__item">List item 3</li>
 </ul>
 
 ```
-<ul class="m-list m-list__unstyled">
-    <li class="m-list_item">List item 1</li>
-    <li class="m-list_item">List item 2</li>
-    <li class="m-list_item">List item 3</li>
+<ul class="m-list m-list--unstyled">
+    <li class="m-list__item">List item 1</li>
+    <li class="m-list__item">List item 2</li>
+    <li class="m-list__item">List item 3</li>
 </ul>
 ```
 
@@ -328,47 +328,47 @@ Spaced list adds extra padding to every element in a list.
 
 #### Default spaced list
 
-<ul class="m-list m-list__spaced">
-    <li class="m-list_item">List item 1</li>
-    <li class="m-list_item">List item 2</li>
-    <li class="m-list_item">List item 3</li>
+<ul class="m-list m-list--spaced">
+    <li class="m-list__item">List item 1</li>
+    <li class="m-list__item">List item 2</li>
+    <li class="m-list__item">List item 3</li>
 </ul>
 
 ```
-<ul class="m-list m-list__spaced">
-    <li class="m-list_item">List item 1</li>
-    <li class="m-list_item">List item 2</li>
-    <li class="m-list_item">List item 3</li>
+<ul class="m-list m-list--spaced">
+    <li class="m-list__item">List item 1</li>
+    <li class="m-list__item">List item 2</li>
+    <li class="m-list__item">List item 3</li>
 </ul>
 ```
 
 #### Nested list example
 
-<ul class="m-list m-list__spaced">
-    <li class="m-list_item">List item 1</li>
-    <li class="m-list_item">
+<ul class="m-list m-list--spaced">
+    <li class="m-list__item">List item 1</li>
+    <li class="m-list__item">
         List item 2
-        <ul class="m-list m-list__spaced">
-            <li class="m-list_item">List item 2a</li>
-            <li class="m-list_item">List item 2b</li>
-            <li class="m-list_item">List item 2c</li>
+        <ul class="m-list m-list--spaced">
+            <li class="m-list__item">List item 2a</li>
+            <li class="m-list__item">List item 2b</li>
+            <li class="m-list__item">List item 2c</li>
         </ul>
     </li>
-    <li class="m-list_item">List item 3</li>
+    <li class="m-list__item">List item 3</li>
 </ul>
 
 ```
-<ul class="m-list m-list__spaced">
-    <li class="m-list_item">List item 1</li>
-    <li class="m-list_item">
+<ul class="m-list m-list--spaced">
+    <li class="m-list__item">List item 1</li>
+    <li class="m-list__item">
         List item 2
-        <ul class="m-list m-list__spaced">
-            <li class="m-list_item">List item 2a</li>
-            <li class="m-list_item">List item 2b</li>
-            <li class="m-list_item">List item 2c</li>
+        <ul class="m-list m-list--spaced">
+            <li class="m-list__item">List item 2a</li>
+            <li class="m-list__item">List item 2b</li>
+            <li class="m-list__item">List item 2c</li>
         </ul>
     </li>
-    <li class="m-list_item">List item 3</li>
+    <li class="m-list__item">List item 3</li>
 </ul>
 ```
 
@@ -376,17 +376,17 @@ Spaced list adds extra padding to every element in a list.
 
 A modifier for the list to make it show items horizontally.
 
-<ul class="m-list m-list__horizontal">
-    <li class="m-list_item">List item 1</li>
-    <li class="m-list_item">List item 2</li>
-    <li class="m-list_item">List item 3</li>
+<ul class="m-list m-list--horizontal">
+    <li class="m-list__item">List item 1</li>
+    <li class="m-list__item">List item 2</li>
+    <li class="m-list__item">List item 3</li>
 </ul>
 
 ```
-<ul class="m-list m-list__horizontal">
-    <li class="m-list_item">List item 1</li>
-    <li class="m-list_item">List item 2</li>
-    <li class="m-list_item">List item 3</li>
+<ul class="m-list m-list--horizontal">
+    <li class="m-list__item">List item 1</li>
+    <li class="m-list__item">List item 2</li>
+    <li class="m-list__item">List item 3</li>
 </ul>
 ```
 
@@ -396,28 +396,28 @@ The link list modifier is intended to be used for lists where each item is a
 link. It converts to a finger-friendly link with a large tap area on smaller
 screens.
 
-<ul class="m-list m-list__links">
-    <li class="m-list_item">
-        <a class="m-list_link" href="#">List item 1</a>
+<ul class="m-list m-list--links">
+    <li class="m-list__item">
+        <a class="m-list__link" href="#">List item 1</a>
     </li>
-    <li class="m-list_item">
-        <a class="m-list_link" href="#">List item 2</a>
+    <li class="m-list__item">
+        <a class="m-list__link" href="#">List item 2</a>
     </li>
-    <li class="m-list_item">
-        <a class="m-list_link" href="#">List item 3</a>
+    <li class="m-list__item">
+        <a class="m-list__link" href="#">List item 3</a>
     </li>
 </ul>
 
 ```
-<ul class="m-list m-list__links">
-    <li class="m-list_item">
-        <a class="m-list_link" href="#">List item 1</a>
+<ul class="m-list m-list--links">
+    <li class="m-list__item">
+        <a class="m-list__link" href="#">List item 1</a>
     </li>
-    <li class="m-list_item">
-        <a class="m-list_link" href="#">List item 2</a>
+    <li class="m-list__item">
+        <a class="m-list__link" href="#">List item 2</a>
     </li>
-    <li class="m-list_item">
-        <a class="m-list_link" href="#">List item 3</a>
+    <li class="m-list__item">
+        <a class="m-list__link" href="#">List item 3</a>
     </li>
 </ul>
 ```
@@ -446,13 +446,13 @@ you should use the `aside` element.
 #### Default pull quote
 
 <aside class="m-pull-quote">
-    <p class="m-pull-quote_body">
+    <p class="m-pull-quote__body">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Cum corrupti tempora nam nihil qui mollitia consectetur
         corporis nemo culpa dolorum!
     </p>
     <footer>
-        <cite class="m-pull-quote_citation">
+        <cite class="m-pull-quote__citation">
             Author Name
         </cite>
     </footer>
@@ -460,13 +460,13 @@ you should use the `aside` element.
 
 ```
 <aside class="m-pull-quote">
-    <p class="m-pull-quote_body">
+    <p class="m-pull-quote__body">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Cum corrupti tempora nam nihil qui mollitia consectetur
         corporis nemo culpa dolorum!
     </p>
     <footer>
-        <cite class="m-pull-quote_citation">
+        <cite class="m-pull-quote__citation">
             Author Name
         </cite>
     </footer>

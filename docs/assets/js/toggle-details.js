@@ -45,16 +45,16 @@ function toggleDetails(button, document = window.document, state) {
  */
 function toggleAllDetails(toggleBtn) {
   if (isShowingAllDetails) {
-    toggleBtn.querySelector('.a-btn_text').innerHTML = 'Show all details';
+    toggleBtn.querySelector('.a-btn__text').innerHTML = 'Show all details';
     toggleBtn.setAttribute('title', 'Show all details');
     window.localStorage.setItem('toggleState', 'show');
   } else {
-    toggleBtn.querySelector('.a-btn_text').innerHTML = 'Hide all details';
+    toggleBtn.querySelector('.a-btn__text').innerHTML = 'Hide all details';
     toggleBtn.setAttribute('title', 'Hide all details');
     window.localStorage.setItem('toggleState', 'hide');
   }
 
-  const codeEls = document.querySelectorAll('.a-toggle_code');
+  const codeEls = document.querySelectorAll('.a-toggle__code');
   let buttonElm;
   for (let i = 0, len = codeEls.length; i < len; i++) {
     buttonElm = codeEls[i].querySelector('button:not(.u-hidden)');

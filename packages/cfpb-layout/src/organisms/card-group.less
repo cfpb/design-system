@@ -4,11 +4,11 @@
     margin-bottom: unit((30px / @base-font-size-px), rem);
   }
 
-  &__column-2 &_cards {
+  &--column-2 &__cards {
     grid-template-columns: 1fr 1fr;
   }
 
-  &__column-3 &_cards {
+  &--column-3 &__cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
     // Convert to 2-column layout at small screen sizes;
@@ -17,7 +17,7 @@
     });
   }
 
-  &_cards {
+  &__cards {
     display: grid;
     grid-column-gap: unit((20px / @base-font-size-px), em);
     grid-row-gap: unit((20px / @base-font-size-px), em);
@@ -29,7 +29,7 @@
     });
   }
 
-  &__bg-green {
+  &--bg-green {
     padding: unit((30px / @base-font-size-px), em);
     background: var(--green-20);
   }
@@ -41,7 +41,7 @@
 
 /* stylelint-disable selector-type-no-unknown */
 _:-ms-lang(x),
-.o-card-group_cards {
+.o-card-group__cards {
   display: block;
 
   .m-card {
@@ -52,23 +52,23 @@ _:-ms-lang(x),
 }
 
 _:-ms-lang(x),
-.o-card-group__column-2 {
-  .o-card-group_cards .m-card {
+.o-card-group--column-2 {
+  .o-card-group__cards .m-card {
     width: 48%;
     margin-right: 2%;
   }
-  .o-card-group_cards .m-card:last-child {
+  .o-card-group__cards .m-card:last-child {
     margin-right: 0;
   }
 }
 
 _:-ms-lang(x),
-.o-card-group__column-3 {
-  .o-card-group_cards .m-card {
+.o-card-group--column-3 {
+  .o-card-group__cards .m-card {
     width: 32%;
     margin-right: 1%;
   }
-  .o-card-group_cards .m-card:last-child {
+  .o-card-group__cards .m-card:last-child {
     margin-right: 0;
   }
 }
@@ -86,9 +86,9 @@ _:-ms-lang(x),
 .o-card-group {
   /* stylelint-enable no-duplicate-selectors */
   // Name the card grid areas.
-  &__count-2,
-  &__count-3,
-  &__count-4 {
+  &--count-2,
+  &--count-3,
+  &--count-4 {
     .m-card:nth-of-type(1) {
       grid-area: card1;
     }
@@ -106,12 +106,12 @@ _:-ms-lang(x),
     }
   }
 
-  &__count-2 &_cards {
+  &--count-2 &__cards {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'card1 card2';
   }
 
-  &__count-3 &_cards {
+  &--count-3 &__cards {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       'card1 card2'
@@ -130,7 +130,7 @@ _:-ms-lang(x),
     }
   }
 
-  &__count-4 &_cards {
+  &--count-4 &__cards {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       'card1 card2'
@@ -138,8 +138,8 @@ _:-ms-lang(x),
   }
 
   // Flexbox-based "flow" card group layout.
-  &__flow {
-    .o-card-group_cards {
+  &--flow {
+    .o-card-group__cards {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -150,7 +150,7 @@ _:-ms-lang(x),
 // Tablet only.
 .respond-to-range(@bp-sm-min, @bp-sm-max, {
   .o-card-group {
-    &__count-3 &_cards {
+    &--count-3 &__cards {
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
       'card1 card1'
@@ -162,13 +162,13 @@ _:-ms-lang(x),
 // Mobile only.
 .respond-to-max(@bp-xs-max, {
   .o-card-group {
-    &__count-2 &_cards {
+    &--count-2 &__cards {
       grid-template-columns: 1fr;
       grid-template-areas:
       'card1'
       'card2';
     }
-    &__count-3 &_cards {
+    &--count-3 &__cards {
       grid-template-columns: 1fr;
       grid-template-areas:
       'card1'
@@ -176,7 +176,7 @@ _:-ms-lang(x),
       'card3';
     }
 
-    &__count-4 &_cards {
+    &--count-4 &__cards {
       grid-template-columns: 1fr;
       grid-template-areas:
       'card1'
@@ -185,8 +185,8 @@ _:-ms-lang(x),
       'card4';
     }
 
-    &__flow {
-      .o-card-group_cards {
+    &--flow {
+      .o-card-group__cards {
         display: block;
 
         .m-card {

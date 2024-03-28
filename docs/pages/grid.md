@@ -141,7 +141,7 @@ variation_groups:
 
           ```
 
-          .grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
+          .grid__column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
 
           ```
 
@@ -169,7 +169,7 @@ variation_groups:
           }
 
           .half {
-              .grid_column(1, 2);
+              .grid__column(1, 2);
           }
 
           .styled {
@@ -213,7 +213,7 @@ variation_groups:
 
           In cf-grid, the way to get around this is by wrapping your columns
 
-          in a container that utilizes the `.grid_nested-col-group()` mixin.
+          in a container that utilizes the `.grid__nested-col-group()` mixin.
 
           This mixin uses negative left and right margins to
 
@@ -232,7 +232,7 @@ variation_groups:
 
           ```
 
-          .grid_nested-col-group()
+          .grid__nested-col-group()
 
           ```
 
@@ -247,11 +247,11 @@ variation_groups:
           }
 
           .nested {
-              .grid_nested-col-group();
+              .grid__nested-col-group();
           }
 
           .half {
-              .grid_column(1, 2);
+              .grid__column(1, 2);
           }
 
           ```
@@ -346,12 +346,12 @@ variation_groups:
           ```
 
           .first {
-              .grid_column(1, 2);
+              .grid__column(1, 2);
               .grid_pull(1);
           }
 
           .second {
-              .grid_column(1, 2);
+              .grid__column(1, 2);
               .grid_push(1);
           }
 
@@ -446,7 +446,7 @@ variation_groups:
       .description,
 
       .illustration {
-          .grid_column(1, 2);
+          .grid__column(1, 2);
       }
 
       ```

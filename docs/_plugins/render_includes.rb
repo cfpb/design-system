@@ -7,12 +7,12 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     doc = Nokogiri::HTML(page.output)
     # Elements to search for includes in
     divs = doc.css(
-      'div.a-live_code,' \
+      'div.a-live__code,' \
       'table.icon-table,' \
       'body.t-generic-page,' \
       'div.component-restrictions,' \
       'section#description,' \
-      '.m-variation_description,' \
+      '.m-variation__description,' \
       '.misuse'
     )
     divs.each do |div|

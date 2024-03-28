@@ -14,7 +14,7 @@ variation_groups:
 
 
           <div class="m-form-field m-form-field__select">
-              <label class="a-label a-label__heading" for="test_select_enabled">
+              <label class="a-label a-label--heading" for="test_select_enabled">
                   Enabled
               </label>
               <div class="a-select">
@@ -34,7 +34,7 @@ variation_groups:
           <!--Hover state-->
 
           <div class="m-form-field m-form-field__select">
-              <label class="a-label a-label__heading" for="test_select__hover">
+              <label class="a-label a-label--heading" for="test_select__hover">
                  Hover
               </label>
               <div class="a-select">
@@ -55,7 +55,7 @@ variation_groups:
 
 
           <div class="m-form-field m-form-field__select">
-              <label class="a-label a-label__heading" for="test_select__focus">
+              <label class="a-label a-label--heading" for="test_select__focus">
                   Focus
               </label>
               <div class="a-select">
@@ -76,8 +76,8 @@ variation_groups:
 
 
           <div class="m-form-field m-form-field__select">
-              <label class="a-label a-label__heading" for="test_select__disabled">Disabled</label>
-              <div class="a-select a-select__disabled">
+              <label class="a-label a-label--heading" for="test_select__disabled">Disabled</label>
+              <div class="a-select a-select--disabled">
                   <select id="test_select__disabled" disabled>
                       <option value="option1">Option 1</option>
                       <option value="option2">Option 2</option>
@@ -98,7 +98,7 @@ variation_groups:
           list of options.
         variation_code_snippet: >-
           <div class="m-form-field m-form-field__select">
-              <label class="a-label a-label__heading" for="test_select__multiple">
+              <label class="a-label a-label--heading" for="test_select__multiple">
                   Label
               </label>
               <select class="o-multiselect" id="test_select__multiple" multiple>

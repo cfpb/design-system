@@ -12,7 +12,7 @@ const selector = 'data-js-hook=behavior_flyout-menu';
 
 const HTML_SNIPPET = `
 <div class="skip-nav">
-  <a href="#main" class="skip-nav_link">Skip to main content</a>
+  <a href="#main" class="skip-nav__link">Skip to main content</a>
 </div>
 <a class="o-mega-menu_content-link o-mega-menu_content-1-link"
    data-js-hook="behavior_flyout-menu_trigger">

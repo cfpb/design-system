@@ -51,7 +51,7 @@ variation_groups:
             <tbody>
 
           <tr>
-                <td class="swatch_field swatch_field__green"></td>
+                <td class="swatch_field swatch_field--green"></td>
                 <td>CFPB green</td>
 
             <td>80, 0, 100, 0</td>
@@ -65,7 +65,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__green-60"></td>
+                <td class="swatch_field swatch_field--green-60"></td>
                 <td>Green 60 (Midtone Green)</td>
                 <td>32, 0, 52, 0</td>
 
@@ -78,7 +78,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field__gray"></td>
+                <td class="swatch_field swatch_field--gray"></td>
                 <td>Gray</td>
                 <td>0, 0, 0, 77</td>
 
@@ -450,10 +450,10 @@ guidelines: >-
   #### Compositions
 
 
-  A beam pattern is a graphic background element that can be paired with the CFPB logo. A beam pattern provides grounding and an engaging graphic reference to the beam concept in our logo. 
+  A beam pattern is a graphic background element that can be paired with the CFPB logo. A beam pattern provides grounding and an engaging graphic reference to the beam concept in our logo.
 
 
-  Beam patterns are composed of overlapping beams that frame areas of white space used for titles, text, and other graphic elements. Beams always point horizontally, not vertically. 
+  Beam patterns are composed of overlapping beams that frame areas of white space used for titles, text, and other graphic elements. Beams always point horizontally, not vertically.
 
 
   </div>

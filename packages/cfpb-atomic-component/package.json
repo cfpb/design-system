@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-atomic-component",
-  "version": "0.42.0",
+  "version": "0.43.0",
   "description": "Design System atomic component utilities",
   "less": "src/cfpb-atomic-component.less",
   "style": "cfpb-atomic-component.css",

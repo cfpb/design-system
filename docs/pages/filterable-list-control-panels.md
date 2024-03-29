@@ -17,7 +17,7 @@ variation_groups:
                   o-expandable__border
                   o-expandable__onload-open">
                   <button class="o-expandable_header" type="button">
-                      <span class="h4 o-expandable_label">
+                      <span class="o-expandable_label">
                       Filter posts
                       </span>
                       <span class="o-expandable_cues">

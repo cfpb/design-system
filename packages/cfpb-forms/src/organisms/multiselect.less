@@ -80,7 +80,7 @@ select.o-multiselect {
       // See https://github.com/cfpb/design-system/blob/4d26d5af04317bcc00b4677aa866fe8d526e82e0/packages/cfpb-forms/src/organisms/Multiselect.js#L340
       max-height: 140px;
 
-      border-color: @pacific;
+      border-color: var(--pacific);
       border-width: 2px;
       border-top: 0;
     }
@@ -93,7 +93,7 @@ select.o-multiselect {
 
   &_options {
     list-style-type: none;
-    background-color: @white;
+    background-color: var(--white);
     padding: 0;
 
     li {
@@ -171,20 +171,20 @@ select.o-multiselect {
 
       &:focus {
         border-radius: unit((3px / @size-v), em);
-        outline: 1px dotted @teal;
+        outline: 1px dotted var(--teal);
         outline-offset: 1px;
 
         label {
-          background-color: @teal-20;
+          background-color: var(--teal-20);
         }
       }
 
       &:hover label {
-        background-color: @teal-40;
+        background-color: var(--teal-40);
       }
 
       &:active label {
-        background-color: @teal-60;
+        background-color: var(--teal-60);
       }
     }
 
@@ -193,19 +193,19 @@ select.o-multiselect {
       padding: 4px 10px;
       padding-right: 25px;
 
-      background-color: @teal-20;
+      background-color: var(--teal-20);
       border-radius: unit((3px / @size-v), em);
-      border: 1px solid @teal;
-      color: @black;
+      border: 1px solid var(--teal);
+      color: var(--black);
       cursor: pointer;
       font-size: unit((16px / @base-font-size-px), em);
       position: relative;
 
       &:hover {
-        background-color: @teal-40;
+        background-color: var(--teal-40);
 
         &::after {
-          color: @white;
+          color: var(--white);
         }
       }
 
@@ -214,7 +214,7 @@ select.o-multiselect {
         top: 4px;
         right: 5px;
         margin-left: 10px;
-        fill: @black;
+        fill: var(--black);
       }
     }
   }

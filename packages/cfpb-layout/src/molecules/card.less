@@ -51,7 +51,7 @@
     bottom: 1px;
     height: 5px;
     width: 100%;
-    background: @green;
+    background: var(--green);
   }
 }
 
@@ -69,8 +69,8 @@
   }
 
   &:not(.m-card__breakout, .m-card__topic) {
-    background: @white;
-    border: 1px solid @gray-20;
+    background: var(--white);
+    border: 1px solid var(--gray-20);
     border-bottom-width: 3px;
     padding: unit((@grid_gutter-width / @base-font-size-px), em);
   }
@@ -103,10 +103,10 @@
 
   // Regular cards.
   &_heading > a {
-    color: @black;
+    color: var(--black);
 
     &:hover {
-      color: @pacific;
+      color: var(--pacific);
     }
 
     & .m-card_icon {
@@ -130,37 +130,37 @@
   &__topic {
     text-align: center;
     width: 170px;
-    background: @white;
+    background: var(--white);
 
     & > a {
-      border: 1px solid @gray-20;
+      border: 1px solid var(--gray-20);
       border-bottom-width: 3px;
     }
 
     .m-card_icon {
       font-size: unit((30px / @base-font-size-px), em);
-      color: @green;
+      color: var(--green);
       margin-bottom: unit((5px / @base-font-size-px), em);
     }
 
     &:hover {
       > a {
         box-shadow:
-          0 2px 0 0 inset @gray-20,
-          2px 0 0 0 inset @gray-20,
-          -2px 0 0 0 inset @gray-20;
+          0 2px 0 0 inset var(--gray-20),
+          2px 0 0 0 inset var(--gray-20),
+          -2px 0 0 0 inset var(--gray-20);
       }
 
       .u-card-bottom-bar();
     }
 
     // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-    .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific-dark, @pacific-dark );
+    .u-link-card__colors( var(--pacific), var(--teal), var(--pacific-dark), var(--pacific-dark), var(--pacific-dark) );
   }
 
   &__topic-action {
     .m-card_icon {
-      color: @pacific;
+      color: var(--pacific);
     }
   }
 
@@ -181,8 +181,8 @@
       z-index: 0;
       min-height: (@card_img_height + (@grid_gutter-width / 2));
 
-      background: @gray-5;
-      border: 1px solid @gray-20;
+      background: var(--gray-5);
+      border: 1px solid var(--gray-20);
       border-bottom-width: 3px;
     }
 
@@ -206,16 +206,16 @@
     &:hover {
       .m-card_inner-wrapper {
         box-shadow:
-          0 2px 0 0 inset @gray-20,
-          2px 0 0 0 inset @gray-20,
-          -2px 0 0 0 inset @gray-20;
+          0 2px 0 0 inset var(--gray-20),
+          2px 0 0 0 inset var(--gray-20),
+          -2px 0 0 0 inset var(--gray-20);
       }
 
       .u-card-bottom-bar();
     }
 
     // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-    .u-link-card__colors( @pacific, @teal, @pacific-dark, @pacific, @navy );
+    .u-link-card__colors( var(--pacific), var(--teal), var(--pacific-dark), var(--pacific), var(--navy) );
 
     // Breakout cards have larger links.
     .m-card_footer > span {

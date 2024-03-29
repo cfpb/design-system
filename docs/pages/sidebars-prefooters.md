@@ -126,37 +126,6 @@ variation_groups:
 
           Note that inline styling is for demonstration purposes only; do not include it in your markup.
         variation_name: Bleedbar sidebar styling
-      - variation_code_snippet: >-
-          <main class="content content__2-1" role="main">
-              <div class="content_line"></div>
-              <div class="content_wrapper">
-                  <section class="content_main content_main__narrow">
-                      <h2>Main content area</h2>
-                      <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          Cum corrupti tempora nam nihil qui mollitia consectetur
-                          corporis nemo culpa dolorum! Laborum at eos deleniti
-                          consequatur itaque officiis debitis quisquam! Provident!
-                      </p>
-                  </section>
-                  <aside class="content_sidebar" style="background: #F1F2F2">
-                      Sidebar
-                  </aside>
-              </div>
-          </main>
-
-          <footer class="footer" role="contentinfo">
-              <div class="wrapper">
-                  Footer
-              </div>
-          </footer>
-        variation_description: >-
-          Add a class of `.content_main__narrow` to `.content_main` to get a
-          one-column (in a 12-column grid) gutter on the right side.
-
-
-          Inline styling is for demonstration purposes only; do not include it in your markup.
-        variation_name: Narrow content column option
     variation_group_name: Main content and sidebar
   - variation_group_name: Modifiers
     variations:
@@ -339,8 +308,6 @@ related_items: >-
   variables](https://cfpb.github.io/design-system/development/variables#color-4)
 
   * [Blocks](https://cfpb.github.io/design-system/development/blocks)
-
-  * [Column dividers](https://cfpb.github.io/design-system/development/column-dividers)
 
   * [Grid](https://cfpb.github.io/design-system/foundation/grid)
 last_updated: 2020-01-28T15:55:47.394Z

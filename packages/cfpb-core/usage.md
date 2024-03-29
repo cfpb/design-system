@@ -20,7 +20,6 @@ It's made up of four child components `vars`, `media-queries`,
 - [Media queries](#media-queries)
   - [Respond to min and max mixins](#respond-to-min-and-max-width-mixins)
   - [Respond to range mixin](#respond-to-range-mixin)
-  - [Respond to dpi mixin](#respond-to-dpi-mixin)
   - [Respond to print mixin](#respond-to-print-mixin)
 - [Utilities](#utilities)
   - [Helper classes](#helper-classes)
@@ -64,30 +63,30 @@ Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.l
 
 ```
 // body
-@text:                   @black;
+@text:                   var(--black);
 
 // a
-@link-text:              @pacific;
-@link-underline:         @pacific;
-@link-text-visited:      @teal;
-@link-underline-visited: @teal;
-@link-text-hover:        @pacific-dark;
-@link-underline-hover:   @pacific-dark;
-@link-text-active:       @navy;
-@link-underline-active:  @navy;
+@link-text:              var(--pacific);
+@link-underline:         var(--pacific);
+@link-text-visited:      var(--teal);
+@link-underline-visited: var(--teal);
+@link-text-hover:        var(--pacific-dark);
+@link-underline-hover:   var(--pacific-dark);
+@link-text-active:       var(--navy);
+@link-underline-active:  var(--navy);
 
 // table
 
 @table-head-text:        @text;
-@table-head-bg:          @gray-5;
-@table-cell-bg:          @white;
-@table-cell-bg_alt:      @gray-5;
-@table-scrolling-border: @gray-40;
-@table-border:           @gray;
+@table-head-bg:          var(--gray-5);
+@table-cell-bg:          var(--white);
+@table-cell-bg_alt:      var(--gray-5);
+@table-scrolling-border: var(--gray-40);
+@table-border:           var(--gray);
 
 // code
 @code-text:              @text;
-@code-bg:                @gray-5;
+@code-bg:                var(--gray-5);
 ```
 
 ### Sizing variables
@@ -177,32 +176,6 @@ Ex.
 }
 ```
 
-### Respond to dpi mixin
-
-This mixin allows us to easily write styles
-that target high-resolution screens,
-such as Apple retina screens
-
-```less
-// The following LESS...
-.example {
-  background: url(regular-resolution-image.png);
-  .respond-to-dpi(2, {
-        background-image: url(retina-image.png);
-    });
-}
-
-// ...Exports to
-.example {
-  background: url(regular-resolution-image.png);
-}
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .example {
-    background-image: url(retina-image.png);
-  }
-}
-```
-
 ### Respond to print mixin
 
 This mixin allows us to easily write styles that target both
@@ -211,9 +184,9 @@ This mixin allows us to easily write styles that target both
 ```less
 // The following LESS...
 .example {
-  color: @gray;
+  color: var(--gray);
   .respond-to-print({
-        color: @black;
+        color: var(--black);
     });
 }
 

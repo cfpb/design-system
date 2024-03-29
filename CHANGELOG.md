@@ -1,4 +1,41 @@
 
+## v0.42.0 (2024-03-26)
+
+#### Breaking Change
+* `cfpb-buttons`, `cfpb-core`, `cfpb-expandables`, `cfpb-forms`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1918](https://github.com/cfpb/design-system/pull/1918) Migrate Less color variables to CSS custom properties (variables) ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
+## v0.41.0 (2024-03-26)
+
+#### Breaking Change
+* `cfpb-core`
+  * [#1935](https://github.com/cfpb/design-system/pull/1935) cfpb-core: Remove `.respond-to-dpi(…)` utility ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1934](https://github.com/cfpb/design-system/pull/1934) Update autoprefixer, cypress, postcss ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
+## v0.40.0 (2024-03-21)
+
+#### Breaking Change
+* `cfpb-design-system`, `cfpb-layout`
+  * [#1928](https://github.com/cfpb/design-system/pull/1928) cfpb-layout: Remove `content_main__narrow` class ([@anselmbradford](https://github.com/anselmbradford))
+  * [#1929](https://github.com/cfpb/design-system/pull/1929) cfpb-layout: Remove legacy layout classes and docs ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.39.0 (2024-03-13)
 
 #### Breaking Change

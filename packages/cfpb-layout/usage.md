@@ -65,33 +65,33 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ```
 // .block
-@block__bg:                 @gray-5;
-@block__border:             @gray-40;
-@block__border-top:         @gray-40;
-@block__border-right:       @gray-40;
-@block__border-bottom:      @gray-40;
-@block__border-left:        @gray-40;
+@block__bg:                 var(--gray-5);
+@block__border:             var(--gray-40);
+@block__border-top:         var(--gray-40);
+@block__border-right:       var(--gray-40);
+@block__border-bottom:      var(--gray-40);
+@block__border-left:        var(--gray-40);
 
 // .content_main
-@content_main-border:       @gray-40;
+@content_main-border:       var(--gray-40);
 
 // .content_sidebar
-@content_sidebar-bg:        @gray-5;
-@content_sidebar-border:    @gray-40;
+@content_sidebar-bg:        var(--gray-5);
+@content_sidebar-border:    var(--gray-40);
 
 // .content_line
-@content_line:              @gray-40;
+@content_line:              var(--gray-40);
 
 // .grid_column__top-divider
-@grid_column__top-divider:  @gray-40;
+@grid_column__top-divider:  var(--gray-40);
 
 // .grid_column__left-divider
-@grid_column__left-divider: @gray-40;
+@grid_column__left-divider: var(--gray-40);
 
 // Hero variables
-@hero-bg:                   @gray-5;
-@hero-knockout-bg:          @gray;
-@hero-knockout-text:        @white;
+@hero-bg:                   var(--gray-5);
+@hero-knockout-bg:          var(--gray);
+@hero-knockout-text:        var(--white);
 
 // Featured Content Module variables
 @fcm-bg:                    @block__bg;
@@ -315,62 +315,6 @@ it in your markup._
         </aside>
     </div>
 </main>
-```
-
-### Narrow content column option
-
-Add a class of `.content_main__narrow` to `.content_main` to get a one-column
-(in a 12-column grid) gutter on the right side.
-
-_Inline styling is for demonstration purposes only; do not include it in your
-markup._
-
-<main class="content content__2-1" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main content_main__narrow">
-            <h2>Main content area</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            </p>
-        </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
-            Sidebar
-        </aside>
-    </div>
-</main>
-<footer class="footer" role="contentinfo">
-    <div class="wrapper">
-        Footer
-    </div>
-</footer>
-
-```
-<main class="content content__2-1" role="main">
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main content_main__narrow">
-            <h2>Main content area</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            </p>
-        </section>
-        <aside class="content_sidebar" style="background: #F1F2F2">
-            Sidebar
-        </aside>
-    </div>
-</main>
-<footer class="footer" role="contentinfo">
-    <div class="wrapper">
-        Footer
-    </div>
-</footer>
 ```
 
 ### Flush bottom modifier

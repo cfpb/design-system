@@ -76,36 +76,6 @@ variation_groups:
 
       ```
     variation_group_name: Range
-  - variation_group_description: >-
-      This mixin allows us to easily write styles that target high-resolution
-      screens, such as Apple retina screens
-
-      ```
-
-      // The following LESS...
-
-      .example {
-          background: url(regular-resolution-image.png);
-          .respond-to-dpi(2, {
-              background-image: url(retina-image.png);
-          });
-      }
-
-
-      // ...Exports to
-
-      .example {
-          background: url(regular-resolution-image.png);
-      }
-
-      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-          .example {
-              background-image: url(retina-image.png);
-          }
-      }
-
-      ```
-    variation_group_name: Dpi
   - variation_group_name: Print
     variation_group_description: >-
 
@@ -116,9 +86,9 @@ variation_groups:
       // The following LESS...
 
       .example {
-          color: @gray;
+          color: var(--gray);
           .respond-to-print({
-              color: @black;
+              color: var(--black);
           });
       }
 

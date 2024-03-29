@@ -100,7 +100,6 @@ first-level:
         nav-items:
           - page: Base images
           - page: Blocks
-          - page: Column dividers
           - page: Main content and sidebars
       - heading: Utilities
         nav-items:

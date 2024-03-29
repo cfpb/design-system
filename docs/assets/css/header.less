@@ -7,7 +7,7 @@
   margin-top: 30px;
 
   a {
-    color: @gray;
+    color: var(--gray);
   }
 
   .demi {
@@ -27,7 +27,7 @@
 .respond-to-max(@bp-xs-max, {
 
   .site-header {
-    background-color: @gray-5;
+    background-color: var(--gray-5);
     display: table;
     width: 100%;
     padding: 0;
@@ -57,11 +57,11 @@
 
   .nav-list-item {
     &:first-child a {
-      border-top: 1px solid @gray-20;
+      border-top: 1px solid var(--gray-20);
     }
     a {
       display: block;
-      border-bottom: 1px solid @gray-20;
+      border-bottom: 1px solid var(--gray-20);
       padding: 1em;
     }
   }
@@ -77,7 +77,7 @@
 
   .site-header-wrapper {
     padding-bottom: unit( ( 16px / @base-font-size-px ), em );
-    border-bottom: 4px solid @green;
+    border-bottom: 4px solid var(--green);
   }
 
   .site-header {

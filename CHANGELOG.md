@@ -1,4 +1,22 @@
 
+## v0.43.0 (2024-03-29)
+
+#### Breaking Change
+* `cfpb-expandables`
+  * [#1930](https://github.com/cfpb/design-system/pull/1930) cfpb-expandables: Set spacing for expandable icon ([@csebianlander](https://github.com/csebianlander))
+
+#### Bug Fix
+* `cfpb-design-system`, `cfpb-notifications`
+  * [#1940](https://github.com/cfpb/design-system/pull/1940) cfpb-notifications: Only set icon color on first child icon | move h4 to CSS ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-core`, `cfpb-typography`
+  * [#1938](https://github.com/cfpb/design-system/pull/1938) Remove unused `@text-shadow` argument ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Chuck Sebian-Lander ([@csebianlander](https://github.com/csebianlander))
+
+
+
 ## v0.42.0 (2024-03-26)
 
 #### Breaking Change

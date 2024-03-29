@@ -18,7 +18,7 @@
     background: @notification-bg-success;
     border-color: @notification-border-success;
 
-    .cf-icon-svg {
+    & > .cf-icon-svg {
       fill: @notification-icon-success;
     }
   }
@@ -27,7 +27,7 @@
     background: @notification-bg-warning;
     border-color: @notification-border-warning;
 
-    .cf-icon-svg {
+    & > .cf-icon-svg {
       fill: @notification-icon-warning;
     }
   }
@@ -36,7 +36,7 @@
     background: @notification-bg-error;
     border-color: @notification-border-error;
 
-    .cf-icon-svg {
+    & > .cf-icon-svg {
       fill: @notification-icon-error;
     }
   }
@@ -51,6 +51,7 @@
   }
 
   &_message {
+    .h4();
     margin-bottom: 0;
   }
 

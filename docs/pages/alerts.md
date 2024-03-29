@@ -22,7 +22,7 @@ variation_groups:
                       m-notification__visible">
               {% include icons/information-round.svg %}
               <div class="m-notification_content">
-                  <div class="h4 m-notification_message">Information alert</div>
+                  <div class="m-notification_message">Information alert</div>
               </div>
           </div>
 
@@ -34,7 +34,7 @@ variation_groups:
                       m-notification__visible">
               {% include icons/information-round.svg %}
               <div class="m-notification_content">
-                  <div class="h4 m-notification_message">Information alert</div>
+                  <div class="m-notification_message">Information alert</div>
                   <p class="m-notification_explanation">
                       You can also add an explanation to the alert.
                   </p>
@@ -49,7 +49,7 @@ variation_groups:
                       m-notification__visible">
               {% include icons/information-round.svg %}
               <div class="m-notification_content">
-                  <div class="h4 m-notification_message">Information alert</div>
+                  <div class="m-notification_message">Information alert</div>
                   <p class="m-notification_explanation">
                       This is the explanation of the alert.
                   </p>
@@ -77,7 +77,7 @@ variation_groups:
                       m-notification__success">
               {% include icons/approved-round.svg %}
               <div class="m-notification_content">
-                  <div class="h4 m-notification_message">11 results</div>
+                  <div class="m-notification_message">11 results</div>
               </div>
           </div>
         variation_description:
@@ -92,7 +92,7 @@ variation_groups:
                       m-notification__warning">
               {% include icons/warning-round.svg %}
               <div class="m-notification_content">
-                  <div class="h4 m-notification_message">No results found.</div>
+                  <div class="m-notification_message">No results found.</div>
               </div>
           </div>
         variation_description:
@@ -111,7 +111,17 @@ variation_groups:
                       m-notification__error">
               {% include icons/error-round.svg %}
               <div class="m-notification_content">
-                  <div class="h4 m-notification_message">Page not found.</div>
+                  <div class="m-notification_message">Page not found.</div>
+                  <p class="m-notification_explanation">
+                      This is an explanation of the error.
+                  </p>
+                  <ul class="m-list m-list__links">
+                      <li class="m-list_item">
+                          <a class="m-list_link" href="/">
+                              This is an external link {% include icons/external-link.svg %}
+                          </a>
+                      </li>
+                  </ul>
               </div>
           </div>
         variation_description:
@@ -133,7 +143,7 @@ variation_groups:
                       m-notification__visible">
               {% include icons/updating.svg %}
               <div class="m-notification_content">
-                  <div class="h4 m-notification_message">The page is loading…</div>
+                  <div class="m-notification_message">The page is loading…</div>
               </div>
           </div>
         variation_description: The in-progress alert displays when something is

@@ -78,6 +78,16 @@ variation_groups:
               {% include icons/approved-round.svg %}
               <div class="m-notification_content">
                   <div class="m-notification_message">11 results</div>
+                  <p class="m-notification_explanation">
+                      This is an optional explanation of the success message.
+                  </p>
+                  <ul class="m-list m-list__links">
+                      <li class="m-list_item">
+                          <a class="m-list_link" href="/">
+                              This is an external link {% include icons/external-link.svg %}
+                          </a>
+                      </li>
+                  </ul>
               </div>
           </div>
         variation_description:
@@ -93,6 +103,16 @@ variation_groups:
               {% include icons/warning-round.svg %}
               <div class="m-notification_content">
                   <div class="m-notification_message">No results found.</div>
+                  <p class="m-notification_explanation">
+                      This is an optional explanation of the warning.
+                  </p>
+                  <ul class="m-list m-list__links">
+                      <li class="m-list_item">
+                          <a class="m-list_link" href="/">
+                              This is an external link {% include icons/external-link.svg %}
+                          </a>
+                      </li>
+                  </ul>
               </div>
           </div>
         variation_description:
@@ -113,7 +133,7 @@ variation_groups:
               <div class="m-notification_content">
                   <div class="m-notification_message">Page not found.</div>
                   <p class="m-notification_explanation">
-                      This is an explanation of the error.
+                      This is an optional explanation of the error.
                   </p>
                   <ul class="m-list m-list__links">
                       <li class="m-list_item">

@@ -39,7 +39,12 @@
     & > .cf-icon-svg {
       fill: @notification-icon-error;
     }
+  }
 
+  // Set accessible colors for links in alert notificiations.
+  &__success,
+  &__warning,
+  &__error {
     & a {
       // Colors for :link, :visited, :hover, :focus, :active.
       .u-link__colors( var(--pacific-mid-dark), var(--teal), var(--pacific-dark), var(--pacific-mid-dark), var(--navy-dark) );

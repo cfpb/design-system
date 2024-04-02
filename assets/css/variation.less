@@ -3,11 +3,11 @@
    ========================================================================== */
 
 .o-variation-group {
-  border: 5px solid @gray-10;
+  border: 5px solid var(--gray-10);
   margin: 2rem 0;
 
   &_title {
-    background: @gray-10;
+    background: var(--gray-10);
     margin-bottom: 2rem;
     padding: 1rem;
   }
@@ -24,14 +24,14 @@
 }
 
 .m-variation {
-  border-bottom: 1px solid @gray-40;
+  border-bottom: 1px solid var(--gray-40);
 
   &_name {
     margin-top: 2rem;
   }
 
   &_deprecated {
-    background: @gray-10;
+    background: var(--gray-10);
     font-size: unit((10px / @base-font-size-px), em);
     font-variant: small-caps;
     border-radius: 5px;
@@ -50,11 +50,11 @@
 
 // The icon colors on the restrictions do/do not sections.
 .component-restrictions_heading-do svg {
-  color: @green;
+  color: var(--green);
 }
 
 .component-restrictions_heading-donot svg {
-  color: @red;
+  color: var(--red);
 }
 
 // Wrapping long horizontal lists.

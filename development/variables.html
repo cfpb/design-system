@@ -177,10 +177,6 @@
                             </li>
                         
                             <li class="m-list_item">
-                                <a class="m-list_link" href="/design-system/development/column-dividers">Column dividers</a>
-                            </li>
-                        
-                            <li class="m-list_item">
                                 <a class="m-list_link" href="/design-system/development/main-content-and-sidebars">Main content and sidebars</a>
                             </li>
                         
@@ -333,27 +329,31 @@
             
             <div class="m-variation_description">
                 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// .btn
-@btn-text:                  @white;
-@btn-bg:                    @pacific;
-@btn-bg-hover:              @pacific-dark;
-@btn-bg-active:             @navy;
+@btn-text:                  var(--white);
+@btn-bg:                    var(--pacific);
+@btn-bg-hover:              var(--pacific-dark);
+@btn-bg-active:             var(--navy);
+@btn-divider:               var(--pacific-60);
 
 // .btn__secondary
-@btn__secondary-text:       @white;
-@btn__secondary-bg:         @gray;
-@btn__secondary-bg-hover:   @gray-dark;
-@btn__secondary-bg-active:  @black;
+@btn__secondary-text:       var(--white);
+@btn__secondary-bg:         var(--gray);
+@btn__secondary-bg-hover:   var(--gray-dark);
+@btn__secondary-bg-active:  var(--black);
+@btn__secondary-divider:    var(--gray-40);
 
 // .btn__warning
-@btn__warning-text:         @white;
-@btn__warning-bg:           @red-mid-dark;
-@btn__warning-bg-hover:     @red-dark;
-@btn__warning-bg-active:    @gray-dark;
+@btn__warning-text:         var(--white);
+@btn__warning-bg:           var(--red-mid-dark);
+@btn__warning-bg-hover:     var(--red-dark);
+@btn__warning-bg-active:    var(--gray-dark);
+@btn__warning-divider:      var(--red-60);
 
 // .btn__disabled
-@btn__disabled-text:        @gray;
-@btn__disabled-bg:          @gray-20;
-@btn__disabled-outline:     @gray-20;
+@btn__disabled-text:        var(--gray);
+@btn__disabled-bg:          var(--gray-20);
+@btn__disabled-outline:     var(--gray-20);
+@btn__disabled-divider:     var(--gray-60);
 </code></pre></div></div>
 
             </div>
@@ -443,47 +443,47 @@
             
             <div class="m-variation_description">
                 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// .a-text-input borders
-@input-border:                            @gray-60;
-@input-border__hover:                     @pacific;
-@input-border__focused:                   @pacific;
-@input-border__active:                    @pacific;
-@input-border__error:                     @red;
-@input-border__warning:                   @gold;
-@input-border__success:                   @green;
-@input-border__selected:                  @pacific;
+@input-border:                            var(--gray-60);
+@input-border__hover:                     var(--pacific);
+@input-border__focused:                   var(--pacific);
+@input-border__active:                    var(--pacific);
+@input-border__error:                     var(--red);
+@input-border__warning:                   var(--gold);
+@input-border__success:                   var(--green);
+@input-border__selected:                  var(--pacific);
 
 // .a-text-input backgrounds
-@input-bg:                                @white;
-@input-bg__selected:                      @pacific;
-@input-bg__disabled:                      @gray-10;
-@input-bg__disabled-selected:             @gray-40;
+@input-bg:                                var(--white);
+@input-bg__selected:                      var(--pacific);
+@input-bg__disabled:                      var(--gray-10);
+@input-bg__disabled-selected:             var(--gray-40);
 
 // .a-text-input text
-@input-text:                              @black;
-@input-text__disabled:                    @gray;
-@input-text__placeholder:                 @gray;
+@input-text:                              var(--black);
+@input-text__disabled:                    var(--gray);
+@input-text__placeholder:                 var(--gray);
 
 // .a-text-input icons
-@input-icon__error:                       @red;
+@input-icon__error:                       var(--red);
 
 // .a-select
 @select-border:                           @input-border;
-@select-icon-bg:                          @gray-10;
+@select-icon-bg:                          var(--gray-10);
 @select-text__disabled:                   @input-text__disabled;
 
 // .m-form-field
 @form-field-input-border:                 @input-border;
 @form-field-input-border__focused:        @input-border;
-@form-field-input-border__disabled:       @gray-60;
+@form-field-input-border__disabled:       var(--gray-60);
 
 // .m-form-field__lg-target
-@form-field-input-lg-target-bg:           @gray-10;
-@form-field-input-lg-target-bg__selected: @pacific-20;
-@form-field-input-lg-target-bg__disabled: @gray-20;
-@form-field-input-lg-target-border:       @pacific;
+@form-field-input-lg-target-bg:           var(--gray-10);
+@form-field-input-lg-target-bg__selected: var(--pacific-20);
+@form-field-input-lg-target-bg__disabled: var(--gray-20);
+@form-field-input-lg-target-border:       var(--pacific);
 
 // .a-label_helper
-@label-helper:                            @gray;
+@label-helper:                            var(--gray);
 </code></pre></div></div>
 
             </div>
@@ -700,28 +700,28 @@
             
             <div class="m-variation_description">
                 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// .block
-@block__bg:                 @gray-5;
-@block__border:             @gray-40;
-@block__border-top:         @gray-40;
-@block__border-right:       @gray-40;
-@block__border-bottom:      @gray-40;
-@block__border-left:        @gray-40;
+@block__bg:                 var(--gray-5);
+@block__border:             var(--gray-40);
+@block__border-top:         var(--gray-40);
+@block__border-right:       var(--gray-40);
+@block__border-bottom:      var(--gray-40);
+@block__border-left:        var(--gray-40);
 
 // .content_main
-@content_main-border:       @gray-40;
+@content_main-border:       var(--gray-40);
 
 // .content_sidebar
-@content_sidebar-bg:        @gray-5;
-@content_sidebar-border:    @gray-40;
+@content_sidebar-bg:        var(--gray-5);
+@content_sidebar-border:    var(--gray-40);
 
 // .content_line
-@content_line:              @gray-40;
+@content_line:              var(--gray-40);
 
 // .grid_column__top-divider
-@grid_column__top-divider:  @gray-40;
+@grid_column__top-divider:  var(--gray-40);
 
 // .grid_column__left-divider
-@grid_column__left-divider: @gray-40;
+@grid_column__left-divider: var(--gray-40);
 
 </code></pre></div></div>
 
@@ -760,9 +760,9 @@
             <div class="m-variation_description">
                 <h4 id="color">Color</h4>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Hero variables
-@hero-bg:                   @gray-5;
-@hero-knockout-bg:          @gray;
-@hero-knockout-text:        @white;
+@hero-bg:                   var(--gray-5);
+@hero-knockout-bg:          var(--gray);
+@hero-knockout-text:        var(--white);
 
 // Featured Content Module variables
 @fcm-bg:                    @block__bg;
@@ -819,20 +819,20 @@
 
             
             <div class="m-variation_description">
-                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@notification-bg:             @gray-5;
-@notification-bg-success:     @green-10;
-@notification-bg-warning:     @gold-10;
-@notification-bg-error:       @red-10;
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@notification-bg:             var(--gray-5);
+@notification-bg-success:     var(--green-10);
+@notification-bg-warning:     var(--gold-10);
+@notification-bg-error:       var(--red-10);
 
-@notification-border:         @gray-40;
-@notification-border-success: @green;
-@notification-border-warning: @gold;
-@notification-border-error:   @red;
+@notification-border:         var(--gray-40);
+@notification-border-success: var(--green);
+@notification-border-warning: var(--gold);
+@notification-border-error:   var(--red);
 
-@notification-icon:           @gray;
-@notification-icon-success:   @green;
-@notification-icon-warning:   @gold;
-@notification-icon-error:     @red;
+@notification-icon:           var(--gray);
+@notification-icon-success:   var(--green);
+@notification-icon-warning:   var(--gold);
+@notification-icon-error:     var(--red);
 </code></pre></div></div>
 
             </div>
@@ -921,8 +921,8 @@
 
             
             <div class="m-variation_description">
-                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@pagination-text: @gray;
-@pagination-bg:   @gray-10;
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@pagination-text: var(--gray);
+@pagination-bg:   var(--gray-10);
 </code></pre></div></div>
 
             </div>
@@ -1007,14 +1007,14 @@
 
             
             <div class="m-variation_description">
-                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@table-cell-bg:              @white;
-@table-cell-bg_alt:          @gray-5;
-@table-row-link-bg-hover:    @pacific-80;
-@table-row-link-hover-color: @white;
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@table-cell-bg:              var(--white);
+@table-cell-bg_alt:          var(--gray-5);
+@table-row-link-bg-hover:    var(--pacific-80);
+@table-row-link-hover-color: var(--white);
 @table-head-text:            @text;
-@table-head-bg:              @gray-5;
-@table-scrolling-border:     @gray-40;
-@table-border:               @gray;
+@table-head-bg:              var(--gray-5);
+@table-scrolling-border:     var(--gray-40);
+@table-border:               var(--gray);
 
 </code></pre></div></div>
 
@@ -1067,48 +1067,48 @@
                 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Running text elements
 
 // .a-date
-@date:                      @gray;
+@date:                      var(--gray);
 
 // .m-pull-quote
-@pull-quote_body:           @black;
-@pull-quote_citation:       @gray;
+@pull-quote_body:           var(--black);
+@pull-quote_citation:       var(--gray);
 
 // Headings
 
 // .a-heading__icon
-@heading__icon:             @black;
+@heading__icon:             var(--black);
 @heading__icon__hover:      @link-text-hover;
 
 // Headers
 
 // .m-slug-header
-@slug-header_border__thin:  @gray-10;
-@slug-header_border__thick: @green;
+@slug-header_border__thin:  var(--gray-10);
+@slug-header_border__thick: var(--green);
 
 // .m-meta-header
-@meta-header_border:        @gray-40;
+@meta-header_border:        var(--gray-40);
 
 // Body
-@text:                      @black;
+@text:                      var(--black);
 
 // Links
 // a
-@link-text:              @pacific;
-@link-underline:         @pacific;
-@link-text-visited:      @teal;
-@link-underline-visited: @teal;
-@link-text-hover:        @pacific-dark;
-@link-underline-hover:   @pacific-dark;
-@link-text-active:       @navy;
-@link-underline-active:  @navy;
+@link-text:              var(--pacific);
+@link-underline:         var(--pacific);
+@link-text-visited:      var(--teal);
+@link-underline-visited: var(--teal);
+@link-text-hover:        var(--pacific-dark);
+@link-underline-hover:   var(--pacific-dark);
+@link-text-active:       var(--navy);
+@link-underline-active:  var(--navy);
 
 // .a-link__jump
-@jump-link_bg:           @gray-5;
-@jump-link_border:       @gray-40;
+@jump-link_bg:           var(--gray-5);
+@jump-link_border:       var(--gray-40);
 
 // code
 @code-text:              @text;
-@code-bg:                @gray-5;
+@code-bg:                var(--gray-5);
 </code></pre></div></div>
 
             </div>
@@ -1320,8 +1320,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/variables.md">
-                            <time datetime="2024-02-16 11:01:43 -0500">
-                                11:01:43 AM Feb 16, 2024
+                            <time datetime="2024-04-02 09:31:47 -0400">
+                                 9:31:47 AM Apr 02, 2024
                             </time>
                         </a>
                     </section>

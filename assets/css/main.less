@@ -41,7 +41,7 @@ nav ul {
 // Default details element styles
 details summary:focus {
   border: none;
-  outline: 1px dotted @pacific;
+  outline: 1px dotted var(--pacific);
   outline-offset: 2px;
 }
 
@@ -102,7 +102,7 @@ main {
 .ds-sidebar {
   width: 250px;
   padding-right: 30px;
-  border-right: 1px solid @gray-40;
+  border-right: 1px solid var(--gray-40);
   padding-bottom: 30px;
 }
 
@@ -151,21 +151,21 @@ main {
   width: 100px;
   height: 100px;
   padding: 10px;
-  background-color: @red;
+  background-color: var(--red);
   text-align: center;
-  color: @white;
+  color: var(--white);
   cursor: pointer;
 
   &.u-is-animating {
-    outline: 5px solid @gray-40;
+    outline: 5px solid var(--gray-40);
   }
 }
 
 .example-flyout-content {
   width: 100px;
-  background-color: @red;
+  background-color: var(--red);
   text-align: center;
-  color: @white;
+  color: var(--white);
   cursor: pointer;
 }
 

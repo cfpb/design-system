@@ -177,10 +177,6 @@
                             </li>
                         
                             <li class="m-list_item">
-                                <a class="m-list_link" href="/design-system/development/column-dividers">Column dividers</a>
-                            </li>
-                        
-                            <li class="m-list_item">
                                 <a class="m-list_link" href="/design-system/development/main-content-and-sidebars">Main content and sidebars</a>
                             </li>
                         
@@ -261,10 +257,6 @@
         
         <li class="m-list_item">
             <a class="m-list_link" href="#range">Range</a>
-        </li>
-        
-        <li class="m-list_item">
-            <a class="m-list_link" href="#dpi">Dpi</a>
         </li>
         
         <li class="m-list_item">
@@ -356,42 +348,6 @@
         
     </section>
     
-    <section class="o-variation-group" id="dpi">
-
-        
-        <h2 class="o-variation-group_title">
-            Dpi
-        </h2>
-        
-
-        
-        <div class="o-variation-group_description">
-            <p>This mixin allows us to easily write styles that target high-resolution screens, such as Apple retina screens</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The following LESS...
-.example {
-    background: url(regular-resolution-image.png);
-    .respond-to-dpi(2, {
-        background-image: url(retina-image.png);
-    });
-}
-
-// ...Exports to
-.example {
-    background: url(regular-resolution-image.png);
-}
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .example {
-        background-image: url(retina-image.png);
-    }
-}
-</code></pre></div></div>
-
-        </div>
-        
-
-        
-    </section>
-    
     <section class="o-variation-group" id="print">
 
         
@@ -406,9 +362,9 @@
 <p>This mixin allows us to easily write styles that target both <code class="language-plaintext highlighter-rouge">@media print</code> and <code class="language-plaintext highlighter-rouge">.print</code>.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The following LESS...
 .example {
-    color: @gray;
+    color: var(--gray);
     .respond-to-print({
-        color: @black;
+        color: var(--black);
     });
 }
 
@@ -456,8 +412,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/media-queries.md">
-                            <time datetime="2024-02-16 11:01:43 -0500">
-                                11:01:43 AM Feb 16, 2024
+                            <time datetime="2024-04-02 09:31:47 -0400">
+                                 9:31:47 AM Apr 02, 2024
                             </time>
                         </a>
                     </section>

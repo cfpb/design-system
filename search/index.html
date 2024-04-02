@@ -129,7 +129,7 @@
             m-notification__visible&quot;&gt;
     {% include icons/information-round.svg %}
     &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;Information alert&lt;/div&gt;
+        &lt;div class=&quot;m-notification_message&quot;&gt;Information alert&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
@@ -139,7 +139,7 @@
             m-notification__visible&quot;&gt;
     {% include icons/information-round.svg %}
     &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;Information alert&lt;/div&gt;
+        &lt;div class=&quot;m-notification_message&quot;&gt;Information alert&lt;/div&gt;
         &lt;p class=&quot;m-notification_explanation&quot;&gt;
             You can also add an explanation to the alert.
         &lt;/p&gt;
@@ -152,7 +152,7 @@
             m-notification__visible&quot;&gt;
     {% include icons/information-round.svg %}
     &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;Information alert&lt;/div&gt;
+        &lt;div class=&quot;m-notification_message&quot;&gt;Information alert&lt;/div&gt;
         &lt;p class=&quot;m-notification_explanation&quot;&gt;
             This is the explanation of the alert.
         &lt;/p&gt;
@@ -178,7 +178,7 @@
             m-notification__success&quot;&gt;
     {% include icons/approved-round.svg %}
     &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;11 results&lt;/div&gt;
+        &lt;div class=&quot;m-notification_message&quot;&gt;11 results&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
@@ -189,7 +189,7 @@
             m-notification__warning&quot;&gt;
     {% include icons/warning-round.svg %}
     &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;No results found.&lt;/div&gt;
+        &lt;div class=&quot;m-notification_message&quot;&gt;No results found.&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
@@ -200,7 +200,17 @@
             m-notification__error&quot;&gt;
     {% include icons/error-round.svg %}
     &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;Page not found.&lt;/div&gt;
+        &lt;div class=&quot;m-notification_message&quot;&gt;Page not found.&lt;/div&gt;
+        &lt;p class=&quot;m-notification_explanation&quot;&gt;
+            This is an explanation of the error.
+        &lt;/p&gt;
+        &lt;ul class=&quot;m-list m-list__links&quot;&gt;
+            &lt;li class=&quot;m-list_item&quot;&gt;
+                &lt;a class=&quot;m-list_link&quot; href=&quot;/&quot;&gt;
+                    This is an external link {% include icons/external-link.svg %}
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
@@ -210,7 +220,7 @@
             m-notification__visible&quot;&gt;
     {% include icons/updating.svg %}
     &lt;div class=&quot;m-notification_content&quot;&gt;
-        &lt;div class=&quot;h4 m-notification_message&quot;&gt;The page is loading…&lt;/div&gt;
+        &lt;div class=&quot;m-notification_message&quot;&gt;The page is loading…&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
@@ -741,6 +751,10 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,
+                
+                    'variation_name17': 'Content dividers',
+                    'variation_description17': "A 1 pixel edge to edge bar that can divide content.\n",
+                    'variation_code_snippet17': `&lt;div class=&quot;content_line&quot;&gt;&lt;/div&gt;`,
                 
             
 
@@ -1889,41 +1903,6 @@ Label
         
         
 
-        'development-column-dividers': {
-
-            // Cycle through the variation fields of this page.
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
-                    'variation_name1': 'Content layout column dividers',
-                    'variation_description1': "Adds dividers between specified .content-l_col-X-X classes.\n\nLayout dividers work in conjunction with .content-l_col-X-X elements and have specific needs depending on which column element variant they are attached to. For example, .content-l_col-1-2 has different divider needs than .content-l_col-1-3 because they may break to single columns at different breakpoints.\n\nDividers use absolute positioning relative to the .content-l element and depend on .content-l using position: relative;. This allows vertical dividers to span the height of the tallest column. Just be aware that if you have more than one row of columns, and each row has columns of different widths, the borders will cause unwanted overlapping since they will span the height of the entire .content-l element.\n",
-                    'variation_code_snippet1': `&lt;div class=&quot;content_line&quot;&gt;&lt;/div&gt;`,
-                
-                    'variation_name2': 'Column divider modifiers',
-                    'variation_description2': "cf-grid columns use left and right border for fixed margin which means it’s not possible to set visual left and right borders directly on them. Instead we can use the :before pseudo element and position it absolutely. The added benefit of doing it this way is that the border spans the entire height of the next parent using position: relative;. This means that the border will always match the height of the tallest column in the row.\n\n.my-column-1-2 {\n\n    // Creates a column that spans 6 out of 12 columns.\n    .grid_column(6, 12);\n\n    // Add a top divider only at screen 599px and smaller.\n    .respond-to-max(599px {\n        .grid_column__top-divider();\n    });\n\n    // Add a left divider only at screen 600px and larger.\n    .respond-to-min(600px, {\n        .grid_column__left-divider();\n    });\n\n}\n\n",
-                    'variation_code_snippet2': ``,
-                
-            
-
-
-            'title': 'Column dividers',
-            'description': "Information about content lines and column dividers.\n",
-            'use_cases': "\n",
-            'guidelines': "\n",
-            'behavior': "\n",
-            'accessibility': "\n",
-            'research': "\n",
-            'related_items': "\n",
-            'url': 'development/column-dividers'
-        }
-        ,
-        
-
-        
-        
-
         'components-index': {
 
             // Cycle through the variation fields of this page.
@@ -2177,12 +2156,11 @@ Label
                     'variation_name1': 'Expandable',
                     'variation_description1': "The following combination is our recommended go-to expandable pattern.\n",
                     'variation_code_snippet1': `&lt;div class=&quot;o-expandable
-            o-expandable__padded
             o-expandable__background
             o-expandable__border&quot;&gt;
     &lt;button class=&quot;o-expandable_header&quot;
             title=&quot;Expand content&quot;&gt;
-        &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
+        &lt;h3 class=&quot;o-expandable_label&quot;&gt;
             Expandable header
         &lt;/h3&gt;
         &lt;span class=&quot;o-expandable_cues&quot;&gt;
@@ -2207,16 +2185,51 @@ Label
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name2': 'Expandable (open on load)',
-                    'variation_description2': "Sometimes you may want the expandable to be open by default. This is as easy as adding the .o-expandable__onload-open modifier to the .o-expandable block.\n",
+                    'variation_name2': 'Padded expandable',
+                    'variation_description2': "A variation with a padded label and larger text. This also shows what an icon in the header text looks like, which should be wrapped in a o-expandable_icon class.\n",
                     'variation_code_snippet2': `&lt;div class=&quot;o-expandable
             o-expandable__padded
+            o-expandable__background
+            o-expandable__border&quot;&gt;
+    &lt;button class=&quot;o-expandable_header&quot;
+            title=&quot;Expand content&quot;&gt;
+        &lt;span class=&quot;o-expandable_icon&quot;&gt;
+            {% include icons/bank.svg %}
+        &lt;/span&gt;
+        &lt;h3 class=&quot;o-expandable_label&quot;&gt;
+            Expandable header
+        &lt;/h3&gt;
+        &lt;span class=&quot;o-expandable_cues&quot;&gt;
+            &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
+                {% include icons/plus-round.svg %}
+            &lt;/span&gt;
+            &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
+                &lt;span class=&quot;u-visually-hidden&quot;&gt;Hide&lt;/span&gt;
+                {% include icons/minus-round.svg %}
+            &lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;o-expandable_content&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+            &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name3': 'Expandable (open on load)',
+                    'variation_description3': "Sometimes you may want the expandable to be open by default. This is as easy as adding the .o-expandable__onload-open modifier to the .o-expandable block.\n",
+                    'variation_code_snippet3': `&lt;div class=&quot;o-expandable
             o-expandable__background
             o-expandable__border
             o-expandable__onload-open&quot;&gt;
     &lt;button class=&quot;o-expandable_header&quot;
             title=&quot;Expand content&quot;&gt;
-        &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
+        &lt;h3 class=&quot;o-expandable_label&quot;&gt;
             Expandable header
         &lt;/h3&gt;
         &lt;span class=&quot;o-expandable_cues&quot;&gt;
@@ -2240,13 +2253,13 @@ Label
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name3': 'Expandable group (default)',
-                    'variation_description3': "In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.\n",
-                    'variation_code_snippet3': `&lt;div class=&quot;o-expandable-group&quot;&gt;
-    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
+                    'variation_name4': 'Expandable group (default)',
+                    'variation_description4': "In the default mode, users are able to have multiple sections of an expandable group expanded at the same time, which allows users to easily compare information that is available in different sections.\n",
+                    'variation_code_snippet4': `&lt;div class=&quot;o-expandable-group&quot;&gt;
+    &lt;div class=&quot;o-expandable&quot;&gt;
         &lt;button class=&quot;o-expandable_header&quot;
                 title=&quot;Expand content&quot;&gt;
-            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
+            &lt;h3 class=&quot;o-expandable_label&quot;&gt;
                 Expandable header
             &lt;/h3&gt;
             &lt;span class=&quot;o-expandable_cues&quot;&gt;
@@ -2269,10 +2282,10 @@ Label
             &lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
+    &lt;div class=&quot;o-expandable&quot;&gt;
         &lt;button class=&quot;o-expandable_header&quot;
                 title=&quot;Expand content&quot;&gt;
-            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
+            &lt;h3 class=&quot;o-expandable_label&quot;&gt;
                 Expandable header
             &lt;/h3&gt;
             &lt;span class=&quot;o-expandable_cues&quot;&gt;
@@ -2295,129 +2308,10 @@ Label
             &lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
+    &lt;div class=&quot;o-expandable&quot;&gt;
         &lt;button class=&quot;o-expandable_header&quot;
                 title=&quot;Expand content&quot;&gt;
-            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-                Expandable header
-            &lt;/h3&gt;
-            &lt;span class=&quot;o-expandable_cues&quot;&gt;
-                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
-                    {% include icons/plus-round.svg %}
-                &lt;/span&gt;
-                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
-                    {% include icons/minus-round.svg %}
-                &lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class=&quot;o-expandable_content&quot;&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name4': 'Expandable group (accordion)',
-                    'variation_description4': "To show only one open expandable at a time, use an accordion group. Add the o-expandable-group__accordion class to the expandable group to activate the accordion mode.\n",
-                    'variation_code_snippet4': `&lt;div class=&quot;o-expandable-group o-expandable-group__accordion&quot;&gt;
-    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
-        &lt;button class=&quot;o-expandable_header&quot;
-                title=&quot;Expand content&quot;&gt;
-            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-                Expandable header
-            &lt;/h3&gt;
-            &lt;span class=&quot;o-expandable_cues&quot;&gt;
-                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
-                    {% include icons/plus-round.svg %}
-                &lt;/span&gt;
-                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
-                    {% include icons/minus-round.svg %}
-                &lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class=&quot;o-expandable_content&quot;&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
-        &lt;button class=&quot;o-expandable_header&quot;
-                title=&quot;Expand content&quot;&gt;
-            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
-                Expandable header
-            &lt;/h3&gt;
-            &lt;span class=&quot;o-expandable_cues&quot;&gt;
-                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
-                    {% include icons/plus-round.svg %}
-                &lt;/span&gt;
-                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
-                    {% include icons/minus-round.svg %}
-                &lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class=&quot;o-expandable_content&quot;&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-
-                 Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;o-expandable o-expandable__padded&quot;&gt;
-        &lt;button class=&quot;o-expandable_header&quot;
-                title=&quot;Expand content&quot;&gt;
-            &lt;h3 class=&quot;h4 o-expandable_label&quot;&gt;
+            &lt;h3 class=&quot;o-expandable_label&quot;&gt;
                 Expandable header
             &lt;/h3&gt;
             &lt;span class=&quot;o-expandable_cues&quot;&gt;
@@ -2442,9 +2336,128 @@ Label
     &lt;/div&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name5': 'Variations',
-                    'variation_description5': "Should you need an expandable thing that is not covered by the expandables above, see the Transition Patterns for making a component with expandable-like behavior.\n",
-                    'variation_code_snippet5': ``,
+                    'variation_name5': 'Expandable group (accordion)',
+                    'variation_description5': "To show only one open expandable at a time, use an accordion group. Add the o-expandable-group__accordion class to the expandable group to activate the accordion mode.\n",
+                    'variation_code_snippet5': `&lt;div class=&quot;o-expandable-group o-expandable-group__accordion&quot;&gt;
+    &lt;div class=&quot;o-expandable&quot;&gt;
+        &lt;button class=&quot;o-expandable_header&quot;
+                title=&quot;Expand content&quot;&gt;
+            &lt;h3 class=&quot;o-expandable_label&quot;&gt;
+                Expandable header
+            &lt;/h3&gt;
+            &lt;span class=&quot;o-expandable_cues&quot;&gt;
+                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
+                    {% include icons/plus-round.svg %}
+                &lt;/span&gt;
+                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
+                    {% include icons/minus-round.svg %}
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;o-expandable_content&quot;&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-expandable&quot;&gt;
+        &lt;button class=&quot;o-expandable_header&quot;
+                title=&quot;Expand content&quot;&gt;
+            &lt;h3 class=&quot;o-expandable_label&quot;&gt;
+                Expandable header
+            &lt;/h3&gt;
+            &lt;span class=&quot;o-expandable_cues&quot;&gt;
+                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
+                    {% include icons/plus-round.svg %}
+                &lt;/span&gt;
+                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
+                    {% include icons/minus-round.svg %}
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;o-expandable_content&quot;&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+
+                 Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-expandable&quot;&gt;
+        &lt;button class=&quot;o-expandable_header&quot;
+                title=&quot;Expand content&quot;&gt;
+            &lt;h3 class=&quot;o-expandable_label&quot;&gt;
+                Expandable header
+            &lt;/h3&gt;
+            &lt;span class=&quot;o-expandable_cues&quot;&gt;
+                &lt;span class=&quot;o-expandable_cue-open&quot; role=&quot;img&quot; aria-label=&quot;Show&quot;&gt;
+                    {% include icons/plus-round.svg %}
+                &lt;/span&gt;
+                &lt;span class=&quot;o-expandable_cue-close&quot; role=&quot;img&quot; aria-label=&quot;Hide&quot;&gt;
+                    {% include icons/minus-round.svg %}
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;o-expandable_content&quot;&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+                &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`,
+                
+                    'variation_name6': 'Variations',
+                    'variation_description6': "Should you need an expandable thing that is not covered by the expandables above, see the Transition Patterns for making a component with expandable-like behavior.\n",
+                    'variation_code_snippet6': ``,
                 
             
 
@@ -2700,12 +2713,11 @@ Basic legend
                     'variation_description1': "\n",
                     'variation_code_snippet1': `&lt;div id=&quot;o-filterable-list-controls&quot; class=&quot;o-filterable-list-controls&quot;&gt;
     &lt;div class=&quot;o-expandable
-        o-expandable__padded
         o-expandable__background
         o-expandable__border
         o-expandable__onload-open&quot;&gt;
         &lt;button class=&quot;o-expandable_header&quot; type=&quot;button&quot;&gt;
-            &lt;span class=&quot;h4 o-expandable_label&quot;&gt;
+            &lt;span class=&quot;o-expandable_label&quot;&gt;
             Filter posts
             &lt;/span&gt;
             &lt;span class=&quot;o-expandable_cues&quot;&gt;
@@ -3654,7 +3666,7 @@ Label
     &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;!-- 
+&lt;!--
 Use CSS rules to modify the hero&#39;s background color, image and padding.
 
 NOTE: in consumerfinance.gov these styles are generated by the CMS and placed inline in the markup. See this template for more details https://github.com/cfpb/consumerfinance.gov/blob/96c082eefcbaf440e671dc236f1c530041093c30/cfgov/jinja2/v1/_includes/molecules/hero.html#L93-L99
@@ -3698,7 +3710,7 @@ NOTE: in consumerfinance.gov these styles are generated by the CMS and placed in
     &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;!-- 
+&lt;!--
 Use CSS rules to modify the hero&#39;s background color, image and padding.
 
 NOTE: in consumerfinance.gov these styles are generated by the CMS and placed inline in the markup. See this template for more details https://github.com/cfpb/consumerfinance.gov/blob/96c082eefcbaf440e671dc236f1c530041093c30/cfgov/jinja2/v1/_includes/molecules/hero.html#L93-L99
@@ -3741,7 +3753,7 @@ NOTE: in consumerfinance.gov these styles are generated by the CMS and placed in
     &lt;div class=&quot;m-hero_wrapper&quot;&gt;
         &lt;div class=&quot;m-hero_text&quot;&gt;
             &lt;h1 class=m-hero_heading&quot;&gt;50 chars max for a two-line heading&lt;/h1&gt;
-            &lt;p class=&quot;m-hero_subhead&quot;&gt;    
+            &lt;p class=&quot;m-hero_subhead&quot;&gt;
                 This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
             &lt;/p&gt;
         &lt;/div&gt;
@@ -3751,7 +3763,7 @@ NOTE: in consumerfinance.gov these styles are generated by the CMS and placed in
     &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;!-- 
+&lt;!--
 Use CSS rules to modify the hero&#39;s background color, image and padding.
 
 NOTE: in consumerfinance.gov these styles are generated by the CMS and placed inline in the markup. See this template for more details https://github.com/cfpb/consumerfinance.gov/blob/96c082eefcbaf440e671dc236f1c530041093c30/cfgov/jinja2/v1/_includes/molecules/hero.html#L93-L99
@@ -3794,7 +3806,7 @@ NOTE: in consumerfinance.gov these styles are generated by the CMS and placed in
     &lt;div class=&quot;m-hero_wrapper&quot;&gt;
         &lt;div class=&quot;m-hero_text&quot;&gt;
             &lt;h1 class=&quot;m-hero_heading&quot;&gt;50 chars max for a two-line heading&lt;/h1&gt;
-            &lt;p class=&quot;m-hero_subhead&quot;&gt;    
+            &lt;p class=&quot;m-hero_subhead&quot;&gt;
                 This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
             &lt;/p&gt;
         &lt;/div&gt;
@@ -3804,7 +3816,7 @@ NOTE: in consumerfinance.gov these styles are generated by the CMS and placed in
     &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;!-- 
+&lt;!--
 Use CSS rules to modify the hero&#39;s background color, image and padding.
 
 NOTE: in consumerfinance.gov these styles are generated by the CMS and placed inline in the markup. See this template for more details https://github.com/cfpb/consumerfinance.gov/blob/96c082eefcbaf440e671dc236f1c530041093c30/cfgov/jinja2/v1/_includes/molecules/hero.html#L93-L99
@@ -3860,7 +3872,7 @@ NOTE: in consumerfinance.gov these styles are generated by the CMS and placed in
     &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;!-- 
+&lt;!--
 Use CSS rules to modify the hero&#39;s background color, image and padding.
 
 NOTE: in consumerfinance.gov these styles are generated by the CMS and placed inline in the markup. See this template for more details https://github.com/cfpb/consumerfinance.gov/blob/96c082eefcbaf440e671dc236f1c530041093c30/cfgov/jinja2/v1/_includes/molecules/hero.html#L93-L99
@@ -3975,7 +3987,7 @@ NOTE: in consumerfinance.gov these styles are generated by the CMS and placed in
             'description': "Icons visually reinforce an interface action, file type, status, or category. They are visually simple, quickly recognizable, and easy to understand. They are almost always used in context with descriptive text and function to reinforce the message of that text.\n\n\n\n  Download web icons\n\n  The cfpb-icons component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.\n\n  \n    View on GitHub\n    {% include icons/download.svg %}\n\n\n\n\n\n\n  Download the icon font\n\n  Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. The icon font should not be used for placing icons on a website.\n\n  \n    Download font\n    {% include icons/download.svg %}\n\n\n\n",
             'use_cases': "\n",
             'guidelines': "Icon artboard\n\nBecause our icons typically appear beside text we designed our icon artboards (in Illustrator) to match the vertical footprint of Avenir Next. Avenir Next text set to a font size of 16px has a rendered height of 19px. To account for the additional white space, we set the icon artboards to 19px (h).\n\n\n\nRelative sizing\n\nWhen typing or placing an icon next to Avenir Next in print or web, all icons should have a similar size. Refer to our guidelines on how type should scale relative to neighboring text.\n\nWhen designing these icons, we used two sizing grids: a smaller one that fits within the standard circle, and a larger one for non-circle icons. This allows icons to have a similar visual prominence, whether inside or outside of the circle.\n\n\n\nAlignment\n\nThe overall position of a circle icon is centered on the cap height of Avenir Next. Within the circle, the icon is centered optically.\n\nThe alignment of non-circle icons depends on the icon height in relation to the footprint of Avenir Next. For more horizontal icons, vertically centering the icon on the cap height of Avenir Next often leaves it floating. To solve this, we start the grid on the baseline for more horizontal icons. For more vertical icons that exceed the cap height of Avenir Next, we center the icon on the cap height.\n\n\n\nColor\n\nThe color of an icon should match the color of neighboring text. This setting is built into our code and happens automatically, provided that the icon is within the same parent element as the text. If the icon sits outside of the text’s parent element the color must be applied manually but should still match the color of the text.\n\nCode examples:\n\n\n  Heading color automatically applied to the icon: &lt;h2&gt;{icon} Heading text&lt;/h2&gt;\n  Heading color must be manually applied to the icon: &lt;div&gt;{icon}&lt;h2&gt;Heading text&lt;/h2&gt;&lt;/div&gt;\n\n\nScale\n\nIcons should be scaled relative to the size of neighboring text. This setting is built into our code and happens automatically, provided that the icon is within the same parent element as the text. If the icon sits outside of the text’s parent element the scaling must be applied manually but the icon should still be scaled relative to the size of the text.\n\nIn code, the SVG height is scaled to match the rendered text height, calculated by dividing the rendered height by the assigned font size (19/16 = 1.1875em). This appears in the code as @cf-icon-height: 1.1875em.\n\nCode examples:\n\n\n  Icon is automatically scaled relative to the heading size: &lt;h2&gt;{icon} Heading text&lt;/h2&gt;\n  Icon must be manually scaled relative to the heading size: &lt;div&gt;{icon}&lt;h2&gt;Heading text&lt;/h2&gt;&lt;/div&gt;\n\n",
-            'behavior': "SVG icon basics\n\nThe cfpb-icons component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the icon library section. We encourage using your templating system to inject the SVG icon files, as opposed to copying and pasting the raw SVG.\n\nNote: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: {% include 'icons/download.svg' %}.\n\nWhat the Less is doing\n\nIf you look in cfpb-icons.less  you can see that we have encoded class=\"cf-icon-svg\" in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.\n\nWe start by limiting the size of the SVG to a proportion of the text height, using the @cf-icon-height variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set vertical-align: text-top;. Finally, setting fill: currentColor; tells the SVG to set its path’s fill color to match the color value of its parent element.\n\nInline SVG background\n\nIn some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS background-image property. This is exposed via a mixin, .u-svg-inline-bg( @name, @color: @black ), where @name is the SVG icon canonical name and @color is the SVG fill color (which defaults to black).\n\nInteraction details\n\nPlease reference the Links page for guidance regarding icons paired with links.\n",
+            'behavior': "SVG icon basics\n\nThe cfpb-icons component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the icon library section. We encourage using your templating system to inject the SVG icon files, as opposed to copying and pasting the raw SVG.\n\nNote: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: {% include 'icons/download.svg' %}.\n\nWhat the Less is doing\n\nIf you look in cfpb-icons.less  you can see that we have encoded class=\"cf-icon-svg\" in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.\n\nWe start by limiting the size of the SVG to a proportion of the text height, using the @cf-icon-height variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set vertical-align: text-top;. Finally, setting fill: currentColor; tells the SVG to set its path’s fill color to match the color value of its parent element.\n\nInline SVG background\n\nIn some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS background-image property. This is exposed via a mixin, .u-svg-inline-bg( @name, @is-grayscale ), where @name is the SVG icon canonical name and @is-grayscale is whether the SVG fill color is gray (true) or black (false).\n\nInteraction details\n\nPlease reference the Links page for guidance regarding icons paired with links.\n",
             'accessibility': "\n",
             'research': "\n",
             'related_items': "\n",
@@ -4670,11 +4682,6 @@ Label heading
         'development-media-queries': {
 
             // Cycle through the variation fields of this page.
-            
-                // Determine the maximum number of variations present overall.
-                
-
-                
             
                 // Determine the maximum number of variations present overall.
                 
@@ -5587,31 +5594,6 @@ Label
     &lt;/div&gt;
 &lt;/main&gt;`,
                 
-                    'variation_name5': 'Narrow content column option',
-                    'variation_description5': "Add a class of .content_main__narrow to .content_main to get a one-column (in a 12-column grid) gutter on the right side.\n\nInline styling is for demonstration purposes only; do not include it in your markup.\n",
-                    'variation_code_snippet5': `&lt;main class=&quot;content content__2-1&quot; role=&quot;main&quot;&gt;
-    &lt;div class=&quot;content_line&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;content_wrapper&quot;&gt;
-        &lt;section class=&quot;content_main content_main__narrow&quot;&gt;
-            &lt;h2&gt;Main content area&lt;/h2&gt;
-            &lt;p&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum! Laborum at eos deleniti
-                consequatur itaque officiis debitis quisquam! Provident!
-            &lt;/p&gt;
-        &lt;/section&gt;
-        &lt;aside class=&quot;content_sidebar&quot; style=&quot;background: #F1F2F2&quot;&gt;
-            Sidebar
-        &lt;/aside&gt;
-    &lt;/div&gt;
-&lt;/main&gt;
-&lt;footer class=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;
-    &lt;div class=&quot;wrapper&quot;&gt;
-        Footer
-    &lt;/div&gt;
-&lt;/footer&gt;`,
-                
             
                 // Determine the maximum number of variations present overall.
                 
@@ -5780,7 +5762,7 @@ Label
             'behavior': "\n",
             'accessibility': "\n",
             'research': "\n",
-            'related_items': "\n  Layout variables\n  Blocks\n  Column dividers\n  Grid\n\n",
+            'related_items': "\n  Layout variables\n  Blocks\n  Grid\n\n",
             'url': 'development/main-content-and-sidebars'
         }
         ,
@@ -6836,7 +6818,7 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
 
                 
                     'variation_name1': 'Color',
-                    'variation_description1': "// .btn\n@btn-text:                  @white;\n@btn-bg:                    @pacific;\n@btn-bg-hover:              @pacific-dark;\n@btn-bg-active:             @navy;\n\n// .btn__secondary\n@btn__secondary-text:       @white;\n@btn__secondary-bg:         @gray;\n@btn__secondary-bg-hover:   @gray-dark;\n@btn__secondary-bg-active:  @black;\n\n// .btn__warning\n@btn__warning-text:         @white;\n@btn__warning-bg:           @red-mid-dark;\n@btn__warning-bg-hover:     @red-dark;\n@btn__warning-bg-active:    @gray-dark;\n\n// .btn__disabled\n@btn__disabled-text:        @gray;\n@btn__disabled-bg:          @gray-20;\n@btn__disabled-outline:     @gray-20;\n\n",
+                    'variation_description1': "// .btn\n@btn-text:                  var(--white);\n@btn-bg:                    var(--pacific);\n@btn-bg-hover:              var(--pacific-dark);\n@btn-bg-active:             var(--navy);\n@btn-divider:               var(--pacific-60);\n\n// .btn__secondary\n@btn__secondary-text:       var(--white);\n@btn__secondary-bg:         var(--gray);\n@btn__secondary-bg-hover:   var(--gray-dark);\n@btn__secondary-bg-active:  var(--black);\n@btn__secondary-divider:    var(--gray-40);\n\n// .btn__warning\n@btn__warning-text:         var(--white);\n@btn__warning-bg:           var(--red-mid-dark);\n@btn__warning-bg-hover:     var(--red-dark);\n@btn__warning-bg-active:    var(--gray-dark);\n@btn__warning-divider:      var(--red-60);\n\n// .btn__disabled\n@btn__disabled-text:        var(--gray);\n@btn__disabled-bg:          var(--gray-20);\n@btn__disabled-outline:     var(--gray-20);\n@btn__disabled-divider:     var(--gray-60);\n\n",
                     'variation_code_snippet1': ``,
                 
                     'variation_name2': 'Sizing',
@@ -6849,7 +6831,7 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
 
                 
                     'variation_name1': 'Color',
-                    'variation_description1': "// .a-text-input borders\n@input-border:                            @gray-60;\n@input-border__hover:                     @pacific;\n@input-border__focused:                   @pacific;\n@input-border__active:                    @pacific;\n@input-border__error:                     @red;\n@input-border__warning:                   @gold;\n@input-border__success:                   @green;\n@input-border__selected:                  @pacific;\n\n// .a-text-input backgrounds\n@input-bg:                                @white;\n@input-bg__selected:                      @pacific;\n@input-bg__disabled:                      @gray-10;\n@input-bg__disabled-selected:             @gray-40;\n\n// .a-text-input text\n@input-text:                              @black;\n@input-text__disabled:                    @gray;\n@input-text__placeholder:                 @gray;\n\n// .a-text-input icons\n@input-icon__error:                       @red;\n\n// .a-select\n@select-border:                           @input-border;\n@select-icon-bg:                          @gray-10;\n@select-text__disabled:                   @input-text__disabled;\n\n// .m-form-field\n@form-field-input-border:                 @input-border;\n@form-field-input-border__focused:        @input-border;\n@form-field-input-border__disabled:       @gray-60;\n\n// .m-form-field__lg-target\n@form-field-input-lg-target-bg:           @gray-10;\n@form-field-input-lg-target-bg__selected: @pacific-20;\n@form-field-input-lg-target-bg__disabled: @gray-20;\n@form-field-input-lg-target-border:       @pacific;\n\n// .a-label_helper\n@label-helper:                            @gray;\n\n",
+                    'variation_description1': "// .a-text-input borders\n@input-border:                            var(--gray-60);\n@input-border__hover:                     var(--pacific);\n@input-border__focused:                   var(--pacific);\n@input-border__active:                    var(--pacific);\n@input-border__error:                     var(--red);\n@input-border__warning:                   var(--gold);\n@input-border__success:                   var(--green);\n@input-border__selected:                  var(--pacific);\n\n// .a-text-input backgrounds\n@input-bg:                                var(--white);\n@input-bg__selected:                      var(--pacific);\n@input-bg__disabled:                      var(--gray-10);\n@input-bg__disabled-selected:             var(--gray-40);\n\n// .a-text-input text\n@input-text:                              var(--black);\n@input-text__disabled:                    var(--gray);\n@input-text__placeholder:                 var(--gray);\n\n// .a-text-input icons\n@input-icon__error:                       var(--red);\n\n// .a-select\n@select-border:                           @input-border;\n@select-icon-bg:                          var(--gray-10);\n@select-text__disabled:                   @input-text__disabled;\n\n// .m-form-field\n@form-field-input-border:                 @input-border;\n@form-field-input-border__focused:        @input-border;\n@form-field-input-border__disabled:       var(--gray-60);\n\n// .m-form-field__lg-target\n@form-field-input-lg-target-bg:           var(--gray-10);\n@form-field-input-lg-target-bg__selected: var(--pacific-20);\n@form-field-input-lg-target-bg__disabled: var(--gray-20);\n@form-field-input-lg-target-border:       var(--pacific);\n\n// .a-label_helper\n@label-helper:                            var(--gray);\n\n",
                     'variation_code_snippet1': ``,
                 
                     'variation_name2': 'Sizing',
@@ -6880,11 +6862,11 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
 
                 
                     'variation_name1': 'Color',
-                    'variation_description1': "// .block\n@block__bg:                 @gray-5;\n@block__border:             @gray-40;\n@block__border-top:         @gray-40;\n@block__border-right:       @gray-40;\n@block__border-bottom:      @gray-40;\n@block__border-left:        @gray-40;\n\n// .content_main\n@content_main-border:       @gray-40;\n\n// .content_sidebar\n@content_sidebar-bg:        @gray-5;\n@content_sidebar-border:    @gray-40;\n\n// .content_line\n@content_line:              @gray-40;\n\n// .grid_column__top-divider\n@grid_column__top-divider:  @gray-40;\n\n// .grid_column__left-divider\n@grid_column__left-divider: @gray-40;\n\n\n",
+                    'variation_description1': "// .block\n@block__bg:                 var(--gray-5);\n@block__border:             var(--gray-40);\n@block__border-top:         var(--gray-40);\n@block__border-right:       var(--gray-40);\n@block__border-bottom:      var(--gray-40);\n@block__border-left:        var(--gray-40);\n\n// .content_main\n@content_main-border:       var(--gray-40);\n\n// .content_sidebar\n@content_sidebar-bg:        var(--gray-5);\n@content_sidebar-border:    var(--gray-40);\n\n// .content_line\n@content_line:              var(--gray-40);\n\n// .grid_column__top-divider\n@grid_column__top-divider:  var(--gray-40);\n\n// .grid_column__left-divider\n@grid_column__left-divider: var(--gray-40);\n\n\n",
                     'variation_code_snippet1': ``,
                 
                     'variation_name2': 'Heroes and featured content modules',
-                    'variation_description2': "Color\n// Hero variables\n@hero-bg:                   @gray-5;\n@hero-knockout-bg:          @gray;\n@hero-knockout-text:        @white;\n\n// Featured Content Module variables\n@fcm-bg:                    @block__bg;\n\n\nSizing\n// Hero variables\n@hero-desktop-height: 285px;\n\n",
+                    'variation_description2': "Color\n// Hero variables\n@hero-bg:                   var(--gray-5);\n@hero-knockout-bg:          var(--gray);\n@hero-knockout-text:        var(--white);\n\n// Featured Content Module variables\n@fcm-bg:                    @block__bg;\n\n\nSizing\n// Hero variables\n@hero-desktop-height: 285px;\n\n",
                     'variation_code_snippet2': ``,
                 
             
@@ -6893,7 +6875,7 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
 
                 
                     'variation_name1': 'Color',
-                    'variation_description1': "@notification-bg:             @gray-5;\n@notification-bg-success:     @green-10;\n@notification-bg-warning:     @gold-10;\n@notification-bg-error:       @red-10;\n\n@notification-border:         @gray-40;\n@notification-border-success: @green;\n@notification-border-warning: @gold;\n@notification-border-error:   @red;\n\n@notification-icon:           @gray;\n@notification-icon-success:   @green;\n@notification-icon-warning:   @gold;\n@notification-icon-error:     @red;\n\n",
+                    'variation_description1': "@notification-bg:             var(--gray-5);\n@notification-bg-success:     var(--green-10);\n@notification-bg-warning:     var(--gold-10);\n@notification-bg-error:       var(--red-10);\n\n@notification-border:         var(--gray-40);\n@notification-border-success: var(--green);\n@notification-border-warning: var(--gold);\n@notification-border-error:   var(--red);\n\n@notification-icon:           var(--gray);\n@notification-icon-success:   var(--green);\n@notification-icon-warning:   var(--gold);\n@notification-icon-error:     var(--red);\n\n",
                     'variation_code_snippet1': ``,
                 
                     'variation_name2': 'Sizing',
@@ -6906,7 +6888,7 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
 
                 
                     'variation_name1': 'Color',
-                    'variation_description1': "@pagination-text: @gray;\n@pagination-bg:   @gray-10;\n\n",
+                    'variation_description1': "@pagination-text: var(--gray);\n@pagination-bg:   var(--gray-10);\n\n",
                     'variation_code_snippet1': ``,
                 
                     'variation_name2': 'Sizing',
@@ -6919,7 +6901,7 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
 
                 
                     'variation_name1': 'Color',
-                    'variation_description1': "@table-cell-bg:              @white;\n@table-cell-bg_alt:          @gray-5;\n@table-row-link-bg-hover:    @pacific-80;\n@table-row-link-hover-color: @white;\n@table-head-text:            @text;\n@table-head-bg:              @gray-5;\n@table-scrolling-border:     @gray-40;\n@table-border:               @gray;\n\n\n",
+                    'variation_description1': "@table-cell-bg:              var(--white);\n@table-cell-bg_alt:          var(--gray-5);\n@table-row-link-bg-hover:    var(--pacific-80);\n@table-row-link-hover-color: var(--white);\n@table-head-text:            @text;\n@table-head-bg:              var(--gray-5);\n@table-scrolling-border:     var(--gray-40);\n@table-border:               var(--gray);\n\n\n",
                     'variation_code_snippet1': ``,
                 
             
@@ -6928,7 +6910,7 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
 
                 
                     'variation_name1': 'Color',
-                    'variation_description1': "// Running text elements\n\n// .a-date\n@date:                      @gray;\n\n// .m-pull-quote\n@pull-quote_body:           @black;\n@pull-quote_citation:       @gray;\n\n// Headings\n\n// .a-heading__icon\n@heading__icon:             @black;\n@heading__icon__hover:      @link-text-hover;\n\n// Headers\n\n// .m-slug-header\n@slug-header_border__thin:  @gray-10;\n@slug-header_border__thick: @green;\n\n// .m-meta-header\n@meta-header_border:        @gray-40;\n\n// Body\n@text:                      @black;\n\n// Links\n// a\n@link-text:              @pacific;\n@link-underline:         @pacific;\n@link-text-visited:      @teal;\n@link-underline-visited: @teal;\n@link-text-hover:        @pacific-dark;\n@link-underline-hover:   @pacific-dark;\n@link-text-active:       @navy;\n@link-underline-active:  @navy;\n\n// .a-link__jump\n@jump-link_bg:           @gray-5;\n@jump-link_border:       @gray-40;\n\n// code\n@code-text:              @text;\n@code-bg:                @gray-5;\n\n",
+                    'variation_description1': "// Running text elements\n\n// .a-date\n@date:                      var(--gray);\n\n// .m-pull-quote\n@pull-quote_body:           var(--black);\n@pull-quote_citation:       var(--gray);\n\n// Headings\n\n// .a-heading__icon\n@heading__icon:             var(--black);\n@heading__icon__hover:      @link-text-hover;\n\n// Headers\n\n// .m-slug-header\n@slug-header_border__thin:  var(--gray-10);\n@slug-header_border__thick: var(--green);\n\n// .m-meta-header\n@meta-header_border:        var(--gray-40);\n\n// Body\n@text:                      var(--black);\n\n// Links\n// a\n@link-text:              var(--pacific);\n@link-underline:         var(--pacific);\n@link-text-visited:      var(--teal);\n@link-underline-visited: var(--teal);\n@link-text-hover:        var(--pacific-dark);\n@link-underline-hover:   var(--pacific-dark);\n@link-text-active:       var(--navy);\n@link-underline-active:  var(--navy);\n\n// .a-link__jump\n@jump-link_bg:           var(--gray-5);\n@jump-link_border:       var(--gray-40);\n\n// code\n@code-text:              @text;\n@code-bg:                var(--gray-5);\n\n",
                     'variation_code_snippet1': ``,
                 
                     'variation_name2': 'Sizing',
@@ -7364,6 +7346,11 @@ Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur instructior ex pr
             'variation_name16',
             'variation_description16',
             'variation_code_snippet16'
+            ,
+        
+            'variation_name17',
+            'variation_description17',
+            'variation_code_snippet17'
             
         
     ];

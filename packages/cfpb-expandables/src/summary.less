@@ -1,37 +1,5 @@
 @import (reference) '@cfpb/cfpb-core/src/cfpb-core.less';
 
-/* topdoc
-  name: Summary
-  family: cf-organisms
-  notes:
-    - "Styles a one-way Expandable-like organism that previews content."
-  patterns:
-  - name: Summary Mobile organism
-    markup: |
-      <div class="o-summary o-summary__mobile">
-          <div class="o-summary_content">
-               Content
-          </div>
-          <button class="o-summary_btn u-hidden">
-            Read full description
-          </button>
-      </div>
-    codenotes:
-      - |
-        Pattern structure
-        -----------------
-        .o-summary
-          .o-summary_content
-          .o-summary_btn.u-hidden
-
-    notes:
-      - "One-way expandable. Displays an approximately 4-line
-         preview of content on mobile screen sizes only
-         when __mobile modifier is used."
-  tags:
-  - cf-organisms
-*/
-
 .o-summary {
   &_content {
     overflow-y: hidden;

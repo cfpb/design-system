@@ -126,9 +126,10 @@ description: A clear typographic hierarchy is critical to the effective
 use_cases: ""
 behavior: ""
 accessibility: >-
-  Web Content Accessibility (WCAG) standards ensure that content is accessible
-  by everyone, regardless of any disability or user device. To learn more, refer
-  to the [http://www.section508.gov](https://www.section508.gov/).
+  ![]()
+
+
+  Web Content Accessibility (WCAG) standards ensure that content is accessible by everyone, regardless of any disability or user device. To learn more, refer to the [http://www.section508.gov](https://www.section508.gov/).
 
 
   ### Don't use type in illustrations or graphics
@@ -158,7 +159,7 @@ accessibility: >-
   Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. A few colors allow for slightly darker saturations while still maintaining accessibility. If you're looking to use a combination not listed here, check [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)  to verify accessibility.
 
 
-  ![](/design-system/images/uploads/black_type.png)
+  ![Chart showing accessible combinations of white type on colored backgrounds.](/design-system/images/uploads/white_type_revised.png)
 
 
   #### White type on colored backgrounds
@@ -170,7 +171,7 @@ accessibility: >-
   For white type on green, if the type size is below 18pt, it must be bolded in order for it to be accessible. In other words, use at least 14pt bolded type, or alternatively, at least 18pt regular type. 
 
 
-  ![](/design-system/images/uploads/white_type.png)
+  ![](/design-system/images/uploads/white_type_revised.png)
 related_items: >-
   * [Headings](https://cfpb.github.io/design-system/foundation/headings)
 

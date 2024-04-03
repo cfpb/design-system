@@ -172,7 +172,7 @@ accessibility: >-
   - White type is not accessible on any CFPB shade of gold
 
 
-  Hex values for CFPB brand colors at 100% saturation are shown in parentheses in the chart below. 
+  The graphic below shows accessible combinations of white type on CFPB brand colors at 100% saturation. Hex values for those colors are shown in parentheses. 
 
 
   ![](/design-system/images/uploads/white_type_revised.png)

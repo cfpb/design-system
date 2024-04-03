@@ -165,10 +165,10 @@ accessibility: >-
   #### White type on colored backgrounds
 
 
-  White type is accessible on all brand colors at 100% saturation and their darker shades when using at least 14pt type, with the exception of gold. Hex values for brand colors are shown in parentheses in the chart below.
+  White type is accessible on all brand colors at 100% saturation and their darker shades when using at least 14pt type, with the exception of gold and green. Gold is not accessible. For white text on green, type sizes below 18pt  must be bolded to be accessible.  
 
 
-  For white type on green, if the type size is below 18pt, it must be bolded in order for it to be accessible. In other words, use at least 14pt bolded type, or alternatively, at least 18pt regular type. 
+  Hex values for brand colors are shown in parentheses in the chart below. 
 
 
   ![](/design-system/images/uploads/white_type_revised.png)

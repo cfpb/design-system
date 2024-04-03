@@ -16,7 +16,7 @@ variation_groups:
 
           0123456789</h4>
 
-        variation_name: ''
+        variation_name: ""
       - variation_code_snippet: |+
           <h3 style="font-weight: 500;">Avenir Next Medium</h3>
 
@@ -26,7 +26,7 @@ variation_groups:
           0123456789</h4>
 
 
-        variation_name: ''
+        variation_name: ""
       - variation_code_snippet: |-
           <h3>Avenir Next Regular</h3>
 
@@ -34,9 +34,8 @@ variation_groups:
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789</h4>
-        variation_name: ''
-    variation_group_description:
-      Avenir Next is the primary brand typeface and can
+        variation_name: ""
+    variation_group_description: Avenir Next is the primary brand typeface and can
       be used across all formats from print to digital. Its round and geometric
       letterforms are approachable and modern.
 guidelines: >-
@@ -124,8 +123,8 @@ description: A clear typographic hierarchy is critical to the effective
   scale, and capitalization to convey the relative importance of each heading
   within a document. Readability, accessibility, and font smoothing to allow all
   users to efficiently read and absorb textual information.
-use_cases: ''
-behavior: ''
+use_cases: ""
+behavior: ""
 accessibility: >-
   Web Content Accessibility (WCAG) standards ensure that content is accessible
   by everyone, regardless of any disability or user device. To learn more, refer
@@ -165,7 +164,10 @@ accessibility: >-
   #### White type on colored backgrounds
 
 
-  White type is accessible on all brand colors at 100% saturation and their darker shades when using at least 14pt type, with the exception of gold.
+  White type is accessible on all brand colors at 100% saturation and their darker shades when using at least 14pt type, with the exception of gold. Hex values for brand colors are shown in parentheses in the chart below.
+
+
+  For white type on green, if the type size is below 18pt, it must be bolded in order for it to be accessible. In other words, use at least 14pt bolded type, or alternatively, at least 18pt regular type. 
 
 
   ![](/design-system/images/uploads/white_type.png)

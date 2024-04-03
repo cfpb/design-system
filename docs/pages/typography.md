@@ -159,7 +159,7 @@ accessibility: >-
   Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. A few colors allow for slightly darker saturations while still maintaining accessibility. If you're looking to use a combination not listed here, check [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)  to verify accessibility.
 
 
-  ![Chart showing accessible combinations of black type on brand colors with 20% saturation or below.](/design-system/images/uploads/black_type.png)
+  ![Chart showing accessible combinations of black type on brand colors with 20% saturation or below.](/design-system/images/uploads/black_type_revised.png)
 
 
   #### White type on colored backgrounds
@@ -167,9 +167,10 @@ accessibility: >-
 
   White type is accessible on CFPB brand colors at 100% saturation and their darker shades when using at least 14pt type, with the following two exceptions: 
 
-  - White type is accessible on CFPB green at 100% saturation and its darker shades *only* when using at least 14pt bold type. Alternatively, use at least 18pt regular type.  
 
-  - White type is not accessible on any CFPB shade of gold
+  * White type is accessible on CFPB green at 100% saturation and its darker shades *only* when using at least 14pt bold type. Alternatively, use at least 18pt regular type.  
+
+  * White type is not accessible on any CFPB shade of gold.
 
 
   The graphic below shows accessible combinations of white type on CFPB brand colors at 100% saturation. Hex values for those colors are shown in parentheses. 

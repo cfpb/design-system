@@ -165,14 +165,14 @@ accessibility: >-
   #### White type on colored backgrounds
 
 
-  White type is accessible on all brand colors at 100% saturation and their darker shades when using at least 14pt type, with the exceptions of gold and green (explained below). Hex values for brand colors are shown in parentheses in the chart below.  
+  White type is accessible on CFPB brand colors at 100% saturation and their darker shades when using at least 14pt type, with the following two exceptions: 
+
+  - White type is accessible on CFPB green at 100% saturation and its darker shades *only* when using at least 14pt bold type. Alternatively, use at least 18pt regular type.  
+
+  - White type is not accessible on any CFPB shade of gold
 
 
-  ##### White type on green 
-
-  For white type on CFPB green or darker shades of green, bold any type below 18pt (again, the minimum type size is 14pt).  
-
-
+  Hex values for CFPB brand colors at 100% saturation are shown in parentheses in the chart below. 
 
 
   ![](/design-system/images/uploads/white_type_revised.png)

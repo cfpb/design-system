@@ -156,7 +156,10 @@ accessibility: >-
   #### Black type on colored backgrounds
 
 
-  Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. A few colors allow for slightly darker saturations while still maintaining accessibility. If you're looking to use a combination not listed here, check [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)  to verify accessibility.
+  Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. Hex values for those colors are shown in parentheses in the image below; for their RGB equivalents, see the \[Design System colors page](https://cfpb.github.io/design-system/foundation/color#tints). 
+
+
+  A few colors allow for slightly darker saturations while still maintaining accessibility. If you're looking to use a combination not listed here, check [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)  to verify accessibility.
 
 
   ![Chart showing accessible combinations of black type on brand colors with 20% saturation or below.](/design-system/images/uploads/black_type_revised.png)
@@ -173,7 +176,7 @@ accessibility: >-
   * White type is not accessible on any CFPB shade of gold.
 
 
-  The graphic below shows accessible combinations of white type on CFPB brand colors at 100% saturation. Hex values for those colors are shown in parentheses. (For RGB equivalents, see the \[Design System colors page](https://cfpb.github.io/design-system/foundation/color#tints).)
+  The graphic below shows accessible combinations of white type on CFPB brand colors at 100% saturation. Hex values for those colors are shown in parentheses; for their RGB equivalents, see the \[Design System colors page](https://cfpb.github.io/design-system/foundation/color#tints).
 
 
   ![](/design-system/images/uploads/white_type_revised.png)

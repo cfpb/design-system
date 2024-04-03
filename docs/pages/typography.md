@@ -162,7 +162,7 @@ accessibility: >-
   A few colors allow for slightly darker saturations while still maintaining accessibility. If you're looking to use a combination not listed here, check [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)  to verify accessibility.
 
 
-  ![Chart showing accessible combinations of black type on brand colors with 20% saturation or below.](/design-system/images/uploads/black_type_revised.png)
+  ![Chart showing accessible combinations of black type on brand colors with 20% saturation](/design-system/images/uploads/black_type_revised.png)
 
 
   #### White type on colored backgrounds
@@ -179,7 +179,7 @@ accessibility: >-
   The graphic below shows accessible combinations of white type on CFPB brand colors at 100% saturation. Hex values for those colors are shown in parentheses; for their RGB equivalents, see the \[Design System colors page](https://cfpb.github.io/design-system/foundation/color#tints).
 
 
-  ![](/design-system/images/uploads/white_type_revised.png)
+  ![Chart showing accessible combinations of white type on brand colors at 100% saturation](/design-system/images/uploads/white_type_revised.png)
 related_items: >-
   * [Headings](https://cfpb.github.io/design-system/foundation/headings)
 

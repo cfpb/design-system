@@ -13,8 +13,7 @@ variation_groups:
     variations:
       - variation_is_deprecated: false
         variation_name: Information
-        variation_description:
-          The information alert is the base alert type without any
+        variation_description: The information alert is the base alert type without any
           modifiers. If your alert message requires further explanation, include
           that content in a paragraph following the main message.
         variation_code_snippet: >-
@@ -67,11 +66,10 @@ variation_groups:
                   </ul>
               </div>
           </div>
-        variation_implementation:
-          Alerts are hidden by default; you can toggle their
+        variation_implementation: Alerts are hidden by default; you can toggle their
           visibility by adding or removing the `m-notification__visible` class
           to the base element.
-      - variation_code_snippet: |-
+      - variation_code_snippet: >-
           <div class="m-notification
                       m-notification__visible
                       m-notification__success">
@@ -90,13 +88,17 @@ variation_groups:
                   </ul>
               </div>
           </div>
-        variation_description:
-          The success alert displays when an operation has run as
+        variation_description: The success alert displays when an operation has run as
           expected, such as returning the number of results in a search.
-        variation_implementation: ''
+        variation_implementation: ""
         variation_name: Success
-        variation_specs: ''
-      - variation_code_snippet: |-
+        variation_specs: |-
+          link: pacific-mid-dark
+          visited: teal 
+          hover: pacific-dark 
+          focus: pacific-mid-dark 
+          active: navy-dark
+      - variation_code_snippet: >-
           <div class="m-notification
                       m-notification__visible
                       m-notification__warning">
@@ -115,17 +117,21 @@ variation_groups:
                   </ul>
               </div>
           </div>
-        variation_description:
-          The warning alert displays when an operation has run as
+        variation_description: The warning alert displays when an operation has run as
           expected, but doesn’t have the expected results, such as a search that
           returned no result. This alert can also be used to display additional
           critical information to a user before they submit a form, such as how
           their data will be used and protected or a reminder that they can’t
           edit their responses after submitting.
-        variation_implementation: ''
+        variation_implementation: ""
         variation_name: Warning
-        variation_specs: ''
-      - variation_code_snippet: |-
+        variation_specs: |-
+          link: pacific-mid-dark
+          visited: teal 
+          hover: pacific-dark 
+          focus: pacific-mid-dark 
+          active: navy-dark
+      - variation_code_snippet: >-
           <div class="m-notification
                       m-notification__visible
                       m-notification__error">
@@ -144,8 +150,7 @@ variation_groups:
                   </ul>
               </div>
           </div>
-        variation_description:
-          The error alert displays when an operation has not run as
+        variation_description: The error alert displays when an operation has not run as
           expected and encounters an error. Use after validating on the server
           side to call out input errors preventing form submission.
         variation_implementation: >-
@@ -157,8 +162,13 @@ variation_groups:
           * For field level alerts, the error icon and message should
             always appear below the input field.
         variation_name: Error
-        variation_specs: ''
-      - variation_code_snippet: >-
+        variation_specs: |-
+          link: pacific-mid-dark
+          visited: teal 
+          hover: pacific-dark 
+          focus: pacific-mid-dark 
+          active: navy-dark
+      - variation_code_snippet: |-
           <div class="m-notification
                       m-notification__visible">
               {% include icons/updating.svg %}
@@ -172,7 +182,7 @@ variation_groups:
           icons](https://cfpb.github.io/design-system/foundation/iconography) to
           reassure the user that an action is functioning as intended.
         variation_name: In-progress
-    variation_group_description: ''
+    variation_group_description: ""
   - variation_group_name: Field-level alerts
     variations:
       - variation_is_deprecated: false
@@ -187,8 +197,8 @@ variation_groups:
                   </span>
               </div>
           </div>
-        variation_code_snippet_rendered: ''
-        variation_specs: ''
+        variation_code_snippet_rendered: ""
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Warning
         variation_code_snippet: >-
@@ -202,7 +212,7 @@ variation_groups:
                   </span>
               </div>
           </div>
-        variation_specs: ''
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Error
         variation_code_snippet: >-
@@ -213,14 +223,13 @@ variation_groups:
                       This is a field-level alert with an error status.
                   </span>
           </div>
-        variation_specs: ''
-    variation_group_description:
-      Field-level alerts reflect validation status and
+        variation_specs: ""
+    variation_group_description: Field-level alerts reflect validation status and
       include success, warning, and error. Field-level alerts (icon and message)
       should always appear below the input field.
-guidelines: ''
+guidelines: ""
 eyebrow: Components
-use_cases: ''
+use_cases: ""
 accessibility: >-
   * For screen reader accessibility, form-level errors should include anchor
   links to the problem field in question.
@@ -254,5 +263,5 @@ behavior: >-
 
 
   In general, the best practice for server-side validation is to mark errors with both form-level and field-level errors.
-research: ''
+research: ""
 ---

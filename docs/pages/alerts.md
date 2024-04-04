@@ -92,12 +92,20 @@ variation_groups:
           expected, such as returning the number of results in a search.
         variation_implementation: ""
         variation_name: Success
-        variation_specs: |-
-          link: pacific-mid-dark
-          visited: teal 
-          hover: pacific-dark 
-          focus: pacific-mid-dark 
-          active: navy-dark
+        variation_specs: >-
+          For accessibility reasons, link colors differ from standard link
+          colors as follows: 
+
+
+          * Link: pacific-mid-dark
+
+          * Visited: teal 
+
+          * Hover: pacific-dark
+
+          * Focus: pacific-mid-dark 
+
+          * Active: navy-dark
       - variation_code_snippet: >-
           <div class="m-notification
                       m-notification__visible

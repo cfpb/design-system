@@ -1,4 +1,29 @@
 
+## v0.43.1 (2024-04-12)
+
+#### Enhancement
+* `cfpb-notifications`
+  * [#1945](https://github.com/cfpb/design-system/pull/1945) cfpb-notifications: Add links to different alerts ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-atomic-component`, `cfpb-design-system`, `cfpb-layout`, `cfpb-notifications`
+  * [#1953](https://github.com/cfpb/design-system/pull/1953) cfpb-notification: fix issue with overridden bottom margin at mobile ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-layout`
+  * [#1950](https://github.com/cfpb/design-system/pull/1950) fix: o-text-introduction - Limit content width to 41.875rem ([@meissadia](https://github.com/meissadia))
+* `cfpb-notifications`
+  * [#1944](https://github.com/cfpb/design-system/pull/1944) cfpb-notification: Add color contrast safe colors for links in an error notification ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-design-system`, `cfpb-expandables`, `cfpb-notifications`
+  * [#1947](https://github.com/cfpb/design-system/pull/1947) Remove topdoc comments ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Meis ([@meissadia](https://github.com/meissadia))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+
+
+
 ## v0.43.0 (2024-03-29)
 
 #### Breaking Change

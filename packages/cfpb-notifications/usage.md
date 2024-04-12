@@ -66,7 +66,7 @@ message based on user input.
             m-notification__visible">
     {% include icons/information-round.svg %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A default notification</div>
+        <div class="m-notification_message">A default notification</div>
     </div>
 </div>
 
@@ -75,7 +75,7 @@ message based on user input.
             m-notification__visible">
     {% raw %}{% include icons/information-round.svg %}{% endraw %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A default notification</div>
+        <div class="m-notification_message">A default notification</div>
     </div>
 </div>
 ```
@@ -91,7 +91,7 @@ following the main message.
             m-notification__visible">
     {% include icons/information-round.svg %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A default notification</div>
+        <div class="m-notification_message">A default notification</div>
         <p class="m-notification_explanation">
             This is the explanation of the notification.
         </p>
@@ -103,7 +103,7 @@ following the main message.
             m-notification__visible">
     {% raw %}{% include icons/information-round.svg %}{% endraw %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A default notification</div>
+        <div class="m-notification_message">A default notification</div>
         <p class="m-notification_explanation">
             This is the explanation of the notification.
         </p>
@@ -120,7 +120,7 @@ include them below the message or explanation as a `m-list` unordered list.
             m-notification__visible">
     {% include icons/information-round.svg %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A default notification</div>
+        <div class="m-notification_message">A default notification</div>
         <ul class="m-list m-list__links">
             <li class="m-list_item">
                 <a class="m-list_link" href="/">
@@ -141,7 +141,7 @@ include them below the message or explanation as a `m-list` unordered list.
             m-notification__visible">
     {% raw %}{% include icons/information-round.svg %}{% endraw %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A default notification</div>
+        <div class="m-notification_message">A default notification</div>
         <ul class="m-list m-list__links">
             <li class="m-list_item">
                 <a class="m-list_link" href="/">
@@ -162,7 +162,7 @@ include them below the message or explanation as a `m-list` unordered list.
             m-notification__visible">
     {% include icons/information-round.svg %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A default notification</div>
+        <div class="m-notification_message">A default notification</div>
         <p class="m-notification_explanation">
             This is the explanation of the notification.
         </p>
@@ -186,7 +186,7 @@ include them below the message or explanation as a `m-list` unordered list.
             m-notification__visible">
     {% raw %}{% include icons/information-round.svg %}{% endraw %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">A default notification</div>
+        <div class="m-notification_message">A default notification</div>
         <p class="m-notification_explanation">
             This is the explanation of the notification.
         </p>
@@ -217,7 +217,7 @@ This is the default notification appearance without additional CSS modifiers.
             m-notification__visible">
     {% include icons/update.svg %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">The page is loading…</div>
+        <div class="m-notification_message">The page is loading…</div>
     </div>
 </div>
 
@@ -226,7 +226,7 @@ This is the default notification appearance without additional CSS modifiers.
             m-notification__visible">
     {% raw %}{% include icons/update.svg %}{% endraw %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">The page is loading…</div>
+        <div class="m-notification_message">The page is loading…</div>
     </div>
 </div>
 ```
@@ -241,7 +241,7 @@ expected, such as returning the number of results in a search.
             m-notification__success">
     {% include icons/approved-round.svg %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">11 results</div>
+        <div class="m-notification_message">11 results</div>
     </div>
 </div>
 
@@ -251,7 +251,7 @@ expected, such as returning the number of results in a search.
             m-notification__success">
     {% raw %}{% include icons/approved-round.svg %}{% endraw %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">11 results</div>
+        <div class="m-notification_message">11 results</div>
     </div>
 </div>
 ```
@@ -267,7 +267,7 @@ such as a search that returned no results.
             m-notification__warning">
     {% include icons/warning-round.svg %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">No results found.</div>
+        <div class="m-notification_message">No results found.</div>
     </div>
 </div>
 
@@ -277,7 +277,7 @@ such as a search that returned no results.
             m-notification__warning">
     {% raw %}{% include icons/warning-round.svg %}{% endraw %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">No results found.</div>
+        <div class="m-notification_message">No results found.</div>
     </div>
 </div>
 ```
@@ -292,7 +292,7 @@ expected and encountered an error.
             m-notification__error">
     {% include icons/error-round.svg %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">Page not found.</div>
+        <div class="m-notification_message">Page not found.</div>
     </div>
 </div>
 
@@ -302,7 +302,7 @@ expected and encountered an error.
             m-notification__error">
     {% raw %}{% include icons/error-round.svg %}{% endraw %}
     <div class="m-notification_content">
-        <div class="h4 m-notification_message">Page not found.</div>
+        <div class="m-notification_message">Page not found.</div>
     </div>
 </div>
 ```

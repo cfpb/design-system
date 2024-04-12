@@ -11,7 +11,7 @@ description: >-
        data-interstitial-notification>
       {% include icons/information-round.svg %}
       <div class="m-notification_content">
-          <div class="h4 m-notification_message">Before you edit <span data-interstitial-page-name>a page</span>, familiarize yourself with the process.</div>
+          <div class="m-notification_message">Before you edit <span data-interstitial-page-name>a page</span>, familiarize yourself with the process.</div>
           <p class="m-notification_explanation">
               When you're ready to start editing, continue to Netlify CMS.
           </p>

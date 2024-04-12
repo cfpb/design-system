@@ -27,8 +27,8 @@ use_cases: >-
   <div class="m-notification">
       <span class="m-notification_icon cf-icon"></span>
       <div class="m-notification_content" role="alert">
-          <div class="h4 m-notification_message">message</div>
-              <p class="h4 m-notification_explanation">
+          <div class="m-notification_message">message</div>
+              <p class="m-notification_explanation">
                 Please check the URL and try again.
               </p>
           </div>

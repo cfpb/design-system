@@ -16,7 +16,7 @@ variation_groups:
                               m-notification__warning">
                       {% include icons/warning-round.svg %}
                       <div class="m-notification_content">
-                          <div class="h4 m-notification_message">Warning banner with a notification</div>
+                          <div class="m-notification_message">Warning banner with a notification</div>
                           <p class="m-notification_explanation">
                               An optional paragraph of text can be added to explain the purpose of the warning banner.
                           </p>
@@ -50,7 +50,7 @@ variation_groups:
                               m-notification__visible">
                       {% include icons/information-round.svg %}
                       <div class="m-notification_content">
-                          <div class="h4 m-notification_message">
+                          <div class="m-notification_message">
                               Archived content banner with notification
                           </div>
                           <p class="m-notification_explanation">

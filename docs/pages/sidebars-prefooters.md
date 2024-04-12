@@ -104,28 +104,6 @@ variation_groups:
 
           Inline styling is for demonstration purposes only; do not include it in your markup.
         variation_name: Right-hand sidebar layout
-      - variation_code_snippet: |-
-          <main class="content content__2-1 content__bleedbar" role="main">
-              <section class="content_hero" style="background: #E3E4E5">
-                  Content hero
-              </section>
-              <div class="content_line"></div>
-              <div class="content_wrapper">
-                  <section class="content_main">
-                      Main content area
-                  </section>
-                  <aside class="content_sidebar">
-                      Bleeding sidebar
-                  </aside>
-              </div>
-          </main>
-        variation_description: >-
-          Simply add class `.content__bleedbar` to `main.content.` Only supports
-          sidebars on the right, for now.
-
-
-          Note that inline styling is for demonstration purposes only; do not include it in your markup.
-        variation_name: Bleedbar sidebar styling
     variation_group_name: Main content and sidebar
   - variation_group_name: Modifiers
     variations:

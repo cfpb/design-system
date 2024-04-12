@@ -277,46 +277,6 @@ markup._
 </footer>
 ```
 
-#### Bleedbar sidebar styling
-
-Simply add class `.content__bleedbar` to `main.content`. Only supports
-sidebars on the right, for now.
-
-_Note that inline styling is for demonstration purposes only; do not include
-it in your markup._
-
-<main class="content content__2-1 content__bleedbar" role="main">
-    <section class="content_hero" style="background: #E3E4E5">
-        Content hero
-    </section>
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main">
-            Main content area
-        </section>
-        <aside class="content_sidebar">
-            Bleeding sidebar
-        </aside>
-    </div>
-</main>
-
-```
-<main class="content content__2-1 content__bleedbar" role="main">
-    <section class="content_hero" style="background: #E3E4E5">
-        Content hero
-    </section>
-    <div class="content_line"></div>
-    <div class="content_wrapper">
-        <section class="content_main">
-            Main content area
-        </section>
-        <aside class="content_sidebar">
-            Bleeding sidebar
-        </aside>
-    </div>
-</main>
-```
-
 ### Flush bottom modifier
 
 Add a class of `.content__flush-bottom` to `.content_main` or

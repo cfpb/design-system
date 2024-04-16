@@ -1,4 +1,17 @@
 
+## v1.0.0 (2024-04-16)
+
+#### Breaking Change
+* `cfpb-atomic-component`, `cfpb-buttons`, `cfpb-core`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-grid`, `cfpb-icons`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1919](https://github.com/cfpb/design-system/pull/1919) Migrate custom BEM to getBEM syntax ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-design-system`, `cfpb-layout`
+  * [#1954](https://github.com/cfpb/design-system/pull/1954) cfpb-layout: Remove `content__bleedbar` ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v0.43.1 (2024-04-12)
 
 #### Enhancement

@@ -194,8 +194,8 @@
 .color-swatch-loop( @index ) when ( @index > 0 ) {
   // Retrieve the next variable name from the @colors array
   @name: e(extract(@colors, @index));
-  // Output the `.swatch_field__color` rule
-  .swatch_field--@{name} {
+  // Output the `.swatch__field--color` rule
+  .swatch__field--@{name} {
     /* prettier-ignore */
     background: ~"var(--@{name})";
   }

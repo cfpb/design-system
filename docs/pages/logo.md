@@ -51,7 +51,7 @@ variation_groups:
             <tbody>
 
           <tr>
-                <td class="swatch_field swatch_field--green"></td>
+                <td class="swatch__field swatch__field--green"></td>
                 <td>CFPB green</td>
 
             <td>80, 0, 100, 0</td>
@@ -65,7 +65,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field--green-60"></td>
+                <td class="swatch__field swatch__field--green-60"></td>
                 <td>Green 60 (Midtone Green)</td>
                 <td>32, 0, 52, 0</td>
 
@@ -78,7 +78,7 @@ variation_groups:
             </tr>
 
             <tr>
-                <td class="swatch_field swatch_field--gray"></td>
+                <td class="swatch__field swatch__field--gray"></td>
                 <td>Gray</td>
                 <td>0, 0, 0, 77</td>
 

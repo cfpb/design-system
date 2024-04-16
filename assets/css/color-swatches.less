@@ -1,30 +1,30 @@
 /* Color swatches for Identity/Color page
    ========================================================================== */
 
-.swatches-container__primary {
-  .grid_nested-col-group();
+.swatches-container--primary {
+  .grid__nested-col-group();
 }
 
-.swatches__primary {
-  .grid_column( 9.4 );
+.swatches--primary {
+  .grid__column( 9.4 );
 }
 
 .swatch {
   margin-left: 0;
 
-  &_field {
+  &__field {
     height: 5em;
   }
 
-  &__primary &_field {
+  &--primary &__field {
     height: 10em;
   }
 
-  &_head {
+  &__head {
     margin: 0.25em 0;
   }
 
-  &_table {
+  &__table {
     width: 100%;
   }
 
@@ -40,7 +40,7 @@
     text-align: left;
   }
 
-  &_field__green {
+  &__field--green {
     background: var(--green);
   }
 }
@@ -50,10 +50,10 @@
 /* Small tablet (600px) */
 @media only screen and (min-width: 37.5em) {
   .swatches {
-    .grid_nested-col-group();
+    .grid__nested-col-group();
   }
   .swatch {
-    .grid_column( 6 );
+    .grid__column( 6 );
 
     th {
       width: unit((70px / @base-font-size-px), em);
@@ -63,12 +63,12 @@
 
 /* Landscape tablet/netbook/laptop (1024px) */
 @media only screen and (min-width: 64em) {
-  .swatch__secondary {
-    .grid_column( 3 );
+  .swatch--secondary {
+    .grid__column( 3 );
   }
 
-  .swatch__primary {
-    .grid_column( 4 );
+  .swatch--primary {
+    .grid__column( 4 );
   }
 }
 
@@ -194,8 +194,8 @@
 .color-swatch-loop( @index ) when ( @index > 0 ) {
   // Retrieve the next variable name from the @colors array
   @name: e(extract(@colors, @index));
-  // Output the `.swatch_field__color` rule
-  .swatch_field__@{name} {
+  // Output the `.swatch__field--color` rule
+  .swatch__field--@{name} {
     /* prettier-ignore */
     background: ~"var(--@{name})";
   }
@@ -210,7 +210,7 @@
   width: 100%;
   margin-bottom: unit((45px / @base-font-size-px), em);
 
-  .swatch_field {
+  .swatch__field {
     width: 30%;
     height: 2.5em;
   }

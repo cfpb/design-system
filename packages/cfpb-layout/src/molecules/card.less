@@ -3,8 +3,8 @@
 // @h = `:hover` state.
 // @f = `:focus` state.
 // @a = `:active` state.
-.u-link-card__colors( @c, @v, @h, @f, @a ) {
-  .m-card_footer > span {
+.u-link-card--colors( @c, @v, @h, @f, @a ) {
+  .m-card__footer > span {
     display: inline;
     border-width: 0;
     border-bottom-width: 1px;
@@ -15,7 +15,7 @@
     text-decoration: none;
   }
 
-  & > a:visited .m-card_footer > span {
+  & > a:visited .m-card__footer > span {
     border-color: @v;
     color: @v;
   }
@@ -24,18 +24,18 @@
   // element, so for consistency we trigger the hover styles on the parent
   // instead of on the link. This differs from the visited, focus,
   // and active states, which add styles onto the link.
-  &:hover .m-card_footer > span {
+  &:hover .m-card__footer > span {
     border-style: solid;
     border-color: @h;
     color: @h;
   }
 
-  & > a:focus .m-card_footer > span {
+  & > a:focus .m-card__footer > span {
     border-color: @f;
     color: @f;
   }
 
-  & > a:active .m-card_footer > span {
+  & > a:active .m-card__footer > span {
     border-color: @a;
     border-style: solid;
     color: @a;
@@ -58,24 +58,24 @@
 .m-card {
   position: relative;
 
-  &:not(.m-card__breakout) {
+  &:not(.m-card--breakout) {
     & > a {
       padding: unit((@grid_gutter-width / @base-font-size-px), em);
     }
 
-    .m-card_footer {
+    .m-card__footer {
       margin-top: auto;
     }
   }
 
-  &:not(.m-card__breakout, .m-card__topic) {
+  &:not(.m-card--breakout, .m-card--topic) {
     background: var(--white);
     border: 1px solid var(--gray-20);
     border-bottom-width: 3px;
     padding: unit((@grid_gutter-width / @base-font-size-px), em);
   }
 
-  &:not(.m-card__breakout, .m-card__topic),
+  &:not(.m-card--breakout, .m-card--topic),
   & > a {
     display: flex;
     flex-direction: column;
@@ -89,33 +89,33 @@
     outline-offset: 2px;
   }
 
-  &_footer > a {
+  &__footer > a {
     font-weight: 500;
     border-bottom-width: 1px;
   }
 
   // Shrink heading at smaller screen sizes.
-  &_heading {
+  &__heading {
     .respond-to-max(@bp-med-min, {
       .h3();
     });
   }
 
   // Regular cards.
-  &_heading > a {
+  &__heading > a {
     color: var(--black);
 
     &:hover {
       color: var(--pacific);
     }
 
-    & .m-card_icon {
+    & .m-card__icon {
       font-size: 1em;
       margin-bottom: 0;
       padding-right: unit((7.5px / @base-font-size-px), em);
     }
 
-    & .m-card_icon,
+    & .m-card__icon,
     & span {
       display: table-cell;
     }
@@ -127,7 +127,7 @@
   }
 
   // Topic cards.
-  &__topic {
+  &--topic {
     text-align: center;
     width: 170px;
     background: var(--white);
@@ -137,7 +137,7 @@
       border-bottom-width: 3px;
     }
 
-    .m-card_icon {
+    .m-card__icon {
       font-size: unit((30px / @base-font-size-px), em);
       color: var(--green);
       margin-bottom: unit((5px / @base-font-size-px), em);
@@ -155,11 +155,11 @@
     }
 
     // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-    .u-link-card__colors( var(--pacific), var(--teal), var(--pacific-dark), var(--pacific-dark), var(--pacific-dark) );
+    .u-link-card--colors( var(--pacific), var(--teal), var(--pacific-dark), var(--pacific-dark), var(--pacific-dark) );
   }
 
-  &__topic-action {
-    .m-card_icon {
+  &--topic-action {
+    .m-card__icon {
       color: var(--pacific);
     }
   }
@@ -167,7 +167,7 @@
   // Breakout cards.
   @card_img_width: 210px;
   @card_img_height: 120px;
-  &__breakout {
+  &--breakout {
     min-width: 210px;
     text-align: center;
 
@@ -176,7 +176,7 @@
       padding-top: (@card_img_height / 2);
     }
 
-    .m-card_inner-wrapper {
+    .m-card__inner-wrapper {
       position: relative;
       z-index: 0;
       min-height: (@card_img_height + (@grid_gutter-width / 2));
@@ -186,7 +186,7 @@
       border-bottom-width: 3px;
     }
 
-    .m-card_img {
+    .m-card__img {
       position: absolute;
       z-index: 1;
       top: 0;
@@ -198,13 +198,13 @@
       margin-left: -(@card_img_width / 2);
     }
 
-    .m-card_footer {
+    .m-card__footer {
       // Subtract 6px to accommodate heading-3 size.
       margin-top: (@card_img_height / 2) + @grid_gutter-width - 6px;
     }
 
     &:hover {
-      .m-card_inner-wrapper {
+      .m-card__inner-wrapper {
         box-shadow:
           0 2px 0 0 inset var(--gray-20),
           2px 0 0 0 inset var(--gray-20),
@@ -215,10 +215,10 @@
     }
 
     // Arguments: default, `:visited`, `:hover`, `:focus`, and `:active` states.
-    .u-link-card__colors( var(--pacific), var(--teal), var(--pacific-dark), var(--pacific), var(--navy) );
+    .u-link-card--colors( var(--pacific), var(--teal), var(--pacific-dark), var(--pacific), var(--navy) );
 
     // Breakout cards have larger links.
-    .m-card_footer > span {
+    .m-card__footer > span {
       .heading-3();
     }
   }

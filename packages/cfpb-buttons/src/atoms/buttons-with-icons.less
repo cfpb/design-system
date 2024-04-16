@@ -2,28 +2,28 @@
 // TODO: Replace magic numbers with calculations based off of the
 // button padding size
 
-.a-btn_icon__on-left {
+.a-btn__icon--on-left {
   padding-right: unit((11px / @btn-font-size), em);
   border-right: 1px solid @btn-divider;
   margin-right: unit((7px / @btn-font-size), em);
 }
 
-.a-btn_icon__on-right {
+.a-btn__icon--on-right {
   padding-left: unit((11px / @btn-font-size), em);
   border-left: 1px solid @btn-divider;
   margin-left: unit((7px / @btn-font-size), em);
 }
 
-.a-btn_icon {
-  .a-btn__secondary & {
+.a-btn__icon {
+  .a-btn--secondary & {
     border-color: @btn__secondary-divider;
   }
 
-  .a-btn__warning & {
+  .a-btn--warning & {
     border-color: @btn__warning-divider;
   }
 
-  .a-btn__disabled &,
+  .a-btn--disabled &,
   .a-btn[disabled] & {
     border-color: @btn__disabled-divider;
   }

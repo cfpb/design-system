@@ -1,7 +1,7 @@
 @import (reference) '@cfpb/cfpb-core/src/cfpb-core.less';
 
 .o-summary-minimal {
-  &_content {
+  &__content {
     overflow-y: hidden;
 
     // Move the bounding box 2 pixels to avoid clipping link focus boxes.
@@ -12,7 +12,7 @@
     position: relative;
   }
 
-  &_btn {
+  &__btn {
     // Hide button in no-js state.
     .no-js & {
       display: none;
@@ -32,16 +32,16 @@
       outline-offset: 2px;
     }
 
-    .o-summary-minimal_cue-close,
-    .o-summary-minimal_cue-open {
+    .o-summary-minimal__cue-close,
+    .o-summary-minimal__cue-open {
       display: none;
     }
 
-    &[aria-expanded='false'] .o-summary-minimal_cue-open {
+    &[aria-expanded='false'] .o-summary-minimal__cue-open {
       display: block;
     }
 
-    &[aria-expanded='true'] .o-summary-minimal_cue-close {
+    &[aria-expanded='true'] .o-summary-minimal__cue-close {
       display: block;
     }
   }

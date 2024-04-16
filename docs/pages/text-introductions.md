@@ -20,9 +20,9 @@ variation_groups:
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore.
             </p>
-            <ul class="m-list m-list__links">
-              <li class="m-list_item">
-                <a class="m-list_link" href="#"> Call-to-action link </a>
+            <ul class="m-list m-list--links">
+              <li class="m-list__item">
+                <a class="m-list__link" href="#"> Call-to-action link </a>
               </li>
             </ul>
           </div>

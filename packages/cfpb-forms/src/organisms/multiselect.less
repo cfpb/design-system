@@ -21,7 +21,7 @@ select.o-multiselect {
 .o-multiselect {
   position: relative;
 
-  &_header {
+  &__header {
     position: relative;
 
     &::after {
@@ -45,14 +45,14 @@ select.o-multiselect {
     }
   }
 
-  &_search[type='text'] {
+  &__search[type='text'] {
     display: block;
 
     box-sizing: border-box;
     width: 100%;
   }
 
-  &_fieldset {
+  &__fieldset {
     // Resets
     border-color: @input-border;
     border-top: none;
@@ -74,7 +74,7 @@ select.o-multiselect {
   }
 
   &.u-active {
-    .o-multiselect_fieldset {
+    .o-multiselect__fieldset {
       margin-top: 0;
       // This needs to match the value set in _bindEvents in Multiselect.js.
       // See https://github.com/cfpb/design-system/blob/4d26d5af04317bcc00b4677aa866fe8d526e82e0/packages/cfpb-forms/src/organisms/Multiselect.js#L340
@@ -86,12 +86,12 @@ select.o-multiselect {
     }
 
     // Reverse arrow when search drop-down is open.
-    .o-multiselect_header::after {
+    .o-multiselect__header::after {
       .u-svg-inline-bg( 'up' );
     }
   }
 
-  &_options {
+  &__options {
     list-style-type: none;
     background-color: var(--white);
     padding: 0;
@@ -144,7 +144,7 @@ select.o-multiselect {
     }
   }
 
-  &_choices {
+  &__choices {
     padding-left: 0;
     // The following is required to make side-by-side LI
     // have a space between them.

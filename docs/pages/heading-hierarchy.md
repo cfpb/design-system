@@ -97,17 +97,17 @@ variation_groups:
           page](https://www.consumerfinance.gov/about-us/blog/).
         variation_code_snippet: >-
           <div class="m-meta-header">
-              <div class="m-meta-header_item-group">
-                <div class="m-meta-header_item">
+              <div class="m-meta-header__item-group">
+                <div class="m-meta-header__item">
                     {% include icons/chart.svg %}
                     Office of Research Publication
                 </div>
-                <div class="m-meta-header_item">
+                <div class="m-meta-header__item">
                     {% include icons/bank.svg %}
                     Policy and compliance
                 </div>
               </div>
-              <div class="m-meta-header_item">
+              <div class="m-meta-header__item">
                   <span class="a-date">
                       Published
                       <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
@@ -147,7 +147,7 @@ variation_groups:
           modules.
         variation_code_snippet: |-
           <header class="m-slug-header">
-              <h2 class="m-slug-header_heading">
+              <h2 class="m-slug-header__heading">
                   Slug heading
               </h2>
           </header>

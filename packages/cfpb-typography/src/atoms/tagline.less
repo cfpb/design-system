@@ -5,7 +5,7 @@
   grid-template-columns: 22px 1fr;
   grid-column-gap: 10px;
 
-  &_text {
+  &__text {
     // Needed for browsers with legacy/no grid support (e.g. IE11).
     display: inline-block;
   }
@@ -14,7 +14,7 @@
     margin-top: 1px;
   }
 
-  &__large {
+  &--large {
     & .u-usa-flag {
       margin-top: 4px;
     }
@@ -22,7 +22,7 @@
     font-size: unit((16px / @base-font-size-px), rem);
   }
 
-  &__xlarge {
+  &--xlarge {
     & .u-usa-flag {
       margin-top: 6px;
 

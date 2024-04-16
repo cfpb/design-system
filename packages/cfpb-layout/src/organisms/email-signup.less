@@ -9,7 +9,7 @@
     max-width: unit((370px / @base-font-size-px), rem);
   }
 
-  &_buttons {
+  &__buttons {
     display: flex;
     margin-top: unit((@grid_gutter-width / 2 / @base-font-size-px), em);
     align-items: center;
@@ -23,7 +23,7 @@
 
   // Mobile only.
   .respond-to-max(@bp-xs-max, {
-    .a-label__heading {
+    .a-label--heading {
       font-size: 1em;
     }
   });

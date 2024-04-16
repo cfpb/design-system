@@ -11,13 +11,13 @@
   // Dividers are to the left of content, so this crops the unneeded 1st one.
   overflow: hidden;
 
-  &_item-group {
+  &__item-group {
     display: flex;
     flex-wrap: wrap;
     column-gap: unit((@meta-header-item-gap / @base-font-size-px), rem);
   }
 
-  &_item {
+  &__item {
     // Use grid to indent the text from the icon when it wraps.
     display: grid;
     grid-template-columns: 0 auto 1fr;

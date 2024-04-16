@@ -42,11 +42,11 @@ function Expandable(element) {
       return this;
     }
 
-    _targetDom = _dom.querySelector(`.${BASE_CLASS}_header`);
-    _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
-    _labelDom = _dom.querySelector(`.${BASE_CLASS}_label`);
+    _targetDom = _dom.querySelector(`.${BASE_CLASS}__header`);
+    _contentDom = _dom.querySelector(`.${BASE_CLASS}__content`);
+    _labelDom = _dom.querySelector(`.${BASE_CLASS}__label`);
 
-    const isExpanded = _dom.classList.contains(`${BASE_CLASS}__onload-open`);
+    const isExpanded = _dom.classList.contains(`${BASE_CLASS}--onload-open`);
 
     // Add behavior hooks.
     addDataHook(_dom, 'behavior_flyout-menu');

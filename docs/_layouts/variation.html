@@ -1,35 +1,31 @@
 ---
 layout: default
 ---
+
 <main id="main" role="main">
+  {% include sidebar.html %}
 
-    {% include sidebar.html %}
+  <div class="ds-content">
+    {% include variation-content.html %} {% if page.variation_groups.size > 0 %}
 
-    <div class="ds-content">
-        {% include variation-content.html %}
-
-
-        {% if page.variation_groups.size > 0 %}
-
-        <div class="o-editor_link" id="toggle-details">
-            <a class="a-btn"
-                href="#"
-                title="Show all details">
-                <span class="a-btn_text">Show all details</span>
-                <span class="a-btn_icon">{% include icons/lightbulb.svg %}</span>
-            </a>
-        </div>
-
-        {% endif %}
-
-        <div class="o-editor_link" id="edit-page">
-            <a class="a-btn"
-               href="/design-system/updating-this-website?page={{ page.title | url_encode }}"
-               title="Edit this page in Netlify CMS">
-                <span class="a-btn_text">Edit page</span>
-                <span class="a-btn_icon">{% include icons/edit.svg %}</span>
-            </a>
-        </div>
-
+    <div class="o-editor__link" id="toggle-details">
+      <a class="a-btn" href="#" title="Show all details">
+        <span class="a-btn__text">Show all details</span>
+        <span class="a-btn__icon">{% include icons/lightbulb.svg %}</span>
+      </a>
     </div>
+
+    {% endif %}
+
+    <div class="o-editor__link" id="edit-page">
+      <a
+        class="a-btn"
+        href="/design-system/updating-this-website?page={{ page.title | url_encode }}"
+        title="Edit this page in Netlify CMS"
+      >
+        <span class="a-btn__text">Edit page</span>
+        <span class="a-btn__icon">{% include icons/edit.svg %}</span>
+      </a>
+    </div>
+  </div>
 </main>

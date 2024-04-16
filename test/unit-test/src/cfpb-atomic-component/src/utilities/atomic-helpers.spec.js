@@ -11,21 +11,21 @@ let componentDom;
 const testClass = 'o-footer';
 const HTML_SNIPPET = `
   <div class="o-expandable" id="test-subject-two">
-      <button class="o-expandable_header"
+      <button class="o-expandable__header"
               title="Expand content">
-          <span class="o-expandable_label">
+          <span class="o-expandable__label">
               Expandable Header 3
           </span>
-          <span class="o-expandable_cues">
-              <span class="o-expandable_cue-open">
+          <span class="o-expandable__cues">
+              <span class="o-expandable__cue-open">
                   Show
               </span>
-              <span class="o-expandable_cue-close">
+              <span class="o-expandable__cue-close">
                   Hide
               </span>
           </span>
       </button>
-      <div class="o-expandable_content">
+      <div class="o-expandable__content">
           <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing
               elit. Neque ipsa voluptatibus soluta nobis unde quisquam

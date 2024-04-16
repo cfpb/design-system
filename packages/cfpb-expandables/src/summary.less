@@ -1,7 +1,7 @@
 @import (reference) '@cfpb/cfpb-core/src/cfpb-core.less';
 
 .o-summary {
-  &_content {
+  &__content {
     overflow-y: hidden;
 
     // Move the bounding box 2 pixels to avoid clipping link focus boxes.
@@ -12,7 +12,7 @@
     position: relative;
   }
 
-  &_btn {
+  &__btn {
     // Hide button in no-js state.
     .no-js & {
       display: none;
@@ -60,9 +60,9 @@
   }
 
   // If we're mobile-only…
-  &__mobile {
+  &--mobile {
     @media only screen and (min-width: @bp-sm-min) {
-      .o-summary_btn {
+      .o-summary__btn {
         // Hide the "read more" button and fading on desktop.
         display: none;
       }

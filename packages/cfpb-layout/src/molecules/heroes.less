@@ -7,7 +7,7 @@
 .m-hero {
   background-color: var(--gray-5);
 
-  &_wrapper {
+  &__wrapper {
     display: grid;
     max-width: (@grid_wrapper-width - @grid_gutter-width);
     margin: 0 auto;
@@ -15,28 +15,28 @@
     padding-bottom: @grid_gutter-width;
   }
 
-  &_text {
+  &__text {
     padding-right: (@grid_gutter-width / 2);
     padding-left: (@grid_gutter-width / 2);
   }
 
-  &_heading {
+  &__heading {
     .heading-1();
   }
 
-  &_subhead {
+  &__subhead {
     // Not using the `.heading-3()` mixin here because we want the weight
     // to remain Regular on smaller screens.
     font-size: @size-iii;
     line-height: 1.25;
   }
 
-  &_image-wrapper {
+  &__image-wrapper {
     box-sizing: border-box;
     overflow: hidden;
   }
 
-  &_image {
+  &__image {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -53,21 +53,21 @@
     }
   }
 
-  &__knockout {
+  &--knockout {
     background-color: var(--gray);
     color: var(--white);
   }
 
-  &__overlay {
-    .m-hero_wrapper {
+  &--overlay {
+    .m-hero__wrapper {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
     }
   }
 
-  &__jumbo,
-  &__50-50 {
+  &--jumbo,
+  &--50-50 {
     background-color: var(--white);
 
     .u-jumbo-text();
@@ -77,20 +77,20 @@
 // Mobile only.
 .respond-to-max( @bp-xs-max, {
   .m-hero {
-    &_image-wrapper {
+    &__image-wrapper {
       margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em );
     }
 
-    &__overlay {
-      .m-hero_wrapper {
+    &--overlay {
+      .m-hero__wrapper {
         // Overwrite the image that is set in the markup because
         // we are showing the image container below instead.
         background-image: none !important;
       }
     }
 
-    &__jumbo {
-      .m-hero_wrapper {
+    &--jumbo {
+      .m-hero__wrapper {
         // Keep hero image flush with container on mobile
         padding-bottom: 0;
       }
@@ -101,11 +101,11 @@
 // Tablet and below.
 .respond-to-max( @bp-sm-max, {
   .m-hero {
-    &_heading {
+    &__heading {
       .heading-2();
     }
 
-    &_subhead {
+    &__subhead {
       font-size: @size-iv;
     }
   }
@@ -114,7 +114,7 @@
 // Tablet and above.
 .respond-to-min( @bp-sm-min, {
   .m-hero {
-    &_wrapper {
+    &__wrapper {
       grid-template-columns: 7fr 5fr;
       padding-right: ( @grid_gutter-width / 2);
       padding-left: ( @grid_gutter-width / 2);
@@ -122,11 +122,11 @@
       min-height: @hero-desktop-height - ( @grid_gutter-width * 2 );
     }
 
-    &_text {
+    &__text {
       margin: auto;
     }
 
-    &_image-wrapper {
+    &__image-wrapper {
       padding-right: ( @grid_gutter-width / 2 );
       padding-left: ( @grid_gutter-width / 2 );
 
@@ -135,14 +135,14 @@
       align-items: center;
     }
 
-    &__bleeding {
-      .m-hero_image-wrapper {
+    &--bleeding {
+      .m-hero__image-wrapper {
         width: 100%;
         margin-top: unit( ( @grid_gutter-width / @base-font-size-px ), em ) * -1;
         margin-bottom: unit( ( @grid_gutter-width / @base-font-size-px ), em ) * -1;
       }
 
-      .m-hero_image {
+      .m-hero__image {
         // Remove the flexible container padding so that the image is a consistent width.
         padding-bottom: 0 !important;
         height: 100%;
@@ -151,26 +151,26 @@
       }
     }
 
-    &__overlay {
-      .m-hero_image {
+    &--overlay {
+      .m-hero__image {
         display: none;
       }
     }
 
-    &__jumbo {
-      .m-hero_wrapper {
+    &--jumbo {
+      .m-hero__wrapper {
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
       }
 
-      .m-hero_image {
+      .m-hero__image {
         display: none;
       }
     }
 
-    &__50-50 {
-      .m-hero_wrapper {
+    &--50-50 {
+      .m-hero__wrapper {
         grid-template-columns: 1fr 1fr;
 
         border: 1px solid var(--gray-40);
@@ -181,7 +181,7 @@
         background-size: 50%;
       }
 
-      .m-hero_image {
+      .m-hero__image {
         display: none;
       }
     }
@@ -191,21 +191,21 @@
 // Large desktop.
 .respond-to-min( @bp-lg-min, {
   .m-hero {
-    &_wrapper {
+    &__wrapper {
       padding-top: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em );
       padding-bottom: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em );
       min-height: @hero-desktop-height - ( ( @grid_gutter-width * 1.5 ) * 2 );
     }
 
-    &__bleeding {
-      .m-hero_image-wrapper {
+    &--bleeding {
+      .m-hero__image-wrapper {
         margin-top: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em ) * -1;
         margin-bottom: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em ) * -1;
       }
     }
 
-    &__50-50 {
-      .m-hero_wrapper {
+    &--50-50 {
+      .m-hero__wrapper {
         // Enlarge the 50/50 height on large screens to maximize the image size
         min-height: @hero-desktop-height + ( @grid_gutter-width * 2 );
       }
@@ -215,26 +215,26 @@
 
 // Jumbo hero text mixin.
 .u-jumbo-text() {
-  .m-hero_subhead {
+  .m-hero__subhead {
     .lead-paragraph();
   }
 
   // Tablet and above.
   .respond-to-min( @bp-sm-min, {
-    .m-hero_subhead {
+    .m-hero__subhead {
       .heading-3();
     }
   } );
 
   // Large desktop.
   .respond-to-min( @bp-lg-min, {
-    .m-hero_wrapper {
+    .m-hero__wrapper {
       min-height: @hero-desktop-height;
     }
-    .m-hero_heading {
+    .m-hero__heading {
       .superheading();
     }
-    .m-hero_subhead {
+    .m-hero__subhead {
       .heading-2();
       font-weight:400;
     }

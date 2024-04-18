@@ -1,4 +1,15 @@
 
+## v1.0.1 (2024-04-18)
+
+#### Bug Fix
+* `cfpb-buttons`, `cfpb-core`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-grid`, `cfpb-icons`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1957](https://github.com/cfpb/design-system/pull/1957) Fix some modifiers to updated BEM | Clean up CSS nesting | add stylelint BEM rule ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v1.0.0 (2024-04-16)
 
 #### Breaking Change

@@ -8,7 +8,7 @@ layout: default
   <div class="ds-content">
     {% include variation-content.html %} {% if page.variation_groups.size > 0 %}
 
-    <div class="o-editor__link" id="toggle-details">
+    <div class="o-editor" id="toggle-details">
       <a class="a-btn" href="#" title="Show all details">
         <span class="a-btn__text">Show all details</span>
         <span class="a-btn__icon">{% include icons/lightbulb.svg %}</span>
@@ -17,7 +17,7 @@ layout: default
 
     {% endif %}
 
-    <div class="o-editor__link" id="edit-page">
+    <div class="o-editor" id="edit-page">
       <a
         class="a-btn"
         href="/design-system/updating-this-website?page={{ page.title | url_encode }}"

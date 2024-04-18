@@ -9,7 +9,7 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     divs = doc.css(
       'div.a-live__code,' \
       'table.icon-table,' \
-      'body.t-generic-page,' \
+      'body,' \
       'div.component-restrictions,' \
       'section#description,' \
       '.m-variation__description,' \

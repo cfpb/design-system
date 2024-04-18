@@ -15,14 +15,6 @@
   }
 }
 
-.global-nav__list {
-  font-size: unit((14px / @base-font-size-px), em);
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
-  vertical-align: middle;
-}
-
 // Mobile only.
 .respond-to-max(@bp-xs-max, {
 
@@ -49,22 +41,6 @@
     margin-bottom: 15px;
     padding-left: 15px;
   }
-
-
-  .global-nav__list {
-    width: 100%;
-  }
-
-  .nav-list-item {
-    &:first-child a {
-      border-top: 1px solid var(--gray-20);
-    }
-    a {
-      display: block;
-      border-bottom: 1px solid var(--gray-20);
-      padding: 1em;
-    }
-  }
 });
 
 // Tablet and above.
@@ -88,35 +64,5 @@
 
   .title {
     font-size: 1.625em;
-  }
-
-  .nav-list-item {
-    display: inline-block;
-  }
-
-  .global-nav__list {
-    font-size: unit( ( 16px / @base-font-size-px ), em );
-  }
-
-  .nav-list-item {
-    .u-inline-block;
-    margin-right: 20px;
-    a {
-      &:active,
-      &.active,
-      &:visited {
-        border-bottom: 1px solid @link-underline;
-        color: @link-text;
-      }
-      &:hover,
-      &:focus {
-        border-bottom: 1px solid @link-underline-active;
-        color: @link-text-active;
-      }
-    }
-  }
-
-  .nav-list-item:last-child {
-    margin-right: 0px;
   }
 });

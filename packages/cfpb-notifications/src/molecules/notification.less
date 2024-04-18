@@ -42,9 +42,9 @@
   }
 
   // Set accessible colors for links in alert notificiations.
-  &__success,
-  &__warning,
-  &__error {
+  &--success,
+  &--warning,
+  &--error {
     & a {
       // Colors for :link, :visited, :hover, :focus, :active.
       .u-link--colors( var(--pacific-mid-dark), var(--teal), var(--pacific-dark), var(--pacific-mid-dark), var(--navy-dark) );
@@ -57,29 +57,29 @@
 
   // Only adding left padding if an icon is present.
   .cf-icon-svg + &__content {
-    padding-left: unit((25px / @base-font-size-px), rem);
+    padding-left: unit(25px / @base-font-size-px, rem);
   }
 
   &__message {
-    font-size: unit((16px / @base-font-size-px), rem);
+    font-size: unit(16px / @base-font-size-px, rem);
     line-height: 1.25;
     font-weight: 500;
 
     // Tablet and above.
     .respond-to-min(@bp-sm-min, {
       // h4 size
-      font-size: unit((18px / @base-font-size-px), rem);
+      font-size: unit(18px / @base-font-size-px, rem);
     });
   }
 
   &__explanation {
-    margin-top: unit((5px / @base-font-size-px), rem);
-    margin-bottom: unit((15px / @base-font-size-px), rem);
+    margin-top: unit(5px / @base-font-size-px, rem);
+    margin-bottom: unit(15px / @base-font-size-px, rem);
   }
 
   // We need to provide a margin for links if an explanation is absent.
   &__message + .m-list {
-    margin-top: unit((15px / @base-font-size-px), rem);
+    margin-top: unit(15px / @base-font-size-px, rem);
   }
 
   // Tablet and above.
@@ -88,7 +88,7 @@
 
     // Increase the icon size.
     .cf-icon-svg {
-      font-size: unit(( 18px / @base-font-size-px ), rem);
+      font-size: unit(18px / @base-font-size-px, rem);
     }
 
     // Remove default margin between explanation and list of links.
@@ -112,7 +112,7 @@
 html[lang='ar'] .m-notification {
   .cf-icon-svg + .m-notification__content {
     padding-left: initial;
-    padding-right: unit((25px / @base-font-size-px), rem);
+    padding-right: unit(25px / @base-font-size-px, rem);
   }
 
   .m-list {

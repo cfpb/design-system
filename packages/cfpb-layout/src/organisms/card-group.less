@@ -1,7 +1,7 @@
 // Grid-based "column" card group layouts.
 .o-card-group {
   > h2 {
-    margin-bottom: unit((30px / @base-font-size-px), rem);
+    margin-bottom: unit(30px / @base-font-size-px, rem);
   }
 
   &--column-2 &__cards {
@@ -19,8 +19,8 @@
 
   &__cards {
     display: grid;
-    grid-column-gap: unit((20px / @base-font-size-px), em);
-    grid-row-gap: unit((20px / @base-font-size-px), em);
+    grid-column-gap: unit(20px / @base-font-size-px, em);
+    grid-row-gap: unit(20px / @base-font-size-px, em);
 
     // Mobile only.
     .respond-to-max(@bp-xs-max, {
@@ -30,7 +30,7 @@
   }
 
   &--bg-green {
-    padding: unit((30px / @base-font-size-px), em);
+    padding: unit(30px / @base-font-size-px, em);
     background: var(--green-20);
   }
 }
@@ -191,7 +191,7 @@ _:-ms-lang(x),
 
         .m-card {
           width: 100%;
-          margin-bottom: unit( ( @grid_gutter-width / @base-font-size-px ), em );
+          margin-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
         }
       }
     }

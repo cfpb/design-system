@@ -109,23 +109,23 @@ variation_groups:
     variations:
       - variation_name: Flush bottom modifier
         variation_description: >+
-          Add a class of `.content__flush-bottom` to `.content__main` or
+          Add a class of `.content--flush-bottom` to `.content__main` or
           `.content__sidebar` to remove bottom padding.
 
         variation_code_snippet: >-
           <main class="content content--1-3" role="main">
               <div class="content__line"></div>
               <div class="content__wrapper">
-                  <aside class="content__sidebar content__flush-bottom">
+                  <aside class="content__sidebar content--flush-bottom">
                       Side with no bottom padding...
                   </aside>
-                  <section class="content__main content__flush-bottom">
+                  <section class="content__main content--flush-bottom">
                       Main content with no bottom padding...
                       <div class="block
                                   block--flush-bottom
                                   block--flush-sides
                                   block--bg">
-                          .content__flush-bottom is very useful when you have a
+                          .content--flush-bottom is very useful when you have a
                           content block inside of .content__main with a background
                           and flush sides.
                       </div>
@@ -140,7 +140,7 @@ variation_groups:
           </footer>
       - variation_name: Flush top modifier (only on small screens)
         variation_description: >+
-          Add a class of `.content__flush-top-on-small` to `.content__main` or
+          Add a class of `.content--flush-top-on-small` to `.content__main` or
           `.content__sidebar` to remove top padding on small screens only.
           ‘Small’ screens in this case refers to the breakpoint where
           `.content__main` and `.content__sidebar` single column layout.
@@ -149,7 +149,7 @@ variation_groups:
           <main class="content content--1-3" role="main">
               <div class="content__line"></div>
               <div class="content__wrapper">
-                  <aside class="content__sidebar content__flush-top-on-small">
+                  <aside class="content__sidebar content--flush-top-on-small">
                       Side with no top padding on small screens...
                   </aside>
                   <section class="content__main">
@@ -164,7 +164,7 @@ variation_groups:
           </footer>
       - variation_name: Flush all modifier (only on small screens)
         variation_description: >+
-          Add a class of `.content__flush-all-on-small` to `.content__main` or
+          Add a class of `.content--flush-all-on-small` to `.content__main` or
           `.content__sidebar` to remove all padding and border-based gutters on
           small screens only. ‘Small’ screens in this case refers to the
           breakpoint where .content__main and .content__sidebar single column
@@ -174,7 +174,7 @@ variation_groups:
           <main class="content content--1-3" role="main">
               <div class="content__line"></div>
               <div class="content__wrapper">
-                  <aside class="content__sidebar content__flush-all-on-small">
+                  <aside class="content__sidebar content--flush-all-on-small">
                       Side with no padding or border-based gutters on small screens...
                   </aside>
                   <section class="content__main">

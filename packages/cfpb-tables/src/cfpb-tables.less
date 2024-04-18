@@ -89,14 +89,14 @@
       .heading-5();
       display: block;
       margin-top: 0;
-      margin-bottom: unit((5px / @base-font-size-px), em);
+      margin-bottom: unit(5px / @base-font-size-px, em);
       content: attr(data-label);
       line-height: 1.83333333;
     }
 
     td:last-child,
     [data-display-table='cell']:last-child {
-      margin-bottom: unit((30px / @base-font-size-px), em);
+      margin-bottom: unit(30px / @base-font-size-px, em);
     }
   }
 
@@ -104,7 +104,7 @@
     & > tbody td:first-child {
       padding-bottom: 0.75em;
       border-bottom: 1px solid @table-border;
-      margin-bottom: unit((10px / @base-font-size-px), em);
+      margin-bottom: unit(10px / @base-font-size-px, em);
       margin-top: 0;
       background-color: @table-head-bg;
       font-size: 1.125em;
@@ -118,7 +118,7 @@
 
     & > tbody > tr {
       border-bottom: none;
-      margin-bottom: unit((30px / @base-font-size-px), em);
+      margin-bottom: unit(30px / @base-font-size-px, em);
     }
   }
 }

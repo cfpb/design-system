@@ -8,8 +8,8 @@
   select {
     width: 100%;
     line-height: @base-line-height;
-    padding: unit((7px / @base-font-size-px), em)
-      unit((6px / @base-font-size-px), em) unit((6px / @base-font-size-px), em);
+    padding: unit(7px / @base-font-size-px, em)
+      unit(6px / @base-font-size-px, em) unit(6px / @base-font-size-px, em);
     border: 0;
     appearance: none;
     background-color: @input-bg;
@@ -55,7 +55,7 @@
 
   &::after {
     // Arrow box width must be odd size to properly center the bg image
-    width: unit((@select-height / @base-font-size-px), em);
+    width: unit(@select-height / @base-font-size-px, em);
     box-sizing: border-box;
     border-left: 1px solid @select-border;
     position: absolute;

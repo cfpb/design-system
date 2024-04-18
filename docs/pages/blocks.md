@@ -129,7 +129,7 @@ variation_groups:
                   <aside class="content__sidebar">
                       Section navigation
                   </aside>
-                  <section class="content__main content__flush-bottom">
+                  <section class="content__main content--flush-bottom">
                       Main content...
                       <div class="block block--flush-sides block--bg">
                           Content block with a background and flush sides

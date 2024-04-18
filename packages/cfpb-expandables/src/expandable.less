@@ -26,8 +26,8 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    padding: unit((10px / @base-font-size-px), em)
-      unit((15px / @base-font-size-px), em);
+    padding: unit(10px / @base-font-size-px, em)
+      unit(15px / @base-font-size-px, em);
     border: 0;
     background-color: transparent;
     cursor: pointer;
@@ -86,12 +86,12 @@
   &__cues {
     align-self: center;
     color: var(--pacific);
-    font-size: unit((@btn-font-size / @base-font-size-px), em);
-    line-height: unit((@base-line-height-px / @btn-font-size));
+    font-size: unit(@btn-font-size / @base-font-size-px, em);
+    line-height: unit(@base-line-height-px / @btn-font-size);
   }
 
   &__content {
-    padding: unit((15px / @base-font-size-px), em);
+    padding: unit(15px / @base-font-size-px, em);
     padding-top: 0;
 
     // The divider between __header and __content.
@@ -99,11 +99,11 @@
       content: '';
       display: block;
       border-top: 1px solid @expandable--border;
-      padding-top: unit((15px / @base-font-size-px), em);
+      padding-top: unit(15px / @base-font-size-px, em);
     }
 
     &::after {
-      padding-bottom: unit((15px / @base-font-size-px), em);
+      padding-bottom: unit(15px / @base-font-size-px, em);
       width: 100%;
     }
   }
@@ -115,8 +115,8 @@
   &--padded {
     .o-expandable {
       &__header {
-        padding: unit((25px / @base-font-size-px), em)
-          unit((15px / @base-font-size-px), em);
+        padding: unit(25px / @base-font-size-px, em)
+          unit(15px / @base-font-size-px, em);
       }
 
       &__icon,

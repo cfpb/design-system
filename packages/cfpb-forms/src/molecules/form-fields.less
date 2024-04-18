@@ -5,7 +5,7 @@
   }
 
   .a-label + .a-text-input {
-    margin-top: unit((5px / @base-font-size-px), em);
+    margin-top: unit(5px / @base-font-size-px, em);
   }
 
   &--checkbox,
@@ -23,7 +23,7 @@
       /*! autoprefixer: ignore next */
       display: inline-grid;
       // 30px is width of checkbox/radio button plus the needed padding.
-      grid-template-columns: unit((30px / @base-font-size-px), em) auto;
+      grid-template-columns: unit(30px / @base-font-size-px, em) auto;
       vertical-align: top;
       cursor: pointer;
       // Wrap long words in narrow form fields to prevent clipping
@@ -34,8 +34,8 @@
         grid-row-start: 1;
         grid-row-end: 3;
         border: 1px solid @form-field-input-border;
-        height: unit((18px / @base-font-size-px), em);
-        width: unit((18px / @base-font-size-px), em);
+        height: unit(18px / @base-font-size-px, em);
+        width: unit(18px / @base-font-size-px, em);
         margin-right: 10px;
         background-color: @input-bg;
         content: '';
@@ -336,6 +336,6 @@
   // with-button forms in organisms/form.less; we should find a way to merge
   // these to be less repetitive.
   .a-form-alert {
-    margin-top: unit((@grid_gutter-width / 2 / @base-font-size-px), em);
+    margin-top: unit(@grid_gutter-width / 2 / @base-font-size-px, em);
   }
 }

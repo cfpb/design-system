@@ -1,4 +1,7 @@
 <script>
+(function() {
+
+
     {% assign variations_count = 0 %}
     // This is an inline script attached to the window so that we can utilize
     // jekyll's liquid variables, such as site.pages.
@@ -19,20 +22,20 @@
 
                 {% for variation in variation_group.variations %}
                     'variation_name{{ forloop.index }}': '{{ variation.variation_name | escape }}',
-                    'variation_description{{ forloop.index }}': {{ variation.variation_description | markdownify | strip_html | jsonify }},
+                    'variation_description{{ forloop.index }}': {{ variation.variation_description | markdownify | strip_html | url_encode | jsonify }},
                     'variation_code_snippet{{ forloop.index }}': `{{ variation.variation_code_snippet | escape }}`,
                 {% endfor %}
             {% endfor %}
 
 
             'title': '{{ page.title | escape }}',
-            'description': {{ page.description | markdownify | strip_html | jsonify }},
-            'use_cases': {{ page.use_cases | markdownify | strip_html | jsonify }},
-            'guidelines': {{ page.guidelines | markdownify | strip_html | jsonify }},
-            'behavior': {{ page.behavior | markdownify | strip_html | jsonify }},
-            'accessibility': {{ page.accessibility | markdownify | strip_html | jsonify }},
-            'research': {{ page.research | markdownify | strip_html | jsonify }},
-            'related_items': {{ page.related_items | markdownify | strip_html | jsonify }},
+            'description': {{ page.description | markdownify | strip_html | url_encode | jsonify }},
+            'use_cases': {{ page.use_cases | markdownify | strip_html | url_encode | jsonify }},
+            'guidelines': {{ page.guidelines | markdownify | strip_html | url_encode | jsonify }},
+            'behavior': {{ page.behavior | markdownify | strip_html | url_encode | jsonify }},
+            'accessibility': {{ page.accessibility | markdownify | strip_html | url_encode | jsonify }},
+            'research': {{ page.research | markdownify | strip_html | url_encode | jsonify }},
+            'related_items': {{ page.related_items | markdownify | strip_html | url_encode | jsonify }},
             'url': '{{ page.url | escape }}'
         }
         {% unless forloop.last %},{% endunless %}
@@ -58,5 +61,6 @@
             {% unless forloop.last %},{% endunless %}
         {% endfor %}
     ];
+})();
 </script>
 <script src="{{ site.baseurl }}/dist/js/search.js"></script>

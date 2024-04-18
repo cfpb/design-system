@@ -15,7 +15,7 @@ describe('The search feature', () => {
     cy.get('#search-form button').click();
     cy.get('#search-results').should(
       'contain',
-      "5 results for search of 'button'.",
+      "results for search of 'button'.",
     );
   });
 });

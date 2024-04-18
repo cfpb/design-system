@@ -711,7 +711,7 @@
         &lt;aside class=&quot;content__sidebar&quot;&gt;
             Section navigation
         &lt;/aside&gt;
-        &lt;section class=&quot;content__main content__flush-bottom&quot;&gt;
+        &lt;section class=&quot;content__main content--flush-bottom&quot;&gt;
             Main content...
             &lt;div class=&quot;block block--flush-sides block--bg&quot;&gt;
                 Content block with a background and flush sides
@@ -5604,20 +5604,20 @@ Label
 
                 
                     'variation_name1': 'Flush bottom modifier',
-                    'variation_description1': "Add a class of .content__flush-bottom to .content__main or .content__sidebar to remove bottom padding.\n\n",
+                    'variation_description1': "Add a class of .content--flush-bottom to .content__main or .content__sidebar to remove bottom padding.\n\n",
                     'variation_code_snippet1': `&lt;main class=&quot;content content--1-3&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content__line&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;content__wrapper&quot;&gt;
-        &lt;aside class=&quot;content__sidebar content__flush-bottom&quot;&gt;
+        &lt;aside class=&quot;content__sidebar content--flush-bottom&quot;&gt;
             Side with no bottom padding...
         &lt;/aside&gt;
-        &lt;section class=&quot;content__main content__flush-bottom&quot;&gt;
+        &lt;section class=&quot;content__main content--flush-bottom&quot;&gt;
             Main content with no bottom padding...
             &lt;div class=&quot;block
                         block--flush-bottom
                         block--flush-sides
                         block--bg&quot;&gt;
-                .content__flush-bottom is very useful when you have a
+                .content--flush-bottom is very useful when you have a
                 content block inside of .content__main with a background
                 and flush sides.
             &lt;/div&gt;
@@ -5631,11 +5631,11 @@ Label
 &lt;/footer&gt;`,
                 
                     'variation_name2': 'Flush top modifier (only on small screens)',
-                    'variation_description2': "Add a class of .content__flush-top-on-small to .content__main or .content__sidebar to remove top padding on small screens only. ‘Small’ screens in this case refers to the breakpoint where .content__main and .content__sidebar single column layout.\n\n",
+                    'variation_description2': "Add a class of .content--flush-top-on-small to .content__main or .content__sidebar to remove top padding on small screens only. ‘Small’ screens in this case refers to the breakpoint where .content__main and .content__sidebar single column layout.\n\n",
                     'variation_code_snippet2': `&lt;main class=&quot;content content--1-3&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content__line&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;content__wrapper&quot;&gt;
-        &lt;aside class=&quot;content__sidebar content__flush-top-on-small&quot;&gt;
+        &lt;aside class=&quot;content__sidebar content--flush-top-on-small&quot;&gt;
             Side with no top padding on small screens...
         &lt;/aside&gt;
         &lt;section class=&quot;content__main&quot;&gt;
@@ -5650,11 +5650,11 @@ Label
 &lt;/footer&gt;`,
                 
                     'variation_name3': 'Flush all modifier (only on small screens)',
-                    'variation_description3': "Add a class of .content__flush-all-on-small to .content__main or .content__sidebar to remove all padding and border-based gutters on small screens only. ‘Small’ screens in this case refers to the breakpoint where .content__main and .content__sidebar single column layout.\n\n",
+                    'variation_description3': "Add a class of .content--flush-all-on-small to .content__main or .content__sidebar to remove all padding and border-based gutters on small screens only. ‘Small’ screens in this case refers to the breakpoint where .content__main and .content__sidebar single column layout.\n\n",
                     'variation_code_snippet3': `&lt;main class=&quot;content content--1-3&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content__line&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;content__wrapper&quot;&gt;
-        &lt;aside class=&quot;content__sidebar content__flush-all-on-small&quot;&gt;
+        &lt;aside class=&quot;content__sidebar content--flush-all-on-small&quot;&gt;
             Side with no padding or border-based gutters on small screens...
         &lt;/aside&gt;
         &lt;section class=&quot;content__main&quot;&gt;
@@ -6491,15 +6491,15 @@ value=&quot;Input text&quot;&gt;
                     'variation_name3': 'Text input (with button)',
                     'variation_description3': "Use for simple forms where a full filter isn’t necessary.\n",
                     'variation_code_snippet3': `&lt;div class=&quot;o-form--input-w-btn&quot;&gt;
-    &lt;div class=&quot;o-form--input-w-btn_input-container&quot;&gt;    
+    &lt;div class=&quot;o-form--input-w-btn__input-container&quot;&gt;
 &lt;input class=&quot;a-text-input a-text-input--full&quot;
           type=&quot;text&quot;
           id=&quot;full-textinput-w-btn-example&quot;
 placeholder=&quot;Placeholder text&quot;
 value=&quot;Input text&quot;&gt;
-        
+
     &lt;/div&gt;
-    &lt;div class=&quot;o-form--input-w-btn_btn-container&quot;&gt;
+    &lt;div class=&quot;o-form--input-w-btn__btn-container&quot;&gt;
         &lt;button class=&quot;a-btn&quot;&gt;Search&lt;/button&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,
@@ -6520,7 +6520,7 @@ value=&quot;Input text&quot;&gt;
                     'variation_name5': 'Button inside text input (with button)',
                     'variation_description5': "This example combines both of the previous patterns, creating a typical site search form.\n",
                     'variation_code_snippet5': `&lt;div class=&quot;o-form--input-w-btn&quot;&gt;
-    &lt;div class=&quot;o-form--input-w-btn_input-container&quot;&gt;
+    &lt;div class=&quot;o-form--input-w-btn__input-container&quot;&gt;
         &lt;div class=&quot;m-btn-inside-input&quot;&gt;
             &lt;input type=&quot;text&quot;
                 value=&quot;This is some really long text to make sure that the button doesn&#39;t overlap the content in such a way that this input becomes unusable.&quot;
@@ -6532,7 +6532,7 @@ value=&quot;Input text&quot;&gt;
             &lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;o-form--input-w-btn_btn-container&quot;&gt;
+    &lt;div class=&quot;o-form--input-w-btn__btn-container&quot;&gt;
         &lt;button class=&quot;a-btn&quot;&gt;Search&lt;/button&gt;
     &lt;/div&gt;
 &lt;/div&gt;`,

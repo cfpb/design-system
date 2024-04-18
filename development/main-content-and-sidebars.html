@@ -686,7 +686,7 @@
 
             
             <div class="m-variation__description">
-                <p>Add a class of <code class="language-plaintext highlighter-rouge">.content__flush-bottom</code> to <code class="language-plaintext highlighter-rouge">.content__main</code> or <code class="language-plaintext highlighter-rouge">.content__sidebar</code> to remove bottom padding.</p>
+                <p>Add a class of <code class="language-plaintext highlighter-rouge">.content--flush-bottom</code> to <code class="language-plaintext highlighter-rouge">.content__main</code> or <code class="language-plaintext highlighter-rouge">.content__sidebar</code> to remove bottom padding.</p>
 
             </div>
             
@@ -697,16 +697,16 @@
                 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
     <div class="content__wrapper">
-        <aside class="content__sidebar content__flush-bottom">
+        <aside class="content__sidebar content--flush-bottom">
             Side with no bottom padding...
         </aside>
-        <section class="content__main content__flush-bottom">
+        <section class="content__main content--flush-bottom">
             Main content with no bottom padding...
             <div class="block
                         block--flush-bottom
                         block--flush-sides
                         block--bg">
-                .content__flush-bottom is very useful when you have a
+                .content--flush-bottom is very useful when you have a
                 content block inside of .content__main with a background
                 and flush sides.
             </div>
@@ -756,16 +756,16 @@
                             <pre><code class="language-html">&lt;main class="content content--1-3" role="main"&gt;
     &lt;div class="content__line"&gt;&lt;/div&gt;
     &lt;div class="content__wrapper"&gt;
-        &lt;aside class="content__sidebar content__flush-bottom"&gt;
+        &lt;aside class="content__sidebar content--flush-bottom"&gt;
             Side with no bottom padding...
         &lt;/aside&gt;
-        &lt;section class="content__main content__flush-bottom"&gt;
+        &lt;section class="content__main content--flush-bottom"&gt;
             Main content with no bottom padding...
             &lt;div class="block
                         block--flush-bottom
                         block--flush-sides
                         block--bg"&gt;
-                .content__flush-bottom is very useful when you have a
+                .content--flush-bottom is very useful when you have a
                 content block inside of .content__main with a background
                 and flush sides.
             &lt;/div&gt;
@@ -814,7 +814,7 @@
 
             
             <div class="m-variation__description">
-                <p>Add a class of <code class="language-plaintext highlighter-rouge">.content__flush-top-on-small</code> to <code class="language-plaintext highlighter-rouge">.content__main</code> or <code class="language-plaintext highlighter-rouge">.content__sidebar</code> to remove top padding on small screens only. ‘Small’ screens in this case refers to the breakpoint where <code class="language-plaintext highlighter-rouge">.content__main</code> and <code class="language-plaintext highlighter-rouge">.content__sidebar</code> single column layout.</p>
+                <p>Add a class of <code class="language-plaintext highlighter-rouge">.content--flush-top-on-small</code> to <code class="language-plaintext highlighter-rouge">.content__main</code> or <code class="language-plaintext highlighter-rouge">.content__sidebar</code> to remove top padding on small screens only. ‘Small’ screens in this case refers to the breakpoint where <code class="language-plaintext highlighter-rouge">.content__main</code> and <code class="language-plaintext highlighter-rouge">.content__sidebar</code> single column layout.</p>
 
             </div>
             
@@ -825,7 +825,7 @@
                 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
     <div class="content__wrapper">
-        <aside class="content__sidebar content__flush-top-on-small">
+        <aside class="content__sidebar content--flush-top-on-small">
             Side with no top padding on small screens...
         </aside>
         <section class="content__main">
@@ -876,7 +876,7 @@
                             <pre><code class="language-html">&lt;main class="content content--1-3" role="main"&gt;
     &lt;div class="content__line"&gt;&lt;/div&gt;
     &lt;div class="content__wrapper"&gt;
-        &lt;aside class="content__sidebar content__flush-top-on-small"&gt;
+        &lt;aside class="content__sidebar content--flush-top-on-small"&gt;
             Side with no top padding on small screens...
         &lt;/aside&gt;
         &lt;section class="content__main"&gt;
@@ -926,7 +926,7 @@
 
             
             <div class="m-variation__description">
-                <p>Add a class of <code class="language-plaintext highlighter-rouge">.content__flush-all-on-small</code> to <code class="language-plaintext highlighter-rouge">.content__main</code> or <code class="language-plaintext highlighter-rouge">.content__sidebar</code> to remove all padding and border-based gutters on small screens only. ‘Small’ screens in this case refers to the breakpoint where .content__main and .content__sidebar single column layout.</p>
+                <p>Add a class of <code class="language-plaintext highlighter-rouge">.content--flush-all-on-small</code> to <code class="language-plaintext highlighter-rouge">.content__main</code> or <code class="language-plaintext highlighter-rouge">.content__sidebar</code> to remove all padding and border-based gutters on small screens only. ‘Small’ screens in this case refers to the breakpoint where .content__main and .content__sidebar single column layout.</p>
 
             </div>
             
@@ -937,7 +937,7 @@
                 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
     <div class="content__wrapper">
-        <aside class="content__sidebar content__flush-all-on-small">
+        <aside class="content__sidebar content--flush-all-on-small">
             Side with no padding or border-based gutters on small screens...
         </aside>
         <section class="content__main">
@@ -988,7 +988,7 @@
                             <pre><code class="language-html">&lt;main class="content content--1-3" role="main"&gt;
     &lt;div class="content__line"&gt;&lt;/div&gt;
     &lt;div class="content__wrapper"&gt;
-        &lt;aside class="content__sidebar content__flush-all-on-small"&gt;
+        &lt;aside class="content__sidebar content--flush-all-on-small"&gt;
             Side with no padding or border-based gutters on small screens...
         &lt;/aside&gt;
         &lt;section class="content__main"&gt;
@@ -1316,8 +1316,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/sidebars-prefooters.md">
-                            <time datetime="2024-04-18 09:06:30 -0400">
-                                 9:06:30 AM Apr 18, 2024
+                            <time datetime="2024-04-18 11:19:57 -0400">
+                                11:19:57 AM Apr 18, 2024
                             </time>
                         </a>
                     </section>

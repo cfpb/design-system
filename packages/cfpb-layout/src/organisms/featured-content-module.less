@@ -9,8 +9,8 @@
   background-color: var(--gray-5);
 
   &__text {
-    padding-top: unit((@grid_gutter-width / @base-font-size-px), em);
-    padding-bottom: unit((@grid_gutter-width / @base-font-size-px), em);
+    padding-top: unit(@grid_gutter-width / @base-font-size-px, em);
+    padding-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
   }
 
   &__img {
@@ -20,14 +20,14 @@
   // Mobile only.
   .respond-to-max(@bp-xs-max, {
     &__text {
-      padding-right: unit( ( @grid_gutter-width / 2 / @base-font-size-px ), em );
-      padding-left: unit( ( @grid_gutter-width / 2 / @base-font-size-px ), em );
+      padding-right: unit(@grid_gutter-width / 2 / @base-font-size-px, em);
+      padding-left: unit(@grid_gutter-width / 2 / @base-font-size-px, em);
     }
 
     &__visual {
-      padding-right: unit( ( @grid_gutter-width / 2 / @base-font-size-px ), em );
-      padding-bottom: unit( ( @grid_gutter-width / 2 / @base-font-size-px ), em );
-      padding-left: unit( ( @grid_gutter-width / 2 / @base-font-size-px ), em );
+      padding-right: unit(@grid_gutter-width / 2 / @base-font-size-px, em);
+      padding-bottom: unit(@grid_gutter-width / 2 / @base-font-size-px, em);
+      padding-left: unit(@grid_gutter-width / 2 / @base-font-size-px, em);
     }
 
     &__img {
@@ -40,7 +40,7 @@
   .respond-to-min(@bp-sm-min, {
     &__text {
       padding-right: @fcm-visual-width + @grid_gutter-width;
-      padding-left: unit( ( @grid_gutter-width / @base-font-size-px ), em );
+      padding-left: unit(@grid_gutter-width / @base-font-size-px, em);
     }
 
     &__visual {
@@ -82,7 +82,7 @@
       // Tablet and above.
       .respond-to-min(@bp-sm-min, {
         padding-left: @fcm-visual-width + @grid_gutter-width;
-        padding-right: unit( ( @grid_gutter-width / @base-font-size-px ), em );
+        padding-right: unit(@grid_gutter-width / @base-font-size-px, em);
       });
     }
   }

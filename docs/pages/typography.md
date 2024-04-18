@@ -16,7 +16,7 @@ variation_groups:
 
           0123456789</h4>
 
-        variation_name: ""
+        variation_name: ''
       - variation_code_snippet: |+
           <h3 style="font-weight: 500;">Avenir Next Medium</h3>
 
@@ -26,7 +26,7 @@ variation_groups:
           0123456789</h4>
 
 
-        variation_name: ""
+        variation_name: ''
       - variation_code_snippet: |-
           <h3>Avenir Next Regular</h3>
 
@@ -34,8 +34,9 @@ variation_groups:
           ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
           abcdefghijklmnopqrstuvwxyz<br>
           0123456789</h4>
-        variation_name: ""
-    variation_group_description: Avenir Next is the primary brand typeface and can
+        variation_name: ''
+    variation_group_description:
+      Avenir Next is the primary brand typeface and can
       be used across all formats from print to digital. Its round and geometric
       letterforms are approachable and modern.
 guidelines: >-
@@ -123,8 +124,8 @@ description: A clear typographic hierarchy is critical to the effective
   scale, and capitalization to convey the relative importance of each heading
   within a document. Readability, accessibility, and font smoothing to allow all
   users to efficiently read and absorb textual information.
-use_cases: ""
-behavior: ""
+use_cases: ''
+behavior: ''
 accessibility: >-
   ![]()
 

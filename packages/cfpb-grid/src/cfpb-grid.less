@@ -16,7 +16,9 @@
 // Wrapper
 //
 
+/* stylelint-disable selector-class-pattern */
 .grid__wrapper( @grid_wrapper-width: @grid_wrapper-width ) {
+  /* stylelint-enable */
   max-width: (@grid_wrapper-width - @grid_gutter-width);
   padding-right: (@grid_gutter-width / 2);
   padding-left: (@grid_gutter-width / 2);
@@ -28,7 +30,9 @@
 // Columns
 //
 
+/* stylelint-disable selector-class-pattern */
 .grid__column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 ) {
+  /* stylelint-enable */
   display: inline-block;
   box-sizing: border-box;
 
@@ -40,7 +44,7 @@
   //  column width in % = -------------
   //                       total cols
 
-  @width: percentage((@columns / @total));
+  @width: percentage(@columns / @total);
 
   border: solid transparent;
   border-width: 0 (@grid_gutter-width / 2);
@@ -70,7 +74,7 @@
 
   // Run this when only prefix is specified
   .prefix( @prefix: 0; @suffix: 0 ) when ( @prefix > 0 ) and ( @suffix = 0 ) {
-    @offset: percentage((@prefix / @total));
+    @offset: percentage(@prefix / @total);
 
     width: @width + @offset;
     padding-left: @offset;
@@ -78,7 +82,7 @@
 
   // Run this when only suffix is specified
   .suffix( @suffix: 0; @prefix: 0 ) when ( @suffix > 0 ) and ( @prefix = 0 ) {
-    @offset: percentage((@suffix / @total));
+    @offset: percentage(@suffix / @total);
 
     width: @width + @offset;
     padding-right: @offset;
@@ -87,8 +91,8 @@
   // Run this when both prefix and suffix are specified
   // prettier-ignore
   .prefixSuffix( @prefix: 0; @suffix: 0 ) when ( @prefix > 0 ) and ( @suffix > 0 ) {
-    @left: percentage( ( @prefix / @total ) );
-    @right: percentage( ( @suffix / @total ) );
+    @left: percentage(@prefix / @total);
+    @right: percentage(@suffix / @total);
 
     width: @width + @left + @right;
     padding-right: @right;
@@ -96,8 +100,10 @@
   }
 }
 
+/* stylelint-disable selector-class-pattern */
 // prettier-ignore
 .grid__column( @columns; @total: @grid_total-columns; @prefix: 0; @suffix: 0; ) when ( @grid_debug ) {
+  /* stylelint-enable */
   border-left-color: #ffb149;
   border-left-color: fade( #ff9e1b, 25% );
   border-right-color: #ffb149;
@@ -128,15 +134,19 @@
 // Push and Pull mixins for source ordering
 //
 
+/* stylelint-disable selector-class-pattern */
 .grid__push( @offset: 1, @grid_total-columns: @grid_total-columns ) {
-  @push: percentage((@offset / @grid_total-columns));
+  /* stylelint-enable */
+  @push: percentage(@offset / @grid_total-columns);
 
   position: relative;
   left: @push;
 }
 
+/* stylelint-disable selector-class-pattern */
 .grid__pull( @offset: 1, @grid_total-columns: @grid_total-columns ) {
-  @pull: percentage((@offset / @grid_total-columns));
+  /* stylelint-enable */
+  @pull: percentage(@offset / @grid_total-columns);
 
   position: relative;
   right: @pull;

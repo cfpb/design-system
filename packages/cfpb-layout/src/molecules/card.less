@@ -60,7 +60,7 @@
 
   &:not(.m-card--breakout) {
     & > a {
-      padding: unit((@grid_gutter-width / @base-font-size-px), em);
+      padding: unit(@grid_gutter-width / @base-font-size-px, em);
     }
 
     .m-card__footer {
@@ -72,7 +72,7 @@
     background: var(--white);
     border: 1px solid var(--gray-20);
     border-bottom-width: 3px;
-    padding: unit((@grid_gutter-width / @base-font-size-px), em);
+    padding: unit(@grid_gutter-width / @base-font-size-px, em);
   }
 
   &:not(.m-card--breakout, .m-card--topic),
@@ -112,7 +112,7 @@
     & .m-card__icon {
       font-size: 1em;
       margin-bottom: 0;
-      padding-right: unit((7.5px / @base-font-size-px), em);
+      padding-right: unit(7.5px / @base-font-size-px, em);
     }
 
     & .m-card__icon,
@@ -138,9 +138,9 @@
     }
 
     .m-card__icon {
-      font-size: unit((30px / @base-font-size-px), em);
+      font-size: unit(30px / @base-font-size-px, em);
       color: var(--green);
-      margin-bottom: unit((5px / @base-font-size-px), em);
+      margin-bottom: unit(5px / @base-font-size-px, em);
     }
 
     &:hover {

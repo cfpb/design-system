@@ -279,22 +279,22 @@ markup._
 
 ### Flush bottom modifier
 
-Add a class of `.content__flush-bottom` to `.content__main` or
+Add a class of `.content--flush-bottom` to `.content__main` or
 `.content__sidebar` to remove bottom padding.
 
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
     <div class="content__wrapper">
-        <aside class="content__sidebar content__flush-bottom">
+        <aside class="content__sidebar content--flush-bottom">
             Side with no bottom padding...
         </aside>
-        <section class="content__main content__flush-bottom">
+        <section class="content__main content--flush-bottom">
             Main content with no bottom padding...
             <div class="block
                         block--flush-bottom
                         block--flush-sides
                         block--bg">
-                .content__flush-bottom is very useful when you have a
+                .content--flush-bottom is very useful when you have a
                 content block inside of .content__main with a background
                 and flush sides.
             </div>
@@ -311,16 +311,16 @@ Add a class of `.content__flush-bottom` to `.content__main` or
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
     <div class="content__wrapper">
-        <aside class="content__sidebar content__flush-bottom">
+        <aside class="content__sidebar content--flush-bottom">
             Side with no bottom padding...
         </aside>
-        <section class="content__main content__flush-bottom">
+        <section class="content__main content--flush-bottom">
             Main content with no bottom padding...
             <div class="block
                         block--flush-bottom
                         block--flush-sides
                         block--bg">
-                .content__flush-bottom is very useful when you have a
+                .content--flush-bottom is very useful when you have a
                 content block inside of .content__main with a background
                 and flush sides.
             </div>
@@ -336,7 +336,7 @@ Add a class of `.content__flush-bottom` to `.content__main` or
 
 ### Flush top modifier (only on small screens)
 
-Add a class of `.content__flush-top-on-small` to `.content__main` or
+Add a class of `.content--flush-top-on-small` to `.content__main` or
 `.content__sidebar` to remove top `padding` on small screens only. 'Small'
 screens in this case refers to the breakpoint where `.content__main` and
 `.content__sidebar` single column layout.
@@ -344,7 +344,7 @@ screens in this case refers to the breakpoint where `.content__main` and
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
     <div class="content__wrapper">
-        <aside class="content__sidebar content__flush-top-on-small">
+        <aside class="content__sidebar content--flush-top-on-small">
             Side with no top padding on small screens...
         </aside>
         <section class="content__main">
@@ -362,7 +362,7 @@ screens in this case refers to the breakpoint where `.content__main` and
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
     <div class="content__wrapper">
-        <aside class="content__sidebar content__flush-top-on-small">
+        <aside class="content__sidebar content--flush-top-on-small">
             Side with no top padding on small screens...
         </aside>
         <section class="content__main">
@@ -379,7 +379,7 @@ screens in this case refers to the breakpoint where `.content__main` and
 
 ### Flush all modifier (only on small screens)
 
-Add a class of `.content__flush-all-on-small` to `.content__main` or
+Add a class of `.content--flush-all-on-small` to `.content__main` or
 `.content__sidebar` to remove all `padding` and border-based gutters on small
 screens only. 'Small' screens in this case refers to the breakpoint where
 `.content__main` and `.content__sidebar` single column layout.
@@ -387,7 +387,7 @@ screens only. 'Small' screens in this case refers to the breakpoint where
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
     <div class="content__wrapper">
-        <aside class="content__sidebar content__flush-all-on-small">
+        <aside class="content__sidebar content--flush-all-on-small">
             Side with no padding or border-based gutters on small screens...
         </aside>
         <section class="content__main">
@@ -405,7 +405,7 @@ screens only. 'Small' screens in this case refers to the breakpoint where
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
     <div class="content__wrapper">
-        <aside class="content__sidebar content__flush-all-on-small">
+        <aside class="content__sidebar content--flush-all-on-small">
             Side with no padding or border-based gutters on small screens...
         </aside>
         <section class="content__main">
@@ -925,7 +925,7 @@ This is an example of combining modifiers to get a flush `padding` and
         <aside class="content__sidebar">
             Section navigation
         </aside>
-        <section class="content__main content__flush-bottom">
+        <section class="content__main content--flush-bottom">
             Main content...
             <div class="block block--flush-sides block--bg">
                 Content block with a background and flush sides
@@ -940,7 +940,7 @@ This is an example of combining modifiers to get a flush `padding` and
         <aside class="content__sidebar">
             Section navigation
         </aside>
-        <section class="content__main content__flush-bottom">
+        <section class="content__main content--flush-bottom">
             Main content...
             <div class="block block--flush-sides block--bg">
                 Content block with a background and flush sides

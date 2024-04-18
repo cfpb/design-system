@@ -24,7 +24,9 @@
 // into a background-image property.
 @plugin "icons-svg-inline.cjs";
 
+/* stylelint-disable selector-class-pattern */
 .u-svg-inline-bg( @name, @is-grayscale: false ) {
+  /* stylelint-enable */
   @svg: icons-svg-inline(@name, @is-grayscale);
 
   background-image: url('data:image/svg+xml;charset=UTF-8,@{svg}');

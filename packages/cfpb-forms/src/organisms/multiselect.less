@@ -3,18 +3,18 @@ select.o-multiselect {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: unit((7px / @base-font-size-px), em);
+  padding: unit(7px / @base-font-size-px, em);
 
   // Fixed height breaks the bottom border
   // mid-character to indicate there's more content.
   height: 5.5em;
-  padding-top: unit((4px / @base-font-size-px), em);
-  padding-bottom: unit((4px / @base-font-size-px), em);
+  padding-top: unit(4px / @base-font-size-px, em);
+  padding-bottom: unit(4px / @base-font-size-px, em);
   border: 1px solid @select-border;
 
   option {
-    padding: unit((2px / @base-font-size-px), em)
-      unit((6px / @base-font-size-px), em);
+    padding: unit(2px / @base-font-size-px, em)
+      unit(6px / @base-font-size-px, em);
   }
 }
 
@@ -26,7 +26,7 @@ select.o-multiselect {
 
     &::after {
       // Arrow box width must be odd size to properly center the bg image
-      width: unit((@select-height / @base-font-size-px), em);
+      width: unit(@select-height / @base-font-size-px, em);
       box-sizing: border-box;
       border-left: 1px solid @select-border;
       position: absolute;
@@ -102,7 +102,7 @@ select.o-multiselect {
 
     li:first-child {
       .a-label {
-        padding-top: unit((10px / @base-font-size-px), em);
+        padding-top: unit(10px / @base-font-size-px, em);
       }
     }
 
@@ -126,7 +126,7 @@ select.o-multiselect {
     }
 
     &.u-max-selections {
-      padding: unit((10px / @base-font-size-px), em);
+      padding: unit(10px / @base-font-size-px, em);
       pointer-events: none;
 
       &::after {
@@ -136,10 +136,10 @@ select.o-multiselect {
 
     .a-label {
       box-sizing: border-box;
-      padding-top: unit((5px / @base-font-size-px), em);
+      padding-top: unit(5px / @base-font-size-px, em);
       padding-right: 0;
-      padding-bottom: unit((5px / @base-font-size-px), em);
-      padding-left: unit((10px / @base-font-size-px), em);
+      padding-bottom: unit(5px / @base-font-size-px, em);
+      padding-left: unit(10px / @base-font-size-px, em);
       width: 100%;
     }
   }
@@ -148,7 +148,7 @@ select.o-multiselect {
     padding-left: 0;
     // The following is required to make side-by-side LI
     // have a space between them.
-    margin-right: unit((-10px / @base-font-size-px), em);
+    margin-right: unit(-10px / @base-font-size-px, em);
     margin-bottom: 0;
 
     li {
@@ -156,11 +156,11 @@ select.o-multiselect {
 
       // The following is required to make side-by-side LI
       // have a space between them.
-      margin-right: unit((10px / @base-font-size-px), em);
+      margin-right: unit(10px / @base-font-size-px, em);
     }
 
     li:last-child {
-      margin-bottom: unit((10px / @base-font-size-px), em);
+      margin-bottom: unit(10px / @base-font-size-px, em);
     }
 
     button {
@@ -170,7 +170,7 @@ select.o-multiselect {
       text-align: left;
 
       &:focus {
-        border-radius: unit((3px / @size-v), em);
+        border-radius: unit(3px / @size-v, em);
         outline: 1px dotted var(--teal);
         outline-offset: 1px;
 
@@ -194,11 +194,11 @@ select.o-multiselect {
       padding-right: 25px;
 
       background-color: var(--teal-20);
-      border-radius: unit((3px / @size-v), em);
+      border-radius: unit(3px / @size-v, em);
       border: 1px solid var(--teal);
       color: var(--black);
       cursor: pointer;
-      font-size: unit((16px / @base-font-size-px), em);
+      font-size: unit(16px / @base-font-size-px, em);
       position: relative;
 
       &:hover {

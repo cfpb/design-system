@@ -139,22 +139,22 @@
 .content__intro,
 .content__main,
 .content__sidebar {
-  padding: unit((@grid_gutter-width / @base-font-size-px), em)
-    unit((@grid_gutter-width / 2 / @base-font-size-px), em);
+  padding: unit(@grid_gutter-width / @base-font-size-px, em)
+    unit(@grid_gutter-width / 2 / @base-font-size-px, em);
 
   // Tablet and above.
   .respond-to-min(@bp-sm-min, {
     .grid__column( 12 );
 
     padding:
-    unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em )
-    unit( ( ( @grid_gutter-width / 2 ) / @base-font-size-px ), em );
+    unit((@grid_gutter-width * 1.5) / @base-font-size-px, em)
+    unit((@grid_gutter-width / 2) / @base-font-size-px, em);
   });
 
   // Desktop and above.
   .respond-to-min(@bp-med-min, {
     padding:
-    unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em )
+    unit((@grid_gutter-width * 1.5) / @base-font-size-px, em)
     0;
   });
 }
@@ -210,18 +210,18 @@
   }
 }); // END min-width 801 block
 
-.content__flush-bottom {
+.content--flush-bottom {
   padding-bottom: 0;
 }
 
-.content__flush-top-on-small {
+.content--flush-top-on-small {
   // Tablet and below.
   .respond-to-max(@bp-sm-max, {
     padding-top: 0;
   });
 }
 
-.content__flush-all-on-small {
+.content--flush-all-on-small {
   // Tablet and below.
   .respond-to-max(@bp-sm-max, {
     padding: 0;
@@ -234,8 +234,8 @@
 //
 
 .block {
-  margin-top: unit(((@grid_gutter-width * 2) / @base-font-size-px), em);
-  margin-bottom: unit(((@grid_gutter-width * 2) / @base-font-size-px), em);
+  margin-top: unit((@grid_gutter-width * 2) / @base-font-size-px, em);
+  margin-bottom: unit((@grid_gutter-width * 2) / @base-font-size-px, em);
 
   &--border-top {
     border-top: 1px solid @block--border-top;
@@ -327,31 +327,31 @@
   }
 
   &--bg {
-    padding: unit((@grid_gutter-width / @base-font-size-px), em)
-      unit(((@grid_gutter-width / 2) / @base-font-size-px), em);
-    padding-bottom: unit(((@grid_gutter-width * 2) / @base-font-size-px), em);
+    padding: unit(@grid_gutter-width / @base-font-size-px, em)
+      unit((@grid_gutter-width / 2) / @base-font-size-px, em);
+    padding-bottom: unit((@grid_gutter-width * 2) / @base-font-size-px, em);
     background: @block--bg;
 
     // Tablet and above.
     .respond-to-min(@bp-sm-min, {
-      padding: unit( ( ( @grid_gutter-width * 1.5 ) / @base-font-size-px ), em )
+      padding: unit((@grid_gutter-width * 1.5 ) / @base-font-size-px, em )
       unit( ( @grid_gutter-width / @base-font-size-px ), em );
     });
   }
 
   &--padded-top {
-    padding-top: unit((@grid_gutter-width / @base-font-size-px), em);
-    margin-top: unit((@grid_gutter-width / @base-font-size-px), em);
+    padding-top: unit(@grid_gutter-width / @base-font-size-px, em);
+    margin-top: unit(@grid_gutter-width / @base-font-size-px, em);
   }
 
   &--padded-bottom {
-    padding-bottom: unit((@grid_gutter-width / @base-font-size-px), em);
-    margin-bottom: unit((@grid_gutter-width / @base-font-size-px), em);
+    padding-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
+    margin-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
   }
 
   &--sub {
-    margin-top: unit((@grid_gutter-width / @base-font-size-px), em);
-    margin-bottom: unit((@grid_gutter-width / @base-font-size-px), em);
+    margin-top: unit(@grid_gutter-width / @base-font-size-px, em);
+    margin-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
   }
 
   // Overrides for when .block is also a column

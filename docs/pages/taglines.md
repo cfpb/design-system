@@ -31,18 +31,6 @@ variation_groups:
           The `u-nowrap` container prevents wrapping of the
           "United States government" text. If the content of the tagline
           contains markup it needs to go inside a generic `div` container.
-      - variation_name: Extra large tagline
-        variation_code_snippet: |-
-          <div class="a-tagline a-tagline--xlarge">
-              <span class="u-usa-flag"></span>
-              <div class="a-tagline__text">
-                We're a government agency whose mission is to protect consumers
-                from financial harm.
-              </div>
-          </div>
-        variation_description: An extra large tagline, which stacks on mobile.
-        variation_implementation: ''
-        variation_is_deprecated: true
     variation_group_name: Types
 use_cases: ''
 guidelines: ''

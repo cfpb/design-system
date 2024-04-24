@@ -160,7 +160,7 @@ variation_groups:
         variation_implementation: >+
           #### Bleeding illustrations
 
-          When using an illustration that bleeds top to bottom at larger screen sizes, add the `__bleeding` modifier to the hero and add an additional `m-hero_bleeding-image` as a sibling to `m-hero__image`.
+          When using an illustration that bleeds top to bottom at larger screen sizes, add the `--bleeding` modifier to the hero and add an additional `m-hero__bleeding-image` as a sibling to `m-hero__image`.
 
 
           #### Customizing illustrations

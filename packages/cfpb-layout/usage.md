@@ -612,7 +612,7 @@ overlapping since they will span the height of the entire `.content-l` element.
         <br>
         Half-width column (spans 6/12 columns)
     </div>
-    <div class="content-l__col content-l__col-1-2 content-l__col__before-divider">
+    <div class="content-l__col content-l__col-1-2">
         <img src="https://dummyimage.com/600x320/addc91/101820" alt="Placeholder image">
         <br>
         Half-width column (spans 6/12 columns)
@@ -623,10 +623,10 @@ overlapping since they will span the height of the entire `.content-l` element.
     <div class="content-l__col content-l__col-1-3">
         Third-width column (spans 4/12 columns)
     </div>
-    <div class="content-l__col content-l__col-1-3 content-l__col__before-divider">
+    <div class="content-l__col content-l__col-1-3">
         Third-width column (spans 4/12 columns)
     </div>
-    <div class="content-l__col content-l__col-1-3 content-l__col__before-divider">
+    <div class="content-l__col content-l__col-1-3">
         Third-width column (spans 4/12 columns)
     </div>
 </div>
@@ -638,7 +638,7 @@ overlapping since they will span the height of the entire `.content-l` element.
         <br>
         Half-width column (spans 6/12 columns)
     </div>
-    <div class="content-l__col content-l__col-1-2 content-l__col__before-divider">
+    <div class="content-l__col content-l__col-1-2">
         <img src="https://dummyimage.com/600x320/addc91/101820" alt="Placeholder image">
         <br>
         Half-width column (spans 6/12 columns)
@@ -646,16 +646,16 @@ overlapping since they will span the height of the entire `.content-l` element.
 </div>
 <br>
 <!-- Starting a new .content-l so that the dividers from
-     .content-l__col.content-l__col-1-2.content-l__col__before-divider
+     .content-l__col.content-l__col-1-2
      won't overlap the .content-l__col-1-3 columns. -->
 <div class="content-l">
     <div class="content-l__col content-l__col-1-3">
         Third-width column (spans 4/12 columns)
     </div>
-    <div class="content-l__col content-l__col-1-3 content-l__col__before-divider">
+    <div class="content-l__col content-l__col-1-3">
         Third-width column (spans 4/12 columns)
     </div>
-    <div class="content-l__col content-l__col-1-3 content-l__col__before-divider">
+    <div class="content-l__col content-l__col-1-3">
         Third-width column (spans 4/12 columns)
     </div>
 </div>

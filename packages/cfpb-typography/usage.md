@@ -57,8 +57,8 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 // Headings
 
 // .a-heading__icon
-@heading__icon:             var(--black);
-@heading__icon__hover:      @link-text-hover;
+@heading-icon:              var(--black);
+@heading-icon-hover:        @link-text-hover;
 
 // Headers
 

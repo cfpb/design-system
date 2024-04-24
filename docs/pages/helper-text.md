@@ -8,7 +8,7 @@ variation_groups:
           <label class="a-label a-label--heading" for="helper-block-example">
 
           Label
-              <small class="a-label__helper a-label__helper__block">Use block helper text for instructions</small>
+              <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
           </label>
 
 

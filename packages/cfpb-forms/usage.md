@@ -153,13 +153,13 @@ Appears with labels and label headings.
 
 <label class="a-label a-label--heading">
     A label heading
-    <small class="a-label__helper a-label__helper__block">Helper text</small>
+    <small class="a-label__helper a-label__helper--block">Helper text</small>
 </label>
 
 ```html
 <label class="a-label a-label--heading">
   A label heading
-  <small class="a-label__helper a-label__helper__block">Helper text</small>
+  <small class="a-label__helper a-label__helper--block">Helper text</small>
 </label>
 ```
 

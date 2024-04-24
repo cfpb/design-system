@@ -23,7 +23,7 @@ variation_groups:
           <legend class="a-legend">
 
           Basic legend
-              <small class="a-label__helper a-label__helper__block">Use block helper text for instructions</small>
+              <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
           </legend>
               <div class="o-form__group">
                   <fieldset class="o-form__fieldset">
@@ -46,7 +46,7 @@ variation_groups:
           <legend class="a-legend">
 
           Basic legend
-              <small class="a-label__helper a-label__helper__block">Use block helper text for instructions</small>
+              <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
           </legend>
               <div class="o-form__group">
                   <fieldset class="o-form__fieldset">
@@ -74,7 +74,7 @@ variation_groups:
           <legend class="a-legend">
 
           Basic legend
-              <small class="a-label__helper a-label__helper__block">Use block helper text for instructions</small>
+              <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
           </legend>
               <div class="o-form__group">
                   <fieldset class="o-form__fieldset">
@@ -104,7 +104,7 @@ variation_groups:
           <legend class="a-legend">
 
           Basic legend
-              <small class="a-label__helper a-label__helper__block">Use block helper text for instructions</small>
+              <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
           </legend>
 
                           <div class="m-form-field m-form-field--radio m-form-field--lg-target">

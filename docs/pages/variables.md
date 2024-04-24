@@ -290,8 +290,8 @@ variation_groups:
           // Headings
 
           // .a-heading__icon
-          @heading__icon:             var(--black);
-          @heading__icon__hover:      @link-text-hover;
+          @heading-icon:              var(--black);
+          @heading-icon-hover:        @link-text-hover;
 
           // Headers
 

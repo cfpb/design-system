@@ -1,4 +1,19 @@
 
+## v1.0.2 (2024-04-24)
+
+#### Breaking Change
+* `cfpb-design-system`, `cfpb-typography`
+  * [#1960](https://github.com/cfpb/design-system/pull/1960) cfpb-typography: Remove xtra large tagline ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-forms`, `cfpb-layout`, `cfpb-typography`
+  * [#1963](https://github.com/cfpb/design-system/pull/1963) BEM fixes ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v1.0.1 (2024-04-18)
 
 #### Bug Fix

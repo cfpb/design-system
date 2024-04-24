@@ -1,4 +1,15 @@
 
+## v1.0.3 (2024-04-24)
+
+#### Breaking Change
+* `cfpb-design-system`, `cfpb-typography`
+  * [#1964](https://github.com/cfpb/design-system/pull/1964) cfpb-typography: Remove `a-heading__icon` class ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v1.0.2 (2024-04-24)
 
 #### Breaking Change

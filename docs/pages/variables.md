@@ -287,12 +287,6 @@ variation_groups:
           @pull-quote_body:           var(--black);
           @pull-quote_citation:       var(--gray);
 
-          // Headings
-
-          // .a-heading__icon
-          @heading-icon:              var(--black);
-          @heading-icon-hover:        @link-text-hover;
-
           // Headers
 
           // .m-slug-header

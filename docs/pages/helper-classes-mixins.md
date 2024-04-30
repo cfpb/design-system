@@ -85,7 +85,7 @@ variation_groups:
 
           <h1>
               <a href="#">
-                  <span class="cf-icon cf-icon-twitter-square"></span>
+                  <span class="cf-icon cf-icon-x-square"></span>
                   <span class="u-visually-hidden">Share on Twitter</span>
               </a>
           </h1>

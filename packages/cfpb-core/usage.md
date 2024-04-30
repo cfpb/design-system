@@ -263,7 +263,7 @@ add descriptive text with the `u-visually-hidden` class.
 ```
 <h1>
     <a href="#">
-        <span class="@cfpb/icon @cfpb/icon-twitter-square"></span>
+        <span class="@cfpb/icon @cfpb/icon-x-square"></span>
         <span class="u-visually-hidden">Share on Twitter</span>
     </a>
 </h1>

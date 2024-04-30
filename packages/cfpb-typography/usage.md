@@ -135,7 +135,8 @@ Can be either a relative or absolute path.
     <div class="m-meta-header__item">
         <span class="a-date">
             Published
-            <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
+            <span class="datetime">
+                <time datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
             </span>
         </span>
     </div>
@@ -156,7 +157,8 @@ Can be either a relative or absolute path.
     <div class="m-meta-header__item">
         <span class="a-date">
             Published
-            <span class="datetime"><time class="datetime_date" datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
+            <span class="datetime">
+                <time datetime="2024-09-28T00:00:00">SEP 28, 2024</time>
             </span>
         </span>
     </div>

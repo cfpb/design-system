@@ -210,7 +210,7 @@ search this page for a particular icon.
 | {% include icons/github.svg %}    | {% include icons/github-square.svg %}    | github         |                                  |
 | {% include icons/linkedin.svg %}  | {% include icons/linkedin-square.svg %}  | linkedin       |                                  |
 | {% include icons/pinterest.svg %} | {% include icons/pinterest-square.svg %} | pinterest      |                                  |
-| {% include icons/twitter.svg %}   | {% include icons/twitter-square.svg %}   | twitter        |                                  |
+| {% include icons/x.svg %}         | {% include icons/x-square.svg %}         | x              | twitter                          |
 | {% include icons/youtube.svg %}   | {% include icons/youtube-square.svg %}   | youtube        |                                  |
 
 {: class="icon-table"}

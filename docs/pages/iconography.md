@@ -117,7 +117,7 @@ variation_groups:
 
           | {% include icons/pinterest.svg %} | {% include icons/pinterest-square.svg %} | pinterest | | |
 
-          | {% include icons/twitter.svg %} | {% include icons/twitter-square.svg %} | twitter | | |
+          | {% include icons/x.svg %} | {% include icons/x-square.svg %} | x | twitter | |
 
           | {% include icons/youtube.svg %} | {% include icons/youtube-square.svg %} | youtube | | |
 

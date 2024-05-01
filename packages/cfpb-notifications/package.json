@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-notifications",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Design System notifications",
   "less": "src/cfpb-notifications.less",
   "style": "cfpb-notifications.css",
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@cfpb/cfpb-core": "^1.1.0",
-    "@cfpb/cfpb-icons": "^1.1.1"
+    "@cfpb/cfpb-icons": "^1.1.2"
   },
   "keywords": [
     "notifications"

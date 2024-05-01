@@ -1,4 +1,19 @@
 
+## v1.0.3 (2024-05-01)
+
+#### Enhancement
+* `cfpb-core`, `cfpb-design-system`, `cfpb-forms`, `cfpb-icons`
+  * [#1967](https://github.com/cfpb/design-system/pull/1967) Migrate Twitter to X | optimize icons ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-typography`
+  * [#1966](https://github.com/cfpb/design-system/pull/1966) Remove `datetime` elements ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v1.0.3 (2024-04-24)
 
 #### Breaking Change

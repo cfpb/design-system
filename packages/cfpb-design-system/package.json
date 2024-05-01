@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-design-system",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "CFPB's UI framework",
   "main": "src/cfpb-design-system.js",
   "less": "src/cfpb-design-system.less",
@@ -22,17 +22,17 @@
   },
   "dependencies": {
     "@cfpb/cfpb-atomic-component": "^1.0.0",
-    "@cfpb/cfpb-buttons": "^1.1.0",
+    "@cfpb/cfpb-buttons": "^1.1.1",
     "@cfpb/cfpb-core": "^1.1.0",
-    "@cfpb/cfpb-expandables": "^1.1.0",
-    "@cfpb/cfpb-forms": "^1.1.0",
+    "@cfpb/cfpb-expandables": "^1.1.1",
+    "@cfpb/cfpb-forms": "^1.1.1",
     "@cfpb/cfpb-grid": "^1.0.1",
-    "@cfpb/cfpb-icons": "^1.1.0",
+    "@cfpb/cfpb-icons": "^1.1.1",
     "@cfpb/cfpb-layout": "^1.1.0",
-    "@cfpb/cfpb-notifications": "^1.1.0",
-    "@cfpb/cfpb-pagination": "^1.1.0",
+    "@cfpb/cfpb-notifications": "^1.1.1",
+    "@cfpb/cfpb-pagination": "^1.1.1",
     "@cfpb/cfpb-tables": "^1.1.0",
-    "@cfpb/cfpb-typography": "^1.1.0"
+    "@cfpb/cfpb-typography": "^1.1.1"
   },
   "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e",
   "type": "module"

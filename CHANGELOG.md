@@ -1,4 +1,15 @@
 
+## v1.1.2 (2024-05-01)
+
+#### Bug Fix
+* `cfpb-icons`
+  * [#1970](https://github.com/cfpb/design-system/pull/1970) New, smaller, X icons ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v1.1.1 (2024-05-01)
 
 #### Bug Fix

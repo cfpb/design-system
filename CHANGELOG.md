@@ -1,5 +1,16 @@
 
-## v1.0.3 (2024-05-01)
+## v1.1.1 (2024-05-01)
+
+#### Bug Fix
+* `cfpb-icons`
+  * [#1969](https://github.com/cfpb/design-system/pull/1969) Update icon BEM modifier names ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
+## v1.1.0 (2024-05-01)
 
 #### Enhancement
 * `cfpb-core`, `cfpb-design-system`, `cfpb-forms`, `cfpb-icons`

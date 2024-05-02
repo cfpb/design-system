@@ -43,7 +43,7 @@
     "test:browser": "yarn cypress run",
     "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && node_modules/saucectl/bin/saucectl run"
   },
-  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead, ie >= 11",
+  "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
     "anchor-js": "5.0.0",
     "html-entities": "2.5.2",
@@ -56,6 +56,7 @@
     "slugify": "1.6.6"
   },
   "devDependencies": {
+    "@cfpb/browserslist-config": "0.0.2",
     "@lhci/cli": "0.13.0",
     "autoprefixer": "10.4.19",
     "concurrently": "8.2.2",

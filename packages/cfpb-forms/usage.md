@@ -726,13 +726,19 @@ appear in code.
 
 #### Default state
 
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default">
     <label class="a-label" for="test_checkbox_lg_default">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target"
+>
   <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default" />
   <label class="a-label" for="test_checkbox_lg_default">Label</label>
 </div>
@@ -744,13 +750,19 @@ Generally this is only useful for documentation purposes.
 
 #### Hover state
 
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
     <input class="a-checkbox hover" type="checkbox" id="test_checkbox_lg_hover">
     <label class="a-label" for="test_checkbox_lg_hover">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target"
+>
   <input class="a-checkbox hover" type="checkbox" id="test_checkbox_lg_hover" />
   <label class="a-label" for="test_checkbox_lg_hover">Label</label>
 </div>
@@ -758,13 +770,19 @@ Generally this is only useful for documentation purposes.
 
 #### Focus state
 
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
     <input class="a-checkbox focus" type="checkbox" id="test_checkbox_lg_focus">
     <label class="a-label" for="test_checkbox_lg_focus">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target"
+>
   <input class="a-checkbox focus" type="checkbox" id="test_checkbox_lg_focus" />
   <label class="a-label" for="test_checkbox_lg_focus">Label</label>
 </div>
@@ -772,13 +790,19 @@ Generally this is only useful for documentation purposes.
 
 #### Selected state
 
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_checked" checked>
     <label class="a-label" for="test_checkbox_lg_checked">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target"
+>
   <input
     class="a-checkbox"
     type="checkbox"
@@ -791,13 +815,19 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled state
 
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled" disabled>
     <label class="a-label" for="test_checkbox_lg_disabled">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target"
+>
   <input
     class="a-checkbox"
     type="checkbox"
@@ -810,7 +840,9 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled/selected state
 
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
     <input class="a-checkbox"
            type="checkbox"
            id="test_checkbox_lg_disabled"
@@ -820,7 +852,11 @@ Generally this is only useful for documentation purposes.
 </div>
 
 ```html
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target"
+>
   <input
     class="a-checkbox"
     type="checkbox"
@@ -839,13 +875,19 @@ appear in code.
 
 #### Default state
 
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target">
     <input class="a-radio" type="radio" id="test_radio_lg_default">
     <label class="a-label" for="test_radio_lg_default">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target"
+>
   <input class="a-radio" type="radio" id="test_radio_lg_default" />
   <label class="a-label" for="test_radio_lg_default">Label</label>
 </div>
@@ -857,13 +899,19 @@ Generally this is only useful for documentation purposes.
 
 #### Hover state
 
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target">
     <input class="a-radio hover" type="radio" id="test_radio_lg_hover">
     <label class="a-label" for="test_radio_lg_hover">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target"
+>
   <input class="a-radio hover" type="radio" id="test_radio_lg_hover" />
   <label class="a-label" for="test_radio_lg_hover">Label</label>
 </div>
@@ -871,13 +919,19 @@ Generally this is only useful for documentation purposes.
 
 #### Focus state
 
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target">
     <input class="a-radio focus" type="radio" id="test_radio_lg_focus">
     <label class="a-label" for="test_radio_lg_focus">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target"
+>
   <input class="a-radio focus" type="radio" id="test_radio_lg_focus" />
   <label class="a-label" for="test_radio_lg_focus">Label</label>
 </div>
@@ -885,13 +939,19 @@ Generally this is only useful for documentation purposes.
 
 #### Selected state
 
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target">
     <input class="a-radio" type="radio" id="test_radio_lg_checked" checked>
     <label class="a-label" for="test_radio_lg_checked">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target"
+>
   <input class="a-radio" type="radio" id="test_radio_lg_checked" checked />
   <label class="a-label" for="test_radio_lg_checked">Label</label>
 </div>
@@ -899,13 +959,19 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled state
 
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target">
     <input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled>
     <label class="a-label" for="test_radio_lg_disabled">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target"
+>
   <input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled />
   <label class="a-label" for="test_radio_lg_disabled">Label</label>
 </div>
@@ -913,7 +979,9 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled/selected state
 
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target">
     <input class="a-radio"
            type="radio"
            id="test_radio_lg_disabled"
@@ -923,7 +991,11 @@ Generally this is only useful for documentation purposes.
 </div>
 
 ```html
-<div class="m-form-field m-form-field--radio m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target"
+>
   <input
     class="a-radio"
     type="radio"
@@ -966,7 +1038,9 @@ have helper text that appears below the main label text.
 
 #### Large target checkbox/radio button helper text
 
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_helper">
     <label class="a-label" for="test_checkbox_lg_helper">
         This is a very long label that wraps to a second line.
@@ -978,7 +1052,11 @@ have helper text that appears below the main label text.
 </div>
 
 ```html
-<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+<div
+  class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target"
+>
   <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_helper" />
   <label class="a-label" for="test_checkbox_lg_helper">
     This is a very long label that wraps to a second line. Lorem ipsum dolor sit
@@ -995,7 +1073,7 @@ appear in code.
 
 ### Default state
 
-<div class="m-form-field m-form-field__select">
+<div class="m-form-field">
     <label class="a-label a-label--heading" for="test_select_default">
         Label
     </label>
@@ -1010,7 +1088,7 @@ appear in code.
 </div>
 
 ```html
-<div class="m-form-field m-form-field__select">
+<div class="m-form-field">
   <label class="a-label a-label--heading" for="test_select_default">
     Label
   </label>
@@ -1031,7 +1109,7 @@ Generally this is only useful for documentation purposes.
 
 ### Hover state
 
-<div class="m-form-field m-form-field__select">
+<div class="m-form-field">
     <label class="a-label a-label--heading" for="test_select__hover">
         Label
     </label>
@@ -1046,7 +1124,7 @@ Generally this is only useful for documentation purposes.
 </div>
 
 ```html
-<div class="m-form-field m-form-field__select">
+<div class="m-form-field">
   <label class="a-label a-label--heading" for="test_select__hover">
     Label
   </label>
@@ -1063,7 +1141,7 @@ Generally this is only useful for documentation purposes.
 
 ### Focus state
 
-<div class="m-form-field m-form-field__select">
+<div class="m-form-field">
     <label class="a-label a-label--heading" for="test_select__focus">
         Label
     </label>
@@ -1078,7 +1156,7 @@ Generally this is only useful for documentation purposes.
 </div>
 
 ```html
-<div class="m-form-field m-form-field__select">
+<div class="m-form-field">
   <label class="a-label a-label--heading" for="test_select__focus">
     Label
   </label>
@@ -1095,7 +1173,7 @@ Generally this is only useful for documentation purposes.
 
 ### Disabled state
 
-<div class="m-form-field m-form-field__select">
+<div class="m-form-field">
     <label class="a-label a-label--heading" for="test_select__disabled">Label</label>
     <div class="a-select a-select--disabled">
         <select id="test_select__disabled" disabled>
@@ -1108,7 +1186,7 @@ Generally this is only useful for documentation purposes.
 </div>
 
 ```html
-<div class="m-form-field m-form-field__select">
+<div class="m-form-field">
   <label class="a-label a-label--heading" for="test_select__disabled"
     >Label</label
   >
@@ -1125,7 +1203,7 @@ Generally this is only useful for documentation purposes.
 
 ## Basic multiselect
 
-<div class="m-form-field m-form-field__select">
+<div class="m-form-field">
     <label class="a-label a-label--heading" for="test_select__multiple">
         Label
     </label>
@@ -1142,7 +1220,7 @@ Generally this is only useful for documentation purposes.
 </div>
 
 ```html
-<div class="m-form-field m-form-field__select">
+<div class="m-form-field">
   <label class="a-label a-label--heading" for="test_select__multiple">
     Label
   </label>
@@ -1186,7 +1264,7 @@ form validation or feedback to a user's input.
     </div>
 </div>
 <div class="o-form__group">
-    <div class="m-form-field m-form-field__success">
+    <div class="m-form-field">
         <label class="a-label--heading"
                for="field-validation__success-demo">
             Label
@@ -1207,7 +1285,7 @@ form validation or feedback to a user's input.
     </div>
 </div>
 <div class="o-form__group">
-    <div class="m-form-field m-form-field__error">
+    <div class="m-form-field">
         <label class="a-label--heading"
                for="field-validation__error-demo">
             Label
@@ -1228,7 +1306,7 @@ form validation or feedback to a user's input.
     </div>
 </div>
 <div class="o-form__group">
-    <div class="m-form-field m-form-field__warning">
+    <div class="m-form-field">
         <label class="a-label--heading"
                for="field-validation__warning-demo">
             Label
@@ -1275,7 +1353,7 @@ form validation or feedback to a user's input.
   </div>
 </div>
 <div class="o-form__group">
-  <div class="m-form-field m-form-field__success">
+  <div class="m-form-field">
     <label class="a-label--heading" for="field-validation__success">
       Label
     </label>
@@ -1299,7 +1377,7 @@ form validation or feedback to a user's input.
   </div>
 </div>
 <div class="o-form__group">
-  <div class="m-form-field m-form-field__error">
+  <div class="m-form-field">
     <label class="a-label--heading" for="field-validation__error">
       Label
     </label>
@@ -1323,7 +1401,7 @@ form validation or feedback to a user's input.
   </div>
 </div>
 <div class="o-form__group">
-  <div class="m-form-field m-form-field__warning">
+  <div class="m-form-field">
     <label class="a-label--heading" for="field-validation__warning">
       Label
     </label>
@@ -1377,15 +1455,21 @@ form validation or feedback to a user's input.
     </div>
     <div class="o-form__group">
         <fieldset class="o-form__fieldset">
-            <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+            <div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_1">
                 <label class="a-label" for="test_checkbox_lg_default_1">Label</label>
             </div>
-            <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+            <div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_2">
                 <label class="a-label" for="test_checkbox_lg_default_2">Label</label>
             </div>
-            <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+            <div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3">
                 <label class="a-label" for="test_checkbox_lg_default_3">
                     This is a very long label that wraps to a second line.
@@ -1395,7 +1479,9 @@ form validation or feedback to a user's input.
                     </small>
                 </label>
             </div>
-            <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+            <div class="m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4">
                 <label class="a-label" for="test_checkbox_lg_default_4">Label</label>
             </div>
@@ -1403,19 +1489,27 @@ form validation or feedback to a user's input.
     </div>
     <div class="o-form__group">
         <fieldset class="o-form__fieldset">
-            <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+            <div class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target">
                 <input class="a-radio" type="radio" id="test_radio_lg_default_1" name="radio-fieldset">
                 <label class="a-label" for="test_radio_lg_default_1">Label</label>
             </div>
-            <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+            <div class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target">
                 <input class="a-radio" type="radio" id="test_radio_lg_default_2" name="radio-fieldset">
                 <label class="a-label" for="test_radio_lg_default_2">Label</label>
             </div>
-            <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+            <div class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target">
                 <input class="a-radio" type="radio" id="test_radio_lg_default_3" name="radio-fieldset">
                 <label class="a-label" for="test_radio_lg_default_3">Label</label>
             </div>
-            <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+            <div class="m-form-field
+                        m-form-field--radio
+                        m-form-field--lg-target">
                 <input class="a-radio" type="radio" id="test_radio_lg_default_4" name="radio-fieldset">
                 <label class="a-label" for="test_radio_lg_default_4">Label</label>
             </div>
@@ -1471,7 +1565,11 @@ form validation or feedback to a user's input.
   </div>
   <div class="o-form__group">
     <fieldset class="o-form__fieldset">
-      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+      <div
+        class="m-form-field
+                  m-form-field--checkbox
+                  m-form-field--lg-target"
+      >
         <input
           class="a-checkbox"
           type="checkbox"
@@ -1479,7 +1577,11 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_checkbox_lg_default_1">Label</label>
       </div>
-      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+      <div
+        class="m-form-field
+                  m-form-field--checkbox
+                  m-form-field--lg-target"
+      >
         <input
           class="a-checkbox"
           type="checkbox"
@@ -1487,7 +1589,11 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_checkbox_lg_default_2">Label</label>
       </div>
-      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+      <div
+        class="m-form-field
+                  m-form-field--checkbox
+                  m-form-field--lg-target"
+      >
         <input
           class="a-checkbox"
           type="checkbox"
@@ -1495,7 +1601,11 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_checkbox_lg_default_3">Label</label>
       </div>
-      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+      <div
+        class="m-form-field
+                  m-form-field--checkbox
+                  m-form-field--lg-target"
+      >
         <input
           class="a-checkbox"
           type="checkbox"
@@ -1507,7 +1617,11 @@ form validation or feedback to a user's input.
   </div>
   <div class="o-form__group">
     <fieldset class="o-form__fieldset">
-      <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+      <div
+        class="m-form-field
+                  m-form-field--radio
+                  m-form-field--lg-target"
+      >
         <input
           class="a-radio"
           type="radio"
@@ -1516,7 +1630,11 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_radio_lg_default_1">Label</label>
       </div>
-      <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+      <div
+        class="m-form-field
+                  m-form-field--radio
+                  m-form-field--lg-target"
+      >
         <input
           class="a-radio"
           type="radio"
@@ -1525,7 +1643,11 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_radio_lg_default_2">Label</label>
       </div>
-      <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+      <div
+        class="m-form-field
+                  m-form-field--radio
+                  m-form-field--lg-target"
+      >
         <input
           class="a-radio"
           type="radio"
@@ -1534,7 +1656,11 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_radio_lg_default_3">Label</label>
       </div>
-      <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+      <div
+        class="m-form-field
+                  m-form-field--radio
+                  m-form-field--lg-target"
+      >
         <input
           class="a-radio"
           type="radio"

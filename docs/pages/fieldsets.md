@@ -78,19 +78,27 @@ variation_groups:
           </legend>
               <div class="o-form__group">
                   <fieldset class="o-form__fieldset">
-                      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+                      <div class="m-form-field
+                                  m-form-field--checkbox
+                                  m-form-field--lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_1">
                           <label class="a-label" for="test_checkbox_lg_default_1">Inline label</label>
                       </div>
-                      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+                      <div class="m-form-field
+                                  m-form-field--checkbox
+                                  m-form-field--lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_2">
                           <label class="a-label" for="test_checkbox_lg_default_2">Inline label</label>
                       </div>
-                      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+                      <div class="m-form-field
+                                  m-form-field--checkbox
+                                  m-form-field--lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3">
                           <label class="a-label" for="test_checkbox_lg_default_3">Inline label</label>
                       </div>
-                      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+                      <div class="m-form-field
+                                  m-form-field--checkbox
+                                  m-form-field--lg-target">
                           <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4">
                           <label class="a-label" for="test_checkbox_lg_default_4">Inline label</label>
                       </div>
@@ -107,25 +115,29 @@ variation_groups:
               <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
           </legend>
 
-                          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+                          <div class="m-form-field
+                                      m-form-field--radio m-form-field--lg-target">
                               <input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1">
                                   <label class="a-label" for="is_helpful_1">Inline label
                                   </label>
                           </div>
 
-                          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+                          <div class="m-form-field
+                                      m-form-field--radio m-form-field--lg-target">
                               <input class="a-radio" id="is_helpful_2" type="radio" name="is_helpful" value="0">
                                   <label class="a-label" for="is_helpful_2">Inline label
                                   </label>
                           </div>
 
-                          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+                          <div class="m-form-field
+                                      m-form-field--radio m-form-field--lg-target">
                               <input class="a-radio" id="is_helpful_3" type="radio" name="is_helpful" value="0">
                                   <label class="a-label" for="is_helpful_3">Inline label
                                   </label>
                           </div>
 
-                          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+                          <div class="m-form-field
+                                      m-form-field--radio m-form-field--lg-target">
                               <input class="a-radio" id="is_helpful_4" type="radio" name="is_helpful" value="0">
                                   <label class="a-label" for="is_helpful_4">Inline label
                                   </label>

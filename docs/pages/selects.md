@@ -13,7 +13,7 @@ variation_groups:
           <!--Enabled state-->
 
 
-          <div class="m-form-field m-form-field__select">
+          <div class="m-form-field">
               <label class="a-label a-label--heading" for="test_select_enabled">
                   Enabled
               </label>
@@ -33,7 +33,7 @@ variation_groups:
 
           <!--Hover state-->
 
-          <div class="m-form-field m-form-field__select">
+          <div class="m-form-field">
               <label class="a-label a-label--heading" for="test_select__hover">
                  Hover
               </label>
@@ -54,7 +54,7 @@ variation_groups:
           <!--Focus state-->
 
 
-          <div class="m-form-field m-form-field__select">
+          <div class="m-form-field">
               <label class="a-label a-label--heading" for="test_select__focus">
                   Focus
               </label>
@@ -75,7 +75,7 @@ variation_groups:
           <!--Disabled state-->
 
 
-          <div class="m-form-field m-form-field__select">
+          <div class="m-form-field">
               <label class="a-label a-label--heading" for="test_select__disabled">Disabled</label>
               <div class="a-select a-select--disabled">
                   <select id="test_select__disabled" disabled>
@@ -97,7 +97,7 @@ variation_groups:
           Allows the user to select multiple items from a dropdown
           list of options.
         variation_code_snippet: >-
-          <div class="m-form-field m-form-field__select">
+          <div class="m-form-field">
               <label class="a-label a-label--heading" for="test_select__multiple">
                   Label
               </label>
@@ -127,16 +127,16 @@ use_cases: >-
   Use selects when:
 
 
-  * You have a long list of finite options. 
+  * You have a long list of finite options.
 
-    * If the list is shorter than around six items, [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons) or [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) might work better. 
+    * If the list is shorter than around six items, [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons) or [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) might work better.
     * If the options include something open ended, a [text input](https://cfpb.github.io/design-system/components/text-inputs) field is better.
-  * You need structured data for a long list. 
+  * You need structured data for a long list.
 
     * For instance, an open text field for “state” could be entered as Missouri or MO. So if this needs to be standardized, a select facilitates this standardization.
-  * The list options are familiar to the user. 
+  * The list options are familiar to the user.
 
-    * A select is not a good place to introduce new or complicated terms or concepts. 
+    * A select is not a good place to introduce new or complicated terms or concepts.
     * For instance, if the question is “What’s your favorite color of the rainbow,” a select could be a good choice. The options are familiar and there are more than six.
 accessibility: >-
   ### Selects

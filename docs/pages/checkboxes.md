@@ -73,7 +73,9 @@ variation_groups:
 
           <!--Success-->
 
-          <div class="m-form-field m-form-field--checkbox m-form-field--checkbox__success">
+          <div class="m-form-field
+                      m-form-field--checkbox
+                      m-form-field--checkbox-success">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_success">
               <label class="a-label" for="test_checkbox_success">Success</label>
           </div>
@@ -82,7 +84,9 @@ variation_groups:
 
           <!--Warning-->
 
-          <div class="m-form-field m-form-field--checkbox m-form-field--checkbox__warning">
+          <div class="m-form-field
+                      m-form-field--checkbox
+                      m-form-field--checkbox-warning">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_warning">
               <label class="a-label" for="test_checkbox_warning">Warning</label>
           </div>
@@ -91,7 +95,9 @@ variation_groups:
 
           <!--Error-->
 
-          <div class="m-form-field m-form-field--checkbox m-form-field--checkbox__error">
+          <div class="m-form-field
+                      m-form-field--checkbox
+                      m-form-field--checkbox-error">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_error">
               <label class="a-label" for="test_checkbox_error">Error</label>
           </div>
@@ -121,8 +127,9 @@ variation_groups:
           example, they may not work well for terms of service agreement
           checkboxes.
         variation_code_snippet: >-
-          <div class="m-form-field m-form-field--checkbox
-          m-form-field--lg-target">
+          <div class="m-form-field
+                      m-form-field--checkbox
+                      m-form-field--lg-target">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default">
               <label class="a-label" for="test_checkbox_lg_default">Enabled</label>
           </div>
@@ -132,7 +139,9 @@ variation_groups:
 
           <!--Hover-->
 
-          <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+          <div class="m-form-field
+                      m-form-field--checkbox
+                      m-form-field--lg-target">
               <input class="a-checkbox hover" type="checkbox" id="test_checkbox_lg_hover">
               <label class="a-label" for="test_checkbox_lg_hover">Hover</label>
           </div>
@@ -142,7 +151,9 @@ variation_groups:
 
           <!--Focus-->
 
-          <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+          <div class="m-form-field
+                      m-form-field--checkbox
+                      m-form-field--lg-target">
               <input class="a-checkbox focus" type="checkbox" id="test_checkbox_lg_focus">
               <label class="a-label" for="test_checkbox_lg_focus">Focus</label>
           </div>
@@ -153,7 +164,9 @@ variation_groups:
 
           <!--Selected-->
 
-          <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+          <div class="m-form-field
+                      m-form-field--checkbox
+                      m-form-field--lg-target">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_checked" checked>
               <label class="a-label" for="test_checkbox_lg_checked">Selected</label>
           </div>
@@ -163,7 +176,9 @@ variation_groups:
 
           <!--Disabled-->
 
-          <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+          <div class="m-form-field
+                      m-form-field--checkbox
+                      m-form-field--lg-target">
               <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled" disabled>
               <label class="a-label" for="test_checkbox_lg_disabled">Disabled</label>
           </div>
@@ -175,7 +190,9 @@ variation_groups:
 
           <!--
 
-          <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
+          <div class="m-form-field
+                      m-form-field--checkbox
+                      m-form-field--lg-target">
               <input class="a-checkbox"
                      type="checkbox"
                      id="test_checkbox_lg_disabled"
@@ -189,8 +206,9 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: Large target area checkbox (with helper text)
         variation_code_snippet: >-
-          <div class="m-form-field m-form-field--checkbox
-          m-form-field--lg-target">
+          <div class="m-form-field
+                      m-form-field--checkbox
+                      m-form-field--lg-target">
               <input class="a-checkbox" type="radio" id="test_checkbox_lg_helper">
               <label class="a-label" for="test_checkbox_lg_helper">
                  Label

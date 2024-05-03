@@ -78,7 +78,7 @@
   // Reset the browser's default styling.
   appearance: none;
   display: inline-block;
-  padding: unit((7px / @base-font-size-px), em);
+  padding: unit(7px / @base-font-size-px, em);
   border: 1px solid @input-border;
   background: @input-bg;
   color: @input-text;
@@ -116,15 +116,15 @@
     }
   }
 
-  &__error {
+  &-error {
     .u-border-outline-error();
   }
 
-  &__warning {
+  &-warning {
     .u-border-outline-warning();
   }
 
-  &__success {
+  &-success {
     .u-border-outline-success();
   }
 }

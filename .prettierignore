@@ -4,6 +4,7 @@ docs/_includes/*.html
 test/unit-test-coverage/
 .lighthouseci
 .github
+.eslintignore
+.stylelintignore
 CHANGELOG.md
-packages/cfpb-design-system/cfpb-design-system.js
-packages/cfpb-*/cfpb-*.css
+packages/cfpb-*/dist/

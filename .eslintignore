@@ -1,6 +1,4 @@
 docs/\_site
 docs/dist
 test/unit-test-coverage/
-packages/cfpb-design-system/cfpb-design-system.js
-wdio.conf.js
-wdio.conf.sauce.js
+packages/cfpb-*/dist/

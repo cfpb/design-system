@@ -5,10 +5,10 @@ status: Released
 variation_groups:
   - variations:
       - variation_code_snippet: >-
-          <label class="a-label a-label__heading" for="helper-block-example">
+          <label class="a-label a-label--heading" for="helper-block-example">
 
           Label
-              <small class="a-label_helper a-label_helper__block">Use block helper text for instructions</small>
+              <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
           </label>
 
 
@@ -21,8 +21,8 @@ variation_groups:
         variation_name: Block helper text
         variation_specs: ''
       - variation_code_snippet: |-
-          <label class="a-label a-label__heading" for="helper-inline-example">
-           Label <small class="a-label_helper">(optional)</small>
+          <label class="a-label a-label--heading" for="helper-inline-example">
+           Label <small class="a-label__helper">(optional)</small>
           </label>
 
           <input class="a-text-input" type="text" id="helper-inline-example">
@@ -33,7 +33,7 @@ variation_groups:
         variation_name: Inline helper text
         variation_specs: ''
       - variation_code_snippet: >
-          <label class="a-label a-label__heading"
+          <label class="a-label a-label--heading"
           for="textinput-example-email-default">
               Email address
           </label>

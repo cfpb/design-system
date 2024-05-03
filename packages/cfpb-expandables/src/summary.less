@@ -1,39 +1,7 @@
 @import (reference) '@cfpb/cfpb-core/src/cfpb-core.less';
 
-/* topdoc
-  name: Summary
-  family: cf-organisms
-  notes:
-    - "Styles a one-way Expandable-like organism that previews content."
-  patterns:
-  - name: Summary Mobile organism
-    markup: |
-      <div class="o-summary o-summary__mobile">
-          <div class="o-summary_content">
-               Content
-          </div>
-          <button class="o-summary_btn u-hidden">
-            Read full description
-          </button>
-      </div>
-    codenotes:
-      - |
-        Pattern structure
-        -----------------
-        .o-summary
-          .o-summary_content
-          .o-summary_btn.u-hidden
-
-    notes:
-      - "One-way expandable. Displays an approximately 4-line
-         preview of content on mobile screen sizes only
-         when __mobile modifier is used."
-  tags:
-  - cf-organisms
-*/
-
 .o-summary {
-  &_content {
+  &__content {
     overflow-y: hidden;
 
     // Move the bounding box 2 pixels to avoid clipping link focus boxes.
@@ -44,7 +12,7 @@
     position: relative;
   }
 
-  &_btn {
+  &__btn {
     // Hide button in no-js state.
     .no-js & {
       display: none;
@@ -56,14 +24,14 @@
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    border: dotted @pacific;
+    border: dotted var(--pacific);
     border-width: 1px 0;
     text-align: center;
-    color: @pacific;
+    color: var(--pacific);
     background: #fff;
 
     &:focus {
-      outline: 1px dotted @pacific;
+      outline: 1px dotted var(--pacific);
       outline-offset: 2px;
     }
 
@@ -71,7 +39,7 @@
       // Fades content out over approximately 2 lines.
       display: block;
       pointer-events: none;
-      height: unit(((@base-line-height-px * 2) / @base-font-size-px), em);
+      height: unit((@base-line-height-px * 2) / @base-font-size-px, em);
       margin: 0;
       position: absolute;
       left: 0;
@@ -92,9 +60,9 @@
   }
 
   // If we're mobile-only…
-  &__mobile {
+  &--mobile {
     @media only screen and (min-width: @bp-sm-min) {
-      .o-summary_btn {
+      .o-summary__btn {
         // Hide the "read more" button and fading on desktop.
         display: none;
       }

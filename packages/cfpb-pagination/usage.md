@@ -27,8 +27,8 @@ where this component's less file is imported.
 Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.less).
 
 ```
-@pagination-text: @gray;
-@pagination-bg:   @gray-10;
+@pagination-text: var(--gray);
+@pagination-bg:   var(--gray-10);
 ```
 
 ### Sizing variables
@@ -54,27 +54,27 @@ include an `id` on a wrapper of the paginated content
 
 <nav class="m-pagination" role="navigation" aria-label="Pagination">
     <a class="a-btn
-              m-pagination_btn-prev"
+              m-pagination__btn-prev"
        href="?page=21#pagination_content">
-        <span class="a-btn_icon a-btn_icon__on-left">{% include icons/left.svg %}</span>
+        <span class="a-btn__icon a-btn__icon--on-left">{% include icons/left.svg %}</span>
         Newer
     </a>
     <a class="a-btn
-              m-pagination_btn-next"
+              m-pagination__btn-next"
        href="?page=23#pagination_content">
         Older
-        <span class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg %}</span>
+        <span class="a-btn__icon a-btn__icon--on-right">{% include icons/right.svg %}</span>
     </a>
-    <form class="m-pagination_form"
+    <form class="m-pagination__form"
           action="#pagination_content">
-        <label class="m-pagination_label"
-               for="m-pagination_current-page">
+        <label class="m-pagination__label"
+               for="m-pagination__current-page">
             Page
             <span class="u-visually-hidden">
                 number 22 out
             </span>
-            <input class="m-pagination_current-page"
-                   id="m-pagination_current-page"
+            <input class="m-pagination__current-page"
+                   id="m-pagination__current-page"
                    name="page"
                    type="number"
                    min="1"
@@ -85,9 +85,9 @@ include an `id` on a wrapper of the paginated content
             of 149
         </label>
         <button class="a-btn
-                       a-btn__link
-                       m-pagination_btn-submit"
-                id="m-pagination_btn-submit"
+                       a-btn--link
+                       m-pagination__btn-submit"
+                id="m-pagination__btn-submit"
                 type="submit">Go</button>
     </form>
 </nav>
@@ -99,27 +99,27 @@ include an `id` on a wrapper of the paginated content
 
 <nav class="m-pagination" role="navigation" aria-label="Pagination">
     <a class="a-btn
-              m-pagination_btn-prev"
+              m-pagination__btn-prev"
        href="?page=21#pagination_content">
-        <span class="a-btn_icon a-btn_icon__on-left">{% raw %}{% include icons/left.svg %}{% endraw %}</span>
+        <span class="a-btn__icon a-btn__icon--on-left">{% raw %}{% include icons/left.svg %}{% endraw %}</span>
         Newer
     </a>
     <a class="a-btn
-              m-pagination_btn-next"
+              m-pagination__btn-next"
        href="?page=23#pagination_content">
-        <span class="a-btn_icon a-btn_icon__on-right">{% raw %}{% include icons/right.svg %}{% endraw %}</span>
+        <span class="a-btn__icon a-btn__icon--on-right">{% raw %}{% include icons/right.svg %}{% endraw %}</span>
         Older
     </a>
-    <form class="m-pagination_form"
+    <form class="m-pagination__form"
           action="#pagination_content">
-        <label class="m-pagination_label"
-               for="m-pagination_current-page">
+        <label class="m-pagination__label"
+               for="m-pagination__current-page">
             Page
             <span class="u-visually-hidden">
                 number 22 out
             </span>
-            <input class="m-pagination_current-page"
-                   id="m-pagination_current-page"
+            <input class="m-pagination__current-page"
+                   id="m-pagination__current-page"
                    name="page"
                    type="number"
                    min="1"
@@ -130,9 +130,9 @@ include an `id` on a wrapper of the paginated content
             of 149
         </label>
         <button class="a-btn
-                       a-btn__link
-                       m-pagination_btn-submit"
-                id="m-pagination_btn-submit"
+                       a-btn--link
+                       m-pagination__btn-submit"
+                id="m-pagination__btn-submit"
                 type="submit">Go</button>
     </form>
 </nav>
@@ -149,27 +149,27 @@ For example:
 
 <nav class="m-pagination" role="navigation" aria-label="Pagination">
     <a class="a-btn
-              a-btn__disabled
-              m-pagination_btn-prev">
-        <span class="a-btn_icon a-btn_icon__on-left">{% include icons/left.svg %}</span>
+              a-btn--disabled
+              m-pagination__btn-prev">
+        <span class="a-btn__icon a-btn__icon--on-left">{% include icons/left.svg %}</span>
         Newer
     </a>
     <a class="a-btn
-              m-pagination_btn-next"
+              m-pagination__btn-next"
        href="?page=2#pagination_content">
         Older
-        <span class="a-btn_icon a-btn_icon__on-right">{% include icons/right.svg %}</span>
+        <span class="a-btn__icon a-btn__icon--on-right">{% include icons/right.svg %}</span>
     </a>
-    <form class="m-pagination_form"
+    <form class="m-pagination__form"
           action="#pagination_content">
-        <label class="m-pagination_label"
-               for="m-pagination_current-page">
+        <label class="m-pagination__label"
+               for="m-pagination__current-page">
             Page
             <span class="u-visually-hidden">
                 number 1 out
             </span>
-            <input class="m-pagination_current-page"
-                   id="m-pagination_current-page"
+            <input class="m-pagination__current-page"
+                   id="m-pagination__current-page"
                    name="page"
                    type="number"
                    min="1"
@@ -180,9 +180,9 @@ For example:
             of 149
         </label>
         <button class="a-btn
-                       a-btn__link
-                       m-pagination_btn-submit"
-                id="m-pagination_btn-submit"
+                       a-btn--link
+                       m-pagination__btn-submit"
+                id="m-pagination__btn-submit"
                 type="submit">Go</button>
     </form>
 </nav>
@@ -190,27 +190,27 @@ For example:
 ```
 <nav class="m-pagination" role="navigation" aria-label="Pagination">
     <a class="a-btn
-              a-btn__disabled
-              m-pagination_btn-prev">
-        <span class="a-btn_icon a-btn_icon__on-left">{% raw %}{% include icons/left.svg %}{% endraw %}</span>
+              a-btn--disabled
+              m-pagination__btn-prev">
+        <span class="a-btn__icon a-btn__icon--on-left">{% raw %}{% include icons/left.svg %}{% endraw %}</span>
         Newer
     </a>
     <a class="a-btn
-              m-pagination_btn-next"
+              m-pagination__btn-next"
        href="?page=2#pagination_content">
         Older
-        <span class="a-btn_icon a-btn_icon__on-right">{% raw %}{% include icons/right.svg %}{% endraw %}</span>
+        <span class="a-btn__icon a-btn__icon--on-right">{% raw %}{% include icons/right.svg %}{% endraw %}</span>
     </a>
-    <form class="m-pagination_form"
+    <form class="m-pagination__form"
           action="#pagination_content">
-        <label class="m-pagination_label"
-               for="m-pagination_current-page">
+        <label class="m-pagination__label"
+               for="m-pagination__current-page">
             Page
             <span class="u-visually-hidden">
                 number 1 out
             </span>
-            <input class="m-pagination_current-page"
-                   id="m-pagination_current-page"
+            <input class="m-pagination__current-page"
+                   id="m-pagination__current-page"
                    name="page"
                    type="number"
                    min="1"
@@ -221,9 +221,9 @@ For example:
             of 149
         </label>
         <button class="a-btn
-                       a-btn__link
-                       m-pagination_btn-submit"
-                id="m-pagination_btn-submit"
+                       a-btn--link
+                       m-pagination__btn-submit"
+                id="m-pagination__btn-submit"
                 type="submit">Go</button>
     </form>
 </nav>

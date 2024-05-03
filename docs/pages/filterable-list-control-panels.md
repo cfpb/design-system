@@ -13,106 +13,105 @@ variation_groups:
           <div id="o-filterable-list-controls"
           class="o-filterable-list-controls">
               <div class="o-expandable
-                  o-expandable__padded
-                  o-expandable__background
-                  o-expandable__border
-                  o-expandable__onload-open">
-                  <button class="o-expandable_header" type="button">
-                      <span class="h4 o-expandable_label">
-                      Filter posts
+                          o-expandable--background
+                          o-expandable--border
+                          o-expandable--onload-open">
+                  <button class="o-expandable__header" type="button">
+                      <span class="o-expandable__label">
+                          Filter posts
                       </span>
-                      <span class="o-expandable_cues">
-                          <span class="o-expandable_cue-open" role="img" aria-label="Show filters">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__plus-round" viewBox="0 0 17 20.4"><path d="M16.416 10.283A7.917 7.917 0 1 1 8.5 2.366a7.916 7.916 0 0 1 7.916 7.917zm-2.958.01a.792.792 0 0 0-.792-.792H9.284V6.12a.792.792 0 1 0-1.583 0V9.5H4.32a.792.792 0 0 0 0 1.584H7.7v3.382a.792.792 0 0 0 1.583 0v-3.382h3.382a.792.792 0 0 0 .792-.791z"/></svg>
+                      <span class="o-expandable__cues">
+                          <span class="o-expandable__cue-open" role="img" aria-label="Show filters">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--plus-round" viewBox="0 0 17 20.4"><path d="M16.416 10.283A7.917 7.917 0 1 1 8.5 2.366a7.916 7.916 0 0 1 7.916 7.917zm-2.958.01a.792.792 0 0 0-.792-.792H9.284V6.12a.792.792 0 1 0-1.583 0V9.5H4.32a.792.792 0 0 0 0 1.584H7.7v3.382a.792.792 0 0 0 1.583 0v-3.382h3.382a.792.792 0 0 0 .792-.791z"/></svg>
                           </span>
-                          <span class="o-expandable_cue-close" role="img" aria-label="Hide filters">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__minus-round" viewBox="0 0 17 20.4"><path d="M16.416 10.283A7.917 7.917 0 1 1 8.5 2.366a7.916 7.916 0 0 1 7.916 7.917zm-2.958.01a.792.792 0 0 0-.792-.792H4.32a.792.792 0 0 0 0 1.583h8.346a.792.792 0 0 0 .792-.791z"/></svg>
+                          <span class="o-expandable__cue-close" role="img" aria-label="Hide filters">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--minus-round" viewBox="0 0 17 20.4"><path d="M16.416 10.283A7.917 7.917 0 1 1 8.5 2.366a7.916 7.916 0 0 1 7.916 7.917zm-2.958.01a.792.792 0 0 0-.792-.792H4.32a.792.792 0 0 0 0 1.583h8.346a.792.792 0 0 0 .792-.791z"/></svg>
                           </span>
                       </span>
                   </button>
-                  <div class="o-expandable_content">
+                  <div class="o-expandable__content">
                       <form method="get" action="#">
                           <div class="content-l">
-                              <div class="content-l_col
-                                  content-l_col-1">
-                                  <div class="o-form_group">
+                              <div class="content-l__col
+                                  content-l__col-1">
+                                  <div class="o-form__group">
                                       <div class="m-form-field">
-                                          <label class="a-label a-label__heading" for="o-filterable-list-controls_title">
+                                          <label class="a-label a-label--heading" for="o-filterable-list-controls_title">
                                           Search by keyword(s)
                                           </label>
-                                          <input type="text" name="title" id="o-filterable-list-controls_title" class="a-text-input a-text-input__full" maxlength="250">
+                                          <input type="text" name="title" id="o-filterable-list-controls_title" class="a-text-input a-text-input--full" maxlength="250">
                                       </div>
                                   </div>
                               </div>
-                              <div class="content-l_col
-                                  content-l_col-1-3">
-                                  <div class="o-form_group">
+                              <div class="content-l__col
+                                  content-l__col-1-3">
+                                  <div class="o-form__group">
                                       <div class="m-form-field">
-                                          <label class="a-label a-label__heading" for="o-filterable-list-controls_categories">
+                                          <label class="a-label a-label--heading" for="o-filterable-list-controls_categories">
                                           Category
                                           </label>
                                           <div class="o-multiselect">
-                                              <ul class="o-multiselect_choices"></ul>
-                                              <header class="o-multiselect_header"><input class="o-multiselect_search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_categories" autocomplete="off"></header>
+                                              <ul class="o-multiselect__choices"></ul>
+                                              <header class="o-multiselect__header"><input class="o-multiselect__search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_categories" autocomplete="off"></header>
                                           </div>
                                       </div>
                                   </div>
                               </div>
-                              <div class="content-l_col
-                                  content-l_col-1-3">
-                                  <div class="o-form_group">
+                              <div class="content-l__col
+                                  content-l__col-1-3">
+                                  <div class="o-form__group">
                                       <div class="m-form-field">
-                                          <label class="a-label a-label__heading" for="o-filterable-list-controls_topics">
+                                          <label class="a-label a-label--heading" for="o-filterable-list-controls_topics">
                                           Topics
                                           </label>
                                           <div class="o-multiselect">
-                                              <ul class="o-multiselect_choices"></ul>
-                                              <header class="o-multiselect_header"><input class="o-multiselect_search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_topics" autocomplete="off"></header>
+                                              <ul class="o-multiselect__choices"></ul>
+                                              <header class="o-multiselect__header"><input class="o-multiselect__search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_topics" autocomplete="off"></header>
                                           </div>
                                       </div>
                                   </div>
                               </div>
-                              <div class="content-l_col
-                                  content-l_col-1-3">
-                                  <div class="o-form_group">
+                              <div class="content-l__col
+                                  content-l__col-1-3">
+                                  <div class="o-form__group">
                                       <div class="m-form-field">
-                                          <label class="a-label a-label__heading" for="o-filterable-list-controls_language">
+                                          <label class="a-label a-label--heading" for="o-filterable-list-controls_language">
                                           Language
                                           </label>
                                           <div class="o-multiselect">
-                                              <ul class="o-multiselect_choices"></ul>
-                                              <header class="o-multiselect_header"><input class="o-multiselect_search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_language" autocomplete="off"></header>
+                                              <ul class="o-multiselect__choices"></ul>
+                                              <header class="o-multiselect__header"><input class="o-multiselect__search a-text-input" type="text" placeholder="Select up to five" id="o-filterable-list-controls_language" autocomplete="off"></header>
                                           </div>
                                       </div>
                                   </div>
                               </div>
-                              <div class="content-l_col
-                                  content-l_col-1">
+                              <div class="content-l__col
+                                  content-l__col-1">
                                   <div class="content-l">
-                                      <div class="content-l_col
-                                          content-l_col-2-3">
-                                          <div class="o-form_group">
-                                              <fieldset class="o-form_fieldset">
+                                      <div class="content-l__col
+                                          content-l__col-2-3">
+                                          <div class="o-form__group">
+                                              <fieldset class="o-form__fieldset">
                                                   <legend class="a-legend">
                                                       Date range
                                                   </legend>
                                                   <div class="content-l">
-                                                      <div class="content-l_col
-                                                          content-l_col-1-2">
+                                                      <div class="content-l__col
+                                                          content-l__col-1-2">
                                                           <div class="m-form-field">
-                                                              <label class="a-label a-label__heading" for="o-filterable-list-controls_from-date">
+                                                              <label class="a-label a-label--heading" for="o-filterable-list-controls_from-date">
                                                               From:
                                                               </label>
-                                                              <input type="date" name="from_date" class="a-text-input a-text-input__full" placeholder="mm/dd/yyyy" data-type="date" id="o-filterable-list-controls_from-date">
+                                                              <input type="date" name="from_date" class="a-text-input a-text-input--full" placeholder="mm/dd/yyyy" data-type="date" id="o-filterable-list-controls_from-date">
                                                           </div>
                                                       </div>
-                                                      <div class="content-l_col
-                                                          content-l_col-1-2">
+                                                      <div class="content-l__col
+                                                          content-l__col-1-2">
                                                           <div class="m-form-field">
-                                                              <label class="a-label a-label__heading" for="o-filterable-list-controls_to-date">
+                                                              <label class="a-label a-label--heading" for="o-filterable-list-controls_to-date">
                                                               To:
                                                               </label>
-                                                              <input type="date" name="to_date" class="a-text-input a-text-input__full" placeholder="mm/dd/yyyy" data-type="date" id="o-filterable-list-controls_to-date">
+                                                              <input type="date" name="to_date" class="a-text-input a-text-input--full" placeholder="mm/dd/yyyy" data-type="date" id="o-filterable-list-controls_to-date">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -121,13 +120,13 @@ variation_groups:
                                       </div>
                                   </div>
                               </div>
-                              <div class="content-l_col
-                                  content-l_col-1
+                              <div class="content-l__col
+                                  content-l__col-1
                                   m-btn-group">
                                   <button class="a-btn" type="submit">
                                   Apply filters
                                   </button>
-                                  <a class="a-btn a-btn__link a-btn__warning" href="#">
+                                  <a class="a-btn a-btn--link a-btn--warning" href="#">
                                   Clear filters
                                   </a>
                               </div>

@@ -3,16 +3,16 @@
 // Required for jump link modifier
 //
 
-.a-link__icon,
-.a-link__jump {
+.a-link--icon,
+.a-link--jump {
   border-bottom-width: 0;
 
-  .a-link_text {
+  .a-link__text {
     border-bottom-width: 1px;
     border-bottom-style: inherit;
   }
 
-  &.a-link__no-wrap {
+  &.a-link--no-wrap {
     white-space: nowrap;
   }
 }
@@ -21,7 +21,7 @@
 // Jump link
 //
 
-.a-link__jump {
+.a-link--jump {
   font-weight: 500;
 
   // Mobile only.
@@ -36,19 +36,19 @@
       bottom: 50%;
     }
 
-    &.a-link__icon-after-text {
+    &.a-link--icon-after-text {
       padding-right: 1.25em;
     }
 
-    &.a-link__icon-after-text .cf-icon-svg {
+    &.a-link--icon-after-text .cf-icon-svg {
       right: 0;
     }
 
-    &.a-link__icon-before-text {
+    &.a-link--icon-before-text {
       padding-left: 1.25em;
     }
 
-    &.a-link__icon-before-text .cf-icon-svg {
+    &.a-link--icon-before-text .cf-icon-svg {
       left: 0;
     }
   });
@@ -66,14 +66,14 @@
 .u-block-link {
   box-sizing: border-box;
   display: block;
-  padding-top: unit((10px / @base-font-size-px), em);
-  padding-bottom: unit((10px / @base-font-size-px), em);
+  padding-top: unit(10px / @base-font-size-px, em);
+  padding-bottom: unit(10px / @base-font-size-px, em);
   border-top-width: 1px;
   border-bottom-width: 1px;
   // 100% width is needed when block or jump link are applied to a <button>
   width: 100%;
 
-  .a-link_text {
+  .a-link__text {
     border-bottom-width: 0;
   }
 }

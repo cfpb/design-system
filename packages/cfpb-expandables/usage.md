@@ -27,23 +27,19 @@ components are dependencies of this component.
 ### Expanded
 
 Sometimes you may want the expandable to be open by default.
-This is as easy as adding the `.o-expandable__onload-open` modifier
+This is as easy as adding the `.o-expandable--onload-open` modifier
 to the `.o-expandable` block.
 
 ```
-.o-expandable__onload-open
+.o-expandable--onload-open
 ```
 
 ### Padded
 
-Adds `padding` and a `background` color to `.o-expandable_header` and
-`.o-expandable_content`.
-
-In addition to using the `.o-expandable__padded` modifier you also need to make
-sure you are using `.o-expandable_header`.
+Adds `padding` to the `.o-expandable__header` and makes the label larger.
 
 ```
-.o-expandable__padded
+.o-expandable--padded
 ```
 
 ## Elements
@@ -54,12 +50,12 @@ sure you are using `.o-expandable_header`.
 
 Allows you to add some styled text.
 
-<span class="o-expandable_label">
+<span class="o-expandable__label">
     Lorem ipsum
 </span>
 
 ```
-<span class="o-expandable_label">
+<span class="o-expandable__label">
     Lorem ipsum
 </span>
 ```
@@ -70,12 +66,12 @@ Allows you to add some styled text to look like a link.
 
 _Note: only use this in the expandable header_
 
-<span class="o-expandable_cues">
+<span class="o-expandable__cues">
     Lorem ipsum
 </span>
 
 ```
-<span class="o-expandable_cues">
+<span class="o-expandable__cues">
     Lorem ipsum
 </span>
 ```
@@ -91,24 +87,23 @@ and modifiers described throughout.
 The following combination is our recommended go-to expandable pattern.
 
 <div class="o-expandable
-            o-expandable__padded
-            o-expandable__background
-            o-expandable__border">
-    <button class="o-expandable_header"
+            o-expandable--background
+            o-expandable--border">
+    <button class="o-expandable__header"
             title="Expand content">
-        <h3 class="h4 o-expandable_label">
+        <h3 class="o-expandable__label">
             Expandable Header
         </h3>
-        <span class="o-expandable_cues">
-            <span class="o-expandable_cue-open" role="img" aria-label="Show">
+        <span class="o-expandable__cues">
+            <span class="o-expandable__cue-open" role="img" aria-label="Show">
                 {% include icons/plus-round.svg %}
             </span>
-            <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+            <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                 {% include icons/minus-round.svg %}
             </span>
         </span>
     </button>
-    <div class="o-expandable_content">
+    <div class="o-expandable__content">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -121,24 +116,23 @@ The following combination is our recommended go-to expandable pattern.
 
 ```
 <div class="o-expandable
-            o-expandable__padded
-            o-expandable__background
-            o-expandable__border">
-    <button class="o-expandable_header"
+            o-expandable--background
+            o-expandable--border">
+    <button class="o-expandable__header"
             title="Expand content">
-        <h3 class="h4 o-expandable_label">
+        <h3 class="o-expandable__label">
             Expandable Header
         </h3>
-        <span class="o-expandable_cues">
-            <span class="o-expandable_cue-open" role="img" aria-label="Show">
+        <span class="o-expandable__cues">
+            <span class="o-expandable__cue-open" role="img" aria-label="Show">
                 {% raw %}{% include icons/plus-round.svg %}{% endraw %}
             </span>
-            <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+            <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                 {% raw %}{% include icons/minus-round.svg %}{% endraw %}
             </span>
         </span>
     </button>
-    <div class="o-expandable_content">
+    <div class="o-expandable__content">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -153,25 +147,24 @@ The following combination is our recommended go-to expandable pattern.
 ### Default state (open on load)
 
 <div class="o-expandable
-            o-expandable__padded
-            o-expandable__background
-            o-expandable__border
-            o-expandable__onload-open">
-    <button class="o-expandable_header"
+            o-expandable--background
+            o-expandable--border
+            o-expandable--onload-open">
+    <button class="o-expandable__header"
             title="Expand content">
-        <h3 class="h4 o-expandable_label">
+        <h3 class="o-expandable__label">
             Expandable Header
         </h3>
-        <span class="o-expandable_cues">
-            <span class="o-expandable_cue-open" role="img" aria-label="Show">
+        <span class="o-expandable__cues">
+            <span class="o-expandable__cue-open" role="img" aria-label="Show">
                 {% include icons/plus-round.svg %}
             </span>
-            <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+            <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                 {% include icons/minus-round.svg %}
             </span>
         </span>
     </button>
-    <div class="o-expandable_content">
+    <div class="o-expandable__content">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -184,25 +177,24 @@ The following combination is our recommended go-to expandable pattern.
 
 ```
 <div class="o-expandable
-            o-expandable__padded
-            o-expandable__background
-            o-expandable__border
-            o-expandable__onload-open">
-    <button class="o-expandable_header"
+            o-expandable--background
+            o-expandable--border
+            o-expandable--onload-open">
+    <button class="o-expandable__header"
             title="Expand content">
-        <h3 class="h4 o-expandable_label">
+        <h3 class="o-expandable__label">
             Expandable Header
         </h3>
-        <span class="o-expandable_cues">
-            <span class="o-expandable_cue-open" role="img" aria-label="Show">
+        <span class="o-expandable__cues">
+            <span class="o-expandable__cue-open" role="img" aria-label="Show">
                 {% raw %}{% include icons/plus-round.svg %}{% endraw %}
             </span>
-            <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+            <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                 {% raw %}{% include icons/minus-round.svg %}{% endraw %}
             </span>
         </span>
     </button>
-    <div class="o-expandable_content">
+    <div class="o-expandable__content">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -221,22 +213,22 @@ Should you need an expandable thing that is not covered by the expandables above
 ## Expandable groups
 
 <div class="o-expandable-group">
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 1
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -246,22 +238,22 @@ Should you need an expandable thing that is not covered by the expandables above
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 2
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -271,22 +263,22 @@ Should you need an expandable thing that is not covered by the expandables above
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 3
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -300,22 +292,22 @@ Should you need an expandable thing that is not covered by the expandables above
 
 ```
 <div class="o-expandable-group">
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 1
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -325,22 +317,22 @@ Should you need an expandable thing that is not covered by the expandables above
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 2
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -350,22 +342,22 @@ Should you need an expandable thing that is not covered by the expandables above
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 3
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -385,22 +377,22 @@ Add the `o-expandable-group__accordion` class to the expandable group
 to activate the accordion mode.
 
 <div class="o-expandable-group o-expandable-group__accordion">
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 1
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -410,22 +402,22 @@ to activate the accordion mode.
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 2
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -435,22 +427,22 @@ to activate the accordion mode.
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 3
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% include icons/plus-round.svg %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% include icons/minus-round.svg %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -464,22 +456,22 @@ to activate the accordion mode.
 
 ```
 <div class="o-expandable-group o-expandable-group__accordion">
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 1
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -489,22 +481,22 @@ to activate the accordion mode.
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 2
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -514,22 +506,22 @@ to activate the accordion mode.
             </p>
         </div>
     </div>
-    <div class="o-expandable o-expandable__padded">
-        <button class="o-expandable_header"
+    <div class="o-expandable">
+        <button class="o-expandable__header"
                 title="Expand content">
-            <h3 class="h4 o-expandable_label">
+            <h3 class="o-expandable__label">
                 Expandable Header 3
             </h3>
-            <span class="o-expandable_cues">
-                <span class="o-expandable_cue-open" role="img" aria-label="Show">
+            <span class="o-expandable__cues">
+                <span class="o-expandable__cue-open" role="img" aria-label="Show">
                     {% raw %}{% include icons/plus-round.svg %}{% endraw %}
                 </span>
-                <span class="o-expandable_cue-close" role="img" aria-label="Hide">
+                <span class="o-expandable__cue-close" role="img" aria-label="Hide">
                     {% raw %}{% include icons/minus-round.svg %}{% endraw %}
                 </span>
             </span>
         </button>
-        <div class="o-expandable_content">
+        <div class="o-expandable__content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Neque ipsa voluptatibus soluta nobis unde quisquam

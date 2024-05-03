@@ -2,20 +2,14 @@
    Main content
    ========================================================================== */
 
-.section-image {
-  width: 65%;
-  margin: 0 auto;
-  padding-bottom: 1.4em;
-}
-
 .icon-table {
   width: 100%;
 
   td:nth-child(1),
   td:nth-child(2) {
-    font-size: unit((32px / @base-font-size-px), em);
+    font-size: unit(32px / @base-font-size-px, em);
     text-align: center;
-    padding: unit((10px / 32px), em);
+    padding: unit(10px / 32px, em);
     width: 15%;
   }
 
@@ -34,7 +28,7 @@
   // Aliases table.
   td:nth-child(4) {
     width: 46%;
-    text-decoration: @red solid line-through;
+    text-decoration: var(--red) solid line-through;
   }
 }
 
@@ -53,7 +47,7 @@
 .content-75,
 .content-33,
 .content-67 {
-  .grid_column(12);
+  .grid__column(12);
 }
 
 /* Media Queries
@@ -63,25 +57,25 @@
 @media only screen and (min-width: 37.5em) {
   /* Inner content - nested grid inside content */
   .content-25 {
-    .grid_column(3);
+    .grid__column(3);
   }
 
   .content-75 {
-    .grid_column(9);
+    .grid__column(9);
   }
 
   /* Inner content - nested grid inside content */
   .content-33 {
-    .grid_column(4);
+    .grid__column(4);
   }
 
   .content-67 {
-    .grid_column(8);
+    .grid__column(8);
   }
 
   /* Inner content - nested grid inside content */
   .content-50 {
-    .grid_column(6);
+    .grid__column(6);
   }
 
   //Nested colums don't work yet, so pull the first col back
@@ -91,11 +85,5 @@
 
   .content-last {
     border-right: 0;
-  }
-
-  /* Rules between rows of content */
-  .content-row-rule {
-    border-bottom: 1px solid @gray-10;
-    margin-bottom: 1em;
   }
 }

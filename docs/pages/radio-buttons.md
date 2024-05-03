@@ -6,9 +6,9 @@ variation_groups:
   - variation_group_name: Types
     variations:
       - variation_code_snippet: >
-          <div class="m-form-field m-form-field__radio">
+          <div class="m-form-field m-form-field--radio">
               <input class="a-radio" type="radio" id="test_radio_basic_default">
-              <label class="a-label" for="test_radio_basic_default">Default</label>
+              <label class="a-label" for="test_radio_basic_default">Enabled</label>
           </div>
 
 
@@ -16,7 +16,7 @@ variation_groups:
 
           <!--Hover-->
 
-          <div class="m-form-field m-form-field__radio">
+          <div class="m-form-field m-form-field--radio">
               <input class="a-radio hover" type="radio" id="test_radio_basic_hover">
               <label class="a-label" for="test_radio_basic_hover">Hover</label>
           </div>
@@ -26,7 +26,7 @@ variation_groups:
 
           <!--Focus-->
 
-          <div class="m-form-field m-form-field__radio">
+          <div class="m-form-field m-form-field--radio">
               <input class="a-radio focus" type="radio" id="test_radio_basic_focus">
               <label class="a-label" for="test_radio_basic_focus">Focus</label>
           </div>
@@ -36,7 +36,7 @@ variation_groups:
 
           <!--Selected-->
 
-          <div class="m-form-field m-form-field__radio">
+          <div class="m-form-field m-form-field--radio">
               <input class="a-radio" type="radio" id="test_radio_basic_checked" checked>
               <label class="a-label" for="test_radio_basic_checked">Selected</label>
           </div>
@@ -46,7 +46,7 @@ variation_groups:
 
           <!--Disabled-->
 
-          <div class="m-form-field m-form-field__radio">
+          <div class="m-form-field m-form-field--radio">
               <input class="a-radio" type="radio" id="test_radio_basic_disabled" disabled>
               <label class="a-label" for="test_radio_basic_disabled">Disabled</label>
           </div>
@@ -56,7 +56,7 @@ variation_groups:
 
           <!--Disabled/selected-->
 
-          <div class="m-form-field m-form-field__radio">
+          <div class="m-form-field m-form-field--radio">
               <input class="a-radio"
                      type="radio"
                      id="test_radio_basic_disabled_selected"
@@ -65,18 +65,18 @@ variation_groups:
               <label class="a-label" for="test_radio_basic_disabled_selected">Disabled/selected</label>
           </div>
         variation_specs: ''
-        variation_name: Standard radio button
-      - variation_name: Standard radio button with helper text
+        variation_name: Radio button
+      - variation_name: Radio button (with helper text)
         variation_description:
           Radio button inputs can have labels that span multiple
           lines and can include optional helper text that appears below the main
           label text.
         variation_code_snippet: |-
-          <div class="m-form-field m-form-field__radio">
+          <div class="m-form-field m-form-field--radio">
               <input class="a-radio" type="radio" id="test_radio_basic_helper">
               <label class="a-label" for="test_radio_basic_helper">
-                  Radio button label
-                  <small class="a-label_helper">
+                  Label
+                  <small class="a-label__helper">
                       (This is optional helper text)
                   </small>
               </label>
@@ -91,9 +91,9 @@ variation_groups:
           when the form will have heavy mobile usage. Given the amount of real
           estate they occupy, they’re probably not suited for all use cases.
         variation_code_snippet: >-
-          <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_default">
-              <label class="a-label" for="test_radio_lg_default">Default</label>
+              <label class="a-label" for="test_radio_lg_default">Enabled</label>
           </div>
 
           <br>
@@ -101,7 +101,7 @@ variation_groups:
 
           <!--Hover-->
 
-          <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
               <input class="a-radio hover" type="radio" id="test_radio_lg_hover">
               <label class="a-label" for="test_radio_lg_hover">Hover</label>
           </div>
@@ -111,7 +111,7 @@ variation_groups:
 
           <!--Focus-->
 
-          <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
               <input class="a-radio focus" type="radio" id="test_radio_lg_focus">
               <label class="a-label" for="test_radio_lg_focus">Focus</label>
           </div>
@@ -122,7 +122,7 @@ variation_groups:
           <!--Selected-->
 
 
-          <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_checked" checked>
               <label class="a-label" for="test_radio_lg_checked">Selected</label>
           </div>
@@ -132,7 +132,7 @@ variation_groups:
 
           <!--Disabled-->
 
-          <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled>
               <label class="a-label" for="test_radio_lg_disabled">Disabled</label>
           </div>
@@ -142,7 +142,7 @@ variation_groups:
 
           <!--Disabled/selected-->
 
-          <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
               <input class="a-radio"
                      type="radio"
                      id="test_radio_lg_disabled_selected"
@@ -152,13 +152,13 @@ variation_groups:
           </div>
         variation_specs: ''
       - variation_is_deprecated: false
-        variation_name: Large target area radio button with helper text
+        variation_name: Large target area radio button (with helper text)
         variation_code_snippet: |-
-          <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
               <input class="a-radio" type="radio" id="test_radio_lg_helper">
               <label class="a-label" for="test_radio_lg_helper">
-          Radio button label
-                  <small class="a-label_helper">
+          Label
+                  <small class="a-label__helper">
                       (This is optional helper text)
                   </small>
                 </label>

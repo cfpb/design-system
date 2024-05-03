@@ -48,47 +48,47 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ```less
 // .a-text-input borders
-@input-border: @gray-60;
-@input-border__hover: @pacific;
-@input-border__focused: @pacific;
-@input-border__active: @pacific;
-@input-border__error: @red;
-@input-border__warning: @gold;
-@input-border__success: @green;
-@input-border__selected: @pacific;
+@input-border: var(--gray-60);
+@input-border__hover: var(--pacific);
+@input-border__focused: var(--pacific);
+@input-border__active: var(--pacific);
+@input-border__error: var(--red);
+@input-border__warning: var(--gold);
+@input-border__success: var(--green);
+@input-border__selected: var(--pacific);
 
 // .a-text-input backgrounds
-@input-bg: @white;
-@input-bg__selected: @pacific;
-@input-bg__disabled: @gray-10;
-@input-bg__disabled-selected: @gray-40;
+@input-bg: var(--white);
+@input-bg__selected: var(--pacific);
+@input-bg__disabled: var(--gray-10);
+@input-bg__disabled-selected: var(--gray-40);
 
 // .a-text-input text
-@input-text: @black;
-@input-text__disabled: @gray;
-@input-text__placeholder: @gray;
+@input-text: var(--black);
+@input-text__disabled: var(--gray);
+@input-text__placeholder: var(--gray);
 
 // .a-text-input icons
-@input-icon__error: @red;
+@input-icon__error: var(--red);
 
 // .a-select
 @select-border: @input-border;
-@select-icon-bg: @gray-10;
+@select-icon-bg: var(--gray-10);
 @select-text__disabled: @input-text__disabled;
 
 // .m-form-field
 @form-field-input-border: @input-border;
 @form-field-input-border__focused: @input-border;
-@form-field-input-border__disabled: @gray-60;
+@form-field-input-border__disabled: var(--gray-60);
 
-// .m-form-field__lg-target
-@form-field-input-lg-target-bg: @gray-10;
-@form-field-input-lg-target-bg__selected: @pacific-20;
-@form-field-input-lg-target-bg__disabled: @gray-20;
-@form-field-input-lg-target-border: @pacific;
+// .m-form-field--lg-target
+@form-field-input-lg-target-bg: var(--gray-10);
+@form-field-input-lg-target-bg__selected: var(--pacific-20);
+@form-field-input-lg-target-bg__disabled: var(--gray-20);
+@form-field-input-lg-target-border: var(--pacific);
 
-// .a-label_helper
-@label-helper: @gray;
+// .a-label__helper
+@label-helper: var(--gray);
 ```
 
 ### Sizing variables
@@ -122,12 +122,12 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ### Label heading
 
-<label class="a-label a-label__heading">
+<label class="a-label a-label--heading">
     A label heading
 </label>
 
 ```html
-<label class="a-label a-label__heading"> A label heading </label>
+<label class="a-label a-label--heading"> A label heading </label>
 ```
 
 ### Label helper text
@@ -137,13 +137,13 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 Appears with label headings.
 Used for designating an input as optional for user input.
 
-<label class="a-label a-label__heading">
-    A label heading <small class="a-label_helper">(optional)</small>
+<label class="a-label a-label--heading">
+    A label heading <small class="a-label__helper">(optional)</small>
 </label>
 
 ```html
-<label class="a-label a-label__heading">
-  A label heading <small class="a-label_helper">(optional)</small>
+<label class="a-label a-label--heading">
+  A label heading <small class="a-label__helper">(optional)</small>
 </label>
 ```
 
@@ -151,15 +151,15 @@ Used for designating an input as optional for user input.
 
 Appears with labels and label headings.
 
-<label class="a-label a-label__heading">
+<label class="a-label a-label--heading">
     A label heading
-    <small class="a-label_helper a-label_helper__block">Helper text</small>
+    <small class="a-label__helper a-label__helper--block">Helper text</small>
 </label>
 
 ```html
-<label class="a-label a-label__heading">
+<label class="a-label a-label--heading">
   A label heading
-  <small class="a-label_helper a-label_helper__block">Helper text</small>
+  <small class="a-label__helper a-label__helper--block">Helper text</small>
 </label>
 ```
 
@@ -174,7 +174,7 @@ appear in code.
 
 #### Default state
 
-<label class="a-label a-label__heading" for="textinput-example-default">
+<label class="a-label a-label--heading" for="textinput-example-default">
     A text input
 </label>
 <input class="a-text-input"
@@ -183,7 +183,7 @@ appear in code.
        placeholder="Enter text…"
        value="Lorem ipsum">
 
-<label class="a-label a-label__heading" for="textarea-example-default">
+<label class="a-label a-label--heading" for="textarea-example-default">
     A textarea input
 </label>
 <textarea class="a-text-input"
@@ -191,7 +191,7 @@ appear in code.
           placeholder="Enter text…">Lorem Ipsum</textarea>
 
 ```html
-<label class="a-label a-label__heading" for="textinput-example-default">
+<label class="a-label a-label--heading" for="textinput-example-default">
   A text input
 </label>
 <input
@@ -202,7 +202,7 @@ appear in code.
   value="Lorem ipsum"
 />
 
-<label class="a-label a-label__heading" for="textarea-example-default">
+<label class="a-label a-label--heading" for="textarea-example-default">
   A textarea input
 </label>
 <textarea
@@ -220,7 +220,7 @@ Generally this is only useful for documentation purposes.
 
 #### Hover state
 
-<label class="a-label a-label__heading" for="textinput-example-hover">
+<label class="a-label a-label--heading" for="textinput-example-hover">
     A text input
 </label>
 <input class="a-text-input hover"
@@ -229,14 +229,14 @@ Generally this is only useful for documentation purposes.
        placeholder="Enter text…"
        value="Lorem ipsum">
 
-<label class="a-label a-label__heading" for="textarea-example-hover">
+<label class="a-label a-label--heading" for="textarea-example-hover">
     A textarea input
 </label>
 <textarea class="a-text-input hover"
           id="textarea-example-hover"
           placeholder="Enter text…">Lorem Ipsum</textarea>
 ```html
-<label class="a-label a-label__heading" for="textinput-example-hover">
+<label class="a-label a-label--heading" for="textinput-example-hover">
     A text input
 </label>
 <input class="a-text-input hover"
@@ -245,7 +245,7 @@ Generally this is only useful for documentation purposes.
        placeholder="Enter text…"
        value="Lorem ipsum">
 
-<label class="a-label a-label__heading" for="textarea-example-hover">
+<label class="a-label a-label--heading" for="textarea-example-hover">
     A textarea input
 </label>
 <textarea class="a-text-input hover"
@@ -255,7 +255,7 @@ Generally this is only useful for documentation purposes.
 
 #### Focus state
 
-<label class="a-label a-label__heading" for="textinput-example-focus">
+<label class="a-label a-label--heading" for="textinput-example-focus">
     A text input
 </label>
 <input class="a-text-input focus"
@@ -264,14 +264,14 @@ Generally this is only useful for documentation purposes.
        placeholder="Enter text…"
        value="Lorem ipsum">
 
-<label class="a-label a-label__heading" for="textarea-example-focus">
+<label class="a-label a-label--heading" for="textarea-example-focus">
     A textarea input
 </label>
 <textarea class="a-text-input focus"
           id="textarea-example-focus"
           placeholder="Enter text…">Lorem Ipsum</textarea>
 ```html
-<label class="a-label a-label__heading" for="textinput-example-focus">
+<label class="a-label a-label--heading" for="textinput-example-focus">
     A text input
 </label>
 <input class="a-text-input focus"
@@ -280,7 +280,7 @@ Generally this is only useful for documentation purposes.
        placeholder="Enter text…"
        value="Lorem ipsum">
 
-<label class="a-label a-label__heading" for="textarea-example-focus">
+<label class="a-label a-label--heading" for="textarea-example-focus">
     A textarea input
 </label>
 <textarea class="a-text-input focus"
@@ -290,7 +290,7 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled state
 
-<label class="a-label a-label__heading" for="textinput-example-disabled-demo">
+<label class="a-label a-label--heading" for="textinput-example-disabled-demo">
     A text input
 </label>
 <input class="a-text-input"
@@ -300,7 +300,7 @@ Generally this is only useful for documentation purposes.
        value="Lorem ipsum"
        disabled>
 
-<label class="a-label a-label__heading" for="textarea-example-disabled-demo">
+<label class="a-label a-label--heading" for="textarea-example-disabled-demo">
     A textarea input
 </label>
 <textarea class="a-text-input"
@@ -308,7 +308,7 @@ Generally this is only useful for documentation purposes.
           placeholder="Enter text…"
           disabled>Lorem Ipsum</textarea>
 ```html
-<label class="a-label a-label__heading" for="textinput-example-disabled">
+<label class="a-label a-label--heading" for="textinput-example-disabled">
     A text input
 </label>
 <input class="a-text-input"
@@ -318,7 +318,7 @@ Generally this is only useful for documentation purposes.
        value="Lorem ipsum"
        disabled>
 
-<label class="a-label a-label__heading" for="textarea-example-disabled">
+<label class="a-label a-label--heading" for="textarea-example-disabled">
     A textarea input
 </label>
 <textarea class="a-text-input"
@@ -330,10 +330,10 @@ Generally this is only useful for documentation purposes.
 ### Full-width modifier
 
 <div class="m-form-field">
-    <label class="a-label a-label__heading" for="full-textinput-example">
+    <label class="a-label a-label--heading" for="full-textinput-example">
         A full-width text input
     </label>
-    <input class="a-text-input a-text-input__full"
+    <input class="a-text-input a-text-input--full"
            type="text"
            id="full-textinput-example"
            value="Lorem ipsum">
@@ -341,11 +341,11 @@ Generally this is only useful for documentation purposes.
 
 ```html
 <div class="m-form-field">
-  <label class="a-label a-label__heading" for="full-textinput-example">
+  <label class="a-label a-label--heading" for="full-textinput-example">
     A full-width text input
   </label>
   <input
-    class="a-text-input a-text-input__full"
+    class="a-text-input a-text-input--full"
     type="text"
     id="full-textinput-example"
     value="Lorem ipsum"
@@ -354,19 +354,19 @@ Generally this is only useful for documentation purposes.
 ```
 
 <div class="m-form-field">
-    <label class="a-label a-label__heading" for="full-textarea-example">
+    <label class="a-label a-label--heading" for="full-textarea-example">
         A full-width textarea input
     </label>
-    <textarea class="a-text-input a-text-input__full"
+    <textarea class="a-text-input a-text-input--full"
               id="full-textarea-example">Lorem Ipsum</textarea>
 </div>
 
 ```html
 <div class="m-form-field">
-  <label class="a-label a-label__heading" for="full-textarea-example">
+  <label class="a-label a-label--heading" for="full-textarea-example">
     A full-width textarea input
   </label>
-  <textarea class="a-text-input a-text-input__full" id="full-textarea-example">
+  <textarea class="a-text-input a-text-input--full" id="full-textarea-example">
 Lorem Ipsum</textarea
   >
 </div>
@@ -378,8 +378,8 @@ Lorem Ipsum</textarea
 
 These are used for simple forms where a full filter isn't necessary.
 
-<div class="o-form__input-w-btn">
-    <div class="o-form__input-w-btn_input-container">
+<div class="o-form--input-w-btn">
+    <div class="o-form--input-w-btn_input-container">
         <label for="button-input-test-demo"
                class="u-visually-hidden">
             Test input
@@ -388,20 +388,20 @@ These are used for simple forms where a full filter isn't necessary.
                class="a-text-input"
                type="text">
     </div>
-    <div class="o-form__input-w-btn_btn-container">
+    <div class="o-form--input-w-btn_btn-container">
         <button class="a-btn">Search</button>
     </div>
 </div>
 
 ```html
-<div class="o-form__input-w-btn">
-  <div class="o-form__input-w-btn_input-container">
+<div class="o-form--input-w-btn">
+  <div class="o-form--input-w-btn_input-container">
     <label for="button-input-test" class="u-visually-hidden">
       Test input
     </label>
     <input id="button-input-test" class="a-text-input" type="text" />
   </div>
-  <div class="o-form__input-w-btn_btn-container">
+  <div class="o-form--input-w-btn_btn-container">
     <button class="a-btn">Search</button>
   </div>
 </div>
@@ -421,7 +421,7 @@ typically to clear the input.
         value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
         id="button-inside-test"
         class="a-text-input">
-    <button class="a-btn a-btn__link">
+    <button class="a-btn a-btn--link">
         {% include icons/error.svg %}
         <span class="u-visually-hidden">Clear</span>
     </button>
@@ -438,7 +438,7 @@ typically to clear the input.
     id="button-inside-test-demo"
     class="a-text-input"
   />
-  <button class="a-btn a-btn__link">
+  <button class="a-btn a-btn--link">
     {% raw %}{% include icons/error.svg %}{% endraw %}
     <span class="u-visually-hidden">Clear</span>
   </button>
@@ -450,8 +450,8 @@ typically to clear the input.
 This example combines both of the previous patterns,
 creating a typical site search form.
 
-<div class="o-form__input-w-btn">
-    <div class="o-form__input-w-btn_input-container">
+<div class="o-form--input-w-btn">
+    <div class="o-form--input-w-btn_input-container">
         <div class="m-btn-inside-input">
             <label for="button-inside-input-test-demo"
                    class="u-visually-hidden">
@@ -461,20 +461,20 @@ creating a typical site search form.
                 value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
                 id="button-inside-input-test-demo"
                 class="a-text-input">
-            <button class="a-btn a-btn__link">
+            <button class="a-btn a-btn--link">
                 {% include icons/error.svg %}
                 <span class="u-visually-hidden">Clear</span>
             </button>
         </div>
     </div>
-    <div class="o-form__input-w-btn_btn-container">
+    <div class="o-form--input-w-btn_btn-container">
         <button class="a-btn">Search</button>
     </div>
 </div>
 
 ```html
-<div class="o-form__input-w-btn">
-  <div class="o-form__input-w-btn_input-container">
+<div class="o-form--input-w-btn">
+  <div class="o-form--input-w-btn_input-container">
     <div class="m-btn-inside-input">
       <label for="button-inside-input-test" class="u-visually-hidden">
         Test input
@@ -485,13 +485,13 @@ creating a typical site search form.
         id="button-inside-input-test"
         class="a-text-input"
       />
-      <button class="a-btn a-btn__link">
+      <button class="a-btn a-btn--link">
         {% raw %}{% include icons/error.svg %}{% endraw %}
         <span class="u-visually-hidden">Clear</span>
       </button>
     </div>
   </div>
-  <div class="o-form__input-w-btn_btn-container">
+  <div class="o-form--input-w-btn_btn-container">
     <button class="a-btn">Search</button>
   </div>
 </div>
@@ -506,13 +506,13 @@ appear in code.
 
 #### Default state
 
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_default">
     <label class="a-label" for="test_checkbox_basic_default">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
   <input class="a-checkbox" type="checkbox" id="test_checkbox" />
   <label class="a-label" for="test_checkbox">Label</label>
 </div>
@@ -524,13 +524,13 @@ Generally this is only useful for documentation purposes.
 
 #### Hover state
 
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
     <input class="a-checkbox hover" type="checkbox" id="test_checkbox_basic_hover">
     <label class="a-label" for="test_checkbox_basic_hover">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
   <input
     class="a-checkbox hover"
     type="checkbox"
@@ -542,13 +542,13 @@ Generally this is only useful for documentation purposes.
 
 #### Focus state
 
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
     <input class="a-checkbox focus" type="checkbox" id="test_checkbox_basic_focus">
     <label class="a-label" for="test_checkbox_basic_focus">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
   <input
     class="a-checkbox focus"
     type="checkbox"
@@ -560,13 +560,13 @@ Generally this is only useful for documentation purposes.
 
 #### Selected state
 
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_checked" checked>
     <label class="a-label" for="test_checkbox_basic_checked">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
   <input
     class="a-checkbox"
     type="checkbox"
@@ -579,13 +579,13 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled state
 
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled>
     <label class="a-label" for="test_checkbox_basic_disabled">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
   <input
     class="a-checkbox"
     type="checkbox"
@@ -598,13 +598,13 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled/selected state
 
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_basic_disabled" disabled checked>
     <label class="a-label" for="test_checkbox_basic_disabled">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
   <input
     class="a-checkbox"
     type="checkbox"
@@ -623,13 +623,13 @@ appear in code.
 
 #### Default state
 
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
     <input class="a-radio" type="radio" id="test_radio_basic_default">
     <label class="a-label" for="test_radio_basic_default">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
   <input class="a-radio" type="radio" id="test_radio_basic_default" />
   <label class="a-label" for="test_radio_basic_default">Label</label>
 </div>
@@ -641,13 +641,13 @@ Generally this is only useful for documentation purposes.
 
 #### Hover state
 
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
     <input class="a-radio hover" type="radio" id="test_radio_basic_hover">
     <label class="a-label" for="test_radio_basic_hover">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
   <input class="a-radio hover" type="radio" id="test_radio_basic_hover" />
   <label class="a-label" for="test_radio_basic_hover">Label</label>
 </div>
@@ -655,13 +655,13 @@ Generally this is only useful for documentation purposes.
 
 #### Focus state
 
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
     <input class="a-radio focus" type="radio" id="test_radio_basic_focus">
     <label class="a-label" for="test_radio_basic_focus">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
   <input class="a-radio focus" type="radio" id="test_radio_basic_focus" />
   <label class="a-label" for="test_radio_basic_focus">Label</label>
 </div>
@@ -669,13 +669,13 @@ Generally this is only useful for documentation purposes.
 
 #### Selected state
 
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
     <input class="a-radio" type="radio" id="test_radio_basic_checked" checked>
     <label class="a-label" for="test_radio_basic_checked">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
   <input class="a-radio" type="radio" id="test_radio_basic_checked" checked />
   <label class="a-label" for="test_radio_basic_checked">Label</label>
 </div>
@@ -683,13 +683,13 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled state
 
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
     <input class="a-radio" type="radio" id="test_radio_basic_disabled" disabled>
     <label class="a-label" for="test_radio_basic_disabled">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
   <input class="a-radio" type="radio" id="test_radio_basic_disabled" disabled />
   <label class="a-label" for="test_radio_basic_disabled">Label</label>
 </div>
@@ -697,7 +697,7 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled/selected state
 
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
     <input class="a-radio"
            type="radio"
            id="test_radio_basic_disabled"
@@ -707,7 +707,7 @@ Generally this is only useful for documentation purposes.
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio">
+<div class="m-form-field m-form-field--radio">
   <input
     class="a-radio"
     type="radio"
@@ -726,13 +726,13 @@ appear in code.
 
 #### Default state
 
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default">
     <label class="a-label" for="test_checkbox_lg_default">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
   <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default" />
   <label class="a-label" for="test_checkbox_lg_default">Label</label>
 </div>
@@ -744,13 +744,13 @@ Generally this is only useful for documentation purposes.
 
 #### Hover state
 
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
     <input class="a-checkbox hover" type="checkbox" id="test_checkbox_lg_hover">
     <label class="a-label" for="test_checkbox_lg_hover">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
   <input class="a-checkbox hover" type="checkbox" id="test_checkbox_lg_hover" />
   <label class="a-label" for="test_checkbox_lg_hover">Label</label>
 </div>
@@ -758,13 +758,13 @@ Generally this is only useful for documentation purposes.
 
 #### Focus state
 
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
     <input class="a-checkbox focus" type="checkbox" id="test_checkbox_lg_focus">
     <label class="a-label" for="test_checkbox_lg_focus">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
   <input class="a-checkbox focus" type="checkbox" id="test_checkbox_lg_focus" />
   <label class="a-label" for="test_checkbox_lg_focus">Label</label>
 </div>
@@ -772,13 +772,13 @@ Generally this is only useful for documentation purposes.
 
 #### Selected state
 
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_checked" checked>
     <label class="a-label" for="test_checkbox_lg_checked">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
   <input
     class="a-checkbox"
     type="checkbox"
@@ -791,13 +791,13 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled state
 
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_disabled" disabled>
     <label class="a-label" for="test_checkbox_lg_disabled">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
   <input
     class="a-checkbox"
     type="checkbox"
@@ -810,7 +810,7 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled/selected state
 
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
     <input class="a-checkbox"
            type="checkbox"
            id="test_checkbox_lg_disabled"
@@ -820,7 +820,7 @@ Generally this is only useful for documentation purposes.
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
   <input
     class="a-checkbox"
     type="checkbox"
@@ -839,13 +839,13 @@ appear in code.
 
 #### Default state
 
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
     <input class="a-radio" type="radio" id="test_radio_lg_default">
     <label class="a-label" for="test_radio_lg_default">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
   <input class="a-radio" type="radio" id="test_radio_lg_default" />
   <label class="a-label" for="test_radio_lg_default">Label</label>
 </div>
@@ -857,13 +857,13 @@ Generally this is only useful for documentation purposes.
 
 #### Hover state
 
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
     <input class="a-radio hover" type="radio" id="test_radio_lg_hover">
     <label class="a-label" for="test_radio_lg_hover">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
   <input class="a-radio hover" type="radio" id="test_radio_lg_hover" />
   <label class="a-label" for="test_radio_lg_hover">Label</label>
 </div>
@@ -871,13 +871,13 @@ Generally this is only useful for documentation purposes.
 
 #### Focus state
 
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
     <input class="a-radio focus" type="radio" id="test_radio_lg_focus">
     <label class="a-label" for="test_radio_lg_focus">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
   <input class="a-radio focus" type="radio" id="test_radio_lg_focus" />
   <label class="a-label" for="test_radio_lg_focus">Label</label>
 </div>
@@ -885,13 +885,13 @@ Generally this is only useful for documentation purposes.
 
 #### Selected state
 
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
     <input class="a-radio" type="radio" id="test_radio_lg_checked" checked>
     <label class="a-label" for="test_radio_lg_checked">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
   <input class="a-radio" type="radio" id="test_radio_lg_checked" checked />
   <label class="a-label" for="test_radio_lg_checked">Label</label>
 </div>
@@ -899,13 +899,13 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled state
 
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
     <input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled>
     <label class="a-label" for="test_radio_lg_disabled">Label</label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
   <input class="a-radio" type="radio" id="test_radio_lg_disabled" disabled />
   <label class="a-label" for="test_radio_lg_disabled">Label</label>
 </div>
@@ -913,7 +913,7 @@ Generally this is only useful for documentation purposes.
 
 #### Disabled/selected state
 
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
     <input class="a-radio"
            type="radio"
            id="test_radio_lg_disabled"
@@ -923,7 +923,7 @@ Generally this is only useful for documentation purposes.
 </div>
 
 ```html
-<div class="m-form-field m-form-field__radio m-form-field__lg-target">
+<div class="m-form-field m-form-field--radio m-form-field--lg-target">
   <input
     class="a-radio"
     type="radio"
@@ -942,48 +942,48 @@ have helper text that appears below the main label text.
 
 #### Basic checkbox/radio button helper text
 
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_helper">
     <label class="a-label" for="test_checkbox_helper">
         This is a very long label that wraps to a second line.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        <small class="a-label_helper">
+        <small class="a-label__helper">
             (This is helper text)
         </small>
     </label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox">
+<div class="m-form-field m-form-field--checkbox">
   <input class="a-checkbox" type="checkbox" id="test_checkbox_helper" />
   <label class="a-label" for="test_checkbox_helper">
     This is a very long label that wraps to a second line. Lorem ipsum dolor sit
     amet, consectetur adipiscing elit.
-    <small class="a-label_helper"> (This is helper text) </small>
+    <small class="a-label__helper"> (This is helper text) </small>
   </label>
 </div>
 ```
 
 #### Large target checkbox/radio button helper text
 
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
     <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_helper">
     <label class="a-label" for="test_checkbox_lg_helper">
         This is a very long label that wraps to a second line.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        <small class="a-label_helper">
+        <small class="a-label__helper">
             (This is helper text)
         </small>
     </label>
 </div>
 
 ```html
-<div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+<div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
   <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_helper" />
   <label class="a-label" for="test_checkbox_lg_helper">
     This is a very long label that wraps to a second line. Lorem ipsum dolor sit
     amet, consectetur adipiscing elit.
-    <small class="a-label_helper"> (This is helper text) </small>
+    <small class="a-label__helper"> (This is helper text) </small>
   </label>
 </div>
 ```
@@ -996,7 +996,7 @@ appear in code.
 ### Default state
 
 <div class="m-form-field m-form-field__select">
-    <label class="a-label a-label__heading" for="test_select_default">
+    <label class="a-label a-label--heading" for="test_select_default">
         Label
     </label>
     <div class="a-select">
@@ -1011,7 +1011,7 @@ appear in code.
 
 ```html
 <div class="m-form-field m-form-field__select">
-  <label class="a-label a-label__heading" for="test_select_default">
+  <label class="a-label a-label--heading" for="test_select_default">
     Label
   </label>
   <div class="a-select">
@@ -1032,7 +1032,7 @@ Generally this is only useful for documentation purposes.
 ### Hover state
 
 <div class="m-form-field m-form-field__select">
-    <label class="a-label a-label__heading" for="test_select__hover">
+    <label class="a-label a-label--heading" for="test_select__hover">
         Label
     </label>
     <div class="a-select">
@@ -1047,7 +1047,7 @@ Generally this is only useful for documentation purposes.
 
 ```html
 <div class="m-form-field m-form-field__select">
-  <label class="a-label a-label__heading" for="test_select__hover">
+  <label class="a-label a-label--heading" for="test_select__hover">
     Label
   </label>
   <div class="a-select">
@@ -1064,7 +1064,7 @@ Generally this is only useful for documentation purposes.
 ### Focus state
 
 <div class="m-form-field m-form-field__select">
-    <label class="a-label a-label__heading" for="test_select__focus">
+    <label class="a-label a-label--heading" for="test_select__focus">
         Label
     </label>
     <div class="a-select">
@@ -1079,7 +1079,7 @@ Generally this is only useful for documentation purposes.
 
 ```html
 <div class="m-form-field m-form-field__select">
-  <label class="a-label a-label__heading" for="test_select__focus">
+  <label class="a-label a-label--heading" for="test_select__focus">
     Label
   </label>
   <div class="a-select">
@@ -1096,8 +1096,8 @@ Generally this is only useful for documentation purposes.
 ### Disabled state
 
 <div class="m-form-field m-form-field__select">
-    <label class="a-label a-label__heading" for="test_select__disabled">Label</label>
-    <div class="a-select a-select__disabled">
+    <label class="a-label a-label--heading" for="test_select__disabled">Label</label>
+    <div class="a-select a-select--disabled">
         <select id="test_select__disabled" disabled>
             <option value="option1">Option 1</option>
             <option value="option2">Option 2</option>
@@ -1109,10 +1109,10 @@ Generally this is only useful for documentation purposes.
 
 ```html
 <div class="m-form-field m-form-field__select">
-  <label class="a-label a-label__heading" for="test_select__disabled"
+  <label class="a-label a-label--heading" for="test_select__disabled"
     >Label</label
   >
-  <div class="a-select a-select__disabled">
+  <div class="a-select a-select--disabled">
     <select id="test_select__disabled" disabled>
       <option value="option1">Option 1</option>
       <option value="option2">Option 2</option>
@@ -1126,7 +1126,7 @@ Generally this is only useful for documentation purposes.
 ## Basic multiselect
 
 <div class="m-form-field m-form-field__select">
-    <label class="a-label a-label__heading" for="test_select__multiple">
+    <label class="a-label a-label--heading" for="test_select__multiple">
         Label
     </label>
     <select class="a-multiselect" id="test_select__multiple" multiple>
@@ -1143,7 +1143,7 @@ Generally this is only useful for documentation purposes.
 
 ```html
 <div class="m-form-field m-form-field__select">
-  <label class="a-label a-label__heading" for="test_select__multiple">
+  <label class="a-label a-label--heading" for="test_select__multiple">
     Label
   </label>
   <select class="a-multiselect" id="test_select__multiple" multiple>
@@ -1164,9 +1164,9 @@ Generally this is only useful for documentation purposes.
 Form alerts provide a light-touch alternative to notifications for inline
 form validation or feedback to a user's input.
 
-<div class="o-form_group">
+<div class="o-form__group">
     <div class="m-form-field">
-        <label class="a-label__heading"
+        <label class="a-label--heading"
                for="field-validation__default-demo">
             Label
         </label>
@@ -1179,70 +1179,70 @@ form validation or feedback to a user's input.
              class="a-form-alert"
              role="alert">
             {% include icons/info-round.svg %}
-            <span class="a-form-alert_text">
+            <span class="a-form-alert__text">
                 This is an inline alert with a default state.
             </span>
         </div>
     </div>
 </div>
-<div class="o-form_group">
+<div class="o-form__group">
     <div class="m-form-field m-form-field__success">
-        <label class="a-label__heading"
+        <label class="a-label--heading"
                for="field-validation__success-demo">
             Label
         </label>
-        <input class="a-text-input a-text-input__success"
+        <input class="a-text-input a-text-input--success"
                type="text"
                value="Valid input"
                id="field-validation__success-demo"
                aria-describedby="field-validation__success-message-demo">
         <div id="field-validation__success-message-demo"
-             class="a-form-alert a-form-alert__success"
+             class="a-form-alert a-form-alert--success"
              role="alert">
             {% include icons/approved-round.svg %}
-            <span class="a-form-alert_text">
+            <span class="a-form-alert__text">
                 This is an inline alert with a success state.
             </span>
         </div>
     </div>
 </div>
-<div class="o-form_group">
+<div class="o-form__group">
     <div class="m-form-field m-form-field__error">
-        <label class="a-label__heading"
+        <label class="a-label--heading"
                for="field-validation__error-demo">
             Label
         </label>
-        <input class="a-text-input a-text-input__error"
+        <input class="a-text-input a-text-input--error"
                type="text"
                value="Invalid input"
                id="field-validation__error-demo"
                aria-describedby="field-validation__error-message-demo">
         <div id="field-validation__error-message-demo"
-             class="a-form-alert a-form-alert__error"
+             class="a-form-alert a-form-alert--error"
              role="alert">
             {% include icons/error-round.svg %}
-            <span class="a-form-alert_text">
+            <span class="a-form-alert__text">
                 This is an inline alert with an error state.
             </span>
         </div>
     </div>
 </div>
-<div class="o-form_group">
+<div class="o-form__group">
     <div class="m-form-field m-form-field__warning">
-        <label class="a-label__heading"
+        <label class="a-label--heading"
                for="field-validation__warning-demo">
             Label
         </label>
-        <input class="a-text-input a-text-input__warning"
+        <input class="a-text-input a-text-input--warning"
                type="text"
                value="Semi-valid input"
                id="field-validation__warning-demo"
                aria-describedby="field-validation__warning-message-demo">
         <div id="field-validation__warning-message-demo"
-             class="a-form-alert a-form-alert__warning"
+             class="a-form-alert a-form-alert--warning"
              role="alert">
             {% include icons/warning-round.svg %}
-            <span class="a-form-alert_text">
+            <span class="a-form-alert__text">
                 This is an inline alert with a warning state.
             </span>
         </div>
@@ -1250,9 +1250,9 @@ form validation or feedback to a user's input.
 </div>
 
 ```html
-<div class="o-form_group">
+<div class="o-form__group">
   <div class="m-form-field">
-    <label class="a-label__heading" for="field-validation__default">
+    <label class="a-label--heading" for="field-validation__default">
       Label
     </label>
     <input
@@ -1268,19 +1268,19 @@ form validation or feedback to a user's input.
       role="alert"
     >
       {% include icons/info-round.svg %}
-      <span class="a-form-alert_text">
+      <span class="a-form-alert__text">
         This is an inline alert with a default state.
       </span>
     </div>
   </div>
 </div>
-<div class="o-form_group">
+<div class="o-form__group">
   <div class="m-form-field m-form-field__success">
-    <label class="a-label__heading" for="field-validation__success">
+    <label class="a-label--heading" for="field-validation__success">
       Label
     </label>
     <input
-      class="a-text-input a-text-input__success"
+      class="a-text-input a-text-input--success"
       type="text"
       value="Valid input"
       id="field-validation__success"
@@ -1288,23 +1288,23 @@ form validation or feedback to a user's input.
     />
     <div
       id="field-validation__success-message"
-      class="a-form-alert a-form-alert__success"
+      class="a-form-alert a-form-alert--success"
       role="alert"
     >
       {% include icons/approved-round.svg %}
-      <span class="a-form-alert_text">
+      <span class="a-form-alert__text">
         This is an inline alert with a success state.
       </span>
     </div>
   </div>
 </div>
-<div class="o-form_group">
+<div class="o-form__group">
   <div class="m-form-field m-form-field__error">
-    <label class="a-label__heading" for="field-validation__error">
+    <label class="a-label--heading" for="field-validation__error">
       Label
     </label>
     <input
-      class="a-text-input a-text-input__error"
+      class="a-text-input a-text-input--error"
       type="text"
       value="Invalid input"
       id="field-validation__error"
@@ -1312,23 +1312,23 @@ form validation or feedback to a user's input.
     />
     <div
       id="field-validation__error-message"
-      class="a-form-alert a-form-alert__error"
+      class="a-form-alert a-form-alert--error"
       role="alert"
     >
       {% include icons/error-round.svg %}
-      <span class="a-form-alert_text">
+      <span class="a-form-alert__text">
         This is an inline alert with an error state.
       </span>
     </div>
   </div>
 </div>
-<div class="o-form_group">
+<div class="o-form__group">
   <div class="m-form-field m-form-field__warning">
-    <label class="a-label__heading" for="field-validation__warning">
+    <label class="a-label--heading" for="field-validation__warning">
       Label
     </label>
     <input
-      class="a-text-input a-text-input__warning"
+      class="a-text-input a-text-input--warning"
       type="text"
       value="Semi-valid input"
       id="field-validation__warning"
@@ -1336,11 +1336,11 @@ form validation or feedback to a user's input.
     />
     <div
       id="field-validation__warning-message"
-      class="a-form-alert a-form-alert__warning"
+      class="a-form-alert a-form-alert--warning"
       role="alert"
     >
       {% include icons/warning-round.svg %}
-      <span class="a-form-alert_text">
+      <span class="a-form-alert__text">
         This is an inline alert with a warning state.
       </span>
     </div>
@@ -1351,71 +1351,71 @@ form validation or feedback to a user's input.
 ## Fieldsets
 
 <form class="o-form">
-    <div class="o-form_group">
-        <fieldset class="o-form_fieldset">
-            <div class="m-form-field m-form-field__checkbox">
+    <div class="o-form__group">
+        <fieldset class="o-form__fieldset">
+            <div class="m-form-field m-form-field--checkbox">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_1" name="test_checkbox">
                 <label class="a-label" for="test_checkbox_1">Label</label>
             </div>
-            <div class="m-form-field m-form-field__checkbox">
+            <div class="m-form-field m-form-field--checkbox">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_2" name="test_checkbox">
                 <label class="a-label" for="test_checkbox_2">Label</label>
             </div>
         </fieldset>
     </div>
-    <div class="o-form_group">
-        <fieldset class="o-form_fieldset">
-            <div class="m-form-field m-form-field__radio">
+    <div class="o-form__group">
+        <fieldset class="o-form__fieldset">
+            <div class="m-form-field m-form-field--radio">
                 <input class="a-radio" type="radio" id="test_radio_1" name="test_radio">
                 <label class="a-label" for="test_radio_1">Label</label>
             </div>
-            <div class="m-form-field m-form-field__radio">
+            <div class="m-form-field m-form-field--radio">
                 <input class="a-radio" type="radio" id="test_radio_2" name="test_radio">
                 <label class="a-label" for="test_radio_2">Label</label>
             </div>
         </fieldset>
     </div>
-    <div class="o-form_group">
-        <fieldset class="o-form_fieldset">
-            <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+    <div class="o-form__group">
+        <fieldset class="o-form__fieldset">
+            <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_1">
                 <label class="a-label" for="test_checkbox_lg_default_1">Label</label>
             </div>
-            <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+            <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_2">
                 <label class="a-label" for="test_checkbox_lg_default_2">Label</label>
             </div>
-            <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+            <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_3">
                 <label class="a-label" for="test_checkbox_lg_default_3">
                     This is a very long label that wraps to a second line.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <small class="a-label_helper">
+                    <small class="a-label__helper">
                         (This is helper text)
                     </small>
                 </label>
             </div>
-            <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+            <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
                 <input class="a-checkbox" type="checkbox" id="test_checkbox_lg_default_4">
                 <label class="a-label" for="test_checkbox_lg_default_4">Label</label>
             </div>
         </fieldset>
     </div>
-    <div class="o-form_group">
-        <fieldset class="o-form_fieldset">
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+    <div class="o-form__group">
+        <fieldset class="o-form__fieldset">
+            <div class="m-form-field m-form-field--radio m-form-field--lg-target">
                 <input class="a-radio" type="radio" id="test_radio_lg_default_1" name="radio-fieldset">
                 <label class="a-label" for="test_radio_lg_default_1">Label</label>
             </div>
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+            <div class="m-form-field m-form-field--radio m-form-field--lg-target">
                 <input class="a-radio" type="radio" id="test_radio_lg_default_2" name="radio-fieldset">
                 <label class="a-label" for="test_radio_lg_default_2">Label</label>
             </div>
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+            <div class="m-form-field m-form-field--radio m-form-field--lg-target">
                 <input class="a-radio" type="radio" id="test_radio_lg_default_3" name="radio-fieldset">
                 <label class="a-label" for="test_radio_lg_default_3">Label</label>
             </div>
-            <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+            <div class="m-form-field m-form-field--radio m-form-field--lg-target">
                 <input class="a-radio" type="radio" id="test_radio_lg_default_4" name="radio-fieldset">
                 <label class="a-label" for="test_radio_lg_default_4">Label</label>
             </div>
@@ -1425,9 +1425,9 @@ form validation or feedback to a user's input.
 
 ```html
 <form class="o-form">
-  <div class="o-form_group">
-    <fieldset class="o-form_fieldset">
-      <div class="m-form-field m-form-field__checkbox">
+  <div class="o-form__group">
+    <fieldset class="o-form__fieldset">
+      <div class="m-form-field m-form-field--checkbox">
         <input
           class="a-checkbox"
           type="checkbox"
@@ -1436,7 +1436,7 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_checkbox_1">Label</label>
       </div>
-      <div class="m-form-field m-form-field__checkbox">
+      <div class="m-form-field m-form-field--checkbox">
         <input
           class="a-checkbox"
           type="checkbox"
@@ -1447,9 +1447,9 @@ form validation or feedback to a user's input.
       </div>
     </fieldset>
   </div>
-  <div class="o-form_group">
-    <fieldset class="o-form_fieldset">
-      <div class="m-form-field m-form-field__radio">
+  <div class="o-form__group">
+    <fieldset class="o-form__fieldset">
+      <div class="m-form-field m-form-field--radio">
         <input
           class="a-radio"
           type="radio"
@@ -1458,7 +1458,7 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_radio_1">Label</label>
       </div>
-      <div class="m-form-field m-form-field__radio">
+      <div class="m-form-field m-form-field--radio">
         <input
           class="a-radio"
           type="radio"
@@ -1469,9 +1469,9 @@ form validation or feedback to a user's input.
       </div>
     </fieldset>
   </div>
-  <div class="o-form_group">
-    <fieldset class="o-form_fieldset">
-      <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+  <div class="o-form__group">
+    <fieldset class="o-form__fieldset">
+      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
         <input
           class="a-checkbox"
           type="checkbox"
@@ -1479,7 +1479,7 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_checkbox_lg_default_1">Label</label>
       </div>
-      <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
         <input
           class="a-checkbox"
           type="checkbox"
@@ -1487,7 +1487,7 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_checkbox_lg_default_2">Label</label>
       </div>
-      <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
         <input
           class="a-checkbox"
           type="checkbox"
@@ -1495,7 +1495,7 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_checkbox_lg_default_3">Label</label>
       </div>
-      <div class="m-form-field m-form-field__checkbox m-form-field__lg-target">
+      <div class="m-form-field m-form-field--checkbox m-form-field--lg-target">
         <input
           class="a-checkbox"
           type="checkbox"
@@ -1505,9 +1505,9 @@ form validation or feedback to a user's input.
       </div>
     </fieldset>
   </div>
-  <div class="o-form_group">
-    <fieldset class="o-form_fieldset">
-      <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+  <div class="o-form__group">
+    <fieldset class="o-form__fieldset">
+      <div class="m-form-field m-form-field--radio m-form-field--lg-target">
         <input
           class="a-radio"
           type="radio"
@@ -1516,7 +1516,7 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_radio_lg_default_1">Label</label>
       </div>
-      <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+      <div class="m-form-field m-form-field--radio m-form-field--lg-target">
         <input
           class="a-radio"
           type="radio"
@@ -1525,7 +1525,7 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_radio_lg_default_2">Label</label>
       </div>
-      <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+      <div class="m-form-field m-form-field--radio m-form-field--lg-target">
         <input
           class="a-radio"
           type="radio"
@@ -1534,7 +1534,7 @@ form validation or feedback to a user's input.
         />
         <label class="a-label" for="test_radio_lg_default_3">Label</label>
       </div>
-      <div class="m-form-field m-form-field__radio m-form-field__lg-target">
+      <div class="m-form-field m-form-field--radio m-form-field--lg-target">
         <input
           class="a-radio"
           type="radio"

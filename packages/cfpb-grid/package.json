@@ -1,14 +1,11 @@
 {
   "name": "@cfpb/cfpb-grid",
-  "version": "0.34.0",
+  "version": "1.0.1",
   "description": "Design System grid",
   "less": "src/cfpb-grid.less",
   "style": "cfpb-grid.css",
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "normalize-css": "^2.0.0"
   },
   "keywords": [
     "grid"

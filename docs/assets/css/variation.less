@@ -3,20 +3,20 @@
    ========================================================================== */
 
 .o-variation-group {
-  border: 5px solid @gray-10;
+  border: 5px solid var(--gray-10);
   margin: 2rem 0;
 
-  &_title {
-    background: @gray-10;
+  &__title {
+    background: var(--gray-10);
     margin-bottom: 2rem;
     padding: 1rem;
   }
 
-  &_description {
+  &__description {
     margin-bottom: 2rem;
   }
 
-  &_description,
+  &__description,
   & .m-variation {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -24,21 +24,21 @@
 }
 
 .m-variation {
-  border-bottom: 1px solid @gray-40;
+  border-bottom: 1px solid var(--gray-40);
 
-  &_name {
+  &__name {
     margin-top: 2rem;
   }
 
-  &_deprecated {
-    background: @gray-10;
-    font-size: unit((10px / @base-font-size-px), em);
+  &__deprecated {
+    background: var(--gray-10);
+    font-size: unit(10px / @base-font-size-px, em);
     font-variant: small-caps;
     border-radius: 5px;
     padding: 5px;
   }
 
-  &:first-child .m-variation_name {
+  &:first-child .m-variation__name {
     margin-top: 0;
   }
 
@@ -49,21 +49,21 @@
 }
 
 // The icon colors on the restrictions do/do not sections.
-.component-restrictions_heading-do svg {
-  color: @green;
+.component-restrictions__heading-do svg {
+  color: var(--green);
 }
 
-.component-restrictions_heading-donot svg {
-  color: @red;
+.component-restrictions__heading-donot svg {
+  color: var(--red);
 }
 
 // Wrapping long horizontal lists.
-.m-list__horizontal-spaced {
-  margin-bottom: unit((30px / @base-font-size-px), em);
+.m-list--horizontal-spaced {
+  margin-bottom: unit(30px / @base-font-size-px, em);
 }
 
-.m-list__horizontal-spaced > .m-list_item {
-  margin-bottom: unit((15px / @base-font-size-px), em);
+.m-list--horizontal-spaced > .m-list__item {
+  margin-bottom: unit(15px / @base-font-size-px, em);
 }
 
 // Gives 100% width to all tables
@@ -71,6 +71,6 @@ table {
   .u-w100pct();
 }
 
-.a-live_code table {
+.a-live__code table {
   width: inherit;
 }

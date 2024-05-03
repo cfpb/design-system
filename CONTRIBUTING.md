@@ -165,16 +165,12 @@ Then, do a release:
 1. Decide what version (major, minor, or patch) you will be releasing and
    manually update to that version in `CHANGELOG.md`.
    This is the future version that will be tagged shortly.
-1. **There is a bug in lerna where the root package.json won't auto increment.**
-   ([See this issue](https://github.com/lerna/lerna/issues/2879)).
-   Manually increment the `version` in the root `package.json` file to match
-   the latest change log entry and save the file.
 1. Run `git add . && git commit -m "Bump version" && yarn release` to start the release.
 1. It'll ask if you want to do a major, minor or patch release.
    Select whichever matches the latest changelog version.
    Lerna will tag and publish every package to npm.
-1. Confirm both the updated root `CHANGELOG.md` and `package.json` files have
-   been updated and committed to the `main` branch.
+1. Confirm the `CHANGELOG.md` file has been updated
+   and committed to the `main` branch.
 
 ## Notes
 

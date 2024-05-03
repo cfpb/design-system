@@ -20,7 +20,6 @@ It's made up of four child components `vars`, `media-queries`,
 - [Media queries](#media-queries)
   - [Respond to min and max mixins](#respond-to-min-and-max-width-mixins)
   - [Respond to range mixin](#respond-to-range-mixin)
-  - [Respond to dpi mixin](#respond-to-dpi-mixin)
   - [Respond to print mixin](#respond-to-print-mixin)
 - [Utilities](#utilities)
   - [Helper classes](#helper-classes)
@@ -64,30 +63,30 @@ Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.l
 
 ```
 // body
-@text:                   @black;
+@text:                   var(--black);
 
 // a
-@link-text:              @pacific;
-@link-underline:         @pacific;
-@link-text-visited:      @teal;
-@link-underline-visited: @teal;
-@link-text-hover:        @pacific-dark;
-@link-underline-hover:   @pacific-dark;
-@link-text-active:       @navy;
-@link-underline-active:  @navy;
+@link-text:              var(--pacific);
+@link-underline:         var(--pacific);
+@link-text-visited:      var(--teal);
+@link-underline-visited: var(--teal);
+@link-text-hover:        var(--pacific-dark);
+@link-underline-hover:   var(--pacific-dark);
+@link-text-active:       var(--navy);
+@link-underline-active:  var(--navy);
 
 // table
 
 @table-head-text:        @text;
-@table-head-bg:          @gray-5;
-@table-cell-bg:          @white;
-@table-cell-bg_alt:      @gray-5;
-@table-scrolling-border: @gray-40;
-@table-border:           @gray;
+@table-head-bg:          var(--gray-5);
+@table-cell-bg:          var(--white);
+@table-cell-bg_alt:      var(--gray-5);
+@table-scrolling-border: var(--gray-40);
+@table-border:           var(--gray);
 
 // code
 @code-text:              @text;
-@code-bg:                @gray-5;
+@code-bg:                var(--gray-5);
 ```
 
 ### Sizing variables
@@ -177,32 +176,6 @@ Ex.
 }
 ```
 
-### Respond to dpi mixin
-
-This mixin allows us to easily write styles
-that target high-resolution screens,
-such as Apple retina screens
-
-```less
-// The following LESS...
-.example {
-  background: url(regular-resolution-image.png);
-  .respond-to-dpi(2, {
-        background-image: url(retina-image.png);
-    });
-}
-
-// ...Exports to
-.example {
-  background: url(regular-resolution-image.png);
-}
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .example {
-    background-image: url(retina-image.png);
-  }
-}
-```
-
 ### Respond to print mixin
 
 This mixin allows us to easily write styles that target both
@@ -211,9 +184,9 @@ This mixin allows us to easily write styles that target both
 ```less
 // The following LESS...
 .example {
-  color: @gray;
+  color: var(--gray);
   .respond-to-print({
-        color: @black;
+        color: var(--black);
     });
 }
 
@@ -290,7 +263,7 @@ add descriptive text with the `u-visually-hidden` class.
 ```
 <h1>
     <a href="#">
-        <span class="@cfpb/icon @cfpb/icon-twitter-square"></span>
+        <span class="@cfpb/icon @cfpb/icon-x-square"></span>
         <span class="u-visually-hidden">Share on Twitter</span>
     </a>
 </h1>
@@ -548,11 +521,11 @@ _Original mixin credit: <https://gist.github.com/craigmdennis/6655047>_
 **NOTE: Inline style properties for demonstration only**
 
 To create a 16:9 flexible video player, wrap the video element in an element
-with `u-flexible-container` and add the `u-flexible-container_inner` to the
+with `u-flexible-container` and add the `u-flexible-container__inner` to the
 video element.
 
 <div class="u-flexible-container">
-    <video class="u-flexible-container_inner"
+    <video class="u-flexible-container__inner"
            style="background:#75787B;"
            controls>
     </video>
@@ -560,7 +533,7 @@ video element.
 
 ```
 <div class="u-flexible-container">
-    <video class="u-flexible-container_inner"
+    <video class="u-flexible-container__inner"
            style="background:#75787B;"
            controls>
     </video>
@@ -584,16 +557,16 @@ element), ommit the inner container.
 
 To create a 4:3 flexible video player, add the `__4_3` modifier to the container
 
-<div class="u-flexible-container u-flexible-container__4-3">
-    <video class="u-flexible-container_inner"
+<div class="u-flexible-container u-flexible-container--4-3">
+    <video class="u-flexible-container__inner"
            style="background:#75787B;"
            controls>
     </video>
 </div>
 
 ```
-<div class="u-flexible-container u-flexible-container__4-3">
-    <video class="u-flexible-container_inner"
+<div class="u-flexible-container u-flexible-container--4-3">
+    <video class="u-flexible-container__inner"
            style="background:#75787B;"
            controls>
     </video>
@@ -612,30 +585,30 @@ default - `#0071bc`, `:hover` - `#205493`, `focus:` - `#0071bc`,
 
 [//]: # "NOTE: These aren't the default colors within this project, only once the brand theme has been applied."
 
-`u-link__colors()`
+`u-link--colors()`
 
 Passing a single argument into the mixin will set the color for the
 default, `:visited`, `:hover`, `:focus`, `:active` states.
 
-`u-link__colors(@c)`
+`u-link--colors(@c)`
 
 Passing two arguments into the mixin will set the color for the default,
 `:visited`, and `:active` states as the first argument, and `:hover` and
 `:focus` as the second argument.
 
-`u-link__colors(@c, @h)`
+`u-link--colors(@c, @h)`
 
 Passing five arguments will set the color for the default, `:visited`,
 `:hover`, `:focus`, and `:active` states respectively.
 
-`u-link__colors(@c, @v, @h, @f, @a)`
+`u-link--colors(@c, @v, @h, @f, @a)`
 
 Passing ten arguments will set the text (default, `:visited`, `:hover`,
 `:focus`, and `:active` states in the first five arguments) and border colors
 (default, `:visited`, `:hover`, `:focus`, and `:active` states in the
 following five arguments) separately.
 
-`u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)`
+`u-link--colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)`
 
 **A base mixin of `u-link**colors-base()`exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use`.u-link**colors(@c, @v, @h, @f, @a)`.**
 

@@ -1,5 +1,5 @@
 // TODO: Consider adding a pseudo elem to the input wrapper that can fade out
-// the text as it intersects the button
+// the text as it intersects the button.
 
 .m-btn-inside-input {
   position: relative;
@@ -7,21 +7,21 @@
   .a-text-input {
     box-sizing: border-box;
     // Magic number padding to give the icon clear space
-    padding-right: unit(((@btn-h-padding * 2 + 11px) / @btn-font-size), em);
+    padding-right: unit((@btn-h-padding * 2 + 11px) / @btn-font-size, em);
     width: 100%;
   }
 
   .a-btn {
-    .u-link__no-border();
+    .u-link--no-border();
 
     position: absolute;
     // Set the right and top distances to match typical button padding.
-    right: unit((@btn-h-padding / @btn-font-size), em);
-    top: unit((@btn-v-padding / @btn-font-size), em);
-    color: @gray-80;
+    right: unit(@btn-h-padding / @btn-font-size, em);
+    top: unit(@btn-v-padding / @btn-font-size, em);
+    color: var(--gray-80);
 
     &:hover {
-      color: @black;
+      color: var(--black);
     }
 
     .no-js & {

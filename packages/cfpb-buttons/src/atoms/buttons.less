@@ -6,13 +6,13 @@
   appearance: none;
   display: inline-block;
   box-sizing: border-box;
-  padding: unit((@btn-v-padding / @btn-font-size), em)
-    unit((@btn-h-padding / @btn-font-size), em);
+  padding: unit(@btn-v-padding / @btn-font-size, em)
+    unit(@btn-h-padding / @btn-font-size, em);
   border: 0;
   margin: 0;
-  border-radius: unit((@btn-border-radius-size / @btn-font-size), em);
+  border-radius: unit(@btn-border-radius-size / @btn-font-size, em);
   cursor: pointer;
-  font-size: unit((@btn-font-size / @base-font-size-px), em);
+  font-size: unit(@btn-font-size / @base-font-size-px, em);
   font-weight: 500;
   line-height: normal;
   text-align: center;
@@ -57,7 +57,7 @@
   // Secondary button
   //
 
-  &__secondary {
+  &--secondary {
     &,
     &:link,
     &:visited {
@@ -87,7 +87,7 @@
   // Destructive action button
   //
 
-  &__warning {
+  &--warning {
     &,
     &:link,
     &:visited {
@@ -117,7 +117,7 @@
   // Disabled button
   //
 
-  &__disabled,
+  &--disabled,
   &[disabled] {
     &,
     &:link,
@@ -143,7 +143,7 @@
   //
   // Full width button on x-small screens
   //
-  &__full-on-xs {
+  &--full-on-xs {
     // Mobile only.
     .respond-to-max(@bp-xs-max, {
       display: block;

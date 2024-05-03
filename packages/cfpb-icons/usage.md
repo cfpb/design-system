@@ -42,15 +42,15 @@ in which he concludes, "Just include the icons inline."
 
 For example, you could create one of our icon links like so:
 
-<a class="a-link a-link__icon" href="#">
-    <span class="a-link_text">Download the info sheet</span>
-    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
+<a class="a-link a-link--icon" href="#">
+    <span class="a-link__text">Download the info sheet</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
 </a>
 
 ```
-<a class="a-link a-link__icon" href="#">
-    <span class="a-link_text">Download the info sheet</span>
-    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
+<a class="a-link a-link--icon" href="#">
+    <span class="a-link__text">Download the info sheet</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
 </a>
 ```
 
@@ -62,16 +62,16 @@ For example, here is how we include them in the templates of the
 Design System documentation site:
 
 ```
-<a class="a-link a-link__icon" href="#">
-    <span class="a-link_text">Download the info sheet</span>
+<a class="a-link a-link--icon" href="#">
+    <span class="a-link__text">Download the info sheet</span>
     {% raw %}{% include icons/download.svg %}{% endraw %}
 </a>
 ```
 
 Which renders as:
 
-<a class="a-link a-link__icon" href="#">
-    <span class="a-link_text">Download the info sheet</span>
+<a class="a-link a-link--icon" href="#">
+    <span class="a-link__text">Download the info sheet</span>
     {% include icons/download.svg %}
 </a>
 
@@ -210,7 +210,7 @@ search this page for a particular icon.
 | {% include icons/github.svg %}    | {% include icons/github-square.svg %}    | github         |                                  |
 | {% include icons/linkedin.svg %}  | {% include icons/linkedin-square.svg %}  | linkedin       |                                  |
 | {% include icons/pinterest.svg %} | {% include icons/pinterest-square.svg %} | pinterest      |                                  |
-| {% include icons/twitter.svg %}   | {% include icons/twitter-square.svg %}   | twitter        |                                  |
+| {% include icons/x.svg %}         | {% include icons/x-square.svg %}         | x              | twitter                          |
 | {% include icons/youtube.svg %}   | {% include icons/youtube-square.svg %}   | youtube        |                                  |
 
 {: class="icon-table"}

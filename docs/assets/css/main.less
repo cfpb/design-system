@@ -5,7 +5,7 @@
 // This is your project's main Less file.
 // Project-specific Less rules go after the imports.
 
-// Import Capital Framework.
+// Import Design System packages.
 @import (less) '@cfpb/cfpb-atomic-component/src/cfpb-atomic-component.less';
 @import (less) '@cfpb/cfpb-core/src/cfpb-core.less';
 @import (less) '@cfpb/cfpb-grid/src/cfpb-grid.less';
@@ -18,6 +18,23 @@
 @import (less) '@cfpb/cfpb-pagination/src/cfpb-pagination.less';
 @import (less) '@cfpb/cfpb-expandables/src/cfpb-expandables.less';
 @import (less) '@cfpb/cfpb-tables/src/cfpb-tables.less';
+
+// Custom modules.
+@import (less) 'sidebar.less';
+@import (less) 'footer.less';
+@import (less) 'skip-nav.less';
+@import (less) 'global-eyebrow.less';
+@import (less) 'layout.less';
+@import (less) 'header.less';
+@import (less) 'main-content.less';
+@import (less) 'code.less';
+@import (less) 'grid-demo.less';
+@import (less) 'netlify.less';
+@import (less) 'tabs.less';
+@import (less) 'toggle-code-button.less';
+@import (less) 'variation.less';
+@import (less) 'color-swatches.less';
+@import (less) 'search.less';
 
 // Icon font path
 @cf-icon-path: '../css/fonts';
@@ -41,7 +58,7 @@ nav ul {
 // Default details element styles
 details summary:focus {
   border: none;
-  outline: 1px dotted @pacific;
+  outline: 1px dotted var(--pacific);
   outline-offset: 2px;
 }
 
@@ -102,7 +119,7 @@ main {
 .ds-sidebar {
   width: 250px;
   padding-right: 30px;
-  border-right: 1px solid @gray-40;
+  border-right: 1px solid var(--gray-40);
   padding-bottom: 30px;
 }
 
@@ -151,42 +168,20 @@ main {
   width: 100px;
   height: 100px;
   padding: 10px;
-  background-color: @red;
+  background-color: var(--red);
   text-align: center;
-  color: @white;
+  color: var(--white);
   cursor: pointer;
 
   &.u-is-animating {
-    outline: 5px solid @gray-40;
+    outline: 5px solid var(--gray-40);
   }
 }
 
 .example-flyout-content {
   width: 100px;
-  background-color: @red;
+  background-color: var(--red);
   text-align: center;
-  color: @white;
+  color: var(--white);
   cursor: pointer;
 }
-
-// TODO: See if these imports can be moved to the file top.
-/* stylelint-disable no-invalid-position-at-import-rule */
-// custom modules
-@import (less) 'sidebar.less';
-@import (less) 'footer.less';
-@import (less) 'skip-nav.less';
-@import (less) 'global-eyebrow.less';
-@import (less) 'layout.less';
-@import (less) 'header.less';
-@import (less) 'hero.less';
-@import (less) 'main-content.less';
-@import (less) 'code.less';
-@import (less) 'grid-demo.less';
-@import (less) 'netlify.less';
-@import (less) 'tabs.less';
-@import (less) 'toggle-code-button.less';
-@import (less) 'badges.less';
-@import (less) 'variation.less';
-@import (less) 'color-swatches.less';
-@import (less) 'search.less';
-/* stylelint-enable */

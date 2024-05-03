@@ -3,10 +3,11 @@ layout: variation
 section: components
 status: Released
 variation_groups:
-  - variation_group_name: Text inputs
+  - variation_group_name: Types
     variations:
-      - variation_code_snippet: >
+      - variation_code_snippet: >-
           <!--States are shown for demonstration purposes only-->
+
 
           <h4>
 
@@ -18,7 +19,7 @@ variation_groups:
                 type="text"
                 id="textinput-example-default"
                 placeholder="Placeholder text"
-          value="Default">
+          value="Enabled">
 
           <br><br>
 
@@ -41,7 +42,12 @@ variation_groups:
                  id="textinput-example-disabled"
                  placeholder="Disabled"
                  disabled>
-          <br><br>
+          <br>
+
+          <br>
+
+          <br>
+
 
           <h4>
 
@@ -49,13 +55,15 @@ variation_groups:
 
           </h4>
 
-          <input class="a-text-input a-text-input__success" type="text" placeholder="Success" id="form-input-success" aria-describedby="form-input-success_message">
+          <input class="a-text-input a-text-input--success" type="text" placeholder="Success" id="form-input-success" aria-describedby="form-input-success_message">
 
           <br><br>
-           <input class="a-text-input a-text-input__warning" type="text" placeholder="Warning" id="form-input-warning" aria-describedby="form-input-warning_message">
+
+          <input class="a-text-input a-text-input--warning" type="text" placeholder="Warning" id="form-input-warning" aria-describedby="form-input-warning_message">
+
           <br><br>
 
-          <input class="a-text-input a-text-input__error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
+          <input class="a-text-input a-text-input--error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
         variation_specs: ''
         variation_name: Text input
         variation_description:
@@ -68,21 +76,26 @@ variation_groups:
         variation_name: Text input (full width)
         variation_code_snippet: |-
           <div class="m-form-field">
-              <input class="a-text-input a-text-input__full"
+              <input class="a-text-input a-text-input--full"
                     type="text"
                     id="full-textinput-example"
-                    placeholder="Placeholder text"
-                    value="Input text">
+          placeholder="Placeholder text"
+          value="Input text">
           </div>
       - variation_is_deprecated: false
         variation_name: Text input (with button)
         variation_description: Use for simple forms where a full filter isn’t necessary.
         variation_code_snippet: |-
-          <div class="o-form__input-w-btn">
-              <div class="o-form__input-w-btn_input-container">
-                  <input class="a-text-input" type="text" title="Test input">
+          <div class="o-form--input-w-btn">
+              <div class="o-form--input-w-btn__input-container">
+          <input class="a-text-input a-text-input--full"
+                    type="text"
+                    id="full-textinput-w-btn-example"
+          placeholder="Placeholder text"
+          value="Input text">
+
               </div>
-              <div class="o-form__input-w-btn_btn-container">
+              <div class="o-form--input-w-btn__btn-container">
                   <button class="a-btn">Search</button>
               </div>
           </div>
@@ -97,36 +110,36 @@ variation_groups:
                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
                   title="Test input"
                   class="a-text-input">
-              <button class="a-btn a-btn__link">
+              <button class="a-btn a-btn--link">
                   {% include icons/error.svg %}
                   <span class="u-visually-hidden">Clear</span>
               </button>
           </div>
       - variation_is_deprecated: false
-        variation_name: Button inside text input with another button
+        variation_name: Button inside text input (with button)
         variation_description:
           This example combines both of the previous patterns,
           creating a typical site search form.
         variation_code_snippet: >-
-          <div class="o-form__input-w-btn">
-              <div class="o-form__input-w-btn_input-container">
+          <div class="o-form--input-w-btn">
+              <div class="o-form--input-w-btn__input-container">
                   <div class="m-btn-inside-input">
                       <input type="text"
                           value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
                           title="Test input"
                           class="a-text-input">
-                      <button class="a-btn a-btn__link">
+                      <button class="a-btn a-btn--link">
                           {% include icons/error.svg %}
                           <span class="u-visually-hidden">Clear</span>
                       </button>
                   </div>
               </div>
-              <div class="o-form__input-w-btn_btn-container">
+              <div class="o-form--input-w-btn__btn-container">
                   <button class="a-btn">Search</button>
               </div>
           </div>
     variation_group_description: ''
-  - variation_group_name: Text area inputs
+  - variation_group_name: Text area input
     variations:
       - variation_is_deprecated: false
         variation_name: Text area input
@@ -144,9 +157,9 @@ variation_groups:
         variation_name: Text area input (full width)
         variation_description: |-
           <div class="m-form-field">
-              <textarea class="a-text-input a-text-input__full"
+              <textarea class="a-text-input a-text-input--full"
                         id="full-textarea-example"
-                        placeholder="Placeholder text">Input text</textarea>
+                     placeholder="Placeholder text">Input text</textarea>
           </div>
 guidelines: >-
   ### Stylistic guidelines

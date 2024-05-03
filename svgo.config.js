@@ -22,7 +22,7 @@ export default {
     },
     {
       name: 'addClassesToSVGElement',
-      params: { className: 'cf-icon-svg', suffixPattern: '__$FILENAME' },
+      params: { className: 'cf-icon-svg', suffixPattern: '--$FILENAME' },
       fn: addClassesToSVGElement.fn,
     },
   ],

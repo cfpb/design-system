@@ -22,14 +22,12 @@
 
 // Mixin to inject an SVG from the ./icons/ directory
 // into a background-image property.
-@plugin "icons-svg-inline";
+@plugin "icons-svg-inline.cjs";
 
-.u-svg-inline-bg( @name, @color: @black ) {
-  @red: red(@color);
-  @green: green(@color);
-  @blue: blue(@color);
-  @rgb-color: 'rgb(@{red}, @{green}, @{blue})';
-  @svg: icons-svg-inline(@name, @rgb-color);
+/* stylelint-disable selector-class-pattern */
+.u-svg-inline-bg( @name, @is-grayscale: false ) {
+  /* stylelint-enable */
+  @svg: icons-svg-inline(@name, @is-grayscale);
 
   background-image: url('data:image/svg+xml;charset=UTF-8,@{svg}');
 }
@@ -43,8 +41,8 @@
   vertical-align: text-top;
   fill: currentcolor;
 
-  &__updating,
-  &__updating-round {
+  &--updating,
+  &--updating-round {
     animation: updating-animation 1.25s infinite linear;
     transform-origin: 50% 50%;
   }
@@ -62,38 +60,38 @@
 // Right-to-left (RTL) certain icons on arabic pages.
 html[lang='ar'] {
   .cf-icon-svg {
-    &__right,
-    &__right-round,
-    &__left,
-    &__left-round,
-    &__arrow-right,
-    &__arrow-right-round,
-    &__arrow-left,
-    &__arrow-left-round,
-    &__help,
-    &__help-round,
-    &__book,
-    &__book-round,
-    &__document,
-    &__document-round,
-    &__edit,
-    &__edit-round,
-    &__paper-clip,
-    &__paper-clip-round,
-    &__cart,
-    &__cart-round,
-    &__disability,
-    &__disability-round,
-    &__travel,
-    &__travel-round,
-    &__bullhorn,
-    &__bullhorn-round,
-    &__chart,
-    &__chart-round,
-    &__list,
-    &__list-round,
-    &__external-link,
-    &__external-link-round {
+    &--right,
+    &--right-round,
+    &--left,
+    &--left-round,
+    &--arrow-right,
+    &--arrow-right-round,
+    &--arrow-left,
+    &--arrow-left-round,
+    &--help,
+    &--help-round,
+    &--book,
+    &--book-round,
+    &--document,
+    &--document-round,
+    &--edit,
+    &--edit-round,
+    &--paper-clip,
+    &--paper-clip-round,
+    &--cart,
+    &--cart-round,
+    &--disability,
+    &--disability-round,
+    &--travel,
+    &--travel-round,
+    &--bullhorn,
+    &--bullhorn-round,
+    &--chart,
+    &--chart-round,
+    &--list,
+    &--list-round,
+    &--external-link,
+    &--external-link-round {
       transform: scaleX(-1);
     }
   }

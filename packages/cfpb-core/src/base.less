@@ -10,7 +10,7 @@
 body {
   color: @text;
   font-family: @font-stack;
-  font-size: unit((@base-font-size-px / 16 * 100), %);
+  font-size: unit(@base-font-size-px / 16 * 100, %);
   line-height: @base-line-height;
   -webkit-font-smoothing: antialiased;
 }
@@ -29,66 +29,78 @@ b {
   font-weight: 600;
 }
 
+/* stylelint-disable selector-class-pattern */
 .heading-1( @fs: @size-i ) {
+  /* stylelint-enable */
   @font-size: @fs;
 
-  margin-bottom: unit((15px / @font-size), em);
-  font-size: unit((@font-size / @base-font-size-px), em);
+  margin-bottom: unit(15px / @font-size, em);
+  font-size: unit(@font-size / @base-font-size-px, em);
   font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
 }
 
+/* stylelint-disable selector-class-pattern */
 .heading-2( @fs: @size-ii ) {
+  /* stylelint-enable */
   @font-size: @fs;
 
-  margin-bottom: unit((15px / @font-size), em);
-  font-size: unit((@font-size / @base-font-size-px), em);
+  margin-bottom: unit(15px / @font-size, em);
+  font-size: unit(@font-size / @base-font-size-px, em);
   font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
 }
 
+/* stylelint-disable selector-class-pattern */
 .heading-3( @fs: @size-iii ) {
+  /* stylelint-enable */
   @font-size: @fs;
 
-  margin-bottom: unit((15px / @font-size), em);
-  font-size: unit((@font-size / @base-font-size-px), em);
+  margin-bottom: unit(15px / @font-size, em);
+  font-size: unit(@font-size / @base-font-size-px, em);
   font-weight: normal;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
 }
 
+/* stylelint-disable selector-class-pattern */
 .heading-4( @fs: @size-iv ) {
+  /* stylelint-enable */
   @font-size: @fs;
 
-  margin-bottom: unit((15px / @font-size), em);
-  font-size: unit((@font-size / @base-font-size-px), em);
+  margin-bottom: unit(15px / @font-size, em);
+  font-size: unit(@font-size / @base-font-size-px, em);
   font-weight: 500;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
 }
 
-.heading-5( @fs: @size-v, @text-shadow: @text ) {
+/* stylelint-disable selector-class-pattern */
+.heading-5( @fs: @size-v ) {
+  /* stylelint-enable */
   @font-size: @fs;
 
-  margin-bottom: unit((15px / @font-size), em);
-  font-size: unit((@font-size / @base-font-size-px), em);
+  margin-bottom: unit(15px / @font-size, em);
+  font-size: unit(@font-size / @base-font-size-px, em);
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 1.25;
   text-transform: uppercase;
 }
 
-.heading-6( @fs: @size-vi, @text-shadow: @text ) {
+/* stylelint-disable selector-class-pattern */
+.heading-6( @fs: @size-vi ) {
+  /* stylelint-enable */
   @font-size: @fs;
 
-  margin-bottom: unit((15px / @font-size), em);
-  font-size: unit((@font-size / @base-font-size-px), em);
+  margin-bottom: unit(15px / @font-size, em);
+  font-size: unit(@font-size / @base-font-size-px, em);
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 1.25;
@@ -117,7 +129,7 @@ h1,
   img + &,
   table + &,
   blockquote + & {
-    margin-top: unit((60px / @font-size), em);
+    margin-top: unit(60px / @font-size, em);
   }
 
   // Mobile only.
@@ -132,7 +144,7 @@ h1,
     img + &,
     table + &,
     blockquote + & {
-      margin-top: unit( ( 45px / @font-size ), em );
+      margin-top: unit(45px / @font-size, em );
     }
 
     h2 + &,
@@ -145,7 +157,7 @@ h1,
     .h5 + &,
     h6 + &,
     .h6 + & {
-      margin-top: unit( ( 30px / @font-size ), em );
+      margin-top: unit(30px / @font-size, em );
     }
   });
 }
@@ -162,7 +174,7 @@ h2,
   img + &,
   table + &,
   blockquote + & {
-    margin-top: unit((45px / @font-size), em);
+    margin-top: unit(45px / @font-size, em);
   }
 
   h1 + &,
@@ -175,7 +187,7 @@ h2,
   .h5 + &,
   h6 + &,
   .h6 + & {
-    margin-top: unit((30px / @font-size), em);
+    margin-top: unit(30px / @font-size, em);
   }
 
   // Mobile only.
@@ -190,7 +202,7 @@ h2,
     img + &,
     table + &,
     blockquote + & {
-      margin-top: unit( ( 30px / @font-size ), em );
+      margin-top: unit(30px / @font-size, em );
     }
   });
 }
@@ -217,7 +229,7 @@ h3,
   .h5 + &,
   h6 + &,
   .h6 + & {
-    margin-top: unit((30px / @font-size), em);
+    margin-top: unit(30px / @font-size, em);
   }
 
   // Mobile only.
@@ -248,16 +260,16 @@ h4,
   .h5 + &,
   h6 + &,
   .h6 + & {
-    margin-top: unit((30px / @font-size), em);
+    margin-top: unit(30px / @font-size, em);
   }
 
   // Mobile only.
   .respond-to-max(@bp-xs-max, {
     @h4-font-size-on-xs: @base-font-size-px;
 
-    margin-bottom: unit( ( 10px / @h4-font-size-on-xs ), em );
-    font-size: unit( ( @h4-font-size-on-xs / @base-font-size-px ), em );
-    line-height: unit( ( 18px / @h4-font-size-on-xs) );
+    margin-bottom: unit(10px / @h4-font-size-on-xs, em );
+    font-size: unit(@h4-font-size-on-xs / @base-font-size-px, em );
+    line-height: unit(18px / @h4-font-size-on-xs);
   });
 }
 
@@ -283,7 +295,7 @@ h5,
   .h4 + &,
   h6 + &,
   .h6 + & {
-    margin-top: unit((30px / @font-size), em);
+    margin-top: unit(30px / @font-size, em);
   }
 }
 
@@ -309,7 +321,7 @@ h6,
   .h4 + &,
   h5 + &,
   .h5 + & {
-    margin-top: unit((30px / @font-size), em);
+    margin-top: unit(30px / @font-size, em);
   }
 }
 
@@ -322,7 +334,7 @@ h6,
   // Mobile only.
   .respond-to-max(@bp-xs-max, {
     // Use the same regular weight but reduce the sizes to h4 size
-    font-size: unit( ( 18px / @base-font-size-px ), em );
+    font-size: unit(18px / @base-font-size-px, em );
   });
 }
 
@@ -330,8 +342,8 @@ h6,
   // For when you want a heading that's bigger than a normal H1
   @font-size: @size-xl;
 
-  margin-bottom: unit((20px / @font-size), em);
-  font-size: unit((@font-size / @base-font-size-px), em);
+  margin-bottom: unit(20px / @font-size, em);
+  font-size: unit(@font-size / @base-font-size-px, em);
   font-weight: normal;
   line-height: 1.25;
 }
@@ -348,7 +360,7 @@ figure,
 table,
 blockquote {
   margin-top: 0;
-  margin-bottom: unit((15px / @base-font-size-px), em);
+  margin-bottom: unit(15px / @base-font-size-px, em);
 
   &:last-child {
     margin-bottom: 0;
@@ -357,18 +369,18 @@ blockquote {
 
 p + ul,
 p + ol {
-  margin-top: unit((-5px / @base-font-size-px), em);
+  margin-top: unit(-5px / @base-font-size-px, em);
 }
 
 ul ul,
 ol ol,
 ul ol,
 ol ul {
-  margin-top: unit((8px / @base-font-size-px), em);
+  margin-top: unit(8px / @base-font-size-px, em);
 }
 
 li {
-  margin-bottom: unit((8px / @base-font-size-px), em);
+  margin-bottom: unit(8px / @base-font-size-px, em);
 
   &:last-child,
   nav & {
@@ -449,7 +461,7 @@ nav a {
 //
 
 ul {
-  padding-left: unit((18px / @base-font-size-px), em);
+  padding-left: unit(18px / @base-font-size-px, em);
   list-style: square;
 }
 
@@ -460,12 +472,12 @@ ul ul {
 ol {
   // Slightly larger than necessary, but this is the minimum value
   // for numbers to not be partially in the margin in Internet Explorer.
-  padding-left: unit((21px / @base-font-size-px), em);
+  padding-left: unit(21px / @base-font-size-px, em);
 
   li:nth-last-child(n + 10),
   li:nth-last-child(n + 10) ~ li {
     // 0.5625rem
-    margin-left: unit((9px / @base-font-size-px), rem);
+    margin-left: unit(9px / @base-font-size-px, rem);
   }
 }
 
@@ -490,20 +502,20 @@ nav ol ol {
 //
 
 caption {
-  margin-bottom: unit((10px / @base-font-size-px), em);
+  margin-bottom: unit(10px / @base-font-size-px, em);
   text-align: left;
 }
 
 th,
 td {
-  padding: unit((10px / @base-font-size-px), em);
+  padding: unit(10px / @base-font-size-px, em);
 
   thead & {
     // 10px / 14px
-    padding: unit((10px / @size-v), em);
+    padding: unit(10px / @size-v, em);
     background: @table-head-bg;
     color: @table-head-text;
-    font-size: unit((16px / @base-font-size-px), em);
+    font-size: unit(16px / @base-font-size-px, em);
     vertical-align: top;
   }
 }
@@ -545,13 +557,13 @@ th {
 //
 
 blockquote {
-  margin-right: unit((15px / @base-font-size-px), em);
-  margin-left: unit((15px / @base-font-size-px), em);
+  margin-right: unit(15px / @base-font-size-px, em);
+  margin-left: unit(15px / @base-font-size-px, em);
 
   // Tablet and above.
   .respond-to-min(@bp-sm-min, {
-    margin-right: unit( ( 30px / @base-font-size-px ), em );
-    margin-left: unit( ( 30px / @base-font-size-px ), em );
+    margin-right: unit(30px / @base-font-size-px, em );
+    margin-left: unit(30px / @base-font-size-px, em );
   });
 }
 
@@ -596,14 +608,14 @@ code {
 }
 
 code {
-  padding: unit((3px / @size-code), em) unit((3px / @size-code), em) 0;
-  font-size: unit((@size-code / @base-font-size-px), em);
+  padding: unit(3px / @size-code, em) unit(3px / @size-code, em) 0;
+  font-size: unit(@size-code / @base-font-size-px, em);
 }
 
 pre {
   display: block;
-  padding: unit((10px / @base-font-size-px), em)
-    unit((15px / @base-font-size-px), em);
+  padding: unit(10px / @base-font-size-px, em)
+    unit(15px / @base-font-size-px, em);
   white-space: pre-wrap;
   overflow-wrap: break-word;
 

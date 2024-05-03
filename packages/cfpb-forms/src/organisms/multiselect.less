@@ -3,30 +3,30 @@ select.o-multiselect {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: unit((7px / @base-font-size-px), em);
+  padding: unit(7px / @base-font-size-px, em);
 
   // Fixed height breaks the bottom border
   // mid-character to indicate there's more content.
   height: 5.5em;
-  padding-top: unit((4px / @base-font-size-px), em);
-  padding-bottom: unit((4px / @base-font-size-px), em);
+  padding-top: unit(4px / @base-font-size-px, em);
+  padding-bottom: unit(4px / @base-font-size-px, em);
   border: 1px solid @select-border;
 
   option {
-    padding: unit((2px / @base-font-size-px), em)
-      unit((6px / @base-font-size-px), em);
+    padding: unit(2px / @base-font-size-px, em)
+      unit(6px / @base-font-size-px, em);
   }
 }
 
 .o-multiselect {
   position: relative;
 
-  &_header {
+  &__header {
     position: relative;
 
     &::after {
       // Arrow box width must be odd size to properly center the bg image
-      width: unit((@select-height / @base-font-size-px), em);
+      width: unit(@select-height / @base-font-size-px, em);
       box-sizing: border-box;
       border-left: 1px solid @select-border;
       position: absolute;
@@ -45,14 +45,14 @@ select.o-multiselect {
     }
   }
 
-  &_search[type='text'] {
+  &__search[type='text'] {
     display: block;
 
     box-sizing: border-box;
     width: 100%;
   }
 
-  &_fieldset {
+  &__fieldset {
     // Resets
     border-color: @input-border;
     border-top: none;
@@ -74,26 +74,26 @@ select.o-multiselect {
   }
 
   &.u-active {
-    .o-multiselect_fieldset {
+    .o-multiselect__fieldset {
       margin-top: 0;
       // This needs to match the value set in _bindEvents in Multiselect.js.
       // See https://github.com/cfpb/design-system/blob/4d26d5af04317bcc00b4677aa866fe8d526e82e0/packages/cfpb-forms/src/organisms/Multiselect.js#L340
       max-height: 140px;
 
-      border-color: @pacific;
+      border-color: var(--pacific);
       border-width: 2px;
       border-top: 0;
     }
 
     // Reverse arrow when search drop-down is open.
-    .o-multiselect_header::after {
+    .o-multiselect__header::after {
       .u-svg-inline-bg( 'up' );
     }
   }
 
-  &_options {
+  &__options {
     list-style-type: none;
-    background-color: @white;
+    background-color: var(--white);
     padding: 0;
 
     li {
@@ -102,7 +102,7 @@ select.o-multiselect {
 
     li:first-child {
       .a-label {
-        padding-top: unit((10px / @base-font-size-px), em);
+        padding-top: unit(10px / @base-font-size-px, em);
       }
     }
 
@@ -126,7 +126,7 @@ select.o-multiselect {
     }
 
     &.u-max-selections {
-      padding: unit((10px / @base-font-size-px), em);
+      padding: unit(10px / @base-font-size-px, em);
       pointer-events: none;
 
       &::after {
@@ -136,19 +136,19 @@ select.o-multiselect {
 
     .a-label {
       box-sizing: border-box;
-      padding-top: unit((5px / @base-font-size-px), em);
+      padding-top: unit(5px / @base-font-size-px, em);
       padding-right: 0;
-      padding-bottom: unit((5px / @base-font-size-px), em);
-      padding-left: unit((10px / @base-font-size-px), em);
+      padding-bottom: unit(5px / @base-font-size-px, em);
+      padding-left: unit(10px / @base-font-size-px, em);
       width: 100%;
     }
   }
 
-  &_choices {
+  &__choices {
     padding-left: 0;
     // The following is required to make side-by-side LI
     // have a space between them.
-    margin-right: unit((-10px / @base-font-size-px), em);
+    margin-right: unit(-10px / @base-font-size-px, em);
     margin-bottom: 0;
 
     li {
@@ -156,11 +156,11 @@ select.o-multiselect {
 
       // The following is required to make side-by-side LI
       // have a space between them.
-      margin-right: unit((10px / @base-font-size-px), em);
+      margin-right: unit(10px / @base-font-size-px, em);
     }
 
     li:last-child {
-      margin-bottom: unit((10px / @base-font-size-px), em);
+      margin-bottom: unit(10px / @base-font-size-px, em);
     }
 
     button {
@@ -170,21 +170,21 @@ select.o-multiselect {
       text-align: left;
 
       &:focus {
-        border-radius: unit((3px / @size-v), em);
-        outline: 1px dotted @teal;
+        border-radius: unit(3px / @size-v, em);
+        outline: 1px dotted var(--teal);
         outline-offset: 1px;
 
         label {
-          background-color: @teal-20;
+          background-color: var(--teal-20);
         }
       }
 
       &:hover label {
-        background-color: @teal-40;
+        background-color: var(--teal-40);
       }
 
       &:active label {
-        background-color: @teal-60;
+        background-color: var(--teal-60);
       }
     }
 
@@ -193,19 +193,19 @@ select.o-multiselect {
       padding: 4px 10px;
       padding-right: 25px;
 
-      background-color: @teal-20;
-      border-radius: unit((3px / @size-v), em);
-      border: 1px solid @teal;
-      color: @black;
+      background-color: var(--teal-20);
+      border-radius: unit(3px / @size-v, em);
+      border: 1px solid var(--teal);
+      color: var(--black);
       cursor: pointer;
-      font-size: unit((16px / @base-font-size-px), em);
+      font-size: unit(16px / @base-font-size-px, em);
       position: relative;
 
       &:hover {
-        background-color: @teal-40;
+        background-color: var(--teal-40);
 
         &::after {
-          color: @white;
+          color: var(--white);
         }
       }
 
@@ -214,7 +214,7 @@ select.o-multiselect {
         top: 4px;
         right: 5px;
         margin-left: 10px;
-        fill: @black;
+        fill: var(--black);
       }
     }
   }

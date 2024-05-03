@@ -1,6 +1,7 @@
 module.exports = {
   parserOptions: {
     sourceType: 'module',
+    ecmaVersion: 2020,
   },
   settings: {
     'import/resolver': {
@@ -24,6 +25,7 @@ module.exports = {
     'plugin:jsdoc/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
+    'plugin:cypress/recommended',
     'eslint-config-prettier',
   ],
   // Some plugins are automatically included.

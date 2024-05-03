@@ -2,7 +2,7 @@
 
     <hr>
 
-    <div class="block block__sub ds-footer_content">
+    <div class="block block--sub ds-footer__content">
         <p>
             <small>
                 We need your help keeping the Design System accurate and up-to-date!
@@ -12,23 +12,6 @@
                 <a href="https://github.com/{{ site.repository }}/issues/new?assignees=&labels=content&template=content_issues.md&title={{ page.title }}%3A+Add+issue+description">file an issue</a>.
                 If you have a substantial change to an existing page, or a new standard you want to add,
                 <a href="{{ '/updating-this-website/#creating-new-pages' | relative_url }}">follow these guidelines</a>.
-            </small>
-        </p>
-
-        <p>
-            <small>
-                <strong>Page last edited:</strong>
-                {% assign file_url_path = page.path | split: '/' | last %}
-                {% assign page_collection_name = 'pages' %}
-                {% if page.collection_name %}
-                    {% assign page_collection_name = page.collection_name %}
-                {% endif %}
-                {% assign file_url_path = page_collection_name | append: '/' | append: file_url_path %}
-                <a href="https://github.com/{{ site.repository }}/commits/main/docs/{{ file_url_path }}">
-                    <time datetime="{{ page.last_modified_at }}">
-                        {{ page.last_modified_at | date: "%l:%M:%S %p %b %d, %Y" }}
-                    </time>
-                </a>
             </small>
         </p>
     </div>

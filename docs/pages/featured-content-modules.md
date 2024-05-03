@@ -71,7 +71,7 @@ variation_groups:
           * Text is aligned to the left edge of the image.
       - variation_code_snippet: >-
           <section class="o-featured-content-module">
-              <div class="o-featured-content-module_text">
+              <div class="o-featured-content-module__text">
                   <h2>Featured content</h2>
                   <p>
                       Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
@@ -79,13 +79,13 @@ variation_groups:
                       commodo cu.
                   </p>
                   <a class="a-link
-                            a-link__jump
-                            a-link__icon-after-text">
-                      <span class="a-link_text">Read more about the feature</span>
+                            a-link--jump
+                            a-link--icon-after-text">
+                      <span class="a-link__text">Read more about the feature</span>
                   </a>
               </div>
-              <div class="o-featured-content-module_visual">
-                  <img class="o-featured-content-module_img"
+              <div class="o-featured-content-module__visual">
+                  <img class="o-featured-content-module__img"
                       src="https://dummyimage.com/1076x606/addc91/101820"
                       alt="">
               </div>
@@ -101,8 +101,8 @@ variation_groups:
         variation_name: Visual anchored on the right (default)
       - variation_code_snippet: >-
           <section class="o-featured-content-module
-                          o-featured-content-module__left">
-              <div class="o-featured-content-module_text">
+                          o-featured-content-module--left">
+              <div class="o-featured-content-module__text">
                   <h2>Featured content</h2>
                   <p>
                       Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur
@@ -110,19 +110,19 @@ variation_groups:
                       commodo cu.
                   </p>
                   <a class="a-link
-                            a-link__jump
-                            a-link__icon-after-text">
-                      <span class="a-link_text">Read more about the feature</span>
+                            a-link--jump
+                            a-link--icon-after-text">
+                      <span class="a-link__text">Read more about the feature</span>
                   </a>
               </div>
-              <div class="o-featured-content-module_visual">
-                  <img class="o-featured-content-module_img"
+              <div class="o-featured-content-module__visual">
+                  <img class="o-featured-content-module__img"
                       src="https://dummyimage.com/1076x606/addc91/101820"
                       alt="">
               </div>
           </section>
         variation_description: >-
-          Adding the `o-featured-content-module__left` modifier places the
+          Adding the `o-featured-content-module--left` modifier places the
           visual to the left of the text and doesn't include a background
           color or border.
         variation_name: Left-anchored visual

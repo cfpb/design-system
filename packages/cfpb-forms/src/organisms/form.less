@@ -1,16 +1,16 @@
 .o-form {
-  &_group {
-    margin-bottom: unit((30px / @base-font-size-px), em);
+  &__group {
+    margin-bottom: unit(30px / @base-font-size-px, em);
   }
 
-  &_fieldset {
+  &__fieldset {
     // Overwrite Normalize.
     border: none;
     margin: 0;
     padding: 0;
 
     .m-form-field + .m-form-field {
-      margin-top: unit((10px / @base-font-size-px), em);
+      margin-top: unit(10px / @base-font-size-px, em);
     }
   }
 
@@ -18,16 +18,16 @@
   // Input with button
   //
 
-  &__input-w-btn {
+  &--input-w-btn {
     .respond-to-min( 480px, {
-      .grid_nested-col-group();
+      .grid__nested-col-group();
     });
 
-    &_input-container {
-      margin-bottom: unit((15px / @base-font-size-px), em);
+    &__input-container {
+      margin-bottom: unit(15px / @base-font-size-px, em);
 
       .respond-to-min( 480px, {
-        .grid_column( 9 );
+        .grid__column( 9 );
 
         border-right-width: 0;
       });
@@ -40,21 +40,20 @@
       // TODO: The same top margin is applied to field-level errors for
       // regular forms in molecules/form-fields.less; we should find a way
       // to merge these to be less repetitive.
-      .a-form-alert,
-      .a-error-message {
-        margin-top: unit((@grid_gutter-width / 2 / @base-font-size-px), em);
+      .a-form-alert {
+        margin-top: unit(@grid_gutter-width / 2 / @base-font-size-px, em);
       }
     }
 
-    &_btn-container {
-      margin-bottom: unit((15px / @base-font-size-px), em);
+    &__btn-container {
+      margin-bottom: unit(15px / @base-font-size-px, em);
 
       .a-btn {
         width: 100%;
       }
 
       .respond-to-min( 480px, {
-        .grid_column( 3 );
+        .grid__column( 3 );
         border-left: 0;
         .a-btn {
           border-top-left-radius: 0;

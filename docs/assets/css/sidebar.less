@@ -10,19 +10,6 @@
   margin-top: 15px;
 }
 
-.ds-nav__subnav {
-  & .h5,
-  & ul {
-    margin-left: 15px;
-  }
-
-  & .h6 {
-    margin-left: 30px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-  }
-}
-
 // Tablet and above.
 .respond-to-min(@bp-sm-min, {
 
@@ -35,7 +22,7 @@
     display: none;
   }
 
-  .ds-nav-container > .m-list > .m-list_item {
+  .ds-nav-container > .m-list > .m-list__item {
     margin-bottom: 15px;
   }
 
@@ -44,7 +31,7 @@
   }
 
   .ds-nav-1 {
-    border-bottom: 1px solid @gray-40;
+    border-bottom: 1px solid var(--gray-40);
   }
 });
 
@@ -69,8 +56,8 @@
   }
 
   .ds-nav-container {
-    border-top: 1px solid @gray-40;
-    border-bottom: 1px solid @gray-40;
+    border-top: 1px solid var(--gray-40);
+    border-bottom: 1px solid var(--gray-40);
 
     & > summary {
       padding: 15px;
@@ -89,7 +76,7 @@
     }
   }
 
-  .ds-nav > .m-list > .m-list_item {
+  .ds-nav > .m-list > .m-list__item {
     margin-left: 10px;
   }
 });

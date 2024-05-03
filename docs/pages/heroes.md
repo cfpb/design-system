@@ -6,24 +6,24 @@ variation_groups:
   - variations:
       - variation_code_snippet: >-
           <section class="m-hero">
-              <div class="m-hero_wrapper">
-                  <div class="m-hero_text">
-                      <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
-                      <p class="m-hero_subhead">
+              <div class="m-hero__wrapper">
+                  <div class="m-hero__text">
+                      <h1 class="m-hero__heading">41 chars max for a one-line heading</h1>
+                      <p class="m-hero__subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
                           and 108-124 characters (two lines at 1230px)
                           following a two-line heading.
                       </p>
                   </div>
-                  <div class="m-hero_image-wrapper">
-                      <div class="m-hero_image"></div>
+                  <div class="m-hero__image-wrapper">
+                      <div class="m-hero__image"></div>
                   </div>
               </div>
           </section>
 
 
-          <!-- 
+          <!--
 
           Use CSS rules to modify the hero's background color, image and padding.
 
@@ -33,10 +33,10 @@ variation_groups:
           -->
 
            <style>
-                   .m-hero_wrapper {
+                   .m-hero__wrapper {
                      background-color: #d4e7e6;
                    }
-                  .m-hero_image {
+                  .m-hero__image {
                       background-image:
                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png');
                       background-image: -webkit-image-set(
@@ -52,25 +52,25 @@ variation_groups:
            </style>
         variation_code_snippet_rendered: >-
           <section class="m-hero" id="hero1">
-              <div class="m-hero_wrapper">
-                  <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">41 chars max for a one-line heading</p>
-                      <p class="m-hero_subhead">
+              <div class="m-hero__wrapper">
+                  <div class="m-hero__text">
+                      <p class="h1 m-hero__heading">41 chars max for a one-line heading</p>
+                      <p class="m-hero__subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
                           and 108-124 characters (two lines at 1230px)
                           following a two-line heading.
                       </p>
                   </div>
-                  <div class="m-hero_image-wrapper">
-                      <div class="m-hero_image"></div>
+                  <div class="m-hero__image-wrapper">
+                      <div class="m-hero__image"></div>
                   </div>
               </div>
               <style>
-                   #hero1 .m-hero_wrapper {
+                   #hero1 .m-hero__wrapper {
                      background-color: #d4e7e6;
                    }
-                  #hero1 .m-hero_image {
+                  #hero1 .m-hero__image {
                       background-image:
                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png');
                       background-image: -webkit-image-set(
@@ -98,7 +98,7 @@ variation_groups:
 
           * Use a transparent background.
 
-          * Export illustrations as PNG files. 
+          * Export illustrations as PNG files.
 
 
           #### Standard hero with illustration
@@ -160,17 +160,17 @@ variation_groups:
         variation_implementation: >+
           #### Bleeding illustrations
 
-          When using an illustration that bleeds top to bottom at larger screen sizes, add the `__bleeding` modifier to the hero and add an additional `m-hero_bleeding-image` as a sibling to `m-hero_image`.
+          When using an illustration that bleeds top to bottom at larger screen sizes, add the `--bleeding` modifier to the hero and add an additional `m-hero__bleeding-image` as a sibling to `m-hero__image`.
 
 
           #### Customizing illustrations
 
-          The illustration can be customized by setting the `background-image` property on the `.m-hero_image` element.
+          The illustration can be customized by setting the `background-image` property on the `.m-hero__image` element.
 
 
           #### Responsive behavior
 
-          On small screens (or where media queries are not supported), the text spans the full width of the `.m-hero_wrapper` and the illustration is displayed underneath.
+          On small screens (or where media queries are not supported), the text spans the full width of the `.m-hero__wrapper` and the illustration is displayed underneath.
 
 
           For larger screen sizes, media queries are used to position the illustration to the right of the text.
@@ -187,25 +187,25 @@ variation_groups:
           For implementation details and production specs, click on the "Show
           details" link.
         variation_code_snippet: >-
-          <section class="m-hero m-hero__overlay">
-              <div class="m-hero_wrapper">
-                  <div class="m-hero_text">
-                      <h1 class="m-hero_heading">41 chars max for a one-line heading</h1>
-                      <p class="m-hero_subhead">
+          <section class="m-hero m-hero--overlay">
+              <div class="m-hero__wrapper">
+                  <div class="m-hero__text">
+                      <h1 class="m-hero__heading">41 chars max for a one-line heading</h1>
+                      <p class="m-hero__subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
                           and 108-124 characters (two lines at 1230px)
                           following a two-line heading.
                       </p>
                   </div>
-                  <div class="m-hero_image-wrapper">
-                      <div class="m-hero_image"></div>
+                  <div class="m-hero__image-wrapper">
+                      <div class="m-hero__image"></div>
                   </div>
               </div>
           </section>
 
 
-          <!-- 
+          <!--
 
           Use CSS rules to modify the hero's background color, image and padding.
 
@@ -216,7 +216,7 @@ variation_groups:
 
 
           <style>
-              .m-hero_image {
+              .m-hero__image {
                   background-image:
                       url('https://dummyimage.com/600x250/addc91/101820');
                   background-image: -webkit-image-set(
@@ -231,7 +231,7 @@ variation_groups:
               }
 
               @media screen and (min-width: 37.5625em) {
-                  .m-hero_wrapper{
+                  .m-hero__wrapper{
                       background-image:
                           url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
                       background-image: -webkit-image-set(
@@ -246,23 +246,23 @@ variation_groups:
               }
           </style>
         variation_code_snippet_rendered: >-
-          <section class="m-hero m-hero__overlay" id="hero4">
-              <div class="m-hero_wrapper">
-                  <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">41 chars max for a one-line heading</p>
-                      <p class="m-hero_subhead">
+          <section class="m-hero m-hero--overlay" id="hero4">
+              <div class="m-hero__wrapper">
+                  <div class="m-hero__text">
+                      <p class="h1 m-hero__heading">41 chars max for a one-line heading</p>
+                      <p class="m-hero__subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
                           and 108-124 characters (two lines at 1230px)
                           following a two-line heading.
                       </p>
                   </div>
-                  <div class="m-hero_image-wrapper">
-                      <div class="m-hero_image"></div>
+                  <div class="m-hero__image-wrapper">
+                      <div class="m-hero__image"></div>
                   </div>
               </div>
               <style>
-                  #hero4 .m-hero_image {
+                  #hero4 .m-hero__image {
                       background-image:
                           url('https://dummyimage.com/600x250/addc91/101820');
                       background-image: -webkit-image-set(
@@ -277,7 +277,7 @@ variation_groups:
                   }
 
                   @media screen and (min-width: 37.5625em) {
-                      #hero4 .m-hero_wrapper{
+                      #hero4 .m-hero__wrapper{
                           background-image:
                               url('http://files.consumerfinance.gov/f/images/PC_hero.original.jpg');
                           background-image: -webkit-image-set(
@@ -310,7 +310,7 @@ variation_groups:
 
           * Photo dimensions for small screens: 600px (exact) x 338px (maximum)
 
-          * Export photos as PNG files. 
+          * Export photos as PNG files.
 
 
           ![Image of larger photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_large.png "Image of larger photographic hero graphic with dimensions")
@@ -329,22 +329,22 @@ variation_groups:
           fills the right-most third of the element while using a gradient to
           seamlessly fade behind the text.
         variation_code_snippet: >-
-          <section class="m-hero m-hero__jumbo">
-              <div class="m-hero_wrapper">
-                  <div class="m-hero_text">
-                      <h1 class=m-hero_heading">50 chars max for a two-line heading</h1>
-                      <p class="m-hero_subhead">    
+          <section class="m-hero m-hero--jumbo">
+              <div class="m-hero__wrapper">
+                  <div class="m-hero__text">
+                      <h1 class=m-hero__heading">50 chars max for a two-line heading</h1>
+                      <p class="m-hero__subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
                   </div>
-                  <div class="m-hero_image-wrapper">
-                      <div class="m-hero_image"></div>
+                  <div class="m-hero__image-wrapper">
+                      <div class="m-hero__image"></div>
                   </div>
               </div>
           </section>
 
 
-          <!-- 
+          <!--
 
           Use CSS rules to modify the hero's background color, image and padding.
 
@@ -355,7 +355,7 @@ variation_groups:
 
 
           <style>
-              .m-hero_image {
+              .m-hero__image {
                   background-image:
                       url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
                   background-image: -webkit-image-set(
@@ -370,7 +370,7 @@ variation_groups:
               }
 
               @media screen and (min-width: 37.5625em) {
-                  .m-hero_wrapper {
+                  .m-hero__wrapper {
                       background-image:
                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
                       background-image: -webkit-image-set(
@@ -385,20 +385,20 @@ variation_groups:
               }
           </style>
         variation_code_snippet_rendered: >-
-          <section class="m-hero m-hero__jumbo" id="example-jumbo-hero">
-              <div class="m-hero_wrapper">
-                  <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">50 chars max for a two-line heading</p>
-                      <p class="m-hero_subhead">
+          <section class="m-hero m-hero--jumbo" id="example-jumbo-hero">
+              <div class="m-hero__wrapper">
+                  <div class="m-hero__text">
+                      <p class="h1 m-hero__heading">50 chars max for a two-line heading</p>
+                      <p class="m-hero__subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
                   </div>
-                  <div class="m-hero_image-wrapper">
-                      <div class="m-hero_image"></div>
+                  <div class="m-hero__image-wrapper">
+                      <div class="m-hero__image"></div>
                   </div>
               </div>
               <style>
-                  #example-jumbo-hero .m-hero_image {
+                  #example-jumbo-hero .m-hero__image {
                       background-image:
                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
                       background-image: -webkit-image-set(
@@ -413,7 +413,7 @@ variation_groups:
                   }
 
                   @media screen and (min-width: 37.5625em) {
-                      #example-jumbo-hero .m-hero_wrapper {
+                      #example-jumbo-hero .m-hero__wrapper {
                           background-image:
                               url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
                           background-image: -webkit-image-set(
@@ -428,13 +428,13 @@ variation_groups:
                       /* We're overriding some desktop jumbo hero CSS rules because the DS website
                           constrains the example jumbo hero into a narrow column, causing the
                           desktop CSS rules to be rendered against a narrow, non-desktop-sized hero. */
-                      #example-jumbo-hero .m-hero_wrapper {
+                      #example-jumbo-hero .m-hero__wrapper {
                           min-height: 0;
                       }
-                      #example-jumbo-hero .m-hero_heading {
+                      #example-jumbo-hero .m-hero__heading {
                           font-size: 2.125em;
                       }
-                      #example-jumbo-hero .m-hero_subheading {
+                      #example-jumbo-hero .m-hero__subheading {
                           font-size: 1.375em;
                       }
                   }
@@ -457,22 +457,22 @@ variation_groups:
           constrained layouts, white space will appear above and below the image
           in order to preserve its dimensions.
         variation_code_snippet: >-
-          <section class="m-hero m-hero__50-50">
-              <div class="m-hero_wrapper">
-                  <div class="m-hero_text">
-                      <h1 class="m-hero_heading">50 chars max for a two-line heading</h1>
-                      <p class="m-hero_subhead">    
+          <section class="m-hero m-hero--50-50">
+              <div class="m-hero__wrapper">
+                  <div class="m-hero__text">
+                      <h1 class="m-hero__heading">50 chars max for a two-line heading</h1>
+                      <p class="m-hero__subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
                   </div>
-                  <div class="m-hero_image-wrapper">
-                      <div class="m-hero_image"></div>
+                  <div class="m-hero__image-wrapper">
+                      <div class="m-hero__image"></div>
                   </div>
               </div>
           </section>
 
 
-          <!-- 
+          <!--
 
           Use CSS rules to modify the hero's background color, image and padding.
 
@@ -483,7 +483,7 @@ variation_groups:
 
 
           <style>
-              .m-hero_image {
+              .m-hero__image {
                   background-image:
                       url('/design-system/images/uploads/jumbo-hero-image.png');
                   background-image: -webkit-image-set(
@@ -498,7 +498,7 @@ variation_groups:
               }
 
               @media screen and (min-width: 37.5625em) {
-                  .m-hero_wrapper {
+                  .m-hero__wrapper {
                       background-image:
                           url('/design-system/images/uploads/jumbo-hero-image.png');
                       background-image: -webkit-image-set(
@@ -513,20 +513,20 @@ variation_groups:
               }
           </style>
         variation_code_snippet_rendered: >-
-          <section class="m-hero m-hero__50-50" id="example-hero-50-50">
-              <div class="m-hero_wrapper">
-                  <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">50 chars max for a two-line heading</p>
-                      <p class="m-hero_subhead">
+          <section class="m-hero m-hero--50-50" id="example-hero-50-50">
+              <div class="m-hero__wrapper">
+                  <div class="m-hero__text">
+                      <p class="h1 m-hero__heading">50 chars max for a two-line heading</p>
+                      <p class="m-hero__subhead">
                           This text has a recommended count of 140-175 characters (four lines at 1230px) following a two- or three-line heading.
                       </p>
                   </div>
-                  <div class="m-hero_image-wrapper">
-                      <div class="m-hero_image"></div>
+                  <div class="m-hero__image-wrapper">
+                      <div class="m-hero__image"></div>
                   </div>
               </div>
               <style>
-                  #example-hero-50-50 .m-hero_image {
+                  #example-hero-50-50 .m-hero__image {
                       background-image:
                           url('/design-system/images/uploads/jumbo-hero-image.png');
                       background-image: -webkit-image-set(
@@ -541,7 +541,7 @@ variation_groups:
                   }
 
                   @media screen and (min-width: 37.5625em) {
-                      #example-hero-50-50 .m-hero_wrapper {
+                      #example-hero-50-50 .m-hero__wrapper {
                           background-image:
                               url('/design-system/images/uploads/jumbo-hero-image.png');
                           background-image: -webkit-image-set(
@@ -556,21 +556,21 @@ variation_groups:
                       /* We're overriding some desktop jumbo hero CSS rules because the DS website
                           constrains the example jumbo hero into a narrow column, causing the
                           desktop CSS rules to be rendered against a narrow, non-desktop-sized hero. */
-                      #example-hero-50-50 .m-hero_wrapper {
+                      #example-hero-50-50 .m-hero__wrapper {
                           border-top: 1px solid #b4b5b6;
                           min-height: 0;
                       }
-                      #example-hero-50-50 .m-hero_heading {
+                      #example-hero-50-50 .m-hero__heading {
                           font-size: 2.125em;
                       }
-                      #example-hero-50-50 .m-hero_subheading {
+                      #example-hero-50-50 .m-hero__subheading {
                           font-size: 1.375em;
                       }
                   }
               </style>
           </section>
         variation_implementation:
-          50/50 heroes have a 1px `@gray-40` border on the sides
+          50/50 heroes have a 1px `var(--gray-40)` border on the sides
           because, unlike standard heroes, their background does not
           horizontally bleed to the edges of the screen.
         variation_specs: >-
@@ -593,25 +593,25 @@ variation_groups:
           this [example of a hero with knockout
           text](https://www.consumerfinance.gov/data-research/consumer-credit-trends/).
         variation_code_snippet: >-
-          <section class="m-hero m-hero__knockout">
-              <div class="m-hero_wrapper">
-                  <div class="m-hero_text">
-                      <h1 class="m-hero_heading">Max of 41 chars for a one-line heading</h1>
-                      <p class="m-hero_subhead">
+          <section class="m-hero m-hero--knockout">
+              <div class="m-hero__wrapper">
+                  <div class="m-hero__text">
+                      <h1 class="m-hero__heading">Max of 41 chars for a one-line heading</h1>
+                      <p class="m-hero__subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
                           and 108-124 characters (two lines at 1230px)
                           following a two-line heading.
                       </p>
                   </div>
-                  <div class="m-hero_image-wrapper">
-                      <div class="m-hero_image"></div>
+                  <div class="m-hero__image-wrapper">
+                      <div class="m-hero__image"></div>
                   </div>
               </div>
           </section>
 
 
-          <!-- 
+          <!--
 
           Use CSS rules to modify the hero's background color, image and padding.
 
@@ -622,11 +622,11 @@ variation_groups:
 
 
           <style>
-                  .m-hero__knockout {
+                  .m-hero--knockout {
                       background-color: #207676;
                   }
 
-                  .m-hero_image {
+                  .m-hero__image {
                       background-image:
                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
                       background-image: -webkit-image-set(
@@ -641,7 +641,7 @@ variation_groups:
                   }
 
                   @media screen and (min-width: 37.5625em) {
-                      .m-hero_image {
+                      .m-hero__image {
                           background-image:
                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
                           background-image: -webkit-image-set(
@@ -657,19 +657,19 @@ variation_groups:
                   }
           </style>
         variation_code_snippet_rendered: >-
-          <section class="m-hero m-hero__knockout" id="hero2">
-              <div class="m-hero_wrapper">
-                  <div class="m-hero_text">
-                      <p class="h1 m-hero_heading">Max of 41 chars for a one-line heading</p>
-                      <p class="m-hero_subhead">
+          <section class="m-hero m-hero--knockout" id="hero2">
+              <div class="m-hero__wrapper">
+                  <div class="m-hero__text">
+                      <p class="h1 m-hero__heading">Max of 41 chars for a one-line heading</p>
+                      <p class="m-hero__subhead">
                           This text has a recommended count of 165-186 characters
                           (three lines at 1230px) following a one-line heading
                           and 108-124 characters (two lines at 1230px)
                           following a two-line heading.
                       </p>
                   </div>
-                  <div class="m-hero_image-wrapper">
-                      <div class="m-hero_image"></div>
+                  <div class="m-hero__image-wrapper">
+                      <div class="m-hero__image"></div>
                   </div>
               </div>
               <style>
@@ -677,7 +677,7 @@ variation_groups:
                       background-color: #207676;
                   }
 
-                  #hero2 .m-hero_image {
+                  #hero2 .m-hero__image {
                       background-image:
                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
                       background-image: -webkit-image-set(
@@ -692,7 +692,7 @@ variation_groups:
                   }
 
                   @media screen and (min-width: 37.5625em) {
-                      #hero2 .m-hero_image {
+                      #hero2 .m-hero__image {
                           background-image:
                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
                           background-image: -webkit-image-set(

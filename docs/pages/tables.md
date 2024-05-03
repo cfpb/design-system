@@ -58,9 +58,9 @@ variation_groups:
       - variation_name: Responsive stacked table
         variation_description: >
           To stack table information on smaller screens and make the information
-          legible, use the `.o-table__stack-on-small` class.
+          legible, use the `.o-table--stack-on-small` class.
         variation_code_snippet: |-
-          <table class="o-table o-table__stack-on-small">
+          <table class="o-table o-table--stack-on-small">
               <thead>
                   <tr>
                       <th>Column 1</th>
@@ -105,11 +105,11 @@ variation_groups:
           At the small screen breakpoint, the first column (in the example shown below, employee names) become headers, and the remaining data points in the same row (phone number, email address) are stacked below.
 
 
-          The `.o-table__entry-header-on-small` class in addition to `.o-table__stack-on-small` class changes the first column to be styled as an entry header. This style requires both classes be added.
+          The `.o-table--entry-header-on-small` class in addition to `.o-table--stack-on-small` class changes the first column to be styled as an entry header. This style requires both classes be added.
         variation_code_snippet: |-
           <table class="o-table
-                        o-table__stack-on-small
-                        o-table__entry-header-on-small">
+                        o-table--stack-on-small
+                        o-table--entry-header-on-small">
               <thead>
                   <tr>
                       <th>Employee name</th>
@@ -144,9 +144,9 @@ variation_groups:
           structure, even on smaller screens.
 
 
-          The `.o-table-wrapper__scrolling` class must be added to the parent element of the `table` (by adding a wrapping `div`, in most cases). The `table` element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the o-table__striped class, below).
+          The `.o-table-wrapper--scrolling` class must be added to the parent element of the `table` (by adding a wrapping `div`, in most cases). The `table` element does not need additional markup in this case. The “Comparative with horizontal scroll” style also adds striped rows to the table contained within, and remains striped on small screens (unlike the o-table--striped class, below).
         variation_code_snippet: |-
-          <div class="o-table o-table-wrapper__scrolling">
+          <div class="o-table o-table-wrapper--scrolling">
               <table>
                   <thead>
                       <tr>
@@ -207,7 +207,7 @@ variation_groups:
         variation_specs: ''
   - variations:
       - variation_code_snippet: |-
-          <table class="o-table o-table__striped">
+          <table class="o-table o-table--striped">
               <thead>
                   <tr>
                       <th>Column 1</th>
@@ -245,34 +245,34 @@ variation_groups:
           table.
 
 
-          The `.o-table__striped` class adds stripes to the `table` rows. This striping is not visible on small screens.
+          The `.o-table--striped` class adds stripes to the `table` rows. This striping is not visible on small screens.
         variation_name: Striped table
       - variation_code_snippet: >-
-          <table class="o-table o-table__stack-on-small">
+          <table class="o-table o-table--stack-on-small">
               <thead>
                   <tr>
                       <th>Column 1</th>
                       <th>Column 2</th>
-                      <th  class="o-table_cell__right-align">Right-aligned column</th>
+                      <th  class="o-table__cell--right-align">Right-aligned column</th>
                   </tr>
               </thead>
               <tbody>
                   <tr>
                       <td data-label="Column 1">Row A</td>
                       <td data-label="Column 2">Cell A2</td>
-                      <td data-label="Right-aligned column" class="o-table_cell__right-align">$1.00</td>
+                      <td data-label="Right-aligned column" class="o-table__cell--right-align">$1.00</td>
                   </tr>
                   <tr>
                       <td data-label="Column 1">Row B</td>
                       <td data-label="Column 2">Cell B2</td>
-                      <td data-label="Right-aligned column" class="o-table_cell__right-align">$200.02</td>
+                      <td data-label="Right-aligned column" class="o-table__cell--right-align">$200.02</td>
                   </tr>
               </tbody>
           </table>
         variation_description: >-
           Right-align columns of numbers when they're quantities (counts, dollar
           amounts, percentages) or ordinals (ranks, item numbers). Use the
-          `.o-table_cell__right-align` class on a `td`.
+          `.o-table__cell--right-align` class on a `td`.
 
 
           Left-align columns of numbers when they're nominal (ZIP codes, room numbers) or non-numeric values (names, phrases).
@@ -315,7 +315,7 @@ variation_groups:
         variation_code_snippet: >-
           <!--Code from Design Manual
 
-          <table class="o-table o-table__stack-on-small">
+          <table class="o-table o-table--stack-on-small">
               <thead>
                   <tr>
                       <th class="u-w20pct">
@@ -332,7 +332,7 @@ variation_groups:
               <tbody>
                   <tr>
                       <td data-label="Type">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> Blog
+                          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> Blog
                       </td>
                       <td data-label="Title">
                           Three things to do before closing
@@ -343,7 +343,7 @@ variation_groups:
                   </tr>
                   <tr>
                       <td data-label="Type">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> News
+                          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> News
                       </td>
                       <td data-label="Title">
                           Electronic Mortgage Closings Can Benefit Consumers
@@ -359,7 +359,7 @@ variation_groups:
                   </tr>
                   <tr>
                       <td data-label="Type">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> Blog
+                          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--speech-bubble" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.112 1.112 0 0 1-1.108 1.108h-.792v1.762c0 .262-.182.362-.403.224L8.546 13.67h-6.47a1.112 1.112 0 0 1-1.108-1.108V5.286a1.112 1.112 0 0 1 1.108-1.108h10.848a1.112 1.112 0 0 1 1.108 1.108zm-1.9 1.677H2.868V8.07h9.264zm0 2.843H2.868v1.108h9.264z"/></svg> Blog
                       </td>
                       <td data-label="Title">
                           National Day of Civic Hacking 2015
@@ -374,28 +374,28 @@ variation_groups:
 
           <nav class="m-pagination" role="navigation" aria-label="Pagination">
               <a class="a-btn
-                        a-btn__disabled
-                        m-pagination_btn-prev">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.026 1.026 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
+                        a-btn--disabled
+                        m-pagination__btn-prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.026 1.026 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
                   Newer
               </a>
 
               <a class="a-btn
-                        m-pagination_btn-next" href="#">
+                        m-pagination__btn-next" href="#">
                   Older
-                  <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg__right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.025 1.025 0 0 1-.727.302z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.025 1.025 0 0 1-.727.302z"/></svg>
               </a>
-              <form class="m-pagination_form" action="#">
-                  <label class="m-pagination_label" for="m-pagination_current-page">
+              <form class="m-pagination__form" action="#">
+                  <label class="m-pagination__label" for="m-pagination__current-page">
                       Page
                       <span class="u-visually-hidden">
                           number out of 3 total pages
                       </span>
-                      <input class="m-pagination_current-page" id="m-pagination_current-page" name="page" type="number" min="1" max="3" inputmode="numeric" value="1">
+                      <input class="m-pagination__current-page" id="m-pagination__current-page" name="page" type="number" min="1" max="3" inputmode="numeric" value="1">
                       of 3
                   </label>
                   <button class="a-btn
-                                 a-btn__link
+                                 a-btn--link
                                  m-pagination_submit-btn" id="pagination_submit" type="submit">Go</button>
               </form>
           </nav>
@@ -410,7 +410,7 @@ variation_groups:
 
           Fixed-width columns at the 600 px breakpoint and less lose their custom widths and expand to full width. This is the same responsive pattern used for default tables at small screens.
         variation_code_snippet: |-
-          <table class="o-table o-table__stack-on-small">
+          <table class="o-table o-table--stack-on-small">
               <thead>
                   <tr>
                       <th class="u-w20pct">

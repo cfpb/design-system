@@ -13,35 +13,35 @@
 // Color variables
 
 // body
-@text: @black;
+@text: var(--black);
 
 // a
-@link-text: @pacific;
-@link-underline: @pacific;
-@link-text-visited: @teal;
-@link-underline-visited: @teal;
-@link-text-hover: @pacific-dark;
-@link-underline-hover: @pacific-dark;
-@link-text-active: @navy;
-@link-underline-active: @navy;
+@link-text: var(--pacific);
+@link-underline: var(--pacific);
+@link-text-visited: var(--teal);
+@link-underline-visited: var(--teal);
+@link-text-hover: var(--pacific-dark);
+@link-underline-hover: var(--pacific-dark);
+@link-text-active: var(--navy);
+@link-underline-active: var(--navy);
 
 // table
 @table-head-text: @text;
-@table-head-bg: @gray-5;
-@table-cell-bg: @white;
-@table-cell-bg_alt: @gray-5;
-@table-scrolling-border: @gray-40;
-@table-border: @gray;
+@table-head-bg: var(--gray-5);
+@table-cell-bg: var(--white);
+@table-cell-bg_alt: var(--gray-5);
+@table-scrolling-border: var(--gray-40);
+@table-border: var(--gray);
 
 // code
 @code-text: @text;
-@code-bg: @gray-5;
+@code-bg: var(--gray-5);
 
 // Sizing variables
 
 @base-font-size-px: 16px;
 @base-line-height-px: 22px;
-@base-line-height: unit((@base-line-height-px / @base-font-size-px));
+@base-line-height: unit(@base-line-height-px / @base-font-size-px);
 
 @size-xl: 48px; // Super-size
 

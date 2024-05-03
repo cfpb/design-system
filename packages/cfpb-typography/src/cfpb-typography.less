@@ -25,36 +25,29 @@
 // Running text elements
 
 // .a-date
-@date: @gray;
+@date: var(--gray);
 
 // .m-pull-quote
-@pull-quote_body: @black;
-@pull-quote_citation: @gray;
-
-// Headings
-
-// .a-heading__icon
-@heading__icon: @black;
-@heading__icon__hover: @link-text-hover;
+@pull-quote_body: var(--black);
+@pull-quote_citation: var(--gray);
 
 // Headers
 
 // .m-slug-header
-@slug-header_border__thin: @gray-40;
-@slug-header_border__thick: @green;
+@slug-header_border__thin: var(--gray-40);
+@slug-header_border__thick: var(--green);
 
 // Links
 
-// .a-link__jump
-@jump-link_bg: @gray-5;
-@jump-link_border: @gray-40;
+// .a-link--jump
+@jump-link_bg: var(--gray-5);
+@jump-link_border: var(--gray-40);
 
 //
 // Import atoms
 //
 
 @import (less) 'atoms/date.less';
-@import (less) 'atoms/headings.less';
 @import (less) 'atoms/links.less';
 @import (less) 'atoms/tagline.less';
 

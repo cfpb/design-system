@@ -22,9 +22,9 @@ const BASE_CLASS = 'o-summary';
  */
 function Summary(element) {
   const _dom = checkDom(element, BASE_CLASS);
-  const _hasMobileModifier = _dom.classList.contains(`${BASE_CLASS}__mobile`);
-  const _contentDom = _dom.querySelector(`.${BASE_CLASS}_content`);
-  const _btnDom = _dom.querySelector(`.${BASE_CLASS}_btn`);
+  const _hasMobileModifier = _dom.classList.contains(`${BASE_CLASS}--mobile`);
+  const _contentDom = _dom.querySelector(`.${BASE_CLASS}__content`);
+  const _btnDom = _dom.querySelector(`.${BASE_CLASS}__btn`);
   let _transition;
   let _flyout;
 

@@ -13,10 +13,10 @@
 
 // Color variables
 
-@table-cell-bg: @white;
-@table-cell-bg_alt: @gray-5;
-@table-scrolling-border: @gray-40;
-@table-border: @gray;
+@table-cell-bg: var(--white);
+@table-cell-bg_alt: var(--gray-5);
+@table-scrolling-border: var(--gray-40);
+@table-border: var(--gray);
 
 // Mixins
 .striped-table() {
@@ -28,11 +28,11 @@
   }
 }
 
-.o-table_cell__right-align {
+.o-table__cell--right-align {
   text-align: right;
 }
 
-.o-table-wrapper__scrolling {
+.o-table-wrapper--scrolling {
   box-sizing: border-box;
   overflow-y: hidden;
   table {
@@ -43,7 +43,7 @@
 
 // Tablet and above.
 .respond-to-min(@bp-sm-min, {
-  .o-table__striped {
+  .o-table--striped {
     .striped-table();
   }
 });
@@ -55,15 +55,15 @@
     width: 100%;
   }
 
-  .o-table__striped tr:nth-child(even) {
+  .o-table--striped tr:nth-child(even) {
     & > th,
     & > td {
       background: @table-cell-bg;
     }
   }
 
-  .o-table__stack-on-small {
-    border-top: 1px solid @gray-40;
+  .o-table--stack-on-small {
+    border-top: 1px solid var(--gray-40);
 
     tr,
     td,
@@ -89,22 +89,22 @@
       .heading-5();
       display: block;
       margin-top: 0;
-      margin-bottom: unit((5px / @base-font-size-px), em);
+      margin-bottom: unit(5px / @base-font-size-px, em);
       content: attr(data-label);
       line-height: 1.83333333;
     }
 
     td:last-child,
     [data-display-table='cell']:last-child {
-      margin-bottom: unit((30px / @base-font-size-px), em);
+      margin-bottom: unit(30px / @base-font-size-px, em);
     }
   }
 
-  .o-table__entry-header-on-small {
+  .o-table--entry-header-on-small {
     & > tbody td:first-child {
       padding-bottom: 0.75em;
       border-bottom: 1px solid @table-border;
-      margin-bottom: unit((10px / @base-font-size-px), em);
+      margin-bottom: unit(10px / @base-font-size-px, em);
       margin-top: 0;
       background-color: @table-head-bg;
       font-size: 1.125em;
@@ -118,7 +118,7 @@
 
     & > tbody > tr {
       border-bottom: none;
-      margin-bottom: unit((30px / @base-font-size-px), em);
+      margin-bottom: unit(30px / @base-font-size-px, em);
     }
   }
 }

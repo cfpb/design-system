@@ -25,10 +25,10 @@ use_cases: >-
   ```
 
   <div class="m-notification">
-      <span class="m-notification_icon cf-icon"></span>
-      <div class="m-notification_content" role="alert">
-          <div class="h4 m-notification_message">message</div>
-              <p class="h4 m-notification_explanation">
+      <span class="m-notification__icon cf-icon"></span>
+      <div class="m-notification__content" role="alert">
+          <div class="m-notification__message">message</div>
+              <p class="m-notification__explanation">
                 Please check the URL and try again.
               </p>
           </div>
@@ -61,13 +61,13 @@ use_cases: >-
 
   const NotificationMolecule = Molecule.extend( {
         classes: {
-          isVisible:   'm-notification__visible'
+          isVisible:   'm-notification--visible'
         },
 
         ui: {
           base:        '.m-notification',
-          explanation: '.m-notification_explanation',
-          message:     '.m-notification_message'
+          explanation: '.m-notification__explanation',
+          message:     '.m-notification__message'
         },
 
         initialize: function() {

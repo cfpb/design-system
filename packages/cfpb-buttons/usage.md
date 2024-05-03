@@ -41,27 +41,31 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ```
 // .btn
-@btn-text:                  @white;
-@btn-bg:                    @pacific;
-@btn-bg-hover:              @pacific-dark;
-@btn-bg-active:             @navy;
+@btn-text:                  var(--white);
+@btn-bg:                    var(--pacific);
+@btn-bg-hover:              var(--pacific-dark);
+@btn-bg-active:             var(--navy);
+@btn-divider:               var(--pacific-60);
 
 // .btn__secondary
-@btn__secondary-text:       @white;
-@btn__secondary-bg:         @gray;
-@btn__secondary-bg-hover:   @gray-dark;
-@btn__secondary-bg-active:  @black;
+@btn__secondary-text:       var(--white);
+@btn__secondary-bg:         var(--gray);
+@btn__secondary-bg-hover:   var(--gray-dark);
+@btn__secondary-bg-active:  var(--black);
+@btn__secondary-divider:    var(--gray-40);
 
 // .btn__warning
-@btn__warning-text:         @white;
-@btn__warning-bg:           @red-mid-dark;
-@btn__warning-bg-hover:     @red-dark;
-@btn__warning-bg-active:    @gray-dark;
+@btn__warning-text:         var(--white);
+@btn__warning-bg:           var(--red-mid-dark);
+@btn__warning-bg-hover:     var(--red-dark);
+@btn__warning-bg-active:    var(--gray-dark);
+@btn__warning-divider:      var(--red-60);
 
 // .btn__disabled
-@btn__disabled-text:        @gray;
-@btn__disabled-bg:          @gray-20;
-@btn__disabled-outline:     @gray-20;
+@btn__disabled-text:        var(--gray);
+@btn__disabled-bg:          var(--gray-20);
+@btn__disabled-outline:     var(--gray-20);
+@btn__disabled-divider:     var(--gray-60);
 ```
 
 ### Sizing variables
@@ -136,145 +140,145 @@ For accessibility reasons, use the semantic `<button>` instead of a link when po
 
 #### Default state
 
-<a href="#" class="a-btn a-btn__secondary">Anchor Tag</a>
-<button class="a-btn a-btn__secondary" title="Test button">Button Tag</button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__secondary">
+<a href="#" class="a-btn a-btn--secondary">Anchor Tag</a>
+<button class="a-btn a-btn--secondary" title="Test button">Button Tag</button>
+<input type="submit" value="Input Tag" class="a-btn a-btn--secondary">
 
 ```
-<a href="#" class="a-btn a-btn__secondary">Anchor Tag</a>
-<button class="a-btn a-btn__secondary" title="Test button">Button Tag</button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__secondary">
+<a href="#" class="a-btn a-btn--secondary">Anchor Tag</a>
+<button class="a-btn a-btn--secondary" title="Test button">Button Tag</button>
+<input type="submit" value="Input Tag" class="a-btn a-btn--secondary">
 ```
 
 #### Hovered state
 
-<a href="#" class="a-btn a-btn__secondary hover">Anchor Tag</a>
-<button class="a-btn a-btn__secondary hover" title="Test button">
+<a href="#" class="a-btn a-btn--secondary hover">Anchor Tag</a>
+<button class="a-btn a-btn--secondary hover" title="Test button">
 Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__secondary hover">
+<input type="submit" value="Input Tag" class="a-btn a-btn--secondary hover">
 
 ```
-<a href="#" class="a-btn a-btn__secondary hover">Anchor Tag</a>
-<button class="a-btn a-btn__secondary hover" title="Test button">
+<a href="#" class="a-btn a-btn--secondary hover">Anchor Tag</a>
+<button class="a-btn a-btn--secondary hover" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__secondary hover">
+<input type="submit" value="Input Tag" class="a-btn a-btn--secondary hover">
 ```
 
 #### Focused state
 
-<a href="#" class="a-btn a-btn__secondary focus">Anchor Tag</a>
-<button class="a-btn a-btn__secondary focus" title="Test button">
+<a href="#" class="a-btn a-btn--secondary focus">Anchor Tag</a>
+<button class="a-btn a-btn--secondary focus" title="Test button">
 Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__secondary focus">
+<input type="submit" value="Input Tag" class="a-btn a-btn--secondary focus">
 
 ```
-<a href="#" class="a-btn a-btn__secondary focus">Anchor Tag</a>
-<button class="a-btn a-btn__secondary focus" title="Test button">
+<a href="#" class="a-btn a-btn--secondary focus">Anchor Tag</a>
+<button class="a-btn a-btn--secondary focus" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__secondary focus">
+<input type="submit" value="Input Tag" class="a-btn a-btn--secondary focus">
 ```
 
 #### Active state
 
-<a href="#" class="a-btn a-btn__secondary active">Anchor Tag</a>
-<button class="a-btn a-btn__secondary active" title="Test button">
+<a href="#" class="a-btn a-btn--secondary active">Anchor Tag</a>
+<button class="a-btn a-btn--secondary active" title="Test button">
 Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__secondary active">
+<input type="submit" value="Input Tag" class="a-btn a-btn--secondary active">
 
 ```
-<a href="#" class="a-btn a-btn__secondary active">Anchor Tag</a>
-<button class="a-btn a-btn__secondary active" title="Test button">
+<a href="#" class="a-btn a-btn--secondary active">Anchor Tag</a>
+<button class="a-btn a-btn--secondary active" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__secondary active">
+<input type="submit" value="Input Tag" class="a-btn a-btn--secondary active">
 ```
 
 ### Destructive action button
 
 #### Default state
 
-<a href="#" class="a-btn a-btn__warning">Anchor Tag</a>
-<button class="a-btn a-btn__warning" title="Test button">
+<a href="#" class="a-btn a-btn--warning">Anchor Tag</a>
+<button class="a-btn a-btn--warning" title="Test button">
 Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__warning">
+<input type="submit" value="Input Tag" class="a-btn a-btn--warning">
 
 ```
-<a href="#" class="a-btn a-btn__warning">Anchor Tag</a>
-<button class="a-btn a-btn__warning" title="Test button">
+<a href="#" class="a-btn a-btn--warning">Anchor Tag</a>
+<button class="a-btn a-btn--warning" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__warning">
+<input type="submit" value="Input Tag" class="a-btn a-btn--warning">
 ```
 
 #### Hovered state
 
-<a href="#" class="a-btn a-btn__warning hover">Anchor Tag</a>
-<button class="a-btn a-btn__warning hover" title="Test button">
+<a href="#" class="a-btn a-btn--warning hover">Anchor Tag</a>
+<button class="a-btn a-btn--warning hover" title="Test button">
 Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__warning hover">
+<input type="submit" value="Input Tag" class="a-btn a-btn--warning hover">
 
 ```
-<a href="#" class="a-btn a-btn__warning hover">Anchor Tag</a>
-<button class="a-btn a-btn__warning hover" title="Test button">
+<a href="#" class="a-btn a-btn--warning hover">Anchor Tag</a>
+<button class="a-btn a-btn--warning hover" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__warning hover">
+<input type="submit" value="Input Tag" class="a-btn a-btn--warning hover">
 ```
 
 #### Focused state
 
-<a href="#" class="a-btn a-btn__warning focus">Anchor Tag</a>
-<button class="a-btn a-btn__warning focus" title="Test button">
+<a href="#" class="a-btn a-btn--warning focus">Anchor Tag</a>
+<button class="a-btn a-btn--warning focus" title="Test button">
 Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__warning focus">
+<input type="submit" value="Input Tag" class="a-btn a-btn--warning focus">
 
 ```
-<a href="#" class="a-btn a-btn__warning focus">Anchor Tag</a>
-<button class="a-btn a-btn__warning focus" title="Test button">
+<a href="#" class="a-btn a-btn--warning focus">Anchor Tag</a>
+<button class="a-btn a-btn--warning focus" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__warning focus">
+<input type="submit" value="Input Tag" class="a-btn a-btn--warning focus">
 ```
 
 #### Active state
 
-<a href="#" class="a-btn a-btn__warning active">Anchor Tag</a>
-<button class="a-btn a-btn__warning active" title="Test button">
+<a href="#" class="a-btn a-btn--warning active">Anchor Tag</a>
+<button class="a-btn a-btn--warning active" title="Test button">
 Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__warning active">
+<input type="submit" value="Input Tag" class="a-btn a-btn--warning active">
 
 ```
-<a href="#" class="a-btn a-btn__warning active">Anchor Tag</a>
-<button class="a-btn a-btn__warning active" title="Test button">
+<a href="#" class="a-btn a-btn--warning active">Anchor Tag</a>
+<button class="a-btn a-btn--warning active" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__warning active">
+<input type="submit" value="Input Tag" class="a-btn a-btn--warning active">
 ```
 
 ### Disabled button
 
 #### Default/hovered/active state
 
-<a href="#" class="a-btn a-btn__disabled">Anchor Tag</a>
-<button class="a-btn a-btn__disabled" title="Test button">Button Tag</button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__disabled">
+<a href="#" class="a-btn a-btn--disabled">Anchor Tag</a>
+<button class="a-btn a-btn--disabled" title="Test button">Button Tag</button>
+<input type="submit" value="Input Tag" class="a-btn a-btn--disabled">
 <button class="a-btn" disabled title="Test button">
 Button Tag w/ disabled attr
 </button>
 
 ```
-<a href="#" class="a-btn a-btn__disabled">Anchor Tag</a>
-<button class="a-btn a-btn__disabled" title="Test button">Button Tag</button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__disabled">
+<a href="#" class="a-btn a-btn--disabled">Anchor Tag</a>
+<button class="a-btn a-btn--disabled" title="Test button">Button Tag</button>
+<input type="submit" value="Input Tag" class="a-btn a-btn--disabled">
 <button class="a-btn" disabled title="Test button">
     Button Tag w/ disabled attr
 </button>
@@ -282,17 +286,17 @@ Button Tag w/ disabled attr
 
 #### Focused state
 
-<a href="#" class="a-btn a-btn__disabled focus">Anchor Tag</a>
-<button class="a-btn a-btn__disabled focus" title="Test button">Button Tag</button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__disabled focus">
+<a href="#" class="a-btn a-btn--disabled focus">Anchor Tag</a>
+<button class="a-btn a-btn--disabled focus" title="Test button">Button Tag</button>
+<input type="submit" value="Input Tag" class="a-btn a-btn--disabled focus">
 <button class="a-btn focus" disabled title="Test button">
 Button Tag w/ disabled attr
 </button>
 
 ```
-<a href="#" class="a-btn a-btn__disabled focus">Anchor Tag</a>
-<button class="a-btn a-btn__disabled focus" title="Test button">Button Tag</button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__disabled focus">
+<a href="#" class="a-btn a-btn--disabled focus">Anchor Tag</a>
+<button class="a-btn a-btn--disabled focus" title="Test button">Button Tag</button>
+<input type="submit" value="Input Tag" class="a-btn a-btn--disabled focus">
 <button class="a-btn focus" disabled title="Test button">
     Button Tag w/ disabled attr
 </button>
@@ -364,100 +368,100 @@ Button Tag
 
 _Reduce screen size to see these in action_
 
-<a href="#" class="a-btn a-btn__full-on-xs">Anchor Tag</a>
+<a href="#" class="a-btn a-btn--full-on-xs">Anchor Tag</a>
 
-<button class="a-btn a-btn__full-on-xs" title="Test button">
+<button class="a-btn a-btn--full-on-xs" title="Test button">
     Button Tag
 </button>
 
-<input type="submit" value="Input Tag" class="a-btn a-btn__full-on-xs">
+<input type="submit" value="Input Tag" class="a-btn a-btn--full-on-xs">
 
 ```
-<a href="#" class="a-btn a-btn__full-on-xs">Anchor Tag</a>
-<button class="a-btn a-btn__full-on-xs" title="Test button">
+<a href="#" class="a-btn a-btn--full-on-xs">Anchor Tag</a>
+<button class="a-btn a-btn--full-on-xs" title="Test button">
     Button Tag
 </button>
-<input type="submit" value="Input Tag" class="a-btn a-btn__full-on-xs">
+<input type="submit" value="Input Tag" class="a-btn a-btn--full-on-xs">
 ```
 
 ### Button links
 
 #### Default state
 
-<button href="#" class="a-btn a-btn__link">Button Link</button>
-<button href="#" class="a-btn a-btn__link a-btn__secondary">
+<button href="#" class="a-btn a-btn--link">Button Link</button>
+<button href="#" class="a-btn a-btn--link a-btn--secondary">
 Secondary Button Link
 </button>
-<button href="#" class="a-btn a-btn__link a-btn__warning">
+<button href="#" class="a-btn a-btn--link a-btn--warning">
 Warning Button Link
 </button>
 
 ```
-<button href="#" class="a-btn a-btn__link">Button Link</button>
-<button href="#" class="a-btn a-btn__link a-btn__secondary">
+<button href="#" class="a-btn a-btn--link">Button Link</button>
+<button href="#" class="a-btn a-btn--link a-btn--secondary">
     Secondary Button Link
 </button>
-<button href="#" class="a-btn a-btn__link a-btn__warning">
+<button href="#" class="a-btn a-btn--link a-btn--warning">
     Warning Button Link
 </button>
 ```
 
 #### Hovered state
 
-<button href="#" class="a-btn a-btn__link hover">Button Link</button>
-<button href="#" class="a-btn a-btn__link a-btn__secondary hover">
+<button href="#" class="a-btn a-btn--link hover">Button Link</button>
+<button href="#" class="a-btn a-btn--link a-btn--secondary hover">
 Secondary Button Link
 </button>
-<button href="#" class="a-btn a-btn__link a-btn__warning hover">
+<button href="#" class="a-btn a-btn--link a-btn--warning hover">
 Warning Button Link
 </button>
 
 ```
-<button href="#" class="a-btn a-btn__link hover">Button Link</button>
-<button href="#" class="a-btn a-btn__link a-btn__secondary hover">
+<button href="#" class="a-btn a-btn--link hover">Button Link</button>
+<button href="#" class="a-btn a-btn--link a-btn--secondary hover">
     Secondary Button Link
 </button>
-<button href="#" class="a-btn a-btn__link a-btn__warning hover">
+<button href="#" class="a-btn a-btn--link a-btn--warning hover">
     Warning Button Link
 </button>
 ```
 
 #### Focus state
 
-<button href="#" class="a-btn a-btn__link focus">Button Link</button>
-<button href="#" class="a-btn a-btn__link a-btn__secondary focus">
+<button href="#" class="a-btn a-btn--link focus">Button Link</button>
+<button href="#" class="a-btn a-btn--link a-btn--secondary focus">
 Secondary Button Link
 </button>
-<button href="#" class="a-btn a-btn__link a-btn__warning focus">
+<button href="#" class="a-btn a-btn--link a-btn--warning focus">
 Warning Button Link
 </button>
 
 ```
-<button href="#" class="a-btn a-btn__link focus">Button Link</button>
-<button href="#" class="a-btn a-btn__link a-btn__secondary focus">
+<button href="#" class="a-btn a-btn--link focus">Button Link</button>
+<button href="#" class="a-btn a-btn--link a-btn--secondary focus">
     Secondary Button Link
 </button>
-<button href="#" class="a-btn a-btn__link a-btn__warning focus">
+<button href="#" class="a-btn a-btn--link a-btn--warning focus">
     Warning Button Link
 </button>
 ```
 
 #### Active state
 
-<button href="#" class="a-btn a-btn__link active">Button Link</button>
-<button href="#" class="a-btn a-btn__link a-btn__secondary active">
+<button href="#" class="a-btn a-btn--link active">Button Link</button>
+<button href="#" class="a-btn a-btn--link a-btn--secondary active">
 Secondary Button Link
 </button>
-<button href="#" class="a-btn a-btn__link a-btn__warning active">
+<button href="#" class="a-btn a-btn--link a-btn--warning active">
 Warning Button Link
 </button>
 
 ```
-<button href="#" class="a-btn a-btn__link active">Button Link</button>
-<button href="#" class="a-btn a-btn__link a-btn__secondary active">
+<button href="#" class="a-btn a-btn--link active">Button Link</button>
+<button href="#" class="a-btn a-btn--link a-btn--secondary active">
     Secondary Button Link
 </button>
-<button href="#" class="a-btn a-btn__link a-btn__warning active">
+<button href="#" class="a-btn a-btn--link a-btn--warning active">
     Warning Button Link
 </button>
 ```
@@ -470,51 +474,51 @@ Warning Button Link
 #### Button with icon on the left
 
 <button class="a-btn">
-    <span class="a-btn_icon
-                 a-btn_icon__on-left">{% include icons/error.svg %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-left">{% include icons/error.svg %}</span>
     Close
 </button>
 
-<button class="a-btn a-btn__secondary">
-    <span class="a-btn_icon
-                 a-btn_icon__on-left">{% include icons/error.svg %}</span>
+<button class="a-btn a-btn--secondary">
+    <span class="a-btn__icon
+                 a-btn__icon--on-left">{% include icons/error.svg %}</span>
     Close
 </button> Secondary button
 
-<button class="a-btn a-btn__warning">
-    <span class="a-btn_icon
-                 a-btn_icon__on-left">{% include icons/error.svg %}</span>
+<button class="a-btn a-btn--warning">
+    <span class="a-btn__icon
+                 a-btn__icon--on-left">{% include icons/error.svg %}</span>
     Close
 </button> Warning button
 
-<button class="a-btn a-btn__disabled">
-    <span class="a-btn_icon
-                 a-btn_icon__on-left">{% include icons/error.svg %}</span>
+<button class="a-btn a-btn--disabled">
+    <span class="a-btn__icon
+                 a-btn__icon--on-left">{% include icons/error.svg %}</span>
     Close
 </button> Disabled button
 
 ```
 <button class="a-btn">
-    <span class="a-btn_icon
-                 a-btn_icon__on-left">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-left">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
     Close
 </button>
 
-<button class="a-btn a-btn__secondary">
-    <span class="a-btn_icon
-                 a-btn_icon__on-left">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
+<button class="a-btn a-btn--secondary">
+    <span class="a-btn__icon
+                 a-btn__icon--on-left">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
     Close
 </button>
 
-<button class="a-btn a-btn__warning">
-    <span class="a-btn_icon
-                 a-btn_icon__on-left">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
+<button class="a-btn a-btn--warning">
+    <span class="a-btn__icon
+                 a-btn__icon--on-left">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
     Close
 </button>
 
-<button class="a-btn a-btn__disabled">
-    <span class="a-btn_icon
-                 a-btn_icon__on-left">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
+<button class="a-btn a-btn--disabled">
+    <span class="a-btn__icon
+                 a-btn__icon--on-left">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
     Close
 </button>
 ```
@@ -523,67 +527,67 @@ Warning Button Link
 
 <button class="a-btn">
     Close
-    <span class="a-btn_icon
-                 a-btn_icon__on-right">{% include icons/error.svg %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-right">{% include icons/error.svg %}</span>
 </button>
 
-<button class="a-btn a-btn__secondary">
+<button class="a-btn a-btn--secondary">
     Close
-    <span class="a-btn_icon
-                 a-btn_icon__on-right">{% include icons/error.svg %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-right">{% include icons/error.svg %}</span>
 </button> Secondary button
 
-<button class="a-btn a-btn__warning">
+<button class="a-btn a-btn--warning">
     Close
-    <span class="a-btn_icon
-                 a-btn_icon__on-right">{% include icons/error.svg %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-right">{% include icons/error.svg %}</span>
 </button> Warning button
 
-<button class="a-btn a-btn__disabled">
+<button class="a-btn a-btn--disabled">
     Close
-    <span class="a-btn_icon
-                 a-btn_icon__on-right">{% include icons/error.svg %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-right">{% include icons/error.svg %}</span>
 </button> Disabled button
 
 ```
 <button class="a-btn">
     Close
-    <span class="a-btn_icon
-                 a-btn_icon__on-right">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-right">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
 </button>
 
-<button class="a-btn a-btn__secondary">
+<button class="a-btn a-btn--secondary">
     Close
-    <span class="a-btn_icon
-                 a-btn_icon__on-right">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-right">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
 </button>
 
-<button class="a-btn a-btn__warning">
+<button class="a-btn a-btn--warning">
     Close
-    <span class="a-btn_icon
-                 a-btn_icon__on-right">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-right">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
 </button>
 
-<button class="a-btn a-btn__disabled">
+<button class="a-btn a-btn--disabled">
     Close
-    <span class="a-btn_icon
-                 a-btn_icon__on-right">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-right">{% raw %}{% include icons/error.svg %}{% endraw %}</span>
 </button>
 ```
 
 #### Button with an animated icon
 
-<button class="a-btn a-btn__disabled">
+<button class="a-btn a-btn--disabled">
     Submit your complaint
-    <span class="a-btn_icon
-                 a-btn_icon__on-right">{% include icons/updating.svg %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-right">{% include icons/updating.svg %}</span>
 </button>
 
 ```
 <button class="a-btn">
     Submit your complaint
-    <span class="a-btn_icon
-                 a-btn_icon__on-right">{% raw %}{% include icons/updating.svg %}{% endraw %}</span>
+    <span class="a-btn__icon
+                 a-btn__icon--on-right">{% raw %}{% include icons/updating.svg %}{% endraw %}</span>
 </button>
 ```
 

@@ -1,0 +1,57 @@
+.u-range-track-styles() {
+  height: unit(11px / @base-font-size-px, rem);
+  width: 100%;
+  background-color: @range-bg-track;
+  border: 1px solid @range-border;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.u-range-thumb-styles() {
+  height: unit(45px / @base-font-size-px, rem);
+  width: unit(45px / @base-font-size-px, rem);
+  margin-top: unit(-18px / @base-font-size-px, rem);
+  appearance: none;
+  border: 1px solid @range-border;
+  border-radius: 50%;
+  background-color: @range-bg;
+  cursor: pointer;
+}
+
+.u-range-thumb-focus-styles() {
+  background-color: @range-bg__focused;
+  border: 2px solid @range-border__focused;
+}
+
+.a-range {
+  // Reset the browser's default styling.
+  appearance: none;
+
+  width: 100%;
+  min-height: 49px;
+
+  &::-webkit-slider-runnable-track {
+    .u-range-track-styles();
+  }
+  &::-moz-range-track {
+    .u-range-track-styles();
+  }
+  &::-webkit-slider-thumb {
+    .u-range-thumb-styles();
+  }
+  &::-moz-range-thumb {
+    .u-range-thumb-styles();
+  }
+  &:focus,
+  &.focus {
+    box-shadow: none;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      .u-range-thumb-focus-styles();
+    }
+    &::-moz-range-thumb {
+      .u-range-thumb-focus-styles();
+    }
+  }
+}

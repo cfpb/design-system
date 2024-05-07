@@ -64,8 +64,11 @@ variation_groups:
           @input-border__focused:                   var(--pacific);
           @input-border__active:                    var(--pacific);
           @input-border__error:                     var(--red);
+          @input-border__error__hover:              var(--red-dark);
           @input-border__warning:                   var(--gold);
+          @input-border__warning__hover:            var(--gold-dark);
           @input-border__success:                   var(--green);
+          @input-border__success__hover:            var(--green-dark);
           @input-border__selected:                  var(--pacific);
 
           // .a-text-input backgrounds

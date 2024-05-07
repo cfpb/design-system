@@ -25,13 +25,15 @@ variation_groups:
                           <legend class="a-legend">Basic legend
                           </legend>
 
-                          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+                          <div class="m-form-field
+                                      m-form-field--radio m-form-field--lg-target">
                               <input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1">
                                   <label class="a-label" for="is_helpful_1">Inline label
                                   </label>
                           </div>
 
-                          <div class="m-form-field m-form-field--radio m-form-field--lg-target">
+                          <div class="m-form-field
+                                      m-form-field--radio m-form-field--lg-target">
                               <input class="a-radio" id="is_helpful_2" type="radio" name="is_helpful" value="0">
                                   <label class="a-label" for="is_helpful_2">Inline label
                                   </label>

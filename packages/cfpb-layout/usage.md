@@ -75,10 +75,6 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 // .content__main
 @content__main-border:       var(--gray-40);
 
-// .content__sidebar
-@content__sidebar-bg:        var(--gray-5);
-@content__sidebar-border:    var(--gray-40);
-
 // .content__line
 @content__line:              var(--gray-40);
 

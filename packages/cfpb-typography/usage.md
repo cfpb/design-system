@@ -60,23 +60,20 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 @slug-header_border__thin:  var(--gray-10);
 @slug-header_border__thick: var(--green);
 
-// Links
-
-// .a-link--jump
-@jump-link_bg:              var(--gray-5);
-@jump-link_border:          var(--gray-40);
-```
-
 ### Font variables
 
 ```
+
 @font-stack: "Avenir Next", Arial, sans-serif;
+
 ```
 
 #### Webfont variables
 
 ```
+
 @font-face-path: 'licensed-fonts.less';
+
 ```
 
 Use this variable to point to the file containing your `@font-face` rules.
@@ -91,7 +88,9 @@ in place of Avenir Next Demi, though the results of that experiment
 have been less predictable, so we may yet revert that decision.
 
 ```
+
 @cf-fonts-path: '/static/fonts';
+
 ```
 
 Use this variable to specify where
@@ -110,6 +109,7 @@ Can be either a relative or absolute path.
 </header>
 
 ```
+
 <header class="m-slug-header">
     <h2 class="m-slug-header__heading">
         Blog summary
@@ -172,7 +172,7 @@ Can be either a relative or absolute path.
 - Styles to enable adding an icon to a link and preventing the link's underline
   from extending under the icon.
 - For the underlined icon prevention to work, you must wrap the link text with
-  a `span.icon-link_text`. There can be no whitespace between the text and the
+  a `span.a-link__text`. There can be no whitespace between the text and the
   opening and closing `span` tags.
 - Include the icon either prior to or after the `a-link__text`. It is important the
   text and icon are siblings to correctly handle underlines.

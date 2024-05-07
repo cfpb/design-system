@@ -77,7 +77,7 @@ variation_groups:
         variation_implementation: >-
 
 
-          * To prevent the link’s underline from extending under the icon, wrap the link text with a `span.icon-link_text`. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the `a-link__text`. It is important the text and icon are siblings to correctly handle underlines.
+          * To prevent the link’s underline from extending under the icon, wrap the link text with a `span.a-link__text`. There can be no whitespace between the text and the opening and closing span tags. Include the icon either prior to or after the `a-link__text`. It is important the text and icon are siblings to correctly handle underlines.
         variation_code_snippet: |-
           <p>
             The document icon should emphasize a link that contains a

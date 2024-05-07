@@ -313,10 +313,6 @@ variation_groups:
           @link-text-active:       var(--navy);
           @link-underline-active:  var(--navy);
 
-          // .a-link--jump
-          @jump-link_bg:           var(--gray-5);
-          @jump-link_border:       var(--gray-40);
-
           // code
           @code-text:              @text;
           @code-bg:                var(--gray-5);

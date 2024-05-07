@@ -255,7 +255,7 @@
                 
                     'variation_name1': 'Success',
                     'variation_description1': "%0A",
-                    'variation_code_snippet1': `&lt;div class=&quot;m-form-field m-form-field__success&quot;&gt;
+                    'variation_code_snippet1': `&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;input class=&quot;a-text-input a-text-input--success&quot; type=&quot;text&quot; placeholder=&quot;Input text&quot; id=&quot;form-input-success&quot; aria-describedby=&quot;form-input-success_message&quot;&gt;
     &lt;div class=&quot;a-form-alert a-form-alert--success&quot; id=&quot;form-input-success_message&quot; role=&quot;alert&quot;&gt;
         <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--approved-round" viewBox="0 0 17 19"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0m-4.105-4.498a.79.79 0 0 0-1.082.29l-3.828 6.63-1.733-2.08a.792.792 0 1 0-1.216 1.014l2.459 2.952a.792.792 0 0 0 1.294-.111L12.6 6.166a.79.79 0 0 0-.29-1.081z"/></svg>
@@ -268,8 +268,7 @@
                 
                     'variation_name2': 'Warning',
                     'variation_description2': "%0A",
-                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__warning&quot;&gt;
-
+                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;input class=&quot;a-text-input a-text-input--warning&quot; type=&quot;text&quot; placeholder=&quot;Input text&quot; id=&quot;form-input-warning&quot; aria-describedby=&quot;form-input-warning_message&quot;&gt;
     &lt;div class=&quot;a-form-alert a-form-alert--warning&quot; id=&quot;form-input-warning_message&quot; role=&quot;alert&quot;&gt;
         <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--warning-round" viewBox="0 0 17 19"><path d="M16.406 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0M9.48 13.667a1.003 1.003 0 1 0-2.007 0 1.003 1.003 0 0 0 2.007 0M7.697 10.83a.792.792 0 0 0 1.583 0V4.562a.792.792 0 0 0-1.583 0z"/></svg>
@@ -281,7 +280,7 @@
                 
                     'variation_name3': 'Error',
                     'variation_description3': "%0A",
-                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field m-form-field__error&quot;&gt;
+                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;input class=&quot;a-text-input a-text-input--error&quot; type=&quot;text&quot; placeholder=&quot;Input text&quot; id=&quot;form-input-error&quot; aria-describedby=&quot;form-input-error_message&quot;&gt;&lt;div class=&quot;a-form-alert a-form-alert--error&quot; id=&quot;form-input-error_message&quot; role=&quot;alert&quot;&gt;
         <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--error-round" viewBox="0 0 17 19"><path d="M16.417 9.583a7.916 7.916 0 1 1-15.833 0 7.916 7.916 0 0 1 15.833 0m-6.804.01 3.032-3.033a.792.792 0 1 0-1.12-1.12L8.494 8.473 5.46 5.44a.792.792 0 0 0-1.12 1.12l3.033 3.033-3.032 3.033a.791.791 0 1 0 1.12 1.119l3.032-3.033 3.033 3.033a.79.79 0 0 0 1.12 0 .79.79 0 0 0 0-1.12z"/></svg>
         &lt;span class=&quot;a-form-alert__text&quot;&gt;
@@ -1736,19 +1735,25 @@ States
 Validation status
 &lt;/h4&gt;
 &lt;!--Success--&gt;
-&lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--checkbox__success&quot;&gt;
+&lt;div class=&quot;m-form-field
+            m-form-field--checkbox
+            m-form-field--checkbox-success&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_success&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_success&quot;&gt;Success&lt;/label&gt;
 &lt;/div&gt;
 &lt;br&gt;
 &lt;!--Warning--&gt;
-&lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--checkbox__warning&quot;&gt;
+&lt;div class=&quot;m-form-field
+            m-form-field--checkbox
+            m-form-field--checkbox-warning&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_warning&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_warning&quot;&gt;Warning&lt;/label&gt;
 &lt;/div&gt;
 &lt;br&gt;
 &lt;!--Error--&gt;
-&lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--checkbox__error&quot;&gt;
+&lt;div class=&quot;m-form-field
+            m-form-field--checkbox
+            m-form-field--checkbox-error&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_error&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_error&quot;&gt;Error&lt;/label&gt;
 &lt;/div&gt;`,
@@ -1767,21 +1772,27 @@ Label
                 
                     'variation_name3': 'Large target area checkbox',
                     'variation_description3': "For+better+usability%2C+consider+using+the+checkboxes+with+large+target+areas.+These+are+easier+to+interact+with+%28especially+on+smaller+screens%29+and+harder+to+miss.+They+are+especially+desirable+when+the+form+will+have+heavy+mobile+usage.+Given+the+amount+of+real+estate+they+occupy%2C+they%E2%80%99re+probably+not+suited+for+all+use+cases%3B+for+example%2C+they+may+not+work+well+for+terms+of+service+agreement+checkboxes.%0A",
-                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+                    'variation_code_snippet3': `&lt;div class=&quot;m-form-field
+            m-form-field--checkbox
+            m-form-field--lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_default&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_default&quot;&gt;Enabled&lt;/label&gt;
 &lt;/div&gt;
 &lt;br&gt;
 
 &lt;!--Hover--&gt;
-&lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+&lt;div class=&quot;m-form-field
+            m-form-field--checkbox
+            m-form-field--lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox hover&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_hover&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_hover&quot;&gt;Hover&lt;/label&gt;
 &lt;/div&gt;
 &lt;br&gt;
 
 &lt;!--Focus--&gt;
-&lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+&lt;div class=&quot;m-form-field
+            m-form-field--checkbox
+            m-form-field--lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox focus&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_focus&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_focus&quot;&gt;Focus&lt;/label&gt;
 &lt;/div&gt;
@@ -1789,14 +1800,18 @@ Label
 &lt;br&gt;
 
 &lt;!--Selected--&gt;
-&lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+&lt;div class=&quot;m-form-field
+            m-form-field--checkbox
+            m-form-field--lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_checked&quot; checked&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_checked&quot;&gt;Selected&lt;/label&gt;
 &lt;/div&gt;
 &lt;br&gt;
 
 &lt;!--Disabled--&gt;
-&lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+&lt;div class=&quot;m-form-field
+            m-form-field--checkbox
+            m-form-field--lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_disabled&quot; disabled&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_disabled&quot;&gt;Disabled&lt;/label&gt;
 &lt;/div&gt;
@@ -1804,7 +1819,9 @@ Label
 
 &lt;!--Disabled/Selected--&gt;
 &lt;!--
-&lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+&lt;div class=&quot;m-form-field
+            m-form-field--checkbox
+            m-form-field--lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot;
            type=&quot;checkbox&quot;
            id=&quot;test_checkbox_lg_disabled&quot;
@@ -1816,7 +1833,9 @@ Label
                 
                     'variation_name4': 'Large target area checkbox (with helper text)',
                     'variation_description4': "%0A",
-                    'variation_code_snippet4': `&lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+                    'variation_code_snippet4': `&lt;div class=&quot;m-form-field
+            m-form-field--checkbox
+            m-form-field--lg-target&quot;&gt;
     &lt;input class=&quot;a-checkbox&quot; type=&quot;radio&quot; id=&quot;test_checkbox_lg_helper&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_helper&quot;&gt;
        Label
@@ -2631,19 +2650,27 @@ Basic legend
 &lt;/legend&gt;
     &lt;div class=&quot;o-form__group&quot;&gt;
         &lt;fieldset class=&quot;o-form__fieldset&quot;&gt;
-            &lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+            &lt;div class=&quot;m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target&quot;&gt;
                 &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_default_1&quot;&gt;
                 &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_default_1&quot;&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+            &lt;div class=&quot;m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target&quot;&gt;
                 &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_default_2&quot;&gt;
                 &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_default_2&quot;&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+            &lt;div class=&quot;m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target&quot;&gt;
                 &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_default_3&quot;&gt;
                 &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_default_3&quot;&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;m-form-field m-form-field--checkbox m-form-field--lg-target&quot;&gt;
+            &lt;div class=&quot;m-form-field
+                        m-form-field--checkbox
+                        m-form-field--lg-target&quot;&gt;
                 &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_lg_default_4&quot;&gt;
                 &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_lg_default_4&quot;&gt;Inline label&lt;/label&gt;
             &lt;/div&gt;
@@ -2659,25 +2686,29 @@ Basic legend
     &lt;small class=&quot;a-label__helper a-label__helper--block&quot;&gt;Use block helper text for instructions&lt;/small&gt;
 &lt;/legend&gt;
 
-                &lt;div class=&quot;m-form-field m-form-field--radio m-form-field--lg-target&quot;&gt;
+                &lt;div class=&quot;m-form-field
+                            m-form-field--radio m-form-field--lg-target&quot;&gt;
                     &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_1&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;1&quot;&gt;
                         &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_1&quot;&gt;Inline label
                         &lt;/label&gt;
                 &lt;/div&gt;
 
-                &lt;div class=&quot;m-form-field m-form-field--radio m-form-field--lg-target&quot;&gt;
+                &lt;div class=&quot;m-form-field
+                            m-form-field--radio m-form-field--lg-target&quot;&gt;
                     &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_2&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;0&quot;&gt;
                         &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_2&quot;&gt;Inline label
                         &lt;/label&gt;
                 &lt;/div&gt;
 
-                &lt;div class=&quot;m-form-field m-form-field--radio m-form-field--lg-target&quot;&gt;
+                &lt;div class=&quot;m-form-field
+                            m-form-field--radio m-form-field--lg-target&quot;&gt;
                     &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_3&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;0&quot;&gt;
                         &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_3&quot;&gt;Inline label
                         &lt;/label&gt;
                 &lt;/div&gt;
 
-                &lt;div class=&quot;m-form-field m-form-field--radio m-form-field--lg-target&quot;&gt;
+                &lt;div class=&quot;m-form-field
+                            m-form-field--radio m-form-field--lg-target&quot;&gt;
                     &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_4&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;0&quot;&gt;
                         &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_4&quot;&gt;Inline label
                         &lt;/label&gt;
@@ -4216,13 +4247,15 @@ Label heading
                 &lt;legend class=&quot;a-legend&quot;&gt;Basic legend
                 &lt;/legend&gt;
 
-                &lt;div class=&quot;m-form-field m-form-field--radio m-form-field--lg-target&quot;&gt;
+                &lt;div class=&quot;m-form-field
+                            m-form-field--radio m-form-field--lg-target&quot;&gt;
                     &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_1&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;1&quot;&gt;
                         &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_1&quot;&gt;Inline label
                         &lt;/label&gt;
                 &lt;/div&gt;
 
-                &lt;div class=&quot;m-form-field m-form-field--radio m-form-field--lg-target&quot;&gt;
+                &lt;div class=&quot;m-form-field
+                            m-form-field--radio m-form-field--lg-target&quot;&gt;
                     &lt;input class=&quot;a-radio&quot; id=&quot;is_helpful_2&quot; type=&quot;radio&quot; name=&quot;is_helpful&quot; value=&quot;0&quot;&gt;
                         &lt;label class=&quot;a-label&quot; for=&quot;is_helpful_2&quot;&gt;Inline label
                         &lt;/label&gt;
@@ -5382,7 +5415,7 @@ Label
                     'variation_description1': "Allows+the+user+to+select+a+single+item+from+a+dropdown+list+of+options.%0A",
                     'variation_code_snippet1': `&lt;!--Enabled state--&gt;
 
-&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;label class=&quot;a-label a-label--heading&quot; for=&quot;test_select_enabled&quot;&gt;
         Enabled
     &lt;/label&gt;
@@ -5399,7 +5432,7 @@ Label
 &lt;br&gt;
 
 &lt;!--Hover state--&gt;
-&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;label class=&quot;a-label a-label--heading&quot; for=&quot;test_select__hover&quot;&gt;
        Hover
     &lt;/label&gt;
@@ -5417,7 +5450,7 @@ Label
 
 &lt;!--Focus state--&gt;
 
-&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;label class=&quot;a-label a-label--heading&quot; for=&quot;test_select__focus&quot;&gt;
         Focus
     &lt;/label&gt;
@@ -5435,7 +5468,7 @@ Label
 
 &lt;!--Disabled state--&gt;
 
-&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;label class=&quot;a-label a-label--heading&quot; for=&quot;test_select__disabled&quot;&gt;Disabled&lt;/label&gt;
     &lt;div class=&quot;a-select a-select--disabled&quot;&gt;
         &lt;select id=&quot;test_select__disabled&quot; disabled&gt;
@@ -5449,7 +5482,7 @@ Label
                 
                     'variation_name2': 'Multiselect',
                     'variation_description2': "Allows+the+user+to+select+multiple+items+from+a+dropdown+list+of+options.%0A",
-                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field__select&quot;&gt;
+                    'variation_code_snippet2': `&lt;div class=&quot;m-form-field&quot;&gt;
     &lt;label class=&quot;a-label a-label--heading&quot; for=&quot;test_select__multiple&quot;&gt;
         Label
     &lt;/label&gt;

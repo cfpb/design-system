@@ -1,4 +1,4 @@
-# @cfpb/notifications [![Build Status](https://img.shields.io/travis/cfpb/design-system.svg)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/@cfpb/notifications.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/notifications)
+# @cfpb/notifications [![npm](https://img.shields.io/npm/v/@cfpb/notifications.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/notifications)
 
 Design System notifications
 

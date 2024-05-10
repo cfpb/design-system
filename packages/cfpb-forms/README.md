@@ -1,4 +1,4 @@
-# @cfpb/forms [![Build Status](https://img.shields.io/travis/cfpb/design-system.svg)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/@cfpb/forms.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/forms)
+# @cfpb/forms [![npm](https://img.shields.io/npm/v/@cfpb/forms.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/forms)
 
 Design System forms
 

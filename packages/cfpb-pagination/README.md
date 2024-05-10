@@ -1,4 +1,4 @@
-# @cfpb/pagination [![Build Status](https://img.shields.io/travis/cfpb/design-system.svg)](https://travis-ci.org/cfpb/design-system) [![npm](https://img.shields.io/npm/v/@cfpb/pagination.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/pagination)
+# @cfpb/pagination [![npm](https://img.shields.io/npm/v/@cfpb/pagination.svg?style=flat-square)](https://www.npmjs.com/package/@cfpb/pagination)
 
 Design System pagination
 

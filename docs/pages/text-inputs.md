@@ -83,61 +83,25 @@ variation_groups:
           value="Input text">
           </div>
       - variation_is_deprecated: false
-        variation_name: Text input (with button)
-        variation_description: Use for simple forms where a full filter isn’t necessary.
+        variation_name: Search input
+        variation_description: Use for search inputs.
         variation_code_snippet: |-
-          <div class="o-form--input-w-btn">
-              <div class="o-form--input-w-btn__input-container">
-          <input class="a-text-input a-text-input--full"
-                    type="text"
-                    id="full-textinput-w-btn-example"
-          placeholder="Placeholder text"
-          value="Input text">
-
-              </div>
-              <div class="o-form--input-w-btn__btn-container">
-                  <button class="a-btn">Search</button>
-              </div>
-          </div>
-      - variation_is_deprecated: false
-        variation_name: Button inside text input
-        variation_description:
-          Use to offer the user an action to take related to the
-          input, typically to clear the input.
-        variation_code_snippet: >-
-          <div class="m-btn-inside-input">
-              <input type="text"
-                  value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
-                  title="Test input"
-                  class="a-text-input">
-              <button class="a-btn a-btn--link">
-                  {% include icons/error.svg %}
-                  <span class="u-visually-hidden">Clear</span>
-              </button>
-          </div>
-      - variation_is_deprecated: false
-        variation_name: Button inside text input (with button)
-        variation_description:
-          This example combines both of the previous patterns,
-          creating a typical site search form.
-        variation_code_snippet: >-
-          <div class="o-form--input-w-btn">
-              <div class="o-form--input-w-btn__input-container">
-                  <div class="m-btn-inside-input">
-                      <input type="text"
-                          value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
-                          title="Test input"
-                          class="a-text-input">
-                      <button class="a-btn a-btn--link">
-                          {% include icons/error.svg %}
-                          <span class="u-visually-hidden">Clear</span>
+          <form>
+              <div class="o-search-input">
+                  <div class="o-search-input__input">
+                      <label for="example-search-text" class="o-search-input__input-label" aria-label="Search for a term">
+                        {% include icons/search.svg %}
+                      </label>
+                      <input type="search" id="example-search-text" name="example-search-text" value="" class="a-text-input a-text-input__full" placeholder="Enter your search term(s)" title="Enter your search term(s)" autocomplete="off" maxlength="75">
+                      <button type="reset" onclick="document.getElementById('example-search-text').setAttribute('value','')" aria-label="Clear search" title="Clear search">
+                        {% include icons/error.svg %}
                       </button>
                   </div>
+                  <button class="a-btn" type="submit" aria-label="Search for term(s)">
+                      Search
+                  </button>
               </div>
-              <div class="o-form--input-w-btn__btn-container">
-                  <button class="a-btn">Search</button>
-              </div>
-          </div>
+          </form>
     variation_group_description: ''
   - variation_group_name: Text area input
     variations:

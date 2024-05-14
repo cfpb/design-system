@@ -1,4 +1,32 @@
 
+## v1.1.2 (2024-05-14)
+
+#### Breaking Change
+* `cfpb-layout`
+  * [#1976](https://github.com/cfpb/design-system/pull/1976) Remove `@content__sidebar` variables ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-design-system`, `cfpb-forms`
+  * [#1979](https://github.com/cfpb/design-system/pull/1979) Add search input component and replace `o-form--input-w-btn` ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-forms`
+  * [#1973](https://github.com/cfpb/design-system/pull/1973) Remove/update m-form-field modifiers ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-buttons`, `cfpb-design-system`, `cfpb-forms`, `cfpb-typography`
+  * [#1972](https://github.com/cfpb/design-system/pull/1972) Update browserslist to use @cfpb/browserslist-config stats ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-typography`
+  * [#1975](https://github.com/cfpb/design-system/pull/1975) Update `icon-link` | Remove unused `@jump-link` ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* [#1977](https://github.com/cfpb/design-system/pull/1977) Update marked, react, react-is, cypress, esbuild, stylelint, svgo ([@anselmbradford](https://github.com/anselmbradford))
+* [#1968](https://github.com/cfpb/design-system/pull/1968) Bump ejs from 3.1.9 to 3.1.10 ([@dependabot[bot]](https://github.com/apps/dependabot))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- S T ([@shindigira](https://github.com/shindigira))
+
+
+
 ## v1.1.2 (2024-05-01)
 
 #### Bug Fix

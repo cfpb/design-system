@@ -374,127 +374,61 @@ Lorem Ipsum</textarea
 
 ### Buttons and inputs
 
-#### Simple input with a button
+#### Search input
 
-These are used for simple forms where a full filter isn't necessary.
-
-<div class="o-form--input-w-btn">
-    <div class="o-form--input-w-btn_input-container">
-        <label for="button-input-test-demo"
-               class="u-visually-hidden">
-            Test input
-        </label>
-        <input id="button-input-test-demo"
-               class="a-text-input"
-               type="text">
-    </div>
-    <div class="o-form--input-w-btn_btn-container">
-        <button class="a-btn">Search</button>
-    </div>
-</div>
-
-```html
-<div class="o-form--input-w-btn">
-  <div class="o-form--input-w-btn_input-container">
-    <label for="button-input-test" class="u-visually-hidden">
-      Test input
-    </label>
-    <input id="button-input-test" class="a-text-input" type="text" />
-  </div>
-  <div class="o-form--input-w-btn_btn-container">
-    <button class="a-btn">Search</button>
-  </div>
-</div>
-```
-
-#### Button inside an input
-
-These offer the user an action to take related to the input,
-typically to clear the input.
-
-<div class="m-btn-inside-input">
-    <label for="button-inside-test"
-           class="u-visually-hidden">
-        Test input
-    </label>
-    <input type="text"
-        value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
-        id="button-inside-test"
-        class="a-text-input">
-    <button class="a-btn a-btn--link">
-        {% include icons/error.svg %}
-        <span class="u-visually-hidden">Clear</span>
-    </button>
-</div>
-
-```html
-<div class="m-btn-inside-input">
-  <label for="button-inside-test-demo" class="u-visually-hidden">
-    Test input
-  </label>
-  <input
-    type="text"
-    value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
-    id="button-inside-test-demo"
-    class="a-text-input"
-  />
-  <button class="a-btn a-btn--link">
-    {% raw %}{% include icons/error.svg %}{% endraw %}
-    <span class="u-visually-hidden">Clear</span>
-  </button>
-</div>
-```
-
-#### Button inside an input with another button
-
-This example combines both of the previous patterns,
-creating a typical site search form.
-
-<div class="o-form--input-w-btn">
-    <div class="o-form--input-w-btn_input-container">
-        <div class="m-btn-inside-input">
-            <label for="button-inside-input-test-demo"
-                   class="u-visually-hidden">
-                Test input
+<form>
+    <div class="o-search-input">
+        <div class="o-search-input__input">
+            <label for="example-search-text" class="o-search-input__input-label" aria-label="Search for a term">
+              {% raw %}{% include icons/search.svg %}{% endraw %}
             </label>
-            <input type="text"
-                value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
-                id="button-inside-input-test-demo"
-                class="a-text-input">
-            <button class="a-btn a-btn--link">
-                {% include icons/error.svg %}
-                <span class="u-visually-hidden">Clear</span>
+            <input type="search" id="example-search-text" name="example-search-text" value="" class="a-text-input a-text-input__full" placeholder="Enter your search term(s)" title="Enter your search term(s)" autocomplete="off" maxlength="75">
+            <button type="reset" onclick="document.getElementById('example-search-text').setAttribute('value','')" aria-label="Clear search" title="Clear search">
+              {% raw %}{% include icons/error.svg %}{% endraw %}
             </button>
         </div>
+        <button class="a-btn" type="submit" aria-label="Search for term(s)">
+            Search
+        </button>
     </div>
-    <div class="o-form--input-w-btn_btn-container">
-        <button class="a-btn">Search</button>
-    </div>
-</div>
+</form>
 
 ```html
-<div class="o-form--input-w-btn">
-  <div class="o-form--input-w-btn_input-container">
-    <div class="m-btn-inside-input">
-      <label for="button-inside-input-test" class="u-visually-hidden">
-        Test input
+<form>
+  <div class="o-search-input">
+    <div class="o-search-input__input">
+      <label
+        for="example-search-text"
+        class="o-search-input__input-label"
+        aria-label="Search for a term"
+      >
+        {% raw %}{% include icons/search.svg %}{% endraw %}
       </label>
       <input
-        type="text"
-        value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable."
-        id="button-inside-input-test"
-        class="a-text-input"
+        type="search"
+        id="example-search-text"
+        name="example-search-text"
+        value=""
+        class="a-text-input a-text-input__full"
+        placeholder="Enter your search term(s)"
+        title="Enter your search term(s)"
+        autocomplete="off"
+        maxlength="75"
       />
-      <button class="a-btn a-btn--link">
+      <button
+        type="reset"
+        onclick="document.getElementById('example-search-text').setAttribute('value','')"
+        aria-label="Clear search"
+        title="Clear search"
+      >
         {% raw %}{% include icons/error.svg %}{% endraw %}
-        <span class="u-visually-hidden">Clear</span>
       </button>
     </div>
+    <button class="a-btn" type="submit" aria-label="Search for term(s)">
+      Search
+    </button>
   </div>
-  <div class="o-form--input-w-btn_btn-container">
-    <button class="a-btn">Search</button>
-  </div>
-</div>
+</form>
 ```
 
 ## Checkboxes and radio inputs

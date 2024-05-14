@@ -6493,54 +6493,24 @@ placeholder=&quot;Placeholder text&quot;
 value=&quot;Input text&quot;&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name3': 'Text input (with button)',
-                    'variation_description3': "Use+for+simple+forms+where+a+full+filter+isn%E2%80%99t+necessary.%0A",
-                    'variation_code_snippet3': `&lt;div class=&quot;o-form--input-w-btn&quot;&gt;
-    &lt;div class=&quot;o-form--input-w-btn__input-container&quot;&gt;
-&lt;input class=&quot;a-text-input a-text-input--full&quot;
-          type=&quot;text&quot;
-          id=&quot;full-textinput-w-btn-example&quot;
-placeholder=&quot;Placeholder text&quot;
-value=&quot;Input text&quot;&gt;
-
-    &lt;/div&gt;
-    &lt;div class=&quot;o-form--input-w-btn__btn-container&quot;&gt;
-        &lt;button class=&quot;a-btn&quot;&gt;Search&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name4': 'Button inside text input',
-                    'variation_description4': "Use+to+offer+the+user+an+action+to+take+related+to+the+input%2C+typically+to+clear+the+input.%0A",
-                    'variation_code_snippet4': `&lt;div class=&quot;m-btn-inside-input&quot;&gt;
-    &lt;input type=&quot;text&quot;
-        value=&quot;This is some really long text to make sure that the button doesn&#39;t overlap the content in such a way that this input becomes unusable.&quot;
-        title=&quot;Test input&quot;
-        class=&quot;a-text-input&quot;&gt;
-    &lt;button class=&quot;a-btn a-btn--link&quot;&gt;
-        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--error" viewBox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"/></svg>
-        &lt;span class=&quot;u-visually-hidden&quot;&gt;Clear&lt;/span&gt;
-    &lt;/button&gt;
-&lt;/div&gt;`,
-                
-                    'variation_name5': 'Button inside text input (with button)',
-                    'variation_description5': "This+example+combines+both+of+the+previous+patterns%2C+creating+a+typical+site+search+form.%0A",
-                    'variation_code_snippet5': `&lt;div class=&quot;o-form--input-w-btn&quot;&gt;
-    &lt;div class=&quot;o-form--input-w-btn__input-container&quot;&gt;
-        &lt;div class=&quot;m-btn-inside-input&quot;&gt;
-            &lt;input type=&quot;text&quot;
-                value=&quot;This is some really long text to make sure that the button doesn&#39;t overlap the content in such a way that this input becomes unusable.&quot;
-                title=&quot;Test input&quot;
-                class=&quot;a-text-input&quot;&gt;
-            &lt;button class=&quot;a-btn a-btn--link&quot;&gt;
-                <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--error" viewBox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"/></svg>
-                &lt;span class=&quot;u-visually-hidden&quot;&gt;Clear&lt;/span&gt;
+                    'variation_name3': 'Search input',
+                    'variation_description3': "Use+for+search+inputs.%0A",
+                    'variation_code_snippet3': `&lt;form&gt;
+    &lt;div class=&quot;o-search-input&quot;&gt;
+        &lt;div class=&quot;o-search-input__input&quot;&gt;
+            &lt;label for=&quot;example-search-text&quot; class=&quot;o-search-input__input-label&quot; aria-label=&quot;Search for a term&quot;&gt;
+              <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--search" viewBox="0 0 15 19"><path d="M14.147 15.488a1.11 1.11 0 0 1-1.567 0l-3.395-3.395a5.575 5.575 0 1 1 1.568-1.568l3.394 3.395a1.11 1.11 0 0 1 0 1.568m-6.361-3.903a4.488 4.488 0 1 0-1.681.327 4.4 4.4 0 0 0 1.68-.327z"/></svg>
+            &lt;/label&gt;
+            &lt;input type=&quot;search&quot; id=&quot;example-search-text&quot; name=&quot;example-search-text&quot; value=&quot;&quot; class=&quot;a-text-input a-text-input__full&quot; placeholder=&quot;Enter your search term(s)&quot; title=&quot;Enter your search term(s)&quot; autocomplete=&quot;off&quot; maxlength=&quot;75&quot;&gt;
+            &lt;button type=&quot;reset&quot; onclick=&quot;document.getElementById(&#39;example-search-text&#39;).setAttribute(&#39;value&#39;,&#39;&#39;)&quot; aria-label=&quot;Clear search&quot; title=&quot;Clear search&quot;&gt;
+              <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--error" viewBox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"/></svg>
             &lt;/button&gt;
         &lt;/div&gt;
+        &lt;button class=&quot;a-btn&quot; type=&quot;submit&quot; aria-label=&quot;Search for term(s)&quot;&gt;
+            Search
+        &lt;/button&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;o-form--input-w-btn__btn-container&quot;&gt;
-        &lt;button class=&quot;a-btn&quot;&gt;Search&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;`,
+&lt;/form&gt;`,
                 
             
                 // Determine the maximum number of variations present overall.

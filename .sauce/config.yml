@@ -26,7 +26,7 @@ suites:
       testingType: e2e
       specPattern:
         - 'test/cypress/e2e/**/*.cy.js'
-      # Increase the VM's resolution for Netlify CMS tests that require a wider viewport.
+      # Increase the VM's resolution for Decap CMS tests that require a wider viewport.
       screenResolution: '1920x1200'
   - name: cypress - Windows 11 - edge
     browser: 'microsoftedge'
@@ -38,8 +38,8 @@ suites:
         - 'test/cypress/e2e/**/*.cy.js'
       screenResolution: '1920x1200'
       exclude:
-        # Netlify CMS is only tested with Chrome
-        - 'test/cypress/e2e/docs/netlify-cms.cy.js'
+        # Decap CMS is only tested with Chrome
+        - 'test/cypress/e2e/docs/decap-cms.cy.js'
   - name: cypress - Windows 10 - firefox
     browser: 'firefox'
     browserVersion: '123'
@@ -50,6 +50,6 @@ suites:
         - 'test/cypress/e2e/**/*.cy.js'
       screenResolution: '1920x1200'
       exclude:
-        # Netlify CMS is only tested with Chrome
-        - 'test/cypress/e2e/docs/netlify-cms.cy.js'
+        # Decap CMS is only tested with Chrome
+        - 'test/cypress/e2e/docs/decap-cms.cy.js'
 rootDir: .

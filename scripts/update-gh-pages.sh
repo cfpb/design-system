@@ -25,7 +25,7 @@ yarn install
 yarn after-install
 
 # Build the design system website
-yarn build-netlify
+yarn build-decap
 
 # Remove the built Jekyll website from .gitignore
 sed -i '/_site/d' ./.gitignore

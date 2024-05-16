@@ -8,7 +8,7 @@ let extraCollect = {};
 // URLs by finding all HTML files in the output documentation directory;
 // this requires that the docs have already been built before this code is run.
 const urlsSpecified = process.argv.some((arg) =>
-  arg.match(/^--(collect\.)?url=/)
+  arg.match(/^--(collect\.)?url=/),
 );
 
 if (!urlsSpecified) {
@@ -21,7 +21,7 @@ if (!urlsSpecified) {
   if (!filenames.length) {
     // eslint-disable-next-line no-console
     console.error(
-      "No HTML files found; build the docs first with 'yarn build-netlify'."
+      "No HTML files found; build the docs first with 'yarn build-decap'.",
     );
 
     // eslint-disable-next-line no-process-exit
@@ -42,7 +42,7 @@ if (!urlsSpecified) {
         filename
           .replace(/index.html$/, '')
           .replace(/.html$/, '')
-          .replace(/^/, 'http://localhost:8080/design-system/')
+          .replace(/^/, 'http://localhost:8080/design-system/'),
       )
       .sort(),
   };

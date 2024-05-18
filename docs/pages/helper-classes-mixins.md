@@ -316,34 +316,34 @@ variation_groups:
           `:visited` - `#4c2c92`, `:active` - `#046b99`.
 
 
-          `u-link--colors()`
+          `u-link-colors()`
 
 
           Passing a single argument into the mixin will set the color for the default, `:visited`, `:hover`, `:focus`, and `:active` states.
 
 
-          `u-link--colors(@c)`
+          `u-link-colors(@c)`
 
 
           Passing two arguments into the mixin will set the color for the default, `:visited`, and `:active` states as the first argument, and `:hover` and `:focus` as the second argument.
 
 
-          `u-link--colors(@c, @h)`
+          `u-link-colors(@c, @h)`
 
 
           Passing five arguments will set the color for the default, `:visited`, `:hover`, `:focus`, and `:active` states respectively.
 
 
-          `u-link--colors(@c, @v, @h, @f, @a)`
+          `u-link-colors(@c, @v, @h, @f, @a)`
 
 
           Passing ten arguments will set the text (default, `:visited`, `:hover`, `:focus`, and `:active` states in the first five arguments) and border colors (default, `:visited`, `:hover`, `:focus`, and `:active` states in the following five arguments) separately.
 
 
-          `u-link--colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)`
+          `u-link-colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)`
 
 
-          **A base mixin of `u-link--colors-base()` exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use `.u-link--colors(@c, @v, @h, @f, @a)`.**
+          **A base mixin of `u-link-colors-base()` exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use `.u-link-colors(@c, @v, @h, @f, @a)`.**
         variation_code_snippet: ''
       - variation_name: '"Link border" mixin'
         variation_description: >-
@@ -407,7 +407,7 @@ variation_groups:
           // Ex.
 
           .example {
-            font-size: unit(20px / @base-font-size-px, em);
+            font-size: math.div(20px, @base-font-size-px) + em;
 
             small {
               .u-small-text(20px);

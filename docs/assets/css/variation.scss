@@ -1,0 +1,79 @@
+@use 'sass:math';
+
+/* ==========================================================================
+   Variation page template
+   ========================================================================== */
+
+.o-variation-group {
+  border: 5px solid var(--gray-10);
+  margin: 2rem 0;
+
+  &__title {
+    background: var(--gray-10);
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+
+  &__description {
+    margin-bottom: 2rem;
+  }
+
+  &__description,
+  & .m-variation {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.m-variation {
+  border-bottom: 1px solid var(--gray-40);
+
+  &__name {
+    margin-top: 2rem;
+  }
+
+  &__deprecated {
+    background: var(--gray-10);
+    font-size: math.div(10px, $base-font-size-px) + em;
+    font-variant: small-caps;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  &:first-child .m-variation__name {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 1rem;
+  }
+}
+
+// The icon colors on the restrictions do/do not sections.
+.component-restrictions__heading-do svg {
+  color: var(--green);
+}
+
+.component-restrictions__heading-donot svg {
+  color: var(--red);
+}
+
+// Wrapping long horizontal lists.
+.m-list--horizontal-spaced {
+  margin-bottom: math.div(30px, $base-font-size-px) + em;
+}
+
+.m-list--horizontal-spaced > .m-list__item {
+  margin-bottom: math.div(15px, $base-font-size-px) + em;
+}
+
+// Gives 100% width to all tables
+table {
+  @include u-w100pct;
+}
+
+.a-live__code table {
+  width: inherit;
+}

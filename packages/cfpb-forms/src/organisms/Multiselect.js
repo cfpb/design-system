@@ -348,7 +348,7 @@ function Multiselect(element) {
       /* Check if we're over the down-arrow on the right side of the input.
          Also check if the fieldset is open.
          35 = width of the arrow on the right of the search input.
-         140 = the max-height value set in multiselect.less for the fieldset.
+         140 = the max-height value set in multiselect.src for the fieldset.
       */
       if (
         event.offsetX > target.offsetWidth - 35 &&

@@ -1,0 +1,122 @@
+@use 'sass:math';
+
+//
+//  Notification
+//
+
+.m-notification {
+  display: none;
+  position: relative;
+  padding: $notification-padding-px;
+  background: $notification-bg;
+  border: 1px solid $notification-border;
+
+  & > .cf-icon-svg {
+    position: absolute;
+    fill: $notification-icon;
+  }
+
+  &--success {
+    background: $notification-bg-success;
+    border-color: $notification-border-success;
+
+    & > .cf-icon-svg {
+      fill: $notification-icon-success;
+    }
+  }
+
+  &--warning {
+    background: $notification-bg-warning;
+    border-color: $notification-border-warning;
+
+    & > .cf-icon-svg {
+      fill: $notification-icon-warning;
+    }
+  }
+
+  &--error {
+    background: $notification-bg-error;
+    border-color: $notification-border-error;
+
+    & > .cf-icon-svg {
+      fill: $notification-icon-error;
+    }
+  }
+
+  // Set accessible colors for links in alert notificiations.
+  &--success,
+  &--warning,
+  &--error {
+    & a {
+      // Colors for :link, :visited, :hover, :focus, :active.
+      @include u-link-colors(
+        var(--pacific-mid-dark),
+        var(--teal),
+        var(--pacific-dark),
+        var(--pacific-mid-dark),
+        var(--navy-dark)
+      );
+    }
+  }
+
+  &--visible {
+    display: block;
+  }
+
+  // Only adding left padding if an icon is present.
+  .cf-icon-svg + &__content {
+    padding-left: math.div(25px, $base-font-size-px) + rem;
+  }
+
+  &__message {
+    font-size: math.div(16px, $base-font-size-px) + rem;
+    line-height: 1.25;
+    font-weight: 500;
+
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      // h4 size
+      font-size: math.div(18px, $base-font-size-px) + rem;
+    }
+  }
+
+  &__explanation {
+    margin-top: math.div(5px, $base-font-size-px) + rem;
+    margin-bottom: math.div(15px, $base-font-size-px) + rem;
+  }
+
+  // We need to provide a margin for links if an explanation is absent.
+  &__message + .m-list {
+    margin-top: math.div(15px, $base-font-size-px) + rem;
+  }
+
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    // Make adjustments to the icon, explanation, and links if at non-mobile.
+    // Increase the icon size.
+    .cf-icon-svg {
+      font-size: math.div(18px, $base-font-size-px) + rem;
+    } // Remove default margin between explanation and list of links.
+    &__explanation {
+      margin-bottom: 0;
+    } // Decrease the margin between the links and the message/explanation.
+    .m-list {
+      margin-top: math.div(5px, $base-font-size-px) + rem;
+    } // Decrease the margin between link items.
+    .m-list__item {
+      margin-bottom: math.div(5px, $base-font-size-px) + rem;
+    }
+  }
+}
+
+// Handle right-to-left (RTL) adjustments.
+html[lang='ar'] .m-notification {
+  .cf-icon-svg + .m-notification__content {
+    padding-left: initial;
+    padding-right: math.div(25px, $base-font-size-px) + rem;
+  }
+
+  .m-list {
+    padding-right: 0;
+  }
+}

@@ -3,8 +3,6 @@
   "version": "1.3.0",
   "description": "Design System expandables",
   "main": "src/index.js",
-  "less": "src/cfpb-expandables.less",
-  "style": "cfpb-expandables.css",
   "publishConfig": {
     "access": "public"
   },

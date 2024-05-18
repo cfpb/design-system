@@ -1,0 +1,347 @@
+@use 'sass:math';
+
+.m-form-field {
+  .a-text-input--full {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .a-label + .a-text-input {
+    margin-top: math.div(5px, $base-font-size-px) + em;
+  }
+
+  &--checkbox,
+  &--radio {
+    .a-label {
+      // We need to turn off autoprefixing for the inline-grid because
+      // IE does not handle an inline-grid like other browsers,
+      // leading to an extremely narrow column of text for the label
+      // and the checkbox or radio widget covering the first part of it.
+      // The Autoprefixer control comment below ensures that the following
+      // property is only picked up by browsers with standard support.
+      // The exclamation mark is necessary for Less to preserve the
+      // comment so that Autoprefixer will see it.
+
+      /*! autoprefixer: ignore next */
+      display: inline-grid;
+
+      // 30px is width of checkbox/radio button plus the needed padding.
+      grid-template-columns: math.div(30px, $base-font-size-px) + em auto;
+      vertical-align: top;
+      cursor: pointer;
+
+      // Wrap long words in narrow form fields to prevent clipping
+      overflow-wrap: anywhere;
+
+      &::before {
+        display: inline-block;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        border: 1px solid $form-field-input-border;
+        height: math.div(18px, $base-font-size-px) + em;
+        width: math.div(18px, $base-font-size-px) + em;
+        margin-right: 10px;
+        background-color: $input-bg;
+        content: '';
+        vertical-align: top;
+
+        // Offset so that the checkbox/radio fits within focused area.
+        position: relative;
+        top: 1px;
+        left: 1px;
+      }
+
+      &:hover::before,
+      &.hover::before {
+        border-color: $input-border-hover;
+      }
+    }
+
+    // Ensure the helper text appears on its own line below the label.
+    .a-label__helper {
+      display: block;
+    }
+
+    .a-checkbox,
+    .a-radio {
+      @include u-visually-hidden;
+
+      &:focus + .a-label,
+      &.focus + .a-label {
+        outline: 1px dotted $input-border-focused;
+
+        // The outline-offset property is not supported in IE.
+        outline-offset: 1px;
+      }
+
+      &:disabled {
+        &:checked + .a-label::before,
+        &:focus + .a-label::before,
+        &.focus + .a-label::before,
+        &:hover + .a-label::before,
+        &.hover + .a-label::before {
+          border-color: $input-border;
+          outline: none;
+          box-shadow: none; // Applies only to radio buttons.
+        }
+
+        & + .a-label {
+          cursor: not-allowed;
+          color: $input-text-disabled;
+
+          &::before {
+            background: $input-bg-disabled;
+            border-color: $form-field-input-border-disabled;
+          }
+        }
+      }
+    }
+  }
+
+  &--checkbox {
+    .a-checkbox {
+      &:focus + .a-label::before,
+      &.focus + .a-label::before {
+        border-color: $input-border-focused;
+        box-shadow: 0 0 0 1px $input-border-focused;
+      }
+
+      &:hover + .a-label::before,
+      &.hover + .a-label::before {
+        border-color: $input-border-hover;
+        box-shadow: 0 0 0 1px $input-border-hover;
+      }
+
+      &:checked + .a-label::before {
+        --cfpb-background-icon-svg: 'approved';
+
+        background-size: auto $cf-icon-height;
+        background-repeat: no-repeat;
+        background-position: center 0;
+      }
+      &:disabled:checked + .a-label::before {
+        // RGB values are CFPB gray (#5a5d61).
+        // For some reason SVG isn't accepting hex values for the fill.
+        --cfpb-background-icon-svg: 'approved rgb(90,93,97)';
+      }
+    }
+
+    &-error {
+      .a-label {
+        &::before {
+          border-color: $input-border-error;
+          outline: 1px solid $input-border-error;
+        }
+
+        &:hover::before,
+        &.hover::before {
+          border-color: $input-border-hover;
+          outline-color: $input-border-hover;
+        }
+      }
+
+      .a-checkbox {
+        &:hover + .a-label::before,
+        &.hover + .a-label::before {
+          border-color: $input-border-hover;
+          outline-color: $input-border-hover;
+        }
+
+        &:focus + .a-label::before,
+        &.focus + .a-label::before {
+          border-color: $input-border-error;
+          box-shadow: 0 0 0 1px $input-border-error;
+          outline-color: $input-border-error;
+        }
+
+        &:focus + .a-label,
+        &.focus + .a-label {
+          outline: 1px dotted $input-border-error;
+          outline-offset: 1px;
+        }
+      }
+    }
+
+    &-warning {
+      .a-label {
+        &::before {
+          border-color: $input-border-warning;
+          outline: 1px solid $input-border-warning;
+        }
+
+        &:hover::before,
+        &.hover::before {
+          border-color: $input-border-hover;
+          outline-color: $input-border-hover;
+        }
+      }
+
+      .a-checkbox {
+        &:hover + .a-label::before,
+        &.hover + .a-label::before {
+          border-color: $input-border-hover;
+          outline-color: $input-border-hover;
+        }
+
+        &:focus + .a-label::before,
+        &.focus + .a-label::before {
+          border-color: $input-border-warning;
+          box-shadow: 0 0 0 1px $input-border-warning;
+          outline-color: $input-border-warning;
+        }
+
+        &:focus + .a-label,
+        &.focus + .a-label {
+          outline: 1px dotted $input-border-warning;
+          outline-offset: 1px;
+        }
+      }
+    }
+
+    &-success {
+      .a-label {
+        &::before {
+          border-color: $input-border-success;
+          outline: 1px solid $input-border-success;
+        }
+
+        &:hover::before,
+        &.hover::before {
+          border-color: $input-border-hover;
+          outline-color: $input-border-hover;
+        }
+      }
+
+      .a-checkbox {
+        &:hover + .a-label::before,
+        &.hover + .a-label::before {
+          border-color: $input-border-hover;
+          outline-color: $input-border-hover;
+        }
+
+        &:focus + .a-label::before,
+        &.focus + .a-label::before {
+          border-color: $input-border-success;
+          box-shadow: 0 0 0 1px $input-border-success;
+          outline-color: $input-border-success;
+        }
+
+        &:focus + .a-label,
+        &.focus + .a-label {
+          outline: 1px dotted $input-border-success;
+          outline-offset: 1px;
+        }
+      }
+    }
+  }
+
+  &--radio {
+    .a-label {
+      &::before {
+        border-radius: 50%;
+
+        /* The rotate is needed to fix a bug in Firefox where radio
+                   button was not centered. */
+        transform: rotate(0deg);
+      }
+    }
+
+    .a-radio {
+      &:focus + .a-label::before,
+      &.focus + .a-label::before {
+        outline: none;
+        border-color: $input-border-focused;
+        box-shadow: 0 0 0 1px $input-border-focused;
+      }
+
+      &:hover + .a-label::before,
+      &.hover + .a-label::before {
+        outline: none;
+        border-color: $input-border-hover;
+        box-shadow: 0 0 0 1px $input-border-hover;
+      }
+
+      &:checked + .a-label::before {
+        background-color: $input-bg-selected;
+        box-shadow: inset 0 0 0 2px $form-field-inset;
+      }
+
+      &:checked:disabled + .a-label::before {
+        background-color: $input-bg-disabled-selected;
+        box-shadow: inset 0 0 0 2px $input-bg-disabled;
+      }
+
+      &:focus:checked + .a-label::before,
+      &.focus:checked + .a-label::before {
+        border-color: $input-border-focused;
+        box-shadow:
+          0 0 0 1px $input-border-focused,
+          inset 0 0 0 2px $form-field-inset;
+      }
+
+      &:hover:checked + .a-label::before,
+      &.hover:checked + .a-label::before {
+        border-color: $input-border-hover;
+        box-shadow:
+          0 0 0 1px $input-border-hover,
+          inset 0 0 0 2px $form-field-inset;
+      }
+    }
+  }
+
+  &--lg-target {
+    display: block;
+
+    .a-label {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 15px;
+      background-color: $form-field-input-lg-target-bg;
+    }
+
+    .a-checkbox,
+    .a-radio {
+      &:checked + .a-label {
+        background-color: $form-field-input-lg-target-bg-selected;
+        box-shadow: inset 0 0 0 1px $form-field-input-lg-target-border;
+      }
+
+      &:hover + .a-label,
+      &.hover + .a-label,
+      &:focus + .a-label,
+      &.focus + .a-label {
+        box-shadow: inset 0 0 0 2px $form-field-input-lg-target-border;
+      }
+
+      &:focus + .a-label,
+      &.focus + .a-label,
+      &:checked + .a-label {
+        // The outline-offset property is not supported in IE.
+        outline-offset: 1px;
+      }
+
+      &:disabled + .a-label,
+      &:checked:disabled + .a-label,
+      &:hover:disabled + .a-label {
+        color: $input-text-disabled;
+        box-shadow: none;
+        background-color: $form-field-input-lg-target-bg-disabled;
+      }
+
+      &:checked:disabled + .a-label {
+        &,
+        &::before {
+          border: 1px solid $form-field-input-border-disabled;
+        }
+      }
+    }
+  }
+
+  // TODO: The same top margin is applied to field-level errors for input-
+  // with-button forms in organisms/form.scss; we should find a way to merge
+  // these to be less repetitive.
+  .a-form-alert {
+    margin-top: math.div(math.div($grid-gutter-width, 2), $base-font-size-px) +
+      em;
+  }
+}

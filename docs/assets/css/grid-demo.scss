@@ -1,0 +1,86 @@
+@use 'sass:math';
+
+/* ==========================================================================
+   Grid Demo
+   Classes used by the cf-grid demo
+   ========================================================================== */
+
+.col {
+  background-color: var(--gray-5);
+
+  > div {
+    background-color: var(--gray-10);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: math.div(15px, $base-font-size-px) + em;
+  }
+}
+
+@media (min-width: 720px) {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    margin-bottom: 15px;
+  }
+
+  .col-1 {
+    @include u-grid-column(1);
+  }
+
+  .col-2 {
+    @include u-grid-column(2);
+  }
+
+  .col-3 {
+    @include u-grid-column(3);
+  }
+
+  .col-4 {
+    @include u-grid-column(4);
+  }
+
+  .col-5 {
+    @include u-grid-column(5);
+  }
+
+  .col-6 {
+    @include u-grid-column(6);
+  }
+
+  .col-7 {
+    @include u-grid-column(7);
+  }
+
+  .col-8 {
+    @include u-grid-column(8);
+  }
+
+  .col-9 {
+    @include u-grid-column(9);
+  }
+
+  .col-10 {
+    @include u-grid-column(10);
+  }
+
+  .col-11 {
+    @include u-grid-column(11);
+  }
+
+  .col-12 {
+    @include u-grid-column(12);
+  }
+}
+
+.nested {
+  @include u-grid-nested-col-group;
+}

@@ -1,0 +1,67 @@
+.ds-nav a {
+  border-bottom-color: transparent;
+
+  &:hover {
+    border-bottom-color: initial;
+  }
+}
+
+.ds-nav > .h5:first-of-type {
+  margin-top: 15px;
+}
+
+// Tablet and above.
+@include respond-to-min($bp-sm-min) {
+  .ds-nav ul:last-child {
+    margin-bottom: 30px;
+  } // Hide the top-level expandable details on desktop.
+  .ds-nav-container > summary {
+    display: none;
+  }
+  .ds-nav-container > .m-list > .m-list__item {
+    margin-bottom: 15px;
+  }
+  .ds-nav {
+    margin-left: 15px;
+  }
+  .ds-nav-1 {
+    border-bottom: 1px solid var(--gray-40);
+  }
+}
+
+// Mobile only.
+@include respond-to-max($bp-xs-max) {
+  .ds-nav a {
+    border-style: solid;
+    border-top-width: 0;
+  }
+  .ds-nav-2,
+  .ds-nav-3 {
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .ds-nav .h4,
+  .ds-nav .h5,
+  .ds-nav .h6 {
+    margin-bottom: 0;
+  }
+  .ds-nav-container {
+    border-top: 1px solid var(--gray-40);
+    border-bottom: 1px solid var(--gray-40);
+    & > summary {
+      padding: 15px;
+      margin-bottom: 0; // Adjust details/summary arrow positioning.
+      &::after {
+        top: 20px;
+        right: 15px;
+      }
+    }
+    & > .m-list {
+      padding: 15px;
+      padding-top: 0;
+    }
+  }
+  .ds-nav > .m-list > .m-list__item {
+    margin-left: 10px;
+  }
+}

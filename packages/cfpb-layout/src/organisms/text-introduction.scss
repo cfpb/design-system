@@ -1,0 +1,11 @@
+.o-text-introduction {
+  margin-top: 0; // Top spacing should come from the layout container
+  margin-bottom: 60px;
+
+  // All direct children should be 15px apart
+  & > * {
+    margin-top: 0;
+    margin-bottom: 15px;
+    max-width: 41.875rem;
+  }
+}

@@ -9,7 +9,7 @@ description: >
   is, but if needed can be overwritten by duplicating the variable in a `@key:
   value` format with a different value. This customized variable would be placed
   in the same file where this component’s less file is imported. Color variables
-  referenced in comments are from cf-core cf-brand-colors.less.
+  referenced in comments are from cf-core cf-brand-colors.scss.
 variation_groups:
   - variation_group_name: Buttons
     variations:
@@ -120,7 +120,7 @@ variation_groups:
 
       ```
 
-      The grid’s maximum width in px. This value can be overridden in the `grid__wrapper()` mixin.
+      The grid’s maximum width in px. This value can be overridden in the `u-grid-wrapper()` mixin.
 
 
       ```
@@ -138,7 +138,7 @@ variation_groups:
 
       ```
 
-      The total number of columns used in calculating column widths. This value can be overridden in the `grid__column()` mixin.
+      The total number of columns used in calculating column widths. This value can be overridden in the `u-grid-column()` mixin.
 
 
       ```
@@ -192,11 +192,11 @@ variation_groups:
           // .content__line
           @content__line:              var(--gray-40);
 
-          // .grid__column__top-divider
-          @grid__column__top-divider:  var(--gray-40);
+          // .u-grid-column__top-divider
+          @u-grid-column__top-divider:  var(--gray-40);
 
-          // .grid__column__left-divider
-          @grid__column__left-divider: var(--gray-40);
+          // .u-grid-column__left-divider
+          @u-grid-column__left-divider: var(--gray-40);
 
           ```
         variation_name: Color
@@ -321,7 +321,7 @@ variation_groups:
 
           @base-line-height-px: 22px;
 
-          @base-line-height:    unit( ( @base-line-height-px / @base-font-size-px ) );
+          @base-line-height:    @base-line-height / @base-font-size;
 
 
           @size-xl:             48px; // Super-size
@@ -353,11 +353,11 @@ variation_groups:
           Use this variable to point to the file containing your `@font-face`
           rules. To use none, set it to an empty string.
 
-          `@font-face-path: 'licensed-fonts.less';`
+          `@font-face-path: 'licensed-fonts.scss';`
       - variation_name: Font source
         variation_description: >-
           Use this variable to specify where the fonts declared in
-          `licensed-fonts.less` are located when self-hosting the font files.
+          `licensed-fonts.scss` are located when self-hosting the font files.
           Can be either a relative or absolute path.
 
           ```

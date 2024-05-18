@@ -59,7 +59,7 @@ where this component's less file is imported.
 
 ### Color variables
 
-Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.less).
+Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.scss).
 
 ```
 // body
@@ -94,7 +94,7 @@ Color variables referenced in comments are from [@cfpb/cfpb-core brand-palette.l
 ```
 @base-font-size-px:   16px;
 @base-line-height-px: 22px;
-@base-line-height:    unit( ( @base-line-height-px / @base-font-size-px ) );
+@base-line-height:    @base-line-height / @base-font-size;
 
 @size-xl:             48px; // Super-size
 
@@ -124,20 +124,24 @@ These mixins take a `px` value breakpoint and set of style rules and converts
 them to the corresponding min or max width media query.
 
 ```
-.respond-to-min(@bp, @rules);
+@include respond-to-min(vars-breakpoints.@bp) {
+    @rules
+}
 
-.respond-to-max(@bp, @rules);
+@include respond-to-max(vars-breakpoints.@bp) {
+    @rules
+}
 ```
 
 Ex.
 
 ```
 // Tablet and above.
-.respond-to-min(@bp-sm-min, {
+@include respond-to-min(vars-breakpoints.@bp-sm-min) {
     .title {
         font-size: 2em;
     }
-});
+}
 
 // Compiles to
 
@@ -154,18 +158,20 @@ This mixin takes both min and max `px` values and a set of style rules and
 converts them to the corresponding min and max media query.
 
 ```
-.respond-to-range(@bp1, @bp2, @rules );
+@include respond-to-range(@bp1, @bp2) {
+    @rules
+}
 ```
 
 Ex.
 
 ```
 // Tablet only.
-.respond-to-range(@bp-sm-min, @bp-sm-max, {
+@include respond-to-range(@bp-sm-min, @bp-sm-max) {
     .title {
         font-size: 2em;
     }
-});
+}
 
 // Compiles to
 
@@ -185,9 +191,9 @@ This mixin allows us to easily write styles that target both
 // The following LESS...
 .example {
   color: var(--gray);
-  .respond-to-print({
-        color: var(--black);
-    });
+  @include respond-to-print() {
+    color: var(--black);
+  }
 }
 
 // ...Exports to
@@ -585,30 +591,30 @@ default - `#0071bc`, `:hover` - `#205493`, `focus:` - `#0071bc`,
 
 [//]: # "NOTE: These aren't the default colors within this project, only once the brand theme has been applied."
 
-`u-link--colors()`
+`u-link-colors()`
 
 Passing a single argument into the mixin will set the color for the
 default, `:visited`, `:hover`, `:focus`, `:active` states.
 
-`u-link--colors(@c)`
+`u-link-colors(@c)`
 
 Passing two arguments into the mixin will set the color for the default,
 `:visited`, and `:active` states as the first argument, and `:hover` and
 `:focus` as the second argument.
 
-`u-link--colors(@c, @h)`
+`u-link-colors(@c, @h)`
 
 Passing five arguments will set the color for the default, `:visited`,
 `:hover`, `:focus`, and `:active` states respectively.
 
-`u-link--colors(@c, @v, @h, @f, @a)`
+`u-link-colors(@c, @v, @h, @f, @a)`
 
 Passing ten arguments will set the text (default, `:visited`, `:hover`,
 `:focus`, and `:active` states in the first five arguments) and border colors
 (default, `:visited`, `:hover`, `:focus`, and `:active` states in the
 following five arguments) separately.
 
-`u-link--colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)`
+`u-link-colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)`
 
 **A base mixin of `u-link**colors-base()`exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use`.u-link**colors(@c, @v, @h, @f, @a)`.**
 
@@ -660,7 +666,7 @@ Sets the element to `14px` (in `em`s) based on the text size passed as
 ```
 // Ex.
 .example {
-  font-size: unit( ( 20px / @base-font-size-px ), em);
+  font-size: math.div( ( 20px / @base-font-size-px ), em);
 
   small {
     .u-small-text(20px);

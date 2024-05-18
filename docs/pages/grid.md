@@ -108,10 +108,10 @@ variation_groups:
           Wrappers are centered containers with a max-width
           and outside left/right padding of ½ the gutter width on each side.
 
-          #### Less mixin
+          #### Sass mixin
 
           ```
-          .grid__wrapper( @grid_wrapper-width: @grid_wrapper-width )
+          @include u-grid-wrapper( @grid_wrapper-width: @grid_wrapper-width )
           ```
 
           You can create a wrapper with max-width other than the default
@@ -121,10 +121,10 @@ variation_groups:
 
           ```
           .main-wrapper {
-              .grid__wrapper();
+              @include u-grid-wrapper();
           }
           .wide-wrapper {
-              .grid__wrapper( 1900px );
+              @include u-grid-wrapper( 1900px );
           }
           ```
         variation_name: Wrappers
@@ -141,7 +141,7 @@ variation_groups:
 
           ```
 
-          .grid__column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
+          .u-grid-column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
 
           ```
 
@@ -165,11 +165,11 @@ variation_groups:
           ```
 
           .main-wrapper {
-              .grid__wrapper();
+              @include u-grid-wrapper();
           }
 
           .half {
-              .grid__column(1, 2);
+              .u-grid-column(1, 2);
           }
 
           .styled {
@@ -213,7 +213,7 @@ variation_groups:
 
           In cf-grid, the way to get around this is by wrapping your columns
 
-          in a container that utilizes the `.grid__nested-col-group()` mixin.
+          in a container that utilizes the `.u-grid-nested-col-group()` mixin.
 
           This mixin uses negative left and right margins to
 
@@ -232,7 +232,7 @@ variation_groups:
 
           ```
 
-          .grid__nested-col-group()
+          .u-grid-nested-col-group()
 
           ```
 
@@ -243,15 +243,15 @@ variation_groups:
           ```
 
           .main-wrapper {
-              .grid__wrapper();
+              @include u-grid-wrapper();
           }
 
           .nested {
-              .grid__nested-col-group();
+              .u-grid-nested-col-group();
           }
 
           .half {
-              .grid__column(1, 2);
+              .u-grid-column(1, 2);
           }
 
           ```
@@ -309,73 +309,6 @@ variation_groups:
           </div>
         variation_description: ''
         variation_name: Nesting
-      - variation_code_snippet: >-
-          <div>
-              <div class="second">I am first in the markup but appear after .first.</div>
-              <div class="first">I am second in the markup but appear before .second.</div>
-          </div>
-        variation_description: >-
-          **NOTE:** Using these is not advised, because the disadvantages for
-          users
-
-          of assistive technology outweigh the advantages of putting your most important
-
-          content first in the source order, but it's here if you absolutely need it.
-
-
-          #### Less mixin
-
-
-          ```
-
-          .push( @offset: 1, @grid_total-columns: @grid_total-columns )
-
-          ```
-
-
-          ```
-
-          .pull( @offset: 1, @grid_total-columns: @grid_total-columns )
-
-          ```
-
-
-          #### Usage
-
-
-          ```
-
-          .first {
-              .grid__column(1, 2);
-              .grid__pull(1);
-          }
-
-          .second {
-              .grid__column(1, 2);
-              .grid__push(1);
-          }
-
-          ```
-        variation_name: Push and pull mixins for source ordering
-      - variation_code_snippet: >-
-          <div class="cols-12">
-              <section>
-                  <div class="col col-1 suffix-11"><div>prefix 0, suffix 11</div></div>
-                  <div class="col col-1 prefix-1 suffix-10"><div>prefix 1, suffix 10</div></div>
-                  <div class="col col-1 prefix-2 suffix-9"><div>prefix 2, suffix 9</div></div>
-                  <div class="col col-1 prefix-3 suffix-8"><div>prefix 3, suffix 8</div></div>
-                  <div class="col col-1 prefix-4 suffix-7"><div>prefix 4, suffix 7</div></div>
-                  <div class="col col-1 prefix-5 suffix-6"><div>prefix 5, suffix 6</div></div>
-                  <div class="col col-1 prefix-6 suffix-5"><div>prefix 6, suffix 5</div></div>
-                  <div class="col col-1 prefix-7 suffix-4"><div>prefix 7, suffix 4</div></div>
-                  <div class="col col-1 prefix-8 suffix-3"><div>prefix 8, suffix 3</div></div>
-                  <div class="col col-1 prefix-9 suffix-2"><div>prefix 9, suffix 2</div></div>
-                  <div class="col col-1 prefix-10 suffix-1"><div>prefix 10, suffix 1</div></div>
-                  <div class="col col-1 prefix-11"><div>prefix 11, suffix 0</div></div>
-              </section>
-          </div>
-        variation_description: ''
-        variation_name: Prefixing/Suffixing
       - variation_name: 'Cf-grid helpers: Wrapper'
         variation_description: >
           Turns an element into a cf-grid wrapper at 801px and above (e.g.,
@@ -446,7 +379,7 @@ variation_groups:
       .description,
 
       .illustration {
-          .grid__column(1, 2);
+          .u-grid-column(1, 2);
       }
 
       ```
@@ -455,7 +388,7 @@ variation_groups:
       Read on for more details on the variables and mixins this component provides.
 
 
-      > NOTE: If you use `cf-grid.less` directly,
+      > NOTE: If you use `cf-grid.scss` directly,
 
       >   be sure to run the file through
 

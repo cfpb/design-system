@@ -4,7 +4,7 @@
    All values are pixel based.
 
    NOTE: If any of the values in this file are adjusted,
-         they need to be adjusted in vars-breakpoints.less as well.
+         they need to be adjusted in vars-breakpoints.scss as well.
    ========================================================================== */
 
 export default {

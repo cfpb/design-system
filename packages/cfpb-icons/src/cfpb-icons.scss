@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Design System
+   Icons
+   ========================================================================== */
+
+//
+// Theme variables
+//
+
+//
+// Size variables
+//
+
+// Icons' SVG viewbox are a consistent 19px (h) x variable (w).
+// The height matches the 19px rendered canvas of text set in Avenir Next
+// sized at 16px (19/16 = 1.1875).
+$cf-icon-height: 1.1875em;
+
+//
+// The basics.
+//
+
+.cf-icon-svg {
+  height: $cf-icon-height;
+  vertical-align: text-top;
+  fill: currentcolor;
+
+  &--updating,
+  &--updating-round {
+    animation: updating-animation 1.25s infinite linear;
+    transform-origin: 50% 50%;
+  }
+}
+
+@keyframes updating-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+// Right-to-left (RTL) certain icons on arabic pages.
+html[lang='ar'] {
+  .cf-icon-svg {
+    &--right,
+    &--right-round,
+    &--left,
+    &--left-round,
+    &--arrow-right,
+    &--arrow-right-round,
+    &--arrow-left,
+    &--arrow-left-round,
+    &--help,
+    &--help-round,
+    &--book,
+    &--book-round,
+    &--document,
+    &--document-round,
+    &--edit,
+    &--edit-round,
+    &--paper-clip,
+    &--paper-clip-round,
+    &--cart,
+    &--cart-round,
+    &--disability,
+    &--disability-round,
+    &--travel,
+    &--travel-round,
+    &--bullhorn,
+    &--bullhorn-round,
+    &--chart,
+    &--chart-round,
+    &--list,
+    &--list-round,
+    &--external-link,
+    &--external-link-round {
+      transform: scaleX(-1);
+    }
+  }
+}

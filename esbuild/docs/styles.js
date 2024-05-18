@@ -1,8 +1,7 @@
-import { readdirSync } from 'fs';
-import { postCSSPlugin } from '../plugins/postcss.js';
+import { pluginPostCssSass } from '../plugins/plugin-postcss-sass.js';
 import autoprefixer from 'autoprefixer';
 
-const cssPaths = ['./docs/assets/css/main.less'];
+const cssPaths = ['./docs/assets/css/main.scss'];
 
 /**
  * @param {object} baseConfig - The base esbuild configuration.
@@ -13,17 +12,8 @@ function styles(baseConfig) {
     ...baseConfig,
     entryPoints: cssPaths,
     plugins: baseConfig.plugins.concat([
-      postCSSPlugin({
+      pluginPostCssSass({
         plugins: [autoprefixer],
-        lessOptions: {
-          math: 'always',
-          paths: [
-            ...readdirSync('./node_modules/@cfpb').map(
-              (v) => `./node_modules/@cfpb/${v}/src`,
-            ),
-            './node_modules/',
-          ],
-        },
       }),
     ]),
   };

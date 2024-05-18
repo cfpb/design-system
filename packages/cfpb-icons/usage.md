@@ -92,9 +92,9 @@ TODO: Provide better contributing docs for SVG icons,
 including how to run the Node script for processing the source SVGs.
 {% endcomment %}
 
-### What the Less is doing
+### What the SCSS is doing
 
-If you look in `@cfpb/icons.less`, below the aforementioned sizing variable,
+If you look in `@cfpb/cfpb-icons.scss`, below the aforementioned sizing variable,
 you'll see this simple rule:
 
 ```
@@ -137,10 +137,12 @@ browser like IE9.
 ## Inline SVG background
 
 In some cases we embed an SVG as a background image.
-To accomplish this, a custom less plugin is used to inject the SVG icon source
-file inline into the CSS `background-image` property.
-This is exposed via a mixin, `.u-svg-inline-bg( @name )`,
-where `@name` is the SVG icon canonical name.
+To accomplish this, a custom postcss plugin is used to inject the
+SVG icon source file inline into the CSS `background-image` property.
+This is exposed via a custom CSS property,
+`--cfpb-background-icon-svg: '[name] [color]'`,
+where `[name]` is the SVG icon canonical name,
+and the optional `[color]` is the color of the icon in `rgb(r,g,b)` format.
 
 ## Rotating update icon
 

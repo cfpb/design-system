@@ -51,9 +51,9 @@ description: >-
 
   /* adjust paths to the modules as necessary */
 
-  @import "node_modules/@cfpb/cfpb-buttons/src/cfpb-buttons.less";
+  @import  "node_modules/@cfpb/cfpb-buttons/src/cfpb-buttons.scss";
 
-  @import "node_modules/@cfpb/cfpb-icons/src/cfpb-icons.less";
+  @import  "node_modules/@cfpb/cfpb-icons/src/cfpb-icons.scss";
 
   ```
 

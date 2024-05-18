@@ -1,0 +1,14 @@
+@use 'sass:math';
+@import '@cfpb/cfpb-core/src/vars';
+@import '@cfpb/cfpb-grid/src/cfpb-grid';
+
+// Taken from global-eyebrow.scss in cfgov.
+.m-global-eyebrow {
+  font-size: math.div(12px, $base-font-size-px) + em;
+  padding-top: math.div(math.div($grid-gutter-width, 3), $base-font-size-px) +
+    em;
+  padding-bottom: math.div(math.div($grid-gutter-width, 3), $base-font-size-px) +
+    em;
+  background: var(--gray-5);
+  border-bottom: 1px solid var(--gray-40);
+}

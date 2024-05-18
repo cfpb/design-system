@@ -1,0 +1,63 @@
+@use 'sass:math';
+@import '@cfpb/cfpb-typography/src/atoms/links';
+
+//
+// Unstyled list modifier
+// Required for horizontal, icon, and link list modifiers
+//
+
+.m-list--unstyled,
+.m-list--horizontal,
+.m-list--links {
+  padding-left: 0;
+  list-style-type: none;
+
+  // This is needed for dd elements.
+  .m-list__item {
+    margin-left: 0;
+  }
+}
+
+//
+// Spaced list modifier
+//
+
+.m-list--spaced {
+  .m-list--spaced,
+  .m-list__item + .m-list__item {
+    margin-top: math.div(24px, $base-font-size-px) + em;
+  }
+}
+
+//
+// Horizontal list modifier
+//
+
+.m-list--horizontal {
+  .m-list__item {
+    display: inline-block;
+
+    // Assuming a natural space of 4px between inline block items
+    // then the space between would be 8px (4px natural + 4px added).
+    margin-right: math.div(4px, $base-font-size-px) + em;
+    margin-bottom: 0;
+  }
+}
+
+//
+// Link list modifier
+//
+
+.m-list--links {
+  .m-list__item {
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+html[lang='ar'] .m-list {
+  // This is needed for right-to-left (RTL) lists.
+  padding-right: 0;
+}

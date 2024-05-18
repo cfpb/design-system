@@ -24,7 +24,7 @@ and apply the mixins to those semantic classes, like this:
 ```
 .description,
 .illustration {
-    .grid__column(1, 2);
+    .u-grid-column(1, 2);
 }
 ```
 
@@ -52,7 +52,7 @@ where this component's less file is imported.
 ```
 
 The grid's maximum width in px.
-This value can be overridden in the `grid__wrapper()` mixin.
+This value can be overridden in the `u-grid-wrapper()` mixin.
 
 ```
 @grid_gutter-width: 30px;
@@ -65,7 +65,7 @@ The fixed width between columns.
 ```
 
 The total number of columns used in calculating column widths.
-This value can be overridden in the `grid__column()` mixin.
+This value can be overridden in the `u-grid-column()` mixin.
 
 ```
 @grid_debug: false;
@@ -78,10 +78,10 @@ Gives column blocks a background color if set to true.
 Wrappers are centered containers with a max-width
 and outside left/right padding of ½ the gutter width on each side.
 
-### Less mixin
+### Sass mixin
 
 ```
-.grid__wrapper( @grid_wrapper-width: @grid_wrapper-width )
+@include u-grid-wrapper( @grid_wrapper-width: @grid_wrapper-width )
 ```
 
 You can create a wrapper with max-width other than the default
@@ -91,10 +91,10 @@ by passing a pixel value into the mixin.
 
 ```
 .main-wrapper {
-    .grid__wrapper();
+    @include u-grid-wrapper();
 }
 .wide-wrapper {
-    .grid__wrapper( 1900px );
+    @include u-grid-wrapper( 1900px );
 }
 ```
 
@@ -112,7 +112,7 @@ by passing a pixel value into the mixin.
 ### Less mixin
 
 ```
-.grid__column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
+.u-grid-column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
 ```
 
 Create a grid column that is `@columns` wide given `@total` total grid columns.
@@ -128,10 +128,10 @@ add a wrapper just inside the column to be styled that way.
 
 ```
 .main-wrapper {
-    .grid__wrapper();
+    @include u-grid-wrapper();
 }
 .half {
-    .grid__column(1, 2);
+    .u-grid-column(1, 2);
 }
 .styled {
     border: 1px solid #999;
@@ -162,7 +162,7 @@ Normally this is removed with complex selectors
 or by adding classes to the first and last column per 'row'.
 
 In @cfpb/grid, the way to get around this is by wrapping your columns
-in a container that utilizes the `.grid__nested-col-group()` mixin.
+in a container that utilizes the `.u-grid-nested-col-group()` mixin.
 This mixin uses negative left and right margins to
 pull the columns back into alignment with parent columns.
 
@@ -173,20 +173,20 @@ without having to deal with the first and last columns of each row.
 ### Less mixin
 
 ```
-.grid__nested-col-group()
+.u-grid-nested-col-group()
 ```
 
 ### Usage
 
 ```
 .main-wrapper {
-    .grid__wrapper();
+    @include u-grid-wrapper();
 }
 .nested {
-    .grid__nested-col-group();
+    .u-grid-nested-col-group();
 }
 .half {
-    .grid__column(1, 2);
+    .u-grid-column(1, 2);
 }
 ```
 
@@ -227,12 +227,12 @@ content first in the source order, but it's here if you absolutely need it.
 
 ```
 .first {
-    .grid__column(1, 2);
-    .grid__pull(1);
+    .u-grid-column(1, 2);
+    .u-grid-pull(1);
 }
 .second {
-    .grid__column(1, 2);
-    .grid__push(1);
+    .u-grid-column(1, 2);
+    .u-grid-push(1);
 }
 ```
 

@@ -1,0 +1,8 @@
+// Taken from enhancements/layout.scss in cfgov-refresh
+
+.wrapper--match-content {
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    max-width: $grid-wrapper-width - ($grid-gutter-width * 2);
+  }
+}

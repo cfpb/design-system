@@ -3,7 +3,6 @@
   "version": "1.3.2",
   "description": "CFPB's UI framework",
   "main": "src/cfpb-design-system.js",
-  "less": "src/cfpb-design-system.less",
   "author": {
     "name": "Consumer Financial Protection Bureau",
     "email": "tech@cfpb.gov",

@@ -1,0 +1,98 @@
+@use 'sass:math';
+
+// Featured Content Module variables
+$fcm-visual-width: 270px;
+$fcm-min-height: 220px;
+
+.o-featured-content-module {
+  min-height: $fcm-min-height;
+  position: relative;
+  border: 1px solid var(--gray-40);
+  background-color: var(--gray-5);
+
+  &__text {
+    padding-top: math.div($grid-gutter-width, $base-font-size-px) + em;
+    padding-bottom: math.div($grid-gutter-width, $base-font-size-px) + em;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    &__text {
+      padding-right: math.div(
+          math.div($grid-gutter-width, 2),
+          $base-font-size-px
+        ) + em;
+      padding-left: math.div(
+          math.div($grid-gutter-width, 2),
+          $base-font-size-px
+        ) + em;
+    }
+    &__visual {
+      padding-right: math.div(
+          math.div($grid-gutter-width, 2),
+          $base-font-size-px
+        ) + em;
+      padding-bottom: math.div(
+          math.div($grid-gutter-width, 2),
+          $base-font-size-px
+        ) + em;
+      padding-left: math.div(
+          math.div($grid-gutter-width, 2),
+          $base-font-size-px
+        ) + em;
+    }
+    &__img {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    &__text {
+      padding-right: $fcm-visual-width + $grid-gutter-width;
+      padding-left: math.div($grid-gutter-width, $base-font-size-px) + em;
+    }
+    &__visual {
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: $fcm-visual-width;
+    }
+    &__img {
+      max-width: none;
+      height: 100%;
+      position: absolute; // Center alignment.
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  // Modifiers
+  &--left {
+    /* Left modifier doesn't have a border/background. If in the future we
+       have a left arranged FCM we'll want to make the border/background
+       its own modifer */
+    border: initial;
+    background-color: initial;
+
+    .o-featured-content-module__visual {
+      left: 0;
+      right: initial;
+    }
+
+    .o-featured-content-module__text {
+      // Tablet and above.
+      @include respond-to-min($bp-sm-min) {
+        padding-left: $fcm-visual-width + $grid-gutter-width;
+        padding-right: math.div($grid-gutter-width, $base-font-size-px) + em;
+      }
+    }
+  }
+}

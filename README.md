@@ -32,11 +32,11 @@ npm install @cfpb/cfpb-design-system
 
 Import individual Less stylesheets or the entire design system into your project:
 
-```less
-@import '@cfpb/cfpb-buttons/src/cfpb-buttons.less';
-@import '@cfpb/cfpb-typography/src/cfpb-typography.less';
+```scss
+@import '@cfpb/cfpb-buttons/src/cfpb-buttons.scss';
+@import '@cfpb/cfpb-typography/src/cfpb-typography.scss';
 // or
-@import '@cfpb/cfpb-design-system/src/cfpb-design-system.less';
+@import '@cfpb/cfpb-design-system/src/cfpb-design-system.scss';
 
 // the rest of your stylesheet...
 ```

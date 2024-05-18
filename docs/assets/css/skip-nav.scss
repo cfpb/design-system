@@ -1,0 +1,53 @@
+@use 'sass:math';
+
+/* ==========================================================================
+   cfgov-refresh
+   skip-nav
+   ========================================================================== */
+
+.skip-nav {
+  position: relative;
+
+  &__link {
+    position: absolute;
+    top: auto;
+    left: -10000px;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    background: transparent;
+    transition:
+      transform 1s ease,
+      background 0.5s linear;
+    z-index: 11;
+
+    &:focus {
+      // a-btn styles.
+      appearance: none;
+      display: inline-block;
+      box-sizing: border-box;
+      border: 0;
+      margin: 0;
+      border-radius: math.div($btn-border-radius-size, $btn-font-size) + em;
+      cursor: pointer;
+      font-weight: 500;
+      line-height: normal;
+      text-align: center;
+      text-decoration: none;
+
+      // Adjustments to button to make it appear like a super button.
+      padding: math.div(11px, 18px) + em math.div(29px, 18px) + em;
+      font-size: math.div(18px, $base-font-size-px) + em;
+
+      top: 15px;
+      left: 15px;
+      height: auto;
+      width: auto;
+      overflow: visible;
+      outline: 0;
+      transition:
+        transform 0.1s ease,
+        background 0.2s linear;
+    }
+  }
+}

@@ -3,8 +3,6 @@
   "version": "1.2.0",
   "description": "Design System tables",
   "main": "src/cfpb-tables.js",
-  "less": "src/cfpb-tables.less",
-  "style": "cfpb-tables.css",
   "publishConfig": {
     "access": "public"
   },

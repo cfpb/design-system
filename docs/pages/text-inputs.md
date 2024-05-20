@@ -55,15 +55,15 @@ variation_groups:
 
           </h4>
 
-          <input class="a-text-input a-text-input--success" type="text" placeholder="Success" id="form-input-success" aria-describedby="form-input-success_message">
+          <input class="a-text-input a-text-input-success" type="text" placeholder="Success" id="form-input-success" aria-describedby="form-input-success_message">
 
           <br><br>
 
-          <input class="a-text-input a-text-input--warning" type="text" placeholder="Warning" id="form-input-warning" aria-describedby="form-input-warning_message">
+          <input class="a-text-input a-text-input-warning" type="text" placeholder="Warning" id="form-input-warning" aria-describedby="form-input-warning_message">
 
           <br><br>
 
-          <input class="a-text-input a-text-input--error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
+          <input class="a-text-input a-text-input-error" type="text" placeholder="Error" id="form-input-error" aria-describedby="form-input-error_message">
         variation_specs: ''
         variation_name: Text input
         variation_description:

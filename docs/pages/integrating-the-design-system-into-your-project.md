@@ -85,7 +85,7 @@ description: >-
   ## Downloading the compiled CSS and JavaScript
 
 
-  While we recommend the above installation method to make future updates smaller and safer by allowing you to update one component at a time, there may be some use cases where it's more appropriate to just grab a snapshot of the full Design System's compiled CSS and JavaScript and drop it into a page. <a class="cf-download" href="https://npmcdn.com/@cfpb/cfpb-design-system/">You can download the compiled Design System CSS and JavaScript from UNPKG.</a>
+  While we recommend the above installation method to make future updates smaller and safer by allowing you to update one component at a time, there may be some use cases where it's more appropriate to just grab a snapshot of the full Design System's compiled CSS and JavaScript and drop it into a page. <a class="cf-download" href="https://unpkg.com/@cfpb/cfpb-design-system/">You can download the compiled Design System CSS and JavaScript from UNPKG.</a>
 
 
   Download the `cfpb-design-system.css` and `cfpb-design-system.js` files to your project and use standard `<link>` and `<script>` tags to include them. For example:

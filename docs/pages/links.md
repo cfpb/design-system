@@ -119,23 +119,38 @@ variation_groups:
           screens by converting to full block links that have a finger-friendly
           touch area. Reduce screen size to see these in action.
         variation_code_snippet: |-
-          <a class="a-link
+          <p><a class="a-link
                     a-link--jump"
             href="#">
           <span class="a-link__text">Jump link</span>
               {% include icons/right.svg %}
-          </a>
+          </a></p><p>
+          <a class="a-link
+                    a-link--jump"
+            href="#">
+          <span class="a-link__text">External link jump link</span>
+              {% include icons/external-link.svg %}
+              {% include icons/right.svg %}
+          </a></p>
+
       - variation_is_deprecated: false
         variation_name: Jump link with icon on left
         variation_description: Jump links can also have icons before the text, like icon links.
         variation_code_snippet: |-
-          <a class="a-link
+          <p><a class="a-link
                     a-link--jump
                     a-link--icon-before-text"
             href="#">
               {% include icons/left.svg %}
               <span class="a-link__text">Jump link with icon on left</span>
-          </a>
+          </a></p><p>
+          <a class="a-link
+                    a-link--jump"
+            href="#">
+              {% include icons/left.svg %}
+          <span class="a-link__text">External link jump link</span>
+              {% include icons/external-link.svg %}
+          </a></p>
       - variation_is_deprecated: false
         variation_name: Printed links
         variation_description: When a page is printed from

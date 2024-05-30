@@ -35,6 +35,9 @@
 
     .a-link__text {
       border-bottom-width: 0;
+      // Arbitrary high value for flex-shrink to prevent squeezing of the icon
+      // when the link text is very long.
+      flex-shrink: 10;
     }
   });
 }

@@ -643,7 +643,7 @@ description: >-
   The cfpb-icons component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.
 
 
-  <a class="a-link--icon"
+  <a class="a-link"
      href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons">
       <span class="a-link__text">View on GitHub</span>
       {% include icons/download.svg %}
@@ -662,7 +662,7 @@ description: >-
   Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. The icon font should not be used for placing icons on a website.
 
 
-  <a class="a-link--icon"
+  <a class="a-link"
      href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
       <span class="a-link__text">Download font</span>
       {% include icons/download.svg %}

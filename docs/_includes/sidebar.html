@@ -11,7 +11,7 @@
 
             <div class="ds-nav ds-nav-1">
                 <div class="h4">
-                    <a class="m-list__link" href="{{ first_level_slug | relative_url }}">{{ first.heading }}</a>
+                    <a class="a-link a-link--jump" href="{{ first_level_slug | relative_url }}">{{ first.heading }}</a>
                 </div>
 
             {% if page.section == first_level_slug or page == blank %}
@@ -19,7 +19,7 @@
                 <ul class="m-list m-list--links">
                 {% for link in first.nav-items %}
                     <li class="m-list__item">
-                        <a class="m-list__link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
+                        <a class="a-link a-link--jump" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
                     </li>
                 {% endfor %}
                 </ul>
@@ -31,7 +31,7 @@
                         <ul class="m-list m-list--links">
                         {% for link in second.nav-items %}
                             <li class="m-list__item">
-                                <a class="m-list__link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
+                                <a class="a-link a-link--jump" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
                             </li>
                         {% endfor %}
                         </ul>
@@ -42,7 +42,7 @@
                         <ul class="m-list m-list--links">
                         {% for link in third.nav-items %}
                             <li class="m-list__item">
-                                <a class="m-list__link" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
+                                <a class="a-link a-link--jump" href="{{ first_level_slug | relative_url }}/{{ link.page | slugify }}">{{ link.page }}</a>
                             </li>
                         {% endfor %}
                         </ul>

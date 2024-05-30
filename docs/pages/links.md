@@ -55,14 +55,6 @@ variation_groups:
                     {% include icons/right.svg %}
                   </a>
               </li>
-              <li class="m-list__item">
-                  <a class="a-link a-link--jump" href="#">
-                      {% include icons/car.svg %}
-                      <span class="a-link__text">List item 4</span>
-                      {% include icons/external-link.svg %}
-                      {% include icons/right.svg %}
-                  </a>
-              </li>
           </ul>
         variation_description: List links (or call-to-action links) are links
           that highlight a users' next steps. They are medium weight and often

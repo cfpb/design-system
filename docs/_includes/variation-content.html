@@ -48,7 +48,7 @@
     <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
         {% for jump_link in jump_links %}
         <li class="m-list__item">
-            <a class="m-list__link" href="#{{ jump_link | slugify }}">
+            <a href="#{{ jump_link | slugify }}">
                 {{- jump_link -}}
             </a>
         </li>

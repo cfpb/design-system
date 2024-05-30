@@ -22,12 +22,12 @@ variation_groups:
                           </p>
                           <ul class="m-list m-list--links">
                               <li class="m-list__item">
-                                  <a class="m-list__link" href="#">
+                                  <a class="a-link a-link--jump" href="#">
                                       A link can be added
                                   </a>
                               </li>
                               <li class="m-list__item">
-                                  <a class="m-list__link" href="#">
+                                  <a class="a-link a-link--jump" href="#">
                                       Multiple links are supported
                                   </a>
                               </li>
@@ -58,12 +58,12 @@ variation_groups:
                           </p>
                           <ul class="m-list m-list--links">
                               <li class="m-list__item">
-                                  <a class="m-list__link" href="#test-link">
+                                  <a class="a-link a-link--jump" href="#test-link">
                                       Links can be added
                                   </a>
                               </li>
                               <li class="m-list__item">
-                                  <a class="m-list__link" href="#">
+                                  <a class="a-link a-link--jump" href="#">
                                       Visited links appear gray instead of white
                                   </a>
                               </li>

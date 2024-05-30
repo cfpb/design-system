@@ -1,10 +1,9 @@
 //
-// Links with icons
-// Required for jump link modifier
+// Jump link
 //
 
-.a-link--icon,
 .a-link--jump {
+  font-weight: 500;
   border-bottom-width: 0;
 
   .a-link__text {
@@ -12,21 +11,8 @@
     border-bottom-style: inherit;
   }
 
-  &.a-link--no-wrap {
-    white-space: nowrap;
-  }
-}
-
-//
-// Jump link
-//
-
-.a-link--jump {
-  font-weight: 500;
-
   // Mobile only.
   .respond-to-max(@bp-xs-max, {
-    .u-block-link();
     display: flex;
     align-items: center;
     gap: unit(5px / @base-font-size-px, rem);
@@ -35,28 +21,39 @@
     .cf-icon-svg--right {
       margin-left: auto;
     }
+
+    box-sizing: border-box;
+    padding-top: unit(10px / @base-font-size-px, em);
+    padding-bottom: unit(10px / @base-font-size-px, em);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    // 100% width is needed when block or jump link are applied to a <button>
+    width: 100%;
+
+    .a-link__text {
+      border-bottom-width: 0;
+    }
   });
 }
 
-/**
- * Block link
- *
- * The block link mixin is used in the jump link and link list patterns
- * to provide the `padding`, `background`, and `border` styling
- * that is common to those two patterns at extra-small screen sizes.
- * It is not intended to be used directly.
- */
+// Mobile only.
+.respond-to-max(@bp-xs-max, {
 
-.u-block-link {
-  box-sizing: border-box;
-  padding-top: unit(10px / @base-font-size-px, em);
-  padding-bottom: unit(10px / @base-font-size-px, em);
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-  // 100% width is needed when block or jump link are applied to a <button>
-  width: 100%;
+  // Handle the borders of jump links that are adjacent in a list
+  li:has(.a-link--jump) + li:has(.a-link--jump) {
+    .a-link--jump {
+      position: relative;
+      border-top: none;
+    }
 
-  .a-link__text {
-    border-bottom-width: 0;
+    .a-link--jump:hover:before {
+      position: absolute;
+      top: -1px;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      border-top: 1px solid @link-underline-hover;
+    }
   }
-}
+});

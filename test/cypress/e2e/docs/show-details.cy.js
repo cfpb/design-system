@@ -36,7 +36,7 @@ describe('The "show details" toggling feature', () => {
   });
 
   it('should query component names', () => {
-    cy.get('.ds-nav-2 .m-list__link').then((items) => {
+    cy.get('.ds-nav-2 .a-link--jump').then((items) => {
       items.each((index, item) => {
         item = String(item);
         components[index] = item.substring(

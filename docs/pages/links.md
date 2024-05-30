@@ -39,14 +39,32 @@ variation_groups:
         variation_code_snippet: |-
           <ul class="m-list m-list--links">
               <li class="m-list__item">
-                  <a class="m-list__link" href="#">List link 1</a>
+                  <a class="a-link a-link--jump" href="#">
+                     <span class="a-link__text">List item 1</span>
+                  </a>
               </li>
               <li class="m-list__item">
-                  <a class="m-list__link" href="#">List link 2</a>
+                  <a class="a-link a-link--jump" href="#">
+                      <span class="a-link__text">List item 2</span>
+                      {% include icons/external-link.svg %}
+                  </a>
+              </li>
+              <li class="m-list__item">
+                  <a class="a-link a-link--jump" href="#">
+                    <span class="a-link__text">List item 3</span>
+                    {% include icons/right.svg %}
+                  </a>
+              </li>
+              <li class="m-list__item">
+                  <a class="a-link a-link--jump" href="#">
+                      {% include icons/car.svg %}
+                      <span class="a-link__text">List item 4</span>
+                      {% include icons/external-link.svg %}
+                      {% include icons/right.svg %}
+                  </a>
               </li>
           </ul>
-        variation_description:
-          List links (or call-to-action links) are standalone links
+        variation_description: List links (or call-to-action links) are links
           that highlight a users' next steps. They are medium weight and often
           used in unordered lists.
         variation_implementation: Call-to-action links are used in
@@ -81,36 +99,17 @@ variation_groups:
         variation_code_snippet: |-
           <p>
             The document icon should emphasize a link that contains a
-              <a class="a-link
-                        a-link--icon"
+              <a class="a-link"
                 href="#">
                   <span class="a-link__text">file or document</span>
                   {% include icons/download.svg %}
               </a>.
               Use the external link icon to emphasize
-              <a class="a-link
-                        a-link--icon"
+              <a class="a-link"
                 href="#">
                   <span class="a-link__text">a non-CFPB webpage</span>
                   {% include icons/external-link.svg %}
               </a> for further details.
-          </p>
-      - variation_is_deprecated: false
-        variation_name: Non-wrapping link with icon
-        variation_description:
-          Icons added to inline links can sometimes break onto the
-          next line. If you want to prevent this, you can add the `__no-wrap`
-          modifier to `.a-link--icon`.
-        variation_code_snippet: |-
-          <p>
-              The document icon should emphasize a link that contains a
-              <a class="a-link
-                    a-link--icon
-                    a-link--no-wrap"
-            href="#">
-                  <span class="a-link__text">file or document</span>
-                  {% include icons/download.svg %}
-              </a>.
           </p>
       - variation_is_deprecated: false
         variation_name: Jump link
@@ -138,8 +137,7 @@ variation_groups:
         variation_description: Jump links can also have icons before the text, like icon links.
         variation_code_snippet: |-
           <p><a class="a-link
-                    a-link--jump
-                    a-link--icon-before-text"
+                    a-link--jump"
             href="#">
               {% include icons/left.svg %}
               <span class="a-link__text">Jump link with icon on left</span>

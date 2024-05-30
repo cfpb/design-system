@@ -174,27 +174,24 @@ Can be either a relative or absolute path.
 - For the underlined icon prevention to work, you must wrap the link text with
   a `span.a-link__text`. There can be no whitespace between the text and the
   opening and closing `span` tags.
-- Include the icon either prior to or after the `a-link__text`. It is important the
-  text and icon are siblings to correctly handle underlines.
+- Include the icon either prior to or after the `a-link__text`.
+  It is important the text and icon are siblings to correctly handle underlines.
 
 <p>
     For more information, email
-    <a class="a-link
-              a-link--icon"
+    <a class="a-link"
        href="#">
         {% include icons/mail.svg %}
         <span class="a-link__text">john.smith@cfpb.gov</span>
     </a>.
     Alternatively, you can
-    <a class="a-link
-              a-link--icon"
+    <a class="a-link"
        href="#">
         <span class="a-link__text">download the info sheet</span>
         {% include icons/download.svg %}
     </a>.
     Oh, you might also want to visit this
-    <a class="a-link
-              a-link--icon"
+    <a class="a-link"
        href="#">
         <span class="a-link__text">other organization's website</span>
         {% include icons/external-link.svg %}
@@ -204,54 +201,24 @@ Can be either a relative or absolute path.
 ```
 <p>
    For more information, email
-    <a class="a-link
-              a-link--icon"
+    <a class="a-link"
        href="#">
         {% raw %}{% include icons/mail.svg %}{% endraw %}
         <span class="a-link__text">john.smith@cfpb.gov</span>
     </a>.
     Alternatively, you can
-    <a class="a-link
-              a-link--icon"
+    <a class="a-link"
        href="#">
         <span class="a-link__text">download the info sheet</span>
         {% raw %}{% include icons/download.svg %}{% endraw %}
     </a>.
     Oh, you might also want to visit this
-    <a class="a-link
-              a-link--icon"
+    <a class="a-link"
        href="#">
         <span class="a-link__text">other organization's website</span>
         {% raw %}{% include icons/external-link.svg %}{% endraw %}
     </a> for further details.
 </p>
-```
-
-#### Non-wrapping icon links
-
-- Warning: Icons added to inline links can sometimes break onto the next line.
-  If you want to prevent this, you can add the `__no-wrap` modifier to
-  `.a-link--icon`.
-
-For more information, email
-<a class="a-link
-          a-link--icon
-          a-link--no-wrap"
-   href="#">
-<span class="a-link__text">john.smith@cfpb.gov</span>
-{% include icons/mail.svg %}
-</a>.
-
-```
-
-For more information, email
-<a class="a-link
-          a-link--icon
-          a-link--no-wrap"
-   href="#">
-    <span class="a-link__text">john.smith@cfpb.gov</span>
-    {% raw %}{% include icons/mail.svg %}{% endraw %}
-</a>.
 ```
 
 ### Jump link
@@ -279,8 +246,7 @@ to full block links that have a finger-friendly touch area.
 Jump links can also have icons before the text, like icon links.
 
 <a class="a-link
-          a-link--jump
-          a-link--icon-before-text"
+          a-link--jump"
    href="#">
 {% include icons/left.svg %}
 <span class="a-link__text">Jump link with icon on left</span>
@@ -288,8 +254,7 @@ Jump links can also have icons before the text, like icon links.
 
 ```
 <a class="a-link
-          a-link--jump
-          a-link--icon-before-text"
+          a-link--jump"
    href="#">
     {% raw %}{% include icons/left.svg %}{% endraw %}
     <span class="a-link__text">Jump link with icon on left</span>
@@ -392,26 +357,26 @@ screens.
 
 <ul class="m-list m-list--links">
     <li class="m-list__item">
-        <a class="m-list__link" href="#">List item 1</a>
+        <a class="a-link a-link--jump" href="#">List item 1</a>
     </li>
     <li class="m-list__item">
-        <a class="m-list__link" href="#">List item 2</a>
+        <a class="a-link a-link--jump" href="#">List item 2</a>
     </li>
     <li class="m-list__item">
-        <a class="m-list__link" href="#">List item 3</a>
+        <a class="a-link a-link--jump" href="#">List item 3</a>
     </li>
 </ul>
 
 ```
 <ul class="m-list m-list--links">
     <li class="m-list__item">
-        <a class="m-list__link" href="#">List item 1</a>
+        <a class="a-link a-link--jump" href="#">List item 1</a>
     </li>
     <li class="m-list__item">
-        <a class="m-list__link" href="#">List item 2</a>
+        <a class="a-link a-link--jump" href="#">List item 2</a>
     </li>
     <li class="m-list__item">
-        <a class="m-list__link" href="#">List item 3</a>
+        <a class="a-link a-link--jump" href="#">List item 3</a>
     </li>
 </ul>
 ```

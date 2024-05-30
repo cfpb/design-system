@@ -55,12 +55,12 @@ variation_groups:
                   </p>
                   <ul class="m-list m-list--links">
                       <li class="m-list__item">
-                          <a class="m-list__link" href="/">
+                          <a class="a-link a-link--jump" href="/">
                               This is a link below the explanation
                           </a>
                       </li>
                       <li class="m-list__item">
-                          <a class="m-list__link" href="/">
+                          <a class="a-link a-link--jump" href="/">
                               This is an external link {% include icons/external-link.svg %}
                           </a>
                       </li>
@@ -83,7 +83,7 @@ variation_groups:
                   </p>
                   <ul class="m-list m-list--links">
                       <li class="m-list__item">
-                          <a class="m-list__link" href="/">
+                          <a class="a-link a-link--jump" href="/">
                               This is an external link {% include icons/external-link.svg %}
                           </a>
                       </li>
@@ -108,7 +108,7 @@ variation_groups:
                   </p>
                   <ul class="m-list m-list--links">
                       <li class="m-list__item">
-                          <a class="m-list__link" href="/">
+                          <a class="a-link a-link--jump" href="/">
                               This is an external link {% include icons/external-link.svg %}
                           </a>
                       </li>
@@ -137,7 +137,7 @@ variation_groups:
                   </p>
                   <ul class="m-list m-list--links">
                       <li class="m-list__item">
-                          <a class="m-list__link" href="/">
+                          <a class="a-link a-link--jump" href="/">
                               This is an external link {% include icons/external-link.svg %}
                           </a>
                       </li>

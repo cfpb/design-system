@@ -1,4 +1,15 @@
 
+## v1.3.1 (2024-05-30)
+
+#### Bug Fix
+* `cfpb-typography`
+  * [#1990](https://github.com/cfpb/design-system/pull/1990) Set underline on link by default ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v1.3.0 (2024-05-30)
 
 #### Enhancement

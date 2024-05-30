@@ -1,4 +1,24 @@
 
+## v1.3.0 (2024-05-30)
+
+#### Enhancement
+* `cfpb-design-system`, `cfpb-forms`, `cfpb-icons`, `cfpb-notifications`, `cfpb-typography`
+  * [#1989](https://github.com/cfpb/design-system/pull/1989) Remove `a-link--no-wrap`, `a-link-icon`, and `m-list__link` ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-typography`
+  * [#1988](https://github.com/cfpb/design-system/pull/1988) Update jump links to handle external icons ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-layout`, `cfpb-typography`
+  * [#1987](https://github.com/cfpb/design-system/pull/1987) Remove `a-link--icon-before-text` and `a-link--icon-after-text` ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-forms`
+  * [#1984](https://github.com/cfpb/design-system/pull/1984) Fix `a-text-input` error/warning/success modifiers ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Andy Chosak ([@chosak](https://github.com/chosak))
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v1.2.0 (2024-05-14)
 
 #### Breaking Change

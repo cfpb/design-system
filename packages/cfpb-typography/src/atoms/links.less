@@ -29,10 +29,11 @@
     .u-block-link();
     display: flex;
     align-items: center;
-    gap: unit(10px / @base-font-size-px, rem);
+    gap: unit(5px / @base-font-size-px, rem);
 
-    .a-link__text {
-      flex-grow: 1;
+    // Only right-hand align arrow icons.
+    .cf-icon-svg--right {
+      margin-left: auto;
     }
   });
 }
@@ -48,7 +49,6 @@
 
 .u-block-link {
   box-sizing: border-box;
-  display: block;
   padding-top: unit(10px / @base-font-size-px, em);
   padding-bottom: unit(10px / @base-font-size-px, em);
   border-top-width: 1px;

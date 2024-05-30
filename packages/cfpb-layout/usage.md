@@ -1148,8 +1148,7 @@ See below for modifiers that change the image's horizontal anchoring.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link--jump
-                  a-link--icon-after-text">
+                  a-link--jump">
             <span class="a-link__text">Read more about the feature</span>
             {% include icons/right.svg %}
         </a>
@@ -1171,8 +1170,7 @@ See below for modifiers that change the image's horizontal anchoring.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link--jump
-                  a-link--icon-after-text">
+                  a-link--jump">
             <span class="a-link__text">Read more about the feature</span>
             {% raw %}{% include icons/right.svg %}{% endraw %}
         </a>
@@ -1204,8 +1202,7 @@ so that the right side remains in view at all screen sizes.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link--jump
-                  a-link--icon-after-text">
+                  a-link--jump">
             <span class="a-link__text">Read more about the feature</span>
             {% include icons/right.svg %}
         </a>
@@ -1228,8 +1225,7 @@ so that the right side remains in view at all screen sizes.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link--jump
-                  a-link--icon-after-text">
+                  a-link--jump">
             <span class="a-link__text">Read more about the feature</span>
             {% raw %}{% include icons/right.svg %}{% endraw %}
         </a>
@@ -1261,8 +1257,7 @@ so that the focal point of the visual remains in view at all screen sizes.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link--jump
-                  a-link--icon-after-text">
+                  a-link--jump">
             <span class="a-link__text">Read more about the feature</span>
             {% include icons/right.svg %}
         </a>
@@ -1285,8 +1280,7 @@ so that the focal point of the visual remains in view at all screen sizes.
             commodo cu.
         </p>
         <a class="a-link
-                  a-link--jump
-                  a-link--icon-after-text">
+                  a-link--jump">
             <span class="a-link__text">Read more about the feature</span>
             {% raw %}{% include icons/right.svg %}{% endraw %}
         </a>

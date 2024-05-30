@@ -27,29 +27,12 @@
   // Mobile only.
   .respond-to-max(@bp-xs-max, {
     .u-block-link();
+    display: flex;
+    align-items: center;
+    gap: unit(10px / @base-font-size-px, rem);
 
-    position: relative;
-
-    .cf-icon-svg {
-      position: absolute;
-      margin-bottom: -0.6em;
-      bottom: 50%;
-    }
-
-    &.a-link--icon-after-text {
-      padding-right: 1.25em;
-    }
-
-    &.a-link--icon-after-text .cf-icon-svg {
-      right: 0;
-    }
-
-    &.a-link--icon-before-text {
-      padding-left: 1.25em;
-    }
-
-    &.a-link--icon-before-text .cf-icon-svg {
-      left: 0;
+    .a-link__text {
+      flex-grow: 1;
     }
   });
 }

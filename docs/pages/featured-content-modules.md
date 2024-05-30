@@ -79,8 +79,7 @@ variation_groups:
                       commodo cu.
                   </p>
                   <a class="a-link
-                            a-link--jump
-                            a-link--icon-after-text">
+                            a-link--jump">
                       <span class="a-link__text">Read more about the feature</span>
                   </a>
               </div>
@@ -110,8 +109,7 @@ variation_groups:
                       commodo cu.
                   </p>
                   <a class="a-link
-                            a-link--jump
-                            a-link--icon-after-text">
+                            a-link--jump">
                       <span class="a-link__text">Read more about the feature</span>
                   </a>
               </div>

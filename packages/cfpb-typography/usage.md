@@ -260,8 +260,7 @@ For more information, email
 to full block links that have a finger-friendly touch area.
 
 <a class="a-link
-          a-link--jump
-          a-link--icon-after-text"
+          a-link--jump"
    href="#">
 <span class="a-link__text">Default jump link</span>
 {% include icons/right.svg %}
@@ -269,8 +268,7 @@ to full block links that have a finger-friendly touch area.
 
 ```
 <a class="a-link
-          a-link--jump
-          a-link--icon-after-text"
+          a-link--jump"
    href="#">
     {% raw %}{% include icons/right.svg %}{% endraw %}
 </a>

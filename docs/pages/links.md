@@ -120,8 +120,7 @@ variation_groups:
           touch area. Reduce screen size to see these in action.
         variation_code_snippet: |-
           <a class="a-link
-                    a-link--jump
-                    a-link--icon-after-text"
+                    a-link--jump"
             href="#">
           <span class="a-link__text">Jump link</span>
               {% include icons/right.svg %}

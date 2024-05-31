@@ -1,4 +1,15 @@
 
+## v1.3.2 (2024-05-31)
+
+#### Bug Fix
+* `cfpb-typography`
+  * [#1991](https://github.com/cfpb/design-system/pull/1991) Prevent squeezing of icon on long jump link text ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v1.3.1 (2024-05-30)
 
 #### Bug Fix

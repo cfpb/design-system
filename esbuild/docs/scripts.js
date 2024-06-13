@@ -1,7 +1,7 @@
 const jsPaths = [
   './docs/assets/js/interstitial.js',
   './docs/assets/js/main.js',
-  './docs/assets/js/admin/netlify-cms.js',
+  './docs/assets/js/admin/decap-cms.js',
   './docs/assets/js/search.js',
 ];
 

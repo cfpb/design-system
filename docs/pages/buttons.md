@@ -3,13 +3,14 @@ title: Buttons
 layout: variation
 section: components
 status: Released
-description: Buttons signal actions. They should be used sparingly; each
-  additional button on a page reduces the visual prominence of a call to action.
-  In contrast, [links](https://cfpb.github.io/design-system/components/links)
-  should lead users to another page or further information.
+description: Buttons are UI elements that signal actions. They should be used
+  sparingly; each additional button on a page reduces the visual prominence of a
+  call to action. In contrast,
+  [links](https://cfpb.github.io/design-system/components/links) should lead
+  users to another page or further information.
 variation_groups:
   - variation_group_name: Types
-    variation_group_description: ''
+    variation_group_description: ""
     variations:
       - variation_code_snippet: >-
           <button class="a-btn" title="Default state">Default state</button>
@@ -22,8 +23,7 @@ variation_groups:
 
 
           <button class="a-btn active" title="Active state">Active state</button>
-        variation_description:
-          Use a primary button for an action that goes to the next
+        variation_description: Use a primary button for an action that goes to the next
           step. Avoid using multiple primary buttons on a single page; there can
           be multiple secondary buttons per page.
         variation_implementation: >-
@@ -34,7 +34,7 @@ variation_groups:
 
 
           Apply the `a-btn` class to a link, button and submit input field to receive the atomic button styles. For more information, see [cf.gov refresh documentation on atomic styles](https://cfpb.github.io/cfgov-refresh/atomic-structure/).
-        variation_specs: ''
+        variation_specs: ""
         variation_name: Primary button
       - variation_code_snippet: >-
           <button class="a-btn a-btn--secondary" title="Default state">Default
@@ -50,7 +50,7 @@ variation_groups:
           <button class="a-btn a-btn--secondary active" title="Active state">Active state</button>
         variation_description: Use a secondary button for actions that happen on the current page.
         variation_name: Secondary button
-        variation_specs: ''
+        variation_specs: ""
       - variation_code_snippet: >-
           <button class="a-btn a-btn--disabled" title="Default state"
           disabled>Default state</button>
@@ -61,7 +61,7 @@ variation_groups:
 
           <button class="a-btn a-btn--disabled focus" title="Focused state" disabled>Focused state</button>
         variation_name: Disabled button
-        variation_specs: ''
+        variation_specs: ""
       - variation_code_snippet: >-
           <button class="a-btn a-btn--warning" title="Default state">Default
           state</button>
@@ -72,7 +72,7 @@ variation_groups:
 
           <button class="a-btn a-btn--warning focus" title="Focused state">Focused state</button>
         variation_name: Destructive button
-        variation_specs: ''
+        variation_specs: ""
       - variation_name: Destructive action
         variation_code_snippet: >-
           <div class="m-btn-group">
@@ -82,7 +82,7 @@ variation_groups:
         variation_description: When paired with a primary action, indicate the
           destructive action using a destructive action button link to the right
           of the primary button.
-        variation_specs: ''
+        variation_specs: ""
       - variation_is_deprecated: false
         variation_name: Full-width button (on x-small screens)
         variation_description: Reduce screen size to see this button in action.
@@ -108,8 +108,7 @@ variation_groups:
           </div>
       - variation_is_deprecated: false
         variation_name: Button with icon
-        variation_description:
-          An icon should appear after the text it represents. The
+        variation_description: An icon should appear after the text it represents. The
           only exception is the back button, in which the icon should appear
           before the button’s text. Each icon should be used exclusively and
           consistently for one action. Icons should never be underlined.
@@ -162,7 +161,7 @@ guidelines: >-
   * Use clear, succinct, and informative language.
 
   * Limit the copy length to 22 characters.
-behavior: ''
+behavior: ""
 restrictions:
   - restrictions_do: <button class="a-btn" title="Test button">Short label</button>
     restrictions_do_not: <button class="a-btn" title="Test button">This label is
@@ -184,10 +183,10 @@ restrictions:
           </span>
       </button>
 eyebrow: Components
-accessibility: ''
+accessibility: ""
 related_items: "* [Button
   variables](https://cfpb.github.io/design-system/development/variables#buttons\
   )"
 last_updated: 2020-01-28T15:55:47.394Z
-research: ''
+research: ""
 ---

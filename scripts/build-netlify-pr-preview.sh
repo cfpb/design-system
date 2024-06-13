@@ -3,4 +3,4 @@
 set -eu
 
 yarn
-yarn run build-netlify
+yarn run build-decap

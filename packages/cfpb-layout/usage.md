@@ -128,7 +128,7 @@ markup._
     <section class="content_hero" style="background: #E3E4E5">
         Content hero
     </section>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <section class="content__main">
             Main content area
         </section>
@@ -143,7 +143,7 @@ markup._
     <section class="content_hero" style="background: #E3E4E5">
         Content hero
     </section>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <section class="content__main">
             Main content area
         </section>
@@ -166,7 +166,7 @@ It is assumed that the content is wider than the sidebar.
 
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar">
             Section navigation
         </aside>
@@ -190,7 +190,7 @@ It is assumed that the content is wider than the sidebar.
 ```
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar">
             Section navigation
         </aside>
@@ -227,7 +227,7 @@ markup._
 
 <main class="content content--2-1" role="main">
     <div class="content__line"></div>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <section class="content__main">
             <h2>Main content area</h2>
             <p>
@@ -251,7 +251,7 @@ markup._
 ```
 <main class="content content--2-1" role="main">
     <div class="content__line"></div>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <section class="content__main">
             <h2>Main content area</h2>
             <p>
@@ -280,7 +280,7 @@ Add a class of `.content--flush-bottom` to `.content__main` or
 
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar content--flush-bottom">
             Side with no bottom padding...
         </aside>
@@ -306,7 +306,7 @@ Add a class of `.content--flush-bottom` to `.content__main` or
 ```
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar content--flush-bottom">
             Side with no bottom padding...
         </aside>
@@ -339,7 +339,7 @@ screens in this case refers to the breakpoint where `.content__main` and
 
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar content--flush-top-on-small">
             Side with no top padding on small screens...
         </aside>
@@ -357,7 +357,7 @@ screens in this case refers to the breakpoint where `.content__main` and
 ```
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar content--flush-top-on-small">
             Side with no top padding on small screens...
         </aside>
@@ -382,7 +382,7 @@ screens only. 'Small' screens in this case refers to the breakpoint where
 
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar content--flush-all-on-small">
             Side with no padding or border-based gutters on small screens...
         </aside>
@@ -400,7 +400,7 @@ screens only. 'Small' screens in this case refers to the breakpoint where
 ```
 <main class="content content--1-3" role="main">
     <div class="content__line"></div>
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar content--flush-all-on-small">
             Side with no padding or border-based gutters on small screens...
         </aside>
@@ -830,7 +830,7 @@ Typically used in conjunction with `.block--bg` to create a 'well' whose
 `background` extends into the left and right gutters. (See below.)
 
 <main class="content content--1-3" role="main">
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar">
             Section navigation
         </aside>
@@ -845,7 +845,7 @@ Typically used in conjunction with `.block--bg` to create a 'well' whose
 
 ```
 <main class="content content--1-3" role="main">
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar">
             Section navigation
         </aside>
@@ -864,7 +864,7 @@ Typically used in conjunction with `.block--bg` to create a 'well' whose
 Removes the side, top, and bottom `margin` from `.block`.
 
 <main class="content content--1-3" role="main">
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar">
             Section navigation
         </aside>
@@ -879,7 +879,7 @@ Removes the side, top, and bottom `margin` from `.block`.
 
 ```
 <main class="content content--1-3" role="main">
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar">
             Section navigation
         </aside>
@@ -917,7 +917,7 @@ This is an example of combining modifiers to get a flush `padding` and
 `background` with a `.block`.
 
 <main class="content content--1-3" role="main">
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar">
             Section navigation
         </aside>
@@ -932,7 +932,7 @@ This is an example of combining modifiers to get a flush `padding` and
 
 ```
 <main class="content content--1-3" role="main">
-    <div class="content__wrapper">
+    <div class="wrapper">
         <aside class="content__sidebar">
             Section navigation
         </aside>

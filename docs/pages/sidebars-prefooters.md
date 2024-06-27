@@ -13,7 +13,7 @@ variation_groups:
               <section class="content_hero" style="background: #E3E4E5">
                   Content hero
               </section>
-              <div class="content__wrapper">
+              <div class="wrapper">
                   <section class="content__main">
                       Main content area
                   </section>
@@ -45,7 +45,7 @@ variation_groups:
         variation_code_snippet: >-
           <main class="content content--1-3" role="main">
               <div class="content__line"></div>
-              <div class="content__wrapper">
+              <div class="wrapper">
                   <aside class="content__sidebar">
                       Section navigation
                   </aside>
@@ -69,7 +69,7 @@ variation_groups:
       - variation_code_snippet: >-
           <main class="content content--2-1" role="main">
               <div class="content__line"></div>
-              <div class="content__wrapper">
+              <div class="wrapper">
                   <section class="content__main">
                       <h2>Main content area</h2>
                       <p>
@@ -115,7 +115,7 @@ variation_groups:
         variation_code_snippet: >-
           <main class="content content--1-3" role="main">
               <div class="content__line"></div>
-              <div class="content__wrapper">
+              <div class="wrapper">
                   <aside class="content__sidebar content--flush-bottom">
                       Side with no bottom padding...
                   </aside>
@@ -148,7 +148,7 @@ variation_groups:
         variation_code_snippet: |-
           <main class="content content--1-3" role="main">
               <div class="content__line"></div>
-              <div class="content__wrapper">
+              <div class="wrapper">
                   <aside class="content__sidebar content--flush-top-on-small">
                       Side with no top padding on small screens...
                   </aside>
@@ -173,7 +173,7 @@ variation_groups:
         variation_code_snippet: >-
           <main class="content content--1-3" role="main">
               <div class="content__line"></div>
-              <div class="content__wrapper">
+              <div class="wrapper">
                   <aside class="content__sidebar content--flush-all-on-small">
                       Side with no padding or border-based gutters on small screens...
                   </aside>

@@ -81,7 +81,7 @@ variation_groups:
         variation_name: Flush-bottom modifier
       - variation_code_snippet: |-
           <main class="content content--1-3" role="main">
-              <div class="content__wrapper">
+              <div class="wrapper">
                   <aside class="content__sidebar">
                       Section navigation
                   </aside>
@@ -100,7 +100,7 @@ variation_groups:
         variation_name: Flush-sides modifier
       - variation_code_snippet: |-
           <main class="content content--1-3" role="main">
-              <div class="content__wrapper">
+              <div class="wrapper">
                   <aside class="content__sidebar">
                       Section navigation
                   </aside>
@@ -125,7 +125,7 @@ variation_groups:
         variation_name: Background modifier
       - variation_code_snippet: |-
           <main class="content content--1-3" role="main">
-              <div class="content__wrapper">
+              <div class="wrapper">
                   <aside class="content__sidebar">
                       Section navigation
                   </aside>

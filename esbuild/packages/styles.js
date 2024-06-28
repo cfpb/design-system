@@ -1,11 +1,10 @@
-import { readdirSync } from 'fs';
-import { postCSSPlugin } from '../plugins/postcss.js';
+import { pluginPostCssSass } from '../plugins/plugin-postcss-sass.js';
 import autoprefixer from 'autoprefixer';
 import { glob } from 'glob';
 
 const cssPaths = [];
 
-const entryFileList = glob.sync('./packages/cfpb-*/src/cfpb-*.less');
+const entryFileList = glob.sync('./packages/cfpb-*/src/cfpb-*.scss');
 entryFileList.forEach((file) => {
   cssPaths.push(file);
 });
@@ -19,17 +18,8 @@ function styles(baseConfig) {
     ...baseConfig,
     entryPoints: cssPaths,
     plugins: baseConfig.plugins.concat([
-      postCSSPlugin({
+      pluginPostCssSass({
         plugins: [autoprefixer],
-        lessOptions: {
-          math: 'always',
-          paths: [
-            ...readdirSync('./node_modules/@cfpb').map(
-              (v) => `./node_modules/@cfpb/${v}/src`,
-            ),
-            './node_modules/',
-          ],
-        },
       }),
     ]),
   };

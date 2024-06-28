@@ -61,7 +61,7 @@ where this component's less file is imported.
 
 ### Color variables
 
-Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.less).
+Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.scss).
 
 ```
 // .block
@@ -78,11 +78,11 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 // .content__line
 @content__line:              var(--gray-40);
 
-// .grid__column__top-divider
-@grid__column__top-divider:  var(--gray-40);
+// .u-grid-column__top-divider
+@u-grid-column__top-divider:  var(--gray-40);
 
-// .grid__column__left-divider
-@grid__column__left-divider: var(--gray-40);
+// .u-grid-column__left-divider
+@u-grid-column__left-divider: var(--gray-40);
 
 // Hero variables
 @hero-bg:                   var(--gray-5);
@@ -1103,17 +1103,17 @@ height of the next parent using `position: relative;`. This means that the
 ```less
 .my-column-1-2 {
   // Creates a column that spans 6 out of 12 columns.
-  .grid__column(6, 12);
+  .u-grid-column(6, 12);
 
   // Add a top divider only at screen 599px and smaller.
-  .respond-to-max(599px {
-        .grid__column--top-divider();
-    });
+  @include respond-to-max(vars-breakpoints.599px) {
+    .u-grid-column--top-divider();
+  }
 
   // Add a left divider only at screen 600px and larger.
-  .respond-to-min(600px, {
-        .grid__column--left-divider();
-    });
+  @include respond-to-min(vars-breakpoints.600px) {
+    .u-grid-column--left-divider();
+  }
 }
 ```
 

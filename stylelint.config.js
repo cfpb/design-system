@@ -1,7 +1,6 @@
 /* NOTES:
 at-rule-no-unknown -
-  This rule enforces only @ rules that appear in the CSS spec,
-  however, @plugin appears in Less, so should be ignored.
+  Ignore to allow at rules from Sass.
 color-function-notation -
   Set to 'legacy' to support older browsers in our browserslist (for now).
 declaration-block-no-redundant-longhand-properties -
@@ -31,18 +30,17 @@ selector-id-pattern -
 selector-class-pattern -
   Turned off.
   TODO: Turn on this rule and work out regex for BEM syntax.
-less/color-no-invalid-hex
-less/no-duplicate-variables
-  Both of the above settings are turned off till
-  https://github.com/ssivanatarajan/stylelint-less/issues/6 is addressed.
+scss/operator-no-newline-after -
+  Turned off. Prettier(?) wraps long lines, so sometimes the + operator ends up
+  at the end of the line.
+scss/comment-no-empty -
+  Turned off. Allow empty comments, for visual formatting purposes.
 */
 export default {
-  extends: ['stylelint-config-standard'],
-  plugins: ['stylelint-less'],
-  ignoreFiles: ['packages/**/node_modules/**/*.less'],
-  customSyntax: 'postcss-less',
+  extends: ['stylelint-config-standard-scss'],
+  ignoreFiles: ['packages/**/node_modules/**/*.scss'],
   rules: {
-    'at-rule-no-unknown': [true, { ignoreAtRules: 'plugin' }],
+    'at-rule-no-unknown': null,
     'color-function-notation': ['legacy'],
     'declaration-block-no-redundant-longhand-properties': null,
     'declaration-empty-line-before': null,
@@ -67,7 +65,7 @@ export default {
       '^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$',
       { resolveNestedSelectors: true },
     ],
-    'less/color-no-invalid-hex': null,
-    'less/no-duplicate-variables': null,
+    'scss/operator-no-newline-after': null,
+    'scss/comment-no-empty': null,
   },
 };

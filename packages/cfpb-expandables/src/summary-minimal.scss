@@ -1,0 +1,48 @@
+@import '@cfpb/cfpb-core/src/cfpb-core';
+
+.o-summary-minimal {
+  &__content {
+    overflow-y: hidden;
+
+    // Move the bounding box 2 pixels to avoid clipping link focus boxes.
+    padding: 2px;
+    left: -2px;
+    top: -2px;
+
+    position: relative;
+  }
+
+  &__btn {
+    // Hide button in no-js state.
+    .no-js & {
+      display: none;
+    }
+
+    margin-top: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    border: none;
+    background: none;
+    text-align: left;
+    color: var(--pacific);
+
+    &:focus {
+      outline: 1px dotted var(--pacific);
+      outline-offset: 2px;
+    }
+
+    .o-summary-minimal__cue-close,
+    .o-summary-minimal__cue-open {
+      display: none;
+    }
+
+    &[aria-expanded='false'] .o-summary-minimal__cue-open {
+      display: block;
+    }
+
+    &[aria-expanded='true'] .o-summary-minimal__cue-close {
+      display: block;
+    }
+  }
+}

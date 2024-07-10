@@ -13,7 +13,7 @@ description: >-
       <div class="m-notification__content">
           <div class="m-notification__message">Before you edit <span data-interstitial-page-name>a page</span>, familiarize yourself with the process.</div>
           <p class="m-notification__explanation">
-              When you're ready to start editing, continue to Netlify CMS.
+              When you're ready to start editing, continue to Decap CMS.
           </p>
       </div>
   </div>
@@ -27,7 +27,7 @@ description: >-
   <strong>Before making a change to a pattern or its documentation, visit Hubcap to read our Design System governance policy.</strong> It contains guidance and acceptance criteria for making minor and major changes to the Design System.
 
 
-  We use a content management system called [Netlify CMS](https://www.netlifycms.org/).
+  We use a content management system called [Decap CMS](https://decapcms.org/).
 
   It's powered by GitHub and will let you edit any page of this website.
 
@@ -80,7 +80,7 @@ description: >-
                   post a message in the <code>Design System</code> mattermost channel and someone will assist you.
               </p>
               <div class="o-well">
-                  <img src="/design-system/images/uploads/cms-demo2.gif" alt="Screenshot showing how to log into Netlify CMS" />
+                  <img src="/design-system/images/uploads/cms-demo2.gif" alt="Screenshot showing how to log into Decap CMS" />
               </div>
           </div>
       </div>
@@ -104,7 +104,7 @@ description: >-
                   Edit content in the left hand pane of the CMS. Preview your changes in the right hand pane. Check out our <a href="/design-system/sample-component-page">sample component page</a> for tips on how to structure a typical page.
               </p>
               <div class="o-well">
-                  <img src="/design-system/images/uploads/cms-demo3.gif" alt="Screenshot showing how to edit a page in Netlify CMS" />
+                  <img src="/design-system/images/uploads/cms-demo3.gif" alt="Screenshot showing how to edit a page in Decap CMS" />
               </div>
           </div>
       </div>
@@ -127,11 +127,11 @@ description: >-
               <p>
                   Click the blue 'Save' button in the top left to save your changes as a draft.
                   Don't worry, the live site won't be affected.
-                  Netlify CMS will build a temporary version of the website with your changes so that you can preview them.
+                  Decap CMS will build a temporary version of the website with your changes so that you can preview them.
                   After you click the 'Save' button you can close the tab and come back to it later if you want, your temporary changes will persist.
               </p>
               <div class="o-well">
-                  <img src="/design-system/images/uploads/cms-demo4.gif" alt="Screenshot showing how to save changes in Netlify CMS" />
+                  <img src="/design-system/images/uploads/cms-demo4.gif" alt="Screenshot showing how to save changes in Decap CMS" />
               </div>
           </div>
       </div>
@@ -152,13 +152,13 @@ description: >-
           </button>
           <div class="o-expandable__content">
               <p>
-                  After you save some changes, Netlify CMS will build a preview of the entire website with your new content.
+                  After you save some changes, Decap CMS will build a preview of the entire website with your new content.
                   This takes a few minutes.
                   When the preview is ready you’ll see a "View Preview" link at the top of the editing page.
                   Feel free to share this link with your peers if you’d like feedback on your new page.
               </p>
               <div class="o-well">
-                  <img src="/design-system/images/uploads/cms-demo5.gif" alt="Screenshot showing how to preview Netlify CMS changes" />
+                  <img src="/design-system/images/uploads/cms-demo5.gif" alt="Screenshot showing how to preview Decap CMS changes" />
               </div>
           </div>
       </div>
@@ -187,7 +187,7 @@ description: >-
                   After you publish, our servers will re-deploy the live website and you'll see your changes in a few minutes at https://cfpb.github.io/design-system.
               </p>
               <div class="o-well">
-                  <img src="/design-system/images/uploads/cms-demo6.gif" alt="Screenshot showing how to publish Netlify CMS changes" />
+                  <img src="/design-system/images/uploads/cms-demo6.gif" alt="Screenshot showing how to publish Decap CMS changes" />
               </div>
           </div>
       </div>
@@ -201,7 +201,7 @@ description: >-
       <h3>Ready to edit the <span data-interstitial-page-name></span> page?</h3>
 
       <p>
-        <a href="/design-system/admin" class="a-btn" data-interstitial-redirect-button>Continue to Netlify CMS</a>
+        <a href="/design-system/admin" class="a-btn" data-interstitial-redirect-button>Continue to Decap CMS</a>
       </p>
   </div>
 
@@ -225,7 +225,7 @@ description: >-
 
 
   <p>
-        <a href="/design-system/admin/#/collections/pages/new" class="a-btn" title="Create a new page for this website in Netlify CMS">Create new page</a>
+        <a href="/design-system/admin/#/collections/pages/new" class="a-btn" title="Create a new page for this website in Decap CMS">Create new page</a>
   </p>
 
 
@@ -245,7 +245,7 @@ description: >-
   ## Uploading images
 
 
-  When editing a page, click the `+` icon to add an image. Select an image from the current library or upload a new image from your computer. Note: Due to a bug in Netlify CMS, the image might not immediately appear in the preview pane.
+  When editing a page, click the `+` icon to add an image. Select an image from the current library or upload a new image from your computer. Note: Due to a bug in Decap CMS, the image might not immediately appear in the preview pane.
 
 
 

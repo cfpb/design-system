@@ -32,7 +32,13 @@
   }
 }
 
-// Don't show the toggle code button in the Netlify CMS preview pane
+// Don't show the toggle code button in the Decap CMS preview pane
 .frame-content #toggle-code {
   display: none;
+}
+
+// By default the preview pane doesn't have any padding.
+.frame-content {
+  padding-left: 20px;
+  padding-right: 20px;
 }

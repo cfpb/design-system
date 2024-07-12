@@ -38,7 +38,7 @@
   @media print {
     @content;
   }
-  .print & {
+  .print {
     @content;
   }
 }

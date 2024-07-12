@@ -11,7 +11,7 @@ input.a-btn::-moz-focus-inner {
   border: 0;
 }
 
-.a-btn {
+@mixin a-btn() {
   appearance: none;
   display: inline-block;
   box-sizing: border-box;
@@ -153,4 +153,8 @@ input.a-btn::-moz-focus-inner {
       width: 100%;
     }
   }
+}
+
+.a-btn {
+  @include a-btn;
 }

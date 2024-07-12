@@ -34,12 +34,16 @@
 // Clearfix
 //
 
-.u-clearfix {
+@mixin u-clearfix {
   &::after {
     content: '';
     display: table;
     clear: both;
   }
+}
+
+.u-clearfix {
+  @include u-clearfix;
 }
 
 //
@@ -97,8 +101,12 @@
 // Hide an element while retaining its layout.
 //
 
-.u-invisible {
+@mixin u-invisible() {
   visibility: hidden;
+}
+
+.u-invisible {
+  @include u-invisible;
 }
 
 // TODO: Deprecated. Remove in CFv5.

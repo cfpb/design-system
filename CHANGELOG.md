@@ -1,4 +1,29 @@
 
+## v2.0.0 (2024-07-18)
+
+#### Breaking Change
+* `cfpb-atomic-component`, `cfpb-buttons`, `cfpb-core`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-grid`, `cfpb-icons`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#1993](https://github.com/cfpb/design-system/pull/1993) Convert Less to Sass ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-design-system`, `cfpb-forms`, `cfpb-layout`, `cfpb-notifications`
+  * [#1997](https://github.com/cfpb/design-system/pull/1997) Replace `content__wrapper` with `wrapper` ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* Other
+  * [#1998](https://github.com/cfpb/design-system/pull/1998) Remove `@cf-icon-path` ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-forms`, `cfpb-notifications`
+  * [#1995](https://github.com/cfpb/design-system/pull/1995) Update deps ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-core`, `cfpb-forms`, `cfpb-grid`
+  * [#2002](https://github.com/cfpb/design-system/pull/2002) Update dependencies: cypress, prettier, sass, saucectl, stylelint ([@anselmbradford](https://github.com/anselmbradford))
+* Other
+  * [#1999](https://github.com/cfpb/design-system/pull/1999) Update browserslist-config, cypress, esbuild, glob, lerna, postcss ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v1.3.2 (2024-05-31)
 
 #### Bug Fix

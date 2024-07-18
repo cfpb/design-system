@@ -5,7 +5,7 @@ set -e
 yarn build-packages &
 
 # Make sure everything is current and built and generate changelog.
-yarn build
+yarn build &
 
 # Update the changelog.
 yarn changelog

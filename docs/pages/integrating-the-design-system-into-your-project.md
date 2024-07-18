@@ -44,7 +44,7 @@ description: >-
   ```
 
 
-  ### Import Less
+  ### Import CSS
 
 
   ```css
@@ -58,7 +58,7 @@ description: >-
   ```
 
 
-  *Note:* Be sure to run the Less files through
+  *Note:* Be sure to run the SCSS files through
 
   [Autoprefixer](https://github.com/postcss/autoprefixer),
 

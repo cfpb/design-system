@@ -30,7 +30,7 @@ npm install @cfpb/cfpb-design-system
 
 ## Usage
 
-Import individual Less stylesheets or the entire design system into your project:
+Import individual SCSS stylesheets or the entire design system into your project:
 
 ```scss
 @import '@cfpb/cfpb-buttons/src/cfpb-buttons.scss';
@@ -49,7 +49,7 @@ import { Expandable } from '@cfpb/cfpb-expandables';
 Expandable.init(document.querySelector('#container'));
 ```
 
-> NOTE: Be sure to run the Less files through
+> NOTE: Be sure to run the SCSS files through
 > [Autoprefixer](https://github.com/postcss/autoprefixer),
 > or your compiled CSS might not work perfectly in older browsers.
 

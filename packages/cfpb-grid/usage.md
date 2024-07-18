@@ -1,8 +1,8 @@
-The grid component is a suite of Less variable and mixins that enables you to
+The grid component is a suite of SCSS variable and mixins that enables you to
 lay out a flexible 12-column grid with fixed-size gutters.
 (Column widths will expand and contract with the width of the page,
 but the gutter width remains constant.)
-The mixins are made to be used within your project's Less code to give grid
+The mixins are made to be used within your project's SCSS code to give grid
 layout to your content without needing to use non-semantic grid classes.
 
 For example, when creating a half-and-half layout, instead of applying classes
@@ -109,7 +109,7 @@ by passing a pixel value into the mixin.
 
 ## Columns
 
-### Less mixin
+### Mixin
 
 ```
 .u-grid-column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
@@ -170,7 +170,7 @@ Working this way allows you to easily create responsive grids.
 You are free to control the number of columns per "row" at different breakpoints
 without having to deal with the first and last columns of each row.
 
-### Less mixin
+### Mixin
 
 ```
 .u-grid-nested-col-group()
@@ -213,14 +213,14 @@ without having to deal with the first and last columns of each row.
 of assistive technology outweigh the advantages of putting your most important
 content first in the source order, but it's here if you absolutely need it.
 
-### Less mixin
+### Mixins
 
 ```
-.push( @offset: 1, @grid_total-columns: @grid_total-columns )
+.u-grid-push( @offset: 1, @grid_total-columns: @grid_total-columns )
 ```
 
 ```
-.pull( @offset: 1, @grid_total-columns: @grid_total-columns )
+.u-grid-pull( @offset: 1, @grid_total-columns: @grid_total-columns )
 ```
 
 ### Usage

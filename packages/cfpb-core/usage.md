@@ -2,7 +2,7 @@ The @cfpb/cfpb-core component acts as the backbone for Design System.
 It's made up of four child components `vars`, `media-queries`,
 `utilities`, and `base`.
 
-> NOTE: If you use any @cfpb/cfpb-core Less file directly,
+> NOTE: If you use any @cfpb/cfpb-core SCSS file directly,
 > be sure to run the files through
 > [Autoprefixer](https://github.com/postcss/autoprefixer),
 > or your compiled Design System CSS will

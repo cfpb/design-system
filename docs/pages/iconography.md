@@ -681,10 +681,11 @@ behavior: >-
   Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.
 
 
-  #### What the Less is doing
+  #### What the SCSS is doing
 
 
-  If you look in [cfpb-icons.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.scss)  you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.
+  If you look in [cfpb-icons.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.scss) you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the CSS rule gets applied to all of the SVGs on the page,
+  just like any other HTML element.
 
 
   We start by limiting the size of the SVG to a proportion of the text height, using the `@cf-icon-height` variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set `vertical-align: text-top;`. Finally, setting `fill: currentColor;` tells the SVG to set its path’s fill `color` to match the color value of its parent element.

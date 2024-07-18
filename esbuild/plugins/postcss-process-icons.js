@@ -22,6 +22,7 @@ const pluginProcessIcons = () => {
           iconName +
           '.svg';
         const rawSVG = await readFileSync(pathToSVG, 'utf8', (err, data) => {
+          // eslint-disable-next-line no-console
           if (err) console.log(err);
 
           return data;

@@ -136,7 +136,7 @@ variation_groups:
               </div>
           </div>
         variation_description: >-
-          #### Less mixin
+          #### Mixin
 
 
           ```
@@ -227,7 +227,7 @@ variation_groups:
           without having to deal with the first and last columns of each row.
 
 
-          #### Less mixin
+          #### Mixin
 
 
           ```
@@ -327,13 +327,13 @@ variation_groups:
     variation_group_name: Development
     variation_group_description: >-
 
-      **Warning:** _This document is written for people who might want to create a grid system using our Less mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write._
+      **Warning:** _This document is written for people who might want to create a grid system using our SCSS mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write._
 
 
       ----
 
 
-      The grid component is a suite of Less variable and mixins that enables you to
+      The grid component is a suite of variables and mixins that enables you to
 
       lay out a flexible 12-column grid with fixed-size gutters.
 
@@ -341,7 +341,7 @@ variation_groups:
 
       but the gutter width remains constant.)
 
-      The mixins are made to be used within your project's Less code to give grid
+      The mixins are made to be used within your project's SCSS code to give grid
 
       layout to your content without needing to use non-semantic grid classes.
 

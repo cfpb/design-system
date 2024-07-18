@@ -19,10 +19,8 @@
       // and the checkbox or radio widget covering the first part of it.
       // The Autoprefixer control comment below ensures that the following
       // property is only picked up by browsers with standard support.
-      // The exclamation mark is necessary for Less to preserve the
-      // comment so that Autoprefixer will see it.
 
-      /*! autoprefixer: ignore next */
+      /* autoprefixer: ignore next */
       display: inline-grid;
 
       // 30px is width of checkbox/radio button plus the needed padding.

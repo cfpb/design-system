@@ -574,15 +574,15 @@
         
         <div class="o-variation-group__description">
             
-<p><strong>Warning:</strong> <em>This document is written for people who might want to create a grid system using our Less mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write.</em></p>
+<p><strong>Warning:</strong> <em>This document is written for people who might want to create a grid system using our SCSS mixins, and does not itself document how we have used our own mixins to create a grid system. Nor does it document how to use said grid system. This page probably needs a major re-write.</em></p>
 
 <hr>
 
-<p>The grid component is a suite of Less variable and mixins that enables you to
+<p>The grid component is a suite of variables and mixins that enables you to
 lay out a flexible 12-column grid with fixed-size gutters.
 (Column widths will expand and contract with the width of the page,
 but the gutter width remains constant.)
-The mixins are made to be used within your project’s Less code to give grid
+The mixins are made to be used within your project’s SCSS code to give grid
 layout to your content without needing to use non-semantic grid classes.</p>
 
 <p>For example, when creating a half-and-half layout, instead of applying classes
@@ -775,7 +775,7 @@ by passing a pixel value into the mixin.</p>
 
             
             <div class="m-variation__description">
-                <h4 id="less-mixin">Less mixin</h4>
+                <h4 id="mixin">Mixin</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.u-grid-column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )
 </code></pre></div></div>
@@ -828,15 +828,15 @@ cf-grid columns will automatically stack into two rows of 12.</p>
             
 
             <div class="a-toggle__code">
-                <button href="#details-columns-less-mixin-u-grid-column-3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
-                <button href="#details-columns-less-mixin-u-grid-column-3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+                <button href="#details-columns-mixin-u-grid-column-colu-3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-columns-mixin-u-grid-column-colu-3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
             </div>
 
-            <div class="m-tabs u-hidden" id="details-columns-less-mixin-u-grid-column-3">
+            <div class="m-tabs u-hidden" id="details-columns-mixin-u-grid-column-colu-3">
                 <ul class="m-tabs__list">
                     
                     <li class="m-tabs__list-item m-tabs__list-item-selected">
-                        <a class="m-tabs__tab" href="#details-columns-less-mixin-u-grid-column-html-code-snippet-3">
+                        <a class="m-tabs__tab" href="#details-columns-mixin-u-grid-column-colu-html-code-snippet-3">
                             HTML code snippet
                         </a>
                     </li>
@@ -848,7 +848,7 @@ cf-grid columns will automatically stack into two rows of 12.</p>
 
                 <!-- HTML snippet -->
                 
-                <section class="m-tabs__panel" id="details-columns-less-mixin-u-grid-column-html-code-snippet-3">
+                <section class="m-tabs__panel" id="details-columns-mixin-u-grid-column-colu-html-code-snippet-3">
                     <div class="variation-code-snippet">
                         <h4 class="variation-code-snippet-title">HTML code snippet</h4>
                         <div class="source-code">
@@ -909,7 +909,7 @@ pull the columns back into alignment with parent columns.</p>
 You are free to control the number of columns per “row” at different breakpoints
 without having to deal with the first and last columns of each row.</p>
 
-<h4 id="less-mixin">Less mixin</h4>
+<h4 id="mixin">Mixin</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.u-grid-nested-col-group()
 </code></pre></div></div>
@@ -1357,8 +1357,8 @@ without having to deal with the first and last columns of each row.</p>
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/grid.md">
-                            <time datetime="2024-07-18 10:44:49 -0400">
-                                10:44:49 AM Jul 18, 2024
+                            <time datetime="2024-07-18 11:39:50 -0400">
+                                11:39:50 AM Jul 18, 2024
                             </time>
                         </a>
                     </section>

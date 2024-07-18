@@ -1,14 +1,14 @@
 {
   "name": "@cfpb/cfpb-pagination",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Design System pagination",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/cfpb-buttons": "^1.3.0",
-    "@cfpb/cfpb-core": "^1.2.0",
-    "@cfpb/cfpb-icons": "^1.3.0"
+    "@cfpb/cfpb-buttons": "^2.0.0",
+    "@cfpb/cfpb-core": "^2.0.0",
+    "@cfpb/cfpb-icons": "^2.0.0"
   },
   "keywords": [
     "pagination"

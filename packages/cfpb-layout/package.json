@@ -1,13 +1,13 @@
 {
   "name": "@cfpb/cfpb-layout",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Design System layouts",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@cfpb/cfpb-core": "^1.2.0",
-    "@cfpb/cfpb-grid": "^1.2.0"
+    "@cfpb/cfpb-core": "^2.0.0",
+    "@cfpb/cfpb-grid": "^2.0.0"
   },
   "keywords": [
     "layout"

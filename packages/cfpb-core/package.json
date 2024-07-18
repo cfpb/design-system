@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-core",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Design System core styles",
   "publishConfig": {
     "access": "public"

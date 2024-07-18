@@ -2095,13 +2095,12 @@
 
 <h4 id="what-the-less-is-doing">What the Less is doing</h4>
 
-<p>If you look in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.less">cfpb-icons.less</a>  you can see that we have encoded <code class="language-plaintext highlighter-rouge">class="cf-icon-svg"</code> in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.</p>
+<p>If you look in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.scss">cfpb-icons.scss</a>  you can see that we have encoded <code class="language-plaintext highlighter-rouge">class="cf-icon-svg"</code> in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.</p>
 
 <p>We start by limiting the size of the SVG to a proportion of the text height, using the <code class="language-plaintext highlighter-rouge">@cf-icon-height</code> variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set <code class="language-plaintext highlighter-rouge">vertical-align: text-top;</code>. Finally, setting <code class="language-plaintext highlighter-rouge">fill: currentColor;</code> tells the SVG to set its path’s fill <code class="language-plaintext highlighter-rouge">color</code> to match the color value of its parent element.</p>
 
 <h4 id="inline-svg-background">Inline SVG background</h4>
-
-<p>In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS background-image property. This is exposed via a mixin, <code class="language-plaintext highlighter-rouge">.u-svg-inline-bg( @name, @is-grayscale )</code>, where @name is the SVG icon canonical name and <code class="language-plaintext highlighter-rouge">@is-grayscale</code> is whether the SVG fill color is gray (true) or black (false).</p>
+<p>In some cases we embed an SVG as a background image. To accomplish this, a custom postcss plugin is used to inject the SVG icon source file inline into the CSS <code class="language-plaintext highlighter-rouge">background-image</code> property. This is exposed via a custom CSS property, <code class="language-plaintext highlighter-rouge">--cfpb-background-icon-svg: '[name] [color]'</code>, where <code class="language-plaintext highlighter-rouge">[name]</code> is the SVG icon canonical name, and the optional <code class="language-plaintext highlighter-rouge">[color]</code> is the color of the icon in <code class="language-plaintext highlighter-rouge">rgb(r,g,b)</code> format.</p>
 
 <h3 id="interaction-details">Interaction details</h3>
 
@@ -2133,8 +2132,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/iconography.md">
-                            <time datetime="2024-07-10 15:04:20 -0400">
-                                 3:04:20 PM Jul 10, 2024
+                            <time datetime="2024-07-18 10:44:49 -0400">
+                                10:44:49 AM Jul 18, 2024
                             </time>
                         </a>
                     </section>

@@ -1412,25 +1412,25 @@
             <div class="m-variation__description">
                 <p>Calling the mixin without arguments will set the following states: default - <code class="language-plaintext highlighter-rouge">#0071bc</code>, <code class="language-plaintext highlighter-rouge">:hover</code> - <code class="language-plaintext highlighter-rouge">#205493</code>, <code class="language-plaintext highlighter-rouge">:focus</code> - <code class="language-plaintext highlighter-rouge">#0071bc</code>, <code class="language-plaintext highlighter-rouge">:visited</code> - <code class="language-plaintext highlighter-rouge">#4c2c92</code>, <code class="language-plaintext highlighter-rouge">:active</code> - <code class="language-plaintext highlighter-rouge">#046b99</code>.</p>
 
-<p><code class="language-plaintext highlighter-rouge">u-link--colors()</code></p>
+<p><code class="language-plaintext highlighter-rouge">u-link-colors()</code></p>
 
 <p>Passing a single argument into the mixin will set the color for the default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states.</p>
 
-<p><code class="language-plaintext highlighter-rouge">u-link--colors(@c)</code></p>
+<p><code class="language-plaintext highlighter-rouge">u-link-colors(@c)</code></p>
 
 <p>Passing two arguments into the mixin will set the color for the default, <code class="language-plaintext highlighter-rouge">:visited</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states as the first argument, and <code class="language-plaintext highlighter-rouge">:hover</code> and <code class="language-plaintext highlighter-rouge">:focus</code> as the second argument.</p>
 
-<p><code class="language-plaintext highlighter-rouge">u-link--colors(@c, @h)</code></p>
+<p><code class="language-plaintext highlighter-rouge">u-link-colors(@c, @h)</code></p>
 
 <p>Passing five arguments will set the color for the default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states respectively.</p>
 
-<p><code class="language-plaintext highlighter-rouge">u-link--colors(@c, @v, @h, @f, @a)</code></p>
+<p><code class="language-plaintext highlighter-rouge">u-link-colors(@c, @v, @h, @f, @a)</code></p>
 
 <p>Passing ten arguments will set the text (default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states in the first five arguments) and border colors (default, <code class="language-plaintext highlighter-rouge">:visited</code>, <code class="language-plaintext highlighter-rouge">:hover</code>, <code class="language-plaintext highlighter-rouge">:focus</code>, and <code class="language-plaintext highlighter-rouge">:active</code> states in the following five arguments) separately.</p>
 
-<p><code class="language-plaintext highlighter-rouge">u-link--colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)</code></p>
+<p><code class="language-plaintext highlighter-rouge">u-link-colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)</code></p>
 
-<p><strong>A base mixin of <code class="language-plaintext highlighter-rouge">u-link--colors-base()</code> exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use <code class="language-plaintext highlighter-rouge">.u-link--colors(@c, @v, @h, @f, @a)</code>.</strong></p>
+<p><strong>A base mixin of <code class="language-plaintext highlighter-rouge">u-link-colors-base()</code> exists, but please refrain from using this mixin directly in order to promote consistent naming throughout this project. If you need to set colors for all states of a link, use <code class="language-plaintext highlighter-rouge">.u-link-colors(@c, @v, @h, @f, @a)</code>.</strong></p>
 
             </div>
             
@@ -1567,7 +1567,7 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Ex.
 .example {
-  font-size: unit(20px / @base-font-size-px, em);
+  font-size: math.div(20px, @base-font-size-px) + em;
 
   small {
     .u-small-text(20px);
@@ -1625,8 +1625,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/helper-classes-mixins.md">
-                            <time datetime="2024-07-10 15:04:20 -0400">
-                                 3:04:20 PM Jul 10, 2024
+                            <time datetime="2024-07-18 10:44:49 -0400">
+                                10:44:49 AM Jul 18, 2024
                             </time>
                         </a>
                     </section>

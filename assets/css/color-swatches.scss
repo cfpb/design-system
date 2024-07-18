@@ -1,12 +1,15 @@
+@use 'sass:math';
+@import '@cfpb/cfpb-core/src/vars';
+
 /* Color swatches for Identity/Color page
    ========================================================================== */
 
 .swatches-container--primary {
-  .grid__nested-col-group();
+  @include u-grid-nested-col-group;
 }
 
 .swatches--primary {
-  .grid__column( 9.4 );
+  @include u-grid-column(9.4);
 }
 
 .swatch {
@@ -50,13 +53,13 @@
 /* Small tablet (600px) */
 @media only screen and (min-width: 37.5em) {
   .swatches {
-    .grid__nested-col-group();
+    @include u-grid-nested-col-group;
   }
   .swatch {
-    .grid__column( 6 );
+    @include u-grid-column(6);
 
     th {
-      width: unit(70px / @base-font-size-px, em);
+      width: math.div(70px, $base-font-size-px) + em;
     }
   }
 }
@@ -64,16 +67,16 @@
 /* Landscape tablet/netbook/laptop (1024px) */
 @media only screen and (min-width: 64em) {
   .swatch--secondary {
-    .grid__column( 3 );
+    @include u-grid-column(3);
   }
 
   .swatch--primary {
-    .grid__column( 4 );
+    @include u-grid-column(4);
   }
 }
 
 // prettier-ignore
-@colors: 'beige',
+$colors: 'beige',
          'beige-30',
          'beige-60',
          'green-dark',
@@ -191,24 +194,17 @@
          'white';
 
 // Set up looping mixin
-.color-swatch-loop( @index ) when ( @index > 0 ) {
-  // Retrieve the next variable name from the @colors array
-  @name: e(extract(@colors, @index));
+@each $color in $colors {
   // Output the `.swatch__field--color` rule
-  .swatch__field--@{name} {
+  .swatch__field--#{$color} {
     /* prettier-ignore */
-    background: ~"var(--@{name})";
+    background: var(--#{$color});
   }
-  // Call the next iteration of the loop
-  .color-swatch-loop( @index - 1 );
 }
-
-// Initiate loop
-.color-swatch-loop( length( @colors ) );
 
 .color-table {
   width: 100%;
-  margin-bottom: unit(45px / @base-font-size-px, em);
+  margin-bottom: math.div(45px, $base-font-size-px) + em;
 
   .swatch__field {
     width: 30%;

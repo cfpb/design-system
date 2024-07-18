@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /* ==========================================================================
    Main content
    ========================================================================== */
@@ -7,9 +9,9 @@
 
   td:nth-child(1),
   td:nth-child(2) {
-    font-size: unit(32px / @base-font-size-px, em);
+    font-size: math.div(32px, $base-font-size-px) + em;
     text-align: center;
-    padding: unit(10px / 32px, em);
+    padding: math.div(10px, 32px) + em;
     width: 15%;
   }
 
@@ -47,38 +49,38 @@
 .content-75,
 .content-33,
 .content-67 {
-  .grid__column(12);
+  @include u-grid-column(12);
 }
 
 /* Media Queries
    ========================================================================== */
 
-/* Small tablet (600px) */
+// Small tablet (600px).
 @media only screen and (min-width: 37.5em) {
-  /* Inner content - nested grid inside content */
+  // Inner content - nested grid inside content.
   .content-25 {
-    .grid__column(3);
+    @include u-grid-column(3);
   }
 
   .content-75 {
-    .grid__column(9);
+    @include u-grid-column(9);
   }
 
-  /* Inner content - nested grid inside content */
+  // Inner content - nested grid inside content.
   .content-33 {
-    .grid__column(4);
+    @include u-grid-column(4);
   }
 
   .content-67 {
-    .grid__column(8);
+    @include u-grid-column(8);
   }
 
-  /* Inner content - nested grid inside content */
+  // Inner content - nested grid inside content.
   .content-50 {
-    .grid__column(6);
+    @include u-grid-column(6);
   }
 
-  //Nested colums don't work yet, so pull the first col back
+  // Nested colums don't work yet, so pull the first col back.
   .content-first {
     border-left: 0;
   }

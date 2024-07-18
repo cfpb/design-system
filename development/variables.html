@@ -292,7 +292,7 @@
 
     
     <section id="description" class="u-mb30">
-        <p>Component variables are used to theme a component. They likely will be left as is, but if needed can be overwritten by duplicating the variable in a <code class="language-plaintext highlighter-rouge">@key: value</code> format with a different value. This customized variable would be placed in the same file where this component’s less file is imported. Color variables referenced in comments are from cf-core cf-brand-colors.less.</p>
+        <p>Component variables are used to theme a component. They likely will be left as is, but if needed can be overwritten by duplicating the variable in a <code class="language-plaintext highlighter-rouge">@key: value</code> format with a different value. This customized variable would be placed in the same file where this component’s less file is imported. Color variables referenced in comments are from cf-core cf-brand-colors.scss.</p>
 
     </section>
     
@@ -555,7 +555,7 @@
         <div class="o-variation-group__description">
             <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@grid_wrapper-width: 1230px;
 </code></pre></div></div>
-<p>The grid’s maximum width in px. This value can be overridden in the <code class="language-plaintext highlighter-rouge">grid__wrapper()</code> mixin.</p>
+<p>The grid’s maximum width in px. This value can be overridden in the <code class="language-plaintext highlighter-rouge">u-grid-wrapper()</code> mixin.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@grid_gutter-width: 30px;
 </code></pre></div></div>
@@ -563,7 +563,7 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@grid_total-columns: 12;
 </code></pre></div></div>
-<p>The total number of columns used in calculating column widths. This value can be overridden in the <code class="language-plaintext highlighter-rouge">grid__column()</code> mixin.</p>
+<p>The total number of columns used in calculating column widths. This value can be overridden in the <code class="language-plaintext highlighter-rouge">u-grid-column()</code> mixin.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@grid_debug: false;
 </code></pre></div></div>
@@ -716,11 +716,11 @@
 // .content__line
 @content__line:              var(--gray-40);
 
-// .grid__column__top-divider
-@grid__column__top-divider:  var(--gray-40);
+// .u-grid-column__top-divider
+@u-grid-column__top-divider:  var(--gray-40);
 
-// .grid__column__left-divider
-@grid__column__left-divider: var(--gray-40);
+// .u-grid-column__left-divider
+@u-grid-column__left-divider: var(--gray-40);
 
 </code></pre></div></div>
 
@@ -1135,7 +1135,7 @@
             <div class="m-variation__description">
                 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@base-font-size-px:   16px;
 @base-line-height-px: 22px;
-@base-line-height:    unit( ( @base-line-height-px / @base-font-size-px ) );
+@base-line-height:    @base-line-height / @base-font-size;
 
 @size-xl:             48px; // Super-size
 
@@ -1218,7 +1218,7 @@
             
             <div class="m-variation__description">
                 <p>Use this variable to point to the file containing your <code class="language-plaintext highlighter-rouge">@font-face</code> rules. To use none, set it to an empty string.
-<code class="language-plaintext highlighter-rouge">@font-face-path: 'licensed-fonts.less';</code></p>
+<code class="language-plaintext highlighter-rouge">@font-face-path: 'licensed-fonts.scss';</code></p>
 
             </div>
             
@@ -1253,7 +1253,7 @@
 
             
             <div class="m-variation__description">
-                <p>Use this variable to specify where the fonts declared in <code class="language-plaintext highlighter-rouge">licensed-fonts.less</code> are located when self-hosting the font files. Can be either a relative or absolute path.</p>
+                <p>Use this variable to specify where the fonts declared in <code class="language-plaintext highlighter-rouge">licensed-fonts.scss</code> are located when self-hosting the font files. Can be either a relative or absolute path.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@cf-fonts-path: '/static/fonts'`;
 </code></pre></div></div>
 
@@ -1309,8 +1309,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/variables.md">
-                            <time datetime="2024-07-10 15:04:20 -0400">
-                                 3:04:20 PM Jul 10, 2024
+                            <time datetime="2024-07-18 10:44:49 -0400">
+                                10:44:49 AM Jul 18, 2024
                             </time>
                         </a>
                     </section>

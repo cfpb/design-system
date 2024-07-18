@@ -287,16 +287,20 @@
         <div class="o-variation-group__description">
             <p>These mixins take a px value breakpoint and set of style rules and converts them to the corresponding min or max width media query.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-min(@bp, @rules);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@include respond-to-min(vars-breakpoints.@bp) {
+    @rules
+}
 
-.respond-to-max(@bp, @rules);
+@include respond-to-max(vars-breakpoints.@bp) {
+    @rules
+}
 </code></pre></div></div>
 <p>Ex.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Tablet and above. .respond-to-min(@bp-sm-min, {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Tablet and above. @include respond-to-min(vars-breakpoints.@bp-sm-min) {
     .title {
         font-size: 2em;
     }
-});
+}
 
 // Compiles to
 
@@ -324,14 +328,16 @@
         
         <div class="o-variation-group__description">
             <p>This mixin takes both min and max px values and a set of style rules and converts them to the corresponding min and max media query.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.respond-to-range(@bp1, @bp2, @rules );
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@include respond-to-range(@bp1, @bp2) {
+  @rules
+}
 </code></pre></div></div>
 <p>Ex.
-``` // Tablet only. .respond-to-range(@bp-sm-min, @bp-sm-max, {
+``` // Tablet only. @include respond-to-range(@bp-sm-min, @bp-sm-max) {
     .title {
         font-size: 2em;
     }
-});</p>
+}</p>
 
 <p>// Compiles to</p>
 
@@ -363,9 +369,9 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The following LESS...
 .example {
     color: var(--gray);
-    .respond-to-print({
+    @include respond-to-print() {
         color: var(--black);
-    });
+    }
 }
 
 // ...Exports to
@@ -412,8 +418,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/media-queries.md">
-                            <time datetime="2024-07-10 15:04:20 -0400">
-                                 3:04:20 PM Jul 10, 2024
+                            <time datetime="2024-07-18 10:44:49 -0400">
+                                10:44:49 AM Jul 18, 2024
                             </time>
                         </a>
                     </section>

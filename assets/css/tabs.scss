@@ -9,7 +9,7 @@
   }
 
   &__list-item {
-    .heading-5();
+    @include heading-5;
     border-bottom: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -81,30 +81,28 @@
 }
 
 // Tablet and below.
-.respond-to-max(@bp-sm-max, {
+@include respond-to-max($bp-sm-max) {
   .m-tabs__panel {
     &.u-hidden {
       display: block !important;
     }
   }
-});
+}
 
 // Desktop and above.
-.respond-to-min(@bp-med-min, {
+@include respond-to-min($bp-med-min) {
   .m-tabs__list {
     display: flex;
   }
-
   .m-tabs__panel {
     border-top: 1px solid var(--gray);
     border-bottom: 1px solid var(--gray-40);
     margin: -3px 0 50px;
   }
-
   .variation-code-snippet-title,
   .variation-jinja-code-snippet-title,
   .variation-implementation-title,
   .variation-specs-title {
-    .u-visually-hidden();
+    @include u-visually-hidden;
   }
-});
+}

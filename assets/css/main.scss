@@ -2,43 +2,40 @@
    Design System
    ========================================================================== */
 
-// This is your project's main Less file.
-// Project-specific Less rules go after the imports.
-
-// Import Design System packages.
-@import (less) '@cfpb/cfpb-atomic-component/src/cfpb-atomic-component.less';
-@import (less) '@cfpb/cfpb-core/src/cfpb-core.less';
-@import (less) '@cfpb/cfpb-grid/src/cfpb-grid.less';
-@import (less) '@cfpb/cfpb-icons/src/cfpb-icons.less';
-@import (less) '@cfpb/cfpb-typography/src/cfpb-typography.less';
-@import (less) '@cfpb/cfpb-layout/src/cfpb-layout.less';
-@import (less) '@cfpb/cfpb-buttons/src/cfpb-buttons.less';
-@import (less) '@cfpb/cfpb-forms/src/cfpb-forms.less';
-@import (less) '@cfpb/cfpb-notifications/src/cfpb-notifications.less';
-@import (less) '@cfpb/cfpb-pagination/src/cfpb-pagination.less';
-@import (less) '@cfpb/cfpb-expandables/src/cfpb-expandables.less';
-@import (less) '@cfpb/cfpb-tables/src/cfpb-tables.less';
-
-// Custom modules.
-@import (less) 'sidebar.less';
-@import (less) 'footer.less';
-@import (less) 'skip-nav.less';
-@import (less) 'global-eyebrow.less';
-@import (less) 'layout.less';
-@import (less) 'header.less';
-@import (less) 'main-content.less';
-@import (less) 'code.less';
-@import (less) 'grid-demo.less';
-@import (less) 'netlify.less';
-@import (less) 'tabs.less';
-@import (less) 'toggle-code-button.less';
-@import (less) 'variation.less';
-@import (less) 'color-swatches.less';
-@import (less) 'search.less';
-
 // Webfont variables
 // This is the path for self-hosted fonts.
-@cf-fonts-path: '/design-system/fonts';
+$cf-fonts-path: '/design-system/fonts';
+
+// Import Design System packages.
+@import '@cfpb/cfpb-atomic-component/src/cfpb-atomic-component';
+@import '@cfpb/cfpb-core/src/cfpb-core';
+@import '@cfpb/cfpb-grid/src/cfpb-grid';
+@import '@cfpb/cfpb-icons/src/cfpb-icons';
+@import '@cfpb/cfpb-typography/src/cfpb-typography';
+@import '@cfpb/cfpb-layout/src/cfpb-layout';
+@import '@cfpb/cfpb-buttons/src/cfpb-buttons';
+@import '@cfpb/cfpb-forms/src/cfpb-forms';
+@import '@cfpb/cfpb-notifications/src/cfpb-notifications';
+@import '@cfpb/cfpb-pagination/src/cfpb-pagination';
+@import '@cfpb/cfpb-expandables/src/cfpb-expandables';
+@import '@cfpb/cfpb-tables/src/cfpb-tables';
+
+// Custom modules.
+@import 'sidebar';
+@import 'footer';
+@import 'skip-nav';
+@import 'global-eyebrow';
+@import 'layout';
+@import 'header';
+@import 'main-content';
+@import 'code';
+@import 'grid-demo';
+@import 'netlify';
+@import 'tabs';
+@import 'toggle-code-button';
+@import 'variation';
+@import 'color-swatches';
+@import 'search';
 
 // Documentation specific stlyes
 html,
@@ -80,11 +77,12 @@ details summary::after {
   height: 10px;
   display: block;
   content: '';
-  .u-svg-inline-bg( 'down' );
+
+  --cfpb-background-icon-svg: 'down';
 }
 
 details[open] summary::after {
-  .u-svg-inline-bg( 'up' );
+  --cfpb-background-icon-svg: 'up';
 }
 
 // Set padding for main content blocks.
@@ -96,9 +94,9 @@ details[open] summary::after {
   padding: 0 30px;
 
   // Mobile only.
-  .respond-to-max(@bp-xs-max, {
+  @include respond-to-max($bp-xs-max) {
     padding: 0;
-  });
+  }
 }
 
 main {
@@ -131,33 +129,28 @@ main {
 }
 
 // Mobile only.
-.respond-to-max(@bp-xs-max, {
-
+@include respond-to-max($bp-xs-max) {
   main {
     padding: 0;
     margin-top: 0;
   }
-
   .ds-sidebar,
   .ds-content {
     display: block;
   }
-
   .ds-content {
     padding-left: 15px;
   }
-
   .ds-sidebar {
     width: auto;
     border-right: none;
     padding-right: 0;
   }
-
   .m-global-eyebrow,
   .ds-footer {
     padding: 0 15px;
   }
-});
+}
 
 // Example shapes - for transition examples.
 

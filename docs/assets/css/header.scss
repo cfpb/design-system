@@ -1,0 +1,62 @@
+@use 'sass:math';
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.title {
+  font-size: math.div(16px, $base-font-size-px) + em;
+  margin-top: 30px;
+
+  a {
+    color: var(--gray);
+  }
+
+  .demi {
+    font-weight: bold;
+  }
+}
+
+// Mobile only.
+@include respond-to-max($bp-xs-max) {
+  .site-header {
+    background-color: var(--gray-5);
+    display: table;
+    width: 100%;
+    padding: 0;
+  }
+  .title {
+    display: table-header-group;
+    margin-top: 0;
+  }
+  .title-link {
+    margin-top: 15px;
+    margin-left: 15px;
+    display: block;
+  }
+  #search-form {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+  }
+}
+
+// Tablet and above.
+@include respond-to-min($bp-sm-min) {
+  #search-form {
+    margin: 0;
+    float: right;
+  }
+  .site-header-wrapper {
+    padding-bottom: math.div(16px, $base-font-size-px) + em;
+    border-bottom: 4px solid var(--green);
+  }
+  .site-header {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  .title {
+    font-size: 1.625em;
+  }
+}

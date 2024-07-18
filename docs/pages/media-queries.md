@@ -14,10 +14,14 @@ variation_groups:
 
       ```
 
-      .respond-to-min(@bp, @rules);
+      @include respond-to-min(vars-breakpoints.@bp) {
+          @rules
+      }
 
 
-      .respond-to-max(@bp, @rules);
+      @include respond-to-max(vars-breakpoints.@bp) {
+          @rules
+      }
 
       ```
 
@@ -26,11 +30,11 @@ variation_groups:
       ```
 
       // Tablet and above.
-      .respond-to-min(@bp-sm-min, {
+      @include respond-to-min(vars-breakpoints.@bp-sm-min) {
           .title {
               font-size: 2em;
           }
-      });
+      }
 
 
       // Compiles to
@@ -50,7 +54,9 @@ variation_groups:
 
       ```
 
-      .respond-to-range(@bp1, @bp2, @rules );
+      @include respond-to-range(@bp1, @bp2) {
+        @rules
+      }
 
       ```
 
@@ -58,11 +64,11 @@ variation_groups:
 
       ```
       // Tablet only.
-      .respond-to-range(@bp-sm-min, @bp-sm-max, {
+      @include respond-to-range(@bp-sm-min, @bp-sm-max) {
           .title {
               font-size: 2em;
           }
-      });
+      }
 
 
       // Compiles to
@@ -87,9 +93,9 @@ variation_groups:
 
       .example {
           color: var(--gray);
-          .respond-to-print({
+          @include respond-to-print() {
               color: var(--black);
-          });
+          }
       }
 
 

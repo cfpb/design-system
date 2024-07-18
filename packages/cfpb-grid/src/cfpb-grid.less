@@ -31,7 +31,7 @@
 //
 
 /* stylelint-disable selector-class-pattern */
-.grid__column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 ) {
+.u-grid-column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 ) {
   /* stylelint-enable */
   display: inline-block;
   box-sizing: border-box;
@@ -102,7 +102,7 @@
 
 /* stylelint-disable selector-class-pattern */
 // prettier-ignore
-.grid__column( @columns; @total: @grid_total-columns; @prefix: 0; @suffix: 0; ) when ( @grid_debug ) {
+.u-grid-column( @columns; @total: @grid_total-columns; @prefix: 0; @suffix: 0; ) when ( @grid_debug ) {
   /* stylelint-enable */
   border-left-color: #ffb149;
   border-left-color: fade( #ff9e1b, 25% );
@@ -135,7 +135,7 @@
 //
 
 /* stylelint-disable selector-class-pattern */
-.grid__push( @offset: 1, @grid_total-columns: @grid_total-columns ) {
+.u-grid-push( @offset: 1, @grid_total-columns: @grid_total-columns ) {
   /* stylelint-enable */
   @push: percentage(@offset / @grid_total-columns);
 
@@ -144,7 +144,7 @@
 }
 
 /* stylelint-disable selector-class-pattern */
-.grid__pull( @offset: 1, @grid_total-columns: @grid_total-columns ) {
+.u-grid-pull( @offset: 1, @grid_total-columns: @grid_total-columns ) {
   /* stylelint-enable */
   @pull: percentage(@offset / @grid_total-columns);
 
@@ -156,7 +156,7 @@
 // Nested columns
 //
 
-.grid__nested-col-group() {
+.u-grid-nested-col-group() {
   display: block;
   position: relative;
   margin-left: (@grid_gutter-width / 2) * -1;

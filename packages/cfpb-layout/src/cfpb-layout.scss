@@ -1,0 +1,355 @@
+@use 'sass:math';
+
+// Import external dependencies
+@import '@cfpb/cfpb-core/src/cfpb-core';
+@import '@cfpb/cfpb-grid/src/cfpb-grid';
+
+//
+// Import Molecules
+//
+@import 'molecules/card';
+@import 'molecules/heroes';
+
+//
+// Import Organisms
+//
+@import 'organisms/card-group';
+@import 'organisms/featured-content-module';
+@import 'organisms/wells';
+@import 'organisms/email-signup';
+@import 'organisms/text-introduction';
+
+/* ==========================================================================
+   Design System
+   Layout Helpers
+   ========================================================================== */
+
+//
+// Theme variables
+//
+
+// Color variables
+
+// .block
+$block-bg: var(--gray-5);
+$block-border: var(--gray-40);
+$block-border-top: $block-border;
+$block-border-right: $block-border;
+$block-border-bottom: $block-border;
+$block-border-left: $block-border;
+
+// .content__main
+$content-main-border: $block-border;
+
+// .content__line
+$content-line: $block-border;
+
+//
+// Content layouts
+//
+
+.content-l {
+  // Used to position __divider modifiers
+  position: relative;
+
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    @include u-grid-nested-col-group;
+  }
+}
+
+.content-l__col {
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    & + & {
+      margin-top: math.div($grid-gutter-width, $base-font-size-px) + em;
+    }
+  }
+}
+
+// Tablet and above.
+@include respond-to-min($bp-sm-min) {
+  .content-l__col-1 {
+    @include u-grid-column(12);
+  }
+  .content-l__col-1-2 {
+    @include u-grid-column(6);
+  }
+  .content-l__col-1-3 {
+    @include u-grid-column(4);
+  }
+  .content-l__col-2-3 {
+    @include u-grid-column(8);
+  }
+  .content-l__col-3-8 {
+    @include u-grid-column(3, 8);
+  }
+  .content-l__col-5-8 {
+    @include u-grid-column(5, 8);
+  }
+  .content-l__col-1-4 {
+    @include u-grid-column(3);
+  }
+  .content-l__col-3-4 {
+    @include u-grid-column(9);
+  }
+}
+
+//
+// Content line
+//
+
+.content__line {
+  height: 1px;
+  background: $content-line;
+}
+
+//
+// Main content and sidebar
+//
+
+.content__main,
+.content__intro {
+  dd,
+  dt,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  p,
+  label {
+    max-width: 41.875rem;
+  }
+}
+
+.content__intro,
+.content__main,
+.content__sidebar {
+  padding: math.div($grid-gutter-width, $base-font-size-px) + em
+    math.div(math.div($grid-gutter-width, 2), $base-font-size-px) + em;
+
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    @include u-grid-column(12);
+    padding: math.div($grid-gutter-width * 1.5, $base-font-size-px) + em
+      math.div(math.div($grid-gutter-width, 2), $base-font-size-px) + em;
+  }
+
+  // Desktop and above.
+  @include respond-to-min($bp-med-min) {
+    padding: math.div($grid-gutter-width * 1.5, $base-font-size-px) + em 0;
+  }
+}
+
+// Desktop and above.
+@include respond-to-min($bp-med-min) {
+  .content__intro {
+    @include u-grid-column(12);
+  }
+}
+
+// Set up standard multi-column content area layouts.
+// Desktop and above.
+@include respond-to-min($bp-med-min) {
+  .content {
+    &--1-3 {
+      .content__sidebar {
+        @include u-grid-column(3);
+        padding-right: math.div($grid-gutter-width, $base-font-size-px) + em;
+      }
+      .content__main {
+        @include u-grid-column(9);
+        position: relative;
+        &::after {
+          content: '';
+          border-left: 1px solid $content-main-border;
+          position: absolute;
+          top: math.div(($grid-gutter-width * 1.5), $base-font-size-px) + em;
+          bottom: 0;
+          left: math.div(($grid-gutter-width * -1), $base-font-size-px) + em;
+        }
+      }
+    }
+    &--2-1 {
+      .content__main {
+        @include u-grid-column(8);
+        &::after {
+          right: math.div(($grid-gutter-width * -1), $base-font-size-px) + em;
+        }
+      }
+      .content__sidebar {
+        @include u-grid-column(4);
+        padding-left: math.div($grid-gutter-width, $base-font-size-px) + em;
+      }
+    }
+  }
+}
+
+.content--flush-bottom {
+  padding-bottom: 0;
+}
+
+.content--flush-top-on-small {
+  // Tablet and below.
+  @include respond-to-max($bp-sm-max) {
+    padding-top: 0;
+  }
+}
+
+.content--flush-all-on-small {
+  // Tablet and below.
+  @include respond-to-max($bp-sm-max) {
+    padding: 0;
+    border: none;
+  }
+}
+
+//
+// Block
+//
+
+.block {
+  margin-top: math.div($grid-gutter-width * 2, $base-font-size-px) + em;
+  margin-bottom: math.div($grid-gutter-width * 2, $base-font-size-px) + em;
+
+  &--border-top {
+    border-top: 1px solid $block-border-top;
+  }
+
+  &--border-right {
+    border-right: 1px solid $block-border-right;
+  }
+
+  &--border-bottom {
+    border-bottom: 1px solid $block-border-bottom;
+  }
+
+  &--border-left {
+    border-left: 1px solid $block-border-left;
+  }
+
+  &--border {
+    border: 1px solid $block-border;
+  }
+
+  &--flush-top {
+    margin-top: 0 !important;
+
+    &.block--border,
+    &.block--border-top {
+      border-top: none;
+    }
+  }
+
+  &--flush-bottom {
+    margin-bottom: 0 !important;
+
+    &.block--border,
+    &.block--border-bottom {
+      border-bottom: none;
+    }
+  }
+
+  &--flush-sides {
+    margin-right: math.div($grid-gutter-width, 2) * -1;
+    margin-left: math.div($grid-gutter-width, 2) * -1;
+
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      &.block--border,
+      &.block--border-right,
+      &.block--border-left {
+        border-right: none;
+        border-left: none;
+      }
+    }
+
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      margin-right: -$grid-gutter-width;
+      margin-left: -$grid-gutter-width;
+    }
+  }
+
+  &--flush {
+    margin-top: 0 !important;
+    margin-right: math.div($grid-gutter-width, 2) * -1;
+    margin-bottom: 0 !important;
+    margin-left: math.div($grid-gutter-width, 2) * -1;
+
+    &.block--border,
+    &.block--border-top,
+    &.block--border-bottom {
+      border-top: none;
+      border-bottom: none;
+    }
+
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      &.block--border,
+      &.block--border-right,
+      &.block--border-left {
+        border-right: none;
+        border-left: none;
+      }
+    }
+
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      margin-right: -$grid-gutter-width;
+      margin-left: -$grid-gutter-width;
+    }
+  }
+
+  &--bg {
+    padding: math.div($grid-gutter-width, $base-font-size-px) + em
+      math.div(math.div($grid-gutter-width, 2), $base-font-size-px) + em;
+    padding-bottom: math.div($grid-gutter-width * 2, $base-font-size-px) + em;
+    background: $block-bg;
+
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      padding: math.div($grid-gutter-width * 1.5, $base-font-size-px) + em
+        math.div($grid-gutter-width, $base-font-size-px) + em;
+    }
+  }
+
+  &--padded-top {
+    padding-top: math.div($grid-gutter-width, $base-font-size-px) + em;
+    margin-top: math.div($grid-gutter-width, $base-font-size-px) + em;
+  }
+
+  &--padded-bottom {
+    padding-bottom: math.div($grid-gutter-width, $base-font-size-px) + em;
+    margin-bottom: math.div($grid-gutter-width, $base-font-size-px) + em;
+  }
+
+  &--sub {
+    margin-top: math.div($grid-gutter-width, $base-font-size-px) + em;
+    margin-bottom: math.div($grid-gutter-width, $base-font-size-px) + em;
+  }
+}
+
+//
+// grid helpers
+//
+
+.wrapper {
+  // Desktop and above.
+  @include respond-to-min($bp-med-min) {
+    @include u-grid-wrapper;
+  }
+
+  &--match-content {
+    padding-left: math.div($grid-gutter-width, 2);
+    padding-right: math.div($grid-gutter-width, 2);
+
+    // Tablet and above.
+    @include respond-to-min($bp-sm-min) {
+      padding-left: $grid-gutter-width;
+      padding-right: $grid-gutter-width;
+      max-width: $grid-wrapper-width - $grid-gutter-width;
+    }
+  }
+}

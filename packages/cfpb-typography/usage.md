@@ -5,7 +5,7 @@ The [`@cfpb/cfpb-core`](../cfpb-core)
 component is a dependency of this component
 and has more basic typography patterns.
 
-> NOTE: If you use `@cfpb/cfpb-typography.less` directly,
+> NOTE: If you use `@cfpb/cfpb-typography.scss` directly,
 > be sure to run the file through
 > [Autoprefixer](https://github.com/postcss/autoprefixer),
 > or your compiled Design System CSS will
@@ -42,7 +42,7 @@ where this component's less file is imported.
 
 ### Color variables
 
-Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.less).
+Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-core/src/brand-colors.scss).
 
 ```
 // Running text elements
@@ -72,7 +72,7 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ```
 
-@font-face-path: 'licensed-fonts.less';
+@font-face-path: 'licensed-fonts.scss';
 
 ```
 
@@ -94,7 +94,7 @@ have been less predictable, so we may yet revert that decision.
 ```
 
 Use this variable to specify where
-the fonts declared in `licensed-fonts.less`
+the fonts declared in `licensed-fonts.scss`
 are located when self-hosting the font files.
 Can be either a relative or absolute path.
 

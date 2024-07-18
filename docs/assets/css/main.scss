@@ -1,0 +1,177 @@
+/* ==========================================================================
+   Design System
+   ========================================================================== */
+
+// Webfont variables
+// This is the path for self-hosted fonts.
+$cf-fonts-path: '/design-system/fonts';
+
+// Import Design System packages.
+@import '@cfpb/cfpb-atomic-component/src/cfpb-atomic-component';
+@import '@cfpb/cfpb-core/src/cfpb-core';
+@import '@cfpb/cfpb-grid/src/cfpb-grid';
+@import '@cfpb/cfpb-icons/src/cfpb-icons';
+@import '@cfpb/cfpb-typography/src/cfpb-typography';
+@import '@cfpb/cfpb-layout/src/cfpb-layout';
+@import '@cfpb/cfpb-buttons/src/cfpb-buttons';
+@import '@cfpb/cfpb-forms/src/cfpb-forms';
+@import '@cfpb/cfpb-notifications/src/cfpb-notifications';
+@import '@cfpb/cfpb-pagination/src/cfpb-pagination';
+@import '@cfpb/cfpb-expandables/src/cfpb-expandables';
+@import '@cfpb/cfpb-tables/src/cfpb-tables';
+
+// Custom modules.
+@import 'sidebar';
+@import 'footer';
+@import 'skip-nav';
+@import 'global-eyebrow';
+@import 'layout';
+@import 'header';
+@import 'main-content';
+@import 'code';
+@import 'grid-demo';
+@import 'netlify';
+@import 'tabs';
+@import 'toggle-code-button';
+@import 'variation';
+@import 'color-swatches';
+@import 'search';
+
+// Documentation specific stlyes
+html,
+body {
+  height: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Default details element styles
+details summary:focus {
+  border: none;
+  outline: 1px dotted var(--pacific);
+  outline-offset: 2px;
+}
+
+details summary:hover {
+  cursor: pointer;
+}
+
+// Hide default open/close arrow.
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  position: relative;
+}
+
+details summary::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 10px;
+  display: block;
+  content: '';
+
+  --cfpb-background-icon-svg: 'down';
+}
+
+details[open] summary::after {
+  --cfpb-background-icon-svg: 'up';
+}
+
+// Set padding for main content blocks.
+.m-global-eyebrow .a-tagline,
+.site-header,
+.ds-footer {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    padding: 0;
+  }
+}
+
+main {
+  max-width: 1170px;
+  margin: 30px auto;
+  padding: 0 30px;
+}
+
+.ds-sidebar,
+.ds-content {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.ds-sidebar {
+  width: 250px;
+  padding-right: 30px;
+  border-right: 1px solid var(--gray-40);
+  padding-bottom: 30px;
+}
+
+.ds-content {
+  padding-left: 30px;
+  width: 75%;
+
+  li,
+  p {
+    max-width: 41.875rem;
+  }
+}
+
+// Mobile only.
+@include respond-to-max($bp-xs-max) {
+  main {
+    padding: 0;
+    margin-top: 0;
+  }
+  .ds-sidebar,
+  .ds-content {
+    display: block;
+  }
+  .ds-content {
+    padding-left: 15px;
+  }
+  .ds-sidebar {
+    width: auto;
+    border-right: none;
+    padding-right: 0;
+  }
+  .m-global-eyebrow,
+  .ds-footer {
+    padding: 0 15px;
+  }
+}
+
+// Example shapes - for transition examples.
+
+.example-box {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  background-color: var(--red);
+  text-align: center;
+  color: var(--white);
+  cursor: pointer;
+
+  &.u-is-animating {
+    outline: 5px solid var(--gray-40);
+  }
+}
+
+.example-flyout-content {
+  width: 100px;
+  background-color: var(--red);
+  text-align: center;
+  color: var(--white);
+  cursor: pointer;
+}

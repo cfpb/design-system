@@ -684,7 +684,7 @@ behavior: >-
   #### What the Less is doing
 
 
-  If you look in [cfpb-icons.less](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.less)  you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.
+  If you look in [cfpb-icons.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.scss)  you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the Less rule gets applied to all of the SVGs on the page, just like any other HTML element.
 
 
   We start by limiting the size of the SVG to a proportion of the text height, using the `@cf-icon-height` variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set `vertical-align: text-top;`. Finally, setting `fill: currentColor;` tells the SVG to set its path’s fill `color` to match the color value of its parent element.
@@ -692,8 +692,13 @@ behavior: >-
 
   #### Inline SVG background
 
-
-  In some cases we embed an SVG as a background image. To accomplish this, a custom Less plugin is used to inject the SVG icon source file inline into the CSS background-image property. This is exposed via a mixin, `.u-svg-inline-bg( @name, @is-grayscale )`, where @name is the SVG icon canonical name and `@is-grayscale` is whether the SVG fill color is gray (true) or black (false).
+  In some cases we embed an SVG as a background image.
+  To accomplish this, a custom postcss plugin is used to inject the
+  SVG icon source file inline into the CSS `background-image` property.
+  This is exposed via a custom CSS property,
+  `--cfpb-background-icon-svg: '[name] [color]'`,
+  where `[name]` is the SVG icon canonical name,
+  and the optional `[color]` is the color of the icon in `rgb(r,g,b)` format.
 
 
   ### Interaction details

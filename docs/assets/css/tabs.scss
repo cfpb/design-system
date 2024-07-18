@@ -1,0 +1,108 @@
+// All screen sizes.
+.m-tabs {
+  &__list {
+    border-top: 1px solid var(--gray);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+  }
+
+  &__list-item {
+    @include heading-5;
+    border-bottom: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+
+    &:first-child {
+      .m-tabs__tab {
+        padding-left: 2rem;
+      }
+    }
+
+    &-selected {
+      a {
+        color: var(--black);
+        border-bottom: 5px solid var(--pacific);
+        &:hover {
+          border-bottom: 5px solid var(--pacific);
+        }
+      }
+    }
+  }
+
+  &__tab {
+    border: 0;
+    color: var(--gray);
+    display: block;
+    margin-right: 5px;
+    padding: 1rem 1rem calc(1rem - 5px);
+    text-align: center;
+
+    &:focus {
+      outline: 1px dotted var(--pacific);
+      outline-offset: 3px;
+      color: var(--black);
+    }
+
+    &:hover {
+      background-color: var(--gray-5);
+      border-bottom: 2px solid var(--gray-5);
+    }
+
+    &:active {
+      color: var(--black);
+    }
+
+    &[aria-current='true'] {
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    &-selected:focus {
+      background-color: transparent;
+    }
+  }
+
+  &__panel {
+    background-color: var(--gray-5);
+    margin-bottom: 30px;
+  }
+}
+
+.variation-code-snippet-title,
+.variation-jinja-code-snippet-title,
+.variation-implementation-title,
+.variation-specs-title {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray);
+  margin: 0;
+  padding: 20px 40px 7px;
+}
+
+// Tablet and below.
+@include respond-to-max($bp-sm-max) {
+  .m-tabs__panel {
+    &.u-hidden {
+      display: block !important;
+    }
+  }
+}
+
+// Desktop and above.
+@include respond-to-min($bp-med-min) {
+  .m-tabs__list {
+    display: flex;
+  }
+  .m-tabs__panel {
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray-40);
+    margin: -3px 0 50px;
+  }
+  .variation-code-snippet-title,
+  .variation-jinja-code-snippet-title,
+  .variation-implementation-title,
+  .variation-specs-title {
+    @include u-visually-hidden;
+  }
+}

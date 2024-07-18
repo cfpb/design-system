@@ -1,6 +1,6 @@
 import esbuild from 'esbuild';
 
-import { esbuildLiquidPlugin } from '../plugins/esbuild-liquid-plugin.js';
+import { pluginEsbuildLiquid } from '../plugins/plugin-esbuild-liquid.js';
 import { scripts, jsPaths } from './scripts.js';
 import { styles, cssPaths } from './styles.js';
 
@@ -16,7 +16,7 @@ const baseConfig = {
   },
   outdir: './docs/dist/',
   outbase: './docs/assets/',
-  plugins: [esbuildLiquidPlugin],
+  plugins: [pluginEsbuildLiquid],
 };
 
 const arg = process.argv.slice(2)[0];

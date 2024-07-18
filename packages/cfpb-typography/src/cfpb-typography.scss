@@ -1,0 +1,63 @@
+// Import external dependencies
+@import '@cfpb/cfpb-core/src/cfpb-core';
+@import '@cfpb/cfpb-icons/src/cfpb-icons';
+
+/* ==========================================================================
+   Design System
+   Advanced Typography
+   ========================================================================== */
+
+//
+// Theme variables
+//
+
+// Font variables
+$font-stack: 'Avenir Next', arial, sans-serif;
+
+// Webfont variables
+// This is the path to your stylesheet containing @font-face rules.
+// For now, dynamic imports are not possible with Sass,
+// see https://stackoverflow.com/questions/37568179/import-path-using-variable-sass
+// $font-face-path: 'licensed-fonts.scss';
+
+// This is the path for self-hosted fonts.
+$cf-fonts-path: '/static/fonts' !default;
+
+// Color variables
+
+// Running text elements
+
+// .a-date
+$date: var(--gray);
+
+// .m-pull-quote
+$pull-quote-body: var(--black);
+$pull-quote-citation: var(--gray);
+
+// Headers
+
+// .m-slug-header
+$slug-header-border-thin: var(--gray-40);
+$slug-header-border-thick: var(--green);
+
+//
+// Import atoms
+//
+
+@import 'atoms/date';
+@import 'atoms/links';
+@import 'atoms/tagline';
+
+//
+// Import molecules
+//
+
+@import 'molecules/list';
+@import 'molecules/meta-header';
+@import 'molecules/pull-quote';
+@import 'molecules/slug-header';
+
+/*
+   Import web fonts
+*/
+@import 'licensed-fonts';

@@ -32,19 +32,14 @@ function Summary(element) {
   let _suspended;
 
   /**
+   * NOTE: Init won't work if it's called after the page has been loaded,
+   * since it depends on the `load` event fired by the browser.
    * @returns {Summary} An instance.
    */
   function init() {
     if (!setInitFlag(_dom)) {
       return this;
     }
-
-    _suspended = !_shouldSuspend();
-
-    // Add FlyoutMenu behavior data-js-hooks.
-    addDataHook(_dom, 'behavior_flyout-menu');
-    addDataHook(_contentDom, 'behavior_flyout-menu_content');
-    addDataHook(_btnDom, 'behavior_flyout-menu_trigger');
 
     // Don't initialize the Summary till the page has loaded, so we can have
     // an accurate idea of its height.
@@ -58,6 +53,13 @@ function Summary(element) {
    */
   function _pageLoadHandler() {
     window.removeEventListener('load', _pageLoadHandler);
+
+    _suspended = !_shouldSuspend();
+
+    // Add FlyoutMenu behavior data-js-hooks.
+    addDataHook(_dom, 'behavior_flyout-menu');
+    addDataHook(_contentDom, 'behavior_flyout-menu_content');
+    addDataHook(_btnDom, 'behavior_flyout-menu_trigger');
 
     _flyout = new FlyoutMenu(_dom, false);
     _transition = new MaxHeightTransition(_contentDom);

@@ -64,7 +64,7 @@ variation_groups:
                               </li>
                               <li class="m-list__item">
                                   <a class="a-link a-link--jump" href="#">
-                                      Visited links appear gray instead of white
+                                      Visited links are also white
                                   </a>
                               </li>
                           </ul>

@@ -31,14 +31,14 @@
     color: var(--white);
 
     a {
-      border-color: var(--white);
-      color: var(--white);
-
-      &:hover,
-      &:hover::before {
-        border-color: var(--gray-15);
-        color: var(--gray-15);
-      }
+      // Colors for :link, :visited, :hover, :focus, :active.
+      @include u-link-colors(
+        var(--white),
+        var(--white),
+        var(--gray-15),
+        var(--white),
+        var(--gray-15)
+      );
     }
 
     .m-notification {

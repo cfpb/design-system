@@ -1,0 +1,162 @@
+@use 'sass:math';
+@use './vars.scss' as *;
+@use '../../abstracts' as *;
+
+//
+// Default button
+//
+
+button.a-btn::-moz-focus-inner,
+input.a-btn::-moz-focus-inner {
+  // Fixes inconsistent button.btn height in Firefox.
+  // Helps with inconsistent input.btn height in Firefox but not completely.
+  border: 0;
+}
+
+@mixin a-btn() {
+  appearance: none;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: math.div($btn-v-padding, $btn-font-size) + em
+    math.div($btn-h-padding, $btn-font-size) + em;
+  border: 0;
+  margin: 0;
+  border-radius: math.div($btn-border-radius-size, $btn-font-size) + em;
+  cursor: pointer;
+  font-size: math.div($btn-font-size, $base-font-size-px) + em;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.1s;
+
+  &,
+  &:link,
+  &:visited {
+    background-color: $btn-bg;
+    color: $btn-text;
+  }
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    background-color: $btn-bg-hover;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 1px dotted $btn-bg;
+
+    // The outline-offset property is not supported everywhere (e.g. IE)
+    // but it adds a nice touch in browsers where it is.
+    outline-offset: 1px;
+  }
+
+  &:active,
+  &.active {
+    background-color: $btn-bg-active;
+  }
+
+  //
+  // Secondary button
+  //
+
+  &--secondary {
+    &,
+    &:link,
+    &:visited {
+      background-color: $btn-secondary-bg;
+      color: $btn-secondary-text;
+    }
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      background-color: $btn-secondary-bg-hover;
+    }
+
+    &:focus,
+    &.focus {
+      outline-color: $btn-secondary-bg;
+    }
+
+    &:active,
+    &.active {
+      background-color: $btn-secondary-bg-active;
+    }
+  }
+
+  //
+  // Destructive action button
+  //
+
+  &--warning {
+    &,
+    &:link,
+    &:visited {
+      background-color: $btn-warning-bg;
+      color: $btn-warning-text;
+    }
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      background-color: $btn-warning-bg-hover;
+    }
+
+    &:focus,
+    &.focus {
+      outline-color: $btn-warning-bg;
+    }
+
+    &:active,
+    &.active {
+      background-color: $btn-warning-bg-active;
+    }
+  }
+
+  //
+  // Disabled button
+  //
+
+  &--disabled,
+  &[disabled] {
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $btn-disabled-bg;
+      color: $btn-disabled-text;
+      cursor: default; // Fallback for IE/Opera
+      cursor: not-allowed;
+    }
+
+    &:focus,
+    &.focus {
+      outline-color: $btn-disabled-outline;
+    }
+  }
+
+  //
+  // Full width button on x-small screens
+  //
+  &--full-on-xs {
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.a-btn {
+  @include a-btn;
+}

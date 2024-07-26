@@ -1,0 +1,326 @@
+@use 'sass:math';
+@use './vars' as *;
+@use './vars-breakpoints' as *;
+@use './media-queries' as *;
+
+/* ==========================================================================
+   Design System
+   Base styles
+   ========================================================================== */
+
+/* stylelint-disable selector-class-pattern */
+@mixin heading-1($fs: $size-i) {
+  /* stylelint-enable */
+  $font-size: $fs;
+
+  margin-bottom: math.div(15px, $font-size) + em;
+  font-size: math.div($font-size, $base-font-size-px) + em;
+  font-weight: 600;
+  letter-spacing: inherit;
+  line-height: 1.25;
+  text-transform: inherit;
+}
+
+/* stylelint-disable selector-class-pattern */
+@mixin heading-2($fs: $size-ii) {
+  /* stylelint-enable */
+  $font-size: $fs;
+
+  margin-bottom: math.div(15px, $font-size) + em;
+  font-size: math.div($font-size, $base-font-size-px) + em;
+  font-weight: 600;
+  letter-spacing: inherit;
+  line-height: 1.25;
+  text-transform: inherit;
+}
+
+/* stylelint-disable selector-class-pattern */
+@mixin heading-3($fs: $size-iii) {
+  /* stylelint-enable */
+  $font-size: $fs;
+
+  margin-bottom: math.div(15px, $font-size) + em;
+  font-size: math.div($font-size, $base-font-size-px) + em;
+  font-weight: normal;
+  letter-spacing: inherit;
+  line-height: 1.25;
+  text-transform: inherit;
+}
+
+/* stylelint-disable selector-class-pattern */
+@mixin heading-4($fs: $size-iv) {
+  /* stylelint-enable */
+  $font-size: $fs;
+
+  margin-bottom: math.div(15px, $font-size) + em;
+  font-size: math.div($font-size, $base-font-size-px) + em;
+  font-weight: 500;
+  letter-spacing: inherit;
+  line-height: 1.25;
+  text-transform: inherit;
+}
+
+/* stylelint-disable selector-class-pattern */
+@mixin heading-5($fs: $size-v) {
+  /* stylelint-enable */
+  $font-size: $fs;
+
+  margin-bottom: math.div(15px, $font-size) + em;
+  font-size: math.div($font-size, $base-font-size-px) + em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+/* stylelint-disable selector-class-pattern */
+@mixin heading-6($fs: $size-vi) {
+  /* stylelint-enable */
+  $font-size: $fs;
+
+  margin-bottom: math.div(15px, $font-size) + em;
+  font-size: math.div($font-size, $base-font-size-px) + em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+@mixin h1() {
+  @include heading-1;
+
+  $font-size: $size-i;
+
+  p + &,
+  ul + &,
+  ol + &,
+  dl + &,
+  figure + &,
+  img + &,
+  table + &,
+  blockquote + & {
+    margin-top: math.div(60px, $font-size) + em;
+  }
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    @include heading-2;
+
+    $font-size: $size-ii;
+
+    p + &,
+    ul + &,
+    ol + &,
+    dl + &,
+    figure + &,
+    img + &,
+    table + &,
+    blockquote + & {
+      margin-top: math.div(45px, $font-size) + em;
+    }
+    h2 + &,
+    .h2 + &,
+    h3 + &,
+    .h3 + &,
+    h4 + &,
+    .h4 + &,
+    h5 + &,
+    .h5 + &,
+    h6 + &,
+    .h6 + & {
+      margin-top: math.div(30px, $font-size) + em;
+    }
+  }
+}
+
+@mixin h2() {
+  @include heading-2;
+
+  $font-size: $size-ii;
+
+  p + &,
+  ul + &,
+  ol + &,
+  dl + &,
+  figure + &,
+  img + &,
+  table + &,
+  blockquote + & {
+    margin-top: math.div(45px, $font-size) + em;
+  }
+
+  h1 + &,
+  .h1 + &,
+  h3 + &,
+  .h3 + &,
+  h4 + &,
+  .h4 + &,
+  h5 + &,
+  .h5 + &,
+  h6 + &,
+  .h6 + & {
+    margin-top: math.div(30px, $font-size) + em;
+  }
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    @include heading-3;
+
+    $font-size: $size-iii;
+
+    p + &,
+    ul + &,
+    ol + &,
+    dl + &,
+    figure + &,
+    img + &,
+    table + &,
+    blockquote + & {
+      margin-top: math.div(30px, $font-size) + em;
+    }
+  }
+}
+
+@mixin h3() {
+  @include heading-3;
+
+  $font-size: $size-iii;
+
+  p + &,
+  ul + &,
+  ol + &,
+  dl + &,
+  figure + &,
+  img + &,
+  table + &,
+  blockquote + &,
+  h1 + &,
+  .h1 + &,
+  h2 + &,
+  .h2 + &,
+  h4 + &,
+  .h4 + &,
+  h5 + &,
+  .h5 + &,
+  h6 + &,
+  .h6 + & {
+    margin-top: math.div(30px, $font-size) + em;
+  }
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    @include heading-4;
+  }
+}
+
+@mixin h4() {
+  @include heading-4;
+
+  $font-size: $size-iv;
+
+  p + &,
+  ul + &,
+  ol + &,
+  dl + &,
+  figure + &,
+  img + &,
+  table + &,
+  blockquote + &,
+  h1 + &,
+  .h1 + &,
+  h2 + &,
+  .h2 + &,
+  h3 + &,
+  .h3 + &,
+  h5 + &,
+  .h5 + &,
+  h6 + &,
+  .h6 + & {
+    margin-top: math.div(30px, $font-size) + em;
+  }
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    $h4-font-size-on-xs: $base-font-size-px;
+    margin-bottom: math.div(10px, $h4-font-size-on-xs) + em;
+    font-size: math.div($h4-font-size-on-xs, $base-font-size-px) + em;
+    line-height: math.div(18px, $h4-font-size-on-xs);
+  }
+}
+
+@mixin h5() {
+  @include heading-5;
+
+  $font-size: $size-v;
+
+  p + &,
+  ul + &,
+  ol + &,
+  dl + &,
+  figure + &,
+  img + &,
+  table + &,
+  blockquote + &,
+  h1 + &,
+  .h1 + &,
+  h2 + &,
+  .h2 + &,
+  h3 + &,
+  .h3 + &,
+  h4 + &,
+  .h4 + &,
+  h6 + &,
+  .h6 + & {
+    margin-top: math.div(30px, $font-size) + em;
+  }
+}
+
+@mixin h6() {
+  @include heading-6;
+
+  $font-size: $size-vi;
+
+  p + &,
+  ul + &,
+  ol + &,
+  dl + &,
+  figure + &,
+  img + &,
+  table + &,
+  blockquote + &,
+  h1 + &,
+  .h1 + &,
+  h2 + &,
+  .h2 + &,
+  h3 + &,
+  .h3 + &,
+  h4 + &,
+  .h4 + &,
+  h5 + &,
+  .h5 + & {
+    margin-top: math.div(30px, $font-size) + em;
+  }
+}
+
+@mixin u-lead-paragraph() {
+  @include heading-3;
+
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    // Use the same regular weight but reduce the sizes to h4 size
+    font-size: math.div(18px, $base-font-size-px) + em;
+  }
+}
+
+@mixin u-superheading() {
+  // For when you want a heading that's bigger than a normal H1
+  $font-size: $size-xl;
+
+  margin-bottom: math.div(20px, $font-size) + em;
+  font-size: math.div($font-size, $base-font-size-px) + em;
+  font-weight: normal;
+  line-height: 1.25;
+}

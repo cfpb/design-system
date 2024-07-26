@@ -1,0 +1,27 @@
+@use 'sass:math';
+@use './vars' as *;
+@use '../../abstracts' as *;
+
+.a-form-alert {
+  .cf-icon-svg {
+    color: $input-icon;
+    float: left;
+  }
+
+  &__text {
+    display: block;
+    margin-left: math.div(20px, $base-font-size-px) + em;
+  }
+
+  &--success .cf-icon-svg {
+    color: $input-icon-success;
+  }
+
+  &--error .cf-icon-svg {
+    color: $input-icon-error;
+  }
+
+  &--warning .cf-icon-svg {
+    color: $input-icon-warning;
+  }
+}

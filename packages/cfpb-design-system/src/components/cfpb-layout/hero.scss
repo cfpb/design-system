@@ -1,0 +1,233 @@
+@use 'sass:math';
+@use '../../abstracts' as *;
+@use '../../abstracts' as *;
+
+// Hero variables
+$hero-desktop-height: 285px;
+
+// Jumbo hero text mixin.
+@mixin u-jumbo-text() {
+  .m-hero__subhead {
+    @include u-lead-paragraph;
+  }
+
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    .m-hero__subhead {
+      @include heading-3;
+    }
+  }
+
+  // Large desktop.
+  @include respond-to-min($bp-lg-min) {
+    .m-hero__wrapper {
+      min-height: $hero-desktop-height;
+    }
+    .m-hero__heading {
+      @include u-superheading;
+    }
+    .m-hero__subhead {
+      @include heading-2;
+      font-weight: 400;
+    }
+  }
+}
+
+// Hero molecule
+.m-hero {
+  background-color: var(--gray-5);
+
+  &__wrapper {
+    display: grid;
+    max-width: ($grid-wrapper-width - $grid-gutter-width);
+    margin: 0 auto;
+    padding-top: $grid-gutter-width;
+    padding-bottom: $grid-gutter-width;
+  }
+
+  &__text {
+    padding-right: math.div($grid-gutter-width, 2);
+    padding-left: math.div($grid-gutter-width, 2);
+  }
+
+  &__heading {
+    @include heading-1;
+  }
+
+  &__subhead {
+    // Not using the `.heading-3()` mixin here because we want the weight
+    // to remain Regular on smaller screens.
+    font-size: $size-iii;
+    line-height: 1.25;
+  }
+
+  &__image-wrapper {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 100%;
+
+    // Progressive enhancement for legacy browsers.
+    // Instead of writing fallbacks for the behavior of each type of
+    // hero image, we hide the hero image in legacy browsers.
+    display: none;
+
+    @supports (display: grid) {
+      display: block;
+    }
+  }
+
+  &--knockout {
+    background-color: var(--gray);
+    color: var(--white);
+  }
+
+  &--overlay {
+    .m-hero__wrapper {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &--jumbo,
+  &--50-50 {
+    background-color: var(--white);
+
+    @include u-jumbo-text;
+  }
+}
+
+// Mobile only.
+@include respond-to-max($bp-xs-max) {
+  .m-hero {
+    &__image-wrapper {
+      margin-top: math.div($grid-gutter-width, $base-font-size-px) + em;
+    }
+    &--overlay {
+      .m-hero__wrapper {
+        // Overwrite the image that is set in the markup because
+        // we are showing the image container below instead.
+        background-image: none !important;
+      }
+    }
+    &--jumbo {
+      .m-hero__wrapper {
+        // Keep hero image flush with container on mobile
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+// Tablet and below.
+@include respond-to-max($bp-sm-max) {
+  .m-hero {
+    &__heading {
+      @include heading-2;
+    }
+    &__subhead {
+      font-size: $size-iv;
+    }
+  }
+}
+
+// Tablet and above.
+@include respond-to-min($bp-sm-min) {
+  .m-hero {
+    &__wrapper {
+      grid-template-columns: 7fr 5fr;
+      padding-right: math.div($grid-gutter-width, 2);
+      padding-left: math.div($grid-gutter-width, 2);
+      min-height: $hero-desktop-height - ($grid-gutter-width * 2);
+    }
+    &__text {
+      margin: auto;
+    }
+    &__image-wrapper {
+      padding-right: math.div($grid-gutter-width, 2);
+      padding-left: math.div(
+        $grid-gutter-width,
+        2
+      ); // Vertically center hero images
+      display: flex;
+      align-items: center;
+    }
+    &--bleeding {
+      .m-hero__image-wrapper {
+        width: 100%;
+        margin-top: math.div($grid-gutter-width * -1.5, $base-font-size-px) + em;
+        margin-bottom: math.div($grid-gutter-width * -1.5, $base-font-size-px) +
+          em;
+      }
+      .m-hero__image {
+        // Remove the flexible container padding so that the image is a consistent width.
+        padding-bottom: 0 !important;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+      }
+    }
+    &--overlay {
+      .m-hero__image {
+        display: none;
+      }
+    }
+    &--jumbo {
+      .m-hero__wrapper {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .m-hero__image {
+        display: none;
+      }
+    }
+    &--50-50 {
+      .m-hero__wrapper {
+        grid-template-columns: 1fr 1fr;
+        border: 1px solid var(--gray-40);
+        border-top: none;
+
+        // Position the hero image all the way to the right
+        background-position: 100% center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+      }
+      .m-hero__image {
+        display: none;
+      }
+    }
+  }
+}
+
+// Large desktop.
+@include respond-to-min($bp-lg-min) {
+  .m-hero {
+    &__wrapper {
+      padding-top: math.div(($grid-gutter-width * 1.5), $base-font-size-px) + em;
+      padding-bottom: math.div(($grid-gutter-width * 1.5), $base-font-size-px) +
+        em;
+      min-height: $hero-desktop-height - (($grid-gutter-width * 1.5) * 2);
+    }
+    &--bleeding {
+      .m-hero__image-wrapper {
+        margin-top: math.div($grid-gutter-width * -1.5, $base-font-size-px) + em;
+        margin-bottom: math.div($grid-gutter-width * -1.5, $base-font-size-px) +
+          em;
+      }
+    }
+    &--50-50 {
+      .m-hero__wrapper {
+        // Enlarge the 50/50 height on large screens to maximize the image size
+        min-height: $hero-desktop-height + ($grid-gutter-width * 2);
+      }
+    }
+  }
+}

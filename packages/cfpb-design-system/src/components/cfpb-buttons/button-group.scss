@@ -1,0 +1,8 @@
+@use 'sass:math';
+@use './vars.scss' as *;
+
+.m-btn-group {
+  .a-btn + .a-btn {
+    margin-left: math.div(6px, $btn-font-size) + em;
+  }
+}

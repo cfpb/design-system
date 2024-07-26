@@ -219,7 +219,7 @@ and one that does not require media query support.
 Instructions for developers who've received a new or updated icon from a designer:
 
 1. Place SVG file (named with its canonical name, i.e., `canonical.svg`)
-   in [`packages/cfpb-icons/src/icons`](tree/main/packages/cfpb-icons/src/icons/)
+   in [`packages/cfpb-design-system/src/components/cfpb-icons/icons`](tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons/)
 1. If it has a `-round` or `-square` version, ensure those are in place as well
 1. Run `yarn process-icon-svgs` from the root of the repository
    - This script compresses and standardizes the SVG code for all of our icons
@@ -227,8 +227,8 @@ Instructions for developers who've received a new or updated icon from a designe
 1. From the repo root, copy the icons into the docs site with `yarn copy-assets'
 
 1. If adding a new icon or updating any names, update the tables on both
-   [`packages/cfpb-icons/usage.md`](tree/main/packages/cfpb-icons/usage.md)
+   [`packages/cfpb-design-system/src/components/cfpb-icons/usage.md`](tree/main/packages/cfpb-design-system/src/components/cfpb-icons/usage.md)
    and [`docs/pages/iconography.md`](tree/main/docs/pages/iconography.md)
    accordingly
 1. If any icons were deleted, be sure to delete them from both
-   `packages/cfpb-icons/src/icons/` and `docs/_includes/icons/`
+   `packages/cfpb-design-system/src/components/cfpb-icons/icons/` and `docs/_includes/icons/`

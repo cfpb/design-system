@@ -347,7 +347,7 @@ variation_groups:
           Override this variable in order to specify a font stack other than the
           CFPB's default brand font and fallback.
 
-          `@font-stack: 'Avenir Next', Arial, sans-serif;`
+          `--font-stack: 'Avenir Next', Arial, sans-serif;`
       - variation_name: '@font-face file path'
         variation_description: >-
           Use this variable to point to the file containing your `@font-face`

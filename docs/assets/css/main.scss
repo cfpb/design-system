@@ -2,40 +2,31 @@
    Design System
    ========================================================================== */
 
-// Webfont variables
-// This is the path for self-hosted fonts.
-$cf-fonts-path: '/design-system/fonts';
-
 // Import Design System packages.
-@import '@cfpb/cfpb-atomic-component/src/cfpb-atomic-component';
-@import '@cfpb/cfpb-core/src/cfpb-core';
-@import '@cfpb/cfpb-grid/src/cfpb-grid';
-@import '@cfpb/cfpb-icons/src/cfpb-icons';
-@import '@cfpb/cfpb-typography/src/cfpb-typography';
-@import '@cfpb/cfpb-layout/src/cfpb-layout';
-@import '@cfpb/cfpb-buttons/src/cfpb-buttons';
-@import '@cfpb/cfpb-forms/src/cfpb-forms';
-@import '@cfpb/cfpb-notifications/src/cfpb-notifications';
-@import '@cfpb/cfpb-pagination/src/cfpb-pagination';
-@import '@cfpb/cfpb-expandables/src/cfpb-expandables';
-@import '@cfpb/cfpb-tables/src/cfpb-tables';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/base' as *;
+@use '@cfpb/cfpb-design-system/dist/index.css' as *;
 
 // Custom modules.
-@import 'sidebar';
-@import 'footer';
-@import 'skip-nav';
-@import 'global-eyebrow';
-@import 'layout';
-@import 'header';
-@import 'main-content';
-@import 'code';
-@import 'grid-demo';
-@import 'netlify';
-@import 'tabs';
-@import 'toggle-code-button';
-@import 'variation';
-@import 'color-swatches';
-@import 'search';
+@use 'sidebar' as *;
+@use 'footer' as *;
+@use 'skip-nav' as *;
+@use 'global-eyebrow' as *;
+@use 'layout' as *;
+@use 'header' as *;
+@use 'main-content' as *;
+@use 'code' as *;
+@use 'grid-demo' as *;
+@use 'netlify' as *;
+@use 'tabs' as *;
+@use 'toggle-code-button' as *;
+@use 'variation' as *;
+@use 'color-swatches' as *;
+@use 'search' as *;
+
+// Webfont
+// This is the path for self-hosted fonts.
+@include licensed-font('/design-system/fonts');
 
 // Documentation specific stlyes
 html,

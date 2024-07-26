@@ -1,8 +1,12 @@
+import { pluginPostCssSass } from '../plugins/plugin-postcss-sass.js';
+import autoprefixer from 'autoprefixer';
 import { glob } from 'glob';
 
 const jsPaths = [];
 
-const entryFileList = glob.sync('./packages/cfpb-*/src/index.js');
+const entryFileList = glob.sync(
+  './packages/cfpb-design-system/src/**/index.js',
+);
 entryFileList.forEach((file) => {
   jsPaths.push(file);
 });
@@ -16,7 +20,12 @@ function scripts(baseConfig) {
     ...baseConfig,
     entryPoints: jsPaths,
     target: 'es6',
+    plugins: baseConfig.plugins.concat([
+      pluginPostCssSass({
+        plugins: [autoprefixer],
+      }),
+    ]),
   };
 }
 
-export { scripts, jsPaths };
+export { scripts };

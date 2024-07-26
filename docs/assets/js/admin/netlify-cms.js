@@ -12,4 +12,4 @@ CMS.registerPreviewTemplate('special-pages', genericPreviewTemplate);
 CMS.registerPreviewTemplate('pages', pagePreviewTemplate);
 CMS.registerPreviewTemplate('side-navigation', navigationPreviewTemplate);
 
-CMS.registerPreviewStyle('/design-system/dist/css/main.css');
+CMS.registerPreviewStyle('/design-system/dist/main.css');

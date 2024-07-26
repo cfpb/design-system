@@ -1,0 +1,69 @@
+@use 'sass:math';
+@use '../../abstracts' as *;
+
+.a-link {
+  border-bottom-width: 0;
+
+  .a-link__text {
+    border-bottom-width: 1px;
+    border-bottom-style: inherit;
+  }
+}
+
+//
+// Jump link
+//
+
+.a-link--jump {
+  font-weight: 500;
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    display: flex;
+    align-items: center;
+    gap: math.div(5px, $base-font-size-px) + rem;
+
+    box-sizing: border-box;
+    padding-top: math.div(10px, $base-font-size-px) + em;
+    padding-bottom: math.div(10px, $base-font-size-px) + em;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+
+    // 100% width is needed when block or jump link are applied to a <button>.
+    width: 100%;
+
+    // Only right-hand align arrow icons.
+    .cf-icon-svg--right {
+      margin-left: auto;
+    }
+
+    .a-link__text {
+      border-bottom-width: 0;
+
+      // Arbitrary high value for flex-shrink to prevent squeezing of the icon
+      // when the link text is very long.
+      flex-shrink: 10;
+    }
+  }
+}
+
+// Mobile only.
+@include respond-to-max($bp-xs-max) {
+  // Handle the borders of jump links that are adjacent in a list.
+  li:has(.a-link--jump) + li:has(.a-link--jump) {
+    .a-link--jump {
+      position: relative;
+      border-top: none;
+    }
+
+    .a-link--jump:hover::before {
+      position: absolute;
+      top: -1px;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      border-top: 1px solid currentcolor;
+    }
+  }
+}

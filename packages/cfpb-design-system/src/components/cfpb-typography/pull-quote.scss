@@ -1,0 +1,27 @@
+@use './vars' as *;
+@use '../../abstracts' as *;
+@use '../../abstracts' as *;
+
+.m-pull-quote {
+  &__body {
+    @include heading-3;
+
+    color: $pull-quote-body;
+
+    // Mobile only.
+    @include respond-to-max($bp-xs-max) {
+      @include heading-4;
+    }
+  }
+
+  &__citation {
+    @include heading-5;
+
+    color: $pull-quote-citation;
+
+    &::before {
+      // An em dash before the cited author name.
+      content: '\2014 ';
+    }
+  }
+}

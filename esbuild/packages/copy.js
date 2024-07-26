@@ -1,7 +1,7 @@
 import fs from 'fs';
 const { mkdir, rename } = fs.promises;
 import { dirname, resolve } from 'path';
-import { getFiles } from './utils.js';
+import { getFiles } from '../utils.js';
 
 /**
  * Copy dist files from temporary directory to packages directories.

@@ -124,12 +124,16 @@ include them below the message or explanation as a `m-list` unordered list.
         <ul class="m-list m-list--links">
             <li class="m-list__item">
                 <a class="a-link a-link--jump" href="/">
-                    This is a link below the message
+                    <span class="a-link__text">
+                        This is a link below the message
+                    </span>
                 </a>
             </li>
             <li class="m-list__item">
                 <a class="a-link a-link--jump" href="/">
-                    This is another link
+                    <span class="a-link__text">
+                        This is another link
+                    </span>
                 </a>
             </li>
          </ul>
@@ -145,12 +149,16 @@ include them below the message or explanation as a `m-list` unordered list.
         <ul class="m-list m-list--links">
             <li class="m-list__item">
                 <a class="a-link a-link--jump" href="/">
-                    This is a link below the message
+                    <span class="a-link__text">
+                        This is a link below the message
+                    </span>
                 </a>
             </li>
             <li class="m-list__item">
                 <a class="a-link a-link--jump" href="/">
-                    This is another link
+                    <span class="a-link__text">
+                        This is another link
+                    </span>
                 </a>
             </li>
         </ul>
@@ -169,12 +177,16 @@ include them below the message or explanation as a `m-list` unordered list.
         <ul class="m-list m-list--links">
             <li class="m-list__item">
                 <a class="a-link a-link--jump" href="/">
-                    This is a link below the explanation
+                    <span class="a-link__text">
+                        This is a link below the explanation
+                    </span>
                 </a>
             </li>
             <li class="m-list__item">
                 <a class="a-link a-link--jump" href="/">
-                    This is an external link {% include icons/external-link.svg %}
+                    <span class="a-link__text">
+                        This is an external link {% include icons/external-link.svg %}
+                    </span>
                 </a>
             </li>
          </ul>
@@ -193,12 +205,16 @@ include them below the message or explanation as a `m-list` unordered list.
         <ul class="m-list m-list--links">
             <li class="m-list__item">
                 <a class="a-link a-link--jump" href="/">
-                    This is a link below the explanation
+                    <span class="a-link__text">
+                        This is a link below the explanation
+                    </span>
                 </a>
             </li>
             <li class="m-list__item">
                 <a class="a-link a-link--jump" href="/">
-                    This is an external link {% raw %}{% include icons/external-link.svg %}{% endraw %}
+                    <span class="a-link__text">
+                        This is an external link {% raw %}{% include icons/external-link.svg %}{% endraw %}
+                    </span>
                 </a>
             </li>
         </ul>

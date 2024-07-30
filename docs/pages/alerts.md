@@ -56,12 +56,16 @@ variation_groups:
                   <ul class="m-list m-list--links">
                       <li class="m-list__item">
                           <a class="a-link a-link--jump" href="/">
+                            <span class="a-link__text">
                               This is a link below the explanation
+                            </span>
                           </a>
                       </li>
                       <li class="m-list__item">
                           <a class="a-link a-link--jump" href="/">
+                            <span class="a-link__text">
                               This is an external link {% include icons/external-link.svg %}
+                            </span>
                           </a>
                       </li>
                   </ul>
@@ -84,7 +88,9 @@ variation_groups:
                   <ul class="m-list m-list--links">
                       <li class="m-list__item">
                           <a class="a-link a-link--jump" href="/">
+                            <span class="a-link__text">
                               This is an external link {% include icons/external-link.svg %}
+                            </span>
                           </a>
                       </li>
                   </ul>
@@ -109,7 +115,9 @@ variation_groups:
                   <ul class="m-list m-list--links">
                       <li class="m-list__item">
                           <a class="a-link a-link--jump" href="/">
+                            <span class="a-link__text">
                               This is an external link {% include icons/external-link.svg %}
+                            </span>
                           </a>
                       </li>
                   </ul>
@@ -138,7 +146,9 @@ variation_groups:
                   <ul class="m-list m-list--links">
                       <li class="m-list__item">
                           <a class="a-link a-link--jump" href="/">
+                            <span class="a-link__text">
                               This is an external link {% include icons/external-link.svg %}
+                            </span>
                           </a>
                       </li>
                   </ul>

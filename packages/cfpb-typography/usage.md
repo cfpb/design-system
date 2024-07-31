@@ -357,26 +357,50 @@ screens.
 
 <ul class="m-list m-list--links">
     <li class="m-list__item">
-        <a class="a-link a-link--jump" href="#">List item 1</a>
+        <a class="a-link a-link--jump" href="#">
+            <span class="a-link__text">
+                List item 1
+            <span>
+        </a>
     </li>
     <li class="m-list__item">
-        <a class="a-link a-link--jump" href="#">List item 2</a>
+        <a class="a-link a-link--jump" href="#">
+            <span class="a-link__text">
+                List item 2
+            </span>
+        </a>
     </li>
     <li class="m-list__item">
-        <a class="a-link a-link--jump" href="#">List item 3</a>
+        <a class="a-link a-link--jump" href="#">
+            <span class="a-link__text">
+                List item 3
+            </span>
+        </a>
     </li>
 </ul>
 
 ```
 <ul class="m-list m-list--links">
     <li class="m-list__item">
-        <a class="a-link a-link--jump" href="#">List item 1</a>
+        <a class="a-link a-link--jump" href="#">
+            <span class="a-link__text">
+                List item 1
+            </span>
+        </a>
     </li>
     <li class="m-list__item">
-        <a class="a-link a-link--jump" href="#">List item 2</a>
+        <a class="a-link a-link--jump" href="#">
+            <span class="a-link__text">
+                List item 2
+            </span>
+        </a>
     </li>
     <li class="m-list__item">
-        <a class="a-link a-link--jump" href="#">List item 3</a>
+        <a class="a-link a-link--jump" href="#">
+            <span class="a-link__text">
+                List item 3
+            </span>
+        </a>
     </li>
 </ul>
 ```

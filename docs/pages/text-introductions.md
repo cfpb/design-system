@@ -22,7 +22,7 @@ variation_groups:
             </p>
             <ul class="m-list m-list--links">
               <li class="m-list__item">
-                <a class="a-link a-link--jump" href="#"> Call-to-action link </a>
+                <a class="a-link a-link--jump" href="#"> <span class="a-link__text">Call-to-action link</span> </a>
               </li>
             </ul>
           </div>

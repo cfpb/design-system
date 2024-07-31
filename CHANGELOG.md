@@ -1,4 +1,21 @@
 
+## v2.0.1 (2024-07-31)
+
+#### Bug Fix
+* `cfpb-notifications`, `cfpb-typography`
+  * [#2006](https://github.com/cfpb/design-system/pull/2006) Add `a-link__text` class to jump links ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-atomic-component`
+  * [#2007](https://github.com/cfpb/design-system/pull/2007) Re-add cfpb-atomic-component missing Less files ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-expandables`
+  * [#2003](https://github.com/cfpb/design-system/pull/2003) Fix Summary tests ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-notifications`
+  * [#2004](https://github.com/cfpb/design-system/pull/2004) Set banner link colors ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v2.0.0 (2024-07-18)
 
 #### Breaking Change

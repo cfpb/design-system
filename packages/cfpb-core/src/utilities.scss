@@ -143,18 +143,6 @@
 }
 
 //
-// Align with button
-//
-
-/* stylelint-disable selector-class-pattern */
-@mixin u-align-with-btn($font-size: $base-font-size-px) {
-  /* stylelint-enable */
-  display: inline-block;
-  line-height: normal;
-  vertical-align: middle;
-}
-
-//
 // Flexible proportional containers
 //
 

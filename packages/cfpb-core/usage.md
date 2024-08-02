@@ -491,18 +491,6 @@ Hides content on screens widths under `601px`.
 
 ### Mixins
 
-#### Align with button
-
-Align an element vertically with the text within a button that may be to either
-side.
-
-_Pass `font-size` as the argument for calculating spacing, default value is
-`@base-font-size-px`._
-
-```
-.u-align-with-btn(@font-size: @base-font-size-px);
-```
-
 #### Flexible proportional containers
 
 Utilize intrinsic ratios to create a flexible container that retains an aspect

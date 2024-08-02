@@ -236,17 +236,6 @@ variation_groups:
     variation_group_name: Helper classes
   - variation_group_name: Mixins
     variations:
-      - variation_name: '"Align with button" mixin'
-        variation_description: >-
-          Align an element vertically with the text within a button that may be
-          to either side.
-
-
-          _Pass `font-size` as the argument for calculating spacing, default value is `@base-font-size-px`._
-
-
-          `.u-align-with-btn(@font-size: @base-font-size-px);`
-        variation_code_snippet: ''
       - variation_name: '"Flexible proportional containers" mixin'
         variation_description: >-
           Utilize intrinsic ratios to create a flexible container that retains

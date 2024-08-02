@@ -100,12 +100,12 @@ Color variables referenced in comments are from [@cfpb/cfpb-core's brand-colors.
 
 ## Legends
 
-<legend class="a-legend">
+<legend class="h4">
     A basic legend
 </legend>
 
 ```html
-<legend class="a-legend">A basic legend</legend>
+<legend class="h4">A basic legend</legend>
 ```
 
 ## Labels

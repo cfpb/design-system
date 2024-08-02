@@ -20,7 +20,7 @@ variation_groups:
       - variation_code_snippet: >-
           <form class="o-form">
 
-          <legend class="a-legend">
+          <legend class="h4">
 
           Basic legend
               <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
@@ -43,7 +43,7 @@ variation_groups:
       - variation_code_snippet: >-
           <form class="o-form">
 
-          <legend class="a-legend">
+          <legend class="h4">
 
           Basic legend
               <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
@@ -71,7 +71,7 @@ variation_groups:
         variation_code_snippet: >-
           <form class="o-form">
 
-          <legend class="a-legend">
+          <legend class="h4">
 
           Basic legend
               <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>
@@ -109,7 +109,7 @@ variation_groups:
         variation_code_snippet: >-
           <fieldset class="o-form__fieldset">
 
-          <legend class="a-legend">
+          <legend class="h4">
 
           Basic legend
               <small class="a-label__helper a-label__helper--block">Use block helper text for instructions</small>

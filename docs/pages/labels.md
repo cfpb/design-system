@@ -22,7 +22,8 @@ variation_groups:
         variation_specs: ''
       - variation_code_snippet: >-
           <fieldset class="o-form__fieldset">
-                          <legend class="a-legend">Basic legend
+                          <legend class="h4">
+                              Basic legend
                           </legend>
 
                           <div class="m-form-field

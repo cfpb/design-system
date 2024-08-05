@@ -1,11 +1,11 @@
 ---
-title: Banner (notification)
 layout: variation
 section: components
 status: Released
 description: Banner notifications communicate high-priority information about
   the state or status of page content. Banner notifications inform users of
-  important information that is not specific to an immediate task.
+  important information that is not specific to an immediate task. They are
+  positioned at the top of the page content area, and span the full width.
 variation_groups:
   - variations:
       - variation_code_snippet: >-
@@ -40,8 +40,7 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description:
-          The warning banner is used to display high-priority
+        variation_description: The warning banner is used to display high-priority
           system or product level notifications that are not specific to an
           immediate task.
         variation_name: Warning banner
@@ -81,26 +80,25 @@ variation_groups:
               </div>
           </div>
         variation_name: Archived content banner
-        variation_description:
-          The archived content banner is used to identify website
+        variation_description: The archived content banner is used to identify website
           pages that are outdated and should no longer be referenced for
           guidance. These pages may have historical value or significance to
           researchers, historians, and the public.
     variation_group_name: Types
+guidelines: Banner notifications are positioned at the top of the page content
+  area and span the full width.
+eyebrow: Components
 use_cases: Use the banner notification to communicate important information
   about the state or status of page content or to highlight high-priority system
   or product level information. Use the inline notification instead when calling
   out specific page content or when alerting users to information that is
   specific to an immediate task.
-guidelines: Banner notifications are positioned at the top of the page content
-  area and span the full width.
-eyebrow: Components
-behavior: ''
 related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
   s/notifications)"
-last_updated: 2020-01-28T15:55:47.394Z
-
 redirect_from:
   - /components/banners
   - /banners
+last_updated: 2020-01-28T15:55:47.394Z
+title: Banner (notification)
+behavior: ""
 ---

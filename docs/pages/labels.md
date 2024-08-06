@@ -22,24 +22,24 @@ variation_groups:
         variation_specs: ''
       - variation_code_snippet: >-
           <fieldset class="o-form__fieldset">
-                          <legend class="a-legend">Basic legend
-                          </legend>
+              <legend class="h4">
+                  Basic legend
+              </legend>
 
-                          <div class="m-form-field
-                                      m-form-field--radio m-form-field--lg-target">
-                              <input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1">
-                                  <label class="a-label" for="is_helpful_1">Inline label
-                                  </label>
-                          </div>
+              <div class="m-form-field
+                          m-form-field--radio m-form-field--lg-target">
+                  <input class="a-radio" id="is_helpful_1" type="radio" name="is_helpful" value="1">
+                      <label class="a-label" for="is_helpful_1">Inline label
+                      </label>
+              </div>
 
-                          <div class="m-form-field
-                                      m-form-field--radio m-form-field--lg-target">
-                              <input class="a-radio" id="is_helpful_2" type="radio" name="is_helpful" value="0">
-                                  <label class="a-label" for="is_helpful_2">Inline label
-                                  </label>
-                          </div>
-
-              </fieldset>
+              <div class="m-form-field
+                          m-form-field--radio m-form-field--lg-target">
+                  <input class="a-radio" id="is_helpful_2" type="radio" name="is_helpful" value="0">
+                      <label class="a-label" for="is_helpful_2">Inline label
+                      </label>
+              </div>
+          </fieldset>
         variation_description: The legend serves as the heading for a
           [fieldset](https://cfpb.github.io/design-system/components/fieldsets).
         variation_name: Basic legend

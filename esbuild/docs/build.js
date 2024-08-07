@@ -31,5 +31,4 @@ const arg = process.argv.slice(2)[0];
     await ctx.rebuild();
     await ctx.dispose();
   }
-  //await copy();
 })();

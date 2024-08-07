@@ -10938,10 +10938,10 @@ sass@^1.69.5:
     immutable "^4.0.0"
     source-map-js ">=0.6.2 <2.0.0"
 
-saucectl@0.179.3:
-  version "0.179.3"
-  resolved "https://registry.yarnpkg.com/saucectl/-/saucectl-0.179.3.tgz#6d9bdd45f849c3e49064acbbbb3f22c1a8bd0ab1"
-  integrity sha512-PjXp9GXUXyR2t662xmrHCOZwcWP4JJmnZU+ScM166/B67c6Jy1RXB/uHQQr61TF1ilOUp50+zZSIl3jEsB0vlg==
+saucectl@0.180.0:
+  version "0.180.0"
+  resolved "https://registry.yarnpkg.com/saucectl/-/saucectl-0.180.0.tgz#8a465b59dcb0c68ad0c10717be6f78afe57d1890"
+  integrity sha512-3L5j41m4Jy6cNFU4avNCqAsfEZj6zHyX4+9HwFfFkqEG6L7nI6pOc/MGfB7vS5lPJKGN6xHs7zDn+gjvIJncmw==
   dependencies:
     "@saucelabs/bin-wrapper" "^2.1.0"
 

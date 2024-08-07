@@ -64,8 +64,28 @@ $size-code: 13px; // Custom size only for Mono code blocks
 // sized at 16px (19/16 = 1.1875).
 $cf-icon-height: 1.1875em;
 
+// Button sizing variables
+
+$btn-font-size: $base-font-size-px;
+$btn-border-radius-size: 4px;
+$btn-v-padding: 8px;
+$btn-h-padding: 14px;
+
 // Grid variables
 
 $grid-wrapper-width: 1230px;
 $grid-gutter-width: 30px;
 $grid-total-columns: 12;
+
+// Layout variables
+
+// .block
+$block-bg: var(--gray-5);
+$block-border: var(--gray-40);
+$block-border-top: $block-border;
+$block-border-right: $block-border;
+$block-border-bottom: $block-border;
+$block-border-left: $block-border;
+
+// .content__main
+$content-main-border: var(--gray-40);

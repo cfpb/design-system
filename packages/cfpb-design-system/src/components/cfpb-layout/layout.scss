@@ -1,5 +1,4 @@
 @use 'sass:math';
-@use './vars' as *;
 @use '../../abstracts' as *;
 
 /* ==========================================================================
@@ -64,7 +63,7 @@
 
 .content__line {
   height: 1px;
-  background: $content-line;
+  background: $block-border;
 }
 
 //

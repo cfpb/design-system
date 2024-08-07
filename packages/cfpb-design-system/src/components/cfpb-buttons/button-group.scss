@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use './vars.scss' as *;
+@use '../../abstracts' as *;
 
 .m-btn-group {
   .a-btn + .a-btn {

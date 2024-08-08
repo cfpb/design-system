@@ -1,8 +1,0 @@
-@import '@cfpb/cfpb-core/src/base';
-
-.a-date {
-  @include heading-5;
-
-  color: $date;
-  white-space: nowrap;
-}

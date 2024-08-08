@@ -1,6 +1,7 @@
 export default {
   testEnvironment: 'jsdom',
   verbose: true,
+  setupFiles: ['<rootDir>/test/util/simulate-event.js'],
   transform: {},
   collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/packages/**/*.js'],
@@ -16,7 +17,8 @@ export default {
   ],
   coverageDirectory: '<rootDir>/test/unit-test-coverage',
   moduleNameMapper: {
-    '\\.(svg)$': '<rootDir>/test/unit-test/mocks/fileMock.js',
+    '\\.(svg)$': '<rootDir>/test/util/mocks/file-mock.js',
+    '\\.(scss)$': '<rootDir>/test/util/mocks/file-mock.js',
   },
   testEnvironmentOptions: {
     url: 'http://localhost',

@@ -40,7 +40,8 @@ variation_groups:
                   </div>
               </div>
           </div>
-        variation_description: The warning banner is used to display high-priority
+        variation_description:
+          The warning banner is used to display high-priority
           system or product level notifications that are not specific to an
           immediate task.
         variation_name: Warning banner
@@ -80,7 +81,8 @@ variation_groups:
               </div>
           </div>
         variation_name: Archived content banner
-        variation_description: The archived content banner is used to identify website
+        variation_description:
+          The archived content banner is used to identify website
           pages that are outdated and should no longer be referenced for
           guidance. These pages may have historical value or significance to
           researchers, historians, and the public.
@@ -100,5 +102,5 @@ redirect_from:
   - /banners
 last_updated: 2020-01-28T15:55:47.394Z
 title: Banner (notification)
-behavior: ""
+behavior: ''
 ---

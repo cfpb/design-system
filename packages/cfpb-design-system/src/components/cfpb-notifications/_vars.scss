@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Design System
+   Notifications Styling
+   ========================================================================== */
+
+//
+// Theme variables
+//
+
+// Color variables
+
+$notification-bg: var(--gray-5);
+$notification-bg-success: var(--green-10);
+$notification-bg-warning: var(--gold-10);
+$notification-bg-error: var(--red-10);
+$notification-border: var(--gray-40);
+$notification-border-success: var(--green);
+$notification-border-warning: var(--gold);
+$notification-border-error: var(--red);
+$notification-icon: var(--gray);
+$notification-icon-success: var(--green);
+$notification-icon-warning: var(--gold);
+$notification-icon-error: var(--red);
+
+// Sizing variables
+
+$notification-padding-px: 15px;

@@ -1,0 +1,38 @@
+@use 'sass:math';
+@use './vars' as *;
+@use '../../abstracts' as *;
+
+/* ==========================================================================
+   Design System
+   Expandable Group Styling
+   ========================================================================== */
+
+.o-expandable {
+  //
+  // Expandable groups
+  //
+
+  &-group {
+    .o-expandable {
+      border-bottom: 1px solid $expandable-border;
+
+      &:first-child {
+        border-top: 1px solid $expandable-border;
+      }
+    }
+  }
+
+  @include respond-to-print {
+    // Hide the interactive expandable cues when printing
+    &__header[aria-expanded='true'] &__cue-close,
+    &__header[aria-expanded='false'] &__cue-open {
+      display: none;
+    } // Ensure all expandables are expanded when printing.
+    // To accommodate print stylesheets that display the raw URL after links,
+    // set an enormous max height to accommodate expandables that have a lot of links.
+    &__content[aria-expanded='false'] {
+      display: block;
+      max-height: 99999px !important;
+    }
+  }
+}

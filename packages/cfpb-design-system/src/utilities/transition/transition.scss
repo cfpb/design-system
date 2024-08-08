@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Utility classes for transitions.
+
+   Adds transitions utilty classes for transform, opacity,
+   and for the removing the transition duration.
+   ========================================================================== */
+
+.u-no-animation {
+  transition-duration: 0s !important;
+}
+
+//
+// Utility classes for moving an element using transform translate values.
+//
+
+.u-move-transition {
+  transition: transform 0.25s ease-out;
+}
+
+.u-move-to-origin {
+  transform: translate3d(0, 0, 0);
+}
+
+.u-move-left {
+  transform: translate3d(-100%, 0, 0);
+}
+
+// TODO: Look into adding a mixin for movement multiples.
+.u-move-left-2x {
+  transform: translate3d(-200%, 0, 0);
+}
+
+.u-move-left-3x {
+  transform: translate3d(-300%, 0, 0);
+}
+
+.u-move-right {
+  transform: translate3d(100%, 0, 0);
+}
+
+.u-move-up {
+  transform: translate3d(0, -100%, 0);
+}
+
+//
+// Utility classes for setting an element's opacity.
+//
+
+.u-alpha-transition {
+  transition: opacity 0.25s linear;
+}
+
+.u-alpha-100 {
+  opacity: 1;
+}
+
+.u-alpha-0 {
+  opacity: 0;
+}
+
+//
+// Utility classes for setting an element's height.
+//
+
+.u-max-height-transition {
+  overflow: hidden;
+  contain: paint;
+
+  // Duration is set here, but it is actually overridden in the JavaScript.
+  transition: max-height 0.2s ease-out;
+}
+
+/*
+.u-max-height-default {
+  This class is kept for documentation completeness.
+  The actual max-height is set in the JavaScript,
+  so that we know what the actual height of the content is for easing purposes.
+}
+*/
+
+.u-max-height-zero {
+  max-height: 0 !important;
+}
+
+.u-max-height-summary {
+  /* The value set here should show 4 lines of text at our standard 16px
+     base font size. The calculation comes from the following:
+     88px = 16 * 5.5em.
+     5.5em = base-line-height (22px) * 4 / base-font-size (16px)
+  */
+  max-height: 88px !important;
+}

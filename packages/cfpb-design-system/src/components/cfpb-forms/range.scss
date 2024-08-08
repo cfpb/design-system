@@ -1,0 +1,61 @@
+@use 'sass:math';
+@use './vars.scss' as *;
+@use '../../abstracts' as *;
+
+@mixin u-range-track-styles() {
+  height: math.div(11px, $base-font-size-px) + rem;
+  width: 100%;
+  background-color: $range-bg-track;
+  border: 1px solid $range-border;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@mixin u-range-thumb-styles() {
+  height: math.div(45px, $base-font-size-px) + rem;
+  width: math.div(45px, $base-font-size-px) + rem;
+  margin-top: math.div(-18px, $base-font-size-px) + rem;
+  appearance: none;
+  border: 1px solid $range-border;
+  border-radius: 50%;
+  background-color: $range-bg;
+  cursor: pointer;
+}
+
+@mixin u-range-thumb-focus-styles() {
+  background-color: $range-bg-focused;
+  border: 2px solid $range-border-focused;
+}
+
+.a-range {
+  // Reset the browser's default styling.
+  appearance: none;
+
+  width: 100%;
+  min-height: 49px;
+
+  &::-webkit-slider-runnable-track {
+    @include u-range-track-styles;
+  }
+  &::-moz-range-track {
+    @include u-range-track-styles;
+  }
+  &::-webkit-slider-thumb {
+    @include u-range-thumb-styles;
+  }
+  &::-moz-range-thumb {
+    @include u-range-thumb-styles;
+  }
+  &:focus,
+  &.focus {
+    box-shadow: none;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      @include u-range-thumb-focus-styles;
+    }
+    &::-moz-range-thumb {
+      @include u-range-thumb-focus-styles;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use './vars.scss' as *;
+@use '../../abstracts' as *;
+
+.a-date {
+  @include heading-5;
+
+  color: $date;
+  white-space: nowrap;
+}

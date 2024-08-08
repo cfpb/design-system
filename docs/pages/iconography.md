@@ -644,7 +644,7 @@ description: >-
 
 
   <a class="a-link"
-     href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons">
+     href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons">
       <span class="a-link__text">View on GitHub</span>
       {% include icons/download.svg %}
   </a>
@@ -663,7 +663,7 @@ description: >-
 
 
   <a class="a-link"
-     href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
+     href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
       <span class="a-link__text">Download font</span>
       {% include icons/download.svg %}
   </a>
@@ -675,7 +675,7 @@ behavior: >-
   ### SVG icon basics
 
 
-  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons) component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the [icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section. We encourage using your templating system to inject the SVG icon files, as opposed to copying and pasting the raw SVG.
+  The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons) component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the [icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section. We encourage using your templating system to inject the SVG icon files, as opposed to copying and pasting the raw SVG.
 
 
   Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: `{% include 'icons/download.svg' %}`.
@@ -684,7 +684,7 @@ behavior: >-
   #### What the SCSS is doing
 
 
-  If you look in [cfpb-icons.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.scss) you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the CSS rule gets applied to all of the SVGs on the page,
+  If you look in [cfpb-icons.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/src/cfpb-icons.scss) you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the CSS rule gets applied to all of the SVGs on the page,
   just like any other HTML element.
 
 

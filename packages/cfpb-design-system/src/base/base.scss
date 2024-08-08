@@ -1,0 +1,361 @@
+@use 'sass:math';
+@use '../abstracts' as *;
+
+/* ==========================================================================
+   Design System
+   Base styles
+   ========================================================================== */
+
+//
+// Type hierarchy
+//
+
+body {
+  color: $text;
+  font-family: var(--font-stack);
+  font-size: math.div($base-font-size, 16) * 100%;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  // Must set these explicitly to override Normalize.css's provided default
+  // of `font-family: sans-serif;`
+  font-family: var(--font-stack);
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+// Resetting default browser styling for margin-top on headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+h1,
+.h1 {
+  @include h1;
+}
+
+h2,
+.h2 {
+  @include h2;
+}
+
+h3,
+.h3 {
+  @include h3;
+}
+
+h4,
+.h4 {
+  @include h4;
+}
+
+h5,
+.h5 {
+  @include h5;
+}
+
+h6,
+.h6 {
+  @include h6;
+}
+
+.lead-paragraph {
+  @include u-lead-paragraph;
+}
+
+.superheading {
+  @include u-superheading;
+}
+
+//
+// Body copy element vertical margins
+//
+
+p,
+ul,
+ol,
+dl,
+figure,
+table,
+blockquote {
+  margin-top: 0;
+  margin-bottom: math.div(15px, $base-font-size-px) + em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+p + ul,
+p + ol {
+  margin-top: math.div(-5px, $base-font-size-px) + em;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: math.div(8px, $base-font-size-px) + em;
+}
+
+li {
+  margin-bottom: math.div(8px, $base-font-size-px) + em;
+
+  &:last-child,
+  nav & {
+    margin-bottom: 0;
+  }
+}
+
+//
+// Default link
+//
+
+a {
+  border-width: 0;
+  border-style: dotted;
+  border-color: $link-underline;
+  color: $link-text;
+  text-decoration: none;
+
+  // Note: The class definitions below are only for use in
+  // demonstrating link states. Do not use in production.
+
+  &:visited,
+  &.visited {
+    border-color: $link-underline-visited;
+    color: $link-text-visited;
+  }
+
+  &:hover,
+  &.hover {
+    border-style: solid;
+    border-color: $link-underline-hover;
+    color: $link-text-hover;
+  }
+
+  &:focus,
+  &.focus {
+    border-style: solid;
+    outline: thin dotted;
+  }
+
+  &:active,
+  &.active {
+    border-style: solid;
+    border-color: $link-underline-active;
+    color: $link-text-active;
+  }
+}
+
+//
+// Underlined links
+//
+
+p,
+li,
+dd {
+  // Restrict bottom borders to inline text links ...
+
+  a {
+    border-bottom-width: 1px;
+  }
+}
+
+nav a {
+  // ... unless they're part of a nav list
+  border-bottom-width: 0;
+}
+
+//
+// Lists
+//
+
+ul {
+  padding-left: math.div(18px, $base-font-size-px) + em;
+  list-style: square;
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+ol {
+  // Slightly larger than necessary, but this is the minimum value
+  // for numbers to not be partially in the margin in Internet Explorer.
+  padding-left: math.div(21px, $base-font-size-px) + em;
+
+  li:nth-last-child(n + 10),
+  li:nth-last-child(n + 10) ~ li {
+    // 0.5625rem
+    margin-left: math.div(9px, $base-font-size-px) + rem;
+  }
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+
+  // Negate margin added to lists longer than 9 items.
+  li {
+    margin-left: 0 !important;
+  }
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+// Lists in the nav should be unstyled
+nav ul,
+nav ol,
+nav ul ul,
+nav ol ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+//
+// Tables
+//
+
+caption {
+  margin-bottom: math.div(10px, $base-font-size-px) + em;
+  text-align: left;
+}
+
+th,
+td {
+  padding: math.div(10px, $base-font-size-px) + em;
+
+  thead & {
+    // 10px / 14px
+    padding: math.div(10px, $size-v) + em;
+    background: $table-head-bg;
+    color: $table-head-text;
+    font-size: math.div(16px, $base-font-size-px) + em;
+    vertical-align: top;
+  }
+}
+
+thead,
+tbody tr {
+  border-bottom: 1px solid $table-border;
+}
+
+th {
+  font-weight: 600;
+  text-align: left;
+
+  thead & {
+    // Heading elements may at times appear inside `th` elements
+    // as required for navigating the page's content with screenreaders.
+    // These rules prevent those headings from overriding the desired style
+    // of their parent `th` elements.
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      @include h5;
+
+      // TODO: Move this above the h4 mixin. Mixin needs to allow margin override.
+      /* stylelint-disable no-duplicate-selectors */
+      & {
+        margin: 0;
+        font-size: inherit;
+      }
+      /* stylelint-enable */
+    }
+  }
+}
+
+//
+// Block quote
+//
+
+blockquote {
+  margin-right: math.div(15px, $base-font-size-px) + em;
+  margin-left: math.div(15px, $base-font-size-px) + em;
+
+  // Tablet and above.
+  @include respond-to-min($bp-sm-min) {
+    margin-right: math.div(30px, $base-font-size-px) + em;
+    margin-left: math.div(30px, $base-font-size-px) + em;
+  }
+}
+
+//
+// Form elements have been moved to the @cfpb/cfpb-forms component.
+//
+
+//
+// Images
+//
+
+img {
+  max-width: 100%;
+}
+
+//
+// Figure
+//
+
+figure {
+  // reset browser default side margins
+  margin-right: 0;
+  margin-left: 0;
+
+  img {
+    // Removes weird vertical spacing below images.
+    // TODO: Discuss whether this could just be universally applied to img
+    vertical-align: middle;
+  }
+}
+
+//
+// Code blocks
+//
+
+pre,
+code {
+  background: $code-bg;
+  border-radius: 4px;
+  color: $code-text;
+  font-family: 'Input Mono', Consolas, Monaco, 'Courier New', monospace;
+}
+
+code {
+  padding: math.div(3px, $size-code) + em math.div(3px, $size-code) + em 0;
+  font-size: math.div($size-code, $base-font-size-px) + em;
+}
+
+pre {
+  display: block;
+  padding: math.div(10px, $base-font-size-px) + em
+    math.div(15px, $base-font-size-px) + em;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+
+  code {
+    padding: 0;
+    background-color: transparent;
+  }
+}

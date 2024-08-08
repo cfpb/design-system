@@ -2,40 +2,18 @@
    Design System
    ========================================================================== */
 
-export {
-  Expandable,
-  ExpandableGroup,
-  Summary,
-  SummaryMinimal,
-} from '@cfpb/cfpb-expandables/src/index.js';
+export * from './abstracts';
 
-export {
-  BEHAVIOR_PREFIX,
-  JS_HOOK,
-  STATE_PREFIX,
-  EventObserver,
-  checkDom,
-  instantiateAll,
-  setInitFlag,
-  attach,
-  checkBehaviorDom,
-  find,
-  remove,
-  isUndefined,
-  isDefined,
-  isObject,
-  isString,
-  isNumber,
-  isDate,
-  isArray,
-  isFunction,
-  isEmpty,
-  add,
-  contains,
-  isMobileUserAgent,
-  FlyoutMenu,
-  AlphaTransition,
-  BaseTransition,
-  MaxHeightTransition,
-  MoveTransition,
-} from '@cfpb/cfpb-atomic-component/src/index.js';
+export * from './base';
+
+export * from './components/cfpb-buttons';
+export * from './components/cfpb-expandables';
+export * from './components/cfpb-forms';
+export * from './components/cfpb-icons';
+export * from './components/cfpb-layout';
+export * from './components/cfpb-notifications';
+export * from './components/cfpb-pagination';
+export * from './components/cfpb-tables';
+export * from './components/cfpb-typography';
+
+export * from './utilities';

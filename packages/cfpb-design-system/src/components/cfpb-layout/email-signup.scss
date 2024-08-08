@@ -1,0 +1,35 @@
+@use 'sass:math';
+@use '../../abstracts' as *;
+
+.o-email-signup {
+  .m-notification {
+    margin-bottom: math.div(math.div($grid-gutter-width, 2), $base-font-size-px) +
+      em;
+  }
+
+  .a-text-input {
+    // Keep inputs in a wider layout to a reasonable width.
+    // 370 = 4 columns at max grid width
+    max-width: math.div(370px, $base-font-size-px) + rem;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: math.div(math.div($grid-gutter-width, 2), $base-font-size-px) +
+      em;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: math.div(math.div($grid-gutter-width, 2), $base-font-size-px) + em;
+  }
+
+  .a-btn {
+    text-align: inherit;
+  }
+
+  // Mobile only.
+  @include respond-to-max($bp-xs-max) {
+    .a-label--heading {
+      font-size: 1em;
+    }
+  }
+}

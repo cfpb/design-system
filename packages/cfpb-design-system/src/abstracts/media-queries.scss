@@ -1,0 +1,44 @@
+@use 'sass:math';
+@use './vars' as *;
+
+/* ==========================================================================
+   Design System
+   Media queries
+   ========================================================================== */
+
+//
+// Media query mixins
+//
+@mixin respond-to-min($bp) {
+  $ems: math.div($bp, $base-font-size-px) + em;
+
+  @media only all and (min-width: $ems) {
+    @content;
+  }
+}
+
+@mixin respond-to-max($bp) {
+  $ems: math.div($bp, $base-font-size-px) + em;
+
+  @media only all and (max-width: $ems) {
+    @content;
+  }
+}
+
+@mixin respond-to-range($bp1, $bp2) {
+  $ems1: math.div($bp1, $base-font-size-px) + em;
+  $ems2: math.div($bp2, $base-font-size-px) + em;
+
+  @media only all and (min-width: $ems1) and (max-width: $ems2) {
+    @content;
+  }
+}
+
+@mixin respond-to-print() {
+  @media print {
+    @content;
+  }
+  .print {
+    @content;
+  }
+}

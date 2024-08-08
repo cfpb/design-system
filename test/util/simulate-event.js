@@ -46,4 +46,4 @@ function simulateEvent(eventType, target, eventOption = {}) {
   return target.dispatchEvent(event);
 }
 
-export { simulateEvent };
+window.simulateEvent = simulateEvent;

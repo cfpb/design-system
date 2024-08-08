@@ -1,6 +1,5 @@
 @use 'sass:math';
-@import '@cfpb/cfpb-core/src/vars';
-@import '@cfpb/cfpb-grid/src/cfpb-grid';
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
 
 // Taken from global-eyebrow.scss in cfgov.
 .m-global-eyebrow {

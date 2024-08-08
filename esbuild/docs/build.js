@@ -1,8 +1,7 @@
 import esbuild from 'esbuild';
 
 import { pluginEsbuildLiquid } from '../plugins/plugin-esbuild-liquid.js';
-import { scripts, jsPaths } from './scripts.js';
-import { styles, cssPaths } from './styles.js';
+import { scripts } from './scripts.js';
 
 const baseConfig = {
   logLevel: 'info',
@@ -15,7 +14,7 @@ const baseConfig = {
     '.svg': 'text',
   },
   outdir: './docs/dist/',
-  outbase: './docs/assets/',
+  outbase: './docs/assets/js/',
   plugins: [pluginEsbuildLiquid],
 };
 
@@ -23,16 +22,12 @@ const arg = process.argv.slice(2)[0];
 
 (async function () {
   const scriptsConfig = scripts(baseConfig);
-  const stylesConfig = styles(baseConfig);
-  const mergedConfig = { ...scriptsConfig, ...stylesConfig };
-  mergedConfig.entryPoints = jsPaths.concat(cssPaths);
 
+  const ctx = await esbuild.context(scriptsConfig);
   if (arg === 'watch') {
-    const ctx = await esbuild.context(mergedConfig);
     await ctx.watch();
     // Not disposing context here as the user will ctrl+c to end watching.
   } else {
-    const ctx = await esbuild.context(mergedConfig);
     await ctx.rebuild();
     await ctx.dispose();
   }

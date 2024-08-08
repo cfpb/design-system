@@ -1,8 +1,7 @@
 import esbuild from 'esbuild';
 
 import { copy } from './copy.js';
-import { scripts, jsPaths } from './scripts.js';
-import { styles, cssPaths } from './styles.js';
+import { scripts } from './scripts.js';
 
 const baseConfig = {
   logLevel: 'info',
@@ -20,11 +19,7 @@ const baseConfig = {
 
 (async function () {
   const scriptsConfig = scripts(baseConfig);
-  const stylesConfig = styles(baseConfig);
-  const mergedConfig = { ...scriptsConfig, ...stylesConfig };
-  mergedConfig.entryPoints = jsPaths.concat(cssPaths);
-
-  const ctx = await esbuild.context(mergedConfig);
+  const ctx = await esbuild.context(scriptsConfig);
 
   await ctx.rebuild();
   await ctx.dispose();

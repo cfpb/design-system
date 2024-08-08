@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/design-system/dist/css/main.css">
+  <link rel="stylesheet" href="/design-system/dist/main.css">
   <script>
       // Confirm availability of JS and remove no-js class from html
       var docElement = document.documentElement;
@@ -3537,13 +3537,9 @@ Example of a non heading element:
                 
 
                 
-                    'variation_name1': '&quot;Align with button&quot; mixin',
-                    'variation_description1': "Align+an+element+vertically+with+the+text+within+a+button+that+may+be+to+either+side.%0A%0APass+font-size+as+the+argument+for+calculating+spacing%2C+default+value+is+%40base-font-size-px.%0A%0A.u-align-with-btn%28%40font-size%3A+%40base-font-size-px%29%3B%0A",
-                    'variation_code_snippet1': ``,
-                
-                    'variation_name2': '&quot;Flexible proportional containers&quot; mixin',
-                    'variation_description2': "Utilize+intrinsic+ratios+to+create+a+flexible+container+that+retains+an+aspect+ratio.+When+%26lt%3Bimg%26gt%3B+tags+scale+they+retain+their+aspect+ratio%2C+but+if+you+need+a+flexible+video+you+will+need+to+use+this+mixin.%0A%0ARead+more+about+intrinsic+ratios%3A+http%3A%2F%2Falistapart.com%2Farticle%2Fcreating-intrinsic-ratios-for-video%0A%0A.u-flexible-container-mixin%28%40width%3A+16%2C+%40height%3A+9%29%3B%0A%0AIn+addition+to+the+mixin%2C+there+are+two+default+classes+available+for+building+16%3A9+and+4%3A3+containers.%0A%0AWhen+using+the+mixin%2C+pass+the+width+as+the+first+argument%2C+and+the+height+as+the+second+argument.+Default+values+are+16%2C+9.%0A%0AOriginal+mixin+credit%3A+https%3A%2F%2Fgist.github.com%2Fcraigmdennis%2F6655047%0A",
-                    'variation_code_snippet2': `&lt;!--NOTE: Inline style properties for demonstration only--&gt;
+                    'variation_name1': '&quot;Flexible proportional containers&quot; mixin',
+                    'variation_description1': "Utilize+intrinsic+ratios+to+create+a+flexible+container+that+retains+an+aspect+ratio.+When+%26lt%3Bimg%26gt%3B+tags+scale+they+retain+their+aspect+ratio%2C+but+if+you+need+a+flexible+video+you+will+need+to+use+this+mixin.%0A%0ARead+more+about+intrinsic+ratios%3A+http%3A%2F%2Falistapart.com%2Farticle%2Fcreating-intrinsic-ratios-for-video%0A%0A.u-flexible-container-mixin%28%40width%3A+16%2C+%40height%3A+9%29%3B%0A%0AIn+addition+to+the+mixin%2C+there+are+two+default+classes+available+for+building+16%3A9+and+4%3A3+containers.%0A%0AWhen+using+the+mixin%2C+pass+the+width+as+the+first+argument%2C+and+the+height+as+the+second+argument.+Default+values+are+16%2C+9.%0A%0AOriginal+mixin+credit%3A+https%3A%2F%2Fgist.github.com%2Fcraigmdennis%2F6655047%0A",
+                    'variation_code_snippet1': `&lt;!--NOTE: Inline style properties for demonstration only--&gt;
 
 &lt;h4&gt;16:9 flexible video player&lt;/h4&gt;
 &lt;p&gt;To create a 16:9 flexible video player, wrap the video element in an element with &lt;code&gt;u-flexible-container&lt;/code&gt; and add the &lt;code&gt;u-flexible-container__inner&lt;/code&gt; to the video element.&lt;/p&gt;
@@ -3574,21 +3570,21 @@ Example of a non heading element:
     &lt;/video&gt;
 &lt;/div&gt;`,
                 
-                    'variation_name3': '&quot;Link color&quot; mixin',
-                    'variation_description3': "Calling+the+mixin+without+arguments+will+set+the+following+states%3A+default+-+%230071bc%2C+%3Ahover+-+%23205493%2C+%3Afocus+-+%230071bc%2C+%3Avisited+-+%234c2c92%2C+%3Aactive+-+%23046b99.%0A%0Au-link-colors%28%29%0A%0APassing+a+single+argument+into+the+mixin+will+set+the+color+for+the+default%2C+%3Avisited%2C+%3Ahover%2C+%3Afocus%2C+and+%3Aactive+states.%0A%0Au-link-colors%28%40c%29%0A%0APassing+two+arguments+into+the+mixin+will+set+the+color+for+the+default%2C+%3Avisited%2C+and+%3Aactive+states+as+the+first+argument%2C+and+%3Ahover+and+%3Afocus+as+the+second+argument.%0A%0Au-link-colors%28%40c%2C+%40h%29%0A%0APassing+five+arguments+will+set+the+color+for+the+default%2C+%3Avisited%2C+%3Ahover%2C+%3Afocus%2C+and+%3Aactive+states+respectively.%0A%0Au-link-colors%28%40c%2C+%40v%2C+%40h%2C+%40f%2C+%40a%29%0A%0APassing+ten+arguments+will+set+the+text+%28default%2C+%3Avisited%2C+%3Ahover%2C+%3Afocus%2C+and+%3Aactive+states+in+the+first+five+arguments%29+and+border+colors+%28default%2C+%3Avisited%2C+%3Ahover%2C+%3Afocus%2C+and+%3Aactive+states+in+the+following+five+arguments%29+separately.%0A%0Au-link-colors%28%40c%2C+%40v%2C+%40h%2C+%40f%2C+%40a%2C+%40bc%2C+%40bv%2C+%40bh%2C+%40bf%2C+%40ba%29%0A%0AA+base+mixin+of+u-link-colors-base%28%29+exists%2C+but+please+refrain+from+using+this+mixin+directly+in+order+to+promote+consistent+naming+throughout+this+project.+If+you+need+to+set+colors+for+all+states+of+a+link%2C+use+.u-link-colors%28%40c%2C+%40v%2C+%40h%2C+%40f%2C+%40a%29.%0A",
+                    'variation_name2': '&quot;Link color&quot; mixin',
+                    'variation_description2': "Calling+the+mixin+without+arguments+will+set+the+following+states%3A+default+-+%230071bc%2C+%3Ahover+-+%23205493%2C+%3Afocus+-+%230071bc%2C+%3Avisited+-+%234c2c92%2C+%3Aactive+-+%23046b99.%0A%0Au-link-colors%28%29%0A%0APassing+a+single+argument+into+the+mixin+will+set+the+color+for+the+default%2C+%3Avisited%2C+%3Ahover%2C+%3Afocus%2C+and+%3Aactive+states.%0A%0Au-link-colors%28%40c%29%0A%0APassing+two+arguments+into+the+mixin+will+set+the+color+for+the+default%2C+%3Avisited%2C+and+%3Aactive+states+as+the+first+argument%2C+and+%3Ahover+and+%3Afocus+as+the+second+argument.%0A%0Au-link-colors%28%40c%2C+%40h%29%0A%0APassing+five+arguments+will+set+the+color+for+the+default%2C+%3Avisited%2C+%3Ahover%2C+%3Afocus%2C+and+%3Aactive+states+respectively.%0A%0Au-link-colors%28%40c%2C+%40v%2C+%40h%2C+%40f%2C+%40a%29%0A%0APassing+ten+arguments+will+set+the+text+%28default%2C+%3Avisited%2C+%3Ahover%2C+%3Afocus%2C+and+%3Aactive+states+in+the+first+five+arguments%29+and+border+colors+%28default%2C+%3Avisited%2C+%3Ahover%2C+%3Afocus%2C+and+%3Aactive+states+in+the+following+five+arguments%29+separately.%0A%0Au-link-colors%28%40c%2C+%40v%2C+%40h%2C+%40f%2C+%40a%2C+%40bc%2C+%40bv%2C+%40bh%2C+%40bf%2C+%40ba%29%0A%0AA+base+mixin+of+u-link-colors-base%28%29+exists%2C+but+please+refrain+from+using+this+mixin+directly+in+order+to+promote+consistent+naming+throughout+this+project.+If+you+need+to+set+colors+for+all+states+of+a+link%2C+use+.u-link-colors%28%40c%2C+%40v%2C+%40h%2C+%40f%2C+%40a%29.%0A",
+                    'variation_code_snippet2': ``,
+                
+                    'variation_name3': '&quot;Link border&quot; mixin',
+                    'variation_description3': "Force+the+default+bottom+border+on+the+default+and+%3Ahover+states.%0A%0A.u-link__border%28%29%0A%0ATurn+off+the+default+bottom+border+on+the+default+and+%3Ahover+states.%0A%0A.u-link__no-border%28%29%0A%0ATurn+off+the+default+bottom+border+on+the+default+state+but+force+a+bottom+border+on+the+%3Ahover+state.%0A%0A.u-link__hover-border%28%29%0A",
                     'variation_code_snippet3': ``,
                 
-                    'variation_name4': '&quot;Link border&quot; mixin',
-                    'variation_description4': "Force+the+default+bottom+border+on+the+default+and+%3Ahover+states.%0A%0A.u-link__border%28%29%0A%0ATurn+off+the+default+bottom+border+on+the+default+and+%3Ahover+states.%0A%0A.u-link__no-border%28%29%0A%0ATurn+off+the+default+bottom+border+on+the+default+state+but+force+a+bottom+border+on+the+%3Ahover+state.%0A%0A.u-link__hover-border%28%29%0A",
+                    'variation_name4': '&quot;Link children&quot; mixin',
+                    'variation_description4': "Calling+this+mixin+without+arguments+will+set+the+default+color+for+the+%3Ahover+state+of+a+child+within+a+link%2C+without+affecting+the+link+itself.%0A%0A.u-link__hover-child%28%29%0A%0APassing+a+single+argument+into+the+mixin+will+set+a+custom+color+for+the+%3Ahover+state+of+a+child+within+a+link%2C+without+affecting+the+link+itself.%0A%0A.u-link__hover-child%28%40c%29%0A",
                     'variation_code_snippet4': ``,
                 
-                    'variation_name5': '&quot;Link children&quot; mixin',
-                    'variation_description5': "Calling+this+mixin+without+arguments+will+set+the+default+color+for+the+%3Ahover+state+of+a+child+within+a+link%2C+without+affecting+the+link+itself.%0A%0A.u-link__hover-child%28%29%0A%0APassing+a+single+argument+into+the+mixin+will+set+a+custom+color+for+the+%3Ahover+state+of+a+child+within+a+link%2C+without+affecting+the+link+itself.%0A%0A.u-link__hover-child%28%40c%29%0A",
+                    'variation_name5': '&quot;Small text utility&quot; mixin',
+                    'variation_description5': "Class%0A%0ASets+the+element+to+14px+%28in+ems%29.%0A%0ATo+be+used+on+default+16px+text+only.+To+use+on+text+set+to+another+size%2C+use+the+mixin+below.%0A%0A.u-small-text%0A%0AMixin%0A%0ASets+the+element+to+14px+%28in+ems%29+based+on+the+text+size+passed+as+%40context.%0A%0A.u-small-text%28%40context%29%0A%0A%2F%2F+Ex.%0A.example+%7B%0A++font-size%3A+math.div%2820px%2C+%40base-font-size-px%29+%2B+em%3B%0A%0A++small+%7B%0A++++.u-small-text%2820px%29%3B%0A++%7D%0A%7D%0A%0A%2F%2F+Compiles+to%0A.example+%7B%0A++font-size%3A+1.25em%3B%0A%7D%0A%0A.example+small+%7B%0A++font-size%3A+0.7em%3B%0A%7D%0A%0A",
                     'variation_code_snippet5': ``,
-                
-                    'variation_name6': '&quot;Small text utility&quot; mixin',
-                    'variation_description6': "Class%0A%0ASets+the+element+to+14px+%28in+ems%29.%0A%0ATo+be+used+on+default+16px+text+only.+To+use+on+text+set+to+another+size%2C+use+the+mixin+below.%0A%0A.u-small-text%0A%0AMixin%0A%0ASets+the+element+to+14px+%28in+ems%29+based+on+the+text+size+passed+as+%40context.%0A%0A.u-small-text%28%40context%29%0A%0A%2F%2F+Ex.%0A.example+%7B%0A++font-size%3A+math.div%2820px%2C+%40base-font-size-px%29+%2B+em%3B%0A%0A++small+%7B%0A++++.u-small-text%2820px%29%3B%0A++%7D%0A%7D%0A%0A%2F%2F+Compiles+to%0A.example+%7B%0A++font-size%3A+1.25em%3B%0A%7D%0A%0A.example+small+%7B%0A++font-size%3A+0.7em%3B%0A%7D%0A%0A",
-                    'variation_code_snippet6': ``,
                 
             
 
@@ -6893,7 +6889,7 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
                     'variation_code_snippet2': ``,
                 
                     'variation_name3': 'Font stack',
-                    'variation_description3': "Override+this+variable+in+order+to+specify+a+font+stack+other+than+the+CFPB%E2%80%99s+default+brand+font+and+fallback.%0A%40font-stack%3A+%27Avenir+Next%27%2C+Arial%2C+sans-serif%3B%0A",
+                    'variation_description3': "Override+this+variable+in+order+to+specify+a+font+stack+other+than+the+CFPB%E2%80%99s+default+brand+font+and+fallback.%0A--font-stack%3A+%27Avenir+Next%27%2C+Arial%2C+sans-serif%3B%0A",
                     'variation_code_snippet3': ``,
                 
                     'variation_name4': '@font-face file path',
@@ -7331,12 +7327,12 @@ Lorem ipsum dolor sit amet, ei ius adhuc inani iudico, labitur instructior ex pr
     ];
 })();
 </script>
-<script src="/design-system/dist/js/search.js"></script>
+<script src="/design-system/dist/search.js"></script>
 
 
 
   
-  <script src="/design-system/dist/js/main.js" charset="utf-8"></script>
+  <script src="/design-system/dist/main.js" charset="utf-8"></script>
 
   
 

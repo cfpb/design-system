@@ -5,17 +5,16 @@ import {
   ExpandableGroup,
   Summary,
   SummaryMinimal,
-} from '@cfpb/cfpb-expandables';
-import { Multiselect } from '@cfpb/cfpb-forms';
-import {
+  Multiselect,
   FlyoutMenu,
   AlphaTransition,
   MaxHeightTransition,
   MoveTransition,
-} from '@cfpb/cfpb-atomic-component';
+} from '@cfpb/cfpb-design-system';
 import Tabs from './Tabs.js';
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';
+export * as MainStyles from '../css/main.scss';
 
 redirectBanner.init();
 sidebar.init();

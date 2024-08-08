@@ -1,3 +1,7 @@
+@use '@cfpb/cfpb-design-system/src/abstracts' as *;
+@use '@cfpb/cfpb-design-system/src/base' as *;
+@use '@cfpb/cfpb-design-system/src/utilities' as *;
+
 // All screen sizes.
 .m-tabs {
   &__list {

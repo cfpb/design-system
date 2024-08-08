@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/design-system/dist/css/main.css">
+  <link rel="stylesheet" href="/design-system/dist/main.css">
   <script>
       // Confirm availability of JS and remove no-js class from html
       var docElement = document.documentElement;
@@ -324,7 +324,7 @@
 
   <p>The cfpb-icons component provides Scalable Vector Graphic (SVG) icons. This component can be used by itself, but is designed to work with the CFPB Design System.</p>
 
-  <p><a class="a-link" href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons">
+  <p><a class="a-link" href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons">
     <span class="a-link__text">View on GitHub</span>
     <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--download" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg>
 </a></p>
@@ -337,7 +337,7 @@
 
   <p>Our full icon set is available for desktop use as an icon font in OpenType format. It can be accessed through programs like Adobe Illustrator and Adobe InDesign via the Glyphs panel. The icon font should not be used for placing icons on a website.</p>
 
-  <p><a class="a-link" href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
+  <p><a class="a-link" href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/src/font/CFPBIcons-Regular.otf?raw=true">
     <span class="a-link__text">Download font</span>
     <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--download" viewbox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg>
 </a></p>
@@ -2089,13 +2089,13 @@
                 </p>
 <h3 id="svg-icon-basics">SVG icon basics</h3>
 
-<p>The <a href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-icons/src/icons">cfpb-icons</a> component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the <a href="https://cfpb.github.io/design-system/foundation/iconography#icon-library-1">icon library</a> section. We encourage using your templating system to inject the SVG icon files, as opposed to copying and pasting the raw SVG.</p>
+<p>The <a href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons">cfpb-icons</a> component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the <a href="https://cfpb.github.io/design-system/foundation/iconography#icon-library-1">icon library</a> section. We encourage using your templating system to inject the SVG icon files, as opposed to copying and pasting the raw SVG.</p>
 
 <p>Note: Jinja2, the templating language that consumerfinance.gov uses, has a near-identical syntax for includes, but it requires that the path be enclosed in quotation marks, like so: <code class="language-plaintext highlighter-rouge">{% include 'icons/download.svg' %}</code>.</p>
 
 <h4 id="what-the-scss-is-doing">What the SCSS is doing</h4>
 
-<p>If you look in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-icons/src/cfpb-icons.scss">cfpb-icons.scss</a> you can see that we have encoded <code class="language-plaintext highlighter-rouge">class="cf-icon-svg"</code> in the root element of each of our SVG icons. As a result, the CSS rule gets applied to all of the SVGs on the page, just like any other HTML element.</p>
+<p>If you look in <a href="https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/src/cfpb-icons.scss">cfpb-icons.scss</a> you can see that we have encoded <code class="language-plaintext highlighter-rouge">class="cf-icon-svg"</code> in the root element of each of our SVG icons. As a result, the CSS rule gets applied to all of the SVGs on the page, just like any other HTML element.</p>
 
 <p>We start by limiting the size of the SVG to a proportion of the text height, using the <code class="language-plaintext highlighter-rouge">@cf-icon-height</code> variable’s em value. To align the canvas of the icon with the canvas of neighboring text, we set <code class="language-plaintext highlighter-rouge">vertical-align: text-top;</code>. Finally, setting <code class="language-plaintext highlighter-rouge">fill: currentColor;</code> tells the SVG to set its path’s fill <code class="language-plaintext highlighter-rouge">color</code> to match the color value of its parent element.</p>
 
@@ -2132,8 +2132,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/iconography.md">
-                            <time datetime="2024-08-07 09:46:26 -0400">
-                                 9:46:26 AM Aug 07, 2024
+                            <time datetime="2024-08-08 09:23:39 -0400">
+                                 9:23:39 AM Aug 08, 2024
                             </time>
                         </a>
                     </section>
@@ -2188,7 +2188,7 @@
 </footer>
 
   
-  <script src="/design-system/dist/js/main.js" charset="utf-8"></script>
+  <script src="/design-system/dist/main.js" charset="utf-8"></script>
 
   
 

@@ -10,11 +10,11 @@ backend:
     delete: Delete "{{slug}}" page
 
 # When running locally, try to use a local proxy server instead of GitHub, if
-# one is running (yarn serve-netlify, which uses netlify-cms-proxy-server).
+# one is running (yarn serve-decap, which uses decap-server).
 local_backend: true
 
 site_url: https://cfpb.github.io/design-system
-logo_url: https://cfpb.github.io/design-system/assets/img/cfpb-netlify-logo.png
+logo_url: https://cfpb.github.io/design-system/assets/img/cfpb-cms-logo.png
 publish_mode: editorial_workflow
 media_folder: docs/images/uploads
 public_folder: /design-system/images/uploads

@@ -8,6 +8,9 @@
 // Global banner in the header.
 //
 
+$banner-dark-background: var(--teal-dark);
+$banner-dark-foreground: var(--white);
+
 .o-banner {
   padding: math.div(math.div($grid-gutter-width, 2), $base-font-size-px) + em 0;
   background: var(--gold-10);
@@ -26,26 +29,26 @@
   }
 
   &--dark {
-    background: var(--teal-mid-dark);
-    border-color: var(--teal-mid-dark);
-    color: var(--white);
-
-    a {
-      // Colors for :link, :visited, :hover, :focus, :active.
-      @include u-link-colors(
-        var(--white),
-        var(--white),
-        var(--gray-15),
-        var(--white),
-        var(--gray-15)
-      );
-    }
+    background: $banner-dark-background;
+    border-color: $banner-dark-background;
+    color: $banner-dark-foreground;
 
     .m-notification {
-      background: var(--teal-mid-dark);
+      background: $banner-dark-background;
 
       .cf-icon-svg {
-        fill: var(--white);
+        fill: $banner-dark-foreground;
+      }
+
+      a {
+        // Colors for :link, :visited, :hover, :focus, :active.
+        @include u-link-colors(
+          $banner-dark-foreground,
+          var(--teal-40),
+          var(--gray-15),
+          var(--white),
+          var(--gray-15)
+        );
       }
     }
   }

@@ -1209,42 +1209,6 @@
             
             <div class="m-variation__name">
                 <h3>
-                    @font-face file path
-                    
-                </h3>
-            </div>
-            
-
-            
-            <div class="m-variation__description">
-                <p>Use this variable to point to the file containing your <code class="language-plaintext highlighter-rouge">@font-face</code> rules. To use none, set it to an empty string.
-<code class="language-plaintext highlighter-rouge">@font-face-path: 'licensed-fonts.scss';</code></p>
-
-            </div>
-            
-
-            <!-- Live code example -->
-            
-
-            
-            
-            
-            
-
-            
-
-        </div>
-        
-        <div class="m-variation">
-
-            
-            
-            
-            
-
-            
-            <div class="m-variation__name">
-                <h3>
                     Font source
                     
                 </h3>
@@ -1253,8 +1217,8 @@
 
             
             <div class="m-variation__description">
-                <p>Use this variable to specify where the fonts declared in <code class="language-plaintext highlighter-rouge">licensed-fonts.scss</code> are located when self-hosting the font files. Can be either a relative or absolute path.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@cf-fonts-path: '/static/fonts'`;
+                <p>There is a Sass mixin for specifying the path to the woff and woff2 font files for the CFPB default brand font, Avenir Next. Pass in the path to the files. The path can be either a relative or absolute path.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@include licensed-font('/path/to/fonts/woff/files')`;
 </code></pre></div></div>
 
             </div>
@@ -1309,8 +1273,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/variables.md">
-                            <time datetime="2024-08-08 15:41:53 -0400">
-                                 3:41:53 PM Aug 08, 2024
+                            <time datetime="2024-08-08 19:56:44 -0400">
+                                 7:56:44 PM Aug 08, 2024
                             </time>
                         </a>
                     </section>

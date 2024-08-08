@@ -348,21 +348,14 @@ variation_groups:
           CFPB's default brand font and fallback.
 
           `--font-stack: 'Avenir Next', Arial, sans-serif;`
-      - variation_name: '@font-face file path'
-        variation_description: >-
-          Use this variable to point to the file containing your `@font-face`
-          rules. To use none, set it to an empty string.
-
-          `@font-face-path: 'licensed-fonts.scss';`
       - variation_name: Font source
         variation_description: >-
-          Use this variable to specify where the fonts declared in
-          `licensed-fonts.scss` are located when self-hosting the font files.
-          Can be either a relative or absolute path.
+          There is a Sass mixin for specifying the path to the woff and woff2 font files for the CFPB default brand font, Avenir Next.
+          Pass in the path to the files. The path can be either a relative or absolute path.
 
           ```
 
-          @cf-fonts-path: '/static/fonts'`;
+          @include licensed-font('/path/to/fonts/woff/files')`;
 
           ```
 ---

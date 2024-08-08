@@ -57,12 +57,12 @@ Expandable.init(document.querySelector('#container'));
 
 The Design System's website is available at https://cfpb.github.io/design-system/.
 It lives in this repository's `docs/` directory
-and is powered by [Netlify CMS](https://www.netlifycms.org/)
+and is powered by [Decap CMS](https://decapcms.org/)
 and [Jekyll](https://jekyllrb.com/).
 To edit any page of the website,
 click the edit button at the bottom right of the page.
 You'll need to be added as a contributor to this repository in order to
-authenticate with Netlify CMS.
+authenticate with Decap CMS.
 
 ### Running the documentation website locally
 
@@ -89,8 +89,7 @@ yarn start
 ```
 
 Visit http://localhost:4000/design-system/ to view the site.
-Editing a page locally will change your local files, using
-[an experimental Netlify CMS feature](https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository).
+Editing a page locally will change your local files.
 
 To run accessibility tests against your local files:
 

@@ -46,19 +46,16 @@ export default class Preview extends Component {
     if (target.matches(`[${TOGGLE_ATTRIBUTE}]`)) {
       event.preventDefault();
       toggleDetails(target, this.containerRef.current);
-    }
-  }
 
-  componentDidUpdate(props) {
-    // Tabs show under the show/hide details button on a pattern.
-    const tabsContainerDom = props.document.querySelectorAll(
-      `.${Tabs.BASE_CLASS}`,
-    );
-    if (tabsContainerDom.length > 0) {
-      let tabsInst;
-      for (let i = 0, len = tabsContainerDom.length; i < len; i++) {
-        tabsInst = new Tabs(tabsContainerDom[i]);
-        tabsInst.init();
+      const tabsContainerDom = this.props.document.querySelectorAll(
+        `.${Tabs.BASE_CLASS}`,
+      );
+      if (tabsContainerDom.length > 0) {
+        let tabsInst;
+        for (let i = 0, len = tabsContainerDom.length; i < len; i++) {
+          tabsInst = new Tabs(tabsContainerDom[i]);
+          tabsInst.init();
+        }
       }
     }
   }

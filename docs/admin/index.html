@@ -5,14 +5,14 @@
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
+          dl = l != "dataLayer" ? "&l=" + l : "";
         j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-WH4L8LB');
+      })(window, document, "script", "dataLayer", "GTM-WH4L8LB");
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,8 +25,8 @@
     </style>
   </head>
   <body>
-    <!-- Include the script that builds the page and powers Netlify CMS -->
-    <script src="../dist/admin/netlify-cms.js"></script>
+    <!-- Include the script that builds the page and powers Decap CMS -->
+    <script src="../dist/admin/decap-cms.js"></script>
     <!-- Google Tag Manager code -->
     <iframe
       src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB"

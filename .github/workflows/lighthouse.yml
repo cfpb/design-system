@@ -47,7 +47,7 @@ jobs:
       # Build the documentation site.
       # This is needed so we can determine the list of URLs to test.
       - name: Build documentation site
-        run: yarn build-netlify
+        run: yarn build-decap
 
       # Run Lighthouse CI
       - name: Run Lighthouse CI

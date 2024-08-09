@@ -11,7 +11,7 @@ import {
   MaxHeightTransition,
   MoveTransition,
 } from '@cfpb/cfpb-design-system';
-import Tabs from './Tabs.js';
+import Tabs from './tabs.js';
 import redirectBanner from './redirect-banner.js';
 import sidebar from './sidebar.js';
 export * as MainStyles from '../css/main.scss';

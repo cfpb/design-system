@@ -5,7 +5,7 @@ import {
   TOGGLE_ATTRIBUTE,
   toggleDetails,
 } from '../../../../assets/js/toggle-details.js';
-import Tabs from '../../../../assets/js/Tabs.js';
+import Tabs from '../../../../assets/js/tabs.js';
 import { encode } from 'html-entities';
 import slugify from 'slugify';
 import template from '../../../../_includes/variation-content.html';
@@ -22,6 +22,11 @@ const templateWithIcons = template.replace(
 export default class Preview extends Component {
   constructor(props) {
     super(props);
+
+    const { document } = this.props;
+    const script = document.createElement('script');
+    script.src = '../dist/admin/main-preview.js';
+    document.head.appendChild(script);
 
     liquidEngine.registerFilter('slugify', (initial) =>
       slugify(initial || '', { lower: true }),

@@ -1,1 +1,1 @@
-export * as varsBreakpoints from './vars-breakpoints';
+export { varsBreakpoints } from './vars-breakpoints';

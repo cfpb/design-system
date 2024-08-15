@@ -7,7 +7,7 @@
          they need to be adjusted in vars-breakpoints.scss as well.
    ========================================================================== */
 
-export default {
+export const varsBreakpoints = {
   bpXS: {
     min: 0,
     max: 600,

@@ -2,7 +2,7 @@
    Get Breakpoint State
    ========================================================================== */
 
-import varsBreakpoints from '../abstracts/vars-breakpoints.js';
+import { varsBreakpoints } from '../abstracts/vars-breakpoints.js';
 
 /**
  * @returns {number} The base font size set on the body element.

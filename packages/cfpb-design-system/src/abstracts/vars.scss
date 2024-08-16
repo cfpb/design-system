@@ -1,8 +1,5 @@
 @use 'sass:math';
 
-// Import external dependencies
-@use './brand-colors';
-
 /* ==========================================================================
    Design System
    Variables
@@ -52,11 +49,6 @@ $size-v: 14px; // h5-site
 $size-vi: 12px; // h6-size
 $size-code: 13px; // Custom size only for Mono code blocks
 
-// Font variables
-:root {
-  --font-stack: system-ui, sans-serif;
-}
-
 // Icon variables
 
 // Icons' SVG viewbox are a consistent 19px (h) x variable (w).
@@ -89,3 +81,70 @@ $block-border-left: $block-border;
 
 // .content__main
 $content-main-border: var(--gray-40);
+
+// Form variables
+
+// .a-text-input borders
+$input-border: var(--gray-60);
+$input-border-hover: var(--pacific);
+$input-border-focused: var(--pacific);
+$input-border-error: var(--red);
+$input-border-error-hover: var(--red-dark);
+$input-border-warning: var(--gold);
+$input-border-warning-hover: var(--gold-dark);
+$input-border-success: var(--green);
+$input-border-success-hover: var(--green-dark);
+
+// .a-text-input backgrounds
+$input-bg: var(--white);
+$input-bg-selected: var(--pacific);
+$input-bg-disabled: var(--gray-10);
+$input-bg-disabled-selected: var(--gray-40);
+
+// .a-text-input text
+$input-text: var(--black);
+$input-text-disabled: var(--gray-dark);
+$input-text-placeholder: var(--gray-dark);
+
+// .a-text-input icons
+$input-icon: var(--gray);
+$input-icon-success: var(--green);
+$input-icon-warning: var(--gold);
+$input-icon-error: var(--red);
+
+// .a-select
+$select-border: $input-border;
+$select-icon-bg: var(--gray-10);
+$select-text-disabled: $input-text-disabled;
+
+// .m-form-field
+$form-field-input-border: $input-border;
+$form-field-input-border-disabled: var(--gray-60);
+$form-field-inset: var(--white);
+
+// .m-form-field--lg-target
+$form-field-input-lg-target-bg: var(--gray-10);
+$form-field-input-lg-target-bg-selected: var(--pacific-20);
+$form-field-input-lg-target-bg-disabled: var(--gray-20);
+$form-field-input-lg-target-border: var(--pacific);
+
+// .a-label__helper
+$label-helper: var(--gray-dark);
+
+// .a-range borders
+$range-border: var(--gray-40);
+$range-border-focused: var(--pacific);
+
+// .a-range backgrounds
+$range-bg: var(--gray-10);
+$range-bg-track: var(--gray-80);
+$range-bg-focused: var(--pacific-20);
+
+// Sizing variables
+
+// .a-select
+$select-height: 35px;
+
+// Featured Content Module sizing variables.
+$fcm-visual-width: 270px;
+$fcm-min-height: 220px;

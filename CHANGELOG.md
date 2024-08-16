@@ -1,4 +1,15 @@
 
+## v3.0.1 (2024-08-16)
+
+#### Enhancement
+* `cfpb-design-system`
+  * [#2022](https://github.com/cfpb/design-system/pull/2022) Create root package index.scss ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.0.0 (2024-08-16)
 
 #### Breaking Change

@@ -11,11 +11,16 @@ variation_groups:
   - variations:
       - variation_is_deprecated: false
         variation_name: Topic tag
-        variation_description: Topic tags appear within content such as blog posts and
-          press releases to display associated topics. When clicked, a topic tag
-          takes a user to a filtered view of other content items tagged with the
-          same topic tag. In this filtered view, a topic tag appears as a filter
-          tag.
+        variation_description: >-
+          Topic tags appear within content such as blog posts and press releases
+          to display associated topics. When clicked, a topic tag takes a user
+          to a filtered view of other items tagged with the same topic tag. In
+          this filtered view, a topic tag appears as a filter tag. 
+
+
+
+
+          *\[Add code]*
       - variation_is_deprecated: false
         variation_name: Filter tag
         variation_description: Filter tags are used as a part of

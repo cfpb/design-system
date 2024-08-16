@@ -12,7 +12,7 @@ variation_groups:
       - variation_is_deprecated: false
         variation_name: Topic tag
         variation_description: >-
-          Topic tags appear within content such as blog posts and press releases
+          Topic tags appear with content such as blog posts and press releases
           to display associated topics. When clicked, a topic tag takes a user
           to a filtered view of other items tagged with the same topic tag. In
           this filtered view, a topic tag appears as a filter tag. 
@@ -25,9 +25,9 @@ variation_groups:
         variation_name: Filter tag
         variation_description: Filter tags are used as a part of
           [multiselects](https://cfpb.github.io/design-system/components/selects#multiselect)
-          to display selected categories, topics, and languages within a
-          [filterable
-          list](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels#standard-filterable-list-1).
+          to display categories, topics, and languages selected in a [filterable
+          list control
+          panel](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels).
         variation_code_snippet: <ul class="o-multiselect_choices"><li
           data-option="option1"><button type="button"><label
           for="test_select__multiple-option1">Option 1<svg

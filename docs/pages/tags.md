@@ -10,10 +10,19 @@ description: Tags are used to label, organize, or categorize content. Tags can
 variation_groups:
   - variations:
       - variation_is_deprecated: false
+        variation_name: Topic tag
+        variation_description: Topic tags appear within content such as blog posts and
+          press releases to display associated topics. When clicked, a topic tag
+          takes a user to a filtered view of other content items tagged with the
+          same topic tag. In this filtered view, a topic tag appears as a filter
+          tag.
+      - variation_is_deprecated: false
         variation_name: Filter tag
-        variation_description: Filter tags are used to display quick and useful category
-          labels to the user. They are often used to display categories or
-          active filters.
+        variation_description: Filter tags are used as a part of
+          [multiselects](https://cfpb.github.io/design-system/components/selects#multiselect)
+          to display selected categories, topics, and languages within a
+          [filterable
+          list](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels#standard-filterable-list-1).
         variation_code_snippet: <ul class="o-multiselect_choices"><li
           data-option="option1"><button type="button"><label
           for="test_select__multiple-option1">Option 1<svg
@@ -32,10 +41,7 @@ variation_groups:
           8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455
           9.716z"></path></svg></label></button></li></ul>
     variation_group_name: Types
-behavior: |-
-  
-
-  * To clear a selection, click the “x” icon inside of the filter tag.
+behavior: To clear a filter tag selection, click the “x” icon inside of the filter tag.
 related_items: >-
   *
   [Multiselect](https://cfpb.github.io/design-system/components/selects#multiselect)[](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels)

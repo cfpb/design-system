@@ -1,4 +1,35 @@
 
+## v3.0.0 (2024-08-16)
+
+#### Breaking Change
+* `cfpb-atomic-component`, `cfpb-buttons`, `cfpb-core`, `cfpb-design-system`, `cfpb-expandables`, `cfpb-forms`, `cfpb-grid`, `cfpb-icons`, `cfpb-layout`, `cfpb-notifications`, `cfpb-pagination`, `cfpb-tables`, `cfpb-typography`
+  * [#2005](https://github.com/cfpb/design-system/pull/2005) Consolidate packages into cfpb-design-system ([@anselmbradford](https://github.com/anselmbradford))
+* `cfpb-forms`
+  * [#2009](https://github.com/cfpb/design-system/pull/2009) Remove `a-legend` class | Move legends inside fieldsets ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Enhancement
+* `cfpb-design-system`
+  * [#2019](https://github.com/cfpb/design-system/pull/2019) Pre-v3 prep ([@anselmbradford](https://github.com/anselmbradford))
+  * [#2018](https://github.com/cfpb/design-system/pull/2018) Remove default export ([@anselmbradford](https://github.com/anselmbradford))
+  * [#2017](https://github.com/cfpb/design-system/pull/2017) Add base index file | Remove less file ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#2014](https://github.com/cfpb/design-system/pull/2014) Update banner color scheme ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-design-system`
+  * [#2020](https://github.com/cfpb/design-system/pull/2020) Update decap-cms-app@3.3.2, saucectl@0.183.0, stylelint@16.8.2, cypress@13.13.3, esbuild@0.23.1 ([@anselmbradford](https://github.com/anselmbradford))
+* Other
+  * [#2012](https://github.com/cfpb/design-system/pull/2012) Patch bump autoprefixer, lerna, postcss ([@anselmbradford](https://github.com/anselmbradford))
+  * [#2010](https://github.com/cfpb/design-system/pull/2010) Update cypress, lerna, postcss, saucectl, stylelint ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Sonna Kim ([@sonnakim](https://github.com/sonnakim))
+
+
+
 ## v2.0.1 (2024-07-31)
 
 #### Bug Fix

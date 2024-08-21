@@ -9,7 +9,6 @@
 
 // Custom modules.
 @use 'sidebar' as *;
-@use 'footer' as *;
 @use 'skip-nav' as *;
 @use 'global-eyebrow' as *;
 @use 'layout' as *;
@@ -118,6 +117,18 @@ main {
   li,
   p {
     max-width: 41.875rem;
+  }
+}
+
+.ds-footer {
+  padding-bottom: 30px;
+
+  &__content {
+    max-width: 41.875rem;
+  }
+
+  a {
+    border-bottom-width: 1px;
   }
 }
 

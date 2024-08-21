@@ -46,6 +46,7 @@ first-level:
           - page: Selects
           - page: Summaries
           - page: Tables
+          - page: Tags
           - page: Taglines
           - page: Text inputs
         third-level: []

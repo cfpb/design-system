@@ -1,4 +1,17 @@
 
+## v3.0.2 (2024-08-21)
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#2024](https://github.com/cfpb/design-system/pull/2024) FCM: Unquote padding-bottom value in video-playing class ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 3
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+- Natalia Fitzgerald ([@natalia-fitzgerald](https://github.com/natalia-fitzgerald))
+- [@jenn-franklin](https://github.com/jenn-franklin)
+
+
+
 ## v3.0.1 (2024-08-16)
 
 #### Enhancement

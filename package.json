@@ -41,18 +41,17 @@
     "start": "yarn build && concurrently --kill-others \"yarn serve-decap\" \"yarn serve-jekyll\" \"yarn build watch\"",
     "jest": "yarn node --experimental-vm-modules $(yarn bin jest)",
     "test:browser": "yarn cypress run",
-    "test:browser:cloud": ": ${SAUCE_USERNAME?\"You need to define SAUCE_USERNAME and SAUCE_ACCESS_KEY env variables \"} && node_modules/saucectl/bin/saucectl run"
+    "test:browser:cloud": "scripts/sauce.sh"
   },
   "browserslist": "> 0.2% in @cfpb/browserslist-config stats",
   "dependencies": {
-    "@types/react": "18.3.3",
+    "@types/react": "18.3.4",
     "anchor-js": "5.0.0",
     "decap-cms-app": "3.3.2",
     "html-entities": "2.5.2",
     "lunr": "2.3.9",
     "marked": "12.0.2",
     "react": "18.3.1",
-    "react-dom": "18.3.1",
     "react-is": "18.3.1",
     "react-liquid": "2.0.1",
     "slugify": "1.6.6"
@@ -103,5 +102,6 @@
     "singleQuote": true
   },
   "type": "module",
-  "version": "3.0.2"
+  "version": "3.0.2",
+  "packageManager": "yarn@4.4.0"
 }

@@ -46,7 +46,6 @@
     "lunr": "2.3.9",
     "marked": "12.0.2",
     "react": "18.3.1",
-    "react-dom": "18.3.1",
     "react-is": "18.3.1",
     "react-liquid": "2.0.1",
     "slugify": "1.6.6"
@@ -117,5 +116,6 @@
       "release": true
     }
   },
-  "type": "module"
+  "type": "module",
+  "packageManager": "yarn@4.5.0"
 }

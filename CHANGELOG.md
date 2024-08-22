@@ -1,4 +1,19 @@
 
+## v3.0.3 (2024-08-22)
+
+#### Bug Fix
+* `cfpb-design-system`
+  * [#2029](https://github.com/cfpb/design-system/pull/2029) Fix malformed line-height ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Internal
+* `cfpb-design-system`
+  * [#2028](https://github.com/cfpb/design-system/pull/2028) Linter autofixes ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 1
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.0.2 (2024-08-21)
 
 #### Bug Fix

@@ -8,78 +8,54 @@
    Base styles
    ========================================================================== */
 
-/* stylelint-disable selector-class-pattern */
-@mixin heading-1($fs: $size-i) {
-  /* stylelint-enable */
-  $font-size: $fs;
-
-  margin-bottom: math.div(15px, $font-size) + em;
-  font-size: math.div($font-size, $base-font-size-px) + em;
+@mixin heading-1() {
+  margin-bottom: math.div(15px, $size-i) + em;
+  font-size: math.div($size-i, $base-font-size-px) + em;
   font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
 }
 
-/* stylelint-disable selector-class-pattern */
-@mixin heading-2($fs: $size-ii) {
-  /* stylelint-enable */
-  $font-size: $fs;
-
-  margin-bottom: math.div(15px, $font-size) + em;
-  font-size: math.div($font-size, $base-font-size-px) + em;
+@mixin heading-2() {
+  margin-bottom: math.div(15px, $size-ii) + em;
+  font-size: math.div($size-ii, $base-font-size-px) + em;
   font-weight: 600;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
 }
 
-/* stylelint-disable selector-class-pattern */
-@mixin heading-3($fs: $size-iii) {
-  /* stylelint-enable */
-  $font-size: $fs;
-
-  margin-bottom: math.div(15px, $font-size) + em;
-  font-size: math.div($font-size, $base-font-size-px) + em;
+@mixin heading-3() {
+  margin-bottom: math.div(15px, $size-iii) + em;
+  font-size: math.div($size-iii, $base-font-size-px) + em;
   font-weight: normal;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
 }
 
-/* stylelint-disable selector-class-pattern */
-@mixin heading-4($fs: $size-iv) {
-  /* stylelint-enable */
-  $font-size: $fs;
-
-  margin-bottom: math.div(15px, $font-size) + em;
-  font-size: math.div($font-size, $base-font-size-px) + em;
+@mixin heading-4() {
+  margin-bottom: math.div(15px, $size-iv) + em;
+  font-size: math.div($size-iv, $base-font-size-px) + em;
   font-weight: 500;
   letter-spacing: inherit;
   line-height: 1.25;
   text-transform: inherit;
 }
 
-/* stylelint-disable selector-class-pattern */
-@mixin heading-5($fs: $size-v) {
-  /* stylelint-enable */
-  $font-size: $fs;
-
-  margin-bottom: math.div(15px, $font-size) + em;
-  font-size: math.div($font-size, $base-font-size-px) + em;
+@mixin heading-5() {
+  margin-bottom: math.div(15px, $size-v) + em;
+  font-size: math.div($size-v, $base-font-size-px) + em;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 1.25;
   text-transform: uppercase;
 }
 
-/* stylelint-disable selector-class-pattern */
-@mixin heading-6($fs: $size-vi) {
-  /* stylelint-enable */
-  $font-size: $fs;
-
-  margin-bottom: math.div(15px, $font-size) + em;
-  font-size: math.div($font-size, $base-font-size-px) + em;
+@mixin heading-6() {
+  margin-bottom: math.div(15px, $size-vi) + em;
+  font-size: math.div($size-vi, $base-font-size-px) + em;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 1.25;
@@ -89,8 +65,6 @@
 @mixin h1() {
   @include heading-1;
 
-  $font-size: $size-i;
-
   p + &,
   ul + &,
   ol + &,
@@ -99,14 +73,12 @@
   img + &,
   table + &,
   blockquote + & {
-    margin-top: math.div(60px, $font-size) + em;
+    margin-top: math.div(60px, $size-i) + em;
   }
 
   // Mobile only.
   @include respond-to-max($bp-xs-max) {
     @include heading-2;
-
-    $font-size: $size-ii;
 
     p + &,
     ul + &,
@@ -116,7 +88,7 @@
     img + &,
     table + &,
     blockquote + & {
-      margin-top: math.div(45px, $font-size) + em;
+      margin-top: math.div(45px, $size-ii) + em;
     }
     h2 + &,
     .h2 + &,
@@ -128,15 +100,13 @@
     .h5 + &,
     h6 + &,
     .h6 + & {
-      margin-top: math.div(30px, $font-size) + em;
+      margin-top: math.div(30px, $size-ii) + em;
     }
   }
 }
 
 @mixin h2() {
   @include heading-2;
-
-  $font-size: $size-ii;
 
   p + &,
   ul + &,
@@ -146,7 +116,7 @@
   img + &,
   table + &,
   blockquote + & {
-    margin-top: math.div(45px, $font-size) + em;
+    margin-top: math.div(45px, $size-ii) + em;
   }
 
   h1 + &,
@@ -159,14 +129,12 @@
   .h5 + &,
   h6 + &,
   .h6 + & {
-    margin-top: math.div(30px, $font-size) + em;
+    margin-top: math.div(30px, $size-ii) + em;
   }
 
   // Mobile only.
   @include respond-to-max($bp-xs-max) {
     @include heading-3;
-
-    $font-size: $size-iii;
 
     p + &,
     ul + &,
@@ -176,15 +144,13 @@
     img + &,
     table + &,
     blockquote + & {
-      margin-top: math.div(30px, $font-size) + em;
+      margin-top: math.div(30px, $size-iii) + em;
     }
   }
 }
 
 @mixin h3() {
   @include heading-3;
-
-  $font-size: $size-iii;
 
   p + &,
   ul + &,
@@ -204,7 +170,7 @@
   .h5 + &,
   h6 + &,
   .h6 + & {
-    margin-top: math.div(30px, $font-size) + em;
+    margin-top: math.div(30px, $size-iii) + em;
   }
 
   // Mobile only.
@@ -216,8 +182,6 @@
 @mixin h4() {
   @include heading-4;
 
-  $font-size: $size-iv;
-
   p + &,
   ul + &,
   ol + &,
@@ -236,7 +200,7 @@
   .h5 + &,
   h6 + &,
   .h6 + & {
-    margin-top: math.div(30px, $font-size) + em;
+    margin-top: math.div(30px, $size-iv) + em;
   }
 
   // Mobile only.
@@ -251,8 +215,6 @@
 @mixin h5() {
   @include heading-5;
 
-  $font-size: $size-v;
-
   p + &,
   ul + &,
   ol + &,
@@ -271,14 +233,12 @@
   .h4 + &,
   h6 + &,
   .h6 + & {
-    margin-top: math.div(30px, $font-size) + em;
+    margin-top: math.div(30px, $size-v) + em;
   }
 }
 
 @mixin h6() {
   @include heading-6;
-
-  $font-size: $size-vi;
 
   p + &,
   ul + &,
@@ -298,7 +258,7 @@
   .h4 + &,
   h5 + &,
   .h5 + & {
-    margin-top: math.div(30px, $font-size) + em;
+    margin-top: math.div(30px, $size-vi) + em;
   }
 }
 
@@ -310,17 +270,15 @@
 
   // Mobile only.
   @include respond-to-max($bp-xs-max) {
-    // Use the same regular weight but reduce the sizes to h4 size
+    // Use the same regular weight but reduce the sizes to h4 size.
     font-size: math.div(18px, $base-font-size-px) + em;
   }
 }
 
+// For when you want a heading that's bigger than a normal H1.
 @mixin u-superheading() {
-  // For when you want a heading that's bigger than a normal H1
-  $font-size: $size-xl;
-
-  margin-bottom: math.div(20px, $font-size) + em;
-  font-size: math.div($font-size, $base-font-size-px) + em;
+  margin-bottom: math.div(20px, $size-xl) + em;
+  font-size: math.div($size-xl, $base-font-size-px) + em;
   font-weight: normal;
   line-height: 1.25;
 }

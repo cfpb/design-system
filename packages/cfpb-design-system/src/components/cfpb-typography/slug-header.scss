@@ -9,10 +9,8 @@
   &__heading {
     @include heading-5;
 
-    $font-size: $size-v;
-
     display: inline-block;
-    padding-top: math.div(4px, $font-size) + em;
+    padding-top: math.div(4px, $size-v) + em;
     border-top: 5px solid $slug-header-border-thick;
     margin-top: -3px;
   }

@@ -57,7 +57,7 @@ $meta-header-item-gap: 21px;
     // Adjustments to default date position.
     .a-date {
       font-size: math.div(14px, $base-font-size-px) + rem;
-      line-height: 24px / 14px;
+      line-height: math.div(24, 14);
       margin-bottom: 0;
     }
   }

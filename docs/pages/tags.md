@@ -40,8 +40,6 @@ variation_groups:
     variation_group_name: Types
 behavior: To clear a filter tag selection, click the “x” icon inside of the filter tag.
 related_items: >-
-  *
-  [Multiselect](https://cfpb.github.io/design-system/components/selects#multiselect)[](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels)
-
+  * [Multiselect](https://cfpb.github.io/design-system/components/selects#multiselect)
   * [Filterable list control panels](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels)
 ---

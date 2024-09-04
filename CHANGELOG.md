@@ -1,4 +1,16 @@
 
+## v3.1.0 (2024-09-04)
+
+#### Enhancement
+* `cfpb-design-system`
+  * [#2031](https://github.com/cfpb/design-system/pull/2031) Add topic tags | Re-arrange links page | Adjust sass imports ([@anselmbradford](https://github.com/anselmbradford))
+
+#### Committers: 2
+- Andy Chosak ([@chosak](https://github.com/chosak))
+- Ans ([@anselmbradford](https://github.com/anselmbradford))
+
+
+
 ## v3.0.3 (2024-08-22)
 
 #### Bug Fix

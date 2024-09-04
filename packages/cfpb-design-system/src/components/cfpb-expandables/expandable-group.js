@@ -20,7 +20,7 @@ const BASE_CLASS = 'o-expandable-group';
 function ExpandableGroup(element) {
   // Internal vars.
   const _dom = checkDom(element, BASE_CLASS);
-  const _isAccordion = _dom.classList.contains(`${BASE_CLASS}__accordion`);
+  const _isAccordion = _dom.classList.contains(`${BASE_CLASS}--accordion`);
   let _expandables;
   let _lastExpanded;
 

@@ -169,7 +169,7 @@ describe('accordion Expandables', () => {
   beforeEach(() => {
     document.body.innerHTML = HTML_SNIPPET;
     expandableGroup = document.querySelector('.o-expandable-group');
-    expandableGroup.classList.add('o-expandable-group__accordion');
+    expandableGroup.classList.add('o-expandable-group--accordion');
     expandableDom1 = document.querySelector('#test-subject-one');
     expandableDom2 = document.querySelector('#test-subject-two');
     contentDom1 = expandableDom1.querySelector('.o-expandable__content');

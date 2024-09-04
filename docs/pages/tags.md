@@ -20,14 +20,14 @@ variation_groups:
           <ol class="m-tag-group">
             <li>
               <a href="#" class="a-tag-topic">
-                •
+                <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
                 <span class="a-tag-topic__text">Discrimination</span>
               </a>
             </li>
 
             <li>
               <a href="#" class="a-tag-topic">
-                •
+                <span class="a-tag-topic__bullet" aria-hidden="true">•</span>
                 <span class="a-tag-topic__text">Mortgages</span>
               </a>
             </li>

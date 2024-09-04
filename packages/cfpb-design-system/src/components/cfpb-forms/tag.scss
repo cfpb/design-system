@@ -11,7 +11,7 @@
 // Filter tags appear in filtered contexts, often as part of multiselects.
 .a-tag-filter {
   display: flex;
-  gap: 10px;
+  gap: math.div(10px, $btn-font-size) + rem;
 
   border: 1px solid var(--teal);
   padding: 4px 6px;
@@ -51,12 +51,20 @@ a.a-tag-filter {
 
 // Topic tags
 .a-tag-topic {
+  display: flex;
+  gap: math.div(5px, $btn-font-size) + rem;
+
   @include u-jump-link(
     $is-gold: true,
     $jump-link-text-class: 'a-tag-topic__text'
   );
 }
 @include u-jump-link-group($jump-link-class: 'a-tag-topic');
+
+.a-tag-topic__bullet {
+  font-size: 1rem;
+  line-height: 1rem;
+}
 
 @include respond-to-min($bp-sm-min) {
   .a-tag-topic__text {

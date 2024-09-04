@@ -18,7 +18,7 @@
     @include u-link-colors(var(--gold-80));
 
     .#{$jump-link-text-class} {
-      color: var(--gray-90);
+      color: var(--gray);
       border-bottom-color: var(--gold-80);
     }
   } @else {

@@ -20,6 +20,7 @@
     .#{$jump-link-text-class} {
       color: var(--gray);
       border-bottom-color: var(--gold-80);
+      word-break: break-word;
     }
   } @else {
     font-weight: 500;

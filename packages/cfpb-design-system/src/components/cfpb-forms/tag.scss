@@ -59,6 +59,7 @@ a.a-tag-filter {
     $jump-link-text-class: 'a-tag-topic__text'
   );
 }
+
 @include u-jump-link-group($jump-link-class: 'a-tag-topic');
 
 .a-tag-topic__bullet {

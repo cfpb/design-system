@@ -22,7 +22,6 @@
 @use 'variation' as *;
 @use 'color-swatches' as *;
 @use 'search' as *;
-
 @include define-custom-props;
 
 // Webfont

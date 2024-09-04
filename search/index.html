@@ -4386,9 +4386,50 @@ Label heading
 
 &lt;p&gt;Here&#39;s the &lt;a href=&quot;#&quot;&gt;default link style&lt;/a&gt;. For reference, here&#39;s the &lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;hover link style&lt;/a&gt;. Train your eyes on the &lt;a href=&quot;#&quot; class=&quot;focus&quot;&gt;focused link style&lt;/a&gt;. Jump to the &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;active link style&lt;/a&gt;. We’ve all been to the &lt;a href=&quot;#&quot; class=&quot;visited&quot;&gt;visited link style&lt;/a&gt;.&lt;/p&gt;`,
                 
-                    'variation_name2': 'List link',
-                    'variation_description2': "List+links+%28or+call-to-action+links%29+are+links+that+highlight+a+users%E2%80%99+next+steps.+They+are+medium+weight+and+often+used+in+unordered+lists.%0A",
-                    'variation_code_snippet2': `&lt;ul class=&quot;m-list m-list--links&quot;&gt;
+                    'variation_name2': 'Destructive link',
+                    'variation_description2': "Destructive+links+provide+a+visual+warning+to+users+that+clicking+them+will+perform+a+destructive+action%2C+such+as+clearing+entries+in+a+form.%0A",
+                    'variation_code_snippet2': `&lt;a class=&quot;a-btn a-btn--link a-btn--warning&quot; href=&quot;#&quot;&gt;
+     Destructive link
+&lt;/a&gt;`,
+                
+                    'variation_name3': 'Link with icon',
+                    'variation_description3': "When+used%2C+an+icon+should+appear+after+the+text+it+represents.+Each+icon+should+be+used+exclusively+and+consistently+for+one+action.+The+color+and+font-size+of+an+icon+should+be+the+same+as+the+text+it+represents%2C+including+state+changes.+Icons+should+never+be+underlined.%0A",
+                    'variation_code_snippet3': `&lt;p&gt;
+  The document icon should emphasize a link that contains a
+    &lt;a class=&quot;a-link&quot;
+      href=&quot;#&quot;&gt;
+        &lt;span class=&quot;a-link__text&quot;&gt;file or document&lt;/span&gt;
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
+    &lt;/a&gt;.
+    Use the external link icon to emphasize
+    &lt;a class=&quot;a-link&quot;
+      href=&quot;#&quot;&gt;
+        &lt;span class=&quot;a-link__text&quot;&gt;a non-CFPB webpage&lt;/span&gt;
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"/></svg>
+    &lt;/a&gt; for further details.
+&lt;/p&gt;`,
+                
+                    'variation_name4': 'Jump link',
+                    'variation_description4': "Jump+links+are+standalone+links+that+respond+to+small+screens+by+converting+to+full+block+links+that+have+a+finger-friendly+touch+area.+Reduce+screen+size+to+see+these+in+action.%0A",
+                    'variation_code_snippet4': `&lt;p&gt;&lt;a class=&quot;a-link
+          a-link--jump&quot;
+  href=&quot;#&quot;&gt;
+&lt;span class=&quot;a-link__text&quot;&gt;Jump link&lt;/span&gt;
+    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"/></svg>
+&lt;/a&gt;&lt;/p&gt;`,
+                
+                    'variation_name5': 'Jump link with icon on left',
+                    'variation_description5': "Jump+links+can+also+have+icons+before+the+text%2C+like+icon+links.%0A",
+                    'variation_code_snippet5': `&lt;p&gt;&lt;a class=&quot;a-link
+          a-link--jump&quot;
+  href=&quot;#&quot;&gt;
+    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
+    &lt;span class=&quot;a-link__text&quot;&gt;Jump link with icon on left&lt;/span&gt;
+&lt;/a&gt;&lt;/p&gt;`,
+                
+                    'variation_name6': 'List link',
+                    'variation_description6': "List+links+%28or+call-to-action+links%29+are+links+that+highlight+a+users%E2%80%99+next+steps.+They+are+medium+weight+and+often+used+in+unordered+lists.%0A",
+                    'variation_code_snippet6': `&lt;ul class=&quot;m-list m-list--links&quot;&gt;
     &lt;li class=&quot;m-list__item&quot;&gt;
         &lt;a class=&quot;a-link a-link--jump&quot; href=&quot;#&quot;&gt;
            &lt;span class=&quot;a-link__text&quot;&gt;List item 1&lt;/span&gt;
@@ -4413,62 +4454,23 @@ Label heading
           <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
         &lt;/a&gt;
     &lt;/li&gt;
-&lt;/ul&gt;`,
-                
-                    'variation_name3': 'Destructive link',
-                    'variation_description3': "Destructive+links+provide+a+visual+warning+to+users+that+clicking+them+will+perform+a+destructive+action%2C+such+as+clearing+entries+in+a+form.%0A",
-                    'variation_code_snippet3': `&lt;a class=&quot;a-btn a-btn--link a-btn--warning&quot; href=&quot;#&quot;&gt;
-     Destructive link
-&lt;/a&gt;`,
-                
-                    'variation_name4': 'Link with icon',
-                    'variation_description4': "When+used%2C+an+icon+should+appear+after+the+text+it+represents.+Each+icon+should+be+used+exclusively+and+consistently+for+one+action.+The+color+and+font-size+of+an+icon+should+be+the+same+as+the+text+it+represents%2C+including+state+changes.+Icons+should+never+be+underlined.%0A",
-                    'variation_code_snippet4': `&lt;p&gt;
-  The document icon should emphasize a link that contains a
-    &lt;a class=&quot;a-link&quot;
+    &lt;li class=&quot;m-list__item&quot;&gt;
+        &lt;a class=&quot;a-link
+              a-link--jump&quot;
       href=&quot;#&quot;&gt;
-        &lt;span class=&quot;a-link__text&quot;&gt;file or document&lt;/span&gt;
-        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"/></svg>
-    &lt;/a&gt;.
-    Use the external link icon to emphasize
-    &lt;a class=&quot;a-link&quot;
-      href=&quot;#&quot;&gt;
-        &lt;span class=&quot;a-link__text&quot;&gt;a non-CFPB webpage&lt;/span&gt;
+    &lt;span class=&quot;a-link__text&quot;&gt;External link jump link&lt;/span&gt;
         <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"/></svg>
-    &lt;/a&gt; for further details.
-&lt;/p&gt;`,
-                
-                    'variation_name5': 'Jump link',
-                    'variation_description5': "Jump+links+are+standalone+links+that+respond+to+small+screens+by+converting+to+full+block+links+that+have+a+finger-friendly+touch+area.+Reduce+screen+size+to+see+these+in+action.%0A",
-                    'variation_code_snippet5': `&lt;p&gt;&lt;a class=&quot;a-link
-          a-link--jump&quot;
-  href=&quot;#&quot;&gt;
-&lt;span class=&quot;a-link__text&quot;&gt;Jump link&lt;/span&gt;
-    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"/></svg>
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-&lt;a class=&quot;a-link
-          a-link--jump&quot;
-  href=&quot;#&quot;&gt;
-&lt;span class=&quot;a-link__text&quot;&gt;External link jump link&lt;/span&gt;
-    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"/></svg>
-    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"/></svg>
-&lt;/a&gt;&lt;/p&gt;`,
-                
-                    'variation_name6': 'Jump link with icon on left',
-                    'variation_description6': "Jump+links+can+also+have+icons+before+the+text%2C+like+icon+links.%0A",
-                    'variation_code_snippet6': `&lt;p&gt;&lt;a class=&quot;a-link
-          a-link--jump&quot;
-  href=&quot;#&quot;&gt;
-    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
-    &lt;span class=&quot;a-link__text&quot;&gt;Jump link with icon on left&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-&lt;a class=&quot;a-link
-          a-link--jump&quot;
-  href=&quot;#&quot;&gt;
-    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
-&lt;span class=&quot;a-link__text&quot;&gt;External link jump link&lt;/span&gt;
-    <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"/></svg>
-&lt;/a&gt;&lt;/p&gt;`,
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--right" viewBox="0 0 10 19"><path d="M1.6 17.262a1.03 1.03 0 0 1-.728-1.757l6.073-6.073L.872 3.36a1.03 1.03 0 0 1 1.455-1.455l6.8 6.8a1.03 1.03 0 0 1 0 1.456l-6.8 6.8a1.02 1.02 0 0 1-.727.302z"/></svg>
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;m-list__item&quot;&gt;
+        &lt;a class=&quot;a-link a-link--jump&quot; href=&quot;#&quot;&gt;
+          <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--left" viewBox="0 0 10 19"><path d="M8.4 17.269a1.03 1.03 0 0 1-.727-.302l-6.801-6.8a1.03 1.03 0 0 1 0-1.456l6.8-6.8a1.03 1.03 0 0 1 1.456 1.455L3.055 9.439l6.073 6.073A1.03 1.03 0 0 1 8.4 17.27z"/></svg>
+          &lt;span class=&quot;a-link__text&quot;&gt;External link jump link&lt;/span&gt;
+            <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"/></svg>
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;`,
                 
                     'variation_name7': 'Printed links',
                     'variation_description7': "When+a+page+is+printed+from+consumerfinance.gov%2C+links+should+appear+in+the+following+style%C2%A0and+include+both+the+original+link+text+as+well+as+a+shortened+URL.%0A",
@@ -6412,11 +6414,51 @@ Note: While th elements normally only contain raw text, they may sometimes conta
                 
                     'variation_name1': 'Topic tag',
                     'variation_description1': "Topic+tags+appear+with+content+such+as+blog+posts+and+press+releases+to+display+associated+topics.+When+clicked%2C+a+topic+tag+takes+a+user+to+a+filtered+view+of+other+items+tagged+with+the+same+topic+tag.+In+this+filtered+view%2C+a+topic+tag+appears+as+a+filter+tag.%0A",
-                    'variation_code_snippet1': ``,
+                    'variation_code_snippet1': `&lt;ol class=&quot;m-tag-group&quot;&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;a-tag-topic&quot;&gt;
+      &lt;span class=&quot;a-tag-topic__bullet&quot; aria-hidden=&quot;true&quot;&gt;•&lt;/span&gt;
+      &lt;span class=&quot;a-tag-topic__text&quot;&gt;Discrimination&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;a-tag-topic&quot;&gt;
+      &lt;span class=&quot;a-tag-topic__bullet&quot; aria-hidden=&quot;true&quot;&gt;•&lt;/span&gt;
+      &lt;span class=&quot;a-tag-topic__text&quot;&gt;Mortgages&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;`,
                 
                     'variation_name2': 'Filter tag',
                     'variation_description2': "Filter+tags+are+used+as+a+part+of+multiselects+to+display+categories%2C+topics%2C+and+languages+selected+in+a+filterable+list+control+panel.%0A",
-                    'variation_code_snippet2': `&lt;div class=&quot;m-tag-group&quot;&gt;&lt;button class=&quot;a-tag&quot;&gt;Option 1 &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;cf-icon-svg cf-icon-svg__error&quot; viewBox=&quot;0 0 12 19&quot;&gt;&lt;path d=&quot;M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;&lt;button class=&quot;a-tag&quot;&gt;Option 4&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;cf-icon-svg cf-icon-svg__error&quot; viewBox=&quot;0 0 12 19&quot;&gt;&lt;path d=&quot;M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;`,
+                    'variation_code_snippet2': `&lt;ol class=&quot;m-tag-group&quot;&gt;
+  &lt;li&gt;
+    &lt;button class=&quot;a-tag-filter&quot;&gt;
+      Option 1
+      &lt;svg
+      xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;cf-icon-svg
+      cf-icon-svg__error&quot; viewBox=&quot;0 0 12 19&quot;&gt;&lt;path d=&quot;M11.383 13.644A1.03
+      1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1
+      1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6
+      8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455
+      9.716z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/li&gt;&lt;li&gt;
+    &lt;button class=&quot;a-tag-filter&quot;&gt;
+      Option 4
+      &lt;svg
+      xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;cf-icon-svg
+      cf-icon-svg__error&quot; viewBox=&quot;0 0 12 19&quot;&gt;&lt;path d=&quot;M11.383 13.644A1.03
+      1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1
+      1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6
+      8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455
+      9.716z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;`,
                 
             
 
